@@ -1,0 +1,3659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telluride Region — Government Hub</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    :root {
+      --forest: #18352d;
+      --forest-soft: #295247;
+      --forest-deep: #112922;
+      --cream: #f7f4ee;
+      --ivory: #fbfaf7;
+      --sand: #ebe3d8;
+      --line: #ddd5ca;
+      --telluride-green: #295247;
+      --telluride-light: #eef4f1;
+      --county-green: #46613d;
+      --county-light: #edf3e8;
+      --smart-orange: #8f6f3b;
+      --smart-light: #f7f2e8;
+      --mv-plum: #5f4a67;
+      --mv-light: #f2edf5;
+      --school-navy: #34516e;
+      --school-light: #eaf0f6;
+      --fire-red: #9f4336;
+      --fire-light: #f8ece9;
+      --med-teal: #2b6d69;
+      --med-light: #e8f4f3;
+      --ttimes-charcoal: #3b403f;
+      --ttimes-light: #eff1f0;
+      --accent-red: #b65a45;
+      --accent-amber: #b38b52;
+      --accent-rust: #9b7551;
+      --bg: #f7f4ee;
+      --card-bg: rgba(255, 255, 255, 0.92);
+      --text-primary: #18352d;
+      --text-secondary: #4c5e58;
+      --text-muted: #7d8a85;
+      --border: #ddd5ca;
+      --shadow: 0 14px 36px rgba(24, 53, 45, 0.08);
+      --shadow-soft: 0 6px 18px rgba(24, 53, 45, 0.06);
+      --radius: 24px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* ── Wix iframe compatibility ── */
+    html {
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: 100%;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(180deg, #fcfbf8 0%, #f7f4ee 100%);
+      color: var(--text-primary);
+      line-height: 1.6;
+      position: relative;
+      letter-spacing: -0.01em;
+      min-height: 100%;
+    }
+
+    /* ── Background landscape ── */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(180deg, rgba(252,251,248,0.95) 0%, rgba(247,244,238,0.96) 100%);
+      z-index: -1;
+    }
+
+    /* ── Header ── */
+    .hero {
+      color: var(--text-primary);
+      padding: 24px 24px 26px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: transparent;
+    }
+    .hero::before {
+      content: '';
+      display: block;
+      width: 104px;
+      height: 104px;
+      margin: 0 auto 16px;
+      border-radius: 22px;
+      background: #fff url("https://www.livabletelluride.org/_astro/lt_logo.D-0sMryR_ZwQJ4a.webp") center/86% no-repeat;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(24,53,45,0.08);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      width: min(1100px, calc(100% - 32px));
+      height: 320px;
+      border-radius: 34px;
+      background:
+        linear-gradient(180deg, rgba(251,250,247,0.12) 0%, rgba(24,53,45,0.18) 100%),
+        url('https://images.unsplash.com/photo-1572683395619-6002c79d9f6e?w=1600&q=80&auto=format') center 38% / cover no-repeat;
+      z-index: -1;
+      box-shadow: var(--shadow);
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 4.8vw, 3.6rem);
+      font-weight: 800;
+      margin-bottom: 6px;
+      letter-spacing: -0.04em;
+      line-height: 0.98;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero p {
+      font-size: 1rem;
+      max-width: 620px;
+      margin: 0 auto;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .hero .last-updated {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 14px;
+    }
+
+    /* ── Tab Navigation ── */
+    .tab-bar {
+      display: flex;
+      justify-content: flex-start;
+      gap: 4px;
+      background: rgba(251,250,247,0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+      padding: 0 16px;
+      margin-top: 18px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    /* When Wix auto-height is on, parent page scrolls — sticky won't work.
+       Fall back to a pinned bar at the top of the iframe viewport. */
+    body.wix-auto-height .tab-bar {
+      position: relative;
+      top: auto;
+      background: rgba(251,250,247,0.96);
+    }
+    .tab-btn {
+      padding: 14px 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .tab-btn:hover { color: var(--text-primary); }
+    .tab-btn.active {
+      color: var(--forest);
+      border-bottom-color: var(--forest);
+    }
+
+    /* ── Main Container ── */
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px 20px 70px;
+    }
+
+    /* ── Tab Content ── */
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* ── Source Filter Chips ── */
+    .filter-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    .chip {
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.88);
+      color: var(--text-secondary);
+      transition: all 0.25s;
+    }
+    .chip:hover { border-color: #b0a898; background: rgba(255,255,255,0.9); }
+    .chip.active-all {
+      border-color: var(--text-primary);
+      color: #fff;
+      background: var(--text-primary);
+    }
+    .chip.active-telluride {
+      border-color: var(--telluride-green);
+      color: #fff;
+      background: var(--telluride-green);
+    }
+    .chip.active-county {
+      border-color: var(--county-green);
+      color: #fff;
+      background: var(--county-green);
+    }
+    .chip.active-smart {
+      border-color: var(--smart-orange);
+      color: #fff;
+      background: var(--smart-orange);
+    }
+    .chip.active-mv {
+      border-color: var(--mv-plum);
+      color: #fff;
+      background: var(--mv-plum);
+    }
+    .chip.active-school {
+      border-color: var(--school-navy);
+      color: #fff;
+      background: var(--school-navy);
+    }
+    .chip.active-fire {
+      border-color: var(--fire-red);
+      color: #fff;
+      background: var(--fire-red);
+    }
+    .chip.active-med {
+      border-color: var(--med-teal);
+      color: #fff;
+      background: var(--med-teal);
+    }
+    .chip.active-ttimes {
+      border-color: var(--ttimes-charcoal);
+      color: #fff;
+      background: var(--ttimes-charcoal);
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(221, 213, 200, 0.72);
+      border-left: none;
+      border-radius: 24px;
+      padding: 22px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: all 0.25s;
+    }
+    .card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+    .card[data-source="telluride"] { border-left-color: var(--telluride-green); }
+    .card[data-source="county"] { border-left-color: var(--county-green); }
+    .card[data-source="smart"] { border-left-color: var(--smart-orange); }
+    .card[data-source="mv"] { border-left-color: var(--mv-plum); }
+    .card[data-source="school"] { border-left-color: var(--school-navy); }
+    .card[data-source="fire"] { border-left-color: var(--fire-red); }
+    .card[data-source="med"] { border-left-color: var(--med-teal); }
+    .card[data-source="ttimes"] { border-left-color: var(--ttimes-charcoal); }
+
+    .card-logo {
+      flex-shrink: 0;
+      width: 92px;
+      height: 92px;
+      border-radius: 22px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .card-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 8px;
+    }
+    .card-logo svg {
+      width: 56px;
+      height: 56px;
+    }
+    .card-body {
+      flex: 1;
+      min-width: 0;
+    }
+    @media (max-width: 500px) {
+      .card-logo { width: 96px; height: 96px; border-radius: 14px; }
+      .card-logo svg { width: 60px; height: 60px; }
+    }
+
+    .card .source-badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 5px 11px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+      margin-right: 6px;
+    }
+    .badge-telluride { background: rgba(58, 90, 58, 0.12); color: var(--telluride-green); }
+    .badge-county { background: rgba(45, 80, 22, 0.12); color: var(--county-green); }
+    .badge-smart { background: rgba(138, 109, 27, 0.12); color: var(--smart-orange); }
+    .badge-mv { background: rgba(107, 58, 107, 0.12); color: var(--mv-plum); }
+    .badge-school { background: rgba(26, 58, 92, 0.12); color: var(--school-navy); }
+    .badge-fire { background: rgba(166, 50, 35, 0.12); color: var(--fire-red); }
+    .badge-med { background: rgba(26, 122, 109, 0.12); color: var(--med-teal); }
+    .badge-ttimes { background: rgba(44, 44, 44, 0.1); color: var(--ttimes-charcoal); }
+    .badge-alert { background: rgba(192, 57, 43, 0.1); color: var(--accent-red); }
+
+    .card .category-tag {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(0,0,0,0.05);
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .card h3 {
+      font-size: 1.35rem;
+      font-weight: 750;
+      margin-bottom: 4px;
+      color: var(--text-primary);
+    }
+    .card h3 a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .card h3 a:hover { text-decoration: underline; }
+
+    .card .meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 5px;
+    }
+    .card .meta .location {
+      color: var(--text-secondary);
+    }
+    .agenda-link {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      background: rgba(58, 90, 58, 0.1);
+      color: var(--telluride-green);
+      padding: 3px 10px;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-left: 6px;
+      transition: all 0.2s;
+    }
+    .agenda-link:hover {
+      background: var(--telluride-green);
+      color: #fff;
+    }
+
+    .card .description {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .meeting-summary {
+      font-size: 0.76rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+      margin-top: 8px;
+      padding: 8px 11px;
+      background: rgba(0,0,0,0.03);
+      border-left: 3px solid var(--border);
+      border-radius: 0 8px 8px 0;
+    }
+    .meeting-summary strong {
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .card[data-source="telluride"] .meeting-summary { border-left-color: var(--telluride-green); }
+    .card[data-source="county"] .meeting-summary { border-left-color: var(--county-green); }
+    .card[data-source="smart"] .meeting-summary { border-left-color: var(--smart-orange); }
+    .card[data-source="mv"] .meeting-summary { border-left-color: var(--mv-plum); }
+    .card[data-source="school"] .meeting-summary { border-left-color: var(--school-navy); }
+    .card[data-source="fire"] .meeting-summary { border-left-color: var(--fire-red); }
+    .card[data-source="med"] .meeting-summary { border-left-color: var(--med-teal); }
+    .card[data-source="ttimes"] .meeting-summary { border-left-color: var(--ttimes-charcoal); }
+
+    /* ── Card Actions (Calendar + Zoom) ── */
+    .card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    .cal-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: 1px solid rgba(0,0,0,0.1);
+      background: rgba(255,255,255,0.8);
+      color: var(--text-primary);
+      cursor: pointer;
+      line-height: 1;
+    }
+    .cal-btn:hover {
+      background: var(--telluride-green);
+      color: #fff;
+      border-color: var(--telluride-green);
+    }
+    .cal-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+    .zoom-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.2s;
+      background: rgba(45, 140, 255, 0.08);
+      color: #2264d1;
+      border: 1px solid rgba(45, 140, 255, 0.15);
+    }
+    .zoom-link:hover {
+      background: #2264d1;
+      color: #fff;
+      border-color: #2264d1;
+    }
+    .zoom-link svg { width: 14px; height: 14px; flex-shrink: 0; }
+    .livestream-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.2s;
+      background: rgba(255, 0, 0, 0.06);
+      color: #c0392b;
+      border: 1px solid rgba(255, 0, 0, 0.12);
+    }
+    .livestream-link:hover {
+      background: #c0392b;
+      color: #fff;
+      border-color: #c0392b;
+    }
+    .livestream-link svg { width: 14px; height: 14px; flex-shrink: 0; }
+    @media (max-width: 500px) {
+      .card-actions { gap: 6px; }
+      .cal-btn, .zoom-link, .livestream-link { font-size: 0.65rem; padding: 4px 9px; }
+    }
+
+    /* ── Date Group Headers ── */
+    .date-group {
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin: 34px 0 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+    .date-group:first-child { margin-top: 8px; }
+
+    /* ── Quick Links Grid ── */
+    .links-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 560px) {
+      .links-grid { grid-template-columns: 1fr; }
+    }
+    .link-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(221, 213, 200, 0.72);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: var(--shadow-soft);
+      transition: all 0.25s;
+      text-decoration: none;
+      color: var(--text-primary);
+      display: block;
+    }
+    .link-card:hover {
+      box-shadow: 0 6px 20px rgba(44, 36, 22, 0.12);
+      transform: translateY(-2px);
+    }
+    .link-card .link-icon {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+    .link-card h4 {
+      font-size: 1rem;
+      font-weight: 750;
+      margin-bottom: 4px;
+    }
+    .link-card p {
+      font-size: 0.76rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+    .link-card .link-source {
+      font-size: 0.66rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-top: 8px;
+      letter-spacing: 0.02em;
+    }
+    .link-source.src-telluride { color: var(--telluride-green); }
+    .link-source.src-county { color: var(--county-green); }
+    .link-source.src-smart { color: var(--smart-orange); }
+    .link-source.src-mv { color: var(--mv-plum); }
+    .link-source.src-school { color: var(--school-navy); }
+    .link-source.src-fire { color: var(--fire-red); }
+    .link-source.src-med { color: var(--med-teal); }
+    .link-source.src-ttimes { color: var(--ttimes-charcoal); }
+
+    /* ── Legal Notice Cards ── */
+    .legal-card {
+      background: var(--card-bg);
+      border-radius: 24px;
+      padding: 22px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(221, 213, 200, 0.72);
+      box-shadow: var(--shadow-soft);
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: all 0.25s;
+    }
+    .legal-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+    .legal-card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .legal-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    .legal-icon.type-rfp { background: rgba(45,140,255,0.1); }
+    .legal-icon.type-hearing { background: rgba(166,50,35,0.1); }
+    .legal-icon.type-rates { background: rgba(107,142,35,0.1); }
+    .legal-icon.type-tax { background: rgba(139,90,43,0.1); }
+    .legal-icon.type-housing { background: rgba(107,63,160,0.1); }
+    .legal-icon.type-bid { background: rgba(0,128,128,0.1); }
+    .legal-card-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      line-height: 1.35;
+    }
+    .legal-card-entity {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-top: 2px;
+    }
+    .legal-card-entity.ent-county { color: var(--county-green); }
+    .legal-card-entity.ent-norwood { color: #7b6834; }
+    .legal-card-entity.ent-assessor { color: #8b5a2b; }
+    .legal-card-entity.ent-mv { color: var(--mv-plum); }
+    .legal-card-entity.ent-housing { color: #6b3fa0; }
+    .legal-card-summary {
+      font-size: 0.83rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 10px;
+    }
+    .legal-card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+    .legal-meta-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+      line-height: 1;
+    }
+    .legal-meta-tag.tag-deadline {
+      background: rgba(166,50,35,0.08);
+      color: #a63223;
+    }
+    .legal-meta-tag.tag-date {
+      background: rgba(0,0,0,0.05);
+      color: var(--text-secondary);
+    }
+    .legal-meta-tag.tag-type {
+      background: rgba(45,140,255,0.08);
+      color: #2264d1;
+    }
+    .legal-read-more {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--telluride-green);
+      margin-left: auto;
+    }
+    .legal-paper-badges {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      align-items: center;
+    }
+    .legal-paper-badges .paper-label {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .paper-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.03);
+      border: 1px solid rgba(0,0,0,0.06);
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      line-height: 1;
+    }
+    .paper-badge img {
+      height: 14px;
+      width: auto;
+      object-fit: contain;
+    }
+    .legal-card-header .legal-entity-logo {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .legal-entity-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 3px;
+    }
+    .legal-entity-logo svg {
+      width: 28px;
+      height: 28px;
+    }
+    .chip.active-public-entity { background: var(--county-green); color: #fff; }
+    .chip.active-water-court { background: #2264d1; color: #fff; }
+    .chip.active-housing { background: #6b3fa0; color: #fff; }
+    .chip.active-ordinance { background: var(--telluride-green); color: #fff; }
+    .chip.active-estate { background: #555; color: #fff; }
+    .chip.active-tax-finance { background: #8b5a2b; color: #fff; }
+    .chip.active-utilities { background: #3a8a6e; color: #fff; }
+
+    /* ── Loading / Error States ── */
+    .loading {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+    }
+    .loading .spinner {
+      display: inline-block;
+      width: 28px; height: 28px;
+      border: 3px solid var(--line);
+      border-top-color: var(--forest);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 10px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .error-msg {
+      text-align: center;
+      padding: 24px;
+      background: rgba(255,245,245,0.9);
+      border: 1px solid #fdd;
+      border-radius: var(--radius);
+      color: var(--accent-red);
+      font-size: 0.85rem;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    /* ── Main Layout (content + sidebar) ── */
+    .main-layout {
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+    }
+    .main-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      flex-shrink: 0;
+      width: 240px;
+      position: sticky;
+      top: 60px;
+      max-height: calc(100vh - 80px);
+      overflow-y: auto;
+    }
+    /* In Wix auto-height mode, sticky won't work — sidebar becomes static
+       and scrolls with content. Still useful as a persistent filter panel. */
+    body.wix-auto-height .sidebar {
+      position: relative;
+      top: auto;
+      max-height: none;
+      align-self: flex-start;
+    }
+    .sidebar-inner {
+      background: var(--card-bg);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(221, 213, 200, 0.72);
+      border-radius: 24px;
+      padding: 20px;
+      box-shadow: var(--shadow-soft);
+    }
+    .sidebar-title {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+    .sidebar-tag {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-bottom: 4px;
+      border: 1px solid transparent;
+    }
+    .sidebar-tag:hover {
+      background: rgba(24, 53, 45, 0.04);
+      color: var(--text-primary);
+    }
+    .sidebar-tag.active {
+      background: var(--forest);
+      color: #fff;
+      border-color: var(--forest);
+    }
+    .sidebar-tag .tag-icon {
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .sidebar-tag .tag-label {
+      flex: 1;
+      line-height: 1.3;
+    }
+    .sidebar-tag .tag-count {
+      font-size: 0.7rem;
+      font-weight: 700;
+      background: rgba(0,0,0,0.06);
+      color: var(--text-muted);
+      padding: 2px 8px;
+      border-radius: 999px;
+      min-width: 24px;
+      text-align: center;
+    }
+    .sidebar-tag.active .tag-count {
+      background: rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.85);
+    }
+    .sidebar-reset {
+      display: block;
+      width: 100%;
+      margin-top: 12px;
+      padding: 8px;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: 1px solid var(--line);
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+    }
+    .sidebar-reset:hover {
+      border-color: var(--forest);
+      color: var(--forest);
+    }
+
+    /* Sidebar mobile toggle */
+    .sidebar-toggle {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--forest);
+      color: #fff;
+      border: none;
+      box-shadow: 0 4px 20px rgba(24, 53, 45, 0.3);
+      cursor: pointer;
+      z-index: 200;
+      font-size: 1.3rem;
+      transition: all 0.2s;
+      align-items: center;
+      justify-content: center;
+    }
+    .sidebar-toggle:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 24px rgba(24, 53, 45, 0.4);
+    }
+    /* In auto-height mode, fixed toggle won't be visible — use sticky-bottom instead */
+    body.wix-auto-height .sidebar-toggle {
+      position: sticky;
+      bottom: 20px;
+      float: right;
+      margin-top: -72px;
+      margin-right: 12px;
+    }
+
+    /* Mobile sidebar overlay */
+    .sidebar-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.3);
+      z-index: 150;
+    }
+    .sidebar-overlay.active { display: block; }
+    /* In auto-height mode, overlay uses absolute positioning within the iframe */
+    body.wix-auto-height .sidebar-overlay {
+      position: absolute;
+      min-height: 100%;
+    }
+
+    @media (max-width: 860px) {
+      .main-layout { flex-direction: column; }
+      .sidebar {
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 270px;
+        height: 100vh;
+        max-height: 100vh;
+        z-index: 160;
+        padding: 20px 0;
+        transition: right 0.3s ease;
+      }
+      .sidebar.open { right: 0; }
+      /* In auto-height mode, mobile sidebar uses absolute positioning */
+      body.wix-auto-height .sidebar {
+        position: absolute;
+        height: 100%;
+        max-height: none;
+      }
+      .sidebar-inner {
+        height: 100%;
+        border-radius: 24px 0 0 24px;
+        overflow-y: auto;
+        padding: 24px 18px;
+      }
+      .sidebar-toggle { display: flex; }
+    }
+
+    /* ── Scroll-to-top button (useful in iframe context) ── */
+    .scroll-top-btn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.92);
+      color: var(--forest);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+      cursor: pointer;
+      z-index: 200;
+      font-size: 1.1rem;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .scroll-top-btn.visible { display: flex; }
+    .scroll-top-btn:hover {
+      background: var(--forest);
+      color: #fff;
+      border-color: var(--forest);
+    }
+    body.wix-auto-height .scroll-top-btn {
+      position: sticky;
+      float: left;
+      margin-top: -64px;
+      margin-left: 12px;
+    }
+
+    /* Active topic banner (shows on main content when topic is filtered) */
+    .topic-banner {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      margin-bottom: 16px;
+      background: rgba(24, 53, 45, 0.06);
+      border: 1px solid rgba(24, 53, 45, 0.12);
+      border-radius: 14px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--forest);
+    }
+    .topic-banner.visible { display: flex; }
+    .topic-banner .banner-icon { font-size: 1.1rem; }
+    .topic-banner .banner-text { flex: 1; }
+    .topic-banner .banner-clear {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      transition: all 0.2s;
+    }
+    .topic-banner .banner-clear:hover {
+      border-color: var(--forest);
+      color: var(--forest);
+    }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--line);
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .footer a { color: var(--forest); text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+
+    /* ── Mobile ── */
+    @media (max-width: 560px) {
+      .hero h1 { font-size: 2.1rem; }
+      .hero { padding: 20px 16px 22px; }
+      .hero::before { width: 80px; height: 80px; border-radius: 18px; margin-bottom: 14px; }
+      .hero::after { width: calc(100% - 20px); height: 220px; border-radius: 24px; }
+      .tab-btn { padding: 12px 14px; font-size: 0.8rem; }
+      .container { padding: 18px 12px 40px; }
+      .chip { padding: 8px 14px; font-size: 0.78rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <div class="hero">
+    <h1>Telluride Region<br>Government Hub</h1>
+    <p>Upcoming Meetings &amp; Events</p>
+    <div class="last-updated" id="lastUpdated"></div>
+  </div>
+
+  <!-- ── Tab Bar ── -->
+  <div class="tab-bar">
+    <button class="tab-btn active" data-tab="meetings">Meetings &amp; Events</button>
+    <button class="tab-btn" data-tab="news">News &amp; Alerts</button>
+    <button class="tab-btn" data-tab="legals">Legal Notices</button>
+    <button class="tab-btn" data-tab="links">Quick Links</button>
+  </div>
+
+  <div class="container">
+  <div class="main-layout">
+  <div class="main-content">
+
+    <!-- ── Topic Filter Banner ── -->
+    <div class="topic-banner" id="topicBanner">
+      <span class="banner-icon" id="bannerIcon"></span>
+      <span class="banner-text">Showing: <strong id="bannerLabel"></strong></span>
+      <button class="banner-clear" id="bannerClear">Clear filter</button>
+    </div>
+
+    <!-- ══════════ MEETINGS TAB ══════════ -->
+    <div class="tab-content active" id="tab-meetings">
+      <div class="filter-row">
+        <span class="chip active-all" data-filter="all" data-tab-target="meetings">All</span>
+        <span class="chip" data-filter="telluride" data-tab-target="meetings">Town of Telluride</span>
+        <span class="chip" data-filter="county" data-tab-target="meetings">San Miguel County</span>
+        <span class="chip" data-filter="smart" data-tab-target="meetings">SMART Transit</span>
+        <span class="chip" data-filter="mv" data-tab-target="meetings">Mountain Village</span>
+        <span class="chip" data-filter="school" data-tab-target="meetings">School District</span>
+        <span class="chip" data-filter="fire" data-tab-target="meetings">Fire District</span>
+        <span class="chip" data-filter="med" data-tab-target="meetings">Medical Center</span>
+      </div>
+      <div id="meetings-content">
+        <div class="loading"><div class="spinner"></div><br>Loading upcoming meetings…</div>
+      </div>
+    </div>
+
+    <!-- ══════════ NEWS TAB ══════════ -->
+    <div class="tab-content" id="tab-news">
+      <div class="filter-row">
+        <span class="chip active-all" data-filter="all" data-tab-target="news">All</span>
+        <span class="chip" data-filter="telluride" data-tab-target="news">Town of Telluride</span>
+        <span class="chip" data-filter="county" data-tab-target="news">San Miguel County</span>
+        <span class="chip" data-filter="ttimes" data-tab-target="news">Telluride Times</span>
+      </div>
+      <div id="news-content">
+        <div class="loading"><div class="spinner"></div><br>Loading news &amp; alerts…</div>
+      </div>
+    </div>
+
+    <!-- ══════════ LEGAL NOTICES TAB ══════════ -->
+    <div class="tab-content" id="tab-legals">
+      <div class="legals-intro" style="margin-bottom:16px; padding:12px 16px; background:rgba(166,50,35,0.06); border-radius:10px; border-left:4px solid #a63223;">
+        <p style="margin:0; font-size:0.85rem; color:var(--text-secondary); line-height:1.5;">
+          Public legal notices published in <strong>The Telluride Times</strong> and <strong>The Norwood Post</strong> for March 2026. Click any notice to read the full text on telluridenews.com.
+        </p>
+      </div>
+      <div class="filter-row">
+        <span class="chip active-all" data-filter="all" data-tab-target="legals">All</span>
+        <span class="chip" data-filter="public-entity" data-tab-target="legals">Public Entity</span>
+        <span class="chip" data-filter="water-court" data-tab-target="legals">Water Court</span>
+        <span class="chip" data-filter="housing" data-tab-target="legals">Housing</span>
+        <span class="chip" data-filter="ordinance" data-tab-target="legals">Ordinance</span>
+        <span class="chip" data-filter="estate" data-tab-target="legals">Estate / Creditors</span>
+        <span class="chip" data-filter="tax-finance" data-tab-target="legals">Tax &amp; Finance</span>
+        <span class="chip" data-filter="utilities" data-tab-target="legals">Utilities</span>
+      </div>
+      <div id="legals-content"></div>
+    </div>
+
+    <!-- ══════════ QUICK LINKS TAB ══════════ -->
+    <div class="tab-content" id="tab-links">
+      <div class="date-group" style="margin-top: 8px;">Town of Telluride</div>
+      <div class="links-grid">
+        <a class="link-card" href="https://telluride-co.civicweb.net/Portal/MeetingTypeList.aspx" target="_blank" rel="noopener">
+          <div class="link-icon">📋</div>
+          <h4>Agendas &amp; Minutes</h4>
+          <p>Browse upcoming and past meeting agendas, packets, and approved minutes for all Town boards.</p>
+          <div class="link-source src-telluride">telluride-co.gov</div>
+        </a>
+        <a class="link-card" href="https://telluride-co.gov/list.aspx" target="_blank" rel="noopener">
+          <div class="link-icon">🔔</div>
+          <h4>Subscribe to Alerts</h4>
+          <p>Sign up for email and text notifications about meetings, emergencies, public notices, and town news.</p>
+          <div class="link-source src-telluride">telluride-co.gov</div>
+        </a>
+        <a class="link-card" href="https://telluride-co.gov/calendar.aspx?CID=56" target="_blank" rel="noopener">
+          <div class="link-icon">📅</div>
+          <h4>Meeting Calendar</h4>
+          <p>Full calendar of all Town meetings — Town Council, HARC, P&amp;Z, Ecology Commission, and more.</p>
+          <div class="link-source src-telluride">telluride-co.gov</div>
+        </a>
+        <a class="link-card" href="https://telluride-co.gov/149/Boards-Commissions" target="_blank" rel="noopener">
+          <div class="link-icon">👥</div>
+          <h4>Boards &amp; Commissions</h4>
+          <p>HARC, Planning &amp; Zoning, Ecology, Parks &amp; Rec, and 10 more boards — members and info.</p>
+          <div class="link-source src-telluride">telluride-co.gov</div>
+        </a>
+      </div>
+
+      <div class="date-group">San Miguel County</div>
+      <div class="links-grid">
+        <a class="link-card" href="https://sanmiguelcoco.portal.civicclerk.com" target="_blank" rel="noopener">
+          <div class="link-icon">📋</div>
+          <h4>Agendas &amp; Minutes</h4>
+          <p>Meeting agendas, packets, and minutes for the Board of County Commissioners and all County boards.</p>
+          <div class="link-source src-county">sanmiguelcountyco.gov</div>
+        </a>
+        <a class="link-card" href="https://sanmiguelcountyco.gov/list.aspx" target="_blank" rel="noopener">
+          <div class="link-icon">🔔</div>
+          <h4>Subscribe to Alerts</h4>
+          <p>Get email and text notifications for County meetings, road closures, elections, and emergency alerts.</p>
+          <div class="link-source src-county">sanmiguelcountyco.gov</div>
+        </a>
+        <a class="link-card" href="https://sanmiguelcountyco.gov/192/Board-of-County-Commissioners" target="_blank" rel="noopener">
+          <div class="link-icon">🏛️</div>
+          <h4>County Commissioners</h4>
+          <p>Board of County Commissioners — meetings, agendas, and how to address the board.</p>
+          <div class="link-source src-county">sanmiguelcountyco.gov</div>
+        </a>
+        <a class="link-card" href="https://sanmiguelcountyco.gov/424/Boards-Commissions" target="_blank" rel="noopener">
+          <div class="link-icon">👥</div>
+          <h4>Boards &amp; Commissions</h4>
+          <p>Planning Commission, Health Board, Library Board, and all other County advisory bodies.</p>
+          <div class="link-source src-county">sanmiguelcountyco.gov</div>
+        </a>
+      </div>
+
+      <div class="date-group">SMART Transit</div>
+      <div class="links-grid">
+        <a class="link-card" href="https://smarttelluride.colorado.gov/board-meetings" target="_blank" rel="noopener">
+          <div class="link-icon">📋</div>
+          <h4>Board Meetings</h4>
+          <p>SMART Board of Directors meeting agendas, packets, and archives going back to 2022.</p>
+          <div class="link-source src-smart">smarttelluride.colorado.gov</div>
+        </a>
+        <a class="link-card" href="https://smarttelluride.colorado.gov/service-alerts" target="_blank" rel="noopener">
+          <div class="link-icon">🚌</div>
+          <h4>Service Alerts</h4>
+          <p>Current transit service alerts, route changes, and schedule updates for SMART bus service.</p>
+          <div class="link-source src-smart">smarttelluride.colorado.gov</div>
+        </a>
+      </div>
+
+      <div class="date-group">Town of Mountain Village</div>
+      <div class="links-grid">
+        <a class="link-card" href="https://townofmountainvillage.com/government/town-council/town-council/" target="_blank" rel="noopener">
+          <div class="link-icon">🏛️</div>
+          <h4>Town Council</h4>
+          <p>Agendas, packets, and minutes for Town Council meetings — posted the Friday before each meeting.</p>
+          <div class="link-source src-mv">townofmountainvillage.com</div>
+        </a>
+        <a class="link-card" href="https://townofmountainvillage.com/business/planning/design-review-board/" target="_blank" rel="noopener">
+          <div class="link-icon">📐</div>
+          <h4>Design Review Board</h4>
+          <p>DRB agendas, packets, and minutes — meets the first Thursday of most months.</p>
+          <div class="link-source src-mv">townofmountainvillage.com</div>
+        </a>
+        <a class="link-card" href="https://media.avcaptureall.cloud/?customerGuid=f6f590a7-5acc-4d32-9928-ad9ae0d02e06&target=foo&view=thumbs&tabs=past%7Ctoday%7Cupcoming" target="_blank" rel="noopener">
+          <div class="link-icon">🎥</div>
+          <h4>Watch Meetings</h4>
+          <p>Watch Town Council and board meetings live or on-demand through the video portal.</p>
+          <div class="link-source src-mv">townofmountainvillage.com</div>
+        </a>
+      </div>
+
+      <div class="date-group">Telluride School District R-1</div>
+      <div class="links-grid">
+        <a class="link-card" href="https://www.tellurideschool.org/agendasandminutes" target="_blank" rel="noopener">
+          <div class="link-icon">📋</div>
+          <h4>Agendas &amp; Minutes</h4>
+          <p>Board of Education agendas, packets, minutes, and Zoom recording links for all meetings.</p>
+          <div class="link-source src-school">tellurideschool.org</div>
+        </a>
+        <a class="link-card" href="https://www.tellurideschool.org/board" target="_blank" rel="noopener">
+          <div class="link-icon">🎓</div>
+          <h4>Board of Education</h4>
+          <p>Board members, meeting schedule, policies, and how to participate in public comment.</p>
+          <div class="link-source src-school">tellurideschool.org</div>
+        </a>
+      </div>
+
+      <div class="date-group">Telluride Hospital District / Medical Center</div>
+      <div class="links-grid">
+        <a class="link-card" href="https://www.tellmed.org/board-meetings" target="_blank" rel="noopener">
+          <div class="link-icon">🏥</div>
+          <h4>Board Meetings</h4>
+          <p>Board of Directors agendas, minutes, and resolutions — regular meetings 4th Thursday, 8:30 AM.</p>
+          <div class="link-source src-med">tellmed.org</div>
+        </a>
+        <a class="link-card" href="https://www.tellmed.org/board-of-directors" target="_blank" rel="noopener">
+          <div class="link-icon">👥</div>
+          <h4>Board of Directors</h4>
+          <p>Board members, district mission, and information about the Telluride Hospital District.</p>
+          <div class="link-source src-med">tellmed.org</div>
+        </a>
+      </div>
+
+      <div class="date-group">Telluride Fire Protection District</div>
+      <div class="links-grid">
+        <a class="link-card" href="https://www.telluridefire.com/board-meetings" target="_blank" rel="noopener">
+          <div class="link-icon">🚒</div>
+          <h4>Board Meetings</h4>
+          <p>Board of Directors agendas, minutes, and resolutions — meets monthly (3rd Tuesday, 5:30 PM).</p>
+          <div class="link-source src-fire">telluridefire.com</div>
+        </a>
+        <a class="link-card" href="https://www.telluridefire.com/audits-budgets" target="_blank" rel="noopener">
+          <div class="link-icon">📊</div>
+          <h4>Audits &amp; Budgets</h4>
+          <p>Annual audits, budgets, and financial documents for the Fire Protection District.</p>
+          <div class="link-source src-fire">telluridefire.com</div>
+        </a>
+      </div>
+
+      <div class="date-group">Telluride Times</div>
+      <div class="links-grid">
+        <a class="link-card" href="https://www.telluridenews.com/calendar/" target="_blank" rel="noopener">
+          <div class="link-icon">📰</div>
+          <h4>Community Calendar</h4>
+          <p>Community events, classes, performances, and activities in the Telluride region — updated weekly.</p>
+          <div class="link-source src-ttimes">telluridenews.com</div>
+        </a>
+        <a class="link-card" href="https://www.telluridenews.com/" target="_blank" rel="noopener">
+          <div class="link-icon">🗞️</div>
+          <h4>The Telluride Times</h4>
+          <p>Local newspaper covering news, sports, arts, and community happenings in the Telluride area.</p>
+          <div class="link-source src-ttimes">telluridenews.com</div>
+        </a>
+      </div>
+
+      <div class="date-group">Helpful Resources</div>
+      <div class="links-grid">
+        <a class="link-card" href="https://www.livabletelluride.org/blog" target="_blank" rel="noopener">
+          <div class="link-icon">✍️</div>
+          <h4>Livable Telluride Blog</h4>
+          <p>Community analysis and commentary on development, housing, and civic issues in the Telluride region.</p>
+          <div class="link-source" style="color: var(--accent-amber);">livabletelluride.org</div>
+        </a>
+        <a class="link-card" href="https://telluride-co.gov/rss.aspx" target="_blank" rel="noopener">
+          <div class="link-icon">📡</div>
+          <h4>RSS Feeds Directory</h4>
+          <p>Full list of available RSS feeds from the Town of Telluride — subscribe in any feed reader.</p>
+          <div class="link-source src-telluride">telluride-co.gov</div>
+        </a>
+      </div>
+    </div>
+
+  </div><!-- /main-content -->
+
+  <!-- ══════════ SIDEBAR ══════════ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-inner">
+      <div class="sidebar-title">Filter by Topic</div>
+      <div class="sidebar-tag active" data-topic="all">
+        <span class="tag-icon">📋</span>
+        <span class="tag-label">All Topics</span>
+      </div>
+      <div class="sidebar-tag" data-topic="housing">
+        <span class="tag-icon">🏠</span>
+        <span class="tag-label">Housing</span>
+        <span class="tag-count" id="count-housing">0</span>
+      </div>
+      <div class="sidebar-tag" data-topic="land-use">
+        <span class="tag-icon">🏗️</span>
+        <span class="tag-label">Land Use &amp; Development</span>
+        <span class="tag-count" id="count-land-use">0</span>
+      </div>
+      <div class="sidebar-tag" data-topic="public-safety">
+        <span class="tag-icon">🔥</span>
+        <span class="tag-label">Public Safety</span>
+        <span class="tag-count" id="count-public-safety">0</span>
+      </div>
+      <div class="sidebar-tag" data-topic="budget-finance">
+        <span class="tag-icon">💰</span>
+        <span class="tag-label">Budget &amp; Finance</span>
+        <span class="tag-count" id="count-budget-finance">0</span>
+      </div>
+      <div class="sidebar-tag" data-topic="infrastructure">
+        <span class="tag-icon">🚰</span>
+        <span class="tag-label">Infrastructure</span>
+        <span class="tag-count" id="count-infrastructure">0</span>
+      </div>
+      <div class="sidebar-tag" data-topic="environment">
+        <span class="tag-icon">🌿</span>
+        <span class="tag-label">Environment</span>
+        <span class="tag-count" id="count-environment">0</span>
+      </div>
+      <div class="sidebar-tag" data-topic="health-education">
+        <span class="tag-icon">🏥</span>
+        <span class="tag-label">Health &amp; Education</span>
+        <span class="tag-count" id="count-health-education">0</span>
+      </div>
+      <div class="sidebar-tag" data-topic="legal-governance">
+        <span class="tag-icon">⚖️</span>
+        <span class="tag-label">Legal &amp; Governance</span>
+        <span class="tag-count" id="count-legal-governance">0</span>
+      </div>
+      <button class="sidebar-reset" id="sidebarReset">Clear Filter</button>
+    </div>
+  </aside>
+
+  </div><!-- /main-layout -->
+  </div><!-- /container -->
+
+  <!-- Mobile sidebar toggle -->
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Filter by topic">🏷️</button>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+  <div class="footer">
+    Data sourced from <a href="https://telluride-co.gov" target="_blank">telluride-co.gov</a>,
+    <a href="https://sanmiguelcountyco.gov" target="_blank">sanmiguelcountyco.gov</a>,
+    <a href="https://smarttelluride.colorado.gov" target="_blank">smarttelluride.colorado.gov</a>,
+    <a href="https://townofmountainvillage.com" target="_blank">townofmountainvillage.com</a>,
+    <a href="https://www.tellurideschool.org" target="_blank">tellurideschool.org</a>,
+    <a href="https://www.telluridefire.com" target="_blank">telluridefire.com</a>, and
+    <a href="https://www.tellmed.org" target="_blank">tellmed.org</a>, and
+    <a href="https://www.telluridenews.com" target="_blank">telluridenews.com</a>.
+    Telluride, County, and Telluride Times data updated live. Other sources cached.<br>
+    Built for <a href="https://www.livabletelluride.org" target="_blank">Livable Telluride</a>
+  </div>
+
+<script>
+// ── Configuration ──
+const CODETABS_PROXY = 'https://api.codetabs.com/v1/proxy/?quest=';
+const ALLORIGINS_PROXY = 'https://api.allorigins.win/raw?url=';
+const RSS2JSON_PROXY = 'https://api.rss2json.com/v1/api.json?rss_url=';
+
+// ── Telluride CivicWeb API (JSON — returns all scheduled meetings) ──
+const TELLURIDE_MEETINGS_API = 'https://telluride-co.civicweb.net/Services/MeetingsService.svc/meetings';
+const TELLURIDE_MEETING_DETAIL = 'https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=';
+
+// ── County meeting calendar feed (RSS with custom XML fields) ──
+const COUNTY_CALENDAR_URL = 'https://sanmiguelcountyco.gov/RSSFeed.aspx?ModID=58';
+
+// ── News feeds ──
+const NEWS_FEEDS = [
+  {
+    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=1&CID=Town-News-1',
+    source: 'telluride',
+    sourceLabel: 'Town of Telluride',
+    category: 'Town News'
+  },
+  {
+    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=1&CID=Marshals-Department-12',
+    source: 'telluride',
+    sourceLabel: 'Town of Telluride',
+    category: "Marshal's Dept"
+  },
+  {
+    url: 'https://sanmiguelcountyco.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml',
+    source: 'county',
+    sourceLabel: 'San Miguel County',
+    category: 'News'
+  },
+  {
+    url: 'https://sanmiguelcountyco.gov/RSSFeed.aspx?ModID=63&CID=All-0',
+    source: 'county',
+    sourceLabel: 'San Miguel County',
+    category: 'Alert'
+  },
+  {
+    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=63&CID=All-0',
+    source: 'telluride',
+    sourceLabel: 'Town of Telluride',
+    category: 'Alert'
+  }
+];
+
+// ── Utility Functions ──
+
+function stripHtml(html) {
+  const div = document.createElement('div');
+  div.innerHTML = html || '';
+  return div.textContent.trim();
+}
+
+function truncate(text, maxLen = 200) {
+  if (!text || text.length <= maxLen) return text;
+  return text.slice(0, maxLen).replace(/\s+\S*$/, '') + '…';
+}
+
+function parseEventDate(dateStr) {
+  if (!dateStr) return null;
+  const parts = dateStr.split(' - ');
+  const d = new Date(parts[0].trim());
+  return isNaN(d) ? null : d;
+}
+
+function friendlyDate(d) {
+  if (!d || !(d instanceof Date) || isNaN(d)) {
+    if (typeof d === 'string') d = new Date(d);
+    if (!d || isNaN(d)) return '';
+  }
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const target = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  const diffDays = Math.round((target - today) / 86400000);
+
+  if (diffDays === 0) return 'Today';
+  if (diffDays === 1) return 'Tomorrow';
+  if (diffDays === -1) return 'Yesterday';
+
+  return d.toLocaleDateString('en-US', {
+    weekday: 'long', month: 'long', day: 'numeric',
+    year: d.getFullYear() !== now.getFullYear() ? 'numeric' : undefined
+  });
+}
+
+function dateGroupKey(d) {
+  if (typeof d === 'string') d = new Date(d);
+  if (!d || isNaN(d)) return '9999-99-99';
+  return d.toISOString().slice(0, 10);
+}
+
+// ══════════════════════════════════════════════════════
+// ── Fetch Telluride meetings from CivicWeb JSON API ──
+// ══════════════════════════════════════════════════════
+
+async function fetchTellurideMeetings() {
+  try {
+    // Build date range: today through 1 year out
+    const today = new Date();
+    const fromDate = today.toISOString().slice(0, 10);
+    const toDate = new Date(today.getFullYear() + 1, today.getMonth(), today.getDate()).toISOString().slice(0, 10);
+
+    const apiUrl = `${TELLURIDE_MEETINGS_API}?from=${fromDate}&to=${toDate}`;
+
+    // Try primary proxy (codetabs), then fallback to allorigins
+    let data;
+    try {
+      const resp = await fetch(CODETABS_PROXY + encodeURIComponent(apiUrl));
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      data = await resp.json();
+    } catch (primaryErr) {
+      console.warn('Primary proxy failed, trying fallback:', primaryErr.message);
+      const resp2 = await fetch(ALLORIGINS_PROXY + encodeURIComponent(apiUrl));
+      if (!resp2.ok) throw new Error(`Fallback HTTP ${resp2.status}`);
+      data = await resp2.json();
+    }
+
+    if (!Array.isArray(data)) return [];
+
+    return data.map(m => {
+      // Clean up meeting name — remove the date suffix for cleaner display
+      // e.g. "Town Council - Mar 31 2026" → "Town Council"
+      const cleanName = m.Name.replace(/\s*-\s*\w{3}\s+\d{1,2}\s+\d{4}.*$/, '').trim();
+      const isCanceled = /cancel/i.test(m.Name);
+
+      return {
+        title: isCanceled ? cleanName + ' — CANCELED' : cleanName,
+        link: TELLURIDE_MEETING_DETAIL + m.Id,
+        description: '',
+        eventDate: new Date(m.MeetingDate),
+        eventDates: '',
+        eventTimes: m.MeetingTime || '',
+        location: m.MeetingLocation || '',
+        source: 'telluride',
+        sourceLabel: 'Town of Telluride',
+        category: 'Meeting',
+        canceled: isCanceled,
+        hasAgenda: m.Published
+      };
+    });
+  } catch (err) {
+    console.warn('Telluride CivicWeb API error:', err.message);
+    return [];
+  }
+}
+
+// ══════════════════════════════════════════════════════════
+// ── Fetch County meetings via rss2json (fast, ~0.3s) ──
+// ══════════════════════════════════════════════════════════
+//
+// County agenda links point to CivicClerk portal pages where the actual
+// agenda documents can be viewed and downloaded.
+//
+// TO UPDATE: Visit https://sanmiguelcoco.portal.civicclerk.com, find the
+// meeting in the calendar, click it, and note the event ID from the URL
+// (e.g. /event/864/files → event ID 864). Add it to COUNTY_CIVICCLERK_IDS below.
+
+const COUNTY_CIVICCLERK_BASE = 'https://sanmiguelcoco.portal.civicclerk.com/event/';
+const COUNTY_CIVICCLERK_FALLBACK = 'https://sanmiguelcoco.portal.civicclerk.com';
+
+// Map: "meeting title fragment|YYYY-MM-DD" → CivicClerk event ID
+const COUNTY_CIVICCLERK_IDS = {
+  'Board of County Commissioners Special Meeting|2026-03-25': 864,
+  'Board of County Commissioner Meeting|2026-03-25': 864,
+  'Planning Commission and Board of County Commissioners Joint Work Session|2026-03-26': 971,
+  'Joint Work Session|2026-03-26': 971,
+  'Board of County Commissioners Meeting|2026-04-01': 882,
+  'Board of County Commissioner Meeting|2026-04-01': 882,
+  'Board of County Commissioners Work Session|2026-04-08': 986,
+};
+
+function getCountyAgendaLink(title, eventDate) {
+  if (!eventDate) return COUNTY_CIVICCLERK_FALLBACK;
+  const dateKey = eventDate.toISOString().slice(0, 10);
+  // Try exact title match
+  const exactKey = title + '|' + dateKey;
+  if (COUNTY_CIVICCLERK_IDS[exactKey]) {
+    return COUNTY_CIVICCLERK_BASE + COUNTY_CIVICCLERK_IDS[exactKey] + '/files';
+  }
+  // Try partial match on date
+  for (const key of Object.keys(COUNTY_CIVICCLERK_IDS)) {
+    if (key.endsWith('|' + dateKey)) {
+      return COUNTY_CIVICCLERK_BASE + COUNTY_CIVICCLERK_IDS[key] + '/files';
+    }
+  }
+  return COUNTY_CIVICCLERK_FALLBACK;
+}
+
+async function fetchCountyMeetings() {
+  try {
+    const resp = await fetch(RSS2JSON_PROXY + encodeURIComponent(COUNTY_CALENDAR_URL));
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const data = await resp.json();
+    if (data.status !== 'ok' || !data.items) return [];
+
+    return data.items.map(item => {
+      const descText = stripHtml(item.description);
+
+      // Parse event date from description text (e.g. "March 25, 2026")
+      const dateMatch = descText.match(/(\w+ \d{1,2}, \d{4})/);
+      // Parse time range (e.g. "9:30 AM - 3:00 PM")
+      const timeMatch = descText.match(/(\d{1,2}:\d{2}\s*[APap][Mm]\s*-\s*\d{1,2}:\d{2}\s*[APap][Mm])/);
+      // Parse single time
+      const singleTimeMatch = !timeMatch ? descText.match(/(\d{1,2}:\d{2}\s*[APap][Mm])/) : null;
+
+      let eventDate = dateMatch ? new Date(dateMatch[1]) : new Date(item.pubDate);
+
+      // County government meetings (BOCC, Planning Commission, etc.) have agendas
+      // on the CivicClerk portal
+      const isGovMeeting = /commissioner|planning commission|work session|board of county/i.test(item.title);
+      const agendaLink = isGovMeeting ? getCountyAgendaLink(item.title, eventDate) : null;
+
+      return {
+        title: item.title || 'Untitled',
+        link: item.link || '#',
+        description: truncate(descText),
+        eventDate,
+        eventDates: dateMatch ? dateMatch[1] : '',
+        eventTimes: timeMatch ? timeMatch[1] : (singleTimeMatch ? singleTimeMatch[1] : ''),
+        location: '',
+        source: 'county',
+        sourceLabel: 'San Miguel County',
+        category: 'Meeting',
+        canceled: false,
+        hasAgenda: isGovMeeting,
+        agendaLink
+      };
+    });
+  } catch (err) {
+    console.warn('County calendar fetch error:', err.message);
+    return [];
+  }
+}
+
+// ══════════════════════════════════════════════════════════
+// ── SMART Transit meetings (cached data, instant load) ──
+// ══════════════════════════════════════════════════════════
+//
+// SMART meetings are cached directly in this file for instant loading.
+// Their board meets ~monthly and the website has no API, so real-time
+// scraping is too slow and unreliable.
+//
+// TO UPDATE: Visit https://smarttelluride.colorado.gov/board-meetings,
+// note any new/changed meetings, and edit the SMART_CACHED_DATA array below.
+// Update SMART_CACHE_DATE so you know when it was last refreshed.
+
+const SMART_BOARD_URL = 'https://smarttelluride.colorado.gov/board-meetings';
+const SMART_CACHE_DATE = '2026-03-24';
+
+const SMART_CACHED_DATA = [
+  {
+    date: 'April 9, 2026',
+    title: 'SMART Board of Directors',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    note: 'Next scheduled meeting — agenda and packet will be posted closer to the date.'
+  },
+  {
+    date: 'March 12, 2026',
+    title: 'SMART Board of Directors',
+    agendaUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART%20Board%20Agenda_March%2012th%202026_distributed.pdf',
+    packetUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART%20Board%20meeting%20packet_March%2012th%202026.pdf',
+    special: false
+  },
+  {
+    date: 'January 8, 2026',
+    title: 'SMART Board of Directors',
+    agendaUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART%20Board%20Agenda_January%208th%202026_distributed.pdf',
+    packetUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART%20Board%20meeting%20packet_January%208th%202026.pdf',
+    special: false
+  }
+];
+
+// ══════════════════════════════════════════════════════════════════
+// ── Mountain Village cached meetings (same pattern as SMART) ──
+// ══════════════════════════════════════════════════════════════════
+//
+// Mountain Village website is behind Cloudflare and has no API.
+// Town Council meets the 3rd Thursday of most months; DRB meets
+// the 1st Thursday of most months.
+//
+// TO UPDATE: Visit https://townofmountainvillage.com/government/town-council/town-council/
+// and https://townofmountainvillage.com/business/planning/design-review-board/
+// Note any new/changed meetings and edit MV_CACHED_DATA below.
+
+const MV_TC_URL = 'https://townofmountainvillage.com/government/town-council/town-council/';
+const MV_DRB_URL = 'https://townofmountainvillage.com/business/planning/design-review-board/';
+const MV_CACHE_DATE = '2026-03-24';
+
+const MV_CACHED_DATA = [
+  // ── Town Council ──
+  {
+    date: 'April 23, 2026',
+    time: '2:00 PM – 7:00 PM',
+    title: 'Town Council Meeting',
+    board: 'tc',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: 'Town Hall, 455 Mountain Village Blvd, Suite A',
+    note: 'Next scheduled meeting — agenda posted the Friday before.'
+  },
+  {
+    date: 'May 21, 2026',
+    time: '2:00 PM – 8:00 PM',
+    title: 'Town Council Meeting',
+    board: 'tc',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
+  },
+  {
+    date: 'June 17, 2026',
+    time: '8:30 AM – 4:00 PM',
+    title: 'Town Council Meeting',
+    board: 'tc',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
+  },
+  {
+    date: 'March 19, 2026',
+    time: '2:00 PM',
+    title: 'Town Council Meeting',
+    board: 'tc',
+    agendaUrl: 'https://townofmountainvillage.com/site/assets/files/48429/march_19-_2026_town_council_meeting_agenda.pdf',
+    packetUrl: 'https://townofmountainvillage.com/site/assets/files/48439/march_19-_2026_town_council_meeting_packet.pdf',
+    special: false,
+    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
+  },
+  // ── Design Review Board ──
+  {
+    date: 'April 2, 2026',
+    time: '10:00 AM – 2:00 PM',
+    title: 'Design Review Board',
+    board: 'drb',
+    agendaUrl: 'https://townofmountainvillage.com/site/assets/files/48456/april_2-_2026_design_review_board_meeting_agenda.pdf',
+    packetUrl: null,
+    special: false,
+    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
+  },
+  {
+    date: 'May 7, 2026',
+    time: '10:00 AM – 3:00 PM',
+    title: 'Design Review Board',
+    board: 'drb',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
+  },
+  {
+    date: 'June 4, 2026',
+    time: '10:00 AM – 3:00 PM',
+    title: 'Design Review Board',
+    board: 'drb',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
+  },
+  {
+    date: 'March 5, 2026',
+    time: '10:00 AM',
+    title: 'Design Review Board',
+    board: 'drb',
+    agendaUrl: 'https://townofmountainvillage.com/site/assets/files/48270/march_5-_2026_design_review_board_meeting_agenda.pdf',
+    packetUrl: 'https://townofmountainvillage.com/site/assets/files/48363/march_5-_2026_design_review_board_meeting_packet_reduced.pdf',
+    special: false,
+    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
+  }
+];
+
+function getMVMeetings() {
+  return MV_CACHED_DATA.map(m => {
+    const eventDate = new Date(m.date);
+    const hasAgenda = !!m.agendaUrl;
+    const link = m.agendaUrl || (m.board === 'drb' ? MV_DRB_URL : MV_TC_URL);
+
+    let description = '';
+    if (m.note) {
+      description = m.note;
+    } else if (hasAgenda) {
+      description = m.packetUrl
+        ? 'Agenda and full meeting packet available (PDF).'
+        : 'Agenda available (PDF).';
+    }
+
+    return {
+      title: m.special ? m.title + ' — Special Meeting' : m.title,
+      link,
+      description,
+      eventDate,
+      eventDates: '',
+      eventTimes: m.time || '',
+      location: m.location || '',
+      source: 'mv',
+      sourceLabel: 'Mountain Village',
+      category: m.board === 'drb' ? 'DRB Meeting' : 'Meeting',
+      canceled: false,
+      hasAgenda
+    };
+  });
+}
+
+// ══════════════════════════════════════════════════════════════════════
+// ── Telluride School District R-1 cached meetings (same pattern) ──
+// ══════════════════════════════════════════════════════════════════════
+//
+// School Board meets monthly: Work Session (Monday 3:30 PM) and
+// Monthly Meeting (Tuesday 5:15 PM), typically the 3rd week.
+//
+// TO UPDATE: Visit https://www.tellurideschool.org/agendasandminutes
+// Note any new/changed meetings and edit SCHOOL_CACHED_DATA below.
+
+const SCHOOL_BOARD_URL = 'https://www.tellurideschool.org/agendasandminutes';
+const SCHOOL_CACHE_DATE = '2026-03-24';
+
+const SCHOOL_CACHED_DATA = [
+  // ── Upcoming (no agendas yet) ──
+  {
+    date: 'April 27, 2026',
+    time: '3:30 PM',
+    title: 'Board of Education Work Session',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: 'Bridal Veil District Conference Room / Zoom',
+    note: 'Next scheduled work session — agenda posted closer to the date.'
+  },
+  {
+    date: 'April 28, 2026',
+    time: '5:15 PM',
+    title: 'Board of Education Monthly Meeting',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: 'Bridal Veil District Conference Room / Zoom',
+    note: 'Next scheduled monthly meeting — agenda posted closer to the date.'
+  },
+  {
+    date: 'May 18, 2026',
+    time: '3:30 PM',
+    title: 'Board of Education Work Session',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: 'Bridal Veil District Conference Room / Zoom'
+  },
+  {
+    date: 'May 19, 2026',
+    time: '5:15 PM',
+    title: 'Board of Education Monthly Meeting',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: 'Bridal Veil District Conference Room / Zoom'
+  },
+  {
+    date: 'June 9, 2026',
+    time: '3:30 PM',
+    title: 'Board of Education Work Session',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: 'Bridal Veil District Conference Room / Zoom'
+  },
+  {
+    date: 'June 9, 2026',
+    time: '5:15 PM',
+    title: 'Board of Education Monthly Meeting',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: 'Bridal Veil District Conference Room / Zoom'
+  },
+  // ── Recent (with agendas) ──
+  {
+    date: 'March 16, 2026',
+    time: '3:30 PM',
+    title: 'Board of Education Work Session',
+    agendaUrl: 'https://files.smartsites.parentsquare.com/3403/31626_ws_packet.pdf',
+    packetUrl: null,
+    special: false,
+    location: 'Bridal Veil District Conference Room / Zoom'
+  },
+  {
+    date: 'March 17, 2026',
+    time: '5:15 PM',
+    title: 'Board of Education Monthly Meeting',
+    agendaUrl: 'https://files.smartsites.parentsquare.com/3403/31726_mm_packet.pdf',
+    packetUrl: null,
+    special: false,
+    location: 'Bridal Veil District Conference Room / Zoom'
+  }
+];
+
+function getSchoolMeetings() {
+  return SCHOOL_CACHED_DATA.map(m => {
+    const eventDate = new Date(m.date);
+    const hasAgenda = !!m.agendaUrl;
+    const link = m.agendaUrl || SCHOOL_BOARD_URL;
+
+    let description = '';
+    if (m.note) {
+      description = m.note;
+    } else if (hasAgenda) {
+      description = 'Agenda/packet available (PDF).';
+    }
+
+    return {
+      title: m.special ? m.title + ' — Special Meeting' : m.title,
+      link,
+      description,
+      eventDate,
+      eventDates: '',
+      eventTimes: m.time || '',
+      location: m.location || '',
+      source: 'school',
+      sourceLabel: 'School District R-1',
+      category: m.special ? 'Special Meeting' : (/Work Session/i.test(m.title) ? 'Work Session' : 'Board Meeting'),
+      canceled: false,
+      hasAgenda
+    };
+  });
+}
+
+// ══════════════════════════════════════════════════════════════════
+// ── Telluride Fire Protection District cached meetings ──
+// ══════════════════════════════════════════════════════════════════
+//
+// Fire District Board of Directors meets monthly, typically the
+// 3rd Tuesday at 5:30 PM, 131 W Columbia Ave.
+//
+// TO UPDATE: Visit https://www.telluridefire.com/board-meetings
+// Note any new/changed meetings and edit FIRE_CACHED_DATA below.
+
+const FIRE_BOARD_URL = 'https://www.telluridefire.com/board-meetings';
+const FIRE_CACHE_DATE = '2026-03-24';
+
+const FIRE_CACHED_DATA = [
+  {
+    date: 'April 21, 2026',
+    time: '5:30 PM',
+    title: 'Board of Directors Meeting',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: '131 W Columbia Ave, Telluride, CO 81435',
+    note: 'Next scheduled meeting — agenda typically posted a few days before.'
+  },
+  {
+    date: 'March 17, 2026',
+    time: '5:30 PM',
+    title: 'Board of Directors Meeting',
+    agendaUrl: 'https://www.telluridefire.com/files/3d3e8ccfb/Agenda+-March+17th%2C+2026.pdf',
+    packetUrl: null,
+    special: false,
+    location: '131 W Columbia Ave, Telluride, CO 81435'
+  },
+  {
+    date: 'February 17, 2026',
+    time: '5:30 PM',
+    title: 'Board of Directors Meeting',
+    agendaUrl: 'https://www.telluridefire.com/files/286ab5c22/Agenda+-February+17th%2C+2026.pdf',
+    packetUrl: null,
+    special: false,
+    location: '131 W Columbia Ave, Telluride, CO 81435'
+  },
+  {
+    date: 'January 20, 2026',
+    time: '5:30 PM',
+    title: 'Board of Directors Meeting',
+    agendaUrl: 'https://www.telluridefire.com/files/cc0cf8d03/Agenda+-January+20th%2C+2026.pdf',
+    packetUrl: null,
+    special: false,
+    location: '131 W Columbia Ave, Telluride, CO 81435'
+  }
+];
+
+function getFireMeetings() {
+  return FIRE_CACHED_DATA.map(m => {
+    const eventDate = new Date(m.date);
+    const hasAgenda = !!m.agendaUrl;
+    const link = m.agendaUrl || FIRE_BOARD_URL;
+
+    let description = '';
+    if (m.note) {
+      description = m.note;
+    } else if (hasAgenda) {
+      description = 'Board agenda available (PDF).';
+    }
+
+    return {
+      title: m.special ? m.title + ' — Special Meeting' : m.title,
+      link,
+      description,
+      eventDate,
+      eventDates: '',
+      eventTimes: m.time || '',
+      location: m.location || '',
+      source: 'fire',
+      sourceLabel: 'Fire District',
+      category: m.special ? 'Special Meeting' : 'Board Meeting',
+      canceled: false,
+      hasAgenda
+    };
+  });
+}
+
+// ══════════════════════════════════════════════════════════════════════
+// ── Telluride Hospital District / Medical Center cached meetings ──
+// ══════════════════════════════════════════════════════════════════════
+//
+// Regular Board meetings: 4th Thursday, 8:30 AM at 333 W Colorado Ave
+// (2nd Floor) and Zoom. Special meetings scheduled as needed.
+//
+// TO UPDATE: Visit https://www.tellmed.org/board-meetings
+// Note any new/changed meetings and edit MED_CACHED_DATA below.
+
+const MED_BOARD_URL = 'https://www.tellmed.org/board-meetings';
+const MED_CACHE_DATE = '2026-03-24';
+
+const MED_CACHED_DATA = [
+  // ── Upcoming ──
+  {
+    date: 'March 26, 2026',
+    time: '8:30 AM – 11:30 AM',
+    title: 'Regular Board Meeting',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom',
+    note: 'Next regular meeting — agenda typically posted a few days before.'
+  },
+  // ── Recent ──
+  {
+    date: 'March 9, 2026',
+    time: '1:00 PM – 2:00 PM',
+    title: 'Special Board Meeting',
+    agendaUrl: 'https://www.tellmed.org/files/a6a367fff/THD+Special+Bd+Mtg+Agenda+3.9.25.pdf',
+    packetUrl: null,
+    special: true,
+    location: 'TMC Wellness Annex / Zoom'
+  },
+  {
+    date: 'March 5, 2026',
+    time: '8:00 AM – 8:30 AM',
+    title: 'Special Board Meeting',
+    agendaUrl: 'https://www.tellmed.org/files/5e604df7f/THD+Special+Bd+Mtg+Agenda+3.5.25.pdf',
+    packetUrl: null,
+    special: true,
+    location: 'TMC Wellness Annex / Zoom'
+  },
+  {
+    date: 'February 26, 2026',
+    time: '8:30 AM – 11:30 AM',
+    title: 'Regular Board Meeting',
+    agendaUrl: 'https://www.tellmed.org/files/06f7d8cca/THD+Reg+BOD+Mtg+2.26.26+Agenda.pdf',
+    packetUrl: null,
+    special: false,
+    location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom'
+  },
+  {
+    date: 'January 22, 2026',
+    time: '8:30 AM',
+    title: 'Regular Board Meeting',
+    agendaUrl: 'https://www.tellmed.org/files/3252b5faf/THD+BOD+Mtg+1.22.26+Agenda.pdf',
+    packetUrl: null,
+    special: false,
+    location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom'
+  }
+];
+
+function getMedMeetings() {
+  return MED_CACHED_DATA.map(m => {
+    const eventDate = new Date(m.date);
+    const hasAgenda = !!m.agendaUrl;
+    const link = m.agendaUrl || MED_BOARD_URL;
+
+    let description = '';
+    if (m.note) {
+      description = m.note;
+    } else if (hasAgenda) {
+      description = 'Board agenda available (PDF).';
+    }
+
+    return {
+      title: m.special ? m.title + ' — Special Meeting' : m.title,
+      link,
+      description,
+      eventDate,
+      eventDates: '',
+      eventTimes: m.time || '',
+      location: m.location || '',
+      source: 'med',
+      sourceLabel: 'Medical Center',
+      category: m.special ? 'Special Meeting' : 'Board Meeting',
+      canceled: false,
+      hasAgenda
+    };
+  });
+}
+
+// ══════════════════════════════════════════════════════════════
+// ── Meeting Topic Summaries (cached, update when agendas change) ──
+// ══════════════════════════════════════════════════════════════
+//
+// Summaries are cached here so they load instantly for all viewers.
+// Each key is "source|YYYY-MM-DD" matching the meeting's source and date.
+//
+// TO UPDATE: When a new agenda is published or an existing one changes,
+// update the matching summary below and bump SUMMARIES_CACHE_DATE.
+// For Telluride, check https://telluride-co.civicweb.net/Portal/MeetingTypeList.aspx
+// For County, check https://sanmiguelcoco.portal.civicclerk.com
+// For SMART, check https://smarttelluride.colorado.gov/board-meetings
+// For Mountain Village, check https://townofmountainvillage.com/government/town-council/town-council/
+// For School District, check https://www.tellurideschool.org/agendasandminutes
+// For Fire District, check https://www.telluridefire.com/board-meetings
+// For Medical Center, check https://www.tellmed.org/board-meetings
+
+const SUMMARIES_CACHE_DATE = '2026-03-24';
+
+const MEETING_SUMMARIES = {
+  // ── Telluride ──
+  'telluride|2026-03-26|Planning & Zoning Commission':
+    'Carhenge Redevelopment Project work session (affordable housing PUD at 700 W Pacific Ave) · Comprehensive Plan review · Colorado Wildfire Resiliency Code & Land Use Code updates',
+
+  'telluride|2026-03-31|Town Council':
+    'Public hearing: Stender Residence HARC appeal (continued to Apr 28) · 2026 Proposed Construction Projects work session · Adoption of Colorado Wildfire Resiliency Code · 2026 Open Space Commission Work Plan · Deed-restricted property sales (Silver Jack Unit 205, Element 52 Unit SW-102) · Workforce housing deed amendments (Overlook Lots 17 & 2) · Acquisition of Wilkin Court Unit H · Executive session: Town Manager evaluation',
+
+  'telluride|2026-03-31|Telluride Housing Authority':
+    'Workforce housing deed amendments for Overlook at Telluride Subdivision (Lots 17 & 2) · Formation of a Resident Advisory Committee',
+
+  // ── County ──
+  'county|2026-03-25|Board of County Commissioners Special Meeting':
+    'Consent: Deed restriction covenant approvals (multiple properties) · Gravel project amendments · FY27 water system improvement support for Ophir · Airport Improvement Plan agreement · Admin: CO Dept of Agriculture Conflict Reduction Program · Letter supporting Nuclear Lifecycle Innovation Campus · Affordable housing: Housing Action Plan Grant · Legislation: House Bill 26-1276 · Executive session: Lucarelli v. BOCC litigation',
+
+  'county|2026-03-25|Board of County Commissioner Meeting':
+    'Consent: Deed restriction covenant approvals (multiple properties) · Gravel project amendments · FY27 water system improvement support for Ophir · Airport Improvement Plan agreement · Admin: CO Dept of Agriculture Conflict Reduction Program · Letter supporting Nuclear Lifecycle Innovation Campus · Affordable housing: Housing Action Plan Grant · Legislation: House Bill 26-1276 · Executive session: Lucarelli v. BOCC litigation',
+
+  'county|2026-03-26|Planning Commission and Board of County Commissioners Joint Work Session':
+    'Land Use Code Amendment: Accelerated Housing Review · Land Use Code Amendment: Natural Resources — Forestry Practices',
+
+  'county|2026-03-26|Joint Work Session - County Planning Commission and San Miguel County Board':
+    'Land Use Code Amendment: Accelerated Housing Review · Land Use Code Amendment: Natural Resources — Forestry Practices',
+
+  // ── SMART ──
+  'smart|2026-04-09|SMART Board of Directors':
+    'Agenda not yet posted — check back closer to the meeting date',
+
+  // ── Mountain Village ──
+  'mv|2026-04-23|Town Council Meeting':
+    'Agenda not yet posted — typically published the Friday before the meeting',
+  'mv|2026-04-02|Design Review Board':
+    'Agenda posted — check townofmountainvillage.com for project applications under review',
+
+  // ── School District R-1 ──
+  'school|2026-03-16|Board of Education Work Session':
+    'Certificates & Stoles for outgoing Student Representatives · Funding & Staffing update: 2026-27 budget reductions (5.93 FTE, $655K target) including TES multi-age K-1, TMHS Social Studies & Spanish 7-12, SPED & clinical therapist reductions · BOE Student Award Planning',
+
+  'school|2026-03-17|Board of Education Monthly Meeting':
+    'TES Student Presentations · TIS Building Report · Administrative Report · Policy governance monitoring (B/SR-1 & B/SR-2) · ELAT Grant assurances · Monitoring Report E-4: Safe & Healthy Community · Funding & Staffing update · One-to-One Device expenditure ($166,500) · Board Self-Assessment (GP-4-E) · Executive session: Superintendent evaluation & Rico School Building property',
+
+  'school|2026-04-27|Board of Education Work Session':
+    'Agenda not yet posted — check back closer to the meeting date',
+  'school|2026-04-28|Board of Education Monthly Meeting':
+    'Agenda not yet posted — check back closer to the meeting date',
+
+  // ── Fire District ──
+  'fire|2026-03-17|Board of Directors Meeting':
+    'Old business: Station 3 update · Apparatus update · New business: Resolution 2026-02 (Colorado Wildfire Resiliency Code) · Resolution 2026-03 (International Wildland Urban Interface/WUI Code) · Reports from Deputy Chief, Battalion Chief Training Officer, Fire Marshal, EMS & HR Coordinators, District Chief',
+
+  'fire|2026-02-17|Board of Directors Meeting':
+    'Old business: Station 3 update · Apparatus update · Reports from Deputy Chief, Battalion Chief Training Officer, Fire Marshal, EMS & HR Coordinators, District Chief · Review and approval of bills',
+
+  'fire|2026-04-21|Board of Directors Meeting':
+    'Agenda not yet posted — check back closer to the meeting date',
+
+  // ── Medical Center / Hospital District ──
+  'med|2026-03-09|Special Board Meeting — Special Meeting':
+    'Review of Final Report from Jensen Partners (healthcare partnership consulting)',
+
+  'med|2026-03-05|Special Board Meeting — Special Meeting':
+    'Board action on Jensen Proposal to explore partnerships',
+
+  'med|2026-02-26|Regular Board Meeting':
+    'Board Education: Primary Care presentation (Alline Arguelles, PC Practice Manager) · New Facility update · Finance Committee update & January 2026 draft financials · CEO Report (Jeff Roberts) · Foundation/Campaign update (Heidi Lauterbach) · Executive sessions: partnership negotiations strategy & CEO evaluation',
+
+  'med|2026-03-26|Regular Board Meeting':
+    'Agenda not yet posted — check back closer to the meeting date',
+};
+
+// Look up a cached summary for a meeting item
+function getMeetingSummary(item) {
+  if (!item.eventDate) return '';
+  const dateKey = item.eventDate.toISOString().slice(0, 10);
+  // Try exact match with title first
+  const exactKey = item.source + '|' + dateKey + '|' + item.title.replace(/ — CANCELED$/, '');
+  if (MEETING_SUMMARIES[exactKey]) return MEETING_SUMMARIES[exactKey];
+  // Try partial match (source + date only, for single-meeting days)
+  for (const key of Object.keys(MEETING_SUMMARIES)) {
+    if (key.startsWith(item.source + '|' + dateKey + '|')) {
+      // Only return if there's just one meeting for this source+date
+      const matchCount = Object.keys(MEETING_SUMMARIES).filter(k => k.startsWith(item.source + '|' + dateKey + '|')).length;
+      if (matchCount === 1) return MEETING_SUMMARIES[key];
+    }
+  }
+  return '';
+}
+
+// ══════════════════════════════════════════════════════════════
+// ── Meeting Zoom Links (cached — update when new agendas post) ──
+// ══════════════════════════════════════════════════════════════
+//
+// Only include a Zoom link when the actual agenda contains one.
+// Key format: "source|YYYY-MM-DD|meeting title" (same as MEETING_SUMMARIES).
+// School District uses one consistent Zoom room for all meetings — handled separately.
+//
+// TO UPDATE: When a new agenda is posted, open the PDF/page and look for
+// the Zoom registration or join URL. Add it here.
+
+const ZOOM_LINKS_CACHE_DATE = '2026-03-24';
+
+const MEETING_ZOOM_LINKS = {
+  // ── Telluride ──
+  'telluride|2026-03-26|Planning & Zoning Commission':
+    'https://us06web.zoom.us/meeting/register/pvzPtHtIRZmah22XUU2xLg',
+
+  'telluride|2026-03-31|Town Council':
+    'https://us06web.zoom.us/meeting/register/xwQzQrv5TcSwUDVj1eylkg',
+
+  // ── County ──
+  'county|2026-03-25|Board of County Commissioners Special Meeting':
+    'https://us02web.zoom.us/meeting/register/OtNb_dreTomuYTpzADMLGQ#/registration',
+};
+
+// School District uses one consistent Zoom link for all meetings
+const SCHOOL_ZOOM_LINK = 'https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09';
+
+function getMeetingZoomLink(item) {
+  if (!item.eventDate) return '';
+  // School district always uses the same link
+  if (item.source === 'school') return SCHOOL_ZOOM_LINK;
+  const dateKey = item.eventDate.toISOString().slice(0, 10);
+  const exactKey = item.source + '|' + dateKey + '|' + item.title.replace(/ — CANCELED$/, '').replace(/ — Special Meeting$/, '');
+  if (MEETING_ZOOM_LINKS[exactKey]) return MEETING_ZOOM_LINKS[exactKey];
+  // Try partial match
+  for (const key of Object.keys(MEETING_ZOOM_LINKS)) {
+    if (key.startsWith(item.source + '|' + dateKey + '|')) {
+      const matchCount = Object.keys(MEETING_ZOOM_LINKS).filter(k => k.startsWith(item.source + '|' + dateKey + '|')).length;
+      if (matchCount === 1) return MEETING_ZOOM_LINKS[key];
+    }
+  }
+  return '';
+}
+
+function getSmartMeetings() {
+  return SMART_CACHED_DATA.map(m => {
+    const eventDate = new Date(m.date);
+    const hasAgenda = !!m.agendaUrl;
+    const link = m.agendaUrl || SMART_BOARD_URL;
+
+    let description = '';
+    if (m.note) {
+      description = m.note;
+    } else if (hasAgenda) {
+      description = m.packetUrl
+        ? 'Board agenda and full meeting packet available (PDF).'
+        : 'Board agenda available (PDF).';
+    }
+
+    return {
+      title: m.special ? m.title + ' — Special Meeting' : m.title,
+      link,
+      description,
+      eventDate,
+      eventDates: '',
+      eventTimes: '',
+      location: '',
+      source: 'smart',
+      sourceLabel: 'SMART Transit',
+      category: m.special ? 'Special Meeting' : 'Board Meeting',
+      canceled: false,
+      hasAgenda
+    };
+  });
+}
+
+// ══════════════════════════════════════
+// ── Fetch news/alerts via rss2json ──
+// ══════════════════════════════════════
+
+async function fetchNewsFeed(feedConfig) {
+  try {
+    const resp = await fetch(RSS2JSON_PROXY + encodeURIComponent(feedConfig.url));
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const data = await resp.json();
+    if (data.status !== 'ok' || !data.items) return [];
+
+    return data.items.map(item => ({
+      title: item.title || 'Untitled',
+      link: item.link || '#',
+      description: truncate(stripHtml(item.description)),
+      pubDate: new Date(item.pubDate),
+      source: feedConfig.source,
+      sourceLabel: feedConfig.sourceLabel,
+      category: feedConfig.category
+    }));
+  } catch (err) {
+    console.warn(`News feed error (${feedConfig.sourceLabel}): ${err.message}`);
+    return [];
+  }
+}
+
+// ── Fetch Telluride Times Community Calendar via CORS proxy ──
+async function fetchTellurideTimesEvents() {
+  const calendarUrl = 'https://www.telluridenews.com/calendar/';
+  try {
+    let html;
+    try {
+      const resp = await fetch(CODETABS_PROXY + encodeURIComponent(calendarUrl));
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      html = await resp.text();
+    } catch (primaryErr) {
+      console.warn('TT Times primary proxy failed, trying fallback:', primaryErr.message);
+      const resp2 = await fetch(ALLORIGINS_PROXY + encodeURIComponent(calendarUrl));
+      if (!resp2.ok) throw new Error(`Fallback HTTP ${resp2.status}`);
+      html = await resp2.text();
+    }
+
+    // Parse event-list-items from the HTML
+    const pattern = /event-month">(\w+)[\s\S]*?event-day">(\d+)[\s\S]*?href="(\/calendar\/event_[^"]+)"[^>]*>([^<]+)/g;
+    const events = [];
+    let match;
+    const currentYear = new Date().getFullYear();
+
+    while ((match = pattern.exec(html)) !== null) {
+      const monthStr = match[1];
+      const day = match[2];
+      const path = match[3];
+      const title = match[4].trim();
+      const href = 'https://www.telluridenews.com' + path;
+
+      // Parse date
+      const dateStr = `${monthStr} ${day}, ${currentYear}`;
+      const eventDate = new Date(dateStr);
+      if (isNaN(eventDate.getTime())) continue;
+
+      // Extract time from the title (e.g., "Event Name, 7 p.m." or "Event, 12-1 p.m.")
+      const timeMatch = title.match(/,\s*(\d{1,2}(?::\d{2})?\s*(?:a\.m\.|p\.m\.|AM|PM)(?:\s*[-–]\s*\d{1,2}(?::\d{2})?\s*(?:a\.m\.|p\.m\.|AM|PM))?)/i);
+      const timeStr = timeMatch ? timeMatch[1] : '';
+
+      // Extract location from title (pattern: "Event Name: Location, time")
+      // or "Event Name, Location, time"
+      let eventTitle = title;
+      let location = '';
+
+      // Try "Name: Location, time" pattern
+      const colonMatch = title.match(/^([^:]+):\s*(.+?)(?:,\s*\d{1,2}(?::\d{2})?\s*(?:a\.m\.|p\.m\.))/i);
+      if (colonMatch) {
+        eventTitle = colonMatch[1].trim();
+        location = colonMatch[2].trim();
+      }
+
+      events.push({
+        title: eventTitle,
+        link: href,
+        description: location ? location + (timeStr ? ', ' + timeStr : '') : (timeStr || ''),
+        pubDate: eventDate,
+        source: 'ttimes',
+        sourceLabel: 'Telluride Times',
+        category: 'Community Event'
+      });
+    }
+
+    // Filter to today onward
+    const todayStr = new Date().toISOString().slice(0, 10);
+    return events.filter(e => e.pubDate.toISOString().slice(0, 10) >= todayStr);
+  } catch (err) {
+    console.warn('Telluride Times calendar error:', err.message);
+    return [];
+  }
+}
+
+async function fetchAllNews() {
+  const feedResults = await Promise.all(NEWS_FEEDS.map(f => fetchNewsFeed(f)));
+  const ttimesResults = await fetchTellurideTimesEvents();
+  return [...feedResults.flat(), ...ttimesResults];
+}
+
+// ══════════════════
+// ── Rendering ──
+// ══════════════════
+
+// Entity logos — uses hosted PNGs where available, inline SVGs as fallback
+const ENTITY_LOGOS = {
+  telluride: '<img src="https://telluride-co.gov/ImageRepository/Document?documentID=14866" alt="Town of Telluride" loading="lazy">',
+  county: '<img src="https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=12524" alt="San Miguel County" loading="lazy">',
+  mv: '<img src="https://townofmountainvillage.com/site/themes/vwtheme/build/img/logos/town-of-mountain-village-logo.png" alt="Mountain Village" loading="lazy">',
+  school: '<img src="https://files.smartsites.parentsquare.com/3403/design_img__vb3hiz.png" alt="Telluride School District" loading="lazy">',
+  smart: '<svg viewBox="0 0 24 24" fill="none"><path d="M4 18L8 6" stroke="#6b8e23" stroke-width="2.5" stroke-linecap="round"/><path d="M7 18L11 6" stroke="#556b2f" stroke-width="2.5" stroke-linecap="round"/><path d="M10 18L14 6" stroke="#6b8e23" stroke-width="2.2" stroke-linecap="round"/><path d="M13 17L16 8" stroke="#556b2f" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 16L17.5 10" stroke="#6b8e23" stroke-width="1.4" stroke-linecap="round"/></svg>',
+  fire: '<svg viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 5 9 5 14a7 7 0 0 0 14 0c0-5-7-12-7-12z" fill="#a63223"/><path d="M12 22a4 4 0 0 0 4-4c0-2.5-4-7-4-7s-4 4.5-4 7a4 4 0 0 0 4 4z" fill="#d4760a"/></svg>',
+  med: '<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#1a7a6d"/><path d="M12 4v4M12 16v4M8 12H4M20 12h-4" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="3" stroke="#fff" stroke-width="1.5" fill="none"/><path d="M12 6v2M12 16v2" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/></svg>',
+  ttimes: '<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="The Telluride Times" />'
+};
+
+function renderLogo(source) {
+  const logo = ENTITY_LOGOS[source];
+  if (!logo) return '';
+  return `<div class="card-logo">${logo}</div>`;
+}
+
+function renderBadge(item) {
+  let badgeClass = 'badge-county';
+  if (item.source === 'telluride') badgeClass = 'badge-telluride';
+  else if (item.source === 'smart') badgeClass = 'badge-smart';
+  else if (item.source === 'mv') badgeClass = 'badge-mv';
+  else if (item.source === 'school') badgeClass = 'badge-school';
+  else if (item.source === 'fire') badgeClass = 'badge-fire';
+  else if (item.source === 'med') badgeClass = 'badge-med';
+  else if (item.source === 'ttimes') badgeClass = 'badge-ttimes';
+  if (item.category === 'Alert') badgeClass = 'badge-alert';
+  return `<span class="source-badge ${badgeClass}">${item.sourceLabel}</span>` +
+         (item.category ? `<span class="category-tag">${item.category}</span>` : '');
+}
+
+// ── Remote Access Links per Entity ──
+const ENTITY_REMOTE = {
+  telluride: {
+    livestream: 'https://www.youtube.com/channel/UCabHMM_u649QXmqS1sVa4kw',
+    livestreamLabel: 'YouTube Livestream'
+  },
+  county: {
+    livestream: 'https://www.youtube.com/@sanmiguelco',
+    livestreamLabel: 'YouTube Livestream'
+  },
+  mv: {
+    livestream: 'https://media.avcaptureall.cloud/?customerGuid=f6f590a7-5acc-4d32-9928-ad9ae0d02e06',
+    livestreamLabel: 'Watch Meeting'
+  },
+  school: {},
+  smart: {},
+  fire: {},
+  med: {},
+  ttimes: {}
+};
+
+// ── Calendar URL Generators ──
+function toCalDateStr(d) {
+  // Format Date as YYYYMMDD
+  return d.toISOString().slice(0, 10).replace(/-/g, '');
+}
+
+function parseTimeStr(timeStr) {
+  // Parse "2:00 PM" or "9:30 AM" etc. into {hours, minutes}
+  if (!timeStr) return null;
+  const match = timeStr.match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i);
+  if (!match) return null;
+  let hours = parseInt(match[1], 10);
+  const minutes = parseInt(match[2], 10);
+  const ampm = match[3].toUpperCase();
+  if (ampm === 'PM' && hours !== 12) hours += 12;
+  if (ampm === 'AM' && hours === 12) hours = 0;
+  return { hours, minutes };
+}
+
+function buildCalendarDates(item) {
+  // Returns {start, end} as Date objects
+  const d = new Date(item.eventDate);
+  const timeRange = item.eventTimes || '';
+  const times = timeRange.split(/\s*[–-]\s*/);
+  const startTime = parseTimeStr(times[0]);
+  const endTime = times[1] ? parseTimeStr(times[1]) : null;
+
+  let start = new Date(d);
+  let end = new Date(d);
+  if (startTime) {
+    start.setHours(startTime.hours, startTime.minutes, 0, 0);
+    if (endTime) {
+      end.setHours(endTime.hours, endTime.minutes, 0, 0);
+    } else {
+      // Default 2-hour duration
+      end = new Date(start.getTime() + 2 * 60 * 60 * 1000);
+    }
+  } else {
+    // All-day style: 9 AM to 11 AM default
+    start.setHours(9, 0, 0, 0);
+    end.setHours(11, 0, 0, 0);
+  }
+  return { start, end };
+}
+
+function toGoogleCalStr(d) {
+  // Google Calendar format: YYYYMMDDTHHMMSS (local)
+  const pad = n => String(n).padStart(2, '0');
+  return `${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}T${pad(d.getHours())}${pad(d.getMinutes())}00`;
+}
+
+function googleCalUrl(item) {
+  const { start, end } = buildCalendarDates(item);
+  const params = new URLSearchParams({
+    action: 'TEMPLATE',
+    text: item.title + ' (' + item.sourceLabel + ')',
+    dates: toGoogleCalStr(start) + '/' + toGoogleCalStr(end),
+    details: 'Source: ' + item.sourceLabel + (item.link ? '\\nMore info: ' + item.link : ''),
+    location: item.location || '',
+    ctz: 'America/Denver'
+  });
+  return 'https://calendar.google.com/calendar/render?' + params.toString();
+}
+
+function outlookCalUrl(item) {
+  const { start, end } = buildCalendarDates(item);
+  const pad = n => String(n).padStart(2, '0');
+  const fmt = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}:00`;
+  const params = new URLSearchParams({
+    path: '/calendar/action/compose',
+    rru: 'addevent',
+    subject: item.title + ' (' + item.sourceLabel + ')',
+    startdt: fmt(start),
+    enddt: fmt(end),
+    location: item.location || '',
+    body: 'Source: ' + item.sourceLabel + (item.link ? ' | More info: ' + item.link : '')
+  });
+  return 'https://outlook.live.com/calendar/0/action/compose?' + params.toString();
+}
+
+function icsDataUri(item) {
+  const { start, end } = buildCalendarDates(item);
+  const pad = n => String(n).padStart(2, '0');
+  const icsDate = d => `${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}T${pad(d.getHours())}${pad(d.getMinutes())}00`;
+  const now = new Date();
+  const ics = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//LiveableTelluride//GovHub//EN',
+    'BEGIN:VEVENT',
+    'DTSTART;TZID=America/Denver:' + icsDate(start),
+    'DTEND;TZID=America/Denver:' + icsDate(end),
+    'SUMMARY:' + item.title + ' (' + item.sourceLabel + ')',
+    'LOCATION:' + (item.location || ''),
+    'DESCRIPTION:' + item.sourceLabel + (item.link ? ' — ' + item.link : ''),
+    'UID:' + icsDate(start) + '-' + item.source + '@liveabletelluride.org',
+    'DTSTAMP:' + icsDate(now) + 'Z',
+    'END:VEVENT',
+    'END:VCALENDAR'
+  ].join('\r\n');
+  return 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
+}
+
+function renderCardActions(item) {
+  const gIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>';
+  const zoomIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>';
+  const ytIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>';
+
+  let html = '<div class="card-actions">';
+
+  // Calendar buttons
+  html += `<a href="${googleCalUrl(item)}" target="_blank" rel="noopener" class="cal-btn" title="Add to Google Calendar">${gIcon} Google</a>`;
+  html += `<a href="${outlookCalUrl(item)}" target="_blank" rel="noopener" class="cal-btn" title="Add to Outlook Calendar">${gIcon} Outlook</a>`;
+  html += `<a href="${icsDataUri(item)}" download="${item.title.replace(/[^a-zA-Z0-9]/g, '_')}.ics" class="cal-btn" title="Download .ics file (Apple Calendar, etc.)">${gIcon} iCal</a>`;
+
+  // Zoom link (only if actual URL is known for this specific meeting)
+  const zoomUrl = getMeetingZoomLink(item);
+  if (zoomUrl) {
+    html += `<a href="${zoomUrl}" target="_blank" rel="noopener" class="zoom-link" title="Join this meeting via Zoom">${zoomIcon} Join Zoom</a>`;
+  }
+
+  // Livestream link (entity-wide, not per-meeting)
+  const remote = ENTITY_REMOTE[item.source] || {};
+  if (remote.livestream) {
+    html += `<a href="${remote.livestream}" target="_blank" rel="noopener" class="livestream-link" title="${remote.livestreamLabel}">${ytIcon} ${remote.livestreamLabel}</a>`;
+  }
+
+  html += '</div>';
+  return html;
+}
+
+// Only show Board, Council, Commission, and similar governmental meetings
+// (excludes recreational events like "Open Roller Skating", "Movie Night", etc.)
+const GOV_MEETING_PATTERN = /board|council|commission|work\s*session|hearing|planning|zoning|harc|ecology|drb|design\s*review|budget|ordinance|executive|legislative|caucus|quorum|town\s*hall/i;
+
+function isGovernmentalMeeting(item) {
+  // Cached sources (smart, mv, school, fire, med) are already curated board meetings
+  if (['smart', 'mv', 'school', 'fire', 'med'].includes(item.source)) return true;
+  // For dynamic feeds (telluride, county), filter by title
+  return GOV_MEETING_PATTERN.test(item.title);
+}
+
+function renderMeetings(items, filter) {
+  const container = document.getElementById('meetings-content');
+
+  let filtered = items;
+  if (filter && filter !== 'all') {
+    filtered = items.filter(i => i.source === filter);
+  }
+
+  // Only include Board/Council/Commission meetings
+  filtered = filtered.filter(isGovernmentalMeeting);
+
+  // Sort by event date ascending
+  filtered.sort((a, b) => (a.eventDate || 0) - (b.eventDate || 0));
+
+  // Filter to today onward
+  const todayStr = new Date().toISOString().slice(0, 10);
+  filtered = filtered.filter(i => i.eventDate && dateGroupKey(i.eventDate) >= todayStr);
+
+  // Remove duplicates by title + date
+  const seen = new Set();
+  filtered = filtered.filter(i => {
+    const key = i.title + '|' + dateGroupKey(i.eventDate);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+
+  // Limit to next 60 days of meetings to keep it manageable
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() + 60);
+  filtered = filtered.filter(i => i.eventDate <= cutoff);
+
+  if (filtered.length === 0) {
+    container.innerHTML = '<div class="empty-state">No upcoming meetings found. Visit the Quick Links tab to check the calendars directly.</div>';
+    return;
+  }
+
+  // Group by date
+  const groups = {};
+  filtered.forEach(item => {
+    const key = dateGroupKey(item.eventDate);
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(item);
+  });
+
+  let html = '';
+  Object.keys(groups).sort().forEach(dateKey => {
+    const firstItem = groups[dateKey][0];
+    html += `<div class="date-group">${friendlyDate(firstItem.eventDate)}</div>`;
+    groups[dateKey].forEach(item => {
+      const timePart = item.eventTimes || '';
+      const locationPart = item.location ? `<span class="location">📍 ${item.location}</span>` : '';
+      const agendaUrl = item.agendaLink || item.link;
+      const agendaBadge = item.hasAgenda ? `<a href="${agendaUrl}" target="_blank" rel="noopener" class="agenda-link">Agenda Posted →</a>` : '';
+      const cancelStyle = item.canceled ? ' style="opacity: 0.55; text-decoration: line-through;"' : '';
+      const summary = item.canceled ? '' : getMeetingSummary(item);
+      const summaryHtml = summary ? `<div class="meeting-summary"><strong>Topics:</strong> ${summary}</div>` : '';
+
+      html += `
+        <div class="card" data-source="${item.source}">
+          ${renderLogo(item.source)}
+          <div class="card-body">
+            ${renderBadge(item)} ${agendaBadge}
+            <h3${cancelStyle}><a href="${item.link}" target="_blank" rel="noopener">${item.title}</a></h3>
+            <div class="meta">${timePart}${timePart && item.eventDates ? ' · ' + item.eventDates : item.eventDates || ''}</div>
+            ${locationPart ? `<div class="meta">${locationPart}</div>` : ''}
+            ${summaryHtml}
+            ${item.description ? `<div class="description">${item.description}</div>` : ''}
+            ${item.canceled ? '' : renderCardActions(item)}
+          </div>
+        </div>`;
+    });
+  });
+
+  container.innerHTML = html;
+}
+
+function renderNews(items, filter) {
+  const container = document.getElementById('news-content');
+  let filtered = items;
+  if (filter && filter !== 'all') {
+    filtered = items.filter(i => i.source === filter);
+  }
+
+  filtered.sort((a, b) => (b.pubDate || 0) - (a.pubDate || 0));
+
+  const seen = new Set();
+  filtered = filtered.filter(i => {
+    if (seen.has(i.title)) return false;
+    seen.add(i.title);
+    return true;
+  });
+
+  filtered = filtered.slice(0, 30);
+
+  if (filtered.length === 0) {
+    container.innerHTML = '<div class="empty-state">No recent news or alerts found.</div>';
+    return;
+  }
+
+  let html = '';
+  filtered.forEach(item => {
+    const dateStr = friendlyDate(item.pubDate);
+    const moreInfo = item.source === 'ttimes'
+      ? `<a href="${item.link}" target="_blank" rel="noopener" class="agenda-link" style="margin-top:6px; display:inline-block;">More Information →</a>`
+      : '';
+    html += `
+      <div class="card" data-source="${item.source}">
+        ${renderLogo(item.source)}
+        <div class="card-body">
+          ${renderBadge(item)}
+          <h3><a href="${item.link}" target="_blank" rel="noopener">${item.title}</a></h3>
+          <div class="meta">${dateStr}</div>
+          ${item.description ? `<div class="description">${item.description}</div>` : ''}
+          ${moreInfo}
+        </div>
+      </div>`;
+  });
+
+  container.innerHTML = html;
+}
+
+// ══════════════════════════
+// ── Tab & Filter Logic ──
+// ══════════════════════════
+
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+  });
+});
+
+let allMeetings = [];
+let allNews = [];
+
+// Meeting filter chips
+document.querySelectorAll('.chip[data-tab-target="meetings"]').forEach(chip => {
+  chip.addEventListener('click', () => {
+    const filter = chip.dataset.filter;
+    document.querySelectorAll('.chip[data-tab-target="meetings"]').forEach(c => {
+      c.className = 'chip';
+    });
+    if (filter === 'all') chip.classList.add('active-all');
+    else if (filter === 'telluride') chip.classList.add('active-telluride');
+    else if (filter === 'county') chip.classList.add('active-county');
+    else if (filter === 'smart') chip.classList.add('active-smart');
+    else if (filter === 'mv') chip.classList.add('active-mv');
+    else if (filter === 'school') chip.classList.add('active-school');
+    else if (filter === 'fire') chip.classList.add('active-fire');
+    else if (filter === 'med') chip.classList.add('active-med');
+    currentMeetingFilter = filter;
+    renderMeetingsWithTopic();
+  });
+});
+
+// News filter chips
+document.querySelectorAll('.chip[data-tab-target="news"]').forEach(chip => {
+  chip.addEventListener('click', () => {
+    const filter = chip.dataset.filter;
+    document.querySelectorAll('.chip[data-tab-target="news"]').forEach(c => {
+      c.className = 'chip';
+    });
+    if (filter === 'all') chip.classList.add('active-all');
+    else if (filter === 'telluride') chip.classList.add('active-telluride');
+    else if (filter === 'county') chip.classList.add('active-county');
+    else if (filter === 'ttimes') chip.classList.add('active-ttimes');
+    // Store which news source filter is active for topic filtering
+    window._currentNewsFilter = filter;
+    renderNewsWithTopic();
+  });
+});
+
+// Legal Notices filter chips
+document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
+  chip.addEventListener('click', () => {
+    const filter = chip.dataset.filter;
+    document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(c => {
+      c.className = 'chip';
+    });
+    if (filter === 'all') chip.classList.add('active-all');
+    else chip.classList.add('active-' + filter);
+    currentLegalFilter = filter;
+    renderLegalNoticesWithTopic();
+  });
+});
+
+// ════════════════════════════════
+// ── Legal Notices Data & Render ─
+// ════════════════════════════════
+
+const LEGAL_NOTICES_CACHE_DATE = '2026-03-24';
+
+const PAPER_LOGOS = {
+  ttimes: {
+    name: 'The Telluride Times',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg',
+    url: 'https://www.telluridenews.com/news/legals/article_098f3ce9-59f7-4232-9cfb-c60ee8c3cac0.html'
+  },
+  ttimes_mar12: {
+    name: 'The Telluride Times',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg',
+    url: 'https://www.telluridenews.com/news/legals/article_f5335947-f1c5-4d4e-8ab7-3b50a58ab55f.html'
+  },
+  ttimes_mar5: {
+    name: 'The Telluride Times',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg',
+    url: 'https://www.telluridenews.com/news/legals/article_d3d895fe-19d3-4c6f-89f2-0f6ac32f19b5.html'
+  },
+  npost: {
+    name: 'The Norwood Post',
+    img: '',
+    svg: '<svg viewBox="0 0 90 14" style="height:13px;width:auto;"><text x="0" y="12" font-family="Georgia,serif" font-weight="bold" font-size="12" fill="#222">The Norwood Post</text></svg>',
+    url: 'https://www.telluridenews.com/norwood_post/legals/article_c23ef3df-a055-4ff6-ba7a-f277ef70197b.html'
+  }
+};
+
+// Entity logos for legal notice cards — reuses ENTITY_LOGOS where possible
+const LEGAL_ENTITY_LOGOS = {
+  county: '<img src="https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=12524" alt="San Miguel County">',
+  mv: '<img src="https://townofmountainvillage.com/site/themes/vwtheme/build/img/logos/town-of-mountain-village-logo.png" alt="Mountain Village">',
+  telluride: '<img src="https://telluride-co.gov/ImageRepository/Document?documentID=14866" alt="Town of Telluride">',
+  housing: '<svg viewBox="0 0 24 24" fill="none"><path d="M3 21V10l9-7 9 7v11H3z" fill="#6b3fa0" opacity="0.15"/><path d="M3 21V10l9-7 9 7v11" stroke="#6b3fa0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="9" y="14" width="6" height="7" rx="0.5" fill="#6b3fa0" opacity="0.3"/><path d="M9 14h6v7H9z" stroke="#6b3fa0" stroke-width="1.2"/><circle cx="12" cy="6" r="0" fill="none"/><path d="M7 21h10" stroke="#6b3fa0" stroke-width="1.8" stroke-linecap="round"/></svg>',
+  norwood: '<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#7b6834" opacity="0.12"/><path d="M12 5v7.5l-3 4.5M12 12.5l3 4.5" stroke="#7b6834" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#7b6834" stroke-width="1.5" fill="none"/></svg>',
+  assessor: '<img src="https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=12524" alt="San Miguel County Assessor">',
+  water_court: '<svg viewBox="0 0 24 24" fill="none"><path d="M3 20h18M5 20V9l7-5 7 5v11" stroke="#2264d1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="8" y="12" width="3" height="4" rx="0.5" stroke="#2264d1" stroke-width="1.2"/><rect x="13" y="12" width="3" height="4" rx="0.5" stroke="#2264d1" stroke-width="1.2"/><path d="M10 4l2-1 2 1" stroke="#2264d1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 9h18" stroke="#2264d1" stroke-width="1.2"/></svg>',
+  ophir: '<svg viewBox="0 0 24 24" fill="none"><path d="M4 18l4-6 4 3 4-5 4 8H4z" fill="#5a7a3a" opacity="0.2"/><path d="M4 18l4-6 4 3 4-5 4 8" stroke="#5a7a3a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="6" r="2" fill="#d4a017"/></svg>',
+  shavano: '<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#3a8a3a" stroke-width="1.5" fill="#3a8a3a" opacity="0.1"/><path d="M8 15c0-3 2-5 4-7 2 2 4 4 4 7" stroke="#3a8a3a" stroke-width="1.5" stroke-linecap="round" fill="#3a8a3a" opacity="0.2"/><path d="M12 8v8M9 13h6" stroke="#3a8a3a" stroke-width="1.2" stroke-linecap="round"/></svg>'
+};
+
+const LEGAL_NOTICES = [
+  // ── March 19–26 (Current Week) ──
+  {
+    title: 'Deed Restricted Ownership Lottery — Silver Jack 202, 205 & Element 52 G-17',
+    entity: 'San Miguel Regional Housing Authority',
+    entityClass: 'ent-housing',
+    entityLogo: 'housing',
+    icon: '🏘️',
+    iconClass: 'type-housing',
+    type: 'Housing Lottery',
+    filterTag: 'housing',
+    summary: 'Silver Jack 202, Silver Jack 205, and Element 52 G-17 at 155 W Pacific Ave and 398 S Davis St will be offered by Ownership Lottery under the Telluride Affordable Housing Guidelines. Applications available at smrha.org/lottery. Submit by appointment from March 20 through April 10 at noon.',
+    deadline: 'Applications: March 20 – April 10, 2026 at Noon',
+    dates: '3/12, 3/19, 3/26, 4/2',
+    papers: ['ttimes']
+  },
+  {
+    title: 'Request for Proposals — Office Painting at 333 W Colorado Ave',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '📋',
+    iconClass: 'type-rfp',
+    type: 'RFP',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County is seeking proposals from contractors to paint an office at 333 W Colorado Ave, Telluride. RFP details available at sanmiguelcountyco.gov/bids or at 333 W Colorado Ave, 2nd Floor. Contact Greg Pollio at (970) 369-5424.',
+    deadline: 'March 27, 2026 at 5:00 PM',
+    dates: '3/5, 3/12, 3/19, 3/26',
+    papers: ['ttimes', 'npost']
+  },
+  {
+    title: 'Request for Proposals — Summer Burn Pile Construction',
+    entity: 'Town of Mountain Village',
+    entityClass: 'ent-mv',
+    entityLogo: 'mv',
+    icon: '🌲',
+    iconClass: 'type-rfp',
+    type: 'RFP',
+    filterTag: 'public-entity',
+    summary: 'Mountain Village seeks proposals to build burn piles during the 2026 summer season (May 18 – Oct 31). A mandatory site walk must occur between March 2 and April 2. Contact Town Forester Rodney Walters at rwalters@mtnvillage.org or (970) 369-8603.',
+    deadline: 'Proposals due April 2, 2026 at 11:59 PM',
+    dates: '3/12, 3/19, 3/26',
+    papers: ['ttimes']
+  },
+  {
+    title: 'Bid Notice — 2026 Parking Lots Overlay Project',
+    entity: 'Town of Mountain Village',
+    entityClass: 'ent-mv',
+    entityLogo: 'mv',
+    icon: '🅿️',
+    iconClass: 'type-bid',
+    type: 'Bid Notice',
+    filterTag: 'public-entity',
+    summary: 'Mountain Village is accepting bids for the 2026 Parking Lots Overlay Project. Bid packets available at townofmountainvillage.com or at Public Works, 411 Mountain Village Blvd, 2nd Floor. Contact Scott Pittenger (970) 708-8690 or Jenny Bates (970) 369-8201.',
+    deadline: 'Bids due April 17, 2026 at 12:00 Noon',
+    dates: '3/19, 3/26',
+    papers: ['ttimes']
+  },
+  {
+    title: 'Public Hearing — Colorado Wildfire Resiliency Code Adoption',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🔥',
+    iconClass: 'type-hearing',
+    type: 'Public Hearing',
+    filterTag: 'public-entity',
+    summary: 'The San Miguel County Commissioners will adopt the Colorado Wildfire Resiliency Code on April 1, 2026, enforced by July 1, 2026. Public comments due by 5 PM on March 26 via email to bocc@sanmiguelcountyco.gov. Hearing at 10:00 AM, Miramonte Building, 333 W Colorado Ave, 2nd Floor, or via Zoom.',
+    deadline: 'Comments by March 26 — Hearing April 1 at 10:00 AM',
+    dates: '3/19',
+    papers: ['ttimes', 'npost'],
+    event: { date: 'April 1, 2026', time: '10:00 AM', endTime: '12:00 PM', location: 'Miramonte Building, 333 W Colorado Ave, 2nd Floor, Telluride' }
+  },
+  {
+    title: 'Norwood Water Commission — Tiered Pricing Structure, April 2026',
+    entity: 'Norwood Water Commission',
+    entityClass: 'ent-norwood',
+    entityLogo: 'norwood',
+    icon: '💧',
+    iconClass: 'type-rates',
+    type: 'Rate Change',
+    filterTag: 'utilities',
+    summary: 'New tiered water pricing takes effect April 1, 2026. Residential base rate is $37.51 for under 1,000 gallons, with increasing tiers up to $20/1,000 gallons above 12,001 gallons. Commercial rates also tiered. Designed to encourage water conservation.',
+    deadline: 'Effective April 1, 2026',
+    dates: '3/19, 3/26',
+    papers: ['npost']
+  },
+  {
+    title: 'Property Tax Exemption — Seniors, Disabled Veterans & Gold Star Spouses',
+    entity: 'San Miguel County Assessor',
+    entityClass: 'ent-assessor',
+    entityLogo: 'assessor',
+    icon: '🏠',
+    iconClass: 'type-tax',
+    type: 'Tax Exemption',
+    filterTag: 'tax-finance',
+    summary: 'Colorado provides a property tax exemption of 50% of the first $200,000 in actual value for qualifying senior citizens (65+, 10-year ownership), veterans with 100% disability, and gold star veteran spouses. Applications accepted through July 15, 2026. Contact the Assessor at 970-728-3174.',
+    deadline: 'Applications due by July 15, 2026',
+    dates: '2/5 through 7/9 (biweekly)',
+    papers: ['ttimes', 'npost']
+  },
+  // ── March 12–18 ──
+  {
+    title: 'Water Court — Agricultural Water Protection Water Right Rules',
+    entity: 'Colorado District Court, Water Division No. 4',
+    entityClass: 'ent-county',
+    entityLogo: 'water_court',
+    icon: '⚖️',
+    iconClass: 'type-bid',
+    type: 'Water Court',
+    filterTag: 'water-court',
+    summary: 'The State Engineer has adopted new rules governing substitute water supply plans for the lease, loan, or trade of decreed agricultural water protection water rights (Case No. 26CW3005). Protests must be filed by end of April 2026 with the Water Clerk, Water Division 4, Montrose. Filing fee: $192.',
+    deadline: 'Protests due by end of April 2026',
+    dates: '3/12',
+    papers: ['ttimes_mar12']
+  },
+  // ── March 5–11 ──
+  {
+    title: 'Notice to Creditors — Estate of Joyce Ann Allred',
+    entity: 'San Miguel County District Court',
+    entityClass: 'ent-county',
+    entityLogo: 'water_court',
+    icon: '📜',
+    iconClass: 'type-hearing',
+    type: 'Estate Notice',
+    filterTag: 'estate',
+    summary: 'All persons having claims against the estate of Joyce Ann Allred (Case No. 2026PR30001) must present them to the personal representative or to District Court of San Miguel County on or before April 20, 2026, or claims may be forever barred. Representative: Michael D. Allred c/o Hoskin, Farina & Kampf, P.C., Grand Junction.',
+    deadline: 'Claims due by April 20, 2026',
+    dates: '2/19, 2/26, 3/5',
+    papers: ['ttimes_mar5']
+  },
+  {
+    title: 'Town of Telluride Ordinances #1625–1630 (Series of 2026)',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '📜',
+    iconClass: 'type-hearing',
+    type: 'Ordinance',
+    filterTag: 'ordinance',
+    summary: 'Town Council passed six ordinances on Feb 24, 2026: #1625 amending the 2025 municipal budget; #1626 amending vending code (TMC Ch. 6, Art. 4); #1627 authorizing sale of Longwill 16 A2; #1628 sale of Entrada Unit H; #1629 sale of White House 3C; #1630 sale of Meribel Unit B. Full text at telluride-co.gov.',
+    deadline: 'Effective upon publication',
+    dates: '3/5',
+    papers: ['ttimes_mar5']
+  },
+  {
+    title: 'Notice of Vesting — 116 E Columbia Ave Remodel Addition',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🏗️',
+    iconClass: 'type-rfp',
+    type: 'Land Use',
+    filterTag: 'ordinance',
+    summary: 'A site-specific development plan and vested property right has been approved for the 116 E Columbia Remodel Addition (Historic Residential zone, Block 7 Telluride). Owner: Drift Mine LLC and AZ LL. Applicant: Shift Architects, Kristine Perpar. Approved February 18, 2026.',
+    deadline: 'Subject to referendum and judicial review',
+    dates: '3/5',
+    papers: ['ttimes_mar5']
+  },
+  {
+    title: 'Ordinance No. 2026-1 — Town of Ophir Roof Pitch Variance',
+    entity: 'Town of Ophir',
+    entityClass: 'ent-norwood',
+    entityLogo: 'ophir',
+    icon: '🏔️',
+    iconClass: 'type-hearing',
+    type: 'Land Use Variance',
+    filterTag: 'ordinance',
+    summary: 'Slator Aplin applied for a variance to allow a 2/12 roof pitch instead of the required 4/12 on Lots 1 and 2, Block Q, Town of Ophir. Hearing held at Ophir Town Hall. Complete information available at Ophir Town Hall, 36 Porphyry St, (970) 728-4943.',
+    deadline: 'Hearing held March 17, 2025',
+    dates: '3/5',
+    papers: ['ttimes_mar5'],
+    event: { date: 'March 17, 2025', time: '7:00 PM', endTime: '9:00 PM', location: 'Ophir Town Hall, 36 Porphyry St, Ophir' }
+  },
+  {
+    title: 'Invitation for Bids — 2026 Stillwell Fill and Drain Line',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🔧',
+    iconClass: 'type-bid',
+    type: 'Bid Notice',
+    filterTag: 'public-entity',
+    summary: 'Sealed bids for a water main installation project (Fusible HDPE, Tomboy Rd Hillside) due at Telluride Public Works & Transit Facility, 1370 Black Bear Rd, or via email to togren@telluride.gov. Bid documents available at Public Works, (970) 729-3127, or bidnetdirect.com.',
+    deadline: 'Bids due March 20, 2026 at 4:00 PM',
+    dates: '2/26, 3/5',
+    papers: ['ttimes_mar5']
+  },
+  {
+    title: 'San Miguel County Planning Commission — Regular Meeting',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏛️',
+    iconClass: 'type-hearing',
+    type: 'Meeting Notice',
+    filterTag: 'public-entity',
+    summary: 'Regular meeting on March 12, 2026 at 9:00 AM. Location: 333 W Colorado Ave, 2nd Floor, Telluride. Agenda includes briefing on Wildfire Code and Building Code enforcement update by Building Official Matt Gonzales. Available via Zoom.',
+    deadline: 'March 12, 2026 at 9:00 AM',
+    dates: '3/5',
+    papers: ['ttimes_mar5'],
+    event: { date: 'March 12, 2026', time: '9:00 AM', endTime: '12:00 PM', location: '333 W Colorado Ave, 2nd Floor, Telluride' }
+  },
+  {
+    title: 'Shavano Conservation District — 84th Annual Meeting',
+    entity: 'Shavano Conservation District',
+    entityClass: 'ent-norwood',
+    entityLogo: 'shavano',
+    icon: '🌿',
+    iconClass: 'type-rates',
+    type: 'Meeting Notice',
+    filterTag: 'public-entity',
+    summary: 'The 84th Annual Meeting on March 10, 2026 at 4:30 PM at the Ute Indian Museum, 17253 Chipeta Rd, Montrose. Local Work Group discussion at 4:30 PM, annual meeting at 6:00 PM, dinner at 6:30 PM, followed by FFA speakers and conservation awards. Tickets $20/adult, $12/child.',
+    deadline: 'March 10, 2026 at 4:30 PM',
+    dates: '3/5',
+    papers: ['ttimes_mar5'],
+    event: { date: 'March 10, 2026', time: '4:30 PM', endTime: '8:00 PM', location: 'Ute Indian Museum, 17253 Chipeta Rd, Montrose' }
+  }
+];
+
+// Build calendar buttons for a legal notice event
+function legalCalendarButtons(notice) {
+  if (!notice.event) return '';
+  const evt = notice.event;
+  const eventDate = new Date(evt.date);
+  if (isNaN(eventDate)) return '';
+
+  // Build a compatible item for the existing calendar URL functions
+  const calItem = {
+    title: notice.title,
+    sourceLabel: notice.entity,
+    eventDate: eventDate,
+    eventTimes: evt.time + (evt.endTime ? ' – ' + evt.endTime : ''),
+    location: evt.location || '',
+    link: PAPER_LOGOS[notice.papers[0]] ? PAPER_LOGOS[notice.papers[0]].url : '',
+    source: 'legal'
+  };
+
+  const gIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>';
+
+  return '<div class="card-actions" style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(0,0,0,0.06);">' +
+    '<a href="' + googleCalUrl(calItem) + '" target="_blank" rel="noopener" class="cal-btn" title="Add to Google Calendar" onclick="event.stopPropagation();">' + gIcon + ' Google</a>' +
+    '<a href="' + outlookCalUrl(calItem) + '" target="_blank" rel="noopener" class="cal-btn" title="Add to Outlook Calendar" onclick="event.stopPropagation();">' + gIcon + ' Outlook</a>' +
+    '<a href="' + icsDataUri(calItem) + '" download="' + notice.title.replace(/[^a-zA-Z0-9]/g, '_') + '.ics" class="cal-btn" title="Download .ics file" onclick="event.stopPropagation();">' + gIcon + ' iCal</a>' +
+  '</div>';
+}
+
+let currentLegalFilter = 'all';
+
+function renderLegalNotices(filter) {
+  filter = filter || 'all';
+  const container = document.getElementById('legals-content');
+  if (!container) return;
+
+  const filtered = filter === 'all'
+    ? LEGAL_NOTICES
+    : LEGAL_NOTICES.filter(n => n.filterTag === filter);
+
+  if (filtered.length === 0) {
+    container.innerHTML = '<div style="text-align:center;padding:30px;color:var(--text-muted);font-size:0.9rem;">No notices in this category.</div>';
+    return;
+  }
+
+  let html = '';
+  filtered.forEach(notice => {
+    // Link to the first paper's article
+    const primaryPaper = PAPER_LOGOS[notice.papers[0]];
+    const linkUrl = primaryPaper ? primaryPaper.url : '#';
+
+    // Entity logo
+    const eLogo = LEGAL_ENTITY_LOGOS[notice.entityLogo] || '';
+    const eLogoHtml = eLogo ? '<div class="legal-entity-logo">' + eLogo + '</div>' : '';
+
+    // Build paper badges
+    let paperBadgesHtml = '<div class="legal-paper-badges"><span class="paper-label">Published in:</span>';
+    const seenPapers = new Set();
+    notice.papers.forEach(pKey => {
+      const p = PAPER_LOGOS[pKey];
+      if (!p) return;
+      if (seenPapers.has(p.name)) return;
+      seenPapers.add(p.name);
+      const logoEl = p.img
+        ? '<img src="' + p.img + '" alt="' + p.name + '" />'
+        : (p.svg || '');
+      paperBadgesHtml += '<span class="paper-badge">' + logoEl + ' ' + p.name + '</span>';
+    });
+    paperBadgesHtml += '</div>';
+
+    const calBtns = legalCalendarButtons(notice);
+
+    html += '<a href="' + linkUrl + '" target="_blank" rel="noopener" class="legal-card" data-filter-tag="' + notice.filterTag + '">' +
+      '<div class="legal-card-header">' +
+        eLogoHtml +
+        '<div>' +
+          '<div class="legal-card-title">' + notice.title + '</div>' +
+          '<div class="legal-card-entity ' + notice.entityClass + '">' + notice.entity + '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="legal-card-summary">' + notice.summary + '</div>' +
+      '<div class="legal-card-meta">' +
+        '<span class="legal-meta-tag tag-type">' + notice.type + '</span>' +
+        '<span class="legal-meta-tag tag-deadline">' + notice.deadline + '</span>' +
+        '<span class="legal-meta-tag tag-date">Published: ' + notice.dates + '</span>' +
+        '<span class="legal-read-more">Read Full Notice →</span>' +
+      '</div>' +
+      calBtns +
+      paperBadgesHtml +
+    '</a>';
+  });
+
+  container.innerHTML = html;
+}
+
+// ══════════════════════════════════════════════════════
+// ── Cross-Cutting Topic Sidebar Filter ──
+// ══════════════════════════════════════════════════════
+
+const TOPIC_DEFINITIONS = {
+  'housing': {
+    label: 'Housing',
+    icon: '🏠',
+    keywords: /housing|deed.restrict|workforce|affordable|lottery|smrha|rent|tenant|overlook|silver jack|element 52|wilkin court/i
+  },
+  'land-use': {
+    label: 'Land Use & Development',
+    icon: '🏗️',
+    keywords: /planning|zoning|drb|design.review|building|construction|variance|vesting|remodel|pud|land.use|harc|comprehensive.plan|development|permit|overlay|subdivision/i
+  },
+  'public-safety': {
+    label: 'Public Safety',
+    icon: '🔥',
+    keywords: /wildfire|fire|marshal|emergency|safety|resiliency|rescue|hazard|evacuation/i
+  },
+  'budget-finance': {
+    label: 'Budget & Finance',
+    icon: '💰',
+    keywords: /budget|tax|financ|audit|bid|rfp|proposal|funding|expenditure|appropriation|revenue|grant|assessment|exemption/i
+  },
+  'infrastructure': {
+    label: 'Infrastructure',
+    icon: '🚰',
+    keywords: /water|road|parking|transit|utility|sewer|drain|pipe|overlay|airport|smart|bus|transportation|pavement/i
+  },
+  'environment': {
+    label: 'Environment',
+    icon: '🌿',
+    keywords: /ecology|open.space|conservation|forestry|burn.pile|wildfire.resiliency|natural.resource|wildlife|forest|environment/i
+  },
+  'health-education': {
+    label: 'Health & Education',
+    icon: '🏥',
+    keywords: /medical|hospital|school|education|student|health|board of education|tellmed|nurse|clinic|teacher|curriculum|staffing/i
+  },
+  'legal-governance': {
+    label: 'Legal & Governance',
+    icon: '⚖️',
+    keywords: /ordinance|court|estate|creditor|hearing|resolution|legislation|litigation|statute|code.adopt|proclamation|vested.property/i
+  }
+};
+
+let currentTopic = 'all';
+
+function matchesTopic(text, topicKey) {
+  if (topicKey === 'all') return true;
+  const topic = TOPIC_DEFINITIONS[topicKey];
+  if (!topic) return true;
+  return topic.keywords.test(text);
+}
+
+function getMeetingFullText(item) {
+  // Combine all searchable text for a meeting
+  let text = (item.title || '') + ' ' + (item.description || '') + ' ' + (item.sourceLabel || '') + ' ' + (item.category || '');
+  // Also check cached summary
+  if (item.eventDate && item.source) {
+    const dateKey = item.eventDate.toISOString().slice(0, 10);
+    for (const key of Object.keys(MEETING_SUMMARIES)) {
+      if (key.startsWith(item.source + '|' + dateKey + '|')) {
+        text += ' ' + MEETING_SUMMARIES[key];
+      }
+    }
+  }
+  return text;
+}
+
+function getLegalFullText(notice) {
+  return (notice.title || '') + ' ' + (notice.entity || '') + ' ' + (notice.summary || '') + ' ' + (notice.type || '') + ' ' + (notice.filterTag || '') + ' ' + (notice.deadline || '');
+}
+
+function getNewsFullText(item) {
+  return (item.title || '') + ' ' + (item.description || '') + ' ' + (item.sourceLabel || '') + ' ' + (item.category || '');
+}
+
+// Update sidebar counts based on current data
+function updateTopicCounts() {
+  for (const topicKey of Object.keys(TOPIC_DEFINITIONS)) {
+    let count = 0;
+
+    // Count meetings
+    const govMeetings = allMeetings.filter(isGovernmentalMeeting);
+    const todayStr = new Date().toISOString().slice(0, 10);
+    const cutoff = new Date();
+    cutoff.setDate(cutoff.getDate() + 60);
+    const futureMeetings = govMeetings.filter(i => i.eventDate && dateGroupKey(i.eventDate) >= todayStr && i.eventDate <= cutoff);
+    count += futureMeetings.filter(m => matchesTopic(getMeetingFullText(m), topicKey)).length;
+
+    // Count news
+    count += allNews.filter(n => matchesTopic(getNewsFullText(n), topicKey)).length;
+
+    // Count legal notices
+    count += LEGAL_NOTICES.filter(n => matchesTopic(getLegalFullText(n), topicKey)).length;
+
+    const el = document.getElementById('count-' + topicKey);
+    if (el) el.textContent = count;
+  }
+}
+
+// Apply topic filter to the currently active tab
+function applyTopicFilter(topicKey) {
+  currentTopic = topicKey;
+
+  // Update sidebar active state
+  document.querySelectorAll('.sidebar-tag').forEach(tag => {
+    tag.classList.toggle('active', tag.dataset.topic === topicKey);
+  });
+
+  // Update banner
+  const banner = document.getElementById('topicBanner');
+  if (topicKey === 'all') {
+    banner.classList.remove('visible');
+  } else {
+    const def = TOPIC_DEFINITIONS[topicKey];
+    document.getElementById('bannerIcon').textContent = def.icon;
+    document.getElementById('bannerLabel').textContent = def.label;
+    banner.classList.add('visible');
+  }
+
+  // Re-render all tabs with topic filter
+  renderMeetingsWithTopic();
+  renderNewsWithTopic();
+  renderLegalNoticesWithTopic();
+  filterQuickLinks();
+
+  // Close mobile sidebar
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('sidebarOverlay').classList.remove('active');
+}
+
+// Wrap meeting render to apply topic filter
+function renderMeetingsWithTopic() {
+  const container = document.getElementById('meetings-content');
+  let filtered = [...allMeetings];
+
+  // Apply source filter
+  if (currentMeetingFilter && currentMeetingFilter !== 'all') {
+    filtered = filtered.filter(i => i.source === currentMeetingFilter);
+  }
+
+  // Apply governmental filter
+  filtered = filtered.filter(isGovernmentalMeeting);
+
+  // Apply topic filter
+  if (currentTopic !== 'all') {
+    filtered = filtered.filter(m => matchesTopic(getMeetingFullText(m), currentTopic));
+  }
+
+  // Sort by event date ascending
+  filtered.sort((a, b) => (a.eventDate || 0) - (b.eventDate || 0));
+
+  // Filter to today onward
+  const todayStr = new Date().toISOString().slice(0, 10);
+  filtered = filtered.filter(i => i.eventDate && dateGroupKey(i.eventDate) >= todayStr);
+
+  // Deduplicate
+  const seen = new Set();
+  filtered = filtered.filter(i => {
+    const key = i.title + '|' + dateGroupKey(i.eventDate);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+
+  // Limit to 60 days
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() + 60);
+  filtered = filtered.filter(i => i.eventDate <= cutoff);
+
+  if (filtered.length === 0) {
+    const msg = currentTopic !== 'all'
+      ? 'No upcoming meetings match the topic "' + TOPIC_DEFINITIONS[currentTopic].label + '". Try a different topic or clear the filter.'
+      : 'No upcoming meetings found. Visit the Quick Links tab to check the calendars directly.';
+    container.innerHTML = '<div class="empty-state">' + msg + '</div>';
+    return;
+  }
+
+  // Group by date and render (same as original renderMeetings)
+  const groups = {};
+  filtered.forEach(item => {
+    const key = dateGroupKey(item.eventDate);
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(item);
+  });
+
+  let html = '';
+  Object.keys(groups).sort().forEach(dateKey => {
+    const firstItem = groups[dateKey][0];
+    html += '<div class="date-group">' + friendlyDate(firstItem.eventDate) + '</div>';
+    groups[dateKey].forEach(item => {
+      const timePart = item.eventTimes || '';
+      const locationPart = item.location ? '<span class="location">📍 ' + item.location + '</span>' : '';
+      const agendaUrl = item.agendaLink || item.link;
+      const agendaBadge = item.hasAgenda ? '<a href="' + agendaUrl + '" target="_blank" rel="noopener" class="agenda-link">Agenda Posted →</a>' : '';
+      const cancelStyle = item.canceled ? ' style="opacity: 0.55; text-decoration: line-through;"' : '';
+      const summary = item.canceled ? '' : getMeetingSummary(item);
+      const summaryHtml = summary ? '<div class="meeting-summary"><strong>Topics:</strong> ' + summary + '</div>' : '';
+
+      html += '<div class="card" data-source="' + item.source + '">' +
+        renderLogo(item.source) +
+        '<div class="card-body">' +
+          renderBadge(item) + ' ' + agendaBadge +
+          '<h3' + cancelStyle + '><a href="' + item.link + '" target="_blank" rel="noopener">' + item.title + '</a></h3>' +
+          '<div class="meta">' + timePart + (timePart && item.eventDates ? ' · ' + item.eventDates : item.eventDates || '') + '</div>' +
+          (locationPart ? '<div class="meta">' + locationPart + '</div>' : '') +
+          summaryHtml +
+          (item.description ? '<div class="description">' + item.description + '</div>' : '') +
+          (item.canceled ? '' : renderCardActions(item)) +
+        '</div>' +
+      '</div>';
+    });
+  });
+
+  container.innerHTML = html;
+}
+
+// Wrap news render to apply topic filter
+function renderNewsWithTopic() {
+  const container = document.getElementById('news-content');
+  let filtered = [...allNews];
+
+  // Apply source filter
+  const currentNewsFilter = window._currentNewsFilter || 'all';
+  if (currentNewsFilter && currentNewsFilter !== 'all') {
+    filtered = filtered.filter(i => i.source === currentNewsFilter);
+  }
+
+  // Apply topic filter
+  if (currentTopic !== 'all') {
+    filtered = filtered.filter(n => matchesTopic(getNewsFullText(n), currentTopic));
+  }
+
+  if (filtered.length === 0) {
+    const msg = currentTopic !== 'all'
+      ? 'No news items match the topic "' + TOPIC_DEFINITIONS[currentTopic].label + '".'
+      : 'No news items available.';
+    container.innerHTML = '<div class="empty-state">' + msg + '</div>';
+    return;
+  }
+
+  // Use original renderNews logic but with pre-filtered items
+  renderNews(filtered, 'all');
+}
+
+// Wrap legal notices render to apply topic filter
+function renderLegalNoticesWithTopic() {
+  const container = document.getElementById('legals-content');
+  if (!container) return;
+
+  let filtered = currentLegalFilter === 'all'
+    ? [...LEGAL_NOTICES]
+    : LEGAL_NOTICES.filter(n => n.filterTag === currentLegalFilter);
+
+  // Apply topic filter
+  if (currentTopic !== 'all') {
+    filtered = filtered.filter(n => matchesTopic(getLegalFullText(n), currentTopic));
+  }
+
+  if (filtered.length === 0) {
+    const msg = currentTopic !== 'all'
+      ? 'No legal notices match the topic "' + TOPIC_DEFINITIONS[currentTopic].label + '".'
+      : 'No notices in this category.';
+    container.innerHTML = '<div style="text-align:center;padding:30px;color:var(--text-muted);font-size:0.9rem;">' + msg + '</div>';
+    return;
+  }
+
+  let html = '';
+  filtered.forEach(notice => {
+    const primaryPaper = PAPER_LOGOS[notice.papers[0]];
+    const linkUrl = primaryPaper ? primaryPaper.url : '#';
+    const eLogo = LEGAL_ENTITY_LOGOS[notice.entityLogo] || '';
+    const eLogoHtml = eLogo ? '<div class="legal-entity-logo">' + eLogo + '</div>' : '';
+
+    let paperBadgesHtml = '<div class="legal-paper-badges"><span class="paper-label">Published in:</span>';
+    const seenPapers = new Set();
+    notice.papers.forEach(pKey => {
+      const p = PAPER_LOGOS[pKey];
+      if (!p) return;
+      if (seenPapers.has(p.name)) return;
+      seenPapers.add(p.name);
+      const logoEl = p.img
+        ? '<img src="' + p.img + '" alt="' + p.name + '" />'
+        : (p.svg || '');
+      paperBadgesHtml += '<span class="paper-badge">' + logoEl + ' ' + p.name + '</span>';
+    });
+    paperBadgesHtml += '</div>';
+
+    const calBtns = legalCalendarButtons(notice);
+
+    html += '<a href="' + linkUrl + '" target="_blank" rel="noopener" class="legal-card" data-filter-tag="' + notice.filterTag + '">' +
+      '<div class="legal-card-header">' +
+        eLogoHtml +
+        '<div>' +
+          '<div class="legal-card-title">' + notice.title + '</div>' +
+          '<div class="legal-card-entity ' + notice.entityClass + '">' + notice.entity + '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="legal-card-summary">' + notice.summary + '</div>' +
+      '<div class="legal-card-meta">' +
+        '<span class="legal-meta-tag tag-type">' + notice.type + '</span>' +
+        '<span class="legal-meta-tag tag-deadline">' + notice.deadline + '</span>' +
+        '<span class="legal-meta-tag tag-date">Published: ' + notice.dates + '</span>' +
+        '<span class="legal-read-more">Read Full Notice →</span>' +
+      '</div>' +
+      calBtns +
+      paperBadgesHtml +
+    '</a>';
+  });
+
+  container.innerHTML = html;
+}
+
+// Filter Quick Links tab by topic
+function filterQuickLinks() {
+  const linksTab = document.getElementById('tab-links');
+  if (!linksTab) return;
+
+  // Quick Links keyword map per link card
+  const linkCards = linksTab.querySelectorAll('.link-card');
+  linkCards.forEach(card => {
+    const text = card.textContent || '';
+    if (currentTopic === 'all') {
+      card.style.display = '';
+    } else {
+      card.style.display = matchesTopic(text, currentTopic) ? '' : 'none';
+    }
+  });
+
+  // Also show/hide date-group headers if all their cards are hidden
+  const sections = linksTab.querySelectorAll('.date-group');
+  sections.forEach(header => {
+    const grid = header.nextElementSibling;
+    if (!grid || !grid.classList.contains('links-grid')) return;
+    const visibleCards = grid.querySelectorAll('.link-card:not([style*="display: none"])');
+    header.style.display = visibleCards.length === 0 ? 'none' : '';
+    grid.style.display = visibleCards.length === 0 ? 'none' : '';
+  });
+}
+
+// Sidebar click handlers
+document.querySelectorAll('.sidebar-tag').forEach(tag => {
+  tag.addEventListener('click', () => {
+    applyTopicFilter(tag.dataset.topic);
+  });
+});
+
+document.getElementById('sidebarReset').addEventListener('click', () => {
+  applyTopicFilter('all');
+});
+
+document.getElementById('bannerClear').addEventListener('click', () => {
+  applyTopicFilter('all');
+});
+
+// Mobile sidebar toggle
+document.getElementById('sidebarToggle').addEventListener('click', () => {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('sidebarOverlay').classList.toggle('active');
+});
+document.getElementById('sidebarOverlay').addEventListener('click', () => {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('sidebarOverlay').classList.remove('active');
+});
+
+// ══════════
+// ── Init ──
+// ══════════
+
+let currentMeetingFilter = 'all';
+
+async function init() {
+  document.getElementById('lastUpdated').textContent =
+    'Last refreshed: ' + new Date().toLocaleString('en-US', {
+      month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit'
+    });
+
+  // ── Legal Notices render instantly (static cache) ──
+  renderLegalNoticesWithTopic();
+
+  // ── Cached sources load instantly ──
+  const smartMeetings = getSmartMeetings();
+  const mvMeetings = getMVMeetings();
+  const schoolMeetings = getSchoolMeetings();
+  const fireMeetings = getFireMeetings();
+  const medMeetings = getMedMeetings();
+  allMeetings = [...smartMeetings, ...mvMeetings, ...schoolMeetings, ...fireMeetings, ...medMeetings];
+  renderMeetingsWithTopic();
+  updateTopicCounts();
+
+  // ── Then progressively add County (~0.3s) and Telluride (~2.5s) ──
+  const countyPromise = fetchCountyMeetings();
+  const telluridePromise = fetchTellurideMeetings();
+  const newsPromise = fetchAllNews();
+
+  countyPromise.then(countyMeetings => {
+    allMeetings = [...allMeetings, ...countyMeetings];
+    renderMeetingsWithTopic();
+    updateTopicCounts();
+  });
+
+  telluridePromise.then(tellurideMeetings => {
+    allMeetings = [...allMeetings, ...tellurideMeetings];
+    renderMeetingsWithTopic();
+    updateTopicCounts();
+  });
+
+  newsPromise.then(newsData => {
+    allNews = newsData;
+    renderNewsWithTopic();
+    updateTopicCounts();
+  });
+}
+
+init();
+
+// ══════════════════════════════════════════════════════
+// ── Wix Iframe Compatibility Layer ──
+// ══════════════════════════════════════════════════════
+//
+// This section handles:
+// 1. Auto-height communication with the Wix parent page
+// 2. Detection of iframe context
+// 3. Scroll-to-top button visibility
+// 4. Graceful degradation of sticky/fixed positioning
+//
+// HOW IT WORKS IN WIX:
+// - Paste this HTML file into a Wix "Embed HTML" component
+// - Set the component width to your desired column width
+// - Set height to at least 800px (or use Wix Velo for auto-height)
+// - If using fixed height: sticky tab bar and sidebar work normally
+// - If using auto-height: the script detects this and adjusts layout
+
+(function wixCompat() {
+  const inIframe = window !== window.top;
+
+  // ── Auto-height: communicate content height to Wix parent ──
+  let lastHeight = 0;
+  function notifyWixHeight() {
+    if (!inIframe) return;
+    const height = Math.max(
+      document.body.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.scrollHeight
+    );
+    // Only send if height changed meaningfully (avoid message spam)
+    if (Math.abs(height - lastHeight) > 5) {
+      lastHeight = height;
+      try {
+        window.parent.postMessage(JSON.stringify({
+          type: 'setHeight',
+          data: height
+        }), '*');
+      } catch (e) {}
+    }
+  }
+
+  // Monitor for height changes (data loads, tab switches, filter changes)
+  if (inIframe) {
+    const resizeObserver = new ResizeObserver(() => {
+      requestAnimationFrame(notifyWixHeight);
+    });
+    resizeObserver.observe(document.body);
+
+    // Also notify on specific events
+    setTimeout(notifyWixHeight, 300);
+    setTimeout(notifyWixHeight, 1500);
+    setTimeout(notifyWixHeight, 4000);
+
+    // Notify after tab switches and filter changes
+    document.querySelectorAll('.tab-btn, .chip, .sidebar-tag').forEach(el => {
+      el.addEventListener('click', () => {
+        setTimeout(notifyWixHeight, 100);
+        setTimeout(notifyWixHeight, 500);
+      });
+    });
+  }
+
+  // ── Detect auto-height mode ──
+  // If the iframe height matches the content height (±50px), Wix is auto-sizing
+  // and the parent page scrolls. In this case, sticky positioning won't work.
+  function detectAutoHeight() {
+    if (!inIframe) return;
+    const iframeHeight = window.innerHeight;
+    const contentHeight = document.body.scrollHeight;
+    // If iframe is nearly as tall as content, we're in auto-height mode
+    if (contentHeight > 0 && Math.abs(iframeHeight - contentHeight) < 80) {
+      document.body.classList.add('wix-auto-height');
+    } else {
+      document.body.classList.remove('wix-auto-height');
+    }
+  }
+  // Check periodically since data loads change content height
+  if (inIframe) {
+    setTimeout(detectAutoHeight, 1000);
+    setTimeout(detectAutoHeight, 3000);
+    setTimeout(detectAutoHeight, 6000);
+    window.addEventListener('resize', detectAutoHeight);
+  }
+
+  // ── Scroll-to-top button ──
+  const scrollBtn = document.getElementById('scrollTopBtn');
+  if (scrollBtn) {
+    // Determine which element is scrolling (iframe body or html)
+    function getScrollTop() {
+      return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    }
+
+    function checkScrollVisibility() {
+      if (getScrollTop() > 400) {
+        scrollBtn.classList.add('visible');
+      } else {
+        scrollBtn.classList.remove('visible');
+      }
+    }
+
+    window.addEventListener('scroll', checkScrollVisibility, { passive: true });
+    document.addEventListener('scroll', checkScrollVisibility, { passive: true });
+
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Also try scrolling the document element (some iframes use this)
+      document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ── Listen for messages from Wix parent (e.g. theme, resize) ──
+  window.addEventListener('message', function(e) {
+    try {
+      const data = typeof e.data === 'string' ? JSON.parse(e.data) : e.data;
+      // Wix may send viewport info — we can use this for responsive adjustments
+      if (data.type === 'viewport') {
+        document.documentElement.style.setProperty('--wix-viewport-width', (data.data.width || 0) + 'px');
+      }
+    } catch (err) {
+      // Not a JSON message — ignore
+    }
+  });
+
+  // ── Ensure links open correctly from iframe ──
+  // All target="_blank" links already work (open new tab).
+  // But add rel="noopener noreferrer" for security on any we missed.
+  document.querySelectorAll('a[target="_blank"]').forEach(a => {
+    if (!a.getAttribute('rel') || !a.getAttribute('rel').includes('noopener')) {
+      a.setAttribute('rel', 'noopener noreferrer');
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
