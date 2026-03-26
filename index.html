@@ -2395,6 +2395,147 @@
       #tab-land-use #landUseTopicRow { display: none !important; }
     }
 
+    /* ── Mobile Bottom Navigation ── */
+    .mobile-nav {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      /* Hide the desktop tab bar on mobile */
+      .tab-bar {
+        display: none;
+      }
+      /* Show mobile bottom nav */
+      .mobile-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        background: rgba(255,253,252,0.97);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-top: 1px solid var(--line);
+        box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+        padding: 0;
+        justify-content: space-around;
+        align-items: stretch;
+        height: 62px;
+      }
+      /* Safe area for phones with home bar */
+      @supports (padding-bottom: env(safe-area-inset-bottom)) {
+        .mobile-nav { padding-bottom: env(safe-area-inset-bottom); }
+      }
+      .mobile-nav-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        padding: 6px 2px 4px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--text-muted);
+        transition: color 0.2s;
+        position: relative;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .mobile-nav-btn .nav-icon {
+        font-size: 1.25rem;
+        line-height: 1;
+        margin-bottom: 2px;
+      }
+      .mobile-nav-btn .nav-label {
+        font-size: 0.58rem;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        line-height: 1.2;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+      }
+      .mobile-nav-btn.active {
+        color: var(--forest);
+      }
+      .mobile-nav-btn.active::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 25%;
+        right: 25%;
+        height: 3px;
+        background: var(--forest);
+        border-radius: 0 0 3px 3px;
+      }
+      /* More menu overlay */
+      .mobile-more-menu {
+        display: none;
+        position: fixed;
+        bottom: 62px;
+        left: 0;
+        right: 0;
+        z-index: 9998;
+        background: rgba(255,253,252,0.98);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-top: 1px solid var(--line);
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.12);
+        padding: 10px 16px;
+        border-radius: 16px 16px 0 0;
+      }
+      .mobile-more-menu.open {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .mobile-more-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex: 1 1 45%;
+        padding: 12px 14px;
+        background: rgba(33,68,60,0.04);
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        color: var(--text-secondary);
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: background 0.15s;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .mobile-more-item:hover, .mobile-more-item:active {
+        background: rgba(33,68,60,0.10);
+      }
+      .mobile-more-item.active {
+        color: var(--forest);
+        background: rgba(33,68,60,0.10);
+      }
+      .mobile-more-item .nav-icon {
+        font-size: 1.15rem;
+      }
+      /* Add bottom padding to container so content isn't hidden behind nav */
+      .container {
+        padding-bottom: 80px !important;
+      }
+      @supports (padding-bottom: env(safe-area-inset-bottom)) {
+        .container { padding-bottom: calc(80px + env(safe-area-inset-bottom)) !important; }
+      }
+      /* Mobile more menu backdrop */
+      .mobile-more-backdrop {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 9997;
+        background: rgba(0,0,0,0.25);
+      }
+      .mobile-more-backdrop.open {
+        display: block;
+      }
+    }
+
     #tab-meetings .source-filters { display: none !important; }
     #tab-meetings .source-badge,
     #tab-meetings .category-tag,
@@ -2566,6 +2707,11 @@
         <p style="margin:8px 0 0 0; font-size:0.82rem; color:var(--text-muted); line-height:1.5; font-style:italic;">
           Scroll down for what's coming up — art walks, live music, community dinners, and more.
         </p>
+      </div>
+      <!-- ── Festival Calendar with Ticket Links ── -->
+      <div id="festivalCalendarWrap" style="margin-bottom:18px; padding:16px 18px; background:linear-gradient(135deg, rgba(33,68,60,0.04) 0%, rgba(166,143,87,0.07) 100%); border-radius:12px; border:1px solid rgba(33,68,60,0.10);">
+        <h3 style="margin:0 0 10px 0; font-size:1.0rem; color:var(--text-primary); font-family:var(--font-heading);">🎟️ 2026 Festival Season — Passes &amp; Tickets</h3>
+        <div id="festivalCalendar"></div>
       </div>
       <div class="filter-row">
         <span class="chip active-all" data-filter="all" data-tab-target="news">All</span>
@@ -6869,6 +7015,16 @@ function renderNews(items, filter) {
         calendarBtnHtml = `<div class="card-actions"><a href="${googleCalUrl(calItem)}" target="_blank" rel="noopener" class="cal-btn" title="Add to Google Calendar">${gIcon} Add to Google Calendar</a></div>`;
       }
 
+      // Check if this news item matches a festival — if so, show ticket button
+      let festivalTicketHtml = '';
+      const titleLower = (item.title || '').toLowerCase();
+      TELLURIDE_FESTIVALS.forEach(fest => {
+        const festLower = fest.name.toLowerCase().replace(/\s*\(.*\)\s*/, ''); // strip parenthetical
+        if (fest.ticketUrl && titleLower.includes(festLower.split(' ').slice(0, 2).join(' '))) {
+          festivalTicketHtml = `<a href="${fest.ticketUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:inline-flex;align-items:center;gap:4px;margin-top:6px;padding:5px 14px;background:var(--accent-green);color:#fff;border-radius:6px;font-size:0.72rem;font-weight:700;text-decoration:none;">🎟️ ${fest.ticketLabel}</a>`;
+        }
+      });
+
       html += `
         <div class="card" data-source="${item.source}">
           ${renderLogo(item.source)}
@@ -6880,6 +7036,7 @@ function renderNews(items, filter) {
                 ${item.pubDate ? `<div class="meta">${fullDate(item.pubDate)}</div>` : ''}
                 ${item.location ? `<div class="meta"><span class="location">📍 ${item.location}</span></div>` : ''}
                 ${item.description ? `<div class="description">${item.description}</div>` : ''}
+                ${festivalTicketHtml}
                 ${calendarBtnHtml}
               </div>
               ${item.imageUrl
@@ -7966,6 +8123,7 @@ async function init() {
     renderNewsWithTopic();
     updateTopicCounts();
     updateEventsHeroFestivals();
+    renderFestivalCalendar();
   });
 }
 
@@ -8068,7 +8226,8 @@ function updateEventsHeroFestivals() {
   if (upcoming.length === 0) { container.style.display = 'none'; return; }
 
   const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  let html = '<div style="display:flex;flex-wrap:wrap;gap:8px;">';
+  let html = '<div style="font-size:0.8rem;font-weight:700;color:var(--text-primary);margin-bottom:6px;">Coming Up</div>';
+  html += '<div style="display:flex;flex-wrap:wrap;gap:8px;">';
   upcoming.slice(0, 4).forEach(f => {
     const dateLabel = monthNames[f.start.getMonth()] + ' ' + f.start.getDate();
     let timing;
@@ -8081,15 +8240,65 @@ function updateEventsHeroFestivals() {
     } else {
       timing = dateLabel;
     }
+    const ticketBtn = f.ticketUrl
+      ? '<a href="' + f.ticketUrl + '" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:inline-block;margin-top:4px;padding:3px 10px;background:var(--accent-green);color:#fff;border-radius:5px;font-size:0.65rem;font-weight:700;text-decoration:none;letter-spacing:0.02em;">' + f.ticketLabel + '</a>'
+      : '';
     html += '<div style="flex:1 1 140px;min-width:140px;background:rgba(255,255,255,0.7);border-radius:8px;padding:8px 10px;text-align:center;">'
       + '<div style="font-size:1.3rem;">' + f.icon + '</div>'
       + '<div style="font-size:0.78rem;font-weight:700;color:var(--text-primary);line-height:1.3;margin:2px 0;">' + f.name + '</div>'
       + '<div style="font-size:0.72rem;color:var(--text-muted);">' + timing + '</div>'
+      + ticketBtn
       + '</div>';
   });
   html += '</div>';
   container.innerHTML = html;
   container.style.display = 'block';
+}
+
+// ── Build the full Festival Calendar section below the hero ──
+function renderFestivalCalendar() {
+  const container = document.getElementById('festivalCalendar');
+  if (!container) return;
+  const year = new Date().getFullYear();
+  const festivals = getAllFestivalsForYear(year);
+  const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+  let html = '';
+  festivals.forEach(f => {
+    const startM = monthShort[f.start.getMonth()];
+    const endM = monthShort[f.end.getMonth()];
+    const dateRange = startM === endM
+      ? startM + ' ' + f.start.getDate() + '–' + f.end.getDate()
+      : startM + ' ' + f.start.getDate() + ' – ' + endM + ' ' + f.end.getDate();
+
+    let statusBadge = '';
+    if (f.happening) {
+      statusBadge = '<span style="display:inline-block;padding:2px 8px;background:#b45309;color:#fff;border-radius:10px;font-size:0.65rem;font-weight:700;margin-left:6px;">HAPPENING NOW</span>';
+    } else if (f.passed) {
+      statusBadge = '<span style="display:inline-block;padding:2px 8px;background:var(--text-muted);color:#fff;border-radius:10px;font-size:0.65rem;font-weight:600;margin-left:6px;opacity:0.6;">PAST</span>';
+    } else if (f.daysUntil <= 14) {
+      statusBadge = '<span style="display:inline-block;padding:2px 8px;background:#b45309;color:#fff;border-radius:10px;font-size:0.65rem;font-weight:600;margin-left:6px;">COMING SOON</span>';
+    }
+
+    const ticketBtn = f.ticketUrl && !f.passed
+      ? '<a href="' + f.ticketUrl + '" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:inline-flex;align-items:center;gap:4px;padding:5px 14px;background:var(--accent-green);color:#fff;border-radius:6px;font-size:0.72rem;font-weight:700;text-decoration:none;letter-spacing:0.02em;white-space:nowrap;">🎟️ ' + f.ticketLabel + '</a>'
+      : '';
+
+    const opacity = f.passed ? 'opacity:0.55;' : '';
+
+    html += '<div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:rgba(255,255,255,0.6);border-radius:10px;margin-bottom:6px;' + opacity + '">'
+      + '<div style="font-size:1.5rem;flex-shrink:0;">' + f.icon + '</div>'
+      + '<div style="flex:1;min-width:0;">'
+        + '<div style="font-size:0.82rem;font-weight:700;color:var(--text-primary);line-height:1.3;">' + f.name + statusBadge + '</div>'
+        + '<div style="font-size:0.72rem;color:var(--text-muted);margin-top:1px;">' + dateRange + ', ' + year + '</div>'
+        + (f.promo && !f.passed ? '<div style="font-size:0.68rem;color:var(--accent-green);margin-top:2px;font-weight:600;">' + f.promo + '</div>' : '')
+      + '</div>'
+      + '<div style="flex-shrink:0;">' + ticketBtn + '</div>'
+    + '</div>';
+  });
+
+  container.innerHTML = html;
 }
 
 function updateLeftSidebar() {
@@ -9344,6 +9553,138 @@ setInterval(() => {
     }
   };
 
+})();
+</script>
+
+<!-- ══════════ MOBILE BOTTOM NAVIGATION ══════════ -->
+<div class="mobile-more-backdrop" id="mobileMoreBackdrop"></div>
+<div class="mobile-more-menu" id="mobileMoreMenu">
+  <button class="mobile-more-item" data-tab="gondola">
+    <span class="nav-icon">🚡</span> Gondola 3A
+  </button>
+  <button class="mobile-more-item" data-tab="legals">
+    <span class="nav-icon">📋</span> Legal Notices
+  </button>
+  <button class="mobile-more-item" data-tab="subscribe">
+    <span class="nav-icon">📬</span> Subscribe
+  </button>
+  <button class="mobile-more-item" data-tab="links">
+    <span class="nav-icon">🔗</span> Quick Links
+  </button>
+</div>
+<nav class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-btn active" data-tab="meetings">
+    <span class="nav-icon">🏛️</span>
+    <span class="nav-label">Meetings</span>
+  </button>
+  <button class="mobile-nav-btn" data-tab="land-use">
+    <span class="nav-icon">🏗️</span>
+    <span class="nav-label">Land Use</span>
+  </button>
+  <button class="mobile-nav-btn" data-tab="news">
+    <span class="nav-icon">🎉</span>
+    <span class="nav-label">Events</span>
+  </button>
+  <button class="mobile-nav-btn" data-tab="more" id="mobileMoreBtn">
+    <span class="nav-icon">☰</span>
+    <span class="nav-label">More</span>
+  </button>
+</nav>
+<script>
+(function() {
+  const mobileNav = document.getElementById('mobileNav');
+  if (!mobileNav) return;
+
+  const moreMenu = document.getElementById('mobileMoreMenu');
+  const moreBackdrop = document.getElementById('mobileMoreBackdrop');
+  const moreBtn = document.getElementById('mobileMoreBtn');
+  const allMobileNavBtns = mobileNav.querySelectorAll('.mobile-nav-btn');
+  const allMoreItems = moreMenu.querySelectorAll('.mobile-more-item');
+  // Tabs that live in the "More" menu
+  const moreTabs = new Set(['gondola', 'legals', 'subscribe', 'links']);
+
+  function closeMoreMenu() {
+    moreMenu.classList.remove('open');
+    moreBackdrop.classList.remove('open');
+  }
+
+  function switchTab(tabName) {
+    // Activate the desktop tab-btn too (keeps state in sync)
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    const desktopBtn = document.querySelector('.tab-btn[data-tab="' + tabName + '"]');
+    if (desktopBtn) desktopBtn.classList.add('active');
+    const tabEl = document.getElementById('tab-' + tabName);
+    if (tabEl) tabEl.classList.add('active');
+    // Trigger any tab-specific rendering
+    if (tabName === 'land-use' && typeof renderLandUseTab === 'function') renderLandUseTab();
+    if (tabName === 'gondola' && typeof renderGondolaTab === 'function') renderGondolaTab();
+    const layout = document.querySelector('.main-layout');
+    if (layout) {
+      layout.classList.toggle('subscribe-active', tabName === 'subscribe');
+      layout.classList.toggle('landuse-active', tabName === 'land-use' || tabName === 'gondola');
+    }
+    // Scroll to top of content
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function updateMobileActive(tabName) {
+    // Clear all active states
+    allMobileNavBtns.forEach(b => b.classList.remove('active'));
+    allMoreItems.forEach(b => b.classList.remove('active'));
+
+    if (moreTabs.has(tabName)) {
+      // Highlight the "More" button and the specific item in the menu
+      moreBtn.classList.add('active');
+      allMoreItems.forEach(b => {
+        if (b.dataset.tab === tabName) b.classList.add('active');
+      });
+    } else {
+      // Highlight the direct nav button
+      allMobileNavBtns.forEach(b => {
+        if (b.dataset.tab === tabName) b.classList.add('active');
+      });
+    }
+  }
+
+  // Primary nav buttons
+  allMobileNavBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (btn.dataset.tab === 'more') {
+        // Toggle more menu
+        const isOpen = moreMenu.classList.contains('open');
+        if (isOpen) {
+          closeMoreMenu();
+        } else {
+          moreMenu.classList.add('open');
+          moreBackdrop.classList.add('open');
+        }
+        return;
+      }
+      closeMoreMenu();
+      switchTab(btn.dataset.tab);
+      updateMobileActive(btn.dataset.tab);
+    });
+  });
+
+  // More menu items
+  allMoreItems.forEach(btn => {
+    btn.addEventListener('click', () => {
+      closeMoreMenu();
+      switchTab(btn.dataset.tab);
+      updateMobileActive(btn.dataset.tab);
+    });
+  });
+
+  // Backdrop closes more menu
+  moreBackdrop.addEventListener('click', closeMoreMenu);
+
+  // Keep mobile nav in sync when desktop tab-btns are clicked
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      updateMobileActive(btn.dataset.tab);
+    });
+  });
 })();
 </script>
 
