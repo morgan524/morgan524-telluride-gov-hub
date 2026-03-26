@@ -374,11 +374,17 @@
       text-align: center;
     }
 
-    /* Hide sidebar when Subscribe or Land Use tab is active */
+    /* Hide sidebars when Subscribe or Land Use tab is active */
     .main-layout.subscribe-active .sidebar,
     .main-layout.subscribe-active .expand-pill-right,
+    .main-layout.subscribe-active .left-sidebar,
     .main-layout.landuse-active .sidebar,
-    .main-layout.landuse-active .expand-pill-right {
+    .main-layout.landuse-active .expand-pill-right,
+    .main-layout.landuse-active .left-sidebar {
+      display: none !important;
+    }
+    /* Also hide left sidebar on Gondola tab */
+    .main-layout.gondola-active .left-sidebar {
       display: none !important;
     }
 
@@ -505,7 +511,7 @@
       flex-shrink: 0;
       width: 92px;
       height: 92px;
-      border-radius: 22px;
+      border-radius: 12px;
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -518,7 +524,7 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-      padding: 8px;
+      padding: 6px;
       display: block;
     }
     .card-logo svg {
@@ -1607,7 +1613,155 @@
       min-width: 0;
     }
 
-    /* Left sidebar removed */
+    /* ── Left Sidebar ── */
+    .left-sidebar {
+      flex-shrink: 0;
+      width: 220px;
+      position: sticky;
+      top: 60px;
+      max-height: calc(100vh - 80px);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      order: -1;
+    }
+    .left-sidebar-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(221, 213, 200, 0.72);
+      border-radius: 14px;
+      padding: 14px 16px;
+      box-shadow: var(--shadow-soft);
+    }
+    .left-sidebar-title {
+      font-size: 0.65rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    /* This Week snapshot */
+    .week-stat {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 0;
+    }
+    .week-stat + .week-stat {
+      border-top: 1px solid rgba(0,0,0,0.04);
+    }
+    .week-stat-icon {
+      font-size: 1.1rem;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(33,68,60,0.07);
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+    .week-stat-text {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      line-height: 1.35;
+    }
+    .week-stat-text strong {
+      color: var(--text-primary);
+      font-weight: 700;
+    }
+
+    /* Deadlines */
+    .deadline-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 7px 0;
+    }
+    .deadline-item + .deadline-item {
+      border-top: 1px solid rgba(0,0,0,0.04);
+    }
+    .deadline-badge {
+      flex-shrink: 0;
+      font-size: 0.6rem;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+      margin-top: 1px;
+    }
+    .deadline-badge.urgent {
+      background: rgba(180, 50, 40, 0.12);
+      color: #a33;
+    }
+    .deadline-badge.soon {
+      background: rgba(200, 140, 30, 0.15);
+      color: #9a6b10;
+    }
+    .deadline-badge.upcoming {
+      background: rgba(33, 68, 60, 0.1);
+      color: var(--forest-soft);
+    }
+    .deadline-text {
+      font-size: 0.72rem;
+      color: var(--text-secondary);
+      line-height: 1.35;
+    }
+    .deadline-text strong {
+      color: var(--text-primary);
+      font-weight: 600;
+      display: block;
+    }
+
+    /* Contact links */
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 8px;
+      border-radius: 8px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--forest-soft);
+      text-decoration: none;
+      transition: all 0.15s;
+      margin-bottom: 2px;
+    }
+    .contact-item:hover {
+      background: rgba(33,68,60,0.07);
+      color: var(--forest);
+    }
+    .contact-icon {
+      font-size: 0.85rem;
+      width: 20px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .contact-label {
+      flex: 1;
+      line-height: 1.3;
+    }
+    .contact-deadline-note {
+      font-size: 0.62rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    .left-sidebar-empty {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-style: italic;
+      padding: 4px 0;
+    }
 
     /* ── Sidebar ── */
     .sidebar {
@@ -1952,6 +2106,11 @@
     .footer a { color: var(--forest); text-decoration: none; }
     .footer a:hover { text-decoration: underline; }
 
+    /* ── Tablet: collapse left sidebar ── */
+    @media (max-width: 960px) {
+      .left-sidebar { display: none; }
+    }
+
     /* ── Mobile ── */
     @media (max-width: 560px) {
 
@@ -2060,6 +2219,66 @@
 
   <div class="container">
   <div class="main-layout">
+
+  <!-- ── Left Sidebar ── -->
+  <aside class="left-sidebar" id="leftSidebar">
+
+    <!-- This Week Snapshot -->
+    <div class="left-sidebar-card">
+      <div class="left-sidebar-title">This Week</div>
+      <div id="weekSnapshot">
+        <div class="left-sidebar-empty">Loading...</div>
+      </div>
+    </div>
+
+    <!-- Upcoming Deadlines -->
+    <div class="left-sidebar-card">
+      <div class="left-sidebar-title">Comment Deadlines</div>
+      <div id="deadlinesList">
+        <div class="left-sidebar-empty">Loading...</div>
+      </div>
+    </div>
+
+    <!-- Quick Contact Links -->
+    <div class="left-sidebar-card">
+      <div class="left-sidebar-title">Submit Public Comment</div>
+      <div id="contactLinks">
+        <a class="contact-item" href="mailto:townclerk@telluride.gov?subject=Public%20Comment" target="_blank">
+          <span class="contact-icon">🏔️</span>
+          <span class="contact-label">Telluride Town Council<span class="contact-deadline-note">By Wed at noon</span></span>
+        </a>
+        <a class="contact-item" href="mailto:bocc@sanmiguelcountyco.gov?subject=Public%20Comment" target="_blank">
+          <span class="contact-icon">🏛️</span>
+          <span class="contact-label">County BOCC<span class="contact-deadline-note">By Mon at 4 PM</span></span>
+        </a>
+        <a class="contact-item" href="mailto:planningcommission@sanmiguelcountyco.gov?subject=Public%20Comment" target="_blank">
+          <span class="contact-icon">📐</span>
+          <span class="contact-label">County Planning<span class="contact-deadline-note">By Mon at 4 PM</span></span>
+        </a>
+        <a class="contact-item" href="mailto:council@mtnvillage.org?subject=Public%20Comment" target="_blank">
+          <span class="contact-icon">⛰️</span>
+          <span class="contact-label">Mountain Village Council<span class="contact-deadline-note">By Thu before meeting</span></span>
+        </a>
+        <a class="contact-item" href="mailto:planning@mtnvillage.org?subject=Public%20Comment" target="_blank">
+          <span class="contact-icon">📋</span>
+          <span class="contact-label">MV Planning & Zoning<span class="contact-deadline-note">By Thu before meeting</span></span>
+        </a>
+        <a class="contact-item" href="mailto:wcrossland@tellmed.org?subject=Public%20Comment" target="_blank">
+          <span class="contact-icon">🏥</span>
+          <span class="contact-label">Med Center Board<span class="contact-deadline-note">48 hrs before meeting</span></span>
+        </a>
+        <a class="contact-item" href="mailto:pdasaro@telluridefire.com?subject=Public%20Comment" target="_blank">
+          <span class="contact-icon">🚒</span>
+          <span class="contact-label">First District Fire<span class="contact-deadline-note">48 hrs before meeting</span></span>
+        </a>
+        <a class="contact-item" href="mailto:clerk@ophir.us?subject=Public%20Comment" target="_blank">
+          <span class="contact-icon">🏘️</span>
+          <span class="contact-label">Town of Ophir<span class="contact-deadline-note">48 hrs before meeting</span></span>
+        </a>
+      </div>
+    </div>
+
+  </aside>
 
   <div class="main-content">
 
@@ -5769,12 +5988,30 @@ function renderBadge(item) {
 }
 
 // Strip the word "Meeting" from card titles to reduce clutter
-function cleanTitle(title) {
+const SOURCE_SHORT_NAME = {
+  telluride: 'Telluride',
+  county: 'San Miguel County',
+  smart: 'SMART',
+  mv: 'Mountain Village',
+  school: 'School District',
+  fire: 'First District',
+  med: 'Med Center',
+  norwood: 'Norwood',
+  ophir: 'Ophir',
+  airport: 'TEX',
+  wilkinson: 'Wilkinson'
+};
+
+function cleanTitle(title, source) {
   if (!title) return '';
-  return title
+  let cleaned = title
     .replace(/\s+Meeting$/i, '')
     .replace(/\s+Meeting\s*--/i, ' --')
     .replace(/\s+Meeting\s*-/i, ' -');
+  if (source && SOURCE_SHORT_NAME[source]) {
+    cleaned = SOURCE_SHORT_NAME[source] + ': ' + cleaned;
+  }
+  return cleaned;
 }
 
 // ── Remote Access Links per Entity ──
@@ -6171,7 +6408,7 @@ function renderMeetings(items, filter) {
             <div class="event-card-main">
               <div class="event-card-content">
                 ${item.canceled ? '' : renderBadge(item) + ' ' + agendaBadge}
-                <h3${cancelStyle}><a href="${item.link}" target="_blank" rel="noopener">${cleanTitle(item.title)}</a></h3>
+                <h3${cancelStyle}><a href="${item.link}" target="_blank" rel="noopener">${cleanTitle(item.title, item.source)}</a></h3>
                 <div class="meta">${fullDate(item.eventDate)}${timePart ? ' · ' + timePart : ''}</div>
                 ${locationPart ? `<div class="meta">${locationPart}</div>` : ''}
                 ${item.canceled ? '' : renderWhyThisMatters(item)}
@@ -6255,7 +6492,7 @@ function renderNews(items, filter) {
             <div class="event-card-main">
               <div class="event-card-content">
                 ${renderBadge(item)} ${moreInfo}
-                <h3><a href="${item.link}" target="_blank" rel="noopener">${item.title}</a></h3>
+                <h3><a href="${item.link}" target="_blank" rel="noopener">${cleanTitle(item.title, item.source)}</a></h3>
                 ${item.pubDate ? `<div class="meta">${fullDate(item.pubDate)}</div>` : ''}
                 ${item.location ? `<div class="meta"><span class="location">📍 ${item.location}</span></div>` : ''}
                 ${item.description ? `<div class="description">${item.description}</div>` : ''}
@@ -6936,7 +7173,7 @@ function renderMeetingsWithTopic() {
         renderLogo(item.source) +
         '<div class="card-body">' +
           (item.canceled ? '' : renderBadge(item) + ' ' + agendaBadge) +
-          '<h3' + cancelStyle + '><a href="' + item.link + '" target="_blank" rel="noopener">' + cleanTitle(item.title) + '</a></h3>' +
+          '<h3' + cancelStyle + '><a href="' + item.link + '" target="_blank" rel="noopener">' + cleanTitle(item.title, item.source) + '</a></h3>' +
           '<div class="meta">' + fullDate(item.eventDate) + (timePart ? ' · ' + timePart : '') + '</div>' +
           (locationPart ? '<div class="meta">' + locationPart + '</div>' : '') +
           (item.canceled ? '' : renderWhyThisMatters(item)) +
@@ -7319,6 +7556,140 @@ async function init() {
     updateTopicCounts();
   });
 }
+
+// ══════════════════════════════════════════════════════
+// ── Left Sidebar: This Week + Deadlines ──
+// ══════════════════════════════════════════════════════
+
+function updateLeftSidebar() {
+  const meetings = window.__allMeetingsCache || [];
+  const now = new Date();
+  const todayStr = now.toISOString().slice(0, 10);
+
+  // End of this week (Sunday)
+  const endOfWeek = new Date(now);
+  endOfWeek.setDate(endOfWeek.getDate() + (7 - endOfWeek.getDay()));
+  endOfWeek.setHours(23, 59, 59, 999);
+
+  // Only governmental meetings from today onward
+  const upcoming = meetings.filter(m =>
+    m.eventDate && dateGroupKey(m.eventDate) >= todayStr && isGovernmentalMeeting(m) && !m.canceled
+  );
+
+  const todayMeetings = upcoming.filter(m => dateGroupKey(m.eventDate) === todayStr);
+  const weekMeetings = upcoming.filter(m => m.eventDate <= endOfWeek);
+
+  // Next 7 days with comment windows
+  const next7 = new Date(now);
+  next7.setDate(next7.getDate() + 7);
+  const weekAhead = upcoming.filter(m => m.eventDate <= next7);
+
+  // Count legal notices
+  const legalCount = (typeof LEGAL_NOTICES !== 'undefined') ? LEGAL_NOTICES.length : 0;
+
+  // ── This Week snapshot ──
+  const snapEl = document.getElementById('weekSnapshot');
+  if (snapEl) {
+    let html = '';
+    html += `<div class="week-stat">
+      <div class="week-stat-icon">📅</div>
+      <div class="week-stat-text"><strong>${todayMeetings.length}</strong> meeting${todayMeetings.length !== 1 ? 's' : ''} today</div>
+    </div>`;
+    html += `<div class="week-stat">
+      <div class="week-stat-icon">🗓️</div>
+      <div class="week-stat-text"><strong>${weekMeetings.length}</strong> this week</div>
+    </div>`;
+    if (legalCount > 0) {
+      html += `<div class="week-stat">
+        <div class="week-stat-icon">⚖️</div>
+        <div class="week-stat-text"><strong>${legalCount}</strong> legal notice${legalCount !== 1 ? 's' : ''}</div>
+      </div>`;
+    }
+    snapEl.innerHTML = html;
+  }
+
+  // ── Comment Deadlines ──
+  const deadEl = document.getElementById('deadlinesList');
+  if (deadEl) {
+    // Build deadline entries from upcoming meetings in next 10 days
+    const next10 = new Date(now);
+    next10.setDate(next10.getDate() + 10);
+    const soonMeetings = upcoming.filter(m => m.eventDate <= next10);
+
+    // Compute comment deadlines per entity
+    const DEADLINE_RULES = {
+      telluride: { label: 'Telluride', offsetDesc: 'Wed noon before meeting', getDeadline: (d) => { const dl = new Date(d); dl.setDate(dl.getDate() - (dl.getDay() >= 3 ? dl.getDay() - 3 : dl.getDay() + 4)); dl.setHours(12, 0, 0, 0); return dl; }},
+      county: { label: 'County', offsetDesc: 'Mon 4 PM before meeting', getDeadline: (d) => { const dl = new Date(d); dl.setDate(dl.getDate() - (dl.getDay() >= 1 ? dl.getDay() - 1 : 6)); dl.setHours(16, 0, 0, 0); return dl; }},
+      mv: { label: 'Mtn Village', offsetDesc: 'Thu before meeting', getDeadline: (d) => { const dl = new Date(d); dl.setDate(dl.getDate() - (dl.getDay() >= 4 ? dl.getDay() - 4 : dl.getDay() + 3)); dl.setHours(17, 0, 0, 0); return dl; }},
+      fire: { label: 'First District', offsetDesc: '48 hrs before', getDeadline: (d) => { const dl = new Date(d); dl.setTime(dl.getTime() - 48*60*60*1000); return dl; }},
+      med: { label: 'Med Center', offsetDesc: '48 hrs before', getDeadline: (d) => { const dl = new Date(d); dl.setTime(dl.getTime() - 48*60*60*1000); return dl; }},
+      ophir: { label: 'Ophir', offsetDesc: '48 hrs before', getDeadline: (d) => { const dl = new Date(d); dl.setTime(dl.getTime() - 48*60*60*1000); return dl; }},
+      norwood: { label: 'Norwood', offsetDesc: '48 hrs before', getDeadline: (d) => { const dl = new Date(d); dl.setTime(dl.getTime() - 48*60*60*1000); return dl; }}
+    };
+
+    const deadlines = [];
+    const seenKeys = new Set();
+
+    soonMeetings.forEach(m => {
+      const rule = DEADLINE_RULES[m.source];
+      if (!rule) return;
+      const deadline = rule.getDeadline(m.eventDate);
+      if (deadline < now) return; // already passed
+
+      const key = m.source + '|' + dateGroupKey(m.eventDate);
+      if (seenKeys.has(key)) return;
+      seenKeys.add(key);
+
+      const diffMs = deadline - now;
+      const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
+      const diffDays = Math.floor(diffHrs / 24);
+
+      let urgency, timeLabel;
+      if (diffHrs < 24) {
+        urgency = 'urgent';
+        timeLabel = diffHrs <= 1 ? '< 1 hr' : diffHrs + ' hrs';
+      } else if (diffDays <= 2) {
+        urgency = 'soon';
+        timeLabel = diffDays + ' day' + (diffDays !== 1 ? 's' : '');
+      } else {
+        urgency = 'upcoming';
+        timeLabel = diffDays + ' days';
+      }
+
+      deadlines.push({
+        urgency,
+        timeLabel,
+        entity: rule.label,
+        title: cleanTitle(m.title),
+        meetingDate: fullDate(m.eventDate),
+        sortKey: deadline.getTime()
+      });
+    });
+
+    deadlines.sort((a, b) => a.sortKey - b.sortKey);
+
+    if (deadlines.length === 0) {
+      deadEl.innerHTML = '<div class="left-sidebar-empty">No comment deadlines in the next 10 days</div>';
+    } else {
+      deadEl.innerHTML = deadlines.slice(0, 6).map(d => `
+        <div class="deadline-item">
+          <span class="deadline-badge ${d.urgency}">${d.timeLabel}</span>
+          <div class="deadline-text">
+            <strong>${d.entity}</strong>
+            ${d.meetingDate}
+          </div>
+        </div>
+      `).join('');
+    }
+  }
+}
+
+// Call after each data load
+const _origRenderMeetingsWithTopic = renderMeetingsWithTopic;
+renderMeetingsWithTopic = function() {
+  _origRenderMeetingsWithTopic();
+  updateLeftSidebar();
+};
 
 init();
 
