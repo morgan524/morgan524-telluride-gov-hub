@@ -8889,7 +8889,7 @@ setInterval(() => {
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       Events Around Me
     </h3>
-    <p>Enter an address and choose a radius. You'll only receive email updates for meetings and projects happening within that distance.</p>
+    <p>Enter an address and choose a radius. You'll be notified when planning decisions, development projects, or board determinations involve property within that distance — plus nearby arts and cultural events.</p>
 
     <label for="proxAddress">Address</label>
     <input type="text" id="proxAddress" placeholder="e.g. 200 W Colorado Ave, Telluride" autocomplete="street-address" />
@@ -8912,28 +8912,53 @@ setInterval(() => {
 // ══════════════════════════════════════════════════════════════
 // ── Events Around Me -- Geocoding & Proximity Filter ──
 // ══════════════════════════════════════════════════════════════
+//
+// PURPOSE: Alert subscribers when a planning decision, development project,
+// or board/commission determination involves property near THEIR address.
+// This is NOT about meeting venue locations (those never change).
+//
+// PRIORITY TIERS:
+//   1. Planning & board/commission decisions involving specific properties
+//   2. Arts & cultural events (festivals, community events)
+//
+// HOW IT WORKS:
+//   - Scans meeting summaries & WHY_THIS_MATTERS for street addresses
+//   - Maps known project sites to coordinates
+//   - Geocodes the subscriber's address via OpenStreetMap Nominatim
+//   - Calculates distance and filters by chosen radius
+//
 
 (function() {
   'use strict';
 
-  // ── Known venue coordinates (lat, lon) ──
-  // Pre-geocoded to avoid API calls for common meeting locations
-  const VENUE_COORDS = {
-    '305 w colorado ave':        { lat: 37.9375, lon: -107.8123, label: 'Telluride Town Hall' },
-    '333 west colorado ave':     { lat: 37.9374, lon: -107.8130, label: 'County Courthouse' },
-    '333 w colorado ave':        { lat: 37.9374, lon: -107.8130, label: 'County Courthouse' },
-    '455 mountain village blvd':  { lat: 37.9335, lon: -107.8507, label: 'MV Town Hall' },
-    '700 w pacific ave':         { lat: 37.9383, lon: -107.8173, label: 'Carhenge site' },
-    '155 w pacific ave':         { lat: 37.9378, lon: -107.8095, label: 'Silver Jack / Element 52' },
-    '398 s davis st':            { lat: 37.9365, lon: -107.8100, label: 'Element 52' },
-    'bridal veil':               { lat: 37.9312, lon: -107.7640, label: 'Fire District' },
-    'norwood':                   { lat: 38.1297, lon: -108.2893, label: 'Town of Norwood' },
-    'ophir':                     { lat: 37.8590, lon: -107.8270, label: 'Town of Ophir' },
-  };
+  // ── Known PROJECT / PROPERTY site coordinates ──
+  // These are the actual development sites, not where the meetings are held.
+  // Update as new projects enter the pipeline.
+  const PROJECT_SITES = [
+    // ── Active planning / development projects ──
+    { lat: 37.9383, lon: -107.8173, name: 'Carhenge Redevelopment (700 W Pacific Ave)', keywords: /carhenge|700 w pacific/i, tier: 1 },
+    { lat: 37.9378, lon: -107.8095, name: 'Silver Jack (155 W Pacific Ave)', keywords: /silver jack|155 w pacific/i, tier: 1 },
+    { lat: 37.9365, lon: -107.8100, name: 'Element 52 (398 S Davis St)', keywords: /element 52|398 s davis/i, tier: 1 },
+    { lat: 37.9370, lon: -107.8068, name: 'Chair 7 Base Area', keywords: /chair\s*7/i, tier: 1 },
+    { lat: 37.9536, lon: -107.9085, name: 'Society Turn PUD', keywords: /society\s*turn/i, tier: 1 },
+    { lat: 37.9358, lon: -107.8095, name: 'Shandoka Parking Structure', keywords: /shandoka/i, tier: 1 },
+    { lat: 37.9387, lon: -107.8160, name: 'Overlook at Telluride Subdivision', keywords: /overlook/i, tier: 1 },
+    { lat: 37.9374, lon: -107.8115, name: 'Wilkin Court', keywords: /wilkin court/i, tier: 1 },
+    { lat: 37.9390, lon: -107.8150, name: 'Stender Residence (HARC appeal)', keywords: /stender/i, tier: 1 },
+    { lat: 37.9383, lon: -107.8210, name: 'Lawson Hill Housing Site', keywords: /lawson hill/i, tier: 1 },
+    { lat: 37.9374, lon: -107.8130, name: 'Aldasoro / Diamond Ranch PUD', keywords: /aldasoro|diamond ranch|lucarelli/i, tier: 1 },
+
+    // ── Arts & cultural event venues (secondary priority) ──
+    { lat: 37.9377, lon: -107.8118, name: 'Town Park (festivals)', keywords: /bluegrass|blues.*brews|jazz|ride\s*festival|film\s*festival|mountainfilm|wine\s*festival|yoga\s*festival|mushroom|horror\s*show|fourth.*july|nothing\s*festival/i, tier: 2 },
+    { lat: 37.9372, lon: -107.8102, name: 'Sheridan Opera House', keywords: /sheridan|opera\s*house/i, tier: 2 },
+    { lat: 37.9368, lon: -107.8078, name: 'Ah Haa School for the Arts', keywords: /ah\s*haa/i, tier: 2 },
+    { lat: 37.9370, lon: -107.8090, name: 'Wilkinson Public Library', keywords: /wilkinson|library/i, tier: 2 },
+    { lat: 37.9375, lon: -107.8108, name: 'Telluride Arts District', keywords: /arts?\s*district|gallery|community\s*event/i, tier: 2 },
+  ];
 
   // ── Haversine distance (miles) ──
   function haversineMiles(lat1, lon1, lat2, lon2) {
-    const R = 3958.8; // Earth radius in miles
+    const R = 3958.8;
     const dLat = (lat2 - lat1) * Math.PI / 180;
     const dLon = (lon2 - lon1) * Math.PI / 180;
     const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
@@ -8942,16 +8967,14 @@ setInterval(() => {
     return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
   }
 
-  // ── Geocode an address using OpenStreetMap Nominatim (free, no key) ──
+  // ── Geocode via OpenStreetMap Nominatim (free, no API key) ──
   async function geocodeAddress(address) {
-    // First check our local cache
-    const normalized = address.toLowerCase().replace(/,?\s*(telluride|co|colorado|81435)/gi, '').trim();
-    for (const key in VENUE_COORDS) {
-      if (normalized.includes(key) || key.includes(normalized)) {
-        return VENUE_COORDS[key];
-      }
+    // Check if address matches a known project site first
+    const lower = address.toLowerCase();
+    for (const site of PROJECT_SITES) {
+      if (site.keywords.test(lower)) return { lat: site.lat, lon: site.lon };
     }
-    // Append Telluride area context for better results
+    // Append region context for better geocoding results
     const query = address.match(/telluride|mountain village|norwood|ophir|san miguel/i)
       ? address
       : address + ', San Miguel County, Colorado';
@@ -8964,10 +8987,29 @@ setInterval(() => {
     return null;
   }
 
+  // ── Match a meeting item to nearby project sites by scanning its text ──
+  // Returns an array of { site, distance } for all project sites referenced
+  // in the meeting's title, summary, or WHY_THIS_MATTERS content.
+  function getItemProjectSites(item) {
+    // Build a searchable text blob from the meeting's content
+    const title = item.title || '';
+    const desc = item.description || '';
+    const summary = (typeof getMeetingSummary === 'function') ? (getMeetingSummary(item) || '') : '';
+    const searchText = title + ' | ' + summary + ' | ' + desc;
+
+    const matches = [];
+    for (const site of PROJECT_SITES) {
+      if (site.keywords.test(searchText)) {
+        matches.push(site);
+      }
+    }
+    return matches;
+  }
+
   // ── State ──
-  let proxCoords = null;    // { lat, lon }
-  let proxRadius = 0.5;     // miles
-  let proxAddress = '';      // display text
+  let proxCoords = null;
+  let proxRadius = 0.5;
+  let proxAddress = '';
 
   // ── DOM refs ──
   const overlay   = document.getElementById('proxOverlay');
@@ -9006,7 +9048,7 @@ setInterval(() => {
     if (e.key === 'Enter') { e.preventDefault(); applyBtn.click(); }
   });
 
-  // ── Apply: geocode & store ──
+  // ── Apply: geocode & count nearby projects ──
   applyBtn.addEventListener('click', async () => {
     const addr = addrInput.value.trim();
     if (!addr) {
@@ -9031,20 +9073,28 @@ setInterval(() => {
       proxCoords = coords;
       proxAddress = addr;
 
-      // Count matching meetings
+      // Count nearby projects by tier
       const meetings = window.__allMeetingsCache || [];
-      const nearby = countNearbyMeetings(meetings);
+      const { planning, cultural } = countNearbyByTier(meetings);
+      const total = planning + cultural;
 
-      // Show success
-      statusEl.innerHTML = 'Found your location! <strong>' + nearby + ' upcoming meeting' + (nearby !== 1 ? 's' : '') + '</strong> within ' + formatRadius(proxRadius) + '.';
+      let msg = 'Found your location! ';
+      if (total === 0) {
+        msg += 'No active projects or events within ' + formatRadius(proxRadius) + ' right now. We\'ll notify you when something comes up.';
+      } else {
+        const parts = [];
+        if (planning > 0) parts.push('<strong>' + planning + ' planning/board decision' + (planning !== 1 ? 's' : '') + '</strong>');
+        if (cultural > 0) parts.push('<strong>' + cultural + ' arts/cultural event' + (cultural !== 1 ? 's' : '') + '</strong>');
+        msg += parts.join(' and ') + ' within ' + formatRadius(proxRadius) + '.';
+      }
+      statusEl.innerHTML = msg;
       statusEl.className = 'prox-modal-status success';
 
-      // Update banner on subscribe tab
-      bannerTxt.innerHTML = '📍 Filtering: within <strong>' + formatRadius(proxRadius) + '</strong> of ' + shortenAddr(addr);
+      // Update banner
+      bannerTxt.innerHTML = '📍 Notify me about projects within <strong>' + formatRadius(proxRadius) + '</strong> of ' + shortenAddr(addr);
       banner.classList.add('visible');
 
-      // Close modal after brief delay
-      setTimeout(() => { overlay.classList.remove('open'); }, 1200);
+      setTimeout(() => { overlay.classList.remove('open'); }, 1500);
 
     } catch (err) {
       statusEl.textContent = 'Network error — please check your connection and try again.';
@@ -9054,7 +9104,7 @@ setInterval(() => {
     applyBtn.textContent = 'Find Events Near This Address';
   });
 
-  // ── Clear proximity filter ──
+  // ── Clear ──
   clearBtn.addEventListener('click', () => {
     proxCoords = null;
     proxAddress = '';
@@ -9062,47 +9112,36 @@ setInterval(() => {
     statusEl.textContent = '';
   });
 
-  // ── Helper: count nearby meetings ──
-  function countNearbyMeetings(items) {
-    if (!proxCoords || !items.length) return 0;
-    let count = 0;
-    items.forEach(item => {
-      const loc = getItemCoords(item);
-      if (loc && haversineMiles(proxCoords.lat, proxCoords.lon, loc.lat, loc.lon) <= proxRadius) {
-        count++;
+  // ── Count nearby meetings grouped by tier ──
+  function countNearbyByTier(items) {
+    let planning = 0, cultural = 0;
+    if (!proxCoords || !items.length) return { planning, cultural };
+
+    // Track which meetings we've already counted (avoid double-counting
+    // a meeting that references multiple nearby projects)
+    const counted = new Set();
+
+    items.forEach((item, idx) => {
+      const sites = getItemProjectSites(item);
+      if (!sites.length) return;
+
+      let bestTier = 99;
+      let isNear = false;
+      for (const site of sites) {
+        const dist = haversineMiles(proxCoords.lat, proxCoords.lon, site.lat, site.lon);
+        if (dist <= proxRadius) {
+          isNear = true;
+          if (site.tier < bestTier) bestTier = site.tier;
+        }
+      }
+
+      if (isNear && !counted.has(idx)) {
+        counted.add(idx);
+        if (bestTier === 1) planning++;
+        else cultural++;
       }
     });
-    return count;
-  }
-
-  // ── Map a meeting item to coordinates ──
-  function getItemCoords(item) {
-    if (!item.location) {
-      // Fall back to source-based defaults
-      return getSourceCoords(item.source);
-    }
-    const loc = item.location.toLowerCase();
-    for (const key in VENUE_COORDS) {
-      if (loc.includes(key)) return VENUE_COORDS[key];
-    }
-    // Default by source entity
-    return getSourceCoords(item.source);
-  }
-
-  function getSourceCoords(source) {
-    const defaults = {
-      'telluride': { lat: 37.9375, lon: -107.8123 },  // Town Hall
-      'county':    { lat: 37.9374, lon: -107.8130 },  // Courthouse
-      'mv':        { lat: 37.9335, lon: -107.8507 },  // MV Town Hall
-      'smart':     { lat: 37.9375, lon: -107.8123 },  // Town Hall area
-      'school':    { lat: 37.9362, lon: -107.8095 },  // School district
-      'fire':      { lat: 37.9312, lon: -107.7640 },  // Fire station
-      'med':       { lat: 37.9340, lon: -107.8110 },  // Medical center
-      'norwood':   { lat: 38.1297, lon: -108.2893 },  // Norwood
-      'ophir':     { lat: 37.8590, lon: -107.8270 },  // Ophir
-      'airport':   { lat: 37.9536, lon: -107.9085 },  // TEX airport
-    };
-    return defaults[source] || null;
+    return { planning, cultural };
   }
 
   function formatRadius(miles) {
@@ -9112,21 +9151,38 @@ setInterval(() => {
   }
 
   function shortenAddr(addr) {
-    // Trim to first meaningful part
     return addr.replace(/,?\s*(CO|Colorado|81435|USA|United States).*/i, '').trim();
   }
 
-  // ── Expose for subscribe form integration ──
+  // ── Expose for subscribe form & email integration ──
   window._proximityFilter = {
     isActive: () => !!proxCoords,
     getCoords: () => proxCoords,
     getRadius: () => proxRadius,
     getAddress: () => proxAddress,
+    // Check if a meeting involves a project site near the user's address
     isNearby: (item) => {
-      if (!proxCoords) return true; // no filter = everything passes
-      const loc = getItemCoords(item);
-      if (!loc) return true; // can't determine = include
-      return haversineMiles(proxCoords.lat, proxCoords.lon, loc.lat, loc.lon) <= proxRadius;
+      if (!proxCoords) return true; // no filter active = include everything
+      const sites = getItemProjectSites(item);
+      if (!sites.length) return false; // no project address = skip
+      for (const site of sites) {
+        if (haversineMiles(proxCoords.lat, proxCoords.lon, site.lat, site.lon) <= proxRadius) {
+          return true;
+        }
+      }
+      return false;
+    },
+    // Get the tier (1 = planning, 2 = cultural) for a nearby item
+    getNearbyTier: (item) => {
+      if (!proxCoords) return null;
+      const sites = getItemProjectSites(item);
+      let best = null;
+      for (const site of sites) {
+        if (haversineMiles(proxCoords.lat, proxCoords.lon, site.lat, site.lon) <= proxRadius) {
+          if (!best || site.tier < best) best = site.tier;
+        }
+      }
+      return best;
     }
   };
 
