@@ -428,6 +428,189 @@
       text-align: center;
     }
 
+    /* ── Events Around Me Modal ── */
+    .proximity-trigger-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin: 0 auto 6px;
+      padding: 12px 24px;
+      border: 2px solid var(--telluride-green);
+      border-radius: 14px;
+      background: rgba(41, 82, 71, 0.06);
+      color: var(--telluride-green);
+      font-size: 0.9rem;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .proximity-trigger-btn:hover {
+      background: var(--telluride-green);
+      color: #fff;
+    }
+    .proximity-trigger-btn svg { width: 18px; height: 18px; }
+    .proximity-trigger-hint {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 0;
+    }
+    .prox-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+    .prox-modal-overlay.open { display: flex; }
+    .prox-modal {
+      background: #fff;
+      border-radius: 24px;
+      padding: 32px 28px 24px;
+      max-width: 440px;
+      width: 92%;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+      position: relative;
+    }
+    .prox-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 4px 8px;
+      line-height: 1;
+    }
+    .prox-modal-close:hover { color: var(--text-primary); }
+    .prox-modal h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0 0 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .prox-modal h3 svg { width: 22px; height: 22px; color: var(--telluride-green); }
+    .prox-modal p {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin: 0 0 18px;
+    }
+    .prox-modal label {
+      display: block;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+    }
+    .prox-modal input[type="text"] {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1.5px solid var(--line);
+      font-size: 0.9rem;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-primary);
+      background: #fff;
+      margin-bottom: 14px;
+      box-sizing: border-box;
+    }
+    .prox-modal input:focus {
+      outline: none;
+      border-color: var(--telluride-green);
+    }
+    .prox-modal-radius-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .prox-radius-chip {
+      padding: 8px 16px;
+      border-radius: 10px;
+      border: 1.5px solid var(--line);
+      background: #fff;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .prox-radius-chip:hover { border-color: var(--telluride-green); }
+    .prox-radius-chip.selected {
+      border-color: var(--telluride-green);
+      background: var(--telluride-green);
+      color: #fff;
+    }
+    .prox-modal-apply {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 14px;
+      background: var(--telluride-green);
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .prox-modal-apply:hover { background: var(--forest-deep); }
+    .prox-modal-apply:disabled {
+      background: var(--line);
+      color: var(--text-muted);
+      cursor: not-allowed;
+    }
+    .prox-modal-status {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      text-align: center;
+      margin-top: 12px;
+      min-height: 1.2em;
+    }
+    .prox-modal-status.error { color: #c0392b; }
+    .prox-modal-status.success { color: var(--telluride-green); }
+    .prox-active-banner {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 16px;
+      margin: 0 auto 10px;
+      border-radius: 12px;
+      background: rgba(41, 82, 71, 0.08);
+      border: 1.5px solid var(--telluride-green);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--telluride-green);
+      max-width: 500px;
+    }
+    .prox-active-banner.visible { display: flex; }
+    .prox-active-banner button {
+      background: none;
+      border: 1px solid var(--telluride-green);
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--telluride-green);
+      cursor: pointer;
+      margin-left: 6px;
+    }
+    .prox-active-banner button:hover { background: rgba(41,82,71,0.1); }
+
     /* Hide sidebars when Subscribe or Land Use tab is active */
     .main-layout.subscribe-active .sidebar,
     .main-layout.subscribe-active .expand-pill-right,
@@ -695,6 +878,16 @@
       font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.04em;
+    }
+    .meeting-summary .address-highlight {
+      font-weight: 700;
+      color: var(--text-primary);
+      font-size: inherit;
+      text-transform: none;
+      letter-spacing: normal;
+      background: rgba(33, 68, 60, 0.08);
+      padding: 1px 3px;
+      border-radius: 3px;
     }
     .card[data-source="telluride"] .meeting-summary { border-left-color: var(--telluride-green); }
     .card[data-source="county"] .meeting-summary { border-left-color: var(--county-green); }
@@ -2323,9 +2516,9 @@
   <!-- ── Left Sidebar ── -->
   <aside class="left-sidebar" id="leftSidebar">
 
-    <!-- What to Watch -->
+    <!-- What to Follow -->
     <div class="left-sidebar-card">
-      <div class="left-sidebar-title">What to Watch</div>
+      <div class="left-sidebar-title">What to Follow</div>
       <div id="weekSnapshot" class="week-summary-prose">
         <div class="left-sidebar-empty">Loading...</div>
       </div>
@@ -3058,7 +3251,22 @@
       </div>
 
       <div class="subscribe-section">
-        <div class="subscribe-section-title">3. How Often?</div>
+        <div class="subscribe-section-title">3. Events Around Me (Optional)</div>
+        <div style="text-align:center;">
+          <button type="button" class="proximity-trigger-btn" id="openProximityModal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Events Around Me
+          </button>
+          <p class="proximity-trigger-hint">Only receive notices for meetings and projects near a specific address</p>
+          <div class="prox-active-banner" id="proxActiveBanner">
+            <span id="proxActiveText"></span>
+            <button type="button" id="proxActiveClear">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="subscribe-section">
+        <div class="subscribe-section-title">4. How Often?</div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
           <button class="freq-option selected" data-freq="weekly">Weekly Digest</button>
           <button class="freq-option" data-freq="daily">Daily</button>
@@ -3067,7 +3275,7 @@
       </div>
 
       <div class="subscribe-section">
-        <div class="subscribe-section-title">4. Your Info</div>
+        <div class="subscribe-section-title">5. Your Info</div>
         <div class="subscribe-form-card">
           <form id="subscribeForm" onsubmit="return false;">
             <label for="subName">First Name</label>
@@ -4788,14 +4996,45 @@ function linkGlossaryTerms(text) {
   });
 }
 
+// ── Highlight addresses, property names, and applicants in summary text ──
+// Bolds street addresses (e.g., "700 W Pacific Ave") and known property/project
+// names so they stand out in the Topics line on meeting cards.
+function highlightAddresses(text) {
+  if (!text) return text;
+  // Street address pattern: number + optional direction + street name + suffix
+  // Matches: 700 W Pacific Ave, 155 W Pacific Ave, 398 S Davis St, 333 W Colorado Ave
+  const addressRe = /\b(\d{1,5}\s+(?:[NSEW]\.?\s+)?(?:[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\s+(?:Ave|St|Rd|Dr|Ln|Way|Blvd|Ct|Pl|Cir|Road|Drive|Lane|Street|Avenue))\b/g;
+  text = text.replace(addressRe, '<strong class="address-highlight">$1</strong>');
+
+  // Property / project names with unit/lot numbers
+  // Matches: Silver Jack Unit 205, Element 52 G-17, Overlook Lots 17 & 2, Wilkin Court Unit H
+  const propertyRe = /\b((?:Silver Jack|Element 52|Overlook|Wilkin Court|Lawson Hill|Shandoka|Carhenge)(?:\s+(?:Unit|Lot|Lots|Suite|Phase)\s+[\w&\s-]+)?)\b/gi;
+  text = text.replace(propertyRe, (match) => {
+    // Don't double-wrap if already inside a <strong>
+    return '<strong class="address-highlight">' + match + '</strong>';
+  });
+
+  // Applicant / residence names (Person + Residence pattern)
+  const applicantRe = /\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?\s+Residence)\b/g;
+  text = text.replace(applicantRe, '<strong class="address-highlight">$1</strong>');
+
+  return text;
+}
+
 // Render the "Why This Matters" button + expandable panel HTML
-function renderWhyThisMatters(item) {
+function renderWhyThisMatters(item, showFaded) {
   const wtm = getWhyThisMatters(item);
-  if (!wtm) return '';
+  if (!wtm && !showFaded) return '';
+
+  const icon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>';
+
+  if (!wtm) {
+    // No "Why This Matters" — show faded, non-interactive button
+    return '<button class="wtm-btn" style="opacity:0.5;cursor:default;pointer-events:none;" disabled>' + icon + ' Why This Matters </button>';
+  }
 
   const id = 'wtm-' + Math.random().toString(36).slice(2, 9);
   const arrow = '<svg class="wtm-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>';
-  const icon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>';
 
   let html = '<button class="wtm-btn" onclick="toggleWTM(\'' + id + '\', this)" aria-expanded="false" aria-controls="' + id + '">' + icon + ' Why This Matters ' + arrow + '</button>';
   html += '<div class="wtm-panel" id="' + id + '" role="region">';
@@ -5050,7 +5289,7 @@ const LAND_USE_ISSUES = {
     statusCopy: 'Carhenge is moving into P&Z review for subdivision and PUD approval, with a work session on March 26, 2026. Shandoka advanced Alternative 2 through Town Council in September 2025 and held open houses in March 2026 before entering HARC and P&Z review. The key public questions for both are density, design, actual affordability, neighborhood fit, and whether these projects meaningfully serve the workforce most squeezed by the current market.',
     nextStep: 'Carhenge P&Z work session: March 26, 2026, 5:30 PM (Zoom ID: 846 6324 0731). Shandoka open houses: March 25-26 at Ah Haa School and Cowboy General Store.',
     metrics: [
-      { label: 'What to watch', value: 'Affordable housing PUD -- but what kind of affordability?', sub: 'Both projects are precedent-setting decisions, not routine site plans. Projects labeled workforce housing can still miss lower-income workers. The entitlement details matter.' },
+      { label: 'What to follow', value: 'Affordable housing PUD -- but what kind of affordability?', sub: 'Both projects are precedent-setting decisions, not routine site plans. Projects labeled workforce housing can still miss lower-income workers. The entitlement details matter.' },
       { label: 'Best public moment', value: 'P&Z work sessions and open houses', sub: 'Massing, density, and code fit get defined before formal votes. Engage early.' }
     ],
     timeline: [
@@ -6485,10 +6724,12 @@ function renderMeetings(items, filter) {
       const timePart = item.eventTimes || '';
       const locationPart = item.location ? `<span class="location">📍 ${item.location}</span>` : '';
       const agendaUrl = item.agendaLink || item.link;
-      const agendaBadge = item.hasAgenda ? `<a href="${agendaUrl}" target="_blank" rel="noopener" class="agenda-link">Agenda Posted →</a>` : '';
+      const agendaBadge = item.hasAgenda
+        ? `<a href="${agendaUrl}" target="_blank" rel="noopener" class="agenda-link">Agenda Posted →</a>`
+        : `<span class="agenda-link" style="opacity:0.5;cursor:default;pointer-events:none;">Agenda Posted →</span>`;
       const cancelStyle = item.canceled ? ' style="opacity: 0.55; text-decoration: line-through;"' : '';
       const summary = item.canceled ? '' : getMeetingSummary(item);
-      const summaryHtml = summary ? `<div class="meeting-summary"><strong>Topics:</strong> ${linkGlossaryTerms(summary)}</div>` : '';
+      const summaryHtml = summary ? `<div class="meeting-summary"><strong>Topics:</strong> ${highlightAddresses(linkGlossaryTerms(summary))}</div>` : '';
 
       html += `
         <div class="card" data-source="${item.source}">
@@ -6500,7 +6741,7 @@ function renderMeetings(items, filter) {
                 <h3${cancelStyle}><a href="${item.link}" target="_blank" rel="noopener">${cleanTitle(item.title, item.source)}</a></h3>
                 <div class="meta">${fullDate(item.eventDate)}${timePart ? ' · ' + timePart : ''}</div>
                 ${locationPart ? `<div class="meta">${locationPart}</div>` : ''}
-                ${item.canceled ? '' : renderWhyThisMatters(item)}
+                ${item.canceled ? '' : renderWhyThisMatters(item, true)}
                 ${item.canceled ? '' : renderPasscodeInfo(item)}
                 ${item.canceled ? '' : summaryHtml}
                 ${item.canceled ? '' : (item.description ? `<div class="description">${item.description}</div>` : '')}
@@ -7254,10 +7495,12 @@ function renderMeetingsWithTopic() {
       const timePart = item.eventTimes || '';
       const locationPart = item.location ? '<span class="location">📍 ' + item.location + '</span>' : '';
       const agendaUrl = item.agendaLink || item.link;
-      const agendaBadge = item.hasAgenda ? '<a href="' + agendaUrl + '" target="_blank" rel="noopener" class="agenda-link">Agenda Posted →</a>' : '';
+      const agendaBadge = item.hasAgenda
+        ? '<a href="' + agendaUrl + '" target="_blank" rel="noopener" class="agenda-link">Agenda Posted →</a>'
+        : '<span class="agenda-link" style="opacity:0.5;cursor:default;pointer-events:none;">Agenda Posted →</span>';
       const cancelStyle = item.canceled ? ' style="opacity: 0.55; text-decoration: line-through;"' : '';
       const summary = item.canceled ? '' : getMeetingSummary(item);
-      const summaryHtml = summary ? '<div class="meeting-summary"><strong>Topics:</strong> ' + linkGlossaryTerms(summary) + '</div>' : '';
+      const summaryHtml = summary ? '<div class="meeting-summary"><strong>Topics:</strong> ' + highlightAddresses(linkGlossaryTerms(summary)) + '</div>' : '';
 
       html += '<div class="card" data-source="' + item.source + '">' +
         renderLogo(item.source) +
@@ -7266,7 +7509,7 @@ function renderMeetingsWithTopic() {
           '<h3' + cancelStyle + '><a href="' + item.link + '" target="_blank" rel="noopener">' + cleanTitle(item.title, item.source) + '</a></h3>' +
           '<div class="meta">' + fullDate(item.eventDate) + (timePart ? ' · ' + timePart : '') + '</div>' +
           (locationPart ? '<div class="meta">' + locationPart + '</div>' : '') +
-          (item.canceled ? '' : renderWhyThisMatters(item)) +
+          (item.canceled ? '' : renderWhyThisMatters(item, true)) +
           (item.canceled ? '' : renderPasscodeInfo(item)) +
           (item.canceled ? '' : summaryHtml) +
           (item.canceled ? '' : (item.description ? '<div class="description">' + item.description + '</div>' : '')) +
@@ -8634,6 +8877,258 @@ setInterval(() => {
       window._EMAILJS_READY = true;
     }
   } catch(e) { console.warn('EmailJS not loaded:', e.message); }
+
+})();
+</script>
+
+<!-- ══════════ Events Around Me Modal ══════════ -->
+<div class="prox-modal-overlay" id="proxOverlay">
+  <div class="prox-modal">
+    <button class="prox-modal-close" id="proxClose" aria-label="Close">&times;</button>
+    <h3>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Events Around Me
+    </h3>
+    <p>Enter an address and choose a radius. You'll only receive email updates for meetings and projects happening within that distance.</p>
+
+    <label for="proxAddress">Address</label>
+    <input type="text" id="proxAddress" placeholder="e.g. 200 W Colorado Ave, Telluride" autocomplete="street-address" />
+
+    <label>Distance</label>
+    <div class="prox-modal-radius-row" id="proxRadiusRow">
+      <button type="button" class="prox-radius-chip" data-miles="0.25">&frac14; mile</button>
+      <button type="button" class="prox-radius-chip selected" data-miles="0.5">&frac12; mile</button>
+      <button type="button" class="prox-radius-chip" data-miles="1">1 mile</button>
+      <button type="button" class="prox-radius-chip" data-miles="3">3 miles</button>
+      <button type="button" class="prox-radius-chip" data-miles="10">10 miles</button>
+    </div>
+
+    <button type="button" class="prox-modal-apply" id="proxApply">Find Events Near This Address</button>
+    <div class="prox-modal-status" id="proxStatus"></div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════════════════
+// ── Events Around Me -- Geocoding & Proximity Filter ──
+// ══════════════════════════════════════════════════════════════
+
+(function() {
+  'use strict';
+
+  // ── Known venue coordinates (lat, lon) ──
+  // Pre-geocoded to avoid API calls for common meeting locations
+  const VENUE_COORDS = {
+    '305 w colorado ave':        { lat: 37.9375, lon: -107.8123, label: 'Telluride Town Hall' },
+    '333 west colorado ave':     { lat: 37.9374, lon: -107.8130, label: 'County Courthouse' },
+    '333 w colorado ave':        { lat: 37.9374, lon: -107.8130, label: 'County Courthouse' },
+    '455 mountain village blvd':  { lat: 37.9335, lon: -107.8507, label: 'MV Town Hall' },
+    '700 w pacific ave':         { lat: 37.9383, lon: -107.8173, label: 'Carhenge site' },
+    '155 w pacific ave':         { lat: 37.9378, lon: -107.8095, label: 'Silver Jack / Element 52' },
+    '398 s davis st':            { lat: 37.9365, lon: -107.8100, label: 'Element 52' },
+    'bridal veil':               { lat: 37.9312, lon: -107.7640, label: 'Fire District' },
+    'norwood':                   { lat: 38.1297, lon: -108.2893, label: 'Town of Norwood' },
+    'ophir':                     { lat: 37.8590, lon: -107.8270, label: 'Town of Ophir' },
+  };
+
+  // ── Haversine distance (miles) ──
+  function haversineMiles(lat1, lon1, lat2, lon2) {
+    const R = 3958.8; // Earth radius in miles
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+              Math.cos(lat1 * Math.PI/180) * Math.cos(lat2 * Math.PI/180) *
+              Math.sin(dLon/2) * Math.sin(dLon/2);
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  }
+
+  // ── Geocode an address using OpenStreetMap Nominatim (free, no key) ──
+  async function geocodeAddress(address) {
+    // First check our local cache
+    const normalized = address.toLowerCase().replace(/,?\s*(telluride|co|colorado|81435)/gi, '').trim();
+    for (const key in VENUE_COORDS) {
+      if (normalized.includes(key) || key.includes(normalized)) {
+        return VENUE_COORDS[key];
+      }
+    }
+    // Append Telluride area context for better results
+    const query = address.match(/telluride|mountain village|norwood|ophir|san miguel/i)
+      ? address
+      : address + ', San Miguel County, Colorado';
+    const url = 'https://nominatim.openstreetmap.org/search?format=json&limit=1&q=' + encodeURIComponent(query);
+    const resp = await fetch(url, { headers: { 'User-Agent': 'TellurideGovHub/1.0' } });
+    const data = await resp.json();
+    if (data && data.length > 0) {
+      return { lat: parseFloat(data[0].lat), lon: parseFloat(data[0].lon), label: data[0].display_name };
+    }
+    return null;
+  }
+
+  // ── State ──
+  let proxCoords = null;    // { lat, lon }
+  let proxRadius = 0.5;     // miles
+  let proxAddress = '';      // display text
+
+  // ── DOM refs ──
+  const overlay   = document.getElementById('proxOverlay');
+  const openBtn   = document.getElementById('openProximityModal');
+  const closeBtn  = document.getElementById('proxClose');
+  const addrInput = document.getElementById('proxAddress');
+  const applyBtn  = document.getElementById('proxApply');
+  const statusEl  = document.getElementById('proxStatus');
+  const radiusRow = document.getElementById('proxRadiusRow');
+  const banner    = document.getElementById('proxActiveBanner');
+  const bannerTxt = document.getElementById('proxActiveText');
+  const clearBtn  = document.getElementById('proxActiveClear');
+
+  // ── Open / close modal ──
+  openBtn.addEventListener('click', () => {
+    overlay.classList.add('open');
+    if (proxAddress) addrInput.value = proxAddress;
+    addrInput.focus();
+  });
+  closeBtn.addEventListener('click', () => { overlay.classList.remove('open'); });
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) overlay.classList.remove('open');
+  });
+
+  // ── Radius chip selection ──
+  radiusRow.querySelectorAll('.prox-radius-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      radiusRow.querySelectorAll('.prox-radius-chip').forEach(c => c.classList.remove('selected'));
+      chip.classList.add('selected');
+      proxRadius = parseFloat(chip.dataset.miles);
+    });
+  });
+
+  // ── Enter key triggers apply ──
+  addrInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); applyBtn.click(); }
+  });
+
+  // ── Apply: geocode & store ──
+  applyBtn.addEventListener('click', async () => {
+    const addr = addrInput.value.trim();
+    if (!addr) {
+      statusEl.textContent = 'Please enter an address.';
+      statusEl.className = 'prox-modal-status error';
+      return;
+    }
+    applyBtn.disabled = true;
+    applyBtn.textContent = 'Looking up address…';
+    statusEl.textContent = '';
+    statusEl.className = 'prox-modal-status';
+
+    try {
+      const coords = await geocodeAddress(addr);
+      if (!coords) {
+        statusEl.textContent = 'Could not find that address. Try including the town name (e.g., "200 W Colorado Ave, Telluride").';
+        statusEl.className = 'prox-modal-status error';
+        applyBtn.disabled = false;
+        applyBtn.textContent = 'Find Events Near This Address';
+        return;
+      }
+      proxCoords = coords;
+      proxAddress = addr;
+
+      // Count matching meetings
+      const meetings = window.__allMeetingsCache || [];
+      const nearby = countNearbyMeetings(meetings);
+
+      // Show success
+      statusEl.innerHTML = 'Found your location! <strong>' + nearby + ' upcoming meeting' + (nearby !== 1 ? 's' : '') + '</strong> within ' + formatRadius(proxRadius) + '.';
+      statusEl.className = 'prox-modal-status success';
+
+      // Update banner on subscribe tab
+      bannerTxt.innerHTML = '📍 Filtering: within <strong>' + formatRadius(proxRadius) + '</strong> of ' + shortenAddr(addr);
+      banner.classList.add('visible');
+
+      // Close modal after brief delay
+      setTimeout(() => { overlay.classList.remove('open'); }, 1200);
+
+    } catch (err) {
+      statusEl.textContent = 'Network error — please check your connection and try again.';
+      statusEl.className = 'prox-modal-status error';
+    }
+    applyBtn.disabled = false;
+    applyBtn.textContent = 'Find Events Near This Address';
+  });
+
+  // ── Clear proximity filter ──
+  clearBtn.addEventListener('click', () => {
+    proxCoords = null;
+    proxAddress = '';
+    banner.classList.remove('visible');
+    statusEl.textContent = '';
+  });
+
+  // ── Helper: count nearby meetings ──
+  function countNearbyMeetings(items) {
+    if (!proxCoords || !items.length) return 0;
+    let count = 0;
+    items.forEach(item => {
+      const loc = getItemCoords(item);
+      if (loc && haversineMiles(proxCoords.lat, proxCoords.lon, loc.lat, loc.lon) <= proxRadius) {
+        count++;
+      }
+    });
+    return count;
+  }
+
+  // ── Map a meeting item to coordinates ──
+  function getItemCoords(item) {
+    if (!item.location) {
+      // Fall back to source-based defaults
+      return getSourceCoords(item.source);
+    }
+    const loc = item.location.toLowerCase();
+    for (const key in VENUE_COORDS) {
+      if (loc.includes(key)) return VENUE_COORDS[key];
+    }
+    // Default by source entity
+    return getSourceCoords(item.source);
+  }
+
+  function getSourceCoords(source) {
+    const defaults = {
+      'telluride': { lat: 37.9375, lon: -107.8123 },  // Town Hall
+      'county':    { lat: 37.9374, lon: -107.8130 },  // Courthouse
+      'mv':        { lat: 37.9335, lon: -107.8507 },  // MV Town Hall
+      'smart':     { lat: 37.9375, lon: -107.8123 },  // Town Hall area
+      'school':    { lat: 37.9362, lon: -107.8095 },  // School district
+      'fire':      { lat: 37.9312, lon: -107.7640 },  // Fire station
+      'med':       { lat: 37.9340, lon: -107.8110 },  // Medical center
+      'norwood':   { lat: 38.1297, lon: -108.2893 },  // Norwood
+      'ophir':     { lat: 37.8590, lon: -107.8270 },  // Ophir
+      'airport':   { lat: 37.9536, lon: -107.9085 },  // TEX airport
+    };
+    return defaults[source] || null;
+  }
+
+  function formatRadius(miles) {
+    if (miles === 0.25) return '¼ mile';
+    if (miles === 0.5)  return '½ mile';
+    return miles + (miles === 1 ? ' mile' : ' miles');
+  }
+
+  function shortenAddr(addr) {
+    // Trim to first meaningful part
+    return addr.replace(/,?\s*(CO|Colorado|81435|USA|United States).*/i, '').trim();
+  }
+
+  // ── Expose for subscribe form integration ──
+  window._proximityFilter = {
+    isActive: () => !!proxCoords,
+    getCoords: () => proxCoords,
+    getRadius: () => proxRadius,
+    getAddress: () => proxAddress,
+    isNearby: (item) => {
+      if (!proxCoords) return true; // no filter = everything passes
+      const loc = getItemCoords(item);
+      if (!loc) return true; // can't determine = include
+      return haversineMiles(proxCoords.lat, proxCoords.lon, loc.lat, loc.lon) <= proxRadius;
+    }
+  };
 
 })();
 </script>
