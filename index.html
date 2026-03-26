@@ -2557,6 +2557,16 @@
 
     <!-- ══════════ NEWS TAB ══════════ -->
     <div class="tab-content" id="tab-news">
+      <div class="events-hero" id="eventsHero" style="margin-bottom:18px; padding:20px 22px; background:linear-gradient(135deg, rgba(33,68,60,0.07) 0%, rgba(166,143,87,0.10) 100%); border-radius:14px; border-left:4px solid var(--accent-green);">
+        <h3 style="margin:0 0 8px 0; font-size:1.15rem; color:var(--text-primary); font-family:var(--font-heading);">There's always something happening in Telluride</h3>
+        <p style="margin:0 0 10px 0; font-size:0.88rem; color:var(--text-secondary); line-height:1.55;">
+          From world-class film and music festivals to gallery walks, storytelling nights, and free yoga at the library — this is a town that celebrates year-round. Art openings on First Thursdays, street dances on spring evenings, farmers markets with mountain views you can't find anywhere else.
+        </p>
+        <div id="eventsHeroFestivals" style="display:none; margin-top:10px; padding-top:10px; border-top:1px solid rgba(33,68,60,0.12);"></div>
+        <p style="margin:8px 0 0 0; font-size:0.82rem; color:var(--text-muted); line-height:1.5; font-style:italic;">
+          Scroll down for what's coming up — art walks, live music, community dinners, and more.
+        </p>
+      </div>
       <div class="filter-row">
         <span class="chip active-all" data-filter="all" data-tab-target="news">All</span>
         <span class="chip" data-filter="telluride" data-tab-target="news">Town of Telluride</span>
@@ -2573,8 +2583,11 @@
     <!-- ══════════ LEGAL NOTICES TAB ══════════ -->
     <div class="tab-content" id="tab-legals">
       <div class="legals-intro" style="margin-bottom:16px; padding:12px 16px; background:rgba(166,50,35,0.06); border-radius:10px; border-left:4px solid #a63223;">
-        <p style="margin:0; font-size:0.85rem; color:var(--text-secondary); line-height:1.5;">
-          Public legal notices published in <strong>The Telluride Times</strong> and <strong>The Norwood Post</strong> for March 2026. Click any notice to read the full text on telluridenews.com.
+        <p style="margin:0 0 8px 0; font-size:0.85rem; color:var(--text-secondary); line-height:1.55;">
+          <strong>This week's legal notices</strong> include a <strong>housing lottery</strong> for deed-restricted units at Silver Jack and Element 52, <strong>RFPs</strong> from San Miguel County (office painting) and Mountain Village (summer burn piles and parking lot overlay), a <strong>public hearing</strong> on wildfire resiliency code adoption, and <strong>new tiered water rates</strong> for Norwood effective April 1. Older notices cover estate creditor filings, Town of Telluride ordinances on budget and property sales, a land use vesting at 116 E Columbia Ave, an Ophir roof pitch variance, and a Stillwell water main bid.
+        </p>
+        <p style="margin:0; font-size:0.82rem; color:var(--text-muted); line-height:1.45; font-style:italic;">
+          Published in The Telluride Times and The Norwood Post. Click any notice to read the full text.
         </p>
       </div>
       <div class="filter-row">
@@ -5018,6 +5031,50 @@ function highlightAddresses(text) {
   return text;
 }
 
+// Bold addresses AND person/entity names in legal notice summaries
+function highlightLegalNamesAndAddresses(text) {
+  if (!text) return text;
+
+  // 1. Street addresses: 333 W Colorado Ave, 155 W Pacific Ave, 1370 Black Bear Rd, etc.
+  const addressRe = /\b(\d{1,5}\s+(?:[NSEW]\.?\s+)?(?:[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\s+(?:Ave|St|Rd|Dr|Ln|Way|Blvd|Ct|Pl|Cir|Road|Drive|Lane|Street|Avenue|Boulevard))\b/g;
+  text = text.replace(addressRe, '<strong class="address-highlight">$1</strong>');
+
+  // 2. Known person names from legal notices
+  const personNames = [
+    'Joyce Ann Allred', 'Michael D. Allred', 'Slator Aplin',
+    'Greg Pollio', 'Matt Gonzales', 'Rodney Walters',
+    'Scott Pittenger', 'Jenny Bates', 'Kristine Perpar',
+    'Drift Mine LLC', 'AZ LL', 'Shift Architects'
+  ];
+  personNames.forEach(name => {
+    const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const nameRe = new RegExp('(?<!<strong[^>]*>)\\b(' + escaped + ')\\b(?![^<]*</strong>)', 'g');
+    text = text.replace(nameRe, '<strong class="address-highlight">$1</strong>');
+  });
+
+  // 3. Property / project names
+  const propertyRe = /\b((?:Silver Jack|Element 52|Longwill|Entrada|White House|Meribel|Overlook|Wilkin Court|Lawson Hill|Shandoka|Carhenge|Stillwell)(?:\s+(?:Unit|Lot|Lots|Suite|Phase)\s+[\w&\s-]+)?)\b/gi;
+  text = text.replace(propertyRe, (match, p1, offset) => {
+    // Don't double-wrap
+    const before = text.substring(Math.max(0, offset - 30), offset);
+    if (before.includes('<strong')) return match;
+    return '<strong class="address-highlight">' + match + '</strong>';
+  });
+
+  // 4. Addresses with specific road names not caught by pattern 1 (e.g. Chipeta Rd, Porphyry St, Tomboy Rd)
+  const extraAddresses = [
+    '17253 Chipeta Rd', '36 Porphyry St', '116 E Columbia Ave',
+    '411 Mountain Village Blvd'
+  ];
+  extraAddresses.forEach(addr => {
+    if (text.indexOf(addr) !== -1 && text.indexOf('<strong class="address-highlight">' + addr) === -1) {
+      text = text.split(addr).join('<strong class="address-highlight">' + addr + '</strong>');
+    }
+  });
+
+  return text;
+}
+
 // Render the "Why This Matters" button + expandable panel HTML
 function renderWhyThisMatters(item, showFaded) {
   const wtm = getWhyThisMatters(item);
@@ -7254,7 +7311,7 @@ function renderLegalNotices(filter) {
           '<div class="legal-card-entity ' + notice.entityClass + '">' + notice.entity + '</div>' +
         '</div>' +
       '</div>' +
-      '<div class="legal-card-summary">' + linkGlossaryTerms(notice.summary) + '</div>' +
+      '<div class="legal-card-summary">' + highlightLegalNamesAndAddresses(linkGlossaryTerms(notice.summary)) + '</div>' +
       '<div class="legal-card-meta">' +
         '<span class="legal-meta-tag tag-type">' + notice.type + '</span>' +
         '<span class="legal-meta-tag tag-deadline">' + notice.deadline + '</span>' +
@@ -7606,7 +7663,7 @@ function renderLegalNoticesWithTopic() {
           '<div class="legal-card-entity ' + notice.entityClass + '">' + notice.entity + '</div>' +
         '</div>' +
       '</div>' +
-      '<div class="legal-card-summary">' + linkGlossaryTerms(notice.summary) + '</div>' +
+      '<div class="legal-card-summary">' + highlightLegalNamesAndAddresses(linkGlossaryTerms(notice.summary)) + '</div>' +
       '<div class="legal-card-meta">' +
         '<span class="legal-meta-tag tag-type">' + notice.type + '</span>' +
         '<span class="legal-meta-tag tag-deadline">' + notice.deadline + '</span>' +
@@ -7908,6 +7965,7 @@ async function init() {
     window.__allNewsCache = allNews;
     renderNewsWithTopic();
     updateTopicCounts();
+    updateEventsHeroFestivals();
   });
 }
 
@@ -7920,18 +7978,30 @@ async function init() {
 // month is 0-indexed (0=Jan). dayStart/dayEnd are inclusive date ranges.
 // These are approximate annual dates -- update yearly as schedules are confirmed.
 const TELLURIDE_FESTIVALS = [
-  { name: 'Telluride Bluegrass Festival', month: 5, dayStart: 18, dayEnd: 21, icon: '🎸' },
-  { name: 'Telluride Blues & Brews Festival', month: 8, dayStart: 12, dayEnd: 14, icon: '🎶' },
-  { name: 'Telluride Jazz Festival', month: 7, dayStart: 7, dayEnd: 10, icon: '🎷' },
-  { name: 'Telluride Film Festival', month: 8, dayStart: 29, dayEnd: 31, icon: '🎬' },
-  { name: 'Mountainfilm', month: 4, dayStart: 22, dayEnd: 25, icon: '🎥' },
-  { name: 'Telluride Mushroom Festival', month: 7, dayStart: 14, dayEnd: 17, icon: '🍄' },
-  { name: 'Ride Festival', month: 6, dayStart: 10, dayEnd: 12, icon: '🎤' },
-  { name: 'Telluride Horror Show', month: 9, dayStart: 9, dayEnd: 12, icon: '🎃' },
-  { name: 'Telluride Wine Festival', month: 5, dayStart: 25, dayEnd: 27, icon: '🍷' },
-  { name: 'Fourth of July Celebration', month: 6, dayStart: 3, dayEnd: 4, icon: '🎆' },
-  { name: 'Telluride Yoga Festival', month: 6, dayStart: 17, dayEnd: 20, icon: '🧘' },
-  { name: 'Nothing Festival / Burning Bridges', month: 3, dayStart: 30, dayEnd: 31, icon: '🔥' }
+  { name: 'Mountainfilm', month: 4, dayStart: 22, dayEnd: 25, icon: '🎥',
+    ticketUrl: 'https://www.mountainfilm.org/festival/passes/', ticketLabel: 'Buy Passes', promo: '2026 festival passes on sale now' },
+  { name: 'Telluride Balloon Festival', month: 5, dayStart: 5, dayEnd: 7, icon: '🎈',
+    ticketUrl: 'https://www.tellurideballoonfest.com/', ticketLabel: 'Get Tickets', promo: 'June 5–7, 2026 — free to attend, paid gondola rides' },
+  { name: 'Telluride Food + Vine', month: 5, dayStart: 12, dayEnd: 14, icon: '🍷',
+    ticketUrl: 'https://www.telluridefoodandvine.com/events', ticketLabel: 'Buy Passes', promo: '2026 Weekend Pass and featured events available' },
+  { name: 'Telluride Bluegrass Festival', month: 5, dayStart: 18, dayEnd: 21, icon: '🎸',
+    ticketUrl: 'https://bluegrass.com/telluride/festival-info/TBF-ticketing-info', ticketLabel: 'Buy Tickets', promo: '2026 tickets on sale now via Planet Bluegrass' },
+  { name: 'Telluride Yoga Festival', month: 5, dayStart: 25, dayEnd: 28, icon: '🧘',
+    ticketUrl: 'https://www.tellurideyogafestival.com/passes', ticketLabel: 'Buy Passes', promo: 'June 25–28, 2026 — festival passes available now' },
+  { name: 'MusicFest (Chamber Music)', month: 5, dayStart: 28, dayEnd: 5, endMonth: 6, icon: '🎻',
+    ticketUrl: 'https://telluridechambermusic.org/musicfest/', ticketLabel: 'Buy Tickets', promo: 'June 28–July 5, 2026 — tickets on sale March 2026' },
+  { name: 'Telluride Americana Music Festival', month: 6, dayStart: 17, dayEnd: 18, icon: '🎤',
+    ticketUrl: 'https://tellurideamericana.com/events/telluride-americana', ticketLabel: 'Get Tickets', promo: 'July 17–18, 2026' },
+  { name: 'Telluride Jazz Festival', month: 7, dayStart: 7, dayEnd: 10, icon: '🎷',
+    ticketUrl: 'https://www.telluridejazz.org/tickets', ticketLabel: 'Buy Tickets', promo: 'Tickets on sale through authorized platform' },
+  { name: 'Telluride Mushroom Festival', month: 7, dayStart: 14, dayEnd: 17, icon: '🍄',
+    ticketUrl: 'https://www.tellurideinstitute.org/passes-telluride-mushroom-festival/', ticketLabel: 'Buy Passes', promo: '2026 passes launched Feb 5 — get them before they sell out' },
+  { name: 'Telluride Film Festival', month: 8, dayStart: 4, dayEnd: 7, icon: '🎬',
+    ticketUrl: 'https://www.telluridefilmfestival.org/show/passes', ticketLabel: 'Purchase Passes', promo: 'Passes are the primary way to attend — check availability' },
+  { name: 'Telluride Blues & Brews Festival', month: 8, dayStart: 18, dayEnd: 20, icon: '🎶',
+    ticketUrl: 'https://www.tellurideblues.com/tickets', ticketLabel: 'Buy Tickets', promo: '2026 tickets on sale now' },
+  { name: 'Telluride Horror Show', month: 9, dayStart: 9, dayEnd: 12, icon: '🎃',
+    ticketUrl: 'https://www.telluridehorrorshow.com/passes', ticketLabel: 'Buy Passes', promo: '3-day passes on sale Mar 25 — 6-packs on sale Jul 1, 2026' }
 ];
 
 function getUpcomingFestivals(now, daysAhead) {
@@ -7944,7 +8014,9 @@ function getUpcomingFestivals(now, daysAhead) {
     // Check this year and possibly next year for wrapping
     [year, year + 1].forEach(y => {
       const start = new Date(y, f.month, f.dayStart);
-      const end = new Date(y, f.month, f.dayEnd, 23, 59, 59);
+      // Support festivals spanning two months (e.g. MusicFest June 28 – July 5)
+      const eMonth = f.endMonth !== undefined ? f.endMonth : f.month;
+      const end = new Date(y, eMonth, f.dayEnd, 23, 59, 59);
       // Festival is upcoming if it starts within our window, or is currently happening
       if ((start >= now && start <= cutoff) || (start <= now && end >= now)) {
         const daysUntil = Math.ceil((start - now) / (1000 * 60 * 60 * 24));
@@ -7954,12 +8026,70 @@ function getUpcomingFestivals(now, daysAhead) {
           start,
           end,
           daysUntil: daysUntil < 0 ? 0 : daysUntil,
-          happening: start <= now && end >= now
+          happening: start <= now && end >= now,
+          ticketUrl: f.ticketUrl || '',
+          ticketLabel: f.ticketLabel || 'Get Tickets',
+          promo: f.promo || ''
         });
       }
     });
   });
   return results.sort((a, b) => a.start - b.start);
+}
+
+// Get ALL festivals (not just upcoming) for full calendar/promo display
+function getAllFestivalsForYear(year) {
+  return TELLURIDE_FESTIVALS.map(f => {
+    const start = new Date(year, f.month, f.dayStart);
+    const eMonth = f.endMonth !== undefined ? f.endMonth : f.month;
+    const end = new Date(year, eMonth, f.dayEnd, 23, 59, 59);
+    const now = new Date();
+    const daysUntil = Math.ceil((start - now) / (1000 * 60 * 60 * 24));
+    return {
+      name: f.name,
+      icon: f.icon,
+      start,
+      end,
+      daysUntil: daysUntil < 0 ? 0 : daysUntil,
+      happening: start <= now && end >= now,
+      passed: end < now,
+      ticketUrl: f.ticketUrl || '',
+      ticketLabel: f.ticketLabel || 'Get Tickets',
+      promo: f.promo || ''
+    };
+  }).sort((a, b) => a.start - b.start);
+}
+
+// ── Populate the Events tab hero with upcoming festival countdowns ──
+function updateEventsHeroFestivals() {
+  const container = document.getElementById('eventsHeroFestivals');
+  if (!container) return;
+  const upcoming = getUpcomingFestivals(new Date(), 120); // look ahead ~4 months
+  if (upcoming.length === 0) { container.style.display = 'none'; return; }
+
+  const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  let html = '<div style="display:flex;flex-wrap:wrap;gap:8px;">';
+  upcoming.slice(0, 4).forEach(f => {
+    const dateLabel = monthNames[f.start.getMonth()] + ' ' + f.start.getDate();
+    let timing;
+    if (f.happening) {
+      timing = '<span style="color:#b45309;font-weight:700;">Happening now!</span>';
+    } else if (f.daysUntil <= 7) {
+      timing = '<span style="color:#b45309;font-weight:600;">This week!</span>';
+    } else if (f.daysUntil <= 30) {
+      timing = f.daysUntil + ' days away';
+    } else {
+      timing = dateLabel;
+    }
+    html += '<div style="flex:1 1 140px;min-width:140px;background:rgba(255,255,255,0.7);border-radius:8px;padding:8px 10px;text-align:center;">'
+      + '<div style="font-size:1.3rem;">' + f.icon + '</div>'
+      + '<div style="font-size:0.78rem;font-weight:700;color:var(--text-primary);line-height:1.3;margin:2px 0;">' + f.name + '</div>'
+      + '<div style="font-size:0.72rem;color:var(--text-muted);">' + timing + '</div>'
+      + '</div>';
+  });
+  html += '</div>';
+  container.innerHTML = html;
+  container.style.display = 'block';
 }
 
 function updateLeftSidebar() {
