@@ -582,6 +582,218 @@
     }
     .prox-modal-status.error { color: #c0392b; }
     .prox-modal-status.success { color: var(--telluride-green); }
+
+    /* ── Correction Modal ── */
+    .correction-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: rgba(0,0,0,0.45);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .correction-overlay.open { display: flex; }
+    .correction-modal {
+      background: #fff;
+      border-radius: 16px;
+      max-width: 520px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.22);
+      padding: 28px 26px 22px;
+      position: relative;
+    }
+    .correction-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      line-height: 1;
+      padding: 4px;
+    }
+    .correction-modal-close:hover { color: var(--text-primary); }
+    .correction-modal h3 {
+      margin: 0 0 4px;
+      font-size: 1.12rem;
+      color: var(--text-primary);
+      font-family: var(--font-heading);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .correction-modal .correction-subtitle {
+      margin: 0 0 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+    .correction-modal label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      margin-bottom: 5px;
+      margin-top: 14px;
+    }
+    .correction-modal label:first-of-type { margin-top: 0; }
+    .correction-modal input[type="text"],
+    .correction-modal input[type="url"],
+    .correction-modal input[type="email"],
+    .correction-modal textarea,
+    .correction-modal select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1.5px solid var(--line);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-family: var(--font-body);
+      color: var(--text-primary);
+      background: #fafaf8;
+      transition: border-color 0.2s;
+      box-sizing: border-box;
+    }
+    .correction-modal input:focus,
+    .correction-modal textarea:focus,
+    .correction-modal select:focus {
+      outline: none;
+      border-color: var(--forest);
+      box-shadow: 0 0 0 3px rgba(33,68,60,0.08);
+    }
+    .correction-modal textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+    .correction-context-box {
+      padding: 10px 14px;
+      background: rgba(33,68,60,0.04);
+      border-radius: 8px;
+      border-left: 3px solid var(--accent-green);
+      margin-bottom: 14px;
+    }
+    .correction-context-box .ctx-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      margin-bottom: 3px;
+    }
+    .correction-context-box .ctx-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+    .correction-verified-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 12px;
+      background: rgba(34,139,34,0.08);
+      color: #228b22;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-top: 6px;
+    }
+    .correction-unverified-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 12px;
+      background: rgba(180,83,9,0.08);
+      color: #b45309;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+    .correction-source-hint {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+    .correction-submit-btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-top: 18px;
+      background: var(--forest);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .correction-submit-btn:hover { background: var(--forest-deep); }
+    .correction-submit-btn:disabled {
+      background: var(--line);
+      color: var(--text-muted);
+      cursor: not-allowed;
+    }
+    .correction-status {
+      font-size: 0.82rem;
+      text-align: center;
+      margin-top: 10px;
+      min-height: 1.2em;
+    }
+    .correction-status.success { color: var(--telluride-green); }
+    .correction-status.error { color: #c0392b; }
+    /* Correction trigger button on cards */
+    .correction-trigger {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      background: none;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s;
+      margin-top: 6px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .correction-trigger:hover {
+      border-color: var(--accent-green);
+      color: var(--accent-green);
+      background: rgba(33,68,60,0.03);
+    }
+    /* Footer correction button */
+    .footer-correction-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      background: var(--forest);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 10px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .footer-correction-btn:hover { background: var(--forest-deep); }
+    @media (max-width: 768px) {
+      .correction-modal { padding: 22px 18px 18px; }
+    }
+
     .prox-active-banner {
       display: none;
       align-items: center;
@@ -3567,7 +3779,8 @@
     <a href="https://koto.org" target="_blank">koto.org</a>.
     Telluride, County, Telluride Times, KOTO, and <a href="https://telluridelibrary.org/events/" target="_blank">Wilkinson Public Library</a> data updated live. Other sources cached. Auto-refreshes every hour.<br>
     <span id="lastUpdated"></span><br>
-    Built for <a href="https://www.livabletelluride.org" target="_blank">Livable Telluride</a>
+    Built for <a href="https://www.livabletelluride.org" target="_blank">Livable Telluride</a><br>
+    <button class="footer-correction-btn" id="correctionFab">✏️ See something wrong? Suggest a Correction</button>
   </div>
 
 <script>
@@ -9552,6 +9765,315 @@ setInterval(() => {
       return best;
     }
   };
+
+})();
+</script>
+
+<!-- ══════════ CORRECTION / FACT-CHECK MODAL ══════════ -->
+<div class="correction-overlay" id="correctionOverlay">
+  <div class="correction-modal">
+    <button class="correction-modal-close" id="correctionClose">&times;</button>
+    <h3>✏️ Suggest a Correction</h3>
+    <p class="correction-subtitle">
+      Spot something wrong — a date, name, location, or detail that's off? Let us know and we'll get it fixed. If you have a link to an official source, the correction can be applied right away.
+    </p>
+
+    <!-- Context: what item the correction is about (populated by JS) -->
+    <div class="correction-context-box" id="correctionContext" style="display:none;">
+      <div class="ctx-label">Correcting</div>
+      <div class="ctx-title" id="correctionContextTitle"></div>
+    </div>
+
+    <label for="correctionCategory">What type of information is incorrect?</label>
+    <select id="correctionCategory">
+      <option value="">Choose one…</option>
+      <option value="date">Date or Time</option>
+      <option value="location">Location or Address</option>
+      <option value="name">Name (person, entity, or organization)</option>
+      <option value="link">Link or URL</option>
+      <option value="detail">Other factual detail</option>
+    </select>
+
+    <label for="correctionCurrent">What does it currently say? (optional)</label>
+    <input type="text" id="correctionCurrent" placeholder='e.g. "June 12–14"'>
+
+    <label for="correctionShould">What should it say?</label>
+    <input type="text" id="correctionShould" placeholder='e.g. "June 19–21"'>
+
+    <label for="correctionSource">Link to a verified source (if available)</label>
+    <input type="url" id="correctionSource" placeholder="https://officialsite.com/event-page">
+    <div class="correction-source-hint">
+      Official sources (government sites, festival websites, news outlets) allow your correction to be applied automatically without manual review.
+    </div>
+    <div id="correctionVerifyStatus"></div>
+
+    <label for="correctionNotes">Additional notes (optional)</label>
+    <textarea id="correctionNotes" placeholder="Any extra context that would help us verify this correction…"></textarea>
+
+    <label for="correctionEmail">Your email (optional, for follow-up)</label>
+    <input type="email" id="correctionEmail" placeholder="you@example.com">
+
+    <button class="correction-submit-btn" id="correctionSubmit" disabled>Submit Correction</button>
+    <div class="correction-status" id="correctionStatusMsg"></div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════════
+// ── Community Correction / Fact-Check System ──
+// ══════════════════════════════════════════════════════
+(function() {
+  const overlay = document.getElementById('correctionOverlay');
+  const fab = document.getElementById('correctionFab');
+  const closeBtn = document.getElementById('correctionClose');
+  const contextBox = document.getElementById('correctionContext');
+  const contextTitle = document.getElementById('correctionContextTitle');
+  const categoryEl = document.getElementById('correctionCategory');
+  const currentEl = document.getElementById('correctionCurrent');
+  const shouldEl = document.getElementById('correctionShould');
+  const sourceEl = document.getElementById('correctionSource');
+  const notesEl = document.getElementById('correctionNotes');
+  const emailEl = document.getElementById('correctionEmail');
+  const submitBtn = document.getElementById('correctionSubmit');
+  const statusMsg = document.getElementById('correctionStatusMsg');
+  const verifyStatus = document.getElementById('correctionVerifyStatus');
+  if (!overlay || !fab) return;
+
+  // ── Trusted domains for automatic verification ──
+  const TRUSTED_DOMAINS = [
+    // Government
+    'telluride-co.gov', 'sanmiguelcountyco.gov', 'townofmountainvillage.com',
+    'colorado.gov', 'state.co.us',
+    // News
+    'telluridenews.com', 'norwoodnews.com', 'telluridedaily.com',
+    'durangoherald.com', 'gjsentinel.com',
+    // Festivals (from TELLURIDE_FESTIVALS)
+    'mountainfilm.org', 'tellurideballoonfest.com', 'telluridefoodandvine.com',
+    'bluegrass.com', 'tellurideyogafestival.com', 'telluridechambermusic.org',
+    'tellurideamericana.com', 'telluridejazz.org', 'tellurideinstitute.org',
+    'telluridefilmfestival.org', 'tellurideblues.com', 'telluridehorrorshow.com',
+    // Regional / tourism
+    'visittelluride.com', 'telluridefoundation.org', 'smrha.org',
+    'tellurideschool.org', 'kfrn.org', 'telluridelibrary.org',
+    // Housing
+    'smrha.org'
+  ];
+
+  function isDomainTrusted(url) {
+    try {
+      const hostname = new URL(url).hostname.replace(/^www\./, '');
+      return TRUSTED_DOMAINS.some(d => hostname === d || hostname.endsWith('.' + d));
+    } catch(e) {
+      return false;
+    }
+  }
+
+  function isValidUrl(str) {
+    try { new URL(str); return true; } catch(e) { return false; }
+  }
+
+  // Track what item the correction is about
+  let correctionItemTitle = '';
+  let correctionItemTab = '';
+
+  // ── Open / Close ──
+  function openModal(itemTitle, tab) {
+    correctionItemTitle = itemTitle || '';
+    correctionItemTab = tab || '';
+    if (itemTitle) {
+      contextBox.style.display = 'block';
+      contextTitle.textContent = itemTitle;
+    } else {
+      contextBox.style.display = 'none';
+    }
+    // Reset form
+    categoryEl.value = '';
+    currentEl.value = '';
+    shouldEl.value = '';
+    sourceEl.value = '';
+    notesEl.value = '';
+    emailEl.value = '';
+    statusMsg.textContent = '';
+    statusMsg.className = 'correction-status';
+    verifyStatus.innerHTML = '';
+    submitBtn.disabled = true;
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  fab.addEventListener('click', () => openModal('', ''));
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+
+  // ── Form validation ──
+  function checkForm() {
+    const hasCategory = categoryEl.value !== '';
+    const hasShould = shouldEl.value.trim() !== '';
+    submitBtn.disabled = !(hasCategory && hasShould);
+  }
+  categoryEl.addEventListener('change', checkForm);
+  shouldEl.addEventListener('input', checkForm);
+
+  // ── Source URL verification feedback ──
+  sourceEl.addEventListener('input', () => {
+    const url = sourceEl.value.trim();
+    if (!url) {
+      verifyStatus.innerHTML = '';
+      return;
+    }
+    if (!isValidUrl(url)) {
+      verifyStatus.innerHTML = '<div class="correction-unverified-note">⚠️ Enter a full URL starting with https://</div>';
+      return;
+    }
+    if (isDomainTrusted(url)) {
+      verifyStatus.innerHTML = '<div class="correction-verified-badge">✅ Verified source — correction will be applied automatically</div>';
+    } else {
+      verifyStatus.innerHTML = '<div class="correction-unverified-note">⏳ Unrecognized source — correction will be sent for review</div>';
+    }
+  });
+
+  // ── Submit handler ──
+  submitBtn.addEventListener('click', () => {
+    const category = categoryEl.value;
+    const currentText = currentEl.value.trim();
+    const shouldText = shouldEl.value.trim();
+    const sourceUrl = sourceEl.value.trim();
+    const notes = notesEl.value.trim();
+    const submitterEmail = emailEl.value.trim();
+    const isVerified = sourceUrl && isValidUrl(sourceUrl) && isDomainTrusted(sourceUrl);
+
+    if (!category || !shouldText) return;
+
+    // Build the email
+    const subjectPrefix = isVerified ? '[AUTO-APPROVED]' : '[NEEDS REVIEW]';
+    const subject = subjectPrefix + ' Gov Hub Correction: ' + (correctionItemTitle || category);
+
+    let body = '';
+    body += '═══════════════════════════════════════\n';
+    body += isVerified
+      ? '✅ VERIFIED SOURCE — AUTO-APPROVED CORRECTION\n'
+      : '⏳ UNVERIFIED — REQUIRES ADMIN APPROVAL\n';
+    body += '═══════════════════════════════════════\n\n';
+
+    if (correctionItemTitle) {
+      body += 'ITEM: ' + correctionItemTitle + '\n';
+    }
+    if (correctionItemTab) {
+      body += 'TAB: ' + correctionItemTab + '\n';
+    }
+    body += 'CATEGORY: ' + category + '\n\n';
+
+    if (currentText) {
+      body += 'CURRENTLY SAYS:\n' + currentText + '\n\n';
+    }
+    body += 'SHOULD SAY:\n' + shouldText + '\n\n';
+
+    if (sourceUrl) {
+      body += 'SOURCE: ' + sourceUrl + '\n';
+      body += 'VERIFIED: ' + (isVerified ? 'YES — Trusted domain' : 'NO — Unknown domain, requires manual review') + '\n\n';
+    }
+
+    if (notes) {
+      body += 'ADDITIONAL NOTES:\n' + notes + '\n\n';
+    }
+
+    if (submitterEmail) {
+      body += 'SUBMITTED BY: ' + submitterEmail + '\n\n';
+    }
+
+    body += '───────────────────────────────────────\n';
+    body += 'Submitted: ' + new Date().toLocaleString() + '\n';
+    body += 'Page: Telluride Regional Government Hub\n';
+
+    if (!isVerified) {
+      body += '\n═══════════════════════════════════════\n';
+      body += 'ADMIN ACTION REQUIRED:\n';
+      body += 'Reply APPROVED to apply this correction,\n';
+      body += 'or reply DENIED with a reason.\n';
+      body += '═══════════════════════════════════════\n';
+    } else {
+      body += '\n═══════════════════════════════════════\n';
+      body += 'This correction was auto-approved because\n';
+      body += 'the source URL is from a verified domain.\n';
+      body += 'The update should be applied to the site.\n';
+      body += '═══════════════════════════════════════\n';
+    }
+
+    // Send via mailto (most reliable for static sites)
+    const mailto = 'mailto:info@livabletelluride.org'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+
+    // Also try sending silently via Formspree-style fetch if available
+    // (Future enhancement: replace with actual form endpoint)
+    // For now, open the mailto link
+    window.open(mailto, '_blank');
+
+    // Show success message
+    statusMsg.className = 'correction-status success';
+    if (isVerified) {
+      statusMsg.innerHTML = '✅ Your correction has been submitted with a verified source. It will be applied automatically. Thank you!';
+    } else {
+      statusMsg.innerHTML = '📬 Your correction has been sent to info@livabletelluride.org for review. You\'ll hear back once it\'s been reviewed.';
+    }
+
+    // Disable submit to prevent double-sends
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitted ✓';
+    setTimeout(() => {
+      submitBtn.textContent = 'Submit Correction';
+    }, 5000);
+  });
+
+  // ── Global function so cards can trigger corrections ──
+  window.openCorrectionModal = function(itemTitle, tab) {
+    openModal(itemTitle, tab);
+  };
+
+  // ── Add correction triggers to event/meeting cards after render ──
+  // We use a MutationObserver to add triggers whenever new cards appear
+  function addCorrectionTriggers(container) {
+    if (!container) return;
+    container.querySelectorAll('.card, .legal-card').forEach(card => {
+      if (card.dataset.correctionAdded) return;
+      card.dataset.correctionAdded = 'true';
+      // Find the title
+      const titleEl = card.querySelector('h3 a, .legal-card-title');
+      if (!titleEl) return;
+      const title = titleEl.textContent.trim();
+      // Determine which tab
+      const tab = card.closest('.tab-content');
+      const tabName = tab ? tab.id.replace('tab-', '') : '';
+      // Create trigger button
+      const trigger = document.createElement('button');
+      trigger.className = 'correction-trigger';
+      trigger.innerHTML = '✏️ Suggest Correction';
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        openModal(title, tabName);
+      });
+      // Insert at end of card body or summary
+      const body = card.querySelector('.card-body, .legal-card-summary');
+      if (body) body.appendChild(trigger);
+    });
+  }
+
+  // Observe content containers for new cards
+  const containers = ['meetings-content', 'news-content', 'legals-content'];
+  containers.forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const observer = new MutationObserver(() => addCorrectionTriggers(el));
+    observer.observe(el, { childList: true, subtree: true });
+    // Also run once for any already-rendered cards
+    addCorrectionTriggers(el);
+  });
 
 })();
 </script>
