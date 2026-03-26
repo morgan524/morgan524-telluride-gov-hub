@@ -3246,27 +3246,21 @@
             <span class="topic-icon">🍽️</span>
             <span class="topic-name">Food &amp; Drink</span>
           </label>
+          <label class="topic-option" data-topic="events-around-me" id="topicEventsAroundMe">
+            <input type="checkbox" name="topic" value="events-around-me">
+            <span class="topic-icon">📍</span>
+            <span class="topic-name">Events Around Me</span>
+          </label>
         </div>
         <div class="selected-summary" id="selectedSummary">No topics selected yet</div>
-      </div>
-
-      <div class="subscribe-section">
-        <div class="subscribe-section-title">3. Events Around Me (Optional)</div>
-        <div style="text-align:center;">
-          <button type="button" class="proximity-trigger-btn" id="openProximityModal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Events Around Me
-          </button>
-          <p class="proximity-trigger-hint">Only receive notices for meetings and projects near a specific address</p>
-          <div class="prox-active-banner" id="proxActiveBanner">
-            <span id="proxActiveText"></span>
-            <button type="button" id="proxActiveClear">Clear</button>
-          </div>
+        <div class="prox-active-banner" id="proxActiveBanner" style="margin-top:10px;">
+          <span id="proxActiveText"></span>
+          <button type="button" id="proxActiveClear">Clear</button>
         </div>
       </div>
 
       <div class="subscribe-section">
-        <div class="subscribe-section-title">4. How Often?</div>
+        <div class="subscribe-section-title">3. How Often?</div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
           <button class="freq-option selected" data-freq="weekly">Weekly Digest</button>
           <button class="freq-option" data-freq="daily">Daily</button>
@@ -3275,11 +3269,14 @@
       </div>
 
       <div class="subscribe-section">
-        <div class="subscribe-section-title">5. Your Info</div>
+        <div class="subscribe-section-title">4. Your Info</div>
         <div class="subscribe-form-card">
           <form id="subscribeForm" onsubmit="return false;">
             <label for="subName">First Name</label>
             <input type="text" id="subName" placeholder="Jane" autocomplete="given-name">
+
+            <label for="subLastName">Last Name</label>
+            <input type="text" id="subLastName" placeholder="Smith" autocomplete="family-name">
 
             <label for="subEmail">Email Address</label>
             <input type="email" id="subEmail" placeholder="jane@example.com" autocomplete="email" required>
@@ -7341,6 +7338,11 @@ const TOPIC_DEFINITIONS = {
     label: 'Food & Drink',
     icon: '🍽️',
     keywords: /restaurant|food|dining|brewery|wine|tasting|brunch|dinner|chef|culinary|farm.to.table|happy.hour|cocktail|distillery|bar|cafe|coffee|farmer.?s?.market|food.truck/i
+  },
+  'events-around-me': {
+    label: 'Events Around Me',
+    icon: '📍',
+    keywords: /(?!)/ // proximity-based; does not match by keyword — relies on location filter
   }
 };
 
@@ -7712,9 +7714,19 @@ document.getElementById('expandRight').addEventListener('click', () => {
       if (cb.checked) {
         selectedTopics.add(cb.value);
         opt.classList.add('selected');
+        // If "Events Around Me" is checked but no address set, open the proximity modal
+        if (cb.value === 'events-around-me' && window._proximityFilter && !window._proximityFilter.isActive()) {
+          const proxOverlay = document.getElementById('proxOverlay');
+          if (proxOverlay) proxOverlay.classList.add('open');
+        }
       } else {
         selectedTopics.delete(cb.value);
         opt.classList.remove('selected');
+        // If "Events Around Me" unchecked, clear proximity
+        if (cb.value === 'events-around-me' && window._proximityFilter && window._proximityFilter.isActive()) {
+          const clearProxBtn = document.getElementById('proxActiveClear');
+          if (clearProxBtn) clearProxBtn.click();
+        }
       }
       updateSubscribeUI();
     });
@@ -7759,10 +7771,12 @@ document.getElementById('expandRight').addEventListener('click', () => {
   document.getElementById('subscribeForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const email = document.getElementById('subEmail').value.trim();
-    const name = document.getElementById('subName').value.trim();
+    const firstName = document.getElementById('subName').value.trim();
+    const lastName = document.getElementById('subLastName').value.trim();
     const town = document.getElementById('subTown').value;
 
-    if (!email || (selectedTopics.size === 0 && selectedSources.size === 0)) return;
+    const hasProximity = window._proximityFilter && window._proximityFilter.isActive();
+    if (!email || (selectedTopics.size === 0 && selectedSources.size === 0 && !hasProximity)) return;
 
     // Mailchimp subscribe configuration
     const MAILCHIMP_URL = 'https://letpeopledecide.us15.list-manage.com/subscribe/post-json';
@@ -7781,16 +7795,23 @@ document.getElementById('expandRight').addEventListener('click', () => {
     params.set('u', MAILCHIMP_U);
     params.set('id', MAILCHIMP_ID);
     params.set('EMAIL', email);
-    if (name) {
-      const parts = name.split(' ');
-      params.set('FNAME', parts[0] || '');
-      params.set('LNAME', parts.slice(1).join(' ') || '');
-    }
+    if (firstName) params.set('FNAME', firstName);
+    if (lastName) params.set('LNAME', lastName);
     // Send town, sources, topics, and frequency as merge fields
     if (town) params.set('MMERGE6', town);
     params.set('MMERGE7', [...selectedSources].map(k => srcNames[k] || k).join(', '));
-    params.set('MMERGE8', [...selectedTopics].map(k => TOPIC_DEFINITIONS[k]?.label || k).join(', '));
+
+    // Build topics list (Events Around Me is auto-checked when proximity is active)
+    const topicLabels = [...selectedTopics].map(k => TOPIC_DEFINITIONS[k]?.label || k);
+    params.set('MMERGE8', topicLabels.join(', '));
     params.set('MMERGE9', selectedFreq);
+
+    // Send proximity address & radius as MERGE10 / MERGE11
+    if (hasProximity) {
+      params.set('MMERGE10', window._proximityFilter.getAddress());
+      params.set('MMERGE11', String(window._proximityFilter.getRadius()));
+    }
+
     params.set('c', 'mcCallback');
 
     // Disable the button during submission
@@ -9013,7 +9034,6 @@ setInterval(() => {
 
   // ── DOM refs ──
   const overlay   = document.getElementById('proxOverlay');
-  const openBtn   = document.getElementById('openProximityModal');
   const closeBtn  = document.getElementById('proxClose');
   const addrInput = document.getElementById('proxAddress');
   const applyBtn  = document.getElementById('proxApply');
@@ -9023,12 +9043,7 @@ setInterval(() => {
   const bannerTxt = document.getElementById('proxActiveText');
   const clearBtn  = document.getElementById('proxActiveClear');
 
-  // ── Open / close modal ──
-  openBtn.addEventListener('click', () => {
-    overlay.classList.add('open');
-    if (proxAddress) addrInput.value = proxAddress;
-    addrInput.focus();
-  });
+  // ── Open / close modal (triggered from "Events Around Me" topic checkbox) ──
   closeBtn.addEventListener('click', () => { overlay.classList.remove('open'); });
   overlay.addEventListener('click', (e) => {
     if (e.target === overlay) overlay.classList.remove('open');
@@ -9094,6 +9109,13 @@ setInterval(() => {
       bannerTxt.innerHTML = '📍 Notify me about projects within <strong>' + formatRadius(proxRadius) + '</strong> of ' + shortenAddr(addr);
       banner.classList.add('visible');
 
+      // Auto-select "Events Around Me" topic checkbox
+      const eamCheckbox = document.querySelector('#topicEventsAroundMe input[type="checkbox"]');
+      if (eamCheckbox && !eamCheckbox.checked) {
+        eamCheckbox.checked = true;
+        eamCheckbox.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+
       setTimeout(() => { overlay.classList.remove('open'); }, 1500);
 
     } catch (err) {
@@ -9110,6 +9132,12 @@ setInterval(() => {
     proxAddress = '';
     banner.classList.remove('visible');
     statusEl.textContent = '';
+    // Uncheck "Events Around Me" topic checkbox
+    const eamCheckbox = document.querySelector('#topicEventsAroundMe input[type="checkbox"]');
+    if (eamCheckbox && eamCheckbox.checked) {
+      eamCheckbox.checked = false;
+      eamCheckbox.dispatchEvent(new Event('change', { bubbles: true }));
+    }
   });
 
   // ── Count nearby meetings grouped by tier ──
