@@ -475,13 +475,13 @@
       -webkit-backdrop-filter: blur(8px);
       border: 1px solid rgba(217, 209, 196, 0.72);
       border-left: none;
-      border-radius: 16px;
-      padding: 14px 16px;
-      margin-bottom: 10px;
+      border-radius: 12px;
+      padding: 10px 14px;
+      margin-bottom: 8px;
       box-shadow: var(--shadow-soft);
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       transition: all 0.25s;
     }
     .card:hover {
@@ -518,18 +518,8 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-      padding: 6px;
+      padding: 8px;
       display: block;
-    }
-    /* Circular seal/badge logos need cover to fill the box */
-    .card[data-source="norwood"] .card-logo img,
-    .card[data-source="ophir"] .card-logo img,
-    .card[data-source="fire"] .card-logo img,
-    .card[data-source="med"] .card-logo img,
-    .card[data-source="wilkinson"] .card-logo img {
-      object-fit: cover;
-      padding: 4px;
-      border-radius: 16px;
     }
     .card-logo svg {
       width: 60px;
@@ -632,9 +622,9 @@
     .meeting-summary {
       font-size: 0.76rem;
       color: var(--text-secondary);
-      line-height: 1.45;
-      margin-top: 6px;
-      padding: 6px 10px;
+      line-height: 1.4;
+      margin-top: 4px;
+      padding: 5px 9px;
       background: rgba(0,0,0,0.03);
       border-left: 3px solid var(--border);
       border-radius: 0 8px 8px 0;
@@ -787,19 +777,19 @@
 
     /* ── Public Comment Info ── */
     .comment-note {
-      margin-top: 10px;
-      padding: 9px 13px;
+      margin-top: 6px;
+      padding: 6px 10px;
       background: linear-gradient(135deg, rgba(33,68,60,0.04), rgba(33,68,60,0.08));
       border: 1px solid rgba(33,68,60,0.12);
       border-left: 3px solid var(--forest-soft);
-      border-radius: 8px;
+      border-radius: 6px;
       font-size: 0.76rem;
       font-style: italic;
-      line-height: 1.55;
+      line-height: 1.45;
       color: var(--text-secondary);
     }
     .comment-actions {
-      margin-top: 8px;
+      margin-top: 5px;
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
@@ -831,8 +821,8 @@
 
     /* ── Passcode Info ── */
     .passcode-info {
-      margin-top: 8px;
-      padding: 8px 12px;
+      margin-top: 5px;
+      padding: 5px 10px;
       background: linear-gradient(135deg, rgba(94,109,118,0.05), rgba(94,109,118,0.10));
       border: 1px solid rgba(94,109,118,0.12);
       border-left: 3px solid var(--slate-700);
@@ -858,7 +848,7 @@
       color: var(--text-muted);
     }
     .passcode-join {
-      margin-top: 8px;
+      margin-top: 5px;
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
@@ -873,9 +863,9 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 8px;
-      margin-top: 10px;
-      padding-top: 10px;
+      gap: 6px;
+      margin-top: 6px;
+      padding-top: 6px;
       border-top: 1px solid rgba(0,0,0,0.06);
     }
     .cal-btn {
