@@ -67,6 +67,50 @@
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
+    /* ── Site Header (matches Wix navigation) ── */
+    .site-header {
+      display: flex;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 36px;
+    }
+    .site-header-logo {
+      flex-shrink: 0;
+    }
+    .site-header-logo img {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+    .site-header-nav {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin: 0 auto;
+    }
+    .site-header-nav a {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--forest);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: opacity 0.2s;
+    }
+    .site-header-nav a:hover {
+      opacity: 0.7;
+    }
+    .site-header-nav a.active {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+    .site-header-divider {
+      border: none;
+      border-top: 1px solid var(--line);
+      margin: 0;
+    }
+
     /* ── Page base ── */
     html {
       overflow-y: auto;
@@ -119,7 +163,7 @@
     }
     .tab-btn {
       padding: 14px 20px;
-      font-size: 0.85rem;
+      font-size: 1.05rem;
       font-weight: 600;
       color: var(--text-muted);
       background: none;
@@ -1999,6 +2043,19 @@
 </script>
 </head>
 <body>
+
+  <!-- ── Site Header (matches Wix site navigation) ── -->
+  <header class="site-header">
+    <a href="https://www.livabletelluride.org/" class="site-header-logo">
+      <img src="data:image/png;base64,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" alt="Livable Telluride">
+    </a>
+    <nav class="site-header-nav">
+      <a href="https://www.livabletelluride.org/">Home</a>
+      <a href="https://www.livabletelluride.org/blog">News</a>
+      <a href="https://govhub.livabletelluride.org/" class="active">Gov Hub</a>
+    </nav>
+  </header>
+  <hr class="site-header-divider">
 
   <!-- ── Tab Bar ── -->
   <div class="tab-bar">
