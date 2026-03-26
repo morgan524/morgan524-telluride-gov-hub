@@ -3753,6 +3753,19 @@
       </div>
       <button class="sidebar-reset" id="sidebarReset">Clear Filter</button>
     </div>
+    <!-- ── Correction Widget ── -->
+    <div class="sidebar-inner" style="margin-top:14px;">
+      <div class="sidebar-title">Community Feedback</div>
+      <p style="font-size:0.78rem;color:var(--text-secondary);line-height:1.5;margin:0 0 12px;">
+        Spot a wrong date, name, or detail? Help us keep the Gov Hub accurate.
+      </p>
+      <button class="footer-correction-btn" id="sidebarCorrectionBtn" style="width:100%;justify-content:center;">
+        ✏️ Suggest a Correction
+      </button>
+      <p style="font-size:0.68rem;color:var(--text-muted);line-height:1.4;margin:10px 0 0;">
+        Corrections with a verified source link are applied automatically. Others are reviewed by our team.
+      </p>
+    </div>
   </aside>
 
   <div class="expand-pill-right" id="expandRight" title="Show Filter by Topic sidebar">◀ Topics</div>
@@ -9907,6 +9920,9 @@ setInterval(() => {
   }
 
   fab.addEventListener('click', () => openModal('', ''));
+  // Sidebar correction button
+  const sidebarCorrBtn = document.getElementById('sidebarCorrectionBtn');
+  if (sidebarCorrBtn) sidebarCorrBtn.addEventListener('click', () => openModal('', ''));
   closeBtn.addEventListener('click', closeModal);
   overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
 
