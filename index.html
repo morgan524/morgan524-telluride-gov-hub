@@ -1616,7 +1616,7 @@
     /* ── Left Sidebar ── */
     .left-sidebar {
       flex-shrink: 0;
-      width: 220px;
+      width: 280px;
       position: sticky;
       top: 60px;
       max-height: calc(100vh - 80px);
@@ -1632,11 +1632,11 @@
       -webkit-backdrop-filter: blur(8px);
       border: 1px solid rgba(221, 213, 200, 0.72);
       border-radius: 14px;
-      padding: 14px 16px;
+      padding: 18px 20px;
       box-shadow: var(--shadow-soft);
     }
     .left-sidebar-title {
-      font-size: 0.65rem;
+      font-size: 0.75rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -1754,6 +1754,34 @@
       font-weight: 400;
       color: var(--text-muted);
       display: block;
+    }
+
+    .week-summary-prose {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .week-summary-prose p {
+      margin: 0 0 10px 0;
+    }
+    .week-summary-prose p:last-child {
+      margin-bottom: 0;
+    }
+    .week-summary-prose strong {
+      color: var(--text-primary);
+      font-weight: 700;
+    }
+    .week-summary-prose .summary-festival {
+      background: linear-gradient(135deg, rgba(200,140,30,0.08), rgba(200,140,30,0.15));
+      border-left: 3px solid #c88c1e;
+      border-radius: 0 8px 8px 0;
+      padding: 6px 10px;
+      margin-bottom: 10px;
+    }
+    .week-summary-prose .summary-divider {
+      border: none;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      margin: 10px 0;
     }
 
     .left-sidebar-empty {
@@ -2169,12 +2197,13 @@
   //  4. Enable Firestore in the Firebase console
   // ═══════════════════════════════════════════════════════
   const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT.firebasestorage.app",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "AIzaSyCyAjB0RA_LtoETyRqxVJor0lRB4NRyXF0",
+    authDomain: "telluride-gov-hub.firebaseapp.com",
+    projectId: "telluride-gov-hub",
+    storageBucket: "telluride-gov-hub.firebasestorage.app",
+    messagingSenderId: "14117089764",
+    appId: "1:14117089764:web:4287985258f0bc929cd7f1",
+    measurementId: "G-PWNCF2PZQP"
   };
 
   // Expose to the global scope so the inline script can use it
@@ -2223,58 +2252,11 @@
   <!-- ── Left Sidebar ── -->
   <aside class="left-sidebar" id="leftSidebar">
 
-    <!-- This Week Snapshot -->
+    <!-- What to Watch -->
     <div class="left-sidebar-card">
-      <div class="left-sidebar-title">This Week</div>
-      <div id="weekSnapshot">
+      <div class="left-sidebar-title">What to Watch</div>
+      <div id="weekSnapshot" class="week-summary-prose">
         <div class="left-sidebar-empty">Loading...</div>
-      </div>
-    </div>
-
-    <!-- Upcoming Deadlines -->
-    <div class="left-sidebar-card">
-      <div class="left-sidebar-title">Comment Deadlines</div>
-      <div id="deadlinesList">
-        <div class="left-sidebar-empty">Loading...</div>
-      </div>
-    </div>
-
-    <!-- Quick Contact Links -->
-    <div class="left-sidebar-card">
-      <div class="left-sidebar-title">Submit Public Comment</div>
-      <div id="contactLinks">
-        <a class="contact-item" href="mailto:townclerk@telluride.gov?subject=Public%20Comment" target="_blank">
-          <span class="contact-icon">🏔️</span>
-          <span class="contact-label">Telluride Town Council<span class="contact-deadline-note">By Wed at noon</span></span>
-        </a>
-        <a class="contact-item" href="mailto:bocc@sanmiguelcountyco.gov?subject=Public%20Comment" target="_blank">
-          <span class="contact-icon">🏛️</span>
-          <span class="contact-label">County BOCC<span class="contact-deadline-note">By Mon at 4 PM</span></span>
-        </a>
-        <a class="contact-item" href="mailto:planningcommission@sanmiguelcountyco.gov?subject=Public%20Comment" target="_blank">
-          <span class="contact-icon">📐</span>
-          <span class="contact-label">County Planning<span class="contact-deadline-note">By Mon at 4 PM</span></span>
-        </a>
-        <a class="contact-item" href="mailto:council@mtnvillage.org?subject=Public%20Comment" target="_blank">
-          <span class="contact-icon">⛰️</span>
-          <span class="contact-label">Mountain Village Council<span class="contact-deadline-note">By Thu before meeting</span></span>
-        </a>
-        <a class="contact-item" href="mailto:planning@mtnvillage.org?subject=Public%20Comment" target="_blank">
-          <span class="contact-icon">📋</span>
-          <span class="contact-label">MV Planning & Zoning<span class="contact-deadline-note">By Thu before meeting</span></span>
-        </a>
-        <a class="contact-item" href="mailto:wcrossland@tellmed.org?subject=Public%20Comment" target="_blank">
-          <span class="contact-icon">🏥</span>
-          <span class="contact-label">Med Center Board<span class="contact-deadline-note">48 hrs before meeting</span></span>
-        </a>
-        <a class="contact-item" href="mailto:pdasaro@telluridefire.com?subject=Public%20Comment" target="_blank">
-          <span class="contact-icon">🚒</span>
-          <span class="contact-label">First District Fire<span class="contact-deadline-note">48 hrs before meeting</span></span>
-        </a>
-        <a class="contact-item" href="mailto:clerk@ophir.us?subject=Public%20Comment" target="_blank">
-          <span class="contact-icon">🏘️</span>
-          <span class="contact-label">Town of Ophir<span class="contact-deadline-note">48 hrs before meeting</span></span>
-        </a>
       </div>
     </div>
 
@@ -3148,7 +3130,8 @@
     <a href="https://townofophir.colorado.gov" target="_blank">townofophir.colorado.gov</a>,
     <a href="https://www.telluridenews.com" target="_blank">telluridenews.com</a>, and
     <a href="https://koto.org" target="_blank">koto.org</a>.
-    Telluride, County, Telluride Times, KOTO, and <a href="https://telluridelibrary.org/events/" target="_blank">Wilkinson Public Library</a> data updated live. Other sources cached.<br>
+    Telluride, County, Telluride Times, KOTO, and <a href="https://telluridelibrary.org/events/" target="_blank">Wilkinson Public Library</a> data updated live. Other sources cached. Auto-refreshes every hour.<br>
+    <span id="lastUpdated"></span><br>
     Built for <a href="https://www.livabletelluride.org" target="_blank">Livable Telluride</a>
   </div>
 
@@ -3988,7 +3971,7 @@ function getFireMeetings() {
 // Note any new/changed meetings and edit MED_CACHED_DATA below.
 
 const MED_BOARD_URL = 'https://www.tellmed.org/board-meetings';
-const MED_CACHE_DATE = '2026-03-24';
+const MED_CACHE_DATE = '2026-03-26';
 
 const MED_CACHED_DATA = [
   // ── Upcoming ──
@@ -3996,11 +3979,11 @@ const MED_CACHED_DATA = [
     date: 'March 26, 2026',
     time: '8:30 AM - 11:30 AM',
     title: 'Regular Board Meeting',
-    agendaUrl: null,
+    agendaUrl: 'https://www.tellmed.org/files/651140033/THD+Reg+BOD+Mtg+3.26.26+Agenda.pdf',
     packetUrl: null,
     special: false,
     location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom',
-    note: 'Next regular meeting -- agenda typically posted a few days before.'
+    note: null
   },
   // ── Recent ──
   {
@@ -4460,7 +4443,7 @@ const MEETING_SUMMARIES = {
     'Board Education: Primary Care presentation (Alline Arguelles, PC Practice Manager) · New Facility update · Finance Committee update & January 2026 draft financials · CEO Report (Jeff Roberts) · Foundation/Campaign update (Heidi Lauterbach) · Executive sessions: partnership negotiations strategy & CEO evaluation',
 
   'med|2026-03-26|Regular Board Meeting':
-    'Agenda not yet posted -- check back closer to the meeting date',
+    'Board Education: Facility Planning update · Finance Committee update & February 2026 draft financials · CEO Report (Jeff Roberts) · Foundation/Campaign update · New Facility progress · Executive sessions: partnership negotiations strategy',
 };
 
 // Look up a cached summary for a meeting item
@@ -7561,127 +7544,250 @@ async function init() {
 // ── Left Sidebar: This Week + Deadlines ──
 // ══════════════════════════════════════════════════════
 
+// ── Telluride-area Festival Calendar ──
+// Major festivals get top billing when they fall in the upcoming window.
+// month is 0-indexed (0=Jan). dayStart/dayEnd are inclusive date ranges.
+// These are approximate annual dates -- update yearly as schedules are confirmed.
+const TELLURIDE_FESTIVALS = [
+  { name: 'Telluride Bluegrass Festival', month: 5, dayStart: 18, dayEnd: 21, icon: '🎸' },
+  { name: 'Telluride Blues & Brews Festival', month: 8, dayStart: 12, dayEnd: 14, icon: '🎶' },
+  { name: 'Telluride Jazz Festival', month: 7, dayStart: 7, dayEnd: 10, icon: '🎷' },
+  { name: 'Telluride Film Festival', month: 8, dayStart: 29, dayEnd: 31, icon: '🎬' },
+  { name: 'Mountainfilm', month: 4, dayStart: 22, dayEnd: 25, icon: '🎥' },
+  { name: 'Telluride Mushroom Festival', month: 7, dayStart: 14, dayEnd: 17, icon: '🍄' },
+  { name: 'Ride Festival', month: 6, dayStart: 10, dayEnd: 12, icon: '🎤' },
+  { name: 'Telluride Horror Show', month: 9, dayStart: 9, dayEnd: 12, icon: '🎃' },
+  { name: 'Telluride Wine Festival', month: 5, dayStart: 25, dayEnd: 27, icon: '🍷' },
+  { name: 'Fourth of July Celebration', month: 6, dayStart: 3, dayEnd: 4, icon: '🎆' },
+  { name: 'Telluride Yoga Festival', month: 6, dayStart: 17, dayEnd: 20, icon: '🧘' },
+  { name: 'Nothing Festival / Burning Bridges', month: 3, dayStart: 30, dayEnd: 31, icon: '🔥' }
+];
+
+function getUpcomingFestivals(now, daysAhead) {
+  const results = [];
+  const cutoff = new Date(now);
+  cutoff.setDate(cutoff.getDate() + daysAhead);
+  const year = now.getFullYear();
+
+  TELLURIDE_FESTIVALS.forEach(f => {
+    // Check this year and possibly next year for wrapping
+    [year, year + 1].forEach(y => {
+      const start = new Date(y, f.month, f.dayStart);
+      const end = new Date(y, f.month, f.dayEnd, 23, 59, 59);
+      // Festival is upcoming if it starts within our window, or is currently happening
+      if ((start >= now && start <= cutoff) || (start <= now && end >= now)) {
+        const daysUntil = Math.ceil((start - now) / (1000 * 60 * 60 * 24));
+        results.push({
+          name: f.name,
+          icon: f.icon,
+          start,
+          end,
+          daysUntil: daysUntil < 0 ? 0 : daysUntil,
+          happening: start <= now && end >= now
+        });
+      }
+    });
+  });
+  return results.sort((a, b) => a.start - b.start);
+}
+
 function updateLeftSidebar() {
   const meetings = window.__allMeetingsCache || [];
   const now = new Date();
   const todayStr = now.toISOString().slice(0, 10);
+  const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 
   // End of this week (Sunday)
   const endOfWeek = new Date(now);
   endOfWeek.setDate(endOfWeek.getDate() + (7 - endOfWeek.getDay()));
   endOfWeek.setHours(23, 59, 59, 999);
 
+  // 10-day lookahead
+  const lookAhead = new Date(now);
+  lookAhead.setDate(lookAhead.getDate() + 10);
+
   // Only governmental meetings from today onward
   const upcoming = meetings.filter(m =>
     m.eventDate && dateGroupKey(m.eventDate) >= todayStr && isGovernmentalMeeting(m) && !m.canceled
   );
 
-  const todayMeetings = upcoming.filter(m => dateGroupKey(m.eventDate) === todayStr);
   const weekMeetings = upcoming.filter(m => m.eventDate <= endOfWeek);
+  const tenDayMeetings = upcoming.filter(m => m.eventDate <= lookAhead);
 
-  // Next 7 days with comment windows
-  const next7 = new Date(now);
-  next7.setDate(next7.getDate() + 7);
-  const weekAhead = upcoming.filter(m => m.eventDate <= next7);
-
-  // Count legal notices
-  const legalCount = (typeof LEGAL_NOTICES !== 'undefined') ? LEGAL_NOTICES.length : 0;
-
-  // ── This Week snapshot ──
   const snapEl = document.getElementById('weekSnapshot');
-  if (snapEl) {
-    let html = '';
-    html += `<div class="week-stat">
-      <div class="week-stat-icon">📅</div>
-      <div class="week-stat-text"><strong>${todayMeetings.length}</strong> meeting${todayMeetings.length !== 1 ? 's' : ''} today</div>
-    </div>`;
-    html += `<div class="week-stat">
-      <div class="week-stat-icon">🗓️</div>
-      <div class="week-stat-text"><strong>${weekMeetings.length}</strong> this week</div>
-    </div>`;
-    if (legalCount > 0) {
-      html += `<div class="week-stat">
-        <div class="week-stat-icon">⚖️</div>
-        <div class="week-stat-text"><strong>${legalCount}</strong> legal notice${legalCount !== 1 ? 's' : ''}</div>
-      </div>`;
+  if (!snapEl) return;
+
+  const paragraphs = [];
+
+  // ── 1. Festivals ──
+  const festivals = getUpcomingFestivals(now, 21);
+  festivals.forEach(f => {
+    if (f.happening) {
+      paragraphs.push({ priority: 0, text: `${f.icon} <strong>${f.name}</strong> is in full swing! Expect road closures, packed restaurants, and that electric Telluride energy. If you haven't already, grab your wristband, find your spot on the grass, and soak it in. Town won't be this alive again until the next big one.` });
+    } else if (f.daysUntil <= 7) {
+      paragraphs.push({ priority: 0, text: `${f.icon} <strong>${f.name}</strong> kicks off in just ${f.daysUntil} day${f.daysUntil !== 1 ? 's' : ''}. Town is about to get buzzing -- now's the time to sort out parking, dinner reservations, and your schedule. Whether you're here for the music, the films, or just the atmosphere, it's going to be a great one.` });
+    } else if (f.daysUntil <= 14) {
+      paragraphs.push({ priority: 1, text: `${f.icon} Mark your calendar: <strong>${f.name}</strong> is coming up ${fullDate(f.start)}. Still a couple weeks out, but a good time to start making plans and locking in accommodations if you haven't already.` });
     }
-    snapEl.innerHTML = html;
-  }
+  });
 
-  // ── Comment Deadlines ──
-  const deadEl = document.getElementById('deadlinesList');
-  if (deadEl) {
-    // Build deadline entries from upcoming meetings in next 10 days
-    const next10 = new Date(now);
-    next10.setDate(next10.getDate() + 10);
-    const soonMeetings = upcoming.filter(m => m.eventDate <= next10);
+  // ── 2. Key government issues (WHY_THIS_MATTERS) ──
+  const keyItems = [];
+  const seenDecisions = new Set();
+  tenDayMeetings.forEach(m => {
+    const wtm = getWhyThisMatters(m);
+    if (wtm && !seenDecisions.has(wtm.decision)) {
+      seenDecisions.add(wtm.decision);
+      keyItems.push({ meeting: m, wtm, date: m.eventDate });
+    }
+  });
+  keyItems.sort((a, b) => a.date - b.date);
 
-    // Compute comment deadlines per entity
-    const DEADLINE_RULES = {
-      telluride: { label: 'Telluride', offsetDesc: 'Wed noon before meeting', getDeadline: (d) => { const dl = new Date(d); dl.setDate(dl.getDate() - (dl.getDay() >= 3 ? dl.getDay() - 3 : dl.getDay() + 4)); dl.setHours(12, 0, 0, 0); return dl; }},
-      county: { label: 'County', offsetDesc: 'Mon 4 PM before meeting', getDeadline: (d) => { const dl = new Date(d); dl.setDate(dl.getDate() - (dl.getDay() >= 1 ? dl.getDay() - 1 : 6)); dl.setHours(16, 0, 0, 0); return dl; }},
-      mv: { label: 'Mtn Village', offsetDesc: 'Thu before meeting', getDeadline: (d) => { const dl = new Date(d); dl.setDate(dl.getDate() - (dl.getDay() >= 4 ? dl.getDay() - 4 : dl.getDay() + 3)); dl.setHours(17, 0, 0, 0); return dl; }},
-      fire: { label: 'First District', offsetDesc: '48 hrs before', getDeadline: (d) => { const dl = new Date(d); dl.setTime(dl.getTime() - 48*60*60*1000); return dl; }},
-      med: { label: 'Med Center', offsetDesc: '48 hrs before', getDeadline: (d) => { const dl = new Date(d); dl.setTime(dl.getTime() - 48*60*60*1000); return dl; }},
-      ophir: { label: 'Ophir', offsetDesc: '48 hrs before', getDeadline: (d) => { const dl = new Date(d); dl.setTime(dl.getTime() - 48*60*60*1000); return dl; }},
-      norwood: { label: 'Norwood', offsetDesc: '48 hrs before', getDeadline: (d) => { const dl = new Date(d); dl.setTime(dl.getTime() - 48*60*60*1000); return dl; }}
-    };
+  // Write each key item as its own paragraph with context
+  keyItems.slice(0, 5).forEach(k => {
+    const dayName = dayNames[k.date.getDay()];
+    const entity = SOURCE_SHORT_NAME[k.meeting.source] || k.meeting.sourceLabel || '';
+    const summary = getMeetingSummary(k.meeting) || '';
 
-    const deadlines = [];
-    const seenKeys = new Set();
+    // Decision description -- keep more of it for the longer format
+    let desc = k.wtm.decision;
+    if (desc.length > 200) desc = desc.slice(0, 197).replace(/\s+\S*$/, '') + '...';
 
-    soonMeetings.forEach(m => {
-      const rule = DEADLINE_RULES[m.source];
-      if (!rule) return;
-      const deadline = rule.getDeadline(m.eventDate);
-      if (deadline < now) return; // already passed
+    // Impact teaser
+    let impact = k.wtm.impact || '';
+    if (impact.length > 160) impact = impact.slice(0, 157).replace(/\s+\S*$/, '') + '...';
 
-      const key = m.source + '|' + dateGroupKey(m.eventDate);
-      if (seenKeys.has(key)) return;
-      seenKeys.add(key);
+    // Who's affected
+    const who = k.wtm.who || '';
 
-      const diffMs = deadline - now;
-      const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
-      const diffDays = Math.floor(diffHrs / 24);
+    // Build the paragraph
+    let para = `<strong>${entity} -- ${dayName}:</strong> ${desc}`;
 
-      let urgency, timeLabel;
-      if (diffHrs < 24) {
-        urgency = 'urgent';
-        timeLabel = diffHrs <= 1 ? '< 1 hr' : diffHrs + ' hrs';
-      } else if (diffDays <= 2) {
-        urgency = 'soon';
-        timeLabel = diffDays + ' day' + (diffDays !== 1 ? 's' : '');
-      } else {
-        urgency = 'upcoming';
-        timeLabel = diffDays + ' days';
+    // Add who's affected if available
+    if (who && who.length < 150) {
+      para += ` This affects ${who.charAt(0).toLowerCase() + who.slice(1)}`;
+      if (!para.endsWith('.')) para += '.';
+    }
+
+    // Add impact
+    if (impact) {
+      para += ` ${impact}`;
+      if (!para.endsWith('.')) para += '.';
+    }
+
+    // Add agenda topics if we have them
+    if (summary && !/not yet posted/i.test(summary)) {
+      const topics = summary.split(' · ').slice(0, 3);
+      if (topics.length > 0) {
+        para += ` On the agenda: ${topics.join(', ').toLowerCase()}.`;
       }
+    }
 
-      deadlines.push({
-        urgency,
-        timeLabel,
-        entity: rule.label,
-        title: cleanTitle(m.title),
-        meetingDate: fullDate(m.eventDate),
-        sortKey: deadline.getTime()
-      });
+    paragraphs.push({ priority: 2, text: para });
+  });
+
+  // ── 3. Other notable government meetings ──
+  const HIGH_PRIORITY = /town\s*council|board\s*of\s*county\s*commissioner|planning\s*commission|joint\s*work\s*session|design\s*review\s*board|general\s*assembly/i;
+  const coveredSources = new Set(keyItems.map(k => k.meeting.source + '|' + dateGroupKey(k.date)));
+  const otherNotable = [];
+
+  weekMeetings.forEach(m => {
+    const key = m.source + '|' + dateGroupKey(m.eventDate);
+    if (coveredSources.has(key)) return;
+    if (HIGH_PRIORITY.test(m.title)) {
+      otherNotable.push(m);
+      coveredSources.add(key);
+    }
+  });
+
+  if (otherNotable.length > 0) {
+    let otherText = 'Beyond the headline items, ';
+    const details = otherNotable.map(m => {
+      const entity = SOURCE_SHORT_NAME[m.source] || '';
+      const day = dayNames[m.eventDate.getDay()];
+      const summary = getMeetingSummary(m) || '';
+      let detail = `<strong>${entity}</strong> meets on ${day}`;
+      if (summary && !/not yet posted/i.test(summary)) {
+        const topicPreview = summary.split(' · ').slice(0, 2).join(' and ').toLowerCase();
+        if (topicPreview.length < 120) detail += ` to discuss ${topicPreview}`;
+      }
+      return detail;
     });
+    otherText += details.join(', and ') + '. These may not make the front page, but they shape how the region operates day to day.';
+    paragraphs.push({ priority: 3, text: otherText });
+  }
 
-    deadlines.sort((a, b) => a.sortKey - b.sortKey);
+  // ── 4. Smaller boards and commissions ──
+  const SECONDARY = /board\s*of\s*education|board\s*of\s*directors|board\s*of\s*trustees|regular\s*board/i;
+  const secondaryMeetings = [];
+  weekMeetings.forEach(m => {
+    const key = m.source + '|' + dateGroupKey(m.eventDate);
+    if (coveredSources.has(key)) return;
+    if (SECONDARY.test(m.title)) {
+      secondaryMeetings.push(m);
+      coveredSources.add(key);
+    }
+  });
 
-    if (deadlines.length === 0) {
-      deadEl.innerHTML = '<div class="left-sidebar-empty">No comment deadlines in the next 10 days</div>';
-    } else {
-      deadEl.innerHTML = deadlines.slice(0, 6).map(d => `
-        <div class="deadline-item">
-          <span class="deadline-badge ${d.urgency}">${d.timeLabel}</span>
-          <div class="deadline-text">
-            <strong>${d.entity}</strong>
-            ${d.meetingDate}
-          </div>
-        </div>
-      `).join('');
+  if (secondaryMeetings.length > 0) {
+    const boardNames = secondaryMeetings.map(m => {
+      const entity = SOURCE_SHORT_NAME[m.source] || '';
+      return entity;
+    });
+    const unique = [...new Set(boardNames)];
+    if (unique.length > 0) {
+      paragraphs.push({ priority: 4, text: `Rounding out the week, <strong>${unique.join('</strong>, <strong>')}</strong> ${unique.length === 1 ? 'has a board meeting' : 'all have board meetings'} on the schedule. Agendas are usually posted a few days before -- check the Meetings tab for updates as they become available.` });
     }
   }
+
+  // ── 5. Legal notices ──
+  const legalThisWeek = [];
+  if (typeof LEGAL_NOTICES !== 'undefined') {
+    LEGAL_NOTICES.forEach(notice => {
+      if (notice.event && notice.event.date) {
+        const eventDate = new Date(notice.event.date + ' ' + (notice.event.time || ''));
+        if (!isNaN(eventDate) && eventDate >= now && eventDate <= lookAhead) {
+          legalThisWeek.push(notice);
+        }
+      }
+    });
+  }
+  if (legalThisWeek.length > 0) {
+    let legalText = 'Keep an eye on the <strong>Legal Notices</strong> tab -- ';
+    const legalDetails = legalThisWeek.slice(0, 3).map(n => {
+      let detail = `a ${n.type.toLowerCase()} from ${n.entity}`;
+      if (n.deadline) detail += ` (deadline: ${n.deadline})`;
+      return detail;
+    });
+    legalText += legalDetails.join(', and ') + '. Public notices are easy to miss but often carry real consequences for property owners and residents.';
+    paragraphs.push({ priority: 2.5, text: legalText });
+  }
+
+  // ── 6. Total meeting count ──
+  const totalCount = weekMeetings.length;
+  const entityCount = new Set(weekMeetings.map(m => m.source)).size;
+  if (totalCount > 0 && paragraphs.filter(p => p.priority >= 2).length > 0) {
+    paragraphs.push({ priority: 4.5, text: `All told, there are <strong>${totalCount} government meetings</strong> this week across <strong>${entityCount} entities</strong>. Scroll through the Meetings tab for full details, agenda links, and public comment info for each one.` });
+  }
+
+  // ── Fallback for quiet weeks ──
+  if (paragraphs.length === 0) {
+    if (totalCount > 0) {
+      paragraphs.push({ priority: 5, text: `A relatively quiet week around town with <strong>${totalCount} government meetings</strong> on the schedule across ${entityCount} entities. Nothing earth-shaking on the agenda, but government never really sleeps -- check the Meetings tab if you want to stay in the loop. Sometimes the most consequential decisions happen when nobody's watching.` });
+    } else {
+      paragraphs.push({ priority: 5, text: `No government meetings on the calendar this week -- a rare breather. Enjoy the mountain air, hit the trails, and recharge. The next round of big decisions is never far off in this valley, and you'll want your energy for when it comes.` });
+    }
+  }
+
+  // Sort and render
+  paragraphs.sort((a, b) => a.priority - b.priority);
+
+  snapEl.innerHTML = paragraphs.map(p => {
+    if (p.priority === 0) {
+      return `<div class="summary-festival"><p>${p.text}</p></div>`;
+    }
+    return `<p>${p.text}</p>`;
+  }).join('');
 }
 
 // Call after each data load
@@ -7692,6 +7798,26 @@ renderMeetingsWithTopic = function() {
 };
 
 init();
+
+// ══════════════════════════════════════════════════════
+// ── Auto-Refresh: reload all data every hour ──
+// ══════════════════════════════════════════════════════
+//
+// Live API sources (Telluride CivicWeb, County RSS, news feeds) are
+// re-fetched on each init() call. Cached sources (SMART, MV, Fire, Med,
+// etc.) use static arrays that update only when the HTML file is updated,
+// but the re-render still picks up any time-dependent display changes
+// (e.g., "TODAY" labels, deadline calculations, sidebar summary).
+//
+// The refresh interval is 60 minutes. A "Last refreshed" timestamp is
+// shown in the footer so users know data is current.
+
+const AUTO_REFRESH_INTERVAL = 60 * 60 * 1000; // 1 hour in ms
+
+setInterval(() => {
+  console.log('[Gov Hub] Auto-refreshing data...');
+  init();
+}, AUTO_REFRESH_INTERVAL);
 
 // ══════════════════════════════════════════════════════
 // ── Wix Iframe Compatibility Layer ──
@@ -7917,6 +8043,7 @@ init();
       const colRef = FB.collection(db, 'govhub_comments');
       await FB.addDoc(colRef, {
         ...comment,
+        approved: false,
         createdAt: FB.serverTimestamp()
       });
     }
@@ -8163,7 +8290,7 @@ init();
 
         const msg = document.createElement('div');
         msg.style.cssText = 'background:#e8f5e9;color:#2e7d32;padding:12px 16px;border-radius:8px;margin-top:8px;font-size:14px;';
-        msg.textContent = 'Thank you! Your comment has been posted.';
+        msg.textContent = 'Thank you! Your comment has been submitted and will appear after review.';
         form.appendChild(msg);
         setTimeout(() => msg.remove(), 4000);
       }
