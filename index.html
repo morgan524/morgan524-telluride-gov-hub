@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -110,6 +109,63 @@
       border: none;
       border-top: 1px solid var(--line);
       margin: 0;
+    }
+
+    /* ── Gov Hub Hero Banner ── */
+    .govhub-hero {
+      position: relative;
+      width: 100%;
+      height: 260px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #1a3a4a 0%, #2d5a3d 40%, #c4713b 80%, #d4845a 100%);
+    }
+    .govhub-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      display: block;
+    }
+    .govhub-hero-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, rgba(33,68,60,0.85) 0%, rgba(33,68,60,0.6) 40%, transparent 70%);
+    }
+    .govhub-hero-text {
+      position: absolute;
+      top: 50%; left: 0;
+      transform: translateY(-50%);
+      max-width: 480px;
+      padding: 28px 40px 28px 36px;
+      margin-left: max(36px, calc((100% - 1200px)/2 + 36px));
+      background: rgba(33,68,60,0.75);
+      border-left: 4px solid var(--forest);
+      border-radius: 0 14px 14px 0;
+    }
+    .govhub-hero-text h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .govhub-hero-text p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.55;
+    }
+    @media (max-width: 768px) {
+      .govhub-hero { height: 200px; }
+      .govhub-hero-text {
+        max-width: 320px;
+        padding: 18px 24px 18px 20px;
+        margin-left: 16px;
+      }
+      .govhub-hero-text h1 { font-size: 1.35rem; }
+      .govhub-hero-text p { font-size: 0.82rem; }
     }
 
     /* ── Page base ── */
@@ -2242,6 +2298,16 @@
     </nav>
   </header>
   <hr class="site-header-divider">
+
+  <!-- ── Gov Hub Hero Banner ── -->
+  <div class="govhub-hero">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1400&q=80&auto=format" alt="Telluride mountain panorama at sunset" onerror="this.style.display='none'">
+    <div class="govhub-hero-overlay"></div>
+    <div class="govhub-hero-text">
+      <h1>Telluride Regional<br>Government Hub</h1>
+      <p>This space is your one-stop shop to keep you informed about what is happening in our community and stay engaged!</p>
+    </div>
+  </div>
 
   <!-- ── Tab Bar ── -->
   <div class="tab-bar">
