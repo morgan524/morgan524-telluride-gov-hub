@@ -3099,30 +3099,43 @@
 
     <!-- Submit an Event (shown on Events tab only) — placed at top -->
     <div class="left-sidebar-card" id="sidebarSubmitEvent" style="display:none;">
-      <div style="text-align:center;margin-bottom:8px;">
-        <div style="font-size:2.2rem;line-height:1;">📅</div>
-        <div class="left-sidebar-title" style="margin:6px 0 2px 0;">Submit an Event</div>
-      </div>
-      <p style="font-size:0.78rem;color:var(--text-secondary);line-height:1.5;margin:0 0 10px 0;">
-        Know about an upcoming community event? Submit a link and we'll review it for inclusion in the calendar.
+      <div class="left-sidebar-title" style="text-align:center;border-bottom:none;padding-bottom:0;margin-bottom:2px;">Community Calendar</div>
+      <div style="font-size:1.1rem;font-weight:900;letter-spacing:-0.02em;color:var(--text-primary);text-align:center;margin-bottom:10px;">Submit an Event</div>
+      <p style="font-size:0.75rem;color:var(--text-secondary);line-height:1.5;margin:0 0 12px 0;">
+        Know about an upcoming community event? Send us the event link and a few basic details. We'll review it for possible inclusion in the calendar.
       </p>
-      <form id="eventSubmitForm" onsubmit="return false;" style="display:flex;flex-direction:column;gap:8px;">
-        <input type="url" id="eventUrlInput" required
-          placeholder="https://example.com/event"
-          style="width:100%;padding:8px 10px;font-size:0.82rem;border:1px solid var(--line);border-radius:8px;background:white;color:var(--text-primary);font-family:var(--font-body);box-sizing:border-box;" />
-        <input type="text" id="eventNameInput"
-          placeholder="Event name (optional)"
-          style="width:100%;padding:8px 10px;font-size:0.82rem;border:1px solid var(--line);border-radius:8px;background:white;color:var(--text-primary);font-family:var(--font-body);box-sizing:border-box;" />
-        <input type="text" id="eventSubmitterInput"
-          placeholder="Your name (optional)"
-          style="width:100%;padding:8px 10px;font-size:0.82rem;border:1px solid var(--line);border-radius:8px;background:white;color:var(--text-primary);font-family:var(--font-body);box-sizing:border-box;" />
+      <form id="eventSubmitForm" onsubmit="return false;" style="display:grid;gap:8px;">
+        <div>
+          <label style="display:block;font-size:0.68rem;font-weight:700;color:var(--text-muted);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.06em;">Event Name <span style="color:#b45309;">*</span></label>
+          <input type="text" id="eventNameInput" required
+            placeholder="e.g. Telluride Film Festival"
+            style="width:100%;min-height:38px;border-radius:10px;border:1.5px solid var(--line);background:white;padding:0 10px;font-size:0.8rem;color:var(--text-primary);outline:none;box-sizing:border-box;transition:border-color 0.18s ease,box-shadow 0.18s ease;" onfocus="this.style.borderColor='rgba(47,86,77,0.55)';this.style.boxShadow='0 0 0 3px rgba(47,86,77,0.08)'" onblur="this.style.borderColor='';this.style.boxShadow=''" />
+        </div>
+        <div>
+          <label style="display:block;font-size:0.68rem;font-weight:700;color:var(--text-muted);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.06em;">Your Name <span style="color:#b45309;">*</span></label>
+          <input type="text" id="eventSubmitterInput" required
+            placeholder="Your full name"
+            style="width:100%;min-height:38px;border-radius:10px;border:1.5px solid var(--line);background:white;padding:0 10px;font-size:0.8rem;color:var(--text-primary);outline:none;box-sizing:border-box;transition:border-color 0.18s ease,box-shadow 0.18s ease;" onfocus="this.style.borderColor='rgba(47,86,77,0.55)';this.style.boxShadow='0 0 0 3px rgba(47,86,77,0.08)'" onblur="this.style.borderColor='';this.style.boxShadow=''" />
+        </div>
+        <div>
+          <label style="display:block;font-size:0.68rem;font-weight:700;color:var(--text-muted);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.06em;">Event URL <span style="color:#b45309;">*</span></label>
+          <input type="url" id="eventUrlInput" required
+            placeholder="https://example.com/event"
+            style="width:100%;min-height:38px;border-radius:10px;border:1.5px solid var(--line);background:white;padding:0 10px;font-size:0.8rem;color:var(--text-primary);outline:none;box-sizing:border-box;transition:border-color 0.18s ease,box-shadow 0.18s ease;" onfocus="this.style.borderColor='rgba(47,86,77,0.55)';this.style.boxShadow='0 0 0 3px rgba(47,86,77,0.08)'" onblur="this.style.borderColor='';this.style.boxShadow=''" />
+        </div>
+        <div>
+          <label style="display:block;font-size:0.68rem;font-weight:700;color:var(--text-muted);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.06em;">Message <span style="font-weight:400;text-transform:none;letter-spacing:0;">(optional)</span></label>
+          <textarea id="eventMessageInput" rows="3"
+            placeholder="Any additional details..."
+            style="width:100%;border-radius:10px;border:1.5px solid var(--line);background:white;padding:8px 10px;font-size:0.8rem;color:var(--text-primary);outline:none;box-sizing:border-box;font-family:inherit;resize:vertical;transition:border-color 0.18s ease,box-shadow 0.18s ease;" onfocus="this.style.borderColor='rgba(47,86,77,0.55)';this.style.boxShadow='0 0 0 3px rgba(47,86,77,0.08)'" onblur="this.style.borderColor='';this.style.boxShadow=''"></textarea>
+        </div>
         <button type="button" id="eventSubmitBtn" onclick="submitEventLink()"
-          style="width:100%;padding:16px;background:var(--accent-green);color:#fff;border:none;border-radius:10px;font-size:1.2rem;font-weight:800;cursor:pointer;font-family:var(--font-body);letter-spacing:0.04em;transition:opacity 0.15s ease;margin-top:4px;">
-          Submit
+          style="width:100%;min-height:48px;border:none;border-radius:12px;background:linear-gradient(135deg,#2f564d,#24463f);color:#fff;font-size:0.95rem;font-weight:900;letter-spacing:0.06em;text-transform:uppercase;box-shadow:0 10px 20px rgba(36,70,63,0.22);cursor:pointer;transition:transform 0.18s ease,box-shadow 0.18s ease,opacity 0.18s ease;margin-top:4px;">
+          Submit Event
         </button>
-        <div id="eventSubmitStatus" style="display:none;font-size:0.75rem;text-align:center;padding:6px 8px;border-radius:6px;line-height:1.4;"></div>
+        <div id="eventSubmitStatus" style="display:none;border-radius:10px;padding:8px 10px;border:1px solid rgba(201,125,42,0.18);font-size:0.75rem;font-weight:700;text-align:center;line-height:1.4;"></div>
       </form>
-      <p style="font-size:0.68rem;color:var(--text-muted);line-height:1.4;margin:8px 0 0 0;font-style:italic;">
+      <p style="margin:8px 0 0 0;font-size:0.68rem;line-height:1.5;color:var(--text-muted);font-style:italic;">
         Submissions are reviewed by the Livable Telluride team before appearing on the calendar.
       </p>
     </div>
@@ -10754,16 +10767,26 @@ function submitEventLink() {
   const urlInput = document.getElementById('eventUrlInput');
   const nameInput = document.getElementById('eventNameInput');
   const submitterInput = document.getElementById('eventSubmitterInput');
+  const messageInput = document.getElementById('eventMessageInput');
   const btn = document.getElementById('eventSubmitBtn');
   const status = document.getElementById('eventSubmitStatus');
   const url = (urlInput.value || '').trim();
   const eventName = (nameInput.value || '').trim();
-  const submitter = (submitterInput.value || '').trim() || 'Anonymous';
+  const submitter = (submitterInput.value || '').trim();
+  const message = (messageInput ? messageInput.value || '' : '').trim();
 
   // Reset status
   status.style.display = 'none';
 
-  // ── URL validation ──
+  // ── Required field validation ──
+  if (!eventName) {
+    showSubmitStatus('Please enter the event name.', 'error');
+    return;
+  }
+  if (!submitter) {
+    showSubmitStatus('Please enter your name.', 'error');
+    return;
+  }
   if (!url) {
     showSubmitStatus('Please enter a URL.', 'error');
     return;
@@ -10815,12 +10838,13 @@ function submitEventLink() {
     from_name: submitter,
     event_name: eventName || '(not provided)',
     event_url: url,
+    message: message || '(none)',
     approve_url: approveUrl,
     deny_url: denyUrl,
     site_name: 'Telluride Gov Hub',
     // Fallback fields for reusing the comment template
     topic: 'Event Submission',
-    comment_body: 'Event URL: ' + url + (eventName ? '\nEvent Name: ' + eventName : '') + '\nSubmitted by: ' + submitter,
+    comment_body: 'Event URL: ' + url + '\nEvent Name: ' + eventName + '\nSubmitted by: ' + submitter + (message ? '\nMessage: ' + message : ''),
     comment_type: 'event_submission',
     review_url: siteUrl
   }).then(
@@ -10829,15 +10853,16 @@ function submitEventLink() {
       urlInput.value = '';
       nameInput.value = '';
       submitterInput.value = '';
+      if (messageInput) messageInput.value = '';
       btn.disabled = false;
-      btn.textContent = 'Submit for Review';
+      btn.textContent = 'SUBMIT EVENT';
       btn.style.opacity = '1';
     },
     (err) => {
       console.warn('[GovHub] Event submission email failed:', err);
       showSubmitStatus('Something went wrong. Please try again or email info@livabletelluride.org directly.', 'error');
       btn.disabled = false;
-      btn.textContent = 'Submit for Review';
+      btn.textContent = 'SUBMIT EVENT';
       btn.style.opacity = '1';
     }
   );
@@ -10848,8 +10873,15 @@ function showSubmitStatus(msg, type) {
   if (!el) return;
   el.textContent = msg;
   el.style.display = 'block';
-  el.style.background = type === 'success' ? 'rgba(33,68,60,0.08)' : 'rgba(180,83,9,0.08)';
-  el.style.color = type === 'success' ? 'var(--forest)' : '#b45309';
+  if (type === 'success') {
+    el.style.background = 'linear-gradient(180deg,rgba(47,86,77,0.08),rgba(47,86,77,0.04))';
+    el.style.borderColor = 'rgba(47,86,77,0.18)';
+    el.style.color = 'var(--forest)';
+  } else {
+    el.style.background = 'linear-gradient(180deg,#f6eee5,#efe5da)';
+    el.style.borderColor = 'rgba(201,125,42,0.18)';
+    el.style.color = '#b65f12';
+  }
 }
 </script>
 
