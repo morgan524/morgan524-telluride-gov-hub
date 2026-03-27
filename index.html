@@ -9764,7 +9764,7 @@ function updateEventsHeroFestivals() {
 
   const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   let html = '<div style="font-size:0.8rem;font-weight:700;color:var(--text-primary);margin-bottom:6px;">Coming Up</div>';
-  html += '<div style="display:flex;flex-wrap:wrap;gap:8px;">';
+  html += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">';
   upcoming.slice(0, 4).forEach(f => {
     const dateLabel = monthNames[f.start.getMonth()] + ' ' + f.start.getDate();
     let timing;
@@ -9777,26 +9777,21 @@ function updateEventsHeroFestivals() {
     } else {
       timing = dateLabel;
     }
-    const ticketBtn = f.ticketUrl
-      ? '<a href="' + f.ticketUrl + '" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:inline-block;margin-top:4px;padding:3px 10px;background:var(--accent-green);color:#fff;border-radius:5px;font-size:0.65rem;font-weight:700;text-decoration:none;letter-spacing:0.02em;">' + f.ticketLabel + '</a>'
-      : '';
     const logoHtml = f.logo
-      ? '<div style="width:100%;height:80px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:6px;margin-bottom:4px;"><img src="' + f.logo + '" alt="' + f.name + '" style="max-width:100%;max-height:80px;object-fit:contain;" onerror="this.parentElement.innerHTML=\'<span style=font-size:2.2rem>' + f.icon + '</span>\'"></div>'
-      : '<div style="font-size:2.2rem;margin-bottom:4px;">' + f.icon + '</div>';
+      ? '<div style="width:100%;height:56px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:6px;margin-bottom:4px;"><img src="' + f.logo + '" alt="' + f.name + '" style="max-width:100%;max-height:56px;object-fit:contain;" onerror="this.parentElement.innerHTML=\'<span style=font-size:1.8rem>' + f.icon + '</span>\'"></div>'
+      : '<div style="font-size:1.8rem;margin-bottom:4px;">' + f.icon + '</div>';
     const linkUrl = f.url || f.ticketUrl || '';
     if (linkUrl) {
-      html += '<a href="' + linkUrl + '" target="_blank" rel="noopener" style="flex:1 1 140px;min-width:140px;background:rgba(255,255,255,0.7);border-radius:8px;padding:8px 10px;text-align:center;text-decoration:none;color:inherit;">'
+      html += '<a href="' + linkUrl + '" target="_blank" rel="noopener" style="background:rgba(255,255,255,0.7);border-radius:8px;padding:8px 10px;text-align:center;text-decoration:none;color:inherit;">'
         + logoHtml
-        + '<div style="font-size:0.78rem;font-weight:700;color:var(--text-primary);line-height:1.3;margin:2px 0;">' + f.name + '</div>'
-        + '<div style="font-size:0.72rem;color:var(--text-muted);">' + timing + '</div>'
-        + ticketBtn
+        + '<div style="font-size:0.75rem;font-weight:700;color:var(--text-primary);line-height:1.3;margin:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + f.name + '</div>'
+        + '<div style="font-size:0.7rem;color:var(--text-muted);">' + timing + '</div>'
         + '</a>';
     } else {
-      html += '<div style="flex:1 1 140px;min-width:140px;background:rgba(255,255,255,0.7);border-radius:8px;padding:8px 10px;text-align:center;">'
+      html += '<div style="background:rgba(255,255,255,0.7);border-radius:8px;padding:8px 10px;text-align:center;">'
         + logoHtml
-        + '<div style="font-size:0.78rem;font-weight:700;color:var(--text-primary);line-height:1.3;margin:2px 0;">' + f.name + '</div>'
-        + '<div style="font-size:0.72rem;color:var(--text-muted);">' + timing + '</div>'
-        + ticketBtn
+        + '<div style="font-size:0.75rem;font-weight:700;color:var(--text-primary);line-height:1.3;margin:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + f.name + '</div>'
+        + '<div style="font-size:0.7rem;color:var(--text-muted);">' + timing + '</div>'
         + '</div>';
     }
   });
