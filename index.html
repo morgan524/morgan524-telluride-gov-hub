@@ -2858,6 +2858,7 @@
     <button class="tab-btn" data-tab="land-use">Land Use</button>
     <button class="tab-btn" data-tab="news">Events</button>
     <button class="tab-btn" data-tab="gondola">Gondola 3A</button>
+    <button class="tab-btn" data-tab="local-news">Local News</button>
     <button class="tab-btn" data-tab="legals">Legal Notices</button>
     <button class="tab-btn" data-tab="subscribe">Subscribe</button>
     <button class="tab-btn" data-tab="links">Quick Links</button>
@@ -2935,6 +2936,34 @@
       </div>
       <div id="news-content">
         <div class="loading"><div class="spinner"></div><br>Loading events &amp; alerts…</div>
+      </div>
+    </div>
+
+    <!-- ══════════ LOCAL NEWS TAB ══════════ -->
+    <div class="tab-content" id="tab-local-news">
+      <div style="margin-bottom:18px; padding:20px 22px; background:linear-gradient(135deg, rgba(33,68,60,0.07) 0%, rgba(166,143,87,0.10) 100%); border-radius:14px; border-left:4px solid var(--accent-green);">
+        <h3 style="margin:0 0 8px 0; font-size:1.15rem; color:var(--text-primary); font-family:var(--font-heading);">Local News from Telluride</h3>
+        <p style="margin:0 0 10px 0; font-size:0.88rem; color:var(--text-secondary); line-height:1.55;">
+          Stay informed with the latest reporting from the region's independent news outlets. Stories sourced from the
+          <a href="https://www.telluridenews.com" target="_blank" rel="noopener" style="color:var(--forest); font-weight:600;">Telluride Times</a> and
+          <a href="https://kfrg.org" target="_blank" rel="noopener" style="color:var(--forest); font-weight:600;">KOTO Community Radio</a>.
+        </p>
+        <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center; margin-top:10px;">
+          <a href="https://www.telluridenews.com" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; text-decoration:none; padding:6px 14px; background:white; border-radius:10px; border:1px solid rgba(33,68,60,0.12); font-size:0.82rem; color:var(--forest); font-weight:600;">
+            <img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="Telluride Times" style="height:22px; border-radius:4px;"> Visit Telluride Times
+          </a>
+          <a href="https://kfrg.org" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; text-decoration:none; padding:6px 14px; background:white; border-radius:10px; border:1px solid rgba(33,68,60,0.12); font-size:0.82rem; color:var(--forest); font-weight:600;">
+            <img src="https://kfrg.org/wp-content/uploads/2023/06/KOTO-Vertical-cropped.png" alt="KOTO" style="height:22px; border-radius:4px;"> Visit KOTO
+          </a>
+        </div>
+      </div>
+      <div class="filter-row">
+        <span class="chip active-all" data-filter="all" data-tab-target="local-news">All</span>
+        <span class="chip" data-filter="ttimes" data-tab-target="local-news">Telluride Times</span>
+        <span class="chip" data-filter="koto" data-tab-target="local-news">KOTO</span>
+      </div>
+      <div id="local-news-content">
+        <div class="loading"><div class="spinner"></div><br>Loading local news…</div>
       </div>
     </div>
 
@@ -3545,6 +3574,9 @@
             <span class="topic-name">Livable Telluride Newsletter</span>
           </label>
         </div>
+        <div style="margin-top:8px;padding:8px 14px;background:rgba(33,68,60,0.05);border-radius:8px;border-left:3px solid var(--accent-green);font-size:0.76rem;color:var(--text-secondary);line-height:1.5;">
+          📬 <strong>The Livable Telluride Newsletter is included for all subscribers.</strong> You can uncheck it above if you only want topic-specific updates.
+        </div>
       </div>
 
       <div class="subscribe-section">
@@ -3663,7 +3695,7 @@
               <option value="Other">Other</option>
             </select>
 
-            <button type="submit" class="subscribe-btn" id="subscribeBtn" disabled>Select at least one topic to subscribe</button>
+            <button type="submit" class="subscribe-btn" id="subscribeBtn">Subscribe Now</button>
           </form>
         </div>
       </div>
@@ -5455,8 +5487,8 @@ function renderWhyThisMatters(item, showFaded) {
   const icon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>';
 
   if (!wtm) {
-    // No "Why This Matters" — show faded, non-interactive button
-    return '<button class="wtm-btn" style="opacity:0.5;cursor:default;pointer-events:none;" disabled>' + icon + ' Why This Matters </button>';
+    // No "Why This Matters" content — hide button entirely
+    return '';
   }
 
   const id = 'wtm-' + Math.random().toString(36).slice(2, 9);
@@ -6929,22 +6961,8 @@ function renderCardActions(item) {
   html += `<a href="${outlookCalUrl(item)}" target="_blank" rel="noopener" class="cal-btn" title="Add to Outlook Calendar">${gIcon} Outlook</a>`;
   html += `<a href="${icsDataUri(item)}" download="${item.title.replace(/[^a-zA-Z0-9]/g, '_')}.ics" class="cal-btn" title="Download .ics file (Apple Calendar, etc.)">${gIcon} iCal</a>`;
 
-  // ── Zoom button (visible on all meetings with zoom access) ──
-  const zoomUrl = getMeetingZoomLink(item);
-  const remote = ENTITY_REMOTE[item.source] || {};
-  const locationHasZoom = item.location && /zoom/i.test(item.location);
-  const entityHasZoom = remote.hasZoom;
-  const agendaUrl = item.agendaLink || item.link;
-
-  if (zoomUrl) {
-    // Direct zoom link available (from MEETING_ZOOM_LINKS cache or school default)
-    html += `<a href="${zoomUrl}" target="_blank" rel="noopener" class="zoom-link">${zoomIcon} Join Zoom</a>`;
-  } else if ((locationHasZoom || entityHasZoom) && item.hasAgenda && agendaUrl) {
-    // Meeting entity offers Zoom or location mentions Zoom -- link is in the agenda
-    html += `<a href="${agendaUrl}" target="_blank" rel="noopener" class="zoom-link">${zoomIcon} Zoom Link in Agenda</a>`;
-  }
-
   // ── Livestream button (day-of only) ──
+  const remote = ENTITY_REMOTE[item.source] || {};
   const today = new Date();
   const isToday = item.eventDate &&
     item.eventDate.getFullYear() === today.getFullYear() &&
@@ -7338,6 +7356,103 @@ document.querySelectorAll('.chip[data-tab-target="news"]').forEach(chip => {
     renderNewsWithTopic();
   });
 });
+
+// Local News filter chips
+let currentLocalNewsFilter = 'all';
+document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip => {
+  chip.addEventListener('click', () => {
+    const filter = chip.dataset.filter;
+    document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(c => {
+      c.className = 'chip';
+    });
+    if (filter === 'all') chip.classList.add('active-all');
+    else if (filter === 'ttimes') chip.classList.add('active-ttimes');
+    else if (filter === 'koto') chip.classList.add('active-koto');
+    currentLocalNewsFilter = filter;
+    renderLocalNews(allNews, currentLocalNewsFilter);
+  });
+});
+
+function renderLocalNews(items, filter) {
+  const container = document.getElementById('local-news-content');
+  if (!container) return;
+
+  // Filter to only ttimes and koto sources
+  let filtered = items.filter(i => i.source === 'ttimes' || i.source === 'koto');
+
+  // Apply sub-filter
+  if (filter && filter !== 'all') {
+    filtered = filtered.filter(i => i.source === filter);
+  }
+
+  // Sort by date descending (most recent first)
+  filtered.sort((a, b) => (b.pubDate || 0) - (a.pubDate || 0));
+
+  // Deduplicate
+  const seen = new Set();
+  filtered = filtered.filter(i => {
+    const key = (i.title || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 30) + '|' + (i.pubDate ? new Date(i.pubDate).toISOString().slice(0, 10) : '');
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+
+  filtered = filtered.slice(0, 60);
+
+  if (filtered.length === 0) {
+    container.innerHTML = '<div class="empty-state">No local news articles found. Check back soon for the latest from Telluride Times and KOTO.</div>';
+    return;
+  }
+
+  // Group by date
+  const groups = {};
+  filtered.forEach(item => {
+    const d = item.pubDate ? new Date(item.pubDate) : null;
+    const key = d ? d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }) : 'Undated';
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(item);
+  });
+
+  let html = '';
+  for (const [dateLabel, groupItems] of Object.entries(groups)) {
+    html += '<div class="date-group"><div class="date-label">' + dateLabel + '</div>';
+    groupItems.forEach(item => {
+      const logo = renderLogo(item.source);
+      const sourceClass = 'src-' + (item.source || 'default');
+      const sourceLabel = item.sourceLabel || item.source || '';
+      const cat = item.category ? ' · ' + item.category : '';
+      const summary = item.description || item.summary || '';
+
+      // Festival ticket matching
+      let festivalTicketHtml = '';
+      const titleLower = (item.title || '').toLowerCase();
+      TELLURIDE_FESTIVALS.forEach(fest => {
+        const festLower = fest.name.toLowerCase().replace(/\s*\(.*\)\s*/, '');
+        if (fest.ticketUrl && titleLower.includes(festLower.split(' ').slice(0, 2).join(' '))) {
+          festivalTicketHtml = '<a href="' + fest.ticketUrl + '" target="_blank" rel="noopener" style="display:inline-block;margin-top:6px;padding:5px 12px;background:#2e7d32;color:#fff;border-radius:6px;font-size:0.78rem;font-weight:600;text-decoration:none;">🎟️ ' + fest.ticketLabel + '</a>';
+        }
+      });
+
+      html += '<div class="news-card">';
+      html += '<div class="news-card-header">';
+      html += '<div class="news-source-logo">' + logo + '</div>';
+      html += '<div class="news-source ' + sourceClass + '">' + sourceLabel + cat + '</div>';
+      html += '</div>';
+      html += '<div class="news-title">' + (item.link ? '<a href="' + item.link + '" target="_blank" rel="noopener">' + (item.title || 'Untitled') + '</a>' : (item.title || 'Untitled')) + '</div>';
+      if (summary) {
+        html += '<div class="news-summary">' + summary + '</div>';
+      }
+      html += festivalTicketHtml;
+      if (item.link) {
+        html += '<div style="margin-top:8px;"><a href="' + item.link + '" target="_blank" rel="noopener" style="font-size:0.8rem; color:var(--forest); font-weight:600; text-decoration:none;">Read full article →</a></div>';
+      }
+      html += '</div>';
+    });
+    html += '</div>';
+  }
+
+  container.innerHTML = html;
+}
 
 // Legal Notices filter chips
 document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
@@ -8132,6 +8247,19 @@ document.getElementById('expandRight').addEventListener('click', () => {
   let selectedTopics = new Set();
   let selectedFreq = 'weekly';
 
+  // Auto-subscribe everyone to the Livable Telluride Newsletter by default
+  (function initNewsletterDefault() {
+    const livableOpt = document.querySelector('#subscribeSources .topic-option[data-src="livable"]');
+    if (livableOpt) {
+      const cb = livableOpt.querySelector('input[type="checkbox"]');
+      if (cb) {
+        cb.checked = true;
+        livableOpt.classList.add('selected');
+        selectedSources.add('livable');
+      }
+    }
+  })();
+
   // Source (Town/County) checkbox toggling
   document.querySelectorAll('#subscribeSources .topic-option').forEach(opt => {
     const cb = opt.querySelector('input[type="checkbox"]');
@@ -8186,10 +8314,11 @@ document.getElementById('expandRight').addEventListener('click', () => {
     const sourceCount = selectedSources.size;
     const summary = document.getElementById('selectedSummary');
     const btn = document.getElementById('subscribeBtn');
-    const hasSelection = topicCount > 0 || sourceCount > 0;
+    const hasProximity = window._proximityFilter && window._proximityFilter.isActive();
+    const hasSelection = topicCount > 0 || sourceCount > 0 || hasProximity;
 
     if (!hasSelection) {
-      summary.textContent = 'No selections yet';
+      summary.textContent = 'No selections yet — the newsletter is included by default';
       btn.disabled = true;
       btn.textContent = 'Select at least one source or topic to subscribe';
     } else {
@@ -8347,6 +8476,7 @@ async function init() {
     allNews = newsData;
     window.__allNewsCache = allNews;
     renderNewsWithTopic();
+    renderLocalNews(allNews, currentLocalNewsFilter);
     updateTopicCounts();
     updateEventsHeroFestivals();
     renderFestivalCalendar();
@@ -10081,7 +10211,7 @@ setInterval(() => {
   }
 
   // Observe content containers for new cards
-  const containers = ['meetings-content', 'news-content', 'legals-content'];
+  const containers = ['meetings-content', 'news-content', 'local-news-content', 'legals-content'];
   containers.forEach(id => {
     const el = document.getElementById(id);
     if (!el) return;
@@ -10097,6 +10227,9 @@ setInterval(() => {
 <!-- ══════════ MOBILE BOTTOM NAVIGATION ══════════ -->
 <div class="mobile-more-backdrop" id="mobileMoreBackdrop"></div>
 <div class="mobile-more-menu" id="mobileMoreMenu">
+  <button class="mobile-more-item" data-tab="local-news">
+    <span class="nav-icon">📰</span> Local News
+  </button>
   <button class="mobile-more-item" data-tab="gondola">
     <span class="nav-icon">🚡</span> Gondola 3A
   </button>
@@ -10139,7 +10272,7 @@ setInterval(() => {
   const allMobileNavBtns = mobileNav.querySelectorAll('.mobile-nav-btn');
   const allMoreItems = moreMenu.querySelectorAll('.mobile-more-item');
   // Tabs that live in the "More" menu
-  const moreTabs = new Set(['gondola', 'legals', 'subscribe', 'links']);
+  const moreTabs = new Set(['local-news', 'gondola', 'legals', 'subscribe', 'links']);
 
   function closeMoreMenu() {
     moreMenu.classList.remove('open');
