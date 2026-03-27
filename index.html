@@ -2946,14 +2946,14 @@
         <p style="margin:0 0 10px 0; font-size:0.88rem; color:var(--text-secondary); line-height:1.55;">
           Stay informed with the latest reporting from the region's independent news outlets. Stories sourced from the
           <a href="https://www.telluridenews.com" target="_blank" rel="noopener" style="color:var(--forest); font-weight:600;">Telluride Times</a> and
-          <a href="https://kfrg.org" target="_blank" rel="noopener" style="color:var(--forest); font-weight:600;">KOTO Community Radio</a>.
+          <a href="https://koto.org" target="_blank" rel="noopener" style="color:var(--forest); font-weight:600;">KOTO Community Radio</a>.
         </p>
         <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center; margin-top:10px;">
           <a href="https://www.telluridenews.com" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; text-decoration:none; padding:6px 14px; background:white; border-radius:10px; border:1px solid rgba(33,68,60,0.12); font-size:0.82rem; color:var(--forest); font-weight:600;">
             <img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="Telluride Times" style="height:22px; border-radius:4px;"> Visit Telluride Times
           </a>
-          <a href="https://kfrg.org" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; text-decoration:none; padding:6px 14px; background:white; border-radius:10px; border:1px solid rgba(33,68,60,0.12); font-size:0.82rem; color:var(--forest); font-weight:600;">
-            <img src="https://kfrg.org/wp-content/uploads/2023/06/KOTO-Vertical-cropped.png" alt="KOTO" style="height:22px; border-radius:4px;"> Visit KOTO
+          <a href="https://koto.org" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; text-decoration:none; padding:6px 14px; background:white; border-radius:10px; border:1px solid rgba(33,68,60,0.12); font-size:0.82rem; color:var(--forest); font-weight:600;">
+            <span id="kotoIntroLogo" style="height:22px; display:inline-flex; align-items:center;"></span> Visit KOTO
           </a>
         </div>
       </div>
@@ -2961,6 +2961,7 @@
         <span class="chip active-all" data-filter="all" data-tab-target="local-news">All</span>
         <span class="chip" data-filter="ttimes" data-tab-target="local-news">Telluride Times</span>
         <span class="chip" data-filter="koto" data-tab-target="local-news">KOTO</span>
+        <span class="chip" data-filter="other" data-tab-target="local-news">Other Sources</span>
       </div>
       <div id="local-news-content">
         <div class="loading"><div class="spinner"></div><br>Loading local news…</div>
@@ -7368,88 +7369,117 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
     if (filter === 'all') chip.classList.add('active-all');
     else if (filter === 'ttimes') chip.classList.add('active-ttimes');
     else if (filter === 'koto') chip.classList.add('active-koto');
+    else chip.classList.add('active-all');
     currentLocalNewsFilter = filter;
-    renderLocalNews(allNews, currentLocalNewsFilter);
+    renderLocalNews(null, currentLocalNewsFilter);
   });
 });
 
-function renderLocalNews(items, filter) {
-  const container = document.getElementById('local-news-content');
-  if (!container) return;
+function collectLocalNewsArticles() {
+  // Gather all news articles from LAND_USE_ISSUES and GONDOLA_DATA
+  const articles = [];
 
-  // Filter to only ttimes and koto sources
-  let filtered = items.filter(i => i.source === 'ttimes' || i.source === 'koto');
-
-  // Apply sub-filter
-  if (filter && filter !== 'all') {
-    filtered = filtered.filter(i => i.source === filter);
+  // Land Use issues news
+  if (typeof LAND_USE_ISSUES !== 'undefined') {
+    Object.values(LAND_USE_ISSUES).forEach(issue => {
+      if (issue.news && Array.isArray(issue.news)) {
+        issue.news.forEach(a => {
+          if (!a.href && !a.title) return;
+          const srcNorm = (a.source || '').toLowerCase();
+          // Determine normalized source key for filtering
+          let sourceKey = 'other';
+          if (/telluride news|telluridenews/i.test(a.source || a.href || '')) sourceKey = 'ttimes';
+          else if (/koto/i.test(a.source || a.href || '')) sourceKey = 'koto';
+          articles.push({
+            title: a.title,
+            link: a.href,
+            summary: a.copy || '',
+            source: a.source || '',
+            sourceKey: sourceKey,
+            date: a.date,
+            pubDate: a.date && a.date !== 'Ongoing' ? new Date(a.date) : null,
+            topic: issue.label || ''
+          });
+        });
+      }
+    });
   }
 
-  // Sort by date descending (most recent first)
-  filtered.sort((a, b) => (b.pubDate || 0) - (a.pubDate || 0));
+  // Gondola data news
+  if (typeof GONDOLA_DATA !== 'undefined' && GONDOLA_DATA.news) {
+    GONDOLA_DATA.news.forEach(a => {
+      if (!a.href && !a.title) return;
+      let sourceKey = 'other';
+      if (/telluride news|telluridenews/i.test(a.source || a.href || '')) sourceKey = 'ttimes';
+      else if (/koto/i.test(a.source || a.href || '')) sourceKey = 'koto';
+      articles.push({
+        title: a.title,
+        link: a.href,
+        summary: a.copy || '',
+        source: a.source || '',
+        sourceKey: sourceKey,
+        date: a.date,
+        pubDate: a.date && a.date !== 'Ongoing' ? new Date(a.date) : null,
+        topic: 'Gondola 3A'
+      });
+    });
+  }
 
-  // Deduplicate
+  // Deduplicate by title
   const seen = new Set();
-  filtered = filtered.filter(i => {
-    const key = (i.title || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 30) + '|' + (i.pubDate ? new Date(i.pubDate).toISOString().slice(0, 10) : '');
+  return articles.filter(a => {
+    const key = (a.title || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 40);
     if (seen.has(key)) return false;
     seen.add(key);
     return true;
   });
+}
 
-  filtered = filtered.slice(0, 60);
+function renderLocalNews(unused, filter) {
+  const container = document.getElementById('local-news-content');
+  if (!container) return;
 
-  if (filtered.length === 0) {
-    container.innerHTML = '<div class="empty-state">No local news articles found. Check back soon for the latest from Telluride Times and KOTO.</div>';
+  let articles = collectLocalNewsArticles();
+
+  // Apply filter
+  if (filter && filter !== 'all') {
+    articles = articles.filter(a => a.sourceKey === filter);
+  }
+
+  // Sort by date descending (most recent first), undated at end
+  articles.sort((a, b) => {
+    if (!a.pubDate && !b.pubDate) return 0;
+    if (!a.pubDate) return 1;
+    if (!b.pubDate) return -1;
+    return b.pubDate - a.pubDate;
+  });
+
+  if (articles.length === 0) {
+    container.innerHTML = '<div class="empty-state">No local news articles found for this filter.</div>';
     return;
   }
 
-  // Group by date
-  const groups = {};
-  filtered.forEach(item => {
-    const d = item.pubDate ? new Date(item.pubDate) : null;
-    const key = d ? d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }) : 'Undated';
-    if (!groups[key]) groups[key] = [];
-    groups[key].push(item);
-  });
-
   let html = '';
-  for (const [dateLabel, groupItems] of Object.entries(groups)) {
-    html += '<div class="date-group"><div class="date-label">' + dateLabel + '</div>';
-    groupItems.forEach(item => {
-      const logo = renderLogo(item.source);
-      const sourceClass = 'src-' + (item.source || 'default');
-      const sourceLabel = item.sourceLabel || item.source || '';
-      const cat = item.category ? ' · ' + item.category : '';
-      const summary = item.description || item.summary || '';
+  articles.forEach(item => {
+    const logoHtml = renderLogo(item.sourceKey);
+    const topicBadge = item.topic
+      ? '<span style="display:inline-block; font-size:0.72rem; padding:2px 8px; background:rgba(33,68,60,0.08); color:var(--forest); border-radius:6px; font-weight:600; margin-left:6px;">' + item.topic + '</span>'
+      : '';
 
-      // Festival ticket matching
-      let festivalTicketHtml = '';
-      const titleLower = (item.title || '').toLowerCase();
-      TELLURIDE_FESTIVALS.forEach(fest => {
-        const festLower = fest.name.toLowerCase().replace(/\s*\(.*\)\s*/, '');
-        if (fest.ticketUrl && titleLower.includes(festLower.split(' ').slice(0, 2).join(' '))) {
-          festivalTicketHtml = '<a href="' + fest.ticketUrl + '" target="_blank" rel="noopener" style="display:inline-block;margin-top:6px;padding:5px 12px;background:#2e7d32;color:#fff;border-radius:6px;font-size:0.78rem;font-weight:600;text-decoration:none;">🎟️ ' + fest.ticketLabel + '</a>';
-        }
-      });
-
-      html += '<div class="news-card">';
-      html += '<div class="news-card-header">';
-      html += '<div class="news-source-logo">' + logo + '</div>';
-      html += '<div class="news-source ' + sourceClass + '">' + sourceLabel + cat + '</div>';
-      html += '</div>';
-      html += '<div class="news-title">' + (item.link ? '<a href="' + item.link + '" target="_blank" rel="noopener">' + (item.title || 'Untitled') + '</a>' : (item.title || 'Untitled')) + '</div>';
-      if (summary) {
-        html += '<div class="news-summary">' + summary + '</div>';
-      }
-      html += festivalTicketHtml;
-      if (item.link) {
-        html += '<div style="margin-top:8px;"><a href="' + item.link + '" target="_blank" rel="noopener" style="font-size:0.8rem; color:var(--forest); font-weight:600; text-decoration:none;">Read full article →</a></div>';
-      }
-      html += '</div>';
-    });
+    html += '<div class="card">';
+    html += logoHtml;
+    html += '<div class="card-body">';
+    html += '<div class="meta" style="margin-bottom:2px;">' + (item.source || '') + (item.date ? ' · ' + item.date : '') + topicBadge + '</div>';
+    html += '<h3>' + (item.link ? '<a href="' + item.link + '" target="_blank" rel="noopener">' + (item.title || 'Untitled') + '</a>' : (item.title || 'Untitled')) + '</h3>';
+    if (item.summary) {
+      html += '<div class="description">' + item.summary + '</div>';
+    }
+    if (item.link) {
+      html += '<div style="margin-top:8px;"><a href="' + item.link + '" target="_blank" rel="noopener" style="font-size:0.8rem; color:var(--forest); font-weight:600; text-decoration:none;">Read full article →</a></div>';
+    }
     html += '</div>';
-  }
+    html += '</div>';
+  });
 
   container.innerHTML = html;
 }
@@ -8476,11 +8506,22 @@ async function init() {
     allNews = newsData;
     window.__allNewsCache = allNews;
     renderNewsWithTopic();
-    renderLocalNews(allNews, currentLocalNewsFilter);
     updateTopicCounts();
     updateEventsHeroFestivals();
     renderFestivalCalendar();
   });
+
+  // Local News tab uses hardcoded article data — render immediately
+  renderLocalNews(null, currentLocalNewsFilter);
+
+  // Populate KOTO intro logo from ENTITY_LOGOS (avoids broken external URL)
+  const kotoIntroEl = document.getElementById('kotoIntroLogo');
+  if (kotoIntroEl && ENTITY_LOGOS.koto) {
+    const tmp = document.createElement('div');
+    tmp.innerHTML = ENTITY_LOGOS.koto;
+    const img = tmp.querySelector('img');
+    if (img) { img.style.height = '22px'; img.style.width = 'auto'; kotoIntroEl.appendChild(img); }
+  }
 }
 
 // ══════════════════════════════════════════════════════
