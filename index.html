@@ -3097,19 +3097,12 @@
       </div>
     </div>
 
-    <!-- Festival Season (shown on Events tab) -->
-    <div class="left-sidebar-card" id="sidebarFestivals" style="display:none;">
-      <div style="text-align:center;padding:10px 0 6px 0;">
-        <div style="font-size:3.5rem;line-height:1;">🎟️</div>
-        <div class="left-sidebar-title" style="margin:6px 0 2px 0;">2026 Festival Season</div>
-        <div style="font-size:1.0rem;font-weight:800;color:var(--accent-green);letter-spacing:0.04em;">Get Tickets!</div>
-      </div>
-      <div id="sidebarFestivalCalendar" style="font-size:0.85rem;"></div>
-    </div>
-
-    <!-- Submit an Event (shown on Events tab only) -->
+    <!-- Submit an Event (shown on Events tab only) — placed at top -->
     <div class="left-sidebar-card" id="sidebarSubmitEvent" style="display:none;">
-      <div class="left-sidebar-title">📅 Submit an Event</div>
+      <div style="text-align:center;margin-bottom:8px;">
+        <div style="font-size:2.2rem;line-height:1;">📅</div>
+        <div class="left-sidebar-title" style="margin:6px 0 2px 0;">Submit an Event</div>
+      </div>
       <p style="font-size:0.78rem;color:var(--text-secondary);line-height:1.5;margin:0 0 10px 0;">
         Know about an upcoming community event? Submit a link and we'll review it for inclusion in the calendar.
       </p>
@@ -3124,14 +3117,31 @@
           placeholder="Your name (optional)"
           style="width:100%;padding:8px 10px;font-size:0.82rem;border:1px solid var(--line);border-radius:8px;background:white;color:var(--text-primary);font-family:var(--font-body);box-sizing:border-box;" />
         <button type="button" id="eventSubmitBtn" onclick="submitEventLink()"
-          style="width:100%;padding:10px;background:var(--accent-green);color:#fff;border:none;border-radius:8px;font-size:0.85rem;font-weight:700;cursor:pointer;font-family:var(--font-body);letter-spacing:0.02em;transition:opacity 0.15s ease;">
-          Submit for Review
+          style="width:100%;padding:16px;background:var(--accent-green);color:#fff;border:none;border-radius:10px;font-size:1.2rem;font-weight:800;cursor:pointer;font-family:var(--font-body);letter-spacing:0.04em;transition:opacity 0.15s ease;margin-top:4px;">
+          Submit
         </button>
         <div id="eventSubmitStatus" style="display:none;font-size:0.75rem;text-align:center;padding:6px 8px;border-radius:6px;line-height:1.4;"></div>
       </form>
       <p style="font-size:0.68rem;color:var(--text-muted);line-height:1.4;margin:8px 0 0 0;font-style:italic;">
         Submissions are reviewed by the Livable Telluride team before appearing on the calendar.
       </p>
+    </div>
+
+    <!-- Festival Season (shown on Events tab) -->
+    <div class="left-sidebar-card" id="sidebarFestivals" style="display:none;padding:0;overflow:hidden;border-radius:18px;">
+      <!-- Header -->
+      <div style="padding:20px 16px 14px;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.6)),linear-gradient(135deg,rgba(39,69,63,0.08),rgba(198,148,55,0.12));border-bottom:1px solid rgba(221,210,196,0.8);text-align:center;">
+        <div style="width:52px;height:52px;margin:0 auto 10px;border-radius:14px;background:linear-gradient(180deg,#ef8d94,#de6a72);color:#fff;display:grid;place-items:center;font-weight:900;font-size:0.7rem;line-height:1.05;text-transform:uppercase;letter-spacing:0.08em;box-shadow:0 8px 18px rgba(222,106,114,0.26);position:relative;">
+          <span>Admit<br>One</span>
+          <span style="position:absolute;top:50%;left:-5px;width:10px;height:10px;background:var(--cream);border-radius:50%;transform:translateY(-50%);"></span>
+          <span style="position:absolute;top:50%;right:-5px;width:10px;height:10px;background:var(--cream);border-radius:50%;transform:translateY(-50%);"></span>
+        </div>
+        <div style="font-size:0.7rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#788e82;margin-bottom:6px;">2026 Festival Season</div>
+        <div style="font-size:1.5rem;font-weight:900;letter-spacing:-0.03em;color:var(--text-primary);">Get Tickets</div>
+      </div>
+      <!-- Festival cards rendered by JS -->
+      <div id="sidebarFestivalCalendar" style="padding:10px;display:grid;gap:10px;"></div>
+      <div style="padding:0 14px 14px;color:var(--text-muted);font-size:0.68rem;line-height:1.4;font-style:italic;">Ticket links go directly to official festival pages.</div>
     </div>
 
   </aside>
@@ -9734,44 +9744,65 @@ function renderFestivalCalendar() {
   if (!container) return;
   const year = new Date().getFullYear();
   const festivals = getAllFestivalsForYear(year);
-  const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   const monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
   let html = '';
-  festivals.forEach(f => {
+  festivals.forEach((f, idx) => {
     const startM = monthShort[f.start.getMonth()];
     const endM = monthShort[f.end.getMonth()];
     const dateRange = startM === endM
       ? startM + ' ' + f.start.getDate() + '–' + f.end.getDate()
       : startM + ' ' + f.start.getDate() + ' – ' + endM + ' ' + f.end.getDate();
 
+    // Status badge
     let statusBadge = '';
     if (f.happening) {
-      statusBadge = '<span style="display:inline-block;padding:2px 8px;background:#b45309;color:#fff;border-radius:10px;font-size:0.65rem;font-weight:700;margin-left:6px;">HAPPENING NOW</span>';
+      statusBadge = '<div style="display:inline-block;padding:2px 8px;background:#b45309;color:#fff;border-radius:10px;font-size:0.6rem;font-weight:700;margin-top:4px;">HAPPENING NOW</div>';
     } else if (f.passed) {
-      statusBadge = '<span style="display:inline-block;padding:2px 8px;background:var(--text-muted);color:#fff;border-radius:10px;font-size:0.65rem;font-weight:600;margin-left:6px;opacity:0.6;">PAST</span>';
+      statusBadge = '<div style="display:inline-block;padding:2px 8px;background:var(--text-muted);color:#fff;border-radius:10px;font-size:0.6rem;font-weight:600;margin-top:4px;opacity:0.6;">PAST</div>';
     } else if (f.daysUntil <= 14) {
-      statusBadge = '<span style="display:inline-block;padding:2px 8px;background:#b45309;color:#fff;border-radius:10px;font-size:0.65rem;font-weight:600;margin-left:6px;">COMING SOON</span>';
+      statusBadge = '<div style="display:inline-block;padding:2px 8px;background:#b45309;color:#fff;border-radius:10px;font-size:0.6rem;font-weight:600;margin-top:4px;">COMING SOON</div>';
     }
 
-    const ticketBtn = f.ticketUrl && !f.passed
-      ? '<a href="' + f.ticketUrl + '" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:block;width:200px;max-width:100%;margin:6px auto 0 auto;padding:8px 0;background:var(--accent-green);color:#fff;border-radius:8px;font-size:0.85rem;font-weight:800;text-decoration:none;text-align:center;letter-spacing:0.03em;">🎟️ Buy Tickets!</a>'
-      : '';
+    const opacity = f.passed ? 'opacity:0.5;' : '';
+    // Featured style for first upcoming (non-passed) festival
+    const isFeatured = !f.passed && idx === festivals.findIndex(x => !x.passed);
+    const cardBorder = isFeatured ? 'border-color:rgba(198,148,55,0.4);' : '';
+    const cardBg = isFeatured ? 'background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(249,246,240,0.92));' : 'background:rgba(255,255,255,0.92);';
 
-    const opacity = f.passed ? 'opacity:0.55;' : '';
-    const nameLink = f.url
-      ? '<a href="' + f.url + '" target="_blank" rel="noopener" style="color:var(--text-primary);text-decoration:none;">' + f.name + '</a>'
-      : f.name;
+    // Logo box: image or wordmark fallback
+    const logoInner = f.logo
+      ? '<img src="' + f.logo + '" alt="' + f.name + '" style="width:100%;height:100%;object-fit:contain;display:block;" onerror="this.parentElement.innerHTML=\'<div style=font-weight:900;font-size:0.7rem;line-height:1.1;letter-spacing:-0.02em;text-align:center;color:var(--text-primary)>' + f.name.split(' ').slice(0,2).join('<br>').replace(/'/g,'') + '</div>\'">'
+      : '<div style="font-weight:900;font-size:0.72rem;line-height:1.1;letter-spacing:-0.02em;text-align:center;color:var(--text-primary);">' + f.name.split(' ').slice(0,2).join('<br>') + '</div>';
 
-    const sidebarLogoHtml = f.logo
-      ? '<div style="width:100%;height:60px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:6px;margin-bottom:2px;"><img src="' + f.logo + '" alt="' + f.name + '" style="max-width:100%;max-height:60px;object-fit:contain;" onerror="this.parentElement.innerHTML=\'<span style=font-size:1.8rem>' + f.icon + '</span>\'"></div>'
-      : '<div style="font-size:1.8rem;">' + f.icon + '</div>';
+    // Buy button
+    let buyBtn = '';
+    if (f.ticketUrl && !f.passed) {
+      buyBtn = '<a href="' + f.ticketUrl + '" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:flex;align-items:center;justify-content:center;gap:6px;width:100%;min-height:38px;padding:0 12px;border-radius:10px;text-decoration:none;font-weight:800;font-size:0.78rem;letter-spacing:-0.01em;color:white;background:linear-gradient(135deg,#2f564d,#22453e);box-shadow:0 8px 16px rgba(34,69,62,0.2);">' + f.icon + ' ' + (f.ticketLabel || 'Buy Tickets') + '</a>';
+    }
 
-    html += '<div style="padding:10px 10px;background:rgba(255,255,255,0.6);border-radius:10px;margin-bottom:8px;text-align:center;' + opacity + '">'
-      + sidebarLogoHtml
-      + '<div style="font-size:0.82rem;font-weight:700;line-height:1.3;margin-top:2px;">' + nameLink + statusBadge + '</div>'
-      + '<div style="font-size:0.72rem;color:var(--text-muted);margin-top:2px;">' + dateRange + ', ' + year + '</div>'
-      + ticketBtn
+    // Festival site link chip
+    let siteChip = '';
+    if (f.url && !f.passed) {
+      siteChip = '<a href="' + f.url + '" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:0 10px;border-radius:8px;text-decoration:none;font-size:0.68rem;font-weight:800;color:var(--forest);background:rgba(39,69,63,0.07);border:1px solid rgba(39,69,63,0.12);white-space:nowrap;">Festival Site</a>';
+    }
+
+    html += '<div style="border:1px solid rgba(221,210,196,0.85);border-radius:16px;overflow:hidden;box-shadow:0 6px 16px rgba(32,48,45,0.08);' + cardBg + cardBorder + opacity + '">'
+      // Top section: logo + meta
+      + '<div style="padding:12px 12px 6px;display:grid;grid-template-columns:56px 1fr;gap:10px;align-items:center;' + (isFeatured ? 'background:linear-gradient(180deg,rgba(198,148,55,0.07),rgba(198,148,55,0));' : '') + '">'
+        + '<div style="width:56px;height:56px;border-radius:14px;background:linear-gradient(180deg,#ffffff,#f6f3ee);border:1px solid rgba(221,210,196,0.95);display:grid;place-items:center;overflow:hidden;padding:5px;">'
+          + logoInner
+        + '</div>'
+        + '<div>'
+          + '<div style="font-size:0.82rem;font-weight:800;line-height:1.1;letter-spacing:-0.02em;color:var(--text-primary);">' + f.name + '</div>'
+          + '<div style="font-size:0.72rem;color:var(--text-secondary);font-weight:700;margin-top:2px;">' + dateRange + ', ' + year + '</div>'
+          + statusBadge
+        + '</div>'
+      + '</div>'
+      // Actions
+      + (buyBtn || siteChip ? '<div style="padding:6px 12px 12px;display:grid;' + (buyBtn && siteChip ? 'grid-template-columns:1fr auto;' : '') + 'gap:8px;align-items:center;">'
+        + buyBtn + siteChip
+      + '</div>' : '')
     + '</div>';
   });
 
