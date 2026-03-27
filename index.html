@@ -840,6 +840,12 @@
     .main-layout.localnews-active .left-sidebar {
       display: none !important;
     }
+    /* Hide both sidebars on Local Groups (links) tab */
+    .main-layout.links-active .left-sidebar,
+    .main-layout.links-active .sidebar,
+    .main-layout.links-active .expand-pill-right {
+      display: none !important;
+    }
     /* Enlarge card logos 50% on Local News tab */
     #tab-local-news .card-logo {
       width: 138px;
@@ -1521,6 +1527,122 @@
     .link-source.src-airport { color: var(--airport-sky); }
     .link-source.src-ttimes { color: var(--ttimes-charcoal); }
 
+    /* ── Local Groups Directory Cards ── */
+    .local-groups-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    @media (max-width: 760px) {
+      .local-groups-grid { grid-template-columns: 1fr; }
+    }
+    .local-group-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1.5px solid rgba(33, 68, 60, 0.18);
+      border-radius: 20px;
+      padding: 0;
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      transition: all 0.25s;
+      display: flex;
+      flex-direction: column;
+    }
+    .local-group-card:hover {
+      box-shadow: 0 6px 20px rgba(44, 36, 22, 0.12);
+      transform: translateY(-1px);
+    }
+    .local-group-card-inner {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .local-group-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      height: 170px;
+      background: linear-gradient(180deg, #f7f5f0 0%, #ede9e0 100%);
+      border-bottom: 1px solid rgba(33, 68, 60, 0.08);
+    }
+    .local-group-logo img {
+      max-width: 150px;
+      max-height: 140px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    .local-group-body {
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      flex: 1;
+    }
+    .local-group-body h4 {
+      font-size: 0.98rem;
+      font-weight: 750;
+      color: var(--text-primary);
+      margin: 0 0 2px 0;
+    }
+    .local-group-body .group-summary {
+      font-size: 0.76rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+      margin-bottom: 4px;
+    }
+    .local-group-details {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      font-size: 0.73rem;
+      line-height: 1.45;
+    }
+    .local-group-details .group-detail {
+      display: flex;
+      gap: 5px;
+    }
+    .local-group-details .group-detail-label {
+      font-weight: 650;
+      color: var(--forest);
+      white-space: nowrap;
+    }
+    .local-group-details .group-detail-value {
+      color: var(--text-secondary);
+    }
+    .local-group-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 10px;
+    }
+    .local-group-actions a {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.73rem;
+      font-weight: 650;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .local-group-actions .group-btn-primary {
+      background: var(--forest);
+      color: #fff;
+    }
+    .local-group-actions .group-btn-primary:hover {
+      background: var(--dark-forest);
+    }
+    .local-group-actions .group-btn-secondary {
+      background: rgba(33, 68, 60, 0.08);
+      color: var(--forest);
+    }
+    .local-group-actions .group-btn-secondary:hover {
+      background: rgba(33, 68, 60, 0.14);
+    }
+
     /* ── Legal Notice Cards ── */
     .legal-card {
       background: var(--card-bg);
@@ -2065,6 +2187,54 @@
     .event-photo { background: none; border: none; box-shadow: none; }
     .event-photo::after { display: none; }
     .event-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block; }
+
+    /* ── Club Info Box (right-side panel on community event cards) ── */
+    .club-info-box {
+      border-radius: 14px;
+      background: linear-gradient(180deg, #f7f5f0 0%, #ede9e0 100%);
+      border: 1px solid rgba(24,53,45,0.10);
+      padding: 16px 18px;
+      font-size: 0.78rem;
+      line-height: 1.55;
+      color: var(--text-primary);
+      min-width: 200px;
+      max-width: 260px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .club-info-box .club-info-header {
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: var(--forest);
+      margin-bottom: 4px;
+      text-align: center;
+    }
+    .club-info-box .club-info-link {
+      display: block;
+      text-align: center;
+      margin-top: 8px;
+      padding: 8px 14px;
+      background: var(--forest);
+      color: #fff;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .club-info-box .club-info-link:hover {
+      background: var(--dark-forest);
+    }
+    .club-info-box .club-info-row {
+      display: flex;
+      gap: 6px;
+    }
+    .club-info-box .club-info-label {
+      font-weight: 600;
+      color: var(--forest);
+      white-space: nowrap;
+    }
 
     @media (max-width: 760px) {
       .event-card-main {
@@ -2910,7 +3080,7 @@
     <button class="tab-btn" data-tab="local-news">Local News</button>
     <button class="tab-btn" data-tab="legals">Legal Notices</button>
     <button class="tab-btn" data-tab="subscribe">Subscribe</button>
-    <button class="tab-btn" data-tab="links">Quick Links</button>
+    <button class="tab-btn" data-tab="links">Local Groups</button>
   </div>
 
   <div class="container">
@@ -2919,12 +3089,49 @@
   <!-- ── Left Sidebar ── -->
   <aside class="left-sidebar" id="leftSidebar">
 
-    <!-- What to Follow -->
-    <div class="left-sidebar-card">
+    <!-- What to Follow (shown on Meetings tab) -->
+    <div class="left-sidebar-card" id="sidebarWhatToFollow">
       <div class="left-sidebar-title">What to Follow</div>
       <div id="weekSnapshot" class="week-summary-prose">
         <div class="left-sidebar-empty">Loading...</div>
       </div>
+    </div>
+
+    <!-- Festival Season (shown on Events tab) -->
+    <div class="left-sidebar-card" id="sidebarFestivals" style="display:none;">
+      <div style="text-align:center;padding:10px 0 6px 0;">
+        <div style="font-size:3.5rem;line-height:1;">🎟️</div>
+        <div class="left-sidebar-title" style="margin:6px 0 2px 0;">2026 Festival Season</div>
+        <div style="font-size:1.0rem;font-weight:800;color:var(--accent-green);letter-spacing:0.04em;">Get Tickets!</div>
+      </div>
+      <div id="sidebarFestivalCalendar" style="font-size:0.85rem;"></div>
+    </div>
+
+    <!-- Submit an Event (shown on Events tab only) -->
+    <div class="left-sidebar-card" id="sidebarSubmitEvent" style="display:none;">
+      <div class="left-sidebar-title">📅 Submit an Event</div>
+      <p style="font-size:0.78rem;color:var(--text-secondary);line-height:1.5;margin:0 0 10px 0;">
+        Know about an upcoming community event? Submit a link and we'll review it for inclusion in the calendar.
+      </p>
+      <form id="eventSubmitForm" onsubmit="return false;" style="display:flex;flex-direction:column;gap:8px;">
+        <input type="url" id="eventUrlInput" required
+          placeholder="https://example.com/event"
+          style="width:100%;padding:8px 10px;font-size:0.82rem;border:1px solid var(--line);border-radius:8px;background:white;color:var(--text-primary);font-family:var(--font-body);box-sizing:border-box;" />
+        <input type="text" id="eventNameInput"
+          placeholder="Event name (optional)"
+          style="width:100%;padding:8px 10px;font-size:0.82rem;border:1px solid var(--line);border-radius:8px;background:white;color:var(--text-primary);font-family:var(--font-body);box-sizing:border-box;" />
+        <input type="text" id="eventSubmitterInput"
+          placeholder="Your name (optional)"
+          style="width:100%;padding:8px 10px;font-size:0.82rem;border:1px solid var(--line);border-radius:8px;background:white;color:var(--text-primary);font-family:var(--font-body);box-sizing:border-box;" />
+        <button type="button" id="eventSubmitBtn" onclick="submitEventLink()"
+          style="width:100%;padding:10px;background:var(--accent-green);color:#fff;border:none;border-radius:8px;font-size:0.85rem;font-weight:700;cursor:pointer;font-family:var(--font-body);letter-spacing:0.02em;transition:opacity 0.15s ease;">
+          Submit for Review
+        </button>
+        <div id="eventSubmitStatus" style="display:none;font-size:0.75rem;text-align:center;padding:6px 8px;border-radius:6px;line-height:1.4;"></div>
+      </form>
+      <p style="font-size:0.68rem;color:var(--text-muted);line-height:1.4;margin:8px 0 0 0;font-style:italic;">
+        Submissions are reviewed by the Livable Telluride team before appearing on the calendar.
+      </p>
     </div>
 
   </aside>
@@ -2969,11 +3176,6 @@
         <p style="margin:8px 0 0 0; font-size:0.82rem; color:var(--text-muted); line-height:1.5; font-style:italic;">
           Scroll down for what's coming up — art walks, live music, community dinners, and more.
         </p>
-      </div>
-      <!-- ── Festival Calendar with Ticket Links ── -->
-      <div id="festivalCalendarWrap" style="margin-bottom:18px; padding:16px 18px; background:linear-gradient(135deg, rgba(33,68,60,0.04) 0%, rgba(166,143,87,0.07) 100%); border-radius:12px; border:1px solid rgba(33,68,60,0.10);">
-        <h3 style="margin:0 0 10px 0; font-size:1.0rem; color:var(--text-primary); font-family:var(--font-heading);">🎟️ 2026 Festival Season — Passes &amp; Tickets</h3>
-        <div id="festivalCalendar"></div>
       </div>
       <div class="filter-row">
         <span class="chip active-all" data-filter="all" data-tab-target="news">All</span>
@@ -3043,7 +3245,310 @@
 
     <!-- ══════════ QUICK LINKS TAB ══════════ -->
     <div class="tab-content" id="tab-links">
-      <div class="date-group" style="margin-top: 8px;">Town of Telluride</div>
+
+      <!-- ── Local Groups Directory ── -->
+      <div class="date-group" style="margin-top: 8px;">Local Groups &amp; Organizations</div>
+      <div class="local-groups-grid">
+
+        <!-- Telluride Rotary Club -->
+        <div class="local-group-card">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <img src="https://clubrunner.blob.core.windows.net/00000003291/thumb/ClubLogo/clublogo.png" alt="Rotary Club of Telluride logo" loading="lazy">
+            </div>
+            <div class="local-group-body">
+              <h4>Rotary Club of Telluride</h4>
+              <div class="group-summary">Service club supporting scholarships, Youth Exchange, international projects, and community grants through the Telluride Rotary Foundation. "Mountain High Service."</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Meets:</span> <span class="group-detail-value">1st &amp; 3rd Wednesdays, 6:00 PM (social at 5:30)</span></div>
+                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">1st Wed — Mountain Lodge, 457 Mountain Village Blvd; 3rd Wed — Announced Telluride location</span></div>
+                <div class="group-detail"><span class="group-detail-label">President:</span> <span class="group-detail-value">Kate Wadley</span></div>
+                <div class="group-detail"><span class="group-detail-label">Contact:</span> <span class="group-detail-value"><a href="mailto:telluriderotary@gmail.com" style="color:var(--forest);">telluriderotary@gmail.com</a></span></div>
+                <div class="group-detail"><span class="group-detail-label">Note:</span> <span class="group-detail-value">No meetings in April. In-person &amp; online options available.</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://portal.clubrunner.ca/3291" target="_blank" rel="noopener" class="group-btn-primary">Visit Club Website</a>
+                <a href="https://www.facebook.com/telluriderotary/" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
+                <a href="https://www.instagram.com/telluriderotary/" target="_blank" rel="noopener" class="group-btn-secondary">Instagram</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Telluride Elks Lodge 692 -->
+        <div class="local-group-card">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <img src="https://clubrunner.blob.core.windows.net/00000101683/ThemeLogos/en-us/LightBG_lodge692115yearlogo.jpg" alt="Telluride Elks Lodge 692 logo" loading="lazy">
+            </div>
+            <div class="local-group-body">
+              <h4>Telluride Elks Lodge 692</h4>
+              <div class="group-summary">Fraternal organization dedicated to community service, charity, and fellowship. The lodge hosts Friday night dinners, comedy nights, fundraisers, and community events supporting local organizations like Tri-County Health Network. Celebrating 115 years in Telluride.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Meets:</span> <span class="group-detail-value">2nd &amp; 4th Thursdays, 6:30 PM</span></div>
+                <div class="group-detail"><span class="group-detail-label">Board/House Cmte:</span> <span class="group-detail-value">2nd Thursdays, 5:30 PM</span></div>
+                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">472 W. Pacific St, Telluride, CO 81435</span></div>
+                <div class="group-detail"><span class="group-detail-label">Lodge Hours:</span> <span class="group-detail-value">Tues/Wed/Fri 5–8 PM</span></div>
+                <div class="group-detail"><span class="group-detail-label">Phone:</span> <span class="group-detail-value">(970) 728-6362</span></div>
+                <div class="group-detail"><span class="group-detail-label">Contact:</span> <span class="group-detail-value"><a href="mailto:bpoe692@yahoo.com" style="color:var(--forest);">bpoe692@yahoo.com</a></span></div>
+                <div class="group-detail"><span class="group-detail-label">Rentals:</span> <span class="group-detail-value">Mike Metz — (970) 729-1910</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://tellurideelks.org" target="_blank" rel="noopener" class="group-btn-primary">Visit Lodge Website</a>
+                <a href="https://www.facebook.com/pages/Telluride-Elks-Lodge-692/232150316875640" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
+                <a href="https://www.elks.org" target="_blank" rel="noopener" class="group-btn-secondary">National Elks</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Telluride Mountain Club -->
+        <div class="local-group-card">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <img src="https://www.telluridemountainclub.org/wp-content/uploads/2017/09/TellMtnClub-logo.png" alt="Telluride Mountain Club logo" loading="lazy">
+            </div>
+            <div class="local-group-body">
+              <h4>Telluride Mountain Club</h4>
+              <div class="group-summary">Nonprofit established in 1986 dedicated to maintaining, preserving, and enhancing Telluride's outdoor recreation. Manages trails, the Via Ferrata route, avalanche education through the Peter Inglis Fund, and hosts year-round community outdoor events.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Founded:</span> <span class="group-detail-value">1986</span></div>
+                <div class="group-detail"><span class="group-detail-label">Focus:</span> <span class="group-detail-value">Trails, Via Ferrata, Avalanche Education, Outdoor Recreation</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://www.telluridemountainclub.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
+                <a href="https://www.instagram.com/telluridemountainclub/" target="_blank" rel="noopener" class="group-btn-secondary">Instagram</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Telluride Mountain Village Owners Association (TMVOA) -->
+        <div class="local-group-card">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <img src="https://tmvoa.org/site/assets/files/1699/tmvoa-logo.800x375.webp" alt="TMVOA logo" loading="lazy">
+            </div>
+            <div class="local-group-body">
+              <h4>Telluride Mountain Village Owners Association (TMVOA)</h4>
+              <div class="group-summary">Official organization serving Mountain Village property owners, dedicated to preserving and promoting a vital resort community. Provides event sponsorship, gondola funding, grant awards, community research, and member resources including gondola/bus access and dial-a-ride services.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">113 Lost Creek Ln, Suite A, Blue Mesa Building, Mountain Village, CO 81435</span></div>
+                <div class="group-detail"><span class="group-detail-label">Phone:</span> <span class="group-detail-value">(970) 728-1904</span></div>
+                <div class="group-detail"><span class="group-detail-label">Office Hours:</span> <span class="group-detail-value">Mon–Fri, 8:30 AM – 5:00 PM</span></div>
+                <div class="group-detail"><span class="group-detail-label">Board Meetings:</span> <span class="group-detail-value">See website for schedule</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://tmvoa.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
+                <a href="https://tmvoa.org/meetings-events/events/" target="_blank" rel="noopener" class="group-btn-secondary">Meeting Calendar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Norwood Chamber of Commerce -->
+        <div class="local-group-card">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <div style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;text-align:center;background:var(--forest);color:white;border-radius:8px;padding:8px;line-height:1.2;">NORWOOD<br>CHAMBER</div>
+            </div>
+            <div class="local-group-body">
+              <h4>Norwood Chamber of Commerce</h4>
+              <div class="group-summary">Supports local business growth and community development in Norwood, Colorado. Maintains a business directory, facilitates networking, and promotes area tourism and economic vitality for this small mountain community.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Address:</span> <span class="group-detail-value">PO Box 116, Norwood, CO 81423</span></div>
+                <div class="group-detail"><span class="group-detail-label">Phone:</span> <span class="group-detail-value">(970) 327-4833</span></div>
+                <div class="group-detail"><span class="group-detail-label">Contact:</span> <span class="group-detail-value"><a href="mailto:info@norwoodcolorado.com" style="color:var(--forest);">info@norwoodcolorado.com</a></span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://norwoodcolorado.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Norwood Park and Recreation District -->
+        <div class="local-group-card">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <div style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:700;text-align:center;background:var(--forest);color:white;border-radius:50%;padding:8px;line-height:1.2;">NORWOOD<br>PARK &amp;<br>REC</div>
+            </div>
+            <div class="local-group-body">
+              <h4>Norwood Park and Recreation District</h4>
+              <div class="group-summary">Public recreation agency serving over 418,500 acres since 2008. Offers year-round programs including Nordic skiing, ice rink, disc golf, pickleball, fitness classes, youth sports, and arts programming. Manages The Livery event venue, 90+ miles of trails, and community facilities.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">1555 Summit St., Norwood, CO 81423</span></div>
+                <div class="group-detail"><span class="group-detail-label">Phone:</span> <span class="group-detail-value">(970) 327-0148</span></div>
+                <div class="group-detail"><span class="group-detail-label">Facilities:</span> <span class="group-detail-value">The Livery, The Oliver House, The Yard, Ice Rink, Disc Golf</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://www.norwoodparkandrec.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
+                <a href="https://booking.norwoodparkandrec.org" target="_blank" rel="noopener" class="group-btn-secondary">Book a Facility</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- San Miguel Basin 4-H Clubs -->
+        <div class="local-group-card">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <div style="width:80px;height:80px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:800;text-align:center;background:#339933;color:white;border-radius:8px;line-height:1.1;">4‑H</div>
+            </div>
+            <div class="local-group-body">
+              <h4>San Miguel Basin 4-H Clubs</h4>
+              <div class="group-summary">Part of Colorado State University Extension, 4-H provides project-based learning for youth across agriculture, livestock, horticulture, natural resources, and home &amp; family topics. Members join a local club to participate in hands-on activities, fairs, and community service.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">1120 Summit St., Norwood, CO 81423</span></div>
+                <div class="group-detail"><span class="group-detail-label">Phone:</span> <span class="group-detail-value">(970) 327-4393</span></div>
+                <div class="group-detail"><span class="group-detail-label">Mailing:</span> <span class="group-detail-value">PO Box 130, Norwood, CO 81423</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://sanmiguel.extension.colostate.edu/smb-club-list/" target="_blank" rel="noopener" class="group-btn-primary">View Club List</a>
+                <a href="https://sanmiguel.extension.colostate.edu/" target="_blank" rel="noopener" class="group-btn-secondary">CSU Extension</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Norwood Roping Club -->
+        <div class="local-group-card">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <div style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;font-size:2rem;background:var(--cream);border-radius:8px;">🤠</div>
+            </div>
+            <div class="local-group-body">
+              <h4>Norwood Roping Club</h4>
+              <div class="group-summary">Roping club based at the San Miguel County Fairgrounds in Norwood. A fairground user group that organizes roping events and activities for the local ranching and rodeo community.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Venue:</span> <span class="group-detail-value">San Miguel County Fairgrounds, Norwood</span></div>
+                <div class="group-detail"><span class="group-detail-label">President:</span> <span class="group-detail-value">Aaron Elwood — (970) 327-4091</span></div>
+                <div class="group-detail"><span class="group-detail-label">Treasurer:</span> <span class="group-detail-value">Laura Snyder-Sherman — (970) 327-4601</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://www.sanmiguelcountyco.gov/431/Fairground-User-Groups" target="_blank" rel="noopener" class="group-btn-primary">Fairground User Groups</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wright's Mesa Gymkhana Club -->
+        <div class="local-group-card">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <div style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;font-size:2rem;background:var(--cream);border-radius:8px;">🐴</div>
+            </div>
+            <div class="local-group-body">
+              <h4>Wright's Mesa Gymkhana Club</h4>
+              <div class="group-summary">Gymkhana club based at the San Miguel County Fairgrounds in Norwood. Organizes timed speed-pattern horse riding events and competitions for riders of all ages in the San Miguel Basin.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Venue:</span> <span class="group-detail-value">San Miguel County Fairgrounds, Norwood</span></div>
+                <div class="group-detail"><span class="group-detail-label">Leadership:</span> <span class="group-detail-value">Currently being reorganized — contact fairgrounds for info</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://www.sanmiguelcountyco.gov/431/Fairground-User-Groups" target="_blank" rel="noopener" class="group-btn-primary">Fairground User Groups</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Youth Soccer Club / County Recreation -->
+        <div class="local-group-card">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <div style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;font-size:2rem;background:var(--cream);border-radius:8px;">⚽</div>
+            </div>
+            <div class="local-group-body">
+              <h4>Youth Soccer Club &amp; County Recreation</h4>
+              <div class="group-summary">Youth soccer and recreational sports programming coordinated through San Miguel County. Check the county calendar for upcoming seasons, registration dates, and community recreation events.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Organized by:</span> <span class="group-detail-value">San Miguel County Recreation</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://sanmiguelcountyco.gov/Calendar.aspx" target="_blank" rel="noopener" class="group-btn-primary">County Calendar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Telluride Elks Lodge Veterans Club -->
+        <div class="local-group-card">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <div style="width:64px;height:64px;display:flex;align-items:center;justify-content:center;font-size:2rem;background:var(--cream);border-radius:8px;">🎖️</div>
+            </div>
+            <div class="local-group-body">
+              <h4>Telluride Elks Lodge BPOE #692 Veterans Club</h4>
+              <div class="group-summary">Veterans service club operating through Telluride Elks Lodge 692, listed as a community support resource by the San Miguel County Veterans Service Office. Provides fellowship and support for local veterans.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Affiliated with:</span> <span class="group-detail-value">Telluride Elks Lodge 692</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://tellurideelks.org/" target="_blank" rel="noopener" class="group-btn-primary">Elks Lodge Website</a>
+                <a href="https://www.sanmiguelcountyco.gov/537/Resources" target="_blank" rel="noopener" class="group-btn-secondary">County Veterans Resources</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Telluride Christian Fellowship -->
+        <div class="local-group-card">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <img src="logo/Church.png" alt="Church logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div style="width:80px;height:80px;display:none;align-items:center;justify-content:center;font-size:2.2rem;background:var(--cream);border-radius:8px;">⛪</div>
+            </div>
+            <div class="local-group-body">
+              <h4>Telluride Christian Fellowship</h4>
+              <div class="group-summary">Non-denominational Christian church serving the Telluride community with worship services, community outreach, and fellowship programs in a welcoming mountain-town setting.</div>
+              <div class="local-group-actions">
+                <a href="https://www.telluridechurch.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- St. Patrick's Catholic Church -->
+        <div class="local-group-card">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <img src="logo/Church.png" alt="Church logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div style="width:80px;height:80px;display:none;align-items:center;justify-content:center;font-size:2.2rem;background:var(--cream);border-radius:8px;">⛪</div>
+            </div>
+            <div class="local-group-body">
+              <h4>St. Patrick's Catholic Church</h4>
+              <div class="group-summary">Catholic parish serving the Telluride community with Mass, sacraments, and spiritual programs. Part of the Diocese of Pueblo, offering a welcoming faith community in the heart of the San Juan Mountains.</div>
+              <div class="local-group-actions">
+                <a href="https://stpatrickstelluride.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Christ Presbyterian Church Telluride -->
+        <div class="local-group-card">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <img src="logo/Church.png" alt="Church logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div style="width:80px;height:80px;display:none;align-items:center;justify-content:center;font-size:2.2rem;background:var(--cream);border-radius:8px;">⛪</div>
+            </div>
+            <div class="local-group-body">
+              <h4>Christ Presbyterian Church Telluride</h4>
+              <div class="group-summary">Presbyterian church offering worship, Bible study, and community fellowship in Telluride. Committed to serving the local community through faith-based programs and outreach.</div>
+              <div class="local-group-actions">
+                <a href="https://christpresbyterianchurchtelluride.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── Quick Links ── -->
+      <div class="date-group">Quick Links</div>
+      <div class="date-group" style="margin-top: 0; font-size: 0.85rem; font-weight: 400; color: var(--text-secondary); border: none; padding: 0 0 8px 0;">Government resources, agendas, calendars, and more.</div>
+
+      <div class="date-group">Town of Telluride</div>
       <div class="links-grid">
         <a class="link-card" href="https://telluride-co.civicweb.net/Portal/MeetingTypeList.aspx" target="_blank" rel="noopener">
           <div class="link-icon">📋</div>
@@ -7265,7 +7770,7 @@ function renderMeetings(items, filter) {
   filtered = filtered.filter(i => i.eventDate <= cutoff);
 
   if (filtered.length === 0) {
-    container.innerHTML = '<div class="empty-state">No upcoming meetings found. Visit the Quick Links tab to check the calendars directly.</div>';
+    container.innerHTML = '<div class="empty-state">No upcoming meetings found. Visit the Local Groups tab to check the calendars directly.</div>';
     return;
   }
 
@@ -7355,6 +7860,11 @@ function renderNews(items, filter) {
     seen.add(key);
     return true;
   });
+
+  // Only show events from today onward
+  const todayStart = new Date();
+  todayStart.setHours(0, 0, 0, 0);
+  filtered = filtered.filter(i => !i.pubDate || i.pubDate >= todayStart);
 
   // Limit to next 3 weeks for future events
   const eventCutoff = new Date();
@@ -7448,11 +7958,19 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
     if (btn.dataset.tab === 'land-use') renderLandUseTab();
     if (btn.dataset.tab === 'gondola') renderGondolaTab();
+    // Toggle left-sidebar cards per tab
+    const wtfCard = document.getElementById('sidebarWhatToFollow');
+    const festCard = document.getElementById('sidebarFestivals');
+    const submitCard = document.getElementById('sidebarSubmitEvent');
+    if (wtfCard) wtfCard.style.display = (btn.dataset.tab === 'meetings' || btn.dataset.tab === 'legals') ? '' : 'none';
+    if (festCard) festCard.style.display = (btn.dataset.tab === 'news') ? '' : 'none';
+    if (submitCard) submitCard.style.display = (btn.dataset.tab === 'news') ? '' : 'none';
     // Hide sidebars on Subscribe, Land Use, and Gondola tabs, show on all others
     const layout = document.querySelector('.main-layout');
     layout.classList.toggle('subscribe-active', btn.dataset.tab === 'subscribe');
     layout.classList.toggle('landuse-active', btn.dataset.tab === 'land-use' || btn.dataset.tab === 'gondola');
     layout.classList.toggle('localnews-active', btn.dataset.tab === 'local-news');
+    layout.classList.toggle('links-active', btn.dataset.tab === 'links');
   });
 });
 
@@ -7725,7 +8243,17 @@ const COMMUNITY_EVENTS = [
     source: "Telluride Rotary Club",
     date: "May 31, 2026",
     copy: "Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four weeks of hiking from May 31 through June 28, with a kickoff at 11am on May 31 at the Oak Street gondola plaza. Hike from anywhere and raise funds for the Telluride Rotary Foundation — supporting scholarships, Youth Exchange, international projects, and community grants. 60% of nonprofit team funds go directly back to their nonprofit. Sponsored by Alpine Bank and Jagged Edge Mountain Gear.",
-    href: "https://www.facebook.com/telluriderotary/"
+    href: "https://www.facebook.com/telluriderotary/",
+    clubInfo: {
+      name: "Telluride Rotary Club",
+      meetings: "1st & 3rd Wednesdays, 6:00 PM (social at 5:30)",
+      location1: "1st Wed — Mountain Lodge, 457 Mountain Village Blvd",
+      location2: "3rd Wed — Announced Telluride location",
+      president: "Kate Wadley",
+      email: "telluriderotary@gmail.com",
+      website: "https://portal.clubrunner.ca/3291",
+      note: "No meetings in April. In-person & online options available."
+    }
   },
   {
     title: "Elks Lodge Comedy Night with Cindy Pierce",
@@ -7870,7 +8398,8 @@ function collectLocalNewsArticles() {
         date: a.date,
         pubDate: pubDate,
         topic: 'Upcoming Event',
-        imageUrl: a.img || ''
+        imageUrl: a.img || '',
+        clubInfo: a.clubInfo || null
       });
     });
   }
@@ -7919,10 +8448,23 @@ function renderLocalNews(unused, filter) {
       ? '<span style="display:inline-block; font-size:0.72rem; padding:2px 8px; background:rgba(33,68,60,0.08); color:var(--forest); border-radius:6px; font-weight:600; margin-left:6px;">' + item.topic + '</span>'
       : '';
 
-    // Article image on right side — same pattern as Wilkinson Library cards (skip for club posts)
-    const imageHtml = (!isClub && item.imageUrl)
-      ? '<div class="event-illustration event-photo" aria-hidden="true"><img src="' + item.imageUrl + '" alt="' + (item.title || '') + '" loading="lazy"></div>'
-      : '';
+    // Article image on right side — same pattern as Wilkinson Library cards (skip for club posts unless they have clubInfo)
+    let imageHtml = '';
+    if (item.clubInfo) {
+      const ci = item.clubInfo;
+      imageHtml = '<div class="club-info-box">'
+        + '<div class="club-info-header">' + (ci.name || 'Club Info') + '</div>'
+        + '<div class="club-info-row"><span class="club-info-label">Meets:</span> ' + (ci.meetings || '') + '</div>'
+        + '<div class="club-info-row"><span class="club-info-label"></span> ' + (ci.location1 || '') + '</div>'
+        + '<div class="club-info-row"><span class="club-info-label"></span> ' + (ci.location2 || '') + '</div>'
+        + '<div class="club-info-row"><span class="club-info-label">President:</span> ' + (ci.president || '') + '</div>'
+        + '<div class="club-info-row"><span class="club-info-label">Email:</span> <a href="mailto:' + (ci.email || '') + '" style="color:var(--forest);">' + (ci.email || '') + '</a></div>'
+        + (ci.note ? '<div style="font-size:0.72rem; color:var(--text-muted); font-style:italic; margin-top:2px;">' + ci.note + '</div>' : '')
+        + '<a href="' + (ci.website || '#') + '" target="_blank" rel="noopener" class="club-info-link">Click for more club info</a>'
+        + '</div>';
+    } else if (!isClub && item.imageUrl) {
+      imageHtml = '<div class="event-illustration event-photo" aria-hidden="true"><img src="' + item.imageUrl + '" alt="' + (item.title || '') + '" loading="lazy"></div>';
+    }
 
     const linkLabel = isClub ? 'Read full post →' : 'Read full article →';
 
@@ -8532,7 +9074,7 @@ function renderMeetingsWithTopic() {
   if (filtered.length === 0) {
     const msg = currentTopic !== 'all'
       ? 'No upcoming meetings match the topic "' + TOPIC_DEFINITIONS[currentTopic].label + '". Try a different topic or clear the filter.'
-      : 'No upcoming meetings found. Visit the Quick Links tab to check the calendars directly.';
+      : 'No upcoming meetings found. Visit the Local Groups tab to check the calendars directly.';
     container.innerHTML = '<div class="empty-state">' + msg + '</div>';
     return;
   }
@@ -8991,22 +9533,29 @@ async function init() {
     window.__allMeetingsCache = allMeetings;
     renderMeetingsWithTopic();
     updateTopicCounts();
-  });
+  }).catch(err => console.error('countyPromise failed:', err));
 
   telluridePromise.then(tellurideMeetings => {
     allMeetings = [...allMeetings, ...tellurideMeetings];
     window.__allMeetingsCache = allMeetings;
     renderMeetingsWithTopic();
     updateTopicCounts();
-  });
+  }).catch(err => console.error('telluridePromise failed:', err));
+
+  // Render festival calendar immediately (doesn't depend on fetched data)
+  try { renderFestivalCalendar(); } catch(e) { console.error('initial renderFestivalCalendar error:', e); }
 
   newsPromise.then(newsData => {
     allNews = newsData;
     window.__allNewsCache = allNews;
-    renderNewsWithTopic();
-    updateTopicCounts();
-    updateEventsHeroFestivals();
-    renderFestivalCalendar();
+    try { renderNewsWithTopic(); } catch(e) { console.error('renderNewsWithTopic error:', e); }
+    try { updateTopicCounts(); } catch(e) { console.error('updateTopicCounts error:', e); }
+    try { updateEventsHeroFestivals(); } catch(e) { console.error('updateEventsHeroFestivals error:', e); }
+    try { renderFestivalCalendar(); } catch(e) { console.error('renderFestivalCalendar error:', e); }
+  }).catch(err => {
+    console.error('newsPromise failed:', err);
+    // Still render festival calendar even if news fetch fails
+    try { renderFestivalCalendar(); } catch(e) { console.error('renderFestivalCalendar fallback error:', e); }
   });
 
   // Local News tab uses hardcoded article data — render immediately
@@ -9032,29 +9581,41 @@ async function init() {
 // These are approximate annual dates -- update yearly as schedules are confirmed.
 const TELLURIDE_FESTIVALS = [
   { name: 'Mountainfilm', month: 4, dayStart: 22, dayEnd: 25, icon: '🎥',
-    ticketUrl: 'https://www.mountainfilm.org/festival/passes/', ticketLabel: 'Buy Passes', promo: '2026 festival passes on sale now' },
+    logo: 'https://www.mountainfilm.org/site/assets/files/1/mf18-mfbanner-kroll-matt-highres-2_full_1.jpg',
+    url: 'https://www.mountainfilm.org/', ticketUrl: 'https://www.mountainfilm.org/festival/passes/', ticketLabel: 'Buy Passes', promo: '2026 festival passes on sale now' },
   { name: 'Telluride Balloon Festival', month: 5, dayStart: 5, dayEnd: 7, icon: '🎈',
-    ticketUrl: 'https://www.tellurideballoonfest.com/', ticketLabel: 'Get Tickets', promo: 'June 5–7, 2026 — free to attend, paid gondola rides' },
+    logo: '',
+    url: 'https://www.tellurideballoonfest.com/', ticketUrl: 'https://www.tellurideballoonfest.com/', ticketLabel: 'Get Tickets', promo: 'June 5–7, 2026 — free to attend, paid gondola rides' },
   { name: 'Telluride Food + Vine', month: 5, dayStart: 12, dayEnd: 14, icon: '🍷',
-    ticketUrl: 'https://www.telluridefoodandvine.com/events', ticketLabel: 'Buy Passes', promo: '2026 Weekend Pass and featured events available' },
+    logo: 'https://cdn.prod.website-files.com/63e3b404578d3e63abef7364/69b1ded759adc5521903fd3e_TFV%20Logo%20Full%E2%84%A2.svg',
+    url: 'https://www.telluridefoodandvine.com/', ticketUrl: 'https://www.telluridefoodandvine.com/events', ticketLabel: 'Buy Passes', promo: '2026 Weekend Pass and featured events available' },
   { name: 'Telluride Bluegrass Festival', month: 5, dayStart: 18, dayEnd: 21, icon: '🎸',
-    ticketUrl: 'https://bluegrass.com/telluride/festival-info/TBF-ticketing-info', ticketLabel: 'Buy Tickets', promo: '2026 tickets on sale now via Planet Bluegrass' },
+    logo: '',
+    url: 'https://bluegrass.com/telluride', ticketUrl: 'https://bluegrass.com/telluride/festival-info/TBF-ticketing-info', ticketLabel: 'Buy Tickets', promo: '2026 tickets on sale now via Planet Bluegrass' },
   { name: 'Telluride Yoga Festival', month: 5, dayStart: 25, dayEnd: 28, icon: '🧘',
-    ticketUrl: 'https://www.tellurideyogafestival.com/passes', ticketLabel: 'Buy Passes', promo: 'June 25–28, 2026 — festival passes available now' },
+    logo: 'https://images.squarespace-cdn.com/content/v1/56687b901115e07461e746d8/fec565cd-db82-4743-afd7-590e1062c90b/TYF_Horizontal2+for+website.png',
+    url: 'https://www.tellurideyogafestival.com/', ticketUrl: 'https://www.tellurideyogafestival.com/passes', ticketLabel: 'Buy Passes', promo: 'June 25–28, 2026 — festival passes available now' },
   { name: 'MusicFest (Chamber Music)', month: 5, dayStart: 28, dayEnd: 5, endMonth: 6, icon: '🎻',
-    ticketUrl: 'https://telluridechambermusic.org/musicfest/', ticketLabel: 'Buy Tickets', promo: 'June 28–July 5, 2026 — tickets on sale March 2026' },
+    logo: 'https://telluridechambermusic.org/wp-content/uploads/2022/05/logo-v4-4-web-2-final.png',
+    url: 'https://telluridechambermusic.org/musicfest/', ticketUrl: 'https://telluridechambermusic.org/musicfest/', ticketLabel: 'Buy Tickets', promo: 'June 28–July 5, 2026 — tickets on sale March 2026' },
   { name: 'Telluride Americana Music Festival', month: 6, dayStart: 17, dayEnd: 18, icon: '🎤',
-    ticketUrl: 'https://tellurideamericana.com/events/telluride-americana', ticketLabel: 'Get Tickets', promo: 'July 17–18, 2026' },
+    logo: 'https://images.squarespace-cdn.com/content/v1/5e666ebe01b24642410d9f4d/054d4b31-514a-4414-ab61-e14b5c4d1449/TAMF_LogoRGB_2025.png',
+    url: 'https://tellurideamericana.com/', ticketUrl: 'https://tellurideamericana.com/events/telluride-americana', ticketLabel: 'Get Tickets', promo: 'July 17–18, 2026' },
   { name: 'Telluride Jazz Festival', month: 7, dayStart: 7, dayEnd: 10, icon: '🎷',
-    ticketUrl: 'https://www.telluridejazz.org/tickets', ticketLabel: 'Buy Tickets', promo: 'Tickets on sale through authorized platform' },
+    logo: 'https://images.squarespace-cdn.com/content/v1/583db0c9d1758e46ff3221e9/821ecb11-5000-415a-a970-87b539036111/2026-ebony-color-logo-png-for-website-no-dates.png?format=1500w',
+    url: 'https://www.telluridejazz.org/', ticketUrl: 'https://www.telluridejazz.org/tickets', ticketLabel: 'Buy Tickets', promo: 'Tickets on sale through authorized platform' },
   { name: 'Telluride Mushroom Festival', month: 7, dayStart: 14, dayEnd: 17, icon: '🍄',
-    ticketUrl: 'https://www.tellurideinstitute.org/passes-telluride-mushroom-festival/', ticketLabel: 'Buy Passes', promo: '2026 passes launched Feb 5 — get them before they sell out' },
+    logo: 'https://www.tellurideinstitute.org/wp-content/uploads/2025/01/Telluride-Mushroom-Festival-318-scaled.jpg',
+    url: 'https://www.tellurideinstitute.org/telluride-mushroom-festival/', ticketUrl: 'https://www.tellurideinstitute.org/passes-telluride-mushroom-festival/', ticketLabel: 'Buy Passes', promo: '2026 passes launched Feb 5 — get them before they sell out' },
   { name: 'Telluride Film Festival', month: 8, dayStart: 4, dayEnd: 7, icon: '🎬',
-    ticketUrl: 'https://www.telluridefilmfestival.org/show/passes', ticketLabel: 'Purchase Passes', promo: 'Passes are the primary way to attend — check availability' },
+    logo: 'https://www.telluridefilmfestival.org/images/home_photos/_562x311_crop_center-center_85_none/TFF52-MescalZhaoBuckley.jpg',
+    url: 'https://www.telluridefilmfestival.org/', ticketUrl: 'https://www.telluridefilmfestival.org/show/passes', ticketLabel: 'Purchase Passes', promo: 'Passes are the primary way to attend — check availability' },
   { name: 'Telluride Blues & Brews Festival', month: 8, dayStart: 18, dayEnd: 20, icon: '🎶',
-    ticketUrl: 'https://www.tellurideblues.com/tickets', ticketLabel: 'Buy Tickets', promo: '2026 tickets on sale now' },
+    logo: 'https://images.squarespace-cdn.com/content/v1/5be480544611a0a58ac2f320/1545422460809-AOUEFR9OODIWJVGFG8YO/General.png',
+    url: 'https://www.tellurideblues.com/', ticketUrl: 'https://www.tellurideblues.com/tickets', ticketLabel: 'Buy Tickets', promo: '2026 tickets on sale now' },
   { name: 'Telluride Horror Show', month: 9, dayStart: 9, dayEnd: 12, icon: '🎃',
-    ticketUrl: 'https://www.telluridehorrorshow.com/passes', ticketLabel: 'Buy Passes', promo: '3-day passes on sale Mar 25 — 6-packs on sale Jul 1, 2026' }
+    logo: 'https://images.squarespace-cdn.com/content/v1/635aaf48434dcc204d4bfb34/762ca493-d7d2-459e-86a2-214c641c3695/HorrorShowLogoColor_STRAIGHT.png',
+    url: 'https://www.telluridehorrorshow.com/', ticketUrl: 'https://www.telluridehorrorshow.com/passes', ticketLabel: 'Buy Passes', promo: '3-day passes on sale Mar 25 — 6-packs on sale Jul 1, 2026' }
 ];
 
 function getUpcomingFestivals(now, daysAhead) {
@@ -9076,10 +9637,12 @@ function getUpcomingFestivals(now, daysAhead) {
         results.push({
           name: f.name,
           icon: f.icon,
+          logo: f.logo || '',
           start,
           end,
           daysUntil: daysUntil < 0 ? 0 : daysUntil,
           happening: start <= now && end >= now,
+          url: f.url || '',
           ticketUrl: f.ticketUrl || '',
           ticketLabel: f.ticketLabel || 'Get Tickets',
           promo: f.promo || ''
@@ -9101,11 +9664,13 @@ function getAllFestivalsForYear(year) {
     return {
       name: f.name,
       icon: f.icon,
+      logo: f.logo || '',
       start,
       end,
       daysUntil: daysUntil < 0 ? 0 : daysUntil,
       happening: start <= now && end >= now,
       passed: end < now,
+      url: f.url || '',
       ticketUrl: f.ticketUrl || '',
       ticketLabel: f.ticketLabel || 'Get Tickets',
       promo: f.promo || ''
@@ -9138,12 +9703,25 @@ function updateEventsHeroFestivals() {
     const ticketBtn = f.ticketUrl
       ? '<a href="' + f.ticketUrl + '" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:inline-block;margin-top:4px;padding:3px 10px;background:var(--accent-green);color:#fff;border-radius:5px;font-size:0.65rem;font-weight:700;text-decoration:none;letter-spacing:0.02em;">' + f.ticketLabel + '</a>'
       : '';
-    html += '<div style="flex:1 1 140px;min-width:140px;background:rgba(255,255,255,0.7);border-radius:8px;padding:8px 10px;text-align:center;">'
-      + '<div style="font-size:1.3rem;">' + f.icon + '</div>'
-      + '<div style="font-size:0.78rem;font-weight:700;color:var(--text-primary);line-height:1.3;margin:2px 0;">' + f.name + '</div>'
-      + '<div style="font-size:0.72rem;color:var(--text-muted);">' + timing + '</div>'
-      + ticketBtn
-      + '</div>';
+    const logoHtml = f.logo
+      ? '<div style="width:100%;height:80px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:6px;margin-bottom:4px;"><img src="' + f.logo + '" alt="' + f.name + '" style="max-width:100%;max-height:80px;object-fit:contain;" onerror="this.parentElement.innerHTML=\'<span style=font-size:2.2rem>' + f.icon + '</span>\'"></div>'
+      : '<div style="font-size:2.2rem;margin-bottom:4px;">' + f.icon + '</div>';
+    const linkUrl = f.url || f.ticketUrl || '';
+    if (linkUrl) {
+      html += '<a href="' + linkUrl + '" target="_blank" rel="noopener" style="flex:1 1 140px;min-width:140px;background:rgba(255,255,255,0.7);border-radius:8px;padding:8px 10px;text-align:center;text-decoration:none;color:inherit;">'
+        + logoHtml
+        + '<div style="font-size:0.78rem;font-weight:700;color:var(--text-primary);line-height:1.3;margin:2px 0;">' + f.name + '</div>'
+        + '<div style="font-size:0.72rem;color:var(--text-muted);">' + timing + '</div>'
+        + ticketBtn
+        + '</a>';
+    } else {
+      html += '<div style="flex:1 1 140px;min-width:140px;background:rgba(255,255,255,0.7);border-radius:8px;padding:8px 10px;text-align:center;">'
+        + logoHtml
+        + '<div style="font-size:0.78rem;font-weight:700;color:var(--text-primary);line-height:1.3;margin:2px 0;">' + f.name + '</div>'
+        + '<div style="font-size:0.72rem;color:var(--text-muted);">' + timing + '</div>'
+        + ticketBtn
+        + '</div>';
+    }
   });
   html += '</div>';
   container.innerHTML = html;
@@ -9152,7 +9730,7 @@ function updateEventsHeroFestivals() {
 
 // ── Build the full Festival Calendar section below the hero ──
 function renderFestivalCalendar() {
-  const container = document.getElementById('festivalCalendar');
+  const container = document.getElementById('sidebarFestivalCalendar');
   if (!container) return;
   const year = new Date().getFullYear();
   const festivals = getAllFestivalsForYear(year);
@@ -9177,19 +9755,23 @@ function renderFestivalCalendar() {
     }
 
     const ticketBtn = f.ticketUrl && !f.passed
-      ? '<a href="' + f.ticketUrl + '" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:inline-flex;align-items:center;gap:4px;padding:5px 14px;background:var(--accent-green);color:#fff;border-radius:6px;font-size:0.72rem;font-weight:700;text-decoration:none;letter-spacing:0.02em;white-space:nowrap;">🎟️ ' + f.ticketLabel + '</a>'
+      ? '<a href="' + f.ticketUrl + '" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:block;width:200px;max-width:100%;margin:6px auto 0 auto;padding:8px 0;background:var(--accent-green);color:#fff;border-radius:8px;font-size:0.85rem;font-weight:800;text-decoration:none;text-align:center;letter-spacing:0.03em;">🎟️ Buy Tickets!</a>'
       : '';
 
     const opacity = f.passed ? 'opacity:0.55;' : '';
+    const nameLink = f.url
+      ? '<a href="' + f.url + '" target="_blank" rel="noopener" style="color:var(--text-primary);text-decoration:none;">' + f.name + '</a>'
+      : f.name;
 
-    html += '<div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:rgba(255,255,255,0.6);border-radius:10px;margin-bottom:6px;' + opacity + '">'
-      + '<div style="font-size:1.5rem;flex-shrink:0;">' + f.icon + '</div>'
-      + '<div style="flex:1;min-width:0;">'
-        + '<div style="font-size:0.82rem;font-weight:700;color:var(--text-primary);line-height:1.3;">' + f.name + statusBadge + '</div>'
-        + '<div style="font-size:0.72rem;color:var(--text-muted);margin-top:1px;">' + dateRange + ', ' + year + '</div>'
-        + (f.promo && !f.passed ? '<div style="font-size:0.68rem;color:var(--accent-green);margin-top:2px;font-weight:600;">' + f.promo + '</div>' : '')
-      + '</div>'
-      + '<div style="flex-shrink:0;">' + ticketBtn + '</div>'
+    const sidebarLogoHtml = f.logo
+      ? '<div style="width:100%;height:60px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:6px;margin-bottom:2px;"><img src="' + f.logo + '" alt="' + f.name + '" style="max-width:100%;max-height:60px;object-fit:contain;" onerror="this.parentElement.innerHTML=\'<span style=font-size:1.8rem>' + f.icon + '</span>\'"></div>'
+      : '<div style="font-size:1.8rem;">' + f.icon + '</div>';
+
+    html += '<div style="padding:10px 10px;background:rgba(255,255,255,0.6);border-radius:10px;margin-bottom:8px;text-align:center;' + opacity + '">'
+      + sidebarLogoHtml
+      + '<div style="font-size:0.82rem;font-weight:700;line-height:1.3;margin-top:2px;">' + nameLink + statusBadge + '</div>'
+      + '<div style="font-size:0.72rem;color:var(--text-muted);margin-top:2px;">' + dateRange + ', ' + year + '</div>'
+      + ticketBtn
     + '</div>';
   });
 
@@ -10128,12 +10710,116 @@ setInterval(() => {
     if (typeof emailjs !== 'undefined') {
       emailjs.init({ publicKey: 'l_E0eKAfgpTFf3kNK' });
       window._EMAILJS_SERVICE = 'service_ubj8ke7';
-      window._EMAILJS_TEMPLATE = 'tlutite';
+      window._EMAILJS_TEMPLATE = 'template_e1o2xcb';
+      window._EMAILJS_EVENT_TEMPLATE = 'template_fzf4ul3';
       window._EMAILJS_READY = true;
     }
   } catch(e) { console.warn('EmailJS not loaded:', e.message); }
 
 })();
+
+// ── Event Link Submission ──
+function submitEventLink() {
+  const urlInput = document.getElementById('eventUrlInput');
+  const nameInput = document.getElementById('eventNameInput');
+  const submitterInput = document.getElementById('eventSubmitterInput');
+  const btn = document.getElementById('eventSubmitBtn');
+  const status = document.getElementById('eventSubmitStatus');
+  const url = (urlInput.value || '').trim();
+  const eventName = (nameInput.value || '').trim();
+  const submitter = (submitterInput.value || '').trim() || 'Anonymous';
+
+  // Reset status
+  status.style.display = 'none';
+
+  // ── URL validation ──
+  if (!url) {
+    showSubmitStatus('Please enter a URL.', 'error');
+    return;
+  }
+
+  let parsed;
+  try {
+    parsed = new URL(url);
+  } catch(e) {
+    showSubmitStatus('That doesn\u2019t look like a valid URL. Please include https://', 'error');
+    return;
+  }
+
+  // Must be http or https
+  if (parsed.protocol !== 'https:' && parsed.protocol !== 'http:') {
+    showSubmitStatus('Please enter a web URL starting with https://', 'error');
+    return;
+  }
+
+  // Block localhost, IPs, and suspicious domains
+  const hostname = parsed.hostname.toLowerCase();
+  if (hostname === 'localhost' || /^(\d{1,3}\.){3}\d{1,3}$/.test(hostname) || hostname.endsWith('.local')) {
+    showSubmitStatus('Please enter a public website URL.', 'error');
+    return;
+  }
+
+  // Must have a real TLD (at least one dot)
+  if (!hostname.includes('.') || hostname.endsWith('.')) {
+    showSubmitStatus('Please enter a complete website URL (e.g. https://example.com/event).', 'error');
+    return;
+  }
+
+  // ── Send via EmailJS ──
+  if (typeof emailjs === 'undefined' || !window._EMAILJS_READY) {
+    showSubmitStatus('Email service not available. Please email info@livabletelluride.org directly with your event link.', 'error');
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
+  btn.style.opacity = '0.6';
+
+  const siteUrl = window.location.origin + window.location.pathname;
+  const approveUrl = siteUrl + '?event_action=approve&event_url=' + encodeURIComponent(url);
+  const denyUrl = siteUrl + '?event_action=deny&event_url=' + encodeURIComponent(url);
+
+  emailjs.send(window._EMAILJS_SERVICE, window._EMAILJS_EVENT_TEMPLATE || window._EMAILJS_TEMPLATE, {
+    to_email: 'info@livabletelluride.org',
+    from_name: submitter,
+    event_name: eventName || '(not provided)',
+    event_url: url,
+    approve_url: approveUrl,
+    deny_url: denyUrl,
+    site_name: 'Telluride Gov Hub',
+    // Fallback fields for reusing the comment template
+    topic: 'Event Submission',
+    comment_body: 'Event URL: ' + url + (eventName ? '\nEvent Name: ' + eventName : '') + '\nSubmitted by: ' + submitter,
+    comment_type: 'event_submission',
+    review_url: siteUrl
+  }).then(
+    () => {
+      showSubmitStatus('Thanks! Your event has been submitted for review.', 'success');
+      urlInput.value = '';
+      nameInput.value = '';
+      submitterInput.value = '';
+      btn.disabled = false;
+      btn.textContent = 'Submit for Review';
+      btn.style.opacity = '1';
+    },
+    (err) => {
+      console.warn('[GovHub] Event submission email failed:', err);
+      showSubmitStatus('Something went wrong. Please try again or email info@livabletelluride.org directly.', 'error');
+      btn.disabled = false;
+      btn.textContent = 'Submit for Review';
+      btn.style.opacity = '1';
+    }
+  );
+}
+
+function showSubmitStatus(msg, type) {
+  const el = document.getElementById('eventSubmitStatus');
+  if (!el) return;
+  el.textContent = msg;
+  el.style.display = 'block';
+  el.style.background = type === 'success' ? 'rgba(33,68,60,0.08)' : 'rgba(180,83,9,0.08)';
+  el.style.color = type === 'success' ? 'var(--forest)' : '#b45309';
+}
 </script>
 
 <!-- ══════════ Events Around Me Modal ══════════ -->
@@ -10779,7 +11465,7 @@ setInterval(() => {
     <span class="nav-icon">📬</span> Subscribe
   </button>
   <button class="mobile-more-item" data-tab="links">
-    <span class="nav-icon">🔗</span> Quick Links
+    <span class="nav-icon">🔗</span> Local Groups
   </button>
 </div>
 <nav class="mobile-nav" id="mobileNav">
@@ -10829,10 +11515,18 @@ setInterval(() => {
     // Trigger any tab-specific rendering
     if (tabName === 'land-use' && typeof renderLandUseTab === 'function') renderLandUseTab();
     if (tabName === 'gondola' && typeof renderGondolaTab === 'function') renderGondolaTab();
+    // Toggle left-sidebar cards: "What to Follow" on Meetings & Legals, Festival Season + Submit on Events
+    const wtfCard = document.getElementById('sidebarWhatToFollow');
+    const festCard = document.getElementById('sidebarFestivals');
+    const submitCard = document.getElementById('sidebarSubmitEvent');
+    if (wtfCard) wtfCard.style.display = (tabName === 'meetings' || tabName === 'legals') ? '' : 'none';
+    if (festCard) festCard.style.display = (tabName === 'news') ? '' : 'none';
+    if (submitCard) submitCard.style.display = (tabName === 'news') ? '' : 'none';
     const layout = document.querySelector('.main-layout');
     if (layout) {
       layout.classList.toggle('subscribe-active', tabName === 'subscribe');
       layout.classList.toggle('landuse-active', tabName === 'land-use' || tabName === 'gondola');
+      layout.classList.toggle('links-active', tabName === 'links');
     }
     // Scroll to top of content
     window.scrollTo({ top: 0, behavior: 'smooth' });
