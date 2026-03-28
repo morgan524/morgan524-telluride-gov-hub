@@ -1581,7 +1581,7 @@
       color: var(--text-secondary);
     }
     .comment-actions {
-      margin-top: 5px;
+      margin-top: 8px;
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
@@ -8125,7 +8125,7 @@ function renderOfficialCommentInfo(item) {
 
   const meetingDate = item.eventDate ? fullDate(item.eventDate) : '';
   const subject = encodeURIComponent(`Please accept these written comments for ${item.title || 'Meeting'} - ${meetingDate}`);
-  return `<div class="comment-note">${quote}</div><div class="comment-actions"><a class="comment-email-btn" href="mailto:${email}?subject=${subject}">✉️ ${label}</a></div>`;
+  return `<div class="comment-note">${quote}<div class="comment-actions"><a class="comment-email-btn" href="mailto:${email}?subject=${subject}">✉️ ${label}</a></div></div>`;
 }
 
 // ── Quick Reactions: perspective buttons on meeting cards ──
