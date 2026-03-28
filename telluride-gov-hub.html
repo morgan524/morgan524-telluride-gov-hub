@@ -5050,11 +5050,31 @@ function truncate(text, maxLen = 200) {
   return text.slice(0, maxLen).replace(/\s+\S*$/, '') + '…';
 }
 
+// Parse a date string into a LOCAL-midnight Date (avoids UTC-to-Mountain off-by-one).
+// Accepts "March 31, 2026", "2026-03-31", "2026-03-31T10:00:00", etc.
+function localDate(str) {
+  if (!str) return null;
+  const s = String(str).trim();
+  // ISO format "YYYY-MM-DD..." — split on dash to avoid UTC interpretation
+  const iso = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (iso) return new Date(+iso[1], +iso[2] - 1, +iso[3]);
+  // Named month format "Month Day, Year"
+  const named = s.match(/^([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})/);
+  if (named) {
+    const d = new Date(named[1] + ' ' + named[2] + ', ' + named[3]);
+    // new Date("March 31, 2026") may be UTC — re-create as local
+    return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  }
+  // Fallback — parse then force to local midnight
+  const d = new Date(s);
+  if (isNaN(d)) return null;
+  return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+}
+
 function parseEventDate(dateStr) {
   if (!dateStr) return null;
   const parts = dateStr.split(' - ');
-  const d = new Date(parts[0].trim());
-  return isNaN(d) ? null : d;
+  return localDate(parts[0].trim());
 }
 
 function friendlyDate(d) {
@@ -5127,7 +5147,7 @@ async function fetchTellurideMeetings() {
         title: isCanceled ? cleanName + ' -- CANCELED' : cleanName,
         link: TELLURIDE_MEETING_DETAIL + m.Id,
         description: '',
-        eventDate: new Date(m.MeetingDate),
+        eventDate: localDate(m.MeetingDate),
         eventDates: '',
         eventTimes: m.MeetingTime || '',
         location: m.MeetingLocation || '',
@@ -5203,7 +5223,7 @@ async function fetchCountyMeetings() {
       // Parse single time
       const singleTimeMatch = !timeMatch ? descText.match(/(\d{1,2}:\d{2}\s*[APap][Mm])/) : null;
 
-      let eventDate = dateMatch ? new Date(dateMatch[1]) : new Date(item.pubDate);
+      let eventDate = dateMatch ? localDate(dateMatch[1]) : localDate(item.pubDate);
 
       // County government meetings (BOCC, Planning Commission, etc.) have agendas
       // on the CivicClerk portal
@@ -5385,7 +5405,7 @@ const COUNTY_CACHED_DATA = [
 
 function getCountyCachedMeetings() {
   return COUNTY_CACHED_DATA.map(m => {
-    const eventDate = new Date(m.date);
+    const eventDate = localDate(m.date);
     const link = m.civicClerkId
       ? COUNTY_CIVICCLERK_BASE + m.civicClerkId + '/files'
       : COUNTY_CIVICCLERK_FALLBACK;
@@ -5580,7 +5600,7 @@ const MV_CACHED_DATA = [
 
 function getMVMeetings() {
   return MV_CACHED_DATA.map(m => {
-    const eventDate = new Date(m.date);
+    const eventDate = localDate(m.date);
     const hasAgenda = !!m.agendaUrl;
     const link = m.agendaUrl || (m.board === 'drb' ? MV_DRB_URL : MV_TC_URL);
 
@@ -5704,7 +5724,7 @@ const SCHOOL_CACHED_DATA = [
 
 function getSchoolMeetings() {
   return SCHOOL_CACHED_DATA.map(m => {
-    const eventDate = new Date(m.date);
+    const eventDate = localDate(m.date);
     const hasAgenda = !!m.agendaUrl;
     const link = m.agendaUrl || SCHOOL_BOARD_URL;
 
@@ -5787,7 +5807,7 @@ const FIRE_CACHED_DATA = [
 
 function getFireMeetings() {
   return FIRE_CACHED_DATA.map(m => {
-    const eventDate = new Date(m.date);
+    const eventDate = localDate(m.date);
     const hasAgenda = !!m.agendaUrl;
     const link = m.agendaUrl || FIRE_BOARD_URL;
 
@@ -5881,7 +5901,7 @@ const MED_CACHED_DATA = [
 
 function getMedMeetings() {
   return MED_CACHED_DATA.map(m => {
-    const eventDate = new Date(m.date);
+    const eventDate = localDate(m.date);
     const hasAgenda = !!m.agendaUrl;
     const link = m.agendaUrl || MED_BOARD_URL;
 
@@ -6003,7 +6023,7 @@ const NORWOOD_CACHED_DATA = [
 function getNorwoodMeetings() {
   const boardUrls = { bot: NORWOOD_BOT_URL, pz: NORWOOD_PZ_URL, nwc: NORWOOD_NWC_URL, san: NORWOOD_SAN_URL };
   return NORWOOD_CACHED_DATA.map(m => {
-    const eventDate = new Date(m.date);
+    const eventDate = localDate(m.date);
     const hasAgenda = !!m.agendaUrl;
     const link = m.agendaUrl || boardUrls[m.board] || NORWOOD_BOT_URL;
 
@@ -6118,7 +6138,7 @@ const OPHIR_CACHED_DATA = [
 function getOphirMeetings() {
   const boardUrls = { ga: OPHIR_GA_URL, pz: OPHIR_PZ_URL };
   return OPHIR_CACHED_DATA.map(m => {
-    const eventDate = new Date(m.date);
+    const eventDate = localDate(m.date);
     const hasAgenda = !!m.agendaUrl;
     const link = m.agendaUrl || boardUrls[m.board] || OPHIR_GA_URL;
 
@@ -6191,7 +6211,7 @@ const AIRPORT_CACHED_DATA = [
 
 function getAirportMeetings() {
   return AIRPORT_CACHED_DATA.map(m => {
-    const eventDate = new Date(m.date);
+    const eventDate = localDate(m.date);
     return {
       title: m.title,
       link: AIRPORT_BOARD_URL,
@@ -6924,7 +6944,7 @@ function renderPasscodeInfo(item) {
 
 function getSmartMeetings() {
   return SMART_CACHED_DATA.map(m => {
-    const eventDate = new Date(m.date);
+    const eventDate = localDate(m.date);
     const hasAgenda = !!m.agendaUrl;
     const link = m.agendaUrl || SMART_BOARD_URL;
 
@@ -7494,8 +7514,8 @@ async function fetchTellurideTimesEvents() {
 
       // Parse date
       const dateStr = `${monthStr} ${day}, ${currentYear}`;
-      const eventDate = new Date(dateStr);
-      if (isNaN(eventDate.getTime())) continue;
+      const eventDate = localDate(dateStr);
+      if (!eventDate || isNaN(eventDate.getTime())) continue;
 
       // Extract time from the title (e.g., "Event Name, 7 p.m." or "Event, 12-1 p.m.")
       const timeMatch = title.match(/,\s*(\d{1,2}(?::\d{2})?\s*(?:a\.m\.|p\.m\.|AM|PM)(?:\s*[--]\s*\d{1,2}(?::\d{2})?\s*(?:a\.m\.|p\.m\.|AM|PM))?)/i);
@@ -9637,8 +9657,8 @@ const LEGAL_NOTICES = [
 function legalCalendarButtons(notice) {
   if (!notice.event) return '';
   const evt = notice.event;
-  const eventDate = new Date(evt.date);
-  if (isNaN(eventDate)) return '';
+  const eventDate = localDate(evt.date);
+  if (!eventDate || isNaN(eventDate)) return '';
 
   // Build a compatible item for the existing calendar URL functions
   const calItem = {
@@ -11142,7 +11162,7 @@ function updateLeftSidebar() {
   if (typeof LEGAL_NOTICES !== 'undefined') {
     LEGAL_NOTICES.forEach(notice => {
       if (notice.event && notice.event.date) {
-        const eventDate = new Date(notice.event.date + ' ' + (notice.event.time || ''));
+        const eventDate = localDate(notice.event.date);
         if (!isNaN(eventDate) && eventDate >= now && eventDate <= lookAhead) {
           legalThisWeek.push(notice);
         }
