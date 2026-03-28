@@ -8574,7 +8574,8 @@ const SKIP_PATTERNS = [
 function getKeyIssueTopic(item) {
   const summary = getMeetingSummary(item);
   if (!summary) return '';
-  // getMeetingSummary already filters placeholder/error text via isBadSummary()
+  // Extra safety: reject the entire summary if it looks like placeholder/error text
+  if (isBadSummary(summary)) return '';
 
   const rawTopics = summary.split(' · ').map(t => t.trim()).filter(Boolean);
   if (rawTopics.length === 0) return '';
@@ -8585,6 +8586,8 @@ function getKeyIssueTopic(item) {
 
   rawTopics.forEach(topic => {
     const low = topic.toLowerCase();
+    // Skip placeholder/error text that leaked into individual topics
+    if (isBadSummary(topic)) return;
     // Skip procedural / non-contentious items
     if (SKIP_PATTERNS.some(pat => pat.test(topic))) return;
     // Skip pure work sessions with no substantive keywords
@@ -8614,6 +8617,25 @@ function getKeyIssueTopic(item) {
   return '';
 }
 
+// Convert a raw topic string into a natural question for Quick Reactions.
+// e.g. "Adoption of Colorado Wildfire Resiliency Code" → "What are your thoughts on the Wildfire Resiliency Code?"
+function formatReactionQuestion(topic) {
+  if (!topic) return '';
+  let q = topic
+    // Strip "(Ordinance, expected to pass)" or similar parenthetical
+    .replace(/\s*\([^)]*\)\s*/g, ' ')
+    // Strip "Adoption of" / "Approval of" — the question already implies opinion
+    .replace(/^(Adoption of|Approval of|Second Reading of|First Reading of)\s*/i, '')
+    // Strip leading "the " / "an " / "a "
+    .replace(/^(the|an|a)\s+/i, '')
+    .trim();
+  // Capitalize first letter
+  q = q.charAt(0).toUpperCase() + q.slice(1);
+  // Remove trailing period if any
+  q = q.replace(/\.\s*$/, '');
+  return 'What are your thoughts on the ' + q + '?';
+}
+
 // Only these meeting types get Quick Reactions
 const REACTION_MEETING_TYPES = /town council|board of county commissioners|bocc|smart|hospital district|harc|historic.*architectural|design review/i;
 
@@ -8627,8 +8649,9 @@ function renderQuickReactions(item) {
   const keyIssue = getKeyIssueTopic(item);
   // If no meaningful key issue was identified, hide the entire quick reactions section
   if (!keyIssue) return '';
+  const reactionQ = formatReactionQuestion(keyIssue);
   let html = '<div class="quick-reactions" data-reaction-id="' + docId + '">';
-  html += '<div class="quick-reactions-issue"><strong>Quick Reaction on Key Issue:</strong> ' + keyIssue + '</div>';
+  html += '<div class="quick-reactions-issue"><strong>Quick Reaction:</strong> ' + reactionQ + '</div>';
   html += '<div class="quick-reactions-btns">';
   QR_OPTIONS.forEach(o => {
     html += `<button class="qr-btn" data-key="${o.key}" data-doc="${docId}" onclick="handleQuickReaction(this, '${docId}', '${o.key}')">${o.emoji} ${o.label} <span class="qr-count">0</span></button>`;
