@@ -251,6 +251,54 @@
       .subscribe-bar { font-size: 0.72rem; gap: 8px; padding: 6px 12px; }
       .subscribe-bar-btn { font-size: 0.7rem; padding: 5px 12px; }
     }
+    /* ── Subscribe Modal ── */
+    .subscribe-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 16px;
+      overflow-y: auto;
+    }
+    .subscribe-modal-overlay.open { display: flex; }
+    .subscribe-modal {
+      background: var(--cream);
+      border-radius: 24px;
+      max-width: 680px;
+      width: 100%;
+      padding: 32px 28px;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      max-height: calc(100vh - 80px);
+      overflow-y: auto;
+    }
+    .subscribe-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 36px;
+      height: 36px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.06);
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: background 0.15s;
+      z-index: 1;
+    }
+    .subscribe-modal-close:hover { background: rgba(0,0,0,0.12); }
+    .subscribe-modal .subscribe-hero { margin-bottom: 16px; }
+    .subscribe-modal .subscribe-section { margin-bottom: 16px; }
+    @media (max-width: 500px) {
+      .subscribe-modal { padding: 20px 16px; border-radius: 18px; }
+    }
 
     .tab-btn {
       padding: 14px 20px;
@@ -3188,7 +3236,7 @@
   <!-- ── Subscribe Bar ── -->
   <div class="subscribe-bar">
     <span class="subscribe-bar-text">Stay informed on the topics that matter to you</span>
-    <button class="subscribe-bar-btn" onclick="document.querySelectorAll('.tab-btn').forEach(b=>{if(b.dataset.tab==='subscribe'){b.click();}});">Subscribe to Your Topics</button>
+    <button class="subscribe-bar-btn" onclick="openSubscribeModal();">Subscribe to Your Topics</button>
   </div>
 
   <div class="container">
@@ -12023,5 +12071,49 @@ function showSubmitStatus(msg, type) {
 })();
 </script>
 
+<!-- ══════════ Subscribe Modal ══════════ -->
+<div class="subscribe-modal-overlay" id="subscribeModalOverlay" onclick="if(event.target===this)closeSubscribeModal();">
+  <div class="subscribe-modal">
+    <button class="subscribe-modal-close" onclick="closeSubscribeModal();" aria-label="Close">&times;</button>
+    <div id="subscribeModalBody"></div>
+  </div>
+</div>
+<script>
+// Track where the subscribe content originally lives
+var _subscribeOriginalParent = null;
+var _subscribeOriginalNext = null;
+
+function openSubscribeModal() {
+  var content = document.getElementById('tab-subscribe');
+  var modalBody = document.getElementById('subscribeModalBody');
+  var overlay = document.getElementById('subscribeModalOverlay');
+  if (!content || !modalBody || !overlay) return;
+  // Remember original position
+  _subscribeOriginalParent = content.parentNode;
+  _subscribeOriginalNext = content.nextSibling;
+  // Move into modal and make visible
+  modalBody.appendChild(content);
+  content.style.display = 'block';
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeSubscribeModal() {
+  var content = document.getElementById('tab-subscribe');
+  var overlay = document.getElementById('subscribeModalOverlay');
+  if (!content || !overlay) return;
+  // Move content back to original location
+  if (_subscribeOriginalParent) {
+    if (_subscribeOriginalNext) {
+      _subscribeOriginalParent.insertBefore(content, _subscribeOriginalNext);
+    } else {
+      _subscribeOriginalParent.appendChild(content);
+    }
+  }
+  content.style.display = '';
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
 </body>
 </html>
