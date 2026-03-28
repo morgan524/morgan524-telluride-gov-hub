@@ -2059,9 +2059,63 @@
     .housing-card-note {
       font-size: 0.76rem; font-style: italic; color: var(--text-muted); margin-top: 8px;
     }
+    /* ── Housing Lottery Cards ── */
+    .housing-card.lottery {
+      border: 2px solid var(--forest);
+      background: rgba(33,68,60,0.03);
+    }
+    .housing-lottery-info {
+      margin-bottom: 14px;
+    }
+    .lottery-banner {
+      background: var(--forest);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 8px 14px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      text-align: center;
+      letter-spacing: 0.03em;
+    }
+    .lottery-details {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 6px 12px;
+      font-size: 0.85rem;
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }
+    .lottery-details dt {
+      font-weight: 600;
+      color: var(--forest);
+      white-space: nowrap;
+    }
+    .lottery-details dd {
+      margin: 0;
+      color: var(--text-primary);
+    }
+    .lottery-apply-btn {
+      display: block;
+      background: var(--forest);
+      color: #fff !important;
+      text-align: center;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .lottery-apply-btn:hover {
+      background: #1a4a3e;
+      transform: translateY(-1px);
+    }
     @media (max-width: 600px) {
       .housing-card-details { grid-template-columns: 1fr; }
       .housing-source-grid { grid-template-columns: 1fr; }
+      .lottery-details { grid-template-columns: 1fr; }
+      .lottery-details dt { white-space: normal; }
     }
 
     /* ── Legal Notice Cards ── */
@@ -10494,35 +10548,56 @@ const HOUSING_LISTINGS = [
   {
     title: '🎟️ LOTTERY: Silver Jack Unit 202 — 3BR Condo',
     type: 'public',
+    lottery: true,
     address: '155 W Pacific Ave, Telluride, CO 81435',
     lat: 37.9378, lng: -107.8155,
     beds: '3 Bedroom, 2 Bath (1,330 sq ft)', price: '$405,507 (Tier 1, deed-restricted)',
     source: 'SMRHA Lottery',
     contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
     url: 'https://smrha.org/lottery',
-    note: 'Housing lottery — applications due by noon April 10, 2026. Drawing: April 24, 10 AM. Must meet employment (1,400 hrs), residency (12 mo in 4-county region), and asset requirements. Up to 220% AMI. Apply at smrha.org/lottery or pick up at 820 Black Bear Rd G17.'
+    applyUrl: 'https://smrha.org/lottery',
+    deadline: 'April 10, 2026 at noon',
+    drawingDate: 'April 24, 2026 at 10:00 AM',
+    drawingLocation: 'SMRHA Office, 820 Black Bear Rd, Unit G17, Telluride',
+    pickupLocation: '820 Black Bear Rd, Unit G17, Telluride (or download at smrha.org/lottery)',
+    eligibility: 'Must work 1,400+ hrs/yr in San Miguel, Ouray, San Juan, or Montrose County · Must have lived in 4-county region 12+ months · Household income up to 220% AMI · Asset limits apply',
+    note: 'Ownership lottery under Telluride Affordable Housing Guidelines. Applications available at smrha.org/lottery or pick up in person.'
   },
   {
     title: '🎟️ LOTTERY: Silver Jack Unit 205 — 2BR Condo',
     type: 'public',
+    lottery: true,
     address: '155 W Pacific Ave, Telluride, CO 81435',
     lat: 37.9378, lng: -107.8155,
     beds: '2 Bedroom, 1 Bath (935 sq ft)', price: '$368,620 (Tier 1, deed-restricted)',
     source: 'SMRHA Lottery',
     contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
     url: 'https://smrha.org/lottery',
-    note: 'Housing lottery — applications due by noon April 10, 2026. Drawing: April 24, 10 AM. Must meet employment (1,400 hrs), residency (12 mo in 4-county region), and asset requirements. Up to 220% AMI. Apply at smrha.org/lottery or pick up at 820 Black Bear Rd G17.'
+    applyUrl: 'https://smrha.org/lottery',
+    deadline: 'April 10, 2026 at noon',
+    drawingDate: 'April 24, 2026 at 10:00 AM',
+    drawingLocation: 'SMRHA Office, 820 Black Bear Rd, Unit G17, Telluride',
+    pickupLocation: '820 Black Bear Rd, Unit G17, Telluride (or download at smrha.org/lottery)',
+    eligibility: 'Must work 1,400+ hrs/yr in San Miguel, Ouray, San Juan, or Montrose County · Must have lived in 4-county region 12+ months · Household income up to 220% AMI · Asset limits apply',
+    note: 'Ownership lottery under Telluride Affordable Housing Guidelines. Applications available at smrha.org/lottery or pick up in person.'
   },
   {
     title: '🎟️ LOTTERY: Element 52 SW-102 — 2BR Condo',
     type: 'public',
+    lottery: true,
     address: '398 S Davis St, Telluride, CO 81435',
     lat: 37.9365, lng: -107.8118,
     beds: '2 Bedroom, 1 Bath (479 sq ft)', price: '$352,529 (Tier 2, deed-restricted)',
     source: 'SMRHA Lottery',
     contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
     url: 'https://smrha.org/lottery',
-    note: 'Housing lottery — applications due by noon April 10, 2026. Drawing: April 24, 10 AM. Must meet employment (1,400 hrs), residency (12 mo in 4-county region), and asset requirements. Up to 220% AMI. Apply at smrha.org/lottery or pick up at 820 Black Bear Rd G17.'
+    applyUrl: 'https://smrha.org/lottery',
+    deadline: 'April 10, 2026 at noon',
+    drawingDate: 'April 24, 2026 at 10:00 AM',
+    drawingLocation: 'SMRHA Office, 820 Black Bear Rd, Unit G17, Telluride',
+    pickupLocation: '820 Black Bear Rd, Unit G17, Telluride (or download at smrha.org/lottery)',
+    eligibility: 'Must work 1,400+ hrs/yr in San Miguel, Ouray, San Juan, or Montrose County · Must have lived in 4-county region 12+ months · Household income up to 220% AMI · Asset limits apply',
+    note: 'Ownership lottery under Telluride Affordable Housing Guidelines. Applications available at smrha.org/lottery or pick up in person.'
   },
   /* ── Public / Deed-Restricted ── */
   {
@@ -10647,11 +10722,28 @@ function renderHousingListings() {
       (h.lng - 0.008) + ',' + (h.lat - 0.005) + ',' + (h.lng + 0.008) + ',' + (h.lat + 0.005) +
       '&layer=mapnik&marker=' + h.lat + ',' + h.lng;
 
-    html += '<div class="housing-card" data-type="' + h.type + '">' +
+    // Build lottery info block if applicable
+    let lotteryHtml = '';
+    if (h.lottery) {
+      lotteryHtml = '<div class="housing-lottery-info">' +
+        '<div class="lottery-banner">🎟️ HOUSING LOTTERY — Applications Open</div>' +
+        '<dl class="lottery-details">' +
+          '<dt>📅 Application Deadline</dt><dd><strong>' + h.deadline + '</strong></dd>' +
+          '<dt>🎲 Lottery Drawing</dt><dd>' + h.drawingDate + '</dd>' +
+          '<dt>📍 Drawing Location</dt><dd>' + h.drawingLocation + '</dd>' +
+          '<dt>📋 Pick Up Application</dt><dd>' + h.pickupLocation + '</dd>' +
+          '<dt>✅ Eligibility</dt><dd>' + h.eligibility + '</dd>' +
+        '</dl>' +
+        '<a href="' + h.applyUrl + '" target="_blank" rel="noopener" class="lottery-apply-btn">📝 Apply Now — Get Application</a>' +
+      '</div>';
+    }
+
+    html += '<div class="housing-card' + (h.lottery ? ' lottery' : '') + '" data-type="' + h.type + '">' +
       '<div class="housing-card-header">' +
         '<div class="housing-card-title">' + h.title + '</div>' +
         '<span class="housing-card-source ' + sourceClass + '">' + sourceLabel + '</span>' +
       '</div>' +
+      lotteryHtml +
       '<dl class="housing-card-details">' +
         '<dt>Address</dt><dd>' + h.address + '</dd>' +
         '<dt>Bedrooms</dt><dd>' + h.beds + '</dd>' +
