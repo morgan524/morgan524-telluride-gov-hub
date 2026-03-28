@@ -1224,6 +1224,45 @@
     #tab-meetings .meeting-summary strong { font-size: 0.91rem; }
     #tab-meetings .chip { font-size: 0.86rem; padding: 7px 16px; }
 
+    /* ── Meetings card redesign: logo top-right, full-width content ── */
+    #tab-meetings .card {
+      flex-direction: column;
+      align-items: stretch;
+      position: relative;
+    }
+    #tab-meetings .card > .card-logo {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      width: 64px;
+      height: 64px;
+      border-radius: 10px;
+      z-index: 1;
+    }
+    #tab-meetings .card-body {
+      width: 100%;
+    }
+    #tab-meetings .event-card-main {
+      display: block;
+    }
+    #tab-meetings .event-card-content {
+      width: 100%;
+    }
+    #tab-meetings .event-card-content > .source-badge,
+    #tab-meetings .event-card-content > .agenda-link,
+    #tab-meetings .event-card-content > h3,
+    #tab-meetings .event-card-content > .meta {
+      padding-right: 80px; /* leave room for logo in top-right */
+    }
+    #tab-meetings .event-illustration {
+      display: none;
+    }
+    #tab-meetings .quick-reactions,
+    #tab-meetings .card-actions,
+    #tab-meetings .comment-actions {
+      width: 100%;
+    }
+
     .meeting-summary {
       font-size: 0.76rem;
       color: var(--text-secondary);
