@@ -8629,8 +8629,8 @@ function formatReactionQuestion(topic) {
   return 'What are your thoughts on the ' + q + '?';
 }
 
-// Only these meeting types get Quick Reactions
-const REACTION_MEETING_TYPES = /town council|board of county commissioners|bocc|smart|hospital district|harc|historic.*architectural|design review/i;
+// Only these meeting types get Quick Reactions (not DRB — those are individual project reviews)
+const REACTION_MEETING_TYPES = /town council|board of county commissioners|bocc|smart|hospital district|harc|historic.*architectural/i;
 
 function renderQuickReactions(item) {
   // Only show when an agenda has been posted
