@@ -846,6 +846,11 @@
     .main-layout.links-active .expand-pill-right {
       display: none !important;
     }
+    /* Hide right sidebar (Filter by Topic) on Events tab */
+    .main-layout.news-active .sidebar,
+    .main-layout.news-active .expand-pill-right {
+      display: none !important;
+    }
     /* Enlarge card logos 50% on Local News tab */
     #tab-local-news .card-logo {
       width: 138px;
@@ -8048,6 +8053,7 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     layout.classList.toggle('landuse-active', btn.dataset.tab === 'land-use' || btn.dataset.tab === 'gondola');
     layout.classList.toggle('localnews-active', btn.dataset.tab === 'local-news');
     layout.classList.toggle('links-active', btn.dataset.tab === 'links');
+    layout.classList.toggle('news-active', btn.dataset.tab === 'news');
   });
 });
 
@@ -9661,7 +9667,7 @@ const TELLURIDE_FESTIVALS = [
     logo: 'https://www.mountainfilm.org/site/assets/files/1/mf18-mfbanner-kroll-matt-highres-2_full_1.jpg',
     url: 'https://www.mountainfilm.org/', ticketUrl: 'https://www.mountainfilm.org/festival/passes/', ticketLabel: 'Buy Passes', promo: '2026 festival passes on sale now' },
   { name: 'Telluride Balloon Festival', month: 5, dayStart: 5, dayEnd: 7, icon: '🎈',
-    logo: '',
+    logo: 'https://raw.githubusercontent.com/morgan524/morgan524-telluride-gov-hub/main/logo/Balloon.avif',
     url: 'https://www.tellurideballoonfest.com/', ticketUrl: 'https://www.tellurideballoonfest.com/', ticketLabel: 'Get Tickets', promo: 'June 5–7, 2026 — free to attend, paid gondola rides' },
   { name: 'Telluride Food + Vine', month: 5, dayStart: 12, dayEnd: 14, icon: '🍷',
     logo: 'https://cdn.prod.website-files.com/63e3b404578d3e63abef7364/69b1ded759adc5521903fd3e_TFV%20Logo%20Full%E2%84%A2.svg',
@@ -11757,6 +11763,7 @@ function showSubmitStatus(msg, type) {
       layout.classList.toggle('subscribe-active', tabName === 'subscribe');
       layout.classList.toggle('landuse-active', tabName === 'land-use' || tabName === 'gondola');
       layout.classList.toggle('links-active', tabName === 'links');
+      layout.classList.toggle('news-active', tabName === 'news');
     }
     // Scroll to top of content
     window.scrollTo({ top: 0, behavior: 'smooth' });
