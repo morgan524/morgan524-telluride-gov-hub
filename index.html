@@ -1497,7 +1497,7 @@
       border-radius: 8px;
     }
     .quick-reactions-issue {
-      font-size: 0.74rem;
+      font-size: 18px;
       line-height: 1.4;
       color: var(--text-primary);
       margin-bottom: 8px;
@@ -1552,8 +1552,7 @@
     }
 
     /* ── Meetings tab: 30% larger Quick Reactions ── */
-    #tab-meetings .quick-reactions-issue { font-size: 0.92rem; }
-    #tab-meetings .quick-reactions-label { font-size: 0.88rem; }
+    #tab-meetings .quick-reactions-issue { font-size: 18px; }
     #tab-meetings .qr-btn { font-size: 0.88rem; padding: 6px 14px; }
     #tab-meetings .qr-btn .qr-count { font-size: 0.81rem; }
 
@@ -8308,7 +8307,7 @@ const QR_OPTIONS = [
   { key: 'matters',    emoji: '💡', label: 'This Matters to Me' },
   { key: 'learn',      emoji: '📖', label: 'I Want to Learn More' },
   { key: 'concerns',   emoji: '⚠️', label: 'I Have Concerns' },
-  { key: 'handled',    emoji: '✅', label: 'Well Handled' }
+  { key: 'handled',    emoji: '✅', label: 'In Support' }
 ];
 
 function meetingReactionId(item) {
@@ -8467,7 +8466,6 @@ function renderQuickReactions(item) {
   if (keyIssue) {
     html += '<div class="quick-reactions-issue"><strong>Quick Reaction on key issue:</strong> ' + keyIssue + '</div>';
   }
-  html += '<div class="quick-reactions-label">Quick Reactions</div>';
   html += '<div class="quick-reactions-btns">';
   QR_OPTIONS.forEach(o => {
     html += `<button class="qr-btn" data-key="${o.key}" data-doc="${docId}" onclick="handleQuickReaction(this, '${docId}', '${o.key}')">${o.emoji} ${o.label} <span class="qr-count">0</span></button>`;
