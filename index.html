@@ -11277,13 +11277,18 @@ function renderBlogSidebar(rssPosts) {
   if (!container) return;
 
   // Merge RSS posts with hardcoded posts, newest first
-  // RSS posts take priority if they match an existing hardcoded post by URL
+  // Hardcoded posts have curated summaries and take priority
+  // Only add RSS posts that don't match any hardcoded post by title
   var allPosts = [...LIVABLE_BLOG_POSTS];
   if (rssPosts && rssPosts.length > 0) {
-    var existingUrls = new Set(allPosts.map(function(p) { return p.url; }));
+    var existingTitles = new Set(allPosts.map(function(p) {
+      return p.title.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 30);
+    }));
     rssPosts.forEach(function(rp) {
-      if (!existingUrls.has(rp.url)) {
-        allPosts.unshift(rp); // New posts go to top
+      var normTitle = rp.title.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 30);
+      if (!existingTitles.has(normTitle)) {
+        allPosts.unshift(rp); // Truly new posts go to top
+        existingTitles.add(normTitle);
       }
     });
   }
