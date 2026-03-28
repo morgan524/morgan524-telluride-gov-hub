@@ -852,6 +852,11 @@
     .main-layout.news-active .expand-pill-right {
       display: none !important;
     }
+    /* Hide right sidebar on Legal Notices tab */
+    .main-layout.legals-active .sidebar,
+    .main-layout.legals-active .expand-pill-right {
+      display: none !important;
+    }
     .main-layout.news-active .festival-sidebar {
       display: block !important;
     }
@@ -1680,6 +1685,30 @@
       color: inherit;
       display: block;
       transition: all 0.25s;
+    }
+    .legal-card-grid {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 18px;
+      align-items: start;
+    }
+    .legal-card-grid:not(:has(.legal-card-map)) {
+      grid-template-columns: 1fr;
+    }
+    .legal-card-map {
+      width: 200px;
+      height: 180px;
+      flex-shrink: 0;
+    }
+    .legal-card-map iframe {
+      pointer-events: none;
+    }
+    .legal-card:hover .legal-card-map iframe {
+      pointer-events: auto;
+    }
+    @media (max-width: 600px) {
+      .legal-card-grid { grid-template-columns: 1fr; }
+      .legal-card-map { width: 100%; height: 150px; }
     }
     .legal-card:hover {
       box-shadow: var(--shadow);
@@ -3175,6 +3204,15 @@
     </div>
 
     <!-- Festival Season moved to right sidebar -->
+
+    <!-- Legal Notices of Interest (shown on Legals tab) -->
+    <div class="left-sidebar-card" id="sidebarLegalInterest" style="display:none;">
+      <div class="left-sidebar-title" style="text-align:center;border-bottom:none;padding-bottom:0;margin-bottom:2px;">⚖️ Legal Notices</div>
+      <div style="font-size:1.05rem;font-weight:900;letter-spacing:-0.02em;color:var(--text-primary);text-align:center;margin-bottom:10px;">Of Interest</div>
+      <div id="legalInterestContent" style="display:grid;gap:10px;font-size:0.78rem;line-height:1.5;color:var(--text-secondary);">
+        <div style="text-align:center;color:var(--text-muted);font-size:0.75rem;">Loading...</div>
+      </div>
+    </div>
 
   </aside>
 
@@ -8076,8 +8114,10 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     // Toggle left-sidebar cards per tab
     const wtfCard = document.getElementById('sidebarWhatToFollow');
     const submitCard = document.getElementById('sidebarSubmitEvent');
-    if (wtfCard) wtfCard.style.display = (btn.dataset.tab === 'meetings' || btn.dataset.tab === 'legals') ? '' : 'none';
+    const legalInterestCard = document.getElementById('sidebarLegalInterest');
+    if (wtfCard) wtfCard.style.display = (btn.dataset.tab === 'meetings') ? '' : 'none';
     if (submitCard) submitCard.style.display = (btn.dataset.tab === 'news') ? '' : 'none';
+    if (legalInterestCard) legalInterestCard.style.display = (btn.dataset.tab === 'legals') ? '' : 'none';
     // Hide sidebars on Subscribe, Land Use, and Gondola tabs, show on all others
     const layout = document.querySelector('.main-layout');
     layout.classList.toggle('subscribe-active', btn.dataset.tab === 'subscribe');
@@ -8085,6 +8125,7 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     layout.classList.toggle('localnews-active', btn.dataset.tab === 'local-news');
     layout.classList.toggle('links-active', btn.dataset.tab === 'links');
     layout.classList.toggle('news-active', btn.dataset.tab === 'news');
+    layout.classList.toggle('legals-active', btn.dataset.tab === 'legals');
   });
 });
 
@@ -8676,7 +8717,8 @@ const LEGAL_NOTICES = [
     summary: 'Silver Jack 202, Silver Jack 205, and Element 52 G-17 at 155 W Pacific Ave and 398 S Davis St will be offered by Ownership Lottery under the Telluride Affordable Housing Guidelines. Applications available at smrha.org/lottery. Submit by appointment from March 20 through April 10 at noon.',
     deadline: 'Applications: March 20 - April 10, 2026 at Noon',
     dates: '3/12, 3/19, 3/26, 4/2',
-    papers: ['ttimes']
+    papers: ['ttimes'],
+    address: '155 W Pacific Ave, Telluride, CO'
   },
   {
     title: 'Request for Proposals -- Office Painting at 333 W Colorado Ave',
@@ -8690,7 +8732,8 @@ const LEGAL_NOTICES = [
     summary: 'San Miguel County is seeking proposals from contractors to paint an office at 333 W Colorado Ave, Telluride. RFP details available at sanmiguelcountyco.gov/bids or at 333 W Colorado Ave, 2nd Floor. Contact Greg Pollio at (970) 369-5424.',
     deadline: 'March 27, 2026 at 5:00 PM',
     dates: '3/5, 3/12, 3/19, 3/26',
-    papers: ['ttimes', 'npost']
+    papers: ['ttimes', 'npost'],
+    address: '333 W Colorado Ave, Telluride, CO'
   },
   {
     title: 'Request for Proposals -- Summer Burn Pile Construction',
@@ -8718,7 +8761,8 @@ const LEGAL_NOTICES = [
     summary: 'Mountain Village is accepting bids for the 2026 Parking Lots Overlay Project. Bid packets available at townofmountainvillage.com or at Public Works, 411 Mountain Village Blvd, 2nd Floor. Contact Scott Pittenger (970) 708-8690 or Jenny Bates (970) 369-8201.',
     deadline: 'Bids due April 17, 2026 at 12:00 Noon',
     dates: '3/19, 3/26',
-    papers: ['ttimes']
+    papers: ['ttimes'],
+    address: '411 Mountain Village Blvd, Mountain Village, CO'
   },
   {
     title: 'Public Hearing -- Colorado Wildfire Resiliency Code Adoption',
@@ -8733,7 +8777,8 @@ const LEGAL_NOTICES = [
     deadline: 'Comments by March 26 -- Hearing April 1 at 10:00 AM',
     dates: '3/19',
     papers: ['ttimes', 'npost'],
-    event: { date: 'April 1, 2026', time: '10:00 AM', endTime: '12:00 PM', location: 'Miramonte Building, 333 W Colorado Ave, 2nd Floor, Telluride' }
+    event: { date: 'April 1, 2026', time: '10:00 AM', endTime: '12:00 PM', location: 'Miramonte Building, 333 W Colorado Ave, 2nd Floor, Telluride' },
+    address: '333 W Colorado Ave, Telluride, CO'
   },
   {
     title: 'Norwood Water Commission -- Tiered Pricing Structure, April 2026',
@@ -8819,7 +8864,8 @@ const LEGAL_NOTICES = [
     summary: 'A site-specific development plan and vested property right has been approved for the 116 E Columbia Remodel Addition (Historic Residential zone, Block 7 Telluride). Owner: Drift Mine LLC and AZ LL. Applicant: Shift Architects, Kristine Perpar. Approved February 18, 2026.',
     deadline: 'Subject to referendum and judicial review',
     dates: '3/5',
-    papers: ['ttimes_mar5']
+    papers: ['ttimes_mar5'],
+    address: '116 E Columbia Ave, Telluride, CO'
   },
   {
     title: 'Ordinance No. 2026-1 -- Town of Ophir Roof Pitch Variance',
@@ -8834,7 +8880,8 @@ const LEGAL_NOTICES = [
     deadline: 'Hearing held March 17, 2025',
     dates: '3/5',
     papers: ['ttimes_mar5'],
-    event: { date: 'March 17, 2025', time: '7:00 PM', endTime: '9:00 PM', location: 'Ophir Town Hall, 36 Porphyry St, Ophir' }
+    event: { date: 'March 17, 2025', time: '7:00 PM', endTime: '9:00 PM', location: 'Ophir Town Hall, 36 Porphyry St, Ophir' },
+    address: '36 Porphyry St, Ophir, CO'
   },
   {
     title: 'Invitation for Bids -- 2026 Stillwell Fill and Drain Line',
@@ -8848,7 +8895,8 @@ const LEGAL_NOTICES = [
     summary: 'Sealed bids for a water main installation project (Fusible HDPE, Tomboy Rd Hillside) due at Telluride Public Works & Transit Facility, 1370 Black Bear Rd, or via email to togren@telluride.gov. Bid documents available at Public Works, (970) 729-3127, or bidnetdirect.com.',
     deadline: 'Bids due March 20, 2026 at 4:00 PM',
     dates: '2/26, 3/5',
-    papers: ['ttimes_mar5']
+    papers: ['ttimes_mar5'],
+    address: '1370 Black Bear Rd, Telluride, CO'
   },
   {
     title: 'San Miguel County Planning Commission -- Regular Meeting',
@@ -8863,7 +8911,8 @@ const LEGAL_NOTICES = [
     deadline: 'March 12, 2026 at 9:00 AM',
     dates: '3/5',
     papers: ['ttimes_mar5'],
-    event: { date: 'March 12, 2026', time: '9:00 AM', endTime: '12:00 PM', location: '333 W Colorado Ave, 2nd Floor, Telluride' }
+    event: { date: 'March 12, 2026', time: '9:00 AM', endTime: '12:00 PM', location: '333 W Colorado Ave, 2nd Floor, Telluride' },
+    address: '333 W Colorado Ave, Telluride, CO'
   },
   {
     title: 'Shavano Conservation District -- 84th Annual Meeting',
@@ -8878,7 +8927,8 @@ const LEGAL_NOTICES = [
     deadline: 'March 10, 2026 at 4:30 PM',
     dates: '3/5',
     papers: ['ttimes_mar5'],
-    event: { date: 'March 10, 2026', time: '4:30 PM', endTime: '8:00 PM', location: 'Ute Indian Museum, 17253 Chipeta Rd, Montrose' }
+    event: { date: 'March 10, 2026', time: '4:30 PM', endTime: '8:00 PM', location: 'Ute Indian Museum, 17253 Chipeta Rd, Montrose' },
+    address: '17253 Chipeta Rd, Montrose, CO'
   }
 ];
 
@@ -8952,23 +9002,39 @@ function renderLegalNotices(filter) {
 
     const calBtns = legalCalendarButtons(notice);
 
+    // Build map embed if address exists
+    let mapHtml = '';
+    if (notice.address) {
+      const mapQ = encodeURIComponent(notice.address);
+      mapHtml = '<div class="legal-card-map" onclick="event.stopPropagation();event.preventDefault();">' +
+        '<iframe src="https://maps.google.com/maps?q=' + mapQ + '&t=&z=15&ie=UTF8&iwloc=&output=embed" ' +
+        'width="100%" height="100%" style="border:0;border-radius:10px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>' +
+        '<div style="font-size:0.65rem;color:var(--text-muted);margin-top:4px;text-align:center;">📍 ' + notice.address + '</div>' +
+      '</div>';
+    }
+
     html += '<a href="' + linkUrl + '" target="_blank" rel="noopener" class="legal-card" data-filter-tag="' + notice.filterTag + '">' +
-      '<div class="legal-card-header">' +
-        eLogoHtml +
-        '<div>' +
-          '<div class="legal-card-title">' + notice.title + '</div>' +
-          '<div class="legal-card-entity ' + notice.entityClass + '">' + notice.entity + '</div>' +
+      '<div class="legal-card-grid">' +
+        '<div class="legal-card-body">' +
+          '<div class="legal-card-header">' +
+            eLogoHtml +
+            '<div>' +
+              '<div class="legal-card-title">' + notice.title + '</div>' +
+              '<div class="legal-card-entity ' + notice.entityClass + '">' + notice.entity + '</div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="legal-card-summary">' + highlightLegalNamesAndAddresses(linkGlossaryTerms(notice.summary)) + '</div>' +
+          '<div class="legal-card-meta">' +
+            '<span class="legal-meta-tag tag-type">' + notice.type + '</span>' +
+            '<span class="legal-meta-tag tag-deadline">' + notice.deadline + '</span>' +
+            '<span class="legal-meta-tag tag-date">Published: ' + notice.dates + '</span>' +
+            '<span class="legal-read-more">Read Full Notice →</span>' +
+          '</div>' +
+          calBtns +
+          paperBadgesHtml +
         '</div>' +
+        mapHtml +
       '</div>' +
-      '<div class="legal-card-summary">' + highlightLegalNamesAndAddresses(linkGlossaryTerms(notice.summary)) + '</div>' +
-      '<div class="legal-card-meta">' +
-        '<span class="legal-meta-tag tag-type">' + notice.type + '</span>' +
-        '<span class="legal-meta-tag tag-deadline">' + notice.deadline + '</span>' +
-        '<span class="legal-meta-tag tag-date">Published: ' + notice.dates + '</span>' +
-        '<span class="legal-read-more">Read Full Notice →</span>' +
-      '</div>' +
-      calBtns +
-      paperBadgesHtml +
     '</a>';
   });
 
@@ -8977,6 +9043,41 @@ function renderLegalNotices(filter) {
 
 // ══════════════════════════════════════════════════════
 // ── Cross-Cutting Topic Sidebar Filter ──
+// ── Legal Notices of Interest Sidebar ──
+function renderLegalInterestSidebar() {
+  const container = document.getElementById('legalInterestContent');
+  if (!container) return;
+
+  // Priority order: water court first, then estate notices
+  const waterCourt = LEGAL_NOTICES.filter(n => n.filterTag === 'water-court');
+  const estate = LEGAL_NOTICES.filter(n => n.filterTag === 'estate');
+  const interest = [...waterCourt, ...estate];
+
+  if (interest.length === 0) {
+    container.innerHTML = '<div style="text-align:center;color:var(--text-muted);font-size:0.75rem;">No priority notices this week.</div>';
+    return;
+  }
+
+  let html = '';
+  interest.forEach(n => {
+    const typeColor = n.filterTag === 'water-court' ? '#1a6fb5' : '#8b5e3c';
+    const typeIcon = n.filterTag === 'water-court' ? '💧' : '📜';
+    const primaryPaper = typeof PAPER_LOGOS !== 'undefined' && PAPER_LOGOS[n.papers[0]] ? PAPER_LOGOS[n.papers[0]].url : '#';
+    html += '<a href="' + primaryPaper + '" target="_blank" rel="noopener" style="display:block;padding:10px 12px;border-radius:10px;background:rgba(47,86,77,0.04);border:1px solid rgba(47,86,77,0.1);text-decoration:none;transition:background 0.15s ease;"' +
+      ' onmouseover="this.style.background=\'rgba(47,86,77,0.09)\'" onmouseout="this.style.background=\'rgba(47,86,77,0.04)\'">' +
+      '<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">' +
+        '<span style="font-size:0.85rem;">' + typeIcon + '</span>' +
+        '<span style="font-size:0.65rem;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;color:' + typeColor + ';">' + n.type + '</span>' +
+      '</div>' +
+      '<div style="font-size:0.78rem;font-weight:700;color:var(--text-primary);line-height:1.35;margin-bottom:4px;">' + n.title + '</div>' +
+      '<div style="font-size:0.72rem;color:var(--text-secondary);line-height:1.45;">' + n.summary.substring(0, 120) + '...</div>' +
+      '<div style="font-size:0.68rem;font-weight:700;color:var(--forest);margin-top:6px;">' + n.deadline + '</div>' +
+    '</a>';
+  });
+
+  container.innerHTML = html;
+}
+
 // ══════════════════════════════════════════════════════
 
 const TOPIC_DEFINITIONS = {
@@ -9331,23 +9432,39 @@ function renderLegalNoticesWithTopic() {
 
     const calBtns = legalCalendarButtons(notice);
 
+    // Build map embed if address exists
+    let mapHtml = '';
+    if (notice.address) {
+      const mapQ = encodeURIComponent(notice.address);
+      mapHtml = '<div class="legal-card-map" onclick="event.stopPropagation();event.preventDefault();">' +
+        '<iframe src="https://maps.google.com/maps?q=' + mapQ + '&t=&z=15&ie=UTF8&iwloc=&output=embed" ' +
+        'width="100%" height="100%" style="border:0;border-radius:10px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>' +
+        '<div style="font-size:0.65rem;color:var(--text-muted);margin-top:4px;text-align:center;">📍 ' + notice.address + '</div>' +
+      '</div>';
+    }
+
     html += '<a href="' + linkUrl + '" target="_blank" rel="noopener" class="legal-card" data-filter-tag="' + notice.filterTag + '">' +
-      '<div class="legal-card-header">' +
-        eLogoHtml +
-        '<div>' +
-          '<div class="legal-card-title">' + notice.title + '</div>' +
-          '<div class="legal-card-entity ' + notice.entityClass + '">' + notice.entity + '</div>' +
+      '<div class="legal-card-grid">' +
+        '<div class="legal-card-body">' +
+          '<div class="legal-card-header">' +
+            eLogoHtml +
+            '<div>' +
+              '<div class="legal-card-title">' + notice.title + '</div>' +
+              '<div class="legal-card-entity ' + notice.entityClass + '">' + notice.entity + '</div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="legal-card-summary">' + highlightLegalNamesAndAddresses(linkGlossaryTerms(notice.summary)) + '</div>' +
+          '<div class="legal-card-meta">' +
+            '<span class="legal-meta-tag tag-type">' + notice.type + '</span>' +
+            '<span class="legal-meta-tag tag-deadline">' + notice.deadline + '</span>' +
+            '<span class="legal-meta-tag tag-date">Published: ' + notice.dates + '</span>' +
+            '<span class="legal-read-more">Read Full Notice →</span>' +
+          '</div>' +
+          calBtns +
+          paperBadgesHtml +
         '</div>' +
+        mapHtml +
       '</div>' +
-      '<div class="legal-card-summary">' + highlightLegalNamesAndAddresses(linkGlossaryTerms(notice.summary)) + '</div>' +
-      '<div class="legal-card-meta">' +
-        '<span class="legal-meta-tag tag-type">' + notice.type + '</span>' +
-        '<span class="legal-meta-tag tag-deadline">' + notice.deadline + '</span>' +
-        '<span class="legal-meta-tag tag-date">Published: ' + notice.dates + '</span>' +
-        '<span class="legal-read-more">Read Full Notice →</span>' +
-      '</div>' +
-      calBtns +
-      paperBadgesHtml +
     '</a>';
   });
 
@@ -9612,6 +9729,7 @@ async function init() {
 
   // ── Legal Notices render instantly (static cache) ──
   renderLegalNoticesWithTopic();
+  renderLegalInterestSidebar();
 
   // ── Cached sources load instantly ──
   const smartMeetings = getSmartMeetings();
@@ -11782,17 +11900,20 @@ function showSubmitStatus(msg, type) {
     // Trigger any tab-specific rendering
     if (tabName === 'land-use' && typeof renderLandUseTab === 'function') renderLandUseTab();
     if (tabName === 'gondola' && typeof renderGondolaTab === 'function') renderGondolaTab();
-    // Toggle left-sidebar cards: "What to Follow" on Meetings & Legals, Submit on Events
+    // Toggle left-sidebar cards: "What to Follow" on Meetings, Submit on Events, Legal Interest on Legals
     const wtfCard = document.getElementById('sidebarWhatToFollow');
     const submitCard = document.getElementById('sidebarSubmitEvent');
-    if (wtfCard) wtfCard.style.display = (tabName === 'meetings' || tabName === 'legals') ? '' : 'none';
+    const legalInterestCard = document.getElementById('sidebarLegalInterest');
+    if (wtfCard) wtfCard.style.display = (tabName === 'meetings') ? '' : 'none';
     if (submitCard) submitCard.style.display = (tabName === 'news') ? '' : 'none';
+    if (legalInterestCard) legalInterestCard.style.display = (tabName === 'legals') ? '' : 'none';
     const layout = document.querySelector('.main-layout');
     if (layout) {
       layout.classList.toggle('subscribe-active', tabName === 'subscribe');
       layout.classList.toggle('landuse-active', tabName === 'land-use' || tabName === 'gondola');
       layout.classList.toggle('links-active', tabName === 'links');
       layout.classList.toggle('news-active', tabName === 'news');
+      layout.classList.toggle('legals-active', tabName === 'legals');
     }
     // Scroll to top of content
     window.scrollTo({ top: 0, behavior: 'smooth' });
