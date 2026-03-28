@@ -2156,7 +2156,7 @@
       display: grid;
       grid-template-columns: minmax(0, 1fr) 160px;
       gap: 20px;
-      align-items: stretch;
+      align-items: start;
     }
     .event-card-content {
       min-width: 0;
@@ -2164,7 +2164,8 @@
     .event-illustration {
       position: relative;
       border-radius: 20px;
-      min-height: 128px;
+      width: 160px;
+      height: 128px;
       overflow: hidden;
       border: 1px solid rgba(24,53,45,0.08);
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.35);
@@ -2246,7 +2247,8 @@
         grid-template-columns: 1fr;
       }
       .event-illustration {
-        min-height: 110px;
+        width: 100%;
+        height: 140px;
       }
     }
 
@@ -9664,7 +9666,7 @@ async function init() {
 // These are approximate annual dates -- update yearly as schedules are confirmed.
 const TELLURIDE_FESTIVALS = [
   { name: 'Mountainfilm', month: 4, dayStart: 22, dayEnd: 25, icon: '🎥',
-    logo: 'https://www.mountainfilm.org/site/assets/files/1/mf18-mfbanner-kroll-matt-highres-2_full_1.jpg',
+    logo: 'https://raw.githubusercontent.com/morgan524/morgan524-telluride-gov-hub/main/logo/Mountain%20Film.png',
     url: 'https://www.mountainfilm.org/', ticketUrl: 'https://www.mountainfilm.org/festival/passes/', ticketLabel: 'Buy Passes', promo: '2026 festival passes on sale now' },
   { name: 'Telluride Balloon Festival', month: 5, dayStart: 5, dayEnd: 7, icon: '🎈',
     logo: 'https://raw.githubusercontent.com/morgan524/morgan524-telluride-gov-hub/main/logo/Balloon.avif',
@@ -9673,7 +9675,7 @@ const TELLURIDE_FESTIVALS = [
     logo: 'https://cdn.prod.website-files.com/63e3b404578d3e63abef7364/69b1ded759adc5521903fd3e_TFV%20Logo%20Full%E2%84%A2.svg',
     url: 'https://www.telluridefoodandvine.com/', ticketUrl: 'https://www.telluridefoodandvine.com/events', ticketLabel: 'Buy Passes', promo: '2026 Weekend Pass and featured events available' },
   { name: 'Telluride Bluegrass Festival', month: 5, dayStart: 18, dayEnd: 21, icon: '🎸',
-    logo: '',
+    logo: 'https://raw.githubusercontent.com/morgan524/morgan524-telluride-gov-hub/main/logo/Blue%20Grass.jpeg',
     url: 'https://bluegrass.com/telluride', ticketUrl: 'https://bluegrass.com/telluride/festival-info/TBF-ticketing-info', ticketLabel: 'Buy Tickets', promo: '2026 tickets on sale now via Planet Bluegrass' },
   { name: 'Telluride Yoga Festival', month: 5, dayStart: 25, dayEnd: 28, icon: '🧘',
     logo: 'https://images.squarespace-cdn.com/content/v1/56687b901115e07461e746d8/fec565cd-db82-4743-afd7-590e1062c90b/TYF_Horizontal2+for+website.png',
