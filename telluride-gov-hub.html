@@ -1937,6 +1937,76 @@
       background: rgba(33, 68, 60, 0.14);
     }
 
+    /* ── Housing Search Tab ── */
+    .housing-search-shell { max-width: 960px; margin: 0 auto; }
+    .housing-search-hero { text-align: center; margin-bottom: 24px; }
+    .housing-search-hero h2 { font-size: 1.6rem; color: var(--forest); margin-bottom: 6px; }
+    .housing-search-subtitle { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; }
+    .housing-filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+    .housing-card {
+      border: 1px solid var(--line); border-radius: 14px; background: var(--card-bg);
+      padding: 18px; margin-bottom: 16px; box-shadow: var(--shadow-soft);
+    }
+    .housing-card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+    .housing-card-title { font-size: 1.1rem; font-weight: 700; color: var(--text-primary); }
+    .housing-card-source {
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+      padding: 3px 10px; border-radius: 999px; white-space: nowrap;
+    }
+    .housing-card-source.public { background: rgba(33,68,60,0.1); color: var(--forest); }
+    .housing-card-source.market { background: rgba(139,114,80,0.1); color: var(--accent-amber); }
+    .housing-card-details {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px;
+      font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 12px;
+    }
+    .housing-card-details dt { font-weight: 600; color: var(--text-primary); }
+    .housing-card-details dd { margin: 0; }
+    .housing-card-map {
+      width: 100%; height: 180px; border-radius: 10px; border: 1px solid var(--line);
+      margin-bottom: 12px; overflow: hidden;
+    }
+    .housing-card-map iframe { width: 100%; height: 100%; border: 0; }
+    .housing-card-contact {
+      display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+    }
+    .housing-contact-btn {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.76rem; font-weight: 700; padding: 7px 16px; border-radius: 8px;
+      text-decoration: none; cursor: pointer; transition: all 0.2s;
+    }
+    .housing-contact-btn.primary {
+      background: var(--forest-soft); color: #f0f0f0; border: none;
+    }
+    .housing-contact-btn.primary:hover { background: var(--forest); color: #fff; }
+    .housing-contact-btn.secondary {
+      background: var(--card-bg); color: var(--forest); border: 1.5px solid var(--forest);
+    }
+    .housing-contact-btn.secondary:hover { background: var(--forest); color: #fff; }
+    .housing-sources-directory {
+      margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line);
+    }
+    .housing-sources-directory h3 {
+      font-size: 1.05rem; color: var(--forest); margin-bottom: 14px; text-align: center;
+    }
+    .housing-source-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    .housing-source-card {
+      display: block; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px;
+      background: var(--card-bg); text-decoration: none; transition: all 0.2s;
+    }
+    .housing-source-card:hover { border-color: var(--forest); box-shadow: var(--shadow-soft); }
+    .housing-source-card strong { display: block; font-size: 0.84rem; color: var(--forest); margin-bottom: 3px; }
+    .housing-source-card span { font-size: 0.74rem; color: var(--text-muted); }
+    .housing-card-note {
+      font-size: 0.76rem; font-style: italic; color: var(--text-muted); margin-top: 8px;
+    }
+    @media (max-width: 600px) {
+      .housing-card-details { grid-template-columns: 1fr; }
+      .housing-source-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── Legal Notice Cards ── */
     .legal-card {
       background: var(--card-bg);
@@ -3410,10 +3480,11 @@
     <button class="tab-btn active" data-tab="meetings">Meetings</button>
     <button class="tab-btn" data-tab="news">Events</button>
     <button class="tab-btn" data-tab="local-news">Local News</button>
-    <button class="tab-btn" data-tab="legals">Legal Notices</button>
     <button class="tab-btn" data-tab="links">Local Groups</button>
+    <button class="tab-btn" data-tab="housing-search">Housing Search</button>
     <button class="tab-btn" data-tab="land-use">Land Use</button>
     <button class="tab-btn" data-tab="gondola">Gondola 3A</button>
+    <button class="tab-btn" data-tab="legals">Legal Notices</button>
   </div>
   <!-- ── Subscribe Bar ── -->
   <div class="subscribe-bar">
@@ -4131,6 +4202,67 @@
       </div>
     </div>
 
+
+    <!-- ══════════ HOUSING SEARCH TAB ══════════ -->
+    <div class="tab-content" id="tab-housing-search">
+      <div class="housing-search-shell">
+        <div class="housing-search-hero">
+          <h2>🏠 Long-Term Housing Search</h2>
+          <p class="housing-search-subtitle">Aggregated long-term rental listings from public housing authorities and regional sources. <em>Short-term and vacation rentals are excluded.</em></p>
+        </div>
+
+        <!-- Filter chips -->
+        <div class="housing-filter-bar">
+          <button class="chip active-all" data-housing-filter="all">All Sources</button>
+          <button class="chip" data-housing-filter="public">Public / Deed-Restricted</button>
+          <button class="chip" data-housing-filter="market">Market Rate</button>
+        </div>
+
+        <!-- Listings container (populated by JS) -->
+        <div id="housing-listings-content">
+          <div class="empty-state">Loading housing listings…</div>
+        </div>
+
+        <!-- Source directory -->
+        <div class="housing-sources-directory">
+          <h3>Search These Sources Directly</h3>
+          <div class="housing-source-grid">
+            <a href="https://smrha.org/property-listings/" target="_blank" rel="noopener" class="housing-source-card">
+              <strong>San Miguel Regional Housing Authority</strong>
+              <span>Deed-restricted &amp; affordable rentals</span>
+            </a>
+            <a href="https://www.telluride-co.gov/745/Town-Owned-Rental-Properties" target="_blank" rel="noopener" class="housing-source-card">
+              <strong>Town of Telluride Rental Housing</strong>
+              <span>212 town-owned units (waitlist-based)</span>
+            </a>
+            <a href="https://townofmountainvillage.com/community/housing/" target="_blank" rel="noopener" class="housing-source-card">
+              <strong>Town of Mountain Village Housing</strong>
+              <span>Village Court Apartments &amp; programs</span>
+            </a>
+            <a href="https://www.apartments.com/telluride-co/" target="_blank" rel="noopener" class="housing-source-card">
+              <strong>Apartments.com — Telluride</strong>
+              <span>Market-rate long-term rentals</span>
+            </a>
+            <a href="https://www.zillow.com/telluride-co/rentals/" target="_blank" rel="noopener" class="housing-source-card">
+              <strong>Zillow — Telluride Rentals</strong>
+              <span>Houses &amp; apartments for rent</span>
+            </a>
+            <a href="https://westslope.craigslist.org/search/apa?query=telluride" target="_blank" rel="noopener" class="housing-source-card">
+              <strong>Craigslist Western Slope</strong>
+              <span>Community-posted rentals</span>
+            </a>
+            <a href="https://www.telluridenews.com/classifieds/housing/rent/" target="_blank" rel="noopener" class="housing-source-card">
+              <strong>Telluride News Classifieds</strong>
+              <span>Local newspaper rental listings</span>
+            </a>
+            <a href="https://coloradohousingsearch.com/" target="_blank" rel="noopener" class="housing-source-card">
+              <strong>ColoradoHousingSearch.com</strong>
+              <span>Statewide affordable housing search (CHFA)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- ══════════ LAND USE TAB ══════════ -->
     <div class="tab-content" id="tab-land-use">
@@ -8457,7 +8589,7 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     // Hide sidebars on Subscribe, Land Use, and Gondola tabs, show on all others
     const layout = document.querySelector('.main-layout');
     layout.classList.toggle('subscribe-active', btn.dataset.tab === 'subscribe');
-    layout.classList.toggle('landuse-active', btn.dataset.tab === 'land-use' || btn.dataset.tab === 'gondola');
+    layout.classList.toggle('landuse-active', btn.dataset.tab === 'land-use' || btn.dataset.tab === 'gondola' || btn.dataset.tab === 'housing-search');
     layout.classList.toggle('localnews-active', btn.dataset.tab === 'local-news');
     layout.classList.toggle('links-active', btn.dataset.tab === 'links');
     layout.classList.toggle('news-active', btn.dataset.tab === 'news');
@@ -10115,6 +10247,190 @@ document.getElementById('expandRight').addEventListener('click', () => {
 })();
 
 // ══════════
+// ══════════════════════════════════════════════════════
+// ── Housing Search: curated long-term rental listings ──
+// ══════════════════════════════════════════════════════
+// Only long-term rentals. No short-term / vacation rentals.
+// Each listing includes location coords for OSM map embed and contact info.
+
+const HOUSING_LISTINGS = [
+  {
+    title: 'Shandoka Townhomes',
+    type: 'public',
+    address: '820 Black Bear Rd, Telluride, CO 81435',
+    lat: 37.9363, lng: -107.8198,
+    beds: '1–3 Bedroom', price: 'Income-based (deed-restricted)',
+    source: 'Town of Telluride',
+    contact: { phone: '(970) 728-4025', email: 'housing@telluride-co.gov' },
+    url: 'https://www.telluride-co.gov/745/Town-Owned-Rental-Properties',
+    note: 'Waitlist-based. Town employee priority. Apply through the Town of Telluride.'
+  },
+  {
+    title: 'Virginia Placer Apartments',
+    type: 'public',
+    address: 'Virginia Placer, Telluride, CO 81435',
+    lat: 37.9380, lng: -107.8260,
+    beds: 'Studio–2 Bedroom', price: 'Income-based (deed-restricted)',
+    source: 'Town of Telluride',
+    contact: { phone: '(970) 728-4025', email: 'housing@telluride-co.gov' },
+    url: 'https://www.telluride-co.gov/745/Town-Owned-Rental-Properties',
+    note: 'Waitlist-based. Apply through the Town of Telluride Rental Housing division.'
+  },
+  {
+    title: 'Village Court Apartments',
+    type: 'public',
+    address: '455 Mountain Village Blvd, Mountain Village, CO 81435',
+    lat: 37.9325, lng: -107.8497,
+    beds: 'Studio–3 Bedroom', price: 'Income-based (deed-restricted)',
+    source: 'Town of Mountain Village',
+    contact: { phone: '(970) 729-3419', email: '' },
+    url: 'https://townofmountainvillage.com/community/housing/',
+    note: 'Managed by Town of Mountain Village. Employee housing with income qualifications.'
+  },
+  {
+    title: 'SMRHA — Current Listings',
+    type: 'public',
+    address: '820 Black Bear Rd, Telluride, CO 81435',
+    lat: 37.9363, lng: -107.8198,
+    beds: 'Varies', price: 'Below-market (deed-restricted)',
+    source: 'San Miguel Regional Housing Authority',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://smrha.org/property-listings/',
+    note: 'Visit smrha.org/property-listings/ for current deed-restricted rentals and sales.'
+  },
+  {
+    title: 'Aldasoro Ranch Apartments',
+    type: 'public',
+    address: 'Aldasoro Ranch, Placerville-Norwood Rd, Telluride, CO',
+    lat: 37.9600, lng: -107.8650,
+    beds: '1–3 Bedroom', price: 'Income-based (deed-restricted)',
+    source: 'San Miguel County',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://www.sanmiguelcountyco.gov/721/Local-Housing-Projects',
+    note: 'County deed-restricted units. Contact SMRHA for availability and waitlist.'
+  },
+  {
+    title: 'Lawson Hill — Deed-Restricted Units',
+    type: 'public',
+    address: 'Lawson Hill, Telluride, CO 81435',
+    lat: 37.9270, lng: -107.8360,
+    beds: '1–3 Bedroom', price: 'Below-market (deed-restricted)',
+    source: 'San Miguel County',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://www.sanmiguelcountyco.gov/721/Local-Housing-Projects',
+    note: 'Mixed-use community with deed-restricted rentals. Contact SMRHA.'
+  },
+  {
+    title: 'Apartments.com — Telluride Area',
+    type: 'market',
+    address: 'Telluride / Mountain Village, CO',
+    lat: 37.9375, lng: -107.8123,
+    beds: 'Varies', price: 'Market rate',
+    source: 'Apartments.com',
+    contact: {},
+    url: 'https://www.apartments.com/telluride-co/',
+    note: 'Aggregated market-rate listings. Filter for long-term leases.'
+  },
+  {
+    title: 'Zillow — Telluride Rentals',
+    type: 'market',
+    address: 'Telluride / San Miguel County, CO',
+    lat: 37.9375, lng: -107.8123,
+    beds: 'Varies', price: 'Market rate',
+    source: 'Zillow',
+    contact: {},
+    url: 'https://www.zillow.com/telluride-co/rentals/',
+    note: 'Filter by long-term. Listings may include short-term — verify lease terms.'
+  },
+  {
+    title: 'Craigslist Western Slope — Telluride Apartments',
+    type: 'market',
+    address: 'Telluride area, CO',
+    lat: 37.9375, lng: -107.8123,
+    beds: 'Varies', price: 'Varies',
+    source: 'Craigslist',
+    contact: {},
+    url: 'https://westslope.craigslist.org/search/apa?query=telluride',
+    note: 'Community-posted. Verify all listings independently.'
+  },
+  {
+    title: 'Telluride News — Rental Classifieds',
+    type: 'market',
+    address: 'Telluride area, CO',
+    lat: 37.9375, lng: -107.8123,
+    beds: 'Varies', price: 'Varies',
+    source: 'Telluride News',
+    contact: {},
+    url: 'https://www.telluridenews.com/classifieds/housing/rent/',
+    note: 'Local newspaper classifieds. Updated weekly (Thursday publication).'
+  }
+];
+
+let currentHousingFilter = 'all';
+
+function renderHousingListings() {
+  const container = document.getElementById('housing-listings-content');
+  if (!container) return;
+  let filtered = HOUSING_LISTINGS;
+  if (currentHousingFilter !== 'all') {
+    filtered = HOUSING_LISTINGS.filter(h => h.type === currentHousingFilter);
+  }
+  if (filtered.length === 0) {
+    container.innerHTML = '<div class="empty-state">No listings match this filter.</div>';
+    return;
+  }
+  let html = '';
+  filtered.forEach(h => {
+    const sourceClass = h.type === 'public' ? 'public' : 'market';
+    const sourceLabel = h.type === 'public' ? 'Public / Deed-Restricted' : 'Market Rate';
+    // Contact buttons
+    let contactHtml = '';
+    if (h.contact && h.contact.phone) {
+      contactHtml += '<a href="tel:' + h.contact.phone.replace(/[^+\d]/g, '') + '" class="housing-contact-btn primary">📞 ' + h.contact.phone + '</a>';
+    }
+    if (h.contact && h.contact.email) {
+      contactHtml += '<a href="mailto:' + h.contact.email + '" class="housing-contact-btn primary">✉️ Email</a>';
+    }
+    contactHtml += '<a href="' + h.url + '" target="_blank" rel="noopener" class="housing-contact-btn secondary">🔗 View Listings</a>';
+    // OSM map embed
+    const mapUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=' +
+      (h.lng - 0.008) + ',' + (h.lat - 0.005) + ',' + (h.lng + 0.008) + ',' + (h.lat + 0.005) +
+      '&layer=mapnik&marker=' + h.lat + ',' + h.lng;
+
+    html += '<div class="housing-card" data-type="' + h.type + '">' +
+      '<div class="housing-card-header">' +
+        '<div class="housing-card-title">' + h.title + '</div>' +
+        '<span class="housing-card-source ' + sourceClass + '">' + sourceLabel + '</span>' +
+      '</div>' +
+      '<dl class="housing-card-details">' +
+        '<dt>Address</dt><dd>' + h.address + '</dd>' +
+        '<dt>Bedrooms</dt><dd>' + h.beds + '</dd>' +
+        '<dt>Price</dt><dd>' + h.price + '</dd>' +
+        '<dt>Source</dt><dd>' + h.source + '</dd>' +
+      '</dl>' +
+      '<div class="housing-card-map"><iframe src="' + mapUrl + '" loading="lazy" title="Map: ' + h.title + '"></iframe></div>' +
+      '<div class="housing-card-contact">' + contactHtml + '</div>' +
+      (h.note ? '<div class="housing-card-note">' + h.note + '</div>' : '') +
+    '</div>';
+  });
+  container.innerHTML = html;
+}
+
+// Housing filter chips
+document.querySelectorAll('[data-housing-filter]').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('[data-housing-filter]').forEach(c => c.className = 'chip');
+    const f = chip.dataset.housingFilter;
+    if (f === 'all') chip.classList.add('active-all');
+    else chip.classList.add('active-topic');
+    currentHousingFilter = f;
+    renderHousingListings();
+  });
+});
+
+// Render on first load
+renderHousingListings();
+
 // ── Init ──
 // ══════════
 
@@ -12294,17 +12610,20 @@ function showSubmitStatus(msg, type) {
   <button class="mobile-more-item" data-tab="local-news">
     <span class="nav-icon">📰</span> Local News
   </button>
-  <button class="mobile-more-item" data-tab="legals">
-    <span class="nav-icon">📋</span> Legal Notices
-  </button>
   <button class="mobile-more-item" data-tab="links">
     <span class="nav-icon">🔗</span> Local Groups
+  </button>
+  <button class="mobile-more-item" data-tab="housing-search">
+    <span class="nav-icon">🏠</span> Housing Search
   </button>
   <button class="mobile-more-item" data-tab="land-use">
     <span class="nav-icon">🏗️</span> Land Use
   </button>
   <button class="mobile-more-item" data-tab="gondola">
     <span class="nav-icon">🚡</span> Gondola 3A
+  </button>
+  <button class="mobile-more-item" data-tab="legals">
+    <span class="nav-icon">📋</span> Legal Notices
   </button>
   <button class="mobile-more-item" data-tab="subscribe">
     <span class="nav-icon">📬</span> Subscribe
