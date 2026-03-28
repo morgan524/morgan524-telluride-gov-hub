@@ -1498,19 +1498,26 @@
       color: #fff;
     }
 
-    /* ── Correction link inside comment box ── */
+    /* ── Correction pill inside Topics box ── */
     .correction-inline-link {
-      display: inline;
-      font-size: inherit;
-      font-style: normal;
-      color: var(--text-muted);
-      text-decoration: underline;
-      text-decoration-style: dotted;
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: var(--forest-soft);
+      color: #fff;
       cursor: pointer;
-      margin-left: 6px;
+      text-decoration: none;
+      margin-top: 6px;
+      transition: all 0.15s;
     }
     .correction-inline-link:hover {
-      color: var(--accent-green);
+      background: var(--forest);
+    }
+    #tab-meetings .correction-inline-link {
+      font-size: 0.88rem;
+      padding: 4px 14px;
     }
 
     /* ── Public Comment Info ── */
@@ -8081,8 +8088,7 @@ function renderOfficialCommentInfo(item) {
 
   const meetingDate = item.eventDate ? fullDate(item.eventDate) : '';
   const subject = encodeURIComponent(`Please accept these written comments for ${item.title || 'Meeting'} - ${meetingDate}`);
-  const safeTitle = (item.title || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
-  return `<div class="comment-note">${quote} <a class="correction-inline-link" onclick="openCorrectionModal('${safeTitle}', 'meetings')">Suggested change to summary?</a></div><div class="comment-actions"><a class="comment-email-btn" href="mailto:${email}?subject=${subject}">✉️ ${label}</a></div>`;
+  return `<div class="comment-note">${quote}</div><div class="comment-actions"><a class="comment-email-btn" href="mailto:${email}?subject=${subject}">✉️ ${label}</a></div>`;
 }
 
 // ── Quick Reactions: perspective buttons on meeting cards ──
@@ -8272,6 +8278,11 @@ function renderMeetings(items, filter) {
       }
       if (aiWhyMatters && !getWhyThisMatters(item)) {
         summaryHtml += `<div class="ai-why-matters">${linkGlossaryTerms(aiWhyMatters)}</div>`;
+      }
+      // Correction pill inside Topics box
+      if (summaryHtml) {
+        const safeTitle = (item.title || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
+        summaryHtml += `<a class="correction-inline-link" onclick="openCorrectionModal('${safeTitle}', 'meetings')">✏️ Suggested change to summary?</a>`;
       }
       // END: AI-enhanced summary rendering
 
