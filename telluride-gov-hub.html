@@ -4312,8 +4312,12 @@
         <div class="housing-sources-directory">
           <h3>Search These Sources Directly</h3>
           <div class="housing-source-grid">
+            <a href="https://smrha.org/lottery" target="_blank" rel="noopener" class="housing-source-card">
+              <strong>SMRHA Housing Lottery</strong>
+              <span>Current lottery units &amp; applications</span>
+            </a>
             <a href="https://smrha.org/property-listings/" target="_blank" rel="noopener" class="housing-source-card">
-              <strong>San Miguel Regional Housing Authority</strong>
+              <strong>SMRHA Property Listings</strong>
               <span>Deed-restricted &amp; affordable rentals</span>
             </a>
             <a href="https://www.telluride-co.gov/745/Town-Owned-Rental-Properties" target="_blank" rel="noopener" class="housing-source-card">
@@ -4339,6 +4343,10 @@
             <a href="https://www.telluridenews.com/classifieds/housing/rent/" target="_blank" rel="noopener" class="housing-source-card">
               <strong>Telluride News Classifieds</strong>
               <span>Local newspaper rental listings</span>
+            </a>
+            <a href="https://www.telluridenews.com/search/?q=housing+lottery&t=article" target="_blank" rel="noopener" class="housing-source-card">
+              <strong>Telluride News — Housing Lottery</strong>
+              <span>News articles on lottery openings</span>
             </a>
             <a href="https://coloradohousingsearch.com/" target="_blank" rel="noopener" class="housing-source-card">
               <strong>ColoradoHousingSearch.com</strong>
@@ -10414,6 +10422,40 @@ document.getElementById('expandRight').addEventListener('click', () => {
 // Each listing includes location coords for OSM map embed and contact info.
 
 const HOUSING_LISTINGS = [
+  /* ── Housing Lottery — Applications Open ── */
+  {
+    title: '🎟️ LOTTERY: Silver Jack Unit 202 — 3BR Condo',
+    type: 'public',
+    address: '155 W Pacific Ave, Telluride, CO 81435',
+    lat: 37.9378, lng: -107.8155,
+    beds: '3 Bedroom, 2 Bath (1,330 sq ft)', price: '$405,507 (Tier 1, deed-restricted)',
+    source: 'SMRHA Lottery',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://smrha.org/lottery',
+    note: 'Housing lottery — applications due by noon April 10, 2026. Drawing: April 24, 10 AM. Must meet employment (1,400 hrs), residency (12 mo in 4-county region), and asset requirements. Up to 220% AMI. Apply at smrha.org/lottery or pick up at 820 Black Bear Rd G17.'
+  },
+  {
+    title: '🎟️ LOTTERY: Silver Jack Unit 205 — 2BR Condo',
+    type: 'public',
+    address: '155 W Pacific Ave, Telluride, CO 81435',
+    lat: 37.9378, lng: -107.8155,
+    beds: '2 Bedroom, 1 Bath (935 sq ft)', price: '$368,620 (Tier 1, deed-restricted)',
+    source: 'SMRHA Lottery',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://smrha.org/lottery',
+    note: 'Housing lottery — applications due by noon April 10, 2026. Drawing: April 24, 10 AM. Must meet employment (1,400 hrs), residency (12 mo in 4-county region), and asset requirements. Up to 220% AMI. Apply at smrha.org/lottery or pick up at 820 Black Bear Rd G17.'
+  },
+  {
+    title: '🎟️ LOTTERY: Element 52 SW-102 — 2BR Condo',
+    type: 'public',
+    address: '398 S Davis St, Telluride, CO 81435',
+    lat: 37.9365, lng: -107.8118,
+    beds: '2 Bedroom, 1 Bath (479 sq ft)', price: '$352,529 (Tier 2, deed-restricted)',
+    source: 'SMRHA Lottery',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://smrha.org/lottery',
+    note: 'Housing lottery — applications due by noon April 10, 2026. Drawing: April 24, 10 AM. Must meet employment (1,400 hrs), residency (12 mo in 4-county region), and asset requirements. Up to 220% AMI. Apply at smrha.org/lottery or pick up at 820 Black Bear Rd G17.'
+  },
   /* ── Public / Deed-Restricted ── */
   {
     title: 'Room for Rent — In-Town 2BR Condo',
