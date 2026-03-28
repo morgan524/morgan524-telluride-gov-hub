@@ -8368,43 +8368,94 @@ async function submitReaction(docId, key) {
 }
 
 // ── Extract the single most contentious/important topic for a meeting ──
-// Priority tiers (checked in order — first match wins):
-//   1. Ordinances & resolutions (formal actions likely to draw debate)
-//   2. Housing issues (deed restrictions, workforce/affordable housing, STRs)
-//   3. Land use & code changes (zoning, PUD, development, code amendments)
-// Within each tier, prefer topics likely to have both support and opposition.
+//
+// Strategy: score every topic against weighted keyword tiers, then pick the
+// highest-scoring one. This avoids the old "first match wins" problem where
+// a procedural "Public hearing: continued" item beat a substantive housing
+// amendment deeper in the agenda.
+//
+// Scoring: each keyword hit adds the tier's weight. Topics that match
+// multiple tiers (e.g. "workforce housing deed amendments for Overlook PUD")
+// accumulate points from ALL tiers, so they naturally rise to the top.
+//
+// Procedural / non-contentious topics are penalized or skipped entirely.
 
 const KEY_ISSUE_TIERS = [
-  // Tier 1 — Ordinances & Resolutions
-  ['ordinance', 'resolution', 'public hearing', 'adoption of', 'repeal'],
-  // Tier 2 — Housing
-  ['deed restrict', 'deed-restrict', 'workforce housing', 'affordable housing',
-   'housing authority', 'housing action', 'carhenge', 'short-term rental',
-   'str ', 'accessory dwelling', 'adu', 'resident occupancy', 'housing code',
-   'deed amendment', 'deed covenant', 'housing plan'],
-  // Tier 3 — Land Use & Code
-  ['land use', 'zoning', 'pud', 'comprehensive plan', 'code update', 'code change',
-   'code amendment', 'land use code', 'rezoning', 'variance', 'subdivision',
-   'annexation', 'harc', 'historic', 'wildfire resiliency', 'setback',
-   'building code', 'development', 'redevelopment', 'appeal']
+  // Tier weight 15 — Housing (deed restrictions, workforce, affordable, STRs)
+  { weight: 15, keywords: [
+    'deed restrict', 'deed-restrict', 'deed amendment', 'deed covenant',
+    'workforce housing', 'affordable housing', 'housing authority', 'housing action',
+    'housing plan', 'housing code', 'carhenge', 'short-term rental', 'str ',
+    'accessory dwelling', 'adu', 'resident occupancy', 'deed-restricted property',
+    'wilkin court', 'overlook', 'silver jack', 'element 52'
+  ]},
+  // Tier weight 8 — Ordinances, resolutions, adoptions (formal contentious actions)
+  { weight: 8, keywords: [
+    'ordinance', 'resolution', 'adoption of', 'repeal', 'amend the', 'amendment'
+  ]},
+  // Tier weight 6 — Land Use & Code (zoning, PUD, development, code changes)
+  { weight: 6, keywords: [
+    'land use', 'zoning', 'pud', 'comprehensive plan', 'code update', 'code change',
+    'code amendment', 'land use code', 'rezoning', 'variance', 'subdivision',
+    'annexation', 'harc', 'historic', 'wildfire resiliency', 'setback',
+    'building code', 'development', 'redevelopment', 'appeal'
+  ]}
+];
+
+// Topics matching these patterns are procedural / non-contentious — skip them
+const SKIP_PATTERNS = [
+  /continued to/i, /postponed/i, /tabled/i,
+  /executive session/i, /town manager evaluation/i,
+  /work plan/i, /open space commission/i,
+  /consent.*agenda/i, /minutes.*approv/i,
+  /adjournment/i
 ];
 
 function getKeyIssueTopic(item) {
   const summary = getMeetingSummary(item);
   if (!summary) return '';
-  const topics = summary.split(' · ').map(t => t.trim()).filter(Boolean);
-  if (topics.length === 0) return '';
-  const lower = topics.map(t => t.toLowerCase());
-  // Walk tiers in priority order
-  for (const tier of KEY_ISSUE_TIERS) {
-    for (let i = 0; i < lower.length; i++) {
-      for (const kw of tier) {
-        if (lower[i].includes(kw)) return topics[i];
+  const rawTopics = summary.split(' · ').map(t => t.trim()).filter(Boolean);
+  if (rawTopics.length === 0) return '';
+
+  // Score each topic
+  let best = null;
+  let bestScore = 0;
+
+  rawTopics.forEach(topic => {
+    const low = topic.toLowerCase();
+    // Skip procedural / non-contentious items
+    if (SKIP_PATTERNS.some(pat => pat.test(topic))) return;
+    // Skip pure work sessions with no substantive keywords
+    if (/work session/i.test(topic) && !/housing|deed|pud|code|land use/i.test(topic)) return;
+
+    let score = 0;
+    for (const tier of KEY_ISSUE_TIERS) {
+      let tierHits = 0;
+      for (const kw of tier.keywords) {
+        if (low.includes(kw)) tierHits++;
       }
+      // Base tier weight + bonus for each additional keyword hit
+      if (tierHits > 0) score += tier.weight + (tierHits - 1) * 2;
+    }
+    // Bonus: if topic hits multiple tiers it's likely very contentious
+    if (score > bestScore) {
+      bestScore = score;
+      best = topic;
+    }
+  });
+
+  if (best) {
+    // Strip procedural prefixes like "Public hearing:" from the display text
+    best = best.replace(/^(Public hearing:\s*|Consent:\s*|Admin:\s*|Legislation:\s*)/i, '');
+    return best;
+  }
+  // Fallback: first non-skipped topic
+  for (const t of rawTopics) {
+    if (!SKIP_PATTERNS.some(pat => pat.test(t))) {
+      return t.replace(/^(Public hearing:\s*|Consent:\s*|Admin:\s*|Legislation:\s*)/i, '');
     }
   }
-  // Fallback: first topic
-  return topics[0];
+  return rawTopics[0];
 }
 
 function renderQuickReactions(item) {
@@ -8414,7 +8465,7 @@ function renderQuickReactions(item) {
   const keyIssue = getKeyIssueTopic(item);
   let html = '<div class="quick-reactions" data-reaction-id="' + docId + '">';
   if (keyIssue) {
-    html += '<div class="quick-reactions-issue">Quick Reaction… <strong>thoughts on key issue:</strong> ' + keyIssue + '</div>';
+    html += '<div class="quick-reactions-issue"><strong>Quick Reaction on key issue:</strong> ' + keyIssue + '</div>';
   }
   html += '<div class="quick-reactions-label">Quick Reactions</div>';
   html += '<div class="quick-reactions-btns">';
