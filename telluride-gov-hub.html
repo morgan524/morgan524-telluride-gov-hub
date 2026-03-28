@@ -6327,6 +6327,23 @@ const MANUAL_SUMMARIES = {
 };
 
 // ── Unified summary lookup: AI first, then manual fallback ──
+// Reject AI summaries that are error/placeholder text rather than real agenda content
+const SUMMARY_REJECT_PATTERNS = [
+  /provided agenda/i, /calendar navigation/i, /no detailed agenda/i,
+  /appears to be/i, /could not (be |)pars/i, /unable to (extract|parse|read)/i,
+  /no agenda (content|items|data)/i, /placeholder/i, /rather than specific/i,
+  /no .{0,20}content .{0,20}available/i, /navigation page/i,
+  /meeting agenda items/i, /agenda text/i, /cannot (be |)determin/i,
+  /insufficient (data|information|content)/i
+];
+function isBadSummary(text) {
+  if (!text) return false;
+  if (SUMMARY_REJECT_PATTERNS.some(pat => pat.test(text))) return true;
+  // Long single-sentence text about the agenda itself (not topic list)
+  if (text.length > 120 && !text.includes(' · ') && /\b(agenda|page|text|content|appears|navigation)\b/i.test(text)) return true;
+  return false;
+}
+
 function getMeetingSummary(item) {
   if (!item.eventDate) return '';
   const dateKey = item.eventDate.toISOString().slice(0, 10);
@@ -6335,7 +6352,9 @@ function getMeetingSummary(item) {
 
   // 1. Check AI summaries (from Firestore via Cloud Function)
   if (AI_SUMMARIES[exactKey] && AI_SUMMARIES[exactKey].shortSummary) {
-    return AI_SUMMARIES[exactKey].shortSummary;
+    const s = AI_SUMMARIES[exactKey].shortSummary;
+    if (isBadSummary(s)) return '';
+    return s;
   }
 
   // 2. Check manual/fallback summaries
@@ -6352,7 +6371,9 @@ function getMeetingSummary(item) {
   // 4. Partial match in AI summaries
   const aiKeys = Object.keys(AI_SUMMARIES).filter(k => k.startsWith(item.source + '|' + dateKey + '|'));
   if (aiKeys.length === 1 && AI_SUMMARIES[aiKeys[0]].shortSummary) {
-    return AI_SUMMARIES[aiKeys[0]].shortSummary;
+    const s = AI_SUMMARIES[aiKeys[0]].shortSummary;
+    if (isBadSummary(s)) return '';
+    return s;
   }
 
   return '';
@@ -8517,29 +8538,7 @@ const SKIP_PATTERNS = [
 function getKeyIssueTopic(item) {
   const summary = getMeetingSummary(item);
   if (!summary) return '';
-
-  // Reject placeholder / error summaries that aren't real agenda content
-  const PLACEHOLDER_PATTERNS = [
-    /provided agenda/i,
-    /calendar navigation/i,
-    /no detailed agenda/i,
-    /not available/i,
-    /appears to be/i,
-    /could not (be |)pars/i,
-    /unable to (extract|parse|read)/i,
-    /no agenda (content|items|data)/i,
-    /placeholder/i,
-    /rather than specific/i,
-    /no .{0,20}content .{0,20}available/i,
-    /navigation page/i,
-    /meeting agenda items/i,
-    /agenda text/i,
-    /cannot (be |)determin/i,
-    /insufficient (data|information|content)/i
-  ];
-  if (PLACEHOLDER_PATTERNS.some(pat => pat.test(summary))) return '';
-  // Also reject if the entire summary looks like a sentence about the agenda rather than topic list
-  if (summary.length > 120 && !summary.includes(' · ') && /\b(agenda|page|text|content|appears|navigation)\b/i.test(summary)) return '';
+  // getMeetingSummary already filters placeholder/error text via isBadSummary()
 
   const rawTopics = summary.split(' · ').map(t => t.trim()).filter(Boolean);
   if (rawTopics.length === 0) return '';
