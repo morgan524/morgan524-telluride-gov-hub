@@ -10303,8 +10303,31 @@ document.getElementById('expandRight').addEventListener('click', () => {
 // Each listing includes location coords for OSM map embed and contact info.
 
 const HOUSING_LISTINGS = [
+  /* ── Public / Deed-Restricted ── */
   {
-    title: 'Shandoka Townhomes',
+    title: 'Room for Rent — In-Town 2BR Condo',
+    type: 'public',
+    address: 'Telluride, CO 81435 (in-town)',
+    lat: 37.9375, lng: -107.8123,
+    beds: '1 Room in 2BR', price: '$1,883/mo (deed-restricted)',
+    source: 'SMRHA',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://smrha.org/property/in-town-room-for-rent-telluride-co-81435/',
+    note: 'Deed-restricted room rental in shared 2BR condo. Contact SMRHA for eligibility.'
+  },
+  {
+    title: 'Village Court Apartments — Waitlist',
+    type: 'public',
+    address: '455 Mountain Village Blvd, Mountain Village, CO 81435',
+    lat: 37.9325, lng: -107.8497,
+    beds: 'Studio–3 Bedroom', price: 'Income-based (deed-restricted)',
+    source: 'Town of Mountain Village',
+    contact: { phone: '(970) 729-3419', email: '' },
+    url: 'https://townofmountainvillage.com/community/housing/village-court-apartments/',
+    note: 'Waitlist is currently capped — not accepting new applications. Check back periodically.'
+  },
+  {
+    title: 'Shandoka Townhomes — Waitlist',
     type: 'public',
     address: '820 Black Bear Rd, Telluride, CO 81435',
     lat: 37.9363, lng: -107.8198,
@@ -10315,7 +10338,7 @@ const HOUSING_LISTINGS = [
     note: 'Waitlist-based. Town employee priority. Apply through the Town of Telluride.'
   },
   {
-    title: 'Virginia Placer Apartments',
+    title: 'Virginia Placer Apartments — Waitlist',
     type: 'public',
     address: 'Virginia Placer, Telluride, CO 81435',
     lat: 37.9380, lng: -107.8260,
@@ -10325,93 +10348,50 @@ const HOUSING_LISTINGS = [
     url: 'https://www.telluride-co.gov/745/Town-Owned-Rental-Properties',
     note: 'Waitlist-based. Apply through the Town of Telluride Rental Housing division.'
   },
+  /* ── Market-Rate Active Listings ── */
   {
-    title: 'Village Court Apartments',
-    type: 'public',
-    address: '455 Mountain Village Blvd, Mountain Village, CO 81435',
-    lat: 37.9325, lng: -107.8497,
-    beds: 'Studio–3 Bedroom', price: 'Income-based (deed-restricted)',
-    source: 'Town of Mountain Village',
-    contact: { phone: '(970) 729-3419', email: '' },
-    url: 'https://townofmountainvillage.com/community/housing/',
-    note: 'Managed by Town of Mountain Village. Employee housing with income qualifications.'
-  },
-  {
-    title: 'SMRHA — Current Listings',
-    type: 'public',
-    address: '820 Black Bear Rd, Telluride, CO 81435',
-    lat: 37.9363, lng: -107.8198,
-    beds: 'Varies', price: 'Below-market (deed-restricted)',
-    source: 'San Miguel Regional Housing Authority',
-    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
-    url: 'https://smrha.org/property-listings/',
-    note: 'Visit smrha.org/property-listings/ for current deed-restricted rentals and sales.'
-  },
-  {
-    title: 'Aldasoro Ranch Apartments',
-    type: 'public',
-    address: 'Aldasoro Ranch, Placerville-Norwood Rd, Telluride, CO',
-    lat: 37.9600, lng: -107.8650,
-    beds: '1–3 Bedroom', price: 'Income-based (deed-restricted)',
-    source: 'San Miguel County',
-    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
-    url: 'https://www.sanmiguelcountyco.gov/721/Local-Housing-Projects',
-    note: 'County deed-restricted units. Contact SMRHA for availability and waitlist.'
-  },
-  {
-    title: 'Lawson Hill — Deed-Restricted Units',
-    type: 'public',
-    address: 'Lawson Hill, Telluride, CO 81435',
-    lat: 37.9270, lng: -107.8360,
-    beds: '1–3 Bedroom', price: 'Below-market (deed-restricted)',
-    source: 'San Miguel County',
-    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
-    url: 'https://www.sanmiguelcountyco.gov/721/Local-Housing-Projects',
-    note: 'Mixed-use community with deed-restricted rentals. Contact SMRHA.'
-  },
-  {
-    title: 'Apartments.com — Telluride Area',
+    title: 'Luxury Condo — 395 E Colorado Ave',
     type: 'market',
-    address: 'Telluride / Mountain Village, CO',
-    lat: 37.9375, lng: -107.8123,
-    beds: 'Varies', price: 'Market rate',
-    source: 'Apartments.com',
-    contact: {},
-    url: 'https://www.apartments.com/telluride-co/',
-    note: 'Aggregated market-rate listings. Filter for long-term leases.'
-  },
-  {
-    title: 'Zillow — Telluride Rentals',
-    type: 'market',
-    address: 'Telluride / San Miguel County, CO',
-    lat: 37.9375, lng: -107.8123,
-    beds: 'Varies', price: 'Market rate',
-    source: 'Zillow',
-    contact: {},
-    url: 'https://www.zillow.com/telluride-co/rentals/',
-    note: 'Filter by long-term. Listings may include short-term — verify lease terms.'
-  },
-  {
-    title: 'Craigslist Western Slope — Telluride Apartments',
-    type: 'market',
-    address: 'Telluride area, CO',
-    lat: 37.9375, lng: -107.8123,
-    beds: 'Varies', price: 'Varies',
+    address: '395 E Colorado Ave, Telluride, CO 81435',
+    lat: 37.9375, lng: -107.8095,
+    beds: '3 Bedroom', price: '$2,500/mo',
     source: 'Craigslist',
     contact: {},
-    url: 'https://westslope.craigslist.org/search/apa?query=telluride',
-    note: 'Community-posted. Verify all listings independently.'
+    url: 'https://westslope.craigslist.org/apa/d/telluride-luxury-condo/7924056218.html',
+    note: 'Long-term rental. 3BR condo on E Colorado Ave. Verify availability directly.'
   },
   {
-    title: 'Telluride News — Rental Classifieds',
+    title: '1BR Apartment — 545 W Pacific Ave',
     type: 'market',
-    address: 'Telluride area, CO',
-    lat: 37.9375, lng: -107.8123,
-    beds: 'Varies', price: 'Varies',
-    source: 'Telluride News',
+    address: '545 W Pacific Ave, Telluride, CO 81435',
+    lat: 37.9378, lng: -107.8155,
+    beds: '1 Bedroom', price: '$1,500/mo',
+    source: 'Craigslist',
     contact: {},
-    url: 'https://www.telluridenews.com/classifieds/housing/rent/',
-    note: 'Local newspaper classifieds. Updated weekly (Thursday publication).'
+    url: 'https://westslope.craigslist.org/apa/d/telluride-look-no-further-than-this/7919977718.html',
+    note: 'Long-term rental. 1BR on W Pacific Ave. Verify availability directly.'
+  },
+  {
+    title: '3BR House — 280 Mahoney Dr',
+    type: 'market',
+    address: '280 Mahoney Dr, Telluride, CO 81435',
+    lat: 37.9410, lng: -107.8170,
+    beds: '3 Bedroom', price: '$3,901/mo',
+    source: 'Apartments.com',
+    contact: {},
+    url: 'https://www.apartments.com/280-mahoney-dr-telluride-co/zq5w36n/',
+    note: 'Market-rate long-term rental. Contact listing agent on Apartments.com.'
+  },
+  {
+    title: '1BR — 107 W Columbia Ave',
+    type: 'market',
+    address: '107 W Columbia Ave, Telluride, CO 81435',
+    lat: 37.9373, lng: -107.8128,
+    beds: '1 Bedroom', price: '$2,874/mo',
+    source: 'Apartments.com',
+    contact: {},
+    url: 'https://www.apartments.com/107-w-columbia-ave-telluride-co/f1l2ss1/',
+    note: 'Market-rate long-term rental in downtown Telluride.'
   }
 ];
 
