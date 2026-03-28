@@ -6262,7 +6262,7 @@ const MANUAL_SUMMARIES = {
     'Carhenge Redevelopment Project work session (affordable housing PUD at 700 W Pacific Ave) · Comprehensive Plan review · Colorado Wildfire Resiliency Code & Land Use Code updates',
 
   'telluride|2026-03-31|Town Council':
-    'Public hearing: Stender Residence HARC appeal (continued to Apr 28) · 2026 Proposed Construction Projects work session · Adoption of Colorado Wildfire Resiliency Code · 2026 Open Space Commission Work Plan · Deed-restricted property sales (Silver Jack Unit 205, Element 52 Unit SW-102) · Workforce housing deed amendments (Overlook Lots 17 & 2) · Acquisition of Wilkin Court Unit H · Executive session: Town Manager evaluation',
+    '⚖️ SECOND READING — Adoption of Colorado Wildfire Resiliency Code (Ordinance, expected to pass) · Public hearing: Stender Residence HARC appeal (continued to Apr 28) · 2026 Proposed Construction Projects work session · 2026 Open Space Commission Work Plan · Deed-restricted property sales (Silver Jack Unit 205, Element 52 Unit SW-102) · Workforce housing deed amendments (Overlook Lots 17 & 2) · Acquisition of Wilkin Court Unit H · Executive session: Town Manager evaluation',
 
   'telluride|2026-03-31|Telluride Housing Authority':
     'Workforce housing deed amendments for Overlook at Telluride Subdivision (Lots 17 & 2) · Formation of a Resident Advisory Committee',
@@ -8505,13 +8505,23 @@ async function submitReaction(docId, key) {
 // Procedural / non-contentious topics are penalized or skipped entirely.
 
 const KEY_ISSUE_TIERS = [
+  // Tier weight 25 — Second readings (will pass at this meeting; always top priority)
+  { weight: 25, keywords: [
+    'second reading'
+  ]},
   // Tier weight 15 — Housing (deed restrictions, workforce, affordable, STRs)
+  //   Note: Individual unit deed amendments score here but structural/code-level
+  //   housing changes are what really matter — pair with ordinance tier for those.
   { weight: 15, keywords: [
     'deed restrict', 'deed-restrict', 'deed amendment', 'deed covenant',
     'workforce housing', 'affordable housing', 'housing authority', 'housing action',
     'housing plan', 'housing code', 'carhenge', 'short-term rental', 'str ',
     'accessory dwelling', 'adu', 'resident occupancy', 'deed-restricted property',
     'wilkin court', 'overlook', 'silver jack', 'element 52'
+  ]},
+  // Tier weight 12 — First reading of ordinances (new legislation, not yet final)
+  { weight: 12, keywords: [
+    'first reading'
   ]},
   // Tier weight 8 — Ordinances, resolutions, adoptions (formal contentious actions)
   { weight: 8, keywords: [
@@ -8571,7 +8581,7 @@ function getKeyIssueTopic(item) {
 
   if (best) {
     // Strip procedural prefixes from display text
-    best = best.replace(/^(Public hearing:\s*|Consent:\s*|Admin:\s*|Legislation:\s*)/i, '');
+    best = best.replace(/^(⚖️\s*SECOND READING\s*[—–-]\s*|Public hearing:\s*|Consent:\s*|Admin:\s*|Legislation:\s*)/i, '');
     return best;
   }
   // No keyword-matched topic found — return empty rather than a generic fallback
