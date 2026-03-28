@@ -2306,12 +2306,19 @@
       top: 60px;
       max-height: calc(100vh - 80px);
       overflow-y: auto;
+      overscroll-behavior: contain;
       display: flex;
       flex-direction: column;
       gap: 14px;
       order: -1;
+      padding-right: 4px;
     }
+    .left-sidebar::-webkit-scrollbar { width: 5px; }
+    .left-sidebar::-webkit-scrollbar-track { background: transparent; }
+    .left-sidebar::-webkit-scrollbar-thumb { background: rgba(47,86,77,0.25); border-radius: 4px; }
+    .left-sidebar::-webkit-scrollbar-thumb:hover { background: rgba(47,86,77,0.45); }
     .left-sidebar-card {
+      flex-shrink: 0;
       background: var(--card-bg);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
