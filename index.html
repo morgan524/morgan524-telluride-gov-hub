@@ -2295,6 +2295,9 @@
       gap: 20px;
       align-items: start;
     }
+    .event-card-main.has-club-info {
+      grid-template-columns: minmax(0, 1fr) 240px;
+    }
     .event-card-content {
       min-width: 0;
     }
@@ -2340,11 +2343,14 @@
       font-size: 0.78rem;
       line-height: 1.55;
       color: var(--text-primary);
-      min-width: 200px;
-      max-width: 260px;
+      width: 100%;
       display: flex;
       flex-direction: column;
       gap: 6px;
+    }
+    /* Align card-logo to top when club-info-box makes the card tall */
+    .card.card-has-club {
+      align-items: flex-start;
     }
     .club-info-box .club-info-header {
       font-weight: 700;
@@ -8712,10 +8718,11 @@ function renderLocalNews(unused, filter) {
 
     const linkLabel = isClub ? 'Read full post →' : 'Read full article →';
 
-    html += '<div class="card">';
+    const clubClass = item.clubInfo ? ' card-has-club' : '';
+    html += '<div class="card' + clubClass + '">';
     html += logoHtml;
     html += '<div class="card-body">';
-    html += '<div class="event-card-main">';
+    html += '<div class="event-card-main' + (item.clubInfo ? ' has-club-info' : '') + '">';
     html += '<div class="event-card-content">';
     html += '<div class="meta" style="margin-bottom:2px;">' + (item.source || '') + (item.date ? ' · ' + item.date : '') + topicBadge + '</div>';
     html += '<h3>' + (item.link ? '<a href="' + item.link + '" target="_blank" rel="noopener">' + (item.title || 'Untitled') + '</a>' : (item.title || 'Untitled')) + '</h3>';
