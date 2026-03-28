@@ -1724,27 +1724,31 @@
       transition: all 0.25s;
     }
     .legal-card-grid {
-      display: grid;
-      grid-template-columns: 1fr 200px;
+      display: flex;
       gap: 18px;
-      align-items: start;
+      align-items: flex-start;
     }
-    .legal-card-grid:not(:has(.legal-card-map)) {
-      grid-template-columns: 1fr;
+    .legal-card-body {
+      flex: 1;
+      min-width: 0;
     }
     .legal-card-map {
+      flex-shrink: 0;
       width: 200px;
       height: 180px;
-      flex-shrink: 0;
+      border-radius: 12px;
+      overflow: hidden;
     }
     .legal-card-map iframe {
       pointer-events: none;
+      width: 100%;
+      height: 100%;
     }
     .legal-card:hover .legal-card-map iframe {
       pointer-events: auto;
     }
     @media (max-width: 600px) {
-      .legal-card-grid { grid-template-columns: 1fr; }
+      .legal-card-grid { flex-direction: column; }
       .legal-card-map { width: 100%; height: 150px; }
     }
     .legal-card:hover {
@@ -3344,14 +3348,7 @@
 
     <!-- ══════════ LEGAL NOTICES TAB ══════════ -->
     <div class="tab-content" id="tab-legals">
-      <div class="legals-intro" style="margin-bottom:16px; padding:12px 16px; background:rgba(166,50,35,0.06); border-radius:10px; border-left:4px solid #a63223;">
-        <p style="margin:0 0 8px 0; font-size:0.85rem; color:var(--text-secondary); line-height:1.55;">
-          <strong>This week's legal notices</strong> include a <strong>housing lottery</strong> for deed-restricted units at Silver Jack and Element 52, <strong>RFPs</strong> from San Miguel County (office painting) and Mountain Village (summer burn piles and parking lot overlay), a <strong>public hearing</strong> on wildfire resiliency code adoption, and <strong>new tiered water rates</strong> for Norwood effective April 1. Older notices cover estate creditor filings, Town of Telluride ordinances on budget and property sales, a land use vesting at 116 E Columbia Ave, an Ophir roof pitch variance, and a Stillwell water main bid.
-        </p>
-        <p style="margin:0; font-size:0.82rem; color:var(--text-muted); line-height:1.45; font-style:italic;">
-          Published in The Telluride Times and The Norwood Post. Click any notice to read the full text.
-        </p>
-      </div>
+      <!-- Intro removed — duplicated by Legal Notices of Interest sidebar -->
       <div class="filter-row">
         <span class="chip active-all" data-filter="all" data-tab-target="legals">All</span>
         <span class="chip" data-filter="public-entity" data-tab-target="legals">Public Entity</span>
@@ -9092,10 +9089,11 @@ function renderLegalInterestSidebar() {
   const container = document.getElementById('legalInterestContent');
   if (!container) return;
 
-  // Priority order: water court first, then estate notices
+  // Priority order: water court first, then estate, then housing (lottery/deed restricted)
   const waterCourt = LEGAL_NOTICES.filter(n => n.filterTag === 'water-court');
   const estate = LEGAL_NOTICES.filter(n => n.filterTag === 'estate');
-  const interest = [...waterCourt, ...estate];
+  const housing = LEGAL_NOTICES.filter(n => n.filterTag === 'housing');
+  const interest = [...waterCourt, ...estate, ...housing];
 
   if (interest.length === 0) {
     container.innerHTML = '<div style="text-align:center;color:var(--text-muted);font-size:0.75rem;">No priority notices this week.</div>';
@@ -9104,8 +9102,8 @@ function renderLegalInterestSidebar() {
 
   let html = '';
   interest.forEach(n => {
-    const typeColor = n.filterTag === 'water-court' ? '#1a6fb5' : '#8b5e3c';
-    const typeIcon = n.filterTag === 'water-court' ? '💧' : '📜';
+    const typeColor = n.filterTag === 'water-court' ? '#1a6fb5' : n.filterTag === 'housing' ? '#2f7a4d' : '#8b5e3c';
+    const typeIcon = n.filterTag === 'water-court' ? '💧' : n.filterTag === 'housing' ? '🏘️' : '📜';
     const primaryPaper = typeof PAPER_LOGOS !== 'undefined' && PAPER_LOGOS[n.papers[0]] ? PAPER_LOGOS[n.papers[0]].url : '#';
     html += '<a href="' + primaryPaper + '" target="_blank" rel="noopener" style="display:block;padding:10px 12px;border-radius:10px;background:rgba(47,86,77,0.04);border:1px solid rgba(47,86,77,0.1);text-decoration:none;transition:background 0.15s ease;"' +
       ' onmouseover="this.style.background=\'rgba(47,86,77,0.09)\'" onmouseout="this.style.background=\'rgba(47,86,77,0.04)\'">' +
