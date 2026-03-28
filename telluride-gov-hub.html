@@ -1941,6 +1941,64 @@
     .housing-search-hero { text-align: center; margin-bottom: 24px; }
     .housing-search-hero h2 { font-size: 1.6rem; color: var(--forest); margin-bottom: 6px; }
     .housing-search-subtitle { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; }
+
+    /* Deed-restricted qualification info box */
+    .deed-restricted-info {
+      border: 1.5px solid var(--forest-soft);
+      border-radius: 12px;
+      margin-bottom: 22px;
+      background: rgba(33,68,60,0.04);
+      overflow: hidden;
+    }
+    .deed-restricted-toggle {
+      cursor: pointer;
+      padding: 14px 18px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--forest);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .deed-restricted-toggle::-webkit-details-marker { display: none; }
+    .deed-restricted-toggle::before {
+      content: '▶';
+      font-size: 0.7rem;
+      transition: transform 0.2s;
+      color: var(--forest-soft);
+    }
+    .deed-restricted-info[open] .deed-restricted-toggle::before {
+      transform: rotate(90deg);
+    }
+    .deed-restricted-body {
+      padding: 0 18px 16px;
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: var(--text-primary);
+    }
+    .deed-restricted-body h4 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--forest);
+      margin: 14px 0 6px;
+    }
+    .deed-restricted-body p {
+      margin: 0 0 8px;
+    }
+    .deed-restricted-contact {
+      margin-top: 12px;
+      padding: 10px 14px;
+      background: rgba(33,68,60,0.07);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+    .deed-restricted-contact a {
+      color: var(--forest-soft);
+      font-weight: 600;
+    }
+
     .housing-filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
     .housing-card {
       border: 1px solid var(--line); border-radius: 14px; background: var(--card-bg);
@@ -4209,6 +4267,34 @@
           <h2>🏠 Long-Term Housing Search</h2>
           <p class="housing-search-subtitle">Aggregated long-term rental listings from public housing authorities and regional sources. <em>Short-term and vacation rentals are excluded.</em></p>
         </div>
+
+        <!-- Deed-restricted qualification box -->
+        <details class="deed-restricted-info">
+          <summary class="deed-restricted-toggle">Am I qualified for deed-restricted housing?</summary>
+          <div class="deed-restricted-body">
+            <p>San Miguel County's deed-restricted housing program has provided affordable housing for local workers since 1991. The program is administered by the <strong>San Miguel Regional Housing Authority (SMRHA)</strong> on behalf of the County Housing Authority.</p>
+
+            <h4>Key Qualifications</h4>
+            <p><strong>Employment:</strong> You must work within the <strong>Telluride R-1 School District</strong> boundaries. Self-employed individuals must document working hours, location, and income for the prior 12–16 months.</p>
+            <p><strong>Income &amp; Assets:</strong> Some deed restriction types (Rio Vista II, Pinion Park) include income and asset limits. Requirements vary by property — SMRHA can confirm which apply.</p>
+            <p><strong>Residency:</strong> Owner-occupancy is required. Properties cannot be left vacant for more than 4 months in any rolling 12-month period without an approved leave of absence.</p>
+            <p><strong>Property Ownership:</strong> Limitations on owning other property may apply depending on the deed restriction type.</p>
+
+            <h4>Types of Deed Restrictions</h4>
+            <p>Four types exist in the county: the Land Use Code (LUC) restriction, the Amended and Restated Covenant (most common, county-wide), the Rio Vista II Covenant, and the Pinion Park Covenant (Norwood). Each carries different rules on price appreciation, income limits, and eligibility.</p>
+
+            <h4>For Renters</h4>
+            <p>Tenants of deed-restricted properties must also qualify and requalify annually with SMRHA when renewing their lease.</p>
+
+            <h4>How to Apply</h4>
+            <p>Submit a completed application to SMRHA — processing takes approximately 7 business days. SMRHA conducts compliance verification every two years.</p>
+
+            <div class="deed-restricted-contact">
+              <strong>Contact SMRHA:</strong> (970) 728-3034 · <a href="mailto:admin@smrha.org">admin@smrha.org</a> · 820 Black Bear Rd G-17, Telluride, CO 81435<br>
+              <a href="https://smrha.org/san-miguel-county/" target="_blank" rel="noopener">Full program details at smrha.org →</a>
+            </div>
+          </div>
+        </details>
 
         <!-- Filter chips -->
         <div class="housing-filter-bar">
