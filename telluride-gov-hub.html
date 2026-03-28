@@ -1593,6 +1593,7 @@
     .comment-actions {
       margin-top: 8px;
       display: flex;
+      justify-content: center;
       gap: 8px;
       flex-wrap: wrap;
     }
@@ -8095,40 +8096,60 @@ function renderOfficialCommentInfo(item) {
   let email = '';
   let label = '';
 
+  // Determine the receiving body from the meeting title
+  const titleLower = (item.title || '').toLowerCase();
+  function bodyLabel() {
+    if (/planning.*zoning|p\s*&\s*z|planning commission/.test(titleLower)) return 'the Planning Commission';
+    if (/town council/.test(titleLower)) return 'Town Council';
+    if (/board of county commissioners|bocc/.test(titleLower)) return 'the BOCC';
+    if (/design review|drc/.test(titleLower)) return 'the Design Review Commission';
+    if (/housing authority/.test(titleLower)) return 'the Housing Authority';
+    if (/school.*board|board of education/.test(titleLower)) return 'the School Board';
+    if (/board of trustees/.test(titleLower)) return 'the Board of Trustees';
+    if (/board of directors/.test(titleLower)) return 'the Board of Directors';
+    if (/town board/.test(titleLower)) return 'the Town Board';
+    if (/council/.test(titleLower)) return 'Council';
+    if (/commission/.test(titleLower)) return 'the Commission';
+    if (/board/.test(titleLower)) return 'the Board';
+    return '';
+  }
+  const body = bodyLabel();
+  const submitLabel = body ? 'Submit Comments to ' + body : 'Submit Comments';
+
   if (item.source === 'county') {
     const isPlanning = isCountyPlanningMeeting(item);
     quote = 'Written comments must be received by Monday at 4:00 pm (prior to the meeting). Later comments will be provided to members as time allows.';
     email = isPlanning ? 'planningcommission@sanmiguelcountyco.gov' : 'bocc@sanmiguelcountyco.gov';
-    label = isPlanning ? 'Email Planning Comments' : 'Email County Comments';
+    label = submitLabel;
   } else if (item.source === 'telluride') {
     quote = 'Written comments must be received by Wednesday at noon (prior to the meeting). Later comments will be provided to members as time allows.';
     email = 'townclerk@telluride.gov';
-    label = 'Submit Comment';
+    label = submitLabel;
   } else if (item.source === 'mv') {
     const isPlanning = isMountainVillagePlanningMeeting(item);
     quote = 'Written comments must be received by Thursday (prior to the meeting). Later comments will be provided to members as time allows.';
     email = isPlanning ? 'planning@mtnvillage.org' : 'council@mtnvillage.org';
-    label = 'Submit Comment';
+    label = submitLabel;
   } else if (item.source === 'ophir') {
     quote = 'Written comments should be submitted 48 hours before the meeting.';
     email = 'clerk@ophir.us';
-    label = 'Submit Comment';
+    label = submitLabel || 'Submit Comments to the Town Board';
   } else if (item.source === 'norwood') {
     quote = 'Written comments should be submitted 48 hours before the meeting.';
     email = 'cross@norwoodtown.com';
-    label = 'Submit Comment';
+    label = submitLabel || 'Submit Comments to the Town Board';
   } else if (item.source === 'fire') {
     quote = 'Written comments should be submitted 48 hours before the meeting.';
     email = 'pdasaro@telluridefire.com';
-    label = 'Submit Comment';
+    label = submitLabel || 'Submit Comments to the Fire Board';
   } else if (item.source === 'med') {
     quote = 'Written comments should be submitted 48 hours before the 4th Thursday of each month.';
     email = 'wcrossland@tellmed.org';
-    label = 'Submit Comment';
+    label = submitLabel || 'Submit Comments to the Board';
   } else if (item.source === 'airport') {
     quote = 'Written comments may be submitted to the Airport Authority prior to the meeting.';
     email = 'info@tellurideairport.com';
-    label = 'Email Airport Authority';
+    label = 'Submit Comments to the Airport Authority';
   } else {
     return '';
   }
