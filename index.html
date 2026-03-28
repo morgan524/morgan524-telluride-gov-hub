@@ -1248,6 +1248,11 @@
       border-radius: 10px;
       z-index: 1;
     }
+    #tab-meetings .card.multiline-title > .card-logo {
+      width: 96px;
+      height: 96px;
+      border-radius: 14px;
+    }
     #tab-meetings .card-body {
       width: 100%;
     }
@@ -1262,6 +1267,12 @@
     #tab-meetings .event-card-content > h3,
     #tab-meetings .event-card-content > .meta {
       padding-right: 80px; /* leave room for logo in top-right */
+    }
+    #tab-meetings .card.multiline-title .event-card-content > .source-badge,
+    #tab-meetings .card.multiline-title .event-card-content > .agenda-link,
+    #tab-meetings .card.multiline-title .event-card-content > h3,
+    #tab-meetings .card.multiline-title .event-card-content > .meta {
+      padding-right: 112px;
     }
     #tab-meetings .event-illustration {
       display: none;
@@ -9723,6 +9734,16 @@ function renderMeetingsWithTopic() {
   });
 
   container.innerHTML = html;
+
+  // Enlarge logo on cards whose title wraps to 2+ lines
+  container.querySelectorAll('.card').forEach(card => {
+    const h3 = card.querySelector('h3');
+    if (!h3) return;
+    const lineHeight = parseFloat(getComputedStyle(h3).lineHeight) || 28;
+    if (h3.scrollHeight > lineHeight * 1.5) {
+      card.classList.add('multiline-title');
+    }
+  });
 }
 
 // Wrap news render to apply topic filter
