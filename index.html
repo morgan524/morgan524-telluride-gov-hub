@@ -215,6 +215,43 @@
       top: auto;
       background: rgba(255,253,252,0.96);
     }
+    /* ── Subscribe Bar ── */
+    .subscribe-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 8px 16px;
+      background: linear-gradient(135deg, rgba(47,86,77,0.06), rgba(198,148,55,0.06));
+      border-bottom: 1px solid rgba(47,86,77,0.1);
+      font-size: 0.78rem;
+    }
+    .subscribe-bar-text {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    .subscribe-bar-btn {
+      padding: 6px 16px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #2f564d, #22453e);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 4px 10px rgba(34,69,62,0.18);
+    }
+    .subscribe-bar-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(34,69,62,0.25);
+    }
+    @media (max-width: 768px) {
+      .subscribe-bar { font-size: 0.72rem; gap: 8px; padding: 6px 12px; }
+      .subscribe-bar-btn { font-size: 0.7rem; padding: 5px 12px; }
+    }
+
     .tab-btn {
       padding: 14px 20px;
       font-size: 1.05rem;
@@ -3137,13 +3174,17 @@
   <!-- ── Tab Bar ── -->
   <div class="tab-bar">
     <button class="tab-btn active" data-tab="meetings">Meetings</button>
-    <button class="tab-btn" data-tab="land-use">Land Use</button>
     <button class="tab-btn" data-tab="news">Events</button>
-    <button class="tab-btn" data-tab="gondola">Gondola 3A</button>
     <button class="tab-btn" data-tab="local-news">Local News</button>
     <button class="tab-btn" data-tab="legals">Legal Notices</button>
-    <button class="tab-btn" data-tab="subscribe">Subscribe</button>
     <button class="tab-btn" data-tab="links">Local Groups</button>
+    <button class="tab-btn" data-tab="land-use">Land Use</button>
+    <button class="tab-btn" data-tab="gondola">Gondola 3A</button>
+  </div>
+  <!-- ── Subscribe Bar ── -->
+  <div class="subscribe-bar">
+    <span class="subscribe-bar-text">Stay informed on the topics that matter to you</span>
+    <button class="subscribe-bar-btn" onclick="document.querySelectorAll('.tab-btn').forEach(b=>{if(b.dataset.tab==='subscribe'){b.click();}});">Subscribe to Your Topics</button>
   </div>
 
   <div class="container">
@@ -8126,6 +8167,9 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     layout.classList.toggle('links-active', btn.dataset.tab === 'links');
     layout.classList.toggle('news-active', btn.dataset.tab === 'news');
     layout.classList.toggle('legals-active', btn.dataset.tab === 'legals');
+    // Hide subscribe bar when on Subscribe tab
+    const subBar = document.querySelector('.subscribe-bar');
+    if (subBar) subBar.style.display = (btn.dataset.tab === 'subscribe') ? 'none' : '';
   });
 });
 
@@ -11840,27 +11884,26 @@ function showSubmitStatus(msg, type) {
   <button class="mobile-more-item" data-tab="local-news">
     <span class="nav-icon">📰</span> Local News
   </button>
-  <button class="mobile-more-item" data-tab="gondola">
-    <span class="nav-icon">🚡</span> Gondola 3A
-  </button>
   <button class="mobile-more-item" data-tab="legals">
     <span class="nav-icon">📋</span> Legal Notices
   </button>
-  <button class="mobile-more-item" data-tab="subscribe">
-    <span class="nav-icon">📬</span> Subscribe
-  </button>
   <button class="mobile-more-item" data-tab="links">
     <span class="nav-icon">🔗</span> Local Groups
+  </button>
+  <button class="mobile-more-item" data-tab="land-use">
+    <span class="nav-icon">🏗️</span> Land Use
+  </button>
+  <button class="mobile-more-item" data-tab="gondola">
+    <span class="nav-icon">🚡</span> Gondola 3A
+  </button>
+  <button class="mobile-more-item" data-tab="subscribe">
+    <span class="nav-icon">📬</span> Subscribe
   </button>
 </div>
 <nav class="mobile-nav" id="mobileNav">
   <button class="mobile-nav-btn active" data-tab="meetings">
     <span class="nav-icon">🏛️</span>
     <span class="nav-label">Meetings</span>
-  </button>
-  <button class="mobile-nav-btn" data-tab="land-use">
-    <span class="nav-icon">🏗️</span>
-    <span class="nav-label">Land Use</span>
   </button>
   <button class="mobile-nav-btn" data-tab="news">
     <span class="nav-icon">🎉</span>
@@ -11882,7 +11925,7 @@ function showSubmitStatus(msg, type) {
   const allMobileNavBtns = mobileNav.querySelectorAll('.mobile-nav-btn');
   const allMoreItems = moreMenu.querySelectorAll('.mobile-more-item');
   // Tabs that live in the "More" menu
-  const moreTabs = new Set(['local-news', 'gondola', 'legals', 'subscribe', 'links']);
+  const moreTabs = new Set(['local-news', 'legals', 'links', 'land-use', 'gondola', 'subscribe']);
 
   function closeMoreMenu() {
     moreMenu.classList.remove('open');
@@ -11915,6 +11958,9 @@ function showSubmitStatus(msg, type) {
       layout.classList.toggle('news-active', tabName === 'news');
       layout.classList.toggle('legals-active', tabName === 'legals');
     }
+    // Hide subscribe bar when on Subscribe tab
+    const subBar = document.querySelector('.subscribe-bar');
+    if (subBar) subBar.style.display = (tabName === 'subscribe') ? 'none' : '';
     // Scroll to top of content
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
