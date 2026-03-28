@@ -1428,6 +1428,90 @@
       letter-spacing: 0.03em;
     }
 
+    /* ── Quick Reactions ── */
+    .quick-reactions {
+      margin-top: 8px;
+      padding: 8px 12px;
+      background: rgba(33,68,60,0.03);
+      border: 1px solid rgba(33,68,60,0.10);
+      border-radius: 8px;
+    }
+    .quick-reactions-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .quick-reactions-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .qr-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #fff;
+      font-size: 0.68rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .qr-btn:hover {
+      border-color: var(--forest-soft);
+      background: rgba(33,68,60,0.06);
+      color: var(--forest);
+    }
+    .qr-btn.voted {
+      border-color: var(--forest);
+      background: rgba(33,68,60,0.10);
+      color: var(--forest);
+      font-weight: 600;
+    }
+    .qr-btn .qr-count {
+      font-size: 0.62rem;
+      font-weight: 700;
+      color: var(--forest-soft);
+      min-width: 14px;
+      text-align: center;
+    }
+
+    /* ── Meetings tab: 30% larger Quick Reactions ── */
+    #tab-meetings .quick-reactions-label { font-size: 0.88rem; }
+    #tab-meetings .qr-btn { font-size: 0.88rem; padding: 6px 14px; }
+    #tab-meetings .qr-btn .qr-count { font-size: 0.81rem; }
+
+    /* ── Agenda link: posted (green bg) vs not-posted (grey) ── */
+    .agenda-link.agenda-posted {
+      background: var(--forest-soft);
+      color: #f0f0f0;
+    }
+    .agenda-link.agenda-posted:hover {
+      background: var(--forest);
+      color: #fff;
+    }
+
+    /* ── Correction link inside comment box ── */
+    .correction-inline-link {
+      display: inline;
+      font-size: inherit;
+      font-style: normal;
+      color: var(--text-muted);
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      cursor: pointer;
+      margin-left: 6px;
+    }
+    .correction-inline-link:hover {
+      color: var(--accent-green);
+    }
+
     /* ── Public Comment Info ── */
     .comment-note {
       margin-top: 6px;
@@ -3182,7 +3266,7 @@
 <!-- Firebase SDK (modular, from CDN) -->
 <script type="module">
   import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js';
-  import { getFirestore, collection, addDoc, query, where, orderBy, onSnapshot, doc, updateDoc, deleteDoc, getDocs, increment, serverTimestamp, Timestamp }
+  import { getFirestore, collection, addDoc, setDoc, query, where, orderBy, onSnapshot, doc, updateDoc, deleteDoc, getDocs, increment, serverTimestamp, Timestamp }
     from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js';
   import { getAuth, signInWithEmailAndPassword, onAuthStateChanged }
     from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js';
@@ -3211,7 +3295,7 @@
     const auth = getAuth(app);
     window._FIREBASE_DB = db;
     window._FIREBASE_AUTH = auth;
-    window._FB = { collection, addDoc, query, where, orderBy, onSnapshot, doc, updateDoc, deleteDoc, getDocs, increment, serverTimestamp, Timestamp };
+    window._FB = { collection, addDoc, setDoc, query, where, orderBy, onSnapshot, doc, updateDoc, deleteDoc, getDocs, increment, serverTimestamp, Timestamp };
     window._FB_AUTH = { signInWithEmailAndPassword, onAuthStateChanged };
     window._FIREBASE_READY = true;
     console.log('Firebase Firestore initialized');
@@ -7996,8 +8080,119 @@ function renderOfficialCommentInfo(item) {
 
   const meetingDate = item.eventDate ? fullDate(item.eventDate) : '';
   const subject = encodeURIComponent(`Please accept these written comments for ${item.title || 'Meeting'} - ${meetingDate}`);
-  return `<div class="comment-note">${quote}</div><div class="comment-actions"><a class="comment-email-btn" href="mailto:${email}?subject=${subject}">✉️ ${label}</a></div>`;
+  const safeTitle = (item.title || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
+  return `<div class="comment-note">${quote} <a class="correction-inline-link" onclick="openCorrectionModal('${safeTitle}', 'meetings')">Suggested change to summary?</a></div><div class="comment-actions"><a class="comment-email-btn" href="mailto:${email}?subject=${subject}">✉️ ${label}</a></div>`;
 }
+
+// ── Quick Reactions: perspective buttons on meeting cards ──
+const QR_OPTIONS = [
+  { key: 'attending',  emoji: '🙋', label: "I'm Attending" },
+  { key: 'matters',    emoji: '💡', label: 'This Matters to Me' },
+  { key: 'learn',      emoji: '📖', label: 'I Want to Learn More' },
+  { key: 'concerns',   emoji: '⚠️', label: 'I Have Concerns' },
+  { key: 'handled',    emoji: '✅', label: 'Well Handled' }
+];
+
+function meetingReactionId(item) {
+  const raw = (item.title || '') + '|' + (item.eventDate ? item.eventDate.toISOString().slice(0,10) : '');
+  let h = 0;
+  for (let i = 0; i < raw.length; i++) { h = ((h << 5) - h + raw.charCodeAt(i)) | 0; }
+  return 'mtg_' + Math.abs(h).toString(36);
+}
+
+// Simple fingerprint for IP-like dedup (uses localStorage as proxy since true IP requires server)
+function getDeviceFingerprint() {
+  let fp = localStorage.getItem('_qr_fp');
+  if (!fp) {
+    fp = Math.random().toString(36).slice(2) + Date.now().toString(36);
+    localStorage.setItem('_qr_fp', fp);
+  }
+  return fp;
+}
+
+async function loadReactionCounts(docId) {
+  if (!window._FIREBASE_READY || !window._FIREBASE_DB) return null;
+  const db = window._FIREBASE_DB;
+  const FB = window._FB;
+  try {
+    const snap = await FB.getDocs(FB.query(FB.collection(db, 'reactions'), FB.where('__name__', '==', docId)));
+    if (!snap.empty) return snap.docs[0].data();
+  } catch(e) { console.warn('loadReactionCounts error:', e); }
+  return null;
+}
+
+async function submitReaction(docId, key) {
+  if (!window._FIREBASE_READY || !window._FIREBASE_DB) return;
+  const db = window._FIREBASE_DB;
+  const FB = window._FB;
+  const fp = getDeviceFingerprint();
+  const votersField = key + '_voters';
+  try {
+    const ref = FB.doc(db, 'reactions', docId);
+    const snap = await FB.getDocs(FB.query(FB.collection(db, 'reactions'), FB.where('__name__', '==', docId)));
+    if (snap.empty) {
+      const data = { created: FB.serverTimestamp() };
+      QR_OPTIONS.forEach(o => { data[o.key] = 0; data[o.key + '_voters'] = []; });
+      data[key] = 1;
+      data[votersField] = [fp];
+      await FB.setDoc(ref, data);
+    } else {
+      const existingData = snap.docs[0].data();
+      const voters = existingData[votersField] || [];
+      if (voters.includes(fp)) return null; // already voted
+      const updateData = {};
+      updateData[key] = FB.increment(1);
+      updateData[votersField] = [...voters, fp];
+      await FB.updateDoc(ref, updateData);
+    }
+    return true;
+  } catch(e) { console.warn('submitReaction error:', e); return null; }
+}
+
+function renderQuickReactions(item) {
+  const docId = meetingReactionId(item);
+  let html = '<div class="quick-reactions" data-reaction-id="' + docId + '">';
+  html += '<div class="quick-reactions-label">Quick Reactions</div>';
+  html += '<div class="quick-reactions-btns">';
+  QR_OPTIONS.forEach(o => {
+    html += `<button class="qr-btn" data-key="${o.key}" data-doc="${docId}" onclick="handleQuickReaction(this, '${docId}', '${o.key}')">${o.emoji} ${o.label} <span class="qr-count">0</span></button>`;
+  });
+  html += '</div></div>';
+
+  // Load counts async after render
+  setTimeout(() => {
+    loadReactionCounts(docId).then(data => {
+      if (!data) return;
+      const container = document.querySelector(`.quick-reactions[data-reaction-id="${docId}"]`);
+      if (!container) return;
+      const fp = getDeviceFingerprint();
+      container.querySelectorAll('.qr-btn').forEach(btn => {
+        const key = btn.dataset.key;
+        const count = data[key] || 0;
+        const voters = data[key + '_voters'] || [];
+        btn.querySelector('.qr-count').textContent = count > 0 ? count : '';
+        if (voters.includes(fp)) btn.classList.add('voted');
+      });
+    });
+  }, 100);
+
+  return html;
+}
+
+window.handleQuickReaction = async function(btn, docId, key) {
+  if (btn.classList.contains('voted')) return;
+  btn.classList.add('voted');
+  const countEl = btn.querySelector('.qr-count');
+  const cur = parseInt(countEl.textContent) || 0;
+  countEl.textContent = cur + 1;
+
+  const result = await submitReaction(docId, key);
+  if (result === null) {
+    // Already voted — revert
+    btn.classList.remove('voted');
+    countEl.textContent = cur || '';
+  }
+};
 
 function renderMeetings(items, filter) {
   const container = document.getElementById('meetings-content');
@@ -8054,7 +8249,7 @@ function renderMeetings(items, filter) {
       const locationPart = item.location ? `<span class="location">📍 ${item.location}</span>` : '';
       const agendaUrl = item.agendaLink || item.link;
       const agendaBadge = item.hasAgenda
-        ? `<a href="${agendaUrl}" target="_blank" rel="noopener" class="agenda-link">Agenda Posted →</a>`
+        ? `<a href="${agendaUrl}" target="_blank" rel="noopener" class="agenda-link agenda-posted">Agenda Posted →</a>`
         : `<span class="agenda-link" style="opacity:0.5;cursor:default;pointer-events:none;">Agenda Posted →</span>`;
       const cancelStyle = item.canceled ? ' style="opacity: 0.55; text-decoration: line-through;"' : '';
       const summary = item.canceled ? '' : getMeetingSummary(item);
@@ -8094,6 +8289,7 @@ function renderMeetings(items, filter) {
                 ${item.canceled ? '' : summaryHtml}
                 ${item.canceled ? '' : (item.description ? `<div class="description">${item.description}</div>` : '')}
                 ${item.canceled ? '' : renderOfficialCommentInfo(item)}
+                ${item.canceled ? '' : renderQuickReactions(item)}
                 ${item.canceled ? '' : renderCardActions(item)}
               </div>
               ${item.canceled ? '' : renderEventIllustration(getEventTopic(item))}
@@ -11959,9 +12155,11 @@ function showSubmitStatus(msg, type) {
     container.querySelectorAll('.card, .legal-card').forEach(card => {
       if (card.dataset.correctionAdded) return;
       card.dataset.correctionAdded = 'true';
-      // Skip "Suggest Correction" for Telluride Times and KOTO articles on Local News page
+      // Skip meetings tab — correction link is now inline in the comment box
       const tab = card.closest('.tab-content');
       const tabName = tab ? tab.id.replace('tab-', '') : '';
+      if (tabName === 'meetings') return;
+      // Skip "Suggest Correction" for Telluride Times and KOTO articles on Local News page
       if (tabName === 'local-news') {
         const srcKey = card.dataset.sourceKey;
         if (srcKey === 'ttimes' || srcKey === 'koto') return;
