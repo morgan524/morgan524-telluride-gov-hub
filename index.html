@@ -1485,6 +1485,15 @@
       border: 1px solid rgba(33,68,60,0.10);
       border-radius: 8px;
     }
+    .quick-reactions-issue {
+      font-size: 0.74rem;
+      line-height: 1.4;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      padding: 5px 8px;
+      background: rgba(33,68,60,0.05);
+      border-radius: 5px;
+    }
     .quick-reactions-label {
       font-size: 0.68rem;
       font-weight: 700;
@@ -1532,6 +1541,7 @@
     }
 
     /* ── Meetings tab: 30% larger Quick Reactions ── */
+    #tab-meetings .quick-reactions-issue { font-size: 0.92rem; }
     #tab-meetings .quick-reactions-label { font-size: 0.88rem; }
     #tab-meetings .qr-btn { font-size: 0.88rem; padding: 6px 14px; }
     #tab-meetings .qr-btn .qr-count { font-size: 0.81rem; }
@@ -8193,9 +8203,42 @@ async function submitReaction(docId, key) {
   } catch(e) { console.warn('submitReaction error:', e); return null; }
 }
 
+// ── Extract the single most important topic for a meeting ──
+// Priority: land use / zoning / code changes first, then first topic in summary
+const LAND_USE_KEYWORDS = [
+  'land use', 'zoning', 'pud', 'comprehensive plan', 'code update', 'code change',
+  'code amendment', 'land use code', 'rezoning', 'variance', 'subdivision',
+  'annexation', 'harc', 'historic', 'wildfire resiliency', 'setback',
+  'building code', 'development', 'affordable housing', 'deed restrict',
+  'workforce housing', 'short-term rental', 'str ', 'accessory dwelling'
+];
+
+function getKeyIssueTopic(item) {
+  const summary = getMeetingSummary(item);
+  if (!summary) return '';
+  // Split on the · separator used in manual summaries
+  const topics = summary.split(' · ').map(t => t.trim()).filter(Boolean);
+  if (topics.length === 0) return '';
+  // Check for land use / code priority topics first
+  const lower = topics.map(t => t.toLowerCase());
+  for (let i = 0; i < lower.length; i++) {
+    for (const kw of LAND_USE_KEYWORDS) {
+      if (lower[i].includes(kw)) return topics[i];
+    }
+  }
+  // Fallback: first topic
+  return topics[0];
+}
+
 function renderQuickReactions(item) {
+  // Only show when an agenda has been posted
+  if (!item.hasAgenda) return '';
   const docId = meetingReactionId(item);
+  const keyIssue = getKeyIssueTopic(item);
   let html = '<div class="quick-reactions" data-reaction-id="' + docId + '">';
+  if (keyIssue) {
+    html += '<div class="quick-reactions-issue">🔑 <strong>Key Issue:</strong> ' + keyIssue + '</div>';
+  }
   html += '<div class="quick-reactions-label">Quick Reactions</div>';
   html += '<div class="quick-reactions-btns">';
   QR_OPTIONS.forEach(o => {
