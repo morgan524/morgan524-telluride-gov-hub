@@ -1941,6 +1941,64 @@
     .housing-search-hero { text-align: center; margin-bottom: 24px; }
     .housing-search-hero h2 { font-size: 1.6rem; color: var(--forest); margin-bottom: 6px; }
     .housing-search-subtitle { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; }
+
+    /* Deed-restricted qualification info box */
+    .deed-restricted-info {
+      border: 1.5px solid var(--forest-soft);
+      border-radius: 12px;
+      margin-bottom: 22px;
+      background: rgba(33,68,60,0.04);
+      overflow: hidden;
+    }
+    .deed-restricted-toggle {
+      cursor: pointer;
+      padding: 14px 18px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--forest);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .deed-restricted-toggle::-webkit-details-marker { display: none; }
+    .deed-restricted-toggle::before {
+      content: '▶';
+      font-size: 0.7rem;
+      transition: transform 0.2s;
+      color: var(--forest-soft);
+    }
+    .deed-restricted-info[open] .deed-restricted-toggle::before {
+      transform: rotate(90deg);
+    }
+    .deed-restricted-body {
+      padding: 0 18px 16px;
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: var(--text-primary);
+    }
+    .deed-restricted-body h4 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--forest);
+      margin: 14px 0 6px;
+    }
+    .deed-restricted-body p {
+      margin: 0 0 8px;
+    }
+    .deed-restricted-contact {
+      margin-top: 12px;
+      padding: 10px 14px;
+      background: rgba(33,68,60,0.07);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+    .deed-restricted-contact a {
+      color: var(--forest-soft);
+      font-weight: 600;
+    }
+
     .housing-filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
     .housing-card {
       border: 1px solid var(--line); border-radius: 14px; background: var(--card-bg);
@@ -4053,7 +4111,7 @@
         <a class="link-card" href="https://townofmountainvillage.com/business/planning/design-review-board/" target="_blank" rel="noopener">
           <div class="link-icon">📐</div>
           <h4>Design Review Board</h4>
-          <p>DRB agendas, packets, and minutes — meets the first Thursday of most months.</p>
+          <p>Design Review Board agendas, packets, and minutes — meets the first Thursday of most months.</p>
           <div class="link-source src-mv">townofmountainvillage.com</div>
         </a>
         <a class="link-card" href="https://media.avcaptureall.cloud/?customerGuid=f6f590a7-5acc-4d32-9928-ad9ae0d02e06&target=foo&view=thumbs&tabs=past%7Ctoday%7Cupcoming" target="_blank" rel="noopener">
@@ -4210,6 +4268,34 @@
           <p class="housing-search-subtitle">Aggregated long-term rental listings from public housing authorities and regional sources. <em>Short-term and vacation rentals are excluded.</em></p>
         </div>
 
+        <!-- Deed-restricted qualification box -->
+        <details class="deed-restricted-info">
+          <summary class="deed-restricted-toggle">Am I qualified for deed-restricted housing?</summary>
+          <div class="deed-restricted-body">
+            <p>San Miguel County's deed-restricted housing program has provided affordable housing for local workers since 1991. The program is administered by the <strong>San Miguel Regional Housing Authority (SMRHA)</strong> on behalf of the County Housing Authority.</p>
+
+            <h4>Key Qualifications</h4>
+            <p><strong>Employment:</strong> You must work within the <strong>Telluride R-1 School District</strong> boundaries. Self-employed individuals must document working hours, location, and income for the prior 12–16 months.</p>
+            <p><strong>Income &amp; Assets:</strong> Some deed restriction types (Rio Vista II, Pinion Park) include income and asset limits. Requirements vary by property — SMRHA can confirm which apply.</p>
+            <p><strong>Residency:</strong> Owner-occupancy is required. Properties cannot be left vacant for more than 4 months in any rolling 12-month period without an approved leave of absence.</p>
+            <p><strong>Property Ownership:</strong> Limitations on owning other property may apply depending on the deed restriction type.</p>
+
+            <h4>Types of Deed Restrictions</h4>
+            <p>Four types exist in the county: the Land Use Code (LUC) restriction, the Amended and Restated Covenant (most common, county-wide), the Rio Vista II Covenant, and the Pinion Park Covenant (Norwood). Each carries different rules on price appreciation, income limits, and eligibility.</p>
+
+            <h4>For Renters</h4>
+            <p>Tenants of deed-restricted properties must also qualify and requalify annually with SMRHA when renewing their lease.</p>
+
+            <h4>How to Apply</h4>
+            <p>Submit a completed application to SMRHA — processing takes approximately 7 business days. SMRHA conducts compliance verification every two years.</p>
+
+            <div class="deed-restricted-contact">
+              <strong>Contact SMRHA:</strong> (970) 728-3034 · <a href="mailto:admin@smrha.org">admin@smrha.org</a> · 820 Black Bear Rd G-17, Telluride, CO 81435<br>
+              <a href="https://smrha.org/san-miguel-county/" target="_blank" rel="noopener">Full program details at smrha.org →</a>
+            </div>
+          </div>
+        </details>
+
         <!-- Filter chips -->
         <div class="housing-filter-bar">
           <button class="chip active-all" data-housing-filter="all">All Sources</button>
@@ -4226,8 +4312,12 @@
         <div class="housing-sources-directory">
           <h3>Search These Sources Directly</h3>
           <div class="housing-source-grid">
+            <a href="https://smrha.org/lottery" target="_blank" rel="noopener" class="housing-source-card">
+              <strong>SMRHA Housing Lottery</strong>
+              <span>Current lottery units &amp; applications</span>
+            </a>
             <a href="https://smrha.org/property-listings/" target="_blank" rel="noopener" class="housing-source-card">
-              <strong>San Miguel Regional Housing Authority</strong>
+              <strong>SMRHA Property Listings</strong>
               <span>Deed-restricted &amp; affordable rentals</span>
             </a>
             <a href="https://www.telluride-co.gov/745/Town-Owned-Rental-Properties" target="_blank" rel="noopener" class="housing-source-card">
@@ -4253,6 +4343,10 @@
             <a href="https://www.telluridenews.com/classifieds/housing/rent/" target="_blank" rel="noopener" class="housing-source-card">
               <strong>Telluride News Classifieds</strong>
               <span>Local newspaper rental listings</span>
+            </a>
+            <a href="https://www.telluridenews.com/search/?q=housing+lottery&t=article" target="_blank" rel="noopener" class="housing-source-card">
+              <strong>Telluride News — Housing Lottery</strong>
+              <span>News articles on lottery openings</span>
             </a>
             <a href="https://coloradohousingsearch.com/" target="_blank" rel="noopener" class="housing-source-card">
               <strong>ColoradoHousingSearch.com</strong>
@@ -4627,6 +4721,11 @@
             <span class="topic-icon">🏠</span>
             <span class="topic-name">Housing</span>
           </label>
+          <label class="topic-option" data-topic="housing-search">
+            <input type="checkbox" name="topic" value="housing-search">
+            <span class="topic-icon">🔑</span>
+            <span class="topic-name">Housing Search</span>
+          </label>
           <label class="topic-option" data-topic="land-use">
             <input type="checkbox" name="topic" value="land-use">
             <span class="topic-icon">🏗️</span>
@@ -4761,6 +4860,11 @@
         <span class="tag-icon">🏠</span>
         <span class="tag-label">Housing</span>
         <span class="tag-count" id="count-housing">0</span>
+      </div>
+      <div class="sidebar-tag" data-topic="housing-search">
+        <span class="tag-icon">🔑</span>
+        <span class="tag-label">Housing Search</span>
+        <span class="tag-count" id="count-housing-search">0</span>
       </div>
       <div class="sidebar-tag" data-topic="land-use">
         <span class="tag-icon">🏗️</span>
@@ -4946,11 +5050,31 @@ function truncate(text, maxLen = 200) {
   return text.slice(0, maxLen).replace(/\s+\S*$/, '') + '…';
 }
 
+// Parse a date string into a LOCAL-midnight Date (avoids UTC-to-Mountain off-by-one).
+// Accepts "March 31, 2026", "2026-03-31", "2026-03-31T10:00:00", etc.
+function localDate(str) {
+  if (!str) return null;
+  const s = String(str).trim();
+  // ISO format "YYYY-MM-DD..." — split on dash to avoid UTC interpretation
+  const iso = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (iso) return new Date(+iso[1], +iso[2] - 1, +iso[3]);
+  // Named month format "Month Day, Year"
+  const named = s.match(/^([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})/);
+  if (named) {
+    const d = new Date(named[1] + ' ' + named[2] + ', ' + named[3]);
+    // new Date("March 31, 2026") may be UTC — re-create as local
+    return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  }
+  // Fallback — parse then force to local midnight
+  const d = new Date(s);
+  if (isNaN(d)) return null;
+  return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+}
+
 function parseEventDate(dateStr) {
   if (!dateStr) return null;
   const parts = dateStr.split(' - ');
-  const d = new Date(parts[0].trim());
-  return isNaN(d) ? null : d;
+  return localDate(parts[0].trim());
 }
 
 function friendlyDate(d) {
@@ -5023,7 +5147,7 @@ async function fetchTellurideMeetings() {
         title: isCanceled ? cleanName + ' -- CANCELED' : cleanName,
         link: TELLURIDE_MEETING_DETAIL + m.Id,
         description: '',
-        eventDate: new Date(m.MeetingDate),
+        eventDate: localDate(m.MeetingDate),
         eventDates: '',
         eventTimes: m.MeetingTime || '',
         location: m.MeetingLocation || '',
@@ -5099,7 +5223,7 @@ async function fetchCountyMeetings() {
       // Parse single time
       const singleTimeMatch = !timeMatch ? descText.match(/(\d{1,2}:\d{2}\s*[APap][Mm])/) : null;
 
-      let eventDate = dateMatch ? new Date(dateMatch[1]) : new Date(item.pubDate);
+      let eventDate = dateMatch ? localDate(dateMatch[1]) : localDate(item.pubDate);
 
       // County government meetings (BOCC, Planning Commission, etc.) have agendas
       // on the CivicClerk portal
@@ -5281,7 +5405,7 @@ const COUNTY_CACHED_DATA = [
 
 function getCountyCachedMeetings() {
   return COUNTY_CACHED_DATA.map(m => {
-    const eventDate = new Date(m.date);
+    const eventDate = localDate(m.date);
     const link = m.civicClerkId
       ? COUNTY_CIVICCLERK_BASE + m.civicClerkId + '/files'
       : COUNTY_CIVICCLERK_FALLBACK;
@@ -5476,7 +5600,7 @@ const MV_CACHED_DATA = [
 
 function getMVMeetings() {
   return MV_CACHED_DATA.map(m => {
-    const eventDate = new Date(m.date);
+    const eventDate = localDate(m.date);
     const hasAgenda = !!m.agendaUrl;
     const link = m.agendaUrl || (m.board === 'drb' ? MV_DRB_URL : MV_TC_URL);
 
@@ -5600,7 +5724,7 @@ const SCHOOL_CACHED_DATA = [
 
 function getSchoolMeetings() {
   return SCHOOL_CACHED_DATA.map(m => {
-    const eventDate = new Date(m.date);
+    const eventDate = localDate(m.date);
     const hasAgenda = !!m.agendaUrl;
     const link = m.agendaUrl || SCHOOL_BOARD_URL;
 
@@ -5683,7 +5807,7 @@ const FIRE_CACHED_DATA = [
 
 function getFireMeetings() {
   return FIRE_CACHED_DATA.map(m => {
-    const eventDate = new Date(m.date);
+    const eventDate = localDate(m.date);
     const hasAgenda = !!m.agendaUrl;
     const link = m.agendaUrl || FIRE_BOARD_URL;
 
@@ -5777,7 +5901,7 @@ const MED_CACHED_DATA = [
 
 function getMedMeetings() {
   return MED_CACHED_DATA.map(m => {
-    const eventDate = new Date(m.date);
+    const eventDate = localDate(m.date);
     const hasAgenda = !!m.agendaUrl;
     const link = m.agendaUrl || MED_BOARD_URL;
 
@@ -5899,7 +6023,7 @@ const NORWOOD_CACHED_DATA = [
 function getNorwoodMeetings() {
   const boardUrls = { bot: NORWOOD_BOT_URL, pz: NORWOOD_PZ_URL, nwc: NORWOOD_NWC_URL, san: NORWOOD_SAN_URL };
   return NORWOOD_CACHED_DATA.map(m => {
-    const eventDate = new Date(m.date);
+    const eventDate = localDate(m.date);
     const hasAgenda = !!m.agendaUrl;
     const link = m.agendaUrl || boardUrls[m.board] || NORWOOD_BOT_URL;
 
@@ -6014,7 +6138,7 @@ const OPHIR_CACHED_DATA = [
 function getOphirMeetings() {
   const boardUrls = { ga: OPHIR_GA_URL, pz: OPHIR_PZ_URL };
   return OPHIR_CACHED_DATA.map(m => {
-    const eventDate = new Date(m.date);
+    const eventDate = localDate(m.date);
     const hasAgenda = !!m.agendaUrl;
     const link = m.agendaUrl || boardUrls[m.board] || OPHIR_GA_URL;
 
@@ -6087,7 +6211,7 @@ const AIRPORT_CACHED_DATA = [
 
 function getAirportMeetings() {
   return AIRPORT_CACHED_DATA.map(m => {
-    const eventDate = new Date(m.date);
+    const eventDate = localDate(m.date);
     return {
       title: m.title,
       link: AIRPORT_BOARD_URL,
@@ -6158,7 +6282,7 @@ const MANUAL_SUMMARIES = {
     'Carhenge Redevelopment Project work session (affordable housing PUD at 700 W Pacific Ave) · Comprehensive Plan review · Colorado Wildfire Resiliency Code & Land Use Code updates',
 
   'telluride|2026-03-31|Town Council':
-    'Public hearing: Stender Residence HARC appeal (continued to Apr 28) · 2026 Proposed Construction Projects work session · Adoption of Colorado Wildfire Resiliency Code · 2026 Open Space Commission Work Plan · Deed-restricted property sales (Silver Jack Unit 205, Element 52 Unit SW-102) · Workforce housing deed amendments (Overlook Lots 17 & 2) · Acquisition of Wilkin Court Unit H · Executive session: Town Manager evaluation',
+    '⚖️ SECOND READING — Adoption of Colorado Wildfire Resiliency Code (Ordinance, expected to pass) · Public hearing: Stender Residence HARC appeal (continued to Apr 28) · 2026 Proposed Construction Projects work session · 2026 Open Space Commission Work Plan · Deed-restricted property sales (Silver Jack Unit 205, Element 52 Unit SW-102) · Workforce housing deed amendments (Overlook Lots 17 & 2) · Acquisition of Wilkin Court Unit H · Executive session: Town Manager evaluation',
 
   'telluride|2026-03-31|Telluride Housing Authority':
     'Workforce housing deed amendments for Overlook at Telluride Subdivision (Lots 17 & 2) · Formation of a Resident Advisory Committee',
@@ -6223,6 +6347,23 @@ const MANUAL_SUMMARIES = {
 };
 
 // ── Unified summary lookup: AI first, then manual fallback ──
+// Reject AI summaries that are error/placeholder text rather than real agenda content
+const SUMMARY_REJECT_PATTERNS = [
+  /provided agenda/i, /calendar navigation/i, /no detailed agenda/i,
+  /appears to be/i, /could not (be |)pars/i, /unable to (extract|parse|read)/i,
+  /no agenda (content|items|data)/i, /placeholder/i, /rather than specific/i,
+  /no .{0,20}content .{0,20}available/i, /navigation page/i,
+  /meeting agenda items/i, /agenda text/i, /cannot (be |)determin/i,
+  /insufficient (data|information|content)/i
+];
+function isBadSummary(text) {
+  if (!text) return false;
+  if (SUMMARY_REJECT_PATTERNS.some(pat => pat.test(text))) return true;
+  // Long single-sentence text about the agenda itself (not topic list)
+  if (text.length > 120 && !text.includes(' · ') && /\b(agenda|page|text|content|appears|navigation)\b/i.test(text)) return true;
+  return false;
+}
+
 function getMeetingSummary(item) {
   if (!item.eventDate) return '';
   const dateKey = item.eventDate.toISOString().slice(0, 10);
@@ -6231,7 +6372,9 @@ function getMeetingSummary(item) {
 
   // 1. Check AI summaries (from Firestore via Cloud Function)
   if (AI_SUMMARIES[exactKey] && AI_SUMMARIES[exactKey].shortSummary) {
-    return AI_SUMMARIES[exactKey].shortSummary;
+    const s = AI_SUMMARIES[exactKey].shortSummary;
+    if (isBadSummary(s)) return '';
+    return s;
   }
 
   // 2. Check manual/fallback summaries
@@ -6248,7 +6391,9 @@ function getMeetingSummary(item) {
   // 4. Partial match in AI summaries
   const aiKeys = Object.keys(AI_SUMMARIES).filter(k => k.startsWith(item.source + '|' + dateKey + '|'));
   if (aiKeys.length === 1 && AI_SUMMARIES[aiKeys[0]].shortSummary) {
-    return AI_SUMMARIES[aiKeys[0]].shortSummary;
+    const s = AI_SUMMARIES[aiKeys[0]].shortSummary;
+    if (isBadSummary(s)) return '';
+    return s;
   }
 
   return '';
@@ -6261,7 +6406,10 @@ function getMeetingTopics(item) {
   const cleanTitle = item.title.replace(/ -- CANCELED$/, '');
   const exactKey = item.source + '|' + dateKey + '|' + cleanTitle;
   if (AI_SUMMARIES[exactKey] && AI_SUMMARIES[exactKey].topics) {
-    return AI_SUMMARIES[exactKey].topics;
+    // If the shortSummary is bad, the whole AI entry is suspect — skip topics too
+    if (AI_SUMMARIES[exactKey].shortSummary && isBadSummary(AI_SUMMARIES[exactKey].shortSummary)) return [];
+    // Also filter out individual topic bullets that contain placeholder text
+    return AI_SUMMARIES[exactKey].topics.filter(function(t) { return !isBadSummary(t); });
   }
   return [];
 }
@@ -6273,6 +6421,9 @@ function getAIWhyItMatters(item) {
   const cleanTitle = item.title.replace(/ -- CANCELED$/, '');
   const exactKey = item.source + '|' + dateKey + '|' + cleanTitle;
   if (AI_SUMMARIES[exactKey] && AI_SUMMARIES[exactKey].whyItMatters) {
+    // If the shortSummary is bad, the whole AI entry is suspect — skip whyItMatters too
+    if (AI_SUMMARIES[exactKey].shortSummary && isBadSummary(AI_SUMMARIES[exactKey].shortSummary)) return '';
+    if (isBadSummary(AI_SUMMARIES[exactKey].whyItMatters)) return '';
     return AI_SUMMARIES[exactKey].whyItMatters;
   }
   return '';
@@ -6793,7 +6944,7 @@ function renderPasscodeInfo(item) {
 
 function getSmartMeetings() {
   return SMART_CACHED_DATA.map(m => {
-    const eventDate = new Date(m.date);
+    const eventDate = localDate(m.date);
     const hasAgenda = !!m.agendaUrl;
     const link = m.agendaUrl || SMART_BOARD_URL;
 
@@ -7363,8 +7514,8 @@ async function fetchTellurideTimesEvents() {
 
       // Parse date
       const dateStr = `${monthStr} ${day}, ${currentYear}`;
-      const eventDate = new Date(dateStr);
-      if (isNaN(eventDate.getTime())) continue;
+      const eventDate = localDate(dateStr);
+      if (!eventDate || isNaN(eventDate.getTime())) continue;
 
       // Extract time from the title (e.g., "Event Name, 7 p.m." or "Event, 12-1 p.m.")
       const timeMatch = title.match(/,\s*(\d{1,2}(?::\d{2})?\s*(?:a\.m\.|p\.m\.|AM|PM)(?:\s*[--]\s*\d{1,2}(?::\d{2})?\s*(?:a\.m\.|p\.m\.|AM|PM))?)/i);
@@ -8244,7 +8395,7 @@ function renderOfficialCommentInfo(item) {
     if (/planning.*zoning|p\s*&\s*z|planning commission/.test(titleLower)) return 'the Planning Commission';
     if (/town council/.test(titleLower)) return 'Town Council';
     if (/board of county commissioners|bocc/.test(titleLower)) return 'the BOCC';
-    if (/design review|drc/.test(titleLower)) return 'the P&Z';
+    if (/design review|drc/.test(titleLower)) return 'the Design Review Board';
     if (/housing authority/.test(titleLower)) return 'the Housing Authority';
     if (/school.*board|board of education/.test(titleLower)) return 'the School Board';
     if (/board of trustees/.test(titleLower)) return 'the Board of Trustees';
@@ -8380,13 +8531,23 @@ async function submitReaction(docId, key) {
 // Procedural / non-contentious topics are penalized or skipped entirely.
 
 const KEY_ISSUE_TIERS = [
+  // Tier weight 25 — Second readings (will pass at this meeting; always top priority)
+  { weight: 25, keywords: [
+    'second reading'
+  ]},
   // Tier weight 15 — Housing (deed restrictions, workforce, affordable, STRs)
+  //   Note: Individual unit deed amendments score here but structural/code-level
+  //   housing changes are what really matter — pair with ordinance tier for those.
   { weight: 15, keywords: [
     'deed restrict', 'deed-restrict', 'deed amendment', 'deed covenant',
     'workforce housing', 'affordable housing', 'housing authority', 'housing action',
     'housing plan', 'housing code', 'carhenge', 'short-term rental', 'str ',
     'accessory dwelling', 'adu', 'resident occupancy', 'deed-restricted property',
     'wilkin court', 'overlook', 'silver jack', 'element 52'
+  ]},
+  // Tier weight 12 — First reading of ordinances (new legislation, not yet final)
+  { weight: 12, keywords: [
+    'first reading'
   ]},
   // Tier weight 8 — Ordinances, resolutions, adoptions (formal contentious actions)
   { weight: 8, keywords: [
@@ -8413,15 +8574,20 @@ const SKIP_PATTERNS = [
 function getKeyIssueTopic(item) {
   const summary = getMeetingSummary(item);
   if (!summary) return '';
+  // Extra safety: reject the entire summary if it looks like placeholder/error text
+  if (isBadSummary(summary)) return '';
+
   const rawTopics = summary.split(' · ').map(t => t.trim()).filter(Boolean);
   if (rawTopics.length === 0) return '';
 
-  // Score each topic
+  // Score each topic — only return topics that match known issue keywords
   let best = null;
   let bestScore = 0;
 
   rawTopics.forEach(topic => {
     const low = topic.toLowerCase();
+    // Skip placeholder/error text that leaked into individual topics
+    if (isBadSummary(topic)) return;
     // Skip procedural / non-contentious items
     if (SKIP_PATTERNS.some(pat => pat.test(topic))) return;
     // Skip pure work sessions with no substantive keywords
@@ -8436,7 +8602,6 @@ function getKeyIssueTopic(item) {
       // Base tier weight + bonus for each additional keyword hit
       if (tierHits > 0) score += tier.weight + (tierHits - 1) * 2;
     }
-    // Bonus: if topic hits multiple tiers it's likely very contentious
     if (score > bestScore) {
       bestScore = score;
       best = topic;
@@ -8444,28 +8609,49 @@ function getKeyIssueTopic(item) {
   });
 
   if (best) {
-    // Strip procedural prefixes like "Public hearing:" from the display text
-    best = best.replace(/^(Public hearing:\s*|Consent:\s*|Admin:\s*|Legislation:\s*)/i, '');
+    // Strip procedural prefixes from display text
+    best = best.replace(/^(⚖️\s*SECOND READING\s*[—–-]\s*|Public hearing:\s*|Consent:\s*|Admin:\s*|Legislation:\s*)/i, '');
     return best;
   }
-  // Fallback: first non-skipped topic
-  for (const t of rawTopics) {
-    if (!SKIP_PATTERNS.some(pat => pat.test(t))) {
-      return t.replace(/^(Public hearing:\s*|Consent:\s*|Admin:\s*|Legislation:\s*)/i, '');
-    }
-  }
-  return rawTopics[0];
+  // No keyword-matched topic found — return empty rather than a generic fallback
+  return '';
 }
+
+// Convert a raw topic string into a natural question for Quick Reactions.
+// e.g. "Adoption of Colorado Wildfire Resiliency Code" → "What are your thoughts on the Wildfire Resiliency Code?"
+function formatReactionQuestion(topic) {
+  if (!topic) return '';
+  let q = topic
+    // Strip "(Ordinance, expected to pass)" or similar parenthetical
+    .replace(/\s*\([^)]*\)\s*/g, ' ')
+    // Strip "Adoption of" / "Approval of" — the question already implies opinion
+    .replace(/^(Adoption of|Approval of|Second Reading of|First Reading of)\s*/i, '')
+    // Strip leading "the " / "an " / "a "
+    .replace(/^(the|an|a)\s+/i, '')
+    .trim();
+  // Capitalize first letter
+  q = q.charAt(0).toUpperCase() + q.slice(1);
+  // Remove trailing period if any
+  q = q.replace(/\.\s*$/, '');
+  return 'What are your thoughts on the ' + q + '?';
+}
+
+// Only these meeting types get Quick Reactions
+const REACTION_MEETING_TYPES = /town council|board of county commissioners|bocc|smart|hospital district|harc|historic.*architectural|design review/i;
 
 function renderQuickReactions(item) {
   // Only show when an agenda has been posted
   if (!item.hasAgenda) return '';
+  // Restrict to specific governing-body meeting types
+  const titleLow = (item.title || '').toLowerCase();
+  if (!REACTION_MEETING_TYPES.test(titleLow)) return '';
   const docId = meetingReactionId(item);
   const keyIssue = getKeyIssueTopic(item);
+  // If no meaningful key issue was identified, hide the entire quick reactions section
+  if (!keyIssue) return '';
+  const reactionQ = formatReactionQuestion(keyIssue);
   let html = '<div class="quick-reactions" data-reaction-id="' + docId + '">';
-  if (keyIssue) {
-    html += '<div class="quick-reactions-issue"><strong>Quick Reaction on key issue:</strong> ' + keyIssue + '</div>';
-  }
+  html += '<div class="quick-reactions-issue"><strong>Quick Reaction:</strong> ' + reactionQ + '</div>';
   html += '<div class="quick-reactions-btns">';
   QR_OPTIONS.forEach(o => {
     html += `<button class="qr-btn" data-key="${o.key}" data-doc="${docId}" onclick="handleQuickReaction(this, '${docId}', '${o.key}')">${o.emoji} ${o.label} <span class="qr-count">0</span></button>`;
@@ -9494,8 +9680,8 @@ const LEGAL_NOTICES = [
 function legalCalendarButtons(notice) {
   if (!notice.event) return '';
   const evt = notice.event;
-  const eventDate = new Date(evt.date);
-  if (isNaN(eventDate)) return '';
+  const eventDate = localDate(evt.date);
+  if (!eventDate || isNaN(eventDate)) return '';
 
   // Build a compatible item for the existing calendar URL functions
   const calItem = {
@@ -9644,6 +9830,11 @@ const TOPIC_DEFINITIONS = {
     label: 'Housing',
     icon: '🏠',
     keywords: /housing|deed.restrict|workforce|affordable|lottery|smrha|rent|tenant|overlook|silver jack|element 52|wilkin court/i
+  },
+  'housing-search': {
+    label: 'Housing Search',
+    icon: '🔑',
+    keywords: /rental|listing|apartment|room.for.rent|vacancy|lease|long.term.rent|housing.search|available.unit|move.in|bedroom.*rent|rent.*bedroom/i
   },
   'land-use': {
     label: 'Land Use & Development',
@@ -10303,8 +10494,65 @@ document.getElementById('expandRight').addEventListener('click', () => {
 // Each listing includes location coords for OSM map embed and contact info.
 
 const HOUSING_LISTINGS = [
+  /* ── Housing Lottery — Applications Open ── */
   {
-    title: 'Shandoka Townhomes',
+    title: '🎟️ LOTTERY: Silver Jack Unit 202 — 3BR Condo',
+    type: 'public',
+    address: '155 W Pacific Ave, Telluride, CO 81435',
+    lat: 37.9378, lng: -107.8155,
+    beds: '3 Bedroom, 2 Bath (1,330 sq ft)', price: '$405,507 (Tier 1, deed-restricted)',
+    source: 'SMRHA Lottery',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://smrha.org/lottery',
+    note: 'Housing lottery — applications due by noon April 10, 2026. Drawing: April 24, 10 AM. Must meet employment (1,400 hrs), residency (12 mo in 4-county region), and asset requirements. Up to 220% AMI. Apply at smrha.org/lottery or pick up at 820 Black Bear Rd G17.'
+  },
+  {
+    title: '🎟️ LOTTERY: Silver Jack Unit 205 — 2BR Condo',
+    type: 'public',
+    address: '155 W Pacific Ave, Telluride, CO 81435',
+    lat: 37.9378, lng: -107.8155,
+    beds: '2 Bedroom, 1 Bath (935 sq ft)', price: '$368,620 (Tier 1, deed-restricted)',
+    source: 'SMRHA Lottery',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://smrha.org/lottery',
+    note: 'Housing lottery — applications due by noon April 10, 2026. Drawing: April 24, 10 AM. Must meet employment (1,400 hrs), residency (12 mo in 4-county region), and asset requirements. Up to 220% AMI. Apply at smrha.org/lottery or pick up at 820 Black Bear Rd G17.'
+  },
+  {
+    title: '🎟️ LOTTERY: Element 52 SW-102 — 2BR Condo',
+    type: 'public',
+    address: '398 S Davis St, Telluride, CO 81435',
+    lat: 37.9365, lng: -107.8118,
+    beds: '2 Bedroom, 1 Bath (479 sq ft)', price: '$352,529 (Tier 2, deed-restricted)',
+    source: 'SMRHA Lottery',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://smrha.org/lottery',
+    note: 'Housing lottery — applications due by noon April 10, 2026. Drawing: April 24, 10 AM. Must meet employment (1,400 hrs), residency (12 mo in 4-county region), and asset requirements. Up to 220% AMI. Apply at smrha.org/lottery or pick up at 820 Black Bear Rd G17.'
+  },
+  /* ── Public / Deed-Restricted ── */
+  {
+    title: 'Room for Rent — In-Town 2BR Condo',
+    type: 'public',
+    address: 'Telluride, CO 81435 (in-town)',
+    lat: 37.9375, lng: -107.8123,
+    beds: '1 Room in 2BR', price: '$1,883/mo (deed-restricted)',
+    source: 'SMRHA',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://smrha.org/property/in-town-room-for-rent-telluride-co-81435/',
+    note: 'Deed-restricted room rental in shared 2BR condo. Contact SMRHA for eligibility.'
+  },
+  {
+    title: 'Village Court Apartments — Waitlist',
+    type: 'public',
+    address: '455 Mountain Village Blvd, Mountain Village, CO 81435',
+    lat: 37.9325, lng: -107.8497,
+    beds: 'Studio–3 Bedroom', price: 'Income-based (deed-restricted)',
+    source: 'Town of Mountain Village',
+    contact: { phone: '(970) 729-3419', email: '' },
+    url: 'https://townofmountainvillage.com/community/housing/village-court-apartments/',
+    note: 'Waitlist is currently capped — not accepting new applications. Check back periodically.'
+  },
+  {
+    title: 'Shandoka Townhomes — Waitlist',
     type: 'public',
     address: '820 Black Bear Rd, Telluride, CO 81435',
     lat: 37.9363, lng: -107.8198,
@@ -10315,7 +10563,7 @@ const HOUSING_LISTINGS = [
     note: 'Waitlist-based. Town employee priority. Apply through the Town of Telluride.'
   },
   {
-    title: 'Virginia Placer Apartments',
+    title: 'Virginia Placer Apartments — Waitlist',
     type: 'public',
     address: 'Virginia Placer, Telluride, CO 81435',
     lat: 37.9380, lng: -107.8260,
@@ -10325,93 +10573,50 @@ const HOUSING_LISTINGS = [
     url: 'https://www.telluride-co.gov/745/Town-Owned-Rental-Properties',
     note: 'Waitlist-based. Apply through the Town of Telluride Rental Housing division.'
   },
+  /* ── Market-Rate Active Listings ── */
   {
-    title: 'Village Court Apartments',
-    type: 'public',
-    address: '455 Mountain Village Blvd, Mountain Village, CO 81435',
-    lat: 37.9325, lng: -107.8497,
-    beds: 'Studio–3 Bedroom', price: 'Income-based (deed-restricted)',
-    source: 'Town of Mountain Village',
-    contact: { phone: '(970) 729-3419', email: '' },
-    url: 'https://townofmountainvillage.com/community/housing/',
-    note: 'Managed by Town of Mountain Village. Employee housing with income qualifications.'
-  },
-  {
-    title: 'SMRHA — Current Listings',
-    type: 'public',
-    address: '820 Black Bear Rd, Telluride, CO 81435',
-    lat: 37.9363, lng: -107.8198,
-    beds: 'Varies', price: 'Below-market (deed-restricted)',
-    source: 'San Miguel Regional Housing Authority',
-    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
-    url: 'https://smrha.org/property-listings/',
-    note: 'Visit smrha.org/property-listings/ for current deed-restricted rentals and sales.'
-  },
-  {
-    title: 'Aldasoro Ranch Apartments',
-    type: 'public',
-    address: 'Aldasoro Ranch, Placerville-Norwood Rd, Telluride, CO',
-    lat: 37.9600, lng: -107.8650,
-    beds: '1–3 Bedroom', price: 'Income-based (deed-restricted)',
-    source: 'San Miguel County',
-    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
-    url: 'https://www.sanmiguelcountyco.gov/721/Local-Housing-Projects',
-    note: 'County deed-restricted units. Contact SMRHA for availability and waitlist.'
-  },
-  {
-    title: 'Lawson Hill — Deed-Restricted Units',
-    type: 'public',
-    address: 'Lawson Hill, Telluride, CO 81435',
-    lat: 37.9270, lng: -107.8360,
-    beds: '1–3 Bedroom', price: 'Below-market (deed-restricted)',
-    source: 'San Miguel County',
-    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
-    url: 'https://www.sanmiguelcountyco.gov/721/Local-Housing-Projects',
-    note: 'Mixed-use community with deed-restricted rentals. Contact SMRHA.'
-  },
-  {
-    title: 'Apartments.com — Telluride Area',
+    title: 'Luxury Condo — 395 E Colorado Ave',
     type: 'market',
-    address: 'Telluride / Mountain Village, CO',
-    lat: 37.9375, lng: -107.8123,
-    beds: 'Varies', price: 'Market rate',
-    source: 'Apartments.com',
-    contact: {},
-    url: 'https://www.apartments.com/telluride-co/',
-    note: 'Aggregated market-rate listings. Filter for long-term leases.'
-  },
-  {
-    title: 'Zillow — Telluride Rentals',
-    type: 'market',
-    address: 'Telluride / San Miguel County, CO',
-    lat: 37.9375, lng: -107.8123,
-    beds: 'Varies', price: 'Market rate',
-    source: 'Zillow',
-    contact: {},
-    url: 'https://www.zillow.com/telluride-co/rentals/',
-    note: 'Filter by long-term. Listings may include short-term — verify lease terms.'
-  },
-  {
-    title: 'Craigslist Western Slope — Telluride Apartments',
-    type: 'market',
-    address: 'Telluride area, CO',
-    lat: 37.9375, lng: -107.8123,
-    beds: 'Varies', price: 'Varies',
+    address: '395 E Colorado Ave, Telluride, CO 81435',
+    lat: 37.9375, lng: -107.8095,
+    beds: '3 Bedroom', price: '$2,500/mo',
     source: 'Craigslist',
     contact: {},
-    url: 'https://westslope.craigslist.org/search/apa?query=telluride',
-    note: 'Community-posted. Verify all listings independently.'
+    url: 'https://westslope.craigslist.org/apa/d/telluride-luxury-condo/7924056218.html',
+    note: 'Long-term rental. 3BR condo on E Colorado Ave. Verify availability directly.'
   },
   {
-    title: 'Telluride News — Rental Classifieds',
+    title: '1BR Apartment — 545 W Pacific Ave',
     type: 'market',
-    address: 'Telluride area, CO',
-    lat: 37.9375, lng: -107.8123,
-    beds: 'Varies', price: 'Varies',
-    source: 'Telluride News',
+    address: '545 W Pacific Ave, Telluride, CO 81435',
+    lat: 37.9378, lng: -107.8155,
+    beds: '1 Bedroom', price: '$1,500/mo',
+    source: 'Craigslist',
     contact: {},
-    url: 'https://www.telluridenews.com/classifieds/housing/rent/',
-    note: 'Local newspaper classifieds. Updated weekly (Thursday publication).'
+    url: 'https://westslope.craigslist.org/apa/d/telluride-look-no-further-than-this/7919977718.html',
+    note: 'Long-term rental. 1BR on W Pacific Ave. Verify availability directly.'
+  },
+  {
+    title: '3BR House — 280 Mahoney Dr',
+    type: 'market',
+    address: '280 Mahoney Dr, Telluride, CO 81435',
+    lat: 37.9410, lng: -107.8170,
+    beds: '3 Bedroom', price: '$3,901/mo',
+    source: 'Apartments.com',
+    contact: {},
+    url: 'https://www.apartments.com/280-mahoney-dr-telluride-co/zq5w36n/',
+    note: 'Market-rate long-term rental. Contact listing agent on Apartments.com.'
+  },
+  {
+    title: '1BR — 107 W Columbia Ave',
+    type: 'market',
+    address: '107 W Columbia Ave, Telluride, CO 81435',
+    lat: 37.9373, lng: -107.8128,
+    beds: '1 Bedroom', price: '$2,874/mo',
+    source: 'Apartments.com',
+    contact: {},
+    url: 'https://www.apartments.com/107-w-columbia-ave-telluride-co/f1l2ss1/',
+    note: 'Market-rate long-term rental in downtown Telluride.'
   }
 ];
 
@@ -10616,7 +10821,10 @@ const TELLURIDE_FESTIVALS = [
     url: 'https://www.tellurideinstitute.org/telluride-mushroom-festival/', ticketUrl: 'https://www.tellurideinstitute.org/passes-telluride-mushroom-festival/', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '2026 passes launched Feb 5 — get them before they sell out' },
   { name: 'Telluride Yoga Festival', month: 5, dayStart: 25, dayEnd: 28, icon: '🧘',
     logo: 'https://raw.githubusercontent.com/morgan524/morgan524-telluride-gov-hub/main/logo/Yoga.webp',
-    url: 'https://www.tellurideyogafestival.com/', ticketUrl: 'https://www.tellurideyogafestival.com/passes', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: 'June 25–28, 2026 — festival passes available now' }
+    url: 'https://www.tellurideyogafestival.com/', ticketUrl: 'https://www.tellurideyogafestival.com/passes', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: 'June 25–28, 2026 — festival passes available now' },
+  { name: 'Telluride Autumn Classic', month: 8, dayStart: 24, dayEnd: 27, icon: '🏎️',
+    logo: 'https://tellurideautumnclassic.com/wp-content/uploads/2021/03/logo-1024x293.webp',
+    url: 'https://tellurideautumnclassic.com/', ticketUrl: 'https://registration.guidebook.com/91911f23-f9fc-11f0-8e6b-af6ca49d39b1', ticketLabel: 'Register Now', ticketStatus: 'on-sale', promo: 'Sept 24–27, 2026 — cars, motorcycles, aircraft & fine arts' }
 ];
 
 function getUpcomingFestivals(now, daysAhead) {
@@ -10977,7 +11185,7 @@ function updateLeftSidebar() {
   if (typeof LEGAL_NOTICES !== 'undefined') {
     LEGAL_NOTICES.forEach(notice => {
       if (notice.event && notice.event.date) {
-        const eventDate = new Date(notice.event.date + ' ' + (notice.event.time || ''));
+        const eventDate = localDate(notice.event.date);
         if (!isNaN(eventDate) && eventDate >= now && eventDate <= lookAhead) {
           legalThisWeek.push(notice);
         }
@@ -12417,7 +12625,7 @@ function showSubmitStatus(msg, type) {
     'mountainfilm.org', 'tellurideballoonfest.com', 'telluridefoodandvine.com',
     'bluegrass.com', 'tellurideyogafestival.com', 'telluridechambermusic.org',
     'tellurideamericana.com', 'telluridejazz.org', 'tellurideinstitute.org',
-    'telluridefilmfestival.org', 'tellurideblues.com', 'telluridehorrorshow.com', 'originalthinkers.com',
+    'telluridefilmfestival.org', 'tellurideblues.com', 'telluridehorrorshow.com', 'originalthinkers.com', 'tellurideautumnclassic.com',
     // Regional / tourism
     'visittelluride.com', 'telluridefoundation.org', 'smrha.org',
     'tellurideschool.org', 'kfrn.org', 'telluridelibrary.org',
