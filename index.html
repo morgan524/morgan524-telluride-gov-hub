@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Telluride Region — Government Hub</title>
+  <title>Telluride Region — Tell-Hub</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
@@ -3221,7 +3221,7 @@
     <nav class="site-header-nav">
       <a href="https://www.livabletelluride.org/">Home</a>
       <a href="https://www.livabletelluride.org/blog">News</a>
-      <a href="https://govhub.livabletelluride.org/" class="active">Gov Hub</a>
+      <a href="https://govhub.livabletelluride.org/" class="active">Tell-Hub</a>
     </nav>
   </header>
   <hr class="site-header-divider">
@@ -3231,7 +3231,7 @@
     <img src="hero-banner.jpeg" alt="Telluride mountain panorama with wildflowers at sunset" onerror="this.style.display='none'">
     <div class="govhub-hero-overlay"></div>
     <div class="govhub-hero-text">
-      <h1>Telluride Regional<br>Government Hub</h1>
+      <h1>Telluride Regional<br>Hub</h1>
       <p>This space is your one-stop shop to keep you informed about what is happening in our community and stay engaged!</p>
     </div>
   </div>
@@ -4528,7 +4528,7 @@
     <div class="sidebar-inner" style="margin-top:14px;">
       <div class="sidebar-title">Community Feedback</div>
       <p style="font-size:0.78rem;color:var(--text-secondary);line-height:1.5;margin:0 0 12px;">
-        Spot a wrong date, name, or detail? Help us keep the Gov Hub accurate.
+        Spot a wrong date, name, or detail? Help us keep the Tell-Hub accurate.
       </p>
       <button class="footer-correction-btn" id="sidebarCorrectionBtn" style="width:100%;justify-content:center;">
         ✏️ Suggest a Correction
@@ -11095,7 +11095,7 @@ setInterval(() => {
       approve_url: approveUrl,
       deny_url: denyUrl,
       review_url: reviewUrl,
-      site_name: 'Telluride Gov Hub'
+      site_name: 'Telluride Tell-Hub'
     }).then(
       () => console.log('[GovHub] Moderation email sent'),
       (err) => console.warn('[GovHub] Email send failed:', err)
@@ -11302,7 +11302,7 @@ async function submitEventLink() {
   detailsBlock += '\n--- TO APPROVE ---\n';
   detailsBlock += 'Click the Approve link above to create a GitHub Issue.\n';
   detailsBlock += 'Review the pre-filled details, edit if needed, then click "Submit new issue".\n';
-  detailsBlock += 'The event will appear on the Gov Hub automatically.\n';
+  detailsBlock += 'The event will appear on the Tell-Hub automatically.\n';
   detailsBlock += 'To remove it later, just close the issue on GitHub.';
 
   emailjs.send(window._EMAILJS_SERVICE, window._EMAILJS_EVENT_TEMPLATE || window._EMAILJS_TEMPLATE, {
@@ -11313,7 +11313,7 @@ async function submitEventLink() {
     message: (message ? 'Submitter note: ' + message + '\n\n' : '') + detailsBlock,
     approve_url: approveUrl,
     deny_url: siteUrl,
-    site_name: 'Telluride Gov Hub',
+    site_name: 'Telluride Tell-Hub',
     topic: 'Event Submission',
     comment_body: 'Event: ' + eventName + '\nURL: ' + url + '\nSubmitted by: ' + submitter + (message ? '\nMessage: ' + message : '') + '\n\n' + detailsBlock,
     comment_type: 'event_submission',
@@ -11856,7 +11856,7 @@ function showSubmitStatus(msg, type) {
 
     // Build the email
     const subjectPrefix = isVerified ? '[AUTO-APPROVED]' : '[NEEDS REVIEW]';
-    const subject = subjectPrefix + ' Gov Hub Correction: ' + (correctionItemTitle || category);
+    const subject = subjectPrefix + ' Tell-Hub Correction: ' + (correctionItemTitle || category);
 
     let body = '';
     body += '═══════════════════════════════════════\n';
@@ -11893,7 +11893,7 @@ function showSubmitStatus(msg, type) {
 
     body += '───────────────────────────────────────\n';
     body += 'Submitted: ' + new Date().toLocaleString() + '\n';
-    body += 'Page: Telluride Regional Government Hub\n';
+    body += 'Page: Telluride Tell-Hub\n';
 
     if (!isVerified) {
       body += '\n═══════════════════════════════════════\n';
