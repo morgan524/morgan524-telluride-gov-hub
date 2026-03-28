@@ -921,8 +921,10 @@
     .main-layout.gondola-active .left-sidebar {
       display: none !important;
     }
-    /* Hide left sidebar on Local News tab */
-    .main-layout.localnews-active .left-sidebar {
+    /* Hide left sidebar and right sidebar (Filter by Topic) on Local News tab */
+    .main-layout.localnews-active .left-sidebar,
+    .main-layout.localnews-active .sidebar,
+    .main-layout.localnews-active .expand-pill-right {
       display: none !important;
     }
     /* Hide both sidebars on Local Groups (links) tab */
@@ -1051,6 +1053,11 @@
       border-color: var(--koto-blue);
       color: #fff;
       background: var(--koto-blue);
+    }
+    .chip.active-topic {
+      border-color: var(--forest);
+      color: #fff;
+      background: var(--forest);
     }
 
     /* ── Cards ── */
@@ -3390,10 +3397,13 @@
       </div>
       <div class="filter-row">
         <span class="chip active-all" data-filter="all" data-tab-target="local-news">All</span>
-        <span class="chip" data-filter="ttimes" data-tab-target="local-news">Telluride Times</span>
-        <span class="chip" data-filter="koto" data-tab-target="local-news">KOTO</span>
-        <span class="chip" data-filter="clubs" data-tab-target="local-news">Community</span>
-        <span class="chip" data-filter="other" data-tab-target="local-news">Other Sources</span>
+        <span class="chip" data-filter="government" data-tab-target="local-news">Government</span>
+        <span class="chip" data-filter="business" data-tab-target="local-news">Business</span>
+        <span class="chip" data-filter="public-safety" data-tab-target="local-news">Public Safety</span>
+        <span class="chip" data-filter="community" data-tab-target="local-news">Community</span>
+        <span class="chip" data-filter="arts-culture" data-tab-target="local-news">Arts & Culture</span>
+        <span class="chip" data-filter="sports" data-tab-target="local-news">Sports</span>
+        <span class="chip" data-filter="land-use" data-tab-target="local-news">Land Use</span>
       </div>
       <div id="local-news-content">
         <div class="loading"><div class="spinner"></div><br>Loading local news…</div>
@@ -8267,7 +8277,7 @@ document.querySelectorAll('.chip[data-tab-target="news"]').forEach(chip => {
   });
 });
 
-// Local News filter chips
+// Local News filter chips (topic-based)
 let currentLocalNewsFilter = 'all';
 document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip => {
   chip.addEventListener('click', () => {
@@ -8276,9 +8286,7 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
       c.className = 'chip';
     });
     if (filter === 'all') chip.classList.add('active-all');
-    else if (filter === 'ttimes') chip.classList.add('active-ttimes');
-    else if (filter === 'koto') chip.classList.add('active-koto');
-    else chip.classList.add('active-all');
+    else chip.classList.add('active-topic');
     currentLocalNewsFilter = filter;
     renderLocalNews(null, currentLocalNewsFilter);
   });
@@ -8291,6 +8299,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     title: "The Ready or Not",
     source: "Telluride Times",
     date: "March 27, 2026",
+    newsTopic: "community",
     copy: "If you're a school-age kid (or you've ever been one) you probably know what it's like to forget something you need for your school day.",
     href: "https://www.telluridenews.com/news/article_7fae4a87-00c6-4a66-a331-b118bb6f9251.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b7/ab79b737-7a3e-42e2-9643-f998d0f3d511/69c4d38b0919b.image.jpg?crop=1661%2C934%2C0%2C0"
@@ -8299,6 +8308,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     title: "A 'true amenity,' The Laundromat is back",
     source: "Telluride Times",
     date: "March 27, 2026",
+    newsTopic: "business",
     copy: "In early January, a fire at The Laundromat in Telluride shut down the town's only public laundry. Now it's returning as a community amenity.",
     href: "https://www.telluridenews.com/business/article_10412a6e-4cb1-4ac2-abc8-e916fba2b163.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/e9/ee927412-6804-440a-a62c-4e9f996e9c39/69c210f5d9c85.image.jpg?crop=1762%2C992%2C0%2C91"
@@ -8307,6 +8317,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     title: "Under shining stars",
     source: "Telluride Times",
     date: "March 27, 2026",
+    newsTopic: "community",
     copy: "Opinion column from the Telluride Times exploring life and community in the San Juans.",
     href: "https://www.telluridenews.com/opinion/columnists/article_54cb2894-d7ff-4618-8e56-1e2b7488932a.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/36/b36ccd87-a8e2-474e-b8c9-c148a0bf1ff8/69c2cda3e9973.image.jpg?crop=1199%2C675%2C0%2C462"
@@ -8315,6 +8326,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     title: "STEADY on",
     source: "Telluride Times",
     date: "March 26, 2026",
+    newsTopic: "community",
     copy: "The latest from the Telluride community, covering local developments and regional news.",
     href: "https://www.telluridenews.com/news/article_41976f4e-3715-48f2-94fe-b620ee293fc8.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/21/821a3f61-c19b-4b85-a12a-dd90e78fc4ac/69c31b9b81c8f.image.jpg?crop=1818%2C1024%2C0%2C57"
@@ -8323,6 +8335,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     title: "Miners top a Butte, then a Mountain",
     source: "Telluride Times",
     date: "March 26, 2026",
+    newsTopic: "sports",
     copy: "Telluride Miners sports coverage — the team advances with back-to-back wins.",
     href: "https://www.telluridenews.com/sports/article_7bf96048-94d5-422b-a342-74bf830b1b47.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8c/f8c28f60-86c3-4eff-8120-32fd30db8e3a/69c30cdc351f3.image.jpg?crop=1762%2C991%2C0%2C0"
@@ -8331,6 +8344,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     title: "Telluride Town Council extends Business Stabilization Assistance Program",
     source: "Telluride Times",
     date: "March 26, 2026",
+    newsTopic: "government",
     copy: "Town Council voted to extend the Business Stabilization Assistance Program, providing continued support for local businesses.",
     href: "https://www.telluridenews.com/news/article_4c5527bf-5890-4781-b370-c12651e7fd20.html",
     img: ""
@@ -8339,6 +8353,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     title: "'Parking isn't pretty'",
     source: "Telluride Times",
     date: "March 25, 2026",
+    newsTopic: "government",
     copy: "Exploring the ongoing parking challenges in Telluride and potential solutions being discussed by local officials.",
     href: "https://www.telluridenews.com/news/article_dd0dfe8d-418a-4dc3-97df-0702c5f64067.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/f1/af14fea6-e57e-4751-89da-324c9b109bc1/69c1a4ff3bc72.image.jpg?crop=1658%2C933%2C0%2C0"
@@ -8347,6 +8362,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     title: "Police investigating death outside Norwood",
     source: "Telluride Times",
     date: "March 23, 2026",
+    newsTopic: "public-safety",
     copy: "Law enforcement is investigating a death that occurred outside Norwood in San Miguel County.",
     href: "https://www.telluridenews.com/news/article_dfcad5fd-0bd2-42bc-902e-3e5046aa7fe1.html",
     img: ""
@@ -8355,6 +8371,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     title: "We're hooked",
     source: "Telluride Times",
     date: "March 26, 2026",
+    newsTopic: "business",
     copy: "A look at what's drawing people to Telluride's local businesses and community life.",
     href: "https://www.telluridenews.com/business/article_ac06e009-1c73-42a2-acb3-1c805821fb99.html",
     img: ""
@@ -8368,6 +8385,7 @@ const KOTO_NEWSCASTS = [
     title: "Newscast 3-26-26",
     source: "KOTO Community Radio",
     date: "March 26, 2026",
+    newsTopic: "government",
     copy: "Local governments discuss water and wastewater infrastructure upgrades across Telluride, Norwood, Rico, Ophir and Mountain Village. Also: West End Roundup with the San Miguel Basin Forum, and avalanche dog Mona's retirement from Telluride Ski Patrol after 13 years of service.",
     href: "https://koto.org/news/newscast-3-26-26/",
     img: "https://koto.org/wp-content/uploads/2024/12/koto-cow-400x272.png"
@@ -8376,6 +8394,7 @@ const KOTO_NEWSCASTS = [
     title: "Newscast 3-25-26",
     source: "KOTO Community Radio",
     date: "March 25, 2026",
+    newsTopic: "arts-culture",
     copy: "The Telluride Jazz Festival shifts to a streamlined two-day format for 2026 with headliners The Disco Biscuits and Lettuce. Also: Telluride Historical Museum reports a record year, and Telluride Arts opens 2026 grant applications.",
     href: "https://koto.org/news/newscast-3-25-26/",
     img: "https://koto.org/wp-content/uploads/2024/12/koto-cow-400x272.png"
@@ -8384,6 +8403,7 @@ const KOTO_NEWSCASTS = [
     title: "Newscast 3-23-26",
     source: "KOTO Community Radio",
     date: "March 23, 2026",
+    newsTopic: "government",
     copy: "A death outside Norwood is under investigation by the Colorado Bureau of Investigation. Telluride Town Council votes to eliminate angled parking on Main Street after a year of public debate. Also: lawmakers work on balancing Colorado's $1.5 billion budget shortfall.",
     href: "https://koto.org/news/newscast-3-23-26/",
     img: "https://koto.org/wp-content/uploads/2024/12/koto-cow-400x272.png"
@@ -8397,6 +8417,7 @@ const KOTO_FEATURED_STORIES = [
     title: "Skijoring Takes Main Street by Storm",
     source: "KOTO Community Radio",
     date: "March 20, 2026",
+    newsTopic: "sports",
     copy: "Telluride held its inaugural skijoring competition on Main Street, drawing hundreds of spectators as horses pulled skiers down a snow-covered course at top speed. Organizer Ashley von Spreeken assembled the event in eight weeks to bring joy during a tough low-snow winter.",
     href: "https://koto.org/news/telluride-skijoring-2026/",
     img: "https://koto.org/wp-content/uploads/2026/03/DSC_0586-800x534.jpeg"
@@ -8405,6 +8426,7 @@ const KOTO_FEATURED_STORIES = [
     title: "Dan Covault Runs for San Miguel County Sheriff",
     source: "KOTO Community Radio",
     date: "March 18, 2026",
+    newsTopic: "government",
     copy: "Dan Covault, appointed sheriff in 2025 after Bill Masters' retirement, is running as an independent with 26 years of San Miguel County law enforcement experience. He emphasizes impartial policing and building the agency into a model for rural departments statewide.",
     href: "https://koto.org/news/dan-covualt-runs-for-san-miguel-county-sheriff/",
     img: "https://koto.org/wp-content/uploads/2026/03/Untitled-design-6-800x450.jpg"
@@ -8413,6 +8435,7 @@ const KOTO_FEATURED_STORIES = [
     title: "Lane Masters Announces Bid for San Miguel County Sheriff",
     source: "KOTO Community Radio",
     date: "March 9, 2026",
+    newsTopic: "government",
     copy: "Lane Masters, son of former Sheriff Bill Masters and a Marine Corps veteran now serving as a Telluride Marshal Deputy, is running for sheriff as a Democrat. He stresses community-rooted policing, technological modernization, and upholding public peace over rigid enforcement.",
     href: "https://koto.org/news/lane-masters-announces-bid-for-san-miguel-county-sheriff/",
     img: "https://koto.org/wp-content/uploads/2026/03/Untitled-design-5-800x450.jpg"
@@ -8421,6 +8444,7 @@ const KOTO_FEATURED_STORIES = [
     title: "Brandon Baker Indicted for Sexual Exploitation of a Child",
     source: "KOTO Community Radio",
     date: "February 26, 2026",
+    newsTopic: "public-safety",
     copy: "Former Telluride preschool teacher Brandon Baker was indicted on nine federal counts including sexual exploitation of a child and child pornography charges. The case originated from a Telluride Marshal's Department investigation and spans multiple states.",
     href: "https://koto.org/news/brandon-baker-indicted-for-sexual-exploitation-of-a-child/",
     img: "https://koto.org/wp-content/uploads/2026/02/Baker-Mugshot.png"
@@ -8429,6 +8453,7 @@ const KOTO_FEATURED_STORIES = [
     title: "The Wonder, Intimacy, and Hope of Appalachia",
     source: "KOTO Community Radio",
     date: "February 5, 2026",
+    newsTopic: "arts-culture",
     copy: "Americana singer-songwriter Emily Scott Robinson, based in the San Juans and signed to John Prine's Oh Boy Records, discusses her fifth album Appalachia — recorded in five days in a Hudson Valley church — and how its intimate, acoustic songs are meant to offer hope and service in difficult times.",
     href: "https://koto.org/news/the-wonder-intimacy-and-hope-of-appalachia/",
     img: "https://koto.org/wp-content/uploads/2026/02/IMG_0665-800x450.jpg"
@@ -8437,6 +8462,7 @@ const KOTO_FEATURED_STORIES = [
     title: "Candlelight Vigil Honors Those Killed by ICE",
     source: "KOTO Community Radio",
     date: "January 29, 2026",
+    newsTopic: "community",
     copy: "Nearly 100 community members gathered at the San Miguel County Courthouse for a candlelight vigil organized by Telluride Indivisible, reading the names of those who died in ICE custody over the past year and expressing solidarity with undocumented neighbors.",
     href: "https://koto.org/news/telluride-ice-vigil-community-solidarity/",
     img: "https://koto.org/wp-content/uploads/2026/01/IMG_0607-800x534.jpeg"
@@ -8445,6 +8471,7 @@ const KOTO_FEATURED_STORIES = [
     title: "Spawn of the Subhuman Comes to the Airwaves",
     source: "KOTO Community Radio",
     date: "January 22, 2026",
+    newsTopic: "arts-culture",
     copy: "Nucla middle school students performed a reimagined 1942 radio play about an evil scientist and a singing gorilla, produced by N3 Music & Theatre Club. Director Brock Benson says the campy production gives West End teens an artistic outlet and a chance to find their voice.",
     href: "https://koto.org/news/spawn-of-the-subhuman-n3-radio-play/",
     img: "https://koto.org/wp-content/uploads/2026/01/N3-RadioDrama2026-ListeningParty-Poster-800x450.jpg"
@@ -8453,6 +8480,7 @@ const KOTO_FEATURED_STORIES = [
     title: "Marti Prohaska Resigns as Mountain Village Mayor",
     source: "KOTO Community Radio",
     date: "January 15, 2026",
+    newsTopic: "government",
     copy: "Mountain Village Mayor Marti Prohaska resigned effective immediately after Town Council requested an investigation into her private conversations with Telski owner Chuck Horning about the ski resort's future and a possible sale during the ski patrol strike.",
     href: "https://koto.org/news/marti-prohaska-resigns-as-mountain-village-mayor/",
     img: "https://koto.org/wp-content/uploads/2026/01/img_5750-800x450.jpg"
@@ -8461,6 +8489,7 @@ const KOTO_FEATURED_STORIES = [
     title: "Ski Patrol Union Votes to Accept Contract Proposal",
     source: "KOTO Community Radio",
     date: "January 8, 2026",
+    newsTopic: "business",
     copy: "The Telluride Ski Patrol Union accepted a new contract from the Telluride Ski Resort, ending a nearly two-week strike that shuttered the mountain and rattled the local economy during peak season.",
     href: "https://koto.org/news/ski-patrol-union-votes-to-accept-contract-proposal/",
     img: "https://koto.org/wp-content/uploads/2026/01/IMG_0468-800x534.jpeg"
@@ -8469,6 +8498,7 @@ const KOTO_FEATURED_STORIES = [
     title: "Business Community Calls for End of Ski Patrol Strike",
     source: "KOTO Community Radio",
     date: "January 7, 2026",
+    newsTopic: "business",
     copy: "Nearly 100 Telluride and Mountain Village residents and business owners marched to demand an end to the ski patrol labor dispute, saying the ongoing strike was devastating livelihoods and local tourism during the busiest time of year.",
     href: "https://koto.org/news/business-community-calls-for-end-of-ski-patrol-strike/",
     img: "https://koto.org/wp-content/uploads/2026/01/IMG_0435-800x534.jpeg"
@@ -8477,6 +8507,7 @@ const KOTO_FEATURED_STORIES = [
     title: "Telski Reopens Lift 1 as Ski Patrol Strike Continues",
     source: "KOTO Community Radio",
     date: "January 5, 2026",
+    newsTopic: "business",
     copy: "Telluride Ski Resort reopened with extremely limited terrain on Lift 1 while ski patrol remained on the picket line for a tenth day. Patrollers said the offered bonus structure doesn't address their base pay needs for securing mortgages and long-term stability.",
     href: "https://koto.org/news/telski-reopens-ski-patrol-strike-continues/",
     img: "https://koto.org/wp-content/uploads/2025/12/IMG_0122-800x534.jpeg"
@@ -8518,7 +8549,7 @@ function collectLocalNewsArticles() {
   // Gather all news articles from LAND_USE_ISSUES, GONDOLA_DATA, TELLURIDE_TIMES_ARTICLES, KOTO_NEWSCASTS, and KOTO_FEATURED_STORIES
   const articles = [];
   const cutoffDate = new Date();
-  cutoffDate.setDate(cutoffDate.getDate() - 4);
+  cutoffDate.setDate(cutoffDate.getDate() - 14);
   cutoffDate.setHours(0, 0, 0, 0);
 
   // Land Use issues news
@@ -8527,12 +8558,10 @@ function collectLocalNewsArticles() {
       if (issue.news && Array.isArray(issue.news)) {
         issue.news.forEach(a => {
           if (!a.href && !a.title) return;
-          // Determine normalized source key for filtering
           let sourceKey = 'other';
           if (/telluride news|telluridenews/i.test(a.source || a.href || '')) sourceKey = 'ttimes';
           else if (/koto/i.test(a.source || a.href || '')) sourceKey = 'koto';
           const pubDate = a.date && a.date !== 'Ongoing' ? new Date(a.date) : null;
-          // Only include articles from the last 4 days to present
           if (!pubDate || pubDate < cutoffDate) return;
           articles.push({
             title: a.title,
@@ -8540,6 +8569,7 @@ function collectLocalNewsArticles() {
             summary: a.copy || '',
             source: a.source || '',
             sourceKey: sourceKey,
+            newsTopic: 'land-use',
             date: a.date,
             pubDate: pubDate,
             topic: issue.label || '',
@@ -8558,7 +8588,6 @@ function collectLocalNewsArticles() {
       if (/telluride news|telluridenews/i.test(a.source || a.href || '')) sourceKey = 'ttimes';
       else if (/koto/i.test(a.source || a.href || '')) sourceKey = 'koto';
       const pubDate = a.date && a.date !== 'Ongoing' ? new Date(a.date) : null;
-      // Only include articles from the last 4 days to present
       if (!pubDate || pubDate < cutoffDate) return;
       articles.push({
         title: a.title,
@@ -8566,6 +8595,7 @@ function collectLocalNewsArticles() {
         summary: a.copy || '',
         source: a.source || '',
         sourceKey: sourceKey,
+        newsTopic: 'land-use',
         date: a.date,
         pubDate: pubDate,
         topic: 'Gondola 3A',
@@ -8586,6 +8616,7 @@ function collectLocalNewsArticles() {
         summary: a.copy || '',
         source: a.source || 'Telluride Times',
         sourceKey: 'ttimes',
+        newsTopic: a.newsTopic || 'community',
         date: a.date,
         pubDate: pubDate,
         topic: '',
@@ -8606,6 +8637,7 @@ function collectLocalNewsArticles() {
         summary: a.copy || '',
         source: a.source || 'KOTO Community Radio',
         sourceKey: 'koto',
+        newsTopic: a.newsTopic || 'community',
         date: a.date,
         pubDate: pubDate,
         topic: '',
@@ -8614,17 +8646,19 @@ function collectLocalNewsArticles() {
     });
   }
 
-  // KOTO Community Radio featured stories (no date cutoff — curated long-form pieces)
+  // KOTO Community Radio featured stories
   if (typeof KOTO_FEATURED_STORIES !== 'undefined') {
     KOTO_FEATURED_STORIES.forEach(a => {
       if (!a.href && !a.title) return;
       const pubDate = a.date ? new Date(a.date) : null;
+      if (!pubDate || pubDate < cutoffDate) return;
       articles.push({
         title: a.title,
         link: a.href,
         summary: a.copy || '',
         source: a.source || 'KOTO Community Radio',
         sourceKey: 'koto',
+        newsTopic: a.newsTopic || 'community',
         date: a.date,
         pubDate: pubDate,
         topic: '',
@@ -8634,17 +8668,22 @@ function collectLocalNewsArticles() {
   }
 
 
-  // Community events (no date cutoff — upcoming events)
+  // Community events — only include upcoming (future) events
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
   if (typeof COMMUNITY_EVENTS !== 'undefined') {
     COMMUNITY_EVENTS.forEach(a => {
       if (!a.href && !a.title) return;
       const pubDate = a.date ? new Date(a.date) : null;
+      // Skip past community events
+      if (pubDate && pubDate < today) return;
       articles.push({
         title: a.title,
         link: a.href,
         summary: a.copy || '',
         source: a.source || 'Community Events',
         sourceKey: 'clubs',
+        newsTopic: 'community',
         date: a.date,
         pubDate: pubDate,
         topic: 'Upcoming Event',
@@ -8670,9 +8709,9 @@ function renderLocalNews(unused, filter) {
 
   let articles = collectLocalNewsArticles();
 
-  // Apply filter
+  // Apply topic-based filter
   if (filter && filter !== 'all') {
-    articles = articles.filter(a => a.sourceKey === filter);
+    articles = articles.filter(a => a.newsTopic === filter);
   }
 
   // Sort by date descending (most recent first), undated at end
@@ -8684,7 +8723,7 @@ function renderLocalNews(unused, filter) {
   });
 
   if (articles.length === 0) {
-    container.innerHTML = '<div class="empty-state">No local news from the past 4 days. Check back soon or visit <a href="https://www.telluridenews.com" target="_blank" rel="noopener" style="color:var(--forest);font-weight:600;">Telluride Times</a> and <a href="https://koto.org" target="_blank" rel="noopener" style="color:var(--forest);font-weight:600;">KOTO</a> directly for the latest.</div>';
+    container.innerHTML = '<div class="empty-state">No local news matching this topic from the past two weeks. Check back soon or visit <a href="https://www.telluridenews.com" target="_blank" rel="noopener" style="color:var(--forest);font-weight:600;">Telluride Times</a> and <a href="https://koto.org" target="_blank" rel="noopener" style="color:var(--forest);font-weight:600;">KOTO</a> directly for the latest.</div>';
     return;
   }
 
@@ -8719,12 +8758,20 @@ function renderLocalNews(unused, filter) {
     const linkLabel = isClub ? 'Read full post →' : 'Read full article →';
 
     const clubClass = item.clubInfo ? ' card-has-club' : '';
-    html += '<div class="card' + clubClass + '">';
+    // Add news topic badge for filtered display
+    const newsTopicLabel = item.newsTopic ? {
+      'government': 'Government', 'business': 'Business', 'public-safety': 'Public Safety',
+      'community': 'Community', 'arts-culture': 'Arts & Culture', 'sports': 'Sports', 'land-use': 'Land Use'
+    }[item.newsTopic] || '' : '';
+    const newsTopicBadge = newsTopicLabel
+      ? '<span style="display:inline-block; font-size:0.68rem; padding:2px 8px; background:rgba(166,143,87,0.15); color:var(--accent); border-radius:6px; font-weight:600; margin-left:6px;">' + newsTopicLabel + '</span>'
+      : '';
+    html += '<div class="card' + clubClass + '" data-source-key="' + (item.sourceKey || '') + '">';
     html += logoHtml;
     html += '<div class="card-body">';
     html += '<div class="event-card-main' + (item.clubInfo ? ' has-club-info' : '') + '">';
     html += '<div class="event-card-content">';
-    html += '<div class="meta" style="margin-bottom:2px;">' + (item.source || '') + (item.date ? ' · ' + item.date : '') + topicBadge + '</div>';
+    html += '<div class="meta" style="margin-bottom:2px;">' + (item.source || '') + (item.date ? ' · ' + item.date : '') + topicBadge + newsTopicBadge + '</div>';
     html += '<h3>' + (item.link ? '<a href="' + item.link + '" target="_blank" rel="noopener">' + (item.title || 'Untitled') + '</a>' : (item.title || 'Untitled')) + '</h3>';
     if (item.summary) {
       html += '<div class="description">' + item.summary + '</div>';
@@ -11895,13 +11942,17 @@ function showSubmitStatus(msg, type) {
     container.querySelectorAll('.card, .legal-card').forEach(card => {
       if (card.dataset.correctionAdded) return;
       card.dataset.correctionAdded = 'true';
+      // Skip "Suggest Correction" for Telluride Times and KOTO articles on Local News page
+      const tab = card.closest('.tab-content');
+      const tabName = tab ? tab.id.replace('tab-', '') : '';
+      if (tabName === 'local-news') {
+        const srcKey = card.dataset.sourceKey;
+        if (srcKey === 'ttimes' || srcKey === 'koto') return;
+      }
       // Find the title
       const titleEl = card.querySelector('h3 a, .legal-card-title');
       if (!titleEl) return;
       const title = titleEl.textContent.trim();
-      // Determine which tab
-      const tab = card.closest('.tab-content');
-      const tabName = tab ? tab.id.replace('tab-', '') : '';
       // Create trigger button
       const trigger = document.createElement('button');
       trigger.className = 'correction-trigger';
