@@ -6386,7 +6386,10 @@ function getMeetingTopics(item) {
   const cleanTitle = item.title.replace(/ -- CANCELED$/, '');
   const exactKey = item.source + '|' + dateKey + '|' + cleanTitle;
   if (AI_SUMMARIES[exactKey] && AI_SUMMARIES[exactKey].topics) {
-    return AI_SUMMARIES[exactKey].topics;
+    // If the shortSummary is bad, the whole AI entry is suspect — skip topics too
+    if (AI_SUMMARIES[exactKey].shortSummary && isBadSummary(AI_SUMMARIES[exactKey].shortSummary)) return [];
+    // Also filter out individual topic bullets that contain placeholder text
+    return AI_SUMMARIES[exactKey].topics.filter(function(t) { return !isBadSummary(t); });
   }
   return [];
 }
@@ -6398,6 +6401,9 @@ function getAIWhyItMatters(item) {
   const cleanTitle = item.title.replace(/ -- CANCELED$/, '');
   const exactKey = item.source + '|' + dateKey + '|' + cleanTitle;
   if (AI_SUMMARIES[exactKey] && AI_SUMMARIES[exactKey].whyItMatters) {
+    // If the shortSummary is bad, the whole AI entry is suspect — skip whyItMatters too
+    if (AI_SUMMARIES[exactKey].shortSummary && isBadSummary(AI_SUMMARIES[exactKey].shortSummary)) return '';
+    if (isBadSummary(AI_SUMMARIES[exactKey].whyItMatters)) return '';
     return AI_SUMMARIES[exactKey].whyItMatters;
   }
   return '';
