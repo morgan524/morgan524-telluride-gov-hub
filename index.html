@@ -3612,6 +3612,16 @@
       </div>
     </div>
 
+    <!-- Upcoming Community Events (shown on Events tab only) -->
+    <div class="left-sidebar-card" id="sidebarUpcomingEvents" style="display:none;">
+      <div style="padding:14px 16px 10px;background:linear-gradient(135deg,rgba(33,68,60,0.06),rgba(166,143,87,0.08));border-bottom:1px solid rgba(33,68,60,0.08);text-align:center;border-radius:14px 14px 0 0;">
+        <div style="font-size:0.68rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#788e82;margin-bottom:4px;">Community</div>
+        <div style="font-size:1.15rem;font-weight:900;letter-spacing:-0.02em;color:var(--text-primary);">Upcoming Events</div>
+        <div style="font-size:0.7rem;color:var(--text-muted);margin-top:2px;">Fundraisers, benefits & community gatherings</div>
+      </div>
+      <div id="upcomingEventsContent" style="padding:10px 12px;display:grid;gap:10px;"></div>
+    </div>
+
     <!-- Submit an Event (shown on Events tab only) — placed at top -->
     <div class="left-sidebar-card" id="sidebarSubmitEvent" style="display:none;">
       <div class="left-sidebar-title" style="text-align:center;border-bottom:none;padding-bottom:0;margin-bottom:2px;">Community Calendar</div>
@@ -3623,7 +3633,7 @@
         <div>
           <label style="display:block;font-size:0.68rem;font-weight:700;color:var(--text-muted);margin-bottom:3px;text-transform:uppercase;letter-spacing:0.06em;">Event Name <span style="color:#b45309;">*</span></label>
           <input type="text" id="eventNameInput" required
-            placeholder="e.g. Telluride Film Festival"
+            placeholder="e.g. Bear-Proof Trash Can Olympics"
             style="width:100%;min-height:38px;border-radius:10px;border:1.5px solid var(--line);background:white;padding:0 10px;font-size:0.8rem;color:var(--text-primary);outline:none;box-sizing:border-box;transition:border-color 0.18s ease,box-shadow 0.18s ease;" onfocus="this.style.borderColor='rgba(47,86,77,0.55)';this.style.boxShadow='0 0 0 3px rgba(47,86,77,0.08)'" onblur="this.style.borderColor='';this.style.boxShadow=''" />
         </div>
         <div>
@@ -8888,9 +8898,11 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     // Toggle left-sidebar cards per tab
     const wtfCard = document.getElementById('sidebarWhatToFollow');
     const submitCard = document.getElementById('sidebarSubmitEvent');
+    const upcomingEventsCard = document.getElementById('sidebarUpcomingEvents');
     const legalInterestCard = document.getElementById('sidebarLegalInterest');
     if (wtfCard) wtfCard.style.display = (btn.dataset.tab === 'meetings') ? '' : 'none';
     if (submitCard) submitCard.style.display = (btn.dataset.tab === 'news') ? '' : 'none';
+    if (upcomingEventsCard) upcomingEventsCard.style.display = (btn.dataset.tab === 'news') ? '' : 'none';
     if (legalInterestCard) legalInterestCard.style.display = (btn.dataset.tab === 'legals') ? '' : 'none';
     // Hide sidebars on Subscribe, Land Use, and Gondola tabs, show on all others
     const layout = document.querySelector('.main-layout');
@@ -9195,8 +9207,14 @@ const COMMUNITY_EVENTS = [
     title: "2nd Annual Telluride Rotary Hikeathon",
     source: "Telluride Rotary Club",
     date: "May 31, 2026",
+    endDate: "June 28, 2026",
+    location: "Oak Street Gondola Plaza, Telluride",
+    eventTimes: "11:00 AM kickoff",
     copy: "Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four weeks of hiking from May 31 through June 28, with a kickoff at 11am on May 31 at the Oak Street gondola plaza. Hike from anywhere and raise funds for the Telluride Rotary Foundation — supporting scholarships, Youth Exchange, international projects, and community grants. 60% of nonprofit team funds go directly back to their nonprofit. Sponsored by Alpine Bank and Jagged Edge Mountain Gear.",
     href: "https://www.facebook.com/telluriderotary/",
+    notable: true,
+    beneficiary: "Telluride Rotary Foundation — scholarships, Youth Exchange & community grants",
+    sponsors: "Alpine Bank, Jagged Edge Mountain Gear",
     clubInfo: {
       name: "Telluride Rotary Club",
       meetings: "1st & 3rd Wednesdays, 6:00 PM (social at 5:30)",
@@ -9212,8 +9230,11 @@ const COMMUNITY_EVENTS = [
     title: "Elks Lodge Comedy Night with Cindy Pierce",
     source: "Telluride Elks Lodge 692",
     date: "March 16, 2026",
+    location: "472 W Pacific Ave, Telluride",
     copy: "The Telluride Elks Lodge hosted comedian Cindy Pierce for a night of laughs benefiting Tri-County Health Network and the community services they provide across the region. Located at 472 W Pacific Ave, the Lodge regularly hosts social and fundraising events for the Telluride community.",
-    href: "https://www.facebook.com/pages/Telluride-Elks-Lodge-692/232150316875640"
+    href: "https://www.facebook.com/pages/Telluride-Elks-Lodge-692/232150316875640",
+    notable: true,
+    beneficiary: "Tri-County Health Network"
   }
 ];
 
@@ -10863,6 +10884,7 @@ async function init() {
 
   // Render festival calendar immediately (doesn't depend on fetched data)
   try { renderFestivalCalendar(); } catch(e) { console.error('initial renderFestivalCalendar error:', e); }
+  try { renderUpcomingEventsSidebar(); } catch(e) { console.error('initial renderUpcomingEventsSidebar error:', e); }
 
   newsPromise.then(newsData => {
     allNews = newsData;
@@ -10871,10 +10893,12 @@ async function init() {
     try { updateTopicCounts(); } catch(e) { console.error('updateTopicCounts error:', e); }
     try { updateEventsHeroFestivals(); } catch(e) { console.error('updateEventsHeroFestivals error:', e); }
     try { renderFestivalCalendar(); } catch(e) { console.error('renderFestivalCalendar error:', e); }
+    try { renderUpcomingEventsSidebar(); } catch(e) { console.error('renderUpcomingEventsSidebar error:', e); }
   }).catch(err => {
     console.error('newsPromise failed:', err);
-    // Still render festival calendar even if news fetch fails
+    // Still render festival calendar and upcoming events sidebar even if news fetch fails
     try { renderFestivalCalendar(); } catch(e) { console.error('renderFestivalCalendar fallback error:', e); }
+    try { renderUpcomingEventsSidebar(); } catch(e) { console.error('renderUpcomingEventsSidebar fallback error:', e); }
   });
 
   // Local News tab uses hardcoded article data — render immediately
@@ -11003,6 +11027,116 @@ function getAllFestivalsForYear(year) {
       promo: f.promo || ''
     };
   }).sort((a, b) => a.start - b.start);
+}
+
+// ── Populate the Upcoming Community Events sidebar (Events tab, left sidebar) ──
+function renderUpcomingEventsSidebar() {
+  var container = document.getElementById('upcomingEventsContent');
+  if (!container) return;
+
+  var today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  // Collect notable community events (future only)
+  var events = [];
+  if (typeof COMMUNITY_EVENTS !== 'undefined') {
+    COMMUNITY_EVENTS.forEach(function(ev) {
+      if (!ev.notable) return;
+      var d = localDate(ev.date);
+      if (!d || d < today) return;
+      events.push({
+        title: ev.title,
+        source: ev.source || '',
+        date: d,
+        endDate: ev.endDate ? localDate(ev.endDate) : null,
+        location: ev.location || '',
+        href: ev.href || '',
+        beneficiary: ev.beneficiary || '',
+        sponsors: ev.sponsors || '',
+        copy: ev.copy || '',
+        eventTimes: ev.eventTimes || ''
+      });
+    });
+  }
+
+  // Also pull notable items from fetched community events (allNews)
+  if (typeof allNews !== 'undefined' && allNews.length > 0) {
+    allNews.forEach(function(item) {
+      if (!item.category || !/community event/i.test(item.category)) return;
+      if (!item.pubDate || item.pubDate < today) return;
+      // Check if it's already in COMMUNITY_EVENTS by title
+      var titleLow = (item.title || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 30);
+      var isDupe = events.some(function(e) {
+        return e.title.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 30) === titleLow;
+      });
+      if (isDupe) return;
+      // Check notability: has a dedicated URL (not just facebook/generic) or mentions fundraising/charity/nonprofit
+      var text = ((item.title || '') + ' ' + (item.description || '') + ' ' + (item.summary || '')).toLowerCase();
+      var isFundraiser = /fundrais|benefit|charity|nonprofit|non-profit|foundation|scholarship|grant|community grant/.test(text);
+      var hasDedicatedUrl = item.link && !/facebook\.com|instagram\.com|twitter\.com|x\.com/.test(item.link);
+      if (!isFundraiser && !hasDedicatedUrl) return;
+      events.push({
+        title: item.title,
+        source: item.sourceLabel || item.source || '',
+        date: item.pubDate,
+        endDate: item.endDate || null,
+        location: item.location || '',
+        href: item.link || '',
+        beneficiary: '',
+        sponsors: '',
+        copy: item.description || item.summary || '',
+        eventTimes: item.eventTimes || ''
+      });
+    });
+  }
+
+  // Sort by date ascending
+  events.sort(function(a, b) { return a.date - b.date; });
+
+  if (events.length === 0) {
+    var parentCard = document.getElementById('sidebarUpcomingEvents');
+    if (parentCard) parentCard.style.display = 'none';
+    return;
+  }
+
+  var html = '';
+  events.forEach(function(ev) {
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var monthStr = months[ev.date.getMonth()];
+    var dayStr = ev.date.getDate();
+
+    // Days until
+    var diff = Math.ceil((ev.date - today) / 86400000);
+    var countdown = diff === 0 ? 'Today' : diff === 1 ? 'Tomorrow' : diff + ' days away';
+
+    // Formatted date range
+    var dateDisplay = monthStr + ' ' + dayStr + ', ' + ev.date.getFullYear();
+    if (ev.endDate && ev.endDate > ev.date) {
+      dateDisplay += ' — ' + months[ev.endDate.getMonth()] + ' ' + ev.endDate.getDate();
+    }
+
+    html += '<a href="' + (ev.href || '#') + '" target="_blank" rel="noopener" style="display:block;text-decoration:none;color:inherit;padding:10px;border-radius:12px;border:1.5px solid rgba(33,68,60,0.12);background:rgba(255,255,255,0.7);transition:border-color 0.18s,box-shadow 0.18s;" onmouseover="this.style.borderColor=\'rgba(47,86,77,0.35)\';this.style.boxShadow=\'0 4px 12px rgba(47,86,77,0.1)\'" onmouseout="this.style.borderColor=\'rgba(33,68,60,0.12)\';this.style.boxShadow=\'none\'">' +
+      '<div style="display:flex;gap:10px;align-items:flex-start;">' +
+        '<div style="flex-shrink:0;width:44px;height:50px;border-radius:10px;background:linear-gradient(180deg,var(--accent-green),#1a3e36);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(33,68,60,0.2);">' +
+          '<div style="font-size:0.55rem;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;line-height:1;margin-bottom:1px;">' + monthStr + '</div>' +
+          '<div style="font-size:1.1rem;font-weight:900;line-height:1;">' + dayStr + '</div>' +
+        '</div>' +
+        '<div style="min-width:0;">' +
+          '<div style="font-size:0.78rem;font-weight:800;color:var(--text-primary);line-height:1.3;margin-bottom:2px;">' + ev.title + '</div>' +
+          '<div style="font-size:0.65rem;color:var(--text-muted);line-height:1.3;">' + ev.source + '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:4px;">' +
+        '<span style="font-size:0.62rem;padding:2px 7px;border-radius:6px;background:rgba(33,68,60,0.08);color:var(--forest);font-weight:700;">' + countdown + '</span>' +
+        (ev.eventTimes ? '<span style="font-size:0.62rem;padding:2px 7px;border-radius:6px;background:rgba(166,143,87,0.12);color:#8b7332;font-weight:600;">⏰ ' + ev.eventTimes + '</span>' : '') +
+      '</div>' +
+      (ev.beneficiary ? '<div style="margin-top:6px;font-size:0.65rem;color:var(--text-secondary);line-height:1.35;">❤️ <strong>Benefits:</strong> ' + ev.beneficiary + '</div>' : '') +
+      (ev.location ? '<div style="font-size:0.62rem;color:var(--text-muted);margin-top:3px;">📍 ' + ev.location + '</div>' : '') +
+      (ev.sponsors ? '<div style="font-size:0.6rem;color:var(--text-muted);margin-top:3px;font-style:italic;">Sponsored by ' + ev.sponsors + '</div>' : '') +
+    '</a>';
+  });
+
+  container.innerHTML = html;
 }
 
 // ── Populate the Events tab hero with upcoming festival countdowns ──
@@ -13049,9 +13183,11 @@ function showSubmitStatus(msg, type) {
     // Toggle left-sidebar cards: "What to Follow" on Meetings, Submit on Events, Legal Interest on Legals
     const wtfCard = document.getElementById('sidebarWhatToFollow');
     const submitCard = document.getElementById('sidebarSubmitEvent');
+    const upcomingEventsCard = document.getElementById('sidebarUpcomingEvents');
     const legalInterestCard = document.getElementById('sidebarLegalInterest');
     if (wtfCard) wtfCard.style.display = (tabName === 'meetings') ? '' : 'none';
     if (submitCard) submitCard.style.display = (tabName === 'news') ? '' : 'none';
+    if (upcomingEventsCard) upcomingEventsCard.style.display = (tabName === 'news') ? '' : 'none';
     if (legalInterestCard) legalInterestCard.style.display = (tabName === 'legals') ? '' : 'none';
     const layout = document.querySelector('.main-layout');
     if (layout) {
