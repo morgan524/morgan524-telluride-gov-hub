@@ -8377,12 +8377,12 @@ function renderNews(items, filter) {
       TELLURIDE_FESTIVALS.forEach(fest => {
         const festLower = fest.name.toLowerCase().replace(/\s*\(.*\)\s*/, ''); // strip parenthetical
         if (fest.ticketUrl && titleLower.includes(festLower.split(' ').slice(0, 2).join(' '))) {
-          festivalTicketHtml = `<a href="${fest.ticketUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:inline-flex;align-items:center;gap:4px;margin-top:6px;padding:5px 14px;background:var(--accent-green);color:#fff;border-radius:6px;font-size:0.72rem;font-weight:700;text-decoration:none;">🎟️ ${fest.ticketLabel}</a>`;
+          festivalTicketHtml = `<a href="${fest.ticketUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:inline-flex;align-items:center;gap:4px;margin-top:6px;padding:5px 14px;background:var(--accent-green);color:#fff;border-radius:6px;font-size:0.72rem;font-weight:700;text-decoration:none;">${fest.ticketLabel}</a>`;
         }
       });
       // Community events with ticket URLs
       if (item.source === 'community' && item.ticketUrl && !festivalTicketHtml) {
-        festivalTicketHtml = `<a href="${item.ticketUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:inline-flex;align-items:center;gap:4px;margin-top:6px;padding:5px 14px;background:var(--accent-green);color:#fff;border-radius:6px;font-size:0.72rem;font-weight:700;text-decoration:none;">🎟️ Get Tickets</a>`;
+        festivalTicketHtml = `<a href="${item.ticketUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:inline-flex;align-items:center;gap:4px;margin-top:6px;padding:5px 14px;background:var(--accent-green);color:#fff;border-radius:6px;font-size:0.72rem;font-weight:700;text-decoration:none;">Get Tickets</a>`;
       }
 
       html += `
@@ -10376,13 +10376,13 @@ function renderFestivalCalendar() {
         // Yellow pill — tickets/passes available now
         btnBg = 'linear-gradient(135deg,#d4a017,#b8860b)';
         btnColor = '#fff';
-        btnLabel = '🎟️ Buy Passes Now!';
+        btnLabel = 'Buy Passes Now!';
         btnShadow = '0 8px 16px rgba(180,130,20,0.25)';
       } else if (f.ticketStatus === 'sold-out') {
         // Rust/red pill — sold out, links to site
         btnBg = 'linear-gradient(135deg,#a0522d,#8b3a2a)';
         btnColor = '#fff';
-        btnLabel = 'Passes';
+        btnLabel = 'Passes Sold Out';
         btnShadow = '0 8px 16px rgba(139,58,42,0.2)';
       } else {
         // Default green pill — original style
