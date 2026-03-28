@@ -8235,27 +8235,40 @@ async function submitReaction(docId, key) {
   } catch(e) { console.warn('submitReaction error:', e); return null; }
 }
 
-// ── Extract the single most important topic for a meeting ──
-// Priority: land use / zoning / code changes first, then first topic in summary
-const LAND_USE_KEYWORDS = [
-  'land use', 'zoning', 'pud', 'comprehensive plan', 'code update', 'code change',
-  'code amendment', 'land use code', 'rezoning', 'variance', 'subdivision',
-  'annexation', 'harc', 'historic', 'wildfire resiliency', 'setback',
-  'building code', 'development', 'affordable housing', 'deed restrict',
-  'workforce housing', 'short-term rental', 'str ', 'accessory dwelling'
+// ── Extract the single most contentious/important topic for a meeting ──
+// Priority tiers (checked in order — first match wins):
+//   1. Ordinances & resolutions (formal actions likely to draw debate)
+//   2. Housing issues (deed restrictions, workforce/affordable housing, STRs)
+//   3. Land use & code changes (zoning, PUD, development, code amendments)
+// Within each tier, prefer topics likely to have both support and opposition.
+
+const KEY_ISSUE_TIERS = [
+  // Tier 1 — Ordinances & Resolutions
+  ['ordinance', 'resolution', 'public hearing', 'adoption of', 'repeal'],
+  // Tier 2 — Housing
+  ['deed restrict', 'deed-restrict', 'workforce housing', 'affordable housing',
+   'housing authority', 'housing action', 'carhenge', 'short-term rental',
+   'str ', 'accessory dwelling', 'adu', 'resident occupancy', 'housing code',
+   'deed amendment', 'deed covenant', 'housing plan'],
+  // Tier 3 — Land Use & Code
+  ['land use', 'zoning', 'pud', 'comprehensive plan', 'code update', 'code change',
+   'code amendment', 'land use code', 'rezoning', 'variance', 'subdivision',
+   'annexation', 'harc', 'historic', 'wildfire resiliency', 'setback',
+   'building code', 'development', 'redevelopment', 'appeal']
 ];
 
 function getKeyIssueTopic(item) {
   const summary = getMeetingSummary(item);
   if (!summary) return '';
-  // Split on the · separator used in manual summaries
   const topics = summary.split(' · ').map(t => t.trim()).filter(Boolean);
   if (topics.length === 0) return '';
-  // Check for land use / code priority topics first
   const lower = topics.map(t => t.toLowerCase());
-  for (let i = 0; i < lower.length; i++) {
-    for (const kw of LAND_USE_KEYWORDS) {
-      if (lower[i].includes(kw)) return topics[i];
+  // Walk tiers in priority order
+  for (const tier of KEY_ISSUE_TIERS) {
+    for (let i = 0; i < lower.length; i++) {
+      for (const kw of tier) {
+        if (lower[i].includes(kw)) return topics[i];
+      }
     }
   }
   // Fallback: first topic
@@ -8269,7 +8282,7 @@ function renderQuickReactions(item) {
   const keyIssue = getKeyIssueTopic(item);
   let html = '<div class="quick-reactions" data-reaction-id="' + docId + '">';
   if (keyIssue) {
-    html += '<div class="quick-reactions-issue">🔑 <strong>Key Issue:</strong> ' + keyIssue + '</div>';
+    html += '<div class="quick-reactions-issue">Quick Reaction… <strong>thoughts on key issue:</strong> ' + keyIssue + '</div>';
   }
   html += '<div class="quick-reactions-label">Quick Reactions</div>';
   html += '<div class="quick-reactions-btns">';
