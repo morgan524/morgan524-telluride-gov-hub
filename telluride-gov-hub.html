@@ -8509,10 +8509,26 @@ const SKIP_PATTERNS = [
 function getKeyIssueTopic(item) {
   const summary = getMeetingSummary(item);
   if (!summary) return '';
+
+  // Reject placeholder / error summaries that aren't real agenda content
+  const PLACEHOLDER_PATTERNS = [
+    /provided agenda text/i,
+    /calendar navigation/i,
+    /no detailed agenda/i,
+    /not available/i,
+    /appears to be a/i,
+    /could not (be |)pars/i,
+    /unable to (extract|parse|read)/i,
+    /no agenda (content|items|data)/i,
+    /placeholder/i,
+    /rather than specific/i
+  ];
+  if (PLACEHOLDER_PATTERNS.some(pat => pat.test(summary))) return '';
+
   const rawTopics = summary.split(' · ').map(t => t.trim()).filter(Boolean);
   if (rawTopics.length === 0) return '';
 
-  // Score each topic
+  // Score each topic — only return topics that match known issue keywords
   let best = null;
   let bestScore = 0;
 
@@ -8532,7 +8548,6 @@ function getKeyIssueTopic(item) {
       // Base tier weight + bonus for each additional keyword hit
       if (tierHits > 0) score += tier.weight + (tierHits - 1) * 2;
     }
-    // Bonus: if topic hits multiple tiers it's likely very contentious
     if (score > bestScore) {
       bestScore = score;
       best = topic;
@@ -8540,17 +8555,12 @@ function getKeyIssueTopic(item) {
   });
 
   if (best) {
-    // Strip procedural prefixes like "Public hearing:" from the display text
+    // Strip procedural prefixes from display text
     best = best.replace(/^(Public hearing:\s*|Consent:\s*|Admin:\s*|Legislation:\s*)/i, '');
     return best;
   }
-  // Fallback: first non-skipped topic
-  for (const t of rawTopics) {
-    if (!SKIP_PATTERNS.some(pat => pat.test(t))) {
-      return t.replace(/^(Public hearing:\s*|Consent:\s*|Admin:\s*|Legislation:\s*)/i, '');
-    }
-  }
-  return rawTopics[0];
+  // No keyword-matched topic found — return empty rather than a generic fallback
+  return '';
 }
 
 function renderQuickReactions(item) {
@@ -8558,10 +8568,10 @@ function renderQuickReactions(item) {
   if (!item.hasAgenda) return '';
   const docId = meetingReactionId(item);
   const keyIssue = getKeyIssueTopic(item);
+  // If no meaningful key issue was identified, hide the entire quick reactions section
+  if (!keyIssue) return '';
   let html = '<div class="quick-reactions" data-reaction-id="' + docId + '">';
-  if (keyIssue) {
-    html += '<div class="quick-reactions-issue"><strong>Quick Reaction on key issue:</strong> ' + keyIssue + '</div>';
-  }
+  html += '<div class="quick-reactions-issue"><strong>Quick Reaction on key issue:</strong> ' + keyIssue + '</div>';
   html += '<div class="quick-reactions-btns">';
   QR_OPTIONS.forEach(o => {
     html += `<button class="qr-btn" data-key="${o.key}" data-doc="${docId}" onclick="handleQuickReaction(this, '${docId}', '${o.key}')">${o.emoji} ${o.label} <span class="qr-count">0</span></button>`;
