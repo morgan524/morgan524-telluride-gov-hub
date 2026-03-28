@@ -142,7 +142,7 @@
     }
     .govhub-hero-text h1 {
       font-family: 'Inter', sans-serif;
-      font-size: 1.85rem;
+      font-size: 2.78rem;
       font-weight: 800;
       color: #fff;
       line-height: 1.2;
@@ -224,19 +224,19 @@
       padding: 8px 16px;
       background: linear-gradient(135deg, rgba(47,86,77,0.06), rgba(198,148,55,0.06));
       border-bottom: 1px solid rgba(47,86,77,0.1);
-      font-size: 0.78rem;
+      font-size: 1.64rem;
     }
     .subscribe-bar-text {
       color: var(--text-secondary);
       font-weight: 500;
     }
     .subscribe-bar-btn {
-      padding: 6px 16px;
+      padding: 10px 25px;
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
       background: linear-gradient(135deg, #2f564d, #22453e);
       color: #fff;
-      font-size: 0.75rem;
+      font-size: 1.58rem;
       font-weight: 700;
       letter-spacing: 0.02em;
       cursor: pointer;
@@ -1222,6 +1222,46 @@
     #tab-meetings .cal-btn svg { width: 18px; height: 18px; }
     #tab-meetings .meeting-summary { font-size: 0.99rem; }
     #tab-meetings .meeting-summary strong { font-size: 0.91rem; }
+    #tab-meetings .chip { font-size: 0.86rem; padding: 7px 16px; }
+
+    /* ── Meetings card redesign: logo top-right, full-width content ── */
+    #tab-meetings .card {
+      flex-direction: column;
+      align-items: stretch;
+      position: relative;
+    }
+    #tab-meetings .card > .card-logo {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      width: 64px;
+      height: 64px;
+      border-radius: 10px;
+      z-index: 1;
+    }
+    #tab-meetings .card-body {
+      width: 100%;
+    }
+    #tab-meetings .event-card-main {
+      display: block;
+    }
+    #tab-meetings .event-card-content {
+      width: 100%;
+    }
+    #tab-meetings .event-card-content > .source-badge,
+    #tab-meetings .event-card-content > .agenda-link,
+    #tab-meetings .event-card-content > h3,
+    #tab-meetings .event-card-content > .meta {
+      padding-right: 80px; /* leave room for logo in top-right */
+    }
+    #tab-meetings .event-illustration {
+      display: none;
+    }
+    #tab-meetings .quick-reactions,
+    #tab-meetings .card-actions,
+    #tab-meetings .comment-actions {
+      width: 100%;
+    }
 
     .meeting-summary {
       font-size: 0.76rem;
@@ -1497,19 +1537,25 @@
       color: #fff;
     }
 
-    /* ── Correction link inside comment box ── */
+    /* ── Correction link inside summary box ── */
     .correction-inline-link {
-      display: inline;
-      font-size: inherit;
-      font-style: normal;
-      color: var(--text-muted);
-      text-decoration: underline;
-      text-decoration-style: dotted;
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 0;
+      background: none;
+      color: var(--forest-soft);
       cursor: pointer;
-      margin-left: 6px;
+      text-decoration: none;
+      margin-top: 8px;
+      transition: color 0.15s;
     }
     .correction-inline-link:hover {
-      color: var(--accent-green);
+      color: var(--forest);
+      text-decoration: underline;
+    }
+    #tab-meetings .correction-inline-link {
+      font-size: 0.88rem;
     }
 
     /* ── Public Comment Info ── */
@@ -2231,9 +2277,9 @@
     .comment-submit-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
     .comment-submit-btn {
       padding: 10px 28px; border-radius: 8px; border: none; font-size: 0.88rem; font-weight: 700;
-      background: var(--forest); color: #fff; cursor: pointer; transition: opacity 0.2s;
+      background: var(--forest-soft); color: #f0f0f0; cursor: pointer; transition: all 0.2s;
     }
-    .comment-submit-btn:hover { opacity: 0.88; }
+    .comment-submit-btn:hover { background: var(--forest); color: #fff; }
     .comment-submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
     .comment-status { font-size: 0.8rem; color: var(--text-muted); }
     .comment-status.error { color: #C62828; }
@@ -2757,7 +2803,7 @@
       box-shadow: var(--shadow-soft);
     }
     .sidebar-title {
-      font-size: 0.91rem;
+      font-size: 0.88rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -2772,7 +2818,7 @@
       gap: 10px;
       padding: 10px 12px;
       border-radius: 14px;
-      font-size: 1.09rem;
+      font-size: 0.95rem;
       font-weight: 600;
       color: var(--text-secondary);
       cursor: pointer;
@@ -2790,7 +2836,7 @@
       border-color: var(--forest);
     }
     .sidebar-tag .tag-icon {
-      font-size: 2.86rem;
+      font-size: 2.80rem;
       width: 48px;
       text-align: center;
       flex-shrink: 0;
@@ -2800,7 +2846,7 @@
       line-height: 1.3;
     }
     .sidebar-tag .tag-count {
-      font-size: 0.91rem;
+      font-size: 0.88rem;
       font-weight: 700;
       background: rgba(0,0,0,0.06);
       color: var(--text-muted);
@@ -4676,7 +4722,7 @@
     <a href="https://townofophir.colorado.gov" target="_blank">townofophir.colorado.gov</a>,
     <a href="https://www.telluridenews.com" target="_blank">telluridenews.com</a>, and
     <a href="https://koto.org" target="_blank">koto.org</a>.
-    Telluride, County, Telluride Times, KOTO, and <a href="https://telluridelibrary.org/events/" target="_blank">Wilkinson Public Library</a> data updated live. Other sources cached. Auto-refreshes every hour.<br>
+    Telluride, County, Telluride Times, KOTO, and <a href="https://telluridelibrary.org/events/" target="_blank">Wilkinson Public Library</a> data updated live. Other sources cached. Auto-refreshes hourly during work hours (Mon–Fri 7am–6pm), every 6 hours otherwise.<br>
     <span id="lastUpdated"></span><br>
     Built for <a href="https://www.livabletelluride.org" target="_blank">Livable Telluride</a><br>
     <button class="footer-correction-btn" id="correctionFab">✏️ See something wrong? Suggest a Correction</button>
@@ -8080,8 +8126,7 @@ function renderOfficialCommentInfo(item) {
 
   const meetingDate = item.eventDate ? fullDate(item.eventDate) : '';
   const subject = encodeURIComponent(`Please accept these written comments for ${item.title || 'Meeting'} - ${meetingDate}`);
-  const safeTitle = (item.title || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
-  return `<div class="comment-note">${quote} <a class="correction-inline-link" onclick="openCorrectionModal('${safeTitle}', 'meetings')">Suggested change to summary?</a></div><div class="comment-actions"><a class="comment-email-btn" href="mailto:${email}?subject=${subject}">✉️ ${label}</a></div>`;
+  return `<div class="comment-note">${quote}</div><div class="comment-actions"><a class="comment-email-btn" href="mailto:${email}?subject=${subject}">✉️ ${label}</a></div>`;
 }
 
 // ── Quick Reactions: perspective buttons on meeting cards ──
@@ -8262,7 +8307,7 @@ function renderMeetings(items, filter) {
       if (summary) {
         summaryHtml += `<div class="meeting-summary"><strong>Topics:</strong>`;
         if (isAISummary) summaryHtml += `<span class="ai-badge">AI Summary</span>`;
-        summaryHtml += ` ${highlightAddresses(linkGlossaryTerms(summary))}</div>`;
+        summaryHtml += ` ${highlightAddresses(linkGlossaryTerms(summary))}`;
       }
       if (aiTopics.length > 0) {
         summaryHtml += '<ul class="ai-topics-list">';
@@ -8271,6 +8316,12 @@ function renderMeetings(items, filter) {
       }
       if (aiWhyMatters && !getWhyThisMatters(item)) {
         summaryHtml += `<div class="ai-why-matters">${linkGlossaryTerms(aiWhyMatters)}</div>`;
+      }
+      // Correction link at bottom of summary box
+      if (summaryHtml) {
+        const safeTitle = (item.title || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
+        summaryHtml += `<a class="correction-inline-link" onclick="openCorrectionModal('${safeTitle}', 'meetings')">✏️ Suggested change to summary?</a>`;
+        summaryHtml += '</div>';
       }
       // END: AI-enhanced summary rendering
 
@@ -9663,7 +9714,7 @@ function renderMeetingsWithTopic() {
       const locationPart = item.location ? '<span class="location">📍 ' + item.location + '</span>' : '';
       const agendaUrl = item.agendaLink || item.link;
       const agendaBadge = item.hasAgenda
-        ? '<a href="' + agendaUrl + '" target="_blank" rel="noopener" class="agenda-link">Agenda Posted →</a>'
+        ? '<a href="' + agendaUrl + '" target="_blank" rel="noopener" class="agenda-link agenda-posted">Agenda Posted →</a>'
         : '<span class="agenda-link" style="opacity:0.5;cursor:default;pointer-events:none;">Agenda Posted →</span>';
       const cancelStyle = item.canceled ? ' style="opacity: 0.55; text-decoration: line-through;"' : '';
       const summary = item.canceled ? '' : getMeetingSummary(item);
@@ -9676,7 +9727,7 @@ function renderMeetingsWithTopic() {
       if (summary) {
         summaryHtml += '<div class="meeting-summary"><strong>Topics:</strong>';
         if (isAISummary) summaryHtml += '<span class="ai-badge">AI Summary</span>';
-        summaryHtml += ' ' + highlightAddresses(linkGlossaryTerms(summary)) + '</div>';
+        summaryHtml += ' ' + highlightAddresses(linkGlossaryTerms(summary));
       }
       // Show AI topic bullets if available
       if (aiTopics.length > 0) {
@@ -9688,11 +9739,19 @@ function renderMeetingsWithTopic() {
       if (aiWhyMatters && !getWhyThisMatters(item)) {
         summaryHtml += '<div class="ai-why-matters">' + linkGlossaryTerms(aiWhyMatters) + '</div>';
       }
+      // Correction link at bottom of summary box
+      if (summaryHtml) {
+        var safeT = (item.title || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
+        summaryHtml += '<a class="correction-inline-link" onclick="openCorrectionModal(\'' + safeT + '\', \'meetings\')">✏️ Suggested change to summary?</a>';
+        summaryHtml += '</div>';
+      }
       // END: AI-enhanced summary rendering
 
       html += '<div class="card" data-source="' + item.source + '">' +
         renderLogo(item.source) +
         '<div class="card-body">' +
+          '<div class="event-card-main">' +
+            '<div class="event-card-content">' +
           (item.canceled ? '' : renderBadge(item) + ' ' + agendaBadge) +
           '<h3' + cancelStyle + '><a href="' + item.link + '" target="_blank" rel="noopener">' + cleanTitle(item.title, item.source) + '</a></h3>' +
           '<div class="meta">' + fullDate(item.eventDate) + (timePart ? ' · ' + timePart : '') + '</div>' +
@@ -9702,7 +9761,11 @@ function renderMeetingsWithTopic() {
           (item.canceled ? '' : summaryHtml) +
           (item.canceled ? '' : (item.description ? '<div class="description">' + item.description + '</div>' : '')) +
           (item.canceled ? '' : renderOfficialCommentInfo(item)) +
+          (item.canceled ? '' : renderQuickReactions(item)) +
           (item.canceled ? '' : renderCardActions(item)) +
+            '</div>' +
+            (item.canceled ? '' : renderEventIllustration(getEventTopic(item))) +
+          '</div>' +
         '</div>' +
       '</div>';
     });
@@ -10163,46 +10226,47 @@ async function init() {
 // Major festivals get top billing when they fall in the upcoming window.
 // month is 0-indexed (0=Jan). dayStart/dayEnd are inclusive date ranges.
 // These are approximate annual dates -- update yearly as schedules are confirmed.
+// ticketStatus: 'on-sale' = yellow "Buy Passes Now!", 'sold-out' = rust "Passes", 'default' = green original label
 const TELLURIDE_FESTIVALS = [
   { name: 'Mountainfilm', month: 4, dayStart: 22, dayEnd: 25, icon: '🎥',
     logo: 'https://raw.githubusercontent.com/morgan524/morgan524-telluride-gov-hub/main/logo/Mountain%20Film.png',
-    url: 'https://www.mountainfilm.org/', ticketUrl: 'https://www.mountainfilm.org/festival/passes/', ticketLabel: 'Buy Passes', promo: '2026 festival passes on sale now' },
+    url: 'https://www.mountainfilm.org/', ticketUrl: 'https://www.mountainfilm.org/festival/passes/', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '2026 festival passes on sale now' },
   { name: 'MusicFest (Chamber Music)', month: 5, dayStart: 28, dayEnd: 5, endMonth: 6, icon: '🎻',
     logo: 'https://raw.githubusercontent.com/morgan524/morgan524-telluride-gov-hub/main/logo/Chamber.png',
-    url: 'https://telluridechambermusic.org/musicfest/', ticketUrl: 'https://telluridechambermusic.org/musicfest/', ticketLabel: 'Buy Tickets', promo: 'June 28–July 5, 2026 — tickets on sale March 2026' },
+    url: 'https://telluridechambermusic.org/musicfest/', ticketUrl: 'https://telluridechambermusic.org/musicfest/', ticketLabel: 'Buy Tickets', ticketStatus: 'on-sale', promo: 'June 28–July 5, 2026 — tickets on sale now' },
   { name: 'Original Thinkers', month: 9, dayStart: 1, dayEnd: 4, icon: '💡',
     logo: 'https://raw.githubusercontent.com/morgan524/morgan524-telluride-gov-hub/main/logo/Original%20Thinkers.png',
-    url: 'https://www.originalthinkers.com/', ticketUrl: 'https://www.originalthinkers.com/', ticketLabel: 'Get Tickets', promo: 'Oct 1–4, 2026 — speakers, documentaries & performances' },
+    url: 'https://www.originalthinkers.com/', ticketUrl: 'https://www.originalthinkers.com/', ticketLabel: 'Get Tickets', ticketStatus: 'default', promo: 'Oct 1–4, 2026 — speakers, documentaries & performances' },
   { name: 'Telluride Americana Music Festival', month: 6, dayStart: 17, dayEnd: 18, icon: '🎤',
     logo: 'https://images.squarespace-cdn.com/content/v1/5e666ebe01b24642410d9f4d/054d4b31-514a-4414-ab61-e14b5c4d1449/TAMF_LogoRGB_2025.png',
-    url: 'https://tellurideamericana.com/', ticketUrl: 'https://tellurideamericana.com/events/telluride-americana', ticketLabel: 'Get Tickets', promo: 'July 17–18, 2026' },
+    url: 'https://tellurideamericana.com/', ticketUrl: 'https://tellurideamericana.com/events/telluride-americana', ticketLabel: 'Get Tickets', ticketStatus: 'default', promo: 'July 17–18, 2026' },
   { name: 'Telluride Balloon Festival', month: 5, dayStart: 5, dayEnd: 7, icon: '🎈',
     logo: 'https://raw.githubusercontent.com/morgan524/morgan524-telluride-gov-hub/main/logo/Balloon.avif',
-    url: 'https://www.tellurideballoonfest.com/', ticketUrl: '', ticketLabel: '', promo: 'June 5–7, 2026 — free to attend' },
+    url: 'https://www.tellurideballoonfest.com/', ticketUrl: '', ticketLabel: '', ticketStatus: 'default', promo: 'June 5–7, 2026 — free to attend' },
   { name: 'Telluride Bluegrass Festival', month: 5, dayStart: 18, dayEnd: 21, icon: '🎸',
     logo: 'https://raw.githubusercontent.com/morgan524/morgan524-telluride-gov-hub/main/logo/Blue%20Grass.jpeg',
-    url: 'https://bluegrass.com/telluride', ticketUrl: 'https://bluegrass.com/telluride/festival-info/TBF-ticketing-info', ticketLabel: 'Buy Tickets', promo: '2026 tickets on sale now via Planet Bluegrass' },
+    url: 'https://bluegrass.com/telluride', ticketUrl: 'https://bluegrass.com/telluride/festival-info/TBF-ticketing-info', ticketLabel: 'Buy Tickets', ticketStatus: 'on-sale', promo: '2026 tickets on sale now via Planet Bluegrass' },
   { name: 'Telluride Blues & Brews Festival', month: 8, dayStart: 18, dayEnd: 20, icon: '🎶',
     logo: 'https://images.squarespace-cdn.com/content/v1/5be480544611a0a58ac2f320/1545422460809-AOUEFR9OODIWJVGFG8YO/General.png',
-    url: 'https://www.tellurideblues.com/', ticketUrl: 'https://www.tellurideblues.com/tickets', ticketLabel: 'Buy Tickets', promo: '2026 tickets on sale now' },
+    url: 'https://www.tellurideblues.com/', ticketUrl: 'https://www.tellurideblues.com/tickets', ticketLabel: 'Buy Tickets', ticketStatus: 'on-sale', promo: '2026 tickets on sale now' },
   { name: 'Telluride Film Festival', month: 8, dayStart: 4, dayEnd: 7, icon: '🎬',
     logo: 'https://raw.githubusercontent.com/morgan524/morgan524-telluride-gov-hub/main/logo/Film%20fest.jpg',
-    url: 'https://www.telluridefilmfestival.org/', ticketUrl: 'https://www.telluridefilmfestival.org/show/passes', ticketLabel: 'Purchase Passes', promo: 'Passes are the primary way to attend — check availability' },
+    url: 'https://www.telluridefilmfestival.org/', ticketUrl: 'https://www.telluridefilmfestival.org/show/passes', ticketLabel: 'Passes', ticketStatus: 'sold-out', promo: '2026 passes are sold out — waitlists available' },
   { name: 'Telluride Food + Vine', month: 5, dayStart: 12, dayEnd: 14, icon: '🍷',
     logo: 'https://cdn.prod.website-files.com/63e3b404578d3e63abef7364/69b1ded759adc5521903fd3e_TFV%20Logo%20Full%E2%84%A2.svg',
-    url: 'https://www.telluridefoodandvine.com/', ticketUrl: 'https://www.telluridefoodandvine.com/events', ticketLabel: 'Buy Passes', promo: '2026 Weekend Pass and featured events available' },
+    url: 'https://www.telluridefoodandvine.com/', ticketUrl: 'https://www.telluridefoodandvine.com/events', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '2026 Weekend Pass and featured events available' },
   { name: 'Telluride Horror Show', month: 9, dayStart: 9, dayEnd: 12, icon: '🎃',
     logo: 'https://images.squarespace-cdn.com/content/v1/635aaf48434dcc204d4bfb34/762ca493-d7d2-459e-86a2-214c641c3695/HorrorShowLogoColor_STRAIGHT.png',
-    url: 'https://www.telluridehorrorshow.com/', ticketUrl: 'https://www.telluridehorrorshow.com/passes', ticketLabel: 'Buy Passes', promo: '3-day passes on sale Mar 25 — 6-packs on sale Jul 1, 2026' },
+    url: 'https://www.telluridehorrorshow.com/', ticketUrl: 'https://www.telluridehorrorshow.com/passes', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '3-day passes on sale Mar 25 — 6-packs on sale Jul 1, 2026' },
   { name: 'Telluride Jazz Festival', month: 7, dayStart: 7, dayEnd: 10, icon: '🎷',
     logo: 'https://images.squarespace-cdn.com/content/v1/583db0c9d1758e46ff3221e9/821ecb11-5000-415a-a970-87b539036111/2026-ebony-color-logo-png-for-website-no-dates.png?format=1500w',
-    url: 'https://www.telluridejazz.org/', ticketUrl: 'https://www.telluridejazz.org/tickets', ticketLabel: 'Buy Tickets', promo: 'Tickets on sale through authorized platform' },
+    url: 'https://www.telluridejazz.org/', ticketUrl: 'https://www.telluridejazz.org/tickets', ticketLabel: 'Buy Tickets', ticketStatus: 'on-sale', promo: 'Tickets on sale now — Tier 1 pricing until July 15' },
   { name: 'Telluride Mushroom Festival', month: 7, dayStart: 14, dayEnd: 17, icon: '🍄',
     logo: 'https://raw.githubusercontent.com/morgan524/morgan524-telluride-gov-hub/main/logo/Mushroom.png',
-    url: 'https://www.tellurideinstitute.org/telluride-mushroom-festival/', ticketUrl: 'https://www.tellurideinstitute.org/passes-telluride-mushroom-festival/', ticketLabel: 'Buy Passes', promo: '2026 passes launched Feb 5 — get them before they sell out' },
+    url: 'https://www.tellurideinstitute.org/telluride-mushroom-festival/', ticketUrl: 'https://www.tellurideinstitute.org/passes-telluride-mushroom-festival/', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '2026 passes launched Feb 5 — get them before they sell out' },
   { name: 'Telluride Yoga Festival', month: 5, dayStart: 25, dayEnd: 28, icon: '🧘',
     logo: 'https://raw.githubusercontent.com/morgan524/morgan524-telluride-gov-hub/main/logo/Yoga.webp',
-    url: 'https://www.tellurideyogafestival.com/', ticketUrl: 'https://www.tellurideyogafestival.com/passes', ticketLabel: 'Buy Passes', promo: 'June 25–28, 2026 — festival passes available now' }
+    url: 'https://www.tellurideyogafestival.com/', ticketUrl: 'https://www.tellurideyogafestival.com/passes', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: 'June 25–28, 2026 — festival passes available now' }
 ];
 
 function getUpcomingFestivals(now, daysAhead) {
@@ -10260,6 +10324,7 @@ function getAllFestivalsForYear(year) {
       url: f.url || '',
       ticketUrl: f.ticketUrl || '',
       ticketLabel: f.ticketLabel || 'Get Tickets',
+      ticketStatus: f.ticketStatus || 'default',
       promo: f.promo || ''
     };
   }).sort((a, b) => a.start - b.start);
@@ -10316,8 +10381,8 @@ function renderFestivalCalendar() {
   if (!container) return;
   const year = new Date().getFullYear();
   const festivals = getAllFestivalsForYear(year);
-  // Sort alphabetically by name for the Get Tickets sidebar
-  festivals.sort((a, b) => a.name.localeCompare(b.name));
+  // Sort by date — soonest event first
+  festivals.sort((a, b) => a.start - b.start);
   const monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
   let html = '';
@@ -10349,10 +10414,35 @@ function renderFestivalCalendar() {
       ? '<img src="' + f.logo + '" alt="' + f.name + '" style="width:100%;height:100%;object-fit:contain;display:block;" onerror="this.parentElement.innerHTML=\'<div style=font-weight:900;font-size:0.7rem;line-height:1.1;letter-spacing:-0.02em;text-align:center;color:var(--text-primary)>' + f.name.split(' ').slice(0,2).join('<br>').replace(/'/g,'') + '</div>\'">'
       : '<div style="font-weight:900;font-size:0.72rem;line-height:1.1;letter-spacing:-0.02em;text-align:center;color:var(--text-primary);">' + f.name.split(' ').slice(0,2).join('<br>') + '</div>';
 
-    // Buy button
+    // Buy button — color depends on ticketStatus
     let buyBtn = '';
-    if (f.ticketUrl && !f.passed) {
-      buyBtn = '<a href="' + f.ticketUrl + '" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:flex;align-items:center;justify-content:center;gap:6px;width:100%;min-height:38px;padding:0 12px;border-radius:10px;text-decoration:none;font-weight:800;font-size:0.78rem;letter-spacing:-0.01em;color:white;background:linear-gradient(135deg,#2f564d,#22453e);box-shadow:0 8px 16px rgba(34,69,62,0.2);">' + f.icon + ' ' + (f.ticketLabel || 'Buy Tickets') + '</a>';
+    if (f.ticketUrl) {
+      let btnBg, btnColor, btnLabel, btnShadow;
+      if (f.passed) {
+        // Past event — no button
+        btnBg = ''; btnLabel = '';
+      } else if (f.ticketStatus === 'on-sale') {
+        // Yellow pill — tickets/passes available now
+        btnBg = 'linear-gradient(135deg,#d4a017,#b8860b)';
+        btnColor = '#fff';
+        btnLabel = '🎟️ Buy Passes Now!';
+        btnShadow = '0 8px 16px rgba(180,130,20,0.25)';
+      } else if (f.ticketStatus === 'sold-out') {
+        // Rust/red pill — sold out, links to site
+        btnBg = 'linear-gradient(135deg,#a0522d,#8b3a2a)';
+        btnColor = '#fff';
+        btnLabel = 'Passes';
+        btnShadow = '0 8px 16px rgba(139,58,42,0.2)';
+      } else {
+        // Default green pill — original style
+        btnBg = 'linear-gradient(135deg,#2f564d,#22453e)';
+        btnColor = '#fff';
+        btnLabel = f.icon + ' ' + (f.ticketLabel || 'Buy Tickets');
+        btnShadow = '0 8px 16px rgba(34,69,62,0.2)';
+      }
+      if (!f.passed && btnLabel) {
+        buyBtn = '<a href="' + f.ticketUrl + '" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:flex;align-items:center;justify-content:center;gap:6px;width:100%;min-height:38px;padding:0 12px;border-radius:10px;text-decoration:none;font-weight:800;font-size:0.78rem;letter-spacing:-0.01em;color:' + btnColor + ';background:' + btnBg + ';box-shadow:' + btnShadow + ';">' + btnLabel + '</a>';
+      }
     }
 
     // Festival site link chip
@@ -10592,7 +10682,7 @@ renderMeetingsWithTopic = function() {
 init();
 
 // ══════════════════════════════════════════════════════
-// ── Auto-Refresh: reload all data every hour ──
+// ── Auto-Refresh: adaptive schedule ──
 // ══════════════════════════════════════════════════════
 //
 // Live API sources (Telluride CivicWeb, County RSS, news feeds) are
@@ -10601,15 +10691,34 @@ init();
 // but the re-render still picks up any time-dependent display changes
 // (e.g., "TODAY" labels, deadline calculations, sidebar summary).
 //
-// The refresh interval is 60 minutes. A "Last refreshed" timestamp is
-// shown in the footer so users know data is current.
+// Refresh schedule:
+//   • Mon–Fri 7 AM – 6 PM (work hours): every 1 hour
+//   • Evenings, early mornings, weekends: every 6 hours
+// A "Last refreshed" timestamp is shown in the footer.
 
-const AUTO_REFRESH_INTERVAL = 60 * 60 * 1000; // 1 hour in ms
+function getRefreshInterval() {
+  const now = new Date();
+  const day = now.getDay();           // 0 = Sun, 6 = Sat
+  const hour = now.getHours();
+  const isWeekday = day >= 1 && day <= 5;
+  const isWorkHours = hour >= 7 && hour < 18;
+  if (isWeekday && isWorkHours) {
+    return 60 * 60 * 1000;            // 1 hour
+  }
+  return 6 * 60 * 60 * 1000;          // 6 hours
+}
 
-setInterval(() => {
-  console.log('[Gov Hub] Auto-refreshing data...');
-  init();
-}, AUTO_REFRESH_INTERVAL);
+function scheduleNextRefresh() {
+  const interval = getRefreshInterval();
+  const label = interval === 60 * 60 * 1000 ? '1 hour (work hours)' : '6 hours (off-hours)';
+  console.log(`[Tell-Hub] Next refresh in ${label}`);
+  setTimeout(() => {
+    console.log('[Tell-Hub] Auto-refreshing data...');
+    init();
+    scheduleNextRefresh();
+  }, interval);
+}
+scheduleNextRefresh();
 
 // ══════════════════════════════════════════════════════
 // ── Wix Iframe Compatibility Layer ──

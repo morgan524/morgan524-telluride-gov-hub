@@ -1537,26 +1537,25 @@
       color: #fff;
     }
 
-    /* ── Correction pill inside Topics box ── */
+    /* ── Correction link inside summary box ── */
     .correction-inline-link {
-      display: inline-block;
+      display: block;
       font-size: 0.68rem;
-      font-weight: 600;
-      padding: 3px 10px;
-      border-radius: 999px;
-      background: var(--forest-soft);
-      color: #fff;
+      font-weight: 700;
+      padding: 0;
+      background: none;
+      color: var(--forest-soft);
       cursor: pointer;
       text-decoration: none;
-      margin-top: 6px;
-      transition: all 0.15s;
+      margin-top: 8px;
+      transition: color 0.15s;
     }
     .correction-inline-link:hover {
-      background: var(--forest);
+      color: var(--forest);
+      text-decoration: underline;
     }
     #tab-meetings .correction-inline-link {
       font-size: 0.88rem;
-      padding: 4px 14px;
     }
 
     /* ── Public Comment Info ── */
@@ -2278,9 +2277,9 @@
     .comment-submit-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
     .comment-submit-btn {
       padding: 10px 28px; border-radius: 8px; border: none; font-size: 0.88rem; font-weight: 700;
-      background: var(--forest); color: #fff; cursor: pointer; transition: opacity 0.2s;
+      background: var(--forest-soft); color: #f0f0f0; cursor: pointer; transition: all 0.2s;
     }
-    .comment-submit-btn:hover { opacity: 0.88; }
+    .comment-submit-btn:hover { background: var(--forest); color: #fff; }
     .comment-submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
     .comment-status { font-size: 0.8rem; color: var(--text-muted); }
     .comment-status.error { color: #C62828; }
@@ -2819,7 +2818,7 @@
       gap: 10px;
       padding: 10px 12px;
       border-radius: 14px;
-      font-size: 1.07rem;
+      font-size: 0.95rem;
       font-weight: 600;
       color: var(--text-secondary);
       cursor: pointer;
@@ -8308,7 +8307,7 @@ function renderMeetings(items, filter) {
       if (summary) {
         summaryHtml += `<div class="meeting-summary"><strong>Topics:</strong>`;
         if (isAISummary) summaryHtml += `<span class="ai-badge">AI Summary</span>`;
-        summaryHtml += ` ${highlightAddresses(linkGlossaryTerms(summary))}</div>`;
+        summaryHtml += ` ${highlightAddresses(linkGlossaryTerms(summary))}`;
       }
       if (aiTopics.length > 0) {
         summaryHtml += '<ul class="ai-topics-list">';
@@ -8318,10 +8317,11 @@ function renderMeetings(items, filter) {
       if (aiWhyMatters && !getWhyThisMatters(item)) {
         summaryHtml += `<div class="ai-why-matters">${linkGlossaryTerms(aiWhyMatters)}</div>`;
       }
-      // Correction pill inside Topics box
+      // Correction link at bottom of summary box
       if (summaryHtml) {
         const safeTitle = (item.title || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
         summaryHtml += `<a class="correction-inline-link" onclick="openCorrectionModal('${safeTitle}', 'meetings')">✏️ Suggested change to summary?</a>`;
+        summaryHtml += '</div>';
       }
       // END: AI-enhanced summary rendering
 
@@ -9727,7 +9727,7 @@ function renderMeetingsWithTopic() {
       if (summary) {
         summaryHtml += '<div class="meeting-summary"><strong>Topics:</strong>';
         if (isAISummary) summaryHtml += '<span class="ai-badge">AI Summary</span>';
-        summaryHtml += ' ' + highlightAddresses(linkGlossaryTerms(summary)) + '</div>';
+        summaryHtml += ' ' + highlightAddresses(linkGlossaryTerms(summary));
       }
       // Show AI topic bullets if available
       if (aiTopics.length > 0) {
@@ -9739,10 +9739,11 @@ function renderMeetingsWithTopic() {
       if (aiWhyMatters && !getWhyThisMatters(item)) {
         summaryHtml += '<div class="ai-why-matters">' + linkGlossaryTerms(aiWhyMatters) + '</div>';
       }
-      // Correction pill inside Topics box
+      // Correction link at bottom of summary box
       if (summaryHtml) {
         var safeT = (item.title || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
         summaryHtml += '<a class="correction-inline-link" onclick="openCorrectionModal(\'' + safeT + '\', \'meetings\')">✏️ Suggested change to summary?</a>';
+        summaryHtml += '</div>';
       }
       // END: AI-enhanced summary rendering
 
