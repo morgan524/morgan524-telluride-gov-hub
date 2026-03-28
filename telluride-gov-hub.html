@@ -930,11 +930,71 @@
     .main-layout.gondola-active .left-sidebar {
       display: none !important;
     }
-    /* Hide left sidebar and right sidebar (Filter by Topic) on Local News tab */
+    /* Hide left sidebar and right sidebar (Filter by Topic) on Local News tab, show blog sidebar */
     .main-layout.localnews-active .left-sidebar,
     .main-layout.localnews-active .sidebar,
     .main-layout.localnews-active .expand-pill-right {
       display: none !important;
+    }
+    .main-layout.localnews-active .blog-sidebar {
+      display: block !important;
+    }
+    /* ── Blog Sidebar (right side, Local News tab only) ── */
+    .blog-sidebar {
+      display: none;
+      flex-shrink: 0;
+      width: 280px;
+      position: sticky;
+      top: 60px;
+      max-height: calc(100vh - 80px);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+    .blog-sidebar::-webkit-scrollbar { width: 5px; }
+    .blog-sidebar::-webkit-scrollbar-track { background: transparent; }
+    .blog-sidebar::-webkit-scrollbar-thumb { background: rgba(47,86,77,0.25); border-radius: 4px; }
+    .blog-sidebar::-webkit-scrollbar-thumb:hover { background: rgba(47,86,77,0.45); }
+    .blog-sidebar-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1.5px solid rgba(33,68,60,0.10);
+      background: var(--card-bg);
+      transition: border-color 0.18s, box-shadow 0.18s, transform 0.18s;
+    }
+    .blog-sidebar-card:hover {
+      border-color: rgba(47,86,77,0.3);
+      box-shadow: 0 4px 14px rgba(47,86,77,0.1);
+      transform: translateY(-1px);
+    }
+    .blog-sidebar-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      display: block;
+    }
+    .blog-sidebar-card .blog-card-body {
+      padding: 10px 12px 12px;
+    }
+    .blog-sidebar-card .blog-card-title {
+      font-size: 0.78rem;
+      font-weight: 800;
+      line-height: 1.3;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+    .blog-sidebar-card .blog-card-summary {
+      font-size: 0.68rem;
+      line-height: 1.4;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+    .blog-sidebar-card .blog-card-meta {
+      font-size: 0.6rem;
+      color: var(--text-muted);
+      font-weight: 600;
     }
     /* Hide both sidebars on Local Groups (links) tab */
     .main-layout.links-active .left-sidebar,
@@ -3321,10 +3381,11 @@
     .footer a { color: var(--forest); text-decoration: none; }
     .footer a:hover { text-decoration: underline; }
 
-    /* ── Tablet: collapse left sidebar and festival sidebar ── */
+    /* ── Tablet: collapse left sidebar and festival sidebar and blog sidebar ── */
     @media (max-width: 960px) {
       .left-sidebar { display: none; }
       .festival-sidebar { display: none !important; }
+      .blog-sidebar { display: none !important; }
     }
 
     /* ── Mobile ── */
@@ -4999,6 +5060,24 @@
       <p style="font-size:0.68rem;color:var(--text-muted);line-height:1.4;margin:10px 0 0;">
         Corrections with a verified source link are applied automatically. Others are reviewed by our team.
       </p>
+    </div>
+  </aside>
+
+  <!-- ══════════ BLOG SIDEBAR (Local News tab only) ══════════ -->
+  <aside class="blog-sidebar" id="sidebarBlog">
+    <div style="padding:0;overflow:hidden;border-radius:18px;background:var(--card-bg);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1.5px solid rgba(33,68,60,0.22);box-shadow:var(--shadow-soft);">
+      <!-- Header -->
+      <div style="padding:18px 16px 12px;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.6)),linear-gradient(135deg,rgba(39,69,63,0.08),rgba(198,148,55,0.12));border-bottom:1px solid rgba(221,210,196,0.8);text-align:center;">
+        <div style="width:48px;height:48px;margin:0 auto 8px;border-radius:14px;background:linear-gradient(180deg,var(--accent-green),#1a3e36);color:#fff;display:grid;place-items:center;font-size:1.3rem;box-shadow:0 6px 14px rgba(33,68,60,0.22);">📝</div>
+        <div style="font-size:0.68rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#788e82;margin-bottom:4px;">Livable Telluride</div>
+        <div style="font-size:1.25rem;font-weight:900;letter-spacing:-0.03em;color:var(--text-primary);">News</div>
+        <div style="font-size:0.68rem;color:var(--text-muted);line-height:1.4;margin-top:4px;font-style:italic;">Our collective random thoughts on subjects we think are important</div>
+      </div>
+      <!-- Blog post cards rendered by JS -->
+      <div id="sidebarBlogPosts" style="padding:10px;display:grid;gap:10px;"></div>
+      <div style="padding:0 14px 14px;text-align:center;">
+        <a href="https://www.livabletelluride.org/blog" target="_blank" rel="noopener" style="display:inline-block;padding:8px 18px;background:var(--accent-green);color:#fff;border-radius:8px;font-size:0.72rem;font-weight:700;text-decoration:none;transition:opacity 0.18s;">View All Posts →</a>
+      </div>
     </div>
   </aside>
 
@@ -9202,6 +9281,120 @@ const KOTO_FEATURED_STORIES = [
 // ── Community Events Data ─────────────
 // ══════════════════════════════════════
 
+// ══════════════════════════════════════
+// ── Livable Telluride Blog Posts ─────
+// ══════════════════════════════════════
+const LIVABLE_BLOG_POSTS = [
+  {
+    title: 'From "Let the People Decide" to "Livable Telluride"',
+    url: 'https://www.livabletelluride.org/post/from-let-the-people-decide-to-livable-telluride',
+    date: 'Feb 23, 2026',
+    readTime: '3 min',
+    image: 'https://static.wixstatic.com/media/4aa606_739ca6fc182142d0b867edb45cda8ee9~mv2.jpg/v1/fill/w_600,h_400,al_c,q_80,enc_auto/4aa606_739ca6fc182142d0b867edb45cda8ee9~mv2.jpg',
+    summary: 'The story behind our rebrand — why the mission evolved from a single ballot question to a broader effort to keep Telluride livable for the people who actually live here.',
+    category: 'Town of Telluride'
+  },
+  {
+    title: 'As the Society Turns (the Survey Episode)',
+    url: 'https://www.livabletelluride.org/post/societyturnpud',
+    date: 'Oct 14, 2025',
+    readTime: '2 min',
+    image: 'https://static.wixstatic.com/media/4aa606_6684199a6f04420ea922555d499617dd~mv2.png/v1/fill/w_600,h_400,al_c,q_80,enc_auto/4aa606_6684199a6f04420ea922555d499617dd~mv2.png',
+    summary: '106 residents weighed in on Society Turn — 83% knew about the hospital, but nearly 80% had no idea how much else is planned for that site.',
+    category: 'County Issues'
+  },
+  {
+    title: 'As the Society Turns (the PUD Episode)',
+    url: 'https://www.livabletelluride.org/post/as-the-society-turns-the-pud-episode',
+    date: 'Oct 11, 2025',
+    readTime: '5 min',
+    image: 'https://static.wixstatic.com/media/4aa606_cf96fe8caf51434cbf126621567a15c4~mv2.png/v1/fill/w_600,h_400,al_c,q_80,enc_auto/4aa606_cf96fe8caf51434cbf126621567a15c4~mv2.png',
+    summary: 'A deep dive into the Society Turn PUD that even its loudest critics admit is bigger than anyone realized — and why that matters for the valley\'s future.',
+    category: 'County Issues'
+  },
+  {
+    title: 'Saturday Shot of Finance: If VooDoo Were a Private Development, Would It Already Be Bankrupt?',
+    url: 'https://www.livabletelluride.org/post/saturday-shot-of-finance-if-voodoo-were-a-private-development-would-it-already-be-bankrupt',
+    date: 'Oct 11, 2025',
+    readTime: '4 min',
+    image: 'https://static.wixstatic.com/media/4aa606_dd129dd65c7e47bdbf1a38792bc74ca2~mv2.png/v1/fill/w_600,h_400,al_c,q_80,enc_auto/4aa606_dd129dd65c7e47bdbf1a38792bc74ca2~mv2.png',
+    summary: 'A family stuck in "affordable housing" with soaring rent asks the question no one at Town Hall wants to answer — do these numbers actually work?',
+    category: 'Town of Telluride'
+  },
+  {
+    title: 'Why is Rent So Damn High In Telluride!',
+    url: 'https://www.livabletelluride.org/post/why-is-rent-so-damn-high-in-telluride',
+    date: 'Sep 15, 2025',
+    readTime: '5 min',
+    image: 'https://static.wixstatic.com/media/4aa606_1ad0a9f0cc984dd8b1ac1accc4805e30~mv2.jpg/v1/fill/w_600,h_400,al_c,q_80,enc_auto/4aa606_1ad0a9f0cc984dd8b1ac1accc4805e30~mv2.jpg',
+    summary: 'Sweet Rants lit up with locals doing the math on new housing projects — and the per-unit costs will make your jaw drop.',
+    category: 'Town of Telluride'
+  },
+  {
+    title: 'From $36 Million to $103 Million: How Telluride Became Richer Than a Lottery Winner',
+    url: 'https://www.livabletelluride.org/post/from-36-million-to-103-million-how-telluride-became-richer-than-a-lottery-winner',
+    date: 'Sep 13, 2025',
+    readTime: '3 min',
+    image: 'https://static.wixstatic.com/media/4aa606_9a4f9e4e38c5466e84cfcf4d26c6b4b8~mv2.jpg/v1/fill/w_600,h_400,al_c,q_80,enc_auto/4aa606_9a4f9e4e38c5466e84cfcf4d26c6b4b8~mv2.jpg',
+    summary: 'A 930% budget increase in ten years — this breakdown of where all that money went (and keeps going) is essential reading for any Telluride taxpayer.',
+    category: 'Town of Telluride'
+  },
+  {
+    title: "Canyonlands Development: A Closer Look at Telluride's Financing",
+    url: 'https://www.livabletelluride.org/post/canyonlands-development-a-closer-look-at-telluride-s-financing',
+    date: 'Jul 28, 2025',
+    readTime: '4 min',
+    image: 'https://static.wixstatic.com/media/4aa606_e77ed7e3b978422f85e1e58ce2d32a57~mv2.png/v1/fill/w_600,h_400,al_c,q_80,enc_auto/4aa606_e77ed7e3b978422f85e1e58ce2d32a57~mv2.png',
+    summary: 'The $26.5M Canyonlands project by Clark\'s uses a creative 30-year lease structure that every resident should understand before the bonds come due.',
+    category: 'Town of Telluride'
+  },
+  {
+    title: 'Empowering Telluride: The Future of Lot L Development',
+    url: 'https://www.livabletelluride.org/post/empowering-telluride-the-future-of-lot-l-development',
+    date: 'Jul 27, 2025',
+    readTime: '2 min',
+    image: 'https://static.wixstatic.com/media/4aa606_9bc2e23b9bf54df79e2bfea8a209e0bf~mv2.png/v1/fill/w_600,h_400,al_c,q_80,enc_auto/4aa606_9bc2e23b9bf54df79e2bfea8a209e0bf~mv2.png',
+    summary: 'A massive parking garage on Lot L could permanently change downtown Telluride\'s character — here\'s why community input matters now, not later.',
+    category: 'Town of Telluride'
+  },
+  {
+    title: 'The Sunnyside Project',
+    url: 'https://www.livabletelluride.org/post/the-sunnyside-project',
+    date: 'Jul 27, 2025',
+    readTime: '2 min',
+    image: 'https://static.wixstatic.com/media/4aa606_0a4bd3ed15ff4eb1939f4f113a3e0b72~mv2.jpg/v1/fill/w_600,h_400,al_c,q_80,enc_auto/4aa606_0a4bd3ed15ff4eb1939f4f113a3e0b72~mv2.jpg',
+    summary: 'Completed before costs spiraled, Sunnyside shows how pre-pandemic housing financing worked — and why today\'s projects can\'t replicate it.',
+    category: 'Town of Telluride'
+  },
+  {
+    title: 'The VooDoo Project',
+    url: 'https://www.livabletelluride.org/post/the-voodoo-project',
+    date: 'Jul 27, 2025',
+    readTime: '2 min',
+    image: 'https://static.wixstatic.com/media/4aa606_5806b00f4ede49e1a91e4acef71e93de~mv2.png/v1/fill/w_600,h_400,al_c,q_80,enc_auto/4aa606_5806b00f4ede49e1a91e4acef71e93de~mv2.png',
+    summary: 'The VooDoo\'s $27.4M price tag for 27 units launched at exactly the wrong time — a cautionary tale of what happens when interest rates hit 7%.',
+    category: 'Town of Telluride'
+  },
+  {
+    title: 'The Chair 7 Development Controversy',
+    url: 'https://www.livabletelluride.org/post/the-chair-7-development-controversy',
+    date: 'Jul 25, 2025',
+    readTime: '3 min',
+    image: 'https://static.wixstatic.com/media/4aa606_abca8f0e0e3d442e895d22d3e2e97e37~mv2.jpg/v1/fill/w_600,h_400,al_c,q_80,enc_auto/4aa606_abca8f0e0e3d442e895d22d3e2e97e37~mv2.jpg',
+    summary: 'A hotel and commercial development on open space near the ski area is the most contentious proposal in years — here\'s what the PUD amendment actually allows.',
+    category: 'Town of Telluride'
+  },
+  {
+    title: 'The Gondola Station',
+    url: 'https://www.livabletelluride.org/post/the-gondola-station',
+    date: 'Jul 2, 2025',
+    readTime: '1 min',
+    image: 'https://static.wixstatic.com/media/4aa606_1f7f0a14b71d4ab896e4e5f539e17fbb~mv2.jpg/v1/fill/w_600,h_400,al_c,q_80,enc_auto/4aa606_1f7f0a14b71d4ab896e4e5f539e17fbb~mv2.jpg',
+    summary: 'Three design concepts for a new gondola station could reshape downtown — but without a charter amendment, voters won\'t get a say.',
+    category: 'Town of Telluride'
+  }
+];
+
 const COMMUNITY_EVENTS = [
   {
     title: "2nd Annual Telluride Rotary Hikeathon",
@@ -10904,6 +11097,12 @@ async function init() {
   // Local News tab uses hardcoded article data — render immediately
   renderLocalNews(null, currentLocalNewsFilter);
 
+  // Blog sidebar — render immediately with hardcoded data, then refresh from RSS
+  try { renderBlogSidebar([]); } catch(e) { console.error('initial renderBlogSidebar error:', e); }
+  fetchLivableBlogRSS().then(function(rssPosts) {
+    try { renderBlogSidebar(rssPosts); } catch(e) { console.error('renderBlogSidebar RSS error:', e); }
+  }).catch(function(e) { console.warn('Blog RSS fetch skipped:', e.message); });
+
   // Populate KOTO intro logo from ENTITY_LOGOS (avoids broken external URL)
   const kotoIntroEl = document.getElementById('kotoIntroLogo');
   if (kotoIntroEl && ENTITY_LOGOS.koto) {
@@ -11030,6 +11229,93 @@ function getAllFestivalsForYear(year) {
 }
 
 // ── Populate the Upcoming Community Events sidebar (Events tab, left sidebar) ──
+// ── Fetch latest Livable Telluride blog posts from Wix RSS and merge with hardcoded data ──
+async function fetchLivableBlogRSS() {
+  try {
+    const rssUrl = 'https://www.livabletelluride.org/blog-feed.xml';
+    const proxyUrl = ALLORIGINS_PROXY + encodeURIComponent(rssUrl);
+    const resp = await fetch(proxyUrl, { signal: AbortSignal.timeout(8000) });
+    if (!resp.ok) return [];
+    const text = await resp.text();
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(text, 'text/xml');
+    const items = xml.querySelectorAll('item');
+    const posts = [];
+    items.forEach(function(item) {
+      var title = (item.querySelector('title') || {}).textContent || '';
+      var link = (item.querySelector('link') || {}).textContent || '';
+      var pubDate = (item.querySelector('pubDate') || {}).textContent || '';
+      var desc = (item.querySelector('description') || {}).textContent || '';
+      // Extract first image from description HTML
+      var imgMatch = desc.match(/<img[^>]+src=["']([^"']+)["']/);
+      var image = imgMatch ? imgMatch[1] : '';
+      // Clean description to plain text
+      var tmp = document.createElement('div');
+      tmp.innerHTML = desc;
+      var plainDesc = tmp.textContent || tmp.innerText || '';
+      plainDesc = plainDesc.replace(/\s+/g, ' ').trim().slice(0, 200);
+      if (title.toLowerCase().includes('test')) return; // skip test posts
+      posts.push({
+        title: title,
+        url: link,
+        date: pubDate ? new Date(pubDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '',
+        image: image,
+        summary: plainDesc,
+        fromRSS: true
+      });
+    });
+    return posts;
+  } catch(e) {
+    console.warn('[GovHub] Livable blog RSS fetch failed:', e.message);
+    return [];
+  }
+}
+
+// ── Render the Livable Telluride News sidebar ──
+function renderBlogSidebar(rssPosts) {
+  var container = document.getElementById('sidebarBlogPosts');
+  if (!container) return;
+
+  // Merge RSS posts with hardcoded posts, newest first
+  // RSS posts take priority if they match an existing hardcoded post by URL
+  var allPosts = [...LIVABLE_BLOG_POSTS];
+  if (rssPosts && rssPosts.length > 0) {
+    var existingUrls = new Set(allPosts.map(function(p) { return p.url; }));
+    rssPosts.forEach(function(rp) {
+      if (!existingUrls.has(rp.url)) {
+        allPosts.unshift(rp); // New posts go to top
+      }
+    });
+  }
+
+  // Sort by date descending (newest first)
+  allPosts.sort(function(a, b) {
+    var da = new Date(a.date);
+    var db = new Date(b.date);
+    if (isNaN(da)) return 1;
+    if (isNaN(db)) return -1;
+    return db - da;
+  });
+
+  var html = '';
+  allPosts.forEach(function(post) {
+    var imgHtml = post.image
+      ? '<img src="' + post.image + '" alt="' + post.title.replace(/"/g, '&quot;') + '" loading="lazy" onerror="this.style.display=\'none\'">'
+      : '<div style="height:80px;background:linear-gradient(135deg,rgba(33,68,60,0.08),rgba(166,143,87,0.12));display:grid;place-items:center;color:var(--text-muted);font-size:1.5rem;">📝</div>';
+
+    html += '<a href="' + post.url + '" target="_blank" rel="noopener" class="blog-sidebar-card">' +
+      imgHtml +
+      '<div class="blog-card-body">' +
+        '<div class="blog-card-title">' + post.title + '</div>' +
+        '<div class="blog-card-summary">' + post.summary + '</div>' +
+        '<div class="blog-card-meta">' + (post.date || '') + (post.readTime ? ' · ' + post.readTime : '') + '</div>' +
+      '</div>' +
+    '</a>';
+  });
+
+  container.innerHTML = html;
+}
+
 function renderUpcomingEventsSidebar() {
   var container = document.getElementById('upcomingEventsContent');
   if (!container) return;
