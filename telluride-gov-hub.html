@@ -5607,11 +5607,8 @@ function getMVMeetings() {
     let description = '';
     if (m.note) {
       description = m.note;
-    } else if (hasAgenda) {
-      description = m.packetUrl
-        ? 'Agenda and full meeting packet available (PDF).'
-        : 'Agenda available (PDF).';
     }
+    // No generic "Agenda available" fallback — the "Agenda Posted →" button already signals this
 
     return {
       title: m.special ? m.title + ' -- Special Meeting' : m.title,
@@ -6030,8 +6027,6 @@ function getNorwoodMeetings() {
     let description = '';
     if (m.note) {
       description = m.note;
-    } else if (hasAgenda) {
-      description = 'Agenda available for review.';
     }
 
     return {
@@ -6145,8 +6140,6 @@ function getOphirMeetings() {
     let description = '';
     if (m.note) {
       description = m.note;
-    } else if (hasAgenda) {
-      description = 'Agenda available for review.';
     }
 
     return {
@@ -6308,7 +6301,7 @@ const MANUAL_SUMMARIES = {
   'mv|2026-04-23|Town Council Meeting':
     'Agenda not yet posted -- typically published the Friday before the meeting',
   'mv|2026-04-02|Design Review Board':
-    'Agenda posted -- check townofmountainvillage.com for project applications under review',
+    'Design review: Lot 164-B1R, San Joaquin Rd (new home + height variance) · Lot 155, San Joaquin Rd (new home) · Lot 1171R, San Joaquin Rd (new home) · Lot 224-B, Snowdrift Ln (new home) · Lot 523-R, Russell Dr (new home) · Lot 533, Russell Dr (new home) · 101 Snowfield Dr (GE encroachment, Lot 360) · 102 Yellow Brick Rd (Lot 17) · 111 San Joaquin Rd (GE encroachment, Lot 154) · 112 Autumn Ln (conditional use permit + ADU, Lot 382-R)',
 
   // ── School District R-1 ──
   'school|2026-03-16|Board of Education Work Session':
