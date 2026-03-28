@@ -4677,7 +4677,7 @@
     <a href="https://townofophir.colorado.gov" target="_blank">townofophir.colorado.gov</a>,
     <a href="https://www.telluridenews.com" target="_blank">telluridenews.com</a>, and
     <a href="https://koto.org" target="_blank">koto.org</a>.
-    Telluride, County, Telluride Times, KOTO, and <a href="https://telluridelibrary.org/events/" target="_blank">Wilkinson Public Library</a> data updated live. Other sources cached. Auto-refreshes every hour.<br>
+    Telluride, County, Telluride Times, KOTO, and <a href="https://telluridelibrary.org/events/" target="_blank">Wilkinson Public Library</a> data updated live. Other sources cached. Auto-refreshes hourly during work hours (Mon–Fri 7am–6pm), every 6 hours otherwise.<br>
     <span id="lastUpdated"></span><br>
     Built for <a href="https://www.livabletelluride.org" target="_blank">Livable Telluride</a><br>
     <button class="footer-correction-btn" id="correctionFab">✏️ See something wrong? Suggest a Correction</button>
@@ -10593,7 +10593,7 @@ renderMeetingsWithTopic = function() {
 init();
 
 // ══════════════════════════════════════════════════════
-// ── Auto-Refresh: reload all data every hour ──
+// ── Auto-Refresh: adaptive schedule ──
 // ══════════════════════════════════════════════════════
 //
 // Live API sources (Telluride CivicWeb, County RSS, news feeds) are
@@ -10602,15 +10602,34 @@ init();
 // but the re-render still picks up any time-dependent display changes
 // (e.g., "TODAY" labels, deadline calculations, sidebar summary).
 //
-// The refresh interval is 60 minutes. A "Last refreshed" timestamp is
-// shown in the footer so users know data is current.
+// Refresh schedule:
+//   • Mon–Fri 7 AM – 6 PM (work hours): every 1 hour
+//   • Evenings, early mornings, weekends: every 6 hours
+// A "Last refreshed" timestamp is shown in the footer.
 
-const AUTO_REFRESH_INTERVAL = 60 * 60 * 1000; // 1 hour in ms
+function getRefreshInterval() {
+  const now = new Date();
+  const day = now.getDay();           // 0 = Sun, 6 = Sat
+  const hour = now.getHours();
+  const isWeekday = day >= 1 && day <= 5;
+  const isWorkHours = hour >= 7 && hour < 18;
+  if (isWeekday && isWorkHours) {
+    return 60 * 60 * 1000;            // 1 hour
+  }
+  return 6 * 60 * 60 * 1000;          // 6 hours
+}
 
-setInterval(() => {
-  console.log('[Gov Hub] Auto-refreshing data...');
-  init();
-}, AUTO_REFRESH_INTERVAL);
+function scheduleNextRefresh() {
+  const interval = getRefreshInterval();
+  const label = interval === 60 * 60 * 1000 ? '1 hour (work hours)' : '6 hours (off-hours)';
+  console.log(`[Tell-Hub] Next refresh in ${label}`);
+  setTimeout(() => {
+    console.log('[Tell-Hub] Auto-refreshing data...');
+    init();
+    scheduleNextRefresh();
+  }, interval);
+}
+scheduleNextRefresh();
 
 // ══════════════════════════════════════════════════════
 // ── Wix Iframe Compatibility Layer ──
