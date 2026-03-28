@@ -3783,7 +3783,7 @@
         <div class="local-group-card">
           <div class="local-group-card-inner">
             <div class="local-group-logo">
-              <img src="https://clubrunner.blob.core.windows.net/00000003291/thumb/ClubLogo/clublogo.png" alt="Rotary Club of Telluride logo" loading="lazy">
+              <img src="https://clubrunner.blob.core.windows.net/00000003291/thumb/ClubLogo/clublogo.png" alt="Rotary Club of Telluride logo" loading="lazy" style="max-width:225px; max-height:210px;">
             </div>
             <div class="local-group-body">
               <h4>Rotary Club of Telluride</h4>
@@ -7808,8 +7808,34 @@ async function fetchAllNews() {
   const wilkinsonResults = fetchWilkinsonEvents();
   const communityResults = await fetchCommunityEvents();
 
+  // Hardcoded COMMUNITY_EVENTS (from the data array above)
+  const hardcodedCommunity = [];
+  const ceToday = new Date();
+  ceToday.setHours(0, 0, 0, 0);
+  if (typeof COMMUNITY_EVENTS !== 'undefined') {
+    COMMUNITY_EVENTS.forEach(function(a) {
+      if (!a.href && !a.title) return;
+      var pubDate = a.date ? localDate(a.date) : null;
+      if (pubDate && pubDate < ceToday) return;
+      hardcodedCommunity.push({
+        title: a.title,
+        link: a.href,
+        description: a.copy || '',
+        summary: a.copy || '',
+        pubDate: pubDate,
+        source: a.source || 'Community Events',
+        sourceLabel: a.source || 'Community',
+        category: 'Community Event',
+        location: a.location || '',
+        imageUrl: a.img || '',
+        eventTimes: a.eventTimes || '',
+        clubInfo: a.clubInfo || null
+      });
+    });
+  }
+
   // Combine all sources — Wilkinson library events take priority over KOTO/TT duplicates
-  const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults];
+  const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...hardcodedCommunity];
 
   // Deduplicate: if the same event title appears on the same date from multiple sources,
   // keep the Wilkinson version (listed first) and drop KOTO/TT duplicates
@@ -9313,31 +9339,6 @@ function collectLocalNewsArticles() {
     });
   }
 
-
-  // Community events — only include upcoming (future) events
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  if (typeof COMMUNITY_EVENTS !== 'undefined') {
-    COMMUNITY_EVENTS.forEach(a => {
-      if (!a.href && !a.title) return;
-      const pubDate = a.date ? new Date(a.date) : null;
-      // Skip past community events
-      if (pubDate && pubDate < today) return;
-      articles.push({
-        title: a.title,
-        link: a.href,
-        summary: a.copy || '',
-        source: a.source || 'Community Events',
-        sourceKey: 'clubs',
-        newsTopic: 'community',
-        date: a.date,
-        pubDate: pubDate,
-        topic: 'Upcoming Event',
-        imageUrl: a.img || '',
-        clubInfo: a.clubInfo || null
-      });
-    });
-  }
 
   // Deduplicate by title
   const seen = new Set();
