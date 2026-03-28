@@ -4713,6 +4713,11 @@
             <span class="topic-icon">🏠</span>
             <span class="topic-name">Housing</span>
           </label>
+          <label class="topic-option" data-topic="housing-search">
+            <input type="checkbox" name="topic" value="housing-search">
+            <span class="topic-icon">🔑</span>
+            <span class="topic-name">Housing Search</span>
+          </label>
           <label class="topic-option" data-topic="land-use">
             <input type="checkbox" name="topic" value="land-use">
             <span class="topic-icon">🏗️</span>
@@ -4847,6 +4852,11 @@
         <span class="tag-icon">🏠</span>
         <span class="tag-label">Housing</span>
         <span class="tag-count" id="count-housing">0</span>
+      </div>
+      <div class="sidebar-tag" data-topic="housing-search">
+        <span class="tag-icon">🔑</span>
+        <span class="tag-label">Housing Search</span>
+        <span class="tag-count" id="count-housing-search">0</span>
       </div>
       <div class="sidebar-tag" data-topic="land-use">
         <span class="tag-icon">🏗️</span>
@@ -9730,6 +9740,11 @@ const TOPIC_DEFINITIONS = {
     label: 'Housing',
     icon: '🏠',
     keywords: /housing|deed.restrict|workforce|affordable|lottery|smrha|rent|tenant|overlook|silver jack|element 52|wilkin court/i
+  },
+  'housing-search': {
+    label: 'Housing Search',
+    icon: '🔑',
+    keywords: /rental|listing|apartment|room.for.rent|vacancy|lease|long.term.rent|housing.search|available.unit|move.in|bedroom.*rent|rent.*bedroom/i
   },
   'land-use': {
     label: 'Land Use & Development',
