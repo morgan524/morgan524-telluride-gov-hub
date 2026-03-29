@@ -9590,7 +9590,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-03-24';
+const LEGAL_NOTICES_CACHE_DATE = '2026-03-29';
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -9630,7 +9630,7 @@ const LEGAL_ENTITY_LOGOS = {
 };
 
 const LEGAL_NOTICES = [
-  // ── March 19-26 (Current Week) ──
+  // ── Active Notices (updated 2026-03-29) ──
   {
     title: 'Deed Restricted Ownership Lottery -- Silver Jack 202, 205 & Element 52 G-17',
     entity: 'San Miguel Regional Housing Authority',
@@ -9646,22 +9646,6 @@ const LEGAL_NOTICES = [
     dates: '3/12, 3/19, 3/26, 4/2',
     papers: ['ttimes'],
     address: '155 W Pacific Ave, Telluride, CO'
-  },
-  {
-    title: 'Request for Proposals -- Office Painting at 333 W Colorado Ave',
-    entity: 'San Miguel County',
-    entityClass: 'ent-county',
-    entityLogo: 'county',
-    icon: '📋',
-    iconClass: 'type-rfp',
-    type: 'RFP',
-    filterTag: 'public-entity',
-    summary: 'San Miguel County is seeking proposals from contractors to paint an office at 333 W Colorado Ave, Telluride. RFP details available at sanmiguelcountyco.gov/bids or at 333 W Colorado Ave, 2nd Floor. Contact Greg Pollio at (970) 369-5424.',
-    deadline: 'March 27, 2026 at 5:00 PM',
-    expires: '2026-03-27',
-    dates: '3/5, 3/12, 3/19, 3/26',
-    papers: ['ttimes', 'npost'],
-    address: '333 W Colorado Ave, Telluride, CO'
   },
   {
     title: 'Request for Proposals -- Summer Burn Pile Construction',
@@ -9804,73 +9788,6 @@ const LEGAL_NOTICES = [
     papers: ['ttimes_mar5'],
     address: '116 E Columbia Ave, Telluride, CO'
   },
-  {
-    title: 'Ordinance No. 2026-1 -- Town of Ophir Roof Pitch Variance',
-    entity: 'Town of Ophir',
-    entityClass: 'ent-norwood',
-    entityLogo: 'ophir',
-    icon: '🏔️',
-    iconClass: 'type-hearing',
-    type: 'Land Use Variance',
-    filterTag: 'ordinance',
-    summary: 'Slator Aplin applied for a variance to allow a 2/12 roof pitch instead of the required 4/12 on Lots 1 and 2, Block Q, Town of Ophir. Hearing held at Ophir Town Hall. Complete information available at Ophir Town Hall, 36 Porphyry St, (970) 728-4943.',
-    deadline: 'Hearing held March 17, 2025',
-    expires: '2026-03-28',
-    dates: '3/5',
-    papers: ['ttimes_mar5'],
-    event: { date: 'March 17, 2025', time: '7:00 PM', endTime: '9:00 PM', location: 'Ophir Town Hall, 36 Porphyry St, Ophir' },
-    address: '36 Porphyry St, Ophir, CO'
-  },
-  {
-    title: 'Invitation for Bids -- 2026 Stillwell Fill and Drain Line',
-    entity: 'Town of Telluride',
-    entityClass: 'ent-county',
-    entityLogo: 'telluride',
-    icon: '🔧',
-    iconClass: 'type-bid',
-    type: 'Bid Notice',
-    filterTag: 'public-entity',
-    summary: 'Sealed bids for a water main installation project (Fusible HDPE, Tomboy Rd Hillside) due at Telluride Public Works & Transit Facility, 1370 Black Bear Rd, or via email to togren@telluride.gov. Bid documents available at Public Works, (970) 729-3127, or bidnetdirect.com.',
-    deadline: 'Bids due March 20, 2026 at 4:00 PM',
-    expires: '2026-03-20',
-    dates: '2/26, 3/5',
-    papers: ['ttimes_mar5'],
-    address: '1370 Black Bear Rd, Telluride, CO'
-  },
-  {
-    title: 'San Miguel County Planning Commission -- Regular Meeting',
-    entity: 'San Miguel County',
-    entityClass: 'ent-county',
-    entityLogo: 'county',
-    icon: '🏛️',
-    iconClass: 'type-hearing',
-    type: 'Meeting Notice',
-    filterTag: 'public-entity',
-    summary: 'Regular meeting on March 12, 2026 at 9:00 AM. Location: 333 W Colorado Ave, 2nd Floor, Telluride. Agenda includes briefing on Wildfire Code and Building Code enforcement update by Building Official Matt Gonzales. Available via Zoom.',
-    deadline: 'March 12, 2026 at 9:00 AM',
-    expires: '2026-03-12',
-    dates: '3/5',
-    papers: ['ttimes_mar5'],
-    event: { date: 'March 12, 2026', time: '9:00 AM', endTime: '12:00 PM', location: '333 W Colorado Ave, 2nd Floor, Telluride' },
-    address: '333 W Colorado Ave, Telluride, CO'
-  },
-  {
-    title: 'Shavano Conservation District -- 84th Annual Meeting',
-    entity: 'Shavano Conservation District',
-    entityClass: 'ent-norwood',
-    entityLogo: 'shavano',
-    icon: '🌿',
-    iconClass: 'type-rates',
-    type: 'Meeting Notice',
-    filterTag: 'public-entity',
-    summary: 'The 84th Annual Meeting on March 10, 2026 at 4:30 PM at the Ute Indian Museum, 17253 Chipeta Rd, Montrose. Local Work Group discussion at 4:30 PM, annual meeting at 6:00 PM, dinner at 6:30 PM, followed by FFA speakers and conservation awards. Tickets $20/adult, $12/child.',
-    deadline: 'March 10, 2026 at 4:30 PM',
-    expires: '2026-03-10',
-    dates: '3/5',
-    papers: ['ttimes_mar5'],
-    event: { date: 'March 10, 2026', time: '4:30 PM', endTime: '8:00 PM', location: 'Ute Indian Museum, 17253 Chipeta Rd, Montrose' },
-    address: '17253 Chipeta Rd, Montrose, CO'
-  }
 ];
 
 // Build calendar buttons for a legal notice event
