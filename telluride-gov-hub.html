@@ -1491,6 +1491,32 @@
       flex: 1;
       min-width: 0;
     }
+    /* ── Global fix: legal card formatting across all views ── */
+    /* Hide entity logo containers when image fails */
+    .legal-entity-logo:empty { display: none !important; }
+    .legal-entity-logo img[src=""] { display: none !important; }
+    .legal-entity-logo img:not([src]) { display: none !important; }
+    /* Force ALL legal card maps to stack below (full width) */
+    .legal-card-grid { flex-direction: column !important; }
+    .legal-card-map {
+      width: 100% !important;
+      height: 180px !important;
+      margin-top: 12px;
+    }
+    /* Remove background/border from SVG-only entity logos to prevent empty circles */
+    .legal-entity-logo:has(> svg:only-child) {
+      background: none !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+    /* Handle entity logos with broken images */
+    .legal-entity-logo:has(> img:only-child) {
+      overflow: hidden;
+    }
+    .legal-standalone-page .legal-entity-logo { width: 48px; height: 48px; min-width: 48px; }
+    .legal-standalone-page .legal-card { text-decoration: none; color: inherit; display: block; margin-bottom: 16px; }
+    .legal-standalone-page .legal-entity-logo { width: 48px; height: 48px; min-width: 48px; }
+    .legal-standalone-page .legal-card { text-decoration: none; color: inherit; display: block; margin-bottom: 16px; }
     /* ── Standalone Legal Notices Page (no top nav) ── */
     .legal-standalone-page {
       max-width: 960px;
@@ -16701,6 +16727,20 @@ document.addEventListener("DOMContentLoaded", function() {
     var el = document.getElementById(idMap[key]);
     if (el) el.textContent = counts[key] || 0;
   });
+});
+
+// ── Clean up broken entity logo images in legal cards ──
+document.addEventListener("DOMContentLoaded", function() {
+  function fixBrokenLogos() {
+    document.querySelectorAll(".legal-entity-logo img").forEach(function(img) {
+      img.onerror = function() { this.parentElement.style.display = "none"; };
+      if (img.complete && img.naturalWidth === 0) img.parentElement.style.display = "none";
+    });
+  }
+  fixBrokenLogos();
+  // Watch for dynamically added legal cards
+  new MutationObserver(function() { fixBrokenLogos(); })
+    .observe(document.body, { childList: true, subtree: true });
 });
 </script>
 </body>
