@@ -917,7 +917,22 @@
     }
     .prox-active-banner button:hover { background: rgba(41,82,71,0.1); }
 
-    /* Hide sidebars when Subscribe or Land Use tab is active */
+    /* Hide sidebars when Subscribe, Land Use, or About Us tab is active */
+    .main-layout.aboutus-active .sidebar,
+    .main-layout.aboutus-active .expand-pill-right,
+    .main-layout.aboutus-active .left-sidebar,
+    @media (max-width: 900px) {
+      #tab-about-us [style*="grid-template-columns: 1fr 1fr"],
+      #tab-about-us [style*="grid-template-columns:1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+      }
+      #tab-about-us [style*="grid-template-columns:repeat(4"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      #tab-about-us [style*="grid-template-columns:repeat(3"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
     .main-layout.subscribe-active .sidebar,
     .main-layout.subscribe-active .expand-pill-right,
     .main-layout.subscribe-active .left-sidebar,
@@ -3667,6 +3682,7 @@
     <button class="tab-btn" data-tab="land-use">Land Use</button>
     <button class="tab-btn" data-tab="gondola">Gondola 3A</button>
     <button class="tab-btn" data-tab="legals">Legal Notices</button>
+    <button class="tab-btn" data-tab="about-us">About Us</button>
   </div>
   <!-- ── Subscribe Bar ── -->
   <div class="subscribe-bar">
@@ -4822,6 +4838,161 @@
         <div class="check-icon">✅</div>
         <h3>You're Subscribed!</h3>
         <p>We'll start sending your personalized updates soon. You can update your preferences anytime by returning to this page.</p>
+      </div>
+    </div>
+
+    <!-- ── About Us Tab ── -->
+    <div class="tab-content" id="tab-about-us">
+
+      <!-- Hero Banner -->
+      <div style="position:relative;width:100%;border-radius:var(--radius);overflow:hidden;margin-bottom:32px;background:linear-gradient(135deg,#1a332c 0%,#21443c 40%,#2d5a4e 100%);min-height:340px;display:flex;align-items:center;">
+        <div style="position:absolute;inset:0;background:url('https://static.wixstatic.com/media/4aa606_92b4360dfb7748268304330917d6f121~mv2.jpeg/v1/fill/w_1186,h_1768,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/AdobeStock_693615995.jpeg') center/cover no-repeat;opacity:0.3;"></div>
+        <div style="position:relative;z-index:2;padding:48px 40px;max-width:680px;">
+          <div style="display:flex;align-items:center;gap:18px;margin-bottom:20px;">
+            <img src="logo/Livable Telluride.png" alt="Livable Telluride" style="width:80px;height:80px;border-radius:18px;object-fit:contain;background:rgba(255,255,255,0.95);padding:6px;">
+            <div>
+              <h1 style="font-size:2.2rem;font-weight:800;color:#fff;margin:0;line-height:1.15;">Livable Telluride</h1>
+              <div style="font-size:0.95rem;color:rgba(255,255,255,0.8);margin-top:4px;font-weight:500;">Preserving the Heart of Telluride</div>
+            </div>
+          </div>
+          <p style="font-size:1.05rem;color:rgba(255,255,255,0.9);line-height:1.7;margin:0;">
+            Advocating for thoughtful growth and community preservation in the Telluride region.
+          </p>
+        </div>
+      </div>
+
+      <!-- Mission Section -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:32px;">
+        <div style="background:var(--card-bg);border-radius:var(--radius);padding:32px;border:1.5px solid var(--border);">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+            <div style="width:40px;height:40px;border-radius:12px;background:rgba(33,68,60,0.08);display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🎯</div>
+            <h2 style="font-size:1.35rem;font-weight:800;color:var(--text-primary);margin:0;">Our Mission</h2>
+          </div>
+          <p style="font-size:0.92rem;color:var(--text-secondary);line-height:1.75;margin:0;">
+            Livable Telluride is dedicated to ensuring that thoughtful processes result in a livable community for all. Our mission is to preserve the heart of Telluride by advocating for sustainable growth and transparent decision-making that prioritizes the long-term well-being of our residents. We work to safeguard the unique character of our box canyon home while fostering an inclusive and vibrant future for generations to come.
+          </p>
+        </div>
+
+        <div style="background:var(--card-bg);border-radius:var(--radius);padding:32px;border:1.5px solid var(--border);">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+            <div style="width:40px;height:40px;border-radius:12px;background:rgba(33,68,60,0.08);display:flex;align-items:center;justify-content:center;font-size:1.2rem;">📖</div>
+            <h2 style="font-size:1.35rem;font-weight:800;color:var(--text-primary);margin:0;">Our Story</h2>
+          </div>
+          <p style="font-size:0.92rem;color:var(--text-secondary);line-height:1.75;margin:0;">
+            Livable Telluride grew out of "Let the People Decide," a grassroots effort built around Measure 300 in November 2024. After that chapter closed, the organization evolved to focus on the broader, ongoing work of keeping Telluride functional, welcoming, and worth living in for the people who call it home. The name change reflects a shift from a single ballot question to a lasting commitment to community well-being.
+          </p>
+        </div>
+      </div>
+
+      <!-- What "Livable" Means -->
+      <div style="background:linear-gradient(135deg,rgba(33,68,60,0.04),rgba(139,114,80,0.04));border-radius:var(--radius);padding:32px;margin-bottom:32px;border:1.5px solid rgba(33,68,60,0.1);">
+        <h2 style="font-size:1.3rem;font-weight:800;color:var(--text-primary);margin:0 0 14px 0;text-align:center;">What "Livable" Means</h2>
+        <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.75;max-width:800px;margin:0 auto;text-align:center;">
+          "Livable" is not code for freezing the county in amber, picking winners and losers, or drawing a line between "locals" and "others." It is an inclusive standard: a community that works for families, workers, retirees, and newcomers alike — one that protects what makes Telluride special while being honest about real-world constraints like housing, water, traffic, public services, and the cost of everyday life. It is a commitment to smart, transparent decisions that balance growth with capacity and ensure Telluride remains a place where a wide range of people can participate, belong, and thrive.
+        </p>
+      </div>
+
+      <!-- Focus Areas -->
+      <h2 style="font-size:1.3rem;font-weight:800;color:var(--text-primary);margin:0 0 16px 0;">What We Focus On</h2>
+      <div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:16px;margin-bottom:32px;">
+        <div style="background:var(--card-bg);border-radius:18px;padding:22px 18px;border:1.5px solid var(--border);text-align:center;">
+          <div style="font-size:2rem;margin-bottom:10px;">🏛️</div>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--text-primary);margin:0 0 8px 0;">Government Transparency</h3>
+          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;margin:0;">The Tell-Hub Gov Hub tracks every public meeting, agenda, and decision across all local government bodies so residents can stay informed.</p>
+        </div>
+        <div style="background:var(--card-bg);border-radius:18px;padding:22px 18px;border:1.5px solid var(--border);text-align:center;">
+          <div style="font-size:2rem;margin-bottom:10px;">🏗️</div>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--text-primary);margin:0 0 8px 0;">Land Use Tracking</h3>
+          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;margin:0;">Monitoring development proposals, zoning changes, and PUD amendments to ensure responsible growth that respects community character.</p>
+        </div>
+        <div style="background:var(--card-bg);border-radius:18px;padding:22px 18px;border:1.5px solid var(--border);text-align:center;">
+          <div style="font-size:2rem;margin-bottom:10px;">🏠</div>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--text-primary);margin:0 0 8px 0;">Housing Accountability</h3>
+          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;margin:0;">Tracking housing initiatives, affordability programs, and construction projects to ensure the community delivers on its promises to residents.</p>
+        </div>
+        <div style="background:var(--card-bg);border-radius:18px;padding:22px 18px;border:1.5px solid var(--border);text-align:center;">
+          <div style="font-size:2rem;margin-bottom:10px;">🤝</div>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--text-primary);margin:0 0 8px 0;">Community Engagement</h3>
+          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;margin:0;">Building tools and resources that make it easy for residents to participate in local government and have their voices heard on the issues that matter.</p>
+        </div>
+      </div>
+
+      <!-- Blog Posts / News from Livable Telluride -->
+      <h2 style="font-size:1.3rem;font-weight:800;color:var(--text-primary);margin:0 0 16px 0;">From the Livable Telluride Blog</h2>
+      <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:18px;margin-bottom:32px;">
+        <a href="https://www.livabletelluride.org/post/from-let-the-people-decide-to-livable-telluride" target="_blank" rel="noopener" style="background:var(--card-bg);border-radius:18px;padding:22px;border:1.5px solid var(--border);text-decoration:none;transition:border-color 0.2s,box-shadow 0.2s;">
+          <div style="font-size:0.72rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Feb 23, 2026</div>
+          <h3 style="font-size:0.98rem;font-weight:700;color:var(--text-primary);margin:0 0 8px 0;line-height:1.4;">From "Let the People Decide" to "Livable Telluride"</h3>
+          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.55;margin:0;">The story behind the name change — and what comes next for our community advocacy work.</p>
+        </a>
+        <a href="https://www.livabletelluride.org/post/societyturnpud" target="_blank" rel="noopener" style="background:var(--card-bg);border-radius:18px;padding:22px;border:1.5px solid var(--border);text-decoration:none;transition:border-color 0.2s,box-shadow 0.2s;">
+          <div style="font-size:0.72rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Oct 14, 2025</div>
+          <h3 style="font-size:0.98rem;font-weight:700;color:var(--text-primary);margin:0 0 8px 0;line-height:1.4;">As the Society Turns (the Survey Episode)</h3>
+          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.55;margin:0;">Survey results from the community on the most pressing issues facing the Telluride region.</p>
+        </a>
+        <a href="https://www.livabletelluride.org/post/as-the-society-turns-the-pud-episode" target="_blank" rel="noopener" style="background:var(--card-bg);border-radius:18px;padding:22px;border:1.5px solid var(--border);text-decoration:none;transition:border-color 0.2s,box-shadow 0.2s;">
+          <div style="font-size:0.72rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Oct 11, 2025</div>
+          <h3 style="font-size:0.98rem;font-weight:700;color:var(--text-primary);margin:0 0 8px 0;line-height:1.4;">As the Society Turns (the PUD Episode)</h3>
+          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.55;margin:0;">Examining the development controversies and PUD amendments that have shaped the community debate.</p>
+        </a>
+        <a href="https://www.livabletelluride.org/post/saturday-shot-of-finance-if-voodoo-were-a-private-development-would-it-already-be-bankrupt" target="_blank" rel="noopener" style="background:var(--card-bg);border-radius:18px;padding:22px;border:1.5px solid var(--border);text-decoration:none;transition:border-color 0.2s,box-shadow 0.2s;">
+          <div style="font-size:0.72rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Oct 11, 2025</div>
+          <h3 style="font-size:0.98rem;font-weight:700;color:var(--text-primary);margin:0 0 8px 0;line-height:1.4;">Saturday Shot of Finance: If VooDoo Were a Private Development</h3>
+          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.55;margin:0;">A financial deep-dive into the economics of local development projects.</p>
+        </a>
+        <a href="https://www.livabletelluride.org/post/how-to-build-housing-in-telluride-that-is-too-expensive-for-anyone-to-rent" target="_blank" rel="noopener" style="background:var(--card-bg);border-radius:18px;padding:22px;border:1.5px solid var(--border);text-decoration:none;transition:border-color 0.2s,box-shadow 0.2s;">
+          <div style="font-size:0.72rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Sep 15, 2025</div>
+          <h3 style="font-size:0.98rem;font-weight:700;color:var(--text-primary);margin:0 0 8px 0;line-height:1.4;">Why is Rent So Damn High in Telluride!</h3>
+          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.55;margin:0;">Investigating the factors driving the housing crisis and what can be done about it.</p>
+        </a>
+        <a href="https://www.livabletelluride.org/post/from-36-million-to-103-million-how-telluride-became-richer-while-its-workers-became-poorer" target="_blank" rel="noopener" style="background:var(--card-bg);border-radius:18px;padding:22px;border:1.5px solid var(--border);text-decoration:none;transition:border-color 0.2s,box-shadow 0.2s;">
+          <div style="font-size:0.72rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Sep 13, 2025</div>
+          <h3 style="font-size:0.98rem;font-weight:700;color:var(--text-primary);margin:0 0 8px 0;line-height:1.4;">From $36 Million to $103 Million: How Telluride Became Richer While Its Workers Became Poorer</h3>
+          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.55;margin:0;">Analyzing the widening gap between property wealth and working-class wages.</p>
+        </a>
+      </div>
+
+      <div style="text-align:center;margin-bottom:32px;">
+        <a href="https://www.livabletelluride.org/blog" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:10px 24px;border-radius:12px;border:1.5px solid var(--accent);color:var(--accent);font-weight:600;font-size:0.88rem;text-decoration:none;transition:all 0.2s;">
+          View all posts on the Livable Telluride blog →
+        </a>
+      </div>
+
+      <!-- Newsletter + Contact -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:16px;">
+        <div style="background:linear-gradient(135deg,#21443c,#2d5a4e);border-radius:var(--radius);padding:32px;color:#fff;">
+          <h2 style="font-size:1.25rem;font-weight:800;margin:0 0 10px 0;">Get Our Newsletter</h2>
+          <p style="font-size:0.88rem;color:rgba(255,255,255,0.8);line-height:1.65;margin:0 0 18px 0;">
+            Stay up to date on what matters most in Telluride. Our newsletter covers government decisions, development updates, housing news, and community events — curated for residents who care about the future of their town.
+          </p>
+          <button onclick="switchTab('subscribe')" style="display:inline-flex;align-items:center;gap:6px;padding:10px 24px;border-radius:12px;background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.3);color:#fff;font-weight:600;font-size:0.88rem;cursor:pointer;transition:all 0.2s;">
+            📬 Subscribe Now
+          </button>
+        </div>
+        <div style="background:var(--card-bg);border-radius:var(--radius);padding:32px;border:1.5px solid var(--border);">
+          <h2 style="font-size:1.25rem;font-weight:800;color:var(--text-primary);margin:0 0 10px 0;">Contact Us</h2>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.65;margin:0 0 16px 0;">
+            Have a question, tip, or want to get involved? We'd love to hear from you.
+          </p>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(--text-secondary);">
+              <span style="font-size:1.1rem;">📧</span>
+              <a href="mailto:info@livabletelluride.org" style="color:var(--accent-green);text-decoration:none;font-weight:600;">info@livabletelluride.org</a>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(--text-secondary);">
+              <span style="font-size:1.1rem;">📍</span>
+              <span>Telluride, Colorado</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(--text-secondary);">
+              <span style="font-size:1.1rem;">🌐</span>
+              <a href="https://www.livabletelluride.org" target="_blank" rel="noopener" style="color:var(--accent-green);text-decoration:none;font-weight:600;">www.livabletelluride.org</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;padding:12px;font-size:0.78rem;color:var(--text-muted);">
+        &copy; 2026 Livable Telluride. All rights reserved.
       </div>
     </div>
 
@@ -8837,9 +9008,10 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     layout.classList.toggle('links-active', btn.dataset.tab === 'links');
     layout.classList.toggle('news-active', btn.dataset.tab === 'news');
     layout.classList.toggle('legals-active', btn.dataset.tab === 'legals');
-    // Hide subscribe bar when on Subscribe tab
+    layout.classList.toggle('aboutus-active', btn.dataset.tab === 'about-us');
+    // Hide subscribe bar when on Subscribe or About Us tab
     const subBar = document.querySelector('.subscribe-bar');
-    if (subBar) subBar.style.display = (btn.dataset.tab === 'subscribe') ? 'none' : '';
+    if (subBar) subBar.style.display = (btn.dataset.tab === 'subscribe' || btn.dataset.tab === 'about-us') ? 'none' : '';
   });
 });
 
@@ -13460,6 +13632,9 @@ function showSubmitStatus(msg, type) {
   <button class="mobile-more-item" data-tab="subscribe">
     <span class="nav-icon">📬</span> Subscribe
   </button>
+  <button class="mobile-more-item" data-tab="about-us">
+    <span class="nav-icon">ℹ️</span> About Us
+  </button>
 </div>
 <nav class="mobile-nav" id="mobileNav">
   <button class="mobile-nav-btn active" data-tab="meetings">
@@ -13522,10 +13697,11 @@ function showSubmitStatus(msg, type) {
       layout.classList.toggle('links-active', tabName === 'links');
       layout.classList.toggle('news-active', tabName === 'news');
       layout.classList.toggle('legals-active', tabName === 'legals');
+      layout.classList.toggle('aboutus-active', tabName === 'about-us');
     }
-    // Hide subscribe bar when on Subscribe tab
+    // Hide subscribe bar when on Subscribe or About Us tab
     const subBar = document.querySelector('.subscribe-bar');
-    if (subBar) subBar.style.display = (tabName === 'subscribe') ? 'none' : '';
+    if (subBar) subBar.style.display = (tabName === 'subscribe' || tabName === 'about-us') ? 'none' : '';
     // Scroll to top of content
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
