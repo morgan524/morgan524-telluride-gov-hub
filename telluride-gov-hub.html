@@ -13657,6 +13657,8 @@ function showSubmitStatus(msg, type) {
     // Scroll to top of content
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+  // Expose switchTab globally so inline onclick handlers (header nav, footer, etc.) can call it
+  window.switchTab = switchTab;
 
   function updateMobileActive(tabName) {
     // Clear all active states
