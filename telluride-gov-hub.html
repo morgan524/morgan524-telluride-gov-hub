@@ -2491,6 +2491,7 @@
       padding: 3px 10px; border-radius: 999px; white-space: nowrap;
     }
     .housing-card-source.public { background: rgba(33,68,60,0.1); color: var(--forest); }
+    .housing-card-source.lottery { background: rgba(168,85,247,0.1); color: #7c3aed; }
     .housing-card-source.market { background: rgba(139,114,80,0.1); color: var(--accent-amber); }
     .housing-card-details {
       display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px;
@@ -4065,8 +4066,7 @@
       <button class="tab-btn" data-tab="local-news">Local News</button>
       <button class="tab-btn" data-tab="links">Local Groups</button>
       <button class="tab-btn" data-tab="housing-search">Housing</button>
-      <button class="tab-btn" data-tab="land-use">Land Use</button>
-      <button class="tab-btn" data-tab="gondola">Gondola 3A</button>
+      <button class="tab-btn" data-tab="land-use">Deep Dive</button>
       <button class="tab-btn" data-tab="legals">Legal Notices</button>
       <button class="tab-btn" data-tab="hub-bub">Hub-Bub</button>
       <button class="tab-btn" data-tab="about-us">About Us</button>
@@ -4485,7 +4485,7 @@
         <div class="local-group-card" data-category="hoa"
           <div class="local-group-card-inner">
             <div class="local-group-logo">
-              <img src="logo/aldasoro-ranch.png" alt="Aldasoro Ranch logo" loading="lazy" style="background:#2d5a3d; border-radius:8px; padding:6px;">
+              <img src="https://d2blwilx4xw5sk.cloudfront.net/d6d87f7a-1619-4e5f-a1a3-177ce2f29dc8/501556a7-fb99-4606-ae38-9cd3e276598f/Banner%205.png" alt="Aldasoro Ranch logo" loading="lazy" style="border-radius:8px;">
             </div>
             <div class="local-group-body">
               <h4>Aldasoro Ranch Homeowners Company</h4>
@@ -4507,7 +4507,7 @@
         <div class="local-group-card" data-category="hoa"
           <div class="local-group-card-inner">
             <div class="local-group-logo">
-              <img src="logo/elk-run.png" alt="Elk Run Telluride logo" loading="lazy" style="background:#2d5a3d; border-radius:8px; padding:6px;">
+              <img src="https://elkruntelluride.com/wp-content/uploads/2019/01/elkrun.png" alt="Elk Run Telluride logo" loading="lazy" style="border-radius:8px;">
             </div>
             <div class="local-group-body">
               <h4>Elk Run Homeowners Corporation</h4>
@@ -4804,9 +4804,11 @@
 
         <!-- Filter chips -->
         <div class="housing-filter-bar">
-          <button class="chip active-all" data-housing-filter="all">All Sources</button>
-          <button class="chip" data-housing-filter="public">Public / Deed-Restricted</button>
-          <button class="chip" data-housing-filter="market">Market Rate</button>
+          <button class="chip active-all" data-housing-filter="all">All Listings</button>
+          <button class="chip" data-housing-filter="deed-rental">Deed-Restricted Rentals</button>
+          <button class="chip" data-housing-filter="deed-sale">Deed-Restricted For Sale</button>
+          <button class="chip" data-housing-filter="lottery">Lottery Deed-Restricted</button>
+          <button class="chip" data-housing-filter="market-rental">Market Rentals</button>
         </div>
 
         <!-- Listings container (populated by JS) -->
@@ -4868,8 +4870,8 @@
       <div class="landuse-shell">
         <section class="landuse-hero">
           <div class="landuse-kicker">Issue Guide</div>
-          <h2>Land Use, Development, and Growth</h2>
-          <p>A plain-English civic guide to major land use issues — with timelines, key documents, upcoming meetings, recent coverage, major players, and what happens next.</p>
+          <h2>Deep Dive</h2>
+          <p>A plain-English civic guide to major local issues — with timelines, key documents, upcoming meetings, recent coverage, major players, and what happens next.</p>
           <div class="landuse-topic-row" id="landUseTopicRow"></div>
         </section>
 
@@ -8019,6 +8021,11 @@ const GONDOLA_DATA = {
     { source: 'Telluride News', date: 'Jan 22, 2025', title: 'Gondola project turns towards station planning', href: 'https://www.telluridenews.com/news/article_0f28f2ca-d846-11ef-b17e-2325e21ba586.html', copy: 'The gondola replacement project advances into its next phase, shifting focus to station infrastructure and design.' }
   ]
 };
+// Merge Gondola 3A into LAND_USE_ISSUES as a regular topic
+GONDOLA_DATA.label = 'Gondola 3A';
+GONDOLA_DATA.meetings = GONDOLA_DATA.meetings || [];
+LAND_USE_ISSUES.gondola = GONDOLA_DATA;
+
 let currentLandUseIssue = 'carhenge';
 function renderLandUseTab() {
   const topicRow = document.getElementById('landUseTopicRow');
@@ -9614,7 +9621,6 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.classList.add('active');
     document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
     if (btn.dataset.tab === 'land-use') renderLandUseTab();
-    if (btn.dataset.tab === 'gondola') renderGondolaTab();
     // Toggle left-sidebar cards per tab
     const wtfCard = document.getElementById('sidebarWhatToFollow');
     const submitCard = document.getElementById('sidebarSubmitEvent');
@@ -11860,7 +11866,7 @@ const HOUSING_LISTINGS = [
   /* ── Housing Lottery — Applications Open ── */
   {
     title: '🎟️ LOTTERY: Silver Jack Unit 202 — 3BR Condo',
-    type: 'public',
+    type: 'lottery',
     lottery: true,
     address: '155 W Pacific Ave, Telluride, CO 81435',
     lat: 37.9378, lng: -107.8155,
@@ -11878,7 +11884,7 @@ const HOUSING_LISTINGS = [
   },
   {
     title: '🎟️ LOTTERY: Silver Jack Unit 205 — 2BR Condo',
-    type: 'public',
+    type: 'lottery',
     lottery: true,
     address: '155 W Pacific Ave, Telluride, CO 81435',
     lat: 37.9378, lng: -107.8155,
@@ -11896,7 +11902,7 @@ const HOUSING_LISTINGS = [
   },
   {
     title: '🎟️ LOTTERY: Element 52 SW-102 — 2BR Condo',
-    type: 'public',
+    type: 'lottery',
     lottery: true,
     address: '398 S Davis St, Telluride, CO 81435',
     lat: 37.9365, lng: -107.8118,
@@ -11915,7 +11921,7 @@ const HOUSING_LISTINGS = [
   /* ── Public / Deed-Restricted ── */
   {
     title: 'Room for Rent — In-Town 2BR Condo',
-    type: 'public',
+    type: 'deed-rental',
     address: 'Telluride, CO 81435 (in-town)',
     lat: 37.9375, lng: -107.8123,
     beds: '1 Room in 2BR', price: '$1,883/mo (deed-restricted)',
@@ -11926,7 +11932,7 @@ const HOUSING_LISTINGS = [
   },
   {
     title: 'Village Court Apartments — Waitlist',
-    type: 'public',
+    type: 'deed-rental',
     address: '455 Mountain Village Blvd, Mountain Village, CO 81435',
     lat: 37.9325, lng: -107.8497,
     beds: 'Studio–3 Bedroom', price: 'Income-based (deed-restricted)',
@@ -11937,7 +11943,7 @@ const HOUSING_LISTINGS = [
   },
   {
     title: 'Shandoka Townhomes — Waitlist',
-    type: 'public',
+    type: 'deed-rental',
     address: '820 Black Bear Rd, Telluride, CO 81435',
     lat: 37.9363, lng: -107.8198,
     beds: '1–3 Bedroom', price: 'Income-based (deed-restricted)',
@@ -11948,7 +11954,7 @@ const HOUSING_LISTINGS = [
   },
   {
     title: 'Virginia Placer Apartments — Waitlist',
-    type: 'public',
+    type: 'deed-rental',
     address: 'Virginia Placer, Telluride, CO 81435',
     lat: 37.9380, lng: -107.8260,
     beds: 'Studio–2 Bedroom', price: 'Income-based (deed-restricted)',
@@ -11960,7 +11966,7 @@ const HOUSING_LISTINGS = [
   /* ── Market-Rate Active Listings ── */
   {
     title: 'Luxury Condo — 395 E Colorado Ave',
-    type: 'market',
+    type: 'market-rental',
     address: '395 E Colorado Ave, Telluride, CO 81435',
     lat: 37.9375, lng: -107.8095,
     beds: '3 Bedroom', price: '$2,500/mo',
@@ -11971,7 +11977,7 @@ const HOUSING_LISTINGS = [
   },
   {
     title: '1BR Apartment — 545 W Pacific Ave',
-    type: 'market',
+    type: 'market-rental',
     address: '545 W Pacific Ave, Telluride, CO 81435',
     lat: 37.9378, lng: -107.8155,
     beds: '1 Bedroom', price: '$1,500/mo',
@@ -11982,7 +11988,7 @@ const HOUSING_LISTINGS = [
   },
   {
     title: '3BR House — 280 Mahoney Dr',
-    type: 'market',
+    type: 'market-rental',
     address: '280 Mahoney Dr, Telluride, CO 81435',
     lat: 37.9410, lng: -107.8170,
     beds: '3 Bedroom', price: '$3,901/mo',
@@ -11993,7 +11999,7 @@ const HOUSING_LISTINGS = [
   },
   {
     title: '1BR — 107 W Columbia Ave',
-    type: 'market',
+    type: 'market-rental',
     address: '107 W Columbia Ave, Telluride, CO 81435',
     lat: 37.9373, lng: -107.8128,
     beds: '1 Bedroom', price: '$2,874/mo',
@@ -12019,8 +12025,9 @@ function renderHousingListings() {
   }
   let html = '';
   filtered.forEach(h => {
-    const sourceClass = h.type === 'public' ? 'public' : 'market';
-    const sourceLabel = h.type === 'public' ? 'Public / Deed-Restricted' : 'Market Rate';
+    const typeLabels = { 'deed-rental': 'Deed-Restricted Rental', 'deed-sale': 'Deed-Restricted For Sale', 'lottery': 'Lottery Deed-Restricted', 'market-rental': 'Market Rental' };
+    const sourceClass = h.type.startsWith('market') ? 'market' : 'public';
+    const sourceLabel = typeLabels[h.type] || h.type;
     // Contact buttons
     let contactHtml = '';
     if (h.contact && h.contact.phone) {
@@ -14499,10 +14506,7 @@ function showSubmitStatus(msg, type) {
     <span class="nav-icon">🏠</span> Housing Search
   </button>
   <button class="mobile-more-item" data-tab="land-use">
-    <span class="nav-icon">🏗️</span> Land Use
-  </button>
-  <button class="mobile-more-item" data-tab="gondola">
-    <span class="nav-icon">🚡</span> Gondola 3A
+    <span class="nav-icon">🔍</span> Deep Dive
   </button>
   <button class="mobile-more-item" data-tab="legals">
     <span class="nav-icon">📋</span> Legal Notices
@@ -14559,7 +14563,6 @@ function showSubmitStatus(msg, type) {
     if (tabEl) tabEl.classList.add('active');
     // Trigger any tab-specific rendering
     if (tabName === 'land-use' && typeof renderLandUseTab === 'function') renderLandUseTab();
-    if (tabName === 'gondola' && typeof renderGondolaTab === 'function') renderGondolaTab();
     // Toggle left-sidebar cards: "What to Follow" on Meetings, Submit on Events, Legal Interest on Legals
     const wtfCard = document.getElementById('sidebarWhatToFollow');
     const submitCard = document.getElementById('sidebarSubmitEvent');
