@@ -257,6 +257,33 @@
     .main-layout.communitypulse-active .sidebar,
     .main-layout.communitypulse-active .expand-pill-right,
     .main-layout.communitypulse-active .left-sidebar { display: none !important; }
+    /* Legal cards inside Local News container */
+    #local-news-content .legal-card {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    #local-news-content .legal-card-grid {
+      flex-wrap: wrap;
+    }
+    #local-news-content .legal-card-map {
+      width: 100%;
+      height: 180px;
+      margin-top: 12px;
+    }
+    #local-news-content .legal-entity-logo:empty,
+    #local-news-content .legal-entity-logo svg:empty {
+      display: none;
+    }
+    #local-news-content .legal-entity-logo {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+    }
+    #local-news-content .legal-entity-logo svg {
+      width: 48px;
+      height: 48px;
+    }
     #tab-community-pulse .card h3 { font-size: 1.2rem; }
     #tab-community-pulse .card .description { font-size: 0.84rem; line-height: 1.55; }
     #tab-community-pulse .card .meta { font-size: 0.76rem; }
