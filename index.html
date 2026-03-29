@@ -3752,6 +3752,32 @@
       </div>
     </div>
 
+    <!-- Nearby Legal Notices Search (shown on Legals tab) -->
+    <div class="left-sidebar-card" id="sidebarLegalNearby" style="display:none;">
+      <div style="padding:14px 16px 10px;background:linear-gradient(135deg,rgba(33,68,60,0.06),rgba(166,143,87,0.08));border-bottom:1px solid rgba(33,68,60,0.08);text-align:center;border-radius:14px 14px 0 0;">
+        <div style="font-size:0.85rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#788e82;margin-bottom:4px;">Nearby</div>
+        <div style="font-size:1.15rem;font-weight:900;letter-spacing:-0.02em;color:var(--text-primary);">Legal Notices Near You</div>
+        <div style="font-size:0.8rem;color:var(--text-muted);margin-top:2px;">Find notices for matters around your address</div>
+      </div>
+      <div style="padding:14px 14px 6px;">
+        <label style="display:block;font-weight:700;font-size:0.8rem;color:#21443c;margin-bottom:5px;">Your Address</label>
+        <input type="text" id="nearbyLegalAddress" placeholder="e.g. 200 W Colorado Ave, Telluride" style="width:100%;padding:9px 11px;border:1.5px solid #ccc;border-radius:8px;font-size:0.88rem;box-sizing:border-box;margin-bottom:10px;">
+        <label style="display:block;font-weight:700;font-size:0.8rem;color:#21443c;margin-bottom:5px;">Distance</label>
+        <div style="display:flex;gap:5px;margin-bottom:12px;" id="nearbyDistanceBtns">
+          <button type="button" class="nearby-dist-btn" data-miles="0.25" style="flex:1;padding:7px 0;border:1.5px solid rgba(33,68,60,0.2);border-radius:8px;background:#fff;font-size:0.78rem;font-weight:700;color:#21443c;cursor:pointer;transition:all 0.15s;">¼ mi</button>
+          <button type="button" class="nearby-dist-btn" data-miles="0.5" style="flex:1;padding:7px 0;border:1.5px solid rgba(33,68,60,0.2);border-radius:8px;background:#fff;font-size:0.78rem;font-weight:700;color:#21443c;cursor:pointer;transition:all 0.15s;">½ mi</button>
+          <button type="button" class="nearby-dist-btn active" data-miles="1" style="flex:1;padding:7px 0;border:1.5px solid #21443c;border-radius:8px;background:#21443c;color:#fff;font-size:0.78rem;font-weight:700;cursor:pointer;transition:all 0.15s;">1 mi</button>
+          <button type="button" class="nearby-dist-btn" data-miles="3" style="flex:1;padding:7px 0;border:1.5px solid rgba(33,68,60,0.2);border-radius:8px;background:#fff;font-size:0.78rem;font-weight:700;color:#21443c;cursor:pointer;transition:all 0.15s;">3 mi</button>
+        </div>
+        <button type="button" id="nearbyLegalSearchBtn" onclick="searchNearbyLegalNotices()" style="width:100%;padding:10px;border:none;border-radius:10px;background:#21443c;color:#fff;font-size:0.9rem;font-weight:700;cursor:pointer;transition:background 0.2s;display:flex;align-items:center;justify-content:center;gap:6px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Search
+        </button>
+      </div>
+      <div id="nearbyLegalResults" style="padding:0 14px 14px;display:none;">
+      </div>
+    </div>
+
   </aside>
 
   <div class="main-content">
@@ -8797,10 +8823,12 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     const submitCard = document.getElementById('sidebarSubmitEvent');
     const upcomingEventsCard = document.getElementById('sidebarUpcomingEvents');
     const legalInterestCard = document.getElementById('sidebarLegalInterest');
+    const legalNearbyCard = document.getElementById('sidebarLegalNearby');
     if (wtfCard) wtfCard.style.display = (btn.dataset.tab === 'meetings') ? '' : 'none';
     if (submitCard) submitCard.style.display = (btn.dataset.tab === 'news') ? '' : 'none';
     if (upcomingEventsCard) upcomingEventsCard.style.display = (btn.dataset.tab === 'news') ? '' : 'none';
     if (legalInterestCard) legalInterestCard.style.display = (btn.dataset.tab === 'legals') ? '' : 'none';
+    if (legalNearbyCard) legalNearbyCard.style.display = (btn.dataset.tab === 'legals') ? '' : 'none';
     // Hide sidebars on Subscribe, Land Use, and Gondola tabs, show on all others
     const layout = document.querySelector('.main-layout');
     layout.classList.toggle('subscribe-active', btn.dataset.tab === 'subscribe');
@@ -9865,6 +9893,193 @@ function renderLegalNotices(filter) {
 
 // ══════════════════════════════════════════════════════
 // ── Cross-Cutting Topic Sidebar Filter ──
+// ── Nearby Legal Notices Search ──
+var nearbySelectedMiles = 1;
+
+// Distance button click handlers
+document.addEventListener('DOMContentLoaded', function() {
+  var distBtns = document.querySelectorAll('.nearby-dist-btn');
+  distBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      distBtns.forEach(function(b) {
+        b.style.background = '#fff';
+        b.style.color = '#21443c';
+        b.style.borderColor = 'rgba(33,68,60,0.2)';
+        b.classList.remove('active');
+      });
+      btn.style.background = '#21443c';
+      btn.style.color = '#fff';
+      btn.style.borderColor = '#21443c';
+      btn.classList.add('active');
+      nearbySelectedMiles = parseFloat(btn.dataset.miles);
+    });
+  });
+  // Enter key triggers search
+  var addrInput = document.getElementById('nearbyLegalAddress');
+  if (addrInput) {
+    addrInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') { e.preventDefault(); searchNearbyLegalNotices(); }
+    });
+  }
+});
+
+// Known locations for entities/addresses in the Telluride area (lat, lng)
+var KNOWN_LOCATIONS = {
+  'telluride': [37.9375, -107.8123],
+  'mountain village': [37.9314, -107.8465],
+  'norwood': [38.1294, -108.2879],
+  'ophir': [37.8561, -107.8284],
+  'rico': [37.6938, -108.0340],
+  'sawpit': [37.9762, -107.8870],
+  'placerville': [38.0186, -108.0482],
+  '155 w pacific ave': [37.9376, -107.8125],
+  '411 mountain village blvd': [37.9332, -107.8492],
+  '333 w colorado ave': [37.9375, -107.8148],
+  '116 e columbia ave': [37.9378, -107.8098],
+  '472 w pacific': [37.9372, -107.8160],
+  '113 lost creek ln': [37.9322, -107.8508],
+  'miramonte building': [37.9375, -107.8148],
+  'san miguel county courthouse': [37.9377, -107.8120]
+};
+
+// Haversine distance in miles
+function haversineMiles(lat1, lon1, lat2, lon2) {
+  var R = 3958.8; // Earth radius in miles
+  var dLat = (lat2 - lat1) * Math.PI / 180;
+  var dLon = (lon2 - lon1) * Math.PI / 180;
+  var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+    Math.sin(dLon/2) * Math.sin(dLon/2);
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+
+// Try to resolve an address to lat/lng from known locations first, then geocode
+function resolveLocation(address) {
+  if (!address) return Promise.resolve(null);
+  var lower = address.toLowerCase().replace(/,?\s*(co|colorado|81435|81425|81432)\s*/gi, '').trim();
+  // Check known locations
+  for (var key in KNOWN_LOCATIONS) {
+    if (lower.indexOf(key) !== -1) {
+      return Promise.resolve(KNOWN_LOCATIONS[key]);
+    }
+  }
+  // Fallback: try to match city name
+  if (/telluride/i.test(address)) return Promise.resolve(KNOWN_LOCATIONS['telluride']);
+  if (/mountain\s*village/i.test(address)) return Promise.resolve(KNOWN_LOCATIONS['mountain village']);
+  if (/norwood/i.test(address)) return Promise.resolve(KNOWN_LOCATIONS['norwood']);
+  if (/ophir/i.test(address)) return Promise.resolve(KNOWN_LOCATIONS['ophir']);
+  if (/rico/i.test(address)) return Promise.resolve(KNOWN_LOCATIONS['rico']);
+  if (/placerville/i.test(address)) return Promise.resolve(KNOWN_LOCATIONS['placerville']);
+  if (/sawpit/i.test(address)) return Promise.resolve(KNOWN_LOCATIONS['sawpit']);
+
+  // Geocode via Nominatim
+  var query = encodeURIComponent(address + (!/colorado|co\b/i.test(address) ? ', Colorado' : ''));
+  return fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&q=' + query)
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data && data.length > 0) return [parseFloat(data[0].lat), parseFloat(data[0].lon)];
+      return null;
+    })
+    .catch(function() { return null; });
+}
+
+// Infer a location for a legal notice from its address, summary, or entity
+function getNoticeLocation(notice) {
+  if (notice.address) return resolveLocation(notice.address);
+  // Try to extract an address from the summary
+  var addrMatch = (notice.summary || '').match(/\d+\s+[NSEW]?\s*\.?\s*\w[\w\s]+(?:Ave|St|Blvd|Rd|Ln|Dr|Way|Ct|Pl|Circle)\b[^,]*/i);
+  if (addrMatch) return resolveLocation(addrMatch[0]);
+  // Try entity location
+  if (notice.event && notice.event.location) return resolveLocation(notice.event.location);
+  // Fall back to entity city
+  var entityName = (notice.entity || '').toLowerCase();
+  if (/mountain village/i.test(entityName)) return Promise.resolve(KNOWN_LOCATIONS['mountain village']);
+  if (/telluride/i.test(entityName)) return Promise.resolve(KNOWN_LOCATIONS['telluride']);
+  if (/norwood/i.test(entityName)) return Promise.resolve(KNOWN_LOCATIONS['norwood']);
+  if (/san miguel county/i.test(entityName)) return Promise.resolve(KNOWN_LOCATIONS['telluride']);
+  return Promise.resolve(null);
+}
+
+function searchNearbyLegalNotices() {
+  var addrInput = document.getElementById('nearbyLegalAddress');
+  var resultsDiv = document.getElementById('nearbyLegalResults');
+  var searchBtn = document.getElementById('nearbyLegalSearchBtn');
+  var address = (addrInput.value || '').trim();
+  if (!address) {
+    addrInput.style.borderColor = '#c0392b';
+    addrInput.focus();
+    setTimeout(function() { addrInput.style.borderColor = '#ccc'; }, 2000);
+    return;
+  }
+
+  searchBtn.disabled = true;
+  searchBtn.innerHTML = '<span style="display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,0.3);border-top-color:#fff;border-radius:50%;animation:spin 0.6s linear infinite;"></span> Searching...';
+  resultsDiv.style.display = 'block';
+  resultsDiv.innerHTML = '<div style="text-align:center;padding:10px;color:var(--text-muted);font-size:0.8rem;">Locating your address...</div>';
+
+  resolveLocation(address).then(function(userCoords) {
+    if (!userCoords) {
+      resultsDiv.innerHTML = '<div style="text-align:center;padding:12px;color:#c0392b;font-size:0.82rem;font-weight:600;">Could not find that address. Try adding "Telluride, CO" or a nearby town.</div>';
+      searchBtn.disabled = false;
+      searchBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Search';
+      return;
+    }
+
+    var today = new Date();
+    today.setHours(0,0,0,0);
+    var activeNotices = LEGAL_NOTICES.filter(function(n) {
+      return !n.expires || new Date(n.expires + 'T23:59:59') >= today;
+    });
+
+    // Resolve locations for all notices
+    var promises = activeNotices.map(function(n) {
+      return getNoticeLocation(n).then(function(coords) {
+        return { notice: n, coords: coords };
+      });
+    });
+
+    Promise.all(promises).then(function(items) {
+      var nearby = [];
+      items.forEach(function(item) {
+        if (!item.coords) return;
+        var dist = haversineMiles(userCoords[0], userCoords[1], item.coords[0], item.coords[1]);
+        if (dist <= nearbySelectedMiles) {
+          nearby.push({ notice: item.notice, distance: dist });
+        }
+      });
+      nearby.sort(function(a, b) { return a.distance - b.distance; });
+
+      if (nearby.length === 0) {
+        resultsDiv.innerHTML = '<div style="text-align:center;padding:14px 8px;">' +
+          '<div style="font-size:1.3rem;margin-bottom:6px;">📭</div>' +
+          '<div style="font-size:0.85rem;font-weight:700;color:var(--text-primary);margin-bottom:4px;">No notices within ' + nearbySelectedMiles + (nearbySelectedMiles === 0.25 ? ' mile' : ' miles') + '</div>' +
+          '<div style="font-size:0.78rem;color:var(--text-muted);">Try increasing the distance or check back later.</div>' +
+        '</div>';
+      } else {
+        var html = '<div style="font-size:0.78rem;font-weight:700;color:#21443c;margin-bottom:8px;padding-top:4px;">' + nearby.length + ' notice' + (nearby.length > 1 ? 's' : '') + ' within ' + nearbySelectedMiles + (nearbySelectedMiles === 0.25 ? ' mile' : ' miles') + '</div>';
+        nearby.forEach(function(item) {
+          var n = item.notice;
+          var distLabel = item.distance < 0.1 ? '< 0.1 mi' : item.distance.toFixed(1) + ' mi';
+          html += '<div style="padding:10px;border-radius:10px;border:1.5px solid rgba(33,68,60,0.12);background:rgba(255,255,255,0.7);margin-bottom:8px;">' +
+            '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:6px;">' +
+              '<div style="font-size:0.82rem;font-weight:700;color:var(--text-primary);line-height:1.3;">' + (n.icon || '📋') + ' ' + n.title + '</div>' +
+              '<span style="flex-shrink:0;font-size:0.68rem;padding:2px 6px;border-radius:5px;background:rgba(166,143,87,0.15);color:#8b7332;font-weight:700;white-space:nowrap;">📍 ' + distLabel + '</span>' +
+            '</div>' +
+            '<div style="font-size:0.72rem;color:var(--text-muted);margin-top:3px;">' + n.entity + '</div>' +
+            (n.address ? '<div style="font-size:0.72rem;color:var(--text-muted);margin-top:2px;">📍 ' + n.address + '</div>' : '') +
+            '<div style="font-size:0.75rem;color:var(--text-secondary);margin-top:5px;line-height:1.4;">' + (n.summary || '').substring(0, 150) + (n.summary && n.summary.length > 150 ? '...' : '') + '</div>' +
+            (n.deadline ? '<div style="font-size:0.72rem;color:#c0392b;font-weight:600;margin-top:4px;">⏰ ' + n.deadline + '</div>' : '') +
+          '</div>';
+        });
+        resultsDiv.innerHTML = html;
+      }
+
+      searchBtn.disabled = false;
+      searchBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Search';
+    });
+  });
+}
+
 // ── Legal Notices of Interest Sidebar ──
 function renderLegalInterestSidebar() {
   const container = document.getElementById('legalInterestContent');
@@ -13284,10 +13499,12 @@ function showSubmitStatus(msg, type) {
     const submitCard = document.getElementById('sidebarSubmitEvent');
     const upcomingEventsCard = document.getElementById('sidebarUpcomingEvents');
     const legalInterestCard = document.getElementById('sidebarLegalInterest');
+    const legalNearbyCard2 = document.getElementById('sidebarLegalNearby');
     if (wtfCard) wtfCard.style.display = (tabName === 'meetings') ? '' : 'none';
     if (submitCard) submitCard.style.display = (tabName === 'news') ? '' : 'none';
     if (upcomingEventsCard) upcomingEventsCard.style.display = (tabName === 'news') ? '' : 'none';
     if (legalInterestCard) legalInterestCard.style.display = (tabName === 'legals') ? '' : 'none';
+    if (legalNearbyCard2) legalNearbyCard2.style.display = (tabName === 'legals') ? '' : 'none';
     const layout = document.querySelector('.main-layout');
     if (layout) {
       layout.classList.toggle('subscribe-active', tabName === 'subscribe');
