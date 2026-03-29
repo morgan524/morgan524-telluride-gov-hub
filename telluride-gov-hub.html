@@ -2214,6 +2214,78 @@
     .link-source.src-airport { color: var(--airport-sky); }
     .link-source.src-ttimes { color: var(--ttimes-charcoal); }
 
+    /* ── Local Groups Layout with Filter Sidebar ── */
+    .local-groups-layout {
+      display: grid;
+      grid-template-columns: 1fr 240px;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 960px) {
+      .local-groups-layout { grid-template-columns: 1fr; }
+      .lg-filter-sidebar { order: -1; }
+    }
+    .lg-filter-sidebar {
+      position: sticky;
+      top: 80px;
+      background: var(--card-bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow-soft);
+    }
+    .lg-filter-sidebar h3 {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0 0 12px 0;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .lg-filter-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      padding: 9px 12px;
+      border: none;
+      border-radius: 8px;
+      background: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s;
+      text-align: left;
+    }
+    .lg-filter-btn:hover { background: rgba(47,86,77,0.06); color: var(--text-primary); }
+    .lg-filter-btn.active { background: rgba(47,86,77,0.1); color: var(--forest); font-weight: 700; }
+    .lg-filter-btn .lg-filter-icon { font-size: 1rem; flex-shrink: 0; }
+    .lg-filter-btn .lg-filter-count {
+      margin-left: auto;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      background: rgba(0,0,0,0.05);
+      border-radius: 10px;
+      padding: 2px 7px;
+    }
+    .lg-filter-btn.active .lg-filter-count { background: rgba(47,86,77,0.15); color: var(--forest); }
+    @media (max-width: 960px) {
+      .lg-filter-sidebar {
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 12px;
+      }
+      .lg-filter-sidebar h3 { width: 100%; margin-bottom: 6px; }
+      .lg-filter-btn { width: auto; padding: 6px 12px; border: 1px solid var(--border); border-radius: 20px; font-size: 0.75rem; }
+      .lg-filter-btn.active { border-color: var(--forest); }
+      .lg-filter-btn .lg-filter-count { display: none; }
+    }
+
     /* ── Local Groups Directory Cards ── */
     .local-groups-grid {
       display: grid;
@@ -4288,10 +4360,11 @@
         </div>
       </div>
 
+      <div class="local-groups-layout">
       <div class="local-groups-grid">
 
         <!-- Telluride Rotary Club -->
-        <div class="local-group-card">
+        <div class="local-group-card" data-category="clubs"
           <div class="local-group-card-inner">
             <div class="local-group-logo logo-lg">
               <img src="https://clubrunner.blob.core.windows.net/00000003291/thumb/ClubLogo/clublogo.png" alt="Rotary Club of Telluride logo" loading="lazy">
@@ -4316,7 +4389,7 @@
         </div>
 
         <!-- Telluride Elks Lodge 692 -->
-        <div class="local-group-card">
+        <div class="local-group-card" data-category="clubs"
           <div class="local-group-card-inner">
             <div class="local-group-logo logo-sm">
               <img src="https://raw.githubusercontent.com/morgan524/morgan524-telluride-gov-hub/main/logo/Elks.png" alt="Telluride Elks Lodge 692 logo" loading="lazy">
@@ -4343,7 +4416,7 @@
         </div>
 
         <!-- Telluride Mountain Club -->
-        <div class="local-group-card">
+        <div class="local-group-card" data-category="recreation"
           <div class="local-group-card-inner">
             <div class="local-group-logo logo-sm">
               <img src="https://www.telluridemountainclub.org/wp-content/uploads/2017/09/TellMtnClub-logo.png" alt="Telluride Mountain Club logo" loading="lazy">
@@ -4364,7 +4437,7 @@
         </div>
 
         <!-- Telluride Mountain Village Owners Association (TMVOA) -->
-        <div class="local-group-card">
+        <div class="local-group-card" data-category="hoa"
           <div class="local-group-card-inner">
             <div class="local-group-logo">
               <img src="https://tmvoa.org/site/assets/files/1699/tmvoa-logo.800x375.webp" alt="TMVOA logo" loading="lazy">
@@ -4387,7 +4460,7 @@
         </div>
 
         <!-- Telluride Ski Ranches Association -->
-        <div class="local-group-card">
+        <div class="local-group-card" data-category="hoa"
           <div class="local-group-card-inner">
             <div class="local-group-logo">
               <img src="https://images.squarespace-cdn.com/content/v1/65c12a0b8ad39747303e6fef/8021336e-5f36-4ca9-8163-c3fcf46f4eb8/Ski+Ranches+Logo_white+transparent.png" alt="Telluride Ski Ranches Association logo" loading="lazy" style="background:#2d5a3d; border-radius:8px; padding:6px;">
@@ -4409,7 +4482,7 @@
         </div>
 
         <!-- Aldasoro Ranch Homeowners Company -->
-        <div class="local-group-card">
+        <div class="local-group-card" data-category="hoa"
           <div class="local-group-card-inner">
             <div class="local-group-logo">
               <img src="logo/aldasoro-ranch.png" alt="Aldasoro Ranch logo" loading="lazy" style="background:#2d5a3d; border-radius:8px; padding:6px;">
@@ -4431,7 +4504,7 @@
         </div>
 
         <!-- Elk Run Homeowners Corporation -->
-        <div class="local-group-card">
+        <div class="local-group-card" data-category="hoa"
           <div class="local-group-card-inner">
             <div class="local-group-logo">
               <img src="logo/elk-run.png" alt="Elk Run Telluride logo" loading="lazy" style="background:#2d5a3d; border-radius:8px; padding:6px;">
@@ -4452,7 +4525,7 @@
         </div>
 
         <!-- Norwood Chamber of Commerce -->
-        <div class="local-group-card">
+        <div class="local-group-card" data-category="business"
           <div class="local-group-card-inner">
             <div class="local-group-logo">
               <img src="logo/norwood-chamber.png" alt="Norwood Chamber of Commerce logo" loading="lazy">
@@ -4473,7 +4546,7 @@
         </div>
 
         <!-- Norwood Park and Recreation District -->
-        <div class="local-group-card">
+        <div class="local-group-card" data-category="recreation"
           <div class="local-group-card-inner">
             <div class="local-group-logo">
               <img src="logo/Norwood Parks.png" alt="Norwood Park and Recreation District logo" loading="lazy">
@@ -4495,7 +4568,7 @@
         </div>
 
         <!-- San Miguel Basin 4-H Clubs -->
-        <div class="local-group-card">
+        <div class="local-group-card" data-category="youth"
           <div class="local-group-card-inner">
             <div class="local-group-logo">
               <img src="logo/4-h.png" alt="San Miguel Basin 4-H Clubs logo" loading="lazy">
@@ -4517,7 +4590,7 @@
         </div>
 
         <!-- Norwood Roping Club -->
-        <div class="local-group-card">
+        <div class="local-group-card" data-category="recreation"
           <div class="local-group-card-inner">
             <div class="local-group-logo">
               <img src="logo/roping.png" alt="Norwood Roping Club logo" loading="lazy">
@@ -4538,7 +4611,7 @@
         </div>
 
         <!-- Wright's Mesa Gymkhana Club -->
-        <div class="local-group-card">
+        <div class="local-group-card" data-category="recreation"
           <div class="local-group-card-inner">
             <div class="local-group-logo">
               <img src="logo/gymkhana.png" alt="Wright's Mesa Gymkhana Club logo" loading="lazy">
@@ -4558,7 +4631,7 @@
         </div>
 
         <!-- Youth Soccer Club / County Recreation -->
-        <div class="local-group-card">
+        <div class="local-group-card" data-category="youth"
           <div class="local-group-card-inner">
             <div class="local-group-logo">
               <img src="logo/soccer.png" alt="Youth Soccer Club & County Recreation logo" loading="lazy">
@@ -4577,7 +4650,7 @@
         </div>
 
         <!-- Telluride Elks Lodge Veterans Club -->
-        <div class="local-group-card">
+        <div class="local-group-card" data-category="veterans"
           <div class="local-group-card-inner">
             <div class="local-group-logo logo-sm">
               <img src="https://raw.githubusercontent.com/morgan524/morgan524-telluride-gov-hub/main/logo/Elks.png" alt="Telluride Elks Lodge Veterans Club logo" loading="lazy">
@@ -4597,7 +4670,7 @@
         </div>
 
         <!-- Telluride Christian Fellowship -->
-        <div class="local-group-card">
+        <div class="local-group-card" data-category="churches"
           <div class="local-group-card-inner">
             <div class="local-group-logo">
               <img src="logo/Church.png" alt="Church logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
@@ -4614,7 +4687,7 @@
         </div>
 
         <!-- St. Patrick's Catholic Church -->
-        <div class="local-group-card">
+        <div class="local-group-card" data-category="churches"
           <div class="local-group-card-inner">
             <div class="local-group-logo">
               <img src="logo/Church.png" alt="Church logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
@@ -4622,7 +4695,12 @@
             </div>
             <div class="local-group-body">
               <h4>St. Patrick's Catholic Church</h4>
-              <div class="group-summary">Catholic parish serving the Telluride community with Mass, sacraments, and spiritual programs. Part of the Diocese of Pueblo, offering a welcoming faith community in the heart of the San Juan Mountains.</div>
+              <div class="group-summary">Historic Catholic parish established in 1896, serving the Telluride community at 8,750 feet in the San Juan Mountains. Part of the Diocese of Pueblo, also operating a mission in Nucla.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Sunday Mass:</span> <span class="group-detail-value">9:00 AM (Confessions &amp; Rosary at 8:30 AM)</span></div>
+                <div class="group-detail"><span class="group-detail-label">Address:</span> <span class="group-detail-value">301 North Spruce, Telluride, CO 81435</span></div>
+                <div class="group-detail"><span class="group-detail-label">Pastor:</span> <span class="group-detail-value">Rev. Mariusz Wirkowski</span></div>
+              </div>
               <div class="local-group-actions">
                 <a href="https://stpatrickstelluride.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
               </div>
@@ -4631,7 +4709,7 @@
         </div>
 
         <!-- Christ Presbyterian Church Telluride -->
-        <div class="local-group-card">
+        <div class="local-group-card" data-category="churches"
           <div class="local-group-card-inner">
             <div class="local-group-logo">
               <img src="logo/Church.png" alt="Church logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
@@ -4639,7 +4717,12 @@
             </div>
             <div class="local-group-body">
               <h4>Christ Presbyterian Church Telluride</h4>
-              <div class="group-summary">Presbyterian church offering worship, Bible study, and community fellowship in Telluride. Committed to serving the local community through faith-based programs and outreach.</div>
+              <div class="group-summary">With roots dating to 1889 as a Congregational church, it became Presbyterian in 1938. A loving and accepting fellowship emphasizing hospitality and community, with children's ministry, contemplative gardens, and local outreach initiatives.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Address:</span> <span class="group-detail-value">434 W. Columbia Avenue, Telluride, CO 81435</span></div>
+                <div class="group-detail"><span class="group-detail-label">Phone:</span> <span class="group-detail-value">(970) 728-4536</span></div>
+                <div class="group-detail"><span class="group-detail-label">Pastor:</span> <span class="group-detail-value">Peter Traben Haas</span></div>
+              </div>
               <div class="local-group-actions">
                 <a href="https://christpresbyterianchurchtelluride.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
               </div>
@@ -4648,6 +4731,37 @@
         </div>
 
       </div>
+
+      <!-- Filter Sidebar -->
+      <aside class="lg-filter-sidebar" id="lgFilterSidebar">
+        <h3>Filter by Topic</h3>
+        <button class="lg-filter-btn active" data-filter="all" onclick="lgFilter('all')">
+          <span class="lg-filter-icon">📋</span> All Groups <span class="lg-filter-count" id="lgCountAll">17</span>
+        </button>
+        <button class="lg-filter-btn" data-filter="clubs" onclick="lgFilter('clubs')">
+          <span class="lg-filter-icon">🤝</span> Service Clubs <span class="lg-filter-count" id="lgCountClubs">0</span>
+        </button>
+        <button class="lg-filter-btn" data-filter="hoa" onclick="lgFilter('hoa')">
+          <span class="lg-filter-icon">🏘️</span> HOAs &amp; Property <span class="lg-filter-count" id="lgCountHoa">0</span>
+        </button>
+        <button class="lg-filter-btn" data-filter="recreation" onclick="lgFilter('recreation')">
+          <span class="lg-filter-icon">⛰️</span> Recreation &amp; Outdoors <span class="lg-filter-count" id="lgCountRecreation">0</span>
+        </button>
+        <button class="lg-filter-btn" data-filter="churches" onclick="lgFilter('churches')">
+          <span class="lg-filter-icon">⛪</span> Churches &amp; Faith <span class="lg-filter-count" id="lgCountChurches">0</span>
+        </button>
+        <button class="lg-filter-btn" data-filter="youth" onclick="lgFilter('youth')">
+          <span class="lg-filter-icon">🧒</span> Youth &amp; Education <span class="lg-filter-count" id="lgCountYouth">0</span>
+        </button>
+        <button class="lg-filter-btn" data-filter="veterans" onclick="lgFilter('veterans')">
+          <span class="lg-filter-icon">🎖️</span> Veterans <span class="lg-filter-count" id="lgCountVeterans">0</span>
+        </button>
+        <button class="lg-filter-btn" data-filter="business" onclick="lgFilter('business')">
+          <span class="lg-filter-icon">💼</span> Business &amp; Commerce <span class="lg-filter-count" id="lgCountBusiness">0</span>
+        </button>
+      </aside>
+
+      </div><!-- /.local-groups-layout -->
 
     </div>
 
@@ -15449,6 +15563,49 @@ function closeSubscribeModal() {
     hbLoadPosts();
   }
 
+})();
+</script>
+
+<!-- ── Local Groups Filter ── -->
+<script>
+(function() {
+  function lgUpdateCounts() {
+    var cards = document.querySelectorAll('.local-group-card[data-category]');
+    var counts = {};
+    cards.forEach(function(c) {
+      var cat = c.getAttribute('data-category');
+      counts[cat] = (counts[cat] || 0) + 1;
+    });
+    var total = cards.length;
+    var allEl = document.getElementById('lgCountAll');
+    if (allEl) allEl.textContent = total;
+    document.querySelectorAll('.lg-filter-btn[data-filter]').forEach(function(btn) {
+      var f = btn.getAttribute('data-filter');
+      if (f !== 'all') {
+        var countEl = btn.querySelector('.lg-filter-count');
+        if (countEl) countEl.textContent = counts[f] || 0;
+      }
+    });
+  }
+  window.lgFilter = function(cat) {
+    var cards = document.querySelectorAll('.local-group-card[data-category]');
+    cards.forEach(function(c) {
+      if (cat === 'all' || c.getAttribute('data-category') === cat) {
+        c.style.display = '';
+      } else {
+        c.style.display = 'none';
+      }
+    });
+    document.querySelectorAll('.lg-filter-btn').forEach(function(b) {
+      b.classList.toggle('active', b.getAttribute('data-filter') === cat);
+    });
+  };
+  // Initialize counts on load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', lgUpdateCounts);
+  } else {
+    lgUpdateCounts();
+  }
 })();
 </script>
 
