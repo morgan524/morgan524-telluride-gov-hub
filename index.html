@@ -5687,6 +5687,12 @@
               <option value="Other">Other</option>
             </select>
 
+            <label for="subPassword">Create a Password <span style="font-weight:400;font-size:0.78rem;color:var(--text-muted);">(for Hub-Bub forum access)</span></label>
+            <input type="password" id="subPassword" placeholder="At least 6 characters" autocomplete="new-password" minlength="6">
+            <div style="margin:8px 0 12px;padding:8px 12px;background:rgba(33,68,60,0.05);border-radius:8px;border-left:3px solid var(--forest);font-size:0.76rem;color:var(--text-secondary);line-height:1.5;">
+              💬 Your password also creates a <strong>Hub-Bub</strong> community forum account so you can join local discussions. A verification email will be sent to confirm your address.
+            </div>
+
             <button type="submit" class="subscribe-btn" id="subscribeBtn">Subscribe Now</button>
           </form>
         </div>
@@ -12347,85 +12353,116 @@ document.getElementById('expandRight').addEventListener('click', () => {
   }
 
   // Form submission -- builds Mailchimp signup URL
-  document.getElementById('subscribeForm').addEventListener('submit', (e) => {
+  document.getElementById("subscribeForm").addEventListener("submit", function(e) {
     e.preventDefault();
-    const email = document.getElementById('subEmail').value.trim();
-    const firstName = document.getElementById('subName').value.trim();
-    const lastName = document.getElementById('subLastName').value.trim();
-    const town = document.getElementById('subTown').value;
+    var email = document.getElementById("subEmail").value.trim();
+    var firstName = document.getElementById("subName").value.trim();
+    var lastName = document.getElementById("subLastName").value.trim();
+    var town = document.getElementById("subTown").value;
+    var password = document.getElementById("subPassword").value;
 
-    const hasProximity = window._proximityFilter && window._proximityFilter.isActive();
+    var hasProximity = window._proximityFilter && window._proximityFilter.isActive();
     if (!email || (selectedTopics.size === 0 && selectedSources.size === 0 && !hasProximity)) return;
 
-    // Mailchimp subscribe configuration
-    const MAILCHIMP_URL = 'https://letpeopledecide.us15.list-manage.com/subscribe/post-json';
-    const MAILCHIMP_U = '5d9192289b9af78822f2f69bf';
-    const MAILCHIMP_ID = 'f83dc56387';
+    var btn = document.querySelector("#subscribeForm button[type=submit]");
+    btn.disabled = true;
+    btn.textContent = "Setting up your account...";
 
-    // Build Mailchimp JSONP subscribe URL with group/interest fields
-    const srcNames = { telluride: 'Town of Telluride', county: 'San Miguel County', mv: 'Mountain Village', smart: 'SMART Transit', school: 'School District', fire: 'Fire District', med: 'Medical Center', norwood: 'Town of Norwood', ophir: 'Town of Ophir', livable: 'Livable Telluride Newsletter' };
-    const allSelections = [
-      ...[...selectedSources].map(k => srcNames[k] || k),
-      ...[...selectedTopics].map(k => TOPIC_DEFINITIONS[k]?.label || k)
-    ];
-
-    // Build form data for Mailchimp
-    const params = new URLSearchParams();
-    params.set('u', MAILCHIMP_U);
-    params.set('id', MAILCHIMP_ID);
-    params.set('EMAIL', email);
-    if (firstName) params.set('FNAME', firstName);
-    if (lastName) params.set('LNAME', lastName);
-    // Send town, sources, topics, and frequency as merge fields
-    if (town) params.set('MMERGE6', town);
-    params.set('MMERGE7', [...selectedSources].map(k => srcNames[k] || k).join(', '));
-
-    // Build topics list (Events Around Me is auto-checked when proximity is active)
-    const topicLabels = [...selectedTopics].map(k => TOPIC_DEFINITIONS[k]?.label || k);
-    params.set('MMERGE8', topicLabels.join(', '));
-    params.set('MMERGE9', selectedFreq);
-
-    // Send proximity address & radius as MERGE10 / MERGE11
-    if (hasProximity) {
-      params.set('MMERGE10', window._proximityFilter.getAddress());
-      params.set('MMERGE11', String(window._proximityFilter.getRadius()));
+    // ── Step 1: Create Firebase Hub-Bub account (if password provided) ──
+    var firebasePromise;
+    if (password && password.length >= 6 && typeof firebase !== "undefined" && firebase.auth) {
+      var fbAuth = firebase.auth();
+      firebasePromise = fbAuth.createUserWithEmailAndPassword(email, password)
+        .then(function(cred) {
+          var displayName = firstName + (lastName ? " " + lastName : "");
+          return cred.user.updateProfile({ displayName: displayName }).then(function() {
+            return cred.user.sendEmailVerification();
+          }).then(function() {
+            // Save user profile to Firestore
+            if (typeof firebase.firestore === "function") {
+              return firebase.firestore().collection("users").doc(cred.user.uid).set({
+                displayName: displayName,
+                createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+                postCount: 0
+              });
+            }
+          });
+        })
+        .catch(function(err) {
+          // If email already in use, thats OK — continue to Mailchimp
+          if (err.code === "auth/email-already-in-use") {
+            console.log("Firebase account already exists for " + email + " — subscribing to newsletter only.");
+            return;
+          }
+          console.warn("Firebase signup error:", err.message);
+          // Non-blocking: still proceed to Mailchimp
+        });
+    } else {
+      firebasePromise = Promise.resolve();
     }
 
-    params.set('c', 'mcCallback');
+    // ── Step 2: Subscribe to Mailchimp (after Firebase completes) ──
+    firebasePromise.then(function() {
+      btn.textContent = "Subscribing...";
 
-    // Disable the button during submission
-    const btn = document.querySelector('#subscribeForm button[type="submit"]');
-    btn.disabled = true;
-    btn.textContent = 'Subscribing...';
+      var MAILCHIMP_URL = "https://letpeopledecide.us15.list-manage.com/subscribe/post-json";
+      var MAILCHIMP_U = "5d9192289b9af78822f2f69bf";
+      var MAILCHIMP_ID = "f83dc56387";
 
-    // JSONP callback for cross-domain Mailchimp POST
-    window.mcCallback = function(resp) {
-      if (resp.result === 'success' || resp.msg.indexOf('already subscribed') > -1) {
-        // Show success state
-        document.getElementById('subscribeForm').closest('.subscribe-section').style.display = 'none';
-        document.querySelectorAll('.subscribe-section').forEach(s => s.style.display = 'none');
-        document.querySelector('.subscribe-hero').style.display = 'none';
-        const success = document.getElementById('subscribeSuccess');
-        success.classList.add('visible');
-        success.querySelector('p').textContent =
-          'We\'ll send you ' + selectedFreq + ' updates on ' +
-          allSelections.join(', ') +
-          '. Keep an eye on ' + email + ' for your first digest!';
-      } else {
-        btn.disabled = false;
-        btn.textContent = 'Subscribe Now';
-        alert('Subscription issue: ' + resp.msg.replace(/<[^>]+>/g, ''));
+      var srcNames = { telluride: "Town of Telluride", county: "San Miguel County", mv: "Mountain Village", smart: "SMART Transit", school: "School District", fire: "Fire District", med: "Medical Center", norwood: "Town of Norwood", ophir: "Town of Ophir", livable: "Livable Telluride Newsletter" };
+      var allSelections = [
+        ...[...selectedSources].map(function(k) { return srcNames[k] || k; }),
+        ...[...selectedTopics].map(function(k) { return TOPIC_DEFINITIONS[k] ? TOPIC_DEFINITIONS[k].label : k; })
+      ];
+
+      var params = new URLSearchParams();
+      params.set("u", MAILCHIMP_U);
+      params.set("id", MAILCHIMP_ID);
+      params.set("EMAIL", email);
+      if (firstName) params.set("FNAME", firstName);
+      if (lastName) params.set("LNAME", lastName);
+      if (town) params.set("MMERGE6", town);
+      params.set("MMERGE7", [...selectedSources].map(function(k) { return srcNames[k] || k; }).join(", "));
+
+      var topicLabels = [...selectedTopics].map(function(k) { return TOPIC_DEFINITIONS[k] ? TOPIC_DEFINITIONS[k].label : k; });
+      params.set("MMERGE8", topicLabels.join(", "));
+      params.set("MMERGE9", selectedFreq);
+
+      if (hasProximity) {
+        params.set("MMERGE10", window._proximityFilter.getAddress());
+        params.set("MMERGE11", String(window._proximityFilter.getRadius()));
       }
-      // Clean up script tag
-      var s = document.getElementById('mc-jsonp');
-      if (s) s.remove();
-    };
 
-    // Create JSONP script to submit to Mailchimp
-    var script = document.createElement('script');
-    script.id = 'mc-jsonp';
-    script.src = MAILCHIMP_URL + '?' + params.toString();
-    document.body.appendChild(script);
+      params.set("c", "mcCallback");
+
+      window.mcCallback = function(resp) {
+        if (resp.result === "success" || resp.msg.indexOf("already subscribed") > -1) {
+          document.getElementById("subscribeForm").closest(".subscribe-section").style.display = "none";
+          document.querySelectorAll(".subscribe-section").forEach(function(s) { s.style.display = "none"; });
+          document.querySelector(".subscribe-hero").style.display = "none";
+          var success = document.getElementById("subscribeSuccess");
+          success.classList.add("visible");
+          var verifyNote = password && password.length >= 6
+            ? " A verification email has been sent to " + email + " — click the link to activate your Hub-Bub forum account."
+            : "";
+          success.querySelector("p").textContent =
+            "We\x27ll send you " + selectedFreq + " updates on " +
+            allSelections.join(", ") +
+            ". Keep an eye on " + email + " for your first digest!" + verifyNote;
+        } else {
+          btn.disabled = false;
+          btn.textContent = "Subscribe Now";
+          alert("Subscription issue: " + resp.msg.replace(/<[^>]+>/g, ""));
+        }
+        var s = document.getElementById("mc-jsonp");
+        if (s) s.remove();
+      };
+
+      var script = document.createElement("script");
+      script.id = "mc-jsonp";
+      script.src = MAILCHIMP_URL + "?" + params.toString();
+      document.body.appendChild(script);
+    });
   });
 })();
 
@@ -14731,31 +14768,24 @@ function showSubmitStatus(msg, type) {
       <option value="link">Link or URL</option>
       <option value="detail">Other factual detail</option>
     </select>
-
     <label for="correctionCurrent">What does it currently say? (optional)</label>
     <input type="text" id="correctionCurrent" placeholder='e.g. "June 12–14"'>
-
     <label for="correctionShould">What should it say?</label>
     <input type="text" id="correctionShould" placeholder='e.g. "June 19–21"'>
-
     <label for="correctionSource">Link to a verified source (if available)</label>
     <input type="url" id="correctionSource" placeholder="https://officialsite.com/event-page">
     <div class="correction-source-hint">
       Official sources (government sites, festival websites, news outlets) allow your correction to be applied automatically without manual review.
     </div>
     <div id="correctionVerifyStatus"></div>
-
     <label for="correctionNotes">Additional notes (optional)</label>
     <textarea id="correctionNotes" placeholder="Any extra context that would help us verify this correction…"></textarea>
-
     <label for="correctionEmail">Your email (optional, for follow-up)</label>
     <input type="email" id="correctionEmail" placeholder="you@example.com">
-
     <button class="correction-submit-btn" id="correctionSubmit" disabled>Submit Correction</button>
     <div class="correction-status" id="correctionStatusMsg"></div>
   </div>
 </div>
-
 <script>
 // ══════════════════════════════════════════════════════
 // ── Community Correction / Fact-Check System ──
@@ -14776,7 +14806,6 @@ function showSubmitStatus(msg, type) {
   const statusMsg = document.getElementById('correctionStatusMsg');
   const verifyStatus = document.getElementById('correctionVerifyStatus');
   if (!overlay || !fab) return;
-
   // ── Trusted domains for automatic verification ──
   const TRUSTED_DOMAINS = [
     // Government
@@ -14796,7 +14825,6 @@ function showSubmitStatus(msg, type) {
     // Housing
     'smrha.org'
   ];
-
   function isDomainTrusted(url) {
     try {
       const hostname = new URL(url).hostname.replace(/^www\./, '');
@@ -14805,15 +14833,12 @@ function showSubmitStatus(msg, type) {
       return false;
     }
   }
-
   function isValidUrl(str) {
     try { new URL(str); return true; } catch(e) { return false; }
   }
-
   // Track what item the correction is about
   let correctionItemTitle = '';
   let correctionItemTab = '';
-
   // ── Open / Close ──
   function openModal(itemTitle, tab) {
     correctionItemTitle = itemTitle || '';
@@ -14838,19 +14863,16 @@ function showSubmitStatus(msg, type) {
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
-
   function closeModal() {
     overlay.classList.remove('open');
     document.body.style.overflow = '';
   }
-
   fab.addEventListener('click', () => openModal('', ''));
   // Sidebar correction button
   const sidebarCorrBtn = document.getElementById('sidebarCorrectionBtn');
   if (sidebarCorrBtn) sidebarCorrBtn.addEventListener('click', () => openModal('', ''));
   closeBtn.addEventListener('click', closeModal);
   overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
-
   // ── Form validation ──
   function checkForm() {
     const hasCategory = categoryEl.value !== '';
@@ -14859,7 +14881,6 @@ function showSubmitStatus(msg, type) {
   }
   categoryEl.addEventListener('change', checkForm);
   shouldEl.addEventListener('input', checkForm);
-
   // ── Source URL verification feedback ──
   sourceEl.addEventListener('input', () => {
     const url = sourceEl.value.trim();
@@ -14877,7 +14898,6 @@ function showSubmitStatus(msg, type) {
       verifyStatus.innerHTML = '<div class="correction-unverified-note">⏳ Unrecognized source — correction will be sent for review</div>';
     }
   });
-
   // ── Submit handler ──
   submitBtn.addEventListener('click', () => {
     const category = categoryEl.value;
@@ -14887,20 +14907,16 @@ function showSubmitStatus(msg, type) {
     const notes = notesEl.value.trim();
     const submitterEmail = emailEl.value.trim();
     const isVerified = sourceUrl && isValidUrl(sourceUrl) && isDomainTrusted(sourceUrl);
-
     if (!category || !shouldText) return;
-
     // Build the email
     const subjectPrefix = isVerified ? '[AUTO-APPROVED]' : '[NEEDS REVIEW]';
     const subject = subjectPrefix + ' Tell-Hub Correction: ' + (correctionItemTitle || category);
-
     let body = '';
     body += '═══════════════════════════════════════\n';
     body += isVerified
       ? '✅ VERIFIED SOURCE — AUTO-APPROVED CORRECTION\n'
       : '⏳ UNVERIFIED — REQUIRES ADMIN APPROVAL\n';
     body += '═══════════════════════════════════════\n\n';
-
     if (correctionItemTitle) {
       body += 'ITEM: ' + correctionItemTitle + '\n';
     }
@@ -14908,29 +14924,23 @@ function showSubmitStatus(msg, type) {
       body += 'TAB: ' + correctionItemTab + '\n';
     }
     body += 'CATEGORY: ' + category + '\n\n';
-
     if (currentText) {
       body += 'CURRENTLY SAYS:\n' + currentText + '\n\n';
     }
     body += 'SHOULD SAY:\n' + shouldText + '\n\n';
-
     if (sourceUrl) {
       body += 'SOURCE: ' + sourceUrl + '\n';
       body += 'VERIFIED: ' + (isVerified ? 'YES — Trusted domain' : 'NO — Unknown domain, requires manual review') + '\n\n';
     }
-
     if (notes) {
       body += 'ADDITIONAL NOTES:\n' + notes + '\n\n';
     }
-
     if (submitterEmail) {
       body += 'SUBMITTED BY: ' + submitterEmail + '\n\n';
     }
-
     body += '───────────────────────────────────────\n';
     body += 'Submitted: ' + new Date().toLocaleString() + '\n';
     body += 'Page: Telluride Tell-Hub\n';
-
     if (!isVerified) {
       body += '\n═══════════════════════════════════════\n';
       body += 'ADMIN ACTION REQUIRED:\n';
@@ -14944,17 +14954,14 @@ function showSubmitStatus(msg, type) {
       body += 'The update should be applied to the site.\n';
       body += '═══════════════════════════════════════\n';
     }
-
     // Send via mailto (most reliable for static sites)
     const mailto = 'mailto:info@livabletelluride.org'
       + '?subject=' + encodeURIComponent(subject)
       + '&body=' + encodeURIComponent(body);
-
     // Also try sending silently via Formspree-style fetch if available
     // (Future enhancement: replace with actual form endpoint)
     // For now, open the mailto link
     window.open(mailto, '_blank');
-
     // Show success message
     statusMsg.className = 'correction-status success';
     if (isVerified) {
@@ -14962,7 +14969,6 @@ function showSubmitStatus(msg, type) {
     } else {
       statusMsg.innerHTML = '📬 Your correction has been sent to info@livabletelluride.org for review. You\'ll hear back once it\'s been reviewed.';
     }
-
     // Disable submit to prevent double-sends
     submitBtn.disabled = true;
     submitBtn.textContent = 'Submitted ✓';
@@ -14970,12 +14976,10 @@ function showSubmitStatus(msg, type) {
       submitBtn.textContent = 'Submit Correction';
     }, 5000);
   });
-
   // ── Global function so cards can trigger corrections ──
   window.openCorrectionModal = function(itemTitle, tab) {
     openModal(itemTitle, tab);
   };
-
   // ── Add correction triggers to event/meeting cards after render ──
   // We use a MutationObserver to add triggers whenever new cards appear
   function addCorrectionTriggers(container) {
@@ -15010,7 +15014,6 @@ function showSubmitStatus(msg, type) {
       if (body) body.appendChild(trigger);
     });
   }
-
   // Observe content containers for new cards
   const containers = ['meetings-content', 'news-content', 'local-news-content', 'legals-content'];
   containers.forEach(id => {
@@ -15021,25 +15024,19 @@ function showSubmitStatus(msg, type) {
     // Also run once for any already-rendered cards
     addCorrectionTriggers(el);
   });
-
 })();
 </script>
-
 <!-- ══════════ HUB-BUB AUTH MODAL ══════════ -->
 <div class="hb-modal-overlay" id="hbAuthModal">
   <div class="hb-modal">
     <!-- Sign Up form -->
     <div id="hbSignupForm">
       <h3>Join Hub-Bub</h3>
-      <div class="hb-modal-error" id="hbSignupError"></div>
-      <div class="hb-modal-info" id="hbSignupInfo"></div>
-      <label>Display Name</label>
-      <input type="text" id="hbSignupName" placeholder="How you'll appear to the community">
-      <label>Email Address</label>
-      <input type="email" id="hbSignupEmail" placeholder="your@email.com">
-      <label>Password</label>
-      <input type="password" id="hbSignupPassword" placeholder="At least 6 characters">
-      <button class="hb-modal-btn" onclick="hbDoSignup()">Create Account</button>
+      <p style="font-size:0.88rem;color:#555;line-height:1.6;margin-bottom:14px;">
+        Hub-Bub accounts are created through the <strong>Subscribe</strong> signup.
+        You'll choose your newsletter topics and create a password — all in one step.
+      </p>
+      <button class="hb-modal-btn" onclick="hbCloseAuth(); openSubscribeModal();">Go to Subscribe</button>
       <div class="hb-modal-switch">Already have an account? <a onclick="hbShowAuth('login')">Log in</a></div>
     </div>
     <!-- Login form -->
@@ -15066,7 +15063,6 @@ function showSubmitStatus(msg, type) {
     </div>
   </div>
 </div>
-
 <!-- ══════════ MOBILE BOTTOM NAVIGATION ══════════ -->
 <div class="mobile-more-backdrop" id="mobileMoreBackdrop"></div>
 <div class="mobile-more-menu" id="mobileMoreMenu">
@@ -15110,7 +15106,6 @@ function showSubmitStatus(msg, type) {
 (function() {
   const mobileNav = document.getElementById('mobileNav');
   if (!mobileNav) return;
-
   const moreMenu = document.getElementById('mobileMoreMenu');
   const moreBackdrop = document.getElementById('mobileMoreBackdrop');
   const moreBtn = document.getElementById('mobileMoreBtn');
@@ -15118,12 +15113,10 @@ function showSubmitStatus(msg, type) {
   const allMoreItems = moreMenu.querySelectorAll('.mobile-more-item');
   // Tabs that live in the "More" menu
   const moreTabs = new Set(['local-news', 'legals', 'links', 'land-use', 'gondola', 'subscribe']);
-
   function closeMoreMenu() {
     moreMenu.classList.remove('open');
     moreBackdrop.classList.remove('open');
   }
-
   function switchTab(tabName) {
     // Activate the desktop tab-btn too (keeps state in sync)
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -15166,12 +15159,10 @@ function showSubmitStatus(msg, type) {
   }
   // Expose switchTab globally so inline onclick handlers (header nav, footer, etc.) can call it
   window.switchTab = switchTab;
-
   function updateMobileActive(tabName) {
     // Clear all active states
     allMobileNavBtns.forEach(b => b.classList.remove('active'));
     allMoreItems.forEach(b => b.classList.remove('active'));
-
     if (moreTabs.has(tabName)) {
       // Highlight the "More" button and the specific item in the menu
       moreBtn.classList.add('active');
@@ -15185,7 +15176,6 @@ function showSubmitStatus(msg, type) {
       });
     }
   }
-
   // Primary nav buttons
   allMobileNavBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -15205,7 +15195,6 @@ function showSubmitStatus(msg, type) {
       updateMobileActive(btn.dataset.tab);
     });
   });
-
   // More menu items
   allMoreItems.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -15214,10 +15203,8 @@ function showSubmitStatus(msg, type) {
       updateMobileActive(btn.dataset.tab);
     });
   });
-
   // Backdrop closes more menu
   moreBackdrop.addEventListener('click', closeMoreMenu);
-
   // Keep mobile nav in sync when desktop tab-btns are clicked
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -15226,7 +15213,6 @@ function showSubmitStatus(msg, type) {
   });
 })();
 </script>
-
 <!-- ══════════ Subscribe Modal ══════════ -->
 <div class="subscribe-modal-overlay" id="subscribeModalOverlay" onclick="if(event.target===this)closeSubscribeModal();">
   <div class="subscribe-modal">
@@ -15238,7 +15224,6 @@ function showSubmitStatus(msg, type) {
 // Track where the subscribe content originally lives
 var _subscribeOriginalParent = null;
 var _subscribeOriginalNext = null;
-
 function openSubscribeModal() {
   var content = document.getElementById('tab-subscribe');
   var modalBody = document.getElementById('subscribeModalBody');
@@ -15253,7 +15238,6 @@ function openSubscribeModal() {
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
-
 function closeSubscribeModal() {
   var content = document.getElementById('tab-subscribe');
   var overlay = document.getElementById('subscribeModalOverlay');
@@ -15271,19 +15255,16 @@ function closeSubscribeModal() {
   document.body.style.overflow = '';
 }
 </script>
-
 <!-- ══════════ FIREBASE SDK (compat mode for single-file simplicity) ══════════ -->
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
-
 <script>
 /* ══════════════════════════════════════════════════════════════
    COMMUNITY PULSE ENGINE
    View-only aggregation of recent public posts from local organizations
    ══════════════════════════════════════════════════════════════ */
-
 // ── Community Pulse Sources & Data ──
 // Posts auto-expire after 5 days. Max 20 shown at a time.
 // Data refreshed every 6 hours with new relevant posts.
@@ -15303,11 +15284,9 @@ const CP_SOURCES = {
   'foundation': { name: 'Telluride Foundation', type: 'nonprofits', platform: 'instagram', url: 'https://www.instagram.com/telluridefoundation/', logo: '' },
   'tchn': { name: 'Tri-County Health Network', type: 'health', platform: 'instagram', url: 'https://www.instagram.com/tchn_co/', logo: '' }
 };
-
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
 const COMMUNITY_PULSE_CACHE_DATE = '2026-03-29';
-
 const COMMUNITY_PULSE_POSTS = [
   {
     id: 'c7cc-001', sourceKey: 'c7cc',
@@ -15450,17 +15429,14 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Lost Pet', 'Community', 'Help'], featured: false, eventRelated: false
   }
 ];
-
 const CP_MAX_POSTS = 20;
 const CP_EXPIRY_DAYS = 5;
-
 // ── Community Pulse State ──// ── Community Pulse State ──
 let cpTimeWindow = '48h';
 let cpTypeFilter = 'all';
 let cpPlatformFilter = 'all';
 let cpSearchTerm = '';
 let cpEventOnly = false;
-
 function cpRelativeTime(isoStr) {
   const posted = new Date(isoStr);
   const now = new Date();
@@ -15471,20 +15447,16 @@ function cpRelativeTime(isoStr) {
   const diffD = Math.floor(diffH / 24);
   return diffD + ' day' + (diffD === 1 ? '' : 's') + ' ago';
 }
-
 function cpGetSource(p) {
   return CP_SOURCES[p.sourceKey] || { name: 'Unknown', type: 'community', platform: 'website', url: '#', logo: '' };
 }
-
 function cpFilterPosts() {
   const now = new Date();
   const expiryMs = CP_EXPIRY_DAYS * 24 * 3600000;
-
   // Time window for display filter
   let windowMs = 48 * 3600000;
   if (cpTimeWindow === '72h') windowMs = 72 * 3600000;
   else if (cpTimeWindow === '7d') windowMs = 7 * 24 * 3600000;
-
   const filtered = COMMUNITY_PULSE_POSTS.filter(function(p) {
     const src = cpGetSource(p);
     const posted = new Date(p.postedAt);
@@ -15510,18 +15482,14 @@ function cpFilterPosts() {
   }).sort(function(a, b) {
     return new Date(b.postedAt) - new Date(a.postedAt);
   });
-
   // Cap at 20 posts
   return filtered.slice(0, CP_MAX_POSTS);
 }
-
 function renderCommunityPulse() {
   const container = document.getElementById('community-pulse-content');
   const featuredEl = document.getElementById('communityPulseFeatured');
   if (!container) return;
-
   const posts = cpFilterPosts();
-
   // Render featured
   if (featuredEl) {
     const featured = posts.filter(function(p) { return p.featured; }).slice(0, 3);
@@ -15540,28 +15508,22 @@ function renderCommunityPulse() {
       featuredEl.parentElement.style.display = 'none';
     }
   }
-
   // Render main feed
   if (posts.length === 0) {
     container.innerHTML = '<div class="empty-state">No community updates match your current filters. Try widening the time window or clearing filters.</div>';
     return;
   }
-
   let html = '';
   posts.forEach(function(p) {
     var src = cpGetSource(p);
     const logoHtml = src.logo
       ? '<div class="card-logo" style="width:72px;height:72px;min-width:72px;"><img src="' + src.logo + '" alt="' + src.name + '" style="width:100%;height:100%;object-fit:contain;border-radius:10px;" loading="lazy"></div>'
       : '<div class="card-logo" style="width:72px;height:72px;min-width:72px;display:flex;align-items:center;justify-content:center;background:rgba(33,68,60,0.08);border-radius:10px;font-size:1.5rem;">\u25ce</div>';
-
     const tagsHtml = p.tags.map(function(t) {
       return '<span class="legal-meta-tag tag-type">' + t + '</span>';
     }).join('');
-
     const imageHtml = '';
-
     const platformIcon = { facebook: '\ud83d\udcd8', instagram: '\ud83d\udcf7', website: '\ud83c\udf10', youtube: '\u25b6\ufe0f' }[src.platform] || '\ud83d\udd17';
-
     html += '<div class="card community-pulse-card" data-pulse-type="' + src.type + '" data-pulse-platform="' + src.platform + '">';
     html += logoHtml;
     html += '<div class="card-body">';
@@ -15583,10 +15545,8 @@ function renderCommunityPulse() {
     html += '<div class="community-pulse-note">Comments stay on the original platform.</div>';
     html += '</div></div>';
   });
-
   container.innerHTML = html;
 }
-
 // ── Community Pulse Filter Handlers ──
 document.addEventListener('DOMContentLoaded', function() {
   // Time window filters
@@ -15598,7 +15558,6 @@ document.addEventListener('DOMContentLoaded', function() {
       renderCommunityPulse();
     });
   });
-
   // Type filters
   document.querySelectorAll('#communityPulseTypeFilters .chip').forEach(function(chip) {
     chip.addEventListener('click', function() {
@@ -15609,7 +15568,6 @@ document.addEventListener('DOMContentLoaded', function() {
       renderCommunityPulse();
     });
   });
-
   // Platform filters
   document.querySelectorAll('#communityPulsePlatformFilters .chip').forEach(function(chip) {
     chip.addEventListener('click', function() {
@@ -15620,7 +15578,6 @@ document.addEventListener('DOMContentLoaded', function() {
       renderCommunityPulse();
     });
   });
-
   // Search
   var cpSearchInput = document.getElementById('communityPulseSearch');
   if (cpSearchInput) {
@@ -15633,7 +15590,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 300);
     });
   }
-
   // Event-only checkbox
   var cpEventCheck = document.getElementById('communityPulseEventOnly');
   if (cpEventCheck) {
@@ -15642,18 +15598,15 @@ document.addEventListener('DOMContentLoaded', function() {
       renderCommunityPulse();
     });
   }
-
   // Initial render
   renderCommunityPulse();
 });
-
 /* ══════════════════════════════════════════════════════════════
       HUB-BUB FORUM ENGINE
    Firebase-backed community discussion forum for Telluride Gov Hub
    ══════════════════════════════════════════════════════════════ */
 (function() {
   'use strict';
-
   // ─── Firebase Configuration ───
   const FIREBASE_CONFIG = {
     apiKey: "AIzaSyCyAjB0RA_LtoETyRqxVJor0lRB4NRyXF0",
@@ -15664,7 +15617,6 @@ document.addEventListener('DOMContentLoaded', function() {
     appId: "1:14117089764:web:4287985258f0bc929cd7f1",
     measurementId: "G-PWNCF2PZQP"
   };
-
   // ─── Initialize Firebase ───
   let app, auth, db, storage;
   let hbUser = null;           // Current authenticated user
@@ -15674,7 +15626,6 @@ document.addEventListener('DOMContentLoaded', function() {
   let hbPendingAttachments = []; // Files queued for upload
   let hbToneOriginalText = '';
   let hbFirebaseReady = false;
-
   try {
     if (FIREBASE_CONFIG.apiKey !== 'YOUR_API_KEY') {
       app = firebase.initializeApp(FIREBASE_CONFIG);
@@ -15686,7 +15637,6 @@ document.addEventListener('DOMContentLoaded', function() {
   } catch(e) {
     console.warn('Hub-Bub: Firebase not configured yet.', e);
   }
-
   // ─── Topic Definitions (matches Hub's existing taxonomy) ───
   const HB_TOPICS = {
     'housing': { label: 'Housing', icon: '🏠' },
@@ -15702,11 +15652,9 @@ document.addEventListener('DOMContentLoaded', function() {
     'community': { label: 'Community', icon: '🤝' },
     'other': { label: 'Other', icon: '💡' }
   };
-
   // ═══════════════════════════════
   // AUTH FUNCTIONS
   // ═══════════════════════════════
-
   window.hbShowAuth = function(mode) {
     var modal = document.getElementById('hbAuthModal');
     modal.classList.add('open');
@@ -15719,22 +15667,18 @@ document.addEventListener('DOMContentLoaded', function() {
       if (el) { el.style.display = 'none'; el.textContent = ''; }
     });
   };
-
   window.hbCloseAuth = function() {
     document.getElementById('hbAuthModal').classList.remove('open');
   };
-
   window.hbDoSignup = function() {
     if (!hbFirebaseReady) { hbShowConfigNeeded(); return; }
     var name = document.getElementById('hbSignupName').value.trim();
     var email = document.getElementById('hbSignupEmail').value.trim();
     var pass = document.getElementById('hbSignupPassword').value;
     var errEl = document.getElementById('hbSignupError');
-
     if (!name) { errEl.textContent = 'Please enter a display name.'; errEl.style.display = ''; return; }
     if (!email) { errEl.textContent = 'Please enter your email.'; errEl.style.display = ''; return; }
     if (pass.length < 6) { errEl.textContent = 'Password must be at least 6 characters.'; errEl.style.display = ''; return; }
-
     auth.createUserWithEmailAndPassword(email, pass)
       .then(function(cred) {
         return cred.user.updateProfile({ displayName: name }).then(function() {
@@ -15756,15 +15700,12 @@ document.addEventListener('DOMContentLoaded', function() {
         errEl.textContent = err.message; errEl.style.display = '';
       });
   };
-
   window.hbDoLogin = function() {
     if (!hbFirebaseReady) { hbShowConfigNeeded(); return; }
     var email = document.getElementById('hbLoginEmail').value.trim();
     var pass = document.getElementById('hbLoginPassword').value;
     var errEl = document.getElementById('hbLoginError');
-
     if (!email || !pass) { errEl.textContent = 'Please enter email and password.'; errEl.style.display = ''; return; }
-
     auth.signInWithEmailAndPassword(email, pass)
       .then(function(cred) {
         if (!cred.user.emailVerified) {
@@ -15779,18 +15720,15 @@ document.addEventListener('DOMContentLoaded', function() {
         errEl.textContent = err.message; errEl.style.display = '';
       });
   };
-
   window.hbLogout = function() {
     if (auth) auth.signOut();
   };
-
   function hbUpdateAuthUI(user) {
     hbUser = user;
     var statusEl = document.getElementById('hbAuthStatus');
     var userEl = document.getElementById('hbAuthUser');
     var logoutBtn = document.getElementById('hbLogoutBtn');
     var avatarEl = document.getElementById('hbComposeAvatar');
-
     if (user && user.emailVerified) {
       var name = user.displayName || 'User';
       statusEl.style.display = 'none';
@@ -15807,7 +15745,6 @@ document.addEventListener('DOMContentLoaded', function() {
       avatarEl.style.background = '#999';
     }
   }
-
   // Listen for auth state changes
   if (hbFirebaseReady) {
     auth.onAuthStateChanged(function(user) {
@@ -15817,15 +15754,12 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-
   function hbShowConfigNeeded() {
     alert('Hub-Bub is almost ready! The site administrator needs to configure Firebase. See the setup instructions in the source code.');
   }
-
   // ═══════════════════════════════
   // COMPOSE / POST FUNCTIONS
   // ═══════════════════════════════
-
   window.hbExpandCompose = function() {
     var compose = document.getElementById('hbCompose');
     compose.classList.add('expanded');
@@ -15834,7 +15768,6 @@ document.addEventListener('DOMContentLoaded', function() {
       compose.classList.remove('expanded');
     }
   };
-
   // Tag selection in compose
   document.querySelectorAll('.hb-compose-tag').forEach(function(tag) {
     tag.addEventListener('click', function() {
@@ -15842,7 +15775,6 @@ document.addEventListener('DOMContentLoaded', function() {
       hbUpdatePostBtn();
     });
   });
-
   // Topic filter chips
   document.querySelectorAll('.hb-topic-chip').forEach(function(chip) {
     chip.addEventListener('click', function() {
@@ -15852,7 +15784,6 @@ document.addEventListener('DOMContentLoaded', function() {
       hbRenderPosts();
     });
   });
-
   // Enable/disable post button
   function hbUpdatePostBtn() {
     var title = document.getElementById('hbComposeTitle').value.trim();
@@ -15862,12 +15793,10 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   document.getElementById('hbComposeTitle').addEventListener('input', hbUpdatePostBtn);
   document.getElementById('hbComposeBody').addEventListener('input', hbUpdatePostBtn);
-
   // File attachments
   window.hbTriggerAttach = function() {
     document.getElementById('hbFileInput').click();
   };
-
   window.hbHandleFiles = function(input) {
     var files = Array.from(input.files);
     files.forEach(function(file) {
@@ -15880,7 +15809,6 @@ document.addEventListener('DOMContentLoaded', function() {
     hbRenderAttachPreview();
     input.value = '';
   };
-
   function hbRenderAttachPreview() {
     var container = document.getElementById('hbAttachPreview');
     container.innerHTML = '';
@@ -15892,16 +15820,13 @@ document.addEventListener('DOMContentLoaded', function() {
       container.appendChild(item);
     });
   }
-
   window.hbRemoveAttach = function(idx) {
     hbPendingAttachments.splice(idx, 1);
     hbRenderAttachPreview();
   };
-
   // ═══════════════════════════════
   // AI TONE REVIEW
   // ═══════════════════════════════
-
   // Personal attack detection patterns
   var ATTACK_PATTERNS = [
     // Direct "you are" insults
@@ -15919,7 +15844,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // General profanity used at someone
     /\b(?:f[\*u]ck(?:ing)?|shit(?:ty)?|ass(?:hole)?|bitch|bastard|damn(?:ed)?)\s+(?:you|him|her|them|[A-Z][a-z]+)\b/i,
   ];
-
   // Suggestion templates — keyed by the type of attack detected
   var TONE_SUGGESTIONS = {
     'competence': 'I have serious concerns about the decision-making in this area. The outcomes suggest a need for different leadership or expertise.',
@@ -15929,10 +15853,8 @@ document.addEventListener('DOMContentLoaded', function() {
     'threat': 'I believe there need to be consequences for these decisions. The community should hold leadership accountable through proper channels.',
     'dismissive': 'I fundamentally disagree with this perspective. Here is why I think the evidence points in a different direction:'
   };
-
   function hbAnalyzeTone(text) {
     if (!text || text.length < 10) return null;
-
     for (var i = 0; i < ATTACK_PATTERNS.length; i++) {
       if (ATTACK_PATTERNS[i].test(text)) {
         var category = 'general';
@@ -15942,7 +15864,6 @@ document.addEventListener('DOMContentLoaded', function() {
         else if (i <= 4) category = 'profanity';
         else if (i === 5) category = 'threat';
         else category = 'profanity';
-
         return {
           flagged: true,
           category: category,
@@ -15952,35 +15873,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     return { flagged: false };
   }
-
   window.hbUseSuggested = function() {
     var suggested = document.getElementById('hbToneSuggested').textContent;
     document.getElementById('hbComposeBody').value = suggested;
     document.getElementById('hbToneNudge').classList.remove('visible');
     hbUpdatePostBtn();
   };
-
   window.hbKeepOriginal = function() {
     document.getElementById('hbComposeBody').value = hbToneOriginalText;
     document.getElementById('hbToneNudge').classList.remove('visible');
     hbDoActualPost();
   };
-
   window.hbEditMore = function() {
     document.getElementById('hbToneNudge').classList.remove('visible');
     document.getElementById('hbComposeBody').focus();
   };
-
   // ═══════════════════════════════
   // POST SUBMISSION
   // ═══════════════════════════════
-
   window.hbSubmitPost = function() {
     if (!hbUser || !hbUser.emailVerified) { hbShowAuth('login'); return; }
     if (!hbFirebaseReady) { hbShowConfigNeeded(); return; }
-
     var body = document.getElementById('hbComposeBody').value.trim();
-
     // Run tone check first
     var toneResult = hbAnalyzeTone(body);
     if (toneResult && toneResult.flagged) {
@@ -15990,10 +15904,8 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('hbToneNudge').classList.add('visible');
       return; // Don't post yet — let user choose
     }
-
     hbDoActualPost();
   };
-
   function hbDoActualPost() {
     var title = document.getElementById('hbComposeTitle').value.trim();
     var body = document.getElementById('hbComposeBody').value.trim();
@@ -16001,13 +15913,10 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.hb-compose-tag.selected').forEach(function(t) {
       selectedTags.push(t.dataset.hbTag);
     });
-
     if (!title || !body || selectedTags.length === 0) return;
-
     var postBtn = document.getElementById('hbPostBtn');
     postBtn.disabled = true;
     postBtn.textContent = 'Posting...';
-
     // Upload attachments first, then create post
     var uploadPromises = hbPendingAttachments.map(function(file) {
       var path = 'hub-bub/' + hbUser.uid + '/' + Date.now() + '_' + file.name;
@@ -16018,7 +15927,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       });
     });
-
     Promise.all(uploadPromises).then(function(attachments) {
       return db.collection('posts').add({
         authorId: hbUser.uid,
@@ -16039,7 +15947,6 @@ document.addEventListener('DOMContentLoaded', function() {
       db.collection('users').doc(hbUser.uid).update({
         postCount: firebase.firestore.FieldValue.increment(1)
       }).catch(function() {});
-
       // Reset compose
       document.getElementById('hbComposeTitle').value = '';
       document.getElementById('hbComposeBody').value = '';
@@ -16050,7 +15957,6 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('hbToneNudge').classList.remove('visible');
       postBtn.textContent = 'Post to Hub-Bub';
       postBtn.disabled = true;
-
       hbLoadPosts();
     }).catch(function(err) {
       console.error('Hub-Bub post error:', err);
@@ -16059,20 +15965,16 @@ document.addEventListener('DOMContentLoaded', function() {
       postBtn.disabled = false;
     });
   }
-
   // ═══════════════════════════════
   // LOAD & RENDER POSTS
   // ═══════════════════════════════
-
   function hbLoadPosts() {
     if (!hbFirebaseReady) {
       hbRenderDemoPosts();
       return;
     }
-
     var loadEl = document.getElementById('hbLoading');
     if (loadEl) loadEl.style.display = '';
-
     db.collection('posts').orderBy('createdAt', 'desc').limit(100).get()
       .then(function(snap) {
         hbPosts = [];
@@ -16091,13 +15993,11 @@ document.addEventListener('DOMContentLoaded', function() {
         hbRenderDemoPosts();
       });
   }
-
   function hbRenderPosts() {
     var feed = document.getElementById('hbPostsFeed');
     var loadEl = document.getElementById('hbLoading');
     var emptyEl = document.getElementById('hbEmpty');
     if (loadEl) loadEl.style.display = 'none';
-
     // Filter by topic
     var filtered = hbPosts;
     if (hbCurrentTopic !== 'all') {
@@ -16105,34 +16005,28 @@ document.addEventListener('DOMContentLoaded', function() {
         return p.tags && p.tags.indexOf(hbCurrentTopic) !== -1;
       });
     }
-
     // Sort
     if (hbCurrentSort === 'most-discussed') {
       filtered.sort(function(a, b) { return (b.replyCount || 0) - (a.replyCount || 0); });
     } else if (hbCurrentSort === 'most-upvoted') {
       filtered.sort(function(a, b) { return ((b.upvotes||0) - (b.downvotes||0)) - ((a.upvotes||0) - (a.downvotes||0)); });
     }
-
     // Clear existing posts (keep loading/empty divs)
     var existingPosts = feed.querySelectorAll('.hb-post');
     existingPosts.forEach(function(p) { p.remove(); });
-
     if (filtered.length === 0) {
       if (emptyEl) emptyEl.style.display = '';
       return;
     }
     if (emptyEl) emptyEl.style.display = 'none';
-
     filtered.forEach(function(post) {
       feed.appendChild(hbCreatePostCard(post));
     });
   }
-
   function hbCreatePostCard(post) {
     var card = document.createElement('div');
     card.className = 'hb-post';
     card.dataset.postId = post.id;
-
     var initial = (post.authorName || '?').charAt(0).toUpperCase();
     var timeStr = post.createdAt ? hbTimeAgo(post.createdAt.toDate ? post.createdAt.toDate() : new Date(post.createdAt)) : 'just now';
     var isLong = post.body && post.body.length > 400;
@@ -16141,7 +16035,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var myUid = hbUser ? hbUser.uid : '';
     var votedUp = post.upvoters && post.upvoters.indexOf(myUid) !== -1;
     var votedDown = post.downvoters && post.downvoters.indexOf(myUid) !== -1;
-
     var tagsHtml = '';
     if (post.tags && post.tags.length) {
       tagsHtml = '<div class="hb-post-tags">' + post.tags.map(function(t) {
@@ -16149,7 +16042,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return '<span class="hb-post-tag">' + info.icon + ' ' + hbEsc(info.label) + '</span>';
       }).join('') + '</div>';
     }
-
     var attachHtml = '';
     if (post.attachments && post.attachments.length) {
       attachHtml = '<div class="hb-post-attachments">' + post.attachments.map(function(a) {
@@ -16157,7 +16049,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return '<a class="hb-post-attach" href="' + hbEsc(a.url) + '" target="_blank">' + icon + ' ' + hbEsc(a.name) + '</a>';
       }).join('') + '</div>';
     }
-
     card.innerHTML =
       '<div class="hb-post-head">' +
         '<div class="hb-post-avatar">' + initial + '</div>' +
@@ -16175,10 +16066,8 @@ document.addEventListener('DOMContentLoaded', function() {
         '<button class="hb-reply-toggle" onclick="hbToggleReplies(\'' + post.id + '\')">💬 <span>' + (post.replyCount || 0) + '</span> replies</button>' +
       '</div>' +
       '<div class="hb-replies" id="hb-replies-' + post.id + '" style="display:none;"></div>';
-
     return card;
   }
-
   window.hbExpandPost = function(btn) {
     var bodyEl = btn.previousElementSibling;
     bodyEl.classList.remove('truncated');
@@ -16189,24 +16078,19 @@ document.addEventListener('DOMContentLoaded', function() {
     if (post) bodyEl.textContent = post.body;
     btn.remove();
   };
-
   // ═══════════════════════════════
   // VOTING
   // ═══════════════════════════════
-
   window.hbVote = function(postId, dir) {
     if (!hbUser || !hbUser.emailVerified) { hbShowAuth('login'); return; }
     if (!hbFirebaseReady) return;
-
     var ref = db.collection('posts').doc(postId);
     var uid = hbUser.uid;
-
     db.runTransaction(function(tx) {
       return tx.get(ref).then(function(doc) {
         var data = doc.data();
         var upvoters = data.upvoters || [];
         var downvoters = data.downvoters || [];
-
         if (dir === 'up') {
           if (upvoters.indexOf(uid) !== -1) {
             // Already upvoted — remove
@@ -16223,7 +16107,6 @@ document.addEventListener('DOMContentLoaded', function() {
             upvoters = upvoters.filter(function(u) { return u !== uid; });
           }
         }
-
         tx.update(ref, {
           upvoters: upvoters,
           downvoters: downvoters,
@@ -16237,15 +16120,12 @@ document.addEventListener('DOMContentLoaded', function() {
       console.error('Vote error:', err);
     });
   };
-
   // ═══════════════════════════════
   // REPLIES
   // ═══════════════════════════════
-
   window.hbToggleReplies = function(postId) {
     var container = document.getElementById('hb-replies-' + postId);
     if (!container) return;
-
     if (container.style.display === 'none') {
       container.style.display = '';
       hbLoadReplies(postId, container);
@@ -16253,16 +16133,13 @@ document.addEventListener('DOMContentLoaded', function() {
       container.style.display = 'none';
     }
   };
-
   function hbLoadReplies(postId, container) {
     if (!hbFirebaseReady) {
       container.innerHTML = '<div style="font-size:0.82rem;color:#aaa;padding:8px;">Replies will appear here once Firebase is configured.</div>';
       hbAddReplyCompose(postId, container);
       return;
     }
-
     container.innerHTML = '<div class="hb-loading"><div class="hb-spinner"></div></div>';
-
     db.collection('posts').doc(postId).collection('replies').orderBy('createdAt', 'asc').limit(50).get()
       .then(function(snap) {
         container.innerHTML = '';
@@ -16288,7 +16165,6 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Load replies error:', err);
       });
   }
-
   function hbAddReplyCompose(postId, container) {
     var div = document.createElement('div');
     div.className = 'hb-reply-compose';
@@ -16297,15 +16173,12 @@ document.addEventListener('DOMContentLoaded', function() {
       '<button onclick="hbPostReply(\'' + postId + '\')">Reply</button>';
     container.appendChild(div);
   }
-
   window.hbPostReply = function(postId) {
     if (!hbUser || !hbUser.emailVerified) { hbShowAuth('login'); return; }
     if (!hbFirebaseReady) return;
-
     var textarea = document.getElementById('hb-reply-text-' + postId);
     var body = textarea.value.trim();
     if (!body) return;
-
     // Tone check on reply too
     var tone = hbAnalyzeTone(body);
     if (tone && tone.flagged) {
@@ -16313,11 +16186,9 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
     }
-
     var btn = textarea.nextElementSibling;
     btn.disabled = true;
     btn.textContent = '...';
-
     db.collection('posts').doc(postId).collection('replies').add({
       authorId: hbUser.uid,
       authorName: hbUser.displayName || 'Anonymous',
@@ -16343,11 +16214,9 @@ document.addEventListener('DOMContentLoaded', function() {
       btn.textContent = 'Reply';
     });
   };
-
   // ═══════════════════════════════
   // SORT
   // ═══════════════════════════════
-
   window.hbSortPosts = function(sortBy) {
     hbCurrentSort = sortBy;
     document.querySelectorAll('.hb-sort-opt').forEach(function(o) {
@@ -16355,15 +16224,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     hbRenderPosts();
   };
-
   // ═══════════════════════════════
   // TRENDING SIDEBAR
   // ═══════════════════════════════
-
   function hbRenderTrending() {
     var container = document.getElementById('hbTrending');
     if (!container) return;
-
     // Aggregate by tag
     var tagCounts = {};
     hbPosts.forEach(function(p) {
@@ -16374,16 +16240,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!tagCounts[t].latest || (p.title && p.title.length > 0)) tagCounts[t].latest = p.title;
       });
     });
-
     var sorted = Object.keys(tagCounts).sort(function(a, b) {
       return (tagCounts[b].posts + tagCounts[b].replies) - (tagCounts[a].posts + tagCounts[a].replies);
     });
-
     if (sorted.length === 0) {
       container.innerHTML = '<div style="font-size:0.8rem;color:#aaa;padding:8px 0;">No discussions yet.</div>';
       return;
     }
-
     container.innerHTML = '';
     sorted.slice(0, 8).forEach(function(tag) {
       var info = HB_TOPICS[tag] || { icon: '💡', label: tag };
@@ -16403,35 +16266,29 @@ document.addEventListener('DOMContentLoaded', function() {
       container.appendChild(item);
     });
   }
-
   // ═══════════════════════════════
   // STATS
   // ═══════════════════════════════
-
   function hbRenderStats() {
     var now = new Date();
     var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
     var weekAgo = new Date(today.getTime() - 7 * 86400000);
     var todayCount = 0, weekCount = 0, users = {};
-
     hbPosts.forEach(function(p) {
       var d = p.createdAt ? (p.createdAt.toDate ? p.createdAt.toDate() : new Date(p.createdAt)) : null;
       if (d && d >= today) todayCount++;
       if (d && d >= weekAgo) weekCount++;
       if (p.authorId) users[p.authorId] = true;
     });
-
     var el = function(id) { return document.getElementById(id); };
     if (el('hbStatToday')) el('hbStatToday').textContent = todayCount;
     if (el('hbStatWeek')) el('hbStatWeek').textContent = weekCount;
     if (el('hbStatTotal')) el('hbStatTotal').textContent = hbPosts.length;
     if (el('hbStatUsers')) el('hbStatUsers').textContent = Object.keys(users).length;
   }
-
   // ═══════════════════════════════
   // DEMO POSTS (shown before Firebase is configured)
   // ═══════════════════════════════
-
   function hbRenderDemoPosts() {
     var now = new Date();
     hbPosts = [
@@ -16479,18 +16336,15 @@ document.addEventListener('DOMContentLoaded', function() {
     hbRenderTrending();
     hbRenderStats();
   }
-
   // ═══════════════════════════════
   // UTILITIES
   // ═══════════════════════════════
-
   function hbEsc(s) {
     if (!s) return '';
     var div = document.createElement('div');
     div.appendChild(document.createTextNode(s));
     return div.innerHTML;
   }
-
   function hbTimeAgo(date) {
     var secs = Math.floor((new Date() - date) / 1000);
     if (secs < 60) return 'just now';
@@ -16499,7 +16353,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (secs < 604800) return Math.floor(secs / 86400) + 'd ago';
     return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   }
-
   // ─── Initialize on page load ───
   if (!hbFirebaseReady) {
     // Show demo content when Firebase isn't configured yet
@@ -16507,10 +16360,8 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     hbLoadPosts();
   }
-
 })();
 </script>
-
 <!-- ── Local Groups Filter ── -->
 <script>
 (function() {
@@ -16553,7 +16404,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 </script>
-
 <!-- Google Translate -->
 <script>
 function googleTranslateElementInit() {
@@ -16574,7 +16424,6 @@ function googleTranslateElementInit() {
   var params = new URLSearchParams(window.location.search);
   var legalParam = params.get("legal");
   if (!legalParam) return; // Not in standalone mode
-
   // Category label map
   var catLabels = {
     "all": "All Legal Notices",
@@ -16586,7 +16435,6 @@ function googleTranslateElementInit() {
     "tax-finance": "Tax \& Finance",
     "utilities": "Utilities"
   };
-
   // Wait for DOM
   document.addEventListener("DOMContentLoaded", function() {
     // Hide everything: header, subscribe bar, deep dive bar, container, footer
@@ -16598,11 +16446,9 @@ function googleTranslateElementInit() {
     hideSelectors.forEach(function(sel) {
       document.querySelectorAll(sel).forEach(function(el) { el.style.display = "none"; });
     });
-
     // Create standalone page container
     var page = document.createElement("div");
     page.className = "legal-standalone-page";
-
     // Header with back button and title
     var catLabel = catLabels[legalParam] || "Legal Notices";
     var headerHtml = "<div class=\"legal-standalone-header\">" +
@@ -16613,7 +16459,6 @@ function googleTranslateElementInit() {
       "</div>" +
     "</div>";
     page.innerHTML = headerHtml;
-
     // Filter notices
     var today = new Date();
     today.setHours(0, 0, 0, 0);
@@ -16622,15 +16467,12 @@ function googleTranslateElementInit() {
       var exp = localDate(n.expires);
       return !exp || exp >= today;
     });
-
     if (legalParam !== "all") {
       active = active.filter(function(n) { return n.filterTag === legalParam; });
     }
-
     // Render cards
     var cardsDiv = document.createElement("div");
     cardsDiv.id = "legal-standalone-cards";
-
     if (active.length === 0) {
       cardsDiv.innerHTML = "<div style=\"text-align:center;padding:40px 20px;color:var(--text-muted);font-size:1rem;\">No active legal notices in this category.</div>";
     } else {
@@ -16639,7 +16481,6 @@ function googleTranslateElementInit() {
         var linkUrl = primaryPaper ? primaryPaper.url : "#";
         var eLogo = LEGAL_ENTITY_LOGOS[notice.entityLogo] || "";
         var eLogoHtml = eLogo ? "<div class=\"legal-entity-logo\">" + eLogo + "</div>" : "";
-
         var paperBadgesHtml = "<div class=\"legal-paper-badges\"><span class=\"paper-label\">Published in:</span>";
         var seenPapers = new Set();
         notice.papers.forEach(function(pKey) {
@@ -16651,9 +16492,7 @@ function googleTranslateElementInit() {
           paperBadgesHtml += "<span class=\"paper-badge\">" + logoEl + " " + p.name + "</span>";
         });
         paperBadgesHtml += "</div>";
-
         var calBtns = legalCalendarButtons(notice);
-
         var mapHtml = "";
         if (notice.address) {
           var mapQ = encodeURIComponent(notice.address);
@@ -16663,7 +16502,6 @@ function googleTranslateElementInit() {
             "<div style=\"font-size:0.65rem;color:var(--text-muted);margin-top:4px;text-align:center;\">📍 " + notice.address + "</div>" +
           "</div>";
         }
-
         var cardHtml = "<a href=\"" + linkUrl + "\" target=\"_blank\" rel=\"noopener\" class=\"legal-card\" style=\"text-decoration:none;color:inherit;display:block;margin-bottom:16px;\">" +
           "<div class=\"legal-card-grid\" style=\"flex-wrap:wrap;\">" +
             "<div class=\"legal-card-body\">" +
@@ -16689,12 +16527,10 @@ function googleTranslateElementInit() {
         cardsDiv.innerHTML += cardHtml;
       });
     }
-
     page.appendChild(cardsDiv);
     document.body.appendChild(page);
   });
 })();
-
 // ── Legal Sidebar Count Updater ──
 document.addEventListener("DOMContentLoaded", function() {
   if (typeof LEGAL_NOTICES === "undefined") return;
@@ -16705,13 +16541,11 @@ document.addEventListener("DOMContentLoaded", function() {
     var exp = localDate(n.expires);
     return !exp || exp >= today;
   });
-
   var counts = { "all": active.length };
   var tags = ["public-entity", "water-court", "housing", "ordinance", "estate", "tax-finance", "utilities"];
   tags.forEach(function(tag) {
     counts[tag] = active.filter(function(n) { return n.filterTag === tag; }).length;
   });
-
   var idMap = {
     "all": "legalCountAll",
     "public-entity": "legalCountPublicEntity",
@@ -16722,13 +16556,11 @@ document.addEventListener("DOMContentLoaded", function() {
     "tax-finance": "legalCountTaxFinance",
     "utilities": "legalCountUtilities"
   };
-
   Object.keys(idMap).forEach(function(key) {
     var el = document.getElementById(idMap[key]);
     if (el) el.textContent = counts[key] || 0;
   });
 });
-
 // ── Clean up broken entity logo images in legal cards ──
 document.addEventListener("DOMContentLoaded", function() {
   function fixBrokenLogos() {
