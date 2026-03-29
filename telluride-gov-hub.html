@@ -921,6 +921,15 @@
     .main-layout.aboutus-active .sidebar,
     .main-layout.aboutus-active .expand-pill-right,
     .main-layout.aboutus-active .left-sidebar,
+    .main-layout.subscribe-active .sidebar,
+    .main-layout.subscribe-active .expand-pill-right,
+    .main-layout.subscribe-active .left-sidebar,
+    .main-layout.landuse-active .sidebar,
+    .main-layout.landuse-active .expand-pill-right,
+    .main-layout.landuse-active .left-sidebar {
+      display: none !important;
+    }
+    /* Responsive grids for About Us tab */
     @media (max-width: 900px) {
       #tab-about-us [style*="grid-template-columns: 1fr 1fr"],
       #tab-about-us [style*="grid-template-columns:1fr 1fr"] {
@@ -932,14 +941,6 @@
       #tab-about-us [style*="grid-template-columns:repeat(3"] {
         grid-template-columns: 1fr !important;
       }
-    }
-    .main-layout.subscribe-active .sidebar,
-    .main-layout.subscribe-active .expand-pill-right,
-    .main-layout.subscribe-active .left-sidebar,
-    .main-layout.landuse-active .sidebar,
-    .main-layout.landuse-active .expand-pill-right,
-    .main-layout.landuse-active .left-sidebar {
-      display: none !important;
     }
     /* Also hide left sidebar on Gondola tab */
     .main-layout.gondola-active .left-sidebar {
