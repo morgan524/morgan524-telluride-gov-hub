@@ -3857,6 +3857,57 @@
 
       <!-- ── Local Groups Directory ── -->
       <div class="date-group" style="margin-top: 8px;">Local Groups &amp; Organizations</div>
+      <div style="text-align:center;margin:12px 0 18px;">
+        <button id="addClubBtn" onclick="document.getElementById('addClubModal').style.display='flex'" style="background:#21443c;color:#fff;border:none;padding:10px 22px;border-radius:24px;font-size:0.95rem;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:8px;box-shadow:0 2px 8px rgba(33,68,60,0.15);transition:background 0.2s;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Add Your Club or Organization
+        </button>
+      </div>
+
+      <!-- Add Club Modal -->
+      <div id="addClubModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;align-items:center;justify-content:center;padding:16px;" onclick="if(event.target===this)this.style.display='none'">
+        <div style="background:#fff;border-radius:16px;max-width:480px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 12px 40px rgba(0,0,0,0.25);position:relative;">
+          <div style="padding:24px 24px 0;">
+            <button onclick="document.getElementById('addClubModal').style.display='none'" style="position:absolute;top:14px;right:16px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#666;line-height:1;">&times;</button>
+            <h3 style="margin:0 0 4px;font-size:1.25rem;color:#21443c;">Add Your Club or Organization</h3>
+            <p style="margin:0 0 18px;color:#666;font-size:0.9rem;">Fill out the details below and we'll add your group to the directory.</p>
+          </div>
+          <form id="addClubForm" onsubmit="submitClubForm(event)" style="padding:0 24px 24px;">
+            <div style="margin-bottom:14px;">
+              <label style="display:block;font-weight:600;font-size:0.85rem;color:#21443c;margin-bottom:4px;">Club / Organization Name <span style="color:#c0392b;">*</span></label>
+              <input type="text" name="clubName" required placeholder="e.g. Telluride Garden Club" style="width:100%;padding:10px 12px;border:1.5px solid #ccc;border-radius:8px;font-size:0.95rem;box-sizing:border-box;">
+            </div>
+            <div style="margin-bottom:14px;">
+              <label style="display:block;font-weight:600;font-size:0.85rem;color:#21443c;margin-bottom:4px;">Website URL <span style="color:#999;font-weight:400;">(if any)</span></label>
+              <input type="url" name="clubUrl" placeholder="https://..." style="width:100%;padding:10px 12px;border:1.5px solid #ccc;border-radius:8px;font-size:0.95rem;box-sizing:border-box;">
+            </div>
+            <div style="margin-bottom:14px;">
+              <label style="display:block;font-weight:600;font-size:0.85rem;color:#21443c;margin-bottom:4px;">Contact Name <span style="color:#c0392b;">*</span></label>
+              <input type="text" name="contactName" required placeholder="Your name" style="width:100%;padding:10px 12px;border:1.5px solid #ccc;border-radius:8px;font-size:0.95rem;box-sizing:border-box;">
+            </div>
+            <div style="margin-bottom:14px;">
+              <label style="display:block;font-weight:600;font-size:0.85rem;color:#21443c;margin-bottom:4px;">Contact Email or Phone <span style="color:#c0392b;">*</span></label>
+              <input type="text" name="contactInfo" required placeholder="email@example.com or (970) 555-1234" style="width:100%;padding:10px 12px;border:1.5px solid #ccc;border-radius:8px;font-size:0.95rem;box-sizing:border-box;">
+            </div>
+            <div style="margin-bottom:14px;">
+              <label style="display:block;font-weight:600;font-size:0.85rem;color:#21443c;margin-bottom:4px;">Meeting Schedule <span style="color:#999;font-weight:400;">(when &amp; where)</span></label>
+              <input type="text" name="meetingSchedule" placeholder="e.g. 1st Tuesdays, 6 PM at Community Center" style="width:100%;padding:10px 12px;border:1.5px solid #ccc;border-radius:8px;font-size:0.95rem;box-sizing:border-box;">
+            </div>
+            <div style="margin-bottom:18px;">
+              <label style="display:block;font-weight:600;font-size:0.85rem;color:#21443c;margin-bottom:4px;">Brief Description</label>
+              <textarea name="clubDescription" rows="3" placeholder="What does your group do?" style="width:100%;padding:10px 12px;border:1.5px solid #ccc;border-radius:8px;font-size:0.95rem;box-sizing:border-box;resize:vertical;"></textarea>
+            </div>
+            <button type="submit" style="width:100%;background:#21443c;color:#fff;border:none;padding:12px;border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;transition:background 0.2s;">Submit for Review</button>
+          </form>
+          <div id="addClubSuccess" style="display:none;padding:40px 24px;text-align:center;">
+            <div style="font-size:2.5rem;margin-bottom:12px;">&#10003;</div>
+            <h3 style="margin:0 0 8px;color:#21443c;">Thank You!</h3>
+            <p style="color:#666;margin:0 0 20px;font-size:0.95rem;">Your submission has been received. We'll review it and add your group to the directory soon.</p>
+            <button onclick="document.getElementById('addClubModal').style.display='none';document.getElementById('addClubForm').style.display='block';document.getElementById('addClubSuccess').style.display='none';document.getElementById('addClubForm').reset();" style="background:#21443c;color:#fff;border:none;padding:10px 24px;border-radius:8px;font-size:0.95rem;cursor:pointer;">Close</button>
+          </div>
+        </div>
+      </div>
+
       <div class="local-groups-grid">
 
         <!-- Telluride Rotary Club -->
@@ -9216,6 +9267,22 @@ const LOCAL_GROUP_SCHEDULES = [
     note: 'Telluride Mountain Village Owners Association. Check website for time confirmation.'
   }
 ];
+
+function submitClubForm(e) {
+  e.preventDefault();
+  var form = document.getElementById('addClubForm');
+  var data = new FormData(form);
+  var subject = encodeURIComponent('New Club Submission: ' + data.get('clubName'));
+  var body = 'Club Name: ' + data.get('clubName') +
+    '\nWebsite: ' + (data.get('clubUrl') || 'N/A') +
+    '\nContact: ' + data.get('contactName') +
+    '\nContact Info: ' + data.get('contactInfo') +
+    '\nMeeting Schedule: ' + (data.get('meetingSchedule') || 'N/A') +
+    '\nDescription: ' + (data.get('clubDescription') || 'N/A');
+  window.open('mailto:morgancsmith99@gmail.com?subject=' + subject + '&body=' + encodeURIComponent(body));
+  form.style.display = 'none';
+  document.getElementById('addClubSuccess').style.display = 'block';
+}
 
 function generateLocalGroupMeetings() {
   const meetings = [];
