@@ -1461,7 +1461,8 @@
       color: #fff;
       background: var(--koto-blue);
     }
-    .chip.active-topic {
+    .chip.active-topic,
+    .chip.active-legal {
       border-color: var(--forest);
       color: #fff;
       background: var(--forest);
@@ -4068,7 +4069,6 @@
       <button class="tab-btn" data-tab="links">Local Groups</button>
       <button class="tab-btn" data-tab="housing-search">Housing</button>
       <button class="tab-btn" data-tab="land-use">Deep Dive</button>
-      <button class="tab-btn" data-tab="legals">Legal Notices</button>
       <button class="tab-btn" data-tab="about-us">About Us</button>
     </nav>
     <div class="site-header-translate" id="google_translate_element"></div>
@@ -4282,6 +4282,7 @@
         <span class="chip" data-filter="arts-culture" data-tab-target="local-news">Arts & Culture</span>
         <span class="chip" data-filter="sports" data-tab-target="local-news">Sports</span>
         <span class="chip" data-filter="land-use" data-tab-target="local-news">Land Use</span>
+        <span class="chip" data-filter="legal-notices" data-tab-target="local-news">Legal Notices</span>
       </div>
       <div id="local-news-content">
         <div class="loading"><div class="spinner"></div><br>Loading local news…</div>
@@ -9700,9 +9701,15 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
       c.className = 'chip';
     });
     if (filter === 'all') chip.classList.add('active-all');
+    else if (filter === 'legal-notices') chip.classList.add('active-legal');
     else chip.classList.add('active-topic');
     currentLocalNewsFilter = filter;
     renderLocalNews(null, currentLocalNewsFilter);
+    // Toggle legal sidebar cards when legal-notices filter is active
+    const legalInterestCard = document.getElementById('sidebarLegalInterest');
+    const legalNearbyCard = document.getElementById('sidebarLegalNearby');
+    if (legalInterestCard) legalInterestCard.style.display = (filter === 'legal-notices') ? '' : 'none';
+    if (legalNearbyCard) legalNearbyCard.style.display = (filter === 'legal-notices') ? '' : 'none';
   });
 });
 
@@ -10530,6 +10537,12 @@ function renderLocalNews(unused, filter) {
   const container = document.getElementById('local-news-content');
   if (!container) return;
 
+  // If "Legal Notices" filter is active, render legal notices into this container
+  if (filter === 'legal-notices') {
+    renderLegalNoticesIntoContainer(container);
+    return;
+  }
+
   let articles = collectLocalNewsArticles();
 
   // Apply topic-based filter
@@ -10610,6 +10623,110 @@ function renderLocalNews(unused, filter) {
   });
 
   container.innerHTML = html;
+}
+
+// Render legal notices inside the Local News container when "Legal Notices" filter is selected
+function renderLegalNoticesIntoContainer(container) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const active = LEGAL_NOTICES.filter(function(n) {
+    if (!n.expires) return true;
+    var exp = localDate(n.expires);
+    return !exp || exp >= today;
+  });
+
+  if (active.length === 0) {
+    container.innerHTML = '<div class="empty-state">No active legal notices at this time.</div>';
+    return;
+  }
+
+  // Show the legals sub-filter chips
+  let subFilterHtml = '<div class="filter-row" id="legal-sub-filters" style="margin-bottom:16px;">';
+  subFilterHtml += '<span class="chip active-all legal-sub-chip" data-legal-filter="all">All</span>';
+  subFilterHtml += '<span class="chip legal-sub-chip" data-legal-filter="public-entity">Public Entity</span>';
+  subFilterHtml += '<span class="chip legal-sub-chip" data-legal-filter="water-court">Water Court</span>';
+  subFilterHtml += '<span class="chip legal-sub-chip" data-legal-filter="housing">Housing</span>';
+  subFilterHtml += '<span class="chip legal-sub-chip" data-legal-filter="ordinance">Ordinance</span>';
+  subFilterHtml += '<span class="chip legal-sub-chip" data-legal-filter="estate">Estate / Creditors</span>';
+  subFilterHtml += '<span class="chip legal-sub-chip" data-legal-filter="tax-finance">Tax & Finance</span>';
+  subFilterHtml += '<span class="chip legal-sub-chip" data-legal-filter="utilities">Utilities</span>';
+  subFilterHtml += '</div>';
+
+  let html = subFilterHtml;
+  active.forEach(function(notice) {
+    const primaryPaper = PAPER_LOGOS[notice.papers[0]];
+    const linkUrl = primaryPaper ? primaryPaper.url : '#';
+    const eLogo = LEGAL_ENTITY_LOGOS[notice.entityLogo] || '';
+    const eLogoHtml = eLogo ? '<div class="legal-entity-logo">' + eLogo + '</div>' : '';
+
+    let paperBadgesHtml = '<div class="legal-paper-badges"><span class="paper-label">Published in:</span>';
+    const seenPapers = new Set();
+    notice.papers.forEach(function(pKey) {
+      const p = PAPER_LOGOS[pKey];
+      if (!p) return;
+      if (seenPapers.has(p.name)) return;
+      seenPapers.add(p.name);
+      const logoEl = p.img ? '<img src="' + p.img + '" alt="' + p.name + '" />' : (p.svg || '');
+      paperBadgesHtml += '<span class="paper-badge">' + logoEl + ' ' + p.name + '</span>';
+    });
+    paperBadgesHtml += '</div>';
+
+    const calBtns = legalCalendarButtons(notice);
+
+    let mapHtml = '';
+    if (notice.address) {
+      const mapQ = encodeURIComponent(notice.address);
+      mapHtml = '<div class="legal-card-map" onclick="event.stopPropagation();event.preventDefault();">' +
+        '<iframe src="https://maps.google.com/maps?q=' + mapQ + '&t=&z=15&ie=UTF8&iwloc=&output=embed" ' +
+        'width="100%" height="100%" style="border:0;border-radius:10px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>' +
+        '<div style="font-size:0.65rem;color:var(--text-muted);margin-top:4px;text-align:center;">\ud83d\udccd ' + notice.address + '</div>' +
+      '</div>';
+    }
+
+    html += '<a href="' + linkUrl + '" target="_blank" rel="noopener" class="legal-card" data-filter-tag="' + notice.filterTag + '">' +
+      '<div class="legal-card-grid">' +
+        '<div class="legal-card-body">' +
+          '<div class="legal-card-header">' +
+            eLogoHtml +
+            '<div>' +
+              '<div class="legal-card-title">' + notice.title + '</div>' +
+              '<div class="legal-card-entity ' + notice.entityClass + '">' + notice.entity + '</div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="legal-card-summary">' + highlightLegalNamesAndAddresses(linkGlossaryTerms(notice.summary)) + '</div>' +
+          '<div class="legal-card-meta">' +
+            '<span class="legal-meta-tag tag-type">' + notice.type + '</span>' +
+            '<span class="legal-meta-tag tag-deadline">' + notice.deadline + '</span>' +
+            '<span class="legal-meta-tag tag-date">Published: ' + notice.dates + '</span>' +
+            '<span class="legal-read-more">Read Full Notice \u2192</span>' +
+          '</div>' +
+          calBtns +
+          paperBadgesHtml +
+        '</div>' +
+        mapHtml +
+      '</div>' +
+    '</a>';
+  });
+
+  container.innerHTML = html;
+
+  // Attach sub-filter click handlers
+  document.querySelectorAll('.legal-sub-chip').forEach(function(chip) {
+    chip.addEventListener('click', function() {
+      const f = chip.dataset.legalFilter;
+      document.querySelectorAll('.legal-sub-chip').forEach(function(c) { c.className = 'chip legal-sub-chip'; });
+      if (f === 'all') chip.classList.add('active-all');
+      else chip.classList.add('active-' + f);
+      // Show/hide legal cards based on sub-filter
+      document.querySelectorAll('#local-news-content .legal-card').forEach(function(card) {
+        if (f === 'all' || card.getAttribute('data-filter-tag') === f) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
 }
 
 // Legal Notices filter chips
@@ -14510,9 +14627,6 @@ function showSubmitStatus(msg, type) {
   </button>
   <button class="mobile-more-item" data-tab="land-use">
     <span class="nav-icon">🔍</span> Deep Dive
-  </button>
-  <button class="mobile-more-item" data-tab="legals">
-    <span class="nav-icon">📋</span> Legal Notices
   </button>
   <button class="mobile-more-item" data-tab="subscribe">
     <span class="nav-icon">📬</span> Subscribe
