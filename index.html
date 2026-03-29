@@ -942,6 +942,330 @@
         grid-template-columns: 1fr !important;
       }
     }
+
+    /* ═══════════ HUB-BUB FORUM STYLES ═══════════ */
+    .main-layout.hubbub-active .sidebar,
+    .main-layout.hubbub-active .expand-pill-right,
+    .main-layout.hubbub-active .left-sidebar {
+      display: none !important;
+    }
+
+    /* Hub-Bub container */
+    .hb-wrap { max-width: 1100px; margin: 0 auto; padding: 0 12px; }
+    .hb-grid { display: grid; grid-template-columns: 1fr 300px; gap: 20px; align-items: start; }
+    @media (max-width: 900px) { .hb-grid { grid-template-columns: 1fr; } }
+
+    /* Auth bar */
+    .hb-auth-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--sand); border-radius: 10px; padding: 10px 16px;
+      margin-bottom: 16px; font-size: 0.84rem;
+    }
+    .hb-auth-bar .hb-user { font-weight: 600; color: var(--forest); }
+    .hb-auth-bar button {
+      background: var(--forest); color: #fff; border: none; border-radius: 6px;
+      padding: 6px 14px; font-size: 0.8rem; font-weight: 600; cursor: pointer;
+    }
+    .hb-auth-bar button:hover { opacity: 0.85; }
+    .hb-auth-bar .hb-btn-link {
+      background: none; color: var(--forest); text-decoration: underline; padding: 0;
+    }
+
+    /* Topic filter chips */
+    .hb-topic-bar {
+      display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px;
+    }
+    .hb-topic-chip {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 600;
+      border: 1.5px solid var(--line); background: #fff; color: var(--forest-soft);
+      cursor: pointer; transition: all 0.15s;
+    }
+    .hb-topic-chip:hover { border-color: var(--forest); color: var(--forest); }
+    .hb-topic-chip.active { background: var(--forest); color: #fff; border-color: var(--forest); }
+
+    /* Compose box */
+    .hb-compose {
+      background: #fff; border: 1.5px solid var(--line); border-radius: 12px;
+      padding: 16px; margin-bottom: 18px;
+    }
+    .hb-compose-header {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
+    }
+    .hb-compose-avatar {
+      width: 36px; height: 36px; border-radius: 50%; background: var(--forest);
+      color: #fff; display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
+    }
+    .hb-compose input[type="text"] {
+      flex: 1; border: 1.5px solid var(--line); border-radius: 8px;
+      padding: 8px 12px; font-size: 0.88rem; font-family: inherit;
+      outline: none; transition: border-color 0.15s;
+    }
+    .hb-compose input[type="text"]:focus { border-color: var(--forest); }
+    .hb-compose textarea {
+      width: 100%; min-height: 80px; border: 1.5px solid var(--line); border-radius: 8px;
+      padding: 10px 12px; font-size: 0.86rem; font-family: inherit;
+      resize: vertical; outline: none; box-sizing: border-box; margin-bottom: 8px;
+    }
+    .hb-compose textarea:focus { border-color: var(--forest); }
+    .hb-compose-expanded { display: none; }
+    .hb-compose.expanded .hb-compose-expanded { display: block; }
+
+    .hb-compose-tags {
+      display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px;
+    }
+    .hb-compose-tag {
+      font-size: 0.72rem; padding: 3px 10px; border-radius: 14px;
+      border: 1px solid var(--line); background: #fff; cursor: pointer;
+      transition: all 0.15s; color: var(--forest-soft);
+    }
+    .hb-compose-tag:hover { border-color: var(--forest); }
+    .hb-compose-tag.selected { background: var(--forest); color: #fff; border-color: var(--forest); }
+
+    .hb-compose-actions {
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    }
+    .hb-compose-actions .hb-attach-btn {
+      background: none; border: 1.5px solid var(--line); border-radius: 8px;
+      padding: 6px 12px; font-size: 0.78rem; cursor: pointer; color: var(--forest-soft);
+      display: flex; align-items: center; gap: 4px;
+    }
+    .hb-compose-actions .hb-attach-btn:hover { border-color: var(--forest); color: var(--forest); }
+    .hb-compose-actions .hb-post-btn {
+      background: var(--forest); color: #fff; border: none; border-radius: 8px;
+      padding: 8px 20px; font-size: 0.84rem; font-weight: 700; cursor: pointer;
+    }
+    .hb-compose-actions .hb-post-btn:hover { opacity: 0.88; }
+    .hb-compose-actions .hb-post-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .hb-attach-preview {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;
+    }
+    .hb-attach-item {
+      display: flex; align-items: center; gap: 6px; background: var(--sand);
+      border-radius: 8px; padding: 4px 10px; font-size: 0.76rem;
+    }
+    .hb-attach-item .hb-remove-attach {
+      cursor: pointer; font-weight: 700; color: #c0392b; margin-left: 4px;
+    }
+
+    /* Tone review nudge */
+    .hb-tone-nudge {
+      display: none; background: #FFF8E1; border: 1.5px solid #FFD54F;
+      border-radius: 10px; padding: 14px 16px; margin-bottom: 10px;
+      font-size: 0.84rem; line-height: 1.5;
+    }
+    .hb-tone-nudge.visible { display: block; }
+    .hb-tone-nudge-title {
+      font-weight: 700; color: #E65100; margin-bottom: 6px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .hb-tone-original { color: #666; font-style: italic; margin: 6px 0; }
+    .hb-tone-suggested {
+      background: #E8F5E9; border-radius: 8px; padding: 10px 12px;
+      margin: 8px 0; border-left: 3px solid #4CAF50; color: #2E7D32;
+    }
+    .hb-tone-actions { display: flex; gap: 8px; margin-top: 8px; }
+    .hb-tone-actions button {
+      padding: 6px 14px; border-radius: 6px; font-size: 0.8rem;
+      font-weight: 600; cursor: pointer; border: none;
+    }
+    .hb-tone-btn-use { background: #4CAF50; color: #fff; }
+    .hb-tone-btn-keep { background: #fff; color: #666; border: 1.5px solid var(--line) !important; }
+    .hb-tone-btn-edit { background: #fff; color: var(--forest); border: 1.5px solid var(--forest) !important; }
+
+    /* Post cards */
+    .hb-post {
+      background: #fff; border: 1.5px solid var(--line); border-radius: 12px;
+      padding: 16px; margin-bottom: 12px; transition: box-shadow 0.15s;
+    }
+    .hb-post:hover { box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+    .hb-post-head {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 8px;
+    }
+    .hb-post-avatar {
+      width: 34px; height: 34px; border-radius: 50%; background: var(--forest-soft);
+      color: #fff; display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.8rem; flex-shrink: 0;
+    }
+    .hb-post-meta { font-size: 0.78rem; color: #888; }
+    .hb-post-author { font-weight: 700; color: var(--forest); }
+    .hb-post-title {
+      font-size: 1.05rem; font-weight: 700; color: #222; margin-bottom: 6px;
+    }
+    .hb-post-body {
+      font-size: 0.88rem; color: #444; line-height: 1.6; margin-bottom: 10px;
+      white-space: pre-wrap; word-wrap: break-word;
+    }
+    .hb-post-body.truncated { max-height: 120px; overflow: hidden; position: relative; }
+    .hb-post-body.truncated::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40px;
+      background: linear-gradient(transparent, #fff);
+    }
+    .hb-read-more {
+      font-size: 0.8rem; color: var(--forest); font-weight: 600;
+      cursor: pointer; background: none; border: none; padding: 0;
+    }
+
+    .hb-post-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+    .hb-post-tag {
+      font-size: 0.7rem; padding: 2px 8px; border-radius: 12px;
+      background: var(--sand); color: var(--forest-soft); font-weight: 600;
+    }
+
+    .hb-post-attachments { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .hb-post-attach {
+      display: flex; align-items: center; gap: 5px; background: var(--sand);
+      border-radius: 8px; padding: 5px 10px; font-size: 0.76rem; color: var(--forest);
+      text-decoration: none; cursor: pointer;
+    }
+    .hb-post-attach:hover { background: var(--line); }
+
+    .hb-post-foot {
+      display: flex; align-items: center; gap: 16px; padding-top: 8px;
+      border-top: 1px solid var(--sand);
+    }
+    .hb-vote-btn {
+      display: flex; align-items: center; gap: 4px; background: none; border: none;
+      font-size: 0.82rem; color: #888; cursor: pointer; padding: 4px 8px;
+      border-radius: 6px; transition: all 0.15s;
+    }
+    .hb-vote-btn:hover { background: var(--sand); color: var(--forest); }
+    .hb-vote-btn.voted-up { color: #2E7D32; font-weight: 700; }
+    .hb-vote-btn.voted-down { color: #c0392b; font-weight: 700; }
+    .hb-reply-toggle {
+      display: flex; align-items: center; gap: 4px; background: none; border: none;
+      font-size: 0.82rem; color: #888; cursor: pointer; padding: 4px 8px;
+      border-radius: 6px;
+    }
+    .hb-reply-toggle:hover { background: var(--sand); color: var(--forest); }
+
+    /* Reply thread */
+    .hb-replies { margin-top: 10px; padding-left: 18px; border-left: 2px solid var(--sand); }
+    .hb-reply {
+      padding: 10px 0; border-bottom: 1px solid var(--sand);
+    }
+    .hb-reply:last-child { border-bottom: none; }
+    .hb-reply-head { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+    .hb-reply-avatar {
+      width: 26px; height: 26px; border-radius: 50%; background: var(--forest-soft);
+      color: #fff; display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.68rem; flex-shrink: 0;
+    }
+    .hb-reply-author { font-weight: 700; font-size: 0.8rem; color: var(--forest); }
+    .hb-reply-time { font-size: 0.74rem; color: #aaa; }
+    .hb-reply-body { font-size: 0.84rem; color: #444; line-height: 1.5; margin-left: 34px; }
+    .hb-reply-compose {
+      display: flex; gap: 8px; margin-top: 8px; align-items: flex-start;
+    }
+    .hb-reply-compose textarea {
+      flex: 1; min-height: 36px; border: 1.5px solid var(--line); border-radius: 8px;
+      padding: 8px 10px; font-size: 0.82rem; font-family: inherit; resize: none;
+      outline: none; box-sizing: border-box;
+    }
+    .hb-reply-compose textarea:focus { border-color: var(--forest); }
+    .hb-reply-compose button {
+      background: var(--forest); color: #fff; border: none; border-radius: 8px;
+      padding: 8px 14px; font-size: 0.8rem; font-weight: 600; cursor: pointer;
+      white-space: nowrap;
+    }
+
+    /* Sort bar */
+    .hb-sort-bar {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 14px;
+      font-size: 0.82rem; color: #888;
+    }
+    .hb-sort-bar span { font-weight: 600; color: var(--forest-soft); }
+    .hb-sort-opt {
+      background: none; border: none; font-size: 0.82rem; color: #888;
+      cursor: pointer; padding: 4px 8px; border-radius: 6px;
+    }
+    .hb-sort-opt:hover { background: var(--sand); }
+    .hb-sort-opt.active { color: var(--forest); font-weight: 700; background: var(--sand); }
+
+    /* Trending sidebar */
+    .hb-sidebar {
+      background: #fff; border: 1.5px solid var(--line); border-radius: 12px;
+      padding: 16px; position: sticky; top: 80px;
+    }
+    .hb-sidebar-title {
+      font-size: 0.9rem; font-weight: 700; color: var(--forest);
+      margin-bottom: 12px; display: flex; align-items: center; gap: 6px;
+    }
+    .hb-trending-item {
+      padding: 8px 0; border-bottom: 1px solid var(--sand); cursor: pointer;
+    }
+    .hb-trending-item:last-child { border-bottom: none; }
+    .hb-trending-item:hover .hb-trending-topic { color: var(--forest); }
+    .hb-trending-topic { font-size: 0.84rem; font-weight: 600; color: #333; }
+    .hb-trending-count { font-size: 0.74rem; color: #999; }
+    .hb-trending-tag {
+      display: inline-block; font-size: 0.68rem; padding: 1px 7px; border-radius: 10px;
+      background: var(--sand); color: var(--forest-soft); margin-top: 2px;
+    }
+
+    /* Community guidelines */
+    .hb-guidelines {
+      background: var(--sand); border-radius: 10px; padding: 14px;
+      margin-top: 14px; font-size: 0.78rem; color: #666; line-height: 1.5;
+    }
+    .hb-guidelines-title { font-weight: 700; color: var(--forest); margin-bottom: 4px; }
+
+    /* Auth modal */
+    .hb-modal-overlay {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+      z-index: 10000; align-items: center; justify-content: center;
+    }
+    .hb-modal-overlay.open { display: flex; }
+    .hb-modal {
+      background: #fff; border-radius: 14px; padding: 28px; width: 380px;
+      max-width: 90vw; box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+    }
+    .hb-modal h3 { margin: 0 0 16px; color: var(--forest); font-size: 1.1rem; }
+    .hb-modal label { display: block; font-size: 0.82rem; font-weight: 600; color: #555; margin-bottom: 4px; }
+    .hb-modal input {
+      width: 100%; padding: 9px 12px; border: 1.5px solid var(--line); border-radius: 8px;
+      font-size: 0.88rem; font-family: inherit; outline: none; box-sizing: border-box;
+      margin-bottom: 12px;
+    }
+    .hb-modal input:focus { border-color: var(--forest); }
+    .hb-modal .hb-modal-btn {
+      width: 100%; padding: 10px; background: var(--forest); color: #fff;
+      border: none; border-radius: 8px; font-size: 0.9rem; font-weight: 700;
+      cursor: pointer; margin-top: 4px;
+    }
+    .hb-modal .hb-modal-btn:hover { opacity: 0.88; }
+    .hb-modal .hb-modal-switch {
+      text-align: center; margin-top: 12px; font-size: 0.8rem; color: #888;
+    }
+    .hb-modal .hb-modal-switch a {
+      color: var(--forest); font-weight: 600; cursor: pointer; text-decoration: underline;
+    }
+    .hb-modal .hb-modal-error {
+      color: #c0392b; font-size: 0.8rem; margin-bottom: 8px; display: none;
+    }
+    .hb-modal .hb-modal-info {
+      color: #2E7D32; font-size: 0.8rem; margin-bottom: 8px; display: none;
+    }
+
+    /* Empty state */
+    .hb-empty {
+      text-align: center; padding: 40px 20px; color: #999;
+    }
+    .hb-empty-icon { font-size: 2.5rem; margin-bottom: 10px; }
+    .hb-empty-text { font-size: 0.92rem; font-weight: 600; color: #777; }
+    .hb-empty-sub { font-size: 0.82rem; margin-top: 4px; }
+
+    /* Loading spinner */
+    .hb-loading { text-align: center; padding: 30px; }
+    .hb-spinner {
+      display: inline-block; width: 28px; height: 28px;
+      border: 3px solid var(--line); border-top-color: var(--forest);
+      border-radius: 50%; animation: hb-spin 0.7s linear infinite;
+    }
+    @keyframes hb-spin { to { transform: rotate(360deg); } }
+
     /* Also hide left sidebar on Gondola tab */
     .main-layout.gondola-active .left-sidebar {
       display: none !important;
@@ -3683,6 +4007,7 @@
     <button class="tab-btn" data-tab="land-use">Land Use</button>
     <button class="tab-btn" data-tab="gondola">Gondola 3A</button>
     <button class="tab-btn" data-tab="legals">Legal Notices</button>
+    <button class="tab-btn" data-tab="hub-bub">Hub-Bub</button>
     <button class="tab-btn" data-tab="about-us">About Us</button>
   </div>
   <!-- ── Subscribe Bar ── -->
@@ -4839,6 +5164,141 @@
         <div class="check-icon">✅</div>
         <h3>You're Subscribed!</h3>
         <p>We'll start sending your personalized updates soon. You can update your preferences anytime by returning to this page.</p>
+      </div>
+    </div>
+
+    <!-- ══════════ HUB-BUB FORUM TAB ══════════ -->
+    <div class="tab-content" id="tab-hub-bub">
+      <div class="hb-wrap">
+
+        <!-- Auth bar — shows login prompt or user info -->
+        <div class="hb-auth-bar" id="hbAuthBar">
+          <span id="hbAuthStatus">Join the conversation — <a href="javascript:void(0)" onclick="hbShowAuth('signup')" style="color:var(--forest);font-weight:700;">Sign up</a> or <a href="javascript:void(0)" onclick="hbShowAuth('login')" style="color:var(--forest);font-weight:700;">Log in</a> to post.</span>
+          <span id="hbAuthUser" style="display:none;" class="hb-user"></span>
+          <button id="hbLogoutBtn" style="display:none;" onclick="hbLogout()">Sign Out</button>
+        </div>
+
+        <div class="hb-grid">
+          <!-- ── Main column ── -->
+          <div>
+            <!-- Topic filter chips -->
+            <div class="hb-topic-bar" id="hbTopicBar">
+              <button class="hb-topic-chip active" data-hb-topic="all">All</button>
+              <button class="hb-topic-chip" data-hb-topic="housing">🏠 Housing</button>
+              <button class="hb-topic-chip" data-hb-topic="land-use">🏗️ Land Use</button>
+              <button class="hb-topic-chip" data-hb-topic="gondola">🚡 Gondola 3A</button>
+              <button class="hb-topic-chip" data-hb-topic="public-safety">🔥 Public Safety</button>
+              <button class="hb-topic-chip" data-hb-topic="budget-finance">💰 Budget</button>
+              <button class="hb-topic-chip" data-hb-topic="infrastructure">🚰 Infrastructure</button>
+              <button class="hb-topic-chip" data-hb-topic="environment">🌿 Environment</button>
+              <button class="hb-topic-chip" data-hb-topic="health-education">🏥 Health &amp; Education</button>
+              <button class="hb-topic-chip" data-hb-topic="legal-governance">⚖️ Legal &amp; Governance</button>
+              <button class="hb-topic-chip" data-hb-topic="transit">🚌 Transit</button>
+              <button class="hb-topic-chip" data-hb-topic="community">🤝 Community</button>
+              <button class="hb-topic-chip" data-hb-topic="other">💡 Other</button>
+            </div>
+
+            <!-- Compose new post -->
+            <div class="hb-compose" id="hbCompose">
+              <div class="hb-compose-header">
+                <div class="hb-compose-avatar" id="hbComposeAvatar">?</div>
+                <input type="text" id="hbComposeTitle" placeholder="Start a discussion..." onfocus="hbExpandCompose()">
+              </div>
+              <div class="hb-compose-expanded">
+                <textarea id="hbComposeBody" placeholder="Share your thoughts, concerns, or ideas with the community..."></textarea>
+
+                <!-- Tag selector -->
+                <div style="font-size:0.78rem;font-weight:600;color:#888;margin-bottom:4px;">Tag your post (select all that apply):</div>
+                <div class="hb-compose-tags" id="hbComposeTags">
+                  <button class="hb-compose-tag" data-hb-tag="housing">🏠 Housing</button>
+                  <button class="hb-compose-tag" data-hb-tag="land-use">🏗️ Land Use</button>
+                  <button class="hb-compose-tag" data-hb-tag="gondola">🚡 Gondola 3A</button>
+                  <button class="hb-compose-tag" data-hb-tag="public-safety">🔥 Public Safety</button>
+                  <button class="hb-compose-tag" data-hb-tag="budget-finance">💰 Budget</button>
+                  <button class="hb-compose-tag" data-hb-tag="infrastructure">🚰 Infrastructure</button>
+                  <button class="hb-compose-tag" data-hb-tag="environment">🌿 Environment</button>
+                  <button class="hb-compose-tag" data-hb-tag="health-education">🏥 Health &amp; Ed</button>
+                  <button class="hb-compose-tag" data-hb-tag="legal-governance">⚖️ Legal</button>
+                  <button class="hb-compose-tag" data-hb-tag="transit">🚌 Transit</button>
+                  <button class="hb-compose-tag" data-hb-tag="community">🤝 Community</button>
+                  <button class="hb-compose-tag" data-hb-tag="other">💡 Other</button>
+                </div>
+
+                <!-- Attachment preview area -->
+                <div class="hb-attach-preview" id="hbAttachPreview"></div>
+
+                <!-- Tone review nudge -->
+                <div class="hb-tone-nudge" id="hbToneNudge">
+                  <div class="hb-tone-nudge-title">⚡ Heads up — this might come across as a personal attack</div>
+                  <div class="hb-tone-original" id="hbToneOriginal"></div>
+                  <div style="font-size:0.82rem;color:#555;margin:4px 0;">Here's a way to make the same point without targeting someone personally:</div>
+                  <div class="hb-tone-suggested" id="hbToneSuggested"></div>
+                  <div class="hb-tone-actions">
+                    <button class="hb-tone-btn-use" onclick="hbUseSuggested()">Use suggested version</button>
+                    <button class="hb-tone-btn-keep" onclick="hbKeepOriginal()">Post as written</button>
+                    <button class="hb-tone-btn-edit" onclick="hbEditMore()">Let me edit more</button>
+                  </div>
+                </div>
+
+                <div class="hb-compose-actions">
+                  <div style="display:flex;gap:6px;">
+                    <button class="hb-attach-btn" onclick="hbTriggerAttach()">📎 Attach File</button>
+                    <input type="file" id="hbFileInput" accept=".pdf,.png,.jpg,.jpeg,.gif,.webp" multiple style="display:none;" onchange="hbHandleFiles(this)">
+                  </div>
+                  <button class="hb-post-btn" id="hbPostBtn" onclick="hbSubmitPost()" disabled>Post to Hub-Bub</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sort bar -->
+            <div class="hb-sort-bar">
+              <span>Sort:</span>
+              <button class="hb-sort-opt active" data-hb-sort="newest" onclick="hbSortPosts('newest')">Newest</button>
+              <button class="hb-sort-opt" data-hb-sort="most-discussed" onclick="hbSortPosts('most-discussed')">Most Discussed</button>
+              <button class="hb-sort-opt" data-hb-sort="most-upvoted" onclick="hbSortPosts('most-upvoted')">Most Upvoted</button>
+            </div>
+
+            <!-- Posts feed -->
+            <div id="hbPostsFeed">
+              <div class="hb-loading" id="hbLoading"><div class="hb-spinner"></div></div>
+              <div class="hb-empty" id="hbEmpty" style="display:none;">
+                <div class="hb-empty-icon">💬</div>
+                <div class="hb-empty-text">No discussions yet</div>
+                <div class="hb-empty-sub">Be the first to start a conversation about what matters to Telluride.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Sidebar ── -->
+          <div>
+            <div class="hb-sidebar">
+              <div class="hb-sidebar-title">🔥 Trending Discussions</div>
+              <div id="hbTrending">
+                <div style="font-size:0.8rem;color:#aaa;padding:8px 0;">Loading...</div>
+              </div>
+            </div>
+
+            <div class="hb-sidebar" style="margin-top:14px;">
+              <div class="hb-sidebar-title">📊 Activity</div>
+              <div style="font-size:0.82rem;color:#666;line-height:1.6;">
+                <div style="display:flex;justify-content:space-between;padding:4px 0;"><span>Posts today</span><strong id="hbStatToday">0</strong></div>
+                <div style="display:flex;justify-content:space-between;padding:4px 0;"><span>This week</span><strong id="hbStatWeek">0</strong></div>
+                <div style="display:flex;justify-content:space-between;padding:4px 0;"><span>Total discussions</span><strong id="hbStatTotal">0</strong></div>
+                <div style="display:flex;justify-content:space-between;padding:4px 0;"><span>Contributors</span><strong id="hbStatUsers">0</strong></div>
+              </div>
+            </div>
+
+            <div class="hb-guidelines">
+              <div class="hb-guidelines-title">Community Guidelines</div>
+              <p style="margin:4px 0;">Hub-Bub is an <strong>uncensored</strong> public forum for the Telluride community. All viewpoints are welcome. That said:</p>
+              <p style="margin:4px 0;">&#8226; <strong>Stay on topic</strong> — tag your posts so others can find what matters to them.</p>
+              <p style="margin:4px 0;">&#8226; <strong>Attack ideas, not people</strong> — disagree vigorously, but our AI will gently suggest alternatives if your post targets an individual.</p>
+              <p style="margin:4px 0;">&#8226; <strong>Back it up</strong> — attach documents, link to sources, cite meeting minutes.</p>
+              <p style="margin:4px 0;">&#8226; <strong>This is a public record</strong> — posts may be referenced in formal public comment processes.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -9004,9 +9464,10 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     layout.classList.toggle('news-active', btn.dataset.tab === 'news');
     layout.classList.toggle('legals-active', btn.dataset.tab === 'legals');
     layout.classList.toggle('aboutus-active', btn.dataset.tab === 'about-us');
-    // Hide subscribe bar when on Subscribe or About Us tab
+    layout.classList.toggle('hubbub-active', btn.dataset.tab === 'hub-bub');
+    // Hide subscribe bar when on Subscribe, About Us, or Hub-Bub tab
     const subBar = document.querySelector('.subscribe-bar');
-    if (subBar) subBar.style.display = (btn.dataset.tab === 'subscribe' || btn.dataset.tab === 'about-us') ? 'none' : '';
+    if (subBar) subBar.style.display = (btn.dataset.tab === 'subscribe' || btn.dataset.tab === 'about-us' || btn.dataset.tab === 'hub-bub') ? 'none' : '';
   });
 });
 
@@ -13560,6 +14021,48 @@ function showSubmitStatus(msg, type) {
 })();
 </script>
 
+<!-- ══════════ HUB-BUB AUTH MODAL ══════════ -->
+<div class="hb-modal-overlay" id="hbAuthModal">
+  <div class="hb-modal">
+    <!-- Sign Up form -->
+    <div id="hbSignupForm">
+      <h3>Join Hub-Bub</h3>
+      <div class="hb-modal-error" id="hbSignupError"></div>
+      <div class="hb-modal-info" id="hbSignupInfo"></div>
+      <label>Display Name</label>
+      <input type="text" id="hbSignupName" placeholder="How you'll appear to the community">
+      <label>Email Address</label>
+      <input type="email" id="hbSignupEmail" placeholder="your@email.com">
+      <label>Password</label>
+      <input type="password" id="hbSignupPassword" placeholder="At least 6 characters">
+      <button class="hb-modal-btn" onclick="hbDoSignup()">Create Account</button>
+      <div class="hb-modal-switch">Already have an account? <a onclick="hbShowAuth('login')">Log in</a></div>
+    </div>
+    <!-- Login form -->
+    <div id="hbLoginForm" style="display:none;">
+      <h3>Log in to Hub-Bub</h3>
+      <div class="hb-modal-error" id="hbLoginError"></div>
+      <label>Email Address</label>
+      <input type="email" id="hbLoginEmail" placeholder="your@email.com">
+      <label>Password</label>
+      <input type="password" id="hbLoginPassword" placeholder="Your password">
+      <button class="hb-modal-btn" onclick="hbDoLogin()">Log In</button>
+      <div class="hb-modal-switch">Don't have an account? <a onclick="hbShowAuth('signup')">Sign up</a></div>
+    </div>
+    <!-- Verify email message -->
+    <div id="hbVerifyForm" style="display:none;">
+      <h3>Check Your Email</h3>
+      <div style="font-size:0.88rem;color:#555;line-height:1.6;margin-bottom:14px;">
+        We've sent a verification link to <strong id="hbVerifyEmail"></strong>. Please click the link in that email to activate your account, then come back and log in.
+      </div>
+      <button class="hb-modal-btn" onclick="hbShowAuth('login')">Go to Login</button>
+    </div>
+    <div style="text-align:right;margin-top:8px;">
+      <button onclick="hbCloseAuth()" style="background:none;border:none;color:#aaa;cursor:pointer;font-size:0.82rem;">Close</button>
+    </div>
+  </div>
+</div>
+
 <!-- ══════════ MOBILE BOTTOM NAVIGATION ══════════ -->
 <div class="mobile-more-backdrop" id="mobileMoreBackdrop"></div>
 <div class="mobile-more-menu" id="mobileMoreMenu">
@@ -13583,6 +14086,9 @@ function showSubmitStatus(msg, type) {
   </button>
   <button class="mobile-more-item" data-tab="subscribe">
     <span class="nav-icon">📬</span> Subscribe
+  </button>
+  <button class="mobile-more-item" data-tab="hub-bub">
+    <span class="nav-icon">💬</span> Hub-Bub
   </button>
   <button class="mobile-more-item" data-tab="about-us">
     <span class="nav-icon">ℹ️</span> About Us
@@ -13650,10 +14156,11 @@ function showSubmitStatus(msg, type) {
       layout.classList.toggle('news-active', tabName === 'news');
       layout.classList.toggle('legals-active', tabName === 'legals');
       layout.classList.toggle('aboutus-active', tabName === 'about-us');
+      layout.classList.toggle('hubbub-active', tabName === 'hub-bub');
     }
-    // Hide subscribe bar when on Subscribe or About Us tab
+    // Hide subscribe bar when on Subscribe, About Us, or Hub-Bub tab
     const subBar = document.querySelector('.subscribe-bar');
-    if (subBar) subBar.style.display = (tabName === 'subscribe' || tabName === 'about-us') ? 'none' : '';
+    if (subBar) subBar.style.display = (tabName === 'subscribe' || tabName === 'about-us' || tabName === 'hub-bub') ? 'none' : '';
     // Scroll to top of content
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -13763,6 +14270,877 @@ function closeSubscribeModal() {
   overlay.classList.remove('open');
   document.body.style.overflow = '';
 }
+</script>
+
+<!-- ══════════ FIREBASE SDK (compat mode for single-file simplicity) ══════════ -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
+
+<script>
+/* ══════════════════════════════════════════════════════════════
+   HUB-BUB FORUM ENGINE
+   Firebase-backed community discussion forum for Telluride Gov Hub
+   ══════════════════════════════════════════════════════════════ */
+(function() {
+  'use strict';
+
+  // ─── Firebase Configuration ───
+  // TODO: Replace with your Firebase project config from console.firebase.google.com
+  const FIREBASE_CONFIG = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT.appspot.com",
+    messagingSenderId: "YOUR_SENDER_ID",
+    appId: "YOUR_APP_ID"
+  };
+
+  // ─── Initialize Firebase ───
+  let app, auth, db, storage;
+  let hbUser = null;           // Current authenticated user
+  let hbCurrentTopic = 'all';  // Active topic filter
+  let hbCurrentSort = 'newest';
+  let hbPosts = [];            // Cached posts
+  let hbPendingAttachments = []; // Files queued for upload
+  let hbToneOriginalText = '';
+  let hbFirebaseReady = false;
+
+  try {
+    if (FIREBASE_CONFIG.apiKey !== 'YOUR_API_KEY') {
+      app = firebase.initializeApp(FIREBASE_CONFIG);
+      auth = firebase.auth();
+      db = firebase.firestore();
+      storage = firebase.storage();
+      hbFirebaseReady = true;
+    }
+  } catch(e) {
+    console.warn('Hub-Bub: Firebase not configured yet.', e);
+  }
+
+  // ─── Topic Definitions (matches Hub's existing taxonomy) ───
+  const HB_TOPICS = {
+    'housing': { label: 'Housing', icon: '🏠' },
+    'land-use': { label: 'Land Use', icon: '🏗️' },
+    'gondola': { label: 'Gondola 3A', icon: '🚡' },
+    'public-safety': { label: 'Public Safety', icon: '🔥' },
+    'budget-finance': { label: 'Budget & Finance', icon: '💰' },
+    'infrastructure': { label: 'Infrastructure', icon: '🚰' },
+    'environment': { label: 'Environment', icon: '🌿' },
+    'health-education': { label: 'Health & Education', icon: '🏥' },
+    'legal-governance': { label: 'Legal & Governance', icon: '⚖️' },
+    'transit': { label: 'Transit', icon: '🚌' },
+    'community': { label: 'Community', icon: '🤝' },
+    'other': { label: 'Other', icon: '💡' }
+  };
+
+  // ═══════════════════════════════
+  // AUTH FUNCTIONS
+  // ═══════════════════════════════
+
+  window.hbShowAuth = function(mode) {
+    var modal = document.getElementById('hbAuthModal');
+    modal.classList.add('open');
+    document.getElementById('hbSignupForm').style.display = mode === 'signup' ? '' : 'none';
+    document.getElementById('hbLoginForm').style.display = mode === 'login' ? '' : 'none';
+    document.getElementById('hbVerifyForm').style.display = mode === 'verify' ? '' : 'none';
+    // Clear errors
+    ['hbSignupError','hbLoginError'].forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) { el.style.display = 'none'; el.textContent = ''; }
+    });
+  };
+
+  window.hbCloseAuth = function() {
+    document.getElementById('hbAuthModal').classList.remove('open');
+  };
+
+  window.hbDoSignup = function() {
+    if (!hbFirebaseReady) { hbShowConfigNeeded(); return; }
+    var name = document.getElementById('hbSignupName').value.trim();
+    var email = document.getElementById('hbSignupEmail').value.trim();
+    var pass = document.getElementById('hbSignupPassword').value;
+    var errEl = document.getElementById('hbSignupError');
+
+    if (!name) { errEl.textContent = 'Please enter a display name.'; errEl.style.display = ''; return; }
+    if (!email) { errEl.textContent = 'Please enter your email.'; errEl.style.display = ''; return; }
+    if (pass.length < 6) { errEl.textContent = 'Password must be at least 6 characters.'; errEl.style.display = ''; return; }
+
+    auth.createUserWithEmailAndPassword(email, pass)
+      .then(function(cred) {
+        return cred.user.updateProfile({ displayName: name }).then(function() {
+          return cred.user.sendEmailVerification();
+        }).then(function() {
+          // Save user profile to Firestore
+          return db.collection('users').doc(cred.user.uid).set({
+            displayName: name,
+            createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+            postCount: 0
+          });
+        });
+      })
+      .then(function() {
+        document.getElementById('hbVerifyEmail').textContent = email;
+        hbShowAuth('verify');
+      })
+      .catch(function(err) {
+        errEl.textContent = err.message; errEl.style.display = '';
+      });
+  };
+
+  window.hbDoLogin = function() {
+    if (!hbFirebaseReady) { hbShowConfigNeeded(); return; }
+    var email = document.getElementById('hbLoginEmail').value.trim();
+    var pass = document.getElementById('hbLoginPassword').value;
+    var errEl = document.getElementById('hbLoginError');
+
+    if (!email || !pass) { errEl.textContent = 'Please enter email and password.'; errEl.style.display = ''; return; }
+
+    auth.signInWithEmailAndPassword(email, pass)
+      .then(function(cred) {
+        if (!cred.user.emailVerified) {
+          errEl.textContent = 'Please verify your email first. Check your inbox for the verification link.';
+          errEl.style.display = '';
+          auth.signOut();
+          return;
+        }
+        hbCloseAuth();
+      })
+      .catch(function(err) {
+        errEl.textContent = err.message; errEl.style.display = '';
+      });
+  };
+
+  window.hbLogout = function() {
+    if (auth) auth.signOut();
+  };
+
+  function hbUpdateAuthUI(user) {
+    hbUser = user;
+    var statusEl = document.getElementById('hbAuthStatus');
+    var userEl = document.getElementById('hbAuthUser');
+    var logoutBtn = document.getElementById('hbLogoutBtn');
+    var avatarEl = document.getElementById('hbComposeAvatar');
+
+    if (user && user.emailVerified) {
+      var name = user.displayName || 'User';
+      statusEl.style.display = 'none';
+      userEl.style.display = '';
+      userEl.textContent = name;
+      logoutBtn.style.display = '';
+      avatarEl.textContent = name.charAt(0).toUpperCase();
+      avatarEl.style.background = 'var(--forest)';
+    } else {
+      statusEl.style.display = '';
+      userEl.style.display = 'none';
+      logoutBtn.style.display = 'none';
+      avatarEl.textContent = '?';
+      avatarEl.style.background = '#999';
+    }
+  }
+
+  // Listen for auth state changes
+  if (hbFirebaseReady) {
+    auth.onAuthStateChanged(function(user) {
+      hbUpdateAuthUI(user);
+      if (user && user.emailVerified) {
+        hbLoadPosts();
+      }
+    });
+  }
+
+  function hbShowConfigNeeded() {
+    alert('Hub-Bub is almost ready! The site administrator needs to configure Firebase. See the setup instructions in the source code.');
+  }
+
+  // ═══════════════════════════════
+  // COMPOSE / POST FUNCTIONS
+  // ═══════════════════════════════
+
+  window.hbExpandCompose = function() {
+    var compose = document.getElementById('hbCompose');
+    compose.classList.add('expanded');
+    if (!hbUser || !hbUser.emailVerified) {
+      hbShowAuth('signup');
+      compose.classList.remove('expanded');
+    }
+  };
+
+  // Tag selection in compose
+  document.querySelectorAll('.hb-compose-tag').forEach(function(tag) {
+    tag.addEventListener('click', function() {
+      tag.classList.toggle('selected');
+      hbUpdatePostBtn();
+    });
+  });
+
+  // Topic filter chips
+  document.querySelectorAll('.hb-topic-chip').forEach(function(chip) {
+    chip.addEventListener('click', function() {
+      document.querySelectorAll('.hb-topic-chip').forEach(function(c) { c.classList.remove('active'); });
+      chip.classList.add('active');
+      hbCurrentTopic = chip.dataset.hbTopic;
+      hbRenderPosts();
+    });
+  });
+
+  // Enable/disable post button
+  function hbUpdatePostBtn() {
+    var title = document.getElementById('hbComposeTitle').value.trim();
+    var body = document.getElementById('hbComposeBody').value.trim();
+    var tags = document.querySelectorAll('.hb-compose-tag.selected');
+    document.getElementById('hbPostBtn').disabled = !(title && body && tags.length > 0);
+  }
+  document.getElementById('hbComposeTitle').addEventListener('input', hbUpdatePostBtn);
+  document.getElementById('hbComposeBody').addEventListener('input', hbUpdatePostBtn);
+
+  // File attachments
+  window.hbTriggerAttach = function() {
+    document.getElementById('hbFileInput').click();
+  };
+
+  window.hbHandleFiles = function(input) {
+    var files = Array.from(input.files);
+    files.forEach(function(file) {
+      if (file.size > 10 * 1024 * 1024) {
+        alert('File "' + file.name + '" is too large (max 10MB).');
+        return;
+      }
+      hbPendingAttachments.push(file);
+    });
+    hbRenderAttachPreview();
+    input.value = '';
+  };
+
+  function hbRenderAttachPreview() {
+    var container = document.getElementById('hbAttachPreview');
+    container.innerHTML = '';
+    hbPendingAttachments.forEach(function(file, i) {
+      var item = document.createElement('div');
+      item.className = 'hb-attach-item';
+      var icon = file.type.startsWith('image/') ? '🖼️' : '📄';
+      item.innerHTML = icon + ' ' + hbEsc(file.name) + ' <span class="hb-remove-attach" onclick="hbRemoveAttach(' + i + ')">✕</span>';
+      container.appendChild(item);
+    });
+  }
+
+  window.hbRemoveAttach = function(idx) {
+    hbPendingAttachments.splice(idx, 1);
+    hbRenderAttachPreview();
+  };
+
+  // ═══════════════════════════════
+  // AI TONE REVIEW
+  // ═══════════════════════════════
+
+  // Personal attack detection patterns
+  var ATTACK_PATTERNS = [
+    // Direct "you are" insults
+    /\byou(?:'re| are)\s+(?:an?\s+)?(?:idiot|moron|fool|liar|fraud|crook|corrupt|scum|trash|joke|disgrace|pathetic|worthless|incompetent|stupid|dumb|ignorant|clueless)/i,
+    // Name-calling with "is/are"
+    /\b(?:he|she|they|mayor|council\s*(?:man|woman|member|person)?|commissioner|manager|director|board\s*member)\s+(?:is|are)\s+(?:an?\s+)?(?:idiot|moron|fool|liar|fraud|crook|corrupt|scum|trash|joke|disgrace|pathetic|worthless|incompetent|stupid|dumb|ignorant|clueless)/i,
+    // "[Name] is a/an [insult]"
+    /\b[A-Z][a-z]+(?:\s[A-Z][a-z]+)?\s+is\s+(?:an?\s+)?(?:idiot|moron|fool|liar|fraud|crook|corrupt|scum|trash|joke|disgrace|pathetic|worthless|incompetent|stupid|dumb|ignorant|clueless)/i,
+    // Imperative attacks
+    /\b(?:shut\s+up|go\s+away|get\s+lost|drop\s+dead|go\s+to\s+hell|f[\*u]ck\s+(?:you|off|yourself))\b/i,
+    // Dehumanizing language
+    /\b(?:piece\s+of\s+(?:shit|crap|garbage)|human\s+garbage|waste\s+of\s+(?:space|oxygen|skin))\b/i,
+    // Threats
+    /\b(?:i'?ll|we'?ll|gonna|going\s+to)\s+(?:destroy|ruin|end|hurt|get)\s+(?:you|him|her|them)\b/i,
+    // General profanity used at someone
+    /\b(?:f[\*u]ck(?:ing)?|shit(?:ty)?|ass(?:hole)?|bitch|bastard|damn(?:ed)?)\s+(?:you|him|her|them|[A-Z][a-z]+)\b/i,
+  ];
+
+  // Suggestion templates — keyed by the type of attack detected
+  var TONE_SUGGESTIONS = {
+    'competence': 'I have serious concerns about the decision-making in this area. The outcomes suggest a need for different leadership or expertise.',
+    'character': 'I question the motivations behind this decision. The community deserves more transparency about why this path was chosen.',
+    'general': 'I feel strongly that this approach is wrong. Here is why I think the community would be better served by a different direction:',
+    'profanity': 'I am deeply frustrated by what I am seeing here. This situation demands accountability and real answers from our leaders.',
+    'threat': 'I believe there need to be consequences for these decisions. The community should hold leadership accountable through proper channels.',
+    'dismissive': 'I fundamentally disagree with this perspective. Here is why I think the evidence points in a different direction:'
+  };
+
+  function hbAnalyzeTone(text) {
+    if (!text || text.length < 10) return null;
+
+    for (var i = 0; i < ATTACK_PATTERNS.length; i++) {
+      if (ATTACK_PATTERNS[i].test(text)) {
+        var category = 'general';
+        if (i <= 0) category = 'competence';
+        else if (i <= 2) category = 'character';
+        else if (i <= 3) category = 'dismissive';
+        else if (i <= 4) category = 'profanity';
+        else if (i === 5) category = 'threat';
+        else category = 'profanity';
+
+        return {
+          flagged: true,
+          category: category,
+          suggestion: TONE_SUGGESTIONS[category] || TONE_SUGGESTIONS['general']
+        };
+      }
+    }
+    return { flagged: false };
+  }
+
+  window.hbUseSuggested = function() {
+    var suggested = document.getElementById('hbToneSuggested').textContent;
+    document.getElementById('hbComposeBody').value = suggested;
+    document.getElementById('hbToneNudge').classList.remove('visible');
+    hbUpdatePostBtn();
+  };
+
+  window.hbKeepOriginal = function() {
+    document.getElementById('hbComposeBody').value = hbToneOriginalText;
+    document.getElementById('hbToneNudge').classList.remove('visible');
+    hbDoActualPost();
+  };
+
+  window.hbEditMore = function() {
+    document.getElementById('hbToneNudge').classList.remove('visible');
+    document.getElementById('hbComposeBody').focus();
+  };
+
+  // ═══════════════════════════════
+  // POST SUBMISSION
+  // ═══════════════════════════════
+
+  window.hbSubmitPost = function() {
+    if (!hbUser || !hbUser.emailVerified) { hbShowAuth('login'); return; }
+    if (!hbFirebaseReady) { hbShowConfigNeeded(); return; }
+
+    var body = document.getElementById('hbComposeBody').value.trim();
+
+    // Run tone check first
+    var toneResult = hbAnalyzeTone(body);
+    if (toneResult && toneResult.flagged) {
+      hbToneOriginalText = body;
+      document.getElementById('hbToneOriginal').textContent = '"' + body.substring(0, 200) + (body.length > 200 ? '...' : '') + '"';
+      document.getElementById('hbToneSuggested').textContent = toneResult.suggestion;
+      document.getElementById('hbToneNudge').classList.add('visible');
+      return; // Don't post yet — let user choose
+    }
+
+    hbDoActualPost();
+  };
+
+  function hbDoActualPost() {
+    var title = document.getElementById('hbComposeTitle').value.trim();
+    var body = document.getElementById('hbComposeBody').value.trim();
+    var selectedTags = [];
+    document.querySelectorAll('.hb-compose-tag.selected').forEach(function(t) {
+      selectedTags.push(t.dataset.hbTag);
+    });
+
+    if (!title || !body || selectedTags.length === 0) return;
+
+    var postBtn = document.getElementById('hbPostBtn');
+    postBtn.disabled = true;
+    postBtn.textContent = 'Posting...';
+
+    // Upload attachments first, then create post
+    var uploadPromises = hbPendingAttachments.map(function(file) {
+      var path = 'hub-bub/' + hbUser.uid + '/' + Date.now() + '_' + file.name;
+      var ref = storage.ref(path);
+      return ref.put(file).then(function(snap) {
+        return snap.ref.getDownloadURL().then(function(url) {
+          return { name: file.name, url: url, type: file.type };
+        });
+      });
+    });
+
+    Promise.all(uploadPromises).then(function(attachments) {
+      return db.collection('posts').add({
+        authorId: hbUser.uid,
+        authorName: hbUser.displayName || 'Anonymous',
+        title: title,
+        body: body,
+        tags: selectedTags,
+        attachments: attachments,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+        replyCount: 0,
+        upvotes: 0,
+        downvotes: 0,
+        upvoters: [],
+        downvoters: []
+      });
+    }).then(function() {
+      // Update user post count
+      db.collection('users').doc(hbUser.uid).update({
+        postCount: firebase.firestore.FieldValue.increment(1)
+      }).catch(function() {});
+
+      // Reset compose
+      document.getElementById('hbComposeTitle').value = '';
+      document.getElementById('hbComposeBody').value = '';
+      document.querySelectorAll('.hb-compose-tag.selected').forEach(function(t) { t.classList.remove('selected'); });
+      hbPendingAttachments = [];
+      hbRenderAttachPreview();
+      document.getElementById('hbCompose').classList.remove('expanded');
+      document.getElementById('hbToneNudge').classList.remove('visible');
+      postBtn.textContent = 'Post to Hub-Bub';
+      postBtn.disabled = true;
+
+      hbLoadPosts();
+    }).catch(function(err) {
+      console.error('Hub-Bub post error:', err);
+      alert('Could not publish your post. Please try again.');
+      postBtn.textContent = 'Post to Hub-Bub';
+      postBtn.disabled = false;
+    });
+  }
+
+  // ═══════════════════════════════
+  // LOAD & RENDER POSTS
+  // ═══════════════════════════════
+
+  function hbLoadPosts() {
+    if (!hbFirebaseReady) {
+      hbRenderDemoPosts();
+      return;
+    }
+
+    var loadEl = document.getElementById('hbLoading');
+    if (loadEl) loadEl.style.display = '';
+
+    db.collection('posts').orderBy('createdAt', 'desc').limit(100).get()
+      .then(function(snap) {
+        hbPosts = [];
+        snap.forEach(function(doc) {
+          var d = doc.data();
+          d.id = doc.id;
+          hbPosts.push(d);
+        });
+        hbRenderPosts();
+        hbRenderTrending();
+        hbRenderStats();
+      })
+      .catch(function(err) {
+        console.error('Hub-Bub load error:', err);
+        if (loadEl) loadEl.style.display = 'none';
+        hbRenderDemoPosts();
+      });
+  }
+
+  function hbRenderPosts() {
+    var feed = document.getElementById('hbPostsFeed');
+    var loadEl = document.getElementById('hbLoading');
+    var emptyEl = document.getElementById('hbEmpty');
+    if (loadEl) loadEl.style.display = 'none';
+
+    // Filter by topic
+    var filtered = hbPosts;
+    if (hbCurrentTopic !== 'all') {
+      filtered = hbPosts.filter(function(p) {
+        return p.tags && p.tags.indexOf(hbCurrentTopic) !== -1;
+      });
+    }
+
+    // Sort
+    if (hbCurrentSort === 'most-discussed') {
+      filtered.sort(function(a, b) { return (b.replyCount || 0) - (a.replyCount || 0); });
+    } else if (hbCurrentSort === 'most-upvoted') {
+      filtered.sort(function(a, b) { return ((b.upvotes||0) - (b.downvotes||0)) - ((a.upvotes||0) - (a.downvotes||0)); });
+    }
+
+    // Clear existing posts (keep loading/empty divs)
+    var existingPosts = feed.querySelectorAll('.hb-post');
+    existingPosts.forEach(function(p) { p.remove(); });
+
+    if (filtered.length === 0) {
+      if (emptyEl) emptyEl.style.display = '';
+      return;
+    }
+    if (emptyEl) emptyEl.style.display = 'none';
+
+    filtered.forEach(function(post) {
+      feed.appendChild(hbCreatePostCard(post));
+    });
+  }
+
+  function hbCreatePostCard(post) {
+    var card = document.createElement('div');
+    card.className = 'hb-post';
+    card.dataset.postId = post.id;
+
+    var initial = (post.authorName || '?').charAt(0).toUpperCase();
+    var timeStr = post.createdAt ? hbTimeAgo(post.createdAt.toDate ? post.createdAt.toDate() : new Date(post.createdAt)) : 'just now';
+    var isLong = post.body && post.body.length > 400;
+    var bodyText = isLong ? post.body.substring(0, 400) + '...' : (post.body || '');
+    var score = (post.upvotes || 0) - (post.downvotes || 0);
+    var myUid = hbUser ? hbUser.uid : '';
+    var votedUp = post.upvoters && post.upvoters.indexOf(myUid) !== -1;
+    var votedDown = post.downvoters && post.downvoters.indexOf(myUid) !== -1;
+
+    var tagsHtml = '';
+    if (post.tags && post.tags.length) {
+      tagsHtml = '<div class="hb-post-tags">' + post.tags.map(function(t) {
+        var info = HB_TOPICS[t] || { icon: '💡', label: t };
+        return '<span class="hb-post-tag">' + info.icon + ' ' + hbEsc(info.label) + '</span>';
+      }).join('') + '</div>';
+    }
+
+    var attachHtml = '';
+    if (post.attachments && post.attachments.length) {
+      attachHtml = '<div class="hb-post-attachments">' + post.attachments.map(function(a) {
+        var icon = a.type && a.type.startsWith('image/') ? '🖼️' : '📄';
+        return '<a class="hb-post-attach" href="' + hbEsc(a.url) + '" target="_blank">' + icon + ' ' + hbEsc(a.name) + '</a>';
+      }).join('') + '</div>';
+    }
+
+    card.innerHTML =
+      '<div class="hb-post-head">' +
+        '<div class="hb-post-avatar">' + initial + '</div>' +
+        '<div><span class="hb-post-author">' + hbEsc(post.authorName || 'Anonymous') + '</span>' +
+        '<div class="hb-post-meta">' + timeStr + '</div></div>' +
+      '</div>' +
+      '<div class="hb-post-title">' + hbEsc(post.title || '') + '</div>' +
+      tagsHtml +
+      '<div class="hb-post-body' + (isLong ? ' truncated' : '') + '">' + hbEsc(bodyText) + '</div>' +
+      (isLong ? '<button class="hb-read-more" onclick="hbExpandPost(this)">Read more</button>' : '') +
+      attachHtml +
+      '<div class="hb-post-foot">' +
+        '<button class="hb-vote-btn' + (votedUp ? ' voted-up' : '') + '" onclick="hbVote(\'' + post.id + '\',\'up\')" title="Upvote">▲ <span>' + (post.upvotes || 0) + '</span></button>' +
+        '<button class="hb-vote-btn' + (votedDown ? ' voted-down' : '') + '" onclick="hbVote(\'' + post.id + '\',\'down\')" title="Downvote">▼ <span>' + (post.downvotes || 0) + '</span></button>' +
+        '<button class="hb-reply-toggle" onclick="hbToggleReplies(\'' + post.id + '\')">💬 <span>' + (post.replyCount || 0) + '</span> replies</button>' +
+      '</div>' +
+      '<div class="hb-replies" id="hb-replies-' + post.id + '" style="display:none;"></div>';
+
+    return card;
+  }
+
+  window.hbExpandPost = function(btn) {
+    var bodyEl = btn.previousElementSibling;
+    bodyEl.classList.remove('truncated');
+    // Find the full text from cached posts
+    var card = btn.closest('.hb-post');
+    var pid = card.dataset.postId;
+    var post = hbPosts.find(function(p) { return p.id === pid; });
+    if (post) bodyEl.textContent = post.body;
+    btn.remove();
+  };
+
+  // ═══════════════════════════════
+  // VOTING
+  // ═══════════════════════════════
+
+  window.hbVote = function(postId, dir) {
+    if (!hbUser || !hbUser.emailVerified) { hbShowAuth('login'); return; }
+    if (!hbFirebaseReady) return;
+
+    var ref = db.collection('posts').doc(postId);
+    var uid = hbUser.uid;
+
+    db.runTransaction(function(tx) {
+      return tx.get(ref).then(function(doc) {
+        var data = doc.data();
+        var upvoters = data.upvoters || [];
+        var downvoters = data.downvoters || [];
+
+        if (dir === 'up') {
+          if (upvoters.indexOf(uid) !== -1) {
+            // Already upvoted — remove
+            upvoters = upvoters.filter(function(u) { return u !== uid; });
+          } else {
+            upvoters.push(uid);
+            downvoters = downvoters.filter(function(u) { return u !== uid; });
+          }
+        } else {
+          if (downvoters.indexOf(uid) !== -1) {
+            downvoters = downvoters.filter(function(u) { return u !== uid; });
+          } else {
+            downvoters.push(uid);
+            upvoters = upvoters.filter(function(u) { return u !== uid; });
+          }
+        }
+
+        tx.update(ref, {
+          upvoters: upvoters,
+          downvoters: downvoters,
+          upvotes: upvoters.length,
+          downvotes: downvoters.length
+        });
+      });
+    }).then(function() {
+      hbLoadPosts();
+    }).catch(function(err) {
+      console.error('Vote error:', err);
+    });
+  };
+
+  // ═══════════════════════════════
+  // REPLIES
+  // ═══════════════════════════════
+
+  window.hbToggleReplies = function(postId) {
+    var container = document.getElementById('hb-replies-' + postId);
+    if (!container) return;
+
+    if (container.style.display === 'none') {
+      container.style.display = '';
+      hbLoadReplies(postId, container);
+    } else {
+      container.style.display = 'none';
+    }
+  };
+
+  function hbLoadReplies(postId, container) {
+    if (!hbFirebaseReady) {
+      container.innerHTML = '<div style="font-size:0.82rem;color:#aaa;padding:8px;">Replies will appear here once Firebase is configured.</div>';
+      hbAddReplyCompose(postId, container);
+      return;
+    }
+
+    container.innerHTML = '<div class="hb-loading"><div class="hb-spinner"></div></div>';
+
+    db.collection('posts').doc(postId).collection('replies').orderBy('createdAt', 'asc').limit(50).get()
+      .then(function(snap) {
+        container.innerHTML = '';
+        snap.forEach(function(doc) {
+          var r = doc.data();
+          var initial = (r.authorName || '?').charAt(0).toUpperCase();
+          var time = r.createdAt ? hbTimeAgo(r.createdAt.toDate ? r.createdAt.toDate() : new Date(r.createdAt)) : 'just now';
+          var div = document.createElement('div');
+          div.className = 'hb-reply';
+          div.innerHTML =
+            '<div class="hb-reply-head">' +
+              '<div class="hb-reply-avatar">' + initial + '</div>' +
+              '<span class="hb-reply-author">' + hbEsc(r.authorName || 'Anonymous') + '</span>' +
+              '<span class="hb-reply-time">' + time + '</span>' +
+            '</div>' +
+            '<div class="hb-reply-body">' + hbEsc(r.body || '') + '</div>';
+          container.appendChild(div);
+        });
+        hbAddReplyCompose(postId, container);
+      })
+      .catch(function(err) {
+        container.innerHTML = '<div style="color:#c0392b;font-size:0.82rem;padding:8px;">Could not load replies.</div>';
+        console.error('Load replies error:', err);
+      });
+  }
+
+  function hbAddReplyCompose(postId, container) {
+    var div = document.createElement('div');
+    div.className = 'hb-reply-compose';
+    div.innerHTML =
+      '<textarea placeholder="Write a reply..." id="hb-reply-text-' + postId + '"></textarea>' +
+      '<button onclick="hbPostReply(\'' + postId + '\')">Reply</button>';
+    container.appendChild(div);
+  }
+
+  window.hbPostReply = function(postId) {
+    if (!hbUser || !hbUser.emailVerified) { hbShowAuth('login'); return; }
+    if (!hbFirebaseReady) return;
+
+    var textarea = document.getElementById('hb-reply-text-' + postId);
+    var body = textarea.value.trim();
+    if (!body) return;
+
+    // Tone check on reply too
+    var tone = hbAnalyzeTone(body);
+    if (tone && tone.flagged) {
+      if (!confirm('This reply may come across as a personal attack. Suggested alternative:\n\n"' + (TONE_SUGGESTIONS[tone.category] || TONE_SUGGESTIONS['general']) + '"\n\nPost as written anyway?')) {
+        return;
+      }
+    }
+
+    var btn = textarea.nextElementSibling;
+    btn.disabled = true;
+    btn.textContent = '...';
+
+    db.collection('posts').doc(postId).collection('replies').add({
+      authorId: hbUser.uid,
+      authorName: hbUser.displayName || 'Anonymous',
+      body: body,
+      createdAt: firebase.firestore.FieldValue.serverTimestamp()
+    }).then(function() {
+      // Increment reply count on parent post
+      return db.collection('posts').doc(postId).update({
+        replyCount: firebase.firestore.FieldValue.increment(1)
+      });
+    }).then(function() {
+      textarea.value = '';
+      btn.disabled = false;
+      btn.textContent = 'Reply';
+      hbLoadReplies(postId, document.getElementById('hb-replies-' + postId));
+      // Update local cache
+      var post = hbPosts.find(function(p) { return p.id === postId; });
+      if (post) post.replyCount = (post.replyCount || 0) + 1;
+      hbRenderTrending();
+    }).catch(function(err) {
+      console.error('Reply error:', err);
+      btn.disabled = false;
+      btn.textContent = 'Reply';
+    });
+  };
+
+  // ═══════════════════════════════
+  // SORT
+  // ═══════════════════════════════
+
+  window.hbSortPosts = function(sortBy) {
+    hbCurrentSort = sortBy;
+    document.querySelectorAll('.hb-sort-opt').forEach(function(o) {
+      o.classList.toggle('active', o.dataset.hbSort === sortBy);
+    });
+    hbRenderPosts();
+  };
+
+  // ═══════════════════════════════
+  // TRENDING SIDEBAR
+  // ═══════════════════════════════
+
+  function hbRenderTrending() {
+    var container = document.getElementById('hbTrending');
+    if (!container) return;
+
+    // Aggregate by tag
+    var tagCounts = {};
+    hbPosts.forEach(function(p) {
+      (p.tags || []).forEach(function(t) {
+        if (!tagCounts[t]) tagCounts[t] = { posts: 0, replies: 0, latest: '' };
+        tagCounts[t].posts++;
+        tagCounts[t].replies += (p.replyCount || 0);
+        if (!tagCounts[t].latest || (p.title && p.title.length > 0)) tagCounts[t].latest = p.title;
+      });
+    });
+
+    var sorted = Object.keys(tagCounts).sort(function(a, b) {
+      return (tagCounts[b].posts + tagCounts[b].replies) - (tagCounts[a].posts + tagCounts[a].replies);
+    });
+
+    if (sorted.length === 0) {
+      container.innerHTML = '<div style="font-size:0.8rem;color:#aaa;padding:8px 0;">No discussions yet.</div>';
+      return;
+    }
+
+    container.innerHTML = '';
+    sorted.slice(0, 8).forEach(function(tag) {
+      var info = HB_TOPICS[tag] || { icon: '💡', label: tag };
+      var item = document.createElement('div');
+      item.className = 'hb-trending-item';
+      item.onclick = function() {
+        // Filter to this topic
+        document.querySelectorAll('.hb-topic-chip').forEach(function(c) { c.classList.remove('active'); });
+        var chip = document.querySelector('.hb-topic-chip[data-hb-topic="' + tag + '"]');
+        if (chip) chip.classList.add('active');
+        hbCurrentTopic = tag;
+        hbRenderPosts();
+      };
+      item.innerHTML =
+        '<div class="hb-trending-topic">' + info.icon + ' ' + hbEsc(info.label) + '</div>' +
+        '<div class="hb-trending-count">' + tagCounts[tag].posts + ' posts · ' + tagCounts[tag].replies + ' replies</div>';
+      container.appendChild(item);
+    });
+  }
+
+  // ═══════════════════════════════
+  // STATS
+  // ═══════════════════════════════
+
+  function hbRenderStats() {
+    var now = new Date();
+    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    var weekAgo = new Date(today.getTime() - 7 * 86400000);
+    var todayCount = 0, weekCount = 0, users = {};
+
+    hbPosts.forEach(function(p) {
+      var d = p.createdAt ? (p.createdAt.toDate ? p.createdAt.toDate() : new Date(p.createdAt)) : null;
+      if (d && d >= today) todayCount++;
+      if (d && d >= weekAgo) weekCount++;
+      if (p.authorId) users[p.authorId] = true;
+    });
+
+    var el = function(id) { return document.getElementById(id); };
+    if (el('hbStatToday')) el('hbStatToday').textContent = todayCount;
+    if (el('hbStatWeek')) el('hbStatWeek').textContent = weekCount;
+    if (el('hbStatTotal')) el('hbStatTotal').textContent = hbPosts.length;
+    if (el('hbStatUsers')) el('hbStatUsers').textContent = Object.keys(users).length;
+  }
+
+  // ═══════════════════════════════
+  // DEMO POSTS (shown before Firebase is configured)
+  // ═══════════════════════════════
+
+  function hbRenderDemoPosts() {
+    var now = new Date();
+    hbPosts = [
+      {
+        id: 'demo-1',
+        authorName: 'Example User',
+        title: 'What happened at the Town Council meeting on the Wildfire Resiliency Code?',
+        body: 'I missed Tuesday\'s meeting but heard there was a big debate about the Colorado Wildfire Resiliency Code adoption. Can anyone who was there share what the key concerns were? Specifically interested in how the defensible space requirements will affect older homes on the north side of town.',
+        tags: ['public-safety', 'legal-governance'],
+        attachments: [],
+        createdAt: { toDate: function() { return new Date(now - 3600000); } },
+        replyCount: 4,
+        upvotes: 12,
+        downvotes: 1,
+        upvoters: [], downvoters: []
+      },
+      {
+        id: 'demo-2',
+        authorName: 'Mountain Resident',
+        title: 'Gondola 3A alternatives analysis — has anyone read the full report?',
+        body: 'The alternatives analysis document is 186 pages and I\'ve been working through it. Some key findings that jumped out: the traffic modeling assumes a 15% mode shift that seems optimistic given current transit ridership data. Also, the visual impact assessment methodology didn\'t include viewshed analysis from the Valley Floor. Would love to discuss with others who\'ve read it.',
+        tags: ['gondola', 'environment', 'transit'],
+        attachments: [{ name: 'gondola-3a-alternatives-summary.pdf', url: '#', type: 'application/pdf' }],
+        createdAt: { toDate: function() { return new Date(now - 7200000); } },
+        replyCount: 8,
+        upvotes: 23,
+        downvotes: 3,
+        upvoters: [], downvoters: []
+      },
+      {
+        id: 'demo-3',
+        authorName: 'Housing Advocate',
+        title: 'Deed-restricted housing waitlist transparency',
+        body: 'Has anyone else noticed that the deed-restricted housing waitlist process is basically a black box? I\'ve been trying to get clarity on how units like Silver Jack 205 and Element 52 SW-102 are allocated. The current system lacks the transparency our community needs. I think we should push for quarterly public reports on waitlist status and allocation criteria.',
+        tags: ['housing', 'legal-governance'],
+        attachments: [],
+        createdAt: { toDate: function() { return new Date(now - 18000000); } },
+        replyCount: 15,
+        upvotes: 31,
+        downvotes: 2,
+        upvoters: [], downvoters: []
+      }
+    ];
+    hbRenderPosts();
+    hbRenderTrending();
+    hbRenderStats();
+  }
+
+  // ═══════════════════════════════
+  // UTILITIES
+  // ═══════════════════════════════
+
+  function hbEsc(s) {
+    if (!s) return '';
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(s));
+    return div.innerHTML;
+  }
+
+  function hbTimeAgo(date) {
+    var secs = Math.floor((new Date() - date) / 1000);
+    if (secs < 60) return 'just now';
+    if (secs < 3600) return Math.floor(secs / 60) + 'm ago';
+    if (secs < 86400) return Math.floor(secs / 3600) + 'h ago';
+    if (secs < 604800) return Math.floor(secs / 86400) + 'd ago';
+    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  }
+
+  // ─── Initialize on page load ───
+  if (!hbFirebaseReady) {
+    // Show demo content when Firebase isn't configured yet
+    setTimeout(hbRenderDemoPosts, 300);
+  } else {
+    hbLoadPosts();
+  }
+
+})();
 </script>
 </body>
 </html>
