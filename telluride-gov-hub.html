@@ -263,13 +263,17 @@
     .cp-sub-filters { margin-top: -8px; margin-bottom: 8px; }
     .cp-sub-filters .chip { font-size: 0.75rem; padding: 4px 10px; }
 
-    /* ── Deep Dive Submenu on Gov-Hub ── */
+    /* ── Deep Dive Submenu (full-width green bar) ── */
     .deep-dive-submenu {
-      margin-bottom: 16px;
-      padding: 16px 20px;
-      background: linear-gradient(135deg, rgba(33,68,60,0.06) 0%, rgba(166,143,87,0.08) 100%);
-      border-radius: 14px;
-      border-left: 4px solid var(--forest);
+      display: none;
+      width: 100%;
+      background: linear-gradient(135deg, #1a3a4a 0%, #21443c 40%, #2d5a3d 100%);
+      padding: 18px 0;
+    }
+    .deep-dive-submenu-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
     }
     .deep-dive-submenu-header {
       display: flex;
@@ -277,16 +281,16 @@
       gap: 8px;
       margin-bottom: 12px;
     }
-    .deep-dive-submenu-icon { font-size: 1.1rem; }
+    .deep-dive-submenu-icon { font-size: 1.1rem; filter: brightness(10); }
     .deep-dive-submenu-title {
       font-family: var(--font-heading);
       font-size: 1.05rem;
       font-weight: 800;
-      color: var(--text-primary);
+      color: #fff;
     }
     .deep-dive-submenu-desc {
       font-size: 0.82rem;
-      color: var(--text-secondary);
+      color: rgba(255,255,255,0.7);
       font-weight: 400;
     }
     .deep-dive-submenu-topics {
@@ -296,35 +300,36 @@
     }
     .deep-dive-topic-btn {
       padding: 8px 16px;
-      border: 1.5px solid rgba(33,68,60,0.2);
+      border: 1.5px solid rgba(255,255,255,0.35);
       border-radius: 24px;
-      background: #fff;
+      background: rgba(255,255,255,0.12);
       font-family: 'Inter', sans-serif;
       font-size: 0.82rem;
       font-weight: 600;
-      color: var(--forest);
+      color: #fff;
       cursor: pointer;
       transition: all 0.2s;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      backdrop-filter: blur(4px);
     }
     .deep-dive-topic-btn:hover {
-      background: var(--forest);
-      color: #fff;
-      border-color: var(--forest);
+      background: #fff;
+      color: var(--forest);
+      border-color: #fff;
       transform: translateY(-1px);
-      box-shadow: 0 3px 10px rgba(33,68,60,0.2);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.2);
     }
     .deep-dive-topic-btn .dd-arrow {
       font-size: 0.75rem;
       opacity: 0.6;
       transition: opacity 0.2s;
     }
-    .deep-dive-topic-btn:hover .dd-arrow { opacity: 1; }
+    .deep-dive-topic-btn:hover .dd-arrow { opacity: 1; color: var(--forest); }
     @media (max-width: 760px) {
-      .deep-dive-submenu { padding: 12px 14px; }
+      .deep-dive-submenu-inner { padding: 0 14px; }
       .deep-dive-submenu-desc { display: none; }
       .deep-dive-topic-btn { padding: 6px 12px; font-size: 0.78rem; }
     }
@@ -4199,6 +4204,18 @@
     <button class="subscribe-bar-btn" onclick="openSubscribeModal();">Subscribe to Your Topics</button>
   </div>
 
+  <!-- Deep Dive Topics Bar (full-width, shown on Gov-Hub tab) -->
+  <div class="deep-dive-submenu" id="deepDiveSubmenu">
+    <div class="deep-dive-submenu-inner">
+      <div class="deep-dive-submenu-header">
+        <span class="deep-dive-submenu-icon">🔍</span>
+        <span class="deep-dive-submenu-title">Deep Dive</span>
+        <span class="deep-dive-submenu-desc">— plain-English civic guides to major local issues</span>
+      </div>
+      <div class="deep-dive-submenu-topics" id="deepDiveTopicButtons"></div>
+    </div>
+  </div>
+
   <div class="container">
   <div class="main-layout">
 
@@ -4316,15 +4333,6 @@
 
     <!-- ══════════ MEETINGS TAB ══════════ -->
     <div class="tab-content active" id="tab-meetings">
-      <!-- Deep Dive Topics Submenu -->
-      <div class="deep-dive-submenu" id="deepDiveSubmenu">
-        <div class="deep-dive-submenu-header">
-          <span class="deep-dive-submenu-icon">🔍</span>
-          <span class="deep-dive-submenu-title">Deep Dive</span>
-          <span class="deep-dive-submenu-desc">— plain-English civic guides to major local issues</span>
-        </div>
-        <div class="deep-dive-submenu-topics" id="deepDiveTopicButtons"></div>
-      </div>
       <div class="filter-row">
         <span class="chip active-all" data-filter="all" data-tab-target="meetings">All</span>
         <span class="chip" data-filter="telluride" data-tab-target="meetings">Town of Telluride</span>
@@ -8246,7 +8254,12 @@ function populateDeepDiveSubmenu() {
   });
 }
 // Run on DOMContentLoaded
-document.addEventListener('DOMContentLoaded', populateDeepDiveSubmenu);
+document.addEventListener('DOMContentLoaded', function() {
+  populateDeepDiveSubmenu();
+  // Show Deep Dive bar since meetings (Gov-Hub) is the default tab
+  var ddBar = document.getElementById('deepDiveSubmenu');
+  if (ddBar) ddBar.style.display = '';
+});
 function renderLandUseTab() {
   const topicRow = document.getElementById('landUseTopicRow');
   const statusEl = document.getElementById('landUseStatus');
@@ -9863,6 +9876,8 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     layout.classList.toggle('aboutus-active', btn.dataset.tab === 'about-us');
     layout.classList.toggle('hubbub-active', btn.dataset.tab === 'hub-bub');
     layout.classList.toggle('communitypulse-active', btn.dataset.tab === 'community-pulse');
+    var ddBar = document.getElementById('deepDiveSubmenu');
+    if (ddBar) ddBar.style.display = (btn.dataset.tab === 'meetings') ? '' : 'none';
     // Hide subscribe bar when on Subscribe, About Us, or Hub-Bub tab
     const subBar = document.querySelector('.subscribe-bar');
     if (subBar) subBar.style.display = (btn.dataset.tab === 'subscribe' || btn.dataset.tab === 'about-us' || btn.dataset.tab === 'hub-bub') ? 'none' : '';
@@ -14918,6 +14933,8 @@ function showSubmitStatus(msg, type) {
       layout.classList.toggle('aboutus-active', tabName === 'about-us');
       layout.classList.toggle('hubbub-active', tabName === 'hub-bub');
       layout.classList.toggle('communitypulse-active', tabName === 'community-pulse');
+      var ddBar2 = document.getElementById('deepDiveSubmenu');
+      if (ddBar2) ddBar2.style.display = (tabName === 'meetings') ? '' : 'none';
     }
     // Hide subscribe bar when on Subscribe, About Us, or Hub-Bub tab
     const subBar = document.querySelector('.subscribe-bar');
