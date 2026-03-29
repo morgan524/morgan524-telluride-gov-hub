@@ -84,6 +84,17 @@
       margin: 0 auto;
       padding: 14px 36px;
     }
+    /* Google Translate widget */
+    .site-header-translate { margin-left: auto; flex-shrink: 0; }
+    .site-header-translate .goog-te-gadget { font-family: 'Inter', sans-serif !important; font-size: 0 !important; }
+    .site-header-translate .goog-te-gadget .goog-te-combo {
+      font-family: 'Inter', sans-serif; font-size: 0.82rem;
+      padding: 5px 8px; border: 1.5px solid var(--line); border-radius: 6px;
+      background: #fff; color: var(--forest); cursor: pointer; outline: none;
+    }
+    .site-header-translate .goog-te-gadget .goog-te-combo:hover { border-color: var(--forest); }
+    .goog-te-banner-frame, #goog-gt-tt { display: none !important; }
+    body { top: 0 !important; }
     .site-header-logo {
       flex-shrink: 0;
     }
@@ -3984,6 +3995,7 @@
       <a href="javascript:void(0)" onclick="switchTab('local-news')" style="cursor:pointer;">News</a>
       <a href="javascript:void(0)" onclick="switchTab('meetings')" class="active" style="cursor:pointer;">Tell-Hub</a>
     </nav>
+    <div class="site-header-translate" id="google_translate_element"></div>
   </header>
   <hr class="site-header-divider">
 
@@ -15381,5 +15393,18 @@ function closeSubscribeModal() {
 
 })();
 </script>
+
+<!-- Google Translate -->
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'es,fr,de,zh-CN,ja,ko,pt,ru,ar,hi,it,vi,tl,ne',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
