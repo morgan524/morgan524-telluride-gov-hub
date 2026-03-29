@@ -15045,181 +15045,177 @@ function closeSubscribeModal() {
    View-only aggregation of recent public posts from local organizations
    ══════════════════════════════════════════════════════════════ */
 
-// ── Community Pulse Sample Data ──
+// ── Community Pulse Sources & Data ──
+// Posts auto-expire after 5 days. Max 20 shown at a time.
+// Data refreshed every 6 hours with new relevant posts.
+const CP_SOURCES = {
+  'c7cc': { name: 'C7CC \u2014 Chair 7 Community Coalition', type: 'community', platform: 'facebook', url: 'https://www.facebook.com/groups/1076276483955655', logo: '' },
+  'fb-3395': { name: 'Telluride Community Board', type: 'community', platform: 'facebook', url: 'https://www.facebook.com/groups/3395262530783440', logo: '' },
+  'fb-2438': { name: 'Telluride Classifieds & Community', type: 'community', platform: 'facebook', url: 'https://www.facebook.com/groups/243846449146234', logo: '' },
+  'koto-carpool': { name: 'KOTO Community Carpool', type: 'community', platform: 'facebook', url: 'https://www.facebook.com/groups/kotocommunitycarpool', logo: '' },
+  'fb-2061': { name: 'Telluride Area Discussion', type: 'community', platform: 'facebook', url: 'https://www.facebook.com/groups/2061333304249532', logo: '' },
+  'yoga-fest': { name: 'Telluride Yoga Festival', type: 'arts', platform: 'facebook', url: 'https://www.facebook.com/groups/tellurideyogafestival', logo: '' },
+  'blues-brews': { name: 'Telluride Blues & Brews Festival', type: 'arts', platform: 'facebook', url: 'https://www.facebook.com/groups/telluridebluesbrewsfestivall', logo: '' },
+  'smc-dems': { name: 'San Miguel County Democrats', type: 'government', platform: 'instagram', url: 'https://www.instagram.com/sanmiguelctydemocrats/', logo: '' },
+  'humane': { name: 'Telluride Humane Society', type: 'nonprofits', platform: 'instagram', url: 'https://www.instagram.com/telluridehumanesociety/', logo: '' },
+  'skijoring': { name: 'Telluride Skijoring & Winter Celebration', type: 'arts', platform: 'instagram', url: 'https://www.instagram.com/trideskijoring/', logo: '' },
+  'rotary-ig': { name: 'Rotary Club of Telluride', type: 'clubs', platform: 'instagram', url: 'https://www.instagram.com/telluriderotary/', logo: 'https://clubrunner.blob.core.windows.net/00000003291/thumb/ClubLogo/clublogo.png' },
+  'telski': { name: 'Telluride Ski Resort', type: 'health', platform: 'instagram', url: 'https://www.instagram.com/tellurideski/', logo: '' },
+  'foundation': { name: 'Telluride Foundation', type: 'nonprofits', platform: 'instagram', url: 'https://www.instagram.com/telluridefoundation/', logo: '' },
+  'tchn': { name: 'Tri-County Health Network', type: 'health', platform: 'instagram', url: 'https://www.instagram.com/tchn_co/', logo: '' }
+};
+
+// Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
+// Each post expires 5 days after its postedAt date.
+const COMMUNITY_PULSE_CACHE_DATE = '2026-03-29';
+
 const COMMUNITY_PULSE_POSTS = [
   {
-    id: 'rotary-2026-03-28-1',
-    orgName: 'Rotary Club of Telluride',
-    orgType: 'clubs',
-    platform: 'facebook',
-    platformLabel: 'Facebook',
-    postedAt: '2026-03-28T15:30:00',
-    title: 'Volunteer Dinner This Friday',
-    excerpt: 'Rotary seeks volunteers for the scholarship dinner this Friday evening. Proceeds support local student programs and youth exchange opportunities.',
-    image: '',
-    originalUrl: 'https://www.facebook.com/TellurideRotary/',
-    websiteUrl: 'https://portal.clubrunner.ca/3291',
-    tags: ['Volunteer', 'Fundraiser', 'Youth'],
-    featured: true,
-    eventRelated: true,
-    logo: 'https://clubrunner.blob.core.windows.net/00000003291/thumb/ClubLogo/clublogo.png'
+    id: 'c7cc-001', sourceKey: 'c7cc',
+    postedAt: '2026-03-29T09:15:00',
+    title: 'Carhenge P&Z Work Session Recap',
+    excerpt: 'For those who missed Wednesday\u2019s work session, here\u2019s a quick summary of where the Carhenge PUD application stands. The commission asked pointed questions about density, parking offsets, and affordability tiers. Next step: formal public hearing date TBD.',
+    tags: ['Development', 'PUD', 'Carhenge'], featured: true, eventRelated: false
   },
   {
-    id: 'elks-2026-03-27-1',
-    orgName: 'Telluride Elks Lodge 692',
-    orgType: 'clubs',
-    platform: 'facebook',
-    platformLabel: 'Facebook',
-    postedAt: '2026-03-27T18:00:00',
-    title: 'Friday Night Dinner & Comedy Show',
-    excerpt: 'Join us this Friday for dinner and a live comedy show at the Lodge. Open to the community, all are welcome. Doors at 5 PM.',
-    image: '',
-    originalUrl: 'https://www.facebook.com/telluride.elks/',
-    websiteUrl: 'https://www.elks.org/lodges/home.cfm?LodgeNumber=692',
-    tags: ['Community', 'Entertainment', 'Dinner'],
-    featured: true,
-    eventRelated: true,
-    logo: 'https://www.elks.org/images/graphics/logo_bpoe_header.gif'
+    id: 'c7cc-002', sourceKey: 'c7cc',
+    postedAt: '2026-03-27T14:30:00',
+    title: 'Shandoka Open House Photos',
+    excerpt: 'Great turnout at the Shandoka Lot L open house at Ah Haa School. Lots of questions about building height, pedestrian access from town, and childcare space. Design Workshop had updated renderings on display.',
+    tags: ['Shandoka', 'Open House', 'Housing'], featured: false, eventRelated: false
   },
   {
-    id: 'stpats-2026-03-28-1',
-    orgName: "St. Patrick's Catholic Church",
-    orgType: 'churches',
-    platform: 'website',
-    platformLabel: 'Website',
-    postedAt: '2026-03-28T08:00:00',
-    title: 'Holy Week Schedule Posted',
-    excerpt: 'Palm Sunday Mass at 9 AM, Holy Thursday at 7 PM, Good Friday at 3 PM, Easter Vigil Saturday at 8 PM, Easter Sunday at 9 AM. Confessions and Rosary at 8:30 AM.',
-    image: '',
-    originalUrl: 'https://www.stpatrickstelluride.com/',
-    websiteUrl: 'https://www.stpatrickstelluride.com/',
-    tags: ['Service', 'Holy Week', 'Easter'],
-    featured: false,
-    eventRelated: true,
-    logo: ''
+    id: 'fb-3395-001', sourceKey: 'fb-3395',
+    postedAt: '2026-03-28T16:45:00',
+    title: 'Bear-proof trash cans now required',
+    excerpt: 'Reminder from the Town: bear-proof trash containers are now required for all residential properties. The bears are waking up and getting active. Secure your trash and bird feeders!',
+    tags: ['Wildlife', 'Town Notice', 'Bears'], featured: false, eventRelated: false
   },
   {
-    id: 'christpres-2026-03-27-1',
-    orgName: 'Christ Presbyterian Church',
-    orgType: 'churches',
-    platform: 'facebook',
-    platformLabel: 'Facebook',
-    postedAt: '2026-03-27T10:00:00',
-    title: 'Community Dinner Wednesday at 6 PM',
-    excerpt: 'All are welcome to join us for a free community dinner this Wednesday evening at 6 PM. No reservations needed.',
-    image: '',
-    originalUrl: 'https://www.facebook.com/christpresbyterianchurchtelluride/',
-    websiteUrl: 'https://christpresbyterianchurchtelluride.com/',
-    tags: ['Community', 'Dinner', 'Free'],
-    featured: false,
-    eventRelated: true,
-    logo: ''
+    id: 'fb-2438-001', sourceKey: 'fb-2438',
+    postedAt: '2026-03-29T08:00:00',
+    title: 'Free firewood \u2014 come and get it',
+    excerpt: 'Downed trees from the wind last week. Already bucked and split. First come first served. DM for address (near Society Turn).',
+    tags: ['Free', 'Community', 'Firewood'], featured: false, eventRelated: false
   },
   {
-    id: 'smc-2026-03-29-1',
-    orgName: 'San Miguel County',
-    orgType: 'government',
-    platform: 'website',
-    platformLabel: 'Website',
-    postedAt: '2026-03-29T09:00:00',
-    title: 'Wildfire Resiliency Code Public Hearing April 1',
-    excerpt: 'Public hearing on adopting Colorado Wildfire Resiliency Code and International WUI Code. Comments due by March 26. Hearing at 10 AM.',
-    image: '',
-    originalUrl: 'https://www.sanmiguelcountyco.gov/',
-    websiteUrl: 'https://www.sanmiguelcountyco.gov/',
-    tags: ['Government', 'Wildfire', 'Public Hearing'],
-    featured: true,
-    eventRelated: false,
-    logo: ''
+    id: 'carpool-001', sourceKey: 'koto-carpool',
+    postedAt: '2026-03-29T07:00:00',
+    title: 'Ride share: Norwood to Telluride, Mon\u2013Fri',
+    excerpt: 'Looking for a carpool buddy Norwood\u2192Telluride, leaving around 7:15 AM daily. Can share gas. Return trip around 5 PM. Comment or DM.',
+    tags: ['Carpool', 'Norwood', 'Commute'], featured: false, eventRelated: false
   },
   {
-    id: 'tmvoa-2026-03-26-1',
-    orgName: 'TMVOA',
-    orgType: 'government',
-    platform: 'website',
-    platformLabel: 'Website',
+    id: 'carpool-002', sourceKey: 'koto-carpool',
+    postedAt: '2026-03-27T18:20:00',
+    title: 'Ride offered: Telluride to Montrose airport Sat 4/5',
+    excerpt: 'Driving to MTJ Saturday April 5, departing Telluride ~10 AM. Room for 2 passengers + luggage. Venmo for gas appreciated.',
+    tags: ['Ride Share', 'Airport', 'Montrose'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-2061-001', sourceKey: 'fb-2061',
+    postedAt: '2026-03-28T11:00:00',
+    title: 'Road closure: Hwy 145 between Rico and Lizard Head',
+    excerpt: 'CDOT reports temporary closures this week for avalanche mitigation work. Check COtrip.org before heading south. Expect delays through Friday.',
+    tags: ['Road Closure', 'CDOT', 'Highway 145'], featured: true, eventRelated: false
+  },
+  {
+    id: 'yoga-001', sourceKey: 'yoga-fest',
+    postedAt: '2026-03-28T10:00:00',
+    title: 'Early-bird passes on sale now \u2014 June 25\u201328',
+    excerpt: 'Telluride Yoga Festival early-bird pricing ends April 15. Over 120 classes, workshops, and live music sessions in the mountains. All levels welcome.',
+    tags: ['Festival', 'Yoga', 'Early Bird'], featured: true, eventRelated: true
+  },
+  {
+    id: 'blues-001', sourceKey: 'blues-brews',
+    postedAt: '2026-03-27T12:00:00',
+    title: 'First wave of artists announced for Sept 18\u201320',
+    excerpt: 'Telluride Blues & Brews Festival has announced the first wave of performers for 2026. Full lineup and single-day passes coming soon. Mark your calendars!',
+    tags: ['Festival', 'Music', 'Blues'], featured: false, eventRelated: true
+  },
+  {
+    id: 'smc-dems-001', sourceKey: 'smc-dems',
+    postedAt: '2026-03-29T10:30:00',
+    title: 'County Assembly reminder: April 12',
+    excerpt: 'San Miguel County Democratic Assembly is April 12. Delegate registration closes April 5. Contact the party for precinct information and volunteer opportunities.',
+    tags: ['Politics', 'Assembly', 'Volunteer'], featured: false, eventRelated: true
+  },
+  {
+    id: 'humane-001', sourceKey: 'humane',
+    postedAt: '2026-03-29T11:00:00',
+    title: 'Meet Juniper \u2014 available for adoption!',
+    excerpt: 'Juniper is a 2-year-old heeler mix who loves hikes, belly rubs, and snowy adventures. Great with kids, good with other dogs. Foster-to-adopt available. Apply on our website!',
+    tags: ['Adoption', 'Dogs', 'Pets'], featured: true, eventRelated: false
+  },
+  {
+    id: 'humane-002', sourceKey: 'humane',
+    postedAt: '2026-03-26T09:00:00',
+    title: 'Foster homes needed for kitten season',
+    excerpt: 'Kitten season is upon us and we need foster families! We provide food, supplies, and vet care. You provide love and a warm spot. Application link in bio.',
+    tags: ['Foster', 'Cats', 'Volunteer'], featured: false, eventRelated: false
+  },
+  {
+    id: 'skijoring-001', sourceKey: 'skijoring',
+    postedAt: '2026-03-25T15:00:00',
+    title: 'Throwback to Main Street magic',
+    excerpt: 'Still buzzing from last month\u2019s inaugural Telluride Skijoring on Colorado Avenue! Planning is already underway for 2027. Want to volunteer or sponsor? DM us.',
+    tags: ['Skijoring', 'Events', 'Volunteer'], featured: false, eventRelated: false
+  },
+  {
+    id: 'rotary-ig-001', sourceKey: 'rotary-ig',
+    postedAt: '2026-03-28T13:00:00',
+    title: 'Scholarship applications due April 15',
+    excerpt: 'Telluride Rotary scholarships for graduating seniors \u2014 applications are open. Awards up to $2,500. See our website for details and application form.',
+    tags: ['Scholarships', 'Youth', 'Education'], featured: false, eventRelated: false
+  },
+  {
+    id: 'telski-001', sourceKey: 'telski',
+    postedAt: '2026-03-29T06:30:00',
+    title: 'Spring skiing conditions \u2014 base 72\u2033',
+    excerpt: 'Bluebird day ahead! 72-inch base, all lifts running. Prospect Bowl and Revelation are skiing great. Sunscreen and layers \u2014 spring conditions mean warm afternoons. Last day April 6.',
+    tags: ['Snow Report', 'Skiing', 'Conditions'], featured: true, eventRelated: false
+  },
+  {
+    id: 'telski-002', sourceKey: 'telski',
+    postedAt: '2026-03-27T07:00:00',
+    title: 'Free gondola rides continue through summer',
+    excerpt: 'Reminder: the gondola between Telluride and Mountain Village is free year-round for everyone. Summer scenic rides start in June. Great for hikers and sightseers.',
+    tags: ['Gondola', 'Free', 'Transportation'], featured: false, eventRelated: false
+  },
+  {
+    id: 'foundation-001', sourceKey: 'foundation',
+    postedAt: '2026-03-28T09:00:00',
+    title: 'Spring grant cycle opens April 1',
+    excerpt: 'Telluride Foundation\u2019s spring grant cycle opens Tuesday. Grants support environment, arts, education, athletics, health, and human services across the three-county region. Apply by May 15.',
+    tags: ['Grants', 'Nonprofits', 'Funding'], featured: false, eventRelated: false
+  },
+  {
+    id: 'tchn-001', sourceKey: 'tchn',
+    postedAt: '2026-03-29T08:30:00',
+    title: 'Free flu & COVID boosters this Saturday',
+    excerpt: 'Tri-County Health Network is offering free flu shots and updated COVID boosters this Saturday 10 AM\u20132 PM at the Norwood Town Hall. No appointment needed. All ages welcome.',
+    tags: ['Health', 'Vaccines', 'Free'], featured: false, eventRelated: true
+  },
+  {
+    id: 'tchn-002', sourceKey: 'tchn',
     postedAt: '2026-03-26T14:00:00',
-    title: 'Annual Meeting & Board Elections April 10',
-    excerpt: 'The Telluride Mountain Village Owners Association annual meeting is scheduled for April 10. Board nominations are open through April 3.',
-    image: '',
-    originalUrl: 'https://tmvoa.org/',
-    websiteUrl: 'https://tmvoa.org/',
-    tags: ['HOA', 'Elections', 'Annual Meeting'],
-    featured: false,
-    eventRelated: true,
-    logo: ''
+    title: 'Mental health first aid training \u2014 April 8',
+    excerpt: 'Free 8-hour Mental Health First Aid certification course at the Telluride Conference Center. Learn to recognize signs and respond to mental health crises. Register on our website.',
+    tags: ['Mental Health', 'Training', 'Free'], featured: false, eventRelated: true
   },
   {
-    id: 'norwood-rec-2026-03-28-1',
-    orgName: 'Norwood Parks & Recreation',
-    orgType: 'health',
-    platform: 'facebook',
-    platformLabel: 'Facebook',
-    postedAt: '2026-03-28T12:00:00',
-    title: 'Youth Soccer Registration Open',
-    excerpt: 'Registration is now open for spring youth soccer. Ages 5-14. Season starts April 12. Register at the recreation center or online.',
-    image: '',
-    originalUrl: 'https://www.facebook.com/NorwoodParksAndRec/',
-    websiteUrl: 'https://www.norwoodcolorado.com/',
-    tags: ['Youth', 'Soccer', 'Registration'],
-    featured: false,
-    eventRelated: true,
-    logo: ''
-  },
-  {
-    id: 'ah-haa-2026-03-27-1',
-    orgName: 'Ah Haa School for the Arts',
-    orgType: 'arts',
-    platform: 'instagram',
-    platformLabel: 'Instagram',
-    postedAt: '2026-03-27T16:00:00',
-    title: 'Spring Workshop Series Begins Next Week',
-    excerpt: 'Ceramics, watercolor, and printmaking workshops start next week. All skill levels welcome. Early-bird pricing ends Friday.',
-    image: '',
-    originalUrl: 'https://www.instagram.com/ahhaaschool/',
-    websiteUrl: 'https://ahhaa.org/',
-    tags: ['Arts', 'Workshops', 'Education'],
-    featured: false,
-    eventRelated: false,
-    logo: ''
-  },
-  {
-    id: 'library-2026-03-26-1',
-    orgName: 'Wilkinson Public Library',
-    orgType: 'nonprofits',
-    platform: 'website',
-    platformLabel: 'Website',
-    postedAt: '2026-03-26T10:00:00',
-    title: 'Author Talk Series: Colorado History Night',
-    excerpt: 'Join us Thursday at 6 PM for an author reading and Q&A about early mining history in the San Juans. Free admission.',
-    image: '',
-    originalUrl: 'https://telluridelibrary.org/',
-    websiteUrl: 'https://telluridelibrary.org/',
-    tags: ['Library', 'History', 'Author Talk'],
-    featured: false,
-    eventRelated: true,
-    logo: ''
-  },
-  {
-    id: 'telschool-2026-03-28-1',
-    orgName: 'Telluride School District R-1',
-    orgType: 'schools',
-    platform: 'website',
-    platformLabel: 'Website',
-    postedAt: '2026-03-28T07:00:00',
-    title: 'Spring Break Reminder: March 30 - April 3',
-    excerpt: 'No school March 30 through April 3. Classes resume Monday, April 6. Have a safe and restful break!',
-    image: '',
-    originalUrl: 'https://www.telluride.k12.co.us/',
-    websiteUrl: 'https://www.telluride.k12.co.us/',
-    tags: ['School', 'Spring Break'],
-    featured: false,
-    eventRelated: false,
-    logo: ''
+    id: 'fb-3395-002', sourceKey: 'fb-3395',
+    postedAt: '2026-03-25T20:00:00',
+    title: 'Lost dog near Town Park \u2014 black lab mix',
+    excerpt: 'Has anyone seen a black lab mix near Town Park? Wearing a red collar, answers to Bandit. Last seen around 5 PM near the skate park. Please call if spotted.',
+    tags: ['Lost Pet', 'Community', 'Help'], featured: false, eventRelated: false
   }
 ];
 
-// ── Community Pulse State ──
+const CP_MAX_POSTS = 20;
+const CP_EXPIRY_DAYS = 5;
+
+// ── Community Pulse State ──// ── Community Pulse State ──
 let cpTimeWindow = '48h';
 let cpTypeFilter = 'all';
 let cpPlatformFilter = 'all';
@@ -15237,26 +15233,36 @@ function cpRelativeTime(isoStr) {
   return diffD + ' day' + (diffD === 1 ? '' : 's') + ' ago';
 }
 
+function cpGetSource(p) {
+  return CP_SOURCES[p.sourceKey] || { name: 'Unknown', type: 'community', platform: 'website', url: '#', logo: '' };
+}
+
 function cpFilterPosts() {
   const now = new Date();
+  const expiryMs = CP_EXPIRY_DAYS * 24 * 3600000;
+
+  // Time window for display filter
   let windowMs = 48 * 3600000;
   if (cpTimeWindow === '72h') windowMs = 72 * 3600000;
   else if (cpTimeWindow === '7d') windowMs = 7 * 24 * 3600000;
 
-  return COMMUNITY_PULSE_POSTS.filter(function(p) {
-    // Time window
+  const filtered = COMMUNITY_PULSE_POSTS.filter(function(p) {
+    const src = cpGetSource(p);
     const posted = new Date(p.postedAt);
+    // Hard expiry: remove posts older than 5 days
+    if ((now - posted) > expiryMs) return false;
+    // Display time window filter
     if ((now - posted) > windowMs) return false;
     // Type filter
-    if (cpTypeFilter !== 'all' && p.orgType !== cpTypeFilter) return false;
+    if (cpTypeFilter !== 'all' && src.type !== cpTypeFilter) return false;
     // Platform filter
-    if (cpPlatformFilter !== 'all' && p.platform !== cpPlatformFilter) return false;
+    if (cpPlatformFilter !== 'all' && src.platform !== cpPlatformFilter) return false;
     // Event only
     if (cpEventOnly && !p.eventRelated) return false;
     // Search
     if (cpSearchTerm) {
-      const s = cpSearchTerm.toLowerCase();
-      if (p.orgName.toLowerCase().indexOf(s) === -1 &&
+      var s = cpSearchTerm.toLowerCase();
+      if (src.name.toLowerCase().indexOf(s) === -1 &&
           p.title.toLowerCase().indexOf(s) === -1 &&
           p.excerpt.toLowerCase().indexOf(s) === -1 &&
           !p.tags.some(function(t) { return t.toLowerCase().indexOf(s) !== -1; })) return false;
@@ -15265,6 +15271,9 @@ function cpFilterPosts() {
   }).sort(function(a, b) {
     return new Date(b.postedAt) - new Date(a.postedAt);
   });
+
+  // Cap at 20 posts
+  return filtered.slice(0, CP_MAX_POSTS);
 }
 
 function renderCommunityPulse() {
@@ -15279,11 +15288,12 @@ function renderCommunityPulse() {
     const featured = posts.filter(function(p) { return p.featured; }).slice(0, 3);
     if (featured.length > 0) {
       featuredEl.innerHTML = featured.map(function(p) {
-        return '<a class="link-card" href="' + p.originalUrl + '" target="_blank" rel="noopener">' +
+        var src = cpGetSource(p);
+        return '<a class="link-card" href="' + src.url + '" target="_blank" rel="noopener">' +
           '<div class="link-icon">' + (p.eventRelated ? '\ud83d\udce3' : '\ud83d\udccc') + '</div>' +
           '<h4>' + p.title + '</h4>' +
           '<p>' + p.excerpt.substring(0, 100) + (p.excerpt.length > 100 ? '\u2026' : '') + '</p>' +
-          '<div class="link-source">' + p.orgName + ' \u00b7 ' + p.platformLabel + '</div>' +
+          '<div class="link-source">' + src.name + ' \u00b7 ' + src.platform.charAt(0).toUpperCase() + src.platform.slice(1) + '</div>' +
         '</a>';
       }).join('');
       featuredEl.parentElement.style.display = '';
@@ -15300,40 +15310,36 @@ function renderCommunityPulse() {
 
   let html = '';
   posts.forEach(function(p) {
-    const logoHtml = p.logo
-      ? '<div class="card-logo" style="width:72px;height:72px;min-width:72px;"><img src="' + p.logo + '" alt="' + p.orgName + '" style="width:100%;height:100%;object-fit:contain;border-radius:10px;" loading="lazy"></div>'
+    var src = cpGetSource(p);
+    const logoHtml = src.logo
+      ? '<div class="card-logo" style="width:72px;height:72px;min-width:72px;"><img src="' + src.logo + '" alt="' + src.name + '" style="width:100%;height:100%;object-fit:contain;border-radius:10px;" loading="lazy"></div>'
       : '<div class="card-logo" style="width:72px;height:72px;min-width:72px;display:flex;align-items:center;justify-content:center;background:rgba(33,68,60,0.08);border-radius:10px;font-size:1.5rem;">\u25ce</div>';
 
     const tagsHtml = p.tags.map(function(t) {
       return '<span class="legal-meta-tag tag-type">' + t + '</span>';
     }).join('');
 
-    const imageHtml = p.image
-      ? '<div class="community-pulse-thumb"><img src="' + p.image + '" alt="' + p.title + '" loading="lazy"></div>'
-      : '';
+    const imageHtml = '';
 
-    const platformIcon = { facebook: '\ud83d\udcd8', instagram: '\ud83d\udcf7', website: '\ud83c\udf10', youtube: '\u25b6\ufe0f' }[p.platform] || '\ud83d\udd17';
+    const platformIcon = { facebook: '\ud83d\udcd8', instagram: '\ud83d\udcf7', website: '\ud83c\udf10', youtube: '\u25b6\ufe0f' }[src.platform] || '\ud83d\udd17';
 
-    html += '<div class="card community-pulse-card" data-pulse-type="' + p.orgType + '" data-pulse-platform="' + p.platform + '">';
+    html += '<div class="card community-pulse-card" data-pulse-type="' + src.type + '" data-pulse-platform="' + src.platform + '">';
     html += logoHtml;
     html += '<div class="card-body">';
     html += '<div class="community-pulse-topline">';
     html += '<div>';
-    html += '<span style="display:inline-block; font-size:0.72rem; padding:2px 8px; background:rgba(33,68,60,0.08); color:var(--forest); border-radius:6px; font-weight:600;">' + p.orgType.charAt(0).toUpperCase() + p.orgType.slice(1) + '</span> ';
-    html += '<span style="display:inline-block; font-size:0.72rem; padding:2px 8px; background:rgba(166,143,87,0.12); color:var(--accent); border-radius:6px; font-weight:600;">' + platformIcon + ' ' + p.platformLabel + '</span>';
+    html += '<span style="display:inline-block; font-size:0.72rem; padding:2px 8px; background:rgba(33,68,60,0.08); color:var(--forest); border-radius:6px; font-weight:600;">' + src.type.charAt(0).toUpperCase() + src.type.slice(1) + '</span> ';
+    html += '<span style="display:inline-block; font-size:0.72rem; padding:2px 8px; background:rgba(166,143,87,0.12); color:var(--accent); border-radius:6px; font-weight:600;">' + platformIcon + ' ' + src.platform.charAt(0).toUpperCase() + src.platform.slice(1) + '</span>';
     html += '</div>';
     html += '<div class="community-pulse-time">' + cpRelativeTime(p.postedAt) + '</div>';
     html += '</div>';
-    html += '<h3><a href="' + p.originalUrl + '" target="_blank" rel="noopener">' + p.orgName + '</a></h3>';
+    html += '<h3><a href="' + src.url + '" target="_blank" rel="noopener">' + src.name + '</a></h3>';
     html += '<div class="meta" style="margin-bottom:4px;">' + p.title + '</div>';
     html += '<div class="description">' + p.excerpt + '</div>';
     html += imageHtml;
     html += '<div style="display:flex; gap:6px; flex-wrap:wrap; margin-top:10px;">' + tagsHtml + '</div>';
     html += '<div class="card-actions" style="margin-top:10px;">';
-    html += '<a href="' + p.originalUrl + '" target="_blank" rel="noopener" class="cal-btn">View Original Post</a>';
-    if (p.websiteUrl && p.websiteUrl !== p.originalUrl) {
-      html += '<a href="' + p.websiteUrl + '" target="_blank" rel="noopener" class="agenda-link">Visit Organization</a>';
-    }
+    html += '<a href="' + src.url + '" target="_blank" rel="noopener" class="cal-btn">View Original Post</a>';
     html += '</div>';
     html += '<div class="community-pulse-note">Comments stay on the original platform.</div>';
     html += '</div></div>';
