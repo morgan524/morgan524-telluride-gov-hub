@@ -223,6 +223,46 @@
       display: none;
     }
     /* ── Subscribe Bar ── */
+    /* ── Community Pulse ── */
+    .community-pulse-card { align-items: flex-start; }
+    .community-pulse-card .card-logo { width: 92px; height: 92px; border-radius: 14px; }
+    .community-pulse-card .card-body { display: block; }
+    .community-pulse-featured-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    @media (max-width: 900px) {
+      .community-pulse-featured-row { grid-template-columns: 1fr; }
+    }
+    .community-pulse-search-input {
+      flex: 1; min-width: 240px; padding: 11px 14px;
+      border: 1.5px solid var(--line); border-radius: 12px;
+      background: #fff; font-size: 0.88rem; color: var(--text-primary);
+    }
+    .community-pulse-search-input:focus {
+      outline: none; border-color: var(--forest);
+      box-shadow: 0 0 0 3px rgba(33,68,60,0.08);
+    }
+    .community-pulse-note { font-size: 0.72rem; color: var(--text-muted); margin-top: 6px; }
+    .community-pulse-thumb {
+      margin-top: 10px; border-radius: 12px; overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.06); max-width: 420px;
+    }
+    .community-pulse-thumb img { width: 100%; display: block; object-fit: cover; max-height: 220px; }
+    .community-pulse-topline {
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    }
+    .community-pulse-time { font-size: 0.72rem; color: var(--text-muted); font-weight: 600; }
+    .main-layout.communitypulse-active .sidebar,
+    .main-layout.communitypulse-active .expand-pill-right,
+    .main-layout.communitypulse-active .left-sidebar { display: none !important; }
+    #tab-community-pulse .card h3 { font-size: 1.2rem; }
+    #tab-community-pulse .card .description { font-size: 0.84rem; line-height: 1.55; }
+    #tab-community-pulse .card .meta { font-size: 0.76rem; }
+    .cp-sub-filters { margin-top: -8px; margin-bottom: 8px; }
+    .cp-sub-filters .chip { font-size: 0.75rem; padding: 4px 10px; }
+
     /* ── Deep Dive Submenu on Gov-Hub ── */
     .deep-dive-submenu {
       margin-bottom: 16px;
@@ -4134,6 +4174,7 @@
       <button class="tab-btn" data-tab="local-news">Local News</button>
       <button class="tab-btn" data-tab="links">Local Groups</button>
       <button class="tab-btn" data-tab="housing-search">Housing</button>
+      <button class="tab-btn" data-tab="community-pulse">Community Pulse</button>
       <button class="tab-btn" data-tab="about-us">About Us</button>
     </nav>
     <div class="site-header-translate" id="google_translate_element"></div>
@@ -5564,7 +5605,88 @@
     </div>
 
     <!-- ── About Us Tab ── -->
-    <div class="tab-content" id="tab-about-us">
+    <!-- ══════════ COMMUNITY PULSE TAB ══════════ -->
+    <div class="tab-content" id="tab-community-pulse">
+      <!-- Intro / hero panel -->
+      <div style="margin-bottom:18px; padding:20px 22px; background:linear-gradient(135deg, rgba(33,68,60,0.07) 0%, rgba(166,143,87,0.10) 100%); border-radius:14px; border-left:4px solid var(--accent-green);">
+        <h3 style="margin:0 0 8px 0; font-size:1.15rem; color:var(--text-primary); font-family:var(--font-heading);">Community Pulse</h3>
+        <p style="margin:0 0 10px 0; font-size:0.88rem; color:var(--text-secondary); line-height:1.55;">
+          Recent public posts from local organizations, clubs, churches, schools, nonprofits, and community groups.
+          Read updates here, then click through to the original source to respond directly on Facebook, Instagram, or the source platform.
+        </p>
+        <p style="margin:0; font-size:0.78rem; color:var(--text-muted); line-height:1.5; font-style:italic;">
+          Livable Telluride highlights recent public posts for awareness and discovery. Comments and replies happen only on the original source.
+        </p>
+      </div>
+
+      <!-- Time window filters -->
+      <div class="filter-row" id="communityPulseTimeFilters">
+        <span class="chip active-all" data-pulse-window="48h">Last 48 Hours</span>
+        <span class="chip" data-pulse-window="72h">Last 72 Hours</span>
+        <span class="chip" data-pulse-window="7d">Last 7 Days</span>
+      </div>
+
+      <!-- Source / organization-type filters -->
+      <div class="filter-row" id="communityPulseTypeFilters">
+        <span class="chip active-all" data-pulse-type="all">All</span>
+        <span class="chip" data-pulse-type="government">Government</span>
+        <span class="chip" data-pulse-type="clubs">Clubs &amp; Service</span>
+        <span class="chip" data-pulse-type="churches">Churches</span>
+        <span class="chip" data-pulse-type="schools">Schools &amp; Youth</span>
+        <span class="chip" data-pulse-type="arts">Arts &amp; Events</span>
+        <span class="chip" data-pulse-type="health">Health &amp; Recreation</span>
+        <span class="chip" data-pulse-type="nonprofits">Nonprofits</span>
+      </div>
+
+      <!-- Platform filters -->
+      <div class="filter-row cp-sub-filters" id="communityPulsePlatformFilters">
+        <span class="chip active-all" data-pulse-platform="all">All Platforms</span>
+        <span class="chip" data-pulse-platform="facebook">Facebook</span>
+        <span class="chip" data-pulse-platform="instagram">Instagram</span>
+        <span class="chip" data-pulse-platform="website">Website Posts</span>
+        <span class="chip" data-pulse-platform="youtube">YouTube</span>
+      </div>
+
+      <!-- Search row -->
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:18px; align-items:center;">
+        <input type="text" id="communityPulseSearch" placeholder="Search organizations, keywords, or topics"
+          class="community-pulse-search-input" />
+        <label style="display:inline-flex; align-items:center; gap:8px; font-size:0.8rem; color:var(--text-secondary); font-weight:600; cursor:pointer;">
+          <input type="checkbox" id="communityPulseEventOnly" style="accent-color: var(--forest);" />
+          Only event-related posts
+        </label>
+      </div>
+
+      <!-- Worth Knowing Today -->
+      <div class="left-sidebar-card" style="margin-bottom:18px;">
+        <div class="left-sidebar-title">Worth Knowing Today</div>
+        <div class="community-pulse-featured-row" id="communityPulseFeatured"></div>
+      </div>
+
+      <!-- Main feed -->
+      <div id="community-pulse-content">
+        <div class="loading"><div class="spinner"></div><br>Loading recent community updates\u2026</div>
+      </div>
+
+      <!-- Transparency / sourcing block -->
+      <div class="left-sidebar-card" style="margin-top:22px;">
+        <div class="left-sidebar-title">Where These Updates Come From</div>
+        <div style="font-size:0.82rem; color:var(--text-secondary); line-height:1.65;">
+          <p style="margin:0 0 10px 0;">
+            Community Pulse includes recent public posts from approved local organizations, clubs, churches, schools, nonprofits, and public entities.
+          </p>
+          <p style="margin:0 0 10px 0;">
+            Livable Telluride does not host comments on this page. To reply, react, or join the conversation, please visit the original source.
+          </p>
+          <p style="margin:0;">
+            Want us to include a local organization?
+            <a href="javascript:void(0)" onclick="document.getElementById('addClubModal').style.display='flex'" style="color:var(--forest); font-weight:600;">Suggest a Source</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+        <div class="tab-content" id="tab-about-us">
 
       <!-- Hero Banner -->
       <div style="position:relative;width:100%;border-radius:var(--radius);overflow:hidden;margin-bottom:32px;background:linear-gradient(135deg,#1a332c 0%,#21443c 40%,#2d5a4e 100%);min-height:340px;display:flex;align-items:center;">
@@ -9740,6 +9862,7 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     layout.classList.toggle('legals-active', btn.dataset.tab === 'legals');
     layout.classList.toggle('aboutus-active', btn.dataset.tab === 'about-us');
     layout.classList.toggle('hubbub-active', btn.dataset.tab === 'hub-bub');
+    layout.classList.toggle('communitypulse-active', btn.dataset.tab === 'community-pulse');
     // Hide subscribe bar when on Subscribe, About Us, or Hub-Bub tab
     const subBar = document.querySelector('.subscribe-bar');
     if (subBar) subBar.style.display = (btn.dataset.tab === 'subscribe' || btn.dataset.tab === 'about-us' || btn.dataset.tab === 'hub-bub') ? 'none' : '';
@@ -14725,6 +14848,9 @@ function showSubmitStatus(msg, type) {
   <button class="mobile-more-item" data-tab="subscribe">
     <span class="nav-icon">📬</span> Subscribe
   </button>
+  <button class="mobile-more-item" data-tab="community-pulse">
+    <span class="nav-icon">◎</span> Community Pulse
+  </button>
   <button class="mobile-more-item" data-tab="about-us">
     <span class="nav-icon">ℹ️</span> About Us
   </button>
@@ -14791,6 +14917,7 @@ function showSubmitStatus(msg, type) {
       layout.classList.toggle('legals-active', tabName === 'legals');
       layout.classList.toggle('aboutus-active', tabName === 'about-us');
       layout.classList.toggle('hubbub-active', tabName === 'hub-bub');
+      layout.classList.toggle('communitypulse-active', tabName === 'community-pulse');
     }
     // Hide subscribe bar when on Subscribe, About Us, or Hub-Bub tab
     const subBar = document.querySelector('.subscribe-bar');
@@ -14914,7 +15041,369 @@ function closeSubscribeModal() {
 
 <script>
 /* ══════════════════════════════════════════════════════════════
-   HUB-BUB FORUM ENGINE
+   COMMUNITY PULSE ENGINE
+   View-only aggregation of recent public posts from local organizations
+   ══════════════════════════════════════════════════════════════ */
+
+// ── Community Pulse Sample Data ──
+const COMMUNITY_PULSE_POSTS = [
+  {
+    id: 'rotary-2026-03-28-1',
+    orgName: 'Rotary Club of Telluride',
+    orgType: 'clubs',
+    platform: 'facebook',
+    platformLabel: 'Facebook',
+    postedAt: '2026-03-28T15:30:00',
+    title: 'Volunteer Dinner This Friday',
+    excerpt: 'Rotary seeks volunteers for the scholarship dinner this Friday evening. Proceeds support local student programs and youth exchange opportunities.',
+    image: '',
+    originalUrl: 'https://www.facebook.com/TellurideRotary/',
+    websiteUrl: 'https://portal.clubrunner.ca/3291',
+    tags: ['Volunteer', 'Fundraiser', 'Youth'],
+    featured: true,
+    eventRelated: true,
+    logo: 'https://clubrunner.blob.core.windows.net/00000003291/thumb/ClubLogo/clublogo.png'
+  },
+  {
+    id: 'elks-2026-03-27-1',
+    orgName: 'Telluride Elks Lodge 692',
+    orgType: 'clubs',
+    platform: 'facebook',
+    platformLabel: 'Facebook',
+    postedAt: '2026-03-27T18:00:00',
+    title: 'Friday Night Dinner & Comedy Show',
+    excerpt: 'Join us this Friday for dinner and a live comedy show at the Lodge. Open to the community, all are welcome. Doors at 5 PM.',
+    image: '',
+    originalUrl: 'https://www.facebook.com/telluride.elks/',
+    websiteUrl: 'https://www.elks.org/lodges/home.cfm?LodgeNumber=692',
+    tags: ['Community', 'Entertainment', 'Dinner'],
+    featured: true,
+    eventRelated: true,
+    logo: 'https://www.elks.org/images/graphics/logo_bpoe_header.gif'
+  },
+  {
+    id: 'stpats-2026-03-28-1',
+    orgName: "St. Patrick's Catholic Church",
+    orgType: 'churches',
+    platform: 'website',
+    platformLabel: 'Website',
+    postedAt: '2026-03-28T08:00:00',
+    title: 'Holy Week Schedule Posted',
+    excerpt: 'Palm Sunday Mass at 9 AM, Holy Thursday at 7 PM, Good Friday at 3 PM, Easter Vigil Saturday at 8 PM, Easter Sunday at 9 AM. Confessions and Rosary at 8:30 AM.',
+    image: '',
+    originalUrl: 'https://www.stpatrickstelluride.com/',
+    websiteUrl: 'https://www.stpatrickstelluride.com/',
+    tags: ['Service', 'Holy Week', 'Easter'],
+    featured: false,
+    eventRelated: true,
+    logo: ''
+  },
+  {
+    id: 'christpres-2026-03-27-1',
+    orgName: 'Christ Presbyterian Church',
+    orgType: 'churches',
+    platform: 'facebook',
+    platformLabel: 'Facebook',
+    postedAt: '2026-03-27T10:00:00',
+    title: 'Community Dinner Wednesday at 6 PM',
+    excerpt: 'All are welcome to join us for a free community dinner this Wednesday evening at 6 PM. No reservations needed.',
+    image: '',
+    originalUrl: 'https://www.facebook.com/christpresbyterianchurchtelluride/',
+    websiteUrl: 'https://christpresbyterianchurchtelluride.com/',
+    tags: ['Community', 'Dinner', 'Free'],
+    featured: false,
+    eventRelated: true,
+    logo: ''
+  },
+  {
+    id: 'smc-2026-03-29-1',
+    orgName: 'San Miguel County',
+    orgType: 'government',
+    platform: 'website',
+    platformLabel: 'Website',
+    postedAt: '2026-03-29T09:00:00',
+    title: 'Wildfire Resiliency Code Public Hearing April 1',
+    excerpt: 'Public hearing on adopting Colorado Wildfire Resiliency Code and International WUI Code. Comments due by March 26. Hearing at 10 AM.',
+    image: '',
+    originalUrl: 'https://www.sanmiguelcountyco.gov/',
+    websiteUrl: 'https://www.sanmiguelcountyco.gov/',
+    tags: ['Government', 'Wildfire', 'Public Hearing'],
+    featured: true,
+    eventRelated: false,
+    logo: ''
+  },
+  {
+    id: 'tmvoa-2026-03-26-1',
+    orgName: 'TMVOA',
+    orgType: 'government',
+    platform: 'website',
+    platformLabel: 'Website',
+    postedAt: '2026-03-26T14:00:00',
+    title: 'Annual Meeting & Board Elections April 10',
+    excerpt: 'The Telluride Mountain Village Owners Association annual meeting is scheduled for April 10. Board nominations are open through April 3.',
+    image: '',
+    originalUrl: 'https://tmvoa.org/',
+    websiteUrl: 'https://tmvoa.org/',
+    tags: ['HOA', 'Elections', 'Annual Meeting'],
+    featured: false,
+    eventRelated: true,
+    logo: ''
+  },
+  {
+    id: 'norwood-rec-2026-03-28-1',
+    orgName: 'Norwood Parks & Recreation',
+    orgType: 'health',
+    platform: 'facebook',
+    platformLabel: 'Facebook',
+    postedAt: '2026-03-28T12:00:00',
+    title: 'Youth Soccer Registration Open',
+    excerpt: 'Registration is now open for spring youth soccer. Ages 5-14. Season starts April 12. Register at the recreation center or online.',
+    image: '',
+    originalUrl: 'https://www.facebook.com/NorwoodParksAndRec/',
+    websiteUrl: 'https://www.norwoodcolorado.com/',
+    tags: ['Youth', 'Soccer', 'Registration'],
+    featured: false,
+    eventRelated: true,
+    logo: ''
+  },
+  {
+    id: 'ah-haa-2026-03-27-1',
+    orgName: 'Ah Haa School for the Arts',
+    orgType: 'arts',
+    platform: 'instagram',
+    platformLabel: 'Instagram',
+    postedAt: '2026-03-27T16:00:00',
+    title: 'Spring Workshop Series Begins Next Week',
+    excerpt: 'Ceramics, watercolor, and printmaking workshops start next week. All skill levels welcome. Early-bird pricing ends Friday.',
+    image: '',
+    originalUrl: 'https://www.instagram.com/ahhaaschool/',
+    websiteUrl: 'https://ahhaa.org/',
+    tags: ['Arts', 'Workshops', 'Education'],
+    featured: false,
+    eventRelated: false,
+    logo: ''
+  },
+  {
+    id: 'library-2026-03-26-1',
+    orgName: 'Wilkinson Public Library',
+    orgType: 'nonprofits',
+    platform: 'website',
+    platformLabel: 'Website',
+    postedAt: '2026-03-26T10:00:00',
+    title: 'Author Talk Series: Colorado History Night',
+    excerpt: 'Join us Thursday at 6 PM for an author reading and Q&A about early mining history in the San Juans. Free admission.',
+    image: '',
+    originalUrl: 'https://telluridelibrary.org/',
+    websiteUrl: 'https://telluridelibrary.org/',
+    tags: ['Library', 'History', 'Author Talk'],
+    featured: false,
+    eventRelated: true,
+    logo: ''
+  },
+  {
+    id: 'telschool-2026-03-28-1',
+    orgName: 'Telluride School District R-1',
+    orgType: 'schools',
+    platform: 'website',
+    platformLabel: 'Website',
+    postedAt: '2026-03-28T07:00:00',
+    title: 'Spring Break Reminder: March 30 - April 3',
+    excerpt: 'No school March 30 through April 3. Classes resume Monday, April 6. Have a safe and restful break!',
+    image: '',
+    originalUrl: 'https://www.telluride.k12.co.us/',
+    websiteUrl: 'https://www.telluride.k12.co.us/',
+    tags: ['School', 'Spring Break'],
+    featured: false,
+    eventRelated: false,
+    logo: ''
+  }
+];
+
+// ── Community Pulse State ──
+let cpTimeWindow = '48h';
+let cpTypeFilter = 'all';
+let cpPlatformFilter = 'all';
+let cpSearchTerm = '';
+let cpEventOnly = false;
+
+function cpRelativeTime(isoStr) {
+  const posted = new Date(isoStr);
+  const now = new Date();
+  const diffMs = now - posted;
+  const diffH = Math.floor(diffMs / 3600000);
+  if (diffH < 1) return 'Just now';
+  if (diffH < 24) return diffH + ' hour' + (diffH === 1 ? '' : 's') + ' ago';
+  const diffD = Math.floor(diffH / 24);
+  return diffD + ' day' + (diffD === 1 ? '' : 's') + ' ago';
+}
+
+function cpFilterPosts() {
+  const now = new Date();
+  let windowMs = 48 * 3600000;
+  if (cpTimeWindow === '72h') windowMs = 72 * 3600000;
+  else if (cpTimeWindow === '7d') windowMs = 7 * 24 * 3600000;
+
+  return COMMUNITY_PULSE_POSTS.filter(function(p) {
+    // Time window
+    const posted = new Date(p.postedAt);
+    if ((now - posted) > windowMs) return false;
+    // Type filter
+    if (cpTypeFilter !== 'all' && p.orgType !== cpTypeFilter) return false;
+    // Platform filter
+    if (cpPlatformFilter !== 'all' && p.platform !== cpPlatformFilter) return false;
+    // Event only
+    if (cpEventOnly && !p.eventRelated) return false;
+    // Search
+    if (cpSearchTerm) {
+      const s = cpSearchTerm.toLowerCase();
+      if (p.orgName.toLowerCase().indexOf(s) === -1 &&
+          p.title.toLowerCase().indexOf(s) === -1 &&
+          p.excerpt.toLowerCase().indexOf(s) === -1 &&
+          !p.tags.some(function(t) { return t.toLowerCase().indexOf(s) !== -1; })) return false;
+    }
+    return true;
+  }).sort(function(a, b) {
+    return new Date(b.postedAt) - new Date(a.postedAt);
+  });
+}
+
+function renderCommunityPulse() {
+  const container = document.getElementById('community-pulse-content');
+  const featuredEl = document.getElementById('communityPulseFeatured');
+  if (!container) return;
+
+  const posts = cpFilterPosts();
+
+  // Render featured
+  if (featuredEl) {
+    const featured = posts.filter(function(p) { return p.featured; }).slice(0, 3);
+    if (featured.length > 0) {
+      featuredEl.innerHTML = featured.map(function(p) {
+        return '<a class="link-card" href="' + p.originalUrl + '" target="_blank" rel="noopener">' +
+          '<div class="link-icon">' + (p.eventRelated ? '\ud83d\udce3' : '\ud83d\udccc') + '</div>' +
+          '<h4>' + p.title + '</h4>' +
+          '<p>' + p.excerpt.substring(0, 100) + (p.excerpt.length > 100 ? '\u2026' : '') + '</p>' +
+          '<div class="link-source">' + p.orgName + ' \u00b7 ' + p.platformLabel + '</div>' +
+        '</a>';
+      }).join('');
+      featuredEl.parentElement.style.display = '';
+    } else {
+      featuredEl.parentElement.style.display = 'none';
+    }
+  }
+
+  // Render main feed
+  if (posts.length === 0) {
+    container.innerHTML = '<div class="empty-state">No community updates match your current filters. Try widening the time window or clearing filters.</div>';
+    return;
+  }
+
+  let html = '';
+  posts.forEach(function(p) {
+    const logoHtml = p.logo
+      ? '<div class="card-logo" style="width:72px;height:72px;min-width:72px;"><img src="' + p.logo + '" alt="' + p.orgName + '" style="width:100%;height:100%;object-fit:contain;border-radius:10px;" loading="lazy"></div>'
+      : '<div class="card-logo" style="width:72px;height:72px;min-width:72px;display:flex;align-items:center;justify-content:center;background:rgba(33,68,60,0.08);border-radius:10px;font-size:1.5rem;">\u25ce</div>';
+
+    const tagsHtml = p.tags.map(function(t) {
+      return '<span class="legal-meta-tag tag-type">' + t + '</span>';
+    }).join('');
+
+    const imageHtml = p.image
+      ? '<div class="community-pulse-thumb"><img src="' + p.image + '" alt="' + p.title + '" loading="lazy"></div>'
+      : '';
+
+    const platformIcon = { facebook: '\ud83d\udcd8', instagram: '\ud83d\udcf7', website: '\ud83c\udf10', youtube: '\u25b6\ufe0f' }[p.platform] || '\ud83d\udd17';
+
+    html += '<div class="card community-pulse-card" data-pulse-type="' + p.orgType + '" data-pulse-platform="' + p.platform + '">';
+    html += logoHtml;
+    html += '<div class="card-body">';
+    html += '<div class="community-pulse-topline">';
+    html += '<div>';
+    html += '<span style="display:inline-block; font-size:0.72rem; padding:2px 8px; background:rgba(33,68,60,0.08); color:var(--forest); border-radius:6px; font-weight:600;">' + p.orgType.charAt(0).toUpperCase() + p.orgType.slice(1) + '</span> ';
+    html += '<span style="display:inline-block; font-size:0.72rem; padding:2px 8px; background:rgba(166,143,87,0.12); color:var(--accent); border-radius:6px; font-weight:600;">' + platformIcon + ' ' + p.platformLabel + '</span>';
+    html += '</div>';
+    html += '<div class="community-pulse-time">' + cpRelativeTime(p.postedAt) + '</div>';
+    html += '</div>';
+    html += '<h3><a href="' + p.originalUrl + '" target="_blank" rel="noopener">' + p.orgName + '</a></h3>';
+    html += '<div class="meta" style="margin-bottom:4px;">' + p.title + '</div>';
+    html += '<div class="description">' + p.excerpt + '</div>';
+    html += imageHtml;
+    html += '<div style="display:flex; gap:6px; flex-wrap:wrap; margin-top:10px;">' + tagsHtml + '</div>';
+    html += '<div class="card-actions" style="margin-top:10px;">';
+    html += '<a href="' + p.originalUrl + '" target="_blank" rel="noopener" class="cal-btn">View Original Post</a>';
+    if (p.websiteUrl && p.websiteUrl !== p.originalUrl) {
+      html += '<a href="' + p.websiteUrl + '" target="_blank" rel="noopener" class="agenda-link">Visit Organization</a>';
+    }
+    html += '</div>';
+    html += '<div class="community-pulse-note">Comments stay on the original platform.</div>';
+    html += '</div></div>';
+  });
+
+  container.innerHTML = html;
+}
+
+// ── Community Pulse Filter Handlers ──
+document.addEventListener('DOMContentLoaded', function() {
+  // Time window filters
+  document.querySelectorAll('#communityPulseTimeFilters .chip').forEach(function(chip) {
+    chip.addEventListener('click', function() {
+      document.querySelectorAll('#communityPulseTimeFilters .chip').forEach(function(c) { c.className = 'chip'; });
+      chip.classList.add('active-all');
+      cpTimeWindow = chip.dataset.pulseWindow;
+      renderCommunityPulse();
+    });
+  });
+
+  // Type filters
+  document.querySelectorAll('#communityPulseTypeFilters .chip').forEach(function(chip) {
+    chip.addEventListener('click', function() {
+      document.querySelectorAll('#communityPulseTypeFilters .chip').forEach(function(c) { c.className = 'chip'; });
+      if (chip.dataset.pulseType === 'all') chip.classList.add('active-all');
+      else chip.classList.add('active-topic');
+      cpTypeFilter = chip.dataset.pulseType;
+      renderCommunityPulse();
+    });
+  });
+
+  // Platform filters
+  document.querySelectorAll('#communityPulsePlatformFilters .chip').forEach(function(chip) {
+    chip.addEventListener('click', function() {
+      document.querySelectorAll('#communityPulsePlatformFilters .chip').forEach(function(c) { c.className = 'chip'; });
+      if (chip.dataset.pulsePlatform === 'all') chip.classList.add('active-all');
+      else chip.classList.add('active-topic');
+      cpPlatformFilter = chip.dataset.pulsePlatform;
+      renderCommunityPulse();
+    });
+  });
+
+  // Search
+  var cpSearchInput = document.getElementById('communityPulseSearch');
+  if (cpSearchInput) {
+    var cpSearchTimeout;
+    cpSearchInput.addEventListener('input', function() {
+      clearTimeout(cpSearchTimeout);
+      cpSearchTimeout = setTimeout(function() {
+        cpSearchTerm = cpSearchInput.value.trim();
+        renderCommunityPulse();
+      }, 300);
+    });
+  }
+
+  // Event-only checkbox
+  var cpEventCheck = document.getElementById('communityPulseEventOnly');
+  if (cpEventCheck) {
+    cpEventCheck.addEventListener('change', function() {
+      cpEventOnly = cpEventCheck.checked;
+      renderCommunityPulse();
+    });
+  }
+
+  // Initial render
+  renderCommunityPulse();
+});
+
+/* ══════════════════════════════════════════════════════════════
+      HUB-BUB FORUM ENGINE
    Firebase-backed community discussion forum for Telluride Gov Hub
    ══════════════════════════════════════════════════════════════ */
 (function() {
