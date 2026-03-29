@@ -11300,13 +11300,25 @@ function renderUpcomingEventsSidebar() {
   var today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  // Collect notable community events (future only)
+  // Helper: exclude minor/small-group events (Wilkinson, Ah Haa, classes, workshops, etc.)
+  function isMinorEvent(title, source, location, description) {
+    var all = ((title || '') + ' ' + (source || '') + ' ' + (location || '') + ' ' + (description || '')).toLowerCase();
+    // Exclude Wilkinson Public Library and Ah Haa School events
+    if (/wilkinson|wilkenson/.test(all)) return true;
+    if (/ah\s*ha[ah]/.test(all)) return true;
+    // Exclude small-group / class / workshop style events
+    if (/\b(class|classes|workshop|workshops|seminar|lecture series|book club|story\s*time|storytime|craft\s*circle|knitting|quilting|yoga|meditation|tai\s*chi|pilates|open\s*mic|trivia\s*night|game\s*night|potluck|bingo)\b/.test(all)) return true;
+    return false;
+  }
+
+  // Collect notable community events (future only) — major fundraisers/charity events only
   var events = [];
   if (typeof COMMUNITY_EVENTS !== 'undefined') {
     COMMUNITY_EVENTS.forEach(function(ev) {
       if (!ev.notable) return;
       var d = localDate(ev.date);
       if (!d || d < today) return;
+      if (isMinorEvent(ev.title, ev.source, ev.location, ev.copy)) return;
       events.push({
         title: ev.title,
         source: ev.source || '',
@@ -11327,17 +11339,18 @@ function renderUpcomingEventsSidebar() {
     allNews.forEach(function(item) {
       if (!item.category || !/community event/i.test(item.category)) return;
       if (!item.pubDate || item.pubDate < today) return;
+      // Exclude minor/small-group events
+      if (isMinorEvent(item.title, item.sourceLabel || item.source, item.location, (item.description || '') + ' ' + (item.summary || ''))) return;
       // Check if it's already in COMMUNITY_EVENTS by title
       var titleLow = (item.title || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 30);
       var isDupe = events.some(function(e) {
         return e.title.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 30) === titleLow;
       });
       if (isDupe) return;
-      // Check notability: has a dedicated URL (not just facebook/generic) or mentions fundraising/charity/nonprofit
+      // Must be a fundraiser/charity event to qualify as major
       var text = ((item.title || '') + ' ' + (item.description || '') + ' ' + (item.summary || '')).toLowerCase();
-      var isFundraiser = /fundrais|benefit|charity|nonprofit|non-profit|foundation|scholarship|grant|community grant/.test(text);
-      var hasDedicatedUrl = item.link && !/facebook\.com|instagram\.com|twitter\.com|x\.com/.test(item.link);
-      if (!isFundraiser && !hasDedicatedUrl) return;
+      var isFundraiser = /fundrais|benefit|charity|nonprofit|non-profit|foundation|scholarship|grant|community grant|gala|auction|5k|run\s*walk|hike.?athon|bike.?athon/.test(text);
+      if (!isFundraiser) return;
       events.push({
         title: item.title,
         source: item.sourceLabel || item.source || '',
