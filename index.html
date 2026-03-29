@@ -9533,13 +9533,22 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-03-27  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "'I voted/yo voté' sticker contest voting ends soon",
+    title: "'I voted/yo vot\u00e9' sticker contest voting ends soon",
     source: "Telluride Times",
     date: "March 29, 2026",
     newsTopic: "community",
     copy: "The San Miguel County Clerk's Office put out a call for creative school-age students to help elevate civic engagement. Young artists answered, submitting original artwork for the 'I voted/yo voté' sticker contest — voting ends soon.",
     href: "https://www.telluridenews.com/news/article_d8e5dded-9af9-4cb1-b0aa-b5572ec3715a.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/ff/cffda83a-a78e-4ec0-8d6b-5a4978a4e879/69c37e515b702.image.jpg?crop=739%2C389%2C0%2C305"
+  },
+  {
+    title: "The bright side of low tide with Bob McKeever",
+    source: "Telluride Times",
+    date: "March 28, 2026",
+    newsTopic: "community",
+    copy: "Columnist Joanna Yonder sits down with Bob McKeever to explore the silver linings of Telluride's quieter winter season and what the low tide means for the community going forward.",
+    href: "https://www.telluridenews.com/opinion/columnists/article_055235ff-40a1-4237-8328-b97687223ffb.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/91/f91a258c-20af-4ffe-9bb0-1afdbe150bdd/69c2daebccebd.image.jpg?crop=1246%2C655%2C0%2C332&resize=1200%2C631&order=crop%2Cresize"
   },
   {
     title: "Telluride Jazz: the art of evolution",
@@ -9560,6 +9569,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/1f/f1fc363f-f257-4d3d-b04d-dc91469c781a/69c31fb88e813.image.jpg?crop=1599%2C841%2C0%2C179&resize=1200%2C631&order=crop%2Cresize"
   },
   {
+    title: "Lady Miners awakened in Aspen",
+    source: "Telluride Times",
+    date: "March 27, 2026",
+    newsTopic: "sports",
+    copy: "Freshman goaltender Cora Krasic earned her first varsity win in the season-opener against St. Mary's as the Lady Miners lacrosse team gets its season underway.",
+    href: "https://www.telluridenews.com/sports/article_e453d051-a943-4f32-9092-3720aa62c2cc.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/37/d37e471b-68e7-455e-9ac2-45646d83a95a/69c315b8d2e62.image.jpg?crop=1762%2C925%2C0%2C0&resize=1200%2C630&order=crop%2Cresize"
+  },
+  {
+    title: "For the Love of Water",
+    source: "Telluride Times",
+    date: "March 27, 2026",
+    newsTopic: "community",
+    copy: "Guest commentary by Adrian Bergere and Matt Moseley on World Water Day: reflecting on water's essential role and the need to protect this resource for the community.",
+    href: "https://www.telluridenews.com/opinion/columnists/article_a42cb472-64e6-4bb9-81ba-094ca34c5a28.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg?resize=600%2C315"
+  },
+  {
     title: "The Ready or Not",
     source: "Telluride Times",
     date: "March 27, 2026",
@@ -9571,7 +9598,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "A 'true amenity,' The Laundromat is back",
     source: "Telluride Times",
-    date: "March 27, 2026",
+    date: "March 26, 2026",
     newsTopic: "business",
     copy: "In early January, a fire at The Laundromat in Telluride shut down the town's only public laundry. Now it's returning as a community amenity.",
     href: "https://www.telluridenews.com/business/article_10412a6e-4cb1-4ac2-abc8-e916fba2b163.html",
@@ -9580,9 +9607,9 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Under shining stars",
     source: "Telluride Times",
-    date: "March 27, 2026",
+    date: "March 26, 2026",
     newsTopic: "community",
-    copy: "Opinion column from the Telluride Times exploring life and community in the San Juans.",
+    copy: "Sean McNamara's Doghouse column explores the pursuit of well-being and the structures we build to enhance our sense of connection in the San Juans.",
     href: "https://www.telluridenews.com/opinion/columnists/article_54cb2894-d7ff-4618-8e56-1e2b7488932a.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/36/b36ccd87-a8e2-474e-b8c9-c148a0bf1ff8/69c2cda3e9973.image.jpg?crop=1199%2C675%2C0%2C462"
   },
@@ -9600,9 +9627,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "March 26, 2026",
     newsTopic: "sports",
-    copy: "Telluride Miners sports coverage — the team advances with back-to-back wins.",
+    copy: "Telluride Miners boys lacrosse team advances with back-to-back wins, facing Grand Junction High School before moving on to higher-level competition.",
     href: "https://www.telluridenews.com/sports/article_7bf96048-94d5-422b-a342-74bf830b1b47.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8c/f8c28f60-86c3-4eff-8120-32fd30db8e3a/69c30cdc351f3.image.jpg?crop=1762%2C991%2C0%2C0"
+  },
+  {
+    title: "We're hooked",
+    source: "Telluride Times",
+    date: "March 25, 2026",
+    newsTopic: "business",
+    copy: "A profile of Hook restaurant's enduring popularity among Telluride locals — from birthday celebrations to everyday dining, this spot keeps the community coming back.",
+    href: "https://www.telluridenews.com/business/article_ac06e009-1c73-42a2-acb3-1c805821fb99.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/7d/47d238ac-5c0a-4160-96b8-4c7c49bcfef2/69c20c4cdc990.image.jpg?crop=1762%2C926%2C0%2C124&resize=1200%2C631&order=crop%2Cresize"
   },
   {
     title: "Telluride Town Council extends Business Stabilization Assistance Program",
@@ -9618,9 +9654,45 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "March 25, 2026",
     newsTopic: "government",
-    copy: "Exploring the ongoing parking challenges in Telluride and potential solutions being discussed by local officials.",
+    copy: "Town Council halted the diagonal parking pilot on Main Street despite receiving hundreds of resident survey responses. The ongoing parking debate continues.",
     href: "https://www.telluridenews.com/news/article_dd0dfe8d-418a-4dc3-97df-0702c5f64067.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/f1/af14fea6-e57e-4751-89da-324c9b109bc1/69c1a4ff3bc72.image.jpg?crop=1658%2C933%2C0%2C0"
+  },
+  {
+    title: "Surveillance or public safety?",
+    source: "Telluride Times",
+    date: "March 24, 2026",
+    newsTopic: "government",
+    copy: "Automated vehicle tracking systems face increased public scrutiny as community members weigh the balance between surveillance capabilities and public safety needs.",
+    href: "https://www.telluridenews.com/news/article_0d2ef6b0-e4b6-4c72-aff4-476282270737.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/5b/a5b957d0-3c26-4621-a3ad-742127d90c3c/69c1a15e973fd.image.jpg?crop=1246%2C654%2C0%2C504&resize=1200%2C630&order=crop%2Cresize"
+  },
+  {
+    title: "The Velveteers + homegrown Sister Sabbath at The Alibi",
+    source: "Telluride Times",
+    date: "March 24, 2026",
+    newsTopic: "arts-culture",
+    copy: "Local Black Sabbath tribute band Sister Sabbath opens for The Velveteers at The Alibi, bringing heavy riffs and homegrown energy to Telluride's live music scene.",
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_57696396-d483-45ea-bbfd-748d1d42a6ec.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/ef/defcc159-7739-495b-ab95-0035c97b0ba9/69c2d1b8e5eb5.image.jpg?crop=1661%2C873%2C0%2C124&resize=1200%2C631&order=crop%2Cresize"
+  },
+  {
+    title: "'The bears are stirring' as Telluride launches spring awareness campaign",
+    source: "Telluride Times",
+    date: "March 24, 2026",
+    newsTopic: "community",
+    copy: "Black bears are awakening from hibernation, triggering a seasonal wildlife safety initiative across the Telluride community.",
+    href: "https://www.telluridenews.com/news/article_d3ca4dc6-726d-49bb-bffb-e3a491520ea9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/d5/ad5463a5-370a-41da-98f7-bcc906f0b24f/69bf7fa5351c3.image.jpg?crop=1658%2C871%2C0%2C0&resize=1200%2C630&order=crop%2Cresize"
+  },
+  {
+    title: "Performing-arts students get a boost",
+    source: "Telluride Times",
+    date: "March 23, 2026",
+    newsTopic: "arts-culture",
+    copy: "Former Telluride Intermediate School teacher Cyndi Jurkowski reflects on student dedication to music and performing arts programs in the community.",
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_eb8a68ed-720b-4883-8cb2-4a531704ba99.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/99/b9910ff9-84da-43f9-9ca9-4cfcf26a7fe9/69bed41e01ef7.image.jpg?crop=1762%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
   },
   {
     title: "Police investigating death outside Norwood",
@@ -9632,19 +9704,163 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/19/719b2d61-d89c-46f3-a4ff-b24e53dac9e6/69c19d1f3aa2e.image.jpg?crop=1289%2C677%2C0%2C516&resize=1200%2C630&order=crop%2Cresize"
   },
   {
-    title: "We're hooked",
+    title: "Dancing into spring",
     source: "Telluride Times",
-    date: "March 26, 2026",
+    date: "March 22, 2026",
+    newsTopic: "arts-culture",
+    copy: "Palm Arts Dance Spring Showcase returns as an annual tradition, with preparations beginning mid-winter for this celebration of movement and community.",
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_c5ff5437-bf69-4c25-8caf-e4a949920db7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/90/f9051c8d-3187-4b2d-9fb2-36a92457b39a/69bed0b449e65.image.jpg?crop=1661%2C872%2C0%2C187&resize=1200%2C630&order=crop%2Cresize"
+  },
+  {
+    title: "Maintaining Craig power plant could cost locals",
+    source: "Telluride Times",
+    date: "March 22, 2026",
+    newsTopic: "government",
+    copy: "Regional energy providers face costly transitions as shifting national policy complicates renewable energy adoption, potentially impacting local ratepayers.",
+    href: "https://www.telluridenews.com/news/article_2c2db980-996d-4811-8150-21e9517f78a9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/63/963c0f28-4ecd-4f3c-80e0-e325077a1b8c/69bed72e52ace.image.jpg?crop=1658%2C871%2C0%2C0&resize=1200%2C630&order=crop%2Cresize"
+  },
+  {
+    title: "Will San Miguel County remain a community to come home to?",
+    source: "Telluride Times",
+    date: "March 21, 2026",
+    newsTopic: "housing",
+    copy: "Guest commentary by Paul Reich examining whether local workers can still afford to live in San Miguel County and what that means for the community's future.",
+    href: "https://www.telluridenews.com/opinion/columnists/article_45f4f469-6d8b-422b-a01f-0291557ac0e7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/cd/dcd61f11-ed69-4a56-a3db-990dc7401383/69b9a95ff03ea.image.jpg?crop=399%2C399%2C0%2C0&resize=200%2C200&order=crop%2Cresize"
+  },
+  {
+    title: "Energy audits for local businesses",
+    source: "Telluride Times",
+    date: "March 21, 2026",
     newsTopic: "business",
-    copy: "A look at what's drawing people to Telluride's local businesses and community life.",
-    href: "https://www.telluridenews.com/business/article_ac06e009-1c73-42a2-acb3-1c805821fb99.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/7d/47d238ac-5c0a-4160-96b8-4c7c49bcfef2/69c20c4cdc990.image.jpg?crop=1762%2C926%2C0%2C124&resize=1200%2C631&order=crop%2Cresize"
+    copy: "Local businesses in historic buildings explore energy efficiency improvements to reduce utility expenses amid rising energy costs.",
+    href: "https://www.telluridenews.com/business/article_b8ed6bb8-1782-45c6-8225-eebf4e0f5d69.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/cd/8cd2c6f2-32cb-4ce1-aeaf-bff413bc3074/69ba35ff6e434.image.jpg?crop=1661%2C873%2C0%2C311&resize=1200%2C631&order=crop%2Cresize"
+  },
+  {
+    title: "'Anything can be fixed'",
+    source: "Telluride Times",
+    date: "March 21, 2026",
+    newsTopic: "business",
+    copy: "A local repair service tackles common outdoor gear damage — broken zippers, tears, and wear — giving well-loved equipment a second life in Telluride.",
+    href: "https://www.telluridenews.com/business/article_d10654ec-11ca-453f-b46e-8bc7233f4e7c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/3b/a3b02bd2-efcd-4204-bbdb-c2769847b1be/69b9330acba8f.image.jpg?crop=1174%2C617%2C0%2C440"
+  },
+  {
+    title: "Eli Emmitt Band \u2014 No part of nothin'",
+    source: "Telluride Times",
+    date: "March 20, 2026",
+    newsTopic: "arts-culture",
+    copy: "An exploration of bluegrass traditions and the genre's distinctive absence of drums, tracing the legacy of Bill Monroe through to modern-day performers.",
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_d77bbcf1-e729-4bf1-b7c3-98acd16e3d92.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/03/203c93c7-cf12-4058-bde8-b18fa9b7da1a/69b92916c46ac.image.jpg?crop=1762%2C925%2C0%2C0&resize=1200%2C630&order=crop%2Cresize"
+  },
+  {
+    title: "Local stakeholders seek new perspective for winter planning",
+    source: "Telluride Times",
+    date: "March 20, 2026",
+    newsTopic: "government",
+    copy: "Regional leaders explore aerial perspectives and new approaches to address complex seasonal land management and planning challenges.",
+    href: "https://www.telluridenews.com/news/article_08313d1a-365c-4d56-872a-7a872b61984d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/79/c799cfc9-4181-4dd6-9aa1-9c84abe77b08/69bdb43f05446.image.jpg?crop=1438%2C755%2C0%2C0&resize=1200%2C630&order=crop%2Cresize"
+  },
+  {
+    title: "Growing Up Skiing",
+    source: "Telluride Times",
+    date: "March 19, 2026",
+    newsTopic: "community",
+    copy: "The Wanderlust Mom columnist Jennifer Julia reflects on raising a family in Telluride — the shared mountain town experience of growing up on the slopes.",
+    href: "https://www.telluridenews.com/opinion/columnists/article_2880bfb7-bd3b-4a08-b6ef-11a73e700859.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/cc/ecc7a9eb-2444-4366-a07a-131a695b1e83/69b99a3876fea.image.jpg?crop=1246%2C655%2C0%2C664&resize=1200%2C631&order=crop%2Cresize"
+  },
+  {
+    title: "Lady Miners split season's first pair",
+    source: "Telluride Times",
+    date: "March 19, 2026",
+    newsTopic: "sports",
+    copy: "The Telluride girls' soccer team, an 'Others Receiving Votes' selection, splits their opening weekend neutral-site matches to start the spring season.",
+    href: "https://www.telluridenews.com/sports/article_2a9944cb-2aaf-4819-a3bd-d3e547804ed3.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/cb/bcbf9977-fa1b-4350-a39d-0aa56ba31e37/69b91c669f9cf.image.jpg?crop=1762%2C925%2C0%2C0&resize=1200%2C630&order=crop%2Cresize"
+  },
+  {
+    title: "Augmented reality in Ridgway",
+    source: "Telluride Times",
+    date: "March 18, 2026",
+    newsTopic: "arts-culture",
+    copy: "Exploring how visual art benefits from stillness and the experience of contemporary augmented reality installations now on display in Ridgway.",
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_41265bcd-17c5-4cf6-9dcb-cc685ee5ca68.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/61/861af70b-595d-409a-81a4-dc2623df9327/69b84b0d75285.image.jpg?crop=1170%2C615%2C0%2C530"
+  },
+  {
+    title: "Safe travels for behavioral health",
+    source: "Telluride Times",
+    date: "March 17, 2026",
+    newsTopic: "government",
+    copy: "Colorado legislation from 2021 establishes protocols for transporting individuals experiencing mental health crises, shaping how communities respond to behavioral health emergencies.",
+    href: "https://www.telluridenews.com/news/article_299ebb20-44cb-4082-95a8-9202fa52d1fe.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/b9/6b9b0a93-fdfe-423b-a042-ce537f8efbd8/69b90f0ebffe1.image.jpg?crop=1721%2C904%2C0%2C149&resize=1200%2C630&order=crop%2Cresize"
+  },
+  {
+    title: "What a weekend",
+    source: "Telluride Times",
+    date: "March 17, 2026",
+    newsTopic: "community",
+    copy: "The first annual Telluride Skijoring event drew enthusiastic crowds with horses, riders, and winter sports competitions on Main Street.",
+    href: "https://www.telluridenews.com/news/article_5e88045c-6c6d-4308-a116-16c01905e281.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/07/e07f6c67-fc74-4317-93a1-c4ab77a66ad9/69b9aaf8de284.image.jpg?crop=1175%2C617%2C0%2C617"
+  },
+  {
+    title: "Reflection and remembrance",
+    source: "Telluride Times",
+    date: "March 17, 2026",
+    newsTopic: "arts-culture",
+    copy: "Musician Hal Adler shares how program themes emerge from musical selections and creative serendipity in this arts feature.",
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_bb31656a-33b8-4ab2-ae7b-86bd5980f706.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/d1/cd12f275-ef9e-4ea7-bd2a-d9dbeb328514/69aa8c64b4ed8.image.jpg?crop=1762%2C925%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
+  },
+  {
+    title: "'Fired up' Dems set stage for big election turnout",
+    source: "Telluride Times",
+    date: "March 16, 2026",
+    newsTopic: "government",
+    copy: "San Miguel County Democrats held their caucus and assembly at Wilkinson Public Library, energized and setting the stage for strong turnout in the upcoming election.",
+    href: "https://www.telluridenews.com/news/article_4668a13e-1ec3-4106-990c-b736e581fa86.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/b9/eb95976b-8c94-4aec-b1ce-6234f39365e3/69b84cd710234.image.jpg?crop=1661%2C872%2C0%2C187&resize=1200%2C630&order=crop%2Cresize"
+  },
+  {
+    title: "'Shimmy Shake' retakes the Sheridan",
+    source: "Telluride Times",
+    date: "March 15, 2026",
+    newsTopic: "arts-culture",
+    copy: "House of Shimmy Shake returns to the Sheridan Opera House with performances and comedy over consecutive weekends.",
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_4bf196b5-5f7d-4258-a1ee-05edb96220fa.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/55/055cda5a-a6da-4fc0-b6aa-d9c74da70553/69b50cb42bdd0.image.jpg?crop=1762%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
+  },
+  {
+    title: "Amidst a season of challenges, neighbors are helping neighbors",
+    source: "Telluride Times",
+    date: "March 15, 2026",
+    newsTopic: "community",
+    copy: "The Telluride community demonstrates mutual support and solidarity during a difficult season, as neighbors step up to help each other through challenges.",
+    href: "https://www.telluridenews.com/news/article_f76d9c11-c156-48a5-8833-48c38113d8e7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/f8/7f8e634c-e0a9-42d3-8300-3c3e4bea00c2/69b51107161a9.image.jpg?crop=1658%2C872%2C0%2C188&resize=1200%2C630&order=crop%2Cresize"
   }
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
-// Updated: 2026-03-27  — refresh periodically from koto.org/news-category/newscasts/
+// Updated: 2026-03-29  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 3-27-26",
+    source: "KOTO Community Radio",
+    date: "March 27, 2026",
+    newsTopic: "community",
+    copy: "This week on the Regional Roundup: community concerns over an ICE detention facility in Glenwood Springs, the impact of the abortion ban in Wyoming, why mule deer fawns are dying off in southeast Utah, and a conversation with a tribal water attorney on Indigenous communities and the Colorado River.",
+    href: "https://koto.org/news/newscast-3-27-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+  },
   {
     title: "Newscast 3-26-26",
     source: "KOTO Community Radio",
@@ -9671,12 +9887,57 @@ const KOTO_NEWSCASTS = [
     copy: "A death outside Norwood is under investigation by the Colorado Bureau of Investigation. Telluride Town Council votes to eliminate angled parking on Main Street after a year of public debate. Also: lawmakers work on balancing Colorado's $1.5 billion budget shortfall.",
     href: "https://koto.org/news/newscast-3-23-26/",
     img: "https://koto.org/wp-content/uploads/2024/12/koto-cow-400x272.png"
+  },
+  {
+    title: "Newscast 3-20-26",
+    source: "KOTO Community Radio",
+    date: "March 20, 2026",
+    newsTopic: "community",
+    copy: "This week on the Regional Roundup: declining moose populations and Wyoming's annual count, the mountain West's sport of skijoring, building community resilience amid climate change, and best-selling author Terry Tempest Williams on protecting public lands.",
+    href: "https://koto.org/news/newscast-3-20-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+  },
+  {
+    title: "Newscast 3-19-26",
+    source: "KOTO Community Radio",
+    date: "March 19, 2026",
+    newsTopic: "government",
+    copy: "San Miguel County adopts the West End Vision Plan. Society Turn development breaks ground. Skijoring takes Main Street by storm.",
+    href: "https://koto.org/news/newscast-3-19-26/",
+    img: "https://koto.org/wp-content/uploads/2024/12/koto-cow-400x272.png"
+  },
+  {
+    title: "Newscast 3-18-26",
+    source: "KOTO Community Radio",
+    date: "March 18, 2026",
+    newsTopic: "government",
+    copy: "Dan Covault runs for San Miguel County Sheriff. Telluride updates housing policies and guidelines. Plus: Cat Movie Fisher with Risho Unda.",
+    href: "https://koto.org/news/newscast-3-18-26/",
+    img: "https://koto.org/wp-content/uploads/2024/12/koto-cow-400x272.png"
+  },
+  {
+    title: "Newscast 3-16-26",
+    source: "KOTO Community Radio",
+    date: "March 16, 2026",
+    newsTopic: "government",
+    copy: "Coming up next in Telluride. Lawmakers talk AI in healthcare, wildfire insurance, and school funding in the state legislature.",
+    href: "https://koto.org/news/newscast-3-16-26/",
+    img: "https://koto.org/wp-content/uploads/2024/12/koto-cow-400x272.png"
   }
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
-// Updated: 2026-03-27  — refresh periodically from koto.org/news-category/featured-stories/
+// Updated: 2026-03-29  — refresh periodically from koto.org/news-category/featured-stories/
 const KOTO_FEATURED_STORIES = [
+  {
+    title: "A Retirement Party for Mona",
+    source: "KOTO Community Radio",
+    date: "March 26, 2026",
+    newsTopic: "community",
+    copy: "Mona the Avalanche Dog spent 13 years promoting safety on the Telluride Ski Resort. After a long career of service, she retired with a party at the top of the world.",
+    href: "https://koto.org/news/a-retirement-party-for-mona/",
+    img: "https://koto.org/wp-content/uploads/2026/03/IMG_0863-scaled.jpeg"
+  },
   {
     title: "Skijoring Takes Main Street by Storm",
     source: "KOTO Community Radio",
@@ -9694,16 +9955,7 @@ const KOTO_FEATURED_STORIES = [
     copy: "Dan Covault, appointed sheriff in 2025 after Bill Masters' retirement, is running as an independent with 26 years of San Miguel County law enforcement experience. He emphasizes impartial policing and building the agency into a model for rural departments statewide.",
     href: "https://koto.org/news/dan-covualt-runs-for-san-miguel-county-sheriff/",
     img: "https://koto.org/wp-content/uploads/2026/03/Untitled-design-6-800x450.jpg"
-  },
-  {
-    title: "Lane Masters Announces Bid for San Miguel County Sheriff",
-    source: "KOTO Community Radio",
-    date: "March 9, 2026",
-    newsTopic: "government",
-    copy: "Lane Masters, son of former Sheriff Bill Masters and a Marine Corps veteran now serving as a Telluride Marshal Deputy, is running for sheriff as a Democrat. He stresses community-rooted policing, technological modernization, and upholding public peace over rigid enforcement.",
-    href: "https://koto.org/news/lane-masters-announces-bid-for-san-miguel-county-sheriff/",
-    img: "https://koto.org/wp-content/uploads/2026/03/Untitled-design-5-800x450.jpg"
-  },
+  }
 ];
 
 // ══════════════════════════════════════
