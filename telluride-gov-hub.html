@@ -223,6 +223,72 @@
       display: none;
     }
     /* ── Subscribe Bar ── */
+    /* ── Deep Dive Submenu on Gov-Hub ── */
+    .deep-dive-submenu {
+      margin-bottom: 16px;
+      padding: 16px 20px;
+      background: linear-gradient(135deg, rgba(33,68,60,0.06) 0%, rgba(166,143,87,0.08) 100%);
+      border-radius: 14px;
+      border-left: 4px solid var(--forest);
+    }
+    .deep-dive-submenu-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .deep-dive-submenu-icon { font-size: 1.1rem; }
+    .deep-dive-submenu-title {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+    .deep-dive-submenu-desc {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+    .deep-dive-submenu-topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .deep-dive-topic-btn {
+      padding: 8px 16px;
+      border: 1.5px solid rgba(33,68,60,0.2);
+      border-radius: 24px;
+      background: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--forest);
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .deep-dive-topic-btn:hover {
+      background: var(--forest);
+      color: #fff;
+      border-color: var(--forest);
+      transform: translateY(-1px);
+      box-shadow: 0 3px 10px rgba(33,68,60,0.2);
+    }
+    .deep-dive-topic-btn .dd-arrow {
+      font-size: 0.75rem;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+    .deep-dive-topic-btn:hover .dd-arrow { opacity: 1; }
+    @media (max-width: 760px) {
+      .deep-dive-submenu { padding: 12px 14px; }
+      .deep-dive-submenu-desc { display: none; }
+      .deep-dive-topic-btn { padding: 6px 12px; font-size: 0.78rem; }
+    }
+
     .subscribe-bar {
       display: flex;
       align-items: center;
@@ -4063,12 +4129,11 @@
     </a>
     <nav class="site-header-nav">
       <button class="tab-btn" data-tab="hub-bub">Hub-Bub</button>
-      <button class="tab-btn active" data-tab="meetings">Meetings</button>
+      <button class="tab-btn active" data-tab="meetings">Gov-Hub</button>
       <button class="tab-btn" data-tab="news">Events</button>
       <button class="tab-btn" data-tab="local-news">Local News</button>
       <button class="tab-btn" data-tab="links">Local Groups</button>
       <button class="tab-btn" data-tab="housing-search">Housing</button>
-      <button class="tab-btn" data-tab="land-use">Deep Dive</button>
       <button class="tab-btn" data-tab="about-us">About Us</button>
     </nav>
     <div class="site-header-translate" id="google_translate_element"></div>
@@ -4210,6 +4275,15 @@
 
     <!-- ══════════ MEETINGS TAB ══════════ -->
     <div class="tab-content active" id="tab-meetings">
+      <!-- Deep Dive Topics Submenu -->
+      <div class="deep-dive-submenu" id="deepDiveSubmenu">
+        <div class="deep-dive-submenu-header">
+          <span class="deep-dive-submenu-icon">🔍</span>
+          <span class="deep-dive-submenu-title">Deep Dive</span>
+          <span class="deep-dive-submenu-desc">— plain-English civic guides to major local issues</span>
+        </div>
+        <div class="deep-dive-submenu-topics" id="deepDiveTopicButtons"></div>
+      </div>
       <div class="filter-row">
         <span class="chip active-all" data-filter="all" data-tab-target="meetings">All</span>
         <span class="chip" data-filter="telluride" data-tab-target="meetings">Town of Telluride</span>
@@ -8028,6 +8102,29 @@ GONDOLA_DATA.meetings = GONDOLA_DATA.meetings || [];
 LAND_USE_ISSUES.gondola = GONDOLA_DATA;
 
 let currentLandUseIssue = 'carhenge';
+
+// Populate Deep Dive topic buttons on Gov-Hub page
+function populateDeepDiveSubmenu() {
+  const container = document.getElementById('deepDiveTopicButtons');
+  if (!container) return;
+  container.innerHTML = Object.entries(LAND_USE_ISSUES).map(([key, issue]) =>
+    '<button class="deep-dive-topic-btn" data-dd-topic="' + key + '">' + issue.label + ' <span class="dd-arrow">→</span></button>'
+  ).join('');
+  container.querySelectorAll('.deep-dive-topic-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const topic = btn.dataset.ddTopic;
+      currentLandUseIssue = topic;
+      if (typeof window.switchTab === 'function') {
+        window.switchTab('land-use');
+      }
+      if (typeof renderLandUseTab === 'function') {
+        renderLandUseTab();
+      }
+    });
+  });
+}
+// Run on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', populateDeepDiveSubmenu);
 function renderLandUseTab() {
   const topicRow = document.getElementById('landUseTopicRow');
   const statusEl = document.getElementById('landUseStatus');
@@ -14625,9 +14722,6 @@ function showSubmitStatus(msg, type) {
   <button class="mobile-more-item" data-tab="housing-search">
     <span class="nav-icon">🏠</span> Housing Search
   </button>
-  <button class="mobile-more-item" data-tab="land-use">
-    <span class="nav-icon">🔍</span> Deep Dive
-  </button>
   <button class="mobile-more-item" data-tab="subscribe">
     <span class="nav-icon">📬</span> Subscribe
   </button>
@@ -14638,7 +14732,7 @@ function showSubmitStatus(msg, type) {
 <nav class="mobile-nav" id="mobileNav">
   <button class="mobile-nav-btn active" data-tab="meetings">
     <span class="nav-icon">🏛️</span>
-    <span class="nav-label">Meetings</span>
+    <span class="nav-label">Gov-Hub</span>
   </button>
   <button class="mobile-nav-btn" data-tab="news">
     <span class="nav-icon">🎉</span>
