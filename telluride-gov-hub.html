@@ -9954,7 +9954,7 @@ function haversineMiles(lat1, lon1, lat2, lon2) {
 }
 
 // Try to resolve an address to lat/lng from known locations first, then geocode
-function resolveLocation(address) {
+function geocodeAddress(address) {
   if (!address) return Promise.resolve(null);
   var lower = address.toLowerCase().replace(/,?\s*(co|colorado|81435|81425|81432)\s*/gi, '').trim();
   // Check known locations
@@ -9985,12 +9985,12 @@ function resolveLocation(address) {
 
 // Infer a location for a legal notice from its address, summary, or entity
 function getNoticeLocation(notice) {
-  if (notice.address) return resolveLocation(notice.address);
+  if (notice.address) return geocodeAddress(notice.address);
   // Try to extract an address from the summary
   var addrMatch = (notice.summary || '').match(/\d+\s+[NSEW]?\s*\.?\s*\w[\w\s]+(?:Ave|St|Blvd|Rd|Ln|Dr|Way|Ct|Pl|Circle)\b[^,]*/i);
-  if (addrMatch) return resolveLocation(addrMatch[0]);
+  if (addrMatch) return geocodeAddress(addrMatch[0]);
   // Try entity location
-  if (notice.event && notice.event.location) return resolveLocation(notice.event.location);
+  if (notice.event && notice.event.location) return geocodeAddress(notice.event.location);
   // Fall back to entity city
   var entityName = (notice.entity || '').toLowerCase();
   if (/mountain village/i.test(entityName)) return Promise.resolve(KNOWN_LOCATIONS['mountain village']);
@@ -10017,7 +10017,7 @@ function searchNearbyLegalNotices() {
   resultsDiv.style.display = 'block';
   resultsDiv.innerHTML = '<div style="text-align:center;padding:10px;color:var(--text-muted);font-size:0.8rem;">Locating your address...</div>';
 
-  resolveLocation(address).then(function(userCoords) {
+  geocodeAddress(address).then(function(userCoords) {
     if (!userCoords) {
       resultsDiv.innerHTML = '<div style="text-align:center;padding:12px;color:#c0392b;font-size:0.82rem;font-weight:600;">Could not find that address. Try adding "Telluride, CO" or a nearby town.</div>';
       searchBtn.disabled = false;
