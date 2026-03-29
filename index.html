@@ -10076,7 +10076,17 @@ function searchNearbyLegalNotices() {
 
       searchBtn.disabled = false;
       searchBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Search';
+    }).catch(function(err) {
+      console.error('Proximity search error:', err);
+      resultsDiv.innerHTML = '<div style="text-align:center;padding:12px;color:#c0392b;font-size:0.82rem;font-weight:600;">Something went wrong searching nearby notices. Please try again.</div>';
+      searchBtn.disabled = false;
+      searchBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Search';
     });
+  }).catch(function(err) {
+    console.error('Geocoding error:', err);
+    resultsDiv.innerHTML = '<div style="text-align:center;padding:12px;color:#c0392b;font-size:0.82rem;font-weight:600;">Could not locate that address. Please check and try again.</div>';
+    searchBtn.disabled = false;
+    searchBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Search';
   });
 }
 
