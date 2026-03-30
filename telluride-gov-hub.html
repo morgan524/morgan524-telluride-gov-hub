@@ -12271,6 +12271,7 @@ document.getElementById('expandRight').addEventListener('click', () => {
   let selectedSources = new Set();
   let selectedTopics = new Set();
   let selectedFreq = 'weekly';
+  const SRC_NAMES = { telluride: 'Town of Telluride', county: 'San Miguel County', mv: 'Mountain Village', smart: 'SMART Transit', school: 'School District', fire: 'Fire District', med: 'Medical Center', norwood: 'Town of Norwood', ophir: 'Town of Ophir', livable: 'Livable Telluride Newsletter' };
 
   // Auto-subscribe everyone to the Livable Telluride Newsletter by default
   (function initNewsletterDefault() {
@@ -12349,8 +12350,7 @@ document.getElementById('expandRight').addEventListener('click', () => {
     } else {
       const parts = [];
       if (sourceCount > 0) {
-        const srcNames = { telluride: 'Town of Telluride', county: 'San Miguel County', mv: 'Mountain Village', smart: 'SMART Transit', school: 'School District', fire: 'Fire District', med: 'Medical Center', norwood: 'Town of Norwood', ophir: 'Town of Ophir', livable: 'Livable Telluride Newsletter' };
-        parts.push([...selectedSources].map(k => srcNames[k] || k).join(', '));
+        parts.push([...selectedSources].map(k => SRC_NAMES[k] || k).join(', '));
       }
       if (topicCount > 0) {
         parts.push([...selectedTopics].map(k => TOPIC_DEFINITIONS[k]?.label || k).join(', '));
@@ -12418,9 +12418,8 @@ document.getElementById('expandRight').addEventListener('click', () => {
       var MAILCHIMP_U = "5d9192289b9af78822f2f69bf";
       var MAILCHIMP_ID = "f83dc56387";
 
-      var srcNames = { telluride: "Town of Telluride", county: "San Miguel County", mv: "Mountain Village", smart: "SMART Transit", school: "School District", fire: "Fire District", med: "Medical Center", norwood: "Town of Norwood", ophir: "Town of Ophir", livable: "Livable Telluride Newsletter" };
       var allSelections = [
-        ...[...selectedSources].map(function(k) { return srcNames[k] || k; }),
+        ...[...selectedSources].map(function(k) { return SRC_NAMES[k] || k; }),
         ...[...selectedTopics].map(function(k) { return TOPIC_DEFINITIONS[k] ? TOPIC_DEFINITIONS[k].label : k; })
       ];
 
@@ -12431,7 +12430,7 @@ document.getElementById('expandRight').addEventListener('click', () => {
       if (firstName) params.set("FNAME", firstName);
       if (lastName) params.set("LNAME", lastName);
       if (town) params.set("MMERGE6", town);
-      params.set("MMERGE7", [...selectedSources].map(function(k) { return srcNames[k] || k; }).join(", "));
+      params.set("MMERGE7", [...selectedSources].map(function(k) { return SRC_NAMES[k] || k; }).join(", "));
 
       var topicLabels = [...selectedTopics].map(function(k) { return TOPIC_DEFINITIONS[k] ? TOPIC_DEFINITIONS[k].label : k; });
       params.set("MMERGE8", topicLabels.join(", "));
@@ -12456,9 +12455,14 @@ document.getElementById('expandRight').addEventListener('click', () => {
 
       params.set("c", "mcCallback");
 
+      // Remove any stale JSONP script from a previous attempt
+      var oldScript = document.getElementById("mc-jsonp");
+      if (oldScript) oldScript.remove();
+
+      var mcTimeout;
       window.mcCallback = function(resp) {
+        clearTimeout(mcTimeout);
         if (resp.result === "success" || resp.msg.indexOf("already subscribed") > -1) {
-          document.getElementById("subscribeForm").closest(".subscribe-section").style.display = "none";
           document.querySelectorAll(".subscribe-section").forEach(function(s) { s.style.display = "none"; });
           document.querySelector(".subscribe-hero").style.display = "none";
           var success = document.getElementById("subscribeSuccess");
@@ -12482,6 +12486,24 @@ document.getElementById('expandRight').addEventListener('click', () => {
       var script = document.createElement("script");
       script.id = "mc-jsonp";
       script.src = MAILCHIMP_URL + "?" + params.toString();
+      script.onerror = function() {
+        clearTimeout(mcTimeout);
+        btn.disabled = false;
+        btn.textContent = "Subscribe Now";
+        alert("Network error — please check your connection and try again.");
+        var s = document.getElementById("mc-jsonp");
+        if (s) s.remove();
+      };
+      // Timeout fallback if Mailchimp doesn't respond within 15 seconds
+      mcTimeout = setTimeout(function() {
+        if (btn.textContent === "Subscribing...") {
+          btn.disabled = false;
+          btn.textContent = "Subscribe Now";
+          alert("The subscription request timed out. Please try again.");
+          var s = document.getElementById("mc-jsonp");
+          if (s) s.remove();
+        }
+      }, 15000);
       document.body.appendChild(script);
     });
   });
