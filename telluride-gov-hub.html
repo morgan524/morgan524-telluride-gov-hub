@@ -12437,6 +12437,18 @@ document.getElementById('expandRight').addEventListener('click', () => {
       params.set("MMERGE8", topicLabels.join(", "));
       params.set("MMERGE9", selectedFreq);
 
+      // ── Map selections to Mailchimp interest group checkboxes ──
+      // Group category ID: 7912 ("Topics of Interest")
+      var srcGroupIds = { telluride: 1, county: 2, mv: 4, school: 8, smart: 128, fire: 256, med: 512, norwood: 1024, ophir: 2048, livable: 4096 };
+      var topicGroupIds = { "housing": 16, "housing-search": 8192, "land-use": 32, "public-safety": 16384, "budget-finance": 32768, "infrastructure": 65536, "environment": 131072, "health-education": 262144, "legal-governance": 524288, "arts": 1048576, "music": 2097152, "recreation": 8388608, "community-events": 4194304, "food-drink": 16777216, "events-around-me": 64 };
+
+      [...selectedSources].forEach(function(k) {
+        if (srcGroupIds[k]) params.set("group[7912][" + srcGroupIds[k] + "]", "1");
+      });
+      [...selectedTopics].forEach(function(k) {
+        if (topicGroupIds[k]) params.set("group[7912][" + topicGroupIds[k] + "]", "1");
+      });
+
       if (hasProximity) {
         params.set("MMERGE10", window._proximityFilter.getAddress());
         params.set("MMERGE11", String(window._proximityFilter.getRadius()));
