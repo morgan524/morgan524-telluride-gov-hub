@@ -5154,7 +5154,6 @@
           <button class="chip active-all" data-housing-filter="all">All Listings</button>
           <button class="chip" data-housing-filter="deed-rental">Deed-Restricted Rentals</button>
           <button class="chip" data-housing-filter="deed-sale">Deed-Restricted For Sale</button>
-          <button class="chip" data-housing-filter="lottery">Lottery Deed-Restricted</button>
           <button class="chip" data-housing-filter="market-rental">Market Rentals</button>
         </div>
 
@@ -5168,8 +5167,8 @@
           <h3>Search These Sources Directly</h3>
           <div class="housing-source-grid">
             <a href="https://smrha.org/lottery" target="_blank" rel="noopener" class="housing-source-card">
-              <strong>SMRHA Housing Lottery</strong>
-              <span>Current lottery units &amp; applications</span>
+              <strong>SMRHA Deed-Restricted For Sale</strong>
+              <span>Current deed-restricted units &amp; applications</span>
             </a>
             <a href="https://smrha.org/property-listings/" target="_blank" rel="noopener" class="housing-source-card">
               <strong>SMRHA Property Listings</strong>
@@ -5200,8 +5199,8 @@
               <span>Local newspaper rental listings</span>
             </a>
             <a href="https://www.telluridenews.com/search/?q=housing+lottery&t=article" target="_blank" rel="noopener" class="housing-source-card">
-              <strong>Telluride News — Housing Lottery</strong>
-              <span>News articles on lottery openings</span>
+              <strong>Telluride News — Deed-Restricted Housing</strong>
+              <span>News articles on deed-restricted housing</span>
             </a>
             <a href="https://coloradohousingsearch.com/" target="_blank" rel="noopener" class="housing-source-card">
               <strong>ColoradoHousingSearch.com</strong>
@@ -12420,15 +12419,15 @@ document.getElementById('expandRight').addEventListener('click', () => {
 // Each listing includes location coords for OSM map embed and contact info.
 
 const HOUSING_LISTINGS = [
-  /* ── Housing Lottery — Applications Open ── */
+  /* ── Deed-Restricted For Sale — Applications Open ── */
   {
-    title: '🎟️ LOTTERY: Silver Jack Unit 202 — 3BR Condo',
-    type: 'lottery',
+    title: '🏠 Silver Jack Unit 202 — 3BR Condo (Deed-Restricted)',
+    type: 'deed-sale',
     lottery: true,
     address: '155 W Pacific Ave, Telluride, CO 81435',
     lat: 37.9378, lng: -107.8155,
     beds: '3 Bedroom, 2 Bath (1,330 sq ft)', price: '$405,507 (Tier 1, deed-restricted)',
-    source: 'SMRHA Lottery',
+    source: 'SMRHA',
     contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
     url: 'https://smrha.org/lottery',
     applyUrl: 'https://smrha.org/lottery',
@@ -12440,13 +12439,13 @@ const HOUSING_LISTINGS = [
     note: 'Ownership lottery under Telluride Affordable Housing Guidelines. Applications available at smrha.org/lottery or pick up in person.'
   },
   {
-    title: '🎟️ LOTTERY: Silver Jack Unit 205 — 2BR Condo',
-    type: 'lottery',
+    title: '🏠 Silver Jack Unit 205 — 2BR Condo (Deed-Restricted)',
+    type: 'deed-sale',
     lottery: true,
     address: '155 W Pacific Ave, Telluride, CO 81435',
     lat: 37.9378, lng: -107.8155,
     beds: '2 Bedroom, 1 Bath (935 sq ft)', price: '$368,620 (Tier 1, deed-restricted)',
-    source: 'SMRHA Lottery',
+    source: 'SMRHA',
     contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
     url: 'https://smrha.org/lottery',
     applyUrl: 'https://smrha.org/lottery',
@@ -12458,13 +12457,13 @@ const HOUSING_LISTINGS = [
     note: 'Ownership lottery under Telluride Affordable Housing Guidelines. Applications available at smrha.org/lottery or pick up in person.'
   },
   {
-    title: '🎟️ LOTTERY: Element 52 SW-102 — 2BR Condo',
-    type: 'lottery',
+    title: '🏠 Element 52 SW-102 — 2BR Condo (Deed-Restricted)',
+    type: 'deed-sale',
     lottery: true,
     address: '398 S Davis St, Telluride, CO 81435',
     lat: 37.9365, lng: -107.8118,
     beds: '2 Bedroom, 1 Bath (479 sq ft)', price: '$352,529 (Tier 2, deed-restricted)',
-    source: 'SMRHA Lottery',
+    source: 'SMRHA',
     contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
     url: 'https://smrha.org/lottery',
     applyUrl: 'https://smrha.org/lottery',
@@ -12582,7 +12581,7 @@ function renderHousingListings() {
   }
   let html = '';
   filtered.forEach(h => {
-    const typeLabels = { 'deed-rental': 'Deed-Restricted Rental', 'deed-sale': 'Deed-Restricted For Sale', 'lottery': 'Lottery Deed-Restricted', 'market-rental': 'Market Rental' };
+    const typeLabels = { 'deed-rental': 'Deed-Restricted Rental', 'deed-sale': 'Deed-Restricted For Sale', 'market-rental': 'Market Rental' };
     const sourceClass = h.type.startsWith('market') ? 'market' : 'public';
     const sourceLabel = typeLabels[h.type] || h.type;
     // Contact buttons
@@ -12603,7 +12602,7 @@ function renderHousingListings() {
     let lotteryHtml = '';
     if (h.lottery) {
       lotteryHtml = '<div class="housing-lottery-info">' +
-        '<div class="lottery-banner">🎟️ HOUSING LOTTERY — Applications Open</div>' +
+        '<div class="lottery-banner">🏠 DEED-RESTRICTED FOR SALE — Applications Open</div>' +
         '<dl class="lottery-details">' +
           '<dt>📅 Application Deadline</dt><dd><strong>' + h.deadline + '</strong></dd>' +
           '<dt>🎲 Lottery Drawing</dt><dd>' + h.drawingDate + '</dd>' +
