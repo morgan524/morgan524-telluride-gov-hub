@@ -8462,13 +8462,24 @@ LAND_USE_ISSUES.gondola = GONDOLA_DATA;
 let currentLandUseIssue = 'carhenge';
 
 // Populate Deep Dive topic buttons on Gov-Hub page
+// Standalone deep-dive pages (open in new tab, not inline)
+const DEEP_DIVE_PAGES = [
+  { label: 'Telluride Debt', href: '/the-growing-weight-of-tellurides-debt/' }
+];
+
 function populateDeepDiveSubmenu() {
   const container = document.getElementById('deepDiveTopicButtons');
   if (!container) return;
-  container.innerHTML = Object.entries(LAND_USE_ISSUES).map(([key, issue]) =>
+  // Inline topic buttons
+  var html = Object.entries(LAND_USE_ISSUES).map(([key, issue]) =>
     '<button class="deep-dive-topic-btn" data-dd-topic="' + key + '">' + issue.label + ' <span class="dd-arrow">→</span></button>'
   ).join('');
-  container.querySelectorAll('.deep-dive-topic-btn').forEach(btn => {
+  // Standalone page buttons
+  html += DEEP_DIVE_PAGES.map(function(page) {
+    return '<a class="deep-dive-topic-btn" href="' + page.href + '" target="_blank" rel="noopener" style="text-decoration:none;">' + page.label + ' <span class="dd-arrow">→</span></a>';
+  }).join('');
+  container.innerHTML = html;
+  container.querySelectorAll('.deep-dive-topic-btn[data-dd-topic]').forEach(btn => {
     btn.addEventListener('click', function() {
       const topic = btn.dataset.ddTopic;
       currentLandUseIssue = topic;

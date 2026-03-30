@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Growing Weight of Telluride's Debt &mdash; Livable Telluride | Gov Hub</title>
+<meta name="description" content="A fiscal analysis of the Town of Telluride's budget growth, housing authority debt portfolio, balloon payment exposure, and proposed future development obligations.">
+<meta property="og:title" content="The Growing Weight of Telluride's Debt">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://livabletelluride.org/the-growing-weight-of-tellurides-debt/">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{--steel:#2c5f7c;--rust:#c44e3d;--gold:#d4a843;--forest:#21443c;--bg:#f5f6f8;--card:#fff;--t:#1a1a2e;--ts:#4a5568;--tm:#718096;--b:#e2e5ea;--accent:#1a7f64}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--t);line-height:1.7}
+
+/* Header */
+.sh{background:linear-gradient(135deg,#1a3a4a 0%,#21443c 60%,#2d5a3d 100%);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.15)}
+.hi{max-width:960px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between}
+.hb{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.hb span{font-size:1.1rem;font-weight:700;letter-spacing:.5px}
+.hn a{color:rgba(255,255,255,.85);text-decoration:none;font-size:.85rem;font-weight:600;padding:6px 14px;border-radius:6px;transition:all .2s}
+.hn a:hover{background:rgba(255,255,255,.1);color:#fff}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#2c5f7c 0%,#1a3a4a 100%);color:#fff;padding:60px 24px 50px;text-align:center}
+.hero h1{font-size:2.3rem;font-weight:800;line-height:1.2;margin-bottom:12px;max-width:700px;margin-left:auto;margin-right:auto}
+.hero .subtitle{font-size:1.05rem;color:rgba(255,255,255,.8);max-width:640px;margin:0 auto 16px;line-height:1.6}
+.hero .meta{font-size:.82rem;color:var(--gold);font-style:italic}
+.gold-bar{height:4px;background:var(--gold);max-width:120px;margin:0 auto 20px}
+
+/* Content */
+.ac{max-width:820px;margin:0 auto;padding:36px 24px 60px}
+.bl{display:inline-flex;align-items:center;gap:6px;color:var(--accent);text-decoration:none;font-weight:600;font-size:.92rem;margin-bottom:24px}
+.bl:hover{text-decoration:underline}
+
+/* Sections */
+.section{margin-bottom:48px}
+.section h2{font-size:1.5rem;font-weight:800;color:var(--steel);margin-bottom:8px;border-bottom:3px solid var(--gold);padding-bottom:8px;display:inline-block}
+.section h3{font-size:1.15rem;font-weight:700;color:var(--t);margin:24px 0 10px}
+.section p{font-size:1rem;line-height:1.8;color:var(--ts);margin-bottom:16px}
+
+/* KPI cards */
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin:24px 0}
+.kpi{background:var(--steel);color:#fff;border-radius:12px;padding:18px 16px;text-align:center}
+.kpi .val{font-size:1.7rem;font-weight:800;line-height:1.2}
+.kpi .lbl{font-size:.78rem;opacity:.85;margin-top:4px}
+.kpi.warn{background:var(--rust)}
+.kpi.gold-bg{background:#7a6420}
+
+/* Charts */
+.chart-wrap{background:var(--card);border-radius:12px;padding:20px;margin:24px 0;box-shadow:0 2px 8px rgba(0,0,0,.06);border:1px solid var(--b)}
+.chart-wrap h4{font-size:.95rem;font-weight:700;color:var(--t);margin-bottom:12px;text-align:center}
+.chart-wrap canvas{max-height:340px}
+
+/* Tables */
+.data-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.88rem;background:var(--card);border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.data-table th{background:var(--steel);color:#fff;padding:10px 12px;text-align:left;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.5px}
+.data-table td{padding:9px 12px;border-bottom:1px solid var(--b)}
+.data-table tr:last-child td{border-bottom:none}
+.data-table .total-row{background:#eef2f5;font-weight:700}
+.data-table .warn-row{background:#fef2f2}
+.data-table .money{text-align:right;font-variant-numeric:tabular-nums}
+.data-table .ratio{text-align:center}
+
+/* Callout boxes */
+.callout{border-left:4px solid var(--gold);background:#fefce8;padding:14px 18px;border-radius:0 8px 8px 0;margin:20px 0;font-size:.92rem;color:#6b5b10}
+.callout.red{border-color:var(--rust);background:#fef2f2;color:#7c2d12}
+.callout strong{color:inherit}
+
+/* Source citations */
+.sources{margin-top:40px;padding-top:20px;border-top:2px solid var(--b)}
+.sources h3{font-size:1rem;color:var(--tm);margin-bottom:10px}
+.sources p{font-size:.82rem;color:var(--tm);line-height:1.7;margin-bottom:6px}
+.sources a{color:var(--accent)}
+
+/* Footer */
+.sf{background:var(--forest);color:rgba(255,255,255,.7);text-align:center;padding:28px 24px;font-size:.82rem}
+.sf a{color:rgba(255,255,255,.9);text-decoration:none}
+
+/* TOC */
+.toc{background:var(--card);border-radius:12px;padding:20px 24px;margin:0 0 36px;box-shadow:0 2px 8px rgba(0,0,0,.06);border:1px solid var(--b)}
+.toc h3{font-size:.9rem;text-transform:uppercase;letter-spacing:1px;color:var(--tm);margin-bottom:10px}
+.toc ol{padding-left:20px}
+.toc li{margin-bottom:6px}
+.toc a{color:var(--steel);text-decoration:none;font-weight:600;font-size:.92rem}
+.toc a:hover{color:var(--accent);text-decoration:underline}
+
+@media(max-width:640px){
+  .hero h1{font-size:1.6rem}
+  .hero{padding:40px 18px 32px}
+  .ac{padding:24px 16px 40px}
+  .kpi-row{grid-template-columns:repeat(2,1fr)}
+  .kpi .val{font-size:1.3rem}
+  .data-table{font-size:.78rem}
+  .data-table th,.data-table td{padding:7px 8px}
+}
+</style>
+</head>
+<body>
+
+<header class="sh"><div class="hi">
+<a href="https://livabletelluride.org/" class="hb">
+<span>Livable Telluride &middot; Deep Dive</span>
+</a>
+<nav class="hn"><a href="https://livabletelluride.org/">Gov Hub</a></nav>
+</div></header>
+
+<div class="hero">
+  <div class="gold-bar"></div>
+  <h1>The Growing Weight of Telluride&rsquo;s Debt</h1>
+  <p class="subtitle">A fiscal analysis of the Town of Telluride&rsquo;s budget growth, housing authority debt portfolio, balloon payment exposure, and proposed future development obligations.</p>
+  <p class="meta">Livable Telluride &bull; March 2026</p>
+</div>
+
+<main class="ac">
+<a href="https://livabletelluride.org/" class="bl">&larr; Back to Gov Hub</a>
+
+<nav class="toc">
+  <h3>In This Report</h3>
+  <ol>
+    <li><a href="#budget">A Budget That Has Tripled</a></li>
+    <li><a href="#debt">The Debt Portfolio: $76M+ and Counting</a></li>
+    <li><a href="#canyonlands">CanyonLands: How It&rsquo;s Supposed to Work &mdash; and Why It Doesn&rsquo;t</a></li>
+    <li><a href="#recession">Recession Vulnerability &amp; Balloon Payment Risk</a></li>
+    <li><a href="#balloons">Balloon Payments: $32.3M in Concentrated Risk</a></li>
+    <li><a href="#future">Proposed Future Development: $388.8M More</a></li>
+    <li><a href="#tabor">Potential TABOR Violation: The Enterprise Test</a></li>
+    <li><a href="#summary">Summary of Current Debt</a></li>
+  </ol>
+</nav>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- 1. BUDGET GROWTH -->
+<!-- ════════════════════════════════════════════ -->
+<div class="section" id="budget">
+  <h2>1. A Budget That Has Tripled</h2>
+  <p>The Town of Telluride&rsquo;s total budget has grown from $32.1 million in 2017 to $103.3 million in 2025 &mdash; a 222% increase in just eight years. While some of this growth reflects rising costs statewide, the rate far outpaces both inflation and population growth in San Miguel County.</p>
+  <p>The Affordable Housing Fund, supported by a 0.5% sales tax, a 2.5% short-term rental excise tax, and a 2.222-mill property tax levy, has grown from under $2 million in 2017 to over $11 million in 2025 &mdash; a 517% increase. The Shandoka Fund alone surged from $1.5 million in FY2019 to $11.1 million in FY2025, largely due to absorbing VooDoo&rsquo;s financial obligations.</p>
+
+  <div class="chart-wrap">
+    <h4>Town of Telluride &mdash; Total Budget (2017&ndash;2025)</h4>
+    <canvas id="budgetChart"></canvas>
+  </div>
+
+  <div class="chart-wrap">
+    <h4>Affordable Housing Fund Growth (2017&ndash;2025)</h4>
+    <canvas id="housingFundChart"></canvas>
+  </div>
+
+  <div class="callout">
+    <strong>+222%</strong> total budget growth and <strong>+517%</strong> housing fund growth in eight years &mdash; far outpacing inflation and county population growth.
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- 2. DEBT PORTFOLIO -->
+<!-- ════════════════════════════════════════════ -->
+<div class="section" id="debt">
+  <h2>2. The Debt Portfolio: $76M+ and Counting</h2>
+  <p>The Telluride Housing Authority has accumulated more than $76 million in bonded debt across five projects &mdash; none of which was put to a public vote. Colorado&rsquo;s Housing Authorities Law (C.R.S. &sect;29-4-201 et seq.) permits this only when bonds are payable from project revenues, not the Town&rsquo;s general funds. Yet THA&rsquo;s own budget documents show that rental income covers only a fraction of annual debt service obligations.</p>
+
+  <div class="kpi-row">
+    <div class="kpi"><div class="val">$76M+</div><div class="lbl">Total Bonded Debt</div></div>
+    <div class="kpi warn"><div class="val">$32.3M</div><div class="lbl">Balloon Payments Due</div></div>
+    <div class="kpi gold-bg"><div class="val">0.35&times;</div><div class="lbl">Effective Coverage Ratio</div></div>
+    <div class="kpi"><div class="val">$814K</div><div class="lbl">Annual Moral Obligation Subsidy</div></div>
+  </div>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Project</th><th>Bond Year</th><th class="money">Principal</th><th class="money">Annual Debt Service</th><th class="money">Annual Revenue</th><th class="ratio">Coverage</th><th class="money">Balloon Payment</th><th>Balloon Year</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Shandoka</td><td>2021</td><td class="money">$3,990,000</td><td class="money">$635,032</td><td class="money">$2,000,000</td><td class="ratio">3.15&times;</td><td class="money">&mdash;</td><td>&mdash;</td></tr>
+      <tr class="warn-row"><td>Virginia Placer</td><td>2017</td><td class="money">$8,602,000</td><td class="money">$518,871</td><td class="money">$575,000</td><td class="ratio">0.58&times;</td><td class="money">$3,040,000</td><td>2036</td></tr>
+      <tr class="warn-row"><td>Sunnyside</td><td>2021</td><td class="money">$11,965,000</td><td class="money">$591,800</td><td class="money">$685,000</td><td class="ratio">0.50&times;</td><td class="money">$6,170,000</td><td>2040</td></tr>
+      <tr class="warn-row"><td>VooDoo</td><td>2022&ndash;23</td><td class="money">$21,370,000</td><td class="money">$1,190,240</td><td class="money">$620,000</td><td class="ratio">0.66&times;</td><td class="money">$23,045,864</td><td>2032</td></tr>
+      <tr class="warn-row"><td>CanyonLands (Est.)</td><td>2024</td><td class="money">$26,000,000</td><td class="money">$556,000</td><td class="money">$606,000</td><td class="ratio">0.50&times;</td><td class="money">TBD</td><td>TBD</td></tr>
+      <tr class="total-row"><td><strong>TOTAL</strong></td><td></td><td class="money"><strong>$71,927,000</strong></td><td class="money"><strong>$3,491,943</strong></td><td class="money"><strong>$4,486,000</strong></td><td></td><td class="money"><strong>$32,255,864</strong></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <p>Red-shaded rows indicate projects where annual revenue does not cover annual debt service. Coverage ratios below 1.0&times; mean rental income alone cannot service the debt.</p>
+
+  <div class="chart-wrap">
+    <h4>THA Debt by Project &mdash; Principal, Interest &amp; Balloon Payments</h4>
+    <canvas id="debtStackChart"></canvas>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- 3. CANYONLANDS -->
+<!-- ════════════════════════════════════════════ -->
+<div class="section" id="canyonlands">
+  <h2>3. CanyonLands: How It&rsquo;s Supposed to Work &mdash; and Why It Doesn&rsquo;t</h2>
+  <p>In June 2024, the Telluride Housing Authority approved the CanyonLands/Tower House project &mdash; a 39-unit development (28 deed-restricted rentals and 11 for-sale units) financed with a $26.575 million taxable multifamily revenue bond issued through the Wisconsin Public Finance Authority and placed privately by J.P. Morgan.</p>
+  <p>The project&rsquo;s financing plan relies on a cross-subsidy: proceeds from the sale of 8 affordable condominiums and 3 market-rate townhomes (estimated at approximately $9.4 million) are to be applied immediately to &ldquo;buy down&rdquo; the bond principal, leaving a smaller remaining debt to be serviced by rental income. The problem is that even after applying roughly $10 million in sales proceeds to reduce principal, the project&rsquo;s 28 rental units generate insufficient income to cover the remaining debt service.</p>
+
+  <div class="chart-wrap">
+    <h4>CanyonLands &mdash; Rent Income vs. Debt Service (Scenario Analysis)</h4>
+    <canvas id="canyonlandsChart"></canvas>
+  </div>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Scenario</th><th class="money">Net Operating Income</th><th class="money">Annual Debt Service</th><th class="money">Annual Shortfall</th><th class="ratio">DSCR</th><th class="money">10-Year Gap</th></tr>
+    </thead>
+    <tbody>
+      <tr class="warn-row"><td>Base Case (95% occ)</td><td class="money">$606K</td><td class="money">$1,204K</td><td class="money">&minus;$598K</td><td class="ratio">0.50&times;</td><td class="money">&minus;$5.98M</td></tr>
+      <tr class="warn-row"><td>Downside (90% occ)</td><td class="money">$574K</td><td class="money">$1,277K</td><td class="money">&minus;$703K</td><td class="ratio">0.45&times;</td><td class="money">&minus;$7.02M</td></tr>
+      <tr class="warn-row"><td>Stress (85% + 20% cost)</td><td class="money">$504K</td><td class="money">$1,699K</td><td class="money">&minus;$1,196K</td><td class="ratio">0.30&times;</td><td class="money">&minus;$11.96M</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Additional Risk Factors</h3>
+  <p><strong>Moral obligation with no legal backstop:</strong> The bond is non-recourse to the Town and THA on paper. In practice, the Town passed a formal Replenishment Resolution committing to refill the debt-service reserve fund if drawn. This is not a legal obligation, but given that the Town Council and THA board are the same people, it functions as a political commitment.</p>
+  <p><strong>Sales-price risk:</strong> The entire business plan depends on condo and townhome sales generating approximately $9.4 million. A 10&ndash;15% decline in sale prices would significantly reduce the principal paydown, worsening DSCR on the remaining rental debt.</p>
+  <p><strong>No voter approval:</strong> Like VooDoo, Sunnyside, and Virginia Placer, CanyonLands was not submitted to voters. The conduit bond structure (through a Wisconsin authority rather than a Colorado entity) was used precisely to avoid the need for local voter approval under TABOR.</p>
+  <p><strong>Pre-development loan at risk:</strong> The Town advanced $1.5 million in pre-development costs, to be reimbursed at financial close for project proceeds. If the project experiences a default or significant financial distress, this loan &mdash; likely subordinate to the bond indenture &mdash; would be among the first funds lost.</p>
+</div>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- 4. RECESSION VULNERABILITY -->
+<!-- ════════════════════════════════════════════ -->
+<div class="section" id="recession">
+  <h2>4. Recession Vulnerability &amp; Balloon Payment Risk</h2>
+  <p>Telluride&rsquo;s economy is heavily dependent on tourism and short-term rentals &mdash; revenue sources that are acutely sensitive to economic downturns. The Town&rsquo;s three dedicated housing tax streams (sales tax, short-term rental excise tax, and property mill levy) would all contract sharply in a recession, precisely when they are most needed to service housing debt.</p>
+  <p>The portfolio&rsquo;s &ldquo;moral obligation&rdquo; structure compounds this risk. THA&rsquo;s 2025 budget includes explicit subsidy line items &mdash; $219,000 for VooDoo, $218,000 for Virginia Placer, and $377,000 for Sunnyside &mdash; acknowledging that rental income alone cannot service these bonds. If the Town ever declined to appropriate these subsidies, bond default and loss of public housing assets would follow.</p>
+
+  <div class="chart-wrap">
+    <h4>Project Revenue vs. Annual Debt Service (FY2025)</h4>
+    <canvas id="revenueVsDebtChart"></canvas>
+  </div>
+
+  <div class="callout red">
+    <strong>Key risk:</strong> In a mild recession (15% revenue decline), the portfolio would face annual shortfalls exceeding $1 million for several consecutive years. In a severe scenario (25% decline), the shortfall could reach $1.5 million annually.
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- 5. BALLOON PAYMENTS -->
+<!-- ════════════════════════════════════════════ -->
+<div class="section" id="balloons">
+  <h2>5. Balloon Payments: $32.3M in Concentrated Risk</h2>
+  <p>Three of THA&rsquo;s five projects carry large balloon payments &mdash; lump sums due at maturity that must either be refinanced at prevailing interest rates or paid in full. These payments total $32.26 million and cluster between 2032 and 2040. The largest &mdash; VooDoo&rsquo;s $23.05 million, due in 2032 &mdash; exceeds the project&rsquo;s total expected rental income over its remaining bond life. If interest rates are elevated at refinancing, the Town&rsquo;s annual obligations could increase substantially.</p>
+
+  <div class="chart-wrap">
+    <h4>Balloon Payment Timeline</h4>
+    <canvas id="balloonChart"></canvas>
+  </div>
+
+  <div class="chart-wrap">
+    <h4>Debt Service Obligations vs. Revenue Under Recession Scenarios</h4>
+    <canvas id="recessionChart"></canvas>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- 6. PROPOSED FUTURE DEVELOPMENT -->
+<!-- ════════════════════════════════════════════ -->
+<div class="section" id="future">
+  <h2>6. Proposed Future Development: An Additional $388.8 Million</h2>
+  <p>Beyond existing obligations, the Town has three major developments in the published phase of approval that would add an estimated $388.8 million in new construction costs. Using the per-square-foot costs established by recent THA projects ($1,000/sf for residential, $700/sf for commercial, $150/sf for parking), these figures represent a potential debt obligation that dwarfs the current $76 million portfolio.</p>
+  <p>If financed through bonds at terms comparable to VooDoo (5.7&ndash;7.15% interest, 10&ndash;20 year terms with balloon payments), the interest burden alone on $388.8 million could exceed $150 million over the bond life &mdash; bringing total future obligations above $500 million. Combined with the existing $76 million portfolio and $32 million in pending balloon payments, the Town would be managing well over half a billion dollars in housing-related debt in a community of approximately 2,500 permanent residents.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Development</th><th class="ratio">Units</th><th class="money">Est. SF</th><th class="money">Cost/SF</th><th class="money">Total Est. Cost</th></tr>
+    </thead>
+    <tbody>
+      <tr><td colspan="5" style="font-weight:700;background:#f1f5f9">Lot L Development</td></tr>
+      <tr><td>&nbsp;&nbsp;Garage Residential</td><td class="ratio">900</td><td class="money">315,000</td><td class="money">$150</td><td class="money">$47,250,000</td></tr>
+      <tr><td>&nbsp;&nbsp;Commercial/Fitness</td><td class="ratio">60</td><td class="money">60,000</td><td class="money">$1,000</td><td class="money">$60,000,000</td></tr>
+      <tr><td>&nbsp;&nbsp;Parking</td><td class="ratio">&mdash;</td><td class="money">10,000</td><td class="money">$1,000</td><td class="money">$10,000,000</td></tr>
+      <tr class="total-row"><td>&nbsp;&nbsp;<strong>Lot L Subtotal</strong></td><td></td><td class="money"><strong>385,000</strong></td><td></td><td class="money"><strong>$117,250,000</strong></td></tr>
+      <tr><td colspan="5" style="font-weight:700;background:#f1f5f9">Chair 7 / Carhenge</td></tr>
+      <tr><td>&nbsp;&nbsp;Residential Hotel/Commercial</td><td class="ratio">230</td><td class="money">230,000</td><td class="money">$1,000</td><td class="money">$230,000,000</td></tr>
+      <tr><td>&nbsp;&nbsp;Parking</td><td class="ratio">38</td><td class="money">38,000</td><td class="money">&mdash;</td><td class="money">&mdash;</td></tr>
+      <tr><td>&nbsp;&nbsp;Residential</td><td class="ratio">230</td><td class="money">80,500</td><td class="money">$150</td><td class="money">$12,075,000</td></tr>
+      <tr class="total-row"><td>&nbsp;&nbsp;<strong>Chair 7 Subtotal</strong></td><td></td><td class="money"><strong>348,500</strong></td><td></td><td class="money"><strong>$242,075,000</strong></td></tr>
+      <tr><td><strong>New Gondola</strong></td><td class="ratio">&mdash;</td><td class="money">42,100</td><td class="money">$700</td><td class="money">$29,470,000</td></tr>
+      <tr class="total-row" style="background:#e2e8f0"><td><strong>GRAND TOTAL</strong></td><td></td><td class="money"><strong>775,600</strong></td><td></td><td class="money"><strong>$388,795,000</strong></td></tr>
+    </tbody>
+  </table>
+
+  <div class="chart-wrap">
+    <h4>Proposed Development &mdash; Estimated Costs</h4>
+    <canvas id="futureDevChart"></canvas>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- 7. TABOR -->
+<!-- ════════════════════════════════════════════ -->
+<div class="section" id="tabor">
+  <h2>7. Potential TABOR Violation: The Enterprise Test</h2>
+  <p>Colorado&rsquo;s Taxpayer&rsquo;s Bill of Rights (TABOR) requires voter approval for government debt. THA avoided this requirement by claiming &ldquo;enterprise&rdquo; status under Colo. Const. art. X, &sect;20(2)(d), which exempts entities that operate as self-sustaining businesses receiving less than 10% of revenue from government sources. The three-part test established in <em>Nicholl v. E-470 Pub. Highway Auth.</em>, 896 P.2d 859 (Colo. 1995) requires that THA satisfy all three grounds simultaneously. Based on publicly available financial data, THA fails all three.</p>
+
+  <h3>Ground 1: The 10% Government Revenue Threshold</h3>
+  <p><em>Nicholl</em> holds that an entity receiving 10% or more of revenue from government sources loses enterprise status. At the entity level, THA&rsquo;s identified government funding share exceeds 52% of all revenues &mdash; more than five times the TABOR threshold.</p>
+
+  <div class="chart-wrap">
+    <h4>Government Revenue Share vs. TABOR 10% Enterprise Threshold</h4>
+    <canvas id="taborChart"></canvas>
+  </div>
+
+  <h3>Legal Consequences If Enterprise Status Is Lost</h3>
+  <p>If a court determines THA is not a TABOR enterprise, the consequences are severe: (a) all future debt issuance and revenue increases require a TABOR vote; (b) any taxpayer may file suit under C.R.S. &sect;29-4-207 seeking restitution of all TABOR-restricted revenues collected without voter approval, at 10% annual interest, back four prior fiscal years; (c) projects generating DSCR below 1.0&times; without government subsidy are in arguable violation of C.R.S. &sect;29-4-229 independent of TABOR; and (d) revenue bond covenants typically require the issuer to maintain enterprise status &mdash; loss could trigger technical default provisions.</p>
+
+  <div class="callout red">The Town&rsquo;s own Charter states that &ldquo;all public debt must be voter approved.&rdquo; None of THA&rsquo;s $76M+ in bonds received a public vote.</div>
+
+  <div class="chart-wrap">
+    <h4>Per-Unit Public Cost Escalation by Project</h4>
+    <canvas id="perUnitChart"></canvas>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- 8. SUMMARY -->
+<!-- ════════════════════════════════════════════ -->
+<div class="section" id="summary">
+  <h2>8. Summary of Current Debt</h2>
+  <p>The two charts below present the most favorable and true-cost views of THA&rsquo;s portfolio. <strong>Chart 1</strong> shows only regular annual debt service against net operating income &mdash; excluding $33.0 million in balloon payments entirely. Even under this optimistic framing, the portfolio DSCR starts at just 0.82&times; in 2025 and does not reach 1.0&times; until 2032, assuming 3% annual NOI growth. Until then, every year runs a structural deficit that must be filled by Town appropriations.</p>
+  <p><strong>Chart 2</strong> shows the true cost of eliminating the portfolio&rsquo;s $33.0 million balloon risk by converting all bonds to fully amortizing schedules. Annual debt service rises from $3,889K to $6,199K &mdash; an increase of $2,310K per year. Under this scenario, the 2025 DSCR drops to 0.52&times; and reaches only 0.67&times; by 2034, meaning the portfolio would never come close to self-sufficiency.</p>
+
+  <div class="callout red">
+    <strong>The gap between the two charts illustrates the degree to which THA&rsquo;s apparent solvency depends on deferring repayment through balloon structures rather than generating sufficient operating income.</strong>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- SOURCES -->
+<!-- ════════════════════════════════════════════ -->
+<div class="sources">
+  <h3>Sources &amp; Methodology</h3>
+  <p>All data in this analysis is derived from publicly available Town of Telluride and THA documents, including adopted budgets, audited financial statements, bond payment schedules, board meeting materials, and planning documents.</p>
+  <p><a href="https://telluride-co.gov/122/Budget-Financial-Statements" target="_blank">Town of Telluride &mdash; Budget &amp; Financial Statements</a></p>
+  <p><a href="https://telluride-co.civicweb.net/filepro/documents/" target="_blank">THA Board Documents (CivicWeb)</a></p>
+  <p>Coverage ratios calculated from THA P&amp;L data (FY2023&ndash;2025) compiled from Town of Telluride 2022 and 2023 Audited Financial Statements and 2025 THA Budget Projections. Debt service figures from bond payment schedules in the Town of Telluride 2022 Budget Book, pp. 79&ndash;80.</p>
+  <p>Recession modeling based on 15% (mild) and 25% (severe) revenue declines applied to tourism-dependent tax streams, consistent with Telluride&rsquo;s experience during the 2008&ndash;2010 downturn.</p>
+  <p>TABOR enterprise test: Colo. Const. art. X, &sect;20(2)(d); <em>Nicholl v. E-470 Pub. Highway Auth.</em>, 896 P.2d 859 (Colo. 1995). Three-part test requires: (1) less than 10% government revenue, (2) operation as a business (self-sustaining), and (3) no taxing power or heavy public subsidy. All three must be satisfied simultaneously.</p>
+</div>
+
+</main>
+
+<footer class="sf"><p>&copy; 2025&ndash;2026 <a href="https://livabletelluride.org/">Livable Telluride</a> &middot; Deep Dive &middot; <a href="https://livabletelluride.org/">Gov Hub</a></p></footer>
+
+<script>
+// ── Chart defaults ──
+Chart.defaults.font.family = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif";
+Chart.defaults.font.size = 12;
+const steel = '#2c5f7c', rust = '#c44e3d', gold = '#d4a843', forest = '#21443c', teal = '#1a7f64';
+
+// ── 1. Budget Chart ──
+new Chart(document.getElementById('budgetChart'), {
+  type: 'bar',
+  data: {
+    labels: ['2017','2018','2019','2020','2021','2022','2023','2024','2025'],
+    datasets: [{
+      label: 'Total Budget ($M)',
+      data: [32,35,38,36,49,68,82,89,103],
+      backgroundColor: [steel,steel,steel,steel,steel,steel,rust,rust,rust],
+      borderRadius: 4
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: c => '$' + c.raw + 'M' } }
+    },
+    scales: {
+      y: { beginAtZero: true, ticks: { callback: v => '$' + v + 'M' }, title: { display: true, text: 'Total Budget ($ Millions)' } }
+    }
+  }
+});
+
+// ── 2. Housing Fund Chart ──
+new Chart(document.getElementById('housingFundChart'), {
+  type: 'line',
+  data: {
+    labels: ['2017','2018','2019','2020','2021','2022','2023','2024','2025'],
+    datasets: [{
+      label: 'Affordable Housing Fund ($M)',
+      data: [2.0,1.5,3.0,2.5,3.5,5.5,6.5,10.0,8.5,11.0],
+      borderColor: steel,
+      backgroundColor: 'rgba(44,95,124,0.15)',
+      fill: true,
+      tension: 0.3,
+      pointRadius: 5,
+      pointBackgroundColor: steel
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: c => '$' + c.raw + 'M' } }
+    },
+    scales: {
+      y: { beginAtZero: true, ticks: { callback: v => '$' + v + 'M' }, title: { display: true, text: 'Fund Balance ($ Millions)' } }
+    }
+  }
+});
+
+// ── 3. Debt Stack Chart ──
+new Chart(document.getElementById('debtStackChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Shandoka\n($3.99M)','Virginia Placer\n($8.60M)','Sunnyside\n($11.97M)','VooDoo\n($21.37M)','CanyonLands\n($26.0M)'],
+    datasets: [
+      { label: 'Principal Borrowed', data: [3.99,8.60,11.97,21.37,26.0], backgroundColor: steel },
+      { label: 'Total Interest', data: [0.8,3.5,4.0,10.0,5.0], backgroundColor: gold },
+      { label: 'Balloon Payment Due', data: [0,3.04,6.17,23.05,0], backgroundColor: rust }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { position: 'top' }, tooltip: { callbacks: { label: c => c.dataset.label + ': $' + c.raw + 'M' } } },
+    scales: {
+      x: { stacked: true },
+      y: { stacked: true, beginAtZero: true, ticks: { callback: v => '$' + v + 'M' }, title: { display: true, text: 'Dollars ($ Millions)' } }
+    }
+  }
+});
+
+// ── 4. CanyonLands Scenario Chart ──
+new Chart(document.getElementById('canyonlandsChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Base Case\n(95% occ, 120% AMI)','Downside\n(90% occ)','Stress\n(85% occ +\n20% cost overrun)'],
+    datasets: [
+      { label: 'Net Operating Income', data: [606,574,504], backgroundColor: teal },
+      { label: 'Annual Debt Service', data: [1204,1277,1699], backgroundColor: rust }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { position: 'top' }, tooltip: { callbacks: { label: c => c.dataset.label + ': $' + c.raw + 'K' } } },
+    scales: {
+      y: { beginAtZero: true, ticks: { callback: v => '$' + v + 'K' }, title: { display: true, text: 'Annual ($K)' } }
+    }
+  }
+});
+
+// ── 5. Revenue vs Debt Service ──
+new Chart(document.getElementById('revenueVsDebtChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Shandoka','Virginia\nPlacer','Sunnyside','VooDoo','CanyonLands'],
+    datasets: [
+      { label: 'Annual Revenue', data: [2000,575,685,620,606], backgroundColor: teal },
+      { label: 'Annual Debt Service', data: [635,519,592,1190,556], backgroundColor: rust }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'top' },
+      tooltip: { callbacks: { label: c => c.dataset.label + ': $' + c.raw + 'K' } }
+    },
+    scales: {
+      y: { beginAtZero: true, ticks: { callback: v => '$' + (v/1000).toFixed(1) + 'M' }, title: { display: true, text: 'Annual ($ Millions)' } }
+    }
+  }
+});
+
+// ── 6. Balloon Payment Timeline ──
+new Chart(document.getElementById('balloonChart'), {
+  type: 'bar',
+  data: {
+    labels: ['VooDoo\n$23.05M (Due 2032)','Virginia Placer\n$3.04M (Due 2036)','Sunnyside\n$6.17M (Due 2040)'],
+    datasets: [{
+      label: 'Balloon Payment ($M)',
+      data: [23.05,3.04,6.17],
+      backgroundColor: [rust,'#e8915a',gold],
+      borderRadius: 4
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: c => '$' + c.raw + 'M' } }
+    },
+    scales: {
+      x: { beginAtZero: true, ticks: { callback: v => '$' + v + 'M' }, title: { display: true, text: 'Balloon Payment Amount ($ Millions)' } }
+    }
+  }
+});
+
+// ── 7. Recession Scenario ──
+new Chart(document.getElementById('recessionChart'), {
+  type: 'line',
+  data: {
+    labels: ['2026','2028','2030','2032','2034','2036','2038','2040'],
+    datasets: [
+      { label: 'Debt Service Obligation', data: [3.5,3.5,3.5,25.0,3.5,6.5,3.5,9.7], borderColor: rust, backgroundColor: 'rgba(196,78,61,0.1)', fill: true, tension: 0.1, pointRadius: 4 },
+      { label: 'Base Revenue', data: [4.5,4.7,4.9,5.1,5.3,5.5,5.7,5.9], borderColor: teal, borderDash: [6,3], pointRadius: 3, fill: false },
+      { label: 'Mild Recession (-15%)', data: [3.8,4.0,4.2,4.3,4.5,4.7,4.8,5.0], borderColor: gold, borderDash: [3,3], pointRadius: 3, fill: false }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { position: 'top' }, tooltip: { callbacks: { label: c => c.dataset.label + ': $' + c.raw + 'M' } } },
+    scales: {
+      y: { beginAtZero: true, ticks: { callback: v => '$' + v + 'M' }, title: { display: true, text: 'Annual ($ Millions)' } }
+    }
+  }
+});
+
+// ── 8. Future Dev Chart ──
+new Chart(document.getElementById('futureDevChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Lot L Development','Chair 7 / Carhenge','New Gondola'],
+    datasets: [{
+      label: 'Estimated Cost ($M)',
+      data: [117.25,242.08,29.47],
+      backgroundColor: [steel,'#6b4c8a',teal],
+      borderRadius: 4
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => '$' + c.raw.toFixed(1) + 'M' } } },
+    scales: { x: { beginAtZero: true, ticks: { callback: v => '$' + v + 'M' } } }
+  }
+});
+
+// ── 9. TABOR Chart ──
+new Chart(document.getElementById('taborChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Virginia Placer','VooDoo\n(via Shandoka)','Sunnyside','Portfolio\nAggregate'],
+    datasets: [{
+      label: 'Gov Revenue Share (%)',
+      data: [15.2,35.1,6.4,52.0],
+      backgroundColor: [rust,rust,teal,rust],
+      borderRadius: 4
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+      annotation: { annotations: { threshold: { type: 'line', yMin: 10, yMax: 10, borderColor: rust, borderWidth: 2, borderDash: [6,4], label: { display: true, content: 'TABOR 10% Threshold', position: 'end', backgroundColor: 'transparent', color: rust, font: { size: 11, weight: 'bold' } } } } }
+    },
+    scales: { y: { beginAtZero: true, max: 60, ticks: { callback: v => v + '%' }, title: { display: true, text: 'Government Revenue Share (%)' } } }
+  }
+});
+
+// ── 10. Per-Unit Cost Chart ──
+new Chart(document.getElementById('perUnitChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Virginia Placer\n(2017)','Sunnyside\n(2021)','CanyonLands\n(2024)','VooDoo\n(2022)'],
+    datasets: [
+      { label: 'Bond Only', data: [410,567,681,743], backgroundColor: steel },
+      { label: 'All-In Public Cost', data: [410,567,681,955], backgroundColor: rust }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { position: 'top' }, tooltip: { callbacks: { label: c => c.dataset.label + ': $' + c.raw + 'K/unit' } } },
+    scales: { y: { beginAtZero: true, ticks: { callback: v => '$' + v + 'K' }, title: { display: true, text: 'Cost Per Unit ($K)' } } }
+  }
+});
+</script>
+</body>
+</html>
