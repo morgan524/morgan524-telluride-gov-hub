@@ -15484,6 +15484,7 @@ function showSubmitStatus(msg, type) {
       <h3>Check Your Email</h3>
       <div style="font-size:0.88rem;color:#555;line-height:1.6;margin-bottom:14px;">
         We've sent a verification link to <strong id="hbVerifyEmail"></strong>. Please click the link in that email to activate your account, then come back and log in.
+        <div style="margin-top:10px;padding:10px 12px;background:#FFF8E1;border-radius:8px;border:1px solid #FFD54F;font-size:0.84rem;color:#795548;"><strong>Note:</strong> The email may land in your junk or spam folder. If you don't see it in your inbox, check there first.</div>
       </div>
       <button class="hb-modal-btn" onclick="hbShowAuth('login')">Go to Login</button>
     </div>
@@ -16239,7 +16240,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(function() {
         errEl.style.display = 'none';
         if (infoEl) {
-          infoEl.textContent = 'Password reset email sent to ' + email + '. Check your inbox (and spam folder).';
+          infoEl.innerHTML = 'Password reset email sent to <strong>' + hbEsc(email) + '</strong>.<br><span style="color:#795548;">Important: The email may land in your junk or spam folder — check there if you don\'t see it in your inbox.</span>';
           infoEl.style.display = 'block';
         }
       })
