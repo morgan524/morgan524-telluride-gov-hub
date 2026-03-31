@@ -1248,6 +1248,52 @@
     }
     .hb-attach-item .hb-remove-attach { cursor: pointer; font-weight: 700; color: #c0392b; margin-left: 4px; }
 
+    /* Featured photo upload (compose) */
+    .hb-photo-upload { margin-bottom: 10px; }
+    .hb-photo-upload-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: none; border: 1.5px dashed var(--line); border-radius: 10px;
+      padding: 10px 16px; font-size: 0.8rem; cursor: pointer; color: var(--forest-soft);
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .hb-photo-upload-btn:hover { border-color: var(--forest); color: var(--forest); }
+    .hb-photo-preview {
+      display: none; position: relative; margin-top: 8px;
+      max-width: 280px; border-radius: 10px; overflow: hidden;
+      border: 1.5px solid var(--line);
+    }
+    .hb-photo-preview.has-photo { display: block; }
+    .hb-photo-preview img {
+      display: block; width: 100%; max-height: 220px; object-fit: cover;
+    }
+    .hb-photo-preview-actions {
+      position: absolute; top: 6px; right: 6px; display: flex; gap: 4px;
+    }
+    .hb-photo-preview-actions button {
+      background: rgba(0,0,0,0.6); color: #fff; border: none; border-radius: 6px;
+      padding: 4px 10px; font-size: 0.72rem; cursor: pointer; font-weight: 600;
+      backdrop-filter: blur(4px);
+    }
+    .hb-photo-preview-actions button:hover { background: rgba(0,0,0,0.8); }
+
+    /* Post card with featured image */
+    .hb-post-content-wrap {
+      display: flex; gap: 14px; align-items: flex-start;
+    }
+    .hb-post-image {
+      flex-shrink: 0; width: 140px; height: 110px; border-radius: 8px;
+      overflow: hidden; border: 1px solid var(--line);
+    }
+    .hb-post-image img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .hb-post-image a { display: block; width: 100%; height: 100%; }
+    .hb-post-content-text { flex: 1; min-width: 0; }
+    @media (max-width: 600px) {
+      .hb-post-content-wrap { flex-direction: column; }
+      .hb-post-image { width: 100%; height: 180px; }
+    }
+
     /* Next-step cue on compose */
     .hb-nextstep-bar {
       display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; margin-bottom: 8px;
@@ -5860,6 +5906,19 @@
 
               <div class="hb-compose-expanded">
                 <textarea id="hbComposeBody" placeholder="Share your thoughts, concerns, or ideas with the community..."></textarea>
+
+                <!-- Featured photo (optional, one image) -->
+                <div class="hb-photo-upload">
+                  <button type="button" class="hb-photo-upload-btn" onclick="hbTriggerPhoto()">📷 Add a photo (optional)</button>
+                  <input type="file" id="hbPhotoInput" accept="image/png,image/jpeg,image/gif,image/webp" style="display:none;" onchange="hbHandlePhoto(this)">
+                  <div class="hb-photo-preview" id="hbPhotoPreview">
+                    <img id="hbPhotoPreviewImg" src="" alt="Photo preview">
+                    <div class="hb-photo-preview-actions">
+                      <button type="button" onclick="hbReplacePhoto()">Replace</button>
+                      <button type="button" onclick="hbRemovePhoto()">Remove</button>
+                    </div>
+                  </div>
+                </div>
 
                 <!-- Source-specific fields -->
                 <div class="hb-source-fields" id="hbSourceFields">
@@ -16419,6 +16478,43 @@ document.addEventListener('DOMContentLoaded', function() {
     hbRenderAttachPreview();
   };
   // ═══════════════════════════════
+  // FEATURED PHOTO (one optional image per post)
+  // ═══════════════════════════════
+  var hbPendingPhoto = null; // File object for the featured image
+  window.hbTriggerPhoto = function() {
+    document.getElementById('hbPhotoInput').click();
+  };
+  window.hbHandlePhoto = function(input) {
+    var file = input.files && input.files[0];
+    if (!file) return;
+    if (!file.type.startsWith('image/')) {
+      alert('Please select an image file (PNG, JPG, GIF, or WebP).');
+      input.value = '';
+      return;
+    }
+    if (file.size > 5 * 1024 * 1024) {
+      alert('Image is too large (max 5 MB). Please choose a smaller photo.');
+      input.value = '';
+      return;
+    }
+    hbPendingPhoto = file;
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      document.getElementById('hbPhotoPreviewImg').src = e.target.result;
+      document.getElementById('hbPhotoPreview').classList.add('has-photo');
+    };
+    reader.readAsDataURL(file);
+    input.value = '';
+  };
+  window.hbReplacePhoto = function() {
+    document.getElementById('hbPhotoInput').click();
+  };
+  window.hbRemovePhoto = function() {
+    hbPendingPhoto = null;
+    document.getElementById('hbPhotoPreviewImg').src = '';
+    document.getElementById('hbPhotoPreview').classList.remove('has-photo');
+  };
+  // ═══════════════════════════════
   // AI TONE REVIEW
   // ═══════════════════════════════
   // Personal attack detection patterns
@@ -16511,7 +16607,16 @@ document.addEventListener('DOMContentLoaded', function() {
     var postBtn = document.getElementById('hbPostBtn');
     postBtn.disabled = true;
     postBtn.textContent = 'Posting...';
-    // Upload attachments first, then create post
+    // Upload featured photo (if any), then attachments, then create post
+    var photoPromise = hbPendingPhoto
+      ? (function() {
+          var pPath = 'hub-bub/' + hbUser.uid + '/photo_' + Date.now() + '_' + hbPendingPhoto.name;
+          var pRef = storage.ref(pPath);
+          return pRef.put(hbPendingPhoto).then(function(snap) {
+            return snap.ref.getDownloadURL();
+          });
+        })()
+      : Promise.resolve(null);
     var uploadPromises = hbPendingAttachments.map(function(file) {
       var path = 'hub-bub/' + hbUser.uid + '/' + Date.now() + '_' + file.name;
       var ref = storage.ref(path);
@@ -16521,7 +16626,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       });
     });
-    Promise.all(uploadPromises).then(function(attachments) {
+    Promise.all([photoPromise, Promise.all(uploadPromises)]).then(function(results) {
+      var imageUrl = results[0];
+      var attachments = results[1];
       var postData = {
         authorId: hbUser.uid,
         authorName: hbUser.displayName || 'Anonymous',
@@ -16530,6 +16637,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tags: selectedTags,
         postType: hbSelectedPostType || 'question',
         attachments: attachments,
+        imageUrl: imageUrl || null,
         createdAt: firebase.firestore.FieldValue.serverTimestamp(),
         replyCount: 0,
         upvotes: 0,
@@ -16570,6 +16678,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('[data-hb-step]').forEach(function(b) { b.classList.remove('selected'); });
       hbPendingAttachments = [];
       hbRenderAttachPreview();
+      hbRemovePhoto();
       hbSelectedPostType = null;
       hbSelectedNextStep = null;
       document.getElementById('hbCompose').classList.remove('expanded');
@@ -16743,6 +16852,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     reactionsHtml += '</div>';
 
+    // Build featured image HTML (left side of card)
+    var hasImage = post.imageUrl && post.imageUrl.length > 0;
+    var imageHtml = hasImage
+      ? '<div class="hb-post-image"><a href="' + hbEsc(post.imageUrl) + '" target="_blank"><img src="' + hbEsc(post.imageUrl) + '" alt="Post photo" loading="lazy"></a></div>'
+      : '';
+
+    // Wrap title+body+extras in a flex row when an image is present
+    var contentStart = hasImage ? '<div class="hb-post-content-wrap">' + imageHtml + '<div class="hb-post-content-text">' : '';
+    var contentEnd = hasImage ? '</div></div>' : '';
+
     card.innerHTML =
       '<div class="hb-post-head">' +
         '<div class="hb-post-avatar">' + initial + '</div>' +
@@ -16750,12 +16869,14 @@ document.addEventListener('DOMContentLoaded', function() {
         '<div class="hb-post-meta">' + timeStr + '</div></div>' +
         badgeHtml +
       '</div>' +
+      contentStart +
       '<div class="hb-post-title">' + hbEsc(post.title || '') + '</div>' +
       tagsHtml +
       '<div class="hb-post-body' + (isLong ? ' truncated' : '') + '">' + hbEsc(bodyText) + '</div>' +
       (isLong ? '<button class="hb-read-more" onclick="hbExpandPost(this)">Read more</button>' : '') +
       debriefHtml +
       sourceHtml +
+      contentEnd +
       attachHtml +
       nextStepHtml +
       reactionsHtml +
