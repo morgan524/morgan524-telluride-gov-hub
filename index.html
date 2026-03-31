@@ -10213,6 +10213,11 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     // Hide subscribe bar when on Subscribe, About Us, or Hub-Bub tab
     const subBar = document.querySelector('.subscribe-bar');
     if (subBar) subBar.style.display = (btn.dataset.tab === 'subscribe' || btn.dataset.tab === 'about-us' || btn.dataset.tab === 'hub-bub') ? 'none' : '';
+    // Update URL hash for bookmarking/sharing
+    var newHash = '#' + btn.dataset.tab;
+    if (window.location.hash !== newHash) {
+      history.pushState(null, '', newHash);
+    }
   });
 });
 
@@ -15431,11 +15436,50 @@ function showSubmitStatus(msg, type) {
     // Hide subscribe bar when on Subscribe, About Us, or Hub-Bub tab
     const subBar = document.querySelector('.subscribe-bar');
     if (subBar) subBar.style.display = (tabName === 'subscribe' || tabName === 'about-us' || tabName === 'hub-bub') ? 'none' : '';
+    // Update URL hash (without triggering hashchange loop)
+    var newHash = '#' + tabName;
+    if (window.location.hash !== newHash) {
+      history.pushState(null, '', newHash);
+    }
     // Scroll to top of content
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   // Expose switchTab globally so inline onclick handlers (header nav, footer, etc.) can call it
   window.switchTab = switchTab;
+
+  // ─── Hash-based routing ───
+  // Map of valid tab names for hash routing
+  var validTabs = {'hub-bub':1,'meetings':1,'news':1,'local-news':1,'links':1,
+    'housing-search':1,'community-pulse':1,'about-us':1,'subscribe':1,
+    'land-use':1,'gondola':1,'legals':1};
+  function handleHashRoute() {
+    var hash = window.location.hash.replace('#','');
+    if (hash && validTabs[hash]) {
+      switchTab(hash);
+      updateMobileActive(hash);
+    }
+  }
+  // Listen for back/forward browser navigation
+  window.addEventListener('hashchange', handleHashRoute);
+  window.addEventListener('popstate', function() {
+    var hash = window.location.hash.replace('#','');
+    if (hash && validTabs[hash]) {
+      // Use replaceState to avoid double-pushing
+      var currentTab = hash;
+      document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+      document.querySelectorAll('.tab-content').forEach(function(c) { c.classList.remove('active'); });
+      var desktopBtn = document.querySelector('.tab-btn[data-tab="' + currentTab + '"]');
+      if (desktopBtn) desktopBtn.classList.add('active');
+      var tabEl = document.getElementById('tab-' + currentTab);
+      if (tabEl) tabEl.classList.add('active');
+      updateMobileActive(currentTab);
+    }
+  });
+  // On initial page load, check for hash
+  if (window.location.hash && window.location.hash.length > 1) {
+    // Defer to let the page finish rendering
+    setTimeout(handleHashRoute, 100);
+  }
   function updateMobileActive(tabName) {
     // Clear all active states
     allMobileNavBtns.forEach(b => b.classList.remove('active'));
