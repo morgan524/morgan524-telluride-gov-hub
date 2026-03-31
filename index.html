@@ -15475,10 +15475,11 @@ function showSubmitStatus(msg, type) {
       updateMobileActive(currentTab);
     }
   });
-  // On initial page load, check for hash
+  // On initial page load, check for hash — use window load to ensure all scripts are ready
   if (window.location.hash && window.location.hash.length > 1) {
-    // Defer to let the page finish rendering
-    setTimeout(handleHashRoute, 100);
+    window.addEventListener('load', function() {
+      setTimeout(handleHashRoute, 200);
+    });
   }
   function updateMobileActive(tabName) {
     // Clear all active states
