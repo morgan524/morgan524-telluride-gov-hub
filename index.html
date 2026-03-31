@@ -16421,6 +16421,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   };
   var hbSelectedNextStep = null;
+  // Post type button click handlers
+  document.querySelectorAll('[data-hb-ptype]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      hbSelectPostType(btn.dataset.hbPtype);
+    });
+  });
   // Tag selection in compose
   document.querySelectorAll('.hb-compose-tag').forEach(function(tag) {
     tag.addEventListener('click', function() {
@@ -16582,7 +16588,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // POST SUBMISSION
   // ═══════════════════════════════
   window.hbSubmitPost = function() {
-    if (!hbUser || !hbUser.emailVerified) { hbShowAuth('login'); return; }
+    var isAdmin = hbUser && hbUser.email === 'info@livabletelluride.org';
+    if (!hbUser || (!hbUser.emailVerified && !isAdmin)) { hbShowAuth('login'); return; }
     if (!hbFirebaseReady) { hbShowConfigNeeded(); return; }
     var body = document.getElementById('hbComposeBody').value.trim();
     // Run tone check first
