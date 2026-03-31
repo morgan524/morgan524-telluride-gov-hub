@@ -16693,7 +16693,8 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('hbToneNudge').classList.remove('visible');
       postBtn.textContent = 'Post to Hub-Bub';
       postBtn.disabled = true;
-      hbLoadPosts();
+      // Brief delay to let serverTimestamp settle before reloading
+      setTimeout(hbLoadPosts, 1500);
     }).catch(function(err) {
       console.error('Hub-Bub post error:', err);
       alert('Could not publish your post. Please try again.');
@@ -16728,7 +16729,8 @@ document.addEventListener('DOMContentLoaded', function() {
       .catch(function(err) {
         console.error('Hub-Bub load error:', err);
         if (loadEl) loadEl.style.display = 'none';
-        hbRenderDemoPosts();
+        // Only show demo posts if we have no real posts loaded yet
+        if (hbPosts.length === 0) hbRenderDemoPosts();
       });
   }
   function hbRenderPosts() {
