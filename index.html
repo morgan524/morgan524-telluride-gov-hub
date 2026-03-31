@@ -15989,7 +15989,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!email || !pass) { errEl.textContent = 'Please enter email and password.'; errEl.style.display = ''; return; }
     auth.signInWithEmailAndPassword(email, pass)
       .then(function(cred) {
-        if (!cred.user.emailVerified) {
+        // Admin account bypasses email verification
+        var isAdmin = cred.user.email === 'info@livabletelluride.org';
+        if (!isAdmin && !cred.user.emailVerified) {
           errEl.textContent = 'Please verify your email first. Check your inbox for the verification link.';
           errEl.style.display = '';
           auth.signOut();
@@ -15998,7 +16000,11 @@ document.addEventListener('DOMContentLoaded', function() {
         hbCloseAuth();
       })
       .catch(function(err) {
-        errEl.textContent = err.message; errEl.style.display = '';
+        var msg = err.message;
+        if (err.code === 'auth/invalid-credential') msg = 'Incorrect email or password. Please try again.';
+        else if (err.code === 'auth/user-not-found') msg = 'No account found with this email. Click "Sign up" to create one.';
+        else if (err.code === 'auth/too-many-requests') msg = 'Too many failed attempts. Please try again in a few minutes.';
+        errEl.textContent = msg; errEl.style.display = '';
       });
   };
   window.hbLogout = function() {
@@ -16010,14 +16016,15 @@ document.addEventListener('DOMContentLoaded', function() {
     var userEl = document.getElementById('hbAuthUser');
     var logoutBtn = document.getElementById('hbLogoutBtn');
     var avatarEl = document.getElementById('hbComposeAvatar');
-    if (user && user.emailVerified) {
-      var name = user.displayName || 'User';
+    var isAdmin = user && user.email === 'info@livabletelluride.org';
+    if (user && (user.emailVerified || isAdmin)) {
+      var name = user.displayName || (isAdmin ? 'Admin' : 'User');
       statusEl.style.display = 'none';
       userEl.style.display = '';
       userEl.textContent = name;
       logoutBtn.style.display = '';
       avatarEl.textContent = name.charAt(0).toUpperCase();
-      avatarEl.style.background = 'var(--forest)';
+      avatarEl.style.background = isAdmin ? '#e53935' : 'var(--forest)';
     } else {
       statusEl.style.display = '';
       userEl.style.display = 'none';
@@ -16030,7 +16037,8 @@ document.addEventListener('DOMContentLoaded', function() {
   if (hbFirebaseReady) {
     auth.onAuthStateChanged(function(user) {
       hbUpdateAuthUI(user);
-      if (user && user.emailVerified) {
+      var isAdmin = user && user.email === 'info@livabletelluride.org';
+      if (user && (user.emailVerified || isAdmin)) {
         hbLoadPosts();
       }
     });
@@ -16044,7 +16052,8 @@ document.addEventListener('DOMContentLoaded', function() {
   window.hbExpandCompose = function() {
     var compose = document.getElementById('hbCompose');
     compose.classList.add('expanded');
-    if (!hbUser || !hbUser.emailVerified) {
+    var isAdmin = hbUser && hbUser.email === 'info@livabletelluride.org';
+    if (!hbUser || (!hbUser.emailVerified && !isAdmin)) {
       hbShowAuth('signup');
       compose.classList.remove('expanded');
     }
