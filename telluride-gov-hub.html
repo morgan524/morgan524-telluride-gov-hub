@@ -17230,9 +17230,9 @@ document.addEventListener('DOMContentLoaded', function() {
           })
           .catch(function(err) {
             var msg = err.message;
-            if (err.code === 'auth/invalid-credential') msg = 'Incorrect email or password. Please try again.';
+            if (err.code === 'auth/invalid-credential') msg = 'Incorrect email or password. Please try again. (If you just reset your password, make sure you clicked the link in the email and set a new one on the Firebase page.)';
             else if (err.code === 'auth/user-not-found') msg = 'No account found with this email. Click "Sign up" to create one.';
-            else if (err.code === 'auth/too-many-requests') msg = 'Too many failed attempts. Please try again in a few minutes.';
+            else if (err.code === 'auth/too-many-requests') msg = 'Too many failed attempts. Please wait 5 minutes, then try again.';
             errEl.textContent = msg; errEl.style.display = 'block';
             loginBtn.textContent = 'Log In';
             loginBtn.disabled = false;
