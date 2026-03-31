@@ -16610,7 +16610,14 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.hb-compose-tag.selected').forEach(function(t) {
       selectedTags.push(t.dataset.hbTag);
     });
-    if (!title || !body || selectedTags.length === 0) return;
+    if (!title || !body || selectedTags.length === 0) {
+      var missing = [];
+      if (!title) missing.push('a title');
+      if (!body) missing.push('a message');
+      if (selectedTags.length === 0) missing.push('at least one tag');
+      alert('Please add ' + missing.join(', ') + ' before posting.');
+      return;
+    }
     var postBtn = document.getElementById('hbPostBtn');
     postBtn.disabled = true;
     postBtn.textContent = 'Posting...';
