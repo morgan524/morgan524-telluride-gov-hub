@@ -1095,7 +1095,7 @@
       display: none !important;
     }
 
-    /* Hub-Bub container */
+    /* ═══ Hub-Bub v2 — Guided Civic Discussion ═══ */
     .hb-wrap { max-width: 1100px; margin: 0 auto; padding: 0 12px; }
     .hb-grid { display: grid; grid-template-columns: 1fr 300px; gap: 20px; align-items: start; }
     @media (max-width: 900px) { .hb-grid { grid-template-columns: 1fr; } }
@@ -1112,14 +1112,48 @@
       padding: 6px 14px; font-size: 0.8rem; font-weight: 600; cursor: pointer;
     }
     .hb-auth-bar button:hover { opacity: 0.85; }
-    .hb-auth-bar .hb-btn-link {
-      background: none; color: var(--forest); text-decoration: underline; padding: 0;
+    .hb-auth-bar .hb-btn-link { background: none; color: var(--forest); text-decoration: underline; padding: 0; }
+
+    /* Intro block */
+    .hb-intro {
+      background: linear-gradient(135deg, #f0f5ee 0%, #e8efe5 100%);
+      border: 1.5px solid var(--line); border-radius: 12px;
+      padding: 18px 20px; margin-bottom: 16px; font-size: 0.88rem; color: #444; line-height: 1.6;
     }
+    .hb-intro-title { font-size: 1.05rem; font-weight: 700; color: var(--forest); margin-bottom: 6px; }
+
+    /* Conversation starter block */
+    .hb-conversation-starter {
+      background: #fff; border: 2px solid var(--accent-green); border-radius: 12px;
+      padding: 16px 20px; margin-bottom: 16px; position: relative;
+    }
+    .hb-cs-label {
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+      color: var(--accent-green); margin-bottom: 6px;
+    }
+    .hb-cs-question { font-size: 1rem; font-weight: 600; color: #333; line-height: 1.5; }
+    .hb-cs-respond {
+      display: inline-block; margin-top: 10px; padding: 6px 16px; border-radius: 8px;
+      background: var(--accent-green); color: #fff; font-size: 0.8rem; font-weight: 600;
+      border: none; cursor: pointer;
+    }
+    .hb-cs-respond:hover { opacity: 0.88; }
+
+    /* Mode switch (Questions / What Happened / Ideas & Solutions) */
+    .hb-mode-bar {
+      display: flex; gap: 0; margin-bottom: 16px; background: var(--sand);
+      border-radius: 10px; padding: 3px; overflow: hidden;
+    }
+    .hb-mode-btn {
+      flex: 1; padding: 10px 8px; text-align: center; font-size: 0.82rem; font-weight: 600;
+      border: none; background: transparent; color: var(--forest-soft); cursor: pointer;
+      border-radius: 8px; transition: all 0.2s;
+    }
+    .hb-mode-btn:hover { color: var(--forest); }
+    .hb-mode-btn.active { background: var(--forest); color: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.12); }
 
     /* Topic filter chips */
-    .hb-topic-bar {
-      display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px;
-    }
+    .hb-topic-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
     .hb-topic-chip {
       display: inline-flex; align-items: center; gap: 4px;
       padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 600;
@@ -1129,25 +1163,36 @@
     .hb-topic-chip:hover { border-color: var(--forest); color: var(--forest); }
     .hb-topic-chip.active { background: var(--forest); color: #fff; border-color: var(--forest); }
 
+    /* Guided post-type chooser */
+    .hb-post-type-bar {
+      display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px;
+    }
+    .hb-post-type-btn {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 7px 14px; border-radius: 20px; font-size: 0.78rem; font-weight: 600;
+      border: 1.5px solid var(--line); background: #fff; color: var(--forest-soft);
+      cursor: pointer; transition: all 0.15s;
+    }
+    .hb-post-type-btn:hover { border-color: var(--forest); color: var(--forest); background: #f6faf5; }
+    .hb-post-type-btn.active { background: var(--forest); color: #fff; border-color: var(--forest); }
+
     /* Compose box */
     .hb-compose {
       background: #fff; border: 1.5px solid var(--line); border-radius: 12px;
       padding: 16px; margin-bottom: 18px;
     }
-    .hb-compose-header {
-      display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
-    }
+    .hb-compose-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
     .hb-compose-avatar {
       width: 36px; height: 36px; border-radius: 50%; background: var(--forest);
       color: #fff; display: flex; align-items: center; justify-content: center;
       font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
     }
-    .hb-compose input[type="text"] {
+    .hb-compose input[type="text"], .hb-compose input[type="url"] {
       flex: 1; border: 1.5px solid var(--line); border-radius: 8px;
       padding: 8px 12px; font-size: 0.88rem; font-family: inherit;
-      outline: none; transition: border-color 0.15s;
+      outline: none; transition: border-color 0.15s; width: 100%; box-sizing: border-box;
     }
-    .hb-compose input[type="text"]:focus { border-color: var(--forest); }
+    .hb-compose input[type="text"]:focus, .hb-compose input[type="url"]:focus { border-color: var(--forest); }
     .hb-compose textarea {
       width: 100%; min-height: 80px; border: 1.5px solid var(--line); border-radius: 8px;
       padding: 10px 12px; font-size: 0.86rem; font-family: inherit;
@@ -1156,10 +1201,24 @@
     .hb-compose textarea:focus { border-color: var(--forest); }
     .hb-compose-expanded { display: none; }
     .hb-compose.expanded .hb-compose-expanded { display: block; }
-
-    .hb-compose-tags {
-      display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px;
+    .hb-compose-field-label {
+      font-size: 0.76rem; font-weight: 600; color: #888; margin-bottom: 4px; margin-top: 8px;
     }
+    .hb-compose-field-label:first-child { margin-top: 0; }
+
+    /* Meeting debrief extra fields */
+    .hb-debrief-fields { display: none; }
+    .hb-compose.debrief-mode .hb-debrief-fields { display: block; }
+    .hb-debrief-fields input, .hb-debrief-fields textarea {
+      width: 100%; box-sizing: border-box; margin-bottom: 6px;
+    }
+    .hb-debrief-fields textarea { min-height: 50px; }
+
+    /* Source fields */
+    .hb-source-fields { display: none; }
+    .hb-compose.source-mode .hb-source-fields { display: block; }
+
+    .hb-compose-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
     .hb-compose-tag {
       font-size: 0.72rem; padding: 3px 10px; border-radius: 14px;
       border: 1px solid var(--line); background: #fff; cursor: pointer;
@@ -1168,9 +1227,7 @@
     .hb-compose-tag:hover { border-color: var(--forest); }
     .hb-compose-tag.selected { background: var(--forest); color: #fff; border-color: var(--forest); }
 
-    .hb-compose-actions {
-      display: flex; align-items: center; justify-content: space-between; gap: 8px;
-    }
+    .hb-compose-actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
     .hb-compose-actions .hb-attach-btn {
       background: none; border: 1.5px solid var(--line); border-radius: 8px;
       padding: 6px 12px; font-size: 0.78rem; cursor: pointer; color: var(--forest-soft);
@@ -1184,16 +1241,24 @@
     .hb-compose-actions .hb-post-btn:hover { opacity: 0.88; }
     .hb-compose-actions .hb-post-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
-    .hb-attach-preview {
-      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;
-    }
+    .hb-attach-preview { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
     .hb-attach-item {
       display: flex; align-items: center; gap: 6px; background: var(--sand);
       border-radius: 8px; padding: 4px 10px; font-size: 0.76rem;
     }
-    .hb-attach-item .hb-remove-attach {
-      cursor: pointer; font-weight: 700; color: #c0392b; margin-left: 4px;
+    .hb-attach-item .hb-remove-attach { cursor: pointer; font-weight: 700; color: #c0392b; margin-left: 4px; }
+
+    /* Next-step cue on compose */
+    .hb-nextstep-bar {
+      display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; margin-bottom: 8px;
     }
+    .hb-nextstep-chip {
+      font-size: 0.7rem; padding: 3px 10px; border-radius: 14px;
+      border: 1px solid #B2DFDB; background: #E0F2F1; cursor: pointer;
+      transition: all 0.15s; color: #00695C; font-weight: 600;
+    }
+    .hb-nextstep-chip:hover { border-color: #00897B; }
+    .hb-nextstep-chip.selected { background: #00897B; color: #fff; border-color: #00897B; }
 
     /* Tone review nudge */
     .hb-tone-nudge {
@@ -1202,20 +1267,11 @@
       font-size: 0.84rem; line-height: 1.5;
     }
     .hb-tone-nudge.visible { display: block; }
-    .hb-tone-nudge-title {
-      font-weight: 700; color: #E65100; margin-bottom: 6px;
-      display: flex; align-items: center; gap: 6px;
-    }
+    .hb-tone-nudge-title { font-weight: 700; color: #E65100; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
     .hb-tone-original { color: #666; font-style: italic; margin: 6px 0; }
-    .hb-tone-suggested {
-      background: #E8F5E9; border-radius: 8px; padding: 10px 12px;
-      margin: 8px 0; border-left: 3px solid #4CAF50; color: #2E7D32;
-    }
+    .hb-tone-suggested { background: #E8F5E9; border-radius: 8px; padding: 10px 12px; margin: 8px 0; border-left: 3px solid #4CAF50; color: #2E7D32; }
     .hb-tone-actions { display: flex; gap: 8px; margin-top: 8px; }
-    .hb-tone-actions button {
-      padding: 6px 14px; border-radius: 6px; font-size: 0.8rem;
-      font-weight: 600; cursor: pointer; border: none;
-    }
+    .hb-tone-actions button { padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; cursor: pointer; border: none; }
     .hb-tone-btn-use { background: #4CAF50; color: #fff; }
     .hb-tone-btn-keep { background: #fff; color: #666; border: 1.5px solid var(--line) !important; }
     .hb-tone-btn-edit { background: #fff; color: var(--forest); border: 1.5px solid var(--forest) !important; }
@@ -1226,9 +1282,19 @@
       padding: 16px; margin-bottom: 12px; transition: box-shadow 0.15s;
     }
     .hb-post:hover { box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
-    .hb-post-head {
-      display: flex; align-items: center; gap: 10px; margin-bottom: 8px;
+    .hb-post-type-badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;
+      padding: 2px 9px; border-radius: 10px; margin-bottom: 8px;
     }
+    .hb-badge-question { background: #E3F2FD; color: #1565C0; }
+    .hb-badge-source { background: #FFF3E0; color: #E65100; }
+    .hb-badge-debrief { background: #F3E5F5; color: #7B1FA2; }
+    .hb-badge-solution { background: #E8F5E9; color: #2E7D32; }
+    .hb-badge-need { background: #FCE4EC; color: #C62828; }
+    .hb-badge-volunteer { background: #E0F7FA; color: #00695C; }
+    .hb-badge-general { background: var(--sand); color: var(--forest-soft); }
+    .hb-post-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
     .hb-post-avatar {
       width: 34px; height: 34px; border-radius: 50%; background: var(--forest-soft);
       color: #fff; display: flex; align-items: center; justify-content: center;
@@ -1236,9 +1302,7 @@
     }
     .hb-post-meta { font-size: 0.78rem; color: #888; }
     .hb-post-author { font-weight: 700; color: var(--forest); }
-    .hb-post-title {
-      font-size: 1.05rem; font-weight: 700; color: #222; margin-bottom: 6px;
-    }
+    .hb-post-title { font-size: 1.05rem; font-weight: 700; color: #222; margin-bottom: 6px; }
     .hb-post-body {
       font-size: 0.88rem; color: #444; line-height: 1.6; margin-bottom: 10px;
       white-space: pre-wrap; word-wrap: break-word;
@@ -1248,9 +1312,28 @@
       content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40px;
       background: linear-gradient(transparent, #fff);
     }
-    .hb-read-more {
-      font-size: 0.8rem; color: var(--forest); font-weight: 600;
-      cursor: pointer; background: none; border: none; padding: 0;
+    .hb-read-more { font-size: 0.8rem; color: var(--forest); font-weight: 600; cursor: pointer; background: none; border: none; padding: 0; }
+
+    /* Meeting debrief card */
+    .hb-post.debrief-card { border-left: 4px solid #7B1FA2; }
+    .hb-debrief-section { margin-bottom: 10px; }
+    .hb-debrief-label { font-size: 0.74rem; font-weight: 700; color: #7B1FA2; text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 3px; }
+    .hb-debrief-content { font-size: 0.86rem; color: #444; line-height: 1.5; }
+    .hb-debrief-link { font-size: 0.82rem; color: var(--forest); text-decoration: underline; }
+
+    /* Source card */
+    .hb-post.source-card { border-left: 4px solid #E65100; }
+    .hb-source-link-box {
+      display: flex; align-items: center; gap: 8px; background: #FFF8E1; border-radius: 8px;
+      padding: 8px 12px; margin-bottom: 8px; font-size: 0.82rem;
+    }
+    .hb-source-link-box a { color: #E65100; font-weight: 600; word-break: break-all; }
+
+    /* Next step cue on cards */
+    .hb-nextstep-cue {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 0.72rem; font-weight: 600; padding: 3px 10px; border-radius: 10px;
+      background: #E0F2F1; color: #00695C; margin-bottom: 8px;
     }
 
     .hb-post-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
@@ -1258,7 +1341,6 @@
       font-size: 0.7rem; padding: 2px 8px; border-radius: 12px;
       background: var(--sand); color: var(--forest-soft); font-weight: 600;
     }
-
     .hb-post-attachments { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
     .hb-post-attach {
       display: flex; align-items: center; gap: 5px; background: var(--sand);
@@ -1267,22 +1349,21 @@
     }
     .hb-post-attach:hover { background: var(--line); }
 
+    /* Constructive engagement buttons (replaces upvote/downvote) */
     .hb-post-foot {
-      display: flex; align-items: center; gap: 16px; padding-top: 8px;
-      border-top: 1px solid var(--sand);
+      display: flex; align-items: center; gap: 8px; padding-top: 8px;
+      border-top: 1px solid var(--sand); flex-wrap: wrap;
     }
-    .hb-vote-btn {
-      display: flex; align-items: center; gap: 4px; background: none; border: none;
-      font-size: 0.82rem; color: #888; cursor: pointer; padding: 4px 8px;
-      border-radius: 6px; transition: all 0.15s;
+    .hb-react-btn {
+      display: inline-flex; align-items: center; gap: 4px; background: none;
+      border: 1.5px solid var(--line); font-size: 0.76rem; color: #888;
+      cursor: pointer; padding: 4px 10px; border-radius: 16px; transition: all 0.15s;
     }
-    .hb-vote-btn:hover { background: var(--sand); color: var(--forest); }
-    .hb-vote-btn.voted-up { color: #2E7D32; font-weight: 700; }
-    .hb-vote-btn.voted-down { color: #c0392b; font-weight: 700; }
+    .hb-react-btn:hover { border-color: var(--forest); color: var(--forest); background: #f6faf5; }
+    .hb-react-btn.reacted { border-color: var(--forest); color: var(--forest); background: #e8f0e5; font-weight: 700; }
     .hb-reply-toggle {
       display: flex; align-items: center; gap: 4px; background: none; border: none;
-      font-size: 0.82rem; color: #888; cursor: pointer; padding: 4px 8px;
-      border-radius: 6px;
+      font-size: 0.82rem; color: #888; cursor: pointer; padding: 4px 8px; border-radius: 6px;
     }
     .hb-reply-toggle:hover { background: var(--sand); color: var(--forest); }
     .hb-admin-delete-btn {
@@ -1294,9 +1375,7 @@
 
     /* Reply thread */
     .hb-replies { margin-top: 10px; padding-left: 18px; border-left: 2px solid var(--sand); }
-    .hb-reply {
-      padding: 10px 0; border-bottom: 1px solid var(--sand);
-    }
+    .hb-reply { padding: 10px 0; border-bottom: 1px solid var(--sand); }
     .hb-reply:last-child { border-bottom: none; }
     .hb-reply-head { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
     .hb-reply-avatar {
@@ -1307,9 +1386,7 @@
     .hb-reply-author { font-weight: 700; font-size: 0.8rem; color: var(--forest); }
     .hb-reply-time { font-size: 0.74rem; color: #aaa; }
     .hb-reply-body { font-size: 0.84rem; color: #444; line-height: 1.5; margin-left: 34px; }
-    .hb-reply-compose {
-      display: flex; gap: 8px; margin-top: 8px; align-items: flex-start;
-    }
+    .hb-reply-compose { display: flex; gap: 8px; margin-top: 8px; align-items: flex-start; }
     .hb-reply-compose textarea {
       flex: 1; min-height: 36px; border: 1.5px solid var(--line); border-radius: 8px;
       padding: 8px 10px; font-size: 0.82rem; font-family: inherit; resize: none;
@@ -1318,14 +1395,12 @@
     .hb-reply-compose textarea:focus { border-color: var(--forest); }
     .hb-reply-compose button {
       background: var(--forest); color: #fff; border: none; border-radius: 8px;
-      padding: 8px 14px; font-size: 0.8rem; font-weight: 600; cursor: pointer;
-      white-space: nowrap;
+      padding: 8px 14px; font-size: 0.8rem; font-weight: 600; cursor: pointer; white-space: nowrap;
     }
 
     /* Sort bar */
     .hb-sort-bar {
-      display: flex; align-items: center; gap: 10px; margin-bottom: 14px;
-      font-size: 0.82rem; color: #888;
+      display: flex; align-items: center; gap: 10px; margin-bottom: 14px; font-size: 0.82rem; color: #888;
     }
     .hb-sort-bar span { font-weight: 600; color: var(--forest-soft); }
     .hb-sort-opt {
@@ -1335,26 +1410,27 @@
     .hb-sort-opt:hover { background: var(--sand); }
     .hb-sort-opt.active { color: var(--forest); font-weight: 700; background: var(--sand); }
 
-    /* Trending sidebar */
+    /* Sidebar modules */
     .hb-sidebar {
       background: #fff; border: 1.5px solid var(--line); border-radius: 12px;
       padding: 16px; position: sticky; top: 80px;
     }
+    .hb-sidebar + .hb-sidebar { margin-top: 14px; position: static; }
     .hb-sidebar-title {
       font-size: 0.9rem; font-weight: 700; color: var(--forest);
       margin-bottom: 12px; display: flex; align-items: center; gap: 6px;
     }
-    .hb-trending-item {
-      padding: 8px 0; border-bottom: 1px solid var(--sand); cursor: pointer;
-    }
+    .hb-trending-item { padding: 8px 0; border-bottom: 1px solid var(--sand); cursor: pointer; }
     .hb-trending-item:last-child { border-bottom: none; }
     .hb-trending-item:hover .hb-trending-topic { color: var(--forest); }
     .hb-trending-topic { font-size: 0.84rem; font-weight: 600; color: #333; }
     .hb-trending-count { font-size: 0.74rem; color: #999; }
-    .hb-trending-tag {
-      display: inline-block; font-size: 0.68rem; padding: 1px 7px; border-radius: 10px;
-      background: var(--sand); color: var(--forest-soft); margin-top: 2px;
+
+    /* Questions Needing Answers module */
+    .hb-unanswered-item {
+      padding: 8px 0; border-bottom: 1px solid var(--sand); font-size: 0.84rem; color: #333; line-height: 1.4;
     }
+    .hb-unanswered-item:last-child { border-bottom: none; }
 
     /* Community guidelines */
     .hb-guidelines {
@@ -1377,8 +1453,7 @@
     .hb-modal label { display: block; font-size: 0.82rem; font-weight: 600; color: #555; margin-bottom: 4px; }
     .hb-modal input {
       width: 100%; padding: 9px 12px; border: 1.5px solid var(--line); border-radius: 8px;
-      font-size: 0.88rem; font-family: inherit; outline: none; box-sizing: border-box;
-      margin-bottom: 12px;
+      font-size: 0.88rem; font-family: inherit; outline: none; box-sizing: border-box; margin-bottom: 12px;
     }
     .hb-modal input:focus { border-color: var(--forest); }
     .hb-modal .hb-modal-btn {
@@ -1387,28 +1462,16 @@
       cursor: pointer; margin-top: 4px;
     }
     .hb-modal .hb-modal-btn:hover { opacity: 0.88; }
-    .hb-modal .hb-modal-switch {
-      text-align: center; margin-top: 12px; font-size: 0.8rem; color: #888;
-    }
-    .hb-modal .hb-modal-switch a {
-      color: var(--forest); font-weight: 600; cursor: pointer; text-decoration: underline;
-    }
-    .hb-modal .hb-modal-error {
-      color: #c0392b; font-size: 0.8rem; margin-bottom: 8px; display: none;
-    }
-    .hb-modal .hb-modal-info {
-      color: #2E7D32; font-size: 0.8rem; margin-bottom: 8px; display: none;
-    }
+    .hb-modal .hb-modal-switch { text-align: center; margin-top: 12px; font-size: 0.8rem; color: #888; }
+    .hb-modal .hb-modal-switch a { color: var(--forest); font-weight: 600; cursor: pointer; text-decoration: underline; }
+    .hb-modal .hb-modal-error { color: #c0392b; font-size: 0.8rem; margin-bottom: 8px; display: none; }
+    .hb-modal .hb-modal-info { color: #2E7D32; font-size: 0.8rem; margin-bottom: 8px; display: none; }
 
-    /* Empty state */
-    .hb-empty {
-      text-align: center; padding: 40px 20px; color: #999;
-    }
+    /* Empty & loading states */
+    .hb-empty { text-align: center; padding: 40px 20px; color: #999; }
     .hb-empty-icon { font-size: 2.5rem; margin-bottom: 10px; }
     .hb-empty-text { font-size: 0.92rem; font-weight: 600; color: #777; }
     .hb-empty-sub { font-size: 0.82rem; margin-top: 4px; }
-
-    /* Loading spinner */
     .hb-loading { text-align: center; padding: 30px; }
     .hb-spinner {
       display: inline-block; width: 28px; height: 28px;
@@ -5732,11 +5795,32 @@
     <div class="tab-content" id="tab-hub-bub">
       <div class="hb-wrap">
 
-        <!-- Auth bar — shows login prompt or user info -->
+        <!-- Auth bar -->
         <div class="hb-auth-bar" id="hbAuthBar">
           <span id="hbAuthStatus">Join the conversation — <a href="javascript:void(0)" onclick="hbShowAuth('signup')" style="color:var(--forest);font-weight:700;">Sign up</a> or <a href="javascript:void(0)" onclick="hbShowAuth('login')" style="color:var(--forest);font-weight:700;">Log in</a> to post.</span>
           <span id="hbAuthUser" style="display:none;" class="hb-user"></span>
           <button id="hbLogoutBtn" style="display:none;" onclick="hbLogout()">Sign Out</button>
+        </div>
+
+        <!-- Intro -->
+        <div class="hb-intro">
+          <div class="hb-intro-title">Welcome to Hub-Bub</div>
+          A space for constructive civic discussion in the Telluride region. Ask questions, share what happened at meetings, link useful sources, and propose practical solutions. All viewpoints welcome — focus on facts and ideas, not personalities.
+        </div>
+
+        <!-- Conversation Starter -->
+        <div class="hb-conversation-starter" id="hbConversationStarter">
+          <div class="hb-cs-label">Conversation Starter</div>
+          <div class="hb-cs-question" id="hbCsQuestion">What is one question you want answered before the next council meeting?</div>
+          <button class="hb-cs-respond" onclick="hbRespondToStarter()">Share your answer</button>
+        </div>
+
+        <!-- Mode switch -->
+        <div class="hb-mode-bar" id="hbModeBar">
+          <button class="hb-mode-btn active" data-hb-mode="all">All Posts</button>
+          <button class="hb-mode-btn" data-hb-mode="question">Questions</button>
+          <button class="hb-mode-btn" data-hb-mode="what-happened">What Happened</button>
+          <button class="hb-mode-btn" data-hb-mode="ideas">Ideas &amp; Solutions</button>
         </div>
 
         <div class="hb-grid">
@@ -5745,44 +5829,90 @@
             <!-- Topic filter chips -->
             <div class="hb-topic-bar" id="hbTopicBar">
               <button class="hb-topic-chip active" data-hb-topic="all">All</button>
-              <button class="hb-topic-chip" data-hb-topic="housing">🏠 Housing</button>
-              <button class="hb-topic-chip" data-hb-topic="land-use">🏗️ Land Use</button>
-              <button class="hb-topic-chip" data-hb-topic="gondola">🚡 Gondola 3A</button>
-              <button class="hb-topic-chip" data-hb-topic="public-safety">🔥 Public Safety</button>
-              <button class="hb-topic-chip" data-hb-topic="budget-finance">💰 Budget</button>
-              <button class="hb-topic-chip" data-hb-topic="infrastructure">🚰 Infrastructure</button>
-              <button class="hb-topic-chip" data-hb-topic="environment">🌿 Environment</button>
-              <button class="hb-topic-chip" data-hb-topic="health-education">🏥 Health &amp; Education</button>
-              <button class="hb-topic-chip" data-hb-topic="legal-governance">⚖️ Legal &amp; Governance</button>
-              <button class="hb-topic-chip" data-hb-topic="transit">🚌 Transit</button>
-              <button class="hb-topic-chip" data-hb-topic="community">🤝 Community</button>
-              <button class="hb-topic-chip" data-hb-topic="other">💡 Other</button>
+              <button class="hb-topic-chip" data-hb-topic="housing">Housing</button>
+              <button class="hb-topic-chip" data-hb-topic="land-use">Land Use</button>
+              <button class="hb-topic-chip" data-hb-topic="gondola">Transit / Gondola</button>
+              <button class="hb-topic-chip" data-hb-topic="public-safety">Fire / Safety</button>
+              <button class="hb-topic-chip" data-hb-topic="budget-finance">Budget</button>
+              <button class="hb-topic-chip" data-hb-topic="environment">Environment</button>
+              <button class="hb-topic-chip" data-hb-topic="health-education">Schools</button>
+              <button class="hb-topic-chip" data-hb-topic="legal-governance">Transparency / CORA / Legal</button>
+              <button class="hb-topic-chip" data-hb-topic="community">Community Events</button>
+              <button class="hb-topic-chip" data-hb-topic="volunteer">Local Groups / Volunteerism</button>
             </div>
 
-            <!-- Compose new post -->
+            <!-- Guided post-type chooser -->
             <div class="hb-compose" id="hbCompose">
+              <div style="font-size:0.78rem;font-weight:600;color:#888;margin-bottom:8px;">What would you like to share?</div>
+              <div class="hb-post-type-bar" id="hbPostTypeBar">
+                <button class="hb-post-type-btn" data-hb-ptype="question">Ask a Question</button>
+                <button class="hb-post-type-btn" data-hb-ptype="source">Share a Source</button>
+                <button class="hb-post-type-btn" data-hb-ptype="debrief">Meeting Takeaway</button>
+                <button class="hb-post-type-btn" data-hb-ptype="solution">Suggest a Solution</button>
+                <button class="hb-post-type-btn" data-hb-ptype="need">Community Need</button>
+                <button class="hb-post-type-btn" data-hb-ptype="volunteer">Volunteer / Join In</button>
+              </div>
+
               <div class="hb-compose-header">
                 <div class="hb-compose-avatar" id="hbComposeAvatar">?</div>
                 <input type="text" id="hbComposeTitle" placeholder="Subject" onfocus="hbExpandCompose()">
               </div>
+
               <div class="hb-compose-expanded">
                 <textarea id="hbComposeBody" placeholder="Share your thoughts, concerns, or ideas with the community..."></textarea>
 
+                <!-- Source-specific fields -->
+                <div class="hb-source-fields" id="hbSourceFields">
+                  <div class="hb-compose-field-label">Source link</div>
+                  <input type="url" id="hbSourceUrl" placeholder="https://...">
+                  <div class="hb-compose-field-label">Why it matters</div>
+                  <textarea id="hbSourceWhy" placeholder="What does this source say and why should others read it?" style="min-height:50px;"></textarea>
+                  <div class="hb-compose-field-label">Question it raises</div>
+                  <input type="text" id="hbSourceQuestion" placeholder="What question does this raise for the community?">
+                </div>
+
+                <!-- Meeting debrief fields -->
+                <div class="hb-debrief-fields" id="hbDebriefFields">
+                  <div class="hb-compose-field-label">Meeting name</div>
+                  <input type="text" id="hbDebriefMeeting" placeholder="e.g., Town Council Regular Meeting">
+                  <div class="hb-compose-field-label">Meeting date</div>
+                  <input type="text" id="hbDebriefDate" placeholder="e.g., March 25, 2026">
+                  <div class="hb-compose-field-label">Key takeaways (up to 3)</div>
+                  <textarea id="hbDebriefTakeaways" placeholder="1. &#10;2. &#10;3. " style="min-height:60px;"></textarea>
+                  <div class="hb-compose-field-label">What changed</div>
+                  <textarea id="hbDebriefChanged" placeholder="What decisions were made or what shifted?" style="min-height:40px;"></textarea>
+                  <div class="hb-compose-field-label">What remains unresolved</div>
+                  <textarea id="hbDebriefUnresolved" placeholder="What still needs to be decided or figured out?" style="min-height:40px;"></textarea>
+                  <div class="hb-compose-field-label">Link to agenda / packet / recording (optional)</div>
+                  <input type="url" id="hbDebriefLink" placeholder="https://...">
+                  <div class="hb-compose-field-label">One question for the community</div>
+                  <input type="text" id="hbDebriefQuestion" placeholder="What should neighbors be thinking about?">
+                </div>
+
                 <!-- Tag selector -->
-                <div style="font-size:0.78rem;font-weight:600;color:#888;margin-bottom:4px;">Tag your post (select all that apply):</div>
+                <div style="font-size:0.78rem;font-weight:600;color:#888;margin-bottom:4px;margin-top:10px;">Tag your post:</div>
                 <div class="hb-compose-tags" id="hbComposeTags">
-                  <button class="hb-compose-tag" data-hb-tag="housing">🏠 Housing</button>
-                  <button class="hb-compose-tag" data-hb-tag="land-use">🏗️ Land Use</button>
-                  <button class="hb-compose-tag" data-hb-tag="gondola">🚡 Gondola 3A</button>
-                  <button class="hb-compose-tag" data-hb-tag="public-safety">🔥 Public Safety</button>
-                  <button class="hb-compose-tag" data-hb-tag="budget-finance">💰 Budget</button>
-                  <button class="hb-compose-tag" data-hb-tag="infrastructure">🚰 Infrastructure</button>
-                  <button class="hb-compose-tag" data-hb-tag="environment">🌿 Environment</button>
-                  <button class="hb-compose-tag" data-hb-tag="health-education">🏥 Health &amp; Ed</button>
-                  <button class="hb-compose-tag" data-hb-tag="legal-governance">⚖️ Legal</button>
-                  <button class="hb-compose-tag" data-hb-tag="transit">🚌 Transit</button>
-                  <button class="hb-compose-tag" data-hb-tag="community">🤝 Community</button>
-                  <button class="hb-compose-tag" data-hb-tag="other">💡 Other</button>
+                  <button class="hb-compose-tag" data-hb-tag="housing">Housing</button>
+                  <button class="hb-compose-tag" data-hb-tag="land-use">Land Use</button>
+                  <button class="hb-compose-tag" data-hb-tag="gondola">Transit / Gondola</button>
+                  <button class="hb-compose-tag" data-hb-tag="public-safety">Fire / Safety</button>
+                  <button class="hb-compose-tag" data-hb-tag="budget-finance">Budget</button>
+                  <button class="hb-compose-tag" data-hb-tag="environment">Environment</button>
+                  <button class="hb-compose-tag" data-hb-tag="health-education">Schools</button>
+                  <button class="hb-compose-tag" data-hb-tag="legal-governance">Transparency / Legal</button>
+                  <button class="hb-compose-tag" data-hb-tag="community">Community</button>
+                  <button class="hb-compose-tag" data-hb-tag="volunteer">Volunteerism</button>
+                </div>
+
+                <!-- Next step cue selector -->
+                <div style="font-size:0.78rem;font-weight:600;color:#888;margin-bottom:4px;">What can someone do next?</div>
+                <div class="hb-nextstep-bar" id="hbNextStepBar">
+                  <button class="hb-nextstep-chip" data-hb-step="attend">Attend</button>
+                  <button class="hb-nextstep-chip" data-hb-step="read">Read</button>
+                  <button class="hb-nextstep-chip" data-hb-step="ask">Ask</button>
+                  <button class="hb-nextstep-chip" data-hb-step="volunteer">Volunteer</button>
+                  <button class="hb-nextstep-chip" data-hb-step="email">Email</button>
+                  <button class="hb-nextstep-chip" data-hb-step="watch">Watch</button>
                 </div>
 
                 <!-- Attachment preview area -->
@@ -5790,7 +5920,7 @@
 
                 <!-- Tone review nudge -->
                 <div class="hb-tone-nudge" id="hbToneNudge">
-                  <div class="hb-tone-nudge-title">⚡ Heads up — this might come across as a personal attack</div>
+                  <div class="hb-tone-nudge-title">Heads up — this might come across as a personal attack</div>
                   <div class="hb-tone-original" id="hbToneOriginal"></div>
                   <div style="font-size:0.82rem;color:#555;margin:4px 0;">Here's a way to make the same point without targeting someone personally:</div>
                   <div class="hb-tone-suggested" id="hbToneSuggested"></div>
@@ -5803,7 +5933,7 @@
 
                 <div class="hb-compose-actions">
                   <div style="display:flex;gap:6px;">
-                    <button class="hb-attach-btn" onclick="hbTriggerAttach()">📎 Attach File</button>
+                    <button class="hb-attach-btn" onclick="hbTriggerAttach()">Attach File</button>
                     <input type="file" id="hbFileInput" accept=".pdf,.png,.jpg,.jpeg,.gif,.webp" multiple style="display:none;" onchange="hbHandleFiles(this)">
                   </div>
                   <button class="hb-post-btn" id="hbPostBtn" onclick="hbSubmitPost()" disabled>Post to Hub-Bub</button>
@@ -5816,7 +5946,7 @@
               <span>Sort:</span>
               <button class="hb-sort-opt active" data-hb-sort="newest" onclick="hbSortPosts('newest')">Newest</button>
               <button class="hb-sort-opt" data-hb-sort="most-discussed" onclick="hbSortPosts('most-discussed')">Most Discussed</button>
-              <button class="hb-sort-opt" data-hb-sort="most-upvoted" onclick="hbSortPosts('most-upvoted')">Most Upvoted</button>
+              <button class="hb-sort-opt" data-hb-sort="most-useful" onclick="hbSortPosts('most-useful')">Most Useful</button>
             </div>
 
             <!-- Posts feed -->
@@ -5825,22 +5955,35 @@
               <div class="hb-empty" id="hbEmpty" style="display:none;">
                 <div class="hb-empty-icon">💬</div>
                 <div class="hb-empty-text">No discussions yet</div>
-                <div class="hb-empty-sub">Be the first to start a conversation about what matters to Telluride.</div>
+                <div class="hb-empty-sub">Be the first to start a constructive conversation about what matters to Telluride.</div>
               </div>
             </div>
           </div>
 
           <!-- ── Sidebar ── -->
           <div>
+            <!-- Questions Needing Answers -->
+            <div class="hb-sidebar" id="hbUnansweredSidebar">
+              <div class="hb-sidebar-title">Questions Needing Answers</div>
+              <div id="hbUnanswered">
+                <div class="hb-unanswered-item">Which figure is the official cost estimate?</div>
+                <div class="hb-unanswered-item">Has a wildlife study been submitted?</div>
+                <div class="hb-unanswered-item">What changed from the last draft?</div>
+                <div class="hb-unanswered-item">What is the actual deadline for written comments?</div>
+              </div>
+            </div>
+
+            <!-- Most Useful This Week -->
             <div class="hb-sidebar">
-              <div class="hb-sidebar-title">🔥 Trending Discussions</div>
-              <div id="hbTrending">
+              <div class="hb-sidebar-title">Most Useful This Week</div>
+              <div id="hbMostUseful">
                 <div style="font-size:0.8rem;color:#aaa;padding:8px 0;">Loading...</div>
               </div>
             </div>
 
-            <div class="hb-sidebar" style="margin-top:14px;">
-              <div class="hb-sidebar-title">📊 Activity</div>
+            <!-- Activity -->
+            <div class="hb-sidebar">
+              <div class="hb-sidebar-title">Activity</div>
               <div style="font-size:0.82rem;color:#666;line-height:1.6;">
                 <div style="display:flex;justify-content:space-between;padding:4px 0;"><span>Posts today</span><strong id="hbStatToday">0</strong></div>
                 <div style="display:flex;justify-content:space-between;padding:4px 0;"><span>This week</span><strong id="hbStatWeek">0</strong></div>
@@ -5849,13 +5992,15 @@
               </div>
             </div>
 
+            <!-- Community Guidelines -->
             <div class="hb-guidelines">
               <div class="hb-guidelines-title">Community Guidelines</div>
-              <p style="margin:4px 0;">Hub-Bub is an <strong>uncensored</strong> public forum for the Telluride community. All viewpoints are welcome. That said:</p>
-              <p style="margin:4px 0;">&#8226; <strong>Stay on topic</strong> — tag your posts so others can find what matters to them.</p>
-              <p style="margin:4px 0;">&#8226; <strong>Attack ideas, not people</strong> — disagree vigorously, but our AI will gently suggest alternatives if your post targets an individual.</p>
-              <p style="margin:4px 0;">&#8226; <strong>Back it up</strong> — attach documents, link to sources, cite meeting minutes.</p>
-              <p style="margin:4px 0;">&#8226; <strong>This is a public record</strong> — posts may be referenced in formal public comment processes.</p>
+              <p style="margin:4px 0;">Hub-Bub is a public civic forum for the Telluride region. All viewpoints are welcome. That said:</p>
+              <p style="margin:4px 0;">&#8226; <strong>Ask clear questions</strong> — good questions lead to better answers.</p>
+              <p style="margin:4px 0;">&#8226; <strong>Share sources</strong> — attach documents, link to meeting minutes, cite records.</p>
+              <p style="margin:4px 0;">&#8226; <strong>Attack ideas, not people</strong> — disagree vigorously but constructively.</p>
+              <p style="margin:4px 0;">&#8226; <strong>Propose solutions</strong> — practical ideas move the conversation forward.</p>
+              <p style="margin:4px 0;">&#8226; <strong>This is a public record</strong> — posts may be referenced in formal public comment.</p>
             </div>
           </div>
         </div>
@@ -15927,8 +16072,8 @@ document.addEventListener('DOMContentLoaded', function() {
   renderCommunityPulse();
 });
 /* ══════════════════════════════════════════════════════════════
-      HUB-BUB FORUM ENGINE
-   Firebase-backed community discussion forum for Telluride Gov Hub
+      HUB-BUB FORUM ENGINE v2
+   Guided Civic Discussion Forum for Telluride Gov Hub
    ══════════════════════════════════════════════════════════════ */
 (function() {
   'use strict';
@@ -15947,10 +16092,13 @@ document.addEventListener('DOMContentLoaded', function() {
   let hbUser = null;           // Current authenticated user
   let hbCurrentTopic = 'all';  // Active topic filter
   let hbCurrentSort = 'newest';
+  let hbCurrentMode = 'all';   // Mode filter: all, question, what-happened, ideas
+  let hbSelectedPostType = null; // Currently selected post type for compose
   let hbPosts = [];            // Cached posts
   let hbPendingAttachments = []; // Files queued for upload
   let hbToneOriginalText = '';
   let hbFirebaseReady = false;
+  let hbCurrentStarterIndex = 0; // Conversation starter rotation
   try {
     if (FIREBASE_CONFIG.apiKey !== 'YOUR_API_KEY') {
       // Use existing Firebase app if already initialized (by modular SDK), otherwise create new
@@ -15978,6 +16126,53 @@ document.addEventListener('DOMContentLoaded', function() {
     'community': { label: 'Community', icon: '🤝' },
     'other': { label: 'Other', icon: '💡' }
   };
+  // ─── Post Type Definitions ───
+  const HB_POST_TYPES = {
+    'question': {
+      label: 'Question',
+      icon: '❓',
+      titlePlaceholder: 'What do you want to know?',
+      bodyPlaceholder: 'Ask your question. What specific information would help?'
+    },
+    'source': {
+      label: 'Source',
+      icon: '📄',
+      titlePlaceholder: 'What is this document about?',
+      bodyPlaceholder: 'Summarize the key points or findings from this source.'
+    },
+    'debrief': {
+      label: 'Meeting Debrief',
+      icon: '📋',
+      titlePlaceholder: 'What meeting did you attend?',
+      bodyPlaceholder: 'Summarize the key discussion points and outcomes.'
+    },
+    'solution': {
+      label: 'Solution',
+      icon: '💡',
+      titlePlaceholder: 'What is your practical idea?',
+      bodyPlaceholder: 'Describe your solution and how it would help the community.'
+    },
+    'need': {
+      label: 'Community Need',
+      icon: '🙋',
+      titlePlaceholder: 'What does our community need?',
+      bodyPlaceholder: 'Describe the need and why it matters.'
+    },
+    'volunteer': {
+      label: 'Volunteer',
+      icon: '🤝',
+      titlePlaceholder: 'What help are you offering?',
+      bodyPlaceholder: 'Describe how you can help and what skills you bring.'
+    }
+  };
+  // ─── Conversation Starters ───
+  const HB_CONVERSATION_STARTERS = [
+    "What is one question you want answered before the next council meeting?",
+    "What is one fact more people should know about this issue?",
+    "What changed your mind, even a little, on a local issue?",
+    "What is one practical idea that would reduce conflict on this topic?",
+    "What did you hear at a recent meeting that deserves more attention?"
+  ];
   // ═══════════════════════════════
   // AUTH FUNCTIONS
   // ═══════════════════════════════
@@ -16078,6 +16273,58 @@ document.addEventListener('DOMContentLoaded', function() {
       compose.classList.remove('expanded');
     }
   };
+  // ─── Conversation Starter ───
+  window.hbRespondToStarter = function() {
+    hbExpandCompose();
+    var starter = HB_CONVERSATION_STARTERS[hbCurrentStarterIndex];
+    document.getElementById('hbComposeTitle').value = starter;
+    hbUpdatePostBtn();
+    // Rotate for next time
+    hbCurrentStarterIndex = (hbCurrentStarterIndex + 1) % HB_CONVERSATION_STARTERS.length;
+  };
+  // ─── Mode Switching ───
+  window.hbSetMode = function(mode) {
+    hbCurrentMode = mode;
+    document.querySelectorAll('[data-hb-mode]').forEach(function(btn) {
+      btn.classList.toggle('active', btn.dataset.hbMode === mode);
+    });
+    hbRenderPosts();
+  };
+  // ─── Post Type Selection ───
+  window.hbSelectPostType = function(ptype) {
+    hbSelectedPostType = ptype;
+    document.querySelectorAll('[data-hb-ptype]').forEach(function(btn) {
+      btn.classList.toggle('active', btn.dataset.hbPtype === ptype);
+    });
+
+    // Update placeholders
+    var typeInfo = HB_POST_TYPES[ptype] || {};
+    var titleInput = document.getElementById('hbComposeTitle');
+    var bodyInput = document.getElementById('hbComposeBody');
+    if (titleInput) titleInput.placeholder = typeInfo.titlePlaceholder || 'Enter title...';
+    if (bodyInput) bodyInput.placeholder = typeInfo.bodyPlaceholder || 'Enter content...';
+
+    // Show/hide extra fields
+    var sourceFields = document.querySelector('.hb-source-fields');
+    var debriefFields = document.querySelector('.hb-debrief-fields');
+    if (sourceFields) sourceFields.style.display = (ptype === 'source') ? '' : 'none';
+    if (debriefFields) debriefFields.style.display = (ptype === 'debrief') ? '' : 'none';
+
+    // Auto-expand
+    hbExpandCompose();
+  };
+  // ─── Next Step Cue Selection ───
+  window.hbToggleNextStep = function(step, btn) {
+    if (btn.classList.contains('selected')) {
+      btn.classList.remove('selected');
+      hbSelectedNextStep = null;
+    } else {
+      document.querySelectorAll('[data-hb-step]').forEach(function(b) { b.classList.remove('selected'); });
+      btn.classList.add('selected');
+      hbSelectedNextStep = step;
+    }
+  };
+  var hbSelectedNextStep = null;
   // Tag selection in compose
   document.querySelectorAll('.hb-compose-tag').forEach(function(tag) {
     tag.addEventListener('click', function() {
@@ -16238,20 +16485,41 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
     Promise.all(uploadPromises).then(function(attachments) {
-      return db.collection('posts').add({
+      var postData = {
         authorId: hbUser.uid,
         authorName: hbUser.displayName || 'Anonymous',
         title: title,
         body: body,
         tags: selectedTags,
+        postType: hbSelectedPostType || 'question',
         attachments: attachments,
         createdAt: firebase.firestore.FieldValue.serverTimestamp(),
         replyCount: 0,
         upvotes: 0,
         downvotes: 0,
         upvoters: [],
-        downvoters: []
-      });
+        downvoters: [],
+        reactions: { useful: 0, helpful_source: 0, good_question: 0, learned: 0 },
+        reactors: {},
+        nextStep: hbSelectedNextStep || null
+      };
+      // Add debrief-specific fields
+      if (hbSelectedPostType === 'debrief') {
+        postData.debriefMeeting = document.getElementById('hbDebriefMeeting') ? document.getElementById('hbDebriefMeeting').value.trim() : '';
+        postData.debriefDate = document.getElementById('hbDebriefDate') ? document.getElementById('hbDebriefDate').value : '';
+        postData.debriefTakeaways = document.getElementById('hbDebriefTakeaways') ? document.getElementById('hbDebriefTakeaways').value.trim() : '';
+        postData.debriefChanged = document.getElementById('hbDebriefChanged') ? document.getElementById('hbDebriefChanged').value.trim() : '';
+        postData.debriefUnresolved = document.getElementById('hbDebriefUnresolved') ? document.getElementById('hbDebriefUnresolved').value.trim() : '';
+        postData.debriefLink = document.getElementById('hbDebriefLink') ? document.getElementById('hbDebriefLink').value.trim() : '';
+        postData.debriefQuestion = document.getElementById('hbDebriefQuestion') ? document.getElementById('hbDebriefQuestion').value.trim() : '';
+      }
+      // Add source-specific fields
+      if (hbSelectedPostType === 'source') {
+        postData.sourceUrl = document.getElementById('hbSourceUrl') ? document.getElementById('hbSourceUrl').value.trim() : '';
+        postData.sourceWhy = document.getElementById('hbSourceWhy') ? document.getElementById('hbSourceWhy').value.trim() : '';
+        postData.sourceQuestion = document.getElementById('hbSourceQuestion') ? document.getElementById('hbSourceQuestion').value.trim() : '';
+      }
+      return db.collection('posts').add(postData);
     }).then(function() {
       // Update user post count
       db.collection('users').doc(hbUser.uid).update({
@@ -16261,8 +16529,12 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('hbComposeTitle').value = '';
       document.getElementById('hbComposeBody').value = '';
       document.querySelectorAll('.hb-compose-tag.selected').forEach(function(t) { t.classList.remove('selected'); });
+      document.querySelectorAll('[data-hb-ptype]').forEach(function(b) { b.classList.remove('active'); });
+      document.querySelectorAll('[data-hb-step]').forEach(function(b) { b.classList.remove('selected'); });
       hbPendingAttachments = [];
       hbRenderAttachPreview();
+      hbSelectedPostType = null;
+      hbSelectedNextStep = null;
       document.getElementById('hbCompose').classList.remove('expanded');
       document.getElementById('hbToneNudge').classList.remove('visible');
       postBtn.textContent = 'Post to Hub-Bub';
@@ -16296,6 +16568,8 @@ document.addEventListener('DOMContentLoaded', function() {
         hbRenderPosts();
         hbRenderTrending();
         hbRenderStats();
+        hbRenderMostUseful();
+        hbRenderUnanswered();
       })
       .catch(function(err) {
         console.error('Hub-Bub load error:', err);
@@ -16315,11 +16589,23 @@ document.addEventListener('DOMContentLoaded', function() {
         return p.tags && p.tags.indexOf(hbCurrentTopic) !== -1;
       });
     }
+    // Filter by mode
+    if (hbCurrentMode === 'question') {
+      filtered = filtered.filter(function(p) { return p.postType === 'question'; });
+    } else if (hbCurrentMode === 'what-happened') {
+      filtered = filtered.filter(function(p) { return p.postType === 'debrief' || p.postType === 'source'; });
+    } else if (hbCurrentMode === 'ideas') {
+      filtered = filtered.filter(function(p) { return p.postType === 'solution' || p.postType === 'need' || p.postType === 'volunteer'; });
+    }
     // Sort
     if (hbCurrentSort === 'most-discussed') {
       filtered.sort(function(a, b) { return (b.replyCount || 0) - (a.replyCount || 0); });
-    } else if (hbCurrentSort === 'most-upvoted') {
-      filtered.sort(function(a, b) { return ((b.upvotes||0) - (b.downvotes||0)) - ((a.upvotes||0) - (a.downvotes||0)); });
+    } else if (hbCurrentSort === 'most-useful') {
+      filtered.sort(function(a, b) {
+        var aTotalReactions = Object.values(a.reactions || {}).reduce(function(sum, val) { return sum + val; }, 0);
+        var bTotalReactions = Object.values(b.reactions || {}).reduce(function(sum, val) { return sum + val; }, 0);
+        return bTotalReactions - aTotalReactions;
+      });
     }
     // Clear existing posts (keep loading/empty divs)
     var existingPosts = feed.querySelectorAll('.hb-post');
@@ -16337,14 +16623,29 @@ document.addEventListener('DOMContentLoaded', function() {
     var card = document.createElement('div');
     card.className = 'hb-post';
     card.dataset.postId = post.id;
+
+    // Add class based on post type
+    var postTypeClass = '';
+    if (post.postType === 'debrief') {
+      card.classList.add('debrief-card');
+      postTypeClass = 'debrief';
+    } else if (post.postType === 'source') {
+      card.classList.add('source-card');
+      postTypeClass = 'source';
+    }
+
     var initial = (post.authorName || '?').charAt(0).toUpperCase();
     var timeStr = post.createdAt ? hbTimeAgo(post.createdAt.toDate ? post.createdAt.toDate() : new Date(post.createdAt)) : 'just now';
     var isLong = post.body && post.body.length > 400;
     var bodyText = isLong ? post.body.substring(0, 400) + '...' : (post.body || '');
-    var score = (post.upvotes || 0) - (post.downvotes || 0);
     var myUid = hbUser ? hbUser.uid : '';
     var votedUp = post.upvoters && post.upvoters.indexOf(myUid) !== -1;
     var votedDown = post.downvoters && post.downvoters.indexOf(myUid) !== -1;
+
+    // Get total reactions
+    var totalReactions = Object.values(post.reactions || {}).reduce(function(sum, val) { return sum + val; }, 0);
+    var userReaction = (post.reactors && post.reactors[myUid]) || null;
+
     var tagsHtml = '';
     if (post.tags && post.tags.length) {
       tagsHtml = '<div class="hb-post-tags">' + post.tags.map(function(t) {
@@ -16352,6 +16653,14 @@ document.addEventListener('DOMContentLoaded', function() {
         return '<span class="hb-post-tag">' + info.icon + ' ' + hbEsc(info.label) + '</span>';
       }).join('') + '</div>';
     }
+
+    // Post type badge
+    var badgeHtml = '';
+    if (post.postType) {
+      var typeInfo = HB_POST_TYPES[post.postType] || { label: post.postType, icon: '💡' };
+      badgeHtml = '<span class="hb-badge hb-badge-' + post.postType + '">' + typeInfo.icon + ' ' + typeInfo.label + '</span>';
+    }
+
     var attachHtml = '';
     if (post.attachments && post.attachments.length) {
       attachHtml = '<div class="hb-post-attachments">' + post.attachments.map(function(a) {
@@ -16359,20 +16668,61 @@ document.addEventListener('DOMContentLoaded', function() {
         return '<a class="hb-post-attach" href="' + hbEsc(a.url) + '" target="_blank">' + icon + ' ' + hbEsc(a.name) + '</a>';
       }).join('') + '</div>';
     }
+
+    // Next step cue
+    var nextStepHtml = '';
+    if (post.nextStep) {
+      nextStepHtml = '<div class="hb-nextstep-cue">Next step: ' + hbEsc(post.nextStep) + '</div>';
+    }
+
+    // Debrief-specific rendering
+    var debriefHtml = '';
+    if (postTypeClass === 'debrief') {
+      debriefHtml = '<div class="hb-debrief-details">';
+      if (post.debriefMeeting) debriefHtml += '<div><strong>Meeting:</strong> ' + hbEsc(post.debriefMeeting) + '</div>';
+      if (post.debriefDate) debriefHtml += '<div><strong>Date:</strong> ' + hbEsc(post.debriefDate) + '</div>';
+      if (post.debriefTakeaways) debriefHtml += '<div><strong>Key Takeaways:</strong> ' + hbEsc(post.debriefTakeaways) + '</div>';
+      debriefHtml += '</div>';
+    }
+
+    // Source-specific rendering
+    var sourceHtml = '';
+    if (postTypeClass === 'source' && post.sourceUrl) {
+      sourceHtml = '<div class="hb-source-link"><a href="' + hbEsc(post.sourceUrl) + '" target="_blank">View Source Document</a></div>';
+    }
+
+    // Constructive reactions
+    var reactionsHtml = '<div class="hb-reactions">';
+    var reactionTypes = [
+      { key: 'useful', label: 'Useful', emoji: '👍' },
+      { key: 'helpful_source', label: 'Helpful source', emoji: '📚' },
+      { key: 'good_question', label: 'Good question', emoji: '❓' },
+      { key: 'learned', label: 'I learned', emoji: '💡' }
+    ];
+    reactionTypes.forEach(function(r) {
+      var count = post.reactions[r.key] || 0;
+      var isSelected = userReaction === r.key ? ' selected' : '';
+      reactionsHtml += '<button class="hb-react-btn' + isSelected + '" onclick="hbReact(\'' + post.id + '\',\'' + r.key + '\')" title="' + r.label + '">' + r.emoji + ' <span>' + count + '</span></button>';
+    });
+    reactionsHtml += '</div>';
+
     card.innerHTML =
       '<div class="hb-post-head">' +
         '<div class="hb-post-avatar">' + initial + '</div>' +
         '<div><span class="hb-post-author">' + hbEsc(post.authorName || 'Anonymous') + '</span>' +
         '<div class="hb-post-meta">' + timeStr + '</div></div>' +
+        badgeHtml +
       '</div>' +
       '<div class="hb-post-title">' + hbEsc(post.title || '') + '</div>' +
       tagsHtml +
       '<div class="hb-post-body' + (isLong ? ' truncated' : '') + '">' + hbEsc(bodyText) + '</div>' +
       (isLong ? '<button class="hb-read-more" onclick="hbExpandPost(this)">Read more</button>' : '') +
+      debriefHtml +
+      sourceHtml +
       attachHtml +
+      nextStepHtml +
+      reactionsHtml +
       '<div class="hb-post-foot">' +
-        '<button class="hb-vote-btn' + (votedUp ? ' voted-up' : '') + '" onclick="hbVote(\'' + post.id + '\',\'up\')" title="Upvote">▲ <span>' + (post.upvotes || 0) + '</span></button>' +
-        '<button class="hb-vote-btn' + (votedDown ? ' voted-down' : '') + '" onclick="hbVote(\'' + post.id + '\',\'down\')" title="Downvote">▼ <span>' + (post.downvotes || 0) + '</span></button>' +
         '<button class="hb-reply-toggle" onclick="hbToggleReplies(\'' + post.id + '\')">💬 <span>' + (post.replyCount || 0) + '</span> replies</button>' +
         (hbUser && hbUser.email === 'info@livabletelluride.org' ? '<button class="hb-admin-delete-btn" onclick="hbAdminDelete(\'' + post.id + '\')" title="Delete post (admin)">🗑️ Delete</button>' : '') +
       '</div>' +
@@ -16390,7 +16740,47 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.remove();
   };
   // ═══════════════════════════════
-  // VOTING
+  // REACTIONS
+  // ═══════════════════════════════
+  window.hbReact = function(postId, reactionType) {
+    if (!hbUser || !hbUser.emailVerified) { hbShowAuth('login'); return; }
+    if (!hbFirebaseReady) return;
+    var ref = db.collection('posts').doc(postId);
+    var uid = hbUser.uid;
+    db.runTransaction(function(tx) {
+      return tx.get(ref).then(function(doc) {
+        var data = doc.data();
+        var reactions = data.reactions || { useful: 0, helpful_source: 0, good_question: 0, learned: 0 };
+        var reactors = data.reactors || {};
+        var currentReaction = reactors[uid];
+
+        // If user already has this reaction, remove it
+        if (currentReaction === reactionType) {
+          reactions[reactionType] = Math.max(0, (reactions[reactionType] || 0) - 1);
+          delete reactors[uid];
+        } else {
+          // Remove old reaction if exists
+          if (currentReaction && reactions[currentReaction]) {
+            reactions[currentReaction] = Math.max(0, (reactions[currentReaction] || 0) - 1);
+          }
+          // Add new reaction
+          reactions[reactionType] = (reactions[reactionType] || 0) + 1;
+          reactors[uid] = reactionType;
+        }
+
+        tx.update(ref, {
+          reactions: reactions,
+          reactors: reactors
+        });
+      });
+    }).then(function() {
+      hbLoadPosts();
+    }).catch(function(err) {
+      console.error('Reaction error:', err);
+    });
+  };
+  // ═══════════════════════════════
+  // VOTING (KEPT FOR BACKWARD COMPATIBILITY)
   // ═══════════════════════════════
   window.hbVote = function(postId, dir) {
     if (!hbUser || !hbUser.emailVerified) { hbShowAuth('login'); return; }
@@ -16596,6 +16986,73 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   // ═══════════════════════════════
+  // MOST USEFUL THIS WEEK SIDEBAR
+  // ═══════════════════════════════
+  function hbRenderMostUseful() {
+    var container = document.getElementById('hbMostUseful');
+    if (!container) return;
+
+    var now = new Date();
+    var weekAgo = new Date(now.getTime() - 7 * 86400000);
+
+    // Get posts from this week, sorted by total reactions
+    var thisWeek = hbPosts.filter(function(p) {
+      var d = p.createdAt ? (p.createdAt.toDate ? p.createdAt.toDate() : new Date(p.createdAt)) : null;
+      return d && d >= weekAgo;
+    }).sort(function(a, b) {
+      var aTotalReactions = Object.values(a.reactions || {}).reduce(function(sum, val) { return sum + val; }, 0);
+      var bTotalReactions = Object.values(b.reactions || {}).reduce(function(sum, val) { return sum + val; }, 0);
+      return bTotalReactions - aTotalReactions;
+    });
+
+    if (thisWeek.length === 0) {
+      container.innerHTML = '<div style="font-size:0.8rem;color:#aaa;padding:8px 0;">No posts this week yet.</div>';
+      return;
+    }
+
+    container.innerHTML = '';
+    thisWeek.slice(0, 5).forEach(function(post) {
+      var totalReactions = Object.values(post.reactions || {}).reduce(function(sum, val) { return sum + val; }, 0);
+      var item = document.createElement('div');
+      item.className = 'hb-useful-item';
+      item.innerHTML =
+        '<div class="hb-useful-title">' + hbEsc(post.title) + '</div>' +
+        '<div class="hb-useful-count">👍 ' + totalReactions + ' reactions</div>';
+      container.appendChild(item);
+    });
+  }
+  // ═══════════════════════════════
+  // UNANSWERED QUESTIONS SIDEBAR
+  // ═══════════════════════════════
+  function hbRenderUnanswered() {
+    var container = document.getElementById('hbUnanswered');
+    if (!container) return;
+
+    // Get question-type posts with 0 replies, sorted by newest first
+    var unanswered = hbPosts.filter(function(p) {
+      return p.postType === 'question' && (p.replyCount || 0) === 0;
+    }).sort(function(a, b) {
+      var aDate = a.createdAt ? (a.createdAt.toDate ? a.createdAt.toDate() : new Date(a.createdAt)) : new Date(0);
+      var bDate = b.createdAt ? (b.createdAt.toDate ? b.createdAt.toDate() : new Date(b.createdAt)) : new Date(0);
+      return bDate - aDate;
+    });
+
+    if (unanswered.length === 0) {
+      container.innerHTML = '<div style="font-size:0.8rem;color:#aaa;padding:8px 0;">All questions have answers!</div>';
+      return;
+    }
+
+    container.innerHTML = '';
+    unanswered.slice(0, 5).forEach(function(post) {
+      var item = document.createElement('div');
+      item.className = 'hb-unanswered-item';
+      item.innerHTML =
+        '<div class="hb-unanswered-title">' + hbEsc(post.title) + '</div>' +
+        '<div class="hb-unanswered-author">by ' + hbEsc(post.authorName || 'Anonymous') + '</div>';
+      container.appendChild(item);
+    });
+  }
+  // ═══════════════════════════════
   // STATS
   // ═══════════════════════════════
   function hbRenderStats() {
@@ -16627,12 +17084,16 @@ document.addEventListener('DOMContentLoaded', function() {
         title: 'What happened at the Town Council meeting on the Wildfire Resiliency Code?',
         body: 'I missed Tuesday\'s meeting but heard there was a big debate about the Colorado Wildfire Resiliency Code adoption. Can anyone who was there share what the key concerns were? Specifically interested in how the defensible space requirements will affect older homes on the north side of town.',
         tags: ['public-safety', 'legal-governance'],
+        postType: 'question',
         attachments: [],
         createdAt: { toDate: function() { return new Date(now - 3600000); } },
         replyCount: 4,
         upvotes: 12,
         downvotes: 1,
-        upvoters: [], downvoters: []
+        upvoters: [], downvoters: [],
+        reactions: { useful: 8, helpful_source: 0, good_question: 12, learned: 3 },
+        reactors: {},
+        nextStep: null
       },
       {
         id: 'demo-2',
@@ -16640,12 +17101,19 @@ document.addEventListener('DOMContentLoaded', function() {
         title: 'Gondola 3A alternatives analysis — has anyone read the full report?',
         body: 'The alternatives analysis document is 186 pages and I\'ve been working through it. Some key findings that jumped out: the traffic modeling assumes a 15% mode shift that seems optimistic given current transit ridership data. Also, the visual impact assessment methodology didn\'t include viewshed analysis from the Valley Floor. Would love to discuss with others who\'ve read it.',
         tags: ['gondola', 'environment', 'transit'],
+        postType: 'source',
         attachments: [{ name: 'gondola-3a-alternatives-summary.pdf', url: '#', type: 'application/pdf' }],
         createdAt: { toDate: function() { return new Date(now - 7200000); } },
         replyCount: 8,
         upvotes: 23,
         downvotes: 3,
-        upvoters: [], downvoters: []
+        upvoters: [], downvoters: [],
+        reactions: { useful: 15, helpful_source: 23, good_question: 2, learned: 8 },
+        reactors: {},
+        sourceUrl: '#',
+        sourceWhy: 'Official analysis document',
+        sourceQuestion: 'What are the main findings?',
+        nextStep: null
       },
       {
         id: 'demo-3',
@@ -16653,17 +17121,23 @@ document.addEventListener('DOMContentLoaded', function() {
         title: 'Deed-restricted housing waitlist transparency',
         body: 'Has anyone else noticed that the deed-restricted housing waitlist process is basically a black box? I\'ve been trying to get clarity on how units like Silver Jack 205 and Element 52 SW-102 are allocated. The current system lacks the transparency our community needs. I think we should push for quarterly public reports on waitlist status and allocation criteria.',
         tags: ['housing', 'legal-governance'],
+        postType: 'solution',
         attachments: [],
         createdAt: { toDate: function() { return new Date(now - 18000000); } },
         replyCount: 15,
         upvotes: 31,
         downvotes: 2,
-        upvoters: [], downvoters: []
+        upvoters: [], downvoters: [],
+        reactions: { useful: 22, helpful_source: 1, good_question: 5, learned: 4 },
+        reactors: {},
+        nextStep: 'Request CORA records'
       }
     ];
     hbRenderPosts();
     hbRenderTrending();
     hbRenderStats();
+    hbRenderMostUseful();
+    hbRenderUnanswered();
   }
   // ═══════════════════════════════
   // UTILITIES
