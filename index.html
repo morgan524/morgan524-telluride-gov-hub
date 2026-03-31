@@ -224,8 +224,17 @@
     }
     /* ── Subscribe Bar ── */
     /* ── Community Pulse ── */
-    .community-pulse-card { align-items: flex-start; }
-    .community-pulse-card .card-logo { width: 92px; height: 92px; border-radius: 14px; }
+    #community-pulse-content {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    @media (max-width: 900px) {
+      #community-pulse-content { grid-template-columns: 1fr; }
+    }
+    #community-pulse-content .empty-state { grid-column: 1 / -1; }
+    .community-pulse-card { align-items: flex-start; margin-bottom: 0; flex-direction: column; }
+    .community-pulse-card .card-logo { width: 52px; height: 52px; min-width: 52px; border-radius: 10px; }
     .community-pulse-card .card-body { display: block; }
     .community-pulse-featured-row {
       display: grid;
@@ -15777,16 +15786,15 @@ function renderCommunityPulse() {
   posts.forEach(function(p) {
     var src = cpGetSource(p);
     const logoHtml = src.logo
-      ? '<div class="card-logo" style="width:72px;height:72px;min-width:72px;"><img src="' + src.logo + '" alt="' + src.name + '" style="width:100%;height:100%;object-fit:contain;border-radius:10px;" loading="lazy"></div>'
-      : '<div class="card-logo" style="width:72px;height:72px;min-width:72px;display:flex;align-items:center;justify-content:center;background:rgba(33,68,60,0.08);border-radius:10px;font-size:1.5rem;">\u25ce</div>';
+      ? '<div class="card-logo"><img src="' + src.logo + '" alt="' + src.name + '" style="width:100%;height:100%;object-fit:contain;border-radius:10px;" loading="lazy"></div>'
+      : '<div class="card-logo" style="display:flex;align-items:center;justify-content:center;background:rgba(33,68,60,0.08);border-radius:10px;font-size:1.2rem;">\u25ce</div>';
     const tagsHtml = p.tags.map(function(t) {
       return '<span class="legal-meta-tag tag-type">' + t + '</span>';
     }).join('');
     const imageHtml = '';
     const platformIcon = { facebook: '\ud83d\udcd8', instagram: '\ud83d\udcf7', website: '\ud83c\udf10', youtube: '\u25b6\ufe0f' }[src.platform] || '\ud83d\udd17';
     html += '<div class="card community-pulse-card" data-pulse-type="' + src.type + '" data-pulse-platform="' + src.platform + '">';
-    html += logoHtml;
-    html += '<div class="card-body">';
+    html += '<div class="card-body" style="width:100%;">';
     html += '<div class="community-pulse-topline">';
     html += '<div>';
     html += '<span style="display:inline-block; font-size:0.72rem; padding:2px 8px; background:rgba(33,68,60,0.08); color:var(--forest); border-radius:6px; font-weight:600;">' + src.type.charAt(0).toUpperCase() + src.type.slice(1) + '</span> ';
@@ -15794,7 +15802,8 @@ function renderCommunityPulse() {
     html += '</div>';
     html += '<div class="community-pulse-time">' + cpRelativeTime(p.postedAt) + '</div>';
     html += '</div>';
-    html += '<h3><a href="' + src.url + '" target="_blank" rel="noopener">' + src.name + '</a></h3>';
+    html += '<div style="display:flex; align-items:center; gap:10px; margin:6px 0 2px 0;">' + logoHtml;
+    html += '<h3 style="margin:0;"><a href="' + src.url + '" target="_blank" rel="noopener">' + src.name + '</a></h3></div>';
     html += '<div class="meta" style="margin-bottom:4px;">' + p.title + '</div>';
     html += '<div class="description">' + p.excerpt + '</div>';
     html += imageHtml;
@@ -15806,6 +15815,9 @@ function renderCommunityPulse() {
     html += '</div></div>';
   });
   container.innerHTML = html;
+  // Ensure loading/empty states span full grid width
+  var loadingEl = container.querySelector('.loading');
+  if (loadingEl) loadingEl.style.gridColumn = '1 / -1';
 }
 // ── Community Pulse Filter Handlers ──
 document.addEventListener('DOMContentLoaded', function() {
