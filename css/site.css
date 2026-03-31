@@ -1,9 +1,3 @@
-/* ══════════════════════════════════════════════════════
-   TELLURIDE GOV HUB — Main Site Styles
-   All non-Hub-Bub CSS (will be split further in future)
-   ══════════════════════════════════════════════════════ */
-
-  <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
     :root {
@@ -1086,8 +1080,6 @@
         grid-template-columns: 1fr !important;
       }
     }
-
-    /* Hub-Bub styles moved to css/hub-bub.css */
 
 
     /* Also hide left sidebar on Gondola tab */
@@ -3996,3 +3988,4 @@
     #tab-news .card-badges,
     #tab-news .badges,
     #tab-news .entity-badge { display: none !important; }
+
