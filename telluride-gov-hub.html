@@ -15324,7 +15324,7 @@ function showSubmitStatus(msg, type) {
       <input type="email" id="hbLoginEmail" placeholder="your@email.com">
       <label>Password</label>
       <input type="password" id="hbLoginPassword" placeholder="Your password">
-      <button class="hb-modal-btn" onclick="hbDoLogin()">Log In</button>
+      <button class="hb-modal-btn" id="hbLoginBtn">Log In</button>
       <div class="hb-modal-switch">Don't have an account? <a onclick="hbShowAuth('signup')">Sign up</a></div>
     </div>
     <!-- Verify email message -->
@@ -15981,32 +15981,7 @@ document.addEventListener('DOMContentLoaded', function() {
         errEl.textContent = err.message; errEl.style.display = '';
       });
   };
-  window.hbDoLogin = function() {
-    if (!hbFirebaseReady) { hbShowConfigNeeded(); return; }
-    var email = document.getElementById('hbLoginEmail').value.trim();
-    var pass = document.getElementById('hbLoginPassword').value;
-    var errEl = document.getElementById('hbLoginError');
-    if (!email || !pass) { errEl.textContent = 'Please enter email and password.'; errEl.style.display = ''; return; }
-    auth.signInWithEmailAndPassword(email, pass)
-      .then(function(cred) {
-        // Admin account bypasses email verification
-        var isAdmin = cred.user.email === 'info@livabletelluride.org';
-        if (!isAdmin && !cred.user.emailVerified) {
-          errEl.textContent = 'Please verify your email first. Check your inbox for the verification link.';
-          errEl.style.display = '';
-          auth.signOut();
-          return;
-        }
-        hbCloseAuth();
-      })
-      .catch(function(err) {
-        var msg = err.message;
-        if (err.code === 'auth/invalid-credential') msg = 'Incorrect email or password. Please try again.';
-        else if (err.code === 'auth/user-not-found') msg = 'No account found with this email. Click "Sign up" to create one.';
-        else if (err.code === 'auth/too-many-requests') msg = 'Too many failed attempts. Please try again in a few minutes.';
-        errEl.textContent = msg; errEl.style.display = '';
-      });
-  };
+  // hbDoLogin is now handled by addEventListener on #hbLoginBtn below
   window.hbLogout = function() {
     if (auth) auth.signOut();
   };
@@ -16662,6 +16637,72 @@ document.addEventListener('DOMContentLoaded', function() {
     if (secs < 604800) return Math.floor(secs / 86400) + 'd ago';
     return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   }
+  // ─── Bind login button via addEventListener (more reliable than inline onclick) ───
+  var loginBtn = document.getElementById('hbLoginBtn');
+  if (loginBtn) {
+    loginBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      loginBtn.textContent = 'Logging in...';
+      loginBtn.disabled = true;
+      try {
+        var email = document.getElementById('hbLoginEmail').value.trim();
+        var pass = document.getElementById('hbLoginPassword').value;
+        var errEl = document.getElementById('hbLoginError');
+        if (!email || !pass) {
+          errEl.textContent = 'Please enter email and password.';
+          errEl.style.display = '';
+          loginBtn.textContent = 'Log In';
+          loginBtn.disabled = false;
+          return;
+        }
+        if (!hbFirebaseReady) {
+          errEl.textContent = 'Forum system is loading. Please wait a moment and try again.';
+          errEl.style.display = '';
+          loginBtn.textContent = 'Log In';
+          loginBtn.disabled = false;
+          return;
+        }
+        auth.signInWithEmailAndPassword(email, pass)
+          .then(function(cred) {
+            var isAdmin = cred.user.email === 'info@livabletelluride.org';
+            if (!isAdmin && !cred.user.emailVerified) {
+              errEl.textContent = 'Please verify your email first. Check your inbox for the verification link.';
+              errEl.style.display = '';
+              auth.signOut();
+              loginBtn.textContent = 'Log In';
+              loginBtn.disabled = false;
+              return;
+            }
+            hbCloseAuth();
+            loginBtn.textContent = 'Log In';
+            loginBtn.disabled = false;
+          })
+          .catch(function(err) {
+            var msg = err.message;
+            if (err.code === 'auth/invalid-credential') msg = 'Incorrect email or password. Please try again.';
+            else if (err.code === 'auth/user-not-found') msg = 'No account found with this email. Click "Sign up" to create one.';
+            else if (err.code === 'auth/too-many-requests') msg = 'Too many failed attempts. Please try again in a few minutes.';
+            errEl.textContent = msg; errEl.style.display = '';
+            loginBtn.textContent = 'Log In';
+            loginBtn.disabled = false;
+          });
+      } catch(ex) {
+        document.getElementById('hbLoginError').textContent = 'Error: ' + ex.message;
+        document.getElementById('hbLoginError').style.display = '';
+        loginBtn.textContent = 'Log In';
+        loginBtn.disabled = false;
+      }
+    });
+    // Also allow Enter key to submit login
+    ['hbLoginEmail','hbLoginPassword'].forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) el.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') loginBtn.click();
+      });
+    });
+  }
+
   // ─── Initialize on page load ───
   if (!hbFirebaseReady) {
     // Show demo content when Firebase isn't configured yet
