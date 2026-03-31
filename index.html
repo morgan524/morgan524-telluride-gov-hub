@@ -15957,9 +15957,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var email = document.getElementById('hbSignupEmail').value.trim();
     var pass = document.getElementById('hbSignupPassword').value;
     var errEl = document.getElementById('hbSignupError');
-    if (!name) { errEl.textContent = 'Please enter a display name.'; errEl.style.display = ''; return; }
-    if (!email) { errEl.textContent = 'Please enter your email.'; errEl.style.display = ''; return; }
-    if (pass.length < 6) { errEl.textContent = 'Password must be at least 6 characters.'; errEl.style.display = ''; return; }
+    if (!name) { errEl.textContent = 'Please enter a display name.'; errEl.style.display = 'block'; return; }
+    if (!email) { errEl.textContent = 'Please enter your email.'; errEl.style.display = 'block'; return; }
+    if (pass.length < 6) { errEl.textContent = 'Password must be at least 6 characters.'; errEl.style.display = 'block'; return; }
     auth.createUserWithEmailAndPassword(email, pass)
       .then(function(cred) {
         return cred.user.updateProfile({ displayName: name }).then(function() {
@@ -15978,7 +15978,7 @@ document.addEventListener('DOMContentLoaded', function() {
         hbShowAuth('verify');
       })
       .catch(function(err) {
-        errEl.textContent = err.message; errEl.style.display = '';
+        errEl.textContent = err.message; errEl.style.display = 'block';
       });
   };
   // hbDoLogin is now handled by addEventListener on #hbLoginBtn below
@@ -16651,14 +16651,14 @@ document.addEventListener('DOMContentLoaded', function() {
         var errEl = document.getElementById('hbLoginError');
         if (!email || !pass) {
           errEl.textContent = 'Please enter email and password.';
-          errEl.style.display = '';
+          errEl.style.display = 'block';
           loginBtn.textContent = 'Log In';
           loginBtn.disabled = false;
           return;
         }
         if (!hbFirebaseReady) {
           errEl.textContent = 'Forum system is loading. Please wait a moment and try again.';
-          errEl.style.display = '';
+          errEl.style.display = 'block';
           loginBtn.textContent = 'Log In';
           loginBtn.disabled = false;
           return;
@@ -16668,7 +16668,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var isAdmin = cred.user.email === 'info@livabletelluride.org';
             if (!isAdmin && !cred.user.emailVerified) {
               errEl.textContent = 'Please verify your email first. Check your inbox for the verification link.';
-              errEl.style.display = '';
+              errEl.style.display = 'block';
               auth.signOut();
               loginBtn.textContent = 'Log In';
               loginBtn.disabled = false;
@@ -16683,13 +16683,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (err.code === 'auth/invalid-credential') msg = 'Incorrect email or password. Please try again.';
             else if (err.code === 'auth/user-not-found') msg = 'No account found with this email. Click "Sign up" to create one.';
             else if (err.code === 'auth/too-many-requests') msg = 'Too many failed attempts. Please try again in a few minutes.';
-            errEl.textContent = msg; errEl.style.display = '';
+            errEl.textContent = msg; errEl.style.display = 'block';
             loginBtn.textContent = 'Log In';
             loginBtn.disabled = false;
           });
       } catch(ex) {
         document.getElementById('hbLoginError').textContent = 'Error: ' + ex.message;
-        document.getElementById('hbLoginError').style.display = '';
+        document.getElementById('hbLoginError').style.display = 'block';
         loginBtn.textContent = 'Log In';
         loginBtn.disabled = false;
       }
