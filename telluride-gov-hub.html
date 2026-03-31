@@ -15475,6 +15475,8 @@ function showSubmitStatus(msg, type) {
       <label>Password</label>
       <input type="password" id="hbLoginPassword" placeholder="Your password">
       <button class="hb-modal-btn" id="hbLoginBtn">Log In</button>
+      <div style="text-align:center;margin-top:8px;"><a onclick="hbForgotPassword()" style="font-size:0.8rem;color:var(--forest);cursor:pointer;text-decoration:underline;">Forgot your password?</a></div>
+      <div class="hb-modal-info" id="hbLoginInfo"></div>
       <div class="hb-modal-switch">Don't have an account? <a onclick="hbShowAuth('signup')">Sign up</a></div>
     </div>
     <!-- Verify email message -->
@@ -16222,6 +16224,35 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   };
   // hbDoLogin is now handled by addEventListener on #hbLoginBtn below
+  window.hbForgotPassword = function() {
+    if (!hbFirebaseReady) { hbShowConfigNeeded(); return; }
+    var email = document.getElementById('hbLoginEmail').value.trim();
+    var errEl = document.getElementById('hbLoginError');
+    var infoEl = document.getElementById('hbLoginInfo');
+    if (!email) {
+      errEl.textContent = 'Please enter your email address above, then click "Forgot your password?" again.';
+      errEl.style.display = 'block';
+      if (infoEl) infoEl.style.display = 'none';
+      return;
+    }
+    auth.sendPasswordResetEmail(email)
+      .then(function() {
+        errEl.style.display = 'none';
+        if (infoEl) {
+          infoEl.textContent = 'Password reset email sent to ' + email + '. Check your inbox (and spam folder).';
+          infoEl.style.display = 'block';
+        }
+      })
+      .catch(function(err) {
+        if (infoEl) infoEl.style.display = 'none';
+        var msg = err.message;
+        if (err.code === 'auth/user-not-found') msg = 'No account found with this email address.';
+        else if (err.code === 'auth/invalid-email') msg = 'Please enter a valid email address.';
+        else if (err.code === 'auth/too-many-requests') msg = 'Too many attempts. Please try again in a few minutes.';
+        errEl.textContent = msg;
+        errEl.style.display = 'block';
+      });
+  };
   window.hbLogout = function() {
     if (auth) auth.signOut();
   };
