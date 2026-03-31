@@ -16185,11 +16185,16 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('hbSignupForm').style.display = mode === 'signup' ? '' : 'none';
     document.getElementById('hbLoginForm').style.display = mode === 'login' ? '' : 'none';
     document.getElementById('hbVerifyForm').style.display = mode === 'verify' ? '' : 'none';
-    // Clear errors
+    // Clear errors and info messages
     ['hbSignupError','hbLoginError'].forEach(function(id) {
       var el = document.getElementById(id);
       if (el) { el.style.display = 'none'; el.textContent = ''; }
     });
+    var infoEl = document.getElementById('hbLoginInfo');
+    if (infoEl) { infoEl.style.display = 'none'; infoEl.innerHTML = ''; }
+    // Reset login button state
+    var lb = document.getElementById('hbLoginBtn');
+    if (lb) { lb.textContent = 'Log In'; lb.disabled = false; }
   };
   window.hbCloseAuth = function() {
     document.getElementById('hbAuthModal').classList.remove('open');
