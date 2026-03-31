@@ -15900,7 +15900,8 @@ document.addEventListener('DOMContentLoaded', function() {
   let hbFirebaseReady = false;
   try {
     if (FIREBASE_CONFIG.apiKey !== 'YOUR_API_KEY') {
-      app = firebase.initializeApp(FIREBASE_CONFIG);
+      // Use existing Firebase app if already initialized (by modular SDK), otherwise create new
+      app = firebase.apps.length ? firebase.app() : firebase.initializeApp(FIREBASE_CONFIG);
       auth = firebase.auth();
       db = firebase.firestore();
       storage = firebase.storage();
