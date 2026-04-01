@@ -65,7 +65,6 @@
       <button class="tab-btn active" data-tab="meetings">Gov-Hub</button>
       <button class="tab-btn" data-tab="news">Events</button>
       <button class="tab-btn" data-tab="local-news">Local News</button>
-      <button class="tab-btn" data-tab="links">Local Groups</button>
       <button class="tab-btn" data-tab="housing-search">Housing</button>
       <button class="tab-btn" data-tab="community-pulse">Community Pulse</button>
       <button class="tab-btn" data-tab="about-us">About Us</button>
@@ -338,6 +337,27 @@
                 <span class="legal-sidebar-label-redesign">Utilities</span>
                 <span class="legal-sidebar-count-redesign" id="legalCountUtilities">&mdash;</span>
               </a>
+            </div>
+          </div>
+          <!-- Local Clubs & Churches Card -->
+          <div class="clubs-churches-card" onclick="switchTab('links')" role="button" tabindex="0" aria-label="Find Local Clubs and Churches">
+            <div class="clubs-churches-border">
+              <div class="clubs-churches-header">
+                <span class="clubs-churches-question">Want to Connect with</span>
+                <span class="clubs-churches-question">Local Clubs &amp; Churches?</span>
+              </div>
+              <div class="clubs-churches-icons">
+                <span class="cc-icon">🎸</span>
+                <span class="cc-icon">⛪</span>
+                <span class="cc-icon">🍀</span>
+              </div>
+              <div class="clubs-churches-title">Local Clubs<br>&amp; Churches</div>
+              <div class="clubs-churches-divider">&#10053; &#10053; &#10053;</div>
+              <p class="clubs-churches-desc">To learn more about clubs and churches in the area, click the button below.</p>
+              <div class="clubs-churches-btn">
+                <span class="cc-btn-pin">&#9906;</span> Find Clubs &amp; Churches
+              </div>
+              <div class="clubs-churches-footer">&#10013;</div>
             </div>
           </div>
         </div>
@@ -2196,9 +2216,6 @@
   </button>
   <button class="mobile-more-item" data-tab="local-news">
     <span class="nav-icon">📰</span> Local News
-  </button>
-  <button class="mobile-more-item" data-tab="links">
-    <span class="nav-icon">🔗</span> Local Groups
   </button>
   <button class="mobile-more-item" data-tab="housing-search">
     <span class="nav-icon">🏠</span> Housing Search

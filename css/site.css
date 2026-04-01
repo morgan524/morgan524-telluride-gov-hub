@@ -1264,6 +1264,96 @@
       background: var(--forest);
       color: #fff;
     }
+    /* ── Local Clubs & Churches Sidebar Card ── */
+    .clubs-churches-card {
+      margin-top: 18px;
+      cursor: pointer;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .clubs-churches-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(36, 49, 46, 0.12);
+    }
+    .clubs-churches-border {
+      background: linear-gradient(180deg, #f5f2e8 0%, #ebe7d9 50%, #ddd8c6 100%);
+      border: 2.5px solid rgba(75, 90, 60, 0.35);
+      border-radius: 20px;
+      padding: 22px 18px 18px;
+      text-align: center;
+      position: relative;
+    }
+    .clubs-churches-header {
+      margin-bottom: 10px;
+    }
+    .clubs-churches-question {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      font-style: italic;
+    }
+    .clubs-churches-icons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      font-size: 1.6rem;
+      margin: 10px 0;
+    }
+    .clubs-churches-title {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--forest);
+      line-height: 1.2;
+      margin: 6px 0 4px;
+    }
+    .clubs-churches-divider {
+      font-size: 0.7rem;
+      color: rgba(75, 90, 60, 0.45);
+      letter-spacing: 6px;
+      margin: 6px 0 10px;
+    }
+    .clubs-churches-desc {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin: 0 0 14px;
+      padding: 0 6px;
+    }
+    .clubs-churches-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, var(--forest), #3a5a3a);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 800;
+      border-radius: 10px;
+      letter-spacing: 0.02em;
+      box-shadow: 0 3px 10px rgba(36, 49, 46, 0.18);
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    .clubs-churches-card:hover .clubs-churches-btn {
+      background: linear-gradient(135deg, #3a5a3a, #2a4a2a);
+      box-shadow: 0 5px 16px rgba(36, 49, 46, 0.22);
+    }
+    .cc-btn-pin {
+      color: #c9a84c;
+      font-size: 1rem;
+    }
+    .clubs-churches-footer {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: rgba(75, 90, 60, 0.3);
+    }
+
     .localnews-main-content {
       flex: 1;
       min-width: 0;
