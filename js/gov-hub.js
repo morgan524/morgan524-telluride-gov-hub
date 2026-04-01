@@ -1312,7 +1312,7 @@ async function loadAISummaries() {
 }
 
 // ── Manual/fallback summaries (preserved from original) ──
-// Last updated: 2026-04-01T06:00 (automated scan — all 7 meeting summaries verified current; BOCC Apr 6-17 CANCELED (spring break recess); County Planning Commission Apr 2 on calendar but no agenda posted; no new agendas for BOCC Apr 22/29, SMRHA Apr 13 1pm Zoom, TC ~Apr 21, SMART Apr 9, MV Council ~Apr 23, School Apr 20/27/28, Fire ~Apr 21, Med TBD)
+// Last updated: 2026-04-01T12:00 (automated scan — all 7 meeting summaries verified current, no new agendas found; BOCC Apr 6-17 CANCELED (spring break recess); County Planning Commission Apr 2 on calendar but no agenda posted; SMRHA Apr 13 1pm Zoom confirmed (packet avail 24hr before); no new agendas for BOCC Apr 22/29, TC ~Apr 21, SMART Apr 9, MV Council ~Apr 23, School Apr 20/27/28, Fire ~Apr 21, Med TBD)
 const MANUAL_SUMMARIES = {
   // ── Telluride ──
   'telluride|2026-03-31|Town Council':
