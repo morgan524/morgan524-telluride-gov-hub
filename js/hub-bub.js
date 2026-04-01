@@ -298,6 +298,12 @@
       hbUpdatePostBtn();
     });
   });
+  // Mode tab buttons (All Posts, Questions, What Happened, Ideas & Solutions)
+  document.querySelectorAll('.hb-mode-btn[data-hb-mode]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      hbSetMode(btn.dataset.hbMode);
+    });
+  });
   // Topic filter chips
   document.querySelectorAll('.hb-topic-chip').forEach(function(chip) {
     chip.addEventListener('click', function() {
