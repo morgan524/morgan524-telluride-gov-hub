@@ -1312,7 +1312,7 @@ async function loadAISummaries() {
 }
 
 // ── Manual/fallback summaries (preserved from original) ──
-// Last updated: 2026-03-31T18:00 (automated scan — all 7 meeting summaries verified current; no new agendas posted for BOCC Apr 8/15, SMRHA Apr 13 1pm Zoom, TC ~Apr 21, SMART Apr 9, MV Council Apr 23, School Apr 20/27/28, Fire, Med)
+// Last updated: 2026-04-01T00:09 (automated scan — all 7 meeting summaries verified current; no new agendas posted for BOCC Apr 8/15, SMRHA Apr 13 1pm Zoom, TC ~Apr 21, SMART Apr 9, MV Council Apr 23, School Apr 20/27/28, Fire, Med)
 const MANUAL_SUMMARIES = {
   // ── Telluride ──
   'telluride|2026-03-31|Town Council':
