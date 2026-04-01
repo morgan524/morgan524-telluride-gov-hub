@@ -292,13 +292,13 @@
       display: none;
     }
     #local-news-content .legal-entity-logo {
-      width: 48px;
-      height: 48px;
-      min-width: 48px;
+      width: 96px;
+      height: 96px;
+      min-width: 96px;
     }
     #local-news-content .legal-entity-logo svg {
-      width: 48px;
-      height: 48px;
+      width: 96px;
+      height: 96px;
     }
     #tab-community-pulse .card h3 { font-size: 1.2rem; }
     #tab-community-pulse .card .description { font-size: 0.84rem; line-height: 1.55; }
@@ -1359,7 +1359,7 @@
       padding: 24px 20px;
       font-family: var(--font-body);
     }
-    .legal-standalone-page .legal-entity-logo { width: 48px; height: 48px; min-width: 48px; }
+    .legal-standalone-page .legal-entity-logo { width: 96px; height: 96px; min-width: 96px; }
     .legal-standalone-page .legal-card {
       display: block;
       margin-bottom: 16px;
@@ -2991,8 +2991,8 @@
     }
     .legal-card-header .legal-entity-logo {
       flex-shrink: 0;
-      width: 44px;
-      height: 44px;
+      width: 88px;
+      height: 88px;
       border-radius: 14px;
       overflow: hidden;
       display: flex;
@@ -3006,11 +3006,11 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-      padding: 3px;
+      padding: 4px;
     }
     .legal-entity-logo svg {
-      width: 28px;
-      height: 28px;
+      width: 56px;
+      height: 56px;
     }
     .chip.active-public-entity { background: var(--county-green); color: #fff; }
     .chip.active-water-court { background: #2264d1; color: #fff; }
