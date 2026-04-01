@@ -1415,6 +1415,10 @@
       border-radius: 10px;
       align-self: center;
     }
+    #tab-local-news .card[data-source-key="koto"] .event-photo img {
+      object-fit: contain;
+      padding: 8px;
+    }
     #tab-local-news .card {
       padding: 16px;
     }
