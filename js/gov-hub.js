@@ -6987,19 +6987,30 @@ function updateLeftSidebar() {
   });
   keyItems.sort((a, b) => a.date - b.date);
 
+  // Truncate to full sentences only — never cut mid-sentence
+  function truncateToFullSentences(text, maxLen) {
+    if (!text || text.length <= maxLen) return text;
+    // Split on sentence-ending punctuation followed by space or end
+    const sentences = text.match(/[^.!?]*[.!?]+(?:\s|$)/g) || [];
+    let result = '';
+    for (const s of sentences) {
+      if ((result + s).length > maxLen && result.length > 0) break;
+      result += s;
+    }
+    return result.trim() || text.split(/[.!?]/)[0] + '.';
+  }
+
   // Write each key item as its own paragraph with context
   keyItems.slice(0, 5).forEach(k => {
     const dayName = dayNames[k.date.getDay()];
     const entity = SOURCE_SHORT_NAME[k.meeting.source] || k.meeting.sourceLabel || '';
     const summary = getMeetingSummary(k.meeting) || '';
 
-    // Decision description -- keep more of it for the longer format
-    let desc = k.wtm.decision;
-    if (desc.length > 200) desc = desc.slice(0, 197).replace(/\s+\S*$/, '') + '...';
+    // Decision description -- only full sentences
+    let desc = truncateToFullSentences(k.wtm.decision, 250);
 
-    // Impact teaser
-    let impact = k.wtm.impact || '';
-    if (impact.length > 160) impact = impact.slice(0, 157).replace(/\s+\S*$/, '') + '...';
+    // Impact teaser -- only full sentences
+    let impact = truncateToFullSentences(k.wtm.impact || '', 200);
 
     // Who's affected
     const who = k.wtm.who || '';
