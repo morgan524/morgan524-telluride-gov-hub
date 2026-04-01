@@ -1132,6 +1132,10 @@
     }
 
 
+    /* Hide left sidebar on Gov-Hub (meetings) tab — no sidebar content there */
+    .main-layout.meetings-active .left-sidebar {
+      display: none !important;
+    }
     /* Also hide left sidebar on Gondola tab */
     .main-layout.gondola-active .left-sidebar {
       display: none !important;

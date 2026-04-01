@@ -2316,6 +2316,9 @@ document.addEventListener('DOMContentLoaded', function() {
   if (ddBar) ddBar.style.display = 'block';
   var wtfBar = document.getElementById('whatToFollowBar');
   if (wtfBar) wtfBar.style.display = 'block';
+  // Set meetings-active on initial load (Gov-Hub is default tab)
+  var layout = document.querySelector('.main-layout');
+  if (layout) layout.classList.add('meetings-active');
 });
 function renderLandUseTab() {
   const topicRow = document.getElementById('landUseTopicRow');
@@ -3924,6 +3927,7 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     if (legalNearbyCard) legalNearbyCard.style.display = (btn.dataset.tab === 'legals') ? '' : 'none';
     // Hide sidebars on Subscribe, Land Use, and Gondola tabs, show on all others
     const layout = document.querySelector('.main-layout');
+    layout.classList.toggle('meetings-active', btn.dataset.tab === 'meetings');
     layout.classList.toggle('subscribe-active', btn.dataset.tab === 'subscribe');
     layout.classList.toggle('landuse-active', btn.dataset.tab === 'land-use' || btn.dataset.tab === 'gondola' || btn.dataset.tab === 'housing-search');
     layout.classList.toggle('localnews-active', btn.dataset.tab === 'local-news');
