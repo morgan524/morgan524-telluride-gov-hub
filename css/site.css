@@ -1352,16 +1352,83 @@
     .legal-entity-logo:has(> img:only-child) {
       overflow: hidden;
     }
-    .legal-standalone-page .legal-entity-logo { width: 48px; height: 48px; min-width: 48px; }
-    .legal-standalone-page .legal-card { text-decoration: none; color: inherit; display: block; margin-bottom: 16px; }
-    .legal-standalone-page .legal-entity-logo { width: 48px; height: 48px; min-width: 48px; }
-    .legal-standalone-page .legal-card { text-decoration: none; color: inherit; display: block; margin-bottom: 16px; }
-    /* ── Standalone Legal Notices Page (no top nav) ── */
+    /* ── Standalone Legal Notices Page ── */
     .legal-standalone-page {
       max-width: 960px;
       margin: 0 auto;
       padding: 24px 20px;
       font-family: var(--font-body);
+    }
+    .legal-standalone-page .legal-entity-logo { width: 48px; height: 48px; min-width: 48px; }
+    .legal-standalone-page .legal-card {
+      display: block;
+      margin-bottom: 16px;
+      background: var(--card-bg);
+      border: 1.5px solid rgba(33,68,60,0.10);
+      border-radius: 14px;
+      padding: 20px 24px;
+      transition: box-shadow 0.18s, border-color 0.18s;
+    }
+    .legal-standalone-page .legal-card:hover {
+      box-shadow: 0 4px 16px rgba(33,68,60,0.10);
+      border-color: rgba(33,68,60,0.18);
+    }
+    /* ── Filter pills ── */
+    .legal-sa-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .legal-sa-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border-radius: 14px;
+      border: 1.5px solid rgba(33,68,60,0.10);
+      background: var(--card-bg);
+      color: var(--text-primary);
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.18s, border-color 0.18s, box-shadow 0.18s;
+    }
+    .legal-sa-pill:hover {
+      background: rgba(33,68,60,0.04);
+      border-color: rgba(33,68,60,0.20);
+      box-shadow: 0 2px 8px rgba(33,68,60,0.06);
+    }
+    .legal-sa-pill-active {
+      background: var(--forest);
+      color: white;
+      border-color: var(--forest);
+    }
+    .legal-sa-pill-active:hover {
+      background: var(--forest);
+      border-color: var(--forest);
+    }
+    .legal-sa-pill-count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(33,68,60,0.08);
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--text-secondary);
+    }
+    .legal-sa-count-active {
+      background: rgba(255,255,255,0.25);
+      color: white;
+    }
+    @media (max-width: 600px) {
+      .legal-sa-filters { gap: 6px; }
+      .legal-sa-pill { padding: 8px 12px; font-size: 0.82rem; border-radius: 10px; }
+      .legal-sa-pill-count { min-width: 24px; height: 24px; font-size: 0.75rem; }
     }
     .legal-standalone-header {
       display: flex;
