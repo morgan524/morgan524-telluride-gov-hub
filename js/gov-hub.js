@@ -2311,9 +2311,11 @@ function populateDeepDiveSubmenu() {
 // Run on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function() {
   populateDeepDiveSubmenu();
-  // Show Deep Dive bar since meetings (Gov-Hub) is the default tab
+  // Show Deep Dive bar and What to Follow since meetings (Gov-Hub) is the default tab
   var ddBar = document.getElementById('deepDiveSubmenu');
   if (ddBar) ddBar.style.display = 'block';
+  var wtfBar = document.getElementById('whatToFollowBar');
+  if (wtfBar) wtfBar.style.display = 'block';
 });
 function renderLandUseTab() {
   const topicRow = document.getElementById('landUseTopicRow');
@@ -3910,12 +3912,12 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
     if (btn.dataset.tab === 'land-use') renderLandUseTab();
     // Toggle left-sidebar cards per tab
-    const wtfCard = document.getElementById('sidebarWhatToFollow');
+    const wtfBar = document.getElementById('whatToFollowBar');
     const submitCard = document.getElementById('sidebarSubmitEvent');
     const upcomingEventsCard = document.getElementById('sidebarUpcomingEvents');
     const legalInterestCard = document.getElementById('sidebarLegalInterest');
     const legalNearbyCard = document.getElementById('sidebarLegalNearby');
-    if (wtfCard) wtfCard.style.display = (btn.dataset.tab === 'meetings') ? '' : 'none';
+    if (wtfBar) wtfBar.style.display = (btn.dataset.tab === 'meetings') ? '' : 'none';
     if (submitCard) submitCard.style.display = (btn.dataset.tab === 'news') ? '' : 'none';
     if (upcomingEventsCard) upcomingEventsCard.style.display = (btn.dataset.tab === 'news') ? '' : 'none';
     if (legalInterestCard) legalInterestCard.style.display = (btn.dataset.tab === 'legals') ? '' : 'none';
