@@ -31,11 +31,11 @@ function googleTranslateElementInit() {
   document.addEventListener("DOMContentLoaded", function() {
     // Hide everything: header, subscribe bar, deep dive bar, container, footer
     var hideSelectors = [
-      ".subscribe-bar", ".deep-dive-submenu",
+      ".govhub-hero", ".subscribe-bar", ".deep-dive-submenu",
       ".container",
       ".scroll-top-btn", ".live-banner",
       ".what-to-follow-bar", "#sidebarUpcomingEvents",
-      ".left-sidebar"
+      ".left-sidebar", ".site-header-divider"
     ];
     hideSelectors.forEach(function(sel) {
       document.querySelectorAll(sel).forEach(function(el) { el.style.display = "none"; });
@@ -123,15 +123,12 @@ function googleTranslateElementInit() {
     }
     page.appendChild(cardsDiv);
     // Insert before footer so footer stays at the bottom
-    var footerEl = document.querySelector("footer");
+    var footerEl = document.querySelector(".footer");
     if (footerEl) {
       document.body.insertBefore(page, footerEl);
     } else {
       document.body.appendChild(page);
     }
-    // Show footer and mobile nav at bottom
-    if (footerEl) footerEl.style.display = "";
-    document.querySelectorAll(".mobile-bottom-nav").forEach(function(el) { el.style.display = ""; });
   });
 })();
 // ── Legal Sidebar Count Updater ──
