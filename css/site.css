@@ -1177,9 +1177,11 @@
       margin-bottom: 10px;
     }
     .legal-sidebar-logo-redesign img {
-      width: 120px;
-      height: auto;
+      width: 120px !important;
+      max-width: 120px !important;
+      height: auto !important;
       border-radius: 8px;
+      display: inline-block;
     }
     .legal-sidebar-header-redesign {
       text-align: center;
