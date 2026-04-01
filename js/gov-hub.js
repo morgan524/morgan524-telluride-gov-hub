@@ -6725,10 +6725,8 @@ function renderUpcomingEventsSidebar() {
         return e.title.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 30) === titleLow;
       });
       if (isDupe) return;
-      // Must be a fundraiser/charity event to qualify as major
-      var text = ((item.title || '') + ' ' + (item.description || '') + ' ' + (item.summary || '')).toLowerCase();
-      var isFundraiser = /fundrais|benefit|charity|nonprofit|non-profit|foundation|scholarship|grant|community grant|gala|auction|5k|run\s*walk|hike.?athon|bike.?athon/.test(text);
-      if (!isFundraiser) return;
+      // Include community events that are meaningful gatherings (not minor classes/workshops)
+      // The isMinorEvent filter above already excludes library classes, yoga, workshops, etc.
       events.push({
         title: item.title,
         source: item.sourceLabel || item.source || '',
@@ -6744,8 +6742,9 @@ function renderUpcomingEventsSidebar() {
     });
   }
 
-  // Sort by date ascending
+  // Sort by date ascending, limit to next 5
   events.sort(function(a, b) { return a.date - b.date; });
+  events = events.slice(0, 5);
 
   if (events.length === 0) {
     var parentCard = document.getElementById('sidebarUpcomingEvents');
