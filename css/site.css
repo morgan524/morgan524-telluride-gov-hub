@@ -1399,11 +1399,24 @@
     .festival-sidebar::-webkit-scrollbar-track { background: transparent; }
     .festival-sidebar::-webkit-scrollbar-thumb { background: rgba(47,86,77,0.25); border-radius: 4px; }
     .festival-sidebar::-webkit-scrollbar-thumb:hover { background: rgba(47,86,77,0.45); }
-    /* Enlarge card logos 50% on Local News tab */
+    /* Local News: hide source logo, show article image on left */
     #tab-local-news .card-logo {
-      width: 138px;
-      height: 138px;
-      min-width: 138px;
+      display: none;
+    }
+    .news-card-img-left {
+      grid-template-columns: 160px minmax(0, 1fr);
+    }
+    .news-card-img-left .event-illustration {
+      order: -1;
+    }
+    @media (max-width: 600px) {
+      .news-card-img-left {
+        grid-template-columns: 1fr;
+      }
+      .news-card-img-left .event-illustration {
+        width: 100%;
+        height: 180px;
+      }
     }
 
     /* ── Source Filter Chips ── */

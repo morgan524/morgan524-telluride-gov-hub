@@ -4666,9 +4666,9 @@ function renderLocalNews(unused, filter) {
       ? '<span style="display:inline-block; font-size:0.68rem; padding:2px 8px; background:rgba(166,143,87,0.15); color:var(--accent); border-radius:6px; font-weight:600; margin-left:6px;">' + newsTopicLabel + '</span>'
       : '';
     html += '<div class="card' + clubClass + '" data-source-key="' + (item.sourceKey || '') + '">';
-    html += logoHtml;
     html += '<div class="card-body">';
-    html += '<div class="event-card-main' + (item.clubInfo ? ' has-club-info' : '') + '">';
+    html += '<div class="event-card-main news-card-img-left' + (item.clubInfo ? ' has-club-info' : '') + '">';
+    html += imageHtml;
     html += '<div class="event-card-content">';
     html += '<div class="meta" style="margin-bottom:2px;">' + (item.source || '') + (item.date ? ' · ' + item.date : '') + topicBadge + newsTopicBadge + '</div>';
     html += '<h3>' + (item.link ? '<a href="' + item.link + '" target="_blank" rel="noopener">' + (item.title || 'Untitled') + '</a>' : (item.title || 'Untitled')) + '</h3>';
@@ -4679,7 +4679,6 @@ function renderLocalNews(unused, filter) {
       html += '<div style="margin-top:8px;"><a href="' + item.link + '" target="_blank" rel="noopener" style="font-size:0.8rem; color:var(--forest); font-weight:600; text-decoration:none;">' + linkLabel + '</a></div>';
     }
     html += '</div>'; // close event-card-content
-    html += imageHtml;
     html += '</div>'; // close event-card-main
     html += '</div>'; // close card-body
     html += '</div>'; // close card
