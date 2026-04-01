@@ -65,7 +65,6 @@
       <button class="tab-btn active" data-tab="meetings">Gov-Hub</button>
       <button class="tab-btn" data-tab="news">Events</button>
       <button class="tab-btn" data-tab="local-news">Local News</button>
-      <button class="tab-btn" data-tab="housing-search">Housing</button>
       <button class="tab-btn" data-tab="community-pulse">Community Pulse</button>
       <button class="tab-btn" data-tab="about-us">About Us</button>
     </nav>
@@ -294,8 +293,14 @@
         </div>
       </div>
       <div class="localnews-layout">
-        <!-- Legal Notices Sidebar -->
+        <!-- Left Sidebar -->
         <div class="localnews-legal-sidebar">
+          <!-- Housing Search Card -->
+          <div class="housing-search-card" onclick="switchTab('housing-search')" role="button" tabindex="0" aria-label="Search for Housing">
+            <img src="logo/Housing Search.png" alt="Housing Search" class="housing-search-img" />
+            <div class="housing-search-label">Find Rentals &amp; Housing</div>
+          </div>
+          <!-- Legal Notices -->
           <div class="legal-sidebar-card-redesign">
             <div class="legal-sidebar-logo-redesign">
               <img src="logo/Legal Notices.png" alt="Legal Notices" />
@@ -2201,9 +2206,6 @@
   </button>
   <button class="mobile-more-item" data-tab="local-news">
     <span class="nav-icon">📰</span> Local News
-  </button>
-  <button class="mobile-more-item" data-tab="housing-search">
-    <span class="nav-icon">🏠</span> Housing Search
   </button>
   <button class="mobile-more-item" data-tab="subscribe">
     <span class="nav-icon">📬</span> Subscribe
