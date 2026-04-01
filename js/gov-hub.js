@@ -4813,7 +4813,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-03-29';
+const LEGAL_NOTICES_CACHE_DATE = '2026-04-01';
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -4836,6 +4836,11 @@ const PAPER_LOGOS = {
     img: '',
     svg: '<svg viewBox="0 0 90 14" style="height:13px;width:auto;"><text x="0" y="12" font-family="Georgia,serif" font-weight="bold" font-size="12" fill="#222">The Norwood Post</text></svg>',
     url: 'https://www.telluridenews.com/norwood_post/legals/article_c23ef3df-a055-4ff6-ba7a-f277ef70197b.html'
+  },
+  county_web: {
+    name: 'San Miguel County',
+    img: 'https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=12524',
+    url: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx'
   }
 };
 
@@ -4963,6 +4968,40 @@ const LEGAL_NOTICES = [
     expires: '2026-04-30',
     dates: '3/12',
     papers: ['ttimes_mar12']
+  },
+  // ── March 25-31 (County Website) ──
+  {
+    title: 'Employee Housing Impact Mitigation Fee Increase -- $1,112/sq ft Effective May 1, 2026',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏗️',
+    iconClass: 'type-rates',
+    type: 'Fee Change',
+    filterTag: 'tax-finance',
+    summary: 'San Miguel County is implementing the final phase of its Employee Housing Impact Mitigation Fee increase effective May 1, 2026. The fee will rise from $928 to $1,112 per square foot and applies to new residential construction and additions in the unincorporated County within the Telluride R-1 School District boundary. The fee is assessed at building permit issuance. Going forward, the fee will be reevaluated annually based on current construction costs. Contact the Planning Department at planning@sanmiguelcountyco.gov or 970-369-5423.',
+    deadline: 'Effective May 1, 2026',
+    expires: '2026-05-01',
+    dates: '3/25',
+    papers: ['county_web'],
+    url: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx'
+  },
+  {
+    title: 'Public Comment -- GMUG South Uncompahgre Hazardous Fuels & Ecological Resiliency (SUHFER) Project',
+    entity: 'USDA Forest Service / Grand Mesa, Uncompahgre & Gunnison National Forests',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🌲',
+    iconClass: 'type-hearing',
+    type: 'Public Comment',
+    filterTag: 'public-entity',
+    summary: 'The Grand Mesa, Uncompahgre and Gunnison National Forests are accepting public comments on the draft environmental assessment for the South Uncompahgre Hazardous Fuels and Ecological Resiliency (SUHFER) project. The 30-day comment period opened March 26, 2026. The project area covers approximately 267,300 acres in Montrose, Ouray, and San Miguel counties. Submit comments to comments-rocky-mountain-gmug@usda.gov or mail to Norwood Ranger District, Attn: Megan Eno, 1150 Forest St, Norwood, CO 81423 (drop-off available Wed-Fri 9am-4pm). Project documents at fs.usda.gov/r02/gmug/projects/68281. Contact Jonathan Tucker at 970-573-1876 or jonathan.tucker@usda.gov.',
+    deadline: 'Comments due by April 25, 2026',
+    expires: '2026-04-25',
+    dates: '3/25, 3/26',
+    papers: ['county_web'],
+    url: 'https://www.fs.usda.gov/r02/gmug/projects/68281',
+    address: '1150 Forest St, Norwood, CO 81423'
   },
   // ── March 5-11 ──
   {
