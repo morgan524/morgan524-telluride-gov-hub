@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Telluride Region — Tell-Hub</title>
   <!-- Site styles (extracted) -->
-  <link rel="stylesheet" href="css/site.css?v=20260401n">
+  <link rel="stylesheet" href="css/site.css?v=20260401e">
   <!-- Hub-Bub forum styles (extracted) -->
   <link rel="stylesheet" href="css/hub-bub.css">
 <!-- Firebase SDK (modular, from CDN) -->
@@ -118,6 +118,15 @@
   <!-- ── Left Sidebar ── -->
   <aside class="left-sidebar" id="leftSidebar">
 
+    <!-- Upcoming Community Events (shown on Events tab only) -->
+    <div class="left-sidebar-card" id="sidebarUpcomingEvents" style="display:none;">
+      <div style="padding:14px 16px 10px;background:linear-gradient(135deg,rgba(33,68,60,0.06),rgba(166,143,87,0.08));border-bottom:1px solid rgba(33,68,60,0.08);text-align:center;border-radius:14px 14px 0 0;">
+        <div style="font-size:0.85rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#788e82;margin-bottom:4px;">Community</div>
+        <div style="font-size:1.44rem;font-weight:900;letter-spacing:-0.02em;color:var(--text-primary);">Upcoming Events</div>
+        <div style="font-size:0.875rem;color:var(--text-muted);margin-top:2px;">Fundraisers, benefits & community gatherings</div>
+      </div>
+      <div id="upcomingEventsContent" style="padding:10px 12px;display:grid;gap:10px;"></div>
+    </div>
 
     <!-- Submit an Event (shown on Events tab only) — placed at top -->
     <div class="left-sidebar-card" id="sidebarSubmitEvent" style="display:none;">
@@ -294,7 +303,9 @@
           <!-- Legal Notices -->
           <div class="legal-sidebar-card-redesign">
             <div class="legal-sidebar-logo-redesign">
-              <img src="logo/Legal Notices.png" alt="Legal Notices" />
+              <a href="?legal=all" target="_blank" rel="noopener">
+                <img src="logo/Legal Notices.png" alt="Legal Notices" style="cursor:pointer;" />
+              </a>
             </div>
             <div class="legal-sidebar-header-redesign">
               <div>
@@ -2075,7 +2086,7 @@
     <button class="footer-correction-btn" id="correctionFab">✏️ See something wrong? Suggest a Correction</button>
   </div>
 
-<script src="js/gov-hub.js?v=20260401b"></script>
+<script src="js/gov-hub.js"></script>
 
 <!-- ══════════ Events Around Me Modal ══════════ -->
 <div class="prox-modal-overlay" id="proxOverlay">
@@ -2242,7 +2253,7 @@
 <!-- ── Local Groups Filter ── -->
 <script src="js/local-groups.js"></script>
 <!-- Google Translate -->
-<script src="js/legal-standalone.js?v=20260401k"></script>
+<script src="js/legal-standalone.js?v=20260401f"></script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
