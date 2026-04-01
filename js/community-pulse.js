@@ -28,140 +28,140 @@ const CP_SOURCES = {
 const COMMUNITY_PULSE_CACHE_DATE = '2026-03-31';
 const COMMUNITY_PULSE_POSTS = [
   {
-    id: 'telski-003', sourceKey: 'telski',
+    id: 'telski-005', sourceKey: 'telski',
     postedAt: '2026-03-31T07:00:00',
-    title: 'Today may be the last day of ski season',
-    excerpt: 'Telluride Ski Resort says today (3/31) could be the final day of the 2025\u201326 season. 9 of 17 lifts open, 31 trails. Possible reopening for a closing weekend April 5 depends on upcoming snowfall.',
+    title: 'Season may be over \u2014 possible closing weekend April 5',
+    excerpt: 'March 31 could be the final day of the 2025\u201326 season. 9 of 17 lifts ran today with limited terrain. Resort says a closing weekend April 5 is possible if snowfall cooperates. Stay tuned for updates.',
     tags: ['Ski Season', 'Closing Day', 'Conditions'], featured: true, eventRelated: false
   },
   {
-    id: 'c7cc-003', sourceKey: 'c7cc',
+    id: 'c7cc-005', sourceKey: 'c7cc',
     postedAt: '2026-03-31T09:00:00',
-    title: 'Town Council meets today \u2014 March 31 agenda',
-    excerpt: 'Town Council meeting today at Rebekah Hall. Agenda packets available on the Town website. Public comment period at the start. Stream live on the Town\u2019s YouTube channel if you can\u2019t attend.',
+    title: 'Town Council met today \u2014 recap coming',
+    excerpt: 'Town Council met today 10 AM\u20135 PM at Rebekah Hall (113 W Columbia Ave). Agenda packets on the Town website. Watch the replay on the Town\u2019s YouTube channel if you missed it.',
     tags: ['Town Council', 'Government', 'Meeting'], featured: true, eventRelated: true
   },
   {
-    id: 'fb-2061-002', sourceKey: 'fb-2061',
-    postedAt: '2026-03-31T08:30:00',
-    title: 'CDOT: CO 145 shoulder work continues west of Telluride',
-    excerpt: 'CDOT crews are still doing sweeping and shoulder cleaning on Hwy 145 west of town. Expect full stops, alternating traffic, and up to 15-minute delays. Plan extra travel time.',
-    tags: ['Road Work', 'CDOT', 'Highway 145'], featured: true, eventRelated: false
-  },
-  {
-    id: 'fb-3395-003', sourceKey: 'fb-3395',
+    id: 'fb-3395-005', sourceKey: 'fb-3395',
     postedAt: '2026-03-31T10:00:00',
-    title: 'KOTO Spring Street Dance this Friday!',
-    excerpt: 'Mark your calendar: KOTO Spring Street Dance is Friday April 3, 4\u20138 PM on Colorado Ave between Aspen and Fir. Free admission, cash bar, and a Pink Flamingo Costume Contest. End-of-ski-season celebration!',
+    title: 'KOTO Spring Street Dance \u2014 this Friday April 3!',
+    excerpt: 'KOTO Spring Street Dance is Friday April 3, 4\u20138 PM on West Main St. Free live music from The Other Brothers (Allman Brothers tribute), cash bar, and a Pink Flamingo Costume Contest. Fiji raffle at 6 PM!',
     tags: ['Events', 'KOTO', 'Street Dance'], featured: true, eventRelated: true
   },
   {
-    id: 'c7cc-004', sourceKey: 'c7cc',
-    postedAt: '2026-03-30T11:00:00',
-    title: 'Carhenge PUD update \u2014 public hearing date pending',
-    excerpt: 'Following last week\u2019s P&Z work session, the Carhenge PUD application is moving toward a formal public hearing. Commission raised concerns about density, parking offsets, and affordability tiers. Stay tuned for the hearing date.',
-    tags: ['Development', 'PUD', 'Carhenge'], featured: false, eventRelated: false
+    id: 'fb-2061-004', sourceKey: 'fb-2061',
+    postedAt: '2026-03-31T08:30:00',
+    title: 'CDOT: CO 145 shoulder work continues west of Telluride',
+    excerpt: 'CDOT crews still doing sweeping and shoulder cleaning on Hwy 145 west of town. Expect full stops, alternating traffic, and up to 15-minute delays between 9 AM and 3 PM. Plan extra travel time.',
+    tags: ['Road Work', 'CDOT', 'Highway 145'], featured: true, eventRelated: false
   },
   {
-    id: 'smc-dems-002', sourceKey: 'smc-dems',
-    postedAt: '2026-03-30T14:00:00',
-    title: 'DA Dougherty meet-and-greet recap',
-    excerpt: 'Boulder DA Michael Dougherty held a public meet-and-greet in Telluride yesterday afternoon. Thanks to everyone who came out to discuss public safety and justice reform. County Assembly is April 12\u2014register by April 5.',
-    tags: ['Politics', 'Meet and Greet', 'Assembly'], featured: false, eventRelated: false
-  },
-  {
-    id: 'fb-2438-002', sourceKey: 'fb-2438',
-    postedAt: '2026-03-30T09:00:00',
-    title: 'Spring cleaning? Free items on the curb this week',
-    excerpt: 'Lots of folks spring cleaning before mud season. Furniture, ski gear, and household items popping up on curbs around town. Post your finds and freebies here!',
-    tags: ['Free', 'Community', 'Spring Cleaning'], featured: false, eventRelated: false
-  },
-  {
-    id: 'carpool-003', sourceKey: 'koto-carpool',
-    postedAt: '2026-03-31T07:15:00',
-    title: 'Ride share: Norwood to Telluride, Mon\u2013Fri',
-    excerpt: 'Looking for a carpool buddy Norwood\u2192Telluride, leaving around 7:15 AM daily. Can share gas. Return trip around 5 PM. Comment or DM if interested.',
-    tags: ['Carpool', 'Norwood', 'Commute'], featured: false, eventRelated: false
-  },
-  {
-    id: 'yoga-002', sourceKey: 'yoga-fest',
-    postedAt: '2026-03-30T10:00:00',
-    title: 'Early-bird passes on sale \u2014 June 25\u201328',
-    excerpt: 'Telluride Yoga Festival early-bird pricing ends April 15. Over 120 classes, workshops, and live music in the mountains. All levels welcome. Grab your pass before prices go up!',
-    tags: ['Festival', 'Yoga', 'Early Bird'], featured: false, eventRelated: true
-  },
-  {
-    id: 'humane-003', sourceKey: 'humane',
+    id: 'humane-005', sourceKey: 'humane',
     postedAt: '2026-03-31T11:00:00',
     title: 'Meet Juniper \u2014 still available for adoption!',
     excerpt: 'Juniper is a 2-year-old heeler mix who loves hikes, belly rubs, and snowy adventures. Great with kids, good with other dogs. Foster-to-adopt available. Apply on our website!',
     tags: ['Adoption', 'Dogs', 'Pets'], featured: true, eventRelated: false
   },
   {
-    id: 'humane-004', sourceKey: 'humane',
+    id: 'telski-006', sourceKey: 'telski',
+    postedAt: '2026-03-31T12:00:00',
+    title: 'Farewell Mona \u2014 avalanche dog retires after 13 years',
+    excerpt: 'Mona the avalanche dog retired March 26 after 13 years of service with Telluride Ski Patrol. Named after former patroller Mona Wilcox, she got a farewell party at the top of the mountain. Thank you, Mona!',
+    tags: ['Avalanche Dogs', 'Ski Patrol', 'Community'], featured: false, eventRelated: false
+  },
+  {
+    id: 'c7cc-006', sourceKey: 'c7cc',
+    postedAt: '2026-03-30T11:00:00',
+    title: 'Carhenge PUD update \u2014 public hearing date pending',
+    excerpt: 'Following last week\u2019s P&Z work session, the Carhenge PUD application is moving toward a formal public hearing. Commission raised concerns about density, parking offsets, and affordability tiers. Stay tuned.',
+    tags: ['Development', 'PUD', 'Carhenge'], featured: false, eventRelated: false
+  },
+  {
+    id: 'smc-dems-003', sourceKey: 'smc-dems',
+    postedAt: '2026-03-31T14:00:00',
+    title: 'DA Dougherty visit recap \u2014 County Assembly April 12',
+    excerpt: 'Boulder DA Michael Dougherty held a meet-and-greet in Telluride on March 30. He\u2019s running for AG with Phil Weiser termed out. County Assembly is April 12 \u2014 register by April 5 to participate.',
+    tags: ['Politics', 'Attorney General', 'Assembly'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-2438-003', sourceKey: 'fb-2438',
+    postedAt: '2026-03-30T09:00:00',
+    title: 'Spring cleaning? Free items on the curb this week',
+    excerpt: 'Lots of folks spring cleaning before mud season. Furniture, ski gear, and household items popping up on curbs around town. Post your finds and freebies in the group!',
+    tags: ['Free', 'Community', 'Spring Cleaning'], featured: false, eventRelated: false
+  },
+  {
+    id: 'carpool-004', sourceKey: 'koto-carpool',
+    postedAt: '2026-03-31T07:15:00',
+    title: 'Ride share: Norwood to Telluride, Mon\u2013Fri',
+    excerpt: 'Looking for a carpool buddy Norwood to Telluride, leaving around 7:15 AM daily. Can share gas. Return trip around 5 PM. Comment or DM if interested.',
+    tags: ['Carpool', 'Norwood', 'Commute'], featured: false, eventRelated: false
+  },
+  {
+    id: 'yoga-003', sourceKey: 'yoga-fest',
+    postedAt: '2026-03-30T10:00:00',
+    title: 'Early-bird passes on sale \u2014 June 25\u201328',
+    excerpt: 'Telluride Yoga Festival early-bird pricing ends April 15. Over 120 classes, workshops, and live music in the mountains. All levels welcome. Grab your pass before prices go up!',
+    tags: ['Festival', 'Yoga', 'Early Bird'], featured: false, eventRelated: true
+  },
+  {
+    id: 'humane-006', sourceKey: 'humane',
     postedAt: '2026-03-28T09:00:00',
     title: 'Foster homes needed for kitten season',
     excerpt: 'Kitten season is here and we need foster families! We provide food, supplies, and vet care. You provide love and a warm spot. Apply on our website.',
     tags: ['Foster', 'Cats', 'Volunteer'], featured: false, eventRelated: false
   },
   {
-    id: 'telski-004', sourceKey: 'telski',
+    id: 'telski-007', sourceKey: 'telski',
     postedAt: '2026-03-29T07:00:00',
     title: 'Gondola closing April 5 for off-season',
     excerpt: 'The free gondola between Telluride and Mountain Village closes for the season at midnight April 5. Summer scenic rides resume in June. Plan your last rides this week!',
     tags: ['Gondola', 'Transportation', 'Season'], featured: false, eventRelated: false
   },
   {
-    id: 'foundation-002', sourceKey: 'foundation',
+    id: 'foundation-003', sourceKey: 'foundation',
     postedAt: '2026-03-31T09:00:00',
-    title: 'Spring grant cycle opens TODAY',
-    excerpt: 'Telluride Foundation\u2019s spring grant cycle is now open! Grants support environment, arts, education, athletics, health, and human services across the three-county region. Deadline: May 15.',
+    title: 'Community grants \u2014 fall 2026 cycle info',
+    excerpt: 'Telluride Foundation community grants support arts, education, athletics, health, human services, and environment across the three-county region. Next application cycle opens fall 2026, awards in December.',
     tags: ['Grants', 'Nonprofits', 'Funding'], featured: false, eventRelated: false
   },
   {
-    id: 'rotary-ig-002', sourceKey: 'rotary-ig',
+    id: 'rotary-ig-003', sourceKey: 'rotary-ig',
     postedAt: '2026-03-29T13:00:00',
     title: 'Scholarship applications due April 15',
     excerpt: 'Telluride Rotary scholarships for graduating seniors \u2014 applications are open. Awards up to $2,500. See our website for details and application form.',
     tags: ['Scholarships', 'Youth', 'Education'], featured: false, eventRelated: false
   },
   {
-    id: 'tchn-003', sourceKey: 'tchn',
+    id: 'tchn-005', sourceKey: 'tchn',
     postedAt: '2026-03-30T08:30:00',
     title: 'Mental health first aid training \u2014 April 8',
     excerpt: 'Free 8-hour Mental Health First Aid certification course at the Telluride Conference Center. Learn to recognize signs and respond to mental health crises. Register on our website.',
     tags: ['Mental Health', 'Training', 'Free'], featured: false, eventRelated: true
   },
   {
-    id: 'blues-002', sourceKey: 'blues-brews',
+    id: 'blues-003', sourceKey: 'blues-brews',
     postedAt: '2026-03-28T12:00:00',
     title: 'First wave of artists announced \u2014 Sept 18\u201320',
     excerpt: 'Telluride Blues & Brews Festival has announced the first wave of performers for 2026. Full lineup and single-day passes coming soon. Mark your calendars!',
     tags: ['Festival', 'Music', 'Blues'], featured: false, eventRelated: true
   },
   {
-    id: 'skijoring-002', sourceKey: 'skijoring',
-    postedAt: '2026-03-27T15:00:00',
-    title: 'Skijoring 2026 recap \u2014 what a weekend!',
-    excerpt: 'Incredible inaugural Telluride Skijoring on Colorado Ave March 13\u201315! Huge crowds, amazing athletes, and perfect conditions. Planning already underway for 2027. Volunteer or sponsor\u2014DM us.',
-    tags: ['Skijoring', 'Events', 'Recap'], featured: false, eventRelated: false
-  },
-  {
-    id: 'fb-3395-004', sourceKey: 'fb-3395',
+    id: 'fb-3395-006', sourceKey: 'fb-3395',
     postedAt: '2026-03-29T16:45:00',
     title: 'Bear-proof trash cans now required',
     excerpt: 'Reminder from the Town: bear-proof trash containers are now required for all residential properties. The bears are waking up! Secure your trash and bird feeders.',
     tags: ['Wildlife', 'Town Notice', 'Bears'], featured: false, eventRelated: false
   },
   {
-    id: 'fb-2061-003', sourceKey: 'fb-2061',
+    id: 'fb-2061-005', sourceKey: 'fb-2061',
     postedAt: '2026-03-28T11:00:00',
     title: 'Tips-Up FriYAY: LP Giobbi at Heritage Plaza April 3',
     excerpt: 'The Tips-Up FriYAY concert series wraps up this Friday with LP Giobbi performing 3:30\u20135:30 PM at Heritage Plaza in Mountain Village. Free and open to all \u2014 great way to close out ski season!',
     tags: ['Music', 'Mountain Village', 'Free'], featured: false, eventRelated: true
   },
   {
-    id: 'tchn-004', sourceKey: 'tchn',
+    id: 'tchn-006', sourceKey: 'tchn',
     postedAt: '2026-03-27T14:00:00',
     title: 'Spring wellness workshops coming in April',
     excerpt: 'Tri-County Health Network is launching a spring wellness series in April covering nutrition, stress management, and outdoor fitness. Free for all community members. Schedule posted soon.',
