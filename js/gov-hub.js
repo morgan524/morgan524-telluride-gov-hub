@@ -4014,67 +4014,67 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "Housing 'fast-track' amendment discussions continue",
+    title: "Housing ‘fast-track’ amendment discussions continue",
     source: "Telluride Times",
     date: "April 1, 2026",
     newsTopic: "land-use",
-    copy: "Telluride Town Council continues deliberations on a proposed fast-track amendment to the land use code aimed at streamlining the approval process for deed-restricted housing projects.",
-    href: "https://www.telluridenews.com/news/article_5cbc2c0e-24a5-4709-b3e8-69cb688ca44ed.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/cb/5cbc2c0e-24a5-4709-b3e8-69cb688ca44e/69cb688ca44ed.image.jpg"
+    copy: "The San Miguel County Planning Commission and the Board of County Commissioners held a joint work session on Thursday to continue discussions on fast-track housing amendments.",
+    href: "https://www.telluridenews.com/news/article_336327c3-b092-4cfd-9548-fbabb979cef3.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/b6/4b62beda-dbf7-488a-be75-4b7c7497789f/69cb688ca44ed.image.jpg"
   },
   {
     title: "Wildfire burning near Greyhead",
     source: "Telluride Times",
     date: "March 31, 2026",
     newsTopic: "public-safety",
-    copy: "A wildfire has been reported burning near Greyhead Peak in the mountains surrounding Telluride, prompting alerts from local fire authorities.",
-    href: "https://www.telluridenews.com/news/article_b8f4e2a1-3c67-4d89-a5e2-69cc8e64b6012.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/8f/b8f4e2a1-3c67-4d89-a5e2-69cc8e64b601/69cc8e64b6012.image.jpg"
+    copy: "Amid the exceptionally dry conditions, the San Miguel County Sheriff\'s Office released information about a wildfire burning near Greyhead Peak.",
+    href: "https://www.telluridenews.com/news/article_7d7e751e-db54-433d-8fe4-0b051959dab8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/a8/da80e7b1-924d-43f2-bc3d-b856f91cdfa2/69cc8e64b6012.image.jpg"
   },
   {
     title: "Celebrating, and acknowledging, the end of the season",
     source: "Telluride Times",
     date: "March 31, 2026",
     newsTopic: "arts-culture",
-    copy: "As Telluride's winter season winds down, the community reflects on a memorable year of events, challenges, and the transition to spring.",
-    href: "https://www.telluridenews.com/news/article_celebrating-end-season-2026.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg?resize=600%2C315"
+    copy: "Telluride Arts and Citizens State Bank will host Tales from the Season at Telluride Arts\' headquarters, celebrating the end of the winter season.",
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_1c8db2bc-e1b7-4421-9a4b-edf8a342033d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/21/5219c399-9ccd-45ed-9fe3-f7cae035e92a/69c3187776c24.image.jpg"
   },
   {
     title: "This is Colorado (In One Square Foot)",
     source: "Telluride Times",
     date: "March 31, 2026",
     newsTopic: "arts-culture",
-    copy: "A photo essay capturing the essence of Colorado through the lens of a single square foot of mountain terrain.",
-    href: "https://www.telluridenews.com/news/article_this-is-colorado-one-square-foot.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg?resize=600%2C315"
+    copy: "What does it mean to be a Coloradan? A photo essay exploring the essence of Colorado through intimate details of mountain terrain.",
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_20287f4e-7c8c-4ed8-93ef-d10582a3496e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/ad/7adf111b-7b5e-468c-a8b5-3a359bbd622a/69c7189d130f5.image.jpg"
   },
   {
     title: "Low snowpack stresses water users",
     source: "Telluride Times",
     date: "March 30, 2026",
     newsTopic: "community",
-    copy: "Below-average snowpack levels across the San Juan Mountains are raising concerns among local water districts and agricultural users ahead of the summer season.",
-    href: "https://www.telluridenews.com/news/article_low-snowpack-stresses-water-2026.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg?resize=600%2C315"
+    copy: "After the recent heatwave, local slope conditions look more like May than March. Regional snowpack is 18% of median, raising concerns among water districts.",
+    href: "https://www.telluridenews.com/news/article_29f36a8e-7cfd-44dc-973e-7f1454d755f0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/d8/6d82ceea-41dc-48ff-bacf-c66b2e5c4172/69c714dff331a.image.png"
   },
   {
     title: "Telluride Ski Resort revised spring operating schedule",
     source: "Telluride Times",
     date: "March 30, 2026",
     newsTopic: "business",
-    copy: "Telluride Ski Resort has announced a revised spring operating schedule, adjusting lift operations as the season comes to a close.",
-    href: "https://www.telluridenews.com/news/article_ski-resort-spring-schedule-2026.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg?resize=600%2C315"
+    copy: "Telluride Ski Resort will be open on Tuesday, March 31, but then will close for a few days. The reopening schedule will depend on conditions.",
+    href: "https://www.telluridenews.com/news_release/article_16473284-9fa7-4518-b3d8-43a48dc7a5aa.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/2c/c2c57f30-7503-41d0-84f3-05ed163b162e/69cb0bf82b841.image.jpg"
   },
   {
     title: "AG candidate Michael Dougherty makes his case in Telluride",
     source: "Telluride Times",
     date: "March 30, 2026",
     newsTopic: "government",
-    copy: "Attorney General candidate Michael Dougherty visited Telluride to discuss his platform and vision for Colorado's justice system.",
-    href: "https://www.telluridenews.com/news/article_ag-candidate-dougherty-telluride.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg?resize=600%2C315"
+    copy: "Candidate for Colorado attorney general and current Boulder District Attorney Michael Dougherty held a meet-and-greet Monday in Telluride.",
+    href: "https://www.telluridenews.com/news/article_2dd73074-c30a-46b4-b33d-92ce0b671d2f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/b2/1b271f59-6a17-4db0-acb5-4905eec725ef/69cab6f8564ec.image.jpg"
   },
   {
     title: "Three units available in next housing lottery",
@@ -4083,16 +4083,16 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "community",
     copy: "Just a few months after the most recent deed-restricted housing lottery, locals have another chance to apply for three units.",
     href: "https://www.telluridenews.com/news/article_de6d4879-227a-4279-96ee-376578b2749a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/1f/f1fc363f-f257-4d3d-b04d-dc91469c781a/69c31fb88e813.image.jpg?crop=1599%2C841%2C0%2C179&resize=1200%2C631&order=crop%2Cresize"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/1f/f1fc363f-f257-4d3d-b04d-dc91469c781a/69c31fb88e813.image.jpg"
   },
   {
-    title: "Colorado 'underfunding schools by billions' prompts Telluride's mill levy solution",
+    title: "Colorado ‘underfunding schools by billions’ prompts Telluride’s mill levy solution",
     source: "Telluride Times",
     date: "March 30, 2026",
     newsTopic: "community",
-    copy: "Residents in the San Miguel County region have undoubtedly been sitting on pins and needles in anticipation of the Colorado Legislative Council's quarterly economic forecast, released on March 19.",
+    copy: "Residents in the San Miguel County region have undoubtedly been sitting on pins and needles in anticipation of the Colorado Legislative Council\'s quarterly economic forecast.",
     href: "https://www.telluridenews.com/news/article_d000e0aa-672a-4aef-8786-d8aeaba4cd08.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/9a/99aaecf0-a527-484d-8535-52e203b8119c/69c70f0f0d498.image.jpg?crop=1845%2C968%2C70%2C0&resize=1200%2C630&order=crop%2Cresize"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/9a/99aaecf0-a527-484d-8535-52e203b8119c/69c70f0f0d498.image.jpg"
   }
 ];
 
