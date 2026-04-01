@@ -1154,7 +1154,7 @@
     }
     .localnews-legal-sidebar {
       flex-shrink: 0;
-      width: 220px;
+      width: 280px;
       position: sticky;
       top: 60px;
       max-height: calc(100vh - 80px);
@@ -1404,19 +1404,19 @@
       display: none;
     }
     .news-card-img-left {
-      grid-template-columns: 120px minmax(0, 1fr);
-      gap: 10px;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 14px;
       align-items: center;
     }
     .news-card-img-left .event-illustration {
       order: -1;
-      width: 120px;
-      height: 96px;
+      width: 180px;
+      height: 144px;
       border-radius: 10px;
       align-self: center;
     }
     #tab-local-news .card {
-      padding: 14px 14px 14px 10px;
+      padding: 16px;
     }
     #tab-local-news .card .card-body {
       padding: 0;
