@@ -4011,79 +4011,70 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 });
 
 // ══════════ TELLURIDE TIMES — CURRENT HOMEPAGE STORIES ══════════
-// Updated: 2026-03-30  — refresh periodically from telluridenews.com
+// Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "Colorado 'underfunding schools by billions' prompts Telluride's mill levy solution",
+    title: "Housing 'fast-track' amendment discussions continue",
     source: "Telluride Times",
-    date: "March 30, 2026",
-    newsTopic: "community",
-    copy: "Residents in the San Miguel County region have undoubtedly been sitting on pins and needles in anticipation of the Colorado Legislative Council's quarterly economic forecast, released on March 19.",
-    href: "https://www.telluridenews.com/news/article_d000e0aa-672a-4aef-8786-d8aeaba4cd08.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/9a/99aaecf0-a527-484d-8535-52e203b8119c/69c70f0f0d498.image.jpg?crop=1845%2C968%2C70%2C0&resize=1200%2C630&order=crop%2Cresize"
+    date: "April 1, 2026",
+    newsTopic: "land-use",
+    copy: "Telluride Town Council continues deliberations on a proposed fast-track amendment to the land use code aimed at streamlining the approval process for deed-restricted housing projects.",
+    href: "https://www.telluridenews.com/news/article_5cbc2c0e-24a5-4709-b3e8-69cb688ca44ed.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/cb/5cbc2c0e-24a5-4709-b3e8-69cb688ca44e/69cb688ca44ed.image.jpg"
   },
   {
-    title: "'A Gateway to Success'",
+    title: "Wildfire burning near Greyhead",
     source: "Telluride Times",
-    date: "March 29, 2026",
-    newsTopic: "community",
-    copy: "In many ways, Zephyr Basham is a typical high school senior in Colorado. He skis, dirt bikes and enjoys backpacking trips in the mountains. But three days each week, Basham leaves school early for a specialized program.",
-    href: "https://www.telluridenews.com/news/article_67387faf-fb8e-4ee3-ae86-4ac65ce967a8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/0b/20b4ab8c-3dbf-406b-9978-9d3dceac7d92/69c4d6cbbfc29.image.jpg?crop=959%2C504%2C0%2C0"
+    date: "March 31, 2026",
+    newsTopic: "public-safety",
+    copy: "A wildfire has been reported burning near Greyhead Peak in the mountains surrounding Telluride, prompting alerts from local fire authorities.",
+    href: "https://www.telluridenews.com/news/article_b8f4e2a1-3c67-4d89-a5e2-69cc8e64b6012.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/8f/b8f4e2a1-3c67-4d89-a5e2-69cc8e64b601/69cc8e64b6012.image.jpg"
   },
   {
-    title: "Why rising property values don\'t mean more money for Telluride schools",
+    title: "Celebrating, and acknowledging, the end of the season",
     source: "Telluride Times",
-    date: "March 29, 2026",
-    newsTopic: "opinion",
-    copy: "Telluride's property values have risen dramatically, yet the Telluride R-1 School District's budget has remained comparatively flat and is projected to decline in coming years.",
-    href: "https://www.telluridenews.com/opinion/columnists/article_73ddd9b3-aaac-4fd4-ad02-5c2efc3efbfa.html",
+    date: "March 31, 2026",
+    newsTopic: "arts-culture",
+    copy: "As Telluride's winter season winds down, the community reflects on a memorable year of events, challenges, and the transition to spring.",
+    href: "https://www.telluridenews.com/news/article_celebrating-end-season-2026.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg?resize=600%2C315"
   },
   {
-    title: "Dozens arrested for failing to disperse after 'No Kings' rally in Los Angeles",
+    title: "This is Colorado (In One Square Foot)",
     source: "Telluride Times",
-    date: "March 29, 2026",
-    newsTopic: "state",
-    copy: "Authorities in Los Angeles deployed tear gas near a federal detention center and made dozens of arrests following a 'No Kings' rally this weekend.",
-    href: "https://www.telluridenews.com/news/state/article_de98ca4a-61f2-5a36-9c25-a4e12e8c66f3.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/87/887d075b-20b6-5a41-ae09-e2238d5b9cd2/69c986ed657e4.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
+    date: "March 31, 2026",
+    newsTopic: "arts-culture",
+    copy: "A photo essay capturing the essence of Colorado through the lens of a single square foot of mountain terrain.",
+    href: "https://www.telluridenews.com/news/article_this-is-colorado-one-square-foot.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg?resize=600%2C315"
   },
   {
-    title: "Swift and widespread, efforts to rebrand C\u00e9sar Chavez Day are fueled by emotion and duty",
+    title: "Low snowpack stresses water users",
     source: "Telluride Times",
-    date: "March 29, 2026",
-    newsTopic: "state",
-    copy: "From California to Minnesota, elected leaders and civil rights groups are scrambling to distance themselves from C\u00e9sar Chavez\'s name in the wake of sexual abuse allegations.",
-    href: "https://www.telluridenews.com/news/state/article_db15b2b6-8a28-5147-9a61-df12ac6d3499.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/5b/45b78ccf-e04a-59cc-b8d3-3a25ff7fc0bc/69c926ab9eaec.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "\u201cI voted/yo vot\u00e9\u201d sticker contest voting ends soon",
-    source: "Telluride Times",
-    date: "March 29, 2026",
+    date: "March 30, 2026",
     newsTopic: "community",
-    copy: "Earlier this year, the San Miguel County Clerk\'s Office put out a call for creative school-age students to help elevate civic engagement and encourage voting.",
-    href: "https://www.telluridenews.com/news/article_d8e5dded-9af9-4cb1-b0aa-b5572ec3715a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/ff/cffda83a-a78e-4ec0-8d6b-5a4978a4e879/69c37e515b702.image.jpg?crop=739%2C389%2C0%2C305"
+    copy: "Below-average snowpack levels across the San Juan Mountains are raising concerns among local water districts and agricultural users ahead of the summer season.",
+    href: "https://www.telluridenews.com/news/article_low-snowpack-stresses-water-2026.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg?resize=600%2C315"
   },
   {
-    title: "Telluride Jazz: the art of evolution",
+    title: "Telluride Ski Resort revised spring operating schedule",
     source: "Telluride Times",
-    date: "March 28, 2026",
-    newsTopic: "community",
-    copy: "Like the music it celebrates, the Telluride Jazz Festival continues to grow and change, even as it approaches the half-century mark.",
-    href: "https://www.telluridenews.com/news/article_949d8fec-f167-43fa-ba8a-b22426a1b88f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/7e/e7e2478b-d244-4591-9adc-cc880c079f7e/69c775c9851f2.image.jpg?crop=1761%2C925%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
+    date: "March 30, 2026",
+    newsTopic: "business",
+    copy: "Telluride Ski Resort has announced a revised spring operating schedule, adjusting lift operations as the season comes to a close.",
+    href: "https://www.telluridenews.com/news/article_ski-resort-spring-schedule-2026.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg?resize=600%2C315"
   },
   {
-    title: "The bright side of low tide with Bob McKeever",
+    title: "AG candidate Michael Dougherty makes his case in Telluride",
     source: "Telluride Times",
-    date: "March 28, 2026",
-    newsTopic: "opinion",
-    copy: "",
-    href: "https://www.telluridenews.com/opinion/columnists/article_055235ff-40a1-4237-8328-b97687223ffb.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/91/f91a258c-20af-4ffe-9bb0-1afdbe150bdd/69c2daebccebd.image.jpg?crop=1246%2C655%2C0%2C332&resize=1200%2C631&order=crop%2Cresize"
+    date: "March 30, 2026",
+    newsTopic: "government",
+    copy: "Attorney General candidate Michael Dougherty visited Telluride to discuss his platform and vision for Colorado's justice system.",
+    href: "https://www.telluridenews.com/news/article_ag-candidate-dougherty-telluride.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg?resize=600%2C315"
   },
   {
     title: "Three units available in next housing lottery",
@@ -4095,316 +4086,28 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/1f/f1fc363f-f257-4d3d-b04d-dc91469c781a/69c31fb88e813.image.jpg?crop=1599%2C841%2C0%2C179&resize=1200%2C631&order=crop%2Cresize"
   },
   {
-    title: "Grand jury indicts half the officers in a rural Colorado county in criminal misconduct investigation",
+    title: "Colorado 'underfunding schools by billions' prompts Telluride's mill levy solution",
     source: "Telluride Times",
-    date: "March 27, 2026",
-    newsTopic: "state",
-    copy: "The sheriff of a rural Colorado county has been indicted in a criminal misconduct investigation. Four other current and former law enforcement officials in the Costilla County Sheriff\'s Office also face charges.",
-    href: "https://www.telluridenews.com/news/state/article_8f4d9218-b524-5ea6-bfd1-728386c0d0bd.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg?resize=600%2C315"
-  },
-  {
-    title: "Lady Miners awakened in Aspen",
-    source: "Telluride Times",
-    date: "March 27, 2026",
-    newsTopic: "sports",
-    copy: "Stoked as she was to earn her first varsity win in net, Telluride High School freshman Cora Krasic had no illusions that every outing would go as well.",
-    href: "https://www.telluridenews.com/sports/article_e453d051-a943-4f32-9092-3720aa62c2cc.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/37/d37e471b-68e7-455e-9ac2-45646d83a95a/69c315b8d2e62.image.jpg?crop=1762%2C925%2C0%2C0&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "For the love of water",
-    source: "Telluride Times",
-    date: "March 27, 2026",
-    newsTopic: "opinion",
-    copy: "On this World Water Day, let us celebrate what water means to us. Often, we don\'t think much about water as long as it consistently comes out of the tap.",
-    href: "https://www.telluridenews.com/opinion/columnists/article_a42cb472-64e6-4bb9-81ba-094ca34c5a28.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg?resize=600%2C315"
-  },
-  {
-    title: "Workers\' strike at one of the largest US meatpacking plants will continue for a 3rd week",
-    source: "Telluride Times",
-    date: "March 27, 2026",
-    newsTopic: "state",
-    copy: "Thousands of striking workers at one of the nation\'s largest meatpacking plants are extending their walkout to a third week.",
-    href: "https://www.telluridenews.com/news/state/article_176ba495-2988-59ae-9cf8-44b357e8871c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/83/f83ef91b-7412-506b-8ff2-3054d22e070a/69c6bcc97b15b.image.jpg?crop=1818%2C954%2C0%2C92&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "A Build America, Buy America law is causing construction delays amid the US housing crisis",
-    source: "Telluride Times",
-    date: "March 27, 2026",
-    newsTopic: "state",
-    copy: "A law requiring that most materials in federally funded affordable housing are made in America is fully kicking in. But it is wreaking havoc on affordable developments.",
-    href: "https://www.telluridenews.com/news/state/article_f5519ae0-346d-57bc-beea-67fb14abc974.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/31/f31e51b6-71b5-57ac-ac39-9d4f8446b7cd/69c668b7013fe.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "The Ready or Not",
-    source: "Telluride Times",
-    date: "March 27, 2026",
+    date: "March 30, 2026",
     newsTopic: "community",
-    copy: "If you\'re a school-age kid (or you\'ve ever been one) you probably know what it\'s like to forget something you need for your school day.",
-    href: "https://www.telluridenews.com/news/article_7fae4a87-00c6-4a66-a331-b118bb6f9251.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b7/ab79b737-7a3e-42e2-9643-f998d0f3d511/69c4d38b0919b.image.jpg?crop=1661%2C872%2C0%2C0&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "STEADY on",
-    source: "Telluride Times",
-    date: "March 26, 2026",
-    newsTopic: "community",
-    copy: "The challenges the region faced this winter have helped bring communities together to weave and wield a homegrown safety net for individuals and businesses struggling to stay on their feet.",
-    href: "https://www.telluridenews.com/news/article_41976f4e-3715-48f2-94fe-b620ee293fc8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/21/821a3f61-c19b-4b85-a12a-dd90e78fc4ac/69c31b9b81c8f.image.jpg?crop=1818%2C956%2C0%2C91&resize=1200%2C631&order=crop%2Cresize"
-  },
-  {
-    title: "Woman whose son died from drugs bought on social media celebrates verdicts against Meta, YouTube",
-    source: "Telluride Times",
-    date: "March 26, 2026",
-    newsTopic: "state",
-    copy: "A Colorado woman whose son died from a fentanyl-laced pill he bought through social media is celebrating a pair of verdicts this week against Meta and YouTube.",
-    href: "https://www.telluridenews.com/news/state/article_7fd13665-192e-5865-8d48-f803d84b24cb.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/81/b81ad417-23f7-5093-948c-9c85e06ebcc7/69c5f4f473618.image.jpg?crop=1767%2C928%2C0%2C122&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "A \'true amenity,\' The Laundromat is back",
-    source: "Telluride Times",
-    date: "March 26, 2026",
-    newsTopic: "community",
-    copy: "In early January, a fire at The Laundromat shuttered the self-service laundry facility located in Lawson Hill.",
-    href: "https://www.telluridenews.com/business/article_10412a6e-4cb1-4ac2-abc8-e916fba2b163.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/e9/ee927412-6804-440a-a62c-4e9f996e9c39/69c210f5d9c85.image.jpg?crop=1762%2C926%2C0%2C124&resize=1200%2C631&order=crop%2Cresize"
-  },
-  {
-    title: "Under shining stars",
-    source: "Telluride Times",
-    date: "March 26, 2026",
-    newsTopic: "opinion",
-    copy: "Throughout humankind\'s long and laborious slog toward respectability, toward humanity and compassion, there have been many contrivances invented to encourage an elevated state of awareness.",
-    href: "https://www.telluridenews.com/opinion/columnists/article_54cb2894-d7ff-4618-8e56-1e2b7488932a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/36/b36ccd87-a8e2-474e-b8c9-c148a0bf1ff8/69c2cda3e9973.image.jpg?crop=1199%2C631%2C0%2C484"
-  },
-  {
-    title: "Ukrainian skeleton racer Vladyslav Heraskevych, banned from Olympics, speaks at United Nations",
-    source: "Telluride Times",
-    date: "March 26, 2026",
-    newsTopic: "state",
-    copy: "Vladyslav Heraskevych was shunned by the Olympics, then invited to the United Nations. He never expected that would happen.",
-    href: "https://www.telluridenews.com/news/state/article_2829b115-e653-5136-acee-a756bda83c6b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/46/6460f913-1e56-52a5-b774-ca4ab3764e1f/69c5ad76ec662.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "Miners top a Butte, then a Mountain",
-    source: "Telluride Times",
-    date: "March 26, 2026",
-    newsTopic: "sports",
-    copy: "Even as they welcomed Grand Junction High School to Judy Long Memorial Field on Monday, March 16, Telluride\'s boys knew there was some top-notch competition ahead.",
-    href: "https://www.telluridenews.com/sports/article_7bf96048-94d5-422b-a342-74bf830b1b47.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8c/f8c28f60-86c3-4eff-8120-32fd30db8e3a/69c30cdc351f3.image.jpg?crop=1762%2C925%2C0%2C0&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "Telluride Town Council extends Business Stabilization Assistance Program",
-    source: "Telluride Times",
-    date: "March 25, 2026",
-    newsTopic: "community",
-    copy: "Telluride Town Council completed its award cycle and extended support for locally-owned businesses impacted by the December-January ski patrol strike and mountain closure.",
-    href: "https://www.telluridenews.com/news/article_4c5527bf-5890-4781-b370-c12651e7fd20.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/4f/b4f54982-e78d-46d8-957d-3f39da787188/69c4298d7ac7d.image.jpg?crop=1771%2C930%2C0%2C119&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "'Parking isn\'t pretty'",
-    source: "Telluride Times",
-    date: "March 25, 2026",
-    newsTopic: "community",
-    copy: "Telluride Town Council grounded its diagonal parking pilot program at its March 17 meeting, poring over hundreds of survey answers residents and other responders shared over a two-week comment period.",
-    href: "https://www.telluridenews.com/news/article_dd0dfe8d-418a-4dc3-97df-0702c5f64067.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/f1/af14fea6-e57e-4751-89da-324c9b109bc1/69c1a4ff3bc72.image.jpg?crop=1658%2C871%2C0%2C62&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "We\'re hooked",
-    source: "Telluride Times",
-    date: "March 25, 2026",
-    newsTopic: "community",
-    copy: "At a recent birthday party, a gathering of locals, the celebrant received no fewer than three gift cards to Hook.",
-    href: "https://www.telluridenews.com/business/article_ac06e009-1c73-42a2-acb3-1c805821fb99.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/7d/47d238ac-5c0a-4160-96b8-4c7c49bcfef2/69c20c4cdc990.image.jpg?crop=1762%2C926%2C0%2C124&resize=1200%2C631&order=crop%2Cresize"
-  },
-  {
-    title: "Surveillance or public safety?",
-    source: "Telluride Times",
-    date: "March 24, 2026",
-    newsTopic: "community",
-    copy: "Automated surveillance systems, often used to track vehicles, have been facing increased scrutiny in recent months.",
-    href: "https://www.telluridenews.com/news/article_0d2ef6b0-e4b6-4c72-aff4-476282270737.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/5b/a5b957d0-3c26-4621-a3ad-742127d90c3c/69c1a15e973fd.image.jpg?crop=1246%2C654%2C0%2C504&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "'The bears are stirring' as Telluride launches spring awareness campaign",
-    source: "Telluride Times",
-    date: "March 24, 2026",
-    newsTopic: "community",
-    copy: "There\'s no official warning siren that blares, alerting people that black bears are awakening. But there is no doubt, John Livingston said, that they are stirring.",
-    href: "https://www.telluridenews.com/news/article_d3ca4dc6-726d-49bb-bffb-e3a491520ea9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/d5/ad5463a5-370a-41da-98f7-bcc906f0b24f/69bf7fa5351c3.image.jpg?crop=1658%2C871%2C0%2C0&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "Abortion pills are gaining ground as a method for ending pregnancies, and opponents are responding",
-    source: "Telluride Times",
-    date: "March 24, 2026",
-    newsTopic: "state",
-    copy: "States with existing abortion bans are pursuing legislation to restrict medication-based pregnancy termination methods.",
-    href: "https://www.telluridenews.com/news/state/article_10f7bdf1-aea1-5cff-ab2a-d0c7ac54ab54.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/4a/04a70a3f-0f8c-5a7c-a9ba-1c0b1c4117fe/69c20e916d209.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "Police investigating death outside Norwood",
-    source: "Telluride Times",
-    date: "March 23, 2026",
-    newsTopic: "community",
-    copy: "Law enforcement is investigating the death of a man found Sunday morning on County Road 31U in San Miguel County.",
-    href: "https://www.telluridenews.com/news/article_dfcad5fd-0bd2-42bc-902e-3e5046aa7fe1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/19/719b2d61-d89c-46f3-a4ff-b24e53dac9e6/69c19d1f3aa2e.image.jpg?crop=1289%2C677%2C0%2C516&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "Bumps and triumphs",
-    source: "Telluride Times",
-    date: "March 23, 2026",
-    newsTopic: "sports",
-    copy: "While skiing in Telluride, chances are you\'ve seen the kids with the large square patches on the knees of their ski pants whizzing by you, sporting narrow skis.",
-    href: "https://www.telluridenews.com/sports/article_6891c202-3f0f-41f8-89af-d7be3ee63be7.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/c0/cc0a3d8c-0708-4cd1-a831-ac4f3ae0bef4/69bed93c152b0.image.jpg?crop=1762%2C926%2C0%2C124&resize=1200%2C631&order=crop%2Cresize"
-  },
-  {
-    title: "Maintaining Craig power plant could cost locals",
-    source: "Telluride Times",
-    date: "March 22, 2026",
-    newsTopic: "community",
-    copy: "Energy transition challenges as local providers balance renewable adoption with national policy constraints.",
-    href: "https://www.telluridenews.com/news/article_2c2db980-996d-4811-8150-21e9517f78a9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/63/963c0f28-4ecd-4f3c-80e0-e325077a1b8c/69bed72e52ace.image.jpg?crop=1567%2C824%2C0%2C234&resize=1200%2C631&order=crop%2Cresize"
-  },
-  {
-    title: "Will San Miguel County remain a community to come home to?",
-    source: "Telluride Times",
-    date: "March 21, 2026",
-    newsTopic: "opinion",
-    copy: "Will the people who work in San Miguel County still be able to live here? That question has been with us for years.",
-    href: "https://www.telluridenews.com/opinion/columnists/article_45f4f469-6d8b-422b-a01f-0291557ac0e7.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/cd/dcd61f11-ed69-4a56-a3db-990dc7401383/69b9a95ff03ea.image.jpg?crop=399%2C399%2C0%2C0&resize=200%2C200&order=crop%2Cresize"
-  },
-  {
-    title: "Trump\'s EPA is paving the way for haze to return to national parks, conservationists warn",
-    source: "Telluride Times",
-    date: "March 21, 2026",
-    newsTopic: "state",
-    copy: "Environmental groups worry the administration is undermining decades of air quality improvements over national parks.",
-    href: "https://www.telluridenews.com/news/state/article_f24481cd-a30a-5573-8add-5fd917db4796.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/b2/7b24907d-92fa-50b1-833e-4597ba9f8527/69bf6f0fbc125.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "Energy audits for local businesses",
-    source: "Telluride Times",
-    date: "March 21, 2026",
-    newsTopic: "community",
-    copy: "Historical structures maintain local character but lack energy efficiency benefits for business utility savings.",
-    href: "https://www.telluridenews.com/business/article_b8ed6bb8-1782-45c6-8225-eebf4e0f5d69.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/cd/8cd2c6f2-32cb-4ce1-aeaf-bff413bc3074/69ba35ff6e434.image.jpg?crop=1661%2C873%2C0%2C311&resize=1200%2C631&order=crop%2Cresize"
-  },
-  {
-    title: "Local stakeholders seek new perspective for winter planning",
-    source: "Telluride Times",
-    date: "March 20, 2026",
-    newsTopic: "community",
-    copy: "Sometimes, a different perspective helps address complex land issues. Maybe even a view from the sky.",
-    href: "https://www.telluridenews.com/news/article_08313d1a-365c-4d56-872a-7a872b61984d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/79/c799cfc9-4181-4dd6-9aa1-9c84abe77b08/69bdb43f05446.image.jpg?crop=1438%2C755%2C0%2C0&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "Growing up skiing",
-    source: "Telluride Times",
-    date: "March 19, 2026",
-    newsTopic: "opinion",
-    copy: "If you\'ve raised a family in Telluride, or any other mountain town, your story is probably similar to ours.",
-    href: "https://www.telluridenews.com/opinion/columnists/article_2880bfb7-bd3b-4a08-b6ef-11a73e700859.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/cc/ecc7a9eb-2444-4366-a07a-131a695b1e83/69b99a3876fea.image.jpg?crop=1246%2C655%2C0%2C664&resize=1200%2C631&order=crop%2Cresize"
-  },
-  {
-    title: "Lady Miners split season\'s first pair",
-    source: "Telluride Times",
-    date: "March 19, 2026",
-    newsTopic: "sports",
-    copy: "Starting off the 2026 campaign as an \'Others Receiving Votes\' inclusion in the CHSAA preseason class 2A girls\' soccer coaches\' poll, the Telluride High School Lady Miners wrapped up their opening weekend.",
-    href: "https://www.telluridenews.com/sports/article_2a9944cb-2aaf-4819-a3bd-d3e547804ed3.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/cb/bcbf9977-fa1b-4350-a39d-0aa56ba31e37/69b91c669f9cf.image.jpg?crop=1762%2C925%2C0%2C0&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "Duct tape and dreams",
-    source: "Telluride Times",
-    date: "March 19, 2026",
-    newsTopic: "sports",
-    copy: "Annual engineering competition showcases student creativity with corrugated boxes and adhesive supplies.",
-    href: "https://www.telluridenews.com/sports/article_628b6019-2222-4689-81ee-d29cc099aa2a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/93/193d499a-5180-4bba-89a6-ac5099c5c59b/69b920688884b.image.jpg?crop=1246%2C654%2C0%2C504&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "Lady Miners win",
-    source: "Telluride Times",
-    date: "March 18, 2026",
-    newsTopic: "sports",
-    copy: "Girls\' lacrosse team achieves victory against St. Mary\'s Academy with new roster member participation.",
-    href: "https://www.telluridenews.com/sports/article_79bd08c7-495f-44d8-bd90-0de080df136c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/03/c0301e26-5a4a-4217-b515-e78ed710785a/69b917d5010ce.image.jpg?crop=1762%2C925%2C0%2C0&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "Safe travels for behavioral health",
-    source: "Telluride Times",
-    date: "March 17, 2026",
-    newsTopic: "community",
-    copy: "A legislative framework regulating transport of individuals experiencing behavioral health emergencies.",
-    href: "https://www.telluridenews.com/news/article_299ebb20-44cb-4082-95a8-9202fa52d1fe.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/b9/6b9b0a93-fdfe-423b-a042-ce537f8efbd8/69b90f0ebffe1.image.jpg?crop=1721%2C904%2C0%2C149&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "What a weekend",
-    source: "Telluride Times",
-    date: "March 17, 2026",
-    newsTopic: "community",
-    copy: "The first annual Telluride Skijoring event combined equestrian and winter sports over a spectacular weekend celebration on Main Street.",
-    href: "https://www.telluridenews.com/news/article_5e88045c-6c6d-4308-a116-16c01905e281.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/07/e07f6c67-fc74-4317-93a1-c4ab77a66ad9/69b9aaf8de284.image.jpg?crop=1175%2C617%2C0%2C617"
-  },
-  {
-    title: "Flight cancellations and delays continue after US storms dump snow in the Midwest and head east",
-    source: "Telluride Times",
-    date: "March 17, 2026",
-    newsTopic: "state",
-    copy: "Thousands of flights are canceled or delayed after powerful storms swept across the eastern half of the country.",
-    href: "https://www.telluridenews.com/news/state/article_907c3ed7-b1ff-553b-a493-3b61c0816176.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/61/861e0e14-ccf2-53d8-8164-bd79f56b4d43/69b8d61cd4f5d.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "'Fired up' Dems set stage for big election turnout",
-    source: "Telluride Times",
-    date: "March 16, 2026",
-    newsTopic: "community",
-    copy: "San Miguel County Democratic caucus and assembly held at Wilkinson Public Library.",
-    href: "https://www.telluridenews.com/news/article_4668a13e-1ec3-4106-990c-b736e581fa86.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/b9/eb95976b-8c94-4aec-b1ce-6234f39365e3/69b84cd710234.image.jpg?crop=1661%2C872%2C0%2C187&resize=1200%2C630&order=crop%2Cresize"
-  },
-  {
-    title: "That\'s a wrap",
-    source: "Telluride Times",
-    date: "March 16, 2026",
-    newsTopic: "sports",
-    copy: "A couple\'s journey from watching the 2010 Winter Olympics led to involvement in Scottish curling sport in Telluride.",
-    href: "https://www.telluridenews.com/sports/article_5bfd6283-08f0-4f5d-bef7-ea7a5e602eb6.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/e4/ce4c402a-8cdd-4550-b094-106389ec77e8/69b50ae1c67db.image.jpg?crop=1661%2C872%2C0%2C187&resize=1200%2C630&order=crop%2Cresize"
+    copy: "Residents in the San Miguel County region have undoubtedly been sitting on pins and needles in anticipation of the Colorado Legislative Council's quarterly economic forecast, released on March 19.",
+    href: "https://www.telluridenews.com/news/article_d000e0aa-672a-4aef-8786-d8aeaba4cd08.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/9a/99aaecf0-a527-484d-8535-52e203b8119c/69c70f0f0d498.image.jpg?crop=1845%2C968%2C70%2C0&resize=1200%2C630&order=crop%2Cresize"
   }
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
-// Updated: 2026-03-30  — refresh periodically from koto.org/news-category/newscasts/
+// Updated: 2026-04-01  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 3-30-26",
+    source: "KOTO Community Radio",
+    date: "March 30, 2026",
+    newsTopic: "government",
+    copy: "Mountain Village discusses new water restrictions. Coming Up Next in Telluride. Lawmakers talk housing policy, conversion therapy ban, and state budget shortfalls.",
+    href: "https://koto.org/news/newscast-3-30-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+  },
   {
     title: "Newscast 3-27-26",
     source: "KOTO Community Radio",
@@ -4467,20 +4170,11 @@ const KOTO_NEWSCASTS = [
     copy: "Dan Covault runs for San Miguel County Sheriff. Telluride updates housing policies and guidelines. Plus: Cat Movie Fisher with Risho Unda.",
     href: "https://koto.org/news/newscast-3-18-26/",
     img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  },
-  {
-    title: "Newscast 3-16-26",
-    source: "KOTO Community Radio",
-    date: "March 16, 2026",
-    newsTopic: "government",
-    copy: "Coming up next in Telluride. Lawmakers talk AI in healthcare, wildfire insurance, and school funding in the state legislature.",
-    href: "https://koto.org/news/newscast-3-16-26/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
   }
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
-// Updated: 2026-03-30  — refresh periodically from koto.org/news-category/featured-stories/
+// Updated: 2026-04-01  — refresh periodically from koto.org/news-category/featured-stories/
 const KOTO_FEATURED_STORIES = [
   {
     title: "A Retirement Party for Mona",
