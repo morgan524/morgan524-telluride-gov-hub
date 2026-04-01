@@ -1405,13 +1405,21 @@
     }
     .news-card-img-left {
       grid-template-columns: 120px minmax(0, 1fr);
-      gap: 14px;
+      gap: 10px;
+      align-items: center;
     }
     .news-card-img-left .event-illustration {
       order: -1;
       width: 120px;
       height: 96px;
       border-radius: 10px;
+      align-self: center;
+    }
+    #tab-local-news .card {
+      padding: 14px 14px 14px 10px;
+    }
+    #tab-local-news .card .card-body {
+      padding: 0;
     }
     @media (max-width: 600px) {
       .news-card-img-left {
