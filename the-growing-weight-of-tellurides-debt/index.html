@@ -611,6 +611,318 @@
     line-height: 1.2;
   }
 
+  /* === FORENSIC SECTION === */
+  .forensic-banner {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+    color: white;
+    padding: 2rem 1.5rem;
+    border-top: 4px solid #d35400;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .forensic-banner .banner-label {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #d35400;
+    margin-bottom: 0.75rem;
+  }
+  .forensic-banner h2 {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .forensic-banner p {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.85);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .risk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .risk-card {
+    background: white;
+    border-radius: 6px;
+    padding: 1.5rem;
+    border-left: 3px solid var(--border);
+    position: relative;
+  }
+  .risk-card .risk-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .risk-badge.critical {
+    background: #8b0000;
+    color: #ff6b6b;
+  }
+  .risk-badge.high {
+    background: #fff3cd;
+    color: #d35400;
+  }
+  .risk-badge.medium {
+    background: #fff3cd;
+    color: #e67e22;
+  }
+  .risk-card.critical {
+    border-left-color: #c0392b;
+    background: #fef5f5;
+  }
+  .risk-card.high {
+    border-left-color: #d35400;
+    background: #fffaf0;
+  }
+  .risk-card.medium {
+    border-left-color: #f39c12;
+    background: #fffaf0;
+  }
+  .risk-card h3 {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    margin-top: 0.5rem;
+    padding-right: 80px;
+  }
+  .risk-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  /* TABOR Tests Grid */
+  .tabor-tests {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .tabor-test {
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .tabor-test .test-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-tertiary);
+    margin-bottom: 1rem;
+  }
+  .tabor-test h3 {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .tabor-test .test-row {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .tabor-test .test-row:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .tabor-test .test-label-inner {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  .tabor-test .test-value {
+    font-family: var(--serif);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .tabor-test .test-result {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--negative);
+    margin-top: 0.5rem;
+  }
+
+  /* Cascade Flow */
+  .cascade-flow {
+    position: relative;
+    margin: 2rem 0;
+    padding: 2rem 0;
+  }
+  .cascade-step {
+    position: relative;
+    margin-bottom: 2.5rem;
+    padding-left: 60px;
+  }
+  .cascade-step::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 30px;
+    width: 2px;
+    height: calc(100% + 30px);
+    background: var(--border);
+  }
+  .cascade-step:last-child::before {
+    display: none;
+  }
+  .cascade-step .cascade-circle {
+    position: absolute;
+    left: -18px;
+    top: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #d35400;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    font-family: var(--serif);
+  }
+  .cascade-step h3 {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  .cascade-step .cascade-statute {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+  }
+  .cascade-step p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  /* Cost Escalation Bars */
+  .cost-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    margin: 2rem 0;
+    height: 280px;
+    padding: 1.5rem 1rem;
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+  }
+  .cost-bar-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .cost-bar-value {
+    font-family: var(--serif);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .cost-bar-fill {
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+    position: relative;
+  }
+  .cost-bar-label {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+  .cost-bar-year {
+    font-size: 0.65rem;
+    color: var(--text-tertiary);
+  }
+
+  /* Vacancy Bar */
+  .vacancy-bar {
+    display: flex;
+    height: 40px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  .vacancy-occupied {
+    flex: 171;
+    background: #27ae60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .vacancy-vacant {
+    flex: 41;
+    background: #c0392b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* Governance Timeline */
+  .gov-timeline {
+    margin: 2rem 0;
+  }
+  .timeline-event {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .timeline-event:last-child {
+    border-bottom: none;
+  }
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-content p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
   /* === FOOTER === */
   .footer {
     text-align: center;
@@ -641,6 +953,11 @@
     line-height: 1.5;
   }
   .annotation strong { font-weight: 600; }
+  .annotation.legal {
+    background: #f0f0f0;
+    border-left-color: #666;
+    color: var(--text-secondary);
+  }
 
   @media (max-width: 700px) {
     .hero-stats { gap: 1rem; }
@@ -649,6 +966,9 @@
     .bar-percapita { display: none; }
     .cards-grid { grid-template-columns: 1fr; }
     .treemap-container { aspect-ratio: 1 / 1; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .tabor-tests { grid-template-columns: 1fr; }
+    .cost-bars { flex-direction: column; height: auto; align-items: center; }
   }
 </style>
 </head>
@@ -726,7 +1046,7 @@
 <div class="container">
   <section class="debt-section">
     <div class="section-label">Housing Debt Portfolio</div>
-    <div class="section-title">$76M+ in Bonded Debt — and $32.3M in Balloon Payments</div>
+    <div class="section-title">$76M+ in Bonded Debt — and ~$36M in Balloon Payments</div>
     <div class="section-intro">The Telluride Housing Authority has accumulated more than $76 million in bonded debt across five projects — none approved by public vote. Most projects cannot cover their own debt service from rental income alone.</div>
 
     <div class="debt-hero-stats">
@@ -735,7 +1055,7 @@
         <div class="ds-label">Total Bonded Debt</div>
       </div>
       <div class="debt-stat">
-        <div class="ds-number">$32.3M</div>
+        <div class="ds-number">~$36M</div>
         <div class="ds-label">Balloon Payments Due</div>
       </div>
       <div class="debt-stat">
@@ -769,8 +1089,8 @@
           <td>$635,032</td>
           <td>$2,000,000</td>
           <td><span class="coverage-ok">3.15x</span></td>
-          <td>--</td>
-          <td>--</td>
+          <td>$3,620,000</td>
+          <td>~2040</td>
         </tr>
         <tr>
           <td><span class="project-name"><span class="project-dot" style="background:#c0392b"></span>Virginia Placer</span></td>
@@ -821,7 +1141,7 @@
           <td>$3,491,943</td>
           <td>$4,486,000</td>
           <td></td>
-          <td>$32,255,864</td>
+          <td>$35,875,864</td>
           <td></td>
         </tr>
       </tfoot>
@@ -837,8 +1157,8 @@
 <div class="container">
   <section class="debt-section">
     <div class="section-label">Balloon Payment Timeline</div>
-    <div class="section-title">$32.3 Million in Concentrated Risk</div>
-    <div class="section-intro">Three projects carry balloon payments — lump sums due at maturity that must be refinanced or paid in full. They cluster between 2032 and 2040. The largest — VooDoo's $23M, due in 2032 — exceeds the project's total expected rental income over its remaining bond life.</div>
+    <div class="section-title">~$36 Million in Concentrated Risk</div>
+    <div class="section-intro">Four projects carry balloon payments — lump sums due at maturity that must be refinanced or paid in full. They cluster between 2032 and 2040. The largest — VooDoo's $23M, due in 2032 — exceeds the project's total expected rental income over its remaining bond life.</div>
 
     <div class="balloon-timeline" id="balloonTimeline"></div>
 
@@ -853,9 +1173,313 @@
   </section>
 </div>
 
+<!-- FORENSIC RED FLAGS SECTION -->
+<div class="container">
+  <section class="debt-section">
+    <div class="forensic-banner">
+      <div class="banner-label">Forensic Screening Findings</div>
+      <h2>What the Numbers Can't Hide</h2>
+      <p>A preliminary forensic screening of publicly available budget documents, bond records, and THA financial statements reveals structural legal and financial risks that go beyond normal budget concerns.</p>
+    </div>
+
+    <div class="risk-grid">
+      <div class="risk-card critical">
+        <span class="risk-badge critical">CRITICAL</span>
+        <h3>$76M+ in Bonds Without Voter Approval</h3>
+        <p>None of the five THA bond issuances were submitted to voters. The Town Charter states all public debt must be voter-approved. Conduit structures — including routing CanyonLands through a Wisconsin authority — appear designed to circumvent TABOR and local charter requirements.</p>
+      </div>
+
+      <div class="risk-card critical">
+        <span class="risk-badge critical">CRITICAL</span>
+        <h3>TABOR Enterprise Status Unsupported</h3>
+        <p>THA claims enterprise status to avoid voter approval, but 52% of revenue comes from government sources — 5.2x the 10% threshold under the Nicholl test. THA appears to fail all three prongs of the enterprise test simultaneously.</p>
+      </div>
+
+      <div class="risk-card critical">
+        <span class="risk-badge critical">CRITICAL</span>
+        <h3>Housing Law Violations (C.R.S. §29-4-229)</h3>
+        <p>Colorado law requires housing projects to be self-sustaining from project revenues. Four of five THA projects have pre-structured, permanent revenue deficits that were known at bond inception — not a later surprise.</p>
+      </div>
+
+      <div class="risk-card critical">
+        <span class="risk-badge critical">CRITICAL</span>
+        <h3>Structural Revenue Deficits Violate §29-4-214</h3>
+        <p>Colorado law prohibits housing authority bonds from being "payable out of any funds other than those of the authority." Town tax revenue subsidies of $814K+/year and the $11.1M Shandoka Fund violate this prohibition in substance.</p>
+      </div>
+
+      <div class="risk-card high">
+        <span class="risk-badge high">HIGH</span>
+        <h3>VooDoo: $23M Bullet Payment, Dec 2032</h3>
+        <p>All three VooDoo bond series (2022A at 4.69%, 2022B at 5.86%, 2023 at 5.86%) mature simultaneously in December 2032. The $23.05M balloon exceeds total expected rental income over the bond's remaining life. No refinancing plan exists.</p>
+      </div>
+
+      <div class="risk-card high">
+        <span class="risk-badge high">HIGH</span>
+        <h3>Per-Unit Cost Escalation: +133%</h3>
+        <p>All-in public cost per housing unit has risen from $410K (Virginia Placer, 2017) to $955K (VooDoo, 2022). VooDoo received $4.7M in cash subsidies plus $1M in waived tap fees on top of $20.1M in bonds. Construction cost inflation alone does not explain this trajectory.</p>
+      </div>
+
+      <div class="risk-card high">
+        <span class="risk-badge high">HIGH</span>
+        <h3>$814K Annual Subsidy Acknowledged in Budget</h3>
+        <p>THA's own 2025 budget explicitly includes "moral obligation" subsidy line items: $219K for VooDoo, $218K for Virginia Placer, $377K for Sunnyside. The Finance Director's October 2024 memo simultaneously states enterprise funds should be "entirely or predominately self-supporting" — while documenting they are not.</p>
+      </div>
+
+      <div class="risk-card high">
+        <span class="risk-badge high">HIGH</span>
+        <h3>CanyonLands: $26.6M Through Wisconsin Conduit</h3>
+        <p>A $26.6M bond routed through the Wisconsin Public Finance Authority, held by a special-purpose LLC where THA owns just 0.1%. The Town advanced $1.5M in pre-development costs subordinate to the bond. Coverage ratio: 0.50x. A Replenishment Resolution creates a political obligation to backstop the debt.</p>
+      </div>
+
+      <div class="risk-card medium">
+        <span class="risk-badge medium">MEDIUM</span>
+        <h3>19.3% Vacancy Rate — Policy-Induced</h3>
+        <p>41 of 212 deed-restricted units are vacant as of February 2026, largely due to January 2025 policy changes that tripled turnover. The 240-household waitlist is described as "very stale." VooDoo alone loses ~$140K/year in rent from empty units — widening the gap that taxpayers must fill.</p>
+      </div>
+
+      <div class="risk-card medium">
+        <span class="risk-badge medium">MEDIUM</span>
+        <h3>Budget Tripled in 8 Years (+222%)</h3>
+        <p>Total budget grew from $32.1M (2017) to $103.3M (2025), far outpacing inflation and population growth. The Affordable Housing Fund alone grew 517% to over $11M. The Shandoka Fund surged from $1.5M to $11.1M after absorbing VooDoo's obligations.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- TABOR ENTERPRISE TEST SECTION -->
+<div class="container">
+  <section class="debt-section">
+    <div class="section-label">TABOR Compliance Analysis</div>
+    <div class="section-title">THA Fails All Three TABOR Enterprise Tests</div>
+
+    <div class="tabor-tests">
+      <div class="tabor-test">
+        <div class="test-label">Test 1</div>
+        <h3>Government Revenue</h3>
+        <div class="test-row">
+          <div class="test-label-inner">Threshold</div>
+          <div class="test-value">&lt; 10%</div>
+        </div>
+        <div class="test-row">
+          <div class="test-label-inner">Actual</div>
+          <div class="test-value">52%</div>
+        </div>
+        <div class="test-row">
+          <div class="test-label-inner">Result</div>
+          <div class="test-result">FAILS (5.2x over)</div>
+        </div>
+      </div>
+
+      <div class="tabor-test">
+        <div class="test-label">Test 2</div>
+        <h3>Self-Sustaining</h3>
+        <div class="test-row">
+          <div class="test-label-inner">Threshold</div>
+          <div class="test-value">Yes</div>
+        </div>
+        <div class="test-row">
+          <div class="test-label-inner">Actual</div>
+          <div class="test-value">$814K subsidy/yr</div>
+        </div>
+        <div class="test-row">
+          <div class="test-label-inner">Result</div>
+          <div class="test-result">FAILS</div>
+        </div>
+      </div>
+
+      <div class="tabor-test">
+        <div class="test-label">Test 3</div>
+        <h3>No Tax Backing</h3>
+        <div class="test-row">
+          <div class="test-label-inner">Threshold</div>
+          <div class="test-value">No dedicated taxes</div>
+        </div>
+        <div class="test-row">
+          <div class="test-label-inner">Actual</div>
+          <div class="test-value">3 dedicated taxes</div>
+        </div>
+        <div class="test-row">
+          <div class="test-label-inner">Result</div>
+          <div class="test-result">FAILS</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="annotation legal">
+      <strong>Legal implications if THA loses enterprise status:</strong> (a) all future debt requires voter approval; (b) any taxpayer may sue for restitution at 10% annual interest for 4 prior fiscal years under C.R.S. §29-4-207; (c) bond covenants requiring enterprise status could trigger technical default; and (d) the Town's own Charter mandate that "all public debt must be voter approved" would retroactively apply to all $76M+ in outstanding bonds.
+    </div>
+  </section>
+</div>
+
+<!-- THE LEGAL CASCADE SECTION -->
+<div class="container">
+  <section class="debt-section">
+    <div class="section-label">Statutory Violations</div>
+    <div class="section-title">How One Violation Triggers the Next</div>
+    <div class="section-intro">The legal analyses reveal a chain reaction where each statutory violation reinforces the next, creating compounding legal exposure.</div>
+
+    <div class="cascade-flow">
+      <div class="cascade-step">
+        <div class="cascade-circle">1</div>
+        <h3>Revenue Insufficiency</h3>
+        <div class="cascade-statute">C.R.S. §29-4-229</div>
+        <p>Projects structured with pre-known deficits — rental income covers only 35-66% of debt service on four of five projects.</p>
+      </div>
+
+      <div class="cascade-step">
+        <div class="cascade-circle">2</div>
+        <h3>Reliance on Town Subsidies</h3>
+        <div class="cascade-statute">C.R.S. §29-4-214</div>
+        <p>Since projects can't self-fund, the Town fills the gap with tax revenues. But the statute says bonds "shall not be payable out of any funds other than those of the authority."</p>
+      </div>
+
+      <div class="cascade-step">
+        <div class="cascade-circle">3</div>
+        <h3>Enterprise Status Collapses</h3>
+        <div class="cascade-statute">TABOR Art. X, §20(2)(d)</div>
+        <p>Government subsidies push THA's government revenue share to 52% — five times the 10% enterprise threshold. All three Nicholl test prongs fail.</p>
+      </div>
+
+      <div class="cascade-step">
+        <div class="cascade-circle">4</div>
+        <h3>Annual Appropriation Defense Fails</h3>
+        <div class="cascade-statute">In re Interrogatories on H.B. 99-1325</div>
+        <p>Non-appropriation would trigger default on $76M in bonds and loss of public housing. The Colorado Supreme Court requires courts to examine the "entire obligation as a whole" — economic compulsion is not genuine discretion.</p>
+      </div>
+
+      <div class="cascade-step">
+        <div class="cascade-circle">5</div>
+        <h3>All $76M+ Bonds Issued Without Required Voter Approval</h3>
+        <div class="cascade-statute">Colo. Const. art. X, §20</div>
+        <p>TABOR's voter-approval mandate applies. No THA bond has ever received a public vote. The Town Charter independently requires voter approval for all public debt.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- PER-UNIT COST ESCALATION SECTION -->
+<div class="container">
+  <section class="debt-section">
+    <div class="section-label">Cost Analysis</div>
+    <div class="section-title">The Cost Per Housing Unit Has More Than Doubled</div>
+
+    <div class="cost-bars">
+      <div class="cost-bar-item">
+        <div class="cost-bar-value">$410K</div>
+        <div class="cost-bar-fill" style="height: 43%; background: #c0392b;"></div>
+        <div class="cost-bar-label">Virginia Placer</div>
+        <div class="cost-bar-year">2017</div>
+      </div>
+      <div class="cost-bar-item">
+        <div class="cost-bar-value">$567K</div>
+        <div class="cost-bar-fill" style="height: 59%; background: #e67e22;"></div>
+        <div class="cost-bar-label">Sunnyside</div>
+        <div class="cost-bar-year">2021</div>
+      </div>
+      <div class="cost-bar-item">
+        <div class="cost-bar-value">$681K</div>
+        <div class="cost-bar-fill" style="height: 71%; background: #16a085;"></div>
+        <div class="cost-bar-label">CanyonLands</div>
+        <div class="cost-bar-year">2024</div>
+      </div>
+      <div class="cost-bar-item">
+        <div class="cost-bar-value">$955K</div>
+        <div class="cost-bar-fill" style="height: 100%; background: #8e44ad;"></div>
+        <div class="cost-bar-label">VooDoo</div>
+        <div class="cost-bar-year">2022</div>
+      </div>
+    </div>
+
+    <div class="annotation">
+      <strong>VooDoo's all-in cost</strong> includes $20.1M in bonds (3 series), $4.7M in cash subsidies from the Affordable Housing Fund, and ~$1M in waived tap fees. For comparison, the national median for multifamily construction is $150K-$250K per unit.
+    </div>
+  </section>
+</div>
+
+<!-- HOUSING VACANCY CRISIS SECTION -->
+<div class="container">
+  <section class="debt-section">
+    <div class="section-label">Occupancy Crisis</div>
+    <div class="section-title">41 of 212 Units Sit Empty</div>
+
+    <div class="vacancy-bar">
+      <div class="vacancy-occupied">171 occupied (80.7%)</div>
+      <div class="vacancy-vacant">41 vacant (19.3%)</div>
+    </div>
+
+    <div style="text-align: center; margin: 1rem 0; font-size: 0.9rem; color: var(--text-secondary);">
+      <strong>Healthy vacancy: 5-8%</strong> &middot; <strong>Current: 19.3%</strong>
+    </div>
+
+    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 1.5rem 0;">
+      Policy changes effective January 1, 2025 — raising minimum employment hours and changing household income calculations — tripled the turnover rate compared to 2024. Units are turning over faster than replacement tenants can qualify. The 240-household waitlist has been described as "very stale" with many applicants no longer in the area, no longer qualifying, or unreachable.
+    </p>
+
+    <div class="annotation">
+      <strong>Revenue impact:</strong> Every vacant unit is lost revenue against bonds that still require full debt service payments. At VooDoo, an estimated 5 vacant units cost ~$140K/year in foregone rent — directly widening the coverage gap that Town taxpayers must fill.
+    </div>
+  </section>
+</div>
+
+<!-- GOVERNANCE CONTEXT SECTION -->
+<div class="container">
+  <section class="debt-section">
+    <div class="section-label">Governance & Oversight</div>
+    <div class="section-title">Ski Resort Scandal Raises Governance Questions</div>
+
+    <div class="gov-timeline">
+      <div class="timeline-event">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p><strong>Jan 2026:</strong> $127.5M offer to acquire 51% of Telluride Ski Resort surfaces — elected officials allegedly involved</p>
+        </div>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p><strong>Jan 2026:</strong> Mayor Pro Tem Meehan Fee resigns under investigation</p>
+        </div>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p><strong>Jan 2026:</strong> Mountain Village Mayor Marti Prohaska resigns</p>
+        </div>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p><strong>Jan 2026:</strong> Town Manager Paul Wisor placed on administrative leave</p>
+        </div>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p><strong>Jan 2026:</strong> Telski files civil conspiracy lawsuit alleging officials colluded to harm resort</p>
+        </div>
+      </div>
+
+      <div class="timeline-event">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p><strong>Ongoing:</strong> Both Telluride and Mountain Village launch investigations</p>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 1.5rem 0;">
+      The Town Council and THA Board are the same people. The officials who authorized $76M+ in housing bonds without voter approval operate within the same governance structure that produced this undisclosed acquisition attempt. A forensic investigation should determine whether officials who resigned or are under investigation played roles in THA bond approvals, vendor selection, or project oversight.
+    </p>
+  </section>
+</div>
+
 <!-- FOOTER -->
 <footer class="footer">
-  <p>Budget data from the Town of Telluride 2024 Budget Request and Town Council Budget Meeting materials (October 2023). Debt data from THA Financial Statements, bond documents, and Livable Telluride Debt Analysis (March 2026). Population estimate: ~2,417 (World Population Review, 2026). Per-capita figures are approximate. For the full budget book, visit <a href="https://www.telluride-co.gov/122/Budget-Financial-Statements" target="_blank">telluride-co.gov</a>.</p>
+  <p>Budget data from the Town of Telluride 2024 Budget Request and Town Council Budget Meeting materials (October 2023). Debt data from THA Financial Statements, bond documents, and Livable Telluride Debt Analysis (March 2026). Forensic screening data from THA Financial Statements, bond documents, Livable Telluride Debt Analysis (March 2026), and Colorado Revised Statutes. Population estimate: ~2,417 (World Population Review, 2026). Per-capita figures are approximate. For the full budget book, visit <a href="https://www.telluride-co.gov/122/Budget-Financial-Statements" target="_blank">telluride-co.gov</a>.</p>
 </footer>
 
 <script>
@@ -955,6 +1579,7 @@ const departments = [
 const balloons = [
   { project: "VooDoo", amount: 23045864, year: 2032, color: "#8e44ad" },
   { project: "Virginia Placer", amount: 3040000, year: 2036, color: "#c0392b" },
+  { project: "Shandoka Lot E", amount: 3620000, year: 2040, color: "#2c5f8a" },
   { project: "Sunnyside", amount: 6170000, year: 2040, color: "#e67e22" },
 ];
 
