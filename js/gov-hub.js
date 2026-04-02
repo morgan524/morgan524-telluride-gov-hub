@@ -199,6 +199,14 @@ const COUNTY_CIVICCLERK_IDS = {
   'Board of County Commissioners Meeting|2026-04-01': 882,
   'Board of County Commissioners Meeting|2026-04-01': 882,
   'Board of County Commissioners Work Session|2026-04-08': 986,
+  'Planning Commission|2026-04-02': 1025,
+  'San Miguel County: Planning Commission|2026-04-02': 1025,
+};
+
+// Map: event ID → specific agenda file ID (for direct agenda PDF links)
+// When known, links go to /event/{eventId}/files/agenda/{agendaId} instead of /event/{eventId}/files
+const COUNTY_CIVICCLERK_AGENDA_FILES = {
+  1025: 1652,  // Planning Commission Apr 2 2026
 };
 
 function getCountyAgendaLink(title, eventDate) {
@@ -206,16 +214,22 @@ function getCountyAgendaLink(title, eventDate) {
   const dateKey = eventDate.toISOString().slice(0, 10);
   // Try exact title match
   const exactKey = title + '|' + dateKey;
-  if (COUNTY_CIVICCLERK_IDS[exactKey]) {
-    return COUNTY_CIVICCLERK_BASE + COUNTY_CIVICCLERK_IDS[exactKey] + '/files';
-  }
+  let eventId = COUNTY_CIVICCLERK_IDS[exactKey];
   // Try partial match on date
-  for (const key of Object.keys(COUNTY_CIVICCLERK_IDS)) {
-    if (key.endsWith('|' + dateKey)) {
-      return COUNTY_CIVICCLERK_BASE + COUNTY_CIVICCLERK_IDS[key] + '/files';
+  if (!eventId) {
+    for (const key of Object.keys(COUNTY_CIVICCLERK_IDS)) {
+      if (key.endsWith('|' + dateKey)) {
+        eventId = COUNTY_CIVICCLERK_IDS[key];
+        break;
+      }
     }
   }
-  return COUNTY_CIVICCLERK_FALLBACK;
+  if (!eventId) return COUNTY_CIVICCLERK_FALLBACK;
+  // If we have a specific agenda file ID, link directly to it
+  if (COUNTY_CIVICCLERK_AGENDA_FILES[eventId]) {
+    return COUNTY_CIVICCLERK_BASE + eventId + '/files/agenda/' + COUNTY_CIVICCLERK_AGENDA_FILES[eventId];
+  }
+  return COUNTY_CIVICCLERK_BASE + eventId + '/files';
 }
 
 async function fetchCountyMeetings() {
@@ -241,9 +255,11 @@ async function fetchCountyMeetings() {
       // on the CivicClerk portal
       const isGovMeeting = /commissioner|planning commission|work session|board of county/i.test(item.title);
       const agendaLink = isGovMeeting ? getCountyAgendaLink(item.title, eventDate) : null;
+      const isCanceled = /cancel/i.test(item.title) || /cancel/i.test(descText);
+      const displayTitle = isCanceled ? (item.title || 'Untitled').replace(/\s*-?\s*cancel(l?ed)?/gi, '').trim() + ' -- CANCELED' : (item.title || 'Untitled');
 
       return {
-        title: item.title || 'Untitled',
+        title: displayTitle,
         link: item.link || '#',
         description: truncate(descText),
         eventDate,
@@ -253,7 +269,7 @@ async function fetchCountyMeetings() {
         source: 'county',
         sourceLabel: 'San Miguel County',
         category: 'Meeting',
-        canceled: false,
+        canceled: isCanceled,
         hasAgenda: isGovMeeting,
         agendaLink
       };
@@ -1339,14 +1355,11 @@ const MANUAL_SUMMARIES = {
   // (school|2026-04-27 -- Work Session 3:30pm, agenda not yet posted, will add when available)
   // (school|2026-04-28 -- Monthly Meeting 5:15pm, agenda not yet posted, will add when available)
 
-  // ── Telluride HARC ──
-  // (telluride|2026-04-15|Historic & Architectural Review Commission -- confirmed on CivicWeb, agenda not yet posted, will add when available)
-
   // ── Fire District ──
   // (fire|2026-04-21 -- agenda not yet posted, will add when available)
 
   // ── County Planning Commission ──
-  // (county|2026-04-02|Planning Commission -- on calendar 9am-5:59pm, agenda not yet posted, will add when available)
+  // (county|2026-04-02|Planning Commission -- CANCELED, agenda posted at CivicClerk event 1025, agenda file 1652)
 
   // ── BOCC (upcoming) ──
   // (county|2026-04-06 to 2026-04-17 -- CANCELED, spring break recess, no BOCC meetings)
