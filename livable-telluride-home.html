@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livable Telluride — Preserving the Heart of Telluride</title>
+  <link rel="icon" type="image/png" href="logo/Livable Telluride Logo.png">
+  <style>
+    /* ═══════════════════════════════════════════════════════
+       RESET & BASE
+       ═══════════════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      color: #1a2e1a;
+      background: #f5f0e8;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ═══════════════════════════════════════════════════════
+       HEADER / NAV
+       ═══════════════════════════════════════════════════════ */
+    .site-header {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 2rem;
+      background: #1a3a2a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .site-header .logo-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .site-nav {
+      display: flex;
+      gap: 2rem;
+      margin-left: auto;
+    }
+    .site-nav a {
+      color: #f5f0e8;
+      font-size: 1.05rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      padding: 0.4rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.25s;
+    }
+    .site-nav a:hover,
+    .site-nav a.active {
+      border-bottom-color: #f5f0e8;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════════════════════ */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 80vh;
+      background: #f5f0e8;
+      overflow: hidden;
+    }
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem 3rem 4rem 5rem;
+    }
+    .hero-text h1 {
+      font-family: 'Georgia', serif;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 700;
+      color: #1a2e1a;
+      line-height: 1.15;
+      margin-bottom: 2rem;
+    }
+    .hero-text .btn-outline {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      border: 2px solid #1a2e1a;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-family: 'Georgia', serif;
+      color: #1a2e1a;
+      transition: all 0.3s;
+      width: fit-content;
+    }
+    .hero-text .btn-outline:hover {
+      background: #1a2e1a;
+      color: #f5f0e8;
+    }
+    .hero-image {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0 0 0 2rem;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       MISSION OVERVIEW BANNER
+       ═══════════════════════════════════════════════════════ */
+    .mission-banner {
+      position: relative;
+      height: 350px;
+      overflow: hidden;
+    }
+    .mission-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .mission-banner .overlay-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: rgba(0,0,0,0.25);
+    }
+    .mission-banner .overlay-text h2 {
+      font-family: 'Georgia', serif;
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      color: #f5f0e8;
+      max-width: 700px;
+      line-height: 1.3;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       UPCOMING MEETINGS SECTION
+       ═══════════════════════════════════════════════════════ */
+    .meetings-section {
+      background: linear-gradient(180deg, #f5f0e8 0%, #e8e0d4 100%);
+      padding: 3rem 2rem 2rem;
+    }
+    .meetings-section .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .meetings-section h2 {
+      font-family: 'Georgia', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #1a2e1a;
+      margin-bottom: 0.25rem;
+    }
+    .meetings-section .subtitle {
+      color: #6b7c6b;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+    .meetings-carousel-embed {
+      width: 100%;
+      min-height: 320px;
+      border: none;
+      border-radius: 12px;
+      background: #fff;
+    }
+    .meetings-link {
+      display: block;
+      text-align: center;
+      margin-top: 1.25rem;
+      font-size: 1.05rem;
+      color: #1a3a2a;
+      font-weight: 600;
+    }
+    .meetings-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       GRADIENT TRANSITION
+       ═══════════════════════════════════════════════════════ */
+    .gradient-transition {
+      height: 120px;
+      background: linear-gradient(180deg, #e8e0d4 0%, #ddd5f0 40%, #c8d8f0 70%, #f5f0e8 100%);
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       OUR MISSION SECTION
+       ═══════════════════════════════════════════════════════ */
+    .our-mission {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      align-items: center;
+    }
+    .our-mission h2 {
+      font-family: 'Georgia', serif;
+      font-size: clamp(2rem, 3vw, 3rem);
+      color: #1a2e1a;
+      margin-bottom: 1.25rem;
+    }
+    .our-mission p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #3a4a3a;
+    }
+    .our-mission .mission-image img {
+      border-radius: 1rem;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       NEWSLETTER CTA
+       ═══════════════════════════════════════════════════════ */
+    .newsletter-cta {
+      background: #f5f0e8;
+      padding: 4rem 2rem;
+      text-align: center;
+      border-top: 1px solid #ddd5c8;
+    }
+    .newsletter-cta h2 {
+      font-family: 'Georgia', serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      color: #1a2e1a;
+      margin-bottom: 1.5rem;
+    }
+    .newsletter-cta .btn-subscribe {
+      display: inline-block;
+      padding: 0.85rem 2.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1a2e1a;
+      border: 2px solid #1a2e1a;
+      border-radius: 0;
+      font-family: 'Georgia', serif;
+      transition: all 0.3s;
+      letter-spacing: 0.03em;
+    }
+    .newsletter-cta .btn-subscribe:hover {
+      background: #1a2e1a;
+      color: #f5f0e8;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════ */
+    .site-footer {
+      background: #1a3a2a;
+      padding: 2rem;
+      text-align: center;
+    }
+    .site-footer .footer-logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin: 0 auto 0.75rem;
+    }
+    .site-footer p {
+      color: #a8b8a8;
+      font-size: 0.85rem;
+    }
+    .site-footer a {
+      color: #c8d8c8;
+    }
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       RESPONSIVE
+       ═══════════════════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+      .hero-text {
+        padding: 3rem 1.5rem;
+        text-align: center;
+        align-items: center;
+      }
+      .hero-image {
+        height: 50vh;
+      }
+      .hero-image img {
+        border-radius: 0;
+      }
+      .our-mission {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem;
+      }
+      .site-nav {
+        gap: 1rem;
+      }
+      .site-nav a {
+        font-size: 0.9rem;
+      }
+      .mission-banner {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <header class="site-header">
+    <a href="livable-telluride-home.html" class="logo-link">
+      <img src="logo/Livable Telluride Logo.png" alt="Livable Telluride" class="logo-img">
+    </a>
+    <nav class="site-nav">
+      <a href="livable-telluride-home.html" class="active">Home</a>
+      <a href="#">News</a>
+      <a href="index.html">Tell-Hub</a>
+    </nav>
+  </header>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Preserving the Heart of Telluride</h1>
+      <a href="index.html" class="btn-outline">Latest Updates</a>
+    </div>
+    <div class="hero-image">
+      <img src="photos-hero-road.jpeg" alt="Autumn road winding through fall aspens toward Telluride mountains">
+    </div>
+  </section>
+
+  <!-- ═══════════ MISSION OVERVIEW BANNER ═══════════ -->
+  <section class="mission-banner">
+    <img src="photos-aspen-pano.jpg" alt="Fall aspens and mountain panorama near Telluride">
+    <div class="overlay-text">
+      <h2>Advocating for Thoughtful Growth and Community Preservation</h2>
+    </div>
+  </section>
+
+  <!-- ═══════════ UPCOMING MEETINGS ═══════════ -->
+  <section class="meetings-section">
+    <div class="section-inner">
+      <h2>Upcoming Government Meetings</h2>
+      <p class="subtitle">Town of Telluride &middot; San Miguel County &middot; Mountain Village &middot; Norwood &middot; Ophir</p>
+      <iframe
+        class="meetings-carousel-embed"
+        src="upcoming-meetings-carousel.html"
+        title="Upcoming Government Meetings"
+        loading="lazy">
+      </iframe>
+      <a href="index.html" class="meetings-link">View all meetings &amp; agendas on the Gov Hub &rarr;</a>
+    </div>
+  </section>
+
+  <!-- ═══════════ GRADIENT TRANSITION ═══════════ -->
+  <div class="gradient-transition"></div>
+
+  <!-- ═══════════ OUR MISSION ═══════════ -->
+  <section class="our-mission">
+    <div class="mission-text">
+      <h2>Our Mission</h2>
+      <p>Livable Telluride is dedicated to ensuring that thoughtful processes result in a livable community for all. Our mission is to preserve the heart of Telluride by advocating for sustainable growth and transparent decision-making that prioritizes the long-term well-being of our residents. We work to safeguard the unique character of our box canyon home while fostering an inclusive and vibrant future for generations to come.</p>
+    </div>
+    <div class="mission-image">
+      <img src="photos-box-canyon.jpg" alt="Telluride box canyon autumn landscape">
+    </div>
+  </section>
+
+  <!-- ═══════════ NEWSLETTER CTA ═══════════ -->
+  <section class="newsletter-cta">
+    <h2>Get our Newsletter</h2>
+    <a href="#" class="btn-subscribe">Subscribe</a>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="site-footer">
+    <img src="logo/Livable Telluride Logo.png" alt="Livable Telluride" class="footer-logo">
+    <p>&copy; 2026 Livable Telluride &middot; <a href="privacy-policy.html">Privacy Policy</a></p>
+  </footer>
+
+</body>
+</html>

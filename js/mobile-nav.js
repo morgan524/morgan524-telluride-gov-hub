@@ -47,6 +47,9 @@
       layout.classList.toggle('communitypulse-active', tabName === 'community-pulse');
       var ddBar2 = document.getElementById('deepDiveSubmenu');
       if (ddBar2) ddBar2.style.display = (tabName === 'meetings') ? 'block' : 'none';
+      // "What to Follow" bar should only show on Gov-Hub (meetings) tab
+      var wtfBar = document.getElementById('whatToFollowBar');
+      if (wtfBar) wtfBar.style.display = (tabName === 'meetings') ? '' : 'none';
     }
     // Hide subscribe bar when on Subscribe, About Us, or Hub-Bub tab
     const subBar = document.querySelector('.subscribe-bar');
