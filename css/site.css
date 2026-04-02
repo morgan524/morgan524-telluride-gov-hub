@@ -1473,6 +1473,10 @@
         width: 100%;
         position: static;
         max-height: none;
+        order: 2;          /* move left sidebar AFTER the feed on mobile */
+      }
+      .localnews-main-content {
+        order: 1;          /* feed comes first on mobile */
       }
       .localnews-legal-sidebar-card {
         display: flex;
@@ -4049,6 +4053,8 @@
       .left-sidebar { display: none; }
       .festival-sidebar { display: none !important; }
       .blog-sidebar { display: none !important; }
+      /* Override the localnews-active rule that shows blog sidebar on desktop */
+      .main-layout.localnews-active .blog-sidebar { display: none !important; }
     }
 
     /* ── Mobile ── */
