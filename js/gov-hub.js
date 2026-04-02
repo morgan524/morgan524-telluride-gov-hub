@@ -4180,8 +4180,17 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
-// Updated: 2026-04-01  — refresh periodically from koto.org/news-category/newscasts/
+// Updated: 2026-04-02  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 4-1-26",
+    source: "KOTO Community Radio",
+    date: "April 1, 2026",
+    newsTopic: "public-safety",
+    copy: "Fire season ignites with the Willow Springs wildfire near Greyhead and Telluride Airport. Telluride discusses the housing waitlist crisis — 330 applicants, dozens of vacant units. AG candidate Hetal Doshi visits Telluride. Plus: Telski closing weekend plans, Supreme Court overturns Colorado conversion therapy ban, and singing resistance in Boulder.",
+    href: "https://koto.org/news/newscast-4-1-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+  },
   {
     title: "Newscast 3-30-26",
     source: "KOTO Community Radio",
