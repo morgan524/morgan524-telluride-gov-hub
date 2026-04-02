@@ -4058,8 +4058,44 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 });
 
 // ══════════ TELLURIDE TIMES — CURRENT HOMEPAGE STORIES ══════════
-// Updated: 2026-04-01  — refresh periodically from telluridenews.com
+// Updated: 2026-04-02  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Flock to the fun",
+    source: "Telluride Times",
+    date: "April 2, 2026",
+    newsTopic: "arts-culture",
+    copy: "While it’s time to bid farewell to ski season, there is one silver lining: the KOTO Spring Street Dance returns Friday on West Colorado Avenue.",
+    href: "https://www.telluridenews.com/news/article_d9c05b19-e744-404f-9f47-4a91a89ad411.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/b5/db5ef660-af07-480d-a1ba-55171586422f/69c9853373f12.image.jpg"
+  },
+  {
+    title: "Busting out of the bubble",
+    source: "Telluride Times",
+    date: "April 1, 2026",
+    newsTopic: "education",
+    copy: "Telluride students reflect on navigating eight straight semesters in one admittedly beautiful, wonderfully supportive — but also isolated — mountain town.",
+    href: "https://www.telluridenews.com/news/article_4e8dbcde-88cd-4ed8-974c-5601666dd4d8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/9f/19fc7dcb-0568-4810-869d-8393e194c651/69c7316054c1b.image.jpg"
+  },
+  {
+    title: "UPDATE: Telluride Ski Resort to re-open Friday",
+    source: "Telluride Times",
+    date: "April 1, 2026",
+    newsTopic: "sports-recreation",
+    copy: "After closing Wednesday and Thursday to preserve snow, Telluride Ski Resort announced it will re-open Friday with the goal to remain open through scheduled closing on Sunday, April 5th.",
+    href: "https://www.telluridenews.com/news_release/article_16473284-9fa7-4518-b3d8-43a48dc7a5aa.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/2c/c2c57f30-7503-41d0-84f3-05ed163b162e/69cb0bf82b841.image.jpg"
+  },
+  {
+    title: "Opening the door to recovery in western Colorado",
+    source: "Telluride Times",
+    date: "April 1, 2026",
+    newsTopic: "community",
+    copy: "A senior citizen in western Colorado recently reached out for help with a behavioral health challenge connected to substance use, navigating Medicare and limited access to affordable counseling.",
+    href: "https://www.telluridenews.com/opinion/columnists/article_ab6bb37f-8a9f-44a5-81f3-822944b404d8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/61/a61314f5-8a69-4c0c-9dbb-bb8f21de2939/69cca3a5e67b2.image.jpg"
+  },
   {
     title: "Housing ‘fast-track’ amendment discussions continue",
     source: "Telluride Times",
@@ -4070,11 +4106,11 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/b6/4b62beda-dbf7-488a-be75-4b7c7497789f/69cb688ca44ed.image.jpg"
   },
   {
-    title: "Wildfire burning near Greyhead",
+    title: "Wildfire sparked northwest of Telluride airport",
     source: "Telluride Times",
     date: "March 31, 2026",
     newsTopic: "public-safety",
-    copy: "Amid the exceptionally dry conditions, the San Miguel County Sheriff\'s Office released information about a wildfire burning near Greyhead Peak.",
+    copy: "Amid the exceptionally dry conditions, the San Miguel County Sheriff\'s Office released information about a wildfire approximately 2 miles northwest of Telluride Regional Airport, near the Greyhead subdivision.",
     href: "https://www.telluridenews.com/news/article_7d7e751e-db54-433d-8fe4-0b051959dab8.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/a8/da80e7b1-924d-43f2-bc3d-b856f91cdfa2/69cc8e64b6012.image.jpg"
   },
