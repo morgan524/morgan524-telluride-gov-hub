@@ -3369,10 +3369,11 @@
       display: grid;
       grid-template-columns: minmax(0, 1fr) 160px;
       gap: 20px;
-      align-items: start;
+      align-items: center;
     }
     .event-card-main.has-club-info {
       grid-template-columns: minmax(0, 1fr) 240px;
+      align-items: start;
     }
     .event-card-content {
       min-width: 0;

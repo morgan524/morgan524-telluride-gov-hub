@@ -3940,7 +3940,8 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     const legalNearbyCard = document.getElementById('sidebarLegalNearby');
     if (wtfBar) wtfBar.style.display = (btn.dataset.tab === 'meetings') ? '' : 'none';
     if (submitCard) submitCard.style.display = (btn.dataset.tab === 'news') ? '' : 'none';
-    if (upcomingEventsCard) upcomingEventsCard.style.display = (btn.dataset.tab === 'news') ? '' : 'none';
+    // Upcoming Events sidebar removed
+    // if (upcomingEventsCard) upcomingEventsCard.style.display = (btn.dataset.tab === 'news') ? '' : 'none';
     if (legalInterestCard) legalInterestCard.style.display = (btn.dataset.tab === 'legals') ? '' : 'none';
     if (legalNearbyCard) legalNearbyCard.style.display = (btn.dataset.tab === 'legals') ? '' : 'none';
     // Hide sidebars on Subscribe, Land Use, and Gondola tabs, show on all others
