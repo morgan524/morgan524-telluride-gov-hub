@@ -1343,6 +1343,10 @@ const MANUAL_SUMMARIES = {
   'county|2026-04-01|Board of County Commissioners Meeting':
     'PUBLIC HEARING: Resolution 2026-14 — Adoption of Colorado Wildfire Resiliency Code (enforcement July 1, 2026) · Planning: Paradigm Festival temporary use permit (Egnar) · Housing: Elizabeth Forsythe exception request to Rural Homes For Sale/For Locals regs (§5.2.4 & §5.2.5) · Affordable housing update · Tax abatement petitions: RRMV LLC (ABMT2026-7) and Epic Ridge Properties (ABMT2026-13), both recommended deny · Public Health: Septic Regulation update · Ophir Pass gate progress · Resolution 2026-15: Telluride Times designated legal newspaper of record · Litigation update Q1 · Executive session: DRMS mining regulations MOU',
 
+  // ── Telluride HARC ──
+  'telluride|2026-04-15|Historic & Architectural Review Commission':
+    'Agenda scheduled — full packet typically posted the Wednesday before the meeting (April 8). HARC reviews exterior alterations, new construction, demolitions, and signage in Telluride\'s National Historic Landmark District. Check back for specific agenda items.',
+
   // ── SMART ──
   // (smart|2026-04-09 -- agenda not yet posted, will add when available)
 
@@ -1639,6 +1643,26 @@ const WHY_THIS_MATTERS = [
     stage: 'Work session -- early-stage policy discussion.',
     impact: 'Forestry regulations affect how private landowners manage timber, which in turn affects wildfire risk, watershed health, and ecosystem integrity. In a mountain community surrounded by national forest, these rules have outsized importance.',
     context: 'Wildfire preparedness and water infrastructure protection have been identified as top regional priorities. Forestry practices directly affect both -- improper logging can increase runoff and erosion while reducing forest resilience to fire.'
+  },
+
+  // ── HARC / Historic Preservation ──
+  {
+    match: /harc|historic.*architectural.*review|national.*historic.*landmark|historic.*preservation|demolition.*historic/i,
+    decision: 'Whether to approve exterior alterations, new construction, demolitions, or signage within Telluride\'s National Historic Landmark District.',
+    who: 'Property owners seeking approvals, adjacent property owners, and all residents who value the town\'s historic character.',
+    stage: 'Check agenda -- HARC reviews can range from minor alterations (staff-level) to full commission hearings for large-scale projects and demolitions.',
+    impact: 'HARC decisions shape the physical character of Telluride\'s historic downtown and residential neighborhoods. Approvals set precedents for building scale, materials, and design. Demolition permits are effectively irreversible -- once a historic structure is gone, it cannot be restored.',
+    context: 'Telluride is a designated National Historic Landmark District -- one of the highest levels of historic recognition in the U.S. Development pressure from luxury construction and resort expansion creates ongoing tension between preservation and modernization. HARC also reviews projects tied to larger land use applications (Shandoka, Carhenge) that advance through P&Z and Council.'
+  },
+
+  // ── DRB / Design Review Board (Mountain Village) ──
+  {
+    match: /design\s*review\s*board|drb|mountain\s*village.*design/i,
+    decision: 'Whether to approve architectural designs, site plans, and exterior modifications within Mountain Village.',
+    who: 'Property owners, developers, and Mountain Village residents affected by building design and neighborhood character.',
+    stage: 'Check agenda for specific project reviews.',
+    impact: 'DRB decisions control building aesthetics, massing, and materials in Mountain Village. Large projects reviewed here can significantly affect views, traffic, and neighborhood character.',
+    context: 'Mountain Village has its own design standards separate from Telluride\'s HARC. Projects like the gondola terminal redesign and resort-area expansions go through DRB review.'
   },
 
   // ── General fallback for Fire District ──
