@@ -1339,6 +1339,9 @@ const MANUAL_SUMMARIES = {
   // (school|2026-04-27 -- Work Session 3:30pm, agenda not yet posted, will add when available)
   // (school|2026-04-28 -- Monthly Meeting 5:15pm, agenda not yet posted, will add when available)
 
+  // ── Telluride HARC ──
+  // (telluride|2026-04-15|Historic & Architectural Review Commission -- confirmed on CivicWeb, agenda not yet posted, will add when available)
+
   // ── Fire District ──
   // (fire|2026-04-21 -- agenda not yet posted, will add when available)
 
