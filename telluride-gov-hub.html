@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Telluride Region — Tell-Hub</title>
   <!-- Site styles (extracted) -->
-  <link rel="stylesheet" href="css/site.css?v=20260401n">
+  <link rel="stylesheet" href="css/site.css?v=20260401e">
   <!-- Hub-Bub forum styles (extracted) -->
   <link rel="stylesheet" href="css/hub-bub.css">
 <!-- Firebase SDK (modular, from CDN) -->
@@ -118,6 +118,7 @@
   <!-- ── Left Sidebar ── -->
   <aside class="left-sidebar" id="leftSidebar">
 
+    <!-- Upcoming Community Events sidebar removed per user request -->
 
     <!-- Submit an Event (shown on Events tab only) — placed at top -->
     <div class="left-sidebar-card" id="sidebarSubmitEvent" style="display:none;">
@@ -294,7 +295,9 @@
           <!-- Legal Notices -->
           <div class="legal-sidebar-card-redesign">
             <div class="legal-sidebar-logo-redesign">
-              <img src="logo/Legal Notices.png" alt="Legal Notices" />
+              <a href="?legal=all" target="_blank" rel="noopener">
+                <img src="logo/Legal Notices.png" alt="Legal Notices" style="cursor:pointer;" />
+              </a>
             </div>
             <div class="legal-sidebar-header-redesign">
               <div>
@@ -1766,43 +1769,47 @@
 
         <div class="tab-content" id="tab-about-us">
 
-      <!-- Hero Banner -->
-      <div style="position:relative;width:100%;border-radius:var(--radius);overflow:hidden;margin-bottom:32px;background:linear-gradient(135deg,#1a332c 0%,#21443c 40%,#2d5a4e 100%);min-height:340px;display:flex;align-items:center;">
-        <div style="position:absolute;inset:0;background:url('images/about/hero-telluride.jpg') center/cover no-repeat;opacity:0.3;"></div>
-        <div style="position:relative;z-index:2;padding:48px 40px;max-width:680px;">
-          <div style="display:flex;align-items:center;gap:18px;margin-bottom:20px;">
-            <img src="logo/Livable Telluride.png" alt="Livable Telluride" style="width:80px;height:80px;border-radius:18px;object-fit:contain;background:rgba(255,255,255,0.95);padding:6px;">
-            <div>
-              <h1 style="font-size:2.2rem;font-weight:800;color:#fff;margin:0;line-height:1.15;">Livable Telluride</h1>
-              <div style="font-size:0.95rem;color:rgba(255,255,255,0.8);margin-top:4px;font-weight:500;">Preserving the Heart of Telluride</div>
+      <!-- Hero Banner with real photo -->
+      <div style="position:relative;width:100%;border-radius:var(--radius);overflow:hidden;margin-bottom:0;">
+        <img src="photos-hero-road.jpeg" alt="Autumn road winding toward Telluride mountains" style="width:100%;height:420px;object-fit:cover;display:block;">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,51,44,0.15) 0%,rgba(26,51,44,0.65) 100%);display:flex;align-items:flex-end;">
+          <div style="padding:40px 44px;max-width:700px;">
+            <div style="display:flex;align-items:center;gap:18px;margin-bottom:16px;">
+              <img src="logo/Livable Telluride Logo.png" alt="Livable Telluride" style="width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.6);">
+              <div>
+                <h1 style="font-size:2.4rem;font-weight:800;color:#fff;margin:0;line-height:1.1;text-shadow:0 2px 12px rgba(0,0,0,0.3);">Preserving the Heart of Telluride</h1>
+              </div>
             </div>
           </div>
-          <p style="font-size:1.05rem;color:rgba(255,255,255,0.9);line-height:1.7;margin:0;">
-            Advocating for thoughtful growth and community preservation in the Telluride region.
-          </p>
         </div>
       </div>
 
-      <!-- Mission Section -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:32px;">
-        <div style="background:var(--card-bg);border-radius:var(--radius);padding:32px;border:1.5px solid var(--border);">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
-            <div style="width:40px;height:40px;border-radius:12px;background:rgba(33,68,60,0.08);display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🎯</div>
-            <h2 style="font-size:1.35rem;font-weight:800;color:var(--text-primary);margin:0;">Our Mission</h2>
-          </div>
-          <p style="font-size:0.92rem;color:var(--text-secondary);line-height:1.75;margin:0;">
-            Livable Telluride is dedicated to ensuring that thoughtful processes result in a livable community for all. Our mission is to preserve the heart of Telluride by advocating for sustainable growth and transparent decision-making that prioritizes the long-term well-being of our residents. We work to safeguard the unique character of our box canyon home while fostering an inclusive and vibrant future for generations to come.
-          </p>
+      <!-- Panoramic Aspen Banner -->
+      <div style="position:relative;width:100%;overflow:hidden;margin-bottom:32px;">
+        <img src="photos-aspen-pano.jpg" alt="Fall aspens and mountain panorama near Telluride" style="width:100%;height:260px;object-fit:cover;display:block;">
+        <div style="position:absolute;inset:0;background:rgba(0,0,0,0.28);display:flex;align-items:center;justify-content:center;text-align:center;">
+          <h2 style="font-family:Georgia,serif;font-size:clamp(1.4rem,3vw,2.2rem);color:#fff;max-width:600px;line-height:1.3;text-shadow:0 2px 12px rgba(0,0,0,0.4);margin:0;padding:0 20px;">Advocating for Thoughtful Growth and Community Preservation</h2>
         </div>
+      </div>
 
-        <div style="background:var(--card-bg);border-radius:var(--radius);padding:32px;border:1.5px solid var(--border);">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
-            <div style="width:40px;height:40px;border-radius:12px;background:rgba(33,68,60,0.08);display:flex;align-items:center;justify-content:center;font-size:1.2rem;">📖</div>
-            <h2 style="font-size:1.35rem;font-weight:800;color:var(--text-primary);margin:0;">Our Story</h2>
+      <!-- Mission + Photo Section -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:32px;align-items:center;">
+        <div>
+          <div style="background:var(--card-bg);border-radius:var(--radius);padding:32px;border:1.5px solid var(--border);margin-bottom:20px;">
+            <h2 style="font-family:Georgia,serif;font-size:1.6rem;font-weight:800;color:var(--text-primary);margin:0 0 14px 0;">Our Mission</h2>
+            <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.8;margin:0;">
+              Livable Telluride is dedicated to ensuring that thoughtful processes result in a livable community for all. Our mission is to preserve the heart of Telluride by advocating for sustainable growth and transparent decision-making that prioritizes the long-term well-being of our residents. We work to safeguard the unique character of our box canyon home while fostering an inclusive and vibrant future for generations to come.
+            </p>
           </div>
-          <p style="font-size:0.92rem;color:var(--text-secondary);line-height:1.75;margin:0;">
-            Livable Telluride grew out of "Let the People Decide," a grassroots effort built around Measure 300 in November 2024. After that chapter closed, the organization evolved to focus on the broader, ongoing work of keeping Telluride functional, welcoming, and worth living in for the people who call it home. The name change reflects a shift from a single ballot question to a lasting commitment to community well-being.
-          </p>
+          <div style="background:var(--card-bg);border-radius:var(--radius);padding:32px;border:1.5px solid var(--border);">
+            <h2 style="font-family:Georgia,serif;font-size:1.6rem;font-weight:800;color:var(--text-primary);margin:0 0 14px 0;">Our Story</h2>
+            <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.8;margin:0;">
+              Livable Telluride grew out of "Let the People Decide," a grassroots effort built around Measure 300 in November 2024. After that chapter closed, the organization evolved to focus on the broader, ongoing work of keeping Telluride functional, welcoming, and worth living in for the people who call it home. The name change reflects a shift from a single ballot question to a lasting commitment to community well-being.
+            </p>
+          </div>
+        </div>
+        <div>
+          <img src="photos-box-canyon.jpg" alt="Telluride box canyon autumn landscape" style="width:100%;height:100%;min-height:400px;object-fit:cover;border-radius:var(--radius);">
         </div>
       </div>
 
@@ -2075,7 +2082,7 @@
     <button class="footer-correction-btn" id="correctionFab">✏️ See something wrong? Suggest a Correction</button>
   </div>
 
-<script src="js/gov-hub.js?v=20260401b"></script>
+<script src="js/gov-hub.js"></script>
 
 <!-- ══════════ Events Around Me Modal ══════════ -->
 <div class="prox-modal-overlay" id="proxOverlay">
@@ -2242,7 +2249,7 @@
 <!-- ── Local Groups Filter ── -->
 <script src="js/local-groups.js"></script>
 <!-- Google Translate -->
-<script src="js/legal-standalone.js?v=20260401k"></script>
+<script src="js/legal-standalone.js?v=20260401f"></script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
