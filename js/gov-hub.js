@@ -270,8 +270,8 @@ async function fetchCountyMeetings() {
         sourceLabel: 'San Miguel County',
         category: 'Meeting',
         canceled: isCanceled,
-        hasAgenda: isGovMeeting,
-        agendaLink
+        hasAgenda: isGovMeeting && !isCanceled,
+        agendaLink: isCanceled ? null : agendaLink
       };
     });
   } catch (err) {
@@ -5658,9 +5658,9 @@ function renderMeetingsWithTopic() {
       const timePart = item.eventTimes || '';
       const locationPart = item.location ? '<span class="location">📍 ' + item.location + '</span>' : '';
       const agendaUrl = item.agendaLink || item.link;
-      const agendaBadge = item.hasAgenda
+      const agendaBadge = (item.hasAgenda && !item.canceled)
         ? '<a href="' + agendaUrl + '" target="_blank" rel="noopener" class="agenda-link agenda-posted">Agenda Posted →</a>'
-        : '<span class="agenda-link" style="opacity:0.5;cursor:default;pointer-events:none;">Agenda Posted →</span>';
+        : '<span class="agenda-link" style="opacity:0.5;cursor:default;pointer-events:none;">' + (item.canceled ? 'Canceled' : 'Agenda Posted →') + '</span>';
       const cancelStyle = item.canceled ? ' style="opacity: 0.55; text-decoration: line-through;"' : '';
       const summary = item.canceled ? '' : getMeetingSummary(item);
       // START: AI-enhanced summary rendering
