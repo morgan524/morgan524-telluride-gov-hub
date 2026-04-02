@@ -257,6 +257,8 @@ async function fetchCountyMeetings() {
       const agendaLink = isGovMeeting ? getCountyAgendaLink(item.title, eventDate) : null;
       const isCanceled = /cancel/i.test(item.title) || /cancel/i.test(descText);
       const displayTitle = isCanceled ? (item.title || 'Untitled').replace(/\s*-?\s*cancel(l?ed)?/gi, '').trim() + ' -- CANCELED' : (item.title || 'Untitled');
+      // Only show green "Agenda Posted" when we have a specific agenda link (not the fallback)
+      const hasRealAgenda = isGovMeeting && !isCanceled && agendaLink && agendaLink !== COUNTY_CIVICCLERK_FALLBACK;
 
       return {
         title: displayTitle,
@@ -270,7 +272,7 @@ async function fetchCountyMeetings() {
         sourceLabel: 'San Miguel County',
         category: 'Meeting',
         canceled: isCanceled,
-        hasAgenda: isGovMeeting && !isCanceled,
+        hasAgenda: hasRealAgenda,
         agendaLink: isCanceled ? null : agendaLink
       };
     });
