@@ -18,13 +18,13 @@ const COUNTY_CALENDAR_URL = 'https://sanmiguelcountyco.gov/RSSFeed.aspx?ModID=58
 // ── News feeds ──
 const NEWS_FEEDS = [
   {
-    url: 'https://townoftelluride.com/RSSFeed.aspx?ModID=1&CID=Town-News-1',
+    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=1&CID=Town-News-1',
     source: 'telluride',
     sourceLabel: 'Town of Telluride',
     category: 'Town News'
   },
   {
-    url: 'https://townoftelluride.com/RSSFeed.aspx?ModID=1&CID=Marshals-Department-12',
+    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=1&CID=Marshals-Department-12',
     source: 'telluride',
     sourceLabel: 'Town of Telluride',
     category: "Marshal's Dept"
@@ -42,7 +42,7 @@ const NEWS_FEEDS = [
     category: 'Alert'
   },
   {
-    url: 'https://townoftelluride.com/RSSFeed.aspx?ModID=63&CID=All-0',
+    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=63&CID=All-0',
     source: 'telluride',
     sourceLabel: 'Town of Telluride',
     category: 'Alert'
@@ -672,6 +672,16 @@ const SCHOOL_CACHE_DATE = '2026-03-24';
 
 const SCHOOL_CACHED_DATA = [
   // ── Upcoming (no agendas yet) ──
+  {
+    date: 'April 20, 2026',
+    time: '5:15 PM',
+    title: 'Board of Education Special Meeting',
+    agendaUrl: null,
+    packetUrl: null,
+    special: true,
+    location: 'Bridal Veil District Conference Room / Zoom',
+    note: 'Special meeting -- agenda posted closer to the date.'
+  },
   {
     date: 'April 27, 2026',
     time: '3:30 PM',
@@ -1330,7 +1340,7 @@ async function loadAISummaries() {
 }
 
 // ── Manual/fallback summaries (preserved from original) ──
-// Last updated: 2026-04-02T18:00 (automated scan — HARC Apr 15 agenda now posted, summary updated with actual items; Vending Apr 2 confirmed current; HARC Chair Apr 15 CANCELED; Parks & Rec Apr 15 CANCELED; P&Z Chair Apr 23 CANCELLED; THA Special Apr 9 no agenda yet; BOCC Apr 6-17 spring break recess; County Planning Apr 2 event 1025 status unchanged; SMRHA Apr 13 1pm Zoom confirmed (packet avail 24hr before); no new agendas for BOCC Apr 22/29, TC ~Apr 21, SMART Apr 9, MV Council ~Apr 23, School Apr 20/27/28, Fire ~Apr 21, Med TBD)
+// Last updated: 2026-04-03T12:00 (automated scan — Town Council confirmed Apr 28 (was ~Apr 21); new THA meetings Apr 23/24/28 discovered; Election Commission Apr 29 new; Parks & Rec rescheduled to Apr 29; Liquor Licensing Apr 23 new; School District Special Meeting Apr 20 added to cache; HARC Apr 15 Published=true, summary current; SMRHA Apr 13 1pm Zoom confirmed; no new agendas posted for BOCC Apr 22/29, SMART Apr 9, MV Council Apr 23, School Apr 20/27/28, Fire ~Apr 21, Med Apr 23; BOCC Apr 8 work session event 986 — JS portal, no agenda visible yet)
 const MANUAL_SUMMARIES = {
   // ── Telluride ──
   'telluride|2026-03-31|Town Council':
@@ -1346,6 +1356,10 @@ const MANUAL_SUMMARIES = {
   // ── Telluride HARC ──
   'telluride|2026-04-15|Historic & Architectural Review Commission':
     'PUBLIC HEARING: 238 N Pine St (Lot 18B) — small-scale demolition of non-rated THAS structure + new construction (950–2,500 sq ft) + repositioning of THAS secondary structure (continued from Feb 18) · 238 N Pine St (Lot 18A) — small-scale demolition + new construction (continued from Feb 18) · WORK SESSION: 208 S Fir St — large-scale mixed-use replacement structure (5,000+ sq ft, Commercial Zone, NIBA LLC) · Colorado Wildfire Resiliency Code work session · Community Engagement — Historic Preservation discussion',
+
+  // ── County BOCC Work Session Apr 8 ──
+  'county|2026-04-08|Board of County Commissioners Work Session':
+    'Work session — agenda details pending. Full packet expected on CivicClerk portal (event 986) by Monday Apr 6. Topics TBD.',
 
   // ── SMART ──
   // (smart|2026-04-09 -- agenda not yet posted, will add when available)
@@ -1377,10 +1391,20 @@ const MANUAL_SUMMARIES = {
   // (smrha|2026-04-13 -- SMRHA board meeting 1pm via Zoom, packet not yet posted, will add when available)
 
   // ── Telluride Town Council (next) ──
-  // (telluride|~2026-04-21 -- next TC meeting ~3 weeks from Mar 31, agenda not yet posted, will add when available)
+  // (telluride|2026-04-28|Town Council -- confirmed Apr 28, agenda not yet posted, will add when available)
+  // (telluride|2026-04-28|Telluride Housing Authority -- confirmed Apr 28 2:30pm, agenda not yet posted)
+
+  // ── Telluride Sub-commissions (Apr 23-24) ──
+  // (telluride|2026-04-23|Planning & Zoning Commission -- Apr 23 5:30pm, agenda not yet posted)
+  // (telluride|2026-04-23|Liquor Licensing Authority -- Apr 23 3pm, new meeting discovered, agenda not yet posted)
+  // (telluride|2026-04-23|Telluride Housing Authority Subcommittee Special Meeting -- Apr 23 9am, agenda not yet posted)
+  // (telluride|2026-04-24|Telluride Housing Authority Subcommittee Special Meeting SMRHA Lottery Drawing -- Apr 24 10am, agenda not yet posted)
+  // (telluride|2026-04-24|Telluride Housing Authority Subcommittee Special Meeting Boarding House Master Lease Lottery -- Apr 24 8:30am, agenda not yet posted)
+  // (telluride|2026-04-29|Election Commission -- Apr 29 3pm, new meeting discovered, agenda not yet posted)
+  // (telluride|2026-04-29|RESCHEDULED Parks & Recreation Commission -- Apr 29 12pm, rescheduled from Apr 15, agenda not yet posted)
 
   // ── Medical Center / Hospital District ──
-  // (med -- no April meeting listed yet, will add when available)
+  // (med|2026-04-23 -- Regular Board Meeting confirmed in cache, agenda not yet posted)
 
   // ── Telluride Sub-commissions (April 2026) ──
   'telluride|2026-04-01|Telluride Housing Authority Subcommittee':
@@ -2141,7 +2165,7 @@ const LAND_USE_ISSUES = {
     docs: [
       { title: 'Society Turn PUD Information', copy: 'Developer site with aerial imagery, project features, community benefits, and mixed-use development details.', tag: 'Developer', href: 'https://societyturn.info/' },
       { title: 'San Miguel County CivicClerk Portal', copy: 'Best place to look for county-side packets, work sessions, and supporting development materials.', tag: 'County Record', href: 'https://sanmiguelcoco.portal.civicclerk.com/' },
-      /* Removed 2026-04-02: sanmiguelcountyco.gov/192/Board-of-County-Commissioners redirects to wrong page (Juvenile Services) */
+      { title: 'County Commissioners Page', copy: 'Track BOCC agendas and board-level movement on major regional items.', tag: 'BOCC', href: 'https://sanmiguelcountyco.gov/192/Board-of-County-Commissioners' },
       { title: 'Telluride Medical Center Board Meetings', copy: 'Useful when hospital facility planning overlaps with Society Turn discussions.', tag: 'Hospital', href: 'https://www.tellmed.org/board-meetings' }
     ],
     players: [
@@ -2170,7 +2194,7 @@ const LAND_USE_ISSUES = {
     ],
     docs: [
       { title: 'San Miguel County CivicClerk Portal', copy: 'Source for ordinance drafts, staff memos, and joint work-session materials.', tag: 'Draft Text', href: 'https://sanmiguelcoco.portal.civicclerk.com/' },
-      /* Removed 2026-04-02: sanmiguelcountyco.gov/424/Boards-Commissions returned 404 */
+      { title: 'County Boards & Commissions', copy: 'Use this to identify whether Planning Commission or BOCC is the key venue at each stage.', tag: 'Process Guide', href: 'https://sanmiguelcountyco.gov/424/Boards-Commissions' },
       { title: 'Town of Telluride Agendas & Minutes', copy: 'Important when related code conversations move inside town jurisdiction as well.', tag: 'Town Record', href: 'https://telluride-co.civicweb.net/Portal/MeetingTypeList.aspx' }
     ],
     players: [
@@ -2199,7 +2223,7 @@ const LAND_USE_ISSUES = {
     ],
     docs: [
       { title: 'Town of Telluride Agendas & Minutes', copy: 'Watch for wildfire resiliency code adoption on Town Council agendas.', tag: 'Town Record', href: 'https://telluride-co.civicweb.net/Portal/MeetingTypeList.aspx' },
-      { title: 'Telluride Fire Protection District', copy: 'Fire district meetings where WUI and resiliency code resolutions are being considered.', tag: 'Fire District', href: 'https://www.telluridefire.com/' },
+      { title: 'Telluride Fire Protection District', copy: 'Fire district meetings where WUI and resiliency code resolutions are being considered.', tag: 'Fire District', href: 'https://telluridefire.com/' },
       { title: 'San Miguel County CivicClerk Portal', copy: 'County-level forestry and fire code discussions.', tag: 'County Record', href: 'https://sanmiguelcoco.portal.civicclerk.com/' }
     ],
     players: [
@@ -2283,7 +2307,7 @@ const GONDOLA_DATA = {
     { title: 'Plaintiff\'s Written Closing Argument', copy: 'Masson\'s post-trial closing argument contending SMART provided no meaningful public notice for opposition comments, and that the TABOR notice misleadingly omitted the "slush fund" nature of capital improvement spending.', tag: 'Closing Arg. 2025' },
     { title: 'Contestor Emily Masson\'s Trial Brief', copy: 'Pre-trial brief filed by Starritt Legal LLC arguing voters had only 12-24 hours to submit opposition comments and that TABOR notice language regarding "capital improvements" was misleading.', tag: 'Trial Brief 2025' },
     { title: 'Written Statement to Contest Ballot Issue 3A', copy: 'Original election contest filing by Emily Masson (Case 2024CV8) challenging 3A on grounds of non-resident voter eligibility, inadequate TABOR notice, misleading ballot language, and unlawful public entity campaign contributions.', tag: 'Filing 2024' },
-    /* Removed 2026-04-02: smartgov.org/meetings/ returned 404 */
+    { title: 'SMART Board Meeting Agendas', copy: 'Official meeting materials for the San Miguel Authority for Regional Transportation.', tag: 'SMART', href: 'https://smartgov.org/meetings/' },
     { title: 'San Miguel County CivicClerk Portal', copy: 'County-level records relevant to SMART district and gondola discussions.', tag: 'County Record', href: 'https://sanmiguelcoco.portal.civicclerk.com/' }
   ],
   legalIssues: [
@@ -2779,7 +2803,7 @@ async function fetchKOTONews() {
   // Fallback: hardcoded upcoming KOTO Community Calendar events (non-library only)
   const calLink = KOTO_CAL_URL;
   return [
-    /* Removed 2026-04-02: KOTO CPR World event page returned 404 (past event) */
+    { title: 'CPR World First Aid & CPR Certification', link: 'https://koto.org/event/cpr-world-first-aid-and-cpr-certification-in-mountain-village/', description: '12:00 PM – 4:30 PM · CPR World offers First Aid and CPR certification. Register at cprworld.com or call (970) 729-2779.', pubDate: new Date('2026-03-29T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'Mountain Village Fire Station, 411 Mountain Village Blvd' },
     { title: 'Telluride Mountain School Open House', link: 'https://koto.org/event/telluride-mountain-school-open-house/', description: '5:00 PM – 6:00 PM · Join an evening of conversation about the next chapter for TMS\u2014new leadership, updated programming, and a refreshed mission. Wine, appetizers, and childcare provided.', pubDate: new Date('2026-03-31T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'Telluride Mountain School, 200 San Miguel River Dr', imageUrl: 'https://koto.org/wp-content/uploads/2026/03/Open-House.png' },
     { title: 'Healthy Kids Colorado Survey Data Sharing', link: 'https://koto.org/event/healthy-kids-colorado-survey-2025-data-sharing-event/', description: '5:15 PM – 7:00 PM · Explore key insights from the 2025 HKCS, celebrate positive trends, and discuss how to support local youth. Free and open to all.', pubDate: new Date('2026-03-31T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'Telluride Science & Innovation Center', imageUrl: 'https://koto.org/wp-content/uploads/2026/03/HKCS-Workshop-Flyer.png' },
     { title: 'Art Walk Telluride', link: 'https://koto.org/event/art-walk-telluride/2026-04-02/', description: '5:00 PM – 7:00 PM · First-Thursday gallery walk featuring inspiring exhibits, receptions, and a chance to meet local and visiting artists. Details at telluridearts.org.', pubDate: new Date('2026-04-02T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'Downtown Telluride galleries', imageUrl: 'https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png' },
@@ -4059,71 +4083,8 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 });
 
 // ══════════ TELLURIDE TIMES — CURRENT HOMEPAGE STORIES ══════════
-// Updated: 2026-04-03  — refresh periodically from telluridenews.com
+// Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
-  {
-    title: "Celebrate closing weekend",
-    source: "Telluride Times",
-    date: "April 3, 2026",
-    newsTopic: "arts-culture",
-    copy: "A range of bands and DJs are on hand to play Telluride into off-season, from LP Giobbi at Heritage Plaza and The Alibi to Easy Jim at the Sheridan Opera House and the Mountain Village Closing Weekend Bash.",
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_0ffe0247-ee72-4cc6-8e59-23574ac6c4f2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/a3/ca3dd84a-9a81-4cc9-842c-03da3130932a/69cb6e2762867.image.jpg"
-  },
-  {
-    title: "Super Cyclery",
-    source: "Telluride Times",
-    date: "April 2, 2026",
-    newsTopic: "business",
-    copy: "Max Cooper and Steven Steinberg opened Telluride Cyclery on Feb. 13 in the former Box Canyon Bicycles space at 300 W. Colorado Ave., offering bike and Nordic ski service, rentals and sales.",
-    href: "https://www.telluridenews.com/business/article_b7a23f29-42e9-4c06-8410-d75fc8584fd8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/79/a7962e60-5866-4b40-9f81-234a875e5c18/69cb6ae48d001.image.jpg"
-  },
-  {
-    title: "Snapshots from the middle",
-    source: "Telluride Times",
-    date: "April 2, 2026",
-    newsTopic: "community",
-    copy: "Columnist Jen Julia reflects on life in the middle — caring for aging parents in Maine while her Telluride family scatters across the country, from mogul competitions to AP classes.",
-    href: "https://www.telluridenews.com/opinion/columnists/article_d722598b-eb78-4b0a-80dc-ebf28202dcf1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/36/43640baf-ddd4-4735-80c6-dd4ea97c775a/69cca6c96283b.image.jpg"
-  },
-  {
-    title: "Flock to the fun",
-    source: "Telluride Times",
-    date: "April 2, 2026",
-    newsTopic: "community",
-    copy: "The pink flamingo costume contest returns at KOTO\’s Spring Street Dance on Friday, April 3. People of all ages are invited to West Colorado Avenue for live music from The Other Brothers, an Allman Brothers tribute band.",
-    href: "https://www.telluridenews.com/news/article_d9c05b19-e744-404f-9f47-4a91a89ad411.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/b5/db5ef660-af07-480d-a1ba-55171586422f/69c9853373f12.image.jpg"
-  },
-  {
-    title: "Busting out of the bubble",
-    source: "Telluride Times",
-    date: "April 1, 2026",
-    newsTopic: "community",
-    copy: "For Telluride high school students, a semester away through the Semester Schools Network can be life-changing — from kayaking in the Bahamas to farming in Vermont, students return transformed.",
-    href: "https://www.telluridenews.com/news/article_4e8dbcde-88cd-4ed8-974c-5601666dd4d8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/9f/19fc7dcb-0568-4810-869d-8393e194c651/69c7316054c1b.image.jpg"
-  },
-  {
-    title: "UPDATE: Telluride Ski Resort to re-open Friday",
-    source: "Telluride Times",
-    date: "April 1, 2026",
-    newsTopic: "business",
-    copy: "Telluride Ski Resort announced it will re-open Friday, April 3, with the goal of remaining open through the scheduled closing on Sunday, April 5, after closing mid-week to preserve snow.",
-    href: "https://www.telluridenews.com/news_release/article_16473284-9fa7-4518-b3d8-43a48dc7a5aa.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/2c/c2c57f30-7503-41d0-84f3-05ed163b162e/69cb0bf82b841.image.jpg"
-  },
-  {
-    title: "Opening the door to recovery in western Colorado",
-    source: "Telluride Times",
-    date: "April 1, 2026",
-    newsTopic: "community",
-    copy: "The Recovery Access Fund, supported by opioid settlement funding, has helped over 150 people across Delta, Montrose, Ouray and San Miguel counties begin behavioral health treatment.",
-    href: "https://www.telluridenews.com/opinion/columnists/article_ab6bb37f-8a9f-44a5-81f3-822944b404d8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/61/a61314f5-8a69-4c0c-9dbb-bb8f21de2939/69cca3a5e67b2.image.jpg"
-  },
   {
     title: "Housing ‘fast-track’ amendment discussions continue",
     source: "Telluride Times",
@@ -4134,11 +4095,11 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/b6/4b62beda-dbf7-488a-be75-4b7c7497789f/69cb688ca44ed.image.jpg"
   },
   {
-    title: "Wildfire sparked northwest of Telluride airport",
+    title: "Wildfire burning near Greyhead",
     source: "Telluride Times",
-    date: "April 1, 2026",
+    date: "March 31, 2026",
     newsTopic: "public-safety",
-    copy: "Amid the exceptionally dry conditions, the San Miguel County Sheriff\’s Office released information about a wildfire burning near Greyhead Peak northwest of the Telluride airport.",
+    copy: "Amid the exceptionally dry conditions, the San Miguel County Sheriff\'s Office released information about a wildfire burning near Greyhead Peak.",
     href: "https://www.telluridenews.com/news/article_7d7e751e-db54-433d-8fe4-0b051959dab8.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/a8/da80e7b1-924d-43f2-bc3d-b856f91cdfa2/69cc8e64b6012.image.jpg"
   },
@@ -4147,7 +4108,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "March 31, 2026",
     newsTopic: "arts-culture",
-    copy: "Telluride Arts and Citizens State Bank will host Tales from the Season at Telluride Arts\’ headquarters, celebrating the end of the winter season.",
+    copy: "Telluride Arts and Citizens State Bank will host Tales from the Season at Telluride Arts\' headquarters, celebrating the end of the winter season.",
     href: "https://www.telluridenews.com/arts_and_entertainment/article_1c8db2bc-e1b7-4421-9a4b-edf8a342033d.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/21/5219c399-9ccd-45ed-9fe3-f7cae035e92a/69c3187776c24.image.jpg"
   },
@@ -4170,6 +4131,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/d8/6d82ceea-41dc-48ff-bacf-c66b2e5c4172/69c714dff331a.image.png"
   },
   {
+    title: "Telluride Ski Resort revised spring operating schedule",
+    source: "Telluride Times",
+    date: "March 30, 2026",
+    newsTopic: "business",
+    copy: "Telluride Ski Resort will be open on Tuesday, March 31, but then will close for a few days. The reopening schedule will depend on conditions.",
+    href: "https://www.telluridenews.com/news_release/article_16473284-9fa7-4518-b3d8-43a48dc7a5aa.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/2c/c2c57f30-7503-41d0-84f3-05ed163b162e/69cb0bf82b841.image.jpg"
+  },
+  {
     title: "AG candidate Michael Dougherty makes his case in Telluride",
     source: "Telluride Times",
     date: "March 30, 2026",
@@ -4177,15 +4147,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Candidate for Colorado attorney general and current Boulder District Attorney Michael Dougherty held a meet-and-greet Monday in Telluride.",
     href: "https://www.telluridenews.com/news/article_2dd73074-c30a-46b4-b33d-92ce0b671d2f.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/b2/1b271f59-6a17-4db0-acb5-4905eec725ef/69cab6f8564ec.image.jpg"
-  },
-  {
-    title: "Colorado ‘underfunding schools by billions’ prompts Telluride’s mill levy solution",
-    source: "Telluride Times",
-    date: "March 30, 2026",
-    newsTopic: "government",
-    copy: "Residents in the San Miguel County region have undoubtedly been sitting on pins and needles in anticipation of the Colorado Legislative Council\’s quarterly economic forecast.",
-    href: "https://www.telluridenews.com/news/article_d000e0aa-672a-4aef-8786-d8aeaba4cd08.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/9a/99aaecf0-a527-484d-8535-52e203b8119c/69c70f0f0d498.image.jpg"
   },
   {
     title: "Three units available in next housing lottery",
@@ -4197,97 +4158,25 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/1f/f1fc363f-f257-4d3d-b04d-dc91469c781a/69c31fb88e813.image.jpg"
   },
   {
-    title: "A ‘true amenity,’ The Laundromat is back",
+    title: "Colorado ‘underfunding schools by billions’ prompts Telluride’s mill levy solution",
     source: "Telluride Times",
-    date: "March 27, 2026",
-    newsTopic: "business",
-    copy: "A community staple returns as The Laundromat reopens its doors in Telluride, welcomed by locals who consider it an essential amenity.",
-    href: "https://www.telluridenews.com/business/article_10412a6e-4cb1-4ac2-abc8-e916fba2b163.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/e9/ee927412-6804-440a-a62c-4e9f996e9c39/69c210f5d9c85.image.jpg"
-  },
-  {
-    title: "Lady Miners awakened in Aspen",
-    source: "Telluride Times",
-    date: "March 27, 2026",
-    newsTopic: "sports",
-    copy: "The Telluride Lady Miners hit the field in Aspen for an early-season matchup as spring sports get underway in the San Juans.",
-    href: "https://www.telluridenews.com/sports/article_e453d051-a943-4f32-9092-3720aa62c2cc.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/37/d37e471b-68e7-455e-9ac2-45646d83a95a/69c315b8d2e62.image.jpg"
-  },
-  {
-    title: "We’re hooked",
-    source: "Telluride Times",
-    date: "March 25, 2026",
-    newsTopic: "business",
-    copy: "A look at a local business catching the attention of Telluride residents and visitors alike.",
-    href: "https://www.telluridenews.com/business/article_ac06e009-1c73-42a2-acb3-1c805821fb99.html",
-    img: ""
-  },
-  {
-    title: "The Velveteers + homegrown Sister Sabbath at The Alibi",
-    source: "Telluride Times",
-    date: "March 24, 2026",
-    newsTopic: "arts-culture",
-    copy: "Denver garage-rock trio The Velveteers team up with local favorites Sister Sabbath for a high-energy show at The Alibi in Telluride.",
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_57696396-d483-45ea-bbfd-748d1d42a6ec.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/ef/defcc159-7739-495b-ab95-0035c97b0ba9/69c2d1b8e5eb5.image.jpg"
-  },
-  {
-    title: "Performing-arts students get a boost",
-    source: "Telluride Times",
-    date: "March 23, 2026",
-    newsTopic: "arts-culture",
-    copy: "Local performing-arts students receive new support and opportunities to develop their talents in the Telluride community.",
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_eb8a68ed-720b-4883-8cb2-4a531704ba99.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/99/b9910ff9-84da-43f9-9ca9-4cfcf26a7fe9/69bed41e01ef7.image.jpg"
-  },
-  {
-    title: "Miners top a Butte, then a Mountain",
-    source: "Telluride Times",
-    date: "March 23, 2026",
-    newsTopic: "sports",
-    copy: "The Telluride Miners notch victories over Crested Butte and then a Mountain opponent as the spring sports season heats up.",
-    href: "https://www.telluridenews.com/sports/article_7bf96048-94d5-422b-a342-74bf830b1b47.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8c/f8c28f60-86c3-4eff-8120-32fd30db8e3a/69c30cdc351f3.image.jpg"
-  },
-  {
-    title: "Energy audits for local businesses",
-    source: "Telluride Times",
-    date: "March 21, 2026",
-    newsTopic: "business",
-    copy: "Local businesses in the Telluride area can take advantage of energy audit programs to improve efficiency and reduce costs.",
-    href: "https://www.telluridenews.com/business/article_b8ed6bb8-1782-45c6-8225-eebf4e0f5d69.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/cd/8cd2c6f2-32cb-4ce1-aeaf-bff413bc3074/69ba35ff6e434.image.jpg"
+    date: "March 30, 2026",
+    newsTopic: "community",
+    copy: "Residents in the San Miguel County region have undoubtedly been sitting on pins and needles in anticipation of the Colorado Legislative Council\'s quarterly economic forecast.",
+    href: "https://www.telluridenews.com/news/article_d000e0aa-672a-4aef-8786-d8aeaba4cd08.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/9a/99aaecf0-a527-484d-8535-52e203b8119c/69c70f0f0d498.image.jpg"
   }
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
-// Updated: 2026-04-03  — refresh periodically from koto.org/news-category/newscasts/
+// Updated: 2026-04-01  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
-  {
-    title: "Newscast 4-2-26",
-    source: "KOTO Community Radio",
-    date: "April 2, 2026",
-    newsTopic: "government",
-    copy: "Floating solar on Reservoir Number 2. Soul comes to Music on the Mesa. Michael Dougherty looks for attorney general nomination.",
-    href: "https://koto.org/news/newscast-4-2-26/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  },
-  {
-    title: "Newscast 4-1-26",
-    source: "KOTO Community Radio",
-    date: "April 1, 2026",
-    newsTopic: "public-safety",
-    copy: "Fire season ignites with Willow Springs Fire. Telluride discusses the housing waitlist. Hetal Doshi runs for Colorado attorney general.",
-    href: "https://koto.org/news/newscast-4-1-26/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  },
   {
     title: "Newscast 3-30-26",
     source: "KOTO Community Radio",
     date: "March 30, 2026",
     newsTopic: "government",
-    copy: "Mountain Village implements water restrictions. Coming Up Next, Telluride. Lawmakers talk housing, conversion therapy, and the budget.",
+    copy: "Mountain Village discusses new water restrictions. Coming Up Next in Telluride. Lawmakers talk housing policy, conversion therapy ban, and state budget shortfalls.",
     href: "https://koto.org/news/newscast-3-30-26/",
     img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
   },
@@ -4305,7 +4194,7 @@ const KOTO_NEWSCASTS = [
     source: "KOTO Community Radio",
     date: "March 26, 2026",
     newsTopic: "government",
-    copy: "Local governments discuss water and wastewater infrastructure upgrades across Telluride, Norwood, Rico, Ophir and Mountain Village. Also: West End Roundup with the San Miguel Basin Forum, and avalanche dog Mona\'s retirement from Telluride Ski Patrol after 13 years of service.",
+    copy: "Local governments discuss water and wastewater infrastructure upgrades across Telluride, Norwood, Rico, Ophir and Mountain Village. Also: West End Roundup with the San Miguel Basin Forum, and avalanche dog Mona's retirement from Telluride Ski Patrol after 13 years of service.",
     href: "https://koto.org/news/newscast-3-26-26/",
     img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
   },
@@ -4314,7 +4203,7 @@ const KOTO_NEWSCASTS = [
     source: "KOTO Community Radio",
     date: "March 25, 2026",
     newsTopic: "arts-culture",
-    copy: "Jazz shakes things up. A Telluride Historical Museum update. Cat Movie Fisher with Risho Unda.",
+    copy: "The Telluride Jazz Festival shifts to a streamlined two-day format for 2026 with headliners The Disco Biscuits and Lettuce. Also: Telluride Historical Museum reports a record year, and Telluride Arts opens 2026 grant applications.",
     href: "https://koto.org/news/newscast-3-25-26/",
     img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
   },
@@ -4323,7 +4212,7 @@ const KOTO_NEWSCASTS = [
     source: "KOTO Community Radio",
     date: "March 23, 2026",
     newsTopic: "government",
-    copy: "Norwood death under investigation. Telluride talks parking, again. Lawmakers work on the budget.",
+    copy: "A death outside Norwood is under investigation by the Colorado Bureau of Investigation. Telluride Town Council votes to eliminate angled parking on Main Street after a year of public debate. Also: lawmakers work on balancing Colorado's $1.5 billion budget shortfall.",
     href: "https://koto.org/news/newscast-3-23-26/",
     img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
   },
@@ -4332,24 +4221,33 @@ const KOTO_NEWSCASTS = [
     source: "KOTO Community Radio",
     date: "March 20, 2026",
     newsTopic: "community",
-    copy: "This week on the Regional Roundup: declining moose populations and Wyoming\'s annual count, the mountain West\'s sport of skijoring, building community resilience amid climate change, and best-selling author Terry Tempest Williams on protecting public lands.",
+    copy: "This week on the Regional Roundup: declining moose populations and Wyoming's annual count, the mountain West's sport of skijoring, building community resilience amid climate change, and best-selling author Terry Tempest Williams on protecting public lands.",
     href: "https://koto.org/news/newscast-3-20-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+  },
+  {
+    title: "Newscast 3-19-26",
+    source: "KOTO Community Radio",
+    date: "March 19, 2026",
+    newsTopic: "government",
+    copy: "San Miguel County adopts the West End Vision Plan. Society Turn development breaks ground. Skijoring takes Main Street by storm.",
+    href: "https://koto.org/news/newscast-3-19-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+  },
+  {
+    title: "Newscast 3-18-26",
+    source: "KOTO Community Radio",
+    date: "March 18, 2026",
+    newsTopic: "government",
+    copy: "Dan Covault runs for San Miguel County Sheriff. Telluride updates housing policies and guidelines. Plus: Cat Movie Fisher with Risho Unda.",
+    href: "https://koto.org/news/newscast-3-18-26/",
     img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
   }
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
-// Updated: 2026-04-03  — refresh periodically from koto.org/news-category/featured-stories/
+// Updated: 2026-04-01  — refresh periodically from koto.org/news-category/featured-stories/
 const KOTO_FEATURED_STORIES = [
-  {
-    title: "Floating Solar on Reservoir Number 2",
-    source: "KOTO Community Radio",
-    date: "April 2, 2026",
-    newsTopic: "community",
-    copy: "Norwood is teaming up with EcoAction Partners and the Colorado School of Mines to explore floatovoltaics — floating solar panels — to reduce evaporation, prevent algae blooms, and generate renewable energy.",
-    href: "https://koto.org/news/norwood-floating-solar-water-conservation/",
-    img: "https://koto.org/wp-content/uploads/2026/04/IMG_0935-scaled.jpeg"
-  },
   {
     title: "A Retirement Party for Mona",
     source: "KOTO Community Radio",
@@ -4367,6 +4265,15 @@ const KOTO_FEATURED_STORIES = [
     copy: "Telluride held its inaugural skijoring competition on Main Street, drawing hundreds of spectators as horses pulled skiers down a snow-covered course at top speed.",
     href: "https://koto.org/news/telluride-skijoring-2026/",
     img: "https://koto.org/wp-content/uploads/2026/03/DSC_0586-scaled.jpeg"
+  },
+  {
+    title: "Dan Covault Runs for San Miguel County Sheriff",
+    source: "KOTO Community Radio",
+    date: "March 18, 2026",
+    newsTopic: "government",
+    copy: "Dan Covault, appointed sheriff in 2025 after Bill Masters\' retirement, is running as an independent with 26 years of San Miguel County law enforcement experience.",
+    href: "https://koto.org/news/dan-covualt-runs-for-san-miguel-county-sheriff/",
+    img: "https://koto.org/wp-content/uploads/2026/03/Untitled-design-6.jpg"
   }
 ];
 
@@ -4545,7 +4452,7 @@ const LOCAL_GROUP_SCHEDULES = [
     dayOfWeek: 4,        // Thursday
     time: '6:30 PM',
     locations: ['472 W Pacific Ave, Telluride'],
-    href: 'https://www.facebook.com/pages/Telluride-Elks-Lodge-692/232150316875640', /* Updated 2026-04-02: tellurideelks.org returned 404 */
+    href: 'https://tellurideelks.org',
     note: 'Board/House Committee meets 2nd Thursdays at 5:30 PM.'
   },
   {
@@ -4974,7 +4881,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-04-01'; // Updated by legal-notice-update task
+const LEGAL_NOTICES_CACHE_DATE = '2026-04-02'; // Updated by legal-notice-update task
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -5035,21 +4942,6 @@ const LEGAL_NOTICES = [
     dates: '3/12, 3/19, 3/26, 4/2',
     papers: ['ttimes'],
     address: '155 W Pacific Ave, Telluride, CO'
-  },
-  {
-    title: 'Request for Proposals -- Summer Burn Pile Construction',
-    entity: 'Town of Mountain Village',
-    entityClass: 'ent-mv',
-    entityLogo: 'mv',
-    icon: '🌲',
-    iconClass: 'type-rfp',
-    type: 'RFP',
-    filterTag: 'public-entity',
-    summary: 'Mountain Village seeks proposals to build burn piles during the 2026 summer season (May 18 - Oct 31). A mandatory site walk must occur between March 2 and April 2. Contact Town Forester Rodney Walters at rwalters@mtnvillage.org or (970) 369-8603.',
-    deadline: 'Proposals due April 2, 2026 at 11:59 PM',
-    expires: '2026-04-02',
-    dates: '3/12, 3/19, 3/26',
-    papers: ['ttimes']
   },
   {
     title: 'Bid Notice -- 2026 Parking Lots Overlay Project',
@@ -5131,6 +5023,55 @@ const LEGAL_NOTICES = [
     papers: ['county_web'],
     url: 'https://townofmountainvillage.com/government/bids-rfps/procurement-materials/'
   },
+  // ── April 2 (County Bids Page) ──
+  {
+    title: 'RFP -- Deep Creek Workforce Housing Planning Project',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏘️',
+    iconClass: 'type-rfp',
+    type: 'RFP',
+    filterTag: 'housing',
+    summary: 'San Miguel County is seeking proposals for the Deep Creek Workforce Housing Planning Project. Full RFP documents and submission requirements available at sanmiguelcountyco.gov/Bids.aspx.',
+    deadline: 'Proposals due April 9, 2026 at 4:00 PM',
+    expires: '2026-04-09',
+    dates: '4/2',
+    papers: ['county_web'],
+    url: 'https://www.sanmiguelcountyco.gov/Bids.aspx'
+  },
+  {
+    title: 'RFP -- Floor Replacement for Courthouse & Miramonte Building',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏛️',
+    iconClass: 'type-rfp',
+    type: 'RFP',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County is seeking proposals for floor replacement at the Courthouse and Miramonte Building. Full RFP documents and submission requirements available at sanmiguelcountyco.gov/Bids.aspx.',
+    deadline: 'Proposals due April 24, 2026 at 11:59 PM',
+    expires: '2026-04-24',
+    dates: '4/2',
+    papers: ['county_web'],
+    url: 'https://www.sanmiguelcountyco.gov/Bids.aspx'
+  },
+  {
+    title: 'RFP -- Sheriff\'s Office Jail Based Behavioral Services',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '⚖️',
+    iconClass: 'type-rfp',
+    type: 'RFP',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County is seeking proposals from qualified providers to deliver jail-based behavioral services at the Sheriff\'s Office. Full RFP documents and submission requirements available at sanmiguelcountyco.gov/Bids.aspx.',
+    deadline: 'Proposals due May 1, 2026 at 5:00 PM',
+    expires: '2026-05-01',
+    dates: '4/2',
+    papers: ['county_web'],
+    url: 'https://www.sanmiguelcountyco.gov/Bids.aspx'
+  },
   // ── March 25-31 (County Website) ──
   {
     title: 'Employee Housing Impact Mitigation Fee Increase -- $1,112/sq ft Effective May 1, 2026',
@@ -5190,7 +5131,7 @@ const LEGAL_NOTICES = [
     iconClass: 'type-hearing',
     type: 'Ordinance',
     filterTag: 'ordinance',
-    summary: 'Town Council passed six ordinances on Feb 24, 2026: #1625 amending the 2025 municipal budget; #1626 amending vending code (TMC Ch. 6, Art. 4); #1627 authorizing sale of Longwill 16 A2; #1628 sale of Entrada Unit H; #1629 sale of White House 3C; #1630 sale of Meribel Unit B. Full text at townoftelluride.com.',
+    summary: 'Town Council passed six ordinances on Feb 24, 2026: #1625 amending the 2025 municipal budget; #1626 amending vending code (TMC Ch. 6, Art. 4); #1627 authorizing sale of Longwill 16 A2; #1628 sale of Entrada Unit H; #1629 sale of White House 3C; #1630 sale of Meribel Unit B. Full text at telluride-co.gov.',
     deadline: 'Effective upon publication',
     expires: '2026-04-05',
     dates: '3/5',
@@ -6465,7 +6406,7 @@ const HOUSING_LISTINGS = [
     beds: '1–3 Bedroom', price: 'Income-based (deed-restricted)',
     source: 'Town of Telluride',
     contact: { phone: '(970) 728-4025', email: 'housing@telluride-co.gov' },
-    url: 'https://www.townoftelluride.com/745/Town-Owned-Rental-Properties',
+    url: 'https://www.telluride-co.gov/745/Town-Owned-Rental-Properties',
     note: 'Waitlist-based. Town employee priority. Apply through the Town of Telluride.'
   },
   {
@@ -6476,13 +6417,54 @@ const HOUSING_LISTINGS = [
     beds: 'Studio–2 Bedroom', price: 'Income-based (deed-restricted)',
     source: 'Town of Telluride',
     contact: { phone: '(970) 728-4025', email: 'housing@telluride-co.gov' },
-    url: 'https://www.townoftelluride.com/745/Town-Owned-Rental-Properties',
+    url: 'https://www.telluride-co.gov/745/Town-Owned-Rental-Properties',
     note: 'Waitlist-based. Apply through the Town of Telluride Rental Housing division.'
   },
   /* ── Market-Rate Active Listings ── */
-  /* Removed 2026-04-02: Craigslist listing 7924056218 returned 410 Gone */
-  /* Removed 2026-04-02: Craigslist listing 7919977718 returned 403 — listing expired */
-  /* Removed 2026-04-02: Apartments.com listings (280 Mahoney Dr, 107 W Columbia Ave) returned 403 — listings removed */
+  {
+    title: 'Luxury Condo — 395 E Colorado Ave',
+    type: 'market-rental',
+    address: '395 E Colorado Ave, Telluride, CO 81435',
+    lat: 37.9375, lng: -107.8095,
+    beds: '3 Bedroom', price: '$2,500/mo',
+    source: 'Craigslist',
+    contact: {},
+    url: 'https://westslope.craigslist.org/apa/d/telluride-luxury-condo/7924056218.html',
+    note: 'Long-term rental. 3BR condo on E Colorado Ave. Verify availability directly.'
+  },
+  {
+    title: '1BR Apartment — 545 W Pacific Ave',
+    type: 'market-rental',
+    address: '545 W Pacific Ave, Telluride, CO 81435',
+    lat: 37.9378, lng: -107.8155,
+    beds: '1 Bedroom', price: '$1,500/mo',
+    source: 'Craigslist',
+    contact: {},
+    url: 'https://westslope.craigslist.org/apa/d/telluride-look-no-further-than-this/7919977718.html',
+    note: 'Long-term rental. 1BR on W Pacific Ave. Verify availability directly.'
+  },
+  {
+    title: '3BR House — 280 Mahoney Dr',
+    type: 'market-rental',
+    address: '280 Mahoney Dr, Telluride, CO 81435',
+    lat: 37.9410, lng: -107.8170,
+    beds: '3 Bedroom', price: '$3,901/mo',
+    source: 'Apartments.com',
+    contact: {},
+    url: 'https://www.apartments.com/280-mahoney-dr-telluride-co/zq5w36n/',
+    note: 'Market-rate long-term rental. Contact listing agent on Apartments.com.'
+  },
+  {
+    title: '1BR — 107 W Columbia Ave',
+    type: 'market-rental',
+    address: '107 W Columbia Ave, Telluride, CO 81435',
+    lat: 37.9373, lng: -107.8128,
+    beds: '1 Bedroom', price: '$2,874/mo',
+    source: 'Apartments.com',
+    contact: {},
+    url: 'https://www.apartments.com/107-w-columbia-ave-telluride-co/f1l2ss1/',
+    note: 'Market-rate long-term rental in downtown Telluride.'
+  }
 ];
 
 let currentHousingFilter = 'all';
@@ -6702,7 +6684,7 @@ const TELLURIDE_FESTIVALS = [
     url: 'https://www.telluridefoodandvine.com/', ticketUrl: 'https://www.telluridefoodandvine.com/events', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '2026 Weekend Pass and featured events available' },
   { name: 'Telluride Horror Show', month: 9, dayStart: 9, dayEnd: 12, icon: '🎃',
     logo: 'https://images.squarespace-cdn.com/content/v1/635aaf48434dcc204d4bfb34/762ca493-d7d2-459e-86a2-214c641c3695/HorrorShowLogoColor_STRAIGHT.png',
-    url: 'https://www.telluridehorrorshow.com/', ticketUrl: 'https://www.telluridehorrorshow.com/', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '3-day passes on sale Mar 25 — 6-packs on sale Jul 1, 2026' },
+    url: 'https://www.telluridehorrorshow.com/', ticketUrl: 'https://www.telluridehorrorshow.com/passes', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '3-day passes on sale Mar 25 — 6-packs on sale Jul 1, 2026' },
   { name: 'Telluride Jazz Festival', month: 7, dayStart: 7, dayEnd: 10, icon: '🎷',
     logo: 'https://images.squarespace-cdn.com/content/v1/583db0c9d1758e46ff3221e9/821ecb11-5000-415a-a970-87b539036111/2026-ebony-color-logo-png-for-website-no-dates.png?format=1500w',
     url: 'https://www.telluridejazz.org/', ticketUrl: 'https://www.telluridejazz.org/tickets', ticketLabel: 'Buy Tickets', ticketStatus: 'on-sale', promo: 'Tickets on sale now — Tier 1 pricing until July 15' },
