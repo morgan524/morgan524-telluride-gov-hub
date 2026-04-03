@@ -1330,7 +1330,7 @@ async function loadAISummaries() {
 }
 
 // ── Manual/fallback summaries (preserved from original) ──
-// Last updated: 2026-04-01T12:00 (automated scan — all 7 meeting summaries verified current, no new agendas found; BOCC Apr 6-17 CANCELED (spring break recess); County Planning Commission Apr 2 on calendar but no agenda posted; SMRHA Apr 13 1pm Zoom confirmed (packet avail 24hr before); no new agendas for BOCC Apr 22/29, TC ~Apr 21, SMART Apr 9, MV Council ~Apr 23, School Apr 20/27/28, Fire ~Apr 21, Med TBD)
+// Last updated: 2026-04-02T18:00 (automated scan — HARC Apr 15 agenda now posted, summary updated with actual items; Vending Apr 2 confirmed current; HARC Chair Apr 15 CANCELED; Parks & Rec Apr 15 CANCELED; P&Z Chair Apr 23 CANCELLED; THA Special Apr 9 no agenda yet; BOCC Apr 6-17 spring break recess; County Planning Apr 2 event 1025 status unchanged; SMRHA Apr 13 1pm Zoom confirmed (packet avail 24hr before); no new agendas for BOCC Apr 22/29, TC ~Apr 21, SMART Apr 9, MV Council ~Apr 23, School Apr 20/27/28, Fire ~Apr 21, Med TBD)
 const MANUAL_SUMMARIES = {
   // ── Telluride ──
   'telluride|2026-03-31|Town Council':
@@ -1345,7 +1345,7 @@ const MANUAL_SUMMARIES = {
 
   // ── Telluride HARC ──
   'telluride|2026-04-15|Historic & Architectural Review Commission':
-    'Agenda scheduled — full packet typically posted the Wednesday before the meeting (April 8). HARC reviews exterior alterations, new construction, demolitions, and signage in Telluride\'s National Historic Landmark District. Check back for specific agenda items.',
+    'PUBLIC HEARING: 238 N Pine St (Lot 18B) — small-scale demolition of non-rated THAS structure + new construction (950–2,500 sq ft) + repositioning of THAS secondary structure (continued from Feb 18) · 238 N Pine St (Lot 18A) — small-scale demolition + new construction (continued from Feb 18) · WORK SESSION: 208 S Fir St — large-scale mixed-use replacement structure (5,000+ sq ft, Commercial Zone, NIBA LLC) · Colorado Wildfire Resiliency Code work session · Community Engagement — Historic Preservation discussion',
 
   // ── SMART ──
   // (smart|2026-04-09 -- agenda not yet posted, will add when available)
@@ -1371,6 +1371,7 @@ const MANUAL_SUMMARIES = {
   // (county|2026-04-06 to 2026-04-17 -- CANCELED, spring break recess, no BOCC meetings)
   // (county|2026-04-22 -- BOCC meeting scheduled, agenda not yet posted, will add when available)
   // (county|2026-04-29 -- BOCC work session scheduled, agenda not yet posted, will add when available)
+  // (county|2026-04-27 -- Open Space Commission 4pm, agenda not yet posted, will add when available)
 
   // ── SMRHA ──
   // (smrha|2026-04-13 -- SMRHA board meeting 1pm via Zoom, packet not yet posted, will add when available)
