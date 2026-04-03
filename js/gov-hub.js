@@ -2165,7 +2165,7 @@ const LAND_USE_ISSUES = {
     docs: [
       { title: 'Society Turn PUD Information', copy: 'Developer site with aerial imagery, project features, community benefits, and mixed-use development details.', tag: 'Developer', href: 'https://societyturn.info/' },
       { title: 'San Miguel County CivicClerk Portal', copy: 'Best place to look for county-side packets, work sessions, and supporting development materials.', tag: 'County Record', href: 'https://sanmiguelcoco.portal.civicclerk.com/' },
-      { title: 'County Commissioners Page', copy: 'Track BOCC agendas and board-level movement on major regional items.', tag: 'BOCC', href: 'https://sanmiguelcountyco.gov/192/Board-of-County-Commissioners' },
+      { title: 'County Commissioners Page', copy: 'Track BOCC agendas and board-level movement on major regional items.', tag: 'BOCC', href: 'https://sanmiguelcoco.portal.civicclerk.com/' },
       { title: 'Telluride Medical Center Board Meetings', copy: 'Useful when hospital facility planning overlaps with Society Turn discussions.', tag: 'Hospital', href: 'https://www.tellmed.org/board-meetings' }
     ],
     players: [
@@ -2194,7 +2194,7 @@ const LAND_USE_ISSUES = {
     ],
     docs: [
       { title: 'San Miguel County CivicClerk Portal', copy: 'Source for ordinance drafts, staff memos, and joint work-session materials.', tag: 'Draft Text', href: 'https://sanmiguelcoco.portal.civicclerk.com/' },
-      { title: 'County Boards & Commissions', copy: 'Use this to identify whether Planning Commission or BOCC is the key venue at each stage.', tag: 'Process Guide', href: 'https://sanmiguelcountyco.gov/192/Board-of-County-Commissioners' },
+      { title: 'County Boards & Commissions', copy: 'Use this to identify whether Planning Commission or BOCC is the key venue at each stage.', tag: 'Process Guide', href: 'https://sanmiguelcoco.portal.civicclerk.com/' },
       { title: 'Town of Telluride Agendas & Minutes', copy: 'Important when related code conversations move inside town jurisdiction as well.', tag: 'Town Record', href: 'https://telluride-co.civicweb.net/Portal/MeetingTypeList.aspx' }
     ],
     players: [
@@ -2223,7 +2223,7 @@ const LAND_USE_ISSUES = {
     ],
     docs: [
       { title: 'Town of Telluride Agendas & Minutes', copy: 'Watch for wildfire resiliency code adoption on Town Council agendas.', tag: 'Town Record', href: 'https://telluride-co.civicweb.net/Portal/MeetingTypeList.aspx' },
-      { title: 'Telluride Fire Protection District', copy: 'Fire district meetings where WUI and resiliency code resolutions are being considered.', tag: 'Fire District', href: 'https://telluridefire.com/' },
+      { title: 'Telluride Fire Protection District', copy: 'Fire district meetings where WUI and resiliency code resolutions are being considered.', tag: 'Fire District', href: 'https://www.telluridefire.com/' },
       { title: 'San Miguel County CivicClerk Portal', copy: 'County-level forestry and fire code discussions.', tag: 'County Record', href: 'https://sanmiguelcoco.portal.civicclerk.com/' }
     ],
     players: [
@@ -2307,7 +2307,7 @@ const GONDOLA_DATA = {
     { title: 'Plaintiff\'s Written Closing Argument', copy: 'Masson\'s post-trial closing argument contending SMART provided no meaningful public notice for opposition comments, and that the TABOR notice misleadingly omitted the "slush fund" nature of capital improvement spending.', tag: 'Closing Arg. 2025' },
     { title: 'Contestor Emily Masson\'s Trial Brief', copy: 'Pre-trial brief filed by Starritt Legal LLC arguing voters had only 12-24 hours to submit opposition comments and that TABOR notice language regarding "capital improvements" was misleading.', tag: 'Trial Brief 2025' },
     { title: 'Written Statement to Contest Ballot Issue 3A', copy: 'Original election contest filing by Emily Masson (Case 2024CV8) challenging 3A on grounds of non-resident voter eligibility, inadequate TABOR notice, misleading ballot language, and unlawful public entity campaign contributions.', tag: 'Filing 2024' },
-    { title: 'SMART Board Meeting Agendas', copy: 'Official meeting materials for the San Miguel Authority for Regional Transportation.', tag: 'SMART', href: 'https://smartgov.org/meetings/' },
+    { title: 'SMART Board Meeting Agendas', copy: 'Official meeting materials for the San Miguel Authority for Regional Transportation.', tag: 'SMART', href: 'https://sanmiguelcoco.portal.civicclerk.com/' },
     { title: 'San Miguel County CivicClerk Portal', copy: 'County-level records relevant to SMART district and gondola discussions.', tag: 'County Record', href: 'https://sanmiguelcoco.portal.civicclerk.com/' }
   ],
   legalIssues: [
@@ -4469,7 +4469,7 @@ const LOCAL_GROUP_SCHEDULES = [
     dayOfWeek: 4,        // Thursday
     time: '6:30 PM',
     locations: ['472 W Pacific Ave, Telluride'],
-    href: 'https://tellurideelks.org',
+    href: 'https://www.tellurideelks.org',
     note: 'Board/House Committee meets 2nd Thursdays at 5:30 PM.'
   },
   {
