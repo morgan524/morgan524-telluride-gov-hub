@@ -18,13 +18,13 @@ const COUNTY_CALENDAR_URL = 'https://sanmiguelcountyco.gov/RSSFeed.aspx?ModID=58
 // ── News feeds ──
 const NEWS_FEEDS = [
   {
-    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=1&CID=Town-News-1',
+    url: 'https://townoftelluride.com/RSSFeed.aspx?ModID=1&CID=Town-News-1',
     source: 'telluride',
     sourceLabel: 'Town of Telluride',
     category: 'Town News'
   },
   {
-    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=1&CID=Marshals-Department-12',
+    url: 'https://townoftelluride.com/RSSFeed.aspx?ModID=1&CID=Marshals-Department-12',
     source: 'telluride',
     sourceLabel: 'Town of Telluride',
     category: "Marshal's Dept"
@@ -42,7 +42,7 @@ const NEWS_FEEDS = [
     category: 'Alert'
   },
   {
-    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=63&CID=All-0',
+    url: 'https://townoftelluride.com/RSSFeed.aspx?ModID=63&CID=All-0',
     source: 'telluride',
     sourceLabel: 'Town of Telluride',
     category: 'Alert'
@@ -2141,7 +2141,7 @@ const LAND_USE_ISSUES = {
     docs: [
       { title: 'Society Turn PUD Information', copy: 'Developer site with aerial imagery, project features, community benefits, and mixed-use development details.', tag: 'Developer', href: 'https://societyturn.info/' },
       { title: 'San Miguel County CivicClerk Portal', copy: 'Best place to look for county-side packets, work sessions, and supporting development materials.', tag: 'County Record', href: 'https://sanmiguelcoco.portal.civicclerk.com/' },
-      { title: 'County Commissioners Page', copy: 'Track BOCC agendas and board-level movement on major regional items.', tag: 'BOCC', href: 'https://sanmiguelcountyco.gov/192/Board-of-County-Commissioners' },
+      /* Removed 2026-04-02: sanmiguelcountyco.gov/192/Board-of-County-Commissioners redirects to wrong page (Juvenile Services) */
       { title: 'Telluride Medical Center Board Meetings', copy: 'Useful when hospital facility planning overlaps with Society Turn discussions.', tag: 'Hospital', href: 'https://www.tellmed.org/board-meetings' }
     ],
     players: [
@@ -2170,7 +2170,7 @@ const LAND_USE_ISSUES = {
     ],
     docs: [
       { title: 'San Miguel County CivicClerk Portal', copy: 'Source for ordinance drafts, staff memos, and joint work-session materials.', tag: 'Draft Text', href: 'https://sanmiguelcoco.portal.civicclerk.com/' },
-      { title: 'County Boards & Commissions', copy: 'Use this to identify whether Planning Commission or BOCC is the key venue at each stage.', tag: 'Process Guide', href: 'https://sanmiguelcountyco.gov/424/Boards-Commissions' },
+      /* Removed 2026-04-02: sanmiguelcountyco.gov/424/Boards-Commissions returned 404 */
       { title: 'Town of Telluride Agendas & Minutes', copy: 'Important when related code conversations move inside town jurisdiction as well.', tag: 'Town Record', href: 'https://telluride-co.civicweb.net/Portal/MeetingTypeList.aspx' }
     ],
     players: [
@@ -2199,7 +2199,7 @@ const LAND_USE_ISSUES = {
     ],
     docs: [
       { title: 'Town of Telluride Agendas & Minutes', copy: 'Watch for wildfire resiliency code adoption on Town Council agendas.', tag: 'Town Record', href: 'https://telluride-co.civicweb.net/Portal/MeetingTypeList.aspx' },
-      { title: 'Telluride Fire Protection District', copy: 'Fire district meetings where WUI and resiliency code resolutions are being considered.', tag: 'Fire District', href: 'https://telluridefire.com/' },
+      { title: 'Telluride Fire Protection District', copy: 'Fire district meetings where WUI and resiliency code resolutions are being considered.', tag: 'Fire District', href: 'https://www.telluridefire.com/' },
       { title: 'San Miguel County CivicClerk Portal', copy: 'County-level forestry and fire code discussions.', tag: 'County Record', href: 'https://sanmiguelcoco.portal.civicclerk.com/' }
     ],
     players: [
@@ -2283,7 +2283,7 @@ const GONDOLA_DATA = {
     { title: 'Plaintiff\'s Written Closing Argument', copy: 'Masson\'s post-trial closing argument contending SMART provided no meaningful public notice for opposition comments, and that the TABOR notice misleadingly omitted the "slush fund" nature of capital improvement spending.', tag: 'Closing Arg. 2025' },
     { title: 'Contestor Emily Masson\'s Trial Brief', copy: 'Pre-trial brief filed by Starritt Legal LLC arguing voters had only 12-24 hours to submit opposition comments and that TABOR notice language regarding "capital improvements" was misleading.', tag: 'Trial Brief 2025' },
     { title: 'Written Statement to Contest Ballot Issue 3A', copy: 'Original election contest filing by Emily Masson (Case 2024CV8) challenging 3A on grounds of non-resident voter eligibility, inadequate TABOR notice, misleading ballot language, and unlawful public entity campaign contributions.', tag: 'Filing 2024' },
-    { title: 'SMART Board Meeting Agendas', copy: 'Official meeting materials for the San Miguel Authority for Regional Transportation.', tag: 'SMART', href: 'https://smartgov.org/meetings/' },
+    /* Removed 2026-04-02: smartgov.org/meetings/ returned 404 */
     { title: 'San Miguel County CivicClerk Portal', copy: 'County-level records relevant to SMART district and gondola discussions.', tag: 'County Record', href: 'https://sanmiguelcoco.portal.civicclerk.com/' }
   ],
   legalIssues: [
@@ -2779,7 +2779,7 @@ async function fetchKOTONews() {
   // Fallback: hardcoded upcoming KOTO Community Calendar events (non-library only)
   const calLink = KOTO_CAL_URL;
   return [
-    { title: 'CPR World First Aid & CPR Certification', link: 'https://koto.org/event/cpr-world-first-aid-and-cpr-certification-in-mountain-village/', description: '12:00 PM – 4:30 PM · CPR World offers First Aid and CPR certification. Register at cprworld.com or call (970) 729-2779.', pubDate: new Date('2026-03-29T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'Mountain Village Fire Station, 411 Mountain Village Blvd' },
+    /* Removed 2026-04-02: KOTO CPR World event page returned 404 (past event) */
     { title: 'Telluride Mountain School Open House', link: 'https://koto.org/event/telluride-mountain-school-open-house/', description: '5:00 PM – 6:00 PM · Join an evening of conversation about the next chapter for TMS\u2014new leadership, updated programming, and a refreshed mission. Wine, appetizers, and childcare provided.', pubDate: new Date('2026-03-31T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'Telluride Mountain School, 200 San Miguel River Dr', imageUrl: 'https://koto.org/wp-content/uploads/2026/03/Open-House.png' },
     { title: 'Healthy Kids Colorado Survey Data Sharing', link: 'https://koto.org/event/healthy-kids-colorado-survey-2025-data-sharing-event/', description: '5:15 PM – 7:00 PM · Explore key insights from the 2025 HKCS, celebrate positive trends, and discuss how to support local youth. Free and open to all.', pubDate: new Date('2026-03-31T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'Telluride Science & Innovation Center', imageUrl: 'https://koto.org/wp-content/uploads/2026/03/HKCS-Workshop-Flyer.png' },
     { title: 'Art Walk Telluride', link: 'https://koto.org/event/art-walk-telluride/2026-04-02/', description: '5:00 PM – 7:00 PM · First-Thursday gallery walk featuring inspiring exhibits, receptions, and a chance to meet local and visiting artists. Details at telluridearts.org.', pubDate: new Date('2026-04-02T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'Downtown Telluride galleries', imageUrl: 'https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png' },
@@ -4455,7 +4455,7 @@ const LOCAL_GROUP_SCHEDULES = [
     dayOfWeek: 4,        // Thursday
     time: '6:30 PM',
     locations: ['472 W Pacific Ave, Telluride'],
-    href: 'https://tellurideelks.org',
+    href: 'https://www.facebook.com/pages/Telluride-Elks-Lodge-692/232150316875640', /* Updated 2026-04-02: tellurideelks.org returned 404 */
     note: 'Board/House Committee meets 2nd Thursdays at 5:30 PM.'
   },
   {
@@ -5100,7 +5100,7 @@ const LEGAL_NOTICES = [
     iconClass: 'type-hearing',
     type: 'Ordinance',
     filterTag: 'ordinance',
-    summary: 'Town Council passed six ordinances on Feb 24, 2026: #1625 amending the 2025 municipal budget; #1626 amending vending code (TMC Ch. 6, Art. 4); #1627 authorizing sale of Longwill 16 A2; #1628 sale of Entrada Unit H; #1629 sale of White House 3C; #1630 sale of Meribel Unit B. Full text at telluride-co.gov.',
+    summary: 'Town Council passed six ordinances on Feb 24, 2026: #1625 amending the 2025 municipal budget; #1626 amending vending code (TMC Ch. 6, Art. 4); #1627 authorizing sale of Longwill 16 A2; #1628 sale of Entrada Unit H; #1629 sale of White House 3C; #1630 sale of Meribel Unit B. Full text at townoftelluride.com.',
     deadline: 'Effective upon publication',
     expires: '2026-04-05',
     dates: '3/5',
@@ -6375,7 +6375,7 @@ const HOUSING_LISTINGS = [
     beds: '1–3 Bedroom', price: 'Income-based (deed-restricted)',
     source: 'Town of Telluride',
     contact: { phone: '(970) 728-4025', email: 'housing@telluride-co.gov' },
-    url: 'https://www.telluride-co.gov/745/Town-Owned-Rental-Properties',
+    url: 'https://www.townoftelluride.com/745/Town-Owned-Rental-Properties',
     note: 'Waitlist-based. Town employee priority. Apply through the Town of Telluride.'
   },
   {
@@ -6386,21 +6386,11 @@ const HOUSING_LISTINGS = [
     beds: 'Studio–2 Bedroom', price: 'Income-based (deed-restricted)',
     source: 'Town of Telluride',
     contact: { phone: '(970) 728-4025', email: 'housing@telluride-co.gov' },
-    url: 'https://www.telluride-co.gov/745/Town-Owned-Rental-Properties',
+    url: 'https://www.townoftelluride.com/745/Town-Owned-Rental-Properties',
     note: 'Waitlist-based. Apply through the Town of Telluride Rental Housing division.'
   },
   /* ── Market-Rate Active Listings ── */
-  {
-    title: 'Luxury Condo — 395 E Colorado Ave',
-    type: 'market-rental',
-    address: '395 E Colorado Ave, Telluride, CO 81435',
-    lat: 37.9375, lng: -107.8095,
-    beds: '3 Bedroom', price: '$2,500/mo',
-    source: 'Craigslist',
-    contact: {},
-    url: 'https://westslope.craigslist.org/apa/d/telluride-luxury-condo/7924056218.html',
-    note: 'Long-term rental. 3BR condo on E Colorado Ave. Verify availability directly.'
-  },
+  /* Removed 2026-04-02: Craigslist listing 7924056218 returned 410 Gone */
   {
     title: '1BR Apartment — 545 W Pacific Ave',
     type: 'market-rental',
@@ -6412,28 +6402,7 @@ const HOUSING_LISTINGS = [
     url: 'https://westslope.craigslist.org/apa/d/telluride-look-no-further-than-this/7919977718.html',
     note: 'Long-term rental. 1BR on W Pacific Ave. Verify availability directly.'
   },
-  {
-    title: '3BR House — 280 Mahoney Dr',
-    type: 'market-rental',
-    address: '280 Mahoney Dr, Telluride, CO 81435',
-    lat: 37.9410, lng: -107.8170,
-    beds: '3 Bedroom', price: '$3,901/mo',
-    source: 'Apartments.com',
-    contact: {},
-    url: 'https://www.apartments.com/280-mahoney-dr-telluride-co/zq5w36n/',
-    note: 'Market-rate long-term rental. Contact listing agent on Apartments.com.'
-  },
-  {
-    title: '1BR — 107 W Columbia Ave',
-    type: 'market-rental',
-    address: '107 W Columbia Ave, Telluride, CO 81435',
-    lat: 37.9373, lng: -107.8128,
-    beds: '1 Bedroom', price: '$2,874/mo',
-    source: 'Apartments.com',
-    contact: {},
-    url: 'https://www.apartments.com/107-w-columbia-ave-telluride-co/f1l2ss1/',
-    note: 'Market-rate long-term rental in downtown Telluride.'
-  }
+  /* Removed 2026-04-02: Apartments.com listings (280 Mahoney Dr, 107 W Columbia Ave) returned 403 — listings removed */
 ];
 
 let currentHousingFilter = 'all';
