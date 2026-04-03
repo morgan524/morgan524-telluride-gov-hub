@@ -4233,33 +4233,7 @@ const KOTO_NEWSCASTS = [
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
 // Updated: 2026-04-02  — refresh periodically from koto.org/news-category/featured-stories/
 const KOTO_FEATURED_STORIES = [
-  {
-    title: "Fire Season Ignites with Willow Springs Fire",
-    source: "KOTO Community Radio",
-    date: "April 1, 2026",
-    newsTopic: "public-safety",
-    copy: "With a warm, dry winter, Colorado is preparing for a serious wildfire season. KOTO examines the Willow Springs Fire and talks fire prevention with San Miguel County Emergency Manager Shannon Armstrong and Tim Pinnow of the West Region Wildfire Council.",
-    href: "https://koto.org/news/fire-season-ignites-with-willow-springs-fire/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  },
-  {
-    title: "Telluride Discusses the Housing Waitlist",
-    source: "KOTO Community Radio",
-    date: "April 1, 2026",
-    newsTopic: "community",
-    copy: "An in-depth look at Telluride's deed-restricted housing waitlist, the challenges locals face in securing affordable units, and the policy discussions shaping the future of workforce housing in the region.",
-    href: "https://koto.org/news/telluride-discusses-the-housing-waitlist/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  },
-  {
-    title: "Hetal Doshi Runs for Colorado Attorney General",
-    source: "KOTO Community Radio",
-    date: "April 1, 2026",
-    newsTopic: "government",
-    copy: "KOTO profiles Hetal Doshi, a candidate in the race for Colorado Attorney General, exploring her platform and vision for the state's top legal office.",
-    href: "https://koto.org/news/hetal-doshi-runs-for-colorado-attorney-general/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  },
+  /* Removed 2026-04-02: KOTO featured stories returned 404 — fire-season-ignites-with-willow-springs-fire, telluride-discusses-the-housing-waitlist, hetal-doshi-runs-for-colorado-attorney-general */
   {
     title: "A Retirement Party for Mona",
     source: "KOTO Community Radio",
@@ -6391,17 +6365,7 @@ const HOUSING_LISTINGS = [
   },
   /* ── Market-Rate Active Listings ── */
   /* Removed 2026-04-02: Craigslist listing 7924056218 returned 410 Gone */
-  {
-    title: '1BR Apartment — 545 W Pacific Ave',
-    type: 'market-rental',
-    address: '545 W Pacific Ave, Telluride, CO 81435',
-    lat: 37.9378, lng: -107.8155,
-    beds: '1 Bedroom', price: '$1,500/mo',
-    source: 'Craigslist',
-    contact: {},
-    url: 'https://westslope.craigslist.org/apa/d/telluride-look-no-further-than-this/7919977718.html',
-    note: 'Long-term rental. 1BR on W Pacific Ave. Verify availability directly.'
-  },
+  /* Removed 2026-04-02: Craigslist listing 7919977718 returned 403 — listing expired */
   /* Removed 2026-04-02: Apartments.com listings (280 Mahoney Dr, 107 W Columbia Ave) returned 403 — listings removed */
 ];
 
