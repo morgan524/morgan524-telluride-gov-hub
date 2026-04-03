@@ -4062,6 +4062,15 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-03  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Celebrate closing weekend",
+    source: "Telluride Times",
+    date: "April 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "A range of bands and DJs are on hand to play Telluride into off-season, from LP Giobbi at Heritage Plaza and The Alibi to Easy Jim at the Sheridan Opera House and the Mountain Village Closing Weekend Bash.",
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_0ffe0247-ee72-4cc6-8e59-23574ac6c4f2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/a3/ca3dd84a-9a81-4cc9-842c-03da3130932a/69cb6e2762867.image.jpg"
+  },
+  {
     title: "Super Cyclery",
     source: "Telluride Times",
     date: "April 2, 2026",
