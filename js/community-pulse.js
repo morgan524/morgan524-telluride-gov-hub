@@ -38,7 +38,7 @@ const COMMUNITY_PULSE_POSTS = [
     id: 'telski-017', sourceKey: 'telski',
     postedAt: '2026-04-03T07:00:00',
     title: 'Closing weekend is HERE — ski today through Sunday April 5',
-    excerpt: 'Telluride Ski Resort reopened today for closing weekend after temporarily closing mid-week to preserve snow. Ski through Sunday April 5. Closing Day party at Gorrono Ranch features the annual pond skim and dance party. Check tellurideskiresort.com for conditions.',
+    excerpt: 'Telluride Ski Resort reopened today for closing weekend after temporarily closing mid-week to preserve snow. Ski through Sunday April 5. Pond skim and closing party already went off at Gorrono Ranch on April 2 with DJ Wombat. Check tellurideskiresort.com for conditions and enjoy the final turns!',
     tags: ['Ski Season', 'Closing Day', 'Pond Skim'], featured: true, eventRelated: true
   },
   {
@@ -112,11 +112,11 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Wildlife', 'Town Notice', 'Bears'], featured: false, eventRelated: false
   },
   {
-    id: 'c7cc-014', sourceKey: 'c7cc',
-    postedAt: '2026-03-31T09:00:00',
-    title: 'Town Council met March 31 — recap available',
-    excerpt: 'Town Council met March 31, 10 AM–5 PM at Rebekah Hall (113 W Columbia Ave). Agenda packets on the Town website. Watch the replay on the Town of Telluride YouTube channel if you missed it.',
-    tags: ['Town Council', 'Government', 'Meeting'], featured: false, eventRelated: false
+    id: 'c7cc-015', sourceKey: 'c7cc',
+    postedAt: '2026-04-03T11:00:00',
+    title: 'KOTO "Off the Record" — wildfire preparedness with emergency manager',
+    excerpt: 'KOTO aired a wildfire preparedness segment on "Off the Record" with San Miguel County Emergency Manager Shannon Armstrong and Tim Pinnow, executive director at the West Region Wildfire Council. Discussion covered defensible space, evacuation routes, and the elevated risk this season after record-low snowpack.',
+    tags: ['Wildfire', 'KOTO', 'Preparedness'], featured: false, eventRelated: false
   },
   {
     id: 'carpool-008', sourceKey: 'koto-carpool',
@@ -147,11 +147,11 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Festival', 'Music', 'Blues'], featured: false, eventRelated: true
   },
   {
-    id: 'foundation-007', sourceKey: 'foundation',
-    postedAt: '2026-03-31T09:00:00',
-    title: 'Community grants — fall 2026 application cycle info',
-    excerpt: 'Telluride Foundation community grants support arts, education, athletics, health, human services, and environment across the three-county region. Next application cycle opens fall 2026, awards in December.',
-    tags: ['Grants', 'Nonprofits', 'Funding'], featured: false, eventRelated: false
+    id: 'foundation-008', sourceKey: 'foundation',
+    postedAt: '2026-04-02T17:30:00',
+    title: 'Tales from the Season — storytelling night recap',
+    excerpt: 'Telluride Arts and Citizens State Bank hosted "Tales from the Season" on April 2 at 135 W Pacific Ave. Community members shared stories from the 2025-26 winter season over mocktails and light bites. A great send-off to an unforgettable — and unusually dry — ski season.',
+    tags: ['Arts', 'Community', 'Events'], featured: false, eventRelated: true
   },
   {
     id: 'fb-2438-007', sourceKey: 'fb-2438',
