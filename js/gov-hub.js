@@ -4058,44 +4058,8 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 });
 
 // ══════════ TELLURIDE TIMES — CURRENT HOMEPAGE STORIES ══════════
-// Updated: 2026-04-02  — refresh periodically from telluridenews.com
+// Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
-  {
-    title: "Flock to the fun",
-    source: "Telluride Times",
-    date: "April 2, 2026",
-    newsTopic: "arts-culture",
-    copy: "While it’s time to bid farewell to ski season, there is one silver lining: the KOTO Spring Street Dance returns Friday on West Colorado Avenue.",
-    href: "https://www.telluridenews.com/news/article_d9c05b19-e744-404f-9f47-4a91a89ad411.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/b5/db5ef660-af07-480d-a1ba-55171586422f/69c9853373f12.image.jpg"
-  },
-  {
-    title: "Busting out of the bubble",
-    source: "Telluride Times",
-    date: "April 1, 2026",
-    newsTopic: "education",
-    copy: "Telluride students reflect on navigating eight straight semesters in one admittedly beautiful, wonderfully supportive — but also isolated — mountain town.",
-    href: "https://www.telluridenews.com/news/article_4e8dbcde-88cd-4ed8-974c-5601666dd4d8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/9f/19fc7dcb-0568-4810-869d-8393e194c651/69c7316054c1b.image.jpg"
-  },
-  {
-    title: "UPDATE: Telluride Ski Resort to re-open Friday",
-    source: "Telluride Times",
-    date: "April 1, 2026",
-    newsTopic: "sports-recreation",
-    copy: "After closing Wednesday and Thursday to preserve snow, Telluride Ski Resort announced it will re-open Friday with the goal to remain open through scheduled closing on Sunday, April 5th.",
-    href: "https://www.telluridenews.com/news_release/article_16473284-9fa7-4518-b3d8-43a48dc7a5aa.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/2c/c2c57f30-7503-41d0-84f3-05ed163b162e/69cb0bf82b841.image.jpg"
-  },
-  {
-    title: "Opening the door to recovery in western Colorado",
-    source: "Telluride Times",
-    date: "April 1, 2026",
-    newsTopic: "community",
-    copy: "A senior citizen in western Colorado recently reached out for help with a behavioral health challenge connected to substance use, navigating Medicare and limited access to affordable counseling.",
-    href: "https://www.telluridenews.com/opinion/columnists/article_ab6bb37f-8a9f-44a5-81f3-822944b404d8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/61/a61314f5-8a69-4c0c-9dbb-bb8f21de2939/69cca3a5e67b2.image.jpg"
-  },
   {
     title: "Housing ‘fast-track’ amendment discussions continue",
     source: "Telluride Times",
@@ -4106,11 +4070,11 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/b6/4b62beda-dbf7-488a-be75-4b7c7497789f/69cb688ca44ed.image.jpg"
   },
   {
-    title: "Wildfire sparked northwest of Telluride airport",
+    title: "Wildfire burning near Greyhead",
     source: "Telluride Times",
     date: "March 31, 2026",
     newsTopic: "public-safety",
-    copy: "Amid the exceptionally dry conditions, the San Miguel County Sheriff\'s Office released information about a wildfire approximately 2 miles northwest of Telluride Regional Airport, near the Greyhead subdivision.",
+    copy: "Amid the exceptionally dry conditions, the San Miguel County Sheriff\'s Office released information about a wildfire burning near Greyhead Peak.",
     href: "https://www.telluridenews.com/news/article_7d7e751e-db54-433d-8fe4-0b051959dab8.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/a8/da80e7b1-924d-43f2-bc3d-b856f91cdfa2/69cc8e64b6012.image.jpg"
   },
@@ -4180,17 +4144,8 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
-// Updated: 2026-04-02  — refresh periodically from koto.org/news-category/newscasts/
+// Updated: 2026-04-01  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
-  {
-    title: "Newscast 4-1-26",
-    source: "KOTO Community Radio",
-    date: "April 1, 2026",
-    newsTopic: "public-safety",
-    copy: "Fire season ignites with the Willow Springs wildfire near Greyhead and Telluride Airport. Telluride discusses the housing waitlist crisis — 330 applicants, dozens of vacant units. AG candidate Hetal Doshi visits Telluride. Plus: Telski closing weekend plans, Supreme Court overturns Colorado conversion therapy ban, and singing resistance in Boulder.",
-    href: "https://koto.org/news/newscast-4-1-26/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  },
   {
     title: "Newscast 3-30-26",
     source: "KOTO Community Radio",
@@ -4901,7 +4856,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-04-01';
+const LEGAL_NOTICES_CACHE_DATE = '2026-04-01'; // Updated by legal-notice-update task
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -4995,38 +4950,6 @@ const LEGAL_NOTICES = [
     address: '411 Mountain Village Blvd, Mountain Village, CO'
   },
   {
-    title: 'Public Hearing -- Colorado Wildfire Resiliency Code Adoption',
-    entity: 'San Miguel County',
-    entityClass: 'ent-county',
-    entityLogo: 'county',
-    icon: '🔥',
-    iconClass: 'type-hearing',
-    type: 'Public Hearing',
-    filterTag: 'public-entity',
-    summary: 'The San Miguel County Commissioners will adopt the Colorado Wildfire Resiliency Code on April 1, 2026, enforced by July 1, 2026. Public comments due by 5 PM on March 26 via email to bocc@sanmiguelcountyco.gov. Hearing at 10:00 AM, Miramonte Building, 333 W Colorado Ave, 2nd Floor, or via Zoom.',
-    deadline: 'Comments by March 26 -- Hearing April 1 at 10:00 AM',
-    expires: '2026-04-01',
-    dates: '3/19',
-    papers: ['ttimes', 'npost'],
-    event: { date: 'April 1, 2026', time: '10:00 AM', endTime: '12:00 PM', location: 'Miramonte Building, 333 W Colorado Ave, 2nd Floor, Telluride' },
-    address: '333 W Colorado Ave, Telluride, CO'
-  },
-  {
-    title: 'Norwood Water Commission -- Tiered Pricing Structure, April 2026',
-    entity: 'Norwood Water Commission',
-    entityClass: 'ent-norwood',
-    entityLogo: 'norwood',
-    icon: '💧',
-    iconClass: 'type-rates',
-    type: 'Rate Change',
-    filterTag: 'utilities',
-    summary: 'New tiered water pricing takes effect April 1, 2026. Residential base rate is $37.51 for under 1,000 gallons, with increasing tiers up to $20/1,000 gallons above 12,001 gallons. Commercial rates also tiered. Designed to encourage water conservation.',
-    deadline: 'Effective April 1, 2026',
-    expires: '2026-04-01',
-    dates: '3/19, 3/26',
-    papers: ['npost']
-  },
-  {
     title: 'Property Tax Exemption -- Seniors, Disabled Veterans & Gold Star Spouses',
     entity: 'San Miguel County Assessor',
     entityClass: 'ent-assessor',
@@ -5056,6 +4979,39 @@ const LEGAL_NOTICES = [
     expires: '2026-04-30',
     dates: '3/12',
     papers: ['ttimes_mar12']
+  },
+  // ── April 1 (Mountain Village RFPs) ──
+  {
+    title: 'RFP -- Country Club Drive Shoulder Widening',
+    entity: 'Town of Mountain Village',
+    entityClass: 'ent-mv',
+    entityLogo: 'mv',
+    icon: '🛣️',
+    iconClass: 'type-rfp',
+    type: 'RFP',
+    filterTag: 'public-entity',
+    summary: 'Mountain Village seeks proposals from qualified firms for the Country Club Drive Shoulder Widening project. Proposal documents available at townofmountainvillage.com/government/bids-rfps/procurement-materials/. Contact the Town of Mountain Village Public Works Department for details.',
+    deadline: 'Proposals due April 27, 2026 at Noon',
+    expires: '2026-04-27',
+    dates: '4/1',
+    papers: ['county_web'],
+    url: 'https://townofmountainvillage.com/government/bids-rfps/procurement-materials/'
+  },
+  {
+    title: 'RFP -- Ski Ranches 2026 Waterline Improvement Project',
+    entity: 'Town of Mountain Village',
+    entityClass: 'ent-mv',
+    entityLogo: 'mv',
+    icon: '💧',
+    iconClass: 'type-rfp',
+    type: 'RFP',
+    filterTag: 'utilities',
+    summary: 'Mountain Village seeks proposals from qualified firms for the Ski Ranches 2026 Waterline Improvement Project. RFP documents available at townofmountainvillage.com/government/bids-rfps/procurement-materials/. Contact the Town of Mountain Village Public Works Department for details.',
+    deadline: 'Proposals due April 27, 2026 at 12:00 PM',
+    expires: '2026-04-27',
+    dates: '4/1',
+    papers: ['county_web'],
+    url: 'https://townofmountainvillage.com/government/bids-rfps/procurement-materials/'
   },
   // ── March 25-31 (County Website) ──
   {
