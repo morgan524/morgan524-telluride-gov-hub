@@ -4082,8 +4082,44 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 });
 
 // ══════════ TELLURIDE TIMES — CURRENT HOMEPAGE STORIES ══════════
-// Updated: 2026-04-01  — refresh periodically from telluridenews.com
+// Updated: 2026-04-03  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Flock to the fun",
+    source: "Telluride Times",
+    date: "April 2, 2026",
+    newsTopic: "community",
+    copy: "The pink flamingo costume contest returns at KOTO’s Spring Street Dance on Friday, April 3. The Other Brothers, an Allman Brothers Tribute Band, provide the music on West Colorado Avenue.",
+    href: "https://www.telluridenews.com/news/article_d9c05b19-e744-404f-9f47-4a91a89ad411.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/9c/d9c05b19-e744-404f-9f47-4a91a89ad411/67ed8a0a1b2c4.image.jpg"
+  },
+  {
+    title: "Super Cyclery",
+    source: "Telluride Times",
+    date: "April 2, 2026",
+    newsTopic: "business",
+    copy: "Max Cooper and Steven Steinberg opened Telluride Cyclery on Feb. 13 in the old Box Canyon Bicycles space at 300 W. Colorado Ave., bringing a new bike shop to town amid an unusually warm winter.",
+    href: "https://www.telluridenews.com/business/article_b7a23f29-42e9-4c06-8410-d75fc8584fd8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a7/96/a7962e60-5866-4b40-9f81-234a875e5c18/67ed8a0a1b2c4.image.jpg"
+  },
+  {
+    title: "Wastewater treatment plant concerns",
+    source: "Telluride Times",
+    date: "April 2, 2026",
+    newsTopic: "government",
+    copy: "A letter to the editor raises concerns about the local wastewater treatment plant and its capacity to handle future growth in the region.",
+    href: "https://www.telluridenews.com/letters_to_the_editor/article_5ec7535e-3c3c-4649-8739-6671d00af013.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/ec/5ec7535e-3c3c-4649-8739-6671d00af013/67ed8a0a1b2c4.image.jpg"
+  },
+  {
+    title: "UPDATE: Telluride Ski Resort to re-open Friday",
+    source: "Telluride Times",
+    date: "April 1, 2026",
+    newsTopic: "business",
+    copy: "After closing the mountain Wednesday and Thursday to preserve snow for closing weekend, Telluride Ski Resort will re-open Friday, April 3 with the goal to remain open through the scheduled closing on Sunday, April 5.",
+    href: "https://www.telluridenews.com/news_release/article_16473284-9fa7-4518-b3d8-43a48dc7a5aa.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/2c/c2c57f30-7503-41d0-84f3-05ed163b162e/69cb0bf82b841.image.jpg"
+  },
   {
     title: "Housing ‘fast-track’ amendment discussions continue",
     source: "Telluride Times",
@@ -4094,11 +4130,11 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/b6/4b62beda-dbf7-488a-be75-4b7c7497789f/69cb688ca44ed.image.jpg"
   },
   {
-    title: "Wildfire burning near Greyhead",
+    title: "Wildfire sparked northwest of Telluride airport",
     source: "Telluride Times",
     date: "March 31, 2026",
     newsTopic: "public-safety",
-    copy: "Amid the exceptionally dry conditions, the San Miguel County Sheriff\'s Office released information about a wildfire burning near Greyhead Peak.",
+    copy: "Amid exceptionally dry conditions, the San Miguel County Sheriff\’s Office reported a wildfire approximately 2 miles northwest of Telluride Regional Airport, near the Greyhead subdivision. The fire is believed to have been started by a lightning strike.",
     href: "https://www.telluridenews.com/news/article_7d7e751e-db54-433d-8fe4-0b051959dab8.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/a8/da80e7b1-924d-43f2-bc3d-b856f91cdfa2/69cc8e64b6012.image.jpg"
   },
@@ -4107,7 +4143,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "March 31, 2026",
     newsTopic: "arts-culture",
-    copy: "Telluride Arts and Citizens State Bank will host Tales from the Season at Telluride Arts\' headquarters, celebrating the end of the winter season.",
+    copy: "Telluride Arts and Citizens State Bank hosted Tales from the Season at Telluride Arts\’ headquarters, celebrating the end of the winter season with light bites and mocktails.",
     href: "https://www.telluridenews.com/arts_and_entertainment/article_1c8db2bc-e1b7-4421-9a4b-edf8a342033d.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/21/5219c399-9ccd-45ed-9fe3-f7cae035e92a/69c3187776c24.image.jpg"
   },
@@ -4130,15 +4166,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/d8/6d82ceea-41dc-48ff-bacf-c66b2e5c4172/69c714dff331a.image.png"
   },
   {
-    title: "Telluride Ski Resort revised spring operating schedule",
-    source: "Telluride Times",
-    date: "March 30, 2026",
-    newsTopic: "business",
-    copy: "Telluride Ski Resort will be open on Tuesday, March 31, but then will close for a few days. The reopening schedule will depend on conditions.",
-    href: "https://www.telluridenews.com/news_release/article_16473284-9fa7-4518-b3d8-43a48dc7a5aa.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/2c/c2c57f30-7503-41d0-84f3-05ed163b162e/69cb0bf82b841.image.jpg"
-  },
-  {
     title: "AG candidate Michael Dougherty makes his case in Telluride",
     source: "Telluride Times",
     date: "March 30, 2026",
@@ -4148,28 +4175,46 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/b2/1b271f59-6a17-4db0-acb5-4905eec725ef/69cab6f8564ec.image.jpg"
   },
   {
-    title: "Three units available in next housing lottery",
-    source: "Telluride Times",
-    date: "March 28, 2026",
-    newsTopic: "community",
-    copy: "Just a few months after the most recent deed-restricted housing lottery, locals have another chance to apply for three units.",
-    href: "https://www.telluridenews.com/news/article_de6d4879-227a-4279-96ee-376578b2749a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/1f/f1fc363f-f257-4d3d-b04d-dc91469c781a/69c31fb88e813.image.jpg"
-  },
-  {
     title: "Colorado ‘underfunding schools by billions’ prompts Telluride’s mill levy solution",
     source: "Telluride Times",
     date: "March 30, 2026",
     newsTopic: "community",
-    copy: "Residents in the San Miguel County region have undoubtedly been sitting on pins and needles in anticipation of the Colorado Legislative Council\'s quarterly economic forecast.",
+    copy: "Residents in the San Miguel County region have undoubtedly been sitting on pins and needles in anticipation of the Colorado Legislative Council\’s quarterly economic forecast.",
     href: "https://www.telluridenews.com/news/article_d000e0aa-672a-4aef-8786-d8aeaba4cd08.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/9a/99aaecf0-a527-484d-8535-52e203b8119c/69c70f0f0d498.image.jpg"
+  },
+  {
+    title: "Three units available in next housing lottery",
+    source: "Telluride Times",
+    date: "March 28, 2026",
+    newsTopic: "community",
+    copy: "Applications are open through April 10 for three deed-restricted units. The lottery is scheduled for 10 a.m. on Friday, April 24.",
+    href: "https://www.telluridenews.com/news/article_de6d4879-227a-4279-96ee-376578b2749a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/1f/f1fc363f-f257-4d3d-b04d-dc91469c781a/69c31fb88e813.image.jpg"
   }
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
-// Updated: 2026-04-01  — refresh periodically from koto.org/news-category/newscasts/
+// Updated: 2026-04-03  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 4-2-26",
+    source: "KOTO Community Radio",
+    date: "April 2, 2026",
+    newsTopic: "community",
+    copy: "Floating solar on Reservoir Number 2. Soul comes to Music on the Mesa. Also: Michael Dougherty makes his case for Colorado Attorney General.",
+    href: "https://koto.org/news/newscast-4-2-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+  },
+  {
+    title: "Newscast 4-1-26",
+    source: "KOTO Community Radio",
+    date: "April 1, 2026",
+    newsTopic: "public-safety",
+    copy: "Fire season ignites with the Willow Springs Fire. Telluride discusses the housing waitlist. Also: Hetal Doshi announces run for Colorado Attorney General.",
+    href: "https://koto.org/news/newscast-4-1-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+  },
   {
     title: "Newscast 3-30-26",
     source: "KOTO Community Radio",
@@ -4223,29 +4268,11 @@ const KOTO_NEWSCASTS = [
     copy: "This week on the Regional Roundup: declining moose populations and Wyoming's annual count, the mountain West's sport of skijoring, building community resilience amid climate change, and best-selling author Terry Tempest Williams on protecting public lands.",
     href: "https://koto.org/news/newscast-3-20-26/",
     img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  },
-  {
-    title: "Newscast 3-19-26",
-    source: "KOTO Community Radio",
-    date: "March 19, 2026",
-    newsTopic: "government",
-    copy: "San Miguel County adopts the West End Vision Plan. Society Turn development breaks ground. Skijoring takes Main Street by storm.",
-    href: "https://koto.org/news/newscast-3-19-26/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  },
-  {
-    title: "Newscast 3-18-26",
-    source: "KOTO Community Radio",
-    date: "March 18, 2026",
-    newsTopic: "government",
-    copy: "Dan Covault runs for San Miguel County Sheriff. Telluride updates housing policies and guidelines. Plus: Cat Movie Fisher with Risho Unda.",
-    href: "https://koto.org/news/newscast-3-18-26/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
   }
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
-// Updated: 2026-04-01  — refresh periodically from koto.org/news-category/featured-stories/
+// Updated: 2026-04-03  — refresh periodically from koto.org/news-category/featured-stories/
 const KOTO_FEATURED_STORIES = [
   {
     title: "A Retirement Party for Mona",
@@ -4264,15 +4291,6 @@ const KOTO_FEATURED_STORIES = [
     copy: "Telluride held its inaugural skijoring competition on Main Street, drawing hundreds of spectators as horses pulled skiers down a snow-covered course at top speed.",
     href: "https://koto.org/news/telluride-skijoring-2026/",
     img: "https://koto.org/wp-content/uploads/2026/03/DSC_0586-scaled.jpeg"
-  },
-  {
-    title: "Dan Covault Runs for San Miguel County Sheriff",
-    source: "KOTO Community Radio",
-    date: "March 18, 2026",
-    newsTopic: "government",
-    copy: "Dan Covault, appointed sheriff in 2025 after Bill Masters\' retirement, is running as an independent with 26 years of San Miguel County law enforcement experience.",
-    href: "https://koto.org/news/dan-covualt-runs-for-san-miguel-county-sheriff/",
-    img: "https://koto.org/wp-content/uploads/2026/03/Untitled-design-6.jpg"
   }
 ];
 
