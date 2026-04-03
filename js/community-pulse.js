@@ -133,18 +133,18 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Festival', 'Yoga', 'Early Bird'], featured: false, eventRelated: true
   },
   {
-    id: 'rotary-ig-007', sourceKey: 'rotary-ig',
-    postedAt: '2026-03-30T13:00:00',
-    title: 'Rotary scholarships for seniors — due April 15',
-    excerpt: 'Telluride Rotary scholarships for graduating seniors are open. Awards up to $5,000 for top academic achievers, plus $2,500 awards and a $1,000 vocational scholarship. Deadline April 15.',
+    id: 'rotary-ig-008', sourceKey: 'rotary-ig',
+    postedAt: '2026-04-02T13:00:00',
+    title: 'Rotary scholarships for seniors — deadline April 15',
+    excerpt: 'Telluride Rotary scholarships for graduating seniors are open. Awards up to $5,000 for top academic achievers, plus $2,500 awards and a $1,000 vocational scholarship. Deadline April 15. Apply at telluriderotary.org.',
     tags: ['Scholarships', 'Youth', 'Education'], featured: false, eventRelated: false
   },
   {
-    id: 'blues-007', sourceKey: 'blues-brews',
-    postedAt: '2026-03-30T12:00:00',
-    title: 'Blues & Brews 2026 full lineup — Jon Batiste, Marcus King & more',
-    excerpt: 'Telluride Blues & Brews Festival (Sept 18–20) full lineup announced: Jon Batiste, Marcus King Band, Taj Mahal & Keb\' Mo\', Samantha Fish, G. Love, Tab Benoit, Daniel Donato\'s Cosmic Country, and many more. Tickets on sale now.',
-    tags: ['Festival', 'Music', 'Blues'], featured: false, eventRelated: true
+    id: 'smc-dems-008', sourceKey: 'smc-dems',
+    postedAt: '2026-04-01T10:00:00',
+    title: 'SMC Land Use Code Amendment — Accelerated Housing Review',
+    excerpt: 'San Miguel County Planning Commission and Board of County Commissioners held a joint work session March 26 on a proposed Land Use Code Amendment for Accelerated Housing Review. The amendment aims to streamline permitting for deed-restricted and workforce housing projects countywide.',
+    tags: ['Housing', 'Land Use', 'County'], featured: false, eventRelated: false
   },
   {
     id: 'foundation-008', sourceKey: 'foundation',
