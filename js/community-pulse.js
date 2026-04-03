@@ -25,77 +25,91 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-01';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-02';
 const COMMUNITY_PULSE_POSTS = [
   {
+    id: 'fb-2061-012', sourceKey: 'fb-2061',
+    postedAt: '2026-04-02T08:00:00',
+    title: 'Wildfire reported near Telluride Regional Airport',
+    excerpt: 'San Miguel County Sheriff advises of a wildfire approximately 2 miles northwest of Telluride Regional Airport, near the Greyhead subdivision. Exceptionally dry conditions persist. Stay alert for updates from SMSO and Telluride Fire Protection District.',
+    tags: ['Wildfire', 'Safety', 'Alert'], featured: true, eventRelated: false
+  },
+  {
     id: 'fb-3395-011', sourceKey: 'fb-3395',
-    postedAt: '2026-04-01T09:00:00',
-    title: 'KOTO Spring Street Dance — this Friday April 3!',
-    excerpt: 'KOTO Spring Street Dance is Friday April 3, 4–8 PM on West Main Street. Free live music from The Other Brothers (Allman Brothers tribute ft. members of Thievery Corporation, Circles Around the Sun, and more). Cash bar, Pink Flamingo Costume Contest, and Fiji resort raffle drawn at 6 PM!',
+    postedAt: '2026-04-02T09:00:00',
+    title: 'KOTO Spring Street Dance — tomorrow, Friday April 3!',
+    excerpt: 'KOTO Spring Street Dance is Friday April 3, 4–8 PM on Colorado Ave between Aspen and Fir. Free live music from The Other Brothers (Allman Brothers tribute ft. members of Thievery Corporation, Circles Around the Sun, and more). Cash bar, Pink Flamingo Costume Contest!',
     tags: ['Events', 'KOTO', 'Street Dance'], featured: true, eventRelated: true
   },
   {
     id: 'telski-014', sourceKey: 'telski',
-    postedAt: '2026-04-01T08:00:00',
-    title: 'Resort reopening Friday — closing day Sunday April 5',
-    excerpt: 'Telluride Ski Resort will reopen Friday April 3 for closing weekend through Sunday April 5. Closing Day party at Gorrono Ranch features the annual pond skim (12–2 PM, register at Gorrono 10–11 AM) and DJ Wombat. Check tellurideskiresort.com for conditions.',
+    postedAt: '2026-04-02T07:30:00',
+    title: 'Closing weekend starts Friday — last chance to ski April 3–5',
+    excerpt: 'Telluride Ski Resort reopens Friday April 3 for closing weekend through Sunday April 5. Closing Day party at Gorrono Ranch features the annual pond skim and dance party. Goose Chase Scavenger Hunt and Hanorama Jamma Rail Jam also on tap. Check tellurideskiresort.com for conditions.',
     tags: ['Ski Season', 'Closing Day', 'Pond Skim'], featured: true, eventRelated: true
   },
   {
     id: 'c7cc-011', sourceKey: 'c7cc',
-    postedAt: '2026-04-01T08:30:00',
+    postedAt: '2026-04-02T08:30:00',
     title: 'SMRHA housing lottery — deed-restricted units available',
     excerpt: 'SMRHA accepting applications for deed-restricted homeownership units (White House 3C, Entrada H, Meribel B). Lottery drawing April 24 at 10 AM, Rebekah Hall, 113 W Colorado Ave. Visit smrha.org/lottery or email admin@smrha.org.',
     tags: ['Housing', 'Affordable', 'Lottery'], featured: true, eventRelated: true
   },
   {
     id: 'fb-2061-010', sourceKey: 'fb-2061',
-    postedAt: '2026-04-01T10:00:00',
-    title: 'Tales from the Season — tomorrow at Telluride Arts',
-    excerpt: 'Telluride Arts and Citizens State Bank host Tales from the Season on Thursday April 2 at Telluride Arts HQ, 135 W. Pacific Ave. Celebrate the end of ski season with stories, art, and community.',
+    postedAt: '2026-04-02T10:00:00',
+    title: 'Tales from the Season — tonight at Telluride Arts',
+    excerpt: 'Telluride Arts and Citizens State Bank host Tales from the Season TODAY, Thursday April 2, at Telluride Arts HQ, 135 W. Pacific Ave. Celebrate the end of ski season with stories, art, and community.',
     tags: ['Arts', 'Events', 'Community'], featured: true, eventRelated: true
+  },
+  {
+    id: 'fb-3395-012', sourceKey: 'fb-3395',
+    postedAt: '2026-04-02T12:00:00',
+    title: 'Colorado drought: Denver enacts Stage 1 water restrictions',
+    excerpt: 'Denver Water declared Stage 1 drought — the first such restriction since 2013. Snowpack is at record lows statewide. San Miguel County remains in severe drought (D2) with runoff forecasts 60–70% of normal. Western Slope restrictions expected this summer — conserve now.',
+    tags: ['Drought', 'Water', 'Conservation'], featured: false, eventRelated: false
   },
   {
     id: 'fb-2061-011', sourceKey: 'fb-2061',
     postedAt: '2026-04-01T07:30:00',
     title: 'CDOT: CO 145 road widening near Society Turn through September',
     excerpt: 'CDOT road work on CO 145 at Mile Point 71, just west of Society Turn Roundabout, runs through early September. Williams Construction adding a new right-turn lane with acceleration/deceleration lanes. Mon–Fri, 9 AM–4 PM. Expect lane shifts, flaggers, and up to 5-minute delays.',
-    tags: ['Road Work', 'CDOT', 'Highway 145'], featured: true, eventRelated: false
+    tags: ['Road Work', 'CDOT', 'Highway 145'], featured: false, eventRelated: false
   },
   {
     id: 'telski-015', sourceKey: 'telski',
-    postedAt: '2026-04-01T07:00:00',
+    postedAt: '2026-04-02T07:00:00',
     title: 'Gondola closes April 6 — reopens May 21 for summer',
     excerpt: 'The free gondola between Telluride and Mountain Village closes April 6 for spring maintenance. Reopens May 21 for summer operations. Free SMART bus service continues between towns during the closure.',
     tags: ['Gondola', 'Transportation', 'Season'], featured: false, eventRelated: false
   },
   {
     id: 'smc-dems-006', sourceKey: 'smc-dems',
-    postedAt: '2026-04-01T14:00:00',
+    postedAt: '2026-04-02T14:00:00',
     title: 'County Democratic Assembly April 12 — register by April 5',
     excerpt: 'San Miguel County Democratic Assembly is April 12. Register by April 5 to participate as a delegate. Info at smcdemocrats.org. This is how local candidates advance to the primary ballot.',
     tags: ['Politics', 'Assembly', 'Deadline'], featured: false, eventRelated: true
   },
   {
     id: 'tchn-011', sourceKey: 'tchn',
-    postedAt: '2026-04-01T08:30:00',
+    postedAt: '2026-04-02T08:30:00',
     title: 'Free Mental Health First Aid training — April 8',
     excerpt: 'Free 8-hour Mental Health First Aid certification course at the Telluride Conference Center on April 8. Learn to recognize signs and respond to mental health crises. Register at tchnetwork.org.',
     tags: ['Mental Health', 'Training', 'Free'], featured: false, eventRelated: true
   },
   {
-    id: 'fb-3395-012', sourceKey: 'fb-3395',
-    postedAt: '2026-04-01T12:00:00',
-    title: 'Colorado drought deepens — water restrictions likely this summer',
-    excerpt: 'Governor activated Phase 2 of the Drought Response Plan on March 16. Snowpack is at record lows and runoff forecasts are 60–70% of normal. San Miguel County is in severe drought (D2). Expect water restrictions this summer — conserve now.',
-    tags: ['Drought', 'Water', 'Conservation'], featured: false, eventRelated: false
-  },
-  {
     id: 'humane-011', sourceKey: 'humane',
-    postedAt: '2026-04-01T11:00:00',
+    postedAt: '2026-04-02T11:00:00',
     title: 'Meet Juniper — heeler mix available for adoption',
     excerpt: 'Juniper is a 2-year-old heeler mix who loves hikes, belly rubs, and snowy adventures. Great with kids, good with other dogs. Foster-to-adopt available. Apply at telluridehumanesociety.com.',
     tags: ['Adoption', 'Dogs', 'Pets'], featured: false, eventRelated: false
+  },
+  {
+    id: 'telski-016', sourceKey: 'telski',
+    postedAt: '2026-04-01T12:00:00',
+    title: 'Tips-Up FriYAY finale — LP Giobbi at Heritage Plaza April 3',
+    excerpt: 'The Tips-Up FriYAY après series wraps up April 3 with DJ LP Giobbi at Heritage Plaza, Mountain Village, 3:30–5:30 PM. Free event with live music, beverages, and mountain views. Last one of the season!',
+    tags: ['Music', 'Mountain Village', 'Free'], featured: false, eventRelated: true
   },
   {
     id: 'c7cc-012', sourceKey: 'c7cc',
@@ -103,13 +117,6 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Town Council met March 31 — recap available',
     excerpt: 'Town Council met March 31, 10 AM–5 PM at Rebekah Hall (113 W Columbia Ave). Agenda packets on the Town website. Watch the replay on the Town of Telluride YouTube channel if you missed it.',
     tags: ['Town Council', 'Government', 'Meeting'], featured: false, eventRelated: false
-  },
-  {
-    id: 'telski-016', sourceKey: 'telski',
-    postedAt: '2026-03-31T12:00:00',
-    title: 'Tips-Up FriYAY finale — LP Giobbi at Heritage Plaza April 3',
-    excerpt: 'The Tips-Up FriYAY après series wraps up April 3 with DJ LP Giobbi at Heritage Plaza, Mountain Village, 3:30–5:30 PM. Free event with live music, beverages, and mountain views. Last one of the season!',
-    tags: ['Music', 'Mountain Village', 'Free'], featured: false, eventRelated: true
   },
   {
     id: 'fb-2438-006', sourceKey: 'fb-2438',
@@ -143,7 +150,7 @@ const COMMUNITY_PULSE_POSTS = [
     id: 'blues-006', sourceKey: 'blues-brews',
     postedAt: '2026-03-30T12:00:00',
     title: 'Blues & Brews 2026 full lineup — Jon Batiste, Marcus King & more',
-    excerpt: 'Telluride Blues & Brews Festival (Sept 18–20) full lineup announced: Jon Batiste, Marcus King Band, Taj Mahal & Keb\' Mo\', Samantha Fish, G. Love, Tab Benoit, and many more. Tickets on sale now.',
+    excerpt: 'Telluride Blues & Brews Festival (Sept 18–20) full lineup announced: Jon Batiste, Marcus King Band, Taj Mahal & Keb\' Mo\', Samantha Fish, G. Love, Tab Benoit, Daniel Donato\'s Cosmic Country, and many more. Tickets on sale now.',
     tags: ['Festival', 'Music', 'Blues'], featured: false, eventRelated: true
   },
   {
@@ -155,17 +162,10 @@ const COMMUNITY_PULSE_POSTS = [
   },
   {
     id: 'fb-3395-013', sourceKey: 'fb-3395',
-    postedAt: '2026-03-29T16:45:00',
-    title: 'Bear-proof trash cans now required for all homes',
-    excerpt: 'Reminder from the Town: bear-proof trash containers are now required for all residential properties. Bears are waking up — secure your trash and take down bird feeders.',
+    postedAt: '2026-04-02T16:00:00',
+    title: 'Bears are stirring — secure trash and remove bird feeders',
+    excerpt: 'Town of Telluride spring bear awareness campaign is underway. Bear-proof trash containers are required for all residential properties. Lock cars, secure windows, and take down bird feeders. Most bear conflicts are linked to careless handling of food and garbage.',
     tags: ['Wildlife', 'Town Notice', 'Bears'], featured: false, eventRelated: false
-  },
-  {
-    id: 'tchn-012', sourceKey: 'tchn',
-    postedAt: '2026-03-28T14:00:00',
-    title: 'Spring wellness workshops launching in April',
-    excerpt: 'Tri-County Health Network kicks off a spring wellness series in April: nutrition, stress management, and outdoor fitness. Free for all community members. Full schedule coming soon at tchnetwork.org.',
-    tags: ['Health', 'Wellness', 'Free'], featured: false, eventRelated: true
   }
 ];
 const CP_MAX_POSTS = 20;
