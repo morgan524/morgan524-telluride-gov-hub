@@ -18,13 +18,13 @@ const COUNTY_CALENDAR_URL = 'https://sanmiguelcountyco.gov/RSSFeed.aspx?ModID=58
 // ── News feeds ──
 const NEWS_FEEDS = [
   {
-    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=1&CID=Town-News-1',
+    url: 'https://telluride.gov/RSSFeed.aspx?ModID=1&CID=Town-News-1',
     source: 'telluride',
     sourceLabel: 'Town of Telluride',
     category: 'Town News'
   },
   {
-    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=1&CID=Marshals-Department-12',
+    url: 'https://telluride.gov/RSSFeed.aspx?ModID=1&CID=Marshals-Department-12',
     source: 'telluride',
     sourceLabel: 'Town of Telluride',
     category: "Marshal's Dept"
@@ -42,7 +42,7 @@ const NEWS_FEEDS = [
     category: 'Alert'
   },
   {
-    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=63&CID=All-0',
+    url: 'https://telluride.gov/RSSFeed.aspx?ModID=63&CID=All-0',
     source: 'telluride',
     sourceLabel: 'Town of Telluride',
     category: 'Alert'
@@ -5274,7 +5274,7 @@ const LEGAL_NOTICES = [
     iconClass: 'type-hearing',
     type: 'Ordinance',
     filterTag: 'ordinance',
-    summary: 'Town Council passed six ordinances on Feb 24, 2026: #1625 amending the 2025 municipal budget; #1626 amending vending code (TMC Ch. 6, Art. 4); #1627 authorizing sale of Longwill 16 A2; #1628 sale of Entrada Unit H; #1629 sale of White House 3C; #1630 sale of Meribel Unit B. Full text at telluride-co.gov.',
+    summary: 'Town Council passed six ordinances on Feb 24, 2026: #1625 amending the 2025 municipal budget; #1626 amending vending code (TMC Ch. 6, Art. 4); #1627 authorizing sale of Longwill 16 A2; #1628 sale of Entrada Unit H; #1629 sale of White House 3C; #1630 sale of Meribel Unit B. Full text at telluride.gov.',
     deadline: 'Effective upon publication',
     expires: '2026-04-05',
     dates: '3/5',
@@ -6548,8 +6548,8 @@ const HOUSING_LISTINGS = [
     lat: 37.9363, lng: -107.8198,
     beds: '1–3 Bedroom', price: 'Income-based (deed-restricted)',
     source: 'Town of Telluride',
-    contact: { phone: '(970) 728-4025', email: 'housing@telluride-co.gov' },
-    url: 'https://www.telluride-co.gov/745/Town-Owned-Rental-Properties',
+    contact: { phone: '(970) 728-4025', email: 'housing@telluride.gov' },
+    url: 'https://www.telluride.gov/745/Town-Owned-Rental-Properties',
     note: 'Waitlist-based. Town employee priority. Apply through the Town of Telluride.'
   },
   {
@@ -6559,8 +6559,8 @@ const HOUSING_LISTINGS = [
     lat: 37.9380, lng: -107.8260,
     beds: 'Studio–2 Bedroom', price: 'Income-based (deed-restricted)',
     source: 'Town of Telluride',
-    contact: { phone: '(970) 728-4025', email: 'housing@telluride-co.gov' },
-    url: 'https://www.telluride-co.gov/745/Town-Owned-Rental-Properties',
+    contact: { phone: '(970) 728-4025', email: 'housing@telluride.gov' },
+    url: 'https://www.telluride.gov/745/Town-Owned-Rental-Properties',
     note: 'Waitlist-based. Apply through the Town of Telluride Rental Housing division.'
   },
   /* ── Market-Rate Active Listings ── */
