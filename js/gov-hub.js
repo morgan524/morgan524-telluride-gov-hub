@@ -4082,7 +4082,7 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 });
 
 // ══════════ TELLURIDE TIMES — CURRENT HOMEPAGE STORIES ══════════
-// Updated: 2026-04-03  — refresh periodically from telluridenews.com
+// Updated: 2026-04-04  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Speed amid setbacks",
@@ -4240,7 +4240,7 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
-// Updated: 2026-04-03  — refresh periodically from koto.org/news-category/newscasts/
+// Updated: 2026-04-04  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
   {
     title: "Newscast 4-3-26",
@@ -4314,19 +4314,10 @@ const KOTO_NEWSCASTS = [
     href: "https://koto.org/news/newscast-3-23-26/",
     img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
   },
-  {
-    title: "Newscast 3-20-26",
-    source: "KOTO Community Radio",
-    date: "March 20, 2026",
-    newsTopic: "community",
-    copy: "This week on the Regional Roundup: declining moose populations and Wyoming's annual count, the mountain West's sport of skijoring, building community resilience amid climate change, and best-selling author Terry Tempest Williams on protecting public lands.",
-    href: "https://koto.org/news/newscast-3-20-26/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  }
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
-// Updated: 2026-04-03  — refresh periodically from koto.org/news-category/featured-stories/
+// Updated: 2026-04-04  — refresh periodically from koto.org/news-category/featured-stories/
 const KOTO_FEATURED_STORIES = [
   {
     title: "Floating Solar on Reservoir Number 2",
@@ -4346,15 +4337,6 @@ const KOTO_FEATURED_STORIES = [
     href: "https://koto.org/news/a-retirement-party-for-mona/",
     img: "https://koto.org/wp-content/uploads/2026/03/IMG_0863-scaled.jpeg"
   },
-  {
-    title: "Skijoring Takes Main Street by Storm",
-    source: "KOTO Community Radio",
-    date: "March 20, 2026",
-    newsTopic: "sports",
-    copy: "Telluride held its inaugural skijoring competition on Main Street, drawing hundreds of spectators as horses pulled skiers down a snow-covered course at top speed.",
-    href: "https://koto.org/news/telluride-skijoring-2026/",
-    img: "https://koto.org/wp-content/uploads/2026/03/DSC_0586-scaled.jpeg"
-  }
 ];
 
 // ══════════════════════════════════════
