@@ -4085,6 +4085,42 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-03  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Speed amid setbacks",
+    source: "Telluride Times",
+    date: "April 3, 2026",
+    newsTopic: "sports",
+    copy: "Despite a season of challenges including ski area closures and lack of snow, TSSC alpine ski racers Sadie Schenk and Hugh Hatcher qualified for the U18 Alpine National Championships, placing among the top 50 skiers in the country.",
+    href: "https://www.telluridenews.com/sports/article_8033f0f0-cbde-4cf7-926b-a0feb0bf2381.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/ae/8ae8ecfe-bc49-49cb-a72b-8f8f22764d36/69cb718967215.image.jpg"
+  },
+  {
+    title: "Watering our roots",
+    source: "Telluride Times",
+    date: "April 3, 2026",
+    newsTopic: "community",
+    copy: "Michelle Curry Wright\’s Dandelion Reflection column explores the value of character assessments and strengths-based approaches to personal growth, from the corporate world to health coaching.",
+    href: "https://www.telluridenews.com/opinion/columnists/article_2b934a07-4080-4562-b759-5d84f4699ce1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/b5/eb5bff0d-d2ce-4aaf-9fb7-96f17ff6b6ad/69cea4f510ebd.image.jpg"
+  },
+  {
+    title: "Celebrate closing weekend",
+    source: "Telluride Times",
+    date: "April 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Closing weekend brings a wave of live music across Telluride and Mountain Village, with LP Giobbi headlining the final Tips-Up Friyay concert, Desiderata at The Alibi, and Easy Jim performing Grateful Dead tributes at the Sheridan Opera House.",
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_0ffe0247-ee72-4cc6-8e59-23574ac6c4f2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/a3/ca3dd84a-9a81-4cc9-842c-03da3130932a/69cb6e2762867.image.jpg"
+  },
+  {
+    title: "Snapshots from the middle",
+    source: "Telluride Times",
+    date: "April 2, 2026",
+    newsTopic: "community",
+    copy: "Jennifer Julia\’s Wanderlust Mom column reflects on being in the middle of life \u2014 caring for aging parents in Maine while her children pursue their own paths in California and Colorado.",
+    href: "https://www.telluridenews.com/opinion/columnists/article_d722598b-eb78-4b0a-80dc-ebf28202dcf1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/36/43640baf-ddd4-4735-80c6-dd4ea97c775a/69cca6c96283b.image.jpg"
+  },
+  {
     title: "Flock to the fun",
     source: "Telluride Times",
     date: "April 2, 2026",
@@ -4110,6 +4146,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A letter to the editor raises concerns about the local wastewater treatment plant and its capacity to handle future growth in the region.",
     href: "https://www.telluridenews.com/letters_to_the_editor/article_5ec7535e-3c3c-4649-8739-6671d00af013.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/ec/5ec7535e-3c3c-4649-8739-6671d00af013/67ed8a0a1b2c4.image.jpg"
+  },
+  {
+    title: "Busting out of the bubble",
+    source: "Telluride Times",
+    date: "April 1, 2026",
+    newsTopic: "community",
+    copy: "Telluride high school students share transformative experiences from semester-away programs through the Semester Schools Network, from kayaking in the Bahamas to farming in Vermont.",
+    href: "https://www.telluridenews.com/news/article_4e8dbcde-88cd-4ed8-974c-5601666dd4d8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/9f/19fc7dcb-0568-4810-869d-8393e194c651/69c7316054c1b.image.jpg"
   },
   {
     title: "UPDATE: Telluride Ski Resort to re-open Friday",
@@ -4198,6 +4243,15 @@ const TELLURIDE_TIMES_ARTICLES = [
 // Updated: 2026-04-03  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
   {
+    title: "Newscast 4-3-26",
+    source: "KOTO Community Radio",
+    date: "April 3, 2026",
+    newsTopic: "community",
+    copy: "This week on the Regional Roundup: songs of resistance from the March 28 No Kings rallies, new efforts to support local news outlets in Colorado, Telluride\u2019s first skijoring event, and the growing threats facing salt lakes including Utah\u2019s Great Salt Lake.",
+    href: "https://koto.org/news/newscast-4-3-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+  },
+  {
     title: "Newscast 4-2-26",
     source: "KOTO Community Radio",
     date: "April 2, 2026",
@@ -4274,6 +4328,15 @@ const KOTO_NEWSCASTS = [
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
 // Updated: 2026-04-03  — refresh periodically from koto.org/news-category/featured-stories/
 const KOTO_FEATURED_STORIES = [
+  {
+    title: "Floating Solar on Reservoir Number 2",
+    source: "KOTO Community Radio",
+    date: "April 2, 2026",
+    newsTopic: "community",
+    copy: "Norwood is teaming up with EcoAction Partners and the Colorado School of Mines to explore floatovoltaics \u2014 floating solar panels \u2014 to reduce evaporation, prevent algae blooms, and generate renewable energy on Reservoir Number 2.",
+    href: "https://koto.org/news/norwood-floating-solar-water-conservation/",
+    img: "https://koto.org/wp-content/uploads/2026/04/IMG_0935-scaled.jpeg"
+  },
   {
     title: "A Retirement Party for Mona",
     source: "KOTO Community Radio",
