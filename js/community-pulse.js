@@ -31,21 +31,21 @@ const COMMUNITY_PULSE_POSTS = [
     id: 'fb-3395-014', sourceKey: 'fb-3395',
     postedAt: '2026-04-03T08:00:00',
     title: 'KOTO Spring Street Dance — TODAY, 4–8 PM on Colorado Ave',
-    excerpt: 'KOTO Spring Street Dance is TODAY, Friday April 3, 4–8 PM on Colorado Ave between Aspen and Fir. Free live music from The Other Brothers (Allman Brothers tribute). Cash bar, Pink Flamingo Costume Contest. Celebrate the end of ski season with Telluride!',
+    excerpt: 'KOTO Spring Street Dance is TODAY, Friday April 3, 4–8 PM on Colorado Ave between Aspen and Fir. Free live music, cash bar, and Pink Flamingo Costume Contest. Celebrate closing weekend and the end of ski season with Telluride!',
     tags: ['Events', 'KOTO', 'Street Dance'], featured: true, eventRelated: true
   },
   {
     id: 'telski-017', sourceKey: 'telski',
     postedAt: '2026-04-03T07:00:00',
     title: 'Closing weekend is HERE — ski today through Sunday April 5',
-    excerpt: 'Telluride Ski Resort reopened today for closing weekend after temporarily closing mid-week to preserve snow. Ski through Sunday April 5. Pond skim and closing party already went off at Gorrono Ranch on April 2 with DJ Wombat. Check tellurideskiresort.com for conditions and enjoy the final turns!',
+    excerpt: 'Telluride Ski Resort reopened today for closing weekend after temporarily closing Wed–Thu to preserve snow. Ski through Sunday April 5. Pond skim and closing party went off at Gorrono Ranch. DJ Dirty Blonde and Chrome Velvet sets still to come. Check tellurideskiresort.com for conditions.',
     tags: ['Ski Season', 'Closing Day', 'Pond Skim'], featured: true, eventRelated: true
   },
   {
     id: 'fb-2061-013', sourceKey: 'fb-2061',
     postedAt: '2026-04-03T07:30:00',
-    title: 'Willow Springs Fire update — dry conditions persist',
-    excerpt: 'The Willow Springs Fire ignited April 1 near Telluride amid exceptionally dry conditions. Colorado is preparing for a serious wildfire season following a warm, dry winter. San Miguel County remains in severe drought. Follow Telluride Fire Protection District and SMSO for the latest.',
+    title: 'Willow Springs Fire update — lightning-caused, dry conditions persist',
+    excerpt: 'The Willow Springs Fire, believed lightning-caused, ignited April 1 approximately 2 miles NW of Telluride Regional Airport near Greyhead subdivision. Colorado is preparing for a serious wildfire season following a warm, dry winter. Follow Telluride Fire Protection District and San Miguel County Sheriff for updates.',
     tags: ['Wildfire', 'Safety', 'Alert'], featured: true, eventRelated: false
   },
   {
@@ -58,16 +58,23 @@ const COMMUNITY_PULSE_POSTS = [
   {
     id: 'c7cc-013', sourceKey: 'c7cc',
     postedAt: '2026-04-03T08:30:00',
-    title: 'SMRHA housing lottery — deed-restricted units, drawing April 24',
-    excerpt: 'SMRHA accepting applications for deed-restricted homeownership units (White House 3C, Entrada H, Meribel B). Lottery drawing April 24 at 10 AM, Rebekah Hall, 113 W Colorado Ave. Visit smrha.org/lottery or email admin@smrha.org.',
+    title: 'SMRHA housing lottery — applications close April 10, drawing April 24',
+    excerpt: 'SMRHA accepting applications by appointment through noon April 10 for deed-restricted homeownership units. Lottery drawing April 24 at 10 AM. Exception applications for household size and unconventional loans due today by noon. Visit smrha.org/lottery or email admin@smrha.org.',
     tags: ['Housing', 'Affordable', 'Lottery'], featured: true, eventRelated: true
   },
   {
     id: 'fb-3395-015', sourceKey: 'fb-3395',
     postedAt: '2026-04-03T10:00:00',
     title: 'Town outdoor water restrictions in effect since March 31',
-    excerpt: 'Town of Telluride outdoor water restrictions began March 31. Watering allowed Mon/Wed/Fri only, before 8 AM or after 7 PM. Irrigation systems must run at 70–75% of normal. Exterior water features must be off. San Miguel County remains in severe drought with runoff forecast 60–70% of normal.',
+    excerpt: 'Town of Telluride outdoor water restrictions began March 31 in response to below-average snowpack. Watering allowed Mon/Wed/Fri only, before 8 AM or after 7 PM. Irrigation systems must run at 70–75% of normal. Exterior water features must be off. Proactive measures to protect long-term water supplies.',
     tags: ['Drought', 'Water', 'Conservation'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-3395-017', sourceKey: 'fb-3395',
+    postedAt: '2026-04-03T13:00:00',
+    title: 'Special election petition filing — deadline April 20',
+    excerpt: 'Town of Telluride special municipal election set for June 30, 2026 to fill two Council seats (including the vacancy from Councilmember Meehan Fee\'s Jan 27 resignation). Nomination petitions available from Town Clerk at 135 W Columbia Ave. Must return 25+ signatures by April 20. Terms through Nov 2029.',
+    tags: ['Election', 'Town Council', 'Deadline'], featured: false, eventRelated: true
   },
   {
     id: 'telski-019', sourceKey: 'telski',
@@ -86,8 +93,8 @@ const COMMUNITY_PULSE_POSTS = [
   {
     id: 'fb-2061-014', sourceKey: 'fb-2061',
     postedAt: '2026-04-01T07:30:00',
-    title: 'CDOT: CO 145 road widening near Society Turn through September',
-    excerpt: 'CDOT road work on CO 145 at Mile Point 71, just west of Society Turn Roundabout, runs through early September. Williams Construction adding a new right-turn lane with acceleration/deceleration lanes. Mon–Fri, 9 AM–4 PM. Expect lane shifts, flaggers, and up to 5-minute delays.',
+    title: 'CDOT: CO 145 road widening near Society Turn — $3.3M project through October',
+    excerpt: 'CDOT road work on CO 145 at Mile Point 71, just west of Society Turn Roundabout, runs through October. Williams Construction adding a new right-turn lane with acceleration/deceleration lanes. Funded by Genesee Properties, overseen by CDOT. Mon–Fri, 9 AM–4 PM. Expect flaggers and up to 5-minute delays.',
     tags: ['Road Work', 'CDOT', 'Highway 145'], featured: false, eventRelated: false
   },
   {
@@ -108,14 +115,14 @@ const COMMUNITY_PULSE_POSTS = [
     id: 'fb-3395-016', sourceKey: 'fb-3395',
     postedAt: '2026-04-02T16:00:00',
     title: 'Bears are stirring — secure trash and remove bird feeders',
-    excerpt: 'Town of Telluride spring bear awareness campaign is underway. Bear-proof trash containers are required for all residential properties. Lock cars, secure windows, and take down bird feeders. Most bear conflicts are linked to careless handling of food and garbage.',
+    excerpt: 'Town of Telluride spring bear awareness campaign is underway. Bear-proof trash containers required for all residential properties. Never leave food, livestock feed, or pet food outside or in vehicles. Remove bird feeders. Bears emerging from dormancy need food — most conflicts stem from unsecured garbage.',
     tags: ['Wildlife', 'Town Notice', 'Bears'], featured: false, eventRelated: false
   },
   {
     id: 'c7cc-015', sourceKey: 'c7cc',
     postedAt: '2026-04-03T11:00:00',
     title: 'KOTO "Off the Record" — wildfire preparedness with emergency manager',
-    excerpt: 'KOTO aired a wildfire preparedness segment on "Off the Record" with San Miguel County Emergency Manager Shannon Armstrong and Tim Pinnow, executive director at the West Region Wildfire Council. Discussion covered defensible space, evacuation routes, and the elevated risk this season after record-low snowpack.',
+    excerpt: 'KOTO aired a wildfire preparedness segment on "Off the Record" with San Miguel County Emergency Manager Shannon Armstrong and Tim Pinnow of the West Region Wildfire Council. Covered defensible space, evacuation routes, and the elevated risk this season after record-low snowpack.',
     tags: ['Wildfire', 'KOTO', 'Preparedness'], featured: false, eventRelated: false
   },
   {
@@ -147,11 +154,11 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Housing', 'Land Use', 'County'], featured: false, eventRelated: false
   },
   {
-    id: 'foundation-008', sourceKey: 'foundation',
-    postedAt: '2026-04-02T17:30:00',
-    title: 'Tales from the Season — storytelling night recap',
-    excerpt: 'Telluride Arts and Citizens State Bank hosted "Tales from the Season" on April 2 at 135 W Pacific Ave. Community members shared stories from the 2025-26 winter season over mocktails and light bites. A great send-off to an unforgettable — and unusually dry — ski season.',
-    tags: ['Arts', 'Community', 'Events'], featured: false, eventRelated: true
+    id: 'fb-2061-015', sourceKey: 'fb-2061',
+    postedAt: '2026-04-03T12:00:00',
+    title: 'Uncompahgre Plateau forest treatment — SUHFER public comment open',
+    excerpt: 'USFS South Uncompahgre Hazardous Fuels and Ecological Resiliency (SUHFER) project covers 267,300 acres on the Uncompahgre Plateau across Montrose, Ouray, and San Miguel counties. Includes timber harvest, prescribed burns, and fuel reduction over 20 years. Public comment period underway at fs.usda.gov.',
+    tags: ['Forest', 'Public Comment', 'Wildfire'], featured: false, eventRelated: false
   },
   {
     id: 'fb-2438-007', sourceKey: 'fb-2438',
@@ -159,13 +166,6 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Spring cleaning — free items on curbs around town',
     excerpt: 'Lots of folks spring cleaning before mud season. Furniture, ski gear, and household items showing up on curbs around town. Post your finds and freebies in the group!',
     tags: ['Free', 'Community', 'Spring Cleaning'], featured: false, eventRelated: false
-  },
-  {
-    id: 'fb-2061-015', sourceKey: 'fb-2061',
-    postedAt: '2026-04-03T12:00:00',
-    title: 'Uncompahgre Plateau forest treatment — public comment open',
-    excerpt: 'USFS proposed forest treatment project covers 267,000+ acres on the Uncompahgre Plateau across Montrose, Ouray, and San Miguel counties. 30-day public comment period underway. Details at fs.usda.gov. Important for wildfire mitigation in the region.',
-    tags: ['Forest', 'Public Comment', 'Wildfire'], featured: false, eventRelated: false
   }
 ];
 const CP_MAX_POSTS = 20;
