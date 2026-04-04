@@ -4085,6 +4085,24 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-04  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Playtime for grownups",
+    source: "Telluride Times",
+    date: "April 4, 2026",
+    newsTopic: "community",
+    copy: "Wilkinson Public Library programmers take their foot off the gas a bit this month when it comes to kids' gatherings, shifting focus to adult programming and community events.",
+    href: "https://www.telluridenews.com/news/article_470020e5-3af1-4689-a7a1-8b8fda9cd33d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/e1/6e11ae9d-9263-49bf-8a57-629a51368bfa/69cf5bfae42eb.image.jpg"
+  },
+  {
+    title: "UPDATE: Ski resort to close Saturday",
+    source: "Telluride Times",
+    date: "April 3, 2026",
+    newsTopic: "business",
+    copy: "Telluride Ski Resort has announced that the last day of the 2025-26 ski season will be Saturday, April 4, ending the season a day earlier than originally planned.",
+    href: "https://www.telluridenews.com/news/article_c3ae42cf-d0c4-41c5-ae08-d005b93d1b36.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/75/a75244f5-e3b8-4c13-b3fc-27d9e98cfc0d/69d05b7abf032.image.jpg"
+  },
+  {
     title: "Speed amid setbacks",
     source: "Telluride Times",
     date: "April 3, 2026",
