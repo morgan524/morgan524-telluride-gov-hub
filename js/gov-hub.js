@@ -4089,7 +4089,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "April 4, 2026",
     newsTopic: "community",
-    copy: "Wilkinson Public Library programmers take their foot off the gas a bit this month when it comes to kids' gatherings, shifting focus to adult programming and community events.",
+    copy: "Wilkinson Public Library programmers take their foot off the gas a bit this month when it comes to kids’ gatherings, shifting focus to adult programming and community events.",
     href: "https://www.telluridenews.com/news/article_470020e5-3af1-4689-a7a1-8b8fda9cd33d.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/e1/6e11ae9d-9263-49bf-8a57-629a51368bfa/69cf5bfae42eb.image.jpg"
   },
@@ -4254,6 +4254,69 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Applications are open through April 10 for three deed-restricted units. The lottery is scheduled for 10 a.m. on Friday, April 24.",
     href: "https://www.telluridenews.com/news/article_de6d4879-227a-4279-96ee-376578b2749a.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/1f/f1fc363f-f257-4d3d-b04d-dc91469c781a/69c31fb88e813.image.jpg"
+  },
+  {
+    title: "Lady Miners awakened in Aspen",
+    source: "Telluride Times",
+    date: "March 27, 2026",
+    newsTopic: "sports",
+    copy: "Telluride High School freshman Cora Krasic earned her first varsity win in net as the Lady Miners lacrosse team faced off against Aspen in a tough road matchup.",
+    href: "https://www.telluridenews.com/sports/article_e453d051-a943-4f32-9092-3720aa62c2cc.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/37/d37e471b-68e7-455e-9ac2-45646d83a95a/69c315b8d2e62.image.jpg"
+  },
+  {
+    title: "A ‘true amenity,’ The Laundromat is back",
+    source: "Telluride Times",
+    date: "March 26, 2026",
+    newsTopic: "business",
+    copy: "In early January, a fire at The Laundromat shuttered the self-service laundry facility located in Lawson Hill. Now it\’s back open and serving the community.",
+    href: "https://www.telluridenews.com/business/article_10412a6e-4cb1-4ac2-abc8-e916fba2b163.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/e9/ee927412-6804-440a-a62c-4e9f996e9c39/69c210f5d9c85.image.jpg"
+  },
+  {
+    title: "Miners top a Butte, then a Mountain",
+    source: "Telluride Times",
+    date: "March 26, 2026",
+    newsTopic: "sports",
+    copy: "Telluride\’s boys lacrosse team welcomed Grand Junction High School to Judy Long Memorial Field, then took on Crested Butte, showcasing top-notch play in back-to-back matchups.",
+    href: "https://www.telluridenews.com/sports/article_7bf96048-94d5-422b-a342-74bf830b1b47.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8c/f8c28f60-86c3-4eff-8120-32fd30db8e3a/69c30cdc351f3.image.jpg"
+  },
+  {
+    title: "We’re hooked",
+    source: "Telluride Times",
+    date: "March 25, 2026",
+    newsTopic: "business",
+    copy: "At a recent birthday party, the celebrant received no fewer than three gift cards to Hook \u2014 a testament to how quickly the new restaurant has become a local favorite in Telluride.",
+    href: "https://www.telluridenews.com/business/article_ac06e009-1c73-42a2-acb3-1c805821fb99.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/7d/47d238ac-5c0a-4160-96b8-4c7c49bcfef2/69c20c4cdc990.image.jpg"
+  },
+  {
+    title: "The Velveteers + homegrown Sister Sabbath at The Alibi",
+    source: "Telluride Times",
+    date: "March 24, 2026",
+    newsTopic: "arts-culture",
+    copy: "The box canyon may experience a slight tremor when The Velveteers, with support from local Black Sabbath tribute band Sister Sabbath, take The Alibi stage.",
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_57696396-d483-45ea-bbfd-748d1d42a6ec.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/ef/defcc159-7739-495b-ab95-0035c97b0ba9/69c2d1b8e5eb5.image.jpg"
+  },
+  {
+    title: "Bumps and triumphs",
+    source: "Telluride Times",
+    date: "March 23, 2026",
+    newsTopic: "sports",
+    copy: "Telluride mogul skiers showcased their skills in competition, with young athletes sporting square patches on their ski pants whizzing down the mountain on narrow skis.",
+    href: "https://www.telluridenews.com/sports/article_6891c202-3f0f-41f8-89af-d7be3ee63be7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/c0/cc0a3d8c-0708-4cd1-a831-ac4f3ae0bef4/69bed93c152b0.image.jpg"
+  },
+  {
+    title: "Energy audits for local businesses",
+    source: "Telluride Times",
+    date: "March 21, 2026",
+    newsTopic: "business",
+    copy: "Historical buildings are a vital part of local character, but don\’t necessarily contribute to energy efficiency. With the risk of rising energy prices, improving building efficiency is becoming a priority for Telluride businesses.",
+    href: "https://www.telluridenews.com/business/article_b8ed6bb8-1782-45c6-8225-eebf4e0f5d69.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/cd/8cd2c6f2-32cb-4ce1-aeaf-bff413bc3074/69ba35ff6e434.image.jpg"
   }
 ];
 
