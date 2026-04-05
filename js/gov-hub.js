@@ -4881,7 +4881,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-04-02'; // Updated by legal-notice-update task
+const LEGAL_NOTICES_CACHE_DATE = '2026-04-05'; // Updated by legal-notice-update task
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -4904,6 +4904,16 @@ const PAPER_LOGOS = {
     img: '',
     svg: '<svg viewBox="0 0 90 14" style="height:13px;width:auto;"><text x="0" y="12" font-family="Georgia,serif" font-weight="bold" font-size="12" fill="#222">The Norwood Post</text></svg>',
     url: 'https://www.telluridenews.com/norwood_post/legals/article_c23ef3df-a055-4ff6-ba7a-f277ef70197b.html'
+  },
+  ttimes_mar26: {
+    name: 'The Telluride Times',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg',
+    url: 'https://www.telluridenews.com/news/legals/article_aa40e482-7008-4eda-9975-91e506726631.html'
+  },
+  ttimes_apr2: {
+    name: 'The Telluride Times',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg',
+    url: 'https://www.telluridenews.com/news/legals/article_aec96dee-01bf-4370-b831-16a17257d9ff.html'
   },
   county_web: {
     name: 'San Miguel County',
@@ -5049,11 +5059,11 @@ const LEGAL_NOTICES = [
     iconClass: 'type-rfp',
     type: 'RFP',
     filterTag: 'public-entity',
-    summary: 'San Miguel County is seeking proposals for floor replacement at the Courthouse and Miramonte Building. Full RFP documents and submission requirements available at sanmiguelcountyco.gov/Bids.aspx.',
-    deadline: 'Proposals due April 24, 2026 at 11:59 PM',
-    expires: '2026-04-24',
-    dates: '4/2',
-    papers: ['county_web'],
+    summary: 'San Miguel County is seeking proposals for a contractor to replace flooring at 333 & 305 W. Colorado Ave, Telluride. RFP info available at sanmiguelcountyco.gov/Bids.aspx or 333 W. Colorado Ave 2nd flr, Telluride. Contact Greg Pollio at (970) 369-5432 or gregp@sanmiguelcountyco.gov. Deadline extended to May 23.',
+    deadline: 'Proposals due May 23, 2026 at 5:00 PM',
+    expires: '2026-05-23',
+    dates: '4/2, 4/7, 4/16, 4/23',
+    papers: ['ttimes_apr2', 'county_web'],
     url: 'https://www.sanmiguelcountyco.gov/Bids.aspx'
   },
   {
@@ -5137,6 +5147,137 @@ const LEGAL_NOTICES = [
     dates: '3/5',
     papers: ['ttimes_mar5'],
     address: '116 E Columbia Ave, Telluride, CO'
+  },
+  // ── March 26 (Boarding House Lottery) ──
+  {
+    title: 'Master Lease Rental Lottery -- Boarding House Units',
+    entity: 'Telluride Housing Authority / Town of Telluride Housing Division',
+    entityClass: 'ent-housing',
+    entityLogo: 'telluride',
+    icon: '🏘️',
+    iconClass: 'type-housing',
+    type: 'Housing Lottery',
+    filterTag: 'housing',
+    summary: 'A maximum of five (5) double-occupancy and three (3) single-occupancy rooms at the Boarding House (1270 W Black Bear Road) will be offered for a two-year master lease opportunity by Lottery pursuant to the Telluride Employee Rental Housing Policies. Interested local businesses, governmental or non-profit organizations must submit applications to the Telluride Housing Division at 820 Black Bear Rd G-17. Materials available at telluride-co.gov/735/Rental-Housing.',
+    deadline: 'Applications: March 25 at 9:00 AM through April 16, 2026 at 9:00 AM',
+    expires: '2026-04-16',
+    dates: '3/26',
+    papers: ['ttimes_mar26'],
+    url: 'https://www.telluride-co.gov/735/Rental-Housing',
+    address: '1270 W Black Bear Road, Telluride, CO'
+  },
+  // ── April 2-8 (Telluride Times) ──
+  {
+    title: 'Mountain Village Ordinances -- Second Reading April 23 (Wildfire Code, Background Checks, Municipal Penalties)',
+    entity: 'Town of Mountain Village',
+    entityClass: 'ent-mv',
+    entityLogo: 'mv',
+    icon: '📋',
+    iconClass: 'type-hearing',
+    type: 'Ordinance',
+    filterTag: 'ordinance',
+    summary: 'Three ordinances passed first reading at the March 19, 2026 Town Council meeting. Second reading, public hearing, and final Council vote will take place Thursday, April 23, 2026 at 4:00 p.m. in the 2nd floor conference room, Mountain Village Town Hall and via Zoom: (1) CDC Amendments for Compliance with Colorado Wildfire Resilience Code (CWRC); (2) Creating a Background Check Process for Prospective Massage Facility Operators, Owners, and Employees; (3) Adjusting Certain Penalties in the Municipal Code. Ordinances available at the Town Clerk office, 411 Mountain Village Blvd, Suite A, or at townofmountainvillage.com.',
+    deadline: 'Public hearing: April 23, 2026 at 4:00 PM',
+    expires: '2026-04-23',
+    dates: '4/2',
+    papers: ['ttimes_apr2'],
+    url: 'https://www.townofmountainvillage.com',
+    address: '411 Mountain Village Blvd, Mountain Village, CO'
+  },
+  {
+    title: 'Notice of Substantial Completion -- Telluride Wastewater Treatment Plant Lab Remodel',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🏗️',
+    iconClass: 'type-bid',
+    type: 'Substantial Completion',
+    filterTag: 'public-entity',
+    summary: 'Contractor: FCI Constructors, Inc., 3050 I-70 Business Loop, Bldg A, Grand Junction, CO 81503. The Town of Telluride Public Works Department intends to begin processing Final Payment on March 30, 2026. Any person or firm having debts against the Contractor must file written notice with Connor J. Tyrrell, Town Capital Improvement Project Manager, P.O. Box 397, Telluride, CO 81435 on or before April 10, 2026.',
+    deadline: 'Claims due by April 10, 2026',
+    expires: '2026-04-10',
+    dates: '4/2',
+    papers: ['ttimes_apr2']
+  },
+  {
+    title: 'Bid Notice -- 2026 Ski Ranches Waterline Replacement Project',
+    entity: 'Town of Mountain Village',
+    entityClass: 'ent-mv',
+    entityLogo: 'mv',
+    icon: '💧',
+    iconClass: 'type-bid',
+    type: 'Bid Notice',
+    filterTag: 'utilities',
+    summary: 'Mountain Village is accepting bids for the 2026 Ski Ranches Waterline Replacement Project. Bid packets available at townofmountainvillage.com or at TMV Public Works Dept, 411 Mountain Village Blvd 2nd floor. Pre-bid site walk: Wednesday April 9, 2026 at 10:00 AM, 411 Mountain Village Blvd 3rd floor. Contact Scott Pittenger (970) 708-8690 or Jenny Bates (970) 369-8201.',
+    deadline: 'Bids due April 25, 2026',
+    expires: '2026-04-25',
+    dates: '4/2, 4/7',
+    papers: ['ttimes_apr2'],
+    url: 'https://www.townofmountainvillage.com',
+    address: '411 Mountain Village Blvd, Mountain Village, CO'
+  },
+  {
+    title: 'Public Hearing -- Ophir Land Use Variance (Cooper, Lots 1 & 2, Block 2)',
+    entity: 'Town of Ophir',
+    entityClass: 'ent-county',
+    entityLogo: 'ophir',
+    icon: '⚖️',
+    iconClass: 'type-hearing',
+    type: 'Public Hearing',
+    filterTag: 'ordinance',
+    summary: 'Jonathan Cooper filed a land use application under Article XI of the Town Land Use Code seeking a height and roof pitch variance (2/12 pitch instead of the required 4/12 per LUC §303.7) and a setback variance (10 feet instead of 15 feet required under LUC §406.1(A)) for construction of a single-family dwelling on Lots 1 and 2, Block 2. Public hearing: April 21, 2026 at 5:00 PM in Ophir Town Hall, 46 Porphyry St. Contact: (970) 728-4743.',
+    deadline: 'Public hearing: April 21, 2026 at 5:00 PM',
+    expires: '2026-04-21',
+    dates: '4/2',
+    papers: ['ttimes_apr2'],
+    address: 'Lots 1 & 2, Block 2, Ophir, CO'
+  },
+  {
+    title: 'Notice of Vesting -- Korn Residence, 566 W Columbia Ave',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🏗️',
+    iconClass: 'type-rfp',
+    type: 'Land Use',
+    filterTag: 'ordinance',
+    summary: 'A site-specific development plan and vested property right has been approved for the Korn Residence (Historic Residential zone, Lot 24A Block 9 West Telluride). Small-scale addition increasing floor area by more than 25%, small-scale repositioning of a designated THAS primary structure, minor scale alteration, and insubstantial scale addition. Owner: Korn David & Kristin Family Trust. Applicant: Shift Architects, Kristine Perpar. Approved March 18, 2026.',
+    deadline: 'Subject to referendum and judicial review',
+    expires: '2026-06-18',
+    dates: '4/2',
+    papers: ['ttimes_apr2'],
+    address: '566 W Columbia Ave, Telluride, CO'
+  },
+  {
+    title: 'Notice of Vesting -- 108 N Columbine Minor Addition/Remodel',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🏗️',
+    iconClass: 'type-rfp',
+    type: 'Land Use',
+    filterTag: 'ordinance',
+    summary: 'A site-specific development plan and vested property right has been approved for 108 N Columbine Minor Addition/Remodel (Residential zone, Lot 1R Block 24 East Telluride). Minor scale addition increasing floor area by more than 25% and resulting in 1,000-2,500 sq ft, outside of the THLD but within the HPOD. Owner: ZKLF LLC. Applicant: McAllister Architects, Michael McAllister. Approved March 18, 2026.',
+    deadline: 'Subject to referendum and judicial review',
+    expires: '2026-06-18',
+    dates: '4/2',
+    papers: ['ttimes_apr2'],
+    address: '108 N Columbine St, Telluride, CO'
+  },
+  {
+    title: 'Notice of Vesting -- Fulton Residence (Hillside Transitional)',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🏗️',
+    iconClass: 'type-rfp',
+    type: 'Land Use',
+    filterTag: 'ordinance',
+    summary: 'A site-specific development plan and vested property right has been approved for the Fulton Residence (Hillside Transitional zone, Lot 7R Block E North Telluride). Small-scale new construction of a principal structure containing 2,500 sq ft or more of floor area, on a lot with pre-construction grade or slope of building site coverage of 25% or greater. Owner: Tio Rico LLC. Applicant: William Erwin, ASUL. Approved March 18, 2026.',
+    deadline: 'Subject to referendum and judicial review',
+    expires: '2026-06-18',
+    dates: '4/2',
+    papers: ['ttimes_apr2']
   },
 ];
 
