@@ -2194,7 +2194,7 @@ const LAND_USE_ISSUES = {
     ],
     docs: [
       { title: 'San Miguel County CivicClerk Portal', copy: 'Source for ordinance drafts, staff memos, and joint work-session materials.', tag: 'Draft Text', href: 'https://sanmiguelcoco.portal.civicclerk.com/' },
-      { title: 'County Boards & Commissions', copy: 'Use this to identify whether Planning Commission or BOCC is the key venue at each stage.', tag: 'Process Guide', href: 'https://sanmiguelcountyco.gov/424/Boards-Commissions' },
+      { title: 'County Boards & Commissions', copy: 'Use this to identify whether Planning Commission or BOCC is the key venue at each stage.', tag: 'Process Guide', href: 'https://www.sanmiguelcountyco.gov/192/Board-of-County-Commissioners' },
       { title: 'Town of Telluride Agendas & Minutes', copy: 'Important when related code conversations move inside town jurisdiction as well.', tag: 'Town Record', href: 'https://telluride-co.civicweb.net/Portal/MeetingTypeList.aspx' }
     ],
     players: [
@@ -2307,7 +2307,7 @@ const GONDOLA_DATA = {
     { title: 'Plaintiff\'s Written Closing Argument', copy: 'Masson\'s post-trial closing argument contending SMART provided no meaningful public notice for opposition comments, and that the TABOR notice misleadingly omitted the "slush fund" nature of capital improvement spending.', tag: 'Closing Arg. 2025' },
     { title: 'Contestor Emily Masson\'s Trial Brief', copy: 'Pre-trial brief filed by Starritt Legal LLC arguing voters had only 12-24 hours to submit opposition comments and that TABOR notice language regarding "capital improvements" was misleading.', tag: 'Trial Brief 2025' },
     { title: 'Written Statement to Contest Ballot Issue 3A', copy: 'Original election contest filing by Emily Masson (Case 2024CV8) challenging 3A on grounds of non-resident voter eligibility, inadequate TABOR notice, misleading ballot language, and unlawful public entity campaign contributions.', tag: 'Filing 2024' },
-    { title: 'SMART Board Meeting Agendas', copy: 'Official meeting materials for the San Miguel Authority for Regional Transportation.', tag: 'SMART', href: 'https://smartgov.org/meetings/' },
+    { title: 'SMART Board Meeting Agendas', copy: 'Official meeting materials for the San Miguel Authority for Regional Transportation.', tag: 'SMART', href: 'https://smarttelluride.colorado.gov/board-meetings' },
     { title: 'San Miguel County CivicClerk Portal', copy: 'County-level records relevant to SMART district and gondola discussions.', tag: 'County Record', href: 'https://sanmiguelcoco.portal.civicclerk.com/' }
   ],
   legalIssues: [
@@ -2803,9 +2803,7 @@ async function fetchKOTONews() {
   // Fallback: hardcoded upcoming KOTO Community Calendar events (non-library only)
   const calLink = KOTO_CAL_URL;
   return [
-    { title: 'CPR World First Aid & CPR Certification', link: 'https://koto.org/event/cpr-world-first-aid-and-cpr-certification-in-mountain-village/', description: '12:00 PM – 4:30 PM · CPR World offers First Aid and CPR certification. Register at cprworld.com or call (970) 729-2779.', pubDate: new Date('2026-03-29T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'Mountain Village Fire Station, 411 Mountain Village Blvd' },
     { title: 'Telluride Mountain School Open House', link: 'https://koto.org/event/telluride-mountain-school-open-house/', description: '5:00 PM – 6:00 PM · Join an evening of conversation about the next chapter for TMS\u2014new leadership, updated programming, and a refreshed mission. Wine, appetizers, and childcare provided.', pubDate: new Date('2026-03-31T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'Telluride Mountain School, 200 San Miguel River Dr', imageUrl: 'https://koto.org/wp-content/uploads/2026/03/Open-House.png' },
-    { title: 'Healthy Kids Colorado Survey Data Sharing', link: 'https://koto.org/event/healthy-kids-colorado-survey-2025-data-sharing-event/', description: '5:15 PM – 7:00 PM · Explore key insights from the 2025 HKCS, celebrate positive trends, and discuss how to support local youth. Free and open to all.', pubDate: new Date('2026-03-31T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'Telluride Science & Innovation Center', imageUrl: 'https://koto.org/wp-content/uploads/2026/03/HKCS-Workshop-Flyer.png' },
     { title: 'Art Walk Telluride', link: 'https://koto.org/event/art-walk-telluride/2026-04-02/', description: '5:00 PM – 7:00 PM · First-Thursday gallery walk featuring inspiring exhibits, receptions, and a chance to meet local and visiting artists. Details at telluridearts.org.', pubDate: new Date('2026-04-02T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'Downtown Telluride galleries', imageUrl: 'https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png' },
     { title: 'Community Storytelling Night: Tales from the Season', link: 'https://koto.org/event/telluride-arts-citizens-state-bank-present-community-storytelling-night-oh-what-a-season-its-been/', description: '5:30 PM – 7:00 PM · Mocktails and bites at 5:30; storytelling at 6:00. Friends and neighbors share funny, heartfelt 3\u20135 minute stories from the winter season. Free.', pubDate: new Date('2026-04-02T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'Telluride Arts HQ, 135 W Pacific Ave', imageUrl: 'https://koto.org/wp-content/uploads/2026/03/image001.png' },
     { title: 'French Happy Hour', link: 'https://koto.org/event/french-happy-hour/', description: '5:30 PM – 7:00 PM · Practice French conversation in a relaxed setting. Light snacks provided; beverages at the bar. Space limited\u2014sign up at telluridelibrary.org.', pubDate: new Date('2026-04-02T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'The Alibi, 121 S Fir St, Telluride', imageUrl: 'https://koto.org/wp-content/uploads/2026/03/French-Happy-Hour-6.png' },
@@ -6548,17 +6546,6 @@ const HOUSING_LISTINGS = [
   },
   /* ── Market-Rate Active Listings ── */
   {
-    title: 'Luxury Condo — 395 E Colorado Ave',
-    type: 'market-rental',
-    address: '395 E Colorado Ave, Telluride, CO 81435',
-    lat: 37.9375, lng: -107.8095,
-    beds: '3 Bedroom', price: '$2,500/mo',
-    source: 'Craigslist',
-    contact: {},
-    url: 'https://westslope.craigslist.org/apa/d/telluride-luxury-condo/7924056218.html',
-    note: 'Long-term rental. 3BR condo on E Colorado Ave. Verify availability directly.'
-  },
-  {
     title: '1BR Apartment — 545 W Pacific Ave',
     type: 'market-rental',
     address: '545 W Pacific Ave, Telluride, CO 81435',
@@ -6810,7 +6797,7 @@ const TELLURIDE_FESTIVALS = [
     url: 'https://www.telluridefoodandvine.com/', ticketUrl: 'https://www.telluridefoodandvine.com/events', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '2026 Weekend Pass and featured events available' },
   { name: 'Telluride Horror Show', month: 9, dayStart: 9, dayEnd: 12, icon: '🎃',
     logo: 'https://images.squarespace-cdn.com/content/v1/635aaf48434dcc204d4bfb34/762ca493-d7d2-459e-86a2-214c641c3695/HorrorShowLogoColor_STRAIGHT.png',
-    url: 'https://www.telluridehorrorshow.com/', ticketUrl: 'https://www.telluridehorrorshow.com/passes', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '3-day passes on sale Mar 25 — 6-packs on sale Jul 1, 2026' },
+    url: 'https://www.telluridehorrorshow.com/', ticketUrl: 'https://www.telluridehorrorshow.com/', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '3-day passes on sale Mar 25 — 6-packs on sale Jul 1, 2026' },
   { name: 'Telluride Jazz Festival', month: 7, dayStart: 7, dayEnd: 10, icon: '🎷',
     logo: 'https://images.squarespace-cdn.com/content/v1/583db0c9d1758e46ff3221e9/821ecb11-5000-415a-a970-87b539036111/2026-ebony-color-logo-png-for-website-no-dates.png?format=1500w',
     url: 'https://www.telluridejazz.org/', ticketUrl: 'https://www.telluridejazz.org/tickets', ticketLabel: 'Buy Tickets', ticketStatus: 'on-sale', promo: 'Tickets on sale now — Tier 1 pricing until July 15' },
