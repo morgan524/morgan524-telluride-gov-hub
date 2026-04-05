@@ -1415,6 +1415,10 @@ const MANUAL_SUMMARIES = {
 
   'telluride|2026-04-02|Vending Subcommittee':
     'Seasonal de-brief: Summer 2025 & Winter 2025-2026 vending compliance reports · Private property vending compliance · Vendor selection for 2026 summer season: North Spruce Park, Gondola Plaza, Colorado Ave (5 sites incl. N Oak St, Elks Park, S Spruce Mall, S Fir & W Pacific)',
+
+  // ── Telluride Ecology Commission (Apr 8) ──
+  'telluride|2026-04-08|Ecology Commission':
+    'WORKSESSION: Trash Bash event final planning · 2027 Climate Action Plan (CAP) update discussion — Buildings & Energy focus area',
 };
 
 // ── Unified summary lookup: AI first, then manual fallback ──
