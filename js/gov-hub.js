@@ -4085,6 +4085,15 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-05  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Peace is the gift",
+    source: "Telluride Times",
+    date: "April 5, 2026",
+    newsTopic: "community",
+    copy: "The West End VFW Uranium Post no. 9058 in Nucla coordinated the construction of a code-compliant wheelchair ramp for Eric Loesch, a Norwood resident and Vietnam-era Navy veteran, showcasing the spirit of neighbor-helping-neighbor.",
+    href: "https://www.telluridenews.com/news/article_07ab0249-8990-4238-b6c5-dbda39cce370.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/b1/6b132ad4-2e70-4cc0-aecf-c798d3ce5c2b/69cf6909b1214.image.jpg"
+  },
+  {
     title: "Music on the Mesa returns to Norwood",
     source: "Telluride Times",
     date: "April 4, 2026",
