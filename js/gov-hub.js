@@ -4604,7 +4604,7 @@ const LOCAL_GROUP_SCHEDULES = [
     dayOfWeek: 4,        // Thursday
     time: '6:30 PM',
     locations: ['472 W Pacific Ave, Telluride'],
-    href: 'https://www.tellurideelks.org',
+    href: '',  // tellurideelks.org domain returned 404 as of 2026-04-04
     note: 'Board/House Committee meets 2nd Thursdays at 5:30 PM.'
   },
   {
@@ -6574,17 +6574,6 @@ const HOUSING_LISTINGS = [
   },
   /* ── Market-Rate Active Listings ── */
   {
-    title: 'Luxury Condo — 395 E Colorado Ave',
-    type: 'market-rental',
-    address: '395 E Colorado Ave, Telluride, CO 81435',
-    lat: 37.9375, lng: -107.8095,
-    beds: '3 Bedroom', price: '$2,500/mo',
-    source: 'Craigslist',
-    contact: {},
-    url: 'https://westslope.craigslist.org/apa/d/telluride-luxury-condo/7924056218.html',
-    note: 'Long-term rental. 3BR condo on E Colorado Ave. Verify availability directly.'
-  },
-  {
     title: '1BR Apartment — 545 W Pacific Ave',
     type: 'market-rental',
     address: '545 W Pacific Ave, Telluride, CO 81435',
@@ -6814,7 +6803,7 @@ const TELLURIDE_FESTIVALS = [
     url: 'https://www.telluridefoodandvine.com/', ticketUrl: 'https://www.telluridefoodandvine.com/events', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '2026 Weekend Pass and featured events available' },
   { name: 'Telluride Horror Show', month: 9, dayStart: 9, dayEnd: 12, icon: '🎃',
     logo: 'https://images.squarespace-cdn.com/content/v1/635aaf48434dcc204d4bfb34/762ca493-d7d2-459e-86a2-214c641c3695/HorrorShowLogoColor_STRAIGHT.png',
-    url: 'https://www.telluridehorrorshow.com/', ticketUrl: 'https://www.telluridehorrorshow.com/passes', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '3-day passes on sale Mar 25 — 6-packs on sale Jul 1, 2026' },
+    url: 'https://www.telluridehorrorshow.com/', ticketUrl: 'https://www.telluridehorrorshow.com/', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '3-day passes on sale Mar 25 — 6-packs on sale Jul 1, 2026' },
   { name: 'Telluride Jazz Festival', month: 7, dayStart: 7, dayEnd: 10, icon: '🎷',
     logo: 'https://images.squarespace-cdn.com/content/v1/583db0c9d1758e46ff3221e9/821ecb11-5000-415a-a970-87b539036111/2026-ebony-color-logo-png-for-website-no-dates.png?format=1500w',
     url: 'https://www.telluridejazz.org/', ticketUrl: 'https://www.telluridejazz.org/tickets', ticketLabel: 'Buy Tickets', ticketStatus: 'on-sale', promo: 'Tickets on sale now — Tier 1 pricing until July 15' },
