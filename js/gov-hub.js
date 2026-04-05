@@ -4085,6 +4085,15 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-04  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Music on the Mesa returns to Norwood",
+    source: "Telluride Times",
+    date: "April 4, 2026",
+    newsTopic: "arts-culture",
+    copy: "Music on the Mesa returns to the San Miguel County Fairgrounds in Norwood this summer with two free outdoor concerts: Wolf Jett on June 13 and The Burroughs on August 1, featuring food, beverages, and artisan vendors.",
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_91bc6e4e-de7f-48e3-8a95-58598c3a8488.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/2b/f2ba4ad9-3262-41d6-a290-f86765330def/69cf652c3ed0d.image.jpg"
+  },
+  {
     title: "Playtime for grownups",
     source: "Telluride Times",
     date: "April 4, 2026",
