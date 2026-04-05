@@ -4082,7 +4082,7 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 });
 
 // ══════════ TELLURIDE TIMES — CURRENT HOMEPAGE STORIES ══════════
-// Updated: 2026-04-04  — refresh periodically from telluridenews.com
+// Updated: 2026-04-05  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Music on the Mesa returns to Norwood",
@@ -4256,6 +4256,33 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/9a/99aaecf0-a527-484d-8535-52e203b8119c/69c70f0f0d498.image.jpg"
   },
   {
+    title: "\u201CI voted/yo vot\u00e9\u201D sticker contest voting ends soon",
+    source: "Telluride Times",
+    date: "March 29, 2026",
+    newsTopic: "government",
+    copy: "The San Miguel County Clerk\u2019s Office put out a call for creative school-age students to design bilingual \u201CI voted/yo vot\u00e9\u201D stickers to elevate civic engagement and encourage voting. Voting on the finalists ends soon.",
+    href: "https://www.telluridenews.com/news/article_d8e5dded-9af9-4cb1-b0aa-b5572ec3715a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/ff/cffda83a-a78e-4ec0-8d6b-5a4978a4e879/69c37e515b702.image.jpg"
+  },
+  {
+    title: "'A Gateway to Success'",
+    source: "Telluride Times",
+    date: "March 29, 2026",
+    newsTopic: "community",
+    copy: "Zephyr Basham, a typical Colorado high school senior who skis, dirt bikes, and backpacks, is profiled as part of a program connecting students with career pathways and real-world experience.",
+    href: "https://www.telluridenews.com/news/article_67387faf-fb8e-4ee3-ae86-4ac65ce967a8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/0b/20b4ab8c-3dbf-406b-9978-9d3dceac7d92/69c4d6cbbfc29.image.jpg"
+  },
+  {
+    title: "Telluride Jazz: the art of evolution",
+    source: "Telluride Times",
+    date: "March 28, 2026",
+    newsTopic: "arts-culture",
+    copy: "The Telluride Jazz Festival continues to grow and change as it approaches the half-century mark, with major developments for the August 7-8 edition including a condensed schedule and expanded programming.",
+    href: "https://www.telluridenews.com/news/article_949d8fec-f167-43fa-ba8a-b22426a1b88f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/49/949d8fec-f167-43fa-ba8a-b22426a1b88f/69c4d6cbbfc29.image.jpg"
+  },
+  {
     title: "Three units available in next housing lottery",
     source: "Telluride Times",
     date: "March 28, 2026",
@@ -4310,6 +4337,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/ef/defcc159-7739-495b-ab95-0035c97b0ba9/69c2d1b8e5eb5.image.jpg"
   },
   {
+    title: "Performing-arts students get a boost",
+    source: "Telluride Times",
+    date: "March 23, 2026",
+    newsTopic: "arts-culture",
+    copy: "Local performing-arts students receive new support and resources, boosting arts education opportunities in the Telluride community.",
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_eb8a68ed-720b-4883-8cb2-4a531704ba99.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/b8/eb8a68ed-720b-4883-8cb2-4a531704ba99/69bed93c152b0.image.jpg"
+  },
+  {
     title: "Bumps and triumphs",
     source: "Telluride Times",
     date: "March 23, 2026",
@@ -4319,18 +4355,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/c0/cc0a3d8c-0708-4cd1-a831-ac4f3ae0bef4/69bed93c152b0.image.jpg"
   },
   {
-    title: "Energy audits for local businesses",
+    title: "Dancing into spring",
     source: "Telluride Times",
-    date: "March 21, 2026",
-    newsTopic: "business",
-    copy: "Historical buildings are a vital part of local character, but don\’t necessarily contribute to energy efficiency. With the risk of rising energy prices, improving building efficiency is becoming a priority for Telluride businesses.",
-    href: "https://www.telluridenews.com/business/article_b8ed6bb8-1782-45c6-8225-eebf4e0f5d69.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/cd/8cd2c6f2-32cb-4ce1-aeaf-bff413bc3074/69ba35ff6e434.image.jpg"
+    date: "March 22, 2026",
+    newsTopic: "arts-culture",
+    copy: "Spring brings a fresh wave of dance performances and events to the Telluride arts scene, celebrating the season with movement and creativity.",
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_c5ff5437-bf69-4c25-8caf-e4a949920db7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/5f/c5ff5437-bf69-4c25-8caf-e4a949920db7/69bed93c152b0.image.jpg"
   }
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
-// Updated: 2026-04-04  — refresh periodically from koto.org/news-category/newscasts/
+// Updated: 2026-04-05  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
   {
     title: "Newscast 4-3-26",
@@ -4407,7 +4443,7 @@ const KOTO_NEWSCASTS = [
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
-// Updated: 2026-04-04  — refresh periodically from koto.org/news-category/featured-stories/
+// Updated: 2026-04-05  — refresh periodically from koto.org/news-category/featured-stories/
 const KOTO_FEATURED_STORIES = [
   {
     title: "Floating Solar on Reservoir Number 2",
