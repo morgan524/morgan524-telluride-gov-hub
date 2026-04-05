@@ -30,51 +30,44 @@ const COMMUNITY_PULSE_POSTS = [
   {
     id: 'telski-024', sourceKey: 'telski',
     postedAt: '2026-04-05T08:00:00',
-    title: 'Today is closing day — last chance to ski Telluride this season',
-    excerpt: 'Telluride Ski Resort closes today, Sunday April 5, wrapping up the 2025-26 season. The resort reopened Friday after mid-week closure to preserve snow for closing weekend. Intermediate and advanced terrain only — spring conditions prevail. Thanks for a great season, Telluride!',
-    tags: ['Ski Season', 'Closing Day', 'Final Weekend'], featured: true, eventRelated: true
+    title: 'TODAY is closing day — last chance to ski Telluride this season',
+    excerpt: 'Sunday April 5 is the final day of the 2025-26 ski season at Telluride Ski Resort. The resort reopened Friday after a mid-week closure to preserve snow for closing weekend. Spring conditions with intermediate and advanced terrain only. Base depth around 35 inches. Make your last turns count!',
+    tags: ['Ski Season', 'Closing Day', 'Final Day'], featured: true, eventRelated: true
+  },
+  {
+    id: 'telski-025', sourceKey: 'telski',
+    postedAt: '2026-04-05T08:30:00',
+    title: 'Gondola closes tomorrow — spring maintenance April 6 through May 21',
+    excerpt: 'The free gondola between Telluride and Mountain Village closes Monday, April 6 for spring maintenance. It will reopen May 21 for summer operations. Free SMART bus service continues between the towns throughout the closure period. Plan your commute accordingly.',
+    tags: ['Gondola', 'Transportation', 'Season'], featured: true, eventRelated: false
   },
   {
     id: 'fb-2061-024', sourceKey: 'fb-2061',
     postedAt: '2026-04-05T09:00:00',
-    title: 'Greyhead wildfire near airport highlights extreme drought conditions',
-    excerpt: 'A lightning-caused wildfire broke out approximately 2 miles northwest of Telluride Regional Airport near the Greyhead subdivision. Telluride Fire dispatched 7 firefighters, 3 engines, and was joined by USFS and BLM crews. Fire is a stark reminder of the historic drought — Colorado snowpack is at record lows.',
-    tags: ['Wildfire', 'Safety', 'Drought'], featured: true, eventRelated: false
+    title: 'Wildfire risk elevated — Colorado bracing for unusually early fire season',
+    excerpt: 'Seasonal fire outlook from NIFC shows above-average wildfire risk across the Four Corners by June. Colorado snowpack at just 61% of median. First four months of the water year are the warmest in 131 years. Experts warn conditions are worse than 2012 and 2020. Maintain defensible space around your property now.',
+    tags: ['Wildfire', 'Drought', 'Safety'], featured: true, eventRelated: false
   },
   {
     id: 'fb-3395-024', sourceKey: 'fb-3395',
     postedAt: '2026-04-05T10:00:00',
     title: 'Water restrictions in effect — outdoor watering Mon/Wed/Fri only',
-    excerpt: 'Town of Telluride outdoor water restrictions took effect March 31 due to below-average snowpack and anticipated dry spring. Watering allowed Mon/Wed/Fri only, before 8 AM or after 7 PM. Irrigation at 70–75% of normal. Exterior water features must be off. Runoff forecast 60–70% of normal.',
+    excerpt: 'Town of Telluride outdoor water restrictions remain in effect since March 31. Below-average snowpack and anticipated dry spring drove the proactive restrictions. Watering allowed Mon/Wed/Fri only, before 8 AM or after 7 PM. Irrigation at 70–75% of normal. Runoff forecast 60–70% of normal.',
     tags: ['Drought', 'Water', 'Conservation'], featured: true, eventRelated: false
   },
   {
     id: 'c7cc-020', sourceKey: 'c7cc',
     postedAt: '2026-04-05T09:30:00',
-    title: 'SMRHA housing lottery — deed-restricted units, drawing April 24',
-    excerpt: 'SMRHA accepting applications for deed-restricted homeownership units (Silver Jack 202, Silver Jack 205, Element 52 SW-102). Lottery drawing April 24 at 10 AM, Rebekah Hall, 113 W Colorado Ave. Visit smrha.org or email admin@smrha.org.',
+    title: 'SMRHA housing lottery apps close April 10 — drawing April 24',
+    excerpt: 'Last chance to apply for deed-restricted homeownership units through SMRHA. Three condos available ranging from $352K to $405K. Applications accepted by appointment through noon on Friday, April 10. Lottery drawing April 24 at 10 AM, Rebekah Hall. Visit smrha.org or email admin@smrha.org.',
     tags: ['Housing', 'Affordable', 'Lottery'], featured: true, eventRelated: true
-  },
-  {
-    id: 'telski-025', sourceKey: 'telski',
-    postedAt: '2026-04-05T08:30:00',
-    title: 'Gondola closes tomorrow April 6 — reopens May 21 for summer',
-    excerpt: 'The free gondola between Telluride and Mountain Village closes Monday, April 6 for spring maintenance. Summer operations begin May 21. Free SMART bus service continues between towns during the closure period.',
-    tags: ['Gondola', 'Transportation', 'Season'], featured: true, eventRelated: false
   },
   {
     id: 'smc-dems-013', sourceKey: 'smc-dems',
     postedAt: '2026-04-05T08:00:00',
-    title: 'TODAY: delegate registration deadline for County Democratic Assembly April 12',
-    excerpt: 'San Miguel County Democratic Assembly is April 12. Today, April 5, is the deadline to register as a delegate. Info at smcdemocrats.org. This is how local candidates advance to the primary ballot — register now before it closes.',
+    title: 'TODAY: delegate registration deadline for County Democratic Assembly',
+    excerpt: 'Today, April 5, is the last day to register as a delegate for the San Miguel County Democratic Assembly on April 12. This is how local candidates advance to the primary ballot. Register at smcdemocrats.org before the deadline.',
     tags: ['Politics', 'Assembly', 'Deadline'], featured: false, eventRelated: true
-  },
-  {
-    id: 'fb-3395-025', sourceKey: 'fb-3395',
-    postedAt: '2026-04-05T07:30:00',
-    title: 'Town community survey open through May 21 — share your feedback',
-    excerpt: 'The Town of Telluride launched its third annual community survey on March 31. Share feedback on government services, quality of life, and priorities. Open to all residents through May 21, 2026. Your input helps shape town budget and policy decisions.',
-    tags: ['Town Government', 'Survey', 'Civic'], featured: false, eventRelated: false
   },
   {
     id: 'fb-2061-025', sourceKey: 'fb-2061',
@@ -84,11 +77,18 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Elections', 'Government', 'Deadline'], featured: false, eventRelated: true
   },
   {
-    id: 'fb-2061-026', sourceKey: 'fb-2061',
-    postedAt: '2026-04-05T07:00:00',
-    title: 'Fire outlook: above-average wildfire risk building across Four Corners',
-    excerpt: 'Seasonal wildfire outlook from NIFC shows above-average wildfire risk across the Four Corners by June. Colorado recorded its lowest snowpack in the modern SNOTEL record. Fire danger elevated on the plains now, increasing on the West Slope by June. Maintain defensible space around your property.',
-    tags: ['Wildfire', 'Drought', 'Safety'], featured: false, eventRelated: false
+    id: 'fb-3395-025', sourceKey: 'fb-3395',
+    postedAt: '2026-04-05T07:30:00',
+    title: 'Town community survey open through May 21 — share your feedback',
+    excerpt: 'The Town of Telluride\'s third annual community survey is open. Share feedback on government services, quality of life, and priorities. Open to all residents through May 21, 2026. Your input helps shape town budget and policy decisions.',
+    tags: ['Town Government', 'Survey', 'Civic'], featured: false, eventRelated: false
+  },
+  {
+    id: 'tchn-015', sourceKey: 'tchn',
+    postedAt: '2026-04-05T09:00:00',
+    title: 'Free Mental Health First Aid training — this Tuesday, April 8',
+    excerpt: 'Free 8-hour Mental Health First Aid certification course at the Telluride Conference Center on Tuesday, April 8. Learn to recognize signs and respond to mental health crises. Open to community members. Register at tchnetwork.org.',
+    tags: ['Mental Health', 'Training', 'Free'], featured: false, eventRelated: true
   },
   {
     id: 'c7cc-021', sourceKey: 'c7cc',
@@ -98,24 +98,24 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Business', 'Town Government', 'Relief'], featured: false, eventRelated: false
   },
   {
-    id: 'tchn-015', sourceKey: 'tchn',
-    postedAt: '2026-04-05T09:00:00',
-    title: 'Free Mental Health First Aid training — Tuesday, April 8',
-    excerpt: 'Free 8-hour Mental Health First Aid certification course at the Telluride Conference Center on Tuesday, April 8. Learn to recognize signs and respond to mental health crises. Register at tchnetwork.org.',
-    tags: ['Mental Health', 'Training', 'Free'], featured: false, eventRelated: true
-  },
-  {
     id: 'fb-3395-026', sourceKey: 'fb-3395',
-    postedAt: '2026-04-04T07:00:00',
-    title: 'KOTO Spring Street Dance recap — huge turnout on Colorado Ave',
-    excerpt: 'The KOTO Spring Street Dance drew a big crowd Thursday on Colorado Ave. Multiple bands rocked the block with a Pink Flamingo Costume Contest adding to the fun. Great end-of-season send-off for the community!',
+    postedAt: '2026-04-05T07:00:00',
+    title: 'KOTO Spring Street Dance recap — big crowd for end-of-season send-off',
+    excerpt: 'The KOTO Spring Street Dance drew a big crowd Thursday on Colorado Ave. The Other Brothers, Circles Around the Sun, Steely Dead, and JJ Grey & Mofro rocked the block. The Pink Flamingo Costume Contest was a hit. Great end-of-season celebration!',
     tags: ['Events', 'KOTO', 'Recap'], featured: false, eventRelated: true
   },
   {
-    id: 'fb-2061-027', sourceKey: 'fb-2061',
+    id: 'foundation-011', sourceKey: 'foundation',
+    postedAt: '2026-04-05T10:00:00',
+    title: 'Town Park Campground reservations open April 21 — season starts May 15',
+    excerpt: 'Town Park Campground 2026 season runs May 15 through October 4. First of four reservation windows opens Tuesday, April 21 at 9 AM MST for arrivals May 15–June 12. All camping is by online reservation only with limited availability. Details at telluride-co.gov.',
+    tags: ['Camping', 'Town Park', 'Reservations'], featured: false, eventRelated: true
+  },
+  {
+    id: 'fb-2061-026', sourceKey: 'fb-2061',
     postedAt: '2026-04-04T07:30:00',
     title: 'CDOT: CO 145 road widening near Society Turn through September',
-    excerpt: 'CDOT road work on CO 145 at Mile Point 71, just west of Society Turn Roundabout, runs through early September. Williams Construction adding a new right-turn lane with acceleration/deceleration lanes. The $3.3M project funded by Genesee Properties. Mon–Fri, 9 AM–4 PM, expect up to 5-minute delays.',
+    excerpt: 'CDOT road work on CO 145 at Mile Point 71, just west of Society Turn Roundabout, runs through early September. Williams Construction adding a new right-turn lane with acceleration/deceleration lanes. Mon–Fri, 9 AM–4 PM. Expect lane shifts, flaggers, and up to 5-minute delays.',
     tags: ['Road Work', 'CDOT', 'Highway 145'], featured: false, eventRelated: false
   },
   {
@@ -129,7 +129,7 @@ const COMMUNITY_PULSE_POSTS = [
     id: 'fb-3395-027', sourceKey: 'fb-3395',
     postedAt: '2026-04-04T16:00:00',
     title: 'Bears are stirring — secure trash and remove bird feeders',
-    excerpt: 'Town of Telluride spring bear awareness campaign is underway. Muddy paw prints spotted on trash cans around the region. Bear-proof containers are required. Lock cars, secure windows, and take down bird feeders. Most bear conflicts are linked to careless handling of food and garbage.',
+    excerpt: 'Town of Telluride spring bear awareness campaign is underway. Bear-proof trash containers are required for all residential properties. Lock cars, secure windows, and take down bird feeders. Most bear conflicts are linked to careless handling of food and garbage.',
     tags: ['Wildlife', 'Town Notice', 'Bears'], featured: false, eventRelated: false
   },
   {
@@ -148,17 +148,17 @@ const COMMUNITY_PULSE_POSTS = [
   },
   {
     id: 'yoga-010', sourceKey: 'yoga-fest',
-    postedAt: '2026-04-03T10:00:00',
+    postedAt: '2026-04-04T10:00:00',
     title: '18th annual Yoga Festival — early-bird passes end April 15',
     excerpt: 'Telluride Yoga Festival runs June 25–28 with 24+ presenters and over 120 offerings plus live music and excursions. Early-bird pricing ends April 15. All levels welcome — grab your pass before prices go up!',
     tags: ['Festival', 'Yoga', 'Early Bird'], featured: false, eventRelated: true
   },
   {
-    id: 'foundation-011', sourceKey: 'foundation',
-    postedAt: '2026-04-05T10:00:00',
-    title: 'Town Park Campground reservations open April 21 — first window May 15–June 12',
-    excerpt: 'Town Park Campground 2026 season runs May 15–Oct 4. First of four online booking windows opens April 21 at 9 AM MST for arrivals May 15–June 12. All camping is by online reservation only with limited availability. Plan ahead — spots go fast. Details at telluride-co.gov.',
-    tags: ['Camping', 'Town Park', 'Reservations'], featured: false, eventRelated: true
+    id: 'fb-2061-027', sourceKey: 'fb-2061',
+    postedAt: '2026-04-04T12:00:00',
+    title: 'Uncompahgre Plateau forest treatment — public comment open',
+    excerpt: 'USFS proposed forest treatment project covers 267,000+ acres on the Uncompahgre Plateau across Montrose, Ouray, and San Miguel counties. 30-day public comment period underway. Treatments aim to reduce wildfire risk and improve drought resilience. Details at fs.usda.gov.',
+    tags: ['Forest', 'Public Comment', 'Wildfire'], featured: false, eventRelated: false
   },
   {
     id: 'fb-2438-010', sourceKey: 'fb-2438',
