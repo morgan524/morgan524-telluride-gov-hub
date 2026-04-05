@@ -28,144 +28,144 @@ const CP_SOURCES = {
 const COMMUNITY_PULSE_CACHE_DATE = '2026-04-04';
 const COMMUNITY_PULSE_POSTS = [
   {
-    id: 'fb-2061-016', sourceKey: 'fb-2061',
+    id: 'telski-022', sourceKey: 'telski',
     postedAt: '2026-04-04T08:00:00',
-    title: 'Willow Springs Fire contained — crews monitoring hot spots',
-    excerpt: 'The Willow Springs Fire near Telluride Regional Airport is contained after overnight precipitation. No active flames or visible smoke as of this morning. Telluride Fire, USFS, and BLM crews continue monitoring interior hot spots. San Miguel County remains in severe drought — stay fire-aware.',
-    tags: ['Wildfire', 'Safety', 'Update'], featured: true, eventRelated: false
-  },
-  {
-    id: 'telski-020', sourceKey: 'telski',
-    postedAt: '2026-04-04T07:00:00',
-    title: 'Final weekend — ski today and tomorrow, season ends Sunday April 5',
-    excerpt: 'Telluride Ski Resort is open today and tomorrow for the last turns of the season. Intermediate and advanced terrain only — conditions are spring-soft. Season officially ends Sunday April 5. Thank you for a memorable 2025-26 season!',
+    title: 'Last day tomorrow — ski resort closes Sunday April 5 for the season',
+    excerpt: 'Telluride Ski Resort reopened Friday after closing mid-week to preserve snow for closing weekend. Intermediate and advanced terrain only — spring conditions. Sunday April 5 is the final day of the 2025-26 season. Get your last turns in!',
     tags: ['Ski Season', 'Closing Day', 'Final Weekend'], featured: true, eventRelated: true
   },
   {
-    id: 'c7cc-016', sourceKey: 'c7cc',
-    postedAt: '2026-04-04T09:00:00',
-    title: 'SMRHA housing lottery — deed-restricted units, drawing April 24',
-    excerpt: 'SMRHA accepting applications for deed-restricted homeownership units (White House 3C, Entrada H, Meribel B). Lottery drawing April 24 at 10 AM, Rebekah Hall, 113 W Colorado Ave. Visit smrha.org/lottery or email admin@smrha.org.',
-    tags: ['Housing', 'Affordable', 'Lottery'], featured: true, eventRelated: true
-  },
-  {
-    id: 'fb-3395-017', sourceKey: 'fb-3395',
+    id: 'fb-3395-020', sourceKey: 'fb-3395',
     postedAt: '2026-04-04T10:00:00',
-    title: 'Town outdoor water restrictions in effect — Mon/Wed/Fri only',
-    excerpt: 'Town of Telluride outdoor water restrictions are in effect since March 31. Watering allowed Mon/Wed/Fri only, before 8 AM or after 7 PM. Irrigation systems must run at 70–75% of normal. Exterior water features must be off. Runoff forecast remains 60–70% of normal.',
+    title: 'Water restrictions in effect — outdoor watering Mon/Wed/Fri only',
+    excerpt: 'Town of Telluride outdoor water restrictions took effect March 31 due to below-average snowpack and anticipated dry spring. Watering allowed Mon/Wed/Fri only, before 8 AM or after 7 PM. Irrigation at 70–75% of normal. Exterior water features must be off. Runoff forecast 60–70% of normal.',
     tags: ['Drought', 'Water', 'Conservation'], featured: true, eventRelated: false
   },
   {
-    id: 'telski-021', sourceKey: 'telski',
+    id: 'fb-2061-020', sourceKey: 'fb-2061',
+    postedAt: '2026-04-04T09:00:00',
+    title: 'Fire outlook: above-average wildfire risk building across Four Corners',
+    excerpt: 'National Interagency Fire Center seasonal outlook shows above-average wildfire risk across the Four Corners region by June. Colorado has the lowest snowpack in the modern SNOTEL era. First four months of the water year are the warmest in 131 years. Stay fire-aware and maintain defensible space.',
+    tags: ['Wildfire', 'Drought', 'Safety'], featured: true, eventRelated: false
+  },
+  {
+    id: 'c7cc-018', sourceKey: 'c7cc',
+    postedAt: '2026-04-04T09:30:00',
+    title: 'SMRHA housing lottery — deed-restricted units, drawing April 24',
+    excerpt: 'SMRHA accepting applications for deed-restricted homeownership units (Silver Jack 202, Silver Jack 205, Element 52 SW-102). Lottery drawing April 24 at 10 AM, Rebekah Hall, 113 W Colorado Ave. Visit smrha.org or email admin@smrha.org.',
+    tags: ['Housing', 'Affordable', 'Lottery'], featured: true, eventRelated: true
+  },
+  {
+    id: 'telski-023', sourceKey: 'telski',
     postedAt: '2026-04-04T08:30:00',
     title: 'Gondola closes Monday April 6 — reopens May 21 for summer',
     excerpt: 'The free gondola between Telluride and Mountain Village closes Monday, April 6 for spring maintenance. Reopens May 21 for summer operations. Free SMART bus service continues between towns during the closure.',
     tags: ['Gondola', 'Transportation', 'Season'], featured: true, eventRelated: false
   },
   {
-    id: 'fb-3395-018', sourceKey: 'fb-3395',
+    id: 'fb-3395-021', sourceKey: 'fb-3395',
     postedAt: '2026-04-04T07:30:00',
-    title: 'KOTO Spring Street Dance recap — huge turnout on Colorado Ave',
-    excerpt: 'The KOTO Spring Street Dance drew a big crowd yesterday on Colorado Ave. The Other Brothers (Allman Brothers tribute) rocked the block, the Pink Flamingo Costume Contest was a hit, and raffle winners scored a Fiji resort stay. Great end-of-season send-off!',
-    tags: ['Events', 'KOTO', 'Recap'], featured: false, eventRelated: true
+    title: 'Town community survey open through May 21 — share your feedback',
+    excerpt: 'The Town of Telluride launched its third annual community survey on March 31. Share feedback on government services, quality of life, and priorities. Open to all residents through May 21, 2026. Your input helps shape town budget and policy decisions.',
+    tags: ['Town Government', 'Survey', 'Civic'], featured: false, eventRelated: false
   },
   {
-    id: 'smc-dems-009', sourceKey: 'smc-dems',
+    id: 'fb-2061-021', sourceKey: 'fb-2061',
+    postedAt: '2026-04-04T09:30:00',
+    title: 'Town election petitions due April 20 — run for Town Council',
+    excerpt: 'Nomination petitions for the June 30 Town of Telluride special election are available now. Completed petitions must be submitted to the Town Clerk by Monday, April 20, 2026. Town Council seats to be filled — if you\'re considering a run for local office, now is the time.',
+    tags: ['Elections', 'Government', 'Deadline'], featured: false, eventRelated: true
+  },
+  {
+    id: 'smc-dems-011', sourceKey: 'smc-dems',
     postedAt: '2026-04-04T08:00:00',
     title: 'County Democratic Assembly April 12 — delegate registration closes tomorrow',
     excerpt: 'San Miguel County Democratic Assembly is April 12. Register by tomorrow, April 5, to participate as a delegate. Info at smcdemocrats.org. This is how local candidates advance to the primary ballot.',
     tags: ['Politics', 'Assembly', 'Deadline'], featured: false, eventRelated: true
   },
   {
-    id: 'fb-2061-017', sourceKey: 'fb-2061',
-    postedAt: '2026-04-04T09:30:00',
-    title: 'Town election petitions due April 20 — run for office!',
-    excerpt: 'Completed petitions for the upcoming Town of Telluride municipal election must be submitted to the Town Clerk no later than Monday, April 20, 2026. If you are considering a run for local office, now is the time to collect signatures.',
-    tags: ['Elections', 'Government', 'Deadline'], featured: false, eventRelated: true
+    id: 'fb-3395-022', sourceKey: 'fb-3395',
+    postedAt: '2026-04-04T07:00:00',
+    title: 'KOTO Spring Street Dance recap — huge turnout on Colorado Ave',
+    excerpt: 'The KOTO Spring Street Dance drew a big crowd Thursday on Colorado Ave. The Other Brothers, Circles Around the Sun, Steely Dead, and JJ Grey & Mofro rocked the block. The Pink Flamingo Costume Contest was a hit. Great end-of-season send-off!',
+    tags: ['Events', 'KOTO', 'Recap'], featured: false, eventRelated: true
   },
   {
-    id: 'tchn-013', sourceKey: 'tchn',
+    id: 'c7cc-019', sourceKey: 'c7cc',
+    postedAt: '2026-04-04T11:00:00',
+    title: '$290K in business grants distributed to 46 local businesses',
+    excerpt: 'Town of Telluride distributed approximately $290,876 to 46 locally owned businesses impacted by the ski resort closure earlier this season. Part of the broader $400,000 economic relief package approved in February alongside tourism, air service, and resident hardship funding.',
+    tags: ['Business', 'Town Government', 'Relief'], featured: false, eventRelated: false
+  },
+  {
+    id: 'tchn-014', sourceKey: 'tchn',
     postedAt: '2026-04-04T09:00:00',
-    title: 'Free Mental Health First Aid training — this Tuesday, April 8',
+    title: 'Free Mental Health First Aid training — Tuesday, April 8',
     excerpt: 'Free 8-hour Mental Health First Aid certification course at the Telluride Conference Center on Tuesday, April 8. Learn to recognize signs and respond to mental health crises. Register at tchnetwork.org.',
     tags: ['Mental Health', 'Training', 'Free'], featured: false, eventRelated: true
   },
   {
-    id: 'c7cc-017', sourceKey: 'c7cc',
-    postedAt: '2026-04-04T11:00:00',
-    title: 'KOTO "Off the Record" — wildfire preparedness with emergency manager',
-    excerpt: 'KOTO aired a wildfire preparedness segment with San Miguel County Emergency Manager Shannon Armstrong and Tim Pinnow from the West Region Wildfire Council. Discussion covered defensible space, evacuation routes, and the elevated risk this season after record-low snowpack.',
-    tags: ['Wildfire', 'KOTO', 'Preparedness'], featured: false, eventRelated: false
-  },
-  {
-    id: 'fb-2061-018', sourceKey: 'fb-2061',
+    id: 'fb-2061-022', sourceKey: 'fb-2061',
     postedAt: '2026-04-03T07:30:00',
     title: 'CDOT: CO 145 road widening near Society Turn through September',
     excerpt: 'CDOT road work on CO 145 at Mile Point 71, just west of Society Turn Roundabout, runs through early September. Williams Construction adding a new right-turn lane with acceleration/deceleration lanes. Mon–Fri, 9 AM–4 PM. Expect lane shifts, flaggers, and up to 5-minute delays.',
     tags: ['Road Work', 'CDOT', 'Highway 145'], featured: false, eventRelated: false
   },
   {
-    id: 'fb-3395-019', sourceKey: 'fb-3395',
+    id: 'smc-dems-012', sourceKey: 'smc-dems',
+    postedAt: '2026-04-03T10:00:00',
+    title: 'County housing projects update — Ilium groundbreaking targeted spring 2026',
+    excerpt: 'San Miguel County targets April–May 2026 groundbreaking for five affordable units at the Ilium site (KEO Studio Works design). Deer Creek CDOT partnership aims for 30–35 workforce units. Pathfinder 73-unit project still contingent on water. County also advancing a Land Use Code Amendment for accelerated housing review.',
+    tags: ['Housing', 'County', 'Development'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-3395-023', sourceKey: 'fb-3395',
     postedAt: '2026-04-03T16:00:00',
     title: 'Bears are stirring — secure trash and remove bird feeders',
     excerpt: 'Town of Telluride spring bear awareness campaign is underway. Bear-proof trash containers are required for all residential properties. Lock cars, secure windows, and take down bird feeders. Most bear conflicts are linked to careless handling of food and garbage.',
     tags: ['Wildlife', 'Town Notice', 'Bears'], featured: false, eventRelated: false
   },
   {
-    id: 'humane-013', sourceKey: 'humane',
+    id: 'humane-014', sourceKey: 'humane',
     postedAt: '2026-04-04T11:00:00',
     title: 'Spring adoptions — meet Juniper and Copper at telluridehumanesociety.com',
     excerpt: 'Telluride Humane Society has dogs and cats ready for forever homes this spring. Juniper (heeler mix) and Copper (lab mix) are looking for active families. Foster-to-adopt available. All adopters must be in Telluride for pickup. Apply at telluridehumanesociety.com.',
     tags: ['Adoption', 'Dogs', 'Pets'], featured: false, eventRelated: false
   },
   {
-    id: 'rotary-ig-009', sourceKey: 'rotary-ig',
+    id: 'rotary-ig-010', sourceKey: 'rotary-ig',
     postedAt: '2026-04-03T13:00:00',
     title: 'Rotary scholarships for seniors — deadline April 15',
     excerpt: 'Telluride Rotary scholarships for graduating seniors are open. Awards up to $5,000 for top academic achievers, plus $2,500 awards and a $1,000 vocational scholarship. Deadline April 15. Apply at telluriderotary.org.',
     tags: ['Scholarships', 'Youth', 'Education'], featured: false, eventRelated: false
   },
   {
-    id: 'yoga-008', sourceKey: 'yoga-fest',
+    id: 'yoga-009', sourceKey: 'yoga-fest',
     postedAt: '2026-04-02T10:00:00',
     title: '18th annual Yoga Festival — early-bird passes end April 15',
     excerpt: 'Telluride Yoga Festival runs June 25–28 with 24+ presenters and over 120 offerings plus live music and excursions. Early-bird pricing ends April 15. All levels welcome — grab your pass before prices go up!',
     tags: ['Festival', 'Yoga', 'Early Bird'], featured: false, eventRelated: true
   },
   {
-    id: 'fb-2061-019', sourceKey: 'fb-2061',
+    id: 'foundation-010', sourceKey: 'foundation',
+    postedAt: '2026-04-04T10:00:00',
+    title: 'Town Park Campground reservations open April 21 — first window May 15–June 12',
+    excerpt: 'Town Park Campground reservation windows announced. First booking window opens April 21 for arrivals May 15–June 12. Plan ahead — Telluride campground spots go fast. Details at telluride-co.gov.',
+    tags: ['Camping', 'Town Park', 'Reservations'], featured: false, eventRelated: true
+  },
+  {
+    id: 'fb-2061-023', sourceKey: 'fb-2061',
     postedAt: '2026-04-03T12:00:00',
     title: 'Uncompahgre Plateau forest treatment — public comment open',
     excerpt: 'USFS proposed forest treatment project covers 267,000+ acres on the Uncompahgre Plateau across Montrose, Ouray, and San Miguel counties. 30-day public comment period underway. Details at fs.usda.gov. Important for wildfire mitigation in the region.',
     tags: ['Forest', 'Public Comment', 'Wildfire'], featured: false, eventRelated: false
   },
   {
-    id: 'smc-dems-010', sourceKey: 'smc-dems',
-    postedAt: '2026-04-02T10:00:00',
-    title: 'SMC Land Use Code Amendment — Accelerated Housing Review',
-    excerpt: 'San Miguel County Planning Commission and Board of County Commissioners held a joint work session March 26 on a proposed Land Use Code Amendment for Accelerated Housing Review. The amendment aims to streamline permitting for deed-restricted and workforce housing projects countywide.',
-    tags: ['Housing', 'Land Use', 'County'], featured: false, eventRelated: false
-  },
-  {
-    id: 'foundation-009', sourceKey: 'foundation',
-    postedAt: '2026-04-03T17:30:00',
-    title: 'Tales from the Season — storytelling night recap',
-    excerpt: 'Telluride Arts and Citizens State Bank hosted "Tales from the Season" on April 2 at 135 W Pacific Ave. Community members shared stories from the 2025-26 winter season over mocktails and light bites. A great send-off to an unforgettable — and unusually dry — ski season.',
-    tags: ['Arts', 'Community', 'Events'], featured: false, eventRelated: true
-  },
-  {
-    id: 'fb-2438-008', sourceKey: 'fb-2438',
+    id: 'fb-2438-009', sourceKey: 'fb-2438',
     postedAt: '2026-04-03T09:00:00',
-    title: 'SMC Road & Bridge — pothole patching and road grading underway',
-    excerpt: 'San Miguel County Road and Bridge is patching potholes and grading roads across the district this month. Dust control treatment coming in mid-April. Drive carefully in work zones and expect brief delays on county roads.',
-    tags: ['Roads', 'County', 'Maintenance'], featured: false, eventRelated: false
-  },
-  {
-    id: 'carpool-009', sourceKey: 'koto-carpool',
-    postedAt: '2026-04-02T07:15:00',
-    title: 'Ride share: Norwood to Telluride, Mon–Fri',
-    excerpt: 'Looking for a carpool buddy Norwood to Telluride, leaving around 7:15 AM daily. Can share gas. Return trip around 5 PM. Comment or DM if interested.',
-    tags: ['Carpool', 'Norwood', 'Commute'], featured: false, eventRelated: false
+    title: 'Housing Authority reduces employment hours for 2026 rentals',
+    excerpt: 'Telluride Housing Authority temporarily reduced the employment requirement from 1,400 to 1,200 hours for employee rental housing in 2026. Aimed at easing access for seasonal and year-round workers during the economic recovery period.',
+    tags: ['Housing', 'Policy', 'Workers'], featured: false, eventRelated: false
   }
 ];
 const CP_MAX_POSTS = 20;
