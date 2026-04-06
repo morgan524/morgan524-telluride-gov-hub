@@ -1358,8 +1358,7 @@ const MANUAL_SUMMARIES = {
     'PUBLIC HEARING: 238 N Pine St (Lot 18B) — small-scale demolition of non-rated THAS structure + new construction (950–2,500 sq ft) + repositioning of THAS secondary structure (continued from Feb 18) · 238 N Pine St (Lot 18A) — small-scale demolition + new construction (continued from Feb 18) · WORK SESSION: 208 S Fir St — large-scale mixed-use replacement structure (5,000+ sq ft, Commercial Zone, NIBA LLC) · Colorado Wildfire Resiliency Code work session · Community Engagement — Historic Preservation discussion',
 
   // ── County BOCC Work Session Apr 8 ──
-  'county|2026-04-08|Board of County Commissioners Work Session':
-    'Work session — agenda details pending. Full packet expected on CivicClerk portal (event 986) by Monday Apr 6. Topics TBD.',
+  // (county|2026-04-08|Board of County Commissioners Work Session -- CANCELED, spring break recess Apr 6-17, confirmed via county calendar)
 
   // ── SMART ──
   // (smart|2026-04-09 -- agenda not yet posted, will add when available)
