@@ -1418,6 +1418,10 @@ const MANUAL_SUMMARIES = {
   // ── Telluride Ecology Commission (Apr 8) ──
   'telluride|2026-04-08|Ecology Commission':
     'WORKSESSION: Trash Bash event final planning · 2027 Climate Action Plan (CAP) update discussion — Buildings & Energy focus area',
+
+  // ── Telluride Housing Authority Subcommittee Special Meeting (Apr 9) ──
+  'telluride|2026-04-09|Telluride Housing Authority Subcommittee Special Meeting':
+    'Household size exception requests (§103.3B) — 15 applicants (Brumley, Candelaria, Criado, Cristadoro & Worthington, Davis & Gulic, Douglas, Goldstein, Kittler, Rigby, Schiefelbein, Seibal, Siemens, Bonilla Sosa & Elera Marino, Sundeen, Territo) seeking exceptions to Telluride Affordable Housing Guidelines minimum household size requirement',
 };
 
 // ── Unified summary lookup: AI first, then manual fallback ──
