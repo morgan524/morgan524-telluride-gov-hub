@@ -6655,7 +6655,7 @@ const HOUSING_LISTINGS = [
     lottery: true,
     address: '398 S Davis St, Telluride, CO 81435',
     lat: 37.9365, lng: -107.8118,
-    beds: '2 Bedroom, 1 Bath (479 sq ft)', price: '$352,529 (Tier 2, deed-restricted)',
+    beds: '2 Bedroom, 1 Bath (988 sq ft)', price: '$352,529 (Tier 2, deed-restricted)',
     source: 'SMRHA',
     contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
     url: 'https://smrha.org/lottery',
@@ -6807,11 +6807,11 @@ const HOUSING_LISTINGS = [
     type: 'market-rental',
     address: '107 W Columbia Ave, Telluride, CO 81435',
     lat: 37.9373, lng: -107.8128,
-    beds: '1 Bedroom', price: '$2,874/mo',
+    beds: '1 Bedroom (441 sq ft)', price: '$3,308/mo',
     source: 'Apartments.com',
     contact: {},
-    url: 'https://www.apartments.com/107-w-columbia-ave-telluride-co/f1l2ss1/',
-    note: 'Market-rate long-term rental in downtown Telluride.'
+    url: 'https://www.apartments.com/107-w-columbia-ave-telluride-co-unit-si-id1324996p/4er43mh/',
+    note: 'Furnished 1BR condo in downtown Telluride. No pets, no smoking. Street parking permit included.'
   }
 ];
 
