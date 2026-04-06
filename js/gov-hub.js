@@ -580,8 +580,8 @@ const MV_CACHED_DATA = [
     time: '2:00 PM',
     title: 'Town Council Meeting',
     board: 'tc',
-    agendaUrl: 'https://townofmountainvillage.com/site/assets/files/48429/march_19-_2026_town_council_meeting_agenda.pdf',
-    packetUrl: 'https://townofmountainvillage.com/site/assets/files/48439/march_19-_2026_town_council_meeting_packet.pdf',
+    agendaUrl: null,
+    packetUrl: null,
     special: false,
     location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
   },
@@ -591,7 +591,7 @@ const MV_CACHED_DATA = [
     time: '10:00 AM - 2:00 PM',
     title: 'Design Review Board',
     board: 'drb',
-    agendaUrl: 'https://townofmountainvillage.com/site/assets/files/48456/april_2-_2026_design_review_board_meeting_agenda.pdf',
+    agendaUrl: null,
     packetUrl: null,
     special: false,
     location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
@@ -621,8 +621,8 @@ const MV_CACHED_DATA = [
     time: '10:00 AM',
     title: 'Design Review Board',
     board: 'drb',
-    agendaUrl: 'https://townofmountainvillage.com/site/assets/files/48270/march_5-_2026_design_review_board_meeting_agenda.pdf',
-    packetUrl: 'https://townofmountainvillage.com/site/assets/files/48363/march_5-_2026_design_review_board_meeting_packet_reduced.pdf',
+    agendaUrl: null,
+    packetUrl: null,
     special: false,
     location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
   }
@@ -6797,17 +6797,6 @@ const HOUSING_LISTINGS = [
     note: 'Waitlist-based. Apply through the Town of Telluride Rental Housing division.'
   },
   /* ── Market-Rate Active Listings ── */
-  {
-    title: '1BR Apartment — 545 W Pacific Ave',
-    type: 'market-rental',
-    address: '545 W Pacific Ave, Telluride, CO 81435',
-    lat: 37.9378, lng: -107.8155,
-    beds: '1 Bedroom', price: '$1,500/mo',
-    source: 'Craigslist',
-    contact: {},
-    url: 'https://westslope.craigslist.org/apa/d/telluride-look-no-further-than-this/7919977718.html',
-    note: 'Long-term rental. 1BR on W Pacific Ave. Verify availability directly.'
-  },
   {
     title: '3BR House — 280 Mahoney Dr',
     type: 'market-rental',
