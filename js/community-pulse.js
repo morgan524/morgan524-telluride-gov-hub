@@ -25,20 +25,20 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-05';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-06';
 const COMMUNITY_PULSE_POSTS = [
   {
     id: 'telski-024', sourceKey: 'telski',
     postedAt: '2026-04-05T08:00:00',
-    title: 'TODAY is closing day — last chance to ski Telluride this season',
-    excerpt: 'Sunday April 5 is the final day of the 2025-26 ski season at Telluride Ski Resort. The resort reopened Friday after a mid-week closure to preserve snow for closing weekend. Spring conditions with intermediate and advanced terrain only. Base depth around 35 inches. Make your last turns count!',
-    tags: ['Ski Season', 'Closing Day', 'Final Day'], featured: true, eventRelated: true
+    title: 'Ski season wrapped — Telluride closed for the summer after April 5 closing day',
+    excerpt: 'The 2025-26 ski season at Telluride Ski Resort ended Sunday, April 5. The resort reopened Friday after a mid-week closure to preserve snow for closing weekend. Spring conditions with intermediate and advanced terrain only. Next up: summer operations begin in late June.',
+    tags: ['Ski Season', 'Closing Day', 'Recap'], featured: true, eventRelated: false
   },
   {
-    id: 'telski-025', sourceKey: 'telski',
-    postedAt: '2026-04-05T08:30:00',
-    title: 'Gondola closes tomorrow — spring maintenance April 6 through May 21',
-    excerpt: 'The free gondola between Telluride and Mountain Village closes Monday, April 6 for spring maintenance. It will reopen May 21 for summer operations. Free SMART bus service continues between the towns throughout the closure period. Plan your commute accordingly.',
+    id: 'telski-025b', sourceKey: 'telski',
+    postedAt: '2026-04-06T07:00:00',
+    title: 'Gondola closed today — spring maintenance through May 21',
+    excerpt: 'The free gondola between Telluride and Mountain Village is now closed as of Monday, April 6 for spring maintenance. It will reopen May 21 for summer operations. Free SMART bus service continues between the towns throughout the closure period. The Town of Mountain Village will also operate a bus between the Meadows and Village Center until the chondola opens.',
     tags: ['Gondola', 'Transportation', 'Season'], featured: true, eventRelated: false
   },
   {
@@ -63,11 +63,11 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Housing', 'Affordable', 'Lottery'], featured: true, eventRelated: true
   },
   {
-    id: 'smc-dems-013', sourceKey: 'smc-dems',
-    postedAt: '2026-04-05T08:00:00',
-    title: 'TODAY: delegate registration deadline for County Democratic Assembly',
-    excerpt: 'Today, April 5, is the last day to register as a delegate for the San Miguel County Democratic Assembly on April 12. This is how local candidates advance to the primary ballot. Register at smcdemocrats.org before the deadline.',
-    tags: ['Politics', 'Assembly', 'Deadline'], featured: false, eventRelated: true
+    id: 'smc-dems-013b', sourceKey: 'smc-dems',
+    postedAt: '2026-04-06T08:00:00',
+    title: 'San Miguel County Democratic Assembly — Saturday, April 12',
+    excerpt: 'The San Miguel County Democratic Assembly takes place Saturday, April 12. Registered delegates will vote to advance local candidates to the primary ballot. Delegate registration closed April 5. Details at smcdemocrats.org.',
+    tags: ['Politics', 'Assembly', 'Upcoming'], featured: false, eventRelated: true
   },
   {
     id: 'fb-2061-025', sourceKey: 'fb-2061',
@@ -98,11 +98,11 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Business', 'Town Government', 'Relief'], featured: false, eventRelated: false
   },
   {
-    id: 'fb-3395-026', sourceKey: 'fb-3395',
-    postedAt: '2026-04-05T07:00:00',
-    title: 'KOTO Spring Street Dance recap — big crowd for end-of-season send-off',
-    excerpt: 'The KOTO Spring Street Dance drew a big crowd Thursday on Colorado Ave. The Other Brothers, Circles Around the Sun, Steely Dead, and JJ Grey & Mofro rocked the block. The Pink Flamingo Costume Contest was a hit. Great end-of-season celebration!',
-    tags: ['Events', 'KOTO', 'Recap'], featured: false, eventRelated: true
+    id: 'fb-3395-028', sourceKey: 'fb-3395',
+    postedAt: '2026-04-06T08:00:00',
+    title: 'Community Wildfire Protection Plan — public comment period open',
+    excerpt: 'San Miguel County is seeking public input on a new Community Wildfire Protection Plan. Panel discussions are being held to kick off the public comment period. With 2026 fire season outlook showing above-average wildfire risk across the Four Corners, community input on preparedness and mitigation is critical. Visit sanmiguelcountyco.gov for details.',
+    tags: ['Wildfire', 'County', 'Public Comment'], featured: false, eventRelated: false
   },
   {
     id: 'foundation-011', sourceKey: 'foundation',
@@ -154,18 +154,18 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Festival', 'Yoga', 'Early Bird'], featured: false, eventRelated: true
   },
   {
-    id: 'fb-2061-028', sourceKey: 'fb-2061',
-    postedAt: '2026-04-05T12:00:00',
-    title: 'Mountain Village Police warn of email fraud scam targeting residents',
-    excerpt: 'The Mountain Village Police Department issued an alert about a growing email scam targeting local residents. Be cautious of unsolicited emails requesting personal or financial information. Do not click suspicious links. Report suspicious emails to MVPD at 970-728-9281.',
-    tags: ['Safety', 'Scam Alert', 'Police'], featured: false, eventRelated: false
+    id: 'fb-2061-030', sourceKey: 'fb-2061',
+    postedAt: '2026-04-06T10:00:00',
+    title: 'Airport Authority special meeting — April 21 at Hangar 30',
+    excerpt: 'The Telluride Regional Airport Authority will hold a special meeting on Tuesday, April 21, 2026 at 1:00 PM at Hangar 30 Conference Room, Telluride Regional Airport. Agenda to be posted at tellurideairport.com. This follows a recent aircraft incident at the airport that was reported with no injuries.',
+    tags: ['Airport', 'Government', 'Meeting'], featured: false, eventRelated: true
   },
   {
-    id: 'fb-2438-011', sourceKey: 'fb-2438',
-    postedAt: '2026-04-05T10:30:00',
-    title: 'Closing Day Crawfish Boil — celebrate the end of ski season today',
-    excerpt: 'Closing Day Crawfish Boil happening today, Sunday April 5, to mark the end of the 2025-26 ski season. A Telluride tradition to send off winter with good food and community spirit. Check local listings for time and location details.',
-    tags: ['Events', 'Closing Day', 'Food'], featured: false, eventRelated: true
+    id: 'fb-2061-029', sourceKey: 'fb-2061',
+    postedAt: '2026-04-06T09:00:00',
+    title: 'Wildfire reported near Telluride Airport — Greyhead subdivision area',
+    excerpt: 'The San Miguel County Sheriff\'s Office reported a wildfire approximately 2 miles northwest of Telluride Regional Airport, near the Greyhead subdivision. Telluride Fire and sheriff\'s deputies responded, joined by U.S. Forest Service and BLM personnel. Fire believed to be lightning-caused. Conditions are exceptionally dry — stay alert and maintain defensible space.',
+    tags: ['Wildfire', 'Safety', 'Emergency'], featured: true, eventRelated: false
   }
 ];
 const CP_MAX_POSTS = 20;
