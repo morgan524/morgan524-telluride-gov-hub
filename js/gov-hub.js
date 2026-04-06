@@ -4087,6 +4087,24 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Take the plunge: petition process underway for council candidates",
+    source: "Telluride Times",
+    date: "April 5, 2026",
+    newsTopic: "government",
+    copy: "The petition process is underway for candidates seeking seats on the Telluride Town Council in a June 30 special election to fill two council vacancies, with petitions due April 20.",
+    href: "https://www.telluridenews.com/news/article_92bfab96-4947-41b7-a1ef-d1e682f59d33.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/0d/30d9377d-5c3c-474b-a710-dfd7f142de66/69cf61ea20a7e.image.jpg"
+  },
+  {
+    title: "Watering our roots",
+    source: "Telluride Times",
+    date: "April 3, 2026",
+    newsTopic: "community",
+    copy: "Columnist Michelle Curry Wright reflects on identity and character, exploring what it means to stay connected to one\'s roots in a rapidly changing world.",
+    href: "https://www.telluridenews.com/opinion/columnists/article_2b934a07-4080-4562-b759-5d84f4699ce1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/b5/eb5bff0d-d2ce-4aaf-9fb7-96f17ff6b6ad/69cea4f510ebd.image.jpg"
+  },
+  {
     title: "Peace is the gift",
     source: "Telluride Times",
     date: "April 5, 2026",
