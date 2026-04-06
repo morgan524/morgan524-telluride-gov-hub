@@ -5512,6 +5512,23 @@ const LEGAL_NOTICES = [
     url: 'https://www.sanmiguelcountyco.gov/Bids.aspx',
     address: 'Mill Creek Park, Telluride, CO 81435'
   },
+  // ── April 6 (County Bids Page — New) ──
+  {
+    title: 'RFQ -- Material Hauling Services (Road & Bridge)',
+    entity: 'San Miguel County Road & Bridge',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🚛',
+    iconClass: 'type-bid',
+    type: 'RFQ',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County Road & Bridge is seeking contractors with commercial vehicles to assist with hauling material to various locations throughout the county. Full RFQ documents available at sanmiguelcountyco.gov/Bids.aspx.',
+    deadline: 'Open until contract awarded',
+    expires: '2026-06-30',
+    dates: '4/6',
+    papers: ['county_web'],
+    url: 'https://www.sanmiguelcountyco.gov/Bids.aspx'
+  },
 ];
 
 // Build calendar buttons for a legal notice event
