@@ -154,18 +154,18 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Festival', 'Yoga', 'Early Bird'], featured: false, eventRelated: true
   },
   {
-    id: 'fb-2061-027', sourceKey: 'fb-2061',
-    postedAt: '2026-04-04T12:00:00',
-    title: 'Uncompahgre Plateau forest treatment — public comment open',
-    excerpt: 'USFS proposed forest treatment project covers 267,000+ acres on the Uncompahgre Plateau across Montrose, Ouray, and San Miguel counties. 30-day public comment period underway. Treatments aim to reduce wildfire risk and improve drought resilience. Details at fs.usda.gov.',
-    tags: ['Forest', 'Public Comment', 'Wildfire'], featured: false, eventRelated: false
+    id: 'fb-2061-028', sourceKey: 'fb-2061',
+    postedAt: '2026-04-05T12:00:00',
+    title: 'Mountain Village Police warn of email fraud scam targeting residents',
+    excerpt: 'The Mountain Village Police Department issued an alert about a growing email scam targeting local residents. Be cautious of unsolicited emails requesting personal or financial information. Do not click suspicious links. Report suspicious emails to MVPD at 970-728-9281.',
+    tags: ['Safety', 'Scam Alert', 'Police'], featured: false, eventRelated: false
   },
   {
-    id: 'fb-2438-010', sourceKey: 'fb-2438',
-    postedAt: '2026-04-04T09:00:00',
-    title: 'Housing Authority reduces employment hours for 2026 rentals',
-    excerpt: 'Telluride Housing Authority temporarily reduced the employment requirement from 1,400 to 1,200 hours for employee rental housing in 2026. Aimed at easing access for seasonal and year-round workers during the economic recovery period.',
-    tags: ['Housing', 'Policy', 'Workers'], featured: false, eventRelated: false
+    id: 'fb-2438-011', sourceKey: 'fb-2438',
+    postedAt: '2026-04-05T10:30:00',
+    title: 'Closing Day Crawfish Boil — celebrate the end of ski season today',
+    excerpt: 'Closing Day Crawfish Boil happening today, Sunday April 5, to mark the end of the 2025-26 ski season. A Telluride tradition to send off winter with good food and community spirit. Check local listings for time and location details.',
+    tags: ['Events', 'Closing Day', 'Food'], featured: false, eventRelated: true
   }
 ];
 const CP_MAX_POSTS = 20;
