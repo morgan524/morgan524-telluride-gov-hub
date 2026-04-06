@@ -4087,6 +4087,105 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Telluride paramedic rides to Ukraine",
+    source: "Telluride Times",
+    date: "April 6, 2026",
+    newsTopic: "community",
+    copy: "Local paramedic Heidi Attenberger is riding her bike from Munich, Germany to Lviv, Ukraine this summer to raise funds for an Estonian aid organization that sends evacuation trucks to the front.",
+    href: "https://www.telluridenews.com/news/article_b84341f1-a75d-449c-98f5-ce239bca88b9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/84/c84d653f-ad57-421f-b4b7-e3c492602d26/69cf5ef42153e.image.jpg"
+  },
+  {
+    title: "\u2018A Gateway to Success\u2019",
+    source: "Telluride Times",
+    date: "March 29, 2026",
+    newsTopic: "community",
+    copy: "Telluride Miner School facilitates learning by doing, with students gaining hands-on experience in local industries.",
+    href: "https://www.telluridenews.com/news/article_67387faf-fb8e-4ee3-ae86-4ac65ce967a8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/0b/20b4ab8c-3dbf-406b-9978-9d3dceac7d92/69c4d6cbbfc29.image.jpg"
+  },
+  {
+    title: "\u201cI voted/yo vot\u00e9\u201d sticker contest voting ends soon",
+    source: "Telluride Times",
+    date: "March 29, 2026",
+    newsTopic: "government",
+    copy: "San Miguel County\u2019s bilingual \u2018I voted/yo vot\u00e9\u2019 sticker contest is wrapping up, with community voting on student-designed stickers ending soon.",
+    href: "https://www.telluridenews.com/news/article_d8e5dded-9af9-4cb1-b0aa-b5572ec3715a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/ff/cffda83a-a78e-4ec0-8d6b-5a4978a4e879/69c37e515b702.image.jpg"
+  },
+  {
+    title: "Telluride Jazz: the art of evolution",
+    source: "Telluride Times",
+    date: "March 28, 2026",
+    newsTopic: "arts-culture",
+    copy: "Tickets are on sale for the 48th Telluride Jazz Festival, featuring genre-fluid artists pushing the boundaries of jazz.",
+    href: "https://www.telluridenews.com/news/article_949d8fec-f167-43fa-ba8a-b22426a1b88f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/7e/e7e2478b-d244-4591-9adc-cc880c079f7e/69c775c9851f2.image.jpg"
+  },
+  {
+    title: "The Ready or Not",
+    source: "Telluride Times",
+    date: "March 27, 2026",
+    newsTopic: "community",
+    copy: "Fourth-grader Enzo Smith wins multiple awards with his innovative invention at a student showcase event.",
+    href: "https://www.telluridenews.com/news/article_7fae4a87-00c6-4a66-a331-b118bb6f9251.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b7/ab79b737-7a3e-42e2-9643-f998d0f3d511/69c4d38b0919b.image.jpg"
+  },
+  {
+    title: "STEADY on",
+    source: "Telluride Times",
+    date: "March 26, 2026",
+    newsTopic: "government",
+    copy: "Mountain Village Town Council hears better news in updates on local relief efforts after recent economic challenges.",
+    href: "https://www.telluridenews.com/news/article_41976f4e-3715-48f2-94fe-b620ee293fc8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/21/821a3f61-c19b-4b85-a12a-dd90e78fc4ac/69c31b9b81c8f.image.jpg"
+  },
+  {
+    title: "Telluride Town Council extends Business Stabilization Assistance Program",
+    source: "Telluride Times",
+    date: "March 25, 2026",
+    newsTopic: "business",
+    copy: "April 10 deadline set for locally owned private businesses seeking urgent support through the Town Council\u2019s stabilization program.",
+    href: "https://www.telluridenews.com/news/article_4c5527bf-5890-4781-b370-c12651e7fd20.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/4f/b4f54982-e78d-46d8-957d-3f39da787188/69c4298d7ac7d.image.jpg"
+  },
+  {
+    title: "\u2018Parking isn\u2019t pretty\u2019",
+    source: "Telluride Times",
+    date: "March 25, 2026",
+    newsTopic: "government",
+    copy: "Telluride Town Council pulls the plug on the controversial diagonal parking pilot program after community debate.",
+    href: "https://www.telluridenews.com/news/article_dd0dfe8d-418a-4dc3-97df-0702c5f64067.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/f1/af14fea6-e57e-4751-89da-324c9b109bc1/69c1a4ff3bc72.image.jpg"
+  },
+  {
+    title: "Surveillance or public safety?",
+    source: "Telluride Times",
+    date: "March 24, 2026",
+    newsTopic: "public-safety",
+    copy: "Police say automated license plate readers speed up investigations and help solve crimes, but civil liberty concerns remain.",
+    href: "https://www.telluridenews.com/news/article_0d2ef6b0-e4b6-4c72-aff4-476282270737.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/5b/a5b957d0-3c26-4621-a3ad-742127d90c3c/69c1a15e973fd.image.jpg"
+  },
+  {
+    title: "\u2018The bears are stirring\u2019 as Telluride launches spring awareness campaign",
+    source: "Telluride Times",
+    date: "March 24, 2026",
+    newsTopic: "public-safety",
+    copy: "As bears emerge from hibernation, Telluride launches its annual spring awareness campaign urging residents to secure trash and food attractants.",
+    href: "https://www.telluridenews.com/news/article_d3ca4dc6-726d-49bb-bffb-e3a491520ea9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/d5/ad5463a5-370a-41da-98f7-bcc906f0b24f/69bf7fa5351c3.image.jpg"
+  },
+  {
+    title: "Police investigating death outside Norwood",
+    source: "Telluride Times",
+    date: "March 23, 2026",
+    newsTopic: "public-safety",
+    copy: "The Colorado Bureau of Investigation is looking into a death that occurred outside Norwood.",
+    href: "https://www.telluridenews.com/news/article_dfcad5fd-0bd2-42bc-902e-3e5046aa7fe1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/19/719b2d61-d89c-46f3-a4ff-b24e53dac9e6/69c19d1f3aa2e.image.jpg"
+  },
+  {
     title: "Take the plunge: petition process underway for council candidates",
     source: "Telluride Times",
     date: "April 5, 2026",
@@ -4222,11 +4321,11 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/d8/6d82ceea-41dc-48ff-bacf-c66b2e5c4172/69c714dff331a.image.png"
   },
   {
-    title: "Telluride Ski Resort revised spring operating schedule",
+    title: "UPDATE: Telluride Ski Resort to re-open Friday",
     source: "Telluride Times",
-    date: "March 30, 2026",
+    date: "April 1, 2026",
     newsTopic: "business",
-    copy: "Telluride Ski Resort will be open on Tuesday, March 31, but then will close for a few days. The reopening schedule will depend on conditions.",
+    copy: "After closing the mountain to preserve snow for closing weekend, Telluride Ski Resort announced the resort will re-open on Friday, April 3rd.",
     href: "https://www.telluridenews.com/news_release/article_16473284-9fa7-4518-b3d8-43a48dc7a5aa.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/2c/c2c57f30-7503-41d0-84f3-05ed163b162e/69cb0bf82b841.image.jpg"
   },
@@ -4260,7 +4359,7 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
-// Updated: 2026-04-05  — refresh periodically from koto.org/news-category/newscasts/
+// Updated: 2026-04-06  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
   {
     title: "Newscast 4-3-26",
@@ -4337,7 +4436,7 @@ const KOTO_NEWSCASTS = [
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
-// Updated: 2026-04-05  — refresh periodically from koto.org/news-category/featured-stories/
+// Updated: 2026-04-06  — refresh periodically from koto.org/news-category/featured-stories/
 const KOTO_FEATURED_STORIES = [
   {
     title: "Floating Solar on Reservoir Number 2",
