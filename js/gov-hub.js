@@ -4963,7 +4963,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-04-05'; // Updated by legal-notice-update task
+const LEGAL_NOTICES_CACHE_DATE = '2026-04-05'; // Updated by legal-notice-update task (3 new county RFPs added)
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -5360,6 +5360,58 @@ const LEGAL_NOTICES = [
     expires: '2026-06-18',
     dates: '4/2',
     papers: ['ttimes_apr2']
+  },
+  // ── April 5 (County Bids Page — New) ──
+  {
+    title: 'RFP -- Foundation Repairs at the Placerville Schoolhouse',
+    entity: 'San Miguel County Parks & Open Space',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏛️',
+    iconClass: 'type-rfp',
+    type: 'RFP',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County Parks & Open Space is seeking qualified bidders to repoint the foundation of the historic Placerville Schoolhouse at 400 Front St, Placerville. Full RFP documents available at sanmiguelcountyco.gov/Bids.aspx.',
+    deadline: 'Open until contract awarded',
+    expires: '2026-06-30',
+    dates: '4/5',
+    papers: ['county_web'],
+    url: 'https://www.sanmiguelcountyco.gov/Bids.aspx',
+    address: '400 Front St, Placerville, CO 81430'
+  },
+  {
+    title: 'RFP -- Trout Lake Water Tank Roofing',
+    entity: 'San Miguel County Parks & Open Space',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏗️',
+    iconClass: 'type-rfp',
+    type: 'RFP',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County Parks & Open Space is seeking qualified bidders to replace the cedar shake roofing on the Trout Lake Water Tank at 912 N Trout Lake Rd, Telluride. Full RFP documents available at sanmiguelcountyco.gov/Bids.aspx.',
+    deadline: 'Open until contract awarded',
+    expires: '2026-06-30',
+    dates: '4/5',
+    papers: ['county_web'],
+    url: 'https://www.sanmiguelcountyco.gov/Bids.aspx',
+    address: '912 N Trout Lake Rd, Telluride, CO 81435'
+  },
+  {
+    title: 'RFP -- Soil Preparation & Regrading of Mill Creek Park Site',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🌲',
+    iconClass: 'type-rfp',
+    type: 'RFP',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County is seeking proposals for soil preparation and regrading of the Mill Creek Park site in Telluride. Full RFP documents available at sanmiguelcountyco.gov/Bids.aspx.',
+    deadline: 'Open until contract awarded',
+    expires: '2026-06-30',
+    dates: '4/5',
+    papers: ['county_web'],
+    url: 'https://www.sanmiguelcountyco.gov/Bids.aspx',
+    address: 'Mill Creek Park, Telluride, CO 81435'
   },
 ];
 
