@@ -166,6 +166,13 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Wildfire reported near Telluride Airport — Greyhead subdivision area',
     excerpt: 'The San Miguel County Sheriff\'s Office reported a wildfire approximately 2 miles northwest of Telluride Regional Airport, near the Greyhead subdivision. Telluride Fire and sheriff\'s deputies responded, joined by U.S. Forest Service and BLM personnel. Fire believed to be lightning-caused. Conditions are exceptionally dry — stay alert and maintain defensible space.',
     tags: ['Wildfire', 'Safety', 'Emergency'], featured: true, eventRelated: false
+  },
+  {
+    id: 'fb-3395-029', sourceKey: 'fb-3395',
+    postedAt: '2026-04-06T11:00:00',
+    title: 'Pacific Avenue closed April 6–18 for improvement project',
+    excerpt: 'Pacific Avenue is closed from Monday, April 6 through Saturday, April 18 as the Town of Telluride Public Works Department begins the next phase of the Pacific Avenue Improvement Project. Expect full closures between Mahoney and surrounding blocks. Part of the broader Southwest Area Conceptual Plan for improved traffic flow, bike safety, and pedestrian access.',
+    tags: ['Road Closure', 'Town Notice', 'Construction'], featured: false, eventRelated: false
   }
 ];
 const CP_MAX_POSTS = 20;
