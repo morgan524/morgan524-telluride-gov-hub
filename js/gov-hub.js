@@ -300,25 +300,6 @@ async function fetchCountyMeetings() {
 const COUNTY_CACHE_DATE = '2026-03-25';
 
 const COUNTY_CACHED_DATA = [
-  // ── March 2026 ──
-  {
-    date: 'March 25, 2026',
-    time: '9:30 AM - 3:00 PM',
-    title: 'Board of County Commissioners Meeting',
-    type: 'bocc',
-    location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: 864,
-    note: null
-  },
-  {
-    date: 'March 26, 2026',
-    time: '9:30 AM - 12:00 PM',
-    title: 'Planning Commission and Board of County Commissioners Joint Work Session',
-    type: 'planning',
-    location: '333 West Colorado Ave, 2nd Floor, Telluride, CO 81435',
-    civicClerkId: 971,
-    note: 'Joint session -- Accelerated Housing Review, Forestry Code, and related topics.'
-  },
   // ── April 2026 ──
   {
     date: 'April 1, 2026',
@@ -510,20 +491,6 @@ const SMART_CACHED_DATA = [
     special: false,
     note: 'Next scheduled meeting -- agenda and packet will be posted closer to the date.'
   },
-  {
-    date: 'March 12, 2026',
-    title: 'SMART Board of Directors',
-    agendaUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART%20Board%20Agenda_March%2012th%202026_distributed.pdf',
-    packetUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART%20Board%20meeting%20packet_March%2012th%202026.pdf',
-    special: false
-  },
-  {
-    date: 'January 8, 2026',
-    title: 'SMART Board of Directors',
-    agendaUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART%20Board%20Agenda_January%208th%202026_distributed.pdf',
-    packetUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART%20Board%20meeting%20packet_January%208th%202026.pdf',
-    special: false
-  }
 ];
 
 // ══════════════════════════════════════════════════════════════════
@@ -575,16 +542,6 @@ const MV_CACHED_DATA = [
     special: false,
     location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
   },
-  {
-    date: 'March 19, 2026',
-    time: '2:00 PM',
-    title: 'Town Council Meeting',
-    board: 'tc',
-    agendaUrl: null,
-    packetUrl: null,
-    special: false,
-    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
-  },
   // ── Design Review Board ──
   {
     date: 'April 2, 2026',
@@ -616,16 +573,6 @@ const MV_CACHED_DATA = [
     special: false,
     location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
   },
-  {
-    date: 'March 5, 2026',
-    time: '10:00 AM',
-    title: 'Design Review Board',
-    board: 'drb',
-    agendaUrl: null,
-    packetUrl: null,
-    special: false,
-    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
-  }
 ];
 
 function getMVMeetings() {
@@ -738,25 +685,6 @@ const SCHOOL_CACHED_DATA = [
     special: false,
     location: 'Bridal Veil District Conference Room / Zoom'
   },
-  // ── Recent (with agendas) ──
-  {
-    date: 'March 16, 2026',
-    time: '3:30 PM',
-    title: 'Board of Education Work Session',
-    agendaUrl: 'https://files.smartsites.parentsquare.com/3403/31626_ws_packet.pdf',
-    packetUrl: null,
-    special: false,
-    location: 'Bridal Veil District Conference Room / Zoom'
-  },
-  {
-    date: 'March 17, 2026',
-    time: '5:15 PM',
-    title: 'Board of Education Monthly Meeting',
-    agendaUrl: 'https://files.smartsites.parentsquare.com/3403/31726_mm_packet.pdf',
-    packetUrl: null,
-    special: false,
-    location: 'Bridal Veil District Conference Room / Zoom'
-  }
 ];
 
 function getSchoolMeetings() {
@@ -813,33 +741,6 @@ const FIRE_CACHED_DATA = [
     location: '131 W Columbia Ave, Telluride, CO 81435',
     note: 'Next scheduled meeting -- agenda typically posted a few days before.'
   },
-  {
-    date: 'March 17, 2026',
-    time: '5:30 PM',
-    title: 'Board of Directors Meeting',
-    agendaUrl: 'https://www.telluridefire.com/files/3d3e8ccfb/Agenda+-March+17th%2C+2026.pdf',
-    packetUrl: null,
-    special: false,
-    location: '131 W Columbia Ave, Telluride, CO 81435'
-  },
-  {
-    date: 'February 17, 2026',
-    time: '5:30 PM',
-    title: 'Board of Directors Meeting',
-    agendaUrl: 'https://www.telluridefire.com/files/286ab5c22/Agenda+-February+17th%2C+2026.pdf',
-    packetUrl: null,
-    special: false,
-    location: '131 W Columbia Ave, Telluride, CO 81435'
-  },
-  {
-    date: 'January 20, 2026',
-    time: '5:30 PM',
-    title: 'Board of Directors Meeting',
-    agendaUrl: 'https://www.telluridefire.com/files/cc0cf8d03/Agenda+-January+20th%2C+2026.pdf',
-    packetUrl: null,
-    special: false,
-    location: '131 W Columbia Ave, Telluride, CO 81435'
-  }
 ];
 
 function getFireMeetings() {
@@ -917,54 +818,6 @@ const MED_CACHED_DATA = [
     location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom',
     note: null
   },
-  // ── Recent ──
-  {
-    date: 'March 26, 2026',
-    time: '8:30 AM - 11:30 AM',
-    title: 'Regular Board Meeting',
-    agendaUrl: 'https://www.tellmed.org/files/651140033/THD+Reg+BOD+Mtg+3.26.26+Agenda.pdf',
-    packetUrl: null,
-    special: false,
-    location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom',
-    note: null
-  },
-  // ── Recent ──
-  {
-    date: 'March 9, 2026',
-    time: '1:00 PM - 2:00 PM',
-    title: 'Special Board Meeting',
-    agendaUrl: 'https://www.tellmed.org/files/a6a367fff/THD+Special+Bd+Mtg+Agenda+3.9.25.pdf',
-    packetUrl: null,
-    special: true,
-    location: 'TMC Wellness Annex / Zoom'
-  },
-  {
-    date: 'March 5, 2026',
-    time: '8:00 AM - 8:30 AM',
-    title: 'Special Board Meeting',
-    agendaUrl: 'https://www.tellmed.org/files/5e604df7f/THD+Special+Bd+Mtg+Agenda+3.5.25.pdf',
-    packetUrl: null,
-    special: true,
-    location: 'TMC Wellness Annex / Zoom'
-  },
-  {
-    date: 'February 26, 2026',
-    time: '8:30 AM - 11:30 AM',
-    title: 'Regular Board Meeting',
-    agendaUrl: 'https://www.tellmed.org/files/06f7d8cca/THD+Reg+BOD+Mtg+2.26.26+Agenda.pdf',
-    packetUrl: null,
-    special: false,
-    location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom'
-  },
-  {
-    date: 'January 22, 2026',
-    time: '8:30 AM',
-    title: 'Regular Board Meeting',
-    agendaUrl: 'https://www.tellmed.org/files/3252b5faf/THD+BOD+Mtg+1.22.26+Agenda.pdf',
-    packetUrl: null,
-    special: false,
-    location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom'
-  }
 ];
 
 function getMedMeetings() {
@@ -1038,12 +891,6 @@ const NORWOOD_CACHED_DATA = [
     board: 'bot',
     agendaUrl: null
   },
-  {
-    date: 'March 11, 2026',
-    title: 'Board of Trustees Meeting',
-    board: 'bot',
-    agendaUrl: 'https://www.norwoodtown.com/files/89dac45c4/03.11.2026+Board+of+Trustee+Agenda+ADA.pdf'
-  },
   // ── Planning & Zoning Commission ──
   {
     date: 'April 27, 2026',
@@ -1051,12 +898,6 @@ const NORWOOD_CACHED_DATA = [
     board: 'pz',
     agendaUrl: null,
     note: 'Next scheduled P&Z meeting -- agenda posted before the meeting.'
-  },
-  {
-    date: 'February 23, 2026',
-    title: 'Planning and Zoning Commission Meeting',
-    board: 'pz',
-    agendaUrl: 'https://www.norwoodtown.com/planning-and-zoning-commission-meetings'
   },
   // ── Water Commission ──
   {
@@ -1066,12 +907,6 @@ const NORWOOD_CACHED_DATA = [
     agendaUrl: null,
     note: 'Next scheduled NWC meeting -- agenda posted before the meeting.'
   },
-  {
-    date: 'March 10, 2026',
-    title: 'Norwood Water Commission Meeting',
-    board: 'nwc',
-    agendaUrl: 'https://www.norwoodtown.com/nwc-meetings'
-  },
   // ── Sanitation District ──
   {
     date: 'April 9, 2026',
@@ -1080,12 +915,6 @@ const NORWOOD_CACHED_DATA = [
     agendaUrl: null,
     note: 'Next scheduled Sanitation District meeting -- agenda posted before the meeting.'
   },
-  {
-    date: 'March 12, 2026',
-    title: 'Norwood Sanitation District Meeting',
-    board: 'san',
-    agendaUrl: 'https://www.norwoodtown.com/norwood-sanitation-district-meeting'
-  }
 ];
 
 function getNorwoodMeetings() {
@@ -1155,18 +984,6 @@ const OPHIR_CACHED_DATA = [
     board: 'ga',
     agendaUrl: null
   },
-  {
-    date: 'March 17, 2026',
-    title: 'General Assembly Meeting',
-    board: 'ga',
-    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/GAMeetingPacketMaterials-March17%2C2026-%282%29.pdf'
-  },
-  {
-    date: 'February 17, 2026',
-    title: 'General Assembly Meeting',
-    board: 'ga',
-    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/GAMeetingPacket-February17%2C2026.pdf'
-  },
   // ── Planning & Zoning Commission ──
   {
     date: 'April 9, 2026',
@@ -1181,24 +998,6 @@ const OPHIR_CACHED_DATA = [
     board: 'pz',
     agendaUrl: null
   },
-  {
-    date: 'March 11, 2026',
-    title: 'Planning and Zoning Commission Meeting',
-    board: 'pz',
-    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/OphirPZ_March2026_packet.pdf'
-  },
-  {
-    date: 'February 12, 2026',
-    title: 'Planning and Zoning Commission Meeting',
-    board: 'pz',
-    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/Feb2026_OphirPZ_packet.pdf'
-  },
-  {
-    date: 'January 15, 2026',
-    title: 'Planning and Zoning Commission Meeting',
-    board: 'pz',
-    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/OphirPZ_Jan26_packet.pdf'
-  }
 ];
 
 function getOphirMeetings() {
