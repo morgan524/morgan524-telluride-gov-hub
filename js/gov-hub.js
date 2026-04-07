@@ -4091,6 +4091,15 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Norwood\u2019s dream comes true",
+    source: "Telluride Times",
+    date: "April 7, 2026",
+    newsTopic: "community",
+    copy: "Just in time for America 250, the dream for a new Norwood School is about to get real. Design/build teams are poised to work the plan and expect to break ground in the next month or so.",
+    href: "https://www.telluridenews.com/news/article_b37a3e41-bf0f-495e-bef8-3dc5135581be.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3a/c3aca597-9016-4023-b145-d4ce28b8a655/69d49367e040c.image.jpg"
+  },
+  {
     title: "Local delegation represented at Democratic State Assembly",
     source: "Telluride Times",
     date: "April 6, 2026",
@@ -4188,15 +4197,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "As bears emerge from hibernation, Telluride launches its annual spring awareness campaign urging residents to secure trash and food attractants.",
     href: "https://www.telluridenews.com/news/article_d3ca4dc6-726d-49bb-bffb-e3a491520ea9.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/d5/ad5463a5-370a-41da-98f7-bcc906f0b24f/69bf7fa5351c3.image.jpg"
-  },
-  {
-    title: "Police investigating death outside Norwood",
-    source: "Telluride Times",
-    date: "March 23, 2026",
-    newsTopic: "public-safety",
-    copy: "The Colorado Bureau of Investigation is looking into a death that occurred outside Norwood.",
-    href: "https://www.telluridenews.com/news/article_dfcad5fd-0bd2-42bc-902e-3e5046aa7fe1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/19/719b2d61-d89c-46f3-a4ff-b24e53dac9e6/69c19d1f3aa2e.image.jpg"
   },
   {
     title: "Take the plunge: petition process underway for council candidates",
@@ -4437,15 +4437,6 @@ const KOTO_NEWSCASTS = [
     href: "https://koto.org/news/newscast-3-25-26/",
     img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
   },
-  {
-    title: "Newscast 3-23-26",
-    source: "KOTO Community Radio",
-    date: "March 23, 2026",
-    newsTopic: "government",
-    copy: "A death outside Norwood is under investigation by the Colorado Bureau of Investigation. Telluride Town Council votes to eliminate angled parking on Main Street after a year of public debate. Also: lawmakers work on balancing Colorado's $1.5 billion budget shortfall.",
-    href: "https://koto.org/news/newscast-3-23-26/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  }
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
