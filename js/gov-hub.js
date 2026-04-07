@@ -5075,7 +5075,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-04-05'; // Updated by legal-notice-update task (3 new county RFPs added)
+const LEGAL_NOTICES_CACHE_DATE = '2026-04-06'; // Updated by legal-notice-update task (election notice, Ordinance 1630 added)
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -5204,7 +5204,7 @@ const LEGAL_NOTICES = [
     iconClass: 'type-rfp',
     type: 'RFP',
     filterTag: 'public-entity',
-    summary: 'Mountain Village seeks proposals from qualified firms for the Country Club Drive Shoulder Widening project. Proposal documents available at townofmountainvillage.com/government/bids-rfps/procurement-materials/. Contact the Town of Mountain Village Public Works Department for details.',
+    summary: 'Mountain Village seeks proposals from qualified firms for the Country Club Drive Shoulder Widening project to add additional width and accommodate a bike/pedestrian lane on the outbound lane. Proposal documents available at townofmountainvillage.com/government/bids-rfps/procurement-materials/. Contact the Town of Mountain Village Public Works Department for details.',
     deadline: 'Proposals due April 27, 2026 at Noon',
     expires: '2026-04-27',
     dates: '4/1',
@@ -5524,6 +5524,41 @@ const LEGAL_NOTICES = [
     papers: ['county_web'],
     url: 'https://www.sanmiguelcountyco.gov/Bids.aspx',
     address: 'Mill Creek Park, Telluride, CO 81435'
+  },
+  // ── April 6 (Town of Telluride — Election & Ordinance) ──
+  {
+    title: 'Special Election Notice -- Two Town Council Seats (June 30, 2026)',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🗳️',
+    iconClass: 'type-hearing',
+    type: 'Election Notice',
+    filterTag: 'ordinance',
+    summary: 'The Town of Telluride will hold a Special Municipal Election on June 30, 2026 to fill two Town Council seats, conducted by San Miguel County under an intergovernmental agreement. Nomination petitions are available from the Town Clerk beginning March 31, 2026. Completed petitions must be submitted to the Town Clerk no later than Monday, April 20, 2026.',
+    deadline: 'Nomination petitions due April 20, 2026; Election June 30, 2026',
+    expires: '2026-06-30',
+    dates: '3/26, 4/6',
+    papers: ['town_web'],
+    url: 'https://www.telluride-co.gov',
+    event: { date: '2026-06-30', time: '7:00 AM', endTime: '7:00 PM', location: 'Town of Telluride' }
+  },
+  {
+    title: 'Ordinance No. 1630 -- Authorizing Sale of Meribel Unit B (Deed-Restricted)',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🏘️',
+    iconClass: 'type-housing',
+    type: 'Ordinance',
+    filterTag: 'housing',
+    summary: 'Ordinance No. 1630 authorizes the sale of Meribel Unit B, a deed-restricted residential condominium at 394 W Colorado Ave, acquired by the Town in December 2025. A lottery drawing was held January 30, 2026 to identify a qualified buyer. The unit is subject to Telluride Affordable Housing Guidelines requiring owner occupancy as a primary residence. The Mayor and Town Manager are authorized to execute the deed and complete the closing.',
+    deadline: 'Adopted by Town Council, Series of 2026',
+    expires: '2026-06-30',
+    dates: '4/6',
+    papers: ['town_web'],
+    url: 'https://telluride-co.civicweb.net/document/433206/',
+    address: '394 W Colorado Ave, Telluride, CO'
   },
   // ── April 6 (County Bids Page — New) ──
   {
