@@ -1160,7 +1160,7 @@ const MANUAL_SUMMARIES = {
   // (county|2026-04-08|Board of County Commissioners Work Session -- CANCELED, spring break recess Apr 6-17, confirmed via county calendar)
 
   // ── SMART ──
-  // (smart|2026-04-09 -- agenda not yet posted, will add when available)
+  // (smart|2026-04-09 -- SMART Board of Directors, agenda not yet posted as of 2026-04-07, will add when available)
 
   // ── Mountain Village ──
   'mv|2026-04-02|Design Review Board':
@@ -1181,12 +1181,14 @@ const MANUAL_SUMMARIES = {
 
   // ── BOCC (upcoming) ──
   // (county|2026-04-06 to 2026-04-17 -- CANCELED, spring break recess, no BOCC meetings)
-  // (county|2026-04-22 -- BOCC meeting scheduled, agenda not yet posted, will add when available)
+  'county|2026-04-22|Board of County Commissioners Meeting':
+    'PUBLIC HEARING: Sheriff candidate appointment interviews per CRS 24-6-402(4)(f) — Undersheriff Dan Covault (2pm) & Operations Sgt. Lane Masters (3pm), Miramonte Building 2nd floor · Public meet & greet with candidates at Placerville Schoolhouse 5-6:30pm · Appointment decision expected at Apr 30 BOCC meeting',
+
   // (county|2026-04-29 -- BOCC work session scheduled, agenda not yet posted, will add when available)
   // (county|2026-04-27 -- Open Space Commission 4pm, agenda not yet posted, will add when available)
 
   // ── SMRHA ──
-  // (smrha|2026-04-13 -- SMRHA board meeting 1pm via Zoom, packet not yet posted, will add when available)
+  // (smrha|2026-04-13 -- SMRHA board meeting 1pm via Zoom, packet available 24hrs before meeting only, will add when available)
 
   // ── Telluride Town Council (next) ──
   // (telluride|2026-04-28|Town Council -- confirmed Apr 28, agenda not yet posted, will add when available)
