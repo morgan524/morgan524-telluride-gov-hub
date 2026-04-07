@@ -59,7 +59,7 @@ const COMMUNITY_PULSE_POSTS = [
     id: 'c7cc-020', sourceKey: 'c7cc',
     postedAt: '2026-04-05T09:30:00',
     title: 'SMRHA housing lottery apps close April 10 — drawing April 24',
-    excerpt: 'Last chance to apply for deed-restricted homeownership units through SMRHA. Three condos available ranging from $352K to $405K. Applications accepted by appointment through noon on Friday, April 10. Lottery drawing April 24 at 10 AM, Rebekah Hall. Visit smrha.org or email admin@smrha.org.',
+    excerpt: 'Last chance to apply for deed-restricted homeownership units through SMRHA. Three units available: Silver Jack 202 and Silver Jack 205 at 155 W Pacific Ave, and Element 52 SW-102 at 398 S Davis St. Applications accepted by appointment through noon on Friday, April 10. Lottery drawing April 24 at 10 AM, Rebekah Hall. Visit smrha.org or email admin@smrha.org.',
     tags: ['Housing', 'Affordable', 'Lottery'], featured: true, eventRelated: true
   },
   {
@@ -126,11 +126,11 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Housing', 'County', 'Development'], featured: false, eventRelated: false
   },
   {
-    id: 'humane-015', sourceKey: 'humane',
-    postedAt: '2026-04-05T11:00:00',
-    title: 'Spring adoptions — meet Juniper and Copper at telluridehumanesociety.com',
-    excerpt: 'Telluride Humane Society has dogs and cats ready for forever homes this spring. Juniper (heeler mix) and Copper (lab mix) are looking for active families. Foster-to-adopt available. All adopters must be in Telluride for pickup. Apply at telluridehumanesociety.com.',
-    tags: ['Adoption', 'Dogs', 'Pets'], featured: false, eventRelated: false
+    id: 'fb-2061-032', sourceKey: 'fb-2061',
+    postedAt: '2026-04-07T09:00:00',
+    title: 'Mountain Village council vacancy — five candidates seeking appointment',
+    excerpt: 'Five candidates are seeking appointment by Mountain Village Town Council to fill the vacancy left by former Mayor Marti Prohaska\'s resignation last month. Town Council is expected to make the appointment at an upcoming meeting. Follow townofmountainvillage.com for meeting agendas and updates.',
+    tags: ['Government', 'Mountain Village', 'Council'], featured: false, eventRelated: false
   },
   {
     id: 'rotary-ig-011', sourceKey: 'rotary-ig',
