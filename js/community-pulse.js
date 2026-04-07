@@ -25,7 +25,7 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-06';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-07';
 const COMMUNITY_PULSE_POSTS = [
   {
     id: 'telski-024', sourceKey: 'telski',
@@ -126,13 +126,6 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Housing', 'County', 'Development'], featured: false, eventRelated: false
   },
   {
-    id: 'fb-3395-027', sourceKey: 'fb-3395',
-    postedAt: '2026-04-04T16:00:00',
-    title: 'Bears are stirring — secure trash and remove bird feeders',
-    excerpt: 'Town of Telluride spring bear awareness campaign is underway. Bear-proof trash containers are required for all residential properties. Lock cars, secure windows, and take down bird feeders. Most bear conflicts are linked to careless handling of food and garbage.',
-    tags: ['Wildlife', 'Town Notice', 'Bears'], featured: false, eventRelated: false
-  },
-  {
     id: 'humane-015', sourceKey: 'humane',
     postedAt: '2026-04-05T11:00:00',
     title: 'Spring adoptions — meet Juniper and Copper at telluridehumanesociety.com',
@@ -147,13 +140,6 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Scholarships', 'Youth', 'Education'], featured: false, eventRelated: false
   },
   {
-    id: 'yoga-010', sourceKey: 'yoga-fest',
-    postedAt: '2026-04-04T10:00:00',
-    title: '18th annual Yoga Festival — early-bird passes end April 15',
-    excerpt: 'Telluride Yoga Festival runs June 25–28 with 24+ presenters and over 120 offerings plus live music and excursions. Early-bird pricing ends April 15. All levels welcome — grab your pass before prices go up!',
-    tags: ['Festival', 'Yoga', 'Early Bird'], featured: false, eventRelated: true
-  },
-  {
     id: 'fb-2061-030', sourceKey: 'fb-2061',
     postedAt: '2026-04-06T10:00:00',
     title: 'Airport Authority special meeting — April 21 at Hangar 30',
@@ -161,11 +147,18 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Airport', 'Government', 'Meeting'], featured: false, eventRelated: true
   },
   {
-    id: 'fb-2061-029', sourceKey: 'fb-2061',
-    postedAt: '2026-04-06T09:00:00',
-    title: 'Wildfire reported near Telluride Airport — Greyhead subdivision area',
-    excerpt: 'The San Miguel County Sheriff\'s Office reported a wildfire approximately 2 miles northwest of Telluride Regional Airport, near the Greyhead subdivision. Telluride Fire and sheriff\'s deputies responded, joined by U.S. Forest Service and BLM personnel. Fire believed to be lightning-caused. Conditions are exceptionally dry — stay alert and maintain defensible space.',
-    tags: ['Wildfire', 'Safety', 'Emergency'], featured: true, eventRelated: false
+    id: 'fb-2061-029b', sourceKey: 'fb-2061',
+    postedAt: '2026-04-07T07:00:00',
+    title: 'Greyhead wildfire update — no active flames after overnight precipitation',
+    excerpt: 'Update on the Greyhead Mountain fire near Telluride Regional Airport: following moderate overnight precipitation, there are no active flames or visible smoke. Additional snowfall is expected, further supporting containment. Fire crews continue working interior hot spots to prevent re-ignition. The fire was reported Sunday approximately 2 miles northwest of the airport and was believed to be lightning-caused. Conditions remain exceptionally dry — maintain defensible space.',
+    tags: ['Wildfire', 'Safety', 'Update'], featured: true, eventRelated: false
+  },
+  {
+    id: 'fb-2061-031', sourceKey: 'fb-2061',
+    postedAt: '2026-04-07T08:00:00',
+    title: 'Parks & Recreation Commission meeting April 15 canceled — rescheduled to April 29',
+    excerpt: 'The Town of Telluride Parks & Recreation Commission meeting originally scheduled for April 15 has been canceled. It has been rescheduled to Tuesday, April 29. The Liquor Licensing Authority meeting remains on schedule for April 23, 2026.',
+    tags: ['Town Government', 'Parks', 'Meeting'], featured: false, eventRelated: true
   },
   {
     id: 'fb-3395-029', sourceKey: 'fb-3395',
