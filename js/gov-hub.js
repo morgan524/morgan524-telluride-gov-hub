@@ -4091,6 +4091,15 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Local delegation represented at Democratic State Assembly",
+    source: "Telluride Times",
+    date: "April 6, 2026",
+    newsTopic: "government",
+    copy: "San Miguel County delegates Wyszynski, Ahern and Reich joined 1,400 Democratic Party delegates at the biennial state assembly on March 28 to designate candidates for the ballot.",
+    href: "https://www.telluridenews.com/news/article_28653816-b332-4929-9bff-df456a6cb38c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/f0/4f0ce2dd-4d86-47fa-85e0-d5f705c7945b/69d427cb86559.image.jpg"
+  },
+  {
     title: "Telluride paramedic rides to Ukraine",
     source: "Telluride Times",
     date: "April 6, 2026",
