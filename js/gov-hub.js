@@ -868,7 +868,7 @@ const NORWOOD_BOT_URL = 'https://www.norwoodtown.com/board-of-trustees-meetings'
 const NORWOOD_PZ_URL = 'https://www.norwoodtown.com/planning-and-zoning-commission-meetings';
 const NORWOOD_NWC_URL = 'https://www.norwoodtown.com/nwc-meetings';
 const NORWOOD_SAN_URL = 'https://www.norwoodtown.com/norwood-sanitation-district-meeting';
-const NORWOOD_CACHE_DATE = '2026-03-24';
+const NORWOOD_CACHE_DATE = '2026-04-07';
 
 const NORWOOD_CACHED_DATA = [
   // ── Board of Trustees ──
@@ -876,8 +876,8 @@ const NORWOOD_CACHED_DATA = [
     date: 'April 8, 2026',
     title: 'Board of Trustees Meeting',
     board: 'bot',
-    agendaUrl: null,
-    note: 'Next scheduled meeting -- agenda posted before the meeting.'
+    agendaUrl: 'https://www.norwoodtown.com/files/35faa5101/04.08.2026+Board+of+Trustee+Agenda+ADA.pdf',
+    note: 'Regular meeting at 7:00 PM, Norwood Town Hall & Zoom.'
   },
   {
     date: 'May 12, 2026',
@@ -1217,6 +1217,11 @@ const MANUAL_SUMMARIES = {
     'Seasonal de-brief: Summer 2025 & Winter 2025-2026 vending compliance reports · Private property vending compliance · Vendor selection for 2026 summer season: North Spruce Park, Gondola Plaza, Colorado Ave (5 sites incl. N Oak St, Elks Park, S Spruce Mall, S Fir & W Pacific)',
 
   // ── Telluride Ecology Commission (Apr 8) ──
+  // ── Norwood ──
+  'norwood|2026-04-08|Board of Trustees Meeting':
+    'Swearing in of new Trustees (Bernice White, Liza Tanguay) & Mayor (Candy Meehan) · Marijuana license renewals: Blue Cottage LLC / Mary Jane Medicinals (1510 Grand Ave) and Alpine Wellness (1630 Grand Ave) · Special event liquor license: Norwood Chamber of Commerce (1455 Pinion St) · Norwood Post / Telluride Times update (Erin Spiellane) · Public notices newspaper designation: SM Basin Forum or Telluride Times · Pocket Park bid — RMC Builders · Discussion: town speed limit reduction · Sheriff\'s Office written report · Parks & Recreation District report · Music on the Mesa report',
+
+  // ── Telluride (continued) ──
   'telluride|2026-04-08|Ecology Commission':
     'WORKSESSION: Trash Bash event final planning · 2027 Climate Action Plan (CAP) update discussion — Buildings & Energy focus area',
 
