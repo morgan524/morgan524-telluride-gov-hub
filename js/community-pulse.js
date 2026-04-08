@@ -25,7 +25,7 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-07';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-08';
 const COMMUNITY_PULSE_POSTS = [
   {
     id: 'telski-024', sourceKey: 'telski',
@@ -166,6 +166,27 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Pacific Avenue closed April 6–18 for improvement project',
     excerpt: 'Pacific Avenue is closed from Monday, April 6 through Saturday, April 18 as the Town of Telluride Public Works Department begins the next phase of the Pacific Avenue Improvement Project. Expect full closures between Mahoney and surrounding blocks. Part of the broader Southwest Area Conceptual Plan for improved traffic flow, bike safety, and pedestrian access.',
     tags: ['Road Closure', 'Town Notice', 'Construction'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-2061-033', sourceKey: 'fb-2061',
+    postedAt: '2026-04-08T07:00:00',
+    title: 'Galloping Goose shifts to shoulder season — single-bus loop now in effect',
+    excerpt: 'The Town of Telluride Galloping Goose bus has transitioned to its shoulder season schedule with single-bus operation. With the gondola closed for maintenance through May 21, SMART regional bus service continues between Telluride and Mountain Village. Mountain Village is also running a bus between the Meadows and Village Center until the chondola opens. Call 970-728-5700 for schedule details.',
+    tags: ['Transportation', 'Bus', 'Shoulder Season'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-2061-034', sourceKey: 'fb-2061',
+    postedAt: '2026-04-08T08:00:00',
+    title: 'Music on the Green returns — Mountain Village summer concerts May 29 through Sept 18',
+    excerpt: 'The 2026 Music on the Green Summer Concert Series in Mountain Village runs every Friday from May 29 through September 18 (except July 3), 5–7 PM. Free live music in the Village Center. Mark your calendars for the summer season ahead.',
+    tags: ['Events', 'Music', 'Mountain Village'], featured: false, eventRelated: true
+  },
+  {
+    id: 'fb-2061-035', sourceKey: 'fb-2061',
+    postedAt: '2026-04-08T09:00:00',
+    title: 'Four Seasons Mountain Village project tweaks — 52 hotel rooms, 43 residences',
+    excerpt: 'The Four Seasons Hotel and Private Residences has updated its Mountain Village project design in response to customer demand. The revised plan includes 52 hotel rooms on the second and third floors overlooking the Mountain Village pond, plus 43 individually owned hotel residences ranging from one to five bedrooms, all allowed to be rented.',
+    tags: ['Development', 'Mountain Village', 'Hotel'], featured: false, eventRelated: false
   }
 ];
 const CP_MAX_POSTS = 20;
