@@ -187,6 +187,27 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Four Seasons Mountain Village project tweaks — 52 hotel rooms, 43 residences',
     excerpt: 'The Four Seasons Hotel and Private Residences has updated its Mountain Village project design in response to customer demand. The revised plan includes 52 hotel rooms on the second and third floors overlooking the Mountain Village pond, plus 43 individually owned hotel residences ranging from one to five bedrooms, all allowed to be rented.',
     tags: ['Development', 'Mountain Village', 'Hotel'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-3395-030', sourceKey: 'fb-3395',
+    postedAt: '2026-04-08T10:00:00',
+    title: 'Spring Clean Up & Trash Bash — May 16–18 at multiple locations',
+    excerpt: 'The annual countywide Spring Clean Up returns May 16–18. Telluride drop-off at Carhenge Parking Lot (700 W Pacific Ave) Friday and Saturday; Mountain Village at Market Plaza on Friday; Norwood and County Fairgrounds on Saturday. Household hazardous waste, electronics recycling, and general household waste accepted. The third annual Trash Bash follows Sunday, May 18 starting at noon in Elks Park — pick up litter, get entered in a raffle, and enjoy free food.',
+    tags: ['Community', 'Clean Up', 'Upcoming Event'], featured: false, eventRelated: true
+  },
+  {
+    id: 'tchn-016', sourceKey: 'tchn',
+    postedAt: '2026-04-08T08:30:00',
+    title: 'Public Health Week — April 6–12 proclaimed by County Commissioners',
+    excerpt: 'San Miguel County Commissioners proclaimed April 6–12, 2026 as Public Health Week, joining national celebrations recognizing public health achievements. San Miguel County Public Health expanded services in 2025 including increased radon testing, food safety training, and enhanced access to harm-reduction materials like Narcan and fentanyl test strips.',
+    tags: ['Public Health', 'County', 'Awareness'], featured: false, eventRelated: true
+  },
+  {
+    id: 'fb-2061-036', sourceKey: 'fb-2061',
+    postedAt: '2026-04-08T10:30:00',
+    title: 'Housing Code update — Phase 2 drafts due April 12, accelerated review underway',
+    excerpt: 'San Miguel County\'s Housing Code Update project is now in Phase 2: Issue Identification and Analysis. The county is developing an Accelerated Housing Review process per Proposition 123 requirements and identifying code constraints that slow housing production. Revised draft materials will be published by April 12, 2026. Public input opportunities to follow.',
+    tags: ['Housing', 'County', 'Land Use Code'], featured: false, eventRelated: false
   }
 ];
 const CP_MAX_POSTS = 20;
