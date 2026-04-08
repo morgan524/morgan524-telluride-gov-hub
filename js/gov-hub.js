@@ -4086,6 +4086,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/b5/db5ef660-af07-480d-a1ba-55171586422f/69c9853373f12.image.jpg"
   },
   {
+    title: "Super Cyclery",
+    source: "Telluride Times",
+    date: "April 2, 2026",
+    newsTopic: "business",
+    copy: "Max Cooper and Steven Steinberg opened Telluride Cyclery in the beloved old Box Canyon Bicycles space at 300 W. Colorado Ave., offering bike and Nordic ski service, rentals, sales, and a welcoming community hub for riders of all levels.",
+    href: "https://www.telluridenews.com/business/article_b7a23f29-42e9-4c06-8410-d75fc8584fd8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/79/a7962e60-5866-4b40-9f81-234a875e5c18/69cb6ae48d001.image.jpg"
+  },
+  {
     title: "Busting out of the bubble",
     source: "Telluride Times",
     date: "April 1, 2026",
@@ -4178,7 +4187,7 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
-// Updated: 2026-04-06  — refresh periodically from koto.org/news-category/newscasts/
+// Updated: 2026-04-08  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
   {
     title: "Newscast 4-3-26",
@@ -4246,7 +4255,7 @@ const KOTO_NEWSCASTS = [
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
-// Updated: 2026-04-06  — refresh periodically from koto.org/news-category/featured-stories/
+// Updated: 2026-04-08  — refresh periodically from koto.org/news-category/featured-stories/
 const KOTO_FEATURED_STORIES = [
   {
     title: "Floating Solar on Reservoir Number 2",
