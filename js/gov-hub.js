@@ -4461,7 +4461,7 @@ const LOCAL_GROUP_SCHEDULES = [
     dayOfWeek: 4,        // Thursday
     time: '6:30 PM',
     locations: ['472 W Pacific Ave, Telluride'],
-    href: 'https://tellurideelks.org',
+    href: 'https://www.facebook.com/pages/Telluride-Elks-Lodge-692/232150316875640',
     note: 'Board/House Committee meets 2nd Thursdays at 5:30 PM.'
   },
   {
@@ -6678,17 +6678,6 @@ const HOUSING_LISTINGS = [
     note: 'Waitlist-based. Apply through the Town of Telluride Rental Housing division.'
   },
   /* ── Market-Rate Active Listings ── */
-  {
-    title: '3BR House — 280 Mahoney Dr',
-    type: 'market-rental',
-    address: '280 Mahoney Dr, Telluride, CO 81435',
-    lat: 37.9410, lng: -107.8170,
-    beds: '3 Bedroom', price: '$3,901/mo',
-    source: 'Apartments.com',
-    contact: {},
-    url: 'https://www.apartments.com/280-mahoney-dr-telluride-co/zq5w36n/',
-    note: 'Market-rate long-term rental. Contact listing agent on Apartments.com.'
-  },
   {
     title: '1BR — 107 W Columbia Ave',
     type: 'market-rental',
