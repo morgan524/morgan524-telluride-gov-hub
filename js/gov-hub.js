@@ -3897,6 +3897,24 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Town council discusses long waitlist",
+    source: "Telluride Times",
+    date: "April 7, 2026",
+    newsTopic: "government",
+    copy: "The long waitlist and vacancies for deed-restricted rental properties continue to be a source of frustration, and Telluride Town Council discussed next steps to reduce the list during its regular meeting on Tuesday, March 31.",
+    href: "https://www.telluridenews.com/news/article_2bbd1e4d-5ead-4f4c-9ec8-27397b60bae1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/8f/18fbb46d-94db-477d-92f2-32feb2c8ae9c/69d0d9a08c465.image.jpg"
+  },
+  {
+    title: "Community flocks to KOTO street dance",
+    source: "Telluride Times",
+    date: "April 7, 2026",
+    newsTopic: "community",
+    copy: "The KOTO Spring Street Dance drew crowds to West Colorado Avenue for a sunny afternoon of music, costumes, and community celebration outside the San Miguel County Courthouse.",
+    href: "https://www.telluridenews.com/gallery/news/article_78519f26-50c2-4b14-9108-3bb41bf851bc.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/65/c65a6395-82f6-4ffc-b732-c495cea16247/69d51ffb460ec.image.jpg"
+  },
+  {
     title: "Norwood\u2019s dream comes true",
     source: "Telluride Times",
     date: "April 7, 2026",
