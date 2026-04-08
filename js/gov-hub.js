@@ -5375,6 +5375,24 @@ const LEGAL_NOTICES = [
     url: 'https://telluride-co.civicweb.net/document/433206/',
     address: '394 W Colorado Ave, Telluride, CO'
   },
+  // ── April 7 (TRAA Meeting Notice) ──
+  {
+    title: 'Special Meeting -- Telluride Regional Airport Authority (April 21)',
+    entity: 'Telluride Regional Airport Authority',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '✈️',
+    iconClass: 'type-hearing',
+    type: 'Meeting Notice',
+    filterTag: 'public-entity',
+    summary: 'The Telluride Regional Airport Authority will hold a special meeting on Tuesday, April 21, 2026 at 1:00 p.m. at Hangar 30 Conference Room, Telluride Regional Airport. Agenda available at tellurideairport.com.',
+    deadline: 'Meeting: April 21, 2026 at 1:00 PM',
+    expires: '2026-04-21',
+    dates: '4/7',
+    papers: ['ttimes_apr7'],
+    url: 'https://tellurideairport.com/traa-board-information/',
+    address: 'Hangar 30, Telluride Regional Airport'
+  },
   // ── April 6 (County Bids Page — New) ──
   {
     title: 'RFQ -- Material Hauling Services (Road & Bridge)',
