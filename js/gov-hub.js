@@ -4005,24 +4005,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/f1/af14fea6-e57e-4751-89da-324c9b109bc1/69c1a4ff3bc72.image.jpg"
   },
   {
-    title: "Surveillance or public safety?",
-    source: "Telluride Times",
-    date: "March 24, 2026",
-    newsTopic: "public-safety",
-    copy: "Police say automated license plate readers speed up investigations and help solve crimes, but civil liberty concerns remain.",
-    href: "https://www.telluridenews.com/news/article_0d2ef6b0-e4b6-4c72-aff4-476282270737.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/5b/a5b957d0-3c26-4621-a3ad-742127d90c3c/69c1a15e973fd.image.jpg"
-  },
-  {
-    title: "\u2018The bears are stirring\u2019 as Telluride launches spring awareness campaign",
-    source: "Telluride Times",
-    date: "March 24, 2026",
-    newsTopic: "public-safety",
-    copy: "As bears emerge from hibernation, Telluride launches its annual spring awareness campaign urging residents to secure trash and food attractants.",
-    href: "https://www.telluridenews.com/news/article_d3ca4dc6-726d-49bb-bffb-e3a491520ea9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/d5/ad5463a5-370a-41da-98f7-bcc906f0b24f/69bf7fa5351c3.image.jpg"
-  },
-  {
     title: "Take the plunge: petition process underway for council candidates",
     source: "Telluride Times",
     date: "April 5, 2026",
