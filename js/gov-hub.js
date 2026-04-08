@@ -18,13 +18,13 @@ const COUNTY_CALENDAR_URL = 'https://sanmiguelcountyco.gov/RSSFeed.aspx?ModID=58
 // ── News feeds ──
 const NEWS_FEEDS = [
   {
-    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=1&CID=Town-News-1',
+    url: 'https://telluride.gov/RSSFeed.aspx?ModID=1&CID=Town-News-1',
     source: 'telluride',
     sourceLabel: 'Town of Telluride',
     category: 'Town News'
   },
   {
-    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=1&CID=Marshals-Department-12',
+    url: 'https://telluride.gov/RSSFeed.aspx?ModID=1&CID=Marshals-Department-12',
     source: 'telluride',
     sourceLabel: 'Town of Telluride',
     category: "Marshal's Dept"
@@ -42,7 +42,7 @@ const NEWS_FEEDS = [
     category: 'Alert'
   },
   {
-    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=63&CID=All-0',
+    url: 'https://telluride.gov/RSSFeed.aspx?ModID=63&CID=All-0',
     source: 'telluride',
     sourceLabel: 'Town of Telluride',
     category: 'Alert'
@@ -5158,12 +5158,12 @@ const LEGAL_NOTICES = [
     iconClass: 'type-housing',
     type: 'Housing Lottery',
     filterTag: 'housing',
-    summary: 'A maximum of five (5) double-occupancy and three (3) single-occupancy rooms at the Boarding House (1270 W Black Bear Road) will be offered for a two-year master lease opportunity by Lottery pursuant to the Telluride Employee Rental Housing Policies. Interested local businesses, governmental or non-profit organizations must submit applications to the Telluride Housing Division at 820 Black Bear Rd G-17. Materials available at telluride-co.gov/735/Rental-Housing.',
+    summary: 'A maximum of five (5) double-occupancy and three (3) single-occupancy rooms at the Boarding House (1270 W Black Bear Road) will be offered for a two-year master lease opportunity by Lottery pursuant to the Telluride Employee Rental Housing Policies. Interested local businesses, governmental or non-profit organizations must submit applications to the Telluride Housing Division at 820 Black Bear Rd G-17. Materials available at telluride.gov/735/Rental-Housing.',
     deadline: 'Applications: March 25 at 9:00 AM through April 16, 2026 at 9:00 AM',
     expires: '2026-04-16',
     dates: '3/26',
     papers: ['ttimes_mar26'],
-    url: 'https://www.telluride-co.gov/735/Rental-Housing',
+    url: 'https://telluride.gov/735/Rental-Housing',
     address: '1270 W Black Bear Road, Telluride, CO'
   },
   // ── April 2-8 (Telluride Times) ──
@@ -5346,7 +5346,7 @@ const LEGAL_NOTICES = [
     expires: '2026-06-30',
     dates: '3/26, 4/6',
     papers: ['town_web'],
-    url: 'https://www.telluride-co.gov',
+    url: 'https://telluride.gov',
     event: { date: '2026-06-30', time: '7:00 AM', endTime: '7:00 PM', location: 'Town of Telluride' }
   },
   {
@@ -6654,7 +6654,7 @@ const HOUSING_LISTINGS = [
     beds: '1–3 Bedroom', price: 'Income-based (deed-restricted)',
     source: 'Town of Telluride',
     contact: { phone: '(970) 728-4025', email: 'housing@telluride-co.gov' },
-    url: 'https://www.telluride-co.gov/745/Town-Owned-Rental-Properties',
+    url: 'https://telluride.gov/745/Town-Owned-Rental-Properties',
     note: 'Waitlist-based. Town employee priority. Apply through the Town of Telluride.'
   },
   {
@@ -6665,7 +6665,7 @@ const HOUSING_LISTINGS = [
     beds: 'Studio–2 Bedroom', price: 'Income-based (deed-restricted)',
     source: 'Town of Telluride',
     contact: { phone: '(970) 728-4025', email: 'housing@telluride-co.gov' },
-    url: 'https://www.telluride-co.gov/745/Town-Owned-Rental-Properties',
+    url: 'https://telluride.gov/745/Town-Owned-Rental-Properties',
     note: 'Waitlist-based. Apply through the Town of Telluride Rental Housing division.'
   },
   /* ── Market-Rate Active Listings ── */
