@@ -208,6 +208,13 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Housing Code update — Phase 2 drafts due April 12, accelerated review underway',
     excerpt: 'San Miguel County\'s Housing Code Update project is now in Phase 2: Issue Identification and Analysis. The county is developing an Accelerated Housing Review process per Proposition 123 requirements and identifying code constraints that slow housing production. Revised draft materials will be published by April 12, 2026. Public input opportunities to follow.',
     tags: ['Housing', 'County', 'Land Use Code'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-3395-031', sourceKey: 'fb-3395',
+    postedAt: '2026-04-08T11:00:00',
+    title: 'Colorado wildfire building codes now in effect — local adoption required by July 1',
+    excerpt: 'As of April 1, 2026, Colorado cities and counties in high-risk wildfire areas must adopt new wildfire-ready building codes by July 1. The codes govern roofing materials, vent mesh sizes, landscaping within five feet of structures, and exterior wall assemblies. San Miguel County, with over 173,000 acres of moderate-to-high fire hazard, is directly affected. Building to wildfire standards adds roughly 2.7% to construction costs. Details at dfpc.colorado.gov.',
+    tags: ['Wildfire', 'Building Codes', 'County'], featured: false, eventRelated: false
   }
 ];
 const CP_MAX_POSTS = 20;
