@@ -3897,6 +3897,15 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Lady Miners rout Pagosa Springs 5-0",
+    source: "Telluride Times",
+    date: "April 8, 2026",
+    newsTopic: "sports",
+    copy: "The THS girls\' soccer team dominated their final home match with a 5-0 rout of Pagosa Springs before a 1-1 draw at non-league Grand Valley on Saturday, April 4.",
+    href: "https://www.telluridenews.com/sports/article_0fe91ef0-05a0-4514-9f6f-a64aa2696890.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/43/1432fa73-801c-4b8c-9f72-bf7e1b54cc07/69d49d40a1e3d.image.jpg"
+  },
+  {
     title: "Town council discusses long waitlist",
     source: "Telluride Times",
     date: "April 7, 2026",
