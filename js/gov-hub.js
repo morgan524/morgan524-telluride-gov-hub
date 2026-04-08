@@ -201,6 +201,8 @@ const COUNTY_CIVICCLERK_IDS = {
   'Board of County Commissioners Work Session|2026-04-08': 986,
   'Planning Commission|2026-04-02': 1025,
   'San Miguel County: Planning Commission|2026-04-02': 1025,
+  'Board of County Commissioners Meeting|2026-04-22': 865,
+  'Board of County Commissioners Work Session|2026-04-29': 985,
 };
 
 // Map: event ID → specific agenda file ID (for direct agenda PDF links)
@@ -1139,7 +1141,7 @@ async function loadAISummaries() {
 }
 
 // ── Manual/fallback summaries (preserved from original) ──
-// Last updated: 2026-04-03T12:00 (automated scan — Town Council confirmed Apr 28 (was ~Apr 21); new THA meetings Apr 23/24/28 discovered; Election Commission Apr 29 new; Parks & Rec rescheduled to Apr 29; Liquor Licensing Apr 23 new; School District Special Meeting Apr 20 added to cache; HARC Apr 15 Published=true, summary current; SMRHA Apr 13 1pm Zoom confirmed; no new agendas posted for BOCC Apr 22/29, SMART Apr 9, MV Council Apr 23, School Apr 20/27/28, Fire ~Apr 21, Med Apr 23; BOCC Apr 8 work session event 986 — JS portal, no agenda visible yet)
+// Last updated: 2026-04-08T12:00 (automated scan — HARC Apr 15 agenda verified: both 238 N Pine St items are applicant req. to continue w/o discussion (updated summary); COUNTY_CIVICCLERK_IDS updated: BOCC Apr 22 event 865 + BOCC Work Session Apr 29 event 985 added; BOCC Apr 29 has agendaIsPublish=False (not yet public); SMART Apr 9 no agenda; SMRHA Apr 13 confirmed, no packet yet; School Apr 20/27/28 no agendas; MV DRB Apr 23 not accessible; Fire/Med Apr 21/23 no agendas)
 const MANUAL_SUMMARIES = {
   // ── Telluride ──
   'telluride|2026-03-31|Town Council':
@@ -1154,7 +1156,7 @@ const MANUAL_SUMMARIES = {
 
   // ── Telluride HARC ──
   'telluride|2026-04-15|Historic & Architectural Review Commission':
-    'PUBLIC HEARING: 238 N Pine St (Lot 18B) — small-scale demolition of non-rated THAS structure + new construction (950–2,500 sq ft) + repositioning of THAS secondary structure (continued from Feb 18) · 238 N Pine St (Lot 18A) — small-scale demolition + new construction (continued from Feb 18) · WORK SESSION: 208 S Fir St — large-scale mixed-use replacement structure (5,000+ sq ft, Commercial Zone, NIBA LLC) · Colorado Wildfire Resiliency Code work session · Community Engagement — Historic Preservation discussion',
+    'PUBLIC HEARING (applicant req. to continue w/o discussion): 238 N Pine St (Lot 18B) — small-scale demolition + new construction (950–2,500 sq ft) + THAS secondary structure repositioning (continued from Feb 18) · PUBLIC HEARING (applicant req. to continue w/o discussion): 238 N Pine St (Lot 18A) — small-scale demolition + new construction (continued from Feb 18) · WORK SESSION: 208 S Fir St (Block 23) — large-scale mixed-use replacement structure (5,000+ sq ft, Commercial Zone, NIBA LLC / Shift Architects) · Colorado Wildfire Resiliency Code work session · Community Engagement — Historic Preservation discussion',
 
   // ── County BOCC Work Session Apr 8 ──
   // (county|2026-04-08|Board of County Commissioners Work Session -- CANCELED, spring break recess Apr 6-17, confirmed via county calendar)
@@ -1184,7 +1186,7 @@ const MANUAL_SUMMARIES = {
   'county|2026-04-22|Board of County Commissioners Meeting':
     'PUBLIC HEARING: Sheriff candidate appointment interviews per CRS 24-6-402(4)(f) — Undersheriff Dan Covault (2pm) & Operations Sgt. Lane Masters (3pm), Miramonte Building 2nd floor · Public meet & greet with candidates at Placerville Schoolhouse 5-6:30pm · Appointment decision expected at Apr 30 BOCC meeting',
 
-  // (county|2026-04-29 -- BOCC work session scheduled, agenda not yet posted, will add when available)
+  // (county|2026-04-29 -- BOCC Work Session, CivicClerk event 985, hasAgenda=True in system but agendaIsPublish=False as of 2026-04-08 — agenda not yet public, will add when published)
   // (county|2026-04-27 -- Open Space Commission 4pm, agenda not yet posted, will add when available)
 
   // ── SMRHA ──
