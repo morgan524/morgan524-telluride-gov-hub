@@ -126,10 +126,10 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Housing', 'County', 'Development'], featured: false, eventRelated: false
   },
   {
-    id: 'fb-2061-032', sourceKey: 'fb-2061',
+    id: 'fb-2061-032b', sourceKey: 'fb-2061',
     postedAt: '2026-04-07T09:00:00',
-    title: 'Mountain Village council vacancy — five candidates seeking appointment',
-    excerpt: 'Five candidates are seeking appointment by Mountain Village Town Council to fill the vacancy left by former Mayor Marti Prohaska\'s resignation last month. Town Council is expected to make the appointment at an upcoming meeting. Follow townofmountainvillage.com for meeting agendas and updates.',
+    title: 'Mountain Village council update — investigation into Prohaska resignation continues',
+    excerpt: 'Mountain Village Town Council appointed Dan Jansen to fill the vacancy left by former Mayor Marti Prohaska\'s January resignation. The council has also approved an independent third-party investigation into the events and circumstances surrounding the resignation. Community discussion continues as the investigation proceeds. Follow townofmountainvillage.com for updates.',
     tags: ['Government', 'Mountain Village', 'Council'], featured: false, eventRelated: false
   },
   {
