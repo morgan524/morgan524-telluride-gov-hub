@@ -3902,6 +3902,33 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Celebrating Mona",
+    source: "Telluride Times",
+    date: "April 9, 2026",
+    newsTopic: "community",
+    copy: "After 14 years as a Telluride Avalanche Dog, beloved local Labrador Mona enjoyed a special retirement send-off celebration.",
+    href: "https://www.telluridenews.com/news/article_7bffdd59-3c69-4bb0-b220-90d00d66d614.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/85/5859d982-c27b-4836-b394-ea702917d857/69d4909ab7eeb.image.jpg"
+  },
+  {
+    title: "Mountain Village and Telluride implement water restrictions",
+    source: "Telluride Times",
+    date: "April 8, 2026",
+    newsTopic: "government",
+    copy: "Both the towns of Telluride and Mountain Village recently implemented outdoor water restrictions due to exceptionally low snowpack and dry conditions this season.",
+    href: "https://www.telluridenews.com/news/article_839a13fb-58fb-414a-992e-eed87a6c80bb.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/45/c45704eb-1af5-4026-8acf-8ed3c357bf7b/69d5f724863b1.image.png"
+  },
+  {
+    title: "The Shining Mountains",
+    source: "Telluride Times",
+    date: "April 8, 2026",
+    newsTopic: "community",
+    copy: "Columnist Art Goodtimes reflects on the winter that wasn\u2019t, the mountains that endure, and what the changing seasons mean for the San Juan region.",
+    href: "https://www.telluridenews.com/opinion/columnists/article_5e40ccc4-9033-419e-8ae2-5ad8da76ff03.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/41/a41798cf-68fd-4d00-9e24-ffe7115cd52c/69d5384a1ea15.image.jpg"
+  },
+  {
     title: "Lady Miners rout Pagosa Springs 5-0",
     source: "Telluride Times",
     date: "April 8, 2026",
