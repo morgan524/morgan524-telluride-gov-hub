@@ -3997,24 +3997,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/news/article_41976f4e-3715-48f2-94fe-b620ee293fc8.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/21/821a3f61-c19b-4b85-a12a-dd90e78fc4ac/69c31b9b81c8f.image.jpg"
   },
-  {
-    title: "Telluride Town Council extends Business Stabilization Assistance Program",
-    source: "Telluride Times",
-    date: "March 25, 2026",
-    newsTopic: "business",
-    copy: "April 10 deadline set for locally owned private businesses seeking urgent support through the Town Council\u2019s stabilization program.",
-    href: "https://www.telluridenews.com/news/article_4c5527bf-5890-4781-b370-c12651e7fd20.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/4f/b4f54982-e78d-46d8-957d-3f39da787188/69c4298d7ac7d.image.jpg"
-  },
-  {
-    title: "\u2018Parking isn\u2019t pretty\u2019",
-    source: "Telluride Times",
-    date: "March 25, 2026",
-    newsTopic: "government",
-    copy: "Telluride Town Council pulls the plug on the controversial diagonal parking pilot program after community debate.",
-    href: "https://www.telluridenews.com/news/article_dd0dfe8d-418a-4dc3-97df-0702c5f64067.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/f1/af14fea6-e57e-4751-89da-324c9b109bc1/69c1a4ff3bc72.image.jpg"
-  },
+  // Removed 2 stale Telluride Times articles from March 25 (>14 days old)
   {
     title: "Take the plunge: petition process underway for council candidates",
     source: "Telluride Times",
@@ -4254,15 +4237,7 @@ const KOTO_NEWSCASTS = [
     href: "https://koto.org/news/newscast-3-26-26/",
     img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
   },
-  {
-    title: "Newscast 3-25-26",
-    source: "KOTO Community Radio",
-    date: "March 25, 2026",
-    newsTopic: "arts-culture",
-    copy: "The Telluride Jazz Festival shifts to a streamlined two-day format for 2026 with headliners The Disco Biscuits and Lettuce. Also: Telluride Historical Museum reports a record year, and Telluride Arts opens 2026 grant applications.",
-    href: "https://koto.org/news/newscast-3-25-26/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  },
+  // Removed 1 stale KOTO newscast from March 25 (>14 days old)
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
