@@ -1162,7 +1162,7 @@ const MANUAL_SUMMARIES = {
   // (county|2026-04-08|Board of County Commissioners Work Session -- CANCELED, spring break recess Apr 6-17, confirmed via county calendar)
 
   // ── SMART ──
-  // (smart|2026-04-09 -- SMART Board of Directors, agenda not yet posted as of 2026-04-07, will add when available)
+  // (smart|2026-04-09 -- SMART Board of Directors, agenda not yet posted as of 2026-04-09, site returns 403, will add when available)
 
   // ── Mountain Village ──
   'mv|2026-04-02|Design Review Board':
@@ -1222,6 +1222,9 @@ const MANUAL_SUMMARIES = {
   // ── Norwood ──
   'norwood|2026-04-08|Board of Trustees Meeting':
     'Swearing in of new Trustees (Bernice White, Liza Tanguay) & Mayor (Candy Meehan) · Marijuana license renewals: Blue Cottage LLC / Mary Jane Medicinals (1510 Grand Ave) and Alpine Wellness (1630 Grand Ave) · Special event liquor license: Norwood Chamber of Commerce (1455 Pinion St) · Norwood Post / Telluride Times update (Erin Spiellane) · Public notices newspaper designation: SM Basin Forum or Telluride Times · Pocket Park bid — RMC Builders · Discussion: town speed limit reduction · Sheriff\'s Office written report · Parks & Recreation District report · Music on the Mesa report',
+
+  'norwood|2026-04-01|Board of Trustees Special Meeting':
+    'SECOND READING equivalent — Adoption of Resolution No. 0401 (Series 2026): Colorado Model Wildfire Resiliency Code adopted by reference (2023 edition, per SB 23-166 & HB 26-1334) · Interim implementation authorized pending permanent ordinance · Applies to all new construction, substantial improvements & development activities · Town Administrator authorized to enforce',
 
   // ── Telluride (continued) ──
   'telluride|2026-04-08|Ecology Commission':
