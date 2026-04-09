@@ -3902,6 +3902,15 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Telluriders take to the streets",
+    source: "Telluride Times",
+    date: "April 9, 2026",
+    newsTopic: "community",
+    copy: "Telluriders joined nationwide No Kings marches on March 28, with locals traveling to Montrose and organizing a People's March on Colorado Avenue. The next People's March is scheduled for April 25.",
+    href: "https://www.telluridenews.com/gallery/news/article_d627bc01-97c9-4081-a2dc-a6ed744e2ea5.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/96/d9654805-a0f8-4c28-89ce-f5348acc4073/69d73c03d20d1.image.jpg"
+  },
+  {
     title: "Celebrating Mona",
     source: "Telluride Times",
     date: "April 9, 2026",
