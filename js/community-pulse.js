@@ -21,7 +21,8 @@ const CP_SOURCES = {
   'rotary-ig': { name: 'Rotary Club of Telluride', type: 'clubs', platform: 'instagram', url: 'https://www.instagram.com/telluriderotary/', logo: 'https://clubrunner.blob.core.windows.net/00000003291/thumb/ClubLogo/clublogo.png' },
   'telski': { name: 'Telluride Ski Resort', type: 'health', platform: 'instagram', url: 'https://www.instagram.com/tellurideski/', logo: '' },
   'foundation': { name: 'Telluride Foundation', type: 'nonprofits', platform: 'instagram', url: 'https://www.instagram.com/telluridefoundation/', logo: '' },
-  'tchn': { name: 'Tri-County Health Network', type: 'health', platform: 'instagram', url: 'https://www.instagram.com/tchn_co/', logo: '' }
+  'tchn': { name: 'Tri-County Health Network', type: 'health', platform: 'instagram', url: 'https://www.instagram.com/tchn_co/', logo: '' },
+  'mountainfilm': { name: 'Mountainfilm Festival', type: 'arts', platform: 'website', url: 'https://www.mountainfilm.org/', logo: '' }
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
@@ -236,6 +237,13 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Alpine Loop Overpass gate swung — mid-May clearing planned',
     excerpt: 'San Miguel County road staff report the Alpine Loop Overpass gate has been swung and San Juan County has cleared its side with rock berms placed at the summit to prevent bypass. A temporary barricade and signage will be installed so motorists know the pass remains closed at the summit. San Miguel County plans dozer work in mid-May to open the pass for the season, pending U.S. Forest Service coordination.',
     tags: ['Roads', 'County', 'Alpine Loop'], featured: false, eventRelated: false
+  },
+  {
+    id: 'mountainfilm-001', sourceKey: 'mountainfilm',
+    postedAt: '2026-04-09T10:30:00',
+    title: 'Mountainfilm 2026 speaker lineup revealed — festival runs May 21–25',
+    excerpt: 'Mountainfilm announced its 2026 Minds Moving Mountains Speaker Series lineup on April 8. The 48th annual documentary film festival runs May 21–25 in Telluride with conservationist and marine biologist Cristina Mittermeier as guest director. Festival passes are on sale now at mountainfilm.org.',
+    tags: ['Festival', 'Film', 'Arts', 'Upcoming Event'], featured: false, eventRelated: true
   }
 ];
 const CP_MAX_POSTS = 20;
