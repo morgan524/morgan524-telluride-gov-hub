@@ -6679,6 +6679,18 @@ const HOUSING_LISTINGS = [
     url: 'https://telluride.gov/745/Town-Owned-Rental-Properties',
     note: 'Waitlist-based. Apply through the Town of Telluride Rental Housing division.'
   },
+  /* ── Deed-Restricted For Sale — MLS/Market Listings ── */
+  {
+    title: '🏠 178 Alexander Overlook — 1BR Home, Lawson Hill (Deed-Restricted)',
+    type: 'deed-sale',
+    address: '178 Alexander Overlook, Telluride, CO 81435',
+    lat: 37.9270, lng: -107.8380,
+    beds: '1 Bedroom, 1 Bath (994 sq ft)', price: '$649,000 (deed-restricted)',
+    source: 'Mountain Rose Realty / MLS #44393',
+    contact: {},
+    url: 'https://www.zillow.com/homedetails/178-Alexander-Overlook-Telluride-CO-81435/461552686_zpid/',
+    note: 'Newly built (2025) deed-restricted home in Lawson Hill subdivision. Partially furnished with full appliances. Buyers must qualify under SMRHA deed restriction guidelines. Contemporary style, 0.067-acre lot.'
+  },
   /* ── Market-Rate Active Listings ── */
   {
     title: '1BR — 107 W Columbia Ave',
