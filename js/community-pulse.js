@@ -25,7 +25,7 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-08';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-09';
 const COMMUNITY_PULSE_POSTS = [
   {
     id: 'telski-024', sourceKey: 'telski',
@@ -112,15 +112,15 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Camping', 'Town Park', 'Reservations'], featured: false, eventRelated: true
   },
   {
-    id: 'fb-2061-026', sourceKey: 'fb-2061',
-    postedAt: '2026-04-04T07:30:00',
-    title: 'CDOT: CO 145 road widening near Society Turn through September',
-    excerpt: 'CDOT road work on CO 145 at Mile Point 71, just west of Society Turn Roundabout, runs through early September. Williams Construction adding a new right-turn lane with acceleration/deceleration lanes. Mon–Fri, 9 AM–4 PM. Expect lane shifts, flaggers, and up to 5-minute delays.',
+    id: 'fb-2061-026b', sourceKey: 'fb-2061',
+    postedAt: '2026-04-09T07:00:00',
+    title: 'CDOT: CO 145 road widening near Society Turn — work continues through September',
+    excerpt: 'Ongoing CDOT road work on CO 145 at Mile Point 71, just west of Society Turn Roundabout, runs through early September. Williams Construction is adding a new right-turn lane with acceleration and deceleration lanes. Expect lane shifts, flaggers, and up to 5-minute delays Mon–Fri, 9 AM–4 PM. Plan extra time for your commute.',
     tags: ['Road Work', 'CDOT', 'Highway 145'], featured: false, eventRelated: false
   },
   {
-    id: 'smc-dems-014', sourceKey: 'smc-dems',
-    postedAt: '2026-04-04T10:00:00',
+    id: 'smc-dems-014b', sourceKey: 'smc-dems',
+    postedAt: '2026-04-09T10:00:00',
     title: 'County housing projects update — Ilium groundbreaking targeted this spring',
     excerpt: 'San Miguel County targets April–May 2026 groundbreaking for five affordable units at the Ilium site (KEO Studio Works design). Deer Creek CDOT partnership aims for 30–35 workforce units. Pathfinder 73-unit project still contingent on water. County also advancing a Land Use Code Amendment for accelerated housing review.',
     tags: ['Housing', 'County', 'Development'], featured: false, eventRelated: false
@@ -133,10 +133,10 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Government', 'Mountain Village', 'Council'], featured: false, eventRelated: false
   },
   {
-    id: 'rotary-ig-011', sourceKey: 'rotary-ig',
-    postedAt: '2026-04-04T13:00:00',
+    id: 'rotary-ig-011b', sourceKey: 'rotary-ig',
+    postedAt: '2026-04-09T10:00:00',
     title: 'Rotary scholarships for seniors — deadline April 15',
-    excerpt: 'Telluride Rotary scholarships for graduating seniors are open. Awards up to $5,000 for top academic achievers, plus $2,500 awards and a $1,000 vocational scholarship. Deadline April 15. Apply at telluriderotary.org.',
+    excerpt: 'Telluride Rotary scholarships for graduating seniors are still open with the deadline approaching fast. Awards up to $5,000 for top academic achievers, plus $2,500 awards and a $1,000 vocational scholarship. Deadline is Tuesday, April 15. Apply at telluriderotary.org.',
     tags: ['Scholarships', 'Youth', 'Education'], featured: false, eventRelated: false
   },
   {
@@ -215,6 +215,27 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Colorado wildfire building codes now in effect — local adoption required by July 1',
     excerpt: 'As of April 1, 2026, Colorado cities and counties in high-risk wildfire areas must adopt new wildfire-ready building codes by July 1. The codes govern roofing materials, vent mesh sizes, landscaping within five feet of structures, and exterior wall assemblies. San Miguel County, with over 173,000 acres of moderate-to-high fire hazard, is directly affected. Building to wildfire standards adds roughly 2.7% to construction costs. Details at dfpc.colorado.gov.',
     tags: ['Wildfire', 'Building Codes', 'County'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-2061-037', sourceKey: 'fb-2061',
+    postedAt: '2026-04-09T07:30:00',
+    title: 'Colorado confirms worst snowpack year in recorded history — San Miguel basin at 15%',
+    excerpt: 'Colorado has officially recorded its worst snowpack year in history. As of April 1, statewide snow water equivalent was just 3.1 inches — less than 40% of the previous record low set in 2012. The San Miguel-Dolores-Animas-San Juan River Basin is at just 15% of median as of April 7. Sixty of 64 snow course measurement sites recorded their lowest-ever readings. Runoff forecasts remain grim, reinforcing the need for continued water conservation.',
+    tags: ['Drought', 'Snowpack', 'Water', 'Climate'], featured: true, eventRelated: false
+  },
+  {
+    id: 'fb-2061-038', sourceKey: 'fb-2061',
+    postedAt: '2026-04-09T08:00:00',
+    title: 'Sunset Concert Series returns — Mountain Village Wednesdays June 10 through August 26',
+    excerpt: 'The Sunset Concert Series in Mountain Village returns for its 25th year, now nationally recognized as one of USA Today\'s 10Best outdoor summer music series. Free live concerts every Wednesday from 6–8 PM at Sunset Plaza, June 10 through August 26. Family and pet friendly; no personal alcohol. Full artist lineup to be announced soon at sunsetconcertseries.com.',
+    tags: ['Events', 'Music', 'Mountain Village', 'Summer'], featured: false, eventRelated: true
+  },
+  {
+    id: 'fb-2061-039', sourceKey: 'fb-2061',
+    postedAt: '2026-04-09T09:00:00',
+    title: 'Alpine Loop Overpass gate swung — mid-May clearing planned',
+    excerpt: 'San Miguel County road staff report the Alpine Loop Overpass gate has been swung and San Juan County has cleared its side with rock berms placed at the summit to prevent bypass. A temporary barricade and signage will be installed so motorists know the pass remains closed at the summit. San Miguel County plans dozer work in mid-May to open the pass for the season, pending U.S. Forest Service coordination.',
+    tags: ['Roads', 'County', 'Alpine Loop'], featured: false, eventRelated: false
   }
 ];
 const CP_MAX_POSTS = 20;
