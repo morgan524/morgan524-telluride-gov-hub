@@ -5034,22 +5034,6 @@ const LEGAL_NOTICES = [
   },
   // ── April 2 (County Bids Page) ──
   {
-    title: 'RFP -- Deep Creek Workforce Housing Planning Project',
-    entity: 'San Miguel County',
-    entityClass: 'ent-county',
-    entityLogo: 'county',
-    icon: '🏘️',
-    iconClass: 'type-rfp',
-    type: 'RFP',
-    filterTag: 'housing',
-    summary: 'San Miguel County is seeking proposals for the Deep Creek Workforce Housing Planning Project. Full RFP documents and submission requirements available at sanmiguelcountyco.gov/Bids.aspx.',
-    deadline: 'Proposals due April 9, 2026 at 4:00 PM',
-    expires: '2026-04-09',
-    dates: '4/2',
-    papers: ['county_web'],
-    url: 'https://www.sanmiguelcountyco.gov/Bids.aspx'
-  },
-  {
     title: 'RFP -- Floor Replacement for Courthouse & Miramonte Building',
     entity: 'San Miguel County',
     entityClass: 'ent-county',
