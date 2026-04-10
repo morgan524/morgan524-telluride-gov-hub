@@ -4027,16 +4027,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/news/article_7fae4a87-00c6-4a66-a331-b118bb6f9251.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b7/ab79b737-7a3e-42e2-9643-f998d0f3d511/69c4d38b0919b.image.jpg"
   },
-  {
-    title: "STEADY on",
-    source: "Telluride Times",
-    date: "March 26, 2026",
-    newsTopic: "government",
-    copy: "Mountain Village Town Council hears better news in updates on local relief efforts after recent economic challenges.",
-    href: "https://www.telluridenews.com/news/article_41976f4e-3715-48f2-94fe-b620ee293fc8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/21/821a3f61-c19b-4b85-a12a-dd90e78fc4ac/69c31b9b81c8f.image.jpg"
-  },
-  // Removed 2 stale Telluride Times articles from March 25 (>14 days old)
+  // Removed 3 stale Telluride Times articles from March 26 and earlier (>14 days old)
   {
     title: "Take the plunge: petition process underway for council candidates",
     source: "Telluride Times",
@@ -4267,16 +4258,7 @@ const KOTO_NEWSCASTS = [
     href: "https://koto.org/news/newscast-3-27-26/",
     img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
   },
-  {
-    title: "Newscast 3-26-26",
-    source: "KOTO Community Radio",
-    date: "March 26, 2026",
-    newsTopic: "government",
-    copy: "Local governments discuss water and wastewater infrastructure upgrades across Telluride, Norwood, Rico, Ophir and Mountain Village. Also: West End Roundup with the San Miguel Basin Forum, and avalanche dog Mona's retirement from Telluride Ski Patrol after 13 years of service.",
-    href: "https://koto.org/news/newscast-3-26-26/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  },
-  // Removed 1 stale KOTO newscast from March 25 (>14 days old)
+  // Removed 2 stale KOTO newscasts from March 26 and earlier (>14 days old)
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
@@ -4291,15 +4273,7 @@ const KOTO_FEATURED_STORIES = [
     href: "https://koto.org/news/norwood-floating-solar-water-conservation/",
     img: "https://koto.org/wp-content/uploads/2026/04/IMG_0935-scaled.jpeg"
   },
-  {
-    title: "A Retirement Party for Mona",
-    source: "KOTO Community Radio",
-    date: "March 26, 2026",
-    newsTopic: "community",
-    copy: "Mona the Avalanche Dog spent 13 years promoting safety on the Telluride Ski Resort. After a long career of service, she retired with a party at the top of the world.",
-    href: "https://koto.org/news/a-retirement-party-for-mona/",
-    img: "https://koto.org/wp-content/uploads/2026/03/IMG_0863-scaled.jpeg"
-  }
+  // Removed 1 stale KOTO featured story from March 26 (>14 days old)
 ];
 
 // ══════════════════════════════════════
