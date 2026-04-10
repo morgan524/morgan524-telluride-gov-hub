@@ -29,6 +29,27 @@ const CP_SOURCES = {
 const COMMUNITY_PULSE_CACHE_DATE = '2026-04-10';
 const COMMUNITY_PULSE_POSTS = [
   {
+    id: 'fb-2061-043', sourceKey: 'fb-2061',
+    postedAt: '2026-04-10T10:00:00',
+    title: 'Outdoor water restrictions now in effect — Telluride and Mountain Village both restrict irrigation',
+    excerpt: 'The Town of Telluride implemented outdoor water restrictions effective March 31, 2026 in response to anticipated dry spring and summer conditions and below-average snowpack. Mountain Village has also implemented restrictions. Additional restrictions may follow if dry conditions persist, including potential limits on all outdoor water use. Property owners with newly installed landscaping in 2025 or 2026 may apply for additional watering allowances through the Town\'s Planning and Building Department.',
+    tags: ['Water', 'Drought', 'Town Government', 'Conservation'], featured: true, eventRelated: false
+  },
+  {
+    id: 'foundation-012', sourceKey: 'foundation',
+    postedAt: '2026-04-10T10:30:00',
+    title: 'Town allocates $100K to Good Neighbor Fund — rent relief applications accepted through May 1',
+    excerpt: 'Town Council directed that the Affordable Housing Fund be used to cover approved rent relief applications through the Good Neighbor Fund for residents in Town-owned properties. Applications accepted through May 1, 2026. The Good Neighbor Fund, administered by the Telluride Foundation, provides emergency assistance for local families and individuals facing financial hardship, with no residency restrictions. Part of the Town\'s broader economic support response.',
+    tags: ['Housing', 'Relief', 'Town Government', 'Affordable'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-2061-044', sourceKey: 'fb-2061',
+    postedAt: '2026-04-10T11:00:00',
+    title: 'Town adjusts rent formula for employee housing — tenants save $100–$400 per month',
+    excerpt: 'The Town of Telluride adjusted its rent formula for Town-managed employee housing with revised multipliers. Tenants now pay an average of 25% of their income toward rent after deductions for childcare, healthcare, and education. The change is projected to save households $100–$400 per month, with some tenants seeing reductions of up to $900 depending on unit type and income tier.',
+    tags: ['Housing', 'Affordable', 'Town Government', 'Relief'], featured: false, eventRelated: false
+  },
+  {
     id: 'c7cc-022', sourceKey: 'c7cc',
     postedAt: '2026-04-10T07:00:00',
     title: 'SMRHA housing lottery apps close TODAY at noon — three deed-restricted units available',
@@ -90,13 +111,6 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Community Wildfire Protection Plan — public comment period open',
     excerpt: 'San Miguel County is seeking public input on a new Community Wildfire Protection Plan. Panel discussions are being held to kick off the public comment period. With 2026 fire season outlook showing above-average wildfire risk across the Four Corners, community input on preparedness and mitigation is critical. Visit sanmiguelcountyco.gov for details.',
     tags: ['Wildfire', 'County', 'Public Comment'], featured: false, eventRelated: false
-  },
-  {
-    id: 'foundation-011', sourceKey: 'foundation',
-    postedAt: '2026-04-05T10:00:00',
-    title: 'Town Park Campground reservations open April 21 — season starts May 15',
-    excerpt: 'Town Park Campground 2026 season runs May 15 through October 4. First of four reservation windows opens Tuesday, April 21 at 9 AM MST for arrivals May 15–June 12. All camping is by online reservation only with limited availability. Details at telluride-co.gov.',
-    tags: ['Camping', 'Town Park', 'Reservations'], featured: false, eventRelated: true
   },
   {
     id: 'fb-2061-026b', sourceKey: 'fb-2061',
