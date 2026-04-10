@@ -26,14 +26,49 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-09';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-10';
 const COMMUNITY_PULSE_POSTS = [
   {
-    id: 'telski-024', sourceKey: 'telski',
-    postedAt: '2026-04-05T08:00:00',
-    title: 'Ski season wrapped — Telluride closed for the summer after April 5 closing day',
-    excerpt: 'The 2025-26 ski season at Telluride Ski Resort ended Sunday, April 5. The resort reopened Friday after a mid-week closure to preserve snow for closing weekend. Spring conditions with intermediate and advanced terrain only. Next up: summer operations begin in late June.',
-    tags: ['Ski Season', 'Closing Day', 'Recap'], featured: true, eventRelated: false
+    id: 'c7cc-022', sourceKey: 'c7cc',
+    postedAt: '2026-04-10T07:00:00',
+    title: 'SMRHA housing lottery apps close TODAY at noon — three deed-restricted units available',
+    excerpt: 'Today is the final day to apply for deed-restricted homeownership units through SMRHA. Three units available: Silver Jack 202 and Silver Jack 205 at 155 W Pacific Ave, and Element 52 SW-102 at 398 S Davis St. Applications accepted by appointment through noon on Friday, April 10. Lottery drawing April 24 at 10 AM, Rebekah Hall. Visit smrha.org or email admin@smrha.org.',
+    tags: ['Housing', 'Affordable', 'Lottery', 'Deadline'], featured: true, eventRelated: true
+  },
+  {
+    id: 'fb-2061-040', sourceKey: 'fb-2061',
+    postedAt: '2026-04-10T07:30:00',
+    title: 'Business Stabilization Grant materials due today — 11:59 PM MT deadline',
+    excerpt: 'All outstanding materials for the Town of Telluride Business Stabilization Assistance Grant Program must be received by 11:59 PM MT tonight, April 10. The program has already distributed approximately $290,876 to 46 locally owned businesses impacted by the ski resort closure. Part of the $400,000 economic relief package. Contact the Town Clerk\'s office with questions.',
+    tags: ['Business', 'Town Government', 'Deadline'], featured: true, eventRelated: true
+  },
+  {
+    id: 'fb-2061-041', sourceKey: 'fb-2061',
+    postedAt: '2026-04-10T08:00:00',
+    title: 'Town election petitions due April 20 — ten days left to file for Town Council',
+    excerpt: 'Nomination petitions for the June 30 Town of Telluride special election must be submitted to the Town Clerk by Monday, April 20, 2026. Petitions are available now. Town Council seats to be filled — if you\'re considering a run for local office, the window is closing.',
+    tags: ['Elections', 'Government', 'Deadline'], featured: false, eventRelated: true
+  },
+  {
+    id: 'fb-3395-032', sourceKey: 'fb-3395',
+    postedAt: '2026-04-10T08:30:00',
+    title: 'Bluegrass NightGrass tickets on sale April 22–23 — pre-sale signup open now',
+    excerpt: 'NightGrass shows for the 2026 Telluride Bluegrass Festival (June 17–21) go on pre-sale Wednesday, April 22 and general sale Thursday, April 23. Late-night performances across four venues including Greensky Bluegrass, Infamous Stringdusters, Punch Brothers, and more. Text NIGHTGRASS to 1-844-326-3296 for pre-sale access. Details at bluegrass.com.',
+    tags: ['Festival', 'Music', 'Tickets', 'Upcoming Event'], featured: false, eventRelated: true
+  },
+  {
+    id: 'fb-3395-033', sourceKey: 'fb-3395',
+    postedAt: '2026-04-10T09:00:00',
+    title: 'Housing Impact Fee final increase May 1 — fee rises to $1,112 per square foot',
+    excerpt: 'The final phased increase of the Employee Housing Impact Mitigation Fee takes effect May 1, 2026, rising from $928 to $1,112 per square foot of employee housing required. San Miguel County is projected to need approximately 1,100 housing units by 2030, including 218 units in unincorporated areas. Nearly half of all workers commute more than 25 miles.',
+    tags: ['Housing', 'County', 'Development', 'Policy'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-3395-034', sourceKey: 'fb-3395',
+    postedAt: '2026-04-10T09:30:00',
+    title: 'Community survey still open — help shape Town of Telluride priorities through May 21',
+    excerpt: 'The Town of Telluride\'s third annual community survey remains open through May 21, 2026. Share feedback on government services, quality of life, and town priorities. Open to all residents. Your input helps shape the town budget and policy decisions for the coming year.',
+    tags: ['Town Government', 'Survey', 'Civic'], featured: false, eventRelated: false
   },
   {
     id: 'telski-025b', sourceKey: 'telski',
@@ -43,60 +78,11 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Gondola', 'Transportation', 'Season'], featured: true, eventRelated: false
   },
   {
-    id: 'fb-2061-024', sourceKey: 'fb-2061',
-    postedAt: '2026-04-05T09:00:00',
-    title: 'Wildfire risk elevated — Colorado bracing for unusually early fire season',
-    excerpt: 'Seasonal fire outlook from NIFC shows above-average wildfire risk across the Four Corners by June. Colorado snowpack at just 61% of median. First four months of the water year are the warmest in 131 years. Experts warn conditions are worse than 2012 and 2020. Maintain defensible space around your property now.',
-    tags: ['Wildfire', 'Drought', 'Safety'], featured: true, eventRelated: false
-  },
-  {
-    id: 'fb-3395-024', sourceKey: 'fb-3395',
-    postedAt: '2026-04-05T10:00:00',
-    title: 'Water restrictions in effect — outdoor watering Mon/Wed/Fri only',
-    excerpt: 'Town of Telluride outdoor water restrictions remain in effect since March 31. Below-average snowpack and anticipated dry spring drove the proactive restrictions. Watering allowed Mon/Wed/Fri only, before 8 AM or after 7 PM. Irrigation at 70–75% of normal. Runoff forecast 60–70% of normal.',
-    tags: ['Drought', 'Water', 'Conservation'], featured: true, eventRelated: false
-  },
-  {
-    id: 'c7cc-020', sourceKey: 'c7cc',
-    postedAt: '2026-04-05T09:30:00',
-    title: 'SMRHA housing lottery apps close April 10 — drawing April 24',
-    excerpt: 'Last chance to apply for deed-restricted homeownership units through SMRHA. Three units available: Silver Jack 202 and Silver Jack 205 at 155 W Pacific Ave, and Element 52 SW-102 at 398 S Davis St. Applications accepted by appointment through noon on Friday, April 10. Lottery drawing April 24 at 10 AM, Rebekah Hall. Visit smrha.org or email admin@smrha.org.',
-    tags: ['Housing', 'Affordable', 'Lottery'], featured: true, eventRelated: true
-  },
-  {
     id: 'smc-dems-013b', sourceKey: 'smc-dems',
     postedAt: '2026-04-06T08:00:00',
     title: 'San Miguel County Democratic Assembly — Saturday, April 12',
     excerpt: 'The San Miguel County Democratic Assembly takes place Saturday, April 12. Registered delegates will vote to advance local candidates to the primary ballot. Delegate registration closed April 5. Details at smcdemocrats.org.',
     tags: ['Politics', 'Assembly', 'Upcoming'], featured: false, eventRelated: true
-  },
-  {
-    id: 'fb-2061-025', sourceKey: 'fb-2061',
-    postedAt: '2026-04-05T09:30:00',
-    title: 'Town election petitions due April 20 — run for Town Council',
-    excerpt: 'Nomination petitions for the June 30 Town of Telluride special election are available now. Completed petitions must be submitted to the Town Clerk by Monday, April 20, 2026. Town Council seats to be filled — if you\'re considering a run for local office, now is the time.',
-    tags: ['Elections', 'Government', 'Deadline'], featured: false, eventRelated: true
-  },
-  {
-    id: 'fb-3395-025', sourceKey: 'fb-3395',
-    postedAt: '2026-04-05T07:30:00',
-    title: 'Town community survey open through May 21 — share your feedback',
-    excerpt: 'The Town of Telluride\'s third annual community survey is open. Share feedback on government services, quality of life, and priorities. Open to all residents through May 21, 2026. Your input helps shape town budget and policy decisions.',
-    tags: ['Town Government', 'Survey', 'Civic'], featured: false, eventRelated: false
-  },
-  {
-    id: 'tchn-015', sourceKey: 'tchn',
-    postedAt: '2026-04-05T09:00:00',
-    title: 'Free Mental Health First Aid training — this Tuesday, April 8',
-    excerpt: 'Free 8-hour Mental Health First Aid certification course at the Telluride Conference Center on Tuesday, April 8. Learn to recognize signs and respond to mental health crises. Open to community members. Register at tchnetwork.org.',
-    tags: ['Mental Health', 'Training', 'Free'], featured: false, eventRelated: true
-  },
-  {
-    id: 'c7cc-021', sourceKey: 'c7cc',
-    postedAt: '2026-04-05T11:00:00',
-    title: '$290K in business grants distributed to 46 local businesses',
-    excerpt: 'Town of Telluride distributed approximately $290,876 to 46 locally owned businesses impacted by the ski resort closure earlier this season. Part of the broader $400,000 economic relief package approved in February alongside tourism, air service, and resident hardship funding.',
-    tags: ['Business', 'Town Government', 'Relief'], featured: false, eventRelated: false
   },
   {
     id: 'fb-3395-028', sourceKey: 'fb-3395',
