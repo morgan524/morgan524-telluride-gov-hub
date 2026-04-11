@@ -3900,8 +3900,53 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 });
 
 // ══════════ TELLURIDE TIMES — CURRENT HOMEPAGE STORIES ══════════
-// Updated: 2026-04-01  — refresh periodically from telluridenews.com
+// Updated: 2026-04-11  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "\u2018A sense of belonging\u2019",
+    source: "Telluride Times",
+    date: "April 11, 2026",
+    newsTopic: "sports",
+    copy: "While Ullr may have been uncooperative this year, Telluride\u2019s winter-sports athletes did not let low precipitation stand in the way of their learning, training or fun.",
+    href: "https://www.telluridenews.com/sports/article_9ad76276-35a5-43e5-9690-1c1cc0e78428.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/80/e80acfa7-26ac-4e00-b49f-17e97e736727/69d48d5fed0b6.image.jpg"
+  },
+  {
+    title: "State Senator Cleave Simpson shares vision for \u2018new horizons\u2019",
+    source: "Telluride Times",
+    date: "April 10, 2026",
+    newsTopic: "government",
+    copy: "In his new role as State Senate Minority Leader, Senator Cleave Simpson gave an opening day speech outlining his vision for the legislative session, using 150 years of Colorado history to look ahead.",
+    href: "https://www.telluridenews.com/news/article_64ca750b-bc9a-4c64-a675-395b5d312550.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/e2/1e252e4f-d4d0-4698-9297-9b912d0364c3/69d736af0b7d2.image.jpg"
+  },
+  {
+    title: "THS students help make wishes come true",
+    source: "Telluride Times",
+    date: "April 10, 2026",
+    newsTopic: "community",
+    copy: "Over Wish Week, March 23-27, Telluride High School students took part in a fundraiser and awareness raiser for the Colorado chapter of the Make-a-Wish Foundation.",
+    href: "https://www.telluridenews.com/gallery/news/article_020c1ee3-9f78-4016-97a6-9a612116d164.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/13/f13718fc-7eb3-4c6d-a08e-1675f3e28bf0/69d745cbdac4d.image.jpg"
+  },
+  {
+    title: "Miners avenge \u201925 loss to Eagles",
+    source: "Telluride Times",
+    date: "April 10, 2026",
+    newsTopic: "sports",
+    copy: "Senior defender Leyton Holbrook\u2019s incredible forehand rip from near midfield highlighted the Telluride Miners\u2019 lacrosse victory over the Eagles on Saturday, April 4.",
+    href: "https://www.telluridenews.com/sports/article_2eeb912c-7358-47be-bc16-899f1c60cff1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/70/c70fb9f8-6d90-4c6d-a27b-1828d000df7c/69d498c40cca8.image.jpg"
+  },
+  {
+    title: "Off-season sounds",
+    source: "Telluride Times",
+    date: "April 9, 2026",
+    newsTopic: "arts-culture",
+    copy: "The colorful, phantasmagorical musical experience known as MarchFourth Marching Band is coming to Montrose April 14, keeping the music alive in the off-season.",
+    href: "https://www.telluridenews.com/news/article_2a7ea4ca-d250-4a6a-9c10-fd6a5fc39a38.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/8d/68dccffa-db8f-4ca8-afb8-b7dc0ed8eb88/69d0deb9d92c6.image.jpg"
+  },
   {
     title: "Telluriders take to the streets",
     source: "Telluride Times",
