@@ -4018,16 +4018,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/news/article_949d8fec-f167-43fa-ba8a-b22426a1b88f.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/7e/e7e2478b-d244-4591-9adc-cc880c079f7e/69c775c9851f2.image.jpg"
   },
-  {
-    title: "The Ready or Not",
-    source: "Telluride Times",
-    date: "March 27, 2026",
-    newsTopic: "community",
-    copy: "Fourth-grader Enzo Smith wins multiple awards with his innovative invention at a student showcase event.",
-    href: "https://www.telluridenews.com/news/article_7fae4a87-00c6-4a66-a331-b118bb6f9251.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b7/ab79b737-7a3e-42e2-9643-f998d0f3d511/69c4d38b0919b.image.jpg"
-  },
-  // Removed 3 stale Telluride Times articles from March 26 and earlier (>14 days old)
+  // Removed 4 stale Telluride Times articles from March 27 and earlier (>14 days old)
   {
     title: "Take the plunge: petition process underway for council candidates",
     source: "Telluride Times",
@@ -4249,16 +4240,7 @@ const KOTO_NEWSCASTS = [
     href: "https://koto.org/news/newscast-3-30-26/",
     img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
   },
-  {
-    title: "Newscast 3-27-26",
-    source: "KOTO Community Radio",
-    date: "March 27, 2026",
-    newsTopic: "community",
-    copy: "This week on the Regional Roundup: community concerns over an ICE detention facility in Glenwood Springs, the impact of the abortion ban in Wyoming, why mule deer fawns are dying off in southeast Utah, and a conversation with a tribal water attorney on Indigenous communities and the Colorado River.",
-    href: "https://koto.org/news/newscast-3-27-26/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  },
-  // Removed 2 stale KOTO newscasts from March 26 and earlier (>14 days old)
+  // Removed 3 stale KOTO newscasts from March 27 and earlier (>14 days old)
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
