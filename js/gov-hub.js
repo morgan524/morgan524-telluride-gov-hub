@@ -1141,7 +1141,7 @@ async function loadAISummaries() {
 }
 
 // ── Manual/fallback summaries (preserved from original) ──
-// Last updated: 2026-04-08T12:00 (automated scan — HARC Apr 15 agenda verified: both 238 N Pine St items are applicant req. to continue w/o discussion (updated summary); COUNTY_CIVICCLERK_IDS updated: BOCC Apr 22 event 865 + BOCC Work Session Apr 29 event 985 added; BOCC Apr 29 has agendaIsPublish=False (not yet public); SMART Apr 9 no agenda; SMRHA Apr 13 confirmed, no packet yet; School Apr 20/27/28 no agendas; MV DRB Apr 23 not accessible; Fire/Med Apr 21/23 no agendas)
+// Last updated: 2026-04-11T18:00 (automated scan — SMRHA Apr 13 agenda added from board packet PDF; BOCC Apr 29 work session agenda now published on county calendar (content behind JS portal, summary pending); all Telluride Apr 23/28/29 meetings still no agendas; School Apr 20/27/28 no agendas; MV Town Council Apr 23 no agenda; Fire Apr 21 no agenda; Med Apr 23 no agenda; SMART still inaccessible)
 const MANUAL_SUMMARIES = {
   // ── Telluride ──
   'telluride|2026-03-31|Town Council':
@@ -1186,11 +1186,12 @@ const MANUAL_SUMMARIES = {
   'county|2026-04-22|Board of County Commissioners Meeting':
     'PUBLIC HEARING: Sheriff candidate appointment interviews per CRS 24-6-402(4)(f) — Undersheriff Dan Covault (2pm) & Operations Sgt. Lane Masters (3pm), Miramonte Building 2nd floor · Public meet & greet with candidates at Placerville Schoolhouse 5-6:30pm · Appointment decision expected at Apr 30 BOCC meeting',
 
-  // (county|2026-04-29 -- BOCC Work Session, CivicClerk event 985, hasAgenda=True in system but agendaIsPublish=False as of 2026-04-08 — agenda not yet public, will add when published)
+  // (county|2026-04-29 -- BOCC Work Session, CivicClerk event 985, agenda now listed as available on county calendar as of 2026-04-11 but content behind JS portal — will add summary when content is readable)
   // (county|2026-04-27 -- Open Space Commission 4pm, agenda not yet posted, will add when available)
 
   // ── SMRHA ──
-  // (smrha|2026-04-13 -- SMRHA board meeting 1pm via Zoom, packet available 24hrs before meeting only, will add when available)
+  'smrha|2026-04-13|SMRHA Board Meeting':
+    'WORKSESSION: Mapping deed-restricted units for SMRHA website publication · Town of Telluride housing lottery update — Silver Jack 202 & 205, Element 52 SW-102 (22 applications received, drawing Apr 24) · Continuing qualification verification: AHU 100% response (108 completed, 6 in THA legal review), EDU 96% response · Piñon Park: 5 homes currently on market',
 
   // ── Telluride Town Council (next) ──
   // (telluride|2026-04-28|Town Council -- confirmed Apr 28, agenda not yet posted, will add when available)
