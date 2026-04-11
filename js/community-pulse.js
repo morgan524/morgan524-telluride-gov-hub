@@ -26,7 +26,7 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-10';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-11';
 const COMMUNITY_PULSE_POSTS = [
   {
     id: 'fb-2061-043', sourceKey: 'fb-2061',
@@ -50,25 +50,18 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Housing', 'Affordable', 'Town Government', 'Relief'], featured: false, eventRelated: false
   },
   {
-    id: 'c7cc-022', sourceKey: 'c7cc',
-    postedAt: '2026-04-10T07:00:00',
-    title: 'SMRHA housing lottery apps close TODAY at noon — three deed-restricted units available',
-    excerpt: 'Today is the final day to apply for deed-restricted homeownership units through SMRHA. Three units available: Silver Jack 202 and Silver Jack 205 at 155 W Pacific Ave, and Element 52 SW-102 at 398 S Davis St. Applications accepted by appointment through noon on Friday, April 10. Lottery drawing April 24 at 10 AM, Rebekah Hall. Visit smrha.org or email admin@smrha.org.',
-    tags: ['Housing', 'Affordable', 'Lottery', 'Deadline'], featured: true, eventRelated: true
+    id: 'c7cc-023', sourceKey: 'c7cc',
+    postedAt: '2026-04-11T08:00:00',
+    title: 'SMRHA housing lottery drawing April 24 — three deed-restricted units to be awarded',
+    excerpt: 'Applications for three deed-restricted homeownership units through SMRHA closed April 10. The lottery drawing takes place Thursday, April 24 at 10 AM at Rebekah Hall. Units available: Silver Jack 202 and Silver Jack 205 at 155 W Pacific Ave, and Element 52 SW-102 at 398 S Davis St. Visit smrha.org or email admin@smrha.org for details.',
+    tags: ['Housing', 'Affordable', 'Lottery', 'Upcoming Event'], featured: true, eventRelated: true
   },
   {
-    id: 'fb-2061-040', sourceKey: 'fb-2061',
-    postedAt: '2026-04-10T07:30:00',
-    title: 'Business Stabilization Grant materials due today — 11:59 PM MT deadline',
-    excerpt: 'All outstanding materials for the Town of Telluride Business Stabilization Assistance Grant Program must be received by 11:59 PM MT tonight, April 10. The program has already distributed approximately $290,876 to 46 locally owned businesses impacted by the ski resort closure. Part of the $400,000 economic relief package. Contact the Town Clerk\'s office with questions.',
-    tags: ['Business', 'Town Government', 'Deadline'], featured: true, eventRelated: true
-  },
-  {
-    id: 'fb-2061-041', sourceKey: 'fb-2061',
-    postedAt: '2026-04-10T08:00:00',
-    title: 'Town election petitions due April 20 — ten days left to file for Town Council',
-    excerpt: 'Nomination petitions for the June 30 Town of Telluride special election must be submitted to the Town Clerk by Monday, April 20, 2026. Petitions are available now. Town Council seats to be filled — if you\'re considering a run for local office, the window is closing.',
-    tags: ['Elections', 'Government', 'Deadline'], featured: false, eventRelated: true
+    id: 'fb-2061-045', sourceKey: 'fb-2061',
+    postedAt: '2026-04-11T07:30:00',
+    title: 'Business Stabilization Grant review underway — notifications expected April 22',
+    excerpt: 'The Town of Telluride Business Stabilization Assistance Grant application period closed April 10. Review of submissions runs April 13–17, with applicant notifications expected by April 22. The program has already distributed approximately $290,876 to 46 locally owned businesses impacted by the ski resort closure. Part of the $400,000 economic relief package. Contact the Town Clerk\'s office with questions.',
+    tags: ['Business', 'Town Government', 'Relief'], featured: true, eventRelated: false
   },
   {
     id: 'fb-3395-032', sourceKey: 'fb-3395',
@@ -92,22 +85,22 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Town Government', 'Survey', 'Civic'], featured: false, eventRelated: false
   },
   {
-    id: 'telski-025b', sourceKey: 'telski',
-    postedAt: '2026-04-06T07:00:00',
-    title: 'Gondola closed today — spring maintenance through May 21',
-    excerpt: 'The free gondola between Telluride and Mountain Village is now closed as of Monday, April 6 for spring maintenance. It will reopen May 21 for summer operations. Free SMART bus service continues between the towns throughout the closure period. The Town of Mountain Village will also operate a bus between the Meadows and Village Center until the chondola opens.',
+    id: 'telski-025c', sourceKey: 'telski',
+    postedAt: '2026-04-11T07:00:00',
+    title: 'Gondola remains closed — spring maintenance continues through May 21',
+    excerpt: 'The free gondola between Telluride and Mountain Village remains closed for spring maintenance since April 6. It will reopen May 21 for summer operations. Free SMART bus service continues between the towns throughout the closure period. The Town of Mountain Village is also running a bus between the Meadows and Village Center until the chondola opens.',
     tags: ['Gondola', 'Transportation', 'Season'], featured: true, eventRelated: false
   },
   {
-    id: 'smc-dems-013b', sourceKey: 'smc-dems',
-    postedAt: '2026-04-06T08:00:00',
-    title: 'San Miguel County Democratic Assembly — Saturday, April 12',
-    excerpt: 'The San Miguel County Democratic Assembly takes place Saturday, April 12. Registered delegates will vote to advance local candidates to the primary ballot. Delegate registration closed April 5. Details at smcdemocrats.org.',
+    id: 'smc-dems-013c', sourceKey: 'smc-dems',
+    postedAt: '2026-04-11T08:00:00',
+    title: 'San Miguel County Democratic Assembly — TOMORROW, Saturday, April 12',
+    excerpt: 'The San Miguel County Democratic Assembly takes place tomorrow, Saturday, April 12. Registered delegates will vote to advance local candidates to the primary ballot. Delegate registration closed April 5. Details at smcdemocrats.org.',
     tags: ['Politics', 'Assembly', 'Upcoming'], featured: false, eventRelated: true
   },
   {
-    id: 'fb-3395-028', sourceKey: 'fb-3395',
-    postedAt: '2026-04-06T08:00:00',
+    id: 'fb-3395-028b', sourceKey: 'fb-3395',
+    postedAt: '2026-04-11T08:30:00',
     title: 'Community Wildfire Protection Plan — public comment period open',
     excerpt: 'San Miguel County is seeking public input on a new Community Wildfire Protection Plan. Panel discussions are being held to kick off the public comment period. With 2026 fire season outlook showing above-average wildfire risk across the Four Corners, community input on preparedness and mitigation is critical. Visit sanmiguelcountyco.gov for details.',
     tags: ['Wildfire', 'County', 'Public Comment'], featured: false, eventRelated: false
@@ -141,8 +134,8 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Scholarships', 'Youth', 'Education'], featured: false, eventRelated: false
   },
   {
-    id: 'fb-2061-030', sourceKey: 'fb-2061',
-    postedAt: '2026-04-06T10:00:00',
+    id: 'fb-2061-030b', sourceKey: 'fb-2061',
+    postedAt: '2026-04-11T10:00:00',
     title: 'Airport Authority special meeting — April 21 at Hangar 30',
     excerpt: 'The Telluride Regional Airport Authority will hold a special meeting on Tuesday, April 21, 2026 at 1:00 PM at Hangar 30 Conference Room, Telluride Regional Airport. Agenda to be posted at tellurideairport.com. This follows a recent aircraft incident at the airport that was reported with no injuries.',
     tags: ['Airport', 'Government', 'Meeting'], featured: false, eventRelated: true
@@ -162,8 +155,8 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Town Government', 'Parks', 'Meeting'], featured: false, eventRelated: true
   },
   {
-    id: 'fb-3395-029', sourceKey: 'fb-3395',
-    postedAt: '2026-04-06T11:00:00',
+    id: 'fb-3395-029b', sourceKey: 'fb-3395',
+    postedAt: '2026-04-11T11:00:00',
     title: 'Pacific Avenue closed April 6–18 for improvement project',
     excerpt: 'Pacific Avenue is closed from Monday, April 6 through Saturday, April 18 as the Town of Telluride Public Works Department begins the next phase of the Pacific Avenue Improvement Project. Expect full closures between Mahoney and surrounding blocks. Part of the broader Southwest Area Conceptual Plan for improved traffic flow, bike safety, and pedestrian access.',
     tags: ['Road Closure', 'Town Notice', 'Construction'], featured: false, eventRelated: false
@@ -244,6 +237,20 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Mountainfilm 2026 speaker lineup revealed — festival runs May 21–25',
     excerpt: 'Mountainfilm announced its 2026 Minds Moving Mountains Speaker Series lineup on April 8. The 48th annual documentary film festival runs May 21–25 in Telluride with conservationist and marine biologist Cristina Mittermeier as guest director. Festival passes are on sale now at mountainfilm.org.',
     tags: ['Festival', 'Film', 'Arts', 'Upcoming Event'], featured: false, eventRelated: true
+  },
+  {
+    id: 'fb-3395-036', sourceKey: 'fb-3395',
+    postedAt: '2026-04-11T09:00:00',
+    title: 'Tips-Up FriYAY kicks off April 20 — new après music series in Mountain Village',
+    excerpt: 'Mountain Village launches a brand-new après music series called Tips-Up FriYAY, kicking off April 20, 2026. The series brings live music and community vibes to the Village during the spring shoulder season. A welcome addition while the gondola remains closed for maintenance through May 21.',
+    tags: ['Events', 'Music', 'Mountain Village', 'Spring'], featured: false, eventRelated: true
+  },
+  {
+    id: 'fb-2061-046', sourceKey: 'fb-2061',
+    postedAt: '2026-04-11T09:30:00',
+    title: 'Special election filing window closing — petitions due April 20 for two Council seats',
+    excerpt: 'The candidate petition period for the June 30 Town of Telluride special election closes Monday, April 20. Two Council seats are being filled: one vacated by former Mayor Pro Tem Meehan Fee and one held by appointed Councilmember Marya Stark. Candidates need 25 signatures from registered Telluride voters. Petitions available at the Town Clerk\'s office in Rebekah Hall. Each voter may sign up to two petitions.',
+    tags: ['Elections', 'Government', 'Deadline', 'Council'], featured: false, eventRelated: true
   }
 ];
 const CP_MAX_POSTS = 20;
