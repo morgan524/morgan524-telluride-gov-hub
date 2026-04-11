@@ -4937,22 +4937,6 @@ const LEGAL_ENTITY_LOGOS = {
 const LEGAL_NOTICES = [
   // ── Active Notices (updated 2026-03-29) ──
   {
-    title: 'Deed Restricted Ownership Lottery -- Silver Jack 202, 205 & Element 52 G-17',
-    entity: 'San Miguel Regional Housing Authority',
-    entityClass: 'ent-housing',
-    entityLogo: 'county',
-    icon: '🏘️',
-    iconClass: 'type-housing',
-    type: 'Housing Lottery',
-    filterTag: 'housing',
-    summary: 'Silver Jack 202, Silver Jack 205, and Element 52 G-17 at 155 W Pacific Ave and 398 S Davis St will be offered by Ownership Lottery under the Telluride Affordable Housing Guidelines. Applications available at smrha.org/lottery. Submit by appointment from March 20 through April 10 at noon.',
-    deadline: 'Applications: March 20 - April 10, 2026 at Noon',
-    expires: '2026-04-10',
-    dates: '3/12, 3/19, 3/26, 4/2',
-    papers: ['ttimes'],
-    address: '155 W Pacific Ave, Telluride, CO'
-  },
-  {
     title: 'Bid Notice -- 2026 Parking Lots Overlay Project',
     entity: 'Town of Mountain Village',
     entityClass: 'ent-mv',
@@ -5166,21 +5150,6 @@ const LEGAL_NOTICES = [
     papers: ['ttimes_apr2'],
     url: 'https://www.townofmountainvillage.com',
     address: '411 Mountain Village Blvd, Mountain Village, CO'
-  },
-  {
-    title: 'Notice of Substantial Completion -- Telluride Wastewater Treatment Plant Lab Remodel',
-    entity: 'Town of Telluride',
-    entityClass: 'ent-county',
-    entityLogo: 'telluride',
-    icon: '🏗️',
-    iconClass: 'type-bid',
-    type: 'Substantial Completion',
-    filterTag: 'public-entity',
-    summary: 'Contractor: FCI Constructors, Inc., 3050 I-70 Business Loop, Bldg A, Grand Junction, CO 81503. The Town of Telluride Public Works Department intends to begin processing Final Payment on March 30, 2026. Any person or firm having debts against the Contractor must file written notice with Connor J. Tyrrell, Town Capital Improvement Project Manager, P.O. Box 397, Telluride, CO 81435 on or before April 10, 2026.',
-    deadline: 'Claims due by April 10, 2026',
-    expires: '2026-04-10',
-    dates: '4/2',
-    papers: ['ttimes_apr2']
   },
   {
     title: 'Bid Notice -- 2026 Ski Ranches Waterline Replacement Project',
