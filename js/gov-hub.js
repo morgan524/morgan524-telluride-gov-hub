@@ -303,15 +303,7 @@ const COUNTY_CACHE_DATE = '2026-03-25';
 
 const COUNTY_CACHED_DATA = [
   // ── April 2026 ──
-  {
-    date: 'April 1, 2026',
-    time: '9:30 AM - 3:00 PM',
-    title: 'Board of County Commissioners Meeting',
-    type: 'bocc',
-    location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: 882,
-    note: null
-  },
+  // Removed April 1 BOCC meeting (>7 days past)
   {
     date: 'April 8, 2026',
     time: '9:30 AM - 3:00 PM',
@@ -545,16 +537,7 @@ const MV_CACHED_DATA = [
     location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
   },
   // ── Design Review Board ──
-  {
-    date: 'April 2, 2026',
-    time: '10:00 AM - 2:00 PM',
-    title: 'Design Review Board',
-    board: 'drb',
-    agendaUrl: null,
-    packetUrl: null,
-    special: false,
-    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
-  },
+  // Removed April 2 DRB meeting (>7 days past)
   {
     date: 'May 7, 2026',
     time: '10:00 AM - 3:00 PM',
@@ -4055,15 +4038,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/news/article_d8e5dded-9af9-4cb1-b0aa-b5572ec3715a.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/ff/cffda83a-a78e-4ec0-8d6b-5a4978a4e879/69c37e515b702.image.jpg"
   },
-  {
-    title: "Telluride Jazz: the art of evolution",
-    source: "Telluride Times",
-    date: "March 28, 2026",
-    newsTopic: "arts-culture",
-    copy: "Tickets are on sale for the 48th Telluride Jazz Festival, featuring genre-fluid artists pushing the boundaries of jazz.",
-    href: "https://www.telluridenews.com/news/article_949d8fec-f167-43fa-ba8a-b22426a1b88f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/7e/e7e2478b-d244-4591-9adc-cc880c079f7e/69c775c9851f2.image.jpg"
-  },
+  // Removed 2 stale Telluride Times articles from March 28 (>14 days old)
   // Removed 4 stale Telluride Times articles from March 27 and earlier (>14 days old)
   {
     title: "Take the plunge: petition process underway for council candidates",
@@ -4227,15 +4202,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/news/article_2dd73074-c30a-46b4-b33d-92ce0b671d2f.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/b2/1b271f59-6a17-4db0-acb5-4905eec725ef/69cab6f8564ec.image.jpg"
   },
-  {
-    title: "Three units available in next housing lottery",
-    source: "Telluride Times",
-    date: "March 28, 2026",
-    newsTopic: "community",
-    copy: "Just a few months after the most recent deed-restricted housing lottery, locals have another chance to apply for three units.",
-    href: "https://www.telluridenews.com/news/article_de6d4879-227a-4279-96ee-376578b2749a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/1f/f1fc363f-f257-4d3d-b04d-dc91469c781a/69c31fb88e813.image.jpg"
-  },
+  // Removed "Three units available in next housing lottery" (March 28, >14 days old)
   {
     title: "Colorado ‘underfunding schools by billions’ prompts Telluride’s mill levy solution",
     source: "Telluride Times",
