@@ -26,7 +26,7 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-11';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-13';
 const COMMUNITY_PULSE_POSTS = [
   {
     id: 'fb-2061-043', sourceKey: 'fb-2061',
@@ -120,13 +120,6 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Housing', 'County', 'Development'], featured: false, eventRelated: false
   },
   {
-    id: 'fb-2061-032b', sourceKey: 'fb-2061',
-    postedAt: '2026-04-07T09:00:00',
-    title: 'Mountain Village council update — investigation into Prohaska resignation continues',
-    excerpt: 'Mountain Village Town Council appointed Dan Jansen to fill the vacancy left by former Mayor Marti Prohaska\'s January resignation. The council has also approved an independent third-party investigation into the events and circumstances surrounding the resignation. Community discussion continues as the investigation proceeds. Follow townofmountainvillage.com for updates.',
-    tags: ['Government', 'Mountain Village', 'Council'], featured: false, eventRelated: false
-  },
-  {
     id: 'rotary-ig-011b', sourceKey: 'rotary-ig',
     postedAt: '2026-04-09T10:00:00',
     title: 'Rotary scholarships for seniors — deadline April 15',
@@ -139,20 +132,6 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Airport Authority special meeting — April 21 at Hangar 30',
     excerpt: 'The Telluride Regional Airport Authority will hold a special meeting on Tuesday, April 21, 2026 at 1:00 PM at Hangar 30 Conference Room, Telluride Regional Airport. Agenda to be posted at tellurideairport.com. This follows a recent aircraft incident at the airport that was reported with no injuries.',
     tags: ['Airport', 'Government', 'Meeting'], featured: false, eventRelated: true
-  },
-  {
-    id: 'fb-2061-029b', sourceKey: 'fb-2061',
-    postedAt: '2026-04-07T07:00:00',
-    title: 'Greyhead wildfire update — no active flames after overnight precipitation',
-    excerpt: 'Update on the Greyhead Mountain fire near Telluride Regional Airport: following moderate overnight precipitation, there are no active flames or visible smoke. Additional snowfall is expected, further supporting containment. Fire crews continue working interior hot spots to prevent re-ignition. The fire was reported Sunday approximately 2 miles northwest of the airport and was believed to be lightning-caused. Conditions remain exceptionally dry — maintain defensible space.',
-    tags: ['Wildfire', 'Safety', 'Update'], featured: true, eventRelated: false
-  },
-  {
-    id: 'fb-2061-031', sourceKey: 'fb-2061',
-    postedAt: '2026-04-07T08:00:00',
-    title: 'Parks & Recreation Commission meeting April 15 canceled — rescheduled to April 29',
-    excerpt: 'The Town of Telluride Parks & Recreation Commission meeting originally scheduled for April 15 has been canceled. It has been rescheduled to Tuesday, April 29. The Liquor Licensing Authority meeting remains on schedule for April 23, 2026.',
-    tags: ['Town Government', 'Parks', 'Meeting'], featured: false, eventRelated: true
   },
   {
     id: 'fb-3395-029b', sourceKey: 'fb-3395',
@@ -251,6 +230,20 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Special election filing window closing — petitions due April 20 for two Council seats',
     excerpt: 'The candidate petition period for the June 30 Town of Telluride special election closes Monday, April 20. Two Council seats are being filled: one vacated by former Mayor Pro Tem Meehan Fee and one held by appointed Councilmember Marya Stark. Candidates need 25 signatures from registered Telluride voters. Petitions available at the Town Clerk\'s office in Rebekah Hall. Each voter may sign up to two petitions.',
     tags: ['Elections', 'Government', 'Deadline', 'Council'], featured: false, eventRelated: true
+  },
+  {
+    id: 'fb-3395-037', sourceKey: 'fb-3395',
+    postedAt: '2026-04-12T09:00:00',
+    title: 'Tourism Board briefs both town councils — summer outlook, lodging, festival impacts',
+    excerpt: 'The Telluride Tourism Board made separate presentations to the Telluride and Mountain Village town councils covering lodging and occupancy trends, festival economic impacts, marketing efforts, and summer season projections. The briefings set the stage for shoulder-season decisions and continued coordination between the two municipalities heading into the 2026 summer festival calendar.',
+    tags: ['Tourism', 'Town Government', 'Mountain Village', 'Economy'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-2061-047', sourceKey: 'fb-2061',
+    postedAt: '2026-04-12T10:00:00',
+    title: 'Mountain Village Police warn of growing email fraud scam targeting residents',
+    excerpt: 'Mountain Village Police Department issued an alert about a growing email fraud scam targeting local residents. Do not click links or provide personal information in unsolicited emails. Verify senders directly and report suspicious messages to MVPD. Scams of this type often impersonate government agencies, financial institutions, or known local businesses.',
+    tags: ['Safety', 'Mountain Village', 'Scam Alert', 'Public Notice'], featured: true, eventRelated: false
   }
 ];
 const CP_MAX_POSTS = 20;
