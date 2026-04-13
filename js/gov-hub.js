@@ -4020,6 +4020,33 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/news/article_b84341f1-a75d-449c-98f5-ce239bca88b9.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/84/c84d653f-ad57-421f-b4b7-e3c492602d26/69cf5ef42153e.image.jpg"
   },
+  {
+    title: "Welcome to Yappy Hour",
+    source: "Telluride Times",
+    date: "April 13, 2026",
+    newsTopic: "community",
+    copy: "A rooftop view of the Cimarron Range, framed by alpenglow, beverage in hand \u2014 Telluride's off-season social scene comes to life at Yappy Hour.",
+    href: "https://www.telluridenews.com/news/article_5caa8e3a-8cea-4605-ab7c-421989b78d14.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/07/407ce859-36b5-4638-a7ff-0b8612b3efb9/69dd143d94eaf.image.jpg"
+  },
+  {
+    title: "Celebrate the night",
+    source: "Telluride Times",
+    date: "April 13, 2026",
+    newsTopic: "community",
+    copy: "NASA\u2019s recent Artemis II mission has sparked a renewed interest in space travel and dark skies \u2014 Telluride looks up to celebrate the night.",
+    href: "https://www.telluridenews.com/news/article_68ed339d-e2c5-440a-9991-c60aa1a83941.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/c8/5c862c6c-5e26-4e0f-a33d-33caec3b7a75/69dd71c6bab04.image.jpg"
+  },
+  {
+    title: "Sixth annual Paradigm Gathering near Egnar approved with caveats",
+    source: "Telluride Times",
+    date: "April 11, 2026",
+    newsTopic: "government",
+    copy: "One of San Miguel County\u2019s newer and smaller festivals, the Paradigm Gathering in the West End near Egnar, has received approval for a temporary-use permit with conditions.",
+    href: "https://www.telluridenews.com/news/article_e7b36d10-207b-4a0c-a2b3-c1944caa8c29.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/01/701c7f66-4aaa-444c-a94f-90044560e760/69daa83812423.image.jpg"
+  },
   // Removed 2 stale Telluride Times articles from March 29 (>14 days old)
   // Removed 2 stale Telluride Times articles from March 28 (>14 days old)
   // Removed 4 stale Telluride Times articles from March 27 and earlier (>14 days old)
