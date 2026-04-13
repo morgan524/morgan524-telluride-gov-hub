@@ -6465,7 +6465,7 @@ const HOUSING_LISTINGS = [
     drawingLocation: 'SMRHA Office, 820 Black Bear Rd, Unit G17, Telluride',
     pickupLocation: '820 Black Bear Rd, Unit G17, Telluride (or download at smrha.org/lottery)',
     eligibility: 'Must work 1,400+ hrs/yr in San Miguel, Ouray, San Juan, or Montrose County · Must have lived in 4-county region 12+ months · Household income up to 220% AMI · Asset limits apply',
-    note: 'Ownership lottery under Telluride Affordable Housing Guidelines. Applications available at smrha.org/lottery or pick up in person.'
+    note: 'APPLICATIONS CLOSED (deadline was April 10, 2026). Drawing scheduled for April 24, 2026 at 10:00 AM at SMRHA Office. Ownership lottery under Telluride Affordable Housing Guidelines.'
   },
   {
     title: '🏠 Silver Jack Unit 205 — 2BR Condo (Deed-Restricted)',
@@ -6483,7 +6483,7 @@ const HOUSING_LISTINGS = [
     drawingLocation: 'SMRHA Office, 820 Black Bear Rd, Unit G17, Telluride',
     pickupLocation: '820 Black Bear Rd, Unit G17, Telluride (or download at smrha.org/lottery)',
     eligibility: 'Must work 1,400+ hrs/yr in San Miguel, Ouray, San Juan, or Montrose County · Must have lived in 4-county region 12+ months · Household income up to 220% AMI · Asset limits apply',
-    note: 'Ownership lottery under Telluride Affordable Housing Guidelines. Applications available at smrha.org/lottery or pick up in person.'
+    note: 'APPLICATIONS CLOSED (deadline was April 10, 2026). Drawing scheduled for April 24, 2026 at 10:00 AM at SMRHA Office. Ownership lottery under Telluride Affordable Housing Guidelines.'
   },
   {
     title: '🏠 Element 52 SW-102 — 2BR Condo (Deed-Restricted)',
@@ -6501,7 +6501,7 @@ const HOUSING_LISTINGS = [
     drawingLocation: 'SMRHA Office, 820 Black Bear Rd, Unit G17, Telluride',
     pickupLocation: '820 Black Bear Rd, Unit G17, Telluride (or download at smrha.org/lottery)',
     eligibility: 'Must work 1,400+ hrs/yr in San Miguel, Ouray, San Juan, or Montrose County · Must have lived in 4-county region 12+ months · Household income up to 220% AMI · Asset limits apply',
-    note: 'Ownership lottery under Telluride Affordable Housing Guidelines. Applications available at smrha.org/lottery or pick up in person.'
+    note: 'APPLICATIONS CLOSED (deadline was April 10, 2026). Drawing scheduled for April 24, 2026 at 10:00 AM at SMRHA Office. Ownership lottery under Telluride Affordable Housing Guidelines.'
   },
   /* ── Deed-Restricted For Sale — SMRHA Property Listings ── */
   {
