@@ -4020,24 +4020,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/news/article_b84341f1-a75d-449c-98f5-ce239bca88b9.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/84/c84d653f-ad57-421f-b4b7-e3c492602d26/69cf5ef42153e.image.jpg"
   },
-  {
-    title: "\u2018A Gateway to Success\u2019",
-    source: "Telluride Times",
-    date: "March 29, 2026",
-    newsTopic: "community",
-    copy: "Telluride Miner School facilitates learning by doing, with students gaining hands-on experience in local industries.",
-    href: "https://www.telluridenews.com/news/article_67387faf-fb8e-4ee3-ae86-4ac65ce967a8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/0b/20b4ab8c-3dbf-406b-9978-9d3dceac7d92/69c4d6cbbfc29.image.jpg"
-  },
-  {
-    title: "\u201cI voted/yo vot\u00e9\u201d sticker contest voting ends soon",
-    source: "Telluride Times",
-    date: "March 29, 2026",
-    newsTopic: "government",
-    copy: "San Miguel County\u2019s bilingual \u2018I voted/yo vot\u00e9\u2019 sticker contest is wrapping up, with community voting on student-designed stickers ending soon.",
-    href: "https://www.telluridenews.com/news/article_d8e5dded-9af9-4cb1-b0aa-b5572ec3715a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/ff/cffda83a-a78e-4ec0-8d6b-5a4978a4e879/69c37e515b702.image.jpg"
-  },
+  // Removed 2 stale Telluride Times articles from March 29 (>14 days old)
   // Removed 2 stale Telluride Times articles from March 28 (>14 days old)
   // Removed 4 stale Telluride Times articles from March 27 and earlier (>14 days old)
   {
