@@ -3883,8 +3883,44 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 });
 
 // ══════════ TELLURIDE TIMES — CURRENT HOMEPAGE STORIES ══════════
-// Updated: 2026-04-11  — refresh periodically from telluridenews.com
+// Updated: 2026-04-14  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Have van, will travel",
+    source: "Telluride Times",
+    date: "April 13, 2026",
+    newsTopic: "community",
+    copy: "A family road trip in a 1982 VW van — two weeks with kids, a 90-pound dog, and a cat — tests family compatibility while exploring the American West.",
+    href: "https://www.telluridenews.com/news/article_60557203-2d16-47b6-be8c-31122f3e9120.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/40/640400c9-6ae1-4262-962f-eb97a21eee8b/69dd81e6e6891.image.jpg"
+  },
+  {
+    title: "Undaunted dawn: Craig Grother and the Gunnison sage grouse",
+    source: "Telluride Times",
+    date: "April 12, 2026",
+    newsTopic: "community",
+    copy: "A pre-dawn trip to the high sage plains with biologist Craig Grother, who has spent decades studying the imperiled Gunnison sage grouse on the mesas of southwest Colorado.",
+    href: "https://www.telluridenews.com/news/article_ba541143-94f3-4c44-8243-a087c004eb83.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/ed/8ed07efb-0b9b-43fa-b26b-c0e136b85217/69d75061da0c6.image.jpg"
+  },
+  {
+    title: "Small team, big results",
+    source: "Telluride Times",
+    date: "April 12, 2026",
+    newsTopic: "community",
+    copy: "At the District II FFA Career Development Events in Northfork, Reece Elwood placed first and Weston Elwood tied for second, helping their two-person team finish 7th out of 11.",
+    href: "https://www.telluridenews.com/news/article_ca21b2d4-aa99-4906-a5cd-fc27d9ab343c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/7c/f7cf23e9-7440-4054-bbcd-02a3d472b2c8/69d74ece47489.image.png"
+  },
+  {
+    title: "A spring break at Ah Haa for True North youth",
+    source: "Telluride Times",
+    date: "April 11, 2026",
+    newsTopic: "community",
+    copy: "True North participants from Norwood and Nucla High Schools enjoyed a spring break staycation, taking workshops at Ah Haa School for the Arts in encaustic painting, stained-glass welding, and scratch cooking.",
+    href: "https://www.telluridenews.com/news/article_e870359a-e4c5-4bd7-9b35-e4e36ea44180.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/9d/b9ddf424-b914-4844-b9c2-dabf1f2ba8ae/69d74c66839ba.image.jpg"
+  },
   {
     title: "\u2018A sense of belonging\u2019",
     source: "Telluride Times",
@@ -4198,8 +4234,17 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
-// Updated: 2026-04-08  — refresh periodically from koto.org/news-category/newscasts/
+// Updated: 2026-04-14  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 4-13-26",
+    source: "KOTO Community Radio",
+    date: "April 13, 2026",
+    newsTopic: "government",
+    copy: "This week\u2019s Regional Roundup: a Mountain Munchkins update, and Colorado\u2019s General Assembly heads into its final month of the 2026 legislative session.",
+    href: "https://koto.org/news/newscast-4-13-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+  },
   {
     title: "Newscast 4-3-26",
     source: "KOTO Community Radio",
