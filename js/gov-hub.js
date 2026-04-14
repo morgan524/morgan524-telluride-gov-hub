@@ -4186,15 +4186,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/ad/7adf111b-7b5e-468c-a8b5-3a359bbd622a/69c7189d130f5.image.jpg"
   },
   {
-    title: "Low snowpack stresses water users",
-    source: "Telluride Times",
-    date: "March 30, 2026",
-    newsTopic: "community",
-    copy: "After the recent heatwave, local slope conditions look more like May than March. Regional snowpack is 18% of median, raising concerns among water districts.",
-    href: "https://www.telluridenews.com/news/article_29f36a8e-7cfd-44dc-973e-7f1454d755f0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/d8/6d82ceea-41dc-48ff-bacf-c66b2e5c4172/69c714dff331a.image.png"
-  },
-  {
     title: "UPDATE: Telluride Ski Resort to re-open Friday",
     source: "Telluride Times",
     date: "April 1, 2026",
@@ -4203,25 +4194,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/news_release/article_16473284-9fa7-4518-b3d8-43a48dc7a5aa.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/2c/c2c57f30-7503-41d0-84f3-05ed163b162e/69cb0bf82b841.image.jpg"
   },
-  {
-    title: "AG candidate Michael Dougherty makes his case in Telluride",
-    source: "Telluride Times",
-    date: "March 30, 2026",
-    newsTopic: "government",
-    copy: "Candidate for Colorado attorney general and current Boulder District Attorney Michael Dougherty held a meet-and-greet Monday in Telluride.",
-    href: "https://www.telluridenews.com/news/article_2dd73074-c30a-46b4-b33d-92ce0b671d2f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/b2/1b271f59-6a17-4db0-acb5-4905eec725ef/69cab6f8564ec.image.jpg"
-  },
   // Removed "Three units available in next housing lottery" (March 28, >14 days old)
-  {
-    title: "Colorado ‘underfunding schools by billions’ prompts Telluride’s mill levy solution",
-    source: "Telluride Times",
-    date: "March 30, 2026",
-    newsTopic: "community",
-    copy: "Residents in the San Miguel County region have undoubtedly been sitting on pins and needles in anticipation of the Colorado Legislative Council\’s quarterly economic forecast.",
-    href: "https://www.telluridenews.com/news/article_d000e0aa-672a-4aef-8786-d8aeaba4cd08.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/9a/99aaecf0-a527-484d-8535-52e203b8119c/69c70f0f0d498.image.jpg"
-  }
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
@@ -4252,15 +4225,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "public-safety",
     copy: "Fire season ignites with Willow Springs Fire. Telluride discusses the housing waitlist. Hetal Doshi runs for Colorado Attorney General.",
     href: "https://koto.org/news/newscast-4-1-26/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  },
-  {
-    title: "Newscast 3-30-26",
-    source: "KOTO Community Radio",
-    date: "March 30, 2026",
-    newsTopic: "government",
-    copy: "Mountain Village discusses new water restrictions. Coming Up Next in Telluride. Lawmakers talk housing policy, conversion therapy ban, and state budget shortfalls.",
-    href: "https://koto.org/news/newscast-3-30-26/",
     img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
   },
   // Removed 3 stale KOTO newscasts from March 27 and earlier (>14 days old)
