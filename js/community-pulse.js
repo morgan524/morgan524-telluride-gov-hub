@@ -26,7 +26,7 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-13';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-14';
 const COMMUNITY_PULSE_POSTS = [
   {
     id: 'fb-2061-043', sourceKey: 'fb-2061',
@@ -141,55 +141,6 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Road Closure', 'Town Notice', 'Construction'], featured: false, eventRelated: false
   },
   {
-    id: 'fb-2061-033', sourceKey: 'fb-2061',
-    postedAt: '2026-04-08T07:00:00',
-    title: 'Galloping Goose shifts to shoulder season — single-bus loop now in effect',
-    excerpt: 'The Town of Telluride Galloping Goose bus has transitioned to its shoulder season schedule with single-bus operation. With the gondola closed for maintenance through May 21, SMART regional bus service continues between Telluride and Mountain Village. Mountain Village is also running a bus between the Meadows and Village Center until the chondola opens. Call 970-728-5700 for schedule details.',
-    tags: ['Transportation', 'Bus', 'Shoulder Season'], featured: false, eventRelated: false
-  },
-  {
-    id: 'fb-2061-034', sourceKey: 'fb-2061',
-    postedAt: '2026-04-08T08:00:00',
-    title: 'Music on the Green returns — Mountain Village summer concerts May 29 through Sept 18',
-    excerpt: 'The 2026 Music on the Green Summer Concert Series in Mountain Village runs every Friday from May 29 through September 18 (except July 3), 5–7 PM. Free live music in the Village Center. Mark your calendars for the summer season ahead.',
-    tags: ['Events', 'Music', 'Mountain Village'], featured: false, eventRelated: true
-  },
-  {
-    id: 'fb-2061-035', sourceKey: 'fb-2061',
-    postedAt: '2026-04-08T09:00:00',
-    title: 'Four Seasons Mountain Village project tweaks — 52 hotel rooms, 43 residences',
-    excerpt: 'The Four Seasons Hotel and Private Residences has updated its Mountain Village project design in response to customer demand. The revised plan includes 52 hotel rooms on the second and third floors overlooking the Mountain Village pond, plus 43 individually owned hotel residences ranging from one to five bedrooms, all allowed to be rented.',
-    tags: ['Development', 'Mountain Village', 'Hotel'], featured: false, eventRelated: false
-  },
-  {
-    id: 'fb-3395-030', sourceKey: 'fb-3395',
-    postedAt: '2026-04-08T10:00:00',
-    title: 'Spring Clean Up & Trash Bash — May 16–18 at multiple locations',
-    excerpt: 'The annual countywide Spring Clean Up returns May 16–18. Telluride drop-off at Carhenge Parking Lot (700 W Pacific Ave) Friday and Saturday; Mountain Village at Market Plaza on Friday; Norwood and County Fairgrounds on Saturday. Household hazardous waste, electronics recycling, and general household waste accepted. The third annual Trash Bash follows Sunday, May 18 starting at noon in Elks Park — pick up litter, get entered in a raffle, and enjoy free food.',
-    tags: ['Community', 'Clean Up', 'Upcoming Event'], featured: false, eventRelated: true
-  },
-  {
-    id: 'tchn-016', sourceKey: 'tchn',
-    postedAt: '2026-04-08T08:30:00',
-    title: 'Public Health Week — April 6–12 proclaimed by County Commissioners',
-    excerpt: 'San Miguel County Commissioners proclaimed April 6–12, 2026 as Public Health Week, joining national celebrations recognizing public health achievements. San Miguel County Public Health expanded services in 2025 including increased radon testing, food safety training, and enhanced access to harm-reduction materials like Narcan and fentanyl test strips.',
-    tags: ['Public Health', 'County', 'Awareness'], featured: false, eventRelated: true
-  },
-  {
-    id: 'fb-2061-036', sourceKey: 'fb-2061',
-    postedAt: '2026-04-08T10:30:00',
-    title: 'Housing Code update — Phase 2 drafts due April 12, accelerated review underway',
-    excerpt: 'San Miguel County\'s Housing Code Update project is now in Phase 2: Issue Identification and Analysis. The county is developing an Accelerated Housing Review process per Proposition 123 requirements and identifying code constraints that slow housing production. Revised draft materials will be published by April 12, 2026. Public input opportunities to follow.',
-    tags: ['Housing', 'County', 'Land Use Code'], featured: false, eventRelated: false
-  },
-  {
-    id: 'fb-3395-031', sourceKey: 'fb-3395',
-    postedAt: '2026-04-08T11:00:00',
-    title: 'Colorado wildfire building codes now in effect — local adoption required by July 1',
-    excerpt: 'As of April 1, 2026, Colorado cities and counties in high-risk wildfire areas must adopt new wildfire-ready building codes by July 1. The codes govern roofing materials, vent mesh sizes, landscaping within five feet of structures, and exterior wall assemblies. San Miguel County, with over 173,000 acres of moderate-to-high fire hazard, is directly affected. Building to wildfire standards adds roughly 2.7% to construction costs. Details at dfpc.colorado.gov.',
-    tags: ['Wildfire', 'Building Codes', 'County'], featured: false, eventRelated: false
-  },
-  {
     id: 'fb-2061-037', sourceKey: 'fb-2061',
     postedAt: '2026-04-09T07:30:00',
     title: 'Colorado confirms worst snowpack year in recorded history — San Miguel basin at 15%',
@@ -244,6 +195,20 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Mountain Village Police warn of growing email fraud scam targeting residents',
     excerpt: 'Mountain Village Police Department issued an alert about a growing email fraud scam targeting local residents. Do not click links or provide personal information in unsolicited emails. Verify senders directly and report suspicious messages to MVPD. Scams of this type often impersonate government agencies, financial institutions, or known local businesses.',
     tags: ['Safety', 'Mountain Village', 'Scam Alert', 'Public Notice'], featured: true, eventRelated: false
+  },
+  {
+    id: 'mountainfilm-002', sourceKey: 'mountainfilm',
+    postedAt: '2026-04-13T09:00:00',
+    title: 'Mountainfilm 2026 festival passes on sale now — May 21–25 in Telluride',
+    excerpt: 'The 48th annual Mountainfilm documentary festival returns to Telluride May 21–25, 2026 with conservationist and marine biologist Cristina Mittermeier as guest director. Festival passes are on sale now at mountainfilm.org. The Minds Moving Mountains Speaker Series lineup was revealed April 8 and film submissions remain open. Mountainfilm is an Academy Award–qualifying festival for the Documentary Short Film category.',
+    tags: ['Festival', 'Film', 'Arts', 'Tickets'], featured: false, eventRelated: true
+  },
+  {
+    id: 'fb-2061-048', sourceKey: 'fb-2061',
+    postedAt: '2026-04-13T10:00:00',
+    title: 'Petition filing deadline one week away — Town Council special election candidates',
+    excerpt: 'One week remains for prospective candidates to file petitions for the June 30 Town of Telluride special election. The filing window closes Monday, April 20. Two Council seats are on the ballot. Candidates need 25 signatures from registered Telluride voters and can pick up petition packets at the Town Clerk\'s office in Rebekah Hall. Voters may sign up to two petitions.',
+    tags: ['Elections', 'Deadline', 'Town Government', 'Council'], featured: true, eventRelated: true
   }
 ];
 const CP_MAX_POSTS = 20;
