@@ -4194,33 +4194,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/news/article_336327c3-b092-4cfd-9548-fbabb979cef3.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/b6/4b62beda-dbf7-488a-be75-4b7c7497789f/69cb688ca44ed.image.jpg"
   },
-  {
-    title: "Wildfire sparked northwest of Telluride airport",
-    source: "Telluride Times",
-    date: "March 31, 2026",
-    newsTopic: "public-safety",
-    copy: "Amid the exceptionally dry conditions, the San Miguel County Sheriff\’s Office advised of a wildfire approximately 2 miles northwest of Telluride Regional Airport, near the Greyhead subdivision.",
-    href: "https://www.telluridenews.com/news/article_7d7e751e-db54-433d-8fe4-0b051959dab8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/a8/da80e7b1-924d-43f2-bc3d-b856f91cdfa2/69cc8e64b6012.image.jpg"
-  },
-  {
-    title: "Celebrating, and acknowledging, the end of the season",
-    source: "Telluride Times",
-    date: "March 31, 2026",
-    newsTopic: "arts-culture",
-    copy: "Telluride Arts and Citizens State Bank will host Tales from the Season at Telluride Arts\’ headquarters, celebrating the end of the winter season.",
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_1c8db2bc-e1b7-4421-9a4b-edf8a342033d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/21/5219c399-9ccd-45ed-9fe3-f7cae035e92a/69c3187776c24.image.jpg"
-  },
-  {
-    title: "This is Colorado (In One Square Foot)",
-    source: "Telluride Times",
-    date: "March 31, 2026",
-    newsTopic: "arts-culture",
-    copy: "What does it mean to be a Coloradan? A photo essay exploring the essence of Colorado through intimate details of mountain terrain.",
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_20287f4e-7c8c-4ed8-93ef-d10582a3496e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/ad/7adf111b-7b5e-468c-a8b5-3a359bbd622a/69c7189d130f5.image.jpg"
-  },
+  
+  
+  
   {
     title: "UPDATE: Telluride Ski Resort to re-open Friday",
     source: "Telluride Times",
