@@ -4907,7 +4907,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-04-06'; // Updated by legal-notice-update task (election notice, Ordinance 1630 added)
+const LEGAL_NOTICES_CACHE_DATE = '2026-04-15'; // Updated by legal-notice-update task (floor replacement deadline fix, spring clean up, CO-145 traffic)
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -5053,10 +5053,10 @@ const LEGAL_NOTICES = [
     iconClass: 'type-rfp',
     type: 'RFP',
     filterTag: 'public-entity',
-    summary: 'San Miguel County is seeking proposals for a contractor to replace flooring at 333 & 305 W. Colorado Ave, Telluride. RFP info available at sanmiguelcountyco.gov/Bids.aspx or 333 W. Colorado Ave 2nd flr, Telluride. Contact Greg Pollio at (970) 369-5432 or gregp@sanmiguelcountyco.gov. Deadline extended to May 23.',
-    deadline: 'Proposals due May 23, 2026 at 5:00 PM',
-    expires: '2026-05-23',
-    dates: '4/2, 4/7, 4/16, 4/23',
+    summary: 'San Miguel County is seeking proposals for a contractor to replace flooring at 333 & 305 W. Colorado Ave, Telluride. RFP info available at sanmiguelcountyco.gov/Bids.aspx or 333 W. Colorado Ave 2nd flr, Telluride. Contact Greg Pollio at (970) 369-5432 or gregp@sanmiguelcountyco.gov.',
+    deadline: 'Proposals due April 24, 2026 at 11:59 PM',
+    expires: '2026-04-24',
+    dates: '4/2, 4/7, 4/16',
     papers: ['ttimes_apr2', 'county_web'],
     url: 'https://www.sanmiguelcountyco.gov/Bids.aspx'
   },
@@ -5447,6 +5447,39 @@ const LEGAL_NOTICES = [
     dates: '4/6',
     papers: ['county_web'],
     url: 'https://www.sanmiguelcountyco.gov/Bids.aspx'
+  },
+  // ── April 15 (County Civic Alerts — New) ──
+  {
+    title: 'Spring Clean Up Events -- May 15-16 (Telluride, Mountain Village, Norwood)',
+    entity: 'San Miguel County / EcoAction Partners',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '♻️',
+    iconClass: 'type-hearing',
+    type: 'Public Notice',
+    filterTag: 'public-entity',
+    summary: 'Annual Spring Clean Up events coordinated by EcoAction Partners at three locations: Telluride (Carhenge) — May 15-16, 10 AM-2 PM; Mountain Village (Market Plaza) — May 15, 10 AM-2 PM; Norwood (County Fairgrounds) — May 16, 9 AM-3 PM. Different waste items accepted at each site. Senior pickup assistance available in Norwood.',
+    deadline: 'Events: May 15-16, 2026',
+    expires: '2026-05-16',
+    dates: '4/2',
+    papers: ['county_web'],
+    url: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx'
+  },
+  {
+    title: 'CO-145 Traffic Interruptions -- Society Turn Roundabout Area',
+    entity: 'CDOT / San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🚧',
+    iconClass: 'type-rates',
+    type: 'Traffic Notice',
+    filterTag: 'public-entity',
+    summary: 'CDOT has created a dedicated webpage for upcoming highway interruptions on CO-145 near the Society Turn roundabout. Residents and commuters should monitor the CDOT page for schedule updates, lane closures, and detour information affecting travel between Telluride and the regional highway network.',
+    deadline: 'Ongoing — check CDOT page for updates',
+    expires: '2026-09-30',
+    dates: '4/2',
+    papers: ['county_web'],
+    url: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx'
   },
 ];
 
