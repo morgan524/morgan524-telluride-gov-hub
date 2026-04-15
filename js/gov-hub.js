@@ -1181,7 +1181,8 @@ const MANUAL_SUMMARIES = {
   // (telluride|2026-04-28|Telluride Housing Authority -- confirmed Apr 28 2:30pm, agenda not yet posted)
 
   // ── Telluride Sub-commissions (Apr 23-24) ──
-  // (telluride|2026-04-23|Planning & Zoning Commission -- Apr 23 5:30pm, agenda not yet posted)
+  'telluride|2026-04-23|Planning & Zoning Commission':
+    'WORK SESSION: Gargoyle Building Minor Subdivision / Lot Line Adjustment — 138 E Colorado Ave (Historic Commercial zone, Telluride Vargas Seiger LLC / Alpine Planning) · Colorado Wildfire Resiliency Code — Land Use Code updates work session (continuing from Mar 12 & Mar 26)',
   // (telluride|2026-04-23|Liquor Licensing Authority -- Apr 23 3pm, new meeting discovered, agenda not yet posted)
   // (telluride|2026-04-23|Telluride Housing Authority Subcommittee Special Meeting -- Apr 23 9am, agenda not yet posted)
   // (telluride|2026-04-24|Telluride Housing Authority Subcommittee Special Meeting SMRHA Lottery Drawing -- Apr 24 10am, agenda not yet posted)
