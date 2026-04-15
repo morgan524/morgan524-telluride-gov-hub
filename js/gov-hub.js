@@ -3884,8 +3884,44 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 });
 
 // ══════════ TELLURIDE TIMES — CURRENT HOMEPAGE STORIES ══════════
-// Updated: 2026-04-14  — refresh periodically from telluridenews.com
+// Updated: 2026-04-15  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Colorado GOP picks statewide primary candidates after \u2018whirlwind courtship\u2019",
+    source: "Telluride Times",
+    date: "April 15, 2026",
+    newsTopic: "government",
+    copy: "San Miguel County Republicans joined over 2,000 delegates from across Colorado for the Republican State Assembly on April 11 in Pueblo, gathering to designate candidates for statewide office to the June primary ballot.",
+    href: "https://www.telluridenews.com/news/article_1463a95f-376c-463b-85ea-9898d198d503.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/10/910ff84c-b09c-49c0-a048-fbb56e306737/69de855cab92a.image.jpg"
+  },
+  {
+    title: "San Miguel County gets water ready",
+    source: "Telluride Times",
+    date: "April 14, 2026",
+    newsTopic: "public-safety",
+    copy: "With the lowest spring moisture totals in Colorado history and wildland fire season underway, San Miguel County launched its Water Ready Program, strategically placing portable water tanks across the county for rapid wildfire suppression.",
+    href: "https://www.telluridenews.com/news/article_d2a3e166-b053-4557-b7d8-f82693be0888.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/6f/c6f34668-4b14-4b8e-bc6f-404b96d81abd/69de7c9c0de27.image.jpg"
+  },
+  {
+    title: "Lady Miners earn All-League status",
+    source: "Telluride Times",
+    date: "April 14, 2026",
+    newsTopic: "sports",
+    copy: "THS junior Ellarose Aplin was voted Second Team All-San Juan Basin League and senior Lucia Young received Honorable Mention for their standout girls basketball performances this winter.",
+    href: "https://www.telluridenews.com/sports/article_ec624d8d-dd3b-4ab7-a71f-9873f536cea0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/c1/4c10f9da-ad1e-4a17-8b30-cb179bf66ea5/69de70f3419ab.image.jpg"
+  },
+  {
+    title: "Giving their all",
+    source: "Telluride Times",
+    date: "April 14, 2026",
+    newsTopic: "sports",
+    copy: "The Norwood Middle School track teams delivered impressive performances at the Ridgway Middle School track meet on Saturday, April 11, with each athlete giving 100% effort despite cool, windy weather.",
+    href: "https://www.telluridenews.com/norwood_post/article_d3a40371-b0ac-4b9d-8ee4-acadb09eb405.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/2f/62f37111-377f-4dc9-bf7f-ff6775acaad1/69de6e9871275.image.jpg"
+  },
   {
     title: "Have van, will travel",
     source: "Telluride Times",
@@ -4211,7 +4247,7 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
-// Updated: 2026-04-14  — refresh periodically from koto.org/news-category/newscasts/
+// Updated: 2026-04-15  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
   {
     title: "Newscast 4-13-26",
@@ -4253,7 +4289,7 @@ const KOTO_NEWSCASTS = [
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
-// Updated: 2026-04-08  — refresh periodically from koto.org/news-category/featured-stories/
+// Updated: 2026-04-15  — refresh periodically from koto.org/news-category/featured-stories/
 const KOTO_FEATURED_STORIES = [
   {
     title: "Floating Solar on Reservoir Number 2",
