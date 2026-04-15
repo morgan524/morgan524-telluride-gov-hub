@@ -29,27 +29,6 @@ const CP_SOURCES = {
 const COMMUNITY_PULSE_CACHE_DATE = '2026-04-15';
 const COMMUNITY_PULSE_POSTS = [
   {
-    id: 'fb-2061-043', sourceKey: 'fb-2061',
-    postedAt: '2026-04-10T10:00:00',
-    title: 'Outdoor water restrictions now in effect — Telluride and Mountain Village both restrict irrigation',
-    excerpt: 'The Town of Telluride implemented outdoor water restrictions effective March 31, 2026 in response to anticipated dry spring and summer conditions and below-average snowpack. Mountain Village has also implemented restrictions. Additional restrictions may follow if dry conditions persist, including potential limits on all outdoor water use. Property owners with newly installed landscaping in 2025 or 2026 may apply for additional watering allowances through the Town\'s Planning and Building Department.',
-    tags: ['Water', 'Drought', 'Town Government', 'Conservation'], featured: true, eventRelated: false
-  },
-  {
-    id: 'foundation-012', sourceKey: 'foundation',
-    postedAt: '2026-04-10T10:30:00',
-    title: 'Town allocates $100K to Good Neighbor Fund — rent relief applications accepted through May 1',
-    excerpt: 'Town Council directed that the Affordable Housing Fund be used to cover approved rent relief applications through the Good Neighbor Fund for residents in Town-owned properties. Applications accepted through May 1, 2026. The Good Neighbor Fund, administered by the Telluride Foundation, provides emergency assistance for local families and individuals facing financial hardship, with no residency restrictions. Part of the Town\'s broader economic support response.',
-    tags: ['Housing', 'Relief', 'Town Government', 'Affordable'], featured: false, eventRelated: false
-  },
-  {
-    id: 'fb-2061-044', sourceKey: 'fb-2061',
-    postedAt: '2026-04-10T11:00:00',
-    title: 'Town adjusts rent formula for employee housing — tenants save $100–$400 per month',
-    excerpt: 'The Town of Telluride adjusted its rent formula for Town-managed employee housing with revised multipliers. Tenants now pay an average of 25% of their income toward rent after deductions for childcare, healthcare, and education. The change is projected to save households $100–$400 per month, with some tenants seeing reductions of up to $900 depending on unit type and income tier.',
-    tags: ['Housing', 'Affordable', 'Town Government', 'Relief'], featured: false, eventRelated: false
-  },
-  {
     id: 'c7cc-023', sourceKey: 'c7cc',
     postedAt: '2026-04-11T08:00:00',
     title: 'SMRHA housing lottery drawing April 24 — three deed-restricted units to be awarded',
@@ -64,39 +43,11 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Business', 'Town Government', 'Relief'], featured: true, eventRelated: false
   },
   {
-    id: 'fb-3395-032', sourceKey: 'fb-3395',
-    postedAt: '2026-04-10T08:30:00',
-    title: 'Bluegrass NightGrass tickets on sale April 22–23 — pre-sale signup open now',
-    excerpt: 'NightGrass shows for the 2026 Telluride Bluegrass Festival (June 17–21) go on pre-sale Wednesday, April 22 and general sale Thursday, April 23. Late-night performances across four venues including Greensky Bluegrass, Infamous Stringdusters, Punch Brothers, and more. Text NIGHTGRASS to 1-844-326-3296 for pre-sale access. Details at bluegrass.com.',
-    tags: ['Festival', 'Music', 'Tickets', 'Upcoming Event'], featured: false, eventRelated: true
-  },
-  {
-    id: 'fb-3395-033', sourceKey: 'fb-3395',
-    postedAt: '2026-04-10T09:00:00',
-    title: 'Housing Impact Fee final increase May 1 — fee rises to $1,112 per square foot',
-    excerpt: 'The final phased increase of the Employee Housing Impact Mitigation Fee takes effect May 1, 2026, rising from $928 to $1,112 per square foot of employee housing required. San Miguel County is projected to need approximately 1,100 housing units by 2030, including 218 units in unincorporated areas. Nearly half of all workers commute more than 25 miles.',
-    tags: ['Housing', 'County', 'Development', 'Policy'], featured: false, eventRelated: false
-  },
-  {
-    id: 'fb-3395-034', sourceKey: 'fb-3395',
-    postedAt: '2026-04-10T09:30:00',
-    title: 'Community survey still open — help shape Town of Telluride priorities through May 21',
-    excerpt: 'The Town of Telluride\'s third annual community survey remains open through May 21, 2026. Share feedback on government services, quality of life, and town priorities. Open to all residents. Your input helps shape the town budget and policy decisions for the coming year.',
-    tags: ['Town Government', 'Survey', 'Civic'], featured: false, eventRelated: false
-  },
-  {
     id: 'telski-025c', sourceKey: 'telski',
     postedAt: '2026-04-11T07:00:00',
     title: 'Gondola remains closed — spring maintenance continues through May 21',
     excerpt: 'The free gondola between Telluride and Mountain Village remains closed for spring maintenance since April 6. It will reopen May 21 for summer operations. Free SMART bus service continues between the towns throughout the closure period. The Town of Mountain Village is also running a bus between the Meadows and Village Center until the chondola opens.',
     tags: ['Gondola', 'Transportation', 'Season'], featured: true, eventRelated: false
-  },
-  {
-    id: 'smc-dems-013c', sourceKey: 'smc-dems',
-    postedAt: '2026-04-11T08:00:00',
-    title: 'San Miguel County Democratic Assembly — TOMORROW, Saturday, April 12',
-    excerpt: 'The San Miguel County Democratic Assembly takes place tomorrow, Saturday, April 12. Registered delegates will vote to advance local candidates to the primary ballot. Delegate registration closed April 5. Details at smcdemocrats.org.',
-    tags: ['Politics', 'Assembly', 'Upcoming'], featured: false, eventRelated: true
   },
   {
     id: 'fb-3395-028b', sourceKey: 'fb-3395',
@@ -115,8 +66,8 @@ const COMMUNITY_PULSE_POSTS = [
   {
     id: 'fb-3395-029b', sourceKey: 'fb-3395',
     postedAt: '2026-04-11T11:00:00',
-    title: 'Pacific Avenue closed April 6–18 for improvement project',
-    excerpt: 'Pacific Avenue is closed from Monday, April 6 through Saturday, April 18 as the Town of Telluride Public Works Department begins the next phase of the Pacific Avenue Improvement Project. Expect full closures between Mahoney and surrounding blocks. Part of the broader Southwest Area Conceptual Plan for improved traffic flow, bike safety, and pedestrian access.',
+    title: 'Pacific Avenue closed through April 18 — improvement project nearing completion',
+    excerpt: 'Pacific Avenue remains closed through Saturday, April 18 as the Town of Telluride Public Works Department continues the next phase of the Pacific Avenue Improvement Project. Expect full closures between Mahoney and surrounding blocks. Part of the broader Southwest Area Conceptual Plan for improved traffic flow, bike safety, and pedestrian access. Reopening expected this weekend.',
     tags: ['Road Closure', 'Town Notice', 'Construction'], featured: false, eventRelated: false
   },
   {
@@ -157,9 +108,51 @@ const COMMUNITY_PULSE_POSTS = [
   {
     id: 'fb-2061-048', sourceKey: 'fb-2061',
     postedAt: '2026-04-13T10:00:00',
-    title: 'Petition filing deadline one week away — Town Council special election candidates',
-    excerpt: 'One week remains for prospective candidates to file petitions for the June 30 Town of Telluride special election. The filing window closes Monday, April 20. Two Council seats are on the ballot. Candidates need 25 signatures from registered Telluride voters and can pick up petition packets at the Town Clerk\'s office in Rebekah Hall. Voters may sign up to two petitions.',
+    title: 'Petition filing deadline five days away — Town Council special election candidates',
+    excerpt: 'Five days remain for prospective candidates to file petitions for the June 30 Town of Telluride special election. The filing window closes Monday, April 20. Two Council seats are on the ballot. Candidates need 25 signatures from registered Telluride voters and can pick up petition packets at the Town Clerk\'s office in Rebekah Hall. Voters may sign up to two petitions.',
     tags: ['Elections', 'Deadline', 'Town Government', 'Council'], featured: true, eventRelated: true
+  },
+  {
+    id: 'fb-2061-049', sourceKey: 'fb-2061',
+    postedAt: '2026-04-14T08:00:00',
+    title: 'Four Seasons worker housing dispute hits courts — down-valley towns push back',
+    excerpt: 'A lawsuit filed in Ouray County District Court challenges the use of the 52-unit MTN Lodge in Ridgway to house construction workers building the $1 billion Four Seasons Resort in Mountain Village. The town of Ridgway argues the lodge sits on land zoned for temporary stays, not long-term worker housing. Down-valley communities say they are bearing the housing burden while resort towns reap the financial benefits. The lodge owner says closure is the alternative if the lease is blocked.',
+    tags: ['Housing', 'Development', 'Four Seasons', 'Legal'], featured: true, eventRelated: false
+  },
+  {
+    id: 'fb-3395-038', sourceKey: 'fb-3395',
+    postedAt: '2026-04-14T09:00:00',
+    title: 'Lightning-caused wildfire near airport contained — dry conditions persist',
+    excerpt: 'A lightning-caused wildfire approximately 2 miles northwest of Telluride Regional Airport near the Greyhead subdivision was contained after response from Telluride Fire, San Miguel County Sheriff, U.S. Forest Service, and BLM. The fire burned less than 3 acres with no threat to public safety. Snowpack remains at just 15% of median as of early April, underscoring ongoing drought conditions and elevated wildfire risk heading into summer.',
+    tags: ['Wildfire', 'Safety', 'Drought', 'Airport'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-2061-050', sourceKey: 'fb-2061',
+    postedAt: '2026-04-14T10:00:00',
+    title: 'People\'s March returns April 25 — community rally in downtown Telluride',
+    excerpt: 'The next People\'s March in Telluride is scheduled for Friday, April 25, 2026, following the previous march held March 28. The community-organized event brings residents together on West Colorado Avenue for a public demonstration. Details and updates available through local organizers.',
+    tags: ['Community', 'Events', 'Civic', 'Upcoming Event'], featured: false, eventRelated: true
+  },
+  {
+    id: 'mountainfilm-003', sourceKey: 'mountainfilm',
+    postedAt: '2026-04-14T11:00:00',
+    title: 'Mountainfilm reveals Minds Moving Mountains speaker lineup for 2026',
+    excerpt: 'Mountainfilm announced the full speaker lineup for its Minds Moving Mountains series at the 48th annual festival, May 21–25 in Telluride. The speaker series brings thought leaders, activists, and storytellers to the festival alongside documentary film screenings. Guest director Cristina Mittermeier, a conservationist and marine biologist, curates this year\'s program. Full lineup and festival passes at mountainfilm.org.',
+    tags: ['Festival', 'Film', 'Speakers', 'Arts'], featured: false, eventRelated: true
+  },
+  {
+    id: 'fb-3395-039', sourceKey: 'fb-3395',
+    postedAt: '2026-04-15T08:00:00',
+    title: 'Snowpack at 15% of median — drought emergency deepens across San Miguel County',
+    excerpt: 'Snowpack in the San Miguel basin stands at just 15% of median as of early April, well below the threshold needed for normal summer water supply. Both Telluride and Mountain Village have outdoor water restrictions in place, and additional restrictions may follow. The severe drought heightens wildfire risk and threatens irrigation and municipal water supplies through the summer season. Residents urged to conserve water and prepare for potential further restrictions.',
+    tags: ['Water', 'Drought', 'Conservation', 'County'], featured: true, eventRelated: false
+  },
+  {
+    id: 'fb-3395-040', sourceKey: 'fb-3395',
+    postedAt: '2026-04-15T09:00:00',
+    title: 'NightGrass pre-sale opens next week — Bluegrass Festival late-night shows June 17–21',
+    excerpt: 'NightGrass shows for the 2026 Telluride Bluegrass Festival (June 17–21) go on pre-sale Wednesday, April 22 and general sale Thursday, April 23. Late-night performances across four venues including Greensky Bluegrass, Infamous Stringdusters, Punch Brothers, and more. Text NIGHTGRASS to 1-844-326-3296 for pre-sale access. Details at bluegrass.com.',
+    tags: ['Festival', 'Music', 'Tickets', 'Upcoming Event'], featured: false, eventRelated: true
   }
 ];
 const CP_MAX_POSTS = 20;
