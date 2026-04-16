@@ -26,7 +26,7 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-16';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-16T18:00:00';
 const COMMUNITY_PULSE_POSTS = [
   {
     id: 'fb-2061-049', sourceKey: 'fb-2061',
@@ -132,6 +132,20 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Mountainfilm partners with Firelight Media — HOMEGROWN Series comes to 2026 festival',
     excerpt: 'Mountainfilm announced a collaborative partnership with Firelight Media\'s HOMEGROWN Series, bringing curated documentary programming to the 48th annual festival, May 21–25. Firelight Media supports emerging filmmakers of color. The partnership expands Mountainfilm\'s commitment to diverse storytelling alongside guest director Cristina Mittermeier\'s conservation-focused program. Festival passes available at mountainfilm.org.',
     tags: ['Festival', 'Film', 'Partnership', 'Arts'], featured: false, eventRelated: true
+  },
+  {
+    id: 'fb-2438-015', sourceKey: 'fb-2438',
+    postedAt: '2026-04-16T12:00:00',
+    title: 'Paradigm Gathering approved with total fire ban — West End wellness festival returns in June',
+    excerpt: 'San Miguel County approved a temporary-use permit for the sixth annual Paradigm Gathering, a four-day wellness festival for 250 participants near Egnar in the West End. Due to extreme drought conditions and snowpack at 15% of median, the county imposed a total fire ban at this year\'s event, eliminating fire dancing which had been a hallmark of past gatherings. The festival focuses on intentional music, cleansing, and healing workshops.',
+    tags: ['Festival', 'County', 'Fire Ban', 'West End'], featured: false, eventRelated: true
+  },
+  {
+    id: 'fb-2061-056', sourceKey: 'fb-2061',
+    postedAt: '2026-04-16T12:30:00',
+    title: 'Colorado restructures search and rescue oversight — CPW takes statewide coordination role',
+    excerpt: 'Colorado Parks and Wildlife announced a new interagency agreement effective August 1 that shifts statewide search and rescue coordination from the Colorado Search and Rescue Association to CPW and the state\'s homeland security division. Sheriff\'s offices retain operational authority, but CPW will develop training standards, credentialing, and response coordination. San Miguel County SAR, covering over 1,200 square miles from 5,000 to 14,000 feet elevation, will be affected. Some veteran volunteers have raised concerns about the restructuring.',
+    tags: ['Safety', 'Search and Rescue', 'State Policy', 'County'], featured: false, eventRelated: false
   }
 ];
 const CP_MAX_POSTS = 20;
