@@ -26,92 +26,8 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-15';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-16';
 const COMMUNITY_PULSE_POSTS = [
-  {
-    id: 'c7cc-023', sourceKey: 'c7cc',
-    postedAt: '2026-04-11T08:00:00',
-    title: 'SMRHA housing lottery drawing April 24 — three deed-restricted units to be awarded',
-    excerpt: 'Applications for three deed-restricted homeownership units through SMRHA closed April 10. The lottery drawing takes place Thursday, April 24 at 10 AM at Rebekah Hall. Units available: Silver Jack 202 and Silver Jack 205 at 155 W Pacific Ave, and Element 52 SW-102 at 398 S Davis St. Visit smrha.org or email admin@smrha.org for details.',
-    tags: ['Housing', 'Affordable', 'Lottery', 'Upcoming Event'], featured: true, eventRelated: true
-  },
-  {
-    id: 'fb-2061-045', sourceKey: 'fb-2061',
-    postedAt: '2026-04-11T07:30:00',
-    title: 'Business Stabilization Grant review underway — notifications expected April 22',
-    excerpt: 'The Town of Telluride Business Stabilization Assistance Grant application period closed April 10. Review of submissions runs April 13–17, with applicant notifications expected by April 22. The program has already distributed approximately $290,876 to 46 locally owned businesses impacted by the ski resort closure. Part of the $400,000 economic relief package. Contact the Town Clerk\'s office with questions.',
-    tags: ['Business', 'Town Government', 'Relief'], featured: true, eventRelated: false
-  },
-  {
-    id: 'telski-025c', sourceKey: 'telski',
-    postedAt: '2026-04-11T07:00:00',
-    title: 'Gondola remains closed — spring maintenance continues through May 21',
-    excerpt: 'The free gondola between Telluride and Mountain Village remains closed for spring maintenance since April 6. It will reopen May 21 for summer operations. Free SMART bus service continues between the towns throughout the closure period. The Town of Mountain Village is also running a bus between the Meadows and Village Center until the chondola opens.',
-    tags: ['Gondola', 'Transportation', 'Season'], featured: true, eventRelated: false
-  },
-  {
-    id: 'fb-3395-028b', sourceKey: 'fb-3395',
-    postedAt: '2026-04-11T08:30:00',
-    title: 'Community Wildfire Protection Plan — public comment period open',
-    excerpt: 'San Miguel County is seeking public input on a new Community Wildfire Protection Plan. Panel discussions are being held to kick off the public comment period. With 2026 fire season outlook showing above-average wildfire risk across the Four Corners, community input on preparedness and mitigation is critical. Visit sanmiguelcountyco.gov for details.',
-    tags: ['Wildfire', 'County', 'Public Comment'], featured: false, eventRelated: false
-  },
-  {
-    id: 'fb-2061-030b', sourceKey: 'fb-2061',
-    postedAt: '2026-04-11T10:00:00',
-    title: 'Airport Authority special meeting — April 21 at Hangar 30',
-    excerpt: 'The Telluride Regional Airport Authority will hold a special meeting on Tuesday, April 21, 2026 at 1:00 PM at Hangar 30 Conference Room, Telluride Regional Airport. Agenda to be posted at tellurideairport.com. This follows a recent aircraft incident at the airport that was reported with no injuries.',
-    tags: ['Airport', 'Government', 'Meeting'], featured: false, eventRelated: true
-  },
-  {
-    id: 'fb-3395-029b', sourceKey: 'fb-3395',
-    postedAt: '2026-04-11T11:00:00',
-    title: 'Pacific Avenue closed through April 18 — improvement project nearing completion',
-    excerpt: 'Pacific Avenue remains closed through Saturday, April 18 as the Town of Telluride Public Works Department continues the next phase of the Pacific Avenue Improvement Project. Expect full closures between Mahoney and surrounding blocks. Part of the broader Southwest Area Conceptual Plan for improved traffic flow, bike safety, and pedestrian access. Reopening expected this weekend.',
-    tags: ['Road Closure', 'Town Notice', 'Construction'], featured: false, eventRelated: false
-  },
-  {
-    id: 'fb-3395-036', sourceKey: 'fb-3395',
-    postedAt: '2026-04-11T09:00:00',
-    title: 'Tips-Up FriYAY kicks off April 20 — new après music series in Mountain Village',
-    excerpt: 'Mountain Village launches a brand-new après music series called Tips-Up FriYAY, kicking off April 20, 2026. The series brings live music and community vibes to the Village during the spring shoulder season. A welcome addition while the gondola remains closed for maintenance through May 21.',
-    tags: ['Events', 'Music', 'Mountain Village', 'Spring'], featured: false, eventRelated: true
-  },
-  {
-    id: 'fb-2061-046', sourceKey: 'fb-2061',
-    postedAt: '2026-04-11T09:30:00',
-    title: 'Special election filing window closing — petitions due April 20 for two Council seats',
-    excerpt: 'The candidate petition period for the June 30 Town of Telluride special election closes Monday, April 20. Two Council seats are being filled: one vacated by former Mayor Pro Tem Meehan Fee and one held by appointed Councilmember Marya Stark. Candidates need 25 signatures from registered Telluride voters. Petitions available at the Town Clerk\'s office in Rebekah Hall. Each voter may sign up to two petitions.',
-    tags: ['Elections', 'Government', 'Deadline', 'Council'], featured: false, eventRelated: true
-  },
-  {
-    id: 'fb-3395-037', sourceKey: 'fb-3395',
-    postedAt: '2026-04-12T09:00:00',
-    title: 'Tourism Board briefs both town councils — summer outlook, lodging, festival impacts',
-    excerpt: 'The Telluride Tourism Board made separate presentations to the Telluride and Mountain Village town councils covering lodging and occupancy trends, festival economic impacts, marketing efforts, and summer season projections. The briefings set the stage for shoulder-season decisions and continued coordination between the two municipalities heading into the 2026 summer festival calendar.',
-    tags: ['Tourism', 'Town Government', 'Mountain Village', 'Economy'], featured: false, eventRelated: false
-  },
-  {
-    id: 'fb-2061-047', sourceKey: 'fb-2061',
-    postedAt: '2026-04-12T10:00:00',
-    title: 'Mountain Village Police warn of growing email fraud scam targeting residents',
-    excerpt: 'Mountain Village Police Department issued an alert about a growing email fraud scam targeting local residents. Do not click links or provide personal information in unsolicited emails. Verify senders directly and report suspicious messages to MVPD. Scams of this type often impersonate government agencies, financial institutions, or known local businesses.',
-    tags: ['Safety', 'Mountain Village', 'Scam Alert', 'Public Notice'], featured: true, eventRelated: false
-  },
-  {
-    id: 'mountainfilm-002', sourceKey: 'mountainfilm',
-    postedAt: '2026-04-13T09:00:00',
-    title: 'Mountainfilm 2026 festival passes on sale now — May 21–25 in Telluride',
-    excerpt: 'The 48th annual Mountainfilm documentary festival returns to Telluride May 21–25, 2026 with conservationist and marine biologist Cristina Mittermeier as guest director. Festival passes are on sale now at mountainfilm.org. The Minds Moving Mountains Speaker Series lineup was revealed April 8 and film submissions remain open. Mountainfilm is an Academy Award–qualifying festival for the Documentary Short Film category.',
-    tags: ['Festival', 'Film', 'Arts', 'Tickets'], featured: false, eventRelated: true
-  },
-  {
-    id: 'fb-2061-048', sourceKey: 'fb-2061',
-    postedAt: '2026-04-13T10:00:00',
-    title: 'Petition filing deadline five days away — Town Council special election candidates',
-    excerpt: 'Five days remain for prospective candidates to file petitions for the June 30 Town of Telluride special election. The filing window closes Monday, April 20. Two Council seats are on the ballot. Candidates need 25 signatures from registered Telluride voters and can pick up petition packets at the Town Clerk\'s office in Rebekah Hall. Voters may sign up to two petitions.',
-    tags: ['Elections', 'Deadline', 'Town Government', 'Council'], featured: true, eventRelated: true
-  },
   {
     id: 'fb-2061-049', sourceKey: 'fb-2061',
     postedAt: '2026-04-14T08:00:00',
@@ -153,6 +69,69 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'NightGrass pre-sale opens next week — Bluegrass Festival late-night shows June 17–21',
     excerpt: 'NightGrass shows for the 2026 Telluride Bluegrass Festival (June 17–21) go on pre-sale Wednesday, April 22 and general sale Thursday, April 23. Late-night performances across four venues including Greensky Bluegrass, Infamous Stringdusters, Punch Brothers, and more. Text NIGHTGRASS to 1-844-326-3296 for pre-sale access. Details at bluegrass.com.',
     tags: ['Festival', 'Music', 'Tickets', 'Upcoming Event'], featured: false, eventRelated: true
+  },
+  {
+    id: 'c7cc-023b', sourceKey: 'c7cc',
+    postedAt: '2026-04-15T10:00:00',
+    title: 'SMRHA housing lottery drawing April 24 — three deed-restricted units to be awarded',
+    excerpt: 'The lottery drawing for three deed-restricted homeownership units through SMRHA takes place Thursday, April 24 at 10 AM at Rebekah Hall. Units available: Silver Jack 202 and Silver Jack 205 at 155 W Pacific Ave, and Element 52 SW-102 at 398 S Davis St. Applications closed April 10. Visit smrha.org or email admin@smrha.org for details.',
+    tags: ['Housing', 'Affordable', 'Lottery', 'Upcoming Event'], featured: true, eventRelated: true
+  },
+  {
+    id: 'fb-2061-051', sourceKey: 'fb-2061',
+    postedAt: '2026-04-15T11:00:00',
+    title: 'Business Stabilization Grant notifications expected April 22 — review wrapping up',
+    excerpt: 'Review of Town of Telluride Business Stabilization Assistance Grant applications wraps up this week, with applicant notifications expected by April 22. The program has distributed approximately $290,876 to 46 locally owned businesses impacted by the ski resort closure, part of the $400,000 economic relief package. Contact the Town Clerk\'s office with questions.',
+    tags: ['Business', 'Town Government', 'Relief'], featured: true, eventRelated: false
+  },
+  {
+    id: 'fb-2061-052', sourceKey: 'fb-2061',
+    postedAt: '2026-04-16T08:00:00',
+    title: 'Employee Housing Impact Mitigation Fee increase takes effect May 1',
+    excerpt: 'San Miguel County\'s Employee Housing Impact Mitigation Fee will increase effective May 1, 2026. The updated fee structure applies to new development and is part of the county\'s ongoing effort to address the housing crisis for local workers. Developers and property owners should review the new schedule at sanmiguelcountyco.gov. The fee supports deed-restricted housing production across the region.',
+    tags: ['Housing', 'Development', 'County', 'Policy'], featured: true, eventRelated: false
+  },
+  {
+    id: 'fb-3395-041', sourceKey: 'fb-3395',
+    postedAt: '2026-04-16T08:30:00',
+    title: 'Spring Clean Up set for May 15–16 — electronics, paint, hazardous waste accepted',
+    excerpt: 'San Miguel County\'s annual Spring Clean Up is scheduled for May 15–16, hosted by EcoAction Partners. Drop-off locations: Telluride (Carhenge Parking Lot, both days), Mountain Village (Market Plaza, May 15), and Norwood (County Fairgrounds, May 16). Accepted items include electronics, paint, batteries, and other hazardous waste. Visit ecoactionpartners.org for full details on accepted items.',
+    tags: ['Community', 'Environment', 'County', 'Upcoming Event'], featured: false, eventRelated: true
+  },
+  {
+    id: 'fb-2061-053', sourceKey: 'fb-2061',
+    postedAt: '2026-04-16T09:00:00',
+    title: 'Society Turn / CO-145 construction — check CDOT updates before traveling',
+    excerpt: 'The Colorado Department of Transportation continues infrastructure work on CO-145 west of the Society Turn roundabout. Expect intermittent lane closures and delays. CDOT has created a dedicated webpage tracking highway interruptions — visit bit.ly/CO145updates for real-time status. Motorists should allow extra travel time between Telluride and the valley floor.',
+    tags: ['Transportation', 'Construction', 'CDOT', 'Road Closure'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-3395-042', sourceKey: 'fb-3395',
+    postedAt: '2026-04-16T09:30:00',
+    title: 'County wildfire building code requirements now in effect — WUI areas affected',
+    excerpt: 'San Miguel County\'s updated wildfire-resilient building code requirements are now in effect for properties in designated wildland-urban interface (WUI) areas. The county is also launching an interactive mapping tool so residents can check their wildfire risk. The Community Wildfire Protection Plan is expected to be completed in 2026. With snowpack at 15% of median and fire season approaching, compliance with new standards is critical.',
+    tags: ['Wildfire', 'Building Code', 'County', 'Safety'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-2061-054', sourceKey: 'fb-2061',
+    postedAt: '2026-04-16T10:00:00',
+    title: 'County Commissioner meetings resume April 22 after spring break',
+    excerpt: 'The San Miguel County Board of County Commissioners resumes regular meetings on Wednesday, April 22, 2026 at 9:30 AM following the April 6–17 spring break recess. The next meeting on April 29 is also scheduled. Agendas will be posted at sanmiguelcountyco.gov. Multiple advisory boards also resume this month, including the Open Space Commission on April 27.',
+    tags: ['Government', 'County', 'Meeting'], featured: false, eventRelated: true
+  },
+  {
+    id: 'fb-2061-055', sourceKey: 'fb-2061',
+    postedAt: '2026-04-16T10:30:00',
+    title: 'Special election petition deadline Monday — four days left for Council candidates',
+    excerpt: 'Four days remain for prospective candidates to file petitions for the June 30 Town of Telluride special election. The filing window closes Monday, April 20 at 5 PM. Two Council seats are on the ballot: one vacated by former Mayor Pro Tem Meehan Fee and one held by appointed Councilmember Marya Stark. Candidates need 25 signatures from registered Telluride voters. Petitions available at the Town Clerk\'s office in Rebekah Hall.',
+    tags: ['Elections', 'Deadline', 'Town Government', 'Council'], featured: true, eventRelated: true
+  },
+  {
+    id: 'mountainfilm-004', sourceKey: 'mountainfilm',
+    postedAt: '2026-04-16T11:00:00',
+    title: 'Mountainfilm partners with Firelight Media — HOMEGROWN Series comes to 2026 festival',
+    excerpt: 'Mountainfilm announced a collaborative partnership with Firelight Media\'s HOMEGROWN Series, bringing curated documentary programming to the 48th annual festival, May 21–25. Firelight Media supports emerging filmmakers of color. The partnership expands Mountainfilm\'s commitment to diverse storytelling alongside guest director Cristina Mittermeier\'s conservation-focused program. Festival passes available at mountainfilm.org.',
+    tags: ['Festival', 'Film', 'Partnership', 'Arts'], featured: false, eventRelated: true
   }
 ];
 const CP_MAX_POSTS = 20;
