@@ -3904,15 +3904,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/c1/4c10f9da-ad1e-4a17-8b30-cb179bf66ea5/69de70f3419ab.image.jpg"
   },
   {
-    title: "Giving their all",
-    source: "Telluride Times",
-    date: "April 14, 2026",
-    newsTopic: "sports",
-    copy: "The Norwood Middle School track teams delivered impressive performances at the Ridgway Middle School track meet on Saturday, April 11, with each athlete giving 100% effort despite cool, windy weather.",
-    href: "https://www.telluridenews.com/norwood_post/article_d3a40371-b0ac-4b9d-8ee4-acadb09eb405.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/2f/62f37111-377f-4dc9-bf7f-ff6775acaad1/69de6e9871275.image.jpg"
-  },
-  {
     title: "Have van, will travel",
     source: "Telluride Times",
     date: "April 13, 2026",
