@@ -5162,24 +5162,6 @@ const LEGAL_NOTICES = [
     papers: ['ttimes_mar5'],
     address: '116 E Columbia Ave, Telluride, CO'
   },
-  // ── March 26 (Boarding House Lottery) ──
-  {
-    title: 'Master Lease Rental Lottery -- Boarding House Units',
-    entity: 'Telluride Housing Authority / Town of Telluride Housing Division',
-    entityClass: 'ent-housing',
-    entityLogo: 'telluride',
-    icon: '🏘️',
-    iconClass: 'type-housing',
-    type: 'Housing Lottery',
-    filterTag: 'housing',
-    summary: 'A maximum of five (5) double-occupancy and three (3) single-occupancy rooms at the Boarding House (1270 W Black Bear Road) will be offered for a two-year master lease opportunity by Lottery pursuant to the Telluride Employee Rental Housing Policies. Interested local businesses, governmental or non-profit organizations must submit applications to the Telluride Housing Division at 820 Black Bear Rd G-17. Materials available at telluride.gov/735/Rental-Housing.',
-    deadline: 'Applications: March 25 at 9:00 AM through April 16, 2026 at 9:00 AM',
-    expires: '2026-04-16',
-    dates: '3/26',
-    papers: ['ttimes_mar26'],
-    url: 'https://telluride.gov/735/Rental-Housing',
-    address: '1270 W Black Bear Road, Telluride, CO'
-  },
   // ── April 2-8 (Telluride Times) ──
   {
     title: 'Mountain Village Ordinances -- Second Reading April 23 (Wildfire Code, Background Checks, Municipal Penalties)',
