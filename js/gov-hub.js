@@ -4850,7 +4850,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-04-15'; // Updated by legal-notice-update task (floor replacement deadline fix, spring clean up, CO-145 traffic)
+const LEGAL_NOTICES_CACHE_DATE = '2026-04-16'; // Updated by legal-notice-update task (Telecam water diligence - Illium Pond)
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -4883,6 +4883,11 @@ const PAPER_LOGOS = {
     name: 'The Telluride Times',
     img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg',
     url: 'https://www.telluridenews.com/news/legals/article_aec96dee-01bf-4370-b831-16a17257d9ff.html'
+  },
+  ttimes_apr9: {
+    name: 'The Telluride Times',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg',
+    url: 'https://www.telluridenews.com/news/legals/article_53f99203-76eb-4168-b3a4-392ac65857e4.html'
   },
   county_web: {
     name: 'San Miguel County',
@@ -5405,6 +5410,22 @@ const LEGAL_NOTICES = [
     dates: '4/2',
     papers: ['county_web'],
     url: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx'
+  },
+  // ── April 9 (Telluride Times — Water Court) ──
+  {
+    title: 'Water Court -- Telecam Partnership II Finding of Reasonable Diligence (Illium Pond)',
+    entity: 'Colorado District Court, Water Division No. 4',
+    entityClass: 'ent-county',
+    entityLogo: 'water_court',
+    icon: '💧',
+    iconClass: 'type-bid',
+    type: 'Water Court',
+    filterTag: 'water-court',
+    summary: 'Telecam Partnership II, LTD. filed an Application for Finding of Reasonable Diligence for the Illium Pond conditional water right (15 acre-feet, San Miguel River source, appropriation date Feb. 27, 2004). Uses: irrigation, piscatorial, augmentation and exchange. Original decree Aug. 22, 2006, Case No. 04CW175; subsequent diligence decrees Sept. 3, 2013 (12CW102) and March 3, 2020 (19CW3071). Pond location: S 56°10\'10" W, 4,836.72 ft from NW corner of Sec. 6, T42N, R9W, N.M.P.M., San Miguel County.',
+    deadline: 'File protests with Water Clerk, Water Division 4, Montrose',
+    expires: '2026-06-30',
+    dates: '4/9',
+    papers: ['ttimes_apr9']
   },
 ];
 
