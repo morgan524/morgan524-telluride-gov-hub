@@ -3877,6 +3877,15 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-15  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Bluegrass Jones? Feed your craving with Wednesday\u2019s NightGrass pre-sale",
+    source: "Telluride Times",
+    date: "April 16, 2026",
+    newsTopic: "arts-culture",
+    copy: "Planet Bluegrass is making the longest days of summer even longer with its after-hours NightGrass lineup, unveiled now and on pre-sale Wednesday, April 22, a day before the public on-sale date.",
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_04a4b832-33f8-4f7c-9287-131cfd928ef4.html",
+    img: ""
+  },
+  {
     title: "Colorado GOP picks statewide primary candidates after \u2018whirlwind courtship\u2019",
     source: "Telluride Times",
     date: "April 15, 2026",
@@ -3902,6 +3911,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "THS junior Ellarose Aplin was voted Second Team All-San Juan Basin League and senior Lucia Young received Honorable Mention for their standout girls basketball performances this winter.",
     href: "https://www.telluridenews.com/sports/article_ec624d8d-dd3b-4ab7-a71f-9873f536cea0.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/c1/4c10f9da-ad1e-4a17-8b30-cb179bf66ea5/69de70f3419ab.image.jpg"
+  },
+  {
+    title: "Mountainfilm reveals its 2026 Minds Moving Mountains Speaker Series lineup",
+    source: "Telluride Times",
+    date: "April 14, 2026",
+    newsTopic: "arts-culture",
+    copy: "For its 48th edition, Mountainfilm welcomes an exceptional roster of guests to Telluride this Memorial Day Weekend, May 21-25, for the 2026 Minds Moving Mountains Speaker Series.",
+    href: "https://www.telluridenews.com/news_release/article_a2a8dc7c-89cc-40f2-9da6-e899f05a81b3.html",
+    img: ""
   },
   {
     title: "Have van, will travel",
