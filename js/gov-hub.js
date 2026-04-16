@@ -303,17 +303,7 @@ const COUNTY_CACHE_DATE = '2026-03-25';
 
 const COUNTY_CACHED_DATA = [
   // ── April 2026 ──
-  // Removed April 1 BOCC meeting (>7 days past)
-  {
-    date: 'April 8, 2026',
-    time: '9:30 AM - 3:00 PM',
-    title: 'Board of County Commissioners Work Session',
-    type: 'bocc',
-    location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: 986,
-    note: null
-  },
-  // April 6-17 Spring Break -- no BOCC meetings
+  // Removed April 1 & April 8 BOCC meetings (>7 days past)
   {
     date: 'April 22, 2026',
     time: '9:30 AM - 3:00 PM',
@@ -4213,36 +4203,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/business/article_b7a23f29-42e9-4c06-8410-d75fc8584fd8.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/79/a7962e60-5866-4b40-9f81-234a875e5c18/69cb6ae48d001.image.jpg"
   },
-  {
-    title: "Busting out of the bubble",
-    source: "Telluride Times",
-    date: "April 1, 2026",
-    newsTopic: "community",
-    copy: "For high school students, a semester away can be life-changing. Telluride students share their experiences at Semester Schools Network programs.",
-    href: "https://www.telluridenews.com/news/article_4e8dbcde-88cd-4ed8-974c-5601666dd4d8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/9f/19fc7dcb-0568-4810-869d-8393e194c651/69c7316054c1b.image.jpg"
-  },
-  {
-    title: "Housing ‘fast-track’ amendment discussions continue",
-    source: "Telluride Times",
-    date: "April 1, 2026",
-    newsTopic: "land-use",
-    copy: "The San Miguel County Planning Commission and the Board of County Commissioners held a joint work session on Thursday to continue discussions on fast-track housing amendments.",
-    href: "https://www.telluridenews.com/news/article_336327c3-b092-4cfd-9548-fbabb979cef3.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/b6/4b62beda-dbf7-488a-be75-4b7c7497789f/69cb688ca44ed.image.jpg"
-  },
-  
-  
-  
-  {
-    title: "UPDATE: Telluride Ski Resort to re-open Friday",
-    source: "Telluride Times",
-    date: "April 1, 2026",
-    newsTopic: "business",
-    copy: "After closing the mountain to preserve snow for closing weekend, Telluride Ski Resort announced the resort will re-open on Friday, April 3rd.",
-    href: "https://www.telluridenews.com/news_release/article_16473284-9fa7-4518-b3d8-43a48dc7a5aa.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/2c/c2c57f30-7503-41d0-84f3-05ed163b162e/69cb0bf82b841.image.jpg"
-  },
+  // Removed 3 Telluride Times articles from April 1 (>14 days old)
   // Removed "Three units available in next housing lottery" (March 28, >14 days old)
 ];
 
@@ -4276,16 +4237,7 @@ const KOTO_NEWSCASTS = [
     href: "https://koto.org/news/newscast-4-2-26/",
     img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
   },
-  {
-    title: "Newscast 4-1-26",
-    source: "KOTO Community Radio",
-    date: "April 1, 2026",
-    newsTopic: "public-safety",
-    copy: "Fire season ignites with Willow Springs Fire. Telluride discusses the housing waitlist. Hetal Doshi runs for Colorado Attorney General.",
-    href: "https://koto.org/news/newscast-4-1-26/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  },
-  // Removed 3 stale KOTO newscasts from March 27 and earlier (>14 days old)
+  // Removed KOTO newscasts from April 1 and earlier (>14 days old)
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
