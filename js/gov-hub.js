@@ -4873,7 +4873,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-04-16'; // Updated by legal-notice-update task (Telecam water diligence - Illium Pond)
+const LEGAL_NOTICES_CACHE_DATE = '2026-04-17'; // Updated by legal-notice-update task (MV parking lot overlay, Egnar MVR office)
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -4997,6 +4997,41 @@ const LEGAL_NOTICES = [
     dates: '4/1',
     papers: ['county_web'],
     url: 'https://townofmountainvillage.com/government/bids-rfps/procurement-materials/'
+  },
+  // ── April 17 (Mountain Village Bids — New) ──
+  {
+    title: 'Bid Notice -- 2026 Parking Lots Overlay (Village Court Apts Phase II & Municipal Building)',
+    entity: 'Town of Mountain Village',
+    entityClass: 'ent-mv',
+    entityLogo: 'mv',
+    icon: '🛣️',
+    iconClass: 'type-bid',
+    type: 'Bid Notice',
+    filterTag: 'public-entity',
+    summary: 'Mountain Village is soliciting proposals from qualified firms for asphalt milling and a 2-inch HMA overlay of the Village Court Apartments Parking Lot (Phase II) and the TMV Municipal Building parking lot. Proposal documents available at townofmountainvillage.com/government/bids-rfps/procurement-materials/.',
+    deadline: 'Proposals due April 17, 2026',
+    expires: '2026-04-17',
+    dates: '4/17',
+    papers: ['county_web'],
+    url: 'https://townofmountainvillage.com/government/bids-rfps/procurement-materials/'
+  },
+  // ── April 17 (County Civic Alert — Egnar MVR) ──
+  {
+    title: 'Motor Vehicle Office -- Temporary Availability in Egnar (May 13)',
+    entity: 'San Miguel County Clerk & Recorder',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🚗',
+    iconClass: 'type-hearing',
+    type: 'Public Notice',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County will operate a temporary motor vehicle office in Egnar on May 13, 2026 from 9:00 AM to 3:00 PM at 5634 County Rd H1 (fire department building). Services include vehicle registration and other motor vehicle transactions for West End residents.',
+    deadline: 'May 13, 2026 — 9 AM to 3 PM',
+    expires: '2026-05-13',
+    dates: '4/17',
+    papers: ['county_web'],
+    url: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx',
+    address: '5634 County Rd H1, Egnar, CO'
   },
   // ── April 2 (County Bids Page) ──
   {
