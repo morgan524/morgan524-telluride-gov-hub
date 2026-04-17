@@ -3852,6 +3852,51 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-15  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "\u2018If you need a bike, I\u2019ll get you a bike\u2019",
+    source: "Telluride Times",
+    date: "April 17, 2026",
+    newsTopic: "business",
+    copy: "When Brock Benson returned to the West End of San Miguel County after a more than 20-year hiatus, he had a singular goal in mind: to make a difference in the community through cycling.",
+    href: "https://www.telluridenews.com/business/article_17e6ed12-c222-4bb4-be49-bc7fd0218161.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/b6/5b69bc02-298a-4f3c-8389-5577f5280803/69de832972175.image.png"
+  },
+  {
+    title: "Miners earn all-league accolades",
+    source: "Telluride Times",
+    date: "April 16, 2026",
+    newsTopic: "sports",
+    copy: "Three THS boys basketball players earned All-San Juan Basin League honors: Miguel Sanchez (First Team), Langston Silbergeld (Second Team), and Alex Nieto (Honorable Mention).",
+    href: "https://www.telluridenews.com/sports/article_35825b51-1943-4aa2-8db0-1a47ac90a4e8.html",
+    img: ""
+  },
+  {
+    title: "Giving their all",
+    source: "Telluride Times",
+    date: "April 16, 2026",
+    newsTopic: "sports",
+    copy: "Norwood Middle School track teams delivered impressive performances at the Ridgway Middle School track meet on April 11, with each athlete giving 100% effort despite cool, windy weather.",
+    href: "https://www.telluridenews.com/norwood_post/article_d3a40371-b0ac-4b9d-8ee4-acadb09eb405.html",
+    img: ""
+  },
+  {
+    title: "Former San Miguel County deputy sentenced to prison",
+    source: "Telluride Times",
+    date: "April 15, 2026",
+    newsTopic: "public-safety",
+    copy: "Former San Miguel County Sheriff\u2019s Office deputy Jesus Damian Nieblas was sentenced to 10 years in prison after pleading guilty to multiple felony charges involving crimes against children.",
+    href: "https://www.telluridenews.com/news/article_960ed152-5b3a-42d6-bdc4-f92f6be11557.html",
+    img: ""
+  },
+  {
+    title: "Spring balancing acts",
+    source: "Telluride Times",
+    date: "April 15, 2026",
+    newsTopic: "community",
+    copy: "Columnist Michelle Curry Wright reflects on spring as a season of renewal, exploring mind-body rebalancing from simple cleanses to small shifts in routine.",
+    href: "https://www.telluridenews.com/opinion/columnists/article_bb45f431-9653-488a-afe3-5dffb0ad8e4f.html",
+    img: ""
+  },
+  {
     title: "Bluegrass Jones? Feed your craving with Wednesday\u2019s NightGrass pre-sale",
     source: "Telluride Times",
     date: "April 16, 2026",
@@ -4175,8 +4220,26 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
-// Updated: 2026-04-15  — refresh periodically from koto.org/news-category/newscasts/
+// Updated: 2026-04-17  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 4-16-26",
+    source: "KOTO Community Radio",
+    date: "April 16, 2026",
+    newsTopic: "public-safety",
+    copy: "Former Sheriff Deputy sentenced for child pornography, West End Roundup with the San Miguel Basin Forum, and celebrating dark skies.",
+    href: "https://koto.org/news/newscast-4-16-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+  },
+  {
+    title: "Newscast 4-15-26",
+    source: "KOTO Community Radio",
+    date: "April 15, 2026",
+    newsTopic: "community",
+    copy: "The Kids Are Alright, The Dark Veil of Romance, and A Look Back: Ten Years of Good Curling.",
+    href: "https://koto.org/news/newscast-4-15-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+  },
   {
     title: "Newscast 4-13-26",
     source: "KOTO Community Radio",
@@ -4200,7 +4263,7 @@ const KOTO_NEWSCASTS = [
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
-// Updated: 2026-04-15  — refresh periodically from koto.org/news-category/featured-stories/
+// Updated: 2026-04-17  — refresh periodically from koto.org/news-category/featured-stories/
 const KOTO_FEATURED_STORIES = [
   // Removed "Floating Solar on Reservoir Number 2" (April 2, >14 days old)
   // Removed 1 stale KOTO featured story from March 26 (>14 days old)
