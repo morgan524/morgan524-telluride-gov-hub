@@ -464,17 +464,10 @@ function mergeCountyMeetings(rssMeetings, cachedMeetings) {
 // Update SMART_CACHE_DATE so you know when it was last refreshed.
 
 const SMART_BOARD_URL = 'https://smarttelluride.colorado.gov/board-meetings';
-const SMART_CACHE_DATE = '2026-03-24';
+const SMART_CACHE_DATE = '2026-04-17';
 
 const SMART_CACHED_DATA = [
-  {
-    date: 'April 9, 2026',
-    title: 'SMART Board of Directors',
-    agendaUrl: null,
-    packetUrl: null,
-    special: false,
-    note: 'Next scheduled meeting -- agenda and packet will be posted closer to the date.'
-  },
+  // Removed April 9 SMART meeting (>7 days past)
 ];
 
 // ══════════════════════════════════════════════════════════════════
@@ -843,17 +836,11 @@ const NORWOOD_BOT_URL = 'https://www.norwoodtown.com/board-of-trustees-meetings'
 const NORWOOD_PZ_URL = 'https://www.norwoodtown.com/planning-and-zoning-commission-meetings';
 const NORWOOD_NWC_URL = 'https://www.norwoodtown.com/nwc-meetings';
 const NORWOOD_SAN_URL = 'https://www.norwoodtown.com/norwood-sanitation-district-meeting';
-const NORWOOD_CACHE_DATE = '2026-04-07';
+const NORWOOD_CACHE_DATE = '2026-04-17';
 
 const NORWOOD_CACHED_DATA = [
   // ── Board of Trustees ──
-  {
-    date: 'April 8, 2026',
-    title: 'Board of Trustees Meeting',
-    board: 'bot',
-    agendaUrl: 'https://www.norwoodtown.com/files/35faa5101/04.08.2026+Board+of+Trustee+Agenda+ADA.pdf',
-    note: 'Regular meeting at 7:00 PM, Norwood Town Hall & Zoom.'
-  },
+  // Removed April 8 BOT meeting (>7 days past)
   {
     date: 'May 12, 2026',
     title: 'Board of Trustees Meeting',
@@ -883,13 +870,7 @@ const NORWOOD_CACHED_DATA = [
     note: 'Next scheduled NWC meeting -- agenda posted before the meeting.'
   },
   // ── Sanitation District ──
-  {
-    date: 'April 9, 2026',
-    title: 'Norwood Sanitation District Meeting',
-    board: 'san',
-    agendaUrl: null,
-    note: 'Next scheduled Sanitation District meeting -- agenda posted before the meeting.'
-  },
+  // Removed April 9 Sanitation District meeting (>7 days past)
 ];
 
 function getNorwoodMeetings() {
@@ -936,7 +917,7 @@ function getNorwoodMeetings() {
 
 const OPHIR_GA_URL = 'https://townofophir.colorado.gov/general-assembly-2';
 const OPHIR_PZ_URL = 'https://townofophir.colorado.gov/planning-and-zoning';
-const OPHIR_CACHE_DATE = '2026-03-24';
+const OPHIR_CACHE_DATE = '2026-04-17';
 
 const OPHIR_CACHED_DATA = [
   // ── General Assembly ──
@@ -960,13 +941,7 @@ const OPHIR_CACHED_DATA = [
     agendaUrl: null
   },
   // ── Planning & Zoning Commission ──
-  {
-    date: 'April 9, 2026',
-    title: 'Planning and Zoning Commission Meeting',
-    board: 'pz',
-    agendaUrl: null,
-    note: 'Next scheduled P&Z meeting -- agenda posted before the meeting.'
-  },
+  // Removed April 9 P&Z meeting (>7 days past)
   {
     date: 'May 14, 2026',
     title: 'Planning and Zoning Commission Meeting',
@@ -4194,24 +4169,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/arts_and_entertainment/article_0ffe0247-ee72-4cc6-8e59-23574ac6c4f2.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/a3/ca3dd84a-9a81-4cc9-842c-03da3130932a/69cb6e2762867.image.jpg"
   },
-  {
-    title: "Flock to the fun",
-    source: "Telluride Times",
-    date: "April 2, 2026",
-    newsTopic: "community",
-    copy: "KOTO\’s signature spring event invites locals to dress up, dance and celebrate community at the Spring Street Dance on West Colorado Avenue.",
-    href: "https://www.telluridenews.com/news/article_d9c05b19-e744-404f-9f47-4a91a89ad411.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/b5/db5ef660-af07-480d-a1ba-55171586422f/69c9853373f12.image.jpg"
-  },
-  {
-    title: "Super Cyclery",
-    source: "Telluride Times",
-    date: "April 2, 2026",
-    newsTopic: "business",
-    copy: "Max Cooper and Steven Steinberg opened Telluride Cyclery in the beloved old Box Canyon Bicycles space at 300 W. Colorado Ave., offering bike and Nordic ski service, rentals, sales, and a welcoming community hub for riders of all levels.",
-    href: "https://www.telluridenews.com/business/article_b7a23f29-42e9-4c06-8410-d75fc8584fd8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/79/a7962e60-5866-4b40-9f81-234a875e5c18/69cb6ae48d001.image.jpg"
-  },
+  // Removed 2 Telluride Times articles from April 2 (>14 days old)
   // Removed 3 Telluride Times articles from April 1 (>14 days old)
   // Removed "Three units available in next housing lottery" (March 28, >14 days old)
 ];
@@ -4237,30 +4195,14 @@ const KOTO_NEWSCASTS = [
     href: "https://koto.org/news/newscast-4-3-26/",
     img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
   },
-  {
-    title: "Newscast 4-2-26",
-    source: "KOTO Community Radio",
-    date: "April 2, 2026",
-    newsTopic: "government",
-    copy: "Floating solar on Reservoir Number 2. Soul comes to Music on the Mesa. Michael Dougherty looks for Attorney General nomination.",
-    href: "https://koto.org/news/newscast-4-2-26/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  },
+  // Removed KOTO newscast 4-2-26 (>14 days old)
   // Removed KOTO newscasts from April 1 and earlier (>14 days old)
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
 // Updated: 2026-04-15  — refresh periodically from koto.org/news-category/featured-stories/
 const KOTO_FEATURED_STORIES = [
-  {
-    title: "Floating Solar on Reservoir Number 2",
-    source: "KOTO Community Radio",
-    date: "April 2, 2026",
-    newsTopic: "community",
-    copy: "Norwood is teaming up with EcoAction Partners and the Colorado School of Mines to explore floatovoltaics — floating solar panels — to reduce evaporation, prevent algae blooms, and generate renewable energy.",
-    href: "https://koto.org/news/norwood-floating-solar-water-conservation/",
-    img: "https://koto.org/wp-content/uploads/2026/04/IMG_0935-scaled.jpeg"
-  },
+  // Removed "Floating Solar on Reservoir Number 2" (April 2, >14 days old)
   // Removed 1 stale KOTO featured story from March 26 (>14 days old)
 ];
 
