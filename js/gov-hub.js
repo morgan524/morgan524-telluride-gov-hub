@@ -3861,6 +3861,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/b6/5b69bc02-298a-4f3c-8389-5577f5280803/69de832972175.image.png"
   },
   {
+    title: "The Big BAM Bash",
+    source: "Telluride Times",
+    date: "April 17, 2026",
+    newsTopic: "arts-culture",
+    copy: "The Big BAM Bash brings arts and entertainment to Telluride, showcasing local talent and community spirit in a celebration of music and creativity.",
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_aeb39527-3a52-4fad-906c-0cad39da6fd9.html",
+    img: ""
+  },
+  {
     title: "Miners earn all-league accolades",
     source: "Telluride Times",
     date: "April 16, 2026",
@@ -4220,7 +4229,7 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
-// Updated: 2026-04-17  — refresh periodically from koto.org/news-category/newscasts/
+// Updated: 2026-04-17T12  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
   {
     title: "Newscast 4-16-26",
@@ -4263,7 +4272,7 @@ const KOTO_NEWSCASTS = [
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
-// Updated: 2026-04-17  — refresh periodically from koto.org/news-category/featured-stories/
+// Updated: 2026-04-17T12  — refresh periodically from koto.org/news-category/featured-stories/
 const KOTO_FEATURED_STORIES = [
   // Removed "Floating Solar on Reservoir Number 2" (April 2, >14 days old)
   // Removed 1 stale KOTO featured story from March 26 (>14 days old)
