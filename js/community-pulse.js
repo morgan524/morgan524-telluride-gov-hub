@@ -26,7 +26,7 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-16T18:00:00';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-17T12:00:00';
 const COMMUNITY_PULSE_POSTS = [
   {
     id: 'fb-2061-049', sourceKey: 'fb-2061',
@@ -146,6 +146,20 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Colorado restructures search and rescue oversight — CPW takes statewide coordination role',
     excerpt: 'Colorado Parks and Wildlife announced a new interagency agreement effective August 1 that shifts statewide search and rescue coordination from the Colorado Search and Rescue Association to CPW and the state\'s homeland security division. Sheriff\'s offices retain operational authority, but CPW will develop training standards, credentialing, and response coordination. San Miguel County SAR, covering over 1,200 square miles from 5,000 to 14,000 feet elevation, will be affected. Some veteran volunteers have raised concerns about the restructuring.',
     tags: ['Safety', 'Search and Rescue', 'State Policy', 'County'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-2061-057', sourceKey: 'fb-2061',
+    postedAt: '2026-04-17T08:00:00',
+    title: 'CDOT shoulder work on Keystone Hill — expect 20-minute delays between Telluride and Placerville',
+    excerpt: 'The Colorado Department of Transportation is performing culvert cleaning and shoulder clearing operations on CO-145 along Keystone Hill between Mile Points 73 and 74 (Telluride to Placerville). Motorists should expect full stops, alternating one-lane traffic, and delays of up to 20 minutes from 9 a.m. to 3 p.m. on active work days. The routine maintenance is necessary to remove debris and mitigate erosion or flooding on the roadway. This is separate from the ongoing access improvement project west of the Society Turn roundabout.',
+    tags: ['Transportation', 'CDOT', 'Road Work', 'Delays'], featured: false, eventRelated: false
+  },
+  {
+    id: 'mountainfilm-005', sourceKey: 'mountainfilm',
+    postedAt: '2026-04-17T09:00:00',
+    title: 'Mountainfilm releases full 2026 schedule — passholder reservations open May 6',
+    excerpt: 'Mountainfilm has released the full schedule for its 48th annual festival, May 21\u201325 in Telluride. Festival passes are on sale now at mountainfilm.org. Passholder film reservations open on a tiered schedule: Ama Dablam and Festival Guest passes on May 6, Palmyra/Student/Crew on May 8, and Wasatch/Volunteer/Senior on May 12. The free Mountainfilm app (iOS and Android) serves as the official festival guide with schedule, film descriptions, and event details. Guest director Cristina Mittermeier curates this year\u2019s conservation-focused program.',
+    tags: ['Festival', 'Film', 'Tickets', 'Upcoming Event'], featured: true, eventRelated: true
   }
 ];
 const CP_MAX_POSTS = 20;
