@@ -4872,22 +4872,6 @@ const LEGAL_ENTITY_LOGOS = {
 const LEGAL_NOTICES = [
   // ── Active Notices (updated 2026-03-29) ──
   {
-    title: 'Bid Notice -- 2026 Parking Lots Overlay Project',
-    entity: 'Town of Mountain Village',
-    entityClass: 'ent-mv',
-    entityLogo: 'mv',
-    icon: '🅿️',
-    iconClass: 'type-bid',
-    type: 'Bid Notice',
-    filterTag: 'public-entity',
-    summary: 'Mountain Village is accepting bids for the 2026 Parking Lots Overlay Project. Bid packets available at townofmountainvillage.com or at Public Works, 411 Mountain Village Blvd, 2nd Floor. Contact Scott Pittenger (970) 708-8690 or Jenny Bates (970) 369-8201.',
-    deadline: 'Bids due April 17, 2026 at 12:00 Noon',
-    expires: '2026-04-17',
-    dates: '3/19, 3/26',
-    papers: ['ttimes'],
-    address: '411 Mountain Village Blvd, Mountain Village, CO'
-  },
-  {
     title: 'Property Tax Exemption -- Seniors, Disabled Veterans & Gold Star Spouses',
     entity: 'San Miguel County Assessor',
     entityClass: 'ent-assessor',
