@@ -1089,7 +1089,7 @@ async function loadAISummaries() {
 }
 
 // ── Manual/fallback summaries (preserved from original) ──
-// Last updated: 2026-04-11T18:00 (automated scan — SMRHA Apr 13 agenda added from board packet PDF; BOCC Apr 29 work session agenda now published on county calendar (content behind JS portal, summary pending); all Telluride Apr 23/28/29 meetings still no agendas; School Apr 20/27/28 no agendas; MV Town Council Apr 23 no agenda; Fire Apr 21 no agenda; Med Apr 23 no agenda; SMART still inaccessible)
+// Last updated: 2026-04-17T18:00 (automated scan — added THA lottery drawing Apr 24 summary from SMRHA site; BOCC Apr 29 work session still behind JS portal; Telluride TC Apr 28 agenda expected to post Apr 24; Liquor Licensing Apr 23 confirmed but no detailed agenda; P&Z Apr 23 already summarized; School Apr 20/27/28 no agendas; MV TC Apr 23 site returning 403; Fire Apr 21 no agenda posted; Med Apr 23 no agenda; SMART still inaccessible)
 const MANUAL_SUMMARIES = {
   // ── Telluride ──
   'telluride|2026-03-31|Town Council':
@@ -1150,8 +1150,10 @@ const MANUAL_SUMMARIES = {
     'WORK SESSION: Gargoyle Building Minor Subdivision / Lot Line Adjustment — 138 E Colorado Ave (Historic Commercial zone, Telluride Vargas Seiger LLC / Alpine Planning) · Colorado Wildfire Resiliency Code — Land Use Code updates work session (continuing from Mar 12 & Mar 26)',
   // (telluride|2026-04-23|Liquor Licensing Authority -- Apr 23 3pm, new meeting discovered, agenda not yet posted)
   // (telluride|2026-04-23|Telluride Housing Authority Subcommittee Special Meeting -- Apr 23 9am, agenda not yet posted)
-  // (telluride|2026-04-24|Telluride Housing Authority Subcommittee Special Meeting SMRHA Lottery Drawing -- Apr 24 10am, agenda not yet posted)
-  // (telluride|2026-04-24|Telluride Housing Authority Subcommittee Special Meeting Boarding House Master Lease Lottery -- Apr 24 8:30am, agenda not yet posted)
+  'telluride|2026-04-24|Telluride Housing Authority Subcommittee Special Meeting':
+    'SMRHA LOTTERY DRAWING (10am, Rebekah Hall) — Three deed-restricted units: Silver Jack 202 (3-bed/2-bath, ~$405,507, Tier 1 Town Constructed) & Silver Jack 205 (2-bed/1-bath, ~$368,620, Tier 1 Town Constructed) at 155 W Pacific Ave · Element 52 SW-102 (2-bed/1-bath, ~$352,529, Tier 2 Mitigation) at 398 S Davis St · 22 applications received; qualified household list posted Apr 15; appeal deadline Apr 17 5pm MST',
+
+  // (telluride|2026-04-24|Telluride Housing Authority Subcommittee Special Meeting Boarding House Master Lease Lottery -- Apr 24 8:30am, confirmed on CivicWeb but no detailed agenda content found)
   // (telluride|2026-04-29|Election Commission -- Apr 29 3pm, new meeting discovered, agenda not yet posted)
   // (telluride|2026-04-29|RESCHEDULED Parks & Recreation Commission -- Apr 29 12pm, rescheduled from Apr 15, agenda not yet posted)
 
