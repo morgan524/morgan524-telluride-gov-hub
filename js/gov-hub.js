@@ -5476,7 +5476,6 @@ const LEGAL_NOTICES = [
     expires: '2026-05-11',
     dates: '4/16',
     papers: ['ttimes_apr16'],
-    url: 'https://cara.fs4c.usda.gov/PublicCommentInput',
     address: 'Norwood Ranger District, P.O. Box 388, Norwood, CO 81428'
   },
   // ── April 16 (Telluride Times — Norwood Public Schools Re-Zoning) ──
