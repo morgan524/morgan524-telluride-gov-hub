@@ -3854,6 +3854,15 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-15  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "SMPA District 3 board candidates weigh in",
+    source: "Telluride Times",
+    date: "April 17, 2026",
+    newsTopic: "government",
+    copy: "Incumbent director Dave Alexander faces challenger Joanna Yonder in the San Miguel Power Association District 3 board election. Both candidates discuss their visions for managing energy costs and infrastructure while serving co-op members across the region.",
+    href: "https://www.telluridenews.com/news/article_a019f39e-3a7f-4c99-861a-6dd7517d0533.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/8e/a8e61fcd-9110-4d4f-b78e-a5b33220bc49/69dfe390e3b7c.image.jpg"
+  },
+  {
     title: "\u2018If you need a bike, I\u2019ll get you a bike\u2019",
     source: "Telluride Times",
     date: "April 17, 2026",
@@ -4207,7 +4216,7 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
-// Updated: 2026-04-17T12  — refresh periodically from koto.org/news-category/newscasts/
+// Updated: 2026-04-18  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
   {
     title: "Newscast 4-16-26",
