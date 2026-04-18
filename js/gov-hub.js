@@ -4861,7 +4861,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-04-17'; // Updated by legal-notice-update task (MV parking lot overlay, Egnar MVR office)
+const LEGAL_NOTICES_CACHE_DATE = '2026-04-18'; // Updated by legal-notice-update task (USDA SkiCo Lifts 6/8, Design Standards RFP, Norwood school rezone, Norwood water)
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -4899,6 +4899,11 @@ const PAPER_LOGOS = {
     name: 'The Telluride Times',
     img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg',
     url: 'https://www.telluridenews.com/news/legals/article_53f99203-76eb-4168-b3a4-392ac65857e4.html'
+  },
+  ttimes_apr16: {
+    name: 'The Telluride Times',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg',
+    url: 'https://www.telluridenews.com/news/legals/article_c5a54e8f-2fa6-42a2-ba94-3a3828e137ff.html'
   },
   county_web: {
     name: 'San Miguel County',
@@ -5439,6 +5444,74 @@ const LEGAL_NOTICES = [
     expires: '2026-06-30',
     dates: '4/9',
     papers: ['ttimes_apr9']
+  },
+  // ── April 9 (Telluride Times — Water Court, Norwood) ──
+  {
+    title: 'Water Court -- Norwood Water Commission Conditional Water Rights (Case 26CW3015)',
+    entity: 'Colorado District Court, Water Division No. 4',
+    entityClass: 'ent-county',
+    entityLogo: 'water_court',
+    icon: '💧',
+    iconClass: 'type-bid',
+    type: 'Water Court',
+    filterTag: 'water-court',
+    summary: 'The Norwood Water Commission filed applications for conditional water rights and plan for augmentation in Case No. 26CW3015, Water Division 4. Structures include Lone Cone Ditch, NWR Beaver Park Reservoir, NWR Ed Joe Draw Reservoir, and NWR Goat Creek Pump, with conditional amounts up to 2,430 acre-feet for irrigation, power generation, and municipal augmentation serving the Norwood area. Counsel: Garfield & Hamersley, P.C., Glenwood Springs. Protests must be filed with the Water Clerk, Water Division 4, Montrose.',
+    deadline: 'File protests with Water Clerk, Water Division 4, Montrose',
+    expires: '2026-06-30',
+    dates: '4/9',
+    papers: ['ttimes_apr9']
+  },
+  // ── April 16 (Telluride Times — USDA Forest Service Ski Resort Draft EA) ──
+  {
+    title: 'Public Comment -- Telluride Ski Resort Recreation Improvements (Lifts 6 & 8, High Camp, Trails)',
+    entity: 'USDA Forest Service / Grand Mesa, Uncompahgre & Gunnison National Forests',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🎿',
+    iconClass: 'type-hearing',
+    type: 'Public Comment',
+    filterTag: 'public-entity',
+    summary: 'The Grand Mesa, Uncompahgre and Gunnison National Forests (Norwood Ranger District) has released a Draft Environmental Assessment for recreation improvements at Telluride Ski Resort. Proposed actions include replacing Lifts 6 and 8, forest health projects using tethered logging, widening of Galloping Goose Skiway, construction of Lift 8 Jaws Skiway, expansion of High Camp warming hut into a full-service restaurant, construction of a Green Tech mountain bike connector trail, and permanent approval of Heritage Trail ski trail. Project occurs on NFS lands within the resort\'s Special Use Permit area and on adjacent private lands in Mountain Village and Telluride. Written comments to Scott Spielman, Recreation Manager; electronic comments via the CARA portal. 30-day comment period follows publication in the Grand Junction Daily Sentinel (approx. April 11 – May 11, 2026).',
+    deadline: 'Comments due approximately May 11, 2026',
+    expires: '2026-05-11',
+    dates: '4/16',
+    papers: ['ttimes_apr16'],
+    url: 'https://cara.fs4c.usda.gov/PublicCommentInput',
+    address: 'Norwood Ranger District, P.O. Box 388, Norwood, CO 81428'
+  },
+  // ── April 16 (Telluride Times — Norwood Public Schools Re-Zoning) ──
+  {
+    title: 'Public Hearing -- Norwood Public Schools Re-Zoning Application (2038 Maverick Way)',
+    entity: 'Town of Norwood Planning & Zoning / Board of Trustees',
+    entityClass: 'ent-county',
+    entityLogo: 'norwood',
+    icon: '🏫',
+    iconClass: 'type-hearing',
+    type: 'Public Hearing',
+    filterTag: 'ordinance',
+    summary: 'Norwood Public Schools has applied for a re-zoning of the premises located at 2038 Maverick Way, Norwood, CO 81428. Public hearings will be held before the Town of Norwood Planning and Zoning Commission at 6:30 PM and the Norwood Board of Trustees at 7:00 PM on April 20, 2026 at 1250 Naturita Street, Norwood. Applicant officer: Reilly O\'Brien.',
+    deadline: 'Public hearings: April 20, 2026 at 6:30 PM (P&Z) and 7:00 PM (Board of Trustees)',
+    expires: '2026-04-20',
+    dates: '4/16',
+    papers: ['ttimes_apr16'],
+    address: '2038 Maverick Way, Norwood, CO 81428'
+  },
+  // ── April 16 (Telluride Times — Town of Telluride Design Standards RFP) ──
+  {
+    title: 'RFP -- Engineering Services for 2026 Design Standards & Construction Specifications Update',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '📐',
+    iconClass: 'type-rfp',
+    type: 'RFP',
+    filterTag: 'public-entity',
+    summary: 'The Town of Telluride is soliciting proposals from experienced, qualified consultants for a comprehensive update of the Town\'s Design Standards and Construction Specifications governing construction and right-of-way connections to public utilities. Confirmed electronic proposals must be submitted to togen@telluride.gov. Bid documents are available by email or through BidNet Direct at www.bidnetdirect.com. Contact: (970) 728-1838.',
+    deadline: 'Proposals due April 25, 2026 at 5:00 PM',
+    expires: '2026-04-25',
+    dates: '4/16',
+    papers: ['ttimes_apr16'],
+    url: 'https://www.bidnetdirect.com'
   },
 ];
 
