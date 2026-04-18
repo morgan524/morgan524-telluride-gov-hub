@@ -26,7 +26,7 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-17T18:00:00';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-18T08:00:00';
 const COMMUNITY_PULSE_POSTS = [
   {
     id: 'fb-2061-049', sourceKey: 'fb-2061',
@@ -167,6 +167,48 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Sheriff launches behavioral health safe transport pilot — Norwood-based program fills West End gap',
     excerpt: 'San Miguel County Sheriff Dan Covault and Dave Hayes of Guardian Transport and Security in Grand Junction have launched the San Miguel Safe Transport Program, a behavioral health secure transport pilot based in Norwood. The program addresses a critical gap in services for the county\'s West End communities, providing safe transportation for individuals experiencing behavioral health crises. The pilot is expected to serve residents who previously faced long wait times or lacked access to appropriate transport to treatment facilities.',
     tags: ['Health', 'Safety', 'County', 'West End'], featured: false, eventRelated: false
+  },
+  {
+    id: 'telski-001', sourceKey: 'telski',
+    postedAt: '2026-04-17T14:00:00',
+    title: 'Telluride Bike Park closed for summer 2026 — Lift 4 modernization underway',
+    excerpt: 'The Telluride Bike Park will be closed for the entire summer 2026 season to accommodate the Lift 4 (Village Express) modernization project, which began immediately after the mountain closed in early April. The project also affects operations around Gorrono Ranch at the top of Lift 4. Regular summer lift-served mountain biking is not expected to resume until summer 2027. Riders can still access hiking trails and the free gondola for sightseeing when it reopens May 21. Details at tellurideskiresort.com.',
+    tags: ['Recreation', 'Bike Park', 'Ski Resort', 'Lift Modernization'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-3395-043', sourceKey: 'fb-3395',
+    postedAt: '2026-04-17T15:00:00',
+    title: 'Gondola closed for spring maintenance — free buses run between Telluride and Mountain Village through May 20',
+    excerpt: 'The Telluride-Mountain Village Gondola is now closed for several weeks of required spring maintenance after its final day of winter operation on April 5. A free shuttle bus runs between Telluride and Mountain Village through Wednesday, May 20. The gondola reopens Thursday, May 21 for the summer season, operating daily through October 25. Routine spring maintenance is scheduled during shoulder-season months as the gondola operates roughly 287 days per year.',
+    tags: ['Transportation', 'Gondola', 'Mountain Village', 'Shoulder Season'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-2061-059', sourceKey: 'fb-2061',
+    postedAt: '2026-04-18T07:30:00',
+    title: 'Pacific Avenue reopens today — Public Works phase wraps after 13-day closure',
+    excerpt: 'Pacific Avenue in downtown Telluride reopens to through traffic today, Saturday, April 18, as the Town of Telluride Public Works Department wraps up the latest phase of infrastructure improvements. The full closure between Mahoney Drive had been in place since Monday, April 6 and included utility and streetscape work. Additional phases of the multi-year downtown improvement plan are expected later this season. Motorists should expect normal traffic patterns to resume by Monday.',
+    tags: ['Transportation', 'Town Government', 'Public Works', 'Downtown'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-2061-060', sourceKey: 'fb-2061',
+    postedAt: '2026-04-18T08:00:00',
+    title: 'Mountain Village Council to weigh new lighting regulations at April 23 meeting — first reading of CDC amendments',
+    excerpt: 'The Mountain Village Town Council will consider a first reading of proposed amendments to the Community Development Code\'s lighting regulations at its regular meeting on Thursday, April 23. The changes aim to modernize the town\'s dark-sky and outdoor-lighting standards. A first reading is typically followed by a second reading and public hearing before final adoption. Agenda packet and livestream details will be posted at townofmountainvillage.com ahead of the meeting.',
+    tags: ['Mountain Village', 'Town Council', 'Lighting', 'CDC', 'Upcoming Event'], featured: true, eventRelated: true
+  },
+  {
+    id: 'fb-2438-016', sourceKey: 'fb-2438',
+    postedAt: '2026-04-18T08:30:00',
+    title: 'KOTO\'s Big BAM Bash returns Friday, April 24 — battle of the bands lights up downtown',
+    excerpt: 'KOTO Community Radio hosts its first-ever Big BAM Bash battle of the bands on Friday, April 24, featuring eight local musical groups competing in a single rollicking evening. The event doubles as a community benefit for KOTO\'s public broadcasting operations and showcases homegrown Telluride talent heading into festival season. Doors and venue details to be announced through KOTO and local organizers. Follow @KOTOradio for updates.',
+    tags: ['Community', 'Music', 'KOTO', 'Benefit', 'Upcoming Event'], featured: false, eventRelated: true
+  },
+  {
+    id: 'fb-3395-044', sourceKey: 'fb-3395',
+    postedAt: '2026-04-18T09:00:00',
+    title: 'Galloping Goose shoulder-season schedule in effect through May 22 — single bus every 30 minutes',
+    excerpt: 'The Town of Telluride\'s free Galloping Goose transit continues its shoulder-season schedule through Friday, May 22. A single bus runs every 30 minutes during off-season rather than the peak-season two-bus, 15-minute interval service. The revised schedule is designed to provide consistent, predictable service during the quieter spring weeks between ski season and summer festivals. Full route and timing details at telluride.gov.',
+    tags: ['Transportation', 'Galloping Goose', 'Shoulder Season', 'Town Government'], featured: false, eventRelated: false
   }
 ];
 const CP_MAX_POSTS = 20;
