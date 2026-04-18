@@ -4861,7 +4861,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-04-18'; // Updated by legal-notice-update task (USDA SkiCo Lifts 6/8, Design Standards RFP, Norwood school rezone, Norwood water)
+const LEGAL_NOTICES_CACHE_DATE = '2026-04-18'; // Updated by legal-notice-update task (USDA SkiCo Lifts 6/8, Design Standards RFP, Norwood school rezone, Norwood water, Mill Creek PRV IFB 4/30)
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -5511,6 +5511,24 @@ const LEGAL_NOTICES = [
     dates: '4/16',
     papers: ['ttimes_apr16'],
     url: 'https://www.bidnetdirect.com'
+  },
+  // ── April 16 (Telluride Times — Town of Telluride Public Works IFB) ──
+  {
+    title: 'Invitation for Bids -- 2026 Mill Creek Prefab Pressure Reducing Valve Vault Installation',
+    entity: 'Town of Telluride Public Works',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '💧',
+    iconClass: 'type-bid',
+    type: 'Bid Notice',
+    filterTag: 'utilities',
+    summary: 'The Town of Telluride is accepting separate sealed bids for the 2026 Mill Creek Prefab Pressure Reducing Valve (PRV) Vault Installation project. Sealed bids must be received by the Town of Telluride prior to 4:00 PM on Thursday, April 30, 2026. Bid documents may be obtained at the Town of Telluride Public Works a/o Transit Facility, 1870 Black Bear Road, Telluride, CO 81435, via email, by phone at (970) 728-2562, or through www.bidnetdirect.com. Confirmed electronic submissions may be sent to togen@telluride.gov.',
+    deadline: 'Bids due April 30, 2026 at 4:00 PM',
+    expires: '2026-04-30',
+    dates: '4/16',
+    papers: ['ttimes_apr16'],
+    url: 'https://www.bidnetdirect.com',
+    address: '1870 Black Bear Road, Telluride, CO 81435'
   },
 ];
 
