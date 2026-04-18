@@ -4162,15 +4162,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/news/article_92bfab96-4947-41b7-a1ef-d1e682f59d33.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/0d/30d9377d-5c3c-474b-a710-dfd7f142de66/69cf61ea20a7e.image.jpg"
   },
-  {
-    title: "Watering our roots",
-    source: "Telluride Times",
-    date: "April 3, 2026",
-    newsTopic: "community",
-    copy: "Columnist Michelle Curry Wright reflects on identity and character, exploring what it means to stay connected to one\'s roots in a rapidly changing world.",
-    href: "https://www.telluridenews.com/opinion/columnists/article_2b934a07-4080-4562-b759-5d84f4699ce1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/b5/eb5bff0d-d2ce-4aaf-9fb7-96f17ff6b6ad/69cea4f510ebd.image.jpg"
-  },
+  // Removed "Watering our roots" (April 3, 2026 — >14 days old, cleaned 2026-04-18)
   {
     title: "Peace is the gift",
     source: "Telluride Times",
@@ -4207,24 +4199,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/news/article_c3ae42cf-d0c4-41c5-ae08-d005b93d1b36.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/75/a75244f5-e3b8-4c13-b3fc-27d9e98cfc0d/69d05b7abf032.image.jpg"
   },
-  {
-    title: "Speed amid setbacks",
-    source: "Telluride Times",
-    date: "April 3, 2026",
-    newsTopic: "sports",
-    copy: "Sadie Schenk, a Telluride High School senior and longtime ski racer with the Telluride Ski and Snowboard Club, has persevered through challenges on her way to success.",
-    href: "https://www.telluridenews.com/sports/article_8033f0f0-cbde-4cf7-926b-a0feb0bf2381.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/ae/8ae8ecfe-bc49-49cb-a72b-8f8f22764d36/69cb718967215.image.jpg"
-  },
-  {
-    title: "Celebrate closing weekend",
-    source: "Telluride Times",
-    date: "April 3, 2026",
-    newsTopic: "arts-culture",
-    copy: "A constant throughout this unusual season has been the abundance of music at local venues. Here\’s what\’s happening for closing weekend.",
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_0ffe0247-ee72-4cc6-8e59-23574ac6c4f2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/a3/ca3dd84a-9a81-4cc9-842c-03da3130932a/69cb6e2762867.image.jpg"
-  },
+  // Removed "Speed amid setbacks" (April 3, 2026 — >14 days old, cleaned 2026-04-18)
+  // Removed "Celebrate closing weekend" (April 3, 2026 — >14 days old, cleaned 2026-04-18)
   // Removed 2 Telluride Times articles from April 2 (>14 days old)
   // Removed 3 Telluride Times articles from April 1 (>14 days old)
   // Removed "Three units available in next housing lottery" (March 28, >14 days old)
@@ -4260,15 +4236,7 @@ const KOTO_NEWSCASTS = [
     href: "https://koto.org/news/newscast-4-13-26/",
     img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
   },
-  {
-    title: "Newscast 4-3-26",
-    source: "KOTO Community Radio",
-    date: "April 3, 2026",
-    newsTopic: "community",
-    copy: "This week on the Regional Roundup: songs of resistance from No Kings rallies, efforts to support local news outlets in Colorado, Telluride\'s first skijoring event, and growing threats facing salt lakes including Utah\'s Great Salt Lake.",
-    href: "https://koto.org/news/newscast-4-3-26/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  },
+  // Removed KOTO newscast 4-3-26 (>14 days old, cleaned 2026-04-18)
   // Removed KOTO newscast 4-2-26 (>14 days old)
   // Removed KOTO newscasts from April 1 and earlier (>14 days old)
 ];
