@@ -836,7 +836,7 @@ const NORWOOD_BOT_URL = 'https://www.norwoodtown.com/board-of-trustees-meetings'
 const NORWOOD_PZ_URL = 'https://www.norwoodtown.com/planning-and-zoning-commission-meetings';
 const NORWOOD_NWC_URL = 'https://www.norwoodtown.com/nwc-meetings';
 const NORWOOD_SAN_URL = 'https://www.norwoodtown.com/norwood-sanitation-district-meeting';
-const NORWOOD_CACHE_DATE = '2026-04-17';
+const NORWOOD_CACHE_DATE = '2026-04-18';
 
 const NORWOOD_CACHED_DATA = [
   // ── Board of Trustees ──
@@ -855,11 +855,10 @@ const NORWOOD_CACHED_DATA = [
   },
   // ── Planning & Zoning Commission ──
   {
-    date: 'April 27, 2026',
+    date: 'April 20, 2026',
     title: 'Planning and Zoning Commission Meeting',
     board: 'pz',
-    agendaUrl: null,
-    note: 'Next scheduled P&Z meeting -- agenda posted before the meeting.'
+    agendaUrl: 'https://www.norwoodtown.com/files/9f7d271ce/04.20.2026+P%26Z+BOA+AGENDA.pdf'
   },
   // ── Water Commission ──
   {
@@ -1089,7 +1088,7 @@ async function loadAISummaries() {
 }
 
 // ── Manual/fallback summaries (preserved from original) ──
-// Last updated: 2026-04-17T18:00 (automated scan — added THA lottery drawing Apr 24 summary from SMRHA site; BOCC Apr 29 work session still behind JS portal; Telluride TC Apr 28 agenda expected to post Apr 24; Liquor Licensing Apr 23 confirmed but no detailed agenda; P&Z Apr 23 already summarized; School Apr 20/27/28 no agendas; MV TC Apr 23 site returning 403; Fire Apr 21 no agenda posted; Med Apr 23 no agenda; SMART still inaccessible)
+// Last updated: 2026-04-18T12:15 (automated scan — replaced stale BOCC Apr 22 sheriff-interview summary with actual CivicClerk agenda (Historical Commission work plan, RRMV tax abatement, weed-management IGAs, Miramonte boiler/space planning, deed restriction amendments); added Liquor Licensing Authority Apr 23 (7 parklet TMOPs + 5 special event permit hearings incl. Mountainfilm & Bluegrass); added Citizen's Weed Advisory Board Apr 23; added Norwood P&Z Apr 20 (Norwood Schools rezoning at 2028 Maverick Way + SDR). MV TC Apr 23 agenda posted (file 48629) but PDF behind Cloudflare challenge; BOCC Apr 29 work session & Open Space Apr 27 agendas not yet posted; School Apr 20/27/28, Fire Apr 21, Med Apr 23, SMART all still without posted agendas.)
 const MANUAL_SUMMARIES = {
   // ── Telluride ──
   'telluride|2026-03-31|Town Council':
@@ -1132,7 +1131,10 @@ const MANUAL_SUMMARIES = {
   // ── BOCC (upcoming) ──
   // (county|2026-04-06 to 2026-04-17 -- CANCELED, spring break recess, no BOCC meetings)
   'county|2026-04-22|Board of County Commissioners Meeting':
-    'PUBLIC HEARING: Sheriff candidate appointment interviews per CRS 24-6-402(4)(f) — Undersheriff Dan Covault (2pm) & Operations Sgt. Lane Masters (3pm), Miramonte Building 2nd floor · Public meet & greet with candidates at Placerville Schoolhouse 5-6:30pm · Appointment decision expected at Apr 30 BOCC meeting',
+    'PRESENTATION: Historical Commission 2026 Work Plan (Ted Wilson, Historical Commission; Janet Kask, Dir. of Parks & Open Space, 45 min) · Planning Department update (Kaye Simonson, 20 min) · Miramonte Space Planning update (Bordogna, Biggs) · Tax Abatement petition ABMT2026-7 RRMV LLC — staff recommended DENY · Consent: IGAs with TRAA, Mountain Village & Ophir for noxious weed management · Miramonte Boiler Replacement — updated Construction Agreement w/ Carl Kelly Plumbing (bonding incl.) · Deed Restriction V2016 amendments — Unit 314-13 Society Dr. (Cela White/Tanner Small), 182 Alexander Overlook (Cormac Bourke/Kathleen Morgan) · Armor Proseal asphalt installation agreement · JBBS 2027 contract amendment · Attorney matters (possible executive session)',
+
+  'county|2026-04-23|Citizen\'s Weed Advisory Board':
+    'Updates from Vegetation Control & Management: Summer 2026 synopsis, Forest Service Agreement, Noxious Weed Agreements, Cost Share Program · Discussion: new opportunity spraying on private landowner property · Grant funds appropriation to landowners; whether funds should cover SMC VC&M · Vacant Chair position — discussion of filling role · Approval of minutes (3/27/2025, 10/20/2025)',
 
   // (county|2026-04-29 -- BOCC Work Session, CivicClerk event 985, agenda now listed as available on county calendar as of 2026-04-11 but content behind JS portal — will add summary when content is readable)
   // (county|2026-04-27 -- Open Space Commission 4pm, agenda not yet posted, will add when available)
@@ -1148,7 +1150,8 @@ const MANUAL_SUMMARIES = {
   // ── Telluride Sub-commissions (Apr 23-24) ──
   'telluride|2026-04-23|Planning & Zoning Commission':
     'WORK SESSION: Gargoyle Building Minor Subdivision / Lot Line Adjustment — 138 E Colorado Ave (Historic Commercial zone, Telluride Vargas Seiger LLC / Alpine Planning) · Colorado Wildfire Resiliency Code — Land Use Code updates work session (continuing from Mar 12 & Mar 26)',
-  // (telluride|2026-04-23|Liquor Licensing Authority -- Apr 23 3pm, new meeting discovered, agenda not yet posted)
+  'telluride|2026-04-23|Liquor Licensing Authority':
+    '🍽️ 7 Temporary Modification of Premises (parklet/outdoor) applications for summer 2026: Steamies Burger Bar (300 W Colorado), The Butcher and The Baker (201 E Colorado), Floradora Saloon (103 W Colorado), Brown Dog Pizza/Lost Dog Pizza (110 E Colorado), Stronghouse Brew Pub (283 S Fir St), There... (629 W Pacific), The Telluride Company/Mischief Managed (212 W Colorado) · PUBLIC HEARINGS — Special Event Permits: One to One Mentoring (Food & Vine Festival, Oak St Plaza, Jun 14) · Telluride Education Foundation (Party in the Park, Town Park, May 30) · Mountainfilm (Art Walk May 22 at Telluride Arts; Festival May 23-24 at Elks Park; May 25 at Town Park) · Telluride Bluegrass Beer Booth (5 permits for Bluegrass Festival 2026, June 17-21 at Town Park)',
   // (telluride|2026-04-23|Telluride Housing Authority Subcommittee Special Meeting -- Apr 23 9am, agenda not yet posted)
   'telluride|2026-04-24|Telluride Housing Authority Subcommittee Special Meeting':
     'SMRHA LOTTERY DRAWING (10am, Rebekah Hall) — Three deed-restricted units: Silver Jack 202 (3-bed/2-bath, ~$405,507, Tier 1 Town Constructed) & Silver Jack 205 (2-bed/1-bath, ~$368,620, Tier 1 Town Constructed) at 155 W Pacific Ave · Element 52 SW-102 (2-bed/1-bath, ~$352,529, Tier 2 Mitigation) at 398 S Davis St · 22 applications received; qualified household list posted Apr 15; appeal deadline Apr 17 5pm MST',
@@ -1174,6 +1177,9 @@ const MANUAL_SUMMARIES = {
   // ── Norwood ──
   'norwood|2026-04-08|Board of Trustees Meeting':
     'Swearing in of new Trustees (Bernice White, Liza Tanguay) & Mayor (Candy Meehan) · Marijuana license renewals: Blue Cottage LLC / Mary Jane Medicinals (1510 Grand Ave) and Alpine Wellness (1630 Grand Ave) · Special event liquor license: Norwood Chamber of Commerce (1455 Pinion St) · Norwood Post / Telluride Times update (Erin Spiellane) · Public notices newspaper designation: SM Basin Forum or Telluride Times · Pocket Park bid — RMC Builders · Discussion: town speed limit reduction · Sheriff\'s Office written report · Parks & Recreation District report · Music on the Mesa report',
+
+  'norwood|2026-04-20|Planning and Zoning Commission Meeting':
+    'PUBLIC HEARING: Norwood Public Schools Re-Zoning Application — 2028 Maverick Way, Norwood · Norwood Public Schools Site Development Review · Dark Sky Coalition Update (Hailey Bruinsma) · San Miguel County Building Department Code Updates (Matt Gonzales & Serge Morin) · Land Use Code Progress Update · Approval of March 16, 2026 minutes',
 
   'norwood|2026-04-01|Board of Trustees Special Meeting':
     'SECOND READING equivalent — Adoption of Resolution No. 0401 (Series 2026): Colorado Model Wildfire Resiliency Code adopted by reference (2023 edition, per SB 23-166 & HB 26-1334) · Interim implementation authorized pending permanent ordinance · Applies to all new construction, substantial improvements & development activities · Town Administrator authorized to enforce',
