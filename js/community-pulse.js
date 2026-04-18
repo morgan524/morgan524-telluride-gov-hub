@@ -26,7 +26,7 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-18T08:00:00';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-18T14:00:00';
 const COMMUNITY_PULSE_POSTS = [
   {
     id: 'fb-2061-049', sourceKey: 'fb-2061',
@@ -209,6 +209,27 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Galloping Goose shoulder-season schedule in effect through May 22 — single bus every 30 minutes',
     excerpt: 'The Town of Telluride\'s free Galloping Goose transit continues its shoulder-season schedule through Friday, May 22. A single bus runs every 30 minutes during off-season rather than the peak-season two-bus, 15-minute interval service. The revised schedule is designed to provide consistent, predictable service during the quieter spring weeks between ski season and summer festivals. Full route and timing details at telluride.gov.',
     tags: ['Transportation', 'Galloping Goose', 'Shoulder Season', 'Town Government'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-2061-061', sourceKey: 'fb-2061',
+    postedAt: '2026-04-18T11:00:00',
+    title: 'SMPA board elections underway — District 3 and District 6 seats contested as energy costs rise',
+    excerpt: 'San Miguel Power Association members have the chance to influence the seven-member cooperative board, with District 3 and District 6 seats on the ballot this year. District 3 (covering Norwood, Placerville, Rico, Sawpit and parts of five counties) has incumbent Dave Alexander facing challenger Joanna Yonder. District 6 (Ridgway and parts of Log Hill Village) pits appointed director Valentine Szwarc against Tricia Savage, following the passing of longtime director Debbie Cokes. With regional energy costs climbing, the race has drawn heightened attention from cooperative members. Candidate statements and voting details available at smpa.com.',
+    tags: ['Elections', 'Energy', 'SMPA', 'Cooperative'], featured: true, eventRelated: true
+  },
+  {
+    id: 'fb-3395-045', sourceKey: 'fb-3395',
+    postedAt: '2026-04-18T11:30:00',
+    title: 'Telluride Regional Airport Authority calls special meeting for Tuesday, April 21',
+    excerpt: 'The Telluride Regional Airport Authority has scheduled a special meeting for Tuesday, April 21, 2026 at 1:00 p.m. in the Hangar 30 Conference Room at the Telluride Regional Airport. The notice was published in the Telluride Times classifieds on April 16. Agenda and supporting materials are available at tellurideairport.com. Special meetings of the Authority are used for time-sensitive decisions outside the regular meeting schedule.',
+    tags: ['Airport', 'Government', 'Special Meeting', 'Upcoming Event'], featured: false, eventRelated: true
+  },
+  {
+    id: 'fb-2061-062', sourceKey: 'fb-2061',
+    postedAt: '2026-04-18T12:00:00',
+    title: 'Former San Miguel County Sheriff\'s deputy sentenced to 10 years on felony charges involving children',
+    excerpt: 'A former San Miguel County Sheriff\'s Office deputy has been sentenced to 10 years in prison after pleading guilty to multiple felony charges involving crimes against children, according to the Telluride Times. The sentencing closes a case that has drawn significant attention across the county given the defendant\'s former role in local law enforcement. Full details of the plea agreement and sentencing were covered in this week\'s edition of the Telluride Times.',
+    tags: ['Safety', 'Courts', 'County', 'Law Enforcement'], featured: false, eventRelated: false
   }
 ];
 const CP_MAX_POSTS = 20;
