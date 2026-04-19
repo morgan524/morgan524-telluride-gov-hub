@@ -26,7 +26,7 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-18T14:00:00';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-19T10:00:00';
 const COMMUNITY_PULSE_POSTS = [
   {
     id: 'fb-2061-049', sourceKey: 'fb-2061',
@@ -230,6 +230,34 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Former San Miguel County Sheriff\'s deputy sentenced to 10 years on felony charges involving children',
     excerpt: 'A former San Miguel County Sheriff\'s Office deputy has been sentenced to 10 years in prison after pleading guilty to multiple felony charges involving crimes against children, according to the Telluride Times. The sentencing closes a case that has drawn significant attention across the county given the defendant\'s former role in local law enforcement. Full details of the plea agreement and sentencing were covered in this week\'s edition of the Telluride Times.',
     tags: ['Safety', 'Courts', 'County', 'Law Enforcement'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-3395-046', sourceKey: 'fb-3395',
+    postedAt: '2026-04-19T08:00:00',
+    title: 'San Miguel Watershed Coalition awarded $500,000 for wildfire preparedness planning',
+    excerpt: 'The San Miguel Watershed Coalition has received a $500,000 grant to develop a Wildfire Readiness Action Plan focused on watershed-scale risks across the San Miguel Basin. With snowpack still at roughly 15% of median following an abnormally dry winter, the funding will pay for hazard mapping, fuel-reduction prioritization, and coordination among fire agencies, water providers, and land managers. Plan development is expected to ramp up this spring ahead of summer fire season.',
+    tags: ['Wildfire', 'Water', 'Grant', 'County'], featured: true, eventRelated: false
+  },
+  {
+    id: 'fb-2061-063', sourceKey: 'fb-2061',
+    postedAt: '2026-04-19T09:00:00',
+    title: 'Festival season safety push — organizers urge heat, hydration, and fire awareness',
+    excerpt: 'With Mountainfilm (May 21\u201325), Bluegrass (June 17\u201321), and other festivals approaching, local public-health and emergency officials are reminding residents and visitors to prepare for hot, dry outdoor conditions. Recommendations include carrying water, watching for signs of heat illness at altitude, reviewing event fire restrictions, and planning transit from downtown Telluride and Mountain Village to avoid road congestion. With snowpack at 15% of median and a total fire ban already imposed at some West End events, festival-goers should expect stricter no-flame rules at many summer venues.',
+    tags: ['Safety', 'Festival', 'Health', 'Fire'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-2438-017', sourceKey: 'fb-2438',
+    postedAt: '2026-04-19T10:00:00',
+    title: 'West End community bike program launches — Brock Benson aims to put neighbors on two wheels',
+    excerpt: 'Brock Benson, recently returned to San Miguel County\'s West End after a 20-year absence, has launched a grassroots effort to get bikes into the hands of residents who need them. "If you need a bike, I\'ll get you a bike," Benson says of the program, which leans on donations and refurbished frames. The effort targets Norwood, Redvale, and surrounding communities where transportation options are limited and a working bicycle can meaningfully expand access to jobs and services.',
+    tags: ['Community', 'West End', 'Transportation', 'Nonprofit'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-2061-064', sourceKey: 'fb-2061',
+    postedAt: '2026-04-19T11:00:00',
+    title: 'Reminder: Telluride Town Council special-election petitions due tomorrow at 5 PM',
+    excerpt: 'Tomorrow \u2014 Monday, April 20 at 5 p.m. \u2014 is the deadline for prospective candidates to file petitions for the Town of Telluride\'s June 30 special election. Two Council seats are on the ballot: one vacated by former Mayor Pro Tem Meehan Fee and one currently held by appointed Councilmember Marya Stark. Petitions require 25 valid signatures from registered Telluride voters and must be turned in to the Town Clerk\'s office at Rebekah Hall before the deadline.',
+    tags: ['Elections', 'Deadline', 'Town Government', 'Council'], featured: true, eventRelated: true
   }
 ];
 const CP_MAX_POSTS = 20;
