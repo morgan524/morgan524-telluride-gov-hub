@@ -3857,8 +3857,26 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 });
 
 // ══════════ TELLURIDE TIMES — CURRENT HOMEPAGE STORIES ══════════
-// Updated: 2026-04-15  — refresh periodically from telluridenews.com
+// Updated: 2026-04-19  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Safety and health come first during festival season",
+    source: "Telluride Times",
+    date: "April 19, 2026",
+    newsTopic: "public-safety",
+    copy: "Music festival season is fast approaching \u2014 a time to gather outdoors with friends, enjoy live music and dance. Local officials and event organizers share their focus on keeping festival-goers safe and healthy this summer.",
+    href: "https://www.telluridenews.com/news/article_959e0960-3070-4c9d-b4b7-2dfb4ce49958.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/2e/22ed2f9b-3f0d-4220-a7b1-b32327c3e123/69e3e01813073.image.jpg"
+  },
+  {
+    title: "San Miguel Watershed Coalition receives $500,000 for wildfire preparedness",
+    source: "Telluride Times",
+    date: "April 18, 2026",
+    newsTopic: "public-safety",
+    copy: "With a dry winter and focus already on wildfire preparedness for summer and beyond, the San Miguel Watershed Coalition received $500,000 to develop a Wildfire Readiness Action Plan for the region.",
+    href: "https://www.telluridenews.com/news/article_335d69a9-77c0-4f1f-82b8-22a07ffc5de9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/88/f888c95b-00a6-42d8-ac0d-73e7a1744aee/69e336ab1d78a.image.jpg"
+  },
   {
     title: "SMPA District 3 board candidates weigh in",
     source: "Telluride Times",
@@ -3882,9 +3900,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "April 17, 2026",
     newsTopic: "arts-culture",
-    copy: "The Big BAM Bash brings arts and entertainment to Telluride, showcasing local talent and community spirit in a celebration of music and creativity.",
+    copy: "Eight musical groups will compete in a battle of the bands competition on Friday, April 24, showcasing local talent and community spirit in Telluride.",
     href: "https://www.telluridenews.com/arts_and_entertainment/article_aeb39527-3a52-4fad-906c-0cad39da6fd9.html",
-    img: ""
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/78/4781eb53-eb29-43cd-9609-710d60a58474/69e24f281b4c3.image.jpg"
   },
   {
     title: "Miners earn all-league accolades",
@@ -4187,33 +4205,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/news/article_07ab0249-8990-4238-b6c5-dbda39cce370.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/b1/6b132ad4-2e70-4cc0-aecf-c798d3ce5c2b/69cf6909b1214.image.jpg"
   },
-  {
-    title: "Music on the Mesa returns to Norwood",
-    source: "Telluride Times",
-    date: "April 4, 2026",
-    newsTopic: "arts-culture",
-    copy: "The two bands who will headline this summer\’s Music on the Mesa concert series in Norwood have been announced, bringing live music back to the West End.",
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_91bc6e4e-de7f-48e3-8a95-58598c3a8488.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/2b/f2ba4ad9-3262-41d6-a290-f86765330def/69cf652c3ed0d.image.jpg"
-  },
-  {
-    title: "Playtime for grownups",
-    source: "Telluride Times",
-    date: "April 4, 2026",
-    newsTopic: "community",
-    copy: "Wilkinson Public Library programmers take their foot off the gas a bit this month when it comes to kids\’ gatherings, shifting focus to adult programming.",
-    href: "https://www.telluridenews.com/news/article_470020e5-3af1-4689-a7a1-8b8fda9cd33d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/e1/6e11ae9d-9263-49bf-8a57-629a51368bfa/69cf5bfae42eb.image.jpg"
-  },
-  {
-    title: "UPDATE: Ski resort to close Saturday",
-    source: "Telluride Times",
-    date: "April 4, 2026",
-    newsTopic: "business",
-    copy: "Telluride Ski Resort has announced that the last day of the 2025-26 ski season will be Saturday, April 4.",
-    href: "https://www.telluridenews.com/news/article_c3ae42cf-d0c4-41c5-ae08-d005b93d1b36.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/75/a75244f5-e3b8-4c13-b3fc-27d9e98cfc0d/69d05b7abf032.image.jpg"
-  },
+  // Removed 3 Telluride Times articles from April 4 (>14 days old, cleaned 2026-04-19)
   // Removed "Speed amid setbacks" (April 3, 2026 — >14 days old, cleaned 2026-04-18)
   // Removed "Celebrate closing weekend" (April 3, 2026 — >14 days old, cleaned 2026-04-18)
   // Removed 2 Telluride Times articles from April 2 (>14 days old)
