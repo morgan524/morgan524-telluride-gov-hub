@@ -4396,17 +4396,8 @@ const COMMUNITY_EVENTS = [
       website: "https://portal.clubrunner.ca/3291",
       note: "No meetings in April. In-person & online options available."
     }
-  },
-  {
-    title: "Elks Lodge Comedy Night with Cindy Pierce",
-    source: "Telluride Elks Lodge 692",
-    date: "March 16, 2026",
-    location: "472 W Pacific Ave, Telluride",
-    copy: "The Telluride Elks Lodge hosted comedian Cindy Pierce for a night of laughs benefiting Tri-County Health Network and the community services they provide across the region. Located at 472 W Pacific Ave, the Lodge regularly hosts social and fundraising events for the Telluride community.",
-    href: "https://www.facebook.com/pages/Telluride-Elks-Lodge-692/232150316875640",
-    notable: true,
-    beneficiary: "Tri-County Health Network"
   }
+  // Removed "Elks Lodge Comedy Night with Cindy Pierce" (March 16, 2026 — past event >30 days old, cleaned 2026-04-19)
 ];
 
 // ── Local Group Recurring Meetings ──
