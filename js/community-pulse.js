@@ -26,36 +26,8 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-19T10:00:00';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-19T16:00:00';
 const COMMUNITY_PULSE_POSTS = [
-  {
-    id: 'fb-2061-049', sourceKey: 'fb-2061',
-    postedAt: '2026-04-14T08:00:00',
-    title: 'Four Seasons worker housing dispute hits courts — down-valley towns push back',
-    excerpt: 'A lawsuit filed in Ouray County District Court challenges the use of the 52-unit MTN Lodge in Ridgway to house construction workers building the $1 billion Four Seasons Resort in Mountain Village. The town of Ridgway argues the lodge sits on land zoned for temporary stays, not long-term worker housing. Down-valley communities say they are bearing the housing burden while resort towns reap the financial benefits. The lodge owner says closure is the alternative if the lease is blocked.',
-    tags: ['Housing', 'Development', 'Four Seasons', 'Legal'], featured: true, eventRelated: false
-  },
-  {
-    id: 'fb-3395-038', sourceKey: 'fb-3395',
-    postedAt: '2026-04-14T09:00:00',
-    title: 'Lightning-caused wildfire near airport contained — dry conditions persist',
-    excerpt: 'A lightning-caused wildfire approximately 2 miles northwest of Telluride Regional Airport near the Greyhead subdivision was contained after response from Telluride Fire, San Miguel County Sheriff, U.S. Forest Service, and BLM. The fire burned less than 3 acres with no threat to public safety. Snowpack remains at just 15% of median as of early April, underscoring ongoing drought conditions and elevated wildfire risk heading into summer.',
-    tags: ['Wildfire', 'Safety', 'Drought', 'Airport'], featured: false, eventRelated: false
-  },
-  {
-    id: 'fb-2061-050', sourceKey: 'fb-2061',
-    postedAt: '2026-04-14T10:00:00',
-    title: 'People\'s March returns April 25 — community rally in downtown Telluride',
-    excerpt: 'The next People\'s March in Telluride is scheduled for Friday, April 25, 2026, following the previous march held March 28. The community-organized event brings residents together on West Colorado Avenue for a public demonstration. Details and updates available through local organizers.',
-    tags: ['Community', 'Events', 'Civic', 'Upcoming Event'], featured: false, eventRelated: true
-  },
-  {
-    id: 'mountainfilm-003', sourceKey: 'mountainfilm',
-    postedAt: '2026-04-14T11:00:00',
-    title: 'Mountainfilm reveals Minds Moving Mountains speaker lineup for 2026',
-    excerpt: 'Mountainfilm announced the full speaker lineup for its Minds Moving Mountains series at the 48th annual festival, May 21–25 in Telluride. The speaker series brings thought leaders, activists, and storytellers to the festival alongside documentary film screenings. Guest director Cristina Mittermeier, a conservationist and marine biologist, curates this year\'s program. Full lineup and festival passes at mountainfilm.org.',
-    tags: ['Festival', 'Film', 'Speakers', 'Arts'], featured: false, eventRelated: true
-  },
   {
     id: 'fb-3395-039', sourceKey: 'fb-3395',
     postedAt: '2026-04-15T08:00:00',
@@ -258,6 +230,20 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Reminder: Telluride Town Council special-election petitions due tomorrow at 5 PM',
     excerpt: 'Tomorrow \u2014 Monday, April 20 at 5 p.m. \u2014 is the deadline for prospective candidates to file petitions for the Town of Telluride\'s June 30 special election. Two Council seats are on the ballot: one vacated by former Mayor Pro Tem Meehan Fee and one currently held by appointed Councilmember Marya Stark. Petitions require 25 valid signatures from registered Telluride voters and must be turned in to the Town Clerk\'s office at Rebekah Hall before the deadline.',
     tags: ['Elections', 'Deadline', 'Town Government', 'Council'], featured: true, eventRelated: true
+  },
+  {
+    id: 'fb-3395-047', sourceKey: 'fb-3395',
+    postedAt: '2026-04-19T12:00:00',
+    title: 'SMART free shuttle filling in for gondola — rider guide for shoulder-season travel',
+    excerpt: 'The San Miguel Authority for Regional Transportation (SMART) is running a free shuttle between Telluride and Mountain Village every day while the gondola is closed for spring maintenance. The gondola, which closed after its final winter day April 5, reopens Thursday, May 21 for the summer season. The shuttle is designed for commuters, visitors, and anyone making the cross-town connection typically handled by the gondola. Routing, pickup locations, and schedule details are posted at smarttelluride.colorado.gov and on the Town of Mountain Village website.',
+    tags: ['Transportation', 'Gondola', 'Mountain Village', 'Shoulder Season'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-2061-065', sourceKey: 'fb-2061',
+    postedAt: '2026-04-19T13:00:00',
+    title: 'Early-season water restrictions in effect — three-day watering schedule, 70–75% system setting',
+    excerpt: 'Outdoor watering restrictions adopted by the Town of Telluride in late March remain in effect as snowpack sits at roughly 15% of median. Irrigation is allowed only Mondays, Wednesdays, and Fridays \u2014 before 8 a.m. or after 7 p.m. Irrigation systems must be set to 70\u201375% of normal usage, and all exterior water features must be turned off. Mountain Village has parallel restrictions. The proactive approach is designed to protect long-term municipal supply heading into what forecasters warn could be an above-normal fire season. Full details at telluride.gov.',
+    tags: ['Water', 'Drought', 'Conservation', 'Town Government'], featured: true, eventRelated: false
   }
 ];
 const CP_MAX_POSTS = 20;
