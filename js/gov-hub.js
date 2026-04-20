@@ -6727,17 +6727,6 @@ const HOUSING_LISTINGS = [
   },
   /* ── Market-Rate Active Listings ── */
   {
-    title: '2BR/2BA — 447 W Galena Ave (Available May 1)',
-    type: 'market-rental',
-    address: '447 W Galena Ave, Telluride, CO 81435',
-    lat: 37.9375, lng: -107.8115,
-    beds: '2 Bedroom, 2 Bath (900+ sq ft)', price: '$4,000/mo + utilities',
-    source: 'Telluride News Classifieds',
-    contact: {},
-    url: 'https://www.telluridenews.com/classifieds/housing/rent/ad_6809ac7b-963e-4f73-81da-fd378119b520.html',
-    note: 'Historic house in downtown Telluride. Available May 1, 2026. Contact listing for details. Posted April 2026.'
-  },
-  {
     title: '1BR — 107 W Columbia Ave',
     type: 'market-rental',
     address: '107 W Columbia Ave, Telluride, CO 81435',
