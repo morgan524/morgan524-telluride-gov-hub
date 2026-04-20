@@ -26,36 +26,8 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-20T12:00:00';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-20T18:00:00';
 const COMMUNITY_PULSE_POSTS = [
-  {
-    id: 'fb-3395-039', sourceKey: 'fb-3395',
-    postedAt: '2026-04-15T08:00:00',
-    title: 'Snowpack at 15% of median — drought emergency deepens across San Miguel County',
-    excerpt: 'Snowpack in the San Miguel basin stands at just 15% of median as of early April, well below the threshold needed for normal summer water supply. Both Telluride and Mountain Village have outdoor water restrictions in place, and additional restrictions may follow. The severe drought heightens wildfire risk and threatens irrigation and municipal water supplies through the summer season. Residents urged to conserve water and prepare for potential further restrictions.',
-    tags: ['Water', 'Drought', 'Conservation', 'County'], featured: true, eventRelated: false
-  },
-  {
-    id: 'fb-3395-040', sourceKey: 'fb-3395',
-    postedAt: '2026-04-15T09:00:00',
-    title: 'NightGrass pre-sale opens next week — Bluegrass Festival late-night shows June 17–21',
-    excerpt: 'NightGrass shows for the 2026 Telluride Bluegrass Festival (June 17–21) go on pre-sale Wednesday, April 22 and general sale Thursday, April 23. Late-night performances across four venues including Greensky Bluegrass, Infamous Stringdusters, Punch Brothers, and more. Text NIGHTGRASS to 1-844-326-3296 for pre-sale access. Details at bluegrass.com.',
-    tags: ['Festival', 'Music', 'Tickets', 'Upcoming Event'], featured: false, eventRelated: true
-  },
-  {
-    id: 'c7cc-023b', sourceKey: 'c7cc',
-    postedAt: '2026-04-15T10:00:00',
-    title: 'SMRHA housing lottery drawing April 24 — three deed-restricted units to be awarded',
-    excerpt: 'The lottery drawing for three deed-restricted homeownership units through SMRHA takes place Thursday, April 24 at 10 AM at Rebekah Hall. Units available: Silver Jack 202 and Silver Jack 205 at 155 W Pacific Ave, and Element 52 SW-102 at 398 S Davis St. Applications closed April 10. Visit smrha.org or email admin@smrha.org for details.',
-    tags: ['Housing', 'Affordable', 'Lottery', 'Upcoming Event'], featured: true, eventRelated: true
-  },
-  {
-    id: 'fb-2061-051', sourceKey: 'fb-2061',
-    postedAt: '2026-04-15T11:00:00',
-    title: 'Business Stabilization Grant notifications expected April 22 — review wrapping up',
-    excerpt: 'Review of Town of Telluride Business Stabilization Assistance Grant applications wraps up this week, with applicant notifications expected by April 22. The program has distributed approximately $290,876 to 46 locally owned businesses impacted by the ski resort closure, part of the $400,000 economic relief package. Contact the Town Clerk\'s office with questions.',
-    tags: ['Business', 'Town Government', 'Relief'], featured: true, eventRelated: false
-  },
   {
     id: 'fb-2061-052', sourceKey: 'fb-2061',
     postedAt: '2026-04-16T08:00:00',
@@ -265,6 +237,27 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Week ahead: County Commissioners resume Wednesday, Mountain Village Council meets Thursday',
     excerpt: 'Government meetings return this week after the spring break recess. The San Miguel County Board of County Commissioners holds its first regular meeting of the month on Wednesday, April 22 at 9:30 a.m. — agendas are posted at sanmiguelcountyco.gov. On Thursday, April 23, the Mountain Village Town Council considers a first reading of proposed amendments to the Community Development Code\'s lighting regulations, aimed at modernizing dark-sky and outdoor-lighting standards. The Telluride Regional Airport Authority also has a special meeting Tuesday, April 21 at 1 p.m. at Hangar 30.',
     tags: ['Government', 'County', 'Mountain Village', 'Meeting', 'Upcoming Event'], featured: false, eventRelated: true
+  },
+  {
+    id: 'fb-2061-069', sourceKey: 'fb-2061',
+    postedAt: '2026-04-20T11:00:00',
+    title: 'Entrada Parking Lot closed Tuesday for sweeping and striping \u2014 use alternate lots',
+    excerpt: 'The Town of Telluride will close the Entrada Parking Lot on Tuesday, April 21 for sweeping and striping, delayed from an earlier date due to weather. The lot will be closed for the full day while crews complete the work. Motorists should use the Carhenge lot or street parking as alternatives. The maintenance is part of regular spring preparation ahead of summer visitor season.',
+    tags: ['Transportation', 'Parking', 'Town Government', 'Public Works'], featured: false, eventRelated: false
+  },
+  {
+    id: 'fb-3395-048', sourceKey: 'fb-3395',
+    postedAt: '2026-04-20T12:00:00',
+    title: 'NightGrass pre-sale Wednesday, general sale Thursday \u2014 Bluegrass late-night shows June 17\u201321',
+    excerpt: 'The NightGrass pre-sale for late-night shows during the 2026 Telluride Bluegrass Festival (June 17\u201321) opens Wednesday, April 22. General sale follows Thursday, April 23. Acts include Greensky Bluegrass, Infamous Stringdusters, Punch Brothers, and more across four downtown venues. Text NIGHTGRASS to 1-844-326-3296 for pre-sale access. Full lineup and ticket details at bluegrass.com.',
+    tags: ['Festival', 'Music', 'Tickets', 'Upcoming Event'], featured: true, eventRelated: true
+  },
+  {
+    id: 'c7cc-024', sourceKey: 'c7cc',
+    postedAt: '2026-04-20T13:00:00',
+    title: 'SMRHA housing lottery this Friday \u2014 three deed-restricted units awarded at Rebekah Hall',
+    excerpt: 'The San Miguel Regional Housing Authority lottery drawing takes place this Friday, April 24 at 10 AM at Rebekah Hall, 113 W Colorado Ave. Three deed-restricted homeownership units will be awarded: Silver Jack 202 and Silver Jack 205 at 155 W Pacific Ave, and Element 52 SW-102 at 398 S Davis St. Applications closed April 10. Results will be posted at smrha.org after the drawing.',
+    tags: ['Housing', 'Affordable', 'Lottery', 'Upcoming Event'], featured: true, eventRelated: true
   }
 ];
 const CP_MAX_POSTS = 20;
