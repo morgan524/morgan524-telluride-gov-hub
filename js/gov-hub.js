@@ -6604,7 +6604,7 @@ const HOUSING_LISTINGS = [
     drawingLocation: 'SMRHA Office, 820 Black Bear Rd, Unit G17, Telluride',
     pickupLocation: '820 Black Bear Rd, Unit G17, Telluride (or download at smrha.org/lottery)',
     eligibility: 'Must work 1,400+ hrs/yr in San Miguel, Ouray, San Juan, or Montrose County · Must have lived in 4-county region 12+ months · Household income up to 220% AMI · Asset limits apply',
-    note: 'APPLICATIONS CLOSED (deadline was April 10, 2026). Drawing scheduled for April 24, 2026 at 10:00 AM at SMRHA Office. Ownership lottery under Telluride Affordable Housing Guidelines.'
+    note: 'APPLICATIONS CLOSED. LOTTERY DRAWING THIS WEEK — April 24, 2026 at 10:00 AM at SMRHA Office (820 Black Bear Rd, Unit G17). Ownership lottery under Telluride Affordable Housing Guidelines.'
   },
   {
     title: '🏠 Silver Jack Unit 205 — 2BR Condo (Deed-Restricted)',
@@ -6622,7 +6622,7 @@ const HOUSING_LISTINGS = [
     drawingLocation: 'SMRHA Office, 820 Black Bear Rd, Unit G17, Telluride',
     pickupLocation: '820 Black Bear Rd, Unit G17, Telluride (or download at smrha.org/lottery)',
     eligibility: 'Must work 1,400+ hrs/yr in San Miguel, Ouray, San Juan, or Montrose County · Must have lived in 4-county region 12+ months · Household income up to 220% AMI · Asset limits apply',
-    note: 'APPLICATIONS CLOSED (deadline was April 10, 2026). Drawing scheduled for April 24, 2026 at 10:00 AM at SMRHA Office. Ownership lottery under Telluride Affordable Housing Guidelines.'
+    note: 'APPLICATIONS CLOSED. LOTTERY DRAWING THIS WEEK — April 24, 2026 at 10:00 AM at SMRHA Office (820 Black Bear Rd, Unit G17). Ownership lottery under Telluride Affordable Housing Guidelines.'
   },
   {
     title: '🏠 Element 52 SW-102 — 2BR Condo (Deed-Restricted)',
@@ -6640,7 +6640,7 @@ const HOUSING_LISTINGS = [
     drawingLocation: 'SMRHA Office, 820 Black Bear Rd, Unit G17, Telluride',
     pickupLocation: '820 Black Bear Rd, Unit G17, Telluride (or download at smrha.org/lottery)',
     eligibility: 'Must work 1,400+ hrs/yr in San Miguel, Ouray, San Juan, or Montrose County · Must have lived in 4-county region 12+ months · Household income up to 220% AMI · Asset limits apply',
-    note: 'APPLICATIONS CLOSED (deadline was April 10, 2026). Drawing scheduled for April 24, 2026 at 10:00 AM at SMRHA Office. Ownership lottery under Telluride Affordable Housing Guidelines.'
+    note: 'APPLICATIONS CLOSED. LOTTERY DRAWING THIS WEEK — April 24, 2026 at 10:00 AM at SMRHA Office (820 Black Bear Rd, Unit G17). Ownership lottery under Telluride Affordable Housing Guidelines.'
   },
   /* ── Deed-Restricted For Sale — SMRHA Property Listings ── */
   {
@@ -6741,7 +6741,7 @@ const HOUSING_LISTINGS = [
     source: 'Town of Telluride',
     contact: { phone: '(970) 728-4025', email: 'housing@telluride-co.gov' },
     url: 'https://telluride.gov/745/Town-Owned-Rental-Properties',
-    note: 'Waitlist-based. Town employee priority. Apply through the Town of Telluride.'
+    note: 'Waitlist-based. Town employee priority. NEW FOR 2026: Temporary reduced work-hour requirement (1,200 hrs/yr, down from 1,400) for leases executed in 2026. Minor income exclusion also now in effect. Apply through the Town of Telluride.'
   },
   {
     title: 'Virginia Placer Apartments — Waitlist',
@@ -6752,7 +6752,7 @@ const HOUSING_LISTINGS = [
     source: 'Town of Telluride',
     contact: { phone: '(970) 728-4025', email: 'housing@telluride-co.gov' },
     url: 'https://telluride.gov/745/Town-Owned-Rental-Properties',
-    note: 'Waitlist-based. Apply through the Town of Telluride Rental Housing division.'
+    note: 'Waitlist-based. NEW FOR 2026: Temporary reduced work-hour requirement (1,200 hrs/yr, down from 1,400) for leases executed in 2026. Minor income exclusion also now in effect. Apply through the Town of Telluride Rental Housing division.'
   },
   /* ── Deed-Restricted For Sale — MLS/Market Listings ── */
   {
@@ -6767,6 +6767,17 @@ const HOUSING_LISTINGS = [
     note: 'Newly built (2025) deed-restricted home in Lawson Hill subdivision. Partially furnished with full appliances. Buyers must qualify under SMRHA deed restriction guidelines. Contemporary style, 0.067-acre lot.'
   },
   /* ── Market-Rate Active Listings ── */
+  {
+    title: '2BR/2BA — 447 W Galena Ave (Available May 1)',
+    type: 'market-rental',
+    address: '447 W Galena Ave, Telluride, CO 81435',
+    lat: 37.9375, lng: -107.8115,
+    beds: '2 Bedroom, 2 Bath (900+ sq ft)', price: '$4,000/mo + utilities',
+    source: 'Telluride News Classifieds',
+    contact: {},
+    url: 'https://www.telluridenews.com/classifieds/housing/rent/ad_6809ac7b-963e-4f73-81da-fd378119b520.html',
+    note: 'Historic house in downtown Telluride. Available May 1, 2026. Contact listing for details. Posted April 2026.'
+  },
   {
     title: '1BR — 107 W Columbia Ave',
     type: 'market-rental',
