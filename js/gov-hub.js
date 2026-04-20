@@ -5135,21 +5135,6 @@ const LEGAL_NOTICES = [
   },
   // ── March 5-11 ──
   {
-    title: 'Notice to Creditors -- Estate of Joyce Ann Allred',
-    entity: 'San Miguel County District Court',
-    entityClass: 'ent-county',
-    entityLogo: 'county',
-    icon: '📜',
-    iconClass: 'type-hearing',
-    type: 'Estate Notice',
-    filterTag: 'estate',
-    summary: 'All persons having claims against the estate of Joyce Ann Allred (Case No. 2026PR30001) must present them to the personal representative or to District Court of San Miguel County on or before April 20, 2026, or claims may be forever barred. Representative: Michael D. Allred c/o Hoskin, Farina & Kampf, P.C., Grand Junction.',
-    deadline: 'Claims due by April 20, 2026',
-    expires: '2026-04-20',
-    dates: '2/19, 2/26, 3/5',
-    papers: ['ttimes_mar5']
-  },
-  {
     title: 'Notice of Vesting -- 116 E Columbia Ave Remodel Addition',
     entity: 'Town of Telluride',
     entityClass: 'ent-county',
@@ -5466,23 +5451,6 @@ const LEGAL_NOTICES = [
     dates: '4/16',
     papers: ['ttimes_apr16'],
     address: 'Norwood Ranger District, P.O. Box 388, Norwood, CO 81428'
-  },
-  // ── April 16 (Telluride Times — Norwood Public Schools Re-Zoning) ──
-  {
-    title: 'Public Hearing -- Norwood Public Schools Re-Zoning Application (2038 Maverick Way)',
-    entity: 'Town of Norwood Planning & Zoning / Board of Trustees',
-    entityClass: 'ent-county',
-    entityLogo: 'norwood',
-    icon: '🏫',
-    iconClass: 'type-hearing',
-    type: 'Public Hearing',
-    filterTag: 'ordinance',
-    summary: 'Norwood Public Schools has applied for a re-zoning of the premises located at 2038 Maverick Way, Norwood, CO 81428. Public hearings will be held before the Town of Norwood Planning and Zoning Commission at 6:30 PM and the Norwood Board of Trustees at 7:00 PM on April 20, 2026 at 1250 Naturita Street, Norwood. Applicant officer: Reilly O\'Brien.',
-    deadline: 'Public hearings: April 20, 2026 at 6:30 PM (P&Z) and 7:00 PM (Board of Trustees)',
-    expires: '2026-04-20',
-    dates: '4/16',
-    papers: ['ttimes_apr16'],
-    address: '2038 Maverick Way, Norwood, CO 81428'
   },
   // ── April 16 (Telluride Times — Town of Telluride Design Standards RFP) ──
   {
