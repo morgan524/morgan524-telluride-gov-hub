@@ -4811,7 +4811,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-04-20'; // Updated by legal-notice-update task (Element 52 SW-102 sale hearing 4/23, Ordinance 1651 Wildfire Resiliency Code adoption, Norwood P&Z rezone hearing 4/20)
+const LEGAL_NOTICES_CACHE_DATE = '2026-04-20'; // Updated by legal-notice-update task (water restrictions Telluride & MV, Element 52 SW-102 sale hearing 4/23, Ordinance 1651 Wildfire Resiliency Code)
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -5497,6 +5497,39 @@ const LEGAL_NOTICES = [
     dates: '4/9',
     papers: ['ttimes_apr9'],
     address: '2503 Maverick Way, Norwood, CO 81424'
+  },
+  // ── April 17 (Town Water Restrictions — Drought) ──
+  {
+    title: 'Outdoor Water Restrictions -- Town of Telluride (Effective March 31)',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '💧',
+    iconClass: 'type-rates',
+    type: 'Public Notice',
+    filterTag: 'utilities',
+    summary: 'The Town of Telluride implemented early-season outdoor water restrictions effective March 31, 2026 due to exceptionally low snowpack (15% of median as of April 7) and anticipated dry conditions. Outdoor watering limited to Mondays, Wednesdays, and Fridays only, before 8 AM or after 7 PM. Irrigation systems must be set to 70-75% of normal usage. All exterior water features must be turned off. Trucked-in water may not be connected to irrigation systems. Additional restrictions may be imposed if conditions worsen. Contact: Town of Telluride Public Works.',
+    deadline: 'In effect until further notice',
+    expires: '2026-09-30',
+    dates: '3/31, 4/7',
+    papers: ['town_web'],
+    url: 'https://telluride.gov/CivicAlerts.aspx?AID=388'
+  },
+  {
+    title: 'Outdoor Water Restrictions -- Town of Mountain Village (Effective March 30)',
+    entity: 'Town of Mountain Village',
+    entityClass: 'ent-mv',
+    entityLogo: 'mv',
+    icon: '💧',
+    iconClass: 'type-rates',
+    type: 'Public Notice',
+    filterTag: 'utilities',
+    summary: 'The Town of Mountain Village implemented outdoor water restrictions effective March 30, 2026 in anticipation of a dry spring and summer with snowpack at 15% of median. Properties north of Mountain Village Blvd and Elk Run: water Mon/Wed/Fri, 7 PM-8 AM. Properties south of Mountain Village Blvd, Ski Ranches, and Skyfield: water Tue/Thu/Sat, 7 PM-8 AM. All irrigation must be set to 70-75% of normal. Exterior water features must be turned off. No trucked-in water for irrigation. If conditions do not improve, all exterior watering may be banned.',
+    deadline: 'In effect until further notice',
+    expires: '2026-09-30',
+    dates: '3/30, 4/7',
+    papers: ['county_web'],
+    url: 'https://townofmountainvillage.com/green-living/water-programs/water-conservation/'
   },
 ];
 
