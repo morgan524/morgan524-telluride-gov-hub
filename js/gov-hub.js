@@ -861,13 +861,7 @@ const NORWOOD_CACHED_DATA = [
     agendaUrl: 'https://www.norwoodtown.com/files/9f7d271ce/04.20.2026+P%26Z+BOA+AGENDA.pdf'
   },
   // ── Water Commission ──
-  {
-    date: 'April 14, 2026',
-    title: 'Norwood Water Commission Meeting',
-    board: 'nwc',
-    agendaUrl: null,
-    note: 'Next scheduled NWC meeting -- agenda posted before the meeting.'
-  },
+  // Removed April 14 Norwood Water Commission meeting (>6 days past, cleaned 2026-04-20)
   // ── Sanitation District ──
   // Removed April 9 Sanitation District meeting (>7 days past)
 ];
@@ -4138,24 +4132,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/news/article_b37a3e41-bf0f-495e-bef8-3dc5135581be.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3a/c3aca597-9016-4023-b145-d4ce28b8a655/69d49367e040c.image.jpg"
   },
-  {
-    title: "Local delegation represented at Democratic State Assembly",
-    source: "Telluride Times",
-    date: "April 6, 2026",
-    newsTopic: "government",
-    copy: "San Miguel County delegates Wyszynski, Ahern and Reich joined 1,400 Democratic Party delegates at the biennial state assembly on March 28 to designate candidates for the ballot.",
-    href: "https://www.telluridenews.com/news/article_28653816-b332-4929-9bff-df456a6cb38c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/f0/4f0ce2dd-4d86-47fa-85e0-d5f705c7945b/69d427cb86559.image.jpg"
-  },
-  {
-    title: "Telluride paramedic rides to Ukraine",
-    source: "Telluride Times",
-    date: "April 6, 2026",
-    newsTopic: "community",
-    copy: "Local paramedic Heidi Attenberger is riding her bike from Munich, Germany to Lviv, Ukraine this summer to raise funds for an Estonian aid organization that sends evacuation trucks to the front.",
-    href: "https://www.telluridenews.com/news/article_b84341f1-a75d-449c-98f5-ce239bca88b9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/84/c84d653f-ad57-421f-b4b7-e3c492602d26/69cf5ef42153e.image.jpg"
-  },
+  // Removed 2 Telluride Times articles from April 6 (>14 days old, cleaned 2026-04-20)
   {
     title: "Welcome to Yappy Hour",
     source: "Telluride Times",
@@ -4186,25 +4163,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   // Removed 2 stale Telluride Times articles from March 29 (>14 days old)
   // Removed 2 stale Telluride Times articles from March 28 (>14 days old)
   // Removed 4 stale Telluride Times articles from March 27 and earlier (>14 days old)
-  {
-    title: "Take the plunge: petition process underway for council candidates",
-    source: "Telluride Times",
-    date: "April 5, 2026",
-    newsTopic: "government",
-    copy: "The petition process is underway for candidates seeking seats on the Telluride Town Council in a June 30 special election to fill two council vacancies, with petitions due April 20.",
-    href: "https://www.telluridenews.com/news/article_92bfab96-4947-41b7-a1ef-d1e682f59d33.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/0d/30d9377d-5c3c-474b-a710-dfd7f142de66/69cf61ea20a7e.image.jpg"
-  },
-  // Removed "Watering our roots" (April 3, 2026 — >14 days old, cleaned 2026-04-18)
-  {
-    title: "Peace is the gift",
-    source: "Telluride Times",
-    date: "April 5, 2026",
-    newsTopic: "community",
-    copy: "The West End VFW heeds the call. Uranium Post no. 9058 in Nucla coordinated the construction of a wheelchair ramp for a Norwood veteran, showing small-town VFW spirit.",
-    href: "https://www.telluridenews.com/news/article_07ab0249-8990-4238-b6c5-dbda39cce370.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/b1/6b132ad4-2e70-4cc0-aecf-c798d3ce5c2b/69cf6909b1214.image.jpg"
-  },
+  // Removed 2 Telluride Times articles from April 5 (>14 days old, cleaned 2026-04-20)
   // Removed 3 Telluride Times articles from April 4 (>14 days old, cleaned 2026-04-19)
   // Removed "Speed amid setbacks" (April 3, 2026 — >14 days old, cleaned 2026-04-18)
   // Removed "Celebrate closing weekend" (April 3, 2026 — >14 days old, cleaned 2026-04-18)
