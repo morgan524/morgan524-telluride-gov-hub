@@ -3851,7 +3851,7 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 });
 
 // ══════════ TELLURIDE TIMES — CURRENT HOMEPAGE STORIES ══════════
-// Updated: 2026-04-19  — refresh periodically from telluridenews.com
+// Updated: 2026-04-20  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Safety and health come first during festival season",
@@ -3878,7 +3878,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "government",
     copy: "Incumbent director Dave Alexander faces challenger Joanna Yonder in the San Miguel Power Association District 3 board election. Both candidates discuss their visions for managing energy costs and infrastructure while serving co-op members across the region.",
     href: "https://www.telluridenews.com/news/article_a019f39e-3a7f-4c99-861a-6dd7517d0533.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/8e/a8e61fcd-9110-4d4f-b78e-a5b33220bc49/69dfe390e3b7c.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/55/055df151-cd4e-43b4-84cc-f78688c91d78/69e1b0b187411.image.jpg"
   },
   {
     title: "\u2018If you need a bike, I\u2019ll get you a bike\u2019",
@@ -3892,9 +3892,9 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "The Big BAM Bash",
     source: "Telluride Times",
-    date: "April 17, 2026",
+    date: "April 18, 2026",
     newsTopic: "arts-culture",
-    copy: "Eight musical groups will compete in a battle of the bands competition on Friday, April 24, showcasing local talent and community spirit in Telluride.",
+    copy: "As many as four youth and four adult musical groups — eight bands in total — will square off in a rollicking, first-ever battle of the bands competition on Friday, April 24.",
     href: "https://www.telluridenews.com/arts_and_entertainment/article_aeb39527-3a52-4fad-906c-0cad39da6fd9.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/78/4781eb53-eb29-43cd-9609-710d60a58474/69e24f281b4c3.image.jpg"
   },
@@ -3905,7 +3905,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "sports",
     copy: "Three THS boys basketball players earned All-San Juan Basin League honors: Miguel Sanchez (First Team), Langston Silbergeld (Second Team), and Alex Nieto (Honorable Mention).",
     href: "https://www.telluridenews.com/sports/article_35825b51-1943-4aa2-8db0-1a47ac90a4e8.html",
-    img: ""
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/07/d075a00c-fe58-46cd-b572-0b01af89ce08/69de7986c32a6.image.jpg"
   },
   {
     title: "Giving their all",
@@ -3923,7 +3923,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "public-safety",
     copy: "Former San Miguel County Sheriff\u2019s Office deputy Jesus Damian Nieblas was sentenced to 10 years in prison after pleading guilty to multiple felony charges involving crimes against children.",
     href: "https://www.telluridenews.com/news/article_960ed152-5b3a-42d6-bdc4-f92f6be11557.html",
-    img: ""
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/8e/a8e61fcd-9110-4d4f-b78e-a5b33220bc49/69dfe390e3b7c.image.jpg"
   },
   {
     title: "Spring balancing acts",
