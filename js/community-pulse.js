@@ -26,7 +26,7 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-19T16:00:00';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-20T12:00:00';
 const COMMUNITY_PULSE_POSTS = [
   {
     id: 'fb-3395-039', sourceKey: 'fb-3395',
@@ -244,6 +244,27 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Early-season water restrictions in effect — three-day watering schedule, 70–75% system setting',
     excerpt: 'Outdoor watering restrictions adopted by the Town of Telluride in late March remain in effect as snowpack sits at roughly 15% of median. Irrigation is allowed only Mondays, Wednesdays, and Fridays \u2014 before 8 a.m. or after 7 p.m. Irrigation systems must be set to 70\u201375% of normal usage, and all exterior water features must be turned off. Mountain Village has parallel restrictions. The proactive approach is designed to protect long-term municipal supply heading into what forecasters warn could be an above-normal fire season. Full details at telluride.gov.',
     tags: ['Water', 'Drought', 'Conservation', 'Town Government'], featured: true, eventRelated: false
+  },
+  {
+    id: 'fb-2061-066', sourceKey: 'fb-2061',
+    postedAt: '2026-04-20T08:00:00',
+    title: 'Community Survey open through May 21 — resident feedback shapes Council priorities and budget',
+    excerpt: 'The Town of Telluride\'s third annual National Community Survey is open now through midnight on Thursday, May 21. Administered by Polco, the survey captures resident feedback on the economy, mobility, community design, utilities, safety, natural environment, and overall livability. Results will directly inform Town Council goals and future budget allocations. "Our residents don\'t just live in Telluride, they define it," said Town Manager Zoe Dohnal. Take the survey at bit.ly/totsurvey26.',
+    tags: ['Town Government', 'Survey', 'Community', 'Budget'], featured: true, eventRelated: false
+  },
+  {
+    id: 'fb-2061-067', sourceKey: 'fb-2061',
+    postedAt: '2026-04-20T09:00:00',
+    title: 'Special-election petition deadline TODAY at 5 PM — candidates need 25 signatures to qualify',
+    excerpt: 'Today, Monday, April 20 at 5 p.m., is the final deadline for prospective candidates to file petitions for the Town of Telluride\'s June 30 special election. Two Council seats are on the ballot: one vacated by former Mayor Pro Tem Meehan Fee and one held by appointed Councilmember Marya Stark, who has confirmed she will run. Candidates must submit petitions with 25 valid signatures from registered Telluride voters to the Town Clerk\'s office at Town Hall, 135 W. Columbia Ave. Registered voters may sign up to two petitions. Certified candidates will be announced after verification.',
+    tags: ['Elections', 'Deadline', 'Town Government', 'Council'], featured: true, eventRelated: true
+  },
+  {
+    id: 'fb-2061-068', sourceKey: 'fb-2061',
+    postedAt: '2026-04-20T10:00:00',
+    title: 'Week ahead: County Commissioners resume Wednesday, Mountain Village Council meets Thursday',
+    excerpt: 'Government meetings return this week after the spring break recess. The San Miguel County Board of County Commissioners holds its first regular meeting of the month on Wednesday, April 22 at 9:30 a.m. — agendas are posted at sanmiguelcountyco.gov. On Thursday, April 23, the Mountain Village Town Council considers a first reading of proposed amendments to the Community Development Code\'s lighting regulations, aimed at modernizing dark-sky and outdoor-lighting standards. The Telluride Regional Airport Authority also has a special meeting Tuesday, April 21 at 1 p.m. at Hangar 30.',
+    tags: ['Government', 'County', 'Mountain Village', 'Meeting', 'Upcoming Event'], featured: false, eventRelated: true
   }
 ];
 const CP_MAX_POSTS = 20;
