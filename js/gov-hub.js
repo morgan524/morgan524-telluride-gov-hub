@@ -1109,15 +1109,15 @@ const MANUAL_SUMMARIES = {
   'mv|2026-04-02|Design Review Board':
     'Design review: Lot 164-B1R, San Joaquin Rd (new home + height variance) · Lot 155, San Joaquin Rd (new home) · Lot 1171R, San Joaquin Rd (new home) · Lot 224-B, Snowdrift Ln (new home) · Lot 523-R, Russell Dr (new home) · Lot 533, Russell Dr (new home) · 101 Snowfield Dr (GE encroachment, Lot 360) · 102 Yellow Brick Rd (Lot 17) · 111 San Joaquin Rd (GE encroachment, Lot 154) · 112 Autumn Ln (conditional use permit + ADU, Lot 382-R)',
 
-  // (mv|2026-04-23 -- Town Council, agenda not yet posted, will add when available)
+  // (mv|2026-04-23 -- Town Council, agenda not yet posted as of 2026-04-20 scan, will add when available)
 
   // ── School District R-1 ──
-  // (school|2026-04-20 -- Special Meeting 5:15pm, agenda not yet posted, will add when available)
-  // (school|2026-04-27 -- Work Session 3:30pm, agenda not yet posted, will add when available)
-  // (school|2026-04-28 -- Monthly Meeting 5:15pm, agenda not yet posted, will add when available)
+  // (school|2026-04-20 -- Special Meeting 5:15pm, agenda not yet posted as of 2026-04-20 scan, will add when available)
+  // (school|2026-04-27 -- Work Session 3:30pm, agenda not yet posted as of 2026-04-20 scan, will add when available)
+  // (school|2026-04-28 -- Monthly Meeting 5:15pm, agenda not yet posted as of 2026-04-20 scan, will add when available)
 
   // ── Fire District ──
-  // (fire|2026-04-21 -- agenda not yet posted, will add when available)
+  // (fire|2026-04-21 -- Fire Protection District board meeting, agenda not yet posted as of 2026-04-20 scan (website only shows through Mar 2026), will add when available)
 
   // ── County Planning Commission ──
   // (county|2026-04-02|Planning Commission -- CANCELED, agenda posted at CivicClerk event 1025, agenda file 1652)
@@ -1130,32 +1130,32 @@ const MANUAL_SUMMARIES = {
   'county|2026-04-23|Citizen\'s Weed Advisory Board':
     'Updates from Vegetation Control & Management: Summer 2026 synopsis, Forest Service Agreement, Noxious Weed Agreements, Cost Share Program · Discussion: new opportunity spraying on private landowner property · Grant funds appropriation to landowners; whether funds should cover SMC VC&M · Vacant Chair position — discussion of filling role · Approval of minutes (3/27/2025, 10/20/2025)',
 
-  // (county|2026-04-29 -- BOCC Work Session, CivicClerk event 985, agenda now listed as available on county calendar as of 2026-04-11 but content behind JS portal — will add summary when content is readable)
-  // (county|2026-04-27 -- Open Space Commission 4pm, agenda not yet posted, will add when available)
+  // (county|2026-04-29 -- BOCC Work Session, CivicClerk event 985, agenda listed on county calendar but content behind JS portal — still unreadable as of 2026-04-20 scan)
+  // (county|2026-04-27 -- Open Space Commission 4pm, meeting confirmed on county calendar, agenda not yet posted as of 2026-04-20 scan)
 
   // ── SMRHA ──
   'smrha|2026-04-13|SMRHA Board Meeting':
     'WORKSESSION: Mapping deed-restricted units for SMRHA website publication · Town of Telluride housing lottery update — Silver Jack 202 & 205, Element 52 SW-102 (22 applications received, drawing Apr 24) · Continuing qualification verification: AHU 100% response (108 completed, 6 in THA legal review), EDU 96% response · Piñon Park: 5 homes currently on market',
 
   // ── Telluride Town Council (next) ──
-  // (telluride|2026-04-28|Town Council -- confirmed Apr 28, agenda not yet posted, will add when available)
-  // (telluride|2026-04-28|Telluride Housing Authority -- confirmed Apr 28 2:30pm, agenda not yet posted)
+  // (telluride|2026-04-28|Town Council -- confirmed Apr 28, agenda not yet posted as of 2026-04-20 scan, typically posted Fri before meeting)
+  // (telluride|2026-04-28|Telluride Housing Authority -- confirmed Apr 28 2:30pm, agenda not yet posted as of 2026-04-20 scan)
 
   // ── Telluride Sub-commissions (Apr 23-24) ──
   'telluride|2026-04-23|Planning & Zoning Commission':
     'WORK SESSION: Gargoyle Building Minor Subdivision / Lot Line Adjustment — 138 E Colorado Ave (Historic Commercial zone, Telluride Vargas Seiger LLC / Alpine Planning) · Colorado Wildfire Resiliency Code — Land Use Code updates work session (continuing from Mar 12 & Mar 26)',
   'telluride|2026-04-23|Liquor Licensing Authority':
     '🍽️ 7 Temporary Modification of Premises (parklet/outdoor) applications for summer 2026: Steamies Burger Bar (300 W Colorado), The Butcher and The Baker (201 E Colorado), Floradora Saloon (103 W Colorado), Brown Dog Pizza/Lost Dog Pizza (110 E Colorado), Stronghouse Brew Pub (283 S Fir St), There... (629 W Pacific), The Telluride Company/Mischief Managed (212 W Colorado) · PUBLIC HEARINGS — Special Event Permits: One to One Mentoring (Food & Vine Festival, Oak St Plaza, Jun 14) · Telluride Education Foundation (Party in the Park, Town Park, May 30) · Mountainfilm (Art Walk May 22 at Telluride Arts; Festival May 23-24 at Elks Park; May 25 at Town Park) · Telluride Bluegrass Beer Booth (5 permits for Bluegrass Festival 2026, June 17-21 at Town Park)',
-  // (telluride|2026-04-23|Telluride Housing Authority Subcommittee Special Meeting -- Apr 23 9am, agenda not yet posted)
+  // (telluride|2026-04-23|Telluride Housing Authority Subcommittee Special Meeting -- Apr 23 9am, agenda not yet posted as of 2026-04-20 scan)
   'telluride|2026-04-24|Telluride Housing Authority Subcommittee Special Meeting':
     'SMRHA LOTTERY DRAWING (10am, Rebekah Hall) — Three deed-restricted units: Silver Jack 202 (3-bed/2-bath, ~$405,507, Tier 1 Town Constructed) & Silver Jack 205 (2-bed/1-bath, ~$368,620, Tier 1 Town Constructed) at 155 W Pacific Ave · Element 52 SW-102 (2-bed/1-bath, ~$352,529, Tier 2 Mitigation) at 398 S Davis St · 22 applications received; qualified household list posted Apr 15; appeal deadline Apr 17 5pm MST',
 
   // (telluride|2026-04-24|Telluride Housing Authority Subcommittee Special Meeting Boarding House Master Lease Lottery -- Apr 24 8:30am, confirmed on CivicWeb but no detailed agenda content found)
-  // (telluride|2026-04-29|Election Commission -- Apr 29 3pm, new meeting discovered, agenda not yet posted)
-  // (telluride|2026-04-29|RESCHEDULED Parks & Recreation Commission -- Apr 29 12pm, rescheduled from Apr 15, agenda not yet posted)
+  // (telluride|2026-04-29|Election Commission -- Apr 29 3pm, agenda not yet posted as of 2026-04-20 scan)
+  // (telluride|2026-04-29|RESCHEDULED Parks & Recreation Commission -- Apr 29 12pm, rescheduled from Apr 15, agenda not yet posted as of 2026-04-20 scan)
 
   // ── Medical Center / Hospital District ──
-  // (med|2026-04-23 -- Regular Board Meeting confirmed in cache, agenda not yet posted)
+  // (med|2026-04-23 -- Telluride Hospital District: no April meeting found on website as of 2026-04-20 scan; last listed meeting was Mar 26)
 
   // ── Telluride Sub-commissions (April 2026) ──
   'telluride|2026-04-01|Telluride Housing Authority Subcommittee':
