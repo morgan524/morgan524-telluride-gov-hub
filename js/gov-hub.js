@@ -1138,8 +1138,10 @@ const MANUAL_SUMMARIES = {
     'WORKSESSION: Mapping deed-restricted units for SMRHA website publication · Town of Telluride housing lottery update — Silver Jack 202 & 205, Element 52 SW-102 (22 applications received, drawing Apr 24) · Continuing qualification verification: AHU 100% response (108 completed, 6 in THA legal review), EDU 96% response · Piñon Park: 5 homes currently on market',
 
   // ── Telluride Town Council (next) ──
-  // (telluride|2026-04-28|Town Council -- confirmed Apr 28, agenda not yet posted as of 2026-04-20 scan, typically posted Fri before meeting)
-  // (telluride|2026-04-28|Telluride Housing Authority -- confirmed Apr 28 2:30pm, agenda not yet posted as of 2026-04-20 scan)
+  'telluride|2026-04-28|Town Council':
+    'PUBLIC HEARING (continued): Stender Residence HARC appeal — small-scale + insubstantial-scale new construction, Lot C Block 3 Halls Addition, N Aspen St (continued from Dec 16, Feb 24, Mar 31) · WORK SESSION: Emergency Evacuation Planning & Municipal Disaster Management (Shannon Armstrong, SM County Emergency Mgr, 60 min) · Update from Telluride Ski and Golf (Steve Swenson) · Manager\u2019s Report: Q1 Goals & Objectives update, Master Lease Program update · Proclamations: May Mental Health Awareness Month, May 9 Valley Floor Day · P&Z appointment: Piper Miller · SECOND READING: Ordinance authorizing sale of deed-restricted Element 52 Unit SW-102 (398 S Davis St) · SECOND READING: Ordinance authorizing sale of deed-restricted Silver Jack Unit 205 (155 W Pacific Ave) · WORK SESSION: Black Hills Energy franchise agreement discussion · Marshal\u2019s Dept annual report · Fire Ban approval process discussion',
+  'telluride|2026-04-28|Telluride Housing Authority':
+    'Consideration of adoption of a Policy Statement regarding the Affordable Housing Waitlist (DeLanie Young-Tapson, Allie Slaten) · Discussion on the formation of a Resident Advisory Committee (continuing from Mar 31)',
 
   // ── Telluride Sub-commissions (Apr 23-24) ──
   'telluride|2026-04-23|Planning & Zoning Commission':
