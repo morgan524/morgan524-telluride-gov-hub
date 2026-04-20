@@ -4809,7 +4809,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-04-18'; // Updated by legal-notice-update task (USDA SkiCo Lifts 6/8, Design Standards RFP, Norwood school rezone, Norwood water, Mill Creek PRV IFB 4/30)
+const LEGAL_NOTICES_CACHE_DATE = '2026-04-20'; // Updated by legal-notice-update task (Element 52 SW-102 sale hearing 4/23, Ordinance 1651 Wildfire Resiliency Code adoption, Norwood P&Z rezone hearing 4/20)
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -5445,6 +5445,56 @@ const LEGAL_NOTICES = [
     papers: ['ttimes_apr16'],
     url: 'https://www.bidnetdirect.com',
     address: '1870 Black Bear Road, Telluride, CO 81435'
+  },
+  // ── April 9 (Telluride Times — Town Council Hearing & Ordinance Adoption) ──
+  {
+    title: 'Public Hearing -- Sale of Element 52 Unit SW-102 (Deed-Restricted)',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🏘️',
+    iconClass: 'type-housing',
+    type: 'Public Hearing',
+    filterTag: 'housing',
+    summary: 'Second reading and public hearing on an ordinance authorizing the sale of Element 52 Unit SW-102, a deed-restricted residential unit. The Town Council will consider approval at its April 23, 2026 meeting at approximately 1:00 PM (hybrid format) at 131 W Columbia Ave, Telluride. The unit is subject to Telluride Affordable Housing Guidelines.',
+    deadline: 'Public hearing: April 23, 2026 at ~1:00 PM',
+    expires: '2026-04-23',
+    dates: '4/9',
+    papers: ['ttimes_apr9'],
+    address: '131 W Columbia Ave, Telluride, CO',
+    event: { date: '2026-04-23', time: '1:00 PM', location: '131 W Columbia Ave, Telluride' }
+  },
+  {
+    title: 'Ordinance No. 1651 -- Adoption of 2024 Colorado Wildfire Resiliency Code',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🔥',
+    iconClass: 'type-hearing',
+    type: 'Ordinance',
+    filterTag: 'ordinance',
+    summary: 'The Town of Telluride adopted Ordinance No. 1651 (Series of 2026) adopting the 2024 Colorado Wildfire Resiliency Code with local amendments. The ordinance takes effect upon publication notice. The code establishes construction and land management standards for fire-prone areas within town limits. Full text available at Town Hall and online.',
+    deadline: 'Effective upon publication',
+    expires: '2026-07-31',
+    dates: '4/9',
+    papers: ['ttimes_apr9'],
+    url: 'https://telluride.municipal.codes/'
+  },
+  {
+    title: 'Public Hearing -- Norwood Public Schools Re-Zoning Application (2028 Maverick Way)',
+    entity: 'San Miguel County Planning & Zoning',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏫',
+    iconClass: 'type-hearing',
+    type: 'Public Hearing',
+    filterTag: 'ordinance',
+    summary: 'San Miguel County Planning & Zoning Commission will hold a public hearing on the Norwood Public Schools re-zoning application for 2028 Maverick Way, Norwood. Hearing scheduled for April 20, 2026 at 5:30 PM (Planning & Zoning) and 6:00 PM (Board). Site development review also on agenda, along with Dark Sky Coalition update and Land Use Code progress update.',
+    deadline: 'Public hearing: April 20, 2026 at 5:30 PM',
+    expires: '2026-04-20',
+    dates: '4/9',
+    papers: ['ttimes_apr9'],
+    address: '2503 Maverick Way, Norwood, CO 81424'
   },
 ];
 
