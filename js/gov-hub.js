@@ -4811,7 +4811,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-04-20'; // Updated by legal-notice-update task (water restrictions Telluride & MV, Element 52 SW-102 sale hearing 4/23, Ordinance 1651 Wildfire Resiliency Code)
+const LEGAL_NOTICES_CACHE_DATE = '2026-04-21'; // Updated by legal-notice-update task (dust control ITB, municipal financial advisor RFP)
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -5530,6 +5530,40 @@ const LEGAL_NOTICES = [
     dates: '3/30, 4/7',
     papers: ['county_web'],
     url: 'https://townofmountainvillage.com/green-living/water-programs/water-conservation/'
+  },
+  // ── April 21 (County Bids Page — New) ──
+  {
+    title: 'Invitation to Bid -- Dust Control (Road & Bridge)',
+    entity: 'San Miguel County Road & Bridge',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🚛',
+    iconClass: 'type-bid',
+    type: 'Bid Notice',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County Road and Bridge Department is accepting bids for Dust Control: delivery of 10,000 gallons of straight MgCl (30% blend) to the county storage tank. Full ITB documents available at sanmiguelcountyco.gov/Bids.aspx.',
+    deadline: 'Open until contract awarded',
+    expires: '2026-06-30',
+    dates: '4/21',
+    papers: ['county_web'],
+    url: 'https://www.sanmiguelcountyco.gov/Bids.aspx'
+  },
+  // ── April 21 (Town of Telluride Bids — New) ──
+  {
+    title: 'RFP -- Municipal Financial Advisor Services',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '💰',
+    iconClass: 'type-rfp',
+    type: 'RFP',
+    filterTag: 'tax-finance',
+    summary: 'The Town of Telluride is soliciting sealed proposals from qualified entities specializing in municipal financial advisor services. Proposals may be submitted through BidNet Direct at www.bidnetdirect.com. Contact the Town of Telluride for full RFP documents and submission requirements.',
+    deadline: 'See BidNet Direct for deadline',
+    expires: '2026-06-30',
+    dates: '4/21',
+    papers: ['town_web'],
+    url: 'https://www.bidnetdirect.com/colorado/townoftelluride'
   },
 ];
 
