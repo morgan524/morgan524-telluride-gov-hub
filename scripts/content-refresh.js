@@ -617,7 +617,8 @@ function extractJsArray(source, varName) {
 function replaceJsValue(source, varName, newValue, isObject = false) {
   const bracket = isObject ? '{' : '[';
   const closeBracket = isObject ? '}' : ']';
-  const startRe = new RegExp(`const\\s+${varName}\\s*=\\s*\\${bracket.replace(/[[\]{}]/g, '\\$&')}`);
+  const escapedBracket = bracket === '[' ? '\\[' : '\\{';
+  const startRe = new RegExp(`const\\s+${varName}\\s*=\\s*${escapedBracket}`);
   const match = startRe.exec(source);
   if (!match) {
     console.warn(`  Could not find ${varName} in source for replacement`);
