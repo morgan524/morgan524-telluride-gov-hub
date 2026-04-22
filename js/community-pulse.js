@@ -64,27 +64,6 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Airport', 'Government', 'Special Meeting'], featured: false, eventRelated: true
   },
 {
-    id: 'fb-2061-057', sourceKey: 'fb-2061',
-    postedAt: '2026-04-17T08:00:00',
-    title: 'CDOT shoulder work on Keystone Hill — expect 20-minute delays between Telluride and Placerville',
-    excerpt: 'The Colorado Department of Transportation is performing culvert cleaning and shoulder clearing operations on CO-145 along Keystone Hill between Mile Points 73 and 74 (Telluride to Placerville). Motorists should expect full stops, alternating one-lane traffic, and delays of up to 20 minutes from 9 a.m. to 3 p.m. on active work days. The routine maintenance is necessary to remove debris and mitigate erosion or flooding on the roadway. This is separate from the ongoing access improvement project west of the Society Turn roundabout.',
-    tags: ['Transportation', 'CDOT', 'Road Work', 'Delays'], featured: false, eventRelated: false
-  },
-{
-    id: 'mountainfilm-005', sourceKey: 'mountainfilm',
-    postedAt: '2026-04-17T09:00:00',
-    title: 'Mountainfilm releases full 2026 schedule — passholder reservations open May 6',
-    excerpt: 'Mountainfilm has released the full schedule for its 48th annual festival, May 21\u201325 in Telluride. Festival passes are on sale now at mountainfilm.org. Passholder film reservations open on a tiered schedule: Ama Dablam and Festival Guest passes on May 6, Palmyra/Student/Crew on May 8, and Wasatch/Volunteer/Senior on May 12. The free Mountainfilm app (iOS and Android) serves as the official festival guide with schedule, film descriptions, and event details. Guest director Cristina Mittermeier curates this year\u2019s conservation-focused program.',
-    tags: ['Festival', 'Film', 'Tickets', 'Upcoming Event'], featured: true, eventRelated: true
-  },
-{
-    id: 'fb-2061-058', sourceKey: 'fb-2061',
-    postedAt: '2026-04-17T10:00:00',
-    title: 'Sheriff launches behavioral health safe transport pilot — Norwood-based program fills West End gap',
-    excerpt: 'San Miguel County Sheriff Dan Covault and Dave Hayes of Guardian Transport and Security in Grand Junction have launched the San Miguel Safe Transport Program, a behavioral health secure transport pilot based in Norwood. The program addresses a critical gap in services for the county\'s West End communities, providing safe transportation for individuals experiencing behavioral health crises. The pilot is expected to serve residents who previously faced long wait times or lacked access to appropriate transport to treatment facilities.',
-    tags: ['Health', 'Safety', 'County', 'West End'], featured: false, eventRelated: false
-  },
-{
     id: 'telski-001', sourceKey: 'telski',
     postedAt: '2026-04-17T14:00:00',
     title: 'Telluride Bike Park closed for summer 2026 — Lift 4 modernization underway',
