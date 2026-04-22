@@ -3856,295 +3856,61 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-20  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "Safety and health come first during festival season",
-    source: "Telluride Times",
-    date: "April 19, 2026",
-    newsTopic: "public-safety",
-    copy: "Music festival season is fast approaching \u2014 a time to gather outdoors with friends, enjoy live music and dance. Local officials and event organizers share their focus on keeping festival-goers safe and healthy this summer.",
-    href: "https://www.telluridenews.com/news/article_959e0960-3070-4c9d-b4b7-2dfb4ce49958.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/2e/22ed2f9b-3f0d-4220-a7b1-b32327c3e123/69e3e01813073.image.jpg"
+    title: 'Road + Bridge Summer Projects',
+    source: 'San Miguel County',
+    date: 'April 8, 2026',
+    newsTopic: 'infrastructure',
+    copy: '',
+    href: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1392'
   },
   {
-    title: "San Miguel Watershed Coalition receives $500,000 for wildfire preparedness",
-    source: "Telluride Times",
-    date: "April 18, 2026",
-    newsTopic: "public-safety",
-    copy: "With a dry winter and focus already on wildfire preparedness for summer and beyond, the San Miguel Watershed Coalition received $500,000 to develop a Wildfire Readiness Action Plan for the region.",
-    href: "https://www.telluridenews.com/news/article_335d69a9-77c0-4f1f-82b8-22a07ffc5de9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/88/f888c95b-00a6-42d8-ac0d-73e7a1744aee/69e336ab1d78a.image.jpg"
+    title: 'Board + Commissions Positions',
+    source: 'San Miguel County',
+    date: 'April 8, 2026',
+    newsTopic: 'government',
+    copy: '',
+    href: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1389'
   },
   {
-    title: "SMPA District 3 board candidates weigh in",
-    source: "Telluride Times",
-    date: "April 17, 2026",
-    newsTopic: "government",
-    copy: "Incumbent director Dave Alexander faces challenger Joanna Yonder in the San Miguel Power Association District 3 board election. Both candidates discuss their visions for managing energy costs and infrastructure while serving co-op members across the region.",
-    href: "https://www.telluridenews.com/news/article_a019f39e-3a7f-4c99-861a-6dd7517d0533.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/55/055df151-cd4e-43b4-84cc-f78688c91d78/69e1b0b187411.image.jpg"
+    title: 'Housing Code Update',
+    source: 'San Miguel County',
+    date: 'April 8, 2026',
+    newsTopic: 'housing',
+    copy: '',
+    href: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1391'
   },
   {
-    title: "\u2018If you need a bike, I\u2019ll get you a bike\u2019",
-    source: "Telluride Times",
-    date: "April 17, 2026",
-    newsTopic: "business",
-    copy: "When Brock Benson returned to the West End of San Miguel County after a more than 20-year hiatus, he had a singular goal in mind: to make a difference in the community through cycling.",
-    href: "https://www.telluridenews.com/business/article_17e6ed12-c222-4bb4-be49-bc7fd0218161.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/b6/5b69bc02-298a-4f3c-8389-5577f5280803/69de832972175.image.png"
+    title: 'Parks + Open Space Projects',
+    source: 'San Miguel County',
+    date: 'April 8, 2026',
+    newsTopic: 'recreation',
+    copy: '',
+    href: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1387'
   },
   {
-    title: "The Big BAM Bash",
-    source: "Telluride Times",
-    date: "April 18, 2026",
-    newsTopic: "arts-culture",
-    copy: "As many as four youth and four adult musical groups — eight bands in total — will square off in a rollicking, first-ever battle of the bands competition on Friday, April 24.",
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_aeb39527-3a52-4fad-906c-0cad39da6fd9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/78/4781eb53-eb29-43cd-9609-710d60a58474/69e24f281b4c3.image.jpg"
+    title: 'Spring Clean Up',
+    source: 'San Miguel County',
+    date: 'April 8, 2026',
+    newsTopic: 'community',
+    copy: '',
+    href: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1386'
   },
   {
-    title: "Miners earn all-league accolades",
-    source: "Telluride Times",
-    date: "April 16, 2026",
-    newsTopic: "sports",
-    copy: "Three THS boys basketball players earned All-San Juan Basin League honors: Miguel Sanchez (First Team), Langston Silbergeld (Second Team), and Alex Nieto (Honorable Mention).",
-    href: "https://www.telluridenews.com/sports/article_35825b51-1943-4aa2-8db0-1a47ac90a4e8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/07/d075a00c-fe58-46cd-b572-0b01af89ce08/69de7986c32a6.image.jpg"
+    title: 'Updated Mining Regulations',
+    source: 'San Miguel County',
+    date: 'April 8, 2026',
+    newsTopic: 'community',
+    copy: '',
+    href: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1385'
   },
   {
-    title: "Giving their all",
-    source: "Telluride Times",
-    date: "April 16, 2026",
-    newsTopic: "sports",
-    copy: "Norwood Middle School track teams delivered impressive performances at the Ridgway Middle School track meet on April 11, with each athlete giving 100% effort despite cool, windy weather.",
-    href: "https://www.telluridenews.com/norwood_post/article_d3a40371-b0ac-4b9d-8ee4-acadb09eb405.html",
-    img: ""
-  },
-  {
-    title: "Former San Miguel County deputy sentenced to prison",
-    source: "Telluride Times",
-    date: "April 15, 2026",
-    newsTopic: "public-safety",
-    copy: "Former San Miguel County Sheriff\u2019s Office deputy Jesus Damian Nieblas was sentenced to 10 years in prison after pleading guilty to multiple felony charges involving crimes against children.",
-    href: "https://www.telluridenews.com/news/article_960ed152-5b3a-42d6-bdc4-f92f6be11557.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/8e/a8e61fcd-9110-4d4f-b78e-a5b33220bc49/69dfe390e3b7c.image.jpg"
-  },
-  {
-    title: "Spring balancing acts",
-    source: "Telluride Times",
-    date: "April 15, 2026",
-    newsTopic: "community",
-    copy: "Columnist Michelle Curry Wright reflects on spring as a season of renewal, exploring mind-body rebalancing from simple cleanses to small shifts in routine.",
-    href: "https://www.telluridenews.com/opinion/columnists/article_bb45f431-9653-488a-afe3-5dffb0ad8e4f.html",
-    img: ""
-  },
-  {
-    title: "Bluegrass Jones? Feed your craving with Wednesday\u2019s NightGrass pre-sale",
-    source: "Telluride Times",
-    date: "April 16, 2026",
-    newsTopic: "arts-culture",
-    copy: "Planet Bluegrass is making the longest days of summer even longer with its after-hours NightGrass lineup, unveiled now and on pre-sale Wednesday, April 22, a day before the public on-sale date.",
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_04a4b832-33f8-4f7c-9287-131cfd928ef4.html",
-    img: ""
-  },
-  {
-    title: "Colorado GOP picks statewide primary candidates after \u2018whirlwind courtship\u2019",
-    source: "Telluride Times",
-    date: "April 15, 2026",
-    newsTopic: "government",
-    copy: "San Miguel County Republicans joined over 2,000 delegates from across Colorado for the Republican State Assembly on April 11 in Pueblo, gathering to designate candidates for statewide office to the June primary ballot.",
-    href: "https://www.telluridenews.com/news/article_1463a95f-376c-463b-85ea-9898d198d503.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/10/910ff84c-b09c-49c0-a048-fbb56e306737/69de855cab92a.image.jpg"
-  },
-  {
-    title: "San Miguel County gets water ready",
-    source: "Telluride Times",
-    date: "April 14, 2026",
-    newsTopic: "public-safety",
-    copy: "With the lowest spring moisture totals in Colorado history and wildland fire season underway, San Miguel County launched its Water Ready Program, strategically placing portable water tanks across the county for rapid wildfire suppression.",
-    href: "https://www.telluridenews.com/news/article_d2a3e166-b053-4557-b7d8-f82693be0888.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/6f/c6f34668-4b14-4b8e-bc6f-404b96d81abd/69de7c9c0de27.image.jpg"
-  },
-  {
-    title: "Lady Miners earn All-League status",
-    source: "Telluride Times",
-    date: "April 14, 2026",
-    newsTopic: "sports",
-    copy: "THS junior Ellarose Aplin was voted Second Team All-San Juan Basin League and senior Lucia Young received Honorable Mention for their standout girls basketball performances this winter.",
-    href: "https://www.telluridenews.com/sports/article_ec624d8d-dd3b-4ab7-a71f-9873f536cea0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/c1/4c10f9da-ad1e-4a17-8b30-cb179bf66ea5/69de70f3419ab.image.jpg"
-  },
-  {
-    title: "Mountainfilm reveals its 2026 Minds Moving Mountains Speaker Series lineup",
-    source: "Telluride Times",
-    date: "April 14, 2026",
-    newsTopic: "arts-culture",
-    copy: "For its 48th edition, Mountainfilm welcomes an exceptional roster of guests to Telluride this Memorial Day Weekend, May 21-25, for the 2026 Minds Moving Mountains Speaker Series.",
-    href: "https://www.telluridenews.com/news_release/article_a2a8dc7c-89cc-40f2-9da6-e899f05a81b3.html",
-    img: ""
-  },
-  {
-    title: "Have van, will travel",
-    source: "Telluride Times",
-    date: "April 13, 2026",
-    newsTopic: "community",
-    copy: "A family road trip in a 1982 VW van — two weeks with kids, a 90-pound dog, and a cat — tests family compatibility while exploring the American West.",
-    href: "https://www.telluridenews.com/news/article_60557203-2d16-47b6-be8c-31122f3e9120.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/40/640400c9-6ae1-4262-962f-eb97a21eee8b/69dd81e6e6891.image.jpg"
-  },
-  {
-    title: "Undaunted dawn: Craig Grother and the Gunnison sage grouse",
-    source: "Telluride Times",
-    date: "April 12, 2026",
-    newsTopic: "community",
-    copy: "A pre-dawn trip to the high sage plains with biologist Craig Grother, who has spent decades studying the imperiled Gunnison sage grouse on the mesas of southwest Colorado.",
-    href: "https://www.telluridenews.com/news/article_ba541143-94f3-4c44-8243-a087c004eb83.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/ed/8ed07efb-0b9b-43fa-b26b-c0e136b85217/69d75061da0c6.image.jpg"
-  },
-  {
-    title: "Small team, big results",
-    source: "Telluride Times",
-    date: "April 12, 2026",
-    newsTopic: "community",
-    copy: "At the District II FFA Career Development Events in Northfork, Reece Elwood placed first and Weston Elwood tied for second, helping their two-person team finish 7th out of 11.",
-    href: "https://www.telluridenews.com/news/article_ca21b2d4-aa99-4906-a5cd-fc27d9ab343c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/7c/f7cf23e9-7440-4054-bbcd-02a3d472b2c8/69d74ece47489.image.png"
-  },
-  {
-    title: "A spring break at Ah Haa for True North youth",
-    source: "Telluride Times",
-    date: "April 11, 2026",
-    newsTopic: "community",
-    copy: "True North participants from Norwood and Nucla High Schools enjoyed a spring break staycation, taking workshops at Ah Haa School for the Arts in encaustic painting, stained-glass welding, and scratch cooking.",
-    href: "https://www.telluridenews.com/news/article_e870359a-e4c5-4bd7-9b35-e4e36ea44180.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/9d/b9ddf424-b914-4844-b9c2-dabf1f2ba8ae/69d74c66839ba.image.jpg"
-  },
-  {
-    title: "\u2018A sense of belonging\u2019",
-    source: "Telluride Times",
-    date: "April 11, 2026",
-    newsTopic: "sports",
-    copy: "While Ullr may have been uncooperative this year, Telluride\u2019s winter-sports athletes did not let low precipitation stand in the way of their learning, training or fun.",
-    href: "https://www.telluridenews.com/sports/article_9ad76276-35a5-43e5-9690-1c1cc0e78428.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/80/e80acfa7-26ac-4e00-b49f-17e97e736727/69d48d5fed0b6.image.jpg"
-  },
-  {
-    title: "State Senator Cleave Simpson shares vision for \u2018new horizons\u2019",
-    source: "Telluride Times",
-    date: "April 10, 2026",
-    newsTopic: "government",
-    copy: "In his new role as State Senate Minority Leader, Senator Cleave Simpson gave an opening day speech outlining his vision for the legislative session, using 150 years of Colorado history to look ahead.",
-    href: "https://www.telluridenews.com/news/article_64ca750b-bc9a-4c64-a675-395b5d312550.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/e2/1e252e4f-d4d0-4698-9297-9b912d0364c3/69d736af0b7d2.image.jpg"
-  },
-  {
-    title: "THS students help make wishes come true",
-    source: "Telluride Times",
-    date: "April 10, 2026",
-    newsTopic: "community",
-    copy: "Over Wish Week, March 23-27, Telluride High School students took part in a fundraiser and awareness raiser for the Colorado chapter of the Make-a-Wish Foundation.",
-    href: "https://www.telluridenews.com/gallery/news/article_020c1ee3-9f78-4016-97a6-9a612116d164.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/13/f13718fc-7eb3-4c6d-a08e-1675f3e28bf0/69d745cbdac4d.image.jpg"
-  },
-  {
-    title: "Miners avenge \u201925 loss to Eagles",
-    source: "Telluride Times",
-    date: "April 10, 2026",
-    newsTopic: "sports",
-    copy: "Senior defender Leyton Holbrook\u2019s incredible forehand rip from near midfield highlighted the Telluride Miners\u2019 lacrosse victory over the Eagles on Saturday, April 4.",
-    href: "https://www.telluridenews.com/sports/article_2eeb912c-7358-47be-bc16-899f1c60cff1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/70/c70fb9f8-6d90-4c6d-a27b-1828d000df7c/69d498c40cca8.image.jpg"
-  },
-  {
-    title: "Off-season sounds",
-    source: "Telluride Times",
-    date: "April 9, 2026",
-    newsTopic: "arts-culture",
-    copy: "The colorful, phantasmagorical musical experience known as MarchFourth Marching Band is coming to Montrose April 14, keeping the music alive in the off-season.",
-    href: "https://www.telluridenews.com/news/article_2a7ea4ca-d250-4a6a-9c10-fd6a5fc39a38.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/8d/68dccffa-db8f-4ca8-afb8-b7dc0ed8eb88/69d0deb9d92c6.image.jpg"
-  },
-  {
-    title: "Telluriders take to the streets",
-    source: "Telluride Times",
-    date: "April 9, 2026",
-    newsTopic: "community",
-    copy: "Telluriders joined nationwide No Kings marches on March 28, with locals traveling to Montrose and organizing a People's March on Colorado Avenue. The next People's March is scheduled for April 25.",
-    href: "https://www.telluridenews.com/gallery/news/article_d627bc01-97c9-4081-a2dc-a6ed744e2ea5.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/96/d9654805-a0f8-4c28-89ce-f5348acc4073/69d73c03d20d1.image.jpg"
-  },
-  {
-    title: "Celebrating Mona",
-    source: "Telluride Times",
-    date: "April 9, 2026",
-    newsTopic: "community",
-    copy: "After 14 years as a Telluride Avalanche Dog, beloved local Labrador Mona enjoyed a special retirement send-off celebration.",
-    href: "https://www.telluridenews.com/news/article_7bffdd59-3c69-4bb0-b220-90d00d66d614.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/85/5859d982-c27b-4836-b394-ea702917d857/69d4909ab7eeb.image.jpg"
-  },
-  {
-    title: "Mountain Village and Telluride implement water restrictions",
-    source: "Telluride Times",
-    date: "April 8, 2026",
-    newsTopic: "government",
-    copy: "Both the towns of Telluride and Mountain Village recently implemented outdoor water restrictions due to exceptionally low snowpack and dry conditions this season.",
-    href: "https://www.telluridenews.com/news/article_839a13fb-58fb-414a-992e-eed87a6c80bb.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/45/c45704eb-1af5-4026-8acf-8ed3c357bf7b/69d5f724863b1.image.png"
-  },
-  {
-    title: "The Shining Mountains",
-    source: "Telluride Times",
-    date: "April 8, 2026",
-    newsTopic: "community",
-    copy: "Columnist Art Goodtimes reflects on the winter that wasn\u2019t, the mountains that endure, and what the changing seasons mean for the San Juan region.",
-    href: "https://www.telluridenews.com/opinion/columnists/article_5e40ccc4-9033-419e-8ae2-5ad8da76ff03.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/41/a41798cf-68fd-4d00-9e24-ffe7115cd52c/69d5384a1ea15.image.jpg"
-  },
-  {
-    title: "Lady Miners rout Pagosa Springs 5-0",
-    source: "Telluride Times",
-    date: "April 8, 2026",
-    newsTopic: "sports",
-    copy: "The THS girls\' soccer team dominated their final home match with a 5-0 rout of Pagosa Springs before a 1-1 draw at non-league Grand Valley on Saturday, April 4.",
-    href: "https://www.telluridenews.com/sports/article_0fe91ef0-05a0-4514-9f6f-a64aa2696890.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/43/1432fa73-801c-4b8c-9f72-bf7e1b54cc07/69d49d40a1e3d.image.jpg"
-  },
-  // Removed 3 Telluride Times articles from April 7 (>14 days old, cleaned 2026-04-22)
-  {
-    title: "Welcome to Yappy Hour",
-    source: "Telluride Times",
-    date: "April 13, 2026",
-    newsTopic: "community",
-    copy: "A rooftop view of the Cimarron Range, framed by alpenglow, beverage in hand \u2014 Telluride's off-season social scene comes to life at Yappy Hour.",
-    href: "https://www.telluridenews.com/news/article_5caa8e3a-8cea-4605-ab7c-421989b78d14.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/07/407ce859-36b5-4638-a7ff-0b8612b3efb9/69dd143d94eaf.image.jpg"
-  },
-  {
-    title: "Celebrate the night",
-    source: "Telluride Times",
-    date: "April 13, 2026",
-    newsTopic: "community",
-    copy: "NASA\u2019s recent Artemis II mission has sparked a renewed interest in space travel and dark skies \u2014 Telluride looks up to celebrate the night.",
-    href: "https://www.telluridenews.com/news/article_68ed339d-e2c5-440a-9991-c60aa1a83941.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/c8/5c862c6c-5e26-4e0f-a33d-33caec3b7a75/69dd71c6bab04.image.jpg"
-  },
-  {
-    title: "Sixth annual Paradigm Gathering near Egnar approved with caveats",
-    source: "Telluride Times",
-    date: "April 11, 2026",
-    newsTopic: "government",
-    copy: "One of San Miguel County\u2019s newer and smaller festivals, the Paradigm Gathering in the West End near Egnar, has received approval for a temporary-use permit with conditions.",
-    href: "https://www.telluridenews.com/news/article_e7b36d10-207b-4a0c-a2b3-c1944caa8c29.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/01/701c7f66-4aaa-444c-a94f-90044560e760/69daa83812423.image.jpg"
-  },
-  // Removed 2 stale Telluride Times articles from March 29 (>14 days old)
-  // Removed 2 stale Telluride Times articles from March 28 (>14 days old)
-  // Removed 4 stale Telluride Times articles from March 27 and earlier (>14 days old)
-  // Removed 2 Telluride Times articles from April 5 (>14 days old, cleaned 2026-04-20)
-  // Removed 3 Telluride Times articles from April 4 (>14 days old, cleaned 2026-04-19)
-  // Removed "Speed amid setbacks" (April 3, 2026 — >14 days old, cleaned 2026-04-18)
-  // Removed "Celebrate closing weekend" (April 3, 2026 — >14 days old, cleaned 2026-04-18)
-  // Removed 2 Telluride Times articles from April 2 (>14 days old)
-  // Removed 3 Telluride Times articles from April 1 (>14 days old)
-  // Removed "Three units available in next housing lottery" (March 28, >14 days old)
+    title: 'New Motor Vehicle Office Availability in Egnar! May 13 at 9 am - 3 pm',
+    source: 'San Miguel County',
+    date: 'April 20, 2026',
+    newsTopic: 'land-use',
+    copy: 'The new Motor Vehicle office will be available in Egnar on May 13 from 9 am - 3 pm in the same building as the fire department (5634 County Rd H1). We hope to serve many community members in this area, eliminating the drive to Norwood or Telluride.',
+    href: 'https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=516'
+  }
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════

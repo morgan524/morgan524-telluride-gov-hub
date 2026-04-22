@@ -26,147 +26,197 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-22T12:00:00';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-22';
 const COMMUNITY_PULSE_POSTS = [
   {
-    id: 'fb-2061-070', sourceKey: 'fb-2061',
+    id: 'fb-2061-070',
+    sourceKey: 'fb-2061',
     postedAt: '2026-04-22T08:00:00',
-    title: 'County Commissioners resume today after spring recess \u2014 first regular meeting since April 6',
+    title: 'County Commissioners resume today after spring recess — first regular meeting since April 6',
     excerpt: 'The San Miguel County Board of County Commissioners holds its first regular meeting since the spring break recess today, Wednesday, April 22 at 9:30 a.m. The meeting covers accumulated business from the two-week break. Agendas and livestream links are posted at sanmiguelcountyco.gov. The next regular meeting follows on April 29. Multiple advisory boards also resume this month, including the Open Space Commission on April 27.',
-    tags: ['Government', 'County', 'Meeting'], featured: true, eventRelated: true
+    tags: ['Government', 'County', 'Meeting'],
+    featured: true,
+    eventRelated: true
   },
   {
-    id: 'fb-3395-049', sourceKey: 'fb-3395',
+    id: 'fb-3395-049',
+    sourceKey: 'fb-3395',
     postedAt: '2026-04-22T08:30:00',
-    title: 'NightGrass pre-sale opens TODAY \u2014 text NIGHTGRASS for early access to late-night Bluegrass shows',
-    excerpt: 'The NightGrass pre-sale for late-night shows during the 2026 Telluride Bluegrass Festival (June 17\u201321) opens today, Wednesday, April 22. Text NIGHTGRASS to 1-844-326-3296 for pre-sale access. General sale follows Thursday, April 23. Acts include Greensky Bluegrass, Infamous Stringdusters, Punch Brothers, and more across four downtown venues. Full lineup and ticket details at bluegrass.com.',
-    tags: ['Festival', 'Music', 'Tickets', 'Upcoming Event'], featured: true, eventRelated: true
+    title: 'NightGrass pre-sale opens TODAY — text NIGHTGRASS for early access to late-night Bluegrass shows',
+    excerpt: 'The NightGrass pre-sale for late-night shows during the 2026 Telluride Bluegrass Festival (June 17–21) opens today, Wednesday, April 22. Text NIGHTGRASS to 1-844-326-3296 for pre-sale access. General sale follows Thursday, April 23. Acts include Greensky Bluegrass, Infamous Stringdusters, Punch Brothers, and more across four downtown venues. Full lineup and ticket details at bluegrass.com.',
+    tags: ['Festival', 'Music', 'Tickets', 'Upcoming Event'],
+    featured: true,
+    eventRelated: true
   },
   {
-    id: 'fb-2061-071', sourceKey: 'fb-2061',
+    id: 'fb-2061-071',
+    sourceKey: 'fb-2061',
     postedAt: '2026-04-22T09:00:00',
-    title: 'Colorado Sun: Telluride rent regulations driving tenants out \u2014 nearly 50 units sit empty',
-    excerpt: 'A Colorado Sun investigation published April 19 reports that Telluride\u2019s new rent-to-income regulations, designed to make deed-restricted housing more affordable, are instead driving tenants away. Nearly 50 of 201 town-managed units across five complexes (Shandoka, Sunnyside, Voodoo, and others) now sit empty. Many tenants lost work hours during the December ski patrol strike and may not meet the 1,400-hour annual requirement. Town Council approved a temporary reduction to 1,200 hours for 2026 leases and adjusted the rent multiplier, saving households $100\u2013$400/month.',
-    tags: ['Housing', 'Policy', 'Town Government', 'Affordable'], featured: true, eventRelated: false
+    title: 'Colorado Sun: Telluride rent regulations driving tenants out — nearly 50 units sit empty',
+    excerpt: 'A Colorado Sun investigation published April 19 reports that Telluride’s new rent-to-income regulations, designed to make deed-restricted housing more affordable, are instead driving tenants away. Nearly 50 of 201 town-managed units across five complexes (Shandoka, Sunnyside, Voodoo, and others) now sit empty. Many tenants lost work hours during the December ski patrol strike and may not meet the 1,400-hour annual requirement. Town Council approved a temporary reduction to 1,200 hours for 2026 leases and adjusted the rent multiplier, saving households $100–$400/month.',
+    tags: ['Housing', 'Policy', 'Town Government', 'Affordable'],
+    featured: true,
+    eventRelated: false
   },
   {
-    id: 'fb-2061-072', sourceKey: 'fb-2061',
+    id: 'fb-2061-072',
+    sourceKey: 'fb-2061',
     postedAt: '2026-04-22T09:30:00',
-    title: 'Mountain Village Council meets Thursday \u2014 first reading of dark-sky lighting regulation amendments',
-    excerpt: 'The Mountain Village Town Council will consider a first reading of proposed amendments to the Community Development Code\u2019s lighting regulations at its regular meeting on Thursday, April 23. The changes aim to modernize the town\u2019s dark-sky and outdoor-lighting standards. A first reading is typically followed by a second reading and public hearing before final adoption. Agenda and livestream details at townofmountainvillage.com.',
-    tags: ['Mountain Village', 'Town Council', 'Lighting', 'CDC', 'Upcoming Event'], featured: false, eventRelated: true
+    title: 'Mountain Village Council meets Thursday — first reading of dark-sky lighting regulation amendments',
+    excerpt: 'The Mountain Village Town Council will consider a first reading of proposed amendments to the Community Development Code’s lighting regulations at its regular meeting on Thursday, April 23. The changes aim to modernize the town’s dark-sky and outdoor-lighting standards. A first reading is typically followed by a second reading and public hearing before final adoption. Agenda and livestream details at townofmountainvillage.com.',
+    tags: ['Mountain Village', 'Town Council', 'Lighting', 'CDC', 'Upcoming Event'],
+    featured: false,
+    eventRelated: true
   },
   {
-    id: 'c7cc-025', sourceKey: 'c7cc',
+    id: 'c7cc-025',
+    sourceKey: 'c7cc',
     postedAt: '2026-04-22T10:00:00',
-    title: 'SMRHA housing lottery THIS Friday \u2014 three deed-restricted units awarded at Rebekah Hall',
+    title: 'SMRHA housing lottery THIS Friday — three deed-restricted units awarded at Rebekah Hall',
     excerpt: 'The San Miguel Regional Housing Authority lottery drawing takes place this Friday, April 24 at 10 AM at Rebekah Hall, 113 W Colorado Ave. Three deed-restricted homeownership units will be awarded: Silver Jack 202 (3BR, $405,507), Silver Jack 205 (2BR, $368,620), and Element 52 SW-102 (2BR, $352,529). Applications closed April 10 and 93 households were approved. Results will be posted at smrha.org after the drawing.',
-    tags: ['Housing', 'Affordable', 'Lottery', 'Upcoming Event'], featured: true, eventRelated: true
+    tags: ['Housing', 'Affordable', 'Lottery', 'Upcoming Event'],
+    featured: true,
+    eventRelated: true
   },
   {
-    id: 'fb-2438-018', sourceKey: 'fb-2438',
+    id: 'fb-2438-018',
+    sourceKey: 'fb-2438',
     postedAt: '2026-04-22T10:30:00',
-    title: 'KOTO\u2019s Big BAM Bash this Friday \u2014 eight local bands battle it out downtown',
-    excerpt: 'KOTO Community Radio hosts its first-ever Big BAM Bash battle of the bands on Friday, April 24, featuring eight local musical groups \u2014 four youth and four adult acts \u2014 competing in a single evening. The event doubles as a community benefit for KOTO\u2019s public broadcasting operations and showcases homegrown Telluride talent heading into festival season. Doors and venue details announced through KOTO and local organizers. Follow @KOTOradio for updates.',
-    tags: ['Community', 'Music', 'KOTO', 'Benefit', 'Upcoming Event'], featured: false, eventRelated: true
+    title: 'KOTO’s Big BAM Bash this Friday — eight local bands battle it out downtown',
+    excerpt: 'KOTO Community Radio hosts its first-ever Big BAM Bash battle of the bands on Friday, April 24, featuring eight local musical groups — four youth and four adult acts — competing in a single evening. The event doubles as a community benefit for KOTO’s public broadcasting operations and showcases homegrown Telluride talent heading into festival season. Doors and venue details announced through KOTO and local organizers. Follow @KOTOradio for updates.',
+    tags: ['Community', 'Music', 'KOTO', 'Benefit', 'Upcoming Event'],
+    featured: false,
+    eventRelated: true
   },
   {
-    id: 'fb-2061-073', sourceKey: 'fb-2061',
+    id: 'fb-2061-073',
+    sourceKey: 'fb-2061',
     postedAt: '2026-04-22T11:00:00',
-    title: 'Mountainfilm speaker lineup revealed \u2014 Minds Moving Mountains series set for May 21\u201325',
-    excerpt: 'Mountainfilm has announced its 2026 Minds Moving Mountains Speaker Series lineup for the 48th annual festival, May 21\u201325 in Telluride. The speaker series is an annual highlight alongside the film program curated by guest director Cristina Mittermeier. Festival passes are on sale at mountainfilm.org, with passholder film reservations opening May 6 for top-tier passes. The free Mountainfilm app (iOS and Android) serves as the official festival guide.',
-    tags: ['Festival', 'Film', 'Speakers', 'Upcoming Event'], featured: false, eventRelated: true
+    title: 'Mountainfilm speaker lineup revealed — Minds Moving Mountains series set for May 21–25',
+    excerpt: 'Mountainfilm has announced its 2026 Minds Moving Mountains Speaker Series lineup for the 48th annual festival, May 21–25 in Telluride. The speaker series is an annual highlight alongside the film program curated by guest director Cristina Mittermeier. Festival passes are on sale at mountainfilm.org, with passholder film reservations opening May 6 for top-tier passes. The free Mountainfilm app (iOS and Android) serves as the official festival guide.',
+    tags: ['Festival', 'Film', 'Speakers', 'Upcoming Event'],
+    featured: false,
+    eventRelated: true
   },
   {
-    id: 'fb-2061-074', sourceKey: 'fb-2061',
+    id: 'fb-2061-074',
+    sourceKey: 'fb-2061',
     postedAt: '2026-04-21T08:00:00',
-    title: 'Special-election petitions verified \u2014 certified candidates to be announced for June 30 Council race',
-    excerpt: 'The Town Clerk\u2019s office is verifying petitions submitted by the April 20 deadline for the June 30 special election. Two Council seats are on the ballot: one vacated by former Mayor Pro Tem Meehan Fee and one held by appointed Councilmember Marya Stark, who confirmed she will run. Candidates needed 25 valid signatures from registered Telluride voters. The certified candidate list is expected to be posted at telluride-co.gov/elections once verification is complete.',
-    tags: ['Elections', 'Town Government', 'Council'], featured: true, eventRelated: false
+    title: 'Special-election petitions verified — certified candidates to be announced for June 30 Council race',
+    excerpt: 'The Town Clerk’s office is verifying petitions submitted by the April 20 deadline for the June 30 special election. Two Council seats are on the ballot: one vacated by former Mayor Pro Tem Meehan Fee and one held by appointed Councilmember Marya Stark, who confirmed she will run. Candidates needed 25 valid signatures from registered Telluride voters. The certified candidate list is expected to be posted at telluride-co.gov/elections once verification is complete.',
+    tags: ['Elections', 'Town Government', 'Council'],
+    featured: true,
+    eventRelated: false
   },
   {
-    id: 'fb-3395-050', sourceKey: 'fb-3395',
+    id: 'fb-3395-050',
+    sourceKey: 'fb-3395',
     postedAt: '2026-04-21T09:00:00',
     title: 'Telluride Regional Airport Authority held special meeting Tuesday at Hangar 30',
     excerpt: 'The Telluride Regional Airport Authority held a special meeting on Tuesday, April 21 at 1:00 p.m. in the Hangar 30 Conference Room at the Telluride Regional Airport. Special meetings of the Authority are used for time-sensitive decisions outside the regular meeting schedule. Meeting minutes and materials are available at tellurideairport.com.',
-    tags: ['Airport', 'Government', 'Special Meeting'], featured: false, eventRelated: false
+    tags: ['Airport', 'Government', 'Special Meeting'],
+    featured: false,
+    eventRelated: false
   },
   {
-    id: 'fb-2061-075', sourceKey: 'fb-2061',
+    id: 'fb-2061-075',
+    sourceKey: 'fb-2061',
     postedAt: '2026-04-21T10:00:00',
-    title: 'Stage 1 fire restrictions remain in effect \u2014 snowpack still at historic low',
-    excerpt: 'Stage 1 fire restrictions remain in effect across San Miguel County as snowpack sits at roughly 15% of median. Open burning, campfires outside designated areas, and fireworks are prohibited. The San Miguel Watershed Coalition\u2019s $500,000 Wildfire Readiness Action Plan grant is funding hazard mapping and fuel-reduction planning ahead of what forecasters warn could be an above-normal fire season. Residents can check their wildfire risk via the county\u2019s interactive mapping tool at sanmiguelcountyco.gov.',
-    tags: ['Wildfire', 'Fire Restrictions', 'County', 'Safety'], featured: false, eventRelated: false
+    title: 'Stage 1 fire restrictions remain in effect — snowpack still at historic low',
+    excerpt: 'Stage 1 fire restrictions remain in effect across San Miguel County as snowpack sits at roughly 15% of median. Open burning, campfires outside designated areas, and fireworks are prohibited. The San Miguel Watershed Coalition’s $500,000 Wildfire Readiness Action Plan grant is funding hazard mapping and fuel-reduction planning ahead of what forecasters warn could be an above-normal fire season. Residents can check their wildfire risk via the county’s interactive mapping tool at sanmiguelcountyco.gov.',
+    tags: ['Wildfire', 'Fire Restrictions', 'County', 'Safety'],
+    featured: false,
+    eventRelated: false
   },
   {
-    id: 'fb-2061-076', sourceKey: 'fb-2061',
+    id: 'fb-2061-076',
+    sourceKey: 'fb-2061',
     postedAt: '2026-04-20T08:00:00',
-    title: 'Community Survey open through May 21 \u2014 resident feedback shapes Council priorities and budget',
-    excerpt: 'The Town of Telluride\u2019s third annual National Community Survey is open now through midnight on Thursday, May 21. Administered by Polco, the survey captures resident feedback on the economy, mobility, community design, utilities, safety, natural environment, and overall livability. Results will directly inform Town Council goals and future budget allocations. Take the survey at bit.ly/totsurvey26.',
-    tags: ['Town Government', 'Survey', 'Community', 'Budget'], featured: true, eventRelated: false
+    title: 'Community Survey open through May 21 — resident feedback shapes Council priorities and budget',
+    excerpt: 'The Town of Telluride’s third annual National Community Survey is open now through midnight on Thursday, May 21. Administered by Polco, the survey captures resident feedback on the economy, mobility, community design, utilities, safety, natural environment, and overall livability. Results will directly inform Town Council goals and future budget allocations. Take the survey at bit.ly/totsurvey26.',
+    tags: ['Town Government', 'Survey', 'Community', 'Budget'],
+    featured: true,
+    eventRelated: false
   },
   {
-    id: 'fb-3395-048', sourceKey: 'fb-3395',
+    id: 'fb-3395-048',
+    sourceKey: 'fb-3395',
     postedAt: '2026-04-20T12:00:00',
-    title: 'NightGrass pre-sale Wednesday, general sale Thursday \u2014 Bluegrass late-night shows June 17\u201321',
-    excerpt: 'The NightGrass pre-sale for late-night shows during the 2026 Telluride Bluegrass Festival (June 17\u201321) opens Wednesday, April 22. General sale follows Thursday, April 23. Acts include Greensky Bluegrass, Infamous Stringdusters, Punch Brothers, and more across four downtown venues. Text NIGHTGRASS to 1-844-326-3296 for pre-sale access. Full lineup and ticket details at bluegrass.com.',
-    tags: ['Festival', 'Music', 'Tickets', 'Upcoming Event'], featured: false, eventRelated: true
+    title: 'NightGrass pre-sale Wednesday, general sale Thursday — Bluegrass late-night shows June 17–21',
+    excerpt: 'The NightGrass pre-sale for late-night shows during the 2026 Telluride Bluegrass Festival (June 17–21) opens Wednesday, April 22. General sale follows Thursday, April 23. Acts include Greensky Bluegrass, Infamous Stringdusters, Punch Brothers, and more across four downtown venues. Text NIGHTGRASS to 1-844-326-3296 for pre-sale access. Full lineup and ticket details at bluegrass.com.',
+    tags: ['Festival', 'Music', 'Tickets', 'Upcoming Event'],
+    featured: false,
+    eventRelated: true
   },
   {
-    id: 'c7cc-024', sourceKey: 'c7cc',
+    id: 'c7cc-024',
+    sourceKey: 'c7cc',
     postedAt: '2026-04-20T13:00:00',
-    title: 'SMRHA housing lottery this Friday \u2014 three deed-restricted units awarded at Rebekah Hall',
+    title: 'SMRHA housing lottery this Friday — three deed-restricted units awarded at Rebekah Hall',
     excerpt: 'The San Miguel Regional Housing Authority lottery drawing takes place this Friday, April 24 at 10 AM at Rebekah Hall, 113 W Colorado Ave. Three deed-restricted homeownership units will be awarded: Silver Jack 202 and Silver Jack 205 at 155 W Pacific Ave, and Element 52 SW-102 at 398 S Davis St. Applications closed April 10. Results will be posted at smrha.org after the drawing.',
-    tags: ['Housing', 'Affordable', 'Lottery', 'Upcoming Event'], featured: false, eventRelated: true
+    tags: ['Housing', 'Affordable', 'Lottery', 'Upcoming Event'],
+    featured: false,
+    eventRelated: true
   },
   {
-    id: 'fb-2061-067', sourceKey: 'fb-2061',
+    id: 'fb-2061-067',
+    sourceKey: 'fb-2061',
     postedAt: '2026-04-20T09:00:00',
-    title: 'Special-election petition deadline passed \u2014 candidates needed 25 signatures to qualify',
-    excerpt: 'The filing deadline for the Town of Telluride\u2019s June 30 special election passed Monday, April 20 at 5 p.m. Two Council seats are on the ballot: one vacated by former Mayor Pro Tem Meehan Fee and one held by appointed Councilmember Marya Stark. Candidates had to submit petitions with 25 valid signatures from registered Telluride voters to the Town Clerk\u2019s office. Certified candidates will be announced after verification.',
-    tags: ['Elections', 'Deadline', 'Town Government', 'Council'], featured: false, eventRelated: false
+    title: 'Special-election petition deadline passed — candidates needed 25 signatures to qualify',
+    excerpt: 'The filing deadline for the Town of Telluride’s June 30 special election passed Monday, April 20 at 5 p.m. Two Council seats are on the ballot: one vacated by former Mayor Pro Tem Meehan Fee and one held by appointed Councilmember Marya Stark. Candidates had to submit petitions with 25 valid signatures from registered Telluride voters to the Town Clerk’s office. Certified candidates will be announced after verification.',
+    tags: ['Elections', 'Deadline', 'Town Government', 'Council'],
+    featured: false,
+    eventRelated: false
   },
   {
-    id: 'fb-3395-046', sourceKey: 'fb-3395',
+    id: 'fb-3395-046',
+    sourceKey: 'fb-3395',
     postedAt: '2026-04-19T08:00:00',
     title: 'San Miguel Watershed Coalition awarded $500,000 for wildfire preparedness planning',
     excerpt: 'The San Miguel Watershed Coalition has received a $500,000 grant to develop a Wildfire Readiness Action Plan focused on watershed-scale risks across the San Miguel Basin. With snowpack still at roughly 15% of median following an abnormally dry winter, the funding will pay for hazard mapping, fuel-reduction prioritization, and coordination among fire agencies, water providers, and land managers. Plan development is expected to ramp up this spring ahead of summer fire season.',
-    tags: ['Wildfire', 'Water', 'Grant', 'County'], featured: false, eventRelated: false
+    tags: ['Wildfire', 'Water', 'Grant', 'County'],
+    featured: false,
+    eventRelated: false
   },
   {
-    id: 'fb-2061-065', sourceKey: 'fb-2061',
+    id: 'fb-2061-065',
+    sourceKey: 'fb-2061',
     postedAt: '2026-04-19T13:00:00',
-    title: 'Early-season water restrictions in effect \u2014 three-day watering schedule, 70\u201375% system setting',
-    excerpt: 'Outdoor watering restrictions adopted by the Town of Telluride in late March remain in effect as snowpack sits at roughly 15% of median. Irrigation is allowed only Mondays, Wednesdays, and Fridays \u2014 before 8 a.m. or after 7 p.m. Irrigation systems must be set to 70\u201375% of normal usage, and all exterior water features must be turned off. Mountain Village has parallel restrictions. Full details at telluride.gov.',
-    tags: ['Water', 'Drought', 'Conservation', 'Town Government'], featured: false, eventRelated: false
+    title: 'Early-season water restrictions in effect — three-day watering schedule, 70–75% system setting',
+    excerpt: 'Outdoor watering restrictions adopted by the Town of Telluride in late March remain in effect as snowpack sits at roughly 15% of median. Irrigation is allowed only Mondays, Wednesdays, and Fridays — before 8 a.m. or after 7 p.m. Irrigation systems must be set to 70–75% of normal usage, and all exterior water features must be turned off. Mountain Village has parallel restrictions. Full details at telluride.gov.',
+    tags: ['Water', 'Drought', 'Conservation', 'Town Government'],
+    featured: false,
+    eventRelated: false
   },
   {
-    id: 'fb-2438-017', sourceKey: 'fb-2438',
+    id: 'fb-2438-017',
+    sourceKey: 'fb-2438',
     postedAt: '2026-04-19T10:00:00',
-    title: 'West End community bike program launches \u2014 Brock Benson aims to put neighbors on two wheels',
-    excerpt: 'Brock Benson, recently returned to San Miguel County\u2019s West End after a 20-year absence, has launched a grassroots effort to get bikes into the hands of residents who need them. The effort targets Norwood, Redvale, and surrounding communities where transportation options are limited and a working bicycle can meaningfully expand access to jobs and services.',
-    tags: ['Community', 'West End', 'Transportation', 'Nonprofit'], featured: false, eventRelated: false
+    title: 'West End community bike program launches — Brock Benson aims to put neighbors on two wheels',
+    excerpt: 'Brock Benson, recently returned to San Miguel County’s West End after a 20-year absence, has launched a grassroots effort to get bikes into the hands of residents who need them. The effort targets Norwood, Redvale, and surrounding communities where transportation options are limited and a working bicycle can meaningfully expand access to jobs and services.',
+    tags: ['Community', 'West End', 'Transportation', 'Nonprofit'],
+    featured: false,
+    eventRelated: false
   },
   {
-    id: 'fb-2061-061', sourceKey: 'fb-2061',
+    id: 'fb-2061-061',
+    sourceKey: 'fb-2061',
     postedAt: '2026-04-18T11:00:00',
-    title: 'SMPA board elections underway \u2014 District 3 and District 6 seats contested as energy costs rise',
+    title: 'SMPA board elections underway — District 3 and District 6 seats contested as energy costs rise',
     excerpt: 'San Miguel Power Association members have the chance to influence the seven-member cooperative board, with District 3 and District 6 seats on the ballot this year. District 3 has incumbent Dave Alexander facing challenger Joanna Yonder. District 6 pits appointed director Valentine Szwarc against Tricia Savage. With regional energy costs climbing, the race has drawn heightened attention. Candidate statements and voting details available at smpa.com.',
-    tags: ['Elections', 'Energy', 'SMPA', 'Cooperative'], featured: false, eventRelated: true
+    tags: ['Elections', 'Energy', 'SMPA', 'Cooperative'],
+    featured: false,
+    eventRelated: true
   },
   {
-    id: 'fb-3395-044', sourceKey: 'fb-3395',
+    id: 'fb-3395-044',
+    sourceKey: 'fb-3395',
     postedAt: '2026-04-18T09:00:00',
-    title: 'Galloping Goose shoulder-season schedule in effect through May 22 \u2014 single bus every 30 minutes',
-    excerpt: 'The Town of Telluride\u2019s free Galloping Goose transit continues its shoulder-season schedule through Friday, May 22. A single bus runs every 30 minutes during off-season rather than the peak-season two-bus, 15-minute interval service. Full route and timing details at telluride.gov.',
-    tags: ['Transportation', 'Galloping Goose', 'Shoulder Season', 'Town Government'], featured: false, eventRelated: false
-  },
-  {
-    id: 'fb-2061-057', sourceKey: 'fb-2061',
-    postedAt: '2026-04-17T08:00:00',
-    title: 'CDOT shoulder work on Keystone Hill \u2014 expect 20-minute delays between Telluride and Placerville',
-    excerpt: 'The Colorado Department of Transportation is performing culvert cleaning and shoulder clearing operations on CO-145 along Keystone Hill between Mile Points 73 and 74 (Telluride to Placerville). Motorists should expect full stops, alternating one-lane traffic, and delays of up to 20 minutes from 9 a.m. to 3 p.m. on active work days. This is separate from the ongoing access improvement project west of the Society Turn roundabout.',
-    tags: ['Transportation', 'CDOT', 'Road Work', 'Delays'], featured: false, eventRelated: false
+    title: 'Galloping Goose shoulder-season schedule in effect through May 22 — single bus every 30 minutes',
+    excerpt: 'The Town of Telluride’s free Galloping Goose transit continues its shoulder-season schedule through Friday, May 22. A single bus runs every 30 minutes during off-season rather than the peak-season two-bus, 15-minute interval service. Full route and timing details at telluride.gov.',
+    tags: ['Transportation', 'Galloping Goose', 'Shoulder Season', 'Town Government'],
+    featured: false,
+    eventRelated: false
   }
 ];
 const CP_MAX_POSTS = 20;
