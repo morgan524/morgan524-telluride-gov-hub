@@ -5147,22 +5147,6 @@ const LEGAL_NOTICES = [
     address: '411 Mountain Village Blvd, Mountain Village, CO'
   },
   {
-    title: 'Public Hearing -- Ophir Land Use Variance (Cooper, Lots 1 & 2, Block 2)',
-    entity: 'Town of Ophir',
-    entityClass: 'ent-county',
-    entityLogo: 'ophir',
-    icon: '⚖️',
-    iconClass: 'type-hearing',
-    type: 'Public Hearing',
-    filterTag: 'ordinance',
-    summary: 'Jonathan Cooper filed a land use application under Article XI of the Town Land Use Code seeking a height and roof pitch variance (2/12 pitch instead of the required 4/12 per LUC §303.7) and a setback variance (10 feet instead of 15 feet required under LUC §406.1(A)) for construction of a single-family dwelling on Lots 1 and 2, Block 2. Public hearing: April 21, 2026 at 5:00 PM in Ophir Town Hall, 46 Porphyry St. Contact: (970) 728-4743.',
-    deadline: 'Public hearing: April 21, 2026 at 5:00 PM',
-    expires: '2026-04-21',
-    dates: '4/2',
-    papers: ['ttimes_apr2'],
-    address: 'Lots 1 & 2, Block 2, Ophir, CO'
-  },
-  {
     title: 'Notice of Vesting -- Korn Residence, 566 W Columbia Ave',
     entity: 'Town of Telluride',
     entityClass: 'ent-county',
@@ -5297,23 +5281,6 @@ const LEGAL_NOTICES = [
     address: '394 W Colorado Ave, Telluride, CO'
   },
   // ── April 7 (TRAA Meeting Notice) ──
-  {
-    title: 'Special Meeting -- Telluride Regional Airport Authority (April 21)',
-    entity: 'Telluride Regional Airport Authority',
-    entityClass: 'ent-county',
-    entityLogo: 'county',
-    icon: '✈️',
-    iconClass: 'type-hearing',
-    type: 'Meeting Notice',
-    filterTag: 'public-entity',
-    summary: 'The Telluride Regional Airport Authority will hold a special meeting on Tuesday, April 21, 2026 at 1:00 p.m. at Hangar 30 Conference Room, Telluride Regional Airport. Agenda available at tellurideairport.com.',
-    deadline: 'Meeting: April 21, 2026 at 1:00 PM',
-    expires: '2026-04-21',
-    dates: '4/7',
-    papers: ['ttimes_apr7'],
-    url: 'https://tellurideairport.com/traa-board-information/',
-    address: 'Hangar 30, Telluride Regional Airport'
-  },
   // ── April 6 (County Bids Page — New) ──
   {
     title: 'RFQ -- Material Hauling Services (Road & Bridge)',
@@ -5481,22 +5448,6 @@ const LEGAL_NOTICES = [
     dates: '4/9',
     papers: ['ttimes_apr9'],
     url: 'https://telluride.municipal.codes/'
-  },
-  {
-    title: 'Public Hearing -- Norwood Public Schools Re-Zoning Application (2028 Maverick Way)',
-    entity: 'San Miguel County Planning & Zoning',
-    entityClass: 'ent-county',
-    entityLogo: 'county',
-    icon: '🏫',
-    iconClass: 'type-hearing',
-    type: 'Public Hearing',
-    filterTag: 'ordinance',
-    summary: 'San Miguel County Planning & Zoning Commission will hold a public hearing on the Norwood Public Schools re-zoning application for 2028 Maverick Way, Norwood. Hearing scheduled for April 20, 2026 at 5:30 PM (Planning & Zoning) and 6:00 PM (Board). Site development review also on agenda, along with Dark Sky Coalition update and Land Use Code progress update.',
-    deadline: 'Public hearing: April 20, 2026 at 5:30 PM',
-    expires: '2026-04-20',
-    dates: '4/9',
-    papers: ['ttimes_apr9'],
-    address: '2503 Maverick Way, Norwood, CO 81424'
   },
   // ── April 17 (Town Water Restrictions — Drought) ──
   {
