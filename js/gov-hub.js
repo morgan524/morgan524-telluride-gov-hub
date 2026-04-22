@@ -1082,7 +1082,7 @@ async function loadAISummaries() {
 }
 
 // ── Manual/fallback summaries (preserved from original) ──
-// Last updated: 2026-04-18T12:15 (automated scan — replaced stale BOCC Apr 22 sheriff-interview summary with actual CivicClerk agenda (Historical Commission work plan, RRMV tax abatement, weed-management IGAs, Miramonte boiler/space planning, deed restriction amendments); added Liquor Licensing Authority Apr 23 (7 parklet TMOPs + 5 special event permit hearings incl. Mountainfilm & Bluegrass); added Citizen's Weed Advisory Board Apr 23; added Norwood P&Z Apr 20 (Norwood Schools rezoning at 2028 Maverick Way + SDR). MV TC Apr 23 agenda posted (file 48629) but PDF behind Cloudflare challenge; BOCC Apr 29 work session & Open Space Apr 27 agendas not yet posted; School Apr 20/27/28, Fire Apr 21, Med Apr 23, SMART all still without posted agendas.)
+// Last updated: 2026-04-22T18:00 (automated scan — no new agendas detected since 2026-04-18. MV TC Apr 23 agenda PDF confirmed to exist (file 48629) but still behind Cloudflare challenge, content unreadable. BOCC Apr 29 work session & Open Space Apr 27 agendas not yet posted. School Apr 20/27/28, Fire Apr 21, Med Apr 23, SMART all still without posted agendas. Hospital District has no April meeting listed on tellmed.org board-meetings page. Election Commission Apr 29, Parks & Rec Apr 29, THA Subcommittee Apr 23 agendas not yet posted on CivicWeb.)
 const MANUAL_SUMMARIES = {
   // ── Telluride ──
   'telluride|2026-03-31|Town Council':
