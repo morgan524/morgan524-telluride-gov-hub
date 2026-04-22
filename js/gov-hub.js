@@ -1084,82 +1084,45 @@ async function loadAISummaries() {
 // ── Manual/fallback summaries (preserved from original) ──
 // Last updated: 2026-04-22T18:00 (automated scan — no new agendas detected since 2026-04-18. MV TC Apr 23 agenda PDF confirmed to exist (file 48629) but still behind Cloudflare challenge, content unreadable. BOCC Apr 29 work session & Open Space Apr 27 agendas not yet posted. School Apr 20/27/28, Fire Apr 21, Med Apr 23, SMART all still without posted agendas. Hospital District has no April meeting listed on tellmed.org board-meetings page. Election Commission Apr 29, Parks & Rec Apr 29, THA Subcommittee Apr 23 agendas not yet posted on CivicWeb.)
 const MANUAL_SUMMARIES = {
-  // ── Telluride ──
   'telluride|2026-03-31|Town Council':
     '⚖️ SECOND READING — Adoption of Colorado Wildfire Resiliency Code (Ordinance, expected to pass) · Public hearing: Stender Residence HARC appeal (continued to Apr 28) · 2026 Proposed Construction Projects work session · 2026 Open Space Commission Work Plan · Deed-restricted property sales (Silver Jack Unit 205, Element 52 Unit SW-102) · Workforce housing deed amendments (Overlook Lots 17 & 2) · Acquisition of Wilkin Court Unit H · Executive session: Town Manager evaluation',
 
   'telluride|2026-03-31|Telluride Housing Authority':
     'Workforce housing deed amendments for Overlook at Telluride Subdivision (Lots 17 & 2) · Formation of a Resident Advisory Committee',
 
-  // ── County ──
   'county|2026-04-01|Board of County Commissioners Meeting':
     'PUBLIC HEARING: Resolution 2026-14 — Adoption of Colorado Wildfire Resiliency Code (enforcement July 1, 2026) · Planning: Paradigm Festival temporary use permit (Egnar) · Housing: Elizabeth Forsythe exception request to Rural Homes For Sale/For Locals regs (§5.2.4 & §5.2.5) · Affordable housing update · Tax abatement petitions: RRMV LLC (ABMT2026-7) and Epic Ridge Properties (ABMT2026-13), both recommended deny · Public Health: Septic Regulation update · Ophir Pass gate progress · Resolution 2026-15: Telluride Times designated legal newspaper of record · Litigation update Q1 · Executive session: DRMS mining regulations MOU',
 
-  // ── Telluride HARC ──
   'telluride|2026-04-15|Historic & Architectural Review Commission':
     'PUBLIC HEARING (applicant req. to continue w/o discussion): 238 N Pine St (Lot 18B) — small-scale demolition + new construction (950–2,500 sq ft) + THAS secondary structure repositioning (continued from Feb 18) · PUBLIC HEARING (applicant req. to continue w/o discussion): 238 N Pine St (Lot 18A) — small-scale demolition + new construction (continued from Feb 18) · WORK SESSION: 208 S Fir St (Block 23) — large-scale mixed-use replacement structure (5,000+ sq ft, Commercial Zone, NIBA LLC / Shift Architects) · Colorado Wildfire Resiliency Code work session · Community Engagement — Historic Preservation discussion',
 
-  // ── County BOCC Work Session Apr 8 ──
-  // (county|2026-04-08|Board of County Commissioners Work Session -- CANCELED, spring break recess Apr 6-17, confirmed via county calendar)
-
-  // ── SMART ──
-  // (smart|2026-04-09 -- SMART Board of Directors, agenda not yet posted as of 2026-04-09, site returns 403, will add when available)
-
-  // ── Mountain Village ──
   'mv|2026-04-02|Design Review Board':
     'Design review: Lot 164-B1R, San Joaquin Rd (new home + height variance) · Lot 155, San Joaquin Rd (new home) · Lot 1171R, San Joaquin Rd (new home) · Lot 224-B, Snowdrift Ln (new home) · Lot 523-R, Russell Dr (new home) · Lot 533, Russell Dr (new home) · 101 Snowfield Dr (GE encroachment, Lot 360) · 102 Yellow Brick Rd (Lot 17) · 111 San Joaquin Rd (GE encroachment, Lot 154) · 112 Autumn Ln (conditional use permit + ADU, Lot 382-R)',
 
-  // (mv|2026-04-23 -- Town Council, agenda not yet posted as of 2026-04-20 scan, will add when available)
-
-  // ── School District R-1 ──
-  // (school|2026-04-20 -- Special Meeting 5:15pm, agenda not yet posted as of 2026-04-20 scan, will add when available)
-  // (school|2026-04-27 -- Work Session 3:30pm, agenda not yet posted as of 2026-04-20 scan, will add when available)
-  // (school|2026-04-28 -- Monthly Meeting 5:15pm, agenda not yet posted as of 2026-04-20 scan, will add when available)
-
-  // ── Fire District ──
-  // (fire|2026-04-21 -- Fire Protection District board meeting, agenda not yet posted as of 2026-04-20 scan (website only shows through Mar 2026), will add when available)
-
-  // ── County Planning Commission ──
-  // (county|2026-04-02|Planning Commission -- CANCELED, agenda posted at CivicClerk event 1025, agenda file 1652)
-
-  // ── BOCC (upcoming) ──
-  // (county|2026-04-06 to 2026-04-17 -- CANCELED, spring break recess, no BOCC meetings)
   'county|2026-04-22|Board of County Commissioners Meeting':
     'PRESENTATION: Historical Commission 2026 Work Plan (Ted Wilson, Historical Commission; Janet Kask, Dir. of Parks & Open Space, 45 min) · Planning Department update (Kaye Simonson, 20 min) · Miramonte Space Planning update (Bordogna, Biggs) · Tax Abatement petition ABMT2026-7 RRMV LLC — staff recommended DENY · Consent: IGAs with TRAA, Mountain Village & Ophir for noxious weed management · Miramonte Boiler Replacement — updated Construction Agreement w/ Carl Kelly Plumbing (bonding incl.) · Deed Restriction V2016 amendments — Unit 314-13 Society Dr. (Cela White/Tanner Small), 182 Alexander Overlook (Cormac Bourke/Kathleen Morgan) · Armor Proseal asphalt installation agreement · JBBS 2027 contract amendment · Attorney matters (possible executive session)',
 
-  'county|2026-04-23|Citizen\'s Weed Advisory Board':
+  'county|2026-04-23|Citizen's Weed Advisory Board':
     'Updates from Vegetation Control & Management: Summer 2026 synopsis, Forest Service Agreement, Noxious Weed Agreements, Cost Share Program · Discussion: new opportunity spraying on private landowner property · Grant funds appropriation to landowners; whether funds should cover SMC VC&M · Vacant Chair position — discussion of filling role · Approval of minutes (3/27/2025, 10/20/2025)',
 
-  // (county|2026-04-29 -- BOCC Work Session, CivicClerk event 985, agenda listed on county calendar but content behind JS portal — still unreadable as of 2026-04-20 scan)
-  // (county|2026-04-27 -- Open Space Commission 4pm, meeting confirmed on county calendar, agenda not yet posted as of 2026-04-20 scan)
-
-  // ── SMRHA ──
   'smrha|2026-04-13|SMRHA Board Meeting':
     'WORKSESSION: Mapping deed-restricted units for SMRHA website publication · Town of Telluride housing lottery update — Silver Jack 202 & 205, Element 52 SW-102 (22 applications received, drawing Apr 24) · Continuing qualification verification: AHU 100% response (108 completed, 6 in THA legal review), EDU 96% response · Piñon Park: 5 homes currently on market',
 
-  // ── Telluride Town Council (next) ──
   'telluride|2026-04-28|Town Council':
-    'PUBLIC HEARING (continued): Stender Residence HARC appeal — small-scale + insubstantial-scale new construction, Lot C Block 3 Halls Addition, N Aspen St (continued from Dec 16, Feb 24, Mar 31) · WORK SESSION: Emergency Evacuation Planning & Municipal Disaster Management (Shannon Armstrong, SM County Emergency Mgr, 60 min) · Update from Telluride Ski and Golf (Steve Swenson) · Manager\u2019s Report: Q1 Goals & Objectives update, Master Lease Program update · Proclamations: May Mental Health Awareness Month, May 9 Valley Floor Day · P&Z appointment: Piper Miller · SECOND READING: Ordinance authorizing sale of deed-restricted Element 52 Unit SW-102 (398 S Davis St) · SECOND READING: Ordinance authorizing sale of deed-restricted Silver Jack Unit 205 (155 W Pacific Ave) · WORK SESSION: Black Hills Energy franchise agreement discussion · Marshal\u2019s Dept annual report · Fire Ban approval process discussion',
+    'PUBLIC HEARING (continued): Stender Residence HARC appeal — small-scale + insubstantial-scale new construction, Lot C Block 3 Halls Addition, N Aspen St (continued from Dec 16, Feb 24, Mar 31) · WORK SESSION: Emergency Evacuation Planning & Municipal Disaster Management (Shannon Armstrong, SM County Emergency Mgr, 60 min) · Update from Telluride Ski and Golf (Steve Swenson) · Manager’s Report: Q1 Goals & Objectives update, Master Lease Program update · Proclamations: May Mental Health Awareness Month, May 9 Valley Floor Day · P&Z appointment: Piper Miller · SECOND READING: Ordinance authorizing sale of deed-restricted Element 52 Unit SW-102 (398 S Davis St) · SECOND READING: Ordinance authorizing sale of deed-restricted Silver Jack Unit 205 (155 W Pacific Ave) · WORK SESSION: Black Hills Energy franchise agreement discussion · Marshal’s Dept annual report · Fire Ban approval process discussion',
+
   'telluride|2026-04-28|Telluride Housing Authority':
     'Consideration of adoption of a Policy Statement regarding the Affordable Housing Waitlist (DeLanie Young-Tapson, Allie Slaten) · Discussion on the formation of a Resident Advisory Committee (continuing from Mar 31)',
 
-  // ── Telluride Sub-commissions (Apr 23-24) ──
   'telluride|2026-04-23|Planning & Zoning Commission':
     'WORK SESSION: Gargoyle Building Minor Subdivision / Lot Line Adjustment — 138 E Colorado Ave (Historic Commercial zone, Telluride Vargas Seiger LLC / Alpine Planning) · Colorado Wildfire Resiliency Code — Land Use Code updates work session (continuing from Mar 12 & Mar 26)',
+
   'telluride|2026-04-23|Liquor Licensing Authority':
     '🍽️ 7 Temporary Modification of Premises (parklet/outdoor) applications for summer 2026: Steamies Burger Bar (300 W Colorado), The Butcher and The Baker (201 E Colorado), Floradora Saloon (103 W Colorado), Brown Dog Pizza/Lost Dog Pizza (110 E Colorado), Stronghouse Brew Pub (283 S Fir St), There... (629 W Pacific), The Telluride Company/Mischief Managed (212 W Colorado) · PUBLIC HEARINGS — Special Event Permits: One to One Mentoring (Food & Vine Festival, Oak St Plaza, Jun 14) · Telluride Education Foundation (Party in the Park, Town Park, May 30) · Mountainfilm (Art Walk May 22 at Telluride Arts; Festival May 23-24 at Elks Park; May 25 at Town Park) · Telluride Bluegrass Beer Booth (5 permits for Bluegrass Festival 2026, June 17-21 at Town Park)',
-  // (telluride|2026-04-23|Telluride Housing Authority Subcommittee Special Meeting -- Apr 23 9am, agenda not yet posted as of 2026-04-20 scan)
+
   'telluride|2026-04-24|Telluride Housing Authority Subcommittee Special Meeting':
     'SMRHA LOTTERY DRAWING (10am, Rebekah Hall) — Three deed-restricted units: Silver Jack 202 (3-bed/2-bath, ~$405,507, Tier 1 Town Constructed) & Silver Jack 205 (2-bed/1-bath, ~$368,620, Tier 1 Town Constructed) at 155 W Pacific Ave · Element 52 SW-102 (2-bed/1-bath, ~$352,529, Tier 2 Mitigation) at 398 S Davis St · 22 applications received; qualified household list posted Apr 15; appeal deadline Apr 17 5pm MST',
 
-  // (telluride|2026-04-24|Telluride Housing Authority Subcommittee Special Meeting Boarding House Master Lease Lottery -- Apr 24 8:30am, confirmed on CivicWeb but no detailed agenda content found)
-  // (telluride|2026-04-29|Election Commission -- Apr 29 3pm, agenda not yet posted as of 2026-04-20 scan)
-  // (telluride|2026-04-29|RESCHEDULED Parks & Recreation Commission -- Apr 29 12pm, rescheduled from Apr 15, agenda not yet posted as of 2026-04-20 scan)
-
-  // ── Medical Center / Hospital District ──
-  // (med|2026-04-23 -- Telluride Hospital District: no April meeting found on website as of 2026-04-20 scan; last listed meeting was Mar 26)
-
-  // ── Telluride Sub-commissions (April 2026) ──
   'telluride|2026-04-01|Telluride Housing Authority Subcommittee':
     'Exception request: Mills & Lusk household size exception (§103.3B & §105.4F) · Discussion: §110.2 lender/mortgage exceptions for April 24, 2026 housing lottery',
 
@@ -1169,8 +1132,6 @@ const MANUAL_SUMMARIES = {
   'telluride|2026-04-02|Vending Subcommittee':
     'Seasonal de-brief: Summer 2025 & Winter 2025-2026 vending compliance reports · Private property vending compliance · Vendor selection for 2026 summer season: North Spruce Park, Gondola Plaza, Colorado Ave (5 sites incl. N Oak St, Elks Park, S Spruce Mall, S Fir & W Pacific)',
 
-  // ── Telluride Ecology Commission (Apr 8) ──
-  // ── Norwood ──
   'norwood|2026-04-08|Board of Trustees Meeting':
     'Swearing in of new Trustees (Bernice White, Liza Tanguay) & Mayor (Candy Meehan) · Marijuana license renewals: Blue Cottage LLC / Mary Jane Medicinals (1510 Grand Ave) and Alpine Wellness (1630 Grand Ave) · Special event liquor license: Norwood Chamber of Commerce (1455 Pinion St) · Norwood Post / Telluride Times update (Erin Spiellane) · Public notices newspaper designation: SM Basin Forum or Telluride Times · Pocket Park bid — RMC Builders · Discussion: town speed limit reduction · Sheriff\'s Office written report · Parks & Recreation District report · Music on the Mesa report',
 
@@ -1180,13 +1141,14 @@ const MANUAL_SUMMARIES = {
   'norwood|2026-04-01|Board of Trustees Special Meeting':
     'SECOND READING equivalent — Adoption of Resolution No. 0401 (Series 2026): Colorado Model Wildfire Resiliency Code adopted by reference (2023 edition, per SB 23-166 & HB 26-1334) · Interim implementation authorized pending permanent ordinance · Applies to all new construction, substantial improvements & development activities · Town Administrator authorized to enforce',
 
-  // ── Telluride (continued) ──
   'telluride|2026-04-08|Ecology Commission':
     'WORKSESSION: Trash Bash event final planning · 2027 Climate Action Plan (CAP) update discussion — Buildings & Energy focus area',
 
-  // ── Telluride Housing Authority Subcommittee Special Meeting (Apr 9) ──
   'telluride|2026-04-09|Telluride Housing Authority Subcommittee Special Meeting':
     'Household size exception requests (§103.3B) — 15 applicants (Brumley, Candelaria, Criado, Cristadoro & Worthington, Davis & Gulic, Douglas, Goldstein, Kittler, Rigby, Schiefelbein, Seibal, Siemens, Bonilla Sosa & Elera Marino, Sundeen, Territo) seeking exceptions to Telluride Affordable Housing Guidelines minimum household size requirement',
+
+  'county|2026-04-22|Board of County Commissioners Regular Meeting':
+    'Meeting scheduled for 9:30 AM at County offices · No specific agenda items available in provided text'
 };
 
 // ── Unified summary lookup: AI first, then manual fallback ──
@@ -3855,6 +3817,231 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // ══════════ TELLURIDE TIMES — CURRENT HOMEPAGE STORIES ══════════
 // Updated: 2026-04-20  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: 'The buzz about the Bike Park: closed for 2026',
+    source: 'Telluride Times',
+    date: 'April 22, 2026',
+    newsTopic: 'recreation',
+    copy: 'Last month, Telluride Ski Resort (Telski) announced that the Telluride Bike Park will be closed for 2026 due to uncertainty around summer upgrade work on Lift 4.',
+    href: 'https://www.telluridenews.com/news/article_03e530b5-1172-4e9a-9421-3e90d522fe6e.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/f7/2f74685d-961a-4ce8-b3b9-951ebe18cb22/69e68d6fd33e0.image.jpg?resize=300%2C196'
+  },
+  {
+    title: 'Gunman who fired on tourists at Mexican pyramid carried materials related to 1999 Columbine massacre',
+    source: 'Telluride Times',
+    date: 'April 22, 2026',
+    newsTopic: 'housing',
+    copy: 'The gunman who opened fire on tourists at Mexico’s iconic Teotihuacan pyramids carried materials that were apparently related to the deadly 1999 shooting at Columbine High School. That\'s according to authorities who spoke Tuesday, a day after the attack that…',
+    href: 'https://www.telluridenews.com/news/state/article_37352de0-fc91-5dc2-b35e-8718d7dbcbaf.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/a4/7a44d4e8-73af-5e2a-874a-ad57e60541a7/69e817d42830c.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'Pneumonia evidence upends a decades old conviction in baby\'s death to free Stephen Martinez',
+    source: 'Telluride Times',
+    date: 'April 21, 2026',
+    newsTopic: 'arts-culture',
+    copy: 'A judge has thrown out the first-degree murder conviction of a man found guilty in the death of his girlfriend’s 4-month-old daughter in Denver nearly 30 years ago because of new evidence in the case. Stephen Martinez was convicted in…',
+    href: 'https://www.telluridenews.com/news/state/article_b7033c78-edbb-5d83-b3c3-ea8112ac053c.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/b6/cb61a188-adb4-5c52-ba88-7b57de52e55a/69e7cf9fbc2ba.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'Norwood poised for growth',
+    source: 'Telluride Times',
+    date: 'April 21, 2026',
+    newsTopic: 'land-use',
+    copy: 'The ground has broken on a new era in Norwood. The La Sal Vista neighborhood, right across from the San Miguel County Fairgrounds, is expanding this small town’s footprint with one of the most significant residential developments in decades.',
+    href: 'https://www.telluridenews.com/news/article_7863e6d6-6d8d-4ee7-897f-eca8f5b8f0fc.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/d0/ad0c008e-cdee-4970-b3bd-cac8e1a47c69/69e79cab7c2e6.image.jpg?resize=300%2C388'
+  },
+  {
+    title: 'Prohaska, Wisor and Fee move to dismiss Telski lawsuit',
+    source: 'Telluride Times',
+    date: 'April 20, 2026',
+    newsTopic: 'housing',
+    copy: 'Nearly two months after Telluride Ski Resort (Telski) filed a lawsuit against former and current public officials in Telluride and Mountain Village, blaming them for prolonging the 13-day Telluride Ski Patrol strike and the concurrent closing of the mountain, the…',
+    href: 'https://www.telluridenews.com/news/article_d5676d0f-ec0d-40ca-a146-b597a3a9c097.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/d0/cd08705c-66d0-4207-a0c1-56d5ae1b4733/69e6b38476f1a.image.jpg?resize=300%2C225'
+  },
+  {
+    title: 'Supreme Court will hear from religious preschools challenging exclusion from taxpayer-funded program',
+    source: 'Telluride Times',
+    date: 'April 20, 2026',
+    newsTopic: 'government',
+    copy: 'The Supreme Court will hear from Catholic preschools that say it’s unconstitutional to exclude them from a state-funded program because they won’t admit kids from LGBTQ+ families. It\'s the latest religious rights case for the conservative-majority court. The justices on…',
+    href: 'https://www.telluridenews.com/news/state/article_1a33693e-55b3-5d1b-b5e8-2b5a93ea2b04.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/d0/ad006c78-63cc-50c4-96d3-53b58f7d9251/69e62eb2c9442.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'Wildfire survivors who lost their homes could face another blow from taxes on settlement payouts',
+    source: 'Telluride Times',
+    date: 'April 20, 2026',
+    newsTopic: 'public-safety',
+    copy: 'Thousands of survivors of the 2025 Eaton Fire in California are accepting settlements from the utility accused of causing it. They\'re choosing faster payments over litigation to rebuild their lives. However, they now face the possibility of these payments being…',
+    href: 'https://www.telluridenews.com/news/state/article_e850f478-16ab-588a-a6df-a9463b17a438.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/8d/08dfe579-e51d-5f46-b70e-40231f61b4b0/69e60bf56b398.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'Safety and health come first during festival season',
+    source: 'Telluride Times',
+    date: 'April 19, 2026',
+    newsTopic: 'arts-culture',
+    copy: 'Music festival season is fast approaching: A time to gather outdoors with friends, enjoy live music and dance.',
+    href: 'https://www.telluridenews.com/news/article_959e0960-3070-4c9d-b4b7-2dfb4ce49958.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/2e/22ed2f9b-3f0d-4220-a7b1-b32327c3e123/69e3e01813073.image.jpg?resize=300%2C300'
+  },
+  {
+    title: 'San Miguel Watershed Coalition receives $500,000 for wildfire preparedness',
+    source: 'Telluride Times',
+    date: 'April 18, 2026',
+    newsTopic: 'public-safety',
+    copy: 'With the dry winter, focus is already on wildfire preparedness for the summer season and beyond. The San Miguel Watershed Coalition received $500,000 in funding to develop a Wildfire Readiness Action Plan (WRAP). WRAP focuses on watershed risks of wildfire…',
+    href: 'https://www.telluridenews.com/news/article_335d69a9-77c0-4f1f-82b8-22a07ffc5de9.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/88/f888c95b-00a6-42d8-ac0d-73e7a1744aee/69e336ab1d78a.image.jpg?resize=300%2C225'
+  },
+  {
+    title: 'ICE went on a hiring spree. Sterling credentials were not required, AP investigation finds',
+    source: 'Telluride Times',
+    date: 'April 18, 2026',
+    newsTopic: 'arts-culture',
+    copy: 'Some new U.S. Immigration and Customs Enforcement officers started working before passing background checks and had problems in their past. ICE announced in January that it completed an unprecedented hiring spree, adding 12,000 officers and agents to double its force.…',
+    href: 'https://www.telluridenews.com/news/state/article_f33bb0ba-1262-5f2d-91fc-603ec7c0a7b1.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/31/23174e94-3906-56c5-a596-a3e9f7e30f97/69e1dd101ccd1.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'SMPA District 3 board candidates weigh in',
+    source: 'Telluride Times',
+    date: 'April 17, 2026',
+    newsTopic: 'government',
+    copy: 'With rising energy costs, locals have an opportunity to have a voice in energy operations in San Miguel County. As a consumer-controlled electric cooperative, San Miguel Power Association (SMPA) is supervised by a seven-member board of directors, elected by co-op…',
+    href: 'https://www.telluridenews.com/news/article_a019f39e-3a7f-4c99-861a-6dd7517d0533.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/55/055df151-cd4e-43b4-84cc-f78688c91d78/69e1b0b187411.image.jpg?resize=300%2C232'
+  },
+  {
+    title: 'Takeaways from AP investigation that found problems in the backgrounds of some new ICE officers',
+    source: 'Telluride Times',
+    date: 'April 17, 2026',
+    newsTopic: 'arts-culture',
+    copy: 'Some new U.S. Immigration and Customs Enforcement officers started working before passing background checks and had problems in their past. ICE announced in January that it completed an unprecedented hiring spree, adding 12,000 officers and agents to double its force.…',
+    href: 'https://www.telluridenews.com/news/state/article_210b9625-c8d0-5e60-a7ea-0ad3a4de8c6f.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/36/536136f9-160c-5e8b-bbbc-94f93085626f/69e1df8f84fea.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'Drone violations of restricted airspace at Colorado Rockies games prompt warning from authorities',
+    source: 'Telluride Times',
+    date: 'April 16, 2026',
+    newsTopic: 'community',
+    copy: 'A rash of drone sightings during the Colorado Rockies’ first homestand of the season against the Philadelphia Phillies sent law enforcement scrambling to track down the operators. No one was arrested after more than a half dozen drone sightings around…',
+    href: 'https://www.telluridenews.com/news/state/article_c6da0599-ae27-509e-a2e6-0a62e0c5c8da.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/da/cda00261-5709-5787-b497-6d6b319fd190/69e1615c4180d.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'Suspect enters new guilty plea in the case of missing Navajo grandmother Ella Mae Begay',
+    source: 'Telluride Times',
+    date: 'April 16, 2026',
+    newsTopic: 'arts-culture',
+    copy: 'A man charged in the disappearance of a Navajo grandmother has pleaded guilty to robbery as part of a second plea agreement. Preston Henry Tolth could face a maximum of five years in federal prison, with credit for three years…',
+    href: 'https://www.telluridenews.com/news/state/article_2fe8b14e-b613-5350-9e56-48f8e4e7b596.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/0c/70cbe161-2630-531d-ab78-d413f11b00c3/69e14b73bba9b.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'Legals and Public Notices for April 16-22, 2026',
+    source: 'Telluride Times',
+    date: 'April 16, 2026',
+    newsTopic: 'community',
+    copy: 'Legal Notice of Opportunity to Comment',
+    href: 'https://www.telluridenews.com/news/legals/article_c5a54e8f-2fa6-42a2-ba94-3a3828e137ff.html',
+    img: ''
+  },
+  {
+    title: 'Former San Miguel County deputy sentenced to prison',
+    source: 'Telluride Times',
+    date: 'April 15, 2026',
+    newsTopic: 'public-safety',
+    copy: 'A former San Miguel County Sheriff’s Office deputy was sentenced to 10 years in prison on Monday after pleading guilty to multiple felony charges involving crimes against children.',
+    href: 'https://www.telluridenews.com/news/article_960ed152-5b3a-42d6-bdc4-f92f6be11557.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/8e/a8e61fcd-9110-4d4f-b78e-a5b33220bc49/69dfe390e3b7c.image.jpg?resize=300%2C375'
+  },
+  {
+    title: 'Pileup of about 70 vehicles on Interstate 70 in Colorado sends 8 to the hospital',
+    source: 'Telluride Times',
+    date: 'April 15, 2026',
+    newsTopic: 'public-safety',
+    copy: 'Officials say crashes involving about 70 vehicles have bottlenecked a section of a snowy Colorado highway and sent eight people to the hospital. The Colorado State Patrol says the massive pileup Tuesday prompted officials to close the eastbound side of…',
+    href: 'https://www.telluridenews.com/news/state/article_f55246cd-4269-5f4a-ab70-879199700007.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/9a/a9acdd65-4ac5-5b11-be45-468bc4237dae/69df26f3f1f84.image.jpg?resize=300%2C169'
+  },
+  {
+    title: 'Colorado GOP picks statewide primary candidates after ‘whirlwind courtship’',
+    source: 'Telluride Times',
+    date: 'April 15, 2026',
+    newsTopic: 'government',
+    copy: 'San Miguel County (SMC) Republicans joined over 2,000 delegates from across Colorado for the Republican State Assembly on April 11 in Pueblo, gathering to designate candidates for statewide office to the June primary ballot.',
+    href: 'https://www.telluridenews.com/news/article_1463a95f-376c-463b-85ea-9898d198d503.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/10/910ff84c-b09c-49c0-a048-fbb56e306737/69de855cab92a.image.jpg?resize=300%2C206'
+  },
+  {
+    title: 'Trump again rejects Colorado amid accusations of playing politics with disaster aid',
+    source: 'Telluride Times',
+    date: 'April 14, 2026',
+    newsTopic: 'public-safety',
+    copy: 'President Donald Trump has again denied a request from Colorado’s governor to help people affected by wildfires and flooding. Trump initially rejected the state\'s Democratic governor, Jared Polis, after Polis sought the major disaster declaration last year. This week, Trump…',
+    href: 'https://www.telluridenews.com/news/state/article_a4397fab-19fb-53a1-b054-55d98eaee1d0.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/8e/e8e7b8e5-6d3a-5ae3-8370-c03220818efb/69deada6e7972.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'San Miguel County gets water ready',
+    source: 'Telluride Times',
+    date: 'April 14, 2026',
+    newsTopic: 'public-safety',
+    copy: 'With the lowest spring moisture totals in Colorado history — and wildland fire season already well underway — San Miguel County Sheriff Dan Covault was faced with the unprecedented challenge of protecting the public from out-of-control fire danger.',
+    href: 'https://www.telluridenews.com/news/article_d2a3e166-b053-4557-b7d8-f82693be0888.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/6f/c6f34668-4b14-4b8e-bc6f-404b96d81abd/69de7c9c0de27.image.jpg?resize=300%2C243'
+  },
+  {
+    title: 'Colleges find removing small obstacles can help students who dropped out to reenroll',
+    source: 'Telluride Times',
+    date: 'April 14, 2026',
+    newsTopic: 'education',
+    copy: 'A growing number of working-age people in the U.S. have attended college without earning a degree — a group that often has student loans to pay but without the credential to boost their earnings. Often referred to as “stopouts,” the…',
+    href: 'https://www.telluridenews.com/news/state/article_d170eb67-b68c-5236-bed1-ea2244faa8d9.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/fa/0faf238b-020a-5a96-b603-6f012bfa540b/69de82616f889.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'Celebrate the night',
+    source: 'Telluride Times',
+    date: 'April 13, 2026',
+    newsTopic: 'arts-culture',
+    copy: 'NASA’s recent Artemis II mission has sparked a renewed interest in space travel and dark skies.',
+    href: 'https://www.telluridenews.com/news/article_68ed339d-e2c5-440a-9991-c60aa1a83941.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/c8/5c862c6c-5e26-4e0f-a33d-33caec3b7a75/69dd71c6bab04.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'Workers at major Colorado meatpacking plant win wage increases in deal with JBS USA',
+    source: 'Telluride Times',
+    date: 'April 13, 2026',
+    newsTopic: 'arts-culture',
+    copy: 'Workers at the Swift Beef Co. plant in Greeley, Colorado, have reached a deal with plant owner JBS USA. Both parties announced the agreement on Sunday, ending weeks of uncertainty at one of the largest meatpacking plants in the country.…',
+    href: 'https://www.telluridenews.com/news/state/article_c7aa4a29-7f65-5d9f-8724-fcb35b158edc.html',
+    img: ''
+  },
+  {
+    title: 'California ski resort extends its season after a major spring snowstorm',
+    source: 'Telluride Times',
+    date: 'April 13, 2026',
+    newsTopic: 'recreation',
+    copy: 'A major spring snowstorm briefly closed a key Northern California interstate and extended the ski season at Mammoth Mountain. More than 3.5 feet of snow fell in the eastern Sierra Nevada over the weekend. Another inch or two of snow…',
+    href: 'https://www.telluridenews.com/news/state/article_45ce8ba1-dd71-57d6-90f3-5c32a15c5137.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/6a/a6ae39d5-859d-56b9-8e60-ffcb0fb99a27/69dd30cbdfb38.image.jpg?resize=300%2C225'
+  },
+  {
+    title: 'Welcome to Yappy Hour',
+    source: 'Telluride Times',
+    date: 'April 13, 2026',
+    newsTopic: 'community',
+    copy: 'A rooftop view of the Cimarron Range, framed by alpenglow, beverage in hand.',
+    href: 'https://www.telluridenews.com/news/article_5caa8e3a-8cea-4605-ab7c-421989b78d14.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/07/407ce859-36b5-4638-a7ff-0b8612b3efb9/69dd143d94eaf.image.jpg?resize=300%2C400'
+  },
   {
     title: 'Road + Bridge Summer Projects',
     source: 'San Miguel County',
