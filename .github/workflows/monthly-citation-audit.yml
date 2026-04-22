@@ -1,0 +1,25 @@
+name: Monthly Citation Audit
+
+on:
+  schedule:
+    # 1st of each month at 15:00 UTC (9am Mountain)
+    - cron: '0 15 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run citation audit
+        run: node scripts/citation-audit.js

@@ -1,0 +1,49 @@
+name: Daily Maintenance
+
+on:
+  schedule:
+    # Daily at 12:00 UTC (6am Mountain)
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run daily maintenance
+        run: node scripts/maintenance.js
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "Gov Hub Bot"
+          git config user.email "bot@livabletelluride.org"
+          git add -A
+          git commit -m "🧹 Daily maintenance $(date -u +'%Y-%m-%d')
+
+          Automated: expired notice cleanup, stale news removal, link check, file parity"
+          git push
+
+      - name: Report issues
+        if: always()
+        run: |
+          if [ -f maintenance-issues.log ]; then
+            echo "::warning::Maintenance found issues — check the log"
+            cat maintenance-issues.log
+          fi

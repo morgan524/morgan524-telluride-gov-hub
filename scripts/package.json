@@ -1,0 +1,15 @@
+{
+  "name": "telluride-govhub-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GitHub Actions automation scripts for Telluride Gov Hub",
+  "scripts": {
+    "content-refresh": "node content-refresh.js",
+    "housing-refresh": "node housing-refresh.js",
+    "maintenance": "node maintenance.js",
+    "citation-audit": "node citation-audit.js"
+  },
+  "dependencies": {
+    "xml2js": "^0.6.2"
+  }
+}

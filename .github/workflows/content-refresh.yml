@@ -1,0 +1,51 @@
+name: Content Refresh
+
+on:
+  schedule:
+    # Every 6 hours: midnight, 6am, noon, 6pm UTC
+    - cron: '0 0,6,12,18 * * *'
+  workflow_dispatch: # Allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          cd scripts
+          npm install xml2js
+
+      - name: Run content refresh
+        id: refresh
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          node scripts/content-refresh.js
+        continue-on-error: true
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "Gov Hub Bot"
+          git config user.email "bot@livabletelluride.org"
+          git add -A
+          git commit -m "🔄 Content refresh $(date -u +'%Y-%m-%d %H:%M UTC')
+
+          Automated update: meeting summaries, news, community pulse, legal notices, events"
+          git push
