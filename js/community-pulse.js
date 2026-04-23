@@ -26,7 +26,7 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-22';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-23';
 const COMMUNITY_PULSE_POSTS = [
   {
     id: 'fb-2061-070',
@@ -195,26 +195,6 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'West End community bike program launches — Brock Benson aims to put neighbors on two wheels',
     excerpt: 'Brock Benson, recently returned to San Miguel County’s West End after a 20-year absence, has launched a grassroots effort to get bikes into the hands of residents who need them. The effort targets Norwood, Redvale, and surrounding communities where transportation options are limited and a working bicycle can meaningfully expand access to jobs and services.',
     tags: ['Community', 'West End', 'Transportation', 'Nonprofit'],
-    featured: false,
-    eventRelated: false
-  },
-  {
-    id: 'fb-2061-061',
-    sourceKey: 'fb-2061',
-    postedAt: '2026-04-18T11:00:00',
-    title: 'SMPA board elections underway — District 3 and District 6 seats contested as energy costs rise',
-    excerpt: 'San Miguel Power Association members have the chance to influence the seven-member cooperative board, with District 3 and District 6 seats on the ballot this year. District 3 has incumbent Dave Alexander facing challenger Joanna Yonder. District 6 pits appointed director Valentine Szwarc against Tricia Savage. With regional energy costs climbing, the race has drawn heightened attention. Candidate statements and voting details available at smpa.com.',
-    tags: ['Elections', 'Energy', 'SMPA', 'Cooperative'],
-    featured: false,
-    eventRelated: true
-  },
-  {
-    id: 'fb-3395-044',
-    sourceKey: 'fb-3395',
-    postedAt: '2026-04-18T09:00:00',
-    title: 'Galloping Goose shoulder-season schedule in effect through May 22 — single bus every 30 minutes',
-    excerpt: 'The Town of Telluride’s free Galloping Goose transit continues its shoulder-season schedule through Friday, May 22. A single bus runs every 30 minutes during off-season rather than the peak-season two-bus, 15-minute interval service. Full route and timing details at telluride.gov.',
-    tags: ['Transportation', 'Galloping Goose', 'Shoulder Season', 'Town Government'],
     featured: false,
     eventRelated: false
   }
