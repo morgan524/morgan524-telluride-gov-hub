@@ -3818,54 +3818,6 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-20  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: 'Road + Bridge Summer Projects',
-    source: 'San Miguel County',
-    date: 'April 8, 2026',
-    newsTopic: 'infrastructure',
-    copy: '',
-    href: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1392'
-  },
-  {
-    title: 'Board + Commissions Positions',
-    source: 'San Miguel County',
-    date: 'April 8, 2026',
-    newsTopic: 'government',
-    copy: '',
-    href: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1389'
-  },
-  {
-    title: 'Housing Code Update',
-    source: 'San Miguel County',
-    date: 'April 8, 2026',
-    newsTopic: 'housing',
-    copy: '',
-    href: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1391'
-  },
-  {
-    title: 'Parks + Open Space Projects',
-    source: 'San Miguel County',
-    date: 'April 8, 2026',
-    newsTopic: 'recreation',
-    copy: '',
-    href: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1387'
-  },
-  {
-    title: 'Spring Clean Up',
-    source: 'San Miguel County',
-    date: 'April 8, 2026',
-    newsTopic: 'community',
-    copy: '',
-    href: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1386'
-  },
-  {
-    title: 'Updated Mining Regulations',
-    source: 'San Miguel County',
-    date: 'April 8, 2026',
-    newsTopic: 'community',
-    copy: '',
-    href: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1385'
-  },
-  {
     title: 'New Motor Vehicle Office Availability in Egnar! May 13 at 9 am - 3 pm',
     source: 'San Miguel County',
     date: 'April 20, 2026',
