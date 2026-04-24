@@ -26,7 +26,7 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-23';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-24';
 const COMMUNITY_PULSE_POSTS = [
   {
     id: 'fb-2061-070',
@@ -165,36 +165,6 @@ const COMMUNITY_PULSE_POSTS = [
     title: 'Special-election petition deadline passed — candidates needed 25 signatures to qualify',
     excerpt: 'The filing deadline for the Town of Telluride’s June 30 special election passed Monday, April 20 at 5 p.m. Two Council seats are on the ballot: one vacated by former Mayor Pro Tem Meehan Fee and one held by appointed Councilmember Marya Stark. Candidates had to submit petitions with 25 valid signatures from registered Telluride voters to the Town Clerk’s office. Certified candidates will be announced after verification.',
     tags: ['Elections', 'Deadline', 'Town Government', 'Council'],
-    featured: false,
-    eventRelated: false
-  },
-  {
-    id: 'fb-3395-046',
-    sourceKey: 'fb-3395',
-    postedAt: '2026-04-19T08:00:00',
-    title: 'San Miguel Watershed Coalition awarded $500,000 for wildfire preparedness planning',
-    excerpt: 'The San Miguel Watershed Coalition has received a $500,000 grant to develop a Wildfire Readiness Action Plan focused on watershed-scale risks across the San Miguel Basin. With snowpack still at roughly 15% of median following an abnormally dry winter, the funding will pay for hazard mapping, fuel-reduction prioritization, and coordination among fire agencies, water providers, and land managers. Plan development is expected to ramp up this spring ahead of summer fire season.',
-    tags: ['Wildfire', 'Water', 'Grant', 'County'],
-    featured: false,
-    eventRelated: false
-  },
-  {
-    id: 'fb-2061-065',
-    sourceKey: 'fb-2061',
-    postedAt: '2026-04-19T13:00:00',
-    title: 'Early-season water restrictions in effect — three-day watering schedule, 70–75% system setting',
-    excerpt: 'Outdoor watering restrictions adopted by the Town of Telluride in late March remain in effect as snowpack sits at roughly 15% of median. Irrigation is allowed only Mondays, Wednesdays, and Fridays — before 8 a.m. or after 7 p.m. Irrigation systems must be set to 70–75% of normal usage, and all exterior water features must be turned off. Mountain Village has parallel restrictions. Full details at telluride.gov.',
-    tags: ['Water', 'Drought', 'Conservation', 'Town Government'],
-    featured: false,
-    eventRelated: false
-  },
-  {
-    id: 'fb-2438-017',
-    sourceKey: 'fb-2438',
-    postedAt: '2026-04-19T10:00:00',
-    title: 'West End community bike program launches — Brock Benson aims to put neighbors on two wheels',
-    excerpt: 'Brock Benson, recently returned to San Miguel County’s West End after a 20-year absence, has launched a grassroots effort to get bikes into the hands of residents who need them. The effort targets Norwood, Redvale, and surrounding communities where transportation options are limited and a working bicycle can meaningfully expand access to jobs and services.',
-    tags: ['Community', 'West End', 'Transportation', 'Nonprofit'],
     featured: false,
     eventRelated: false
   }
