@@ -4464,7 +4464,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-04-21'; // Updated by legal-notice-update task (dust control ITB, municipal financial advisor RFP)
+const LEGAL_NOTICES_CACHE_DATE = '2026-04-24'; // Updated by legal-notice-update task (dust control ITB, municipal financial advisor RFP)
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -4529,7 +4529,6 @@ const LEGAL_ENTITY_LOGOS = {
 };
 
 const LEGAL_NOTICES = [
-  // ── Active Notices (updated 2026-03-29) ──
   {
     title: 'Property Tax Exemption -- Seniors, Disabled Veterans & Gold Star Spouses',
     entity: 'San Miguel County Assessor',
@@ -4545,7 +4544,6 @@ const LEGAL_NOTICES = [
     dates: '2/5 through 7/9 (biweekly)',
     papers: ['ttimes', 'npost']
   },
-  // ── March 12-18 ──
   {
     title: 'Water Court -- Agricultural Water Protection Water Right Rules',
     entity: 'Colorado District Court, Water Division No. 4',
@@ -4561,7 +4559,6 @@ const LEGAL_NOTICES = [
     dates: '3/12',
     papers: ['ttimes_mar12']
   },
-  // ── April 1 (Mountain Village RFPs) ──
   {
     title: 'RFP -- Country Club Drive Shoulder Widening',
     entity: 'Town of Mountain Village',
@@ -4594,7 +4591,6 @@ const LEGAL_NOTICES = [
     papers: ['county_web'],
     url: 'https://townofmountainvillage.com/government/bids-rfps/procurement-materials/'
   },
-  // ── April 17 (County Civic Alert — Egnar MVR) ──
   {
     title: 'Motor Vehicle Office -- Temporary Availability in Egnar (May 13)',
     entity: 'San Miguel County Clerk & Recorder',
@@ -4612,7 +4608,6 @@ const LEGAL_NOTICES = [
     url: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx',
     address: '5634 County Rd H1, Egnar, CO'
   },
-  // ── April 2 (County Bids Page) ──
   {
     title: 'RFP -- Floor Replacement for Courthouse & Miramonte Building',
     entity: 'San Miguel County',
@@ -4645,7 +4640,6 @@ const LEGAL_NOTICES = [
     papers: ['county_web'],
     url: 'https://www.sanmiguelcountyco.gov/Bids.aspx'
   },
-  // ── April 14 (County Bids Page - additional RFPs) ──
   {
     title: 'RFP -- Foundation Repairs at Placerville Schoolhouse',
     entity: 'San Miguel County Parks & Open Space',
@@ -4713,7 +4707,6 @@ const LEGAL_NOTICES = [
     url: 'https://www.sanmiguelcountyco.gov/Bids.aspx',
     address: 'Mill Creek Rd, Telluride, CO 81435'
   },
-  // ── March 25-31 (County Website) ──
   {
     title: 'Employee Housing Impact Mitigation Fee Increase -- $1,112/sq ft Effective May 1, 2026',
     entity: 'San Miguel County',
@@ -4747,7 +4740,6 @@ const LEGAL_NOTICES = [
     url: 'https://www.fs.usda.gov/r02/gmug/projects/68281',
     address: '1150 Forest St, Norwood, CO 81423'
   },
-  // ── March 5-11 ──
   {
     title: 'Notice of Vesting -- 116 E Columbia Ave Remodel Addition',
     entity: 'Town of Telluride',
@@ -4763,24 +4755,6 @@ const LEGAL_NOTICES = [
     dates: '3/5',
     papers: ['ttimes_mar5'],
     address: '116 E Columbia Ave, Telluride, CO'
-  },
-  // ── April 2-8 (Telluride Times) ──
-  {
-    title: 'Mountain Village Ordinances -- Second Reading April 23 (Wildfire Code, Background Checks, Municipal Penalties)',
-    entity: 'Town of Mountain Village',
-    entityClass: 'ent-mv',
-    entityLogo: 'mv',
-    icon: '📋',
-    iconClass: 'type-hearing',
-    type: 'Ordinance',
-    filterTag: 'ordinance',
-    summary: 'Three ordinances passed first reading at the March 19, 2026 Town Council meeting. Second reading, public hearing, and final Council vote will take place Thursday, April 23, 2026 at 4:00 p.m. in the 2nd floor conference room, Mountain Village Town Hall and via Zoom: (1) CDC Amendments for Compliance with Colorado Wildfire Resilience Code (CWRC); (2) Creating a Background Check Process for Prospective Massage Facility Operators, Owners, and Employees; (3) Adjusting Certain Penalties in the Municipal Code. Ordinances available at the Town Clerk office, 411 Mountain Village Blvd, Suite A, or at townofmountainvillage.com.',
-    deadline: 'Public hearing: April 23, 2026 at 4:00 PM',
-    expires: '2026-04-23',
-    dates: '4/2',
-    papers: ['ttimes_apr2'],
-    url: 'https://www.townofmountainvillage.com',
-    address: '411 Mountain Village Blvd, Mountain Village, CO'
   },
   {
     title: 'Bid Notice -- 2026 Ski Ranches Waterline Replacement Project',
@@ -4846,7 +4820,6 @@ const LEGAL_NOTICES = [
     dates: '4/2',
     papers: ['ttimes_apr2']
   },
-  // ── April 5 (County Bids Page — New) ──
   {
     title: 'RFP -- Foundation Repairs at the Placerville Schoolhouse',
     entity: 'San Miguel County Parks & Open Space',
@@ -4898,7 +4871,6 @@ const LEGAL_NOTICES = [
     url: 'https://www.sanmiguelcountyco.gov/Bids.aspx',
     address: 'Mill Creek Park, Telluride, CO 81435'
   },
-  // ── April 6 (Town of Telluride — Election & Ordinance) ──
   {
     title: 'Special Election Notice -- Two Town Council Seats (June 30, 2026)',
     entity: 'Town of Telluride',
@@ -4933,8 +4905,6 @@ const LEGAL_NOTICES = [
     url: 'https://telluride-co.civicweb.net/document/433206/',
     address: '394 W Colorado Ave, Telluride, CO'
   },
-  // ── April 7 (TRAA Meeting Notice) ──
-  // ── April 6 (County Bids Page — New) ──
   {
     title: 'RFQ -- Material Hauling Services (Road & Bridge)',
     entity: 'San Miguel County Road & Bridge',
@@ -4951,7 +4921,6 @@ const LEGAL_NOTICES = [
     papers: ['county_web'],
     url: 'https://www.sanmiguelcountyco.gov/Bids.aspx'
   },
-  // ── April 15 (County Civic Alerts — New) ──
   {
     title: 'Spring Clean Up Events -- May 15-16 (Telluride, Mountain Village, Norwood)',
     entity: 'San Miguel County / EcoAction Partners',
@@ -4984,7 +4953,6 @@ const LEGAL_NOTICES = [
     papers: ['county_web'],
     url: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx'
   },
-  // ── April 9 (Telluride Times — Water Court) ──
   {
     title: 'Water Court -- Telecam Partnership II Finding of Reasonable Diligence (Illium Pond)',
     entity: 'Colorado District Court, Water Division No. 4',
@@ -5000,7 +4968,6 @@ const LEGAL_NOTICES = [
     dates: '4/9',
     papers: ['ttimes_apr9']
   },
-  // ── April 9 (Telluride Times — Water Court, Norwood) ──
   {
     title: 'Water Court -- Norwood Water Commission Conditional Water Rights (Case 26CW3015)',
     entity: 'Colorado District Court, Water Division No. 4',
@@ -5016,7 +4983,6 @@ const LEGAL_NOTICES = [
     dates: '4/9',
     papers: ['ttimes_apr9']
   },
-  // ── April 16 (Telluride Times — USDA Forest Service Ski Resort Draft EA) ──
   {
     title: 'Public Comment -- Telluride Ski Resort Recreation Improvements (Lifts 6 & 8, High Camp, Trails)',
     entity: 'USDA Forest Service / Grand Mesa, Uncompahgre & Gunnison National Forests',
@@ -5033,7 +4999,6 @@ const LEGAL_NOTICES = [
     papers: ['ttimes_apr16'],
     address: 'Norwood Ranger District, P.O. Box 388, Norwood, CO 81428'
   },
-  // ── April 16 (Telluride Times — Town of Telluride Design Standards RFP) ──
   {
     title: 'RFP -- Engineering Services for 2026 Design Standards & Construction Specifications Update',
     entity: 'Town of Telluride',
@@ -5050,7 +5015,6 @@ const LEGAL_NOTICES = [
     papers: ['ttimes_apr16'],
     url: 'https://www.bidnetdirect.com'
   },
-  // ── April 16 (Telluride Times — Town of Telluride Public Works IFB) ──
   {
     title: 'Invitation for Bids -- 2026 Mill Creek Prefab Pressure Reducing Valve Vault Installation',
     entity: 'Town of Telluride Public Works',
@@ -5068,24 +5032,6 @@ const LEGAL_NOTICES = [
     url: 'https://www.bidnetdirect.com',
     address: '1870 Black Bear Road, Telluride, CO 81435'
   },
-  // ── April 9 (Telluride Times — Town Council Hearing & Ordinance Adoption) ──
-  {
-    title: 'Public Hearing -- Sale of Element 52 Unit SW-102 (Deed-Restricted)',
-    entity: 'Town of Telluride',
-    entityClass: 'ent-county',
-    entityLogo: 'telluride',
-    icon: '🏘️',
-    iconClass: 'type-housing',
-    type: 'Public Hearing',
-    filterTag: 'housing',
-    summary: 'Second reading and public hearing on an ordinance authorizing the sale of Element 52 Unit SW-102, a deed-restricted residential unit. The Town Council will consider approval at its April 23, 2026 meeting at approximately 1:00 PM (hybrid format) at 131 W Columbia Ave, Telluride. The unit is subject to Telluride Affordable Housing Guidelines.',
-    deadline: 'Public hearing: April 23, 2026 at ~1:00 PM',
-    expires: '2026-04-23',
-    dates: '4/9',
-    papers: ['ttimes_apr9'],
-    address: '131 W Columbia Ave, Telluride, CO',
-    event: { date: '2026-04-23', time: '1:00 PM', location: '131 W Columbia Ave, Telluride' }
-  },
   {
     title: 'Ordinance No. 1651 -- Adoption of 2024 Colorado Wildfire Resiliency Code',
     entity: 'Town of Telluride',
@@ -5102,7 +5048,6 @@ const LEGAL_NOTICES = [
     papers: ['ttimes_apr9'],
     url: 'https://telluride.municipal.codes/'
   },
-  // ── April 17 (Town Water Restrictions — Drought) ──
   {
     title: 'Outdoor Water Restrictions -- Town of Telluride (Effective March 31)',
     entity: 'Town of Telluride',
@@ -5135,7 +5080,6 @@ const LEGAL_NOTICES = [
     papers: ['county_web'],
     url: 'https://townofmountainvillage.com/green-living/water-programs/water-conservation/'
   },
-  // ── April 21 (County Bids Page — New) ──
   {
     title: 'Invitation to Bid -- Dust Control (Road & Bridge)',
     entity: 'San Miguel County Road & Bridge',
@@ -5152,7 +5096,6 @@ const LEGAL_NOTICES = [
     papers: ['county_web'],
     url: 'https://www.sanmiguelcountyco.gov/Bids.aspx'
   },
-  // ── April 21 (Town of Telluride Bids — New) ──
   {
     title: 'RFP -- Municipal Financial Advisor Services',
     entity: 'Town of Telluride',
@@ -5168,7 +5111,7 @@ const LEGAL_NOTICES = [
     dates: '4/21',
     papers: ['town_web'],
     url: 'https://www.bidnetdirect.com/colorado/townoftelluride'
-  },
+  }
 ];
 
 // Build calendar buttons for a legal notice event
