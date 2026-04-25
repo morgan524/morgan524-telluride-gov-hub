@@ -4464,7 +4464,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-04-24'; // Updated by legal-notice-update task (dust control ITB, municipal financial advisor RFP)
+const LEGAL_NOTICES_CACHE_DATE = '2026-04-25'; // Updated by legal-notice-update task (dust control ITB, municipal financial advisor RFP)
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -4607,22 +4607,6 @@ const LEGAL_NOTICES = [
     papers: ['county_web'],
     url: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx',
     address: '5634 County Rd H1, Egnar, CO'
-  },
-  {
-    title: 'RFP -- Floor Replacement for Courthouse & Miramonte Building',
-    entity: 'San Miguel County',
-    entityClass: 'ent-county',
-    entityLogo: 'county',
-    icon: '🏛️',
-    iconClass: 'type-rfp',
-    type: 'RFP',
-    filterTag: 'public-entity',
-    summary: 'San Miguel County is seeking proposals for a contractor to replace flooring at 333 & 305 W. Colorado Ave, Telluride. RFP info available at sanmiguelcountyco.gov/Bids.aspx or 333 W. Colorado Ave 2nd flr, Telluride. Contact Greg Pollio at (970) 369-5432 or gregp@sanmiguelcountyco.gov.',
-    deadline: 'Proposals due April 24, 2026 at 11:59 PM',
-    expires: '2026-04-24',
-    dates: '4/2, 4/7, 4/16',
-    papers: ['ttimes_apr2', 'county_web'],
-    url: 'https://www.sanmiguelcountyco.gov/Bids.aspx'
   },
   {
     title: 'RFP -- Sheriff\'s Office Jail Based Behavioral Services',
