@@ -127,16 +127,6 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Wildfire', 'Fire Restrictions', 'County', 'Safety'],
     featured: false,
     eventRelated: false
-  },
-  {
-    id: 'c7cc-024',
-    sourceKey: 'c7cc',
-    postedAt: '2026-04-20T13:00:00',
-    title: 'SMRHA housing lottery this Friday — three deed-restricted units awarded at Rebekah Hall',
-    excerpt: 'The San Miguel Regional Housing Authority lottery drawing takes place this Friday, April 24 at 10 AM at Rebekah Hall, 113 W Colorado Ave. Three deed-restricted homeownership units will be awarded: Silver Jack 202 and Silver Jack 205 at 155 W Pacific Ave, and Element 52 SW-102 at 398 S Davis St. Applications closed April 10. Results will be posted at smrha.org after the drawing.',
-    tags: ['Housing', 'Affordable', 'Lottery', 'Upcoming Event'],
-    featured: false,
-    eventRelated: true
   }
 ];
 const CP_MAX_POSTS = 20;
