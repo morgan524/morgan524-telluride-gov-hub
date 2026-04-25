@@ -26,7 +26,7 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-24';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-25';
 const COMMUNITY_PULSE_POSTS = [
   {
     id: 'fb-2061-070',
@@ -129,26 +129,6 @@ const COMMUNITY_PULSE_POSTS = [
     eventRelated: false
   },
   {
-    id: 'fb-2061-076',
-    sourceKey: 'fb-2061',
-    postedAt: '2026-04-20T08:00:00',
-    title: 'Community Survey open through May 21 — resident feedback shapes Council priorities and budget',
-    excerpt: 'The Town of Telluride’s third annual National Community Survey is open now through midnight on Thursday, May 21. Administered by Polco, the survey captures resident feedback on the economy, mobility, community design, utilities, safety, natural environment, and overall livability. Results will directly inform Town Council goals and future budget allocations. Take the survey at bit.ly/totsurvey26.',
-    tags: ['Town Government', 'Survey', 'Community', 'Budget'],
-    featured: true,
-    eventRelated: false
-  },
-  {
-    id: 'fb-3395-048',
-    sourceKey: 'fb-3395',
-    postedAt: '2026-04-20T12:00:00',
-    title: 'NightGrass pre-sale Wednesday, general sale Thursday — Bluegrass late-night shows June 17–21',
-    excerpt: 'The NightGrass pre-sale for late-night shows during the 2026 Telluride Bluegrass Festival (June 17–21) opens Wednesday, April 22. General sale follows Thursday, April 23. Acts include Greensky Bluegrass, Infamous Stringdusters, Punch Brothers, and more across four downtown venues. Text NIGHTGRASS to 1-844-326-3296 for pre-sale access. Full lineup and ticket details at bluegrass.com.',
-    tags: ['Festival', 'Music', 'Tickets', 'Upcoming Event'],
-    featured: false,
-    eventRelated: true
-  },
-  {
     id: 'c7cc-024',
     sourceKey: 'c7cc',
     postedAt: '2026-04-20T13:00:00',
@@ -157,16 +137,6 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Housing', 'Affordable', 'Lottery', 'Upcoming Event'],
     featured: false,
     eventRelated: true
-  },
-  {
-    id: 'fb-2061-067',
-    sourceKey: 'fb-2061',
-    postedAt: '2026-04-20T09:00:00',
-    title: 'Special-election petition deadline passed — candidates needed 25 signatures to qualify',
-    excerpt: 'The filing deadline for the Town of Telluride’s June 30 special election passed Monday, April 20 at 5 p.m. Two Council seats are on the ballot: one vacated by former Mayor Pro Tem Meehan Fee and one held by appointed Councilmember Marya Stark. Candidates had to submit petitions with 25 valid signatures from registered Telluride voters to the Town Clerk’s office. Certified candidates will be announced after verification.',
-    tags: ['Elections', 'Deadline', 'Town Government', 'Council'],
-    featured: false,
-    eventRelated: false
   }
 ];
 const CP_MAX_POSTS = 20;

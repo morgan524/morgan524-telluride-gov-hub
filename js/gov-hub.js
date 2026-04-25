@@ -3818,6 +3818,231 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-20  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: 'Former Colorado funeral home owner sentenced to 30 years in case that forced industry crackdown',
+    source: 'Telluride Times',
+    date: 'April 25, 2026',
+    newsTopic: 'community',
+    copy: 'A former Colorado funeral home owner who helped her ex-husband hide nearly 200 decomposing bodies has been sentenced to 30 years in prison. The case prompted state officials to clamp down on an industry plagued by repeated scandal and notoriously…',
+    href: 'https://www.telluridenews.com/news/state/article_3b8df69a-cf09-5380-b5aa-6bd41a218089.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/d4/fd440f91-55ae-5ccf-9ae1-e3503e0b0d7f/69eaef1b5239b.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'A weekend of mushroom love',
+    source: 'Telluride Times',
+    date: 'April 25, 2026',
+    newsTopic: 'arts-culture',
+    copy: 'Came for the spores, came back for the rad community connection: More than just a fest, the Telluride Mushroom Festival is “an annual reunion” for thousands of “fungi folks,” who return to the box canyon every year to celebrate all…',
+    href: 'https://www.telluridenews.com/news/article_d8eb8e65-c686-4c22-b5f7-b8d73b0c3d20.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/45/f45402c7-f21b-4625-9c4b-9ad04daab19c/69ebacdb3d620.image.jpg?resize=300%2C449'
+  },
+  {
+    title: 'Former Colorado funeral home owner sentenced to 30 years in case that forced state to clamp down on industry',
+    source: 'Telluride Times',
+    date: 'April 24, 2026',
+    newsTopic: 'community',
+    copy: 'Former Colorado funeral home owner sentenced to 30 years in case that forced state to clamp down on industry.',
+    href: 'https://www.telluridenews.com/news/state/article_68436a91-206c-5002-8868-19e121d7b3aa.html',
+    img: ''
+  },
+  {
+    title: 'Bark beetles are eating through trees in San Miguel County',
+    source: 'Telluride Times',
+    date: 'April 24, 2026',
+    newsTopic: 'community',
+    copy: 'An insect scarcely bigger than a grain of rice is infesting trees in the forests of San Miguel County.',
+    href: 'https://www.telluridenews.com/news/article_cc9e2caf-f011-456d-b0e8-c9d98c5510aa.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/a9/4a969e1e-7375-4d2f-b8cd-bde6b0aaa812/69ebaf7fa8a0f.image.jpg?resize=300%2C400'
+  },
+  {
+    title: 'County discusses future planning projects',
+    source: 'Telluride Times',
+    date: 'April 24, 2026',
+    newsTopic: 'land-use',
+    copy: 'The San Miguel Board of County Commissioners (BOCC) held its first meeting after a spring hiatus on Wednesday, April 22. Moving forward into a new season, planning, development and permitting were on top of mind.',
+    href: 'https://www.telluridenews.com/news/article_df3af361-8522-4d1f-9bca-3c050b74c95b.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/1f/a1f0586a-f7fe-489e-a348-0b63cc2b8228/69eafe3da3a22.image.jpg?resize=300%2C225'
+  },
+  {
+    title: 'Not your parents’ PE',
+    source: 'Telluride Times',
+    date: 'April 24, 2026',
+    newsTopic: 'housing',
+    copy: 'Outside the gymnasium of the Telluride Elementary School (TES), physical education teacher Erin Murray waited for her class of first-grade students to arrive.',
+    href: 'https://www.telluridenews.com/news/article_a4c5d839-f765-42ef-8d91-38ffc315ad4d.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/f5/af558834-d00d-4c09-afd8-5bd5e32123d2/69e8798e37429.image.jpg?resize=300%2C400'
+  },
+  {
+    title: 'Federal judge orders release of family of man charged in Colorado firebomb attack',
+    source: 'Telluride Times',
+    date: 'April 23, 2026',
+    newsTopic: 'public-safety',
+    copy: 'A federal judge has ordered the release from immigration custody of the family of a man charged in a fatal firebomb attack in Boulder, Colorado, last year. U.S. District Judge Fred Biery in San Antonio said Hayam El Gamal and…',
+    href: 'https://www.telluridenews.com/news/state/article_09f12f45-ca76-5230-a9c6-768867dc500c.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/df/8dfd6a5c-a101-5ad6-891e-bcee98b6b578/69ea6f2fc96b2.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'Telluride Town Clerk certifies council candidates for June election',
+    source: 'Telluride Times',
+    date: 'April 23, 2026',
+    newsTopic: 'government',
+    copy: 'The Telluride Town Clerk has officially certified candidates for Telluride Town Council’s special election on June 30 — the first time there have been more candidates than open seats on council since 2023.',
+    href: 'https://www.telluridenews.com/news/article_68c45a3a-0714-44e9-b0b4-a237f39657d2.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/21/a21bf33b-c002-4a52-a20d-577939094d4a/69ea5ed10a0b7.image.jpg?resize=300%2C231'
+  },
+  {
+    title: 'Is off-season the best season?',
+    source: 'Telluride Times',
+    date: 'April 23, 2026',
+    newsTopic: 'infrastructure',
+    copy: 'For some, the answer is a definite yes. In Telluride, off-season began on April 6 with quiet streets and locals schools on spring break. Classes resumed April 20, but the serenity of spring continues. Missing your favorite coffee shop, watering…',
+    href: 'https://www.telluridenews.com/gallery/article_a66784be-15e4-457a-84de-c3e4bbaf7105.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/5c/05cbe539-c717-4525-98a2-888c077582ed/69e7ba253ef59.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'Legals and Public Notices for April 23-29, 2026',
+    source: 'Telluride Times',
+    date: 'April 23, 2026',
+    newsTopic: 'community',
+    copy: 'PUBLIC HEARING NOTICE',
+    href: 'https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html',
+    img: ''
+  },
+  {
+    title: 'Assault charge for immigration officer in Colorado could test immunity provisions for federal agents',
+    source: 'Telluride Times',
+    date: 'April 23, 2026',
+    newsTopic: 'community',
+    copy: 'The decision in Colorado to charge an immigration officer with assault after a protester was grabbed by the neck and pulled away could test the boundaries of immunity provisions for federal agents in the line of duty. A Colorado prosecutor…',
+    href: 'https://www.telluridenews.com/news/state/article_6467b8cc-2f6f-56a3-87f6-fb945517f4b8.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/f5/ff50216b-e2da-5ecd-8931-20238c43544e/69e96a0aea89f.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'Immigration officer is charged with assault after protest outside Colorado ICE facility, DA says',
+    source: 'Telluride Times',
+    date: 'April 23, 2026',
+    newsTopic: 'education',
+    copy: 'A Colorado district attorney has charged an immigration agent after a protester said she was held in a chokehold during demonstrations against the detention of an immigrant father and two children. The Durango District Attorney announced the decision Tuesday. Multiple…',
+    href: 'https://www.telluridenews.com/news/state/article_ddb43ab6-63d1-5f27-a5f2-001efe39c7a0.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/f4/0f4452e4-4145-5f8f-a0d9-d56ce939993d/69e9423256e40.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'More kids than ever are attending state-funded preschool, with California\'s surge leading the way',
+    source: 'Telluride Times',
+    date: 'April 23, 2026',
+    newsTopic: 'education',
+    copy: 'More kids than ever are attending state-funded preschool in the U.S., 1.8 million of them the last school year. A report by the National Institute of Early Education Research finds that 37% of 4-year-olds and about 10% of 3-year-olds are…',
+    href: 'https://www.telluridenews.com/news/state/article_0113120d-dfad-5860-a97a-b0d6576dc4c2.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/bb/8bb013f1-f2d6-5904-9ef4-051c56288106/69e900a32af67.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'Immigration officer charged with assault after investigation into treatment of protester outside ICE facility, DA says',
+    source: 'Telluride Times',
+    date: 'April 22, 2026',
+    newsTopic: 'community',
+    copy: 'Immigration officer charged with assault after investigation into treatment of protester outside ICE facility, DA says.',
+    href: 'https://www.telluridenews.com/news/state/article_16cd06ad-7169-5aea-b789-e2ba12e7d51d.html',
+    img: ''
+  },
+  {
+    title: 'The buzz about the Bike Park: closed for 2026',
+    source: 'Telluride Times',
+    date: 'April 22, 2026',
+    newsTopic: 'recreation',
+    copy: 'Last month, Telluride Ski Resort (Telski) announced that the Telluride Bike Park will be closed for 2026 due to uncertainty around summer upgrade work on Lift 4.',
+    href: 'https://www.telluridenews.com/news/article_03e530b5-1172-4e9a-9421-3e90d522fe6e.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/f7/2f74685d-961a-4ce8-b3b9-951ebe18cb22/69e68d6fd33e0.image.jpg?resize=300%2C196'
+  },
+  {
+    title: 'Gunman who fired on tourists at Mexican pyramid carried materials related to 1999 Columbine massacre',
+    source: 'Telluride Times',
+    date: 'April 22, 2026',
+    newsTopic: 'housing',
+    copy: 'The gunman who opened fire on tourists at Mexico’s iconic Teotihuacan pyramids carried materials that were apparently related to the deadly 1999 shooting at Columbine High School. That\'s according to authorities who spoke Tuesday, a day after the attack that…',
+    href: 'https://www.telluridenews.com/news/state/article_37352de0-fc91-5dc2-b35e-8718d7dbcbaf.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/a4/7a44d4e8-73af-5e2a-874a-ad57e60541a7/69e817d42830c.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'Pneumonia evidence upends a decades old conviction in baby\'s death to free Stephen Martinez',
+    source: 'Telluride Times',
+    date: 'April 21, 2026',
+    newsTopic: 'arts-culture',
+    copy: 'A judge has thrown out the first-degree murder conviction of a man found guilty in the death of his girlfriend’s 4-month-old daughter in Denver nearly 30 years ago because of new evidence in the case. Stephen Martinez was convicted in…',
+    href: 'https://www.telluridenews.com/news/state/article_b7033c78-edbb-5d83-b3c3-ea8112ac053c.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/b6/cb61a188-adb4-5c52-ba88-7b57de52e55a/69e7cf9fbc2ba.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'Norwood poised for growth',
+    source: 'Telluride Times',
+    date: 'April 21, 2026',
+    newsTopic: 'land-use',
+    copy: 'The ground has broken on a new era in Norwood. The La Sal Vista neighborhood, right across from the San Miguel County Fairgrounds, is expanding this small town’s footprint with one of the most significant residential developments in decades.',
+    href: 'https://www.telluridenews.com/news/article_7863e6d6-6d8d-4ee7-897f-eca8f5b8f0fc.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/d0/ad0c008e-cdee-4970-b3bd-cac8e1a47c69/69e79cab7c2e6.image.jpg?resize=300%2C388'
+  },
+  {
+    title: 'Prohaska, Wisor and Fee move to dismiss Telski lawsuit',
+    source: 'Telluride Times',
+    date: 'April 20, 2026',
+    newsTopic: 'housing',
+    copy: 'Nearly two months after Telluride Ski Resort (Telski) filed a lawsuit against former and current public officials in Telluride and Mountain Village, blaming them for prolonging the 13-day Telluride Ski Patrol strike and the concurrent closing of the mountain, the…',
+    href: 'https://www.telluridenews.com/news/article_d5676d0f-ec0d-40ca-a146-b597a3a9c097.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/d0/cd08705c-66d0-4207-a0c1-56d5ae1b4733/69e6b38476f1a.image.jpg?resize=300%2C225'
+  },
+  {
+    title: 'Supreme Court will hear from religious preschools challenging exclusion from taxpayer-funded program',
+    source: 'Telluride Times',
+    date: 'April 20, 2026',
+    newsTopic: 'government',
+    copy: 'The Supreme Court will hear from Catholic preschools that say it’s unconstitutional to exclude them from a state-funded program because they won’t admit kids from LGBTQ+ families. It\'s the latest religious rights case for the conservative-majority court. The justices on…',
+    href: 'https://www.telluridenews.com/news/state/article_1a33693e-55b3-5d1b-b5e8-2b5a93ea2b04.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/d0/ad006c78-63cc-50c4-96d3-53b58f7d9251/69e62eb2c9442.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'Wildfire survivors who lost their homes could face another blow from taxes on settlement payouts',
+    source: 'Telluride Times',
+    date: 'April 20, 2026',
+    newsTopic: 'public-safety',
+    copy: 'Thousands of survivors of the 2025 Eaton Fire in California are accepting settlements from the utility accused of causing it. They\'re choosing faster payments over litigation to rebuild their lives. However, they now face the possibility of these payments being…',
+    href: 'https://www.telluridenews.com/news/state/article_e850f478-16ab-588a-a6df-a9463b17a438.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/8d/08dfe579-e51d-5f46-b70e-40231f61b4b0/69e60bf56b398.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'Safety and health come first during festival season',
+    source: 'Telluride Times',
+    date: 'April 19, 2026',
+    newsTopic: 'arts-culture',
+    copy: 'Music festival season is fast approaching: A time to gather outdoors with friends, enjoy live music and dance.',
+    href: 'https://www.telluridenews.com/news/article_959e0960-3070-4c9d-b4b7-2dfb4ce49958.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/2e/22ed2f9b-3f0d-4220-a7b1-b32327c3e123/69e3e01813073.image.jpg?resize=300%2C300'
+  },
+  {
+    title: 'San Miguel Watershed Coalition receives $500,000 for wildfire preparedness',
+    source: 'Telluride Times',
+    date: 'April 18, 2026',
+    newsTopic: 'public-safety',
+    copy: 'With the dry winter, focus is already on wildfire preparedness for the summer season and beyond. The San Miguel Watershed Coalition received $500,000 in funding to develop a Wildfire Readiness Action Plan (WRAP). WRAP focuses on watershed risks of wildfire…',
+    href: 'https://www.telluridenews.com/news/article_335d69a9-77c0-4f1f-82b8-22a07ffc5de9.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/88/f888c95b-00a6-42d8-ac0d-73e7a1744aee/69e336ab1d78a.image.jpg?resize=300%2C225'
+  },
+  {
+    title: 'ICE went on a hiring spree. Sterling credentials were not required, AP investigation finds',
+    source: 'Telluride Times',
+    date: 'April 18, 2026',
+    newsTopic: 'arts-culture',
+    copy: 'Some new U.S. Immigration and Customs Enforcement officers started working before passing background checks and had problems in their past. ICE announced in January that it completed an unprecedented hiring spree, adding 12,000 officers and agents to double its force.…',
+    href: 'https://www.telluridenews.com/news/state/article_f33bb0ba-1262-5f2d-91fc-603ec7c0a7b1.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/31/23174e94-3906-56c5-a596-a3e9f7e30f97/69e1dd101ccd1.image.jpg?resize=300%2C200'
+  },
+  {
+    title: 'SMPA District 3 board candidates weigh in',
+    source: 'Telluride Times',
+    date: 'April 17, 2026',
+    newsTopic: 'government',
+    copy: 'With rising energy costs, locals have an opportunity to have a voice in energy operations in San Miguel County. As a consumer-controlled electric cooperative, San Miguel Power Association (SMPA) is supervised by a seven-member board of directors, elected by co-op…',
+    href: 'https://www.telluridenews.com/news/article_a019f39e-3a7f-4c99-861a-6dd7517d0533.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/ab/3abd5591-ff36-4247-afb0-46f9a8d51ac0/69e1b1049ecbe.image.jpg?resize=300%2C451'
+  },
+  {
     title: 'New Motor Vehicle Office Availability in Egnar! May 13 at 9 am - 3 pm',
     source: 'San Miguel County',
     date: 'April 20, 2026',
