@@ -26,7 +26,7 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-25';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-26';
 const COMMUNITY_PULSE_POSTS = [
   {
     id: 'fb-2061-070',
@@ -97,36 +97,6 @@ const COMMUNITY_PULSE_POSTS = [
     tags: ['Festival', 'Film', 'Speakers', 'Upcoming Event'],
     featured: false,
     eventRelated: true
-  },
-  {
-    id: 'fb-2061-074',
-    sourceKey: 'fb-2061',
-    postedAt: '2026-04-21T08:00:00',
-    title: 'Special-election petitions verified — certified candidates to be announced for June 30 Council race',
-    excerpt: 'The Town Clerk’s office is verifying petitions submitted by the April 20 deadline for the June 30 special election. Two Council seats are on the ballot: one vacated by former Mayor Pro Tem Meehan Fee and one held by appointed Councilmember Marya Stark, who confirmed she will run. Candidates needed 25 valid signatures from registered Telluride voters. The certified candidate list is expected to be posted at telluride-co.gov/elections once verification is complete.',
-    tags: ['Elections', 'Town Government', 'Council'],
-    featured: true,
-    eventRelated: false
-  },
-  {
-    id: 'fb-3395-050',
-    sourceKey: 'fb-3395',
-    postedAt: '2026-04-21T09:00:00',
-    title: 'Telluride Regional Airport Authority held special meeting Tuesday at Hangar 30',
-    excerpt: 'The Telluride Regional Airport Authority held a special meeting on Tuesday, April 21 at 1:00 p.m. in the Hangar 30 Conference Room at the Telluride Regional Airport. Special meetings of the Authority are used for time-sensitive decisions outside the regular meeting schedule. Meeting minutes and materials are available at tellurideairport.com.',
-    tags: ['Airport', 'Government', 'Special Meeting'],
-    featured: false,
-    eventRelated: false
-  },
-  {
-    id: 'fb-2061-075',
-    sourceKey: 'fb-2061',
-    postedAt: '2026-04-21T10:00:00',
-    title: 'Stage 1 fire restrictions remain in effect — snowpack still at historic low',
-    excerpt: 'Stage 1 fire restrictions remain in effect across San Miguel County as snowpack sits at roughly 15% of median. Open burning, campfires outside designated areas, and fireworks are prohibited. The San Miguel Watershed Coalition’s $500,000 Wildfire Readiness Action Plan grant is funding hazard mapping and fuel-reduction planning ahead of what forecasters warn could be an above-normal fire season. Residents can check their wildfire risk via the county’s interactive mapping tool at sanmiguelcountyco.gov.',
-    tags: ['Wildfire', 'Fire Restrictions', 'County', 'Safety'],
-    featured: false,
-    eventRelated: false
   }
 ];
 const CP_MAX_POSTS = 20;
