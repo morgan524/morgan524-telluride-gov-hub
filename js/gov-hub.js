@@ -4464,7 +4464,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-04-25'; // Updated by legal-notice-update task (dust control ITB, municipal financial advisor RFP)
+const LEGAL_NOTICES_CACHE_DATE = '2026-04-26'; // Updated by legal-notice-update task (dust control ITB, municipal financial advisor RFP)
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -4708,23 +4708,6 @@ const LEGAL_NOTICES = [
     url: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx'
   },
   {
-    title: 'Public Comment -- GMUG South Uncompahgre Hazardous Fuels & Ecological Resiliency (SUHFER) Project',
-    entity: 'USDA Forest Service / Grand Mesa, Uncompahgre & Gunnison National Forests',
-    entityClass: 'ent-county',
-    entityLogo: 'county',
-    icon: '🌲',
-    iconClass: 'type-hearing',
-    type: 'Public Comment',
-    filterTag: 'public-entity',
-    summary: 'The Grand Mesa, Uncompahgre and Gunnison National Forests are accepting public comments on the draft environmental assessment for the South Uncompahgre Hazardous Fuels and Ecological Resiliency (SUHFER) project. The 30-day comment period opened March 26, 2026. The project area covers approximately 267,300 acres in Montrose, Ouray, and San Miguel counties. Submit comments to comments-rocky-mountain-gmug@usda.gov or mail to Norwood Ranger District, Attn: Megan Eno, 1150 Forest St, Norwood, CO 81423 (drop-off available Wed-Fri 9am-4pm). Project documents at fs.usda.gov/r02/gmug/projects/68281. Contact Jonathan Tucker at 970-573-1876 or jonathan.tucker@usda.gov.',
-    deadline: 'Comments due by April 25, 2026',
-    expires: '2026-04-25',
-    dates: '3/25, 3/26',
-    papers: ['county_web'],
-    url: 'https://www.fs.usda.gov/r02/gmug/projects/68281',
-    address: '1150 Forest St, Norwood, CO 81423'
-  },
-  {
     title: 'Notice of Vesting -- 116 E Columbia Ave Remodel Addition',
     entity: 'Town of Telluride',
     entityClass: 'ent-county',
@@ -4739,23 +4722,6 @@ const LEGAL_NOTICES = [
     dates: '3/5',
     papers: ['ttimes_mar5'],
     address: '116 E Columbia Ave, Telluride, CO'
-  },
-  {
-    title: 'Bid Notice -- 2026 Ski Ranches Waterline Replacement Project',
-    entity: 'Town of Mountain Village',
-    entityClass: 'ent-mv',
-    entityLogo: 'mv',
-    icon: '💧',
-    iconClass: 'type-bid',
-    type: 'Bid Notice',
-    filterTag: 'utilities',
-    summary: 'Mountain Village is accepting bids for the 2026 Ski Ranches Waterline Replacement Project. Bid packets available at townofmountainvillage.com or at TMV Public Works Dept, 411 Mountain Village Blvd 2nd floor. Pre-bid site walk: Wednesday April 9, 2026 at 10:00 AM, 411 Mountain Village Blvd 3rd floor. Contact Scott Pittenger (970) 708-8690 or Jenny Bates (970) 369-8201.',
-    deadline: 'Bids due April 25, 2026',
-    expires: '2026-04-25',
-    dates: '4/2, 4/7',
-    papers: ['ttimes_apr2'],
-    url: 'https://www.townofmountainvillage.com',
-    address: '411 Mountain Village Blvd, Mountain Village, CO'
   },
   {
     title: 'Notice of Vesting -- Korn Residence, 566 W Columbia Ave',
@@ -4982,22 +4948,6 @@ const LEGAL_NOTICES = [
     dates: '4/16',
     papers: ['ttimes_apr16'],
     address: 'Norwood Ranger District, P.O. Box 388, Norwood, CO 81428'
-  },
-  {
-    title: 'RFP -- Engineering Services for 2026 Design Standards & Construction Specifications Update',
-    entity: 'Town of Telluride',
-    entityClass: 'ent-county',
-    entityLogo: 'telluride',
-    icon: '📐',
-    iconClass: 'type-rfp',
-    type: 'RFP',
-    filterTag: 'public-entity',
-    summary: 'The Town of Telluride is soliciting proposals from experienced, qualified consultants for a comprehensive update of the Town\'s Design Standards and Construction Specifications governing construction and right-of-way connections to public utilities. Confirmed electronic proposals must be submitted to togen@telluride.gov. Bid documents are available by email or through BidNet Direct at www.bidnetdirect.com. Contact: (970) 728-1838.',
-    deadline: 'Proposals due April 25, 2026 at 5:00 PM',
-    expires: '2026-04-25',
-    dates: '4/16',
-    papers: ['ttimes_apr16'],
-    url: 'https://www.bidnetdirect.com'
   },
   {
     title: 'Invitation for Bids -- 2026 Mill Creek Prefab Pressure Reducing Valve Vault Installation',
