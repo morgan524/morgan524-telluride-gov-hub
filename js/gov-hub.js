@@ -314,6 +314,16 @@ const COUNTY_CACHED_DATA = [
     note: 'Agenda typically posted the Friday before.'
   },
   {
+    date: 'April 27, 2026',
+    time: '1:30 PM - 3:30 PM',
+    title: 'Housing Code Update -- SSR Meeting #5',
+    type: 'ssr',
+    location: '333 West Colorado Ave, 2nd Floor, Telluride, CO 81435',
+    civicClerkId: null,
+    agendaUrl: 'https://www.sanmiguelcountyco.gov/DocumentCenter/View/14206/April-SSR-No-5-Meeting-Packet',
+    note: '2-hour working session of the Stakeholder Strategic Roundtable for the SMC Housing Code Update. Agenda: Recap of Project Objectives (5 min) -- Accelerated Housing Review (25 min) -- Draft Code Recommendations (85 min) -- Closing (5 min). Zoom: 860 9725 9982 / passcode 731354 (https://us06web.zoom.us/j/86097259982).'
+  },
+  {
     date: 'April 29, 2026',
     time: '9:30 AM - 3:00 PM',
     title: 'Board of County Commissioners Meeting',
@@ -401,9 +411,16 @@ const COUNTY_CACHED_DATA = [
 function getCountyCachedMeetings() {
   return COUNTY_CACHED_DATA.map(m => {
     const eventDate = localDate(m.date);
-    const link = m.civicClerkId
-      ? COUNTY_CIVICCLERK_BASE + m.civicClerkId + '/files'
-      : COUNTY_CIVICCLERK_FALLBACK;
+    // Explicit agendaUrl override (used for entities not on CivicClerk, e.g.
+    // the SSR Housing Code Update meetings whose packets are in DocumentCenter).
+    const link = m.agendaUrl
+      ? m.agendaUrl
+      : (m.civicClerkId
+          ? COUNTY_CIVICCLERK_BASE + m.civicClerkId + '/files'
+          : COUNTY_CIVICCLERK_FALLBACK);
+    const categoryLabel = m.type === 'planning'  ? 'Planning Commission'
+                        : m.type === 'ssr'       ? 'SSR Roundtable'
+                        : 'Meeting';
 
     return {
       title: m.title,
@@ -415,10 +432,12 @@ function getCountyCachedMeetings() {
       location: m.location || '',
       source: 'county',
       sourceLabel: 'San Miguel County',
-      category: m.type === 'planning' ? 'Planning Commission' : 'Meeting',
+      category: categoryLabel,
       canceled: false,
-      hasAgenda: !!m.civicClerkId,
-      agendaLink: m.civicClerkId ? COUNTY_CIVICCLERK_BASE + m.civicClerkId + '/files' : null
+      hasAgenda: !!(m.agendaUrl || m.civicClerkId),
+      agendaLink: m.agendaUrl
+        ? m.agendaUrl
+        : (m.civicClerkId ? COUNTY_CIVICCLERK_BASE + m.civicClerkId + '/files' : null)
     };
   });
 }
@@ -1911,10 +1930,16 @@ const LAND_USE_ISSUES = {
   },
   code: {
     label: 'Code Changes & Accelerated Review',
+    heroImage: 'assets/ssr/SMC-Housing-Code-Update-infographic.jpg',
+    heroAlt: 'San Miguel County Housing Code Update infographic showing Phase 1 Project Foundation (Fall/Winter 2025), Phase 2 Issue Identification & Analysis (Spring 2026), and Phase 3 Final Audit Report and Code Drafting (Summer 2026).',
+    heroCredit: 'Source: San Miguel County Housing Code Update project page',
+    legalSummary: 'The current LUCA Draft (April 8, 2026) would create a 90-day "Accelerated Housing Review" track. Compared to the SSR\'s recommendations, the County\'s draft removes (1) language identifying the program as voluntary, (2) the exclusion of PUDs that involve rezoning or subdivision, (3) a 10-unit project-size cap, and (4) the requirement that review default to a two-step Planning-Commission-plus-BOCC process. The redline (linked above) shows SSR additions in blue and County deletions in red.',
+    legalIssuesTitle: 'Concerns with the County\'s draft',
+    legalIssuesSub: 'Specific places where the County\'s April 8 LUCA Draft removed or weakened SSR-recommended limits on the Accelerated Housing Review process.',
     intro: 'Code reform is often where the biggest long-term land-use changes happen, because one ordinance can affect every future project, not just one site, for better or worse. The most active local example right now is the San Miguel County Housing Code Update, a 15-month land use code audit being shaped by an appointed Stakeholder Strategic Roundtable (SSR).',
     statusTitle: 'The code-change process may matter more than any single project.',
     statusCopy: 'San Miguel County is undertaking a comprehensive land use code audit (June 2025 -- Sept 2026) funded by a Colorado Proposition 123 Local Planning Capacity Grant. The Stakeholder Strategic Roundtable (SSR) -- a mix of County staff, planning commissioners, school and housing officials, and 12 appointed community members -- meets monthly to review existing housing policies and shape draft amendments. The County notes this work also positions it for Proposition 123 "Fast Track Approval" funding, but does NOT satisfy SB24-174, which still requires a separate Housing Action Plan by January 1, 2028. If review timelines shorten or approval standards shift through this code audit, the practical balance between faster housing production and meaningful public review, environmental protection, and growth management changes for years to come.',
-    nextStep: 'Watch SSR meeting packets, attend Spring 2026 community review of draft amendments, and read the actual draft code language as it is published in the SMC Housing Code Update document center.',
+    nextStep: 'Read the LUCA Draft (April 8, 2026) and the SSR-vs-County redline below, then attend Spring 2026 community review or submit comments to housingupdate@sanmiguelcountyco.gov.',
     metrics: [
       { label: 'Big question', value: 'Speed vs. scrutiny', sub: 'How much process should be compressed in the name of housing delivery?' },
       { label: 'Who is affected', value: 'Every future applicant and every future neighbor', sub: 'Code amendments are system rules, not one-off exceptions.' },
@@ -1930,12 +1955,35 @@ const LAND_USE_ISSUES = {
       { date: 'Winter 2026', title: 'Adoption process for the final code amendments', copy: 'The County moves to formal adoption of the updated land use code, completing the 15-month process. Adopted text -- not the summary -- is what governs every future application.', future: true }
     ],
     docs: [
-      { title: 'San Miguel County Housing Code Update (project page)', copy: 'Official SMC project page for the Housing Code Update -- timeline, listening sessions, SSR roster, document center, and Spanish-language information. The canonical entry point for everything happening in this code audit.', tag: 'SMC Project Page', href: 'https://www.sanmiguelcountyco.gov/882/Housing-Code-Update' },
-      { title: 'SSR Project Document Center', copy: 'Meeting packets and high-level summaries from SSR No. 1-5, plus the Draft Land Use Code Amendment, the Accelerated Housing Review document, the BOCC Presentation, and the Community Engagement Plan. Linked from the SMC project page.', tag: 'SSR Documents', href: 'https://www.sanmiguelcountyco.gov/882/Housing-Code-Update' },
-      { title: 'San Miguel County CivicClerk Portal', copy: 'Source for ordinance drafts, staff memos, and joint work-session materials beyond the SSR\'s own packets.', tag: 'Draft Text', href: 'https://sanmiguelcoco.portal.civicclerk.com/' },
-      { title: 'County Boards & Commissions', copy: 'Use this to identify whether Planning Commission or BOCC is the key venue at each stage of the code update.', tag: 'Process Guide', href: 'https://sanmiguelcountyco.gov/424/Boards-Commissions' },
-      { title: 'Town of Telluride Agendas & Minutes', copy: 'Important when related code conversations (Wildfire Resiliency Code, Land Use Code updates) move inside town jurisdiction as well.', tag: 'Town Record', href: 'https://telluride-co.civicweb.net/Portal/MeetingTypeList.aspx' },
-      { title: 'Submit comments to the SSR', copy: 'Email housingupdate@sanmiguelcountyco.gov. Comments received by noon a week before a meeting go into the meeting packet; comments received by noon the day before go to the meeting body. Anything later is held until the next meeting.', tag: 'Public Comment', href: 'mailto:housingupdate@sanmiguelcountyco.gov' }
+      { title: 'Accelerated Housing Review LUCA Draft (April 8, 2026)', copy: 'The actual draft code amendment text the County is currently moving forward. This is the single most important document: every rule in this draft becomes law if adopted. Read this BEFORE the redline below to see where the County landed.', tag: 'Flagship Draft', href: 'https://www.sanmiguelcountyco.gov/DocumentCenter/View/14055/Accelerated-Housing-Review-LUCA-Draft-04082026?bidId=' },
+      { title: 'SSR-vs-County redline (offline copy)', copy: 'Mirror of the redlined Accelerated Housing Review draft, with SSR additions in BLUE and County deletions in RED. Stored on this site so it stays available even if SMC moves or removes the original. Use this to see exactly what the SSR recommended versus what the County kept.', tag: 'Redline (mirror)', href: 'assets/ssr/Accelerated-Housing-Review-LUCA-redline-SSR-vs-County.pdf' },
+      { title: 'San Miguel County Housing Code Update (project page)', copy: 'Official SMC project page -- timeline, listening sessions, SSR roster, document center, and Spanish-language information. The canonical entry point for everything happening in this code audit.', tag: 'SMC Project Page', href: 'https://www.sanmiguelcountyco.gov/882/Housing-Code-Update' },
+      { title: 'San Miguel County Land Use Code (Accelerated Housing Review)', copy: 'The current Land Use Code language that the Accelerated Housing Review draft would amend. Useful for comparing existing rules against the proposed changes.', tag: 'Existing Code', href: 'https://www.sanmiguelcountyco.gov/DocumentCenter/View/14055' },
+      { title: 'BOCC Presentation -- Community Engagement Plan', copy: 'Presentation given to the Board of County Commissioners describing the Housing Code Update community engagement strategy.', tag: 'BOCC', href: 'https://www.sanmiguelcountyco.gov/DocumentCenter/View/13339/BOCC-Presentation-Community-Engagement-Plan-PDF?bidId=' },
+      { title: 'Community Engagement Plan', copy: 'Full Community Engagement Plan describing how the County intends to gather public input throughout the code update.', tag: 'Plan', href: 'https://www.sanmiguelcountyco.gov/DocumentCenter/View/13340/Community-Engagement-Plan-PDF?bidId=' },
+      { title: 'October SSR No. 1 Meeting Packet', copy: 'First SSR meeting packet (October 2025). Typically the largest packet because it sets up baseline existing-code review.', tag: 'SSR No. 1', href: 'https://www.sanmiguelcountyco.gov/DocumentCenter/View/13732/October-SSR-No-1-Meeting-Packet' },
+      { title: 'October SSR No. 1 Meeting High-Level Summary', copy: 'Short summary of what was discussed and decided at SSR No. 1.', tag: 'SSR No. 1 Summary', href: 'https://www.sanmiguelcountyco.gov/DocumentCenter/View/13734/October-SSR-No-1-Meeting-High-Level-Summary' },
+      { title: 'December SSR No. 2 Meeting Packet', copy: 'Second SSR meeting packet (December 2025).', tag: 'SSR No. 2', href: 'https://www.sanmiguelcountyco.gov/DocumentCenter/View/13733/December-SSR-No-2-Meeting-Packet' },
+      { title: 'December SSR No. 2 Meeting High-Level Summary', copy: 'Short summary of what was discussed and decided at SSR No. 2.', tag: 'SSR No. 2 Summary', href: 'https://www.sanmiguelcountyco.gov/DocumentCenter/View/13810/December-SSR-No-Meeting-High-Level-Summary' },
+      { title: 'January SSR No. 3 Meeting Packet', copy: 'Third SSR meeting packet (January 2026).', tag: 'SSR No. 3', href: 'https://www.sanmiguelcountyco.gov/DocumentCenter/View/13846/January-SSR-No-3-Meeting-Packet' },
+      { title: 'January SSR No. 3 Meeting High-Level Summary', copy: 'Short summary of what was discussed and decided at SSR No. 3.', tag: 'SSR No. 3 Summary', href: 'https://www.sanmiguelcountyco.gov/DocumentCenter/View/13883/January-SSR-No-3-High-Level-Summary' },
+      { title: 'March SSR No. 4 Meeting Packet', copy: 'Fourth SSR meeting packet (March 2026). This is where the Accelerated Housing Review draft language was substantively reworked.', tag: 'SSR No. 4', href: 'https://www.sanmiguelcountyco.gov/DocumentCenter/View/13938/March-SSR-No-4-Meeting-Packet' },
+      { title: 'March SSR No. 4 Meeting High-Level Summary', copy: 'Short summary of what was discussed and decided at SSR No. 4.', tag: 'SSR No. 4 Summary', href: 'https://www.sanmiguelcountyco.gov/DocumentCenter/View/14065/March-SSR-No-4-Meeting-High-Level-Summary' },
+      { title: 'April SSR No. 5 Meeting Packet', copy: 'Fifth and most recent SSR meeting packet (April 2026). High-level summary not yet posted by SMC at the time of writing.', tag: 'SSR No. 5', href: 'https://www.sanmiguelcountyco.gov/DocumentCenter/View/14206/April-SSR-No-5-Meeting-Packet' },
+      { title: 'San Miguel County CivicClerk Portal', copy: 'Source for BOCC and Planning Commission packets, staff memos, and joint work sessions where this code update will be debated and ultimately adopted.', tag: 'CivicClerk', href: 'https://sanmiguelcoco.portal.civicclerk.com/' },
+      { title: 'Submit comments to the SSR', copy: 'Email housingupdate@sanmiguelcountyco.gov. Comments received by noon a week before a meeting go into the meeting packet; by noon the day before go to the meeting body; later is held until next meeting.', tag: 'Public Comment', href: 'mailto:housingupdate@sanmiguelcountyco.gov' }
+    ],
+    legalIssues: [
+      { icon: '⚖️', title: '3-1501 -- the County removed language identifying the program as voluntary',
+        copy: 'The SSR draft kept the phrase "in order to receive financial assistance from the State of Colorado" before the requirement to provide an Accelerated Housing Review. The County removed it. Nothing in C.R.S. 29-32-105 actually requires this 90-day review -- it is a precondition for one funding stream (Proposition 123). Colorado HB26-1360 has eliminated Prop 123 funding for this fiscal year and it may be eliminated again. As written, the County\'s draft reads as a mandate when in fact the program is voluntary tied to a discretionary funding source.' },
+      { icon: '🏗️', title: '3-1501 / eligible-vs-ineligible -- new PUDs with rezoning or subdivision could be fast-tracked',
+        copy: 'The SSR draft excluded "Planned Unit Development approval or amendment that includes zoning approval or subdivision of land" from the 90-day track -- the same language used by the State of Colorado. The County\'s draft strikes that exclusion AND removes "approval that does not involve rezoning or subdivision of land" from the eligible-projects clause. Read together, the County draft would let a brand-new PUD that requires both rezoning and subdivision proceed through 90-day administrative review, which can apply to projects of any size (see issue 5).' },
+      { icon: '🗺️', title: '3-1501 ineligible list -- "Initial Zoning or Rezoning" deleted',
+        copy: 'The County\'s draft strikes "Initial Zoning or Rezoning" from the list of project types ineligible for accelerated review. Combined with the change above, this signals that rezoning is now permitted within a 90-day administrative review for both PUDs and other developments. The change is consequential by omission rather than statement.' },
+      { icon: '📋', title: '3-1503 -- the two-step process backstop is removed',
+        copy: 'The SSR draft kept the language "Unless an alternate process is specified in the Land Use Code, the Accelerated Housing Review process shall be a Two-Step process (review by the Planning Commission + Board of County Commissioners)." The County\'s draft strikes that line entirely. With it gone, the Code does not specify who reviews these applications, what notice is given to neighbors, or whether the public has a hearing -- it could become a fully administrative one-step process. The draft should specify the actual procedure.' },
+      { icon: '📐', title: 'Article 7 Definitions -- the 10-unit cap and contiguous-land limit are deleted',
+        copy: 'The SSR draft included "No project that includes more than ten (10) total units may be considered for Accelerated Housing Review" along with rules requiring the application to encompass the whole contiguous parcel and preventing future fast-track applications on the same land. The County\'s draft strikes the entire paragraph. Nothing in Proposition 123 requires the fast-track process to apply to projects of any size. As drafted, a 200-unit development could move through 90-day review with limited or no public notice -- a far different posture than the small-project framing the SSR proposed.' }
     ],
     players: [
       { icon: '📜', title: 'Planning staff and consultants', copy: 'They draft and shape the first version of the ordinance language and run the SSR process day-to-day.' },
@@ -2267,6 +2315,11 @@ function renderLandUseTab() {
   if (legalPanel && legalEl) {
     if (issue.legalIssues && issue.legalIssues.length) {
       legalPanel.style.display = '';
+      // Optional per-issue panel-header overrides (legalIssuesTitle / legalIssuesSub)
+      const legalH3 = legalPanel.querySelector('.landuse-panel-header h3');
+      const legalP  = legalPanel.querySelector('.landuse-panel-header p');
+      if (legalH3) legalH3.textContent = issue.legalIssuesTitle || 'Legal issues';
+      if (legalP)  legalP.textContent  = issue.legalIssuesSub   || 'Key legal and transparency questions surrounding this topic.';
       legalEl.innerHTML = issue.legalIssues.map(item => `
         <div class="landuse-player">
           <div class="landuse-player-icon">${item.icon}</div>

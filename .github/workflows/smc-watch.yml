@@ -1,0 +1,44 @@
+name: SMC Housing Code Update Watch
+
+# Watches the San Miguel County Housing Code Update / SSR project page and
+# mirrors any newly-posted documents into assets/ssr/, plus a manifest.
+#
+# Runs every 6 hours and on manual dispatch.  When new documents appear the
+# script writes them into assets/ssr/ and updates assets/ssr/manifest.json;
+# this workflow then commits and pushes the changes so the live site has
+# offline copies even if SMC moves or removes the originals.
+
+on:
+  schedule:
+    - cron: '15 */6 * * *'   # every 6 hours, offset 15 min to avoid overlap with content-refresh
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run SMC watcher
+        run: node scripts/smc-housing-code-watch.js
+
+      - name: Commit & push if anything changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes from SMC watcher"
+            exit 0
+          fi
+          git add assets/ssr
+          git commit -m "🛰 SMC Housing Code Update mirror $(date -u +%F\ %H:%MZ)"
+          git push origin HEAD
