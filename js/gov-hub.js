@@ -4056,35 +4056,23 @@ const TELLURIDE_TIMES_ARTICLES = [
 // Updated: 2026-04-18  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
   {
-    title: "Newscast 4-16-26",
-    source: "KOTO Community Radio",
-    date: "April 16, 2026",
-    newsTopic: "public-safety",
-    copy: "Former Sheriff Deputy sentenced for child pornography, West End Roundup with the San Miguel Basin Forum, and celebrating dark skies.",
-    href: "https://koto.org/news/newscast-4-16-26/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+    title: 'Newscast 4-16-26',
+    source: 'KOTO Community Radio',
+    date: 'April 16, 2026',
+    newsTopic: 'public-safety',
+    copy: 'Former Sheriff Deputy sentenced for child pornography, West End Roundup with the San Miguel Basin Forum, and celebrating dark skies.',
+    href: 'https://koto.org/news/newscast-4-16-26/',
+    img: 'https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png'
   },
   {
-    title: "Newscast 4-15-26",
-    source: "KOTO Community Radio",
-    date: "April 15, 2026",
-    newsTopic: "community",
-    copy: "The Kids Are Alright, The Dark Veil of Romance, and A Look Back: Ten Years of Good Curling.",
-    href: "https://koto.org/news/newscast-4-15-26/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  },
-  {
-    title: "Newscast 4-13-26",
-    source: "KOTO Community Radio",
-    date: "April 13, 2026",
-    newsTopic: "government",
-    copy: "This week\u2019s Regional Roundup: a Mountain Munchkins update, and Colorado\u2019s General Assembly heads into its final month of the 2026 legislative session.",
-    href: "https://koto.org/news/newscast-4-13-26/",
-    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
-  },
-  // Removed KOTO newscast 4-3-26 (>14 days old, cleaned 2026-04-18)
-  // Removed KOTO newscast 4-2-26 (>14 days old)
-  // Removed KOTO newscasts from April 1 and earlier (>14 days old)
+    title: 'Newscast 4-15-26',
+    source: 'KOTO Community Radio',
+    date: 'April 15, 2026',
+    newsTopic: 'community',
+    copy: 'The Kids Are Alright, The Dark Veil of Romance, and A Look Back: Ten Years of Good Curling.',
+    href: 'https://koto.org/news/newscast-4-15-26/',
+    img: 'https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png'
+  }
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
