@@ -1103,6 +1103,9 @@ async function loadAISummaries() {
 // ── Manual/fallback summaries (preserved from original) ──
 // Last updated: 2026-04-22T18:00 (automated scan — no new agendas detected since 2026-04-18. MV TC Apr 23 agenda PDF confirmed to exist (file 48629) but still behind Cloudflare challenge, content unreadable. BOCC Apr 29 work session & Open Space Apr 27 agendas not yet posted. School Apr 20/27/28, Fire Apr 21, Med Apr 23, SMART all still without posted agendas. Hospital District has no April meeting listed on tellmed.org board-meetings page. Election Commission Apr 29, Parks & Rec Apr 29, THA Subcommittee Apr 23 agendas not yet posted on CivicWeb.)
 const MANUAL_SUMMARIES = {
+  "county|2026-04-27|Open Space Commission Meeting":
+    "Open Space Commission monthly meeting -- review of regional open space initiatives, easement and conservation matters, and committee updates. Comments due to staff by Monday at 4:00 PM. (Stub entry to keep summary lookup correctly scoped per-meeting.)",
+
   "county|2026-04-27|Housing Code Update -- SSR Meeting #5":
     "⚖️ WORKING SESSION (2 hours) of the Stakeholder Strategic Roundtable for the SMC Housing Code Update. AGENDA: Recap of Project Objectives (5 min) · ACCELERATED HOUSING REVIEW discussion (25 min) -- review the County's April 8, 2026 LUCA Draft against the SSR-recommended language; the County's draft removed the voluntariness phrasing in 3-1501, struck the PUD-with-rezoning exclusion (now eligible for 90-day review), deleted Initial Zoning/Rezoning from the ineligible list, removed the two-step Planning-Commission-plus-BOCC backstop in 3-1503, and deleted the 10-unit project cap in Article 7 · DRAFT CODE RECOMMENDATIONS (85 min) -- review and refine code revisions before the Spring 2026 community-review phase · Closing",
 
@@ -5953,7 +5956,15 @@ function renderMeetingsWithTopic() {
   // Filter to today onward, removing meetings whose end time has passed
   const todayStr = new Date().toISOString().slice(0, 10);
   filtered = filtered.filter(i => i.eventDate && dateGroupKey(i.eventDate) >= todayStr);
-  filtered = filtered.filter(i => !isMeetingEnded(i));
+  // Keep TODAY's meetings visible all day even if their end time has passed --
+  // a user opening Gov-Hub at 5pm should still see the agenda for a meeting
+  // that ran 1:30-3:30 PM. Meetings on later days are still hidden once ended
+  // (covers cases where eventDate is offset across timezones).
+  filtered = filtered.filter(i => {
+    if (!i.eventDate) return true;
+    if (dateGroupKey(i.eventDate) === todayStr) return true;
+    return !isMeetingEnded(i);
+  });
 
   // Deduplicate
   const seen = new Set();
