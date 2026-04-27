@@ -3339,7 +3339,7 @@ function renderCardActions(item) {
 
 // Only show Board, Council, Commission, and similar governmental meetings
 // (excludes recreational events like "Open Roller Skating", "Movie Night", etc.)
-const GOV_MEETING_PATTERN = /board|council|commission|work\s*session|hearing|planning|zoning|harc|ecology|drb|design\s*review|budget|ordinance|executive|legislative|caucus|quorum|town\s*hall/i;
+const GOV_MEETING_PATTERN = /board|council|commission|work\s*session|hearing|planning|zoning|harc|ecology|drb|design\s*review|budget|ordinance|executive|legislative|caucus|quorum|town\s*hall|roundtable|stakeholder|housing\s*code\s*update|\bssr\b/i;
 
 function isGovernmentalMeeting(item) {
   // Cached sources (smart, mv, school, fire, med, norwood, ophir, localgroup) are already curated meetings
