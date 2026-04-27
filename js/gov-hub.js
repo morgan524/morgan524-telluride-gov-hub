@@ -3335,17 +3335,10 @@ function renderCardActions(item) {
   html += `<a href="${outlookCalUrl(item)}" target="_blank" rel="noopener" class="cal-btn" title="Add to Outlook Calendar">${gIcon} Outlook</a>`;
   html += `<a href="${icsDataUri(item)}" download="${item.title.replace(/[^a-zA-Z0-9]/g, '_')}.ics" class="cal-btn" title="Download .ics file (Apple Calendar, etc.)">${gIcon} iCal</a>`;
 
-  // ── Livestream button (day-of only) ──
-  const remote = ENTITY_REMOTE[item.source] || {};
-  const today = new Date();
-  const isToday = item.eventDate &&
-    item.eventDate.getFullYear() === today.getFullYear() &&
-    item.eventDate.getMonth() === today.getMonth() &&
-    item.eventDate.getDate() === today.getDate();
-  if (isToday && remote.livestream) {
-    const ytIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>';
-    html += `<a href="${remote.livestream}" target="_blank" rel="noopener" class="livestream-link" title="${remote.livestreamLabel || 'Watch'}">${ytIcon} ${remote.livestreamLabel || 'Watch Live'}</a>`;
-  }
+  // Livestream button intentionally NOT rendered here -- the same button is
+  // already shown by renderPasscodeInfo() at the top of the card in the Zoom
+  // Access panel.  Duplicating it next to the calendar buttons was visually
+  // noisy and confusing.
 
   html += '</div>';
   return html;
