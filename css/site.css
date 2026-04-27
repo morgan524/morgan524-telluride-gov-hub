@@ -3168,6 +3168,21 @@
     .landuse-player span { display: block; font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; }
     .landuse-empty { font-size: 0.82rem; color: var(--text-muted); padding: 10px 0 2px; }
 
+    /* ── Roundtable roster (e.g. SSR for Code Changes & Accelerated Review) ── */
+    .landuse-roster { display: grid; gap: 16px; }
+    .landuse-roster-title { font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 4px; }
+    .landuse-roster-sub { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 6px; }
+    .landuse-roster-group { padding: 10px 0; border-top: 1px solid rgba(221,213,200,0.56); }
+    .landuse-roster-group:first-of-type { border-top: none; padding-top: 0; }
+    .landuse-roster-label {
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700;
+      color: var(--text-muted); margin-bottom: 8px;
+    }
+    .landuse-roster-members { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 6px 18px; }
+    .landuse-roster-member { font-size: 0.85rem; line-height: 1.45; color: var(--text-primary); padding: 4px 0; }
+    .landuse-roster-member strong { font-weight: 700; }
+    .landuse-roster-member span { color: var(--text-secondary); font-size: 0.78rem; }
+
     /* ── Community Comment Section ── */
     .comment-section { margin-top: 28px; }
     .comment-section .landuse-panel { border: 1.5px solid var(--border-color); }

@@ -1911,10 +1911,10 @@ const LAND_USE_ISSUES = {
   },
   code: {
     label: 'Code Changes & Accelerated Review',
-    intro: 'Code reform is often where the biggest long-term land-use changes happen, because one ordinance can affect every future project, not just one site, for better or worse.',
+    intro: 'Code reform is often where the biggest long-term land-use changes happen, because one ordinance can affect every future project, not just one site, for better or worse. The most active local example right now is the San Miguel County Housing Code Update, a 15-month land use code audit being shaped by an appointed Stakeholder Strategic Roundtable (SSR).',
     statusTitle: 'The code-change process may matter more than any single project.',
-    statusCopy: 'If review timelines shorten or approval standards shift, the practical balance between faster housing production and meaningful public review, environmental protection, and growth management changes for years to come.',
-    nextStep: 'Watch county joint work sessions and ordinance drafts, then compare the final adopted language to the original proposal.',
+    statusCopy: 'San Miguel County is undertaking a comprehensive land use code audit (June 2025 -- Sept 2026) funded by a Colorado Proposition 123 Local Planning Capacity Grant. The Stakeholder Strategic Roundtable (SSR) -- a mix of County staff, planning commissioners, school and housing officials, and 12 appointed community members -- meets monthly to review existing housing policies and shape draft amendments. The County notes this work also positions it for Proposition 123 "Fast Track Approval" funding, but does NOT satisfy SB24-174, which still requires a separate Housing Action Plan by January 1, 2028. If review timelines shorten or approval standards shift through this code audit, the practical balance between faster housing production and meaningful public review, environmental protection, and growth management changes for years to come.',
+    nextStep: 'Watch SSR meeting packets, attend Spring 2026 community review of draft amendments, and read the actual draft code language as it is published in the SMC Housing Code Update document center.',
     metrics: [
       { label: 'Big question', value: 'Speed vs. scrutiny', sub: 'How much process should be compressed in the name of housing delivery?' },
       { label: 'Who is affected', value: 'Every future applicant and every future neighbor', sub: 'Code amendments are system rules, not one-off exceptions.' },
@@ -1922,21 +1922,65 @@ const LAND_USE_ISSUES = {
     ],
     timeline: [
       { date: 'Past', title: 'Housing pressure pushes governments toward procedural reform', copy: 'Fast-track review and code cleanup become recurring policy tools in response to affordability pressure, even as many residents worry about cumulative growth effects.' },
-      { date: 'Recent', title: 'County takes up accelerated housing review and forestry code topics', copy: 'Joint public sessions indicate the code is actively being reshaped rather than simply administered.' },
-      { date: 'Now', title: 'Residents need to watch the ordinance text itself', copy: 'The public risk is that broad process changes get absorbed as technical housekeeping even when they may materially affect growth, public oversight, and carrying capacity.' },
-      { date: 'Next', title: 'Expect draft language, revisions, and adoption steps', copy: 'Once the language is published, the engagement window becomes much more concrete.', future: true }
+      { date: 'June 2025', title: 'SMC Housing Code Update kicks off after Regional Housing Needs Assessment', copy: 'San Miguel County launches a 15-month land use code audit funded by Colorado\'s Proposition 123 Local Planning Capacity Grant, targeting regulatory barriers in unincorporated areas and implementing East End Master Plan recommendations.' },
+      { date: 'Summer 2025', title: 'Community Listening Sessions and Code Review begin', copy: 'First series of community listening sessions held October 6-8, 2025; second series held December 8, 2025. SSR formed to advise staff and consultants on housing policy and code amendments.' },
+      { date: 'Fall 2025 - Apr 2026', title: 'SSR meetings 1-5 review existing housing regulations', copy: 'The Stakeholder Strategic Roundtable meets monthly (October, December, January, March, April) to review the Community Housing Zone designation and other housing-related rules. Each meeting packet and high-level summary is posted in the project document center.' },
+      { date: 'Now -- Spring 2026', title: 'Community Review of Draft Code Amendments', copy: 'Draft amendments developed over winter are now open for community review. This is the engagement window where the actual ordinance text becomes concrete and residents can weigh in on specifics rather than concepts.' },
+      { date: 'Summer-Fall 2026', title: 'Planning Commission and BOCC Work Sessions, then Final Presentations', copy: 'After community review, the Planning Commission and Board of County Commissioners hold work sessions on draft amendments, followed by final code amendment presentations in the fall.', future: true },
+      { date: 'Winter 2026', title: 'Adoption process for the final code amendments', copy: 'The County moves to formal adoption of the updated land use code, completing the 15-month process. Adopted text -- not the summary -- is what governs every future application.', future: true }
     ],
     docs: [
-      { title: 'San Miguel County CivicClerk Portal', copy: 'Source for ordinance drafts, staff memos, and joint work-session materials.', tag: 'Draft Text', href: 'https://sanmiguelcoco.portal.civicclerk.com/' },
-      { title: 'County Boards & Commissions', copy: 'Use this to identify whether Planning Commission or BOCC is the key venue at each stage.', tag: 'Process Guide', href: 'https://www.sanmiguelcountyco.gov/192/Board-of-County-Commissioners' },
-      { title: 'Town of Telluride Agendas & Minutes', copy: 'Important when related code conversations move inside town jurisdiction as well.', tag: 'Town Record', href: 'https://telluride-co.civicweb.net/Portal/MeetingTypeList.aspx' }
+      { title: 'San Miguel County Housing Code Update (project page)', copy: 'Official SMC project page for the Housing Code Update -- timeline, listening sessions, SSR roster, document center, and Spanish-language information. The canonical entry point for everything happening in this code audit.', tag: 'SMC Project Page', href: 'https://www.sanmiguelcountyco.gov/882/Housing-Code-Update' },
+      { title: 'SSR Project Document Center', copy: 'Meeting packets and high-level summaries from SSR No. 1-5, plus the Draft Land Use Code Amendment, the Accelerated Housing Review document, the BOCC Presentation, and the Community Engagement Plan. Linked from the SMC project page.', tag: 'SSR Documents', href: 'https://www.sanmiguelcountyco.gov/882/Housing-Code-Update' },
+      { title: 'San Miguel County CivicClerk Portal', copy: 'Source for ordinance drafts, staff memos, and joint work-session materials beyond the SSR\'s own packets.', tag: 'Draft Text', href: 'https://sanmiguelcoco.portal.civicclerk.com/' },
+      { title: 'County Boards & Commissions', copy: 'Use this to identify whether Planning Commission or BOCC is the key venue at each stage of the code update.', tag: 'Process Guide', href: 'https://sanmiguelcountyco.gov/424/Boards-Commissions' },
+      { title: 'Town of Telluride Agendas & Minutes', copy: 'Important when related code conversations (Wildfire Resiliency Code, Land Use Code updates) move inside town jurisdiction as well.', tag: 'Town Record', href: 'https://telluride-co.civicweb.net/Portal/MeetingTypeList.aspx' },
+      { title: 'Submit comments to the SSR', copy: 'Email housingupdate@sanmiguelcountyco.gov. Comments received by noon a week before a meeting go into the meeting packet; comments received by noon the day before go to the meeting body. Anything later is held until the next meeting.', tag: 'Public Comment', href: 'mailto:housingupdate@sanmiguelcountyco.gov' }
     ],
     players: [
-      { icon: '📜', title: 'Planning staff and consultants', copy: 'They usually draft and shape the first version of the ordinance language.' },
-      { icon: '🌲', title: 'County Planning Commission and BOCC', copy: 'They translate policy goals into actual enforceable rules.' },
+      { icon: '📜', title: 'Planning staff and consultants', copy: 'They draft and shape the first version of the ordinance language and run the SSR process day-to-day.' },
+      { icon: '🌲', title: 'County Planning Commission and BOCC', copy: 'They translate policy goals into enforceable rules and hold the final adoption vote on draft amendments.' },
       { icon: '🏠', title: 'Housing advocates and neighborhood critics', copy: 'Both tend to agree the rules matter -- they just disagree on what problem the rules should solve first.' },
       { icon: '⚖️', title: 'Future applicants and objectors', copy: 'They inherit whatever approval framework gets adopted now.' }
-    ]
+    ],
+    roster: {
+      title: 'Stakeholder Strategic Roundtable (SSR)',
+      subtitle: 'Appointed by San Miguel County to advise on the Housing Code Update. The SSR adheres to a charter with consensus-seeking norms and a 70% super-majority for formal "temperature-check" statements; recap, slide deck, and audio are posted within 72 hours of each meeting.',
+      groups: [
+        {
+          label: 'SSR Project Team',
+          members: [
+            { name: 'Drea Araiza', role: 'Housing Specialist, San Miguel County staff' },
+            { name: 'Hallie Bevan-Simpson', role: 'County Planning Commission' },
+            { name: 'Jarrod Biggs', role: 'Deputy County Manager, San Miguel County staff' },
+            { name: 'John Miller', role: 'Telluride Ski and Golf' },
+            { name: 'Drew Nelson', role: 'Housing Director, Town of Mountain Village' },
+            { name: 'John Pandolfo', role: 'Superintendent, Telluride School District R-1' },
+            { name: 'Kaye Simonson', role: 'Planning Director, San Miguel County staff' },
+            { name: 'Lee Taylor', role: 'County Planning Commission' },
+            { name: 'James Van Hooser', role: 'Community Housing Manager, Town of Telluride' },
+            { name: 'Lance Waring', role: 'Board of County Commissioners' }
+          ]
+        },
+        {
+          label: 'Appointed Individuals',
+          members: [
+            { name: 'Danny Craft' },
+            { name: 'Tony Daranyi' },
+            { name: 'Elaine Demas' },
+            { name: 'Nick Farkouh' },
+            { name: 'Peter Johnson' },
+            { name: 'Nina Kothe' },
+            { name: 'Amy Levek' },
+            { name: 'Paul Major' },
+            { name: 'Stefanie Solomon' },
+            { name: 'Jason Soules' },
+            { name: 'Kathrine Warren' },
+            { name: 'Anna Wilson' }
+          ]
+        }
+      ]
+    }
   },
   wildfire: {
     label: 'Wildfire Resiliency',
@@ -2264,6 +2308,34 @@ function renderLandUseTab() {
       <div class="landuse-player-badge">${player.icon}</div>
       <div><strong>${player.title}</strong><span>${player.copy}</span></div>
     </div>`).join('');
+
+  // Optional roster panel (e.g. SSR for Code Changes & Accelerated Review).
+  // Only rendered when the issue object provides a roster object.
+  const rosterPanel = document.getElementById('landUseRosterPanel');
+  const rosterEl = document.getElementById('landUseRoster');
+  if (rosterPanel && rosterEl) {
+    if (issue.roster && issue.roster.groups && issue.roster.groups.length) {
+      rosterPanel.style.display = '';
+      const r = issue.roster;
+      rosterEl.innerHTML = `
+        ${r.title ? `<div class="landuse-roster-title">${r.title}</div>` : ''}
+        ${r.subtitle ? `<div class="landuse-roster-sub">${r.subtitle}</div>` : ''}
+        ${r.groups.map(g => `
+          <div class="landuse-roster-group">
+            <div class="landuse-roster-label">${g.label}</div>
+            <ul class="landuse-roster-members">
+              ${g.members.map(m => `
+                <li class="landuse-roster-member">
+                  <strong>${m.name}</strong>${m.role ? `<span> &mdash; ${m.role}</span>` : ''}
+                </li>`).join('')}
+            </ul>
+          </div>`).join('')}
+      `;
+    } else {
+      rosterPanel.style.display = 'none';
+      rosterEl.innerHTML = '';
+    }
+  }
 
   topicRow.querySelectorAll('[data-landuse-issue]').forEach(btn => {
     btn.addEventListener('click', () => {
