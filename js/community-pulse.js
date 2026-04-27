@@ -26,18 +26,8 @@ const CP_SOURCES = {
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.
-const COMMUNITY_PULSE_CACHE_DATE = '2026-04-26';
+const COMMUNITY_PULSE_CACHE_DATE = '2026-04-27';
 const COMMUNITY_PULSE_POSTS = [
-  {
-    id: 'fb-2061-070',
-    sourceKey: 'fb-2061',
-    postedAt: '2026-04-22T08:00:00',
-    title: 'County Commissioners resume today after spring recess — first regular meeting since April 6',
-    excerpt: 'The San Miguel County Board of County Commissioners holds its first regular meeting since the spring break recess today, Wednesday, April 22 at 9:30 a.m. The meeting covers accumulated business from the two-week break. Agendas and livestream links are posted at sanmiguelcountyco.gov. The next regular meeting follows on April 29. Multiple advisory boards also resume this month, including the Open Space Commission on April 27.',
-    tags: ['Government', 'County', 'Meeting'],
-    featured: true,
-    eventRelated: true
-  },
   {
     id: 'fb-3395-049',
     sourceKey: 'fb-3395',
