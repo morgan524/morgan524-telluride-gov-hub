@@ -28,66 +28,7 @@ const CP_SOURCES = {
 // Each post expires 5 days after its postedAt date.
 const COMMUNITY_PULSE_CACHE_DATE = '2026-04-27';
 const COMMUNITY_PULSE_POSTS = [
-  {
-    id: 'fb-3395-049',
-    sourceKey: 'fb-3395',
-    postedAt: '2026-04-22T08:30:00',
-    title: 'NightGrass pre-sale opens TODAY — text NIGHTGRASS for early access to late-night Bluegrass shows',
-    excerpt: 'The NightGrass pre-sale for late-night shows during the 2026 Telluride Bluegrass Festival (June 17–21) opens today, Wednesday, April 22. Text NIGHTGRASS to 1-844-326-3296 for pre-sale access. General sale follows Thursday, April 23. Acts include Greensky Bluegrass, Infamous Stringdusters, Punch Brothers, and more across four downtown venues. Full lineup and ticket details at bluegrass.com.',
-    tags: ['Festival', 'Music', 'Tickets', 'Upcoming Event'],
-    featured: true,
-    eventRelated: true
-  },
-  {
-    id: 'fb-2061-071',
-    sourceKey: 'fb-2061',
-    postedAt: '2026-04-22T09:00:00',
-    title: 'Colorado Sun: Telluride rent regulations driving tenants out — nearly 50 units sit empty',
-    excerpt: 'A Colorado Sun investigation published April 19 reports that Telluride’s new rent-to-income regulations, designed to make deed-restricted housing more affordable, are instead driving tenants away. Nearly 50 of 201 town-managed units across five complexes (Shandoka, Sunnyside, Voodoo, and others) now sit empty. Many tenants lost work hours during the December ski patrol strike and may not meet the 1,400-hour annual requirement. Town Council approved a temporary reduction to 1,200 hours for 2026 leases and adjusted the rent multiplier, saving households $100–$400/month.',
-    tags: ['Housing', 'Policy', 'Town Government', 'Affordable'],
-    featured: true,
-    eventRelated: false
-  },
-  {
-    id: 'fb-2061-072',
-    sourceKey: 'fb-2061',
-    postedAt: '2026-04-22T09:30:00',
-    title: 'Mountain Village Council meets Thursday — first reading of dark-sky lighting regulation amendments',
-    excerpt: 'The Mountain Village Town Council will consider a first reading of proposed amendments to the Community Development Code’s lighting regulations at its regular meeting on Thursday, April 23. The changes aim to modernize the town’s dark-sky and outdoor-lighting standards. A first reading is typically followed by a second reading and public hearing before final adoption. Agenda and livestream details at townofmountainvillage.com.',
-    tags: ['Mountain Village', 'Town Council', 'Lighting', 'CDC', 'Upcoming Event'],
-    featured: false,
-    eventRelated: true
-  },
-  {
-    id: 'c7cc-025',
-    sourceKey: 'c7cc',
-    postedAt: '2026-04-22T10:00:00',
-    title: 'SMRHA housing lottery THIS Friday — three deed-restricted units awarded at Rebekah Hall',
-    excerpt: 'The San Miguel Regional Housing Authority lottery drawing takes place this Friday, April 24 at 10 AM at Rebekah Hall, 113 W Colorado Ave. Three deed-restricted homeownership units will be awarded: Silver Jack 202 (3BR, $405,507), Silver Jack 205 (2BR, $368,620), and Element 52 SW-102 (2BR, $352,529). Applications closed April 10 and 93 households were approved. Results will be posted at smrha.org after the drawing.',
-    tags: ['Housing', 'Affordable', 'Lottery', 'Upcoming Event'],
-    featured: true,
-    eventRelated: true
-  },
-  {
-    id: 'fb-2438-018',
-    sourceKey: 'fb-2438',
-    postedAt: '2026-04-22T10:30:00',
-    title: 'KOTO’s Big BAM Bash this Friday — eight local bands battle it out downtown',
-    excerpt: 'KOTO Community Radio hosts its first-ever Big BAM Bash battle of the bands on Friday, April 24, featuring eight local musical groups — four youth and four adult acts — competing in a single evening. The event doubles as a community benefit for KOTO’s public broadcasting operations and showcases homegrown Telluride talent heading into festival season. Doors and venue details announced through KOTO and local organizers. Follow @KOTOradio for updates.',
-    tags: ['Community', 'Music', 'KOTO', 'Benefit', 'Upcoming Event'],
-    featured: false,
-    eventRelated: true
-  },
-  {
-    id: 'fb-2061-073',
-    sourceKey: 'fb-2061',
-    postedAt: '2026-04-22T11:00:00',
-    title: 'Mountainfilm speaker lineup revealed — Minds Moving Mountains series set for May 21–25',
-    excerpt: 'Mountainfilm has announced its 2026 Minds Moving Mountains Speaker Series lineup for the 48th annual festival, May 21–25 in Telluride. The speaker series is an annual highlight alongside the film program curated by guest director Cristina Mittermeier. Festival passes are on sale at mountainfilm.org, with passholder film reservations opening May 6 for top-tier passes. The free Mountainfilm app (iOS and Android) serves as the official festival guide.',
-    tags: ['Festival', 'Film', 'Speakers', 'Upcoming Event'],
-    featured: false,
-    eventRelated: true
-  }
+
 ];
 const CP_MAX_POSTS = 20;
 const CP_EXPIRY_DAYS = 5;
