@@ -650,27 +650,36 @@ function replaceJsValue(source, varName, newValue, isObject = false) {
 }
 
 function serializeObject(varName, obj) {
+  // Use JSON.stringify so keys and values are always safely quoted as JS
+  // string literals — handles apostrophes, backslashes, newlines, control
+  // chars, and unicode without manual escaping.  The keys produced are valid
+  // ECMAScript object property names because every JSON-stringified string is
+  // a valid JS string literal.
   const entries = Object.entries(obj).map(([k, v]) => {
-    const escapedVal = String(v).replace(/\\/g, '\\\\').replace(/'/g, "\\'");
-    return `  '${k}':\n    '${escapedVal}'`;
+    return `  ${JSON.stringify(String(k))}:\n    ${JSON.stringify(String(v))}`;
   });
   return `const ${varName} = {\n${entries.join(',\n\n')}\n};`;
 }
 
 function serializeArray(varName, arr) {
+  // JS object property names without quotes must be valid identifiers; if
+  // they aren't (e.g. contain special chars), fall back to JSON.stringify so
+  // the key gets quoted.  All string values flow through JSON.stringify so
+  // apostrophes, backslashes, newlines, and control chars are safe.
+  const safeKey = (k) => /^[A-Za-z_$][A-Za-z0-9_$]*$/.test(k) ? k : JSON.stringify(k);
   const items = arr.map(item => {
     const props = Object.entries(item).map(([k, v]) => {
       if (typeof v === 'object' && v !== null && !Array.isArray(v)) {
-        const inner = Object.entries(v).map(([ik, iv]) => `${ik}: '${String(iv).replace(/'/g, "\\'")}'`).join(', ');
-        return `    ${k}: { ${inner} }`;
+        const inner = Object.entries(v).map(([ik, iv]) => `${safeKey(ik)}: ${JSON.stringify(String(iv))}`).join(', ');
+        return `    ${safeKey(k)}: { ${inner} }`;
       }
       if (Array.isArray(v)) {
-        return `    ${k}: [${v.map(i => `'${String(i).replace(/'/g, "\\'")}'`).join(', ')}]`;
+        return `    ${safeKey(k)}: [${v.map(i => JSON.stringify(String(i))).join(', ')}]`;
       }
       if (typeof v === 'boolean' || typeof v === 'number') {
-        return `    ${k}: ${v}`;
+        return `    ${safeKey(k)}: ${v}`;
       }
-      return `    ${k}: '${String(v).replace(/'/g, "\\'")}'`;
+      return `    ${safeKey(k)}: ${JSON.stringify(String(v))}`;
     });
     return `  {\n${props.join(',\n')}\n  }`;
   });
