@@ -461,7 +461,7 @@ function mergeCountyMeetings(rssMeetings, cachedMeetings) {
   // cached data for -- cached data is manually curated and more up-to-date
   const filteredRss = rssMeetings.filter(m => {
     const dateKey = m.eventDate.toISOString().slice(0, 10);
-    const isGov = /commissioner|planning commission|work session|board of county|joint.*session/i.test(m.title || '');
+    const isGov = /commissioner|planning commission|work session|board of county|joint.*session|housing code update|\bssr\b/i.test(m.title || '');
     // Keep non-gov RSS items always; for gov items, only keep if no cached entry for that date
     return !isGov || !cachedDateKeys.has(dateKey);
   });
