@@ -1282,189 +1282,189 @@ const WHY_THIS_MATTERS = [
   // ── PUD / Zoning / Development ──
   {
     match: /carhenge|700 w pacific/i,
-    decision: 'Whether to approve a Planned Unit Development (PUD) for the former Carhenge site at 700 W Pacific Ave as affordable housing.',
-    who: 'Residents seeking affordable housing, adjacent property owners, and anyone concerned about density in the west end of town.',
-    stage: 'Work session -- no binding vote, but direction given here shapes the formal application.',
-    impact: 'This site could add deed-restricted workforce housing units near the gondola. Design, density, and traffic impacts will be evaluated. Work sessions are the best time for public input before formal review narrows options.',
-    context: 'Affordable housing is among the most pressing issues in Telluride. Recent projects like VooDoo have shown that building at $1M/unit makes truly affordable rents extremely difficult. How this PUD is structured -- density, financing, deed restrictions -- will determine whether it actually serves lower-income workers or becomes another project that primarily benefits higher-AMI residents.'
+    decision: 'A PUD for the old Carhenge site at 700 W Pacific, framed as affordable housing.',
+    who: 'Folks looking for somewhere they can actually afford, the neighbors next door, and anyone watching how density gets handled in the west end.',
+    stage: 'Work session -- no binding vote, but the direction set here shapes the formal application that follows.',
+    impact: 'The site could add deed-restricted workforce housing close to the gondola. Density, design, and traffic are all on the table. Work sessions are when the framing gets settled, before formal review narrows the options.',
+    context: 'We have watched this play out before. VooDoo built at roughly $1M a unit and the rents had to follow the math. How this PUD gets structured -- density, financing, deed restrictions -- decides whether it actually serves the workers it is named after, or quietly drifts upmarket like so many before it.'
   },
   {
     match: /chair\s*7/i,
-    decision: 'Whether to approve rezoning or development at the Chair 7 base area.',
-    who: 'All Telluride residents and visitors -- Chair 7 was dedicated as "Open Space District" in 1979 (ski uses only, no residential or commercial).',
-    stage: 'Check agenda for whether this is a work session, public hearing, or vote.',
-    impact: 'Any commercial development here would set a precedent for converting dedicated open space to commercial use. The Chair 7 proposal was a primary catalyst for the Measure 300 campaign. In September 2025, Town Council stated they would no longer include hotel plans in this area, but rezoning discussions may continue.',
-    context: 'The original Chair 7 proposal included a luxury hotel up to 5.5 stories. Combined with Shandoka and the gondola redesign, these projects totaled ~120,000 sq ft of new commercial space requiring 150-200+ new employees -- with no corresponding housing plan. The community response (Measure 300 receiving 40% YES votes) demonstrated significant concern about this scale of development.'
+    decision: 'Rezoning or development at the Chair 7 base area.',
+    who: 'Anyone who lives or skis here. Chair 7 was dedicated as Open Space District in 1979 -- ski uses only, no residential, no commercial.',
+    stage: 'Check the agenda for whether this is a work session, public hearing, or vote.',
+    impact: 'A commercial use here would be the first crack in the open-space designation, and the precedent travels. The original proposal helped fuel the Measure 300 campaign. In September 2025 Council said they would not include hotel plans here, but rezoning conversations have a way of returning.',
+    context: 'The original Chair 7 plan called for a luxury hotel up to 5.5 stories. Stack it next to Shandoka and the gondola redesign and you have roughly 120,000 sq ft of new commercial space pulling 150-200 new employees with no housing plan to match. Measure 300 picked up about 40% YES, which is the community signaling that scale is the real argument.'
   },
   {
     match: /society\s*turn/i,
-    decision: 'Whether to advance the Society Turn PUD -- a ~400,000 sq ft mixed-use development at the valley entrance including a hospital, hotel, medical offices, retail, and employee housing.',
-    who: 'Every resident of the region. The hospital component (~44,000 sq ft) is roughly 10% of the total development. The remaining ~90% is commercial.',
-    stage: 'Check agenda -- the PUD has completed 4 of 5 approval steps. Final approval may be pending.',
-    impact: 'This would be the largest development project in the region\'s history. Traffic studies relied on March 2020 data (during COVID lockdown). Surveys show ~75% of residents were unaware the hospital was only 10% of total development, and ~79% didn\'t know the full scope was 400,000 sq ft.',
-    context: 'The hospital district receives 2.6 acres essentially free (valued $1-2M), but defending a 400,000 sq ft PUD it doesn\'t control. The developer reportedly threatened withdrawal if Measure 300 passed. No wildfire evacuation analysis has been completed for the site, which sits at the single entry/exit point for the entire valley.'
+    decision: 'Whether to advance the Society Turn PUD -- about 400,000 sq ft of mixed use at the valley entrance, including a hospital, hotel, medical offices, retail, and employee housing.',
+    who: 'Everyone in the region, whether they realize it or not. The hospital piece is roughly 10% of the footprint. The other 90% is commercial.',
+    stage: 'Check the agenda -- the PUD has cleared four of five approval steps. Final approval may be on this one.',
+    impact: 'It would be the largest single project in the region\'s history. Traffic studies leaned on March 2020 data, when the valley was effectively closed. Surveys showed about 75% of residents did not realize the hospital was only 10% of the project, and about 79% had no idea the full scope was 400,000 sq ft.',
+    context: 'The hospital district picks up 2.6 acres essentially free, in exchange for carrying water on a 400,000 sq ft project it does not control. The developer reportedly said they would walk if Measure 300 passed. There is still no wildfire evacuation analysis for the site, which sits at the single way in and out of the canyon.'
   },
   {
     match: /shandoka/i,
-    decision: 'Whether to approve a large parking structure at Shandoka.',
-    who: 'Telluride residents, visitors, Mountain Village commuters, and adjacent neighborhoods.',
-    stage: 'Check agenda for current phase.',
-    impact: 'The proposed 900-space garage would be one of the largest structures in the region. Combined with Chair 7 and gondola redesign proposals, these projects represent a significant escalation of commercial infrastructure. Parking capacity decisions directly influence traffic volume, visitor numbers, and the character of the town.',
-    context: 'Doug Sanders, with 20 years in local land development, testified that these projects cannot be evaluated in isolation -- the combined scope approaches $500M and could push the town\'s effective population from ~2,200 toward 3,500.'
+    decision: 'A large parking structure at Shandoka.',
+    who: 'Telluride residents, visitors, MV commuters, and the neighborhoods within sight and sound of the project.',
+    stage: 'Check the agenda for the current phase.',
+    impact: 'Nine hundred spaces would be one of the largest single structures the valley has built. Combined with Chair 7 and the gondola redesign, you are looking at a real escalation in commercial infrastructure. Parking decisions drive traffic, visitor counts, and the feel of the place.',
+    context: 'Doug Sanders, who has been working in local land development for two decades, testified that these projects cannot be evaluated one at a time -- the combined scope sits around $500M and could push the town\'s effective population from roughly 2,200 toward 3,500. Whether you agree with him or not, the pattern of treating big projects in isolation is exactly how we got here.'
   },
   {
     match: /(stakeholder strategic roundtable|\bssr\b|housing code update)/i,
-    decision: "Whether the SSR's recommended limits on the 90-day Accelerated Housing Review process get folded back into the County's April 8, 2026 LUCA Draft before community review and BOCC adoption.",
-    who: 'Anyone who could be a future PUD applicant or neighbor of one in unincorporated San Miguel County. As drafted, the County\'s LUCA would let projects of any size -- including new PUDs that require rezoning and subdivision -- move through 90-day administrative review with undefined process and notice requirements.',
-    stage: 'SSR working session #5 (of 5 in the Project Foundation phase). The SSR is advisory; its consensus shapes what the BOCC ultimately adopts. The April 8 LUCA Draft will go to community review in spring 2026, then BOCC adoption.',
-    impact: "Five places where the County's draft diverged from the SSR's recommendations: (1) 3-1501 voluntariness language stripped (program is voluntary, only required for Prop 123 funding -- which HB26-1360 has eliminated this fiscal year); (2) PUD-with-rezoning exclusion deleted from the ineligible list AND the eligible-projects clause loosened (new PUDs requiring rezoning and subdivision could be fast-tracked); (3) Initial Zoning or Rezoning removed from the ineligible list; (4) the two-step Planning-Commission-plus-BOCC default removed in 3-1503 (process now unspecified); (5) the 10-unit cap and contiguous-land limit deleted in Article 7 (no project-size limit on fast-track review).",
-    context: "Funded by Colorado's Proposition 123 Local Planning Capacity Grant; positions the County for Prop 123 'Fast Track Approval' funding. The Code Update does NOT satisfy SB24-174, which still requires a separate Housing Action Plan by January 1, 2028. The redline (SSR additions in blue, County deletions in red) is mirrored on this site under Code Changes & Accelerated Review."
+    decision: 'Whether the SSR\'s recommended limits on the 90-day Accelerated Housing Review get folded back into the County\'s April 8, 2026 LUCA Draft before it goes to community review and the BOCC.',
+    who: 'Anyone who could be a future PUD applicant or neighbor of one in unincorporated San Miguel County. As written, the County\'s LUCA would let projects of any size -- including new PUDs that need rezoning and subdivision -- run through 90-day administrative review with the procedure left undefined.',
+    stage: 'SSR working session #5, the last in the Project Foundation phase. The SSR is advisory; their consensus shapes what the BOCC ultimately adopts. Community review follows in spring 2026, then BOCC adoption.',
+    impact: 'Five places where the County\'s draft pulled back from the SSR\'s recommendations: (1) the line in 3-1501 reminding readers the program is voluntary -- only required if the County wants Prop 123 funding, which HB26-1360 zeroed out this fiscal year -- was struck. (2) PUDs with rezoning or subdivision were dropped from the ineligible list, and the eligible-projects clause was widened to match. (3) Initial Zoning and Rezoning were removed from the ineligible list. (4) The two-step Planning-Commission-plus-BOCC default in 3-1503 is gone, with nothing specified in its place. (5) Article 7\'s 10-unit cap and contiguous-land limit are gone, leaving no project-size ceiling on fast-track review.',
+    context: 'Funded by Colorado\'s Proposition 123 Local Planning Capacity Grant; positions the County for Prop 123 Fast Track Approval funding. The Code Update does not satisfy SB24-174, which still requires a separate Housing Action Plan by January 1, 2028. The redline -- SSR additions in blue, County deletions in red -- is mirrored on this site under Code Changes & Accelerated Review. The box canyon has been threading the housing-versus-process needle since the 70s; this round goes further than most.'
   },
-    {
+  {
     match: /accelerated\s*housing\s*review/i,
-    decision: 'Whether to amend the Land Use Code to implement fast-track 90-day review timelines for qualifying affordable housing development applications.',
-    who: 'Developers proposing affordable housing, neighbors of potential development sites, and planning staff who must complete reviews within shortened timelines.',
-    stage: 'Work session -- joint Planning Commission and BOCC discussion of proposed code language.',
-    impact: 'Faster review timelines could accelerate housing production, but also reduce the window for public input on individual projects. This implements state requirements from HB23-1123. The question is how the county balances speed with community participation.',
-    context: 'Housing affordability is a central regional concern. VooDoo\'s financial difficulties ($27.4M for 27 units, $23M balloon payment due ~2032) show that merely building faster doesn\'t solve the fundamental math problem: at $1M/unit, truly affordable rents are impossible without significant subsidy.'
+    decision: 'Amending the Land Use Code to set 90-day fast-track review timelines for qualifying affordable housing applications.',
+    who: 'Affordable-housing developers, the neighbors of the sites they pick, and the planning staff who have to actually finish a review in 90 days.',
+    stage: 'Work session -- joint Planning Commission and BOCC discussion of the proposed code language.',
+    impact: 'A faster track could push more housing through, but it also tightens the window for public input on individual projects. The driver is HB23-1123. The real question is how the County balances speed against community participation.',
+    context: 'Housing affordability is the recurring local fight. VooDoo\'s numbers -- $27.4M for 27 units, with a $23M balloon coming due around 2032 -- are a reminder that building faster does not solve the math problem. At a million dollars a unit, truly affordable rents do not pencil without serious subsidy.'
   },
   {
     match: /comprehensive\s*plan/i,
-    decision: 'Review or update of the town\'s Comprehensive Plan -- the foundational document guiding all future land use and zoning decisions.',
-    who: 'Every property owner, resident, and business in the jurisdiction. The Comp Plan sets the framework for what can be built where.',
-    stage: 'Check agenda -- typically presented as work session or public hearing.',
-    impact: 'Comprehensive Plan changes can reshape development patterns for decades. This is one of the most consequential items a planning body can take up. Public input at this stage has the greatest influence on long-term outcomes.',
-    context: 'Recent years have seen $64M in consultant spending (2017-2025), much of it directed by firms like DesignWorkshop that simultaneously work on specific development proposals. How the Comp Plan is framed -- and by whom -- shapes whether future development serves existing residents or primarily facilitates new commercial growth.'
+    decision: 'A look at the town\'s Comprehensive Plan -- the document that quietly runs every zoning and land use decision downstream of it.',
+    who: 'Every property owner, resident, and business in the jurisdiction. The Comp Plan sets the framework for what gets built where.',
+    stage: 'Check the agenda -- usually a work session or public hearing.',
+    impact: 'Comp Plan changes shape development for decades. This is one of the most consequential things a planning body ever takes up. Public input here matters more than at any individual project hearing.',
+    context: 'Consultant spending has run about $64M over 2017-2025, with firms like DesignWorkshop showing up on both the planning side and on specific development proposals. Who frames the plan -- and how -- decides whether it serves the residents already here or mainly clears runway for new commercial growth.'
   },
 
   // ── Wildfire / Safety ──
   {
     match: /wildfire\s*resiliency\s*code|wildland\s*urban\s*interface|wui\s*code/i,
-    decision: 'Whether to adopt Colorado\'s Wildfire Resiliency Code and/or the International Wildland Urban Interface (WUI) Code, setting construction and land management standards in fire-prone areas.',
-    who: 'All property owners (new construction requirements), current residents (evacuation and defensible space), and the fire district (enforcement and response capacity).',
-    stage: 'Check agenda -- may be adoption vote or work session.',
-    impact: 'These codes set building material requirements, defensible space mandates, and vegetation management standards. In a box canyon with one primary exit road, wildfire preparedness is an existential community concern. Adoption means new construction and renovations must meet enhanced fire-resistance standards.',
-    context: 'Fire mitigation has been identified as a top community priority for the region\'s future. Notably, the Society Turn PUD -- at the valley\'s single entry/exit point -- has not undergone a wildfire evacuation analysis despite its massive proposed scale.'
+    decision: 'Adoption of Colorado\'s Wildfire Resiliency Code and/or the International Wildland Urban Interface (WUI) Code -- construction and land management standards for fire-prone areas.',
+    who: 'Anyone building or renovating in the district, anyone living near the trees, and the fire district that has to enforce and respond.',
+    stage: 'Check the agenda -- could be an adoption vote or still a work session.',
+    impact: 'These codes set building materials, defensible-space rules, and vegetation management standards. In a box canyon with one road out, wildfire preparedness is not theoretical. Adoption means new construction and major renovations have to meet stronger fire-resistance standards.',
+    context: 'Fire mitigation has been near the top of every regional priority list for a decade. Worth noting: the Society Turn PUD, sitting at the valley\'s only entry/exit, has not had a wildfire evacuation analysis done despite the size of what is being proposed.'
   },
 
   // ── Housing / Deed Restrictions ──
   {
     match: /deed\s*restrict|workforce\s*housing\s*deed|housing\s*authority/i,
-    decision: 'Whether to approve modifications to deed-restricted property sales or housing program rules.',
-    who: 'Current and prospective deed-restricted homeowners and renters -- roughly one-third of Telluride voters live in town-managed housing.',
-    stage: 'Check agenda for whether this is an individual property approval or policy change.',
-    impact: 'Deed restriction terms determine who can live in these units, at what income levels, and at what price. Changes to individual deeds can set precedents for the broader program. Policy changes can affect affordability for hundreds of households.',
-    context: 'The housing affordability paradox is acute: at $1M/unit construction costs, 50% AMI tenants ($42K/year) cannot cover financing. Recent projects saw 60% rent increases over two years. Meanwhile, Measure 2B authorized $64M in new Town debt (with $132M in interest) partially collateralized against housing fund revenue -- creating tension between debt service and keeping units affordable.'
+    decision: 'Modifications to a deed-restricted property sale or to the housing program rules themselves.',
+    who: 'Current and prospective deed-restricted owners and renters -- roughly a third of Telluride voters live in town-managed housing.',
+    stage: 'Check the agenda for whether this is one specific property or a broader policy change.',
+    impact: 'The deed-restriction terms decide who can live in these units, at what income, and at what price. Individual approvals quietly set precedents for the rest of the program. Policy changes can move the affordability needle for hundreds of households.',
+    context: 'The math is the math. Construction at $1M a unit and 50% AMI tenants ($42K a year) cannot cover financing without subsidy. Recent projects saw rents jump 60% in two years. Meanwhile Measure 2B authorized $64M in new Town debt -- about $132M with interest -- partially collateralized against housing fund revenue, which puts debt service in tension with keeping units affordable.'
   },
 
   // ── Budget / Finance ──
   {
     match: /budget\s*reduct|budget\s*session|funding.*staffing|proposed\s*construction\s*projects/i,
-    decision: 'Review of proposed spending, staffing levels, or capital construction projects.',
-    who: 'All taxpayers and service recipients -- budget decisions determine what services are funded and what gets cut.',
-    stage: 'Work session -- input here shapes the final budget before formal adoption.',
-    impact: 'The Town of Telluride\'s budget has grown from ~$10M (2015) to ~$95-100M (2025), with 212 employees (~10% of the population). Capital project decisions at this stage determine which infrastructure investments move forward.',
-    context: 'Consultant spending alone has totaled $64M over 2017-2025, spiking from $1.9M to $10.5M annually. Measure 2B authorized $64M in additional debt (total cost ~$197M with interest) with no specified projects -- giving Town Council broad spending authority via simple resolution.'
+    decision: 'Proposed spending, staffing, or capital projects.',
+    who: 'Anyone who pays the bills and anyone who uses the services.',
+    stage: 'Work session -- the place where input still actually changes the final budget.',
+    impact: 'The Town\'s budget has gone from about $10M in 2015 to roughly $95-100M in 2025, with 212 employees -- about one in ten of the population on the payroll. Capital project decisions made now decide which infrastructure investments move forward and which wait.',
+    context: 'Consultant spending alone totaled $64M over 2017-2025, jumping from $1.9M to $10.5M a year along the way. Measure 2B authorized $64M in additional debt -- closer to $197M with interest -- without specified projects, which leaves Council with broad spending authority by simple resolution. None of that is unique to here, but the scale is.'
   },
 
   // ── Gondola / SMART ──
   {
     match: /gondola|smart\s*board|smart\s*transit/i,
-    decision: 'SMART Board decisions regarding gondola operations, maintenance, capital planning, or the future of the free gondola connecting Telluride and Mountain Village.',
-    who: 'Every commuter, worker, and visitor who uses the gondola, plus all property taxpayers in the SMART district.',
-    stage: 'Check agenda for specific action items.',
-    impact: 'The gondola (built 1996) is critical regional infrastructure. The current funding agreement expires in 2027. Ballot Issue 3A approved ~$8.2M/year in new tax revenue, but a replacement gondola is estimated at $120-150M+ -- leaving a significant funding gap.',
-    context: 'CORA records revealed over $175,000 in consultant spending before the 3A ballot referral, including $68K on polling (Keating Research) and $170K on project management (Kerry Donovan/Ulysses). "Friends of the Gondola" raised $130K, with $60K from TMVOA and $60K from the Four Seasons developer. The campaign marketed the measure as funding a "new gondola" but the actual revenue only covers a fraction of replacement cost.'
+    decision: 'SMART Board action on gondola operations, maintenance, capital planning, or the future of the free gondola between Telluride and Mountain Village.',
+    who: 'Every commuter, worker, and visitor who rides it, and every property taxpayer in the SMART district.',
+    stage: 'Check the agenda for the specific action items.',
+    impact: 'The gondola has been running since 1996 and is the spine of regional transit. The current funding agreement expires in 2027. Ballot Issue 3A approved roughly $8.2M a year in new tax revenue, but a replacement gondola is estimated at $120-150M and up -- meaning the gap between revenue and replacement cost is real.',
+    context: 'CORA records turned up more than $175,000 in consultant spending before 3A was even referred to the ballot, including $68K on polling (Keating Research) and $170K on project management (Kerry Donovan/Ulysses). "Friends of the Gondola" raised $130K, with $60K from TMVOA and $60K from the Four Seasons developer. The campaign sold the measure as funding "a new gondola." The actual revenue covers a fraction of replacement cost, which is worth holding in mind when 2027 arrives.'
   },
 
   // ── BOCC / Lucarelli Litigation ──
   {
     match: /lucarelli|executive\s*session.*litigation/i,
-    decision: 'Executive session to discuss litigation strategy in the Lucarelli v. BOCC case regarding PUD enforcement in the Aldasoro/Diamond Ranch area.',
-    who: 'Property owners in the Aldasoro PUD area, the broader community with interest in zoning enforcement consistency, and county taxpayers funding the litigation.',
-    stage: 'Executive session -- closed to public, but the decision to settle or continue litigating has public consequences.',
-    impact: 'This case established that the 1991 PUD covers the entire Aldasoro area (plaintiffs won the 106 appeal in June 2024). The ongoing litigation determines whether RETA fees (3/4 of 1% on property transfers) will be enforced, generating transportation revenue, and whether density restrictions in the Sheep Ranch sub-district are upheld.',
-    context: 'The PUD case illustrates a broader pattern: historical land use commitments made to secure development approval being challenged or reinterpreted decades later. How the county handles this case signals whether PUD agreements across the region can be relied upon.'
+    decision: 'Executive session on the Lucarelli v. BOCC litigation around PUD enforcement in the Aldasoro / Diamond Ranch area.',
+    who: 'Property owners in the Aldasoro PUD, the broader community that has a stake in how zoning gets enforced consistently, and the county taxpayers funding the case.',
+    stage: 'Closed session -- the public does not see the discussion, but the call to settle or keep going has very public consequences.',
+    impact: 'The June 2024 ruling held that the 1991 PUD covers the entire Aldasoro area. The remaining litigation decides whether RETA fees (3/4 of 1% on property transfers) get enforced, generating transportation revenue, and whether density restrictions in the Sheep Ranch sub-district hold.',
+    context: 'This case is part of a longer pattern: historical land use commitments made to win approval get re-litigated decades later when development pressure picks up again. How the County handles this one signals whether PUD agreements made elsewhere can be relied on.'
   },
 
   // ── Medical Center / Hospital ──
   {
     match: /jensen\s*partners|healthcare\s*partnership|new\s*facility.*med|hospital\s*district/i,
-    decision: 'Whether to pursue a healthcare partnership and/or new medical facility -- potentially tied to the Society Turn development.',
-    who: 'All residents who rely on local healthcare, hospital district taxpayers, and the broader region served by Telluride Medical Center.',
-    stage: 'Check agenda -- special meetings indicate active decision-making.',
-    impact: 'The hospital\'s future is intertwined with the Society Turn PUD. The district receives 2.6 acres at Society Turn essentially free, but the hospital component is only ~10% of a 400,000 sq ft development. Partnership decisions made now will shape healthcare access and costs for decades.',
-    context: 'The hospital district board is weighing significant partnership proposals (Jensen Partners consulting). Meanwhile, the Society Turn developer has reportedly conditioned the hospital\'s land allocation on the broader PUD advancing. Community members may want to ask: can the hospital secure a site without being tied to 300,000+ sq ft of commercial development it doesn\'t control?'
+    decision: 'A possible healthcare partnership or new medical facility -- threaded into the Society Turn discussion.',
+    who: 'Everyone who relies on local healthcare, hospital district taxpayers, and the broader region the medical center serves.',
+    stage: 'Check the agenda -- special meetings usually mean live decisions are happening.',
+    impact: 'The hospital\'s future and the Society Turn PUD are knotted together. The district picks up 2.6 acres at Society Turn essentially free, but the hospital is only about 10% of a 400,000 sq ft project. Whatever partnership shape is approved now will set the cost and access picture for decades.',
+    context: 'The board is weighing significant proposals (Jensen Partners consulting). The Society Turn developer has reportedly conditioned the hospital land allocation on the broader PUD moving forward. Worth asking out loud: can the hospital secure a site without being tethered to 300,000+ sq ft of commercial development it does not control?'
   },
 
   // ── School District ──
   {
     match: /board\s*of\s*education|school\s*district|telluride\s*school/i,
-    decision: 'School board decisions on budget, staffing, facilities, and educational programs.',
-    who: 'Students, families, teachers, and staff -- plus all property taxpayers who fund the district.',
-    stage: 'Check agenda for whether this is a work session, monthly meeting, or special session.',
-    impact: 'Staffing and budget decisions directly affect class sizes, programs offered, and the quality of education. The district is considering 2026-27 budget reductions of ~$655K including cuts to teaching positions.',
-    context: 'The school district operates in a community under intense development pressure. New commercial projects (hotels, restaurants, retail) increase workforce demand but often don\'t directly generate school funding. Meanwhile, housing costs make it increasingly difficult for teachers and staff to live in the community they serve.'
+    decision: 'School board work on budget, staffing, facilities, and programs.',
+    who: 'Students, families, teachers, staff -- and every property owner whose taxes keep the district running, which around here is most of us whether we have kids in school or not.',
+    stage: 'Check the agenda for whether this is a work session, monthly meeting, or special session.',
+    impact: 'Doesn\'t sound like much until your kid\'s class size jumps by six and you\'re trying to figure out why. Decisions here ripple through what\'s offered in the classroom for years. The district is currently looking at roughly $655K in 2026-27 reductions, including teaching positions.',
+    context: 'The school sits inside the same growth pressure as everything else. New commercial projects keep increasing workforce demand, but they don\'t directly fund the schools that workforce sends kids to. Meanwhile housing costs make it harder every year for teachers and staff to live in the community they teach.'
   },
 
   // ── HB24-1107 / Land Use Judicial Review ──
   {
     match: /hb.?24.?1107|1107|fee.?shifting|attorney\s*fees.*land\s*use/i,
-    decision: 'Discussion or action related to HB24-1107, which mandates courts award attorney fees to prevailing governments when citizens challenge local land use decisions involving residential development at 5+ units/acre.',
-    who: 'Any citizen or neighborhood group that might challenge a development approval. The law creates a one-sided financial penalty for losing -- citizens must pay government attorneys, but developers denied permits face no similar risk.',
-    stage: 'Check agenda for context.',
-    impact: 'This law fundamentally changes the risk calculus for citizens considering judicial review of land use decisions. A federal constitutional challenge is pending (Case 1:24-cv-01847-NRN). The law was lobbied by the Colorado Contractors Association through a lobbyist receiving $2.6M+ in fees.',
-    context: 'In a community with active PUD enforcement litigation (Lucarelli v. BOCC) and development disputes (Chair 7, Society Turn), this law directly threatens residents\' ability to seek judicial review. Statistics cited in support of the bill were later shown to be misleading -- actual case numbers were 4-5 times higher than claimed.'
+    decision: 'Discussion or action tied to HB24-1107, the state law that has courts award attorney fees to prevailing governments when residents challenge local land use decisions involving 5+ units/acre residential development.',
+    who: 'Anyone who might ever take a development decision to court -- because the law puts the financial risk only on the resident\'s side. Citizens who lose pay government attorneys; developers who get denied face no parallel exposure.',
+    stage: 'Check the agenda for context.',
+    impact: 'The law changes the math on whether a citizen or neighborhood group can afford to seek judicial review. A federal constitutional challenge is pending (1:24-cv-01847-NRN). The law was lobbied through by the Colorado Contractors Association, with $2.6M+ in fees paid to the lobbyist.',
+    context: 'In a place with active PUD enforcement litigation (Lucarelli v. BOCC) and ongoing development disputes, this law matters. The statistics used to push the bill through were later shown to overstate the problem by a factor of four or five, which is the kind of detail that does not get cleaned up after a bill becomes law.'
   },
 
   // ── CORA / Transparency ──
   {
     match: /cora|open\s*records|public\s*records/i,
-    decision: 'Issues related to Colorado Open Records Act compliance and government transparency.',
-    who: 'All community members who depend on transparent government. CORA is the primary tool for citizens to understand how public money is spent.',
-    stage: 'Check agenda for context.',
-    impact: 'CORA requests have been instrumental in uncovering the scale of consultant spending on the gondola project, the funding sources behind ballot measure campaigns, and the financial structure of housing projects.',
-    context: 'CORA requests regarding SMART revealed over $175,000 in consultant spending before the 3A ballot referral. Government responsiveness to records requests is a practical measure of transparency -- delays and excessive fees can effectively block public oversight.'
+    decision: 'CORA compliance and government transparency.',
+    who: 'Anyone who wants to know how public money is being spent -- which is to say, everyone, even if most of us never file a request.',
+    stage: 'Check the agenda for context.',
+    impact: 'CORA requests are how a lot of the actual numbers come to light around here -- consultant spending, ballot-measure funding, the financial structure behind housing projects.',
+    context: 'CORA on SMART turned up over $175,000 in consultant spending before the 3A ballot referral. How quickly governments respond to records requests is the practical measure of transparency. Slow responses and big fees are functionally a wall.'
   },
 
   // ── Forestry / Natural Resources ──
   {
     match: /natural\s*resources.*forestry|forestry\s*practices/i,
-    decision: 'Whether to amend the Land Use Code regarding forestry practices and natural resource management on private land.',
-    who: 'Rural property owners, environmental advocates, and the broader community affected by watershed health and wildfire risk.',
-    stage: 'Work session -- early-stage policy discussion.',
-    impact: 'Forestry regulations affect how private landowners manage timber, which in turn affects wildfire risk, watershed health, and ecosystem integrity. In a mountain community surrounded by national forest, these rules have outsized importance.',
-    context: 'Wildfire preparedness and water infrastructure protection have been identified as top regional priorities. Forestry practices directly affect both -- improper logging can increase runoff and erosion while reducing forest resilience to fire.'
+    decision: 'Land Use Code amendments around forestry practices and natural resource management on private land.',
+    who: 'Rural property owners, conservationists, and the broader community that depends on watershed health and lower wildfire risk.',
+    stage: 'Work session -- early policy discussion.',
+    impact: 'These rules shape how private landowners manage timber, which feeds back into wildfire risk, watershed health, and forest resilience. Surrounded as we are by national forest, the rules on private land matter more than they might somewhere flatter.',
+    context: 'Wildfire and water both keep showing up at the top of regional priority lists. Forestry practice cuts both ways -- improper logging worsens runoff and erosion and weakens the forest\'s ability to come back after fire.'
   },
 
   // ── HARC / Historic Preservation ──
   {
     match: /harc|historic.*architectural.*review|national.*historic.*landmark|historic.*preservation|demolition.*historic/i,
-    decision: 'Whether to approve exterior alterations, new construction, demolitions, or signage within Telluride\'s National Historic Landmark District.',
-    who: 'Property owners seeking approvals, adjacent property owners, and all residents who value the town\'s historic character.',
-    stage: 'Check agenda -- HARC reviews can range from minor alterations (staff-level) to full commission hearings for large-scale projects and demolitions.',
-    impact: 'HARC decisions shape the physical character of Telluride\'s historic downtown and residential neighborhoods. Approvals set precedents for building scale, materials, and design. Demolition permits are effectively irreversible -- once a historic structure is gone, it cannot be restored.',
-    context: 'Telluride is a designated National Historic Landmark District -- one of the highest levels of historic recognition in the U.S. Development pressure from luxury construction and resort expansion creates ongoing tension between preservation and modernization. HARC also reviews projects tied to larger land use applications (Shandoka, Carhenge) that advance through P&Z and Council.'
+    decision: 'Exterior alterations, new construction, demolitions, or signage inside Telluride\'s National Historic Landmark District.',
+    who: 'The applicant, the neighbors, and everyone who walks the streetscape day to day.',
+    stage: 'Check the agenda -- HARC ranges from minor staff-level reviews to full commission hearings on bigger projects and demolitions.',
+    impact: 'Whatever HARC approves sits on the streetscape for the rest of our lives, and the precedents it sets travel. Demolition is the one that does not come back -- once a historic structure is gone, it is gone.',
+    context: 'Telluride is a designated National Historic Landmark District -- among the highest historic recognitions in the country. The pressure from luxury construction and resort expansion against that designation is the recurring fight, and HARC sits right in the middle of it. Larger projects that move through P&Z and Council often have their HARC review in parallel.'
   },
 
   // ── DRB / Design Review Board (Mountain Village) ──
   {
     match: /design\s*review\s*board|drb|mountain\s*village.*design/i,
-    decision: 'Whether to approve architectural designs, site plans, and exterior modifications within Mountain Village.',
-    who: 'Property owners, developers, and Mountain Village residents affected by building design and neighborhood character.',
-    stage: 'Check agenda for specific project reviews.',
-    impact: 'DRB decisions control building aesthetics, massing, and materials in Mountain Village. Large projects reviewed here can significantly affect views, traffic, and neighborhood character.',
-    context: 'Mountain Village has its own design standards separate from Telluride\'s HARC. Projects like the gondola terminal redesign and resort-area expansions go through DRB review.'
+    decision: 'Architectural designs, site plans, and exterior modifications inside Mountain Village.',
+    who: 'Owners, developers, and the neighbors who live with whatever gets built.',
+    stage: 'Check the agenda for the specific projects on the docket.',
+    impact: 'The texture of MV gets settled at this table, one project at a time -- aesthetics, massing, materials. Big projects can move views, traffic patterns, and the feel of a whole road.',
+    context: 'Mountain Village runs its own design standards, separate from Telluride\'s HARC. Projects like the gondola terminal redesign and resort-area expansions go through DRB.'
   },
 
-  // ── General fallback for Fire District ──
+  // ── Fire District ──
   {
     match: /fire\s*(protection\s*)?district|station\s*3/i,
-    decision: 'Fire district operations, apparatus, and facilities decisions.',
-    who: 'All residents within the fire protection district -- fire and EMS response times and capabilities affect every property and person.',
-    stage: 'Check agenda for specific items.',
-    impact: 'Station 3 updates and apparatus decisions affect the district\'s capacity to respond to structure fires, wildfires, and medical emergencies in a remote mountain setting with limited mutual aid resources.',
-    context: 'The fire district is pursuing wildfire resiliency code adoption alongside the town. As development increases (potentially adding 1,000+ new daily occupants across proposed projects), fire and EMS capacity must keep pace.'
+    decision: 'Fire district operations, apparatus, and facilities.',
+    who: 'Everyone inside the protection district -- response times and capabilities affect every property and person here.',
+    stage: 'Check the agenda for the specific items.',
+    impact: 'Station 3 updates and apparatus calls matter more in a remote mountain setting where mutual aid is hours away rather than minutes.',
+    context: 'The fire district is moving on wildfire resiliency code adoption alongside the town. As development keeps adding to the daily occupant load -- potentially 1,000+ across proposed projects -- fire and EMS capacity has to keep up, or the gap becomes the story.'
   }
 ];
 
@@ -7367,9 +7367,11 @@ function updateLeftSidebar() {
     // Build the paragraph
     let para = `<strong>${entity} -- ${dayName}:</strong> ${desc}`;
 
-    // Add who's affected if available
-    if (who && who.length < 150) {
-      para += ` This affects ${who.charAt(0).toLowerCase() + who.slice(1)}`;
+    // Append the who-it-affects sentence directly. Entries are written so
+    // the `who` field reads as a self-contained sentence in the locked
+    // Tell-Hub voice; no need for a generic "This affects ..." preface.
+    if (who && who.length < 220) {
+      para += ' ' + who;
       if (!para.endsWith('.')) para += '.';
     }
 
@@ -7383,7 +7385,10 @@ function updateLeftSidebar() {
     if (summary && !/not yet posted/i.test(summary)) {
       const topics = summary.split(' · ').slice(0, 3);
       if (topics.length > 0) {
-        para += ` On the agenda: ${topics.join(', ').toLowerCase()}.`;
+        // Keep capitalization as-written -- "PUBLIC HEARING", "SECOND READING",
+        // and other emphasized phrases lose their punch when lowercased and
+        // tend to read as a sterile civics paragraph.
+        para += ` On the agenda: ${topics.join(' · ')}.`;
       }
     }
 
@@ -7417,7 +7422,7 @@ function updateLeftSidebar() {
       }
       return detail;
     });
-    otherText += details.join(', and ') + '. These may not make the front page, but they shape how the region operates day to day.';
+    otherText += details.join(', and ') + '. These do not make the front page, but they are how the region actually runs day to day -- long after the cameras leave the bigger meetings.';
     paragraphs.push({ priority: 3, text: otherText });
   }
 
@@ -7440,7 +7445,7 @@ function updateLeftSidebar() {
     });
     const unique = [...new Set(boardNames)];
     if (unique.length > 0) {
-      paragraphs.push({ priority: 4, text: `Rounding out the week, <strong>${unique.join('</strong>, <strong>')}</strong> ${unique.length === 1 ? 'has a board meeting' : 'all have board meetings'} on the schedule. Agendas are usually posted a few days before -- check the Meetings tab for updates as they become available.` });
+      paragraphs.push({ priority: 4, text: `Rounding out the week, <strong>${unique.join('</strong>, <strong>')}</strong> ${unique.length === 1 ? 'has a board meeting' : 'all have board meetings'} on the schedule. Agendas usually post a few days out -- check the Meetings tab as those go live.` });
     }
   }
 
@@ -7471,7 +7476,7 @@ function updateLeftSidebar() {
   const totalCount = weekMeetings.length;
   const entityCount = new Set(weekMeetings.map(m => m.source)).size;
   if (totalCount > 0 && paragraphs.filter(p => p.priority >= 2).length > 0) {
-    paragraphs.push({ priority: 4.5, text: `All told, there are <strong>${totalCount} government meetings</strong> this week across <strong>${entityCount} entities</strong>. Scroll through the Meetings tab for full details, agenda links, and public comment info for each one.` });
+    paragraphs.push({ priority: 4.5, text: `All told, <strong>${totalCount} government meetings</strong> this week across <strong>${entityCount} entities</strong>. Scroll through Meetings for full agendas, links, and public-comment instructions for each one.` });
   }
 
   // ── Fallback for quiet weeks ──
