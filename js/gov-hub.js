@@ -321,7 +321,7 @@ const COUNTY_CACHED_DATA = [
     location: '333 West Colorado Ave, 2nd Floor, Telluride, CO 81435',
     civicClerkId: null,
     agendaUrl: 'https://www.sanmiguelcountyco.gov/DocumentCenter/View/14206/April-SSR-No-5-Meeting-Packet',
-    note: '2-hour working session of the Stakeholder Strategic Roundtable for the SMC Housing Code Update. Agenda: Recap of Project Objectives (5 min) -- Accelerated Housing Review (25 min) -- Draft Code Recommendations (85 min) -- Closing (5 min).'
+    note: 'Event date: April 27, 2026 Event Time: 1:30 PM - 3:30 PM Location: 333 West Colorado Ave, 2nd Floor, Telluride, CO 81435'
   },
   {
     date: 'April 29, 2026',
