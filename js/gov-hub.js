@@ -1103,6 +1103,9 @@ async function loadAISummaries() {
 // ── Manual/fallback summaries (preserved from original) ──
 // Last updated: 2026-04-22T18:00 (automated scan — no new agendas detected since 2026-04-18. MV TC Apr 23 agenda PDF confirmed to exist (file 48629) but still behind Cloudflare challenge, content unreadable. BOCC Apr 29 work session & Open Space Apr 27 agendas not yet posted. School Apr 20/27/28, Fire Apr 21, Med Apr 23, SMART all still without posted agendas. Hospital District has no April meeting listed on tellmed.org board-meetings page. Election Commission Apr 29, Parks & Rec Apr 29, THA Subcommittee Apr 23 agendas not yet posted on CivicWeb.)
 const MANUAL_SUMMARIES = {
+  "county|2026-04-27|Housing Code Update -- SSR Meeting #5":
+    "⚖️ WORKING SESSION (2 hours) of the Stakeholder Strategic Roundtable for the SMC Housing Code Update. AGENDA: Recap of Project Objectives (5 min) · ACCELERATED HOUSING REVIEW discussion (25 min) -- review the County's April 8, 2026 LUCA Draft against the SSR-recommended language; the County's draft removed the voluntariness phrasing in 3-1501, struck the PUD-with-rezoning exclusion (now eligible for 90-day review), deleted Initial Zoning/Rezoning from the ineligible list, removed the two-step Planning-Commission-plus-BOCC backstop in 3-1503, and deleted the 10-unit project cap in Article 7 · DRAFT CODE RECOMMENDATIONS (85 min) -- review and refine code revisions before the Spring 2026 community-review phase · Closing",
+
   'telluride|2026-03-31|Town Council':
     '⚖️ SECOND READING — Adoption of Colorado Wildfire Resiliency Code (Ordinance, expected to pass) · Public hearing: Stender Residence HARC appeal (continued to Apr 28) · 2026 Proposed Construction Projects work session · 2026 Open Space Commission Work Plan · Deed-restricted property sales (Silver Jack Unit 205, Element 52 Unit SW-102) · Workforce housing deed amendments (Overlook Lots 17 & 2) · Acquisition of Wilkin Court Unit H · Executive session: Town Manager evaluation',
 
@@ -1307,6 +1310,14 @@ const WHY_THIS_MATTERS = [
     context: 'Doug Sanders, with 20 years in local land development, testified that these projects cannot be evaluated in isolation -- the combined scope approaches $500M and could push the town\'s effective population from ~2,200 toward 3,500.'
   },
   {
+    match: /(stakeholder strategic roundtable|\bssr\b|housing code update)/i,
+    decision: "Whether the SSR's recommended limits on the 90-day Accelerated Housing Review process get folded back into the County's April 8, 2026 LUCA Draft before community review and BOCC adoption.",
+    who: 'Anyone who could be a future PUD applicant or neighbor of one in unincorporated San Miguel County. As drafted, the County\'s LUCA would let projects of any size -- including new PUDs that require rezoning and subdivision -- move through 90-day administrative review with undefined process and notice requirements.',
+    stage: 'SSR working session #5 (of 5 in the Project Foundation phase). The SSR is advisory; its consensus shapes what the BOCC ultimately adopts. The April 8 LUCA Draft will go to community review in spring 2026, then BOCC adoption.',
+    impact: "Five places where the County's draft diverged from the SSR's recommendations: (1) 3-1501 voluntariness language stripped (program is voluntary, only required for Prop 123 funding -- which HB26-1360 has eliminated this fiscal year); (2) PUD-with-rezoning exclusion deleted from the ineligible list AND the eligible-projects clause loosened (new PUDs requiring rezoning and subdivision could be fast-tracked); (3) Initial Zoning or Rezoning removed from the ineligible list; (4) the two-step Planning-Commission-plus-BOCC default removed in 3-1503 (process now unspecified); (5) the 10-unit cap and contiguous-land limit deleted in Article 7 (no project-size limit on fast-track review).",
+    context: "Funded by Colorado's Proposition 123 Local Planning Capacity Grant; positions the County for Prop 123 'Fast Track Approval' funding. The Code Update does NOT satisfy SB24-174, which still requires a separate Housing Action Plan by January 1, 2028. The redline (SSR additions in blue, County deletions in red) is mirrored on this site under Code Changes & Accelerated Review."
+  },
+    {
     match: /accelerated\s*housing\s*review/i,
     decision: 'Whether to amend the Land Use Code to implement fast-track 90-day review timelines for qualifying affordable housing development applications.',
     who: 'Developers proposing affordable housing, neighbors of potential development sites, and planning staff who must complete reviews within shortened timelines.',
