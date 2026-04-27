@@ -1933,6 +1933,7 @@ const LAND_USE_ISSUES = {
     heroImage: 'assets/ssr/SMC-Housing-Code-Update-infographic.jpg',
     heroAlt: 'San Miguel County Housing Code Update infographic showing Phase 1 Project Foundation (Fall/Winter 2025), Phase 2 Issue Identification & Analysis (Spring 2026), and Phase 3 Final Audit Report and Code Drafting (Summer 2026).',
     heroCredit: 'Source: San Miguel County Housing Code Update project page',
+    heroAspect: 'tall',
     legalSummary: 'The current LUCA Draft (April 8, 2026) would create a 90-day "Accelerated Housing Review" track. Compared to the SSR\'s recommendations, the County\'s draft removes (1) language identifying the program as voluntary, (2) the exclusion of PUDs that involve rezoning or subdivision, (3) a 10-unit project-size cap, and (4) the requirement that review default to a two-step Planning-Commission-plus-BOCC process. The redline (linked above) shows SSR additions in blue and County deletions in red.',
     legalIssuesTitle: 'Concerns with the County\'s draft',
     legalIssuesSub: 'Specific places where the County\'s April 8 LUCA Draft removed or weakened SSR-recommended limits on the Accelerated Housing Review process.',
@@ -2234,6 +2235,11 @@ function renderLandUseTab() {
   if (heroImageEl) {
     if (issue.heroImage) {
       heroImageEl.style.display = '';
+      // heroAspect: 'tall' lets full-detail infographics render without
+      // being cropped to the default 200px banner height (e.g., the SMC
+      // SSR phase-timeline infographic on the Code Changes module).
+      const aspectClass = issue.heroAspect === 'tall' ? ' landuse-hero-image--tall' : '';
+      heroImageEl.className = 'landuse-hero-image' + aspectClass;
       heroImageEl.innerHTML = `<img src="${issue.heroImage}" alt="${issue.heroAlt || ''}" loading="lazy">${issue.heroCredit ? '<div class="landuse-image-credit">' + issue.heroCredit + '</div>' : ''}`;
     } else {
       heroImageEl.style.display = 'none';

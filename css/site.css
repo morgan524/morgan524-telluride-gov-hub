@@ -3051,6 +3051,12 @@
       display: block;
       border-radius: 20px;
     }
+    /* Tall variant for full-detail infographics (e.g., SMC SSR phase timeline) */
+    .landuse-hero-image--tall img {
+      max-height: none;
+      object-fit: contain;
+      background: #ffffff;
+    }
     .landuse-hero-image .landuse-image-credit {
       font-size: 0.68rem;
       color: var(--text-muted);
