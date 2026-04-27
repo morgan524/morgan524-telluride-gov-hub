@@ -732,7 +732,7 @@
       { key: 'learned', label: 'I learned', emoji: '💡' }
     ];
     reactionTypes.forEach(function(r) {
-      var count = post.reactions[r.key] || 0;
+      var count = (post.reactions && post.reactions[r.key]) || 0;
       var isSelected = userReaction === r.key ? ' selected' : '';
       reactionsHtml += '<button class="hb-react-btn' + isSelected + '" onclick="hbReact(\'' + post.id + '\',\'' + r.key + '\')" title="' + r.label + '">' + r.emoji + ' <span>' + count + '</span></button>';
     });

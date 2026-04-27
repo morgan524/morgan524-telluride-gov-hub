@@ -1102,7 +1102,7 @@ const MANUAL_SUMMARIES = {
   'county|2026-04-22|Board of County Commissioners Meeting':
     'PRESENTATION: Historical Commission 2026 Work Plan (Ted Wilson, Historical Commission; Janet Kask, Dir. of Parks & Open Space, 45 min) · Planning Department update (Kaye Simonson, 20 min) · Miramonte Space Planning update (Bordogna, Biggs) · Tax Abatement petition ABMT2026-7 RRMV LLC — staff recommended DENY · Consent: IGAs with TRAA, Mountain Village & Ophir for noxious weed management · Miramonte Boiler Replacement — updated Construction Agreement w/ Carl Kelly Plumbing (bonding incl.) · Deed Restriction V2016 amendments — Unit 314-13 Society Dr. (Cela White/Tanner Small), 182 Alexander Overlook (Cormac Bourke/Kathleen Morgan) · Armor Proseal asphalt installation agreement · JBBS 2027 contract amendment · Attorney matters (possible executive session)',
 
-  'county|2026-04-23|Citizen's Weed Advisory Board':
+  "county|2026-04-23|Citizen's Weed Advisory Board":
     'Updates from Vegetation Control & Management: Summer 2026 synopsis, Forest Service Agreement, Noxious Weed Agreements, Cost Share Program · Discussion: new opportunity spraying on private landowner property · Grant funds appropriation to landowners; whether funds should cover SMC VC&M · Vacant Chair position — discussion of filling role · Approval of minutes (3/27/2025, 10/20/2025)',
 
   'smrha|2026-04-13|SMRHA Board Meeting':
