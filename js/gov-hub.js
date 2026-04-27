@@ -321,7 +321,7 @@ const COUNTY_CACHED_DATA = [
     location: '333 West Colorado Ave, 2nd Floor, Telluride, CO 81435',
     civicClerkId: null,
     agendaUrl: 'https://www.sanmiguelcountyco.gov/DocumentCenter/View/14206/April-SSR-No-5-Meeting-Packet',
-    note: '2-hour working session of the Stakeholder Strategic Roundtable for the SMC Housing Code Update. Agenda: Recap of Project Objectives (5 min) -- Accelerated Housing Review (25 min) -- Draft Code Recommendations (85 min) -- Closing (5 min). Zoom: 860 9725 9982 / passcode 731354 (https://us06web.zoom.us/j/86097259982).'
+    note: '2-hour working session of the Stakeholder Strategic Roundtable for the SMC Housing Code Update. Agenda: Recap of Project Objectives (5 min) -- Accelerated Housing Review (25 min) -- Draft Code Recommendations (85 min) -- Closing (5 min).'
   },
   {
     date: 'April 29, 2026',
@@ -1667,6 +1667,10 @@ const MEETING_ZOOM_LINKS = {
   // ── County ──
   'county|2026-03-25|Board of County Commissioners Special Meeting':
     'https://us02web.zoom.us/meeting/register/OtNb_dreTomuYTpzADMLGQ#/registration',
+
+  // ── SSR / Housing Code Update ──
+  'county|2026-04-27|Housing Code Update -- SSR Meeting #5':
+    'https://us06web.zoom.us/j/86097259982?pwd=M54xcez6wkm1ZEoL5K1791R7ZcCsLX.1',
 };
 
 // School District uses one consistent Zoom link for all meetings
@@ -1725,6 +1729,13 @@ const MEETING_PASSCODES = {
     id: '846 6324 0731',
     passcode: '464546',
     phone: '1-301-715-8592 or 1-312-626-6799'
+  },
+
+  // ── SSR / Housing Code Update ──
+  'county|2026-04-27|Housing Code Update -- SSR Meeting #5': {
+    id: '860 9725 9982',
+    passcode: '731354',
+    phone: '719-359-4580 or 720-707-2699'
   },
 
   // ── School District (consistent across meetings) ──
