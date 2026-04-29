@@ -3990,15 +3990,6 @@ const KOTO_NEWSCASTS = [
     copy: 'Former Sheriff Deputy sentenced for child pornography, West End Roundup with the San Miguel Basin Forum, and celebrating dark skies.',
     href: 'https://koto.org/news/newscast-4-16-26/',
     img: 'https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png'
-  },
-  {
-    title: 'Newscast 4-15-26',
-    source: 'KOTO Community Radio',
-    date: 'April 15, 2026',
-    newsTopic: 'community',
-    copy: 'The Kids Are Alright, The Dark Veil of Romance, and A Look Back: Ten Years of Good Curling.',
-    href: 'https://koto.org/news/newscast-4-15-26/',
-    img: 'https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png'
   }
 ];
 
