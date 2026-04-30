@@ -6051,97 +6051,28 @@ document.getElementById('expandRight').addEventListener('click', () => {
 // ══════════════════════════════
 
 (function() {
-  let selectedSources = new Set();
-  let selectedTopics = new Set();
   let selectedFreq = 'weekly';
-  const SRC_NAMES = { telluride: 'Town of Telluride', county: 'San Miguel County', mv: 'Mountain Village', smart: 'SMART Transit', school: 'School District', fire: 'Fire District', med: 'Medical Center', norwood: 'Town of Norwood', ophir: 'Town of Ophir', livable: 'Livable Telluride Newsletter' };
 
-  // Auto-subscribe everyone to the Livable Telluride Newsletter by default
-  (function initNewsletterDefault() {
-    const livableOpt = document.querySelector('#subscribeSources .topic-option[data-src="livable"]');
-    if (livableOpt) {
-      const cb = livableOpt.querySelector('input[type="checkbox"]');
-      if (cb) {
-        cb.checked = true;
-        livableOpt.classList.add('selected');
-        selectedSources.add('livable');
-      }
-    }
-  })();
-
-  // Source (Town/County) checkbox toggling
-  document.querySelectorAll('#subscribeSources .topic-option').forEach(opt => {
-    const cb = opt.querySelector('input[type="checkbox"]');
-    cb.addEventListener('change', () => {
-      if (cb.checked) {
-        selectedSources.add(cb.value);
-        opt.classList.add('selected');
-      } else {
-        selectedSources.delete(cb.value);
-        opt.classList.remove('selected');
-      }
-      updateSubscribeUI();
-    });
-  });
-
-  // Topic checkbox toggling
-  document.querySelectorAll('#subscribeTopics .topic-option').forEach(opt => {
-    const cb = opt.querySelector('input[type="checkbox"]');
-    cb.addEventListener('change', () => {
-      if (cb.checked) {
-        selectedTopics.add(cb.value);
-        opt.classList.add('selected');
-        // If "Events Around Me" is checked but no address set, open the proximity modal
-        if (cb.value === 'events-around-me' && window._proximityFilter && !window._proximityFilter.isActive()) {
-          const proxOverlay = document.getElementById('proxOverlay');
-          if (proxOverlay) proxOverlay.classList.add('open');
-        }
-      } else {
-        selectedTopics.delete(cb.value);
-        opt.classList.remove('selected');
-        // If "Events Around Me" unchecked, clear proximity
-        if (cb.value === 'events-around-me' && window._proximityFilter && window._proximityFilter.isActive()) {
-          const clearProxBtn = document.getElementById('proxActiveClear');
-          if (clearProxBtn) clearProxBtn.click();
-        }
-      }
-      updateSubscribeUI();
-    });
-  });
-
-  // Frequency buttons
-  document.querySelectorAll('.freq-option').forEach(btn => {
+  // Frequency buttons (daily / weekly / monthly)
+  // Scoped by [data-freq] so the proximity button (also styled .freq-option)
+  // doesn't get caught up in the selected-state toggling below.
+  document.querySelectorAll('.freq-option[data-freq]').forEach(btn => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.freq-option').forEach(b => b.classList.remove('selected'));
+      document.querySelectorAll('.freq-option[data-freq]').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
       selectedFreq = btn.dataset.freq;
     });
   });
 
-  function updateSubscribeUI() {
-    const topicCount = selectedTopics.size;
-    const sourceCount = selectedSources.size;
-    const summary = document.getElementById('selectedSummary');
-    const btn = document.getElementById('subscribeBtn');
-    const hasProximity = window._proximityFilter && window._proximityFilter.isActive();
-    const hasSelection = topicCount > 0 || sourceCount > 0 || hasProximity;
-
-    if (!hasSelection) {
-      summary.textContent = 'No selections yet — the newsletter is included by default';
-      btn.disabled = true;
-      btn.textContent = 'Select at least one source or topic to subscribe';
-    } else {
-      const parts = [];
-      if (sourceCount > 0) {
-        parts.push([...selectedSources].map(k => SRC_NAMES[k] || k).join(', '));
-      }
-      if (topicCount > 0) {
-        parts.push([...selectedTopics].map(k => TOPIC_DEFINITIONS[k]?.label || k).join(', '));
-      }
-      summary.textContent = parts.join(' · ');
-      btn.disabled = false;
-      btn.textContent = 'Subscribe Now';
-    }
+  // Optional "Events Near You" — clicking opens the existing proximity modal.
+  // If the user sets an address + radius, MMERGE10 / MMERGE11 get sent at submit
+  // time; otherwise the field stays empty and the digest goes out without filtering.
+  const proxOpenBtn = document.getElementById('proxOpenBtn');
+  if (proxOpenBtn) {
+    proxOpenBtn.addEventListener('click', () => {
+      const proxOverlay = document.getElementById('proxOverlay');
+      if (proxOverlay) proxOverlay.classList.add('open');
+    });
   }
 
   // Form submission -- builds Mailchimp signup URL
@@ -6153,8 +6084,7 @@ document.getElementById('expandRight').addEventListener('click', () => {
     var town = document.getElementById("subTown").value;
     var password = document.getElementById("subPassword").value;
 
-    var hasProximity = window._proximityFilter && window._proximityFilter.isActive();
-    if (!email || (selectedTopics.size === 0 && selectedSources.size === 0 && !hasProximity)) return;
+    if (!email) return;
 
     var btn = document.querySelector("#subscribeForm button[type=submit]");
     btn.disabled = true;
@@ -6201,11 +6131,6 @@ document.getElementById('expandRight').addEventListener('click', () => {
       var MAILCHIMP_U = "5d9192289b9af78822f2f69bf";
       var MAILCHIMP_ID = "f83dc56387";
 
-      var allSelections = [
-        ...[...selectedSources].map(function(k) { return SRC_NAMES[k] || k; }),
-        ...[...selectedTopics].map(function(k) { return TOPIC_DEFINITIONS[k] ? TOPIC_DEFINITIONS[k].label : k; })
-      ];
-
       var params = new URLSearchParams();
       params.set("u", MAILCHIMP_U);
       params.set("id", MAILCHIMP_ID);
@@ -6213,24 +6138,9 @@ document.getElementById('expandRight').addEventListener('click', () => {
       if (firstName) params.set("FNAME", firstName);
       if (lastName) params.set("LNAME", lastName);
       if (town) params.set("MMERGE6", town);
-      params.set("MMERGE7", [...selectedSources].map(function(k) { return SRC_NAMES[k] || k; }).join(", "));
-
-      var topicLabels = [...selectedTopics].map(function(k) { return TOPIC_DEFINITIONS[k] ? TOPIC_DEFINITIONS[k].label : k; });
-      params.set("MMERGE8", topicLabels.join(", "));
       params.set("MMERGE9", selectedFreq);
 
-      // ── Map selections to Mailchimp interest group checkboxes ──
-      // Group category ID: 7912 ("Topics of Interest")
-      var srcGroupIds = { telluride: 1, county: 2, mv: 4, school: 8, smart: 128, fire: 256, med: 512, norwood: 1024, ophir: 2048, livable: 4096 };
-      var topicGroupIds = { "housing": 16, "housing-search": 8192, "land-use": 32, "public-safety": 16384, "budget-finance": 32768, "infrastructure": 65536, "environment": 131072, "health-education": 262144, "legal-governance": 524288, "arts": 1048576, "music": 2097152, "recreation": 8388608, "community-events": 4194304, "food-drink": 16777216, "events-around-me": 64 };
-
-      [...selectedSources].forEach(function(k) {
-        if (srcGroupIds[k]) params.set("group[7912][" + srcGroupIds[k] + "]", "1");
-      });
-      [...selectedTopics].forEach(function(k) {
-        if (topicGroupIds[k]) params.set("group[7912][" + topicGroupIds[k] + "]", "1");
-      });
-
+      var hasProximity = window._proximityFilter && window._proximityFilter.isActive();
       if (hasProximity) {
         params.set("MMERGE10", window._proximityFilter.getAddress());
         params.set("MMERGE11", String(window._proximityFilter.getRadius()));
@@ -6254,9 +6164,7 @@ document.getElementById('expandRight').addEventListener('click', () => {
             ? " Your Hub-Bub forum account has been created — you can now log in to join local discussions."
             : "";
           success.querySelector("p").textContent =
-            "We\x27ll send you " + selectedFreq + " updates on " +
-            allSelections.join(", ") +
-            ". Keep an eye on " + email + " for your first digest!" + verifyNote;
+            "We\x27ll send you a " + selectedFreq + " digest of meetings, news, and notices for the Telluride region. Keep an eye on " + email + " for your first one!" + verifyNote;
         } else {
           btn.disabled = false;
           btn.textContent = "Subscribe Now";
