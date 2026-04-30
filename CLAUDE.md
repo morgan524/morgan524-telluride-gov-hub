@@ -306,6 +306,139 @@ digest, extend the `main()` builder to read those arrays from `js/gov-hub.js`
 and produce more `buildXItems(...)` flatMaps. The pattern is the same as the
 existing news/legal builders.
 
+## Email addresses on the project
+
+The `livabletelluride.org` domain has three role addresses, each with a
+different job. Easy to mix them up — keep them straight:
+
+| Address                          | Role                                       | Where it appears                                                                                          |
+| -------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| `info@livabletelluride.org`      | Main public contact + Hub-Bub admin identity | 14 places: contact links across the site, corrections form, event-submission backup, Mailchimp signup wrap-up, **hardcoded admin check in `js/hub-bub.js` and `js/gov-hub.js` (`user.email === 'info@livabletelluride.org'`)**, and the destination for Apps-Script confirmation emails. If you log into Hub-Bub / Firebase Auth as this address, the UI grants moderator privileges. |
+| `bot@livabletelluride.org`       | Git commit author for automated workflows  | All four GH Actions workflows set `git config user.email "bot@livabletelluride.org"` so commits are attributed to "Gov Hub Bot". Nothing reads mail here; it's just an identity string. |
+| `events@livabletelluride.org`    | Inbox for the email-to-events pipeline     | Only used by the Apps Script + Google Sheet flow described below. Treat it as a service inbox, not a contact. |
+
+If you spin up a fourth alias (e.g. for a new project), add it to this table
+and grep the codebase for any place that needs to know about it.
+
+## Email-to-events ingestion pipeline
+
+The site lets community members get events on the calendar without filing a
+PR or using the form: forward an email about the event to
+`events@livabletelluride.org` and the system parses + queues + publishes it.
+This is structurally similar to the Mailchimp pipeline (a signup form on the
+site, but the actual sending lives elsewhere) — the parsing and queueing
+live INSIDE a Google account, not in this repo.
+
+**Pipeline stages (data flows top-to-bottom):**
+
+```
+   1. Sender (you, a community member, an org)
+        forwards an event email to:        events@livabletelluride.org
+        │
+        ▼
+   2. Google Apps Script (deployed inside the events@ Gmail account)
+        - polls 'is:unread -label:Processed' every 5 minutes
+        - parses date/location/time/description with regexes
+        - writes a row to the "Event Inbox" Google Sheet
+        - applies a "Processed" Gmail label so each thread runs once
+        - emails info@livabletelluride.org a receipt summary
+        Source: scripts/../email-to-events-appscript.js (in this repo,
+        but the deployed copy lives in the Gmail account's
+        Extensions → Apps Script editor)
+        │
+        ▼
+   3. Google Sheet "Event Inbox", published as CSV.
+        URL stored in email-events-config.json (sheetCsvUrl).
+        Headers: Status | Title | Date | EndDate | Location | Time |
+        Description | SourceURL | SubmittedAt | EmailSubject | EmailFrom
+        │
+        ▼
+   4. GH Actions content-refresh.yml — Task 5 (syncEmailEvents())
+        - every 6 hours, fetches the CSV
+        - parses rows, writes them to community-events.json at the repo root
+        - bumps Status from "new" to "added" for items it picks up
+        │
+        ▼
+   5. The site reads community-events.json and renders events on the
+      Events tab. Each event displays date / location / description / link.
+
+   6. (Round-trip) Apps Script's checkAddedEvents() polls the Sheet every
+      10 minutes for rows whose Status = "added" and emails info@ a "now
+      live on site" confirmation, then bumps Status to "notified".
+```
+
+**Important deployment fact:** the Apps Script in this repo is the *source
+copy*. The actual running script lives inside the Gmail account at
+`events@livabletelluride.org` — Extensions → Apps Script. If `EMAIL-EVENTS-SETUP.md`
+hasn't been completed end-to-end (script pasted, `setupTrigger` run once,
+auth granted), nothing happens at stage 2 even though stages 3-5 still pull
+from an empty Sheet.
+
+### "I forwarded an event and it never showed up" — debug order
+
+Walk this in order; each step rules out one stage of the pipeline.
+
+1. **Confirm the email actually arrived at events@.** Log into the Gmail
+   account; check Inbox + Spam. If it's missing, the issue is upstream
+   (sender's deliverability, Google's spam filter, etc.) — not on us.
+
+2. **Confirm the Apps Script is deployed and running.** In the Gmail
+   account: Extensions → Apps Script → check that `email-to-events-appscript.js`
+   is present and `setupTrigger` was run. Triggers tab should show two:
+   `processNewEmails` (every 5 min) and `checkAddedEvents` (every 10 min).
+   If those don't exist, follow `EMAIL-EVENTS-SETUP.md` to install.
+
+3. **Check the Apps Script's Execution log.** Apps Script editor → Executions
+   tab. Look for recent `processNewEmails` runs and what they logged. The
+   script verbose-logs whether it found unread threads, which subjects it
+   processed, and which fields it parsed. If runs are failing, the error
+   trace is here.
+
+4. **Confirm the Sheet has a new row.** Open the "Event Inbox" Sheet. Each
+   forwarded email should produce one row with Status=`new`. If the Apps
+   Script ran but no row appeared, the parser bailed (rare).
+
+5. **Confirm the published CSV is up to date.** Sometimes Google Sheets'
+   "Publish to web" caches aggressively:
+   `curl -sL '<sheetCsvUrl from email-events-config.json>' | head`.
+   If the live CSV doesn't show your new row even though the Sheet does,
+   re-publish (File → Share → Publish to web → Publish again).
+
+6. **Confirm the GH Action picked it up.** Latest content-refresh run logs
+   should show `Task 5: Syncing email events ... Found N events from sheet`
+   and `Wrote N events to community-events.json`. If it logs `No events in
+   sheet`, the CSV is empty — go back to step 5.
+
+7. **Confirm the site is rendering it.** Hard-refresh livabletelluride.org
+   (Cmd-Shift-R). If `community-events.json` was updated but the Events tab
+   still doesn't show the event, the cache buster on `index.html`'s
+   reference to gov-hub.js / community-events.json may need bumping.
+
+### Current state baseline (as of 2026-04-30)
+
+- `email-events-config.json` has `sheetCsvUrl` set; the URL responds 200
+  with `Content-Type: text/csv` — publish is configured.
+- The published Sheet currently has **0 data rows**. Every content-refresh
+  run logs "No events in sheet". `community-events.json` was last touched
+  on 2026-03-27 and only contains the hardcoded Telluride Balloon Festival
+  entry.
+- This means either no event emails have been forwarded yet (most likely),
+  or the Apps Script half of the pipeline isn't actually deployed in the
+  events@ Gmail account. Walk the debug order above to tell which.
+
+### Operational notes for editing the pipeline
+
+- **Editing the parser?** Update `email-to-events-appscript.js` here AND
+  paste the updated copy into the Gmail account's Apps Script editor.
+  Without the second step the live behavior doesn't change.
+- **Changing Sheet shape?** Headers must match `appendToSheet()`'s order
+  exactly (Status | Title | Date | EndDate | Location | Time | Description |
+  SourceURL | SubmittedAt | EmailSubject | EmailFrom). Reordering breaks
+  the CSV parsing in `scripts/content-refresh.js` Task 5.
+- **Rotating the Sheet?** If the Sheet is replaced (new file, new URL),
+  publish-to-web the new one and update `email-events-config.json` with
+  the new `sheetCsvUrl`. No restart needed; the next 6h cron picks it up.
+
 ## Known loose ends
 
 - **KOTO featured stories** publish less often than newscasts. If
