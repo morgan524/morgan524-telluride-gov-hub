@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Livable Telluride — Blog</title>
+    <link>https://livabletelluride.org</link>
+    <atom:link href="https://livabletelluride.org/feed-blog.xml" rel="self" type="application/rss+xml" />
+    <description>Long-form posts from Livable Telluride on housing, land use, civic decisions, and the issues shaping our valley.</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 30 Apr 2026 22:57:45 GMT</lastBuildDate>
+    <ttl>360</ttl>
+    <item>
+      <title>[Blog] Welcome to the Livable Telluride Blog</title>
+      <link>https://livabletelluride.org/#blog</link>
+      <guid isPermaLink="false">https://livabletelluride.org/#blog</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate>
+      <description>We&apos;re starting a blog to share deeper context on the issues shaping the Telluride region — housing, land use, civic decisions, and what it really takes to keep this place livable.</description>
+      <category>Blog</category>
+      <category>Livable Telluride</category>
+    </item>
+  </channel>
+</rss>

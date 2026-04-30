@@ -26,11 +26,14 @@ const path = require('path');
 const REPO_ROOT = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
 const GOV_HUB_JS = path.join(REPO_ROOT, 'js', 'gov-hub.js');
 const FEED_OUT = path.join(REPO_ROOT, 'feed.xml');
+const BLOG_FEED_OUT = path.join(REPO_ROOT, 'feed-blog.xml');
 
 const SITE_URL = 'https://livabletelluride.org';
 const COMMUNITY_EVENTS_JSON = path.join(REPO_ROOT, 'community-events.json');
 const FEED_TITLE = 'Livable Telluride — Daily Digest';
-const FEED_DESC = 'News, upcoming meetings, community events, and blog posts for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).';
+const FEED_DESC = 'News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).';
+const BLOG_FEED_TITLE = 'Livable Telluride — Blog';
+const BLOG_FEED_DESC = 'Long-form posts from Livable Telluride on housing, land use, civic decisions, and the issues shaping our valley.';
 const MAX_AGE_DAYS = 7;             // backward window for news + blog
 const MAX_FUTURE_DAYS = 14;         // forward window for meetings (only emit upcoming meetings within 14d)
 const MAX_EVENT_FUTURE_DAYS = 60;   // forward window for events (events starting within 60d)
@@ -264,13 +267,13 @@ function main() {
 
   console.log(`  Loaded: ${tt.length} TT/gov articles, ${koNews.length} KOTO newscasts, ${koFeat.length} KOTO features, ${Object.keys(summaries).length} meeting summaries, ${events.length + jsonEvents.length} events, ${blogPosts.length} blog posts`);
 
+  // Main digest feed: news + meetings + events. Blog posts get their own feed.
   let items = [
     ...buildNewsItems('tt', tt, 'Telluride Times'),
     ...buildNewsItems('koto-newscasts', koNews, 'KOTO Community Radio'),
     ...buildNewsItems('koto-features', koFeat, 'KOTO Community Radio'),
     ...buildMeetingItems(summaries),
     ...buildEventItems(events, jsonEvents),
-    ...buildBlogItems(blogPosts),
   ];
 
   // De-duplicate by guid, keep newest pubDate, sort newest first, cap.
@@ -284,8 +287,21 @@ function main() {
     .sort((a, b) => b.pubDate - a.pubDate)
     .slice(0, MAX_ITEMS);
 
-  console.log(`  Emitting ${items.length} items (max: ${MAX_ITEMS})`);
+  console.log(`  Emitting ${items.length} items to feed.xml (max: ${MAX_ITEMS})`);
 
+  // ── Build separate blog-only feed (used by the all-audience blog campaign) ──
+  let blogItems = buildBlogItems(blogPosts);
+  // Sort newest first, in case multiple posts get pushed in a single edit.
+  blogItems = blogItems
+    .filter((it) => it.pubDate instanceof Date && !isNaN(it.pubDate.getTime()))
+    .sort((a, b) => b.pubDate - a.pubDate);
+  console.log(`  Emitting ${blogItems.length} items to feed-blog.xml`);
+
+  writeRssFeed(FEED_OUT, FEED_TITLE, FEED_DESC, `${SITE_URL}/feed.xml`, items);
+  writeRssFeed(BLOG_FEED_OUT, BLOG_FEED_TITLE, BLOG_FEED_DESC, `${SITE_URL}/feed-blog.xml`, blogItems);
+}
+
+function writeRssFeed(outPath, title, desc, selfUrl, items) {
   const lastBuild = new Date();
   const itemsXml = items.map((it) => {
     const cats = (it.categories || []).map((c) => `      <category>${xmlEscape(c)}</category>`).join('\n');
@@ -302,10 +318,10 @@ ${cats}
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>${xmlEscape(FEED_TITLE)}</title>
+    <title>${xmlEscape(title)}</title>
     <link>${SITE_URL}</link>
-    <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml" />
-    <description>${xmlEscape(FEED_DESC)}</description>
+    <atom:link href="${selfUrl}" rel="self" type="application/rss+xml" />
+    <description>${xmlEscape(desc)}</description>
     <language>en-us</language>
     <lastBuildDate>${rfc822(lastBuild)}</lastBuildDate>
     <ttl>360</ttl>
@@ -314,8 +330,8 @@ ${itemsXml}
 </rss>
 `;
 
-  fs.writeFileSync(FEED_OUT, xml);
-  console.log(`\n✅ Wrote ${FEED_OUT} (${xml.length} bytes)`);
+  fs.writeFileSync(outPath, xml);
+  console.log(`✅ Wrote ${outPath} (${xml.length} bytes)`);
 }
 
 main();

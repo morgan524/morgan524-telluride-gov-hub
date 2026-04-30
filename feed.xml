@@ -4,9 +4,9 @@
     <title>Livable Telluride — Daily Digest</title>
     <link>https://livabletelluride.org</link>
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
-    <description>News, upcoming meetings, community events, and blog posts for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
+    <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Apr 2026 22:35:41 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 22:57:45 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
@@ -36,15 +36,6 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <description>KOTO Community Radio • April 30, 2026</description>
       <category>KOTO Community Radio</category>
       <category>land-use</category>
-    </item>
-    <item>
-      <title>[Blog] Welcome to the Livable Telluride Blog</title>
-      <link>https://livabletelluride.org/#blog</link>
-      <guid isPermaLink="false">https://livabletelluride.org/#blog</guid>
-      <pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate>
-      <description>We&apos;re starting a blog to share deeper context on the issues shaping the Telluride region — housing, land use, civic decisions, and what it really takes to keep this place livable.</description>
-      <category>Blog</category>
-      <category>Livable Telluride</category>
     </item>
     <item>
       <title>Newscast 4-27-26</title>
