@@ -1,5 +1,5 @@
 {
   "emailAddress": "Events@livabletelluride.org",
-  "sheetCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vT_n4RvRHfCI9hu9BznVRvr_Prz_aP0LRjZCCzfjJK3aylAAy7sceZeqC42vqno7l4_76Aly4l7SuJT/pub?output=csv",
+  "sheetCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRSi7KofuvZnR0Y6cFqQ9HheZUTOy0JJAsPCL9Tvpzm9G5zjU48O9qY3r9RyTjzMdwCFlkrvQUF-H-H/pub?output=csv",
   "notes": "Set sheetCsvUrl after publishing the Google Sheet as CSV (File → Share → Publish to web)"
 }
