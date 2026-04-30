@@ -63,60 +63,32 @@ const AGENDA_SOURCES = {
 
 // ── News Feeds ──
 const NEWS_FEEDS = [
-  { url: 'https://telluride.gov/RSSFeed.aspx?ModID=1&CID=Town-News-1', source: 'Town of Telluride', category: 'Town News' },
-  { url: 'https://telluride.gov/RSSFeed.aspx?ModID=1&CID=Marshals-Department-12', source: 'Town of Telluride', category: "Marshal's Dept" },
+  { url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=1&CID=Town-News-1', source: 'Town of Telluride', category: 'Town News' },
+  { url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=1&CID=Marshals-Department-12', source: 'Town of Telluride', category: "Marshal's Dept" },
   { url: 'https://sanmiguelcountyco.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml', source: 'San Miguel County', category: 'News' },
   { url: 'https://sanmiguelcountyco.gov/RSSFeed.aspx?ModID=63&CID=All-0', source: 'San Miguel County', category: 'Alert' },
-  { url: 'https://telluride.gov/RSSFeed.aspx?ModID=63&CID=All-0', source: 'Town of Telluride', category: 'Alert' }
+  { url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=63&CID=All-0', source: 'Town of Telluride', category: 'Alert' }
 ];
 
 // ── Telluride Times scrape config ──
 const TELLURIDE_TIMES_RSS = 'https://www.telluridenews.com/search/?f=rss&t=article&c=news,news/*&l=25&s=start_time&sd=desc';
-const KOTO_NEWSCASTS_RSS = 'https://koto.org/news-category/newscasts/feed/';
-const KOTO_FEATURED_RSS = 'https://koto.org/news-category/featured-stories/feed/';
+const KOTO_RSS = 'https://koto.org/feed/';
 
 // ══════════════════════════════════════════════════════════════
 // ── HTTP Helpers ──
 // ══════════════════════════════════════════════════════════════
 
-// Hosts that are blocked or rate-limited from GitHub Actions runner IPs.
-// We route those through our Cloudflare Worker proxy (livabletelluride-rss-proxy)
-// which fetches from CF's edge and is treated as legitimate residential traffic.
-const PROXY_HOSTS = new Set([
-  'telluridenews.com', 'www.telluridenews.com',
-  'koto.org', 'www.koto.org',
-  'telluride.gov', 'www.telluride.gov',
-  'sanmiguelcountyco.gov', 'www.sanmiguelcountyco.gov',
-  'telluride-co.civicweb.net',
-  'townofmountainvillage.com', 'www.townofmountainvillage.com',
-  'smarttelluride.colorado.gov',
-  'www.tellurideschool.org', 'tellurideschool.org',
-]);
-const RSS_PROXY_URL = (process.env.RSS_PROXY_URL || '').replace(/\/+$/,'');
-const RSS_PROXY_KEY = process.env.RSS_PROXY_KEY || '';
-
-function maybeProxy(url) {
-  if (!RSS_PROXY_URL) return { url, headers: {} };
-  let host;
-  try { host = new URL(url).hostname.toLowerCase(); } catch { return { url, headers: {} }; }
-  if (!PROXY_HOSTS.has(host)) return { url, headers: {} };
-  const proxied = `${RSS_PROXY_URL}/proxy?url=${encodeURIComponent(url)}`;
-  return { url: proxied, headers: RSS_PROXY_KEY ? { 'X-Proxy-Key': RSS_PROXY_KEY } : {} };
-}
-
 function fetch(url, opts = {}) {
-  const { url: realUrl, headers: proxyHeaders } = maybeProxy(url);
   return new Promise((resolve, reject) => {
-    const mod = realUrl.startsWith('https') ? https : http;
-    const req = mod.get(realUrl, {
+    const mod = url.startsWith('https') ? https : http;
+    const req = mod.get(url, {
       headers: {
-        // NOTE: a bot-style UA gets rate-limited / Cloudflare-challenged.
-        // We send a normal Safari UA AND, for blocked hosts, route through
-        // a Cloudflare Worker proxy (see RSS_PROXY_URL above).
+        // NOTE: A bot-style UA ('TellurideGovHub/2.0 (github-actions-bot)') gets rate-limited
+        // (HTTP 429) by Telluride Times and challenged (HTTP 403) by Cloudflare on KOTO.
+        // Use a normal Safari UA so the RSS scrapers actually return content.
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15',
         'Accept': 'application/rss+xml, application/xml, text/xml, text/html, */*',
         'Accept-Language': 'en-US,en;q=0.9',
-        ...proxyHeaders,
         ...opts.headers
       },
       timeout: 15000
@@ -427,10 +399,7 @@ async function refreshNews() {
   for (const feed of NEWS_FEEDS) {
     try {
       const resp = await fetch(feed.url);
-      if (resp.status !== 200) {
-        console.warn(`  [feed] ${feed.source} (${feed.category}) HTTP ${resp.status} from ${feed.url}`);
-        continue;
-      }
+      if (resp.status !== 200) continue;
       const xml = await parseXml(resp.text);
       const items = xml?.rss?.channel?.item;
       const arr = Array.isArray(items) ? items : (items ? [items] : []);
@@ -455,7 +424,6 @@ async function refreshNews() {
   // Telluride Times RSS
   try {
     const resp = await fetch(TELLURIDE_TIMES_RSS);
-    console.log(`  [feed] Telluride Times HTTP ${resp.status} bytes=${(resp.text||'').length}`);
     if (resp.status === 200) {
       const xml = await parseXml(resp.text);
       const items = xml?.rss?.channel?.item;
@@ -477,17 +445,12 @@ async function refreshNews() {
     }
   } catch (e) { console.warn(`  Telluride Times RSS error: ${e.message}`); }
 
-  // KOTO RSS — split feeds for newscasts vs featured stories
+  // KOTO RSS
   const kotoNewscasts = [];
   const kotoFeatured = [];
-  for (const [feedUrl, bucket, label] of [
-    [KOTO_NEWSCASTS_RSS, kotoNewscasts, 'KOTO newscasts'],
-    [KOTO_FEATURED_RSS, kotoFeatured, 'KOTO featured'],
-  ]) {
-    try {
-      const resp = await fetch(feedUrl);
-      console.log(`  [feed] ${label} HTTP ${resp.status} bytes=${(resp.text||'').length}`);
-      if (resp.status !== 200) continue;
+  try {
+    const resp = await fetch(KOTO_RSS);
+    if (resp.status === 200) {
       const xml = await parseXml(resp.text);
       const items = xml?.rss?.channel?.item;
       const arr = Array.isArray(items) ? items : (items ? [items] : []);
@@ -495,19 +458,21 @@ async function refreshNews() {
         const pubDate = new Date(item.pubDate || '');
         if (pubDate < cutoff) continue;
         const title = (item.title || '').trim();
-        // The category archive feed sometimes includes the archive page itself
-        // as the first <item>; skip non-permalink entries.
-        if (/Archives?/i.test(title)) continue;
-        bucket.push({
+        const entry = {
           title,
           source: 'KOTO Community Radio',
           date: formatDate(pubDate),
           newsTopic: classifyNewsTopic(title, item.description || ''),
           href: (item.link || '').trim()
-        });
+        };
+        if (/newscast/i.test(title)) {
+          kotoNewscasts.push(entry);
+        } else {
+          kotoFeatured.push(entry);
+        }
       }
-    } catch (e) { console.warn(`  ${label} RSS error: ${e.message}`); }
-  }
+    }
+  } catch (e) { console.warn(`  KOTO RSS error: ${e.message}`); }
 
   // Deduplicate by href
   const seen = new Set();
@@ -565,6 +530,54 @@ async function refreshLegalNotices(existingNotices) {
 // ── Task 5: Email Events Sync ──
 // ══════════════════════════════════════════════════════════════
 
+/**
+ * RFC 4180-ish CSV parser. Handles:
+ *   - quoted fields containing commas (e.g. "Town Park, Telluride")
+ *   - quoted fields containing literal newlines (e.g. multi-line description)
+ *   - escaped quotes inside quoted fields ("she said ""hi""")
+ *   - bare CR/LF/CRLF row terminators
+ * Returns: { headers: string[], rows: string[][] }
+ *
+ * The previous implementation split on \n and , and broke on every Google
+ * Sheets export with a comma in a Location cell or a newline in Description.
+ */
+function parseCSV(text) {
+  const records = [];
+  let row = [];
+  let cell = '';
+  let inQuotes = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (inQuotes) {
+      if (ch === '"') {
+        if (text[i + 1] === '"') { cell += '"'; i++; }
+        else inQuotes = false;
+      } else {
+        cell += ch;
+      }
+    } else {
+      if (ch === '"') { inQuotes = true; }
+      else if (ch === ',') { row.push(cell); cell = ''; }
+      else if (ch === '\n' || ch === '\r') {
+        // Treat \r\n as one terminator
+        if (ch === '\r' && text[i + 1] === '\n') i++;
+        row.push(cell); cell = '';
+        if (row.length > 1 || row[0] !== '') records.push(row);
+        row = [];
+      } else {
+        cell += ch;
+      }
+    }
+  }
+  // Final cell / row
+  if (cell.length > 0 || row.length > 0) {
+    row.push(cell);
+    if (row.length > 1 || row[0] !== '') records.push(row);
+  }
+  if (records.length === 0) return { headers: [], rows: [] };
+  return { headers: records[0].map((h) => String(h).trim()), rows: records.slice(1) };
+}
+
 async function syncEmailEvents() {
   console.log('\n📅 Task 5: Syncing email events...');
   try {
@@ -578,15 +591,18 @@ async function syncEmailEvents() {
       console.warn(`  Sheet fetch failed: HTTP ${resp.status}`);
       return null;
     }
-    // Parse CSV rows
-    const lines = resp.text.trim().split('\n');
-    if (lines.length <= 1) { console.log('  No events in sheet'); return []; }
-    const headers = lines[0].split(',').map(h => h.trim().replace(/"/g, ''));
+    const { headers, rows } = parseCSV(resp.text);
+    if (rows.length === 0) { console.log('  No events in sheet'); return []; }
     const events = [];
-    for (let i = 1; i < lines.length; i++) {
-      const vals = lines[i].split(',').map(v => v.trim().replace(/^"|"$/g, ''));
+    for (const vals of rows) {
       const row = {};
-      headers.forEach((h, idx) => row[h] = vals[idx] || '');
+      headers.forEach((h, idx) => { row[h] = (vals[idx] || '').trim(); });
+      // Skip rows whose Status is anything other than 'new' / blank.
+      // The Apps Script sets Status='new'; the GH Action below bumps it to
+      // 'added' once it's been picked up. Anything else (skipped, notified,
+      // duplicate, ...) means we explicitly chose not to publish this row.
+      const status = (row.Status || row.status || '').toLowerCase();
+      if (status && status !== 'new' && status !== 'added') continue;
       if (row.Title || row.title || row.Event) {
         events.push({
           title: row.Title || row.title || row.Event || '',
@@ -595,7 +611,7 @@ async function syncEmailEvents() {
           location: row.Location || row.location || '',
           description: row.Description || row.description || '',
           source: 'Community Submitted',
-          href: row.URL || row.url || row.Link || ''
+          href: row.SourceURL || row.URL || row.url || row.Link || ''
         });
       }
     }
