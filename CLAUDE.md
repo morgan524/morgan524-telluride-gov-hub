@@ -216,6 +216,96 @@ does.
   Don't confuse the brieflink-* workers with this project — they belong to
   a separate product (BriefLink legal-citation tooling).
 
+## Email subscriptions / Mailchimp daily digest
+
+**Important architectural fact (easy to misread).** The site has a Mailchimp
+signup form (`js/gov-hub.js` ~line 6357), but **no code anywhere in this
+project sends digest emails**. There is no Firebase function, GH workflow,
+or Cloudflare Worker that emails subscribers. The form is a vanilla
+JSONP-embed signup — it just adds the email + frequency preference to
+Mailchimp's audience and stops there.
+
+Layout of the pieces:
+
+| Component                    | Where it lives                                  | Owner          |
+| ---------------------------- | ----------------------------------------------- | -------------- |
+| Subscribe form (UI)          | `js/gov-hub.js` ~6357                            | This repo      |
+| Mailchimp audience           | `letpeopledecide.us15.list-manage.com`, list `f83dc56387` | Mailchimp UI |
+| Frequency preference         | merge field `MMERGE9` ("daily" / "weekly" / …)  | Mailchimp     |
+| Topics & sources              | interest groups under category `7912`           | Mailchimp     |
+| Source RSS feed for digests  | `https://livabletelluride.org/feed.xml`         | This repo     |
+| Daily-send mechanism         | **Mailchimp "RSS-driven email" campaign**        | **Mailchimp UI — must be configured** |
+
+The `feed.xml` half is automated:
+
+- `scripts/build-rss-feed.js` reads `js/gov-hub.js` (TT articles, KOTO
+  newscasts/features, legal notices) and emits `feed.xml` at the repo root.
+- The content-refresh workflow runs it every 6 hours alongside the news scrape,
+  so the feed is always fresh.
+- 7-day window for news, max 30 items, max 8 legal notices.
+- GUIDs are stable (`href` for news, synthetic title-hash for legal notices),
+  so Mailchimp won't re-send the same item across daily campaigns.
+
+**The other half — actually sending email — is one-time Mailchimp UI work**
+that has to happen INSIDE the Mailchimp account at
+`https://us15.admin.mailchimp.com/`. Steps (do these once; they keep running
+forever):
+
+1. Log in → **Campaigns → Create Campaign → Email → RSS-driven email**.
+2. **RSS feed URL:** `https://livabletelluride.org/feed.xml`.
+3. **Send schedule:** every day, at the time of day you want the digest to
+   land. (Site updates land on the 6h cron, so any time after 12:30 UTC
+   includes everything from the morning's refresh.)
+4. **Audience:** "Livable Telluride" (audience ID `f83dc56387`).
+5. **Segment:** if you want true daily-vs-weekly differentiation, segment by
+   merge field `MMERGE9 == "daily"`, then make a second campaign for
+   `MMERGE9 == "weekly"` with weekly cadence. Otherwise just send to the
+   whole audience and ignore `MMERGE9`.
+6. **Subject line:** Mailchimp lets you template with `*|RSSITEM:TITLE|*` and
+   `*|RSSFEED:DATE|*` — e.g. `Livable Telluride — *|RSSFEED:DATE|*`.
+7. **Confirm sender domain DKIM/SPF** in Mailchimp's domain settings — if
+   livabletelluride.org isn't authenticated, deliveries hit spam.
+8. **Send a test to your own address** before activating to catch any
+   formatting / template issues.
+
+### "I subscribed and got nothing" — debug order
+
+1. **Confirm the user is actually in the Mailchimp audience.** Log into
+   Mailchimp → Audience → search for the email. Status should be
+   `Subscribed` (not `Pending`, not `Cleaned`, not `Unsubscribed`).
+2. **If status is `Pending`**, double opt-in is on (default for Mailchimp).
+   Either ask the user to click the confirmation link in their inbox/spam,
+   or turn off double opt-in in Audience → Settings → Audience name and
+   defaults (only do this if the form privacy policy already covers it).
+3. **Confirm a daily campaign actually exists.** Campaigns tab → look for an
+   active "RSS-driven email" pointing at livabletelluride.org/feed.xml.
+   If there isn't one, that's the bug — set it up per the steps above.
+4. **Check the campaign's recent send log.** If sends are failing, the most
+   common causes are: feed unreachable (rare — see below), authenticated
+   sender domain not set up, or recipient address bouncing.
+5. **Confirm the feed itself is fresh and reachable.**
+   `curl -I https://livabletelluride.org/feed.xml` should return 200 with
+   `Content-Type: application/xml`. If the feed has a stale `lastBuildDate`,
+   investigate the content-refresh workflow (see "Common 'news isn't refreshing'"
+   above — same pipeline).
+6. **Always check spam.** First-send open rates for any new sender domain
+   are bad until DKIM/SPF/DMARC is in place; tell the user to whitelist the
+   sender in Gmail/Outlook.
+
+### Updating what goes into the digest
+
+`scripts/build-rss-feed.js` is the one place to change the digest contents.
+Knobs:
+
+- `MAX_AGE_DAYS = 7` — content older than this is dropped from the feed.
+- `MAX_ITEMS = 30` — feed cap.
+- `MAX_LEGAL_NOTICES = 8` — never let legal notices push out news.
+
+If you want meeting summaries / Hub-Bub posts / housing listings in the
+digest, extend the `main()` builder to read those arrays from `js/gov-hub.js`
+and produce more `buildXItems(...)` flatMaps. The pattern is the same as the
+existing news/legal builders.
+
 ## Known loose ends
 
 - **KOTO featured stories** publish less often than newscasts. If
