@@ -224,7 +224,7 @@ function buildBlogItems(posts) {
     if (!withinWindow(postDate, MAX_AGE_DAYS)) continue;
     const desc = p.excerpt || p.summary || (p.body ? String(p.body).replace(/<[^>]+>/g, '').slice(0, 400) : '');
     items.push({
-      title: `[Blog] ${p.title}`,
+      title: p.title,
       link: p.href || `${SITE_URL}/#blog`,
       pubDate: postDate,
       description: desc,
