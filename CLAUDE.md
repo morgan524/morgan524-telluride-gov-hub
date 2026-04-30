@@ -426,7 +426,7 @@ Walk this in order; each step rules out one stage of the pipeline.
   or the Apps Script half of the pipeline isn't actually deployed in the
   events@ Gmail account. Walk the debug order above to tell which.
 
-### Four gotchas hit during the 2026-04-30 install — read this before debugging
+### Six gotchas hit during the 2026-04-30 install — read this before debugging
 
 These all came up during the events@ deployment that day and are easy to
 fall into again. All have been fixed in the codebase, but the symptoms can
@@ -509,6 +509,26 @@ reverted that parser.
 **Status-column allow-list:** Task 5 only emits rows whose `Status` is
 empty, `new`, or `added`. To suppress a row from going to the live site,
 set Status to anything else (`skipped`, `duplicate`, `notified`, etc.).
+
+**6. Pre-fix `main()` only wrote `community-events.json` when `events.length > 0`.**
+
+Effect: marking every Sheet row as `skipped` (or sending zero events
+through Task 5 for any reason) left the previous JSON in place forever.
+Once a stale event landed in `community-events.json`, you couldn't unstick
+it without manual intervention — the next refresh would skip the write
+because there was nothing to write, and the old contents persisted on the
+live site indefinitely.
+
+Fix: the script now writes `community-events.json` whenever
+`syncEmailEvents()` returned successfully, including the empty-array case.
+It also short-circuits to a no-op when the new JSON is byte-identical to
+the previous content, so we don't churn unnecessary commits.
+
+Symptom of a regression: after the user marks a row `skipped` and triggers
+a refresh, Task 5 logs `Found 0 events from sheet` but the row keeps
+appearing on the Events tab. If `community-events.json` on `origin/main`
+also still has the row even though the Sheet doesn't, someone reverted
+this fix.
 
 ### Operational notes for editing the pipeline
 
