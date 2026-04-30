@@ -426,6 +426,90 @@ Walk this in order; each step rules out one stage of the pipeline.
   or the Apps Script half of the pipeline isn't actually deployed in the
   events@ Gmail account. Walk the debug order above to tell which.
 
+### Four gotchas hit during the 2026-04-30 install — read this before debugging
+
+These all came up during the events@ deployment that day and are easy to
+fall into again. All have been fixed in the codebase, but the symptoms can
+recur if the wrong copy of the script is pasted, the Sheet is recreated
+under a different tab name, or someone reverts a content-refresh fix.
+
+**1. The Apps Script's `SHEET_NAME` is a TAB name, not a file name.**
+
+`SHEET_NAME = 'Event Inbox'` is matched against `getSheetByName()`, which
+returns the sheet *tab* with that exact name. When a user creates a new
+spreadsheet, names the *file* "Event Inbox", and pastes headers into the
+default tab (which is still called `Sheet1`), the script can't find a tab
+called "Event Inbox" — so it *creates a second tab* called "Event Inbox"
+and writes rows there. The user keeps refreshing the `Sheet1` tab and sees
+nothing, while rows pile up in the script-created tab.
+
+Symptom: receipt notification email arrives with a Sheet URL, but when you
+open the Sheet you see no rows.
+
+Fix: at the bottom of the Sheets window, look for the tab bar. Either
+delete the empty `Sheet1` and let the script-created `Event Inbox` tab
+become the only/active tab, or rename `Sheet1` to `Event Inbox` (after
+first deleting the script-created duplicate).
+
+**2. Publishing "Entire Document" as CSV serves only the first/active tab.**
+
+Even after fixing gotcha #1, if the wrong tab is the first one, publish-to-web
+serves the wrong tab. Re-publishing the same Sheet always returns the same
+opaque `pub` URL, so re-publishing won't help unless you also delete the
+unwanted first tab. After deleting, click File → Share → Publish to web →
+**Stop publishing**, then click Publish to web → Publish *again*. Confirm
+the new URL serves the rows you expect (`curl -sL '<url>' | head`).
+
+**3. Drive can quietly accumulate duplicate "Event Inbox" spreadsheets.**
+
+If the Apps Script gets installed in two different spreadsheets (e.g. user
+reinstalled, or duplicated the file in Drive) and `setupTrigger` was run in
+both, Gmail polling runs twice and writes to two different sheets. The
+receipt URLs in the notification emails will start pointing at different
+spreadsheet IDs depending on which copy of the script ran most recently.
+
+Fix: open Drive in the events@ account, search "Event Inbox", trash any
+duplicates, and confirm there is only ONE script project bound to the
+remaining Sheet (Apps Script editor → its left-rail Triggers count should
+be exactly 2: one `processNewEmails` and one `checkAddedEvents`).
+
+**4. The Apps Script's body-cleanup regex used to eat user "Date:" lines.**
+
+The original `parseEventEmail()` did:
+```js
+body = body.replace(/^From:.*$/im, '');
+body = body.replace(/^Date:.*$/im, '');
+body = body.replace(/^Subject:.*$/im, '');
+body = body.replace(/^To:.*$/im, '');
+```
+unconditionally — to clean up forwarded-message headers. But for non-forwarded
+mail, it *also* stripped the user's literal "Date: May 15, 2026" line,
+producing rows with empty Date. Fixed: those replaces now only run when
+`---------- Forwarded message ----------` is actually present in the body.
+
+If you see Date columns coming through empty for non-forwarded events,
+the deployed Apps Script is probably the pre-fix version. Confirm by
+opening Extensions → Apps Script and Cmd-F for "Forwarded message" — the
+fixed version has `if (/^-+\s*Forwarded message\s*-+/im.test(body)) {`.
+
+**5. content-refresh.js Task 5's CSV parser used to split on raw commas.**
+
+Google Sheets exports cells like `"Town Park, Telluride"` and multi-line
+descriptions as RFC 4180-quoted fields with embedded commas / newlines.
+The previous `lines.split('\n')` + `vals.split(',')` parser shifted every
+column right by one whenever a Location had a comma in it, and split a
+multi-line description across multiple rows.
+
+Fixed: there's now a tiny inline RFC-4180 parser (`parseCSV()`) in
+`scripts/content-refresh.js` that handles quoted commas / quoted newlines /
+escaped quotes. If you see column-shift bugs in `community-events.json`
+(time = "Telluride", description = "4:00 PM - 8:00 PM" pattern), someone
+reverted that parser.
+
+**Status-column allow-list:** Task 5 only emits rows whose `Status` is
+empty, `new`, or `added`. To suppress a row from going to the live site,
+set Status to anything else (`skipped`, `duplicate`, `notified`, etc.).
+
 ### Operational notes for editing the pipeline
 
 - **Editing the parser?** Update `email-to-events-appscript.js` here AND
