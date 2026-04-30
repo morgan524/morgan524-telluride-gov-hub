@@ -210,12 +210,19 @@ function parseEventEmail(msg) {
     return null;
   }
 
-  // Clean up forwarded email markers
-  body = body.replace(/^-+\s*Forwarded message\s*-+/im, '');
-  body = body.replace(/^From:.*$/im, '');
-  body = body.replace(/^Date:.*$/im, '');
-  body = body.replace(/^Subject:.*$/im, '');
-  body = body.replace(/^To:.*$/im, '');
+  // Clean up forwarded email markers — but ONLY if the body actually contains
+  // a "---------- Forwarded message ----------" envelope. Otherwise these
+  // regexes silently strip a user's literal "Date: May 15, 2026" line and the
+  // date extractor never sees it.
+  if (/^-+\s*Forwarded message\s*-+/im.test(body)) {
+    body = body.replace(/^-+\s*Forwarded message\s*-+/im, '');
+    // Strip the standard envelope lines that follow the marker (and only
+    // those — applying once so we don't keep eating real fields below).
+    body = body.replace(/^From:.*$/im, '');
+    body = body.replace(/^Date:.*$/im, '');
+    body = body.replace(/^Subject:.*$/im, '');
+    body = body.replace(/^To:.*$/im, '');
+  }
 
   // Extract fields using common patterns
   var title = extractField(body, subject, 'title') || cleanSubject(subject);
