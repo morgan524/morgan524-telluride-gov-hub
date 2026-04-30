@@ -82,7 +82,15 @@ function fetch(url, opts = {}) {
   return new Promise((resolve, reject) => {
     const mod = url.startsWith('https') ? https : http;
     const req = mod.get(url, {
-      headers: { 'User-Agent': 'TellurideGovHub/2.0 (github-actions-bot)', ...opts.headers },
+      headers: {
+        // NOTE: A bot-style UA ('TellurideGovHub/2.0 (github-actions-bot)') gets rate-limited
+        // (HTTP 429) by Telluride Times and challenged (HTTP 403) by Cloudflare on KOTO.
+        // Use a normal Safari UA so the RSS scrapers actually return content.
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15',
+        'Accept': 'application/rss+xml, application/xml, text/xml, text/html, */*',
+        'Accept-Language': 'en-US,en;q=0.9',
+        ...opts.headers
+      },
       timeout: 15000
     }, (res) => {
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
