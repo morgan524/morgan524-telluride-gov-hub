@@ -4165,6 +4165,44 @@ const LIVABLE_BLOG_POSTS = [
   }
 ];
 
+// ══════════════════════════════════════════════════════════════
+// ── Blog Posts ──
+// ══════════════════════════════════════════════════════════════
+// Long-form posts written by Livable Telluride. Each post is rendered
+// on the Blog tab and also flows into the email digest via
+// scripts/build-rss-feed.js. Append new posts at the TOP (newest first).
+//
+// Schema:
+//   {
+//     title:   string,             // displayed as the card heading
+//     date:    "YYYY-MM-DD",       // post publication date (used to sort + age)
+//     author:  string,             // optional, displayed as byline
+//     excerpt: string,             // 1–2 sentence teaser shown on the card
+//                                  //   AND used as the email-digest description
+//     body:    string,             // full post content (HTML allowed; rendered
+//                                  //   on the Blog tab when the user clicks
+//                                  //   "Read more"). NOT included in the digest;
+//                                  //   the email links back to the site.
+//     href:    string,             // canonical link for the post (defaults to
+//                                  //   livabletelluride.org/#blog if omitted)
+//     image:   string,             // optional image URL shown on the card
+//   }
+//
+// Posts older than 7 days are pruned from the email digest but remain on
+// the Blog tab forever.
+
+const BLOG_POSTS = [
+  {
+    title: "Welcome to the Livable Telluride Blog",
+    date: "2026-04-30",
+    author: "Livable Telluride",
+    excerpt: "We're starting a blog to share deeper context on the issues shaping the Telluride region — housing, land use, civic decisions, and what it really takes to keep this place livable.",
+    body: "<p>Welcome! We've launched this blog as a place for longer-form commentary that doesn't fit in our news roundup or meeting summaries.</p><p>You'll see posts here on local housing economics, land-use proposals, civic process, and other topics where we think a closer look helps people make sense of what's happening in the valley. Subscribe to our daily or weekly digest to get new posts in your inbox.</p>",
+    href: "https://livabletelluride.org/#blog",
+    image: "",
+  }
+];
+
 const COMMUNITY_EVENTS = [
   {
     title: "2nd Annual Telluride Rotary Hikeathon",
@@ -8187,3 +8225,75 @@ function showSubmitStatus(msg, type) {
     el.style.color = '#b65f12';
   }
 }
+
+// ══════════════════════════════════════════════════════════════
+// ── Blog Tab Rendering ──
+// ══════════════════════════════════════════════════════════════
+// Reads BLOG_POSTS (defined earlier in this file), renders post cards
+// into #blogPostsContainer with a click-to-expand body. Posts are sorted
+// newest-first by ISO date.
+
+(function renderBlogTab() {
+  function blogEscape(s) {
+    const d = document.createElement('div');
+    d.textContent = String(s == null ? '' : s);
+    return d.innerHTML;
+  }
+
+  function blogFormatDate(s) {
+    if (!s) return '';
+    const d = new Date(s);
+    if (isNaN(d.getTime())) return s;
+    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  }
+
+  window._toggleBlogBody = function(idx) {
+    const body = document.getElementById('blog-body-' + idx);
+    const btn  = document.getElementById('blog-toggle-' + idx);
+    if (!body) return;
+    if (body.style.display === 'none' || !body.style.display) {
+      body.style.display = 'block';
+      if (btn) btn.textContent = '← Show less';
+    } else {
+      body.style.display = 'none';
+      if (btn) btn.textContent = 'Read more →';
+    }
+  };
+
+  function render() {
+    const container = document.getElementById('blogPostsContainer');
+    if (!container) return;
+    const posts = (typeof BLOG_POSTS !== 'undefined' && Array.isArray(BLOG_POSTS)) ? BLOG_POSTS : [];
+    if (!posts.length) {
+      container.innerHTML = '<div style="text-align:center; color:var(--text-muted); padding:60px 20px; font-size:0.92rem;">No blog posts yet — check back soon.</div>';
+      return;
+    }
+    const sorted = [...posts].sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
+    container.innerHTML = sorted.map((p, idx) => {
+      const hasBody = p.body && String(p.body).trim().length > 0;
+      const meta = [
+        p.date ? blogFormatDate(p.date) : '',
+        p.author ? blogEscape(p.author) : ''
+      ].filter(Boolean).join(' • ');
+      return [
+        '<article class="blog-card" style="background:white; border-radius:14px; padding:22px 24px; margin-bottom:16px; box-shadow:0 2px 8px rgba(0,0,0,0.04); border:1px solid rgba(33,68,60,0.08);">',
+        p.image ? '<img src="' + blogEscape(p.image) + '" alt="" style="width:100%; max-height:240px; object-fit:cover; border-radius:10px; margin-bottom:14px;">' : '',
+        '<h3 style="margin:0 0 6px; font-family:var(--font-heading); font-size:1.25rem; color:var(--text-primary);">' + blogEscape(p.title || '(untitled)') + '</h3>',
+        meta ? '<div style="font-size:0.78rem; color:var(--text-muted); margin-bottom:10px;">' + meta + '</div>' : '',
+        p.excerpt ? '<p style="font-size:0.92rem; line-height:1.6; color:var(--text-secondary); margin:0 0 12px;">' + blogEscape(p.excerpt) + '</p>' : '',
+        hasBody
+          ? '<div class="blog-body" id="blog-body-' + idx + '" style="display:none; font-size:0.95rem; line-height:1.65; color:var(--text-primary); margin-top:14px;">' + p.body + '</div>'
+            + '<button id="blog-toggle-' + idx + '" onclick="_toggleBlogBody(' + idx + ')" style="background:none; border:none; color:var(--forest); font-weight:600; cursor:pointer; padding:0; font-size:0.88rem;">Read more →</button>'
+          : '',
+        '</article>'
+      ].join('');
+    }).join('');
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', render);
+  } else {
+    render();
+  }
+})();
+

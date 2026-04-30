@@ -28,16 +28,38 @@ const GOV_HUB_JS = path.join(REPO_ROOT, 'js', 'gov-hub.js');
 const FEED_OUT = path.join(REPO_ROOT, 'feed.xml');
 
 const SITE_URL = 'https://livabletelluride.org';
+const COMMUNITY_EVENTS_JSON = path.join(REPO_ROOT, 'community-events.json');
 const FEED_TITLE = 'Livable Telluride — Daily Digest';
-const FEED_DESC = 'News, meetings, and legal notices for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).';
-const MAX_AGE_DAYS = 7;            // include items from the last 7 days
-const MAX_ITEMS = 30;              // hard cap on feed size
-const MAX_LEGAL_NOTICES = 8;       // never let legal notices crowd out news
+const FEED_DESC = 'News, upcoming meetings, community events, and blog posts for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).';
+const MAX_AGE_DAYS = 7;             // backward window for news + blog
+const MAX_FUTURE_DAYS = 14;         // forward window for meetings (only emit upcoming meetings within 14d)
+const MAX_EVENT_FUTURE_DAYS = 60;   // forward window for events (events starting within 60d)
+const MAX_ITEMS = 40;               // hard cap on feed size
+const MAX_MEETINGS = 10;            // cap upcoming-meeting items per build
+const MAX_EVENTS = 10;              // cap event items per build
+const MAX_BLOG = 8;                 // cap blog items per build
 
 // ──────────────────────────────────────────────────────────────
 // Read js/gov-hub.js and extract the relevant arrays/objects.
 // Reuses the same Function-eval trick as content-refresh.js.
 // ──────────────────────────────────────────────────────────────
+
+function extractJsObject(source, varName) {
+  const startRe = new RegExp(`const\\s+${varName}\\s*=\\s*\\{`);
+  const m = startRe.exec(source);
+  if (!m) return null;
+  let depth = 0, start = m.index + m[0].length - 1;
+  for (let i = start; i < source.length; i++) {
+    if (source[i] === '{') depth++;
+    else if (source[i] === '}') {
+      if (--depth === 0) {
+        try { return new Function(`return (${source.slice(start, i + 1)})`)(); }
+        catch (e) { console.warn(`  parse ${varName}: ${e.message}`); return null; }
+      }
+    }
+  }
+  return null;
+}
 
 function extractJsArray(source, varName) {
   const startRe = new RegExp(`const\\s+${varName}\\s*=\\s*\\[`);
@@ -85,6 +107,29 @@ function withinWindow(d, days) {
   return (Date.now() - d.getTime()) / 86400000 <= days;
 }
 
+// True if d falls in [now - daysBehind, now + daysAhead]. Used for meetings
+// (which want recent past + upcoming) and events (which only want upcoming
+// but with a small grace window for events that started today).
+function withinRollingWindow(d, daysBehind, daysAhead) {
+  if (!d) return false;
+  const deltaMs = d.getTime() - Date.now();
+  return deltaMs >= -daysBehind * 86400000 && deltaMs <= daysAhead * 86400000;
+}
+
+// Map MANUAL_SUMMARIES key prefix → readable source label.
+const MEETING_SOURCE_LABELS = {
+  telluride: 'Town of Telluride',
+  mv: 'Mountain Village',
+  county: 'San Miguel County',
+  smart: 'SMART Transit',
+  school: 'Telluride School District',
+  fire: 'Telluride Fire Protection District',
+  med: 'Telluride Medical Center',
+  norwood: 'Town of Norwood',
+  ophir: 'Town of Ophir',
+  smrha: 'San Miguel Regional Housing Authority',
+};
+
 // Stable per-item GUID. Use href when available; fall back to a hash of
 // title+date so Mailchimp doesn't think the same item is "new" tomorrow.
 function guidFor(item) {
@@ -116,36 +161,76 @@ function buildNewsItems(src, articles, sourceLabel) {
   });
 }
 
-function buildLegalNoticeItems(notices) {
-  if (!Array.isArray(notices)) return [];
-  // We don't have a posted-on date for legal notices, so synthesize a pubDate
-  // a couple of days in the past — enough to land BELOW today's actual news
-  // in the feed sort, but recent enough that Mailchimp considers them "fresh".
-  // Stable GUID derived from title+entity so Mailchimp dedupes correctly.
-  const synthDate = new Date(Date.now() - 2 * 86400000);
-  // Cap legal notices to MAX_LEGAL_NOTICES so they don't fill the whole feed.
-  // Prefer those with the soonest deadline / earliest expiry first.
-  const ranked = notices
-    .filter((n) => n.title)
-    .filter((n) => {
-      if (!n.expires) return true;
-      const exp = parseDate(n.expires);
-      return !(exp && exp.getTime() < Date.now()); // drop already-expired
-    })
-    .sort((a, b) => {
-      const ax = parseDate(a.expires) || new Date(8e15);
-      const bx = parseDate(b.expires) || new Date(8e15);
-      return ax - bx;
-    })
-    .slice(0, MAX_LEGAL_NOTICES);
-  return ranked.map((n) => ({
-    title: `[Legal Notice] ${n.title}`,
-    link: `${SITE_URL}/#legals`,
-    pubDate: synthDate,
-    description: n.summary || `${n.entity || ''} — ${n.deadline || ''}`,
-    categories: ['Legal Notice', n.type, n.entity].filter(Boolean),
-    guid: `${SITE_URL}/legal-notice/${encodeURIComponent((n.title + '|' + (n.entity||'')).slice(0, 100))}`,
-  }));
+function buildMeetingItems(summaries) {
+  if (!summaries || typeof summaries !== 'object') return [];
+  const items = [];
+  for (const [key, summary] of Object.entries(summaries)) {
+    if (!key || typeof key !== 'string') continue;
+    const parts = key.split('|');
+    if (parts.length < 3) continue;
+    const [source, dateStr, ...titleParts] = parts;
+    const title = titleParts.join('|');
+    const meetingDate = parseDate(dateStr);
+    if (!withinRollingWindow(meetingDate, 7, MAX_FUTURE_DAYS)) continue;
+    const sourceLabel = MEETING_SOURCE_LABELS[source] || source;
+    items.push({
+      title: `[Meeting] ${title} — ${dateStr}`,
+      link: `${SITE_URL}/#meetings`,
+      pubDate: meetingDate,
+      description: `${sourceLabel} • ${dateStr}\n\n${summary || '(see meeting page for details)'}`,
+      categories: ['Meeting', sourceLabel].filter(Boolean),
+      guid: `${SITE_URL}/meeting/${encodeURIComponent(`${source}|${dateStr}|${title.slice(0, 80)}`)}`,
+    });
+  }
+  // Earliest upcoming first
+  items.sort((a, b) => a.pubDate - b.pubDate);
+  return items.slice(0, MAX_MEETINGS);
+}
+
+function buildEventItems(...sources) {
+  const events = sources.flatMap((s) => Array.isArray(s) ? s : []);
+  const items = [];
+  for (const e of events) {
+    if (!e || !e.title) continue;
+    const eventDate = parseDate(e.date || e.startDate || e.Date);
+    if (!withinRollingWindow(eventDate, 1, MAX_EVENT_FUTURE_DAYS)) continue;
+    const desc = [
+      e.location ? `📍 ${e.location}` : null,
+      e.eventTimes || e.time ? `🕒 ${e.eventTimes || e.time}` : null,
+      e.copy || e.description || '',
+    ].filter(Boolean).join('\n');
+    items.push({
+      title: `[Event] ${e.title} — ${e.date || ''}`,
+      link: e.href || `${SITE_URL}/#events`,
+      pubDate: eventDate,
+      description: desc,
+      categories: ['Community Event', e.source].filter(Boolean),
+      guid: `${SITE_URL}/event/${encodeURIComponent(`${e.title.slice(0, 80)}|${e.date || ''}`)}`,
+    });
+  }
+  items.sort((a, b) => a.pubDate - b.pubDate);
+  return items.slice(0, MAX_EVENTS);
+}
+
+function buildBlogItems(posts) {
+  if (!Array.isArray(posts)) return [];
+  const items = [];
+  for (const p of posts) {
+    if (!p || !p.title) continue;
+    const postDate = parseDate(p.date);
+    if (!withinWindow(postDate, MAX_AGE_DAYS)) continue;
+    const desc = p.excerpt || p.summary || (p.body ? String(p.body).replace(/<[^>]+>/g, '').slice(0, 400) : '');
+    items.push({
+      title: `[Blog] ${p.title}`,
+      link: p.href || `${SITE_URL}/#blog`,
+      pubDate: postDate,
+      description: desc,
+      categories: ['Blog', p.author].filter(Boolean),
+      guid: p.href || `${SITE_URL}/blog/${encodeURIComponent(p.title.slice(0, 80) + '|' + (p.date || ''))}`,
+    });
+  }
+  items.sort((a, b) => b.pubDate - a.pubDate);
+  return items.slice(0, MAX_BLOG);
 }
 
 // ──────────────────────────────────────────────────────────────
@@ -162,15 +247,30 @@ function main() {
   const tt = extractJsArray(src, 'TELLURIDE_TIMES_ARTICLES') || [];
   const koNews = extractJsArray(src, 'KOTO_NEWSCASTS') || [];
   const koFeat = extractJsArray(src, 'KOTO_FEATURED_STORIES') || [];
-  const legal = extractJsArray(src, 'LEGAL_NOTICES') || [];
+  const summaries = extractJsObject(src, 'MANUAL_SUMMARIES') || {};
+  const events = extractJsArray(src, 'COMMUNITY_EVENTS') || [];
+  const blogPosts = extractJsArray(src, 'BLOG_POSTS') || [];
 
-  console.log(`  Loaded: ${tt.length} TT/gov articles, ${koNews.length} KOTO newscasts, ${koFeat.length} KOTO features, ${legal.length} legal notices`);
+  // community-events.json holds events submitted via email-to-events pipeline
+  let jsonEvents = [];
+  try {
+    if (fs.existsSync(COMMUNITY_EVENTS_JSON)) {
+      jsonEvents = JSON.parse(fs.readFileSync(COMMUNITY_EVENTS_JSON, 'utf8')) || [];
+      if (!Array.isArray(jsonEvents)) jsonEvents = [];
+    }
+  } catch (e) {
+    console.warn(`  community-events.json parse error: ${e.message}`);
+  }
+
+  console.log(`  Loaded: ${tt.length} TT/gov articles, ${koNews.length} KOTO newscasts, ${koFeat.length} KOTO features, ${Object.keys(summaries).length} meeting summaries, ${events.length + jsonEvents.length} events, ${blogPosts.length} blog posts`);
 
   let items = [
     ...buildNewsItems('tt', tt, 'Telluride Times'),
     ...buildNewsItems('koto-newscasts', koNews, 'KOTO Community Radio'),
     ...buildNewsItems('koto-features', koFeat, 'KOTO Community Radio'),
-    ...buildLegalNoticeItems(legal),
+    ...buildMeetingItems(summaries),
+    ...buildEventItems(events, jsonEvents),
+    ...buildBlogItems(blogPosts),
   ];
 
   // De-duplicate by guid, keep newest pubDate, sort newest first, cap.
@@ -184,7 +284,7 @@ function main() {
     .sort((a, b) => b.pubDate - a.pubDate)
     .slice(0, MAX_ITEMS);
 
-  console.log(`  Emitting ${items.length} items (window: ${MAX_AGE_DAYS} days, max: ${MAX_ITEMS})`);
+  console.log(`  Emitting ${items.length} items (max: ${MAX_ITEMS})`);
 
   const lastBuild = new Date();
   const itemsXml = items.map((it) => {
