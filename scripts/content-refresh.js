@@ -399,7 +399,10 @@ async function refreshNews() {
   for (const feed of NEWS_FEEDS) {
     try {
       const resp = await fetch(feed.url);
-      if (resp.status !== 200) continue;
+      if (resp.status !== 200) {
+        console.warn(`  [feed] ${feed.source} (${feed.category}) HTTP ${resp.status} from ${feed.url}`);
+        continue;
+      }
       const xml = await parseXml(resp.text);
       const items = xml?.rss?.channel?.item;
       const arr = Array.isArray(items) ? items : (items ? [items] : []);
@@ -424,6 +427,7 @@ async function refreshNews() {
   // Telluride Times RSS
   try {
     const resp = await fetch(TELLURIDE_TIMES_RSS);
+    console.log(`  [feed] Telluride Times HTTP ${resp.status} bytes=${(resp.text||'').length}`);
     if (resp.status === 200) {
       const xml = await parseXml(resp.text);
       const items = xml?.rss?.channel?.item;
@@ -450,6 +454,7 @@ async function refreshNews() {
   const kotoFeatured = [];
   try {
     const resp = await fetch(KOTO_RSS);
+    console.log(`  [feed] KOTO HTTP ${resp.status} bytes=${(resp.text||'').length}`);
     if (resp.status === 200) {
       const xml = await parseXml(resp.text);
       const items = xml?.rss?.channel?.item;
