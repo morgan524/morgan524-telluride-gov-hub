@@ -4195,36 +4195,12 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/f7/2f74685d-961a-4ce8-b3b9-951ebe18cb22/69e68d6fd33e0.image.jpg?resize=300%2C196"
   },
   {
-    title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
-    source: "Town of Telluride",
-    date: "April 24, 2026",
-    newsTopic: "infrastructure",
-    copy: "(April 5, 2026) – The Town will implement an updated schedule for the Galloping Goose bus loop during shoulder seasons, transitioning to a single-bus service operating on a 30-minute loop.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=389"
-  },
-  {
-    title: "Certified Candidates Announced for Telluride Town Council Election",
-    source: "Town of Telluride",
-    date: "April 21, 2026",
-    newsTopic: "government",
-    copy: "(April 21, 2026) – The Town of Telluride will hold a Special Municipal Election on Tuesday, June 30, coordinated with San Miguel County for the Primary Election. The Clerk's Department has certified three candidates eligible to run for elected office.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=390"
-  },
-  {
     title: "New Motor Vehicle Office Availability in Egnar! May 13 at 9 am - 3 pm",
     source: "San Miguel County",
     date: "April 20, 2026",
     newsTopic: "land-use",
     copy: "The new Motor Vehicle office will be available in Egnar on May 13 from 9 am - 3 pm in the same building as the fire department (5634 County Rd H1). We hope to serve many community members in this area, eliminating the drive to Norwood or Telluride.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=516"
-  },
-  {
-    title: "Spring Off-Season Schedule",
-    source: "Town of Telluride",
-    date: "April 24, 2026",
-    newsTopic: "community",
-    copy: "Spring Off-Season Schedule in effect April 6 – May 22, 2026. Service frequency reduced. Check individual route schedules below.",
-    href: "https://www.telluride.gov/AlertCenter.aspx?AID=64"
   }
 ];
 
