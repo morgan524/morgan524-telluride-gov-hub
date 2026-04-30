@@ -35,6 +35,11 @@ jobs:
           node scripts/content-refresh.js
         continue-on-error: true
 
+      - name: Build RSS feed (feed.xml) for Mailchimp
+        run: |
+          node scripts/build-rss-feed.js
+        continue-on-error: true
+
       - name: Check for changes
         id: changes
         run: |
