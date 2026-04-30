@@ -72,23 +72,51 @@ const NEWS_FEEDS = [
 
 // ── Telluride Times scrape config ──
 const TELLURIDE_TIMES_RSS = 'https://www.telluridenews.com/search/?f=rss&t=article&c=news,news/*&l=25&s=start_time&sd=desc';
-const KOTO_RSS = 'https://koto.org/feed/';
+const KOTO_NEWSCASTS_RSS = 'https://koto.org/news-category/newscasts/feed/';
+const KOTO_FEATURED_RSS = 'https://koto.org/news-category/featured-stories/feed/';
 
 // ══════════════════════════════════════════════════════════════
 // ── HTTP Helpers ──
 // ══════════════════════════════════════════════════════════════
 
+// Hosts that are blocked or rate-limited from GitHub Actions runner IPs.
+// We route those through our Cloudflare Worker proxy (livabletelluride-rss-proxy)
+// which fetches from CF's edge and is treated as legitimate residential traffic.
+const PROXY_HOSTS = new Set([
+  'telluridenews.com', 'www.telluridenews.com',
+  'koto.org', 'www.koto.org',
+  'telluride-co.gov', 'www.telluride-co.gov',
+  'sanmiguelcountyco.gov', 'www.sanmiguelcountyco.gov',
+  'telluride-co.civicweb.net',
+  'townofmountainvillage.com', 'www.townofmountainvillage.com',
+  'smarttelluride.colorado.gov',
+  'www.tellurideschool.org', 'tellurideschool.org',
+]);
+const RSS_PROXY_URL = (process.env.RSS_PROXY_URL || '').replace(/\/+$/,'');
+const RSS_PROXY_KEY = process.env.RSS_PROXY_KEY || '';
+
+function maybeProxy(url) {
+  if (!RSS_PROXY_URL) return { url, headers: {} };
+  let host;
+  try { host = new URL(url).hostname.toLowerCase(); } catch { return { url, headers: {} }; }
+  if (!PROXY_HOSTS.has(host)) return { url, headers: {} };
+  const proxied = `${RSS_PROXY_URL}/proxy?url=${encodeURIComponent(url)}`;
+  return { url: proxied, headers: RSS_PROXY_KEY ? { 'X-Proxy-Key': RSS_PROXY_KEY } : {} };
+}
+
 function fetch(url, opts = {}) {
+  const { url: realUrl, headers: proxyHeaders } = maybeProxy(url);
   return new Promise((resolve, reject) => {
-    const mod = url.startsWith('https') ? https : http;
-    const req = mod.get(url, {
+    const mod = realUrl.startsWith('https') ? https : http;
+    const req = mod.get(realUrl, {
       headers: {
-        // NOTE: A bot-style UA ('TellurideGovHub/2.0 (github-actions-bot)') gets rate-limited
-        // (HTTP 429) by Telluride Times and challenged (HTTP 403) by Cloudflare on KOTO.
-        // Use a normal Safari UA so the RSS scrapers actually return content.
+        // NOTE: a bot-style UA gets rate-limited / Cloudflare-challenged.
+        // We send a normal Safari UA AND, for blocked hosts, route through
+        // a Cloudflare Worker proxy (see RSS_PROXY_URL above).
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15',
         'Accept': 'application/rss+xml, application/xml, text/xml, text/html, */*',
         'Accept-Language': 'en-US,en;q=0.9',
+        ...proxyHeaders,
         ...opts.headers
       },
       timeout: 15000
@@ -449,13 +477,17 @@ async function refreshNews() {
     }
   } catch (e) { console.warn(`  Telluride Times RSS error: ${e.message}`); }
 
-  // KOTO RSS
+  // KOTO RSS — split feeds for newscasts vs featured stories
   const kotoNewscasts = [];
   const kotoFeatured = [];
-  try {
-    const resp = await fetch(KOTO_RSS);
-    console.log(`  [feed] KOTO HTTP ${resp.status} bytes=${(resp.text||'').length}`);
-    if (resp.status === 200) {
+  for (const [feedUrl, bucket, label] of [
+    [KOTO_NEWSCASTS_RSS, kotoNewscasts, 'KOTO newscasts'],
+    [KOTO_FEATURED_RSS, kotoFeatured, 'KOTO featured'],
+  ]) {
+    try {
+      const resp = await fetch(feedUrl);
+      console.log(`  [feed] ${label} HTTP ${resp.status} bytes=${(resp.text||'').length}`);
+      if (resp.status !== 200) continue;
       const xml = await parseXml(resp.text);
       const items = xml?.rss?.channel?.item;
       const arr = Array.isArray(items) ? items : (items ? [items] : []);
@@ -463,21 +495,19 @@ async function refreshNews() {
         const pubDate = new Date(item.pubDate || '');
         if (pubDate < cutoff) continue;
         const title = (item.title || '').trim();
-        const entry = {
+        // The category archive feed sometimes includes the archive page itself
+        // as the first <item>; skip non-permalink entries.
+        if (/Archives?/i.test(title)) continue;
+        bucket.push({
           title,
           source: 'KOTO Community Radio',
           date: formatDate(pubDate),
           newsTopic: classifyNewsTopic(title, item.description || ''),
           href: (item.link || '').trim()
-        };
-        if (/newscast/i.test(title)) {
-          kotoNewscasts.push(entry);
-        } else {
-          kotoFeatured.push(entry);
-        }
+        });
       }
-    }
-  } catch (e) { console.warn(`  KOTO RSS error: ${e.message}`); }
+    } catch (e) { console.warn(`  ${label} RSS error: ${e.message}`); }
+  }
 
   // Deduplicate by href
   const seen = new Set();
