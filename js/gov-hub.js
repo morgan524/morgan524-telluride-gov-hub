@@ -3970,6 +3970,14 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-20  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "County Planning Commission 5/14 Meeting in TELLURIDE",
+    source: "San Miguel County",
+    date: "April 30, 2026",
+    newsTopic: "land-use",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1393"
+  },
+  {
     title: "New Motor Vehicle Office Availability in Egnar! May 13 at 9 am - 3 pm",
     source: "San Miguel County",
     date: "April 20, 2026",
