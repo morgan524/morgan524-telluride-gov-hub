@@ -30,6 +30,7 @@ jobs:
         id: refresh
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RSS_PROXY_URL: ${{ secrets.RSS_PROXY_URL }}
         run: |
           node scripts/content-refresh.js
         continue-on-error: true
