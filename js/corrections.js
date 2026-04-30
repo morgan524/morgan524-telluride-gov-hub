@@ -22,7 +22,7 @@
   // ── Trusted domains for automatic verification ──
   const TRUSTED_DOMAINS = [
     // Government
-    'telluride-co.gov', 'sanmiguelcountyco.gov', 'townofmountainvillage.com',
+    'telluride.gov', 'sanmiguelcountyco.gov', 'townofmountainvillage.com',
     'colorado.gov', 'state.co.us',
     // News
     'telluridenews.com', 'norwoodnews.com', 'telluridedaily.com',

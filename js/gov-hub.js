@@ -6594,7 +6594,7 @@ const HOUSING_LISTINGS = [
     beds: '1–3 Bedroom',
     price: 'Income-based (deed-restricted)',
     source: 'Town of Telluride',
-    contact: { phone: '(970) 728-4025', email: 'housing@telluride-co.gov' },
+    contact: { phone: '(970) 728-4025', email: 'housing@telluride.gov' },
     url: 'https://telluride.gov/745/Town-Owned-Rental-Properties',
     note: 'Waitlist-based. Town employee priority. NEW FOR 2026: Temporary reduced work-hour requirement (1,200 hrs/yr, down from 1,400) for leases executed in 2026. Minor income exclusion also now in effect. Apply through the Town of Telluride.'
   },
@@ -6607,7 +6607,7 @@ const HOUSING_LISTINGS = [
     beds: 'Studio–2 Bedroom',
     price: 'Income-based (deed-restricted)',
     source: 'Town of Telluride',
-    contact: { phone: '(970) 728-4025', email: 'housing@telluride-co.gov' },
+    contact: { phone: '(970) 728-4025', email: 'housing@telluride.gov' },
     url: 'https://telluride.gov/745/Town-Owned-Rental-Properties',
     note: 'Waitlist-based. NEW FOR 2026: Temporary reduced work-hour requirement (1,200 hrs/yr, down from 1,400) for leases executed in 2026. Minor income exclusion also now in effect. Apply through the Town of Telluride Rental Housing division.'
   },
