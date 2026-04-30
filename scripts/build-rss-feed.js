@@ -289,16 +289,21 @@ function main() {
 
   console.log(`  Emitting ${items.length} items to feed.xml (max: ${MAX_ITEMS})`);
 
-  // ── Build separate blog-only feed (used by the all-audience blog campaign) ──
-  let blogItems = buildBlogItems(blogPosts);
-  // Sort newest first, in case multiple posts get pushed in a single edit.
-  blogItems = blogItems
-    .filter((it) => it.pubDate instanceof Date && !isNaN(it.pubDate.getTime()))
-    .sort((a, b) => b.pubDate - a.pubDate);
-  console.log(`  Emitting ${blogItems.length} items to feed-blog.xml`);
+  // ── feed-blog.xml RETIRED 2026-04-30 ──
+  // Blog posts are now sent as regular Mailchimp campaigns (the user authors
+  // them in the Mailchimp UI, sends them to the audience directly, and
+  // content-refresh.js Task 6 syncs the campaign archive feed back into
+  // BLOG_POSTS so they appear on the website's Blog tab). The separate
+  // RSS-driven Blog Blast campaign is no longer needed, so we no longer
+  // emit feed-blog.xml. Keeping buildBlogItems in case we want to re-enable.
+  // To re-enable: uncomment the writeRssFeed() call below.
+  //
+  //   let blogItems = buildBlogItems(blogPosts)
+  //     .filter((it) => it.pubDate instanceof Date && !isNaN(it.pubDate.getTime()))
+  //     .sort((a, b) => b.pubDate - a.pubDate);
+  //   writeRssFeed(BLOG_FEED_OUT, BLOG_FEED_TITLE, BLOG_FEED_DESC, `${SITE_URL}/feed-blog.xml`, blogItems);
 
   writeRssFeed(FEED_OUT, FEED_TITLE, FEED_DESC, `${SITE_URL}/feed.xml`, items);
-  writeRssFeed(BLOG_FEED_OUT, BLOG_FEED_TITLE, BLOG_FEED_DESC, `${SITE_URL}/feed-blog.xml`, blogItems);
 }
 
 function writeRssFeed(outPath, title, desc, selfUrl, items) {

@@ -778,6 +778,142 @@ function replaceConstString(source, varName, newValue) {
 // ── Main ──
 // ══════════════════════════════════════════════════════════════
 
+// ══════════════════════════════════════════════════════════════
+// ── Task 6: Mailchimp Blog Sync ──
+// ══════════════════════════════════════════════════════════════
+// Pulls the audience archive RSS feed (every campaign sent to the
+// Livable Telluride audience) and merges any campaigns we haven't
+// already captured into the BLOG_POSTS array. Hand-curated entries
+// (source: 'livable-telluride.org') are NEVER touched — only entries
+// with source: 'mailchimp' are managed by this sync.
+
+const MAILCHIMP_ARCHIVE_FEED =
+  'https://us15.campaign-archive.com/feed?u=5d9192289b9af78822f2f69bf&id=f83dc56387';
+
+// Strip HTML tags and collapse whitespace for excerpt extraction.
+function htmlToText(s) {
+  return String(s || '')
+    .replace(/<style[\s\S]*?<\/style>/gi, '')
+    .replace(/<script[\s\S]*?<\/script>/gi, '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+// Pull the first reasonable image URL out of the campaign HTML.
+function firstImageFromHtml(html) {
+  if (!html) return '';
+  // Look for <img ... src="..."> — Mailchimp emails are heavy on tracking
+  // pixels and email-client compat images, so we filter out 1x1 / sprite /
+  // common boilerplate images.
+  const re = /<img[^>]+src\s*=\s*["']([^"']+)["'][^>]*>/gi;
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    const url = m[1];
+    if (!url) continue;
+    if (/(spacer|tracking|pixel|1x1|open\.gif|empty\.gif|transparent)/i.test(url)) continue;
+    if (url.startsWith('data:')) continue;
+    return url;
+  }
+  return '';
+}
+
+async function syncMailchimpBlog(existingPosts) {
+  console.log('\n📰 Task 6: Syncing Mailchimp blog archive...');
+  let resp;
+  try {
+    resp = await fetch(MAILCHIMP_ARCHIVE_FEED);
+  } catch (e) {
+    console.warn(`  Fetch error: ${e.message}`);
+    return null;
+  }
+  if (!resp || resp.status !== 200) {
+    console.warn(`  Archive feed HTTP ${resp ? resp.status : 'no response'}`);
+    return null;
+  }
+
+  let parsed;
+  try {
+    parsed = await parseXml(resp.text);
+  } catch (e) {
+    console.warn(`  XML parse error: ${e.message}`);
+    return null;
+  }
+  const items = parsed?.rss?.channel?.item;
+  const arr = Array.isArray(items) ? items : (items ? [items] : []);
+  console.log(`  Archive feed returned ${arr.length} campaigns`);
+
+  if (!arr.length) return existingPosts;
+
+  // Index existing posts by href AND by normalized title, so we don't
+  // duplicate a Mailchimp campaign whose content was already hand-curated
+  // as a livabletelluride.org post (same title, different URL).
+  const normTitle = (s) => String(s || '')
+    .toLowerCase()
+    .replace(/[\u201C\u201D\u2018\u2019]/g, '')   // smart quotes
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+  const existingByHref = new Map();
+  const existingByTitle = new Map();
+  for (const p of existingPosts) {
+    if (p && p.href) existingByHref.set(p.href, p);
+    if (p && p.title) existingByTitle.set(normTitle(p.title), p);
+  }
+
+  // Build entries for any campaign we haven't seen.
+  const newEntries = [];
+  for (const item of arr) {
+    const href = item.link || '';
+    if (!href) continue;
+    if (existingByHref.has(href)) continue;
+    const title = (item.title || '').trim();
+    if (!title) continue;
+    if (existingByTitle.has(normTitle(title))) {
+      console.log(`  Skipping duplicate-by-title: ${title}`);
+      continue;
+    }
+    // Skip campaigns whose title is flagged private (convention for one-offs
+    // that should NOT appear on the public blog).
+    if (/\[(private|skip|internal|test)\]/i.test(title)) {
+      console.log(`  Skipping private campaign: ${title}`);
+      continue;
+    }
+    const desc = item.description || '';
+    const text = htmlToText(desc).slice(0, 400);
+    const image = firstImageFromHtml(desc);
+    let dateStr = item.pubDate || '';
+    // Normalize to a friendly format consistent with the migrated posts.
+    const d = new Date(dateStr);
+    if (!isNaN(d.getTime())) {
+      dateStr = d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+    }
+    newEntries.push({
+      title,
+      date: dateStr,
+      href,
+      image: image || '',
+      excerpt: text,
+      category: 'Newsletter',
+      source: 'mailchimp',
+    });
+    console.log(`  + New campaign: ${title}`);
+  }
+
+  if (!newEntries.length) {
+    console.log('  No new Mailchimp campaigns to add');
+    return existingPosts;
+  }
+
+  // Prepend new entries (newest from feed first), preserving existing posts.
+  return [...newEntries, ...existingPosts];
+}
+
 async function main() {
   console.log('═══════════════════════════════════════════════');
   console.log('  Telluride Gov Hub — Content Refresh');
@@ -847,6 +983,14 @@ async function main() {
     } else {
       console.log(`  community-events.json unchanged (${events.length} events)`);
     }
+  }
+
+  // ── 6. Mailchimp Blog Sync ──
+  const existingBlogPosts = extractJsArray(govHubSrc, 'BLOG_POSTS') || [];
+  const updatedBlogPosts = await syncMailchimpBlog(existingBlogPosts);
+  if (updatedBlogPosts && updatedBlogPosts.length !== existingBlogPosts.length) {
+    govHubSrc = replaceJsValue(govHubSrc, 'BLOG_POSTS', updatedBlogPosts, false);
+    changed = true;
   }
 
   // ── Write files ──

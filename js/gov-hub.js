@@ -3970,6 +3970,231 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-20  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Trump gives go-ahead to major new Canada-US oil pipeline",
+    source: "Telluride Times",
+    date: "April 30, 2026",
+    newsTopic: "infrastructure",
+    copy: "President Donald Trump has granted a key approval to a major new pipeline that would move oil from Canada into the central U.S. The three-foot-wide Bridger Pipeline Expansion would carry up to 550,000 barrels of oil a day from the…",
+    href: "https://www.telluridenews.com/news/state/article_93f080bd-3bff-5091-afc4-5a9ddae33488.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c9/ec9912c8-b253-5755-acce-42c147636686/69f3c91b34529.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "Telski update to council: bike park’s future uncertain",
+    source: "Telluride Times",
+    date: "April 30, 2026",
+    newsTopic: "government",
+    copy: "Telluride Ski Resort (Telski) representative Steve Swenson came before Telluride Town Council at its Tuesday, April 28, meeting to offer a semi-regular update at council’s request.",
+    href: "https://www.telluridenews.com/news/article_8e8c2d7e-8aed-42dd-83b6-036f40b6fb54.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/e5/ee56772c-7de4-4126-8ef7-d8bc4dfd4025/69f3c904ec009.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "Telluride’s ‘I voted/yo voté’ sticker contest winners",
+    source: "Telluride Times",
+    date: "April 30, 2026",
+    newsTopic: "government",
+    copy: "Earlier this year, Telluride and Norwood students participated in a sticker contest, with 18 creative kiddos taking part. The brief, set by the San Miguel County Clerk’s Office, was to devise a design that could be used as the artwork…",
+    href: "https://www.telluridenews.com/news/article_3022309d-c7c1-4717-85d3-41ac89e3f795.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/9d/79d165ca-16ce-40fa-a9ac-77113d7839c8/69f1660ad0191.image.png?resize=300%2C389"
+  },
+  {
+    title: "Lindsey Vonn tells the AP she is not yet in position emotionally to decide if she will race again",
+    source: "Telluride Times",
+    date: "April 30, 2026",
+    newsTopic: "public-safety",
+    copy: "Lindsey Vonn is still recovering physically and emotionally from her frightening crash at the Winter Olympics. She has undergone eight surgeries after suffering a complex left leg fracture — one that nearly led to amputation — in the women’s downhill…",
+    href: "https://www.telluridenews.com/news/state/article_8e0ab335-1e12-5377-af15-ff97d158dede.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/c6/3c6899e9-4691-5fd5-be26-4d01403e1ebf/69f3542094bae.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "Here's how to grow your own food with less water, even in a drought",
+    source: "Telluride Times",
+    date: "April 30, 2026",
+    newsTopic: "infrastructure",
+    copy: "After one of the worst snow years on record in the western United States, communities must live with less water. Around this time of year, home gardeners are starting to grow their own produce as utilities enact outdoor watering restrictions.…",
+    href: "https://www.telluridenews.com/news/state/article_62ad4304-c441-5377-acde-86dcbdde9312.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/d2/ed2b9a2e-dea0-5f0d-9b8e-8a1e2e924534/69f3541bd0685.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "Legals and Public Notices for April 30-May 6, 2026",
+    source: "Telluride Times",
+    date: "April 30, 2026",
+    newsTopic: "infrastructure",
+    copy: "SMC BOCC OWTS Variance Application for Slator Aplin, the owner of Lot 1 & 2, Blk Q in Ophir. The applicant seeks a Variance to the Minimum Setbacks as stated in Table 7-1 of the San Miguel County On-Site Wastewater…",
+    href: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
+    img: ""
+  },
+  {
+    title: "West End drought survival",
+    source: "Telluride Times",
+    date: "April 29, 2026",
+    newsTopic: "community",
+    copy: "The Colorado State University (CSU) Extension program has served home gardeners for more than a century across a network of county offices, 4-H clubs and local Master Gardeners.",
+    href: "https://www.telluridenews.com/news/article_a778a9e9-c819-4849-9e80-fad649fa33c6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/4b/34b91d82-6339-4684-9229-8250f4823b6c/69f1697616de8.image.jpg?resize=300%2C182"
+  },
+  {
+    title: "Far from the original in Philadelphia, these fans hunt for the Liberty Bell replica in each state",
+    source: "Telluride Times",
+    date: "April 29, 2026",
+    newsTopic: "government",
+    copy: "If you can't visit the original Liberty Bell in Philadelphia, you might find a dead ringer nearby. For a 1950 bond drive, the Treasury Department commissioned replicas for each U.S. state and several territories. These replicas have become a fascination…",
+    href: "https://www.telluridenews.com/news/state/article_6c4b6e25-2cb9-51b8-b812-1143e07369b9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/7e/37efb440-e66f-5d94-a2bc-43449e73e748/69f1e9285fdc5.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "‘We’ve legislated our way into housing insecurity’",
+    source: "Telluride Times",
+    date: "April 28, 2026",
+    newsTopic: "housing",
+    copy: "Editor's note: After The Telluride Times published this story in print and online, the Town of Telluride responded to an earlier request from The Times for updated vacancy information. The updated numbers, current as of April 27, indicate that there…",
+    href: "https://www.telluridenews.com/news/article_fc7e07da-d18b-4b4e-8371-ae908bc5f813.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/5a/25abcf8b-8de8-41c9-8d2d-5da48a05d4a5/69f10d434c461.image.jpg?resize=300%2C400"
+  },
+  {
+    title: "Telluride Times staff win seven awards at Top of the Rockies",
+    source: "Telluride Times",
+    date: "April 28, 2026",
+    newsTopic: "community",
+    copy: "The Telluride Times, under its former name, the Telluride Daily Planet, won seven awards at the Society of Professional Journalists’ 2026 Top of the Rockies Excellence in Journalism competition.",
+    href: "https://www.telluridenews.com/news/article_aa173851-b6c9-49cc-ab64-d2e92b45ddb4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/96/796a7f6b-d98a-44c8-b1cf-48fc5b8ff1fe/69efd2c95a1fa.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "Girls’ Lax poised for final title push",
+    source: "Telluride Times",
+    date: "April 27, 2026",
+    newsTopic: "education",
+    copy: "Whether the Telluride High School girls’ lacrosse players like it or not, final exams will be here before they know it.",
+    href: "https://www.telluridenews.com/news/article_d99c2f0a-ffc0-4d79-aee1-fa0042d83a5e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/51/f51b09a3-51ab-4ae2-9366-80f32d7f6b90/69efcf9a79ae9.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "Mountain Village approves emergency ordinance for water use",
+    source: "Telluride Times",
+    date: "April 26, 2026",
+    newsTopic: "government",
+    copy: "As spring remains dry, the Town of Mountain Village decided to implement more water regulations. Both the towns of Telluride and Mountain Village previously imposed outdoor water restrictions due to exceptionally low snowpack and ongoing drought. The decision is aimed…",
+    href: "https://www.telluridenews.com/news/article_176574ee-5386-4f7a-bb01-f660d0e0e751.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/f4/7f4a4336-692d-4b29-951f-d2bd922f4fe9/69ed120c7443d.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "MV town council briefed about investigation of former mayor",
+    source: "Telluride Times",
+    date: "April 25, 2026",
+    newsTopic: "government",
+    copy: "At its Thursday, April 23, monthly meeting, Mountain Village Town Council received a behind-closed-doors briefing lasting over two hours on the subject of the investigation surrounding former Mayor Marti Prohaska’s December meeting with Telluride Ski Resort owner Chuck Horning and…",
+    href: "https://www.telluridenews.com/news/article_cf8a6058-6209-4936-a446-44c2f15a13af.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/28/5288590f-2f6c-40a9-9d32-31b6f7ff8f5e/69ed071dd778e.image.jpg?resize=300%2C182"
+  },
+  {
+    title: "Former Colorado funeral home owner sentenced to 30 years in case that forced industry crackdown",
+    source: "Telluride Times",
+    date: "April 25, 2026",
+    newsTopic: "community",
+    copy: "A former Colorado funeral home owner who helped her ex-husband hide nearly 200 decomposing bodies has been sentenced to 30 years in prison. The case prompted state officials to clamp down on an industry plagued by repeated scandal and notoriously…",
+    href: "https://www.telluridenews.com/news/state/article_3b8df69a-cf09-5380-b5aa-6bd41a218089.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/d4/fd440f91-55ae-5ccf-9ae1-e3503e0b0d7f/69eaef1b5239b.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "A weekend of mushroom love",
+    source: "Telluride Times",
+    date: "April 25, 2026",
+    newsTopic: "arts-culture",
+    copy: "Came for the spores, came back for the rad community connection: More than just a fest, the Telluride Mushroom Festival is “an annual reunion” for thousands of “fungi folks,” who return to the box canyon every year to celebrate all…",
+    href: "https://www.telluridenews.com/news/article_d8eb8e65-c686-4c22-b5f7-b8d73b0c3d20.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/45/f45402c7-f21b-4625-9c4b-9ad04daab19c/69ebacdb3d620.image.jpg?resize=300%2C449"
+  },
+  {
+    title: "Former Colorado funeral home owner sentenced to 30 years in case that forced state to clamp down on industry",
+    source: "Telluride Times",
+    date: "April 24, 2026",
+    newsTopic: "community",
+    copy: "Former Colorado funeral home owner sentenced to 30 years in case that forced state to clamp down on industry.",
+    href: "https://www.telluridenews.com/news/state/article_68436a91-206c-5002-8868-19e121d7b3aa.html",
+    img: ""
+  },
+  {
+    title: "Bark beetles are eating through trees in San Miguel County",
+    source: "Telluride Times",
+    date: "April 24, 2026",
+    newsTopic: "community",
+    copy: "An insect scarcely bigger than a grain of rice is infesting trees in the forests of San Miguel County.",
+    href: "https://www.telluridenews.com/news/article_cc9e2caf-f011-456d-b0e8-c9d98c5510aa.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/a9/4a969e1e-7375-4d2f-b8cd-bde6b0aaa812/69ebaf7fa8a0f.image.jpg?resize=300%2C400"
+  },
+  {
+    title: "County discusses future planning projects",
+    source: "Telluride Times",
+    date: "April 24, 2026",
+    newsTopic: "land-use",
+    copy: "The San Miguel Board of County Commissioners (BOCC) held its first meeting after a spring hiatus on Wednesday, April 22. Moving forward into a new season, planning, development and permitting were on top of mind.",
+    href: "https://www.telluridenews.com/news/article_df3af361-8522-4d1f-9bca-3c050b74c95b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/1f/a1f0586a-f7fe-489e-a348-0b63cc2b8228/69eafe3da3a22.image.jpg?resize=300%2C225"
+  },
+  {
+    title: "Not your parents’ PE",
+    source: "Telluride Times",
+    date: "April 24, 2026",
+    newsTopic: "housing",
+    copy: "Outside the gymnasium of the Telluride Elementary School (TES), physical education teacher Erin Murray waited for her class of first-grade students to arrive.",
+    href: "https://www.telluridenews.com/news/article_a4c5d839-f765-42ef-8d91-38ffc315ad4d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/f5/af558834-d00d-4c09-afd8-5bd5e32123d2/69e8798e37429.image.jpg?resize=300%2C400"
+  },
+  {
+    title: "Federal judge orders release of family of man charged in Colorado firebomb attack",
+    source: "Telluride Times",
+    date: "April 23, 2026",
+    newsTopic: "public-safety",
+    copy: "A federal judge has ordered the release from immigration custody of the family of a man charged in a fatal firebomb attack in Boulder, Colorado, last year. U.S. District Judge Fred Biery in San Antonio said Hayam El Gamal and…",
+    href: "https://www.telluridenews.com/news/state/article_09f12f45-ca76-5230-a9c6-768867dc500c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/df/8dfd6a5c-a101-5ad6-891e-bcee98b6b578/69ea6f2fc96b2.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "Telluride Town Clerk certifies council candidates for June election",
+    source: "Telluride Times",
+    date: "April 23, 2026",
+    newsTopic: "government",
+    copy: "The Telluride Town Clerk has officially certified candidates for Telluride Town Council’s special election on June 30 — the first time there have been more candidates than open seats on council since 2023.",
+    href: "https://www.telluridenews.com/news/article_68c45a3a-0714-44e9-b0b4-a237f39657d2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/21/a21bf33b-c002-4a52-a20d-577939094d4a/69ea5ed10a0b7.image.jpg?resize=300%2C231"
+  },
+  {
+    title: "Is off-season the best season?",
+    source: "Telluride Times",
+    date: "April 23, 2026",
+    newsTopic: "infrastructure",
+    copy: "For some, the answer is a definite yes. In Telluride, off-season began on April 6 with quiet streets and locals schools on spring break. Classes resumed April 20, but the serenity of spring continues. Missing your favorite coffee shop, watering…",
+    href: "https://www.telluridenews.com/gallery/article_a66784be-15e4-457a-84de-c3e4bbaf7105.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/5c/05cbe539-c717-4525-98a2-888c077582ed/69e7ba253ef59.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "Legals and Public Notices for April 23-29, 2026",
+    source: "Telluride Times",
+    date: "April 23, 2026",
+    newsTopic: "community",
+    copy: "PUBLIC HEARING NOTICE",
+    href: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
+    img: ""
+  },
+  {
+    title: "Assault charge for immigration officer in Colorado could test immunity provisions for federal agents",
+    source: "Telluride Times",
+    date: "April 23, 2026",
+    newsTopic: "community",
+    copy: "The decision in Colorado to charge an immigration officer with assault after a protester was grabbed by the neck and pulled away could test the boundaries of immunity provisions for federal agents in the line of duty. A Colorado prosecutor…",
+    href: "https://www.telluridenews.com/news/state/article_6467b8cc-2f6f-56a3-87f6-fb945517f4b8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/f5/ff50216b-e2da-5ecd-8931-20238c43544e/69e96a0aea89f.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "Immigration officer is charged with assault after protest outside Colorado ICE facility, DA says",
+    source: "Telluride Times",
+    date: "April 23, 2026",
+    newsTopic: "education",
+    copy: "A Colorado district attorney has charged an immigration agent after a protester said she was held in a chokehold during demonstrations against the detention of an immigrant father and two children. The Durango District Attorney announced the decision Tuesday. Multiple…",
+    href: "https://www.telluridenews.com/news/state/article_ddb43ab6-63d1-5f27-a5f2-001efe39c7a0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/f4/0f4452e4-4145-5f8f-a0d9-d56ce939993d/69e9423256e40.image.jpg?resize=300%2C200"
+  },
+  {
     title: "County Planning Commission 5/14 Meeting in TELLURIDE",
     source: "San Miguel County",
     date: "April 30, 2026",
@@ -4059,119 +4284,6 @@ const KOTO_FEATURED_STORIES = [
 // ── Community Events Data ─────────────
 // ══════════════════════════════════════
 
-// ══════════════════════════════════════
-// ── Livable Telluride Blog Posts ─────
-// ══════════════════════════════════════
-const LIVABLE_BLOG_POSTS = [
-  {
-    title: 'From "Let the People Decide" to "Livable Telluride"',
-    url: 'https://livabletelluride.org/from-let-the-people-decide-to-livable-telluride',
-    date: 'Feb 23, 2026',
-    readTime: '3 min',
-    image: '/images/blog/let-the-people-decide.jpg',
-    summary: 'The story behind our rebrand — why the mission evolved from a single ballot question to a broader effort to keep Telluride livable for the people who actually live here.',
-    category: 'Town of Telluride'
-  },
-  {
-    title: 'As the Society Turns (the Survey Episode)',
-    url: 'https://livabletelluride.org/societyturnpud',
-    date: 'Oct 14, 2025',
-    readTime: '2 min',
-    image: '/images/blog/society-turn-survey.png',
-    summary: '106 residents weighed in on Society Turn — 83% knew about the hospital, but nearly 80% had no idea how much else is planned for that site.',
-    category: 'County Issues'
-  },
-  {
-    title: 'As the Society Turns (the PUD Episode)',
-    url: 'https://livabletelluride.org/as-the-society-turns-the-pud-episode',
-    date: 'Oct 11, 2025',
-    readTime: '5 min',
-    image: '/images/blog/society-turn-pud.png',
-    summary: 'A deep dive into the Society Turn PUD that even its loudest critics admit is bigger than anyone realized — and why that matters for the valley\'s future.',
-    category: 'County Issues'
-  },
-  {
-    title: 'Saturday Shot of Finance: If VooDoo Were a Private Development, Would It Already Be Bankrupt?',
-    url: 'https://livabletelluride.org/saturday-shot-of-finance-if-voodoo-were-a-private-development-would-it-already-be-bankrupt',
-    date: 'Oct 11, 2025',
-    readTime: '4 min',
-    image: '/images/blog/voodoo-finance.png',
-    summary: 'A family stuck in "affordable housing" with soaring rent asks the question no one at Town Hall wants to answer — do these numbers actually work?',
-    category: 'Town of Telluride'
-  },
-  {
-    title: 'Why is Rent So Damn High In Telluride!',
-    url: 'https://livabletelluride.org/why-is-rent-so-damn-high-in-telluride',
-    date: 'Sep 15, 2025',
-    readTime: '5 min',
-    image: '/images/blog/rent-so-damn-high.png',
-    summary: 'Sweet Rants lit up with locals doing the math on new housing projects — and the per-unit costs will make your jaw drop.',
-    category: 'Town of Telluride'
-  },
-  {
-    title: 'From $36 Million to $103 Million: How Telluride Became Richer Than a Lottery Winner',
-    url: 'https://livabletelluride.org/from-36-million-to-103-million-how-telluride-became-richer-than-a-lottery-winner',
-    date: 'Sep 13, 2025',
-    readTime: '3 min',
-    image: '/images/blog/36-to-103-million.png',
-    summary: 'A 930% budget increase in ten years — this breakdown of where all that money went (and keeps going) is essential reading for any Telluride taxpayer.',
-    category: 'Town of Telluride'
-  },
-  {
-    title: "Canyonlands Development: A Closer Look at Telluride's Financing",
-    url: 'https://livabletelluride.org/canyonlands-development-a-closer-look-at-telluride-s-financing',
-    date: 'Jul 28, 2025',
-    readTime: '4 min',
-    image: '/images/blog/canyonlands.png',
-    summary: 'The $26.5M Canyonlands project by Clark\'s uses a creative 30-year lease structure that every resident should understand before the bonds come due.',
-    category: 'Town of Telluride'
-  },
-  {
-    title: 'Empowering Telluride: The Future of Lot L Development',
-    url: 'https://livabletelluride.org/empowering-telluride-the-future-of-lot-l-development',
-    date: 'Jul 27, 2025',
-    readTime: '2 min',
-    image: '/images/blog/lot-l.png',
-    summary: 'A massive parking garage on Lot L could permanently change downtown Telluride\'s character — here\'s why community input matters now, not later.',
-    category: 'Town of Telluride'
-  },
-  {
-    title: 'The Sunnyside Project',
-    url: 'https://livabletelluride.org/the-sunnyside-project',
-    date: 'Jul 27, 2025',
-    readTime: '2 min',
-    image: '/images/blog/sunnyside.png',
-    summary: 'Completed before costs spiraled, Sunnyside shows how pre-pandemic housing financing worked — and why today\'s projects can\'t replicate it.',
-    category: 'Town of Telluride'
-  },
-  {
-    title: 'The VooDoo Project',
-    url: 'https://livabletelluride.org/the-voodoo-project',
-    date: 'Jul 27, 2025',
-    readTime: '2 min',
-    image: '/images/blog/voodoo-project.png',
-    summary: 'The VooDoo\'s $27.4M price tag for 27 units launched at exactly the wrong time — a cautionary tale of what happens when interest rates hit 7%.',
-    category: 'Town of Telluride'
-  },
-  {
-    title: 'The Chair 7 Development Controversy',
-    url: 'https://livabletelluride.org/the-chair-7-development-controversy',
-    date: 'Jul 25, 2025',
-    readTime: '3 min',
-    image: '/images/blog/chair-7.png',
-    summary: 'A hotel and commercial development on open space near the ski area is the most contentious proposal in years — here\'s what the PUD amendment actually allows.',
-    category: 'Town of Telluride'
-  },
-  {
-    title: 'The Gondola Station',
-    url: 'https://livabletelluride.org/the-gondola-station',
-    date: 'Jul 2, 2025',
-    readTime: '1 min',
-    image: '/images/blog/gondola-station.png',
-    summary: 'Three design concepts for a new gondola station could reshape downtown — but without a charter amendment, voters won\'t get a say.',
-    category: 'Town of Telluride'
-  }
-];
 
 // ══════════════════════════════════════════════════════════════
 // ── Blog Posts ──
@@ -4200,15 +4312,130 @@ const LIVABLE_BLOG_POSTS = [
 // the Blog tab forever.
 
 const BLOG_POSTS = [
+  // Migrated 2026-04-30 from the legacy LIVABLE_BLOG_POSTS array. Hand-curated
+  // posts hosted on livabletelluride.org (each links out to the full post page).
+  // Going forward, new entries will be auto-prepended by the Mailchimp archive
+  // sync in scripts/content-refresh.js — those will have source: 'mailchimp'.
   {
-    title: "Welcome to the Livable Telluride Blog",
-    date: "2026-04-30",
-    author: "Livable Telluride",
-    excerpt: "We're starting a blog to share deeper context on the issues shaping the Telluride region — housing, land use, civic decisions, and what it really takes to keep this place livable.",
-    body: "<p>Welcome! We've launched this blog as a place for longer-form commentary that doesn't fit in our news roundup or meeting summaries.</p><p>You'll see posts here on local housing economics, land-use proposals, civic process, and other topics where we think a closer look helps people make sense of what's happening in the valley. Subscribe to our daily or weekly digest to get new posts in your inbox.</p>",
-    href: "https://livabletelluride.org/#blog",
-    image: "",
-  }
+    title: 'From "Let the People Decide" to "Livable Telluride"',
+    date: 'Feb 23, 2026',
+    href: 'https://livabletelluride.org/from-let-the-people-decide-to-livable-telluride',
+    image: '/images/blog/let-the-people-decide.jpg',
+    excerpt: 'The story behind our rebrand — why the mission evolved from a single ballot question to a broader effort to keep Telluride livable for the people who actually live here.',
+    category: 'Town of Telluride',
+    readTime: '3 min',
+    source: 'livable-telluride.org',
+  },
+  {
+    title: 'As the Society Turns (the Survey Episode)',
+    date: 'Oct 14, 2025',
+    href: 'https://livabletelluride.org/societyturnpud',
+    image: '/images/blog/society-turn-survey.png',
+    excerpt: '106 residents weighed in on Society Turn — 83% knew about the hospital, but nearly 80% had no idea how much else is planned for that site.',
+    category: 'County Issues',
+    readTime: '2 min',
+    source: 'livable-telluride.org',
+  },
+  {
+    title: 'As the Society Turns (the PUD Episode)',
+    date: 'Oct 11, 2025',
+    href: 'https://livabletelluride.org/as-the-society-turns-the-pud-episode',
+    image: '/images/blog/society-turn-pud.png',
+    excerpt: "A deep dive into the Society Turn PUD that even its loudest critics admit is bigger than anyone realized — and why that matters for the valley's future.",
+    category: 'County Issues',
+    readTime: '5 min',
+    source: 'livable-telluride.org',
+  },
+  {
+    title: 'Saturday Shot of Finance: If VooDoo Were a Private Development, Would It Already Be Bankrupt?',
+    date: 'Oct 11, 2025',
+    href: 'https://livabletelluride.org/saturday-shot-of-finance-if-voodoo-were-a-private-development-would-it-already-be-bankrupt',
+    image: '/images/blog/voodoo-finance.png',
+    excerpt: 'A family stuck in "affordable housing" with soaring rent asks the question no one at Town Hall wants to answer — do these numbers actually work?',
+    category: 'Town of Telluride',
+    readTime: '4 min',
+    source: 'livable-telluride.org',
+  },
+  {
+    title: 'Why is Rent So Damn High In Telluride!',
+    date: 'Sep 15, 2025',
+    href: 'https://livabletelluride.org/why-is-rent-so-damn-high-in-telluride',
+    image: '/images/blog/rent-so-damn-high.png',
+    excerpt: 'Sweet Rants lit up with locals doing the math on new housing projects — and the per-unit costs will make your jaw drop.',
+    category: 'Town of Telluride',
+    readTime: '5 min',
+    source: 'livable-telluride.org',
+  },
+  {
+    title: 'From $36 Million to $103 Million: How Telluride Became Richer Than a Lottery Winner',
+    date: 'Sep 13, 2025',
+    href: 'https://livabletelluride.org/from-36-million-to-103-million-how-telluride-became-richer-than-a-lottery-winner',
+    image: '/images/blog/36-to-103-million.png',
+    excerpt: 'A 930% budget increase in ten years — this breakdown of where all that money went (and keeps going) is essential reading for any Telluride taxpayer.',
+    category: 'Town of Telluride',
+    readTime: '3 min',
+    source: 'livable-telluride.org',
+  },
+  {
+    title: "Canyonlands Development: A Closer Look at Telluride's Financing",
+    date: 'Jul 28, 2025',
+    href: 'https://livabletelluride.org/canyonlands-development-a-closer-look-at-telluride-s-financing',
+    image: '/images/blog/canyonlands.png',
+    excerpt: "The $26.5M Canyonlands project by Clark's uses a creative 30-year lease structure that every resident should understand before the bonds come due.",
+    category: 'Town of Telluride',
+    readTime: '4 min',
+    source: 'livable-telluride.org',
+  },
+  {
+    title: 'Empowering Telluride: The Future of Lot L Development',
+    date: 'Jul 27, 2025',
+    href: 'https://livabletelluride.org/empowering-telluride-the-future-of-lot-l-development',
+    image: '/images/blog/lot-l.png',
+    excerpt: "A massive parking garage on Lot L could permanently change downtown Telluride's character — here's why community input matters now, not later.",
+    category: 'Town of Telluride',
+    readTime: '2 min',
+    source: 'livable-telluride.org',
+  },
+  {
+    title: 'The Sunnyside Project',
+    date: 'Jul 27, 2025',
+    href: 'https://livabletelluride.org/the-sunnyside-project',
+    image: '/images/blog/sunnyside.png',
+    excerpt: "Completed before costs spiraled, Sunnyside shows how pre-pandemic housing financing worked — and why today's projects can't replicate it.",
+    category: 'Town of Telluride',
+    readTime: '2 min',
+    source: 'livable-telluride.org',
+  },
+  {
+    title: 'The VooDoo Project',
+    date: 'Jul 27, 2025',
+    href: 'https://livabletelluride.org/the-voodoo-project',
+    image: '/images/blog/voodoo-project.png',
+    excerpt: "The VooDoo's $27.4M price tag for 27 units launched at exactly the wrong time — a cautionary tale of what happens when interest rates hit 7%.",
+    category: 'Town of Telluride',
+    readTime: '2 min',
+    source: 'livable-telluride.org',
+  },
+  {
+    title: 'The Chair 7 Development Controversy',
+    date: 'Jul 25, 2025',
+    href: 'https://livabletelluride.org/the-chair-7-development-controversy',
+    image: '/images/blog/chair-7.png',
+    excerpt: "A hotel and commercial development on open space near the ski area is the most contentious proposal in years — here's what the PUD amendment actually allows.",
+    category: 'Town of Telluride',
+    readTime: '3 min',
+    source: 'livable-telluride.org',
+  },
+  {
+    title: 'The Gondola Station',
+    date: 'Jul 2, 2025',
+    href: 'https://livabletelluride.org/the-gondola-station',
+    image: '/images/blog/gondola-station.png',
+    excerpt: "Three design concepts for a new gondola station could reshape downtown — but without a charter amendment, voters won't get a say.",
+    category: 'Town of Telluride',
+    readTime: '1 min',
+    source: 'livable-telluride.org',
+  },
 ];
 
 const COMMUNITY_EVENTS = [
@@ -6716,7 +6943,7 @@ function renderBlogSidebar(rssPosts) {
   // Merge RSS posts with hardcoded posts, newest first
   // Hardcoded posts have curated summaries and take priority
   // Only add RSS posts that don't match any hardcoded post by title
-  var allPosts = [...LIVABLE_BLOG_POSTS];
+  var allPosts = [...BLOG_POSTS];
   if (rssPosts && rssPosts.length > 0) {
     var existingTitles = new Set(allPosts.map(function(p) {
       return p.title.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 30);
@@ -6745,11 +6972,11 @@ function renderBlogSidebar(rssPosts) {
       ? '<img src="' + post.image + '" alt="' + post.title.replace(/"/g, '&quot;') + '" loading="lazy" onerror="this.style.display=\'none\'">'
       : '<div style="height:80px;background:linear-gradient(135deg,rgba(33,68,60,0.08),rgba(166,143,87,0.12));display:grid;place-items:center;color:var(--text-muted);font-size:1.5rem;">📝</div>';
 
-    html += '<a href="' + post.url + '" target="_blank" rel="noopener" class="blog-sidebar-card">' +
+    html += '<a href="' + (post.href || post.url || "") + '" target="_blank" rel="noopener" class="blog-sidebar-card">' +
       imgHtml +
       '<div class="blog-card-body">' +
         '<div class="blog-card-title">' + post.title + '</div>' +
-        '<div class="blog-card-summary">' + post.summary + '</div>' +
+        '<div class="blog-card-summary">' + (post.excerpt || post.summary || "") + '</div>' +
         '<div class="blog-card-meta">' + (post.date || '') + (post.readTime ? ' · ' + post.readTime : '') + '</div>' +
       '</div>' +
     '</a>';
@@ -8268,6 +8495,11 @@ function showSubmitStatus(msg, type) {
     }
   };
 
+  function postDateMs(p) {
+    const d = new Date(p.date || 0);
+    return isNaN(d.getTime()) ? 0 : d.getTime();
+  }
+
   function render() {
     const container = document.getElementById('blogPostsContainer');
     if (!container) return;
@@ -8276,23 +8508,39 @@ function showSubmitStatus(msg, type) {
       container.innerHTML = '<div style="text-align:center; color:var(--text-muted); padding:60px 20px; font-size:0.92rem;">No blog posts yet — check back soon.</div>';
       return;
     }
-    const sorted = [...posts].sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
+    // Sort by parsed date desc (handles ISO and "Mon DD, YYYY" formats).
+    const sorted = [...posts].sort((a, b) => postDateMs(b) - postDateMs(a));
     container.innerHTML = sorted.map((p, idx) => {
       const hasBody = p.body && String(p.body).trim().length > 0;
+      const linkUrl = p.href || p.url || '';
+      const isExternal = linkUrl && !/^https?:\/\/livabletelluride\.org/.test(linkUrl);
       const meta = [
         p.date ? blogFormatDate(p.date) : '',
-        p.author ? blogEscape(p.author) : ''
+        p.author ? blogEscape(p.author) : '',
+        p.category ? blogEscape(p.category) : '',
+        p.readTime ? blogEscape(p.readTime) : ''
       ].filter(Boolean).join(' • ');
+      const excerptText = p.excerpt || p.summary || '';
+      const titleHtml = blogEscape(p.title || '(untitled)');
+      // Make the title itself a link when we have an href and no expandable body.
+      const titleLinked = (linkUrl && !hasBody)
+        ? '<a href="' + blogEscape(linkUrl) + '"' + (isExternal ? ' target="_blank" rel="noopener"' : '') + ' style="color:inherit; text-decoration:none;">' + titleHtml + '</a>'
+        : titleHtml;
+      // Action: in-page expander if we have a body, otherwise an external link.
+      let action = '';
+      if (hasBody) {
+        action = '<div class="blog-body" id="blog-body-' + idx + '" style="display:none; font-size:0.95rem; line-height:1.65; color:var(--text-primary); margin-top:14px;">' + p.body + '</div>'
+          + '<button id="blog-toggle-' + idx + '" onclick="_toggleBlogBody(' + idx + ')" style="background:none; border:none; color:var(--forest); font-weight:600; cursor:pointer; padding:0; font-size:0.88rem;">Read more →</button>';
+      } else if (linkUrl) {
+        action = '<a href="' + blogEscape(linkUrl) + '"' + (isExternal ? ' target="_blank" rel="noopener"' : '') + ' style="color:var(--forest); font-weight:600; text-decoration:none; font-size:0.88rem;">Read full post' + (isExternal ? ' →' : ' →') + '</a>';
+      }
       return [
         '<article class="blog-card" style="background:white; border-radius:14px; padding:22px 24px; margin-bottom:16px; box-shadow:0 2px 8px rgba(0,0,0,0.04); border:1px solid rgba(33,68,60,0.08);">',
-        p.image ? '<img src="' + blogEscape(p.image) + '" alt="" style="width:100%; max-height:240px; object-fit:cover; border-radius:10px; margin-bottom:14px;">' : '',
-        '<h3 style="margin:0 0 6px; font-family:var(--font-heading); font-size:1.25rem; color:var(--text-primary);">' + blogEscape(p.title || '(untitled)') + '</h3>',
+        p.image ? '<img src="' + blogEscape(p.image) + '" alt="" style="width:100%; max-height:240px; object-fit:cover; border-radius:10px; margin-bottom:14px;" onerror="this.style.display=\'none\'">' : '',
+        '<h3 style="margin:0 0 6px; font-family:var(--font-heading); font-size:1.25rem; color:var(--text-primary);">' + titleLinked + '</h3>',
         meta ? '<div style="font-size:0.78rem; color:var(--text-muted); margin-bottom:10px;">' + meta + '</div>' : '',
-        p.excerpt ? '<p style="font-size:0.92rem; line-height:1.6; color:var(--text-secondary); margin:0 0 12px;">' + blogEscape(p.excerpt) + '</p>' : '',
-        hasBody
-          ? '<div class="blog-body" id="blog-body-' + idx + '" style="display:none; font-size:0.95rem; line-height:1.65; color:var(--text-primary); margin-top:14px;">' + p.body + '</div>'
-            + '<button id="blog-toggle-' + idx + '" onclick="_toggleBlogBody(' + idx + ')" style="background:none; border:none; color:var(--forest); font-weight:600; cursor:pointer; padding:0; font-size:0.88rem;">Read more →</button>'
-          : '',
+        excerptText ? '<p style="font-size:0.92rem; line-height:1.6; color:var(--text-secondary); margin:0 0 12px;">' + blogEscape(excerptText) + '</p>' : '',
+        action,
         '</article>'
       ].join('');
     }).join('');
