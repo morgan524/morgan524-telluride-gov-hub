@@ -832,11 +832,21 @@ async function main() {
 
   // ── 5. Email Events ──
   const events = await syncEmailEvents();
-  if (events && events.length > 0) {
+  // Write whenever syncEmailEvents() returned successfully — including the
+  // empty-array case. If we only wrote on length > 0, marking every row as
+  // 'skipped' would leave a stale event lingering on the live site forever.
+  if (events !== null && events !== undefined) {
     const eventsJson = path.join(REPO_ROOT, 'community-events.json');
-    fs.writeFileSync(eventsJson, JSON.stringify(events, null, 2));
-    changed = true;
-    console.log(`  Wrote ${events.length} events to community-events.json`);
+    const newJson = JSON.stringify(events, null, 2);
+    let prev = '';
+    try { prev = fs.readFileSync(eventsJson, 'utf8'); } catch (_) {}
+    if (prev !== newJson) {
+      fs.writeFileSync(eventsJson, newJson);
+      changed = true;
+      console.log(`  Wrote ${events.length} events to community-events.json`);
+    } else {
+      console.log(`  community-events.json unchanged (${events.length} events)`);
+    }
   }
 
   // ── Write files ──
