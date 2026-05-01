@@ -3975,7 +3975,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c9/ec9912c8-b253-5755-acce-42c147636686/69f3c91b34529.image.jpg?resize=300%2C200"
   },
   {
-    title: "Telski update to council: bike park���s future uncertain",
+    title: "Telski update to council: bike park’s future uncertain",
     source: "Telluride Times",
     date: "April 30, 2026",
     newsTopic: "government",
