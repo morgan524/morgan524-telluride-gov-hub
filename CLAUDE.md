@@ -350,6 +350,32 @@ Adding to `corrections.js`'s skip-list when introducing new
 upstream-sourced card sources: see `addCorrectionTriggers()` around
 line 207.
 
+## Local News card filtering (`isRedundantLocalNewsTitle`)
+
+`collectLocalNewsArticles()` in `js/gov-hub.js` runs every TT/gov entry
+through `isRedundantLocalNewsTitle(title)` and SKIPS items that are
+already covered by other tabs:
+
+- **Legal-notices roundups** (titles starting with `Legals` … `Notices`,
+  e.g. "Legals and Public Notices for April 30-May 6, 2026") — already
+  covered by the dedicated Legal Notices section, so they'd be
+  duplicate noise on Local News.
+- **Government meeting announcements** with dates in the title (e.g.
+  "County Planning Commission 5/14 Meeting in TELLURIDE") — already
+  covered by the Gov-Hub tab.
+- **Meeting announcements with a named governmental body** (Planning
+  Commission, Town Council, BOCC, HARC, School Board, Fire District,
+  Hospital District, Open Space Commission, SMART, Telluride Housing
+  Authority) plus "Meeting" in the title.
+
+The filter is render-time only (it doesn't strip from
+`TELLURIDE_TIMES_ARTICLES` itself), so the items are still available
+for any other consumer (the email digest, Gov-Hub, etc.). If a
+legitimate news article happens to match the patterns by accident,
+loosen the regex; the existing patterns are tight enough that real
+news passes through (e.g. "Telski update to council" stays because
+there's no `Meeting` keyword paired with the body name).
+
 ## Gotcha: `TELLURIDE_TIMES_ARTICLES` is mixed-source despite the name
 
 The const name is historical. The array holds two kinds of items:

@@ -1586,7 +1586,10 @@
     #tab-local-news .card .card-body {
       display: flex;
       gap: 14px;
-      align-items: flex-start;
+      /* Vertically center the small source logo with the article photo (the
+         photo lives inside event-card-main and is itself centered, so this
+         puts the logo and photo at the same vertical level on every card). */
+      align-items: center;
       padding: 0;
     }
     #tab-local-news .card-logo {

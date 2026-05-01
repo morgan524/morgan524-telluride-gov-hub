@@ -4687,6 +4687,25 @@ function nthWeekday(year, month, dayOfWeek, nth) {
   return result;
 }
 
+// Some articles in TELLURIDE_TIMES_ARTICLES describe content that's
+// already covered by other tabs:
+//   - The weekly "Legals and Public Notices for ..." roundup is
+//     redundant with the dedicated Legal Notices section.
+//   - Meeting announcements ("County Planning Commission 5/14 Meeting
+//     in TELLURIDE") are redundant with Gov-Hub.
+// Skip these from Local News so it stays focused on actual news.
+function isRedundantLocalNewsTitle(title) {
+  if (!title) return false;
+  // Weekly legals roundup
+  if (/^\s*Legals?\b[\s\S]*\bNotices?\b/i.test(title)) return true;
+  // Government meeting announcement with date in title
+  // ("County Planning Commission 5/14 Meeting in TELLURIDE")
+  if (/\b\d+[\/-]\d+\b[\s\S]*\bMeeting\b/i.test(title)) return true;
+  // Meeting announcement with named governmental body
+  if (/\b(?:Planning Commission|Board of County Commissioners|BOCC|Town Council|HARC|School Board|Fire (?:Protection )?District|Hospital District|Open Space Commission|SMART (?:Board|Transit)|Telluride Housing Authority)\b[\s\S]*\bMeeting\b/i.test(title)) return true;
+  return false;
+}
+
 function collectLocalNewsArticles() {
   // Gather all news articles from LAND_USE_ISSUES, GONDOLA_DATA, TELLURIDE_TIMES_ARTICLES, KOTO_NEWSCASTS, and KOTO_FEATURED_STORIES
   const articles = [];
@@ -4746,10 +4765,13 @@ function collectLocalNewsArticles() {
     });
   }
 
-  // Telluride Times homepage stories
+  // Telluride Times homepage stories (mixed with gov news)
   if (typeof TELLURIDE_TIMES_ARTICLES !== 'undefined') {
     TELLURIDE_TIMES_ARTICLES.forEach(a => {
       if (!a.href && !a.title) return;
+      // Skip legals roundups and meeting announcements (redundant with
+      // Legal Notices and Gov-Hub tabs).
+      if (isRedundantLocalNewsTitle(a.title)) return;
       const pubDate = a.date ? new Date(a.date) : null;
       if (!pubDate || pubDate < cutoffDate) return;
       articles.push({
