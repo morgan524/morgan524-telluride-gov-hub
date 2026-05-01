@@ -204,10 +204,12 @@
       const tab = card.closest('.tab-content');
       const tabName = tab ? tab.id.replace('tab-', '') : '';
       if (tabName === 'meetings') return;
-      // Skip "Suggest Correction" for Telluride Times and KOTO articles on Local News page
+      // Skip "Suggest Correction" for Telluride Times, KOTO, and
+      // Telluride Humane Society cards on Local News page (those come
+      // from upstream feeds — corrections should go to the source).
       if (tabName === 'local-news') {
         const srcKey = card.dataset.sourceKey;
-        if (srcKey === 'ttimes' || srcKey === 'koto') return;
+        if (srcKey === 'ttimes' || srcKey === 'koto' || srcKey === 'humane-society') return;
       }
       // Find the title
       const titleEl = card.querySelector('h3 a, .legal-card-title');

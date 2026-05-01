@@ -1624,20 +1624,24 @@
       border-radius: 10px;
       align-self: center;
     }
-    /* When a card has no article photo (e.g. KOTO newscasts, THS adoptable
-       animals without a photo), the source logo takes the photo position
-       at 300px wide. Logo image scales with object-fit: contain so the
-       aspect ratio is preserved. */
+    /* When a card has no article photo (e.g. KOTO newscasts, THS
+       adoptable animals without a photo), the source logo takes the
+       photo position at 150px wide × 100px tall — about half the size
+       of full article photos so it doesn't overwhelm the card. Logo
+       image scales with object-fit: contain so the aspect ratio is
+       preserved. */
     #tab-local-news .news-card-img-left .event-illustration.source-logo-substitute {
-      width: 300px;
-      height: 144px;
+      width: 150px;
+      height: 100px;
       background: #fff;
       border: 1px solid rgba(0,0,0,0.06);
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      align-self: center;
     }
     #tab-local-news .news-card-img-left .event-illustration.source-logo-substitute img {
       max-width: 100%;
@@ -1645,12 +1649,12 @@
       width: auto;
       height: auto;
       object-fit: contain;
-      padding: 8px;
+      padding: 6px;
     }
     @media (max-width: 600px) {
       #tab-local-news .news-card-img-left .event-illustration.source-logo-substitute {
-        width: 100%;
-        height: 160px;
+        width: 140px;
+        height: 90px;
       }
     }
     #tab-local-news .card[data-source-key="koto"] .event-photo img {

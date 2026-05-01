@@ -898,6 +898,22 @@ async function syncMailchimpBlog(existingPosts) {
 
   if (!arr.length) return existingPosts;
 
+  // Active prune: drop any existing mailchimp-source entries that match
+  // the digest-skip pattern. This cleans up past mistakes (digest emails
+  // that leaked into the blog before the skip pattern was added).
+  const isDigestTitle = (t) => {
+    if (!t) return false;
+    return (/^Posts from Livable Telluride for /i.test(t) ||
+            /Daily Digest|Weekly Digest|Daily Update|Weekly Update/i.test(t));
+  };
+  const prunedExisting = existingPosts.filter(p => {
+    if (p && p.source === 'mailchimp' && isDigestTitle(p.title)) {
+      console.log(`  Pruning leaked digest from blog: ${p.title}`);
+      return false;
+    }
+    return true;
+  });
+
   // Index existing posts by href AND by normalized title, so we don't
   // duplicate a Mailchimp campaign whose content was already hand-curated
   // as a livabletelluride.org post (same title, different URL).
@@ -908,7 +924,7 @@ async function syncMailchimpBlog(existingPosts) {
     .trim();
   const existingByHref = new Map();
   const existingByTitle = new Map();
-  for (const p of existingPosts) {
+  for (const p of prunedExisting) {
     if (p && p.href) existingByHref.set(p.href, p);
     if (p && p.title) existingByTitle.set(normTitle(p.title), p);
   }
@@ -929,6 +945,16 @@ async function syncMailchimpBlog(existingPosts) {
     // that should NOT appear on the public blog).
     if (/\[(private|skip|internal|test)\]/i.test(title)) {
       console.log(`  Skipping private campaign: ${title}`);
+      continue;
+    }
+    // Skip the auto-generated daily/weekly digest emails. Their titles
+    // are 'Posts from Livable Telluride for MM/DD/YYYY' (Mailchimp's
+    // RSS-driven campaign uses *|RSSFEED:DATE|* in the subject line).
+    // Those go to opt-in subscribers via feed.xml and shouldn't appear
+    // on the public blog tab — only manually-authored campaigns should.
+    if (/^Posts from Livable Telluride for /i.test(title) ||
+        /Daily Digest|Weekly Digest|Daily Update|Weekly Update/i.test(title)) {
+      console.log(`  Skipping digest campaign: ${title}`);
       continue;
     }
     const desc = item.description || '';
@@ -954,11 +980,12 @@ async function syncMailchimpBlog(existingPosts) {
 
   if (!newEntries.length) {
     console.log('  No new Mailchimp campaigns to add');
-    return existingPosts;
+    return prunedExisting;
   }
 
-  // Prepend new entries (newest from feed first), preserving existing posts.
-  return [...newEntries, ...existingPosts];
+  // Prepend new entries (newest from feed first), preserving existing
+  // (already-pruned) posts.
+  return [...newEntries, ...prunedExisting];
 }
 
 // ══════════════════════════════════════════════════════════════

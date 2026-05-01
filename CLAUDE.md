@@ -78,6 +78,21 @@ all formatting/images preserved.
 `[skip]`, `[internal]`, or `[test]` (case-insensitive) in the
 Mailchimp campaign title. Task 6 filters those out.
 
+**Auto-skipped: daily / weekly digest campaigns.** The RSS-driven
+Mailchimp campaigns that send to opt-in subscribers (segments
+`MMERGE9 = daily` and `= weekly`) generate subjects like
+`Posts from Livable Telluride for MM/DD/YYYY` from the `*|RSSFEED:DATE|*`
+template. Those auto-generated digest emails would clutter the public
+blog feed if synced, so Task 6 actively skips ANY campaign whose title
+matches `/^Posts from Livable Telluride for /i` or
+`/Daily Digest|Weekly Digest|Daily Update|Weekly Update/i`. The skip
+is also retroactive: existing `source: 'mailchimp'` entries in
+`BLOG_POSTS` that match the digest pattern are pruned from the array
+on every Task 6 run, so any past leakage self-cleans.
+
+If you ever rename the digest subject lines or add new digest cadences,
+update the regex in `scripts/content-refresh.js`'s `syncMailchimpBlog()`.
+
 ### BLOG_POSTS canonical schema
 
 ```js
@@ -278,6 +293,62 @@ Important behaviors:
   workflow's "Commit and push" step is *skipped*. That's correct behavior,
   not a failure. Use `git log --grep "Content refresh"` and the per-run logs
   in GitHub Actions to debug.
+
+## Telluride Humane Society — adoptable animals on Local News
+
+Live at /#local-news and refreshed every 6 hours. Source of truth is
+the Shelterluv API for organization GID `36337`:
+
+```
+https://www.shelterluv.com/api/v3/available-animals/36337
+```
+
+Returns dogs and cats currently up for adoption. `scripts/content-refresh.js`
+Task 7 (`syncHumaneSocietyAnimals`) hits this endpoint, parses each
+animal record, and writes a normalized `HUMANE_SOCIETY_ANIMALS` array
+into `js/gov-hub.js`. The animal record schema we keep:
+
+```js
+{ id, name, species, breed, ageGroup, sex, photo, profileUrl, summary }
+```
+
+Important shapes to remember when reading the Shelterluv response:
+- `age_group` is an OBJECT (`{name: "Young Dog", duration: "(1-5 years)", ...}`).
+  Pull `.name` for display.
+- `photos` is an array of OBJECTS (`{id, name, url, isCover, ...}`). Pull
+  `.url` from the cover photo (or first one) — never use the array entry
+  directly, that's an object.
+- `species` is `"Dog"` or `"Cat"`. Other values are filtered out.
+
+**Adopted animals auto-disappear.** Task 7 REPLACES the entire
+`HUMANE_SOCIETY_ANIMALS` array with the current API response on every
+6-hour run. So when a pet is adopted and falls off Shelterluv's
+availability list, its card drops off the Local News tab on the next
+refresh. There is no manual cleanup step.
+
+Cards are rendered by `collectLocalNewsArticles()` + `renderLocalNews()`
+in `js/gov-hub.js`. Each animal becomes one card with `sourceKey: 'humane-society'`.
+Card-specific behavior:
+
+- **Small source logo is hidden** for humane-society cards (the animal
+  photo is the brand marker; hiding the small logo gives the title text
+  more horizontal room).
+- **Primary CTA** is `Adopt a dog →` or `Adopt a cat →`, linking to
+  `https://telluridehumanesociety.com/dogs/` or `/cats/` (the form on
+  those pages).
+- **Secondary link** is `View dog/cat profile →`, linking to the
+  individual animal's Shelterluv embed page (from `profileUrl`).
+- **Suggest Correction** is suppressed via the
+  `js/corrections.js` skip-list (alongside `ttimes` and `koto` —
+  corrections to upstream-sourced cards belong to the source).
+- **Pub dates are randomized** across the last ~7 days using a stable
+  hash of the animal id, so the 4-or-so animal cards interleave with
+  KOTO and TT cards instead of all bunching at the top. Same hash =
+  same date across page loads, so cards don't shuffle on refresh.
+
+Adding to `corrections.js`'s skip-list when introducing new
+upstream-sourced card sources: see `addCorrectionTriggers()` around
+line 207.
 
 ## Gotcha: `TELLURIDE_TIMES_ARTICLES` is mixed-source despite the name
 
