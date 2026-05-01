@@ -499,7 +499,7 @@ async function refreshNews() {
         // Clean the RSS description: strip HTML, drop the canonical
         // "The post <link>X</link> appeared first on <link>KOTO FM</link>" trailer.
         let copy = (item.description || '').replace(/<[^>]+>/g, ' ');
-        copy = copy.replace(/The post .+? appeared first on .+?\.?/i, '');
+        copy = copy.replace(/The post [\s\S]*?appeared first on [\s\S]*?\./i, '');
         copy = copy.replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
         // KOTO descriptions are bullet-style ("- Topic 1\n- Topic 2"). Convert
         // them to a comma-separated single line for the card preview.
@@ -961,6 +961,83 @@ async function syncMailchimpBlog(existingPosts) {
   return [...newEntries, ...existingPosts];
 }
 
+// ══════════════════════════════════════════════════════════════
+// ── Task 7: Telluride Humane Society Adoptable Animals ──
+// ══════════════════════════════════════════════════════════════
+// Fetches the Shelterluv API for organization GID 36337 (Telluride
+// Humane Society) and emits the current dogs + cats listings.
+// Called from main() after Task 6.
+
+const SHELTERLUV_GID = 36337;
+const SHELTERLUV_API = `https://www.shelterluv.com/api/v3/available-animals/${SHELTERLUV_GID}`;
+
+async function syncHumaneSocietyAnimals() {
+  console.log('\n🐾 Task 7: Syncing Telluride Humane Society adoptable animals...');
+  let resp;
+  try {
+    resp = await fetch(SHELTERLUV_API);
+  } catch (e) {
+    console.warn(`  Fetch error: ${e.message}`);
+    return null;
+  }
+  if (!resp || resp.status !== 200) {
+    console.warn(`  Shelterluv API HTTP ${resp ? resp.status : 'no response'}`);
+    return null;
+  }
+  let payload;
+  try {
+    payload = JSON.parse(resp.text);
+  } catch (e) {
+    console.warn(`  JSON parse error: ${e.message}`);
+    return null;
+  }
+  // Endpoint returns either { animals: [...] } or a bare array. Normalize.
+  const arr = Array.isArray(payload)
+    ? payload
+    : (payload && Array.isArray(payload.animals) ? payload.animals : []);
+  console.log(`  Shelterluv returned ${arr.length} adoptable animal(s)`);
+
+  const animals = [];
+  for (const a of arr) {
+    if (!a) continue;
+    const id = String(a.uniqueId || a.nid || a.id || '').trim();
+    const name = (a.name || '').trim();
+    const species = (a.species || '').trim();
+    if (!id || !name || (species !== 'Dog' && species !== 'Cat')) continue;
+    // Photos are objects ({id, name, url, isCover, ...}). Pull the URL
+    // from the cover photo if present, else the first one.
+    const photos = Array.isArray(a.photos) ? a.photos : [];
+    let photo = '';
+    if (photos.length > 0) {
+      const cover = photos.find(p => p && p.isCover) || photos[0];
+      photo = (cover && cover.url) || (typeof cover === 'string' ? cover : '');
+    }
+    // age_group is an object — pull its .name field (e.g. "Young Dog")
+    const ageGroupName = (a.age_group && typeof a.age_group === 'object')
+      ? (a.age_group.name || '')
+      : (typeof a.age_group === 'string' ? a.age_group : '');
+    const breed = [a.breed, a.secondary_breed].filter(Boolean).join(' / ').trim();
+    const summaryParts = [];
+    if (ageGroupName) summaryParts.push(ageGroupName);
+    if (breed) summaryParts.push(breed);
+    if (a.sex) summaryParts.push(a.sex);
+    const summary = summaryParts.join(' • ');
+    animals.push({
+      id,
+      name,
+      species,
+      breed,
+      ageGroup: ageGroupName,
+      sex: a.sex || '',
+      photo,
+      profileUrl: a.public_url || '',
+      summary,
+    });
+  }
+  console.log(`  Parsed ${animals.length} dogs/cats (${animals.filter(x=>x.species==='Dog').length} dogs, ${animals.filter(x=>x.species==='Cat').length} cats)`);
+  return animals;
+}
+
 async function main() {
   console.log('═══════════════════════════════════════════════');
   console.log('  Telluride Gov Hub — Content Refresh');
@@ -1038,6 +1115,19 @@ async function main() {
   if (updatedBlogPosts && updatedBlogPosts.length !== existingBlogPosts.length) {
     govHubSrc = replaceJsValue(govHubSrc, 'BLOG_POSTS', updatedBlogPosts, false);
     changed = true;
+  }
+
+  // ── 7. Telluride Humane Society Adoptable Animals ──
+  const newAnimals = await syncHumaneSocietyAnimals();
+  if (newAnimals !== null && newAnimals !== undefined) {
+    const existingAnimals = extractJsArray(govHubSrc, 'HUMANE_SOCIETY_ANIMALS') || [];
+    if (JSON.stringify(newAnimals) !== JSON.stringify(existingAnimals)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'HUMANE_SOCIETY_ANIMALS', newAnimals, false);
+      changed = true;
+      console.log(`  HUMANE_SOCIETY_ANIMALS updated (was ${existingAnimals.length}, now ${newAnimals.length})`);
+    } else {
+      console.log('  HUMANE_SOCIETY_ANIMALS unchanged');
+    }
   }
 
   // ── Write files ──
