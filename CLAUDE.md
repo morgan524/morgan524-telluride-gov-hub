@@ -11,6 +11,150 @@ restructure the script), update this file in the same commit.
 
 ---
 
+## Subscription + Blog Architecture (updated 2026-04-30)
+
+Major refactor of the Mailchimp pipeline. Three Mailchimp campaigns now
+serve three distinct subscriber experiences:
+
+| Campaign | Audience | Feed source | Cadence | What's in it |
+| -------- | -------- | ----------- | ------- | ------------ |
+| **Daily Digest** | Segment: `Email Frequency = daily AND Date Added is after 04/30/2026` | `feed.xml` | Daily polling | News + meetings + community events |
+| **Weekly Digest** | Segment: `Email Frequency = weekly AND Date Added is after 04/30/2026` | `feed.xml` | Weekly | News + meetings + community events |
+| **Blog posts** | **Entire audience** (NO segment) | (no RSS — sent directly) | Manual, when user writes a post | Long-form posts authored as regular Mailchimp campaigns |
+
+**The "Date Added is after 04/30/2026" filter is critical.** Existing
+~846 subscribers from before that date didn't actively opt into a
+digest cadence (the old form defaulted MMERGE9 to "weekly" without
+asking). The cutoff scopes digests to people who explicitly chose a
+frequency on the simplified post-2026-04-30 form. Legacy subscribers
+still receive blog posts (their original "Livable Telluride newsletter"
+expectation), but not digests.
+
+### Subscribe form on the site
+
+`index.html` Subscribe tab now has 3 sections only:
+
+1. **How Often** — radio buttons for `daily` / `weekly` (Monthly was
+   removed 2026-04-30; we don't run a monthly campaign).
+2. **Events Near You (Optional)** — opens the existing proximity
+   modal; sets MMERGE10 (address) + MMERGE11 (radius). Optional, no
+   gating.
+3. **Your Info** — first/last name, email, town (MMERGE6), Hub-Bub
+   forum password (creates a Firebase auth account when ≥6 chars).
+
+Removed in the 2026-04-30 simplification: 10 source-group checkboxes
+(Town of Telluride, San Miguel County, Mountain Village, …) and 15
+topic-group checkboxes (Housing, Land Use, Public Safety, …). The
+Mailchimp interest groups under category `7912` are no longer set
+during signup — segmentation is via merge fields only. The form's
+JSONP submit posts only EMAIL, FNAME, LNAME, MMERGE6, MMERGE9, and
+optionally MMERGE10/11.
+
+### Blog architecture: Mailchimp campaigns are the source of truth
+
+The Blog tab on livabletelluride.org reads from a `BLOG_POSTS` const
+in `js/gov-hub.js`. That array has two kinds of entries:
+
+- **Hand-curated posts** (`source: 'livable-telluride.org'`) — 12 posts
+  migrated 2026-04-30 from the legacy `LIVABLE_BLOG_POSTS` array (now
+  deleted). Each links to a full post page on livabletelluride.org.
+  Edit by hand if you want to add another permanent on-site post.
+- **Mailchimp campaigns** (`source: 'mailchimp'`) — auto-prepended by
+  `scripts/content-refresh.js` Task 6. Every 6 hours the script fetches
+  the audience archive feed at
+  `https://us15.campaign-archive.com/feed?u=5d9192289b9af78822f2f69bf&id=f83dc56387`
+  and adds any campaign it hasn't seen yet (dedup by href AND by
+  normalized title — the second guards against a Mailchimp campaign
+  duplicating a hand-curated post about the same topic).
+
+**Authoring workflow for new blog posts:** user creates a regular
+campaign in the Mailchimp UI, sends to whichever audience/segment they
+want, hits Send. Within 6 hours the next content-refresh tick syncs
+it into BLOG_POSTS and it appears on the Blog tab. Card title links
+out to the Mailchimp `mailchi.mp/...` archive URL — full post with
+all formatting/images preserved.
+
+**Skipping a campaign from the public blog:** put `[private]`,
+`[skip]`, `[internal]`, or `[test]` (case-insensitive) in the
+Mailchimp campaign title. Task 6 filters those out.
+
+### BLOG_POSTS canonical schema
+
+```js
+{
+  title:    string,                // required
+  date:     string,                // any format new Date() can parse
+  excerpt:  string,                // shown on the card; emails too
+  href:     string,                // where "Read full post →" goes
+  image:    string,                // optional card image (with onerror fallback)
+  category: string,                // optional (e.g. "Town of Telluride", "Newsletter")
+  readTime: string,                // optional ("3 min", "5 min")
+  source:   'livable-telluride.org' | 'mailchimp',
+  body:     string,                // optional HTML — when present, "Read more"
+                                   // expands in-place instead of opening href
+  author:   string,                // optional
+}
+```
+
+The legacy `LIVABLE_BLOG_POSTS` const was DELETED 2026-04-30. Don't
+recreate it — anything that was reading from it (the Local-News-tab
+sidebar `renderBlogSidebar`) now reads from BLOG_POSTS with field
+fallbacks (`post.href || post.url`, `post.excerpt || post.summary`).
+
+### feed.xml content composition (updated 2026-04-30)
+
+`scripts/build-rss-feed.js` emits ONE feed (not two — feed-blog.xml
+was retired 2026-04-30 and is no longer emitted; the buildBlogItems
+function and BLOG_FEED_* constants are kept commented out at the
+writeRssFeed call site in case we want to re-enable). The single
+`feed.xml` contains:
+
+- **News** — last 7 days from `TELLURIDE_TIMES_ARTICLES`,
+  `KOTO_NEWSCASTS`, `KOTO_FEATURED_STORIES`.
+- **Meetings** — last 7 days + next 14 days from `MANUAL_SUMMARIES`
+  (keyed `source|date|title`). Each item carries the full agenda
+  summary in the description. Source label map:
+  telluride / mv / county / smart / school / fire / med / norwood /
+  ophir / smrha → human-readable names.
+- **Events** — next 60 days from `COMMUNITY_EVENTS` array AND
+  `community-events.json` (the email-ingestion path).
+
+Removed 2026-04-30: legal notices (no longer in the digest). Blog
+posts are NOT in feed.xml — they go out as direct Mailchimp campaigns
+to the entire audience instead.
+
+Window helpers: `withinWindow(d, days)` for backward windows (news);
+`withinRollingWindow(d, daysBehind, daysAhead)` for the news + future
+range used by meetings/events.
+
+### Subscriber merge fields on the audience
+
+Set by the post-2026-04-30 form:
+- `EMAIL`, `FNAME`, `LNAME`
+- `MMERGE6` = Town
+- `MMERGE9` = Email Frequency (`daily` | `weekly`; `monthly` removed)
+- `MMERGE10` = Proximity Address (optional)
+- `MMERGE11` = Proximity Radius miles (optional)
+
+Pre-2026-04-30 form ALSO set MMERGE7 (Sources Subscribed text mirror)
+and MMERGE8 (Topics Subscribed text mirror) and `group[7912][N]`
+interest-group checkboxes. Those legacy fields may still have values
+on existing subscribers but are no longer being WRITTEN by the form
+and aren't used for anything in the current campaign segments.
+
+### Domain note (fixed 2026-04-30)
+
+Replaced 14 references to the dead domain `telluride-co.gov` with
+`telluride.gov` across `scripts/content-refresh.js` (RSS URLs that had
+been failing every run), `index.html`, `js/gov-hub.js` (housing
+contact emails), `js/corrections.js`, `the-growing-weight-of-tellurides-debt/index.html`,
+and `telluride-gov-hub.html`. **Do NOT touch `telluride-co.civicweb.net`** —
+that's a real, separate domain hosting Telluride's CivicWeb agenda
+portal. Confirmed working 2026-04-30: `https://telluride.gov/` returns
+200; `https://telluride-co.gov/` returns DNS NXDOMAIN.
+
+---
+
 ## Live system at a glance
 
 ```
@@ -107,11 +251,22 @@ Five tasks per run (in order):
 Important behaviors:
 
 - **`maybeProxy(url)`** routes any fetch to a known-blocked host through the
-  Worker. Allow-list of proxyable hosts is hard-coded; matches the Worker's
-  own allow-list. Hosts NOT in the set fetch direct.
+  Worker. Allow-list of proxyable hosts is hard-coded as the `PROXY_HOSTS`
+  Set near the top of `scripts/content-refresh.js` (~line 84) and MUST stay
+  in sync with the Worker's `ALLOWED_HOSTS`. The helper is wired into the
+  custom `fetch(url, opts)` function so every outgoing request is routed
+  transparently. Hosts NOT in the set fetch direct. Implemented
+  2026-05-01 — before that the script fetched directly and TT scraping
+  silently returned 0 articles every run.
 - **Telluride Times feed:**
   `https://www.telluridenews.com/search/?f=rss&t=article&c=news,news/*&l=25&s=start_time&sd=desc`
-- **KOTO feeds (split, not the catch-all `/feed/`):**
+- **KOTO feeds (split, not the catch-all `/feed/`):** the catch-all
+  `https://koto.org/feed/` returns 0 items most of the time; the script
+  uses two category-specific feeds via constants `KOTO_NEWSCASTS_RSS` and
+  `KOTO_FEATURED_RSS`, scraped via a small `pullKotoFeed(url, bucket)`
+  helper inside `refreshNews()`. (Pre-2026-05-01 the script used a single
+  `KOTO_RSS = 'https://koto.org/feed/'`, which is why CLAUDE.md flagged
+  the gotcha but the bug persisted; now fixed.)
   - newscasts: `https://koto.org/news-category/newscasts/feed/`
   - featured:  `https://koto.org/news-category/featured-stories/feed/`
 - **14-day cutoff:** `NEWS_MAX_AGE_DAYS = 14`. Anything older than 14 days is
@@ -123,6 +278,27 @@ Important behaviors:
   workflow's "Commit and push" step is *skipped*. That's correct behavior,
   not a failure. Use `git log --grep "Content refresh"` and the per-run logs
   in GitHub Actions to debug.
+
+## Gotcha: `TELLURIDE_TIMES_ARTICLES` is mixed-source despite the name
+
+The const name is historical. The array holds two kinds of items:
+
+- Actual Telluride Times articles (`source: 'Telluride Times'`) — pulled
+  from the TT search RSS feed.
+- Government news items (`source: 'Town of Telluride'`,
+  `'San Miguel County'`, etc.) — pulled from each gov RSS feed in
+  `NEWS_FEEDS` and then merged into the same array because they share
+  the same rendering shape (title/source/date/copy/href).
+
+If you ever see "no Telluride Times stories on the Local News tab" but
+the array has entries, count items by `source` field, not by array
+length. Confirmed 2026-05-01: when the maybeProxy fix landed, the array
+went from 5 items (all gov news, 0 actual TT) to 31 items (25 actual TT
++ 6 gov news).
+
+The two `KOTO_*` arrays are clean — `KOTO_NEWSCASTS` only contains
+newscast posts and `KOTO_FEATURED_STORIES` only contains feature posts,
+because the per-category RSS feeds segment them server-side.
 
 ## Common "news isn't refreshing" complaints — debug order
 
