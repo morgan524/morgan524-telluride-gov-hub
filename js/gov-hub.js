@@ -4043,8 +4043,18 @@ function renderNews(items, filter) {
 
   filtered = filtered.slice(0, 50);
 
-  // Re-sort ascending for chronological date-group display
-  filtered.sort((a, b) => (a.pubDate || 0) - (b.pubDate || 0));
+  // Re-apply the day-asc + hash-mix sort so the slice's selection is
+  // re-ordered for chronological day-group display while keeping the
+  // within-day source mixing.
+  filtered.sort((a, b) => {
+    const aT = a.pubDate ? new Date(a.pubDate).getTime() : 0;
+    const bT = b.pubDate ? new Date(b.pubDate).getTime() : 0;
+    const dayA = Math.floor(aT / 86400000);
+    const dayB = Math.floor(bT / 86400000);
+    if (dayA !== dayB) return dayA - dayB;
+    return _evHash((a.title || '') + '|' + (a.source || '')) -
+           _evHash((b.title || '') + '|' + (b.source || ''));
+  });
 
   if (filtered.length === 0) {
     container.innerHTML = '<div class="empty-state">No recent news or alerts found.</div>';
