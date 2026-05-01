@@ -4002,8 +4002,26 @@ function renderNews(items, filter) {
     filtered = items.filter(i => i.source === filter);
   }
 
-  // Sort by date descending (most recent / upcoming first) for slicing
-  filtered.sort((a, b) => (b.pubDate || 0) - (a.pubDate || 0));
+  // Sort by day (ascending — soonest first), then mix sources within
+  // each day so we don't get all TT, then all Wilkinson, then all KOTO
+  // bunched together. Within-day order is stable across reloads (uses
+  // a deterministic hash of title+source) so cards don't shuffle on
+  // refresh.
+  const _evHash = (s) => {
+    let h = 0;
+    const str = String(s || '');
+    for (let i = 0; i < str.length; i++) h = ((h << 5) - h + str.charCodeAt(i)) | 0;
+    return h;
+  };
+  filtered.sort((a, b) => {
+    const aT = a.pubDate ? new Date(a.pubDate).getTime() : 0;
+    const bT = b.pubDate ? new Date(b.pubDate).getTime() : 0;
+    const dayA = Math.floor(aT / 86400000);
+    const dayB = Math.floor(bT / 86400000);
+    if (dayA !== dayB) return dayA - dayB;
+    return _evHash((a.title || '') + '|' + (a.source || '')) -
+           _evHash((b.title || '') + '|' + (b.source || ''));
+  });
 
   const seen = new Set();
   filtered = filtered.filter(i => {
