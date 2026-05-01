@@ -2861,7 +2861,7 @@ const WILKINSON_EVENTS = [
     imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_26_10_18_20.jpg"
   },
   {
-    title: "You &amp; Me / Tu y Yo",
+    title: "You & Me / Tu y Yo",
     link: "https://telluridelibrary.libcal.com/event/15184966?hs=a",
     description: "10:30 AM – 11:00 AM",
     pubDate: "2026-05-01T10:30:00.000Z",
