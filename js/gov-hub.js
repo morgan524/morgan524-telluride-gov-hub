@@ -3059,7 +3059,12 @@ const ENTITY_LOGOS = {
   'humane-society': '<img src="logo/Telluride Humane-400x400.png" alt="Telluride Humane Society" loading="lazy">',
 };
 
-function renderLogo(source) {
+function renderLogo(source, item) {
+  // For per-item custom logos (e.g. specific local groups: Rotary, Elks),
+  // prefer the logo path on the item itself over the source-keyed default.
+  if (item && item.logo) {
+    return `<div class="card-logo"><img src="${item.logo}" alt="${item.sourceLabel || source || ''}" loading="lazy"></div>`;
+  }
   const logo = ENTITY_LOGOS[source];
   if (!logo) return '';
   return `<div class="card-logo">${logo}</div>`;
@@ -3826,7 +3831,7 @@ function renderNews(items, filter) {
 
       html += `
         <div class="card" data-source="${item.source}">
-          ${renderLogo(item.source)}
+          ${renderLogo(item.source, item)}
           <div class="card-body">
             <div class="event-card-main">
               <div class="event-card-content">
@@ -4600,6 +4605,7 @@ const LOCAL_GROUP_SCHEDULES = [
   {
     name: 'Telluride Elks Lodge 692',
     title: 'Elks Lodge Regular Meeting',
+    logo: '/logo/Elks.png',
     rule: [2, 4],        // 2nd & 4th occurrence
     dayOfWeek: 4,        // Thursday
     time: '6:30 PM',
@@ -4610,6 +4616,7 @@ const LOCAL_GROUP_SCHEDULES = [
   {
     name: 'TMVOA',
     title: 'TMVOA Board Meeting',
+    logo: '/logo/TMVOA Logo.png',
     rule: [3],            // 3rd occurrence
     dayOfWeek: 4,         // Thursday
     time: 'TBD — see website',
@@ -4667,7 +4674,8 @@ function generateLocalGroupMeetings() {
           sourceLabel: sched.name,
           category: 'Local Group Meeting',
           canceled: false,
-          hasAgenda: false
+          hasAgenda: false,
+          logo: sched.logo || ''
         });
       });
     }
@@ -6273,7 +6281,7 @@ function renderMeetingsWithTopic() {
       // END: AI-enhanced summary rendering
 
       html += '<div class="card" data-source="' + item.source + '">' +
-        renderLogo(item.source) +
+        renderLogo(item.source, item) +
         '<div class="card-body">' +
           '<div class="event-card-main">' +
             '<div class="event-card-content">' +

@@ -1604,6 +1604,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      /* Force vertical-center vs the photo on the same row, regardless
+         of the parent's align-items (parent setting was getting beaten
+         by some cascade — align-self at the child level is bulletproof). */
+      align-self: center;
     }
     #tab-local-news .card-logo img {
       width: 100%;
