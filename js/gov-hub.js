@@ -3061,16 +3061,61 @@ async function fetchAllNews() {
     });
   }
 
-  // Combine all sources — Wilkinson library events take priority over KOTO/TT duplicates
+  // Combine all sources. Cross-source dedup preference (highest wins):
+  //   Wilkinson Library  >  KOTO Community Calendar  >  Local groups /
+  //   Humane Society  >  Telluride Times  >  others.
+  // Rationale: TT and KOTO often re-list events that originate at the
+  // library or another organization. The original-source listing is
+  // canonical (correct title, photo, location, status) and should win.
   const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...hardcodedCommunity];
 
-  // Deduplicate: if the same event title appears on the same date from multiple sources,
-  // keep the Wilkinson version (listed first) and drop KOTO/TT duplicates
+  // Source-priority sort: lower number wins on a duplicate match.
+  function eventSourcePriority(item) {
+    const src = (item.source || '').toLowerCase();
+    const lbl = (item.sourceLabel || '').toLowerCase();
+    if (src === 'wilkinson' || lbl.includes('wilkinson')) return 0;
+    if (src === 'koto' || lbl.includes('koto')) return 1;
+    if (src === 'localgroup' || src === 'humane-society') return 2;
+    if (src === 'ttimes' || lbl.includes('telluride times')) return 3;
+    return 4;
+  }
+
+  // Stable sort by (date asc, source priority asc) so for identical
+  // dedup keys the highest-priority source comes first and wins.
+  all.sort((a, b) => {
+    const dA = a.pubDate ? new Date(a.pubDate).toISOString().slice(0,10) : '';
+    const dB = b.pubDate ? new Date(b.pubDate).toISOString().slice(0,10) : '';
+    if (dA !== dB) return dA.localeCompare(dB);
+    return eventSourcePriority(a) - eventSourcePriority(b);
+  });
+
+  // Smart dedup key: cross-source titles for the same event diverge in
+  // surface text but share their first few content words. Normalize:
+  //   1. Strip a trailing "Wilkinson Public Library" / "Telluride
+  //      Storywalk" / venue suffix that TT often appends.
+  //   2. Strip a trailing time suffix like ", 2:30-4:30 p.m." or ", 1-3 p.m."
+  //   3. Replace "&" with "and" so "Tea & Tarot" and "Tea and Tarot" match.
+  //   4. Strip remaining punctuation, lowercase, collapse whitespace.
+  //   5. Take first 4 words (catches: "Drop In Tech Time" vs "Drop In
+  //      Tech Time with Oliver" — both share the first 4 words).
+  function eventDedupKey(item) {
+    let t = (item.title || '').toLowerCase();
+    t = t.replace(/:\s*wilkinson public library\b.*$/i, '');
+    t = t.replace(/:\s*telluride storywalk\b.*$/i, '');
+    t = t.replace(/:\s*[a-z][a-z\s']+,\s*\d+(:\d+)?\s*[-\u2013]\s*\d+(:\d+)?\s*[ap]\.?\s*m\.?\s*$/i, '');
+    t = t.replace(/,\s*\d+(:\d+)?\s*[-\u2013]\s*\d+(:\d+)?\s*[ap]\.?\s*m\.?\s*$/i, '');
+    t = t.replace(/\s*&\s*/g, ' and ');
+    t = t.replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim();
+    const words = t.split(' ').filter(Boolean).slice(0, 4);
+    const dateKey = item.pubDate ? new Date(item.pubDate).toISOString().slice(0, 10) : '';
+    return words.join(' ') + '|' + dateKey;
+  }
+
+  // First-seen wins. Because we sorted by source priority above, the
+  // higher-priority source's listing is what gets kept.
   const seen = new Set();
   return all.filter(item => {
-    const normTitle = (item.title || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 20);
-    const dateKey = item.pubDate ? new Date(item.pubDate).toISOString().slice(0, 10) : '';
-    const key = normTitle + '|' + dateKey;
+    const key = eventDedupKey(item);
     if (seen.has(key)) return false;
     seen.add(key);
     return true;

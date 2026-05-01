@@ -388,6 +388,57 @@ If KOTO ever migrates off WordPress / The Events Calendar plugin, the
 JSON endpoint will change. Update `KOTO_TRIBE_API` in
 `scripts/content-refresh.js` accordingly.
 
+## Cross-source duplicate detection on the Events tab
+
+Many events are listed by multiple sources: Wilkinson Library posts
+its own events, KOTO often re-lists library and other community
+events on its calendar, and the Telluride Times calendar lists
+nearly everything. To avoid showing the same event 2-3 times, the
+events merge step in `collectEvents()` (the function that builds
+the Events tab data) does smart deduplication.
+
+**Source priority (lowest number wins on a duplicate):**
+
+| Priority | Source                                  |
+| -------- | --------------------------------------- |
+| 0        | Wilkinson Public Library (`wilkinson`)  |
+| 1        | KOTO Community Calendar (`koto`)        |
+| 2        | Local groups / Humane Society           |
+| 3        | Telluride Times (`ttimes`)              |
+| 4        | everything else                         |
+
+Rationale: TT and KOTO often re-list events that originate at the
+library or another organization. The original-source listing is
+canonical (correct title, photo, location, status) and should win.
+
+**Dedup key construction** — handles the ways different sources
+phrase the same event:
+
+1. Strip a trailing venue suffix that TT often appends, e.g.
+   `Tea & Tarot: Wilkinson Public Library, 2:30-4:30 p.m.` →
+   `Tea & Tarot`.
+2. Strip a trailing time suffix like `, 1-3 p.m.` or `, 2:30-4:30 p.m.`.
+3. Replace `&` with `and` so `Tea & Tarot` and `Tea and Tarot` match.
+4. Lowercase, strip remaining punctuation, collapse whitespace.
+5. Take the first 4 words. (Catches `Drop-In Tech Time` vs
+   `Drop-In Tech Time with Oliver` — both yield `drop in tech time`.)
+6. Append the ISO date so events with the same title on different
+   days don't collapse.
+
+**Implementation** is `eventSourcePriority()` and `eventDedupKey()`
+inside the events-collect function in `js/gov-hub.js`. The merged
+array is sorted by `(date asc, priority asc)` BEFORE the
+first-seen-wins filter, so the highest-priority source for each
+duplicate set is the one that survives.
+
+If you add a new event source in the future:
+
+- Pick its priority slot in `eventSourcePriority()` (0 = canonical
+  origin, 4 = re-listing aggregator).
+- If its titles include venue suffixes that other sources don't
+  mention, extend `eventDedupKey()`'s suffix-strip regex so the
+  cross-source match still works.
+
 ## Per-group logos on Gov-Hub recurring meetings
 
 `LOCAL_GROUP_SCHEDULES` entries (Rotary, Elks, TMVOA, etc.) can carry
