@@ -4247,6 +4247,7 @@ const KOTO_NEWSCASTS = [
     source: "KOTO Community Radio",
     date: "May 1, 2026",
     newsTopic: "community",
+    copy: "Local Governments Plan for Disaster; West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda KOTO FM .",
     href: "https://koto.org/news/newscast-4-30-26/"
   },
   {
@@ -4254,6 +4255,7 @@ const KOTO_NEWSCASTS = [
     source: "KOTO Community Radio",
     date: "April 30, 2026",
     newsTopic: "land-use",
+    copy: "The State of Crime in Telluride; Town Council Pauses Housing Waitlist Policy; Building with Cob KOTO FM .",
     href: "https://koto.org/news/newscast-4-29-26/"
   },
   {
@@ -4261,6 +4263,7 @@ const KOTO_NEWSCASTS = [
     source: "KOTO Community Radio",
     date: "April 28, 2026",
     newsTopic: "recreation",
+    copy: "A Mountain Village Investigation Update; Coming Up Next, Telluride; Lawmakers Talk Geothermal and Overtime Hours KOTO FM .",
     href: "https://koto.org/news/newscast-4-27-26/"
   },
   {
@@ -4268,6 +4271,7 @@ const KOTO_NEWSCASTS = [
     source: "KOTO Community Radio",
     date: "April 25, 2026",
     newsTopic: "housing",
+    copy: "This week on the Regional Roundup: two people living with Parkinson’s share what it’s like to navigate a disease that affects more than a million Americans. We head to Norwood in southwest Colorado, where a project aims to tackle algae blooms while generating electricity. In Glenwood Springs, we hear community concerns about Flock surveillance came",
     href: "https://koto.org/news/newscast-4-24-26/"
   },
   {
@@ -4275,6 +4279,7 @@ const KOTO_NEWSCASTS = [
     source: "KOTO Community Radio",
     date: "April 24, 2026",
     newsTopic: "community",
+    copy: "Ranching In A Drying West; Cat Movie Fisher with Risho Unda; The Listening Club Gets Stranger KOTO FM .",
     href: "https://koto.org/news/newscast-4-23-26/"
   },
   {
@@ -4282,6 +4287,7 @@ const KOTO_NEWSCASTS = [
     source: "KOTO Community Radio",
     date: "April 23, 2026",
     newsTopic: "government",
+    copy: "Candidates Vie for Telluride Town Council; Funding Cliff Looms for Telluride School District; A Look Back: Goats Graze the Valley Floor KOTO FM .",
     href: "https://koto.org/news/newscast-4-22-26/"
   },
   {
@@ -4289,6 +4295,7 @@ const KOTO_NEWSCASTS = [
     source: "KOTO Community Radio",
     date: "April 21, 2026",
     newsTopic: "government",
+    copy: "Floating Solar on Reservoir Number 2; Lawmakers Tackle the Budget KOTO FM .",
     href: "https://koto.org/news/newscast-4-20-26/"
   },
   {
@@ -4296,6 +4303,7 @@ const KOTO_NEWSCASTS = [
     source: "KOTO Community Radio",
     date: "April 18, 2026",
     newsTopic: "public-safety",
+    copy: "This week on the Regional Roundup, we look at concerns over a proposed move by the U.S. Forest Service from Washington, D.C. to Salt Lake City, and what that could mean for public lands management in the West. We’ll also visit a conserved organic orchard in Western Colorado, and we hear about new composting efforts in Aspen aimed at cutting greenho",
     href: "https://koto.org/news/newscast-4-17-26/"
   }
 ];
