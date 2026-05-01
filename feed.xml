@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 May 2026 17:25:56 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 19:03:24 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
@@ -18,6 +18,15 @@
 Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four weeks of hiking from May 31 through June 28, with a kickoff at 11am on May 31 at the Oak Street gondola plaza. Hike from anywhere and raise funds for the Telluride Rotary Foundation — supporting scholarships, Youth Exchange, international projects, and community grants. 60% of nonprofit team funds go directly back to their nonprofit. Sponsored by Alpine Bank and Jagged Edge Mountain Gear.</description>
       <category>Community Event</category>
       <category>Telluride Rotary Club</category>
+    </item>
+    <item>
+      <title>Paul Wisor resigns as MV Town Manager</title>
+      <link>https://www.telluridenews.com/news/article_2c1cc16d-5e4a-4543-86bd-1faadf9f7028.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_2c1cc16d-5e4a-4543-86bd-1faadf9f7028.html</guid>
+      <pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate>
+      <description>In the latest fallout from the investigation surrounding former Mountain Village Mayor Marti Prohaska and former Telluride Mayor Pro Tem Meehan Fee and their December 2025 “offer to purchase” Telluride Ski Resort (Telski) on behalf of unnamed investors, the Town…</description>
+      <category>Telluride Times</category>
+      <category>arts-culture</category>
     </item>
     <item>
       <title>New Wildfire Information Site Launched</title>

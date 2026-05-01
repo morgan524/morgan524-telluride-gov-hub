@@ -2661,17 +2661,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/04/Screenshot-2026-04-13-105702.png"
   },
   {
-    title: "Young People's Theater presents My Son Pinocchio Jr",
-    link: "https://koto.org/event/young-peoples-theater-presents-my-son-pinocchio-jr/2026-05-01/",
-    description: "The Sheridan Arts Foundation Young People’s Theater presents the middle school production of My Son, Pinocchio JR. at the historic Sheridan Opera House on Friday, May 1st & 2nd at 6:00 PM and Sunday, May 3rd at 4:00 PM.",
-    pubDate: "2026-05-01T18:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
     title: "Bilingual Balance in Motion",
     link: "https://koto.org/event/bilingual-balance-in-motion/2026-05-02/",
     description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun an",
@@ -4291,6 +4280,15 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-20  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Paul Wisor resigns as MV Town Manager",
+    source: "Telluride Times",
+    date: "May 1, 2026",
+    newsTopic: "arts-culture",
+    copy: "In the latest fallout from the investigation surrounding former Mountain Village Mayor Marti Prohaska and former Telluride Mayor Pro Tem Meehan Fee and their December 2025 “offer to purchase” Telluride Ski Resort (Telski) on behalf of unnamed investors, the Town…",
+    href: "https://www.telluridenews.com/news/article_2c1cc16d-5e4a-4543-86bd-1faadf9f7028.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/86/38610eb6-050c-4a1d-963e-dd31f000024c/69f4eedeb0d89.image.webp?resize=300%2C450"
+  },
+  {
     title: "Trump gives go-ahead to major new Canada-US oil pipeline",
     source: "Telluride Times",
     date: "April 30, 2026",
@@ -4505,15 +4503,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The decision in Colorado to charge an immigration officer with assault after a protester was grabbed by the neck and pulled away could test the boundaries of immunity provisions for federal agents in the line of duty. A Colorado prosecutor…",
     href: "https://www.telluridenews.com/news/state/article_6467b8cc-2f6f-56a3-87f6-fb945517f4b8.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/f5/ff50216b-e2da-5ecd-8931-20238c43544e/69e96a0aea89f.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Immigration officer is charged with assault after protest outside Colorado ICE facility, DA says",
-    source: "Telluride Times",
-    date: "April 23, 2026",
-    newsTopic: "education",
-    copy: "A Colorado district attorney has charged an immigration agent after a protester said she was held in a chokehold during demonstrations against the detention of an immigrant father and two children. The Durango District Attorney announced the decision Tuesday. Multiple…",
-    href: "https://www.telluridenews.com/news/state/article_ddb43ab6-63d1-5f27-a5f2-001efe39c7a0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/f4/0f4452e4-4145-5f8f-a0d9-d56ce939993d/69e9423256e40.image.jpg?resize=300%2C200"
   },
   {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
