@@ -1065,6 +1065,181 @@ async function syncHumaneSocietyAnimals() {
   return animals;
 }
 
+// ══════════════════════════════════════════════════════════════
+// ── Task 8: KOTO Community Calendar (Tribe Events JSON API) ──
+// ══════════════════════════════════════════════════════════════
+// koto.org runs The Events Calendar (Tribe) WordPress plugin which
+// exposes a JSON API for the community-calendar category. Fetch
+// every 6h, filter to events starting in the next 7 days.
+
+const KOTO_TRIBE_API = 'https://koto.org/wp-json/tribe/events/v1/events/?categories=community-calendar&per_page=50';
+
+function decodeHtmlEntities(s) {
+  return String(s || '')
+    .replace(/&#8217;|&rsquo;/g, "'")
+    .replace(/&#8216;|&lsquo;/g, "'")
+    .replace(/&#8220;|&ldquo;/g, '"')
+    .replace(/&#8221;|&rdquo;/g, '"')
+    .replace(/&#8211;|&ndash;/g, '\u2013')
+    .replace(/&#8212;|&mdash;/g, '\u2014')
+    .replace(/&#038;|&amp;/g, '&')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"');
+}
+
+async function syncKotoCommunityEvents() {
+  console.log('\n🎵 Task 8: Syncing KOTO Community Calendar...');
+  let resp;
+  try { resp = await fetch(KOTO_TRIBE_API); }
+  catch (e) { console.warn(`  Fetch error: ${e.message}`); return null; }
+  if (!resp || resp.status !== 200) {
+    console.warn(`  KOTO Tribe API HTTP ${resp ? resp.status : 'no response'}`);
+    return null;
+  }
+  let payload;
+  try { payload = JSON.parse(resp.text); }
+  catch (e) { console.warn(`  JSON parse error: ${e.message}`); return null; }
+  const arr = Array.isArray(payload.events) ? payload.events
+    : (Array.isArray(payload) ? payload : []);
+  console.log(`  Tribe API returned ${arr.length} community-calendar event(s)`);
+  const now = Date.now();
+  const horizon = now + 7 * 86400000;
+  const events = [];
+  for (const e of arr) {
+    if (!e || !e.title) continue;
+    const startStr = e.start_date || '';
+    if (!startStr) continue;
+    const start = new Date(startStr.replace(' ', 'T'));
+    if (isNaN(start.getTime())) continue;
+    const endStr = e.end_date || startStr;
+    const end = new Date(endStr.replace(' ', 'T'));
+    if (!isNaN(end.getTime()) && end.getTime() < now) continue;
+    if (start.getTime() > horizon) continue;
+    const description = decodeHtmlEntities(
+      String(e.description || e.excerpt || '').replace(/<[^>]+>/g, ' ')
+    ).replace(/\s+/g, ' ').trim().slice(0, 350);
+    let imageUrl = '';
+    if (e.image && typeof e.image === 'object' && e.image.url) imageUrl = e.image.url;
+    else if (typeof e.image === 'string') imageUrl = e.image;
+    let venueName = '';
+    if (e.venue && typeof e.venue === 'object') {
+      venueName = e.venue.venue || '';
+      if (e.venue.city && venueName && !venueName.includes(e.venue.city)) {
+        venueName += ', ' + e.venue.city;
+      } else if (e.venue.city && !venueName) {
+        venueName = e.venue.city;
+      }
+    }
+    events.push({
+      title: decodeHtmlEntities(e.title),
+      link: e.url || '',
+      description,
+      pubDate: start.toISOString(),
+      source: 'koto',
+      sourceLabel: 'KOTO',
+      category: 'Community Event',
+      location: venueName,
+      imageUrl,
+    });
+  }
+  events.sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
+  console.log(`  Kept ${events.length} events starting within 7 days`);
+  return events;
+}
+
+// ══════════════════════════════════════════════════════════════
+// ── Task 9: Wilkinson Public Library (LibCal) ──
+// ══════════════════════════════════════════════════════════════
+// telluridelibrary.libcal.com exposes api_events.php with the
+// library's main calendar (cid=19928). The endpoint returns HTML
+// rather than JSON, so we parse it with regex. Each event's detail
+// page has an og:image we fetch for the card photo.
+
+const WILKINSON_API = 'https://telluridelibrary.libcal.com/api_events.php?cid=19928&days=7';
+
+function parseWilkinsonHtml(html) {
+  const events = [];
+  const tableBlocks = html.split(/<table\b[^>]*class="[^"]*s-lc-ea-tb[^"]*"[^>]*>/i).slice(1);
+  for (const block of tableBlocks) {
+    const tableEnd = block.indexOf('</table>');
+    const segment = tableEnd >= 0 ? block.slice(0, tableEnd) : block;
+    // Title + link
+    const titleMatch = /<tr class="s-lc-ea-ttit"[\s\S]*?<a[^>]+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/i.exec(segment);
+    if (!titleMatch) continue;
+    const link = titleMatch[1].replace(/&amp;/g, '&');
+    const title = titleMatch[2].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    if (!title) continue;
+    // From / To
+    const fromMatch = /<tr class="s-lc-ea-from"[\s\S]*?<td>([\s\S]*?)<\/td>\s*<\/tr>/i.exec(segment);
+    const toMatch = /<tr class="s-lc-ea-to"[\s\S]*?<td>([\s\S]*?)<\/td>\s*<\/tr>/i.exec(segment);
+    const fromStr = fromMatch ? fromMatch[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() : '';
+    const toStr = toMatch ? toMatch[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() : '';
+    // Location
+    const locMatch = /<tr class="s-lc-ea-tloc"[\s\S]*?<td>([\s\S]*?)<\/td>\s*<\/tr>/i.exec(segment);
+    const location = locMatch ? locMatch[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() : '';
+    // Description (s-lc-ea-tdesc — sometimes present)
+    const descMatch = /<tr class="s-lc-ea-tdesc"[\s\S]*?<td>([\s\S]*?)<\/td>\s*<\/tr>/i.exec(segment);
+    const description = descMatch ? descMatch[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim() : '';
+    // Parse "From" datetime ("8:00 AM Friday, May 1, 2026" -> Date)
+    const fromDate = new Date(fromStr.replace(/^(\d+:\d+\s*[AP]M)\s+\w+,\s+/, '$1 '));
+    if (isNaN(fromDate.getTime())) continue;
+    events.push({ title, link, fromDate, fromStr, toStr, location, description });
+  }
+  return events;
+}
+
+async function fetchWilkinsonEventImage(url) {
+  try {
+    const resp = await fetch(url);
+    if (!resp || resp.status !== 200) return '';
+    const m = /<meta\s+property="og:image"\s+content="([^"]+)"/i.exec(resp.text);
+    return m ? m[1].replace(/&amp;/g, '&') : '';
+  } catch (_) { return ''; }
+}
+
+async function syncWilkinsonEvents() {
+  console.log('\n📚 Task 9: Syncing Wilkinson Public Library events...');
+  let resp;
+  try { resp = await fetch(WILKINSON_API); }
+  catch (e) { console.warn(`  Fetch error: ${e.message}`); return null; }
+  if (!resp || resp.status !== 200) {
+    console.warn(`  LibCal HTTP ${resp ? resp.status : 'no response'}`);
+    return null;
+  }
+  const parsed = parseWilkinsonHtml(resp.text);
+  console.log(`  LibCal returned ${parsed.length} event(s) within 7-day window`);
+  const now = Date.now();
+  const horizon = now + 7 * 86400000;
+  const events = [];
+  for (const p of parsed) {
+    const t = p.fromDate.getTime();
+    if (isNaN(t) || t < now - 86400000) continue;  // skip already-past
+    if (t > horizon) continue;                      // skip beyond 7 days
+    // Fetch the event detail page for og:image (rate-limited by sequential await)
+    const imageUrl = await fetchWilkinsonEventImage(p.link);
+    // Build a clean description: location + time + (extracted desc if any)
+    const descParts = [];
+    if (p.fromStr) descParts.push(p.fromStr.split(/\s+\w+,\s+/)[0] + (p.toStr ? ' – ' + p.toStr.split(/\s+\w+,\s+/)[0] : ''));
+    if (p.description) descParts.push(p.description);
+    events.push({
+      title: decodeHtmlEntities(p.title),
+      link: p.link,
+      description: decodeHtmlEntities(descParts.join(' · ')).slice(0, 350) || 'Wilkinson Public Library event',
+      pubDate: p.fromDate.toISOString(),
+      source: 'wilkinson',
+      sourceLabel: 'Wilkinson Public Library',
+      category: 'Library Event',
+      location: decodeHtmlEntities(p.location) || 'Wilkinson Public Library',
+      imageUrl,
+    });
+  }
+  events.sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
+  console.log(`  Kept ${events.length} event(s) within 7 days (with images fetched)`);
+  return events;
+}
+
 async function main() {
   console.log('═══════════════════════════════════════════════');
   console.log('  Telluride Gov Hub — Content Refresh');
@@ -1152,8 +1327,28 @@ async function main() {
       govHubSrc = replaceJsValue(govHubSrc, 'HUMANE_SOCIETY_ANIMALS', newAnimals, false);
       changed = true;
       console.log(`  HUMANE_SOCIETY_ANIMALS updated (was ${existingAnimals.length}, now ${newAnimals.length})`);
-    } else {
-      console.log('  HUMANE_SOCIETY_ANIMALS unchanged');
+    }
+  }
+
+  // ── 8. KOTO Community Calendar ──
+  const newKotoEvents = await syncKotoCommunityEvents();
+  if (newKotoEvents !== null && newKotoEvents !== undefined) {
+    const existingKotoEvents = extractJsArray(govHubSrc, 'KOTO_COMMUNITY_EVENTS') || [];
+    if (JSON.stringify(newKotoEvents) !== JSON.stringify(existingKotoEvents)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'KOTO_COMMUNITY_EVENTS', newKotoEvents, false);
+      changed = true;
+      console.log(`  KOTO_COMMUNITY_EVENTS updated (was ${existingKotoEvents.length}, now ${newKotoEvents.length})`);
+    }
+  }
+
+  // ── 9. Wilkinson Library Events ──
+  const newWilkinsonEvents = await syncWilkinsonEvents();
+  if (newWilkinsonEvents !== null && newWilkinsonEvents !== undefined) {
+    const existingWilk = extractJsArray(govHubSrc, 'WILKINSON_EVENTS') || [];
+    if (JSON.stringify(newWilkinsonEvents) !== JSON.stringify(existingWilk)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'WILKINSON_EVENTS', newWilkinsonEvents, false);
+      changed = true;
+      console.log(`  WILKINSON_EVENTS updated (was ${existingWilk.length}, now ${newWilkinsonEvents.length})`);
     }
   }
 

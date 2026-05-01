@@ -350,6 +350,87 @@ Adding to `corrections.js`'s skip-list when introducing new
 upstream-sourced card sources: see `addCorrectionTriggers()` around
 line 207.
 
+## KOTO Community Calendar — events on the Events tab
+
+Live at /#tab-news (the "Events" tab). Source of truth is the WordPress
+Tribe Events JSON API for the community-calendar category:
+
+```
+https://koto.org/wp-json/tribe/events/v1/events/?categories=community-calendar
+```
+
+`scripts/content-refresh.js` Task 8 (`syncKotoCommunityEvents`) hits
+this API every 6 hours via the Cloudflare Worker proxy, filters to
+events whose `start_date` is within the next 7 days (or still
+in-progress now), and writes a normalized `KOTO_COMMUNITY_EVENTS`
+array into `js/gov-hub.js`. Each entry:
+
+```js
+{ title, link, description, pubDate (ISO string), source: 'koto',
+  sourceLabel: 'KOTO', category: 'Community Event', location, imageUrl }
+```
+
+`fetchKOTONews()` in `js/gov-hub.js` reads this server-curated array
+first. It only falls back to the old client-side proxy-scrape path
+(`CODETABS_PROXY` / `ALLORIGINS_PROXY`) if the const is empty —
+which should only happen on a brand-new repo before the first
+content-refresh run.
+
+The 7-day window is a user-imposed cap: longer windows make the
+events tab unwieldy (the Tribe API page returns 50 by default and
+KOTO regularly has 30+ upcoming community events).
+
+KOTO logo is wired automatically: events have `source: 'koto'`, so
+`renderLogo('koto')` picks up `ENTITY_LOGOS['koto']` and renders it
+on each card.
+
+If KOTO ever migrates off WordPress / The Events Calendar plugin, the
+JSON endpoint will change. Update `KOTO_TRIBE_API` in
+`scripts/content-refresh.js` accordingly.
+
+## KOTO Community Calendar — events on the Events tab
+
+Live at /#tab-news. Source of truth is the Tribe Events JSON API:
+
+```
+https://koto.org/wp-json/tribe/events/v1/events/?categories=community-calendar
+```
+
+`scripts/content-refresh.js` Task 8 (`syncKotoCommunityEvents`) hits
+this every 6h, filters to events whose `start_date` is within the
+next 7 days (or still in-progress now), and writes a normalized
+`KOTO_COMMUNITY_EVENTS` array into `js/gov-hub.js`. Schema:
+
+```js
+{ title, link, description, pubDate (ISO), source: 'koto',
+  sourceLabel: 'KOTO', category: 'Community Event', location, imageUrl }
+```
+
+`fetchKOTONews()` in `js/gov-hub.js` reads this server-curated array
+first; falls back to legacy client-side proxy-scrape only if the
+const is empty.
+
+## Wilkinson Public Library — events on the Events tab
+
+Same pattern as KOTO. Source: telluridelibrary.libcal.com (LibCal
+platform), api_events.php endpoint with `cid=19928&days=7`.
+
+`scripts/content-refresh.js` Task 9 (`syncWilkinsonEvents`) parses
+the HTML response (LibCal returns table-formatted HTML, not JSON),
+fetches each event's detail page for the `og:image`, and writes
+`WILKINSON_EVENTS` into `js/gov-hub.js`. Filtered to next 7 days.
+Schema same as KOTO above but with `source: 'wilkinson'`.
+
+The HTML parser splits on `<table class="...s-lc-ea-tb...">` and
+extracts the title, From/To times, location, and description rows.
+HTML entities are decoded via `decodeHtmlEntities()` before storage.
+
+`fetchWilkinsonEvents()` (sync function in `js/gov-hub.js`, called
+synchronously from the events-render path) reads the const directly.
+
+If LibCal ever changes the api_events.php response format, update
+`parseWilkinsonHtml()` in `scripts/content-refresh.js`.
+
 ## Local News card filtering (`isRedundantLocalNewsTitle`)
 
 `collectLocalNewsArticles()` in `js/gov-hub.js` runs every TT/gov entry
