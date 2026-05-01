@@ -4009,60 +4009,53 @@ const TELLURIDE_TIMES_ARTICLES = [
 // Updated: 2026-04-18  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
   {
-    title: "Newscast 4-29-26",
-    source: "KOTO Community Radio",
-    date: "April 30, 2026",
-    newsTopic: "land-use",
-    href: "https://koto.org/news/newscast-4-29-26/"
+    title: 'Newscast 4-29-26',
+    source: 'KOTO Community Radio',
+    date: 'April 30, 2026',
+    newsTopic: 'land-use',
+    href: 'https://koto.org/news/newscast-4-29-26/'
   },
   {
-    title: "Newscast 4-27-26",
-    source: "KOTO Community Radio",
-    date: "April 28, 2026",
-    newsTopic: "recreation",
-    href: "https://koto.org/news/newscast-4-27-26/"
+    title: 'Newscast 4-27-26',
+    source: 'KOTO Community Radio',
+    date: 'April 28, 2026',
+    newsTopic: 'recreation',
+    href: 'https://koto.org/news/newscast-4-27-26/'
   },
   {
-    title: "Newscast 4-24-26",
-    source: "KOTO Community Radio",
-    date: "April 25, 2026",
-    newsTopic: "housing",
-    href: "https://koto.org/news/newscast-4-24-26/"
+    title: 'Newscast 4-24-26',
+    source: 'KOTO Community Radio',
+    date: 'April 25, 2026',
+    newsTopic: 'housing',
+    href: 'https://koto.org/news/newscast-4-24-26/'
   },
   {
-    title: "Newscast 4-23-26",
-    source: "KOTO Community Radio",
-    date: "April 24, 2026",
-    newsTopic: "community",
-    href: "https://koto.org/news/newscast-4-23-26/"
+    title: 'Newscast 4-23-26',
+    source: 'KOTO Community Radio',
+    date: 'April 24, 2026',
+    newsTopic: 'community',
+    href: 'https://koto.org/news/newscast-4-23-26/'
   },
   {
-    title: "Newscast 4-22-26",
-    source: "KOTO Community Radio",
-    date: "April 23, 2026",
-    newsTopic: "government",
-    href: "https://koto.org/news/newscast-4-22-26/"
+    title: 'Newscast 4-22-26',
+    source: 'KOTO Community Radio',
+    date: 'April 23, 2026',
+    newsTopic: 'government',
+    href: 'https://koto.org/news/newscast-4-22-26/'
   },
   {
-    title: "Newscast 4-20-26",
-    source: "KOTO Community Radio",
-    date: "April 21, 2026",
-    newsTopic: "government",
-    href: "https://koto.org/news/newscast-4-20-26/"
+    title: 'Newscast 4-20-26',
+    source: 'KOTO Community Radio',
+    date: 'April 21, 2026',
+    newsTopic: 'government',
+    href: 'https://koto.org/news/newscast-4-20-26/'
   },
   {
-    title: "Newscast 4-17-26",
-    source: "KOTO Community Radio",
-    date: "April 18, 2026",
-    newsTopic: "public-safety",
-    href: "https://koto.org/news/newscast-4-17-26/"
-  },
-  {
-    title: "Newscast 4-16-26",
-    source: "KOTO Community Radio",
-    date: "April 17, 2026",
-    newsTopic: "public-safety",
-    href: "https://koto.org/news/newscast-4-16-26/"
+    title: 'Newscast 4-17-26',
+    source: 'KOTO Community Radio',
+    date: 'April 18, 2026',
+    newsTopic: 'public-safety',
+    href: 'https://koto.org/news/newscast-4-17-26/'
   }
 ];
 
