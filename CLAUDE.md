@@ -388,6 +388,66 @@ If KOTO ever migrates off WordPress / The Events Calendar plugin, the
 JSON endpoint will change. Update `KOTO_TRIBE_API` in
 `scripts/content-refresh.js` accordingly.
 
+## Per-group logos on Gov-Hub recurring meetings
+
+`LOCAL_GROUP_SCHEDULES` entries (Rotary, Elks, TMVOA, etc.) can carry
+a `logo: '/logo/<file>.png'` path. `generateLocalGroupMeetings()`
+copies this onto each meeting record, and `renderLogo(source, item)`
+prefers `item.logo` over the `ENTITY_LOGOS[source]` default. Without
+a `logo` field, the card falls back to the generic `🤝` localgroup
+placeholder.
+
+To add a new branded local group:
+1. `cp <file>.png /tmp/deploy/telluride/logo/`
+2. Add `logo: '/logo/<file>.png'` to that group's `LOCAL_GROUP_SCHEDULES`
+   entry in `js/gov-hub.js`.
+
+Already wired: `Telluride Rotary.png`, `Elks.png`, `TMVOA Logo.png`.
+
+## Local News card overrides
+
+`LOCAL_NEWS_LINK_OVERRIDES` (in `js/gov-hub.js`) is a title→URL map.
+At render time, when an article's title matches a key, the
+"Read full article →" link goes to the override URL instead of the
+article's original `href`. Used when an article ANNOUNCES something
+and readers should click straight through to the destination
+instead of the announcement page.
+
+Existing entry:
+- `"New Wildfire Information Site Launched"` →
+  `https://wildfire-sanmiguelco.hub.arcgis.com/`
+
+Add new entries by appending to the map. Match is by exact title
+string (case-sensitive) — fine because TT and gov RSS titles are
+stable.
+
+## Local News card-logo vertical alignment
+
+`#tab-local-news .card-logo` has `align-self: center` so the small
+source logo (TT, KOTO) vertically centers with the article photo on
+each card. Setting `align-items: center` on the parent flex
+(`.card-body`) didn't reliably win the cascade in practice; the
+child-level `align-self` is the bulletproof rule. Belt + suspenders
+— both rules are present.
+
+## Events tab card sort: mix sources within each day
+
+`renderNews()` in `js/gov-hub.js` sorts events with TWO passes
+(both using the same logic, applied before and after the
+`slice(0,50)` cap):
+
+1. **Day bucket, ascending** — `Math.floor(pubDate / 86400000)` →
+   today's events first, then tomorrow's, then the day after.
+2. **Stable hash within each day** — `_evHash(title + '|' + source)` →
+   pseudo-random ordering within a date that interleaves TT,
+   Wilkinson, KOTO, and other sources instead of clustering by source.
+
+The hash is deterministic (same input → same output every page load)
+so cards don't shuffle on refresh. The two-pass structure exists
+because there's a slice in the middle; without re-applying the same
+sort after the slice, the result reverted to plain pubDate-ascending
+which clobbered the mixing.
+
 ## KOTO Community Calendar — events on the Events tab
 
 Live at /#tab-news. Source of truth is the Tribe Events JSON API:
