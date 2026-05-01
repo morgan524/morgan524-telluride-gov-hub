@@ -348,6 +348,33 @@ clone of the same GitHub repo (only contains `index.html` from an early
 single-file phase). Don't conflate the two; commits go to the actual repo
 on GitHub, not into `repo/`.
 
+## CRITICAL: maintenance.js parity sync is one-way (index.html canonical)
+
+`scripts/maintenance.js` Task 5 syncs `index.html` ↔ `telluride-gov-hub.html`.
+**As of 2026-05-01 the sync is one-way: `index.html` → `telluride-gov-hub.html`.**
+
+The OLD logic (pre-2026-05-01) was "copy the larger file over the smaller
+one". That heuristic SILENTLY REVERTED any edit to `index.html` that made
+the file smaller, because the maintenance bot ran every day at 12:00 UTC
+and would copy the stale (larger, older) `telluride-gov-hub.html` BACK
+over the new index.html. This destroyed:
+
+- The 2026-04-30 form simplification (drop topic/source checkboxes,
+  drop Monthly button) — restored to the pre-Round-1 form
+- The 2026-04-30 Blog tab addition — entire nav button + tab-content
+  div removed
+- The cache buster bump on `js/gov-hub.js` — reverted
+
+**Don't re-introduce a two-way sync.** `index.html` is the source of
+truth. `telluride-gov-hub.html` is a legacy duplicate kept around for
+backward compat (some old links may point at it); it must mirror
+`index.html`, never the other way around.
+
+When making edits to index.html, ALSO `cp index.html telluride-gov-hub.html`
+in the same commit so the parity hash matches and the next maintenance
+run is a no-op. (Even though the sync is one-way now, having them match
+avoids unnecessary maintenance commits.)
+
 ## Other workflows in the same repo
 
 - `housing-refresh.yml` — daily housing listing refresh

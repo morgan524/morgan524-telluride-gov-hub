@@ -268,17 +268,14 @@ function checkParity() {
   const govhubHash = crypto.createHash('md5').update(fs.readFileSync(GOVHUB_HTML)).digest('hex');
 
   if (indexHash !== govhubHash) {
-    console.log('  ⚠️ index.html and telluride-gov-hub.html are out of sync — syncing...');
-    // Copy the larger (more likely up-to-date) file over the smaller one
-    const indexSize = fs.statSync(INDEX_HTML).size;
-    const govhubSize = fs.statSync(GOVHUB_HTML).size;
-    if (indexSize >= govhubSize) {
-      fs.copyFileSync(INDEX_HTML, GOVHUB_HTML);
-      console.log('  Copied index.html → telluride-gov-hub.html');
-    } else {
-      fs.copyFileSync(GOVHUB_HTML, INDEX_HTML);
-      console.log('  Copied telluride-gov-hub.html → index.html');
-    }
+    // index.html is the canonical source. telluride-gov-hub.html is a
+    // legacy duplicate kept around for backward compat — it must mirror
+    // index.html, never the other way around. Previously this used a
+    // 'larger file wins' heuristic which silently reverted index.html
+    // edits whenever they made the file smaller (e.g. removing a section).
+    // 2026-05-01: switched to one-way sync.
+    console.log('  ⚠️ HTML files out of sync — copying index.html → telluride-gov-hub.html');
+    fs.copyFileSync(INDEX_HTML, GOVHUB_HTML);
     changed = true;
   } else {
     console.log('  ✓ HTML files are in sync');
