@@ -496,11 +496,20 @@ async function refreshNews() {
         const pubDate = new Date(item.pubDate || '');
         if (pubDate < cutoff) continue;
         const title = (item.title || '').trim();
+        // Clean the RSS description: strip HTML, drop the canonical
+        // "The post <link>X</link> appeared first on <link>KOTO FM</link>" trailer.
+        let copy = (item.description || '').replace(/<[^>]+>/g, ' ');
+        copy = copy.replace(/The post .+? appeared first on .+?\.?/i, '');
+        copy = copy.replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
+        // KOTO descriptions are bullet-style ("- Topic 1\n- Topic 2"). Convert
+        // them to a comma-separated single line for the card preview.
+        copy = copy.replace(/^[-•]\s*/g, '').replace(/\s*[-•]\s+/g, '; ').slice(0, 350);
         bucket.push({
           title,
           source: 'KOTO Community Radio',
           date: formatDate(pubDate),
           newsTopic: classifyNewsTopic(title, item.description || ''),
+          copy,
           href: (item.link || '').trim()
         });
       }

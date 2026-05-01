@@ -1579,9 +1579,38 @@
     .festival-sidebar::-webkit-scrollbar-track { background: transparent; }
     .festival-sidebar::-webkit-scrollbar-thumb { background: rgba(47,86,77,0.25); border-radius: 4px; }
     .festival-sidebar::-webkit-scrollbar-thumb:hover { background: rgba(47,86,77,0.45); }
-    /* Local News: hide source logo, show article image on left */
+    /* Local News: show source logo (KOTO/TT) on the left, article
+       image (when present) inside the content column. Original design
+       hid the logo; the KOTO/TT cards mostly don't have article images,
+       so the cards came out as text-only with no branding. */
+    #tab-local-news .card .card-body {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 0;
+    }
     #tab-local-news .card-logo {
-      display: none;
+      width: 80px;
+      height: 80px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #tab-local-news .card-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 6px;
+    }
+    #tab-local-news .event-card-main {
+      flex: 1;
+      min-width: 0;
     }
     #tab-local-news .event-card-main.news-card-img-left {
       grid-template-columns: 180px minmax(0, 1fr);
@@ -1602,9 +1631,7 @@
     #tab-local-news .card {
       padding: 16px;
     }
-    #tab-local-news .card .card-body {
-      padding: 0;
-    }
+
     @media (max-width: 600px) {
       .news-card-img-left {
         grid-template-columns: 1fr;
