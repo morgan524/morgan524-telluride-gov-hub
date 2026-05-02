@@ -2816,48 +2816,26 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Pinhead Storywalk",
-    link: "https://telluridelibrary.libcal.com/event/14972724?hs=a",
-    description: "8:00 AM – 2:00 PM",
-    pubDate: "2026-05-01T08:00:00.000Z",
+    title: "CANCELLED-Balance in Motion - Equilibrio en Movimiento",
+    link: "https://telluridelibrary.libcal.com/event/16535296?hs=a",
+    description: "10:00 AM – 11:00 AM",
+    pubDate: "2026-05-02T10:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Telluride Storywalk",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_29_11_52_35.png"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1740003527.jpg"
   },
   {
-    title: "Coffee, Croissants and Cribbage",
-    link: "https://telluridelibrary.libcal.com/event/16588564?hs=a",
-    description: "10:00 AM – 11:30 AM",
-    pubDate: "2026-05-01T10:00:00.000Z",
+    title: "Teen CPR Class",
+    link: "https://telluridelibrary.libcal.com/event/16696290?hs=a",
+    description: "10:00 AM – 3:30 PM",
+    pubDate: "2026-05-02T10:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_26_10_18_20.jpg"
-  },
-  {
-    title: "You & Me / Tu y Yo",
-    link: "https://telluridelibrary.libcal.com/event/15184966?hs=a",
-    description: "10:30 AM – 11:00 AM",
-    pubDate: "2026-05-01T10:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755554174.png"
-  },
-  {
-    title: "Teen Ping Pong",
-    link: "https://telluridelibrary.libcal.com/event/15976838?hs=a",
-    description: "4:00 PM – 6:00 PM",
-    pubDate: "2026-05-01T16:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1765562739.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_23_16_12_37.png"
   }
 ];
 
