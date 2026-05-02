@@ -4875,7 +4875,8 @@ const LOCAL_GROUP_SCHEDULES = [
     locations: ['Mountain Lodge, 457 Mountain Village Blvd (1st Wed)', 'Announced Telluride location (3rd Wed)'],
     href: 'https://portal.clubrunner.ca/3291',
     note: 'Social at 5:30 PM. No meetings in April. In-person & online options available.',
-    skipMonths: [4]      // No meetings in April
+    skipMonths: [4],     // No meetings in April
+    section: 'events'   // Appears in Events tab, not Gov-Hub
   },
   {
     name: 'Telluride Elks Lodge 692',
@@ -4901,6 +4902,45 @@ const LOCAL_GROUP_SCHEDULES = [
   }
 ];
 
+function generateLocalGroupEventItems() {
+  const items = [];
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const horizon = new Date(today);
+  horizon.setDate(horizon.getDate() + 60);
+
+  LOCAL_GROUP_SCHEDULES.forEach(function(sched) {
+    if (sched.section !== 'events') return;
+    for (var mo = 0; mo < 3; mo++) {
+      var year = today.getFullYear();
+      var month = today.getMonth() + mo;
+      if (month > 11) { month -= 12; year++; }
+      if (sched.skipMonths && sched.skipMonths.indexOf(month + 1) !== -1) continue;
+
+      sched.rule.forEach(function(nth, idx) {
+        var d = nthWeekday(year, month, sched.dayOfWeek, nth);
+        if (!d || d < today || d > horizon) return;
+        var loc = sched.locations.length > 1 ? sched.locations[idx] || sched.locations[0] : sched.locations[0];
+        items.push({
+          title: sched.title,
+          link: sched.href,
+          description: sched.note || '',
+          summary: sched.note || '',
+          pubDate: d,
+          source: 'localgroup',
+          sourceLabel: sched.name,
+          category: 'Local Group Meeting',
+          location: loc,
+          eventTimes: sched.time,
+          logo: sched.logo || '',
+          imageUrl: sched.logo || ''
+        });
+      });
+    }
+  });
+  return items;
+}
+
 function submitClubForm(e) {
   e.preventDefault();
   var form = document.getElementById('addClubForm');
@@ -4925,6 +4965,7 @@ function generateLocalGroupMeetings() {
   horizon.setDate(horizon.getDate() + 60);
 
   LOCAL_GROUP_SCHEDULES.forEach(function(sched) {
+    if (sched.section === 'events') return; // handled by generateLocalGroupEventItems()
     // Generate for current month and next 2 months
     for (var mo = 0; mo < 3; mo++) {
       var year = today.getFullYear();
@@ -7211,7 +7252,8 @@ async function init() {
   try { renderUpcomingEventsSidebar(); } catch(e) { console.error('initial renderUpcomingEventsSidebar error:', e); }
 
   newsPromise.then(newsData => {
-    allNews = newsData;
+    const localGroupEvents = generateLocalGroupEventItems();
+    allNews = [...newsData, ...localGroupEvents];
     window.__allNewsCache = allNews;
     try { renderNewsWithTopic(); } catch(e) { console.error('renderNewsWithTopic error:', e); }
     try { updateTopicCounts(); } catch(e) { console.error('updateTopicCounts error:', e); }
