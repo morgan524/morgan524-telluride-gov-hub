@@ -1109,9 +1109,6 @@ const MANUAL_SUMMARIES = {
   "county|2026-04-27|Housing Code Update -- SSR Meeting #5":
     "⚖️ WORKING SESSION (2 hours) of the Stakeholder Strategic Roundtable for the SMC Housing Code Update. AGENDA: Recap of Project Objectives (5 min) · ACCELERATED HOUSING REVIEW discussion (25 min) -- review the County's April 8, 2026 LUCA Draft against the SSR-recommended language; the County's draft removed the voluntariness phrasing in 3-1501, struck the PUD-with-rezoning exclusion (now eligible for 90-day review), deleted Initial Zoning/Rezoning from the ineligible list, removed the two-step Planning-Commission-plus-BOCC backstop in 3-1503, and deleted the 10-unit project cap in Article 7 · DRAFT CODE RECOMMENDATIONS (85 min) -- review and refine code revisions before the Spring 2026 community-review phase · Closing",
 
-  "county|2026-04-01|Board of County Commissioners Meeting":
-    "PUBLIC HEARING: Resolution 2026-14 — Adoption of Colorado Wildfire Resiliency Code (enforcement July 1, 2026) · Planning: Paradigm Festival temporary use permit (Egnar) · Housing: Elizabeth Forsythe exception request to Rural Homes For Sale/For Locals regs (§5.2.4 & §5.2.5) · Affordable housing update · Tax abatement petitions: RRMV LLC (ABMT2026-7) and Epic Ridge Properties (ABMT2026-13), both recommended deny · Public Health: Septic Regulation update · Ophir Pass gate progress · Resolution 2026-15: Telluride Times designated legal newspaper of record · Litigation update Q1 · Executive session: DRMS mining regulations MOU",
-
   "telluride|2026-04-15|Historic & Architectural Review Commission":
     "PUBLIC HEARING (applicant req. to continue w/o discussion): 238 N Pine St (Lot 18B) — small-scale demolition + new construction (950–2,500 sq ft) + THAS secondary structure repositioning (continued from Feb 18) · PUBLIC HEARING (applicant req. to continue w/o discussion): 238 N Pine St (Lot 18A) — small-scale demolition + new construction (continued from Feb 18) · WORK SESSION: 208 S Fir St (Block 23) — large-scale mixed-use replacement structure (5,000+ sq ft, Commercial Zone, NIBA LLC / Shift Architects) · Colorado Wildfire Resiliency Code work session · Community Engagement — Historic Preservation discussion",
 
@@ -1142,12 +1139,6 @@ const MANUAL_SUMMARIES = {
   "telluride|2026-04-24|Telluride Housing Authority Subcommittee Special Meeting":
     "SMRHA LOTTERY DRAWING (10am, Rebekah Hall) — Three deed-restricted units: Silver Jack 202 (3-bed/2-bath, ~$405,507, Tier 1 Town Constructed) & Silver Jack 205 (2-bed/1-bath, ~$368,620, Tier 1 Town Constructed) at 155 W Pacific Ave · Element 52 SW-102 (2-bed/1-bath, ~$352,529, Tier 2 Mitigation) at 398 S Davis St · 22 applications received; qualified household list posted Apr 15; appeal deadline Apr 17 5pm MST",
 
-  "telluride|2026-04-01|Telluride Housing Authority Subcommittee":
-    "Exception request: Mills & Lusk household size exception (§103.3B & §105.4F) · Discussion: §110.2 lender/mortgage exceptions for April 24, 2026 housing lottery",
-
-  "telluride|2026-04-01|Commission for Community Assistance, Arts & Special Events":
-    "Public hearing: KOTO Radio street closures for Live @ the Drive (N Pine St, Jul 30 & Aug 27) · Calendar dates: KOTO, Telluride Rep Theatre (Impetus May 29), Augment Music Project concert series, SAF Oak St Park SHOW series · SM Basin Rodeo date change to Jul 31–Aug 1 · Palm Arts Dance winter performance (Dec 12–13) · Banners: Telluride Mountain Run, SM Resource Center DV Awareness Month",
-
   "telluride|2026-04-02|Vending Subcommittee":
     "Seasonal de-brief: Summer 2025 & Winter 2025-2026 vending compliance reports · Private property vending compliance · Vendor selection for 2026 summer season: North Spruce Park, Gondola Plaza, Colorado Ave (5 sites incl. N Oak St, Elks Park, S Spruce Mall, S Fir & W Pacific)",
 
@@ -1156,9 +1147,6 @@ const MANUAL_SUMMARIES = {
 
   "norwood|2026-04-20|Planning and Zoning Commission Meeting":
     "PUBLIC HEARING: Norwood Public Schools Re-Zoning Application — 2028 Maverick Way, Norwood · Norwood Public Schools Site Development Review · Dark Sky Coalition Update (Hailey Bruinsma) · San Miguel County Building Department Code Updates (Matt Gonzales & Serge Morin) · Land Use Code Progress Update · Approval of March 16, 2026 minutes",
-
-  "norwood|2026-04-01|Board of Trustees Special Meeting":
-    "SECOND READING equivalent — Adoption of Resolution No. 0401 (Series 2026): Colorado Model Wildfire Resiliency Code adopted by reference (2023 edition, per SB 23-166 & HB 26-1334) · Interim implementation authorized pending permanent ordinance · Applies to all new construction, substantial improvements & development activities · Town Administrator authorized to enforce",
 
   "telluride|2026-04-08|Ecology Commission":
     "WORKSESSION: Trash Bash event final planning · 2027 Climate Action Plan (CAP) update discussion — Buildings & Energy focus area",
@@ -4523,7 +4511,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "County Planning Commission 5/14 Meeting in TELLURIDE",
     source: "San Miguel County",
-    date: "April 30, 2026",
+    date: "May 1, 2026",
     newsTopic: "land-use",
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1393"
@@ -4557,6 +4545,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
 // Updated: 2026-04-18  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 5-1-26",
+    source: "KOTO Community Radio",
+    date: "May 2, 2026",
+    newsTopic: "land-use",
+    copy: "The city of Durango has proclaimed April 19, 2026 as Ross Anderson Day, marking twenty years since the Native American speed skier set a U.S. speed-skiing record of 154.06 miles per hour. We’ll also hear from a researcher working in Bears Ears who is turning to crowdfunding to continue his work after losing a federal grant. Then, we head to Utah, w",
+    href: "https://koto.org/news/newscast-5-1-26/"
+  },
   {
     title: "Newscast 4-30-26",
     source: "KOTO Community Radio",
@@ -4612,14 +4608,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "government",
     copy: "Floating Solar on Reservoir Number 2; Lawmakers Tackle the Budget",
     href: "https://koto.org/news/newscast-4-20-26/"
-  },
-  {
-    title: "Newscast 4-17-26",
-    source: "KOTO Community Radio",
-    date: "April 18, 2026",
-    newsTopic: "public-safety",
-    copy: "This week on the Regional Roundup, we look at concerns over a proposed move by the U.S. Forest Service from Washington, D.C. to Salt Lake City, and what that could mean for public lands management in the West. We’ll also visit a conserved organic orchard in Western Colorado, and we hear about new composting efforts in Aspen aimed at cutting greenho",
-    href: "https://koto.org/news/newscast-4-17-26/"
   }
 ];
 
@@ -5437,7 +5425,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-05-01'; // Updated by legal-notice-update task (dust control ITB, municipal financial advisor RFP)
+const LEGAL_NOTICES_CACHE_DATE = '2026-05-02'; // Updated by legal-notice-update task (dust control ITB, municipal financial advisor RFP)
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -5535,22 +5523,6 @@ const LEGAL_NOTICES = [
     address: "5634 County Rd H1, Egnar, CO"
   },
   {
-    title: "RFP -- Sheriff's Office Jail Based Behavioral Services",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "⚖️",
-    iconClass: "type-rfp",
-    type: "RFP",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking proposals from qualified providers to deliver jail-based behavioral services at the Sheriff's Office. Full RFP documents and submission requirements available at sanmiguelcountyco.gov/Bids.aspx.",
-    deadline: "Proposals due May 1, 2026 at 5:00 PM",
-    expires: "2026-05-01",
-    dates: "4/2",
-    papers: ["county_web"],
-    url: "https://www.sanmiguelcountyco.gov/Bids.aspx"
-  },
-  {
     title: "RFP -- Foundation Repairs at Placerville Schoolhouse",
     entity: "San Miguel County Parks & Open Space",
     entityClass: "ent-county",
@@ -5616,22 +5588,6 @@ const LEGAL_NOTICES = [
     papers: ["county_web"],
     url: "https://www.sanmiguelcountyco.gov/Bids.aspx",
     address: "Mill Creek Rd, Telluride, CO 81435"
-  },
-  {
-    title: "Employee Housing Impact Mitigation Fee Increase -- $1,112/sq ft Effective May 1, 2026",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏗️",
-    iconClass: "type-rates",
-    type: "Fee Change",
-    filterTag: "tax-finance",
-    summary: "San Miguel County is implementing the final phase of its Employee Housing Impact Mitigation Fee increase effective May 1, 2026. The fee will rise from $928 to $1,112 per square foot and applies to new residential construction and additions in the unincorporated County within the Telluride R-1 School District boundary. The fee is assessed at building permit issuance. Going forward, the fee will be reevaluated annually based on current construction costs. Contact the Planning Department at planning@sanmiguelcountyco.gov or 970-369-5423.",
-    deadline: "Effective May 1, 2026",
-    expires: "2026-05-01",
-    dates: "3/25",
-    papers: ["county_web"],
-    url: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx"
   },
   {
     title: "Notice of Vesting -- 116 E Columbia Ave Remodel Addition",
