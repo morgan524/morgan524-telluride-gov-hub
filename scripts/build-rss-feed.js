@@ -158,6 +158,7 @@ function buildNewsItems(src, articles, sourceLabel) {
       link: a.href || SITE_URL,
       pubDate: d,
       description: desc,
+      imageUrl: a.img || a.imageUrl || null,
       categories: [a.source || sourceLabel, a.newsTopic].filter(Boolean),
       guid: guidFor(a),
     }];
@@ -207,6 +208,7 @@ function buildEventItems(...sources) {
       link: e.href || `${SITE_URL}/#events`,
       pubDate: eventDate,
       description: desc,
+      imageUrl: e.img || e.imageUrl || null,
       categories: ['Community Event', e.source].filter(Boolean),
       guid: `${SITE_URL}/event/${encodeURIComponent(`${e.title.slice(0, 80)}|${e.date || ''}`)}`,
     });
@@ -310,18 +312,24 @@ function writeRssFeed(outPath, title, desc, selfUrl, items) {
   const lastBuild = new Date();
   const itemsXml = items.map((it) => {
     const cats = (it.categories || []).map((c) => `      <category>${xmlEscape(c)}</category>`).join('\n');
+    // Make image URL absolute (site-relative paths need the domain prepended)
+    let imgUrl = it.imageUrl || null;
+    if (imgUrl && imgUrl.startsWith('/')) imgUrl = SITE_URL + imgUrl;
+    const imgHtml = imgUrl ? `<img src="${imgUrl}" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />` : '';
+    const descHtml = imgHtml + (it.description || '');
+    const mediaTag = imgUrl ? `\n      <media:content url="${xmlEscape(imgUrl)}" medium="image" />` : '';
     return `    <item>
       <title>${xmlEscape(it.title)}</title>
       <link>${xmlEscape(it.link)}</link>
       <guid isPermaLink="false">${xmlEscape(it.guid)}</guid>
       <pubDate>${rfc822(it.pubDate)}</pubDate>
-      <description>${xmlEscape(it.description)}</description>
+      <description><![CDATA[${descHtml}]]></description>${mediaTag}
 ${cats}
     </item>`;
   }).join('\n');
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>${xmlEscape(title)}</title>
     <link>${SITE_URL}</link>
