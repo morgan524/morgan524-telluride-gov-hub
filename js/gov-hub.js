@@ -2788,26 +2788,59 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "CANCELLED-Balance in Motion - Equilibrio en Movimiento",
-    link: "https://telluridelibrary.libcal.com/event/16535296?hs=a",
-    description: "10:00 AM – 11:00 AM",
-    pubDate: "2026-05-02T10:00:00.000Z",
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://telluridelibrary.libcal.com/event/16515735?hs=a",
+    description: "11:00 AM – 12:00 PM",
+    pubDate: "2026-05-03T11:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
+  },
+  {
+    title: "Drop-In Tech Time with Oliver",
+    link: "https://telluridelibrary.libcal.com/event/15970372?hs=a",
+    description: "1:00 PM – 3:00 PM",
+    pubDate: "2026-05-03T13:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "2nd Floor Desk",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+  },
+  {
+    title: "Holding Space/Espacio de Espera con Daniel Kanow",
+    link: "https://telluridelibrary.libcal.com/event/16042596?hs=a",
+    description: "1:00 PM – 3:00 PM",
+    pubDate: "2026-05-03T13:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1740003527.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1767903630.jpg"
   },
   {
-    title: "Teen CPR Class",
-    link: "https://telluridelibrary.libcal.com/event/16696290?hs=a",
-    description: "10:00 AM – 3:30 PM",
-    pubDate: "2026-05-02T10:00:00.000Z",
+    title: "Tea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/16567823?hs=a",
+    description: "2:30 PM – 4:30 PM",
+    pubDate: "2026-05-03T14:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+  },
+  {
+    title: "Table Tennis Tournament with Prizes!",
+    link: "https://telluridelibrary.libcal.com/event/16795856?hs=a",
+    description: "3:00 PM – 5:00 PM",
+    pubDate: "2026-05-03T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_23_16_12_37.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_27_17_16_03.jpg"
   }
 ];
 
