@@ -5226,6 +5226,24 @@ function renderLocalNews(unused, filter) {
     return b.pubDate - a.pubDate;
   });
 
+  // Keep Humane Society cards out of the first 4 slots — scatter them randomly
+  // among the rest so they don't monopolize the top of the feed.
+  (function() {
+    const humane = articles.filter(a => a.sourceKey === 'humane-society');
+    const other  = articles.filter(a => a.sourceKey !== 'humane-society');
+    if (humane.length === 0) return; // nothing to rearrange
+    const top4 = other.slice(0, 4);
+    const rest  = other.slice(4);
+    // Randomly insert each humane card into the rest array
+    humane.forEach(card => {
+      const pos = Math.floor(Math.random() * (rest.length + 1));
+      rest.splice(pos, 0, card);
+    });
+    articles.length = 0;
+    top4.forEach(a => articles.push(a));
+    rest.forEach(a => articles.push(a));
+  })();
+
   if (articles.length === 0) {
     container.innerHTML = '<div class="empty-state">No local news matching this topic from the past two weeks. Check back soon or visit <a href="https://www.telluridenews.com" target="_blank" rel="noopener" style="color:var(--forest);font-weight:600;">Telluride Times</a> and <a href="https://koto.org" target="_blank" rel="noopener" style="color:var(--forest);font-weight:600;">KOTO</a> directly for the latest.</div>';
     return;
