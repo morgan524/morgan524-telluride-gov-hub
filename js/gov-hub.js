@@ -4887,7 +4887,8 @@ const LOCAL_GROUP_SCHEDULES = [
     time: '6:30 PM',
     locations: ['472 W Pacific Ave, Telluride'],
     href: 'https://www.facebook.com/pages/Telluride-Elks-Lodge-692/232150316875640',
-    note: 'Board/House Committee meets 2nd Thursdays at 5:30 PM.'
+    note: 'Board/House Committee meets 2nd Thursdays at 5:30 PM.',
+    section: 'events'   // Appears in Events tab, not Gov-Hub
   },
   {
     name: 'TMVOA',
