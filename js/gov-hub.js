@@ -1112,9 +1112,6 @@ const MANUAL_SUMMARIES = {
   "telluride|2026-04-15|Historic & Architectural Review Commission":
     "PUBLIC HEARING (applicant req. to continue w/o discussion): 238 N Pine St (Lot 18B) — small-scale demolition + new construction (950–2,500 sq ft) + THAS secondary structure repositioning (continued from Feb 18) · PUBLIC HEARING (applicant req. to continue w/o discussion): 238 N Pine St (Lot 18A) — small-scale demolition + new construction (continued from Feb 18) · WORK SESSION: 208 S Fir St (Block 23) — large-scale mixed-use replacement structure (5,000+ sq ft, Commercial Zone, NIBA LLC / Shift Architects) · Colorado Wildfire Resiliency Code work session · Community Engagement — Historic Preservation discussion",
 
-  "mv|2026-04-02|Design Review Board":
-    "Design review: Lot 164-B1R, San Joaquin Rd (new home + height variance) · Lot 155, San Joaquin Rd (new home) · Lot 1171R, San Joaquin Rd (new home) · Lot 224-B, Snowdrift Ln (new home) · Lot 523-R, Russell Dr (new home) · Lot 533, Russell Dr (new home) · 101 Snowfield Dr (GE encroachment, Lot 360) · 102 Yellow Brick Rd (Lot 17) · 111 San Joaquin Rd (GE encroachment, Lot 154) · 112 Autumn Ln (conditional use permit + ADU, Lot 382-R)",
-
   "county|2026-04-22|Board of County Commissioners Meeting":
     "PRESENTATION: Historical Commission 2026 Work Plan (Ted Wilson, Historical Commission; Janet Kask, Dir. of Parks & Open Space, 45 min) · Planning Department update (Kaye Simonson, 20 min) · Miramonte Space Planning update (Bordogna, Biggs) · Tax Abatement petition ABMT2026-7 RRMV LLC — staff recommended DENY · Consent: IGAs with TRAA, Mountain Village & Ophir for noxious weed management · Miramonte Boiler Replacement — updated Construction Agreement w/ Carl Kelly Plumbing (bonding incl.) · Deed Restriction V2016 amendments — Unit 314-13 Society Dr. (Cela White/Tanner Small), 182 Alexander Overlook (Cormac Bourke/Kathleen Morgan) · Armor Proseal asphalt installation agreement · JBBS 2027 contract amendment · Attorney matters (possible executive session)",
 
@@ -1138,9 +1135,6 @@ const MANUAL_SUMMARIES = {
 
   "telluride|2026-04-24|Telluride Housing Authority Subcommittee Special Meeting":
     "SMRHA LOTTERY DRAWING (10am, Rebekah Hall) — Three deed-restricted units: Silver Jack 202 (3-bed/2-bath, ~$405,507, Tier 1 Town Constructed) & Silver Jack 205 (2-bed/1-bath, ~$368,620, Tier 1 Town Constructed) at 155 W Pacific Ave · Element 52 SW-102 (2-bed/1-bath, ~$352,529, Tier 2 Mitigation) at 398 S Davis St · 22 applications received; qualified household list posted Apr 15; appeal deadline Apr 17 5pm MST",
-
-  "telluride|2026-04-02|Vending Subcommittee":
-    "Seasonal de-brief: Summer 2025 & Winter 2025-2026 vending compliance reports · Private property vending compliance · Vendor selection for 2026 summer season: North Spruce Park, Gondola Plaza, Colorado Ave (5 sites incl. N Oak St, Elks Park, S Spruce Mall, S Fir & W Pacific)",
 
   "norwood|2026-04-08|Board of Trustees Meeting":
     "Swearing in of new Trustees (Bernice White, Liza Tanguay) & Mayor (Candy Meehan) · Marijuana license renewals: Blue Cottage LLC / Mary Jane Medicinals (1510 Grand Ave) and Alpine Wellness (1630 Grand Ave) · Special event liquor license: Norwood Chamber of Commerce (1455 Pinion St) · Norwood Post / Telluride Times update (Erin Spiellane) · Public notices newspaper designation: SM Basin Forum or Telluride Times · Pocket Park bid — RMC Builders · Discussion: town speed limit reduction · Sheriff's Office written report · Parks & Recreation District report · Music on the Mesa report",
@@ -2638,39 +2632,6 @@ async function enrichKOTOEvent(item) {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Spring Health Month at TMC",
-    link: "https://koto.org/event/spring-health-month-at-tmc/",
-    description: "TMC is again offering special pricing for the month of May. Annual exam and corresponding lab work for $185 or less for adults and $50 for children. Call or visit tellmed.org to book your appointment today!",
-    pubDate: "2026-05-01T00:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Medical Center",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/Screenshot-2026-04-13-105702.png"
-  },
-  {
-    title: "Young People's Theater presents My Son Pinocchio Jr",
-    link: "https://koto.org/event/young-peoples-theater-presents-my-son-pinocchio-jr/2026-05-02/",
-    description: "The Sheridan Arts Foundation Young People’s Theater presents the middle school production of My Son, Pinocchio JR. at the historic Sheridan Opera House on Friday, May 1st & 2nd at 6:00 PM and Sunday, May 3rd at 4:00 PM.",
-    pubDate: "2026-05-02T18:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Gentle Yoga with Kristin Milord",
-    link: "https://koto.org/event/gentle-yoga-with-kristin-milord/",
-    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instru",
-    pubDate: "2026-05-03T11:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/gentle-yoga-kristen.png"
-  },
-  {
     title: "Drop In Tech Time with Oliver",
     link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-05-03/",
     description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access fr",
@@ -2801,6 +2762,28 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
+  },
+  {
+    title: "Gentle Yoga with Kristin Milord",
+    link: "https://koto.org/event/gentle-yoga-with-kristin-milord-2/2026-05-10/",
+    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class is free, but donations to support the instru",
+    pubDate: "2026-05-10T11:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/gentle-yoga-kristen-1.png"
+  },
+  {
+    title: "Nature Nurture for Moms with Lauren Norton",
+    link: "https://koto.org/event/nature-nurture-for-moms-with-lauren-norton/",
+    description: "Connect with Mother Nature on this Mother's Day 2026. Join Lauren Kaas Norton for a guided outdoor experience designed to help you slow down, ground yourself, and reconnect with the natural world. Through gentle breathwork, mindful movement, and guided reflection, you’ll explore a new way of being in relationship with the land rooted in presence, a",
+    pubDate: "2026-05-10T12:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/nature-nurture-6.png"
   }
 ];
 
@@ -2816,26 +2799,59 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "CANCELLED-Balance in Motion - Equilibrio en Movimiento",
-    link: "https://telluridelibrary.libcal.com/event/16535296?hs=a",
-    description: "10:00 AM – 11:00 AM",
-    pubDate: "2026-05-02T10:00:00.000Z",
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://telluridelibrary.libcal.com/event/16515735?hs=a",
+    description: "11:00 AM – 12:00 PM",
+    pubDate: "2026-05-03T11:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
+  },
+  {
+    title: "Drop-In Tech Time with Oliver",
+    link: "https://telluridelibrary.libcal.com/event/15970372?hs=a",
+    description: "1:00 PM – 3:00 PM",
+    pubDate: "2026-05-03T13:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "2nd Floor Desk",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+  },
+  {
+    title: "Holding Space/Espacio de Espera con Daniel Kanow",
+    link: "https://telluridelibrary.libcal.com/event/16042596?hs=a",
+    description: "1:00 PM – 3:00 PM",
+    pubDate: "2026-05-03T13:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1740003527.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1767903630.jpg"
   },
   {
-    title: "Teen CPR Class",
-    link: "https://telluridelibrary.libcal.com/event/16696290?hs=a",
-    description: "10:00 AM – 3:30 PM",
-    pubDate: "2026-05-02T10:00:00.000Z",
+    title: "Tea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/16567823?hs=a",
+    description: "2:30 PM – 4:30 PM",
+    pubDate: "2026-05-03T14:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+  },
+  {
+    title: "Table Tennis Tournament with Prizes!",
+    link: "https://telluridelibrary.libcal.com/event/16795856?hs=a",
+    description: "3:00 PM – 5:00 PM",
+    pubDate: "2026-05-03T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_23_16_12_37.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_27_17_16_03.jpg"
   }
 ];
 
@@ -4246,6 +4262,24 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-20  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Jonathan Fouser is Telluride Mountain School’s new head of school",
+    source: "Telluride Times",
+    date: "May 3, 2026",
+    newsTopic: "education",
+    copy: "Jonathan Fouser was recently appointed as the new head of school for Telluride Mountain School following an extensive nationwide search.",
+    href: "https://www.telluridenews.com/news/article_77d21881-a251-4576-a200-d746761986e3.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/67/86782a60-11e8-4c7e-8528-ed092884ae87/69f5ab43664e2.image.jpg?resize=300%2C300"
+  },
+  {
+    title: "Town council suspends waitlist policies",
+    source: "Telluride Times",
+    date: "May 2, 2026",
+    newsTopic: "housing",
+    copy: "Telluride Town Council, acting as the Telluride Housing Authority, voted during a meeting on April 28 to temporarily suspend its housing waitlist policies for town-owned rental units until the end of July.",
+    href: "https://www.telluridenews.com/news/article_766aee5a-65e5-4d4e-af87-0d75148b5bba.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/be/4be5885b-5c31-47e0-a343-371f832e5f5f/69f64629dcef0.image.jpg?resize=300%2C184"
+  },
+  {
     title: "Paul Wisor resigns as MV Town Manager",
     source: "Telluride Times",
     date: "May 1, 2026",
@@ -4451,24 +4485,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "For some, the answer is a definite yes. In Telluride, off-season began on April 6 with quiet streets and locals schools on spring break. Classes resumed April 20, but the serenity of spring continues. Missing your favorite coffee shop, watering…",
     href: "https://www.telluridenews.com/gallery/article_a66784be-15e4-457a-84de-c3e4bbaf7105.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/5c/05cbe539-c717-4525-98a2-888c077582ed/69e7ba253ef59.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Legals and Public Notices for April 23-29, 2026",
-    source: "Telluride Times",
-    date: "April 23, 2026",
-    newsTopic: "community",
-    copy: "PUBLIC HEARING NOTICE",
-    href: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    img: ""
-  },
-  {
-    title: "Assault charge for immigration officer in Colorado could test immunity provisions for federal agents",
-    source: "Telluride Times",
-    date: "April 23, 2026",
-    newsTopic: "community",
-    copy: "The decision in Colorado to charge an immigration officer with assault after a protester was grabbed by the neck and pulled away could test the boundaries of immunity provisions for federal agents in the line of duty. A Colorado prosecutor…",
-    href: "https://www.telluridenews.com/news/state/article_6467b8cc-2f6f-56a3-87f6-fb945517f4b8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/f5/ff50216b-e2da-5ecd-8931-20238c43544e/69e96a0aea89f.image.jpg?resize=300%2C200"
   },
   {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
