@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 May 2026 18:50:04 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 02:14:52 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
@@ -18,6 +18,15 @@
 Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four weeks of hiking from May 31 through June 28, with a kickoff at 11am on May 31 at the Oak Street gondola plaza. Hike from anywhere and raise funds for the Telluride Rotary Foundation — supporting scholarships, Youth Exchange, international projects, and community grants. 60% of nonprofit team funds go directly back to their nonprofit. Sponsored by Alpine Bank and Jagged Edge Mountain Gear.</description>
       <category>Community Event</category>
       <category>Telluride Rotary Club</category>
+    </item>
+    <item>
+      <title>Town council suspends waitlist policies</title>
+      <link>https://www.telluridenews.com/news/article_766aee5a-65e5-4d4e-af87-0d75148b5bba.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_766aee5a-65e5-4d4e-af87-0d75148b5bba.html</guid>
+      <pubDate>Sat, 02 May 2026 00:00:00 GMT</pubDate>
+      <description>Telluride Town Council, acting as the Telluride Housing Authority, voted during a meeting on April 28 to temporarily suspend its housing waitlist policies for town-owned rental units until the end of July.</description>
+      <category>Telluride Times</category>
+      <category>housing</category>
     </item>
     <item>
       <title>Newscast 5-1-26</title>
@@ -235,15 +244,6 @@ Open Space Commission monthly meeting -- review of regional open space initiativ
 Meeting scheduled for April 29, 2026 at 9:30 AM · Location: 333 West Colorado Ave, 2nd Floor · No specific agenda items provided in source material</description>
       <category>Meeting</category>
       <category>San Miguel County</category>
-    </item>
-    <item>
-      <title>Mountain Village approves emergency ordinance for water use</title>
-      <link>https://www.telluridenews.com/news/article_176574ee-5386-4f7a-bb01-f660d0e0e751.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/article_176574ee-5386-4f7a-bb01-f660d0e0e751.html</guid>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 GMT</pubDate>
-      <description>As spring remains dry, the Town of Mountain Village decided to implement more water regulations. Both the towns of Telluride and Mountain Village previously imposed outdoor water restrictions due to exceptionally low snowpack and ongoing drought. The decision is aimed…</description>
-      <category>Telluride Times</category>
-      <category>government</category>
     </item>
   </channel>
 </rss>
