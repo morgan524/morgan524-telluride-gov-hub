@@ -205,7 +205,7 @@ function buildEventItems(...sources) {
     ].filter(Boolean).join('\n');
     items.push({
       title: `[Event] ${e.title} — ${e.date || ''}`,
-      link: e.href || `${SITE_URL}/#events`,
+      link: `${SITE_URL}/#events`,
       pubDate: eventDate,
       description: desc,
       imageUrl: e.img || e.imageUrl || null,
