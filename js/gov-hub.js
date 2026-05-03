@@ -2632,17 +2632,6 @@ async function enrichKOTOEvent(item) {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Gentle Yoga with Kristin Milord",
-    link: "https://koto.org/event/gentle-yoga-with-kristin-milord/",
-    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instru",
-    pubDate: "2026-05-03T11:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/gentle-yoga-kristen.png"
-  },
-  {
     title: "Drop In Tech Time with Oliver",
     link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-05-03/",
     description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access fr",
@@ -2773,6 +2762,28 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
+  },
+  {
+    title: "Gentle Yoga with Kristin Milord",
+    link: "https://koto.org/event/gentle-yoga-with-kristin-milord-2/2026-05-10/",
+    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class is free, but donations to support the instru",
+    pubDate: "2026-05-10T11:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/gentle-yoga-kristen-1.png"
+  },
+  {
+    title: "Nature Nurture for Moms with Lauren Norton",
+    link: "https://koto.org/event/nature-nurture-for-moms-with-lauren-norton/",
+    description: "Connect with Mother Nature on this Mother's Day 2026. Join Lauren Kaas Norton for a guided outdoor experience designed to help you slow down, ground yourself, and reconnect with the natural world. Through gentle breathwork, mindful movement, and guided reflection, you’ll explore a new way of being in relationship with the land rooted in presence, a",
+    pubDate: "2026-05-10T12:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/nature-nurture-6.png"
   }
 ];
 
@@ -4251,6 +4262,15 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-20  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Jonathan Fouser is Telluride Mountain School’s new head of school",
+    source: "Telluride Times",
+    date: "May 3, 2026",
+    newsTopic: "education",
+    copy: "Jonathan Fouser was recently appointed as the new head of school for Telluride Mountain School following an extensive nationwide search.",
+    href: "https://www.telluridenews.com/news/article_77d21881-a251-4576-a200-d746761986e3.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/67/86782a60-11e8-4c7e-8528-ed092884ae87/69f5ab43664e2.image.jpg?resize=300%2C300"
+  },
+  {
     title: "Town council suspends waitlist policies",
     source: "Telluride Times",
     date: "May 2, 2026",
@@ -4465,15 +4485,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "For some, the answer is a definite yes. In Telluride, off-season began on April 6 with quiet streets and locals schools on spring break. Classes resumed April 20, but the serenity of spring continues. Missing your favorite coffee shop, watering…",
     href: "https://www.telluridenews.com/gallery/article_a66784be-15e4-457a-84de-c3e4bbaf7105.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/5c/05cbe539-c717-4525-98a2-888c077582ed/69e7ba253ef59.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Legals and Public Notices for April 23-29, 2026",
-    source: "Telluride Times",
-    date: "April 23, 2026",
-    newsTopic: "community",
-    copy: "PUBLIC HEARING NOTICE",
-    href: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    img: ""
   },
   {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
