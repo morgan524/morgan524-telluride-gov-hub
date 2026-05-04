@@ -324,15 +324,15 @@
       gap: 8px;
       margin-bottom: 12px;
     }
-    .deep-dive-submenu-icon { font-size: 1.1rem; filter: brightness(10); }
+    .deep-dive-submenu-icon { font-size: 1.65rem; filter: brightness(10); }
     .deep-dive-submenu-title {
       font-family: var(--font-heading);
-      font-size: 1.05rem;
+      font-size: 1.58rem;
       font-weight: 800;
       color: #fff;
     }
     .deep-dive-submenu-desc {
-      font-size: 0.82rem;
+      font-size: 1.23rem;
       color: rgba(255,255,255,0.7);
       font-weight: 400;
     }
@@ -347,7 +347,7 @@
       border-radius: 24px;
       background: rgba(255,255,255,0.12);
       font-family: 'Inter', sans-serif;
-      font-size: 0.82rem;
+      font-size: 1.23rem;
       font-weight: 600;
       color: #fff;
       cursor: pointer;
@@ -366,7 +366,7 @@
       box-shadow: 0 3px 12px rgba(0,0,0,0.2);
     }
     .deep-dive-topic-btn .dd-arrow {
-      font-size: 0.75rem;
+      font-size: 1.12rem;
       opacity: 0.6;
       transition: opacity 0.2s;
     }
@@ -374,7 +374,7 @@
     @media (max-width: 760px) {
       .deep-dive-submenu-inner { padding: 0 14px; }
       .deep-dive-submenu-desc { display: none; }
-      .deep-dive-topic-btn { padding: 6px 12px; font-size: 0.78rem; }
+      .deep-dive-topic-btn { padding: 6px 12px; font-size: 1.17rem; }
     }
 
     /* ── What to Follow (full-width bar below Deep Dive) ── */
@@ -3119,7 +3119,7 @@
       background: #ffffff;
     }
     .landuse-hero-image .landuse-image-credit {
-      font-size: 0.68rem;
+      font-size: 1.02rem;
       color: var(--text-muted);
       text-align: right;
       padding: 6px 12px 0;
@@ -3133,25 +3133,25 @@
       box-shadow: var(--shadow-soft);
     }
     .landuse-legal-summary-label {
-      font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em;
+      font-size: 1.08rem; font-weight: 800; letter-spacing: 0.1em;
       text-transform: uppercase; color: #8B4513; margin-bottom: 8px;
     }
     .landuse-legal-summary-text {
-      font-size: 0.88rem; line-height: 1.65; color: var(--text-main);
+      font-size: 1.32rem; line-height: 1.65; color: var(--text-main);
     }
     .landuse-kicker {
-      font-size: 0.72rem; font-weight: 800; letter-spacing: 0.11em;
+      font-size: 1.08rem; font-weight: 800; letter-spacing: 0.11em;
       text-transform: uppercase; opacity: 0.8; margin-bottom: 10px;
     }
     .landuse-hero h2 {
-      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      font-size: clamp(2.7rem, 4.5vw, 4.05rem);
       line-height: 1.02; letter-spacing: -0.04em; margin-bottom: 10px; max-width: 720px;
     }
-    .landuse-hero p { font-size: 0.96rem; color: rgba(255,255,255,0.88); max-width: 760px; line-height: 1.65; }
+    .landuse-hero p { font-size: 1.44rem; color: rgba(255,255,255,0.88); max-width: 760px; line-height: 1.65; }
     .landuse-topic-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
     .landuse-topic-pill {
       appearance: none; border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.11);
-      color: #fff; padding: 10px 14px; border-radius: 999px; font-size: 0.82rem; font-weight: 700;
+      color: #fff; padding: 10px 14px; border-radius: 999px; font-size: 1.23rem; font-weight: 700;
       cursor: pointer; transition: all 0.2s ease;
     }
     .landuse-topic-pill:hover, .landuse-topic-pill.active { background: #fff; color: var(--forest); border-color: #fff; transform: translateY(-1px); }
@@ -3162,8 +3162,8 @@
       border-radius: 28px; box-shadow: var(--shadow-soft); overflow: hidden;
     }
     .landuse-panel-header { padding: 20px 22px 12px; border-bottom: 1px solid rgba(221,213,200,0.55); }
-    .landuse-panel-header h3 { font-size: 1.08rem; font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 4px; }
-    .landuse-panel-header p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.55; }
+    .landuse-panel-header h3 { font-size: 1.62rem; font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 4px; }
+    .landuse-panel-header p { font-size: 1.23rem; color: var(--text-secondary); line-height: 1.55; }
     .landuse-panel-body { padding: 18px 22px 22px; }
 
     .landuse-status { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 14px; margin-bottom: 18px; }
@@ -3171,18 +3171,18 @@
       background: linear-gradient(180deg, rgba(41,82,71,0.07), rgba(41,82,71,0.03));
       border: 1px solid rgba(41,82,71,0.12); border-radius: 22px; padding: 18px;
     }
-    .landuse-status-label { font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 10px; }
-    .landuse-status-title { font-size: 1.15rem; font-weight: 800; color: var(--text-primary); line-height: 1.15; margin-bottom: 8px; }
-    .landuse-status-copy { font-size: 0.86rem; color: var(--text-secondary); line-height: 1.65; }
+    .landuse-status-label { font-size: 1.02rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 10px; }
+    .landuse-status-title { font-size: 1.72rem; font-weight: 800; color: var(--text-primary); line-height: 1.15; margin-bottom: 8px; }
+    .landuse-status-copy { font-size: 1.29rem; color: var(--text-secondary); line-height: 1.65; }
     .landuse-nextstep {
       display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding: 8px 12px;
-      border-radius: 999px; background: rgba(24,53,45,0.08); color: var(--forest); font-size: 0.76rem; font-weight: 700;
+      border-radius: 999px; background: rgba(24,53,45,0.08); color: var(--forest); font-size: 1.14rem; font-weight: 700;
     }
     .landuse-snapshot { display: grid; gap: 10px; align-content: start; }
     .landuse-metric { background: #fff; border: 1px solid rgba(221,213,200,0.8); border-radius: 18px; padding: 14px 15px; }
-    .landuse-metric-label { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 6px; }
-    .landuse-metric-value { font-size: 1.05rem; font-weight: 800; color: var(--text-primary); line-height: 1.15; }
-    .landuse-metric-sub { font-size: 0.76rem; color: var(--text-secondary); margin-top: 5px; line-height: 1.45; }
+    .landuse-metric-label { font-size: 1.05rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 6px; }
+    .landuse-metric-value { font-size: 1.58rem; font-weight: 800; color: var(--text-primary); line-height: 1.15; }
+    .landuse-metric-sub { font-size: 1.14rem; color: var(--text-secondary); margin-top: 5px; line-height: 1.45; }
 
     .landuse-timeline { position: relative; padding-left: 18px; }
     .landuse-timeline::before {
@@ -3196,9 +3196,9 @@
       background: var(--forest); box-shadow: 0 0 0 4px rgba(24,53,45,0.08);
     }
     .landuse-event.future::before { background: var(--accent-amber); box-shadow: 0 0 0 4px rgba(179,139,82,0.14); }
-    .landuse-event-date { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 5px; }
-    .landuse-event-title { font-size: 0.97rem; font-weight: 800; color: var(--text-primary); line-height: 1.35; margin-bottom: 4px; }
-    .landuse-event-copy { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.58; }
+    .landuse-event-date { font-size: 1.08rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 5px; }
+    .landuse-event-title { font-size: 1.46rem; font-weight: 800; color: var(--text-primary); line-height: 1.35; margin-bottom: 4px; }
+    .landuse-event-copy { font-size: 1.23rem; color: var(--text-secondary); line-height: 1.58; }
 
     .landuse-doc-list, .landuse-compact-list, .landuse-player-list { display: grid; gap: 10px; }
     .landuse-doc-item {
@@ -3207,19 +3207,19 @@
       transition: all 0.2s ease; color: inherit;
     }
     .landuse-doc-item:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(24,53,45,0.08); border-color: rgba(41,82,71,0.24); }
-    .landuse-doc-item strong { display: block; font-size: 0.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 4px; }
-    .landuse-doc-item span { display: block; font-size: 0.77rem; color: var(--text-secondary); line-height: 1.45; }
+    .landuse-doc-item strong { display: block; font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: 4px; }
+    .landuse-doc-item span { display: block; font-size: 1.16rem; color: var(--text-secondary); line-height: 1.45; }
     .landuse-doc-tag {
-      font-size: 0.67rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em;
+      font-size: 1.01rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em;
       color: var(--forest); background: rgba(24,53,45,0.08); border-radius: 999px; padding: 8px 10px; white-space: nowrap;
     }
     .landuse-compact-item { display: grid; gap: 4px; padding: 13px 0; border-bottom: 1px solid rgba(221,213,200,0.56); }
     .landuse-compact-item:first-child { padding-top: 0; }
     .landuse-compact-item:last-child { border-bottom: none; padding-bottom: 0; }
-    .landuse-compact-meta { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); }
-    .landuse-compact-title { font-size: 0.92rem; font-weight: 800; line-height: 1.4; color: var(--text-primary); text-decoration: none; }
+    .landuse-compact-meta { font-size: 1.05rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); }
+    .landuse-compact-title { font-size: 1.38rem; font-weight: 800; line-height: 1.4; color: var(--text-primary); text-decoration: none; }
     .landuse-compact-title:hover { text-decoration: underline; }
-    .landuse-compact-copy { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.55; }
+    .landuse-compact-copy { font-size: 1.2rem; color: var(--text-secondary); line-height: 1.55; }
     .landuse-compact-copy br { display: block; content: ''; margin-top: 2px; }
     .event-meta br, .card-meta br, .meeting-meta br { display:block; content:''; margin-top:2px; }
     .landuse-player {
@@ -3229,33 +3229,33 @@
     .landuse-player:last-child { border-bottom: none; padding-bottom: 0; }
     .landuse-player-badge {
       width: 38px; height: 38px; border-radius: 14px; display: inline-flex; align-items: center; justify-content: center;
-      background: rgba(24,53,45,0.08); color: var(--forest); font-size: 1rem;
+      background: rgba(24,53,45,0.08); color: var(--forest); font-size: 1.5rem;
     }
-    .landuse-player strong { display: block; font-size: 0.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px; }
-    .landuse-player span { display: block; font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; }
-    .landuse-empty { font-size: 0.82rem; color: var(--text-muted); padding: 10px 0 2px; }
+    .landuse-player strong { display: block; font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px; }
+    .landuse-player span { display: block; font-size: 1.17rem; color: var(--text-secondary); line-height: 1.5; }
+    .landuse-empty { font-size: 1.23rem; color: var(--text-muted); padding: 10px 0 2px; }
 
     /* ── Roundtable roster (e.g. SSR for Code Changes & Accelerated Review) ── */
     .landuse-roster { display: grid; gap: 16px; }
-    .landuse-roster-title { font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 4px; }
-    .landuse-roster-sub { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 6px; }
+    .landuse-roster-title { font-size: 1.42rem; font-weight: 800; color: var(--text-primary); margin-bottom: 4px; }
+    .landuse-roster-sub { font-size: 1.23rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 6px; }
     .landuse-roster-group { padding: 10px 0; border-top: 1px solid rgba(221,213,200,0.56); }
     .landuse-roster-group:first-of-type { border-top: none; padding-top: 0; }
     .landuse-roster-label {
-      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700;
+      font-size: 1.08rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700;
       color: var(--text-muted); margin-bottom: 8px;
     }
     .landuse-roster-members { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 6px 18px; }
-    .landuse-roster-member { font-size: 0.85rem; line-height: 1.45; color: var(--text-primary); padding: 4px 0; }
+    .landuse-roster-member { font-size: 1.27rem; line-height: 1.45; color: var(--text-primary); padding: 4px 0; }
     .landuse-roster-member strong { font-weight: 700; }
-    .landuse-roster-member span { color: var(--text-secondary); font-size: 0.78rem; }
+    .landuse-roster-member span { color: var(--text-secondary); font-size: 1.17rem; }
 
     /* ── Community Comment Section ── */
     .comment-section { margin-top: 28px; }
     .comment-section .landuse-panel { border: 1.5px solid var(--border-color); }
     .comment-guidelines {
       background: #FFF8E1; border: 1px solid #FFE082; border-radius: 10px;
-      padding: 14px 18px; margin-bottom: 18px; font-size: 0.82rem; line-height: 1.6; color: #5D4037;
+      padding: 14px 18px; margin-bottom: 18px; font-size: 1.23rem; line-height: 1.6; color: #5D4037;
     }
     .comment-guidelines strong { display: block; margin-bottom: 6px; font-size: 0.88rem; color: #3E2723; }
     .comment-guidelines ul { margin: 6px 0 0 18px; padding: 0; }
