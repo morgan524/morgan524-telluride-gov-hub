@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Telluride Region — Tell-Hub</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#21443C">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Livable TLR">
+  <link rel="apple-touch-icon" href="/logo/apple-touch-icon.png">
   <!-- Site styles (extracted) -->
   <link rel="stylesheet" href="css/site.css?v=2026-05-01-events">
   <!-- Hub-Bub forum styles (extracted) -->
@@ -51,6 +60,16 @@
 </script>
 <!-- EmailJS SDK for comment notification emails -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- Service Worker registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('SW registered:', reg.scope))
+          .catch(err => console.warn('SW registration failed:', err));
+      });
+    }
+  </script>
 </head>
 <body>
 
@@ -278,20 +297,11 @@
     </div>
 
     <div class="tab-content" id="tab-local-news">
-      <div style="margin-bottom:18px; padding:20px 22px; background:linear-gradient(135deg, rgba(33,68,60,0.07) 0%, rgba(166,143,87,0.10) 100%); border-radius:14px; border-left:4px solid var(--accent-green);">
-        <h3 style="margin:0 0 8px 0; font-size:1.15rem; color:var(--text-primary); font-family:var(--font-heading);">Local News from Telluride</h3>
-        <p style="margin:0 0 10px 0; font-size:0.88rem; color:var(--text-secondary); line-height:1.55;">
-          Stay informed with the latest reporting from the region's independent news outlets. Stories sourced from the
-          <a href="https://www.telluridenews.com" target="_blank" rel="noopener" style="color:var(--forest); font-weight:600;">Telluride Times</a> and
-          <a href="https://koto.org" target="_blank" rel="noopener" style="color:var(--forest); font-weight:600;">KOTO Community Radio</a>.
-        </p>
-        <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center; margin-top:10px;">
-          <a href="https://www.telluridenews.com" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; text-decoration:none; padding:6px 14px; background:white; border-radius:10px; border:1px solid rgba(33,68,60,0.12); font-size:0.82rem; color:var(--forest); font-weight:600;">
-            <img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="Telluride Times" style="height:22px; border-radius:4px;"> Visit Telluride Times
-          </a>
-          <a href="https://koto.org" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; text-decoration:none; padding:6px 14px; background:white; border-radius:10px; border:1px solid rgba(33,68,60,0.12); font-size:0.82rem; color:var(--forest); font-weight:600;">
-            <span id="kotoIntroLogo" style="height:22px; display:inline-flex; align-items:center;"></span> Visit KOTO
-          </a>
+      <!-- ══════════ TELLURIDE WEATHER CARD ══════════ -->
+      <div id="nws-weather-card" style="margin-bottom:18px; padding:20px 22px; background:linear-gradient(135deg, rgba(33,68,60,0.07) 0%, rgba(166,143,87,0.10) 100%); border-radius:14px; border-left:4px solid var(--accent-green);">
+        <h3 style="margin:0 0 12px 0; font-size:1.15rem; color:var(--text-primary); font-family:var(--font-heading);">⛅ Telluride Weather</h3>
+        <div id="nws-weather-body">
+          <div style="font-size:0.85rem; color:var(--text-secondary);">Loading weather…</div>
         </div>
       </div>
       <div class="localnews-layout">
@@ -2130,5 +2140,95 @@
 <!-- Google Translate -->
 <script src="js/legal-standalone.js?v=20260401k"></script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+/* ── Telluride NWS Weather Widget ── */
+(function () {
+  var NWS_POINTS = 'https://api.weather.gov/points/37.9375,-107.8123';
+  var UA = { 'User-Agent': 'livabletelluride.org weather@livabletelluride.org' };
+
+  function icon(desc) {
+    desc = (desc || '').toLowerCase();
+    if (desc.includes('thunder') || desc.includes('lightning')) return '⛈';
+    if (desc.includes('blizzard')) return '🌨';
+    if (desc.includes('snow')) return '❄️';
+    if (desc.includes('sleet') || desc.includes('freezing rain') || desc.includes('wintry mix')) return '🌨';
+    if (desc.includes('rain') || desc.includes('shower') || desc.includes('drizzle')) return '🌧';
+    if (desc.includes('fog') || desc.includes('mist') || desc.includes('haze')) return '🌫';
+    if (desc.includes('breezy') || desc.includes('blustery') || desc.includes('windy')) return '🌬';
+    if (desc.includes('partly cloudy') || desc.includes('partly sunny') || desc.includes('mostly sunny')) return '⛅';
+    if (desc.includes('mostly cloudy') || desc.includes('overcast')) return '☁️';
+    if (desc.includes('cloudy')) return '☁️';
+    if (desc.includes('sunny') || desc.includes('clear') || desc.includes('fair')) return '☀️';
+    return '🌤';
+  }
+
+  async function loadWeather() {
+    var body = document.getElementById('nws-weather-body');
+    if (!body) return;
+    try {
+      var ptRes = await fetch(NWS_POINTS, { headers: UA });
+      if (!ptRes.ok) throw new Error('points ' + ptRes.status);
+      var pt = await ptRes.json();
+      var props = pt.properties;
+
+      var fcRes  = await fetch(props.forecast,       { headers: UA });
+      var hrRes  = await fetch(props.forecastHourly, { headers: UA });
+      if (!fcRes.ok || !hrRes.ok) throw new Error('forecast fetch failed');
+      var fc = await fcRes.json();
+      var hr = await hrRes.json();
+
+      var now     = hr.properties.periods[0];
+      var periods = fc.properties.periods;
+
+      /* current conditions */
+      var temp  = now.temperature + '°' + now.temperatureUnit;
+      var desc  = now.shortForecast;
+      var wind  = now.windSpeed + ' ' + now.windDirection;
+      var elev  = '8,750 ft';   /* Telluride elevation */
+      var ico   = icon(desc);
+
+      /* 3-day daytime forecast */
+      var days = periods.filter(function(p){ return p.isDaytime; }).slice(0,3);
+      var dayCards = days.map(function(p) {
+        var d = new Date(p.startTime).toLocaleDateString('en-US', { weekday: 'short' });
+        return '<div style="flex:1;min-width:0;text-align:center;padding:8px 4px;background:rgba(255,255,255,0.65);border-radius:8px;">'
+          + '<div style="font-size:0.72rem;color:var(--text-secondary);font-weight:600;margin-bottom:3px;">' + d + '</div>'
+          + '<div style="font-size:1.4rem;line-height:1;">' + icon(p.shortForecast) + '</div>'
+          + '<div style="font-size:0.82rem;font-weight:700;color:var(--text-primary);margin-top:3px;">' + p.temperature + '°' + p.temperatureUnit + '</div>'
+          + '<div style="font-size:0.67rem;color:var(--text-secondary);margin-top:2px;line-height:1.25;">' + p.shortForecast + '</div>'
+          + '</div>';
+      }).join('');
+
+      var updated = new Date().toLocaleTimeString('en-US', { hour:'numeric', minute:'2-digit' });
+
+      body.innerHTML =
+        '<div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">'
+        + '<div style="font-size:3rem;line-height:1;">' + ico + '</div>'
+        + '<div>'
+        + '<div style="font-size:2rem;font-weight:700;color:var(--text-primary);line-height:1;">' + temp + '</div>'
+        + '<div style="font-size:0.88rem;color:var(--text-secondary);margin-top:3px;">' + desc + '</div>'
+        + '<div style="font-size:0.76rem;color:var(--text-secondary);margin-top:2px;">💨 ' + wind + ' &nbsp;·&nbsp; 📍 ' + elev + '</div>'
+        + '</div>'
+        + '</div>'
+        + '<div style="display:flex;gap:8px;">' + dayCards + '</div>'
+        + '<div style="margin-top:12px;font-size:0.74rem;color:var(--text-secondary);">'
+        + '<a href="https://forecast.weather.gov/MapClick.php?CityName=Telluride&state=CO&site=GJT&textField1=37.9375&textField2=-107.8123" target="_blank" rel="noopener" style="color:var(--forest);font-weight:600;">Full NWS Forecast →</a>'
+        + ' &nbsp;·&nbsp; Updated ' + updated
+        + '</div>';
+
+    } catch (err) {
+      body.innerHTML = '<p style="font-size:0.85rem;color:var(--text-secondary);">Weather temporarily unavailable. '
+        + '<a href="https://forecast.weather.gov/MapClick.php?CityName=Telluride&state=CO&site=GJT" target="_blank" rel="noopener" style="color:var(--forest);">Check NWS →</a></p>';
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadWeather);
+  } else {
+    loadWeather();
+  }
+})();
+</script>
 </body>
 </html>
