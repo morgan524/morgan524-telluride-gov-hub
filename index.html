@@ -293,6 +293,13 @@
           Long-form posts on housing, land use, civic decisions, and the issues shaping our valley. New posts are also delivered to subscribers via the daily and weekly digest.
         </p>
       </div>
+      <!-- TELLURIDE WEATHER CARD (blog tab) -->
+      <div style="margin-bottom:20px; padding:20px 22px; background:linear-gradient(135deg, rgba(33,68,60,0.07) 0%, rgba(166,143,87,0.10) 100%); border-radius:14px; border-left:4px solid var(--accent-green);">
+        <h3 style="margin:0 0 12px 0; font-size:1.15rem; color:var(--text-primary); font-family:var(--font-heading);">â Telluride Weather</h3>
+        <div class="nws-weather-body">
+          <div style="font-size:0.85rem; color:var(--text-secondary);">Loading weatherâ¦</div>
+        </div>
+      </div>
       <div id="blogPostsContainer"></div>
     </div>
 
@@ -300,7 +307,7 @@
       <!-- ══════════ TELLURIDE WEATHER CARD ══════════ -->
       <div id="nws-weather-card" style="margin-bottom:18px; padding:20px 22px; background:linear-gradient(135deg, rgba(33,68,60,0.07) 0%, rgba(166,143,87,0.10) 100%); border-radius:14px; border-left:4px solid var(--accent-green);">
         <h3 style="margin:0 0 12px 0; font-size:1.15rem; color:var(--text-primary); font-family:var(--font-heading);">⛅ Telluride Weather</h3>
-        <div id="nws-weather-body">
+        <div id="nws-weather-body" class="nws-weather-body">
           <div style="font-size:0.85rem; color:var(--text-secondary);">Loading weather…</div>
         </div>
       </div>
@@ -2164,8 +2171,8 @@
   }
 
   async function loadWeather() {
-    var body = document.getElementById('nws-weather-body');
-    if (!body) return;
+    var bodies = document.querySelectorAll('.nws-weather-body');
+    if (!bodies.length) return;
     try {
       var ptRes = await fetch(NWS_POINTS, { headers: UA });
       if (!ptRes.ok) throw new Error('points ' + ptRes.status);
@@ -2202,7 +2209,7 @@
 
       var updated = new Date().toLocaleTimeString('en-US', { hour:'numeric', minute:'2-digit' });
 
-      body.innerHTML =
+      var html =
         '<div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">'
         + '<div style="font-size:3rem;line-height:1;">' + ico + '</div>'
         + '<div>'
@@ -2216,10 +2223,12 @@
         + '<a href="https://forecast.weather.gov/MapClick.php?CityName=Telluride&state=CO&site=GJT&textField1=37.9375&textField2=-107.8123" target="_blank" rel="noopener" style="color:var(--forest);font-weight:600;">Full NWS Forecast →</a>'
         + ' &nbsp;·&nbsp; Updated ' + updated
         + '</div>';
+      bodies.forEach(function(b) { b.innerHTML = html; });
 
     } catch (err) {
-      body.innerHTML = '<p style="font-size:0.85rem;color:var(--text-secondary);">Weather temporarily unavailable. '
+      var errHtml = '<p style="font-size:0.85rem;color:var(--text-secondary);">Weather temporarily unavailable. '
         + '<a href="https://forecast.weather.gov/MapClick.php?CityName=Telluride&state=CO&site=GJT" target="_blank" rel="noopener" style="color:var(--forest);">Check NWS →</a></p>';
+      bodies.forEach(function(b) { b.innerHTML = errHtml; });
     }
   }
 
