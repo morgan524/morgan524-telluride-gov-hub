@@ -40,6 +40,13 @@ jobs:
           node scripts/build-rss-feed.js
         continue-on-error: true
 
+      - name: Run Deep Dive topic update
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          node scripts/deep-dive-refresh.js
+        continue-on-error: true
+
       - name: Check for changes
         id: changes
         run: |
@@ -53,5 +60,5 @@ jobs:
           git add -A
           git commit -m "🔄 Content refresh $(date -u +'%Y-%m-%d %H:%M UTC')
 
-          Automated update: meeting summaries, news, community pulse, legal notices, events"
+          Automated update: meeting summaries, news, community pulse, legal notices, events, deep dive topics"
           git push

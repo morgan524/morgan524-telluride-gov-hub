@@ -2173,6 +2173,13 @@ GONDOLA_DATA.label = 'Gondola 3A';
 GONDOLA_DATA.meetings = GONDOLA_DATA.meetings || [];
 LAND_USE_ISSUES.gondola = GONDOLA_DATA;
 
+// Auto-generated updates from Town of Telluride and San Miguel County meeting review.
+// Managed by scripts/deep-dive-refresh.js — do NOT edit by hand.
+// Each entry: { topic, type, source, articleDate, title, copy, href, addedDate }
+// type='news' entries are prepended to the topic's news section.
+// type='status' entries override the displayed statusCopy/nextStep.
+const DEEP_DIVE_UPDATES = [];
+
 let currentLandUseIssue = 'carhenge';
 
 // Populate Deep Dive topic buttons on Gov-Hub page
@@ -2262,12 +2269,18 @@ function renderLandUseTab() {
     }
   }
 
+  // Use auto-generated status override if present, otherwise fall back to hand-curated
+  const autoStatus = (typeof DEEP_DIVE_UPDATES !== 'undefined' ? DEEP_DIVE_UPDATES : [])
+    .filter(u => u.topic === currentLandUseIssue && u.type === 'status')
+    .sort((a, b) => (b.addedDate || '').localeCompare(a.addedDate || ''))[0];
+  const displayStatusCopy = (autoStatus && autoStatus.statusCopy) ? autoStatus.statusCopy : issue.statusCopy;
+  const displayNextStep   = (autoStatus && autoStatus.nextStep)   ? autoStatus.nextStep   : issue.nextStep;
   statusEl.innerHTML = `
     <div class="landuse-status-card">
-      <div class="landuse-status-label">Current status</div>
+      <div class="landuse-status-label">Current status${autoStatus ? '  <span style="font-size:0.68rem;color:var(--accent);font-weight:600;">· auto-updated</span>' : ''}</div>
       <div class="landuse-status-title">${issue.statusTitle}</div>
-      <div class="landuse-status-copy">${issue.statusCopy}</div>
-      <div class="landuse-nextstep">➜ ${issue.nextStep}</div>
+      <div class="landuse-status-copy">${displayStatusCopy}</div>
+      <div class="landuse-nextstep">➜ ${displayNextStep}</div>
     </div>
     <div class="landuse-snapshot">
       ${issue.metrics.map(metric => `
@@ -2342,14 +2355,21 @@ function renderLandUseTab() {
     }
   }
 
-  if (issue.news && issue.news.length) {
-    newsEl.innerHTML = issue.news.map(item => `
-      <div class="landuse-compact-item">
-        <div class="landuse-compact-meta">${item.source} · ${item.date}</div>
-        <a class="landuse-compact-title" href="${item.href}" target="_blank" rel="noopener">${item.title}</a>
-        <div class="landuse-compact-copy">${item.copy}</div>
-      </div>`).join('');
-  } else {
+  {
+    // Merge auto-generated updates (prepended, newest first) with hand-curated news
+    const autoNews = (typeof DEEP_DIVE_UPDATES !== 'undefined' ? DEEP_DIVE_UPDATES : [])
+      .filter(u => u.topic === currentLandUseIssue && u.type === 'news')
+      .sort((a, b) => (b.addedDate || '').localeCompare(a.addedDate || ''))
+      .map(u => ({ source: u.source, date: u.articleDate, title: u.title, copy: u.copy, href: u.href }));
+    const mergedNews = [...autoNews, ...(issue.news || [])];
+    if (mergedNews.length) {
+      newsEl.innerHTML = mergedNews.map(item => `
+        <div class="landuse-compact-item">
+          <div class="landuse-compact-meta">${item.source} · ${item.date}</div>
+          <a class="landuse-compact-title" href="${item.href}" target="_blank" rel="noopener">${item.title}</a>
+          <div class="landuse-compact-copy">${item.copy}</div>
+        </div>`).join('');
+    } else {
     const allNews = window.__allNewsCache || [];
     const news = allNews.filter(item => {
       const text = `${item.title || ''} ${item.description || ''}`.toLowerCase();
