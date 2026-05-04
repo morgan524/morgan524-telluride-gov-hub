@@ -2672,17 +2672,6 @@ async function enrichKOTOEvent(item) {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Strings in the Stacks with Annie Foxen",
-    link: "https://koto.org/event/strings-in-the-stacks-with-annie-foxen/",
-    description: "Unwind at the library with live violin music from violinist and WPL staff member, Annie Foxen. On the first Monday of every month, Annie fills the library with a calming mix of classical, Celtic, and folk tunes—perfect for reading, relaxing, or simply listening. Free and open to the public. All ages are welcome.",
-    pubDate: "2026-05-04T12:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/violin-2.png"
-  },
-  {
     title: "Savvy Seniors Tech Time",
     link: "https://koto.org/event/savvy-seniors-tech-time/",
     description: "Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music.",
@@ -2813,6 +2802,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Piano on the Patio with Oliver",
+    link: "https://koto.org/event/piano-on-the-patio-with-oliver/",
+    description: "Craving a break from the hustle and bustle of your day? Take a lunchtime escape to the library for a dose of tranquility. Settle into a comfy chair and unwind with ethereal piano melodies played live by WPL's very own, Oliver Henry, of Après Nova. Unplug from your devices and bring a book, magazine, or simply enjoy a moment of peace and quiet. This",
+    pubDate: "2026-05-11T12:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/PATIO-3.png"
   }
 ];
 
@@ -4302,6 +4302,15 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-20  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "States across the wildfire-prone Western US are using AI for early detection",
+    source: "Telluride Times",
+    date: "May 4, 2026",
+    newsTopic: "public-safety",
+    copy: "Another severe wildfire season is forecast for the Western U.S. due to record-breaking heat and an abysmal snowpack. Some states and utilities are trying to get ahead of that threat using AI. In Arizona, the state’s largest electric utility is…",
+    href: "https://www.telluridenews.com/news/state/article_3d9717e8-6111-5f8d-b69b-3260bf6758a8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3c/c3c369ac-5496-5153-b4fc-3638934dc35a/69f899e7aa3db.image.jpg?resize=300%2C200"
+  },
+  {
     title: "Jonathan Fouser is Telluride Mountain School’s new head of school",
     source: "Telluride Times",
     date: "May 3, 2026",
@@ -4516,15 +4525,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Telluride Town Clerk has officially certified candidates for Telluride Town Council’s special election on June 30 — the first time there have been more candidates than open seats on council since 2023.",
     href: "https://www.telluridenews.com/news/article_68c45a3a-0714-44e9-b0b4-a237f39657d2.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/21/a21bf33b-c002-4a52-a20d-577939094d4a/69ea5ed10a0b7.image.jpg?resize=300%2C231"
-  },
-  {
-    title: "Is off-season the best season?",
-    source: "Telluride Times",
-    date: "April 23, 2026",
-    newsTopic: "infrastructure",
-    copy: "For some, the answer is a definite yes. In Telluride, off-season began on April 6 with quiet streets and locals schools on spring break. Classes resumed April 20, but the serenity of spring continues. Missing your favorite coffee shop, watering…",
-    href: "https://www.telluridenews.com/gallery/article_a66784be-15e4-457a-84de-c3e4bbaf7105.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/5c/05cbe539-c717-4525-98a2-888c077582ed/69e7ba253ef59.image.jpg?resize=300%2C200"
   },
   {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
