@@ -2186,7 +2186,18 @@ LAND_USE_ISSUES.gondola = GONDOLA_DATA;
 // Each entry: { topic, type, source, articleDate, title, copy, href, addedDate }
 // type='news' entries are prepended to the topic's news section.
 // type='status' entries override the displayed statusCopy/nextStep.
-const DEEP_DIVE_UPDATES = [];
+const DEEP_DIVE_UPDATES = [
+{
+  topic: "wildfire",
+  type: "news",
+  source: "San Miguel County",
+  articleDate: "2026-05-01",
+  title: "San Miguel County Launches Living with Wildfire Information Site",
+  copy: "San Miguel County launched a new online resource called Living with Wildfire offering preparation, mitigation, evacuation, and recovery information. The site consolidates wildfire-related guidance in one accessible location for county residents.",
+  href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=522",
+  addedDate: "2026-05-04"
+}
+];
 
 let currentLandUseIssue = 'carhenge';
 
@@ -4329,7 +4340,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "April 30, 2026",
     newsTopic: "government",
-    copy: "Earlier this year, Telluride and Norwood students participated in a sticker contest, with 18 creative kiddos taking part. The brief, set by the San Miguel County Clerk��s Office, was to devise a design that could be used as the artwork…",
+    copy: "Earlier this year, Telluride and Norwood students participated in a sticker contest, with 18 creative kiddos taking part. The brief, set by the San Miguel County Clerk’s Office, was to devise a design that could be used as the artwork…",
     href: "https://www.telluridenews.com/news/article_3022309d-c7c1-4717-85d3-41ac89e3f795.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/9d/79d165ca-16ce-40fa-a9ac-77113d7839c8/69f1660ad0191.image.png?resize=300%2C389"
   },
@@ -4808,7 +4819,7 @@ const BLOG_POSTS = [
 const HUMANE_SOCIETY_ANIMALS = [
   {
     id: "TEL-A-176",
-    name: "Kammie",
+    name: "PENDING ADOPTION - Kammie",
     species: "Dog",
     breed: "Pyrenees, Great",
     ageGroup: "Young Dog",
@@ -4830,7 +4841,7 @@ const HUMANE_SOCIETY_ANIMALS = [
   },
   {
     id: "TEL-A-178",
-    name: "Butch",
+    name: "PENDING ADOPTION - Butch",
     species: "Dog",
     breed: "Mixed Breed (Large)",
     ageGroup: "Young Puppy",
