@@ -2828,59 +2828,70 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Gentle Yoga with Kristen Milord",
-    link: "https://telluridelibrary.libcal.com/event/16515735?hs=a",
-    description: "11:00 AM – 12:00 PM",
-    pubDate: "2026-05-03T11:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
-  },
-  {
-    title: "Drop-In Tech Time with Oliver",
-    link: "https://telluridelibrary.libcal.com/event/15970372?hs=a",
-    description: "1:00 PM – 3:00 PM",
-    pubDate: "2026-05-03T13:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "2nd Floor Desk",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
-  },
-  {
-    title: "Holding Space/Espacio de Espera con Daniel Kanow",
-    link: "https://telluridelibrary.libcal.com/event/16042596?hs=a",
-    description: "1:00 PM – 3:00 PM",
-    pubDate: "2026-05-03T13:00:00.000Z",
+    title: "Musik for Kinders",
+    link: "https://telluridelibrary.libcal.com/event/16567228?hs=a",
+    description: "10:30 AM – 11:30 AM",
+    pubDate: "2026-05-04T10:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1767903630.jpg"
+    imageUrl: ""
   },
   {
-    title: "Tea and Tarot",
-    link: "https://telluridelibrary.libcal.com/event/16567823?hs=a",
-    description: "2:30 PM – 4:30 PM",
-    pubDate: "2026-05-03T14:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
-  },
-  {
-    title: "Table Tennis Tournament with Prizes!",
-    link: "https://telluridelibrary.libcal.com/event/16795856?hs=a",
-    description: "3:00 PM – 5:00 PM",
-    pubDate: "2026-05-03T15:00:00.000Z",
+    title: "Strings in the Stacks: Live Violin with Annie Foxen",
+    link: "https://telluridelibrary.libcal.com/event/16759871?hs=a",
+    description: "12:00 PM – 1:00 PM",
+    pubDate: "2026-05-04T12:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_27_17_16_03.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1769020935.jpg"
+  },
+  {
+    title: "Savvy Seniors-Open Tech",
+    link: "https://telluridelibrary.libcal.com/event/16592924?hs=a",
+    description: "1:30 PM – 2:30 PM",
+    pubDate: "2026-05-04T13:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Meeting Room #6 - large",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_12_11_48.png"
+  },
+  {
+    title: "Hobby Hopping / Salta Hobbies",
+    link: "https://telluridelibrary.libcal.com/event/16802069?hs=a",
+    description: "4:00 PM – 5:00 PM",
+    pubDate: "2026-05-04T16:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_28_12_44_40.png"
+  },
+  {
+    title: "Cíclica & Humana",
+    link: "https://telluridelibrary.libcal.com/event/16730501?hs=a",
+    description: "5:00 PM – 6:30 PM",
+    pubDate: "2026-05-04T17:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_14_16_58.jpg"
+  },
+  {
+    title: "Puzzle Competition",
+    link: "https://telluridelibrary.libcal.com/event/16662698?hs=a",
+    description: "5:00 PM – 7:00 PM",
+    pubDate: "2026-05-04T17:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_31_14_35_50.jpg"
   }
 ];
 
