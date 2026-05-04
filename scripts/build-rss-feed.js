@@ -191,8 +191,57 @@ function buildMeetingItems(summaries) {
   return items.slice(0, MAX_MEETINGS);
 }
 
+/**
+ * Compute a "send slot" string for an event based on how far away it is.
+ * Embedding the slot in the GUID means Mailchimp sees a NEW item each slot —
+ * giving recurring send behaviour without re-sending every single day.
+ *
+ * Rules (from today's perspective):
+ *   today          → slot = today's ISO date  (sends once on the day)
+ *   1–7 days away  → slot = ISO week + "a" (Mon) or "b" (Thu) — up to 2x/week
+ *   8–30 days away → slot = ISO year-week  — once per week
+ *   31–60 days     → slot = year + 2-week block — every other week
+ */
+function eventSendSlot(eventDate, today) {
+  const msPerDay = 86400000;
+  const daysAway = Math.round((eventDate - today) / msPerDay);
+
+  if (daysAway <= 0) {
+    // Event is today (or past but within lookback)
+    return today.toISOString().slice(0, 10);
+  }
+
+  // ISO week helper
+  function isoWeek(d) {
+    const tmp = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+    tmp.setUTCDate(tmp.getUTCDate() + 4 - (tmp.getUTCDay() || 7));
+    const yearStart = new Date(Date.UTC(tmp.getUTCFullYear(), 0, 1));
+    return [tmp.getUTCFullYear(), Math.ceil(((tmp - yearStart) / 86400000 + 1) / 7)];
+  }
+
+  const [yr, wk] = isoWeek(today);
+  const weekStr = `${yr}-W${String(wk).padStart(2, '0')}`;
+
+  if (daysAway <= 7) {
+    // Up to 2 sends per week: Mon–Wed = slot "a", Thu–Sun = slot "b"
+    const dow = today.getUTCDay(); // 0=Sun
+    const half = (dow >= 4 || dow === 0) ? 'b' : 'a';
+    return `${weekStr}-${half}`;
+  }
+
+  if (daysAway <= 30) {
+    // Once per week
+    return weekStr;
+  }
+
+  // Every 2 weeks
+  return `${yr}-B${Math.ceil(wk / 2)}`;
+}
+
 function buildEventItems(...sources) {
   const events = sources.flatMap((s) => Array.isArray(s) ? s : []);
+  const today = new Date();
+  today.setUTCHours(0, 0, 0, 0);
   const items = [];
   for (const e of events) {
     if (!e || !e.title) continue;
@@ -203,17 +252,19 @@ function buildEventItems(...sources) {
       e.eventTimes || e.time ? `🕒 ${e.eventTimes || e.time}` : null,
       e.copy || e.description || '',
     ].filter(Boolean).join('\n');
+    const slot = eventSendSlot(eventDate, today);
     items.push({
       title: `[Event] ${e.title} — ${e.date || ''}`,
       link: `${SITE_URL}/#events`,
-      pubDate: eventDate,
+      pubDate: today,          // use today so it's "new" in this slot
       description: desc,
       imageUrl: e.img || e.imageUrl || null,
       categories: ['Community Event', e.source].filter(Boolean),
-      guid: `${SITE_URL}/event/${encodeURIComponent(`${e.title.slice(0, 80)}|${e.date || ''}`)}`,
+      // Slot embedded in GUID → Mailchimp sees a fresh item each send window
+      guid: `${SITE_URL}/event/${encodeURIComponent(`${e.title.slice(0, 80)}|${e.date || ''}|${slot}`)}`,
     });
   }
-  items.sort((a, b) => a.pubDate - b.pubDate);
+  items.sort((a, b) => parseDate(a.description.split('\n')[0]) - parseDate(b.description.split('\n')[0]) || a.title.localeCompare(b.title));
   return items.slice(0, MAX_EVENTS);
 }
 
@@ -288,6 +339,39 @@ function main() {
     .filter((it) => it.pubDate instanceof Date && !isNaN(it.pubDate.getTime()))
     .sort((a, b) => b.pubDate - a.pubDate)
     .slice(0, MAX_ITEMS);
+
+  // ── Minimum-4 filler: pad with upcoming events when digest is thin ──
+  // If fewer than 4 unique items will go out, add the next upcoming
+  // community events (within 60 days) so subscribers always get something.
+  if (items.length < 4) {
+    const today = new Date();
+    today.setUTCHours(0, 0, 0, 0);
+    const existingGuids = new Set(items.map((i) => i.guid));
+    const allEvents = [...events, ...jsonEvents];
+    const filler = allEvents
+      .filter((e) => e && e.title)
+      .map((e) => {
+        const eventDate = parseDate(e.date || e.startDate || e.Date);
+        if (!withinRollingWindow(eventDate, 0, MAX_EVENT_FUTURE_DAYS)) return null;
+        const slot = eventSendSlot(eventDate, today);
+        const guid = `${SITE_URL}/event/${encodeURIComponent(`${e.title.slice(0, 80)}|${e.date || ''}|${slot}`)}`;
+        if (existingGuids.has(guid)) return null;
+        const desc = [
+          e.location ? `📍 ${e.location}` : null,
+          e.eventTimes || e.time ? `🕒 ${e.eventTimes || e.time}` : null,
+          e.copy || e.description || '',
+        ].filter(Boolean).join('\n');
+        return { title: `[Event] ${e.title} — ${e.date || ''}`, link: `${SITE_URL}/#events`,
+          pubDate: today, description: desc, categories: ['Community Event'], guid };
+      })
+      .filter(Boolean)
+      .sort((a, b) => a.title.localeCompare(b.title));
+    for (const f of filler) {
+      if (items.length >= 4) break;
+      items.push(f);
+    }
+    console.log(`  Padded digest to ${items.length} items with upcoming-event filler`);
+  }
 
   console.log(`  Emitting ${items.length} items to feed.xml (max: ${MAX_ITEMS})`);
 

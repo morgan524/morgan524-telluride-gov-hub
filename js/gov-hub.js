@@ -4311,6 +4311,14 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3c/c3c369ac-5496-5153-b4fc-3638934dc35a/69f899e7aa3db.image.jpg?resize=300%2C200"
   },
   {
+    title: "Safe actions in work zones can save lives",
+    source: "Telluride Times",
+    date: "May 4, 2026",
+    newsTopic: "community",
+    copy: "Imagine sitting and working at your office desk, but cars are whizzing by just a few feet away. A column on work zone safety and the responsibility drivers share with road crews.",
+    href: "https://www.telluridenews.com/opinion/columnists/article_0527f33c-d1be-4f91-9d6b-a570a138bf81.html"
+  },
+  {
     title: "Jonathan Fouser is Telluride Mountain School’s new head of school",
     source: "Telluride Times",
     date: "May 3, 2026",
