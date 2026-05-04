@@ -1,0 +1,42 @@
+name: Festival Ticket Status Check
+
+on:
+  schedule:
+    # Every Monday at 10:00 UTC (4am Mountain Time)
+    - cron: '0 10 * * 1'
+  workflow_dispatch: # Manual trigger from GitHub Actions UI
+
+permissions:
+  contents: write
+
+jobs:
+  ticket-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run festival ticket status check
+        run: node scripts/festival-ticket-check.js
+        continue-on-error: true
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "Gov Hub Bot"
+          git config user.email "bot@livabletelluride.org"
+          git add js/gov-hub.js
+          git commit -m "🎟️ Festival ticket status update $(date -u +'%Y-%m-%d')
+
+          Automated weekly check: updated ticketStatus/promo for changed festivals"
+          git push
