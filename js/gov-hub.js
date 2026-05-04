@@ -2672,17 +2672,6 @@ async function enrichKOTOEvent(item) {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Savvy Seniors Tech Time",
-    link: "https://koto.org/event/savvy-seniors-tech-time/",
-    description: "Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music.",
-    pubDate: "2026-05-04T13:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/May26.png"
-  },
-  {
     title: "Sound Bath with Erin",
     link: "https://koto.org/event/sound-bath-with-erin/",
     description: "Bathe in the resonance of time through the healing medium of Himalayan singing bowls. These elemental, multi-tonal instruments help us release worry and drop into a state of zen. Leave your cares outside, find tranquility on your mat, and dissolve with the bowl’s vibrations. Space is limited; please sign up below. BYO mat if possible, plus anything",
@@ -2716,6 +2705,28 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/04/may-Trivia.png"
   },
   {
+    title: "Telluride Rotary Club Meeting",
+    link: "https://koto.org/event/telluride-rotary-club-meeting-2/",
+    description: "Telluride Rotary Club meets Wednesday, May 6, at 6 p.m. at the Mountain Lodge in Mountain Village. Meetings feature guest speakers and discussion of club projects. Anyone with an interest in networking and service is welcome to drop in as a guest. Email telluriderotary@gmail.com for info or to rsvp.",
+    pubDate: "2026-05-06T18:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/Telluride-Rotary-Logo-White.png"
+  },
+  {
+    title: "Pilates for All Bodies with Laura",
+    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-3/2026-05-07/",
+    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-05-07T08:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/PILATES.png"
+  },
+  {
     title: "Pilates for All Bodies with Laura",
     link: "https://koto.org/event/pilates-for-all-bodies-with-laura/",
     description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can",
@@ -2747,6 +2758,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Lone Cone Library Norwood",
     imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Placerville Community Yard Sale",
+    link: "https://koto.org/event/placerville-community-yard-sale/",
+    description: "The Placerville Community Yard Sale is happening on Saturday, May 9, starting at 9 a.m. The weather should be perfect!",
+    pubDate: "2026-05-09T09:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
   },
   {
     title: "Bilingual Balance in Motion",
@@ -2813,6 +2835,39 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/04/PATIO-3.png"
+  },
+  {
+    title: "Savvy Seniors- Open Tech",
+    link: "https://koto.org/event/savvy-seniors-open-tech/",
+    description: "Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music.",
+    pubDate: "2026-05-11T13:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/May26-2.png"
+  },
+  {
+    title: "An Absolute Beginners Guide to Music Theory",
+    link: "https://koto.org/event/an-absolute-beginners-guide-to-music-theory-2/",
+    description: "In this event series, Annie and Rachel will take you on a journey,—starting from the very beginning of reading music—to give you the skills to start reading sheet music on your own.",
+    pubDate: "2026-05-11T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/music-theory-2.png"
+  },
+  {
+    title: "Cardio Dance Class with Kelsey",
+    link: "https://koto.org/event/cardio-dance-class-with-kelsey/",
+    description: "Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won't even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. ¡Únete a nosotros para una divertida noche de baile y ejercicio! Te divertirás tanto que ni te darás cuenta de que estás haciendo ejercicio. Dirigido",
+    pubDate: "2026-05-11T18:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
   }
 ];
 
@@ -4302,277 +4357,269 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-20  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: 'States across the wildfire-prone Western US are using AI for early detection',
-    source: 'Telluride Times',
-    date: 'May 4, 2026',
-    newsTopic: 'public-safety',
-    copy: 'Another severe wildfire season is forecast for the Western U.S. due to record-breaking heat and an abysmal snowpack. Some states and utilities are trying to get ahead of that threat using AI. In Arizona, the state’s largest electric utility is…',
-    href: 'https://www.telluridenews.com/news/state/article_3d9717e8-6111-5f8d-b69b-3260bf6758a8.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3c/c3c369ac-5496-5153-b4fc-3638934dc35a/69f899e7aa3db.image.jpg?resize=300%2C200'
+    title: "States across the wildfire-prone Western US are using AI for early detection",
+    source: "Telluride Times",
+    date: "May 4, 2026",
+    newsTopic: "public-safety",
+    copy: "Another severe wildfire season is forecast for the Western U.S. due to record-breaking heat and an abysmal snowpack. Some states and utilities are trying to get ahead of that threat using AI. In Arizona, the state’s largest electric utility is…",
+    href: "https://www.telluridenews.com/news/state/article_3d9717e8-6111-5f8d-b69b-3260bf6758a8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3c/c3c369ac-5496-5153-b4fc-3638934dc35a/69f899e7aa3db.image.jpg?resize=300%2C200"
   },
   {
-    title: 'Safe actions in work zones can save lives',
-    source: 'Telluride Times',
-    date: 'May 4, 2026',
-    newsTopic: 'community',
-    copy: 'Imagine sitting and working at your office desk, but cars are whizzing by just a few feet away. A column on work zone safety and the responsibility drivers share with road crews.',
-    href: 'https://www.telluridenews.com/opinion/columnists/article_0527f33c-d1be-4f91-9d6b-a570a138bf81.html'
+    title: "Jonathan Fouser is Telluride Mountain School’s new head of school",
+    source: "Telluride Times",
+    date: "May 3, 2026",
+    newsTopic: "education",
+    copy: "Jonathan Fouser was recently appointed as the new head of school for Telluride Mountain School following an extensive nationwide search.",
+    href: "https://www.telluridenews.com/news/article_77d21881-a251-4576-a200-d746761986e3.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/67/86782a60-11e8-4c7e-8528-ed092884ae87/69f5ab43664e2.image.jpg?resize=300%2C300"
   },
   {
-    title: 'Jonathan Fouser is Telluride Mountain School’s new head of school',
-    source: 'Telluride Times',
-    date: 'May 3, 2026',
-    newsTopic: 'education',
-    copy: 'Jonathan Fouser was recently appointed as the new head of school for Telluride Mountain School following an extensive nationwide search.',
-    href: 'https://www.telluridenews.com/news/article_77d21881-a251-4576-a200-d746761986e3.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/67/86782a60-11e8-4c7e-8528-ed092884ae87/69f5ab43664e2.image.jpg?resize=300%2C300'
+    title: "Town council suspends waitlist policies",
+    source: "Telluride Times",
+    date: "May 2, 2026",
+    newsTopic: "housing",
+    copy: "Telluride Town Council, acting as the Telluride Housing Authority, voted during a meeting on April 28 to temporarily suspend its housing waitlist policies for town-owned rental units until the end of July.",
+    href: "https://www.telluridenews.com/news/article_766aee5a-65e5-4d4e-af87-0d75148b5bba.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/be/4be5885b-5c31-47e0-a343-371f832e5f5f/69f64629dcef0.image.jpg?resize=300%2C184"
   },
   {
-    title: 'Town council suspends waitlist policies',
-    source: 'Telluride Times',
-    date: 'May 2, 2026',
-    newsTopic: 'housing',
-    copy: 'Telluride Town Council, acting as the Telluride Housing Authority, voted during a meeting on April 28 to temporarily suspend its housing waitlist policies for town-owned rental units until the end of July.',
-    href: 'https://www.telluridenews.com/news/article_766aee5a-65e5-4d4e-af87-0d75148b5bba.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/be/4be5885b-5c31-47e0-a343-371f832e5f5f/69f64629dcef0.image.jpg?resize=300%2C184'
+    title: "Paul Wisor resigns as MV Town Manager",
+    source: "Telluride Times",
+    date: "May 1, 2026",
+    newsTopic: "arts-culture",
+    copy: "In the latest fallout from the investigation surrounding former Mountain Village Mayor Marti Prohaska and former Telluride Mayor Pro Tem Meehan Fee and their December 2025 “offer to purchase” Telluride Ski Resort (Telski) on behalf of unnamed investors, the Town…",
+    href: "https://www.telluridenews.com/news/article_2c1cc16d-5e4a-4543-86bd-1faadf9f7028.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/86/38610eb6-050c-4a1d-963e-dd31f000024c/69f4eedeb0d89.image.webp?resize=300%2C450"
   },
   {
-    title: 'Paul Wisor resigns as MV Town Manager',
-    source: 'Telluride Times',
-    date: 'May 1, 2026',
-    newsTopic: 'arts-culture',
-    copy: 'In the latest fallout from the investigation surrounding former Mountain Village Mayor Marti Prohaska and former Telluride Mayor Pro Tem Meehan Fee and their December 2025 “offer to purchase” Telluride Ski Resort (Telski) on behalf of unnamed investors, the Town…',
-    href: 'https://www.telluridenews.com/news/article_2c1cc16d-5e4a-4543-86bd-1faadf9f7028.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/86/38610eb6-050c-4a1d-963e-dd31f000024c/69f4eedeb0d89.image.webp?resize=300%2C450'
+    title: "Trump gives go-ahead to major new Canada-US oil pipeline",
+    source: "Telluride Times",
+    date: "April 30, 2026",
+    newsTopic: "infrastructure",
+    copy: "President Donald Trump has granted a key approval to a major new pipeline that would move oil from Canada into the central U.S. The three-foot-wide Bridger Pipeline Expansion would carry up to 550,000 barrels of oil a day from the…",
+    href: "https://www.telluridenews.com/news/state/article_93f080bd-3bff-5091-afc4-5a9ddae33488.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c9/ec9912c8-b253-5755-acce-42c147636686/69f3c91b34529.image.jpg?resize=300%2C200"
   },
   {
-    title: 'Trump gives go-ahead to major new Canada-US oil pipeline',
-    source: 'Telluride Times',
-    date: 'April 30, 2026',
-    newsTopic: 'infrastructure',
-    copy: 'President Donald Trump has granted a key approval to a major new pipeline that would move oil from Canada into the central U.S. The three-foot-wide Bridger Pipeline Expansion would carry up to 550,000 barrels of oil a day from the…',
-    href: 'https://www.telluridenews.com/news/state/article_93f080bd-3bff-5091-afc4-5a9ddae33488.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c9/ec9912c8-b253-5755-acce-42c147636686/69f3c91b34529.image.jpg?resize=300%2C200'
+    title: "Telski update to council: bike park’s future uncertain",
+    source: "Telluride Times",
+    date: "April 30, 2026",
+    newsTopic: "government",
+    copy: "Telluride Ski Resort (Telski) representative Steve Swenson came before Telluride Town Council at its Tuesday, April 28, meeting to offer a semi-regular update at council’s request.",
+    href: "https://www.telluridenews.com/news/article_8e8c2d7e-8aed-42dd-83b6-036f40b6fb54.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/e5/ee56772c-7de4-4126-8ef7-d8bc4dfd4025/69f3c904ec009.image.jpg?resize=300%2C200"
   },
   {
-    title: 'Telski update to council: bike park’s future uncertain',
-    source: 'Telluride Times',
-    date: 'April 30, 2026',
-    newsTopic: 'government',
-    copy: 'Telluride Ski Resort (Telski) representative Steve Swenson came before Telluride Town Council at its Tuesday, April 28, meeting to offer a semi-regular update at council’s request.',
-    href: 'https://www.telluridenews.com/news/article_8e8c2d7e-8aed-42dd-83b6-036f40b6fb54.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/e5/ee56772c-7de4-4126-8ef7-d8bc4dfd4025/69f3c904ec009.image.jpg?resize=300%2C200'
+    title: "Telluride’s ‘I voted/yo voté’ sticker contest winners",
+    source: "Telluride Times",
+    date: "April 30, 2026",
+    newsTopic: "government",
+    copy: "Earlier this year, Telluride and Norwood students participated in a sticker contest, with 18 creative kiddos taking part. The brief, set by the San Miguel County Clerk’s Office, was to devise a design that could be used as the artwork…",
+    href: "https://www.telluridenews.com/news/article_3022309d-c7c1-4717-85d3-41ac89e3f795.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/9d/79d165ca-16ce-40fa-a9ac-77113d7839c8/69f1660ad0191.image.png?resize=300%2C389"
   },
   {
-    title: 'Telluride’s ‘I voted/yo voté’ sticker contest winners',
-    source: 'Telluride Times',
-    date: 'April 30, 2026',
-    newsTopic: 'government',
-    copy: 'Earlier this year, Telluride and Norwood students participated in a sticker contest, with 18 creative kiddos taking part. The brief, set by the San Miguel County Clerk’s Office, was to devise a design that could be used as the artwork…',
-    href: 'https://www.telluridenews.com/news/article_3022309d-c7c1-4717-85d3-41ac89e3f795.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/9d/79d165ca-16ce-40fa-a9ac-77113d7839c8/69f1660ad0191.image.png?resize=300%2C389'
+    title: "Lindsey Vonn tells the AP she is not yet in position emotionally to decide if she will race again",
+    source: "Telluride Times",
+    date: "April 30, 2026",
+    newsTopic: "public-safety",
+    copy: "Lindsey Vonn is still recovering physically and emotionally from her frightening crash at the Winter Olympics. She has undergone eight surgeries after suffering a complex left leg fracture — one that nearly led to amputation — in the women’s downhill…",
+    href: "https://www.telluridenews.com/news/state/article_8e0ab335-1e12-5377-af15-ff97d158dede.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/c6/3c6899e9-4691-5fd5-be26-4d01403e1ebf/69f3542094bae.image.jpg?resize=300%2C200"
   },
   {
-    title: 'Lindsey Vonn tells the AP she is not yet in position emotionally to decide if she will race again',
-    source: 'Telluride Times',
-    date: 'April 30, 2026',
-    newsTopic: 'public-safety',
-    copy: 'Lindsey Vonn is still recovering physically and emotionally from her frightening crash at the Winter Olympics. She has undergone eight surgeries after suffering a complex left leg fracture — one that nearly led to amputation — in the women’s downhill…',
-    href: 'https://www.telluridenews.com/news/state/article_8e0ab335-1e12-5377-af15-ff97d158dede.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/c6/3c6899e9-4691-5fd5-be26-4d01403e1ebf/69f3542094bae.image.jpg?resize=300%2C200'
+    title: "Here's how to grow your own food with less water, even in a drought",
+    source: "Telluride Times",
+    date: "April 30, 2026",
+    newsTopic: "infrastructure",
+    copy: "After one of the worst snow years on record in the western United States, communities must live with less water. Around this time of year, home gardeners are starting to grow their own produce as utilities enact outdoor watering restrictions.…",
+    href: "https://www.telluridenews.com/news/state/article_62ad4304-c441-5377-acde-86dcbdde9312.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/d2/ed2b9a2e-dea0-5f0d-9b8e-8a1e2e924534/69f3541bd0685.image.jpg?resize=300%2C200"
   },
   {
-    title: 'Here\'s how to grow your own food with less water, even in a drought',
-    source: 'Telluride Times',
-    date: 'April 30, 2026',
-    newsTopic: 'infrastructure',
-    copy: 'After one of the worst snow years on record in the western United States, communities must live with less water. Around this time of year, home gardeners are starting to grow their own produce as utilities enact outdoor watering restrictions.…',
-    href: 'https://www.telluridenews.com/news/state/article_62ad4304-c441-5377-acde-86dcbdde9312.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/d2/ed2b9a2e-dea0-5f0d-9b8e-8a1e2e924534/69f3541bd0685.image.jpg?resize=300%2C200'
+    title: "Legals and Public Notices for April 30-May 6, 2026",
+    source: "Telluride Times",
+    date: "April 30, 2026",
+    newsTopic: "infrastructure",
+    copy: "SMC BOCC OWTS Variance Application for Slator Aplin, the owner of Lot 1 & 2, Blk Q in Ophir. The applicant seeks a Variance to the Minimum Setbacks as stated in Table 7-1 of the San Miguel County On-Site Wastewater…",
+    href: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
+    img: ""
   },
   {
-    title: 'Legals and Public Notices for April 30-May 6, 2026',
-    source: 'Telluride Times',
-    date: 'April 30, 2026',
-    newsTopic: 'infrastructure',
-    copy: 'SMC BOCC OWTS Variance Application for Slator Aplin, the owner of Lot 1 & 2, Blk Q in Ophir. The applicant seeks a Variance to the Minimum Setbacks as stated in Table 7-1 of the San Miguel County On-Site Wastewater…',
-    href: 'https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html',
-    img: ''
+    title: "West End drought survival",
+    source: "Telluride Times",
+    date: "April 29, 2026",
+    newsTopic: "community",
+    copy: "The Colorado State University (CSU) Extension program has served home gardeners for more than a century across a network of county offices, 4-H clubs and local Master Gardeners.",
+    href: "https://www.telluridenews.com/news/article_a778a9e9-c819-4849-9e80-fad649fa33c6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/4b/34b91d82-6339-4684-9229-8250f4823b6c/69f1697616de8.image.jpg?resize=300%2C182"
   },
   {
-    title: 'West End drought survival',
-    source: 'Telluride Times',
-    date: 'April 29, 2026',
-    newsTopic: 'community',
-    copy: 'The Colorado State University (CSU) Extension program has served home gardeners for more than a century across a network of county offices, 4-H clubs and local Master Gardeners.',
-    href: 'https://www.telluridenews.com/news/article_a778a9e9-c819-4849-9e80-fad649fa33c6.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/4b/34b91d82-6339-4684-9229-8250f4823b6c/69f1697616de8.image.jpg?resize=300%2C182'
+    title: "Far from the original in Philadelphia, these fans hunt for the Liberty Bell replica in each state",
+    source: "Telluride Times",
+    date: "April 29, 2026",
+    newsTopic: "government",
+    copy: "If you can't visit the original Liberty Bell in Philadelphia, you might find a dead ringer nearby. For a 1950 bond drive, the Treasury Department commissioned replicas for each U.S. state and several territories. These replicas have become a fascination…",
+    href: "https://www.telluridenews.com/news/state/article_6c4b6e25-2cb9-51b8-b812-1143e07369b9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/7e/37efb440-e66f-5d94-a2bc-43449e73e748/69f1e9285fdc5.image.jpg?resize=300%2C200"
   },
   {
-    title: 'Far from the original in Philadelphia, these fans hunt for the Liberty Bell replica in each state',
-    source: 'Telluride Times',
-    date: 'April 29, 2026',
-    newsTopic: 'government',
-    copy: 'If you can\'t visit the original Liberty Bell in Philadelphia, you might find a dead ringer nearby. For a 1950 bond drive, the Treasury Department commissioned replicas for each U.S. state and several territories. These replicas have become a fascination…',
-    href: 'https://www.telluridenews.com/news/state/article_6c4b6e25-2cb9-51b8-b812-1143e07369b9.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/7e/37efb440-e66f-5d94-a2bc-43449e73e748/69f1e9285fdc5.image.jpg?resize=300%2C200'
+    title: "‘We’ve legislated our way into housing insecurity’",
+    source: "Telluride Times",
+    date: "April 28, 2026",
+    newsTopic: "housing",
+    copy: "Editor's note: After The Telluride Times published this story in print and online, the Town of Telluride responded to an earlier request from The Times for updated vacancy information. The updated numbers, current as of April 27, indicate that there…",
+    href: "https://www.telluridenews.com/news/article_fc7e07da-d18b-4b4e-8371-ae908bc5f813.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/5a/25abcf8b-8de8-41c9-8d2d-5da48a05d4a5/69f10d434c461.image.jpg?resize=300%2C400"
   },
   {
-    title: '‘We’ve legislated our way into housing insecurity’',
-    source: 'Telluride Times',
-    date: 'April 28, 2026',
-    newsTopic: 'housing',
-    copy: 'Editor\'s note: After The Telluride Times published this story in print and online, the Town of Telluride responded to an earlier request from The Times for updated vacancy information. The updated numbers, current as of April 27, indicate that there…',
-    href: 'https://www.telluridenews.com/news/article_fc7e07da-d18b-4b4e-8371-ae908bc5f813.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/5a/25abcf8b-8de8-41c9-8d2d-5da48a05d4a5/69f10d434c461.image.jpg?resize=300%2C400'
+    title: "Telluride Times staff win seven awards at Top of the Rockies",
+    source: "Telluride Times",
+    date: "April 28, 2026",
+    newsTopic: "community",
+    copy: "The Telluride Times, under its former name, the Telluride Daily Planet, won seven awards at the Society of Professional Journalists’ 2026 Top of the Rockies Excellence in Journalism competition.",
+    href: "https://www.telluridenews.com/news/article_aa173851-b6c9-49cc-ab64-d2e92b45ddb4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/96/796a7f6b-d98a-44c8-b1cf-48fc5b8ff1fe/69efd2c95a1fa.image.jpg?resize=300%2C200"
   },
   {
-    title: 'Telluride Times staff win seven awards at Top of the Rockies',
-    source: 'Telluride Times',
-    date: 'April 28, 2026',
-    newsTopic: 'community',
-    copy: 'The Telluride Times, under its former name, the Telluride Daily Planet, won seven awards at the Society of Professional Journalists’ 2026 Top of the Rockies Excellence in Journalism competition.',
-    href: 'https://www.telluridenews.com/news/article_aa173851-b6c9-49cc-ab64-d2e92b45ddb4.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/96/796a7f6b-d98a-44c8-b1cf-48fc5b8ff1fe/69efd2c95a1fa.image.jpg?resize=300%2C200'
+    title: "Girls’ Lax poised for final title push",
+    source: "Telluride Times",
+    date: "April 27, 2026",
+    newsTopic: "education",
+    copy: "Whether the Telluride High School girls’ lacrosse players like it or not, final exams will be here before they know it.",
+    href: "https://www.telluridenews.com/news/article_d99c2f0a-ffc0-4d79-aee1-fa0042d83a5e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/51/f51b09a3-51ab-4ae2-9366-80f32d7f6b90/69efcf9a79ae9.image.jpg?resize=300%2C200"
   },
   {
-    title: 'Girls’ Lax poised for final title push',
-    source: 'Telluride Times',
-    date: 'April 27, 2026',
-    newsTopic: 'education',
-    copy: 'Whether the Telluride High School girls’ lacrosse players like it or not, final exams will be here before they know it.',
-    href: 'https://www.telluridenews.com/news/article_d99c2f0a-ffc0-4d79-aee1-fa0042d83a5e.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/51/f51b09a3-51ab-4ae2-9366-80f32d7f6b90/69efcf9a79ae9.image.jpg?resize=300%2C200'
+    title: "Mountain Village approves emergency ordinance for water use",
+    source: "Telluride Times",
+    date: "April 26, 2026",
+    newsTopic: "government",
+    copy: "As spring remains dry, the Town of Mountain Village decided to implement more water regulations. Both the towns of Telluride and Mountain Village previously imposed outdoor water restrictions due to exceptionally low snowpack and ongoing drought. The decision is aimed…",
+    href: "https://www.telluridenews.com/news/article_176574ee-5386-4f7a-bb01-f660d0e0e751.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/f4/7f4a4336-692d-4b29-951f-d2bd922f4fe9/69ed120c7443d.image.jpg?resize=300%2C200"
   },
   {
-    title: 'Mountain Village approves emergency ordinance for water use',
-    source: 'Telluride Times',
-    date: 'April 26, 2026',
-    newsTopic: 'government',
-    copy: 'As spring remains dry, the Town of Mountain Village decided to implement more water regulations. Both the towns of Telluride and Mountain Village previously imposed outdoor water restrictions due to exceptionally low snowpack and ongoing drought. The decision is aimed…',
-    href: 'https://www.telluridenews.com/news/article_176574ee-5386-4f7a-bb01-f660d0e0e751.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/f4/7f4a4336-692d-4b29-951f-d2bd922f4fe9/69ed120c7443d.image.jpg?resize=300%2C200'
+    title: "MV town council briefed about investigation of former mayor",
+    source: "Telluride Times",
+    date: "April 25, 2026",
+    newsTopic: "government",
+    copy: "At its Thursday, April 23, monthly meeting, Mountain Village Town Council received a behind-closed-doors briefing lasting over two hours on the subject of the investigation surrounding former Mayor Marti Prohaska’s December meeting with Telluride Ski Resort owner Chuck Horning and…",
+    href: "https://www.telluridenews.com/news/article_cf8a6058-6209-4936-a446-44c2f15a13af.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/28/5288590f-2f6c-40a9-9d32-31b6f7ff8f5e/69ed071dd778e.image.jpg?resize=300%2C182"
   },
   {
-    title: 'MV town council briefed about investigation of former mayor',
-    source: 'Telluride Times',
-    date: 'April 25, 2026',
-    newsTopic: 'government',
-    copy: 'At its Thursday, April 23, monthly meeting, Mountain Village Town Council received a behind-closed-doors briefing lasting over two hours on the subject of the investigation surrounding former Mayor Marti Prohaska’s December meeting with Telluride Ski Resort owner Chuck Horning and…',
-    href: 'https://www.telluridenews.com/news/article_cf8a6058-6209-4936-a446-44c2f15a13af.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/28/5288590f-2f6c-40a9-9d32-31b6f7ff8f5e/69ed071dd778e.image.jpg?resize=300%2C182'
+    title: "Former Colorado funeral home owner sentenced to 30 years in case that forced industry crackdown",
+    source: "Telluride Times",
+    date: "April 25, 2026",
+    newsTopic: "community",
+    copy: "A former Colorado funeral home owner who helped her ex-husband hide nearly 200 decomposing bodies has been sentenced to 30 years in prison. The case prompted state officials to clamp down on an industry plagued by repeated scandal and notoriously…",
+    href: "https://www.telluridenews.com/news/state/article_3b8df69a-cf09-5380-b5aa-6bd41a218089.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/d4/fd440f91-55ae-5ccf-9ae1-e3503e0b0d7f/69eaef1b5239b.image.jpg?resize=300%2C200"
   },
   {
-    title: 'Former Colorado funeral home owner sentenced to 30 years in case that forced industry crackdown',
-    source: 'Telluride Times',
-    date: 'April 25, 2026',
-    newsTopic: 'community',
-    copy: 'A former Colorado funeral home owner who helped her ex-husband hide nearly 200 decomposing bodies has been sentenced to 30 years in prison. The case prompted state officials to clamp down on an industry plagued by repeated scandal and notoriously…',
-    href: 'https://www.telluridenews.com/news/state/article_3b8df69a-cf09-5380-b5aa-6bd41a218089.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/d4/fd440f91-55ae-5ccf-9ae1-e3503e0b0d7f/69eaef1b5239b.image.jpg?resize=300%2C200'
+    title: "A weekend of mushroom love",
+    source: "Telluride Times",
+    date: "April 25, 2026",
+    newsTopic: "arts-culture",
+    copy: "Came for the spores, came back for the rad community connection: More than just a fest, the Telluride Mushroom Festival is “an annual reunion” for thousands of “fungi folks,” who return to the box canyon every year to celebrate all…",
+    href: "https://www.telluridenews.com/news/article_d8eb8e65-c686-4c22-b5f7-b8d73b0c3d20.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/45/f45402c7-f21b-4625-9c4b-9ad04daab19c/69ebacdb3d620.image.jpg?resize=300%2C449"
   },
   {
-    title: 'A weekend of mushroom love',
-    source: 'Telluride Times',
-    date: 'April 25, 2026',
-    newsTopic: 'arts-culture',
-    copy: 'Came for the spores, came back for the rad community connection: More than just a fest, the Telluride Mushroom Festival is “an annual reunion” for thousands of “fungi folks,” who return to the box canyon every year to celebrate all…',
-    href: 'https://www.telluridenews.com/news/article_d8eb8e65-c686-4c22-b5f7-b8d73b0c3d20.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/45/f45402c7-f21b-4625-9c4b-9ad04daab19c/69ebacdb3d620.image.jpg?resize=300%2C449'
+    title: "Former Colorado funeral home owner sentenced to 30 years in case that forced state to clamp down on industry",
+    source: "Telluride Times",
+    date: "April 24, 2026",
+    newsTopic: "community",
+    copy: "Former Colorado funeral home owner sentenced to 30 years in case that forced state to clamp down on industry.",
+    href: "https://www.telluridenews.com/news/state/article_68436a91-206c-5002-8868-19e121d7b3aa.html",
+    img: ""
   },
   {
-    title: 'Former Colorado funeral home owner sentenced to 30 years in case that forced state to clamp down on industry',
-    source: 'Telluride Times',
-    date: 'April 24, 2026',
-    newsTopic: 'community',
-    copy: 'Former Colorado funeral home owner sentenced to 30 years in case that forced state to clamp down on industry.',
-    href: 'https://www.telluridenews.com/news/state/article_68436a91-206c-5002-8868-19e121d7b3aa.html',
-    img: ''
+    title: "Bark beetles are eating through trees in San Miguel County",
+    source: "Telluride Times",
+    date: "April 24, 2026",
+    newsTopic: "community",
+    copy: "An insect scarcely bigger than a grain of rice is infesting trees in the forests of San Miguel County.",
+    href: "https://www.telluridenews.com/news/article_cc9e2caf-f011-456d-b0e8-c9d98c5510aa.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/a9/4a969e1e-7375-4d2f-b8cd-bde6b0aaa812/69ebaf7fa8a0f.image.jpg?resize=300%2C400"
   },
   {
-    title: 'Bark beetles are eating through trees in San Miguel County',
-    source: 'Telluride Times',
-    date: 'April 24, 2026',
-    newsTopic: 'community',
-    copy: 'An insect scarcely bigger than a grain of rice is infesting trees in the forests of San Miguel County.',
-    href: 'https://www.telluridenews.com/news/article_cc9e2caf-f011-456d-b0e8-c9d98c5510aa.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/a9/4a969e1e-7375-4d2f-b8cd-bde6b0aaa812/69ebaf7fa8a0f.image.jpg?resize=300%2C400'
+    title: "County discusses future planning projects",
+    source: "Telluride Times",
+    date: "April 24, 2026",
+    newsTopic: "land-use",
+    copy: "The San Miguel Board of County Commissioners (BOCC) held its first meeting after a spring hiatus on Wednesday, April 22. Moving forward into a new season, planning, development and permitting were on top of mind.",
+    href: "https://www.telluridenews.com/news/article_df3af361-8522-4d1f-9bca-3c050b74c95b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/1f/a1f0586a-f7fe-489e-a348-0b63cc2b8228/69eafe3da3a22.image.jpg?resize=300%2C225"
   },
   {
-    title: 'County discusses future planning projects',
-    source: 'Telluride Times',
-    date: 'April 24, 2026',
-    newsTopic: 'land-use',
-    copy: 'The San Miguel Board of County Commissioners (BOCC) held its first meeting after a spring hiatus on Wednesday, April 22. Moving forward into a new season, planning, development and permitting were on top of mind.',
-    href: 'https://www.telluridenews.com/news/article_df3af361-8522-4d1f-9bca-3c050b74c95b.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/1f/a1f0586a-f7fe-489e-a348-0b63cc2b8228/69eafe3da3a22.image.jpg?resize=300%2C225'
+    title: "Not your parents’ PE",
+    source: "Telluride Times",
+    date: "April 24, 2026",
+    newsTopic: "housing",
+    copy: "Outside the gymnasium of the Telluride Elementary School (TES), physical education teacher Erin Murray waited for her class of first-grade students to arrive.",
+    href: "https://www.telluridenews.com/news/article_a4c5d839-f765-42ef-8d91-38ffc315ad4d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/f5/af558834-d00d-4c09-afd8-5bd5e32123d2/69e8798e37429.image.jpg?resize=300%2C400"
   },
   {
-    title: 'Not your parents’ PE',
-    source: 'Telluride Times',
-    date: 'April 24, 2026',
-    newsTopic: 'housing',
-    copy: 'Outside the gymnasium of the Telluride Elementary School (TES), physical education teacher Erin Murray waited for her class of first-grade students to arrive.',
-    href: 'https://www.telluridenews.com/news/article_a4c5d839-f765-42ef-8d91-38ffc315ad4d.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/f5/af558834-d00d-4c09-afd8-5bd5e32123d2/69e8798e37429.image.jpg?resize=300%2C400'
+    title: "Federal judge orders release of family of man charged in Colorado firebomb attack",
+    source: "Telluride Times",
+    date: "April 23, 2026",
+    newsTopic: "public-safety",
+    copy: "A federal judge has ordered the release from immigration custody of the family of a man charged in a fatal firebomb attack in Boulder, Colorado, last year. U.S. District Judge Fred Biery in San Antonio said Hayam El Gamal and…",
+    href: "https://www.telluridenews.com/news/state/article_09f12f45-ca76-5230-a9c6-768867dc500c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/df/8dfd6a5c-a101-5ad6-891e-bcee98b6b578/69ea6f2fc96b2.image.jpg?resize=300%2C200"
   },
   {
-    title: 'Federal judge orders release of family of man charged in Colorado firebomb attack',
-    source: 'Telluride Times',
-    date: 'April 23, 2026',
-    newsTopic: 'public-safety',
-    copy: 'A federal judge has ordered the release from immigration custody of the family of a man charged in a fatal firebomb attack in Boulder, Colorado, last year. U.S. District Judge Fred Biery in San Antonio said Hayam El Gamal and…',
-    href: 'https://www.telluridenews.com/news/state/article_09f12f45-ca76-5230-a9c6-768867dc500c.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/df/8dfd6a5c-a101-5ad6-891e-bcee98b6b578/69ea6f2fc96b2.image.jpg?resize=300%2C200'
+    title: "Telluride Town Clerk certifies council candidates for June election",
+    source: "Telluride Times",
+    date: "April 23, 2026",
+    newsTopic: "government",
+    copy: "The Telluride Town Clerk has officially certified candidates for Telluride Town Council’s special election on June 30 — the first time there have been more candidates than open seats on council since 2023.",
+    href: "https://www.telluridenews.com/news/article_68c45a3a-0714-44e9-b0b4-a237f39657d2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/21/a21bf33b-c002-4a52-a20d-577939094d4a/69ea5ed10a0b7.image.jpg?resize=300%2C231"
   },
   {
-    title: 'Telluride Town Clerk certifies council candidates for June election',
-    source: 'Telluride Times',
-    date: 'April 23, 2026',
-    newsTopic: 'government',
-    copy: 'The Telluride Town Clerk has officially certified candidates for Telluride Town Council’s special election on June 30 — the first time there have been more candidates than open seats on council since 2023.',
-    href: 'https://www.telluridenews.com/news/article_68c45a3a-0714-44e9-b0b4-a237f39657d2.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/21/a21bf33b-c002-4a52-a20d-577939094d4a/69ea5ed10a0b7.image.jpg?resize=300%2C231'
+    title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
+    source: "Town of Telluride",
+    date: "April 24, 2026",
+    newsTopic: "infrastructure",
+    copy: "(April 5, 2026) – The Town will implement an updated schedule for the Galloping Goose bus loop during shoulder seasons, transitioning to a single-bus service operating on a 30-minute loop.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=389"
   },
   {
-    title: 'Galloping Goose Refines Shoulder Season Schedule to Improve Reliability',
-    source: 'Town of Telluride',
-    date: 'April 24, 2026',
-    newsTopic: 'infrastructure',
-    copy: '(April 5, 2026) – The Town will implement an updated schedule for the Galloping Goose bus loop during shoulder seasons, transitioning to a single-bus service operating on a 30-minute loop.',
-    href: 'https://www.telluride.gov/CivicAlerts.aspx?aid=389'
+    title: "Certified Candidates Announced for Telluride Town Council Election",
+    source: "Town of Telluride",
+    date: "April 21, 2026",
+    newsTopic: "government",
+    copy: "(April 21, 2026) – The Town of Telluride will hold a Special Municipal Election on Tuesday, June 30, coordinated with San Miguel County for the Primary Election. The Clerk's Department has certified three candidates eligible to run for elected office.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=390"
   },
   {
-    title: 'Certified Candidates Announced for Telluride Town Council Election',
-    source: 'Town of Telluride',
-    date: 'April 21, 2026',
-    newsTopic: 'government',
-    copy: '(April 21, 2026) – The Town of Telluride will hold a Special Municipal Election on Tuesday, June 30, coordinated with San Miguel County for the Primary Election. The Clerk\'s Department has certified three candidates eligible to run for elected office.',
-    href: 'https://www.telluride.gov/CivicAlerts.aspx?aid=390'
+    title: "County Planning Commission 5/14 Meeting in TELLURIDE",
+    source: "San Miguel County",
+    date: "May 1, 2026",
+    newsTopic: "land-use",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1393"
   },
   {
-    title: 'County Planning Commission 5/14 Meeting in TELLURIDE',
-    source: 'San Miguel County',
-    date: 'May 1, 2026',
-    newsTopic: 'land-use',
-    copy: '',
-    href: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1393'
+    title: "New Wildfire Information Site Launched",
+    source: "San Miguel County",
+    date: "May 1, 2026",
+    newsTopic: "public-safety",
+    copy: "San Miguel County announces the launch of a new wildfire information site, Living with Wildfire. The site is a resource for preparation, mitigation, evacuation and recovery information. More material will be added soon!",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=522"
   },
   {
-    title: 'New Wildfire Information Site Launched',
-    source: 'San Miguel County',
-    date: 'May 1, 2026',
-    newsTopic: 'public-safety',
-    copy: 'San Miguel County announces the launch of a new wildfire information site, Living with Wildfire. The site is a resource for preparation, mitigation, evacuation and recovery information. More material will be added soon!',
-    href: 'https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=522'
-  },
-  {
-    title: 'Spring Off-Season Schedule',
-    source: 'Town of Telluride',
-    date: 'April 24, 2026',
-    newsTopic: 'community',
-    copy: 'Spring Off-Season Schedule in effect April 6 – May 22, 2026. Service frequency reduced. Check individual route schedules below.',
-    href: 'https://www.telluride.gov/AlertCenter.aspx?AID=64'
+    title: "Spring Off-Season Schedule",
+    source: "Town of Telluride",
+    date: "April 24, 2026",
+    newsTopic: "community",
+    copy: "Spring Off-Season Schedule in effect April 6 – May 22, 2026. Service frequency reduced. Check individual route schedules below.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=64"
   }
 ];
 
