@@ -75,6 +75,9 @@ const TELLURIDE_TIMES_RSS = 'https://www.telluridenews.com/search/?f=rss&t=artic
 // KOTO uses two category-specific feeds; the catch-all /feed/ misses some posts.
 const KOTO_NEWSCASTS_RSS = 'https://koto.org/news-category/newscasts/feed/';
 const KOTO_FEATURED_RSS = 'https://koto.org/news-category/featured-stories/feed/';
+// Water court legal notices — Telluride Times weekly legals section (published Thursdays)
+const TT_LEGALS_RSS = 'https://www.telluridenews.com/search/?f=rss&t=article&c=news/legals&l=5&s=start_time&sd=desc';
+const TT_AUTH_COOKIE = process.env.TT_AUTH_COOKIE || '';
 
 // ══════════════════════════════════════════════════════════════
 // ── HTTP Helpers ──
@@ -558,9 +561,301 @@ async function refreshCommunityPulse(existingPosts) {
 // ── Task 4: Legal Notices ──
 // ══════════════════════════════════════════════════════════════
 
+/**
+ * TNCMS content cipher — decodes subscriber-only encrypted article blocks.
+ * Involutive (same function encodes and decodes):
+ *   char < 33  → pass-through (whitespace/control)
+ *   char >= 79 → subtract 47
+ *   char 33–78 → add 47
+ * Verified against live Telluride Times articles (April 2026).
+ */
+function decodeTncms(text) {
+  let result = '';
+  for (let i = 0; i < text.length; i++) {
+    const o = text.charCodeAt(i);
+    if (o < 33) {
+      result += text[i];
+    } else if (o >= 79) {
+      result += String.fromCharCode(o - 47);
+    } else {
+      result += String.fromCharCode(o + 47);
+    }
+  }
+  return result;
+}
+
+/**
+ * Fetch a Telluride Times article directly with subscriber auth cookie.
+ * Bypasses the RSS proxy — the proxy can't forward cookies, and direct
+ * article requests with valid JWT cookies succeed even from GH Actions IPs.
+ */
+async function fetchTTArticleDirect(url) {
+  if (!TT_AUTH_COOKIE) return null;
+  return new Promise((resolve) => {
+    const opts = {
+      headers: {
+        'Cookie': `tncms-auth=${TT_AUTH_COOKIE}`,
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15',
+        'Accept': 'text/html,application/xhtml+xml',
+        'Accept-Language': 'en-US,en;q=0.9'
+      },
+      timeout: 20000
+    };
+    const mod = url.startsWith('https') ? https : http;
+    const req = mod.get(url, opts, (res) => {
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        resolve(fetchTTArticleDirect(res.headers.location));
+        return;
+      }
+      let body = '';
+      res.on('data', d => body += d);
+      res.on('end', () => resolve({ status: res.statusCode, text: body }));
+    });
+    req.on('error', () => resolve(null));
+    req.on('timeout', () => { req.destroy(); resolve(null); });
+  });
+}
+
+/**
+ * Extract and decode all TNCMS-encrypted subscriber content blocks from
+ * article HTML. Returns plain text suitable for Claude parsing.
+ */
+function extractTncmsText(html) {
+  const re = /class="subscriber-only encrypted-content"[^>]*>([\s\S]*?)<\/div>/g;
+  const blocks = [];
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    blocks.push(decodeTncms(m[1]));
+  }
+  if (blocks.length === 0) return null;
+  const combined = blocks.join('\n');
+  // Strip HTML tags, decode common entities
+  return combined
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(parseInt(n, 10)))
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}
+
+/**
+ * Colorado Water Division 4 protest deadline: last day of the month
+ * following the publication month (standard CO water court schedule).
+ * e.g. published April 2026 → expires June 30, 2026
+ */
+function waterCourtExpiry(publishDateStr) {
+  const d = new Date(publishDateStr + 'T12:00:00Z');
+  // day 0 of (month + 2) = last day of (month + 1)
+  const exp = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 2, 0));
+  return exp.toISOString().split('T')[0];
+}
+
+/**
+ * Build a short paper key from a publish date, e.g. "2026-05-08" → "ttimes_0508"
+ */
+function ttPaperKey(dateStr) {
+  return 'ttimes_' + dateStr.replace(/-/g, '').slice(4); // "MMDD"
+}
+
+/**
+ * Use Claude to extract structured water court notice data from legal notice text.
+ * Returns an array of LEGAL_NOTICES-formatted objects (may be empty).
+ */
+async function parseWaterCourtNoticesWithClaude(rawText, articleUrl, publishDate) {
+  if (!ANTHROPIC_API_KEY || !rawText) return [];
+
+  const paperKey = ttPaperKey(publishDate);
+
+  const userPrompt = `You are extracting Colorado Water Court (Division 4) legal notice data from a raw Telluride Times legals section.
+
+Extract EVERY water court notice in the text. For each one, return a JSON object with:
+- caseNumber: Colorado water court case number string, e.g. "26CW3015"
+- applicant: Name of the applicant(s) only — NOT their mailing address
+- waterRightLocation: Physical location of the water structure/right (section/township/range, named area, or nearest town). This is WHERE the water is, not where the attorney's office is.
+- structureName: Name of the well, ditch, reservoir, spring, or other water structure (if stated)
+- rightType: e.g. "Conditional Water Right", "Finding of Reasonable Diligence", "Plan for Augmentation", "Change of Water Right"
+- shortSummary: 2-sentence plain-English description for community members: what is being applied for and why it matters locally.
+
+Return a JSON array only. If no water court notices are found, return [].
+
+TEXT:
+${rawText.slice(0, 9000)}`;
+
+  return new Promise((resolve) => {
+    const body = JSON.stringify({
+      model: CLAUDE_MODEL,
+      max_tokens: 2000,
+      messages: [{ role: 'user', content: userPrompt }]
+    });
+
+    const req = https.request({
+      hostname: 'api.anthropic.com',
+      path: '/v1/messages',
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01',
+        'Content-Length': Buffer.byteLength(body)
+      },
+      timeout: 45000
+    }, (res) => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        try {
+          const json = JSON.parse(data);
+          if (json.error) { console.log('  Claude error:', json.error.message); resolve([]); return; }
+          const text = json.content?.[0]?.text || '';
+          const jsonMatch = text.match(/\[[\s\S]*\]/);
+          if (!jsonMatch) { resolve([]); return; }
+          const parsed = JSON.parse(jsonMatch[0]);
+          if (!Array.isArray(parsed)) { resolve([]); return; }
+
+          const expiry = waterCourtExpiry(publishDate);
+          const shortDate = `${parseInt(publishDate.slice(5, 7), 10)}/${parseInt(publishDate.slice(8, 10), 10)}`;
+
+          const notices = parsed
+            .filter(n => n && n.caseNumber && n.applicant)
+            .map(n => ({
+              title: `Water Court -- ${n.applicant}${n.structureName ? ` (${n.structureName})` : ''} (${n.caseNumber})`,
+              entity: 'Colorado District Court, Water Division No. 4',
+              entityClass: 'ent-county',
+              entityLogo: 'water_court',
+              icon: '💧',
+              iconClass: 'type-bid',
+              type: 'Water Court',
+              filterTag: 'water-court',
+              summary: `${n.applicant} filed a ${n.rightType || 'water court application'} in Case No. ${n.caseNumber}${n.structureName ? ` for the ${n.structureName}` : ''}. ${n.shortSummary} Water right location: ${n.waterRightLocation || 'San Miguel County area'}.`,
+              deadline: 'File protests with Water Clerk, Water Division 4, Montrose',
+              expires: expiry,
+              dates: shortDate,
+              papers: [paperKey],
+              url: articleUrl,
+              address: n.waterRightLocation || ''
+            }));
+
+          console.log(`  Claude extracted ${notices.length} water court notice(s) from ${paperKey}`);
+          resolve(notices);
+        } catch (e) {
+          console.log('  Parse error from Claude response:', e.message);
+          resolve([]);
+        }
+      });
+    });
+    req.on('error', (e) => { console.log('  Claude request error:', e.message); resolve([]); });
+    req.on('timeout', () => { req.destroy(); resolve([]); });
+    req.write(body);
+    req.end();
+  });
+}
+
+/**
+ * Fetch the TT legals RSS feed and return any articles not yet represented
+ * in existing water court notices. Compares by paper key (date-based).
+ */
+async function fetchNewLegalsArticles(existingNotices) {
+  if (!TT_AUTH_COOKIE) {
+    console.log('  TT_AUTH_COOKIE not set — skipping water court scrape');
+    return [];
+  }
+
+  // Build set of paper keys already recorded in existing water-court notices
+  const seenKeys = new Set();
+  for (const n of existingNotices) {
+    if (n.filterTag === 'water-court' && Array.isArray(n.papers)) {
+      n.papers.forEach(p => seenKeys.add(p));
+    }
+  }
+
+  // Also track seen case numbers to avoid duplicates within a single run
+  const seenCases = new Set(
+    existingNotices
+      .filter(n => n.filterTag === 'water-court' && n.caseNumber)
+      .map(n => n.caseNumber)
+  );
+
+  let rssText;
+  try {
+    const rssUrl = maybeProxy(TT_LEGALS_RSS);
+    const resp = await fetch(rssUrl);
+    if (resp.status !== 200) {
+      console.log(`  Legals RSS returned HTTP ${resp.status}`);
+      return [];
+    }
+    rssText = resp.text;
+  } catch (e) {
+    console.log('  Legals RSS fetch error:', e.message);
+    return [];
+  }
+
+  let parsed;
+  try { parsed = await parseXml(rssText); } catch (e) {
+    console.log('  Legals RSS parse error:', e.message);
+    return [];
+  }
+
+  const items = parsed?.rss?.channel?.item;
+  if (!items) return [];
+  const articles = Array.isArray(items) ? items : [items];
+
+  const newNotices = [];
+
+  for (const item of articles) {
+    const link = item.link || '';
+    const pubDateRaw = item.pubDate || '';
+    if (!link || !pubDateRaw) continue;
+
+    // Parse publish date to YYYY-MM-DD
+    const pubDate = new Date(pubDateRaw).toISOString().split('T')[0];
+    const paperKey = ttPaperKey(pubDate);
+
+    if (seenKeys.has(paperKey)) {
+      console.log(`  Legals article ${paperKey} already processed — skipping`);
+      continue;
+    }
+
+    console.log(`  New legals issue found: ${item.title || link} (${pubDate})`);
+
+    const result = await fetchTTArticleDirect(link);
+    if (!result || result.status !== 200) {
+      console.log(`  Could not fetch article (status ${result?.status}) — skipping`);
+      continue;
+    }
+
+    const plainText = extractTncmsText(result.text);
+    if (!plainText) {
+      console.log('  No TNCMS encrypted content found — article may not be paywalled or cookie expired');
+      continue;
+    }
+    console.log(`  Decoded ${plainText.length} chars of legal notice text`);
+
+    const notices = await parseWaterCourtNoticesWithClaude(plainText, link, pubDate);
+
+    // Filter out any that duplicate case numbers already in the array
+    for (const n of notices) {
+      if (n.caseNumber && seenCases.has(n.caseNumber)) {
+        console.log(`  Skipping duplicate case ${n.caseNumber}`);
+        continue;
+      }
+      if (n.caseNumber) seenCases.add(n.caseNumber);
+      newNotices.push(n);
+    }
+
+    // Mark this paper key as seen so we don't re-fetch on subsequent loop iterations
+    seenKeys.add(paperKey);
+  }
+
+  return newNotices;
+}
+
 async function refreshLegalNotices(existingNotices) {
-  console.log('\n⚖️ Task 4: Checking legal notices...');
-  // Remove expired notices
+  console.log('\n⚖️  Task 4: Checking legal notices...');
+
+  // 1. Remove expired notices
   const now = today();
   const kept = existingNotices.filter(n => {
     if (n.expires && n.expires < now) {
@@ -569,8 +864,18 @@ async function refreshLegalNotices(existingNotices) {
     }
     return true;
   });
-  console.log(`  ${kept.length} active notices (removed ${existingNotices.length - kept.length} expired)`);
-  return kept;
+  const expiredCount = existingNotices.length - kept.length;
+  if (expiredCount > 0) console.log(`  Removed ${expiredCount} expired notice(s)`);
+
+  // 2. Scrape new water court notices from TT legals section
+  const newWaterCourt = await fetchNewLegalsArticles(kept);
+  if (newWaterCourt.length > 0) {
+    console.log(`  Adding ${newWaterCourt.length} new water court notice(s)`);
+  }
+
+  const result = [...kept, ...newWaterCourt];
+  console.log(`  ${result.length} active notice(s) total`);
+  return result;
 }
 
 // ══════════════════════════════════════════════════════════════
