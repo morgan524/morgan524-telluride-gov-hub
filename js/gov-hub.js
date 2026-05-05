@@ -2890,6 +2890,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: ""
+  },
+  {
+    title: "Online Author Talk with Vivienne Ming",
+    link: "https://koto.org/event/online-author-talk-with-vivienne-ming/",
+    description: "Join us for a timely conversation on AI, humanity, and the next steps towards building a better future with self-proclaimed “mad scientist” Dr. Vivienne Ming as we discuss her new book, Robot-Proof: When Machines Have All the Answers, Build Better People. In Robot-Proof, Dr. Vivienne Ming helps readers grasp the ugly and the amazing of how individu",
+    pubDate: "2026-05-12T12:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/vivienne.png"
   }
 ];
 
@@ -4357,6 +4368,15 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-20  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Boys’ lax blasts into postseason",
+    source: "Telluride Times",
+    date: "May 5, 2026",
+    newsTopic: "education",
+    copy: "Flying out to a 7-1 lead through the opening 12 minutes of action Saturday morning, May 2, Telluride High School Boys’ Lacrosse left little doubt as to its postseason readiness by wrapping up regular-season work with a 19-2 destruction of…",
+    href: "https://www.telluridenews.com/sports/article_10a16ae6-c102-4679-9922-ddab9bdfd4b2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfe83f7a-ec5a-4b87-824b-b7cf86e70644/69f9a893440e8.image.jpg?resize=300%2C200"
+  },
+  {
     title: "Indigenous people honor and raise awareness for relatives who are missing or have been killed",
     source: "Telluride Times",
     date: "May 5, 2026",
@@ -4375,6 +4395,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg?resize=300%2C200"
   },
   {
+    title: "Telluride CrossFit opens new Lawson Hill gym",
+    source: "Telluride Times",
+    date: "May 4, 2026",
+    newsTopic: "community",
+    copy: "Telluride CrossFit has a new home.",
+    href: "https://www.telluridenews.com/business/article_1d5aab25-10fb-4778-b2c1-3973af8a0d9e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/36/7362e16d-547c-4e31-a280-7e922c23bc57/69f9037527be2.image.jpg?resize=300%2C225"
+  },
+  {
     title: "States across the wildfire-prone Western US are using AI for early detection",
     source: "Telluride Times",
     date: "May 4, 2026",
@@ -4382,6 +4411,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Another severe wildfire season is forecast for the Western U.S. due to record-breaking heat and an abysmal snowpack. Some states and utilities are trying to get ahead of that threat using AI. In Arizona, the state’s largest electric utility is…",
     href: "https://www.telluridenews.com/news/state/article_3d9717e8-6111-5f8d-b69b-3260bf6758a8.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3c/c3c369ac-5496-5153-b4fc-3638934dc35a/69f899e7aa3db.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "Safe actions in work zones can save lives",
+    source: "Telluride Times",
+    date: "May 4, 2026",
+    newsTopic: "community",
+    copy: "Imagine sitting and working at your office desk, but cars are whizzing by just a few feet away.",
+    href: "https://www.telluridenews.com/opinion/columnists/article_0527f33c-d1be-4f91-9d6b-a570a138bf81.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/d1/9d1d4b74-6558-4cf1-9ef9-d0848f755a25/69f115f7721a2.image.jpg?resize=300%2C192"
+  },
+  {
+    title: "Rolling in the oats",
+    source: "Telluride Times",
+    date: "May 3, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.telluridenews.com/opinion/columnists/article_8c228500-61a7-4cf7-b21d-383052bad877.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/be/ebeb8396-3450-4d67-af94-c17626457ff1/69f13862191f6.image.jpg?resize=300%2C400"
   },
   {
     title: "Jonathan Fouser is Telluride Mountain School’s new head of school",
@@ -4400,6 +4447,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Telluride Town Council, acting as the Telluride Housing Authority, voted during a meeting on April 28 to temporarily suspend its housing waitlist policies for town-owned rental units until the end of July.",
     href: "https://www.telluridenews.com/news/article_766aee5a-65e5-4d4e-af87-0d75148b5bba.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/be/4be5885b-5c31-47e0-a343-371f832e5f5f/69f64629dcef0.image.jpg?resize=300%2C184"
+  },
+  {
+    title: "Sibling stories",
+    source: "Telluride Times",
+    date: "May 2, 2026",
+    newsTopic: "community",
+    copy: "This is a story about siblings, but it begins with a baby in a bar. More specifically, it begins with our then-5-month-old son, Hud, strapped to my husband’s chest while Trav mixed cocktails and poured shots. Does it make the…",
+    href: "https://www.telluridenews.com/opinion/columnists/article_b13bebfd-ba8d-4e2a-8bbe-e534628b63ec.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/44/244939cc-69e1-4024-ae0f-a26ac2a38c3c/69f134d9097db.image.jpg?resize=300%2C400"
   },
   {
     title: "Paul Wisor resigns as MV Town Manager",
@@ -4438,6 +4494,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/9d/79d165ca-16ce-40fa-a9ac-77113d7839c8/69f1660ad0191.image.png?resize=300%2C389"
   },
   {
+    title: "Norwood’s ‘I voted/yo voté’ sticker contest winners",
+    source: "Telluride Times",
+    date: "April 30, 2026",
+    newsTopic: "government",
+    copy: "Earlier this year, the San Miguel County Clerk’s Office invited Telluride and Norwood students to design a sticker that could be used as the artwork for the “I voted/yo voté” stickers that the county distributes to voters. Eighteen students took…",
+    href: "https://www.telluridenews.com/norwood_post/article_c9e7d416-2ad4-4332-87ee-6317130f948d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/16/2167c90d-35cd-419c-b2dc-fff803c1b0ba/69f1772f694c3.image.jpg?resize=300%2C225"
+  },
+  {
     title: "Lindsey Vonn tells the AP she is not yet in position emotionally to decide if she will race again",
     source: "Telluride Times",
     date: "April 30, 2026",
@@ -4454,6 +4519,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "After one of the worst snow years on record in the western United States, communities must live with less water. Around this time of year, home gardeners are starting to grow their own produce as utilities enact outdoor watering restrictions.…",
     href: "https://www.telluridenews.com/news/state/article_62ad4304-c441-5377-acde-86dcbdde9312.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/d2/ed2b9a2e-dea0-5f0d-9b8e-8a1e2e924534/69f3541bd0685.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "Michael J. Ward",
+    source: "Telluride Times",
+    date: "April 30, 2026",
+    newsTopic: "community",
+    copy: "Michael J. Ward, age 73, passed away on March 17, 2026, in Montrose, Colorado.",
+    href: "https://www.telluridenews.com/obituaries/article_da9c1d39-f9b9-4485-8624-6ec4a163e609.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/5f/e5fb35c1-ab7f-4d7a-9f66-70713f0980da/69f387ba057ba.image.jpg?resize=300%2C400"
   },
   {
     title: "Legals and Public Notices for April 30-May 6, 2026",
@@ -4474,6 +4548,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/4b/34b91d82-6339-4684-9229-8250f4823b6c/69f1697616de8.image.jpg?resize=300%2C182"
   },
   {
+    title: "Norwood Schools Spring Art Show",
+    source: "Telluride Times",
+    date: "April 29, 2026",
+    newsTopic: "education",
+    copy: "The public was invited to the Lone Cone Library on Wednesday, April 22, for Norwood Schools Spring Art Show. The event showcased artwork created with diverse mediums by students of all ages and grade levels.",
+    href: "https://www.telluridenews.com/norwood_post/article_db4d7389-4c3a-4cef-bf85-30ddfebbf642.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/2e/e2e844f7-8c2c-4eaf-aa50-c6ca0cba18f8/69f174ed2c287.image.jpg?resize=300%2C225"
+  },
+  {
     title: "Far from the original in Philadelphia, these fans hunt for the Liberty Bell replica in each state",
     source: "Telluride Times",
     date: "April 29, 2026",
@@ -4483,6 +4566,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/7e/37efb440-e66f-5d94-a2bc-43449e73e748/69f1e9285fdc5.image.jpg?resize=300%2C200"
   },
   {
+    title: "Lady Miners lose 4-0 to Crested Butte",
+    source: "Telluride Times",
+    date: "April 29, 2026",
+    newsTopic: "education",
+    copy: "Though defeated Saturday, April 25, by non-league Delta High School, Telluride High School’s girls’ soccer team likely wouldn’t have had difficulty putting the loss far behind, if not forgetting it altogether.",
+    href: "https://www.telluridenews.com/sports/article_1547cf0b-aff1-4760-ad71-a65da629237d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/78/97808b59-fa26-4d43-b82e-f3a51e40c652/69efd9a9df84d.image.jpg?resize=300%2C200"
+  },
+  {
     title: "‘We’ve legislated our way into housing insecurity’",
     source: "Telluride Times",
     date: "April 28, 2026",
@@ -4490,6 +4582,33 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Editor's note: After The Telluride Times published this story in print and online, the Town of Telluride responded to an earlier request from The Times for updated vacancy information. The updated numbers, current as of April 27, indicate that there…",
     href: "https://www.telluridenews.com/news/article_fc7e07da-d18b-4b4e-8371-ae908bc5f813.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/5a/25abcf8b-8de8-41c9-8d2d-5da48a05d4a5/69f10d434c461.image.jpg?resize=300%2C400"
+  },
+  {
+    title: "CHALKBOARD for the week of April 30-May 6",
+    source: "Telluride Times",
+    date: "April 28, 2026",
+    newsTopic: "government",
+    copy: "To ensure that your birthday is listed, email utetrailclub@yahoo.com. For other events, email mia.rupani@telluridetimes.com.",
+    href: "https://www.telluridenews.com/norwood_post/article_2810e7e2-17a0-4c3b-bc48-8471bf3f043d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/a9/3a968112-13b4-4c82-8f8b-32267e62280a/69f10395372c3.image.jpg?resize=300%2C191"
+  },
+  {
+    title: "Avoiding exponential growth",
+    source: "Telluride Times",
+    date: "April 28, 2026",
+    newsTopic: "community",
+    copy: "Dear Editor,",
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_7ba0d68b-a32e-4ac2-8700-74f287164e7b.html",
+    img: ""
+  },
+  {
+    title: "Green grant gratitude",
+    source: "Telluride Times",
+    date: "April 28, 2026",
+    newsTopic: "community",
+    copy: "Dear Editor,",
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_9797e67f-3ea2-46b0-8131-861e0a2b8291.html",
+    img: ""
   },
   {
     title: "Telluride Times staff win seven awards at Top of the Rockies",
@@ -4573,6 +4692,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/1f/a1f0586a-f7fe-489e-a348-0b63cc2b8228/69eafe3da3a22.image.jpg?resize=300%2C225"
   },
   {
+    title: "What happened to winter?",
+    source: "Telluride Times",
+    date: "April 24, 2026",
+    newsTopic: "infrastructure",
+    copy: "Typically, by early April, the road to our house would be buried beneath layers of snow, requiring spring plowing to open it. However, this year marked a dramatic shift in the winter on the Mesa, unlike any other in the…",
+    href: "https://www.telluridenews.com/opinion/columnists/article_1788ad1a-1e9a-41ea-9a5e-5fba08d8a50c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/8c/98c9bb13-6b79-46c0-b99e-4df22fd01353/69e7c142e2ea5.image.jpg?resize=300%2C527"
+  },
+  {
     title: "Not your parents’ PE",
     source: "Telluride Times",
     date: "April 24, 2026",
@@ -4580,6 +4708,114 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Outside the gymnasium of the Telluride Elementary School (TES), physical education teacher Erin Murray waited for her class of first-grade students to arrive.",
     href: "https://www.telluridenews.com/news/article_a4c5d839-f765-42ef-8d91-38ffc315ad4d.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/f5/af558834-d00d-4c09-afd8-5bd5e32123d2/69e8798e37429.image.jpg?resize=300%2C400"
+  },
+  {
+    title: "Shining at the Ron Keller Invitational",
+    source: "Telluride Times",
+    date: "April 24, 2026",
+    newsTopic: "education",
+    copy: "On Saturday, April 18, the Norwood High School track team traveled to Durango for the Ron Keller Invitational, competing against 18 teams from the region. Leading the charge for Norwood was senior Kieley Shepardson, who placed sixth in the 400m…",
+    href: "https://www.telluridenews.com/norwood_post/article_bc91af69-2711-430d-9477-4f114148a18e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/c0/4c02b3ab-72b9-420c-a364-86e1ca35879a/69e7b7ac4d3f7.image.jpg?resize=300%2C439"
+  },
+  {
+    title: "Federal judge orders release of family of man charged in Colorado firebomb attack",
+    source: "Telluride Times",
+    date: "April 23, 2026",
+    newsTopic: "public-safety",
+    copy: "A federal judge has ordered the release from immigration custody of the family of a man charged in a fatal firebomb attack in Boulder, Colorado, last year. U.S. District Judge Fred Biery in San Antonio said Hayam El Gamal and…",
+    href: "https://www.telluridenews.com/news/state/article_09f12f45-ca76-5230-a9c6-768867dc500c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/df/8dfd6a5c-a101-5ad6-891e-bcee98b6b578/69ea6f2fc96b2.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "Telluride Town Clerk certifies council candidates for June election",
+    source: "Telluride Times",
+    date: "April 23, 2026",
+    newsTopic: "government",
+    copy: "The Telluride Town Clerk has officially certified candidates for Telluride Town Council’s special election on June 30 — the first time there have been more candidates than open seats on council since 2023.",
+    href: "https://www.telluridenews.com/news/article_68c45a3a-0714-44e9-b0b4-a237f39657d2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/21/a21bf33b-c002-4a52-a20d-577939094d4a/69ea5ed10a0b7.image.jpg?resize=300%2C231"
+  },
+  {
+    title: "Is off-season the best season?",
+    source: "Telluride Times",
+    date: "April 23, 2026",
+    newsTopic: "infrastructure",
+    copy: "For some, the answer is a definite yes. In Telluride, off-season began on April 6 with quiet streets and locals schools on spring break. Classes resumed April 20, but the serenity of spring continues. Missing your favorite coffee shop, watering…",
+    href: "https://www.telluridenews.com/gallery/article_a66784be-15e4-457a-84de-c3e4bbaf7105.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/5c/05cbe539-c717-4525-98a2-888c077582ed/69e7ba253ef59.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "Legals and Public Notices for April 23-29, 2026",
+    source: "Telluride Times",
+    date: "April 23, 2026",
+    newsTopic: "community",
+    copy: "PUBLIC HEARING NOTICE",
+    href: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
+    img: ""
+  },
+  {
+    title: "Assault charge for immigration officer in Colorado could test immunity provisions for federal agents",
+    source: "Telluride Times",
+    date: "April 23, 2026",
+    newsTopic: "community",
+    copy: "The decision in Colorado to charge an immigration officer with assault after a protester was grabbed by the neck and pulled away could test the boundaries of immunity provisions for federal agents in the line of duty. A Colorado prosecutor…",
+    href: "https://www.telluridenews.com/news/state/article_6467b8cc-2f6f-56a3-87f6-fb945517f4b8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/f5/ff50216b-e2da-5ecd-8931-20238c43544e/69e96a0aea89f.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "Immigration officer is charged with assault after protest outside Colorado ICE facility, DA says",
+    source: "Telluride Times",
+    date: "April 23, 2026",
+    newsTopic: "education",
+    copy: "A Colorado district attorney has charged an immigration agent after a protester said she was held in a chokehold during demonstrations against the detention of an immigrant father and two children. The Durango District Attorney announced the decision Tuesday. Multiple…",
+    href: "https://www.telluridenews.com/news/state/article_ddb43ab6-63d1-5f27-a5f2-001efe39c7a0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/f4/0f4452e4-4145-5f8f-a0d9-d56ce939993d/69e9423256e40.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "More kids than ever are attending state-funded preschool, with California's surge leading the way",
+    source: "Telluride Times",
+    date: "April 23, 2026",
+    newsTopic: "education",
+    copy: "More kids than ever are attending state-funded preschool in the U.S., 1.8 million of them the last school year. A report by the National Institute of Early Education Research finds that 37% of 4-year-olds and about 10% of 3-year-olds are…",
+    href: "https://www.telluridenews.com/news/state/article_0113120d-dfad-5860-a97a-b0d6576dc4c2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/bb/8bb013f1-f2d6-5904-9ef4-051c56288106/69e900a32af67.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "Getting back on ‘track’",
+    source: "Telluride Times",
+    date: "April 22, 2026",
+    newsTopic: "community",
+    copy: "In track and field, it’s usually a case of “run what ya brung.”",
+    href: "https://www.telluridenews.com/sports/article_87575b6e-9fda-4963-8881-bcaee88c8790.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/92/89277170-d1bd-412b-89a0-ec0ae8bb03bd/69e877b2887cb.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "Forbidden Fruit",
+    source: "Telluride Times",
+    date: "April 22, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.telluridenews.com/opinion/columnists/article_37ace147-b932-4206-9793-2cbff4b7fda7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/0b/b0bb61d9-a7e4-4690-be3d-600db5fe5ec2/69e7aa2c0a5b0.image.jpg?resize=300%2C400"
+  },
+  {
+    title: "Immigration officer charged with assault after investigation into treatment of protester outside ICE facility, DA says",
+    source: "Telluride Times",
+    date: "April 22, 2026",
+    newsTopic: "community",
+    copy: "Immigration officer charged with assault after investigation into treatment of protester outside ICE facility, DA says.",
+    href: "https://www.telluridenews.com/news/state/article_16cd06ad-7169-5aea-b789-e2ba12e7d51d.html",
+    img: ""
+  },
+  {
+    title: "The buzz about the Bike Park: closed for 2026",
+    source: "Telluride Times",
+    date: "April 22, 2026",
+    newsTopic: "recreation",
+    copy: "Last month, Telluride Ski Resort (Telski) announced that the Telluride Bike Park will be closed for 2026 due to uncertainty around summer upgrade work on Lift 4.",
+    href: "https://www.telluridenews.com/news/article_03e530b5-1172-4e9a-9421-3e90d522fe6e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/f7/2f74685d-961a-4ce8-b3b9-951ebe18cb22/69e68d6fd33e0.image.jpg?resize=300%2C196"
   },
   {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
