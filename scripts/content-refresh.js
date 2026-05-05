@@ -426,8 +426,11 @@ function classifyNewsTopic(title, desc) {
   return 'community';
 }
 
-async function refreshNews() {
+async function refreshNews(existingTtArticles = []) {
   console.log('\n📰 Task 2: Refreshing news articles...');
+  // Build a lookup of articles we already have Claude summaries for, keyed by href.
+  // These survive the refresh — we carry the cached summary forward instead of re-fetching.
+  const existingByHref = new Map(existingTtArticles.map(a => [a.href, a]));
   const articles = [];
   const cutoff = new Date(Date.now() - NEWS_MAX_AGE_DAYS * 86400000);
 
@@ -457,27 +460,61 @@ async function refreshNews() {
     }
   }
 
-  // Telluride Times RSS
+  // Telluride Times RSS — with full-text Claude summaries for new articles
   try {
     const resp = await fetch(TELLURIDE_TIMES_RSS);
     if (resp.status === 200) {
       const xml = await parseXml(resp.text);
       const items = xml?.rss?.channel?.item;
       const arr = Array.isArray(items) ? items : (items ? [items] : []);
+      let newCount = 0;
       for (const item of arr) {
         const pubDate = new Date(item.pubDate || '');
         if (pubDate < cutoff) continue;
+        const href = (item.link || '').trim();
         const enclosure = item.enclosure;
+        const rssCopy = (item.description || '').replace(/<[^>]+>/g, '').trim().slice(0, 300);
+
+        // If we already have a Claude summary for this article, carry it forward unchanged
+        if (existingByHref.has(href) && existingByHref.get(href).claudeSummary) {
+          articles.push(existingByHref.get(href));
+          continue;
+        }
+
+        // New article — try to get full text and summarize
+        let copy = rssCopy;
+        let claudeSummary = false;
+        if (TT_AUTH_COOKIE) {
+          try {
+            const title = (item.title || '').trim();
+            const result = await fetchTTArticleDirect(href);
+            if (result && result.status === 200) {
+              const fullText = extractTTArticleText(result.text);
+              if (fullText) {
+                copy = await summarizeTTArticle(title, fullText, rssCopy);
+                claudeSummary = true;
+                newCount++;
+              }
+            }
+            // Small delay between fetches — be polite to TT's servers
+            await new Promise(r => setTimeout(r, 800));
+          } catch (e) {
+            console.warn(`  Could not summarize ${href}: ${e.message}`);
+          }
+        }
+
         articles.push({
           title: (item.title || '').trim(),
           source: 'Telluride Times',
           date: formatDate(pubDate),
           newsTopic: classifyNewsTopic(item.title || '', item.description || ''),
-          copy: (item.description || '').replace(/<[^>]+>/g, '').trim().slice(0, 300),
-          href: (item.link || '').trim(),
+          copy,
+          claudeSummary,
+          href,
           img: enclosure?.$.url || ''
         });
       }
+      if (newCount > 0) console.log(`  Summarized ${newCount} new TT article(s) from full text`);
     }
   } catch (e) { console.warn(`  Telluride Times RSS error: ${e.message}`); }
 
@@ -555,6 +592,82 @@ async function refreshCommunityPulse(existingPosts) {
   });
   console.log(`  Kept ${kept.length} of ${existingPosts.length} posts (pruned ${existingPosts.length - kept.length} expired)`);
   return kept;
+}
+
+// ══════════════════════════════════════════════════════════════
+// ── TT Full-Text Helpers (shared by news summaries + legals) ──
+// ══════════════════════════════════════════════════════════════
+
+/**
+ * Extract readable article text from a fetched TT page.
+ * Priority: (1) TNCMS subscriber-only encrypted blocks, (2) open asset-body div.
+ * Returns plain text or null if nothing usable was found.
+ */
+function extractTTArticleText(html) {
+  // 1. Paywalled blocks (most articles)
+  const tncmsText = extractTncmsText(html);
+  if (tncmsText && tncmsText.length > 100) return tncmsText;
+
+  // 2. Non-paywalled article body (free content)
+  const bodyMatch = html.match(/<div[^>]+class="[^"]*(?:asset-body|article-body|field-items)[^"]*"[^>]*>([\s\S]*?)<\/div>/);
+  if (bodyMatch) {
+    const plain = bodyMatch[1]
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&nbsp;/g, ' ')
+      .replace(/\s{2,}/g, ' ').trim();
+    if (plain.length > 100) return plain;
+  }
+  return null;
+}
+
+/**
+ * Use Claude to write a 2-3 sentence summary of a TT article for the news card.
+ * Voice: long-time local resident, observational, no advocacy.
+ * Falls back to rssFallback if the API call fails.
+ */
+async function summarizeTTArticle(title, fullText, rssFallback) {
+  if (!ANTHROPIC_API_KEY || !fullText) return rssFallback;
+
+  const prompt = `Summarize the following Telluride Times article in 2-3 sentences for a community news card. Write as a long-time local resident would describe it — observational, factual, no advocacy or editorializing. Do not start with the article title. Do not use phrases like "The article says" or "This piece covers." Just deliver the key facts in plain language. Keep it under 280 characters if possible.
+
+TITLE: ${title}
+
+ARTICLE TEXT:
+${fullText.slice(0, 4000)}`;
+
+  return new Promise((resolve) => {
+    const body = JSON.stringify({
+      model: CLAUDE_MODEL,
+      max_tokens: 200,
+      messages: [{ role: 'user', content: prompt }]
+    });
+    const req = https.request({
+      hostname: 'api.anthropic.com',
+      path: '/v1/messages',
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01',
+        'Content-Length': Buffer.byteLength(body)
+      },
+      timeout: 30000
+    }, (res) => {
+      let data = '';
+      res.on('data', c => data += c);
+      res.on('end', () => {
+        try {
+          const json = JSON.parse(data);
+          const text = (json.content?.[0]?.text || '').trim();
+          resolve(text.length > 20 ? text : rssFallback);
+        } catch (_) { resolve(rssFallback); }
+      });
+    });
+    req.on('error', () => resolve(rssFallback));
+    req.on('timeout', () => { req.destroy(); resolve(rssFallback); });
+    req.write(body);
+    req.end();
+  });
 }
 
 // ══════════════════════════════════════════════════════════════
@@ -1565,7 +1678,8 @@ async function main() {
   }
 
   // ── 2. News ──
-  const { ttArticles, kotoNewscasts, kotoFeatured } = await refreshNews();
+  const existingTtArticles = extractJsArray(govHubSrc, 'TELLURIDE_TIMES_ARTICLES') || [];
+  const { ttArticles, kotoNewscasts, kotoFeatured } = await refreshNews(existingTtArticles);
   if (ttArticles.length > 0) {
     govHubSrc = replaceJsValue(govHubSrc, 'TELLURIDE_TIMES_ARTICLES', ttArticles, false);
     changed = true;
