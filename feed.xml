@@ -6,8 +6,18 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 May 2026 02:11:38 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 08:00:24 GMT</lastBuildDate>
     <ttl>360</ttl>
+    <item>
+      <title>Indigenous people honor and raise awareness for relatives who are missing or have been killed</title>
+      <link>https://www.telluridenews.com/news/state/article_ae44c01b-f686-57b2-ae9f-0e1627a4f326.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_ae44c01b-f686-57b2-ae9f-0e1627a4f326.html</guid>
+      <pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ee/4ee20253-fa90-5e52-b3d6-f0a5aa554c5d/69f96e150e3e0.image.jpg?resize=300%2C226" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Indigenous people are gathering to honor loved ones who have gone missing or been killed. They're also calling for reforms to make their communities safer. May 5 is observed as a national day of awareness for the Missing and Murdered…]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ee/4ee20253-fa90-5e52-b3d6-f0a5aa554c5d/69f96e150e3e0.image.jpg?resize=300%2C226" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
+    </item>
     <item>
       <title>Newscast 5-4-26</title>
       <link>https://koto.org/news/newscast-5-4-26/</link>

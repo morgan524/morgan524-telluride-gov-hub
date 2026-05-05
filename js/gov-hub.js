@@ -2905,70 +2905,48 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Musik for Kinders",
-    link: "https://telluridelibrary.libcal.com/event/16567228?hs=a",
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/16762975?hs=a",
     description: "10:30 AM – 11:30 AM",
-    pubDate: "2026-05-04T10:30:00.000Z",
+    pubDate: "2026-05-05T10:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+  },
+  {
+    title: "I Heart Art",
+    link: "https://telluridelibrary.libcal.com/event/16417091?hs=a",
+    description: "2:30 PM – 4:30 PM",
+    pubDate: "2026-05-05T14:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1771000912.png"
+  },
+  {
+    title: "Sound Bath with Erin",
+    link: "https://telluridelibrary.libcal.com/event/16626001?hs=a",
+    description: "5:30 PM – 6:30 PM",
+    pubDate: "2026-05-05T17:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: ""
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_16_28_44.jpg"
   },
   {
-    title: "Strings in the Stacks: Live Violin with Annie Foxen",
-    link: "https://telluridelibrary.libcal.com/event/16759871?hs=a",
-    description: "12:00 PM – 1:00 PM",
-    pubDate: "2026-05-04T12:00:00.000Z",
+    title: "Bardic Trails Online Poetry Night: Regina Lopez-Whiteskunk",
+    link: "https://telluridelibrary.libcal.com/event/15970599?hs=a",
+    description: "7:00 PM – 8:30 PM",
+    pubDate: "2026-05-05T19:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1769020935.jpg"
-  },
-  {
-    title: "Savvy Seniors-Open Tech",
-    link: "https://telluridelibrary.libcal.com/event/16592924?hs=a",
-    description: "1:30 PM – 2:30 PM",
-    pubDate: "2026-05-04T13:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Meeting Room #6 - large",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_12_11_48.png"
-  },
-  {
-    title: "Hobby Hopping / Salta Hobbies",
-    link: "https://telluridelibrary.libcal.com/event/16802069?hs=a",
-    description: "4:00 PM – 5:00 PM",
-    pubDate: "2026-05-04T16:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_28_12_44_40.png"
-  },
-  {
-    title: "Cíclica & Humana",
-    link: "https://telluridelibrary.libcal.com/event/16730501?hs=a",
-    description: "5:00 PM – 6:30 PM",
-    pubDate: "2026-05-04T17:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_14_16_58.jpg"
-  },
-  {
-    title: "Puzzle Competition",
-    link: "https://telluridelibrary.libcal.com/event/16662698?hs=a",
-    description: "5:00 PM – 7:00 PM",
-    pubDate: "2026-05-04T17:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_31_14_35_50.jpg"
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1769030193.jpg"
   }
 ];
 
@@ -4379,6 +4357,15 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-20  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Indigenous people honor and raise awareness for relatives who are missing or have been killed",
+    source: "Telluride Times",
+    date: "May 5, 2026",
+    newsTopic: "community",
+    copy: "Indigenous people are gathering to honor loved ones who have gone missing or been killed. They're also calling for reforms to make their communities safer. May 5 is observed as a national day of awareness for the Missing and Murdered…",
+    href: "https://www.telluridenews.com/news/state/article_ae44c01b-f686-57b2-ae9f-0e1627a4f326.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ee/4ee20253-fa90-5e52-b3d6-f0a5aa554c5d/69f96e150e3e0.image.jpg?resize=300%2C226"
+  },
+  {
     title: "Man to plead guilty in Colorado firebombing attack on pro-Israel demonstrators",
     source: "Telluride Times",
     date: "May 4, 2026",
@@ -4593,15 +4580,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Outside the gymnasium of the Telluride Elementary School (TES), physical education teacher Erin Murray waited for her class of first-grade students to arrive.",
     href: "https://www.telluridenews.com/news/article_a4c5d839-f765-42ef-8d91-38ffc315ad4d.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/f5/af558834-d00d-4c09-afd8-5bd5e32123d2/69e8798e37429.image.jpg?resize=300%2C400"
-  },
-  {
-    title: "Federal judge orders release of family of man charged in Colorado firebomb attack",
-    source: "Telluride Times",
-    date: "April 23, 2026",
-    newsTopic: "public-safety",
-    copy: "A federal judge has ordered the release from immigration custody of the family of a man charged in a fatal firebomb attack in Boulder, Colorado, last year. U.S. District Judge Fred Biery in San Antonio said Hayam El Gamal and…",
-    href: "https://www.telluridenews.com/news/state/article_09f12f45-ca76-5230-a9c6-768867dc500c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/df/8dfd6a5c-a101-5ad6-891e-bcee98b6b578/69ea6f2fc96b2.image.jpg?resize=300%2C200"
   },
   {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
@@ -4897,17 +4875,6 @@ const BLOG_POSTS = [
 //   }
 
 const HUMANE_SOCIETY_ANIMALS = [
-  {
-    id: "TEL-A-176",
-    name: "PENDING ADOPTION - Kammie",
-    species: "Dog",
-    breed: "Pyrenees, Great",
-    ageGroup: "Young Dog",
-    sex: "Female",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/864850c39c3938ae808a75deca16bedb/580a26dfe3148580754a43082d4f4692.jpg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/213538874",
-    summary: "Young Dog • Pyrenees, Great • Female"
-  },
   {
     id: "TEL-A-177",
     name: "Lilibet",
