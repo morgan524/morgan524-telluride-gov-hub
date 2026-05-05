@@ -777,30 +777,61 @@ function ttPaperKey(dateStr) {
  * Use Claude to extract structured water court notice data from legal notice text.
  * Returns an array of LEGAL_NOTICES-formatted objects (may be empty).
  */
-async function parseWaterCourtNoticesWithClaude(rawText, articleUrl, publishDate) {
+/**
+ * Maps a Claude-returned notice type to LEGAL_NOTICES display fields.
+ */
+function noticeTypeToFields(type) {
+  switch (type) {
+    case 'water-court':    return { icon: '💧', iconClass: 'type-bid',     label: 'Water Court',    entity: 'Colorado District Court, Water Division No. 4', logo: 'water_court' };
+    case 'ordinance':      return { icon: '📋', iconClass: 'type-hearing',  label: 'Ordinance',      entity: 'Town of Telluride',                              logo: 'telluride' };
+    case 'housing':        return { icon: '🏠', iconClass: 'type-hearing',  label: 'Housing Notice', entity: 'San Miguel Regional Housing Authority',           logo: 'smrha' };
+    case 'public-entity':  return { icon: '🏛️', iconClass: 'type-rfp',     label: 'Public Notice',  entity: 'San Miguel County',                              logo: 'county' };
+    case 'tax-finance':    return { icon: '💰', iconClass: 'type-tax',      label: 'Tax & Finance',  entity: 'San Miguel County Assessor',                     logo: 'assessor' };
+    case 'utilities':      return { icon: '💧', iconClass: 'type-hearing',  label: 'Utilities',      entity: 'Town of Telluride',                              logo: 'telluride' };
+    default:               return { icon: '📄', iconClass: 'type-hearing',  label: 'Public Notice',  entity: 'San Miguel County',                              logo: 'county' };
+  }
+}
+
+/**
+ * Parse ALL legal notice types from a decoded TT legals article using Claude.
+ * Handles: water court, vesting/ordinance, election, housing, public hearings,
+ * RFPs/bids, tax notices, utility restrictions.
+ * Returns LEGAL_NOTICES-formatted objects.
+ */
+async function parseLegalNoticesWithClaude(rawText, articleUrl, publishDate) {
   if (!ANTHROPIC_API_KEY || !rawText) return [];
 
   const paperKey = ttPaperKey(publishDate);
+  const shortDate = `${parseInt(publishDate.slice(5, 7), 10)}/${parseInt(publishDate.slice(8, 10), 10)}`;
 
-  const userPrompt = `You are extracting Colorado Water Court (Division 4) legal notice data from a raw Telluride Times legals section.
+  const userPrompt = `You are extracting ALL legal notices from a Telluride Times "Legals & Public Notices" section for San Miguel County, Colorado.
 
-Extract EVERY water court notice in the text. For each one, return a JSON object with:
-- caseNumber: Colorado water court case number string, e.g. "26CW3015"
-- applicant: Name of the applicant(s) only — NOT their mailing address
-- waterRightLocation: Physical location of the water structure/right (section/township/range, named area, or nearest town). This is WHERE the water is, not where the attorney's office is.
-- structureName: Name of the well, ditch, reservoir, spring, or other water structure (if stated)
-- rightType: e.g. "Conditional Water Right", "Finding of Reasonable Diligence", "Plan for Augmentation", "Change of Water Right"
-- shortSummary: 2-sentence plain-English description for community members: what is being applied for and why it matters locally.
+Extract EVERY distinct notice. For each one return a JSON object with:
+- filterTag: one of "water-court" | "ordinance" | "housing" | "public-entity" | "tax-finance" | "utilities"
+  * water-court: Colorado Water Court applications, diligence findings, augmentation plans
+  * ordinance: vesting notices, election notices, adopted/proposed ordinances, zoning
+  * housing: deed-restricted housing sales, lotteries, affordable housing authority notices
+  * public-entity: RFPs, ITBs, RFQs, public hearings, public comments, government procurement
+  * tax-finance: property tax notices, assessments, financial services
+  * utilities: water restrictions, sewer notices, utility rate changes, road closures
+- title: concise title in format "Type -- Subject (Identifier if any)"
+- summary: 2-3 sentence plain-English summary for community members. Include: who filed/issued it, what it's about, where it applies, and any key deadline or protest period.
+- deadline: the action deadline stated in the notice (protest deadline, closing date, hearing date, etc.)
+- expires: YYYY-MM-DD when this notice should drop off the site. Use the deadline date if explicit; otherwise estimate: water-court=last day of month after next, vesting=30 days from pub, election=election date, ordinance=60 days, public hearing=hearing date, RFP=closing date or 90 days, utilities=end of restriction period or 90 days.
+- address: physical location the notice applies to (NOT attorney/applicant mailing address). Section/township/range or street address.
+- noticeKey: a short unique slug for dedup, e.g. case number for water court, "vesting-116-e-columbia" for vesting notices, "ord-1630" for ordinances.
+- entity: the government entity or applicant name
+- caseNumber: water court case number if applicable, else null
 
-Return a JSON array only. If no water court notices are found, return [].
+Return a JSON array. If nothing found, return [].
 
-TEXT:
-${rawText.slice(0, 9000)}`;
+TEXT (${publishDate}):
+${rawText.slice(0, 10000)}`;
 
   return new Promise((resolve) => {
     const body = JSON.stringify({
       model: CLAUDE_MODEL,
-      max_tokens: 2000,
+      max_tokens: 4000,
       messages: [{ role: 'user', content: userPrompt }]
     });
 
@@ -814,7 +845,7 @@ ${rawText.slice(0, 9000)}`;
         'anthropic-version': '2023-06-01',
         'Content-Length': Buffer.byteLength(body)
       },
-      timeout: 45000
+      timeout: 60000
     }, (res) => {
       let data = '';
       res.on('data', chunk => data += chunk);
@@ -828,30 +859,38 @@ ${rawText.slice(0, 9000)}`;
           const parsed = JSON.parse(jsonMatch[0]);
           if (!Array.isArray(parsed)) { resolve([]); return; }
 
-          const expiry = waterCourtExpiry(publishDate);
-          const shortDate = `${parseInt(publishDate.slice(5, 7), 10)}/${parseInt(publishDate.slice(8, 10), 10)}`;
-
           const notices = parsed
-            .filter(n => n && n.caseNumber && n.applicant)
-            .map(n => ({
-              title: `Water Court -- ${n.applicant}${n.structureName ? ` (${n.structureName})` : ''} (${n.caseNumber})`,
-              entity: 'Colorado District Court, Water Division No. 4',
-              entityClass: 'ent-county',
-              entityLogo: 'water_court',
-              icon: '💧',
-              iconClass: 'type-bid',
-              type: 'Water Court',
-              filterTag: 'water-court',
-              summary: `${n.applicant} filed a ${n.rightType || 'water court application'} in Case No. ${n.caseNumber}${n.structureName ? ` for the ${n.structureName}` : ''}. ${n.shortSummary} Water right location: ${n.waterRightLocation || 'San Miguel County area'}.`,
-              deadline: 'File protests with Water Clerk, Water Division 4, Montrose',
-              expires: expiry,
-              dates: shortDate,
-              papers: [paperKey],
-              url: articleUrl,
-              address: n.waterRightLocation || ''
-            }));
+            .filter(n => n && n.filterTag && n.title)
+            .map(n => {
+              const fields = noticeTypeToFields(n.filterTag);
+              // Water court gets the Division 4 entity; others use the notice's own entity
+              const entity = n.filterTag === 'water-court'
+                ? 'Colorado District Court, Water Division No. 4'
+                : (n.entity || fields.entity);
+              return {
+                title: n.title,
+                entity,
+                entityClass: 'ent-county',
+                entityLogo: fields.logo,
+                icon: fields.icon,
+                iconClass: fields.iconClass,
+                type: fields.label,
+                filterTag: n.filterTag,
+                summary: n.summary || '',
+                deadline: n.deadline || '',
+                expires: n.expires || waterCourtExpiry(publishDate),
+                dates: shortDate,
+                papers: [paperKey],
+                url: articleUrl,
+                address: n.address || '',
+                noticeKey: n.noticeKey || '',
+                ...(n.caseNumber ? { caseNumber: n.caseNumber } : {})
+              };
+            });
 
-          console.log(`  Claude extracted ${notices.length} water court notice(s) from ${paperKey}`);
+          const byTag = {};
+          notices.forEach(n => { byTag[n.filterTag] = (byTag[n.filterTag] || 0) + 1; });
+          console.log(`  Claude extracted ${notices.length} notice(s) from ${paperKey}:`, JSON.stringify(byTag));
           resolve(notices);
         } catch (e) {
           console.log('  Parse error from Claude response:', e.message);
@@ -870,48 +909,130 @@ ${rawText.slice(0, 9000)}`;
  * Fetch the TT legals RSS feed and return any articles not yet represented
  * in existing water court notices. Compares by paper key (date-based).
  */
+/**
+ * Scrape all open bids from a CivicPlus Bids.aspx page (SMC or Town of Telluride).
+ * Returns LEGAL_NOTICES-formatted objects for any bids not already in existingNotices.
+ */
+async function scrapeCivicPlusBids(baseUrl, entityName, entityLogo, existingNotices) {
+  const results = [];
+  // Build set of bidIDs we already have so we don't re-add
+  const seenBidIds = new Set(
+    existingNotices.filter(n => n.smcBidID || n.totBidID).map(n => String(n.smcBidID || n.totBidID))
+  );
+  const bidIdField = baseUrl.includes('sanmiguelcounty') ? 'smcBidID' : 'totBidID';
+
+  let listHtml;
+  try {
+    const resp = await fetch(baseUrl);
+    if (resp.status !== 200) { console.log(`  Bids page ${baseUrl} returned ${resp.status}`); return []; }
+    listHtml = resp.text;
+  } catch (e) { console.log(`  Bids fetch error: ${e.message}`); return []; }
+
+  // Extract unique bid IDs + titles from listing page
+  const bidMap = new Map();
+  const re = /href="bids\.aspx\?bidID=(\d+)"[^>]*>([^<]+)</g;
+  let m;
+  while ((m = re.exec(listHtml)) !== null) {
+    if (!bidMap.has(m[1])) bidMap.set(m[1], m[2].trim());
+  }
+
+  console.log(`  Found ${bidMap.size} open bid(s) on ${entityName} bids page`);
+
+  for (const [bidId, title] of bidMap) {
+    if (seenBidIds.has(bidId)) {
+      console.log(`  Bid #${bidId} already in notices — skipping`);
+      continue;
+    }
+
+    // Fetch detail page to get closing date and description
+    let detailHtml = '';
+    try {
+      const detailUrl = baseUrl.replace(/Bids\.aspx.*/i, '') + `bids.aspx?bidID=${bidId}`;
+      const dr = await fetch(detailUrl);
+      if (dr.status === 200) detailHtml = dr.text;
+      await new Promise(r => setTimeout(r, 600));
+    } catch (_) {}
+
+    // Extract closing date
+    let closingDate = '';
+    let expiresDate = '';
+    const closingMatch = detailHtml.match(/Closing[^<"]{0,20}["']?\s*[>:]?\s*([\d]{1,2}\/[\d]{1,2}\/[\d]{4})/i);
+    if (closingMatch) {
+      closingDate = closingMatch[1];
+      try {
+        const d = new Date(closingDate);
+        expiresDate = d.toISOString().split('T')[0];
+      } catch (_) {}
+    }
+    if (!expiresDate) {
+      // No explicit closing — set 90 days from today
+      const d = new Date();
+      d.setDate(d.getDate() + 90);
+      expiresDate = d.toISOString().split('T')[0];
+    }
+
+    // Extract description snippet
+    let desc = '';
+    const descMatch = detailHtml.match(/class="widgetItemText"[^>]*>([\s\S]{30,600}?)<\/div>/);
+    if (descMatch) desc = descMatch[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 300);
+
+    // Determine type from title
+    const titleLower = title.toLowerCase();
+    let bidType = 'Request for Proposal';
+    if (/\brfq\b|quote/i.test(titleLower)) bidType = 'Request for Quote';
+    if (/\bitb\b|invitation.to.bid/i.test(titleLower)) bidType = 'Invitation to Bid';
+
+    const detailUrl = baseUrl.replace(/Bids\.aspx.*/i, '') + `bids.aspx?bidID=${bidId}`;
+    const noticeEntry = {
+      title: `${bidType} -- ${title}`,
+      entity: entityName,
+      entityClass: 'ent-county',
+      entityLogo: entityLogo,
+      icon: '🏛️',
+      iconClass: 'type-rfp',
+      type: bidType,
+      filterTag: 'public-entity',
+      summary: desc || `${entityName} is seeking qualified respondents for: ${title}.`,
+      deadline: closingDate ? `Closes ${closingDate}` : 'Open until contracted',
+      expires: expiresDate,
+      dates: `${parseInt(today().slice(5, 7), 10)}/${parseInt(today().slice(8, 10), 10)}`,
+      url: detailUrl,
+      address: '',
+      [bidIdField]: bidId
+    };
+    console.log(`  New bid: ${title} (closes ${closingDate || 'TBD'})`);
+    results.push(noticeEntry);
+  }
+  return results;
+}
+
 async function fetchNewLegalsArticles(existingNotices) {
   if (!TT_AUTH_COOKIE) {
-    console.log('  TT_AUTH_COOKIE not set — skipping water court scrape');
+    console.log('  TT_AUTH_COOKIE not set — skipping TT legals scrape');
     return [];
   }
 
-  // Build set of paper keys already recorded in existing water-court notices
+  // Build set of paper keys already recorded across ALL TT-sourced notices
   const seenKeys = new Set();
   for (const n of existingNotices) {
-    if (n.filterTag === 'water-court' && Array.isArray(n.papers)) {
-      n.papers.forEach(p => seenKeys.add(p));
-    }
+    if (Array.isArray(n.papers)) n.papers.forEach(p => { if (p.startsWith('ttimes_')) seenKeys.add(p); });
   }
 
-  // Also track seen case numbers to avoid duplicates within a single run
-  const seenCases = new Set(
-    existingNotices
-      .filter(n => n.filterTag === 'water-court' && n.caseNumber)
-      .map(n => n.caseNumber)
-  );
+  // Build dedup sets to prevent duplicate notices within a run
+  const seenCases = new Set(existingNotices.filter(n => n.caseNumber).map(n => n.caseNumber));
+  const seenNoticeKeys = new Set(existingNotices.filter(n => n.noticeKey).map(n => n.noticeKey));
 
   let rssText;
   try {
-    const rssUrl = maybeProxy(TT_LEGALS_RSS);
-    const resp = await fetch(rssUrl);
-    if (resp.status !== 200) {
-      console.log(`  Legals RSS returned HTTP ${resp.status}`);
-      return [];
-    }
+    const resp = await fetch(maybeProxy(TT_LEGALS_RSS));
+    if (resp.status !== 200) { console.log(`  Legals RSS HTTP ${resp.status}`); return []; }
     rssText = resp.text;
-  } catch (e) {
-    console.log('  Legals RSS fetch error:', e.message);
-    return [];
-  }
+  } catch (e) { console.log('  Legals RSS fetch error:', e.message); return []; }
 
-  let parsed;
-  try { parsed = await parseXml(rssText); } catch (e) {
-    console.log('  Legals RSS parse error:', e.message);
-    return [];
-  }
+  let parsedRss;
+  try { parsedRss = await parseXml(rssText); } catch (e) { console.log('  Legals RSS parse error:', e.message); return []; }
 
-  const items = parsed?.rss?.channel?.item;
+  const items = parsedRss?.rss?.channel?.item;
   if (!items) return [];
   const articles = Array.isArray(items) ? items : [items];
 
@@ -922,43 +1043,36 @@ async function fetchNewLegalsArticles(existingNotices) {
     const pubDateRaw = item.pubDate || '';
     if (!link || !pubDateRaw) continue;
 
-    // Parse publish date to YYYY-MM-DD
     const pubDate = new Date(pubDateRaw).toISOString().split('T')[0];
     const paperKey = ttPaperKey(pubDate);
 
     if (seenKeys.has(paperKey)) {
-      console.log(`  Legals article ${paperKey} already processed — skipping`);
+      console.log(`  Legals ${paperKey} already processed — skipping`);
       continue;
     }
 
-    console.log(`  New legals issue found: ${item.title || link} (${pubDate})`);
-
+    console.log(`  New legals issue: ${item.title || link} (${pubDate})`);
     const result = await fetchTTArticleDirect(link);
-    if (!result || result.status !== 200) {
-      console.log(`  Could not fetch article (status ${result?.status}) — skipping`);
-      continue;
-    }
+    if (!result || result.status !== 200) { console.log(`  Could not fetch (HTTP ${result?.status})`); continue; }
 
     const plainText = extractTncmsText(result.text);
-    if (!plainText) {
-      console.log('  No TNCMS encrypted content found — article may not be paywalled or cookie expired');
-      continue;
-    }
-    console.log(`  Decoded ${plainText.length} chars of legal notice text`);
+    if (!plainText) { console.log('  No TNCMS content — cookie may have expired'); continue; }
+    console.log(`  Decoded ${plainText.length} chars`);
 
-    const notices = await parseWaterCourtNoticesWithClaude(plainText, link, pubDate);
+    const notices = await parseLegalNoticesWithClaude(plainText, link, pubDate);
 
-    // Filter out any that duplicate case numbers already in the array
     for (const n of notices) {
-      if (n.caseNumber && seenCases.has(n.caseNumber)) {
-        console.log(`  Skipping duplicate case ${n.caseNumber}`);
+      // Dedup by case number (water court) or noticeKey (everything else)
+      const key = n.caseNumber || n.noticeKey;
+      if (key && (seenCases.has(key) || seenNoticeKeys.has(key))) {
+        console.log(`  Skipping duplicate: ${key}`);
         continue;
       }
       if (n.caseNumber) seenCases.add(n.caseNumber);
+      if (n.noticeKey) seenNoticeKeys.add(n.noticeKey);
       newNotices.push(n);
     }
 
-    // Mark this paper key as seen so we don't re-fetch on subsequent loop iterations
     seenKeys.add(paperKey);
   }
 
@@ -971,22 +1085,29 @@ async function refreshLegalNotices(existingNotices) {
   // 1. Remove expired notices
   const now = today();
   const kept = existingNotices.filter(n => {
-    if (n.expires && n.expires < now) {
-      console.log(`  Expired: ${n.title}`);
-      return false;
-    }
+    if (n.expires && n.expires < now) { console.log(`  Expired: ${n.title}`); return false; }
     return true;
   });
-  const expiredCount = existingNotices.length - kept.length;
-  if (expiredCount > 0) console.log(`  Removed ${expiredCount} expired notice(s)`);
+  if (existingNotices.length - kept.length > 0)
+    console.log(`  Removed ${existingNotices.length - kept.length} expired notice(s)`);
 
-  // 2. Scrape new water court notices from TT legals section
-  const newWaterCourt = await fetchNewLegalsArticles(kept);
-  if (newWaterCourt.length > 0) {
-    console.log(`  Adding ${newWaterCourt.length} new water court notice(s)`);
-  }
+  // 2. TT Legals — all notice types (water court, ordinance, housing, public-entity, etc.)
+  const newFromTT = await fetchNewLegalsArticles(kept);
+  if (newFromTT.length > 0) console.log(`  Adding ${newFromTT.length} new notice(s) from TT legals`);
 
-  const result = [...kept, ...newWaterCourt];
+  // 3. SMC Bids page — open RFPs / ITBs / RFQs
+  const newSMCBids = await scrapeCivicPlusBids(
+    'https://www.sanmiguelcountyco.gov/Bids.aspx',
+    'San Miguel County', 'county', [...kept, ...newFromTT]
+  );
+
+  // 4. Town of Telluride Bids page
+  const newTownBids = await scrapeCivicPlusBids(
+    'https://www.telluride.gov/Bids.aspx',
+    'Town of Telluride', 'telluride', [...kept, ...newFromTT, ...newSMCBids]
+  );
+
+  const result = [...kept, ...newFromTT, ...newSMCBids, ...newTownBids];
   console.log(`  ${result.length} active notice(s) total`);
   return result;
 }
