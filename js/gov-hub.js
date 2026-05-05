@@ -2672,6 +2672,17 @@ async function enrichKOTOEvent(item) {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
+    title: "Cinco De Mayo",
+    link: "https://koto.org/event/cinco-de-mayo/",
+    description: "Cinco de Mayo meets Tequila Tuesday at Uno Dos Tres. Music by MVE. Tacos, Tequila and Celebration from 3 to 7pm. Lots of local love. Salud!",
+    pubDate: "2026-05-05T15:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/C5FC1592-D4E9-4C2D-9FF2-7673576C3C7C-1.jpeg"
+  },
+  {
     title: "Sound Bath with Erin",
     link: "https://koto.org/event/sound-bath-with-erin/",
     description: "Bathe in the resonance of time through the healing medium of Himalayan singing bowls. These elemental, multi-tonal instruments help us release worry and drop into a state of zen. Leave your cares outside, find tranquility on your mat, and dissolve with the bowl’s vibrations. Space is limited; please sign up below. BYO mat if possible, plus anything",
@@ -2692,6 +2703,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg"
+  },
+  {
+    title: "Dark Sky Café Tacos and SMPA candidate open house!",
+    link: "https://koto.org/event/dark-sky-cafe-tacos-and-smpa-candidate-open-house/",
+    description: "Please come by Dark Sky Cafe, 1615 Grand Avenue in Norwood, on Wednesday May 6th anytime between 4:30 and 8:30 PM for free tacos and a meet and greet with San Miguel Power board candidate Joanna Yonder! Your voice matters, and our rural electric cooperative is more important than ever. All are welcome!",
+    pubDate: "2026-05-06T16:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Dark, Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/Meet-Greet-Poster-11-x-8.5-in.png"
   },
   {
     title: "Trivia Night at Strong House Brewery",
@@ -4357,6 +4379,15 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-20  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Man to plead guilty in Colorado firebombing attack on pro-Israel demonstrators",
+    source: "Telluride Times",
+    date: "May 4, 2026",
+    newsTopic: "public-safety",
+    copy: "A man accused of killing one person and injuring a dozen more in a Colorado firebomb attack on demonstrators showing support for Israeli hostages in Gaza plans to plead guilty later this week. Mohamed Sabry Soliman had previously pleaded not…",
+    href: "https://www.telluridenews.com/news/state/article_931f4da9-96f2-578e-97a4-bdf03c024048.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg?resize=300%2C200"
+  },
+  {
     title: "States across the wildfire-prone Western US are using AI for early detection",
     source: "Telluride Times",
     date: "May 4, 2026",
@@ -4573,15 +4604,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/df/8dfd6a5c-a101-5ad6-891e-bcee98b6b578/69ea6f2fc96b2.image.jpg?resize=300%2C200"
   },
   {
-    title: "Telluride Town Clerk certifies council candidates for June election",
-    source: "Telluride Times",
-    date: "April 23, 2026",
-    newsTopic: "government",
-    copy: "The Telluride Town Clerk has officially certified candidates for Telluride Town Council’s special election on June 30 — the first time there have been more candidates than open seats on council since 2023.",
-    href: "https://www.telluridenews.com/news/article_68c45a3a-0714-44e9-b0b4-a237f39657d2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/21/a21bf33b-c002-4a52-a20d-577939094d4a/69ea5ed10a0b7.image.jpg?resize=300%2C231"
-  },
-  {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
     source: "Town of Telluride",
     date: "April 24, 2026",
@@ -4626,6 +4648,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
 // Updated: 2026-04-18  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 5-4-26",
+    source: "KOTO Community Radio",
+    date: "May 5, 2026",
+    newsTopic: "recreation",
+    copy: "Paul Wisor Steps Down as Mountain Village Town Manager; General Assembly Enters Its Final Days",
+    href: "https://koto.org/news/newscast-5-4-26/"
+  },
   {
     title: "Newscast 5-1-26",
     source: "KOTO Community Radio",
@@ -4681,14 +4711,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "government",
     copy: "Candidates Vie for Telluride Town Council; Funding Cliff Looms for Telluride School District; A Look Back: Goats Graze the Valley Floor",
     href: "https://koto.org/news/newscast-4-22-26/"
-  },
-  {
-    title: "Newscast 4-20-26",
-    source: "KOTO Community Radio",
-    date: "April 21, 2026",
-    newsTopic: "government",
-    copy: "Floating Solar on Reservoir Number 2; Lawmakers Tackle the Budget",
-    href: "https://koto.org/news/newscast-4-20-26/"
   }
 ];
 

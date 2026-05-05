@@ -6,8 +6,38 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 May 2026 19:20:48 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 02:11:38 GMT</lastBuildDate>
     <ttl>360</ttl>
+    <item>
+      <title>Newscast 5-4-26</title>
+      <link>https://koto.org/news/newscast-5-4-26/</link>
+      <guid isPermaLink="false">https://koto.org/news/newscast-5-4-26/</guid>
+      <pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Paul Wisor Steps Down as Mountain Village Town Manager; General Assembly Enters Its Final Days]]></description>
+      <category>KOTO Community Radio</category>
+      <category>recreation</category>
+    </item>
+    <item>
+      <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
+      <link>https://livabletelluride.org/#events</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/2nd%20Annual%20Telluride%20Rotary%20Hikeathon%7CMay%2031%2C%202026%7C2026-W19</guid>
+      <pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[📍 Oak Street Gondola Plaza, Telluride
+🕒 11:00 AM kickoff
+Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four weeks of hiking from May 31 through June 28, with a kickoff at 11am on May 31 at the Oak Street gondola plaza. Hike from anywhere and raise funds for the Telluride Rotary Foundation — supporting scholarships, Youth Exchange, international projects, and community grants. 60% of nonprofit team funds go directly back to their nonprofit. Sponsored by Alpine Bank and Jagged Edge Mountain Gear.]]></description>
+      <category>Community Event</category>
+      <category>Telluride Rotary Club</category>
+    </item>
+    <item>
+      <title>Man to plead guilty in Colorado firebombing attack on pro-Israel demonstrators</title>
+      <link>https://www.telluridenews.com/news/state/article_931f4da9-96f2-578e-97a4-bdf03c024048.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_931f4da9-96f2-578e-97a4-bdf03c024048.html</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg?resize=300%2C200" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />A man accused of killing one person and injuring a dozen more in a Colorado firebomb attack on demonstrators showing support for Israeli hostages in Gaza plans to plead guilty later this week. Mohamed Sabry Soliman had previously pleaded not…]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg?resize=300%2C200" medium="image" />
+      <category>Telluride Times</category>
+      <category>public-safety</category>
+    </item>
     <item>
       <title>States across the wildfire-prone Western US are using AI for early detection</title>
       <link>https://www.telluridenews.com/news/state/article_3d9717e8-6111-5f8d-b69b-3260bf6758a8.html</link>
@@ -17,17 +47,6 @@
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3c/c3c369ac-5496-5153-b4fc-3638934dc35a/69f899e7aa3db.image.jpg?resize=300%2C200" medium="image" />
       <category>Telluride Times</category>
       <category>public-safety</category>
-    </item>
-    <item>
-      <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
-      <link>https://livabletelluride.org/#events</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/2nd%20Annual%20Telluride%20Rotary%20Hikeathon%7CMay%2031%2C%202026%7C2026-W19</guid>
-      <pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[📍 Oak Street Gondola Plaza, Telluride
-🕒 11:00 AM kickoff
-Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four weeks of hiking from May 31 through June 28, with a kickoff at 11am on May 31 at the Oak Street gondola plaza. Hike from anywhere and raise funds for the Telluride Rotary Foundation — supporting scholarships, Youth Exchange, international projects, and community grants. 60% of nonprofit team funds go directly back to their nonprofit. Sponsored by Alpine Bank and Jagged Edge Mountain Gear.]]></description>
-      <category>Community Event</category>
-      <category>Telluride Rotary Club</category>
     </item>
     <item>
       <title>Jonathan Fouser is Telluride Mountain School’s new head of school</title>
@@ -182,57 +201,6 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/7e/37efb440-e66f-5d94-a2bc-43449e73e748/69f1e9285fdc5.image.jpg?resize=300%2C200" medium="image" />
       <category>Telluride Times</category>
       <category>government</category>
-    </item>
-    <item>
-      <title>‘We’ve legislated our way into housing insecurity’</title>
-      <link>https://www.telluridenews.com/news/article_fc7e07da-d18b-4b4e-8371-ae908bc5f813.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/article_fc7e07da-d18b-4b4e-8371-ae908bc5f813.html</guid>
-      <pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/5a/25abcf8b-8de8-41c9-8d2d-5da48a05d4a5/69f10d434c461.image.jpg?resize=300%2C400" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Editor's note: After The Telluride Times published this story in print and online, the Town of Telluride responded to an earlier request from The Times for updated vacancy information. The updated numbers, current as of April 27, indicate that there…]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/5a/25abcf8b-8de8-41c9-8d2d-5da48a05d4a5/69f10d434c461.image.jpg?resize=300%2C400" medium="image" />
-      <category>Telluride Times</category>
-      <category>housing</category>
-    </item>
-    <item>
-      <title>Telluride Times staff win seven awards at Top of the Rockies</title>
-      <link>https://www.telluridenews.com/news/article_aa173851-b6c9-49cc-ab64-d2e92b45ddb4.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/article_aa173851-b6c9-49cc-ab64-d2e92b45ddb4.html</guid>
-      <pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/96/796a7f6b-d98a-44c8-b1cf-48fc5b8ff1fe/69efd2c95a1fa.image.jpg?resize=300%2C200" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />The Telluride Times, under its former name, the Telluride Daily Planet, won seven awards at the Society of Professional Journalists’ 2026 Top of the Rockies Excellence in Journalism competition.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/96/796a7f6b-d98a-44c8-b1cf-48fc5b8ff1fe/69efd2c95a1fa.image.jpg?resize=300%2C200" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Newscast 4-27-26</title>
-      <link>https://koto.org/news/newscast-4-27-26/</link>
-      <guid isPermaLink="false">https://koto.org/news/newscast-4-27-26/</guid>
-      <pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[A Mountain Village Investigation Update; Coming Up Next, Telluride; Lawmakers Talk Geothermal and Overtime Hours]]></description>
-      <category>KOTO Community Radio</category>
-      <category>recreation</category>
-    </item>
-    <item>
-      <title>[Meeting] Town Council — 2026-04-28</title>
-      <link>https://livabletelluride.org/#meetings</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-04-28%7CTown%20Council</guid>
-      <pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Telluride • 2026-04-28
-
-PUBLIC HEARING (continued): Stender Residence HARC appeal — small-scale + insubstantial-scale new construction, Lot C Block 3 Halls Addition, N Aspen St (continued from Dec 16, Feb 24, Mar 31) · WORK SESSION: Emergency Evacuation Planning & Municipal Disaster Management (Shannon Armstrong, SM County Emergency Mgr, 60 min) · Update from Telluride Ski and Golf (Steve Swenson) · Manager’s Report: Q1 Goals & Objectives update, Master Lease Program update · Proclamations: May Mental Health Awareness Month, May 9 Valley Floor Day · P&Z appointment: Piper Miller · SECOND READING: Ordinance authorizing sale of deed-restricted Element 52 Unit SW-102 (398 S Davis St) · SECOND READING: Ordinance authorizing sale of deed-restricted Silver Jack Unit 205 (155 W Pacific Ave) · WORK SESSION: Black Hills Energy franchise agreement discussion · Marshal’s Dept annual report · Fire Ban approval process discussion]]></description>
-      <category>Meeting</category>
-      <category>Town of Telluride</category>
-    </item>
-    <item>
-      <title>[Meeting] Telluride Housing Authority — 2026-04-28</title>
-      <link>https://livabletelluride.org/#meetings</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-04-28%7CTelluride%20Housing%20Authority</guid>
-      <pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Telluride • 2026-04-28
-
-Consideration of adoption of a Policy Statement regarding the Affordable Housing Waitlist (DeLanie Young-Tapson, Allie Slaten) · Discussion on the formation of a Resident Advisory Committee (continuing from Mar 31)]]></description>
-      <category>Meeting</category>
-      <category>Town of Telluride</category>
     </item>
   </channel>
 </rss>
