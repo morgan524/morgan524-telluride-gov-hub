@@ -29,6 +29,10 @@
       --norwood-light: #F3EFE3;
       --ophir-slate: #5A6B74;
       --ophir-light: #EAF0F3;
+      --ouray-rust: #7A3E2A;
+      --ouray-light: #F5EBE6;
+      --ridgway-blue: #3B6E8E;
+      --ridgway-light: #E3EEF5;
       --airport-sky: #5D7E8E;
       --airport-light: #EDF3F6;
       --ttimes-charcoal: #59605E;
@@ -1796,6 +1800,16 @@
       color: #fff;
       background: var(--airport-sky);
     }
+    .chip.active-ouray {
+      border-color: var(--ouray-rust);
+      color: #fff;
+      background: var(--ouray-rust);
+    }
+    .chip.active-ridgway {
+      border-color: var(--ridgway-blue);
+      color: #fff;
+      background: var(--ridgway-blue);
+    }
     .chip.active-ttimes {
       border-color: var(--ttimes-charcoal);
       color: #fff;
@@ -1842,6 +1856,8 @@
     .card[data-source="med"] { border-left-color: var(--med-teal); }
     .card[data-source="norwood"] { border-left-color: var(--norwood-gold); }
     .card[data-source="ophir"] { border-left-color: var(--ophir-slate); }
+    .card[data-source="ouray"] { border-left-color: var(--ouray-rust); }
+    .card[data-source="ridgway"] { border-left-color: var(--ridgway-blue); }
     .card[data-source="airport"] { border-left-color: var(--airport-sky); }
     .card[data-source="ttimes"] { border-left-color: var(--ttimes-charcoal); }
     .card[data-source="koto"] { border-left-color: var(--koto-blue); }
@@ -1900,6 +1916,8 @@
     .badge-med { background: var(--med-light); color: var(--med-teal); }
     .badge-norwood { background: var(--norwood-light); color: var(--norwood-gold); }
     .badge-ophir { background: var(--ophir-light); color: var(--ophir-slate); }
+    .badge-ouray { background: var(--ouray-light); color: var(--ouray-rust); }
+    .badge-ridgway { background: var(--ridgway-light); color: var(--ridgway-blue); }
     .badge-airport { background: var(--airport-light); color: var(--airport-sky); }
     .badge-localgroup { background: rgba(139,115,50,0.12); color: #6b5b3a; }
     .badge-ttimes { background: var(--ttimes-light); color: var(--ttimes-charcoal); }
@@ -2059,6 +2077,8 @@
     .card[data-source="med"] .meeting-summary { border-left-color: var(--med-teal); }
     .card[data-source="norwood"] .meeting-summary { border-left-color: var(--norwood-gold); }
     .card[data-source="ophir"] .meeting-summary { border-left-color: var(--ophir-slate); }
+    .card[data-source="ouray"] .meeting-summary { border-left-color: var(--ouray-rust); }
+    .card[data-source="ridgway"] .meeting-summary { border-left-color: var(--ridgway-blue); }
     .card[data-source="airport"] .meeting-summary { border-left-color: var(--airport-sky); }
     .card[data-source="ttimes"] .meeting-summary { border-left-color: var(--ttimes-charcoal); }
 

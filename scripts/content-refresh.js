@@ -58,6 +58,12 @@ const AGENDA_SOURCES = {
     label: 'Telluride School District R-1',
     pageUrl: 'https://www.tellurideschool.org/agendasandminutes',
     type: 'generic'
+  },
+  ouray: {
+    label: 'Ouray County',
+    boccRss: 'https://ouraycountyco.gov/RSSFeed.aspx?ModID=65&CID=Board-of-County-Commissioners-1',
+    pcRss:   'https://ouraycountyco.gov/RSSFeed.aspx?ModID=65&CID=Planning-Commission-2',
+    type: 'civicplus-agendacenter'
   }
 };
 
@@ -185,6 +191,9 @@ const PROXY_HOSTS = new Set([
   'www.townofmountainvillage.com',
   'smarttelluride.colorado.gov',
   'www.tellurideschool.org',
+  'ouraycountyco.gov',
+  'www.ouraycountyco.gov',
+  'www.norwoodtown.com',
 ]);
 
 function maybeProxy(url) {
@@ -408,6 +417,42 @@ async function fetchUpcomingMeetings() {
       }
     }
   } catch (e) { console.warn('  County RSS error:', e.message); }
+
+
+  // Ouray County — CivicPlus AgendaCenter RSS (both boards)
+  try {
+    const feeds = [
+      { url: AGENDA_SOURCES.ouray.boccRss, board: 'bocc' },
+      { url: AGENDA_SOURCES.ouray.pcRss,   board: 'pc' }
+    ];
+    for (const feed of feeds) {
+      const resp = await fetch(feed.url);
+      if (resp.status === 200) {
+        const xml = await parseXml(resp.text);
+        const items = xml?.rss?.channel?.item;
+        const arr = Array.isArray(items) ? items : (items ? [items] : []);
+        for (const item of arr) {
+          // Meeting date is embedded in title: "5/6/2026 @ 2:00PM - ..."
+          const titleText = item.title || '';
+          const dateMatch = titleText.match(/^(\d{1,2}\/\d{1,2}\/\d{4})/);
+          let mDate;
+          if (dateMatch) {
+            mDate = new Date(dateMatch[1]);
+          } else {
+            mDate = new Date(item.pubDate || '');
+          }
+          if (!isNaN(mDate) && mDate >= now && mDate <= horizon) {
+            meetings.push({
+              source: 'ouray',
+              date: mDate.toISOString().split('T')[0],
+              title: titleText.replace(/^\d{1,2}\/\d{1,2}\/\d{4}\s*@?\s*[\d:APMapm]*\s*-?\s*/, '').trim() || 'Ouray County Meeting',
+              agendaUrl: item.link || ''
+            });
+          }
+        }
+      }
+    }
+  } catch (e) { console.warn('  Ouray County RSS error:', e.message); }
 
   return meetings;
 }
@@ -2270,6 +2315,124 @@ async function syncTelluridFoundationEvents() {
   }
 }
 
+
+// ══════════════════════════════════════════════════════════════
+// ── Task N: Sync Ouray County Meetings from CivicPlus RSS ──
+// ══════════════════════════════════════════════════════════════
+async function syncOurayMeetings() {
+  console.log('\n🏔️  Syncing Ouray County meetings from AgendaCenter RSS...');
+  const now = new Date();
+  const horizon = now.getTime() + 60 * 86400000;  // 60-day window
+  const pruneDate = new Date(now.getTime() - 7 * 86400000); // prune >7 days past
+
+  const feedDefs = [
+    { url: 'https://ouraycountyco.gov/RSSFeed.aspx?ModID=65&CID=Board-of-County-Commissioners-1', board: 'bocc' },
+    { url: 'https://ouraycountyco.gov/RSSFeed.aspx?ModID=65&CID=Planning-Commission-2', board: 'pc' }
+  ];
+
+  const entries = [];
+  for (const feedDef of feedDefs) {
+    try {
+      const resp = await fetch(feedDef.url);
+      if (resp.status !== 200) {
+        console.log(`  HTTP ${resp.status} for ${feedDef.board} feed`);
+        return null;  // don't clobber on error
+      }
+      const xml = await parseXml(resp.text);
+      const items = xml?.rss?.channel?.item;
+      const arr = Array.isArray(items) ? items : (items ? [items] : []);
+      for (const item of arr) {
+        const titleText = item.title || '';
+        const dateMatch = titleText.match(/^(\d{1,2}\/\d{1,2}\/\d{4})/);
+        let mDate;
+        if (dateMatch) {
+          mDate = new Date(dateMatch[1]);
+        } else {
+          const pubMatch = titleText.match(/(\d{1,2}\/\d{1,2}\/\d{4})/);
+          mDate = pubMatch ? new Date(pubMatch[1]) : new Date(item.pubDate || '');
+        }
+        if (isNaN(mDate)) continue;
+        if (mDate < pruneDate || mDate.getTime() > horizon) continue;
+
+        const cleanTitle = titleText
+          .replace(/^\d{1,2}\/\d{1,2}\/\d{4}\s*@?\s*[\d:APMapm]*\s*(AM|PM)?\s*-?\s*/, '')
+          .trim() || (feedDef.board === 'bocc' ? 'BOCC Meeting' : 'Planning Commission Meeting');
+
+        const dateStr = mDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+        entries.push({
+          date: dateStr,
+          title: cleanTitle,
+          board: feedDef.board,
+          agendaUrl: item.link || null
+        });
+      }
+    } catch (e) {
+      console.warn('  Ouray RSS error:', e.message);
+      return null;
+    }
+  }
+
+  // Sort by date ascending
+  entries.sort((a, b) => new Date(a.date) - new Date(b.date));
+  console.log(`  Found ${entries.length} Ouray County meeting(s)`);
+  return entries;
+}
+
+// ══════════════════════════════════════════════════════════════
+// ── Task N: Sync Norwood Meetings from HTML pages ──
+// ══════════════════════════════════════════════════════════════
+async function syncNorwoodMeetings() {
+  console.log('\n🏘️  Syncing Norwood meetings from meeting pages...');
+  const now = new Date();
+  const pruneDate = new Date(now.getTime() - 7 * 86400000);
+  const horizon = now.getTime() + 60 * 86400000;
+
+  const pageDefs = [
+    { url: 'https://www.norwoodtown.com/board-of-trustees-meetings?year=2026', board: 'bot' },
+    { url: 'https://www.norwoodtown.com/planning-and-zoning-commission-meetings?year=2026', board: 'pz' }
+  ];
+
+  const entries = [];
+  for (const pageDef of pageDefs) {
+    try {
+      const resp = await fetch(pageDef.url);
+      if (resp.status !== 200) {
+        console.log(`  HTTP ${resp.status} for ${pageDef.board}`);
+        return null;
+      }
+      const html = resp.text;
+      // Extract meeting entries via aria-label: "View [title] on YYYY-MM-DD"
+      const viewRe = /aria-label="View ([^"]+) on (\d{4}-\d{2}-\d{2})"/g;
+      const agendaRe = /aria-label="Agenda attachment for (\d{4}-\d{2}-\d{2}) [^"]*"[^>]*href="([^"]+)"/g;
+
+      // Build agenda map by date
+      const agendaMap = {};
+      let am;
+      while ((am = agendaRe.exec(html)) !== null) {
+        if (!agendaMap[am[1]]) agendaMap[am[1]] = 'https://www.norwoodtown.com' + am[2];
+      }
+
+      let vm;
+      while ((vm = viewRe.exec(html)) !== null) {
+        const title = vm[1];
+        const dateStr = vm[2];
+        const mDate = new Date(dateStr + 'T12:00:00'); // noon local to avoid tz
+        if (mDate < pruneDate || mDate.getTime() > horizon) continue;
+        const agendaUrl = agendaMap[dateStr] || null;
+        const humanDate = mDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+        entries.push({ date: humanDate, title, board: pageDef.board, agendaUrl });
+      }
+    } catch (e) {
+      console.warn('  Norwood scrape error:', e.message);
+      return null;
+    }
+  }
+
+  entries.sort((a, b) => new Date(a.date) - new Date(b.date));
+  console.log(`  Found ${entries.length} Norwood meeting(s)`);
+  return entries;
+}
+
 async function main() {
   console.log('═══════════════════════════════════════════════');
   console.log('  Telluride Gov Hub — Content Refresh');
@@ -2440,6 +2603,29 @@ async function main() {
 
   // ── 14. Sherbino Theater Events ──
   const newSherbinoEvents = await syncSherbinoEvents();
+
+  // ── Ouray County meetings ──
+  const newOurayData = await syncOurayMeetings();
+  if (newOurayData !== null) {
+    const existingOuray = extractJsArray(govHubSrc, 'OURAY_CACHED_DATA') || [];
+    if (JSON.stringify(newOurayData) !== JSON.stringify(existingOuray)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'OURAY_CACHED_DATA', newOurayData, false);
+      govHubSrc = replaceConstString(govHubSrc, 'OURAY_CACHE_DATE', today());
+      changed = true;
+    }
+  }
+
+  // ── Norwood meetings ──
+  const newNorwoodData = await syncNorwoodMeetings();
+  if (newNorwoodData !== null) {
+    const existingNorwood = extractJsArray(govHubSrc, 'NORWOOD_CACHED_DATA') || [];
+    if (JSON.stringify(newNorwoodData) !== JSON.stringify(existingNorwood)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'NORWOOD_CACHED_DATA', newNorwoodData, false);
+      govHubSrc = replaceConstString(govHubSrc, 'NORWOOD_CACHE_DATE', today());
+      changed = true;
+    }
+  }
+
   if (newSherbinoEvents !== undefined && newSherbinoEvents !== null) {
     const existingSherbino = extractJsArray(govHubSrc, 'SHERBINO_EVENTS') || [];
     if (JSON.stringify(newSherbinoEvents) !== JSON.stringify(existingSherbino)) {

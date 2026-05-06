@@ -470,6 +470,128 @@ function mergeCountyMeetings(rssMeetings, cachedMeetings) {
   return [...filteredRss, ...futureCached];
 }
 
+// ══════════════════════════════════════════════════════════════
+// ── Ouray County (cached, auto-refreshed by content-refresh.js) ──
+// ══════════════════════════════════════════════════════════════
+//
+// Two boards scraped from CivicPlus AgendaCenter RSS:
+//   - Board of County Commissioners: ouraycountyco.gov/AgendaCenter BOCC category
+//   - Planning Commission: ouraycountyco.gov/AgendaCenter Planning-Commission category
+//
+// TO UPDATE MANUALLY: https://ouraycountyco.gov/AgendaCenter/Planning-Commission-2
+// and https://ouraycountyco.gov/495/Agendas-Minutes
+
+const OURAY_BOCC_URL = 'https://ouraycountyco.gov/495/Agendas-Minutes';
+const OURAY_PC_URL   = 'https://ouraycountyco.gov/AgendaCenter/Planning-Commission-2';
+const OURAY_CACHE_DATE = '2026-05-06';
+
+const OURAY_CACHED_DATA = [
+  {
+    date: 'May 6, 2026',
+    title: 'Planning Commission Work Session',
+    board: 'pc',
+    agendaUrl: 'https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1008'
+  }
+];
+
+function getOurayMeetings() {
+  const boardUrls = { bocc: OURAY_BOCC_URL, pc: OURAY_PC_URL };
+  return OURAY_CACHED_DATA.map(m => {
+    const eventDate = localDate(m.date);
+    const link = m.agendaUrl || boardUrls[m.board] || OURAY_BOCC_URL;
+    return {
+      title: m.title,
+      link,
+      description: m.note || '',
+      eventDate,
+      eventDates: '',
+      eventTimes: '',
+      location: '541 4th St, Ouray, CO 81427',
+      source: 'ouray',
+      sourceLabel: 'Ouray County',
+      category: 'Meeting',
+      canceled: false,
+      hasAgenda: !!m.agendaUrl
+    };
+  });
+}
+
+// ══════════════════════════════════════════════════════════════
+// ── Town of Ridgway (cached — site blocks automated scraping) ──
+// ══════════════════════════════════════════════════════════════
+//
+// Two boards, static schedule (townofridgway.colorado.gov blocks bots):
+//   - Town Council: 2nd and 4th Tuesday each month
+//   - Planning Commission: 1st Tuesday each month
+//
+// TO UPDATE: https://townofridgway.colorado.gov/i-want-to/ridgway-town-council
+// and https://townofridgway.colorado.gov/i-want-to/ridgway-planning-commission
+
+const RIDGWAY_TC_URL  = 'https://townofridgway.colorado.gov/i-want-to/ridgway-town-council';
+const RIDGWAY_PC_URL  = 'https://townofridgway.colorado.gov/i-want-to/ridgway-planning-commission';
+const RIDGWAY_CACHE_DATE = '2026-05-06';
+
+const RIDGWAY_CACHED_DATA = [
+  {
+    date: 'May 12, 2026',
+    title: 'Town Council Regular Meeting',
+    board: 'tc',
+    agendaUrl: null
+  },
+  {
+    date: 'May 26, 2026',
+    title: 'Town Council Regular Meeting',
+    board: 'tc',
+    agendaUrl: null
+  },
+  {
+    date: 'June 2, 2026',
+    title: 'Planning Commission Meeting',
+    board: 'pc',
+    agendaUrl: null
+  },
+  {
+    date: 'June 9, 2026',
+    title: 'Town Council Regular Meeting',
+    board: 'tc',
+    agendaUrl: null
+  },
+  {
+    date: 'June 23, 2026',
+    title: 'Town Council Regular Meeting',
+    board: 'tc',
+    agendaUrl: null
+  },
+  {
+    date: 'July 7, 2026',
+    title: 'Planning Commission Meeting',
+    board: 'pc',
+    agendaUrl: null
+  }
+];
+
+function getRidgwayMeetings() {
+  const boardUrls = { tc: RIDGWAY_TC_URL, pc: RIDGWAY_PC_URL };
+  return RIDGWAY_CACHED_DATA.map(m => {
+    const eventDate = localDate(m.date);
+    const link = m.agendaUrl || boardUrls[m.board] || RIDGWAY_TC_URL;
+    return {
+      title: m.title,
+      link,
+      description: m.note || '',
+      eventDate,
+      eventDates: '',
+      eventTimes: '',
+      location: '201 N Railroad St, Ridgway, CO 81432',
+      source: 'ridgway',
+      sourceLabel: 'Ridgway',
+      category: 'Meeting',
+      canceled: false,
+      hasAgenda: !!m.agendaUrl
+    };
+  });
+}
+
 // ══════════════════════════════════════════════════════════
 // ── SMART Transit meetings (cached data, instant load) ──
 // ══════════════════════════════════════════════════════════
@@ -3596,6 +3718,8 @@ function renderBadge(item) {
   else if (item.source === 'med') badgeClass = 'badge-med';
   else if (item.source === 'norwood') badgeClass = 'badge-norwood';
   else if (item.source === 'ophir') badgeClass = 'badge-ophir';
+  else if (item.source === 'ouray') badgeClass = 'badge-ouray';
+  else if (item.source === 'ridgway') badgeClass = 'badge-ridgway';
   else if (item.source === 'airport') badgeClass = 'badge-airport';
   else if (item.source === 'localgroup') badgeClass = 'badge-localgroup';
   else if (item.source === 'ttimes') badgeClass = 'badge-ttimes';
@@ -3617,6 +3741,8 @@ const SOURCE_SHORT_NAME = {
   med: 'Med Center',
   norwood: 'Norwood',
   ophir: 'Ophir',
+  ouray: 'Ouray County',
+  ridgway: 'Ridgway',
   airport: 'TEX',
   wilkinson: 'Wilkinson'
 };
@@ -3844,7 +3970,7 @@ const GOV_MEETING_PATTERN = /board|council|commission|work\s*session|hearing|pla
 
 function isGovernmentalMeeting(item) {
   // Cached sources (smart, mv, school, fire, med, norwood, ophir, localgroup) are already curated meetings
-  if (['smart', 'mv', 'school', 'fire', 'med', 'norwood', 'ophir', 'airport', 'localgroup'].includes(item.source)) return true;
+  if (['smart', 'mv', 'school', 'fire', 'med', 'norwood', 'ophir', 'airport', 'localgroup', 'ouray', 'ridgway'].includes(item.source)) return true;
   // For dynamic feeds (telluride, county), filter by title
   return GOV_MEETING_PATTERN.test(item.title);
 }
@@ -4440,6 +4566,8 @@ document.querySelectorAll('.chip[data-tab-target="meetings"]').forEach(chip => {
     else if (filter === 'fire') chip.classList.add('active-fire');
     else if (filter === 'med') chip.classList.add('active-med');
     else if (filter === 'norwood') chip.classList.add('active-norwood');
+    else if (filter === 'ouray') chip.classList.add('active-ouray');
+    else if (filter === 'ridgway') chip.classList.add('active-ridgway');
     else if (filter === 'ophir') chip.classList.add('active-ophir');
     else if (filter === 'airport') chip.classList.add('active-airport');
     currentMeetingFilter = filter;
@@ -8512,7 +8640,9 @@ async function init() {
   const airportMeetings = getAirportMeetings();
   const countyCachedMeetings = getCountyCachedMeetings();
   const localGroupMeetings = generateLocalGroupMeetings();
-  allMeetings = [...smartMeetings, ...mvMeetings, ...schoolMeetings, ...fireMeetings, ...medMeetings, ...norwoodMeetings, ...ophirMeetings, ...airportMeetings, ...countyCachedMeetings, ...localGroupMeetings];
+  const ourayMeetings = getOurayMeetings();
+  const ridgwayMeetings = getRidgwayMeetings();
+  allMeetings = [...smartMeetings, ...mvMeetings, ...schoolMeetings, ...fireMeetings, ...medMeetings, ...norwoodMeetings, ...ophirMeetings, ...airportMeetings, ...countyCachedMeetings, ...localGroupMeetings, ...ourayMeetings, ...ridgwayMeetings];
   window.__allMeetingsCache = allMeetings;
   renderMeetingsWithTopic();
   updateTopicCounts();
