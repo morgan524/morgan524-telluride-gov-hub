@@ -71,7 +71,7 @@ const NEWS_FEEDS = [
 ];
 
 // ── Telluride Times scrape config ──
-const TELLURIDE_TIMES_RSS = 'https://www.telluridenews.com/search/?f=rss&t=article&c=news,news/*,business,sports,opinion,opinion/*,obituaries,norwood_post&l=50&s=start_time&sd=desc';
+const TELLURIDE_TIMES_RSS = 'https://www.telluridenews.com/search/?f=rss&t=article&c=news,news/*,business,business/*,sports,sports/*,opinion,opinion/*,obituaries,norwood_post,norwood_post/*,the_norwood_post,the_norwood_post/*,arts_and_entertainment,arts_and_entertainment/*&l=50&s=start_time&sd=desc';
 // KOTO uses two category-specific feeds; the catch-all /feed/ misses some posts.
 const KOTO_NEWSCASTS_RSS = 'https://koto.org/news-category/newscasts/feed/';
 const KOTO_FEATURED_RSS = 'https://koto.org/news-category/featured-stories/feed/';
