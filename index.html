@@ -67,6 +67,7 @@
       <button class="tab-btn" data-tab="local-news">Local News</button>
       <button class="tab-btn" data-tab="community-pulse">Community Pulse</button>
       <button class="tab-btn" data-tab="about-us">About Us</button>
+      <button class="tab-btn tab-btn-donate" data-tab="donate">❤ Donate</button>
     </nav>
     <div class="site-header-translate" id="google_translate_element"></div>
   </header>
@@ -1747,6 +1748,134 @@
       </div>
     </div>
 
+    <!-- ══════════ DONATE TAB ══════════ -->
+    <div class="tab-content" id="tab-donate">
+
+      <!-- Hero photo — full bleed with overlay text -->
+      <div style="position:relative;width:100%;border-radius:var(--radius);overflow:hidden;margin-bottom:36px;">
+        <img src="photos-telluride-125.jpeg"
+             alt="Autumn road winding toward the San Juan Mountains near Telluride"
+             style="width:100%;height:480px;object-fit:cover;object-position:center 55%;display:block;">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,25,18,0.08) 0%,rgba(10,25,18,0.70) 100%);display:flex;align-items:flex-end;">
+          <div style="padding:44px 52px 48px;">
+            <h1 style="font-size:3.6rem;font-weight:900;color:#fff;margin:0 0 12px 0;line-height:1.1;text-shadow:0 2px 20px rgba(0,0,0,0.5);">Support Civic Life<br>in San Miguel County</h1>
+            <p style="font-size:1.1rem;color:rgba(255,255,255,0.88);margin:0;max-width:560px;line-height:1.6;text-shadow:0 1px 8px rgba(0,0,0,0.4);">
+              Livable Telluride is a 501(c)(3) nonprofit. Your donation is fully tax-deductible and keeps this resource free and independent for every resident.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main content: give + why it matters -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:32px;align-items:start;">
+
+        <!-- LEFT — Donation tiers -->
+        <div>
+          <div style="background:var(--card-bg);border-radius:var(--radius);padding:36px;border:1.5px solid var(--border);">
+            <h2 style="font-family:Georgia,serif;font-size:1.55rem;font-weight:800;color:var(--text-primary);margin:0 0 6px 0;">Make a Donation</h2>
+            <p style="font-size:0.88rem;color:var(--text-muted);margin:0 0 24px 0;">Every dollar supports free, nonpartisan civic information for the whole county.</p>
+
+            <!-- Tier buttons -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;">
+              <a href="STRIPE_LINK_25" target="_blank" rel="noopener"
+                 style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px 12px;border-radius:12px;background:rgba(33,68,60,0.06);border:1.5px solid rgba(33,68,60,0.18);text-decoration:none;transition:all 0.18s;cursor:pointer;"
+                 onmouseover="this.style.background='rgba(33,68,60,0.13)'" onmouseout="this.style.background='rgba(33,68,60,0.06)'">
+                <span style="font-size:1.5rem;font-weight:900;color:var(--accent-green);">$25</span>
+                <span style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;text-align:center;">Neighbor</span>
+              </a>
+              <a href="STRIPE_LINK_50" target="_blank" rel="noopener"
+                 style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px 12px;border-radius:12px;background:rgba(33,68,60,0.06);border:1.5px solid rgba(33,68,60,0.18);text-decoration:none;transition:all 0.18s;cursor:pointer;"
+                 onmouseover="this.style.background='rgba(33,68,60,0.13)'" onmouseout="this.style.background='rgba(33,68,60,0.06)'">
+                <span style="font-size:1.5rem;font-weight:900;color:var(--accent-green);">$50</span>
+                <span style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;text-align:center;">Supporter</span>
+              </a>
+              <a href="STRIPE_LINK_100" target="_blank" rel="noopener"
+                 style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px 12px;border-radius:12px;background:linear-gradient(135deg,rgba(33,68,60,0.10),rgba(198,148,55,0.10));border:1.5px solid rgba(33,68,60,0.28);text-decoration:none;transition:all 0.18s;cursor:pointer;position:relative;"
+                 onmouseover="this.style.background='linear-gradient(135deg,rgba(33,68,60,0.18),rgba(198,148,55,0.16))'" onmouseout="this.style.background='linear-gradient(135deg,rgba(33,68,60,0.10),rgba(198,148,55,0.10))'">
+                <span style="position:absolute;top:-9px;left:50%;transform:translateX(-50%);background:var(--accent-gold,#c69437);color:#fff;font-size:0.62rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:2px 10px;border-radius:20px;">Most Popular</span>
+                <span style="font-size:1.5rem;font-weight:900;color:var(--accent-green);">$100</span>
+                <span style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;text-align:center;">Advocate</span>
+              </a>
+              <a href="STRIPE_LINK_250" target="_blank" rel="noopener"
+                 style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px 12px;border-radius:12px;background:rgba(33,68,60,0.06);border:1.5px solid rgba(33,68,60,0.18);text-decoration:none;transition:all 0.18s;cursor:pointer;"
+                 onmouseover="this.style.background='rgba(33,68,60,0.13)'" onmouseout="this.style.background='rgba(33,68,60,0.06)'">
+                <span style="font-size:1.5rem;font-weight:900;color:var(--accent-green);">$250</span>
+                <span style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;text-align:center;">Champion</span>
+              </a>
+            </div>
+
+            <!-- Custom amount -->
+            <a href="STRIPE_LINK_CUSTOM" target="_blank" rel="noopener"
+               style="display:block;width:100%;padding:14px;border-radius:12px;background:linear-gradient(135deg,#21443c,#2d5a4e);color:#fff;font-weight:700;font-size:0.95rem;text-align:center;text-decoration:none;letter-spacing:0.01em;transition:opacity 0.18s;box-sizing:border-box;"
+               onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
+              Choose Your Own Amount →
+            </a>
+
+            <p style="font-size:0.75rem;color:var(--text-muted);text-align:center;margin:14px 0 0;line-height:1.5;">
+              Secure payment via Stripe &nbsp;·&nbsp; 501(c)(3) EIN on receipt &nbsp;·&nbsp; No account required
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT — Why it matters -->
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <div style="background:var(--card-bg);border-radius:var(--radius);padding:28px;border:1.5px solid var(--border);">
+            <h2 style="font-family:Georgia,serif;font-size:1.3rem;font-weight:800;color:var(--text-primary);margin:0 0 12px 0;">Why Your Support Matters</h2>
+            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;margin:0 0 10px 0;">
+              Livable Telluride is the only place in San Miguel County where residents can find government meeting agendas, local news, housing updates, and community events — across every local government, from the West End to Mountain Village — in one free, nonpartisan hub.
+            </p>
+            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;margin:0;">
+              We run no ads and charge no subscription fees. Operating costs are real: hosting, data infrastructure, and the editorial work that keeps everything current and accurate. Donations from people who care about this community are what make it possible.
+            </p>
+          </div>
+
+          <!-- Impact rows -->
+          <div style="background:linear-gradient(135deg,rgba(33,68,60,0.04),rgba(139,114,80,0.04));border-radius:var(--radius);padding:24px 28px;border:1.5px solid rgba(33,68,60,0.1);">
+            <h3 style="font-size:0.85rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:0 0 14px 0;">What Your Donation Does</h3>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div style="display:flex;align-items:flex-start;gap:12px;">
+                <span style="font-size:1.2rem;flex-shrink:0;margin-top:1px;">🏛️</span>
+                <p style="font-size:0.87rem;color:var(--text-secondary);line-height:1.65;margin:0;"><strong>Keeps government meetings public.</strong> We automatically track and publish agendas from 15+ local government bodies every six hours — before the vote, not after.</p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:12px;">
+                <span style="font-size:1.2rem;flex-shrink:0;margin-top:1px;">📰</span>
+                <p style="font-size:0.87rem;color:var(--text-secondary);line-height:1.65;margin:0;"><strong>Surfaces local news you'd otherwise miss.</strong> From Telluride Times and KOTO to library events and housing listings, we pull it together in one place.</p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:12px;">
+                <span style="font-size:1.2rem;flex-shrink:0;margin-top:1px;">🏘️</span>
+                <p style="font-size:0.87rem;color:var(--text-secondary);line-height:1.65;margin:0;"><strong>Serves the whole county.</strong> From the West End to Mountain Village, Norwood to Ridgway — everyone deserves to know what their local government is doing.</p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:12px;">
+                <span style="font-size:1.2rem;flex-shrink:0;margin-top:1px;">🔒</span>
+                <p style="font-size:0.87rem;color:var(--text-secondary);line-height:1.65;margin:0;"><strong>Stays independent.</strong> No advertisers. No subscriptions. No agenda except informed civic participation.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tax deductibility note -->
+          <div style="background:var(--card-bg);border-radius:var(--radius);padding:20px 24px;border:1.5px solid var(--border);display:flex;align-items:flex-start;gap:14px;">
+            <span style="font-size:1.5rem;flex-shrink:0;">🧾</span>
+            <div>
+              <p style="font-size:0.87rem;font-weight:700;color:var(--text-primary);margin:0 0 4px 0;">Tax-Deductible Gift</p>
+              <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.6;margin:0;">Livable Telluride is an IRS-approved 501(c)(3) educational nonprofit. Your contribution is tax-deductible to the full extent permitted by law. You will receive a receipt with our EIN for your records.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quote / pull-out -->
+      <div style="background:linear-gradient(135deg,#21443c,#2d5a4e);border-radius:var(--radius);padding:40px 52px;margin-bottom:32px;text-align:center;">
+        <p style="font-size:1.35rem;font-style:italic;color:rgba(255,255,255,0.92);line-height:1.65;max-width:700px;margin:0 auto 16px;font-family:Georgia,serif;">"The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function."</p>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);margin:0;">F. Scott Fitzgerald — and a pretty good description of what civic life requires.</p>
+      </div>
+
+      <!-- Contact / questions -->
+      <div style="text-align:center;padding:12px 0 20px;">
+        <p style="font-size:0.85rem;color:var(--text-muted);margin:0;">Questions about donating? &nbsp;<a href="mailto:info@livabletelluride.org" style="color:var(--accent-green);font-weight:600;text-decoration:none;">info@livabletelluride.org</a></p>
+      </div>
+
+    </div><!-- /tab-donate -->
+
   </div><!-- /main-content -->
 
   <!-- ══════════ SIDEBAR ══════════ -->
@@ -2041,6 +2170,9 @@
   </button>
   <button class="mobile-more-item" data-tab="about-us">
     <span class="nav-icon">ℹ️</span> About Us
+  </button>
+  <button class="mobile-more-item" data-tab="donate" style="color:#b84040;font-weight:700;">
+    <span class="nav-icon">❤</span> Donate
   </button>
 </div>
 <nav class="mobile-nav" id="mobileNav">

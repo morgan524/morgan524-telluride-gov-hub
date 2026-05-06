@@ -29,10 +29,6 @@
       --norwood-light: #F3EFE3;
       --ophir-slate: #5A6B74;
       --ophir-light: #EAF0F3;
-      --ouray-rust: #7A3E2A;
-      --ouray-light: #F5EBE6;
-      --ridgway-blue: #3B6E8E;
-      --ridgway-light: #E3EEF5;
       --airport-sky: #5D7E8E;
       --airport-light: #EDF3F6;
       --ttimes-charcoal: #59605E;
@@ -328,15 +324,15 @@
       gap: 8px;
       margin-bottom: 12px;
     }
-    .deep-dive-submenu-icon { font-size: 1.65rem; filter: brightness(10); }
+    .deep-dive-submenu-icon { font-size: 1.1rem; filter: brightness(10); }
     .deep-dive-submenu-title {
       font-family: var(--font-heading);
-      font-size: 1.58rem;
+      font-size: 1.05rem;
       font-weight: 800;
       color: #fff;
     }
     .deep-dive-submenu-desc {
-      font-size: 1.23rem;
+      font-size: 0.82rem;
       color: rgba(255,255,255,0.7);
       font-weight: 400;
     }
@@ -351,7 +347,7 @@
       border-radius: 24px;
       background: rgba(255,255,255,0.12);
       font-family: 'Inter', sans-serif;
-      font-size: 1.23rem;
+      font-size: 0.82rem;
       font-weight: 600;
       color: #fff;
       cursor: pointer;
@@ -370,7 +366,7 @@
       box-shadow: 0 3px 12px rgba(0,0,0,0.2);
     }
     .deep-dive-topic-btn .dd-arrow {
-      font-size: 1.12rem;
+      font-size: 0.75rem;
       opacity: 0.6;
       transition: opacity 0.2s;
     }
@@ -378,7 +374,7 @@
     @media (max-width: 760px) {
       .deep-dive-submenu-inner { padding: 0 14px; }
       .deep-dive-submenu-desc { display: none; }
-      .deep-dive-topic-btn { padding: 6px 12px; font-size: 1.17rem; }
+      .deep-dive-topic-btn { padding: 6px 12px; font-size: 0.78rem; }
     }
 
     /* ── What to Follow (full-width bar below Deep Dive) ── */
@@ -521,6 +517,27 @@
     .tab-btn.active {
       color: var(--forest);
       border-bottom-color: var(--forest);
+    }
+    .tab-btn-donate {
+      color: #b84040 !important;
+      font-weight: 700;
+      border: 1.5px solid rgba(184,64,64,0.25);
+      border-radius: 20px;
+      padding-left: 14px !important;
+      padding-right: 14px !important;
+      margin-left: 6px;
+      transition: background 0.18s, border-color 0.18s;
+    }
+    .tab-btn-donate:hover {
+      background: rgba(184,64,64,0.08) !important;
+      border-color: rgba(184,64,64,0.5) !important;
+      color: #b84040 !important;
+    }
+    .tab-btn-donate.active {
+      background: rgba(184,64,64,0.10);
+      border-color: #b84040;
+      color: #b84040 !important;
+      border-bottom-color: #b84040;
     }
 
     /* ── Main Container ── */
@@ -1583,45 +1600,9 @@
     .festival-sidebar::-webkit-scrollbar-track { background: transparent; }
     .festival-sidebar::-webkit-scrollbar-thumb { background: rgba(47,86,77,0.25); border-radius: 4px; }
     .festival-sidebar::-webkit-scrollbar-thumb:hover { background: rgba(47,86,77,0.45); }
-    /* Local News: show source logo (KOTO/TT) on the left, article
-       image (when present) inside the content column. Original design
-       hid the logo; the KOTO/TT cards mostly don't have article images,
-       so the cards came out as text-only with no branding. */
-    #tab-local-news .card .card-body {
-      display: flex;
-      gap: 14px;
-      /* Vertically center the small source logo with the article photo (the
-         photo lives inside event-card-main and is itself centered, so this
-         puts the logo and photo at the same vertical level on every card). */
-      align-items: center;
-      padding: 0;
-    }
+    /* Local News: hide source logo, show article image on left */
     #tab-local-news .card-logo {
-      width: 80px;
-      height: 80px;
-      flex-shrink: 0;
-      border-radius: 12px;
-      overflow: hidden;
-      background: #fff;
-      border: 1px solid rgba(0,0,0,0.06);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      /* Force vertical-center vs the photo on the same row, regardless
-         of the parent's align-items (parent setting was getting beaten
-         by some cascade — align-self at the child level is bulletproof). */
-      align-self: center;
-    }
-    #tab-local-news .card-logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      padding: 6px;
-    }
-    #tab-local-news .event-card-main {
-      flex: 1;
-      min-width: 0;
+      display: none;
     }
     #tab-local-news .event-card-main.news-card-img-left {
       grid-template-columns: 180px minmax(0, 1fr);
@@ -1635,33 +1616,6 @@
       border-radius: 10px;
       align-self: center;
     }
-    /* When a card has no article photo (e.g. KOTO newscasts, THS
-       adoptable animals without a photo), the source logo takes the
-       photo position at 150px wide × 100px tall — about half the size
-       of full article photos so it doesn't overwhelm the card. Logo
-       image scales with object-fit: contain so the aspect ratio is
-       preserved. */
-    #tab-local-news .news-card-img-left .event-illustration.source-logo-substitute {
-      width: 80px;
-      height: 80px;
-      background: #fff;
-      border: 1px solid rgba(0,0,0,0.06);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      align-self: center;
-    }
-    #tab-local-news .news-card-img-left .event-illustration.source-logo-substitute img {
-      max-width: 100%;
-      max-height: 100%;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      padding: 6px;
-    }
     #tab-local-news .card[data-source-key="koto"] .event-photo img {
       object-fit: contain;
       padding: 8px;
@@ -1669,63 +1623,20 @@
     #tab-local-news .card {
       padding: 16px;
     }
-
+    #tab-local-news .card .card-body {
+      padding: 0;
+    }
     @media (max-width: 600px) {
-      #tab-local-news .event-card-main.news-card-img-left {
+      .news-card-img-left {
         grid-template-columns: 1fr;
-        gap: 10px;
       }
-      #tab-local-news .news-card-img-left .event-illustration {
-        order: -1;
+      .news-card-img-left .event-illustration {
         width: 100%;
-        height: 200px;
-        border-radius: 10px;
-      }
-      #tab-local-news .news-card-img-left .event-illustration.source-logo-substitute {
-        width: 72px;
-        height: 72px;
-      }
-      #tab-local-news .news-card-img-left .event-card-main {
-        order: 1;
+        height: 160px;
       }
     }
 
-    /* ── NWS Weather Widget ── */
-    .nws-weather-body { font-family: var(--font-body); }
-    .nws-current {
-      display: flex; align-items: center; gap: 14px; margin-bottom: 14px; flex-wrap: wrap;
-    }
-    .nws-icon { font-size: 3rem; line-height: 1; flex-shrink: 0; }
-    .nws-now { min-width: 0; }
-    .nws-temp { font-size: 2rem; font-weight: 700; color: var(--text-primary); line-height: 1; }
-    .nws-desc { font-size: 0.88rem; color: var(--text-secondary); margin-top: 3px; }
-    .nws-meta { font-size: 0.76rem; color: var(--text-secondary); margin-top: 2px; }
-    .nws-days { display: flex; gap: 8px; }
-    .nws-day {
-      flex: 1; min-width: 0; text-align: center; padding: 8px 4px;
-      background: rgba(255,255,255,0.65); border-radius: 8px;
-    }
-    .nws-day-label { font-size: 0.72rem; color: var(--text-secondary); font-weight: 600; margin-bottom: 3px; }
-    .nws-day-icon { font-size: 1.4rem; line-height: 1; }
-    .nws-day-temp { font-size: 0.82rem; font-weight: 700; color: var(--text-primary); margin-top: 3px; }
-    .nws-day-desc { font-size: 0.67rem; color: var(--text-secondary); margin-top: 2px; line-height: 1.25; }
-    .nws-footer { margin-top: 12px; font-size: 0.74rem; color: var(--text-secondary); }
-
-    @media (max-width: 480px) {
-      .nws-icon { font-size: 2.2rem; }
-      .nws-temp { font-size: 1.6rem; }
-      .nws-desc { font-size: 0.82rem; }
-      .nws-meta { font-size: 0.72rem; }
-      .nws-days { gap: 5px; }
-      .nws-day { padding: 6px 3px; }
-      .nws-day-label { font-size: 0.68rem; }
-      .nws-day-icon { font-size: 1.2rem; }
-      .nws-day-temp { font-size: 0.78rem; }
-      .nws-day-desc { font-size: 0.62rem; }
-      .nws-footer { font-size: 0.7rem; }
-    }
-
-        /* ── Source Filter Chips ── */
+    /* ── Source Filter Chips ── */
     .filter-row {
       display: flex;
       gap: 8px;
@@ -1800,16 +1711,6 @@
       color: #fff;
       background: var(--airport-sky);
     }
-    .chip.active-ouray {
-      border-color: var(--ouray-rust);
-      color: #fff;
-      background: var(--ouray-rust);
-    }
-    .chip.active-ridgway {
-      border-color: var(--ridgway-blue);
-      color: #fff;
-      background: var(--ridgway-blue);
-    }
     .chip.active-ttimes {
       border-color: var(--ttimes-charcoal);
       color: #fff;
@@ -1856,8 +1757,6 @@
     .card[data-source="med"] { border-left-color: var(--med-teal); }
     .card[data-source="norwood"] { border-left-color: var(--norwood-gold); }
     .card[data-source="ophir"] { border-left-color: var(--ophir-slate); }
-    .card[data-source="ouray"] { border-left-color: var(--ouray-rust); }
-    .card[data-source="ridgway"] { border-left-color: var(--ridgway-blue); }
     .card[data-source="airport"] { border-left-color: var(--airport-sky); }
     .card[data-source="ttimes"] { border-left-color: var(--ttimes-charcoal); }
     .card[data-source="koto"] { border-left-color: var(--koto-blue); }
@@ -1916,8 +1815,6 @@
     .badge-med { background: var(--med-light); color: var(--med-teal); }
     .badge-norwood { background: var(--norwood-light); color: var(--norwood-gold); }
     .badge-ophir { background: var(--ophir-light); color: var(--ophir-slate); }
-    .badge-ouray { background: var(--ouray-light); color: var(--ouray-rust); }
-    .badge-ridgway { background: var(--ridgway-light); color: var(--ridgway-blue); }
     .badge-airport { background: var(--airport-light); color: var(--airport-sky); }
     .badge-localgroup { background: rgba(139,115,50,0.12); color: #6b5b3a; }
     .badge-ttimes { background: var(--ttimes-light); color: var(--ttimes-charcoal); }
@@ -2077,8 +1974,6 @@
     .card[data-source="med"] .meeting-summary { border-left-color: var(--med-teal); }
     .card[data-source="norwood"] .meeting-summary { border-left-color: var(--norwood-gold); }
     .card[data-source="ophir"] .meeting-summary { border-left-color: var(--ophir-slate); }
-    .card[data-source="ouray"] .meeting-summary { border-left-color: var(--ouray-rust); }
-    .card[data-source="ridgway"] .meeting-summary { border-left-color: var(--ridgway-blue); }
     .card[data-source="airport"] .meeting-summary { border-left-color: var(--airport-sky); }
     .card[data-source="ttimes"] .meeting-summary { border-left-color: var(--ttimes-charcoal); }
 
@@ -2721,13 +2616,13 @@
       flex: 1;
     }
     .local-group-body h4 {
-      font-size: 1.08rem;
+      font-size: 0.98rem;
       font-weight: 750;
       color: var(--text-primary);
       margin: 0 0 2px 0;
     }
     .local-group-body .group-summary {
-      font-size: 0.875rem;
+      font-size: 0.76rem;
       color: var(--text-secondary);
       line-height: 1.45;
       margin-bottom: 4px;
@@ -2736,7 +2631,7 @@
       display: flex;
       flex-direction: column;
       gap: 3px;
-      font-size: 0.875rem;
+      font-size: 0.73rem;
       line-height: 1.45;
     }
     .local-group-details .group-detail {
@@ -2762,7 +2657,7 @@
       display: inline-block;
       padding: 6px 14px;
       border-radius: 8px;
-      font-size: 0.82rem;
+      font-size: 0.73rem;
       font-weight: 650;
       text-decoration: none;
       transition: all 0.2s;
@@ -3184,7 +3079,7 @@
       background: #ffffff;
     }
     .landuse-hero-image .landuse-image-credit {
-      font-size: 1.02rem;
+      font-size: 0.68rem;
       color: var(--text-muted);
       text-align: right;
       padding: 6px 12px 0;
@@ -3198,25 +3093,25 @@
       box-shadow: var(--shadow-soft);
     }
     .landuse-legal-summary-label {
-      font-size: 1.08rem; font-weight: 800; letter-spacing: 0.1em;
+      font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em;
       text-transform: uppercase; color: #8B4513; margin-bottom: 8px;
     }
     .landuse-legal-summary-text {
-      font-size: 1.32rem; line-height: 1.65; color: var(--text-main);
+      font-size: 0.88rem; line-height: 1.65; color: var(--text-main);
     }
     .landuse-kicker {
-      font-size: 1.08rem; font-weight: 800; letter-spacing: 0.11em;
+      font-size: 0.72rem; font-weight: 800; letter-spacing: 0.11em;
       text-transform: uppercase; opacity: 0.8; margin-bottom: 10px;
     }
     .landuse-hero h2 {
-      font-size: clamp(2.7rem, 4.5vw, 4.05rem);
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
       line-height: 1.02; letter-spacing: -0.04em; margin-bottom: 10px; max-width: 720px;
     }
-    .landuse-hero p { font-size: 1.44rem; color: rgba(255,255,255,0.88); max-width: 760px; line-height: 1.65; }
+    .landuse-hero p { font-size: 0.96rem; color: rgba(255,255,255,0.88); max-width: 760px; line-height: 1.65; }
     .landuse-topic-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
     .landuse-topic-pill {
       appearance: none; border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.11);
-      color: #fff; padding: 10px 14px; border-radius: 999px; font-size: 1.23rem; font-weight: 700;
+      color: #fff; padding: 10px 14px; border-radius: 999px; font-size: 0.82rem; font-weight: 700;
       cursor: pointer; transition: all 0.2s ease;
     }
     .landuse-topic-pill:hover, .landuse-topic-pill.active { background: #fff; color: var(--forest); border-color: #fff; transform: translateY(-1px); }
@@ -3227,8 +3122,8 @@
       border-radius: 28px; box-shadow: var(--shadow-soft); overflow: hidden;
     }
     .landuse-panel-header { padding: 20px 22px 12px; border-bottom: 1px solid rgba(221,213,200,0.55); }
-    .landuse-panel-header h3 { font-size: 1.62rem; font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 4px; }
-    .landuse-panel-header p { font-size: 1.23rem; color: var(--text-secondary); line-height: 1.55; }
+    .landuse-panel-header h3 { font-size: 1.08rem; font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 4px; }
+    .landuse-panel-header p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.55; }
     .landuse-panel-body { padding: 18px 22px 22px; }
 
     .landuse-status { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 14px; margin-bottom: 18px; }
@@ -3236,18 +3131,18 @@
       background: linear-gradient(180deg, rgba(41,82,71,0.07), rgba(41,82,71,0.03));
       border: 1px solid rgba(41,82,71,0.12); border-radius: 22px; padding: 18px;
     }
-    .landuse-status-label { font-size: 1.02rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 10px; }
-    .landuse-status-title { font-size: 1.72rem; font-weight: 800; color: var(--text-primary); line-height: 1.15; margin-bottom: 8px; }
-    .landuse-status-copy { font-size: 1.29rem; color: var(--text-secondary); line-height: 1.65; }
+    .landuse-status-label { font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 10px; }
+    .landuse-status-title { font-size: 1.15rem; font-weight: 800; color: var(--text-primary); line-height: 1.15; margin-bottom: 8px; }
+    .landuse-status-copy { font-size: 0.86rem; color: var(--text-secondary); line-height: 1.65; }
     .landuse-nextstep {
       display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding: 8px 12px;
-      border-radius: 999px; background: rgba(24,53,45,0.08); color: var(--forest); font-size: 1.14rem; font-weight: 700;
+      border-radius: 999px; background: rgba(24,53,45,0.08); color: var(--forest); font-size: 0.76rem; font-weight: 700;
     }
     .landuse-snapshot { display: grid; gap: 10px; align-content: start; }
     .landuse-metric { background: #fff; border: 1px solid rgba(221,213,200,0.8); border-radius: 18px; padding: 14px 15px; }
-    .landuse-metric-label { font-size: 1.05rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 6px; }
-    .landuse-metric-value { font-size: 1.58rem; font-weight: 800; color: var(--text-primary); line-height: 1.15; }
-    .landuse-metric-sub { font-size: 1.14rem; color: var(--text-secondary); margin-top: 5px; line-height: 1.45; }
+    .landuse-metric-label { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 6px; }
+    .landuse-metric-value { font-size: 1.05rem; font-weight: 800; color: var(--text-primary); line-height: 1.15; }
+    .landuse-metric-sub { font-size: 0.76rem; color: var(--text-secondary); margin-top: 5px; line-height: 1.45; }
 
     .landuse-timeline { position: relative; padding-left: 18px; }
     .landuse-timeline::before {
@@ -3261,9 +3156,9 @@
       background: var(--forest); box-shadow: 0 0 0 4px rgba(24,53,45,0.08);
     }
     .landuse-event.future::before { background: var(--accent-amber); box-shadow: 0 0 0 4px rgba(179,139,82,0.14); }
-    .landuse-event-date { font-size: 1.08rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 5px; }
-    .landuse-event-title { font-size: 1.46rem; font-weight: 800; color: var(--text-primary); line-height: 1.35; margin-bottom: 4px; }
-    .landuse-event-copy { font-size: 1.23rem; color: var(--text-secondary); line-height: 1.58; }
+    .landuse-event-date { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 5px; }
+    .landuse-event-title { font-size: 0.97rem; font-weight: 800; color: var(--text-primary); line-height: 1.35; margin-bottom: 4px; }
+    .landuse-event-copy { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.58; }
 
     .landuse-doc-list, .landuse-compact-list, .landuse-player-list { display: grid; gap: 10px; }
     .landuse-doc-item {
@@ -3272,19 +3167,19 @@
       transition: all 0.2s ease; color: inherit;
     }
     .landuse-doc-item:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(24,53,45,0.08); border-color: rgba(41,82,71,0.24); }
-    .landuse-doc-item strong { display: block; font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: 4px; }
-    .landuse-doc-item span { display: block; font-size: 1.16rem; color: var(--text-secondary); line-height: 1.45; }
+    .landuse-doc-item strong { display: block; font-size: 0.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 4px; }
+    .landuse-doc-item span { display: block; font-size: 0.77rem; color: var(--text-secondary); line-height: 1.45; }
     .landuse-doc-tag {
-      font-size: 1.01rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em;
+      font-size: 0.67rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em;
       color: var(--forest); background: rgba(24,53,45,0.08); border-radius: 999px; padding: 8px 10px; white-space: nowrap;
     }
     .landuse-compact-item { display: grid; gap: 4px; padding: 13px 0; border-bottom: 1px solid rgba(221,213,200,0.56); }
     .landuse-compact-item:first-child { padding-top: 0; }
     .landuse-compact-item:last-child { border-bottom: none; padding-bottom: 0; }
-    .landuse-compact-meta { font-size: 1.05rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); }
-    .landuse-compact-title { font-size: 1.38rem; font-weight: 800; line-height: 1.4; color: var(--text-primary); text-decoration: none; }
+    .landuse-compact-meta { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); }
+    .landuse-compact-title { font-size: 0.92rem; font-weight: 800; line-height: 1.4; color: var(--text-primary); text-decoration: none; }
     .landuse-compact-title:hover { text-decoration: underline; }
-    .landuse-compact-copy { font-size: 1.2rem; color: var(--text-secondary); line-height: 1.55; }
+    .landuse-compact-copy { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.55; }
     .landuse-compact-copy br { display: block; content: ''; margin-top: 2px; }
     .event-meta br, .card-meta br, .meeting-meta br { display:block; content:''; margin-top:2px; }
     .landuse-player {
@@ -3294,33 +3189,33 @@
     .landuse-player:last-child { border-bottom: none; padding-bottom: 0; }
     .landuse-player-badge {
       width: 38px; height: 38px; border-radius: 14px; display: inline-flex; align-items: center; justify-content: center;
-      background: rgba(24,53,45,0.08); color: var(--forest); font-size: 1.5rem;
+      background: rgba(24,53,45,0.08); color: var(--forest); font-size: 1rem;
     }
-    .landuse-player strong { display: block; font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px; }
-    .landuse-player span { display: block; font-size: 1.17rem; color: var(--text-secondary); line-height: 1.5; }
-    .landuse-empty { font-size: 1.23rem; color: var(--text-muted); padding: 10px 0 2px; }
+    .landuse-player strong { display: block; font-size: 0.9rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px; }
+    .landuse-player span { display: block; font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; }
+    .landuse-empty { font-size: 0.82rem; color: var(--text-muted); padding: 10px 0 2px; }
 
     /* ── Roundtable roster (e.g. SSR for Code Changes & Accelerated Review) ── */
     .landuse-roster { display: grid; gap: 16px; }
-    .landuse-roster-title { font-size: 1.42rem; font-weight: 800; color: var(--text-primary); margin-bottom: 4px; }
-    .landuse-roster-sub { font-size: 1.23rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 6px; }
+    .landuse-roster-title { font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin-bottom: 4px; }
+    .landuse-roster-sub { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 6px; }
     .landuse-roster-group { padding: 10px 0; border-top: 1px solid rgba(221,213,200,0.56); }
     .landuse-roster-group:first-of-type { border-top: none; padding-top: 0; }
     .landuse-roster-label {
-      font-size: 1.08rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700;
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700;
       color: var(--text-muted); margin-bottom: 8px;
     }
     .landuse-roster-members { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 6px 18px; }
-    .landuse-roster-member { font-size: 1.27rem; line-height: 1.45; color: var(--text-primary); padding: 4px 0; }
+    .landuse-roster-member { font-size: 0.85rem; line-height: 1.45; color: var(--text-primary); padding: 4px 0; }
     .landuse-roster-member strong { font-weight: 700; }
-    .landuse-roster-member span { color: var(--text-secondary); font-size: 1.17rem; }
+    .landuse-roster-member span { color: var(--text-secondary); font-size: 0.78rem; }
 
     /* ── Community Comment Section ── */
     .comment-section { margin-top: 28px; }
     .comment-section .landuse-panel { border: 1.5px solid var(--border-color); }
     .comment-guidelines {
       background: #FFF8E1; border: 1px solid #FFE082; border-radius: 10px;
-      padding: 14px 18px; margin-bottom: 18px; font-size: 1.23rem; line-height: 1.6; color: #5D4037;
+      padding: 14px 18px; margin-bottom: 18px; font-size: 0.82rem; line-height: 1.6; color: #5D4037;
     }
     .comment-guidelines strong { display: block; margin-bottom: 6px; font-size: 0.88rem; color: #3E2723; }
     .comment-guidelines ul { margin: 6px 0 0 18px; padding: 0; }
