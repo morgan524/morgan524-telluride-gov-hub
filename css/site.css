@@ -4191,52 +4191,95 @@
         background: var(--forest);
         border-radius: 0 0 3px 3px;
       }
-      /* More menu overlay */
+      /* ── More menu — modern bottom sheet ── */
       .mobile-more-menu {
         display: none;
         position: fixed;
-        bottom: 62px;
+        bottom: 0;
         left: 0;
         right: 0;
         z-index: 9998;
-        background: rgba(255,253,252,0.98);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border-top: 1px solid var(--line);
-        box-shadow: 0 -4px 20px rgba(0,0,0,0.12);
-        padding: 10px 16px;
-        border-radius: 16px 16px 0 0;
+        background: #fff;
+        border-radius: 24px 24px 0 0;
+        box-shadow: 0 -8px 40px rgba(0,0,0,0.18);
+        padding: 0 0 calc(62px + env(safe-area-inset-bottom, 0px)) 0;
+        flex-direction: column;
+        transform: translateY(100%);
+        transition: transform 0.32s cubic-bezier(0.32,0.72,0,1);
       }
       .mobile-more-menu.open {
         display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
+        transform: translateY(0);
+      }
+      /* Drag handle */
+      .mobile-more-menu::before {
+        content: '';
+        display: block;
+        width: 36px;
+        height: 4px;
+        background: #d1d5db;
+        border-radius: 2px;
+        margin: 12px auto 4px;
+        flex-shrink: 0;
+      }
+      /* Sheet title */
+      .mobile-more-title {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #9ca3af;
+        padding: 4px 20px 10px;
+        flex-shrink: 0;
+      }
+      /* Grid of icon tiles */
+      .mobile-more-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 0 16px 16px;
       }
       .mobile-more-item {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        gap: 8px;
-        flex: 1 1 45%;
-        padding: 12px 14px;
-        background: rgba(33,68,60,0.04);
-        border-radius: 10px;
+        justify-content: center;
+        gap: 6px;
+        padding: 14px 8px 12px;
+        background: #f5f5f7;
+        border-radius: 16px;
         border: none;
         cursor: pointer;
-        color: var(--text-secondary);
-        font-size: 0.85rem;
+        color: #1c1c1e;
+        font-size: 0.7rem;
         font-weight: 600;
-        transition: background 0.15s;
+        letter-spacing: 0.01em;
+        transition: background 0.15s, transform 0.1s;
         -webkit-tap-highlight-color: transparent;
+        line-height: 1.2;
+        text-align: center;
+        min-height: 72px;
       }
-      .mobile-more-item:hover, .mobile-more-item:active {
-        background: rgba(33,68,60,0.10);
+      .mobile-more-item:active {
+        background: #e5e5ea;
+        transform: scale(0.95);
       }
       .mobile-more-item.active {
-        color: var(--forest);
         background: rgba(33,68,60,0.10);
+        color: var(--forest);
       }
       .mobile-more-item .nav-icon {
-        font-size: 1.15rem;
+        font-size: 1.6rem;
+        line-height: 1;
+        display: block;
+      }
+      /* Donate item special treatment */
+      .mobile-more-item[data-tab="donate"] {
+        background: #fff1f2;
+        color: #b91c1c;
+      }
+      .mobile-more-item[data-tab="donate"]:active {
+        background: #fecdd3;
       }
       /* Add bottom padding to container so content isn't hidden behind nav */
       .container {
