@@ -75,6 +75,9 @@ const TELLURIDE_TIMES_RSS = 'https://www.telluridenews.com/search/?f=rss&t=artic
 // KOTO uses two category-specific feeds; the catch-all /feed/ misses some posts.
 const KOTO_NEWSCASTS_RSS = 'https://koto.org/news-category/newscasts/feed/';
 const KOTO_FEATURED_RSS = 'https://koto.org/news-category/featured-stories/feed/';
+const COLORADO_SUN_RSS = 'https://coloradosun.com/feed/';
+// Keywords that make a Colorado Sun article relevant to the Telluride region
+const COLORADO_SUN_KEYWORDS = /telluride|san\s+miguel\s+county|mountain\s+village|ridgway|telski|chuck\s+horning/i;
 // Water court legal notices — Telluride Times weekly legals section (published Thursdays)
 const TT_LEGALS_RSS = 'https://www.telluridenews.com/search/?f=rss&t=article&c=news/legals&l=5&s=start_time&sd=desc';
 const TT_AUTH_COOKIE = process.env.TT_AUTH_COOKIE || '';
@@ -564,6 +567,46 @@ async function refreshNews(existingTtArticles = []) {
   await pullKotoFeed(KOTO_NEWSCASTS_RSS, kotoNewscasts);
   await pullKotoFeed(KOTO_FEATURED_RSS, kotoFeatured);
 
+  // Colorado Sun — filtered to Telluride/San Miguel County local coverage
+  const csSunArticles = [];
+  try {
+    const resp = await fetch(COLORADO_SUN_RSS);
+    if (resp.status === 200) {
+      const xml = await parseXml(resp.text);
+      const items = xml?.rss?.channel?.item;
+      const arr = Array.isArray(items) ? items : (items ? [items] : []);
+      for (const item of arr) {
+        const pubDate = new Date(item.pubDate || '');
+        if (pubDate < cutoff) continue;
+        const title = (item.title || '').trim();
+        const rawDesc = item.description || item['content:encoded'] || '';
+        const descText = rawDesc.replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&#\d+;/g, ' ').replace(/\s+/g, ' ').trim();
+        // Only include articles whose title or description mention our local keywords
+        if (!COLORADO_SUN_KEYWORDS.test(title) && !COLORADO_SUN_KEYWORDS.test(descText)) continue;
+        const href = (item.link || '').trim();
+        // Extract thumbnail from description HTML (WordPress puts it there)
+        const imgMatch = rawDesc.match(/<img[^>]+src=["']([^"']+)["']/i);
+        const img = imgMatch ? imgMatch[1] : '';
+        csSunArticles.push({
+          title,
+          source: 'Colorado Sun',
+          date: formatDate(pubDate),
+          firstSeen: existingByHref.has(href)
+            ? (existingByHref.get(href).firstSeen || new Date().toISOString().slice(0, 10))
+            : new Date().toISOString().slice(0, 10),
+          newsTopic: classifyNewsTopic(title, descText),
+          copy: descText.slice(0, 350),
+          claudeSummary: false,
+          href,
+          img
+        });
+      }
+      if (csSunArticles.length > 0) console.log(`  Found ${csSunArticles.length} relevant Colorado Sun article(s)`);
+    } else {
+      console.warn(`  Colorado Sun RSS HTTP ${resp.status}`);
+    }
+  } catch (e) { console.warn(`  Colorado Sun RSS error: ${e.message}`); }
+
   // Deduplicate by href
   const seen = new Set();
   const dedup = arr => arr.filter(a => {
@@ -575,8 +618,8 @@ async function refreshNews(existingTtArticles = []) {
   const ttArticles = dedup(articles.filter(a => a.source === 'Telluride Times'));
   const govArticles = dedup(articles.filter(a => a.source !== 'Telluride Times'));
 
-  console.log(`  Found: ${ttArticles.length} Telluride Times, ${govArticles.length} gov news, ${kotoNewscasts.length} KOTO newscasts, ${kotoFeatured.length} KOTO stories`);
-  return { ttArticles: [...ttArticles, ...govArticles], kotoNewscasts: dedup(kotoNewscasts), kotoFeatured: dedup(kotoFeatured) };
+  console.log(`  Found: ${ttArticles.length} Telluride Times, ${govArticles.length} gov news, ${kotoNewscasts.length} KOTO newscasts, ${kotoFeatured.length} KOTO stories, ${csSunArticles.length} Colorado Sun`);
+  return { ttArticles: [...ttArticles, ...govArticles, ...dedup(csSunArticles)], kotoNewscasts: dedup(kotoNewscasts), kotoFeatured: dedup(kotoFeatured) };
 }
 
 // ══════════════════════════════════════════════════════════════
