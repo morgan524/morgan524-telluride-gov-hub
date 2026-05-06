@@ -2672,17 +2672,6 @@ async function enrichKOTOEvent(item) {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Bardic Trails Online Poetry Night",
-    link: "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-05-05/",
-    description: "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The ",
-    pubDate: "2026-05-05T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg"
-  },
-  {
     title: "Keeping Kids Safe Parent Meeting for TIS Parents",
     link: "https://koto.org/event/keeping-kids-safe-parent-meeting-for-tis-parents/2026-05-06/1/",
     description: "San Miguel Resource Center and Telluride Intermediate School are hosting a parent workshop to discuss youth safety! Specifically, we'll talk about: -what SMRC teaches TIS students about consent and privacy -how to talk to your own child about safe vs. unsafe touches and sexual abuse prevention -only safety and current risks and trends This workshop",
@@ -4390,13 +4379,23 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-20  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "Trump administration sues Denver over its 1989 assault weapons ban",
+    title: "Indigenous people honor and raise awareness for relatives who are missing or have been killed",
     source: "Telluride Times",
     date: "May 5, 2026",
-    newsTopic: "public-safety",
-    copy: "The Trump administration is suing Denver over its 1989 assault weapons ban, claiming it violates Second Amendment rights. Denver's mayor flatly rejected federal demands to roll back the 37-year-old policy, saying the city won't put \"weapons of war\" back on streets.",
+    newsTopic: "community",
+    copy: "Indigenous communities held events Sunday wearing red to honor missing and murdered relatives, marking a day of grief and resilience. Native Americans face violence at twice the rate of the general population, with nearly 1,500 active federal missing person cases. Despite federal laws passed in 2020, implementation has been slow and inconsistent.",
     claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_91caa8b8-dec6-5691-807a-44fd78d5be2d.html",
+    href: "https://www.telluridenews.com/news/state/article_ae44c01b-f686-57b2-ae9f-0e1627a4f326.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ee/4ee20253-fa90-5e52-b3d6-f0a5aa554c5d/69f96e150e3e0.image.jpg?resize=300%2C226"
+  },
+  {
+    title: "Appreciation for teachers, staff",
+    source: "Telluride Times",
+    date: "May 5, 2026",
+    newsTopic: "education",
+    copy: "The school board passed a resolution officially recognizing Teacher and Staff Appreciation Week for May 4-8, 2026, acknowledging educators' role in student success. The resolution encourages families and community members to express gratitude to teachers and staff during that week and year-round.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_fb79e810-1118-4f69-a3d4-2cb921d8dd13.html",
     img: ""
   },
   {
@@ -4410,6 +4409,36 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/8f/58f263e8-16a8-5781-af16-5d8758db5bc8/69fa387863ba5.image.jpg?resize=300%2C200"
   },
   {
+    title: "Trump administration sues Denver over its 1989 assault weapons ban",
+    source: "Telluride Times",
+    date: "May 5, 2026",
+    newsTopic: "public-safety",
+    copy: "The Trump administration is suing Denver over its 1989 assault weapons ban, claiming it violates Second Amendment rights. Denver's mayor flatly rejected federal demands to roll back the 37-year-old policy, saying the city won't put \"weapons of war\" back on streets.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_91caa8b8-dec6-5691-807a-44fd78d5be2d.html",
+    img: ""
+  },
+  {
+    title: "Telluride community survey open through May 21",
+    source: "Telluride Times",
+    date: "May 5, 2026",
+    newsTopic: "community",
+    copy: "The town's annual community survey is open through May 21, asking residents to rate livability across 10 categories including economy, housing, safety, and recreation. Last year's results showed Telluride scored well on safety, outdoor recreation and community engagement, but poorly on affordability - only 1% rated cost of living as good and just 9% said affordable housing was available.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_1145f14a-0b4a-43a7-9dea-4a452d941817.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/25/d257b794-9d6b-4123-b3b4-ee0abf3d9682/69fa52fb225f6.image.jpg?resize=300%2C155"
+  },
+  {
+    title: "Sacred shoes",
+    source: "Telluride Times",
+    date: "May 5, 2026",
+    newsTopic: "arts-culture",
+    copy: "Hoka running shoes went from being called \"cartoon shoes\" to becoming mainstream as the barefoot running trend faded out due to rocky terrain realities. The author reflects on throwing away old worn-out shoes, including duct-taped Hokas and green Van's basketball shoes that had been repaired multiple times with Shoe Goo.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_781f8bdc-69d7-4ec9-9b5a-90c35c968f18.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bc/abc48601-95b9-4206-9f4b-a65102a0747c/69fa55d5a4936.image.jpg?resize=300%2C400"
+  },
+  {
     title: "Boys’ lax blasts into postseason",
     source: "Telluride Times",
     date: "May 5, 2026",
@@ -4418,16 +4447,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/sports/article_10a16ae6-c102-4679-9922-ddab9bdfd4b2.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfe83f7a-ec5a-4b87-824b-b7cf86e70644/69f9a893440e8.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Indigenous people honor and raise awareness for relatives who are missing or have been killed",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    newsTopic: "community",
-    copy: "Indigenous communities held events Sunday wearing red to honor missing and murdered relatives, marking a day of grief and resilience. Native Americans face violence at twice the rate of the general population, with nearly 1,500 active federal missing person cases. Despite federal laws passed in 2020, implementation has been slow and inconsistent.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_ae44c01b-f686-57b2-ae9f-0e1627a4f326.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ee/4ee20253-fa90-5e52-b3d6-f0a5aa554c5d/69f96e150e3e0.image.jpg?resize=300%2C226"
   },
   {
     title: "Man to plead guilty in Colorado firebombing attack on pro-Israel demonstrators",
@@ -4564,8 +4583,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "April 30, 2026",
     newsTopic: "public-safety",
-    copy: "Lindsey Vonn is still recovering physically and emotionally from her frightening crash at the Winter Olympics. She has undergone eight surgeries after suffering a complex left leg fracture — one that nearly led to amputation — in the women’s downhill…",
-    claudeSummary: false,
+    copy: "Lindsey Vonn is recovering from a severe tibia fracture after crashing at Cortina and says she's not emotionally ready to decide whether to return to racing. The 41-year-old faces at least one more surgery and estimates it would be 18 months before she could fully train again.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_8e0ab335-1e12-5377-af15-ff97d158dede.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/c6/3c6899e9-4691-5fd5-be26-4d01403e1ebf/69f3542094bae.image.jpg?resize=300%2C200"
   },
@@ -4764,8 +4783,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "April 24, 2026",
     newsTopic: "land-use",
-    copy: "The San Miguel Board of County Commissioners (BOCC) held its first meeting after a spring hiatus on Wednesday, April 22. Moving forward into a new season, planning, development and permitting were on top of mind.",
-    claudeSummary: false,
+    copy: "San Miguel County is planning a major Down Valley Master Plan for 2027, covering the area from Deep Creek to Norwood Hill with a focus on Placerville to Sawpit. The project is expected to cost around $200,000 due to water and wastewater components, though the county hopes for 50% DOLA grant funding.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_df3af361-8522-4d1f-9bca-3c050b74c95b.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/1f/a1f0586a-f7fe-489e-a348-0b63cc2b8228/69eafe3da3a22.image.jpg?resize=300%2C225"
   },
@@ -4784,8 +4803,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "April 24, 2026",
     newsTopic: "housing",
-    copy: "Outside the gymnasium of the Telluride Elementary School (TES), physical education teacher Erin Murray waited for her class of first-grade students to arrive.",
-    claudeSummary: false,
+    copy: "TES PE teacher Murray, a Telluride High grad, has revamped the elementary school's physical education program with creative activities like zookeeper tag, glow bowling, and Halloween mini-golf. She holds monthly Parent Play Days and runs an Instagram account that connects PE teachers globally.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_a4c5d839-f765-42ef-8d91-38ffc315ad4d.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/f5/af558834-d00d-4c09-afd8-5bd5e32123d2/69e8798e37429.image.jpg?resize=300%2C400"
   },
@@ -4834,8 +4853,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "April 23, 2026",
     newsTopic: "community",
-    copy: "PUBLIC HEARING NOTICE",
-    claudeSummary: false,
+    copy: "San Miguel County has two planning hearings scheduled for May 14 at the Norwood Sheriff's Annex - one for a scenic/social permit and another for Kurt Works Inc.'s contractor staging area at 488 S. Avalon Dr. The county is also seeking bids to replace flooring at two buildings on Colorado Avenue.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
     img: ""
   },
@@ -4860,36 +4879,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/f4/0f4452e4-4145-5f8f-a0d9-d56ce939993d/69e9423256e40.image.jpg?resize=300%2C200"
   },
   {
-    title: "More kids than ever are attending state-funded preschool, with California's surge leading the way",
-    source: "Telluride Times",
-    date: "April 23, 2026",
-    newsTopic: "education",
-    copy: "California made every 4-year-old eligible for free \"transitional kindergarten\" this year, accounting for more than half of the nation's 25,000 new public preschool students. The rapid expansion only meets 2 of 10 quality benchmarks and is hurting private preschool businesses.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_0113120d-dfad-5860-a97a-b0d6576dc4c2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/bb/8bb013f1-f2d6-5904-9ef4-051c56288106/69e900a32af67.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Getting back on ‘track’",
-    source: "Telluride Times",
-    date: "April 22, 2026",
-    newsTopic: "community",
-    copy: "Telluride High School track resumed its season at Durango's Ron Keller Invitational with junior Thomas Mahoney taking third in the 100-meter dash (11.31 seconds) and sophomore Liv Speck placing fifth in the 800m and ninth in the 3,200m. The small THS squad earned six points in both boys' and girls' divisions.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_87575b6e-9fda-4963-8881-bcaee88c8790.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/92/89277170-d1bd-412b-89a0-ec0ae8bb03bd/69e877b2887cb.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Forbidden Fruit",
-    source: "Telluride Times",
-    date: "April 22, 2026",
-    newsTopic: "community",
-    copy: "A parent and child negotiate spring plans over breakfast - the kid wants to go somewhere warm like Mexico or Hawaii, while mom suggests local camping with hiking and rock climbing instead. They compromise on a day trip to hunt for wild asparagus in the West End, with strawberry milk as the convincing bribe to get the restless kid out of the house.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_37ace147-b932-4206-9793-2cbff4b7fda7.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/0b/b0bb61d9-a7e4-4690-be3d-600db5fe5ec2/69e7aa2c0a5b0.image.jpg?resize=300%2C400"
-  },
-  {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
     source: "Town of Telluride",
     date: "April 24, 2026",
@@ -4898,20 +4887,20 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluride.gov/CivicAlerts.aspx?aid=389"
   },
   {
-    title: "Certified Candidates Announced for Telluride Town Council Election",
-    source: "Town of Telluride",
-    date: "April 21, 2026",
-    newsTopic: "government",
-    copy: "(April 21, 2026) – The Town of Telluride will hold a Special Municipal Election on Tuesday, June 30, coordinated with San Miguel County for the Primary Election. The Clerk's Department has certified three candidates eligible to run for elected office.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=390"
-  },
-  {
     title: "County Planning Commission 5/14 Meeting in TELLURIDE",
     source: "San Miguel County",
     date: "May 1, 2026",
     newsTopic: "land-use",
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1393"
+  },
+  {
+    title: "New Motor Vehicle Office Availability in Egnar! May 13 at 9 am - 3 pm",
+    source: "San Miguel County",
+    date: "May 5, 2026",
+    newsTopic: "land-use",
+    copy: "The new Motor Vehicle office will be available in Egnar on May 13 from 9 am - 3 pm in the same building as the fire department (5634 County Rd H1). We hope to serve many community members in this area, eliminating the drive to Norwood or Telluride.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=516"
   },
   {
     title: "New Wildfire Information Site Launched",
@@ -5863,7 +5852,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-05-05'; // Updated by legal-notice-update task (dust control ITB, municipal financial advisor RFP)
+const LEGAL_NOTICES_CACHE_DATE = '2026-05-06'; // Updated by legal-notice-update task (dust control ITB, municipal financial advisor RFP)
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -6379,24 +6368,6 @@ const LEGAL_NOTICES = [
     noticeKey: "rfp-galloping-goose-landscape"
   },
   {
-    title: "ITB -- Mill Creek Prefab Pressure Reducing Valve Vault Installation",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The Town of Telluride is seeking sealed bids for a PRV vault installation project at Mill Creek. Bids must be received by 4 PM on Thursday, April 30, 2026 at the Public Works & Transit Facility or via confirmed electronic submission.",
-    deadline: "April 30, 2026 (4:00 PM)",
-    expires: "2026-04-30",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "Mill Creek, Telluride, CO",
-    noticeKey: "itb-mill-creek-prv-vault-2026"
-  },
-  {
     title: "Request for Proposal -- Foundation Repairs at the Placerville Schoolhouse",
     entity: "San Miguel County",
     entityClass: "ent-county",
@@ -6497,6 +6468,132 @@ const LEGAL_NOTICES = [
     url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=203",
     address: "",
     smcBidID: "203"
+  },
+  {
+    title: "Ordinance -- Mountain Village CDC/CWRC/Massage/Penalties (Multiple)",
+    entity: "Town of Mountain Village",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "The Town of Mountain Village passed three ordinances on first reading on March 19, 2026. These cover Community Development Code amendments for wildfire resilience compliance, background checks for massage facility operators, and adjustments to municipal penalties. Second reading and public hearing will be held April 23, 2026.",
+    deadline: "April 23, 2026 at 2:00 PM",
+    expires: "2026-06-23",
+    dates: "4/2",
+    papers: ["ttimes_0402"],
+    url: "https://www.telluridenews.com/news/legals/article_aec96dee-01bf-4370-b831-16a17257d9ff.html",
+    address: "Mountain Village Town Hall, 455 Mountain Village Blvd, Suite A",
+    noticeKey: "tmv-ord-multiple-032026"
+  },
+  {
+    title: "RFP -- Ski Ranches Waterline Replacement Project",
+    entity: "Town of Mountain Village",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "The Town of Mountain Village is accepting bids for the 2026 Ski Ranches Waterline Replacement Project. A pre-bid site walk is scheduled for April 1, 2026 at 10:00 AM. All bids must be submitted by April 27, 2026.",
+    deadline: "April 27, 2026",
+    expires: "2026-04-27",
+    dates: "4/2",
+    papers: ["ttimes_0402"],
+    url: "https://www.telluridenews.com/news/legals/article_aec96dee-01bf-4370-b831-16a17257d9ff.html",
+    address: "Ski Ranches area, Mountain Village",
+    noticeKey: "tmv-rfp-ski-ranches-waterline-2026"
+  },
+  {
+    title: "Notice -- Substantial Completion Telluride Wastewater Treatment Plant Lab Remodel",
+    entity: "Town of Telluride",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "💧",
+    iconClass: "type-hearing",
+    type: "Utilities",
+    filterTag: "utilities",
+    summary: "The Town of Telluride intends to process final payment to FCI Constructors, Inc. for the wastewater treatment plant lab remodel project on March 30, 2026. Any claims against the contractor must be filed by April 10, 2026.",
+    deadline: "April 10, 2026",
+    expires: "2026-04-10",
+    dates: "4/2",
+    papers: ["ttimes_0402"],
+    url: "https://www.telluridenews.com/news/legals/article_aec96dee-01bf-4370-b831-16a17257d9ff.html",
+    address: "Telluride Wastewater Treatment Plant",
+    noticeKey: "telluride-wwtp-completion-032026"
+  },
+  {
+    title: "RFP -- Country Club Shoulder Widening Project",
+    entity: "Town of Mountain Village",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "The Town of Mountain Village is accepting bids for the Country Club Shoulder Widening Project. A pre-bid site walk is scheduled for April 15, 2026 at 10:00 AM. All bids must be submitted by April 27, 2026.",
+    deadline: "April 27, 2026",
+    expires: "2026-04-27",
+    dates: "4/2",
+    papers: ["ttimes_0402"],
+    url: "https://www.telluridenews.com/news/legals/article_aec96dee-01bf-4370-b831-16a17257d9ff.html",
+    address: "Country Club area, Mountain Village",
+    noticeKey: "tmv-rfp-country-club-widening-2026"
+  },
+  {
+    title: "Public Hearing -- Height/Roof Pitch/Setback Variance (Cooper)",
+    entity: "Town of Ophir",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "The Ophir General Assembly will hold a public hearing on April 21, 2026 at 7:00 PM to consider Jonathan Cooper's application for variances to allow construction of a single family dwelling on Lots 1 and 2, Block 2. The variances seek approval for a 2/12 roof pitch instead of required 4/12 and a 10-foot setback instead of required 15 feet.",
+    deadline: "April 21, 2026 at 7:00 PM",
+    expires: "2026-04-21",
+    dates: "4/2",
+    papers: ["ttimes_0402"],
+    url: "https://www.telluridenews.com/news/legals/article_aec96dee-01bf-4370-b831-16a17257d9ff.html",
+    address: "Lots 1 & 2 Block 2, TBD Aurum St, Ophir, CO",
+    noticeKey: "ophir-variance-cooper-lots1-2-block2"
+  },
+  {
+    title: "RFP -- Flooring Replacement 333 & 305 W. Colorado Ave",
+    entity: "San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County is requesting proposals for a contractor to replace flooring at 333 & 305 W. Colorado Ave, Telluride. Proposals must be submitted by 5:00 PM on Friday, May 24th either via email or dropped off at the Maintenance department.",
+    deadline: "May 24, 2026 at 5:00 PM",
+    expires: "2026-05-24",
+    dates: "4/2",
+    papers: ["ttimes_0402"],
+    url: "https://www.telluridenews.com/news/legals/article_aec96dee-01bf-4370-b831-16a17257d9ff.html",
+    address: "333 & 305 W. Colorado Ave, Telluride, CO",
+    noticeKey: "smc-rfp-flooring-333-305-colorado"
+  },
+  {
+    title: "Property Tax Exemption -- Senior Citizens/Veterans/Gold Star Spouses",
+    entity: "San Miguel County Assessor",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "San Miguel County Assessor announces property tax exemptions available for qualifying senior citizens (65+), veterans with 100% service-connected disability, and gold star veteran spouses. The exemption covers 50% of the first $200,000 in actual value of primary residence. Applications must be submitted by July 15, with late applications accepted until August 15.",
+    deadline: "July 15, 2026 (late applications until August 15, 2026)",
+    expires: "2026-08-15",
+    dates: "4/2",
+    papers: ["ttimes_0402"],
+    url: "https://www.telluridenews.com/news/legals/article_aec96dee-01bf-4370-b831-16a17257d9ff.html",
+    address: "San Miguel County",
+    noticeKey: "smc-property-tax-exemption-2026"
   }
 ];
 
