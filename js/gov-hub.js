@@ -1152,7 +1152,10 @@ const MANUAL_SUMMARIES = {
     "Meeting scheduled for 9:30 AM at County offices · No specific agenda items available in provided text",
 
   "county|2026-04-27|Board of County Commissioners Special Meeting":
-    "Meeting scheduled for April 29, 2026 at 9:30 AM · Location: 333 West Colorado Ave, 2nd Floor · No specific agenda items provided in source material"
+    "Meeting scheduled for April 29, 2026 at 9:30 AM · Location: 333 West Colorado Ave, 2nd Floor · No specific agenda items provided in source material",
+
+  "county|2026-05-06|One Time Event":
+    "Meeting at SO Annex in Norwood · Limited agenda details available · May 11th evening session"
 };
 
 // ── Unified summary lookup: AI first, then manual fallback ──
@@ -2683,39 +2686,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/05/Meet-Greet-Poster-11-x-8.5-in.png"
   },
   {
-    title: "Keeping Kids Safe Parent Meeting for TIS Parents",
-    link: "https://koto.org/event/keeping-kids-safe-parent-meeting-for-tis-parents/2026-05-06/2/",
-    description: "San Miguel Resource Center and Telluride Intermediate School are hosting a parent workshop to discuss youth safety! Specifically, we'll talk about: -what SMRC teaches TIS students about consent and privacy -how to talk to your own child about safe vs. unsafe touches and sexual abuse prevention -only safety and current risks and trends This workshop",
-    pubDate: "2026-05-06T17:15:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Trivia Night at Strong House Brewery",
-    link: "https://koto.org/event/trivia-night-at-strong-house-brewery/",
-    description: "Gather together your smartest friends and come on down to the Stronghouse Brew Pub for a thrilling night of Library Trivia! Top three teams will get a gift card to the Stronghouse ($75, $50, $25) and we'll do additional raffles for people who have a library card and/or a Friends of the Library membership. There will be staff members on hand to help",
-    pubDate: "2026-05-06T17:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Stronghouse Brewpub, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/may-Trivia.png"
-  },
-  {
-    title: "Telluride Rotary Club Meeting",
-    link: "https://koto.org/event/telluride-rotary-club-meeting-2/",
-    description: "Telluride Rotary Club meets Wednesday, May 6, at 6 p.m. at the Mountain Lodge in Mountain Village. Meetings feature guest speakers and discussion of club projects. Anyone with an interest in networking and service is welcome to drop in as a guest. Email telluriderotary@gmail.com for info or to rsvp.",
-    pubDate: "2026-05-06T18:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/Telluride-Rotary-Logo-White.png"
-  },
-  {
     title: "Pilates for All Bodies with Laura",
     link: "https://koto.org/event/pilates-for-all-bodies-with-laura/",
     description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can",
@@ -2912,6 +2882,50 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/04/MAYLite26-2.png"
+  },
+  {
+    title: "Mountain Village annual Community Clean Up Days",
+    link: "https://koto.org/event/mountain-village-annual-community-clean-up-days/2026-05-13/",
+    description: "Mountain Village hosts its annual Community Clean Up Day, this year expanding to two days in two different parts of the community! On Wednesday, May 13, Clean Up Day will take place in Village Court Apartments and on Thursday, May 14, a second Clean Up Day will take place in the Meadows Neighborhood. The entire community is invited to participate i",
+    pubDate: "2026-05-13T14:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
+  },
+  {
+    title: "Sewing 101 with Melissa",
+    link: "https://koto.org/event/sewing-101-with-melissa/2026-05-13/",
+    description: "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
+    pubDate: "2026-05-13T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
+  },
+  {
+    title: "Sewing 101 with Melissa Sumpter",
+    link: "https://koto.org/event/sewing-101-with-melissa-sumpter/",
+    description: "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
+    pubDate: "2026-05-13T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/SEWING-2024.png"
+  },
+  {
+    title: "Wildfire Preparedness",
+    link: "https://koto.org/event/wildfire-preparedness/",
+    description: "Join San Miguel County and the Western Region Wildfire Council and Telluride Fire Protection District for a presentation on how to prepare for a wildfire and what to do if one arrives. There will also be information about mitigation resources for property owners. There will be simultaneous Spanish interpretation available. Habrá interpretación en e",
+    pubDate: "2026-05-13T17:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/fire-2026.png"
   }
 ];
 
@@ -4457,17 +4471,6 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-20  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "ADL reports a sharp drop in US antisemitic incidents in 2025, driven by a steep fall on campuses",
-    source: "Telluride Times",
-    date: "May 6, 2026",
-    firstSeen: "2026-05-06",
-    newsTopic: "arts-culture",
-    copy: "The ADL reports antisemitic incidents dropped 33% in 2025 to 6,274 cases, down from a record 9,354 in 2024, largely due to fewer campus incidents. However, physical assaults hit a record high of 203 cases, including three killings. The decline follows a peak in Israel-related incidents after the October 2023 Hamas attacks.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_fd5eb38f-870a-5931-a281-fd46c98217ff.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/15/6151511f-d420-5af3-ba21-a347150d4cf9/69fb2ebbc7405.image.jpg?resize=300%2C192"
-  },
-  {
     title: "A late spring snowstorm slams Colorado, closing schools and disrupting commuters",
     source: "Telluride Times",
     date: "May 6, 2026",
@@ -4479,15 +4482,26 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/4d/a4df46ad-e4d3-546a-8382-f9aba6b82c82/69fb2b5bd52db.image.jpg?resize=300%2C200"
   },
   {
-    title: "Keeping traditions alive",
+    title: "ADL reports a sharp drop in US antisemitic incidents in 2025, driven by a steep fall on campuses",
+    source: "Telluride Times",
+    date: "May 6, 2026",
+    firstSeen: "2026-05-06",
+    newsTopic: "arts-culture",
+    copy: "The ADL reports antisemitic incidents dropped 33% in 2025 to 6,274 cases, down from a record 9,354 in 2024, largely due to fewer campus incidents. However, physical assaults hit a record high of 203 cases, including three killings. The decline follows a peak in Israel-related incidents after the October 2023 Hamas attacks.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_fd5eb38f-870a-5931-a281-fd46c98217ff.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/15/6151511f-d420-5af3-ba21-a347150d4cf9/69fb2ebbc7405.image.jpg?resize=300%2C192"
+  },
+  {
+    title: "Legals and Public Notices for May 7-13, 2026",
     source: "Telluride Times",
     date: "May 6, 2026",
     firstSeen: "2026-05-06",
     newsTopic: "community",
-    copy: "Bill Wilson of Knight Canyon Outfitters in Norwood was named \"Outfitter of the Year\" by the Colorado Outfitters Association for his three-generation family business and dedication to ethical hunting. Wilson and other hunting advocates say their industry faces threats from what they call \"ballot-box biology\" and urban voters making wildlife management decisions instead of trusting science-based approaches.",
+    copy: "A Planning Commission meeting is scheduled for May 14th at 333 W Colorado Ave, covering several land use applications including a tabled Garlock permit and a cancelled Crockett staging permit. Mountain Village passed a wildfire code ordinance on second reading, and Village Creek Condominiums is notifying mortgage holders about declaration amendments.",
     claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_f166c0dc-a754-43a1-9784-9facd4674405.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/43/c43e569f-37f2-4543-9cff-45bfa117cf81/69fa5f7853b7c.image.jpg?resize=300%2C315"
+    href: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
+    img: ""
   },
   {
     title: "Indigenous people honor and raise awareness for relatives who are missing or have been killed",
@@ -4498,6 +4512,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_ae44c01b-f686-57b2-ae9f-0e1627a4f326.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ee/4ee20253-fa90-5e52-b3d6-f0a5aa554c5d/69f96e150e3e0.image.jpg?resize=300%2C226"
+  },
+  {
+    title: "Keeping traditions alive",
+    source: "Telluride Times",
+    date: "May 6, 2026",
+    firstSeen: "2026-05-06",
+    newsTopic: "community",
+    copy: "Bill Wilson of Knight Canyon Outfitters in Norwood was named \"Outfitter of the Year\" by the Colorado Outfitters Association for his three-generation family business and dedication to ethical hunting. Wilson and other hunting advocates say their industry faces threats from what they call \"ballot-box biology\" and urban voters making wildlife management decisions instead of trusting science-based approaches.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_f166c0dc-a754-43a1-9784-9facd4674405.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/43/c43e569f-37f2-4543-9cff-45bfa117cf81/69fa5f7853b7c.image.jpg?resize=300%2C315"
   },
   {
     title: "Spring plans meet snow in Denver as a late storm could be the season's biggest",
@@ -4958,16 +4983,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/1f/a1f0586a-f7fe-489e-a348-0b63cc2b8228/69eafe3da3a22.image.jpg?resize=300%2C225"
   },
   {
-    title: "What happened to winter?",
-    source: "Telluride Times",
-    date: "April 24, 2026",
-    newsTopic: "infrastructure",
-    copy: "Mesa resident notes this winter brought minimal snowfall that melted within a week, leaving ground exposed most of the season. Snow tires, shovels, and snowmobiles went unused while ski slopes posted warnings about thin coverage and dangerous conditions.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_1788ad1a-1e9a-41ea-9a5e-5fba08d8a50c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/8c/98c9bb13-6b79-46c0-b99e-4df22fd01353/69e7c142e2ea5.image.jpg?resize=300%2C527"
-  },
-  {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
     source: "Town of Telluride",
     date: "April 24, 2026",
@@ -5413,6 +5428,256 @@ const FRESH_FOOD_HUB_EVENTS = [
 // Schema mirrors TELLURIDE_TIMES_ARTICLES:
 //   { title, href, date, copy, source, sourceKey, img, newsTopic }
 const REGIONAL_NEWS_ARTICLES = [
+  {
+    title: "2026 Chamber Meeting, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 11, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august/",
+    img: ""
+  },
+  {
+    title: "Music on the Mesa",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 8, 2026",
+    newsTopic: "arts-culture",
+    copy: "Live music event on the mesa.",
+    href: "https://norwoodcolorado.com/event/music-on-the-mesa-4/",
+    img: ""
+  },
+  {
+    title: "Fourth Friday Films, July",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "July 24, 2026",
+    newsTopic: "arts-culture",
+    copy: "Outdoor movie screening with popcorn and drinks available.",
+    href: "https://norwoodcolorado.com/event/fourth-friday-films-july/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, July",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "July 14, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-july/",
+    img: ""
+  },
+  {
+    title: "Star Spangled Saturday",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "June 27, 2026",
+    newsTopic: "community",
+    copy: "Annual Independence Day celebration.",
+    href: "https://norwoodcolorado.com/event/star-spangled-saturday-3/",
+    img: ""
+  },
+  {
+    title: "Fourth Friday Films, June",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "June 26, 2026",
+    newsTopic: "arts-culture",
+    copy: "Outdoor movie screening with popcorn and drinks available.",
+    href: "https://norwoodcolorado.com/event/fourth-friday-films-june-2/",
+    img: ""
+  },
+  {
+    title: "Music on the Mesa",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "June 13, 2026",
+    newsTopic: "arts-culture",
+    copy: "Live music event on the mesa.",
+    href: "https://norwoodcolorado.com/event/music-on-the-mesa-3/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, June",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "June 9, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-june/",
+    img: ""
+  },
+  {
+    title: "Fourth Friday Films, May",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "May 22, 2026",
+    newsTopic: "arts-culture",
+    copy: "Outdoor movie screening with popcorn and drinks available.",
+    href: "https://norwoodcolorado.com/event/fourth-friday-films-may-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, May",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "May 12, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-may/",
+    img: ""
+  },
+  {
+    title: "Parish Bulletin for May 3",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "May 2, 2026",
+    newsTopic: "community",
+    copy: "Here is the bulletin for May 3. This Sunday, May 3 immediately after mass, there will be a Crowning of Mary. Please join us. Also, Father Mariusz is going on pilgrimage to walk the El Camino. Please keep him in your prayers...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-may-3/",
+    img: ""
+  },
+  {
+    title: "Evacuation drill an exercise not in futility",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "April 30, 2026",
+    newsTopic: "public-safety",
+    copy: "Sirens will wail and residents will likely see emergency vehicles headed through Ridgway, up County Road 5 on May 15. Traffic will filter back into town, with residents headed to an evacuation center. But there s no need to panic. It s just a drill – the county s first full-scale evacuation exercise",
+    href: "https://www.ouraynews.com/2026/04/29/evacuation-drill-exercise-not-futility/",
+    img: ""
+  },
+  {
+    title: "Mine owner proposes water treatment",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "April 30, 2026",
+    newsTopic: "land-use",
+    copy: "The company that owns the Idarado Mine is exploring the idea of building a treatment plant on Red Mountain Pass to remove heavy metals from water flowing into Red Mountain Creek. Representatives from Newmont Mining Corp. told attendees of a meeting Tuesday night that the company has done what it can",
+    href: "https://www.ouraynews.com/2026/04/29/mine-owner-proposes-water-treatment/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Town mulls affordable housing mandate",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "April 30, 2026",
+    newsTopic: "land-use",
+    copy: "The town of Ridgway will consider requiring developers to reserve 10% of units within market-rate residential projects as affordable housing for local workers and retirees. The proposed “community housing regulations” would apply a common practice called “inclusionary zoning,” which aims to create m",
+    href: "https://www.ouraynews.com/2026/04/29/town-mulls-affordable-housing-mandate/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "County appoints new planning commissioner",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "April 30, 2026",
+    newsTopic: "land-use",
+    copy: "Ouray County commissioners unanimously appointed Danika Gilbert to the county Planning Commission on Tuesday. Gilbert will take the seat of Jennifer Cram, who resigned from the seven-person board after serving for less than a year. Gilbert has lived in the region for more than two decades. In a lett",
+    href: "https://www.ouraynews.com/2026/04/29/county-appoints-new-planning-commissioner/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "County raises 4-H use fees",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "April 30, 2026",
+    newsTopic: "community",
+    copy: "Fees for using the Ouray County 4-H Event Center and Fairgrounds are going up for the first time in more than a decade, with the aim of making the facility’s operations self-sustaining. It’s the largest step the county has taken toward trying to close the facility’s operating deficit, which has stra",
+    href: "https://www.ouraynews.com/2026/04/29/county-raises-4-h-use-fees/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "County holds firm on road access",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "April 30, 2026",
+    newsTopic: "government",
+    copy: "Ouray County may sue the owners of properties north of Red Mountain Pass if they don’t agree to remove two gates and restore public access to a road owned by the county and the U.S. Forest Service. Commissioners voted to issue a notice of violation to Aaron Calhoon and Lance Barker, who own the gate",
+    href: "https://www.ouraynews.com/2026/04/29/county-holds-firm-road-access/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "MTN Lodge’s refusal to pay tax appalling",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "April 30, 2026",
+    newsTopic: "government",
+    copy: "Dear Editor: I’m appalled at the MTN Lodge s blatant refusal to pay the lodging tax to the town of Ridgway. MTN Lodge has entered into a multiyear agreement with Merrimac Ventures to lease out all of its rooms to contractors over a four-year period. And now the MTN Lodge has hired a public relations",
+    href: "https://www.ouraynews.com/2026/04/29/mtn-lodges-refusal-pay-tax-appalling/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Road through Calhoon land is indeed public",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "April 30, 2026",
+    newsTopic: "infrastructure",
+    copy: "Dear Editor: I am writing to respond to the paid advertisement by Aaron Calhoon in last week s Plaindealer. There is no doubt that the Calhoons are well-liked, respected and valued long-time members of the local community. Aaron Calhoon bought the property in 2018. The road through his property has ",
+    href: "https://www.ouraynews.com/2026/04/29/road-calhoon-land-indeed-public/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "CORRECTION",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "April 30, 2026",
+    newsTopic: "infrastructure",
+    copy: "A news brief on Page 3 in the April 16-22 edition about a faulty culvert mischaracterized comments made by Ouray County Road and Bridge Superintendent Ty Barger. Barger did not say the culvert was installed improperly. He said the culvert was installed after the previous culvert running under the ro",
+    href: "https://www.ouraynews.com/2026/04/29/correction-20260430-0346-384883/",
+    img: ""
+  },
+  {
+    title: "More needs to be done to protect Yankee Boy",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "April 30, 2026",
+    newsTopic: "government",
+    copy: "Dear Editor: The Ouray County Commissioners work session on April 15 discussed plans to repair damage to the road in Yankee Boy Basin. The discussion was centered on repair of road areas damaged by all-terrain vehicle traffic and damage to adjacent tundra. They also considered and rejected closure o",
+    href: "https://www.ouraynews.com/2026/04/29/needs-done-protect-yankee-boy/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Women’s Group Book Study Invitation",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "April 30, 2026",
+    newsTopic: "community",
+    copy: "ALL WOMEN ARE INVITED to join us for our Virtual Women's Group Book Study- please share this with a friend who would benefit.We will journey together with the book Rooting Out Hidden Faults, by CSC James F. McElhone. It will be a deep dive into th...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/womens-group-book-study-invitation/",
+    img: ""
+  },
+  {
+    title: "News Release: County Hires Fairground Manager",
+    source: "Ouray County",
+    sourceKey: "ouray-county",
+    date: "April 29, 2026",
+    newsTopic: "community",
+    copy: "Ouray County is pleased to announce the appointment of Liz Schmidt as the new Manager of the Fairgrounds and 4H Event Center.",
+    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=944",
+    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22631"
+  },
+  {
+    title: "Women’s Group Virtual Open Invitation",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "April 27, 2026",
+    newsTopic: "community",
+    copy: "ALL WOMEN ARE INVITED to join us for our Virtual Women's Group this Tuesday- you can share this with a friend who would benefit.Some of us have just finished a small group study and the fruits have been AMAZING! We would love other women to join our si...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/womens-group-virtual-open-invitation/",
+    img: ""
+  },
+  {
+    title: "Coffee, Donuts and Bulletin 4/26",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "April 25, 2026",
+    newsTopic: "community",
+    copy: "Join us Tomorrow (Sunday, April 26th) for Coffee and Donuts in the Parish Basement to celebrate the young parishioners who have received First Eucharist and Confirmation this year! Attached please find the Parish Bulletin for the week of April 26t...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/coffee-donuts-and-bulletin-4-26/",
+    img: ""
+  }
 ];
 
 const COMMUNITY_EVENTS = [
@@ -6826,6 +7091,150 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_c5a54e8f-2fa6-42a2-ba94-3a3828e137ff.html",
     address: "2028 Maverick Way, Norwood, CO 81423",
     noticeKey: "rezoning-2028-maverick-way"
+  },
+  {
+    title: "Planning Commission Meeting -- Land Use Applications and Code Amendments",
+    entity: "San Miguel County Planning Commission",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "San Miguel County Planning Commission will hold a regular meeting on May 14, 2026, to consider various land use applications including special use permits and substantial plan amendments. The meeting will also review proposed Land Use Code amendments for footprint definitions, accelerated housing review, and natural medicine regulations.",
+    deadline: "May 14, 2026 at 9:30 AM",
+    expires: "2026-07-14",
+    dates: "5/6",
+    papers: ["ttimes_0506"],
+    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
+    address: "333 West Colorado Ave., Second Floor, Telluride, CO 81435",
+    noticeKey: "planning-commission-2026-05-14"
+  },
+  {
+    title: "Ordinance -- Community Development Code Amendments for Wildfire Resilience Code Compliance",
+    entity: "Town of Mountain Village",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "Town of Mountain Village adopted an ordinance on second reading April 23, 2026, amending the Community Development Code for compliance with Colorado Wildfire Resilience Code. The ordinance will be codified into the Municipal Code prior to its effective date.",
+    deadline: "Effective date pending codification",
+    expires: "2026-07-06",
+    dates: "5/6",
+    papers: ["ttimes_0506"],
+    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
+    address: "Town of Mountain Village",
+    noticeKey: "ord-mv-wildfire-resilience"
+  },
+  {
+    title: "Condominium Notice -- First Amendment to Declaration Consent (Village Creek)",
+    entity: "Village Creek Condominium Association",
+    entityClass: "ent-county",
+    entityLogo: "smrha",
+    icon: "🏠",
+    iconClass: "type-hearing",
+    type: "Housing Notice",
+    filterTag: "housing",
+    summary: "Village Creek Condominium Association has issued a proposed First Amendment to their Declaration. First mortgagees have 60 days from the mailed notice date to respond negatively, or they will be deemed to have approved the amendment.",
+    deadline: "60 days from mailed notice date",
+    expires: "2026-07-06",
+    dates: "5/6",
+    papers: ["ttimes_0506"],
+    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
+    address: "Village Creek Condominiums, San Miguel County",
+    noticeKey: "village-creek-condo-amendment"
+  },
+  {
+    title: "Ordinance -- Multiple Mountain Village Code Amendments Second Reading",
+    entity: "Town of Mountain Village",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "Town of Mountain Village will hold second reading and public hearing on May 21, 2026, for three ordinances: lighting regulations amendments, building regulations amendments, and emergency water usage restrictions authority. First reading was held April 23, 2026.",
+    deadline: "May 21, 2026 at 2:00 PM",
+    expires: "2026-05-21",
+    dates: "5/6",
+    papers: ["ttimes_0506"],
+    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
+    address: "Mountain Village Town Hall, 455 Mountain Village Blvd",
+    noticeKey: "ord-mv-multiple-2026-05-21"
+  },
+  {
+    title: "Public Hearing -- Onsite Wastewater Treatment Systems Regulations",
+    entity: "San Miguel County Board of Health",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "💧",
+    iconClass: "type-hearing",
+    type: "Utilities",
+    filterTag: "utilities",
+    summary: "San Miguel County Board of Health will consider regulatory options related to Colorado Regulation 43 for onsite wastewater treatment systems on May 20, 2026. The meeting will provide opportunity for public comment and participation.",
+    deadline: "May 20, 2026",
+    expires: "2026-05-20",
+    dates: "5/6",
+    papers: ["ttimes_0506"],
+    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
+    address: "333 West Colorado Ave, 2nd floor, Telluride, CO",
+    noticeKey: "owts-regulations-hearing"
+  },
+  {
+    title: "RFP -- Flooring Replacement at County Buildings",
+    entity: "San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County requests proposals for a contractor to replace flooring at 333 & 305 W. Colorado Ave in Telluride. Proposals must be submitted by 5:00 PM on June 5th either via email or dropped off at the Maintenance department.",
+    deadline: "June 5, 2026 at 5:00 PM",
+    expires: "2026-06-05",
+    dates: "5/6",
+    papers: ["ttimes_0506"],
+    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
+    address: "333 & 305 W. Colorado Ave, Telluride, CO",
+    noticeKey: "rfp-flooring-replacement-2026"
+  },
+  {
+    title: "RFP -- Boiler System Replacement at Down Valley Park",
+    entity: "San Miguel County Parks & Open Space",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County requests proposals for a contractor to replace the boiler system at the Down Valley Park in Placerville. Contact Janet Kask at Parks & Open Space department. Proposals due June 4 at 5:00 PM.",
+    deadline: "June 4, 2026 at 5:00 PM",
+    expires: "2026-06-04",
+    dates: "5/6",
+    papers: ["ttimes_0506"],
+    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
+    address: "Down Valley Park, Placerville, CO",
+    noticeKey: "rfp-boiler-down-valley-park"
+  },
+  {
+    title: "Public Hearing -- OWTS Variance Application (Sheamus Croke)",
+    entity: "San Miguel County Board of Health",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "💧",
+    iconClass: "type-hearing",
+    type: "Utilities",
+    filterTag: "utilities",
+    summary: "San Miguel County Board of Health will consider an OWTS variance application for Sheamus Croke, owner of Lots 5 and 6 Blk M Ophir, to reduce setback from soil treatment area to southwest property line from 10 feet to 2 feet. Public hearing scheduled for May 27, 2026 at 2:00 PM.",
+    deadline: "May 27, 2026 at 2:00 PM",
+    expires: "2026-05-27",
+    dates: "5/6",
+    papers: ["ttimes_0506"],
+    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
+    address: "Lots 5 and 6 Blk M Ophir",
+    noticeKey: "owts-variance-croke-ophir"
   }
 ];
 
