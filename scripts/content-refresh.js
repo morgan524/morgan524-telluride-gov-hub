@@ -120,6 +120,18 @@ const REGIONAL_NEWS_FEEDS = [
     sourceKey: '4h-smc',
     category: 'Newsletter'
   },
+  {
+    url: 'https://www.telluridemountainclub.org/feed/',
+    source: 'Telluride Mountain Club',
+    sourceKey: 'tmc',
+    category: 'Outdoors'
+  },
+  {
+    url: 'https://stpatrickstelluride.com/feed/',
+    source: "St. Patrick's Catholic Church",
+    sourceKey: 'stpatricks',
+    category: 'Community'
+  },
 ];
 
 // Water court legal notices — Telluride Times weekly legals section (published Thursdays)

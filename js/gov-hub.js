@@ -3438,8 +3438,10 @@ const ENTITY_LOGOS = {
   'weedc': '',
   'nucla-gov': '',
   'norwood': '<img src="logo/Norwood.png" alt="Norwood Colorado" loading="lazy">',
-  '4h-smc': '<img src="logo/4h-csu.jpg" alt="San Miguel Basin 4-H" loading="lazy">',
-  'regional': '',
+  '4h-smc':     '<img src="logo/4h-csu.jpg" alt="San Miguel Basin 4-H" loading="lazy">',
+  'tmc':        '<img src="https://www.telluridemountainclub.org/wp-content/uploads/2017/09/TellMtnClub-logo.png" alt="Telluride Mountain Club" style="width:36px;height:36px;border-radius:50%;object-fit:cover;background:#fff;" loading="lazy">',
+  'stpatricks': '<img src="logo/Church.png" alt="St. Patrick's Catholic Church" style="width:36px;height:36px;border-radius:50%;object-fit:cover;" loading="lazy" onerror="this.style.display='none'">',
+  'regional':   '',
 };
 
 function renderLogo(source, item) {
