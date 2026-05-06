@@ -137,7 +137,10 @@ const MEETING_SOURCE_LABELS = {
 // title+date so Mailchimp doesn't think the same item is "new" tomorrow.
 function guidFor(item) {
   if (item.href) return item.href;
-  const seed = `${item.title}|${item.date || ''}|${item.source || ''}`;
+  // Use firstSeen (date first scraped) so articles get a fresh GUID on the day
+  // they're added — Mailchimp will include them in that day's digest.
+  // Falls back to item.date for legacy articles without firstSeen.
+  const seed = `${item.title}|${item.firstSeen || item.date || ''}|${item.source || ''}`;
   let h = 0;
   for (let i = 0; i < seed.length; i++) h = ((h << 5) - h + seed.charCodeAt(i)) | 0;
   return `${SITE_URL}/digest/${(h >>> 0).toString(16)}`;
@@ -153,10 +156,12 @@ function buildNewsItems(src, articles, sourceLabel) {
     const d = parseDate(a.date);
     if (!withinWindow(d, MAX_AGE_DAYS)) return [];
     const desc = a.copy ? a.copy : `${a.source || sourceLabel} • ${a.date || ''}`;
+    // Use firstSeen as pubDate so Mailchimp treats the article as new on the day it was scraped
+    const pubDate = a.firstSeen ? parseDate(a.firstSeen) : d;
     return [{
       title: a.title || '(untitled)',
       link: a.href || SITE_URL,
-      pubDate: d,
+      pubDate,
       description: desc,
       imageUrl: a.img || a.imageUrl || null,
       categories: [a.source || sourceLabel, a.newsTopic].filter(Boolean),
