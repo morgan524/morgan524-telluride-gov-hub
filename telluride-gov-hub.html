@@ -4,17 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Telluride Region — Tell-Hub</title>
-
-  <!-- PWA -->
-  <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#21443C">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Livable TLR">
-  <link rel="apple-touch-icon" href="/logo/apple-touch-icon.png">
   <!-- Site styles (extracted) -->
-  <link rel="stylesheet" href="css/site.css?v=2026-05-01-events">
+  <link rel="stylesheet" href="css/site.css?v=20260401e">
   <!-- Hub-Bub forum styles (extracted) -->
   <link rel="stylesheet" href="css/hub-bub.css">
 <!-- Firebase SDK (modular, from CDN) -->
@@ -60,16 +51,6 @@
 </script>
 <!-- EmailJS SDK for comment notification emails -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <!-- Service Worker registration -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then(reg => console.log('SW registered:', reg.scope))
-          .catch(err => console.warn('SW registration failed:', err));
-      });
-    }
-  </script>
 </head>
 <body>
 
@@ -84,8 +65,7 @@
       <button class="tab-btn active" data-tab="meetings">Gov-Hub</button>
       <button class="tab-btn" data-tab="news">Events</button>
       <button class="tab-btn" data-tab="local-news">Local News</button>
-      <button class="tab-btn" data-tab="blog">Blog</button>
-      <button class="tab-btn" data-tab="links">Local Orgs</button>
+      <button class="tab-btn" data-tab="community-pulse">Community Pulse</button>
       <button class="tab-btn" data-tab="about-us">About Us</button>
     </nav>
     <div class="site-header-translate" id="google_translate_element"></div>
@@ -107,7 +87,7 @@
   <!-- ── Subscribe Bar ── -->
   <div class="subscribe-bar">
     <span class="subscribe-bar-text">Stay informed on the topics that matter to you</span>
-    <button class="subscribe-bar-btn" onclick="openSubscribeModal();">Subscribe for Daily or Weekly Updates</button>
+    <button class="subscribe-bar-btn" onclick="openSubscribeModal();">Subscribe to Your Topics</button>
   </div>
 
   <!-- Deep Dive Topics Bar (full-width, shown on Gov-Hub tab) -->
@@ -138,6 +118,7 @@
   <!-- ── Left Sidebar ── -->
   <aside class="left-sidebar" id="leftSidebar">
 
+    <!-- Upcoming Community Events sidebar removed per user request -->
 
     <!-- Submit an Event (shown on Events tab only) — placed at top -->
     <div class="left-sidebar-card" id="sidebarSubmitEvent" style="display:none;">
@@ -243,8 +224,6 @@
         <span class="chip" data-filter="med" data-tab-target="meetings">Medical Center</span>
         <span class="chip" data-filter="norwood" data-tab-target="meetings">Norwood</span>
         <span class="chip" data-filter="ophir" data-tab-target="meetings">Ophir</span>
-        <span class="chip" data-filter="ouray" data-tab-target="meetings">Ouray County</span>
-        <span class="chip" data-filter="ridgway" data-tab-target="meetings">Ridgway</span>
         <span class="chip" data-filter="airport" data-tab-target="meetings">TEX</span>
         <span class="chip" data-filter="localgroup" data-tab-target="meetings">Local Groups</span>
       </div>
@@ -254,6 +233,12 @@
         <h3 style="margin:0 0 8px 0; font-size:1.15rem; color:var(--text-primary); font-family:var(--font-heading);">Take the Telluride Survey</h3>
         <p style="margin:0 0 14px 0; font-size:0.92rem; color:var(--text-secondary); line-height:1.55;">Telluride is inviting you to answer its survey regarding issues important to this area.</p>
         <a href="https://polco.us/n/res/vote/telluride-co/the-town-of-telluride-2026-community-survey" target="_blank" rel="noopener" style="display:inline-block; padding:10px 28px; background:var(--accent-green); color:#fff; font-size:0.95rem; font-weight:600; border-radius:8px; text-decoration:none; font-family:var(--font-heading); letter-spacing:0.02em; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Answer Survey Here</a>
+      </div>
+
+      <!-- Special Election Key Dates -->
+      <div style="margin:0 0 20px 0; padding:20px 24px; background:var(--card-bg); border-radius:14px; border:1.5px solid var(--border); text-align:center;">
+        <h3 style="margin:0 0 14px 0; font-size:1.2rem; font-weight:800; color:var(--text-primary); font-family:var(--font-heading); line-height:1.4;">Get your petitions now to run for Town Council in the Special Election.</h3>
+        <img src="election-key-dates-2026.png" alt="Key Dates for the 2026 Special Municipal Election timeline" style="width:100%; max-width:900px; border-radius:8px; margin:0 auto;">
       </div>
 
       <div id="meetings-content">
@@ -288,30 +273,21 @@
     </div>
 
     <!-- ══════════ LOCAL NEWS TAB ══════════ -->
-    <!-- ── Blog Tab ── -->
-    <div class="tab-content" id="tab-blog">
-      <div style="margin-bottom:20px; padding:24px 22px; background:linear-gradient(135deg, rgba(33,68,60,0.07) 0%, rgba(166,143,87,0.10) 100%); border-radius:14px; border-left:4px solid var(--accent-green);">
-        <h3 style="margin:0 0 8px 0; font-size:1.2rem; color:var(--text-primary); font-family:var(--font-heading);">From the Livable Telluride Blog</h3>
-        <p style="margin:0; font-size:0.9rem; color:var(--text-secondary); line-height:1.55;">
-          Long-form posts on housing, land use, civic decisions, and the issues shaping our valley. New posts are also delivered to subscribers via the daily and weekly digest.
-        </p>
-      </div>
-      <!-- TELLURIDE WEATHER CARD (blog tab) -->
-      <div style="margin-bottom:20px; padding:20px 22px; background:linear-gradient(135deg, rgba(33,68,60,0.07) 0%, rgba(166,143,87,0.10) 100%); border-radius:14px; border-left:4px solid var(--accent-green);">
-        <h3 style="margin:0 0 12px 0; font-size:1.15rem; color:var(--text-primary); font-family:var(--font-heading);">â Telluride Weather</h3>
-        <div class="nws-weather-body">
-          <div style="font-size:0.85rem; color:var(--text-secondary);">Loading weatherâ¦</div>
-        </div>
-      </div>
-      <div id="blogPostsContainer"></div>
-    </div>
-
     <div class="tab-content" id="tab-local-news">
-      <!-- ══════════ TELLURIDE WEATHER CARD ══════════ -->
-      <div id="nws-weather-card" style="margin-bottom:18px; padding:20px 22px; background:linear-gradient(135deg, rgba(33,68,60,0.07) 0%, rgba(166,143,87,0.10) 100%); border-radius:14px; border-left:4px solid var(--accent-green);">
-        <h3 style="margin:0 0 12px 0; font-size:1.15rem; color:var(--text-primary); font-family:var(--font-heading);">⛅ Telluride Weather</h3>
-        <div id="nws-weather-body" class="nws-weather-body">
-          <div style="font-size:0.85rem; color:var(--text-secondary);">Loading weather…</div>
+      <div style="margin-bottom:18px; padding:20px 22px; background:linear-gradient(135deg, rgba(33,68,60,0.07) 0%, rgba(166,143,87,0.10) 100%); border-radius:14px; border-left:4px solid var(--accent-green);">
+        <h3 style="margin:0 0 8px 0; font-size:1.15rem; color:var(--text-primary); font-family:var(--font-heading);">Local News from Telluride</h3>
+        <p style="margin:0 0 10px 0; font-size:0.88rem; color:var(--text-secondary); line-height:1.55;">
+          Stay informed with the latest reporting from the region's independent news outlets. Stories sourced from the
+          <a href="https://www.telluridenews.com" target="_blank" rel="noopener" style="color:var(--forest); font-weight:600;">Telluride Times</a> and
+          <a href="https://koto.org" target="_blank" rel="noopener" style="color:var(--forest); font-weight:600;">KOTO Community Radio</a>.
+        </p>
+        <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center; margin-top:10px;">
+          <a href="https://www.telluridenews.com" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; text-decoration:none; padding:6px 14px; background:white; border-radius:10px; border:1px solid rgba(33,68,60,0.12); font-size:0.82rem; color:var(--forest); font-weight:600;">
+            <img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="Telluride Times" style="height:22px; border-radius:4px;"> Visit Telluride Times
+          </a>
+          <a href="https://koto.org" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; text-decoration:none; padding:6px 14px; background:white; border-radius:10px; border:1px solid rgba(33,68,60,0.12); font-size:0.82rem; color:var(--forest); font-weight:600;">
+            <span id="kotoIntroLogo" style="height:22px; display:inline-flex; align-items:center;"></span> Visit KOTO
+          </a>
         </div>
       </div>
       <div class="localnews-layout">
@@ -325,7 +301,9 @@
           <!-- Legal Notices -->
           <div class="legal-sidebar-card-redesign">
             <div class="legal-sidebar-logo-redesign">
-              <img src="logo/Legal Notices.png" alt="Legal Notices" />
+              <a href="?legal=all" target="_blank" rel="noopener">
+                <img src="logo/Legal Notices.png" alt="Legal Notices" style="cursor:pointer;" />
+              </a>
             </div>
             <div class="legal-sidebar-header-redesign">
               <div>
@@ -468,374 +446,6 @@
       <div class="local-groups-grid">
 
         <!-- Telluride Rotary Club -->
-                <div class="local-group-card" data-category="clubs">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/Nucla Fire Depart.jpg" alt="5280 Volunteer Fire Department logo" loading="lazy" onerror="this.style.display='none'">
-            </div>
-            <div class="local-group-body">
-              <h4>5280 Volunteer Fire Department</h4>
-              <div class="group-summary">Colorado-based volunteer firefighting organization and fire news network covering incidents, training, and community safety events across the state. Supports local volunteer fire departments and public safety outreach.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Region:</span> <span class="group-detail-value">Colorado statewide</span></div>
-                <div class="group-detail"><span class="group-detail-label">Focus:</span> <span class="group-detail-value">Volunteer fire, community safety events, fire news & photography</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://5280fire.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-                <a href="https://5280fire.com/events/" target="_blank" rel="noopener" class="group-btn-secondary">Events</a>
-                <a href="https://5280fire.com/donate/" target="_blank" rel="noopener" class="group-btn-secondary">Donate</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="recreation">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/Colorado Mountain Club.png" alt="Colorado Mountain Club logo" loading="lazy" onerror="this.style.display='none'" style="max-width:158px;max-height:147px;">
-            </div>
-            <div class="local-group-body">
-              <h4>Colorado Mountain Club</h4>
-              <div class="group-summary">Statewide outdoor organization offering education, conservation advocacy, guided trips, and route information for mountain users throughout Colorado, including Ophir-area and San Juan routes.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Region:</span> <span class="group-detail-value">Statewide, including the San Juan Mountains</span></div>
-                <div class="group-detail"><span class="group-detail-label">Activities:</span> <span class="group-detail-value">Outdoor education, guided trips, conservation, mountain safety</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://www.cmc.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-                <a href="https://www.facebook.com/coloradomountainclub" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-                <a href="https://www.instagram.com/coloradomtnclub/" target="_blank" rel="noopener" class="group-btn-secondary">Instagram</a>
-                <a href="https://twitter.com/coloradomtnclub" target="_blank" rel="noopener" class="group-btn-secondary">X</a>
-                <a href="https://www.youtube.com/user/cmcticket" target="_blank" rel="noopener" class="group-btn-secondary">YouTube</a>
-                <a href="https://www.cmc.org/donate" target="_blank" rel="noopener" class="group-btn-secondary">Donate</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="nonprofits">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/Eco Action.webp" alt="EcoAction Partners logo" loading="lazy" onerror="this.style.display='none'">
-            </div>
-            <div class="local-group-body">
-              <h4>EcoAction Partners</h4>
-              <div class="group-summary">Works on environmental sustainability, climate action, waste reduction, energy efficiency, and community sustainability programs across San Miguel and Ouray counties.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Area:</span> <span class="group-detail-value">San Miguel County, Ouray County, and surrounding communities</span></div>
-                <div class="group-detail"><span class="group-detail-label">Focus:</span> <span class="group-detail-value">Climate action, waste reduction, energy efficiency, sustainability</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://ecoactionpartners.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-                <a href="https://www.instagram.com/EcoAction_Partners/" target="_blank" rel="noopener" class="group-btn-secondary">Instagram</a>
-                <a href="https://www.ecoactionpartners.org/donate" target="_blank" rel="noopener" class="group-btn-secondary">Donate</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="nonprofits">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/Habitat-for-Humanit-Logo.jpg" alt="Habitat for Humanity of the San Juans logo" loading="lazy" onerror="this.style.display='none'">
-            </div>
-            <div class="local-group-body">
-              <h4>Habitat for Humanity of the San Juans</h4>
-              <div class="group-summary">Housing-focused nonprofit serving San Miguel, Ouray, and Montrose counties through affordable housing construction, homeownership support, and community-building programs.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Area:</span> <span class="group-detail-value">San Miguel, Ouray, and Montrose counties</span></div>
-                <div class="group-detail"><span class="group-detail-label">Focus:</span> <span class="group-detail-value">Affordable housing, homeownership access, community development</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://www.buildinglives.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-                <a href="https://www.facebook.com/habitatsanjuans" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-                <a href="https://twitter.com/HabitatSanJuans" target="_blank" rel="noopener" class="group-btn-secondary">X</a>
-                <a href="https://www.youtube.com/channel/UCP1CivM5W95FddQAmURkKpQ" target="_blank" rel="noopener" class="group-btn-secondary">YouTube</a>
-                <a href="https://www.buildinglives.org/donate" target="_blank" rel="noopener" class="group-btn-secondary">Donate</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="nonprofits">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/Norwood.png" alt="Lone Cone Legacy Trust logo" loading="lazy" onerror="this.style.display='none'">
-            </div>
-            <div class="local-group-body">
-              <h4>Lone Cone Legacy Trust</h4>
-              <div class="group-summary">Community trust model supporting local philanthropy, resident-driven improvement projects, and civic investment in outlying communities across the West End and surrounding areas.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Area:</span> <span class="group-detail-value">Norwood, Redvale, Nucla, Naturita, Paradox, Rico, and surrounding communities</span></div>
-                <div class="group-detail"><span class="group-detail-label">Focus:</span> <span class="group-detail-value">Local philanthropy, community projects, resident-driven improvements</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://loneconelegacy.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-              
-                <a href="https://www.facebook.com/LoneConeLegacy/" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="churches">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo logo-sm">
-              <img src="logo/Naturita Churches.png" alt="Church of Jesus Christ of Latter-day Saints — Naturita Branch logo" loading="lazy">
-            </div>
-            <div class="local-group-body">
-              <h4>Naturita Church of Jesus Christ of Latter-day Saints</h4>
-              <div class="group-summary">LDS congregation (Naturita Branch) serving the Naturita area.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">31473 Highway 141, Naturita, CO</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://local.churchofjesuschrist.org/en/units/us/co/naturita-branch" target="_blank" rel="noopener" class="group-btn-primary">Church Page</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="churches">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo logo-sm">
-              <img src="logo/Naturita Churches.png" alt="Naturita New Hope Pentecostal Church of God logo" loading="lazy">
-            </div>
-            <div class="local-group-body">
-              <h4>Naturita New Hope Pentecostal Church of God</h4>
-              <div class="group-summary">Pentecostal Church of God congregation serving the Naturita community.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">135 Crystal Drive, Naturita, CO</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://nucla-naturita.com/business-directory-2/wpbdp_category/religious-services/" target="_blank" rel="noopener" class="group-btn-primary">Directory Listing</a>
-                <a href="https://www.facebook.com/pages/New-Hope-Church-P-C-G-Naturita-Co/1488712808026387" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="business">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/norwood-chamber.png" alt="Norwood Chamber of Commerce logo" loading="lazy">
-            </div>
-            <div class="local-group-body">
-              <h4>Norwood Chamber of Commerce</h4>
-              <div class="group-summary">Supports local business growth and community development in Norwood, Colorado. Maintains a business directory, facilitates networking, and promotes area tourism and economic vitality for this small mountain community.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Address:</span> <span class="group-detail-value">PO Box 116, Norwood, CO 81423</span></div>
-                <div class="group-detail"><span class="group-detail-label">Phone:</span> <span class="group-detail-value">(970) 327-4833</span></div>
-                <div class="group-detail"><span class="group-detail-label">Contact:</span> <span class="group-detail-value"><a href="mailto:info@norwoodcolorado.com" style="color:var(--forest);">info@norwoodcolorado.com</a></span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://norwoodcolorado.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-                <a href="https://www.facebook.com/p/Norwood-Chamber-of-Commerce-of-Wrights-Mesa-61554955367435/" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="churches">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo logo-sm">
-              <img src="logo/Norwood Churches.png" alt="Christ in F.O.C.U.S. Church logo" loading="lazy">
-            </div>
-            <div class="local-group-body">
-              <h4>Norwood Christ in F.O.C.U.S. Church</h4>
-              <div class="group-summary">Non-denominational Christian church located in Norwood, CO at 1470 S. Spruce St.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">1470 S. Spruce St., Norwood, CO</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://www.christinfocuschurch.com/" target="_blank" rel="noopener" class="group-btn-primary">Website</a>
-                <a href="https://www.facebook.com/christinfocuschurch/" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="churches">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo logo-sm">
-              <img src="logo/Norwood Churches.png" alt="Norwood Christian Church logo" loading="lazy">
-            </div>
-            <div class="local-group-body">
-              <h4>Norwood Christian Church</h4>
-              <div class="group-summary">Christian congregation serving the Norwood community, affiliated with Christian Churches / Churches of Christ.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">Norwood, CO</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://norwoodchristian.org/home" target="_blank" rel="noopener" class="group-btn-primary">Website</a>
-                <a href="https://www.facebook.com/people/Norwood-Christian-Church/61553612799780/" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-                <a href="https://www.instagram.com/norwood_christian_church_co/" target="_blank" rel="noopener" class="group-btn-secondary">Instagram</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="clubs">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/Norwood Fire.jpeg" alt="Norwood Fire Protection District logo" loading="lazy" onerror="this.style.display='none'" style="max-width:158px;max-height:147px;">
-            </div>
-            <div class="local-group-body">
-              <h4>Norwood Fire Protection District</h4>
-              <div class="group-summary">Provides fire protection, emergency response, rescue, and public safety services for Norwood and the surrounding Wright's Mesa area. Volunteers welcome.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Area:</span> <span class="group-detail-value">Norwood and Wright's Mesa</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://norwoodfiredistrict.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-              
-                <a href="https://www.facebook.com/Norwood-Fire-Protection-District-265734354230444" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-                <a href="https://www.instagram.com/nfpdco/" target="_blank" rel="noopener" class="group-btn-secondary">Instagram</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="recreation">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/Norwood Parks.png" alt="Norwood Park and Recreation District logo" loading="lazy">
-            </div>
-            <div class="local-group-body">
-              <h4>Norwood Park and Recreation District</h4>
-              <div class="group-summary">Public recreation agency serving over 418,500 acres since 2008. Offers year-round programs including Nordic skiing, ice rink, disc golf, pickleball, fitness classes, youth sports, and arts programming. Manages The Livery event venue, 90+ miles of trails, and community facilities.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">1555 Summit St., Norwood, CO 81423</span></div>
-                <div class="group-detail"><span class="group-detail-label">Phone:</span> <span class="group-detail-value">(970) 327-0148</span></div>
-                <div class="group-detail"><span class="group-detail-label">Facilities:</span> <span class="group-detail-value">The Livery, The Oliver House, The Yard, Ice Rink, Disc Golf</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://www.norwoodparkandrec.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-                <a href="https://www.facebook.com/norwoodrec/" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-                <a href="https://booking.norwoodparkandrec.org" target="_blank" rel="noopener" class="group-btn-secondary">Book a Facility</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="recreation">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/roping.png" alt="Norwood Roping Club logo" loading="lazy">
-            </div>
-            <div class="local-group-body">
-              <h4>Norwood Roping Club</h4>
-              <div class="group-summary">Roping club based at the San Miguel County Fairgrounds in Norwood. A fairground user group that organizes roping events and activities for the local ranching and rodeo community.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Venue:</span> <span class="group-detail-value">San Miguel County Fairgrounds, Norwood</span></div>
-                <div class="group-detail"><span class="group-detail-label">President:</span> <span class="group-detail-value">Aaron Elwood — (970) 327-4091</span></div>
-                <div class="group-detail"><span class="group-detail-label">Treasurer:</span> <span class="group-detail-value">Laura Snyder-Sherman — (970) 327-4601</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://www.sanmiguelcountyco.gov/431/Fairground-User-Groups" target="_blank" rel="noopener" class="group-btn-primary">Fairground User Groups</a>
-                <a href="https://www.facebook.com/smbrodeo" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-                <a href="https://www.instagram.com/sanmiguelbasinrodeo/" target="_blank" rel="noopener" class="group-btn-secondary">Instagram</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="churches">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo logo-sm">
-              <img src="logo/Norwood Churches.png" alt="Norwood United Methodist Church logo" loading="lazy">
-            </div>
-            <div class="local-group-body">
-              <h4>Norwood United Methodist Church</h4>
-              <div class="group-summary">United Methodist congregation in Norwood, CO, affiliated with the Mountain Sky United Methodist Church conference.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">Norwood, CO</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://www.norwoodumc.org/" target="_blank" rel="noopener" class="group-btn-primary">Website</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="churches">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo logo-sm">
-              <img src="logo/Nucla Churches.png" alt="Nucla Seventh-day Adventist Church logo" loading="lazy">
-            </div>
-            <div class="local-group-body">
-              <h4>Nucla Seventh-day Adventist Church</h4>
-              <div class="group-summary">Seventh-day Adventist congregation serving the Nucla community.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">Nucla, CO</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://nuclaco.adventistchurch.org/" target="_blank" rel="noopener" class="group-btn-primary">Website</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="business">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/Nucla Chamber.jpg" alt="Nucla-Naturita Area Chamber of Commerce logo" loading="lazy" onerror="this.style.display='none'">
-            </div>
-            <div class="local-group-body">
-              <h4>Nucla-Naturita Area Chamber of Commerce</h4>
-              <div class="group-summary">Promotes local businesses, community events, tourism, and West End identity for Nucla, Naturita, Redvale, Bedrock, Paradox, and nearby communities.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Area:</span> <span class="group-detail-value">Nucla, Naturita, Redvale, Bedrock, Paradox, and nearby West End communities</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://nucla-naturita.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-                <a href="https://www.facebook.com/NuclaNaturitaAreaChamberofCommerce" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-                <a href="https://nucla-naturita.com/events/" target="_blank" rel="noopener" class="group-btn-secondary">Events</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="business">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/Ridgway Chamber.png" alt="Ridgway Area Chamber of Commerce logo" loading="lazy" onerror="this.style.display='none'">
-            </div>
-            <div class="local-group-body">
-              <h4>Ridgway Area Chamber of Commerce</h4>
-              <div class="group-summary">Supports local businesses, tourism, community events, visitor information, and regional economic activity in Ridgway and the surrounding area.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Area:</span> <span class="group-detail-value">Ridgway and surrounding region (Ouray County)</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://ridgwaycolorado.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-              
-                <a href="https://www.facebook.com/visitridgwaycolorado" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-                <a href="https://www.instagram.com/ridgwaycolorado/" target="_blank" rel="noopener" class="group-btn-secondary">Instagram</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="nonprofits">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/Ridgway Creative.webp" alt="Ridgway Creative District logo" loading="lazy" onerror="this.style.display='none'">
-            </div>
-            <div class="local-group-body">
-              <h4>Ridgway Creative District</h4>
-              <div class="group-summary">Supports local artists, creative businesses, cultural events, and public art in Ridgway, fostering the town's identity as a vibrant creative community.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Area:</span> <span class="group-detail-value">Ridgway (Ouray County)</span></div>
-                <div class="group-detail"><span class="group-detail-label">Focus:</span> <span class="group-detail-value">Arts, creative businesses, cultural events, public art</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://ridgwaycreativedistrict.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div class="local-group-card" data-category="clubs">
           <div class="local-group-card-inner">
             <div class="local-group-logo">
@@ -860,114 +470,7 @@
           </div>
         </div>
 
-        <div class="local-group-card" data-category="youth">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/4-h.png" alt="San Miguel Basin 4-H Clubs logo" loading="lazy">
-            </div>
-            <div class="local-group-body">
-              <h4>San Miguel Basin 4-H Clubs</h4>
-              <div class="group-summary">Part of Colorado State University Extension, 4-H provides project-based learning for youth across agriculture, livestock, horticulture, natural resources, and home &amp; family topics. Members join a local club to participate in hands-on activities, fairs, and community service.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">1120 Summit St., Norwood, CO 81423</span></div>
-                <div class="group-detail"><span class="group-detail-label">Phone:</span> <span class="group-detail-value">(970) 327-4393</span></div>
-                <div class="group-detail"><span class="group-detail-label">Mailing:</span> <span class="group-detail-value">PO Box 130, Norwood, CO 81423</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://sanmiguel.extension.colostate.edu/smb-club-list/" target="_blank" rel="noopener" class="group-btn-primary">View Club List</a>
-                <a href="https://www.facebook.com/people/Colorado-State-University-Extension-San-Miguel-Basin-4-H/100079938742937/" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-                <a href="https://sanmiguel.extension.colostate.edu/" target="_blank" rel="noopener" class="group-btn-secondary">CSU Extension</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="nonprofits">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/sheep-mountain.png" alt="Sheep Mountain Alliance logo" loading="lazy">
-            </div>
-            <div class="local-group-body">
-              <h4>Sheep Mountain Alliance</h4>
-              <div class="group-summary">Southwest Colorado's leading wilderness conservation organization. Works to protect public lands, wildlife, and wild places in the San Juan Mountains and surrounding region through advocacy, education, and community engagement.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Focus:</span> <span class="group-detail-value">Public lands, wilderness, wildlife habitat, clean water &amp; air</span></div>
-                <div class="group-detail"><span class="group-detail-label">Region:</span> <span class="group-detail-value">San Juan Mountains, Southwest Colorado</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://www.sheepmountainalliance.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-                <a href="https://www.facebook.com/SheepMountainAlliance/" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-                <a href="https://www.instagram.com/sheepmountainalliance/" target="_blank" rel="noopener" class="group-btn-secondary">Instagram</a>
-                <a href="https://twitter.com/sheepmtn" target="_blank" rel="noopener" class="group-btn-secondary">X</a>
-                <a href="https://www.sheepmountainalliance.org/news" target="_blank" rel="noopener" class="group-btn-secondary">News</a>
-                <a href="https://www.sheepmountainalliance.org/donate" target="_blank" rel="noopener" class="group-btn-secondary">Donate</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="nonprofits">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/Sherbino.png" alt="Sherbino Theater logo" loading="lazy" onerror="this.style.display='none'" style="max-width:112px;max-height:105px;">
-            </div>
-            <div class="local-group-body">
-              <h4>Sherbino Theater</h4>
-              <div class="group-summary">Community arts, culture, and performance venue in Ridgway hosting music, film, theater, lectures, community gatherings, and educational events for the broader San Juan region.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">Ridgway, CO (Ouray County)</span></div>
-                <div class="group-detail"><span class="group-detail-label">Programs:</span> <span class="group-detail-value">Music, film, theater, lectures, community events, education</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://sherbino.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-                <a href="https://www.facebook.com/SherbinoTheater" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-                <a href="https://www.instagram.com/thesherbino/" target="_blank" rel="noopener" class="group-btn-secondary">Instagram</a>
-                <a href="https://twitter.com/SherbinoTheater" target="_blank" rel="noopener" class="group-btn-secondary">X</a>
-                <a href="https://sherbino.org/support" target="_blank" rel="noopener" class="group-btn-secondary">Donate</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="churches">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/Church.png" alt="Church logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-              <div style="width:80px;height:80px;display:none;align-items:center;justify-content:center;font-size:2.2rem;background:var(--cream);border-radius:8px;">⛪</div>
-            </div>
-            <div class="local-group-body">
-              <h4>Telluride Christ Presbyterian Church</h4>
-              <div class="group-summary">With roots dating to 1889 as a Congregational church, it became Presbyterian in 1938. A loving and accepting fellowship emphasizing hospitality and community, with children's ministry, contemplative gardens, and local outreach initiatives.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Address:</span> <span class="group-detail-value">434 W. Columbia Avenue, Telluride, CO 81435</span></div>
-                <div class="group-detail"><span class="group-detail-label">Phone:</span> <span class="group-detail-value">(970) 728-4536</span></div>
-                <div class="group-detail"><span class="group-detail-label">Pastor:</span> <span class="group-detail-value">Peter Traben Haas</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://christpresbyterianchurchtelluride.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-                <a href="https://www.facebook.com/p/Christ-Presbyterian-Church-Telluride-61562972470758/" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="churches">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/Church.png" alt="Church logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-              <div style="width:80px;height:80px;display:none;align-items:center;justify-content:center;font-size:2.2rem;background:var(--cream);border-radius:8px;">⛪</div>
-            </div>
-            <div class="local-group-body">
-              <h4>Telluride Christian Fellowship</h4>
-              <div class="group-summary">Non-denominational Christian church serving the Telluride community with worship services, community outreach, and fellowship programs in a welcoming mountain-town setting.</div>
-              <div class="local-group-actions">
-                <a href="https://www.telluridechurch.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-                <a href="https://www.facebook.com/p/Telluride-Christian-Fellowship-100064725129027/" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <!-- Telluride Elks Lodge 692 -->
         <div class="local-group-card" data-category="clubs">
           <div class="local-group-card-inner">
             <div class="local-group-logo logo-sm">
@@ -985,7 +488,6 @@
                 <div class="group-detail"><span class="group-detail-label">Contact:</span> <span class="group-detail-value"><a href="mailto:bpoe692@yahoo.com" style="color:var(--forest);">bpoe692@yahoo.com</a></span></div>
                 <div class="group-detail"><span class="group-detail-label">Rentals:</span> <span class="group-detail-value">Mike Metz — (970) 729-1910</span></div>
               </div>
-                <div class="group-detail"><span class="group-detail-label">Veterans Club:</span> <span class="group-detail-value">Veterans fellowship &amp; support operating through the Lodge. Contact: <a href="https://www.sanmiguelcountyco.gov/537/Resources" target="_blank" rel="noopener" style="color:var(--forest);">County Veterans Resources</a></span></div>
               <div class="local-group-actions">
                 <a href="https://tellurideelks.org" target="_blank" rel="noopener" class="group-btn-primary">Visit Lodge Website</a>
                 <a href="https://www.facebook.com/pages/Telluride-Elks-Lodge-692/232150316875640" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
@@ -995,31 +497,7 @@
           </div>
         </div>
 
-        <div class="local-group-card" data-category="nonprofits">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/tf-foundation.png" alt="Telluride Foundation logo" loading="lazy">
-            </div>
-            <div class="local-group-body">
-              <h4>Telluride Foundation</h4>
-              <div class="group-summary">Community foundation serving the Telluride region since 2000. Provides grants to local nonprofits, hosts community events and public forums, runs youth programs, and fosters economic vitality and quality of life across the San Miguel Basin.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Focus:</span> <span class="group-detail-value">Grants, community events, youth programs, economic vitality</span></div>
-                <div class="group-detail"><span class="group-detail-label">Region:</span> <span class="group-detail-value">Telluride &amp; San Miguel Basin</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://telluridefoundation.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-                <a href="https://www.facebook.com/TellurideFoundation/" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-                <a href="https://www.instagram.com/telluridefoundation/" target="_blank" rel="noopener" class="group-btn-secondary">Instagram</a>
-                <a href="https://twitter.com/TellurideFound" target="_blank" rel="noopener" class="group-btn-secondary">X</a>
-                <a href="https://telluridefoundation.org/tf-events/" target="_blank" rel="noopener" class="group-btn-secondary">Events</a>
-                <a href="https://telluridefoundation.org/news/" target="_blank" rel="noopener" class="group-btn-secondary">News</a>
-                <a href="https://telluridefoundation.org/donate" target="_blank" rel="noopener" class="group-btn-secondary">Donate</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <!-- Telluride Mountain Club -->
         <div class="local-group-card" data-category="recreation">
           <div class="local-group-card-inner">
             <div class="local-group-logo logo-sm">
@@ -1034,196 +512,187 @@
               </div>
               <div class="local-group-actions">
                 <a href="https://www.telluridemountainclub.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-                <a href="https://www.facebook.com/TellurideMtClub" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
                 <a href="https://www.instagram.com/telluridemountainclub/" target="_blank" rel="noopener" class="group-btn-secondary">Instagram</a>
-                <a href="https://www.telluridemountainclub.org/donate" target="_blank" rel="noopener" class="group-btn-secondary">Donate</a>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- Telluride Mountain Village Owners Association (TMVOA) -->
+        <div class="local-group-card" data-category="hoa">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <img src="https://tmvoa.org/site/assets/files/1699/tmvoa-logo.800x375.webp" alt="TMVOA logo" loading="lazy">
+            </div>
+            <div class="local-group-body">
+              <h4>Telluride Mountain Village Owners Association (TMVOA)</h4>
+              <div class="group-summary">Official organization serving Mountain Village property owners, dedicated to preserving and promoting a vital resort community. Provides event sponsorship, gondola funding, grant awards, community research, and member resources including gondola/bus access and dial-a-ride services.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">113 Lost Creek Ln, Suite A, Blue Mesa Building, Mountain Village, CO 81435</span></div>
+                <div class="group-detail"><span class="group-detail-label">Phone:</span> <span class="group-detail-value">(970) 728-1904</span></div>
+                <div class="group-detail"><span class="group-detail-label">Office Hours:</span> <span class="group-detail-value">Mon–Fri, 8:30 AM – 5:00 PM</span></div>
+                <div class="group-detail"><span class="group-detail-label">Board Meetings:</span> <span class="group-detail-value">See website for schedule</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://tmvoa.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
+                <a href="https://tmvoa.org/meetings-events/events/" target="_blank" rel="noopener" class="group-btn-secondary">Meeting Calendar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Telluride Ski Ranches Association -->
+        <div class="local-group-card" data-category="hoa">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <img src="https://images.squarespace-cdn.com/content/v1/65c12a0b8ad39747303e6fef/8021336e-5f36-4ca9-8163-c3fcf46f4eb8/Ski+Ranches+Logo_white+transparent.png" alt="Telluride Ski Ranches Association logo" loading="lazy" style="background:#2d5a3d; border-radius:8px; padding:6px;">
+            </div>
+            <div class="local-group-body">
+              <h4>Telluride Ski Ranches Association, Inc.</h4>
+              <div class="group-summary">Single-family residential community offering 1–3 acre homesites with National Forest access, hiking trails, and organized community events. Managed by Telluride Consulting, the HOA provides community involvement, neighborhood committees, and regular resident meetings.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Address:</span> <span class="group-detail-value">PO Box 3275, Telluride, CO 81435</span></div>
+                <div class="group-detail"><span class="group-detail-label">Phone:</span> <span class="group-detail-value">(970) 729-8911</span></div>
+                <div class="group-detail"><span class="group-detail-label">Contact:</span> <span class="group-detail-value"><a href="mailto:skiranches@gmail.com" style="color:var(--forest);">skiranches@gmail.com</a></span></div>
+                <div class="group-detail"><span class="group-detail-label">Annual Meeting:</span> <span class="group-detail-value">January — see website for schedule</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://www.skiranches.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aldasoro Ranch Homeowners Company -->
+        <div class="local-group-card" data-category="hoa">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <img src="logo/Aldasoro.png" alt="Aldasoro Ranch logo" loading="lazy" style="border-radius:8px;">
+            </div>
+            <div class="local-group-body">
+              <h4>Aldasoro Ranch Homeowners Company</h4>
+              <div class="group-summary">Homeowners association governing the Aldasoro Ranch residential community near Telluride. Manages governance, covenants, design review, water systems, road maintenance, snow plowing, wildfire mitigation, and weed management for property owners in the historic ranch subdivision.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Address:</span> <span class="group-detail-value">307 Society Drive, Unit C, Telluride, CO 81435</span></div>
+                <div class="group-detail"><span class="group-detail-label">Phone:</span> <span class="group-detail-value">(970) 728-5191</span></div>
+                <div class="group-detail"><span class="group-detail-label">Services:</span> <span class="group-detail-value">Design Review Board, water conservation, road maintenance, wildfire mitigation</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://www.aldasororanch.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
+                <a href="https://arhcportal.specialdistrict.org/" target="_blank" rel="noopener" class="group-btn-secondary">Owner Portal</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Elk Run Homeowners Corporation -->
+        <div class="local-group-card" data-category="hoa">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <img src="https://elkruntelluride.com/wp-content/uploads/2019/01/elkrun.png" alt="Elk Run Telluride logo" loading="lazy" style="border-radius:8px;">
+            </div>
+            <div class="local-group-body">
+              <h4>Elk Run Homeowners Corporation</h4>
+              <div class="group-summary">Residential community in Telluride providing governance, design review, and neighborhood resources for homeowners. Maintains governing documents, good governance policies, meeting minutes, budgets, and a Design Review Board for architectural oversight.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">Telluride, CO 81435</span></div>
+                <div class="group-detail"><span class="group-detail-label">Services:</span> <span class="group-detail-value">Design Review Board, governing documents, pet policies, community insurance</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://elkruntelluride.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
+                <a href="https://elkruntelluride.com/governing-documents/" target="_blank" rel="noopener" class="group-btn-secondary">Governing Documents</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Norwood Chamber of Commerce -->
+        <div class="local-group-card" data-category="business">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <img src="logo/norwood-chamber.png" alt="Norwood Chamber of Commerce logo" loading="lazy">
+            </div>
+            <div class="local-group-body">
+              <h4>Norwood Chamber of Commerce</h4>
+              <div class="group-summary">Supports local business growth and community development in Norwood, Colorado. Maintains a business directory, facilitates networking, and promotes area tourism and economic vitality for this small mountain community.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Address:</span> <span class="group-detail-value">PO Box 116, Norwood, CO 81423</span></div>
+                <div class="group-detail"><span class="group-detail-label">Phone:</span> <span class="group-detail-value">(970) 327-4833</span></div>
+                <div class="group-detail"><span class="group-detail-label">Contact:</span> <span class="group-detail-value"><a href="mailto:info@norwoodcolorado.com" style="color:var(--forest);">info@norwoodcolorado.com</a></span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://norwoodcolorado.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Norwood Park and Recreation District -->
+        <div class="local-group-card" data-category="recreation">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <img src="logo/Norwood Parks.png" alt="Norwood Park and Recreation District logo" loading="lazy">
+            </div>
+            <div class="local-group-body">
+              <h4>Norwood Park and Recreation District</h4>
+              <div class="group-summary">Public recreation agency serving over 418,500 acres since 2008. Offers year-round programs including Nordic skiing, ice rink, disc golf, pickleball, fitness classes, youth sports, and arts programming. Manages The Livery event venue, 90+ miles of trails, and community facilities.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">1555 Summit St., Norwood, CO 81423</span></div>
+                <div class="group-detail"><span class="group-detail-label">Phone:</span> <span class="group-detail-value">(970) 327-0148</span></div>
+                <div class="group-detail"><span class="group-detail-label">Facilities:</span> <span class="group-detail-value">The Livery, The Oliver House, The Yard, Ice Rink, Disc Golf</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://www.norwoodparkandrec.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
+                <a href="https://booking.norwoodparkandrec.org" target="_blank" rel="noopener" class="group-btn-secondary">Book a Facility</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- San Miguel Basin 4-H Clubs -->
         <div class="local-group-card" data-category="youth">
           <div class="local-group-card-inner">
             <div class="local-group-logo">
-              <img src="logo/Telluride Ski Club.webp" alt="Telluride Ski &amp; Snowboard Club logo" loading="lazy" onerror="this.style.display='none'">
+              <img src="logo/4-h.png" alt="San Miguel Basin 4-H Clubs logo" loading="lazy">
             </div>
             <div class="local-group-body">
-              <h4>Telluride Ski &amp; Snowboard Club</h4>
-              <div class="group-summary">Supports youth skiing and snowboarding through competitive programs, coaching, training camps, and mountain-sports development for athletes across the region.</div>
+              <h4>San Miguel Basin 4-H Clubs</h4>
+              <div class="group-summary">Part of Colorado State University Extension, 4-H provides project-based learning for youth across agriculture, livestock, horticulture, natural resources, and home &amp; family topics. Members join a local club to participate in hands-on activities, fairs, and community service.</div>
               <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Area:</span> <span class="group-detail-value">Telluride and regional youth athletes</span></div>
-                <div class="group-detail"><span class="group-detail-label">Focus:</span> <span class="group-detail-value">Youth ski &amp; snowboard racing, coaching, competition</span></div>
+                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">1120 Summit St., Norwood, CO 81423</span></div>
+                <div class="group-detail"><span class="group-detail-label">Phone:</span> <span class="group-detail-value">(970) 327-4393</span></div>
+                <div class="group-detail"><span class="group-detail-label">Mailing:</span> <span class="group-detail-value">PO Box 130, Norwood, CO 81423</span></div>
               </div>
               <div class="local-group-actions">
-                <a href="https://tssc.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-                <a href="https://www.instagram.com/tellurideskisnowboardclub/" target="_blank" rel="noopener" class="group-btn-secondary">Instagram</a>
-                <a href="https://tssc.org/donate" target="_blank" rel="noopener" class="group-btn-secondary">Donate</a>
+                <a href="https://sanmiguel.extension.colostate.edu/smb-club-list/" target="_blank" rel="noopener" class="group-btn-primary">View Club List</a>
+                <a href="https://sanmiguel.extension.colostate.edu/" target="_blank" rel="noopener" class="group-btn-secondary">CSU Extension</a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="local-group-card" data-category="churches">
+        <!-- Norwood Roping Club -->
+        <div class="local-group-card" data-category="recreation">
           <div class="local-group-card-inner">
             <div class="local-group-logo">
-              <img src="logo/Church.png" alt="Church logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-              <div style="width:80px;height:80px;display:none;align-items:center;justify-content:center;font-size:2.2rem;background:var(--cream);border-radius:8px;">⛪</div>
+              <img src="logo/roping.png" alt="Norwood Roping Club logo" loading="lazy">
             </div>
             <div class="local-group-body">
-              <h4>Telluride St. Patrick's Catholic Church</h4>
-              <div class="group-summary">Historic Catholic parish established in 1896, serving the Telluride community at 8,750 feet in the San Juan Mountains. Part of the Diocese of Pueblo, also operating a mission in Nucla.</div>
+              <h4>Norwood Roping Club</h4>
+              <div class="group-summary">Roping club based at the San Miguel County Fairgrounds in Norwood. A fairground user group that organizes roping events and activities for the local ranching and rodeo community.</div>
               <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Sunday Mass:</span> <span class="group-detail-value">9:00 AM (Confessions &amp; Rosary at 8:30 AM)</span></div>
-                <div class="group-detail"><span class="group-detail-label">Address:</span> <span class="group-detail-value">301 North Spruce, Telluride, CO 81435</span></div>
-                <div class="group-detail"><span class="group-detail-label">Pastor:</span> <span class="group-detail-value">Rev. Mariusz Wirkowski</span></div>
+                <div class="group-detail"><span class="group-detail-label">Venue:</span> <span class="group-detail-value">San Miguel County Fairgrounds, Norwood</span></div>
+                <div class="group-detail"><span class="group-detail-label">President:</span> <span class="group-detail-value">Aaron Elwood — (970) 327-4091</span></div>
+                <div class="group-detail"><span class="group-detail-label">Treasurer:</span> <span class="group-detail-value">Laura Snyder-Sherman — (970) 327-4601</span></div>
               </div>
               <div class="local-group-actions">
-                <a href="https://stpatrickstelluride.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-                <a href="https://www.facebook.com/StPatricksTelluride/" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-                <a href="https://x.com/stpatstelluride" target="_blank" rel="noopener" class="group-btn-secondary">X</a>
+                <a href="https://www.sanmiguelcountyco.gov/431/Fairground-User-Groups" target="_blank" rel="noopener" class="group-btn-primary">Fairground User Groups</a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="local-group-card" data-category="clubs">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/Telluride Fire.png" alt="Telluride Volunteer Fire Department logo" loading="lazy" onerror="this.style.display='none'">
-            </div>
-            <div class="local-group-body">
-              <h4>Telluride Volunteer Fire Department</h4>
-              <div class="group-summary">Provides fire protection, emergency response, technical rescue, and public safety services for the Telluride Fire Protection District and surrounding communities. Volunteers welcome.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Area:</span> <span class="group-detail-value">Telluride Fire Protection District and surrounding communities</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://telluridefire.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-              
-                <a href="https://telluridefire.com/donate" target="_blank" rel="noopener" class="group-btn-secondary">Donate</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="youth">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/West Slope Lacross.jpeg" alt="West Slope Lacrosse logo" loading="lazy" onerror="this.style.display='none'">
-            </div>
-            <div class="local-group-body">
-              <h4>Telluride Youth Lacrosse / West Slope Lacrosse</h4>
-              <div class="group-summary">Youth lacrosse programming serving Telluride and the broader western slope region. Contact for current season schedules, registration, and team information.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Area:</span> <span class="group-detail-value">Telluride and western slope region</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://www.westslopelacrosse.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="youth">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/Telluride Soccer.jpeg" alt="Telluride Youth Soccer Club logo" loading="lazy" onerror="this.style.display='none'">
-            </div>
-            <div class="local-group-body">
-              <h4>Telluride Youth Soccer Club</h4>
-              <div class="group-summary">Provides youth soccer programs, training, and recreational opportunities for young players in Telluride and the surrounding region. Programs for a range of ages and skill levels.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Area:</span> <span class="group-detail-value">Telluride and regional youth</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://www.tellurideyouthsoccerclub.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="youth">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/Pinhead.png" alt="The Pinhead Institute logo" loading="lazy" onerror="this.style.display='none'">
-            </div>
-            <div class="local-group-body">
-              <h4>The Pinhead Institute</h4>
-              <div class="group-summary">Provides STEM education, science programs, youth internships, educational outreach, and hands-on learning opportunities for young people in Telluride and the surrounding region.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Area:</span> <span class="group-detail-value">Telluride and regional youth</span></div>
-                <div class="group-detail"><span class="group-detail-label">Focus:</span> <span class="group-detail-value">STEM education, science programs, internships, youth outreach</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://www.pinheadinstitute.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-                <a href="https://www.facebook.com/pages/Pinhead-Institute-A-Smithsonian-Affiliate/139925686059706" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-                <a href="https://www.instagram.com/pinheadinstitute/" target="_blank" rel="noopener" class="group-btn-secondary">Instagram</a>
-                <a href="https://www.youtube.com/channel/UCzRuty1yIKquRiWGgYj-7yA" target="_blank" rel="noopener" class="group-btn-secondary">YouTube</a>
-                <a href="https://www.pinheadinstitute.org/donate" target="_blank" rel="noopener" class="group-btn-secondary">Donate</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="churches">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo logo-sm">
-              <img src="logo/Naturita Churches.png" alt="Trinity Baptist Church — Naturita logo" loading="lazy">
-            </div>
-            <div class="local-group-body">
-              <h4>Trinity Baptist Church — Naturita</h4>
-              <div class="group-summary">Southern Baptist Convention congregation serving the Naturita community.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">Naturita, CO</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://churches.sbc.net/church/trinity-baptist-church-naturita/" target="_blank" rel="noopener" class="group-btn-primary">SBC Directory</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="youth">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <img src="logo/True North.png" alt="True North Youth Program logo" loading="lazy" onerror="this.style.display='none'">
-            </div>
-            <div class="local-group-body">
-              <h4>True North Youth Program</h4>
-              <div class="group-summary">Provides youth-development programs, after-school enrichment, outdoor experiences, mentoring, and leadership support for young people in Norwood, Nucla, Naturita, Telluride, and surrounding communities.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Area:</span> <span class="group-detail-value">Norwood, Nucla, Naturita, Telluride, and regional youth</span></div>
-                <div class="group-detail"><span class="group-detail-label">Focus:</span> <span class="group-detail-value">After-school programs, outdoor education, mentoring, leadership</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://www.truenorthyouthprogram.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-                <a href="https://www.facebook.com/truenorthyouthprogram/" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-                <a href="https://www.instagram.com/truenorthyouthprogram/" target="_blank" rel="noopener" class="group-btn-secondary">Instagram</a>
-                <a href="https://www.truenorthyouthprogram.org/donate-today" target="_blank" rel="noopener" class="group-btn-secondary">Donate</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="churches">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo logo-sm">
-              <img src="logo/Nucla Churches.png" alt="Union Congregational Church of Nucla logo" loading="lazy">
-            </div>
-            <div class="local-group-body">
-              <h4>Union Congregational Church of Nucla</h4>
-              <div class="group-summary">United Church of Christ congregation serving the Nucla community.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Location:</span> <span class="group-detail-value">Nucla, CO</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://www.faithstreet.com/norwood-co" target="_blank" rel="noopener" class="group-btn-primary">Directory Listing</a>
-                <a href="https://www.facebook.com/p/Union-Congregational-UCC-Nucla-CO-100066690574884/" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <!-- Wright's Mesa Gymkhana Club -->
         <div class="local-group-card" data-category="recreation">
           <div class="local-group-card-inner">
             <div class="local-group-logo">
@@ -1243,6 +712,7 @@
           </div>
         </div>
 
+        <!-- Youth Soccer Club / County Recreation -->
         <div class="local-group-card" data-category="youth">
           <div class="local-group-card-inner">
             <div class="local-group-logo">
@@ -1261,6 +731,86 @@
           </div>
         </div>
 
+        <!-- Telluride Elks Lodge Veterans Club -->
+        <div class="local-group-card" data-category="veterans">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo logo-sm">
+              <img src="https://raw.githubusercontent.com/morgan524/morgan524-telluride-gov-hub/main/logo/Elks.png" alt="Telluride Elks Lodge Veterans Club logo" loading="lazy">
+            </div>
+            <div class="local-group-body">
+              <h4>Telluride Elks Lodge BPOE #692 Veterans Club</h4>
+              <div class="group-summary">Veterans service club operating through Telluride Elks Lodge 692, listed as a community support resource by the San Miguel County Veterans Service Office. Provides fellowship and support for local veterans.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Affiliated with:</span> <span class="group-detail-value">Telluride Elks Lodge 692</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://tellurideelks.org/" target="_blank" rel="noopener" class="group-btn-primary">Elks Lodge Website</a>
+                <a href="https://www.sanmiguelcountyco.gov/537/Resources" target="_blank" rel="noopener" class="group-btn-secondary">County Veterans Resources</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Telluride Christian Fellowship -->
+        <div class="local-group-card" data-category="churches">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <img src="logo/Church.png" alt="Church logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div style="width:80px;height:80px;display:none;align-items:center;justify-content:center;font-size:2.2rem;background:var(--cream);border-radius:8px;">⛪</div>
+            </div>
+            <div class="local-group-body">
+              <h4>Telluride Christian Fellowship</h4>
+              <div class="group-summary">Non-denominational Christian church serving the Telluride community with worship services, community outreach, and fellowship programs in a welcoming mountain-town setting.</div>
+              <div class="local-group-actions">
+                <a href="https://www.telluridechurch.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- St. Patrick's Catholic Church -->
+        <div class="local-group-card" data-category="churches">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <img src="logo/Church.png" alt="Church logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div style="width:80px;height:80px;display:none;align-items:center;justify-content:center;font-size:2.2rem;background:var(--cream);border-radius:8px;">⛪</div>
+            </div>
+            <div class="local-group-body">
+              <h4>St. Patrick's Catholic Church</h4>
+              <div class="group-summary">Historic Catholic parish established in 1896, serving the Telluride community at 8,750 feet in the San Juan Mountains. Part of the Diocese of Pueblo, also operating a mission in Nucla.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Sunday Mass:</span> <span class="group-detail-value">9:00 AM (Confessions &amp; Rosary at 8:30 AM)</span></div>
+                <div class="group-detail"><span class="group-detail-label">Address:</span> <span class="group-detail-value">301 North Spruce, Telluride, CO 81435</span></div>
+                <div class="group-detail"><span class="group-detail-label">Pastor:</span> <span class="group-detail-value">Rev. Mariusz Wirkowski</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://stpatrickstelluride.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Christ Presbyterian Church Telluride -->
+        <div class="local-group-card" data-category="churches">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <img src="logo/Church.png" alt="Church logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div style="width:80px;height:80px;display:none;align-items:center;justify-content:center;font-size:2.2rem;background:var(--cream);border-radius:8px;">⛪</div>
+            </div>
+            <div class="local-group-body">
+              <h4>Christ Presbyterian Church Telluride</h4>
+              <div class="group-summary">With roots dating to 1889 as a Congregational church, it became Presbyterian in 1938. A loving and accepting fellowship emphasizing hospitality and community, with children's ministry, contemplative gardens, and local outreach initiatives.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Address:</span> <span class="group-detail-value">434 W. Columbia Avenue, Telluride, CO 81435</span></div>
+                <div class="group-detail"><span class="group-detail-label">Phone:</span> <span class="group-detail-value">(970) 728-4536</span></div>
+                <div class="group-detail"><span class="group-detail-label">Pastor:</span> <span class="group-detail-value">Peter Traben Haas</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://christpresbyterianchurchtelluride.com/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
 
@@ -1268,10 +818,13 @@
       <aside class="lg-filter-sidebar" id="lgFilterSidebar">
         <h3>Filter by Topic</h3>
         <button class="lg-filter-btn active" data-filter="all" onclick="lgFilter('all')">
-          <span class="lg-filter-icon">📋</span> All Groups <span class="lg-filter-count" id="lgCountAll">26</span>
+          <span class="lg-filter-icon">📋</span> All Groups <span class="lg-filter-count" id="lgCountAll">17</span>
         </button>
         <button class="lg-filter-btn" data-filter="clubs" onclick="lgFilter('clubs')">
           <span class="lg-filter-icon">🤝</span> Service Clubs <span class="lg-filter-count" id="lgCountClubs">0</span>
+        </button>
+        <button class="lg-filter-btn" data-filter="hoa" onclick="lgFilter('hoa')">
+          <span class="lg-filter-icon">🏘️</span> HOAs &amp; Property <span class="lg-filter-count" id="lgCountHoa">0</span>
         </button>
         <button class="lg-filter-btn" data-filter="recreation" onclick="lgFilter('recreation')">
           <span class="lg-filter-icon">⛰️</span> Recreation &amp; Outdoors <span class="lg-filter-count" id="lgCountRecreation">0</span>
@@ -1287,9 +840,6 @@
         </button>
         <button class="lg-filter-btn" data-filter="business" onclick="lgFilter('business')">
           <span class="lg-filter-icon">💼</span> Business &amp; Commerce <span class="lg-filter-count" id="lgCountBusiness">0</span>
-        </button>
-        <button class="lg-filter-btn" data-filter="nonprofits" onclick="lgFilter('nonprofits')">
-          <span class="lg-filter-icon">🌱</span> Nonprofits &amp; Advocacy <span class="lg-filter-count" id="lgCountNonprofits">0</span>
         </button>
       </aside>
 
@@ -1359,7 +909,7 @@
               <strong>SMRHA Property Listings</strong>
               <span>Deed-restricted &amp; affordable rentals</span>
             </a>
-            <a href="https://www.telluride.gov/745/Town-Owned-Rental-Properties" target="_blank" rel="noopener" class="housing-source-card">
+            <a href="https://www.telluride-co.gov/745/Town-Owned-Rental-Properties" target="_blank" rel="noopener" class="housing-source-card">
               <strong>Town of Telluride Rental Housing</strong>
               <span>212 town-owned units (waitlist-based)</span>
             </a>
@@ -1707,6 +1257,7 @@
         <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
           <button class="freq-option selected" data-freq="weekly">Weekly Digest</button>
           <button class="freq-option" data-freq="daily">Daily</button>
+          <button class="freq-option" data-freq="monthly">Monthly</button>
         </div>
       </div>
 
@@ -2099,76 +1650,92 @@
 
         <div class="tab-content" id="tab-about-us">
 
-      <!-- Hero Banner -->
-      <div style="position:relative;width:100%;border-radius:var(--radius);overflow:hidden;margin-bottom:32px;background:linear-gradient(135deg,#1a332c 0%,#21443c 40%,#2d5a4e 100%);min-height:340px;display:flex;align-items:center;">
-        <div style="position:absolute;inset:0;background:url('images/about/hero-telluride.jpg') center/cover no-repeat;opacity:0.3;"></div>
-        <div style="position:relative;z-index:2;padding:48px 40px;max-width:680px;">
-          <div style="display:flex;align-items:center;gap:18px;margin-bottom:20px;">
-            <img src="logo/Livable Telluride.png" alt="Livable Telluride" style="width:80px;height:80px;border-radius:18px;object-fit:contain;background:rgba(255,255,255,0.95);padding:6px;">
-            <div>
-              <h1 style="font-size:2.2rem;font-weight:800;color:#fff;margin:0;line-height:1.15;">Livable Telluride</h1>
-              <div style="font-size:0.95rem;color:rgba(255,255,255,0.8);margin-top:4px;font-weight:500;">Preserving the Heart of Telluride</div>
-            </div>
+      <!-- Hero Banner with real photo -->
+      <div style="position:relative;width:100%;border-radius:var(--radius);overflow:hidden;margin-bottom:32px;">
+        <img src="photos-hero-road.jpeg" alt="Autumn road winding toward Telluride mountains" style="width:100%;height:420px;object-fit:cover;display:block;">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,51,44,0.15) 0%,rgba(26,51,44,0.65) 100%);display:flex;align-items:flex-end;">
+          <div style="padding:40px 44px;">
+            <h1 style="font-size:4.8rem;font-weight:800;color:#fff;margin:0;line-height:1.1;text-shadow:0 2px 16px rgba(0,0,0,0.4);">Bowling Together in San Miguel County</h1>
+            <p style="font-size:1.15rem;color:rgba(255,255,255,0.88);margin:12px 0 0 0;font-weight:400;text-shadow:0 1px 8px rgba(0,0,0,0.4);max-width:640px;line-height:1.5;">A civic information hub for every resident — before the decisions are final.</p>
           </div>
-          <p style="font-size:1.05rem;color:rgba(255,255,255,0.9);line-height:1.7;margin:0;">
-            Advocating for thoughtful growth and community preservation in the Telluride region.
-          </p>
         </div>
       </div>
 
-      <!-- Mission Section -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:32px;">
-        <div style="background:var(--card-bg);border-radius:var(--radius);padding:32px;border:1.5px solid var(--border);">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
-            <div style="width:40px;height:40px;border-radius:12px;background:rgba(33,68,60,0.08);display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🎯</div>
-            <h2 style="font-size:1.35rem;font-weight:800;color:var(--text-primary);margin:0;">Our Mission</h2>
+      <!-- Mission + Photo Section -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:32px;align-items:center;">
+        <div>
+          <div style="background:var(--card-bg);border-radius:var(--radius);padding:32px;border:1.5px solid var(--border);margin-bottom:20px;">
+            <h2 style="font-family:Georgia,serif;font-size:1.6rem;font-weight:800;color:var(--text-primary);margin:0 0 14px 0;">Our Mission</h2>
+            <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.8;margin:0 0 12px 0;">
+              In <em>Bowling Alone</em>, Robert Putnam documented what happens when people stop showing up to civic life. Local governments grow less accountable. Decisions on budgets, land use, debt, and zoning move forward with little public scrutiny. The voices that stay at the table are typically those with a direct financial stake in the outcome — not because anyone is acting in bad faith, but because everyone else has tuned out.
+            </p>
+            <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.8;margin:0;">
+              Livable Telluride exists to close that gap. We are a civic information hub for the whole county — West End to Mountain Village, across the full political spectrum — bringing government meetings, local news, and community information together in one place, always linked back to original sources. As an IRS-approved 501(c)(3) educational nonprofit, we will never charge for access and rely solely on tax-deductible donations.
+            </p>
           </div>
-          <p style="font-size:0.92rem;color:var(--text-secondary);line-height:1.75;margin:0;">
-            Livable Telluride is dedicated to ensuring that thoughtful processes result in a livable community for all. Our mission is to preserve the heart of Telluride by advocating for sustainable growth and transparent decision-making that prioritizes the long-term well-being of our residents. We work to safeguard the unique character of our box canyon home while fostering an inclusive and vibrant future for generations to come.
-          </p>
+          <div style="background:var(--card-bg);border-radius:var(--radius);padding:32px;border:1.5px solid var(--border);">
+            <h2 style="font-family:Georgia,serif;font-size:1.6rem;font-weight:800;color:var(--text-primary);margin:0 0 14px 0;">Our Story</h2>
+            <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.8;margin:0 0 12px 0;">
+              We grew out of "Let the People Decide," the grassroots effort behind Measure 300 in November 2024. During that campaign, the same concern surfaced repeatedly: residents cared deeply, but felt they were learning about major decisions late — through fragments and social media arguments — after the important planning work was already final.
+            </p>
+            <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.8;margin:0;">
+              The Society Turn PUD was a clear example. Most residents knew about the planned hospital at the site. Far fewer knew it was only a small part of a much larger development — roughly 300,000 square feet of free-market commercial space and a 125-room hotel. The question wasn't what to think about it. It was simpler: how can residents meaningfully participate if they don't know what's actually being proposed? Livable Telluride is our ongoing answer to that question.
+            </p>
+          </div>
         </div>
-
-        <div style="background:var(--card-bg);border-radius:var(--radius);padding:32px;border:1.5px solid var(--border);">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
-            <div style="width:40px;height:40px;border-radius:12px;background:rgba(33,68,60,0.08);display:flex;align-items:center;justify-content:center;font-size:1.2rem;">📖</div>
-            <h2 style="font-size:1.35rem;font-weight:800;color:var(--text-primary);margin:0;">Our Story</h2>
-          </div>
-          <p style="font-size:0.92rem;color:var(--text-secondary);line-height:1.75;margin:0;">
-            Livable Telluride grew out of "Let the People Decide," a grassroots effort built around Measure 300 in November 2024. After that chapter closed, the organization evolved to focus on the broader, ongoing work of keeping Telluride functional, welcoming, and worth living in for the people who call it home. The name change reflects a shift from a single ballot question to a lasting commitment to community well-being.
-          </p>
+        <div>
+          <img src="photos-box-canyon.jpg" alt="Telluride box canyon autumn landscape" style="width:100%;height:100%;min-height:400px;object-fit:cover;border-radius:var(--radius);">
         </div>
       </div>
 
       <!-- What "Livable" Means -->
       <div style="background:linear-gradient(135deg,rgba(33,68,60,0.04),rgba(139,114,80,0.04));border-radius:var(--radius);padding:32px;margin-bottom:32px;border:1.5px solid rgba(33,68,60,0.1);">
         <h2 style="font-size:1.3rem;font-weight:800;color:var(--text-primary);margin:0 0 14px 0;text-align:center;">What "Livable" Means</h2>
-        <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.75;max-width:800px;margin:0 auto;text-align:center;">
-          "Livable" is not code for freezing the county in amber, picking winners and losers, or drawing a line between "locals" and "others." It is an inclusive standard: a community that works for families, workers, retirees, and newcomers alike — one that protects what makes Telluride special while being honest about real-world constraints like housing, water, traffic, public services, and the cost of everyday life. It is a commitment to smart, transparent decisions that balance growth with capacity and ensure Telluride remains a place where a wide range of people can participate, belong, and thrive.
+        <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.75;max-width:800px;margin:0 auto 20px auto;text-align:center;">
+          "Livable" is not code for no growth, or for drawing a line between locals and newcomers. It means asking the self-government questions that deserve answers <em>before</em> decisions are finalized — not after.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:780px;margin:0 auto 20px auto;">
+          <span style="background:rgba(33,68,60,0.08);border-radius:20px;padding:6px 14px;font-size:0.85rem;color:var(--text-secondary);">What kind of growth?</span>
+          <span style="background:rgba(33,68,60,0.08);border-radius:20px;padding:6px 14px;font-size:0.85rem;color:var(--text-secondary);">For whose benefit?</span>
+          <span style="background:rgba(33,68,60,0.08);border-radius:20px;padding:6px 14px;font-size:0.85rem;color:var(--text-secondary);">Who can afford it when done?</span>
+          <span style="background:rgba(33,68,60,0.08);border-radius:20px;padding:6px 14px;font-size:0.85rem;color:var(--text-secondary);">What infrastructure is required?</span>
+          <span style="background:rgba(33,68,60,0.08);border-radius:20px;padding:6px 14px;font-size:0.85rem;color:var(--text-secondary);">How much water?</span>
+          <span style="background:rgba(33,68,60,0.08);border-radius:20px;padding:6px 14px;font-size:0.85rem;color:var(--text-secondary);">How much traffic?</span>
+          <span style="background:rgba(33,68,60,0.08);border-radius:20px;padding:6px 14px;font-size:0.85rem;color:var(--text-secondary);">What long-term public debt?</span>
+          <span style="background:rgba(33,68,60,0.08);border-radius:20px;padding:6px 14px;font-size:0.85rem;color:var(--text-secondary);">Through what public process?</span>
+        </div>
+        <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.7;max-width:800px;margin:0 auto;text-align:center;">
+          These are not anti-growth questions. They are self-government questions — the kind a functioning community asks of itself, across the full range of political views, before the future is already decided.
         </p>
       </div>
 
       <!-- Focus Areas -->
       <h2 style="font-size:1.3rem;font-weight:800;color:var(--text-primary);margin:0 0 16px 0;">What We Focus On</h2>
-      <div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:16px;margin-bottom:32px;">
+      <div style="display:grid;grid-template-columns:repeat(5, 1fr);gap:16px;margin-bottom:32px;">
         <div style="background:var(--card-bg);border-radius:18px;padding:22px 18px;border:1.5px solid var(--border);text-align:center;">
           <div style="font-size:2rem;margin-bottom:10px;">🏛️</div>
           <h3 style="font-size:0.95rem;font-weight:700;color:var(--text-primary);margin:0 0 8px 0;">Government Transparency</h3>
-          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;margin:0;">The Tell-Hub Gov Hub tracks every public meeting, agenda, and decision across all local government bodies so residents can stay informed.</p>
+          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;margin:0;">Every public meeting, agenda, and decision across all local government bodies — in one place, before the votes happen.</p>
         </div>
         <div style="background:var(--card-bg);border-radius:18px;padding:22px 18px;border:1.5px solid var(--border);text-align:center;">
           <div style="font-size:2rem;margin-bottom:10px;">🏗️</div>
           <h3 style="font-size:0.95rem;font-weight:700;color:var(--text-primary);margin:0 0 8px 0;">Land Use Tracking</h3>
-          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;margin:0;">Monitoring development proposals, zoning changes, and PUD amendments to ensure responsible growth that respects community character.</p>
+          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;margin:0;">Development proposals, zoning changes, and PUD amendments tracked from first application through final approval — not just when they become controversial.</p>
         </div>
         <div style="background:var(--card-bg);border-radius:18px;padding:22px 18px;border:1.5px solid var(--border);text-align:center;">
           <div style="font-size:2rem;margin-bottom:10px;">🏠</div>
           <h3 style="font-size:0.95rem;font-weight:700;color:var(--text-primary);margin:0 0 8px 0;">Housing Accountability</h3>
-          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;margin:0;">Tracking housing initiatives, affordability programs, and construction projects to ensure the community delivers on its promises to residents.</p>
+          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;margin:0;">Tracking affordability commitments, deed-restricted units, workforce housing programs, and whether the promises made actually get kept.</p>
+        </div>
+        <div style="background:var(--card-bg);border-radius:18px;padding:22px 18px;border:1.5px solid var(--border);text-align:center;">
+          <div style="font-size:2rem;margin-bottom:10px;">📰</div>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--text-primary);margin:0 0 8px 0;">Long-form Coverage</h3>
+          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;margin:0;">In-depth pieces on land use, conservation, infrastructure, and public finance — the context that daily deadlines don't always allow, complementing the great work of the Telluride Times and KOTO.</p>
         </div>
         <div style="background:var(--card-bg);border-radius:18px;padding:22px 18px;border:1.5px solid var(--border);text-align:center;">
           <div style="font-size:2rem;margin-bottom:10px;">🤝</div>
-          <h3 style="font-size:0.95rem;font-weight:700;color:var(--text-primary);margin:0 0 8px 0;">Community Engagement</h3>
-          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;margin:0;">Building tools and resources that make it easy for residents to participate in local government and have their voices heard on the issues that matter.</p>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--text-primary);margin:0 0 8px 0;">Civic Participation</h3>
+          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;margin:0;">Tools and resources that answer the practical questions: What is happening? Where are the documents? When is the meeting? How can I comment before the decision is made?</p>
         </div>
       </div>
 
@@ -2343,7 +1910,25 @@
     </div>
   </aside>
 
-    <!-- ══════════ FESTIVAL SIDEBAR (Events tab only) ══════════ -->
+  <!-- ══════════ BLOG SIDEBAR (Local News tab only) ══════════ -->
+  <aside class="blog-sidebar" id="sidebarBlog">
+    <div style="padding:0;overflow:hidden;border-radius:18px;background:var(--card-bg);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1.5px solid rgba(33,68,60,0.22);box-shadow:var(--shadow-soft);">
+      <!-- Header -->
+      <div style="padding:18px 16px 12px;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.6)),linear-gradient(135deg,rgba(39,69,63,0.08),rgba(198,148,55,0.12));border-bottom:1px solid rgba(221,210,196,0.8);text-align:center;">
+        <img src="logo/Livable Telluride.png" alt="Livable Telluride" style="width:144px;height:144px;margin:0 auto 8px;border-radius:18px;object-fit:contain;display:block;">
+        <div style="font-size:0.68rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#788e82;margin-bottom:4px;">Livable Telluride</div>
+        <div style="font-size:1.25rem;font-weight:900;letter-spacing:-0.03em;color:var(--text-primary);">News</div>
+        <div style="font-size:0.68rem;color:var(--text-muted);line-height:1.4;margin-top:4px;font-style:italic;">Our collective random thoughts on subjects we think are important</div>
+      </div>
+      <!-- Blog post cards rendered by JS -->
+      <div id="sidebarBlogPosts" style="padding:10px;display:grid;gap:10px;"></div>
+      <div style="padding:0 14px 14px;text-align:center;">
+        <a href="javascript:void(0)" onclick="switchTab('about-us')" style="display:inline-block;padding:8px 18px;background:var(--accent-green);color:#fff;border-radius:8px;font-size:0.72rem;font-weight:700;text-decoration:none;transition:opacity 0.18s;cursor:pointer;">View All Posts →</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ══════════ FESTIVAL SIDEBAR (Events tab only) ══════════ -->
   <aside class="festival-sidebar" id="sidebarFestivals">
     <div style="padding:0;overflow:hidden;border-radius:18px;background:var(--card-bg);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1.5px solid rgba(33,68,60,0.22);box-shadow:var(--shadow-soft);">
       <!-- Header -->
@@ -2373,7 +1958,7 @@
   <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
 
   <div class="footer">
-    Data sourced from <a href="https://telluride.gov" target="_blank">telluride.gov</a>,
+    Data sourced from <a href="https://telluride-co.gov" target="_blank">telluride-co.gov</a>,
     <a href="https://sanmiguelcountyco.gov" target="_blank">sanmiguelcountyco.gov</a>,
     <a href="https://smarttelluride.colorado.gov" target="_blank">smarttelluride.colorado.gov</a>,
     <a href="https://townofmountainvillage.com" target="_blank">townofmountainvillage.com</a>,
@@ -2390,7 +1975,7 @@
     <button class="footer-correction-btn" id="correctionFab">✏️ See something wrong? Suggest a Correction</button>
   </div>
 
-<script src="js/gov-hub.js?v=2026-05-06"></script>
+<script src="js/gov-hub.js?v=2026-04-30-form-simplify"></script>
 
 <!-- ══════════ Events Around Me Modal ══════════ -->
 <div class="prox-modal-overlay" id="proxOverlay">
@@ -2513,15 +2098,11 @@
   <button class="mobile-more-item" data-tab="local-news">
     <span class="nav-icon">📰</span> Local News
   </button>
-  <button class="mobile-more-item" data-tab="links">
-    <span class="nav-icon">🏘️</span> Local Orgs
-  </button>
-  <button class="mobile-more-item" data-tab="blog">
-    <span class="mobile-more-icon">✏️</span>
-    <span class="mobile-more-label">Blog</span>
-  </button>
   <button class="mobile-more-item" data-tab="subscribe">
     <span class="nav-icon">📬</span> Subscribe
+  </button>
+  <button class="mobile-more-item" data-tab="community-pulse">
+    <span class="nav-icon">◎</span> Community Pulse
   </button>
   <button class="mobile-more-item" data-tab="about-us">
     <span class="nav-icon">ℹ️</span> About Us
@@ -2561,99 +2142,7 @@
 <!-- ── Local Groups Filter ── -->
 <script src="js/local-groups.js"></script>
 <!-- Google Translate -->
-<script src="js/legal-standalone.js?v=20260401k"></script>
+<script src="js/legal-standalone.js?v=20260401f"></script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-<script>
-/* ── Telluride NWS Weather Widget ── */
-(function () {
-  var NWS_POINTS = 'https://api.weather.gov/points/37.9375,-107.8123';
-  var UA = { 'User-Agent': 'livabletelluride.org weather@livabletelluride.org' };
-
-  function icon(desc) {
-    desc = (desc || '').toLowerCase();
-    if (desc.includes('thunder') || desc.includes('lightning')) return '⛈';
-    if (desc.includes('blizzard')) return '🌨';
-    if (desc.includes('snow')) return '❄️';
-    if (desc.includes('sleet') || desc.includes('freezing rain') || desc.includes('wintry mix')) return '🌨';
-    if (desc.includes('rain') || desc.includes('shower') || desc.includes('drizzle')) return '🌧';
-    if (desc.includes('fog') || desc.includes('mist') || desc.includes('haze')) return '🌫';
-    if (desc.includes('breezy') || desc.includes('blustery') || desc.includes('windy')) return '🌬';
-    if (desc.includes('partly cloudy') || desc.includes('partly sunny') || desc.includes('mostly sunny')) return '⛅';
-    if (desc.includes('mostly cloudy') || desc.includes('overcast')) return '☁️';
-    if (desc.includes('cloudy')) return '☁️';
-    if (desc.includes('sunny') || desc.includes('clear') || desc.includes('fair')) return '☀️';
-    return '🌤';
-  }
-
-  async function loadWeather() {
-    var bodies = document.querySelectorAll('.nws-weather-body');
-    if (!bodies.length) return;
-    try {
-      var ptRes = await fetch(NWS_POINTS, { headers: UA });
-      if (!ptRes.ok) throw new Error('points ' + ptRes.status);
-      var pt = await ptRes.json();
-      var props = pt.properties;
-
-      var fcRes  = await fetch(props.forecast,       { headers: UA });
-      var hrRes  = await fetch(props.forecastHourly, { headers: UA });
-      if (!fcRes.ok || !hrRes.ok) throw new Error('forecast fetch failed');
-      var fc = await fcRes.json();
-      var hr = await hrRes.json();
-
-      var now     = hr.properties.periods[0];
-      var periods = fc.properties.periods;
-
-      /* current conditions */
-      var temp  = now.temperature + '°' + now.temperatureUnit;
-      var desc  = now.shortForecast;
-      var wind  = now.windSpeed + ' ' + now.windDirection;
-      var elev  = '8,750 ft';   /* Telluride elevation */
-      var ico   = icon(desc);
-
-      /* 3-day daytime forecast */
-      var days = periods.filter(function(p){ return p.isDaytime; }).slice(0,3);
-      var dayCards = days.map(function(p) {
-        var d = new Date(p.startTime).toLocaleDateString('en-US', { weekday: 'short' });
-        return '<div class="nws-day">'
-          + '<div class="nws-day-label">' + d + '</div>'
-          + '<div class="nws-day-icon">' + icon(p.shortForecast) + '</div>'
-          + '<div class="nws-day-temp">' + p.temperature + '°' + p.temperatureUnit + '</div>'
-          + '<div class="nws-day-desc">' + p.shortForecast + '</div>'
-          + '</div>';
-      }).join('');
-
-      var updated = new Date().toLocaleTimeString('en-US', { hour:'numeric', minute:'2-digit' });
-
-      var html =
-        '<div class="nws-current">'
-        + '<div class="nws-icon">' + ico + '</div>'
-        + '<div class="nws-now">'
-        + '<div class="nws-temp">' + temp + '</div>'
-        + '<div class="nws-desc">' + desc + '</div>'
-        + '<div class="nws-meta">💨 ' + wind + ' &nbsp;·&nbsp; 📍 ' + elev + '</div>'
-        + '</div>'
-        + '</div>'
-        + '<div class="nws-days">' + dayCards + '</div>'
-        + '<div class="nws-footer">'
-        + '<a href="https://forecast.weather.gov/MapClick.php?CityName=Telluride&state=CO&site=GJT&textField1=37.9375&textField2=-107.8123" target="_blank" rel="noopener" style="color:var(--forest);font-weight:600;">Full NWS Forecast →</a>'
-        + ' &nbsp;·&nbsp; Updated ' + updated
-        + '</div>';
-      bodies.forEach(function(b) { b.innerHTML = html; });
-
-    } catch (err) {
-      var errHtml = '<p style="font-size:0.85rem;color:var(--text-secondary);">Weather temporarily unavailable. '
-        + '<a href="https://forecast.weather.gov/MapClick.php?CityName=Telluride&state=CO&site=GJT" target="_blank" rel="noopener" style="color:var(--forest);">Check NWS →</a></p>';
-      bodies.forEach(function(b) { b.innerHTML = errHtml; });
-    }
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadWeather);
-  } else {
-    loadWeather();
-  }
-})();
-</script>
 </body>
 </html>
