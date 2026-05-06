@@ -28,6 +28,7 @@ const CP_SOURCES = {
   'weedc': { name: 'West End Economic Development Corp.', type: 'community', platform: 'website', url: 'https://choosewestend.org/', logo: '' },
   'nucla-gov': { name: 'Town of Nucla', type: 'government', platform: 'website', url: 'https://townofnucla.colorado.gov/', logo: '' },
   'norwood': { name: 'Norwood Colorado', type: 'community', platform: 'website', url: 'https://norwoodcolorado.com/blog/', logo: '' },
+  '4h-smc': { name: 'San Miguel Basin 4-H', type: 'community', platform: 'website', url: 'https://extension.colostate.edu/san-miguel/4h-resource/san-miguel-basin-4-h-newsletter/', logo: '' },
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.

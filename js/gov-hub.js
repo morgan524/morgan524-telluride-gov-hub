@@ -3435,6 +3435,7 @@ const ENTITY_LOGOS = {
   'weedc': '',
   'nucla-gov': '',
   'norwood': '<img src="logo/Norwood.png" alt="Norwood Colorado" loading="lazy">',
+  '4h-smc': '<img src="logo/4h-csu.jpg" alt="San Miguel Basin 4-H" loading="lazy">',
   'regional': '',
 };
 
@@ -5246,6 +5247,7 @@ const LOCAL_NEWS_LINK_OVERRIDES = {
 //   weedc           — West End Economic Dev. Corp. (choosewestend.org)
 //   nucla-gov       — Town of Nucla (townofnucla.colorado.gov)
 //   norwood         — Norwood Colorado (norwoodcolorado.com) — blog & events
+//   4h-smc          — San Miguel Basin 4-H / CSU Extension (extension.colostate.edu/san-miguel)
 //
 // Auto-populated by the news-content-update scheduled task.
 // Schema mirrors TELLURIDE_TIMES_ARTICLES:

@@ -114,6 +114,12 @@ const REGIONAL_NEWS_FEEDS = [
     sourceKey: 'norwood',
     category: 'Events'
   },
+  {
+    url: 'https://extension.colostate.edu/san-miguel/feed/',
+    source: 'San Miguel Basin 4-H',
+    sourceKey: '4h-smc',
+    category: 'Newsletter'
+  },
 ];
 
 // Water court legal notices — Telluride Times weekly legals section (published Thursdays)
