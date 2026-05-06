@@ -3152,7 +3152,8 @@ async function fetchAllNews() {
     const lbl = (item.sourceLabel || '').toLowerCase();
     if (src === 'wilkinson' || lbl.includes('wilkinson')) return 0;
     if (src === 'koto' || lbl.includes('koto')) return 1;
-    if (src === 'localgroup' || src === 'humane-society') return 2;
+    if (src === 'localgroup') return 0;
+    if (src === 'humane-society') return 2;
     if (src === 'ttimes' || lbl.includes('telluride times')) return 3;
     return 4;
   }
@@ -3191,12 +3192,14 @@ async function fetchAllNews() {
   // First-seen wins. Because we sorted by source priority above, the
   // higher-priority source's listing is what gets kept.
   const seen = new Set();
-  return all.filter(item => {
+  const deduped = all.filter(item => {
     const key = eventDedupKey(item);
     if (seen.has(key)) return false;
     seen.add(key);
     return true;
   });
+  // Replace source-provided images with local org logos where configured
+  return applyOrgEventLogos(deduped);
 }
 
 
@@ -5229,6 +5232,60 @@ const HUMANE_SOCIETY_ANIMALS = [
 //
 // Add new entries by appending to this object. The match is by
 // exact title string (case-sensitive).
+
+
+// ══════════════════════════════════════════════════════════════
+// ── Local Org Event Logo Overrides ──
+// ══════════════════════════════════════════════════════════════
+// When a KOTO or TT event title matches one of these patterns,
+// use the local logo as the card image instead of whatever image
+// the source story provides. Add new orgs by appending entries.
+const LOCAL_ORG_EVENT_LOGOS = [
+  { pattern: /rotary/i,          logo: 'logo/Telluride Rotary.png' },
+  { pattern: /elks\s*lodge/i,    logo: 'logo/Elks.png' },
+  { pattern: /4[\s\-]?h/i,     logo: 'logo/4h-csu.jpg' },
+];
+
+function applyOrgEventLogos(events) {
+  // Build a set of orgIndex|date combos already covered by localgroup entries.
+  // When a localgroup (e.g. Rotary's own recurring meeting) covers a given
+  // org+date, any KOTO/TT re-listing for the same org+date is dropped so the
+  // event only appears once — from the originating org source.
+  const localGroupOrgDates = new Set();
+  events.forEach(item => {
+    if ((item.source || item.sourceKey || '').toLowerCase() !== 'localgroup') return;
+    LOCAL_ORG_EVENT_LOGOS.forEach(({ pattern }, idx) => {
+      if (pattern.test(item.title || '')) {
+        const dateKey = item.pubDate ? new Date(item.pubDate).toISOString().slice(0, 10) : '';
+        localGroupOrgDates.add(idx + '|' + dateKey);
+      }
+    });
+  });
+
+  return events
+    .filter(item => {
+      // Drop KOTO/TT events already covered by a localgroup event for the same org+date.
+      const src = (item.source || item.sourceKey || '').toLowerCase();
+      if (src !== 'koto' && src !== 'ttimes' && src !== 'telluride times') return true;
+      for (let i = 0; i < LOCAL_ORG_EVENT_LOGOS.length; i++) {
+        if (LOCAL_ORG_EVENT_LOGOS[i].pattern.test(item.title || '')) {
+          const dateKey = item.pubDate ? new Date(item.pubDate).toISOString().slice(0, 10) : '';
+          if (localGroupOrgDates.has(i + '|' + dateKey)) return false; // drop duplicate
+        }
+      }
+      return true;
+    })
+    .map(item => {
+      // For any KOTO/TT events that weren't dropped (no localgroup equivalent),
+      // override the image with the local org logo.
+      const src = (item.source || item.sourceKey || '').toLowerCase();
+      if (src !== 'koto' && src !== 'ttimes' && src !== 'telluride times') return item;
+      for (const { pattern, logo } of LOCAL_ORG_EVENT_LOGOS) {
+        if (pattern.test(item.title || '')) return { ...item, imageUrl: logo };
+      }
+      return item;
+    });
+}
 
 const LOCAL_NEWS_LINK_OVERRIDES = {
   "New Wildfire Information Site Launched": "https://wildfire-sanmiguelco.hub.arcgis.com/",
