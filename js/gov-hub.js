@@ -3512,6 +3512,8 @@ const ENTITY_LOGOS = {
   'regional':   '',
   'fresh-food-hub': '',
   'nucla-naturita': '',
+  'telluride-academy': 'https://tellurideacademy.org/wp-content/uploads/2022/11/Telluride-Logo-White-100x100.png',
+  'tri-county-health': '',
   'club-red': '',
 };
 

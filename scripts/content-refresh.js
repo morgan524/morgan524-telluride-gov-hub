@@ -144,6 +144,18 @@ const REGIONAL_NEWS_FEEDS = [
     sourceKey: 'nucla-naturita',
     category: 'News'
   },
+  {
+    url: 'https://tellurideacademy.org/feed/',
+    source: 'Telluride Academy',
+    sourceKey: 'telluride-academy',
+    category: 'Youth'
+  },
+  {
+    url: 'https://tchnetwork.org/feed/',
+    source: 'Tri-County Health Network',
+    sourceKey: 'tri-county-health',
+    category: 'Health'
+  },
 ];
 
 // Water court legal notices — Telluride Times weekly legals section (published Thursdays)
