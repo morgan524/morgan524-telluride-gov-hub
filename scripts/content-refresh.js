@@ -507,6 +507,9 @@ async function refreshNews(existingTtArticles = []) {
           title: (item.title || '').trim(),
           source: 'Telluride Times',
           date: formatDate(pubDate),
+          firstSeen: existingByHref.has(href)
+            ? (existingByHref.get(href).firstSeen || new Date().toISOString().slice(0, 10))
+            : new Date().toISOString().slice(0, 10),
           newsTopic: classifyNewsTopic(item.title || '', item.description || ''),
           copy,
           claudeSummary,
