@@ -102,6 +102,18 @@ const REGIONAL_NEWS_FEEDS = [
     sourceKey: 'tf-news',
     category: 'Nonprofit'
   },
+  {
+    url: 'https://norwoodcolorado.com/blog/feed/',
+    source: 'Norwood Colorado',
+    sourceKey: 'norwood',
+    category: 'News'
+  },
+  {
+    url: 'https://norwoodcolorado.com/events/feed/',
+    source: 'Norwood Colorado',
+    sourceKey: 'norwood',
+    category: 'Events'
+  },
 ];
 
 // Water court legal notices — Telluride Times weekly legals section (published Thursdays)
