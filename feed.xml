@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 May 2026 02:13:32 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 08:15:19 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
@@ -30,15 +30,6 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <category>community</category>
     </item>
     <item>
-      <title>Appreciation for teachers, staff</title>
-      <link>https://www.telluridenews.com/opinion/letters_to_editor/article_fb79e810-1118-4f69-a3d4-2cb921d8dd13.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/opinion/letters_to_editor/article_fb79e810-1118-4f69-a3d4-2cb921d8dd13.html</guid>
-      <pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[The school board passed a resolution officially recognizing Teacher and Staff Appreciation Week for May 4-8, 2026, acknowledging educators' role in student success. The resolution encourages families and community members to express gratitude to teachers and staff during that week and year-round.]]></description>
-      <category>Telluride Times</category>
-      <category>education</category>
-    </item>
-    <item>
       <title>Spring plans meet snow in Denver as a late storm could be the season&apos;s biggest</title>
       <link>https://www.telluridenews.com/news/state/article_df4d81e5-c1f0-558f-a1f4-290dae406595.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_df4d81e5-c1f0-558f-a1f4-290dae406595.html</guid>
@@ -47,6 +38,15 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/8f/58f263e8-16a8-5781-af16-5d8758db5bc8/69fa387863ba5.image.jpg?resize=300%2C200" medium="image" />
       <category>Telluride Times</category>
       <category>recreation</category>
+    </item>
+    <item>
+      <title>Appreciation for teachers, staff</title>
+      <link>https://www.telluridenews.com/opinion/letters_to_editor/article_fb79e810-1118-4f69-a3d4-2cb921d8dd13.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/opinion/letters_to_editor/article_fb79e810-1118-4f69-a3d4-2cb921d8dd13.html</guid>
+      <pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[The school board passed a resolution officially recognizing Teacher and Staff Appreciation Week for May 4-8, 2026, acknowledging educators' role in student success. The resolution encourages families and community members to express gratitude to teachers and staff during that week and year-round.]]></description>
+      <category>Telluride Times</category>
+      <category>education</category>
     </item>
     <item>
       <title>Trump administration sues Denver over its 1989 assault weapons ban</title>

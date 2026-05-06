@@ -2927,48 +2927,37 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/16762975?hs=a",
-    description: "10:30 AM – 11:30 AM",
-    pubDate: "2026-05-05T10:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
-  },
-  {
-    title: "I Heart Art",
-    link: "https://telluridelibrary.libcal.com/event/16417091?hs=a",
-    description: "2:30 PM – 4:30 PM",
-    pubDate: "2026-05-05T14:30:00.000Z",
+    title: "Kids Cook",
+    link: "https://telluridelibrary.libcal.com/event/16417026?hs=a",
+    description: "3:30 PM – 4:30 PM",
+    pubDate: "2026-05-06T15:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1771000912.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1771000657.png"
   },
   {
-    title: "Sound Bath with Erin",
-    link: "https://telluridelibrary.libcal.com/event/16626001?hs=a",
-    description: "5:30 PM – 6:30 PM",
-    pubDate: "2026-05-05T17:30:00.000Z",
+    title: "Día de Registro para Clases de Natación",
+    link: "https://telluridelibrary.libcal.com/event/16703392?hs=a",
+    description: "3:30 PM – 5:00 PM",
+    pubDate: "2026-05-06T15:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_16_28_44.jpg"
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_14_26_12.png"
   },
   {
-    title: "Bardic Trails Online Poetry Night: Regina Lopez-Whiteskunk",
-    link: "https://telluridelibrary.libcal.com/event/15970599?hs=a",
-    description: "7:00 PM – 8:30 PM",
-    pubDate: "2026-05-05T19:00:00.000Z",
+    title: "Library Trivia at the Stronghouse Brew Pub",
+    link: "https://telluridelibrary.libcal.com/event/16529698?hs=a",
+    description: "5:30 PM – 7:00 PM",
+    pubDate: "2026-05-06T17:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1769030193.jpg"
+    location: "Stronghouse Brew Pub",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_11_14_17_22.jpg"
   }
 ];
 
@@ -4389,16 +4378,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ee/4ee20253-fa90-5e52-b3d6-f0a5aa554c5d/69f96e150e3e0.image.jpg?resize=300%2C226"
   },
   {
-    title: "Appreciation for teachers, staff",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    newsTopic: "education",
-    copy: "The school board passed a resolution officially recognizing Teacher and Staff Appreciation Week for May 4-8, 2026, acknowledging educators' role in student success. The resolution encourages families and community members to express gratitude to teachers and staff during that week and year-round.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_fb79e810-1118-4f69-a3d4-2cb921d8dd13.html",
-    img: ""
-  },
-  {
     title: "Spring plans meet snow in Denver as a late storm could be the season's biggest",
     source: "Telluride Times",
     date: "May 5, 2026",
@@ -4407,6 +4386,16 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_df4d81e5-c1f0-558f-a1f4-290dae406595.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/8f/58f263e8-16a8-5781-af16-5d8758db5bc8/69fa387863ba5.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "Appreciation for teachers, staff",
+    source: "Telluride Times",
+    date: "May 5, 2026",
+    newsTopic: "education",
+    copy: "The school board passed a resolution officially recognizing Teacher and Staff Appreciation Week for May 4-8, 2026, acknowledging educators' role in student success. The resolution encourages families and community members to express gratitude to teachers and staff during that week and year-round.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_fb79e810-1118-4f69-a3d4-2cb921d8dd13.html",
+    img: ""
   },
   {
     title: "Trump administration sues Denver over its 1989 assault weapons ban",
@@ -4873,8 +4862,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "April 23, 2026",
     newsTopic: "education",
-    copy: "A Colorado district attorney has charged an immigration agent after a protester said she was held in a chokehold during demonstrations against the detention of an immigrant father and two children. The Durango District Attorney announced the decision Tuesday. Multiple…",
-    claudeSummary: false,
+    copy: "A Border Patrol officer has been charged with third-degree assault and criminal mischief after an incident with a protester outside the ICE facility in Durango. The woman says the officer hit her hand, put her in a chokehold, and threw her down an embankment, while federal authorities are calling the state prosecution unlawful.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_ddb43ab6-63d1-5f27-a5f2-001efe39c7a0.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/f4/0f4452e4-4145-5f8f-a0d9-d56ce939993d/69e9423256e40.image.jpg?resize=300%2C200"
   },
@@ -6486,78 +6475,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_aec96dee-01bf-4370-b831-16a17257d9ff.html",
     address: "Mountain Village Town Hall, 455 Mountain Village Blvd, Suite A",
     noticeKey: "tmv-ord-multiple-032026"
-  },
-  {
-    title: "RFP -- Ski Ranches Waterline Replacement Project",
-    entity: "Town of Mountain Village",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The Town of Mountain Village is accepting bids for the 2026 Ski Ranches Waterline Replacement Project. A pre-bid site walk is scheduled for April 1, 2026 at 10:00 AM. All bids must be submitted by April 27, 2026.",
-    deadline: "April 27, 2026",
-    expires: "2026-04-27",
-    dates: "4/2",
-    papers: ["ttimes_0402"],
-    url: "https://www.telluridenews.com/news/legals/article_aec96dee-01bf-4370-b831-16a17257d9ff.html",
-    address: "Ski Ranches area, Mountain Village",
-    noticeKey: "tmv-rfp-ski-ranches-waterline-2026"
-  },
-  {
-    title: "Notice -- Substantial Completion Telluride Wastewater Treatment Plant Lab Remodel",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "💧",
-    iconClass: "type-hearing",
-    type: "Utilities",
-    filterTag: "utilities",
-    summary: "The Town of Telluride intends to process final payment to FCI Constructors, Inc. for the wastewater treatment plant lab remodel project on March 30, 2026. Any claims against the contractor must be filed by April 10, 2026.",
-    deadline: "April 10, 2026",
-    expires: "2026-04-10",
-    dates: "4/2",
-    papers: ["ttimes_0402"],
-    url: "https://www.telluridenews.com/news/legals/article_aec96dee-01bf-4370-b831-16a17257d9ff.html",
-    address: "Telluride Wastewater Treatment Plant",
-    noticeKey: "telluride-wwtp-completion-032026"
-  },
-  {
-    title: "RFP -- Country Club Shoulder Widening Project",
-    entity: "Town of Mountain Village",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The Town of Mountain Village is accepting bids for the Country Club Shoulder Widening Project. A pre-bid site walk is scheduled for April 15, 2026 at 10:00 AM. All bids must be submitted by April 27, 2026.",
-    deadline: "April 27, 2026",
-    expires: "2026-04-27",
-    dates: "4/2",
-    papers: ["ttimes_0402"],
-    url: "https://www.telluridenews.com/news/legals/article_aec96dee-01bf-4370-b831-16a17257d9ff.html",
-    address: "Country Club area, Mountain Village",
-    noticeKey: "tmv-rfp-country-club-widening-2026"
-  },
-  {
-    title: "Public Hearing -- Height/Roof Pitch/Setback Variance (Cooper)",
-    entity: "Town of Ophir",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "The Ophir General Assembly will hold a public hearing on April 21, 2026 at 7:00 PM to consider Jonathan Cooper's application for variances to allow construction of a single family dwelling on Lots 1 and 2, Block 2. The variances seek approval for a 2/12 roof pitch instead of required 4/12 and a 10-foot setback instead of required 15 feet.",
-    deadline: "April 21, 2026 at 7:00 PM",
-    expires: "2026-04-21",
-    dates: "4/2",
-    papers: ["ttimes_0402"],
-    url: "https://www.telluridenews.com/news/legals/article_aec96dee-01bf-4370-b831-16a17257d9ff.html",
-    address: "Lots 1 & 2 Block 2, TBD Aurum St, Ophir, CO",
-    noticeKey: "ophir-variance-cooper-lots1-2-block2"
   },
   {
     title: "RFP -- Flooring Replacement 333 & 305 W. Colorado Ave",
