@@ -5417,6 +5417,60 @@ const REGIONAL_NEWS_ARTICLES = [
 
 const COMMUNITY_EVENTS = [
   {
+    title: "Durango Fire Ready Expo",
+    source: "5280 Fire",
+    date: "May 9, 2026",
+    location: "Durango, CO",
+    copy: "Fire and safety expo hosted in Durango. Community members can meet local firefighters, explore apparatus, and learn about fire safety and emergency preparedness.",
+    href: "https://5280fire.com/event/durango-fire-ready-expo/",
+    imageUrl: "https://5280fire.com/wp-content/uploads/2026/05/IMG_4261-e1778090252962.jpg"
+  },
+  {
+    title: "Crested Butte Fire Department Open House",
+    source: "5280 Fire",
+    date: "May 14, 2026",
+    location: "Crested Butte Fire Department, 300 County Road 17, Crested Butte, CO",
+    copy: "Open house at Crested Butte Fire Department. Tour the station, meet crews, and explore fire apparatus. All ages welcome.",
+    href: "https://5280fire.com/event/crested-butte-open-house/",
+    imageUrl: "https://5280fire.com/wp-content/uploads/2026/05/686929074_1583730390426326_985925004830145764_n-e1778089034687.jpg"
+  },
+  {
+    title: "Colorado Fallen Firefighter Memorial",
+    source: "5280 Fire",
+    date: "May 16, 2026",
+    location: "Colorado",
+    copy: "Annual statewide ceremony honoring Colorado firefighters who lost their lives in the line of duty. Open to the public.",
+    href: "https://5280fire.com/event/colorado-fallen-firefighter-memorial-2/",
+    imageUrl: "https://5280fire.com/wp-content/uploads/2026/04/Screenshot-2026-04-22-at-3.42.02-PM-e1776894189813.png"
+  },
+  {
+    title: "Monument Fire Camp",
+    source: "5280 Fire",
+    date: "May 28, 2026",
+    location: "Monument, CO",
+    copy: "Fire camp event in Monument, Colorado. Details and registration available on the 5280 Fire events page.",
+    href: "https://5280fire.com/event/monument-fire-camp/",
+    imageUrl: "https://5280fire.com/wp-content/uploads/2026/04/658289470_1640679217394537_7343772524626032476_n-e1775231255490.jpg"
+  },
+  {
+    title: "Fremont County Safety Jam",
+    source: "5280 Fire",
+    date: "May 30, 2026",
+    location: "Fremont County, CO",
+    copy: "Community safety event in Fremont County featuring fire, EMS, and law enforcement demonstrations. Free and open to the public.",
+    href: "https://5280fire.com/event/fremont-county-safety-jam/",
+    imageUrl: "https://5280fire.com/wp-content/uploads/2026/04/683431101_986018367445321_7512203806013998526_n-e1777494298345.jpg"
+  },
+  {
+    title: "Front Range Fire Pancake Breakfast — Johnstown",
+    source: "5280 Fire",
+    date: "June 6, 2026",
+    location: "Front Range Fire, 100 S. Telep Avenue, Johnstown, CO",
+    copy: "Annual pancake breakfast fundraiser at Front Range Fire's Johnstown station. Come meet the crew and support your local fire department.",
+    href: "https://5280fire.com/event/front-range-johnstown-pancake-breakfast-2/",
+    imageUrl: "https://5280fire.com/wp-content/uploads/2026/04/IMG_3595-e1777065822768.jpg"
+  },
+  {
     title: "2nd Annual Telluride Rotary Hikeathon",
     source: "Telluride Rotary Club",
     logo: "/logo/Telluride Rotary.png",
