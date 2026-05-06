@@ -3144,7 +3144,24 @@ async function fetchAllNews() {
   // Rationale: TT and KOTO often re-list events that originate at the
   // library or another organization. The original-source listing is
   // canonical (correct title, photo, location, status) and should win.
-  const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...hardcodedCommunity];
+  // TF_FOUNDATION_EVENTS: scraped from telluridefoundation.org/tf-events/ every 6h
+  const tfEvents = (typeof TF_FOUNDATION_EVENTS !== 'undefined' && Array.isArray(TF_FOUNDATION_EVENTS))
+    ? TF_FOUNDATION_EVENTS.map(e => ({
+        title: e.title || '',
+        link: e.href || 'https://telluridefoundation.org/tf-events/',
+        description: e.copy || '',
+        summary: e.copy || '',
+        pubDate: e.date ? new Date(e.date) : null,
+        source: 'tf-news',
+        sourceLabel: 'Telluride Foundation',
+        category: 'Community Event',
+        location: e.location || '',
+        eventTimes: e.eventTimes || '',
+        imageUrl: 'logo/tf-foundation.jpeg'
+      })).filter(e => e.pubDate && e.pubDate >= new Date(new Date().setHours(0,0,0,0)))
+    : [];
+
+  const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...hardcodedCommunity, ...tfEvents];
 
   // Source-priority sort: lower number wins on a duplicate match.
   function eventSourcePriority(item) {
@@ -3432,7 +3449,7 @@ const ENTITY_LOGOS = {
   'humane-society': '<img src="logo/Telluride Humane-400x400.png" alt="Telluride Humane Society" loading="lazy">',
   'smb-forum': '',
   'sheep-mountain': '',
-  'tf-news': '',
+  'tf-news': '<img src="logo/tf-foundation.jpeg" alt="Telluride Foundation" style="width:36px;height:36px;border-radius:50%;object-fit:cover;">',
   'ouray-plaindealer': '',
   'ouray-county': '',
   'weedc': '',
@@ -5293,6 +5310,13 @@ const LOCAL_NEWS_LINK_OVERRIDES = {
   "New Wildfire Information Site Launched": "https://wildfire-sanmiguelco.hub.arcgis.com/",
 };
 
+
+// ══════════════════════════════════════════════════════════════
+// ── Telluride Foundation Events ──
+// Auto-populated by content-refresh.js (Task 10 — tf-events scraper)
+// ══════════════════════════════════════════════════════════════
+const TF_FOUNDATION_EVENTS = [
+];
 
 // ══════════════════════════════════════════════════════════════
 // ── Regional News Articles ──
