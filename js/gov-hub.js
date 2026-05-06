@@ -2672,17 +2672,6 @@ async function enrichKOTOEvent(item) {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Keeping Kids Safe Parent Meeting for TIS Parents",
-    link: "https://koto.org/event/keeping-kids-safe-parent-meeting-for-tis-parents/2026-05-06/1/",
-    description: "San Miguel Resource Center and Telluride Intermediate School are hosting a parent workshop to discuss youth safety! Specifically, we'll talk about: -what SMRC teaches TIS students about consent and privacy -how to talk to your own child about safe vs. unsafe touches and sexual abuse prevention -only safety and current risks and trends This workshop",
-    pubDate: "2026-05-06T08:15:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
     title: "Dark Sky Café Tacos and SMPA candidate open house!",
     link: "https://koto.org/event/dark-sky-cafe-tacos-and-smpa-candidate-open-house/",
     description: "Please come by Dark Sky Cafe, 1615 Grand Avenue in Norwood, on Wednesday May 6th anytime between 4:30 and 8:30 PM for free tacos and a meet and greet with San Miguel Power board candidate Joanna Yonder! Your voice matters, and our rural electric cooperative is more important than ever. All are welcome!",
@@ -2912,6 +2901,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Brewing Company Lawson Hill Taproom",
     imageUrl: "https://koto.org/wp-content/uploads/2026/04/book-buzz-6.png"
+  },
+  {
+    title: "Lite Lunch Book Club- Wait for Me",
+    link: "https://koto.org/event/lite-lunch-book-club-wait-for-me/",
+    description: "Join us for a little Lite Lunch and a discussion of Wait for Me by Amy Jo Burns. Space is limited, sign up in advance. Contact tosborne@telluridelibrary.org for a copy of the book.",
+    pubDate: "2026-05-13T12:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/MAYLite26-2.png"
   }
 ];
 
@@ -4368,6 +4368,39 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-20  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "ADL reports a sharp drop in US antisemitic incidents in 2025, driven by a steep fall on campuses",
+    source: "Telluride Times",
+    date: "May 6, 2026",
+    firstSeen: "2026-05-06",
+    newsTopic: "arts-culture",
+    copy: "The ADL reports antisemitic incidents dropped 33% in 2025 to 6,274 cases, down from a record 9,354 in 2024, largely due to fewer campus incidents. However, physical assaults hit a record high of 203 cases, including three killings. The decline follows a peak in Israel-related incidents after the October 2023 Hamas attacks.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_fd5eb38f-870a-5931-a281-fd46c98217ff.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/15/6151511f-d420-5af3-ba21-a347150d4cf9/69fb2ebbc7405.image.jpg?resize=300%2C192"
+  },
+  {
+    title: "A late spring snowstorm slams Colorado, closing schools and disrupting commuters",
+    source: "Telluride Times",
+    date: "May 6, 2026",
+    firstSeen: "2026-05-06",
+    newsTopic: "education",
+    copy: "A late spring snowstorm dumped over a foot of snow in some Colorado mountain areas, with Jamestown getting 16+ inches and Estes Park seeing 17 inches. Denver schools canceled classes Wednesday as the city faced its biggest snowfall of the season, though the precipitation was welcome relief during ongoing drought conditions.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_20728449-67c6-551b-8b24-b8ff7c5c661d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/4d/a4df46ad-e4d3-546a-8382-f9aba6b82c82/69fb2b5bd52db.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "Keeping traditions alive",
+    source: "Telluride Times",
+    date: "May 6, 2026",
+    firstSeen: "2026-05-06",
+    newsTopic: "community",
+    copy: "The hunting business keeps money moving in Norwood. Mostly in the fall and especially from outfitter-guided hunts, outside cash flows fast into gas, groceries, lodging, camo, coffee — and with too many ripple effects to count.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/article_f166c0dc-a754-43a1-9784-9facd4674405.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/43/c43e569f-37f2-4543-9cff-45bfa117cf81/69fa5f7853b7c.image.jpg?resize=300%2C315"
+  },
+  {
     title: "Indigenous people honor and raise awareness for relatives who are missing or have been killed",
     source: "Telluride Times",
     date: "May 5, 2026",
@@ -4551,6 +4584,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     title: "Telluride’s ‘I voted/yo voté’ sticker contest winners",
     source: "Telluride Times",
     date: "April 30, 2026",
+    firstSeen: "2026-05-06",
     newsTopic: "government",
     copy: "Earlier this year, Telluride and Norwood students participated in a sticker contest, with 18 creative kiddos taking part. The brief, set by the San Miguel County Clerk’s Office, was to devise a design that could be used as the artwork…",
     claudeSummary: false,
@@ -4681,6 +4715,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     title: "Green grant gratitude",
     source: "Telluride Times",
     date: "April 28, 2026",
+    firstSeen: "2026-05-06",
     newsTopic: "community",
     copy: "Dear Editor,",
     claudeSummary: false,
@@ -4751,6 +4786,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     title: "Former Colorado funeral home owner sentenced to 30 years in case that forced state to clamp down on industry",
     source: "Telluride Times",
     date: "April 24, 2026",
+    firstSeen: "2026-05-06",
     newsTopic: "community",
     copy: "Former Colorado funeral home owner sentenced to 30 years in case that forced state to clamp down on industry.",
     claudeSummary: false,
@@ -4831,41 +4867,12 @@ const TELLURIDE_TIMES_ARTICLES = [
     title: "Is off-season the best season?",
     source: "Telluride Times",
     date: "April 23, 2026",
+    firstSeen: "2026-05-06",
     newsTopic: "infrastructure",
     copy: "For some, the answer is a definite yes. In Telluride, off-season began on April 6 with quiet streets and locals schools on spring break. Classes resumed April 20, but the serenity of spring continues. Missing your favorite coffee shop, watering…",
     claudeSummary: false,
     href: "https://www.telluridenews.com/gallery/article_a66784be-15e4-457a-84de-c3e4bbaf7105.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/5c/05cbe539-c717-4525-98a2-888c077582ed/69e7ba253ef59.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Legals and Public Notices for April 23-29, 2026",
-    source: "Telluride Times",
-    date: "April 23, 2026",
-    newsTopic: "community",
-    copy: "San Miguel County has two planning hearings scheduled for May 14 at the Norwood Sheriff's Annex - one for a scenic/social permit and another for Kurt Works Inc.'s contractor staging area at 488 S. Avalon Dr. The county is also seeking bids to replace flooring at two buildings on Colorado Avenue.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    img: ""
-  },
-  {
-    title: "Assault charge for immigration officer in Colorado could test immunity provisions for federal agents",
-    source: "Telluride Times",
-    date: "April 23, 2026",
-    newsTopic: "community",
-    copy: "An ICE agent has been charged with assault after allegedly using a chokehold on a 57-year-old woman during protests in Durango over the detention of three Colombian asylum-seekers. The case joins similar charges against federal immigration agents in Minnesota and Illinois, testing whether federal immunity protections shield agents from state prosecution.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_6467b8cc-2f6f-56a3-87f6-fb945517f4b8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/f5/ff50216b-e2da-5ecd-8931-20238c43544e/69e96a0aea89f.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Immigration officer is charged with assault after protest outside Colorado ICE facility, DA says",
-    source: "Telluride Times",
-    date: "April 23, 2026",
-    newsTopic: "education",
-    copy: "A Border Patrol officer has been charged with third-degree assault and criminal mischief after an incident with a protester outside the ICE facility in Durango. The woman says the officer hit her hand, put her in a chokehold, and threw her down an embankment, while federal authorities are calling the state prosecution unlawful.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_ddb43ab6-63d1-5f27-a5f2-001efe39c7a0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/f4/0f4452e4-4145-5f8f-a0d9-d56ce939993d/69e9423256e40.image.jpg?resize=300%2C200"
   },
   {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
