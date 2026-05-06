@@ -4395,8 +4395,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "May 6, 2026",
     firstSeen: "2026-05-06",
     newsTopic: "community",
-    copy: "The hunting business keeps money moving in Norwood. Mostly in the fall and especially from outfitter-guided hunts, outside cash flows fast into gas, groceries, lodging, camo, coffee — and with too many ripple effects to count.",
-    claudeSummary: false,
+    copy: "Bill Wilson of Knight Canyon Outfitters in Norwood was named \"Outfitter of the Year\" by the Colorado Outfitters Association for his three-generation family business and dedication to ethical hunting. Wilson and other hunting advocates say their industry faces threats from what they call \"ballot-box biology\" and urban voters making wildlife management decisions instead of trusting science-based approaches.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_f166c0dc-a754-43a1-9784-9facd4674405.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/43/c43e569f-37f2-4543-9cff-45bfa117cf81/69fa5f7853b7c.image.jpg?resize=300%2C315"
   },
@@ -4419,6 +4419,39 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_df4d81e5-c1f0-558f-a1f4-290dae406595.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/8f/58f263e8-16a8-5781-af16-5d8758db5bc8/69fa387863ba5.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "CHALKBOARD for the week of May 7-13",
+    source: "Telluride Times",
+    date: "May 5, 2026",
+    firstSeen: "2026-05-06",
+    newsTopic: "government",
+    copy: "This week's birthdays include Ashley LaUond on May 8, several residents on May 9-10 including the Sheffield siblings, and others through May 13. The community calendar lists regular meetings for town board, school board, and chamber of commerce, plus ongoing activities like the Thursday farmers market, senior meals, food pantry distribution on Sundays, and pickleball sessions.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/the_norwood_post/article_2ef5bd86-8794-4816-8ed3-fc76bbd27167.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8b/f8b47ece-f18b-4c64-891d-3517aa2b0690/69fa6fb7bfb2a.image.png?resize=300%2C183"
+  },
+  {
+    title: "You're invited to the groundbreaking of the new Norwood School",
+    source: "Telluride Times",
+    date: "May 5, 2026",
+    firstSeen: "2026-05-06",
+    newsTopic: "education",
+    copy: "Norwood's holding a groundbreaking ceremony for their new school, funded by a $50+ million state BEST Grant and local bonds. The new campus will consolidate pre-K through 12th grade on 19 acres where the old disc golf course was, next to Pinion Park and the library.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/the_norwood_post/article_c205d989-d94a-4e50-bc98-dd81947a31bd.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/03/c0304c73-0b0c-48e4-a100-80e11b1b2499/69fa6eca08f58.image.jpg?resize=300%2C169"
+  },
+  {
+    title: "Town of Norwood awarded funding for Norwood Hill improvements",
+    source: "Telluride Times",
+    date: "May 5, 2026",
+    firstSeen: "2026-05-06",
+    newsTopic: "community",
+    copy: "Norwood received $1.25 million in state and federal funding to improve safety on Norwood Hill, which has been a longtime concern due to its steep grade, sharp curves, and accident history. The project was selected through a competitive statewide process with no local match required from the town.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/the_norwood_post/article_dad1ad7d-73e3-41de-b2b1-24757153a694.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/7c/57c98200-de4b-4962-86c7-46d1750abfdc/69fa6d93b89e4.image.jpg?resize=300%2C191"
   },
   {
     title: "Appreciation for teachers, staff",
@@ -4509,6 +4542,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_0527f33c-d1be-4f91-9d6b-a570a138bf81.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/d1/9d1d4b74-6558-4cf1-9ef9-d0848f755a25/69f115f7721a2.image.jpg?resize=300%2C192"
+  },
+  {
+    title: "The heart of Telluride",
+    source: "Telluride Times",
+    date: "May 3, 2026",
+    firstSeen: "2026-05-06",
+    newsTopic: "land-use",
+    copy: "The Transfer Warehouse has become an outdoor gallery through the Heart of Telluride Project, where Brandon Bermel and five other local artists installed street art pieces with heart themes that opened on Valentine's Day. The rotating installation gives artists a legal space to create street art without needing town approval.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_917b2db3-f982-472d-9198-8dc744073d8e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfed5db9-e7f7-49f6-8189-3174c244d773/69f64afc5f9a1.image.jpg?resize=300%2C412"
   },
   {
     title: "Rolling in the oats",
@@ -4620,6 +4664,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_62ad4304-c441-5377-acde-86dcbdde9312.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/d2/ed2b9a2e-dea0-5f0d-9b8e-8a1e2e924534/69f3541bd0685.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "Wishing upon a star",
+    source: "Telluride Times",
+    date: "April 30, 2026",
+    firstSeen: "2026-05-06",
+    newsTopic: "community",
+    copy: "The SAF Young People's Theater is staging \"My Son Pinocchio, Jr.\" with 30 kids in grades 3-5, focusing on Geppetto's journey as a father learning unconditional love. Shows run May 1-3 at the Sheridan Opera House, featuring classic Disney songs plus new music by Stephen Schwartz.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_b3673668-79a5-462d-87a1-05b24411b059.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/cd/4cda66af-af53-48e3-b1b9-8d3dd0c94f9c/69f319f8c70cf.image.jpg?resize=300%2C450"
   },
   {
     title: "Michael J. Ward",
@@ -4822,57 +4877,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_1788ad1a-1e9a-41ea-9a5e-5fba08d8a50c.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/8c/98c9bb13-6b79-46c0-b99e-4df22fd01353/69e7c142e2ea5.image.jpg?resize=300%2C527"
-  },
-  {
-    title: "Not your parents’ PE",
-    source: "Telluride Times",
-    date: "April 24, 2026",
-    newsTopic: "housing",
-    copy: "TES PE teacher Murray, a Telluride High grad, has revamped the elementary school's physical education program with creative activities like zookeeper tag, glow bowling, and Halloween mini-golf. She holds monthly Parent Play Days and runs an Instagram account that connects PE teachers globally.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_a4c5d839-f765-42ef-8d91-38ffc315ad4d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/f5/af558834-d00d-4c09-afd8-5bd5e32123d2/69e8798e37429.image.jpg?resize=300%2C400"
-  },
-  {
-    title: "Shining at the Ron Keller Invitational",
-    source: "Telluride Times",
-    date: "April 24, 2026",
-    newsTopic: "education",
-    copy: "The text appears to be corrupted with encoding errors, but shows upcoming track and baseball events for late April. Local teams have meets scheduled at Olathe, Ridgway, and Mancos, with baseball games at Dove Creek at 2 p.m.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_bc91af69-2711-430d-9477-4f114148a18e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/c0/4c02b3ab-72b9-420c-a364-86e1ca35879a/69e7b7ac4d3f7.image.jpg?resize=300%2C439"
-  },
-  {
-    title: "Federal judge orders release of family of man charged in Colorado firebomb attack",
-    source: "Telluride Times",
-    date: "April 23, 2026",
-    newsTopic: "public-safety",
-    copy: "A federal judge ordered the release of the wife and family of Mohamed Sabry Soliman, who's charged with throwing Molotov cocktails at a pro-Israel demonstration, killing an 82-year-old woman. The family has been in immigration detention since June and faces deportation orders, though they're seeking asylum.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_09f12f45-ca76-5230-a9c6-768867dc500c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/df/8dfd6a5c-a101-5ad6-891e-bcee98b6b578/69ea6f2fc96b2.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Telluride Town Clerk certifies council candidates for June election",
-    source: "Telluride Times",
-    date: "April 23, 2026",
-    newsTopic: "government",
-    copy: "Two council seats are up for grabs in the June 30 election - one left vacant after Meehan Fee resigned in January, and another held by Marya Starr who was appointed in December. Three candidates are running: incumbent Starr (5-year resident, extensive policy background), Chris Uihlein (8-year resident, Brown Dog Pizza manager and former Marine), and Charles Dalton (10-year resident, ski resort mountain host).",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_68c45a3a-0714-44e9-b0b4-a237f39657d2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/21/a21bf33b-c002-4a52-a20d-577939094d4a/69ea5ed10a0b7.image.jpg?resize=300%2C231"
-  },
-  {
-    title: "Is off-season the best season?",
-    source: "Telluride Times",
-    date: "April 23, 2026",
-    firstSeen: "2026-05-06",
-    newsTopic: "infrastructure",
-    copy: "For some, the answer is a definite yes. In Telluride, off-season began on April 6 with quiet streets and locals schools on spring break. Classes resumed April 20, but the serenity of spring continues. Missing your favorite coffee shop, watering…",
-    claudeSummary: false,
-    href: "https://www.telluridenews.com/gallery/article_a66784be-15e4-457a-84de-c3e4bbaf7105.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/5c/05cbe539-c717-4525-98a2-888c077582ed/69e7ba253ef59.image.jpg?resize=300%2C200"
   },
   {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
@@ -6519,6 +6523,42 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_aec96dee-01bf-4370-b831-16a17257d9ff.html",
     address: "San Miguel County",
     noticeKey: "smc-property-tax-exemption-2026"
+  },
+  {
+    title: "Environmental Assessment -- Telluride Ski Resort Improvements (Project 68020)",
+    entity: "Grand Mesa, Uncompahgre and Gunnison National Forests",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "The Grand Mesa, Uncompahgre and Gunnison National Forests has prepared a Draft Environmental Assessment for recreation improvements at Telluride Ski Resort, including lift replacements, trail construction, and restaurant expansion. The public comment period runs for 30 days following publication in the Grand Junction Daily Sentinel. Comments must be submitted by May 11, 2026 to maintain objection eligibility.",
+    deadline: "May 11, 2026",
+    expires: "2026-05-11",
+    dates: "4/16",
+    papers: ["ttimes_0416"],
+    url: "https://www.telluridenews.com/news/legals/article_c5a54e8f-2fa6-42a2-ba94-3a3828e137ff.html",
+    address: "Telluride Ski Resort, National Forest System lands and adjacent private lands in Town of Mountain Village and Town of Telluride",
+    noticeKey: "forest-service-68020"
+  },
+  {
+    title: "Rezoning Application -- 2028 Maverick Way, Norwood",
+    entity: "Norwood Public Schools",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "Norwood Public Schools has filed a rezoning application for property at 2028 Maverick Way in Norwood. Public hearings are scheduled for the Planning and Zoning Commission on April 20, 2026 at 6:30 PM and the Norwood Board of Trustees on May 13, 2026 at 7:00 PM. The application was filed by Officer Reilly O'Brien on March 9, 2026.",
+    deadline: "May 13, 2026",
+    expires: "2026-07-12",
+    dates: "4/16",
+    papers: ["ttimes_0416"],
+    url: "https://www.telluridenews.com/news/legals/article_c5a54e8f-2fa6-42a2-ba94-3a3828e137ff.html",
+    address: "2028 Maverick Way, Norwood, CO 81423",
+    noticeKey: "rezoning-2028-maverick-way"
   }
 ];
 

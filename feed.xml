@@ -6,8 +6,19 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 May 2026 13:26:21 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 13:53:23 GMT</lastBuildDate>
     <ttl>360</ttl>
+    <item>
+      <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
+      <link>https://livabletelluride.org/#events</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/2nd%20Annual%20Telluride%20Rotary%20Hikeathon%7CMay%2031%2C%202026</guid>
+      <pubDate>Sun, 31 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[📍 Oak Street Gondola Plaza, Telluride
+🕒 11:00 AM kickoff
+Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four weeks of hiking from May 31 through June 28, with a kickoff at 11am on May 31 at the Oak Street gondola plaza. Hike from anywhere and raise funds for the Telluride Rotary Foundation — supporting scholarships, Youth Exchange, international projects, and community grants. 60% of nonprofit team funds go directly back to their nonprofit. Sponsored by Alpine Bank and Jagged Edge Mountain Gear.]]></description>
+      <category>Community Event</category>
+      <category>Telluride Rotary Club</category>
+    </item>
     <item>
       <title>ADL reports a sharp drop in US antisemitic incidents in 2025, driven by a steep fall on campuses</title>
       <link>https://www.telluridenews.com/news/state/article_fd5eb38f-870a-5931-a281-fd46c98217ff.html</link>
@@ -33,10 +44,50 @@
       <link>https://www.telluridenews.com/news/article_f166c0dc-a754-43a1-9784-9facd4674405.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/news/article_f166c0dc-a754-43a1-9784-9facd4674405.html</guid>
       <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/43/c43e569f-37f2-4543-9cff-45bfa117cf81/69fa5f7853b7c.image.jpg?resize=300%2C315" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />The hunting business keeps money moving in Norwood. Mostly in the fall and especially from outfitter-guided hunts, outside cash flows fast into gas, groceries, lodging, camo, coffee — and with too many ripple effects to count.]]></description>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/43/c43e569f-37f2-4543-9cff-45bfa117cf81/69fa5f7853b7c.image.jpg?resize=300%2C315" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Bill Wilson of Knight Canyon Outfitters in Norwood was named "Outfitter of the Year" by the Colorado Outfitters Association for his three-generation family business and dedication to ethical hunting. Wilson and other hunting advocates say their industry faces threats from what they call "ballot-box biology" and urban voters making wildlife management decisions instead of trusting science-based approaches.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/43/c43e569f-37f2-4543-9cff-45bfa117cf81/69fa5f7853b7c.image.jpg?resize=300%2C315" medium="image" />
       <category>Telluride Times</category>
       <category>community</category>
+    </item>
+    <item>
+      <title>CHALKBOARD for the week of May 7-13</title>
+      <link>https://www.telluridenews.com/the_norwood_post/article_2ef5bd86-8794-4816-8ed3-fc76bbd27167.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/the_norwood_post/article_2ef5bd86-8794-4816-8ed3-fc76bbd27167.html</guid>
+      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8b/f8b47ece-f18b-4c64-891d-3517aa2b0690/69fa6fb7bfb2a.image.png?resize=300%2C183" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />This week's birthdays include Ashley LaUond on May 8, several residents on May 9-10 including the Sheffield siblings, and others through May 13. The community calendar lists regular meetings for town board, school board, and chamber of commerce, plus ongoing activities like the Thursday farmers market, senior meals, food pantry distribution on Sundays, and pickleball sessions.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8b/f8b47ece-f18b-4c64-891d-3517aa2b0690/69fa6fb7bfb2a.image.png?resize=300%2C183" medium="image" />
+      <category>Telluride Times</category>
+      <category>government</category>
+    </item>
+    <item>
+      <title>You&apos;re invited to the groundbreaking of the new Norwood School</title>
+      <link>https://www.telluridenews.com/the_norwood_post/article_c205d989-d94a-4e50-bc98-dd81947a31bd.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/the_norwood_post/article_c205d989-d94a-4e50-bc98-dd81947a31bd.html</guid>
+      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/03/c0304c73-0b0c-48e4-a100-80e11b1b2499/69fa6eca08f58.image.jpg?resize=300%2C169" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Norwood's holding a groundbreaking ceremony for their new school, funded by a $50+ million state BEST Grant and local bonds. The new campus will consolidate pre-K through 12th grade on 19 acres where the old disc golf course was, next to Pinion Park and the library.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/03/c0304c73-0b0c-48e4-a100-80e11b1b2499/69fa6eca08f58.image.jpg?resize=300%2C169" medium="image" />
+      <category>Telluride Times</category>
+      <category>education</category>
+    </item>
+    <item>
+      <title>Town of Norwood awarded funding for Norwood Hill improvements</title>
+      <link>https://www.telluridenews.com/the_norwood_post/article_dad1ad7d-73e3-41de-b2b1-24757153a694.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/the_norwood_post/article_dad1ad7d-73e3-41de-b2b1-24757153a694.html</guid>
+      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/7c/57c98200-de4b-4962-86c7-46d1750abfdc/69fa6d93b89e4.image.jpg?resize=300%2C191" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Norwood received $1.25 million in state and federal funding to improve safety on Norwood Hill, which has been a longtime concern due to its steep grade, sharp curves, and accident history. The project was selected through a competitive statewide process with no local match required from the town.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/7c/57c98200-de4b-4962-86c7-46d1750abfdc/69fa6d93b89e4.image.jpg?resize=300%2C191" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
+    </item>
+    <item>
+      <title>The heart of Telluride</title>
+      <link>https://www.telluridenews.com/arts_and_entertainment/article_917b2db3-f982-472d-9198-8dc744073d8e.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/arts_and_entertainment/article_917b2db3-f982-472d-9198-8dc744073d8e.html</guid>
+      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfed5db9-e7f7-49f6-8189-3174c244d773/69f64afc5f9a1.image.jpg?resize=300%2C412" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />The Transfer Warehouse has become an outdoor gallery through the Heart of Telluride Project, where Brandon Bermel and five other local artists installed street art pieces with heart themes that opened on Valentine's Day. The rotating installation gives artists a legal space to create street art without needing town approval.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfed5db9-e7f7-49f6-8189-3174c244d773/69f64afc5f9a1.image.jpg?resize=300%2C412" medium="image" />
+      <category>Telluride Times</category>
+      <category>land-use</category>
     </item>
     <item>
       <title>Telluride’s ‘I voted/yo voté’ sticker contest winners</title>
@@ -49,15 +100,14 @@
       <category>government</category>
     </item>
     <item>
-      <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
-      <link>https://livabletelluride.org/#events</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/2nd%20Annual%20Telluride%20Rotary%20Hikeathon%7CMay%2031%2C%202026%7C2026-W19</guid>
+      <title>Wishing upon a star</title>
+      <link>https://www.telluridenews.com/arts_and_entertainment/article_b3673668-79a5-462d-87a1-05b24411b059.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/arts_and_entertainment/article_b3673668-79a5-462d-87a1-05b24411b059.html</guid>
       <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[📍 Oak Street Gondola Plaza, Telluride
-🕒 11:00 AM kickoff
-Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four weeks of hiking from May 31 through June 28, with a kickoff at 11am on May 31 at the Oak Street gondola plaza. Hike from anywhere and raise funds for the Telluride Rotary Foundation — supporting scholarships, Youth Exchange, international projects, and community grants. 60% of nonprofit team funds go directly back to their nonprofit. Sponsored by Alpine Bank and Jagged Edge Mountain Gear.]]></description>
-      <category>Community Event</category>
-      <category>Telluride Rotary Club</category>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/cd/4cda66af-af53-48e3-b1b9-8d3dd0c94f9c/69f319f8c70cf.image.jpg?resize=300%2C450" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />The SAF Young People's Theater is staging "My Son Pinocchio, Jr." with 30 kids in grades 3-5, focusing on Geppetto's journey as a father learning unconditional love. Shows run May 1-3 at the Sheridan Opera House, featuring classic Disney songs plus new music by Stephen Schwartz.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/cd/4cda66af-af53-48e3-b1b9-8d3dd0c94f9c/69f319f8c70cf.image.jpg?resize=300%2C450" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
     </item>
     <item>
       <title>Indigenous people honor and raise awareness for relatives who are missing or have been killed</title>
