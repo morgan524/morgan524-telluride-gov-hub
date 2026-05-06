@@ -85,6 +85,7 @@
       <button class="tab-btn" data-tab="news">Events</button>
       <button class="tab-btn" data-tab="local-news">Local News</button>
       <button class="tab-btn" data-tab="blog">Blog</button>
+      <button class="tab-btn" data-tab="links">Local Orgs</button>
       <button class="tab-btn" data-tab="about-us">About Us</button>
     </nav>
     <div class="site-header-translate" id="google_translate_element"></div>
@@ -831,13 +832,57 @@
           </div>
         </div>
 
+        <!-- Sheep Mountain Alliance -->
+        <div class="local-group-card" data-category="nonprofits">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <img src="logo/sheep-mountain.png" alt="Sheep Mountain Alliance logo" loading="lazy">
+            </div>
+            <div class="local-group-body">
+              <h4>Sheep Mountain Alliance</h4>
+              <div class="group-summary">Southwest Colorado's leading wilderness conservation organization. Works to protect public lands, wildlife, and wild places in the San Juan Mountains and surrounding region through advocacy, education, and community engagement.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Focus:</span> <span class="group-detail-value">Public lands, wilderness, wildlife habitat, clean water &amp; air</span></div>
+                <div class="group-detail"><span class="group-detail-label">Region:</span> <span class="group-detail-value">San Juan Mountains, Southwest Colorado</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://www.sheepmountainalliance.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
+                <a href="https://www.sheepmountainalliance.org/news" target="_blank" rel="noopener" class="group-btn-secondary">News</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Telluride Foundation -->
+        <div class="local-group-card" data-category="nonprofits">
+          <div class="local-group-card-inner">
+            <div class="local-group-logo">
+              <img src="logo/tf-foundation.jpeg" alt="Telluride Foundation logo" loading="lazy">
+            </div>
+            <div class="local-group-body">
+              <h4>Telluride Foundation</h4>
+              <div class="group-summary">Community foundation serving the Telluride region since 2000. Provides grants to local nonprofits, hosts community events and public forums, runs youth programs, and fosters economic vitality and quality of life across the San Miguel Basin.</div>
+              <div class="local-group-details">
+                <div class="group-detail"><span class="group-detail-label">Focus:</span> <span class="group-detail-value">Grants, community events, youth programs, economic vitality</span></div>
+                <div class="group-detail"><span class="group-detail-label">Region:</span> <span class="group-detail-value">Telluride &amp; San Miguel Basin</span></div>
+              </div>
+              <div class="local-group-actions">
+                <a href="https://telluridefoundation.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
+                <a href="https://telluridefoundation.org/tf-events/" target="_blank" rel="noopener" class="group-btn-secondary">Events</a>
+                <a href="https://telluridefoundation.org/news/" target="_blank" rel="noopener" class="group-btn-secondary">News</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
       </div>
 
       <!-- Filter Sidebar -->
       <aside class="lg-filter-sidebar" id="lgFilterSidebar">
         <h3>Filter by Topic</h3>
         <button class="lg-filter-btn active" data-filter="all" onclick="lgFilter('all')">
-          <span class="lg-filter-icon">📋</span> All Groups <span class="lg-filter-count" id="lgCountAll">17</span>
+          <span class="lg-filter-icon">📋</span> All Groups <span class="lg-filter-count" id="lgCountAll">19</span>
         </button>
         <button class="lg-filter-btn" data-filter="clubs" onclick="lgFilter('clubs')">
           <span class="lg-filter-icon">🤝</span> Service Clubs <span class="lg-filter-count" id="lgCountClubs">0</span>
@@ -859,6 +904,9 @@
         </button>
         <button class="lg-filter-btn" data-filter="business" onclick="lgFilter('business')">
           <span class="lg-filter-icon">💼</span> Business &amp; Commerce <span class="lg-filter-count" id="lgCountBusiness">0</span>
+        </button>
+        <button class="lg-filter-btn" data-filter="nonprofits" onclick="lgFilter('nonprofits')">
+          <span class="lg-filter-icon">🌱</span> Nonprofits &amp; Advocacy <span class="lg-filter-count" id="lgCountNonprofits">0</span>
         </button>
       </aside>
 
@@ -1912,25 +1960,7 @@
     </div>
   </aside>
 
-  <!-- ══════════ BLOG SIDEBAR (Local News tab only) ══════════ -->
-  <aside class="blog-sidebar" id="sidebarBlog">
-    <div style="padding:0;overflow:hidden;border-radius:18px;background:var(--card-bg);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1.5px solid rgba(33,68,60,0.22);box-shadow:var(--shadow-soft);">
-      <!-- Header -->
-      <div style="padding:18px 16px 12px;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.6)),linear-gradient(135deg,rgba(39,69,63,0.08),rgba(198,148,55,0.12));border-bottom:1px solid rgba(221,210,196,0.8);text-align:center;">
-        <img src="logo/Livable Telluride.png" alt="Livable Telluride" style="width:144px;height:144px;margin:0 auto 8px;border-radius:18px;object-fit:contain;display:block;">
-        <div style="font-size:0.68rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#788e82;margin-bottom:4px;">Livable Telluride</div>
-        <div style="font-size:1.25rem;font-weight:900;letter-spacing:-0.03em;color:var(--text-primary);">News</div>
-        <div style="font-size:0.68rem;color:var(--text-muted);line-height:1.4;margin-top:4px;font-style:italic;">Our collective random thoughts on subjects we think are important</div>
-      </div>
-      <!-- Blog post cards rendered by JS -->
-      <div id="sidebarBlogPosts" style="padding:10px;display:grid;gap:10px;"></div>
-      <div style="padding:0 14px 14px;text-align:center;">
-        <a href="javascript:void(0)" onclick="switchTab('about-us')" style="display:inline-block;padding:8px 18px;background:var(--accent-green);color:#fff;border-radius:8px;font-size:0.72rem;font-weight:700;text-decoration:none;transition:opacity 0.18s;cursor:pointer;">View All Posts →</a>
-      </div>
-    </div>
-  </aside>
-
-  <!-- ══════════ FESTIVAL SIDEBAR (Events tab only) ══════════ -->
+    <!-- ══════════ FESTIVAL SIDEBAR (Events tab only) ══════════ -->
   <aside class="festival-sidebar" id="sidebarFestivals">
     <div style="padding:0;overflow:hidden;border-radius:18px;background:var(--card-bg);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1.5px solid rgba(33,68,60,0.22);box-shadow:var(--shadow-soft);">
       <!-- Header -->
