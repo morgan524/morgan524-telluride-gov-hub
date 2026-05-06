@@ -5755,7 +5755,8 @@ function renderLegalNoticesIntoContainer(container) {
 
   let html = subFilterHtml;
   active.forEach(function(notice) {
-    const primaryPaper = PAPER_LOGOS[notice.papers[0]];
+    const papers = Array.isArray(notice.papers) ? notice.papers : [];
+    const primaryPaper = PAPER_LOGOS[papers[0]];
     const linkUrl = primaryPaper ? primaryPaper.url : '#';
     const eLogo = LEGAL_ENTITY_LOGOS[notice.entityLogo] || '';
     const eLogoHtml = eLogo ? '<div class="legal-entity-logo">' + eLogo + '</div>' : '';
@@ -6576,7 +6577,8 @@ function renderLegalNotices(filter) {
   let html = '';
   filtered.forEach(notice => {
     // Link to the first paper's article
-    const primaryPaper = PAPER_LOGOS[notice.papers[0]];
+    const papers = Array.isArray(notice.papers) ? notice.papers : [];
+    const primaryPaper = PAPER_LOGOS[papers[0]];
     const linkUrl = primaryPaper ? primaryPaper.url : '#';
 
     // Entity logo
@@ -7251,14 +7253,15 @@ function renderLegalNoticesWithTopic() {
 
   let html = '';
   filtered.forEach(notice => {
-    const primaryPaper = PAPER_LOGOS[notice.papers[0]];
+    const papers = Array.isArray(notice.papers) ? notice.papers : [];
+    const primaryPaper = PAPER_LOGOS[papers[0]];
     const linkUrl = primaryPaper ? primaryPaper.url : '#';
     const eLogo = LEGAL_ENTITY_LOGOS[notice.entityLogo] || '';
     const eLogoHtml = eLogo ? '<div class="legal-entity-logo">' + eLogo + '</div>' : '';
 
     let paperBadgesHtml = '<div class="legal-paper-badges"><span class="paper-label">Published in:</span>';
     const seenPapers = new Set();
-    notice.papers.forEach(pKey => {
+    papers.forEach(pKey => {
       const p = PAPER_LOGOS[pKey];
       if (!p) return;
       if (seenPapers.has(p.name)) return;
