@@ -3157,7 +3157,7 @@ async function fetchAllNews() {
         category: 'Community Event',
         location: e.location || '',
         eventTimes: e.eventTimes || '',
-        imageUrl: 'logo/tf-foundation.jpeg'
+        imageUrl: 'logo/tf-foundation.png'
       })).filter(e => e.pubDate && e.pubDate >= new Date(new Date().setHours(0,0,0,0)))
     : [];
 
@@ -3449,7 +3449,7 @@ const ENTITY_LOGOS = {
   'humane-society': '<img src="logo/Telluride Humane-400x400.png" alt="Telluride Humane Society" loading="lazy">',
   'smb-forum': '',
   'sheep-mountain': '',
-  'tf-news': '<img src="logo/tf-foundation.jpeg" alt="Telluride Foundation" style="width:36px;height:36px;border-radius:50%;object-fit:cover;">',
+  'tf-news': '<img src="logo/tf-foundation.png" alt="Telluride Foundation" style="width:36px;height:36px;border-radius:50%;object-fit:cover;">',
   'ouray-plaindealer': '',
   'ouray-county': '',
   'weedc': '',
