@@ -3434,6 +3434,7 @@ const ENTITY_LOGOS = {
   'ouray-county': '',
   'weedc': '',
   'nucla-gov': '',
+  'norwood': '',
   'regional': '',
 };
 
@@ -5244,6 +5245,7 @@ const LOCAL_NEWS_LINK_OVERRIDES = {
 //   ouray-county    — Ouray County Government (ouraycountyco.gov)
 //   weedc           — West End Economic Dev. Corp. (choosewestend.org)
 //   nucla-gov       — Town of Nucla (townofnucla.colorado.gov)
+//   norwood         — Norwood Colorado (norwoodcolorado.com) — blog & events
 //
 // Auto-populated by the news-content-update scheduled task.
 // Schema mirrors TELLURIDE_TIMES_ARTICLES:
