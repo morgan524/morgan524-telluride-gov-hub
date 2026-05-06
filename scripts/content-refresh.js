@@ -1847,7 +1847,7 @@ async function syncHumaneSocietyAnimals() {
 // ══════════════════════════════════════════════════════════════
 // koto.org runs The Events Calendar (Tribe) WordPress plugin which
 // exposes a JSON API for the community-calendar category. Fetch
-// every 6h, filter to events starting in the next 7 days.
+// every 6h, filter to events starting in the next 30 days.
 
 const KOTO_TRIBE_API = 'https://koto.org/wp-json/tribe/events/v1/events/?categories=community-calendar&per_page=50';
 
@@ -1882,7 +1882,7 @@ async function syncKotoCommunityEvents() {
     : (Array.isArray(payload) ? payload : []);
   console.log(`  Tribe API returned ${arr.length} community-calendar event(s)`);
   const now = Date.now();
-  const horizon = now + 7 * 86400000;
+  const horizon = now + 30 * 86400000;
   const events = [];
   for (const e of arr) {
     if (!e || !e.title) continue;
@@ -1922,7 +1922,7 @@ async function syncKotoCommunityEvents() {
     });
   }
   events.sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
-  console.log(`  Kept ${events.length} events starting within 7 days`);
+  console.log(`  Kept ${events.length} events starting within 30 days`);
   return events;
 }
 
@@ -1934,7 +1934,7 @@ async function syncKotoCommunityEvents() {
 // rather than JSON, so we parse it with regex. Each event's detail
 // page has an og:image we fetch for the card photo.
 
-const WILKINSON_API = 'https://telluridelibrary.libcal.com/api_events.php?cid=19928&days=7';
+const WILKINSON_API = 'https://telluridelibrary.libcal.com/api_events.php?cid=19928&days=30';
 
 function parseWilkinsonHtml(html) {
   const events = [];
@@ -1986,14 +1986,14 @@ async function syncWilkinsonEvents() {
     return null;
   }
   const parsed = parseWilkinsonHtml(resp.text);
-  console.log(`  LibCal returned ${parsed.length} event(s) within 7-day window`);
+  console.log(`  LibCal returned ${parsed.length} event(s) within 30-day window`);
   const now = Date.now();
-  const horizon = now + 7 * 86400000;
+  const horizon = now + 30 * 86400000;
   const events = [];
   for (const p of parsed) {
     const t = p.fromDate.getTime();
     if (isNaN(t) || t < now - 86400000) continue;  // skip already-past
-    if (t > horizon) continue;                      // skip beyond 7 days
+    if (t > horizon) continue;                      // skip beyond 30 days
     // Fetch the event detail page for og:image (rate-limited by sequential await)
     const imageUrl = await fetchWilkinsonEventImage(p.link);
     // Build a clean description: location + time + (extracted desc if any)
@@ -2013,7 +2013,7 @@ async function syncWilkinsonEvents() {
     });
   }
   events.sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
-  console.log(`  Kept ${events.length} event(s) within 7 days (with images fetched)`);
+  console.log(`  Kept ${events.length} event(s) within 30 days (with images fetched)`);
   return events;
 }
 
@@ -2127,6 +2127,50 @@ async function syncFreshFoodHubEvents() {
     return events;
   } catch (e) {
     console.warn('  Fresh Food Hub events error:', e.message);
+    return null;
+  }
+}
+
+
+// ── Task 14: Sherbino Theater Events (Tribe Events API, weekly) ──
+// Source: https://sherbino.org/events/
+// Checks the Tribe Events API every Monday. Same stack as KOTO/Nucla/FreshFoodHub.
+const SHERBINO_TRIBE_API = 'https://sherbino.org/wp-json/tribe/events/v1/events/?per_page=30&status=publish';
+
+async function syncSherbinoEvents() {
+  const dow = new Date().getUTCDay();
+  if (dow !== 1) {
+    console.log('\n🎭 Task 14: Sherbino Theater Events — skipping (weekly, runs Mondays)');
+    return undefined;
+  }
+  console.log('\n🎭 Task 14: Syncing Sherbino Theater events (Tribe API)...');
+  try {
+    const resp = await fetch(SHERBINO_TRIBE_API);
+    if (!resp.ok) { console.warn(`  Sherbino Tribe API HTTP ${resp.status}`); return null; }
+    const data = await resp.json();
+    const now = Date.now();
+    const horizon = now + 30 * 86400000;
+    const events = (data.events || [])
+      .filter(ev => {
+        if (!ev || !ev.start_date) return false;
+        const t = new Date(ev.start_date.replace(' ', 'T')).getTime();
+        return !isNaN(t) && t >= now - 86400000 && t <= horizon;
+      })
+      .map(ev => ({
+        title:    decodeHtmlEntities(ev.title || ''),
+        href:     ev.url || 'https://sherbino.org/events/',
+        date:     ev.start_date || '',
+        endDate:  ev.end_date   || '',
+        location: (ev.venue && ev.venue.venue) ? ev.venue.venue
+                  : (ev.venue && ev.venue.city ? ev.venue.city : 'Ridgway, CO'),
+        copy:     ev.description ? decodeHtmlEntities(
+                    ev.description.replace(/<[^>]+>/g, '').slice(0, 300)) : '',
+        imageUrl: (ev.image && ev.image.url) ? ev.image.url : '',
+      }));
+    console.log(`  Sherbino events: ${events.length} (within 30 days)`);
+    return events;
+  } catch (e) {
+    console.warn('  Sherbino events error:', e.message);
     return null;
   }
 }
@@ -2390,6 +2434,18 @@ async function main() {
       govHubSrc = replaceJsValue(govHubSrc, 'FRESH_FOOD_HUB_EVENTS', newFfhEvents, false);
       changed = true;
       console.log(`  FRESH_FOOD_HUB_EVENTS updated (was ${existingFfh.length}, now ${newFfhEvents.length})`);
+    }
+  }
+
+
+  // ── 14. Sherbino Theater Events ──
+  const newSherbinoEvents = await syncSherbinoEvents();
+  if (newSherbinoEvents !== undefined && newSherbinoEvents !== null) {
+    const existingSherbino = extractJsArray(govHubSrc, 'SHERBINO_EVENTS') || [];
+    if (JSON.stringify(newSherbinoEvents) !== JSON.stringify(existingSherbino)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'SHERBINO_EVENTS', newSherbinoEvents, false);
+      changed = true;
+      console.log(`  SHERBINO_EVENTS updated (was ${existingSherbino.length}, now ${newSherbinoEvents.length})`);
     }
   }
 

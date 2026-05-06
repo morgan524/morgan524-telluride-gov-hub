@@ -2668,7 +2668,7 @@ async function enrichKOTOEvent(item) {
 // ══════════════════════════════════════════════════════════════
 // Auto-populated by scripts/content-refresh.js Task 8 from the Tribe
 // Events JSON API for the community-calendar category. Filtered at
-// sync time to events starting within the next 7 days, sorted earliest
+// sync time to events starting within the next 30 days, sorted earliest
 // first. Schema: { title, link, description, pubDate (ISO string),
 // source: 'koto', sourceLabel: 'KOTO', category: 'Community Event',
 // location, imageUrl }.
@@ -2934,7 +2934,7 @@ const KOTO_COMMUNITY_EVENTS = [
 // ══════════════════════════════════════════════════════════════
 // Auto-populated by scripts/content-refresh.js Task 9 from the
 // LibCal api_events.php endpoint (cid=19928 = library calendar).
-// Filtered to events starting within the next 7 days. Schema:
+// Filtered to events starting within the next 30 days. Schema:
 // { title, link, description, pubDate (ISO string), source:
 // 'wilkinson', sourceLabel: 'Wilkinson Public Library', category:
 // 'Library Event', location, imageUrl }.
@@ -2977,7 +2977,7 @@ const WILKINSON_EVENTS = [
 
 // ── Fetch KOTO Community Calendar Events (upcoming only) ──
 // Reads from KOTO_COMMUNITY_EVENTS, populated server-side every 6h
-// by content-refresh.js Task 8 (already filtered to next 7 days).
+// by content-refresh.js Task 8 (already filtered to next 30 days).
 // Falls back to legacy client-side proxy-scrape ONLY if the const is
 // empty (rare — should only happen on a brand-new repo).
 async function fetchKOTONews() {
@@ -3062,7 +3062,7 @@ async function fetchKOTONews() {
 function fetchWilkinsonEvents() {
   // Reads from WILKINSON_EVENTS, populated server-side every 6h by
   // scripts/content-refresh.js Task 9 from the LibCal api_events.php
-  // endpoint. Already filtered to events starting in the next 7 days.
+  // endpoint. Already filtered to events starting in the next 30 days.
   if (typeof WILKINSON_EVENTS !== 'undefined' && Array.isArray(WILKINSON_EVENTS) && WILKINSON_EVENTS.length > 0) {
     const now = Date.now();
     return WILKINSON_EVENTS
@@ -3226,7 +3226,25 @@ async function fetchAllNews() {
       })).filter(e => e.pubDate && e.pubDate >= new Date(new Date().setHours(0,0,0,0)))
     : [];
 
-  const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...hardcodedCommunity, ...tfEvents, ...nuclaNaturitaEvents, ...clubRedShows, ...freshFoodHubEvents];
+
+  // Sherbino Theater Events (weekly, from Tribe Events API)
+  const sherbinoEvents = (typeof SHERBINO_EVENTS !== 'undefined' && Array.isArray(SHERBINO_EVENTS))
+    ? SHERBINO_EVENTS.map(e => ({
+        title: e.title || '',
+        link:  e.href || 'https://sherbino.org/events/',
+        description: e.copy || '',
+        summary:     e.copy || '',
+        pubDate: e.date ? new Date(e.date) : null,
+        source: 'sherbino',
+        sourceLabel: 'Sherbino Theater',
+        category: 'Arts & Music',
+        location: e.location || 'Ridgway, CO',
+        eventTimes: '',
+        imageUrl: e.imageUrl || ''
+      })).filter(e => e.pubDate && e.pubDate >= new Date(new Date().setHours(0,0,0,0)))
+    : [];
+
+  const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...hardcodedCommunity, ...tfEvents, ...nuclaNaturitaEvents, ...clubRedShows, ...freshFoodHubEvents, ...sherbinoEvents];
 
   // Source-priority sort: lower number wins on a duplicate match.
   function eventSourcePriority(item) {
@@ -5408,6 +5426,14 @@ const CLUB_RED_SHOWS = [
 // Auto-populated by content-refresh.js (Task 13 — Tribe Events API, weekly Mondays)
 // ══════════════════════════════════════════════════════════════
 const FRESH_FOOD_HUB_EVENTS = [
+];
+
+
+// ══════════════════════════════════════════════════════════════
+// ── Sherbino Theater Events ──
+// Auto-populated by content-refresh.js (Task 14 — Tribe Events API, weekly Mondays)
+// ══════════════════════════════════════════════════════════════
+const SHERBINO_EVENTS = [
 ];
 
 // ══════════════════════════════════════════════════════════════
