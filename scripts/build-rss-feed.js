@@ -257,16 +257,15 @@ function buildEventItems(...sources) {
       e.eventTimes || e.time ? `🕒 ${e.eventTimes || e.time}` : null,
       e.copy || e.description || '',
     ].filter(Boolean).join('\n');
-    const slot = eventSendSlot(eventDate, today);
     items.push({
       title: `[Event] ${e.title} — ${e.date || ''}`,
       link: `${SITE_URL}/#events`,
-      pubDate: today,          // use today so it's "new" in this slot
+      pubDate: eventDate,      // use actual event date — stable, not refreshed
       description: desc,
       imageUrl: e.img || e.imageUrl || null,
       categories: ['Community Event', e.source].filter(Boolean),
-      // Slot embedded in GUID → Mailchimp sees a fresh item each send window
-      guid: `${SITE_URL}/event/${encodeURIComponent(`${e.title.slice(0, 80)}|${e.date || ''}|${slot}`)}`,
+      // Stable GUID — each event appears in the email exactly once (when first added)
+      guid: `${SITE_URL}/event/${encodeURIComponent(`${e.title.slice(0, 80)}|${e.date || ''}`)}`,
     });
   }
   items.sort((a, b) => parseDate(a.description.split('\n')[0]) - parseDate(b.description.split('\n')[0]) || a.title.localeCompare(b.title));
@@ -345,38 +344,7 @@ function main() {
     .sort((a, b) => b.pubDate - a.pubDate)
     .slice(0, MAX_ITEMS);
 
-  // ── Minimum-4 filler: pad with upcoming events when digest is thin ──
-  // If fewer than 4 unique items will go out, add the next upcoming
-  // community events (within 60 days) so subscribers always get something.
-  if (items.length < 4) {
-    const today = new Date();
-    today.setUTCHours(0, 0, 0, 0);
-    const existingGuids = new Set(items.map((i) => i.guid));
-    const allEvents = [...events, ...jsonEvents];
-    const filler = allEvents
-      .filter((e) => e && e.title)
-      .map((e) => {
-        const eventDate = parseDate(e.date || e.startDate || e.Date);
-        if (!withinRollingWindow(eventDate, 0, MAX_EVENT_FUTURE_DAYS)) return null;
-        const slot = eventSendSlot(eventDate, today);
-        const guid = `${SITE_URL}/event/${encodeURIComponent(`${e.title.slice(0, 80)}|${e.date || ''}|${slot}`)}`;
-        if (existingGuids.has(guid)) return null;
-        const desc = [
-          e.location ? `📍 ${e.location}` : null,
-          e.eventTimes || e.time ? `🕒 ${e.eventTimes || e.time}` : null,
-          e.copy || e.description || '',
-        ].filter(Boolean).join('\n');
-        return { title: `[Event] ${e.title} — ${e.date || ''}`, link: `${SITE_URL}/#events`,
-          pubDate: today, description: desc, categories: ['Community Event'], guid };
-      })
-      .filter(Boolean)
-      .sort((a, b) => a.title.localeCompare(b.title));
-    for (const f of filler) {
-      if (items.length >= 4) break;
-      items.push(f);
-    }
-    console.log(`  Padded digest to ${items.length} items with upcoming-event filler`);
-  }
+  // No minimum-item filler — if nothing is genuinely new, Mailchimp should not send.
 
   console.log(`  Emitting ${items.length} items to feed.xml (max: ${MAX_ITEMS})`);
 
