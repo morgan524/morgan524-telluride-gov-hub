@@ -607,6 +607,55 @@ async function refreshNews(existingTtArticles = []) {
     }
   } catch (e) { console.warn(`  Colorado Sun RSS error: ${e.message}`); }
 
+  // ── Town of Ridgway — Press Releases (PENDING: enable after May 8 site migration) ──
+  // The current site (Drupal/Colorado state CMS) has no RSS feed and blocks automated
+  // HTTP access. The new hosting environment goes live ~May 8, 2026.
+  // On Monday May 11, run the Ridgway review scheduled task to:
+  //   1. Check if the new site has RSS feeds (look for <link rel="alternate"> tags)
+  //   2. If yes: add the feed URL below and uncomment the live scraper block
+  //   3. If no RSS: uncomment the homepage HTML scraper below and add
+  //      'townofridgway.colorado.gov' to both PROXY_HOSTS (here) and the
+  //      Cloudflare Worker ALLOWED_HOSTS (worker.js)
+  //
+  // ── Live scraper (uncomment after confirming access) ──
+  // const RIDGWAY_HOME = 'https://townofridgway.colorado.gov/';
+  // const ridgwayArticles = [];
+  // try {
+  //   const resp = await fetch(RIDGWAY_HOME);  // add to PROXY_HOSTS if blocked
+  //   if (resp.status === 200) {
+  //     const html = resp.text;
+  //     // Extract press release links — pattern: <a href="...files/documents/...">Title - Date</a>
+  //     const linkRe = /<a[^>]+href="([^"]*\/files\/documents\/[^"]+\.pdf)"[^>]*>([^<]+?)<\/a>/gi;
+  //     let m;
+  //     while ((m = linkRe.exec(html)) !== null) {
+  //       const href = m[1].startsWith('http') ? m[1] : `https://townofridgway.colorado.gov${m[1]}`;
+  //       const rawText = m[2].replace(/\(opens in new window\)/gi, '').trim();
+  //       // Extract date from link text: "Title - May 1, 2026" or "Title - April 14, 2026"
+  //       const dateMatch = rawText.match(/[-–]\s*((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+\d+,?\s*\d{4})\s*$/i);
+  //       const title = dateMatch ? rawText.slice(0, rawText.lastIndexOf(dateMatch[0])).trim() : rawText;
+  //       const dateStr = dateMatch ? dateMatch[1] : '';
+  //       const pubDate = dateStr ? new Date(dateStr) : new Date();
+  //       if (pubDate < cutoff) continue;
+  //       ridgwayArticles.push({
+  //         title,
+  //         source: 'Town of Ridgway',
+  //         date: formatDate(pubDate),
+  //         firstSeen: existingByHref.has(href)
+  //           ? (existingByHref.get(href).firstSeen || new Date().toISOString().slice(0, 10))
+  //           : new Date().toISOString().slice(0, 10),
+  //         newsTopic: classifyNewsTopic(title, ''),
+  //         copy: `Press release from the Town of Ridgway. Click to view the full PDF.`,
+  //         claudeSummary: false,
+  //         href,
+  //         img: ''
+  //       });
+  //     }
+  //     if (ridgwayArticles.length > 0) console.log(`  Found ${ridgwayArticles.length} Ridgway press release(s)`);
+  //   } else {
+  //     console.warn(`  Ridgway homepage HTTP ${resp.status}`);
+  //   }
+  // } catch (e) { console.warn(`  Ridgway scraper error: ${e.message}`); }
+
   // Deduplicate by href
   const seen = new Set();
   const dedup = arr => arr.filter(a => {
@@ -619,6 +668,7 @@ async function refreshNews(existingTtArticles = []) {
   const govArticles = dedup(articles.filter(a => a.source !== 'Telluride Times'));
 
   console.log(`  Found: ${ttArticles.length} Telluride Times, ${govArticles.length} gov news, ${kotoNewscasts.length} KOTO newscasts, ${kotoFeatured.length} KOTO stories, ${csSunArticles.length} Colorado Sun`);
+  // When Ridgway is enabled: add ridgwayArticles to the dedup and log count above
   return { ttArticles: [...ttArticles, ...govArticles, ...dedup(csSunArticles)], kotoNewscasts: dedup(kotoNewscasts), kotoFeatured: dedup(kotoFeatured) };
 }
 
