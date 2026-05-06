@@ -22,7 +22,11 @@ const CP_SOURCES = {
   'telski': { name: 'Telluride Ski Resort', type: 'health', platform: 'instagram', url: 'https://www.instagram.com/tellurideski/', logo: '' },
   'foundation': { name: 'Telluride Foundation', type: 'nonprofits', platform: 'instagram', url: 'https://www.instagram.com/telluridefoundation/', logo: '' },
   'tchn': { name: 'Tri-County Health Network', type: 'health', platform: 'instagram', url: 'https://www.instagram.com/tchn_co/', logo: '' },
-  'mountainfilm': { name: 'Mountainfilm Festival', type: 'arts', platform: 'website', url: 'https://www.mountainfilm.org/', logo: '' }
+  'mountainfilm': { name: 'Mountainfilm Festival', type: 'arts', platform: 'website', url: 'https://www.mountainfilm.org/', logo: '' },
+  'smb-forum': { name: 'San Miguel Basin Forum', type: 'news', platform: 'website', url: 'https://sanmiguelbasinforum.com/news/', logo: '' },
+  'sheep-mountain': { name: 'Sheep Mountain Alliance', type: 'nonprofits', platform: 'website', url: 'https://www.sheepmountainalliance.org/news', logo: '' },
+  'weedc': { name: 'West End Economic Development Corp.', type: 'community', platform: 'website', url: 'https://choosewestend.org/', logo: '' },
+  'nucla-gov': { name: 'Town of Nucla', type: 'government', platform: 'website', url: 'https://townofnucla.colorado.gov/', logo: '' },
 };
 // Posts are dated relative to COMMUNITY_PULSE_CACHE_DATE.
 // Each post expires 5 days after its postedAt date.

@@ -78,6 +78,32 @@ const KOTO_FEATURED_RSS = 'https://koto.org/news-category/featured-stories/feed/
 const COLORADO_SUN_RSS = 'https://coloradosun.com/feed/';
 // Keywords that make a Colorado Sun article relevant to the Telluride region
 const COLORADO_SUN_KEYWORDS = /telluride|san\s+miguel\s+county|mountain\s+village|ridgway|telski|chuck\s+horning/i;
+
+// ── Regional News Feeds ──
+// Sources with working RSS feeds. Articles go into REGIONAL_NEWS_ARTICLES in gov-hub.js.
+// Sources without RSS (SMB Forum, Sheep Mountain Alliance, WEEDC, Town of Nucla) are
+// registered in CP_SOURCES (community-pulse.js) as website links instead.
+const REGIONAL_NEWS_FEEDS = [
+  {
+    url: 'https://ouraycountyco.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml',
+    source: 'Ouray County',
+    sourceKey: 'ouray-county',
+    category: 'Government'
+  },
+  {
+    url: 'https://www.ouraynews.com/feed/',
+    source: 'Ouray County Plaindealer',
+    sourceKey: 'ouray-plaindealer',
+    category: 'News'
+  },
+  {
+    url: 'https://telluridefoundation.org/news/feed/',
+    source: 'Telluride Foundation',
+    sourceKey: 'tf-news',
+    category: 'Nonprofit'
+  },
+];
+
 // Water court legal notices — Telluride Times weekly legals section (published Thursdays)
 const TT_LEGALS_RSS = 'https://www.telluridenews.com/search/?f=rss&t=article&c=news/legals&l=5&s=start_time&sd=desc';
 const TT_AUTH_COOKIE = process.env.TT_AUTH_COOKIE || '';
@@ -673,6 +699,68 @@ async function refreshNews(existingTtArticles = []) {
 }
 
 // ══════════════════════════════════════════════════════════════
+
+// ── Regional News Refresh ──
+// ══════════════════════════════════════════════════════════════
+
+async function refreshRegionalNews(existingRegional = []) {
+  console.log('\n🗺️  Regional news: Refreshing RSS feeds...');
+  const existingByHref = new Map(existingRegional.map(a => [a.href, a]));
+  const articles = [];
+  const cutoff = new Date(Date.now() - NEWS_MAX_AGE_DAYS * 86400000);
+
+  for (const feed of REGIONAL_NEWS_FEEDS) {
+    try {
+      const resp = await fetch(feed.url);
+      if (resp.status !== 200) {
+        console.warn(`  Regional RSS (${feed.source}) HTTP ${resp.status}`);
+        continue;
+      }
+      const xml = await parseXml(resp.text);
+      const items = xml?.rss?.channel?.item;
+      const arr = Array.isArray(items) ? items : (items ? [items] : []);
+      let count = 0;
+      for (const item of arr) {
+        const pubDate = new Date(item.pubDate || '');
+        if (pubDate < cutoff) continue;
+        const href = (item.link || '').trim();
+        if (!href) continue;
+        // Carry forward existing entry unchanged if we already have it
+        if (existingByHref.has(href)) {
+          articles.push(existingByHref.get(href));
+          count++;
+          continue;
+        }
+        const title = (item.title || '').trim();
+        const rawDesc = item.description || item['content:encoded'] || '';
+        const copy = rawDesc.replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ')
+          .replace(/&#\d+;/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 300);
+        const enclosure = item.enclosure;
+        articles.push({
+          title,
+          source: feed.source,
+          sourceKey: feed.sourceKey,
+          date: formatDate(pubDate),
+          newsTopic: classifyNewsTopic(title, copy),
+          copy,
+          href,
+          img: enclosure?.$.url || ''
+        });
+        count++;
+      }
+      console.log(`  ${feed.source}: ${count} article(s)`);
+    } catch (e) {
+      console.warn(`  Regional RSS error (${feed.source}): ${e.message}`);
+    }
+  }
+
+  // Sort by date descending, deduplicate by href
+  const seen = new Set();
+  return articles
+    .filter(a => { if (seen.has(a.href)) return false; seen.add(a.href); return true; })
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
+}
+
 // ── Task 3: Community Pulse ──
 // ══════════════════════════════════════════════════════════════
 
@@ -1907,6 +1995,15 @@ async function main() {
   }
   if (kotoFeatured.length > 0) {
     govHubSrc = replaceJsValue(govHubSrc, 'KOTO_FEATURED_STORIES', kotoFeatured, false);
+    changed = true;
+  }
+
+
+  // ── 2b. Regional News ──
+  const existingRegional = extractJsArray(govHubSrc, 'REGIONAL_NEWS_ARTICLES') || [];
+  const freshRegional = await refreshRegionalNews(existingRegional);
+  if (freshRegional.length > 0) {
+    govHubSrc = replaceJsValue(govHubSrc, 'REGIONAL_NEWS_ARTICLES', freshRegional, false);
     changed = true;
   }
 
