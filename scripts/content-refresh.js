@@ -116,8 +116,8 @@ const REGIONAL_NEWS_FEEDS = [
   },
   {
     url: 'https://extension.colostate.edu/san-miguel/feed/',
-    source: 'San Miguel Basin 4-H',
-    sourceKey: '4h-smc',
+    source: 'CSU Extension San Miguel',
+    sourceKey: 'csu-sanmiguel',
     category: 'Newsletter'
   },
   {
@@ -131,6 +131,18 @@ const REGIONAL_NEWS_FEEDS = [
     source: "St. Patrick's Catholic Church",
     sourceKey: 'stpatricks',
     category: 'Community'
+  },
+  {
+    url: 'https://freshfoodhub.net/feed/',
+    source: 'Fresh Food Hub',
+    sourceKey: 'fresh-food-hub',
+    category: 'Community'
+  },
+  {
+    url: 'https://nucla-naturita.com/feed/',
+    source: 'Nucla-Naturita Chamber',
+    sourceKey: 'nucla-naturita',
+    category: 'News'
   },
 ];
 
@@ -1994,6 +2006,119 @@ async function syncWilkinsonEvents() {
 }
 
 
+// ── Task 11: Nucla-Naturita Events (Tribe Events API, weekly) ──
+// Source: https://nucla-naturita.com/events/
+// Checks the Tribe Events API every Monday; returns [] on other days.
+const NUCLA_TRIBE_API = 'https://nucla-naturita.com/wp-json/tribe/events/v1/events/?per_page=20&status=publish';
+
+async function syncNuclaNaturitaEvents() {
+  const dow = new Date().getUTCDay();
+  if (dow !== 1) {
+    console.log('\n📅 Task 11: Nucla-Naturita Events — skipping (weekly, runs Mondays)');
+    return undefined; // undefined = no update needed
+  }
+  console.log('\n📅 Task 11: Syncing Nucla-Naturita events (Tribe API)...');
+  try {
+    const resp = await fetch(NUCLA_TRIBE_API);
+    if (!resp.ok) { console.warn(`  Nucla-Naturita Tribe API HTTP ${resp.status}`); return null; }
+    const data = await resp.json();
+    const events = (data.events || []).map(ev => ({
+      title:     ev.title || '',
+      href:      ev.url   || 'https://nucla-naturita.com/events/',
+      date:      ev.start_date || '',
+      endDate:   ev.end_date   || '',
+      location:  (ev.venue && ev.venue.venue) ? ev.venue.venue : (ev.venue && ev.venue.address ? ev.venue.address.city : ''),
+      copy:      ev.description ? ev.description.replace(/<[^>]+>/g,'').slice(0,300) : '',
+    }));
+    console.log(`  Nucla-Naturita events: ${events.length}`);
+    return events;
+  } catch (e) {
+    console.warn('  Nucla-Naturita events error:', e.message);
+    return null;
+  }
+}
+
+// ── Task 12: Club Red Telluride Shows (Squarespace, weekly) ──
+// Source: https://www.clubredtelluride.com/shows
+// Checks the Squarespace JSON API every Monday.
+const CLUB_RED_URL = 'https://www.clubredtelluride.com/shows?format=json';
+
+async function syncClubRedShows() {
+  const dow = new Date().getUTCDay();
+  if (dow !== 1) {
+    console.log('\n🎸 Task 12: Club Red Shows — skipping (weekly, runs Mondays)');
+    return undefined;
+  }
+  console.log('\n🎸 Task 12: Syncing Club Red Telluride shows...');
+  try {
+    const resp = await fetch(CLUB_RED_URL, {
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; LivableTelluride/1.0)' }
+    });
+    if (!resp.ok) { console.warn(`  Club Red HTTP ${resp.status}`); return null; }
+    const data = await resp.json();
+    const itemCount = (data.collection && data.collection.itemCount) || 0;
+    if (itemCount === 0) {
+      console.log('  Club Red: 0 shows currently listed');
+      return [];
+    }
+    // When shows are added as Squarespace events, extract from mainContent HTML
+    const html = data.mainContent || '';
+    const shows = [];
+    // Extract show blocks: look for date + title patterns in heading/paragraph tags
+    const headings = [...html.matchAll(/<h[1-4][^>]*>([^<]+)<\/h[1-4]>/gi)]
+      .map(m => m[1].trim())
+      .filter(t => t && !t.match(/^(upcoming|shows|stay tuned|buy tickets)/i));
+    const dateRe = /(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+\d{1,2}(?:,?\s*20\d{2})?/i;
+    for (let i = 0; i < headings.length; i++) {
+      const title = headings[i];
+      const dateMatch = html.match(dateRe);
+      shows.push({
+        title,
+        href:  'https://www.clubredtelluride.com/shows',
+        date:  dateMatch ? dateMatch[0] : '',
+        location: 'Club Red, Mountain Village',
+        copy:  'Live music at Club Red Telluride. 580 Mountain Village Blvd.',
+      });
+    }
+    console.log(`  Club Red shows found: ${shows.length}`);
+    return shows;
+  } catch (e) {
+    console.warn('  Club Red error:', e.message);
+    return null;
+  }
+}
+
+// ── Task 13: Fresh Food Hub Events (Tribe Events API, weekly) ──
+// Source: https://freshfoodhub.net/get-involved/#newsandupdates
+const FRESH_FOOD_HUB_TRIBE_API = 'https://freshfoodhub.net/wp-json/tribe/events/v1/events/?per_page=20&status=publish';
+
+async function syncFreshFoodHubEvents() {
+  const dow = new Date().getUTCDay();
+  if (dow !== 1) {
+    console.log('\n🌽 Task 13: Fresh Food Hub Events — skipping (weekly, runs Mondays)');
+    return undefined;
+  }
+  console.log('\n🌽 Task 13: Syncing Fresh Food Hub events (Tribe API)...');
+  try {
+    const resp = await fetch(FRESH_FOOD_HUB_TRIBE_API);
+    if (!resp.ok) { console.warn(`  Fresh Food Hub Tribe API HTTP ${resp.status}`); return null; }
+    const data = await resp.json();
+    const events = (data.events || []).map(ev => ({
+      title:    ev.title || '',
+      href:     ev.url   || 'https://freshfoodhub.net/get-involved/',
+      date:     ev.start_date || '',
+      endDate:  ev.end_date   || '',
+      location: (ev.venue && ev.venue.venue) ? ev.venue.venue : 'Norwood, CO',
+      copy:     ev.description ? ev.description.replace(/<[^>]+>/g,'').slice(0,300) : '',
+    }));
+    console.log(`  Fresh Food Hub events: ${events.length}`);
+    return events;
+  } catch (e) {
+    console.warn('  Fresh Food Hub events error:', e.message);
+    return null;
+  }
+}
+
 // ── Task 10: Telluride Foundation Events (HTML scraper) ──
 // The TF events page is a manually-maintained WPBakery page — no RSS.
 // We fetch the HTML, parse each wpb_text_column block for event data,
@@ -2219,6 +2344,40 @@ async function main() {
       govHubSrc = replaceJsValue(govHubSrc, 'TF_FOUNDATION_EVENTS', newTfEvents, false);
       changed = true;
       console.log(`  TF_FOUNDATION_EVENTS updated (was ${existingTf.length}, now ${newTfEvents.length})`);
+    }
+  }
+
+
+  // ── 11. Nucla-Naturita Events ──
+  const newNuclaEvents = await syncNuclaNaturitaEvents();
+  if (newNuclaEvents !== undefined && newNuclaEvents !== null) {
+    const existingNucla = extractJsArray(govHubSrc, 'NUCLA_NATURITA_EVENTS') || [];
+    if (JSON.stringify(newNuclaEvents) !== JSON.stringify(existingNucla)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'NUCLA_NATURITA_EVENTS', newNuclaEvents, false);
+      changed = true;
+      console.log(`  NUCLA_NATURITA_EVENTS updated (was ${existingNucla.length}, now ${newNuclaEvents.length})`);
+    }
+  }
+
+  // ── 12. Club Red Shows ──
+  const newClubRedShows = await syncClubRedShows();
+  if (newClubRedShows !== undefined && newClubRedShows !== null) {
+    const existingClubRed = extractJsArray(govHubSrc, 'CLUB_RED_SHOWS') || [];
+    if (JSON.stringify(newClubRedShows) !== JSON.stringify(existingClubRed)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'CLUB_RED_SHOWS', newClubRedShows, false);
+      changed = true;
+      console.log(`  CLUB_RED_SHOWS updated (was ${existingClubRed.length}, now ${newClubRedShows.length})`);
+    }
+  }
+
+  // ── 13. Fresh Food Hub Events ──
+  const newFfhEvents = await syncFreshFoodHubEvents();
+  if (newFfhEvents !== undefined && newFfhEvents !== null) {
+    const existingFfh = extractJsArray(govHubSrc, 'FRESH_FOOD_HUB_EVENTS') || [];
+    if (JSON.stringify(newFfhEvents) !== JSON.stringify(existingFfh)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'FRESH_FOOD_HUB_EVENTS', newFfhEvents, false);
+      changed = true;
+      console.log(`  FRESH_FOOD_HUB_EVENTS updated (was ${existingFfh.length}, now ${newFfhEvents.length})`);
     }
   }
 

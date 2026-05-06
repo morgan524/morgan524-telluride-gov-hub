@@ -3161,7 +3161,58 @@ async function fetchAllNews() {
       })).filter(e => e.pubDate && e.pubDate >= new Date(new Date().setHours(0,0,0,0)))
     : [];
 
-  const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...hardcodedCommunity, ...tfEvents];
+  // Nucla-Naturita Community Events (weekly, from Tribe Events API)
+  const nuclaNaturitaEvents = (typeof NUCLA_NATURITA_EVENTS !== 'undefined' && Array.isArray(NUCLA_NATURITA_EVENTS))
+    ? NUCLA_NATURITA_EVENTS.map(e => ({
+        title: e.title || '',
+        link:  e.href || 'https://nucla-naturita.com/events/',
+        description: e.copy || '',
+        summary:     e.copy || '',
+        pubDate: e.date ? new Date(e.date) : null,
+        source: 'nucla-naturita',
+        sourceLabel: 'Nucla-Naturita Chamber',
+        category: 'Community Event',
+        location: e.location || 'Nucla-Naturita, CO',
+        eventTimes: '',
+        imageUrl: ''
+      })).filter(e => e.pubDate && e.pubDate >= new Date(new Date().setHours(0,0,0,0)))
+    : [];
+
+  // Club Red Telluride Shows (weekly, from Squarespace)
+  const clubRedShows = (typeof CLUB_RED_SHOWS !== 'undefined' && Array.isArray(CLUB_RED_SHOWS))
+    ? CLUB_RED_SHOWS.map(e => ({
+        title: e.title || '',
+        link:  e.href || 'https://www.clubredtelluride.com/shows',
+        description: e.copy || '',
+        summary:     e.copy || '',
+        pubDate: e.date ? new Date(e.date) : null,
+        source: 'club-red',
+        sourceLabel: 'Club Red Telluride',
+        category: 'Live Music',
+        location: e.location || 'Club Red, Mountain Village',
+        eventTimes: '',
+        imageUrl: ''
+      })).filter(e => e.pubDate && e.pubDate >= new Date(new Date().setHours(0,0,0,0)))
+    : [];
+
+  // Fresh Food Hub Events (weekly, from Tribe Events API)
+  const freshFoodHubEvents = (typeof FRESH_FOOD_HUB_EVENTS !== 'undefined' && Array.isArray(FRESH_FOOD_HUB_EVENTS))
+    ? FRESH_FOOD_HUB_EVENTS.map(e => ({
+        title: e.title || '',
+        link:  e.href || 'https://freshfoodhub.net/get-involved/',
+        description: e.copy || '',
+        summary:     e.copy || '',
+        pubDate: e.date ? new Date(e.date) : null,
+        source: 'fresh-food-hub',
+        sourceLabel: 'Fresh Food Hub',
+        category: 'Community Event',
+        location: e.location || 'Norwood, CO',
+        eventTimes: '',
+        imageUrl: ''
+      })).filter(e => e.pubDate && e.pubDate >= new Date(new Date().setHours(0,0,0,0)))
+    : [];
+
+  const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...hardcodedCommunity, ...tfEvents, ...nuclaNaturitaEvents, ...clubRedShows, ...freshFoodHubEvents];
 
   // Source-priority sort: lower number wins on a duplicate match.
   function eventSourcePriority(item) {
@@ -3455,10 +3506,13 @@ const ENTITY_LOGOS = {
   'weedc': '',
   'nucla-gov': '',
   'norwood': '<img src="logo/Norwood.png" alt="Norwood Colorado" loading="lazy">',
-  '4h-smc':     '<img src="logo/4h-csu.jpg" alt="San Miguel Basin 4-H" loading="lazy">',
+  'csu-sanmiguel':     '<img src="logo/4h-csu.jpg" alt="CSU Extension San Miguel" loading="lazy">',
   'tmc':        '<img src="https://www.telluridemountainclub.org/wp-content/uploads/2017/09/TellMtnClub-logo.png" alt="Telluride Mountain Club" style="width:36px;height:36px;border-radius:50%;object-fit:cover;background:#fff;" loading="lazy">',
   'stpatricks': '<img src="logo/Church.png" alt="St. Patrick's Catholic Church" style="width:36px;height:36px;border-radius:50%;object-fit:cover;" loading="lazy" onerror="this.style.display='none'">',
   'regional':   '',
+  'fresh-food-hub': '',
+  'nucla-naturita': '',
+  'club-red': '',
 };
 
 function renderLogo(source, item) {
@@ -5316,6 +5370,27 @@ const LOCAL_NEWS_LINK_OVERRIDES = {
 // Auto-populated by content-refresh.js (Task 10 — tf-events scraper)
 // ══════════════════════════════════════════════════════════════
 const TF_FOUNDATION_EVENTS = [
+];
+
+// ══════════════════════════════════════════════════════════════
+// ── Nucla-Naturita Community Events ──
+// Auto-populated by content-refresh.js (Task 11 — Tribe Events API, weekly Mondays)
+// ══════════════════════════════════════════════════════════════
+const NUCLA_NATURITA_EVENTS = [
+];
+
+// ══════════════════════════════════════════════════════════════
+// ── Club Red Telluride Shows ──
+// Auto-populated by content-refresh.js (Task 12 — Squarespace JSON, weekly Mondays)
+// ══════════════════════════════════════════════════════════════
+const CLUB_RED_SHOWS = [
+];
+
+// ══════════════════════════════════════════════════════════════
+// ── Fresh Food Hub Events ──
+// Auto-populated by content-refresh.js (Task 13 — Tribe Events API, weekly Mondays)
+// ══════════════════════════════════════════════════════════════
+const FRESH_FOOD_HUB_EVENTS = [
 ];
 
 // ══════════════════════════════════════════════════════════════
