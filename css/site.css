@@ -2701,13 +2701,13 @@
       flex: 1;
     }
     .local-group-body h4 {
-      font-size: 0.98rem;
+      font-size: 1.08rem;
       font-weight: 750;
       color: var(--text-primary);
       margin: 0 0 2px 0;
     }
     .local-group-body .group-summary {
-      font-size: 0.76rem;
+      font-size: 0.875rem;
       color: var(--text-secondary);
       line-height: 1.45;
       margin-bottom: 4px;
@@ -2716,7 +2716,7 @@
       display: flex;
       flex-direction: column;
       gap: 3px;
-      font-size: 0.73rem;
+      font-size: 0.875rem;
       line-height: 1.45;
     }
     .local-group-details .group-detail {
@@ -2742,7 +2742,7 @@
       display: inline-block;
       padding: 6px 14px;
       border-radius: 8px;
-      font-size: 0.73rem;
+      font-size: 0.82rem;
       font-weight: 650;
       text-decoration: none;
       transition: all 0.2s;
