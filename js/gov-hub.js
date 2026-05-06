@@ -3434,7 +3434,7 @@ const ENTITY_LOGOS = {
   'ouray-county': '',
   'weedc': '',
   'nucla-gov': '',
-  'norwood': '',
+  'norwood': '<img src="logo/Norwood.png" alt="Norwood Colorado" loading="lazy">',
   'regional': '',
 };
 
