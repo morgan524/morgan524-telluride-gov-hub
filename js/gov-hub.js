@@ -2688,6 +2688,39 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Man charged in Colorado firebomb attack on demonstrators to plead guilty to murder",
+    source: "Telluride Times",
+    date: "May 7, 2026",
+    firstSeen: "2026-05-07",
+    newsTopic: "public-safety",
+    copy: "A man who threw Molotov cocktails at demonstrators on Boulder's Pearl Street Mall last year, killing an 82-year-old woman and injuring a dozen others, is set to plead guilty to murder in state court. He still faces federal hate crime charges and potential death penalty for what prosecutors say was a planned attack targeting people perceived as connected to Israel.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_b30b6aed-46e8-5a99-9fb6-c77bfd748db0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg?resize=300%2C200"
+  },
+  {
+    title: "The man who firebombed Colorado demonstrators in 2025, killing 1, is sentenced to life in prison",
+    source: "Telluride Times",
+    date: "May 7, 2026",
+    firstSeen: "2026-05-07",
+    newsTopic: "public-safety",
+    copy: "The man who firebombed Colorado demonstrators in 2025, killing 1, is sentenced to life in prison.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/state/article_0edbe8ac-df62-5ec8-8825-57c179fc633b.html",
+    img: ""
+  },
+  {
+    title: "Man accused of firebombing Colorado demonstrators pleads guilty to murder",
+    source: "Telluride Times",
+    date: "May 7, 2026",
+    firstSeen: "2026-05-07",
+    newsTopic: "public-safety",
+    copy: "Man accused of firebombing Colorado demonstrators pleads guilty to murder.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/state/article_67fbbc41-28b9-5ed3-99f1-824332d7dbf7.html",
+    img: ""
+  },
+  {
     title: "Art for all",
     source: "Telluride Times",
     date: "May 7, 2026",
@@ -2708,17 +2741,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/obituaries/article_0fde58b6-845c-47a4-af53-0733fb89b0bb.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/92/b92397ab-fccb-4ed9-9d43-2eb1808a2886/69fb527eae2f8.image.jpg?resize=300%2C321"
-  },
-  {
-    title: "Man charged in Colorado firebomb attack on demonstrators to plead guilty to murder",
-    source: "Telluride Times",
-    date: "May 7, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "public-safety",
-    copy: "A man who threw Molotov cocktails at demonstrators on Boulder's Pearl Street Mall last year, killing an 82-year-old woman and injuring a dozen others, is set to plead guilty to murder in state court. He still faces federal hate crime charges and potential death penalty for what prosecutors say was a planned attack targeting people perceived as connected to Israel.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_b30b6aed-46e8-5a99-9fb6-c77bfd748db0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg?resize=300%2C200"
   },
   {
     title: "A late spring snowstorm slams Colorado, closing schools and disrupting commuters",
@@ -3100,8 +3122,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "April 30, 2026",
     firstSeen: "2026-05-07",
     newsTopic: "infrastructure",
-    copy: "SMC BOCC OWTS Variance Application for Slator Aplin, the owner of Lot 1 & 2, Blk Q in Ophir. The applicant seeks a Variance to the Minimum Setbacks as stated in Table 7-1 of the San Miguel County On-Site Wastewater…",
-    claudeSummary: false,
+    copy: "The County Board of Health will consider wastewater treatment regulations on May 20th, while the County Commissioners will review a tree removal application for High Meadow Ranch on Wilson Mesa and a lot line vacation request for Fall Creek Subdivision lots.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
     img: ""
   },
@@ -3144,8 +3166,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "April 29, 2026",
     firstSeen: "2026-05-07",
     newsTopic: "education",
-    copy: "Though defeated Saturday, April 25, by non-league Delta High School, Telluride High School’s girls’ soccer team likely wouldn’t have had difficulty putting the loss far behind, if not forgetting it altogether.",
-    claudeSummary: false,
+    copy: "The Lady Miners fell 4-0 to top-ranked Crested Butte at home, though they kept it close at 1-0 through halftime after both teams returned from spring break looking rusty. Telluride managed only a few shot attempts while fatigue became a factor as Crested Butte pulled away in the second half.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/sports/article_1547cf0b-aff1-4760-ad71-a65da629237d.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/78/97808b59-fa26-4d43-b82e-f3a51e40c652/69efd9a9df84d.image.jpg?resize=300%2C200"
   },
@@ -3214,28 +3236,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_d99c2f0a-ffc0-4d79-aee1-fa0042d83a5e.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/51/f51b09a3-51ab-4ae2-9366-80f32d7f6b90/69efcf9a79ae9.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Mountain Village approves emergency ordinance for water use",
-    source: "Telluride Times",
-    date: "April 26, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "government",
-    copy: "Mountain Village approved emergency water restrictions in March due to severe drought conditions, with snow water equivalent at just 9% of median and spring runoff already peaked. The ordinance limits outdoor watering to three days per week during overnight hours only and allows new buildings to get occupancy permits without completed landscaping to save water.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_176574ee-5386-4f7a-bb01-f660d0e0e751.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/f4/7f4a4336-692d-4b29-951f-d2bd922f4fe9/69ed120c7443d.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "MV town council briefed about investigation of former mayor",
-    source: "Telluride Times",
-    date: "April 25, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "government",
-    copy: "Mountain Village council heard an update on the investigation into former mayor's involvement in a ski resort purchase offer during the recent strike and mountain closure. The third-party investigation has conducted 21 interviews instead of the expected 10-15 and will take 2-4 more weeks to complete. Council is deciding whether to waive attorney-client privilege before releasing the public report, expected by late May.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_cf8a6058-6209-4936-a446-44c2f15a13af.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/28/5288590f-2f6c-40a9-9d32-31b6f7ff8f5e/69ed071dd778e.image.jpg?resize=300%2C182"
   },
   {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
@@ -3510,17 +3510,6 @@ const COMMUNITY_EVENTS = [
 
 // ── Bot-managed event arrays (populated every 6h by content-refresh.js) ──
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "French Happy Hour at the Alibi",
-    link: "https://koto.org/event/french-happy-hour-at-the-alibi/",
-    description: "Practice speaking in French with other French speakers in an informal setting at the Alibi. Light snacks are provided and beverages are available to purchase at the bar. Space is limited, sign up at www.telluridelibrary.org.",
-    pubDate: "2026-05-07T17:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "The Alibi, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Up-off Gymnastics, Dance, and Spanish",
     link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-05-08/",
@@ -4085,17 +4074,6 @@ const HUMANE_SOCIETY_ANIMALS = [
     photo: "https://new-s3.shelterluv.com/profile-pictures/494cc8f70068b840e583017a12f16cff/a3966796a280e1ac287456798bea0bcd.jpeg",
     profileUrl: "https://www.shelterluv.com/embed/animal/213577110",
     summary: "Young Dog • Terrier, Yorkshire, Yorkie • Female"
-  },
-  {
-    id: "TEL-A-178",
-    name: "PENDING ADOPTION - Butch",
-    species: "Dog",
-    breed: "Mixed Breed (Large)",
-    ageGroup: "Young Puppy",
-    sex: "Male",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/3a0c95b3f6af0df50a2d4dad63dd7b08/ce618e06f73464e04cdc890596449a9d.jpeg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/213577155",
-    summary: "Young Puppy • Mixed Breed (Large) • Male"
   },
   {
     id: "TEL-A-179",
@@ -5115,6 +5093,78 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_c5a54e8f-2fa6-42a2-ba94-3a3828e137ff.html",
     address: "333 & 305 W. Colorado Ave, Telluride, CO",
     noticeKey: "rfp-flooring-333-305-colorado"
+  },
+  {
+    title: "Public Meeting -- Onsite Wastewater Treatment Systems Regulation (Board of Health)",
+    entity: "San Miguel County Board of Health",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "The San Miguel County Board of Health will consider regulatory options related to Colorado Regulation 43 for onsite wastewater treatment systems during their May 20, 2026 meeting. The meeting will provide opportunity for public comment and participation. Written comments must be received by May 19, 2026.",
+    deadline: "May 19, 2026",
+    expires: "2026-05-20",
+    dates: "4/30",
+    papers: ["ttimes_0430"],
+    url: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
+    address: "333 West Colorado Ave, 2nd floor, Telluride, CO 81423",
+    noticeKey: "boh-wastewater-reg43-052026"
+  },
+  {
+    title: "Public Hearing -- Tree Removal Application (Elm Creek Reserve High Meadow Ranch)",
+    entity: "San Miguel County Board of Commissioners",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "Cari Johnson on behalf of VM West LLC has applied for tree removal permits on Elm Creek Reserve's High Meadow Ranch on Wilson Mesa across five parcels. The Board of County Commissioners will hold a public meeting on May 20, 2026 at 9:30 AM. Written comments must be received by May 12, 2026.",
+    deadline: "May 12, 2026",
+    expires: "2026-05-20",
+    dates: "4/30",
+    papers: ["ttimes_0430"],
+    url: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
+    address: "Wilson Mesa parcels #478301200005, #478301300006, #478313007001, #478313200015, #478312200001",
+    noticeKey: "tree-removal-elmcreek-478301200005"
+  },
+  {
+    title: "Public Hearing -- Lot Line Vacation (Fall Creek Subdivision No. 2)",
+    entity: "San Miguel County Board of Commissioners",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "Ray Bowers on behalf of Cigmire LLC seeks a subdivision exemption for lot line vacation between Lots 51 and 52 in Fall Creek Subdivision No. 2 to increase buildability of lot 52. Public hearing scheduled for May 20, 2026 at 9:30 AM. Written comments must be received by May 11, 2026.",
+    deadline: "May 11, 2026",
+    expires: "2026-05-20",
+    dates: "4/30",
+    papers: ["ttimes_0430"],
+    url: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
+    address: "Fall Creek Subdivision No. 2, Lots 51-52 (parcels #456318203006, #456318203005)",
+    noticeKey: "lot-line-vacation-fallcreek-456318203006"
+  },
+  {
+    title: "Property Tax Exemption -- Senior Citizens and Veterans with Disability",
+    entity: "San Miguel County Assessor",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "San Miguel County Assessor announces property tax exemption applications for qualifying senior citizens (65+), veterans with 100% service-connected disability, gold star veteran spouses, and qualified senior primary residential classification. Applications must be submitted by July 15, with late applications accepted until August 15.",
+    deadline: "July 15, 2026",
+    expires: "2026-08-15",
+    dates: "4/30",
+    papers: ["ttimes_0430"],
+    url: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
+    address: "San Miguel County",
+    noticeKey: "property-tax-exemption-2026"
   }
 ];
 
