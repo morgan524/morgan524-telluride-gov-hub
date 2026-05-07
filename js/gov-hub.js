@@ -1443,6 +1443,10 @@ async function enrichKOTOEvent(item) {
 
 // ── Fetch KOTO Community Calendar Events (upcoming only) ──
 async function fetchKOTONews() {
+  // Reads from KOTO_COMMUNITY_EVENTS, populated server-side every 6h
+  if (typeof KOTO_COMMUNITY_EVENTS !== 'undefined' && Array.isArray(KOTO_COMMUNITY_EVENTS) && KOTO_COMMUNITY_EVENTS.length > 0) {
+    return KOTO_COMMUNITY_EVENTS;
+  }
   const KOTO_CAL_URL = 'https://koto.org/calendars/category/community-calendar/';
   // Try to scrape KOTO community calendar via CORS proxy
   try {
@@ -1517,6 +1521,10 @@ async function fetchKOTONews() {
 
 // ── Fetch Wilkinson Public Library Events ──
 function fetchWilkinsonEvents() {
+  // Reads from WILKINSON_EVENTS, populated server-side every 6h
+  if (typeof WILKINSON_EVENTS !== 'undefined' && Array.isArray(WILKINSON_EVENTS) && WILKINSON_EVENTS.length > 0) {
+    return WILKINSON_EVENTS;
+  }
   const libBase = 'https://telluridelibrary.libcal.com/event/';
   const libHome = 'https://telluridelibrary.org/events/';
   return [
@@ -3498,6 +3506,12 @@ const COMMUNITY_EVENTS = [
     beneficiary: "Tri-County Health Network"
   }
 ];
+
+// ── Bot-managed event arrays (populated every 6h by content-refresh.js) ──
+const KOTO_COMMUNITY_EVENTS = [];
+const WILKINSON_EVENTS = [];
+const HUMANE_SOCIETY_ANIMALS = [];
+
 
 // ── Local Group Recurring Meetings ──
 // Generates upcoming meeting dates from recurring schedules so they appear on the Meetings tab
