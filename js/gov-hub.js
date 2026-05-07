@@ -3596,9 +3596,20 @@ function renderCardActions(item) {
 
 // Only show Board, Council, Commission, and similar governmental meetings
 // (excludes recreational events like "Open Roller Skating", "Movie Night", etc.)
+// Meeting bodies to hide from the Gov-Hub tab permanently.
+// Add a body's full title substring (case-insensitive) to exclude it.
+const HIDDEN_MEETING_BODIES = [
+  'fair board',
+  'parks & recreation commission',
+  'parks and recreation commission'
+];
+
 const GOV_MEETING_PATTERN = /board|council|commission|work\s*session|hearing|planning|zoning|harc|ecology|drb|design\s*review|budget|ordinance|executive|legislative|caucus|quorum|town\s*hall|roundtable|stakeholder|housing\s*code\s*update|\bssr\b/i;
 
 function isGovernmentalMeeting(item) {
+  // Check against the permanent hidden-bodies list first
+  const titleLow = (item.title || '').toLowerCase();
+  if (HIDDEN_MEETING_BODIES.some(b => titleLow.includes(b))) return false;
   // Cached sources (smart, mv, school, fire, med, norwood, ophir, localgroup) are already curated meetings
   if (['smart', 'mv', 'school', 'fire', 'med', 'norwood', 'ophir', 'airport', 'localgroup'].includes(item.source)) return true;
   // For dynamic feeds (telluride, county), filter by title
@@ -4625,17 +4636,6 @@ const LOCAL_GROUP_SCHEDULES = [
     href: 'https://tellurideelks.org',
     note: 'Board/House Committee meets 2nd Thursdays at 5:30 PM.',
     logo: '/logo/Elks.png'
-  },
-  {
-    name: 'TMVOA',
-    title: 'TMVOA Board Meeting',
-    rule: [3],            // 3rd occurrence
-    dayOfWeek: 4,         // Thursday
-    time: 'TBD — see website',
-    locations: ['113 Lost Creek Ln, Suite A, Mountain Village'],
-    href: 'https://tmvoa.org/meetings-events/events/',
-    note: 'Telluride Mountain Village Owners Association. Check website for time confirmation.',
-    logo: '/logo/TMVOA Logo.png'
   }
 ];
 
