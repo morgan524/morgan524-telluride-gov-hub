@@ -18,13 +18,13 @@ const COUNTY_CALENDAR_URL = 'https://sanmiguelcountyco.gov/RSSFeed.aspx?ModID=58
 // ── News feeds ──
 const NEWS_FEEDS = [
   {
-    url: 'https://telluride.gov/RSSFeed.aspx?ModID=1&CID=Town-News-1',
+    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=1&CID=Town-News-1',
     source: 'telluride',
     sourceLabel: 'Town of Telluride',
     category: 'Town News'
   },
   {
-    url: 'https://telluride.gov/RSSFeed.aspx?ModID=1&CID=Marshals-Department-12',
+    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=1&CID=Marshals-Department-12',
     source: 'telluride',
     sourceLabel: 'Town of Telluride',
     category: "Marshal's Dept"
@@ -42,7 +42,7 @@ const NEWS_FEEDS = [
     category: 'Alert'
   },
   {
-    url: 'https://telluride.gov/RSSFeed.aspx?ModID=63&CID=All-0',
+    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=63&CID=All-0',
     source: 'telluride',
     sourceLabel: 'Town of Telluride',
     category: 'Alert'
@@ -201,8 +201,6 @@ const COUNTY_CIVICCLERK_IDS = {
   'Board of County Commissioners Work Session|2026-04-08': 986,
   'Planning Commission|2026-04-02': 1025,
   'San Miguel County: Planning Commission|2026-04-02': 1025,
-  'Board of County Commissioners Meeting|2026-04-22': 865,
-  'Board of County Commissioners Work Session|2026-04-29': 985,
 };
 
 // Map: event ID → specific agenda file ID (for direct agenda PDF links)
@@ -302,8 +300,45 @@ async function fetchCountyMeetings() {
 const COUNTY_CACHE_DATE = '2026-03-25';
 
 const COUNTY_CACHED_DATA = [
+  // ── March 2026 ──
+  {
+    date: 'March 25, 2026',
+    time: '9:30 AM - 3:00 PM',
+    title: 'Board of County Commissioners Meeting',
+    type: 'bocc',
+    location: '305 W Colorado Ave, Telluride, CO 81435',
+    civicClerkId: 864,
+    note: null
+  },
+  {
+    date: 'March 26, 2026',
+    time: '9:30 AM - 12:00 PM',
+    title: 'Planning Commission and Board of County Commissioners Joint Work Session',
+    type: 'planning',
+    location: '333 West Colorado Ave, 2nd Floor, Telluride, CO 81435',
+    civicClerkId: 971,
+    note: 'Joint session -- Accelerated Housing Review, Forestry Code, and related topics.'
+  },
   // ── April 2026 ──
-  // Removed April 1 & April 8 BOCC meetings (>7 days past)
+  {
+    date: 'April 1, 2026',
+    time: '9:30 AM - 3:00 PM',
+    title: 'Board of County Commissioners Meeting',
+    type: 'bocc',
+    location: '305 W Colorado Ave, Telluride, CO 81435',
+    civicClerkId: 882,
+    note: null
+  },
+  {
+    date: 'April 8, 2026',
+    time: '9:30 AM - 3:00 PM',
+    title: 'Board of County Commissioners Work Session',
+    type: 'bocc',
+    location: '305 W Colorado Ave, Telluride, CO 81435',
+    civicClerkId: 986,
+    note: null
+  },
+  // April 6-17 Spring Break -- no BOCC meetings
   {
     date: 'April 22, 2026',
     time: '9:30 AM - 3:00 PM',
@@ -321,7 +356,7 @@ const COUNTY_CACHED_DATA = [
     location: '333 West Colorado Ave, 2nd Floor, Telluride, CO 81435',
     civicClerkId: null,
     agendaUrl: 'https://www.sanmiguelcountyco.gov/DocumentCenter/View/14206/April-SSR-No-5-Meeting-Packet',
-    note: 'Event date: April 27, 2026 Event Time: 1:30 PM - 3:30 PM Location: 333 West Colorado Ave, 2nd Floor, Telluride, CO 81435'
+    note: '2-hour working session of the Stakeholder Strategic Roundtable for the SMC Housing Code Update. Agenda: Recap of Project Objectives (5 min) -- Accelerated Housing Review (25 min) -- Draft Code Recommendations (85 min) -- Closing (5 min). Zoom: 860 9725 9982 / passcode 731354 (https://us06web.zoom.us/j/86097259982).'
   },
   {
     date: 'April 29, 2026',
@@ -470,128 +505,6 @@ function mergeCountyMeetings(rssMeetings, cachedMeetings) {
   return [...filteredRss, ...futureCached];
 }
 
-// ══════════════════════════════════════════════════════════════
-// ── Ouray County (cached, auto-refreshed by content-refresh.js) ──
-// ══════════════════════════════════════════════════════════════
-//
-// Two boards scraped from CivicPlus AgendaCenter RSS:
-//   - Board of County Commissioners: ouraycountyco.gov/AgendaCenter BOCC category
-//   - Planning Commission: ouraycountyco.gov/AgendaCenter Planning-Commission category
-//
-// TO UPDATE MANUALLY: https://ouraycountyco.gov/AgendaCenter/Planning-Commission-2
-// and https://ouraycountyco.gov/495/Agendas-Minutes
-
-const OURAY_BOCC_URL = 'https://ouraycountyco.gov/495/Agendas-Minutes';
-const OURAY_PC_URL   = 'https://ouraycountyco.gov/AgendaCenter/Planning-Commission-2';
-const OURAY_CACHE_DATE = '2026-05-06';
-
-const OURAY_CACHED_DATA = [
-  {
-    date: 'May 6, 2026',
-    title: 'Planning Commission Work Session',
-    board: 'pc',
-    agendaUrl: 'https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1008'
-  }
-];
-
-function getOurayMeetings() {
-  const boardUrls = { bocc: OURAY_BOCC_URL, pc: OURAY_PC_URL };
-  return OURAY_CACHED_DATA.map(m => {
-    const eventDate = localDate(m.date);
-    const link = m.agendaUrl || boardUrls[m.board] || OURAY_BOCC_URL;
-    return {
-      title: m.title,
-      link,
-      description: m.note || '',
-      eventDate,
-      eventDates: '',
-      eventTimes: '',
-      location: '541 4th St, Ouray, CO 81427',
-      source: 'ouray',
-      sourceLabel: 'Ouray County',
-      category: 'Meeting',
-      canceled: false,
-      hasAgenda: !!m.agendaUrl
-    };
-  });
-}
-
-// ══════════════════════════════════════════════════════════════
-// ── Town of Ridgway (cached — site blocks automated scraping) ──
-// ══════════════════════════════════════════════════════════════
-//
-// Two boards, static schedule (townofridgway.colorado.gov blocks bots):
-//   - Town Council: 2nd and 4th Tuesday each month
-//   - Planning Commission: 1st Tuesday each month
-//
-// TO UPDATE: https://townofridgway.colorado.gov/i-want-to/ridgway-town-council
-// and https://townofridgway.colorado.gov/i-want-to/ridgway-planning-commission
-
-const RIDGWAY_TC_URL  = 'https://townofridgway.colorado.gov/i-want-to/ridgway-town-council';
-const RIDGWAY_PC_URL  = 'https://townofridgway.colorado.gov/i-want-to/ridgway-planning-commission';
-const RIDGWAY_CACHE_DATE = '2026-05-06';
-
-const RIDGWAY_CACHED_DATA = [
-  {
-    date: 'May 12, 2026',
-    title: 'Town Council Regular Meeting',
-    board: 'tc',
-    agendaUrl: null
-  },
-  {
-    date: 'May 26, 2026',
-    title: 'Town Council Regular Meeting',
-    board: 'tc',
-    agendaUrl: null
-  },
-  {
-    date: 'June 2, 2026',
-    title: 'Planning Commission Meeting',
-    board: 'pc',
-    agendaUrl: null
-  },
-  {
-    date: 'June 9, 2026',
-    title: 'Town Council Regular Meeting',
-    board: 'tc',
-    agendaUrl: null
-  },
-  {
-    date: 'June 23, 2026',
-    title: 'Town Council Regular Meeting',
-    board: 'tc',
-    agendaUrl: null
-  },
-  {
-    date: 'July 7, 2026',
-    title: 'Planning Commission Meeting',
-    board: 'pc',
-    agendaUrl: null
-  }
-];
-
-function getRidgwayMeetings() {
-  const boardUrls = { tc: RIDGWAY_TC_URL, pc: RIDGWAY_PC_URL };
-  return RIDGWAY_CACHED_DATA.map(m => {
-    const eventDate = localDate(m.date);
-    const link = m.agendaUrl || boardUrls[m.board] || RIDGWAY_TC_URL;
-    return {
-      title: m.title,
-      link,
-      description: m.note || '',
-      eventDate,
-      eventDates: '',
-      eventTimes: '',
-      location: '201 N Railroad St, Ridgway, CO 81432',
-      source: 'ridgway',
-      sourceLabel: 'Ridgway',
-      category: 'Meeting',
-      canceled: false,
-      hasAgenda: !!m.agendaUrl
-    };
-  });
-}
-
 // ══════════════════════════════════════════════════════════
 // ── SMART Transit meetings (cached data, instant load) ──
 // ══════════════════════════════════════════════════════════
@@ -605,10 +518,31 @@ function getRidgwayMeetings() {
 // Update SMART_CACHE_DATE so you know when it was last refreshed.
 
 const SMART_BOARD_URL = 'https://smarttelluride.colorado.gov/board-meetings';
-const SMART_CACHE_DATE = '2026-04-17';
+const SMART_CACHE_DATE = '2026-03-24';
 
 const SMART_CACHED_DATA = [
-  // Removed April 9 SMART meeting (>7 days past)
+  {
+    date: 'April 9, 2026',
+    title: 'SMART Board of Directors',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    note: 'Next scheduled meeting -- agenda and packet will be posted closer to the date.'
+  },
+  {
+    date: 'March 12, 2026',
+    title: 'SMART Board of Directors',
+    agendaUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART%20Board%20Agenda_March%2012th%202026_distributed.pdf',
+    packetUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART%20Board%20meeting%20packet_March%2012th%202026.pdf',
+    special: false
+  },
+  {
+    date: 'January 8, 2026',
+    title: 'SMART Board of Directors',
+    agendaUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART%20Board%20Agenda_January%208th%202026_distributed.pdf',
+    packetUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART%20Board%20meeting%20packet_January%208th%202026.pdf',
+    special: false
+  }
 ];
 
 // ══════════════════════════════════════════════════════════════════
@@ -660,8 +594,27 @@ const MV_CACHED_DATA = [
     special: false,
     location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
   },
+  {
+    date: 'March 19, 2026',
+    time: '2:00 PM',
+    title: 'Town Council Meeting',
+    board: 'tc',
+    agendaUrl: 'https://townofmountainvillage.com/site/assets/files/48429/march_19-_2026_town_council_meeting_agenda.pdf',
+    packetUrl: 'https://townofmountainvillage.com/site/assets/files/48439/march_19-_2026_town_council_meeting_packet.pdf',
+    special: false,
+    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
+  },
   // ── Design Review Board ──
-  // Removed April 2 DRB meeting (>7 days past)
+  {
+    date: 'April 2, 2026',
+    time: '10:00 AM - 2:00 PM',
+    title: 'Design Review Board',
+    board: 'drb',
+    agendaUrl: 'https://townofmountainvillage.com/site/assets/files/48456/april_2-_2026_design_review_board_meeting_agenda.pdf',
+    packetUrl: null,
+    special: false,
+    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
+  },
   {
     date: 'May 7, 2026',
     time: '10:00 AM - 3:00 PM',
@@ -682,6 +635,16 @@ const MV_CACHED_DATA = [
     special: false,
     location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
   },
+  {
+    date: 'March 5, 2026',
+    time: '10:00 AM',
+    title: 'Design Review Board',
+    board: 'drb',
+    agendaUrl: 'https://townofmountainvillage.com/site/assets/files/48270/march_5-_2026_design_review_board_meeting_agenda.pdf',
+    packetUrl: 'https://townofmountainvillage.com/site/assets/files/48363/march_5-_2026_design_review_board_meeting_packet_reduced.pdf',
+    special: false,
+    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
+  }
 ];
 
 function getMVMeetings() {
@@ -794,6 +757,25 @@ const SCHOOL_CACHED_DATA = [
     special: false,
     location: 'Bridal Veil District Conference Room / Zoom'
   },
+  // ── Recent (with agendas) ──
+  {
+    date: 'March 16, 2026',
+    time: '3:30 PM',
+    title: 'Board of Education Work Session',
+    agendaUrl: 'https://files.smartsites.parentsquare.com/3403/31626_ws_packet.pdf',
+    packetUrl: null,
+    special: false,
+    location: 'Bridal Veil District Conference Room / Zoom'
+  },
+  {
+    date: 'March 17, 2026',
+    time: '5:15 PM',
+    title: 'Board of Education Monthly Meeting',
+    agendaUrl: 'https://files.smartsites.parentsquare.com/3403/31726_mm_packet.pdf',
+    packetUrl: null,
+    special: false,
+    location: 'Bridal Veil District Conference Room / Zoom'
+  }
 ];
 
 function getSchoolMeetings() {
@@ -850,6 +832,33 @@ const FIRE_CACHED_DATA = [
     location: '131 W Columbia Ave, Telluride, CO 81435',
     note: 'Next scheduled meeting -- agenda typically posted a few days before.'
   },
+  {
+    date: 'March 17, 2026',
+    time: '5:30 PM',
+    title: 'Board of Directors Meeting',
+    agendaUrl: 'https://www.telluridefire.com/files/3d3e8ccfb/Agenda+-March+17th%2C+2026.pdf',
+    packetUrl: null,
+    special: false,
+    location: '131 W Columbia Ave, Telluride, CO 81435'
+  },
+  {
+    date: 'February 17, 2026',
+    time: '5:30 PM',
+    title: 'Board of Directors Meeting',
+    agendaUrl: 'https://www.telluridefire.com/files/286ab5c22/Agenda+-February+17th%2C+2026.pdf',
+    packetUrl: null,
+    special: false,
+    location: '131 W Columbia Ave, Telluride, CO 81435'
+  },
+  {
+    date: 'January 20, 2026',
+    time: '5:30 PM',
+    title: 'Board of Directors Meeting',
+    agendaUrl: 'https://www.telluridefire.com/files/cc0cf8d03/Agenda+-January+20th%2C+2026.pdf',
+    packetUrl: null,
+    special: false,
+    location: '131 W Columbia Ave, Telluride, CO 81435'
+  }
 ];
 
 function getFireMeetings() {
@@ -927,6 +936,54 @@ const MED_CACHED_DATA = [
     location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom',
     note: null
   },
+  // ── Recent ──
+  {
+    date: 'March 26, 2026',
+    time: '8:30 AM - 11:30 AM',
+    title: 'Regular Board Meeting',
+    agendaUrl: 'https://www.tellmed.org/files/651140033/THD+Reg+BOD+Mtg+3.26.26+Agenda.pdf',
+    packetUrl: null,
+    special: false,
+    location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom',
+    note: null
+  },
+  // ── Recent ──
+  {
+    date: 'March 9, 2026',
+    time: '1:00 PM - 2:00 PM',
+    title: 'Special Board Meeting',
+    agendaUrl: 'https://www.tellmed.org/files/a6a367fff/THD+Special+Bd+Mtg+Agenda+3.9.25.pdf',
+    packetUrl: null,
+    special: true,
+    location: 'TMC Wellness Annex / Zoom'
+  },
+  {
+    date: 'March 5, 2026',
+    time: '8:00 AM - 8:30 AM',
+    title: 'Special Board Meeting',
+    agendaUrl: 'https://www.tellmed.org/files/5e604df7f/THD+Special+Bd+Mtg+Agenda+3.5.25.pdf',
+    packetUrl: null,
+    special: true,
+    location: 'TMC Wellness Annex / Zoom'
+  },
+  {
+    date: 'February 26, 2026',
+    time: '8:30 AM - 11:30 AM',
+    title: 'Regular Board Meeting',
+    agendaUrl: 'https://www.tellmed.org/files/06f7d8cca/THD+Reg+BOD+Mtg+2.26.26+Agenda.pdf',
+    packetUrl: null,
+    special: false,
+    location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom'
+  },
+  {
+    date: 'January 22, 2026',
+    time: '8:30 AM',
+    title: 'Regular Board Meeting',
+    agendaUrl: 'https://www.tellmed.org/files/3252b5faf/THD+BOD+Mtg+1.22.26+Agenda.pdf',
+    packetUrl: null,
+    special: false,
+    location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom'
+  }
 ];
 
 function getMedMeetings() {
@@ -977,11 +1034,17 @@ const NORWOOD_BOT_URL = 'https://www.norwoodtown.com/board-of-trustees-meetings'
 const NORWOOD_PZ_URL = 'https://www.norwoodtown.com/planning-and-zoning-commission-meetings';
 const NORWOOD_NWC_URL = 'https://www.norwoodtown.com/nwc-meetings';
 const NORWOOD_SAN_URL = 'https://www.norwoodtown.com/norwood-sanitation-district-meeting';
-const NORWOOD_CACHE_DATE = '2026-04-18';
+const NORWOOD_CACHE_DATE = '2026-03-24';
 
 const NORWOOD_CACHED_DATA = [
   // ── Board of Trustees ──
-  // Removed April 8 BOT meeting (>7 days past)
+  {
+    date: 'April 8, 2026',
+    title: 'Board of Trustees Meeting',
+    board: 'bot',
+    agendaUrl: null,
+    note: 'Next scheduled meeting -- agenda posted before the meeting.'
+  },
   {
     date: 'May 12, 2026',
     title: 'Board of Trustees Meeting',
@@ -994,17 +1057,54 @@ const NORWOOD_CACHED_DATA = [
     board: 'bot',
     agendaUrl: null
   },
+  {
+    date: 'March 11, 2026',
+    title: 'Board of Trustees Meeting',
+    board: 'bot',
+    agendaUrl: 'https://www.norwoodtown.com/files/89dac45c4/03.11.2026+Board+of+Trustee+Agenda+ADA.pdf'
+  },
   // ── Planning & Zoning Commission ──
   {
-    date: 'April 20, 2026',
+    date: 'April 27, 2026',
     title: 'Planning and Zoning Commission Meeting',
     board: 'pz',
-    agendaUrl: 'https://www.norwoodtown.com/files/9f7d271ce/04.20.2026+P%26Z+BOA+AGENDA.pdf'
+    agendaUrl: null,
+    note: 'Next scheduled P&Z meeting -- agenda posted before the meeting.'
+  },
+  {
+    date: 'February 23, 2026',
+    title: 'Planning and Zoning Commission Meeting',
+    board: 'pz',
+    agendaUrl: 'https://www.norwoodtown.com/planning-and-zoning-commission-meetings'
   },
   // ── Water Commission ──
-  // Removed April 14 Norwood Water Commission meeting (>6 days past, cleaned 2026-04-20)
+  {
+    date: 'April 14, 2026',
+    title: 'Norwood Water Commission Meeting',
+    board: 'nwc',
+    agendaUrl: null,
+    note: 'Next scheduled NWC meeting -- agenda posted before the meeting.'
+  },
+  {
+    date: 'March 10, 2026',
+    title: 'Norwood Water Commission Meeting',
+    board: 'nwc',
+    agendaUrl: 'https://www.norwoodtown.com/nwc-meetings'
+  },
   // ── Sanitation District ──
-  // Removed April 9 Sanitation District meeting (>7 days past)
+  {
+    date: 'April 9, 2026',
+    title: 'Norwood Sanitation District Meeting',
+    board: 'san',
+    agendaUrl: null,
+    note: 'Next scheduled Sanitation District meeting -- agenda posted before the meeting.'
+  },
+  {
+    date: 'March 12, 2026',
+    title: 'Norwood Sanitation District Meeting',
+    board: 'san',
+    agendaUrl: 'https://www.norwoodtown.com/norwood-sanitation-district-meeting'
+  }
 ];
 
 function getNorwoodMeetings() {
@@ -1051,7 +1151,7 @@ function getNorwoodMeetings() {
 
 const OPHIR_GA_URL = 'https://townofophir.colorado.gov/general-assembly-2';
 const OPHIR_PZ_URL = 'https://townofophir.colorado.gov/planning-and-zoning';
-const OPHIR_CACHE_DATE = '2026-04-17';
+const OPHIR_CACHE_DATE = '2026-03-24';
 
 const OPHIR_CACHED_DATA = [
   // ── General Assembly ──
@@ -1074,14 +1174,50 @@ const OPHIR_CACHED_DATA = [
     board: 'ga',
     agendaUrl: null
   },
+  {
+    date: 'March 17, 2026',
+    title: 'General Assembly Meeting',
+    board: 'ga',
+    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/GAMeetingPacketMaterials-March17%2C2026-%282%29.pdf'
+  },
+  {
+    date: 'February 17, 2026',
+    title: 'General Assembly Meeting',
+    board: 'ga',
+    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/GAMeetingPacket-February17%2C2026.pdf'
+  },
   // ── Planning & Zoning Commission ──
-  // Removed April 9 P&Z meeting (>7 days past)
+  {
+    date: 'April 9, 2026',
+    title: 'Planning and Zoning Commission Meeting',
+    board: 'pz',
+    agendaUrl: null,
+    note: 'Next scheduled P&Z meeting -- agenda posted before the meeting.'
+  },
   {
     date: 'May 14, 2026',
     title: 'Planning and Zoning Commission Meeting',
     board: 'pz',
     agendaUrl: null
   },
+  {
+    date: 'March 11, 2026',
+    title: 'Planning and Zoning Commission Meeting',
+    board: 'pz',
+    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/OphirPZ_March2026_packet.pdf'
+  },
+  {
+    date: 'February 12, 2026',
+    title: 'Planning and Zoning Commission Meeting',
+    board: 'pz',
+    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/Feb2026_OphirPZ_packet.pdf'
+  },
+  {
+    date: 'January 15, 2026',
+    title: 'Planning and Zoning Commission Meeting',
+    board: 'pz',
+    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/OphirPZ_Jan26_packet.pdf'
+  }
 ];
 
 function getOphirMeetings() {
@@ -1223,61 +1359,81 @@ async function loadAISummaries() {
 }
 
 // ── Manual/fallback summaries (preserved from original) ──
-// Last updated: 2026-04-22T18:00 (automated scan — no new agendas detected since 2026-04-18. MV TC Apr 23 agenda PDF confirmed to exist (file 48629) but still behind Cloudflare challenge, content unreadable. BOCC Apr 29 work session & Open Space Apr 27 agendas not yet posted. School Apr 20/27/28, Fire Apr 21, Med Apr 23, SMART all still without posted agendas. Hospital District has no April meeting listed on tellmed.org board-meetings page. Election Commission Apr 29, Parks & Rec Apr 29, THA Subcommittee Apr 23 agendas not yet posted on CivicWeb.)
+// Last updated: 2026-04-03T12:00 (automated scan — Town Council confirmed Apr 28 (was ~Apr 21); new THA meetings Apr 23/24/28 discovered; Election Commission Apr 29 new; Parks & Rec rescheduled to Apr 29; Liquor Licensing Apr 23 new; School District Special Meeting Apr 20 added to cache; HARC Apr 15 Published=true, summary current; SMRHA Apr 13 1pm Zoom confirmed; no new agendas posted for BOCC Apr 22/29, SMART Apr 9, MV Council Apr 23, School Apr 20/27/28, Fire ~Apr 21, Med Apr 23; BOCC Apr 8 work session event 986 — JS portal, no agenda visible yet)
 const MANUAL_SUMMARIES = {
-  "county|2026-04-27|Open Space Commission Meeting":
-    "Open Space Commission monthly meeting -- review of regional open space initiatives, easement and conservation matters, and committee updates. Comments due to staff by Monday at 4:00 PM. (Stub entry to keep summary lookup correctly scoped per-meeting.)",
+  // ── Telluride ──
+  'telluride|2026-03-31|Town Council':
+    '⚖️ SECOND READING — Adoption of Colorado Wildfire Resiliency Code (Ordinance, expected to pass) · Public hearing: Stender Residence HARC appeal (continued to Apr 28) · 2026 Proposed Construction Projects work session · 2026 Open Space Commission Work Plan · Deed-restricted property sales (Silver Jack Unit 205, Element 52 Unit SW-102) · Workforce housing deed amendments (Overlook Lots 17 & 2) · Acquisition of Wilkin Court Unit H · Executive session: Town Manager evaluation',
 
-  "county|2026-04-27|Housing Code Update -- SSR Meeting #5":
-    "⚖️ WORKING SESSION (2 hours) of the Stakeholder Strategic Roundtable for the SMC Housing Code Update. AGENDA: Recap of Project Objectives (5 min) · ACCELERATED HOUSING REVIEW discussion (25 min) -- review the County's April 8, 2026 LUCA Draft against the SSR-recommended language; the County's draft removed the voluntariness phrasing in 3-1501, struck the PUD-with-rezoning exclusion (now eligible for 90-day review), deleted Initial Zoning/Rezoning from the ineligible list, removed the two-step Planning-Commission-plus-BOCC backstop in 3-1503, and deleted the 10-unit project cap in Article 7 · DRAFT CODE RECOMMENDATIONS (85 min) -- review and refine code revisions before the Spring 2026 community-review phase · Closing",
+  'telluride|2026-03-31|Telluride Housing Authority':
+    'Workforce housing deed amendments for Overlook at Telluride Subdivision (Lots 17 & 2) · Formation of a Resident Advisory Committee',
 
-  "telluride|2026-04-15|Historic & Architectural Review Commission":
-    "PUBLIC HEARING (applicant req. to continue w/o discussion): 238 N Pine St (Lot 18B) — small-scale demolition + new construction (950–2,500 sq ft) + THAS secondary structure repositioning (continued from Feb 18) · PUBLIC HEARING (applicant req. to continue w/o discussion): 238 N Pine St (Lot 18A) — small-scale demolition + new construction (continued from Feb 18) · WORK SESSION: 208 S Fir St (Block 23) — large-scale mixed-use replacement structure (5,000+ sq ft, Commercial Zone, NIBA LLC / Shift Architects) · Colorado Wildfire Resiliency Code work session · Community Engagement — Historic Preservation discussion",
+  // ── County ──
+  'county|2026-04-01|Board of County Commissioners Meeting':
+    'PUBLIC HEARING: Resolution 2026-14 — Adoption of Colorado Wildfire Resiliency Code (enforcement July 1, 2026) · Planning: Paradigm Festival temporary use permit (Egnar) · Housing: Elizabeth Forsythe exception request to Rural Homes For Sale/For Locals regs (§5.2.4 & §5.2.5) · Affordable housing update · Tax abatement petitions: RRMV LLC (ABMT2026-7) and Epic Ridge Properties (ABMT2026-13), both recommended deny · Public Health: Septic Regulation update · Ophir Pass gate progress · Resolution 2026-15: Telluride Times designated legal newspaper of record · Litigation update Q1 · Executive session: DRMS mining regulations MOU',
 
-  "county|2026-04-22|Board of County Commissioners Meeting":
-    "PRESENTATION: Historical Commission 2026 Work Plan (Ted Wilson, Historical Commission; Janet Kask, Dir. of Parks & Open Space, 45 min) · Planning Department update (Kaye Simonson, 20 min) · Miramonte Space Planning update (Bordogna, Biggs) · Tax Abatement petition ABMT2026-7 RRMV LLC — staff recommended DENY · Consent: IGAs with TRAA, Mountain Village & Ophir for noxious weed management · Miramonte Boiler Replacement — updated Construction Agreement w/ Carl Kelly Plumbing (bonding incl.) · Deed Restriction V2016 amendments — Unit 314-13 Society Dr. (Cela White/Tanner Small), 182 Alexander Overlook (Cormac Bourke/Kathleen Morgan) · Armor Proseal asphalt installation agreement · JBBS 2027 contract amendment · Attorney matters (possible executive session)",
+  // ── Telluride HARC ──
+  'telluride|2026-04-15|Historic & Architectural Review Commission':
+    'PUBLIC HEARING: 238 N Pine St (Lot 18B) — small-scale demolition of non-rated THAS structure + new construction (950–2,500 sq ft) + repositioning of THAS secondary structure (continued from Feb 18) · 238 N Pine St (Lot 18A) — small-scale demolition + new construction (continued from Feb 18) · WORK SESSION: 208 S Fir St — large-scale mixed-use replacement structure (5,000+ sq ft, Commercial Zone, NIBA LLC) · Colorado Wildfire Resiliency Code work session · Community Engagement — Historic Preservation discussion',
 
-  "county|2026-04-23|Citizen's Weed Advisory Board":
-    "Updates from Vegetation Control & Management: Summer 2026 synopsis, Forest Service Agreement, Noxious Weed Agreements, Cost Share Program · Discussion: new opportunity spraying on private landowner property · Grant funds appropriation to landowners; whether funds should cover SMC VC&M · Vacant Chair position — discussion of filling role · Approval of minutes (3/27/2025, 10/20/2025)",
+  // ── County BOCC Work Session Apr 8 ──
+  'county|2026-04-08|Board of County Commissioners Work Session':
+    'Work session — agenda details pending. Full packet expected on CivicClerk portal (event 986) by Monday Apr 6. Topics TBD.',
 
-  "smrha|2026-04-13|SMRHA Board Meeting":
-    "WORKSESSION: Mapping deed-restricted units for SMRHA website publication · Town of Telluride housing lottery update — Silver Jack 202 & 205, Element 52 SW-102 (22 applications received, drawing Apr 24) · Continuing qualification verification: AHU 100% response (108 completed, 6 in THA legal review), EDU 96% response · Piñon Park: 5 homes currently on market",
+  // ── SMART ──
+  // (smart|2026-04-09 -- agenda not yet posted, will add when available)
 
-  "telluride|2026-04-28|Town Council":
-    "PUBLIC HEARING (continued): Stender Residence HARC appeal — small-scale + insubstantial-scale new construction, Lot C Block 3 Halls Addition, N Aspen St (continued from Dec 16, Feb 24, Mar 31) · WORK SESSION: Emergency Evacuation Planning & Municipal Disaster Management (Shannon Armstrong, SM County Emergency Mgr, 60 min) · Update from Telluride Ski and Golf (Steve Swenson) · Manager’s Report: Q1 Goals & Objectives update, Master Lease Program update · Proclamations: May Mental Health Awareness Month, May 9 Valley Floor Day · P&Z appointment: Piper Miller · SECOND READING: Ordinance authorizing sale of deed-restricted Element 52 Unit SW-102 (398 S Davis St) · SECOND READING: Ordinance authorizing sale of deed-restricted Silver Jack Unit 205 (155 W Pacific Ave) · WORK SESSION: Black Hills Energy franchise agreement discussion · Marshal’s Dept annual report · Fire Ban approval process discussion",
+  // ── Mountain Village ──
+  'mv|2026-04-02|Design Review Board':
+    'Design review: Lot 164-B1R, San Joaquin Rd (new home + height variance) · Lot 155, San Joaquin Rd (new home) · Lot 1171R, San Joaquin Rd (new home) · Lot 224-B, Snowdrift Ln (new home) · Lot 523-R, Russell Dr (new home) · Lot 533, Russell Dr (new home) · 101 Snowfield Dr (GE encroachment, Lot 360) · 102 Yellow Brick Rd (Lot 17) · 111 San Joaquin Rd (GE encroachment, Lot 154) · 112 Autumn Ln (conditional use permit + ADU, Lot 382-R)',
 
-  "telluride|2026-04-28|Telluride Housing Authority":
-    "Consideration of adoption of a Policy Statement regarding the Affordable Housing Waitlist (DeLanie Young-Tapson, Allie Slaten) · Discussion on the formation of a Resident Advisory Committee (continuing from Mar 31)",
+  // (mv|2026-04-23 -- Town Council, agenda not yet posted, will add when available)
 
-  "telluride|2026-04-23|Planning & Zoning Commission":
-    "WORK SESSION: Gargoyle Building Minor Subdivision / Lot Line Adjustment — 138 E Colorado Ave (Historic Commercial zone, Telluride Vargas Seiger LLC / Alpine Planning) · Colorado Wildfire Resiliency Code — Land Use Code updates work session (continuing from Mar 12 & Mar 26)",
+  // ── School District R-1 ──
+  // (school|2026-04-20 -- Special Meeting 5:15pm, agenda not yet posted, will add when available)
+  // (school|2026-04-27 -- Work Session 3:30pm, agenda not yet posted, will add when available)
+  // (school|2026-04-28 -- Monthly Meeting 5:15pm, agenda not yet posted, will add when available)
 
-  "telluride|2026-04-23|Liquor Licensing Authority":
-    "🍽️ 7 Temporary Modification of Premises (parklet/outdoor) applications for summer 2026: Steamies Burger Bar (300 W Colorado), The Butcher and The Baker (201 E Colorado), Floradora Saloon (103 W Colorado), Brown Dog Pizza/Lost Dog Pizza (110 E Colorado), Stronghouse Brew Pub (283 S Fir St), There... (629 W Pacific), The Telluride Company/Mischief Managed (212 W Colorado) · PUBLIC HEARINGS — Special Event Permits: One to One Mentoring (Food & Vine Festival, Oak St Plaza, Jun 14) · Telluride Education Foundation (Party in the Park, Town Park, May 30) · Mountainfilm (Art Walk May 22 at Telluride Arts; Festival May 23-24 at Elks Park; May 25 at Town Park) · Telluride Bluegrass Beer Booth (5 permits for Bluegrass Festival 2026, June 17-21 at Town Park)",
+  // ── Fire District ──
+  // (fire|2026-04-21 -- agenda not yet posted, will add when available)
 
-  "telluride|2026-04-24|Telluride Housing Authority Subcommittee Special Meeting":
-    "SMRHA LOTTERY DRAWING (10am, Rebekah Hall) — Three deed-restricted units: Silver Jack 202 (3-bed/2-bath, ~$405,507, Tier 1 Town Constructed) & Silver Jack 205 (2-bed/1-bath, ~$368,620, Tier 1 Town Constructed) at 155 W Pacific Ave · Element 52 SW-102 (2-bed/1-bath, ~$352,529, Tier 2 Mitigation) at 398 S Davis St · 22 applications received; qualified household list posted Apr 15; appeal deadline Apr 17 5pm MST",
+  // ── County Planning Commission ──
+  // (county|2026-04-02|Planning Commission -- CANCELED, agenda posted at CivicClerk event 1025, agenda file 1652)
 
-  "norwood|2026-04-08|Board of Trustees Meeting":
-    "Swearing in of new Trustees (Bernice White, Liza Tanguay) & Mayor (Candy Meehan) · Marijuana license renewals: Blue Cottage LLC / Mary Jane Medicinals (1510 Grand Ave) and Alpine Wellness (1630 Grand Ave) · Special event liquor license: Norwood Chamber of Commerce (1455 Pinion St) · Norwood Post / Telluride Times update (Erin Spiellane) · Public notices newspaper designation: SM Basin Forum or Telluride Times · Pocket Park bid — RMC Builders · Discussion: town speed limit reduction · Sheriff's Office written report · Parks & Recreation District report · Music on the Mesa report",
+  // ── BOCC (upcoming) ──
+  // (county|2026-04-06 to 2026-04-17 -- CANCELED, spring break recess, no BOCC meetings)
+  // (county|2026-04-22 -- BOCC meeting scheduled, agenda not yet posted, will add when available)
+  // (county|2026-04-29 -- BOCC work session scheduled, agenda not yet posted, will add when available)
+  // (county|2026-04-27 -- Open Space Commission 4pm, agenda not yet posted, will add when available)
 
-  "norwood|2026-04-20|Planning and Zoning Commission Meeting":
-    "PUBLIC HEARING: Norwood Public Schools Re-Zoning Application — 2028 Maverick Way, Norwood · Norwood Public Schools Site Development Review · Dark Sky Coalition Update (Hailey Bruinsma) · San Miguel County Building Department Code Updates (Matt Gonzales & Serge Morin) · Land Use Code Progress Update · Approval of March 16, 2026 minutes",
+  // ── SMRHA ──
+  // (smrha|2026-04-13 -- SMRHA board meeting 1pm via Zoom, packet not yet posted, will add when available)
 
-  "telluride|2026-04-08|Ecology Commission":
-    "WORKSESSION: Trash Bash event final planning · 2027 Climate Action Plan (CAP) update discussion — Buildings & Energy focus area",
+  // ── Telluride Town Council (next) ──
+  // (telluride|2026-04-28|Town Council -- confirmed Apr 28, agenda not yet posted, will add when available)
+  // (telluride|2026-04-28|Telluride Housing Authority -- confirmed Apr 28 2:30pm, agenda not yet posted)
 
-  "telluride|2026-04-09|Telluride Housing Authority Subcommittee Special Meeting":
-    "Household size exception requests (§103.3B) — 15 applicants (Brumley, Candelaria, Criado, Cristadoro & Worthington, Davis & Gulic, Douglas, Goldstein, Kittler, Rigby, Schiefelbein, Seibal, Siemens, Bonilla Sosa & Elera Marino, Sundeen, Territo) seeking exceptions to Telluride Affordable Housing Guidelines minimum household size requirement",
+  // ── Telluride Sub-commissions (Apr 23-24) ──
+  // (telluride|2026-04-23|Planning & Zoning Commission -- Apr 23 5:30pm, agenda not yet posted)
+  // (telluride|2026-04-23|Liquor Licensing Authority -- Apr 23 3pm, new meeting discovered, agenda not yet posted)
+  // (telluride|2026-04-23|Telluride Housing Authority Subcommittee Special Meeting -- Apr 23 9am, agenda not yet posted)
+  // (telluride|2026-04-24|Telluride Housing Authority Subcommittee Special Meeting SMRHA Lottery Drawing -- Apr 24 10am, agenda not yet posted)
+  // (telluride|2026-04-24|Telluride Housing Authority Subcommittee Special Meeting Boarding House Master Lease Lottery -- Apr 24 8:30am, agenda not yet posted)
+  // (telluride|2026-04-29|Election Commission -- Apr 29 3pm, new meeting discovered, agenda not yet posted)
+  // (telluride|2026-04-29|RESCHEDULED Parks & Recreation Commission -- Apr 29 12pm, rescheduled from Apr 15, agenda not yet posted)
 
-  "county|2026-04-22|Board of County Commissioners Regular Meeting":
-    "Meeting scheduled for 9:30 AM at County offices · No specific agenda items available in provided text",
+  // ── Medical Center / Hospital District ──
+  // (med|2026-04-23 -- Regular Board Meeting confirmed in cache, agenda not yet posted)
 
-  "county|2026-04-27|Board of County Commissioners Special Meeting":
-    "Meeting scheduled for April 29, 2026 at 9:30 AM · Location: 333 West Colorado Ave, 2nd Floor · No specific agenda items provided in source material",
+  // ── Telluride Sub-commissions (April 2026) ──
+  'telluride|2026-04-01|Telluride Housing Authority Subcommittee':
+    'Exception request: Mills & Lusk household size exception (§103.3B & §105.4F) · Discussion: §110.2 lender/mortgage exceptions for April 24, 2026 housing lottery',
 
-  "county|2026-05-06|One Time Event":
-    "Meeting at SO Annex in Norwood · Limited agenda details available · May 11th evening session"
+  'telluride|2026-04-01|Commission for Community Assistance, Arts & Special Events':
+    'Public hearing: KOTO Radio street closures for Live @ the Drive (N Pine St, Jul 30 & Aug 27) · Calendar dates: KOTO, Telluride Rep Theatre (Impetus May 29), Augment Music Project concert series, SAF Oak St Park SHOW series · SM Basin Rodeo date change to Jul 31–Aug 1 · Palm Arts Dance winter performance (Dec 12–13) · Banners: Telluride Mountain Run, SM Resource Center DV Awareness Month',
+
+  'telluride|2026-04-02|Vending Subcommittee':
+    'Seasonal de-brief: Summer 2025 & Winter 2025-2026 vending compliance reports · Private property vending compliance · Vendor selection for 2026 summer season: North Spruce Park, Gondola Plaza, Colorado Ave (5 sites incl. N Oak St, Elks Park, S Spruce Mall, S Fir & W Pacific)',
 };
 
 // ── Unified summary lookup: AI first, then manual fallback ──
@@ -1386,189 +1542,181 @@ const WHY_THIS_MATTERS = [
   // ── PUD / Zoning / Development ──
   {
     match: /carhenge|700 w pacific/i,
-    decision: 'A PUD for the old Carhenge site at 700 W Pacific, framed as affordable housing.',
-    who: 'Folks looking for somewhere they can actually afford, the neighbors next door, and anyone watching how density gets handled in the west end.',
-    stage: 'Work session -- no binding vote, but the direction set here shapes the formal application that follows.',
-    impact: 'The site could add deed-restricted workforce housing close to the gondola. Density, design, and traffic are all on the table. Work sessions are when the framing gets settled, before formal review narrows the options.',
-    context: 'We have watched this play out before. VooDoo built at roughly $1M a unit and the rents had to follow the math. How this PUD gets structured -- density, financing, deed restrictions -- decides whether it actually serves the workers it is named after, or quietly drifts upmarket like so many before it.'
+    decision: 'Whether to approve a Planned Unit Development (PUD) for the former Carhenge site at 700 W Pacific Ave as affordable housing.',
+    who: 'Residents seeking affordable housing, adjacent property owners, and anyone concerned about density in the west end of town.',
+    stage: 'Work session -- no binding vote, but direction given here shapes the formal application.',
+    impact: 'This site could add deed-restricted workforce housing units near the gondola. Design, density, and traffic impacts will be evaluated. Work sessions are the best time for public input before formal review narrows options.',
+    context: 'Affordable housing is among the most pressing issues in Telluride. Recent projects like VooDoo have shown that building at $1M/unit makes truly affordable rents extremely difficult. How this PUD is structured -- density, financing, deed restrictions -- will determine whether it actually serves lower-income workers or becomes another project that primarily benefits higher-AMI residents.'
   },
   {
     match: /chair\s*7/i,
-    decision: 'Rezoning or development at the Chair 7 base area.',
-    who: 'Anyone who lives or skis here. Chair 7 was dedicated as Open Space District in 1979 -- ski uses only, no residential, no commercial.',
-    stage: 'Check the agenda for whether this is a work session, public hearing, or vote.',
-    impact: 'A commercial use here would be the first crack in the open-space designation, and the precedent travels. The original proposal helped fuel the Measure 300 campaign. In September 2025 Council said they would not include hotel plans here, but rezoning conversations have a way of returning.',
-    context: 'The original Chair 7 plan called for a luxury hotel up to 5.5 stories. Stack it next to Shandoka and the gondola redesign and you have roughly 120,000 sq ft of new commercial space pulling 150-200 new employees with no housing plan to match. Measure 300 picked up about 40% YES, which is the community signaling that scale is the real argument.'
+    decision: 'Whether to approve rezoning or development at the Chair 7 base area.',
+    who: 'All Telluride residents and visitors -- Chair 7 was dedicated as "Open Space District" in 1979 (ski uses only, no residential or commercial).',
+    stage: 'Check agenda for whether this is a work session, public hearing, or vote.',
+    impact: 'Any commercial development here would set a precedent for converting dedicated open space to commercial use. The Chair 7 proposal was a primary catalyst for the Measure 300 campaign. In September 2025, Town Council stated they would no longer include hotel plans in this area, but rezoning discussions may continue.',
+    context: 'The original Chair 7 proposal included a luxury hotel up to 5.5 stories. Combined with Shandoka and the gondola redesign, these projects totaled ~120,000 sq ft of new commercial space requiring 150-200+ new employees -- with no corresponding housing plan. The community response (Measure 300 receiving 40% YES votes) demonstrated significant concern about this scale of development.'
   },
   {
     match: /society\s*turn/i,
-    decision: 'Whether to advance the Society Turn PUD -- about 400,000 sq ft of mixed use at the valley entrance, including a hospital, hotel, medical offices, retail, and employee housing.',
-    who: 'Everyone in the region, whether they realize it or not. The hospital piece is roughly 10% of the footprint. The other 90% is commercial.',
-    stage: 'Check the agenda -- the PUD has cleared four of five approval steps. Final approval may be on this one.',
-    impact: 'It would be the largest single project in the region\'s history. Traffic studies leaned on March 2020 data, when the valley was effectively closed. Surveys showed about 75% of residents did not realize the hospital was only 10% of the project, and about 79% had no idea the full scope was 400,000 sq ft.',
-    context: 'The hospital district picks up 2.6 acres essentially free, in exchange for carrying water on a 400,000 sq ft project it does not control. The developer reportedly said they would walk if Measure 300 passed. There is still no wildfire evacuation analysis for the site, which sits at the single way in and out of the canyon.'
+    decision: 'Whether to advance the Society Turn PUD -- a ~400,000 sq ft mixed-use development at the valley entrance including a hospital, hotel, medical offices, retail, and employee housing.',
+    who: 'Every resident of the region. The hospital component (~44,000 sq ft) is roughly 10% of the total development. The remaining ~90% is commercial.',
+    stage: 'Check agenda -- the PUD has completed 4 of 5 approval steps. Final approval may be pending.',
+    impact: 'This would be the largest development project in the region\'s history. Traffic studies relied on March 2020 data (during COVID lockdown). Surveys show ~75% of residents were unaware the hospital was only 10% of total development, and ~79% didn\'t know the full scope was 400,000 sq ft.',
+    context: 'The hospital district receives 2.6 acres essentially free (valued $1-2M), but defending a 400,000 sq ft PUD it doesn\'t control. The developer reportedly threatened withdrawal if Measure 300 passed. No wildfire evacuation analysis has been completed for the site, which sits at the single entry/exit point for the entire valley.'
   },
   {
     match: /shandoka/i,
-    decision: 'A large parking structure at Shandoka.',
-    who: 'Telluride residents, visitors, MV commuters, and the neighborhoods within sight and sound of the project.',
-    stage: 'Check the agenda for the current phase.',
-    impact: 'Nine hundred spaces would be one of the largest single structures the valley has built. Combined with Chair 7 and the gondola redesign, you are looking at a real escalation in commercial infrastructure. Parking decisions drive traffic, visitor counts, and the feel of the place.',
-    context: 'Doug Sanders, who has been working in local land development for two decades, testified that these projects cannot be evaluated one at a time -- the combined scope sits around $500M and could push the town\'s effective population from roughly 2,200 toward 3,500. Whether you agree with him or not, the pattern of treating big projects in isolation is exactly how we got here.'
-  },
-  {
-    match: /(stakeholder strategic roundtable|\bssr\b|housing code update)/i,
-    decision: 'Whether the SSR\'s recommended limits on the 90-day Accelerated Housing Review get folded back into the County\'s April 8, 2026 LUCA Draft before it goes to community review and the BOCC.',
-    who: 'Anyone who could be a future PUD applicant or neighbor of one in unincorporated San Miguel County. As written, the County\'s LUCA would let projects of any size -- including new PUDs that need rezoning and subdivision -- run through 90-day administrative review with the procedure left undefined.',
-    stage: 'SSR working session #5, the last in the Project Foundation phase. The SSR is advisory; their consensus shapes what the BOCC ultimately adopts. Community review follows in spring 2026, then BOCC adoption.',
-    impact: 'Five places where the County\'s draft pulled back from the SSR\'s recommendations: (1) the line in 3-1501 reminding readers the program is voluntary -- only required if the County wants Prop 123 funding, which HB26-1360 zeroed out this fiscal year -- was struck. (2) PUDs with rezoning or subdivision were dropped from the ineligible list, and the eligible-projects clause was widened to match. (3) Initial Zoning and Rezoning were removed from the ineligible list. (4) The two-step Planning-Commission-plus-BOCC default in 3-1503 is gone, with nothing specified in its place. (5) Article 7\'s 10-unit cap and contiguous-land limit are gone, leaving no project-size ceiling on fast-track review.',
-    context: 'Funded by Colorado\'s Proposition 123 Local Planning Capacity Grant; positions the County for Prop 123 Fast Track Approval funding. The Code Update does not satisfy SB24-174, which still requires a separate Housing Action Plan by January 1, 2028. The redline -- SSR additions in blue, County deletions in red -- is mirrored on this site under Code Changes & Accelerated Review. The box canyon has been threading the housing-versus-process needle since the 70s; this round goes further than most.'
+    decision: 'Whether to approve a large parking structure at Shandoka.',
+    who: 'Telluride residents, visitors, Mountain Village commuters, and adjacent neighborhoods.',
+    stage: 'Check agenda for current phase.',
+    impact: 'The proposed 900-space garage would be one of the largest structures in the region. Combined with Chair 7 and gondola redesign proposals, these projects represent a significant escalation of commercial infrastructure. Parking capacity decisions directly influence traffic volume, visitor numbers, and the character of the town.',
+    context: 'Doug Sanders, with 20 years in local land development, testified that these projects cannot be evaluated in isolation -- the combined scope approaches $500M and could push the town\'s effective population from ~2,200 toward 3,500.'
   },
   {
     match: /accelerated\s*housing\s*review/i,
-    decision: 'Amending the Land Use Code to set 90-day fast-track review timelines for qualifying affordable housing applications.',
-    who: 'Affordable-housing developers, the neighbors of the sites they pick, and the planning staff who have to actually finish a review in 90 days.',
-    stage: 'Work session -- joint Planning Commission and BOCC discussion of the proposed code language.',
-    impact: 'A faster track could push more housing through, but it also tightens the window for public input on individual projects. The driver is HB23-1123. The real question is how the County balances speed against community participation.',
-    context: 'Housing affordability is the recurring local fight. VooDoo\'s numbers -- $27.4M for 27 units, with a $23M balloon coming due around 2032 -- are a reminder that building faster does not solve the math problem. At a million dollars a unit, truly affordable rents do not pencil without serious subsidy.'
+    decision: 'Whether to amend the Land Use Code to implement fast-track 90-day review timelines for qualifying affordable housing development applications.',
+    who: 'Developers proposing affordable housing, neighbors of potential development sites, and planning staff who must complete reviews within shortened timelines.',
+    stage: 'Work session -- joint Planning Commission and BOCC discussion of proposed code language.',
+    impact: 'Faster review timelines could accelerate housing production, but also reduce the window for public input on individual projects. This implements state requirements from HB23-1123. The question is how the county balances speed with community participation.',
+    context: 'Housing affordability is a central regional concern. VooDoo\'s financial difficulties ($27.4M for 27 units, $23M balloon payment due ~2032) show that merely building faster doesn\'t solve the fundamental math problem: at $1M/unit, truly affordable rents are impossible without significant subsidy.'
   },
   {
     match: /comprehensive\s*plan/i,
-    decision: 'A look at the town\'s Comprehensive Plan -- the document that quietly runs every zoning and land use decision downstream of it.',
-    who: 'Every property owner, resident, and business in the jurisdiction. The Comp Plan sets the framework for what gets built where.',
-    stage: 'Check the agenda -- usually a work session or public hearing.',
-    impact: 'Comp Plan changes shape development for decades. This is one of the most consequential things a planning body ever takes up. Public input here matters more than at any individual project hearing.',
-    context: 'Consultant spending has run about $64M over 2017-2025, with firms like DesignWorkshop showing up on both the planning side and on specific development proposals. Who frames the plan -- and how -- decides whether it serves the residents already here or mainly clears runway for new commercial growth.'
+    decision: 'Review or update of the town\'s Comprehensive Plan -- the foundational document guiding all future land use and zoning decisions.',
+    who: 'Every property owner, resident, and business in the jurisdiction. The Comp Plan sets the framework for what can be built where.',
+    stage: 'Check agenda -- typically presented as work session or public hearing.',
+    impact: 'Comprehensive Plan changes can reshape development patterns for decades. This is one of the most consequential items a planning body can take up. Public input at this stage has the greatest influence on long-term outcomes.',
+    context: 'Recent years have seen $64M in consultant spending (2017-2025), much of it directed by firms like DesignWorkshop that simultaneously work on specific development proposals. How the Comp Plan is framed -- and by whom -- shapes whether future development serves existing residents or primarily facilitates new commercial growth.'
   },
 
   // ── Wildfire / Safety ──
   {
     match: /wildfire\s*resiliency\s*code|wildland\s*urban\s*interface|wui\s*code/i,
-    decision: 'Adoption of Colorado\'s Wildfire Resiliency Code and/or the International Wildland Urban Interface (WUI) Code -- construction and land management standards for fire-prone areas.',
-    who: 'Anyone building or renovating in the district, anyone living near the trees, and the fire district that has to enforce and respond.',
-    stage: 'Check the agenda -- could be an adoption vote or still a work session.',
-    impact: 'These codes set building materials, defensible-space rules, and vegetation management standards. In a box canyon with one road out, wildfire preparedness is not theoretical. Adoption means new construction and major renovations have to meet stronger fire-resistance standards.',
-    context: 'Fire mitigation has been near the top of every regional priority list for a decade. Worth noting: the Society Turn PUD, sitting at the valley\'s only entry/exit, has not had a wildfire evacuation analysis done despite the size of what is being proposed.'
+    decision: 'Whether to adopt Colorado\'s Wildfire Resiliency Code and/or the International Wildland Urban Interface (WUI) Code, setting construction and land management standards in fire-prone areas.',
+    who: 'All property owners (new construction requirements), current residents (evacuation and defensible space), and the fire district (enforcement and response capacity).',
+    stage: 'Check agenda -- may be adoption vote or work session.',
+    impact: 'These codes set building material requirements, defensible space mandates, and vegetation management standards. In a box canyon with one primary exit road, wildfire preparedness is an existential community concern. Adoption means new construction and renovations must meet enhanced fire-resistance standards.',
+    context: 'Fire mitigation has been identified as a top community priority for the region\'s future. Notably, the Society Turn PUD -- at the valley\'s single entry/exit point -- has not undergone a wildfire evacuation analysis despite its massive proposed scale.'
   },
 
   // ── Housing / Deed Restrictions ──
   {
     match: /deed\s*restrict|workforce\s*housing\s*deed|housing\s*authority/i,
-    decision: 'Modifications to a deed-restricted property sale or to the housing program rules themselves.',
-    who: 'Current and prospective deed-restricted owners and renters -- roughly a third of Telluride voters live in town-managed housing.',
-    stage: 'Check the agenda for whether this is one specific property or a broader policy change.',
-    impact: 'The deed-restriction terms decide who can live in these units, at what income, and at what price. Individual approvals quietly set precedents for the rest of the program. Policy changes can move the affordability needle for hundreds of households.',
-    context: 'The math is the math. Construction at $1M a unit and 50% AMI tenants ($42K a year) cannot cover financing without subsidy. Recent projects saw rents jump 60% in two years. Meanwhile Measure 2B authorized $64M in new Town debt -- about $132M with interest -- partially collateralized against housing fund revenue, which puts debt service in tension with keeping units affordable.'
+    decision: 'Whether to approve modifications to deed-restricted property sales or housing program rules.',
+    who: 'Current and prospective deed-restricted homeowners and renters -- roughly one-third of Telluride voters live in town-managed housing.',
+    stage: 'Check agenda for whether this is an individual property approval or policy change.',
+    impact: 'Deed restriction terms determine who can live in these units, at what income levels, and at what price. Changes to individual deeds can set precedents for the broader program. Policy changes can affect affordability for hundreds of households.',
+    context: 'The housing affordability paradox is acute: at $1M/unit construction costs, 50% AMI tenants ($42K/year) cannot cover financing. Recent projects saw 60% rent increases over two years. Meanwhile, Measure 2B authorized $64M in new Town debt (with $132M in interest) partially collateralized against housing fund revenue -- creating tension between debt service and keeping units affordable.'
   },
 
   // ── Budget / Finance ──
   {
     match: /budget\s*reduct|budget\s*session|funding.*staffing|proposed\s*construction\s*projects/i,
-    decision: 'Proposed spending, staffing, or capital projects.',
-    who: 'Anyone who pays the bills and anyone who uses the services.',
-    stage: 'Work session -- the place where input still actually changes the final budget.',
-    impact: 'The Town\'s budget has gone from about $10M in 2015 to roughly $95-100M in 2025, with 212 employees -- about one in ten of the population on the payroll. Capital project decisions made now decide which infrastructure investments move forward and which wait.',
-    context: 'Consultant spending alone totaled $64M over 2017-2025, jumping from $1.9M to $10.5M a year along the way. Measure 2B authorized $64M in additional debt -- closer to $197M with interest -- without specified projects, which leaves Council with broad spending authority by simple resolution. None of that is unique to here, but the scale is.'
+    decision: 'Review of proposed spending, staffing levels, or capital construction projects.',
+    who: 'All taxpayers and service recipients -- budget decisions determine what services are funded and what gets cut.',
+    stage: 'Work session -- input here shapes the final budget before formal adoption.',
+    impact: 'The Town of Telluride\'s budget has grown from ~$10M (2015) to ~$95-100M (2025), with 212 employees (~10% of the population). Capital project decisions at this stage determine which infrastructure investments move forward.',
+    context: 'Consultant spending alone has totaled $64M over 2017-2025, spiking from $1.9M to $10.5M annually. Measure 2B authorized $64M in additional debt (total cost ~$197M with interest) with no specified projects -- giving Town Council broad spending authority via simple resolution.'
   },
 
   // ── Gondola / SMART ──
   {
     match: /gondola|smart\s*board|smart\s*transit/i,
-    decision: 'SMART Board action on gondola operations, maintenance, capital planning, or the future of the free gondola between Telluride and Mountain Village.',
-    who: 'Every commuter, worker, and visitor who rides it, and every property taxpayer in the SMART district.',
-    stage: 'Check the agenda for the specific action items.',
-    impact: 'The gondola has been running since 1996 and is the spine of regional transit. The current funding agreement expires in 2027. Ballot Issue 3A approved roughly $8.2M a year in new tax revenue, but a replacement gondola is estimated at $120-150M and up -- meaning the gap between revenue and replacement cost is real.',
-    context: 'CORA records turned up more than $175,000 in consultant spending before 3A was even referred to the ballot, including $68K on polling (Keating Research) and $170K on project management (Kerry Donovan/Ulysses). "Friends of the Gondola" raised $130K, with $60K from TMVOA and $60K from the Four Seasons developer. The campaign sold the measure as funding "a new gondola." The actual revenue covers a fraction of replacement cost, which is worth holding in mind when 2027 arrives.'
+    decision: 'SMART Board decisions regarding gondola operations, maintenance, capital planning, or the future of the free gondola connecting Telluride and Mountain Village.',
+    who: 'Every commuter, worker, and visitor who uses the gondola, plus all property taxpayers in the SMART district.',
+    stage: 'Check agenda for specific action items.',
+    impact: 'The gondola (built 1996) is critical regional infrastructure. The current funding agreement expires in 2027. Ballot Issue 3A approved ~$8.2M/year in new tax revenue, but a replacement gondola is estimated at $120-150M+ -- leaving a significant funding gap.',
+    context: 'CORA records revealed over $175,000 in consultant spending before the 3A ballot referral, including $68K on polling (Keating Research) and $170K on project management (Kerry Donovan/Ulysses). "Friends of the Gondola" raised $130K, with $60K from TMVOA and $60K from the Four Seasons developer. The campaign marketed the measure as funding a "new gondola" but the actual revenue only covers a fraction of replacement cost.'
   },
 
   // ── BOCC / Lucarelli Litigation ──
   {
     match: /lucarelli|executive\s*session.*litigation/i,
-    decision: 'Executive session on the Lucarelli v. BOCC litigation around PUD enforcement in the Aldasoro / Diamond Ranch area.',
-    who: 'Property owners in the Aldasoro PUD, the broader community that has a stake in how zoning gets enforced consistently, and the county taxpayers funding the case.',
-    stage: 'Closed session -- the public does not see the discussion, but the call to settle or keep going has very public consequences.',
-    impact: 'The June 2024 ruling held that the 1991 PUD covers the entire Aldasoro area. The remaining litigation decides whether RETA fees (3/4 of 1% on property transfers) get enforced, generating transportation revenue, and whether density restrictions in the Sheep Ranch sub-district hold.',
-    context: 'This case is part of a longer pattern: historical land use commitments made to win approval get re-litigated decades later when development pressure picks up again. How the County handles this one signals whether PUD agreements made elsewhere can be relied on.'
+    decision: 'Executive session to discuss litigation strategy in the Lucarelli v. BOCC case regarding PUD enforcement in the Aldasoro/Diamond Ranch area.',
+    who: 'Property owners in the Aldasoro PUD area, the broader community with interest in zoning enforcement consistency, and county taxpayers funding the litigation.',
+    stage: 'Executive session -- closed to public, but the decision to settle or continue litigating has public consequences.',
+    impact: 'This case established that the 1991 PUD covers the entire Aldasoro area (plaintiffs won the 106 appeal in June 2024). The ongoing litigation determines whether RETA fees (3/4 of 1% on property transfers) will be enforced, generating transportation revenue, and whether density restrictions in the Sheep Ranch sub-district are upheld.',
+    context: 'The PUD case illustrates a broader pattern: historical land use commitments made to secure development approval being challenged or reinterpreted decades later. How the county handles this case signals whether PUD agreements across the region can be relied upon.'
   },
 
   // ── Medical Center / Hospital ──
   {
     match: /jensen\s*partners|healthcare\s*partnership|new\s*facility.*med|hospital\s*district/i,
-    decision: 'A possible healthcare partnership or new medical facility -- threaded into the Society Turn discussion.',
-    who: 'Everyone who relies on local healthcare, hospital district taxpayers, and the broader region the medical center serves.',
-    stage: 'Check the agenda -- special meetings usually mean live decisions are happening.',
-    impact: 'The hospital\'s future and the Society Turn PUD are knotted together. The district picks up 2.6 acres at Society Turn essentially free, but the hospital is only about 10% of a 400,000 sq ft project. Whatever partnership shape is approved now will set the cost and access picture for decades.',
-    context: 'The board is weighing significant proposals (Jensen Partners consulting). The Society Turn developer has reportedly conditioned the hospital land allocation on the broader PUD moving forward. Worth asking out loud: can the hospital secure a site without being tethered to 300,000+ sq ft of commercial development it does not control?'
+    decision: 'Whether to pursue a healthcare partnership and/or new medical facility -- potentially tied to the Society Turn development.',
+    who: 'All residents who rely on local healthcare, hospital district taxpayers, and the broader region served by Telluride Medical Center.',
+    stage: 'Check agenda -- special meetings indicate active decision-making.',
+    impact: 'The hospital\'s future is intertwined with the Society Turn PUD. The district receives 2.6 acres at Society Turn essentially free, but the hospital component is only ~10% of a 400,000 sq ft development. Partnership decisions made now will shape healthcare access and costs for decades.',
+    context: 'The hospital district board is weighing significant partnership proposals (Jensen Partners consulting). Meanwhile, the Society Turn developer has reportedly conditioned the hospital\'s land allocation on the broader PUD advancing. Community members may want to ask: can the hospital secure a site without being tied to 300,000+ sq ft of commercial development it doesn\'t control?'
   },
 
   // ── School District ──
   {
     match: /board\s*of\s*education|school\s*district|telluride\s*school/i,
-    decision: 'School board work on budget, staffing, facilities, and programs.',
-    who: 'Students, families, teachers, staff -- and every property owner whose taxes keep the district running, which around here is most of us whether we have kids in school or not.',
-    stage: 'Check the agenda for whether this is a work session, monthly meeting, or special session.',
-    impact: 'Doesn\'t sound like much until your kid\'s class size jumps by six and you\'re trying to figure out why. Decisions here ripple through what\'s offered in the classroom for years. The district is currently looking at roughly $655K in 2026-27 reductions, including teaching positions.',
-    context: 'The school sits inside the same growth pressure as everything else. New commercial projects keep increasing workforce demand, but they don\'t directly fund the schools that workforce sends kids to. Meanwhile housing costs make it harder every year for teachers and staff to live in the community they teach.'
+    decision: 'School board decisions on budget, staffing, facilities, and educational programs.',
+    who: 'Students, families, teachers, and staff -- plus all property taxpayers who fund the district.',
+    stage: 'Check agenda for whether this is a work session, monthly meeting, or special session.',
+    impact: 'Staffing and budget decisions directly affect class sizes, programs offered, and the quality of education. The district is considering 2026-27 budget reductions of ~$655K including cuts to teaching positions.',
+    context: 'The school district operates in a community under intense development pressure. New commercial projects (hotels, restaurants, retail) increase workforce demand but often don\'t directly generate school funding. Meanwhile, housing costs make it increasingly difficult for teachers and staff to live in the community they serve.'
   },
 
   // ── HB24-1107 / Land Use Judicial Review ──
   {
     match: /hb.?24.?1107|1107|fee.?shifting|attorney\s*fees.*land\s*use/i,
-    decision: 'Discussion or action tied to HB24-1107, the state law that has courts award attorney fees to prevailing governments when residents challenge local land use decisions involving 5+ units/acre residential development.',
-    who: 'Anyone who might ever take a development decision to court -- because the law puts the financial risk only on the resident\'s side. Citizens who lose pay government attorneys; developers who get denied face no parallel exposure.',
-    stage: 'Check the agenda for context.',
-    impact: 'The law changes the math on whether a citizen or neighborhood group can afford to seek judicial review. A federal constitutional challenge is pending (1:24-cv-01847-NRN). The law was lobbied through by the Colorado Contractors Association, with $2.6M+ in fees paid to the lobbyist.',
-    context: 'In a place with active PUD enforcement litigation (Lucarelli v. BOCC) and ongoing development disputes, this law matters. The statistics used to push the bill through were later shown to overstate the problem by a factor of four or five, which is the kind of detail that does not get cleaned up after a bill becomes law.'
+    decision: 'Discussion or action related to HB24-1107, which mandates courts award attorney fees to prevailing governments when citizens challenge local land use decisions involving residential development at 5+ units/acre.',
+    who: 'Any citizen or neighborhood group that might challenge a development approval. The law creates a one-sided financial penalty for losing -- citizens must pay government attorneys, but developers denied permits face no similar risk.',
+    stage: 'Check agenda for context.',
+    impact: 'This law fundamentally changes the risk calculus for citizens considering judicial review of land use decisions. A federal constitutional challenge is pending (Case 1:24-cv-01847-NRN). The law was lobbied by the Colorado Contractors Association through a lobbyist receiving $2.6M+ in fees.',
+    context: 'In a community with active PUD enforcement litigation (Lucarelli v. BOCC) and development disputes (Chair 7, Society Turn), this law directly threatens residents\' ability to seek judicial review. Statistics cited in support of the bill were later shown to be misleading -- actual case numbers were 4-5 times higher than claimed.'
   },
 
   // ── CORA / Transparency ──
   {
     match: /cora|open\s*records|public\s*records/i,
-    decision: 'CORA compliance and government transparency.',
-    who: 'Anyone who wants to know how public money is being spent -- which is to say, everyone, even if most of us never file a request.',
-    stage: 'Check the agenda for context.',
-    impact: 'CORA requests are how a lot of the actual numbers come to light around here -- consultant spending, ballot-measure funding, the financial structure behind housing projects.',
-    context: 'CORA on SMART turned up over $175,000 in consultant spending before the 3A ballot referral. How quickly governments respond to records requests is the practical measure of transparency. Slow responses and big fees are functionally a wall.'
+    decision: 'Issues related to Colorado Open Records Act compliance and government transparency.',
+    who: 'All community members who depend on transparent government. CORA is the primary tool for citizens to understand how public money is spent.',
+    stage: 'Check agenda for context.',
+    impact: 'CORA requests have been instrumental in uncovering the scale of consultant spending on the gondola project, the funding sources behind ballot measure campaigns, and the financial structure of housing projects.',
+    context: 'CORA requests regarding SMART revealed over $175,000 in consultant spending before the 3A ballot referral. Government responsiveness to records requests is a practical measure of transparency -- delays and excessive fees can effectively block public oversight.'
   },
 
   // ── Forestry / Natural Resources ──
   {
     match: /natural\s*resources.*forestry|forestry\s*practices/i,
-    decision: 'Land Use Code amendments around forestry practices and natural resource management on private land.',
-    who: 'Rural property owners, conservationists, and the broader community that depends on watershed health and lower wildfire risk.',
-    stage: 'Work session -- early policy discussion.',
-    impact: 'These rules shape how private landowners manage timber, which feeds back into wildfire risk, watershed health, and forest resilience. Surrounded as we are by national forest, the rules on private land matter more than they might somewhere flatter.',
-    context: 'Wildfire and water both keep showing up at the top of regional priority lists. Forestry practice cuts both ways -- improper logging worsens runoff and erosion and weakens the forest\'s ability to come back after fire.'
+    decision: 'Whether to amend the Land Use Code regarding forestry practices and natural resource management on private land.',
+    who: 'Rural property owners, environmental advocates, and the broader community affected by watershed health and wildfire risk.',
+    stage: 'Work session -- early-stage policy discussion.',
+    impact: 'Forestry regulations affect how private landowners manage timber, which in turn affects wildfire risk, watershed health, and ecosystem integrity. In a mountain community surrounded by national forest, these rules have outsized importance.',
+    context: 'Wildfire preparedness and water infrastructure protection have been identified as top regional priorities. Forestry practices directly affect both -- improper logging can increase runoff and erosion while reducing forest resilience to fire.'
   },
 
   // ── HARC / Historic Preservation ──
   {
     match: /harc|historic.*architectural.*review|national.*historic.*landmark|historic.*preservation|demolition.*historic/i,
-    decision: 'Exterior alterations, new construction, demolitions, or signage inside Telluride\'s National Historic Landmark District.',
-    who: 'The applicant, the neighbors, and everyone who walks the streetscape day to day.',
-    stage: 'Check the agenda -- HARC ranges from minor staff-level reviews to full commission hearings on bigger projects and demolitions.',
-    impact: 'Whatever HARC approves sits on the streetscape for the rest of our lives, and the precedents it sets travel. Demolition is the one that does not come back -- once a historic structure is gone, it is gone.',
-    context: 'Telluride is a designated National Historic Landmark District -- among the highest historic recognitions in the country. The pressure from luxury construction and resort expansion against that designation is the recurring fight, and HARC sits right in the middle of it. Larger projects that move through P&Z and Council often have their HARC review in parallel.'
+    decision: 'Whether to approve exterior alterations, new construction, demolitions, or signage within Telluride\'s National Historic Landmark District.',
+    who: 'Property owners seeking approvals, adjacent property owners, and all residents who value the town\'s historic character.',
+    stage: 'Check agenda -- HARC reviews can range from minor alterations (staff-level) to full commission hearings for large-scale projects and demolitions.',
+    impact: 'HARC decisions shape the physical character of Telluride\'s historic downtown and residential neighborhoods. Approvals set precedents for building scale, materials, and design. Demolition permits are effectively irreversible -- once a historic structure is gone, it cannot be restored.',
+    context: 'Telluride is a designated National Historic Landmark District -- one of the highest levels of historic recognition in the U.S. Development pressure from luxury construction and resort expansion creates ongoing tension between preservation and modernization. HARC also reviews projects tied to larger land use applications (Shandoka, Carhenge) that advance through P&Z and Council.'
   },
 
   // ── DRB / Design Review Board (Mountain Village) ──
   {
     match: /design\s*review\s*board|drb|mountain\s*village.*design/i,
-    decision: 'Architectural designs, site plans, and exterior modifications inside Mountain Village.',
-    who: 'Owners, developers, and the neighbors who live with whatever gets built.',
-    stage: 'Check the agenda for the specific projects on the docket.',
-    impact: 'The texture of MV gets settled at this table, one project at a time -- aesthetics, massing, materials. Big projects can move views, traffic patterns, and the feel of a whole road.',
-    context: 'Mountain Village runs its own design standards, separate from Telluride\'s HARC. Projects like the gondola terminal redesign and resort-area expansions go through DRB.'
+    decision: 'Whether to approve architectural designs, site plans, and exterior modifications within Mountain Village.',
+    who: 'Property owners, developers, and Mountain Village residents affected by building design and neighborhood character.',
+    stage: 'Check agenda for specific project reviews.',
+    impact: 'DRB decisions control building aesthetics, massing, and materials in Mountain Village. Large projects reviewed here can significantly affect views, traffic, and neighborhood character.',
+    context: 'Mountain Village has its own design standards separate from Telluride\'s HARC. Projects like the gondola terminal redesign and resort-area expansions go through DRB review.'
   },
 
-  // ── Fire District ──
+  // ── General fallback for Fire District ──
   {
     match: /fire\s*(protection\s*)?district|station\s*3/i,
-    decision: 'Fire district operations, apparatus, and facilities.',
-    who: 'Everyone inside the protection district -- response times and capabilities affect every property and person here.',
-    stage: 'Check the agenda for the specific items.',
-    impact: 'Station 3 updates and apparatus calls matter more in a remote mountain setting where mutual aid is hours away rather than minutes.',
-    context: 'The fire district is moving on wildfire resiliency code adoption alongside the town. As development keeps adding to the daily occupant load -- potentially 1,000+ across proposed projects -- fire and EMS capacity has to keep up, or the gap becomes the story.'
+    decision: 'Fire district operations, apparatus, and facilities decisions.',
+    who: 'All residents within the fire protection district -- fire and EMS response times and capabilities affect every property and person.',
+    stage: 'Check agenda for specific items.',
+    impact: 'Station 3 updates and apparatus decisions affect the district\'s capacity to respond to structure fires, wildfires, and medical emergencies in a remote mountain setting with limited mutual aid resources.',
+    context: 'The fire district is pursuing wildfire resiliency code adoption alongside the town. As development increases (potentially adding 1,000+ new daily occupants across proposed projects), fire and EMS capacity must keep pace.'
   }
 ];
 
@@ -1771,10 +1919,6 @@ const MEETING_ZOOM_LINKS = {
   // ── County ──
   'county|2026-03-25|Board of County Commissioners Special Meeting':
     'https://us02web.zoom.us/meeting/register/OtNb_dreTomuYTpzADMLGQ#/registration',
-
-  // ── SSR / Housing Code Update ──
-  'county|2026-04-27|Housing Code Update -- SSR Meeting #5':
-    'https://us06web.zoom.us/j/86097259982?pwd=M54xcez6wkm1ZEoL5K1791R7ZcCsLX.1',
 };
 
 // School District uses one consistent Zoom link for all meetings
@@ -1833,13 +1977,6 @@ const MEETING_PASSCODES = {
     id: '846 6324 0731',
     passcode: '464546',
     phone: '1-301-715-8592 or 1-312-626-6799'
-  },
-
-  // ── SSR / Housing Code Update ──
-  'county|2026-04-27|Housing Code Update -- SSR Meeting #5': {
-    id: '860 9725 9982',
-    passcode: '731354',
-    phone: '719-359-4580 or 720-707-2699'
   },
 
   // ── School District (consistent across meetings) ──
@@ -2242,11 +2379,11 @@ const LAND_USE_ISSUES = {
 };
 
 const GONDOLA_DATA = {
-  legalSummary: 'The gondola has been the spine of this valley since 1996 — the free link between Telluride and Mountain Village that makes the whole two-town setup work. For years, the question of who would pay to eventually replace it sat quietly in the background. That changed in 2023.<br><br>The SMART district (San Miguel Authority for Regional Transportation) began laying groundwork for a ballot measure well before the public knew one was coming. Records obtained through CORA show that SMART hired a Denver consulting firm — Ulysses, run by former State Senator Kerry Donovan — for roughly $170,000 in project management services starting about 13 months before the November 2023 vote. A campaign committee called Friends of the Gondola formed and raised around $130,000, with $60,000 coming from the Telluride Mountain Village Owners Association and another $60,000 from a Four Seasons-affiliated developer. Another $68,000 went to Keating Research for polling. The pro-3A campaign framed the measure as funding a "new gondola."<br><br>The problem: the gondola\'s estimated replacement cost runs somewhere between $120 million and $150 million or more. Ballot Issue 3A, a property tax mill levy, generates roughly $8.2 million per year. Those numbers don\'t build a new gondola — not even close. Whether voters understood that when they marked their ballots is the core of what followed.<br><br>Telluride resident Emily Masson filed a legal challenge (Case No. 2024CV8) arguing two things: first, that the TABOR notice SMART sent was defective because it told voters nothing about where, when, or how to submit opposing comments, resulting in a ballot notice with zero opposition statements — the opposite of what TABOR is designed to produce. Second, that the campaign\'s "new gondola" framing was misleading given the actual funding math. After a bench trial on April 18, 2025, the district court rejected both claims on the merits.<br><br>What happened next is what drew attention. On August 25, 2025 — the day after the deadline to appeal the merits ruling had expired — SMART, the Town of Telluride, and Mountain Village each filed motions seeking attorney fees from Masson. On December 31, 2025, the court awarded a combined $100,683 in fees. Critics noted that the court did not make the specific statutory findings Colorado law requires before shifting fees to a losing election challenger.<br><br>Masson is now appealing those fee awards to the Colorado Court of Appeals (Case No. 2026CA391). The Opening Brief, filed April 9, 2026, does not re-argue whether 3A was valid — it argues only that the fee awards were improper: that the timing of the motions was procedurally irregular, that the required legal findings were never made, and that using a fee award of this size against a private citizen who raised a good-faith public records and TABOR challenge will deter future civic participation. The SMART district\'s funding agreement also expires in 2027, meaning whatever the courts decide, the underlying question of how this valley actually pays for a new gondola remains wide open.',
+  legalSummary: 'This case involved a challenge to the 3A campaign claiming that SMART failed to provide adequate TABOR notice because voters were not told where, when, or how to submit opposing comments for inclusion in the ballot notice. Additionally, the 3A campaign was claimed to be misleading in suggesting the measure would meaningfully fund a new gondola. The district court rejected the plaintiff\'s election claims. However, rather than let the matter rest, the public entities of Mountain Village, Town of Telluride, and SMART brought motions seeking attorney fees for just under $100,000. Plaintiff believes these claims were vindictive and is currently appealing such award in court.',
   intro: 'Ballot Issue 3A approved ~$8.2M/year in new SMART district tax revenue marketed as funding a new gondola. But the current gondola (built 1996) has a replacement cost estimated at $120-150M+, leaving a significant funding gap. CORA records revealed over $175,000 in consultant spending before the ballot referral.',
   statusTitle: 'The gondola funding agreement expires in 2027 -- and the math does not add up.',
-  statusCopy: '3A passed November 2024 (1,956 for / 1,758 against), but SMART\'s own executive director testified at trial that 3A revenue is insufficient to pay for a replacement gondola. Pre-trial records revealed SMART hired campaign consultant Kerry Donovan of Ulysses Strategies in October 2023 — over a year before the vote — to craft the \'Yes on 3A\' narrative. Ulysses concluded that a campaign focused on shifting operating costs from TMVOA would fail, and instead framed 3A as a "savings account" for a new gondola. The GAC operated on a nearly $1 million budget with ~$170,000 in election consultant expenses. A $100,683 attorney-fee award against the citizen who challenged the election is now on appeal at the Colorado Court of Appeals (Case No. 2026CA391).',
-  nextStep: 'Watch the Colorado Court of Appeals (Case No. 2026CA391) for a response brief from SMART, TOT, and Mountain Village, and for oral argument scheduling. Also watch SMART Board meetings for capital planning and any new ballot measures to bridge the funding gap.',
+  statusCopy: '3A revenue covers a fraction of the replacement cost. CORA requests uncovered $68K on polling (Keating Research), $170K on project management (Kerry Donovan/Ulysses), and "Friends of the Gondola" raising $130K -- including $60K from TMVOA and $60K from the Four Seasons developer. The campaign marketed the measure as funding a "new gondola" but actual revenue only covers operating and partial capital costs.',
+  nextStep: 'Watch SMART Board meetings for capital planning, funding strategy, and any new ballot measures or intergovernmental agreements.',
   metrics: [
     { label: 'Core tension', value: '$8.2M/year approved vs. $120-150M+ replacement cost', sub: 'The ballot measure was marketed as funding a new gondola but the revenue covers a fraction of the estimated replacement cost.' },
     { label: 'What CORA revealed', value: '$175K+ in pre-ballot consultant spending', sub: '$68K polling, $170K project management, $130K "Friends of the Gondola" campaign -- funded in part by TMVOA and the Four Seasons developer.' }
@@ -2254,26 +2391,19 @@ const GONDOLA_DATA = {
   timeline: [
     { date: '1996', title: 'Free gondola connecting Telluride and Mountain Village opens', copy: 'The gondola becomes critical regional infrastructure used by commuters, workers, visitors, and residents daily.' },
     { date: '2024', title: 'Ballot Issue 3A passes', copy: 'Voters approve ~$8.2M/year in new SMART district tax revenue. The campaign frames it as funding a "new gondola" but the revenue covers only a small fraction of estimated replacement cost.' },
-    { date: 'Oct 2023', title: 'SMART hires campaign consultant 13 months before vote', copy: 'SMART retained Kerry Donovan of Ulysses Strategies to develop all messaging for the future \'Yes on 3A\' campaign, analyzing polling and crafting a narrative. Ulysses later created the ballot issue group \'Friends of the Gondola\' on September 11, 2024.' },
-    { date: 'Sep 2024', title: 'TABOR notice period closes with zero opposition comments', copy: 'The deadline to submit pro and con comments for the TABOR notice was noon, September 20, 2024. No public entity announced where, when, or how to file comments. The resulting TABOR notice contained only one statement — in favor of 3A, authored by Mountain Village Mayor Pro Tem Scott Pearson.' },
-    { date: 'Nov 2024', title: '3A passes 1,956 to 1,758', copy: 'Measure 3A approved ~$8.2M/year in new SMART district taxes. Two brand-new 10-passenger gondola cars were installed at town entrances during the campaign — different from the current 8-passenger cars — as visual promotion.' },
-    { date: 'Apr 2025', title: 'Bench trial on election contest', copy: 'San Miguel County District Court holds a one-day trial on April 18, 2025. SMART\'s executive director testifies that 3A revenue is insufficient to pay for a replacement gondola. Court denies election claims on August 4, 2025.' },
-    { date: 'Dec 2025', title: 'Court awards $100,683 in attorney fees without required findings', copy: 'On December 31, 2025 — nearly five months after the merits ruling — the district court issued brief, conclusory orders awarding fees to all defendants. SMART\'s fee motion had been filed August 25, 2025, the day after the merits appeal deadline expired.' },
-    { date: 'Apr 2026', title: 'Opening Brief filed at Colorado Court of Appeals', copy: 'Appellant Masson files her Opening Brief (Case No. 2026CA391), arguing the fee awards should be reversed because the court failed to make the statutory findings Colorado law requires and because her TABOR notice theory was a good-faith first-impression constitutional argument protected from sanctions.' },
-    { date: 'Next', title: 'Court of Appeals response and SMART capital planning', copy: 'Response briefs from SMART, TOT, and Mountain Village are due at the Court of Appeals. Separately, the gondola funding agreement expires in 2027 — watch SMART Board meetings for capital planning, new ballot measures, or intergovernmental agreements.', future: true }
+    { date: 'Now', title: 'CORA records reveal consultant spending and campaign funding', copy: 'Public records requests uncovered over $175,000 in consultant spending before the 3A referral, raising transparency questions about how the ballot measure was developed and marketed.' },
+    { date: 'Next', title: 'Funding agreement expires 2027', copy: 'The current gondola funding structure sunsets soon. Watch for SMART Board capital planning, new ballot measures, or intergovernmental agreements to bridge the gap.', future: true }
   ],
   docs: [
-    { title: 'Opening Brief — Colorado Court of Appeals (Case No. 2026CA391)', copy: 'Appellant Masson\'s Opening Brief filed April 9, 2026, appealing the $100,683 attorney-fee awards. Argues the district court failed to make required statutory findings, that her TABOR notice theory was a protected good-faith first-impression argument, and that TOT and TOMV fee awards are unlawful because no \'judgment\' was entered against her as to those defendants.', tag: 'Court of Appeals 2026' },
     { title: 'Response on Order to Show Cause — Colorado Supreme Court', copy: 'Appellant Masson\'s response to the Supreme Court\'s order to show cause in Case No. 2026SA40, asserting appellate jurisdiction over the attorney fee awards under CRS \u00A7 1-11-214(2). Appeal addresses fees only, not the merits of the election contest.', tag: 'Supreme Court 2026' },
     { title: 'Order Following Trial on Election Contest', copy: 'District court order issued after the April 18, 2025 trial in Case 2024CV8. Court found SMART complied with TABOR notice requirements and that ballot language was not misleading. Vote tally: 1,956 for / 1,758 against.', tag: 'Court Order 2025' },
     { title: 'Plaintiff\'s Written Closing Argument', copy: 'Masson\'s post-trial closing argument contending SMART provided no meaningful public notice for opposition comments, and that the TABOR notice misleadingly omitted the "slush fund" nature of capital improvement spending.', tag: 'Closing Arg. 2025' },
     { title: 'Contestor Emily Masson\'s Trial Brief', copy: 'Pre-trial brief filed by Starritt Legal LLC arguing voters had only 12-24 hours to submit opposition comments and that TABOR notice language regarding "capital improvements" was misleading.', tag: 'Trial Brief 2025' },
     { title: 'Written Statement to Contest Ballot Issue 3A', copy: 'Original election contest filing by Emily Masson (Case 2024CV8) challenging 3A on grounds of non-resident voter eligibility, inadequate TABOR notice, misleading ballot language, and unlawful public entity campaign contributions.', tag: 'Filing 2024' },
-    { title: 'SMART Board Meeting Agendas', copy: 'Official meeting materials for the San Miguel Authority for Regional Transportation.', tag: 'SMART', href: 'https://smarttelluride.colorado.gov/board-meetings' },
+    { title: 'SMART Board Meeting Agendas', copy: 'Official meeting materials for the San Miguel Authority for Regional Transportation.', tag: 'SMART', href: 'https://smartgov.org/meetings/' },
     { title: 'San Miguel County CivicClerk Portal', copy: 'County-level records relevant to SMART district and gondola discussions.', tag: 'County Record', href: 'https://sanmiguelcoco.portal.civicclerk.com/' }
   ],
   legalIssues: [
-    { icon: '⚠️', title: 'Fee appeal — Case No. 2026CA391', copy: 'The Colorado Court of Appeals (Case No. 2026CA391) is now reviewing whether the SMART district\'s fee structure is lawful. The Opening Brief (filed April 2026) argues that fees collected beyond the ballot-approved 3A mill levy exceed the district\'s statutory authority and were imposed without adequate public notice or voter approval.' },
     { icon: '💰', title: 'Funding gap and voter expectations', copy: '3A was marketed as funding a "new gondola," but ~$8.2M/year covers only a fraction of the $120-150M+ estimated replacement cost. Whether the ballot language created enforceable voter expectations is an open question.' },
     { icon: '📋', title: 'Pre-ballot consultant spending', copy: 'CORA records revealed $68K on polling (Keating Research), $170K on project management (Kerry Donovan/Ulysses), and a "Friends of the Gondola" campaign raising $130K -- including $60K from TMVOA and $60K from a Four Seasons developer. The timing and sourcing of this spending raise transparency concerns.' },
     { icon: '🔍', title: 'CORA compliance and public records', copy: 'Multiple CORA requests were required to piece together the full picture of pre-ballot spending. Delayed or incomplete responses raise questions about compliance with Colorado open records requirements.' },
@@ -2286,7 +2416,6 @@ const GONDOLA_DATA = {
     { icon: '👥', title: 'Taxpayers and commuters', copy: 'Every property taxpayer in the SMART district funds the gondola. Commuters and workers depend on it daily.' }
   ],
   news: [
-    { source: 'Colorado Court of Appeals', date: 'Apr 9, 2026', title: 'Opening Brief filed: fee awards against 3A challenger go to Court of Appeals', href: '', copy: 'Emily Masson filed her Opening Brief (Case No. 2026CA391) appealing $100,683 in attorney fees. The brief details that SMART hired a campaign consultant 13 months before the vote, that SMART\'s director testified 3A revenue cannot fund a new gondola, and that the fee motion was filed the day after the merits appeal deadline expired.' },
     { source: 'Telluride News (Letter)', date: 'Jan 19, 2026', title: 'Punishing participation', href: 'https://www.telluridenews.com/opinion/letters_to_editor/article_d1101cd5-a2b2-4593-b795-6132a8527169.html', copy: 'Letter to the editor calling the decision by SMART, Mountain Village, and Telluride to seek ~$100K in attorney fees from Emily Masson for her good-faith 3A election challenge "outrageous."' },
     { source: 'Telluride News', date: 'Jan 6, 2026', title: 'Plaintiff in 3A election challenge ruled liable for costs', href: 'https://www.telluridenews.com/news/article_25c45be0-2135-40c2-82a6-40d059eadb64.html', copy: 'District court rules that the plaintiff who challenged Ballot Question 3A must pay attorney fees sought by SMART, Mountain Village, and Telluride.' },
     { source: 'Telluride News', date: 'Nov 7, 2025', title: 'The people decided: Question 300 goes down', href: 'https://www.telluridenews.com/news/article_ccbaf4e8-3135-4e9d-9e46-4639cc8a1913.html', copy: 'Voters rejected the proposed lift ticket tax measure that would have generated additional gondola replacement funding.' },
@@ -2305,24 +2434,6 @@ const GONDOLA_DATA = {
 GONDOLA_DATA.label = 'Gondola 3A';
 GONDOLA_DATA.meetings = GONDOLA_DATA.meetings || [];
 LAND_USE_ISSUES.gondola = GONDOLA_DATA;
-
-// Auto-generated updates from Town of Telluride and San Miguel County meeting review.
-// Managed by scripts/deep-dive-refresh.js — do NOT edit by hand.
-// Each entry: { topic, type, source, articleDate, title, copy, href, addedDate }
-// type='news' entries are prepended to the topic's news section.
-// type='status' entries override the displayed statusCopy/nextStep.
-const DEEP_DIVE_UPDATES = [
-{
-  topic: "wildfire",
-  type: "news",
-  source: "San Miguel County",
-  articleDate: "2026-05-01",
-  title: "San Miguel County Launches Living with Wildfire Information Site",
-  copy: "San Miguel County launched a new online resource called Living with Wildfire offering preparation, mitigation, evacuation, and recovery information. The site consolidates wildfire-related guidance in one accessible location for county residents.",
-  href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=522",
-  addedDate: "2026-05-04"
-}
-];
 
 let currentLandUseIssue = 'carhenge';
 
@@ -2413,18 +2524,12 @@ function renderLandUseTab() {
     }
   }
 
-  // Use auto-generated status override if present, otherwise fall back to hand-curated
-  const autoStatus = (typeof DEEP_DIVE_UPDATES !== 'undefined' ? DEEP_DIVE_UPDATES : [])
-    .filter(u => u.topic === currentLandUseIssue && u.type === 'status')
-    .sort((a, b) => (b.addedDate || '').localeCompare(a.addedDate || ''))[0];
-  const displayStatusCopy = (autoStatus && autoStatus.statusCopy) ? autoStatus.statusCopy : issue.statusCopy;
-  const displayNextStep   = (autoStatus && autoStatus.nextStep)   ? autoStatus.nextStep   : issue.nextStep;
   statusEl.innerHTML = `
     <div class="landuse-status-card">
-      <div class="landuse-status-label">Current status${autoStatus ? '  <span style="font-size:0.68rem;color:var(--accent);font-weight:600;">· auto-updated</span>' : ''}</div>
+      <div class="landuse-status-label">Current status</div>
       <div class="landuse-status-title">${issue.statusTitle}</div>
-      <div class="landuse-status-copy">${displayStatusCopy}</div>
-      <div class="landuse-nextstep">➜ ${displayNextStep}</div>
+      <div class="landuse-status-copy">${issue.statusCopy}</div>
+      <div class="landuse-nextstep">➜ ${issue.nextStep}</div>
     </div>
     <div class="landuse-snapshot">
       ${issue.metrics.map(metric => `
@@ -2447,9 +2552,9 @@ function renderLandUseTab() {
     </a>`).join('');
 
   const meetingsPanel = meetingsEl.closest('.landuse-panel');
-  // Upcoming meetings card removed from Deep Dive — not relevant here
-  if (meetingsPanel) meetingsPanel.style.display = 'none';
-  if (false) {
+  if (issue.hideMeetings) {
+    if (meetingsPanel) meetingsPanel.style.display = 'none';
+  } else {
     if (meetingsPanel) meetingsPanel.style.display = '';
     if (issue.meetings && issue.meetings.length) {
       meetingsEl.innerHTML = issue.meetings.map(item => `
@@ -2499,21 +2604,14 @@ function renderLandUseTab() {
     }
   }
 
-  {
-    // Merge auto-generated updates (prepended, newest first) with hand-curated news
-    const autoNews = (typeof DEEP_DIVE_UPDATES !== 'undefined' ? DEEP_DIVE_UPDATES : [])
-      .filter(u => u.topic === currentLandUseIssue && u.type === 'news')
-      .sort((a, b) => (b.addedDate || '').localeCompare(a.addedDate || ''))
-      .map(u => ({ source: u.source, date: u.articleDate, title: u.title, copy: u.copy, href: u.href }));
-    const mergedNews = [...autoNews, ...(issue.news || [])];
-    if (mergedNews.length) {
-      newsEl.innerHTML = mergedNews.map(item => `
-        <div class="landuse-compact-item">
-          <div class="landuse-compact-meta">${item.source} · ${item.date}</div>
-          <a class="landuse-compact-title" href="${item.href}" target="_blank" rel="noopener">${item.title}</a>
-          <div class="landuse-compact-copy">${item.copy}</div>
-        </div>`).join('');
-    } else {
+  if (issue.news && issue.news.length) {
+    newsEl.innerHTML = issue.news.map(item => `
+      <div class="landuse-compact-item">
+        <div class="landuse-compact-meta">${item.source} · ${item.date}</div>
+        <a class="landuse-compact-title" href="${item.href}" target="_blank" rel="noopener">${item.title}</a>
+        <div class="landuse-compact-copy">${item.copy}</div>
+      </div>`).join('');
+  } else {
     const allNews = window.__allNewsCache || [];
     const news = allNews.filter(item => {
       const text = `${item.title || ''} ${item.description || ''}`.toLowerCase();
@@ -2529,7 +2627,6 @@ function renderLandUseTab() {
         <div class="landuse-compact-copy">${item.description || 'Open the full item for details.'}</div>
       </div>`).join('') : '<div class="landuse-empty">No recent land-use-related coverage surfaced from the current feeds.</div>';
   }
-  } // close news block
 
   playersEl.innerHTML = issue.players.map(player => `
     <div class="landuse-player">
@@ -2785,331 +2882,8 @@ async function enrichKOTOEvent(item) {
   return item;
 }
 
-// ══════════════════════════════════════════════════════════════
-// ── KOTO Community Calendar Events ──
-// ══════════════════════════════════════════════════════════════
-// Auto-populated by scripts/content-refresh.js Task 8 from the Tribe
-// Events JSON API for the community-calendar category. Filtered at
-// sync time to events starting within the next 30 days, sorted earliest
-// first. Schema: { title, link, description, pubDate (ISO string),
-// source: 'koto', sourceLabel: 'KOTO', category: 'Community Event',
-// location, imageUrl }.
-
-const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Dark Sky Café Tacos and SMPA candidate open house!",
-    link: "https://koto.org/event/dark-sky-cafe-tacos-and-smpa-candidate-open-house/",
-    description: "Please come by Dark Sky Cafe, 1615 Grand Avenue in Norwood, on Wednesday May 6th anytime between 4:30 and 8:30 PM for free tacos and a meet and greet with San Miguel Power board candidate Joanna Yonder! Your voice matters, and our rural electric cooperative is more important than ever. All are welcome!",
-    pubDate: "2026-05-06T16:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Dark, Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/Meet-Greet-Poster-11-x-8.5-in.png"
-  },
-  {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can",
-    pubDate: "2026-05-07T12:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "French Happy Hour at the Alibi",
-    link: "https://koto.org/event/french-happy-hour-at-the-alibi/",
-    description: "Practice speaking in French with other French speakers in an informal setting at the Alibi. Light snacks are provided and beverages are available to purchase at the bar. Space is limited, sign up at www.telluridelibrary.org.",
-    pubDate: "2026-05-07T17:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "The Alibi, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Up-off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-05-08/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for s",
-    pubDate: "2026-05-08T10:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
-  },
-  {
-    title: "Placerville Community Yard Sale",
-    link: "https://koto.org/event/placerville-community-yard-sale/",
-    description: "The Placerville Community Yard Sale is happening on Saturday, May 9, starting at 9 a.m. The weather should be perfect!",
-    pubDate: "2026-05-09T09:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Bilingual Balance in Motion",
-    link: "https://koto.org/event/bilingual-balance-in-motion/2026-05-09/",
-    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun an",
-    pubDate: "2026-05-09T10:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
-  },
-  {
-    title: "Gentle Yoga with Kristin Milord",
-    link: "https://koto.org/event/gentle-yoga-with-kristin-milord-2/2026-05-10/",
-    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class is free, but donations to support the instru",
-    pubDate: "2026-05-10T11:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/gentle-yoga-kristen-1.png"
-  },
-  {
-    title: "Nature Nurture for Moms with Lauren Norton",
-    link: "https://koto.org/event/nature-nurture-for-moms-with-lauren-norton/",
-    description: "Connect with Mother Nature on this Mother's Day 2026. Join Lauren Kaas Norton for a guided outdoor experience designed to help you slow down, ground yourself, and reconnect with the natural world. Through gentle breathwork, mindful movement, and guided reflection, you’ll explore a new way of being in relationship with the land rooted in presence, a",
-    pubDate: "2026-05-10T12:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/nature-nurture-6.png"
-  },
-  {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-05-10/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access fr",
-    pubDate: "2026-05-10T13:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-05-10/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-05-10T14:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
-    title: "Piano on the Patio with Oliver",
-    link: "https://koto.org/event/piano-on-the-patio-with-oliver/",
-    description: "Craving a break from the hustle and bustle of your day? Take a lunchtime escape to the library for a dose of tranquility. Settle into a comfy chair and unwind with ethereal piano melodies played live by WPL's very own, Oliver Henry, of Après Nova. Unplug from your devices and bring a book, magazine, or simply enjoy a moment of peace and quiet. This",
-    pubDate: "2026-05-11T12:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/PATIO-3.png"
-  },
-  {
-    title: "Savvy Seniors- Open Tech",
-    link: "https://koto.org/event/savvy-seniors-open-tech/",
-    description: "Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music.",
-    pubDate: "2026-05-11T13:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/May26-2.png"
-  },
-  {
-    title: "An Absolute Beginners Guide to Music Theory",
-    link: "https://koto.org/event/an-absolute-beginners-guide-to-music-theory-2/",
-    description: "In this event series, Annie and Rachel will take you on a journey,—starting from the very beginning of reading music—to give you the skills to start reading sheet music on your own.",
-    pubDate: "2026-05-11T17:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/music-theory-2.png"
-  },
-  {
-    title: "Cardio Dance Class with Kelsey",
-    link: "https://koto.org/event/cardio-dance-class-with-kelsey/",
-    description: "Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won't even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. ¡Únete a nosotros para una divertida noche de baile y ejercicio! Te divertirás tanto que ni te darás cuenta de que estás haciendo ejercicio. Dirigido",
-    pubDate: "2026-05-11T18:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Online Author Talk with Vivienne Ming",
-    link: "https://koto.org/event/online-author-talk-with-vivienne-ming/",
-    description: "Join us for a timely conversation on AI, humanity, and the next steps towards building a better future with self-proclaimed “mad scientist” Dr. Vivienne Ming as we discuss her new book, Robot-Proof: When Machines Have All the Answers, Build Better People. In Robot-Proof, Dr. Vivienne Ming helps readers grasp the ugly and the amazing of how individu",
-    pubDate: "2026-05-12T12:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/vivienne.png"
-  },
-  {
-    title: "Free Legal Clinic – Clínica Jurídica Gratuita",
-    link: "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-05-12/",
-    description: "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more inform",
-    pubDate: "2026-05-12T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Script Club with Telluride Theatre",
-    link: "https://koto.org/event/script-club-with-telluride-theatre/",
-    description: "Join us for our newest club, in partnership with Telluride Theatre: SCRIPT CLUB! This quarterly series will explore contemporary classics and modern-day scripts. We will discuss the historic, literary and performative nature of these plays and films. This month, we'll be reading Beauty Queen of Leenane by Martin McDonagh. There are some editions av",
-    pubDate: "2026-05-12T17:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/Script-mar-2.png"
-  },
-  {
-    title: "Book Buzz at Telluride Brewing Co-Lawson Hill",
-    link: "https://koto.org/event/book-buzz-at-telluride-brewing-co-lawson-hill/",
-    description: "Join WPL on the 2nd Tuesday 5:30-6:30PM of each month at TBC in Lawson Hill. We will have a pop-up library for checkouts, talk about new titles. Pick up some DIY color kits for the kids to enjoy 10% discount on food as well as $5 TBC Beers when you show your library card. Don't have a card? We can make one for you on the spot!",
-    pubDate: "2026-05-12T17:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Brewing Company Lawson Hill Taproom",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/book-buzz-6.png"
-  },
-  {
-    title: "Lite Lunch Book Club- Wait for Me",
-    link: "https://koto.org/event/lite-lunch-book-club-wait-for-me/",
-    description: "Join us for a little Lite Lunch and a discussion of Wait for Me by Amy Jo Burns. Space is limited, sign up in advance. Contact tosborne@telluridelibrary.org for a copy of the book.",
-    pubDate: "2026-05-13T12:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/MAYLite26-2.png"
-  },
-  {
-    title: "Mountain Village annual Community Clean Up Days",
-    link: "https://koto.org/event/mountain-village-annual-community-clean-up-days/2026-05-13/",
-    description: "Mountain Village hosts its annual Community Clean Up Day, this year expanding to two days in two different parts of the community! On Wednesday, May 13, Clean Up Day will take place in Village Court Apartments and on Thursday, May 14, a second Clean Up Day will take place in the Meadows Neighborhood. The entire community is invited to participate i",
-    pubDate: "2026-05-13T14:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Sewing 101 with Melissa",
-    link: "https://koto.org/event/sewing-101-with-melissa/2026-05-13/",
-    description: "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
-    pubDate: "2026-05-13T17:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
-  },
-  {
-    title: "Sewing 101 with Melissa Sumpter",
-    link: "https://koto.org/event/sewing-101-with-melissa-sumpter/",
-    description: "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
-    pubDate: "2026-05-13T17:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/SEWING-2024.png"
-  },
-  {
-    title: "Wildfire Preparedness",
-    link: "https://koto.org/event/wildfire-preparedness/",
-    description: "Join San Miguel County and the Western Region Wildfire Council and Telluride Fire Protection District for a presentation on how to prepare for a wildfire and what to do if one arrives. There will also be information about mitigation resources for property owners. There will be simultaneous Spanish interpretation available. Habrá interpretación en e",
-    pubDate: "2026-05-13T17:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/fire-2026.png"
-  }
-];
-
-// ══════════════════════════════════════════════════════════════
-// ── Wilkinson Public Library Events ──
-// ══════════════════════════════════════════════════════════════
-// Auto-populated by scripts/content-refresh.js Task 9 from the
-// LibCal api_events.php endpoint (cid=19928 = library calendar).
-// Filtered to events starting within the next 30 days. Schema:
-// { title, link, description, pubDate (ISO string), source:
-// 'wilkinson', sourceLabel: 'Wilkinson Public Library', category:
-// 'Library Event', location, imageUrl }.
-
-const WILKINSON_EVENTS = [
-  {
-    title: "Kids Cook",
-    link: "https://telluridelibrary.libcal.com/event/16417026?hs=a",
-    description: "3:30 PM – 4:30 PM",
-    pubDate: "2026-05-06T15:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1771000657.png"
-  },
-  {
-    title: "Día de Registro para Clases de Natación",
-    link: "https://telluridelibrary.libcal.com/event/16703392?hs=a",
-    description: "3:30 PM – 5:00 PM",
-    pubDate: "2026-05-06T15:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_14_26_12.png"
-  },
-  {
-    title: "Library Trivia at the Stronghouse Brew Pub",
-    link: "https://telluridelibrary.libcal.com/event/16529698?hs=a",
-    description: "5:30 PM – 7:00 PM",
-    pubDate: "2026-05-06T17:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Stronghouse Brew Pub",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_11_14_17_22.jpg"
-  }
-];
-
 // ── Fetch KOTO Community Calendar Events (upcoming only) ──
-// Reads from KOTO_COMMUNITY_EVENTS, populated server-side every 6h
-// by content-refresh.js Task 8 (already filtered to next 30 days).
-// Falls back to legacy client-side proxy-scrape ONLY if the const is
-// empty (rare — should only happen on a brand-new repo).
 async function fetchKOTONews() {
-  if (typeof KOTO_COMMUNITY_EVENTS !== 'undefined' && Array.isArray(KOTO_COMMUNITY_EVENTS) && KOTO_COMMUNITY_EVENTS.length > 0) {
-    const now = Date.now();
-    return KOTO_COMMUNITY_EVENTS
-      .map(e => ({ ...e, pubDate: e.pubDate ? new Date(e.pubDate) : new Date() }))
-      .filter(e => !isNaN(e.pubDate) && e.pubDate.getTime() >= now - 86400000);
-  }
-  // Fallback: legacy client-side scrape (unreliable; preserved for emergencies)
   const KOTO_CAL_URL = 'https://koto.org/calendars/category/community-calendar/';
   // Try to scrape KOTO community calendar via CORS proxy
   try {
@@ -3160,7 +2934,9 @@ async function fetchKOTONews() {
   // Fallback: hardcoded upcoming KOTO Community Calendar events (non-library only)
   const calLink = KOTO_CAL_URL;
   return [
+    { title: 'CPR World First Aid & CPR Certification', link: 'https://koto.org/event/cpr-world-first-aid-and-cpr-certification-in-mountain-village/', description: '12:00 PM – 4:30 PM · CPR World offers First Aid and CPR certification. Register at cprworld.com or call (970) 729-2779.', pubDate: new Date('2026-03-29T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'Mountain Village Fire Station, 411 Mountain Village Blvd' },
     { title: 'Telluride Mountain School Open House', link: 'https://koto.org/event/telluride-mountain-school-open-house/', description: '5:00 PM – 6:00 PM · Join an evening of conversation about the next chapter for TMS\u2014new leadership, updated programming, and a refreshed mission. Wine, appetizers, and childcare provided.', pubDate: new Date('2026-03-31T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'Telluride Mountain School, 200 San Miguel River Dr', imageUrl: 'https://koto.org/wp-content/uploads/2026/03/Open-House.png' },
+    { title: 'Healthy Kids Colorado Survey Data Sharing', link: 'https://koto.org/event/healthy-kids-colorado-survey-2025-data-sharing-event/', description: '5:15 PM – 7:00 PM · Explore key insights from the 2025 HKCS, celebrate positive trends, and discuss how to support local youth. Free and open to all.', pubDate: new Date('2026-03-31T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'Telluride Science & Innovation Center', imageUrl: 'https://koto.org/wp-content/uploads/2026/03/HKCS-Workshop-Flyer.png' },
     { title: 'Art Walk Telluride', link: 'https://koto.org/event/art-walk-telluride/2026-04-02/', description: '5:00 PM – 7:00 PM · First-Thursday gallery walk featuring inspiring exhibits, receptions, and a chance to meet local and visiting artists. Details at telluridearts.org.', pubDate: new Date('2026-04-02T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'Downtown Telluride galleries', imageUrl: 'https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png' },
     { title: 'Community Storytelling Night: Tales from the Season', link: 'https://koto.org/event/telluride-arts-citizens-state-bank-present-community-storytelling-night-oh-what-a-season-its-been/', description: '5:30 PM – 7:00 PM · Mocktails and bites at 5:30; storytelling at 6:00. Friends and neighbors share funny, heartfelt 3\u20135 minute stories from the winter season. Free.', pubDate: new Date('2026-04-02T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'Telluride Arts HQ, 135 W Pacific Ave', imageUrl: 'https://koto.org/wp-content/uploads/2026/03/image001.png' },
     { title: 'French Happy Hour', link: 'https://koto.org/event/french-happy-hour/', description: '5:30 PM – 7:00 PM · Practice French conversation in a relaxed setting. Light snacks provided; beverages at the bar. Space limited\u2014sign up at telluridelibrary.org.', pubDate: new Date('2026-04-02T12:00:00'), source: 'koto', sourceLabel: 'KOTO', category: 'Community Event', location: 'The Alibi, 121 S Fir St, Telluride', imageUrl: 'https://koto.org/wp-content/uploads/2026/03/French-Happy-Hour-6.png' },
@@ -3182,16 +2958,26 @@ async function fetchKOTONews() {
 
 // ── Fetch Wilkinson Public Library Events ──
 function fetchWilkinsonEvents() {
-  // Reads from WILKINSON_EVENTS, populated server-side every 6h by
-  // scripts/content-refresh.js Task 9 from the LibCal api_events.php
-  // endpoint. Already filtered to events starting in the next 30 days.
-  if (typeof WILKINSON_EVENTS !== 'undefined' && Array.isArray(WILKINSON_EVENTS) && WILKINSON_EVENTS.length > 0) {
-    const now = Date.now();
-    return WILKINSON_EVENTS
-      .map(e => ({ ...e, pubDate: e.pubDate ? new Date(e.pubDate) : new Date() }))
-      .filter(e => !isNaN(e.pubDate) && e.pubDate.getTime() >= now - 86400000);
-  }
-  return [];
+  const libBase = 'https://telluridelibrary.libcal.com/event/';
+  const libHome = 'https://telluridelibrary.org/events/';
+  return [
+    { title: 'Gentle Yoga with Kristen Milord', link: libBase + '16001885', description: '11:00 AM · Breathe, stretch, and reset with gentle yoga. Free, accessible class open to all levels—no prior experience needed.', pubDate: new Date('2026-03-29T12:00:00'), source: 'wilkinson', sourceLabel: 'Wilkinson Library', category: 'Community Event', location: 'Wilkinson Public Library, Magazine Room', imageUrl: 'https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1760648738.png' },
+    { title: 'Drop-In Tech Time with Oliver', link: libBase + '15970367', description: '1:00 PM · Bring your questions about technology—phones, tablets, laptops, email and more.', pubDate: new Date('2026-03-29T12:00:00'), source: 'wilkinson', sourceLabel: 'Wilkinson Library', category: 'Community Event', location: 'Wilkinson Public Library, 2nd Floor Desk', imageUrl: 'https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg' },
+    { title: 'Tea and Tarot', link: libBase + '15891410', description: '2:30 PM · Tea and Tarot Sessions with Jade Rose and Sanctuary Collective. Seating is limited; sign up in advance.', pubDate: new Date('2026-03-29T12:00:00'), source: 'wilkinson', sourceLabel: 'Wilkinson Library', category: 'Community Event', location: 'Wilkinson Public Library, Telluride Room', imageUrl: 'https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png' },
+    { title: 'Desserts and Doc: Sergio Dondoli\u2019s Happy Life & Gelato', link: 'https://koto.org/event/desserts-and-doc-sergio-dondolis-happy-life-gelato/', description: '1:30 PM \u00B7 Documentary about master gelato-maker Sergio Dondoli\u2019s rise from humble origins to renowned Tuscan gelateria. Gelato served after the screening.', pubDate: new Date('2026-03-30T12:00:00'), source: 'wilkinson', sourceLabel: 'Wilkinson Library', category: 'Community Event', location: 'Wilkinson Public Library, 100 W Pacific Ave', imageUrl: 'https://koto.org/wp-content/uploads/2026/03/desserts-doc-3-1.png' },
+    { title: 'Meet & Greet with Boulder DA Michael Dougherty', link: 'https://koto.org/event/meet-greet-with-boulder-da-michael-dougherty-candidate-for-colorado-attorney-general/', description: '3:30 PM \u00B7 Meet Boulder DA and candidate for Colorado Attorney General Michael Dougherty.', pubDate: new Date('2026-03-30T12:00:00'), source: 'wilkinson', sourceLabel: 'Wilkinson Library', category: 'Community Event', location: 'Wilkinson Public Library, 100 W Pacific Ave', imageUrl: 'https://koto.org/wp-content/uploads/2026/03/Telluride-Meet-and-Greet-4-3.png' },
+    { title: 'Yin Yang Yoga with Miriah', link: libBase + '15968291', description: '10:00 AM · A combination of Vinyasa Flow incorporating Hatha and Kundalini with Yin Restorative poses. Free and open to all skill levels.', pubDate: new Date('2026-04-01T12:00:00'), source: 'wilkinson', sourceLabel: 'Wilkinson Library', category: 'Community Event', location: 'Wilkinson Public Library, Program Room', imageUrl: 'https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1765919021.jpg' },
+    { title: 'Mah-Jongg for Independent Players', link: libBase + '16226876', description: '3:00 PM · Friendly afternoon games of mah-jongg. Bring your own cards or use loaner sets provided by the library.', pubDate: new Date('2026-04-01T12:00:00'), source: 'wilkinson', sourceLabel: 'Wilkinson Library', category: 'Community Event', location: 'Wilkinson Public Library, Magazine Room', imageUrl: 'https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1768508640.jpg' },
+    { title: 'Adults Learn D&D', link: 'https://koto.org/event/adults-learn-dd/', description: '4:00 PM \u00B7 Learn to play Dungeons & Dragons in a 2-hour class with local DM Kase. Get a character, learn the basics, and play a short campaign. Registration required; bring a laptop if possible.', pubDate: new Date('2026-04-01T12:00:00'), source: 'wilkinson', sourceLabel: 'Wilkinson Library', category: 'Community Event', location: 'Wilkinson Public Library, 100 W Pacific Ave' },
+    { title: 'Songs of the Season: Spring!', link: libBase + '16258323', description: '5:30 PM · Seasonal Sing Along with Oliver & Jackson. Bring an instrument, just your voice, or dancing shoes.', pubDate: new Date('2026-04-01T12:00:00'), source: 'wilkinson', sourceLabel: 'Wilkinson Library', category: 'Community Event', location: 'Wilkinson Public Library, Magazine Room', imageUrl: 'https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_04_16_11_47.jpg' },
+    { title: 'Pilates for All Bodies', link: libBase + '16006633', description: '12:30 PM · Join Laura Colbert for Pilates. Free and open to the public, all bodies and experience levels welcome.', pubDate: new Date('2026-04-02T12:00:00'), source: 'wilkinson', sourceLabel: 'Wilkinson Library', category: 'Community Event', location: 'Wilkinson Public Library, Program Room', imageUrl: 'https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg' },
+    { title: 'Gentle Yoga with Kristen Milord', link: libBase + '16001885', description: '11:00 AM · Breathe, stretch, and reset with gentle yoga. Free, accessible class open to all levels.', pubDate: new Date('2026-04-05T12:00:00'), source: 'wilkinson', sourceLabel: 'Wilkinson Library', category: 'Community Event', location: 'Wilkinson Public Library, Magazine Room', imageUrl: 'https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1760648738.png' },
+    { title: 'Drop-In Tech Time with Oliver', link: libBase + '15970367', description: '1:00 PM · Bring your tech questions—phones, tablets, laptops, email and more.', pubDate: new Date('2026-04-05T12:00:00'), source: 'wilkinson', sourceLabel: 'Wilkinson Library', category: 'Community Event', location: 'Wilkinson Public Library, 2nd Floor Desk', imageUrl: 'https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg' },
+    { title: 'Tea and Tarot', link: libBase + '15891410', description: '2:30 PM · Tea ceremony and tarot sessions with Jade Rose and Sanctuary Collective. Seating limited.', pubDate: new Date('2026-04-05T12:00:00'), source: 'wilkinson', sourceLabel: 'Wilkinson Library', category: 'Community Event', location: 'Wilkinson Public Library, Telluride Room', imageUrl: 'https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png' },
+    { title: 'Strings in the Stacks', link: libBase + '16549815', description: '12:00 PM · Live violin music from violinist Annie Foxen. Classical, Celtic, and folk tunes. Free, all ages.', pubDate: new Date('2026-04-06T12:00:00'), source: 'wilkinson', sourceLabel: 'Wilkinson Library', category: 'Community Event', location: 'Wilkinson Public Library, Magazine Room', imageUrl: 'https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1769020935.jpg' },
+    { title: 'Drop in Ping Pong', link: 'https://koto.org/event/drop-in-ping-pong/', description: '10:00 AM \u00B7 Drop by for casual table tennis. Our ping pong table will be set up for players of all ages and skill levels. No sign-up needed\u2014just show up and play.', pubDate: new Date('2026-04-10T12:00:00'), source: 'wilkinson', sourceLabel: 'Wilkinson Library', category: 'Community Event', location: 'Wilkinson Public Library, Program Room', imageUrl: 'https://koto.org/wp-content/uploads/2026/03/april-ping.png' },
+    { title: 'Bilingual Balance in Motion', link: libBase + '16535245', description: '10:00 AM · Dynamic bilingual class led by Lauren Norton. Pilates, dance, yoga, and breathwork. All levels welcome.', pubDate: new Date('2026-04-11T12:00:00'), source: 'wilkinson', sourceLabel: 'Wilkinson Library', category: 'Community Event', location: 'Wilkinson Public Library, Program Room', imageUrl: 'https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1740003527.jpg' }
+  ];
 }
 
 // ── Fetch approved community events from community-events.json ──
@@ -3274,154 +3060,20 @@ async function fetchAllNews() {
     });
   }
 
-  // Combine all sources. Cross-source dedup preference (highest wins):
-  //   Wilkinson Library  >  KOTO Community Calendar  >  Local groups /
-  //   Humane Society  >  Telluride Times  >  others.
-  // Rationale: TT and KOTO often re-list events that originate at the
-  // library or another organization. The original-source listing is
-  // canonical (correct title, photo, location, status) and should win.
-  // TF_FOUNDATION_EVENTS: scraped from telluridefoundation.org/tf-events/ every 6h
-  const tfEvents = (typeof TF_FOUNDATION_EVENTS !== 'undefined' && Array.isArray(TF_FOUNDATION_EVENTS))
-    ? TF_FOUNDATION_EVENTS.map(e => ({
-        title: e.title || '',
-        link: e.href || 'https://telluridefoundation.org/tf-events/',
-        description: e.copy || '',
-        summary: e.copy || '',
-        pubDate: e.date ? new Date(e.date) : null,
-        source: 'tf-news',
-        sourceLabel: 'Telluride Foundation',
-        category: 'Community Event',
-        location: e.location || '',
-        eventTimes: e.eventTimes || '',
-        imageUrl: 'logo/tf-foundation.png'
-      })).filter(e => e.pubDate && e.pubDate >= new Date(new Date().setHours(0,0,0,0)))
-    : [];
+  // Combine all sources — Wilkinson library events take priority over KOTO/TT duplicates
+  const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...hardcodedCommunity];
 
-  // Nucla-Naturita Community Events (weekly, from Tribe Events API)
-  const nuclaNaturitaEvents = (typeof NUCLA_NATURITA_EVENTS !== 'undefined' && Array.isArray(NUCLA_NATURITA_EVENTS))
-    ? NUCLA_NATURITA_EVENTS.map(e => ({
-        title: e.title || '',
-        link:  e.href || 'https://nucla-naturita.com/events/',
-        description: e.copy || '',
-        summary:     e.copy || '',
-        pubDate: e.date ? new Date(e.date) : null,
-        source: 'nucla-naturita',
-        sourceLabel: 'Nucla-Naturita Chamber',
-        category: 'Community Event',
-        location: e.location || 'Nucla-Naturita, CO',
-        eventTimes: '',
-        imageUrl: ''
-      })).filter(e => e.pubDate && e.pubDate >= new Date(new Date().setHours(0,0,0,0)))
-    : [];
-
-  // Club Red Telluride Shows (weekly, from Squarespace)
-  const clubRedShows = (typeof CLUB_RED_SHOWS !== 'undefined' && Array.isArray(CLUB_RED_SHOWS))
-    ? CLUB_RED_SHOWS.map(e => ({
-        title: e.title || '',
-        link:  e.href || 'https://www.clubredtelluride.com/shows',
-        description: e.copy || '',
-        summary:     e.copy || '',
-        pubDate: e.date ? new Date(e.date) : null,
-        source: 'club-red',
-        sourceLabel: 'Club Red Telluride',
-        category: 'Live Music',
-        location: e.location || 'Club Red, Mountain Village',
-        eventTimes: '',
-        imageUrl: ''
-      })).filter(e => e.pubDate && e.pubDate >= new Date(new Date().setHours(0,0,0,0)))
-    : [];
-
-  // Fresh Food Hub Events (weekly, from Tribe Events API)
-  const freshFoodHubEvents = (typeof FRESH_FOOD_HUB_EVENTS !== 'undefined' && Array.isArray(FRESH_FOOD_HUB_EVENTS))
-    ? FRESH_FOOD_HUB_EVENTS.map(e => ({
-        title: e.title || '',
-        link:  e.href || 'https://freshfoodhub.net/get-involved/',
-        description: e.copy || '',
-        summary:     e.copy || '',
-        pubDate: e.date ? new Date(e.date) : null,
-        source: 'fresh-food-hub',
-        sourceLabel: 'Fresh Food Hub',
-        category: 'Community Event',
-        location: e.location || 'Norwood, CO',
-        eventTimes: '',
-        imageUrl: ''
-      })).filter(e => e.pubDate && e.pubDate >= new Date(new Date().setHours(0,0,0,0)))
-    : [];
-
-
-  // Sherbino Theater Events (weekly, from Tribe Events API)
-  const sherbinoEvents = (typeof SHERBINO_EVENTS !== 'undefined' && Array.isArray(SHERBINO_EVENTS))
-    ? SHERBINO_EVENTS.map(e => ({
-        title: e.title || '',
-        link:  e.href || 'https://sherbino.org/events/',
-        description: e.copy || '',
-        summary:     e.copy || '',
-        pubDate: e.date ? new Date(e.date) : null,
-        source: 'sherbino',
-        sourceLabel: 'Sherbino Theater',
-        category: 'Arts & Music',
-        location: e.location || 'Ridgway, CO',
-        eventTimes: '',
-        imageUrl: e.imageUrl || ''
-      })).filter(e => e.pubDate && e.pubDate >= new Date(new Date().setHours(0,0,0,0)))
-    : [];
-
-  const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...hardcodedCommunity, ...tfEvents, ...nuclaNaturitaEvents, ...clubRedShows, ...freshFoodHubEvents, ...sherbinoEvents];
-
-  // Source-priority sort: lower number wins on a duplicate match.
-  function eventSourcePriority(item) {
-    const src = (item.source || '').toLowerCase();
-    const lbl = (item.sourceLabel || '').toLowerCase();
-    if (src === 'wilkinson' || lbl.includes('wilkinson')) return 0;
-    if (src === 'koto' || lbl.includes('koto')) return 1;
-    if (src === 'localgroup') return 0;
-    if (src === 'humane-society') return 2;
-    if (src === 'ttimes' || lbl.includes('telluride times')) return 3;
-    return 4;
-  }
-
-  // Stable sort by (date asc, source priority asc) so for identical
-  // dedup keys the highest-priority source comes first and wins.
-  all.sort((a, b) => {
-    const dA = a.pubDate ? new Date(a.pubDate).toISOString().slice(0,10) : '';
-    const dB = b.pubDate ? new Date(b.pubDate).toISOString().slice(0,10) : '';
-    if (dA !== dB) return dA.localeCompare(dB);
-    return eventSourcePriority(a) - eventSourcePriority(b);
-  });
-
-  // Smart dedup key: cross-source titles for the same event diverge in
-  // surface text but share their first few content words. Normalize:
-  //   1. Strip a trailing "Wilkinson Public Library" / "Telluride
-  //      Storywalk" / venue suffix that TT often appends.
-  //   2. Strip a trailing time suffix like ", 2:30-4:30 p.m." or ", 1-3 p.m."
-  //   3. Replace "&" with "and" so "Tea & Tarot" and "Tea and Tarot" match.
-  //   4. Strip remaining punctuation, lowercase, collapse whitespace.
-  //   5. Take first 4 words (catches: "Drop In Tech Time" vs "Drop In
-  //      Tech Time with Oliver" — both share the first 4 words).
-  function eventDedupKey(item) {
-    let t = (item.title || '').toLowerCase();
-    t = t.replace(/:\s*wilkinson public library\b.*$/i, '');
-    t = t.replace(/:\s*telluride storywalk\b.*$/i, '');
-    t = t.replace(/:\s*[a-z][a-z\s']+,\s*\d+(:\d+)?\s*[-\u2013]\s*\d+(:\d+)?\s*[ap]\.?\s*m\.?\s*$/i, '');
-    t = t.replace(/,\s*\d+(:\d+)?\s*[-\u2013]\s*\d+(:\d+)?\s*[ap]\.?\s*m\.?\s*$/i, '');
-    t = t.replace(/\s*&\s*/g, ' and ');
-    t = t.replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim();
-    const words = t.split(' ').filter(Boolean).slice(0, 4);
-    const dateKey = item.pubDate ? new Date(item.pubDate).toISOString().slice(0, 10) : '';
-    return words.join(' ') + '|' + dateKey;
-  }
-
-  // First-seen wins. Because we sorted by source priority above, the
-  // higher-priority source's listing is what gets kept.
+  // Deduplicate: if the same event title appears on the same date from multiple sources,
+  // keep the Wilkinson version (listed first) and drop KOTO/TT duplicates
   const seen = new Set();
-  const deduped = all.filter(item => {
-    const key = eventDedupKey(item);
+  return all.filter(item => {
+    const normTitle = (item.title || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 20);
+    const dateKey = item.pubDate ? new Date(item.pubDate).toISOString().slice(0, 10) : '';
+    const key = normTitle + '|' + dateKey;
     if (seen.has(key)) return false;
     seen.add(key);
     return true;
   });
-  // Replace source-provided images with local org logos where configured
-  return applyOrgEventLogos(deduped);
 }
 
 
@@ -3642,41 +3294,16 @@ const ENTITY_LOGOS = {
   med: '<img src="data:image/jpeg;base64,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" alt="Telluride Regional Medical Center" loading="lazy">',
   norwood: '<img src="data:image/jpeg;base64,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" alt="Town of Norwood" loading="lazy">',
   ophir: '<img src="data:image/jpeg;base64,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" alt="Town of Ophir" loading="lazy">',
-  ttimes: '<img src="logo/TT Logo.png" alt="The Telluride Times" loading="lazy">',
+  ttimes: '<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="The Telluride Times" />',
   community: '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#2f564d,#22453e);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Community Event">📅</div>',
   localgroup: '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#6b5b3a,#8b7332);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Local Group">🤝</div>',
   koto: '<img src="data:image/webp;base64,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" alt="KOTO Community Radio" loading="lazy">',
-  wilkinson: '<img src="logo/Wilkenson.png" alt="Wilkinson Public Library" loading="lazy">',
-  'colorado-sun': '<img src="logo/Colorado Sun.png" alt="Colorado Sun" loading="lazy">',
+  wilkinson: '<img src="data:image/png;base64,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" alt="Wilkinson Public Library">',
   airport: '<img src="data:image/png;base64,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" alt="Telluride Regional Airport" loading="lazy">',
-  clubs: '<img src="data:image/png;base64,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" alt="Community Clubs" loading="lazy">',
-  'Telluride Rotary Club': '<img src="logo/Telluride Rotary.png" alt="Telluride Rotary Club" loading="lazy">',
-  'humane-society': '<img src="logo/Telluride Humane-400x400.png" alt="Telluride Humane Society" loading="lazy">',
-  'smb-forum': '',
-  'sheep-mountain': '',
-  'tf-news': '<img src="logo/tf-foundation.png" alt="Telluride Foundation" style="width:36px;height:36px;border-radius:50%;object-fit:cover;">',
-  'ouray-plaindealer': '',
-  'ouray-county': '',
-  'weedc': '',
-  'nucla-gov': '',
-  'norwood': '<img src="logo/Norwood.png" alt="Norwood Colorado" loading="lazy">',
-  'csu-sanmiguel':     '<img src="logo/4h-csu.jpg" alt="CSU Extension San Miguel" loading="lazy">',
-  'tmc':        '<img src="https://www.telluridemountainclub.org/wp-content/uploads/2017/09/TellMtnClub-logo.png" alt="Telluride Mountain Club" style="width:36px;height:36px;border-radius:50%;object-fit:cover;background:#fff;" loading="lazy">',
-  'stpatricks': '<img src="logo/Church.png" alt="St. Patrick\'s Catholic Church" style="width:36px;height:36px;border-radius:50%;object-fit:cover;" loading="lazy" onerror="this.style.display=\'none\'">',
-  'regional':   '',
-  'fresh-food-hub': '',
-  'nucla-naturita': '',
-  'telluride-academy': 'https://tellurideacademy.org/wp-content/uploads/2022/11/Telluride-Logo-White-100x100.png',
-  'tri-county-health': '',
-  'club-red': '',
+  clubs: '<img src="data:image/png;base64,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" alt="Community Clubs" loading="lazy">'
 };
 
-function renderLogo(source, item) {
-  // For per-item custom logos (e.g. specific local groups: Rotary, Elks),
-  // prefer the logo path on the item itself over the source-keyed default.
-  if (item && item.logo) {
-    return `<div class="card-logo"><img src="${item.logo}" alt="${item.sourceLabel || source || ''}" loading="lazy"></div>`;
-  }
+function renderLogo(source) {
   const logo = ENTITY_LOGOS[source];
   if (!logo) return '';
   return `<div class="card-logo">${logo}</div>`;
@@ -3687,7 +3314,7 @@ const TOWN_IMAGES = {
   norwood: 'data:image/jpeg;base64,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',
   mv: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCADIAMgDASIAAhEBAxEB/8QAHAABAAIDAQEBAAAAAAAAAAAAAAYHBAUIAwIB/8QAQhAAAQMDAwIEBAQEAwcCBwAAAQIDBAAFEQYSITFBBxMiURRhcZEVMkKBCCOhsRYzUiQ0Q2JygtEXJXOSosHC4fD/xAAbAQEAAwEBAQEAAAAAAAAAAAAAAgMEAQUGB//EADIRAAIBAgQDBgYCAwEBAAAAAAECAAMRBBIhMQVBYRNRgZGh8BQiMnGx4cHRBkLxFTP/2gAMAwEAAhEDEQA/AOqKUpSIpSlIilKUiKUpSIpSlIilKUiKUpSIpSlIilKUiKUpSIpSlIilKUiKUpSIpSlIilKUiKUpSIpSlIilfmcDnisSRdIEYEyZ0VoDn+Y8lP8Ac0iZlK0D+s9MMIK3tR2dCArYSqa2BuxnH5uuKx5HiBpCO0hx7VFlShf5T8a2c/1rl5y4knpUTZ8R9GPPIaa1TZVOLICQJaOT969o+v8ASMh5TTOp7KpxPVPxrfH9aXEZh3yTUrRx9Xacku+VH1BaHXc42ImNk5+m6thFukCX/us6K9/8N5Kv7GuxcTMpSlJ2KUpSIpSlIilKUiKUpSIpSlIisC8Xi22aMZF3nxYLA/4kh1LY/qaz6qLVEGE/44sm9sQ5kQWIPMiW2FiMtL+3Kc8DcVDnFV1anZoWttOSSXbxQ07E+ERbVyr5JltecyxaWTJUpOduSRwkZ45IqNo8VbhqJh1WkbUxEYi4TNn39zyGYzmceVhJJWrp0IAyKx/DrSrGk9aaoSpHlG7S1fApAx/ISkOKx7AKd2/9tVhrGP8AC/w6WRuP/luXJxUs+697w9X7pH2FYfjGc5V6esiQwFz1llOag8QLrrFrS8yfbdPPmIqUiZBimUmWkKAO3zD6MZ5B5/pVdHVF0uti1tMuGqtTPuWApEYRnkREPILhbClhCc7sgk89MVZVsnIZ1f4dRJqgm4myvFYV+Y5bZ4PzJQr7GqouWnLnpXR3iCq+R/hjd5DcSAhShmQrz1L3JGfy7ec1UmId/qPd+bGcdbbdfxJfqzQDUd7S9zgLuk2yzJMdq6Q5k913ch0jYsnOfSVY+uD71+aFt2h7vqu62JvSMFUi3plOPPPpKwCh/YhCQScjbgknvxWwtmtUaY8S1Wa9ymEWifBiKQ6p5KkR30NBB3EHCQSgg57hJ+dQ7wy1FYrP4kawut1vESLDkKeaYWsqV5u94q3JwDkYH9RVfzspvc6aTt0DC3frMrw1m6dvmrJ16kWC22+1tQ4kByMqM2pr4tx3akoyOAcdeuOteujdOx7P/EXdbM7CiuW59p55tl1lK0htQS4naCOMHI49sVF7TqyFo/QjMWwzrXPu0m5KflpkwVuJQhOUtqTuAHG0K9/Vx3qcyPEPRK/EW1ao/F5BdjwHIj6UwHMOKJG0jPTqr37VJgwLWBsQRz5SKlSBci4N5kaGtNu1hpvWFpvLUFp1+8SYsRxEdCFtkDeNuB+nbnHsDVc+LFtkWnTOi7dcYcaPOZjSEyC2wlClqQ7sSSoDKhtAIJ65z3r6uOq7VA0/N/ALu8q7DUarvFJiqQNmCkZJ4HB5H7d6+PGPW9u1srT8qAFtvMxVpktLSUhtxSgSkE/mHB5HbFSpqwqA8v1IVGUoRz/c3E6DDv8A4ARJ9utFsTdocxqHJdaioS4oJXtScgZ53N598mpbZ9P6Tuev9RWR3TFoLVotzS1rYQpoqkDlz8qunqx+1Q3wJ1pZ9Os3y36kkNtwH/KlMhxClpU6g8p4B5OEEf8ATWV4HX6GdS6sul+u0CC/cWSlPxT4bK3FrUo4z2Hf9q46subpt42/EkjK2Xr/ABeeCmIcLwQhartqbjAvbsr4dLka5PpQg+aobtpVg+lOMVs7FetQ/wDpNN1gnWWokz4bxY8hxbbzLiwpITwpOQMKGec9a+7fZHL34C23T9un2py6pm+eWTObHp8xffPsQcVsU6QuMHwT1NYbe27c327orylR2jl9KVtbilOT0KVD/tNS7bLpm/29J0KdwOXrMfw38WNe6ovf4THesbkksqeC5kZaUkIxkZbPGc9cdqk0XxznQdRu6ev+lnnrqy+Y6xanfN3qHOUIUASCOetQnw+05L0NEv0+83KBY7k4uNBivy1nyxu2vupyB12YSewOasWPaY8XxqvF4ZQha5djTKjkcgqCghZB+YSj9lVNsYVY21Fp1EYqLnW8kcPxZ08l9UbUKJ2m5YTvDV3Y8kLT7pWCUn75qa2u6QLtGEi1zY0xg8hyO6lxP3Brk+zXHWtx09aJd2juXOzO3mNMRPecS98OfMLa21J5ISoqxgjj963/AIuxbXp+dfHI+mXLMptlH4de7apbAclEbvLUlBCT0VzjjHPUVauLIOVhc9J0MbZp07StTpKRKl6Ws0m4bvjHobLj24YO8oBVkdjnNbat0nFKUpEUpSkRVA+Lc5mTqvWhRLjRXIOnUQUrkPJb3Prc84JQCcqO0DoOvFX9VU6z8NNLaw1rImSHN12aab+JjIklBUCMIUpOMjIGMgjOPlUKlM1Fyg2ldQkDQXlZyvGG3L1tZ735E6S3EtRZ+HaAQTKdILgO49BtHIzzWn09qXV8eLdGrJp1qTYpkxySzEuLXnBhSlbvSSU5GeemM9Ku2RpSHpeEly32RtaSUtbYTAUvABxu6HHzJ71lRbQ7LZ838OOMZIJSFJ+RHvXKXD6AHzGYauIr30GsoB3SeqNS3R29366eTclL9KkA7m9uQAkpICAOwBrOPh5MuDhf1Fd7hclJTtSoqUdv7qJ+1XjZo0iBFLht6C2p9xGVsgnHmKA+dbyTITGgqU9BSwyhOVOrSEhI98kYrYtGilrJfxmUrWe+Z7eE51j+HlijbkutOObhgea+E4+YxitnF0NYylCPwyOQnoSskn6nPNTWXCtt6uHlWu2OXCcRlTz5LbafbKsZP7Dt1rMslpE9UuLEmRkyYYGUpYBjZzynP5+vRWQTgnGKsNfDpoVHlKFwmIfUMfORiHoezNuJWza4YUnvsBx+xrZN6NsgZUo2qA3jqosJ/wDFSJW+Ary7jHcjc7PPCcsk/wDX+n6Kx8iaxZskuzCw0ErbBCeO57kf+a8fi3FVwVLtAPttY+PTn4T1uF8KbFVMhP36TUtWTT7RQUwYgcR+VbcRPH9K9IumrN5jr0eDAcK/zAR0g9epGK3bdtCgrYCR8k5rBltfBbVN7g5nO8HCQPbFfIYf/MKj1bVFBUnlofC56bc59G/+P4V1y0WIYbX/AJ0mmu2kbPMSnzLNCXjoUthBH2xWluGgLRJCSbSynYnaC0ot8D3wef71ZERbc1ht1laVFSdxQ2Ukjt/esSappS0tNtOy3yrYEtoG1J/5lHCR9M5+VfoWHxCOlyotYakb+/vefGV8I6OVBN+4GVDM8ObItwgMutL6YS+Cfsc18M+HcqIrdZ7vdIJ6jYojB/7SmrKctjVznXSO7AiynbZ5ZcaZJS4rcOQgnAUQcDBxk8D5yGwSYJi+REhjzU4Km3mlIdSPYoVyBVh7CoDZAfSVJSrodXI9ZR980nri424wJmoVXG3+YHvKlLUfWM4OSCe5745rPf1Xr+FPtNwlWKG4q0JUgKjNbfNYUAlTRCVEbfSkjA4KQe2KvJcV+espTb0BJP6GtoH71+P2ExGlOPssjAyBkEn6Cs7YPDsLEWmpKmJXUG4+0oR/xB027Zo1kh2edYYxvDFxdWtXnIThze5gDCscJwkD7Yra+JSkavF6u1r1dbHdOsMouAhbip9MhpBSlPlqwUhRVyR9s1ZkSNE1A8q3yrLI8t0kK+Ki/wAs455POK0+oPBPRqpMV6eTa0OvIZCGJG0OqUcBCQoHk/8ALWJsAqkMjef7mtK1RwQy+UtLRN2kX3SNnus1hMeRMiNvuNp6JKk54z2rd14wozUKIxFjICGGG0tNoH6UpGAPsK9q1TaIpSlIilKUiK508aX7e94gyI8lbkaWwww6zKaVscbVzghQ+eDj5Cui65I/iGcA8WZqd2FfCxiCOxAJqjELmTe0ormyTexdfa40cHQt5vUVuLYcDsgkrBV+rIO7GRyOQMjoKlL3jjZnLal1i2zHbgQd8beltCDnu4Oo78CqVsl1eRITAuMrLKEApyog8AJGD0HA/et3dotnjWY/GNFTSlANyW8B1oE/lyBkgc8HPFZKWMeiQtQZvtMbOzLZTJAPF6+uOIDa248fctamWc5UVKJwXFZIAz2Ffr+pHbrDU7IciW9gKCviMF+S6r3ClEkfLk/LFQA2C5CM1LtqBcIgTgbME+k45Hz61hybhMjFtc9h9tRGUeY2UpH0HT3r0lxNCr9JsZlft1uCbiW7bZkuVbGYLUsWm1LytZbBXMk+5Ueif3PHtUrtF6s1q0qiGwyqLblTWYbi3HNzjiVHBUpX1447A1QMK8EPLfluKfWpOxAcPCQe4H9q3L2pnjp9bYbGBLStIJyDtJUEke3AH3qL0S2oOl5OliSh1HKdHSL5HlwpTjzyGJNsdLMxKgTtB43Ad0kEKwcgjjryIfcR8AlchEAxTnf8bb/58J0HuWyct59hj6nrVextYuxb8LpEQ4HVseVLaVg+YjrnB68dD3rafHNJWidpu4JiKc5Sy2v+UtXtt/SfkPtWWrhVZOzqqCp79vfnNa40klkNiO7357SY2rXER59uApUWO+RkPuO/yVn2Seu75KwPnW5ips81595b0e9PMLSMbgWkuK/KhKQdvzJJUcd+aqCXeY091bt1s7LpziSUI2OpPZeQOR//AGKxNjMXY7p64rbWVbkoSUqBI6HaccjpnrWbD8DwWGOeimVuuvkdx6Tn/p1m+s5h5em35ks1PH1JFjsmdGhLXLcVIQoNBtcZWSEtIUCM5SjJT06g9ajendWTbdfzOuy1vyowUhltxISlB6BKEYATknJIGQBxyc17WnX0hiOu13zctkEjapO7BJ3bjnkKz0NfC7ja1l8yFNuxHVD1ghaUrI79wCAD9+mK9ZSRdKig/aY2IJD02PjPi3awnRdQO3NDylofWhcrACSsIdJ2gnpwSc9jj51at61Xb57q408BLjBK2HXFqYLiSOFNvJ/IscgpPBxVH3CNDeiqZjLfjvJOFJcHmN5+Sx2+fNeb+pbk262oyEDyAACMEHjBz75FTqUVqEMmhEjRxL0gVfUGXLL1qILDb8e5zgsEH4S5IAC/ml5vAP8A9XXpXpA8Y9PtuLTcYMuG6OVOD/aArHOMnCv6VR/+IZs2Yhu0xNrjnDyBw2snuUngfWvuPYH2bm1JvCo77bZCloHRSdp7d+eMfWqGrrSWzG5loquTddBJ9N8XtVaqnBjTDSbPASfXIcSHV4IwQVHjIOSAke2elafTNwLmtbIu8XB673M3JllD8hwrU0nzfypHRPzI/tUKuGoZf4shNvaMRlCFpCHBtJKhkrI+2K1unLoLNqm0XJ8OyW4kxuSpDeCpQCwpWM/vWQM7m7Gw7pdnLMLmd50oORmlbp6cUpSkRSlKRHauLfGDbJ1nq+c22UBm5IUVFSTlHlhBPBIwfSod8EdDXXerbvGsWnLhcZs9m3Mstn/anmy4hpR9KSUAgq9RHAPNcQt3ZKFS1MJQ5IkurDYYIS2SpROQ3jCB3xjj9qyYtmCgLveVVNflmJAmbm56X0+YfKTtyegzzj9qzXZ0lVlUwpBMRJyHVnGQOwJ6/tXhdrbbrBb463hIlzl4Ksr/AJYPbKR2yT19vnUehTpVxv0VLh3Er3Fa/VgJyrGOmPT0q2jhQwLttM70MrZTLa089dbFYm1yrPc22koStKxGUUEkcgkZxng8461sr3emXIiZyUNSIW5IdbUkLCeRhY98HqKjWjfHO521XmzIDzrBbDay0oKSfbOcf371stX68sWtbXIVamm4d3GN7XlbFSUhXIV2UsdQRk8Ed6zYjhqM5qUz75yTIcsx9QWiA0Yy3I7MNBdCVPsZAUkg8EHgfWtDOhwUtKcs0p9TSnAltuQjbuJ77+hwcislq53C9R5NlW2hby2wUqeQoFvAHsCc8E5+dedlvZiOqhXTa80hflFs+oN4wMj9wP61jp9tSW99RyvylT0vlzMNDMRMmZA2pmNLadaOEKWnG33T8xjHH0r3iXBDZWptCS25gqaVyk4549v/ALVOLBqOHdWXYDzTL8dsBQRIST1yDg849v3qK6nt9sYnym4zb8OSln4jy0p3tuc9EEHKeM89OK04fiZzGnWTWZnwwPzIZ7P3YvrTIhuqZUgBvDh3ApOM9e4PI9/rWruyH25KnHA3hSv8xoYSTnrjtWvV8VFDbrjbjTS+W1KSdq0nkc9Dwa+XZ5UhW5WQf0DmvUpuhF0OkzFGBsZtZT4dbbMtSHzjAeT+cD5+9a56SW1Y83cB0OMFX7V8Mx5MhskJDLZ6LWcHH0rxktsB5tlCnHW08kngqUf7DoKg2IVNF1klpX3ns5MeVh1RSkKGQoj8+Dis60QhOkqaUoI81vzAsp3OK5wNqexJPH0rTS235D7rbDLrj8dASWmkFYQkDrx261lT1mxx3YcTeq8ykbVLCeY7SuNgP+tQ/Mf0g7epNZKtZmXfUz0MNgWqNa1gN5PoFsatbTL8WG6446ceetaXeT0ThJIBP7Z7fOOS73Ktrs8Pw5LL77ig2qQhTe0YwOo/etDYpziGpFuupdNv27stK2rY5I9I/UnOfSf2qVxdUSLSzHhagWbpZXiDHnIUVAgEEZ98Y5B9Qx3qpFDEq2/vb+pvfhyWzI2kiM9b6XmJchbTvxSSQ42oq2n5nGAce2e9fsdpPws2SpS0oS38O04kHh1RB6jnIAH0zU7es4mmGFuQZ1lSpxxBC1IXhQOOE8ZBPUYFRq/QGrE+iRbi+IPJdj+aSATwFpJ5+Ro6MVsu8hUweQ5k2nYnhvdXb3oWyXGQ26h1+Kgq8zGVEDG78yuDjIyc4PODUkqif4WrxGctt3tCri6/NQ8ZCIykqKWWDgAhYOzlRJwADnOc9avat6NmUGTU3F4pSlSnYpSlIka8SF3VrRN3csEaJKnIYKgzJbLiXED8wCR+ZW3OAeCcZrh2Ldw2kz1Q1eU1uQhLaUje4rklXt+wrujX9tXd9E32A0ha3n4bqW0oUUqK9pKcEdDkCuErUJN3dbib1txUEB07QB1yUkDpnB/esuJOWzHYSDEqQRMeBc3nnJch5pch9wgEbeACkjAHt/5rZ2SLBiRmJMyDcI0pDyAlbrwCFJKsK9AwRwfnXvcYH+GLmtTqB8JJ9cVKvUFpxnYRnPGcftXtdZV6kRHWrZbohZwnKmVZUknkcHGD0NTo4ilUphr6feTNNnOZReSUQWZF2hGzw51ugPtttzVsS0SkoI3b1BJJJyCMA9KhXlyLde3nkMyEpT5jyBKiKZzjOPcHJwO3WpxY/FXUMJqPGummYsr9KStO0kjvzmtpeNSHUcq3wX7HFtTSn0FYYTkrwr9RAASnrnrnijPSpKSLC45c7SSU6jsAbmx58rzVWK52qS9Eua5qbVcXUlCi8N6c45CgSOxyFZHB5reHSzNzhJSJNmuahklbbqmVZJJJBSVcn3P75qFSGrPBLrEQj4pMk+b57QWnyyTwD0PbBrfW3TmnfgLNOur4bTIS2tZ+H8tKgSoKAUB29680ulwWFztfn71nqZMwK8vP3tMe86MuESMH0w3G2IzW1ZaPnLewokK9IGPTgE47dKw7IyiepFzkXNyO3b2k+a95OUpTk4GSrknOABya9boxHgyibJcHUM7chDE5xCwCAQeuO54HtXvZYCmNPTG795kxtTxcV5K0g5BSCo553cjkds1N6qFdBc7f3MhwNMuWb+Zv7Le4d1tcWKpLDsZ87m2JCAkuAZ9OAcJUD7dPoRUVlaaMhv43Tjbiju2OwnVguMrGQcK6LTnv86199ZNrl+RCbeQJS0yEJXjLbg9JKdvc8DPcY4yKWbUsq3xkR8b0ebvUsdUAn1f1NZEo1KV3o8+R9fe88zFoi1Cg2mubckiS5EdaUJRISPMynYO/B9uTmtra5doksH4VEWMGFlEqVMQXHAAeHUg5G0jsEggnB65r6iXa3TX0uagjzJu1xSkNxkDcRycKUSOPl8v2OWzOtpXNUq2vxIzp2rjNhI9KSMZ6nnnvyRW4VCozHTp79JpwGFUqWIvfaZ961ZarbpsRtNKz5ijtW4CFOuD/AIixjJAJGAeM47A50emLNBNuU7dVy3pUlRJCNoUnPJIKlDkn5VhNzIrtxUoRXExHT/LQ6cBAJHU98c/epK5BQ5qVl9CAYW9lwr2EhJCOfT1PSq3fe5t72npqLWsPffMlm3WKOlh9iA475o8tDj8pO1YOfYH2P2qPoLQQGYzEZ2E+CXIxUtXmAc5BIG1Q4wof1qS2lhLKYKFsPIbZTtUtTWccqPHvyr2rCsVquEWY25Lt7vksNu7S00oqyrpnjpx/SoDLrqSYudNBITZ79KsT7ymWnnrb5hSWXQOPoc8K/oa2ErWcGQ0cQH2lA7j6QpJHfIr2uEiLKtQjNNlcuVLWY4xjzFFZ2jPt0+lYmobEmxMMKBLwLBTKUjkB7rkeyece3p+dafiVBCt9RmN3CHLLk/hTvkt29XizxExG7OGvjPLcQUyAokJG0jgo/wCrpkY710rXN/8ACMHXJWpXmWf9g/lJDpYQk7+Ts3/mOAc7cYGc9TXSFbqeqzKpuLxSlKnJRSlKRI14kXx/TmirrdIkdUh9hr0pStKCnJxvyrIO3O7GCTjABrjjT0Daz5kW4reDnrUkteWFEnnAI/fAro3+JO6QWtJx7TMtz8uTNcLkV5Kw23Hcb6LKiCCfVjZgkgq6YzXO6FbE4vbEhZSjch1kn0juPTzj69q8viDnRQff2/cqc62m3ukCTfoElltbKWWRhlakJ3PBJyAFHkDp0wDUbsGq71prUaZUUIcIQETIi/WhZB5yBnkZ61ILDItsp5TcSPlzG0pkrKTk84wemB/eodKkS9P3l5DkRUR5YUvylrAKQVdsHocdeM/1rFgTlZqTDTu2l2HbW15e0vXeibjFiJuTkVMR5SFqZbQAqOserO4JyRkYI6c9K2iPEfw5eUVfDW9frwpSYwx/1DCePp0qpLdMKoi1sqY81tHmNpIKy96CSkZzgnp9ahjqZzMoB2K8wJC953sqTjJ5GMVZTVWJF9B1/i09I0iAO/31lsX8aC1DNdlaVfdiTVK/nMQwQhxOTlSQRhJ7kdD8jXjo+douQ47ZtYOOsuxTuiylSFpQ6nP+WpJPCuTyOo+nMc0DNYhXISHGI6o6Vhh1PklZGUqHmYH06HH1rDmzYs/UUUqipQ3He9RZYOVAKV6j26YNdJBJ0PvwkgrAZb+/OWaqP4QectLtwdbfSkEJL5CsK/TjH5h7VjXiHoW4JcctlxkXdhDoC21Lypkq/XuI5ScDPcfMdK0laUvb0yTKtkUSgtZSlbSwpak88kA9eRU209Zb/CMmMNPSzFV6krMcJKz6Rjco4HQ9arqZFXfXyk0Vs176ec0upWo0bUMaGy26y0qJtQlQBKRncFgj2OD71GzGV+DzmQptU6RLSltSMert6fqSTU81FofU98vaH3bd5RAEaM+HUpSBwQcA5JwFdv2r7keCN+gxkSoE+OZUfK0JceUdxx0AKMZznGfeoBkBsG97/wBTzcTh3apnHORq0x4iNUKjkuoZMcx1eSkkkJ2grHTnAJ+orcsMNf8Au6m4SZseGgufES9u9WMk5Pc5BwPlWhhWe7abujbz5jvSghaVuF9O1ROMABRSTgZzx1r9e1NNt/xjDqGk/HBfmoQrKSFE8ApJBwDnnucVciDTW/6mnDg00Cc5MdL37SunkM3m6WxL00pDjQ8oqaYOeCAEnKsHO4n6AdamEDxusCESJDqXlpUoguBCwAnOEgejv3P9uKqO/uMvW2HHiSGXWWWtq1BH6UoyST75AH71A1reLjkWMC424oelCScc57Vcqq+mukkaZ+o986ST41WORJfmuIc8iOkCMja4Eg4OVE7OT2HsM45Oahvi14mSrtaEW+w/ENRZDe+XK9SSsH9IJAwMEdO1RFqRMd02i1yQmPGisoJC0etRzjIzjByemegqM3N6Up/yGJDjiV+kN5HAxnHJx296jQy5iSLEdb6eQHWcq0sgvy99ZINEQ7gpo3Pa2hppoJjAhC/MG7OOc4IOT2NbSbDfkRVBUlseb/mNlAJyeAP/AN1gw4DtqtFveuDUk2+Vw2HFjcMcjOPy8cjnkDihlW151S7fGlSZAISDlRTj/UM8e4z8qwVMz1C/4H7nks2Y3Muj+FCR8LB1HZErQ+3FkNvh9OEjK04KNv5uNoO7kc47Vflcyfw/XVFr8QH4dytL5uV1bLUaQypJSwygb1bkdQFKHKuRnaOO/TdfQ4Z89IG95Yu0UpSr5KKUpSJz1/Ft54iWFUhiMu1ha/WlZEgO8cAZ5QR1wCcjsOtAG9+VD8o+a228vapKkEEIyM8nrkZrpX+Ki6zIGnbG1Bhsuqcml34lf5mFNp3DbzwVDcCfYEd6phF6tusbxFtd8lTYcOQ2QUtIHmNu9grcDhPXnHXGTXlY9wjZmW4Gp6eFpDJncKNzPq8RbrqHVPkWO1qjXWNGLy0yEFpa2SpKRwfzAbsg+wP0rLuunrzF1wxan7Ui/SIUUyWXggJSptWMEhRwOUqG0k8njrxat9vMKwRLe64pUyUykRW3G0DzXNwAICR3OAcfLNeMXUy27kj8UtcuAqWlKI6n29pfCcnaFAkcEk4PbJr4ocVxTpnp0hlAI8e/kbdOus9teDpYAnX15yoI8G32S7oamNuxp7VxTHdjB1KglDmThJxzjck5P0FXJY7TDW0HWXnHWj0JlHaf/kPNRjxN0dGXaJl2tum/xK4yX0vSZjj2FMIBBJHqGOAEgJHT51CtNXiE3ebe9HjPtWyMhXmPpLqmN6vSlJBJG0FRJz3xXt4LF/G0BUUm/Pbe33vYm9r6zKScNU7J9b7dJdcuJb7LEm3aHBju3BlhbiQzw4vAzt3fm7VHdM6om3C0i6PPpceSVFxgto2EYB2g43Do6M57AnNSe0Kysh1ppCEjBG7qfp7VQt2mv6R1TdbRFltCIHco3p3DYrkZwcAhKiK6UaoDl3E3IFvZp0EzMtN1Lyiwnc+yGVLGSooOcYKenU88V6XD8CtseOmVP+DbjFKsBwo3AJICV9yOc89SAao/RF5XGYYuZuK2GmpYckhU4NNutgKKmwkkqUrO3oAMZHfNYuttRm7ajmxpALNofcTMbRLjqIQ4UDKkHIUM855IwelaMPQzsUJ2lNUZNbS7IMmwX1+Y41fI/kNICGCZJ4dOTu9R7YxxXhbbxpWeuAtU9lc+NlxTballKl9MqH6sdflVJRloAa2NsEKbCh5b6sDPUYKTjp714uymbdPhyIyLcZqSXApSlyFNEflxnaM57YNKHDDTqs5fQy2tiFekFAOlu63XnzOs6YlrhyY3mKRHktLG71J3BX77TVaa0vsC2uNxLTaoMeYvBLnkJVtyeuOnTnnPUVqWtVvXHTNosz02Tb7it0PzHHZKYy5KFKXvCCsbckkYBwB7VWt7ujjN4ljz/MDa9qS4resjp6iDgnAHTj2xVRptmKqZ2iAbFxpLZ0RcWdYzLjbb/bYktiKPMafW2kBIJxsIGOe4Ix0NSiTpiBHRthRfLbAztjuYH2PFaTwhtblv0QJalIVIuLhkq/mFOxP5UDIyegJ/esfVmoFWKTEiuvtIclHnzlrUlIOQCCMd+Oa6AwOVTtIVHUXc7SN6+tNujCG+83cH2lumOpnzwkkqSdgG0DqoD5VCNUWZ+32VKUacZTGXIQG5KXPPVvKuELXgHnOPbp3ra2fQ9+1jdmE22ZFbKFBbcqQpza8pBOHMHcRzkZ7/AExV8T5DkOyRdNqszDt2lNkvxkOhbQcbwoPJcOAEAhJOQCMp4J6+1Swq06faYg25728Tr+Z5D1O3PyyldcaXu8DTkh+8SJxkNbXpTCsJYwDkJAHIxjGc5qOXnUsVXwBgFDKRHLK9oH5Uq9GB2PJrouc//jR1/S+rYchkLcRKdZiLCzJb3HYhK09EZHqPB4x3zVU+KditGjESWGLdEamDmIpo4cacz6SnuR8jnIzmtHw2HxiCpQsAATpsZmqUzTNjNZ4TaofjeKVnfXMlMJkkRnmosQuKkpP5UKB/SFHO4DIxXZYrl7wWn3S9+K1sMu2LXHgwnHQ5JJQWdydpeSM+okkI74Cj0rqGo4P/AOQ0tLKe0UpStUnFKUpEo7+JeTCtsnSVxuLSnG23ZLKFY3BpakJIc29yNp/v2qtvCzVltt2pJbC0zZEy4ugMKjRUqS6AOBn8wI5zzt71ffjZow6z0YqPHU2idBdE2MXCQlSkg5QSOQFJJGR3xXKds1bcHrvEVpiEhmYwytAS9hxIScblA8HPH2OK8HjOBGJpsttx32Gm3fznaNXsawflLT8UYk2LdbbfosQvIhKUp0J5c2EcnHfGPf3rXyb29rB22QLdEnIbakokvPKbKA0BnpuHJPTHzNZUbxLtztgsECdJbm3WaWG5RSOGStQ8wrxwMZ2hP3rfai1nZNNzrcl7+Y3KdfacU0CpTSkY5KRzjcccV8ZSOIootBqJLjMFOuoF+XPnafVJi6ZUtfTS/wD3lMrXrsu26Ieci3C3x3gg7UTmPNQ9gcgY4z7ZBHuKpnTl0FutqIEtD89qayoMtNMKSh7P5gDgdM/p4HHtW11Nf03TWMofjM5rRslTKZCoy97SHFJG4JyklJzzwODVsMK/w29Cs1pZVIbgtttQUvQcuyW3AN5UoAAHbjOQPy5I5r6LgvC0oYTNif8Acj6RqL230uLX8N58/jKhxNYheV5XEO8R2JkVqJNkKttxeU0iOtW5TLvGAAfWU+lWST1PSvaboZEyTIfblRXlyHPNw+2CRxgJB6446VG9fWqy2HWs6JaYU5HwxAeflPLQpKlkZU3z6jncQRwc9OMVvQ67GaU2LvOjOJGC3NaSpaeOCdwB54x9Fe/G3EKMG3Z5r+vn1ldDE5VIe+k2envDxKTdGbg9bm481ITsiNguoTjkJKgdnPPHerSag22VGbjSYbchptAb82QAokAY5I5zxVUx9UvQHm/xAQ1wCrDz7AK0tEgYylXIAOcqPYdOanka+bEILbzD3A2IIwft2rMzM3zbzejrUF1M2D+gdJqCXF2qFgY5DR5+xr6i2LTlrcBg2lhtQ6LDOB91V+C/zSjPwjRPsHR/esJ/UC8EOyIrWPmVK/8AH96iWY6Xkgtpr9YaVZvU43BiQ354jmMGnUIW2GyrcQE44Oe9V5bvDt6G4lVxVb0u5JJKfMHXgYPHTHapXedTRITa1SD5768BtpsbluEngJTx98VF3JCpM+a3dJs2AkEqjoYdQR5agOFDHXgjk988Gpio1JdT/cqq1kp7zPLzOitPKRGuRLzQKW1LAASFK5OO4SCccdq0qlS3lvT2rZdbt8KtMSQ9JQSp0ukHy0tHgZKkngAD09s19woVqZu0PyHY1vtct3bJdku+clbe3hpSSoekjpk8Z+gqZ3m/Sbfcp0cyHI8hgNogRm2vTKTtGM5GT/p4IxjPNefica2cJSW5Ivrpzty8eem5nKFD44Ek2A0le6J1DfLDrJNtsUGGnDy0lNwR/uw3DcFbFE4BPAHParv1NZrv+O22+WF+3ypDzRjrSUeS1ICsKVgDKgRs3ZJPAI+dVv4iQJKdVW520QkfiEiEpbwefSgOgKGAgZxkEk8gZJzk9ozG1rf7NrGwzL2+GIzAdaaYSsbW9ydhUT0zj7CvqMFiaHFcCi1muzCxU922/dpvPOcNg65QcucubSlqlOanTcNWSIjE2VE3RIaFKAUyk/zAlWQSsEgn5FPHUinvEnTNtb1c1cYHxympMnylR1SFuKCj0KVqJPbpnp06Yr78TtQytX3CzW5qXmXEK30LYXy2Sk45HTPFQC4zb9bgxIkXFxS/NyltwBXqGQFY6HHP0raaeHwlNsIosQLADYeO8pq1mrNmJ3lx+EkaTF8ZLLHbmyJEIRZMhKHf8xkbNhQv/lzt+pCfauoq5+/hitk+6yJ+rrtdnJqwhUBlpST/AC8lK1knAGeEjCc47+1dA1XhKZp0grbySDSKUpWmTilKUiKoTxH8En/x53Ueg/h25ThUt62vK2NrUrqW1dE5PO08Z6EdKvulRdA4yttOEA7zh65WnUtuUUXzSFxS/jYrbCUptaT1CVIBHzBBrURIF0iuOLFhu0mQrhLkiE8rYlJykD057Afeu+Kfes3wdMbSHZ8rziaC9Odalty7JdY7CtjraBb3VKQ7xuI9PP5R7daz/wDGOtRa7pCLV9W3OCEIcVCdS5HSjpswn09AQQc5612V96ferKNDsLhDoeXhac7PrOHBctSFwvLtF6fmOuAuvyYS1haAdw42elQVznmvW+XS93O4GVI03ctzbAaZS1Cewn1KUeSnruUT/QV2996feqKnD6VWp2r6t3y0Fghpg/KdbTg1uFfJLTMZMG6ttrUN4diutgDvlW3H3BNWlb5JgsoZYju+ShIQlKorhwB05Kc11B96fejYFCLXllGoaN7Tm78acKCn4Vz9o7o//GtLqO6zW7Y8uBDluyDhKUtRXMjPG7G3kDrjvXVf3p96ivDqYN7y04pyLTjWH54hLQINzZlLH8yR+HrK1c5xkoBAySR7ZrR6nYusxDXlWy6vSE+grRCeCVJ65KSng/Q9a7m+9PvUU4ZTR89zMZW+5nBtuj3FlUjz9NXR0JSkR98Fz0K3biv8p54GB061Mh4g6yVCdQ/YpjsnyUtNSDbndyXAeXFejByDjA9h7muwPvT71yvwnDYgg1Vvb3/2W0nejfs2tecO3qTerhKcui7LeTc1P78IiPhrYQApISQdvIzx3rHfau82Y2ZNkuakqfLm9yA7/LSpOFA+n3zXdX3p96tTAUkUKvLaVMhYksdTOKILcqK+j8I0ldC6lO1tDVvdClKPVSjtwPkO1SfSvgpqjVt0RP1WDZoP+hWC9t7hKP0k+6unsa6w+9KnTwdOmc25nBTE1+n7NB0/Z4trtLCY8KMjY2gf1JPck8k9ya2FKVrlkUpSkRSlKRFKUpEUpSkRSlKRFKUpEUpSkRSlKRFKUpEUpSkRSlKRFKUpEUpSkRSlKRFKUpEUpSkRSlKRFKUpEUpSkRSlKRFKUpEUpSkRSlKRFKUpEUpSkRSlKRFKUpE//9k=',
   telluride: 'data:image/jpeg;base64,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',
-  ridgway: '<img src="logo/Ridgway Town.png" alt="Town of Ridgway" loading="lazy">',
+  ridgway: 'data:image/jpeg;base64,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',
   ophir: 'data:image/jpeg;base64,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',
   placerville: 'data:image/jpeg;base64,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'
 };
@@ -3718,8 +3345,6 @@ function renderBadge(item) {
   else if (item.source === 'med') badgeClass = 'badge-med';
   else if (item.source === 'norwood') badgeClass = 'badge-norwood';
   else if (item.source === 'ophir') badgeClass = 'badge-ophir';
-  else if (item.source === 'ouray') badgeClass = 'badge-ouray';
-  else if (item.source === 'ridgway') badgeClass = 'badge-ridgway';
   else if (item.source === 'airport') badgeClass = 'badge-airport';
   else if (item.source === 'localgroup') badgeClass = 'badge-localgroup';
   else if (item.source === 'ttimes') badgeClass = 'badge-ttimes';
@@ -3741,8 +3366,6 @@ const SOURCE_SHORT_NAME = {
   med: 'Med Center',
   norwood: 'Norwood',
   ophir: 'Ophir',
-  ouray: 'Ouray County',
-  ridgway: 'Ridgway',
   airport: 'TEX',
   wilkinson: 'Wilkinson'
 };
@@ -3955,10 +3578,17 @@ function renderCardActions(item) {
   html += `<a href="${outlookCalUrl(item)}" target="_blank" rel="noopener" class="cal-btn" title="Add to Outlook Calendar">${gIcon} Outlook</a>`;
   html += `<a href="${icsDataUri(item)}" download="${item.title.replace(/[^a-zA-Z0-9]/g, '_')}.ics" class="cal-btn" title="Download .ics file (Apple Calendar, etc.)">${gIcon} iCal</a>`;
 
-  // Livestream button intentionally NOT rendered here -- the same button is
-  // already shown by renderPasscodeInfo() at the top of the card in the Zoom
-  // Access panel.  Duplicating it next to the calendar buttons was visually
-  // noisy and confusing.
+  // ── Livestream button (day-of only) ──
+  const remote = ENTITY_REMOTE[item.source] || {};
+  const today = new Date();
+  const isToday = item.eventDate &&
+    item.eventDate.getFullYear() === today.getFullYear() &&
+    item.eventDate.getMonth() === today.getMonth() &&
+    item.eventDate.getDate() === today.getDate();
+  if (isToday && remote.livestream) {
+    const ytIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>';
+    html += `<a href="${remote.livestream}" target="_blank" rel="noopener" class="livestream-link" title="${remote.livestreamLabel || 'Watch'}">${ytIcon} ${remote.livestreamLabel || 'Watch Live'}</a>`;
+  }
 
   html += '</div>';
   return html;
@@ -3970,7 +3600,7 @@ const GOV_MEETING_PATTERN = /board|council|commission|work\s*session|hearing|pla
 
 function isGovernmentalMeeting(item) {
   // Cached sources (smart, mv, school, fire, med, norwood, ophir, localgroup) are already curated meetings
-  if (['smart', 'mv', 'school', 'fire', 'med', 'norwood', 'ophir', 'airport', 'localgroup', 'ouray', 'ridgway'].includes(item.source)) return true;
+  if (['smart', 'mv', 'school', 'fire', 'med', 'norwood', 'ophir', 'airport', 'localgroup'].includes(item.source)) return true;
   // For dynamic feeds (telluride, county), filter by title
   return GOV_MEETING_PATTERN.test(item.title);
 }
@@ -4371,26 +4001,8 @@ function renderNews(items, filter) {
     filtered = items.filter(i => i.source === filter);
   }
 
-  // Sort by day (ascending — soonest first), then mix sources within
-  // each day so we don't get all TT, then all Wilkinson, then all KOTO
-  // bunched together. Within-day order is stable across reloads (uses
-  // a deterministic hash of title+source) so cards don't shuffle on
-  // refresh.
-  const _evHash = (s) => {
-    let h = 0;
-    const str = String(s || '');
-    for (let i = 0; i < str.length; i++) h = ((h << 5) - h + str.charCodeAt(i)) | 0;
-    return h;
-  };
-  filtered.sort((a, b) => {
-    const aT = a.pubDate ? new Date(a.pubDate).getTime() : 0;
-    const bT = b.pubDate ? new Date(b.pubDate).getTime() : 0;
-    const dayA = Math.floor(aT / 86400000);
-    const dayB = Math.floor(bT / 86400000);
-    if (dayA !== dayB) return dayA - dayB;
-    return _evHash((a.title || '') + '|' + (a.source || '')) -
-           _evHash((b.title || '') + '|' + (b.source || ''));
-  });
+  // Sort by date descending (most recent / upcoming first) for slicing
+  filtered.sort((a, b) => (b.pubDate || 0) - (a.pubDate || 0));
 
   const seen = new Set();
   filtered = filtered.filter(i => {
@@ -4412,18 +4024,8 @@ function renderNews(items, filter) {
 
   filtered = filtered.slice(0, 50);
 
-  // Re-apply the day-asc + hash-mix sort so the slice's selection is
-  // re-ordered for chronological day-group display while keeping the
-  // within-day source mixing.
-  filtered.sort((a, b) => {
-    const aT = a.pubDate ? new Date(a.pubDate).getTime() : 0;
-    const bT = b.pubDate ? new Date(b.pubDate).getTime() : 0;
-    const dayA = Math.floor(aT / 86400000);
-    const dayB = Math.floor(bT / 86400000);
-    if (dayA !== dayB) return dayA - dayB;
-    return _evHash((a.title || '') + '|' + (a.source || '')) -
-           _evHash((b.title || '') + '|' + (b.source || ''));
-  });
+  // Re-sort ascending for chronological date-group display
+  filtered.sort((a, b) => (a.pubDate || 0) - (b.pubDate || 0));
 
   if (filtered.length === 0) {
     container.innerHTML = '<div class="empty-state">No recent news or alerts found.</div>';
@@ -4475,7 +4077,7 @@ function renderNews(items, filter) {
 
       html += `
         <div class="card" data-source="${item.source}">
-          ${renderLogo(item.source, item)}
+          ${renderLogo(item.source)}
           <div class="card-body">
             <div class="event-card-main">
               <div class="event-card-content">
@@ -4566,8 +4168,6 @@ document.querySelectorAll('.chip[data-tab-target="meetings"]').forEach(chip => {
     else if (filter === 'fire') chip.classList.add('active-fire');
     else if (filter === 'med') chip.classList.add('active-med');
     else if (filter === 'norwood') chip.classList.add('active-norwood');
-    else if (filter === 'ouray') chip.classList.add('active-ouray');
-    else if (filter === 'ridgway') chip.classList.add('active-ridgway');
     else if (filter === 'ophir') chip.classList.add('active-ophir');
     else if (filter === 'airport') chip.classList.add('active-airport');
     currentMeetingFilter = filter;
@@ -4614,1285 +4214,322 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 });
 
 // ══════════ TELLURIDE TIMES — CURRENT HOMEPAGE STORIES ══════════
-// Updated: 2026-04-20  — refresh periodically from telluridenews.com
+// Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "A late spring snowstorm slams Colorado, closing schools and disrupting commuters",
+    title: "Housing ‘fast-track’ amendment discussions continue",
     source: "Telluride Times",
-    date: "May 6, 2026",
-    firstSeen: "2026-05-06",
-    newsTopic: "education",
-    copy: "A late spring snowstorm dumped over a foot of snow in some Colorado mountain areas, with Jamestown getting 16+ inches and Estes Park seeing 17 inches. Denver schools canceled classes Wednesday as the city faced its biggest snowfall of the season, though the precipitation was welcome relief during ongoing drought conditions.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_20728449-67c6-551b-8b24-b8ff7c5c661d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/4d/a4df46ad-e4d3-546a-8382-f9aba6b82c82/69fb2b5bd52db.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "ADL reports a sharp drop in US antisemitic incidents in 2025, driven by a steep fall on campuses",
-    source: "Telluride Times",
-    date: "May 6, 2026",
-    firstSeen: "2026-05-06",
-    newsTopic: "arts-culture",
-    copy: "The ADL reports antisemitic incidents dropped 33% in 2025 to 6,274 cases, down from a record 9,354 in 2024, largely due to fewer campus incidents. However, physical assaults hit a record high of 203 cases, including three killings. The decline follows a peak in Israel-related incidents after the October 2023 Hamas attacks.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_fd5eb38f-870a-5931-a281-fd46c98217ff.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/15/6151511f-d420-5af3-ba21-a347150d4cf9/69fb2ebbc7405.image.jpg?resize=300%2C192"
-  },
-  {
-    title: "Legals and Public Notices for May 7-13, 2026",
-    source: "Telluride Times",
-    date: "May 6, 2026",
-    firstSeen: "2026-05-06",
-    newsTopic: "community",
-    copy: "A Planning Commission meeting is scheduled for May 14th at 333 W Colorado Ave, covering several land use applications including a tabled Garlock permit and a cancelled Crockett staging permit. Mountain Village passed a wildfire code ordinance on second reading, and Village Creek Condominiums is notifying mortgage holders about declaration amendments.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    img: ""
-  },
-  {
-    title: "Indigenous people honor and raise awareness for relatives who are missing or have been killed",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    newsTopic: "community",
-    copy: "Indigenous communities held events Sunday wearing red to honor missing and murdered relatives, marking a day of grief and resilience. Native Americans face violence at twice the rate of the general population, with nearly 1,500 active federal missing person cases. Despite federal laws passed in 2020, implementation has been slow and inconsistent.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_ae44c01b-f686-57b2-ae9f-0e1627a4f326.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ee/4ee20253-fa90-5e52-b3d6-f0a5aa554c5d/69f96e150e3e0.image.jpg?resize=300%2C226"
-  },
-  {
-    title: "Keeping traditions alive",
-    source: "Telluride Times",
-    date: "May 6, 2026",
-    firstSeen: "2026-05-06",
-    newsTopic: "community",
-    copy: "Bill Wilson of Knight Canyon Outfitters in Norwood was named \"Outfitter of the Year\" by the Colorado Outfitters Association for his three-generation family business and dedication to ethical hunting. Wilson and other hunting advocates say their industry faces threats from what they call \"ballot-box biology\" and urban voters making wildlife management decisions instead of trusting science-based approaches.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_f166c0dc-a754-43a1-9784-9facd4674405.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/43/c43e569f-37f2-4543-9cff-45bfa117cf81/69fa5f7853b7c.image.jpg?resize=300%2C315"
-  },
-  {
-    title: "Spring plans meet snow in Denver as a late storm could be the season's biggest",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    newsTopic: "recreation",
-    copy: "Denver's driest winter on record is ending with what could be the season's biggest snowstorm, continuing into Wednesday with plunging temperatures and potential power outages from heavy, wet snow. While May snow isn't unheard of here - Denver's seen five May storms over 10 inches historically - this one won't solve the ongoing drought despite helping with topsoil moisture.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_df4d81e5-c1f0-558f-a1f4-290dae406595.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/8f/58f263e8-16a8-5781-af16-5d8758db5bc8/69fa387863ba5.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "CHALKBOARD for the week of May 7-13",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    firstSeen: "2026-05-06",
-    newsTopic: "government",
-    copy: "This week's birthdays include Ashley LaUond on May 8, several residents on May 9-10 including the Sheffield siblings, and others through May 13. The community calendar lists regular meetings for town board, school board, and chamber of commerce, plus ongoing activities like the Thursday farmers market, senior meals, food pantry distribution on Sundays, and pickleball sessions.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/the_norwood_post/article_2ef5bd86-8794-4816-8ed3-fc76bbd27167.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8b/f8b47ece-f18b-4c64-891d-3517aa2b0690/69fa6fb7bfb2a.image.png?resize=300%2C183"
-  },
-  {
-    title: "You're invited to the groundbreaking of the new Norwood School",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    firstSeen: "2026-05-06",
-    newsTopic: "education",
-    copy: "Norwood's holding a groundbreaking ceremony for their new school, funded by a $50+ million state BEST Grant and local bonds. The new campus will consolidate pre-K through 12th grade on 19 acres where the old disc golf course was, next to Pinion Park and the library.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/the_norwood_post/article_c205d989-d94a-4e50-bc98-dd81947a31bd.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/03/c0304c73-0b0c-48e4-a100-80e11b1b2499/69fa6eca08f58.image.jpg?resize=300%2C169"
-  },
-  {
-    title: "Town of Norwood awarded funding for Norwood Hill improvements",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    firstSeen: "2026-05-06",
-    newsTopic: "community",
-    copy: "Norwood received $1.25 million in state and federal funding to improve safety on Norwood Hill, which has been a longtime concern due to its steep grade, sharp curves, and accident history. The project was selected through a competitive statewide process with no local match required from the town.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/the_norwood_post/article_dad1ad7d-73e3-41de-b2b1-24757153a694.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/7c/57c98200-de4b-4962-86c7-46d1750abfdc/69fa6d93b89e4.image.jpg?resize=300%2C191"
-  },
-  {
-    title: "Appreciation for teachers, staff",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    newsTopic: "education",
-    copy: "The school board passed a resolution officially recognizing Teacher and Staff Appreciation Week for May 4-8, 2026, acknowledging educators' role in student success. The resolution encourages families and community members to express gratitude to teachers and staff during that week and year-round.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_fb79e810-1118-4f69-a3d4-2cb921d8dd13.html",
-    img: ""
-  },
-  {
-    title: "Trump administration sues Denver over its 1989 assault weapons ban",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    newsTopic: "public-safety",
-    copy: "The Trump administration is suing Denver over its 1989 assault weapons ban, claiming it violates Second Amendment rights. Denver's mayor flatly rejected federal demands to roll back the 37-year-old policy, saying the city won't put \"weapons of war\" back on streets.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_91caa8b8-dec6-5691-807a-44fd78d5be2d.html",
-    img: ""
-  },
-  {
-    title: "Telluride community survey open through May 21",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    newsTopic: "community",
-    copy: "The town's annual community survey is open through May 21, asking residents to rate livability across 10 categories including economy, housing, safety, and recreation. Last year's results showed Telluride scored well on safety, outdoor recreation and community engagement, but poorly on affordability - only 1% rated cost of living as good and just 9% said affordable housing was available.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_1145f14a-0b4a-43a7-9dea-4a452d941817.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/25/d257b794-9d6b-4123-b3b4-ee0abf3d9682/69fa52fb225f6.image.jpg?resize=300%2C155"
-  },
-  {
-    title: "Sacred shoes",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    newsTopic: "arts-culture",
-    copy: "Hoka running shoes went from being called \"cartoon shoes\" to becoming mainstream as the barefoot running trend faded out due to rocky terrain realities. The author reflects on throwing away old worn-out shoes, including duct-taped Hokas and green Van's basketball shoes that had been repaired multiple times with Shoe Goo.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_781f8bdc-69d7-4ec9-9b5a-90c35c968f18.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bc/abc48601-95b9-4206-9f4b-a65102a0747c/69fa55d5a4936.image.jpg?resize=300%2C400"
-  },
-  {
-    title: "Boys’ lax blasts into postseason",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    newsTopic: "education",
-    copy: "The Telluride boys lacrosse team crushed Durango 16-2 on Senior Day to clinch the Mountain League championship and earn the #6 seed for state playoffs. The girls team beat Durango 12-11 in a tight rematch after losing to them earlier in the week, with senior Parker Shea scoring five goals. Both teams advanced to the state tournament with games scheduled for early May.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_10a16ae6-c102-4679-9922-ddab9bdfd4b2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfe83f7a-ec5a-4b87-824b-b7cf86e70644/69f9a893440e8.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Man to plead guilty in Colorado firebombing attack on pro-Israel demonstrators",
-    source: "Telluride Times",
-    date: "May 4, 2026",
-    newsTopic: "public-safety",
-    copy: "A man accused of throwing Molotov cocktails at pro-Israel demonstrators on Boulder's Pearl Street Mall plans to plead guilty to state charges including murder after an 82-year-old victim died from injuries. The Egyptian national had been living in the U.S. illegally and faces dozens of charges for the attack that injured 13 people.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_931f4da9-96f2-578e-97a4-bdf03c024048.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Telluride CrossFit opens new Lawson Hill gym",
-    source: "Telluride Times",
-    date: "May 4, 2026",
-    newsTopic: "community",
-    copy: "Telluride CrossFit moved to a new Lawson Hill location that opened in March, featuring more space and better layout than the original gym. Owner Robin Jones added new equipment and expanded offerings to include kids' classes and yoga, with membership around 140 people.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/business/article_1d5aab25-10fb-4778-b2c1-3973af8a0d9e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/36/7362e16d-547c-4e31-a280-7e922c23bc57/69f9037527be2.image.jpg?resize=300%2C225"
-  },
-  {
-    title: "States across the wildfire-prone Western US are using AI for early detection",
-    source: "Telluride Times",
-    date: "May 4, 2026",
-    newsTopic: "public-safety",
-    copy: "Western states are deploying thousands of AI-enabled cameras to spot wildfires faster than 911 calls come in. Arizona, Colorado, and California are leading the charge, with utilities and fire agencies installing the systems mostly in remote, high-risk areas where fires might otherwise go unnoticed for hours.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_3d9717e8-6111-5f8d-b69b-3260bf6758a8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3c/c3c369ac-5496-5153-b4fc-3638934dc35a/69f899e7aa3db.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Safe actions in work zones can save lives",
-    source: "Telluride Times",
-    date: "May 4, 2026",
-    newsTopic: "community",
-    copy: "CDOT manages around 200 construction projects annually across Colorado, with maintenance and repairs happening daily. The Transportation Commissioner for District 8 reminds drivers that work zone safety requires slowing down, avoiding phone use, and following flaggers' directions. Fines double in work zones, and the cone barriers are the only protection between vehicles and road crews.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_0527f33c-d1be-4f91-9d6b-a570a138bf81.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/d1/9d1d4b74-6558-4cf1-9ef9-d0848f755a25/69f115f7721a2.image.jpg?resize=300%2C192"
-  },
-  {
-    title: "The heart of Telluride",
-    source: "Telluride Times",
-    date: "May 3, 2026",
-    firstSeen: "2026-05-06",
+    date: "April 1, 2026",
     newsTopic: "land-use",
-    copy: "The Transfer Warehouse has become an outdoor gallery through the Heart of Telluride Project, where Brandon Bermel and five other local artists installed street art pieces with heart themes that opened on Valentine's Day. The rotating installation gives artists a legal space to create street art without needing town approval.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_917b2db3-f982-472d-9198-8dc744073d8e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfed5db9-e7f7-49f6-8189-3174c244d773/69f64afc5f9a1.image.jpg?resize=300%2C412"
+    copy: "The San Miguel County Planning Commission and the Board of County Commissioners held a joint work session on Thursday to continue discussions on fast-track housing amendments.",
+    href: "https://www.telluridenews.com/news/article_336327c3-b092-4cfd-9548-fbabb979cef3.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/b6/4b62beda-dbf7-488a-be75-4b7c7497789f/69cb688ca44ed.image.jpg"
   },
   {
-    title: "Rolling in the oats",
+    title: "Wildfire burning near Greyhead",
     source: "Telluride Times",
-    date: "May 3, 2026",
-    newsTopic: "community",
-    copy: "A social media personality is promoting oats in various forms, highlighting their nutritional benefits amid ongoing debates between anti-grain and pro-grain diet camps. The writer reflects on personal experiences with oats, from surviving on oatmeal during broke times in DC to enjoying various oat dishes in early Telluride.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_8c228500-61a7-4cf7-b21d-383052bad877.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/be/ebeb8396-3450-4d67-af94-c17626457ff1/69f13862191f6.image.jpg?resize=300%2C400"
-  },
-  {
-    title: "Jonathan Fouser is Telluride Mountain School’s new head of school",
-    source: "Telluride Times",
-    date: "May 3, 2026",
-    newsTopic: "education",
-    copy: "Jonathan Fouser has been selected as Telluride Mountain School's new head of school after a competitive search that started with 42 candidates. Fouser currently oversees multiple campuses for Brewster American Schools in Spain and has experience founding new schools, teaching English, and outdoor instruction. He's familiar with Telluride from climbing in the area and was drawn to the school's experiential education approach.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_77d21881-a251-4576-a200-d746761986e3.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/67/86782a60-11e8-4c7e-8528-ed092884ae87/69f5ab43664e2.image.jpg?resize=300%2C300"
-  },
-  {
-    title: "Town council suspends waitlist policies",
-    source: "Telluride Times",
-    date: "May 2, 2026",
-    newsTopic: "housing",
-    copy: "Town council temporarily suspended its deed-restricted rental waitlist policies through July after vacancy rates hit 18% - nearly double the 8% target. The current system combines waitlists for all four rental properties but has struggled with outdated applicant information and affordability issues at pricier units like Voodoo and Sunnyside.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_766aee5a-65e5-4d4e-af87-0d75148b5bba.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/be/4be5885b-5c31-47e0-a343-371f832e5f5f/69f64629dcef0.image.jpg?resize=300%2C184"
-  },
-  {
-    title: "Sibling stories",
-    source: "Telluride Times",
-    date: "May 2, 2026",
-    newsTopic: "community",
-    copy: "A local dad working a bartending shift with his baby got unsolicited advice from a customer warning that multiple kids would hate each other, which prompted him to vow his future children would be best friends. Years later, the parents share tips that worked for them: giving both kids the same experiences regardless of gender, having them share a bedroom when possible, and encouraging fun activities together.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_b13bebfd-ba8d-4e2a-8bbe-e534628b63ec.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/44/244939cc-69e1-4024-ae0f-a26ac2a38c3c/69f134d9097db.image.jpg?resize=300%2C400"
-  },
-  {
-    title: "Paul Wisor resigns as MV Town Manager",
-    source: "Telluride Times",
-    date: "May 1, 2026",
-    newsTopic: "arts-culture",
-    copy: "Paul Wisor resigned as Mountain Village Town Manager after participating in an investigation related to the mayor's earlier resignation. His involvement included providing investor names to former officials who made a controversial purchase offer to Telluride Ski Resort, which led to lawsuits and resignations.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_2c1cc16d-5e4a-4543-86bd-1faadf9f7028.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/86/38610eb6-050c-4a1d-963e-dd31f000024c/69f4eedeb0d89.image.webp?resize=300%2C450"
-  },
-  {
-    title: "Trump gives go-ahead to major new Canada-US oil pipeline",
-    source: "Telluride Times",
-    date: "April 30, 2026",
-    newsTopic: "infrastructure",
-    copy: "Trump approved a 650-mile oil pipeline from Canada to Montana, dubbed \"Keystone Light,\" which still needs state and federal permits before construction can start in 2027. The company behind it has a history of major spills, including dumping 50,000 gallons into the Yellowstone River in 2015.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_93f080bd-3bff-5091-afc4-5a9ddae33488.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c9/ec9912c8-b253-5755-acce-42c147636686/69f3c91b34529.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Telski update to council: bike park’s future uncertain",
-    source: "Telluride Times",
-    date: "April 30, 2026",
-    newsTopic: "government",
-    copy: "Telski closed the bike park this summer to focus on Lift 4 repairs, acknowledging they lose money on it with only 350-400 riders on busy days versus thousands of skiers in winter. While no final decision has been made, Telski executives admitted to \"loose discussions\" about permanently discontinuing the bike park due to poor financial performance over seven years.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_8e8c2d7e-8aed-42dd-83b6-036f40b6fb54.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/e5/ee56772c-7de4-4126-8ef7-d8bc4dfd4025/69f3c904ec009.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Telluride’s ‘I voted/yo voté’ sticker contest winners",
-    source: "Telluride Times",
-    date: "April 30, 2026",
-    firstSeen: "2026-05-06",
-    newsTopic: "government",
-    copy: "Earlier this year, Telluride and Norwood students participated in a sticker contest, with 18 creative kiddos taking part. The brief, set by the San Miguel County Clerk’s Office, was to devise a design that could be used as the artwork…",
-    claudeSummary: false,
-    href: "https://www.telluridenews.com/news/article_3022309d-c7c1-4717-85d3-41ac89e3f795.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/9d/79d165ca-16ce-40fa-a9ac-77113d7839c8/69f1660ad0191.image.png?resize=300%2C389"
-  },
-  {
-    title: "Norwood’s ‘I voted/yo voté’ sticker contest winners",
-    source: "Telluride Times",
-    date: "April 30, 2026",
-    newsTopic: "government",
-    copy: "The county clerk thanked everyone who entered Norwood's bilingual voting sticker design contest. All the artwork displayed at the courthouse received positive feedback from visitors, with congratulations going out to all participants.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_c9e7d416-2ad4-4332-87ee-6317130f948d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/16/2167c90d-35cd-419c-b2dc-fff803c1b0ba/69f1772f694c3.image.jpg?resize=300%2C225"
-  },
-  {
-    title: "Lindsey Vonn tells the AP she is not yet in position emotionally to decide if she will race again",
-    source: "Telluride Times",
-    date: "April 30, 2026",
+    date: "March 31, 2026",
     newsTopic: "public-safety",
-    copy: "Lindsey Vonn is recovering from a severe tibia fracture after crashing at Cortina and says she's not emotionally ready to decide whether to return to racing. The 41-year-old faces at least one more surgery and estimates it would be 18 months before she could fully train again.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_8e0ab335-1e12-5377-af15-ff97d158dede.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/c6/3c6899e9-4691-5fd5-be26-4d01403e1ebf/69f3542094bae.image.jpg?resize=300%2C200"
+    copy: "Amid the exceptionally dry conditions, the San Miguel County Sheriff\'s Office released information about a wildfire burning near Greyhead Peak.",
+    href: "https://www.telluridenews.com/news/article_7d7e751e-db54-433d-8fe4-0b051959dab8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/a8/da80e7b1-924d-43f2-bc3d-b856f91cdfa2/69cc8e64b6012.image.jpg"
   },
   {
-    title: "Here's how to grow your own food with less water, even in a drought",
+    title: "Celebrating, and acknowledging, the end of the season",
     source: "Telluride Times",
-    date: "April 30, 2026",
-    newsTopic: "infrastructure",
-    copy: "Western cities are implementing water restrictions due to record-low snowfall, with Denver announcing its earliest drought restrictions in history. Gardening experts recommend water-saving techniques like collecting rainwater, greywater, and AC condensation, choosing drought-resistant plants, and improving soil health with compost to reduce watering needs.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_62ad4304-c441-5377-acde-86dcbdde9312.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/d2/ed2b9a2e-dea0-5f0d-9b8e-8a1e2e924534/69f3541bd0685.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Wishing upon a star",
-    source: "Telluride Times",
-    date: "April 30, 2026",
-    firstSeen: "2026-05-06",
-    newsTopic: "community",
-    copy: "The SAF Young People's Theater is staging \"My Son Pinocchio, Jr.\" with 30 kids in grades 3-5, focusing on Geppetto's journey as a father learning unconditional love. Shows run May 1-3 at the Sheridan Opera House, featuring classic Disney songs plus new music by Stephen Schwartz.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_b3673668-79a5-462d-87a1-05b24411b059.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/cd/4cda66af-af53-48e3-b1b9-8d3dd0c94f9c/69f319f8c70cf.image.jpg?resize=300%2C450"
-  },
-  {
-    title: "Michael J. Ward",
-    source: "Telluride Times",
-    date: "April 30, 2026",
-    newsTopic: "community",
-    copy: "Michael J. Ward, who arrived in Telluride in 1973 during a ski trip and never left, passed away after a 40+ year career as a local realtor. He raised four children here, served on Parks & Rec Commission, coached hockey, and sang with the Choral Society before retiring to Hawaii three years ago. A celebration of life will be held June 6, 2026 at Town Park from 4-6 PM.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/obituaries/article_da9c1d39-f9b9-4485-8624-6ec4a163e609.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/5f/e5fb35c1-ab7f-4d7a-9f66-70713f0980da/69f387ba057ba.image.jpg?resize=300%2C400"
-  },
-  {
-    title: "Legals and Public Notices for April 30-May 6, 2026",
-    source: "Telluride Times",
-    date: "April 30, 2026",
-    newsTopic: "infrastructure",
-    copy: "The County Board of Health will consider wastewater treatment regulations on May 20th, while the Commissioners will review a tree removal application for High Meadow Ranch on Wilson Mesa and a lot line vacation request for Fall Creek Subdivision that same day.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
-    img: ""
-  },
-  {
-    title: "West End drought survival",
-    source: "Telluride Times",
-    date: "April 29, 2026",
-    newsTopic: "community",
-    copy: "Norwood is experiencing its earliest water restrictions in recent memory due to deep drought conditions. CSU Extension recommends drought-smart gardening with native perennials and modest vegetable patches using drip irrigation, emphasizing plants suited to our high desert climate. The timing is good for starting veggie seeds indoors and sowing perennial seeds that will establish resilient, water-wise gardens.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_a778a9e9-c819-4849-9e80-fad649fa33c6.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/4b/34b91d82-6339-4684-9229-8250f4823b6c/69f1697616de8.image.jpg?resize=300%2C182"
-  },
-  {
-    title: "Norwood Schools Spring Art Show",
-    source: "Telluride Times",
-    date: "April 29, 2026",
-    newsTopic: "education",
-    copy: "Norwood Schools has spring pictures scheduled for April 30th, with baseball districts at Del Norte on May 1st. Track meets are coming up for high school students at Pagosa Springs May 2nd and Grand Junction May 6th, plus middle school track at Cedaredge May 4th.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_db4d7389-4c3a-4cef-bf85-30ddfebbf642.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/2e/e2e844f7-8c2c-4eaf-aa50-c6ca0cba18f8/69f174ed2c287.image.jpg?resize=300%2C225"
-  },
-  {
-    title: "Far from the original in Philadelphia, these fans hunt for the Liberty Bell replica in each state",
-    source: "Telluride Times",
-    date: "April 29, 2026",
-    newsTopic: "government",
-    copy: "A group of \"bell hunters\" led by Tom Campbell travels the country seeking out Liberty Bell replicas in each state, left over from a 1950 Treasury savings bond drive. The 55 faithful replicas were made in France and gifted to states after touring on truck beds, but many have been lost or forgotten over the decades.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_6c4b6e25-2cb9-51b8-b812-1143e07369b9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/7e/37efb440-e66f-5d94-a2bc-43449e73e748/69f1e9285fdc5.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Lady Miners lose 4-0 to Crested Butte",
-    source: "Telluride Times",
-    date: "April 29, 2026",
-    newsTopic: "education",
-    copy: "The Lady Miners fell 4-0 to top-ranked Crested Butte at home, though they kept it close at 1-0 through the first half before fatigue set in after spring break. Telluride had some early chances but couldn't capitalize, while Crested Butte's Molly Grace Miller scored twice in the second half to help pull away.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_1547cf0b-aff1-4760-ad71-a65da629237d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/78/97808b59-fa26-4d43-b82e-f3a51e40c652/69efd9a9df84d.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "‘We’ve legislated our way into housing insecurity’",
-    source: "Telluride Times",
-    date: "April 28, 2026",
-    newsTopic: "housing",
-    copy: "One quarter of Telluride's 218 town-owned rental units sit vacant, with some empty for two years after rent increases pushed out tenants - like one Shandowa unit where rent jumped from $800 to $2,000 monthly. New rental policies adopted in 2024 tied rents to income and created steep increases for some families, forcing workers to consider moving to RVs in Norwood when their Sunnyside rent nearly doubled from $2,450 to $4,400.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_fc7e07da-d18b-4b4e-8371-ae908bc5f813.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/5a/25abcf8b-8de8-41c9-8d2d-5da48a05d4a5/69f10d434c461.image.jpg?resize=300%2C400"
-  },
-  {
-    title: "CHALKBOARD for the week of April 30-May 6",
-    source: "Telluride Times",
-    date: "April 28, 2026",
-    newsTopic: "government",
-    copy: "The weekly community calendar lists local birthdays for April 30-May 6 and regular meeting schedules for town boards, school board, and chambers of commerce. Ongoing community programs include the Thursday farmers market, senior meals, food pantry distributions, pickleball games, and various support services.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_2810e7e2-17a0-4c3b-bc48-8471bf3f043d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/a9/3a968112-13b4-4c82-8f8b-32267e62280a/69f10395372c3.image.jpg?resize=300%2C191"
-  },
-  {
-    title: "Avoiding exponential growth",
-    source: "Telluride Times",
-    date: "April 28, 2026",
-    newsTopic: "community",
-    copy: "Mountain Village currently has watering restrictions due to ongoing drought conditions, and a resident is expressing concerns about state-approved population growth programs in water-scarce areas. The writer argues that accepting state financial incentives for accelerated development could lead to exponential growth that the region's limited water resources cannot support, especially given increased fire risks and some homeowners losing insurance coverage.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_7ba0d68b-a32e-4ac2-8700-74f287164e7b.html",
-    img: ""
-  },
-  {
-    title: "Green grant gratitude",
-    source: "Telluride Times",
-    date: "April 28, 2026",
-    firstSeen: "2026-05-06",
-    newsTopic: "community",
-    copy: "Dear Editor,",
-    claudeSummary: false,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_9797e67f-3ea2-46b0-8131-861e0a2b8291.html",
-    img: ""
-  },
-  {
-    title: "Telluride Times staff win seven awards at Top of the Rockies",
-    source: "Telluride Times",
-    date: "April 28, 2026",
-    newsTopic: "community",
-    copy: "The Telluride Times won seven awards at the regional Top of the Rockies journalism contest, with Owen Perkins taking six awards including first place for public service reporting and arts coverage. Leslie Vreeland earned third place for her piece on the Telluride Curling Club.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_aa173851-b6c9-49cc-ab64-d2e92b45ddb4.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/96/796a7f6b-d98a-44c8-b1cf-48fc5b8ff1fe/69efd2c95a1fa.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Girls’ Lax poised for final title push",
-    source: "Telluride Times",
-    date: "April 27, 2026",
-    newsTopic: "education",
-    copy: "The THS girls' lacrosse team beat Fruita Monument 18-9 at home and Santa Fe Prep 14-2 on neutral ground, setting up crucial back-to-back games against Durango that could decide the league title. Coach Davenport says the team's balanced scoring makes them hard to defend, with eight or nine players within five goals of each other. The boys team bounced back from a 12-3 loss to Aspen by crushing Crested Butte 16-1 at home.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_d99c2f0a-ffc0-4d79-aee1-fa0042d83a5e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/51/f51b09a3-51ab-4ae2-9366-80f32d7f6b90/69efcf9a79ae9.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Mountain Village approves emergency ordinance for water use",
-    source: "Telluride Times",
-    date: "April 26, 2026",
-    newsTopic: "government",
-    copy: "Mountain Village approved emergency water restrictions due to severe drought conditions, with snow water equivalent at just 9% of median and spring runoff already peaked. The restrictions include alternating watering days for different areas, nighttime-only irrigation from 7 p.m. to 8 a.m., and reduced water consumption to 70-75% of normal levels.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_176574ee-5386-4f7a-bb01-f660d0e0e751.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/f4/7f4a4336-692d-4b29-951f-d2bd922f4fe9/69ed120c7443d.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "MV town council briefed about investigation of former mayor",
-    source: "Telluride Times",
-    date: "April 25, 2026",
-    newsTopic: "government",
-    copy: "Mountain Village council got an update on the ongoing investigation into former mayor and town manager actions during a ski resort purchase offer made during the Telluride ski strike. The third-party investigation has taken longer than expected with 21 interviews conducted, and a public report should be ready in 2-4 weeks.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_cf8a6058-6209-4936-a446-44c2f15a13af.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/28/5288590f-2f6c-40a9-9d32-31b6f7ff8f5e/69ed071dd778e.image.jpg?resize=300%2C182"
-  },
-  {
-    title: "Former Colorado funeral home owner sentenced to 30 years in case that forced industry crackdown",
-    source: "Telluride Times",
-    date: "April 25, 2026",
-    newsTopic: "community",
-    copy: "Former funeral home owner Carie Hallford got 30 years in prison for her role in the Return to Nature scandal, where authorities found 190 decomposing bodies piled in a bug-infested building in Penrose after neighbors complained about the smell. Her husband Jon already received 40 years for the scheme where they charged families over $1,200 each but gave them fake ashes instead of cremating their loved ones.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_3b8df69a-cf09-5380-b5aa-6bd41a218089.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/d4/fd440f91-55ae-5ccf-9ae1-e3503e0b0d7f/69eaef1b5239b.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "A weekend of mushroom love",
-    source: "Telluride Times",
-    date: "April 25, 2026",
+    date: "March 31, 2026",
     newsTopic: "arts-culture",
-    copy: "The Telluride Mushroom Festival runs August 12-16 this year, featuring over 50 presenters talking fungi at venues around town including the Sheridan Opera House. Popular foraging forays and truffle hunts with trained dogs return, plus lectures, tastings, and free events at the library and around town.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_d8eb8e65-c686-4c22-b5f7-b8d73b0c3d20.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/45/f45402c7-f21b-4625-9c4b-9ad04daab19c/69ebacdb3d620.image.jpg?resize=300%2C449"
+    copy: "Telluride Arts and Citizens State Bank will host Tales from the Season at Telluride Arts\' headquarters, celebrating the end of the winter season.",
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_1c8db2bc-e1b7-4421-9a4b-edf8a342033d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/21/5219c399-9ccd-45ed-9fe3-f7cae035e92a/69c3187776c24.image.jpg"
   },
   {
-    title: "Former Colorado funeral home owner sentenced to 30 years in case that forced state to clamp down on industry",
+    title: "This is Colorado (In One Square Foot)",
     source: "Telluride Times",
-    date: "April 24, 2026",
-    firstSeen: "2026-05-06",
-    newsTopic: "community",
-    copy: "Former Colorado funeral home owner sentenced to 30 years in case that forced state to clamp down on industry.",
-    claudeSummary: false,
-    href: "https://www.telluridenews.com/news/state/article_68436a91-206c-5002-8868-19e121d7b3aa.html",
-    img: ""
+    date: "March 31, 2026",
+    newsTopic: "arts-culture",
+    copy: "What does it mean to be a Coloradan? A photo essay exploring the essence of Colorado through intimate details of mountain terrain.",
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_20287f4e-7c8c-4ed8-93ef-d10582a3496e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/ad/7adf111b-7b5e-468c-a8b5-3a359bbd622a/69c7189d130f5.image.jpg"
   },
   {
-    title: "Bark beetles are eating through trees in San Miguel County",
+    title: "Low snowpack stresses water users",
     source: "Telluride Times",
-    date: "April 24, 2026",
+    date: "March 30, 2026",
     newsTopic: "community",
-    copy: "Douglas fir and mountain pine beetles are attacking trees across San Miguel County, with the dry spring making conditions worse. The county is placing about 600 pheromone packs on healthy trees to confuse the beetles and make them use up their energy before they can infest more trees.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_cc9e2caf-f011-456d-b0e8-c9d98c5510aa.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/a9/4a969e1e-7375-4d2f-b8cd-bde6b0aaa812/69ebaf7fa8a0f.image.jpg?resize=300%2C400"
+    copy: "After the recent heatwave, local slope conditions look more like May than March. Regional snowpack is 18% of median, raising concerns among water districts.",
+    href: "https://www.telluridenews.com/news/article_29f36a8e-7cfd-44dc-973e-7f1454d755f0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/d8/6d82ceea-41dc-48ff-bacf-c66b2e5c4172/69c714dff331a.image.png"
   },
   {
-    title: "County discusses future planning projects",
+    title: "Telluride Ski Resort revised spring operating schedule",
     source: "Telluride Times",
-    date: "April 24, 2026",
-    newsTopic: "land-use",
-    copy: "San Miguel County is planning a major Down Valley Master Plan for 2027, covering the area from Deep Creek to Norwood Hill with a focus on Placerville to Sawpit. The project is expected to cost around $200,000 due to water and wastewater components, though the county hopes for 50% DOLA grant funding.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_df3af361-8522-4d1f-9bca-3c050b74c95b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/1f/a1f0586a-f7fe-489e-a348-0b63cc2b8228/69eafe3da3a22.image.jpg?resize=300%2C225"
+    date: "March 30, 2026",
+    newsTopic: "business",
+    copy: "Telluride Ski Resort will be open on Tuesday, March 31, but then will close for a few days. The reopening schedule will depend on conditions.",
+    href: "https://www.telluridenews.com/news_release/article_16473284-9fa7-4518-b3d8-43a48dc7a5aa.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/2c/c2c57f30-7503-41d0-84f3-05ed163b162e/69cb0bf82b841.image.jpg"
   },
   {
-    title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
-    source: "Town of Telluride",
-    date: "April 24, 2026",
-    newsTopic: "infrastructure",
-    copy: "(April 5, 2026) – The Town will implement an updated schedule for the Galloping Goose bus loop during shoulder seasons, transitioning to a single-bus service operating on a 30-minute loop.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=389"
+    title: "AG candidate Michael Dougherty makes his case in Telluride",
+    source: "Telluride Times",
+    date: "March 30, 2026",
+    newsTopic: "government",
+    copy: "Candidate for Colorado attorney general and current Boulder District Attorney Michael Dougherty held a meet-and-greet Monday in Telluride.",
+    href: "https://www.telluridenews.com/news/article_2dd73074-c30a-46b4-b33d-92ce0b671d2f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/b2/1b271f59-6a17-4db0-acb5-4905eec725ef/69cab6f8564ec.image.jpg"
   },
   {
-    title: "County Planning Commission 5/14 Meeting in TELLURIDE",
-    source: "San Miguel County",
-    date: "May 1, 2026",
-    newsTopic: "land-use",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1393"
-  },
-  {
-    title: "New Motor Vehicle Office Availability in Egnar! May 13 at 9 am - 3 pm",
-    source: "San Miguel County",
-    date: "May 5, 2026",
-    newsTopic: "land-use",
-    copy: "The new Motor Vehicle office will be available in Egnar on May 13 from 9 am - 3 pm in the same building as the fire department (5634 County Rd H1). We hope to serve many community members in this area, eliminating the drive to Norwood or Telluride.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=516"
-  },
-  {
-    title: "New Wildfire Information Site Launched",
-    source: "San Miguel County",
-    date: "May 1, 2026",
-    newsTopic: "public-safety",
-    copy: "San Miguel County announces the launch of a new wildfire information site, Living with Wildfire. The site is a resource for preparation, mitigation, evacuation and recovery information. More material will be added soon!",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=522"
-  },
-  {
-    title: "Spring Off-Season Schedule",
-    source: "Town of Telluride",
-    date: "April 24, 2026",
+    title: "Three units available in next housing lottery",
+    source: "Telluride Times",
+    date: "March 28, 2026",
     newsTopic: "community",
-    copy: "Spring Off-Season Schedule in effect April 6 – May 22, 2026. Service frequency reduced. Check individual route schedules below.",
-    href: "https://www.telluride.gov/AlertCenter.aspx?AID=64"
+    copy: "Just a few months after the most recent deed-restricted housing lottery, locals have another chance to apply for three units.",
+    href: "https://www.telluridenews.com/news/article_de6d4879-227a-4279-96ee-376578b2749a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/1f/f1fc363f-f257-4d3d-b04d-dc91469c781a/69c31fb88e813.image.jpg"
+  },
+  {
+    title: "Colorado ‘underfunding schools by billions’ prompts Telluride’s mill levy solution",
+    source: "Telluride Times",
+    date: "March 30, 2026",
+    newsTopic: "community",
+    copy: "Residents in the San Miguel County region have undoubtedly been sitting on pins and needles in anticipation of the Colorado Legislative Council\'s quarterly economic forecast.",
+    href: "https://www.telluridenews.com/news/article_d000e0aa-672a-4aef-8786-d8aeaba4cd08.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/9a/99aaecf0-a527-484d-8535-52e203b8119c/69c70f0f0d498.image.jpg"
   }
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
-// Updated: 2026-04-18  — refresh periodically from koto.org/news-category/newscasts/
+// Updated: 2026-04-01  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
   {
-    title: "Newscast 5-4-26",
+    title: "Newscast 3-30-26",
     source: "KOTO Community Radio",
-    date: "May 5, 2026",
-    newsTopic: "recreation",
-    copy: "Paul Wisor Steps Down as Mountain Village Town Manager; General Assembly Enters Its Final Days",
-    href: "https://koto.org/news/newscast-5-4-26/"
-  },
-  {
-    title: "Newscast 5-1-26",
-    source: "KOTO Community Radio",
-    date: "May 2, 2026",
-    newsTopic: "land-use",
-    copy: "The city of Durango has proclaimed April 19, 2026 as Ross Anderson Day, marking twenty years since the Native American speed skier set a U.S. speed-skiing record of 154.06 miles per hour. We’ll also hear from a researcher working in Bears Ears who is turning to crowdfunding to continue his work after losing a federal grant. Then, we head to Utah, w",
-    href: "https://koto.org/news/newscast-5-1-26/"
-  },
-  {
-    title: "Newscast 4-30-26",
-    source: "KOTO Community Radio",
-    date: "May 1, 2026",
-    newsTopic: "community",
-    copy: "Local Governments Plan for Disaster; West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda",
-    href: "https://koto.org/news/newscast-4-30-26/"
-  },
-  {
-    title: "Newscast 4-29-26",
-    source: "KOTO Community Radio",
-    date: "April 30, 2026",
-    newsTopic: "land-use",
-    copy: "The State of Crime in Telluride; Town Council Pauses Housing Waitlist Policy; Building with Cob",
-    href: "https://koto.org/news/newscast-4-29-26/"
-  },
-  {
-    title: "Newscast 4-27-26",
-    source: "KOTO Community Radio",
-    date: "April 28, 2026",
-    newsTopic: "recreation",
-    copy: "A Mountain Village Investigation Update; Coming Up Next, Telluride; Lawmakers Talk Geothermal and Overtime Hours",
-    href: "https://koto.org/news/newscast-4-27-26/"
-  },
-  {
-    title: "Newscast 4-24-26",
-    source: "KOTO Community Radio",
-    date: "April 25, 2026",
-    newsTopic: "housing",
-    copy: "This week on the Regional Roundup: two people living with Parkinson’s share what it’s like to navigate a disease that affects more than a million Americans. We head to Norwood in southwest Colorado, where a project aims to tackle algae blooms while generating electricity. In Glenwood Springs, we hear community concerns about Flock surveillance came",
-    href: "https://koto.org/news/newscast-4-24-26/"
-  },
-  {
-    title: "Newscast 4-23-26",
-    source: "KOTO Community Radio",
-    date: "April 24, 2026",
-    newsTopic: "community",
-    copy: "Ranching In A Drying West; Cat Movie Fisher with Risho Unda; The Listening Club Gets Stranger",
-    href: "https://koto.org/news/newscast-4-23-26/"
-  },
-  {
-    title: "Newscast 4-22-26",
-    source: "KOTO Community Radio",
-    date: "April 23, 2026",
+    date: "March 30, 2026",
     newsTopic: "government",
-    copy: "Candidates Vie for Telluride Town Council; Funding Cliff Looms for Telluride School District; A Look Back: Goats Graze the Valley Floor",
-    href: "https://koto.org/news/newscast-4-22-26/"
+    copy: "Mountain Village discusses new water restrictions. Coming Up Next in Telluride. Lawmakers talk housing policy, conversion therapy ban, and state budget shortfalls.",
+    href: "https://koto.org/news/newscast-3-30-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+  },
+  {
+    title: "Newscast 3-27-26",
+    source: "KOTO Community Radio",
+    date: "March 27, 2026",
+    newsTopic: "community",
+    copy: "This week on the Regional Roundup: community concerns over an ICE detention facility in Glenwood Springs, the impact of the abortion ban in Wyoming, why mule deer fawns are dying off in southeast Utah, and a conversation with a tribal water attorney on Indigenous communities and the Colorado River.",
+    href: "https://koto.org/news/newscast-3-27-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+  },
+  {
+    title: "Newscast 3-26-26",
+    source: "KOTO Community Radio",
+    date: "March 26, 2026",
+    newsTopic: "government",
+    copy: "Local governments discuss water and wastewater infrastructure upgrades across Telluride, Norwood, Rico, Ophir and Mountain Village. Also: West End Roundup with the San Miguel Basin Forum, and avalanche dog Mona's retirement from Telluride Ski Patrol after 13 years of service.",
+    href: "https://koto.org/news/newscast-3-26-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+  },
+  {
+    title: "Newscast 3-25-26",
+    source: "KOTO Community Radio",
+    date: "March 25, 2026",
+    newsTopic: "arts-culture",
+    copy: "The Telluride Jazz Festival shifts to a streamlined two-day format for 2026 with headliners The Disco Biscuits and Lettuce. Also: Telluride Historical Museum reports a record year, and Telluride Arts opens 2026 grant applications.",
+    href: "https://koto.org/news/newscast-3-25-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+  },
+  {
+    title: "Newscast 3-23-26",
+    source: "KOTO Community Radio",
+    date: "March 23, 2026",
+    newsTopic: "government",
+    copy: "A death outside Norwood is under investigation by the Colorado Bureau of Investigation. Telluride Town Council votes to eliminate angled parking on Main Street after a year of public debate. Also: lawmakers work on balancing Colorado's $1.5 billion budget shortfall.",
+    href: "https://koto.org/news/newscast-3-23-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+  },
+  {
+    title: "Newscast 3-20-26",
+    source: "KOTO Community Radio",
+    date: "March 20, 2026",
+    newsTopic: "community",
+    copy: "This week on the Regional Roundup: declining moose populations and Wyoming's annual count, the mountain West's sport of skijoring, building community resilience amid climate change, and best-selling author Terry Tempest Williams on protecting public lands.",
+    href: "https://koto.org/news/newscast-3-20-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+  },
+  {
+    title: "Newscast 3-19-26",
+    source: "KOTO Community Radio",
+    date: "March 19, 2026",
+    newsTopic: "government",
+    copy: "San Miguel County adopts the West End Vision Plan. Society Turn development breaks ground. Skijoring takes Main Street by storm.",
+    href: "https://koto.org/news/newscast-3-19-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
+  },
+  {
+    title: "Newscast 3-18-26",
+    source: "KOTO Community Radio",
+    date: "March 18, 2026",
+    newsTopic: "government",
+    copy: "Dan Covault runs for San Miguel County Sheriff. Telluride updates housing policies and guidelines. Plus: Cat Movie Fisher with Risho Unda.",
+    href: "https://koto.org/news/newscast-3-18-26/",
+    img: "https://koto.org/wp-content/uploads/2025/01/koto-fm-social.png"
   }
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
-// Updated: 2026-04-17T12  — refresh periodically from koto.org/news-category/featured-stories/
+// Updated: 2026-04-01  — refresh periodically from koto.org/news-category/featured-stories/
 const KOTO_FEATURED_STORIES = [
-  // Removed "Floating Solar on Reservoir Number 2" (April 2, >14 days old)
-  // Removed 1 stale KOTO featured story from March 26 (>14 days old)
+  {
+    title: "A Retirement Party for Mona",
+    source: "KOTO Community Radio",
+    date: "March 26, 2026",
+    newsTopic: "community",
+    copy: "Mona the Avalanche Dog spent 13 years promoting safety on the Telluride Ski Resort. After a long career of service, she retired with a party at the top of the world.",
+    href: "https://koto.org/news/a-retirement-party-for-mona/",
+    img: "https://koto.org/wp-content/uploads/2026/03/IMG_0863-scaled.jpeg"
+  },
+  {
+    title: "Skijoring Takes Main Street by Storm",
+    source: "KOTO Community Radio",
+    date: "March 20, 2026",
+    newsTopic: "sports",
+    copy: "Telluride held its inaugural skijoring competition on Main Street, drawing hundreds of spectators as horses pulled skiers down a snow-covered course at top speed.",
+    href: "https://koto.org/news/telluride-skijoring-2026/",
+    img: "https://koto.org/wp-content/uploads/2026/03/DSC_0586-scaled.jpeg"
+  },
+  {
+    title: "Dan Covault Runs for San Miguel County Sheriff",
+    source: "KOTO Community Radio",
+    date: "March 18, 2026",
+    newsTopic: "government",
+    copy: "Dan Covault, appointed sheriff in 2025 after Bill Masters\' retirement, is running as an independent with 26 years of San Miguel County law enforcement experience.",
+    href: "https://koto.org/news/dan-covualt-runs-for-san-miguel-county-sheriff/",
+    img: "https://koto.org/wp-content/uploads/2026/03/Untitled-design-6.jpg"
+  }
 ];
 
 // ══════════════════════════════════════
 // ── Community Events Data ─────────────
 // ══════════════════════════════════════
 
-
-// ══════════════════════════════════════════════════════════════
-// ── Blog Posts ──
-// ══════════════════════════════════════════════════════════════
-// Long-form posts written by Livable Telluride. Each post is rendered
-// on the Blog tab and also flows into the email digest via
-// scripts/build-rss-feed.js. Append new posts at the TOP (newest first).
-//
-// Schema:
-//   {
-//     title:   string,             // displayed as the card heading
-//     date:    "YYYY-MM-DD",       // post publication date (used to sort + age)
-//     author:  string,             // optional, displayed as byline
-//     excerpt: string,             // 1–2 sentence teaser shown on the card
-//                                  //   AND used as the email-digest description
-//     body:    string,             // full post content (HTML allowed; rendered
-//                                  //   on the Blog tab when the user clicks
-//                                  //   "Read more"). NOT included in the digest;
-//                                  //   the email links back to the site.
-//     href:    string,             // canonical link for the post (defaults to
-//                                  //   livabletelluride.org/#blog if omitted)
-//     image:   string,             // optional image URL shown on the card
-//   }
-//
-// Posts older than 7 days are pruned from the email digest but remain on
-// the Blog tab forever.
-
-const BLOG_POSTS = [
+// ══════════════════════════════════════
+// ── Livable Telluride Blog Posts ─────
+// ══════════════════════════════════════
+const LIVABLE_BLOG_POSTS = [
   {
-    title: "From \"Let the People Decide\" to \"Livable Telluride\"",
-    date: "Feb 23, 2026",
-    href: "https://livabletelluride.org/from-let-the-people-decide-to-livable-telluride",
-    image: "/images/blog/let-the-people-decide.jpg",
-    excerpt: "The story behind our rebrand — why the mission evolved from a single ballot question to a broader effort to keep Telluride livable for the people who actually live here.",
-    category: "Town of Telluride",
-    readTime: "3 min",
-    source: "livable-telluride.org"
+    title: 'From "Let the People Decide" to "Livable Telluride"',
+    url: 'https://livabletelluride.org/from-let-the-people-decide-to-livable-telluride',
+    date: 'Feb 23, 2026',
+    readTime: '3 min',
+    image: '/images/blog/let-the-people-decide.jpg',
+    summary: 'The story behind our rebrand — why the mission evolved from a single ballot question to a broader effort to keep Telluride livable for the people who actually live here.',
+    category: 'Town of Telluride'
   },
   {
-    title: "As the Society Turns (the Survey Episode)",
-    date: "Oct 14, 2025",
-    href: "https://livabletelluride.org/societyturnpud",
-    image: "/images/blog/society-turn-survey.png",
-    excerpt: "106 residents weighed in on Society Turn — 83% knew about the hospital, but nearly 80% had no idea how much else is planned for that site.",
-    category: "County Issues",
-    readTime: "2 min",
-    source: "livable-telluride.org"
+    title: 'As the Society Turns (the Survey Episode)',
+    url: 'https://livabletelluride.org/societyturnpud',
+    date: 'Oct 14, 2025',
+    readTime: '2 min',
+    image: '/images/blog/society-turn-survey.png',
+    summary: '106 residents weighed in on Society Turn — 83% knew about the hospital, but nearly 80% had no idea how much else is planned for that site.',
+    category: 'County Issues'
   },
   {
-    title: "As the Society Turns (the PUD Episode)",
-    date: "Oct 11, 2025",
-    href: "https://livabletelluride.org/as-the-society-turns-the-pud-episode",
-    image: "/images/blog/society-turn-pud.png",
-    excerpt: "A deep dive into the Society Turn PUD that even its loudest critics admit is bigger than anyone realized — and why that matters for the valley's future.",
-    category: "County Issues",
-    readTime: "5 min",
-    source: "livable-telluride.org"
+    title: 'As the Society Turns (the PUD Episode)',
+    url: 'https://livabletelluride.org/as-the-society-turns-the-pud-episode',
+    date: 'Oct 11, 2025',
+    readTime: '5 min',
+    image: '/images/blog/society-turn-pud.png',
+    summary: 'A deep dive into the Society Turn PUD that even its loudest critics admit is bigger than anyone realized — and why that matters for the valley\'s future.',
+    category: 'County Issues'
   },
   {
-    title: "Saturday Shot of Finance: If VooDoo Were a Private Development, Would It Already Be Bankrupt?",
-    date: "Oct 11, 2025",
-    href: "https://livabletelluride.org/saturday-shot-of-finance-if-voodoo-were-a-private-development-would-it-already-be-bankrupt",
-    image: "/images/blog/voodoo-finance.png",
-    excerpt: "A family stuck in \"affordable housing\" with soaring rent asks the question no one at Town Hall wants to answer — do these numbers actually work?",
-    category: "Town of Telluride",
-    readTime: "4 min",
-    source: "livable-telluride.org"
+    title: 'Saturday Shot of Finance: If VooDoo Were a Private Development, Would It Already Be Bankrupt?',
+    url: 'https://livabletelluride.org/saturday-shot-of-finance-if-voodoo-were-a-private-development-would-it-already-be-bankrupt',
+    date: 'Oct 11, 2025',
+    readTime: '4 min',
+    image: '/images/blog/voodoo-finance.png',
+    summary: 'A family stuck in "affordable housing" with soaring rent asks the question no one at Town Hall wants to answer — do these numbers actually work?',
+    category: 'Town of Telluride'
   },
   {
-    title: "Why is Rent So Damn High In Telluride!",
-    date: "Sep 15, 2025",
-    href: "https://livabletelluride.org/why-is-rent-so-damn-high-in-telluride",
-    image: "/images/blog/rent-so-damn-high.png",
-    excerpt: "Sweet Rants lit up with locals doing the math on new housing projects — and the per-unit costs will make your jaw drop.",
-    category: "Town of Telluride",
-    readTime: "5 min",
-    source: "livable-telluride.org"
+    title: 'Why is Rent So Damn High In Telluride!',
+    url: 'https://livabletelluride.org/why-is-rent-so-damn-high-in-telluride',
+    date: 'Sep 15, 2025',
+    readTime: '5 min',
+    image: '/images/blog/rent-so-damn-high.png',
+    summary: 'Sweet Rants lit up with locals doing the math on new housing projects — and the per-unit costs will make your jaw drop.',
+    category: 'Town of Telluride'
   },
   {
-    title: "From $36 Million to $103 Million: How Telluride Became Richer Than a Lottery Winner",
-    date: "Sep 13, 2025",
-    href: "https://livabletelluride.org/from-36-million-to-103-million-how-telluride-became-richer-than-a-lottery-winner",
-    image: "/images/blog/36-to-103-million.png",
-    excerpt: "A 930% budget increase in ten years — this breakdown of where all that money went (and keeps going) is essential reading for any Telluride taxpayer.",
-    category: "Town of Telluride",
-    readTime: "3 min",
-    source: "livable-telluride.org"
+    title: 'From $36 Million to $103 Million: How Telluride Became Richer Than a Lottery Winner',
+    url: 'https://livabletelluride.org/from-36-million-to-103-million-how-telluride-became-richer-than-a-lottery-winner',
+    date: 'Sep 13, 2025',
+    readTime: '3 min',
+    image: '/images/blog/36-to-103-million.png',
+    summary: 'A 930% budget increase in ten years — this breakdown of where all that money went (and keeps going) is essential reading for any Telluride taxpayer.',
+    category: 'Town of Telluride'
   },
   {
     title: "Canyonlands Development: A Closer Look at Telluride's Financing",
-    date: "Jul 28, 2025",
-    href: "https://livabletelluride.org/canyonlands-development-a-closer-look-at-telluride-s-financing",
-    image: "/images/blog/canyonlands.png",
-    excerpt: "The $26.5M Canyonlands project by Clark's uses a creative 30-year lease structure that every resident should understand before the bonds come due.",
-    category: "Town of Telluride",
-    readTime: "4 min",
-    source: "livable-telluride.org"
+    url: 'https://livabletelluride.org/canyonlands-development-a-closer-look-at-telluride-s-financing',
+    date: 'Jul 28, 2025',
+    readTime: '4 min',
+    image: '/images/blog/canyonlands.png',
+    summary: 'The $26.5M Canyonlands project by Clark\'s uses a creative 30-year lease structure that every resident should understand before the bonds come due.',
+    category: 'Town of Telluride'
   },
   {
-    title: "Empowering Telluride: The Future of Lot L Development",
-    date: "Jul 27, 2025",
-    href: "https://livabletelluride.org/empowering-telluride-the-future-of-lot-l-development",
-    image: "/images/blog/lot-l.png",
-    excerpt: "A massive parking garage on Lot L could permanently change downtown Telluride's character — here's why community input matters now, not later.",
-    category: "Town of Telluride",
-    readTime: "2 min",
-    source: "livable-telluride.org"
+    title: 'Empowering Telluride: The Future of Lot L Development',
+    url: 'https://livabletelluride.org/empowering-telluride-the-future-of-lot-l-development',
+    date: 'Jul 27, 2025',
+    readTime: '2 min',
+    image: '/images/blog/lot-l.png',
+    summary: 'A massive parking garage on Lot L could permanently change downtown Telluride\'s character — here\'s why community input matters now, not later.',
+    category: 'Town of Telluride'
   },
   {
-    title: "The Sunnyside Project",
-    date: "Jul 27, 2025",
-    href: "https://livabletelluride.org/the-sunnyside-project",
-    image: "/images/blog/sunnyside.png",
-    excerpt: "Completed before costs spiraled, Sunnyside shows how pre-pandemic housing financing worked — and why today's projects can't replicate it.",
-    category: "Town of Telluride",
-    readTime: "2 min",
-    source: "livable-telluride.org"
+    title: 'The Sunnyside Project',
+    url: 'https://livabletelluride.org/the-sunnyside-project',
+    date: 'Jul 27, 2025',
+    readTime: '2 min',
+    image: '/images/blog/sunnyside.png',
+    summary: 'Completed before costs spiraled, Sunnyside shows how pre-pandemic housing financing worked — and why today\'s projects can\'t replicate it.',
+    category: 'Town of Telluride'
   },
   {
-    title: "The VooDoo Project",
-    date: "Jul 27, 2025",
-    href: "https://livabletelluride.org/the-voodoo-project",
-    image: "/images/blog/voodoo-project.png",
-    excerpt: "The VooDoo's $27.4M price tag for 27 units launched at exactly the wrong time — a cautionary tale of what happens when interest rates hit 7%.",
-    category: "Town of Telluride",
-    readTime: "2 min",
-    source: "livable-telluride.org"
+    title: 'The VooDoo Project',
+    url: 'https://livabletelluride.org/the-voodoo-project',
+    date: 'Jul 27, 2025',
+    readTime: '2 min',
+    image: '/images/blog/voodoo-project.png',
+    summary: 'The VooDoo\'s $27.4M price tag for 27 units launched at exactly the wrong time — a cautionary tale of what happens when interest rates hit 7%.',
+    category: 'Town of Telluride'
   },
   {
-    title: "The Chair 7 Development Controversy",
-    date: "Jul 25, 2025",
-    href: "https://livabletelluride.org/the-chair-7-development-controversy",
-    image: "/images/blog/chair-7.png",
-    excerpt: "A hotel and commercial development on open space near the ski area is the most contentious proposal in years — here's what the PUD amendment actually allows.",
-    category: "Town of Telluride",
-    readTime: "3 min",
-    source: "livable-telluride.org"
+    title: 'The Chair 7 Development Controversy',
+    url: 'https://livabletelluride.org/the-chair-7-development-controversy',
+    date: 'Jul 25, 2025',
+    readTime: '3 min',
+    image: '/images/blog/chair-7.png',
+    summary: 'A hotel and commercial development on open space near the ski area is the most contentious proposal in years — here\'s what the PUD amendment actually allows.',
+    category: 'Town of Telluride'
   },
   {
-    title: "The Gondola Station",
-    date: "Jul 2, 2025",
-    href: "https://livabletelluride.org/the-gondola-station",
-    image: "/images/blog/gondola-station.png",
-    excerpt: "Three design concepts for a new gondola station could reshape downtown — but without a charter amendment, voters won't get a say.",
-    category: "Town of Telluride",
-    readTime: "1 min",
-    source: "livable-telluride.org"
-  }
-];
-
-// ══════════════════════════════════════════════════════════════
-// ── Telluride Humane Society — Adoptable Animals ──
-// ══════════════════════════════════════════════════════════════
-// Auto-populated by scripts/content-refresh.js Task 7 (Shelterluv
-// API for organization GID 36337). Each entry corresponds to an
-// animal currently listed at telluridehumanesociety.com/dogs or
-// /cats. Adopted animals drop out of the array on the next refresh.
-//
-// Schema:
-//   {
-//     id:        string,    // unique animal ID (Shelterluv `nid`)
-//     name:      string,
-//     species:   'Dog' | 'Cat',
-//     breed:     string,    // e.g. 'Lab Mix'
-//     ageGroup:  string,    // 'Puppy' | 'Adult' | 'Senior' | etc.
-//     sex:       string,    // 'Male' | 'Female'
-//     photo:     string,    // first photo URL
-//     profileUrl: string,   // link to the animal's profile on shelterluv
-//     summary:   string,    // breed + age + sex string for the card
-//   }
-
-const HUMANE_SOCIETY_ANIMALS = [
-  {
-    id: "TEL-A-177",
-    name: "Lilibet",
-    species: "Dog",
-    breed: "Terrier, Yorkshire, Yorkie",
-    ageGroup: "Young Dog",
-    sex: "Female",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/494cc8f70068b840e583017a12f16cff/a3966796a280e1ac287456798bea0bcd.jpeg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/213577110",
-    summary: "Young Dog • Terrier, Yorkshire, Yorkie • Female"
-  },
-  {
-    id: "TEL-A-178",
-    name: "PENDING ADOPTION - Butch",
-    species: "Dog",
-    breed: "Mixed Breed (Large)",
-    ageGroup: "Young Puppy",
-    sex: "Male",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/3a0c95b3f6af0df50a2d4dad63dd7b08/ce618e06f73464e04cdc890596449a9d.jpeg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/213577155",
-    summary: "Young Puppy • Mixed Breed (Large) • Male"
-  },
-  {
-    id: "TEL-A-179",
-    name: "Cassidy",
-    species: "Dog",
-    breed: "Mixed Breed (Large)",
-    ageGroup: "Young Puppy",
-    sex: "Male",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/6a0c36e2b195a3f2b18e37b963ae72fe/afafff744f92ed9f2ed9395b4dd9b6dc.jpeg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/213577172",
-    summary: "Young Puppy • Mixed Breed (Large) • Male"
-  }
-];
-
-// ══════════════════════════════════════════════════════════════
-// ── Local News Link Overrides ──
-// ══════════════════════════════════════════════════════════════
-// When an article's title matches a key in this map, the "Read full
-// article →" link goes to the override URL instead of the article's
-// original href. Used when an article ANNOUNCES something and the
-// announcement page links to the actual destination — readers should
-// click straight through to the destination instead.
-//
-// Add new entries by appending to this object. The match is by
-// exact title string (case-sensitive).
-
-
-// ══════════════════════════════════════════════════════════════
-// ── Local Org Event Logo Overrides ──
-// ══════════════════════════════════════════════════════════════
-// When a KOTO or TT event title matches one of these patterns,
-// use the local logo as the card image instead of whatever image
-// the source story provides. Add new orgs by appending entries.
-const LOCAL_ORG_EVENT_LOGOS = [
-  { pattern: /rotary/i,          logo: 'logo/Telluride Rotary.png' },
-  { pattern: /elks\s*lodge/i,    logo: 'logo/Elks.png' },
-  { pattern: /4[\s\-]?h/i,     logo: 'logo/4h-csu.jpg' },
-];
-
-function applyOrgEventLogos(events) {
-  // Build a set of orgIndex|date combos already covered by localgroup entries.
-  // When a localgroup (e.g. Rotary's own recurring meeting) covers a given
-  // org+date, any KOTO/TT re-listing for the same org+date is dropped so the
-  // event only appears once — from the originating org source.
-  const localGroupOrgDates = new Set();
-  events.forEach(item => {
-    if ((item.source || item.sourceKey || '').toLowerCase() !== 'localgroup') return;
-    LOCAL_ORG_EVENT_LOGOS.forEach(({ pattern }, idx) => {
-      if (pattern.test(item.title || '')) {
-        const dateKey = item.pubDate ? new Date(item.pubDate).toISOString().slice(0, 10) : '';
-        localGroupOrgDates.add(idx + '|' + dateKey);
-      }
-    });
-  });
-
-  return events
-    .filter(item => {
-      // Drop KOTO/TT events already covered by a localgroup event for the same org+date.
-      const src = (item.source || item.sourceKey || '').toLowerCase();
-      if (src !== 'koto' && src !== 'ttimes' && src !== 'telluride times') return true;
-      for (let i = 0; i < LOCAL_ORG_EVENT_LOGOS.length; i++) {
-        if (LOCAL_ORG_EVENT_LOGOS[i].pattern.test(item.title || '')) {
-          const dateKey = item.pubDate ? new Date(item.pubDate).toISOString().slice(0, 10) : '';
-          if (localGroupOrgDates.has(i + '|' + dateKey)) return false; // drop duplicate
-        }
-      }
-      return true;
-    })
-    .map(item => {
-      // For any KOTO/TT events that weren't dropped (no localgroup equivalent),
-      // override the image with the local org logo.
-      const src = (item.source || item.sourceKey || '').toLowerCase();
-      if (src !== 'koto' && src !== 'ttimes' && src !== 'telluride times') return item;
-      for (const { pattern, logo } of LOCAL_ORG_EVENT_LOGOS) {
-        if (pattern.test(item.title || '')) return { ...item, imageUrl: logo };
-      }
-      return item;
-    });
-}
-
-const LOCAL_NEWS_LINK_OVERRIDES = {
-  "New Wildfire Information Site Launched": "https://wildfire-sanmiguelco.hub.arcgis.com/",
-};
-
-
-// ══════════════════════════════════════════════════════════════
-// ── Telluride Foundation Events ──
-// Auto-populated by content-refresh.js (Task 10 — tf-events scraper)
-// ══════════════════════════════════════════════════════════════
-const TF_FOUNDATION_EVENTS = [
-];
-
-// ══════════════════════════════════════════════════════════════
-// ── Nucla-Naturita Community Events ──
-// Auto-populated by content-refresh.js (Task 11 — Tribe Events API, weekly Mondays)
-// ══════════════════════════════════════════════════════════════
-const NUCLA_NATURITA_EVENTS = [
-];
-
-// ══════════════════════════════════════════════════════════════
-// ── Club Red Telluride Shows ──
-// Auto-populated by content-refresh.js (Task 12 — Squarespace JSON, weekly Mondays)
-// ══════════════════════════════════════════════════════════════
-const CLUB_RED_SHOWS = [
-];
-
-// ══════════════════════════════════════════════════════════════
-// ── Fresh Food Hub Events ──
-// Auto-populated by content-refresh.js (Task 13 — Tribe Events API, weekly Mondays)
-// ══════════════════════════════════════════════════════════════
-const FRESH_FOOD_HUB_EVENTS = [
-];
-
-
-// ══════════════════════════════════════════════════════════════
-// ── Sherbino Theater Events ──
-// Auto-populated by content-refresh.js (Task 14 — Tribe Events API, weekly Mondays)
-// ══════════════════════════════════════════════════════════════
-const SHERBINO_EVENTS = [
-];
-
-// ══════════════════════════════════════════════════════════════
-// ── Regional News Articles ──
-// ══════════════════════════════════════════════════════════════
-// News and updates from regional sources beyond Telluride/KOTO:
-//   smb-forum       — San Miguel Basin Forum (sanmiguelbasinforum.com)
-//   sheep-mountain  — Sheep Mountain Alliance (sheepmountainalliance.org)
-//   tf-news         — Telluride Foundation news (telluridefoundation.org/news)
-//   ouray-plaindealer — Ouray County Plaindealer (ouraynews.com)
-//   ouray-county    — Ouray County Government (ouraycountyco.gov)
-//   weedc           — West End Economic Dev. Corp. (choosewestend.org)
-//   nucla-gov       — Town of Nucla (townofnucla.colorado.gov)
-//   norwood         — Norwood Colorado (norwoodcolorado.com) — blog & events
-//   4h-smc          — San Miguel Basin 4-H / CSU Extension (extension.colostate.edu/san-miguel)
-//
-// Auto-populated by the news-content-update scheduled task.
-// Schema mirrors TELLURIDE_TIMES_ARTICLES:
-//   { title, href, date, copy, source, sourceKey, img, newsTopic }
-const REGIONAL_NEWS_ARTICLES = [
-  {
-    title: "2026 Chamber Meeting, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 11, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august/",
-    img: ""
-  },
-  {
-    title: "Music on the Mesa",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 8, 2026",
-    newsTopic: "arts-culture",
-    copy: "Live music event on the mesa.",
-    href: "https://norwoodcolorado.com/event/music-on-the-mesa-4/",
-    img: ""
-  },
-  {
-    title: "Fourth Friday Films, July",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "July 24, 2026",
-    newsTopic: "arts-culture",
-    copy: "Outdoor movie screening with popcorn and drinks available.",
-    href: "https://norwoodcolorado.com/event/fourth-friday-films-july/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, July",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "July 14, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-july/",
-    img: ""
-  },
-  {
-    title: "Star Spangled Saturday",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "June 27, 2026",
-    newsTopic: "community",
-    copy: "Annual Independence Day celebration.",
-    href: "https://norwoodcolorado.com/event/star-spangled-saturday-3/",
-    img: ""
-  },
-  {
-    title: "Fourth Friday Films, June",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "June 26, 2026",
-    newsTopic: "arts-culture",
-    copy: "Outdoor movie screening with popcorn and drinks available.",
-    href: "https://norwoodcolorado.com/event/fourth-friday-films-june-2/",
-    img: ""
-  },
-  {
-    title: "Music on the Mesa",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "June 13, 2026",
-    newsTopic: "arts-culture",
-    copy: "Live music event on the mesa.",
-    href: "https://norwoodcolorado.com/event/music-on-the-mesa-3/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, June",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "June 9, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-june/",
-    img: ""
-  },
-  {
-    title: "Fourth Friday Films, May",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "May 22, 2026",
-    newsTopic: "arts-culture",
-    copy: "Outdoor movie screening with popcorn and drinks available.",
-    href: "https://norwoodcolorado.com/event/fourth-friday-films-may-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, May",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "May 12, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-may/",
-    img: ""
-  },
-  {
-    title: "Parish Bulletin for May 3",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "May 2, 2026",
-    newsTopic: "community",
-    copy: "Here is the bulletin for May 3. This Sunday, May 3 immediately after mass, there will be a Crowning of Mary. Please join us. Also, Father Mariusz is going on pilgrimage to walk the El Camino. Please keep him in your prayers...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-may-3/",
-    img: ""
-  },
-  {
-    title: "Evacuation drill an exercise not in futility",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "April 30, 2026",
-    newsTopic: "public-safety",
-    copy: "Sirens will wail and residents will likely see emergency vehicles headed through Ridgway, up County Road 5 on May 15. Traffic will filter back into town, with residents headed to an evacuation center. But there s no need to panic. It s just a drill – the county s first full-scale evacuation exercise",
-    href: "https://www.ouraynews.com/2026/04/29/evacuation-drill-exercise-not-futility/",
-    img: ""
-  },
-  {
-    title: "Mine owner proposes water treatment",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "April 30, 2026",
-    newsTopic: "land-use",
-    copy: "The company that owns the Idarado Mine is exploring the idea of building a treatment plant on Red Mountain Pass to remove heavy metals from water flowing into Red Mountain Creek. Representatives from Newmont Mining Corp. told attendees of a meeting Tuesday night that the company has done what it can",
-    href: "https://www.ouraynews.com/2026/04/29/mine-owner-proposes-water-treatment/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Town mulls affordable housing mandate",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "April 30, 2026",
-    newsTopic: "land-use",
-    copy: "The town of Ridgway will consider requiring developers to reserve 10% of units within market-rate residential projects as affordable housing for local workers and retirees. The proposed “community housing regulations” would apply a common practice called “inclusionary zoning,” which aims to create m",
-    href: "https://www.ouraynews.com/2026/04/29/town-mulls-affordable-housing-mandate/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County appoints new planning commissioner",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "April 30, 2026",
-    newsTopic: "land-use",
-    copy: "Ouray County commissioners unanimously appointed Danika Gilbert to the county Planning Commission on Tuesday. Gilbert will take the seat of Jennifer Cram, who resigned from the seven-person board after serving for less than a year. Gilbert has lived in the region for more than two decades. In a lett",
-    href: "https://www.ouraynews.com/2026/04/29/county-appoints-new-planning-commissioner/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County raises 4-H use fees",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "April 30, 2026",
-    newsTopic: "community",
-    copy: "Fees for using the Ouray County 4-H Event Center and Fairgrounds are going up for the first time in more than a decade, with the aim of making the facility’s operations self-sustaining. It’s the largest step the county has taken toward trying to close the facility’s operating deficit, which has stra",
-    href: "https://www.ouraynews.com/2026/04/29/county-raises-4-h-use-fees/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County holds firm on road access",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "April 30, 2026",
-    newsTopic: "government",
-    copy: "Ouray County may sue the owners of properties north of Red Mountain Pass if they don’t agree to remove two gates and restore public access to a road owned by the county and the U.S. Forest Service. Commissioners voted to issue a notice of violation to Aaron Calhoon and Lance Barker, who own the gate",
-    href: "https://www.ouraynews.com/2026/04/29/county-holds-firm-road-access/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "MTN Lodge’s refusal to pay tax appalling",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "April 30, 2026",
-    newsTopic: "government",
-    copy: "Dear Editor: I’m appalled at the MTN Lodge s blatant refusal to pay the lodging tax to the town of Ridgway. MTN Lodge has entered into a multiyear agreement with Merrimac Ventures to lease out all of its rooms to contractors over a four-year period. And now the MTN Lodge has hired a public relations",
-    href: "https://www.ouraynews.com/2026/04/29/mtn-lodges-refusal-pay-tax-appalling/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Road through Calhoon land is indeed public",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "April 30, 2026",
-    newsTopic: "infrastructure",
-    copy: "Dear Editor: I am writing to respond to the paid advertisement by Aaron Calhoon in last week s Plaindealer. There is no doubt that the Calhoons are well-liked, respected and valued long-time members of the local community. Aaron Calhoon bought the property in 2018. The road through his property has ",
-    href: "https://www.ouraynews.com/2026/04/29/road-calhoon-land-indeed-public/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "CORRECTION",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "April 30, 2026",
-    newsTopic: "infrastructure",
-    copy: "A news brief on Page 3 in the April 16-22 edition about a faulty culvert mischaracterized comments made by Ouray County Road and Bridge Superintendent Ty Barger. Barger did not say the culvert was installed improperly. He said the culvert was installed after the previous culvert running under the ro",
-    href: "https://www.ouraynews.com/2026/04/29/correction-20260430-0346-384883/",
-    img: ""
-  },
-  {
-    title: "More needs to be done to protect Yankee Boy",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "April 30, 2026",
-    newsTopic: "government",
-    copy: "Dear Editor: The Ouray County Commissioners work session on April 15 discussed plans to repair damage to the road in Yankee Boy Basin. The discussion was centered on repair of road areas damaged by all-terrain vehicle traffic and damage to adjacent tundra. They also considered and rejected closure o",
-    href: "https://www.ouraynews.com/2026/04/29/needs-done-protect-yankee-boy/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Women’s Group Book Study Invitation",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "April 30, 2026",
-    newsTopic: "community",
-    copy: "ALL WOMEN ARE INVITED to join us for our Virtual Women's Group Book Study- please share this with a friend who would benefit.We will journey together with the book Rooting Out Hidden Faults, by CSC James F. McElhone. It will be a deep dive into th...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/womens-group-book-study-invitation/",
-    img: ""
-  },
-  {
-    title: "News Release: County Hires Fairground Manager",
-    source: "Ouray County",
-    sourceKey: "ouray-county",
-    date: "April 29, 2026",
-    newsTopic: "community",
-    copy: "Ouray County is pleased to announce the appointment of Liz Schmidt as the new Manager of the Fairgrounds and 4H Event Center.",
-    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=944",
-    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22631"
-  },
-  {
-    title: "Women’s Group Virtual Open Invitation",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "April 27, 2026",
-    newsTopic: "community",
-    copy: "ALL WOMEN ARE INVITED to join us for our Virtual Women's Group this Tuesday- you can share this with a friend who would benefit.Some of us have just finished a small group study and the fruits have been AMAZING! We would love other women to join our si...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/womens-group-virtual-open-invitation/",
-    img: ""
-  },
-  {
-    title: "Coffee, Donuts and Bulletin 4/26",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "April 25, 2026",
-    newsTopic: "community",
-    copy: "Join us Tomorrow (Sunday, April 26th) for Coffee and Donuts in the Parish Basement to celebrate the young parishioners who have received First Eucharist and Confirmation this year! Attached please find the Parish Bulletin for the week of April 26t...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/coffee-donuts-and-bulletin-4-26/",
-    img: ""
+    title: 'The Gondola Station',
+    url: 'https://livabletelluride.org/the-gondola-station',
+    date: 'Jul 2, 2025',
+    readTime: '1 min',
+    image: '/images/blog/gondola-station.png',
+    summary: 'Three design concepts for a new gondola station could reshape downtown — but without a charter amendment, voters won\'t get a say.',
+    category: 'Town of Telluride'
   }
 ];
 
 const COMMUNITY_EVENTS = [
   {
-    title: "Durango Fire Ready Expo",
-    source: "5280 Fire",
-    date: "May 9, 2026",
-    location: "Durango, CO",
-    copy: "Fire and safety expo hosted in Durango. Community members can meet local firefighters, explore apparatus, and learn about fire safety and emergency preparedness.",
-    href: "https://5280fire.com/event/durango-fire-ready-expo/",
-    imageUrl: "https://5280fire.com/wp-content/uploads/2026/05/IMG_4261-e1778090252962.jpg"
-  },
-  {
-    title: "Crested Butte Fire Department Open House",
-    source: "5280 Fire",
-    date: "May 14, 2026",
-    location: "Crested Butte Fire Department, 300 County Road 17, Crested Butte, CO",
-    copy: "Open house at Crested Butte Fire Department. Tour the station, meet crews, and explore fire apparatus. All ages welcome.",
-    href: "https://5280fire.com/event/crested-butte-open-house/",
-    imageUrl: "https://5280fire.com/wp-content/uploads/2026/05/686929074_1583730390426326_985925004830145764_n-e1778089034687.jpg"
-  },
-  {
-    title: "Colorado Fallen Firefighter Memorial",
-    source: "5280 Fire",
-    date: "May 16, 2026",
-    location: "Colorado",
-    copy: "Annual statewide ceremony honoring Colorado firefighters who lost their lives in the line of duty. Open to the public.",
-    href: "https://5280fire.com/event/colorado-fallen-firefighter-memorial-2/",
-    imageUrl: "https://5280fire.com/wp-content/uploads/2026/04/Screenshot-2026-04-22-at-3.42.02-PM-e1776894189813.png"
-  },
-  {
-    title: "Monument Fire Camp",
-    source: "5280 Fire",
-    date: "May 28, 2026",
-    location: "Monument, CO",
-    copy: "Fire camp event in Monument, Colorado. Details and registration available on the 5280 Fire events page.",
-    href: "https://5280fire.com/event/monument-fire-camp/",
-    imageUrl: "https://5280fire.com/wp-content/uploads/2026/04/658289470_1640679217394537_7343772524626032476_n-e1775231255490.jpg"
-  },
-  {
-    title: "Fremont County Safety Jam",
-    source: "5280 Fire",
-    date: "May 30, 2026",
-    location: "Fremont County, CO",
-    copy: "Community safety event in Fremont County featuring fire, EMS, and law enforcement demonstrations. Free and open to the public.",
-    href: "https://5280fire.com/event/fremont-county-safety-jam/",
-    imageUrl: "https://5280fire.com/wp-content/uploads/2026/04/683431101_986018367445321_7512203806013998526_n-e1777494298345.jpg"
-  },
-  {
-    title: "Front Range Fire Pancake Breakfast — Johnstown",
-    source: "5280 Fire",
-    date: "June 6, 2026",
-    location: "Front Range Fire, 100 S. Telep Avenue, Johnstown, CO",
-    copy: "Annual pancake breakfast fundraiser at Front Range Fire's Johnstown station. Come meet the crew and support your local fire department.",
-    href: "https://5280fire.com/event/front-range-johnstown-pancake-breakfast-2/",
-    imageUrl: "https://5280fire.com/wp-content/uploads/2026/04/IMG_3595-e1777065822768.jpg"
-  },
-  {
     title: "2nd Annual Telluride Rotary Hikeathon",
     source: "Telluride Rotary Club",
-    logo: "/logo/Telluride Rotary.png",
     date: "May 31, 2026",
     endDate: "June 28, 2026",
     location: "Oak Street Gondola Plaza, Telluride",
@@ -5912,8 +4549,17 @@ const COMMUNITY_EVENTS = [
       website: "https://portal.clubrunner.ca/3291",
       note: "No meetings in April. In-person & online options available."
     }
+  },
+  {
+    title: "Elks Lodge Comedy Night with Cindy Pierce",
+    source: "Telluride Elks Lodge 692",
+    date: "March 16, 2026",
+    location: "472 W Pacific Ave, Telluride",
+    copy: "The Telluride Elks Lodge hosted comedian Cindy Pierce for a night of laughs benefiting Tri-County Health Network and the community services they provide across the region. Located at 472 W Pacific Ave, the Lodge regularly hosts social and fundraising events for the Telluride community.",
+    href: "https://www.facebook.com/pages/Telluride-Elks-Lodge-692/232150316875640",
+    notable: true,
+    beneficiary: "Tri-County Health Network"
   }
-  // Removed "Elks Lodge Comedy Night with Cindy Pierce" (March 16, 2026 — past event >30 days old, cleaned 2026-04-19)
 ];
 
 // ── Local Group Recurring Meetings ──
@@ -5922,7 +4568,6 @@ const LOCAL_GROUP_SCHEDULES = [
   {
     name: 'Rotary Club of Telluride',
     title: 'Rotary Club Meeting',
-    logo: '/logo/Telluride Rotary.png',
     rule: [1, 3],        // 1st & 3rd occurrence
     dayOfWeek: 3,        // Wednesday (0=Sun)
     time: '6:00 PM',
@@ -5930,71 +4575,31 @@ const LOCAL_GROUP_SCHEDULES = [
     href: 'https://portal.clubrunner.ca/3291',
     note: 'Social at 5:30 PM. No meetings in April. In-person & online options available.',
     skipMonths: [4],     // No meetings in April
-    section: 'events'   // Appears in Events tab, not Gov-Hub
+    logo: '/logo/Telluride Rotary.png'
   },
   {
     name: 'Telluride Elks Lodge 692',
     title: 'Elks Lodge Regular Meeting',
-    logo: '/logo/Elks.png',
     rule: [2, 4],        // 2nd & 4th occurrence
     dayOfWeek: 4,        // Thursday
     time: '6:30 PM',
-    locations: ['472 W. Pacific St., Telluride'],
+    locations: ['472 W Pacific Ave, Telluride'],
     href: 'https://tellurideelks.org',
-    note: 'Board/House Committee meets 2nd Thursdays at 5:30 PM. Club hours: Tue/Wed/Fri 5–8 PM.',
-    section: 'events'   // Appears in Events tab, not Gov-Hub
+    note: 'Board/House Committee meets 2nd Thursdays at 5:30 PM.',
+    logo: '/logo/Elks.png'
   },
   {
     name: 'TMVOA',
     title: 'TMVOA Board Meeting',
-    logo: '/logo/TMVOA Logo.png',
     rule: [3],            // 3rd occurrence
     dayOfWeek: 4,         // Thursday
     time: 'TBD — see website',
     locations: ['113 Lost Creek Ln, Suite A, Mountain Village'],
     href: 'https://tmvoa.org/meetings-events/events/',
-    note: 'Telluride Mountain Village Owners Association. Check website for time confirmation.'
+    note: 'Telluride Mountain Village Owners Association. Check website for time confirmation.',
+    logo: '/logo/TMVOA Logo.png'
   }
 ];
-
-function generateLocalGroupEventItems() {
-  const items = [];
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  const horizon = new Date(today);
-  horizon.setDate(horizon.getDate() + 60);
-
-  LOCAL_GROUP_SCHEDULES.forEach(function(sched) {
-    if (sched.section !== 'events') return;
-    for (var mo = 0; mo < 3; mo++) {
-      var year = today.getFullYear();
-      var month = today.getMonth() + mo;
-      if (month > 11) { month -= 12; year++; }
-      if (sched.skipMonths && sched.skipMonths.indexOf(month + 1) !== -1) continue;
-
-      sched.rule.forEach(function(nth, idx) {
-        var d = nthWeekday(year, month, sched.dayOfWeek, nth);
-        if (!d || d < today || d > horizon) return;
-        var loc = sched.locations.length > 1 ? sched.locations[idx] || sched.locations[0] : sched.locations[0];
-        items.push({
-          title: sched.title,
-          link: sched.href,
-          description: sched.note || '',
-          summary: sched.note || '',
-          pubDate: d,
-          source: 'localgroup',
-          sourceLabel: sched.name,
-          category: 'Local Group Meeting',
-          location: loc,
-          eventTimes: sched.time,
-          logo: sched.logo || '',
-          imageUrl: sched.logo || ''
-        });
-      });
-    }
-  });
-  return items;
-}
 
 function submitClubForm(e) {
   e.preventDefault();
@@ -6020,7 +4625,6 @@ function generateLocalGroupMeetings() {
   horizon.setDate(horizon.getDate() + 60);
 
   LOCAL_GROUP_SCHEDULES.forEach(function(sched) {
-    if (sched.section === 'events') return; // handled by generateLocalGroupEventItems()
     // Generate for current month and next 2 months
     for (var mo = 0; mo < 3; mo++) {
       var year = today.getFullYear();
@@ -6046,7 +4650,7 @@ function generateLocalGroupMeetings() {
           category: 'Local Group Meeting',
           canceled: false,
           hasAgenda: false,
-          logo: sched.logo || ''
+          imageUrl: sched.logo || null
         });
       });
     }
@@ -6064,25 +4668,6 @@ function nthWeekday(year, month, dayOfWeek, nth) {
   var result = new Date(year, month, day);
   if (result.getMonth() !== month) return null; // overflowed
   return result;
-}
-
-// Some articles in TELLURIDE_TIMES_ARTICLES describe content that's
-// already covered by other tabs:
-//   - The weekly "Legals and Public Notices for ..." roundup is
-//     redundant with the dedicated Legal Notices section.
-//   - Meeting announcements ("County Planning Commission 5/14 Meeting
-//     in TELLURIDE") are redundant with Gov-Hub.
-// Skip these from Local News so it stays focused on actual news.
-function isRedundantLocalNewsTitle(title) {
-  if (!title) return false;
-  // Weekly legals roundup
-  if (/^\s*Legals?\b[\s\S]*\bNotices?\b/i.test(title)) return true;
-  // Government meeting announcement with date in title
-  // ("County Planning Commission 5/14 Meeting in TELLURIDE")
-  if (/\b\d+[\/-]\d+\b[\s\S]*\bMeeting\b/i.test(title)) return true;
-  // Meeting announcement with named governmental body
-  if (/\b(?:Planning Commission|Board of County Commissioners|BOCC|Town Council|HARC|School Board|Fire (?:Protection )?District|Hospital District|Open Space Commission|SMART (?:Board|Transit)|Telluride Housing Authority)\b[\s\S]*\bMeeting\b/i.test(title)) return true;
-  return false;
 }
 
 function collectLocalNewsArticles() {
@@ -6144,13 +4729,10 @@ function collectLocalNewsArticles() {
     });
   }
 
-  // Telluride Times homepage stories (mixed with gov news)
+  // Telluride Times homepage stories
   if (typeof TELLURIDE_TIMES_ARTICLES !== 'undefined') {
     TELLURIDE_TIMES_ARTICLES.forEach(a => {
       if (!a.href && !a.title) return;
-      // Skip legals roundups and meeting announcements (redundant with
-      // Legal Notices and Gov-Hub tabs).
-      if (isRedundantLocalNewsTitle(a.title)) return;
       const pubDate = a.date ? new Date(a.date) : null;
       if (!pubDate || pubDate < cutoffDate) return;
       articles.push({
@@ -6158,7 +4740,7 @@ function collectLocalNewsArticles() {
         link: a.href,
         summary: a.copy || '',
         source: a.source || 'Telluride Times',
-        sourceKey: a.source === 'Colorado Sun' ? 'colorado-sun' : a.source === 'Town of Ridgway' ? 'ridgway' : 'ttimes',
+        sourceKey: 'ttimes',
         newsTopic: a.newsTopic || 'community',
         date: a.date,
         pubDate: pubDate,
@@ -6210,61 +4792,6 @@ function collectLocalNewsArticles() {
     });
   }
 
-  // Regional news sources (SMB Forum, Sheep Mountain Alliance, Telluride
-  // Foundation news, Ouray County Plaindealer, Ouray County gov, WEEDC, Nucla)
-  if (typeof REGIONAL_NEWS_ARTICLES !== 'undefined') {
-    REGIONAL_NEWS_ARTICLES.forEach(a => {
-      if (!a.href && !a.title) return;
-      const pubDate = a.date ? new Date(a.date) : null;
-      if (!pubDate || pubDate < cutoffDate) return;
-      articles.push({
-        title: a.title,
-        link: a.href,
-        summary: a.copy || '',
-        source: a.source || '',
-        sourceKey: a.sourceKey || 'regional',
-        newsTopic: a.newsTopic || 'community',
-        date: a.date,
-        pubDate: pubDate,
-        topic: '',
-        imageUrl: a.img || ''
-      });
-    });
-  }
-
-  // Telluride Humane Society — adoptable animals
-  if (typeof HUMANE_SOCIETY_ANIMALS !== 'undefined') {
-    HUMANE_SOCIETY_ANIMALS.forEach(a => {
-      if (!a.id || !a.name) return;
-      const adoptUrl = a.species === 'Cat'
-        ? 'https://telluridehumanesociety.com/cats/'
-        : 'https://telluridehumanesociety.com/dogs/';
-      // Disperse THS animals across the last ~7 days so they interleave
-      // with KOTO/TT cards instead of bunching at the top. Use a stable
-      // hash of the animal id so the same animal lands on the same date
-      // across page loads (no "shuffle every refresh" jitter).
-      const idStr = String(a.id || a.name);
-      let h = 0;
-      for (let i = 0; i < idStr.length; i++) h = ((h << 5) - h + idStr.charCodeAt(i)) | 0;
-      const offsetDays = Math.abs(h) % 7; // 0..6 days back
-      const offsetHours = (Math.abs(h >> 4) % 24);
-      const pub = new Date(Date.now() - (offsetDays * 86400000) - (offsetHours * 3600000));
-      articles.push({
-        title: a.name + ' — ' + (a.summary || (a.species + ', looking for a home')),
-        link: a.profileUrl || adoptUrl,
-        summary: a.summary || (a.species + (a.breed ? ' • ' + a.breed : '') + (a.sex ? ' • ' + a.sex : '')),
-        source: 'Telluride Humane Society',
-        sourceKey: 'humane-society',
-        newsTopic: 'community',
-        date: pub.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
-        pubDate: pub,
-        topic: 'Adoptable',
-        imageUrl: a.photo || '',
-        adoptUrl,
-        adoptSpecies: a.species
-      });
-    });
-  }
 
   // Deduplicate by title
   const seen = new Set();
@@ -6301,24 +4828,6 @@ function renderLocalNews(unused, filter) {
     return b.pubDate - a.pubDate;
   });
 
-  // Keep Humane Society cards out of the first 4 slots — scatter them randomly
-  // among the rest so they don't monopolize the top of the feed.
-  (function() {
-    const humane = articles.filter(a => a.sourceKey === 'humane-society');
-    const other  = articles.filter(a => a.sourceKey !== 'humane-society');
-    if (humane.length === 0) return; // nothing to rearrange
-    const top4 = other.slice(0, 4);
-    const rest  = other.slice(4);
-    // Randomly insert each humane card into the rest array
-    humane.forEach(card => {
-      const pos = Math.floor(Math.random() * (rest.length + 1));
-      rest.splice(pos, 0, card);
-    });
-    articles.length = 0;
-    top4.forEach(a => articles.push(a));
-    rest.forEach(a => articles.push(a));
-  })();
-
   if (articles.length === 0) {
     container.innerHTML = '<div class="empty-state">No local news matching this topic from the past two weeks. Check back soon or visit <a href="https://www.telluridenews.com" target="_blank" rel="noopener" style="color:var(--forest);font-weight:600;">Telluride Times</a> and <a href="https://koto.org" target="_blank" rel="noopener" style="color:var(--forest);font-weight:600;">KOTO</a> directly for the latest.</div>';
     return;
@@ -6327,27 +4836,9 @@ function renderLocalNews(unused, filter) {
   let html = '';
   articles.forEach(item => {
     const isClub = item.sourceKey === 'clubs';
-    const isAdoptable = item.sourceKey === 'humane-society';
-    // Apply title-based link overrides (announcement pages → real destination URL)
-    if (typeof LOCAL_NEWS_LINK_OVERRIDES !== 'undefined' && item.title && LOCAL_NEWS_LINK_OVERRIDES[item.title]) {
-      item.link = LOCAL_NEWS_LINK_OVERRIDES[item.title];
-    }
-    const logoEl = isClub ? (ENTITY_LOGOS['clubs'] || '') : (ENTITY_LOGOS[item.sourceKey] || '');
-    // Cards with an article photo keep the small-logo-on-left layout. Cards
-    // WITHOUT a photo (KOTO newscasts, etc.) get the source logo blown up to
-    // 300px wide in the photo-position instead — small text-only cards looked
-    // anemic before.
-    const hasPhoto = !!item.imageUrl && !item.clubInfo;
-    // Cards with photos normally get a small source-logo on the left, but
-    // for humane-society animal cards the photo IS the brand marker, so
-    // hide the small logo to give the right-column text more room.
-    const showSmallLogo = (hasPhoto && !isAdoptable) || isClub;
-    const logoHtml = showSmallLogo
-      ? '<div class="card-logo">' + logoEl + '</div>'
-      : '';
-    const bigLogoHtml = (!hasPhoto && !isClub && logoEl)
-      ? '<div class="event-illustration source-logo-substitute" aria-hidden="true">' + logoEl + '</div>'
-      : '';
+    const logoHtml = isClub
+      ? '<div class="card-logo">' + (ENTITY_LOGOS['clubs'] || '') + '</div>'
+      : renderLogo(item.sourceKey);
     const topicBadge = item.topic
       ? '<span style="display:inline-block; font-size:0.72rem; padding:2px 8px; background:rgba(33,68,60,0.08); color:var(--forest); border-radius:6px; font-weight:600; margin-left:6px;">' + item.topic + '</span>'
       : '';
@@ -6368,14 +4859,9 @@ function renderLocalNews(unused, filter) {
         + '</div>';
     } else if (!isClub && item.imageUrl) {
       imageHtml = '<div class="event-illustration event-photo" aria-hidden="true"><img src="' + item.imageUrl + '" alt="' + (item.title || '') + '" loading="lazy"></div>';
-    } else if (bigLogoHtml) {
-      imageHtml = bigLogoHtml;
     }
 
-    let linkLabel = isClub ? 'Read full post →' : 'Read full article →';
-    if (isAdoptable) {
-      linkLabel = (item.adoptSpecies === 'Cat' ? 'Adopt a cat →' : 'Adopt a dog →');
-    }
+    const linkLabel = isClub ? 'Read full post →' : 'Read full article →';
 
     const clubClass = item.clubInfo ? ' card-has-club' : '';
     // Add news topic badge for filtered display
@@ -6388,7 +4874,6 @@ function renderLocalNews(unused, filter) {
       : '';
     html += '<div class="card' + clubClass + '" data-source-key="' + (item.sourceKey || '') + '">';
     html += '<div class="card-body">';
-    if (logoHtml) html += logoHtml;
     html += '<div class="event-card-main news-card-img-left' + (item.clubInfo ? ' has-club-info' : '') + '">';
     html += imageHtml;
     html += '<div class="event-card-content">';
@@ -6397,15 +4882,8 @@ function renderLocalNews(unused, filter) {
     if (item.summary) {
       html += '<div class="description">' + item.summary + '</div>';
     }
-    // Primary link (or, for humane society, an explicit "Adopt Now" button to /dogs or /cats)
-    const primaryLink = isAdoptable && item.adoptUrl ? item.adoptUrl : item.link;
-    if (primaryLink) {
-      html += '<div style="margin-top:8px;"><a href="' + primaryLink + '" target="_blank" rel="noopener" style="font-size:0.8rem; color:var(--forest); font-weight:600; text-decoration:none;">' + linkLabel + '</a></div>';
-    }
-    // For humane society, ALSO show the link to the individual animal profile
-    // when one exists, so users can click through to the specific pet.
-    if (isAdoptable && item.link && item.link !== primaryLink) {
-      html += '<div style="margin-top:4px;"><a href="' + item.link + '" target="_blank" rel="noopener" style="font-size:0.78rem; color:var(--text-muted); text-decoration:underline;">View ' + (item.adoptSpecies === 'Cat' ? 'cat' : 'dog') + ' profile →</a></div>';
+    if (item.link) {
+      html += '<div style="margin-top:8px;"><a href="' + item.link + '" target="_blank" rel="noopener" style="font-size:0.8rem; color:var(--forest); font-weight:600; text-decoration:none;">' + linkLabel + '</a></div>';
     }
     html += '</div>'; // close event-card-content
     html += '</div>'; // close event-card-main
@@ -6445,8 +4923,7 @@ function renderLegalNoticesIntoContainer(container) {
 
   let html = subFilterHtml;
   active.forEach(function(notice) {
-    const papers = Array.isArray(notice.papers) ? notice.papers : [];
-    const primaryPaper = PAPER_LOGOS[papers[0]];
+    const primaryPaper = PAPER_LOGOS[notice.papers[0]];
     const linkUrl = primaryPaper ? primaryPaper.url : '#';
     const eLogo = LEGAL_ENTITY_LOGOS[notice.entityLogo] || '';
     const eLogoHtml = eLogo ? '<div class="legal-entity-logo">' + eLogo + '</div>' : '';
@@ -6539,7 +5016,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-05-06'; // Updated by legal-notice-update task (dust control ITB, municipal financial advisor RFP)
+const LEGAL_NOTICES_CACHE_DATE = '2026-04-05'; // Updated by legal-notice-update task
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -6573,16 +5050,6 @@ const PAPER_LOGOS = {
     img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg',
     url: 'https://www.telluridenews.com/news/legals/article_aec96dee-01bf-4370-b831-16a17257d9ff.html'
   },
-  ttimes_apr9: {
-    name: 'The Telluride Times',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg',
-    url: 'https://www.telluridenews.com/news/legals/article_53f99203-76eb-4168-b3a4-392ac65857e4.html'
-  },
-  ttimes_apr16: {
-    name: 'The Telluride Times',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg',
-    url: 'https://www.telluridenews.com/news/legals/article_c5a54e8f-2fa6-42a2-ba94-3a3828e137ff.html'
-  },
   county_web: {
     name: 'San Miguel County',
     img: 'https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=12524',
@@ -6604,792 +5071,349 @@ const LEGAL_ENTITY_LOGOS = {
 };
 
 const LEGAL_NOTICES = [
+  // ── Active Notices (updated 2026-03-29) ──
   {
-    title: "Property Tax Exemption -- Seniors, Disabled Veterans & Gold Star Spouses",
-    entity: "San Miguel County Assessor",
-    entityClass: "ent-assessor",
-    entityLogo: "assessor",
-    icon: "🏠",
-    iconClass: "type-tax",
-    type: "Tax Exemption",
-    filterTag: "tax-finance",
-    summary: "Colorado provides a property tax exemption of 50% of the first $200,000 in actual value for qualifying senior citizens (65+, 10-year ownership), veterans with 100% disability, and gold star veteran spouses. Applications accepted through July 15, 2026. Contact the Assessor at 970-728-3174.",
-    deadline: "Applications due by July 15, 2026",
-    expires: "2026-07-15",
-    dates: "2/5 through 7/9 (biweekly)",
-    papers: ["ttimes", "npost"]
+    title: 'Deed Restricted Ownership Lottery -- Silver Jack 202, 205 & Element 52 G-17',
+    entity: 'San Miguel Regional Housing Authority',
+    entityClass: 'ent-housing',
+    entityLogo: 'county',
+    icon: '🏘️',
+    iconClass: 'type-housing',
+    type: 'Housing Lottery',
+    filterTag: 'housing',
+    summary: 'Silver Jack 202, Silver Jack 205, and Element 52 G-17 at 155 W Pacific Ave and 398 S Davis St will be offered by Ownership Lottery under the Telluride Affordable Housing Guidelines. Applications available at smrha.org/lottery. Submit by appointment from March 20 through April 10 at noon.',
+    deadline: 'Applications: March 20 - April 10, 2026 at Noon',
+    expires: '2026-04-10',
+    dates: '3/12, 3/19, 3/26, 4/2',
+    papers: ['ttimes'],
+    address: '155 W Pacific Ave, Telluride, CO'
   },
   {
-    title: "Motor Vehicle Office -- Temporary Availability in Egnar (May 13)",
-    entity: "San Miguel County Clerk & Recorder",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🚗",
-    iconClass: "type-hearing",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County will operate a temporary motor vehicle office in Egnar on May 13, 2026 from 9:00 AM to 3:00 PM at 5634 County Rd H1 (fire department building). Services include vehicle registration and other motor vehicle transactions for West End residents.",
-    deadline: "May 13, 2026 — 9 AM to 3 PM",
-    expires: "2026-05-13",
-    dates: "4/17",
-    papers: ["county_web"],
-    url: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx",
-    address: "5634 County Rd H1, Egnar, CO"
+    title: 'Bid Notice -- 2026 Parking Lots Overlay Project',
+    entity: 'Town of Mountain Village',
+    entityClass: 'ent-mv',
+    entityLogo: 'mv',
+    icon: '🅿️',
+    iconClass: 'type-bid',
+    type: 'Bid Notice',
+    filterTag: 'public-entity',
+    summary: 'Mountain Village is accepting bids for the 2026 Parking Lots Overlay Project. Bid packets available at townofmountainvillage.com or at Public Works, 411 Mountain Village Blvd, 2nd Floor. Contact Scott Pittenger (970) 708-8690 or Jenny Bates (970) 369-8201.',
+    deadline: 'Bids due April 17, 2026 at 12:00 Noon',
+    expires: '2026-04-17',
+    dates: '3/19, 3/26',
+    papers: ['ttimes'],
+    address: '411 Mountain Village Blvd, Mountain Village, CO'
   },
   {
-    title: "Notice of Vesting -- 116 E Columbia Ave Remodel Addition",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏗️",
-    iconClass: "type-rfp",
-    type: "Land Use",
-    filterTag: "ordinance",
-    summary: "A site-specific development plan and vested property right has been approved for the 116 E Columbia Remodel Addition (Historic Residential zone, Block 7 Telluride). Owner: Drift Mine LLC and AZ LL. Applicant: Shift Architects, Kristine Perpar. Approved February 18, 2026.",
-    deadline: "Subject to referendum and judicial review",
-    expires: "2026-05-18",
-    dates: "3/5",
-    papers: ["ttimes_mar5"],
-    address: "116 E Columbia Ave, Telluride, CO"
+    title: 'Property Tax Exemption -- Seniors, Disabled Veterans & Gold Star Spouses',
+    entity: 'San Miguel County Assessor',
+    entityClass: 'ent-assessor',
+    entityLogo: 'assessor',
+    icon: '🏠',
+    iconClass: 'type-tax',
+    type: 'Tax Exemption',
+    filterTag: 'tax-finance',
+    summary: 'Colorado provides a property tax exemption of 50% of the first $200,000 in actual value for qualifying senior citizens (65+, 10-year ownership), veterans with 100% disability, and gold star veteran spouses. Applications accepted through July 15, 2026. Contact the Assessor at 970-728-3174.',
+    deadline: 'Applications due by July 15, 2026',
+    expires: '2026-07-15',
+    dates: '2/5 through 7/9 (biweekly)',
+    papers: ['ttimes', 'npost']
+  },
+  // ── March 12-18 ──
+  {
+    title: 'Water Court -- Agricultural Water Protection Water Right Rules',
+    entity: 'Colorado District Court, Water Division No. 4',
+    entityClass: 'ent-county',
+    entityLogo: 'water_court',
+    icon: '⚖️',
+    iconClass: 'type-bid',
+    type: 'Water Court',
+    filterTag: 'water-court',
+    summary: 'The State Engineer has adopted new rules governing substitute water supply plans for the lease, loan, or trade of decreed agricultural water protection water rights (Case No. 26CW3005). Protests must be filed by end of April 2026 with the Water Clerk, Water Division 4, Montrose. Filing fee: $192.',
+    deadline: 'Protests due by end of April 2026',
+    expires: '2026-04-30',
+    dates: '3/12',
+    papers: ['ttimes_mar12']
+  },
+  // ── April 1 (Mountain Village RFPs) ──
+  {
+    title: 'RFP -- Country Club Drive Shoulder Widening',
+    entity: 'Town of Mountain Village',
+    entityClass: 'ent-mv',
+    entityLogo: 'mv',
+    icon: '🛣️',
+    iconClass: 'type-rfp',
+    type: 'RFP',
+    filterTag: 'public-entity',
+    summary: 'Mountain Village seeks proposals from qualified firms for the Country Club Drive Shoulder Widening project. Proposal documents available at townofmountainvillage.com/government/bids-rfps/procurement-materials/. Contact the Town of Mountain Village Public Works Department for details.',
+    deadline: 'Proposals due April 27, 2026 at Noon',
+    expires: '2026-04-27',
+    dates: '4/1',
+    papers: ['county_web'],
+    url: 'https://townofmountainvillage.com/government/bids-rfps/procurement-materials/'
   },
   {
-    title: "Notice of Vesting -- Korn Residence, 566 W Columbia Ave",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏗️",
-    iconClass: "type-rfp",
-    type: "Land Use",
-    filterTag: "ordinance",
-    summary: "A site-specific development plan and vested property right has been approved for the Korn Residence (Historic Residential zone, Lot 24A Block 9 West Telluride). Small-scale addition increasing floor area by more than 25%, small-scale repositioning of a designated THAS primary structure, minor scale alteration, and insubstantial scale addition. Owner: Korn David & Kristin Family Trust. Applicant: Shift Architects, Kristine Perpar. Approved March 18, 2026.",
-    deadline: "Subject to referendum and judicial review",
-    expires: "2026-06-18",
-    dates: "4/2",
-    papers: ["ttimes_apr2"],
-    address: "566 W Columbia Ave, Telluride, CO"
+    title: 'RFP -- Ski Ranches 2026 Waterline Improvement Project',
+    entity: 'Town of Mountain Village',
+    entityClass: 'ent-mv',
+    entityLogo: 'mv',
+    icon: '💧',
+    iconClass: 'type-rfp',
+    type: 'RFP',
+    filterTag: 'utilities',
+    summary: 'Mountain Village seeks proposals from qualified firms for the Ski Ranches 2026 Waterline Improvement Project. RFP documents available at townofmountainvillage.com/government/bids-rfps/procurement-materials/. Contact the Town of Mountain Village Public Works Department for details.',
+    deadline: 'Proposals due April 27, 2026 at 12:00 PM',
+    expires: '2026-04-27',
+    dates: '4/1',
+    papers: ['county_web'],
+    url: 'https://townofmountainvillage.com/government/bids-rfps/procurement-materials/'
+  },
+  // ── April 2 (County Bids Page) ──
+  {
+    title: 'RFP -- Deep Creek Workforce Housing Planning Project',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏘️',
+    iconClass: 'type-rfp',
+    type: 'RFP',
+    filterTag: 'housing',
+    summary: 'San Miguel County is seeking proposals for the Deep Creek Workforce Housing Planning Project. Full RFP documents and submission requirements available at sanmiguelcountyco.gov/Bids.aspx.',
+    deadline: 'Proposals due April 9, 2026 at 4:00 PM',
+    expires: '2026-04-09',
+    dates: '4/2',
+    papers: ['county_web'],
+    url: 'https://www.sanmiguelcountyco.gov/Bids.aspx'
   },
   {
-    title: "Notice of Vesting -- 108 N Columbine Minor Addition/Remodel",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏗️",
-    iconClass: "type-rfp",
-    type: "Land Use",
-    filterTag: "ordinance",
-    summary: "A site-specific development plan and vested property right has been approved for 108 N Columbine Minor Addition/Remodel (Residential zone, Lot 1R Block 24 East Telluride). Minor scale addition increasing floor area by more than 25% and resulting in 1,000-2,500 sq ft, outside of the THLD but within the HPOD. Owner: ZKLF LLC. Applicant: McAllister Architects, Michael McAllister. Approved March 18, 2026.",
-    deadline: "Subject to referendum and judicial review",
-    expires: "2026-06-18",
-    dates: "4/2",
-    papers: ["ttimes_apr2"],
-    address: "108 N Columbine St, Telluride, CO"
+    title: 'RFP -- Floor Replacement for Courthouse & Miramonte Building',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏛️',
+    iconClass: 'type-rfp',
+    type: 'RFP',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County is seeking proposals for a contractor to replace flooring at 333 & 305 W. Colorado Ave, Telluride. RFP info available at sanmiguelcountyco.gov/Bids.aspx or 333 W. Colorado Ave 2nd flr, Telluride. Contact Greg Pollio at (970) 369-5432 or gregp@sanmiguelcountyco.gov. Deadline extended to May 23.',
+    deadline: 'Proposals due May 23, 2026 at 5:00 PM',
+    expires: '2026-05-23',
+    dates: '4/2, 4/7, 4/16, 4/23',
+    papers: ['ttimes_apr2', 'county_web'],
+    url: 'https://www.sanmiguelcountyco.gov/Bids.aspx'
   },
   {
-    title: "Notice of Vesting -- Fulton Residence (Hillside Transitional)",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏗️",
-    iconClass: "type-rfp",
-    type: "Land Use",
-    filterTag: "ordinance",
-    summary: "A site-specific development plan and vested property right has been approved for the Fulton Residence (Hillside Transitional zone, Lot 7R Block E North Telluride). Small-scale new construction of a principal structure containing 2,500 sq ft or more of floor area, on a lot with pre-construction grade or slope of building site coverage of 25% or greater. Owner: Tio Rico LLC. Applicant: William Erwin, ASUL. Approved March 18, 2026.",
-    deadline: "Subject to referendum and judicial review",
-    expires: "2026-06-18",
-    dates: "4/2",
-    papers: ["ttimes_apr2"]
+    title: 'RFP -- Sheriff\'s Office Jail Based Behavioral Services',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '⚖️',
+    iconClass: 'type-rfp',
+    type: 'RFP',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County is seeking proposals from qualified providers to deliver jail-based behavioral services at the Sheriff\'s Office. Full RFP documents and submission requirements available at sanmiguelcountyco.gov/Bids.aspx.',
+    deadline: 'Proposals due May 1, 2026 at 5:00 PM',
+    expires: '2026-05-01',
+    dates: '4/2',
+    papers: ['county_web'],
+    url: 'https://www.sanmiguelcountyco.gov/Bids.aspx'
+  },
+  // ── March 25-31 (County Website) ──
+  {
+    title: 'Employee Housing Impact Mitigation Fee Increase -- $1,112/sq ft Effective May 1, 2026',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏗️',
+    iconClass: 'type-rates',
+    type: 'Fee Change',
+    filterTag: 'tax-finance',
+    summary: 'San Miguel County is implementing the final phase of its Employee Housing Impact Mitigation Fee increase effective May 1, 2026. The fee will rise from $928 to $1,112 per square foot and applies to new residential construction and additions in the unincorporated County within the Telluride R-1 School District boundary. The fee is assessed at building permit issuance. Going forward, the fee will be reevaluated annually based on current construction costs. Contact the Planning Department at planning@sanmiguelcountyco.gov or 970-369-5423.',
+    deadline: 'Effective May 1, 2026',
+    expires: '2026-05-01',
+    dates: '3/25',
+    papers: ['county_web'],
+    url: 'https://www.sanmiguelcountyco.gov/CivicAlerts.aspx'
   },
   {
-    title: "Special Election Notice -- Two Town Council Seats (June 30, 2026)",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🗳️",
-    iconClass: "type-hearing",
-    type: "Election Notice",
-    filterTag: "ordinance",
-    summary: "The Town of Telluride will hold a Special Municipal Election on June 30, 2026 to fill two Town Council seats, conducted by San Miguel County under an intergovernmental agreement. Nomination petitions are available from the Town Clerk beginning March 31, 2026. Completed petitions must be submitted to the Town Clerk no later than Monday, April 20, 2026.",
-    deadline: "Nomination petitions due April 20, 2026; Election June 30, 2026",
-    expires: "2026-06-30",
-    dates: "3/26, 4/6",
-    papers: ["town_web"],
-    url: "https://telluride.gov",
-    event: { date: "2026-06-30", time: "7:00 AM", endTime: "7:00 PM", location: "Town of Telluride" }
+    title: 'Public Comment -- GMUG South Uncompahgre Hazardous Fuels & Ecological Resiliency (SUHFER) Project',
+    entity: 'USDA Forest Service / Grand Mesa, Uncompahgre & Gunnison National Forests',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🌲',
+    iconClass: 'type-hearing',
+    type: 'Public Comment',
+    filterTag: 'public-entity',
+    summary: 'The Grand Mesa, Uncompahgre and Gunnison National Forests are accepting public comments on the draft environmental assessment for the South Uncompahgre Hazardous Fuels and Ecological Resiliency (SUHFER) project. The 30-day comment period opened March 26, 2026. The project area covers approximately 267,300 acres in Montrose, Ouray, and San Miguel counties. Submit comments to comments-rocky-mountain-gmug@usda.gov or mail to Norwood Ranger District, Attn: Megan Eno, 1150 Forest St, Norwood, CO 81423 (drop-off available Wed-Fri 9am-4pm). Project documents at fs.usda.gov/r02/gmug/projects/68281. Contact Jonathan Tucker at 970-573-1876 or jonathan.tucker@usda.gov.',
+    deadline: 'Comments due by April 25, 2026',
+    expires: '2026-04-25',
+    dates: '3/25, 3/26',
+    papers: ['county_web'],
+    url: 'https://www.fs.usda.gov/r02/gmug/projects/68281',
+    address: '1150 Forest St, Norwood, CO 81423'
+  },
+  // ── March 5-11 ──
+  {
+    title: 'Notice to Creditors -- Estate of Joyce Ann Allred',
+    entity: 'San Miguel County District Court',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '📜',
+    iconClass: 'type-hearing',
+    type: 'Estate Notice',
+    filterTag: 'estate',
+    summary: 'All persons having claims against the estate of Joyce Ann Allred (Case No. 2026PR30001) must present them to the personal representative or to District Court of San Miguel County on or before April 20, 2026, or claims may be forever barred. Representative: Michael D. Allred c/o Hoskin, Farina & Kampf, P.C., Grand Junction.',
+    deadline: 'Claims due by April 20, 2026',
+    expires: '2026-04-20',
+    dates: '2/19, 2/26, 3/5',
+    papers: ['ttimes_mar5']
   },
   {
-    title: "Ordinance No. 1630 -- Authorizing Sale of Meribel Unit B (Deed-Restricted)",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏘️",
-    iconClass: "type-housing",
-    type: "Ordinance",
-    filterTag: "housing",
-    summary: "Ordinance No. 1630 authorizes the sale of Meribel Unit B, a deed-restricted residential condominium at 394 W Colorado Ave, acquired by the Town in December 2025. A lottery drawing was held January 30, 2026 to identify a qualified buyer. The unit is subject to Telluride Affordable Housing Guidelines requiring owner occupancy as a primary residence. The Mayor and Town Manager are authorized to execute the deed and complete the closing.",
-    deadline: "Adopted by Town Council, Series of 2026",
-    expires: "2026-06-30",
-    dates: "4/6",
-    papers: ["town_web"],
-    url: "https://telluride-co.civicweb.net/document/433206/",
-    address: "394 W Colorado Ave, Telluride, CO"
+    title: 'Notice of Vesting -- 116 E Columbia Ave Remodel Addition',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🏗️',
+    iconClass: 'type-rfp',
+    type: 'Land Use',
+    filterTag: 'ordinance',
+    summary: 'A site-specific development plan and vested property right has been approved for the 116 E Columbia Remodel Addition (Historic Residential zone, Block 7 Telluride). Owner: Drift Mine LLC and AZ LL. Applicant: Shift Architects, Kristine Perpar. Approved February 18, 2026.',
+    deadline: 'Subject to referendum and judicial review',
+    expires: '2026-05-18',
+    dates: '3/5',
+    papers: ['ttimes_mar5'],
+    address: '116 E Columbia Ave, Telluride, CO'
+  },
+  // ── March 26 (Boarding House Lottery) ──
+  {
+    title: 'Master Lease Rental Lottery -- Boarding House Units',
+    entity: 'Telluride Housing Authority / Town of Telluride Housing Division',
+    entityClass: 'ent-housing',
+    entityLogo: 'telluride',
+    icon: '🏘️',
+    iconClass: 'type-housing',
+    type: 'Housing Lottery',
+    filterTag: 'housing',
+    summary: 'A maximum of five (5) double-occupancy and three (3) single-occupancy rooms at the Boarding House (1270 W Black Bear Road) will be offered for a two-year master lease opportunity by Lottery pursuant to the Telluride Employee Rental Housing Policies. Interested local businesses, governmental or non-profit organizations must submit applications to the Telluride Housing Division at 820 Black Bear Rd G-17. Materials available at telluride-co.gov/735/Rental-Housing.',
+    deadline: 'Applications: March 25 at 9:00 AM through April 16, 2026 at 9:00 AM',
+    expires: '2026-04-16',
+    dates: '3/26',
+    papers: ['ttimes_mar26'],
+    url: 'https://www.telluride-co.gov/735/Rental-Housing',
+    address: '1270 W Black Bear Road, Telluride, CO'
+  },
+  // ── April 2-8 (Telluride Times) ──
+  {
+    title: 'Mountain Village Ordinances -- Second Reading April 23 (Wildfire Code, Background Checks, Municipal Penalties)',
+    entity: 'Town of Mountain Village',
+    entityClass: 'ent-mv',
+    entityLogo: 'mv',
+    icon: '📋',
+    iconClass: 'type-hearing',
+    type: 'Ordinance',
+    filterTag: 'ordinance',
+    summary: 'Three ordinances passed first reading at the March 19, 2026 Town Council meeting. Second reading, public hearing, and final Council vote will take place Thursday, April 23, 2026 at 4:00 p.m. in the 2nd floor conference room, Mountain Village Town Hall and via Zoom: (1) CDC Amendments for Compliance with Colorado Wildfire Resilience Code (CWRC); (2) Creating a Background Check Process for Prospective Massage Facility Operators, Owners, and Employees; (3) Adjusting Certain Penalties in the Municipal Code. Ordinances available at the Town Clerk office, 411 Mountain Village Blvd, Suite A, or at townofmountainvillage.com.',
+    deadline: 'Public hearing: April 23, 2026 at 4:00 PM',
+    expires: '2026-04-23',
+    dates: '4/2',
+    papers: ['ttimes_apr2'],
+    url: 'https://www.townofmountainvillage.com',
+    address: '411 Mountain Village Blvd, Mountain Village, CO'
   },
   {
-    title: "Spring Clean Up Events -- May 15-16 (Telluride, Mountain Village, Norwood)",
-    entity: "San Miguel County / EcoAction Partners",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "♻️",
-    iconClass: "type-hearing",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "Annual Spring Clean Up events coordinated by EcoAction Partners at three locations: Telluride (Carhenge) — May 15-16, 10 AM-2 PM; Mountain Village (Market Plaza) — May 15, 10 AM-2 PM; Norwood (County Fairgrounds) — May 16, 9 AM-3 PM. Different waste items accepted at each site. Senior pickup assistance available in Norwood.",
-    deadline: "Events: May 15-16, 2026",
-    expires: "2026-05-16",
-    dates: "4/2",
-    papers: ["county_web"],
-    url: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx"
+    title: 'Notice of Substantial Completion -- Telluride Wastewater Treatment Plant Lab Remodel',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🏗️',
+    iconClass: 'type-bid',
+    type: 'Substantial Completion',
+    filterTag: 'public-entity',
+    summary: 'Contractor: FCI Constructors, Inc., 3050 I-70 Business Loop, Bldg A, Grand Junction, CO 81503. The Town of Telluride Public Works Department intends to begin processing Final Payment on March 30, 2026. Any person or firm having debts against the Contractor must file written notice with Connor J. Tyrrell, Town Capital Improvement Project Manager, P.O. Box 397, Telluride, CO 81435 on or before April 10, 2026.',
+    deadline: 'Claims due by April 10, 2026',
+    expires: '2026-04-10',
+    dates: '4/2',
+    papers: ['ttimes_apr2']
   },
   {
-    title: "CO-145 Traffic Interruptions -- Society Turn Roundabout Area",
-    entity: "CDOT / San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🚧",
-    iconClass: "type-rates",
-    type: "Traffic Notice",
-    filterTag: "public-entity",
-    summary: "CDOT has created a dedicated webpage for upcoming highway interruptions on CO-145 near the Society Turn roundabout. Residents and commuters should monitor the CDOT page for schedule updates, lane closures, and detour information affecting travel between Telluride and the regional highway network.",
-    deadline: "Ongoing — check CDOT page for updates",
-    expires: "2026-09-30",
-    dates: "4/2",
-    papers: ["county_web"],
-    url: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx"
+    title: 'Bid Notice -- 2026 Ski Ranches Waterline Replacement Project',
+    entity: 'Town of Mountain Village',
+    entityClass: 'ent-mv',
+    entityLogo: 'mv',
+    icon: '💧',
+    iconClass: 'type-bid',
+    type: 'Bid Notice',
+    filterTag: 'utilities',
+    summary: 'Mountain Village is accepting bids for the 2026 Ski Ranches Waterline Replacement Project. Bid packets available at townofmountainvillage.com or at TMV Public Works Dept, 411 Mountain Village Blvd 2nd floor. Pre-bid site walk: Wednesday April 9, 2026 at 10:00 AM, 411 Mountain Village Blvd 3rd floor. Contact Scott Pittenger (970) 708-8690 or Jenny Bates (970) 369-8201.',
+    deadline: 'Bids due April 25, 2026',
+    expires: '2026-04-25',
+    dates: '4/2, 4/7',
+    papers: ['ttimes_apr2'],
+    url: 'https://www.townofmountainvillage.com',
+    address: '411 Mountain Village Blvd, Mountain Village, CO'
   },
   {
-    title: "Water Court -- Telecam Partnership II Finding of Reasonable Diligence (Illium Pond)",
-    entity: "Colorado District Court, Water Division No. 4",
-    entityClass: "ent-county",
-    entityLogo: "water_court",
-    icon: "💧",
-    iconClass: "type-bid",
-    type: "Water Court",
-    filterTag: "water-court",
-    summary: "Telecam Partnership II, LTD. filed an Application for Finding of Reasonable Diligence for the Illium Pond conditional water right (15 acre-feet, San Miguel River source, appropriation date Feb. 27, 2004). Uses: irrigation, piscatorial, augmentation and exchange. Original decree Aug. 22, 2006, Case No. 04CW175; subsequent diligence decrees Sept. 3, 2013 (12CW102) and March 3, 2020 (19CW3071). Pond location: S 56°10'10\" W, 4,836.72 ft from NW corner of Sec. 6, T42N, R9W, N.M.P.M., San Miguel County.",
-    deadline: "File protests with Water Clerk, Water Division 4, Montrose",
-    expires: "2026-06-30",
-    dates: "4/9",
-    papers: ["ttimes_apr9"]
+    title: 'Public Hearing -- Ophir Land Use Variance (Cooper, Lots 1 & 2, Block 2)',
+    entity: 'Town of Ophir',
+    entityClass: 'ent-county',
+    entityLogo: 'ophir',
+    icon: '⚖️',
+    iconClass: 'type-hearing',
+    type: 'Public Hearing',
+    filterTag: 'ordinance',
+    summary: 'Jonathan Cooper filed a land use application under Article XI of the Town Land Use Code seeking a height and roof pitch variance (2/12 pitch instead of the required 4/12 per LUC §303.7) and a setback variance (10 feet instead of 15 feet required under LUC §406.1(A)) for construction of a single-family dwelling on Lots 1 and 2, Block 2. Public hearing: April 21, 2026 at 5:00 PM in Ophir Town Hall, 46 Porphyry St. Contact: (970) 728-4743.',
+    deadline: 'Public hearing: April 21, 2026 at 5:00 PM',
+    expires: '2026-04-21',
+    dates: '4/2',
+    papers: ['ttimes_apr2'],
+    address: 'Lots 1 & 2, Block 2, Ophir, CO'
   },
   {
-    title: "Water Court -- Norwood Water Commission Conditional Water Rights (Case 26CW3015)",
-    entity: "Colorado District Court, Water Division No. 4",
-    entityClass: "ent-county",
-    entityLogo: "water_court",
-    icon: "💧",
-    iconClass: "type-bid",
-    type: "Water Court",
-    filterTag: "water-court",
-    summary: "The Norwood Water Commission filed applications for conditional water rights and plan for augmentation in Case No. 26CW3015, Water Division 4. Structures include Lone Cone Ditch, NWR Beaver Park Reservoir, NWR Ed Joe Draw Reservoir, and NWR Goat Creek Pump, with conditional amounts up to 2,430 acre-feet for irrigation, power generation, and municipal augmentation serving the Norwood area. Counsel: Garfield & Hamersley, P.C., Glenwood Springs. Protests must be filed with the Water Clerk, Water Division 4, Montrose.",
-    deadline: "File protests with Water Clerk, Water Division 4, Montrose",
-    expires: "2026-06-30",
-    dates: "4/9",
-    papers: ["ttimes_apr9"]
+    title: 'Notice of Vesting -- Korn Residence, 566 W Columbia Ave',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🏗️',
+    iconClass: 'type-rfp',
+    type: 'Land Use',
+    filterTag: 'ordinance',
+    summary: 'A site-specific development plan and vested property right has been approved for the Korn Residence (Historic Residential zone, Lot 24A Block 9 West Telluride). Small-scale addition increasing floor area by more than 25%, small-scale repositioning of a designated THAS primary structure, minor scale alteration, and insubstantial scale addition. Owner: Korn David & Kristin Family Trust. Applicant: Shift Architects, Kristine Perpar. Approved March 18, 2026.',
+    deadline: 'Subject to referendum and judicial review',
+    expires: '2026-06-18',
+    dates: '4/2',
+    papers: ['ttimes_apr2'],
+    address: '566 W Columbia Ave, Telluride, CO'
   },
   {
-    title: "Public Comment -- Telluride Ski Resort Recreation Improvements (Lifts 6 & 8, High Camp, Trails)",
-    entity: "USDA Forest Service / Grand Mesa, Uncompahgre & Gunnison National Forests",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🎿",
-    iconClass: "type-hearing",
-    type: "Public Comment",
-    filterTag: "public-entity",
-    summary: "The Grand Mesa, Uncompahgre and Gunnison National Forests (Norwood Ranger District) has released a Draft Environmental Assessment for recreation improvements at Telluride Ski Resort. Proposed actions include replacing Lifts 6 and 8, forest health projects using tethered logging, widening of Galloping Goose Skiway, construction of Lift 8 Jaws Skiway, expansion of High Camp warming hut into a full-service restaurant, construction of a Green Tech mountain bike connector trail, and permanent approval of Heritage Trail ski trail. Project occurs on NFS lands within the resort's Special Use Permit area and on adjacent private lands in Mountain Village and Telluride. Written comments to Scott Spielman, Recreation Manager; electronic comments via the CARA portal. 30-day comment period follows publication in the Grand Junction Daily Sentinel (approx. April 11 – May 11, 2026).",
-    deadline: "Comments due approximately May 11, 2026",
-    expires: "2026-05-11",
-    dates: "4/16",
-    papers: ["ttimes_apr16"],
-    address: "Norwood Ranger District, P.O. Box 388, Norwood, CO 81428"
+    title: 'Notice of Vesting -- 108 N Columbine Minor Addition/Remodel',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🏗️',
+    iconClass: 'type-rfp',
+    type: 'Land Use',
+    filterTag: 'ordinance',
+    summary: 'A site-specific development plan and vested property right has been approved for 108 N Columbine Minor Addition/Remodel (Residential zone, Lot 1R Block 24 East Telluride). Minor scale addition increasing floor area by more than 25% and resulting in 1,000-2,500 sq ft, outside of the THLD but within the HPOD. Owner: ZKLF LLC. Applicant: McAllister Architects, Michael McAllister. Approved March 18, 2026.',
+    deadline: 'Subject to referendum and judicial review',
+    expires: '2026-06-18',
+    dates: '4/2',
+    papers: ['ttimes_apr2'],
+    address: '108 N Columbine St, Telluride, CO'
   },
   {
-    title: "Ordinance No. 1651 -- Adoption of 2024 Colorado Wildfire Resiliency Code",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🔥",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "The Town of Telluride adopted Ordinance No. 1651 (Series of 2026) adopting the 2024 Colorado Wildfire Resiliency Code with local amendments. The ordinance takes effect upon publication notice. The code establishes construction and land management standards for fire-prone areas within town limits. Full text available at Town Hall and online.",
-    deadline: "Effective upon publication",
-    expires: "2026-07-31",
-    dates: "4/9",
-    papers: ["ttimes_apr9"],
-    url: "https://telluride.municipal.codes/"
+    title: 'Notice of Vesting -- Fulton Residence (Hillside Transitional)',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🏗️',
+    iconClass: 'type-rfp',
+    type: 'Land Use',
+    filterTag: 'ordinance',
+    summary: 'A site-specific development plan and vested property right has been approved for the Fulton Residence (Hillside Transitional zone, Lot 7R Block E North Telluride). Small-scale new construction of a principal structure containing 2,500 sq ft or more of floor area, on a lot with pre-construction grade or slope of building site coverage of 25% or greater. Owner: Tio Rico LLC. Applicant: William Erwin, ASUL. Approved March 18, 2026.',
+    deadline: 'Subject to referendum and judicial review',
+    expires: '2026-06-18',
+    dates: '4/2',
+    papers: ['ttimes_apr2']
   },
-  {
-    title: "Outdoor Water Restrictions -- Town of Telluride (Effective March 31)",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "💧",
-    iconClass: "type-rates",
-    type: "Public Notice",
-    filterTag: "utilities",
-    summary: "The Town of Telluride implemented early-season outdoor water restrictions effective March 31, 2026 due to exceptionally low snowpack (15% of median as of April 7) and anticipated dry conditions. Outdoor watering limited to Mondays, Wednesdays, and Fridays only, before 8 AM or after 7 PM. Irrigation systems must be set to 70-75% of normal usage. All exterior water features must be turned off. Trucked-in water may not be connected to irrigation systems. Additional restrictions may be imposed if conditions worsen. Contact: Town of Telluride Public Works.",
-    deadline: "In effect until further notice",
-    expires: "2026-09-30",
-    dates: "3/31, 4/7",
-    papers: ["town_web"],
-    url: "https://telluride.gov/CivicAlerts.aspx?AID=388"
-  },
-  {
-    title: "Outdoor Water Restrictions -- Town of Mountain Village (Effective March 30)",
-    entity: "Town of Mountain Village",
-    entityClass: "ent-mv",
-    entityLogo: "mv",
-    icon: "💧",
-    iconClass: "type-rates",
-    type: "Public Notice",
-    filterTag: "utilities",
-    summary: "The Town of Mountain Village implemented outdoor water restrictions effective March 30, 2026 in anticipation of a dry spring and summer with snowpack at 15% of median. Properties north of Mountain Village Blvd and Elk Run: water Mon/Wed/Fri, 7 PM-8 AM. Properties south of Mountain Village Blvd, Ski Ranches, and Skyfield: water Tue/Thu/Sat, 7 PM-8 AM. All irrigation must be set to 70-75% of normal. Exterior water features must be turned off. No trucked-in water for irrigation. If conditions do not improve, all exterior watering may be banned.",
-    deadline: "In effect until further notice",
-    expires: "2026-09-30",
-    dates: "3/30, 4/7",
-    papers: ["county_web"],
-    url: "https://townofmountainvillage.com/green-living/water-programs/water-conservation/"
-  },
-  {
-    title: "RFP -- Municipal Financial Advisor Services",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "💰",
-    iconClass: "type-rfp",
-    type: "RFP",
-    filterTag: "tax-finance",
-    summary: "The Town of Telluride is soliciting sealed proposals from qualified entities specializing in municipal financial advisor services. Proposals may be submitted through BidNet Direct at www.bidnetdirect.com. Contact the Town of Telluride for full RFP documents and submission requirements.",
-    deadline: "See BidNet Direct for deadline",
-    expires: "2026-06-30",
-    dates: "4/21",
-    papers: ["town_web"],
-    url: "https://www.bidnetdirect.com/colorado/townoftelluride"
-  },
-  {
-    title: "Water Court -- Norwood Water Commission (NWC Beaver Park Reservoir, NWC Ed Joe Draw Reservoir, NWC Old Town Reservoir, NWC Goat Creek Pump, NWC Naturita Pump 1 and 2, NWC River Diversion) (26CW3016)",
-    entity: "Colorado District Court, Water Division No. 4",
-    entityClass: "ent-county",
-    entityLogo: "water_court",
-    icon: "💧",
-    iconClass: "type-bid",
-    type: "Water Court",
-    filterTag: "water-court",
-    summary: "Norwood Water Commission filed a Finding of Reasonable Diligence in Case No. 26CW3016 for the NWC Beaver Park Reservoir, NWC Ed Joe Draw Reservoir, NWC Old Town Reservoir, NWC Goat Creek Pump, NWC Naturita Pump 1 and 2, NWC River Diversion. Norwood Water Commission is seeking to continue development of multiple reservoirs, pumps, and diversions as part of an integrated water system to serve up to 20,000 acres with irrigation and municipal water. This represents a major water infrastructure project that would provide long-term water security for the Norwood area and surrounding agricultural lands. Water right location: San Miguel County, tributary to the San Miguel River, multiple sections in Townships 42-46 North, Ranges 12-15 West.",
-    deadline: "File protests with Water Clerk, Water Division 4, Montrose",
-    expires: "2026-05-31",
-    dates: "4/9",
-    papers: ["ttimes_0409"],
-    url: "https://www.telluridenews.com/news/legals/article_53f99203-76eb-4168-b3a4-392ac65857e4.html",
-    address: "San Miguel County, tributary to the San Miguel River, multiple sections in Townships 42-46 North, Ranges 12-15 West"
-  },
-  {
-    title: "Public Hearing -- Onsite Wastewater Treatment Systems Regulation (Board of Health)",
-    entity: "San Miguel County Board of Health",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The San Miguel County Board of Health will consider regulatory options related to Colorado Regulation 43 for onsite wastewater treatment systems during their May 20, 2026 meeting. The meeting will provide opportunity for public comment and participation. Written comments must be received by May 19, 2026.",
-    deadline: "May 20, 2026",
-    expires: "2026-05-20",
-    dates: "4/30",
-    papers: ["ttimes_0430"],
-    url: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
-    address: "333 West Colorado Ave, 2nd floor, Telluride, CO 81423",
-    noticeKey: "boh-wastewater-reg43-052026"
-  },
-  {
-    title: "Public Hearing -- Tree Removal Application High Meadow Ranch Wilson Mesa",
-    entity: "San Miguel County Board of Commissioners",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "Cari Johnson on behalf of VM West LLC has applied for tree removal on Elm Creek Reserve's High Meadow Ranch on Wilson Mesa involving 5 parcels. The Board of County Commissioners will hold a public meeting on May 20, 2026 at 9:30 AM. Written comments must be received by May 12, 2026.",
-    deadline: "May 20, 2026",
-    expires: "2026-05-20",
-    dates: "4/30",
-    papers: ["ttimes_0430"],
-    url: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
-    address: "Wilson Mesa parcels #478301200005, #478301300006, #478313007001, #478313200015, #478312200001",
-    noticeKey: "tree-removal-higmeadow-052026"
-  },
-  {
-    title: "Public Hearing -- Lot Line Vacation Fall Creek Subdivision No. 2",
-    entity: "San Miguel County Board of Commissioners",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "Ray Bowers on behalf of Cigmire LLC seeks a lot line vacation between Lot 51 and Lot 52 in Fall Creek Subdivision No. 2 to increase buildability of lot 52. Public hearing scheduled for May 20, 2026 at 9:30 AM. Written comments must be received by May 11, 2026.",
-    deadline: "May 20, 2026",
-    expires: "2026-05-20",
-    dates: "4/30",
-    papers: ["ttimes_0430"],
-    url: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
-    address: "Fall Creek Subdivision No. 2, Lots 51-52 (Parcels #456318203006, #456318203005)",
-    noticeKey: "lot-vacation-fallcreek-052026"
-  },
-  {
-    title: "RFP -- Landscape Improvements Galloping Goose Park",
-    entity: "San Miguel County Parks & Open Space",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County requests proposals for a contractor to perform landscape improvements to the Galloping Goose Park in Telluride. Proposals must be submitted by 5:00 PM on Friday, May 22, 2026 either via email or dropped off at Parks & Open Space department.",
-    deadline: "May 22, 2026 at 5:00 PM",
-    expires: "2026-05-22",
-    dates: "4/30",
-    papers: ["ttimes_0430"],
-    url: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
-    address: "Galloping Goose Park, Telluride",
-    noticeKey: "rfp-gallopinggoose-052226"
-  },
-  {
-    title: "Property Tax Exemption -- Senior Citizens Veterans and Qualifying Spouses",
-    entity: "San Miguel County Assessor",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "Colorado Constitution establishes property tax exemption for qualifying senior citizens, veterans with disability, and gold star veteran spouses. Exemption covers 50% of first $200,000 in actual value of primary residence. Applications must be submitted to assessor by July 15 (late applications accepted until August 15).",
-    deadline: "July 15, 2026",
-    expires: "2026-08-15",
-    dates: "4/30",
-    papers: ["ttimes_0430"],
-    url: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
-    address: "San Miguel County",
-    noticeKey: "prop-tax-exemption-2026"
-  },
-  {
-    title: "Special Use Permit -- Scenic and Social Special Use Permit Application (Planning Commission Hearing)",
-    entity: "San Miguel County Planning Commission",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "The San Miguel County Planning Commission will hold a public hearing on a Scenic and Social Special Use Permit application. Written comments must be received by noon on April 30, 2026. The hearing will be held May 14, 2026 at 10:30 a.m. at the Sheriffs Annex Building in Norwood.",
-    deadline: "April 30, 2026 (noon deadline for written comments)",
-    expires: "2026-05-14",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "Location not specified in notice",
-    noticeKey: "scenic-social-sup-may14-2026"
-  },
-  {
-    title: "Special Use Permit -- Construction/Contractor Office and Staging Area (Kurt Works Inc.)",
-    entity: "San Miguel County Planning Commission",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "John Miller on behalf of Kurt Works Inc. and Kurt Crockett has applied for a Special Use Permit to establish a Construction/Contractor Office and Staging Area for an excavation and grading business. The San Miguel County Planning Commission will hold a public hearing on May 14, 2026 at 10:45 a.m. Written comments are due by noon on April 30, 2026.",
-    deadline: "April 30, 2026 (noon deadline for written comments)",
-    expires: "2026-05-14",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "488 S. Avalon Dr., Norwood, CO, Parcel #452726103022",
-    noticeKey: "sup-kurt-works-452726103022"
-  },
-  {
-    title: "RFP -- Flooring Replacement at County Buildings",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals from contractors to replace flooring at 333 & 305 W. Colorado Ave in Telluride. Proposals must be submitted by 5:00 PM on Friday, May 24th either via email or dropped off at the Maintenance department.",
-    deadline: "May 24, 2026 (5:00 PM)",
-    expires: "2026-05-24",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "333 & 305 W. Colorado Ave, Telluride, CO",
-    noticeKey: "rfp-flooring-333-305-colorado"
-  },
-  {
-    title: "RFP -- Landscape Improvements at Galloping Goose Park",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals from contractors for landscape improvements to the Galloping Goose Park in Telluride. Proposals must be submitted by 5:00 PM on Friday, May 22 either via email or dropped off at the Parks & Open Space department.",
-    deadline: "May 22, 2026 (5:00 PM)",
-    expires: "2026-05-22",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "Galloping Goose Park, Telluride, CO",
-    noticeKey: "rfp-galloping-goose-landscape"
-  },
-  {
-    title: "Request for Proposal -- Foundation Repairs at the Placerville Schoolhouse",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Foundation Repairs at the Placerville Schoolhouse.",
-    deadline: "Open until contracted",
-    expires: "2026-08-03",
-    dates: "5/5",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=188",
-    address: "",
-    smcBidID: "188"
-  },
-  {
-    title: "Request for Proposal -- Trout Lake Water Tank Roofing",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Trout Lake Water Tank Roofing.",
-    deadline: "Open until contracted",
-    expires: "2026-08-03",
-    dates: "5/5",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=187",
-    address: "",
-    smcBidID: "187"
-  },
-  {
-    title: "Request for Proposal -- Request for Proposal for San Miguel County Galloping Goose Park",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Request for Proposal for San Miguel County Galloping Goose Park.",
-    deadline: "Closes 5/22/2026",
-    expires: "2026-05-22",
-    dates: "5/5",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=202",
-    address: "",
-    smcBidID: "202"
-  },
-  {
-    title: "Request for Quote -- Request for Quote: Material Hauling",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Quote",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Request for Quote: Material Hauling.",
-    deadline: "Open until contracted",
-    expires: "2026-08-03",
-    dates: "5/5",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=159",
-    address: "",
-    smcBidID: "159"
-  },
-  {
-    title: "Request for Proposal -- Soil Preparation and Regrading of Mill Creek Park Site",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Soil Preparation and Regrading of Mill Creek Park Site.",
-    deadline: "Open until contracted",
-    expires: "2026-08-03",
-    dates: "5/5",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=189",
-    address: "",
-    smcBidID: "189"
-  },
-  {
-    title: "Request for Proposal -- Request for Proposal for San Miguel County Road 58P Retaining Wall Construction",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Request for Proposal for San Miguel County Road 58P Retaining Wall Construction.",
-    deadline: "Closes 5/26/2026",
-    expires: "2026-05-26",
-    dates: "5/5",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=203",
-    address: "",
-    smcBidID: "203"
-  },
-  {
-    title: "Ordinance -- Mountain Village CDC/CWRC/Massage/Penalties (Multiple)",
-    entity: "Town of Mountain Village",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "The Town of Mountain Village passed three ordinances on first reading on March 19, 2026. These cover Community Development Code amendments for wildfire resilience compliance, background checks for massage facility operators, and adjustments to municipal penalties. Second reading and public hearing will be held April 23, 2026.",
-    deadline: "April 23, 2026 at 2:00 PM",
-    expires: "2026-06-23",
-    dates: "4/2",
-    papers: ["ttimes_0402"],
-    url: "https://www.telluridenews.com/news/legals/article_aec96dee-01bf-4370-b831-16a17257d9ff.html",
-    address: "Mountain Village Town Hall, 455 Mountain Village Blvd, Suite A",
-    noticeKey: "tmv-ord-multiple-032026"
-  },
-  {
-    title: "RFP -- Flooring Replacement 333 & 305 W. Colorado Ave",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals for a contractor to replace flooring at 333 & 305 W. Colorado Ave, Telluride. Proposals must be submitted by 5:00 PM on Friday, May 24th either via email or dropped off at the Maintenance department.",
-    deadline: "May 24, 2026 at 5:00 PM",
-    expires: "2026-05-24",
-    dates: "4/2",
-    papers: ["ttimes_0402"],
-    url: "https://www.telluridenews.com/news/legals/article_aec96dee-01bf-4370-b831-16a17257d9ff.html",
-    address: "333 & 305 W. Colorado Ave, Telluride, CO",
-    noticeKey: "smc-rfp-flooring-333-305-colorado"
-  },
-  {
-    title: "Property Tax Exemption -- Senior Citizens/Veterans/Gold Star Spouses",
-    entity: "San Miguel County Assessor",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "San Miguel County Assessor announces property tax exemptions available for qualifying senior citizens (65+), veterans with 100% service-connected disability, and gold star veteran spouses. The exemption covers 50% of the first $200,000 in actual value of primary residence. Applications must be submitted by July 15, with late applications accepted until August 15.",
-    deadline: "July 15, 2026 (late applications until August 15, 2026)",
-    expires: "2026-08-15",
-    dates: "4/2",
-    papers: ["ttimes_0402"],
-    url: "https://www.telluridenews.com/news/legals/article_aec96dee-01bf-4370-b831-16a17257d9ff.html",
-    address: "San Miguel County",
-    noticeKey: "smc-property-tax-exemption-2026"
-  },
-  {
-    title: "Environmental Assessment -- Telluride Ski Resort Improvements (Project 68020)",
-    entity: "Grand Mesa, Uncompahgre and Gunnison National Forests",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The Grand Mesa, Uncompahgre and Gunnison National Forests has prepared a Draft Environmental Assessment for recreation improvements at Telluride Ski Resort, including lift replacements, trail construction, and restaurant expansion. The public comment period runs for 30 days following publication in the Grand Junction Daily Sentinel. Comments must be submitted by May 11, 2026 to maintain objection eligibility.",
-    deadline: "May 11, 2026",
-    expires: "2026-05-11",
-    dates: "4/16",
-    papers: ["ttimes_0416"],
-    url: "https://www.telluridenews.com/news/legals/article_c5a54e8f-2fa6-42a2-ba94-3a3828e137ff.html",
-    address: "Telluride Ski Resort, National Forest System lands and adjacent private lands in Town of Mountain Village and Town of Telluride",
-    noticeKey: "forest-service-68020"
-  },
-  {
-    title: "Rezoning Application -- 2028 Maverick Way, Norwood",
-    entity: "Norwood Public Schools",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "Norwood Public Schools has filed a rezoning application for property at 2028 Maverick Way in Norwood. Public hearings are scheduled for the Planning and Zoning Commission on April 20, 2026 at 6:30 PM and the Norwood Board of Trustees on May 13, 2026 at 7:00 PM. The application was filed by Officer Reilly O'Brien on March 9, 2026.",
-    deadline: "May 13, 2026",
-    expires: "2026-07-12",
-    dates: "4/16",
-    papers: ["ttimes_0416"],
-    url: "https://www.telluridenews.com/news/legals/article_c5a54e8f-2fa6-42a2-ba94-3a3828e137ff.html",
-    address: "2028 Maverick Way, Norwood, CO 81423",
-    noticeKey: "rezoning-2028-maverick-way"
-  },
-  {
-    title: "Planning Commission Meeting -- Land Use Applications and Code Amendments",
-    entity: "San Miguel County Planning Commission",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "San Miguel County Planning Commission will hold a regular meeting on May 14, 2026, to consider various land use applications including special use permits and substantial plan amendments. The meeting will also review proposed Land Use Code amendments for footprint definitions, accelerated housing review, and natural medicine regulations.",
-    deadline: "May 14, 2026 at 9:30 AM",
-    expires: "2026-07-14",
-    dates: "5/6",
-    papers: ["ttimes_0506"],
-    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    address: "333 West Colorado Ave., Second Floor, Telluride, CO 81435",
-    noticeKey: "planning-commission-2026-05-14"
-  },
-  {
-    title: "Ordinance -- Community Development Code Amendments for Wildfire Resilience Code Compliance",
-    entity: "Town of Mountain Village",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "Town of Mountain Village adopted an ordinance on second reading April 23, 2026, amending the Community Development Code for compliance with Colorado Wildfire Resilience Code. The ordinance will be codified into the Municipal Code prior to its effective date.",
-    deadline: "Effective date pending codification",
-    expires: "2026-07-06",
-    dates: "5/6",
-    papers: ["ttimes_0506"],
-    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    address: "Town of Mountain Village",
-    noticeKey: "ord-mv-wildfire-resilience"
-  },
-  {
-    title: "Condominium Notice -- First Amendment to Declaration Consent (Village Creek)",
-    entity: "Village Creek Condominium Association",
-    entityClass: "ent-county",
-    entityLogo: "smrha",
-    icon: "🏠",
-    iconClass: "type-hearing",
-    type: "Housing Notice",
-    filterTag: "housing",
-    summary: "Village Creek Condominium Association has issued a proposed First Amendment to their Declaration. First mortgagees have 60 days from the mailed notice date to respond negatively, or they will be deemed to have approved the amendment.",
-    deadline: "60 days from mailed notice date",
-    expires: "2026-07-06",
-    dates: "5/6",
-    papers: ["ttimes_0506"],
-    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    address: "Village Creek Condominiums, San Miguel County",
-    noticeKey: "village-creek-condo-amendment"
-  },
-  {
-    title: "Ordinance -- Multiple Mountain Village Code Amendments Second Reading",
-    entity: "Town of Mountain Village",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "Town of Mountain Village will hold second reading and public hearing on May 21, 2026, for three ordinances: lighting regulations amendments, building regulations amendments, and emergency water usage restrictions authority. First reading was held April 23, 2026.",
-    deadline: "May 21, 2026 at 2:00 PM",
-    expires: "2026-05-21",
-    dates: "5/6",
-    papers: ["ttimes_0506"],
-    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    address: "Mountain Village Town Hall, 455 Mountain Village Blvd",
-    noticeKey: "ord-mv-multiple-2026-05-21"
-  },
-  {
-    title: "Public Hearing -- Onsite Wastewater Treatment Systems Regulations",
-    entity: "San Miguel County Board of Health",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "💧",
-    iconClass: "type-hearing",
-    type: "Utilities",
-    filterTag: "utilities",
-    summary: "San Miguel County Board of Health will consider regulatory options related to Colorado Regulation 43 for onsite wastewater treatment systems on May 20, 2026. The meeting will provide opportunity for public comment and participation.",
-    deadline: "May 20, 2026",
-    expires: "2026-05-20",
-    dates: "5/6",
-    papers: ["ttimes_0506"],
-    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    address: "333 West Colorado Ave, 2nd floor, Telluride, CO",
-    noticeKey: "owts-regulations-hearing"
-  },
-  {
-    title: "RFP -- Flooring Replacement at County Buildings",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County requests proposals for a contractor to replace flooring at 333 & 305 W. Colorado Ave in Telluride. Proposals must be submitted by 5:00 PM on June 5th either via email or dropped off at the Maintenance department.",
-    deadline: "June 5, 2026 at 5:00 PM",
-    expires: "2026-06-05",
-    dates: "5/6",
-    papers: ["ttimes_0506"],
-    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    address: "333 & 305 W. Colorado Ave, Telluride, CO",
-    noticeKey: "rfp-flooring-replacement-2026"
-  },
-  {
-    title: "RFP -- Boiler System Replacement at Down Valley Park",
-    entity: "San Miguel County Parks & Open Space",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County requests proposals for a contractor to replace the boiler system at the Down Valley Park in Placerville. Contact Janet Kask at Parks & Open Space department. Proposals due June 4 at 5:00 PM.",
-    deadline: "June 4, 2026 at 5:00 PM",
-    expires: "2026-06-04",
-    dates: "5/6",
-    papers: ["ttimes_0506"],
-    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    address: "Down Valley Park, Placerville, CO",
-    noticeKey: "rfp-boiler-down-valley-park"
-  },
-  {
-    title: "Public Hearing -- OWTS Variance Application (Sheamus Croke)",
-    entity: "San Miguel County Board of Health",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "💧",
-    iconClass: "type-hearing",
-    type: "Utilities",
-    filterTag: "utilities",
-    summary: "San Miguel County Board of Health will consider an OWTS variance application for Sheamus Croke, owner of Lots 5 and 6 Blk M Ophir, to reduce setback from soil treatment area to southwest property line from 10 feet to 2 feet. Public hearing scheduled for May 27, 2026 at 2:00 PM.",
-    deadline: "May 27, 2026 at 2:00 PM",
-    expires: "2026-05-27",
-    dates: "5/6",
-    papers: ["ttimes_0506"],
-    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    address: "Lots 5 and 6 Blk M Ophir",
-    noticeKey: "owts-variance-croke-ophir"
-  }
 ];
 
 // Build calendar buttons for a legal notice event
@@ -7447,8 +5471,7 @@ function renderLegalNotices(filter) {
   let html = '';
   filtered.forEach(notice => {
     // Link to the first paper's article
-    const papers = Array.isArray(notice.papers) ? notice.papers : [];
-    const primaryPaper = PAPER_LOGOS[papers[0]];
+    const primaryPaper = PAPER_LOGOS[notice.papers[0]];
     const linkUrl = primaryPaper ? primaryPaper.url : '#';
 
     // Entity logo
@@ -7943,15 +5966,7 @@ function renderMeetingsWithTopic() {
   // Filter to today onward, removing meetings whose end time has passed
   const todayStr = new Date().toISOString().slice(0, 10);
   filtered = filtered.filter(i => i.eventDate && dateGroupKey(i.eventDate) >= todayStr);
-  // Keep TODAY's meetings visible all day even if their end time has passed --
-  // a user opening Gov-Hub at 5pm should still see the agenda for a meeting
-  // that ran 1:30-3:30 PM. Meetings on later days are still hidden once ended
-  // (covers cases where eventDate is offset across timezones).
-  filtered = filtered.filter(i => {
-    if (!i.eventDate) return true;
-    if (dateGroupKey(i.eventDate) === todayStr) return true;
-    return !isMeetingEnded(i);
-  });
+  filtered = filtered.filter(i => !isMeetingEnded(i));
 
   // Deduplicate
   const seen = new Set();
@@ -8026,7 +6041,7 @@ function renderMeetingsWithTopic() {
       // END: AI-enhanced summary rendering
 
       html += '<div class="card" data-source="' + item.source + '">' +
-        renderLogo(item.source, item) +
+        renderLogo(item.source) +
         '<div class="card-body">' +
           '<div class="event-card-main">' +
             '<div class="event-card-content">' +
@@ -8123,15 +6138,14 @@ function renderLegalNoticesWithTopic() {
 
   let html = '';
   filtered.forEach(notice => {
-    const papers = Array.isArray(notice.papers) ? notice.papers : [];
-    const primaryPaper = PAPER_LOGOS[papers[0]];
+    const primaryPaper = PAPER_LOGOS[notice.papers[0]];
     const linkUrl = primaryPaper ? primaryPaper.url : '#';
     const eLogo = LEGAL_ENTITY_LOGOS[notice.entityLogo] || '';
     const eLogoHtml = eLogo ? '<div class="legal-entity-logo">' + eLogo + '</div>' : '';
 
     let paperBadgesHtml = '<div class="legal-paper-badges"><span class="paper-label">Published in:</span>';
     const seenPapers = new Set();
-    papers.forEach(pKey => {
+    notice.papers.forEach(pKey => {
       const p = PAPER_LOGOS[pKey];
       if (!p) return;
       if (seenPapers.has(p.name)) return;
@@ -8408,125 +6422,217 @@ document.getElementById('expandRight').addEventListener('click', () => {
 // Each listing includes location coords for OSM map embed and contact info.
 
 const HOUSING_LISTINGS = [
+  /* ── Deed-Restricted For Sale — Applications Open ── */
   {
-    title: "🏠 Element 52 SW-102",
-    type: "deed-sale",
-    address: "398 South Davis Street, Unit SW-102, Telluride, CO 81435",
-    lat: 37.9281,
-    lng: -107.8145,
-    beds: "2 Bedroom, 1 Bath, ~988 sq ft",
-    price: "$352,529 (deed-restricted)",
-    source: "SMRHA",
-    contact: { phone: "(970) 728-3034", email: "admin@smrha.org" },
-    url: "https://smrha.org/element-52-sw-102/",
-    smrhaSlug: "element-52-sw-102",
-    note: "Tier 2 Mitigation Unit. HOA $420.28/mo. Contact SMRHA for eligibility and application details."
+    title: '🏠 Silver Jack Unit 202 — 3BR Condo (Deed-Restricted)',
+    type: 'deed-sale',
+    lottery: true,
+    address: '155 W Pacific Ave, Telluride, CO 81435',
+    lat: 37.9378, lng: -107.8155,
+    beds: '3 Bedroom, 2 Bath (1,330 sq ft)', price: '$405,507 (Tier 1, deed-restricted)',
+    source: 'SMRHA',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://smrha.org/lottery',
+    applyUrl: 'https://smrha.org/lottery',
+    deadline: 'April 10, 2026 at noon',
+    drawingDate: 'April 24, 2026 at 10:00 AM',
+    drawingLocation: 'SMRHA Office, 820 Black Bear Rd, Unit G17, Telluride',
+    pickupLocation: '820 Black Bear Rd, Unit G17, Telluride (or download at smrha.org/lottery)',
+    eligibility: 'Must work 1,400+ hrs/yr in San Miguel, Ouray, San Juan, or Montrose County · Must have lived in 4-county region 12+ months · Household income up to 220% AMI · Asset limits apply',
+    note: 'Ownership lottery under Telluride Affordable Housing Guidelines. Applications available at smrha.org/lottery or pick up in person.'
   },
   {
-    title: "🏠 Silver Jack 202",
-    type: "deed-sale",
-    address: "155 West Pacific Avenue, Unit 202, Telluride, CO 81435",
-    lat: 37.9352,
-    lng: -107.8138,
-    beds: "3 Bedroom, 2 Bath, ~1330 sq ft",
-    price: "$405,507 (deed-restricted)",
-    source: "SMRHA",
-    contact: { phone: "(970) 728-3034", email: "admin@smrha.org" },
-    url: "https://smrha.org/silver-jack-202/",
-    smrhaSlug: "silver-jack-202",
-    note: "Tier 1 Town Constructed Unit. HOA $307.64/mo. Contact SMRHA for eligibility and application details."
+    title: '🏠 Silver Jack Unit 205 — 2BR Condo (Deed-Restricted)',
+    type: 'deed-sale',
+    lottery: true,
+    address: '155 W Pacific Ave, Telluride, CO 81435',
+    lat: 37.9378, lng: -107.8155,
+    beds: '2 Bedroom, 1 Bath (935 sq ft)', price: '$368,620 (Tier 1, deed-restricted)',
+    source: 'SMRHA',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://smrha.org/lottery',
+    applyUrl: 'https://smrha.org/lottery',
+    deadline: 'April 10, 2026 at noon',
+    drawingDate: 'April 24, 2026 at 10:00 AM',
+    drawingLocation: 'SMRHA Office, 820 Black Bear Rd, Unit G17, Telluride',
+    pickupLocation: '820 Black Bear Rd, Unit G17, Telluride (or download at smrha.org/lottery)',
+    eligibility: 'Must work 1,400+ hrs/yr in San Miguel, Ouray, San Juan, or Montrose County · Must have lived in 4-county region 12+ months · Household income up to 220% AMI · Asset limits apply',
+    note: 'Ownership lottery under Telluride Affordable Housing Guidelines. Applications available at smrha.org/lottery or pick up in person.'
   },
   {
-    title: "🏠 Silver Jack 205",
-    type: "deed-sale",
-    address: "155 West Pacific Avenue, Unit 205, Telluride, CO 81435",
-    lat: 37.9352,
-    lng: -107.8138,
-    beds: "2 Bedroom, 1 Bath, ~935 sq ft",
-    price: "$368,620 (deed-restricted)",
-    source: "SMRHA",
-    contact: { phone: "(970) 728-3034", email: "admin@smrha.org" },
-    url: "https://smrha.org/silver-jack-205/",
-    smrhaSlug: "silver-jack-205",
-    note: "Tier 1 Town Constructed Unit. HOA $218.42/mo. Contact SMRHA for eligibility and application details."
+    title: '🏠 Element 52 SW-102 — 2BR Condo (Deed-Restricted)',
+    type: 'deed-sale',
+    lottery: true,
+    address: '398 S Davis St, Telluride, CO 81435',
+    lat: 37.9365, lng: -107.8118,
+    beds: '2 Bedroom, 1 Bath (479 sq ft)', price: '$352,529 (Tier 2, deed-restricted)',
+    source: 'SMRHA',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://smrha.org/lottery',
+    applyUrl: 'https://smrha.org/lottery',
+    deadline: 'April 10, 2026 at noon',
+    drawingDate: 'April 24, 2026 at 10:00 AM',
+    drawingLocation: 'SMRHA Office, 820 Black Bear Rd, Unit G17, Telluride',
+    pickupLocation: '820 Black Bear Rd, Unit G17, Telluride (or download at smrha.org/lottery)',
+    eligibility: 'Must work 1,400+ hrs/yr in San Miguel, Ouray, San Juan, or Montrose County · Must have lived in 4-county region 12+ months · Household income up to 220% AMI · Asset limits apply',
+    note: 'Ownership lottery under Telluride Affordable Housing Guidelines. Applications available at smrha.org/lottery or pick up in person.'
+  },
+  /* ── Deed-Restricted For Sale — SMRHA Property Listings ── */
+  {
+    title: '🏠 530 Society Dr Unit B — 3BR Duplex (Deed-Restricted)',
+    type: 'deed-sale',
+    address: '530 Society Dr Unit B, San Miguel County, CO 81435',
+    lat: 37.9252, lng: -107.8335,
+    beds: '3 Bedroom, 2 Bath (1,180 sq ft)', price: '$765,000 (deed-restricted)',
+    source: 'SMRHA',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://smrha.org/property-listings/',
+    note: 'Deed-restricted single family duplex in San Miguel County. Contact SMRHA for eligibility and application details.'
   },
   {
-    title: "Room for Rent — In-Town 2BR Condo",
-    type: "deed-rental",
-    address: "Telluride, CO 81435 (in-town)",
-    lat: 37.9375,
-    lng: -107.8123,
-    beds: "1 Room in 2BR",
-    price: "$1,883/mo (deed-restricted)",
-    source: "SMRHA",
-    contact: { phone: "(970) 728-3034", email: "admin@smrha.org" },
-    url: "https://smrha.org/property/in-town-room-for-rent-telluride-co-81435/",
-    note: "Deed-restricted room rental in shared 2BR condo. Contact SMRHA for eligibility."
+    title: '🏠 1550 Juniper St — 2BR Home, Norwood (Deed-Restricted)',
+    type: 'deed-sale',
+    address: '1550 Juniper St, Norwood, CO 81423',
+    lat: 38.1297, lng: -108.2867,
+    beds: '2 Bedroom, 2 Bath (1,025 sq ft)', price: '$262,895 (deed-restricted)',
+    source: 'SMRHA',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://smrha.org/property-listings/',
+    note: 'Deed-restricted home in Pinion Park, Norwood. Contact SMRHA for eligibility and application details.'
   },
   {
-    title: "Village Court Apartments — Waitlist",
-    type: "deed-rental",
-    address: "455 Mountain Village Blvd, Mountain Village, CO 81435",
-    lat: 37.9325,
-    lng: -107.8497,
-    beds: "Studio–3 Bedroom",
-    price: "Income-based (deed-restricted)",
-    source: "Town of Mountain Village",
-    contact: { phone: "(970) 729-3419", email: "" },
-    url: "https://townofmountainvillage.com/community/housing/village-court-apartments/",
-    note: "Waitlist is currently capped — not accepting new applications. Check back periodically."
+    title: '🏠 1545 Juniper St — 3BR Home, Norwood (Deed-Restricted)',
+    type: 'deed-sale',
+    address: '1545 Juniper St, Norwood, CO 81423',
+    lat: 38.1297, lng: -108.2870,
+    beds: '3 Bedroom, 3 Bath (1,216 sq ft)', price: '$381,000 (deed-restricted)',
+    source: 'SMRHA',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://smrha.org/property-listings/',
+    note: 'Deed-restricted home in Pinion Park, Norwood. Contact SMRHA for eligibility and application details.'
   },
   {
-    title: "Shandoka Townhomes — Waitlist",
-    type: "deed-rental",
-    address: "820 Black Bear Rd, Telluride, CO 81435",
-    lat: 37.9363,
-    lng: -107.8198,
-    beds: "1–3 Bedroom",
-    price: "Income-based (deed-restricted)",
-    source: "Town of Telluride",
-    contact: { phone: "(970) 728-4025", email: "housing@telluride.gov" },
-    url: "https://telluride.gov/745/Town-Owned-Rental-Properties",
-    note: "Waitlist-based. Town employee priority. NEW FOR 2026: Temporary reduced work-hour requirement (1,200 hrs/yr, down from 1,400) for leases executed in 2026. Minor income exclusion also now in effect. Apply through the Town of Telluride."
+    title: '🏠 1465 Paradox St — 3BR Home, Norwood (Deed-Restricted)',
+    type: 'deed-sale',
+    address: '1465 Paradox St, Norwood, CO 81423',
+    lat: 38.1295, lng: -108.2855,
+    beds: '3 Bedroom, 3 Bath (1,216 sq ft)', price: '$383,244 (deed-restricted)',
+    source: 'SMRHA',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://smrha.org/property-listings/',
+    note: 'Deed-restricted home in Pinion Park, Norwood. Contact SMRHA for eligibility and application details.'
   },
   {
-    title: "Virginia Placer Apartments — Waitlist",
-    type: "deed-rental",
-    address: "Virginia Placer, Telluride, CO 81435",
-    lat: 37.938,
-    lng: -107.826,
-    beds: "Studio–2 Bedroom",
-    price: "Income-based (deed-restricted)",
-    source: "Town of Telluride",
-    contact: { phone: "(970) 728-4025", email: "housing@telluride.gov" },
-    url: "https://telluride.gov/745/Town-Owned-Rental-Properties",
-    note: "Waitlist-based. NEW FOR 2026: Temporary reduced work-hour requirement (1,200 hrs/yr, down from 1,400) for leases executed in 2026. Minor income exclusion also now in effect. Apply through the Town of Telluride Rental Housing division."
+    title: '🏠 1435 Paradox St — 3BR Home, Norwood (Deed-Restricted)',
+    type: 'deed-sale',
+    address: '1435 Paradox St, Norwood, CO 81423',
+    lat: 38.1294, lng: -108.2858,
+    beds: '3 Bedroom, 3 Bath (1,216 sq ft)', price: '$380,523 (deed-restricted)',
+    source: 'SMRHA',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://smrha.org/property-listings/',
+    note: 'Deed-restricted home in Pinion Park, Norwood. Contact SMRHA for eligibility and application details.'
   },
   {
-    title: "🏠 178 Alexander Overlook — 1BR Home, Lawson Hill (Deed-Restricted)",
-    type: "deed-sale",
-    address: "178 Alexander Overlook, Telluride, CO 81435",
-    lat: 37.927,
-    lng: -107.838,
-    beds: "1 Bedroom, 1 Bath (994 sq ft)",
-    price: "$649,000 (deed-restricted)",
-    source: "Mountain Rose Realty / MLS #44393",
-    contact: {  },
-    url: "https://www.zillow.com/homedetails/178-Alexander-Overlook-Telluride-CO-81435/461552686_zpid/",
-    note: "Newly built (2025) deed-restricted home in Lawson Hill subdivision. Partially furnished with full appliances. Buyers must qualify under SMRHA deed restriction guidelines. Contemporary style, 0.067-acre lot."
+    title: '🏠 1560 Juniper St — 3BR Home, Norwood (Deed-Restricted)',
+    type: 'deed-sale',
+    address: '1560 Juniper St, Norwood, CO 81423',
+    lat: 38.1298, lng: -108.2864,
+    beds: '3 Bedroom, 3 Bath (1,216 sq ft)', price: '$395,000 (deed-restricted)',
+    source: 'SMRHA',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://smrha.org/property-listings/',
+    note: 'Deed-restricted home in Pinion Park, Norwood. Contact SMRHA for eligibility and application details.'
+  },
+  /* ── Public / Deed-Restricted Rentals ── */
+  {
+    title: 'Room for Rent — In-Town 2BR Condo',
+    type: 'deed-rental',
+    address: 'Telluride, CO 81435 (in-town)',
+    lat: 37.9375, lng: -107.8123,
+    beds: '1 Room in 2BR', price: '$1,883/mo (deed-restricted)',
+    source: 'SMRHA',
+    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
+    url: 'https://smrha.org/property/in-town-room-for-rent-telluride-co-81435/',
+    note: 'Deed-restricted room rental in shared 2BR condo. Contact SMRHA for eligibility.'
   },
   {
-    title: "1BR — 107 W Columbia Ave",
-    type: "market-rental",
-    address: "107 W Columbia Ave, Telluride, CO 81435",
-    lat: 37.9373,
-    lng: -107.8128,
-    beds: "1 Bedroom (441 sq ft)",
-    price: "$3,308/mo",
-    source: "Apartments.com",
-    contact: {  },
-    url: "https://www.apartments.com/107-w-columbia-ave-telluride-co-unit-si-id1324996p/4er43mh/",
-    note: "Furnished 1BR condo in downtown Telluride. No pets, no smoking. Street parking permit included."
+    title: 'Village Court Apartments — Waitlist',
+    type: 'deed-rental',
+    address: '455 Mountain Village Blvd, Mountain Village, CO 81435',
+    lat: 37.9325, lng: -107.8497,
+    beds: 'Studio–3 Bedroom', price: 'Income-based (deed-restricted)',
+    source: 'Town of Mountain Village',
+    contact: { phone: '(970) 729-3419', email: '' },
+    url: 'https://townofmountainvillage.com/community/housing/village-court-apartments/',
+    note: 'Waitlist is currently capped — not accepting new applications. Check back periodically.'
+  },
+  {
+    title: 'Shandoka Townhomes — Waitlist',
+    type: 'deed-rental',
+    address: '820 Black Bear Rd, Telluride, CO 81435',
+    lat: 37.9363, lng: -107.8198,
+    beds: '1–3 Bedroom', price: 'Income-based (deed-restricted)',
+    source: 'Town of Telluride',
+    contact: { phone: '(970) 728-4025', email: 'housing@telluride-co.gov' },
+    url: 'https://www.telluride-co.gov/745/Town-Owned-Rental-Properties',
+    note: 'Waitlist-based. Town employee priority. Apply through the Town of Telluride.'
+  },
+  {
+    title: 'Virginia Placer Apartments — Waitlist',
+    type: 'deed-rental',
+    address: 'Virginia Placer, Telluride, CO 81435',
+    lat: 37.9380, lng: -107.8260,
+    beds: 'Studio–2 Bedroom', price: 'Income-based (deed-restricted)',
+    source: 'Town of Telluride',
+    contact: { phone: '(970) 728-4025', email: 'housing@telluride-co.gov' },
+    url: 'https://www.telluride-co.gov/745/Town-Owned-Rental-Properties',
+    note: 'Waitlist-based. Apply through the Town of Telluride Rental Housing division.'
+  },
+  /* ── Market-Rate Active Listings ── */
+  {
+    title: 'Luxury Condo — 395 E Colorado Ave',
+    type: 'market-rental',
+    address: '395 E Colorado Ave, Telluride, CO 81435',
+    lat: 37.9375, lng: -107.8095,
+    beds: '3 Bedroom', price: '$2,500/mo',
+    source: 'Craigslist',
+    contact: {},
+    url: 'https://westslope.craigslist.org/apa/d/telluride-luxury-condo/7924056218.html',
+    note: 'Long-term rental. 3BR condo on E Colorado Ave. Verify availability directly.'
+  },
+  {
+    title: '1BR Apartment — 545 W Pacific Ave',
+    type: 'market-rental',
+    address: '545 W Pacific Ave, Telluride, CO 81435',
+    lat: 37.9378, lng: -107.8155,
+    beds: '1 Bedroom', price: '$1,500/mo',
+    source: 'Craigslist',
+    contact: {},
+    url: 'https://westslope.craigslist.org/apa/d/telluride-look-no-further-than-this/7919977718.html',
+    note: 'Long-term rental. 1BR on W Pacific Ave. Verify availability directly.'
+  },
+  {
+    title: '3BR House — 280 Mahoney Dr',
+    type: 'market-rental',
+    address: '280 Mahoney Dr, Telluride, CO 81435',
+    lat: 37.9410, lng: -107.8170,
+    beds: '3 Bedroom', price: '$3,901/mo',
+    source: 'Apartments.com',
+    contact: {},
+    url: 'https://www.apartments.com/280-mahoney-dr-telluride-co/zq5w36n/',
+    note: 'Market-rate long-term rental. Contact listing agent on Apartments.com.'
+  },
+  {
+    title: '1BR — 107 W Columbia Ave',
+    type: 'market-rental',
+    address: '107 W Columbia Ave, Telluride, CO 81435',
+    lat: 37.9373, lng: -107.8128,
+    beds: '1 Bedroom', price: '$2,874/mo',
+    source: 'Apartments.com',
+    contact: {},
+    url: 'https://www.apartments.com/107-w-columbia-ave-telluride-co/f1l2ss1/',
+    note: 'Market-rate long-term rental in downtown Telluride.'
   }
 ];
 
@@ -8640,9 +6746,7 @@ async function init() {
   const airportMeetings = getAirportMeetings();
   const countyCachedMeetings = getCountyCachedMeetings();
   const localGroupMeetings = generateLocalGroupMeetings();
-  const ourayMeetings = getOurayMeetings();
-  const ridgwayMeetings = getRidgwayMeetings();
-  allMeetings = [...smartMeetings, ...mvMeetings, ...schoolMeetings, ...fireMeetings, ...medMeetings, ...norwoodMeetings, ...ophirMeetings, ...airportMeetings, ...countyCachedMeetings, ...localGroupMeetings, ...ourayMeetings, ...ridgwayMeetings];
+  allMeetings = [...smartMeetings, ...mvMeetings, ...schoolMeetings, ...fireMeetings, ...medMeetings, ...norwoodMeetings, ...ophirMeetings, ...airportMeetings, ...countyCachedMeetings, ...localGroupMeetings];
   window.__allMeetingsCache = allMeetings;
   renderMeetingsWithTopic();
   updateTopicCounts();
@@ -8680,8 +6784,7 @@ async function init() {
   try { renderUpcomingEventsSidebar(); } catch(e) { console.error('initial renderUpcomingEventsSidebar error:', e); }
 
   newsPromise.then(newsData => {
-    const localGroupEvents = generateLocalGroupEventItems();
-    allNews = [...newsData, ...localGroupEvents];
+    allNews = newsData;
     window.__allNewsCache = allNews;
     try { renderNewsWithTopic(); } catch(e) { console.error('renderNewsWithTopic error:', e); }
     try { updateTopicCounts(); } catch(e) { console.error('updateTopicCounts error:', e); }
@@ -8750,7 +6853,7 @@ const TELLURIDE_FESTIVALS = [
     url: 'https://www.telluridefoodandvine.com/', ticketUrl: 'https://www.telluridefoodandvine.com/events', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '2026 Weekend Pass and featured events available' },
   { name: 'Telluride Horror Show', month: 9, dayStart: 9, dayEnd: 12, icon: '🎃',
     logo: 'https://images.squarespace-cdn.com/content/v1/635aaf48434dcc204d4bfb34/762ca493-d7d2-459e-86a2-214c641c3695/HorrorShowLogoColor_STRAIGHT.png',
-    url: 'https://www.telluridehorrorshow.com/', ticketUrl: 'https://www.telluridehorrorshow.com/', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '3-day passes on sale Mar 25 — 6-packs on sale Jul 1, 2026' },
+    url: 'https://www.telluridehorrorshow.com/', ticketUrl: 'https://www.telluridehorrorshow.com/passes', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '3-day passes on sale Mar 25 — 6-packs on sale Jul 1, 2026' },
   { name: 'Telluride Jazz Festival', month: 7, dayStart: 7, dayEnd: 10, icon: '🎷',
     logo: 'https://images.squarespace-cdn.com/content/v1/583db0c9d1758e46ff3221e9/821ecb11-5000-415a-a970-87b539036111/2026-ebony-color-logo-png-for-website-no-dates.png?format=1500w',
     url: 'https://www.telluridejazz.org/', ticketUrl: 'https://www.telluridejazz.org/tickets', ticketLabel: 'Buy Tickets', ticketStatus: 'on-sale', promo: 'Tickets on sale now — Tier 1 pricing until July 15' },
@@ -8837,7 +6940,7 @@ function renderBlogSidebar(rssPosts) {
   // Merge RSS posts with hardcoded posts, newest first
   // Hardcoded posts have curated summaries and take priority
   // Only add RSS posts that don't match any hardcoded post by title
-  var allPosts = [...BLOG_POSTS];
+  var allPosts = [...LIVABLE_BLOG_POSTS];
   if (rssPosts && rssPosts.length > 0) {
     var existingTitles = new Set(allPosts.map(function(p) {
       return p.title.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 30);
@@ -8866,11 +6969,11 @@ function renderBlogSidebar(rssPosts) {
       ? '<img src="' + post.image + '" alt="' + post.title.replace(/"/g, '&quot;') + '" loading="lazy" onerror="this.style.display=\'none\'">'
       : '<div style="height:80px;background:linear-gradient(135deg,rgba(33,68,60,0.08),rgba(166,143,87,0.12));display:grid;place-items:center;color:var(--text-muted);font-size:1.5rem;">📝</div>';
 
-    html += '<a href="' + (post.href || post.url || "") + '" target="_blank" rel="noopener" class="blog-sidebar-card">' +
+    html += '<a href="' + post.url + '" target="_blank" rel="noopener" class="blog-sidebar-card">' +
       imgHtml +
       '<div class="blog-card-body">' +
         '<div class="blog-card-title">' + post.title + '</div>' +
-        '<div class="blog-card-summary">' + (post.excerpt || post.summary || "") + '</div>' +
+        '<div class="blog-card-summary">' + post.summary + '</div>' +
         '<div class="blog-card-meta">' + (post.date || '') + (post.readTime ? ' · ' + post.readTime : '') + '</div>' +
       '</div>' +
     '</a>';
@@ -9226,11 +7329,9 @@ function updateLeftSidebar() {
     // Build the paragraph
     let para = `<strong>${entity} -- ${dayName}:</strong> ${desc}`;
 
-    // Append the who-it-affects sentence directly. Entries are written so
-    // the `who` field reads as a self-contained sentence in the locked
-    // Tell-Hub voice; no need for a generic "This affects ..." preface.
-    if (who && who.length < 220) {
-      para += ' ' + who;
+    // Add who's affected if available
+    if (who && who.length < 150) {
+      para += ` This affects ${who.charAt(0).toLowerCase() + who.slice(1)}`;
       if (!para.endsWith('.')) para += '.';
     }
 
@@ -9244,10 +7345,7 @@ function updateLeftSidebar() {
     if (summary && !/not yet posted/i.test(summary)) {
       const topics = summary.split(' · ').slice(0, 3);
       if (topics.length > 0) {
-        // Keep capitalization as-written -- "PUBLIC HEARING", "SECOND READING",
-        // and other emphasized phrases lose their punch when lowercased and
-        // tend to read as a sterile civics paragraph.
-        para += ` On the agenda: ${topics.join(' · ')}.`;
+        para += ` On the agenda: ${topics.join(', ').toLowerCase()}.`;
       }
     }
 
@@ -9281,7 +7379,7 @@ function updateLeftSidebar() {
       }
       return detail;
     });
-    otherText += details.join(', and ') + '. These do not make the front page, but they are how the region actually runs day to day -- long after the cameras leave the bigger meetings.';
+    otherText += details.join(', and ') + '. These may not make the front page, but they shape how the region operates day to day.';
     paragraphs.push({ priority: 3, text: otherText });
   }
 
@@ -9304,7 +7402,7 @@ function updateLeftSidebar() {
     });
     const unique = [...new Set(boardNames)];
     if (unique.length > 0) {
-      paragraphs.push({ priority: 4, text: `Rounding out the week, <strong>${unique.join('</strong>, <strong>')}</strong> ${unique.length === 1 ? 'has a board meeting' : 'all have board meetings'} on the schedule. Agendas usually post a few days out -- check the Meetings tab as those go live.` });
+      paragraphs.push({ priority: 4, text: `Rounding out the week, <strong>${unique.join('</strong>, <strong>')}</strong> ${unique.length === 1 ? 'has a board meeting' : 'all have board meetings'} on the schedule. Agendas are usually posted a few days before -- check the Meetings tab for updates as they become available.` });
     }
   }
 
@@ -9335,7 +7433,7 @@ function updateLeftSidebar() {
   const totalCount = weekMeetings.length;
   const entityCount = new Set(weekMeetings.map(m => m.source)).size;
   if (totalCount > 0 && paragraphs.filter(p => p.priority >= 2).length > 0) {
-    paragraphs.push({ priority: 4.5, text: `All told, <strong>${totalCount} government meetings</strong> this week across <strong>${entityCount} entities</strong>. Scroll through Meetings for full agendas, links, and public-comment instructions for each one.` });
+    paragraphs.push({ priority: 4.5, text: `All told, there are <strong>${totalCount} government meetings</strong> this week across <strong>${entityCount} entities</strong>. Scroll through the Meetings tab for full details, agenda links, and public comment info for each one.` });
   }
 
   // ── Fallback for quiet weeks ──
@@ -10354,96 +8452,3 @@ function showSubmitStatus(msg, type) {
     el.style.color = '#b65f12';
   }
 }
-
-// ══════════════════════════════════════════════════════════════
-// ── Blog Tab Rendering ──
-// ══════════════════════════════════════════════════════════════
-// Reads BLOG_POSTS (defined earlier in this file), renders post cards
-// into #blogPostsContainer with a click-to-expand body. Posts are sorted
-// newest-first by ISO date.
-
-(function renderBlogTab() {
-  function blogEscape(s) {
-    const d = document.createElement('div');
-    d.textContent = String(s == null ? '' : s);
-    return d.innerHTML;
-  }
-
-  function blogFormatDate(s) {
-    if (!s) return '';
-    const d = new Date(s);
-    if (isNaN(d.getTime())) return s;
-    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-  }
-
-  window._toggleBlogBody = function(idx) {
-    const body = document.getElementById('blog-body-' + idx);
-    const btn  = document.getElementById('blog-toggle-' + idx);
-    if (!body) return;
-    if (body.style.display === 'none' || !body.style.display) {
-      body.style.display = 'block';
-      if (btn) btn.textContent = '← Show less';
-    } else {
-      body.style.display = 'none';
-      if (btn) btn.textContent = 'Read more →';
-    }
-  };
-
-  function postDateMs(p) {
-    const d = new Date(p.date || 0);
-    return isNaN(d.getTime()) ? 0 : d.getTime();
-  }
-
-  function render() {
-    const container = document.getElementById('blogPostsContainer');
-    if (!container) return;
-    const posts = (typeof BLOG_POSTS !== 'undefined' && Array.isArray(BLOG_POSTS)) ? BLOG_POSTS : [];
-    if (!posts.length) {
-      container.innerHTML = '<div style="text-align:center; color:var(--text-muted); padding:60px 20px; font-size:0.92rem;">No blog posts yet — check back soon.</div>';
-      return;
-    }
-    // Sort by parsed date desc (handles ISO and "Mon DD, YYYY" formats).
-    const sorted = [...posts].sort((a, b) => postDateMs(b) - postDateMs(a));
-    container.innerHTML = sorted.map((p, idx) => {
-      const hasBody = p.body && String(p.body).trim().length > 0;
-      const linkUrl = p.href || p.url || '';
-      const isExternal = linkUrl && !/^https?:\/\/livabletelluride\.org/.test(linkUrl);
-      const meta = [
-        p.date ? blogFormatDate(p.date) : '',
-        p.author ? blogEscape(p.author) : '',
-        p.category ? blogEscape(p.category) : '',
-        p.readTime ? blogEscape(p.readTime) : ''
-      ].filter(Boolean).join(' • ');
-      const excerptText = p.excerpt || p.summary || '';
-      const titleHtml = blogEscape(p.title || '(untitled)');
-      // Make the title itself a link when we have an href and no expandable body.
-      const titleLinked = (linkUrl && !hasBody)
-        ? '<a href="' + blogEscape(linkUrl) + '"' + (isExternal ? ' target="_blank" rel="noopener"' : '') + ' style="color:inherit; text-decoration:none;">' + titleHtml + '</a>'
-        : titleHtml;
-      // Action: in-page expander if we have a body, otherwise an external link.
-      let action = '';
-      if (hasBody) {
-        action = '<div class="blog-body" id="blog-body-' + idx + '" style="display:none; font-size:0.95rem; line-height:1.65; color:var(--text-primary); margin-top:14px;">' + p.body + '</div>'
-          + '<button id="blog-toggle-' + idx + '" onclick="_toggleBlogBody(' + idx + ')" style="background:none; border:none; color:var(--forest); font-weight:600; cursor:pointer; padding:0; font-size:0.88rem;">Read more →</button>';
-      } else if (linkUrl) {
-        action = '<a href="' + blogEscape(linkUrl) + '"' + (isExternal ? ' target="_blank" rel="noopener"' : '') + ' style="color:var(--forest); font-weight:600; text-decoration:none; font-size:0.88rem;">Read full post' + (isExternal ? ' →' : ' →') + '</a>';
-      }
-      return [
-        '<article class="blog-card" style="background:white; border-radius:14px; padding:22px 24px; margin-bottom:16px; box-shadow:0 2px 8px rgba(0,0,0,0.04); border:1px solid rgba(33,68,60,0.08);">',
-        p.image ? '<img src="' + blogEscape(p.image) + '" alt="" style="width:100%; max-height:240px; object-fit:cover; border-radius:10px; margin-bottom:14px;" onerror="this.style.display=\'none\'">' : '',
-        '<h3 style="margin:0 0 6px; font-family:var(--font-heading); font-size:1.25rem; color:var(--text-primary);">' + titleLinked + '</h3>',
-        meta ? '<div style="font-size:0.78rem; color:var(--text-muted); margin-bottom:10px;">' + meta + '</div>' : '',
-        excerptText ? '<p style="font-size:0.92rem; line-height:1.6; color:var(--text-secondary); margin:0 0 12px;">' + blogEscape(excerptText) + '</p>' : '',
-        action,
-        '</article>'
-      ].join('');
-    }).join('');
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', render);
-  } else {
-    render();
-  }
-})();
-
