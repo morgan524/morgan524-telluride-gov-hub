@@ -1162,9 +1162,6 @@
       display: none !important;
     }
     /* Also hide left sidebar on Gondola tab */
-    .main-layout.gondola-active .left-sidebar {
-      display: none !important;
-    }
     /* Hide left sidebar and right sidebar (Filter by Topic) on Local News tab, show blog sidebar */
     .main-layout.localnews-active .left-sidebar,
     .main-layout.localnews-active .sidebar,

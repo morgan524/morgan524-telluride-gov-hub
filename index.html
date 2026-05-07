@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Telluride Region — Tell-Hub</title>
   <!-- Site styles (extracted) -->
-  <link rel="stylesheet" href="css/site.css?v=2026-05-07-news-card-redesign">
+  <link rel="stylesheet" href="css/site.css?v=2026-05-07-refactor">
   <!-- Hub-Bub forum styles (extracted) -->
   <link rel="stylesheet" href="css/hub-bub.css">
 <!-- Firebase SDK (modular, from CDN) -->
@@ -1100,142 +1100,6 @@
     </div>
 
     <!-- ══════════ GONDOLA 3A TAB ══════════ -->
-    <div class="tab-content" id="tab-gondola">
-      <div class="landuse-shell">
-        <section class="landuse-hero">
-          <div class="landuse-kicker">Issue Guide</div>
-          <h2>Gondola 3A</h2>
-          <p id="gondolaIntro"></p>
-        </section>
-
-        <div class="landuse-legal-summary" id="gondolaLegalSummary"></div>
-
-        <div class="landuse-grid">
-          <section class="landuse-panel">
-            <div class="landuse-panel-header">
-              <h3>Where things stand now</h3>
-              <p>A quick orientation before you dive into the record.</p>
-            </div>
-            <div class="landuse-panel-body">
-              <div class="landuse-status" id="gondolaStatus"></div>
-              <div class="landuse-timeline" id="gondolaTimeline"></div>
-            </div>
-          </section>
-
-          <div style="display:grid; gap:20px;">
-            <section class="landuse-panel">
-              <div class="landuse-panel-header">
-                <h3>Key documents</h3>
-                <p>Start here if you want the core record, not just the headlines.</p>
-              </div>
-              <div class="landuse-panel-body">
-                <div class="landuse-doc-list" id="gondolaDocs"></div>
-              </div>
-            </section>
-
-            <section class="landuse-panel">
-              <div class="landuse-panel-header">
-                <h3>Legal issues</h3>
-                <p>Key legal and transparency questions surrounding this topic.</p>
-              </div>
-              <div class="landuse-panel-body">
-                <div class="landuse-player-list" id="gondolaLegalIssues"></div>
-              </div>
-            </section>
-
-            <section class="landuse-panel">
-              <div class="landuse-panel-header">
-                <h3>Recent news</h3>
-                <p>New reporting, alerts, and public-facing updates tied to this topic.</p>
-              </div>
-              <div class="landuse-panel-body">
-                <div class="landuse-compact-list" id="gondolaNews"></div>
-              </div>
-            </section>
-
-            <section class="landuse-panel">
-              <div class="landuse-panel-header">
-                <h3>Major players</h3>
-                <p>The key decision-makers, stakeholders, and voices shaping this issue.</p>
-              </div>
-              <div class="landuse-panel-body">
-                <div class="landuse-player-list" id="gondolaPlayers"></div>
-              </div>
-            </section>
-
-            <!-- ══════ COMMUNITY COMMENTS ══════ -->
-            <section class="landuse-panel comment-section" id="gondola-comments-section" style="grid-column: 1 / -1;">
-              <div class="landuse-panel-header">
-                <h3>Community Input</h3>
-                <p>Share your perspective on the Gondola 3A issue. All comments are moderated for civility.</p>
-              </div>
-              <div class="landuse-panel-body">
-
-                <div class="comment-guidelines">
-                  <strong>Community Guidelines</strong>
-                  <ul>
-                    <li>Use your real first and last name — anonymous comments won't be posted.</li>
-                    <li>Stick to facts, personal experience, or genuine questions.</li>
-                    <li>No personal attacks, insults, or profanity — the system will ask you to rewrite.</li>
-                    <li>One comment per topic per day. Take your time and make it count.</li>
-                    <li>Comments that add sourced facts or ask clear questions are highlighted.</li>
-                  </ul>
-                </div>
-
-                <button class="comment-toggle-btn" data-target="gondola-comment-form">Would you like to Comment?</button>
-                <div class="comment-form comment-form-collapsed" id="gondola-comment-form">
-                  <div class="comment-prompt-label">Choose a prompt to get started:</div>
-                  <div class="comment-prompt-chips" data-target="gondola">
-                    <button class="prompt-chip" data-prompt="What concerns you most about this issue?">What concerns you most?</button>
-                    <button class="prompt-chip" data-prompt="What benefit do you see in the current proposal?">What benefit do you see?</button>
-                    <button class="prompt-chip" data-prompt="What fact or source should others know about?">Share a fact or source</button>
-                    <button class="prompt-chip" data-prompt="What question should officials answer publicly?">Question for officials</button>
-                  </div>
-
-                  <div class="comment-name-row">
-                    <input type="text" class="comment-input comment-fname" placeholder="First name" maxlength="40" data-field="fname">
-                    <input type="text" class="comment-input comment-lname" placeholder="Last name" maxlength="40" data-field="lname">
-                  </div>
-                  <input type="email" class="comment-input comment-email" placeholder="Email (for verification only — never displayed)" data-field="email">
-                  <textarea class="comment-input comment-body" placeholder="Share your perspective…" rows="4" maxlength="1500" data-field="body"></textarea>
-
-                  <div class="comment-type-label">Tag your comment:</div>
-                  <div class="comment-type-chips" data-target="gondola">
-                    <button class="type-chip" data-type="question">❓ Question</button>
-                    <button class="type-chip" data-type="observation">👁️ Observation</button>
-                    <button class="type-chip" data-type="concern">⚠️ Concern</button>
-                    <button class="type-chip" data-type="support">👍 Support</button>
-                    <button class="type-chip" data-type="opposition">👎 Opposition</button>
-                    <button class="type-chip" data-type="correction">✏️ Correction</button>
-                    <button class="type-chip" data-type="experience">💬 Personal experience</button>
-                  </div>
-
-                  <div class="comment-char-count"><span class="char-current">0</span> / 1,500</div>
-                  <button class="comment-submit-btn" data-target="gondola" disabled>Submit Comment</button>
-                  <div class="comment-rewrite-nudge" id="gondola-rewrite-nudge" style="display:none;">
-                    <span class="nudge-icon">🛑</span>
-                    <span class="nudge-text">Your comment may contain language that violates our guidelines. Please rewrite for a more constructive tone before submitting.</span>
-                  </div>
-                </div>
-
-                <div class="comment-sort-bar" id="gondola-sort-bar">
-                  <span class="comment-count" id="gondola-comment-count">0 comments</span>
-                  <div class="comment-sort-options">
-                    <button class="sort-btn active" data-sort="newest" data-target="gondola">Newest</button>
-                    <button class="sort-btn" data-sort="useful" data-target="gondola">Most useful</button>
-
-                    <button class="sort-btn" data-sort="unanswered" data-target="gondola">Unanswered Qs</button>
-                  </div>
-                </div>
-
-                <div class="comment-list" id="gondola-comment-list"></div>
-              </div>
-            </section>
-
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- ── Subscribe Tab ── -->
     <div class="tab-content" id="tab-subscribe">
@@ -2030,7 +1894,8 @@
     <button class="footer-correction-btn" id="correctionFab">✏️ See something wrong? Suggest a Correction</button>
   </div>
 
-<script src="js/gov-hub.js?v=2026-05-07-news-card-redesign"></script>
+<script src="js/gov-data.js?v=2026-05-07-refactor"></script>
+<script src="js/gov-hub.js?v=2026-05-07-refactor"></script>
 
 <!-- ══════════ Events Around Me Modal ══════════ -->
 <div class="prox-modal-overlay" id="proxOverlay">
