@@ -2582,6 +2582,7 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.classList.add('active');
     document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
     if (btn.dataset.tab === 'land-use') renderLandUseTab();
+    if (btn.dataset.tab === 'local-news') renderLocalNews(null, currentLocalNewsFilter);
     // Toggle left-sidebar cards per tab
     const wtfBar = document.getElementById('whatToFollowBar');
     const submitCard = document.getElementById('sidebarSubmitEvent');
@@ -6334,7 +6335,7 @@ async function init() {
   });
 
   // Local News tab uses hardcoded article data — render immediately
-  renderLocalNews(null, currentLocalNewsFilter);
+  try { renderLocalNews(null, currentLocalNewsFilter); } catch(e) { console.error("renderLocalNews init error:", e); }
 
   // Blog sidebar — render from hardcoded BLOG_POSTS data (no external RSS dependency)
   try { renderBlogSidebar([]); } catch(e) { console.error('renderBlogSidebar error:', e); }
