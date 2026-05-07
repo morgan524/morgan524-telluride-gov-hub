@@ -1600,39 +1600,109 @@
     .festival-sidebar::-webkit-scrollbar-track { background: transparent; }
     .festival-sidebar::-webkit-scrollbar-thumb { background: rgba(47,86,77,0.25); border-radius: 4px; }
     .festival-sidebar::-webkit-scrollbar-thumb:hover { background: rgba(47,86,77,0.45); }
-    /* Local News: hide source logo, show article image on left */
-    #tab-local-news .card-logo {
-      display: none;
-    }
-    #tab-local-news .event-card-main.news-card-img-left {
-      grid-template-columns: 180px minmax(0, 1fr);
-      gap: 14px;
-      align-items: center;
-    }
-    #tab-local-news .news-card-img-left .event-illustration {
-      order: -1;
-      width: 180px;
-      height: 144px;
-      border-radius: 10px;
-      align-self: center;
-    }
-    #tab-local-news .card[data-source-key="koto"] .event-photo img {
-      object-fit: contain;
-      padding: 8px;
-    }
+    /* ── Local News: logo + image stacked in left col, text on right (desktop) ── */
+    #tab-local-news .card-logo { display: none; }
     #tab-local-news .card {
-      padding: 16px;
+      padding: 0;
+      gap: 0;
+      overflow: hidden;
+      align-items: stretch;
     }
     #tab-local-news .card .card-body {
+      flex: 1;
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 0;
+    }
+    /* Left media column */
+    .news-media-col {
+      width: 160px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      background: #f5f4f0;
+      border-right: 1px solid rgba(33,68,60,0.10);
+    }
+    .news-media-col.no-image {
+      justify-content: center;
+      align-items: center;
+    }
+    /* Source logo at top of left col */
+    .news-source-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      border-bottom: 1px solid rgba(33,68,60,0.08);
+      background: #fff;
+      flex-shrink: 0;
+      height: 80px;
+    }
+    .news-source-logo img,
+    .news-source-logo svg {
+      max-width: 60px;
+      max-height: 54px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+    /* Article thumbnail fills remaining left col */
+    .news-media-col .event-illustration {
+      flex: 1;
+      min-height: 90px;
+      width: 100%;
+      border-radius: 0;
+      border: none;
+      box-shadow: none;
+      background: #e8e5de;
+    }
+    .news-media-col .event-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0;
       padding: 0;
     }
+    .news-media-col.no-image .news-source-logo {
+      height: auto;
+      border-bottom: none;
+      padding: 20px 14px;
+    }
+    /* Club cards (have club-info-box): keep original side-by-side grid */
+    #tab-local-news .event-card-main.news-card-img-left.has-club-info {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 240px;
+      gap: 14px;
+      align-items: start;
+    }
+    /* Mobile: logo strip + thumbnail row at top, text below */
     @media (max-width: 600px) {
-      .news-card-img-left {
-        grid-template-columns: 1fr;
+      #tab-local-news .card {
+        flex-direction: column;
       }
-      .news-card-img-left .event-illustration {
+      .news-media-col {
         width: 100%;
-        height: 160px;
+        flex-direction: row;
+        height: 80px;
+        border-right: none;
+        border-bottom: 1px solid rgba(33,68,60,0.10);
+      }
+      .news-source-logo {
+        width: 80px;
+        height: 80px !important;
+        border-bottom: none;
+        border-right: 1px solid rgba(33,68,60,0.08);
+        flex-shrink: 0;
+        padding: 8px;
+      }
+      .news-media-col .event-illustration {
+        flex: 1;
+        min-height: 80px;
+      }
+      #tab-local-news .card .card-body {
+        padding: 12px 14px;
       }
     }
 
@@ -3519,7 +3589,7 @@
     }
 
     /* ── Events tab — mobile card: org image on top, text below, no platform logo ── */
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       #tab-news .card {
         flex-direction: column;
         align-items: stretch;
