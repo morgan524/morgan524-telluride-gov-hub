@@ -6,19 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 May 2026 19:29:20 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2026 02:19:38 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Event] Front Range Fire Pancake Breakfast — Johnstown — June 6, 2026</title>
-      <link>https://livabletelluride.org/#events</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/Front%20Range%20Fire%20Pancake%20Breakfast%20%E2%80%94%20Johnstown%7CJune%206%2C%202026</guid>
-      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://5280fire.com/wp-content/uploads/2026/04/IMG_3595-e1777065822768.jpg" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />📍 Front Range Fire, 100 S. Telep Avenue, Johnstown, CO
-Annual pancake breakfast fundraiser at Front Range Fire's Johnstown station. Come meet the crew and support your local fire department.]]></description>
-      <media:content url="https://5280fire.com/wp-content/uploads/2026/04/IMG_3595-e1777065822768.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>5280 Fire</category>
-    </item>
     <item>
       <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
       <link>https://livabletelluride.org/#events</link>
@@ -31,67 +20,32 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <category>Telluride Rotary Club</category>
     </item>
     <item>
-      <title>[Event] Fremont County Safety Jam — May 30, 2026</title>
-      <link>https://livabletelluride.org/#events</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/Fremont%20County%20Safety%20Jam%7CMay%2030%2C%202026</guid>
-      <pubDate>Sat, 30 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://5280fire.com/wp-content/uploads/2026/04/683431101_986018367445321_7512203806013998526_n-e1777494298345.jpg" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />📍 Fremont County, CO
-Community safety event in Fremont County featuring fire, EMS, and law enforcement demonstrations. Free and open to the public.]]></description>
-      <media:content url="https://5280fire.com/wp-content/uploads/2026/04/683431101_986018367445321_7512203806013998526_n-e1777494298345.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>5280 Fire</category>
-    </item>
-    <item>
-      <title>[Event] Monument Fire Camp — May 28, 2026</title>
-      <link>https://livabletelluride.org/#events</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/Monument%20Fire%20Camp%7CMay%2028%2C%202026</guid>
-      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://5280fire.com/wp-content/uploads/2026/04/658289470_1640679217394537_7343772524626032476_n-e1775231255490.jpg" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />📍 Monument, CO
-Fire camp event in Monument, Colorado. Details and registration available on the 5280 Fire events page.]]></description>
-      <media:content url="https://5280fire.com/wp-content/uploads/2026/04/658289470_1640679217394537_7343772524626032476_n-e1775231255490.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>5280 Fire</category>
-    </item>
-    <item>
-      <title>[Event] Colorado Fallen Firefighter Memorial — May 16, 2026</title>
-      <link>https://livabletelluride.org/#events</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/Colorado%20Fallen%20Firefighter%20Memorial%7CMay%2016%2C%202026</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://5280fire.com/wp-content/uploads/2026/04/Screenshot-2026-04-22-at-3.42.02-PM-e1776894189813.png" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />📍 Colorado
-Annual statewide ceremony honoring Colorado firefighters who lost their lives in the line of duty. Open to the public.]]></description>
-      <media:content url="https://5280fire.com/wp-content/uploads/2026/04/Screenshot-2026-04-22-at-3.42.02-PM-e1776894189813.png" medium="image" />
-      <category>Community Event</category>
-      <category>5280 Fire</category>
-    </item>
-    <item>
-      <title>[Event] Crested Butte Fire Department Open House — May 14, 2026</title>
-      <link>https://livabletelluride.org/#events</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/Crested%20Butte%20Fire%20Department%20Open%20House%7CMay%2014%2C%202026</guid>
-      <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://5280fire.com/wp-content/uploads/2026/05/686929074_1583730390426326_985925004830145764_n-e1778089034687.jpg" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />📍 Crested Butte Fire Department, 300 County Road 17, Crested Butte, CO
-Open house at Crested Butte Fire Department. Tour the station, meet crews, and explore fire apparatus. All ages welcome.]]></description>
-      <media:content url="https://5280fire.com/wp-content/uploads/2026/05/686929074_1583730390426326_985925004830145764_n-e1778089034687.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>5280 Fire</category>
-    </item>
-    <item>
-      <title>[Event] Durango Fire Ready Expo — May 9, 2026</title>
-      <link>https://livabletelluride.org/#events</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/Durango%20Fire%20Ready%20Expo%7CMay%209%2C%202026</guid>
-      <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://5280fire.com/wp-content/uploads/2026/05/IMG_4261-e1778090252962.jpg" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />📍 Durango, CO
-Fire and safety expo hosted in Durango. Community members can meet local firefighters, explore apparatus, and learn about fire safety and emergency preparedness.]]></description>
-      <media:content url="https://5280fire.com/wp-content/uploads/2026/05/IMG_4261-e1778090252962.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>5280 Fire</category>
-    </item>
-    <item>
       <title>A late spring snowstorm slams Colorado, closing schools and disrupting commuters</title>
       <link>https://www.telluridenews.com/news/state/article_20728449-67c6-551b-8b24-b8ff7c5c661d.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_20728449-67c6-551b-8b24-b8ff7c5c661d.html</guid>
-      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/4d/a4df46ad-e4d3-546a-8382-f9aba6b82c82/69fb2b5bd52db.image.jpg?resize=300%2C200" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />A late spring snowstorm dumped over a foot of snow in some Colorado mountain areas, with Jamestown getting 16+ inches and Estes Park seeing 17 inches. Denver schools canceled classes Wednesday as the city faced its biggest snowfall of the season, though the precipitation was welcome relief during ongoing drought conditions.]]></description>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/4d/a4df46ad-e4d3-546a-8382-f9aba6b82c82/69fb2b5bd52db.image.jpg?resize=300%2C200" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />A late spring snowstorm dumped over 2 feet of snow in mountain areas like Estes Park and up to a foot in Boulder, while Denver got nearly 6 inches. Schools closed Wednesday across the Front Range, giving kids an unexpected May snow day for sledding and playing outside.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/4d/a4df46ad-e4d3-546a-8382-f9aba6b82c82/69fb2b5bd52db.image.jpg?resize=300%2C200" medium="image" />
+      <category>Telluride Times</category>
+      <category>education</category>
+    </item>
+    <item>
+      <title>THS left out of soccer playoffs</title>
+      <link>https://www.telluridenews.com/sports/article_2f31b789-d089-42b7-9b6c-940afdff77e1.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/sports/article_2f31b789-d089-42b7-9b6c-940afdff77e1.html</guid>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/7d/e7d83b35-cab8-4f44-a707-1078ade52a57/69f9ac3ebf6ec.image.jpg?resize=300%2C200" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />The THS girls soccer team missed the state playoffs after losing 2-1 to Bayfield, dropping their ranking from 20th to 21st and out of the top 24 needed to qualify. The Lady Miners finished 4-9-1 after also losing 4-1 to Ridgway earlier in the week.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/7d/e7d83b35-cab8-4f44-a707-1078ade52a57/69f9ac3ebf6ec.image.jpg?resize=300%2C200" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
+    </item>
+    <item>
+      <title>Hard work and perseverance</title>
+      <link>https://www.telluridenews.com/norwood_post/article_f36f75c5-78e6-4fbc-9dd5-51535697d60e.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/norwood_post/article_f36f75c5-78e6-4fbc-9dd5-51535697d60e.html</guid>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/46/046406e1-b0ed-45f3-88a5-f87d2570e7d3/69fa5cd6c404f.image.jpg?resize=300%2C400" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Darcy Bray graduated last weekend from Colorado Mountain College with her associate’s degree, an achievement she’s been working toward throughout the entirety of her time in high school. Her dedication, perseverance and hard work have truly paid off. Congratulations, Darcy!]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/46/046406e1-b0ed-45f3-88a5-f87d2570e7d3/69fa5cd6c404f.image.jpg?resize=300%2C400" medium="image" />
       <category>Telluride Times</category>
       <category>education</category>
     </item>
@@ -99,8 +53,8 @@ Fire and safety expo hosted in Durango. Community members can meet local firefig
       <title>ADL reports a sharp drop in US antisemitic incidents in 2025, driven by a steep fall on campuses</title>
       <link>https://www.telluridenews.com/news/state/article_fd5eb38f-870a-5931-a281-fd46c98217ff.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_fd5eb38f-870a-5931-a281-fd46c98217ff.html</guid>
-      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/15/6151511f-d420-5af3-ba21-a347150d4cf9/69fb2ebbc7405.image.jpg?resize=300%2C192" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />The ADL reports antisemitic incidents dropped 33% in 2025 to 6,274 cases, down from a record 9,354 in 2024, largely due to fewer campus incidents. However, physical assaults hit a record high of 203 cases, including three killings. The decline follows a peak in Israel-related incidents after the October 2023 Hamas attacks.]]></description>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/15/6151511f-d420-5af3-ba21-a347150d4cf9/69fb2ebbc7405.image.jpg?resize=300%2C192" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />The ADL reported antisemitic incidents dropped 33% in 2025 to 6,274 cases, largely due to fewer campus incidents, though physical assaults hit a record high of 203. Three people were killed in antisemitic attacks, including two at a DC museum and an elderly woman in Boulder.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/15/6151511f-d420-5af3-ba21-a347150d4cf9/69fb2ebbc7405.image.jpg?resize=300%2C192" medium="image" />
       <category>Telluride Times</category>
       <category>arts-culture</category>
@@ -109,8 +63,18 @@ Fire and safety expo hosted in Durango. Community members can meet local firefig
       <title>Legals and Public Notices for May 7-13, 2026</title>
       <link>https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html</guid>
-      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[A Planning Commission meeting is scheduled for May 14th at 333 W Colorado Ave, covering several land use applications including a tabled Garlock permit and a cancelled Crockett staging permit. Mountain Village passed a wildfire code ordinance on second reading, and Village Creek Condominiums is notifying mortgage holders about declaration amendments.]]></description>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[The Planning Commission meets May 14th at 9:30 AM with agenda items including a tabled Garlock Special Use Permit and cancelled Crockett permit application. Mountain Village Town Council passed an ordinance on second reading updating Community Development Code for wildfire resilience compliance.]]></description>
+      <category>Telluride Times</category>
+      <category>community</category>
+    </item>
+    <item>
+      <title>Indigenous people honor and raise awareness for relatives who are missing or have been killed</title>
+      <link>https://www.telluridenews.com/news/state/article_ae44c01b-f686-57b2-ae9f-0e1627a4f326.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_ae44c01b-f686-57b2-ae9f-0e1627a4f326.html</guid>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ee/4ee20253-fa90-5e52-b3d6-f0a5aa554c5d/69f96e150e3e0.image.jpg?resize=300%2C226" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Indigenous communities marked the day honoring missing and murdered relatives, wearing red to recognize victims of violence. Native Americans face violent crime rates more than twice the general population, with nearly 1,500 active federal missing persons cases.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ee/4ee20253-fa90-5e52-b3d6-f0a5aa554c5d/69f96e150e3e0.image.jpg?resize=300%2C226" medium="image" />
       <category>Telluride Times</category>
       <category>community</category>
     </item>
@@ -118,18 +82,28 @@ Fire and safety expo hosted in Durango. Community members can meet local firefig
       <title>Keeping traditions alive</title>
       <link>https://www.telluridenews.com/news/article_f166c0dc-a754-43a1-9784-9facd4674405.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/news/article_f166c0dc-a754-43a1-9784-9facd4674405.html</guid>
-      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/43/c43e569f-37f2-4543-9cff-45bfa117cf81/69fa5f7853b7c.image.jpg?resize=300%2C315" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Bill Wilson of Knight Canyon Outfitters in Norwood was named "Outfitter of the Year" by the Colorado Outfitters Association for his three-generation family business and dedication to ethical hunting. Wilson and other hunting advocates say their industry faces threats from what they call "ballot-box biology" and urban voters making wildlife management decisions instead of trusting science-based approaches.]]></description>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/43/c43e569f-37f2-4543-9cff-45bfa117cf81/69fa5f7853b7c.image.jpg?resize=300%2C315" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Norwood's Bill Wilson of Knight Canyon Outfitters has been named "Outfitter of the Year" by the Colorado Outfitters Association for his three-generation family business and work in the West End hunting industry. Wilson and other outfitters are concerned about political threats to hunting rights and what they call "ballot-box biology" - voters deciding wildlife management issues instead of relying on scientific expertise.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/43/c43e569f-37f2-4543-9cff-45bfa117cf81/69fa5f7853b7c.image.jpg?resize=300%2C315" medium="image" />
       <category>Telluride Times</category>
       <category>community</category>
     </item>
     <item>
+      <title>Spring plans meet snow in Denver as a late storm could be the season&apos;s biggest</title>
+      <link>https://www.telluridenews.com/news/state/article_df4d81e5-c1f0-558f-a1f4-290dae406595.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_df4d81e5-c1f0-558f-a1f4-290dae406595.html</guid>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/8f/58f263e8-16a8-5781-af16-5d8758db5bc8/69fa387863ba5.image.jpg?resize=300%2C200" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Denver and the Front Range got hit with what could be the season's biggest snowstorm, with forecasts calling for up to 8 inches in Denver and a foot in Boulder after the driest winter on record. Schools canceled classes Wednesday and thousands bundled up for a David Guetta concert at Red Rocks as temperatures plunged overnight.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/8f/58f263e8-16a8-5781-af16-5d8758db5bc8/69fa387863ba5.image.jpg?resize=300%2C200" medium="image" />
+      <category>Telluride Times</category>
+      <category>recreation</category>
+    </item>
+    <item>
       <title>CHALKBOARD for the week of May 7-13</title>
       <link>https://www.telluridenews.com/the_norwood_post/article_2ef5bd86-8794-4816-8ed3-fc76bbd27167.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/the_norwood_post/article_2ef5bd86-8794-4816-8ed3-fc76bbd27167.html</guid>
-      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8b/f8b47ece-f18b-4c64-891d-3517aa2b0690/69fa6fb7bfb2a.image.png?resize=300%2C183" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />This week's birthdays include Ashley LaUond on May 8, several residents on May 9-10 including the Sheffield siblings, and others through May 13. The community calendar lists regular meetings for town board, school board, and chamber of commerce, plus ongoing activities like the Thursday farmers market, senior meals, food pantry distribution on Sundays, and pickleball sessions.]]></description>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8b/f8b47ece-f18b-4c64-891d-3517aa2b0690/69fa6fb7bfb2a.image.png?resize=300%2C183" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />The weekly community calendar lists birthdays for May 8-13 and regular meeting schedules for town board, school board, and chamber groups. Local activities include the Thursday farmers market through mid-October, senior meals on Mondays and Thursdays, food pantry distribution Sundays, and pickleball sessions multiple days a week.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8b/f8b47ece-f18b-4c64-891d-3517aa2b0690/69fa6fb7bfb2a.image.png?resize=300%2C183" medium="image" />
       <category>Telluride Times</category>
       <category>government</category>
@@ -138,8 +112,8 @@ Fire and safety expo hosted in Durango. Community members can meet local firefig
       <title>You&apos;re invited to the groundbreaking of the new Norwood School</title>
       <link>https://www.telluridenews.com/the_norwood_post/article_c205d989-d94a-4e50-bc98-dd81947a31bd.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/the_norwood_post/article_c205d989-d94a-4e50-bc98-dd81947a31bd.html</guid>
-      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/03/c0304c73-0b0c-48e4-a100-80e11b1b2499/69fa6eca08f58.image.jpg?resize=300%2C169" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Norwood's holding a groundbreaking ceremony for their new school, funded by a $50+ million state BEST Grant and local bonds. The new campus will consolidate pre-K through 12th grade on 19 acres where the old disc golf course was, next to Pinion Park and the library.]]></description>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/03/c0304c73-0b0c-48e4-a100-80e11b1b2499/69fa6eca08f58.image.jpg?resize=300%2C169" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Norwood's holding a groundbreaking ceremony for their new school that's being funded by a $50+ million state BEST Grant and local bonds. The new campus will replace the aging current facilities and consolidate pre-K through 12th grade on a 19-acre site where the old disc golf course was, next to Pinion Park neighborhood and Lone Cone Library.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/03/c0304c73-0b0c-48e4-a100-80e11b1b2499/69fa6eca08f58.image.jpg?resize=300%2C169" medium="image" />
       <category>Telluride Times</category>
       <category>education</category>
@@ -148,79 +122,18 @@ Fire and safety expo hosted in Durango. Community members can meet local firefig
       <title>Town of Norwood awarded funding for Norwood Hill improvements</title>
       <link>https://www.telluridenews.com/the_norwood_post/article_dad1ad7d-73e3-41de-b2b1-24757153a694.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/the_norwood_post/article_dad1ad7d-73e3-41de-b2b1-24757153a694.html</guid>
-      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/7c/57c98200-de4b-4962-86c7-46d1750abfdc/69fa6d93b89e4.image.jpg?resize=300%2C191" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Norwood received $1.25 million in state and federal funding to improve safety on Norwood Hill, which has been a longtime concern due to its steep grade, sharp curves, and accident history. The project was selected through a competitive statewide process with no local match required from the town.]]></description>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/7c/57c98200-de4b-4962-86c7-46d1750abfdc/69fa6d93b89e4.image.jpg?resize=300%2C191" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Norwood received $1.25 million in state and federal funding to improve safety on Norwood Hill, which has been a high-priority concern due to its steep grade, sharp curves, and accident history. The project was selected through a competitive statewide process and requires no local matching funds from the town.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/7c/57c98200-de4b-4962-86c7-46d1750abfdc/69fa6d93b89e4.image.jpg?resize=300%2C191" medium="image" />
       <category>Telluride Times</category>
       <category>community</category>
     </item>
     <item>
-      <title>The heart of Telluride</title>
-      <link>https://www.telluridenews.com/arts_and_entertainment/article_917b2db3-f982-472d-9198-8dc744073d8e.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/arts_and_entertainment/article_917b2db3-f982-472d-9198-8dc744073d8e.html</guid>
-      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfed5db9-e7f7-49f6-8189-3174c244d773/69f64afc5f9a1.image.jpg?resize=300%2C412" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />The Transfer Warehouse has become an outdoor gallery through the Heart of Telluride Project, where Brandon Bermel and five other local artists installed street art pieces with heart themes that opened on Valentine's Day. The rotating installation gives artists a legal space to create street art without needing town approval.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfed5db9-e7f7-49f6-8189-3174c244d773/69f64afc5f9a1.image.jpg?resize=300%2C412" medium="image" />
-      <category>Telluride Times</category>
-      <category>land-use</category>
-    </item>
-    <item>
-      <title>Telluride’s ‘I voted/yo voté’ sticker contest winners</title>
-      <link>https://www.telluridenews.com/news/article_3022309d-c7c1-4717-85d3-41ac89e3f795.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/article_3022309d-c7c1-4717-85d3-41ac89e3f795.html</guid>
-      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/9d/79d165ca-16ce-40fa-a9ac-77113d7839c8/69f1660ad0191.image.png?resize=300%2C389" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Earlier this year, Telluride and Norwood students participated in a sticker contest, with 18 creative kiddos taking part. The brief, set by the San Miguel County Clerk’s Office, was to devise a design that could be used as the artwork…]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/9d/79d165ca-16ce-40fa-a9ac-77113d7839c8/69f1660ad0191.image.png?resize=300%2C389" medium="image" />
-      <category>Telluride Times</category>
-      <category>government</category>
-    </item>
-    <item>
-      <title>Wishing upon a star</title>
-      <link>https://www.telluridenews.com/arts_and_entertainment/article_b3673668-79a5-462d-87a1-05b24411b059.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/arts_and_entertainment/article_b3673668-79a5-462d-87a1-05b24411b059.html</guid>
-      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/cd/4cda66af-af53-48e3-b1b9-8d3dd0c94f9c/69f319f8c70cf.image.jpg?resize=300%2C450" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />The SAF Young People's Theater is staging "My Son Pinocchio, Jr." with 30 kids in grades 3-5, focusing on Geppetto's journey as a father learning unconditional love. Shows run May 1-3 at the Sheridan Opera House, featuring classic Disney songs plus new music by Stephen Schwartz.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/cd/4cda66af-af53-48e3-b1b9-8d3dd0c94f9c/69f319f8c70cf.image.jpg?resize=300%2C450" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>[Meeting] One Time Event — 2026-05-06</title>
-      <link>https://livabletelluride.org/#meetings</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-05-06%7COne%20Time%20Event</guid>
-      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[San Miguel County • 2026-05-06
-
-Meeting at SO Annex in Norwood · Limited agenda details available · May 11th evening session]]></description>
-      <category>Meeting</category>
-      <category>San Miguel County</category>
-    </item>
-    <item>
-      <title>Indigenous people honor and raise awareness for relatives who are missing or have been killed</title>
-      <link>https://www.telluridenews.com/news/state/article_ae44c01b-f686-57b2-ae9f-0e1627a4f326.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_ae44c01b-f686-57b2-ae9f-0e1627a4f326.html</guid>
-      <pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ee/4ee20253-fa90-5e52-b3d6-f0a5aa554c5d/69f96e150e3e0.image.jpg?resize=300%2C226" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Indigenous communities held events Sunday wearing red to honor missing and murdered relatives, marking a day of grief and resilience. Native Americans face violence at twice the rate of the general population, with nearly 1,500 active federal missing person cases. Despite federal laws passed in 2020, implementation has been slow and inconsistent.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ee/4ee20253-fa90-5e52-b3d6-f0a5aa554c5d/69f96e150e3e0.image.jpg?resize=300%2C226" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Spring plans meet snow in Denver as a late storm could be the season&apos;s biggest</title>
-      <link>https://www.telluridenews.com/news/state/article_df4d81e5-c1f0-558f-a1f4-290dae406595.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_df4d81e5-c1f0-558f-a1f4-290dae406595.html</guid>
-      <pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/8f/58f263e8-16a8-5781-af16-5d8758db5bc8/69fa387863ba5.image.jpg?resize=300%2C200" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Denver's driest winter on record is ending with what could be the season's biggest snowstorm, continuing into Wednesday with plunging temperatures and potential power outages from heavy, wet snow. While May snow isn't unheard of here - Denver's seen five May storms over 10 inches historically - this one won't solve the ongoing drought despite helping with topsoil moisture.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/8f/58f263e8-16a8-5781-af16-5d8758db5bc8/69fa387863ba5.image.jpg?resize=300%2C200" medium="image" />
-      <category>Telluride Times</category>
-      <category>recreation</category>
-    </item>
-    <item>
       <title>Appreciation for teachers, staff</title>
       <link>https://www.telluridenews.com/opinion/letters_to_editor/article_fb79e810-1118-4f69-a3d4-2cb921d8dd13.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/opinion/letters_to_editor/article_fb79e810-1118-4f69-a3d4-2cb921d8dd13.html</guid>
-      <pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[The school board passed a resolution officially recognizing Teacher and Staff Appreciation Week for May 4-8, 2026, acknowledging educators' role in student success. The resolution encourages families and community members to express gratitude to teachers and staff during that week and year-round.]]></description>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[The school board passed a resolution officially recognizing Teacher and Staff Appreciation Week for May 4-8, 2026, acknowledging educators' role in student success and academic achievement. The board encourages families and community members to show gratitude to teachers and staff during that week and year-round.]]></description>
       <category>Telluride Times</category>
       <category>education</category>
     </item>
@@ -228,8 +141,9 @@ Meeting at SO Annex in Norwood · Limited agenda details available · May 11th e
       <title>Trump administration sues Denver over its 1989 assault weapons ban</title>
       <link>https://www.telluridenews.com/news/state/article_91caa8b8-dec6-5691-807a-44fd78d5be2d.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_91caa8b8-dec6-5691-807a-44fd78d5be2d.html</guid>
-      <pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[The Trump administration is suing Denver over its 1989 assault weapons ban, claiming it violates Second Amendment rights. Denver's mayor flatly rejected federal demands to roll back the 37-year-old policy, saying the city won't put "weapons of war" back on streets.]]></description>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/fc/5fc8dcdd-595e-5e93-b187-5a76035d4985/69fa601618eb0.image.jpg?resize=300%2C200" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />The Trump administration filed a lawsuit against Denver's 35-year-old assault weapons ban, claiming it violates Second Amendment rights. Denver's mayor and police chief rejected federal demands to stop enforcing the ban, with Mayor Mike Johnston saying "hell no" to rolling back the policy. The administration is also threatening to sue Colorado over its statewide ban on large-capacity ammunition magazines.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/fc/5fc8dcdd-595e-5e93-b187-5a76035d4985/69fa601618eb0.image.jpg?resize=300%2C200" medium="image" />
       <category>Telluride Times</category>
       <category>public-safety</category>
     </item>
@@ -237,8 +151,8 @@ Meeting at SO Annex in Norwood · Limited agenda details available · May 11th e
       <title>Telluride community survey open through May 21</title>
       <link>https://www.telluridenews.com/news/article_1145f14a-0b4a-43a7-9dea-4a452d941817.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/news/article_1145f14a-0b4a-43a7-9dea-4a452d941817.html</guid>
-      <pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/25/d257b794-9d6b-4123-b3b4-ee0abf3d9682/69fa52fb225f6.image.jpg?resize=300%2C155" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />The town's annual community survey is open through May 21, asking residents to rate livability across 10 categories including economy, housing, safety, and recreation. Last year's results showed Telluride scored well on safety, outdoor recreation and community engagement, but poorly on affordability - only 1% rated cost of living as good and just 9% said affordable housing was available.]]></description>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/25/d257b794-9d6b-4123-b3b4-ee0abf3d9682/69fa52fb225f6.image.jpg?resize=300%2C155" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />The town's annual community survey is open through May 21, asking residents to rate Telluride's livability across 10 categories including economy, safety, housing, and recreation. Last year's results showed high marks for trails, air quality, and community engagement, but only 1% rated cost of living as good and just 9% said affordable housing was available.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/25/d257b794-9d6b-4123-b3b4-ee0abf3d9682/69fa52fb225f6.image.jpg?resize=300%2C155" medium="image" />
       <category>Telluride Times</category>
       <category>community</category>
@@ -247,8 +161,8 @@ Meeting at SO Annex in Norwood · Limited agenda details available · May 11th e
       <title>Sacred shoes</title>
       <link>https://www.telluridenews.com/opinion/columnists/article_781f8bdc-69d7-4ec9-9b5a-90c35c968f18.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/opinion/columnists/article_781f8bdc-69d7-4ec9-9b5a-90c35c968f18.html</guid>
-      <pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bc/abc48601-95b9-4206-9f4b-a65102a0747c/69fa55d5a4936.image.jpg?resize=300%2C400" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Hoka running shoes went from being called "cartoon shoes" to becoming mainstream as the barefoot running trend faded out due to rocky terrain realities. The author reflects on throwing away old worn-out shoes, including duct-taped Hokas and green Van's basketball shoes that had been repaired multiple times with Shoe Goo.]]></description>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bc/abc48601-95b9-4206-9f4b-a65102a0747c/69fa55d5a4936.image.jpg?resize=300%2C400" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />When Hoka shoes first came out, they were dismissed as cartoon shoes with their big puffy soles, meant to counter the minimalist barefoot running trend promoted by "Born to Run." The author reflects on beloved worn-out shoes being thrown away during spring cleaning, including duct-taped Stinsons and green Vans that had seen basketball games in the Bahamas.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bc/abc48601-95b9-4206-9f4b-a65102a0747c/69fa55d5a4936.image.jpg?resize=300%2C400" medium="image" />
       <category>Telluride Times</category>
       <category>arts-culture</category>
@@ -257,11 +171,120 @@ Meeting at SO Annex in Norwood · Limited agenda details available · May 11th e
       <title>Boys’ lax blasts into postseason</title>
       <link>https://www.telluridenews.com/sports/article_10a16ae6-c102-4679-9922-ddab9bdfd4b2.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/sports/article_10a16ae6-c102-4679-9922-ddab9bdfd4b2.html</guid>
-      <pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfe83f7a-ec5a-4b87-824b-b7cf86e70644/69f9a893440e8.image.jpg?resize=300%2C200" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />The Telluride boys lacrosse team crushed Durango 16-2 on Senior Day to clinch the Mountain League championship and earn the #6 seed for state playoffs. The girls team beat Durango 12-11 in a tight rematch after losing to them earlier in the week, with senior Parker Shea scoring five goals. Both teams advanced to the state tournament with games scheduled for early May.]]></description>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfe83f7a-ec5a-4b87-824b-b7cf86e70644/69f9a893440e8.image.jpg?resize=300%2C200" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />The boys lacrosse team crushed Durango 16-2 on Senior Day to win the Mountain League championship and earned the #6 seed for state playoffs. The girls team beat Durango 12-11 in a close rematch after losing to them earlier in the week, with senior Parker Shea scoring five goals. Both teams have moved into state tournament play.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfe83f7a-ec5a-4b87-824b-b7cf86e70644/69f9a893440e8.image.jpg?resize=300%2C200" medium="image" />
       <category>Telluride Times</category>
       <category>education</category>
+    </item>
+    <item>
+      <title>Man to plead guilty in Colorado firebombing attack on pro-Israel demonstrators</title>
+      <link>https://www.telluridenews.com/news/state/article_931f4da9-96f2-578e-97a4-bdf03c024048.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_931f4da9-96f2-578e-97a4-bdf03c024048.html</guid>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg?resize=300%2C200" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />An Egyptian national who threw Molotov cocktails at pro-Israel demonstrators on Pearl Street Mall in Boulder plans to change his plea to guilty on state charges. The attack killed an 82-year-old woman and injured a dozen others, with the suspect telling investigators he planned it for a year. He faces murder charges in state court and federal hate crime charges, with prosecutors considering the death penalty.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg?resize=300%2C200" medium="image" />
+      <category>Telluride Times</category>
+      <category>public-safety</category>
+    </item>
+    <item>
+      <title>Telluride CrossFit opens new Lawson Hill gym</title>
+      <link>https://www.telluridenews.com/business/article_1d5aab25-10fb-4778-b2c1-3973af8a0d9e.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/business/article_1d5aab25-10fb-4778-b2c1-3973af8a0d9e.html</guid>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/36/7362e16d-547c-4e31-a280-7e922c23bc57/69f9037527be2.image.jpg?resize=300%2C225" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Telluride CrossFit opened their new Lawson Hill location after construction that started last fall and finished in February, with the gym moving in during March. The new space offers more programming flexibility with similar equipment plus additions like wall-mounted rigs, and owner Robin Jones reports membership around 140 people with new offerings including kids' classes and yoga starting in May.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/36/7362e16d-547c-4e31-a280-7e922c23bc57/69f9037527be2.image.jpg?resize=300%2C225" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
+    </item>
+    <item>
+      <title>States across the wildfire-prone Western US are using AI for early detection</title>
+      <link>https://www.telluridenews.com/news/state/article_3d9717e8-6111-5f8d-b69b-3260bf6758a8.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_3d9717e8-6111-5f8d-b69b-3260bf6758a8.html</guid>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3c/c3c369ac-5496-5153-b4fc-3638934dc35a/69f899e7aa3db.image.jpg?resize=300%2C200" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Western states are rapidly expanding AI camera networks to spot wildfires early, with Arizona installing nearly 40 cameras and Colorado's Xcel Energy deploying 126. The technology detects fires about 45 minutes faster than 911 calls, particularly useful in remote areas where blazes might go unnoticed for hours.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3c/c3c369ac-5496-5153-b4fc-3638934dc35a/69f899e7aa3db.image.jpg?resize=300%2C200" medium="image" />
+      <category>Telluride Times</category>
+      <category>public-safety</category>
+    </item>
+    <item>
+      <title>Safe actions in work zones can save lives</title>
+      <link>https://www.telluridenews.com/opinion/columnists/article_0527f33c-d1be-4f91-9d6b-a570a138bf81.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/opinion/columnists/article_0527f33c-d1be-4f91-9d6b-a570a138bf81.html</guid>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/d1/9d1d4b74-6558-4cf1-9ef9-d0848f755a25/69f115f7721a2.image.jpg?resize=300%2C192" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />The Transportation Commissioner for District 8 is reminding drivers about work zone safety during National Work Zone Awareness Week in April. CDOT manages around 200 construction projects annually, with workers protected only by plastic cones from passing traffic. Key safety measures include slowing down in work zones, avoiding phone use, and following flaggers' directions, as fines double for speeding violations.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/d1/9d1d4b74-6558-4cf1-9ef9-d0848f755a25/69f115f7721a2.image.jpg?resize=300%2C192" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
+    </item>
+    <item>
+      <title>The heart of Telluride</title>
+      <link>https://www.telluridenews.com/arts_and_entertainment/article_917b2db3-f982-472d-9198-8dc744073d8e.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/arts_and_entertainment/article_917b2db3-f982-472d-9198-8dc744073d8e.html</guid>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfed5db9-e7f7-49f6-8189-3174c244d773/69f64afc5f9a1.image.jpg?resize=300%2C412" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Brandon Bermel organized a Valentine's Day street art installation at the Transfer Warehouse called the Heart of Telluride Project, working with Telluride Arts' new director Jessica Galbo. Six local artists created heart-themed pieces for the building's exterior, with community support from Ah Haa School and local businesses providing materials and workspace.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfed5db9-e7f7-49f6-8189-3174c244d773/69f64afc5f9a1.image.jpg?resize=300%2C412" medium="image" />
+      <category>Telluride Times</category>
+      <category>land-use</category>
+    </item>
+    <item>
+      <title>Rolling in the oats</title>
+      <link>https://www.telluridenews.com/opinion/columnists/article_8c228500-61a7-4cf7-b21d-383052bad877.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/opinion/columnists/article_8c228500-61a7-4cf7-b21d-383052bad877.html</guid>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/be/ebeb8396-3450-4d67-af94-c17626457ff1/69f13862191f6.image.jpg?resize=300%2C400" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />A social media influencer has built a following around oat-based recipes, highlighting the ongoing debate between anti-grain advocates and those favoring Mediterranean-style diets that include grains. The writer shares their own history with oats, from surviving on oatmeal during a broke summer in D.C. in 1978 to making fried oat cakes on a Telluride woodstove, noting that while oats are nutritious and technically gluten-free, they can spike blood sugar and contain compounds that may affect some people.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/be/ebeb8396-3450-4d67-af94-c17626457ff1/69f13862191f6.image.jpg?resize=300%2C400" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
+    </item>
+    <item>
+      <title>Jonathan Fouser is Telluride Mountain School’s new head of school</title>
+      <link>https://www.telluridenews.com/news/article_77d21881-a251-4576-a200-d746761986e3.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_77d21881-a251-4576-a200-d746761986e3.html</guid>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/67/86782a60-11e8-4c7e-8528-ed092884ae87/69f5ab43664e2.image.jpg?resize=300%2C300" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Jonathan Fouser has been selected as Telluride Mountain School's new head of school after a competitive search that started with 42 candidates. Fouser currently oversees multiple campuses for Brewster American Schools in Spain and has experience founding new schools, which appealed to the board looking for someone to take the mountain school to the next level.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/67/86782a60-11e8-4c7e-8528-ed092884ae87/69f5ab43664e2.image.jpg?resize=300%2C300" medium="image" />
+      <category>Telluride Times</category>
+      <category>education</category>
+    </item>
+    <item>
+      <title>Town council suspends waitlist policies</title>
+      <link>https://www.telluridenews.com/news/article_766aee5a-65e5-4d4e-af87-0d75148b5bba.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_766aee5a-65e5-4d4e-af87-0d75148b5bba.html</guid>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/be/4be5885b-5c31-47e0-a343-371f832e5f5f/69f64629dcef0.image.jpg?resize=300%2C184" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Town council temporarily suspended its waitlist policies for deed-restricted rentals through July 31 to address high vacancy rates. The current system has about 220 people on the waitlist but 39 vacant units (18% vacancy rate), well above the 8% target.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/be/4be5885b-5c31-47e0-a343-371f832e5f5f/69f64629dcef0.image.jpg?resize=300%2C184" medium="image" />
+      <category>Telluride Times</category>
+      <category>housing</category>
+    </item>
+    <item>
+      <title>Sibling stories</title>
+      <link>https://www.telluridenews.com/opinion/columnists/article_b13bebfd-ba8d-4e2a-8bbe-e534628b63ec.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/opinion/columnists/article_b13bebfd-ba8d-4e2a-8bbe-e534628b63ec.html</guid>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/44/244939cc-69e1-4024-ae0f-a26ac2a38c3c/69f134d9097db.image.jpg?resize=300%2C400" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />A local bartender at the Vaudeville once worked a shift with his baby in a carrier when a customer warned him that siblings hate each other. That sparked his determination to raise kids who'd be best friends, which mostly worked out through equal treatment, room-sharing, and encouraging fun activities together.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/44/244939cc-69e1-4024-ae0f-a26ac2a38c3c/69f134d9097db.image.jpg?resize=300%2C400" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
+    </item>
+    <item>
+      <title>Paul Wisor resigns as MV Town Manager</title>
+      <link>https://www.telluridenews.com/news/article_2c1cc16d-5e4a-4543-86bd-1faadf9f7028.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_2c1cc16d-5e4a-4543-86bd-1faadf9f7028.html</guid>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/86/38610eb6-050c-4a1d-963e-dd31f000024c/69f4eedeb0d89.image.webp?resize=300%2C450" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Paul Wisor resigned as Mountain Village Town Manager after participating in an investigation related to the mayor's earlier resignation. Wisor had helped former officials Prohaska and Fee with their controversial offer to purchase Telluride Ski Resort, including providing investor contacts and drafting non-disclosure agreements. He's also been named as a defendant in Telski's lawsuit over the matter.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/86/38610eb6-050c-4a1d-963e-dd31f000024c/69f4eedeb0d89.image.webp?resize=300%2C450" medium="image" />
+      <category>Telluride Times</category>
+      <category>arts-culture</category>
+    </item>
+    <item>
+      <title>Newscast 5-6-26</title>
+      <link>https://koto.org/news/newscast-5-6-26/</link>
+      <guid isPermaLink="false">https://koto.org/news/newscast-5-6-26/</guid>
+      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Mountain Village Addresses Wildfire with Forest Management; Cat Movie Fisher with Risho Unda; Telluride Yoga Festival Brings Longevity and Service]]></description>
+      <category>KOTO Community Radio</category>
+      <category>public-safety</category>
     </item>
     <item>
       <title>New Motor Vehicle Office Availability in Egnar! May 13 at 9 am - 3 pm</title>
@@ -282,86 +305,6 @@ Meeting at SO Annex in Norwood · Limited agenda details available · May 11th e
       <category>recreation</category>
     </item>
     <item>
-      <title>Man to plead guilty in Colorado firebombing attack on pro-Israel demonstrators</title>
-      <link>https://www.telluridenews.com/news/state/article_931f4da9-96f2-578e-97a4-bdf03c024048.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_931f4da9-96f2-578e-97a4-bdf03c024048.html</guid>
-      <pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg?resize=300%2C200" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />A man accused of throwing Molotov cocktails at pro-Israel demonstrators on Boulder's Pearl Street Mall plans to plead guilty to state charges including murder after an 82-year-old victim died from injuries. The Egyptian national had been living in the U.S. illegally and faces dozens of charges for the attack that injured 13 people.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg?resize=300%2C200" medium="image" />
-      <category>Telluride Times</category>
-      <category>public-safety</category>
-    </item>
-    <item>
-      <title>Telluride CrossFit opens new Lawson Hill gym</title>
-      <link>https://www.telluridenews.com/business/article_1d5aab25-10fb-4778-b2c1-3973af8a0d9e.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/business/article_1d5aab25-10fb-4778-b2c1-3973af8a0d9e.html</guid>
-      <pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/36/7362e16d-547c-4e31-a280-7e922c23bc57/69f9037527be2.image.jpg?resize=300%2C225" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Telluride CrossFit moved to a new Lawson Hill location that opened in March, featuring more space and better layout than the original gym. Owner Robin Jones added new equipment and expanded offerings to include kids' classes and yoga, with membership around 140 people.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/36/7362e16d-547c-4e31-a280-7e922c23bc57/69f9037527be2.image.jpg?resize=300%2C225" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>States across the wildfire-prone Western US are using AI for early detection</title>
-      <link>https://www.telluridenews.com/news/state/article_3d9717e8-6111-5f8d-b69b-3260bf6758a8.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_3d9717e8-6111-5f8d-b69b-3260bf6758a8.html</guid>
-      <pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3c/c3c369ac-5496-5153-b4fc-3638934dc35a/69f899e7aa3db.image.jpg?resize=300%2C200" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Western states are deploying thousands of AI-enabled cameras to spot wildfires faster than 911 calls come in. Arizona, Colorado, and California are leading the charge, with utilities and fire agencies installing the systems mostly in remote, high-risk areas where fires might otherwise go unnoticed for hours.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3c/c3c369ac-5496-5153-b4fc-3638934dc35a/69f899e7aa3db.image.jpg?resize=300%2C200" medium="image" />
-      <category>Telluride Times</category>
-      <category>public-safety</category>
-    </item>
-    <item>
-      <title>Safe actions in work zones can save lives</title>
-      <link>https://www.telluridenews.com/opinion/columnists/article_0527f33c-d1be-4f91-9d6b-a570a138bf81.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/opinion/columnists/article_0527f33c-d1be-4f91-9d6b-a570a138bf81.html</guid>
-      <pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/d1/9d1d4b74-6558-4cf1-9ef9-d0848f755a25/69f115f7721a2.image.jpg?resize=300%2C192" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />CDOT manages around 200 construction projects annually across Colorado, with maintenance and repairs happening daily. The Transportation Commissioner for District 8 reminds drivers that work zone safety requires slowing down, avoiding phone use, and following flaggers' directions. Fines double in work zones, and the cone barriers are the only protection between vehicles and road crews.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/d1/9d1d4b74-6558-4cf1-9ef9-d0848f755a25/69f115f7721a2.image.jpg?resize=300%2C192" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Rolling in the oats</title>
-      <link>https://www.telluridenews.com/opinion/columnists/article_8c228500-61a7-4cf7-b21d-383052bad877.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/opinion/columnists/article_8c228500-61a7-4cf7-b21d-383052bad877.html</guid>
-      <pubDate>Sun, 03 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/be/ebeb8396-3450-4d67-af94-c17626457ff1/69f13862191f6.image.jpg?resize=300%2C400" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />A social media personality is promoting oats in various forms, highlighting their nutritional benefits amid ongoing debates between anti-grain and pro-grain diet camps. The writer reflects on personal experiences with oats, from surviving on oatmeal during broke times in DC to enjoying various oat dishes in early Telluride.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/be/ebeb8396-3450-4d67-af94-c17626457ff1/69f13862191f6.image.jpg?resize=300%2C400" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Jonathan Fouser is Telluride Mountain School’s new head of school</title>
-      <link>https://www.telluridenews.com/news/article_77d21881-a251-4576-a200-d746761986e3.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/article_77d21881-a251-4576-a200-d746761986e3.html</guid>
-      <pubDate>Sun, 03 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/67/86782a60-11e8-4c7e-8528-ed092884ae87/69f5ab43664e2.image.jpg?resize=300%2C300" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Jonathan Fouser has been selected as Telluride Mountain School's new head of school after a competitive search that started with 42 candidates. Fouser currently oversees multiple campuses for Brewster American Schools in Spain and has experience founding new schools, teaching English, and outdoor instruction. He's familiar with Telluride from climbing in the area and was drawn to the school's experiential education approach.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/67/86782a60-11e8-4c7e-8528-ed092884ae87/69f5ab43664e2.image.jpg?resize=300%2C300" medium="image" />
-      <category>Telluride Times</category>
-      <category>education</category>
-    </item>
-    <item>
-      <title>Town council suspends waitlist policies</title>
-      <link>https://www.telluridenews.com/news/article_766aee5a-65e5-4d4e-af87-0d75148b5bba.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/article_766aee5a-65e5-4d4e-af87-0d75148b5bba.html</guid>
-      <pubDate>Sat, 02 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/be/4be5885b-5c31-47e0-a343-371f832e5f5f/69f64629dcef0.image.jpg?resize=300%2C184" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Town council temporarily suspended its deed-restricted rental waitlist policies through July after vacancy rates hit 18% - nearly double the 8% target. The current system combines waitlists for all four rental properties but has struggled with outdated applicant information and affordability issues at pricier units like Voodoo and Sunnyside.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/be/4be5885b-5c31-47e0-a343-371f832e5f5f/69f64629dcef0.image.jpg?resize=300%2C184" medium="image" />
-      <category>Telluride Times</category>
-      <category>housing</category>
-    </item>
-    <item>
-      <title>Sibling stories</title>
-      <link>https://www.telluridenews.com/opinion/columnists/article_b13bebfd-ba8d-4e2a-8bbe-e534628b63ec.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/opinion/columnists/article_b13bebfd-ba8d-4e2a-8bbe-e534628b63ec.html</guid>
-      <pubDate>Sat, 02 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/44/244939cc-69e1-4024-ae0f-a26ac2a38c3c/69f134d9097db.image.jpg?resize=300%2C400" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />A local dad working a bartending shift with his baby got unsolicited advice from a customer warning that multiple kids would hate each other, which prompted him to vow his future children would be best friends. Years later, the parents share tips that worked for them: giving both kids the same experiences regardless of gender, having them share a bedroom when possible, and encouraging fun activities together.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/44/244939cc-69e1-4024-ae0f-a26ac2a38c3c/69f134d9097db.image.jpg?resize=300%2C400" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
       <title>Newscast 5-1-26</title>
       <link>https://koto.org/news/newscast-5-1-26/</link>
       <guid isPermaLink="false">https://koto.org/news/newscast-5-1-26/</guid>
@@ -369,16 +312,6 @@ Meeting at SO Annex in Norwood · Limited agenda details available · May 11th e
       <description><![CDATA[The city of Durango has proclaimed April 19, 2026 as Ross Anderson Day, marking twenty years since the Native American speed skier set a U.S. speed-skiing record of 154.06 miles per hour. We’ll also hear from a researcher working in Bears Ears who is turning to crowdfunding to continue his work after losing a federal grant. Then, we head to Utah, w]]></description>
       <category>KOTO Community Radio</category>
       <category>land-use</category>
-    </item>
-    <item>
-      <title>Paul Wisor resigns as MV Town Manager</title>
-      <link>https://www.telluridenews.com/news/article_2c1cc16d-5e4a-4543-86bd-1faadf9f7028.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/article_2c1cc16d-5e4a-4543-86bd-1faadf9f7028.html</guid>
-      <pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/86/38610eb6-050c-4a1d-963e-dd31f000024c/69f4eedeb0d89.image.webp?resize=300%2C450" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />Paul Wisor resigned as Mountain Village Town Manager after participating in an investigation related to the mayor's earlier resignation. His involvement included providing investor names to former officials who made a controversial purchase offer to Telluride Ski Resort, which led to lawsuits and resignations.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/86/38610eb6-050c-4a1d-963e-dd31f000024c/69f4eedeb0d89.image.webp?resize=300%2C450" medium="image" />
-      <category>Telluride Times</category>
-      <category>arts-culture</category>
     </item>
     <item>
       <title>County Planning Commission 5/14 Meeting in TELLURIDE</title>
