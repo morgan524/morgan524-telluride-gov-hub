@@ -3994,6 +3994,41 @@ window.handleQuickReaction = async function(btn, docId, key) {
 
 // renderMeetings() removed — all rendering handled by renderMeetingsWithTopic()
 
+// ── Service-area geographic filter for Events tab ──
+// Keeps events in San Miguel County, Ridgway, or Ophir.
+// Events with no location pass through (assumed local).
+function isWithinServiceArea(item) {
+  const locRaw = (item.location || '').trim();
+  if (!locRaw) return true; // no location = assume local, keep it
+
+  const loc = locRaw.toLowerCase();
+
+  // Always keep if location mentions a known local area
+  const LOCAL_TERMS = [
+    'telluride', 'mountain village', 'san miguel', 'ophir', 'ridgway',
+    'norwood', 'placerville', 'sawpit', 'rico', 'ilium', 'ames',
+    'lawson hill', 'sunnyside', 'society turn', 'ouray'
+  ];
+  if (LOCAL_TERMS.some(t => loc.includes(t))) return true;
+
+  // Exclude "Colorado" alone (statewide events)
+  if (/^colorado[,.]?\s*(usa|co\.?)?$/i.test(locRaw)) return false;
+
+  // Exclude known out-of-area cities/regions
+  const OUT_OF_AREA = [
+    'crested butte', 'gunnison', 'denver', 'durango', 'colorado springs',
+    'grand junction', 'pueblo', 'fort collins', 'boulder', 'aurora',
+    'montrose', 'steamboat', 'vail', 'aspen', 'breckenridge', 'snowmass',
+    'silverton', 'cortez', 'mancos', 'moab', 'fruita', 'naturita', 'nucla',
+    'dolores, co', 'delta, co', 'statewide', 'across colorado',
+    'throughout colorado'
+  ];
+  if (OUT_OF_AREA.some(t => loc.includes(t))) return false;
+
+  // Location exists but isn't recognized — keep (conservative)
+  return true;
+}
+
 function renderNews(items, filter) {
   const container = document.getElementById('news-content');
   let filtered = items;
@@ -4016,6 +4051,9 @@ function renderNews(items, filter) {
   const todayStart = new Date();
   todayStart.setHours(0, 0, 0, 0);
   filtered = filtered.filter(i => !i.pubDate || i.pubDate >= todayStart);
+
+  // Exclude events outside San Miguel County, Ridgway, or Ophir
+  filtered = filtered.filter(isWithinServiceArea);
 
   // Limit to next 3 weeks for future events
   const eventCutoff = new Date();
