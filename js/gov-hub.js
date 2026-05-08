@@ -1907,7 +1907,26 @@ async function fetchAllNews() {
   }
 
   // Combine all sources — Wilkinson library events take priority over KOTO/TT duplicates
-  const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...tjcResults, ...tfResults, ...ecoResults, ...sohResults, ...elksResults, ...orayResults, ...hardcodedCommunity];
+  // Source priority for dedup: ORIGINAL sources first (TJC, TF, EcoAction,
+  // SOH, Elks, Wilkinson, Ouray-Ridgway, gov RSS, hardcoded community,
+  // GitHub-issue community), then AGGREGATORS (Telluride Times, KOTO) last.
+  // The dedup below is first-seen-wins, so originals will keep their cards
+  // and aggregator versions of the same event drop out.
+  const all = [
+    ...feedResults.flat(),    // gov RSS — Town of Telluride, San Miguel County
+    ...wilkinsonResults,      // Wilkinson Public Library
+    ...tjcResults,            // Telluride Jewish Community
+    ...tfResults,             // Telluride Foundation
+    ...ecoResults,            // EcoAction Partners
+    ...sohResults,            // Sheridan Opera House
+    ...elksResults,           // Telluride Elks Lodge
+    ...orayResults,           // Ouray Ridgway Calendar (Localist)
+    ...communityResults,      // GitHub-issue community submissions
+    ...hardcodedCommunity,    // Hardcoded COMMUNITY_EVENTS
+    // Aggregators last — their copies drop out if an original has the event:
+    ...kotoResults,           // KOTO Community Calendar
+    ...ttimesResults          // Telluride Times calendar
+  ];
 
   // Normalize pubDate to a real Date object on every item.
   // Bot-populated arrays (KOTO_COMMUNITY_EVENTS, WILKINSON_EVENTS, etc.) store
@@ -1922,15 +1941,31 @@ async function fetchAllNews() {
     }
   }
 
-  // Deduplicate: if the same event title appears on the same date from multiple sources,
-  // keep the Wilkinson version (listed first) and drop KOTO/TT duplicates
+  // Deduplicate across sources. The merge order above puts originals first,
+  // then aggregators (TT, KOTO) last — so a duplicate from an aggregator
+  // gets dropped here in favor of the original.
+  //
+  // Two-key match per event makes this resilient to title length variation
+  // (e.g. KOTO posts "Free Legal Clinic – Clínica Jurídica Gratuita" while
+  // Wilkinson posts just "Free Legal Clinic"). For each event we register
+  // BOTH a 12-char normalized prefix and the first-3-words bag, paired with
+  // the date. If either key is already seen for this date, the event is a
+  // duplicate.
+  function buildKeys(item) {
+    const dateKey = item.pubDate ? item.pubDate.toISOString().slice(0, 10) : '';
+    const norm = (item.title || '').toLowerCase()
+      .replace(/[–—]/g, ' ')   // en/em dash → space
+      .replace(/[^a-z0-9 ]+/g, ' ')      // strip punctuation/diacritics-stripped
+      .replace(/\s+/g, ' ').trim();
+    const prefixKey = norm.replace(/ /g, '').slice(0, 12) + '|' + dateKey;
+    const wordsKey = norm.split(' ').filter(w => w && !/^(the|a|an|of|at|in|on|for|with|to)$/.test(w)).slice(0, 3).join('-') + '|' + dateKey;
+    return [prefixKey, wordsKey];
+  }
   const seen = new Set();
   return all.filter(item => {
-    const normTitle = (item.title || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 20);
-    const dateKey = item.pubDate ? item.pubDate.toISOString().slice(0, 10) : '';
-    const key = normTitle + '|' + dateKey;
-    if (seen.has(key)) return false;
-    seen.add(key);
+    const keys = buildKeys(item);
+    if (keys.some(k => seen.has(k))) return false;
+    keys.forEach(k => seen.add(k));
     return true;
   });
 }
@@ -2839,7 +2874,7 @@ function renderNews(items, filter) {
 
       html += `
         <div class="card" data-source="${item.source}">
-          ${renderLogo(item.source)}
+          ${item.source === 'koto' ? '' : renderLogo(item.source)}
           <div class="card-body">
             <div class="event-card-main">
               <div class="event-card-content">
