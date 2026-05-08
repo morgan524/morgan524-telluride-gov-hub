@@ -2973,22 +2973,39 @@ document.querySelectorAll('.chip[data-tab-target="meetings"]').forEach(chip => {
   });
 });
 
-// News filter chips
+// Events tab filter chips (location-based: by town)
 document.querySelectorAll('.chip[data-tab-target="news"]').forEach(chip => {
   chip.addEventListener('click', () => {
     const filter = chip.dataset.filter;
     document.querySelectorAll('.chip[data-tab-target="news"]').forEach(c => {
       c.className = 'chip';
     });
-    if (filter === 'all') chip.classList.add('active-all');
-    else if (filter === 'telluride') chip.classList.add('active-telluride');
-    else if (filter === 'county') chip.classList.add('active-county');
-    else if (filter === 'ttimes') chip.classList.add('active-ttimes');
-    // Store which news source filter is active for topic filtering
+    chip.classList.add(filter === 'all' ? 'active-all' : 'active-town');
+    // Store which town filter is active. The value is one of:
+    // 'all', 'town-telluride', 'town-mv', 'town-norwood', 'town-ridgway',
+    // 'town-ouray', 'town-ophir', 'town-placerville'.
     window._currentNewsFilter = filter;
     renderNewsWithTopic();
   });
 });
+
+// Detect which town an event "belongs to" from its location/title text.
+// Returns one of the chip data-filter values, or null when nothing matches.
+function detectEventTown(item) {
+  const text = ((item.location || '') + ' ' + (item.title || '')).toLowerCase();
+  if (!text.trim()) return null;
+  // Order matters — check more specific markers (Mountain Village) before
+  // the parent town name (Telluride) so "Mountain Village" doesn't fall
+  // through to a Telluride match via the substring "telluride".
+  if (/\b(mountain village|mtn\.? village|mv town|tmvoa)\b/.test(text)) return 'town-mv';
+  if (/\bnorwood\b/.test(text)) return 'town-norwood';
+  if (/\bridgway\b/.test(text)) return 'town-ridgway';
+  if (/\bouray\b/.test(text)) return 'town-ouray';
+  if (/\b(ophir|ilium|ames)\b/.test(text)) return 'town-ophir';
+  if (/\b(placerville|sawpit|down valley)\b/.test(text)) return 'town-placerville';
+  if (/\b(telluride|society turn|lawson hill|sunnyside|wilkinson|sheridan opera|palm theatre|transfer warehouse|ah haa|telluride elks|telluride foundation|tssc|pinhead|telluride innovation|telluride mountain school)\b/.test(text)) return 'town-telluride';
+  return null;
+}
 
 // Local News filter chips (topic-based)
 let currentLocalNewsFilter = 'all';
@@ -6063,10 +6080,10 @@ function renderNewsWithTopic() {
   const container = document.getElementById('news-content');
   let filtered = [...allNews];
 
-  // Apply source filter
+  // Apply town/location filter (chip values are 'all' or 'town-<slug>').
   const currentNewsFilter = window._currentNewsFilter || 'all';
-  if (currentNewsFilter && currentNewsFilter !== 'all') {
-    filtered = filtered.filter(i => i.source === currentNewsFilter);
+  if (currentNewsFilter && currentNewsFilter !== 'all' && currentNewsFilter.indexOf('town-') === 0) {
+    filtered = filtered.filter(i => detectEventTown(i) === currentNewsFilter);
   }
 
   // Apply topic filter
