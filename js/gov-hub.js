@@ -1649,6 +1649,175 @@ function fetchTellurideFoundationEvents() {
   return [];
 }
 
+// ── Fetch EcoAction Partners Events ──
+// ecoactionpartners.org is a Squarespace site exposing /events?format=json
+// (same pattern as Telluride Jewish Community).
+async function fetchEcoActionEvents() {
+  const ECO_URL = 'https://ecoactionpartners.org/events?format=json';
+  try {
+    let json;
+    try {
+      const resp = await fetch(CODETABS_PROXY + encodeURIComponent(ECO_URL));
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      json = await resp.json();
+    } catch (e1) {
+      const resp2 = await fetch(ALLORIGINS_PROXY + encodeURIComponent(ECO_URL));
+      if (!resp2.ok) throw new Error('Fallback HTTP ' + resp2.status);
+      json = await resp2.json();
+    }
+    const upcoming = Array.isArray(json && json.upcoming) ? json.upcoming : [];
+    return upcoming.map(ev => {
+      const loc = ev.location || {};
+      const locParts = [loc.addressTitle, loc.addressLine1, loc.addressLine2].filter(Boolean);
+      const locStr = locParts.length ? locParts.join(', ') : 'Telluride, CO';
+      return {
+        title: (ev.title || '').trim(),
+        link: ev.fullUrl ? 'https://ecoactionpartners.org' + ev.fullUrl : 'https://ecoactionpartners.org/events',
+        description: (ev.excerpt || '').trim(),
+        summary: (ev.excerpt || '').trim(),
+        pubDate: ev.startDate ? new Date(ev.startDate) : null,
+        source: 'eco',
+        sourceLabel: 'EcoAction Partners',
+        category: 'Community Event',
+        location: locStr,
+        imageUrl: ev.assetUrl || ''
+      };
+    }).filter(it => it.title && it.pubDate);
+  } catch (err) {
+    console.warn('[GovHub] EcoAction events fetch failed:', err.message);
+    return [];
+  }
+}
+
+// ── Fetch Sheridan Opera House Events ──
+// sheridanoperahouse.com uses Modern Events Calendar (MEC) WordPress plugin,
+// which doesn't expose dates via WP REST cleanly. Easier path: scrape the
+// /events/ HTML page directly — MEC renders each event with stable structural
+// classes (mec-event-article, mec-event-title, mec-start-date-label).
+//
+// Excludes events whose title contains "private" (per Morgan's request).
+async function fetchSheridanOperaHouseEvents() {
+  const SOH_URL = 'https://sheridanoperahouse.com/events/';
+  try {
+    let html;
+    try {
+      const resp = await fetch(CODETABS_PROXY + encodeURIComponent(SOH_URL));
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      html = await resp.text();
+    } catch (e1) {
+      const resp2 = await fetch(ALLORIGINS_PROXY + encodeURIComponent(SOH_URL));
+      if (!resp2.ok) throw new Error('Fallback HTTP ' + resp2.status);
+      html = await resp2.text();
+    }
+    // Each event is an <article class="mec-event-article ...">.
+    // Split the page on the article opening tag, then take everything between
+    // splits — captures all articles regardless of terminator, including the last.
+    const articles = html.split(/(?=<article[^>]*class="[^"]*mec-event-article[^"]*")/)
+      .filter(s => /^<article[^>]*class="[^"]*mec-event-article[^"]*"/.test(s));
+    const out = [];
+    for (const block of articles) {
+      // Title + link
+      const tm = block.match(/<h4[^>]*class="[^"]*mec-event-title[^"]*"[^>]*>\s*<a[^>]+href="([^"]+)"[^>]*>([^<]+)<\/a>/);
+      if (!tm) continue;
+      const link = tm[1];
+      const title = tm[2].replace(/&#?\w+;/g, m => ({'&amp;':'&','&#8211;':'–','&#8212;':'—','&quot;':'"','&#039;':"'"}[m] || m)).trim();
+      // Skip private events
+      if (/\bprivate\b/i.test(title)) continue;
+      // Date — "May 21 - 25 2026" or "May 21 2026"
+      const dm = block.match(/<span[^>]*class="[^"]*mec-start-date-label[^"]*"[^>]*>([^<]+)<\/span>/);
+      const dateStr = dm ? dm[1].trim() : '';
+      // Parse: extract month, day, year (use first day if a range like "May 21 - 25 2026")
+      const dpm = dateStr.match(/([A-Za-z]+)\s+(\d{1,2})(?:\s*-\s*\d{1,2})?\s+(\d{4})/);
+      let pubDate = null;
+      if (dpm) {
+        pubDate = new Date(`${dpm[1]} ${dpm[2]}, ${dpm[3]} 19:00:00`); // 7 PM default
+        if (isNaN(pubDate.getTime())) pubDate = null;
+      }
+      // Image
+      const im = block.match(/<img[^>]+src="([^"]+)"[^>]*class="attachment-thumbnail/);
+      out.push({
+        title: title,
+        link: link,
+        description: '',
+        summary: '',
+        pubDate: pubDate,
+        source: 'soh',
+        sourceLabel: 'Sheridan Opera House',
+        category: 'Community Event',
+        location: 'Sheridan Opera House, Telluride, CO',
+        imageUrl: im ? im[1] : ''
+      });
+    }
+    return out.filter(it => it.title && it.pubDate);
+  } catch (err) {
+    console.warn('[GovHub] Sheridan Opera House events fetch failed:', err.message);
+    return [];
+  }
+}
+
+// ── Fetch Telluride Elks Lodge Events ──
+// tellurideelks.org/Events runs on ClubRunner-style CMS — no public REST.
+// Each event is rendered as <div class="EventAndSpeakersItem"> with the
+// start date in the calendar URL (?Start=YYYY-MM-DD), event name in
+// <a> inside <div class="EAS-Name">, image in <div class="EAS-Image">.
+async function fetchElksEvents() {
+  const ELKS_URL = 'https://tellurideelks.org/Events';
+  try {
+    let html;
+    try {
+      const resp = await fetch(CODETABS_PROXY + encodeURIComponent(ELKS_URL));
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      html = await resp.text();
+    } catch (e1) {
+      const resp2 = await fetch(ALLORIGINS_PROXY + encodeURIComponent(ELKS_URL));
+      if (!resp2.ok) throw new Error('Fallback HTTP ' + resp2.status);
+      html = await resp2.text();
+    }
+    // Walk each EventAndSpeakersItem block.
+    const re = /<div class="EventAndSpeakersItem">([\s\S]*?)(?=<div class="EventAndSpeakersItem">|<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*$)/g;
+    const items = html.match(re) || [];
+    const out = [];
+    for (const block of items) {
+      const sm = block.match(/Start=(\d{4}-\d{2}-\d{2})/);
+      if (!sm) continue;
+      const startDate = new Date(`${sm[1]}T19:00:00`); // 7 PM default
+      if (isNaN(startDate.getTime())) continue;
+      // Title — first <a> inside <div class="EAS-Name">, OR next <a> after the date block
+      let title = '';
+      const tm = block.match(/<div class="EAS-Name">[\s\S]*?<a[^>]*>([^<]+)<\/a>/);
+      if (tm) title = tm[1].trim();
+      else {
+        // Fallback: title is sometimes the second <a> in the block
+        const allLinks = [...block.matchAll(/<a[^>]+href="(CalendarItem\/Details[^"]+)"[^>]*>([^<]+)<\/a>/g)];
+        const named = allLinks.find(m => m[2].trim() && !/^\d/.test(m[2].trim()));
+        if (named) title = named[2].trim();
+      }
+      if (!title) continue;
+      // Image
+      const im = block.match(/<img[^>]+(?:src|data-src)="([^"]+)"/);
+      // Detail link
+      const detail = block.match(/href="(CalendarItem\/Details\?[^"]+)"/);
+      const link = detail ? 'https://tellurideelks.org/' + detail[1].replace(/&amp;/g, '&') : 'https://tellurideelks.org/Events';
+      out.push({
+        title: title,
+        link: link,
+        description: '',
+        summary: '',
+        pubDate: startDate,
+        source: 'elks',
+        sourceLabel: 'Telluride Elks Lodge',
+        category: 'Community Event',
+        location: 'Telluride Elks Lodge #692, Telluride, CO',
+        imageUrl: im ? im[1] : ''
+      });
+    }
+    return out;
+  } catch (err) {
+    console.warn('[GovHub] Telluride Elks events fetch failed:', err.message);
+    return [];
+  }
+}
+
 async function fetchAllNews() {
   const feedResults = await Promise.all(NEWS_FEEDS.map(f => fetchNewsFeed(f)));
   const ttimesResults = await fetchTellurideTimesEvents();
@@ -1657,6 +1826,9 @@ async function fetchAllNews() {
   const communityResults = await fetchCommunityEvents();
   const tjcResults = await fetchTellurideJewishEvents();
   const tfResults = fetchTellurideFoundationEvents();
+  const ecoResults = await fetchEcoActionEvents();
+  const sohResults = await fetchSheridanOperaHouseEvents();
+  const elksResults = await fetchElksEvents();
 
   // Hardcoded COMMUNITY_EVENTS (from the data array above)
   const hardcodedCommunity = [];
@@ -1685,7 +1857,7 @@ async function fetchAllNews() {
   }
 
   // Combine all sources — Wilkinson library events take priority over KOTO/TT duplicates
-  const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...tjcResults, ...tfResults, ...hardcodedCommunity];
+  const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...tjcResults, ...tfResults, ...ecoResults, ...sohResults, ...elksResults, ...hardcodedCommunity];
 
   // Normalize pubDate to a real Date object on every item.
   // Bot-populated arrays (KOTO_COMMUNITY_EVENTS, WILKINSON_EVENTS, etc.) store
