@@ -1594,12 +1594,57 @@ async function fetchCommunityEvents() {
   }
 }
 
+// ── Fetch Telluride Jewish Community Events ──
+// Squarespace site at telluridejewishcommunity.com publishes a JSON event
+// feed at /events?format=json. Reads from TJC_EVENTS const first (future
+// bot-populated path); otherwise live-fetches via the existing CORS proxies.
+async function fetchTellurideJewishEvents() {
+  if (typeof TJC_EVENTS !== 'undefined' && Array.isArray(TJC_EVENTS) && TJC_EVENTS.length > 0) {
+    return TJC_EVENTS;
+  }
+  const TJC_URL = 'https://www.telluridejewishcommunity.com/events?format=json';
+  try {
+    let json;
+    try {
+      const resp = await fetch(CODETABS_PROXY + encodeURIComponent(TJC_URL));
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      json = await resp.json();
+    } catch (e1) {
+      const resp2 = await fetch(ALLORIGINS_PROXY + encodeURIComponent(TJC_URL));
+      if (!resp2.ok) throw new Error('Fallback HTTP ' + resp2.status);
+      json = await resp2.json();
+    }
+    const upcoming = Array.isArray(json && json.upcoming) ? json.upcoming : [];
+    return upcoming.map(ev => {
+      const loc = ev.location || {};
+      const locParts = [loc.addressTitle, loc.addressLine1, loc.addressLine2].filter(Boolean);
+      const locStr = locParts.length ? locParts.join(', ') : 'Telluride, CO';
+      return {
+        title: (ev.title || '').trim(),
+        link: ev.fullUrl ? 'https://www.telluridejewishcommunity.com' + ev.fullUrl : 'https://www.telluridejewishcommunity.com/events',
+        description: (ev.excerpt || '').trim(),
+        summary: (ev.excerpt || '').trim(),
+        pubDate: ev.startDate ? new Date(ev.startDate) : null,
+        source: 'tjc',
+        sourceLabel: 'Telluride Jewish Community',
+        category: 'Community Event',
+        location: locStr,
+        imageUrl: ev.assetUrl || ''
+      };
+    }).filter(it => it.title && it.pubDate);
+  } catch (err) {
+    console.warn('[GovHub] TJC events fetch failed:', err.message);
+    return [];
+  }
+}
+
 async function fetchAllNews() {
   const feedResults = await Promise.all(NEWS_FEEDS.map(f => fetchNewsFeed(f)));
   const ttimesResults = await fetchTellurideTimesEvents();
   const kotoResults = await fetchKOTONews();
   const wilkinsonResults = fetchWilkinsonEvents();
   const communityResults = await fetchCommunityEvents();
+  const tjcResults = await fetchTellurideJewishEvents();
 
   // Hardcoded COMMUNITY_EVENTS (from the data array above)
   const hardcodedCommunity = [];
@@ -1628,7 +1673,7 @@ async function fetchAllNews() {
   }
 
   // Combine all sources — Wilkinson library events take priority over KOTO/TT duplicates
-  const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...hardcodedCommunity];
+  const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...tjcResults, ...hardcodedCommunity];
 
   // Normalize pubDate to a real Date object on every item.
   // Bot-populated arrays (KOTO_COMMUNITY_EVENTS, WILKINSON_EVENTS, etc.) store
