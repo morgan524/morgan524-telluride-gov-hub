@@ -1306,7 +1306,7 @@ const DEEP_DIVE_PAGES = [
 ];
 
 const ENTITY_LOGOS = {
-  telluride: '<img src="/logo/TT Logo.png" alt="Town of Telluride" style="width:100%;height:100%;object-fit:contain;">',
+  telluride: '<img src="/logo/Telluride%20Town.png" alt="Town of Telluride" style="width:100%;height:100%;object-fit:contain;">',
   county: '<img src="/logo/San Miguel County.png" alt="San Miguel County" style="width:100%;height:100%;object-fit:contain;">',
   mv: '<img src="https://townofmountainvillage.com/site/themes/vwtheme/build/img/logos/town-of-mountain-village-logo.png" alt="Mountain Village" loading="lazy">',
   school: '<img src="https://files.smartsites.parentsquare.com/3403/design_img__vb3hiz.png" alt="Telluride School District" loading="lazy">',
@@ -1315,7 +1315,7 @@ const ENTITY_LOGOS = {
   med: '<img src="/logo/Medical.jpeg" alt="Telluride Medical Center" style="width:100%;height:100%;object-fit:contain;">',
   norwood: '<img src="/logo/Norwood.jpeg" alt="Town of Norwood" style="width:100%;height:100%;object-fit:contain;">',
   ophir: '<img src="/logo/Ophir.jpeg" alt="Town of Ophir" style="width:100%;height:100%;object-fit:contain;">',
-  ttimes: '<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="The Telluride Times" />',
+  ttimes: '<img src="/logo/TT%20Logo.png" alt="The Telluride Times" style="width:100%;height:100%;object-fit:contain;">',
   community: '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#2f564d,#22453e);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Community Event">📅</div>',
   localgroup: '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#6b5b3a,#8b7332);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Local Group">🤝</div>',
   koto: '<img src="/logo/koto-fm-logo.webp" alt="KOTO Community Radio" style="width:100%;height:100%;object-fit:contain;">',
