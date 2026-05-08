@@ -3522,7 +3522,7 @@
     .topic-infrastructure { background: linear-gradient(180deg, #f3f6f0 0%, #e3ead8 100%); }
     .event-photo { background: none; border: none; box-shadow: none; }
     .event-photo::after { display: none; }
-    .event-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block; }
+    .event-photo img { width: 100%; height: 100%; object-fit: contain; border-radius: 12px; display: block; padding: 4px; box-sizing: border-box; }
 
     /* ── Club Info Box (right-side panel on community event cards) ── */
     .club-info-box {

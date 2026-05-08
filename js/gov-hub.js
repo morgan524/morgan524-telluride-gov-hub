@@ -2192,6 +2192,11 @@ function getTownImage(item) {
   if (/ophir/.test(loc)) return TOWN_IMAGES.ophir;
   if (/ridgway/.test(loc)) return TOWN_IMAGES.ridgway;
   if (/norwood/.test(loc)) return TOWN_IMAGES.norwood;
+  // Nucla and Naturita are sister towns 1 mile apart but each has its own
+  // illustrated town badge. Match Naturita first since it's more specific.
+  if (/naturita/.test(loc)) return TOWN_IMAGES.naturita;
+  if (/nucla/.test(loc)) return TOWN_IMAGES.nucla;
+  if (/ouray/.test(loc)) return TOWN_IMAGES.ouray;
   if (/mountain village|mtn village|fire station/.test(loc)) return TOWN_IMAGES.mv;
   if (/telluride|wilkinson|library|main street|alibi|arts hq|downtown/.test(loc)) return TOWN_IMAGES.telluride;
   return TOWN_IMAGES.telluride; // default to Telluride
@@ -2796,9 +2801,13 @@ function renderNews(items, filter) {
     filtered = items.filter(i => i.source === filter);
   }
 
-  // Sort by date descending (most recent / upcoming first) for slicing
-  filtered.sort((a, b) => (b.pubDate || 0) - (a.pubDate || 0));
+  // Sort ASCENDING by date (earliest first) — that way slicing keeps the
+  // soonest events. Previous version sorted descending and sliced to 50,
+  // which dropped the earliest events when total count exceeded the cap.
+  filtered.sort((a, b) => (a.pubDate || 0) - (b.pubDate || 0));
 
+  // Title+date dedup (cross-source dedup happened earlier in fetchAllNews;
+  // this one catches same-source repeats).
   const seen = new Set();
   filtered = filtered.filter(i => {
     const key = i.title + '|' + (i.pubDate ? new Date(i.pubDate).toISOString().slice(0,10) : '');
@@ -2807,23 +2816,22 @@ function renderNews(items, filter) {
     return true;
   });
 
-  // Only show events from today onward
+  // Today onward — local midnight
   const todayStart = new Date();
   todayStart.setHours(0, 0, 0, 0);
   filtered = filtered.filter(i => !i.pubDate || i.pubDate >= todayStart);
 
-  // Exclude events outside San Miguel County, Ridgway, or Ophir
+  // Geographic filter — San Miguel County region only
   filtered = filtered.filter(isWithinServiceArea);
 
-  // Limit to next 30 days for future events
+  // Within next 30 days
   const eventCutoff = new Date();
   eventCutoff.setDate(eventCutoff.getDate() + 30);
   filtered = filtered.filter(i => !i.pubDate || i.pubDate <= eventCutoff);
 
-  filtered = filtered.slice(0, 50);
-
-  // Re-sort ascending for chronological date-group display
-  filtered.sort((a, b) => (a.pubDate || 0) - (b.pubDate || 0));
+  // Cap (now safe — list is already sorted earliest-first, so the cap
+  // affects far-future events not the soonest ones the user actually wants)
+  filtered = filtered.slice(0, 200);
 
   if (filtered.length === 0) {
     container.innerHTML = '<div class="empty-state">No recent news or alerts found.</div>';
@@ -3001,6 +3009,7 @@ function detectEventTown(item) {
   if (/\bnorwood\b/.test(text)) return 'town-norwood';
   if (/\bridgway\b/.test(text)) return 'town-ridgway';
   if (/\bouray\b/.test(text)) return 'town-ouray';
+  if (/\b(nucla|naturita)\b/.test(text)) return 'town-nucla';
   if (/\b(ophir|ilium|ames)\b/.test(text)) return 'town-ophir';
   if (/\b(placerville|sawpit|down valley)\b/.test(text)) return 'town-placerville';
   if (/\b(telluride|society turn|lawson hill|sunnyside|wilkinson|sheridan opera|palm theatre|transfer warehouse|ah haa|telluride elks|telluride foundation|tssc|pinhead|telluride innovation|telluride mountain school)\b/.test(text)) return 'town-telluride';

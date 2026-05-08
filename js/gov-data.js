@@ -1332,11 +1332,14 @@ const ENTITY_LOGOS = {
 
 const TOWN_IMAGES = {
   norwood: '/logo/Norwood.jpeg',
-  mv: '/logo/Mountain Village.png',
+  mv: '/logo/Mountain%20Village.png',
   telluride: '/logo/Telluride.png',
-  ridgway: '/logo/Ridgway.png',
+  ridgway: '/logo/Ridgway%20Town.png',
   ophir: '/logo/Ophir.jpeg',
-  placerville: '/logo/Placerville.png'
+  placerville: '/logo/Placerville.png',
+  ouray: '/logo/Ouray%20Town.png',
+  nucla: '/logo/Nucla%20Town.png',
+  naturita: '/logo/Naturita%20Town.png'
 };
 
 const SOURCE_SHORT_NAME = {
