@@ -4041,81 +4041,26 @@ const KOTO_COMMUNITY_EVENTS = [
 ];
 const WILKINSON_EVENTS = [
   {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/15223202?hs=a",
-    description: "10:30 AM – 11:30 AM",
-    pubDate: "2026-05-07T10:30:00.000Z",
+    title: "You & Me / Tu y Yo",
+    link: "https://telluridelibrary.libcal.com/event/15184967?hs=a",
+    description: "10:30 AM – 11:00 AM",
+    pubDate: "2026-05-08T10:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755554174.png"
   },
   {
-    title: "Pilates for All Bodies",
-    link: "https://telluridelibrary.libcal.com/event/16006638?hs=a",
-    description: "12:30 PM – 1:15 PM",
-    pubDate: "2026-05-07T12:30:00.000Z",
+    title: "Teen Ping Pong",
+    link: "https://telluridelibrary.libcal.com/event/15976839?hs=a",
+    description: "4:00 PM – 6:00 PM",
+    pubDate: "2026-05-08T16:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
-  },
-  {
-    title: "Littles On the Move",
-    link: "https://telluridelibrary.libcal.com/event/13960342?hs=a",
-    description: "3:30 PM – 4:30 PM",
-    pubDate: "2026-05-07T15:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
-  },
-  {
-    title: "The Spark Lab with Pinhead",
-    link: "https://telluridelibrary.libcal.com/event/15072261?hs=a",
-    description: "3:30 PM – 4:30 PM",
-    pubDate: "2026-05-07T15:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1761421911.png"
-  },
-  {
-    title: "French Happy Hour",
-    link: "https://telluridelibrary.libcal.com/event/15970651?hs=a",
-    description: "5:00 PM – 6:00 PM",
-    pubDate: "2026-05-07T17:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_06_15_22_25.jpg"
-  },
-  {
-    title: "Online Author Talk with Marjan Kamali",
-    link: "https://telluridelibrary.libcal.com/event/16560419?hs=a",
-    description: "5:00 PM – 6:00 PM",
-    pubDate: "2026-05-07T17:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_11_15_44_29.jpg"
-  },
-  {
-    title: "Adult Craft Night: Book Vases with Fresh Flowers",
-    link: "https://telluridelibrary.libcal.com/event/16600988?hs=a",
-    description: "5:30 PM – 7:00 PM",
-    pubDate: "2026-05-07T17:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_31_15_55_11.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1765562739.png"
   }
 ];
 const HUMANE_SOCIETY_ANIMALS = [
