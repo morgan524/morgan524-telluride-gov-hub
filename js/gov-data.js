@@ -1444,29 +1444,10 @@ const SKIP_PATTERNS = [
 const REACTION_MEETING_TYPES = /town council|board of county commissioners|bocc|smart|hospital district|harc|historic.*architectural/i;
 
 const LOCAL_GROUP_SCHEDULES = [
-  {
-    name: 'Rotary Club of Telluride',
-    title: 'Rotary Club Meeting',
-    rule: [1, 3],        // 1st & 3rd occurrence
-    dayOfWeek: 3,        // Wednesday (0=Sun)
-    time: '6:00 PM',
-    locations: ['Mountain Lodge, 457 Mountain Village Blvd (1st Wed)', 'Announced Telluride location (3rd Wed)'],
-    href: 'https://portal.clubrunner.ca/3291',
-    note: 'Social at 5:30 PM. No meetings in April. In-person & online options available.',
-    skipMonths: [4],     // No meetings in April
-    logo: '/logo/Telluride Rotary.png'
-  },
-  {
-    name: 'Telluride Elks Lodge 692',
-    title: 'Elks Lodge Regular Meeting',
-    rule: [2, 4],        // 2nd & 4th occurrence
-    dayOfWeek: 4,        // Thursday
-    time: '6:30 PM',
-    locations: ['472 W Pacific Ave, Telluride'],
-    href: 'https://tellurideelks.org',
-    note: 'Board/House Committee meets 2nd Thursdays at 5:30 PM.',
-    logo: '/logo/Elks.png'
-  }
+  // Rotary Club of Telluride and Telluride Elks Lodge 692 were removed
+  // from the Gov-Hub recurring-meetings list 2026-05-08. Both still
+  // appear as cards on the Local Orgs tab, and Elks events still flow
+  // through fetchElksEvents() into the Events tab.
 ];
 
 const TELLURIDE_FESTIVALS = [
