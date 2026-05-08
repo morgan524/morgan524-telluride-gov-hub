@@ -2688,6 +2688,17 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "The greatest heron",
+    source: "Telluride Times",
+    date: "May 8, 2026",
+    firstSeen: "2026-05-08",
+    newsTopic: "infrastructure",
+    copy: "Male great blue herons start building nests to attract females, who then help complete construction before laying 2-6 pale blue eggs that hatch after 29 days. The fluffy gray chicks grow quickly into North America's largest herons, standing up to 4.5 feet tall with 6+ foot wingspans.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_1deaa175-5c6a-4156-a2e5-b36e9b739931.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/e6/2e633678-6370-4512-92b5-0b1765a25217/69fa58a638daf.image.jpg?resize=300%2C400"
+  },
+  {
     title: "Man charged in Colorado firebomb attack on demonstrators to plead guilty to murder",
     source: "Telluride Times",
     date: "May 7, 2026",
@@ -3227,17 +3238,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Green grant gratitude",
-    source: "Telluride Times",
-    date: "April 28, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "community",
-    copy: "Dear Editor,",
-    claudeSummary: false,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_9797e67f-3ea2-46b0-8131-861e0a2b8291.html",
-    img: ""
-  },
-  {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
     source: "Town of Telluride",
     date: "April 24, 2026",
@@ -3510,17 +3510,6 @@ const COMMUNITY_EVENTS = [
 
 // ── Bot-managed event arrays (populated every 6h by content-refresh.js) ──
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Up-off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-05-08/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for s",
-    pubDate: "2026-05-08T10:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
-  },
   {
     title: "Placerville Community Yard Sale",
     link: "https://koto.org/event/placerville-community-yard-sale/",
