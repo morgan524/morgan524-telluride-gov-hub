@@ -4112,6 +4112,88 @@ function nthWeekday(year, month, dayOfWeek, nth) {
   return result;
 }
 
+// ── Local News tab: filter out state-wide and national stories ──
+// The TT and KOTO RSS feeds carry both local and state-level/national
+// stories. The Local News tab is meant to be hyperlocal, so this helper
+// filters out items that are clearly Colorado-state-wide or national in
+// nature.
+//
+// Decision order:
+//   1. URL path tags ("/news/state/", "/news/nation/", etc.) — strong
+//      explicit signal from the publisher. Filter immediately.
+//   2. Title contains a local geographic marker → KEEP.
+//   3. Title contains a non-local marker → FILTER.
+//   4. Default → KEEP. Better to show some non-local than hide local.
+//
+// We deliberately do NOT scan article summaries — they often contain
+// incidental mentions of "California", "statewide", etc. as comparison
+// data, which produces false positives on genuinely local stories.
+function isStatewideOrNationalNews(item) {
+  const title = (item.title || '').toLowerCase();
+  const href = (item.link || item.href || '').toLowerCase();
+  if (!title.trim()) return false;
+
+  // 1. Publisher URL path — strongest signal. TT explicitly tags
+  //    syndicated state/national/world content under these paths.
+  if (/\/news\/(state|nation|national|world|international)\//.test(href)) return true;
+
+  // 2. Local geographic markers — keep if any match the title.
+  const localPatterns = [
+    /\btelluride\b/, /\bmountain village\b/, /\bmtn village\b/,
+    /\bnorwood\b/, /\bophir\b/, /\bplacerville\b/, /\bridgway\b/,
+    /\brico\b/, /\bsan miguel\b/, /\bsheridan opera\b/, /\bwilkinson\b/,
+    /\btown park\b/, /\bkoto\b/, /\bmountainfilm\b/,
+    /\bbluegrass festival\b/, /\blone cone\b/, /\blawson hill\b/,
+    /\baldasoro\b/, /\bgondola\b/, /\bbear creek\b/, /\btrout lake\b/,
+    /\blizard head\b/, /\bsunshine peak\b/, /\bhighway 145\b/,
+    /\bhwy 145\b/, /\bwright's mesa\b/, /\bpalm theatre\b/,
+    /\btransfer warehouse\b/, /\bah haa\b/, /\btellski\b/,
+    /\btelluride ski\b/, /\bpinhead\b/, /\begnar\b/,
+    /\bsociety turn\b/, /\btri-county\b/, /\btri county\b/,
+    /\bdown valley\b/, /\bwest end\b/
+  ];
+  for (const r of localPatterns) {
+    if (r.test(title)) return false;
+  }
+
+  // 3. Non-local markers — filter if title matches.
+  const nonLocalPatterns = [
+    // Other Colorado cities
+    /\bdenver\b/, /\bboulder\b/, /\bcolorado springs\b/, /\baurora\b/,
+    /\bfort collins\b/, /\bpueblo\b/, /\bgrand junction\b/,
+    /\bdurango\b/, /\baspen\b/, /\bvail\b/,
+    // Colorado state-level phrasing
+    /colorado (state|lawmaker|legislat|supreme|attorney|governor|department|residents|demonstrators|man|woman|boy|girl|teen|firebomb|plan)/,
+    /\bin colorado\b/, /\bacross colorado\b/, /\bcolorado-wide\b/,
+    /\bstatewide\b/,
+    // Federal / national institutions
+    /\bcongress(ional)?\b/, /\bu\.s\. senate\b/, /\bu\.s\. house\b/,
+    /\bfederal court\b/, /\bsupreme court\b/, /\bscotus\b/,
+    /\bwhite house\b/, /\bpresident (biden|trump|harris|obama)\b/,
+    /\bpentagon\b/, /\bnasa\b/, /\bfbi\b/, /\bcia\b/,
+    /\bdepartment of justice\b/, /\bcapitol hill\b/,
+    // National political figures (when they appear in title alone)
+    /\btrump\b/, /\bbiden\b/, /\bharris\b/, /\bvance\b/,
+    /\blindsey vonn\b/,
+    // Other states / national framing
+    /\bcalifornia\b/, /\btexas\b/, /\bflorida\b/, /\bnew york\b/,
+    /\barizona\b/, /\bnew mexico\b/, /\butah\b/, /\bwyoming\b/,
+    /\bnebraska\b/, /\bkansas\b/, /\bphiladelphia\b/, /\bchicago\b/,
+    /\bnationwide\b/, /\bacross the country\b/, /\bunited states\b/,
+    /\bacross america\b/, /\bnation's\b/, /\btariffs?\b/, /\boverseas\b/,
+    /\beach state\b/, /\bacross the (west|western)\b/,
+    /\bcanada-us\b/, /\bantisemit/, /\bthe ap\b/,
+    // International
+    /\bisrael(i|is)?\b/, /\bpalestin/, /\bgaza\b/, /\bukraine\b/,
+    /\brussia\b/, /\bchina\b/, /\btaiwan\b/, /\biran\b/, /\bnorth korea\b/
+  ];
+  for (const r of nonLocalPatterns) {
+    if (r.test(title)) return true;
+  }
+
+  return false; // default: KEEP
+}
+
 function collectLocalNewsArticles() {
   // Gather all news articles from LAND_USE_ISSUES, GONDOLA_DATA, TELLURIDE_TIMES_ARTICLES, KOTO_NEWSCASTS, and KOTO_FEATURED_STORIES
   const articles = [];
@@ -4235,9 +4317,10 @@ function collectLocalNewsArticles() {
   }
 
 
-  // Deduplicate by title
+  // Filter out state-wide / national stories, then deduplicate by title.
   const seen = new Set();
   return articles.filter(a => {
+    if (isStatewideOrNationalNews(a)) return false;
     const key = (a.title || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 40);
     if (seen.has(key)) return false;
     seen.add(key);
