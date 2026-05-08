@@ -2699,6 +2699,28 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg?resize=300%2C200"
   },
   {
+    title: "Telluride Town Council considers amendments to emergency fire restrictions",
+    source: "Telluride Times",
+    date: "May 7, 2026",
+    firstSeen: "2026-05-08",
+    newsTopic: "public-safety",
+    copy: "Town Council is looking at changing fire ban procedures to let the town manager declare restrictions immediately instead of waiting for a council meeting and vote. The current process can cause delays when coordinating with the county and Mountain Village, who can implement bans faster than Telluride's required council approval.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_74780234-41a7-4a60-84a3-5278e7238f9a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/1c/c1c690df-53af-497b-8b1b-0fd059c75885/69fc4d657a23b.image.jpg?resize=300%2C142"
+  },
+  {
+    title: "We’re in this together",
+    source: "Telluride Times",
+    date: "May 7, 2026",
+    firstSeen: "2026-05-08",
+    newsTopic: "arts-culture",
+    copy: "A new county survey shows concerning mental health trends locally - 38% feel lonely, 55% had poor mental health days recently, and 33% report excessive drinking versus 20% statewide. The county hired Cole Cooper as its first Behavioral Health Projects Lead and is planning a walk-in behavioral health hub at Society Turn, while residents can already access free therapy sessions through a voter-approved fund by calling Tri-County Health Network.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_312e7171-4fbd-48b5-b190-d35e4439e8dc.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/fe/dfeb60ac-288d-4fe5-b2f2-528992d509e8/69fa6216b3098.image.jpg?resize=300%2C400"
+  },
+  {
     title: "The man who firebombed Colorado demonstrators in 2025, killing 1, is sentenced to life in prison",
     source: "Telluride Times",
     date: "May 7, 2026",
@@ -3144,8 +3166,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "April 29, 2026",
     firstSeen: "2026-05-07",
     newsTopic: "education",
-    copy: "The public was invited to the Lone Cone Library on Wednesday, April 22, for Norwood Schools Spring Art Show. The event showcased artwork created with diverse mediums by students of all ages and grade levels.",
-    claudeSummary: false,
+    copy: "Norwood Schools has several upcoming events including spring pictures on April 30th, baseball districts at Del Norte on May 1st, and track meets scheduled for high school students at Pagosa Springs (May 2nd) and Grand Junction (May 6th), plus middle school track at Cedaredge on May 4th.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/norwood_post/article_db4d7389-4c3a-4cef-bf85-30ddfebbf642.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/2e/e2e844f7-8c2c-4eaf-aa50-c6ca0cba18f8/69f174ed2c287.image.jpg?resize=300%2C225"
   },
@@ -3216,28 +3238,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Telluride Times staff win seven awards at Top of the Rockies",
-    source: "Telluride Times",
-    date: "April 28, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "community",
-    copy: "The Telluride Times won seven awards at the regional Top of the Rockies journalism contest, with Owen Perkins taking six awards including first place for public service reporting and arts coverage. Leslie Vreeland earned third place for her piece on the Telluride Curling Club.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_aa173851-b6c9-49cc-ab64-d2e92b45ddb4.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/96/796a7f6b-d98a-44c8-b1cf-48fc5b8ff1fe/69efd2c95a1fa.image.jpg?resize=300%2C200"
-  },
-  {
-    title: "Girls’ Lax poised for final title push",
-    source: "Telluride Times",
-    date: "April 27, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "education",
-    copy: "The THS girls lacrosse team beat Fruita Monument 18-9 at home and defeated Santa Fe Prep 14-2, putting them in position for a league title run. Coach Davenport says the team's balanced scoring attack - with 8-9 girls within five goals of each other - makes them tough to defend.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_d99c2f0a-ffc0-4d79-aee1-fa0042d83a5e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/51/f51b09a3-51ab-4ae2-9366-80f32d7f6b90/69efcf9a79ae9.image.jpg?resize=300%2C200"
-  },
-  {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
     source: "Town of Telluride",
     date: "April 24, 2026",
@@ -3282,6 +3282,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
 // Updated: 2026-04-01  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 5-7-26",
+    source: "KOTO Community Radio",
+    date: "May 8, 2026",
+    newsTopic: "public-safety",
+    copy: "The Bears Are Back in Town; Federal Firefighting in the Region Sees Shift; The Wonder, Intimacy, and Hope of “Appalachia”",
+    href: "https://koto.org/news/newscast-5-7-26/"
+  },
   {
     title: "Newscast 5-6-26",
     source: "KOTO Community Radio",
@@ -3337,14 +3345,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "housing",
     copy: "This week on the Regional Roundup: two people living with Parkinson’s share what it’s like to navigate a disease that affects more than a million Americans. We head to Norwood in southwest Colorado, where a project aims to tackle algae blooms while generating electricity. In Glenwood Springs, we hear community concerns about Flock surveillance came",
     href: "https://koto.org/news/newscast-4-24-26/"
-  },
-  {
-    title: "Newscast 4-23-26",
-    source: "KOTO Community Radio",
-    date: "April 24, 2026",
-    newsTopic: "community",
-    copy: "Ranching In A Drying West; Cat Movie Fisher with Risho Unda; The Listening Club Gets Stranger",
-    href: "https://koto.org/news/newscast-4-23-26/"
   }
 ];
 
@@ -3709,17 +3709,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
   },
   {
-    title: "Sewing 101 with Melissa Sumpter",
-    link: "https://koto.org/event/sewing-101-with-melissa-sumpter/",
-    description: "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
-    pubDate: "2026-05-13T17:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/SEWING-2024.png"
-  },
-  {
     title: "Wildfire Preparedness",
     link: "https://koto.org/event/wildfire-preparedness/",
     description: "Join San Miguel County and the Western Region Wildfire Council and Telluride Fire Protection District for a presentation on how to prepare for a wildfire and what to do if one arrives. There will also be information about mitigation resources for property owners. There will be simultaneous Spanish interpretation available. Habrá interpretación en e",
@@ -3982,6 +3971,72 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://koto.org/wp-content/uploads/2026/04/The-Listening-Club-2.png"
+  },
+  {
+    title: "Online Author Talk with Nir Eyal",
+    link: "https://koto.org/event/online-author-talk-with-nir-eyal/",
+    description: "What if the only thing standing between you and the seemingly impossible…was belief? This is the question posed by bestselling author Nir Eyal in his new work, Beyond Belief. Most of your limits aren’t physical. They’re psychological. In Beyond Belief, Nir Eyal reveals how the hidden assumptions you carry shape what you see, how you feel, and what ",
+    pubDate: "2026-05-19T12:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/nir.png"
+  },
+  {
+    title: "Talking Gourds Presents Stories and Poems",
+    link: "https://koto.org/event/talking-gourds-presents-stories-and-poems/2026-05-19/",
+    description: "The Telluride Institute’s Talking Gourds Poetry Program is hosting a live Stories & Poems series at the Wilkinson Public Library magazine room on the third Tuesday of every month at 5:30 pm. Following the featured poet's or story teller's reading we will hold a Talking Gourds sharing circle going around the room to let everyone speak. Attendees are",
+    pubDate: "2026-05-19T17:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Spanish Happy Hour",
+    link: "https://koto.org/event/spanish-happy-hour-2/",
+    description: "Practice your Spanish skills with other Spanish speakers at La Cocina. The Library will provide appetizers, and the bar will be available for you to purchase a beverage of your choice. Registration is not required, but it helps us have an idea of how many people will be in attendance, and therefore how much food to order. All levels welcome!",
+    pubDate: "2026-05-19T17:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "La Cocina de Luz, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/abril-2.png"
+  },
+  {
+    title: "Beans and Books at Coffee Cowboy",
+    link: "https://koto.org/event/beans-and-books-at-coffee-cowboy/",
+    description: "What better way to start out your day than by sipping on a hot cup of coffee while chatting with other bibliophiles about books? It's a chance to talk about whatever you have been reading (or listening to) and hear about what other folks have been reading (or listening to). Drop in anytime at the beautiful Coffee Cowboy General Store on the corner ",
+    pubDate: "2026-05-20T08:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Coffee Cowboy General Store, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/beans-books-5.png"
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://koto.org/event/mahjongg-for-independent-players-2/",
+    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessar",
+    pubDate: "2026-05-20T13:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/mahjong-6.png"
+  },
+  {
+    title: "Plant Party Kick off!",
+    link: "https://koto.org/event/plant-party-kick-off/",
+    description: "Kick off our new Plant Party series with inspiration from For The Love of House Plants! This first gathering celebrates all things green-whether you're nurturing your first pathos or managing a full indoor jungle. We'll explore simple care tips, share plant stories, and connect with fellow plant enthusiasts in a relaxed welcoming space. Come ready ",
+    pubDate: "2026-05-20T17:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/plant-party-9.png"
   }
 ];
 const WILKINSON_EVENTS = [
@@ -4064,28 +4119,7 @@ const WILKINSON_EVENTS = [
   }
 ];
 const HUMANE_SOCIETY_ANIMALS = [
-  {
-    id: "TEL-A-177",
-    name: "ADOPTION PENDING - Lilibet",
-    species: "Dog",
-    breed: "Terrier, Yorkshire, Yorkie",
-    ageGroup: "Young Dog",
-    sex: "Female",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/494cc8f70068b840e583017a12f16cff/a3966796a280e1ac287456798bea0bcd.jpeg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/213577110",
-    summary: "Young Dog • Terrier, Yorkshire, Yorkie • Female"
-  },
-  {
-    id: "TEL-A-179",
-    name: "Cassidy",
-    species: "Dog",
-    breed: "Mixed Breed (Large)",
-    ageGroup: "Young Puppy",
-    sex: "Male",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/6a0c36e2b195a3f2b18e37b963ae72fe/afafff744f92ed9f2ed9395b4dd9b6dc.jpeg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/213577172",
-    summary: "Young Puppy • Mixed Breed (Large) • Male"
-  }
+
 ];
 
 
