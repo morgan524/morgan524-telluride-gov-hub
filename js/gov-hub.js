@@ -1638,6 +1638,17 @@ async function fetchTellurideJewishEvents() {
   }
 }
 
+// ── Fetch Telluride Foundation Events ──
+// Reads from the hardcoded TELLURIDE_FOUNDATION_EVENTS const above —
+// telluridefoundation.org/tf-events/ has no public events API, so the
+// list is maintained manually. See the const for refresh instructions.
+function fetchTellurideFoundationEvents() {
+  if (typeof TELLURIDE_FOUNDATION_EVENTS !== 'undefined' && Array.isArray(TELLURIDE_FOUNDATION_EVENTS)) {
+    return TELLURIDE_FOUNDATION_EVENTS;
+  }
+  return [];
+}
+
 async function fetchAllNews() {
   const feedResults = await Promise.all(NEWS_FEEDS.map(f => fetchNewsFeed(f)));
   const ttimesResults = await fetchTellurideTimesEvents();
@@ -1645,6 +1656,7 @@ async function fetchAllNews() {
   const wilkinsonResults = fetchWilkinsonEvents();
   const communityResults = await fetchCommunityEvents();
   const tjcResults = await fetchTellurideJewishEvents();
+  const tfResults = fetchTellurideFoundationEvents();
 
   // Hardcoded COMMUNITY_EVENTS (from the data array above)
   const hardcodedCommunity = [];
@@ -1673,7 +1685,7 @@ async function fetchAllNews() {
   }
 
   // Combine all sources — Wilkinson library events take priority over KOTO/TT duplicates
-  const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...tjcResults, ...hardcodedCommunity];
+  const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...tjcResults, ...tfResults, ...hardcodedCommunity];
 
   // Normalize pubDate to a real Date object on every item.
   // Bot-populated arrays (KOTO_COMMUNITY_EVENTS, WILKINSON_EVENTS, etc.) store
@@ -4096,6 +4108,38 @@ const WILKINSON_EVENTS = [
 ];
 const HUMANE_SOCIETY_ANIMALS = [
 
+];
+
+// ── Telluride Foundation events ──
+// telluridefoundation.org/tf-events/ is a hand-maintained WordPress page (no
+// public API, hand-laid WPBakery markup with no stable repeating template).
+// Maintained as a hardcoded list. To refresh: visit /tf-events/, copy each
+// upcoming event's title/date/time/location/description/Register URL, and
+// update the array below. Set source: 'tf' so ENTITY_LOGOS picks up the
+// Telluride Foundation logo on the card.
+const TELLURIDE_FOUNDATION_EVENTS = [
+  {
+    title: "Creating with AI: The Tools Worth Using & How to Actually Use Them",
+    link: "https://telluridefoundation.org/tf-events/",
+    description: "If you've been overwhelmed by the surge of AI tools and aren't sure what's actually useful, this workshop cuts through the noise. Hands-on workshop covering text, images and logos, video creation, and website building. No coding, design, or AI experience required. Free; space limited to 50; RSVP required.",
+    pubDate: "2026-06-12T13:00:00",
+    source: "tf",
+    sourceLabel: "Telluride Foundation",
+    category: "Community Event",
+    location: "Telluride Innovation Center, Telluride, CO",
+    imageUrl: ""
+  },
+  {
+    title: "16th Annual Rundola",
+    link: "https://telluridefoundation.org/tf-events/",
+    description: "Independence Day uphill foot race from the Gondola base in Telluride to the top of San Sophia Ridge, supporting the Good Neighbor Fund (emergency financial assistance for locals in crisis). Family-friendly; medals + prizes; custom Rundola swag for every participant. Race start 7:30 a.m. Registration opens May 11, 2026.",
+    pubDate: "2026-07-04T07:30:00",
+    source: "tf",
+    sourceLabel: "Telluride Foundation",
+    category: "Community Event",
+    location: "Telluride Gondola Plaza, Telluride, CO",
+    imageUrl: ""
+  }
 ];
 
 
