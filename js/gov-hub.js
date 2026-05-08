@@ -1783,8 +1783,9 @@ async function fetchOurayRidgwayEvents() {
       const startStr = inst && inst.start;
       let pubDate = startStr ? new Date(startStr) : (ev.first_date ? new Date(ev.first_date + 'T19:00:00') : null);
       if (pubDate && isNaN(pubDate.getTime())) pubDate = null;
-      const photoId = ev.photo_id;
-      const imageUrl = photoId ? `https://events.ourayridgwayevents.com/live/files/${photoId}` : '';
+      // Localist exposes the photo as `photo_url` (CDN URL on
+      // localist-images.azureedge.net) — use it directly when present.
+      const imageUrl = ev.photo_url || '';
       return {
         title: (ev.title || '').trim(),
         link: ev.url || `https://events.ourayridgwayevents.com/event/${ev.urlname || ev.id}`,
@@ -2874,7 +2875,6 @@ function renderNews(items, filter) {
 
       html += `
         <div class="card" data-source="${item.source}">
-          ${item.source === 'koto' ? '' : renderLogo(item.source)}
           <div class="card-body">
             <div class="event-card-main">
               <div class="event-card-content">
