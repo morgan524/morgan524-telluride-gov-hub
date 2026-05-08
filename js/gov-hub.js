@@ -18,13 +18,13 @@ const COUNTY_CALENDAR_URL = 'https://sanmiguelcountyco.gov/RSSFeed.aspx?ModID=58
 // ── News feeds ──
 const NEWS_FEEDS = [
   {
-    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=1&CID=Town-News-1',
+    url: 'https://telluride.gov/RSSFeed.aspx?ModID=1&CID=Town-News-1',
     source: 'telluride',
     sourceLabel: 'Town of Telluride',
     category: 'Town News'
   },
   {
-    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=1&CID=Marshals-Department-12',
+    url: 'https://telluride.gov/RSSFeed.aspx?ModID=1&CID=Marshals-Department-12',
     source: 'telluride',
     sourceLabel: 'Town of Telluride',
     category: "Marshal's Dept"
@@ -42,7 +42,7 @@ const NEWS_FEEDS = [
     category: 'Alert'
   },
   {
-    url: 'https://telluride-co.gov/RSSFeed.aspx?ModID=63&CID=All-0',
+    url: 'https://telluride.gov/RSSFeed.aspx?ModID=63&CID=All-0',
     source: 'telluride',
     sourceLabel: 'Town of Telluride',
     category: 'Alert'
@@ -4381,14 +4381,15 @@ function renderLegalNoticesIntoContainer(container) {
 
   let html = subFilterHtml;
   active.forEach(function(notice) {
-    const primaryPaper = PAPER_LOGOS[notice.papers[0]];
+    const papersArr = Array.isArray(notice.papers) ? notice.papers : [];
+    const primaryPaper = PAPER_LOGOS[papersArr[0]];
     const linkUrl = primaryPaper ? primaryPaper.url : '#';
     const eLogo = LEGAL_ENTITY_LOGOS[notice.entityLogo] || '';
     const eLogoHtml = eLogo ? '<div class="legal-entity-logo">' + eLogo + '</div>' : '';
 
     let paperBadgesHtml = '<div class="legal-paper-badges"><span class="paper-label">Published in:</span>';
     const seenPapers = new Set();
-    notice.papers.forEach(function(pKey) {
+    papersArr.forEach(function(pKey) {
       const p = PAPER_LOGOS[pKey];
       if (!p) return;
       if (seenPapers.has(p.name)) return;
@@ -5134,7 +5135,7 @@ function legalCalendarButtons(notice) {
     eventDate: eventDate,
     eventTimes: evt.time + (evt.endTime ? ' - ' + evt.endTime : ''),
     location: evt.location || '',
-    link: PAPER_LOGOS[notice.papers[0]] ? PAPER_LOGOS[notice.papers[0]].url : '',
+    link: (Array.isArray(notice.papers) && PAPER_LOGOS[notice.papers[0]]) ? PAPER_LOGOS[notice.papers[0]].url : '',
     source: 'legal'
   };
 
@@ -5368,7 +5369,7 @@ function renderLegalInterestSidebar() {
   interest.forEach(n => {
     const typeColor = n.filterTag === 'water-court' ? '#1a6fb5' : n.filterTag === 'housing' ? '#2f7a4d' : '#8b5e3c';
     const typeIcon = n.filterTag === 'water-court' ? '💧' : n.filterTag === 'housing' ? '🏘️' : '📜';
-    const primaryPaper = typeof PAPER_LOGOS !== 'undefined' && PAPER_LOGOS[n.papers[0]] ? PAPER_LOGOS[n.papers[0]].url : '#';
+    const primaryPaper = (typeof PAPER_LOGOS !== 'undefined' && Array.isArray(n.papers) && PAPER_LOGOS[n.papers[0]]) ? PAPER_LOGOS[n.papers[0]].url : '#';
     html += '<a href="' + primaryPaper + '" target="_blank" rel="noopener" style="display:block;padding:10px 12px;border-radius:10px;background:rgba(47,86,77,0.04);border:1px solid rgba(47,86,77,0.1);text-decoration:none;transition:background 0.15s ease;"' +
       ' onmouseover="this.style.background=\'rgba(47,86,77,0.09)\'" onmouseout="this.style.background=\'rgba(47,86,77,0.04)\'">' +
       '<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">' +
@@ -5676,14 +5677,15 @@ function renderLegalNoticesWithTopic() {
 
   let html = '';
   filtered.forEach(notice => {
-    const primaryPaper = PAPER_LOGOS[notice.papers[0]];
+    const papersArr = Array.isArray(notice.papers) ? notice.papers : [];
+    const primaryPaper = PAPER_LOGOS[papersArr[0]];
     const linkUrl = primaryPaper ? primaryPaper.url : '#';
     const eLogo = LEGAL_ENTITY_LOGOS[notice.entityLogo] || '';
     const eLogoHtml = eLogo ? '<div class="legal-entity-logo">' + eLogo + '</div>' : '';
 
     let paperBadgesHtml = '<div class="legal-paper-badges"><span class="paper-label">Published in:</span>';
     const seenPapers = new Set();
-    notice.papers.forEach(pKey => {
+    papersArr.forEach(pKey => {
       const p = PAPER_LOGOS[pKey];
       if (!p) return;
       if (seenPapers.has(p.name)) return;
@@ -6112,8 +6114,8 @@ const HOUSING_LISTINGS = [
     lat: 37.9363, lng: -107.8198,
     beds: '1–3 Bedroom', price: 'Income-based (deed-restricted)',
     source: 'Town of Telluride',
-    contact: { phone: '(970) 728-4025', email: 'housing@telluride-co.gov' },
-    url: 'https://www.telluride-co.gov/745/Town-Owned-Rental-Properties',
+    contact: { phone: '(970) 728-4025', email: 'housing@telluride.gov' },
+    url: 'https://www.telluride.gov/745/Town-Owned-Rental-Properties',
     note: 'Waitlist-based. Town employee priority. Apply through the Town of Telluride.'
   },
   {
@@ -6123,8 +6125,8 @@ const HOUSING_LISTINGS = [
     lat: 37.9380, lng: -107.8260,
     beds: 'Studio–2 Bedroom', price: 'Income-based (deed-restricted)',
     source: 'Town of Telluride',
-    contact: { phone: '(970) 728-4025', email: 'housing@telluride-co.gov' },
-    url: 'https://www.telluride-co.gov/745/Town-Owned-Rental-Properties',
+    contact: { phone: '(970) 728-4025', email: 'housing@telluride.gov' },
+    url: 'https://www.telluride.gov/745/Town-Owned-Rental-Properties',
     note: 'Waitlist-based. Apply through the Town of Telluride Rental Housing division.'
   },
   /* ── Market-Rate Active Listings ── */
