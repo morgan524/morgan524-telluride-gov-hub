@@ -1630,12 +1630,25 @@ async function fetchAllNews() {
   // Combine all sources — Wilkinson library events take priority over KOTO/TT duplicates
   const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...hardcodedCommunity];
 
+  // Normalize pubDate to a real Date object on every item.
+  // Bot-populated arrays (KOTO_COMMUNITY_EVENTS, WILKINSON_EVENTS, etc.) store
+  // pubDate as an ISO string like "2026-05-08T10:30:00.000Z"; older hardcoded
+  // entries use new Date(...). Downstream filters (renderNews) do
+  // `i.pubDate >= todayStart` which silently coerces strings to NaN and drops
+  // every string-typed event. Convert once, here, for everyone downstream.
+  for (const item of all) {
+    if (item && item.pubDate && !(item.pubDate instanceof Date)) {
+      const d = new Date(item.pubDate);
+      item.pubDate = isNaN(d.getTime()) ? null : d;
+    }
+  }
+
   // Deduplicate: if the same event title appears on the same date from multiple sources,
   // keep the Wilkinson version (listed first) and drop KOTO/TT duplicates
   const seen = new Set();
   return all.filter(item => {
     const normTitle = (item.title || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 20);
-    const dateKey = item.pubDate ? new Date(item.pubDate).toISOString().slice(0, 10) : '';
+    const dateKey = item.pubDate ? item.pubDate.toISOString().slice(0, 10) : '';
     const key = normTitle + '|' + dateKey;
     if (seen.has(key)) return false;
     seen.add(key);
