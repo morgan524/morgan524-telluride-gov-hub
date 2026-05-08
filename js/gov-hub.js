@@ -2545,9 +2545,9 @@ function renderNews(items, filter) {
   // Exclude events outside San Miguel County, Ridgway, or Ophir
   filtered = filtered.filter(isWithinServiceArea);
 
-  // Limit to next 3 weeks for future events
+  // Limit to next 30 days for future events
   const eventCutoff = new Date();
-  eventCutoff.setDate(eventCutoff.getDate() + 21);
+  eventCutoff.setDate(eventCutoff.getDate() + 30);
   filtered = filtered.filter(i => !i.pubDate || i.pubDate <= eventCutoff);
 
   filtered = filtered.slice(0, 50);
