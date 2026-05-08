@@ -1321,6 +1321,7 @@ const ENTITY_LOGOS = {
   eco: '<img src="/logo/Eco%20Action.webp" alt="EcoAction Partners" style="width:100%;height:100%;object-fit:contain;">',
   soh: '<img src="/logo/Sheridan%20Opera%20House.png" alt="Sheridan Opera House" style="width:100%;height:100%;object-fit:contain;">',
   elks: '<img src="/logo/Elks.png" alt="Telluride Elks Lodge" style="width:100%;height:100%;object-fit:contain;">',
+  oray: '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#5a3a2f,#3d2519);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Ouray Ridgway Calendar">🏔️</div>',
   community: '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#2f564d,#22453e);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Community Event">📅</div>',
   localgroup: '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#6b5b3a,#8b7332);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Local Group">🤝</div>',
   koto: '<img src="/logo/koto-fm-logo.webp" alt="KOTO Community Radio" style="width:100%;height:100%;object-fit:contain;">',

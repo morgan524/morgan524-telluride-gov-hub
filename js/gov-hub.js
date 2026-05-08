@@ -1755,6 +1755,55 @@ async function fetchSheridanOperaHouseEvents() {
   }
 }
 
+// ── Fetch Ouray-Ridgway Events Calendar ──
+// events.ourayridgwayevents.com runs on Localist (calendar SaaS). Public
+// JSON API at /api/2/events. The ?school=ridgwayouray filter scopes to
+// the Ridgway-Ouray area, but the calendar still includes events at
+// out-of-area venues (Montrose Pavilion, etc.) — those get filtered by
+// the existing isWithinServiceArea() check downstream in renderNews.
+async function fetchOurayRidgwayEvents() {
+  const ORE_URL = 'https://events.ourayridgwayevents.com/api/2/events?school=ridgwayouray&days=30&pp=50';
+  try {
+    let json;
+    try {
+      const resp = await fetch(CODETABS_PROXY + encodeURIComponent(ORE_URL));
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      json = await resp.json();
+    } catch (e1) {
+      const resp2 = await fetch(ALLORIGINS_PROXY + encodeURIComponent(ORE_URL));
+      if (!resp2.ok) throw new Error('Fallback HTTP ' + resp2.status);
+      json = await resp2.json();
+    }
+    const events = Array.isArray(json && json.events) ? json.events : [];
+    return events.map(wrapped => {
+      const ev = wrapped && wrapped.event;
+      if (!ev || ev.private || ev.status !== 'live') return null;
+      const inst = Array.isArray(ev.event_instances) && ev.event_instances[0]
+        && ev.event_instances[0].event_instance;
+      const startStr = inst && inst.start;
+      let pubDate = startStr ? new Date(startStr) : (ev.first_date ? new Date(ev.first_date + 'T19:00:00') : null);
+      if (pubDate && isNaN(pubDate.getTime())) pubDate = null;
+      const photoId = ev.photo_id;
+      const imageUrl = photoId ? `https://events.ourayridgwayevents.com/live/files/${photoId}` : '';
+      return {
+        title: (ev.title || '').trim(),
+        link: ev.url || `https://events.ourayridgwayevents.com/event/${ev.urlname || ev.id}`,
+        description: (ev.description_text || '').trim(),
+        summary: (ev.description_text || '').trim().slice(0, 280),
+        pubDate: pubDate,
+        source: 'oray',
+        sourceLabel: 'Ouray Ridgway Calendar',
+        category: 'Community Event',
+        location: ev.location || '',
+        imageUrl: imageUrl
+      };
+    }).filter(it => it && it.title && it.pubDate);
+  } catch (err) {
+    console.warn('[GovHub] Ouray-Ridgway events fetch failed:', err.message);
+    return [];
+  }
+}
+
 // ── Fetch Telluride Elks Lodge Events ──
 // tellurideelks.org/Events runs on ClubRunner-style CMS — no public REST.
 // Each event is rendered as <div class="EventAndSpeakersItem"> with the
@@ -1829,6 +1878,7 @@ async function fetchAllNews() {
   const ecoResults = await fetchEcoActionEvents();
   const sohResults = await fetchSheridanOperaHouseEvents();
   const elksResults = await fetchElksEvents();
+  const orayResults = await fetchOurayRidgwayEvents();
 
   // Hardcoded COMMUNITY_EVENTS (from the data array above)
   const hardcodedCommunity = [];
@@ -1857,7 +1907,7 @@ async function fetchAllNews() {
   }
 
   // Combine all sources — Wilkinson library events take priority over KOTO/TT duplicates
-  const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...tjcResults, ...tfResults, ...ecoResults, ...sohResults, ...elksResults, ...hardcodedCommunity];
+  const all = [...feedResults.flat(), ...wilkinsonResults, ...kotoResults, ...ttimesResults, ...communityResults, ...tjcResults, ...tfResults, ...ecoResults, ...sohResults, ...elksResults, ...orayResults, ...hardcodedCommunity];
 
   // Normalize pubDate to a real Date object on every item.
   // Bot-populated arrays (KOTO_COMMUNITY_EVENTS, WILKINSON_EVENTS, etc.) store
