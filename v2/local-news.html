@@ -824,29 +824,35 @@
     render();
 
         function loadLiveData() {
-      const s = document.createElement('script');
-      s.src = 'https://livabletelluride.org/js/gov-hub.js?v=v2';
-      s.onload = () => {
-        if (typeof TELLURIDE_TIMES_ARTICLES === 'undefined') return;
-        const live = [];
-        TELLURIDE_TIMES_ARTICLES.slice(0, 12).forEach(a => live.push({
-          title: a.title, source: a.source, sourceKey: 'ttimes',
-          date: a.date, summary: a.copy, href: a.href, img: a.img,
-          category: a.newsTopic || 'Community'
-        }));
-        if (typeof KOTO_NEWSCASTS !== 'undefined') {
-          KOTO_NEWSCASTS.slice(0, 6).forEach(a => live.push({
-            title: a.title, source: 'KOTO', sourceKey: 'koto',
-            date: a.date, summary: a.copy, href: a.href, img: a.img || '',
+      const dataScript = document.createElement('script');
+      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v2';
+      dataScript.onload = () => {
+        const s = document.createElement('script');
+        s.src = 'https://livabletelluride.org/js/gov-hub.js?v=v2';
+        s.onload = () => {
+          if (typeof TELLURIDE_TIMES_ARTICLES === 'undefined') return;
+          const live = [];
+          TELLURIDE_TIMES_ARTICLES.slice(0, 12).forEach(a => live.push({
+            title: a.title, source: a.source, sourceKey: 'ttimes',
+            date: a.date, summary: a.copy, href: a.href, img: a.img,
             category: a.newsTopic || 'Community'
           }));
-        }
-        ARTICLES.length = 0;
-        live.forEach(a => ARTICLES.push(a));
-        if (ARTICLES[0]) ARTICLES[0].featured = true;
-        render();
+          if (typeof KOTO_NEWSCASTS !== 'undefined') {
+            KOTO_NEWSCASTS.slice(0, 6).forEach(a => live.push({
+              title: a.title, source: 'KOTO', sourceKey: 'koto',
+              date: a.date, summary: a.copy, href: a.href, img: a.img || '',
+              category: a.newsTopic || 'Community'
+            }));
+          }
+          ARTICLES.length = 0;
+          live.forEach(a => ARTICLES.push(a));
+          if (ARTICLES[0]) ARTICLES[0].featured = true;
+          render();
+        };
+        document.head.appendChild(s);
       };
-      document.head.appendChild(s);
+      dataScript.onerror = () => console.warn('Could not load gov-data.js');
+      document.head.appendChild(dataScript);
     }
     loadLiveData();
   </script>

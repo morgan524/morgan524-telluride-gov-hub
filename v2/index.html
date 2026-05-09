@@ -655,75 +655,81 @@
     /* ── Live data: pull next 7 days of meetings + events from /js/gov-hub.js
        and replace the sample week-list. Falls back silently. ─────────── */
     function loadLiveWeek() {
-      const s = document.createElement('script');
-      s.src = 'https://livabletelluride.org/js/gov-hub.js?v=v2';
-      s.onload = () => {
-        try {
-          const today = new Date(); today.setHours(0,0,0,0);
-          const horizon = new Date(today.getTime() + 7 * 86400000);
-          const items = [];
+      const dataScript = document.createElement('script');
+      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v2';
+      dataScript.onload = () => {
+        const s = document.createElement('script');
+        s.src = 'https://livabletelluride.org/js/gov-hub.js?v=v2';
+        s.onload = () => {
+          try {
+            const today = new Date(); today.setHours(0,0,0,0);
+            const horizon = new Date(today.getTime() + 7 * 86400000);
+            const items = [];
 
-          const fetchers = [
-            ['getCountyCachedMeetings', '/v2/gov-hub.html'],
-            ['getMVMeetings',           '/v2/gov-hub.html'],
-            ['getSchoolMeetings',       '/v2/gov-hub.html'],
-            ['getFireMeetings',         '/v2/gov-hub.html'],
-            ['getMedMeetings',          '/v2/gov-hub.html'],
-            ['getNorwoodMeetings',      '/v2/gov-hub.html'],
-            ['getOphirMeetings',        '/v2/gov-hub.html'],
-            ['getSmartMeetings',        '/v2/gov-hub.html']
-          ];
-          fetchers.forEach(([fn, href]) => {
-            if (typeof window[fn] !== 'function') return;
-            try {
-              (window[fn]() || []).forEach(m => {
-                if (!m || !m.eventDate || m.eventDate < today || m.eventDate > horizon) return;
+            const fetchers = [
+              ['getCountyCachedMeetings', '/v2/gov-hub.html'],
+              ['getMVMeetings',           '/v2/gov-hub.html'],
+              ['getSchoolMeetings',       '/v2/gov-hub.html'],
+              ['getFireMeetings',         '/v2/gov-hub.html'],
+              ['getMedMeetings',          '/v2/gov-hub.html'],
+              ['getNorwoodMeetings',      '/v2/gov-hub.html'],
+              ['getOphirMeetings',        '/v2/gov-hub.html'],
+              ['getSmartMeetings',        '/v2/gov-hub.html']
+            ];
+            fetchers.forEach(([fn, href]) => {
+              if (typeof window[fn] !== 'function') return;
+              try {
+                (window[fn]() || []).forEach(m => {
+                  if (!m || !m.eventDate || m.eventDate < today || m.eventDate > horizon) return;
+                  items.push({
+                    date: m.eventDate,
+                    title: m.title,
+                    meta: m.eventTimes
+                      ? formatDate(m.eventDate) + ' • ' + m.eventTimes + (m.location ? ' • ' + m.location : '')
+                      : formatDate(m.eventDate),
+                    href: href
+                  });
+                });
+              } catch (e) {}
+            });
+
+            ['COMMUNITY_EVENTS','KOTO_COMMUNITY_EVENTS','WILKINSON_EVENTS'].forEach(name => {
+              if (typeof window[name] === 'undefined') return;
+              window[name].forEach(e => {
+                const start = e.pubDate || e.start_date || e.date;
+                if (!start) return;
+                const d = new Date(start);
+                d.setHours(0,0,0,0);
+                if (d < today || d > horizon) return;
                 items.push({
-                  date: m.eventDate,
-                  title: m.title,
-                  meta: m.eventTimes
-                    ? formatDate(m.eventDate) + ' • ' + m.eventTimes + (m.location ? ' • ' + m.location : '')
-                    : formatDate(m.eventDate),
-                  href: href
+                  date: d,
+                  title: e.title,
+                  meta: formatDate(d) + (e.location ? ' • ' + e.location : ''),
+                  href: '/v2/events.html'
                 });
               });
-            } catch (e) {}
-          });
-
-          ['COMMUNITY_EVENTS','KOTO_COMMUNITY_EVENTS','WILKINSON_EVENTS'].forEach(name => {
-            if (typeof window[name] === 'undefined') return;
-            window[name].forEach(e => {
-              const start = e.pubDate || e.start_date || e.date;
-              if (!start) return;
-              const d = new Date(start);
-              d.setHours(0,0,0,0);
-              if (d < today || d > horizon) return;
-              items.push({
-                date: d,
-                title: e.title,
-                meta: formatDate(d) + (e.location ? ' • ' + e.location : ''),
-                href: '/v2/events.html'
-              });
             });
-          });
 
-          if (items.length === 0) return;
-          items.sort((a, b) => a.date - b.date);
-          const top = items.slice(0, 5);
-          const list = document.getElementById('weekList');
-          list.innerHTML = top.map(it => {
-            const m = it.date.toLocaleString('en', { month: 'short' });
-            const d = it.date.getDate();
-            return '<a class="week-item" href="' + it.href + '">'
-                 +   '<div class="week-date"><div class="month">' + m + '</div><div class="day">' + d + '</div></div>'
-                 +   '<div class="info"><h4>' + it.title + '</h4><p class="meta">' + it.meta + '</p></div>'
-                 +   '<div class="arrow">›</div>'
-                 + '</a>';
-          }).join('');
-        } catch (err) { console.warn('loadLiveWeek failed:', err); }
+            if (items.length === 0) return;
+            items.sort((a, b) => a.date - b.date);
+            const top = items.slice(0, 5);
+            const list = document.getElementById('weekList');
+            list.innerHTML = top.map(it => {
+              const m = it.date.toLocaleString('en', { month: 'short' });
+              const d = it.date.getDate();
+              return '<a class="week-item" href="' + it.href + '">'
+                   +   '<div class="week-date"><div class="month">' + m + '</div><div class="day">' + d + '</div></div>'
+                   +   '<div class="info"><h4>' + it.title + '</h4><p class="meta">' + it.meta + '</p></div>'
+                   +   '<div class="arrow">›</div>'
+                   + '</a>';
+            }).join('');
+          } catch (err) { console.warn('loadLiveWeek failed:', err); }
+        };
+        s.onerror = () => console.warn('Could not load /js/gov-hub.js for landing week');
+        document.head.appendChild(s);
       };
-      s.onerror = () => console.warn('Could not load /js/gov-hub.js for landing week');
-      document.head.appendChild(s);
+      dataScript.onerror = () => console.warn('Could not load gov-data.js');
+      document.head.appendChild(dataScript);
     }
     function formatDate(d) {
       return d.toLocaleString('en', { month: 'long', day: 'numeric', year: 'numeric' });

@@ -681,32 +681,38 @@
 
     /* ── Live data: load gov-hub.js, prune expired, render cards ── */
     function loadLiveNotices() {
-      const s = document.createElement('script');
-      s.src = 'https://livabletelluride.org/js/gov-hub.js?v=v2';
-      s.onload = () => {
-        try {
-          if (typeof LEGAL_NOTICES === 'undefined' || !Array.isArray(LEGAL_NOTICES)) {
-            return showError('Notice data unavailable.');
+      const dataScript = document.createElement('script');
+      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v2';
+      dataScript.onload = () => {
+        const s = document.createElement('script');
+        s.src = 'https://livabletelluride.org/js/gov-hub.js?v=v2';
+        s.onload = () => {
+          try {
+            if (typeof LEGAL_NOTICES === 'undefined' || !Array.isArray(LEGAL_NOTICES)) {
+              return showError('Notice data unavailable.');
+            }
+            const today = new Date(); today.setHours(0, 0, 0, 0);
+            const active = LEGAL_NOTICES.filter(n => {
+              if (!n.expires) return true;
+              const exp = new Date(n.expires + 'T23:59:59');
+              return !isNaN(exp) && exp >= today;
+            });
+            if (active.length === 0) {
+              return showError('No active legal notices at this time.');
+            }
+            const list = document.getElementById('noticeList');
+            list.innerHTML = active.map(renderNoticeCard).join('');
+            applyFilter();
+          } catch (err) {
+            console.warn('loadLiveNotices failed:', err);
+            showError('Could not load legal notices.');
           }
-          const today = new Date(); today.setHours(0, 0, 0, 0);
-          const active = LEGAL_NOTICES.filter(n => {
-            if (!n.expires) return true;
-            const exp = new Date(n.expires + 'T23:59:59');
-            return !isNaN(exp) && exp >= today;
-          });
-          if (active.length === 0) {
-            return showError('No active legal notices at this time.');
-          }
-          const list = document.getElementById('noticeList');
-          list.innerHTML = active.map(renderNoticeCard).join('');
-          applyFilter();
-        } catch (err) {
-          console.warn('loadLiveNotices failed:', err);
-          showError('Could not load legal notices.');
-        }
+        };
+        s.onerror = () => showError('Could not load /js/gov-hub.js.');
+        document.head.appendChild(s);
       };
-      s.onerror = () => showError('Could not load /js/gov-hub.js.');
-      document.head.appendChild(s);
+      dataScript.onerror = () => console.warn('Could not load gov-data.js');
+      document.head.appendChild(dataScript);
     }
     function showError(msg) {
       const list = document.getElementById('noticeList');

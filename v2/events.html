@@ -748,57 +748,63 @@
        WILKINSON_EVENTS and re-render. Falls back silently to the
        sample data on any failure. ──────────────────────────────────── */
     function loadLiveEvents() {
-      const s = document.createElement('script');
-      s.src = 'https://livabletelluride.org/js/gov-hub.js?v=v2';
-      s.onload = () => {
-        try {
-          const live = [];
-          const townFromLocation = (loc='') => {
-            const l = loc.toLowerCase();
-            if (l.includes('mountain village') || /mv/.test(l)) return 'mv';
-            if (l.includes('norwood')) return 'norwood';
-            if (l.includes('ridgway')) return 'ridgway';
-            if (l.includes('ouray')) return 'ouray';
-            if (l.includes('ophir')) return 'ophir';
-            if (l.includes('placerville')) return 'placerville';
-            if (l.includes('nucla') || l.includes('naturita')) return 'nucla-naturita';
-            return 'telluride';
-          };
-          const pushEvent = (e, sourceLabel) => {
-            if (!e || !e.title) return;
-            const start = e.pubDate || e.start_date || e.date || '';
-            const dateStr = start ? new Date(start).toISOString().slice(0,10) : '';
-            if (!dateStr) return;
-            // Only include events in the next 30 days
-            const dt = new Date(dateStr + 'T00:00:00');
-            const today = new Date(); today.setHours(0,0,0,0);
-            const diff = (dt - today) / 86400000;
-            if (diff < -1 || diff > 30) return;
-            live.push({
-              title: e.title,
-              date: dateStr,
-              time: (start && start.includes('T')) ? new Date(start).toLocaleTimeString([], {hour:'numeric', minute:'2-digit'}) : '',
-              location: e.location || '',
-              town: townFromLocation(e.location || ''),
-              summary: (e.description || '').replace(/<[^>]+>/g,'').slice(0, 600),
-              source: sourceLabel || e.sourceLabel || e.source || 'Community',
-              href: e.link || e.href || '#',
-              img: e.imageUrl || e.img || ''
-            });
-          };
-          if (typeof COMMUNITY_EVENTS !== 'undefined') COMMUNITY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Community'));
-          if (typeof KOTO_COMMUNITY_EVENTS !== 'undefined') KOTO_COMMUNITY_EVENTS.forEach(e => pushEvent(e, 'KOTO'));
-          if (typeof WILKINSON_EVENTS !== 'undefined') WILKINSON_EVENTS.forEach(e => pushEvent(e, 'Wilkinson Library'));
-          if (live.length > 0) {
-            EVENTS.length = 0;
-            live.sort((a,b) => a.date.localeCompare(b.date));
-            live.forEach(e => EVENTS.push(e));
-            render();
-          }
-        } catch (err) { console.warn('loadLiveEvents failed:', err); }
+      const dataScript = document.createElement('script');
+      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v2';
+      dataScript.onload = () => {
+        const s = document.createElement('script');
+        s.src = 'https://livabletelluride.org/js/gov-hub.js?v=v2';
+        s.onload = () => {
+          try {
+            const live = [];
+            const townFromLocation = (loc='') => {
+              const l = loc.toLowerCase();
+              if (l.includes('mountain village') || /mv/.test(l)) return 'mv';
+              if (l.includes('norwood')) return 'norwood';
+              if (l.includes('ridgway')) return 'ridgway';
+              if (l.includes('ouray')) return 'ouray';
+              if (l.includes('ophir')) return 'ophir';
+              if (l.includes('placerville')) return 'placerville';
+              if (l.includes('nucla') || l.includes('naturita')) return 'nucla-naturita';
+              return 'telluride';
+            };
+            const pushEvent = (e, sourceLabel) => {
+              if (!e || !e.title) return;
+              const start = e.pubDate || e.start_date || e.date || '';
+              const dateStr = start ? new Date(start).toISOString().slice(0,10) : '';
+              if (!dateStr) return;
+              // Only include events in the next 30 days
+              const dt = new Date(dateStr + 'T00:00:00');
+              const today = new Date(); today.setHours(0,0,0,0);
+              const diff = (dt - today) / 86400000;
+              if (diff < -1 || diff > 30) return;
+              live.push({
+                title: e.title,
+                date: dateStr,
+                time: (start && start.includes('T')) ? new Date(start).toLocaleTimeString([], {hour:'numeric', minute:'2-digit'}) : '',
+                location: e.location || '',
+                town: townFromLocation(e.location || ''),
+                summary: (e.description || '').replace(/<[^>]+>/g,'').slice(0, 600),
+                source: sourceLabel || e.sourceLabel || e.source || 'Community',
+                href: e.link || e.href || '#',
+                img: e.imageUrl || e.img || ''
+              });
+            };
+            if (typeof COMMUNITY_EVENTS !== 'undefined') COMMUNITY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Community'));
+            if (typeof KOTO_COMMUNITY_EVENTS !== 'undefined') KOTO_COMMUNITY_EVENTS.forEach(e => pushEvent(e, 'KOTO'));
+            if (typeof WILKINSON_EVENTS !== 'undefined') WILKINSON_EVENTS.forEach(e => pushEvent(e, 'Wilkinson Library'));
+            if (live.length > 0) {
+              EVENTS.length = 0;
+              live.sort((a,b) => a.date.localeCompare(b.date));
+              live.forEach(e => EVENTS.push(e));
+              render();
+            }
+          } catch (err) { console.warn('loadLiveEvents failed:', err); }
+        };
+        s.onerror = () => console.warn('Could not load /js/gov-hub.js for live events');
+        document.head.appendChild(s);
       };
-      s.onerror = () => console.warn('Could not load /js/gov-hub.js for live events');
-      document.head.appendChild(s);
+      dataScript.onerror = () => console.warn('Could not load gov-data.js');
+      document.head.appendChild(dataScript);
     }
     loadLiveEvents();
 
