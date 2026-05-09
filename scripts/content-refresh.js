@@ -2123,8 +2123,8 @@ function parseWilkinsonHtml(html) {
     // Location
     const locMatch = /<tr class="s-lc-ea-tloc"[\s\S]*?<td>([\s\S]*?)<\/td>\s*<\/tr>/i.exec(segment);
     const location = locMatch ? locMatch[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() : '';
-    // Description (s-lc-ea-tdesc — sometimes present)
-    const descMatch = /<tr class="s-lc-ea-tdesc"[\s\S]*?<td>([\s\S]*?)<\/td>\s*<\/tr>/i.exec(segment);
+    // Description (s-lc-ea-tdes — sometimes present)
+    const descMatch = /<tr class="s-lc-ea-tdes"[\s\S]*?<td>([\s\S]*?)<\/td>\s*<\/tr>/i.exec(segment);
     const description = descMatch ? descMatch[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim() : '';
     // Parse "From" datetime ("8:00 AM Friday, May 1, 2026" -> Date)
     const fromDate = new Date(fromStr.replace(/^(\d+:\d+\s*[AP]M)\s+\w+,\s+/, '$1 '));

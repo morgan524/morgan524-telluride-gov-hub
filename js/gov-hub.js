@@ -1826,11 +1826,23 @@ async function fetchOurayRidgwayEvents() {
       // Localist exposes the photo as `photo_url` (CDN URL on
       // localist-images.azureedge.net) — use it directly when present.
       const imageUrl = ev.photo_url || '';
+      // Localist's `description_text` sometimes contains literal escape
+      // sequences ("\n") and trailing URL-only continuation lines from
+      // user-submitted content (e.g., "Live Music\nhttps://example.com").
+      // Clean up: literal "\n" → space, real newlines → space, collapse runs;
+      // drop the entire description if it's just a bare URL.
+      let descClean = (ev.description_text || '')
+        .replace(/\n/g, ' ')
+        .replace(/\r?\n+/g, ' ')
+        .replace(/\\\s+/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+      if (/^https?:\/\/\S+$/.test(descClean)) descClean = '';
       return {
         title: (ev.title || '').trim(),
         link: ev.url || `https://events.ourayridgwayevents.com/event/${ev.urlname || ev.id}`,
-        description: (ev.description_text || '').trim(),
-        summary: (ev.description_text || '').trim().slice(0, 280),
+        description: descClean,
+        summary: descClean.slice(0, 280),
         pubDate: pubDate,
         // eventDate mirrors pubDate so gov-meeting items routed to allMeetings
         // satisfy renderMeetingsWithTopic()'s shape requirement.
