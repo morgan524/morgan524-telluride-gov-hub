@@ -761,7 +761,7 @@
       dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v2';
       dataScript.onload = () => {
         const s = document.createElement('script');
-        s.src = 'https://livabletelluride.org/js/gov-hub.js?v=v2';
+        s.src = 'https://livabletelluride.org/js/data-only.js?v=v2';
         s.onload = () => {
           try {
             const live = [];
@@ -809,7 +809,7 @@
             }
           } catch (err) { console.warn('loadLiveEvents failed:', err); }
         };
-        s.onerror = () => console.warn('Could not load /js/gov-hub.js for live events');
+        s.onerror = () => console.warn('Could not load /js/data-only.js for live events');
         document.head.appendChild(s);
       };
       dataScript.onerror = () => console.warn('Could not load gov-data.js');

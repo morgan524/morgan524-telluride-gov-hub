@@ -2782,6 +2782,19 @@ async function main() {
     console.log('\n✓ No changes detected — nothing to commit.');
   }
 
+  // ── Regenerate js/data-only.js from gov-hub.js ──
+  // v2 pages load this clean data-only file instead of gov-hub.js so they
+  // don't pick up the live single-page DOM-touching top-level code (which
+  // throws on v2 pages and silently halts script execution before consts
+  // like HOUSING_LISTINGS get defined). See scripts/extract-data-only.js.
+  try {
+    require('child_process').execSync('node scripts/extract-data-only.js', { stdio: 'inherit' });
+  } catch (err) {
+    console.error('⚠️  data-only.js regeneration failed:', err.message);
+    // Don't fail the whole refresh — v2 pages will keep working with the
+    // previous data-only.js until next run.
+  }
+
   // Signal to the workflow whether there are changes
   process.exit(changed ? 0 : 78); // 78 = "neutral" in GitHub Actions
 }
