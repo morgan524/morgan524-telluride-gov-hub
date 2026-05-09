@@ -823,40 +823,114 @@
 
     render();
 
-        function loadLiveData() {      // Stub hidden DOM elements that gov-hub.js's top-level handlers expect (sidebarReset etc).
-      // Without these, getElementById(...).addEventListener throws and halts execution before HOUSING_LISTINGS gets defined.
-      ['sidebarReset','bannerClear','sidebarToggle','sidebarOverlay','collapseRight','expandRight','sidebar'].forEach(id => {
-        if (document.getElementById(id)) return;
-        const el = document.createElement('span');
-        el.id = id; el.style.display = 'none';
-        document.body.appendChild(el);
-      });
-
-
+        function loadLiveData() {
       const dataScript = document.createElement('script');
       dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v2';
       dataScript.onload = () => {
         const s = document.createElement('script');
         s.src = 'https://livabletelluride.org/js/data-only.js?v=v2';
         s.onload = () => {
-          if (typeof TELLURIDE_TIMES_ARTICLES === 'undefined') return;
-          const live = [];
-          TELLURIDE_TIMES_ARTICLES.slice(0, 12).forEach(a => live.push({
-            title: a.title, source: a.source, sourceKey: 'ttimes',
-            date: a.date, summary: a.copy, href: a.href, img: a.img,
-            category: a.newsTopic || 'Community'
-          }));
-          if (typeof KOTO_NEWSCASTS !== 'undefined') {
-            KOTO_NEWSCASTS.slice(0, 6).forEach(a => live.push({
-              title: a.title, source: 'KOTO', sourceKey: 'koto',
-              date: a.date, summary: a.copy, href: a.href, img: a.img || '',
+          try {
+            if (typeof TELLURIDE_TIMES_ARTICLES === 'undefined') return;
+
+            // ── Redundancy filters (port of live site behavior) ──
+            //
+            // 1. Drop "Legals and Public Notices for ..." roundups — these
+            //    have a dedicated tab.
+            // 2. Drop government-meeting announcement articles ("County
+            //    Planning Commission 5/14 Meeting in TELLURIDE") — already
+            //    on Gov-Hub. Detected via GOV_MEETING_PATTERN (loaded from
+            //    gov-data.js) plus a date pattern in the title.
+            // 3. Drop state/national stories that don't reference any local
+            //    geography. See isStatewideOrNationalNews().
+            const LEGAL_ROUNDUP_RE = /^Legals?\b.*Notices?\b/i;
+            const HAS_DATE_RE = /\b\d{1,2}\/\d{1,2}(\/\d{2,4})?\b/;
+            function isGovMeetingAnnouncement(title) {
+              if (!title) return false;
+              if (typeof GOV_MEETING_PATTERN === 'undefined') return false;
+              if (!GOV_MEETING_PATTERN.test(title)) return false;
+              // Require a date/time hint OR explicit "Meeting" word so we
+              // don't accidentally drop news ARTICLES about councils.
+              return HAS_DATE_RE.test(title) || /\bmeeting\b/i.test(title);
+            }
+            function isStatewideOrNationalNews(item) {
+              const title = (item.title || '').toLowerCase();
+              const href = (item.href || '').toLowerCase();
+              if (!title.trim()) return false;
+              if (/\/news\/(state|nation|national|world|international)\//.test(href)) return true;
+              const local = [
+                /\btelluride\b/, /\bmountain village\b/, /\bmtn village\b/,
+                /\bnorwood\b/, /\bophir\b/, /\bplacerville\b/, /\bridgway\b/,
+                /\brico\b/, /\bsan miguel\b/, /\bsheridan opera\b/, /\bwilkinson\b/,
+                /\btown park\b/, /\bkoto\b/, /\bmountainfilm\b/, /\bbluegrass festival\b/,
+                /\blone cone\b/, /\blawson hill\b/, /\baldasoro\b/, /\bgondola\b/,
+                /\bbear creek\b/, /\btrout lake\b/, /\blizard head\b/, /\bhighway 145\b/,
+                /\bhwy 145\b/, /\bwright's mesa\b/, /\bpalm theatre\b/, /\bah haa\b/,
+                /\btransfer warehouse\b/, /\btellski\b/, /\btelluride ski\b/,
+                /\bpinhead\b/, /\begnar\b/, /\bsociety turn\b/, /\btri-county\b/,
+                /\bdown valley\b/, /\bwest end\b/
+              ];
+              for (const r of local) { if (r.test(title)) return false; }
+              const nonLocal = [
+                /\bdenver\b/, /\bboulder\b/, /\bcolorado springs\b/, /\baurora\b/,
+                /\bfort collins\b/, /\bpueblo\b/, /\bgrand junction\b/,
+                /\bdurango\b/, /\baspen\b/, /\bvail\b/,
+                /colorado (state|lawmaker|legislat|supreme|attorney|governor|department|residents|demonstrators|man|woman|boy|girl|teen|firebomb|plan)/,
+                /\bin colorado\b/, /\bacross colorado\b/, /\bcolorado-wide\b/, /\bstatewide\b/,
+                /\bcongress(ional)?\b/, /\bu\.s\. senate\b/, /\bu\.s\. house\b/,
+                /\bfederal court\b/, /\bsupreme court\b/, /\bscotus\b/, /\bwhite house\b/,
+                /\bpresident (biden|trump|harris|obama)\b/, /\bpentagon\b/, /\bnasa\b/,
+                /\bfbi\b/, /\bcia\b/, /\bdepartment of justice\b/, /\bcapitol hill\b/,
+                /\btrump\b/, /\bbiden\b/, /\bharris\b/, /\bvance\b/, /\blindsey vonn\b/,
+                /\bcalifornia\b/, /\btexas\b/, /\bflorida\b/, /\bnew york\b/,
+                /\barizona\b/, /\bnew mexico\b/, /\butah\b/, /\bwyoming\b/,
+                /\bnebraska\b/, /\bkansas\b/, /\bphiladelphia\b/, /\bchicago\b/,
+                /\bnationwide\b/, /\bacross the country\b/, /\bunited states\b/,
+                /\bacross america\b/, /\bnation's\b/, /\btariffs?\b/, /\boverseas\b/,
+                /\beach state\b/, /\bacross the (west|western)\b/, /\bcanada-us\b/,
+                /\bantisemit/, /\bthe ap\b/,
+                /\bisrael(i|is)?\b/, /\bpalestin/, /\bgaza\b/, /\bukraine\b/,
+                /\brussia\b/, /\bchina\b/, /\btaiwan\b/, /\biran\b/, /\bnorth korea\b/
+              ];
+              for (const r of nonLocal) { if (r.test(title)) return true; }
+              return false;
+            }
+            function shouldKeep(article) {
+              const t = article.title || '';
+              if (LEGAL_ROUNDUP_RE.test(t)) return false;
+              if (isGovMeetingAnnouncement(t)) return false;
+              if (isStatewideOrNationalNews(article)) return false;
+              return true;
+            }
+
+            // ── Collect from sources, then filter, then dedup by title ──
+            const live = [];
+            TELLURIDE_TIMES_ARTICLES.slice(0, 30).forEach(a => live.push({
+              title: a.title, source: a.source, sourceKey: 'ttimes',
+              date: a.date, summary: a.copy, href: a.href, img: a.img,
               category: a.newsTopic || 'Community'
             }));
-          }
-          ARTICLES.length = 0;
-          live.forEach(a => ARTICLES.push(a));
-          if (ARTICLES[0]) ARTICLES[0].featured = true;
-          render();
+            if (typeof KOTO_NEWSCASTS !== 'undefined') {
+              KOTO_NEWSCASTS.slice(0, 15).forEach(a => live.push({
+                title: a.title, source: 'KOTO', sourceKey: 'koto',
+                date: a.date, summary: a.copy, href: a.href, img: a.img || '',
+                category: a.newsTopic || 'Community'
+              }));
+            }
+            const seen = new Set();
+            const filtered = live.filter(a => {
+              if (!shouldKeep(a)) return false;
+              const k = (a.title || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 40);
+              if (seen.has(k)) return false;
+              seen.add(k);
+              return true;
+            });
+
+            ARTICLES.length = 0;
+            filtered.forEach(a => ARTICLES.push(a));
+            if (ARTICLES[0]) ARTICLES[0].featured = true;
+            render();
+          } catch (err) { console.warn('loadLiveData filter pass failed:', err); }
         };
         document.head.appendChild(s);
       };
