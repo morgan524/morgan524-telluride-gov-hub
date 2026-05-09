@@ -795,6 +795,7 @@
             // up), we want the canonical-origin source to win. The dedup pass
             // below is first-seen-wins, so the merge order encodes priority.
             if (typeof WILKINSON_EVENTS !== 'undefined') WILKINSON_EVENTS.forEach(e => pushEvent(e, 'Wilkinson Library'));
+            if (typeof TJC_EVENTS !== 'undefined') TJC_EVENTS.forEach(e => pushEvent(e, 'Telluride Jewish Community'));
             if (typeof COMMUNITY_EVENTS !== 'undefined') COMMUNITY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Community'));
             if (typeof KOTO_COMMUNITY_EVENTS !== 'undefined') KOTO_COMMUNITY_EVENTS.forEach(e => pushEvent(e, 'KOTO'));
 

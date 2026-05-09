@@ -1600,7 +1600,7 @@ const LOCAL_ORGS = [
       summary: "Works on environmental sustainability, climate action, waste reduction, energy efficiency, and community sustainability programs across San Miguel and Ouray counties.",
       website: "https://ecoactionpartners.org/",
       donate: "https://www.ecoactionpartners.org/donate",
-      social: {},
+      social: { instagram: "https://www.instagram.com/EcoAction_Partners/" },
       logo: "https://livabletelluride.org/logo/Eco%20Action.webp"
     },
     {
@@ -1610,7 +1610,7 @@ const LOCAL_ORGS = [
       summary: "Community trust model supporting local philanthropy, resident-driven improvement projects, and civic investment in outlying communities across the West End and surrounding areas.",
       website: "https://loneconelegacy.org/",
       donate: "https://loneconelegacy.org/ways-to-donate",
-      social: {},
+      social: { facebook: "https://www.facebook.com/LoneConeLegacy/" },
       logo: "https://livabletelluride.org/logo/Norwood.png"
     },
     {
@@ -1619,7 +1619,7 @@ const LOCAL_ORGS = [
       summary: "Southwest Colorado's leading wilderness conservation organization. Works to protect public lands, wildlife, and wild places in the San Juan Mountains and surrounding region through advocacy, education, and community engagement.",
       website: "https://www.sheepmountainalliance.org/",
       donate: "https://www.sheepmountainalliance.org/donate",
-      social: {},
+      social: { facebook: "https://www.facebook.com/SheepMountainAlliance/", instagram: "https://www.instagram.com/sheepmountainalliance/", twitter: "https://twitter.com/sheepmtn" },
       logo: "https://livabletelluride.org/logo/sheep-mountain.png"
     },
     {
@@ -1629,7 +1629,7 @@ const LOCAL_ORGS = [
       summary: "Community arts, culture, and performance venue in Ridgway hosting music, film, theater, lectures, community gatherings, and educational events for the broader San Juan region.",
       website: "https://sherbino.org/",
       donate: "https://sherbino.org/contribute/",
-      social: {},
+      social: { facebook: "https://www.facebook.com/SherbinoTheater", instagram: "https://www.instagram.com/thesherbino/", twitter: "https://twitter.com/SherbinoTheater" },
       logo: "https://livabletelluride.org/logo/Sherbino.png"
     },
     {
@@ -1639,7 +1639,7 @@ const LOCAL_ORGS = [
       summary: "Community foundation serving the Telluride region since 2000. Provides grants to local nonprofits, hosts community events and public forums, runs youth programs, and fosters economic vitality and quality of life across the San Miguel Basin.",
       website: "https://telluridefoundation.org/",
       donate: "https://telluridefoundation.org/donate/",
-      social: {},
+      social: { facebook: "https://www.facebook.com/TellurideFoundation/", instagram: "https://www.instagram.com/telluridefoundation/", twitter: "https://twitter.com/TellurideFound" },
       logo: "https://livabletelluride.org/logo/tf-foundation.png"
     },
     {
@@ -1648,7 +1648,7 @@ const LOCAL_ORGS = [
       town: "Norwood",
       summary: "Provides fire protection, emergency response, rescue, and public safety services for Norwood and the surrounding Wright's Mesa area. Volunteers welcome.",
       website: "https://norwoodfiredistrict.org/",
-      social: {},
+      social: { facebook: "https://www.facebook.com/Norwood-Fire-Protection-District-265734354230444", instagram: "https://www.instagram.com/nfpdco/" },
       logo: "https://livabletelluride.org/logo/Norwood%20Fire.jpeg"
     },
     {
@@ -1657,7 +1657,7 @@ const LOCAL_ORGS = [
       town: "Mountain Village",
       summary: "Service club supporting scholarships, Youth Exchange, international projects, and community grants through the Telluride Rotary Foundation. \"Mountain High Service.\"",
       website: "https://portal.clubrunner.ca/3291",
-      social: {},
+      social: { facebook: "https://www.facebook.com/telluriderotary/", instagram: "https://www.instagram.com/telluriderotary/" },
       logo: "https://clubrunner.blob.core.windows.net/00000003291/thumb/ClubLogo/clublogo.png"
     },
     {
@@ -1711,7 +1711,7 @@ const LOCAL_ORGS = [
       summary: "Supports youth skiing and snowboarding through competitive programs, coaching, training camps, and mountain-sports development for athletes across the region.",
       website: "https://tssc.org/",
       donate: "https://www.tssc.org/donate",
-      social: {},
+      social: { instagram: "https://www.instagram.com/tellurideskisnowboardclub/" },
       logo: "https://livabletelluride.org/logo/Telluride%20Ski%20Club.webp"
     },
     {
@@ -1740,7 +1740,7 @@ const LOCAL_ORGS = [
       summary: "Provides STEM education, science programs, youth internships, educational outreach, and hands-on learning opportunities for young people in Telluride and the surrounding region.",
       website: "https://www.pinheadinstitute.org/",
       donate: "https://www.pinheadinstitute.org/donate/",
-      social: {},
+      social: { facebook: "https://www.facebook.com/pages/Pinhead-Institute-A-Smithsonian-Affiliate/139925686059706", instagram: "https://www.instagram.com/pinheadinstitute/", youtube: "https://www.youtube.com/channel/UCzRuty1yIKquRiWGgYj-7yA" },
       logo: "https://livabletelluride.org/logo/Pinhead.png"
     },
     {
@@ -1750,7 +1750,7 @@ const LOCAL_ORGS = [
       summary: "Provides youth-development programs, after-school enrichment, outdoor experiences, mentoring, and leadership support for young people in Norwood, Nucla, Naturita, Telluride, and surrounding communities.",
       website: "https://www.truenorthyouthprogram.org/",
       donate: "https://www.coloradogives.org/organization/TrueNorthYouthProgram",
-      social: {},
+      social: { facebook: "https://www.facebook.com/truenorthyouthprogram/", instagram: "https://www.instagram.com/truenorthyouthprogram/" },
       logo: "https://livabletelluride.org/logo/True%20North.png"
     },
     {
@@ -1776,7 +1776,7 @@ const LOCAL_ORGS = [
       town: "Nucla/Naturita",
       summary: "Promotes local businesses, community events, tourism, and West End identity for Nucla, Naturita, Redvale, Bedrock, Paradox, and nearby communities.",
       website: "https://nucla-naturita.com/",
-      social: {},
+      social: { facebook: "https://www.facebook.com/NuclaNaturitaAreaChamberofCommerce" },
       logo: "https://livabletelluride.org/logo/Nucla%20Chamber.jpg"
     },
     {
@@ -1785,7 +1785,7 @@ const LOCAL_ORGS = [
       town: "Ridgway",
       summary: "Supports local businesses, tourism, community events, visitor information, and regional economic activity in Ridgway and the surrounding area.",
       website: "https://ridgwaycolorado.com/",
-      social: {},
+      social: { facebook: "https://www.facebook.com/visitridgwaycolorado", instagram: "https://www.instagram.com/ridgwaycolorado/" },
       logo: "https://livabletelluride.org/logo/Ridgway%20Chamber.png"
     },
     {
@@ -1808,6 +1808,16 @@ const LOCAL_ORGS = [
       logo: "https://livabletelluride.org/logo/Church.png"
     },
     {
+      name: "Telluride Jewish Community",
+      category: "churches",
+      town: "Telluride",
+      summary: "A lay-led, informal Jewish community serving the Telluride region for 40 years. Welcomes full-time, part-time, and visiting members with Shabbat services, holiday celebrations, youth programs, and cultural events. 501(c)(3) nonprofit; no dues.",
+      website: "https://www.telluridejewishcommunity.com/",
+      donate: "https://www.telluridejewishcommunity.com/new-page-1",
+      social: { email: "mailto:info@telluridejewishcommunity.com" },
+      logo: "https://livabletelluride.org/logo/Telluride%20Jewish.webp"
+    },
+    {
       name: "Telluride Christian Fellowship",
       category: "churches",
       summary: "Non-denominational Christian church serving the Telluride community with worship services, community outreach, and fellowship programs in a welcoming mountain-town setting.",
@@ -1816,4 +1826,45 @@ const LOCAL_ORGS = [
       social: {},
       logo: "https://livabletelluride.org/logo/Church.png"
     }
+];
+
+/* ── Telluride Jewish Community events — bot will refresh this ── */
+/* Source: https://www.telluridejewishcommunity.com/events?format=json
+   The fetchTellurideJewishEvents() helper in gov-hub.js prefers this const
+   over the live JSON fetch when present. v2/events.html reads TJC_EVENTS
+   directly via data-only.js extraction. */
+const TJC_EVENTS = [
+  {
+    title: "Shabbat!",
+    link: "https://www.telluridejewishcommunity.com/events/2026/6/5/shabbat",
+    description: "Monthly Kabbalat Shabbat service and potluck dinner. Details to be announced soon. All are welcome \u2014 full-time, part-time, and visiting members.",
+    pubDate: new Date("2026-06-05T17:00:00"),
+    source: "tjc",
+    sourceLabel: "Telluride Jewish Community",
+    category: "Community Event",
+    location: "Telluride Jewish Community, Telluride, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Shabbat!",
+    link: "https://www.telluridejewishcommunity.com/events/2026/7/31/shabbat",
+    description: "Monthly Kabbalat Shabbat service and potluck dinner. Details to be announced soon.",
+    pubDate: new Date("2026-07-31T18:00:00"),
+    source: "tjc",
+    sourceLabel: "Telluride Jewish Community",
+    category: "Community Event",
+    location: "Telluride Jewish Community, Telluride, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Shabbat!",
+    link: "https://www.telluridejewishcommunity.com/events/2026/8/28/shabbat",
+    description: "Monthly Kabbalat Shabbat service and potluck dinner. Details to be announced.",
+    pubDate: new Date("2026-08-28T18:00:00"),
+    source: "tjc",
+    sourceLabel: "Telluride Jewish Community",
+    category: "Community Event",
+    location: "Telluride Jewish Community, Telluride, CO",
+    imageUrl: ""
+  }
 ];
