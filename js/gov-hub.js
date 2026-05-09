@@ -4022,7 +4022,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Nature Nurture for Moms with Lauren Norton",
     link: "https://koto.org/event/nature-nurture-for-moms-with-lauren-norton/",
-    description: "Connect with Mother Nature on this Mother's Day 2026. Join Lauren Kaas Norton for a guided outdoor experience designed to help you slow down, ground yourself, and reconnect with the natural world. Through gentle breathwork, mindful movement, and guided reflection, you’ll explore a new way of being in relationship with the land rooted in presence, awareness, and reciprocity. This experience is open to anyone curious about deepening their connection to nature, whether you’re new to these practices or already walking this path. …",
+    description: "Connect with Mother Nature on this Mother's Day 2026. Join Lauren Kaas Norton for a guided outdoor experience designed to help you slow down, ground yourself, and reconnect with the natural world. Through gentle breathwork, mindful movement, and guided reflection, you’ll explore a new way of being in relationship with the land rooted in presence, awareness, and reciprocity. This experience is open to anyone curious about deepening their connection to nature, whether you’re new to these practices or already walking this path. Come as you are, and leave feeling more centered, supported, and connected.",
     pubDate: "2026-05-10T12:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4110,7 +4110,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Free Legal Clinic – Clínica Jurídica Gratuita",
     link: "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-05-12/",
-    description: "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. …",
+    description: "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
     pubDate: "2026-05-12T16:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4154,7 +4154,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Mountain Village annual Community Clean Up Days",
     link: "https://koto.org/event/mountain-village-annual-community-clean-up-days/2026-05-13/",
-    description: "Mountain Village hosts its annual Community Clean Up Day, this year expanding to two days in two different parts of the community! On Wednesday, May 13, Clean Up Day will take place in Village Court Apartments and on Thursday, May 14, a second Clean Up Day will take place in the Meadows Neighborhood. The entire community is invited to participate in either or both of these events. Schedule for each day: Volunteer Registration: Begins at 2:30 p.m. Clean Up: 3 p.m.-5 p.m. …",
+    description: "Mountain Village hosts its annual Community Clean Up Day, this year expanding to two days in two different parts of the community! On Wednesday, May 13, Clean Up Day will take place in Village Court Apartments and on Thursday, May 14, a second Clean Up Day will take place in the Meadows Neighborhood. The entire community is invited to participate in either or both of these events. Schedule for each day: Volunteer Registration: Begins at 2:30 p.m. Clean Up: 3 p.m.-5 p.m. – Clean Up in assigned area Gift Card Raffle: bring your trash back to have your name entered into a raffle for $50 Village Market gift cards at 5:15 p.m.",
     pubDate: "2026-05-13T14:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4198,7 +4198,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Mountain Village annual Community Clean Up Days",
     link: "https://koto.org/event/mountain-village-annual-community-clean-up-days/2026-05-14/",
-    description: "Mountain Village hosts its annual Community Clean Up Day, this year expanding to two days in two different parts of the community! On Wednesday, May 13, Clean Up Day will take place in Village Court Apartments and on Thursday, May 14, a second Clean Up Day will take place in the Meadows Neighborhood. The entire community is invited to participate in either or both of these events. Schedule for each day: Volunteer Registration: Begins at 2:30 p.m. Clean Up: 3 p.m.-5 p.m. …",
+    description: "Mountain Village hosts its annual Community Clean Up Day, this year expanding to two days in two different parts of the community! On Wednesday, May 13, Clean Up Day will take place in Village Court Apartments and on Thursday, May 14, a second Clean Up Day will take place in the Meadows Neighborhood. The entire community is invited to participate in either or both of these events. Schedule for each day: Volunteer Registration: Begins at 2:30 p.m. Clean Up: 3 p.m.-5 p.m. – Clean Up in assigned area Gift Card Raffle: bring your trash back to have your name entered into a raffle for $50 Village Market gift cards at 5:15 p.m.",
     pubDate: "2026-05-14T14:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4209,7 +4209,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "The Creative Exchange at Telluride Arts HQ",
     link: "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-05-14/",
-    description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. …",
+    description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. Topics may span everything from the business of art and professional development, to creative process, storytelling, collaboration, and the philosophical underpinnings of making art. Whether you’re a full-time working artist, an educator, a student, a maker, or simply someone curious about creative expression, the Creative Exchange is open to you. …",
     pubDate: "2026-05-14T17:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4253,7 +4253,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Up-off Gymnastics, Dance, and Spanish",
     link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-05-15/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. …",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
     pubDate: "2026-05-15T10:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4286,7 +4286,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Clown Sex Ed (Telluride Theatre FRINGE Project)",
     link: "https://koto.org/event/clown-sex-ed-telluride-theatre-fringe-project/2026-05-15/",
-    description: "Clown Sex Ed is a hilarious romp through the challenges, failures and horror stories of American sex education. Tara Demmy and Zachary Chiero poke fun at your gym teacher, your health class and your parents' awkward talk and examine not only what they said but more importantly what they left out. Produced by Durango-based Oddball Theatre Company, this off-the-walls comedy \"makes the uncomfortable uproariously funny\" (Broad Street Review). A limited number of Pay-What-You-Can tickets are available per performance. …",
+    description: "Clown Sex Ed is a hilarious romp through the challenges, failures and horror stories of American sex education. Tara Demmy and Zachary Chiero poke fun at your gym teacher, your health class and your parents' awkward talk and examine not only what they said but more importantly what they left out. Produced by Durango-based Oddball Theatre Company, this off-the-walls comedy \"makes the uncomfortable uproariously funny\" (Broad Street Review). A limited number of Pay-What-You-Can tickets are available per performance. — About Telluride Theatre FRINGE Projects: First launched in 1947, the Edinburgh Fringe Festival provided independent artists a platform to share their work, ranging from new musicals, small immersive performances, and everything in-between. In the spirit of the Fringe, Telluride Theatre is launching a new year-round program: The FRINGE Project. Applications are open to local artists with performance proposals for small-to-medium sized productions of ALL styles.",
     pubDate: "2026-05-15T19:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4319,7 +4319,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Clown Sex Ed (Telluride Theatre FRINGE Project)",
     link: "https://koto.org/event/clown-sex-ed-telluride-theatre-fringe-project/2026-05-16/",
-    description: "Clown Sex Ed is a hilarious romp through the challenges, failures and horror stories of American sex education. Tara Demmy and Zachary Chiero poke fun at your gym teacher, your health class and your parents' awkward talk and examine not only what they said but more importantly what they left out. Produced by Durango-based Oddball Theatre Company, this off-the-walls comedy \"makes the uncomfortable uproariously funny\" (Broad Street Review). A limited number of Pay-What-You-Can tickets are available per performance. …",
+    description: "Clown Sex Ed is a hilarious romp through the challenges, failures and horror stories of American sex education. Tara Demmy and Zachary Chiero poke fun at your gym teacher, your health class and your parents' awkward talk and examine not only what they said but more importantly what they left out. Produced by Durango-based Oddball Theatre Company, this off-the-walls comedy \"makes the uncomfortable uproariously funny\" (Broad Street Review). A limited number of Pay-What-You-Can tickets are available per performance. — About Telluride Theatre FRINGE Projects: First launched in 1947, the Edinburgh Fringe Festival provided independent artists a platform to share their work, ranging from new musicals, small immersive performances, and everything in-between. In the spirit of the Fringe, Telluride Theatre is launching a new year-round program: The FRINGE Project. Applications are open to local artists with performance proposals for small-to-medium sized productions of ALL styles.",
     pubDate: "2026-05-16T19:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4396,7 +4396,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Money Reset: Getting Your Budget on Track – A Free Financial Literacy Class",
     link: "https://koto.org/event/money-reset-getting-your-budget-on-track-a-free-financial-literacy-class/2026-05-18/1/",
-    description: "The Telluride Foundation is partnering with four local banks, the Wilkinson Library, and Collaborative Action for Immigrants (CAFI) to offer a free financial literacy class, in both English and Spanish, on Monday, May 18. The English workshop will be held from noon to 1:30 p.m. in the Program Room at the Wilkinson Public Library, with lunch provided, and is also available via Zoom. …",
+    description: "The Telluride Foundation is partnering with four local banks, the Wilkinson Library, and Collaborative Action for Immigrants (CAFI) to offer a free financial literacy class, in both English and Spanish, on Monday, May 18. The English workshop will be held from noon to 1:30 p.m. in the Program Room at the Wilkinson Public Library, with lunch provided, and is also available via Zoom. For those attending the afternoon session via Zoom, participants located in the Norwood/Nucla/Naturita area can go to Citizens State Bank, Naturita branch, where they will be live-streaming the event and providing light food and drink. The Spanish workshop runs from 5:30 to 7:00 p.m. in the Library's Program Room, with light food and childcare provided. Classes are free and open to the public, and registration for all classes (Zoom, Citizens State Bank, or in-person) is requested: https://forms.gle/CjepTJxqoCfGwdt17",
     pubDate: "2026-05-18T12:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4418,7 +4418,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Money Reset: Getting Your Budget on Track – A Free Financial Literacy Class",
     link: "https://koto.org/event/money-reset-getting-your-budget-on-track-a-free-financial-literacy-class/2026-05-18/2/",
-    description: "The Telluride Foundation is partnering with four local banks, the Wilkinson Library, and Collaborative Action for Immigrants (CAFI) to offer a free financial literacy class, in both English and Spanish, on Monday, May 18. The English workshop will be held from noon to 1:30 p.m. in the Program Room at the Wilkinson Public Library, with lunch provided, and is also available via Zoom. …",
+    description: "The Telluride Foundation is partnering with four local banks, the Wilkinson Library, and Collaborative Action for Immigrants (CAFI) to offer a free financial literacy class, in both English and Spanish, on Monday, May 18. The English workshop will be held from noon to 1:30 p.m. in the Program Room at the Wilkinson Public Library, with lunch provided, and is also available via Zoom. For those attending the afternoon session via Zoom, participants located in the Norwood/Nucla/Naturita area can go to Citizens State Bank, Naturita branch, where they will be live-streaming the event and providing light food and drink. The Spanish workshop runs from 5:30 to 7:00 p.m. in the Library's Program Room, with light food and childcare provided. Classes are free and open to the public, and registration for all classes (Zoom, Citizens State Bank, or in-person) is requested: https://forms.gle/CjepTJxqoCfGwdt17",
     pubDate: "2026-05-18T17:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4429,7 +4429,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "The Listening Club: The Cure's Disintegration w/ Sam Burgess",
     link: "https://koto.org/event/the-listening-club-the-cures-disintegration-w-sam-burgess/",
-    description: "Take some time to listen to the month's featured album. Then, join The Listening Club the fourth Monday of each month for a deep discussion of the album lead by your album guide for the evening. Your knowledgeable guide will bring you cultural, historical, and musical context that will surprise and delight you, as well as bring you a greater understanding of the music you are hearing. It's like a book club, but for albums! Come join the fun at Telluride Music Company and get into a raffle for a vinyl copy of the month's featured album and enjoy some FREE pizza with the discussion. …",
+    description: "Take some time to listen to the month's featured album. Then, join The Listening Club the fourth Monday of each month for a deep discussion of the album lead by your album guide for the evening. Your knowledgeable guide will bring you cultural, historical, and musical context that will surprise and delight you, as well as bring you a greater understanding of the music you are hearing. It's like a book club, but for albums! Come join the fun at Telluride Music Company and get into a raffle for a vinyl copy of the month's featured album and enjoy some FREE pizza with the discussion. Bring your own beverage. (Signing up here in advance helps us know how much pizza to order!)",
     pubDate: "2026-05-18T18:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4495,7 +4495,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Plant Party Kick off!",
     link: "https://koto.org/event/plant-party-kick-off/",
-    description: "Kick off our new Plant Party series with inspiration from For The Love of House Plants! This first gathering celebrates all things green-whether you're nurturing your first pathos or managing a full indoor jungle. We'll explore simple care tips, share plant stories, and connect with fellow plant enthusiasts in a relaxed welcoming space. Come ready to learn, swap ideas, and grow your love of houseplants. The first 10 people to sign up will receive a free copy of the book! Don't worry, you do not need the book to participate we will have plenty of information and fun for everyone. …",
+    description: "Kick off our new Plant Party series with inspiration from For The Love of House Plants! This first gathering celebrates all things green-whether you're nurturing your first pathos or managing a full indoor jungle. We'll explore simple care tips, share plant stories, and connect with fellow plant enthusiasts in a relaxed welcoming space. Come ready to learn, swap ideas, and grow your love of houseplants. The first 10 people to sign up will receive a free copy of the book! Don't worry, you do not need the book to participate we will have plenty of information and fun for everyone. We also have a fun, free plant craft for the first meeting!",
     pubDate: "2026-05-20T17:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4528,26 +4528,37 @@ const KOTO_COMMUNITY_EVENTS = [
 ];
 const WILKINSON_EVENTS = [
   {
-    title: "You & Me / Tu y Yo",
-    link: "https://telluridelibrary.libcal.com/event/15184967?hs=a",
-    description: "10:30 AM – 11:00 AM · Join us every Friday for a fun and engaging parent-child program designed for preschoolers! Each week, we explore a new theme through hands-on activities that spark creativity, curiosity, and learning.  1st Friday: Art - Get creative with fun art projects designed for little hands! 2nd Friday: Toddler Chef - Stir, mix, and create easy, tasty treats while learning basic kitchen skills. 3rd Friday: STEM - Dive into simple science, technology, engineering, and math experiments that inspire wonder. 4th Friday: Crafts - Enjoy making fun crafts together. …",
-    pubDate: "2026-05-08T10:30:00.000Z",
+    title: "Safe @ Home",
+    link: "https://telluridelibrary.libcal.com/event/16273538?hs=a",
+    description: "9:30 AM – 11:00 AM · This course will provide basic skills to ensure that your child remains safe when home alone for short periods of time. for 3rd graders and up (parents are encouraged to attend). Este curso proporcionar&aacute; habilidades b&aacute;sicas para garantizar que su hijo permanezca seguro cuando est&eacute; solo en casa por per&iacute;odos cortos de tiempo. para estudiantes de 3 grado en adelante (Se recomienda asistencia de padres)",
+    pubDate: "2026-05-09T09:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_22_17_09_43.png"
+  },
+  {
+    title: "CANCELLED - Balance in Motion - Equilibrio en Movimiento",
+    link: "https://telluridelibrary.libcal.com/event/16535297?hs=a",
+    description: "10:00 AM – 11:00 AM · Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Mu&eacute;vase, respire y ll&eacute;nese de energ&iacute;a en esta din&aacute;mica clase biling&uuml;e, dirigido por Lauren Norton, dise&ntilde;ada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energ&iacute;a de la danza, y la presencia equilibrante del yoga y la respiraci&oacute;n, esta sesi&oacute;n le dejar&aacute; sinti&eacute;ndose fuerte, en armon&iacute;a y revitalizado/a. …",
+    pubDate: "2026-05-09T10:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755554174.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1740003527.jpg"
   },
   {
-    title: "Teen Ping Pong",
-    link: "https://telluridelibrary.libcal.com/event/15976839?hs=a",
-    description: "4:00 PM – 6:00 PM · Come stop by the library every Friday after school for open Ping Pong for Teenagers in the Magazine Room.",
-    pubDate: "2026-05-08T16:00:00.000Z",
+    title: "Creación de Tarjetas en Familia • Family Card making Day",
+    link: "https://telluridelibrary.libcal.com/event/16825037?hs=a",
+    description: "2:30 PM – 4:00 PM · Haz una Tarjetas para el D&iacute;a de las Madres o para alguien que ames! &bull; Make a card for Mother&#39;s Day or for anyone you love!",
+    pubDate: "2026-05-09T14:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1765562739.png"
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_01_13_20_11.jpeg"
   }
 ];
 const HUMANE_SOCIETY_ANIMALS = [
