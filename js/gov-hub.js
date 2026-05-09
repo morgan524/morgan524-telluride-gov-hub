@@ -1853,17 +1853,6 @@ const OURAY_COUNTY_EVENTS = [
     category: "Community Event",
     location: "Montrose County Event Center - 1036 N 7th St Montrose CO 81401",
     imageUrl: ""
-  },
-  {
-    title: "Wildfire Aware Fair",
-    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3636",
-    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3636",
-    pubDate: "2026-05-09T12:00:00.000Z",
-    source: "ouraycounty",
-    sourceLabel: "Ouray County",
-    category: "Community Event",
-    location: "Log Hill Fire Station - 434 Ponderosa Drive Ridgway CO 81432",
-    imageUrl: ""
   }
 ];
 
@@ -3180,6 +3169,17 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "A Frontier plane hits a pedestrian during takeoff at Denver airport",
+    source: "Telluride Times",
+    date: "May 9, 2026",
+    firstSeen: "2026-05-09",
+    newsTopic: "community",
+    copy: "A Frontier Airlines plane struck a pedestrian during takeoff at Denver International Airport, forcing an emergency stop and evacuation of 231 people on board. The pilot reported an engine fire and smoke in the cabin, leading to passengers evacuating via emergency slides onto the runway.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_ce4f636a-272a-57ad-8442-17632581041f.html",
+    img: ""
+  },
+  {
     title: "‘Telluride: A Legacy of Legacies’",
     source: "Telluride Times",
     date: "May 8, 2026",
@@ -3719,17 +3719,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/7e/37efb440-e66f-5d94-a2bc-43449e73e748/69f1e9285fdc5.image.jpg?resize=300%2C200"
   },
   {
-    title: "Lady Miners lose 4-0 to Crested Butte",
-    source: "Telluride Times",
-    date: "April 29, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "education",
-    copy: "The Lady Miners fell 4-0 to top-ranked Crested Butte at home, though they kept it close at 1-0 through halftime after both teams returned from spring break looking rusty. Telluride managed only a few shot attempts while fatigue became a factor as Crested Butte pulled away in the second half.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_1547cf0b-aff1-4760-ad71-a65da629237d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/78/97808b59-fa26-4d43-b82e-f3a51e40c652/69efd9a9df84d.image.jpg?resize=300%2C200"
-  },
-  {
     title: "County Planning Commission 5/14 Meeting in TELLURIDE",
     source: "San Miguel County",
     date: "May 1, 2026",
@@ -3986,28 +3975,6 @@ const COMMUNITY_EVENTS = [
 
 // ── Bot-managed event arrays (populated every 6h by content-refresh.js) ──
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Placerville Community Yard Sale",
-    link: "https://koto.org/event/placerville-community-yard-sale/",
-    description: "The Placerville Community Yard Sale is happening on Saturday, May 9, starting at 9 a.m. The weather should be perfect!",
-    pubDate: "2026-05-09T09:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Bilingual Balance in Motion",
-    link: "https://koto.org/event/bilingual-balance-in-motion/2026-05-09/",
-    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
-    pubDate: "2026-05-09T10:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
-  },
   {
     title: "Gentle Yoga with Kristin Milord",
     link: "https://koto.org/event/gentle-yoga-with-kristin-milord-2/2026-05-10/",
