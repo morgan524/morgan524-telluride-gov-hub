@@ -3004,6 +3004,11 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
     if (btn.dataset.tab === 'land-use') renderLandUseTab();
     if (btn.dataset.tab === 'local-news') renderLocalNews(null, currentLocalNewsFilter);
+    // Re-render Legal Notices on tab-switch — the initial page-load render
+    // can race with the legals data load, leaving the tab empty if user
+    // clicks before init finishes. Re-rendering on click is idempotent
+    // and guarantees content.
+    if (btn.dataset.tab === 'legals') renderLegalNoticesWithTopic();
     // Toggle left-sidebar cards per tab
     const wtfBar = document.getElementById('whatToFollowBar');
     const submitCard = document.getElementById('sidebarSubmitEvent');
@@ -4748,6 +4753,9 @@ function collectLocalNewsArticles() {
   if (typeof TELLURIDE_TIMES_ARTICLES !== 'undefined') {
     TELLURIDE_TIMES_ARTICLES.forEach(a => {
       if (!a.href && !a.title) return;
+      // Skip legal-notice roundup articles ("Legals and Public Notices for ...")
+      // — already covered by the dedicated Legal Notices tab.
+      if (/^Legals?\b.*Notices?\b/i.test(a.title || '')) return;
       const pubDate = a.date ? new Date(a.date) : null;
       if (!pubDate || pubDate < cutoffDate) return;
       articles.push({
