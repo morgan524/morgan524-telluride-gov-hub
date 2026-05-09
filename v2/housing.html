@@ -167,6 +167,12 @@
       object-fit: cover;
       display: block;
     }
+    .house-img-wrap .house-map {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
     .type-pill {
       position: absolute;
       top: 12px;
@@ -509,9 +515,17 @@
     }
 
     function houseCard(l) {
-      const img = l.img
-        ? '<img src="' + l.img + '" alt="' + (l.title || '') + '" onerror="this.style.display=\'none\'">'
-        : '';
+      // Visual top of card: map (if we have lat/lng), else photo (if any), else nothing.
+      let visualHtml = '';
+      if (l.lat != null && l.lng != null) {
+        const bbox = (l.lng - 0.008) + ',' + (l.lat - 0.005) + ',' + (l.lng + 0.008) + ',' + (l.lat + 0.005);
+        const mapSrc = 'https://www.openstreetmap.org/export/embed.html?bbox=' + bbox
+          + '&layer=mapnik&marker=' + l.lat + ',' + l.lng;
+        visualHtml = '<iframe class="house-map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" '
+          + 'src="' + mapSrc + '" title="Map: ' + (l.title || '') + '"></iframe>';
+      } else if (l.img) {
+        visualHtml = '<img src="' + l.img + '" alt="' + (l.title || '') + '" onerror="this.style.display=\'none\'">';
+      }
       const pill = '<span class="' + pillClass(l.type) + '">' + (l.typeLabel || l.type || 'Available') + '</span>';
       const price = l.price ? '<div class="house-price">' + l.price + '</div>' : '';
       const beds = l.beds ? '<div class="house-beds">' + l.beds + (l.location ? ' • ' + l.location : '') + '</div>' : '';
@@ -551,7 +565,7 @@
       }
 
       return '<article class="house-card">'
-           + '<div class="house-img-wrap">' + pill + img + '</div>'
+           + '<div class="house-img-wrap">' + pill + visualHtml + '</div>'
            + '<div class="house-body">'
            +   '<div class="house-title-row">'
            +     '<h2 class="house-title">' + l.title + '</h2>'
@@ -629,6 +643,8 @@
               beds: l.beds || '',
               address: l.address || '',                              // full street address
               location: locationFromAddress(l.address) || '',         // town label for filter
+              lat: typeof l.lat === 'number' ? l.lat : null,          // for inline map
+              lng: typeof l.lng === 'number' ? l.lng : null,
               summary: l.note || '',                                  // body summary only
               eligibility: l.eligibility || '',                       // shown in lottery block
               deadline: l.deadline || '',
@@ -638,7 +654,7 @@
               url: l.url || '#',                                      // primary listing URL
               applyUrl: l.applyUrl || '',                             // distinct apply URL (lottery)
               contact: l.contact || null,                             // {phone, email}
-              img: ''   // no images in HOUSING_LISTINGS yet — type pill carries the visual cue
+              img: ''
             }));
             if (live.length > 0) {
               LISTINGS = live;
