@@ -109,26 +109,29 @@ function fullDate(d) {
 }
 
 
-// Smart truncation for event card descriptions — caps text at maxLen, cutting
-// at the nearest sentence boundary (or word boundary, or hard cut), then
-// appending "…". Avoids mid-word breaks. Mirrors the helper in
-// scripts/content-refresh.js — keep them in sync.
-function smartTruncate(text, maxLen) {
+// Smart truncation for event card descriptions — caps text at maxWords words,
+// preferring a sentence boundary, then a word boundary. Always appends " …"
+// when truncated. Mirrors the helper in scripts/content-refresh.js — keep
+// them in sync. Word-based (not char-based) per Morgan's spec — "150 words
+// or less" applies uniformly across every event source.
+function smartTruncate(text, maxWords) {
   if (!text) return text;
   const t = String(text).trim();
-  if (t.length <= maxLen) return t;
-  const candidate = t.slice(0, maxLen);
+  const words = t.split(/\s+/);
+  if (words.length <= maxWords) return t;
+  const truncated = words.slice(0, maxWords).join(' ');
+  // Prefer cutting at the last sentence boundary that lands ≥60% through
+  // the word budget — keeps cards from ending mid-thought.
   const sentEnd = Math.max(
-    candidate.lastIndexOf('. '),
-    candidate.lastIndexOf('! '),
-    candidate.lastIndexOf('? ')
+    truncated.lastIndexOf('. '),
+    truncated.lastIndexOf('! '),
+    truncated.lastIndexOf('? ')
   );
-  if (sentEnd > maxLen * 0.6) return t.slice(0, sentEnd + 1).trim() + ' …';
-  const wordEnd = candidate.lastIndexOf(' ');
-  if (wordEnd > maxLen * 0.6) return t.slice(0, wordEnd).trim() + ' …';
-  return candidate.replace(/\s+\S*$/, '').trim() + ' …';
+  const minBoundary = Math.floor(truncated.length * 0.6);
+  if (sentEnd > minBoundary) return truncated.slice(0, sentEnd + 1).trim() + ' …';
+  return truncated.trim() + ' …';
 }
-const EVENT_DESC_MAX = 600;
+const EVENT_DESC_MAX = 150;
 
 function dateGroupKey(d) {
   if (typeof d === 'string') d = new Date(d);
@@ -1603,7 +1606,7 @@ async function fetchCommunityEvents() {
         events.push({
           title: name,
           link: get('URL') || get('Website') || '',
-          description: get('Description') || '',
+          description: smartTruncate(get('Description') || '', EVENT_DESC_MAX),
           pubDate: pubDate,
           source: 'community',
           sourceLabel: 'Community',
@@ -1652,8 +1655,8 @@ async function fetchTellurideJewishEvents() {
       return {
         title: (ev.title || '').trim(),
         link: ev.fullUrl ? 'https://www.telluridejewishcommunity.com' + ev.fullUrl : 'https://www.telluridejewishcommunity.com/events',
-        description: (ev.excerpt || '').trim(),
-        summary: (ev.excerpt || '').trim(),
+        description: smartTruncate((ev.excerpt || '').trim(), EVENT_DESC_MAX),
+        summary: (ev.excerpt || '').trim().slice(0, 280),
         pubDate: ev.startDate ? new Date(ev.startDate) : null,
         source: 'tjc',
         sourceLabel: 'Telluride Jewish Community',
@@ -1703,8 +1706,8 @@ async function fetchEcoActionEvents() {
       return {
         title: (ev.title || '').trim(),
         link: ev.fullUrl ? 'https://ecoactionpartners.org' + ev.fullUrl : 'https://ecoactionpartners.org/events',
-        description: (ev.excerpt || '').trim(),
-        summary: (ev.excerpt || '').trim(),
+        description: smartTruncate((ev.excerpt || '').trim(), EVENT_DESC_MAX),
+        summary: (ev.excerpt || '').trim().slice(0, 280),
         pubDate: ev.startDate ? new Date(ev.startDate) : null,
         source: 'eco',
         sourceLabel: 'EcoAction Partners',
@@ -1715,6 +1718,47 @@ async function fetchEcoActionEvents() {
     }).filter(it => it.title && it.pubDate);
   } catch (err) {
     console.warn('[GovHub] EcoAction events fetch failed:', err.message);
+    return [];
+  }
+}
+
+
+// ── Fetch Alibi Telluride events ──
+// alibitelluride.com is a Squarespace site with the standard
+// /calendar?format=json endpoint (same pattern as TJC and EcoAction).
+async function fetchAlibiEvents() {
+  const ALIBI_URL = 'https://www.alibitelluride.com/calendar?format=json';
+  try {
+    let json;
+    try {
+      const resp = await fetch(CODETABS_PROXY + encodeURIComponent(ALIBI_URL));
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      json = await resp.json();
+    } catch (e1) {
+      const resp2 = await fetch(ALLORIGINS_PROXY + encodeURIComponent(ALIBI_URL));
+      if (!resp2.ok) throw new Error('Fallback HTTP ' + resp2.status);
+      json = await resp2.json();
+    }
+    const upcoming = Array.isArray(json && json.upcoming) ? json.upcoming : [];
+    return upcoming.map(ev => {
+      const loc = ev.location || {};
+      const locParts = [loc.addressTitle, loc.addressLine1, loc.addressLine2].filter(Boolean);
+      const locStr = locParts.length ? locParts.join(', ') : 'Alibi, Telluride, CO';
+      return {
+        title: (ev.title || '').trim(),
+        link: ev.fullUrl ? 'https://www.alibitelluride.com' + ev.fullUrl : 'https://www.alibitelluride.com/calendar',
+        description: smartTruncate((ev.excerpt || '').trim(), EVENT_DESC_MAX),
+        summary: (ev.excerpt || '').trim().slice(0, 280),
+        pubDate: ev.startDate ? new Date(ev.startDate) : null,
+        source: 'alibi',
+        sourceLabel: 'Alibi Telluride',
+        category: 'Community Event',
+        location: locStr,
+        imageUrl: ev.assetUrl || ''
+      };
+    }).filter(it => it.title && it.pubDate);
+  } catch (err) {
+    console.warn('[GovHub] Alibi events fetch failed:', err.message);
     return [];
   }
 }
@@ -1869,6 +1913,9 @@ async function fetchOurayRidgwayEvents() {
         .replace(/\s+/g, ' ')
         .trim();
       if (/^https?:\/\/\S+$/.test(descClean)) descClean = '';
+      // Apply the 150-word cap (was being bypassed previously — Localist
+      // events with long class descriptions overflowed the card).
+      descClean = smartTruncate(descClean, EVENT_DESC_MAX);
       return {
         title: (ev.title || '').trim(),
         link: ev.url || `https://events.ourayridgwayevents.com/event/${ev.urlname || ev.id}`,
@@ -1963,6 +2010,7 @@ async function fetchAllNews() {
   const tjcResults = await fetchTellurideJewishEvents();
   const tfResults = fetchTellurideFoundationEvents();
   const ecoResults = await fetchEcoActionEvents();
+  const alibiResults = await fetchAlibiEvents();
   const sohResults = await fetchSheridanOperaHouseEvents();
   const elksResults = await fetchElksEvents();
   const orayResults = await fetchOurayRidgwayEvents();
@@ -2006,6 +2054,7 @@ async function fetchAllNews() {
     ...tjcResults,            // Telluride Jewish Community
     ...tfResults,             // Telluride Foundation
     ...ecoResults,            // EcoAction Partners
+    ...alibiResults,          // Alibi Telluride (music venue)
     ...sohResults,            // Sheridan Opera House
     ...elksResults,           // Telluride Elks Lodge
     ...orayResults,           // Ouray Ridgway Calendar (Localist)

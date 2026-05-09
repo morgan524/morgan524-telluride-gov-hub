@@ -33,25 +33,22 @@ const CLAUDE_MODEL = 'claude-sonnet-4-20250514';
 // boundary, or — last resort — hard cut), then appending "…". Avoids the
 // mid-word truncation users complained about ("...encouragement for s").
 // 600 chars ≈ 4-5 lines on a card; longer descriptions get visibly trimmed.
-function smartTruncate(text, maxLen) {
+function smartTruncate(text, maxWords) {
   if (!text) return text;
   const t = String(text).trim();
-  if (t.length <= maxLen) return t;
-  const candidate = t.slice(0, maxLen);
+  const words = t.split(/\s+/);
+  if (words.length <= maxWords) return t;
+  const truncated = words.slice(0, maxWords).join(' ');
   const sentEnd = Math.max(
-    candidate.lastIndexOf('. '),
-    candidate.lastIndexOf('! '),
-    candidate.lastIndexOf('? '),
-    candidate.lastIndexOf('.\n'),
-    candidate.lastIndexOf('!\n'),
-    candidate.lastIndexOf('?\n')
+    truncated.lastIndexOf('. '),
+    truncated.lastIndexOf('! '),
+    truncated.lastIndexOf('? ')
   );
-  if (sentEnd > maxLen * 0.6) return t.slice(0, sentEnd + 1).trim() + ' …';
-  const wordEnd = candidate.lastIndexOf(' ');
-  if (wordEnd > maxLen * 0.6) return t.slice(0, wordEnd).trim() + ' …';
-  return candidate.replace(/\s+\S*$/, '').trim() + ' …';
+  const minBoundary = Math.floor(truncated.length * 0.6);
+  if (sentEnd > minBoundary) return truncated.slice(0, sentEnd + 1).trim() + ' …';
+  return truncated.trim() + ' …';
 }
-const EVENT_DESC_MAX = 600;
+const EVENT_DESC_MAX = 150;
 
 const MAX_AGENDA_TEXT = 15000;
 const NEWS_MAX_AGE_DAYS = 14;
