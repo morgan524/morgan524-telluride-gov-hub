@@ -12,6 +12,7 @@
       --accent-green-soft: rgba(47, 122, 95, 0.12);
       --accent-green-border: rgba(47, 122, 95, 0.25);
       --gold: #b58a2c;
+      --gold-soft: rgba(181, 138, 44, 0.18);
       --bg-warm: #fdfbf6;
       --bg-hero: #efe9dc;
       --bg-paper: #fffdf9;
@@ -22,6 +23,7 @@
       --border-soft: rgba(33, 68, 60, 0.12);
       --border-card: rgba(33, 68, 60, 0.10);
       --shadow-card: 0 4px 18px rgba(36, 49, 46, 0.10);
+      --shadow-strong: 0 10px 30px rgba(36, 49, 46, 0.16);
       --font-heading: 'Georgia', 'Times New Roman', serif;
       --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
     }
@@ -38,19 +40,29 @@
     .topnav-links a:hover { color: var(--forest); }
     .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
 
-    /* ── Hero ── */
+    /* ── Hero — full-bleed banner with photo on right and cream-gradient text panel on left ── */
     .hero {
-      background: var(--bg-warm);
-      padding: 56px 0 40px;
+      position: relative;
+      background:
+        linear-gradient(90deg,
+          var(--bg-warm) 0%,
+          var(--bg-warm) 28%,
+          rgba(253, 251, 246, 0.85) 42%,
+          rgba(253, 251, 246, 0.0) 60%),
+        url('img/telluride-125.jpeg') no-repeat center right / cover,
+        var(--bg-hero);
+      min-height: 480px;
+      padding: 80px 0 120px;   /* extra bottom padding for props overlap */
+      overflow: hidden;
     }
     .hero-inner {
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 32px;
-      display: grid;
-      grid-template-columns: 1fr 1.15fr;
-      gap: 40px;
-      align-items: center;
+      position: relative;
+    }
+    .hero-text {
+      max-width: 480px;
     }
     .hero-overline {
       color: var(--gold);
@@ -74,27 +86,21 @@
       max-width: 460px;
       line-height: 1.55;
     }
-    .hero-photo {
-      width: 100%;
-      aspect-ratio: 5 / 3;
-      border-radius: 14px;
-      overflow: hidden;
-      background: var(--bg-hero) url('img/telluride-125.jpeg') no-repeat center center / cover;
-      box-shadow: var(--shadow-card);
-    }
 
-    /* ── Value-prop strip ── */
+    /* ── Value-prop strip — overlaps the bottom of the hero photo ── */
     .props {
       max-width: 1280px;
-      margin: 0 auto;
+      margin: -90px auto 0;     /* pulls strip up onto the bottom of the hero */
       padding: 0 32px;
+      position: relative;
+      z-index: 5;
     }
     .props-card {
       background: #fff;
       border: 1px solid var(--border-soft);
       border-radius: 16px;
       padding: 28px 24px;
-      box-shadow: var(--shadow-card);
+      box-shadow: var(--shadow-strong);
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 24px;
@@ -109,17 +115,7 @@
       border-right: 1px solid var(--border-soft);
     }
     .prop:last-child { border-right: none; }
-    .prop-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background: var(--accent-green-soft);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-    }
-    .prop-icon.gold { background: rgba(181, 138, 44, 0.18); }
+    .prop-icon { width: 84px; height: 84px; display: block; object-fit: contain; }
     .prop h3 {
       font-family: var(--font-heading);
       font-size: 1.05rem;
@@ -136,31 +132,28 @@
     /* ── Section heading w/ mountain decoration ── */
     .section-head {
       max-width: 1280px;
-      margin: 56px auto 8px;
+      margin: 64px auto 8px;
       padding: 0 32px;
       text-align: center;
     }
     .section-head .mtn {
+      display: flex; justify-content: center;
       color: var(--gold);
-      opacity: 0.6;
-      letter-spacing: 0.5em;
-      font-size: 1.1rem;
-      margin-bottom: 6px;
+      opacity: 0.7;
+      margin-bottom: 10px;
     }
+    .section-head .mtn img { width: 320px; max-width: 100%; height: auto; opacity: 0.95; }
     .section-head h2 {
       font-family: var(--font-heading);
       color: var(--forest);
       font-size: 2rem;
-      margin: 0 0 6px;
+      margin: 0 0 10px;
       letter-spacing: -0.3px;
     }
     .section-head .rule {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
+      display: flex; align-items: center; justify-content: center;
+      gap: 10px;
       color: var(--gold);
-      font-size: 0.9rem;
     }
     .section-head .rule::before, .section-head .rule::after {
       content: ''; flex: 0 0 64px; height: 1px; background: var(--gold); opacity: 0.5;
@@ -197,18 +190,9 @@
       align-items: center;
       gap: 16px;
     }
-    .ex-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: var(--accent-green-soft);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      flex-shrink: 0;
-    }
-    .ex-icon.gold { background: rgba(181, 138, 44, 0.18); }
+    .ex-icon { width: 64px; height: 64px; display: block; object-fit: contain; flex-shrink: 0; }
+    .ex-icon-circle { width: 64px; height: 64px; border-radius: 50%; background: var(--accent-green-soft); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ex-icon-circle img { width: 64%; height: 64%; object-fit: contain; }
     .ex-card h3 {
       font-family: var(--font-heading);
       color: var(--forest);
@@ -257,30 +241,15 @@
       flex-direction: column;
       gap: 14px;
     }
-    .week-head {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+    .week-head { display: flex; align-items: center; gap: 12px; }
     .week-head .icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
+      width: 44px; height: 44px; border-radius: 50%;
       background: rgba(33, 68, 60, 0.10);
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.3rem;
     }
-    .week-head h3 {
-      font-family: var(--font-heading);
-      color: var(--forest);
-      margin: 0;
-      font-size: 1.2rem;
-    }
-    .week-head .sub {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-top: 2px;
-    }
+    .week-head .icon svg { width: 22px; height: 22px; stroke: var(--forest); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .week-head h3 { font-family: var(--font-heading); color: var(--forest); margin: 0; font-size: 1.2rem; }
+    .week-head .sub { font-size: 0.85rem; color: var(--text-muted); margin-top: 2px; }
     .week-list { display: flex; flex-direction: column; gap: 10px; }
     .week-item {
       display: grid;
@@ -297,48 +266,25 @@
     }
     .week-item:hover { background: var(--bg-warm); }
     .week-date {
-      width: 56px;
-      text-align: center;
-      background: var(--forest);
-      color: #fff;
-      border-radius: 8px;
-      padding: 8px 4px;
+      width: 56px; text-align: center;
+      background: var(--forest); color: #fff;
+      border-radius: 8px; padding: 8px 4px;
     }
     .week-date .month { font-size: 0.65rem; letter-spacing: 0.08em; opacity: 0.85; text-transform: uppercase; }
     .week-date .day { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; line-height: 1; }
-    .week-item .info h4 {
-      font-family: var(--font-main);
-      font-size: 0.98rem;
-      margin: 0 0 4px;
-      color: var(--forest);
-      font-weight: 700;
-    }
-    .week-item .meta {
-      font-size: 0.83rem;
-      color: var(--text-muted);
-      margin: 0;
-    }
+    .week-item .info h4 { font-family: var(--font-main); font-size: 0.98rem; margin: 0 0 4px; color: var(--forest); font-weight: 700; }
+    .week-item .meta { font-size: 0.83rem; color: var(--text-muted); margin: 0; }
     .week-item .arrow { color: var(--accent-green); font-size: 1.2rem; }
-    .week-foot {
-      text-align: center;
-      margin-top: 6px;
-    }
-    .week-foot a {
-      color: var(--accent-green);
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
+    .week-foot { text-align: center; margin-top: 6px; }
+    .week-foot a { color: var(--accent-green); font-weight: 600; text-decoration: none; font-size: 0.95rem; }
 
     /* Donate card */
     .donate-card {
       position: relative;
       color: #fff;
       padding: 40px 28px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
       text-align: center;
       background:
         linear-gradient(180deg, rgba(33,68,60,0.55) 0%, rgba(33,68,60,0.55) 100%),
@@ -349,40 +295,22 @@
       width: 56px; height: 56px; border-radius: 50%;
       border: 2px solid #fff;
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.4rem; margin-bottom: 14px;
+      margin-bottom: 14px;
     }
-    .donate-card h3 {
-      font-family: var(--font-heading);
-      font-size: 1.6rem;
-      margin: 0 0 10px;
-    }
-    .donate-card p {
-      max-width: 360px;
-      margin: 0 0 20px;
-      font-size: 0.95rem;
-      opacity: 0.95;
-      line-height: 1.45;
-    }
+    .donate-card .icon svg { width: 26px; height: 26px; stroke: #fff; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .donate-card h3 { font-family: var(--font-heading); font-size: 1.6rem; margin: 0 0 10px; }
+    .donate-card p { max-width: 360px; margin: 0 0 20px; font-size: 0.95rem; opacity: 0.95; line-height: 1.45; }
     .donate-btn {
-      background: var(--gold);
-      color: #fff;
-      padding: 12px 28px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.95rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      background: var(--gold); color: #fff;
+      padding: 12px 28px; border-radius: 999px;
+      text-decoration: none; font-weight: 700; font-size: 0.95rem;
+      display: inline-flex; align-items: center; gap: 8px;
     }
     .donate-btn:hover { background: #c4982f; }
+    .donate-btn svg { width: 16px; height: 16px; stroke: #fff; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
 
     /* ── Subscribe row ── */
-    .subscribe-row {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 32px 56px;
-    }
+    .subscribe-row { max-width: 1280px; margin: 0 auto; padding: 0 32px 56px; }
     .subscribe-card {
       background: var(--bg-cream);
       border: 1px solid var(--border-soft);
@@ -394,107 +322,50 @@
       align-items: center;
       box-shadow: var(--shadow-card);
     }
-    .subscribe-card .icon {
-      width: 56px; height: 56px; border-radius: 50%;
-      background: var(--forest); color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.4rem;
-    }
-    .subscribe-card .copy h3 {
-      font-family: var(--font-heading);
-      color: var(--forest);
-      margin: 0 0 4px;
-      font-size: 1.2rem;
-    }
-    .subscribe-card .copy p {
-      margin: 0;
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-    }
-    .subscribe-card .form {
-      display: flex; gap: 10px;
-    }
-    .subscribe-card input {
-      padding: 12px 16px;
-      border-radius: 999px;
-      border: 1px solid var(--border-soft);
-      background: #fff;
-      font-size: 0.95rem;
-      min-width: 280px;
-      font-family: var(--font-main);
-    }
-    .subscribe-card .submit {
-      background: var(--forest);
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 999px;
-      border: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      cursor: pointer;
-      font-family: var(--font-main);
-    }
+    .subscribe-card .icon { width: 64px; height: 64px; display: block; object-fit: contain; }
+    .subscribe-card .icon img { width: 100%; height: 100%; object-fit: contain; }
+    .subscribe-card .copy h3 { font-family: var(--font-heading); color: var(--forest); margin: 0 0 4px; font-size: 1.2rem; }
+    .subscribe-card .copy p { margin: 0; color: var(--text-secondary); font-size: 0.9rem; }
+    .subscribe-card .form { display: flex; gap: 10px; }
+    .subscribe-card input { padding: 12px 16px; border-radius: 999px; border: 1px solid var(--border-soft); background: #fff; font-size: 0.95rem; min-width: 280px; font-family: var(--font-main); }
+    .subscribe-card .submit { background: var(--forest); color: #fff; padding: 12px 24px; border-radius: 999px; border: none; font-weight: 600; font-size: 0.95rem; cursor: pointer; font-family: var(--font-main); }
     .subscribe-card .submit:hover { background: var(--forest-soft); }
 
     /* ── Footer ── */
-    .site-foot {
-      background: #fff;
-      border-top: 1px solid var(--border-soft);
-      padding: 32px 0 0;
-    }
+    .site-foot { background: #fff; border-top: 1px solid var(--border-soft); padding: 32px 0 0; }
     .site-foot-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 32px 28px;
-      display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr 1fr 1.2fr;
-      gap: 32px;
-      align-items: start;
+      max-width: 1280px; margin: 0 auto; padding: 0 32px 28px;
+      display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr 1.2fr;
+      gap: 32px; align-items: start;
     }
     .foot-brand { display: flex; flex-direction: column; gap: 6px; }
-    .foot-brand-logo { color: var(--forest); font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; }
+    .foot-brand-logo { color: var(--forest); font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 8px; }
+    .foot-brand-logo svg { width: 22px; height: 22px; fill: var(--gold); }
     .foot-brand-tag { color: var(--gold); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; }
-    .foot-col h4 {
-      font-family: var(--font-main);
-      font-size: 0.95rem;
-      color: var(--forest);
-      margin: 0 0 10px;
-      font-weight: 700;
-    }
-    .foot-col a, .foot-col p {
-      display: block;
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-size: 0.88rem;
-      padding: 3px 0;
-    }
+    .foot-col h4 { font-family: var(--font-main); font-size: 0.95rem; color: var(--forest); margin: 0 0 10px; font-weight: 700; }
+    .foot-col a, .foot-col p { display: block; color: var(--text-secondary); text-decoration: none; font-size: 0.88rem; padding: 3px 0; }
     .foot-col a:hover { color: var(--forest); }
     .foot-social { display: flex; gap: 14px; margin-top: 4px; }
     .foot-social a {
       width: 36px; height: 36px; border-radius: 50%;
       background: var(--bg-cream); color: var(--forest);
       display: flex; align-items: center; justify-content: center;
-      text-decoration: none; font-size: 1rem; padding: 0;
+      text-decoration: none; padding: 0;
     }
+    .foot-social a img { width: 18px; height: 18px; object-fit: contain; }
     .foot-social a:hover { background: var(--accent-green-soft); }
-    .foot-mission {
-      background: var(--bg-cream);
-      border-radius: 12px;
-      padding: 16px;
-      font-size: 0.86rem;
-      color: var(--text-secondary);
-    }
+    .foot-mission { background: var(--bg-cream); border-radius: 12px; padding: 16px; font-size: 0.86rem; color: var(--text-secondary); }
     .foot-mission p { margin: 0; padding: 0; }
-    .foot-bottom {
-      background: var(--forest);
-      color: rgba(255,255,255,0.85);
-      text-align: center;
-      padding: 14px;
-      font-size: 0.85rem;
-    }
+    .foot-bottom { background: var(--forest); color: rgba(255,255,255,0.85); text-align: center; padding: 14px; font-size: 0.85rem; }
 
     /* ── Responsive ── */
     @media (max-width: 1080px) {
+      .hero { min-height: 420px; padding: 60px 0 110px;
+        background:
+          linear-gradient(90deg, var(--bg-warm) 0%, var(--bg-warm) 30%, rgba(253,251,246,0.7) 55%, rgba(253,251,246,0.0) 75%),
+          url('img/telluride-125.jpeg') no-repeat center right / cover,
+          var(--bg-hero);
+      }
       .hero h1 { font-size: 2.6rem; }
       .props-card { grid-template-columns: repeat(2, 1fr); }
       .prop { border-right: none; border-bottom: 1px solid var(--border-soft); padding-bottom: 16px; }
@@ -505,9 +376,14 @@
     }
     @media (max-width: 720px) {
       .topnav-links { display: none; }
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-photo { aspect-ratio: 4 / 3; }
+      .hero { min-height: 360px; padding: 48px 0 110px;
+        background:
+          linear-gradient(180deg, rgba(253,251,246,0.96) 0%, rgba(253,251,246,0.85) 60%, rgba(253,251,246,0.5) 100%),
+          url('img/telluride-125.jpeg') no-repeat center center / cover,
+          var(--bg-hero);
+      }
       .hero h1 { font-size: 2rem; }
+      .props { margin-top: -70px; }
       .explore { grid-template-columns: 1fr; }
       .props-card { grid-template-columns: 1fr; }
       .prop { border-bottom: 1px solid var(--border-soft); border-right: none; padding-bottom: 16px; }
@@ -520,6 +396,26 @@
   </style>
 </head>
 <body>
+  <!-- ── Inline SVG icons (Lucide-style strokes) reused across the page ── -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 11l18-5v12L3 14z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></symbol>
+      <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+      <symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M3 7l9-4 9 4"/><path d="M3 21V7"/><path d="M21 21V7"/><path d="M9 21V11"/><path d="M15 21V11"/><path d="M3 10h18"/></symbol>
+      <symbol id="i-newspaper" viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8z"/></symbol>
+      <symbol id="i-mountain" viewBox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></symbol>
+      <symbol id="i-binoculars" viewBox="0 0 24 24"><path d="M5 3h2l1 4-1 4-2-1V3z"/><path d="M19 3h-2l-1 4 1 4 2-1V3z"/><path d="M8 11l-2 6a3 3 0 1 0 6 0v-6"/><path d="M16 11l2 6a3 3 0 1 1-6 0v-6"/><path d="M12 8v3"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+      <symbol id="i-heart-fill" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="currentColor" stroke="none"/></symbol>
+      <symbol id="i-fb" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+      <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></symbol>
+      <symbol id="i-mtn-deco" viewBox="0 0 56 18"><path d="M2 16 L14 4 L20 10 L28 2 L36 10 L42 4 L54 16 Z"/></symbol>
+    </defs>
+  </svg>
+
   <header class="topnav">
     <div class="topnav-inner">
       <a class="topnav-logo" href="/v2/" aria-label="Livable Telluride home">
@@ -541,35 +437,34 @@
   <!-- ── Hero ── -->
   <section class="hero">
     <div class="hero-inner">
-      <div>
+      <div class="hero-text">
         <p class="hero-overline">Inform. Connect. Engage. Together.</p>
         <h1>Your Community.<br>All in One Place.</h1>
         <p class="lead">Livable Telluride brings together meetings, events, news, resources, and local voices to keep our mountain communities informed, connected, and empowered.</p>
       </div>
-      <div class="hero-photo" aria-label="Telluride 125 panorama"></div>
     </div>
   </section>
 
-  <!-- ── Value-prop strip ── -->
+  <!-- ── Value-prop strip (overlaps hero) ── -->
   <section class="props">
     <div class="props-card">
       <div class="prop">
-        <div class="prop-icon">📣</div>
+        <img class="prop-icon" src="img/icons/stay_informed_megaphone.png" alt="">
         <h3>Stay Informed</h3>
         <p>Get the latest meetings, news, alerts, and updates.</p>
       </div>
       <div class="prop">
-        <div class="prop-icon gold">📅</div>
+        <img class="prop-icon" src="img/icons/get_involved_calendar.png" alt="">
         <h3>Get Involved</h3>
         <p>Find events, share your voice, and take action on issues that matter.</p>
       </div>
       <div class="prop">
-        <div class="prop-icon">👥</div>
+        <img class="prop-icon" src="img/icons/connect_locally_people.png" alt="">
         <h3>Connect Locally</h3>
         <p>Discover local organizations, groups, and services that strengthen our community.</p>
       </div>
       <div class="prop">
-        <div class="prop-icon gold">💛</div>
+        <img class="prop-icon" src="img/icons/stronger_together_handshake.png" alt="">
         <h3>Stronger Together</h3>
         <p>Building a livable, inclusive, and sustainable future for all who call this place home.</p>
       </div>
@@ -578,7 +473,7 @@
 
   <!-- ── Explore section ── -->
   <div class="section-head">
-    <div class="mtn">▲ ▲ ▲</div>
+    <div class="mtn"><img src="img/icons/explore_everything_mountain_divider.png" alt=""></div>
     <h2>Explore Everything We Offer</h2>
     <div class="rule"><span></span></div>
   </div>
@@ -586,7 +481,7 @@
   <section class="explore">
     <a class="ex-card" href="https://livabletelluride.org/#tab-hubbub">
       <div class="ex-card-head">
-        <div class="ex-icon">💬</div>
+        <img class="ex-icon" src="img/icons/hub_bub_community_forum.png" alt="">
         <div>
           <h3>Hub-Bub</h3>
           <div class="subtitle">Community Forum</div>
@@ -597,7 +492,7 @@
     </a>
     <a class="ex-card" href="/v2/gov-hub.html">
       <div class="ex-card-head">
-        <div class="ex-icon">🏛️</div>
+        <img class="ex-icon" src="img/icons/gov_hub_public_meetings.png" alt="">
         <div>
           <h3>Gov-Hub</h3>
           <div class="subtitle">Public Meetings &amp; Agendas</div>
@@ -608,7 +503,7 @@
     </a>
     <a class="ex-card" href="/v2/events.html">
       <div class="ex-card-head">
-        <div class="ex-icon gold">📅</div>
+        <img class="ex-icon" src="img/icons/events_community_calendar.png" alt="">
         <div>
           <h3>Events</h3>
           <div class="subtitle">Community Calendar</div>
@@ -619,7 +514,7 @@
     </a>
     <a class="ex-card" href="/v2/local-news.html">
       <div class="ex-card-head">
-        <div class="ex-icon">📰</div>
+        <img class="ex-icon" src="img/icons/local_news_newspaper.png" alt="">
         <div>
           <h3>Local News</h3>
           <div class="subtitle">News &amp; Housing</div>
@@ -630,7 +525,7 @@
     </a>
     <a class="ex-card" href="/v2/local-orgs.html">
       <div class="ex-card-head">
-        <div class="ex-icon gold">👥</div>
+        <img class="ex-icon" src="img/icons/local_orgs_organizations_resources.png" alt="">
         <div>
           <h3>Local Orgs</h3>
           <div class="subtitle">Organizations &amp; Resources</div>
@@ -641,7 +536,7 @@
     </a>
     <a class="ex-card" href="/v2/about.html">
       <div class="ex-card-head">
-        <div class="ex-icon">⛰️</div>
+        <div class="ex-icon-circle"><img src="img/icons/community_powered_mountains.png" alt=""></div>
         <div>
           <h3>About Us</h3>
           <div class="subtitle">Our Mission</div>
@@ -656,14 +551,13 @@
   <section class="week-row">
     <div class="week-card">
       <div class="week-head">
-        <div class="icon">🔭</div>
+        <div class="icon"><svg><use href="#i-binoculars"/></svg></div>
         <div>
           <h3>What's Happening This Week</h3>
           <div class="sub">A quick look at upcoming meetings and events.</div>
         </div>
       </div>
       <div class="week-list" id="weekList">
-        <!-- Sample fallback (replaced by loadLiveWeek) -->
         <a class="week-item" href="/v2/gov-hub.html">
           <div class="week-date"><div class="month">May</div><div class="day">11</div></div>
           <div class="info"><h4>Planning &amp; Zoning Commission Meeting</h4><p class="meta">May 11, 2026 • 5:00 PM • Rebekah Hall</p></div>
@@ -686,17 +580,17 @@
     </div>
 
     <div class="donate-card">
-      <div class="icon">♡</div>
+      <div class="icon"><svg><use href="#i-heart"/></svg></div>
       <h3>Support Our Community</h3>
       <p>Your donation helps us keep information accessible, amplify local voices, and build a stronger, more livable future for all.</p>
-      <a class="donate-btn" href="https://livabletelluride.org/#tab-about">♡  Donate Today</a>
+      <a class="donate-btn" href="https://livabletelluride.org/#tab-about"><svg><use href="#i-heart"/></svg> Donate Today</a>
     </div>
   </section>
 
   <!-- ── Subscribe ── -->
   <section class="subscribe-row" id="subscribe">
     <div class="subscribe-card">
-      <div class="icon">✉</div>
+      <div class="icon"><img src="img/icons/subscribe_envelope.png" alt=""></div>
       <div class="copy">
         <h3>Never Miss an Update</h3>
         <p>Subscribe to get the latest meetings, news, events, and opportunities delivered to your inbox.</p>
@@ -712,7 +606,7 @@
   <footer class="site-foot">
     <div class="site-foot-inner">
       <div class="foot-brand">
-        <div class="foot-brand-logo">⛰️ Livable Telluride</div>
+        <div class="foot-brand-logo"><img src="img/icons/community_powered_mountains.png" alt="" style="width:28px;height:28px;object-fit:contain;"> Livable Telluride</div>
         <div class="foot-brand-tag">Inform. Connect. Engage. Together.</div>
       </div>
       <div class="foot-col">
@@ -730,9 +624,9 @@
       <div class="foot-col">
         <h4>Follow Us</h4>
         <div class="foot-social">
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">⌾</a>
-          <a href="mailto:info@livabletelluride.org" aria-label="Email">✉</a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><img src="img/icons/facebook_social.png" alt=""></a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/icons/instagram_social.png" alt=""></a>
+          <a href="mailto:info@livabletelluride.org" aria-label="Email"><img src="img/icons/email_social.png" alt=""></a>
         </div>
       </div>
       <div class="foot-mission">
@@ -745,7 +639,7 @@
   </footer>
 
   <script>
-    /* ── Live data: pull next week's meetings + events from /js/gov-hub.js
+    /* ── Live data: pull next 7 days of meetings + events from /js/gov-hub.js
        and replace the sample week-list. Falls back silently. ─────────── */
     function loadLiveWeek() {
       const s = document.createElement('script');
@@ -756,7 +650,6 @@
           const horizon = new Date(today.getTime() + 7 * 86400000);
           const items = [];
 
-          // Meetings
           const fetchers = [
             ['getCountyCachedMeetings', '/v2/gov-hub.html'],
             ['getMVMeetings',           '/v2/gov-hub.html'],
@@ -775,14 +668,15 @@
                 items.push({
                   date: m.eventDate,
                   title: m.title,
-                  meta: m.eventTimes ? (formatDate(m.eventDate) + ' • ' + m.eventTimes + (m.location ? ' • ' + m.location : '')) : formatDate(m.eventDate),
+                  meta: m.eventTimes
+                    ? formatDate(m.eventDate) + ' • ' + m.eventTimes + (m.location ? ' • ' + m.location : '')
+                    : formatDate(m.eventDate),
                   href: href
                 });
               });
             } catch (e) {}
           });
 
-          // Events
           ['COMMUNITY_EVENTS','KOTO_COMMUNITY_EVENTS','WILKINSON_EVENTS'].forEach(name => {
             if (typeof window[name] === 'undefined') return;
             window[name].forEach(e => {
