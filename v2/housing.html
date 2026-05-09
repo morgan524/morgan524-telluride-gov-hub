@@ -9,19 +9,26 @@
       --forest: #21443c;
       --forest-soft: #2a5347;
       --accent-green: #2f7a5f;
+      --accent-green-soft: rgba(47, 122, 95, 0.12);
+      --accent-green-border: rgba(47, 122, 95, 0.25);
       --bg-warm: #fdfbf6;
       --bg-hero: #efe9dc;
       --bg-paper: #fffdf9;
+      --bg-elig: #f4d9d2;       /* warm pink-cream — eligibility card from mockup */
+      --bg-elig-border: #e8b8ad;
       --text-primary: #1a2e29;
       --text-secondary: #4a5e57;
       --text-muted: #7a8a85;
       --border-soft: rgba(33, 68, 60, 0.12);
+      --border-card: rgba(33, 68, 60, 0.10);
       --shadow-card: 0 4px 14px rgba(36, 49, 46, 0.06);
       --font-heading: 'Georgia', 'Times New Roman', serif;
       --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
     }
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; font-family: var(--font-main); color: var(--text-primary); background: var(--bg-warm); line-height: 1.5; }
+
+    /* ── Top nav (shared with other v2 pages) ── */
     .topnav { background: #fff; border-bottom: 1px solid var(--border-soft); padding: 14px 0; position: sticky; top: 0; z-index: 50; }
     .topnav-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; gap: 24px; }
     .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--forest); font-family: var(--font-heading); font-weight: 700; font-size: 1.15rem; line-height: 1.1; }
@@ -32,24 +39,234 @@
     .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
     .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
 
-    /* Hero band */
-    .hero { background: var(--bg-hero); padding: 56px 0; border-bottom: 1px solid var(--border-soft); }
-    .hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
-    .hero h1 { font-family: var(--font-heading); font-size: 2.4rem; margin: 0 0 8px; color: var(--forest); }
-    .hero p { margin: 0; color: var(--text-secondary); font-size: 1.05rem; max-width: 720px; }
+    /* ── Hero ── */
+    .hero {
+      min-height: 220px;
+      background:
+        linear-gradient(180deg, rgba(33,68,60,0.55) 0%, rgba(33,68,60,0.30) 60%, rgba(33,68,60,0.45) 100%),
+        url('img/wilson-peak.png') no-repeat center center / cover,
+        var(--bg-hero);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .hero-inner { max-width: 1280px; margin: 0 auto; padding: 36px 32px; width: 100%; }
+    .hero h1 { font-family: var(--font-heading); font-size: 2.6rem; margin: 0 0 8px; letter-spacing: 0.5px; }
+    .hero p { margin: 0; font-size: 1.05rem; max-width: 760px; opacity: 0.92; }
 
-    /* Coming-soon panel */
-    main { max-width: 1280px; margin: 48px auto; padding: 0 32px; }
-    .placeholder { background: var(--bg-paper); border: 1px solid var(--border-soft); border-radius: 14px; padding: 48px; text-align: center; box-shadow: var(--shadow-card); }
-    .placeholder h2 { font-family: var(--font-heading); color: var(--forest); margin: 0 0 12px; font-size: 1.5rem; }
-    .placeholder p { color: var(--text-secondary); margin: 0 0 20px; }
-    .placeholder a.btn { display: inline-block; background: rgba(47, 122, 95, 0.12); color: var(--forest); text-decoration: none; padding: 10px 22px; border-radius: 999px; font-weight: 600; font-size: 0.95rem; border: 1px solid rgba(47, 122, 95, 0.25); }
-    .placeholder a.btn:hover { background: rgba(47, 122, 95, 0.20); }
+    /* ── Filter chips bar (top) ── */
+    .chip-bar { background: #fff; border-bottom: 1px solid var(--border-soft); }
+    .chip-bar-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 14px 32px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      overflow-x: auto;
+    }
+    .chip {
+      display: inline-block;
+      padding: 7px 16px;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--text-primary);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid var(--border-card);
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+    .chip:hover { background: var(--accent-green-soft); border-color: var(--accent-green-border); color: var(--forest); }
+    .chip.active { background: var(--forest); color: #fff; border-color: var(--forest); }
 
+    /* ── Main page layout ── */
+    .page-wrap {
+      max-width: 1280px;
+      margin: 32px auto;
+      padding: 0 32px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* ── Left sidebar ── */
+    .sidebar { display: flex; flex-direction: column; gap: 18px; position: sticky; top: 110px; }
+
+    /* Eligibility card (cream-pink, matches mockup) */
+    .elig-card {
+      background: var(--bg-elig);
+      border: 1px solid var(--bg-elig-border);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: var(--shadow-card);
+    }
+    .elig-card h3 {
+      font-family: var(--font-heading);
+      color: var(--forest);
+      font-size: 1.1rem;
+      margin: 0 0 8px;
+      line-height: 1.25;
+    }
+    .elig-card p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin: 0 0 14px;
+    }
+    .elig-btn {
+      display: inline-block;
+      background: var(--forest);
+      color: #fff;
+      padding: 9px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.88rem;
+    }
+    .elig-btn:hover { background: var(--forest-soft); }
+
+    /* Decorative pine tree below eligibility card (CSS-drawn) */
+    .pine-deco {
+      text-align: center;
+      padding: 28px 0;
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--accent-green);
+      opacity: 0.55;
+    }
+
+    /* ── Housing card grid ── */
+    .house-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .house-card {
+      background: var(--bg-paper);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .house-img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: var(--bg-sidebar, #ece5d5);
+      overflow: hidden;
+    }
+    .house-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .type-pill {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--forest);
+      color: #fff;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .type-pill.sale { background: #b94e2c; }
+    .type-pill.tax { background: #5a7e6a; }
+
+    .house-body { padding: 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .house-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .house-title {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      margin: 0;
+      line-height: 1.25;
+      flex: 1;
+    }
+    .house-price {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      color: var(--forest);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .house-beds {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+    .house-summary {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .house-source {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+    .house-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 8px;
+    }
+    .btn-action {
+      display: inline-block;
+      background: var(--forest);
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: background 0.15s;
+    }
+    .btn-action:hover { background: var(--forest-soft); }
+    .btn-action.secondary {
+      background: var(--accent-green-soft);
+      color: var(--forest);
+      border: 1px solid var(--accent-green-border);
+    }
+    .btn-action.secondary:hover { background: rgba(47, 122, 95, 0.20); }
+
+    /* Empty state */
+    .empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 48px 16px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 1080px) {
+      .house-grid { grid-template-columns: 1fr; }
+    }
     @media (max-width: 880px) {
       .topnav-links { display: none; }
-      .hero h1 { font-size: 1.8rem; }
-      .placeholder { padding: 28px; }
+      .hero h1 { font-size: 1.9rem; }
+      .page-wrap { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
     }
   </style>
 </head>
@@ -75,16 +292,236 @@
   <section class="hero">
     <div class="hero-inner">
       <h1>Housing</h1>
-      <p>Local rental listings, deed-restricted opportunities, and housing-program information for the region.</p>
+      <p>Local rentals, deed-restricted ownership opportunities, tax-credit listings, and housing-program information for Telluride, Mountain Village, and the surrounding region.</p>
     </div>
   </section>
 
-  <main>
-    <div class="placeholder">
-      <h2>Coming soon</h2>
-      <p>The redesigned Housing page is being built. In the meantime, the live Housing tab remains fully functional on the current site.</p>
-      <a class="btn" href="https://livabletelluride.org/#tab-housing">View on the live site →</a>
-    </div>
+  <section class="chip-bar">
+    <div class="chip-bar-inner" id="chipRow"></div>
+  </section>
+
+  <main class="page-wrap">
+    <aside class="sidebar">
+      <div class="elig-card">
+        <h3>Am I qualified for deed-restricted housing?</h3>
+        <p>Most deed-restricted opportunities require working at least 1,400 hours per year in San Miguel, Ouray, San Juan, or Montrose County, plus residency and income criteria.</p>
+        <a class="elig-btn" href="https://smrha.org/" target="_blank" rel="noopener">Check My Eligibility →</a>
+      </div>
+      <div class="pine-deco" aria-hidden="true">🌲</div>
+    </aside>
+
+    <section>
+      <div class="house-grid" id="houseGrid"></div>
+    </section>
   </main>
+
+  <script>
+    /* ── Sample data — falls back to this if /js/gov-hub.js isn't loaded.
+       Real data comes from HOUSING_LISTINGS via loadLiveHousing(). ───── */
+    const SAMPLE_LISTINGS = [
+      {
+        title: 'Alabama Apartments — 2 Bed',
+        type: 'rent',
+        typeLabel: 'For Rent',
+        price: '$1,375/month',
+        beds: '2 Bedroom, 1 Bath',
+        location: 'Telluride',
+        summary: 'Bright apartment in walking distance of Main Street. Income-qualified deed-restricted rental. Pet-friendly, washer/dryer in unit.',
+        source: 'SMRHA',
+        url: 'https://smrha.org/',
+        img: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=450&fit=crop'
+      },
+      {
+        title: 'River Trail Townhome',
+        type: 'sale',
+        typeLabel: 'For Sale',
+        price: '$465,000',
+        beds: '3 Bedroom, 2 Bath',
+        location: 'Mountain Village',
+        summary: 'Deed-restricted ownership opportunity with peak views, attached garage, ski-area access, and recent kitchen update.',
+        source: 'SMRHA',
+        url: 'https://smrha.org/',
+        img: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&h=450&fit=crop'
+      },
+      {
+        title: 'Cornet House Studio',
+        type: 'rent',
+        typeLabel: 'For Rent',
+        price: '$2,000/month',
+        beds: 'Studio, 1 Bath',
+        location: 'Telluride',
+        summary: 'Charming studio in the historic district. Walking distance to gondola, restaurants, and trails. Heat included.',
+        source: 'Telluride Foundation',
+        url: 'https://smrha.org/',
+        img: 'https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800&h=450&fit=crop'
+      },
+      {
+        title: 'Lulu City Place — 3 Bed',
+        type: 'sale',
+        typeLabel: 'For Sale',
+        price: '$1,490,000',
+        beds: '3 Bedroom, 2 Bath',
+        location: 'Mountain Village',
+        summary: 'Spacious mountain-modern with vaulted ceilings, two-car garage, in-floor heat, and direct gondola access.',
+        source: 'SMRHA',
+        url: 'https://smrha.org/',
+        img: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=450&fit=crop'
+      },
+      {
+        title: 'West Meadows Home',
+        type: 'sale',
+        typeLabel: 'For Sale',
+        price: '$595,000',
+        beds: '2 Bedroom, 1.5 Bath',
+        location: 'Telluride',
+        summary: 'Single-family home with fenced yard, mountain views, sun-filled living room, and detached studio.',
+        source: 'SMRHA',
+        url: 'https://smrha.org/',
+        img: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=450&fit=crop'
+      },
+      {
+        title: 'Aspen View Condo',
+        type: 'rent',
+        typeLabel: 'For Rent',
+        price: '$3,500/month',
+        beds: '2 Bedroom, 2 Bath',
+        location: 'Mountain Village',
+        summary: 'Furnished condo with ski-area access, hot tub privileges, mountain views, and underground parking.',
+        source: 'Private',
+        url: 'https://smrha.org/',
+        img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=450&fit=crop'
+      }
+    ];
+
+    /* ── Filter taxonomy ── */
+    const FILTERS = [
+      { key: 'all',     label: 'All Listings' },
+      { key: 'rent',    label: 'Deed Restricted For Rent' },
+      { key: 'sale',    label: 'Deed Restricted For Sale' },
+      { key: 'tax',     label: 'Tax Credit' },
+      { key: 'lottery', label: 'Lottery' },
+      { key: 'tell',    label: 'Telluride' },
+      { key: 'mv',      label: 'Mountain Village' }
+    ];
+
+    let LISTINGS = SAMPLE_LISTINGS.slice();
+    let activeFilter = 'all';
+
+    function chipsHtml() {
+      return FILTERS.map(f => {
+        const cls = f.key === activeFilter ? 'chip active' : 'chip';
+        return '<span class="' + cls + '" data-filter="' + f.key + '">' + f.label + '</span>';
+      }).join('');
+    }
+
+    function matchesFilter(l, key) {
+      if (key === 'all') return true;
+      if (key === 'rent') return /rent/i.test(l.type);
+      if (key === 'sale') return /sale/i.test(l.type);
+      if (key === 'tax') return /tax/i.test(l.type);
+      if (key === 'lottery') return l.lottery === true;
+      if (key === 'tell') return /telluride/i.test(l.location || '') && !/mountain village/i.test(l.location || '');
+      if (key === 'mv')   return /mountain village/i.test(l.location || '');
+      return true;
+    }
+
+    function pillClass(type) {
+      if (/sale/i.test(type)) return 'type-pill sale';
+      if (/tax/i.test(type))  return 'type-pill tax';
+      return 'type-pill';
+    }
+
+    function houseCard(l) {
+      const img = l.img
+        ? '<img src="' + l.img + '" alt="' + (l.title || '') + '" onerror="this.style.display=\'none\'">'
+        : '';
+      const pill = '<span class="' + pillClass(l.type) + '">' + (l.typeLabel || l.type || 'Available') + '</span>';
+      const price = l.price ? '<div class="house-price">' + l.price + '</div>' : '';
+      const beds = l.beds ? '<div class="house-beds">' + l.beds + (l.location ? ' • ' + l.location : '') + '</div>' : '';
+      const summary = l.summary ? '<p class="house-summary">' + l.summary + '</p>' : '';
+      const source = l.source ? '<div class="house-source">Source: ' + l.source + '</div>' : '';
+      const detailBtn = '<a class="btn-action" href="' + (l.url || '#') + '" target="_blank" rel="noopener">View Details →</a>';
+      return '<article class="house-card">'
+           + '<div class="house-img-wrap">' + pill + img + '</div>'
+           + '<div class="house-body">'
+           +   '<div class="house-title-row">'
+           +     '<h2 class="house-title">' + l.title + '</h2>'
+           +     price
+           +   '</div>'
+           +   beds + summary + source
+           +   '<div class="house-actions">' + detailBtn + '</div>'
+           + '</div>'
+           + '</article>';
+    }
+
+    function render() {
+      document.getElementById('chipRow').innerHTML = chipsHtml();
+      const filtered = LISTINGS.filter(l => matchesFilter(l, activeFilter));
+      const grid = document.getElementById('houseGrid');
+      grid.innerHTML = filtered.length
+        ? filtered.map(houseCard).join('')
+        : '<div class="empty">No listings match this filter.</div>';
+
+      document.querySelectorAll('.chip[data-filter]').forEach(c => {
+        c.addEventListener('click', () => {
+          activeFilter = c.dataset.filter;
+          render();
+          window.scrollTo({ top: document.querySelector('.chip-bar').offsetTop - 70, behavior: 'smooth' });
+        });
+      });
+    }
+    render();
+
+    /* ── Live data: pulls HOUSING_LISTINGS from /js/gov-hub.js. ────────
+       The deployed const has fields {title, type, lottery, address,
+       beds, price, source, url, applyUrl, deadline, eligibility, note,
+       lat, lng, ...}. We map to our card schema. ── */
+    function detectTypeLabel(t) {
+      if (/rent/i.test(t)) return 'For Rent';
+      if (/sale/i.test(t)) return 'For Sale';
+      if (/tax/i.test(t)) return 'Tax Credit';
+      return (t || '').replace(/^./, c => c.toUpperCase());
+    }
+    function locationFromAddress(addr) {
+      if (!addr) return '';
+      if (/mountain village/i.test(addr)) return 'Mountain Village';
+      if (/telluride/i.test(addr)) return 'Telluride';
+      if (/norwood/i.test(addr)) return 'Norwood';
+      if (/ridgway/i.test(addr)) return 'Ridgway';
+      if (/ouray/i.test(addr)) return 'Ouray';
+      const m = addr.match(/,\s*([A-Za-z ]+),\s*CO/);
+      return m ? m[1].trim() : '';
+    }
+
+    function loadLiveHousing() {
+      const s = document.createElement('script');
+      s.src = 'https://livabletelluride.org/js/gov-hub.js?v=v2';
+      s.onload = () => {
+        try {
+          if (typeof HOUSING_LISTINGS === 'undefined' || !Array.isArray(HOUSING_LISTINGS)) return;
+          const live = HOUSING_LISTINGS.map(l => ({
+            title: (l.title || '').replace(/^[^\w]*\s/, ''),  // strip leading emoji
+            type: l.type || '',
+            typeLabel: detectTypeLabel(l.type),
+            lottery: l.lottery === true,
+            price: l.price || '',
+            beds: l.beds || '',
+            location: locationFromAddress(l.address) || '',
+            summary: l.note || l.eligibility || '',
+            source: l.source || 'SMRHA',
+            url: l.applyUrl || l.url || '#',
+            img: ''   // no images in HOUSING_LISTINGS yet — type pill carries the visual cue
+          }));
+          if (live.length > 0) {
+            LISTINGS = live;
+            render();
+          }
+        } catch (err) { console.warn('loadLiveHousing failed:', err); }
+      };
+      s.onerror = () => console.warn('Could not load /js/gov-hub.js for housing');
+      document.head.appendChild(s);
+    }
+    loadLiveHousing();
+  </script>
 </body>
 </html>
