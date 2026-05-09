@@ -1382,11 +1382,22 @@ async function fetchTellurideTimesEvents() {
         location = colonMatch[2].trim();
       }
 
+      // Override location for events at known out-of-town venues. The
+      // TT calendar scrape often produces "Telluride, CO" as a default;
+      // for events whose title mentions a Ridgway venue, set the city
+      // explicitly so the town chip + town-badge image both classify correctly.
+      let finalLocation = location || 'Telluride, CO';
+      const titleVenueText = ((eventTitle || '') + ' ' + (location || '')).toLowerCase();
+      if (/\bsherbino\b/.test(titleVenueText)) {
+        finalLocation = 'Sherbino Theater, Ridgway, CO';
+      } else if (/\bcolorado boy depot\b/.test(titleVenueText)) {
+        finalLocation = 'Colorado Boy Depot, Ridgway, CO';
+      }
       events.push({
         title: eventTitle,
         link: href,
         description: timeStr || '',
-        location: location || 'Telluride, CO',
+        location: finalLocation,
         pubDate: eventDate,
         source: 'ttimes',
         sourceLabel: 'Telluride Times',
