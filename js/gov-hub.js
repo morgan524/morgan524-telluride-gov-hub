@@ -6005,8 +6005,8 @@ const GOVHUB_ENTITIES = [
   { source: 'ophir',      label: 'Ophir' },
   { source: 'airport',    label: 'TEX Airport' },
   { source: 'smart',      label: 'SMART Transit' },
-  { source: 'localgroup', label: 'Local Groups' },
-  { source: 'oray',       label: 'Ouray-Ridgway' }
+  { source: 'ouray',      label: 'Ouray' },
+  { source: 'ridgway',    label: 'Ridgway' }
 ];
 
 // Count upcoming non-canceled, non-ended governmental meetings within 60 days
@@ -6917,9 +6917,24 @@ async function init() {
     // Planning Commission, etc.) into the Gov-Hub tab. These come through
     // the news pipeline (Localist API) but belong on /#tab-meetings, not
     // /#tab-news. renderNews() filters them out of the Events tab.
-    const orayGovMeetings = newsData.filter(n => n.source === 'oray' && isGovernmentalMeeting(n));
-    if (orayGovMeetings.length) {
-      allMeetings = allMeetings.filter(m => m.source !== 'oray');
+    //
+    // Each routed item is re-tagged with source='ouray' or source='ridgway'
+    // based on its location so the right-sidebar can filter the two towns
+    // separately.
+    const orayGovRaw = newsData.filter(n => n.source === 'oray' && isGovernmentalMeeting(n));
+    if (orayGovRaw.length) {
+      const orayGovMeetings = orayGovRaw.map(m => {
+        const loc = (m.location || '').toLowerCase();
+        // Ridgway-area markers: "Ridgway", "Log Hill" (Log Hill Mesa is part
+        // of Ridgway's service area).
+        const isRidgway = /\bridgway\b|\blog hill\b/.test(loc);
+        const town = isRidgway ? 'ridgway' : 'ouray';
+        const label = isRidgway ? 'Ridgway' : 'Ouray';
+        return Object.assign({}, m, { source: town, sourceLabel: label });
+      });
+      // Idempotent on re-render: filter prior re-tags AND any old 'oray'
+      // entries before re-adding.
+      allMeetings = allMeetings.filter(m => m.source !== 'ouray' && m.source !== 'ridgway' && m.source !== 'oray');
       allMeetings = [...allMeetings, ...orayGovMeetings];
       window.__allMeetingsCache = allMeetings;
       try { renderMeetingsWithTopic(); } catch(e) { console.error('renderMeetingsWithTopic re-render after oray gov inject:', e); }
