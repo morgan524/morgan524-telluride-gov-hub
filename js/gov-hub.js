@@ -690,10 +690,7 @@ async function loadAISummaries() {
 // Last updated: 2026-04-03T12:00 (automated scan — Town Council confirmed Apr 28 (was ~Apr 21); new THA meetings Apr 23/24/28 discovered; Election Commission Apr 29 new; Parks & Rec rescheduled to Apr 29; Liquor Licensing Apr 23 new; School District Special Meeting Apr 20 added to cache; HARC Apr 15 Published=true, summary current; SMRHA Apr 13 1pm Zoom confirmed; no new agendas posted for BOCC Apr 22/29, SMART Apr 9, MV Council Apr 23, School Apr 20/27/28, Fire ~Apr 21, Med Apr 23; BOCC Apr 8 work session event 986 — JS portal, no agenda visible yet)
 const MANUAL_SUMMARIES = {
   "telluride|2026-04-15|Historic & Architectural Review Commission":
-    "PUBLIC HEARING: 238 N Pine St (Lot 18B) — small-scale demolition of non-rated THAS structure + new construction (950–2,500 sq ft) + repositioning of THAS secondary structure (continued from Feb 18) · 238 N Pine St (Lot 18A) — small-scale demolition + new construction (continued from Feb 18) · WORK SESSION: 208 S Fir St — large-scale mixed-use replacement structure (5,000+ sq ft, Commercial Zone, NIBA LLC) · Colorado Wildfire Resiliency Code work session · Community Engagement — Historic Preservation discussion",
-
-  "county|2026-04-08|Board of County Commissioners Work Session":
-    "Work session — agenda details pending. Full packet expected on CivicClerk portal (event 986) by Monday Apr 6. Topics TBD."
+    "PUBLIC HEARING: 238 N Pine St (Lot 18B) — small-scale demolition of non-rated THAS structure + new construction (950–2,500 sq ft) + repositioning of THAS secondary structure (continued from Feb 18) · 238 N Pine St (Lot 18A) — small-scale demolition + new construction (continued from Feb 18) · WORK SESSION: 208 S Fir St — large-scale mixed-use replacement structure (5,000+ sq ft, Commercial Zone, NIBA LLC) · Colorado Wildfire Resiliency Code work session · Community Engagement — Historic Preservation discussion"
 };
 
 // ── Unified summary lookup: AI first, then manual fallback ──
@@ -1790,7 +1787,30 @@ async function fetchSheridanOperaHouseEvents() {
 // ouraycountyco.gov includes BOCC + City Council + community events; we drop
 // gov meetings at bake time so this array contains only community events
 // (e.g., Wildfire Aware Fair, water summits).
-const OURAY_COUNTY_EVENTS = [];
+const OURAY_COUNTY_EVENTS = [
+  {
+    title: "West Slope Water Summit",
+    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3637",
+    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3637",
+    pubDate: "2026-05-19T07:30:00.000Z",
+    source: "ouraycounty",
+    sourceLabel: "Ouray County",
+    category: "Community Event",
+    location: "Montrose County Event Center - 1036 N 7th St Montrose CO 81401",
+    imageUrl: ""
+  },
+  {
+    title: "Wildfire Aware Fair",
+    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3636",
+    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3636",
+    pubDate: "2026-05-09T12:00:00.000Z",
+    source: "ouraycounty",
+    sourceLabel: "Ouray County",
+    category: "Community Event",
+    location: "Log Hill Fire Station - 434 Ponderosa Drive Ridgway CO 81432",
+    imageUrl: ""
+  }
+];
 
 function fetchOurayCountyEvents() {
   if (typeof OURAY_COUNTY_EVENTS !== 'undefined' && Array.isArray(OURAY_COUNTY_EVENTS)) {
@@ -3093,6 +3113,39 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "‘Telluride: A Legacy of Legacies’",
+    source: "Telluride Times",
+    date: "May 8, 2026",
+    firstSeen: "2026-05-09",
+    newsTopic: "recreation",
+    copy: "Ron Allred and Jim Wells bought majority interest in the ski area in 1978 and developed Mountain Village, the airport, and gondola over 25 years, transforming Telluride from a boarded-up mining town into a world-class resort. Allred's daughter Kristi and author David Strauss are writing \"Telluride: A Legacy of Legacies,\" interviewing locals who helped build the community from mid-1970s to 2000.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_c38b03a3-2122-4822-a291-a7b55317bab0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/c5/0c550539-158f-416e-8854-85112f921ef3/69fe061ba1cd9.image.jpg?resize=300%2C225"
+  },
+  {
+    title: "Shop students show off",
+    source: "Telluride Times",
+    date: "May 8, 2026",
+    firstSeen: "2026-05-09",
+    newsTopic: "education",
+    copy: "Middle school shop students recently completed their knick-knack shelves and wooden spoons. They are now starting to build wooden crates.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/norwood_post/article_a544195c-3dec-4f7d-b1af-6ec2608ca417.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/cc/7cc40952-4413-4d9f-b281-4ff3348cf439/69fa5e574d670.image.jpg?resize=300%2C225"
+  },
+  {
+    title: "California, Nevada and Arizona announce temporary plan to save water from the Colorado River",
+    source: "Telluride Times",
+    date: "May 8, 2026",
+    firstSeen: "2026-05-09",
+    newsTopic: "infrastructure",
+    copy: "Three lower Colorado River states announced emergency water cuts - Nevada and Arizona reducing use by one-third, California by 13% - as drought and overuse threaten Lake Powell and Lake Mead reservoir levels critical for hydropower and water delivery.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_137054fe-c04a-5681-b79b-c1e2088b3c63.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/f6/6f606ce2-4ca6-5126-92f8-60d57f784962/69fe3bc080d49.image.jpg?resize=300%2C200"
+  },
+  {
     title: "The greatest heron",
     source: "Telluride Times",
     date: "May 8, 2026",
@@ -3610,39 +3663,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/78/97808b59-fa26-4d43-b82e-f3a51e40c652/69efd9a9df84d.image.jpg?resize=300%2C200"
   },
   {
-    title: "‘We’ve legislated our way into housing insecurity’",
-    source: "Telluride Times",
-    date: "April 28, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "housing",
-    copy: "Telluride's town-owned rental properties have 60 vacancies out of 218 units, with some sitting empty for two years after rent increases doubled or tripled under new 2024 policies. One family saw their Sunnyside rent jump from $2,450 to $4,400 monthly, forcing many workers out of what used to be called affordable housing.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_fc7e07da-d18b-4b4e-8371-ae908bc5f813.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/5a/25abcf8b-8de8-41c9-8d2d-5da48a05d4a5/69f10d434c461.image.jpg?resize=300%2C400"
-  },
-  {
-    title: "CHALKBOARD for the week of April 30-May 6",
-    source: "Telluride Times",
-    date: "April 28, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "government",
-    copy: "The weekly community calendar lists birthdays for local residents from April 30-May 6 and provides meeting schedules for town boards, school boards, and chambers of commerce. Regular activities include the Thursday farmers market, senior meals on Mondays and Thursdays, Sunday food pantry distribution, and various recreational programs like pickleball.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_2810e7e2-17a0-4c3b-bc48-8471bf3f043d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/a9/3a968112-13b4-4c82-8f8b-32267e62280a/69f10395372c3.image.jpg?resize=300%2C191"
-  },
-  {
-    title: "Avoiding exponential growth",
-    source: "Telluride Times",
-    date: "April 28, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "community",
-    copy: "Mountain Village has water restrictions due to ongoing drought conditions. A resident opposes state-incentivized development programs, arguing the area lacks sufficient water resources for population growth and faces increased fire risks that have caused some homeowners to lose insurance coverage.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_7ba0d68b-a32e-4ac2-8700-74f287164e7b.html",
-    img: ""
-  },
-  {
     title: "County Planning Commission 5/14 Meeting in TELLURIDE",
     source: "San Miguel County",
     date: "May 1, 2026",
@@ -3671,6 +3691,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
 // Updated: 2026-04-01  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 5-8-26",
+    source: "KOTO Community Radio",
+    date: "May 9, 2026",
+    newsTopic: "land-use",
+    copy: "On this week’s Regional Roundup, we look at how communities across the region are grappling with immigration enforcement. In Durango, Colorado, the District Attorney has filed charges against a federal immigration officer over an alleged assault on a protester outside an U.S. Immigration and Customs Enforcement facility in October 2025. In Glenwood",
+    href: "https://koto.org/news/newscast-5-8-26/"
+  },
   {
     title: "Newscast 5-7-26",
     source: "KOTO Community Radio",
@@ -3726,14 +3754,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "recreation",
     copy: "A Mountain Village Investigation Update; Coming Up Next, Telluride; Lawmakers Talk Geothermal and Overtime Hours",
     href: "https://koto.org/news/newscast-4-27-26/"
-  },
-  {
-    title: "Newscast 4-24-26",
-    source: "KOTO Community Radio",
-    date: "April 25, 2026",
-    newsTopic: "housing",
-    copy: "This week on the Regional Roundup: two people living with Parkinson’s share what it’s like to navigate a disease that affects more than a million Americans. We head to Norwood in southwest Colorado, where a project aims to tackle algae blooms while generating electricity. In Glenwood Springs, we hear community concerns about Flock surveillance came",
-    href: "https://koto.org/news/newscast-4-24-26/"
   }
 ];
 
@@ -3913,7 +3933,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Bilingual Balance in Motion",
     link: "https://koto.org/event/bilingual-balance-in-motion/2026-05-09/",
-    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun an",
+    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
     pubDate: "2026-05-09T10:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -3924,7 +3944,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Gentle Yoga with Kristin Milord",
     link: "https://koto.org/event/gentle-yoga-with-kristin-milord-2/2026-05-10/",
-    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class is free, but donations to support the instru",
+    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class is free, but donations to support the instructor are welcome.",
     pubDate: "2026-05-10T11:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -3935,7 +3955,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Nature Nurture for Moms with Lauren Norton",
     link: "https://koto.org/event/nature-nurture-for-moms-with-lauren-norton/",
-    description: "Connect with Mother Nature on this Mother's Day 2026. Join Lauren Kaas Norton for a guided outdoor experience designed to help you slow down, ground yourself, and reconnect with the natural world. Through gentle breathwork, mindful movement, and guided reflection, you’ll explore a new way of being in relationship with the land rooted in presence, a",
+    description: "Connect with Mother Nature on this Mother's Day 2026. Join Lauren Kaas Norton for a guided outdoor experience designed to help you slow down, ground yourself, and reconnect with the natural world. Through gentle breathwork, mindful movement, and guided reflection, you’ll explore a new way of being in relationship with the land rooted in presence, awareness, and reciprocity. This experience is open to anyone curious about deepening their connection to nature, whether you’re new to these practices or already walking this path. …",
     pubDate: "2026-05-10T12:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -3946,7 +3966,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Drop In Tech Time with Oliver",
     link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-05-10/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access fr",
+    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
     pubDate: "2026-05-10T13:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -3968,7 +3988,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Piano on the Patio with Oliver",
     link: "https://koto.org/event/piano-on-the-patio-with-oliver/",
-    description: "Craving a break from the hustle and bustle of your day? Take a lunchtime escape to the library for a dose of tranquility. Settle into a comfy chair and unwind with ethereal piano melodies played live by WPL's very own, Oliver Henry, of Après Nova. Unplug from your devices and bring a book, magazine, or simply enjoy a moment of peace and quiet. This",
+    description: "Craving a break from the hustle and bustle of your day? Take a lunchtime escape to the library for a dose of tranquility. Settle into a comfy chair and unwind with ethereal piano melodies played live by WPL's very own, Oliver Henry, of Après Nova. Unplug from your devices and bring a book, magazine, or simply enjoy a moment of peace and quiet. This program is a great way to de-stress, recharge, and refocus for the rest of your afternoon. Feel free to bring your lunch and enjoy it while listening to the music! No registration required.",
     pubDate: "2026-05-11T12:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4001,7 +4021,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Cardio Dance Class with Kelsey",
     link: "https://koto.org/event/cardio-dance-class-with-kelsey/",
-    description: "Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won't even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. ¡Únete a nosotros para una divertida noche de baile y ejercicio! Te divertirás tanto que ni te darás cuenta de que estás haciendo ejercicio. Dirigido",
+    description: "Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won't even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. ¡Únete a nosotros para una divertida noche de baile y ejercicio! Te divertirás tanto que ni te darás cuenta de que estás haciendo ejercicio. Dirigido por Kelsey Trottier del Telluride Dance Collective.",
     pubDate: "2026-05-11T18:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4012,7 +4032,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Online Author Talk with Vivienne Ming",
     link: "https://koto.org/event/online-author-talk-with-vivienne-ming/",
-    description: "Join us for a timely conversation on AI, humanity, and the next steps towards building a better future with self-proclaimed “mad scientist” Dr. Vivienne Ming as we discuss her new book, Robot-Proof: When Machines Have All the Answers, Build Better People. In Robot-Proof, Dr. Vivienne Ming helps readers grasp the ugly and the amazing of how individu",
+    description: "Join us for a timely conversation on AI, humanity, and the next steps towards building a better future with self-proclaimed “mad scientist” Dr. Vivienne Ming as we discuss her new book, Robot-Proof: When Machines Have All the Answers, Build Better People. In Robot-Proof, Dr. Vivienne Ming helps readers grasp the ugly and the amazing of how individuals, companies, and societies will respond to the changes that are already taking hold due to the advent of AI. Robot-Proof is a book about people, exploring what it means to be human in an increasingly automated world.",
     pubDate: "2026-05-12T12:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4023,7 +4043,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Free Legal Clinic – Clínica Jurídica Gratuita",
     link: "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-05-12/",
-    description: "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more inform",
+    description: "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. …",
     pubDate: "2026-05-12T16:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4034,7 +4054,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Script Club with Telluride Theatre",
     link: "https://koto.org/event/script-club-with-telluride-theatre/",
-    description: "Join us for our newest club, in partnership with Telluride Theatre: SCRIPT CLUB! This quarterly series will explore contemporary classics and modern-day scripts. We will discuss the historic, literary and performative nature of these plays and films. This month, we'll be reading Beauty Queen of Leenane by Martin McDonagh. There are some editions av",
+    description: "Join us for our newest club, in partnership with Telluride Theatre: SCRIPT CLUB! This quarterly series will explore contemporary classics and modern-day scripts. We will discuss the historic, literary and performative nature of these plays and films. This month, we'll be reading Beauty Queen of Leenane by Martin McDonagh. There are some editions available for check-out through the library or you can contact Kevin Douglas at Telluride Theatre for a pdf (electronic or physical print) of the script: KEVIN@TELLURIDETHEATRE.ORG",
     pubDate: "2026-05-12T17:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4067,7 +4087,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Mountain Village annual Community Clean Up Days",
     link: "https://koto.org/event/mountain-village-annual-community-clean-up-days/2026-05-13/",
-    description: "Mountain Village hosts its annual Community Clean Up Day, this year expanding to two days in two different parts of the community! On Wednesday, May 13, Clean Up Day will take place in Village Court Apartments and on Thursday, May 14, a second Clean Up Day will take place in the Meadows Neighborhood. The entire community is invited to participate i",
+    description: "Mountain Village hosts its annual Community Clean Up Day, this year expanding to two days in two different parts of the community! On Wednesday, May 13, Clean Up Day will take place in Village Court Apartments and on Thursday, May 14, a second Clean Up Day will take place in the Meadows Neighborhood. The entire community is invited to participate in either or both of these events. Schedule for each day: Volunteer Registration: Begins at 2:30 p.m. Clean Up: 3 p.m.-5 p.m. …",
     pubDate: "2026-05-13T14:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4089,7 +4109,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Wildfire Preparedness",
     link: "https://koto.org/event/wildfire-preparedness/",
-    description: "Join San Miguel County and the Western Region Wildfire Council and Telluride Fire Protection District for a presentation on how to prepare for a wildfire and what to do if one arrives. There will also be information about mitigation resources for property owners. There will be simultaneous Spanish interpretation available. Habrá interpretación en e",
+    description: "Join San Miguel County and the Western Region Wildfire Council and Telluride Fire Protection District for a presentation on how to prepare for a wildfire and what to do if one arrives. There will also be information about mitigation resources for property owners. There will be simultaneous Spanish interpretation available. Habrá interpretación en español",
     pubDate: "2026-05-13T17:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4111,7 +4131,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Mountain Village annual Community Clean Up Days",
     link: "https://koto.org/event/mountain-village-annual-community-clean-up-days/2026-05-14/",
-    description: "Mountain Village hosts its annual Community Clean Up Day, this year expanding to two days in two different parts of the community! On Wednesday, May 13, Clean Up Day will take place in Village Court Apartments and on Thursday, May 14, a second Clean Up Day will take place in the Meadows Neighborhood. The entire community is invited to participate i",
+    description: "Mountain Village hosts its annual Community Clean Up Day, this year expanding to two days in two different parts of the community! On Wednesday, May 13, Clean Up Day will take place in Village Court Apartments and on Thursday, May 14, a second Clean Up Day will take place in the Meadows Neighborhood. The entire community is invited to participate in either or both of these events. Schedule for each day: Volunteer Registration: Begins at 2:30 p.m. Clean Up: 3 p.m.-5 p.m. …",
     pubDate: "2026-05-14T14:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4122,7 +4142,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "The Creative Exchange at Telluride Arts HQ",
     link: "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-05-14/",
-    description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ide",
+    description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. …",
     pubDate: "2026-05-14T17:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4133,7 +4153,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Booze & Books at Uno, Dos, Tres Tacos",
     link: "https://koto.org/event/booze-books-at-uno-dos-tres-tacos-2/",
-    description: "Sip on a libation while chatting with other bibliophiles about books you have read recently. It's totally open ended and open to everyone! 5:15 the second Thursday of every month. The library will get some apps for the table; you purchase your own beverage. Please sign up in advance. On Thursday, May 14th, we will meet at 123 Tacos at 123 S. Oak St",
+    description: "Sip on a libation while chatting with other bibliophiles about books you have read recently. It's totally open ended and open to everyone! 5:15 the second Thursday of every month. The library will get some apps for the table; you purchase your own beverage. Please sign up in advance. On Thursday, May 14th, we will meet at 123 Tacos at 123 S. Oak St. The rest of our summer season will be at Liz at 200 W. Colorado Ave. in Telluride. (Entrance is on Fir St.)",
     pubDate: "2026-05-14T17:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4166,7 +4186,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Up-off Gymnastics, Dance, and Spanish",
     link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-05-15/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for s",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. …",
     pubDate: "2026-05-15T10:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4199,7 +4219,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Clown Sex Ed (Telluride Theatre FRINGE Project)",
     link: "https://koto.org/event/clown-sex-ed-telluride-theatre-fringe-project/2026-05-15/",
-    description: "Clown Sex Ed is a hilarious romp through the challenges, failures and horror stories of American sex education. Tara Demmy and Zachary Chiero poke fun at your gym teacher, your health class and your parents' awkward talk and examine not only what they said but more importantly what they left out. Produced by Durango-based Oddball Theatre Company, t",
+    description: "Clown Sex Ed is a hilarious romp through the challenges, failures and horror stories of American sex education. Tara Demmy and Zachary Chiero poke fun at your gym teacher, your health class and your parents' awkward talk and examine not only what they said but more importantly what they left out. Produced by Durango-based Oddball Theatre Company, this off-the-walls comedy \"makes the uncomfortable uproariously funny\" (Broad Street Review). A limited number of Pay-What-You-Can tickets are available per performance. …",
     pubDate: "2026-05-15T19:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4210,7 +4230,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Bilingual Balance in Motion",
     link: "https://koto.org/event/bilingual-balance-in-motion/2026-05-16/",
-    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun an",
+    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
     pubDate: "2026-05-16T10:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4232,7 +4252,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Clown Sex Ed (Telluride Theatre FRINGE Project)",
     link: "https://koto.org/event/clown-sex-ed-telluride-theatre-fringe-project/2026-05-16/",
-    description: "Clown Sex Ed is a hilarious romp through the challenges, failures and horror stories of American sex education. Tara Demmy and Zachary Chiero poke fun at your gym teacher, your health class and your parents' awkward talk and examine not only what they said but more importantly what they left out. Produced by Durango-based Oddball Theatre Company, t",
+    description: "Clown Sex Ed is a hilarious romp through the challenges, failures and horror stories of American sex education. Tara Demmy and Zachary Chiero poke fun at your gym teacher, your health class and your parents' awkward talk and examine not only what they said but more importantly what they left out. Produced by Durango-based Oddball Theatre Company, this off-the-walls comedy \"makes the uncomfortable uproariously funny\" (Broad Street Review). A limited number of Pay-What-You-Can tickets are available per performance. …",
     pubDate: "2026-05-16T19:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4243,7 +4263,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Gentle Yoga with Kristin Milord",
     link: "https://koto.org/event/gentle-yoga-with-kristin-milord-2/2026-05-17/",
-    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class is free, but donations to support the instru",
+    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class is free, but donations to support the instructor are welcome.",
     pubDate: "2026-05-17T11:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4254,7 +4274,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Drop In Tech Time with Oliver",
     link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-05-17/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access fr",
+    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
     pubDate: "2026-05-17T13:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4309,7 +4329,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Money Reset: Getting Your Budget on Track – A Free Financial Literacy Class",
     link: "https://koto.org/event/money-reset-getting-your-budget-on-track-a-free-financial-literacy-class/2026-05-18/1/",
-    description: "The Telluride Foundation is partnering with four local banks, the Wilkinson Library, and Collaborative Action for Immigrants (CAFI) to offer a free financial literacy class, in both English and Spanish, on Monday, May 18. The English workshop will be held from noon to 1:30 p.m. in the Program Room at the Wilkinson Public Library, with lunch provide",
+    description: "The Telluride Foundation is partnering with four local banks, the Wilkinson Library, and Collaborative Action for Immigrants (CAFI) to offer a free financial literacy class, in both English and Spanish, on Monday, May 18. The English workshop will be held from noon to 1:30 p.m. in the Program Room at the Wilkinson Public Library, with lunch provided, and is also available via Zoom. …",
     pubDate: "2026-05-18T12:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4331,7 +4351,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Money Reset: Getting Your Budget on Track – A Free Financial Literacy Class",
     link: "https://koto.org/event/money-reset-getting-your-budget-on-track-a-free-financial-literacy-class/2026-05-18/2/",
-    description: "The Telluride Foundation is partnering with four local banks, the Wilkinson Library, and Collaborative Action for Immigrants (CAFI) to offer a free financial literacy class, in both English and Spanish, on Monday, May 18. The English workshop will be held from noon to 1:30 p.m. in the Program Room at the Wilkinson Public Library, with lunch provide",
+    description: "The Telluride Foundation is partnering with four local banks, the Wilkinson Library, and Collaborative Action for Immigrants (CAFI) to offer a free financial literacy class, in both English and Spanish, on Monday, May 18. The English workshop will be held from noon to 1:30 p.m. in the Program Room at the Wilkinson Public Library, with lunch provided, and is also available via Zoom. …",
     pubDate: "2026-05-18T17:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4342,7 +4362,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "The Listening Club: The Cure's Disintegration w/ Sam Burgess",
     link: "https://koto.org/event/the-listening-club-the-cures-disintegration-w-sam-burgess/",
-    description: "Take some time to listen to the month's featured album. Then, join The Listening Club the fourth Monday of each month for a deep discussion of the album lead by your album guide for the evening. Your knowledgeable guide will bring you cultural, historical, and musical context that will surprise and delight you, as well as bring you a greater unders",
+    description: "Take some time to listen to the month's featured album. Then, join The Listening Club the fourth Monday of each month for a deep discussion of the album lead by your album guide for the evening. Your knowledgeable guide will bring you cultural, historical, and musical context that will surprise and delight you, as well as bring you a greater understanding of the music you are hearing. It's like a book club, but for albums! Come join the fun at Telluride Music Company and get into a raffle for a vinyl copy of the month's featured album and enjoy some FREE pizza with the discussion. …",
     pubDate: "2026-05-18T18:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4353,7 +4373,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Online Author Talk with Nir Eyal",
     link: "https://koto.org/event/online-author-talk-with-nir-eyal/",
-    description: "What if the only thing standing between you and the seemingly impossible…was belief? This is the question posed by bestselling author Nir Eyal in his new work, Beyond Belief. Most of your limits aren’t physical. They’re psychological. In Beyond Belief, Nir Eyal reveals how the hidden assumptions you carry shape what you see, how you feel, and what ",
+    description: "What if the only thing standing between you and the seemingly impossible…was belief? This is the question posed by bestselling author Nir Eyal in his new work, Beyond Belief. Most of your limits aren’t physical. They’re psychological. In Beyond Belief, Nir Eyal reveals how the hidden assumptions you carry shape what you see, how you feel, and what you do—and how to replace them with beliefs that unlock your true potential.",
     pubDate: "2026-05-19T12:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4364,7 +4384,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Talking Gourds Presents Stories and Poems",
     link: "https://koto.org/event/talking-gourds-presents-stories-and-poems/2026-05-19/",
-    description: "The Telluride Institute’s Talking Gourds Poetry Program is hosting a live Stories & Poems series at the Wilkinson Public Library magazine room on the third Tuesday of every month at 5:30 pm. Following the featured poet's or story teller's reading we will hold a Talking Gourds sharing circle going around the room to let everyone speak. Attendees are",
+    description: "The Telluride Institute’s Talking Gourds Poetry Program is hosting a live Stories & Poems series at the Wilkinson Public Library magazine room on the third Tuesday of every month at 5:30 pm. Following the featured poet's or story teller's reading we will hold a Talking Gourds sharing circle going around the room to let everyone speak. Attendees are encouraged to bring their own work or someone else’s that they like to share. For more information, visit the Telluride Institute Talking Gourds website: tellurideinstitute.org/talking-gourds",
     pubDate: "2026-05-19T17:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4386,7 +4406,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Beans and Books at Coffee Cowboy",
     link: "https://koto.org/event/beans-and-books-at-coffee-cowboy/",
-    description: "What better way to start out your day than by sipping on a hot cup of coffee while chatting with other bibliophiles about books? It's a chance to talk about whatever you have been reading (or listening to) and hear about what other folks have been reading (or listening to). Drop in anytime at the beautiful Coffee Cowboy General Store on the corner ",
+    description: "What better way to start out your day than by sipping on a hot cup of coffee while chatting with other bibliophiles about books? It's a chance to talk about whatever you have been reading (or listening to) and hear about what other folks have been reading (or listening to). Drop in anytime at the beautiful Coffee Cowboy General Store on the corner of Pacific and Willow the third Wednesday of every month!",
     pubDate: "2026-05-20T08:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4397,7 +4417,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Mahjongg for Independent Players",
     link: "https://koto.org/event/mahjongg-for-independent-players-2/",
-    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessar",
+    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you'd like to join so we can make sure we have enough tables set up for everyone!",
     pubDate: "2026-05-20T13:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -4408,20 +4428,42 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Plant Party Kick off!",
     link: "https://koto.org/event/plant-party-kick-off/",
-    description: "Kick off our new Plant Party series with inspiration from For The Love of House Plants! This first gathering celebrates all things green-whether you're nurturing your first pathos or managing a full indoor jungle. We'll explore simple care tips, share plant stories, and connect with fellow plant enthusiasts in a relaxed welcoming space. Come ready ",
+    description: "Kick off our new Plant Party series with inspiration from For The Love of House Plants! This first gathering celebrates all things green-whether you're nurturing your first pathos or managing a full indoor jungle. We'll explore simple care tips, share plant stories, and connect with fellow plant enthusiasts in a relaxed welcoming space. Come ready to learn, swap ideas, and grow your love of houseplants. The first 10 people to sign up will receive a free copy of the book! Don't worry, you do not need the book to participate we will have plenty of information and fun for everyone. …",
     pubDate: "2026-05-20T17:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/04/plant-party-9.png"
+  },
+  {
+    title: "Mountainfilm Festival",
+    link: "https://koto.org/event/mountainfilm-festival/",
+    description: "Using the power of film, art and ideas, Mountainfilm inspires audiences to create a better world. Held every Memorial Day weekend, the Mountainfilm festival brings together a community of filmmakers and change makers, showcasing documentary films that celebrate adventure, activism, social justice, environment and indomitable spirit.",
+    pubDate: "2026-05-21T00:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/Ocean-Symp-Garth-Andy3-2-scaled.jpg"
+  },
+  {
+    title: "Town Read:  The River's Daughter by Bridget Crocker",
+    link: "https://koto.org/event/town-read-the-rivers-daughter-by-bridget-crocker/",
+    description: "The Town Read, selected by the library, in conjunction with Mountainfilm is The River's Daughter by Bridget Crocker. She will be at the library for a talk and signing. Books available at the event and at the bookstore.",
+    pubDate: "2026-05-21T08:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/Screenshot-2026-05-08-111935.png"
   }
 ];
 const WILKINSON_EVENTS = [
   {
     title: "You & Me / Tu y Yo",
     link: "https://telluridelibrary.libcal.com/event/15184967?hs=a",
-    description: "10:30 AM – 11:00 AM",
+    description: "10:30 AM – 11:00 AM · Join us every Friday for a fun and engaging parent-child program designed for preschoolers! Each week, we explore a new theme through hands-on activities that spark creativity, curiosity, and learning.  1st Friday: Art - Get creative with fun art projects designed for little hands! 2nd Friday: Toddler Chef - Stir, mix, and create easy, tasty treats while learning basic kitchen skills. 3rd Friday: STEM - Dive into simple science, technology, engineering, and math experiments that inspire wonder. 4th Friday: Crafts - Enjoy making fun crafts together. …",
     pubDate: "2026-05-08T10:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -4432,7 +4474,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Teen Ping Pong",
     link: "https://telluridelibrary.libcal.com/event/15976839?hs=a",
-    description: "4:00 PM – 6:00 PM",
+    description: "4:00 PM – 6:00 PM · Come stop by the library every Friday after school for open Ping Pong for Teenagers in the Magazine Room.",
     pubDate: "2026-05-08T16:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -4442,7 +4484,17 @@ const WILKINSON_EVENTS = [
   }
 ];
 const HUMANE_SOCIETY_ANIMALS = [
-
+  {
+    id: "TEL-A-180",
+    name: "Billie",
+    species: "Dog",
+    breed: "Cattle Dog, Australian (Red Heeler) / Shepherd",
+    ageGroup: "Young Puppy",
+    sex: "Female",
+    photo: "https://new-s3.shelterluv.com/profile-pictures/3d526ad221efcb4f9ce95210e44907f3/97514f84518ad9f760c1921e4e97f094.jpg",
+    profileUrl: "https://www.shelterluv.com/embed/animal/213648662",
+    summary: "Young Puppy • Cattle Dog, Australian (Red Heeler) / Shepherd • Female"
+  }
 ];
 
 // ── Telluride Foundation events ──
@@ -4995,7 +5047,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-05-07'; // Updated by legal-notice-update task
+const LEGAL_NOTICES_CACHE_DATE = '2026-05-09'; // Updated by legal-notice-update task
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -5638,6 +5690,40 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
     address: "San Miguel County",
     noticeKey: "property-tax-exemption-2026"
+  },
+  {
+    title: "Request for Proposal -- 2026 Public Restroom Cleaning Services",
+    entity: "Town of Telluride",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Request for Proposal",
+    filterTag: "public-entity",
+    summary: "Town of Telluride is seeking qualified respondents for: 2026 Public Restroom Cleaning Services.",
+    deadline: "Closes 6/5/2026",
+    expires: "2026-06-05",
+    dates: "5/9",
+    url: "https://www.telluride.gov/bids.aspx?bidID=128",
+    address: "",
+    totBidID: "128"
+  },
+  {
+    title: "Request for Proposal -- 2026 Town Facilities Janitorial Services",
+    entity: "Town of Telluride",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Request for Proposal",
+    filterTag: "public-entity",
+    summary: "Town of Telluride is seeking qualified respondents for: 2026 Town Facilities Janitorial Services.",
+    deadline: "Closes 6/5/2026",
+    expires: "2026-06-05",
+    dates: "5/9",
+    url: "https://www.telluride.gov/bids.aspx?bidID=129",
+    address: "",
+    totBidID: "129"
   }
 ];
 
