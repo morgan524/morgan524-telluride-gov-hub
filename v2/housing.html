@@ -21,7 +21,7 @@
       --text-muted: #7a8a85;
       --border-soft: rgba(33, 68, 60, 0.12);
       --border-card: rgba(33, 68, 60, 0.10);
-      --shadow-card: 0 4px 14px rgba(36, 49, 46, 0.06);
+      --shadow-card: 0 4px 18px rgba(36, 49, 46, 0.10);
       --font-heading: 'Georgia', 'Times New Roman', serif;
       --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
     }
@@ -39,21 +39,21 @@
     .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
     .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
 
-    /* ── Hero ── */
+    /* ── Hero ── shared cream/warm overlay treatment, matches Local News */
     .hero {
-      min-height: 220px;
       background:
-        linear-gradient(180deg, rgba(33,68,60,0.55) 0%, rgba(33,68,60,0.30) 60%, rgba(33,68,60,0.45) 100%),
+        linear-gradient(180deg, rgba(239, 233, 220, 0.78) 0%, rgba(239, 233, 220, 0.45) 55%, rgba(239, 233, 220, 0.20) 100%),
         url('img/wilson-peak.png') no-repeat center center / cover,
         var(--bg-hero);
-      color: #fff;
-      display: flex;
-      align-items: center;
+      padding: 28px 0 24px;
       border-bottom: 1px solid var(--border-soft);
+      min-height: 200px;
     }
-    .hero-inner { max-width: 1280px; margin: 0 auto; padding: 36px 32px; width: 100%; }
-    .hero h1 { font-family: var(--font-heading); font-size: 2.6rem; margin: 0 0 8px; letter-spacing: 0.5px; }
-    .hero p { margin: 0; font-size: 1.05rem; max-width: 760px; opacity: 0.92; }
+    .hero h1 { text-shadow: 0 1px 2px rgba(255,255,255,0.6); }
+    .hero p  { text-shadow: 0 1px 2px rgba(255,255,255,0.5); }
+    .hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+    .hero h1 { margin: 0 0 8px; font-family: var(--font-heading); font-size: 2.6rem; color: var(--text-primary); }
+    .hero p { margin: 0; color: var(--text-secondary); font-size: 1.05rem; max-width: 760px; }
 
     /* ── Filter chips bar (top) ── */
     .chip-bar { background: #fff; border-bottom: 1px solid var(--border-soft); }
@@ -146,7 +146,7 @@
       gap: 20px;
     }
     .house-card {
-      background: var(--bg-paper);
+      background: #fff;
       border: 1px solid var(--border-card);
       border-radius: 12px;
       box-shadow: var(--shadow-card);
@@ -277,7 +277,7 @@
         <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
       </a>
       <nav class="topnav-links">
-        <a href="/v2/">Local News</a>
+        <a href="/v2/local-news.html">Local News</a>
         <a href="/v2/gov-hub.html">Gov-Hub</a>
         <a href="/v2/events.html">Events</a>
         <a href="/v2/local-orgs.html">Local Orgs</a>
@@ -395,13 +395,15 @@
 
     /* ── Filter taxonomy ── */
     const FILTERS = [
-      { key: 'all',     label: 'All Listings' },
-      { key: 'rent',    label: 'Deed Restricted For Rent' },
-      { key: 'sale',    label: 'Deed Restricted For Sale' },
-      { key: 'tax',     label: 'Tax Credit' },
-      { key: 'lottery', label: 'Lottery' },
-      { key: 'tell',    label: 'Telluride' },
-      { key: 'mv',      label: 'Mountain Village' }
+      { key: 'all',         label: 'All Listings' },
+      { key: 'rent',        label: 'Deed Restricted For Rent' },
+      { key: 'sale',        label: 'Deed Restricted For Sale' },
+      { key: 'lottery',     label: 'Lottery' },
+      { key: 'tell',        label: 'Telluride' },
+      { key: 'mv',          label: 'Mountain Village' },
+      { key: 'norwood',     label: 'Norwood' },
+      { key: 'placerville', label: 'Placerville' },
+      { key: 'ophir',       label: 'Ophir' }
     ];
 
     let LISTINGS = SAMPLE_LISTINGS.slice();
@@ -415,13 +417,16 @@
     }
 
     function matchesFilter(l, key) {
+      const loc = (l.location || '');
       if (key === 'all') return true;
       if (key === 'rent') return /rent/i.test(l.type);
       if (key === 'sale') return /sale/i.test(l.type);
-      if (key === 'tax') return /tax/i.test(l.type);
       if (key === 'lottery') return l.lottery === true;
-      if (key === 'tell') return /telluride/i.test(l.location || '') && !/mountain village/i.test(l.location || '');
-      if (key === 'mv')   return /mountain village/i.test(l.location || '');
+      if (key === 'tell') return /telluride/i.test(loc) && !/mountain village/i.test(loc);
+      if (key === 'mv')          return /mountain village/i.test(loc);
+      if (key === 'norwood')     return /norwood/i.test(loc);
+      if (key === 'placerville') return /placerville/i.test(loc);
+      if (key === 'ophir')       return /ophir/i.test(loc);
       return true;
     }
 

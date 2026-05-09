@@ -3,556 +3,530 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Local News — Livable Telluride</title>
-  <!--
-    ┌─────────────────────────────────────────────────────────────────────┐
-    │ LOCAL PREVIEW FILE — DO NOT COMMIT/DEPLOY                           │
-    │ Standalone redesign of the Local News tab. Self-contained: inline   │
-    │ CSS, inline sample data. Open directly with file:// or via any      │
-    │ local web server. Images and logos point to livabletelluride.org    │
-    │ so they load from anywhere with internet.                           │
-    │                                                                     │
-    │ To update sample articles: edit the ARTICLES const at the bottom.   │
-    │ To use live data: see the commented "OPTIONAL: live data" section   │
-    │ at the very bottom of the script.                                   │
-    └─────────────────────────────────────────────────────────────────────┘
-  -->
+  <title>Livable Telluride — Your Community. All in One Place.</title>
   <style>
-    /* ─────────────────────────────────────────
-       Base + nav (matches the live site's tone)
-       ───────────────────────────────────────── */
     :root {
       --forest: #21443c;
       --forest-soft: #2a5347;
       --accent-green: #2f7a5f;
-      --bg-warm: #fdfbf6;     /* page body — lighter, near-white cream */
-      --bg-hero: #efe9dc;     /* hero band — slightly darker warm beige */
+      --accent-green-soft: rgba(47, 122, 95, 0.12);
+      --accent-green-border: rgba(47, 122, 95, 0.25);
+      --gold: #b58a2c;
+      --bg-warm: #fdfbf6;
+      --bg-hero: #efe9dc;
       --bg-paper: #fffdf9;
+      --bg-cream: #f7f1e2;
       --text-primary: #1a2e29;
       --text-secondary: #4a5e57;
       --text-muted: #7a8a85;
       --border-soft: rgba(33, 68, 60, 0.12);
-      --shadow-card: 0 4px 14px rgba(36, 49, 46, 0.06);
+      --border-card: rgba(33, 68, 60, 0.10);
+      --shadow-card: 0 4px 18px rgba(36, 49, 46, 0.10);
       --font-heading: 'Georgia', 'Times New Roman', serif;
       --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
     }
     * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: var(--font-main);
-      color: var(--text-primary);
-      background: var(--bg-warm);
-      line-height: 1.5;
-    }
+    html, body { margin: 0; padding: 0; font-family: var(--font-main); color: var(--text-primary); background: var(--bg-warm); line-height: 1.5; }
 
-    /* Top nav */
-    .topnav {
-      background: #fff;
-      border-bottom: 1px solid var(--border-soft);
-      padding: 14px 0;
-      position: sticky;
-      top: 0;
-      z-index: 50;
-    }
-    .topnav-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 32px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-    .topnav-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      color: var(--forest);
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.15rem;
-      line-height: 1.1;
-    }
+    /* ── Top nav ── */
+    .topnav { background: #fff; border-bottom: 1px solid var(--border-soft); padding: 14px 0; position: sticky; top: 0; z-index: 50; }
+    .topnav-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; gap: 24px; }
+    .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--forest); font-family: var(--font-heading); font-weight: 700; font-size: 1.15rem; line-height: 1.1; }
     .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
-    .topnav-logo small {
-      display: block;
-      font-size: 0.62rem;
-      letter-spacing: 0.12em;
-      color: var(--text-muted);
-      font-weight: 600;
-      margin-top: 2px;
-      font-family: var(--font-main);
-    }
-    .topnav-links {
-      display: flex;
-      gap: 22px;
-      margin-left: 28px;
-      flex: 1;
-    }
-    .topnav-links a {
-      color: var(--text-primary);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      padding: 6px 2px;
-      border-bottom: 2px solid transparent;
-      transition: color 0.15s, border-color 0.15s;
-    }
+    .topnav-links { display: flex; gap: 22px; margin-left: 28px; flex: 1; }
+    .topnav-links a { color: var(--text-primary); text-decoration: none; font-weight: 600; font-size: 0.95rem; padding: 6px 2px; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
     .topnav-links a:hover { color: var(--forest); }
-    .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
-    .topnav-cta {
-      display: inline-block;
-      background: var(--forest);
-      color: #fff;
-      text-decoration: none;
-      padding: 9px 18px;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
+    .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
 
-    /* Hero — Wilson Peak panorama as masthead.
-       Wilson Peak photo is 5267x724 (~7:1 panorama). Use `cover` so it fills
-       the full hero width on any viewport, anchored bottom-center to keep
-       the iconic peak silhouette in frame as the hero height shrinks on
-       narrower screens. Soft cream→transparent gradient on top so the
-       heading text stays readable over the lighter sky regions. */
+    /* ── Hero ── */
     .hero {
-      /* Photo is 5267x724 (~7.3:1). Hero stays close to that natural
-         ratio so the full panorama shows with minimal cropping. Warm
-         beige overlay + base color tint the header darker than the page
-         body so the masthead reads as its own band, like the sample
-         design (Local News page). */
-      background:
-        linear-gradient(180deg, rgba(239, 233, 220, 0.78) 0%, rgba(239, 233, 220, 0.45) 55%, rgba(239, 233, 220, 0.20) 100%),
-        url('img/wilson-peak.png') no-repeat center center / cover,
-        var(--bg-hero);
-      padding: 28px 0 24px;
-      border-bottom: 1px solid var(--border-soft);
-      min-height: 200px;
+      background: var(--bg-warm);
+      padding: 56px 0 40px;
     }
-    .hero h1 { text-shadow: 0 1px 2px rgba(255,255,255,0.6); }
-    .hero p  { text-shadow: 0 1px 2px rgba(255,255,255,0.5); }
     .hero-inner {
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 32px;
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero-overline {
+      color: var(--gold);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      font-size: 0.95rem;
+      margin: 0 0 16px;
     }
     .hero h1 {
-      margin: 0 0 8px;
       font-family: var(--font-heading);
-      font-size: 2.6rem;
-      color: var(--text-primary);
+      font-size: 3.4rem;
+      line-height: 1.1;
+      color: var(--forest);
+      margin: 0 0 18px;
+      letter-spacing: -0.5px;
     }
-    .hero p {
-      margin: 0;
-      color: var(--text-secondary);
+    .hero p.lead {
       font-size: 1.05rem;
-      max-width: 640px;
+      color: var(--text-secondary);
+      margin: 0;
+      max-width: 460px;
+      line-height: 1.55;
+    }
+    .hero-photo {
+      width: 100%;
+      aspect-ratio: 5 / 3;
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--bg-hero) url('img/telluride-125.jpeg') no-repeat center center / cover;
+      box-shadow: var(--shadow-card);
     }
 
-    /* Page layout: main + sidebar */
-    .page-wrap {
+    /* ── Value-prop strip ── */
+    .props {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 32px;
+      padding: 0 32px;
+    }
+    .props-card {
+      background: #fff;
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow-card);
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 280px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .prop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+      padding: 0 12px;
+      border-right: 1px solid var(--border-soft);
+    }
+    .prop:last-child { border-right: none; }
+    .prop-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--accent-green-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    .prop-icon.gold { background: rgba(181, 138, 44, 0.18); }
+    .prop h3 {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      color: var(--forest);
+      margin: 4px 0;
+    }
+    .prop p {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.45;
+    }
+
+    /* ── Section heading w/ mountain decoration ── */
+    .section-head {
+      max-width: 1280px;
+      margin: 56px auto 8px;
+      padding: 0 32px;
+      text-align: center;
+    }
+    .section-head .mtn {
+      color: var(--gold);
+      opacity: 0.6;
+      letter-spacing: 0.5em;
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+    .section-head h2 {
+      font-family: var(--font-heading);
+      color: var(--forest);
+      font-size: 2rem;
+      margin: 0 0 6px;
+      letter-spacing: -0.3px;
+    }
+    .section-head .rule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--gold);
+      font-size: 0.9rem;
+    }
+    .section-head .rule::before, .section-head .rule::after {
+      content: ''; flex: 0 0 64px; height: 1px; background: var(--gold); opacity: 0.5;
+    }
+
+    /* ── Explore card grid ── */
+    .explore {
+      max-width: 1280px;
+      margin: 24px auto;
+      padding: 0 32px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .ex-card {
+      background: #fff;
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 26px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .ex-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(36, 49, 46, 0.14);
+    }
+    .ex-card-head {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .ex-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--accent-green-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .ex-icon.gold { background: rgba(181, 138, 44, 0.18); }
+    .ex-card h3 {
+      font-family: var(--font-heading);
+      color: var(--forest);
+      margin: 0;
+      font-size: 1.25rem;
+      line-height: 1.15;
+    }
+    .ex-card .subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .ex-card p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin: 0;
+      flex: 1;
+    }
+    .ex-card .more {
+      color: var(--accent-green);
+      font-weight: 600;
+      font-size: 0.92rem;
+      margin-top: auto;
+    }
+
+    /* ── This Week + Donate row ── */
+    .week-row {
+      max-width: 1280px;
+      margin: 48px auto;
+      padding: 0 32px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+    .week-card, .donate-card {
+      border-radius: 16px;
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+    }
+    .week-card {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-soft);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .week-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .week-head .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(33, 68, 60, 0.10);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+    }
+    .week-head h3 {
+      font-family: var(--font-heading);
+      color: var(--forest);
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    .week-head .sub {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .week-list { display: flex; flex-direction: column; gap: 10px; }
+    .week-item {
+      display: grid;
+      grid-template-columns: 64px 1fr auto;
+      gap: 14px;
+      align-items: center;
+      background: #fff;
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+      padding: 12px 14px;
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: background 0.15s;
+    }
+    .week-item:hover { background: var(--bg-warm); }
+    .week-date {
+      width: 56px;
+      text-align: center;
+      background: var(--forest);
+      color: #fff;
+      border-radius: 8px;
+      padding: 8px 4px;
+    }
+    .week-date .month { font-size: 0.65rem; letter-spacing: 0.08em; opacity: 0.85; text-transform: uppercase; }
+    .week-date .day { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; line-height: 1; }
+    .week-item .info h4 {
+      font-family: var(--font-main);
+      font-size: 0.98rem;
+      margin: 0 0 4px;
+      color: var(--forest);
+      font-weight: 700;
+    }
+    .week-item .meta {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+    .week-item .arrow { color: var(--accent-green); font-size: 1.2rem; }
+    .week-foot {
+      text-align: center;
+      margin-top: 6px;
+    }
+    .week-foot a {
+      color: var(--accent-green);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    /* Donate card */
+    .donate-card {
+      position: relative;
+      color: #fff;
+      padding: 40px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        linear-gradient(180deg, rgba(33,68,60,0.55) 0%, rgba(33,68,60,0.55) 100%),
+        url('img/wilson-peak.png') no-repeat center center / cover,
+        var(--forest);
+    }
+    .donate-card .icon {
+      width: 56px; height: 56px; border-radius: 50%;
+      border: 2px solid #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; margin-bottom: 14px;
+    }
+    .donate-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      margin: 0 0 10px;
+    }
+    .donate-card p {
+      max-width: 360px;
+      margin: 0 0 20px;
+      font-size: 0.95rem;
+      opacity: 0.95;
+      line-height: 1.45;
+    }
+    .donate-btn {
+      background: var(--gold);
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .donate-btn:hover { background: #c4982f; }
+
+    /* ── Subscribe row ── */
+    .subscribe-row {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px 56px;
+    }
+    .subscribe-card {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 26px 32px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 24px;
+      align-items: center;
+      box-shadow: var(--shadow-card);
+    }
+    .subscribe-card .icon {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--forest); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+    }
+    .subscribe-card .copy h3 {
+      font-family: var(--font-heading);
+      color: var(--forest);
+      margin: 0 0 4px;
+      font-size: 1.2rem;
+    }
+    .subscribe-card .copy p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+    .subscribe-card .form {
+      display: flex; gap: 10px;
+    }
+    .subscribe-card input {
+      padding: 12px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      background: #fff;
+      font-size: 0.95rem;
+      min-width: 280px;
+      font-family: var(--font-main);
+    }
+    .subscribe-card .submit {
+      background: var(--forest);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 999px;
+      border: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      font-family: var(--font-main);
+    }
+    .subscribe-card .submit:hover { background: var(--forest-soft); }
+
+    /* ── Footer ── */
+    .site-foot {
+      background: #fff;
+      border-top: 1px solid var(--border-soft);
+      padding: 32px 0 0;
+    }
+    .site-foot-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px 28px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr 1fr 1.2fr;
       gap: 32px;
       align-items: start;
     }
-
-    /* Filter chips row */
-    .filter-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 24px;
+    .foot-brand { display: flex; flex-direction: column; gap: 6px; }
+    .foot-brand-logo { color: var(--forest); font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; }
+    .foot-brand-tag { color: var(--gold); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; }
+    .foot-col h4 {
+      font-family: var(--font-main);
+      font-size: 0.95rem;
+      color: var(--forest);
+      margin: 0 0 10px;
+      font-weight: 700;
     }
-    .chip {
-      display: inline-block;
-      padding: 8px 18px;
-      border-radius: 999px;
-      background: #fff;
-      border: 1px solid var(--border-soft);
+    .foot-col a, .foot-col p {
+      display: block;
       color: var(--text-secondary);
+      text-decoration: none;
       font-size: 0.88rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.15s;
+      padding: 3px 0;
     }
-    .chip:hover { background: var(--bg-paper); }
-    .chip.active {
-      background: var(--forest);
-      color: #fff;
-      border-color: var(--forest);
+    .foot-col a:hover { color: var(--forest); }
+    .foot-social { display: flex; gap: 14px; margin-top: 4px; }
+    .foot-social a {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--bg-cream); color: var(--forest);
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none; font-size: 1rem; padding: 0;
     }
-
-    /* Featured card */
-    .featured-card {
-      background: #fff;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: var(--shadow-card);
-      border: 1px solid var(--border-soft);
-      display: grid;
-      grid-template-columns: minmax(280px, 1fr) 1.4fr;
-      margin-bottom: 28px;
-    }
-    /* .featured-card .img replaced by .img-wrap-featured for blur-bg treatment */
-    .featured-card .body {
-      padding: 28px 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      position: relative;
-    }
-    .featured-tag {
-      align-self: flex-start;
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      background: var(--bg-warm);
-      padding: 4px 10px;
-      border-radius: 6px;
-      font-weight: 700;
-    }
-    .featured-card h2 {
-      margin: 0;
-      font-family: var(--font-heading);
-      font-size: 1.65rem;
-      line-height: 1.25;
-      color: var(--text-primary);
-    }
-    .featured-card .meta {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-    .featured-card .meta .src-logo { width: 22px; height: 22px; object-fit: contain; }
-    .featured-card .meta .sep { color: var(--border-soft); }
-    .featured-card .summary {
-      color: var(--text-secondary);
-      font-size: 0.96rem;
-      line-height: 1.55;
-    }
-    .featured-card .actions {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: auto;
-    }
-    /* Read-more button — picks up the soft sage-green palette of the
-       category tags in the sample design (pale green fill, darker green
-       text). Hover deepens the fill slightly. */
-    .read-more {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 16px;
-      background: rgba(47, 122, 95, 0.12);
-      border: 1px solid rgba(47, 122, 95, 0.18);
-      border-radius: 999px;
-      color: var(--forest);
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 600;
-      transition: background 0.15s, border-color 0.15s;
-    }
-    .read-more:hover {
-      background: rgba(47, 122, 95, 0.22);
-      border-color: rgba(47, 122, 95, 0.32);
-    }
-
-    /* Card grid */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: var(--shadow-card);
-      border: 1px solid var(--border-soft);
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.15s, box-shadow 0.15s;
-    }
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(36, 49, 46, 0.10);
-    }
-    .card .img-wrap {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      overflow: hidden;
-      background: #e8e5de;
-    }
-    .card .img-wrap img {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    /* Portrait images: switch to contain so the whole image shows, and
-       fill the letterboxed side bars with a blurred copy of the same
-       image (Apple Music / Spotify treatment). The portrait class is
-       added by JS in handlePortrait() when naturalHeight > naturalWidth. */
-    .card .img-wrap.portrait::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background-image: var(--bg-img);
-      background-size: cover;
-      background-position: center;
-      filter: blur(22px) brightness(0.85) saturate(1.1);
-      /* Scale up so blurred edges don't reveal the underlying bg color */
-      transform: scale(1.18);
-    }
-    .card .img-wrap.portrait img {
-      object-fit: contain;
-    }
-    /* Same treatment on the featured card */
-    .featured-card .img-wrap-featured {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      overflow: hidden;
-      background: #ddd;
-    }
-    .featured-card .img-wrap-featured img {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .featured-card .img-wrap-featured.portrait::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background-image: var(--bg-img);
-      background-size: cover;
-      background-position: center;
-      filter: blur(28px) brightness(0.82) saturate(1.1);
-      transform: scale(1.18);
-    }
-    .featured-card .img-wrap-featured.portrait img {
-      object-fit: contain;
-    }
-    .card .body {
-      padding: 18px 20px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      flex: 1;
-    }
-    .card h3 {
-      margin: 0;
-      font-family: var(--font-heading);
-      font-size: 1.2rem;
-      line-height: 1.3;
-      color: var(--text-primary);
-    }
-    .card .meta {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--text-muted);
-      font-size: 0.78rem;
-    }
-    .card .meta .src-logo { width: 18px; height: 18px; object-fit: contain; }
-    .card .summary {
-      color: var(--text-secondary);
+    .foot-social a:hover { background: var(--accent-green-soft); }
+    .foot-mission {
+      background: var(--bg-cream);
+      border-radius: 12px;
+      padding: 16px;
       font-size: 0.86rem;
-      line-height: 1.5;
-      /* Cap each card to ~5 lines so heights stay uniform */
-      display: -webkit-box;
-      -webkit-line-clamp: 5;
-      line-clamp: 5;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    .card .actions {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: auto;
-      padding-top: 6px;
-    }
-    .card .actions .read-more {
-      padding: 6px 12px;
-      font-size: 0.8rem;
-    }
-    .card .source-logo-corner {
-      width: 28px;
-      height: 28px;
-      object-fit: contain;
-      opacity: 0.85;
-    }
-    /* KOTO logo runs visually small — bump it 50% in every spot it appears.
-       TT and other source logos keep their default size. */
-    .card .src-logo[src*="koto"]            { width: 27px; height: 27px; }
-    .card .source-logo-corner[src*="koto"]  { width: 42px; height: 42px; }
-    .featured-card .src-logo[src*="koto"]   { width: 33px; height: 33px; }
-
-    /* Sidebar */
-    .sidebar {
-      position: sticky;
-      top: 100px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    /* Support card — sits at the top of the sidebar, links to donate page.
-       Pale beige body, green community badge up top, mountain silhouette
-       at the bottom. */
-    .support-card {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      background: var(--bg-hero);
-      border: 1px solid var(--border-soft);
-      border-radius: 18px;
-      padding: 24px 22px 0;
-      box-shadow: var(--shadow-card);
-      overflow: hidden;
-      position: relative;
-      text-align: center;
-      transition: transform 0.18s, box-shadow 0.18s;
-    }
-    .support-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(36, 49, 46, 0.10);
-    }
-    .support-icon {
-      width: 56px;
-      height: 56px;
-      margin: 0 auto 14px;
-      border-radius: 50%;
-      background: var(--forest);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .support-icon svg { width: 28px; height: 28px; color: #fff; }
-    .support-card h3 {
-      margin: 0 0 12px;
-      font-family: var(--font-heading);
-      font-size: 1.18rem;
-      line-height: 1.25;
-      color: var(--text-primary);
-    }
-    .support-card p {
-      margin: 0 0 18px;
-      font-size: 0.86rem;
-      line-height: 1.55;
       color: var(--text-secondary);
     }
-    .support-cta {
-      display: inline-block;
-      margin-bottom: 18px;
-      color: var(--accent-green);
-      font-weight: 700;
-      font-size: 0.92rem;
-    }
-    .support-card:hover .support-cta { text-decoration: underline; }
-    .support-mountains {
-      display: block;
-      margin: 0 -22px;  /* extend to card edges */
-      width: calc(100% + 44px);
-      height: 70px;
-      opacity: 0.55;
-    }
-    .support-mountains svg { width: 100%; height: 100%; display: block; }
-    .sidebar-placeholder {
-      background: repeating-linear-gradient(45deg,
-        rgba(33, 68, 60, 0.04),
-        rgba(33, 68, 60, 0.04) 12px,
-        rgba(33, 68, 60, 0.07) 12px,
-        rgba(33, 68, 60, 0.07) 24px);
-      border: 2px dashed rgba(33, 68, 60, 0.25);
-      border-radius: 16px;
-      padding: 32px 24px;
+    .foot-mission p { margin: 0; padding: 0; }
+    .foot-bottom {
+      background: var(--forest);
+      color: rgba(255,255,255,0.85);
       text-align: center;
-      color: var(--text-muted);
-      min-height: 320px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-    .sidebar-placeholder h3 {
-      margin: 0;
-      font-family: var(--font-heading);
-      font-size: 1.1rem;
-      color: var(--forest);
-    }
-    .sidebar-placeholder p {
-      margin: 0;
+      padding: 14px;
       font-size: 0.85rem;
-      max-width: 220px;
-      line-height: 1.5;
     }
 
-    /* Responsive */
-    @media (max-width: 1100px) {
-      .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    /* ── Responsive ── */
+    @media (max-width: 1080px) {
+      .hero h1 { font-size: 2.6rem; }
+      .props-card { grid-template-columns: repeat(2, 1fr); }
+      .prop { border-right: none; border-bottom: 1px solid var(--border-soft); padding-bottom: 16px; }
+      .prop:nth-last-child(-n+2) { border-bottom: none; padding-bottom: 0; }
+      .explore { grid-template-columns: repeat(2, 1fr); }
+      .week-row { grid-template-columns: 1fr; }
+      .site-foot-inner { grid-template-columns: 1fr 1fr; }
     }
-    @media (max-width: 900px) {
-      .page-wrap { grid-template-columns: 1fr; }
-      .sidebar { position: static; }
-      .featured-card { grid-template-columns: 1fr; }
-      .featured-card .img-wrap-featured { aspect-ratio: 16 / 9; }
+    @media (max-width: 720px) {
       .topnav-links { display: none; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-photo { aspect-ratio: 4 / 3; }
       .hero h1 { font-size: 2rem; }
-    }
-    @media (max-width: 640px) {
-      .card-grid { grid-template-columns: 1fr; }
-    }
-
-    /* Small "PREVIEW" banner so Morgan never confuses this with the live site */
-    .preview-banner {
-      background: #fff8e1;
-      border-bottom: 1px solid #f0d68a;
-      padding: 8px 24px;
-      text-align: center;
-      font-size: 0.82rem;
-      color: #6b5a1f;
-    }
-    .preview-banner code {
-      background: #f6e8b1;
-      padding: 1px 6px;
-      border-radius: 4px;
+      .explore { grid-template-columns: 1fr; }
+      .props-card { grid-template-columns: 1fr; }
+      .prop { border-bottom: 1px solid var(--border-soft); border-right: none; padding-bottom: 16px; }
+      .prop:last-child { border-bottom: none; padding-bottom: 0; }
+      .subscribe-card { grid-template-columns: 1fr; text-align: center; }
+      .subscribe-card .form { flex-direction: column; }
+      .subscribe-card input { min-width: 0; width: 100%; }
+      .site-foot-inner { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-
-  <div class="preview-banner">
-    🚧 <strong>Local-only preview</strong> — this file is <code>local-news-redesign.html</code> in your workspace and is <strong>not deployed</strong>. Edit freely; nothing here ships until you say so.
-  </div>
-
   <header class="topnav">
     <div class="topnav-inner">
       <a class="topnav-logo" href="/v2/" aria-label="Livable Telluride home">
         <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
       </a>
       <nav class="topnav-links">
-        <a href="/v2/" class="active">Local News</a>
+        <a href="/v2/local-news.html">Local News</a>
         <a href="/v2/gov-hub.html">Gov-Hub</a>
         <a href="/v2/events.html">Events</a>
         <a href="/v2/local-orgs.html">Local Orgs</a>
@@ -560,300 +534,294 @@
         <a href="/v2/legal-notices.html">Legal Notices</a>
         <a href="/v2/about.html">About</a>
       </nav>
-      <a class="topnav-cta" href="https://livabletelluride.org/#tab-subscribe">Subscribe</a>
+      <a class="topnav-cta" href="#subscribe">Subscribe</a>
     </div>
   </header>
 
+  <!-- ── Hero ── -->
   <section class="hero">
     <div class="hero-inner">
-      <h1>Local News</h1>
-      <p>The latest local news and updates from Telluride and the surrounding region.</p>
+      <div>
+        <p class="hero-overline">Inform. Connect. Engage. Together.</p>
+        <h1>Your Community.<br>All in One Place.</h1>
+        <p class="lead">Livable Telluride brings together meetings, events, news, resources, and local voices to keep our mountain communities informed, connected, and empowered.</p>
+      </div>
+      <div class="hero-photo" aria-label="Telluride 125 panorama"></div>
     </div>
   </section>
 
-  <main class="page-wrap">
-    <div>
-      <div class="filter-chips" id="chipRow">
-        <!-- chips populated by JS -->
+  <!-- ── Value-prop strip ── -->
+  <section class="props">
+    <div class="props-card">
+      <div class="prop">
+        <div class="prop-icon">📣</div>
+        <h3>Stay Informed</h3>
+        <p>Get the latest meetings, news, alerts, and updates.</p>
       </div>
+      <div class="prop">
+        <div class="prop-icon gold">📅</div>
+        <h3>Get Involved</h3>
+        <p>Find events, share your voice, and take action on issues that matter.</p>
+      </div>
+      <div class="prop">
+        <div class="prop-icon">👥</div>
+        <h3>Connect Locally</h3>
+        <p>Discover local organizations, groups, and services that strengthen our community.</p>
+      </div>
+      <div class="prop">
+        <div class="prop-icon gold">💛</div>
+        <h3>Stronger Together</h3>
+        <p>Building a livable, inclusive, and sustainable future for all who call this place home.</p>
+      </div>
+    </div>
+  </section>
 
-      <article class="featured-card" id="featuredCard"><!-- populated by JS --></article>
+  <!-- ── Explore section ── -->
+  <div class="section-head">
+    <div class="mtn">▲ ▲ ▲</div>
+    <h2>Explore Everything We Offer</h2>
+    <div class="rule"><span></span></div>
+  </div>
 
-      <div class="card-grid" id="cardGrid"><!-- populated by JS --></div>
+  <section class="explore">
+    <a class="ex-card" href="https://livabletelluride.org/#tab-hubbub">
+      <div class="ex-card-head">
+        <div class="ex-icon">💬</div>
+        <div>
+          <h3>Hub-Bub</h3>
+          <div class="subtitle">Community Forum</div>
+        </div>
+      </div>
+      <p>Join conversations, ask questions, share ideas, and connect with your neighbors.</p>
+      <span class="more">Learn More →</span>
+    </a>
+    <a class="ex-card" href="/v2/gov-hub.html">
+      <div class="ex-card-head">
+        <div class="ex-icon">🏛️</div>
+        <div>
+          <h3>Gov-Hub</h3>
+          <div class="subtitle">Public Meetings &amp; Agendas</div>
+        </div>
+      </div>
+      <p>View upcoming public meetings, read agendas, and stay up to date on local government.</p>
+      <span class="more">Learn More →</span>
+    </a>
+    <a class="ex-card" href="/v2/events.html">
+      <div class="ex-card-head">
+        <div class="ex-icon gold">📅</div>
+        <div>
+          <h3>Events</h3>
+          <div class="subtitle">Community Calendar</div>
+        </div>
+      </div>
+      <p>Find local events, workshops, festivals, and important community gatherings.</p>
+      <span class="more">Learn More →</span>
+    </a>
+    <a class="ex-card" href="/v2/local-news.html">
+      <div class="ex-card-head">
+        <div class="ex-icon">📰</div>
+        <div>
+          <h3>Local News</h3>
+          <div class="subtitle">News &amp; Housing</div>
+        </div>
+      </div>
+      <p>Read the latest local news, housing updates, and in-depth community reporting.</p>
+      <span class="more">Learn More →</span>
+    </a>
+    <a class="ex-card" href="/v2/local-orgs.html">
+      <div class="ex-card-head">
+        <div class="ex-icon gold">👥</div>
+        <div>
+          <h3>Local Orgs</h3>
+          <div class="subtitle">Organizations &amp; Resources</div>
+        </div>
+      </div>
+      <p>Discover local non-profits, community groups, and resources making a difference in our region.</p>
+      <span class="more">Learn More →</span>
+    </a>
+    <a class="ex-card" href="/v2/about.html">
+      <div class="ex-card-head">
+        <div class="ex-icon">⛰️</div>
+        <div>
+          <h3>About Us</h3>
+          <div class="subtitle">Our Mission</div>
+        </div>
+      </div>
+      <p>Learn about Livable Telluride, our mission, and how you can get involved.</p>
+      <span class="more">Learn More →</span>
+    </a>
+  </section>
+
+  <!-- ── This Week + Donate ── -->
+  <section class="week-row">
+    <div class="week-card">
+      <div class="week-head">
+        <div class="icon">🔭</div>
+        <div>
+          <h3>What's Happening This Week</h3>
+          <div class="sub">A quick look at upcoming meetings and events.</div>
+        </div>
+      </div>
+      <div class="week-list" id="weekList">
+        <!-- Sample fallback (replaced by loadLiveWeek) -->
+        <a class="week-item" href="/v2/gov-hub.html">
+          <div class="week-date"><div class="month">May</div><div class="day">11</div></div>
+          <div class="info"><h4>Planning &amp; Zoning Commission Meeting</h4><p class="meta">May 11, 2026 • 5:00 PM • Rebekah Hall</p></div>
+          <div class="arrow">›</div>
+        </a>
+        <a class="week-item" href="/v2/events.html">
+          <div class="week-date"><div class="month">May</div><div class="day">13</div></div>
+          <div class="info"><h4>Telluride Farmers Market Opens</h4><p class="meta">May 13, 2026 • 10:00 AM • Town Park</p></div>
+          <div class="arrow">›</div>
+        </a>
+        <a class="week-item" href="/v2/housing.html">
+          <div class="week-date"><div class="month">May</div><div class="day">15</div></div>
+          <div class="info"><h4>Housing Update: Pipeline Projects</h4><p class="meta">May 15, 2026 • 12:00 PM • Online</p></div>
+          <div class="arrow">›</div>
+        </a>
+      </div>
+      <div class="week-foot">
+        <a href="/v2/gov-hub.html">View all meetings and events →</a>
+      </div>
     </div>
 
-    <aside class="sidebar">
+    <div class="donate-card">
+      <div class="icon">♡</div>
+      <h3>Support Our Community</h3>
+      <p>Your donation helps us keep information accessible, amplify local voices, and build a stronger, more livable future for all.</p>
+      <a class="donate-btn" href="https://livabletelluride.org/#tab-about">♡  Donate Today</a>
+    </div>
+  </section>
 
-      <!-- Support / Donate card -->
-      <a class="support-card" href="#donate" aria-label="Learn how to support Livable Telluride">
-        <div class="support-icon" aria-hidden="true">
-          <!-- 'group of people' icon (Lucide-style users-2) -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-            <circle cx="8.5" cy="7" r="4"/>
-            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
-        </div>
-        <h3>Strong community.</h3>
-        <p>Livable Telluride is a nonprofit community hub. Your support helps us keep local information accessible to all.</p>
-        <span class="support-cta">Learn how to support →</span>
-        <!-- Soft mountain + tree silhouette — pure SVG, no extra image asset needed -->
-        <div class="support-mountains" aria-hidden="true">
-          <svg viewBox="0 0 280 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- back mountains -->
-            <path fill="#a4b3a8" d="M0,55 L40,28 L72,46 L110,18 L150,42 L188,22 L228,40 L260,30 L280,52 L280,70 L0,70 Z"/>
-            <!-- front mountains, slightly darker -->
-            <path fill="#7a8d80" d="M0,62 L24,46 L60,58 L96,38 L138,55 L174,42 L210,55 L246,44 L280,58 L280,70 L0,70 Z"/>
-            <!-- a few trees -->
-            <g fill="#5b6f64">
-              <polygon points="118,46 122,38 126,46"/>
-              <polygon points="122,52 127,42 132,52"/>
-              <polygon points="160,50 164,40 168,50"/>
-              <polygon points="165,56 170,44 175,56"/>
-              <polygon points="200,52 204,42 208,52"/>
-              <polygon points="205,58 210,46 215,58"/>
-            </g>
-          </svg>
-        </div>
-      </a>
-
-      <!-- Placeholder for additional sidebar cards (newsletter, sources, etc.) -->
-      <div class="sidebar-placeholder">
-        <h3>More sidebar slots</h3>
-        <p>Placeholder for newsletter signup / "Our News Sources" / etc. Add cards here when ready.</p>
+  <!-- ── Subscribe ── -->
+  <section class="subscribe-row" id="subscribe">
+    <div class="subscribe-card">
+      <div class="icon">✉</div>
+      <div class="copy">
+        <h3>Never Miss an Update</h3>
+        <p>Subscribe to get the latest meetings, news, events, and opportunities delivered to your inbox.</p>
       </div>
-    </aside>
-  </main>
+      <form class="form" action="https://livabletelluride.org/#tab-subscribe" method="get">
+        <input type="email" placeholder="Enter your email address" aria-label="Email address" required>
+        <button type="submit" class="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="site-foot">
+    <div class="site-foot-inner">
+      <div class="foot-brand">
+        <div class="foot-brand-logo">⛰️ Livable Telluride</div>
+        <div class="foot-brand-tag">Inform. Connect. Engage. Together.</div>
+      </div>
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <a href="/v2/">Home</a>
+        <a href="/v2/about.html">About Us</a>
+        <a href="https://livabletelluride.org/#tab-about">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Helpful Links</h4>
+        <a href="https://livabletelluride.org/privacy-policy.html">Privacy Policy</a>
+        <a href="https://livabletelluride.org/#tab-about">Terms of Use</a>
+        <a href="https://livabletelluride.org/data-deletion.html">Accessibility</a>
+      </div>
+      <div class="foot-col">
+        <h4>Follow Us</h4>
+        <div class="foot-social">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">⌾</a>
+          <a href="mailto:info@livabletelluride.org" aria-label="Email">✉</a>
+        </div>
+      </div>
+      <div class="foot-mission">
+        <p>Livable Telluride is a community-powered initiative.</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      © 2026 Livable Telluride. All rights reserved.
+    </div>
+  </footer>
 
   <script>
-    /* ──────────────────────────────────────────────────────────
-       Detect portrait images and apply the blurred-background treatment.
-       Triggered by each <img>'s onload. Adds .portrait class to the
-       wrapping div and sets the --bg-img CSS variable to the same image.
-       ────────────────────────────────────────────────────────── */
-    function handlePortrait(img) {
-      if (!img || !img.naturalHeight || !img.naturalWidth) return;
-      // Only treat images where height clearly exceeds width
-      if (img.naturalHeight > img.naturalWidth * 1.05) {
-        const wrap = img.parentElement;
-        if (!wrap) return;
-        wrap.classList.add('portrait');
-        // Set the same image as a blurred backdrop. Quote escaped because
-        // the URL may contain special chars; CSS handles unquoted URLs too
-        // but this is safer.
-        wrap.style.setProperty('--bg-img', 'url("' + img.src.replace(/"/g, '\\"') + '")');
-      }
-    }
-    window.handlePortrait = handlePortrait;
-
-    /* ──────────────────────────────────────────────────────────
-       Source logos — same paths as ENTITY_LOGOS in js/gov-data.js,
-       resolved against the live site so this file works from anywhere.
-       ────────────────────────────────────────────────────────── */
-    const SOURCE_LOGOS = {
-      ttimes:    'https://livabletelluride.org/logo/TT%20Logo.png',
-      koto:      'https://livabletelluride.org/logo/koto-fm-logo.webp',
-      wilkinson: 'https://livabletelluride.org/logo/Wilkenson.png',
-      tjc:       'https://livabletelluride.org/logo/Telluride%20Jewish.webp',
-      tf:        'https://livabletelluride.org/logo/Telluride%20Foundation.png',
-      eco:       'https://livabletelluride.org/logo/Eco%20Action.webp',
-      telluride: 'https://livabletelluride.org/logo/Telluride%20Town.png',
-      county:    'https://livabletelluride.org/logo/San%20Miguel%20County.png',
-      fire:      'https://livabletelluride.org/logo/Telluride%20Fire.png',
-      med:       'https://livabletelluride.org/logo/Medical.jpeg',
-      norwood:   'https://livabletelluride.org/logo/Norwood.jpeg',
-      community: 'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png'
-    };
-
-    /* ──────────────────────────────────────────────────────────
-       Sample articles — REAL data hand-pulled from your live site.
-       Replace/extend freely; the layout doesn't care how many.
-       Shape: { title, source, sourceKey, date, summary, href, img, category }
-       ────────────────────────────────────────────────────────── */
-    const ARTICLES = [
-      {
-        title: "‘Telluride: A Legacy of Legacies’",
-        source: "Telluride Times",
-        sourceKey: "ttimes",
-        date: "May 8, 2026",
-        summary: "Ron Allred and Jim Wells bought majority interest in the ski area in 1978 and developed Mountain Village, the airport, and gondola over 25 years.",
-        href: "https://www.telluridenews.com/news/article_c38b03a3-2122-4822-a291-a7b55317bab0.html",
-        img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/c5/0c550539-158f-416e-8854-85112f921ef3/69fe061ba1cd9.image.jpg?resize=600%2C400",
-        category: "Community",
-        featured: true
-      },
-      {
-        title: "Shop students show off",
-        source: "Telluride Times",
-        sourceKey: "ttimes",
-        date: "May 8, 2026",
-        summary: "Middle school shop students recently completed their knick-knack shelves and wooden spoons. They are now starting to build wooden crates.",
-        href: "https://www.telluridenews.com/norwood_post/article_a544195c-3dec-4f7d-b1af-6ec2608ca417.html",
-        img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/cc/7cc40952-4413-4d9f-b281-4ff3348cf439/69fa5e574d670.image.jpg?resize=600%2C400",
-        category: "Education"
-      },
-      {
-        title: "The greatest heron",
-        source: "Telluride Times",
-        sourceKey: "ttimes",
-        date: "May 8, 2026",
-        summary: "Male great blue herons start building nests to attract females, who then help complete construction before laying 2-6 pale blue eggs.",
-        href: "https://www.telluridenews.com/opinion/columnists/article_1deaa175-5c6a-4156-a2e5-b36e9b739931.html",
-        img: "https://images.unsplash.com/photo-1444930694458-01babe71870d?w=600&h=900&fit=crop",
-        category: "Community"
-      },
-      {
-        title: "We're in this together",
-        source: "Telluride Times",
-        sourceKey: "ttimes",
-        date: "May 7, 2026",
-        summary: "Local mental-health initiatives bring residents together to support each other through difficult times. Free counseling and peer-support groups available weekly.",
-        href: "https://www.telluridenews.com/community/article_we-are-in-this-together.html",
-        img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=900&fit=crop",
-        category: "Community"
-      },
-      {
-        title: "Wildfire awareness fair draws hundreds",
-        source: "KOTO",
-        sourceKey: "koto",
-        date: "May 9, 2026",
-        summary: "Local first responders led demonstrations on home defensible space, evacuation planning, and emergency communications at the Log Hill Fire Station event.",
-        href: "https://koto.org/news/wildfire-awareness-fair/",
-        img: "https://images.unsplash.com/photo-1602523498291-43cffe8ee9e1?w=800&h=600&fit=crop",
-        category: "Public Safety"
-      },
-      {
-        title: "Town Council weighs short-term rental cap",
-        source: "Telluride Times",
-        sourceKey: "ttimes",
-        date: "May 6, 2026",
-        summary: "Public hearing scheduled for May 21 to review proposed changes to short-term rental regulations including a numerical cap and licensing fee adjustments.",
-        href: "https://www.telluridenews.com/news/article_str-cap.html",
-        img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/aa/2aa-council.jpg?resize=600%2C400",
-        category: "Land Use"
-      },
-      {
-        title: "School District announces summer reading list",
-        source: "KOTO",
-        sourceKey: "koto",
-        date: "May 5, 2026",
-        summary: "Telluride School District R-1 released its 2026 summer reading list with selections for K–12. Wilkinson Public Library is offering a parallel book club.",
-        href: "https://koto.org/news/summer-reading-list/",
-        img: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=600&fit=crop",
-        category: "Education"
-      }
-    ];
-
-    /* ────────── Render ────────── */
-    const CATEGORIES = ['All News', ...new Set(ARTICLES.map(a => a.category))];
-    let activeCategory = 'All News';
-
-    function chipsHtml() {
-      return CATEGORIES.map(c => {
-        const cls = c === activeCategory ? 'chip active' : 'chip';
-        return `<span class="${cls}" data-cat="${c}">${c}</span>`;
-      }).join('');
-    }
-
-    function logoTag(srcKey, cls) {
-      const url = SOURCE_LOGOS[srcKey];
-      if (!url) return '';
-      return `<img class="${cls}" src="${url}" alt="" onerror="this.style.display='none'">`;
-    }
-
-    function featuredHtml(a) {
-      return `
-        <div class="img-wrap-featured"><img src="${a.img}" alt="" loading="lazy" onload="handlePortrait(this)" onerror="this.style.background='#ddd'"></div>
-        <div class="body">
-          <span class="featured-tag">Featured</span>
-          <h2><a href="${a.href}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${a.title}</a></h2>
-          <div class="meta">
-            <span>${a.source}</span>
-            <span class="sep">·</span>
-            <span>${a.date}</span>
-          </div>
-          <div class="summary">${a.summary}</div>
-          <div class="actions">
-            <a class="read-more" href="${a.href}" target="_blank" rel="noopener">Read more →</a>
-          </div>
-        </div>
-      `;
-    }
-
-    function cardHtml(a) {
-      return `
-        <article class="card">
-          <div class="img-wrap">
-            <img src="${a.img}" alt="" loading="lazy" onload="handlePortrait(this)" onerror="this.style.opacity=0.3">
-          </div>
-          <div class="body">
-            <h3><a href="${a.href}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${a.title}</a></h3>
-            <div class="meta">
-              <span>${a.source}</span>
-              <span class="sep">·</span>
-              <span>${a.date}</span>
-            </div>
-            <div class="summary">${a.summary}</div>
-            <div class="actions">
-              <a class="read-more" href="${a.href}" target="_blank" rel="noopener">Read more →</a>
-              ${logoTag(a.sourceKey, 'source-logo-corner')}
-            </div>
-          </div>
-        </article>
-      `;
-    }
-
-    function render() {
-      document.getElementById('chipRow').innerHTML = chipsHtml();
-
-      const filtered = activeCategory === 'All News'
-        ? ARTICLES
-        : ARTICLES.filter(a => a.category === activeCategory);
-
-      const featured = filtered.find(a => a.featured) || filtered[0];
-      const rest = filtered.filter(a => a !== featured);
-
-      document.getElementById('featuredCard').innerHTML = featured ? featuredHtml(featured) : '';
-      document.getElementById('cardGrid').innerHTML = rest.map(cardHtml).join('');
-
-      // Wire chip clicks
-      document.querySelectorAll('.chip[data-cat]').forEach(chip => {
-        chip.addEventListener('click', () => {
-          activeCategory = chip.dataset.cat;
-          render();
-        });
-      });
-    }
-
-    render();
-
-        function loadLiveData() {
+    /* ── Live data: pull next week's meetings + events from /js/gov-hub.js
+       and replace the sample week-list. Falls back silently. ─────────── */
+    function loadLiveWeek() {
       const s = document.createElement('script');
       s.src = 'https://livabletelluride.org/js/gov-hub.js?v=v2';
       s.onload = () => {
-        if (typeof TELLURIDE_TIMES_ARTICLES === 'undefined') return;
-        const live = [];
-        TELLURIDE_TIMES_ARTICLES.slice(0, 12).forEach(a => live.push({
-          title: a.title, source: a.source, sourceKey: 'ttimes',
-          date: a.date, summary: a.copy, href: a.href, img: a.img,
-          category: a.newsTopic || 'Community'
-        }));
-        if (typeof KOTO_NEWSCASTS !== 'undefined') {
-          KOTO_NEWSCASTS.slice(0, 6).forEach(a => live.push({
-            title: a.title, source: 'KOTO', sourceKey: 'koto',
-            date: a.date, summary: a.copy, href: a.href, img: a.img || '',
-            category: a.newsTopic || 'Community'
-          }));
-        }
-        ARTICLES.length = 0;
-        live.forEach(a => ARTICLES.push(a));
-        if (ARTICLES[0]) ARTICLES[0].featured = true;
-        render();
+        try {
+          const today = new Date(); today.setHours(0,0,0,0);
+          const horizon = new Date(today.getTime() + 7 * 86400000);
+          const items = [];
+
+          // Meetings
+          const fetchers = [
+            ['getCountyCachedMeetings', '/v2/gov-hub.html'],
+            ['getMVMeetings',           '/v2/gov-hub.html'],
+            ['getSchoolMeetings',       '/v2/gov-hub.html'],
+            ['getFireMeetings',         '/v2/gov-hub.html'],
+            ['getMedMeetings',          '/v2/gov-hub.html'],
+            ['getNorwoodMeetings',      '/v2/gov-hub.html'],
+            ['getOphirMeetings',        '/v2/gov-hub.html'],
+            ['getSmartMeetings',        '/v2/gov-hub.html']
+          ];
+          fetchers.forEach(([fn, href]) => {
+            if (typeof window[fn] !== 'function') return;
+            try {
+              (window[fn]() || []).forEach(m => {
+                if (!m || !m.eventDate || m.eventDate < today || m.eventDate > horizon) return;
+                items.push({
+                  date: m.eventDate,
+                  title: m.title,
+                  meta: m.eventTimes ? (formatDate(m.eventDate) + ' • ' + m.eventTimes + (m.location ? ' • ' + m.location : '')) : formatDate(m.eventDate),
+                  href: href
+                });
+              });
+            } catch (e) {}
+          });
+
+          // Events
+          ['COMMUNITY_EVENTS','KOTO_COMMUNITY_EVENTS','WILKINSON_EVENTS'].forEach(name => {
+            if (typeof window[name] === 'undefined') return;
+            window[name].forEach(e => {
+              const start = e.pubDate || e.start_date || e.date;
+              if (!start) return;
+              const d = new Date(start);
+              d.setHours(0,0,0,0);
+              if (d < today || d > horizon) return;
+              items.push({
+                date: d,
+                title: e.title,
+                meta: formatDate(d) + (e.location ? ' • ' + e.location : ''),
+                href: '/v2/events.html'
+              });
+            });
+          });
+
+          if (items.length === 0) return;
+          items.sort((a, b) => a.date - b.date);
+          const top = items.slice(0, 5);
+          const list = document.getElementById('weekList');
+          list.innerHTML = top.map(it => {
+            const m = it.date.toLocaleString('en', { month: 'short' });
+            const d = it.date.getDate();
+            return '<a class="week-item" href="' + it.href + '">'
+                 +   '<div class="week-date"><div class="month">' + m + '</div><div class="day">' + d + '</div></div>'
+                 +   '<div class="info"><h4>' + it.title + '</h4><p class="meta">' + it.meta + '</p></div>'
+                 +   '<div class="arrow">›</div>'
+                 + '</a>';
+          }).join('');
+        } catch (err) { console.warn('loadLiveWeek failed:', err); }
       };
+      s.onerror = () => console.warn('Could not load /js/gov-hub.js for landing week');
       document.head.appendChild(s);
     }
-    loadLiveData();
+    function formatDate(d) {
+      return d.toLocaleString('en', { month: 'long', day: 'numeric', year: 'numeric' });
+    }
+    loadLiveWeek();
   </script>
 </body>
 </html>

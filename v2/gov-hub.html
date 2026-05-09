@@ -20,7 +20,7 @@
       --text-muted: #7a8a85;
       --border-soft: rgba(33, 68, 60, 0.12);
       --border-card: rgba(33, 68, 60, 0.10);
-      --shadow-card: 0 4px 14px rgba(36, 49, 46, 0.06);
+      --shadow-card: 0 4px 18px rgba(36, 49, 46, 0.10);
       --font-heading: 'Georgia', 'Times New Roman', serif;
       --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
     }
@@ -38,21 +38,21 @@
     .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
     .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
 
-    /* ── Hero ── */
+    /* ── Hero ── shared cream/warm overlay treatment, matches Local News */
     .hero {
-      min-height: 220px;
       background:
-        linear-gradient(180deg, rgba(33,68,60,0.55) 0%, rgba(33,68,60,0.30) 60%, rgba(33,68,60,0.45) 100%),
+        linear-gradient(180deg, rgba(239, 233, 220, 0.78) 0%, rgba(239, 233, 220, 0.45) 55%, rgba(239, 233, 220, 0.20) 100%),
         url('img/wilson-peak.png') no-repeat center center / cover,
         var(--bg-hero);
-      color: #fff;
-      display: flex;
-      align-items: center;
+      padding: 28px 0 24px;
       border-bottom: 1px solid var(--border-soft);
+      min-height: 200px;
     }
-    .hero-inner { max-width: 1280px; margin: 0 auto; padding: 36px 32px; width: 100%; }
-    .hero h1 { font-family: var(--font-heading); font-size: 2.6rem; margin: 0 0 8px; letter-spacing: 0.5px; }
-    .hero p { margin: 0; font-size: 1.05rem; max-width: 760px; opacity: 0.92; }
+    .hero h1 { text-shadow: 0 1px 2px rgba(255,255,255,0.6); }
+    .hero p  { text-shadow: 0 1px 2px rgba(255,255,255,0.5); }
+    .hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+    .hero h1 { margin: 0 0 8px; font-family: var(--font-heading); font-size: 2.6rem; color: var(--text-primary); }
+    .hero p { margin: 0; color: var(--text-secondary); font-size: 1.05rem; max-width: 760px; }
 
     /* ── Filter chips bar (top) ── */
     .chip-bar { background: #fff; border-bottom: 1px solid var(--border-soft); }
@@ -97,7 +97,7 @@
     .sidebar { display: flex; flex-direction: column; gap: 18px; position: sticky; top: 110px; }
 
     .side-card {
-      background: var(--bg-paper);
+      background: #fff;
       border: 1px solid var(--border-card);
       border-radius: 12px;
       padding: 18px;
@@ -189,7 +189,7 @@
     }
 
     .meet-card {
-      background: var(--bg-paper);
+      background: #fff;
       border: 1px solid var(--border-card);
       border-radius: 12px;
       padding: 18px;
@@ -331,7 +331,7 @@
         <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
       </a>
       <nav class="topnav-links">
-        <a href="/v2/">Local News</a>
+        <a href="/v2/local-news.html">Local News</a>
         <a href="/v2/gov-hub.html" class="active">Gov-Hub</a>
         <a href="/v2/events.html">Events</a>
         <a href="/v2/local-orgs.html">Local Orgs</a>
