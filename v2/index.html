@@ -40,7 +40,10 @@
     .topnav-links a:hover { color: var(--forest); }
     .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
 
-    /* ── Hero — full-bleed banner with photo on right and cream-gradient text panel on left ── */
+    /* ── Hero — full-bleed banner with photo on right and cream-gradient text panel on left ──
+       Image is 1456x1159 (≈5:4). Use `auto 100%` so the photo's height
+       fits the hero exactly, natural width pinned to the right edge.
+       This avoids the heavy vertical crop that `cover` produced. */
     .hero {
       position: relative;
       background:
@@ -49,7 +52,7 @@
           var(--bg-warm) 28%,
           rgba(253, 251, 246, 0.85) 42%,
           rgba(253, 251, 246, 0.0) 60%),
-        url('img/telluride-125.jpeg') no-repeat center right / cover,
+        url('img/telluride-125.jpeg') no-repeat right center / auto 100%,
         var(--bg-hero);
       min-height: 480px;
       padding: 80px 0 120px;   /* extra bottom padding for props overlap */
@@ -363,7 +366,7 @@
       .hero { min-height: 420px; padding: 60px 0 110px;
         background:
           linear-gradient(90deg, var(--bg-warm) 0%, var(--bg-warm) 30%, rgba(253,251,246,0.7) 55%, rgba(253,251,246,0.0) 75%),
-          url('img/telluride-125.jpeg') no-repeat center right / cover,
+          url('img/telluride-125.jpeg') no-repeat right center / auto 100%,
           var(--bg-hero);
       }
       .hero h1 { font-size: 2.6rem; }
