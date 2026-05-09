@@ -747,16 +747,7 @@
        sample EVENTS with COMMUNITY_EVENTS + KOTO_COMMUNITY_EVENTS +
        WILKINSON_EVENTS and re-render. Falls back silently to the
        sample data on any failure. ──────────────────────────────────── */
-    function loadLiveEvents() {      // Stub hidden DOM elements that gov-hub.js's top-level handlers expect (sidebarReset etc).
-      // Without these, getElementById(...).addEventListener throws and halts execution before HOUSING_LISTINGS gets defined.
-      ['sidebarReset','bannerClear','sidebarToggle','sidebarOverlay','collapseRight','expandRight','sidebar'].forEach(id => {
-        if (document.getElementById(id)) return;
-        const el = document.createElement('span');
-        el.id = id; el.style.display = 'none';
-        document.body.appendChild(el);
-      });
-
-
+    function loadLiveEvents() {
       const dataScript = document.createElement('script');
       dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v2';
       dataScript.onload = () => {
@@ -798,13 +789,45 @@
                 img: e.imageUrl || e.img || ''
               });
             };
+            // ── Source priority — originals first, aggregators last ──
+            // When the same event appears in multiple feeds (Wilkinson posts an
+            // event → KOTO re-lists it on the community calendar → TT picks it
+            // up), we want the canonical-origin source to win. The dedup pass
+            // below is first-seen-wins, so the merge order encodes priority.
+            if (typeof WILKINSON_EVENTS !== 'undefined') WILKINSON_EVENTS.forEach(e => pushEvent(e, 'Wilkinson Library'));
             if (typeof COMMUNITY_EVENTS !== 'undefined') COMMUNITY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Community'));
             if (typeof KOTO_COMMUNITY_EVENTS !== 'undefined') KOTO_COMMUNITY_EVENTS.forEach(e => pushEvent(e, 'KOTO'));
-            if (typeof WILKINSON_EVENTS !== 'undefined') WILKINSON_EVENTS.forEach(e => pushEvent(e, 'Wilkinson Library'));
-            if (live.length > 0) {
+
+            // ── Dedup across sources, two-key match per event ──
+            // Some sources phrase the same event slightly differently (KOTO
+            // adds bilingual subtitle, Wilkinson adds room location). Two
+            // keys make the match resilient: a 12-char title-prefix and a
+            // 3-word bag (stopwords stripped), each paired with the date.
+            // If either key is already seen, the event is a duplicate.
+            function buildKeys(item) {
+              const norm = (item.title || '').toLowerCase()
+                .replace(/[–—]/g, ' ')   // en/em dash → space
+                .replace(/[^a-z0-9 ]+/g, ' ')      // strip punctuation
+                .replace(/\s+/g, ' ').trim();
+              const dateKey = item.date || '';
+              const prefixKey = norm.replace(/ /g, '').slice(0, 12) + '|' + dateKey;
+              const wordsKey = norm.split(' ')
+                .filter(w => w && !/^(the|a|an|of|at|in|on|for|with|to)$/.test(w))
+                .slice(0, 3).join('-') + '|' + dateKey;
+              return [prefixKey, wordsKey];
+            }
+            const seenKeys = new Set();
+            const deduped = live.filter(item => {
+              const keys = buildKeys(item);
+              if (keys.some(k => seenKeys.has(k))) return false;
+              keys.forEach(k => seenKeys.add(k));
+              return true;
+            });
+
+            if (deduped.length > 0) {
               EVENTS.length = 0;
-              live.sort((a,b) => a.date.localeCompare(b.date));
-              live.forEach(e => EVENTS.push(e));
+              deduped.sort((a,b) => a.date.localeCompare(b.date));
+              deduped.forEach(e => EVENTS.push(e));
               render();
             }
           } catch (err) { console.warn('loadLiveEvents failed:', err); }

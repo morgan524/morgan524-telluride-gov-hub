@@ -654,14 +654,7 @@
   <script>
     /* ── Live data: pull next 7 days of meetings + events from /js/gov-hub.js
        and replace the sample week-list. Falls back silently. ─────────── */
-    function loadLiveWeek() {      // Stub hidden DOM elements that gov-hub.js's top-level handlers expect (sidebarReset etc).
-      // Without these, getElementById(...).addEventListener throws and halts execution before HOUSING_LISTINGS gets defined.
-      ['sidebarReset','bannerClear','sidebarToggle','sidebarOverlay','collapseRight','expandRight','sidebar'].forEach(id => {
-        if (document.getElementById(id)) return;
-        const el = document.createElement('span');
-        el.id = id; el.style.display = 'none';
-        document.body.appendChild(el);
-      });
+    function loadLiveWeek() {
 
 
       const dataScript = document.createElement('script');
