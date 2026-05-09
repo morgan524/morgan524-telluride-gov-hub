@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Notices — Livable Telluride</title>
+  <!--
+    ┌─────────────────────────────────────────────────────────────────────┐
+    │ LOCAL PREVIEW FILE — DO NOT COMMIT/DEPLOY                           │
+    │                                                                     │
+    │ Single legal-notice card design + suggested filter taxonomy.        │
+    │ Notice "facts" — dates, entity, address, case#, deadlines, etc. —   │
+    │ are not copyrightable; the publisher's exact prose IS. The schema   │
+    │ below stores facts only and synthesizes a brief plain-English       │
+    │ summary that doesn't lift sentences from the source.                │
+    │                                                                     │
+    │ See "DESIGN NOTES" panel at the bottom for filter taxonomy +        │
+    │ extraction strategy.                                                │
+    └─────────────────────────────────────────────────────────────────────┘
+  -->
+  <style>
+    :root {
+      --forest: #21443c;
+      --forest-soft: #2a5347;
+      --accent-green: #2f7a5f;
+      --bg-warm: #fdfbf6;
+      --bg-hero: #efe9dc;
+      --bg-paper: #fffdf9;
+      --text-primary: #1a2e29;
+      --text-secondary: #4a5e57;
+      --text-muted: #7a8a85;
+      --border-soft: rgba(33, 68, 60, 0.12);
+      --shadow-card: 0 4px 14px rgba(36, 49, 46, 0.06);
+      --warn-amber: #b27a14;
+      --warn-amber-bg: rgba(178, 122, 20, 0.10);
+      --font-heading: 'Georgia', 'Times New Roman', serif;
+      --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      font-family: var(--font-main);
+      color: var(--text-primary);
+      background: var(--bg-warm);
+      line-height: 1.5;
+    }
+
+    /* Top nav (shared) */
+    .topnav { background: #fff; border-bottom: 1px solid var(--border-soft); padding: 14px 0; position: sticky; top: 0; z-index: 50; }
+    .topnav-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; gap: 24px; }
+    .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
+    .topnav-links { display: flex; gap: 22px; margin-left: 28px; flex: 1; }
+    .topnav-links a { color: var(--text-primary); text-decoration: none; font-weight: 600; font-size: 0.95rem; padding: 6px 2px; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
+    .topnav-links a:hover { color: var(--forest); }
+    .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
+    .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
+
+    /* Hero */
+    .hero {
+      background:
+        linear-gradient(180deg, rgba(239,233,220,0.78) 0%, rgba(239,233,220,0.45) 55%, rgba(239,233,220,0.20) 100%),
+        url('Photos/Wilson%20Peak.png') no-repeat center center / cover,
+        var(--bg-hero);
+      padding: 28px 0 24px;
+      border-bottom: 1px solid var(--border-soft);
+      min-height: 200px;
+    }
+    .hero h1 { text-shadow: 0 1px 2px rgba(255,255,255,0.6); margin: 0 0 8px; font-family: var(--font-heading); font-size: 2.6rem; color: var(--text-primary); }
+    .hero p { text-shadow: 0 1px 2px rgba(255,255,255,0.5); margin: 0; color: var(--text-secondary); font-size: 1.05rem; max-width: 720px; }
+    .hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+    /* Filter chips bar */
+    .chips-bar { max-width: 1280px; margin: 0 auto; padding: 28px 32px 0; }
+    .filter-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+    .chip { display: inline-block; padding: 8px 18px; border-radius: 999px; background: #fff; border: 1px solid var(--border-soft); color: var(--text-secondary); font-size: 0.88rem; font-weight: 600; cursor: pointer; transition: all 0.15s; }
+    .chip:hover { background: var(--bg-paper); }
+    .chip.active { background: var(--forest); color: #fff; border-color: var(--forest); }
+
+    /* "Following" row — sits above the card grid (replaces right sidebar). */
+    .following-bar {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px 18px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .following-bar .following-label {
+      font-size: 0.74rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-right: 8px;
+    }
+    .following-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: rgba(47, 122, 95, 0.10);
+      border: 1px solid rgba(47, 122, 95, 0.18);
+      color: var(--forest);
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .following-pill:hover {
+      background: rgba(47, 122, 95, 0.20);
+      border-color: rgba(47, 122, 95, 0.30);
+    }
+    .following-pill svg { width: 13px; height: 13px; opacity: 0.85; }
+    .following-add {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 10px;
+      background: #fff;
+      border: 1px dashed var(--border-soft);
+      color: var(--text-muted);
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .following-add:hover { color: var(--forest); border-color: var(--forest); }
+
+    /* Main content — 2-card grid (no sidebar) */
+    .page-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px 32px;
+    }
+    .notice-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    /* ── LEGAL NOTICE CARD ── */
+    .notice-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border-soft);
+      overflow: hidden;
+    }
+    /* Strip across the top — type icon + category, entity badge, optional flags */
+    .notice-strip {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 22px;
+      background: var(--bg-paper);
+      border-bottom: 1px solid var(--border-soft);
+      flex-wrap: wrap;
+    }
+    .type-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      background: var(--forest);
+      color: #fff;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+    .type-pill svg { width: 14px; height: 14px; }
+    .entity-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      background: rgba(33, 68, 60, 0.06);
+      border: 1px solid var(--border-soft);
+      color: var(--text-secondary);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .deadline-flag {
+      margin-left: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 12px;
+      background: var(--warn-amber-bg);
+      color: var(--warn-amber);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+    .deadline-flag svg { width: 13px; height: 13px; }
+
+    /* Card body: single column. With 2-up cards each is ~600px wide —
+       not enough for body + map side-by-side, so the address/map block
+       sits below the facts list. */
+    .notice-body {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      padding: 22px;
+    }
+
+    .notice-card h2 {
+      margin: 0 0 10px;
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      line-height: 1.3;
+      color: var(--text-primary);
+    }
+    .notice-summary {
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin: 0 0 16px;
+    }
+
+    /* Definition list of facts — every value is a quotable fact, no editorial prose */
+    .notice-facts {
+      display: grid;
+      grid-template-columns: 130px minmax(0, 1fr);
+      column-gap: 16px;
+      row-gap: 8px;
+      font-size: 0.86rem;
+      margin: 0 0 18px;
+    }
+    .notice-facts dt {
+      color: var(--text-muted);
+      font-size: 0.74rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding-top: 2px;
+    }
+    .notice-facts dd { margin: 0; color: var(--text-primary); }
+    .notice-facts dd .case-num,
+    .notice-facts dd .file-num { font-family: 'SF Mono', Monaco, monospace; font-size: 0.82rem; }
+
+    /* Address + map column */
+    /* Location block — sits below the facts at full card width.
+       Inline header (label + address) over a wide, short map preview. */
+    .location-col {
+      background: var(--bg-paper);
+      border: 1px solid var(--border-soft);
+      border-radius: 14px;
+      padding: 12px 14px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 6px 14px;
+      align-items: center;
+    }
+    .location-col .map-thumb { grid-column: 1 / -1; }
+    .location-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.74rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+    .location-label svg { width: 14px; height: 14px; }
+    .location-address {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.35;
+    }
+    .location-coords {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      font-family: 'SF Mono', Monaco, monospace;
+    }
+    .map-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 7;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border-soft);
+      background: #e0ddd4;
+      margin-top: 8px;
+    }
+    .map-thumb iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .map-link {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent-green);
+      text-decoration: none;
+    }
+    .map-link:hover { text-decoration: underline; }
+
+    /* Action row at bottom of card */
+    .notice-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 14px 22px;
+      border-top: 1px solid var(--border-soft);
+      background: var(--bg-paper);
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: rgba(47, 122, 95, 0.12);
+      border: 1px solid rgba(47, 122, 95, 0.18);
+      color: var(--forest);
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .btn-primary:hover { background: rgba(47, 122, 95, 0.22); border-color: rgba(47, 122, 95, 0.32); }
+    .btn-primary svg { width: 13px; height: 13px; }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: #fff;
+      border: 1px solid var(--border-soft);
+      color: var(--text-primary);
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .btn-secondary:hover { background: var(--bg-paper); border-color: rgba(33, 68, 60, 0.22); }
+    .btn-secondary svg { width: 13px; height: 13px; }
+    .actions-meta {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+    }
+
+    /* Sidebar (placeholder) */
+    .sidebar { position: sticky; top: 100px; }
+    .sidebar-card {
+      background: var(--bg-hero);
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: var(--shadow-card);
+    }
+    .sidebar-card h3 { margin: 0 0 8px; font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-primary); }
+    .sidebar-card p { margin: 0 0 12px; font-size: 0.85rem; line-height: 1.55; color: var(--text-secondary); }
+    .sidebar-card .followed-list { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+    .sidebar-card .followed-list a {
+      display: flex; align-items: center; gap: 8px;
+      padding: 8px 12px;
+      background: #fff;
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+    .sidebar-card .followed-list a:hover { background: var(--bg-paper); }
+    .sidebar-card .followed-list svg { width: 14px; height: 14px; opacity: 0.65; }
+
+    /* Design notes panel */
+    .design-notes {
+      max-width: 1280px;
+      margin: 36px auto;
+      padding: 28px 32px;
+      background: #fff8e1;
+      border: 1px solid #f0d68a;
+      border-radius: 14px;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #4d3e10;
+    }
+    .design-notes h2 { margin: 0 0 12px; font-family: var(--font-heading); color: #6b5a1f; }
+    .design-notes h3 { margin: 18px 0 6px; font-size: 1rem; color: #6b5a1f; }
+    .design-notes ul { margin: 6px 0 0 22px; padding: 0; }
+    .design-notes li { margin: 4px 0; }
+    .design-notes code { background: #f6e8b1; padding: 1px 6px; border-radius: 4px; font-size: 0.85rem; }
+    .design-notes table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.86rem; }
+    .design-notes th, .design-notes td { text-align: left; padding: 6px 10px; border-bottom: 1px solid #eddca8; vertical-align: top; }
+    .design-notes th { background: #fbeec5; font-weight: 700; color: #6b5a1f; }
+
+    /* Preview banner */
+    .preview-banner { background: #fff8e1; border-bottom: 1px solid #f0d68a; padding: 8px 24px; text-align: center; font-size: 0.82rem; color: #6b5a1f; }
+    .preview-banner code { background: #f6e8b1; padding: 1px 6px; border-radius: 4px; }
+
+    /* Responsive */
+    @media (max-width: 1000px) {
+      .notice-list { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 900px) {
+      .topnav-links { display: none; }
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preview-banner">
+    🚧 <strong>Local-only preview</strong> — <code>legal-notices-preview.html</code>. Single sample card + filter taxonomy. Not deployed.
+  </div>
+
+  <header class="topnav">
+    <div class="topnav-inner">
+      <a class="topnav-logo" href="/v2/" aria-label="Livable Telluride home">
+        <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
+      </a>
+      <nav class="topnav-links">
+        <a href="/v2/">Local News</a>
+        <a href="/v2/gov-hub.html">Gov-Hub</a>
+        <a href="/v2/events.html">Events</a>
+        <a href="/v2/local-orgs.html">Local Orgs</a>
+        <a href="/v2/housing.html">Housing</a>
+        <a href="/v2/legal-notices.html" class="active">Legal Notices</a>
+        <a href="/v2/about.html">About</a>
+      </nav>
+      <a class="topnav-cta" href="https://livabletelluride.org/#tab-subscribe">Subscribe</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Legal Notices</h1>
+      <p>Public notices from Telluride, San Miguel County, Mountain Village, and the surrounding region — including hearings, permits, water rights, foreclosures, and probate.</p>
+    </div>
+  </section>
+
+  <div class="chips-bar">
+    <div class="filter-chips" id="chipRow"><!-- populated by JS --></div>
+  </div>
+
+  <!-- "Following" row sits above the card grid (was the sidebar) -->
+  <div class="following-bar">
+    <span class="following-label">Following:</span>
+    <a class="following-pill" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Within 0.5 mi of my address
+    </a>
+    <a class="following-pill" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+      Land use &amp; permits
+    </a>
+    <a class="following-pill" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Public hearings — Town of Telluride
+    </a>
+    <a class="following-add" href="#">+ Save current filter</a>
+  </div>
+
+  <main class="page-wrap">
+
+    <div class="notice-list">
+      <!-- ─────────── SAMPLE CARD #1 ─────────── -->
+      <article class="notice-card">
+
+        <!-- Top strip: type + entity + deadline flag -->
+        <div class="notice-strip">
+          <span class="type-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            Land Use Permit
+          </span>
+          <span class="entity-pill">
+            🏛  Town of Telluride · Planning &amp; Zoning Commission
+          </span>
+          <span class="deadline-flag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Hearing in 9 days
+          </span>
+        </div>
+
+        <!-- Body: facts + address/map -->
+        <div class="notice-body">
+          <div>
+            <h2>Conditional Use Permit Application — 425 W Pacific Ave (Sample)</h2>
+
+            <p class="notice-summary">
+              Application to convert an existing single-family residence into a short-term rental under the Town's CUP process. Public hearing scheduled before Planning &amp; Zoning. Written comments accepted in advance.
+            </p>
+
+            <dl class="notice-facts">
+              <dt>Applicant</dt>
+              <dd>Jane Doe, owner</dd>
+
+              <dt>File / Case #</dt>
+              <dd><span class="file-num">CUP-2026-0142</span></dd>
+
+              <dt>Hearing</dt>
+              <dd>Wednesday, May 21, 2026 · 6:00 PM<br>
+                  Rebekah Hall · 113 W Columbia Ave, Telluride</dd>
+
+              <dt>Comment deadline</dt>
+              <dd>Tuesday, May 20, 2026, 5:00 PM (written comments to <a href="mailto:planning@telluride.gov">planning@telluride.gov</a>)</dd>
+
+              <dt>Published</dt>
+              <dd>May 7, 2026 · The Telluride Times</dd>
+
+              <dt>Contact</dt>
+              <dd>Planning Dept · (970) 728-2173</dd>
+            </dl>
+          </div>
+
+          <!-- Address + map column. Hidden via .no-location class when notice has no address. -->
+          <aside class="location-col">
+            <div class="location-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Subject Property
+            </div>
+            <div class="location-address">425 W Pacific Ave<br>Telluride, CO 81435</div>
+            <div class="location-coords">37.9367° N, 107.8123° W</div>
+            <div class="map-thumb">
+              <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-107.815,37.934,-107.810,37.939&layer=mapnik&marker=37.9367,-107.8123"></iframe>
+            </div>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=425+W+Pacific+Ave+Telluride+CO" target="_blank" rel="noopener">Open in Google Maps →</a>
+          </aside>
+        </div>
+
+        <!-- Bottom action row -->
+        <div class="notice-actions">
+          <a class="btn-primary" href="https://telluridetimes.column.us/search?activeNotice=RMwmvFwhJwnqcoqWBVDt-0" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+            Read Full Notice
+          </a>
+          <a class="btn-secondary" href="#add-cal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Add Hearing to Calendar
+          </a>
+          <a class="btn-secondary" href="#submit-comment">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Submit Comment
+          </a>
+          <div class="actions-meta">
+            Published <strong>May 7, 2026</strong> · expires May 28
+          </div>
+        </div>
+
+      </article>
+
+      <!-- ─────────── SAMPLE CARD #2 (no-address example: probate) ─────────── -->
+      <article class="notice-card no-location">
+        <div class="notice-strip">
+          <span class="type-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Estate / Probate
+          </span>
+          <span class="entity-pill">⚖️  San Miguel County District Court</span>
+          <span class="deadline-flag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Claims due in 4 mo
+          </span>
+        </div>
+        <div class="notice-body">
+          <div>
+            <h2>Notice to Creditors — Estate of John Q. Sample</h2>
+            <p class="notice-summary">All persons having claims against the estate are required to present them to the personal representative within four months of first publication, or the claims may be barred.</p>
+            <dl class="notice-facts">
+              <dt>Decedent</dt>
+              <dd>John Q. Sample (DOB 1948 · DOD 03/2026)</dd>
+
+              <dt>Case #</dt>
+              <dd><span class="file-num">2026 PR 0007</span></dd>
+
+              <dt>Personal Rep.</dt>
+              <dd>Mary Sample · c/o Smith &amp; Jones LLP</dd>
+
+              <dt>Claims to</dt>
+              <dd>P.O. Box 1234, Telluride, CO 81435 (mail) ·<br>
+                  <a href="mailto:probate@example.com">probate@example.com</a></dd>
+
+              <dt>First published</dt>
+              <dd>May 7, 2026 · The Telluride Times</dd>
+
+              <dt>Claims deadline</dt>
+              <dd>September 7, 2026 (4 months from first publication)</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="notice-actions">
+          <a class="btn-primary" href="https://telluridetimes.column.us/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+            Read Full Notice
+          </a>
+          <div class="actions-meta">Published <strong>May 7, 2026</strong> · publishes 4× weekly</div>
+        </div>
+      </article>
+    </div>
+
+  </main>
+
+  <!-- ─────────── DESIGN NOTES (Morgan-facing, not part of final design) ─────────── -->
+  <section class="design-notes">
+    <h2>Design notes — extraction strategy + filter taxonomy</h2>
+
+    <h3>1. What's in the card and why</h3>
+    <p>
+      The card is built around <strong>facts</strong> only — values that any system could read off the published notice (dates, addresses, names, file numbers, contact info). Facts are not copyrightable; the publisher's prose is. The plain-English summary at the top is a short, original synthesis (1–2 sentences) describing what the notice is for, not a paraphrase of the source.
+    </p>
+
+    <h3>2. Suggested filter taxonomy</h3>
+    <p>Based on the notice types San Miguel / Telluride publishes most often. Items marked <code>📍</code> typically have an address and should drive the map column.</p>
+    <table>
+      <tr><th>Filter</th><th>What's included</th><th>📍</th></tr>
+      <tr><td>Public Hearings</td><td>Town Council, P&amp;Z, BOCC proposed actions, ordinance hearings</td><td>sometimes</td></tr>
+      <tr><td>Land Use &amp; Permits</td><td>CUP, variance, subdivision, demo, design review, building permit</td><td>📍 always</td></tr>
+      <tr><td>Water Court &amp; Rights</td><td>Diversion applications, water-court resume notices</td><td>📍 usually (point of diversion)</td></tr>
+      <tr><td>Property &amp; Foreclosure</td><td>Foreclosure, public auction, tax sale, condemnation</td><td>📍 always</td></tr>
+      <tr><td>Estate / Probate</td><td>Notice to creditors, name change, guardianship</td><td>no</td></tr>
+      <tr><td>Bids &amp; RFPs</td><td>Government solicitations for goods/services</td><td>sometimes</td></tr>
+      <tr><td>Bonds &amp; Finance</td><td>Municipal bonds, budget hearings, tax exemption notices</td><td>no</td></tr>
+      <tr><td>Elections</td><td>Candidate filings, ballot measures, polling places</td><td>no</td></tr>
+      <tr><td>Utilities</td><td>Service interruption, rate changes, infrastructure notices</td><td>sometimes</td></tr>
+      <tr><td>Liens &amp; Sales</td><td>Mechanics liens, abandoned vehicle, public sale</td><td>sometimes</td></tr>
+    </table>
+
+    <h3>3. Extraction strategy (when piping from Column)</h3>
+    <ul>
+      <li><strong>Type / category</strong> — derive from the notice's title + body using a regex+keyword classifier. Most notices self-identify in the first 1–3 lines ("CONDITIONAL USE PERMIT APPLICATION", "NOTICE TO CREDITORS", "WATER COURT RESUME").</li>
+      <li><strong>Entity</strong> — usually printed at the top or in a "Filed by:" line. Pattern-match against a known list of local agencies (Town of Telluride, SMC Clerk &amp; Recorder, Water Court Div. 4, etc.).</li>
+      <li><strong>Address</strong> — regex for street numbers + street suffix (Ave, St, Rd, Hwy) inside the body, then geocode via Nominatim/OpenStreetMap (free) or Google Geocoding (paid, more accurate). Cache the lat/lng so the map iframe loads instantly.</li>
+      <li><strong>Hearing date/time</strong> — regex for "Wednesday, May 21, 2026" + "6:00 PM"-style strings; cross-validate against known meeting cadences in Gov-Hub (BOCC every other Tuesday, P&amp;Z 2nd Wed, etc.).</li>
+      <li><strong>Comment deadline</strong> — usually phrased "written comments must be received by..." → regex for the date pattern.</li>
+      <li><strong>File number</strong> — regex for ALL-CAPS prefix + digits (e.g., <code>CUP-2026-0142</code>, <code>2026-CV-0034</code>).</li>
+      <li><strong>Summary synthesis</strong> — Claude API call with the body text + extracted facts; prompt asks for a 1–2 sentence factual summary (no editorial language, no copying source phrasing). Cache by Column notice ID so we only spend tokens once per notice.</li>
+    </ul>
+
+    <h3>4. Action buttons (per card)</h3>
+    <ul>
+      <li><strong>Read Full Notice</strong> → links to the Column source page (always).</li>
+      <li><strong>Add Hearing to Calendar</strong> → only if <code>hearingDate</code> present. Generates Google Calendar quick-add URL with title, location, time, link to source.</li>
+      <li><strong>Submit Comment</strong> → only if <code>commentChannel</code> present. mailto: when channel is email; opens form when channel is URL.</li>
+      <li><strong>Open in Google Maps</strong> → in the map column, only if <code>location</code> present.</li>
+    </ul>
+
+    <h3>5. "Near me" filter (suggested)</h3>
+    <p>
+      Once notices have geocoded addresses, the most valuable filter is <strong>distance from user's address</strong>. The sidebar already has a "Within 0.5 mi of my address" placeholder. Backend: store user's address in localStorage (already done elsewhere on the site for events-near-me); compute distance per notice and sort/filter.
+    </p>
+  </section>
+
+  <script>
+    /* Suggested filter taxonomy — see notes above */
+    const FILTERS = [
+      { key: 'all',       label: 'All Notices' },
+      { key: 'hearings',  label: 'Public Hearings' },
+      { key: 'land',      label: 'Land Use &amp; Permits' },
+      { key: 'water',     label: 'Water Court' },
+      { key: 'property',  label: 'Property &amp; Foreclosure' },
+      { key: 'estate',    label: 'Estate / Probate' },
+      { key: 'bids',      label: 'Bids &amp; RFPs' },
+      { key: 'finance',   label: 'Bonds &amp; Finance' },
+      { key: 'elections', label: 'Elections' },
+      { key: 'utilities', label: 'Utilities' },
+      { key: 'liens',     label: 'Liens &amp; Sales' }
+    ];
+    let activeFilter = 'all';
+
+    function chipsHtml() {
+      return FILTERS.map(f => {
+        const cls = f.key === activeFilter ? 'chip active' : 'chip';
+        return `<span class="${cls}" data-filter="${f.key}">${f.label}</span>`;
+      }).join('');
+    }
+    function render() {
+      document.getElementById('chipRow').innerHTML = chipsHtml();
+      document.querySelectorAll('.chip[data-filter]').forEach(c => {
+        c.addEventListener('click', () => { activeFilter = c.dataset.filter; render(); });
+      });
+    }
+    render();
+    /* ── Live data hook: when ready, define renderNoticeCards() to take
+       a notice from LEGAL_NOTICES (in gov-hub.js) and emit the same card
+       HTML used in this preview, then uncomment the loadLiveNotices() block
+       below. The current sample cards stay as the design template. ───── */
+    /*
+    function loadLiveNotices() {
+      const s = document.createElement('script');
+      s.src = 'https://livabletelluride.org/js/gov-hub.js?v=v2';
+      s.onload = () => {
+        if (typeof LEGAL_NOTICES === 'undefined') return;
+        const grid = document.querySelector('.notice-grid');
+        if (!grid) return;
+        grid.innerHTML = LEGAL_NOTICES.slice(0, 12).map(renderNoticeCard).join('');
+      };
+      document.head.appendChild(s);
+    }
+    loadLiveNotices();
+    */
+
+  </script>
+</body>
+</html>

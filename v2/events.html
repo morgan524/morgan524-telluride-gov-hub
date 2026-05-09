@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Events — Livable Telluride</title>
+  <!--
+    ┌─────────────────────────────────────────────────────────────────────┐
+    │ LOCAL PREVIEW FILE — DO NOT COMMIT/DEPLOY                           │
+    │ Standalone redesign of the Events tab. Mirrors local-news-redesign  │
+    │ visual language (same nav, hero, palette) but with town-based       │
+    │ filters, LEFT sidebar (Submit Event), 3-col event card grid, and    │
+    │ a bottom-of-page CTA strip.                                         │
+    │                                                                     │
+    │ To update sample events: edit the EVENTS const at the bottom.       │
+    └─────────────────────────────────────────────────────────────────────┘
+  -->
+  <style>
+    /* ─── Shared base — keep in sync with local-news-redesign.html ─── */
+    :root {
+      --forest: #21443c;
+      --forest-soft: #2a5347;
+      --accent-green: #2f7a5f;
+      --bg-warm: #fdfbf6;
+      --bg-hero: #efe9dc;
+      --bg-paper: #fffdf9;
+      --text-primary: #1a2e29;
+      --text-secondary: #4a5e57;
+      --text-muted: #7a8a85;
+      --border-soft: rgba(33, 68, 60, 0.12);
+      --shadow-card: 0 4px 14px rgba(36, 49, 46, 0.06);
+      --font-heading: 'Georgia', 'Times New Roman', serif;
+      --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      font-family: var(--font-main);
+      color: var(--text-primary);
+      background: var(--bg-warm);
+      line-height: 1.5;
+    }
+
+    /* Top nav */
+    .topnav {
+      background: #fff;
+      border-bottom: 1px solid var(--border-soft);
+      padding: 14px 0;
+      position: sticky; top: 0; z-index: 50;
+    }
+    .topnav-inner {
+      max-width: 1280px; margin: 0 auto; padding: 0 32px;
+      display: flex; align-items: center; gap: 24px;
+    }
+    .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
+    .topnav-links { display: flex; gap: 22px; margin-left: 28px; flex: 1; }
+    .topnav-links a {
+      color: var(--text-primary); text-decoration: none;
+      font-weight: 600; font-size: 0.95rem;
+      padding: 6px 2px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .topnav-links a:hover { color: var(--forest); }
+    .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
+    .topnav-cta {
+      display: inline-block;
+      background: var(--forest); color: #fff;
+      text-decoration: none;
+      padding: 9px 18px; border-radius: 999px;
+      font-weight: 600; font-size: 0.9rem;
+    }
+
+    /* Hero — same Wilson Peak treatment as Local News */
+    .hero {
+      background:
+        linear-gradient(180deg, rgba(239,233,220,0.78) 0%, rgba(239,233,220,0.45) 55%, rgba(239,233,220,0.20) 100%),
+        url('Photos/Wilson%20Peak.png') no-repeat center center / cover,
+        var(--bg-hero);
+      padding: 28px 0 24px;
+      border-bottom: 1px solid var(--border-soft);
+      min-height: 200px;
+    }
+    .hero h1 { text-shadow: 0 1px 2px rgba(255,255,255,0.6); }
+    .hero p  { text-shadow: 0 1px 2px rgba(255,255,255,0.5); }
+    .hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+    .hero h1 {
+      margin: 0 0 8px;
+      font-family: var(--font-heading);
+      font-size: 2.6rem; color: var(--text-primary);
+    }
+    .hero p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 1.05rem; max-width: 640px;
+    }
+
+    /* Filter chips — full-width across the top, above the layout split */
+    .chips-bar {
+      max-width: 1280px; margin: 0 auto;
+      padding: 28px 32px 0;
+    }
+    .filter-chips {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin-bottom: 24px;
+    }
+    .chip {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid var(--border-soft);
+      color: var(--text-secondary);
+      font-size: 0.88rem; font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .chip:hover { background: var(--bg-paper); }
+    .chip.active {
+      background: var(--forest); color: #fff;
+      border-color: var(--forest);
+    }
+
+    /* LEFT sidebar + main content layout */
+    .page-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px 32px;
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 32px;
+      align-items: start;
+    }
+
+    /* Submit Event sidebar card */
+    .sidebar { position: sticky; top: 100px; }
+    .submit-card {
+      background: var(--bg-hero);
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 24px 22px 0;
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      text-align: center;
+    }
+    .submit-icon {
+      width: 56px; height: 56px;
+      margin: 0 auto 14px;
+      border-radius: 14px;
+      background: rgba(47, 122, 95, 0.12);
+      border: 1px solid rgba(47, 122, 95, 0.2);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--forest);
+    }
+    .submit-icon svg { width: 28px; height: 28px; }
+    .submit-card h3 {
+      margin: 0 0 10px;
+      font-family: var(--font-heading);
+      font-size: 1.18rem;
+      line-height: 1.25;
+      color: var(--text-primary);
+    }
+    .submit-card p {
+      margin: 0 0 16px;
+      font-size: 0.86rem;
+      line-height: 1.55;
+      color: var(--text-secondary);
+    }
+    .submit-card .submit-btn {
+      display: inline-block;
+      background: var(--forest);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      margin-bottom: 16px;
+      transition: background 0.15s;
+    }
+    .submit-card .submit-btn:hover { background: var(--forest-soft); }
+    .submit-mountains {
+      display: block;
+      margin: 0 -22px;
+      width: calc(100% + 44px);
+      height: 80px;
+      opacity: 0.55;
+    }
+    .submit-mountains svg { width: 100%; height: 100%; display: block; }
+
+    /* Event card grid — 3 columns on widest, scales down */
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+    .event-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border-soft);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .event-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(36, 49, 46, 0.10);
+    }
+    .event-card .img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #e8e5de;
+    }
+    .event-card .img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      position: relative; z-index: 2;
+    }
+    /* Portrait blur-fill (same treatment as Local News) */
+    .event-card .img-wrap.portrait::before {
+      content: '';
+      position: absolute; inset: 0; z-index: 1;
+      background-image: var(--bg-img);
+      background-size: cover; background-position: center;
+      filter: blur(22px) brightness(0.85) saturate(1.1);
+      transform: scale(1.18);
+    }
+    .event-card .img-wrap.portrait img { object-fit: contain; }
+
+    /* Date badge — overlaid on top-left of the image */
+    .date-badge {
+      position: absolute; top: 14px; left: 14px; z-index: 3;
+      background: #fff;
+      border-radius: 12px;
+      padding: 6px 12px 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.14);
+      text-align: center;
+      min-width: 56px;
+      line-height: 1;
+    }
+    .date-badge .month {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: var(--accent-green);
+      text-transform: uppercase;
+    }
+    .date-badge .day {
+      display: block;
+      margin-top: 2px;
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    /* Card body */
+    .event-card .body {
+      padding: 18px 20px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+    .event-card h3 {
+      margin: 0;
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      line-height: 1.3;
+      color: var(--text-primary);
+    }
+    .event-card .meta-line {
+      display: flex; align-items: center; gap: 8px;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+    .event-card .meta-line svg { width: 14px; height: 14px; flex-shrink: 0; opacity: 0.7; }
+    .event-card .summary {
+      color: var(--text-secondary);
+      font-size: 0.86rem;
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .event-card .source-line {
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      padding-top: 4px;
+      border-top: 1px solid var(--border-soft);
+      margin-top: 4px;
+    }
+    .event-card .source-line strong {
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+    .event-card .actions {
+      display: flex;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 8px;
+    }
+    /* Add-to-Calendar button — sage green pill matching Local News read-more.
+       Compact: single-line, smaller padding so both buttons fit side-by-side
+       in the narrow 3-col card without wrapping the label. */
+    .btn-cal {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 7px 10px;
+      background: rgba(47, 122, 95, 0.12);
+      border: 1px solid rgba(47, 122, 95, 0.18);
+      border-radius: 999px;
+      color: var(--forest);
+      text-decoration: none;
+      font-size: 0.76rem;
+      font-weight: 600;
+      white-space: nowrap;
+      line-height: 1.2;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .btn-cal:hover {
+      background: rgba(47, 122, 95, 0.22);
+      border-color: rgba(47, 122, 95, 0.32);
+    }
+    .btn-cal svg { width: 13px; height: 13px; flex-shrink: 0; }
+    /* View Details button — neutral white pill, same compact sizing */
+    .btn-details {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 7px 10px;
+      background: #fff;
+      border: 1px solid var(--border-soft);
+      border-radius: 999px;
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 0.76rem;
+      font-weight: 600;
+      white-space: nowrap;
+      line-height: 1.2;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .btn-details:hover {
+      background: var(--bg-paper);
+      border-color: rgba(33, 68, 60, 0.22);
+    }
+
+    /* Bottom CTA strip — full-bleed, mountain illustration */
+    .submit-strip {
+      position: relative;
+      margin-top: 36px;
+      background: var(--bg-hero);
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
+      overflow: hidden;
+    }
+    .submit-strip-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      position: relative; z-index: 2;
+    }
+    .submit-strip-icon {
+      width: 56px; height: 56px;
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
+    .submit-strip-icon svg { width: 100%; height: 100%; }
+    .submit-strip-text {
+      flex: 1;
+      font-family: var(--font-heading);
+      font-size: 1.18rem;
+      color: var(--text-primary);
+    }
+    .submit-strip-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      background: var(--forest);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.94rem;
+      border-radius: 999px;
+      transition: background 0.15s;
+    }
+    .submit-strip-cta:hover { background: var(--forest-soft); }
+    .submit-strip-mountains {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 100%;
+      opacity: 0.30;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .submit-strip-mountains svg { width: 100%; height: 100%; display: block; }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .event-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 900px) {
+      .page-wrap { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .topnav-links { display: none; }
+      .hero h1 { font-size: 2rem; }
+      .submit-strip-inner { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 640px) {
+      .event-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Preview banner */
+    .preview-banner {
+      background: #fff8e1;
+      border-bottom: 1px solid #f0d68a;
+      padding: 8px 24px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: #6b5a1f;
+    }
+    .preview-banner code {
+      background: #f6e8b1; padding: 1px 6px; border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preview-banner">
+    🚧 <strong>Local-only preview</strong> — this file is <code>events-preview.html</code> and is <strong>not deployed</strong>.
+  </div>
+
+  <header class="topnav">
+    <div class="topnav-inner">
+      <a class="topnav-logo" href="/v2/" aria-label="Livable Telluride home">
+        <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
+      </a>
+      <nav class="topnav-links">
+        <a href="/v2/">Local News</a>
+        <a href="/v2/gov-hub.html">Gov-Hub</a>
+        <a href="/v2/events.html" class="active">Events</a>
+        <a href="/v2/local-orgs.html">Local Orgs</a>
+        <a href="/v2/housing.html">Housing</a>
+        <a href="/v2/legal-notices.html">Legal Notices</a>
+        <a href="/v2/about.html">About</a>
+      </nav>
+      <a class="topnav-cta" href="https://livabletelluride.org/#tab-subscribe">Subscribe</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Community Events</h1>
+      <p>classes, meetings, and gatherings near you.</p>
+    </div>
+  </section>
+
+  <div class="chips-bar">
+    <div class="filter-chips" id="chipRow"><!-- populated by JS --></div>
+  </div>
+
+  <main class="page-wrap">
+    <aside class="sidebar">
+      <div class="submit-card">
+        <div class="submit-icon" aria-hidden="true">
+          <!-- calendar icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <h3>Submit an Event</h3>
+        <p>Help keep our community calendar full and up to date. Share your event with neighbors and visitors across the region.</p>
+        <a class="submit-btn" href="#submit-event">Submit an Event</a>
+        <div class="submit-mountains" aria-hidden="true">
+          <svg viewBox="0 0 280 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#a4b3a8" d="M0,60 L40,32 L72,50 L110,22 L150,46 L188,26 L228,44 L260,34 L280,56 L280,80 L0,80 Z"/>
+            <path fill="#7a8d80" d="M0,68 L24,52 L60,64 L96,44 L138,60 L174,48 L210,60 L246,50 L280,64 L280,80 L0,80 Z"/>
+            <g fill="#5b6f64">
+              <polygon points="118,52 122,42 126,52"/>
+              <polygon points="122,58 127,46 132,58"/>
+              <polygon points="160,56 164,46 168,56"/>
+              <polygon points="200,58 204,48 208,58"/>
+              <polygon points="205,64 210,52 215,64"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </aside>
+
+    <div>
+      <div class="event-grid" id="eventGrid"><!-- populated by JS --></div>
+    </div>
+  </main>
+
+  <!-- Bottom CTA strip -->
+  <section class="submit-strip">
+    <div class="submit-strip-mountains" aria-hidden="true">
+      <svg viewBox="0 0 1280 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#a4b3a8" d="M0,75 L120,32 L240,52 L380,18 L520,46 L660,22 L800,40 L920,28 L1080,50 L1200,30 L1280,52 L1280,100 L0,100 Z"/>
+        <path fill="#7a8d80" d="M0,82 L100,55 L220,72 L360,42 L500,68 L640,48 L780,68 L920,52 L1060,72 L1180,55 L1280,72 L1280,100 L0,100 Z"/>
+        <g fill="#5b6f64">
+          <polygon points="100,68 105,55 110,68"/>
+          <polygon points="106,76 112,60 118,76"/>
+          <polygon points="640,68 645,55 650,68"/>
+        </g>
+      </svg>
+    </div>
+    <div class="submit-strip-inner">
+      <div class="submit-strip-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+      </div>
+      <div class="submit-strip-text">Have an event to share? Submit it and help build our community calendar.</div>
+      <a class="submit-strip-cta" href="#submit-event">Submit an Event →</a>
+    </div>
+  </section>
+
+  <script>
+    /* ───────── Source town options for the chip filter ───────── */
+    const TOWNS = [
+      { key: 'all',         label: 'All' },
+      { key: 'telluride',   label: 'Telluride' },
+      { key: 'mv',          label: 'Mountain Village' },
+      { key: 'norwood',     label: 'Norwood' },
+      { key: 'ridgway',     label: 'Ridgway' },
+      { key: 'ouray',       label: 'Ouray' },
+      { key: 'ophir',       label: 'Ophir' },
+      { key: 'placerville', label: 'Placerville' },
+      { key: 'nucla',       label: 'Nucla / Naturita' }
+    ];
+    let activeTown = 'all';
+
+    /* ───────── Sample events — replace freely.
+       Shape: { title, date (ISO), endDate?, time?, location, town,
+                summary, source, href, img } ───────── */
+    const EVENTS = [
+      {
+        title: "Telluride Bluegrass Night",
+        date: "2026-05-17", time: "7:00 PM",
+        location: "Sheridan Opera House • Telluride, CO",
+        town: "telluride",
+        summary: "A lively evening of mountain music featuring pickers and singers from across the region. All ages welcome. Proceeds support local youth music programs.",
+        source: "Sheridan Arts Foundation",
+        href: "https://sheridanoperahouse.com/events/",
+        img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&h=600&fit=crop"
+      },
+      {
+        title: "Wildflower Walk & Talk",
+        date: "2026-05-20", time: "10:00 AM",
+        location: "Jud Wiebe Trailhead • Mountain Village, CO",
+        town: "mv",
+        summary: "Join local naturalist Katy Kavanagh for a guided walk to learn about early-season wildflowers, local ecology, and mindful outdoor recreation. Bring water and wear sturdy shoes.",
+        source: "San Miguel Land Conservancy",
+        href: "https://example.com/wildflower-walk",
+        img: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800&h=600&fit=crop"
+      },
+      {
+        title: "Family Storytime",
+        date: "2026-05-22", time: "10:30 AM",
+        location: "Telluride Library • Telluride, CO",
+        town: "telluride",
+        summary: "Stories, songs, and movement for children ages 0–5 and their caregivers. An engaging program that builds early literacy and a love of reading.",
+        source: "Telluride Library",
+        href: "https://telluridelibrary.libcal.com/event/15184967",
+        img: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&h=600&fit=crop"
+      },
+      {
+        title: "Telluride Gallery Walk",
+        date: "2026-05-23", time: "5:00 – 8:00 PM",
+        location: "Downtown Telluride • Telluride, CO",
+        town: "telluride",
+        summary: "Explore local galleries and artist studios during this monthly self-guided walk. Meet artists, see new work, and enjoy art in unexpected places around town.",
+        source: "Telluride Arts District",
+        href: "https://example.com/gallery-walk",
+        img: "https://images.unsplash.com/photo-1577083552431-6e5fd75a9160?w=800&h=600&fit=crop"
+      },
+      {
+        title: "Spring Fundraiser Dinner",
+        date: "2026-05-24", time: "6:00 PM",
+        location: "The Peaks Resort • Telluride, CO",
+        town: "telluride",
+        summary: "An evening of dinner, community, and impact to support Safehouse's mission to promote safety, healing, and empowerment for survivors. Tickets and sponsorships available.",
+        source: "Safehouse Progressive Alliance",
+        href: "https://example.com/spring-fundraiser",
+        img: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop"
+      },
+      {
+        title: "Public Lands & Waters Talk",
+        date: "2026-05-29", time: "6:00 PM",
+        location: "Wilkinson Public Library • Ridgway, CO",
+        town: "ridgway",
+        summary: "A community conversation on the future of our public lands and waters with local leaders and experts. All are welcome to learn, listen, and ask questions.",
+        source: "San Juan Citizens Alliance",
+        href: "https://example.com/public-lands-talk",
+        img: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800&h=600&fit=crop"
+      },
+      {
+        title: "Norwood Farmers Market Opens",
+        date: "2026-06-01", time: "9:00 AM – 1:00 PM",
+        location: "Town Park • Norwood, CO",
+        town: "norwood",
+        summary: "The annual farmers market kicks off the season with local produce, baked goods, crafts, and live music. Open every Sunday through October.",
+        source: "Wright's Mesa Growers Co-op",
+        href: "https://example.com/norwood-market",
+        img: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=800&h=600&fit=crop"
+      },
+      {
+        title: "Wildfire Aware Fair",
+        date: "2026-05-09", time: "12:00 – 4:00 PM",
+        location: "Log Hill Fire Station • Ridgway, CO",
+        town: "ridgway",
+        summary: "Local first responders lead demonstrations on home defensible space, evacuation planning, and emergency communications. Free to attend.",
+        source: "Ouray County",
+        href: "https://ouraycountyco.gov/Calendar.aspx?EID=3636",
+        img: "https://images.unsplash.com/photo-1602523498291-43cffe8ee9e1?w=800&h=600&fit=crop"
+      },
+      {
+        title: "Ouray History Walking Tour",
+        date: "2026-05-31", time: "11:00 AM",
+        location: "Visitor Center • Ouray, CO",
+        town: "ouray",
+        summary: "Discover the mining-era history of the 'Switzerland of America' on this guided walking tour through downtown Ouray. Stories, photos, and architectural highlights.",
+        source: "Ouray County Historical Society",
+        href: "https://example.com/ouray-tour",
+        img: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop"
+      }
+    ];
+
+    /* ───────── Render ───────── */
+    function chipsHtml() {
+      return TOWNS.map(t => {
+        const cls = t.key === activeTown ? 'chip active' : 'chip';
+        return `<span class="${cls}" data-town="${t.key}">${t.label}</span>`;
+      }).join('');
+    }
+
+    function formatMonth(iso) {
+      const m = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+      return m[parseInt(iso.slice(5,7), 10) - 1];
+    }
+    function formatDay(iso) { return parseInt(iso.slice(8,10), 10); }
+    function formatLong(iso) {
+      const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+      const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+      const d = new Date(iso + 'T12:00:00');
+      return `${days[d.getDay()]}, ${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+    }
+
+    function eventCardHtml(e) {
+      // Pre-encode the image URL once for the data-bg-img attribute below
+      return `
+        <article class="event-card">
+          <div class="img-wrap">
+            <span class="date-badge">
+              <span class="month">${formatMonth(e.date)}</span>
+              <span class="day">${formatDay(e.date)}</span>
+            </span>
+            <img src="${e.img}" alt="" loading="lazy" onload="handlePortrait(this)" onerror="this.style.opacity=0.3">
+          </div>
+          <div class="body">
+            <h3>${e.title}</h3>
+            <div class="meta-line">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>${formatLong(e.date)}${e.time ? ' • ' + e.time : ''}</span>
+            </div>
+            <div class="meta-line">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>${e.location}</span>
+            </div>
+            <div class="summary">${e.summary}</div>
+            <div class="source-line">SOURCE: <strong>${e.source}</strong></div>
+            <div class="actions">
+              <a class="btn-cal" href="${googleCalUrl(e)}" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Add to Calendar
+              </a>
+              <a class="btn-details" href="${e.href}" target="_blank" rel="noopener">View Details</a>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    function googleCalUrl(e) {
+      // Build a quick-add Google Calendar URL with title, date, location.
+      // For simplicity treat all events as ~2 hours starting at 7pm if no time.
+      // (Real impl would parse e.time properly — fine for preview.)
+      const start = new Date(e.date + 'T19:00:00');
+      const end = new Date(start.getTime() + 2 * 60 * 60 * 1000);
+      const fmt = d => d.toISOString().replace(/[-:]/g,'').slice(0,15) + 'Z';
+      const params = new URLSearchParams({
+        action: 'TEMPLATE',
+        text: e.title,
+        dates: fmt(start) + '/' + fmt(end),
+        location: e.location,
+        details: e.summary
+      });
+      return 'https://calendar.google.com/calendar/render?' + params.toString();
+    }
+
+    function handlePortrait(img) {
+      if (!img || !img.naturalHeight || !img.naturalWidth) return;
+      if (img.naturalHeight > img.naturalWidth * 1.05) {
+        const wrap = img.parentElement;
+        wrap.classList.add('portrait');
+        wrap.style.setProperty('--bg-img', 'url("' + img.src.replace(/"/g, '\\"') + '")');
+      }
+    }
+    window.handlePortrait = handlePortrait;
+
+    function render() {
+      document.getElementById('chipRow').innerHTML = chipsHtml();
+      const filtered = activeTown === 'all'
+        ? EVENTS
+        : EVENTS.filter(e => e.town === activeTown);
+      document.getElementById('eventGrid').innerHTML = filtered.map(eventCardHtml).join('');
+      document.querySelectorAll('.chip[data-town]').forEach(chip => {
+        chip.addEventListener('click', () => {
+          activeTown = chip.dataset.town;
+          render();
+        });
+      });
+    }
+    render();
+    /* ── Live data: pulls events from the deployed gov-hub.js. ────────
+       If the script loads and the expected consts exist, replace the
+       sample EVENTS with COMMUNITY_EVENTS + KOTO_COMMUNITY_EVENTS +
+       WILKINSON_EVENTS and re-render. Falls back silently to the
+       sample data on any failure. ──────────────────────────────────── */
+    function loadLiveEvents() {
+      const s = document.createElement('script');
+      s.src = 'https://livabletelluride.org/js/gov-hub.js?v=v2';
+      s.onload = () => {
+        try {
+          const live = [];
+          const townFromLocation = (loc='') => {
+            const l = loc.toLowerCase();
+            if (l.includes('mountain village') || /mv/.test(l)) return 'mv';
+            if (l.includes('norwood')) return 'norwood';
+            if (l.includes('ridgway')) return 'ridgway';
+            if (l.includes('ouray')) return 'ouray';
+            if (l.includes('ophir')) return 'ophir';
+            if (l.includes('placerville')) return 'placerville';
+            if (l.includes('nucla') || l.includes('naturita')) return 'nucla-naturita';
+            return 'telluride';
+          };
+          const pushEvent = (e, sourceLabel) => {
+            if (!e || !e.title) return;
+            const start = e.pubDate || e.start_date || e.date || '';
+            const dateStr = start ? new Date(start).toISOString().slice(0,10) : '';
+            if (!dateStr) return;
+            // Only include events in the next 30 days
+            const dt = new Date(dateStr + 'T00:00:00');
+            const today = new Date(); today.setHours(0,0,0,0);
+            const diff = (dt - today) / 86400000;
+            if (diff < -1 || diff > 30) return;
+            live.push({
+              title: e.title,
+              date: dateStr,
+              time: (start && start.includes('T')) ? new Date(start).toLocaleTimeString([], {hour:'numeric', minute:'2-digit'}) : '',
+              location: e.location || '',
+              town: townFromLocation(e.location || ''),
+              summary: (e.description || '').replace(/<[^>]+>/g,'').slice(0, 600),
+              source: sourceLabel || e.sourceLabel || e.source || 'Community',
+              href: e.link || e.href || '#',
+              img: e.imageUrl || e.img || ''
+            });
+          };
+          if (typeof COMMUNITY_EVENTS !== 'undefined') COMMUNITY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Community'));
+          if (typeof KOTO_COMMUNITY_EVENTS !== 'undefined') KOTO_COMMUNITY_EVENTS.forEach(e => pushEvent(e, 'KOTO'));
+          if (typeof WILKINSON_EVENTS !== 'undefined') WILKINSON_EVENTS.forEach(e => pushEvent(e, 'Wilkinson Library'));
+          if (live.length > 0) {
+            EVENTS.length = 0;
+            live.sort((a,b) => a.date.localeCompare(b.date));
+            live.forEach(e => EVENTS.push(e));
+            render();
+          }
+        } catch (err) { console.warn('loadLiveEvents failed:', err); }
+      };
+      s.onerror = () => console.warn('Could not load /js/gov-hub.js for live events');
+      document.head.appendChild(s);
+    }
+    loadLiveEvents();
+
+  </script>
+</body>
+</html>

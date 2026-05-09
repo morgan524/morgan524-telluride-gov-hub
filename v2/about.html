@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Livable Telluride — Livable Telluride</title>
+  <style>
+    :root {
+      --forest: #21443c;
+      --forest-soft: #2a5347;
+      --accent-green: #2f7a5f;
+      --bg-warm: #fdfbf6;
+      --bg-hero: #efe9dc;
+      --bg-paper: #fffdf9;
+      --text-primary: #1a2e29;
+      --text-secondary: #4a5e57;
+      --text-muted: #7a8a85;
+      --border-soft: rgba(33, 68, 60, 0.12);
+      --shadow-card: 0 4px 14px rgba(36, 49, 46, 0.06);
+      --font-heading: 'Georgia', 'Times New Roman', serif;
+      --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; font-family: var(--font-main); color: var(--text-primary); background: var(--bg-warm); line-height: 1.5; }
+    .topnav { background: #fff; border-bottom: 1px solid var(--border-soft); padding: 14px 0; position: sticky; top: 0; z-index: 50; }
+    .topnav-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; gap: 24px; }
+    .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--forest); font-family: var(--font-heading); font-weight: 700; font-size: 1.15rem; line-height: 1.1; }
+    .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
+    .topnav-links { display: flex; gap: 22px; margin-left: 28px; flex: 1; }
+    .topnav-links a { color: var(--text-primary); text-decoration: none; font-weight: 600; font-size: 0.95rem; padding: 6px 2px; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
+    .topnav-links a:hover { color: var(--forest); }
+    .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
+    .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
+
+    /* Hero band */
+    .hero { background: var(--bg-hero); padding: 56px 0; border-bottom: 1px solid var(--border-soft); }
+    .hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+    .hero h1 { font-family: var(--font-heading); font-size: 2.4rem; margin: 0 0 8px; color: var(--forest); }
+    .hero p { margin: 0; color: var(--text-secondary); font-size: 1.05rem; max-width: 720px; }
+
+    /* Coming-soon panel */
+    main { max-width: 1280px; margin: 48px auto; padding: 0 32px; }
+    .placeholder { background: var(--bg-paper); border: 1px solid var(--border-soft); border-radius: 14px; padding: 48px; text-align: center; box-shadow: var(--shadow-card); }
+    .placeholder h2 { font-family: var(--font-heading); color: var(--forest); margin: 0 0 12px; font-size: 1.5rem; }
+    .placeholder p { color: var(--text-secondary); margin: 0 0 20px; }
+    .placeholder a.btn { display: inline-block; background: rgba(47, 122, 95, 0.12); color: var(--forest); text-decoration: none; padding: 10px 22px; border-radius: 999px; font-weight: 600; font-size: 0.95rem; border: 1px solid rgba(47, 122, 95, 0.25); }
+    .placeholder a.btn:hover { background: rgba(47, 122, 95, 0.20); }
+
+    @media (max-width: 880px) {
+      .topnav-links { display: none; }
+      .hero h1 { font-size: 1.8rem; }
+      .placeholder { padding: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topnav">
+    <div class="topnav-inner">
+      <a class="topnav-logo" href="/v2/" aria-label="Livable Telluride home">
+        <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
+      </a>
+      <nav class="topnav-links">
+        <a href="/v2/">Local News</a>
+        <a href="/v2/gov-hub.html">Gov-Hub</a>
+        <a href="/v2/events.html">Events</a>
+        <a href="/v2/local-orgs.html">Local Orgs</a>
+        <a href="/v2/housing.html">Housing</a>
+        <a href="/v2/legal-notices.html">Legal Notices</a>
+        <a href="/v2/about.html" class="active">About</a>
+      </nav>
+      <a class="topnav-cta" href="https://livabletelluride.org/#tab-subscribe">Subscribe</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>About Livable Telluride</h1>
+      <p>A community-built information hub for the Telluride region — independent, ad-free, and built for residents.</p>
+    </div>
+  </section>
+
+  <main>
+    <div class="placeholder">
+      <h2>Coming soon</h2>
+      <p>The About page is being built. In the meantime, you can read the original mission statement and contact info on the live site.</p>
+      <a class="btn" href="https://livabletelluride.org/#tab-about">View on the live site →</a>
+    </div>
+  </main>
+</body>
+</html>
