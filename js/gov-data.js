@@ -1587,3 +1587,221 @@ const TOPIC_DEFINITIONS = {
   }
 };
 
+
+/* ── Local Orgs directory — extracted from index.html ── */
+/* Schema matches v2/local-orgs.html. Add `donate: 'URL'` and
+   social keys (facebook, instagram, twitter, youtube) per org
+   as you discover them. */
+const LOCAL_ORGS = [
+    {
+      name: "EcoAction Partners",
+      category: "nonprofits",
+      town: "Ouray",
+      summary: "Works on environmental sustainability, climate action, waste reduction, energy efficiency, and community sustainability programs across San Miguel and Ouray counties.",
+      website: "https://ecoactionpartners.org/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/Eco%20Action.webp"
+    },
+    {
+      name: "Lone Cone Legacy Trust",
+      category: "nonprofits",
+      town: "Nucla/Naturita",
+      summary: "Community trust model supporting local philanthropy, resident-driven improvement projects, and civic investment in outlying communities across the West End and surrounding areas.",
+      website: "https://loneconelegacy.org/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/Norwood.png"
+    },
+    {
+      name: "Sheep Mountain Alliance",
+      category: "nonprofits",
+      summary: "Southwest Colorado's leading wilderness conservation organization. Works to protect public lands, wildlife, and wild places in the San Juan Mountains and surrounding region through advocacy, education, and community engagement.",
+      website: "https://www.sheepmountainalliance.org/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/sheep-mountain.png"
+    },
+    {
+      name: "Sherbino Theater",
+      category: "nonprofits",
+      town: "Ridgway",
+      summary: "Community arts, culture, and performance venue in Ridgway hosting music, film, theater, lectures, community gatherings, and educational events for the broader San Juan region.",
+      website: "https://sherbino.org/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/Sherbino.png"
+    },
+    {
+      name: "Telluride Foundation",
+      category: "nonprofits",
+      town: "Telluride",
+      summary: "Community foundation serving the Telluride region since 2000. Provides grants to local nonprofits, hosts community events and public forums, runs youth programs, and fosters economic vitality and quality of life across the San Miguel Basin.",
+      website: "https://telluridefoundation.org/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/tf-foundation.png"
+    },
+    {
+      name: "Norwood Fire Protection District",
+      category: "clubs",
+      town: "Norwood",
+      summary: "Provides fire protection, emergency response, rescue, and public safety services for Norwood and the surrounding Wright's Mesa area. Volunteers welcome.",
+      website: "https://norwoodfiredistrict.org/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/Norwood%20Fire.jpeg"
+    },
+    {
+      name: "Rotary Club of Telluride",
+      category: "clubs",
+      town: "Mountain Village",
+      summary: "Service club supporting scholarships, Youth Exchange, international projects, and community grants through the Telluride Rotary Foundation. \"Mountain High Service.\"",
+      website: "https://portal.clubrunner.ca/3291",
+      social: {},
+      logo: "https://clubrunner.blob.core.windows.net/00000003291/thumb/ClubLogo/clublogo.png"
+    },
+    {
+      name: "Telluride Volunteer Fire Department",
+      category: "clubs",
+      town: "Telluride",
+      summary: "Provides fire protection, emergency response, technical rescue, and public safety services for the Telluride Fire Protection District and surrounding communities. Volunteers welcome.",
+      website: "https://telluridefire.com/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/Telluride%20Fire.png"
+    },
+    {
+      name: "Norwood Park and Recreation District",
+      category: "recreation",
+      town: "Norwood",
+      summary: "Public recreation agency serving over 418,500 acres since 2008. Offers year-round programs including Nordic skiing, ice rink, disc golf, pickleball, fitness classes, youth sports, and arts programming. Manages The Livery event venue, 90+ miles of trails, and community facilities.",
+      website: "https://www.norwoodparkandrec.org/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/Norwood%20Parks.png"
+    },
+    {
+      name: "Norwood Roping Club",
+      category: "recreation",
+      summary: "Roping club based at the San Miguel County Fairgrounds in Norwood. A fairground user group that organizes roping events and activities for the local ranching and rodeo community.",
+      website: "https://www.sanmiguelcountyco.gov/431/Fairground-User-Groups",
+      social: {},
+      logo: "https://livabletelluride.org/logo/roping.png"
+    },
+    {
+      name: "Wright's Mesa Gymkhana Club",
+      category: "recreation",
+      summary: "Gymkhana club based at the San Miguel County Fairgrounds in Norwood. Organizes timed speed-pattern horse riding events and competitions for riders of all ages in the San Miguel Basin.",
+      website: "https://www.sanmiguelcountyco.gov/431/Fairground-User-Groups",
+      social: {},
+      logo: "https://livabletelluride.org/logo/gymkhana.png"
+    },
+    {
+      name: "San Miguel Basin 4-H Clubs",
+      category: "youth",
+      town: "Norwood",
+      summary: "Part of Colorado State University Extension, 4-H provides project-based learning for youth across agriculture, livestock, horticulture, natural resources, and home &amp; family topics. Members join a local club to participate in hands-on activities, fairs, and community service.",
+      website: "https://sanmiguel.extension.colostate.edu/smb-club-list/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/4-h.png"
+    },
+    {
+      name: "Telluride Ski &amp; Snowboard Club",
+      category: "youth",
+      town: "Telluride",
+      summary: "Supports youth skiing and snowboarding through competitive programs, coaching, training camps, and mountain-sports development for athletes across the region.",
+      website: "https://tssc.org/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/Telluride%20Ski%20Club.webp"
+    },
+    {
+      name: "Telluride Youth Lacrosse / West Slope Lacrosse",
+      category: "youth",
+      town: "Telluride",
+      summary: "Youth lacrosse programming serving Telluride and the broader western slope region. Contact for current season schedules, registration, and team information.",
+      website: "https://www.westslopelacrosse.org/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/West%20Slope%20Lacross.jpeg"
+    },
+    {
+      name: "Telluride Youth Soccer Club",
+      category: "youth",
+      town: "Telluride",
+      summary: "Provides youth soccer programs, training, and recreational opportunities for young players in Telluride and the surrounding region. Programs for a range of ages and skill levels.",
+      website: "https://www.telluridesoccer.com/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/Telluride%20Soccer.jpeg"
+    },
+    {
+      name: "The Pinhead Institute",
+      category: "youth",
+      town: "Telluride",
+      summary: "Provides STEM education, science programs, youth internships, educational outreach, and hands-on learning opportunities for young people in Telluride and the surrounding region.",
+      website: "https://www.pinheadinstitute.org/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/Pinhead.png"
+    },
+    {
+      name: "True North Youth Program",
+      category: "youth",
+      town: "Nucla/Naturita",
+      summary: "Provides youth-development programs, after-school enrichment, outdoor experiences, mentoring, and leadership support for young people in Norwood, Nucla, Naturita, Telluride, and surrounding communities.",
+      website: "https://www.truenorthyouthprogram.org/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/True%20North.png"
+    },
+    {
+      name: "Youth Soccer Club &amp; County Recreation",
+      category: "youth",
+      summary: "Youth soccer and recreational sports programming coordinated through San Miguel County. Check the county calendar for upcoming seasons, registration dates, and community recreation events.",
+      website: "https://sanmiguelcountyco.gov/Calendar.aspx",
+      social: {},
+      logo: "https://livabletelluride.org/logo/soccer.png"
+    },
+    {
+      name: "Norwood Chamber of Commerce",
+      category: "business",
+      town: "Norwood",
+      summary: "Supports local business growth and community development in Norwood, Colorado. Maintains a business directory, facilitates networking, and promotes area tourism and economic vitality for this small mountain community.",
+      website: "https://norwoodcolorado.com/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/norwood-chamber.png"
+    },
+    {
+      name: "Nucla-Naturita Area Chamber of Commerce",
+      category: "business",
+      town: "Nucla/Naturita",
+      summary: "Promotes local businesses, community events, tourism, and West End identity for Nucla, Naturita, Redvale, Bedrock, Paradox, and nearby communities.",
+      website: "https://nucla-naturita.com/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/Nucla%20Chamber.jpg"
+    },
+    {
+      name: "Ridgway Area Chamber of Commerce",
+      category: "business",
+      town: "Ridgway",
+      summary: "Supports local businesses, tourism, community events, visitor information, and regional economic activity in Ridgway and the surrounding area.",
+      website: "https://ridgwaycolorado.com/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/Ridgway%20Chamber.png"
+    },
+    {
+      name: "Christ Presbyterian Church Telluride",
+      category: "churches",
+      town: "Telluride",
+      summary: "With roots dating to 1889 as a Congregational church, it became Presbyterian in 1938. A loving and accepting fellowship emphasizing hospitality and community, with children's ministry, contemplative gardens, and local outreach initiatives.",
+      website: "https://christpresbyterianchurchtelluride.com/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/Church.png"
+    },
+    {
+      name: "St. Patrick's Catholic Church",
+      category: "churches",
+      town: "Telluride",
+      summary: "Historic Catholic parish established in 1896, serving the Telluride community at 8,750 feet in the San Juan Mountains. Part of the Diocese of Pueblo, also operating a mission in Nucla.",
+      website: "https://stpatrickstelluride.com/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/Church.png"
+    },
+    {
+      name: "Telluride Christian Fellowship",
+      category: "churches",
+      summary: "Non-denominational Christian church serving the Telluride community with worship services, community outreach, and fellowship programs in a welcoming mountain-town setting.",
+      website: "https://www.telluridechurch.org/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/Church.png"
+    }
+];
