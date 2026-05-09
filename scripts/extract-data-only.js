@@ -28,6 +28,7 @@ const TARGETS = [
   // ── Pure helpers ──
   { kind: 'function', name: 'truncate' },
   { kind: 'function', name: 'localDate' },
+  { kind: 'function', name: 'isBadSummary' },   // referenced by getMeetingSummary
   // ── Bot-updated data consts ──
   { kind: 'const',    name: 'MANUAL_SUMMARIES' },
   { kind: 'const',    name: 'TELLURIDE_TIMES_ARTICLES' },

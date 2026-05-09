@@ -36,6 +36,14 @@ function localDate(str) {
   return new Date(d.getFullYear(), d.getMonth(), d.getDate());
 }
 
+function isBadSummary(text) {
+  if (!text) return false;
+  if (SUMMARY_REJECT_PATTERNS.some(pat => pat.test(text))) return true;
+  // Long single-sentence text about the agenda itself (not topic list)
+  if (text.length > 120 && !text.includes(' · ') && /\b(agenda|page|text|content|appears|navigation)\b/i.test(text)) return true;
+  return false;
+}
+
 const MANUAL_SUMMARIES = {
   "telluride|2026-04-15|Historic & Architectural Review Commission":
     "PUBLIC HEARING: 238 N Pine St (Lot 18B) — small-scale demolition of non-rated THAS structure + new construction (950–2,500 sq ft) + repositioning of THAS secondary structure (continued from Feb 18) · 238 N Pine St (Lot 18A) — small-scale demolition + new construction (continued from Feb 18) · WORK SESSION: 208 S Fir St — large-scale mixed-use replacement structure (5,000+ sq ft, Commercial Zone, NIBA LLC) · Colorado Wildfire Resiliency Code work session · Community Engagement — Historic Preservation discussion"

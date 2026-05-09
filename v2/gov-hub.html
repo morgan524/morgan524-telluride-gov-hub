@@ -471,21 +471,21 @@
       }
     ];
 
-    /* ── Entity catalog (sidebar list) ── */
+    /* ── Entity catalog (sidebar list) ──
+       Entries should match keys returned by the get*Meetings() fetchers in
+       data-only.js. Town of Telluride, Ouray, Ridgway, and SMRHA are
+       deferred until their meeting data exists in cached form (currently
+       only available via live RSS/API on the legacy single-page site). */
     const ENTITIES = [
       { key: 'all',       name: 'All Meetings',           logo: 'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png' },
-      { key: 'telluride', name: 'Town of Telluride',      logo: 'https://livabletelluride.org/logo/Telluride.png' },
       { key: 'mv',        name: 'Mountain Village',       logo: 'https://livabletelluride.org/logo/MV.png' },
       { key: 'county',    name: 'San Miguel County',      logo: 'https://livabletelluride.org/logo/SMC.png' },
       { key: 'norwood',   name: 'Town of Norwood',        logo: 'https://livabletelluride.org/logo/Norwood.png' },
-      { key: 'ouray',     name: 'Ouray County / Town',    logo: 'https://livabletelluride.org/logo/Ouray.png' },
-      { key: 'ridgway',   name: 'Town of Ridgway',        logo: 'https://livabletelluride.org/logo/Ridgway.png' },
       { key: 'school',    name: 'School District R-1',    logo: 'https://livabletelluride.org/logo/School.png' },
       { key: 'fire',      name: 'Fire Protection',        logo: 'https://livabletelluride.org/logo/Fire.png' },
       { key: 'med',       name: 'Telluride Medical',      logo: 'https://livabletelluride.org/logo/Medical.png' },
       { key: 'smart',     name: 'SMART Transit',          logo: 'https://livabletelluride.org/logo/SMART.png' },
-      { key: 'ophir',     name: 'Town of Ophir',          logo: 'https://livabletelluride.org/logo/Ophir.png' },
-      { key: 'smrha',     name: 'SMRHA Housing Authority',logo: 'https://livabletelluride.org/logo/SMRHA.png' }
+      { key: 'ophir',     name: 'Town of Ophir',          logo: 'https://livabletelluride.org/logo/Ophir.png' }
     ];
 
     let MEETINGS = SAMPLE_MEETINGS.slice();
@@ -493,7 +493,7 @@
 
     /* ── Render top chip filter bar (subset of sidebar entities) ── */
     function chipsHtml() {
-      const TOP_CHIPS = ['all', 'telluride', 'mv', 'county', 'norwood', 'school', 'fire', 'smart'];
+      const TOP_CHIPS = ['all', 'mv', 'county', 'norwood', 'school', 'fire', 'med', 'smart'];
       return TOP_CHIPS.map(key => {
         const e = ENTITIES.find(x => x.key === key);
         if (!e) return '';
@@ -595,6 +595,12 @@
         s.src = 'https://livabletelluride.org/js/data-only.js?v=v2';
         s.onload = () => {
           try {
+            // Stub AI_SUMMARIES so getMeetingSummary() doesn't throw.
+            // The live site populates this from Firestore at runtime; v2
+            // doesn't (yet), so summaries fall through to MANUAL_SUMMARIES
+            // (which IS in data-only.js) or to the meeting's description.
+            if (typeof AI_SUMMARIES === 'undefined') window.AI_SUMMARIES = {};
+
             const fetchers = [
               ['getCountyCachedMeetings', 'county',    'San Miguel County',     'https://livabletelluride.org/logo/SMC.png'],
               ['getMVMeetings',           'mv',        'Mountain Village',      'https://livabletelluride.org/logo/MV.png'],
