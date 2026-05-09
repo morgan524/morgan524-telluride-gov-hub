@@ -303,6 +303,14 @@
       object-fit: cover;
       display: block;
     }
+    /* KOTO brand-logo fallback — render as a contained logo on a warm
+       cream backdrop, not a cropped photo. */
+    .card .img-wrap img.koto-fallback,
+    .featured-card .img-wrap-featured img.koto-fallback {
+      object-fit: contain;
+      padding: 18px;
+      background: #f4ead0;
+    }
     /* Portrait images: switch to contain so the whole image shows, and
        fill the letterboxed side bars with a blurred copy of the same
        image (Apple Music / Spotify treatment). The portrait class is
@@ -757,9 +765,22 @@
       return `<img class="${cls}" src="${url}" alt="" onerror="this.style.display='none'">`;
     }
 
+    /* Image to render in the card visual area. KOTO articles don't carry
+       enclosure images, so use the cow brand-logo as a fallback. */
+    function imgFor(a) {
+      if (a.img) return a.img;
+      if (a.sourceKey === 'koto') return 'img/koto-cow.webp';
+      return '';
+    }
+
     function featuredHtml(a) {
+      const src = imgFor(a);
+      const isKotoFallback = !a.img && a.sourceKey === 'koto';
+      const imgEl = src
+        ? `<img src="${src}" alt="" loading="lazy" ${isKotoFallback ? 'class="koto-fallback"' : 'onload="handlePortrait(this)"'} onerror="this.style.background='#ddd'">`
+        : '';
       return `
-        <div class="img-wrap-featured"><img src="${a.img}" alt="" loading="lazy" onload="handlePortrait(this)" onerror="this.style.background='#ddd'"></div>
+        <div class="img-wrap-featured">${imgEl}</div>
         <div class="body">
           <span class="featured-tag">Featured</span>
           <h2><a href="${a.href}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${a.title}</a></h2>
@@ -777,11 +798,14 @@
     }
 
     function cardHtml(a) {
+      const src = imgFor(a);
+      const isKotoFallback = !a.img && a.sourceKey === 'koto';
+      const imgEl = src
+        ? `<img src="${src}" alt="" loading="lazy" ${isKotoFallback ? 'class="koto-fallback"' : 'onload="handlePortrait(this)"'} onerror="this.style.opacity=0.3">`
+        : '';
       return `
         <article class="card">
-          <div class="img-wrap">
-            <img src="${a.img}" alt="" loading="lazy" onload="handlePortrait(this)" onerror="this.style.opacity=0.3">
-          </div>
+          <div class="img-wrap">${imgEl}</div>
           <div class="body">
             <h3><a href="${a.href}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${a.title}</a></h3>
             <div class="meta">
@@ -924,6 +948,15 @@
               if (seen.has(k)) return false;
               seen.add(k);
               return true;
+            });
+
+            // Sort by date descending (newest first), interleaved across sources
+            // — NOT grouped by source. Articles without a parseable date sink
+            // to the bottom.
+            filtered.sort((a, b) => {
+              const da = a.date ? new Date(a.date).getTime() : 0;
+              const db = b.date ? new Date(b.date).getTime() : 0;
+              return db - da;
             });
 
             ARTICLES.length = 0;
