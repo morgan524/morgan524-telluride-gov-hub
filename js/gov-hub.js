@@ -2267,7 +2267,7 @@ function getTownImage(item) {
   const loc = ((item.location || '') + ' ' + (item.title || '') + ' ' + (item.description || '')).toLowerCase();
   if (/placerville/.test(loc)) return TOWN_IMAGES.placerville;
   if (/ophir/.test(loc)) return TOWN_IMAGES.ophir;
-  if (/ridgway/.test(loc)) return TOWN_IMAGES.ridgway;
+  if (/ridgway|sherbino|colorado boy depot/.test(loc)) return TOWN_IMAGES.ridgway;
   if (/norwood/.test(loc)) return TOWN_IMAGES.norwood;
   // Nucla and Naturita are sister towns 1 mile apart but each has its own
   // illustrated town badge. Match Naturita first since it's more specific.
@@ -3079,7 +3079,9 @@ function detectEventTown(item) {
   // through to a Telluride match via the substring "telluride".
   if (/\b(mountain village|mtn\.? village|mv town|tmvoa)\b/.test(text)) return 'town-mv';
   if (/\bnorwood\b/.test(text)) return 'town-norwood';
-  if (/\bridgway\b/.test(text)) return 'town-ridgway';
+  // Sherbino Theater (604 Clinton St) and Colorado Boy Depot (687 N Cora
+  // St) are both in Ridgway — venue names alone should classify the card.
+  if (/\b(ridgway|sherbino|colorado boy depot)\b/.test(text)) return 'town-ridgway';
   if (/\bouray\b/.test(text)) return 'town-ouray';
   if (/\b(nucla|naturita)\b/.test(text)) return 'town-nucla';
   if (/\b(ophir|ilium|ames)\b/.test(text)) return 'town-ophir';

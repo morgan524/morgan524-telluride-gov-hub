@@ -2328,8 +2328,15 @@ async function syncSherbinoEvents() {
         href:     ev.url || 'https://sherbino.org/events/',
         date:     ev.start_date || '',
         endDate:  ev.end_date   || '',
-        location: (ev.venue && ev.venue.venue) ? ev.venue.venue
-                  : (ev.venue && ev.venue.city ? ev.venue.city : 'Ridgway, CO'),
+        // Always include "Ridgway" in the location so the Events tab town
+        // chip + town-badge image both classify Sherbino correctly. Without
+        // appending the city, "The Sherbino" alone falls through to the
+        // Telluride default badge.
+        location: (ev.venue && ev.venue.venue && ev.venue.city)
+                    ? `${ev.venue.venue}, ${ev.venue.city}`
+                  : (ev.venue && ev.venue.venue) ? `${ev.venue.venue}, Ridgway`
+                  : (ev.venue && ev.venue.city) ? ev.venue.city
+                  : 'Ridgway, CO',
         copy:     ev.description ? decodeHtmlEntities(
                     smartTruncate(ev.description.replace(/<[^>]+>/g, ''), EVENT_DESC_MAX)) : '',
         imageUrl: (ev.image && ev.image.url) ? ev.image.url : '',
