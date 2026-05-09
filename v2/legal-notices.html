@@ -680,7 +680,16 @@
     renderChips();
 
     /* ── Live data: load gov-hub.js, prune expired, render cards ── */
-    function loadLiveNotices() {
+    function loadLiveNotices() {      // Stub hidden DOM elements that gov-hub.js's top-level handlers expect (sidebarReset etc).
+      // Without these, getElementById(...).addEventListener throws and halts execution before HOUSING_LISTINGS gets defined.
+      ['sidebarReset','bannerClear','sidebarToggle','sidebarOverlay','collapseRight','expandRight','sidebar'].forEach(id => {
+        if (document.getElementById(id)) return;
+        const el = document.createElement('span');
+        el.id = id; el.style.display = 'none';
+        document.body.appendChild(el);
+      });
+
+
       const dataScript = document.createElement('script');
       dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v2';
       dataScript.onload = () => {
