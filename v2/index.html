@@ -40,22 +40,15 @@
     .topnav-links a:hover { color: var(--forest); }
     .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
 
-    /* ── Hero — full-bleed banner with photo on right and cream-gradient text panel on left ──
-       Image is 1456x1159 (≈5:4). Use `auto 100%` so the photo's height
-       fits the hero exactly, natural width pinned to the right edge.
-       Gradient is wider/softer so the cream-to-photo blend always
-       overlaps the image's left edge regardless of viewport width. */
+    /* ── Hero — full-bleed banner ──
+       Image is 3111x1159 (≈2.68:1 panorama) with the cream-fade gradient
+       already baked into the photo on the left side, so no CSS gradient
+       layer is needed. `cover` fills the hero; minor side-cropping at
+       very wide viewports is fine because the cream area on the left is
+       wide enough to absorb it. */
     .hero {
       position: relative;
-      background:
-        linear-gradient(90deg,
-          var(--bg-warm) 0%,
-          var(--bg-warm) 32%,
-          rgba(253, 251, 246, 0.92) 42%,
-          rgba(253, 251, 246, 0.55) 55%,
-          rgba(253, 251, 246, 0.0) 75%),
-        url('img/telluride-125.jpeg') no-repeat right center / auto 100%,
-        var(--bg-hero);
+      background: url('img/telluride-125.jpeg') no-repeat center center / cover, var(--bg-warm);
       min-height: 480px;
       padding: 80px 0 120px;   /* extra bottom padding for props overlap */
       overflow: hidden;
@@ -366,10 +359,7 @@
     /* ── Responsive ── */
     @media (max-width: 1080px) {
       .hero { min-height: 420px; padding: 60px 0 110px;
-        background:
-          linear-gradient(90deg, var(--bg-warm) 0%, var(--bg-warm) 35%, rgba(253,251,246,0.92) 50%, rgba(253,251,246,0.55) 65%, rgba(253,251,246,0.0) 85%),
-          url('img/telluride-125.jpeg') no-repeat right center / auto 100%,
-          var(--bg-hero);
+        background: url('img/telluride-125.jpeg') no-repeat center center / cover, var(--bg-warm);
       }
       .hero h1 { font-size: 2.6rem; }
       .props-card { grid-template-columns: repeat(2, 1fr); }
