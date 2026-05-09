@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Telluride Region — Tell-Hub</title>
   <!-- Site styles (extracted) -->
-  <link rel="stylesheet" href="css/site.css?v=2026-05-08r-govhub">
+  <link rel="stylesheet" href="css/site.css?v=2026-05-08y-cowork-bundle">
   <!-- Hub-Bub forum styles (extracted) -->
   <link rel="stylesheet" href="css/hub-bub.css">
 <!-- Firebase SDK (modular, from CDN) -->
@@ -210,31 +210,46 @@
 
     <!-- ══════════ MEETINGS TAB ══════════ -->
     <div class="tab-content active" id="tab-meetings">
-      <div class="filter-row">
-        <span class="chip active-all" data-filter="all" data-tab-target="meetings">All</span>
-        <span class="chip" data-filter="telluride" data-tab-target="meetings">Town of Telluride</span>
-        <span class="chip" data-filter="county" data-tab-target="meetings">San Miguel County</span>
-        <span class="chip" data-filter="smart" data-tab-target="meetings">SMART Transit</span>
-        <span class="chip" data-filter="mv" data-tab-target="meetings">Mountain Village</span>
-        <span class="chip" data-filter="school" data-tab-target="meetings">School District</span>
-        <span class="chip" data-filter="fire" data-tab-target="meetings">Fire District</span>
-        <span class="chip" data-filter="med" data-tab-target="meetings">Medical Center</span>
-        <span class="chip" data-filter="norwood" data-tab-target="meetings">Norwood</span>
-        <span class="chip" data-filter="ophir" data-tab-target="meetings">Ophir</span>
-        <span class="chip" data-filter="airport" data-tab-target="meetings">TEX</span>
-        <span class="chip" data-filter="localgroup" data-tab-target="meetings">Local Groups</span>
-      </div>
+      <div class="govhub-layout">
+        <div class="govhub-main">
+          <div class="filter-row">
+            <span class="chip active-all" data-filter="all" data-tab-target="meetings">All</span>
+            <span class="chip" data-filter="telluride" data-tab-target="meetings">Town of Telluride</span>
+            <span class="chip" data-filter="county" data-tab-target="meetings">San Miguel County</span>
+            <span class="chip" data-filter="smart" data-tab-target="meetings">SMART Transit</span>
+            <span class="chip" data-filter="mv" data-tab-target="meetings">Mountain Village</span>
+            <span class="chip" data-filter="school" data-tab-target="meetings">School District</span>
+            <span class="chip" data-filter="fire" data-tab-target="meetings">Fire District</span>
+            <span class="chip" data-filter="med" data-tab-target="meetings">Medical Center</span>
+            <span class="chip" data-filter="norwood" data-tab-target="meetings">Norwood</span>
+            <span class="chip" data-filter="ophir" data-tab-target="meetings">Ophir</span>
+            <span class="chip" data-filter="airport" data-tab-target="meetings">TEX</span>
+            <span class="chip" data-filter="localgroup" data-tab-target="meetings">Local Groups</span>
+          </div>
 
-      <!-- Survey Call-to-Action -->
-      <div style="margin:18px 0 20px 0; padding:20px 24px; background:linear-gradient(135deg, rgba(33,68,60,0.07) 0%, rgba(166,143,87,0.12) 100%); border-radius:14px; border-left:4px solid var(--accent-green); text-align:center;">
-        <h3 style="margin:0 0 8px 0; font-size:1.15rem; color:var(--text-primary); font-family:var(--font-heading);">Take the Telluride Survey</h3>
-        <p style="margin:0 0 14px 0; font-size:0.92rem; color:var(--text-secondary); line-height:1.55;">Telluride is inviting you to answer its survey regarding issues important to this area.</p>
-        <a href="https://polco.us/n/res/vote/telluride-co/the-town-of-telluride-2026-community-survey" target="_blank" rel="noopener" style="display:inline-block; padding:10px 28px; background:var(--accent-green); color:#fff; font-size:0.95rem; font-weight:600; border-radius:8px; text-decoration:none; font-family:var(--font-heading); letter-spacing:0.02em; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Answer Survey Here</a>
-      </div>
+              <!-- Survey Call-to-Action -->
+          <div style="margin:18px 0 20px 0; padding:20px 24px; background:linear-gradient(135deg, rgba(33,68,60,0.07) 0%, rgba(166,143,87,0.12) 100%); border-radius:14px; border-left:4px solid var(--accent-green); text-align:center;">
+            <h3 style="margin:0 0 8px 0; font-size:1.15rem; color:var(--text-primary); font-family:var(--font-heading);">Take the Telluride Survey</h3>
+            <p style="margin:0 0 14px 0; font-size:0.92rem; color:var(--text-secondary); line-height:1.55;">Telluride is inviting you to answer its survey regarding issues important to this area.</p>
+            <a href="https://polco.us/n/res/vote/telluride-co/the-town-of-telluride-2026-community-survey" target="_blank" rel="noopener" style="display:inline-block; padding:10px 28px; background:var(--accent-green); color:#fff; font-size:0.95rem; font-weight:600; border-radius:8px; text-decoration:none; font-family:var(--font-heading); letter-spacing:0.02em; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Answer Survey Here</a>
+          </div>
 
 
-      <div id="meetings-content">
-        <div class="loading"><div class="spinner"></div><br>Loading upcoming meetings…</div>
+          <div id="meetings-content">
+            <div class="loading"><div class="spinner"></div><br>Loading upcoming meetings…</div>
+          </div>
+        </div>
+        <aside class="govhub-entity-sidebar" aria-label="Filter meetings by public entity">
+          <div class="govhub-sidebar-card">
+            <div class="govhub-sidebar-header">
+              <div class="govhub-sidebar-title">Public Entities</div>
+              <div class="govhub-sidebar-subtitle">Filter the meetings list by a single body</div>
+            </div>
+            <div class="govhub-sidebar-list" id="govhubEntityList">
+              <div class="govhub-sidebar-loading">Loading…</div>
+            </div>
+          </div>
+        </aside>
       </div>
     </div>
 
@@ -472,30 +487,7 @@
           </div>
         </div>
 
-        <div class="local-group-card" data-category="nonprofits">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo">
-              <a href="https://www.buildinglives.org/" target="_blank" rel="noopener" style="display:block;line-height:0;" aria-label="Visit website"><img src="logo/Habitat-for-Humanit-Logo.jpg" alt="Habitat for Humanity of the San Juans logo" loading="lazy" onerror="this.style.display='none'"></a>
-            </div>
-            <div class="local-group-body">
-              <h4>Habitat for Humanity of the San Juans</h4>
-              <div class="group-summary">Housing-focused nonprofit serving San Miguel, Ouray, and Montrose counties through affordable housing construction, homeownership support, and community-building programs.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Area:</span> <span class="group-detail-value">San Miguel, Ouray, and Montrose counties</span></div>
-                <div class="group-detail"><span class="group-detail-label">Focus:</span> <span class="group-detail-value">Affordable housing, homeownership access, community development</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://www.buildinglives.org/" target="_blank" rel="noopener" class="group-btn-primary">Visit Website</a>
-                <a href="https://www.facebook.com/habitatsanjuans" target="_blank" rel="noopener" class="group-btn-secondary">Facebook</a>
-                <a href="https://twitter.com/HabitatSanJuans" target="_blank" rel="noopener" class="group-btn-secondary">X</a>
-                <a href="https://www.youtube.com/channel/UCP1CivM5W95FddQAmURkKpQ" target="_blank" rel="noopener" class="group-btn-secondary">YouTube</a>
-                <a href="https://www.buildinglives.org/donate" target="_blank" rel="noopener" class="group-btn-secondary">Donate</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="nonprofits">
+                <div class="local-group-card" data-category="nonprofits">
           <div class="local-group-card-inner">
             <div class="local-group-logo">
               <a href="https://loneconelegacy.org/" target="_blank" rel="noopener" style="display:block;line-height:0;" aria-label="Visit website"><img src="logo/Norwood.png" alt="Lone Cone Legacy Trust logo" loading="lazy" onerror="this.style.display='none'"></a>
@@ -906,26 +898,7 @@
           </div>
         </div>
 
-        <div class="local-group-card" data-category="veterans">
-          <div class="local-group-card-inner">
-            <div class="local-group-logo logo-sm">
-              <a href="https://tellurideelks.org/" target="_blank" rel="noopener" style="display:block;line-height:0;" aria-label="Visit website"><img src="https://raw.githubusercontent.com/morgan524/morgan524-telluride-gov-hub/main/logo/Elks.png" alt="Telluride Elks Lodge Veterans Club logo" loading="lazy"></a>
-            </div>
-            <div class="local-group-body">
-              <h4>Telluride Elks Lodge BPOE #692 Veterans Club</h4>
-              <div class="group-summary">Veterans service club operating through Telluride Elks Lodge 692, listed as a community support resource by the San Miguel County Veterans Service Office. Provides fellowship and support for local veterans.</div>
-              <div class="local-group-details">
-                <div class="group-detail"><span class="group-detail-label">Affiliated with:</span> <span class="group-detail-value">Telluride Elks Lodge 692</span></div>
-              </div>
-              <div class="local-group-actions">
-                <a href="https://tellurideelks.org/" target="_blank" rel="noopener" class="group-btn-primary">Elks Lodge Website</a>
-                <a href="https://www.sanmiguelcountyco.gov/537/Resources" target="_blank" rel="noopener" class="group-btn-secondary">County Veterans Resources</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="local-group-card" data-category="nonprofits">
+                <div class="local-group-card" data-category="nonprofits">
           <div class="local-group-card-inner">
             <div class="local-group-logo">
               <a href="https://telluridefoundation.org/" target="_blank" rel="noopener" style="display:block;line-height:0;" aria-label="Visit website"><img src="logo/tf-foundation.png" alt="Telluride Foundation logo" loading="lazy"></a>
@@ -1186,9 +1159,6 @@
         </button>
         <button class="lg-filter-btn" data-filter="youth" onclick="lgFilter('youth')">
           <span class="lg-filter-icon">🧒</span> Youth &amp; Education <span class="lg-filter-count" id="lgCountYouth">0</span>
-        </button>
-        <button class="lg-filter-btn" data-filter="veterans" onclick="lgFilter('veterans')">
-          <span class="lg-filter-icon">🎖️</span> Veterans <span class="lg-filter-count" id="lgCountVeterans">0</span>
         </button>
         <button class="lg-filter-btn" data-filter="business" onclick="lgFilter('business')">
           <span class="lg-filter-icon">💼</span> Business &amp; Commerce <span class="lg-filter-count" id="lgCountBusiness">0</span>
@@ -2254,8 +2224,8 @@
     <button class="footer-correction-btn" id="correctionFab">✏️ See something wrong? Suggest a Correction</button>
   </div>
 
-<script src="js/gov-data.js?v=2026-05-08r-govhub"></script>
-<script src="js/gov-hub.js?v=2026-05-08r-govhub"></script>
+<script src="js/gov-data.js?v=2026-05-08y-cowork-bundle"></script>
+<script src="js/gov-hub.js?v=2026-05-08y-cowork-bundle"></script>
 
 <!-- ══════════ Events Around Me Modal ══════════ -->
 <div class="prox-modal-overlay" id="proxOverlay">
@@ -2328,7 +2298,7 @@
     <div class="correction-status" id="correctionStatusMsg"></div>
   </div>
 </div>
-<script src="js/corrections.js"></script>
+<script src="js/corrections.js?v=2026-05-08y-cowork-bundle"></script>
 <!-- ══════════ HUB-BUB AUTH MODAL ══════════ -->
 <div class="hb-modal-overlay" id="hbAuthModal">
   <div class="hb-modal">
