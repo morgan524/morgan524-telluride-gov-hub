@@ -1599,6 +1599,7 @@ const LOCAL_ORGS = [
       town: "Ouray",
       summary: "Works on environmental sustainability, climate action, waste reduction, energy efficiency, and community sustainability programs across San Miguel and Ouray counties.",
       website: "https://ecoactionpartners.org/",
+      donate: "https://www.ecoactionpartners.org/donate",
       social: {},
       logo: "https://livabletelluride.org/logo/Eco%20Action.webp"
     },
@@ -1608,6 +1609,7 @@ const LOCAL_ORGS = [
       town: "Nucla/Naturita",
       summary: "Community trust model supporting local philanthropy, resident-driven improvement projects, and civic investment in outlying communities across the West End and surrounding areas.",
       website: "https://loneconelegacy.org/",
+      donate: "https://loneconelegacy.org/ways-to-donate",
       social: {},
       logo: "https://livabletelluride.org/logo/Norwood.png"
     },
@@ -1616,6 +1618,7 @@ const LOCAL_ORGS = [
       category: "nonprofits",
       summary: "Southwest Colorado's leading wilderness conservation organization. Works to protect public lands, wildlife, and wild places in the San Juan Mountains and surrounding region through advocacy, education, and community engagement.",
       website: "https://www.sheepmountainalliance.org/",
+      donate: "https://www.sheepmountainalliance.org/donate",
       social: {},
       logo: "https://livabletelluride.org/logo/sheep-mountain.png"
     },
@@ -1625,6 +1628,7 @@ const LOCAL_ORGS = [
       town: "Ridgway",
       summary: "Community arts, culture, and performance venue in Ridgway hosting music, film, theater, lectures, community gatherings, and educational events for the broader San Juan region.",
       website: "https://sherbino.org/",
+      donate: "https://sherbino.org/contribute/",
       social: {},
       logo: "https://livabletelluride.org/logo/Sherbino.png"
     },
@@ -1634,6 +1638,7 @@ const LOCAL_ORGS = [
       town: "Telluride",
       summary: "Community foundation serving the Telluride region since 2000. Provides grants to local nonprofits, hosts community events and public forums, runs youth programs, and fosters economic vitality and quality of life across the San Miguel Basin.",
       website: "https://telluridefoundation.org/",
+      donate: "https://telluridefoundation.org/donate/",
       social: {},
       logo: "https://livabletelluride.org/logo/tf-foundation.png"
     },
@@ -1661,6 +1666,7 @@ const LOCAL_ORGS = [
       town: "Telluride",
       summary: "Provides fire protection, emergency response, technical rescue, and public safety services for the Telluride Fire Protection District and surrounding communities. Volunteers welcome.",
       website: "https://telluridefire.com/",
+      donate: "https://www.telluridefire.com/donate",
       social: {},
       logo: "https://livabletelluride.org/logo/Telluride%20Fire.png"
     },
@@ -1704,6 +1710,7 @@ const LOCAL_ORGS = [
       town: "Telluride",
       summary: "Supports youth skiing and snowboarding through competitive programs, coaching, training camps, and mountain-sports development for athletes across the region.",
       website: "https://tssc.org/",
+      donate: "https://www.tssc.org/donate",
       social: {},
       logo: "https://livabletelluride.org/logo/Telluride%20Ski%20Club.webp"
     },
@@ -1713,6 +1720,7 @@ const LOCAL_ORGS = [
       town: "Telluride",
       summary: "Youth lacrosse programming serving Telluride and the broader western slope region. Contact for current season schedules, registration, and team information.",
       website: "https://www.westslopelacrosse.org/",
+      donate: "https://www.telluridelacrosse.com/about/donate/20585",
       social: {},
       logo: "https://livabletelluride.org/logo/West%20Slope%20Lacross.jpeg"
     },
@@ -1731,6 +1739,7 @@ const LOCAL_ORGS = [
       town: "Telluride",
       summary: "Provides STEM education, science programs, youth internships, educational outreach, and hands-on learning opportunities for young people in Telluride and the surrounding region.",
       website: "https://www.pinheadinstitute.org/",
+      donate: "https://www.pinheadinstitute.org/donate/",
       social: {},
       logo: "https://livabletelluride.org/logo/Pinhead.png"
     },
@@ -1740,6 +1749,7 @@ const LOCAL_ORGS = [
       town: "Nucla/Naturita",
       summary: "Provides youth-development programs, after-school enrichment, outdoor experiences, mentoring, and leadership support for young people in Norwood, Nucla, Naturita, Telluride, and surrounding communities.",
       website: "https://www.truenorthyouthprogram.org/",
+      donate: "https://www.coloradogives.org/organization/TrueNorthYouthProgram",
       social: {},
       logo: "https://livabletelluride.org/logo/True%20North.png"
     },
@@ -1793,6 +1803,7 @@ const LOCAL_ORGS = [
       town: "Telluride",
       summary: "Historic Catholic parish established in 1896, serving the Telluride community at 8,750 feet in the San Juan Mountains. Part of the Diocese of Pueblo, also operating a mission in Nucla.",
       website: "https://stpatrickstelluride.com/",
+      donate: "https://stpatrickstelluride.com/donate/",
       social: {},
       logo: "https://livabletelluride.org/logo/Church.png"
     },
@@ -1801,6 +1812,7 @@ const LOCAL_ORGS = [
       category: "churches",
       summary: "Non-denominational Christian church serving the Telluride community with worship services, community outreach, and fellowship programs in a welcoming mountain-town setting.",
       website: "https://www.telluridechurch.org/",
+      donate: "https://www.telluridechurch.org/give/",
       social: {},
       logo: "https://livabletelluride.org/logo/Church.png"
     }
