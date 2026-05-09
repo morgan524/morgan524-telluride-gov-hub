@@ -108,6 +108,28 @@ function fullDate(d) {
   return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 }
 
+
+// Smart truncation for event card descriptions — caps text at maxLen, cutting
+// at the nearest sentence boundary (or word boundary, or hard cut), then
+// appending "…". Avoids mid-word breaks. Mirrors the helper in
+// scripts/content-refresh.js — keep them in sync.
+function smartTruncate(text, maxLen) {
+  if (!text) return text;
+  const t = String(text).trim();
+  if (t.length <= maxLen) return t;
+  const candidate = t.slice(0, maxLen);
+  const sentEnd = Math.max(
+    candidate.lastIndexOf('. '),
+    candidate.lastIndexOf('! '),
+    candidate.lastIndexOf('? ')
+  );
+  if (sentEnd > maxLen * 0.6) return t.slice(0, sentEnd + 1).trim() + ' …';
+  const wordEnd = candidate.lastIndexOf(' ');
+  if (wordEnd > maxLen * 0.6) return t.slice(0, wordEnd).trim() + ' …';
+  return candidate.replace(/\s+\S*$/, '').trim() + ' …';
+}
+const EVENT_DESC_MAX = 600;
+
 function dateGroupKey(d) {
   if (typeof d === 'string') d = new Date(d);
   if (!d || isNaN(d)) return '9999-99-99';
@@ -1419,7 +1441,7 @@ async function enrichKOTOEvent(item) {
           const min = timeMatch[1].split(':')[1];
           timeStr = (h > 12 ? (h - 12) + ':' + min + ' PM' : h + ':' + min + ' AM') + ' · ';
         }
-        item.description = timeStr + desc.slice(0, 200);
+        item.description = timeStr + smartTruncate(desc, EVENT_DESC_MAX - timeStr.length);
       }
     }
     // Extract location from schema
@@ -1761,6 +1783,24 @@ async function fetchSheridanOperaHouseEvents() {
 // the Ridgway-Ouray area, but the calendar still includes events at
 // out-of-area venues (Montrose Pavilion, etc.) — those get filtered by
 // the existing isWithinServiceArea() check downstream in renderNews.
+
+// ── Ouray County government calendar (non-governmental events only) ──
+// Bot writes here every 6 hours via scripts/content-refresh.js's
+// syncOurayCountyEvents(). The CivicEngage iCal feed at
+// ouraycountyco.gov includes BOCC + City Council + community events; we drop
+// gov meetings at bake time so this array contains only community events
+// (e.g., Wildfire Aware Fair, water summits).
+const OURAY_COUNTY_EVENTS = [];
+
+function fetchOurayCountyEvents() {
+  if (typeof OURAY_COUNTY_EVENTS !== 'undefined' && Array.isArray(OURAY_COUNTY_EVENTS)) {
+    return OURAY_COUNTY_EVENTS.map(ev => Object.assign({}, ev, {
+      pubDate: ev.pubDate ? new Date(ev.pubDate) : null
+    })).filter(ev => ev.pubDate && !isNaN(ev.pubDate.getTime()));
+  }
+  return [];
+}
+
 async function fetchOurayRidgwayEvents() {
   const ORE_URL = 'https://events.ourayridgwayevents.com/api/2/events?school=ridgwayouray&days=30&pp=50';
   try {
@@ -1792,6 +1832,9 @@ async function fetchOurayRidgwayEvents() {
         description: (ev.description_text || '').trim(),
         summary: (ev.description_text || '').trim().slice(0, 280),
         pubDate: pubDate,
+        // eventDate mirrors pubDate so gov-meeting items routed to allMeetings
+        // satisfy renderMeetingsWithTopic()'s shape requirement.
+        eventDate: pubDate,
         source: 'oray',
         sourceLabel: 'Ouray Ridgway Calendar',
         category: 'Community Event',
@@ -1880,6 +1923,7 @@ async function fetchAllNews() {
   const sohResults = await fetchSheridanOperaHouseEvents();
   const elksResults = await fetchElksEvents();
   const orayResults = await fetchOurayRidgwayEvents();
+  const ouCountyResults = fetchOurayCountyEvents();
 
   // Hardcoded COMMUNITY_EVENTS (from the data array above)
   const hardcodedCommunity = [];
@@ -1922,6 +1966,7 @@ async function fetchAllNews() {
     ...sohResults,            // Sheridan Opera House
     ...elksResults,           // Telluride Elks Lodge
     ...orayResults,           // Ouray Ridgway Calendar (Localist)
+    ...ouCountyResults,       // Ouray County (non-gov community events from iCal)
     ...communityResults,      // GitHub-issue community submissions
     ...hardcodedCommunity,    // Hardcoded COMMUNITY_EVENTS
     // Aggregators last — their copies drop out if an original has the event:
@@ -2829,6 +2874,11 @@ function renderNews(items, filter) {
   eventCutoff.setDate(eventCutoff.getDate() + 30);
   filtered = filtered.filter(i => !i.pubDate || i.pubDate <= eventCutoff);
 
+  // Drop government meetings — Town Council, Planning Commission, etc.
+  // belong on the Gov-Hub tab, not the general Events tab. Same items are
+  // routed to allMeetings via newsPromise.then() so they still surface there.
+  filtered = filtered.filter(i => !isGovernmentalMeeting(i));
+
   // Cap (now safe — list is already sorted earliest-first, so the cap
   // affects far-future events not the soonest ones the user actually wants)
   filtered = filtered.slice(0, 200);
@@ -2841,7 +2891,11 @@ function renderNews(items, filter) {
   // Group by date for chronological display
   const groups = {};
   filtered.forEach(item => {
-    const key = item.pubDate ? new Date(item.pubDate).toISOString().slice(0,10) : 'unknown';
+    // Use local-date key (matches friendlyDate's local-midnight comparison).
+    // toISOString() would key by UTC date, splitting evening events into a
+    // "next UTC day" bucket that friendlyDate still labels "Today" — producing
+    // two "Today" headers in Mountain Time.
+    const key = item.pubDate ? dateGroupKey(item.pubDate) : 'unknown';
     if (!groups[key]) groups[key] = [];
     groups[key].push(item);
   });
@@ -2961,23 +3015,9 @@ let allNews = [];
 // Meeting filter chips
 document.querySelectorAll('.chip[data-tab-target="meetings"]').forEach(chip => {
   chip.addEventListener('click', () => {
-    const filter = chip.dataset.filter;
-    document.querySelectorAll('.chip[data-tab-target="meetings"]').forEach(c => {
-      c.className = 'chip';
-    });
-    if (filter === 'all') chip.classList.add('active-all');
-    else if (filter === 'telluride') chip.classList.add('active-telluride');
-    else if (filter === 'county') chip.classList.add('active-county');
-    else if (filter === 'smart') chip.classList.add('active-smart');
-    else if (filter === 'mv') chip.classList.add('active-mv');
-    else if (filter === 'school') chip.classList.add('active-school');
-    else if (filter === 'fire') chip.classList.add('active-fire');
-    else if (filter === 'med') chip.classList.add('active-med');
-    else if (filter === 'norwood') chip.classList.add('active-norwood');
-    else if (filter === 'ophir') chip.classList.add('active-ophir');
-    else if (filter === 'airport') chip.classList.add('active-airport');
-    currentMeetingFilter = filter;
-    renderMeetingsWithTopic();
+    // Delegate to the single source of truth — keeps chip row + right
+    // sidebar visual state in sync.
+    setMeetingsFilter(chip.dataset.filter);
   });
 });
 
@@ -5950,6 +5990,83 @@ function applyTopicFilter(topicKey) {
 }
 
 // Wrap meeting render to apply topic filter
+// ── Gov-Hub right sidebar: filter meetings by public entity ──
+// Canonical entity list — order matches the chip row in index.html.
+// Each entry: { source: <key matching item.source>, label: <human name> }.
+const GOVHUB_ENTITIES = [
+  { source: 'all',        label: 'All Entities' },
+  { source: 'telluride',  label: 'Town of Telluride' },
+  { source: 'county',     label: 'San Miguel County' },
+  { source: 'mv',         label: 'Mountain Village' },
+  { source: 'school',     label: 'School District' },
+  { source: 'fire',       label: 'Fire District' },
+  { source: 'med',        label: 'Medical Center' },
+  { source: 'norwood',    label: 'Norwood' },
+  { source: 'ophir',      label: 'Ophir' },
+  { source: 'airport',    label: 'TEX Airport' },
+  { source: 'smart',      label: 'SMART Transit' },
+  { source: 'localgroup', label: 'Local Groups' },
+  { source: 'oray',       label: 'Ouray-Ridgway' }
+];
+
+// Count upcoming non-canceled, non-ended governmental meetings within 60 days
+// for one entity (or all). Mirrors the filter chain in renderMeetingsWithTopic.
+function countMeetingsForEntity(source) {
+  if (!Array.isArray(allMeetings) || allMeetings.length === 0) return 0;
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const todayStr = dateGroupKey(today);
+  const cutoff = new Date(today);
+  cutoff.setDate(cutoff.getDate() + 60);
+  let n = 0;
+  for (const m of allMeetings) {
+    if (source !== 'all' && m.source !== source) continue;
+    if (!isGovernmentalMeeting(m)) continue;
+    if (!m.eventDate || dateGroupKey(m.eventDate) < todayStr) continue;
+    if (isMeetingEnded(m)) continue;
+    if (m.eventDate > cutoff) continue;
+    n++;
+  }
+  return n;
+}
+
+// Single source of truth for changing the meetings filter — keeps both the
+// chip row and the right sidebar visually in sync, then re-renders.
+function setMeetingsFilter(filter) {
+  currentMeetingFilter = filter || 'all';
+  document.querySelectorAll('.chip[data-tab-target="meetings"]').forEach(c => {
+    c.className = 'chip';
+    if (c.dataset.filter === currentMeetingFilter) {
+      const cls = currentMeetingFilter === 'all'
+        ? 'active-all'
+        : 'active-' + currentMeetingFilter;
+      c.classList.add(cls);
+    }
+  });
+  document.querySelectorAll('.govhub-sidebar-item').forEach(it => {
+    it.classList.toggle('active', it.dataset.filter === currentMeetingFilter);
+  });
+  renderMeetingsWithTopic();
+}
+
+function renderGovHubEntitySidebar() {
+  const list = document.getElementById('govhubEntityList');
+  if (!list) return;
+  const html = GOVHUB_ENTITIES.map(ent => {
+    const count = countMeetingsForEntity(ent.source);
+    const activeCls = (ent.source === currentMeetingFilter) ? ' active' : '';
+    const emptyCls = (count === 0 && ent.source !== 'all') ? ' empty' : '';
+    return '<button type="button" class="govhub-sidebar-item' + activeCls + emptyCls + '"'
+      + ' data-filter="' + ent.source + '"'
+      + ' onclick="setMeetingsFilter(\'' + ent.source + '\')">'
+      + '<span class="govhub-sidebar-label">' + ent.label + '</span>'
+      + '<span class="govhub-sidebar-count">' + count + '</span>'
+      + '</button>';
+  }).join('');
+  list.innerHTML = html;
+}
+window.setMeetingsFilter = setMeetingsFilter;
+
 function renderMeetingsWithTopic() {
   const container = document.getElementById('meetings-content');
   let filtered = [...allMeetings];
@@ -6082,6 +6199,8 @@ function renderMeetingsWithTopic() {
       card.classList.add('multiline-title');
     }
   });
+  // Refresh the right-sidebar counts + active state after each render.
+  try { renderGovHubEntitySidebar(); } catch(e) { /* sidebar is optional */ }
 }
 
 // Wrap news render to apply topic filter
@@ -6794,6 +6913,17 @@ async function init() {
   newsPromise.then(newsData => {
     allNews = newsData;
     window.__allNewsCache = allNews;
+    // Pipe Ouray-Ridgway government meetings (Ridgway Town Council, Ouray
+    // Planning Commission, etc.) into the Gov-Hub tab. These come through
+    // the news pipeline (Localist API) but belong on /#tab-meetings, not
+    // /#tab-news. renderNews() filters them out of the Events tab.
+    const orayGovMeetings = newsData.filter(n => n.source === 'oray' && isGovernmentalMeeting(n));
+    if (orayGovMeetings.length) {
+      allMeetings = allMeetings.filter(m => m.source !== 'oray');
+      allMeetings = [...allMeetings, ...orayGovMeetings];
+      window.__allMeetingsCache = allMeetings;
+      try { renderMeetingsWithTopic(); } catch(e) { console.error('renderMeetingsWithTopic re-render after oray gov inject:', e); }
+    }
     try { renderNewsWithTopic(); } catch(e) { console.error('renderNewsWithTopic error:', e); }
     try { updateTopicCounts(); } catch(e) { console.error('updateTopicCounts error:', e); }
     try { updateEventsHeroFestivals(); } catch(e) { console.error('updateEventsHeroFestivals error:', e); }

@@ -204,6 +204,10 @@
       const tab = card.closest('.tab-content');
       const tabName = tab ? tab.id.replace('tab-', '') : '';
       if (tabName === 'meetings') return;
+      // Skip Events tab — events come from upstream calendars (Wilkinson,
+      // KOTO, Sherbino, TJC, gov RSS, etc.); corrections should go to the
+      // source, not to us.
+      if (tabName === 'news') return;
       // Skip "Suggest Correction" for Telluride Times, KOTO, and
       // Telluride Humane Society cards on Local News page (those come
       // from upstream feeds — corrections should go to the source).

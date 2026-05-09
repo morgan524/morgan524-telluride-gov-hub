@@ -19,10 +19,14 @@ const COUNTY_CIVICCLERK_IDS = {
   'Board of County Commissioners Work Session|2026-04-08': 986,
   'Planning Commission|2026-04-02': 1025,
   'San Miguel County: Planning Commission|2026-04-02': 1025,
+  // 2026-05-13 BOCC — partial-date fallback in getCountyAgendaLink will catch
+  // any title variation as long as the date matches.
+  'Board of County Commissioners Meeting|2026-05-13': 999,
 };
 
 const COUNTY_CIVICCLERK_AGENDA_FILES = {
   1025: 1652,  // Planning Commission Apr 2 2026
+  999:  1702,  // BOCC May 13 2026
 };
 
 const COUNTY_CACHE_DATE = '2026-03-25';

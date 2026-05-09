@@ -27,6 +27,32 @@ const EVENTS_CONFIG = path.join(REPO_ROOT, 'email-events-config.json');
 
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const CLAUDE_MODEL = 'claude-sonnet-4-20250514';
+
+// ── Smart truncation for event/meeting card descriptions ──
+// Caps text at maxLen, cutting at the nearest sentence boundary (or word
+// boundary, or — last resort — hard cut), then appending "…". Avoids the
+// mid-word truncation users complained about ("...encouragement for s").
+// 600 chars ≈ 4-5 lines on a card; longer descriptions get visibly trimmed.
+function smartTruncate(text, maxLen) {
+  if (!text) return text;
+  const t = String(text).trim();
+  if (t.length <= maxLen) return t;
+  const candidate = t.slice(0, maxLen);
+  const sentEnd = Math.max(
+    candidate.lastIndexOf('. '),
+    candidate.lastIndexOf('! '),
+    candidate.lastIndexOf('? '),
+    candidate.lastIndexOf('.\n'),
+    candidate.lastIndexOf('!\n'),
+    candidate.lastIndexOf('?\n')
+  );
+  if (sentEnd > maxLen * 0.6) return t.slice(0, sentEnd + 1).trim() + ' …';
+  const wordEnd = candidate.lastIndexOf(' ');
+  if (wordEnd > maxLen * 0.6) return t.slice(0, wordEnd).trim() + ' …';
+  return candidate.replace(/\s+\S*$/, '').trim() + ' …';
+}
+const EVENT_DESC_MAX = 600;
+
 const MAX_AGENDA_TEXT = 15000;
 const NEWS_MAX_AGE_DAYS = 14;
 
@@ -1911,6 +1937,102 @@ function decodeHtmlEntities(s) {
     .replace(/&quot;/g, '"');
 }
 
+
+// ── Ouray County events (non-governmental) ──
+// The county's CivicEngage iCalendar feed includes BOCC, City Council, work
+// sessions, plus community events (Wildfire Aware Fair, water summits, etc.).
+// We pull all of it but filter out anything matching the governmental-meeting
+// regex — gov meetings are already covered by the BOCC + PC RSS feeds and
+// surface on the Gov-Hub tab; we don't want them duplicated on Events.
+const OURAY_COUNTY_ICS_URL = 'https://ouraycountyco.gov/common/modules/iCalendar/iCalendar.aspx?catID=14&feed=calendar';
+// MUST stay in sync with GOV_MEETING_PATTERN in js/gov-data.js. Both regexes
+// share the same vocabulary so client-side filtering and bake-time filtering
+// agree on what counts as a "government meeting".
+const GOV_MEETING_PATTERN_NODE = /board|council|commission|work\s*session|hearing|planning|zoning|harc|ecology|drb|design\s*review|budget|ordinance|executive|legislative|caucus|quorum|town\s*hall|roundtable|stakeholder|housing\s*code\s*update|\bssr\b/i;
+
+// Minimal RFC 5545 iCal parser — extracts VEVENT blocks with SUMMARY, DTSTART,
+// DTEND, LOCATION, DESCRIPTION, UID, URL. Handles line folding (RFC 5545 § 3.1)
+// and standard escapes (\n, \,, \;, \\).
+function parseICalEvents(icsText) {
+  if (!icsText) return [];
+  const unfolded = icsText.replace(/\r\n[ \t]/g, '').replace(/\n[ \t]/g, '');
+  const out = [];
+  const blockRe = /BEGIN:VEVENT([\s\S]*?)END:VEVENT/g;
+  let m;
+  while ((m = blockRe.exec(unfolded)) !== null) {
+    const block = m[1];
+    const get = name => {
+      const re = new RegExp('(?:^|\\n)' + name + '(?:;[^:\\n]*)?:([^\\r\\n]*)');
+      const mm = re.exec(block);
+      return mm ? mm[1].trim() : '';
+    };
+    const decode = s => String(s).replace(/\\n/gi, ' ').replace(/\\,/g, ',').replace(/\\;/g, ';').replace(/\\\\/g, '\\');
+    const parseDt = raw => {
+      const mm = String(raw).match(/^(\d{4})(\d{2})(\d{2})(?:T(\d{2})(\d{2})(\d{2}))?/);
+      if (!mm) return null;
+      return new Date(+mm[1], +mm[2] - 1, +mm[3], +(mm[4] || 9), +(mm[5] || 0), +(mm[6] || 0));
+    };
+    const summary = decode(get('SUMMARY'));
+    if (!summary) continue;
+    const start = parseDt(get('DTSTART'));
+    if (!start || isNaN(start.getTime())) continue;
+    const end = parseDt(get('DTEND'));
+    out.push({
+      summary, start, end,
+      uid: get('UID'),
+      url: get('URL'),
+      location: decode(get('LOCATION')).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(),
+      description: decode(get('DESCRIPTION')).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
+    });
+  }
+  return out;
+}
+
+async function syncOurayCountyEvents() {
+  console.log('\n🏔  Task 15: Syncing Ouray County non-governmental events...');
+  let resp;
+  try { resp = await fetch(OURAY_COUNTY_ICS_URL); }
+  catch (e) { console.warn(`  Fetch error: ${e.message}`); return null; }
+  if (!resp || resp.status !== 200) {
+    console.warn(`  Ouray County iCal HTTP ${resp ? resp.status : 'no response'}`);
+    return null;
+  }
+  const parsed = parseICalEvents(resp.text || '');
+  const now = Date.now();
+  const horizon = now + 30 * 86400000;
+  const seen = new Set();
+  const events = [];
+  let skippedGov = 0;
+  for (const ev of parsed) {
+    const startMs = ev.start.getTime();
+    if (startMs < now) continue;
+    if (startMs > horizon) continue;
+    if (GOV_MEETING_PATTERN_NODE.test(ev.summary)) { skippedGov++; continue; }
+    const key = (ev.uid || ev.summary) + '|' + ev.start.toISOString().slice(0, 10);
+    if (seen.has(key)) continue;
+    seen.add(key);
+    let link = ev.url || '';
+    if (!link || !/^https?:/i.test(link)) {
+      link = ev.uid
+        ? `https://ouraycountyco.gov/Calendar.aspx?EID=${ev.uid}`
+        : 'https://ouraycountyco.gov/calendar.aspx?CID=14';
+    }
+    events.push({
+      title: ev.summary,
+      link,
+      description: smartTruncate(ev.description || '', EVENT_DESC_MAX),
+      pubDate: ev.start.toISOString(),
+      source: 'ouraycounty',
+      sourceLabel: 'Ouray County',
+      category: 'Community Event',
+      location: ev.location || 'Ouray County',
+      imageUrl: ''
+    });
+  }
+  console.log(`  Ouray County: ${events.length} non-gov events kept (${skippedGov} gov meetings skipped)`);
+  return events;
+}
+
 async function syncKotoCommunityEvents() {
   console.log('\n🎵 Task 8: Syncing KOTO Community Calendar...');
   let resp;
@@ -1939,9 +2061,9 @@ async function syncKotoCommunityEvents() {
     const end = new Date(endStr.replace(' ', 'T'));
     if (!isNaN(end.getTime()) && end.getTime() < now) continue;
     if (start.getTime() > horizon) continue;
-    const description = decodeHtmlEntities(
+    const description = smartTruncate(decodeHtmlEntities(
       String(e.description || e.excerpt || '').replace(/<[^>]+>/g, ' ')
-    ).replace(/\s+/g, ' ').trim().slice(0, 350);
+    ).replace(/\s+/g, ' '), EVENT_DESC_MAX);
     let imageUrl = '';
     if (e.image && typeof e.image === 'object' && e.image.url) imageUrl = e.image.url;
     else if (typeof e.image === 'string') imageUrl = e.image;
@@ -2048,7 +2170,7 @@ async function syncWilkinsonEvents() {
     events.push({
       title: decodeHtmlEntities(p.title),
       link: p.link,
-      description: decodeHtmlEntities(descParts.join(' · ')).slice(0, 350) || 'Wilkinson Public Library event',
+      description: smartTruncate(decodeHtmlEntities(descParts.join(' · ')), EVENT_DESC_MAX) || 'Wilkinson Public Library event',
       pubDate: p.fromDate.toISOString(),
       source: 'wilkinson',
       sourceLabel: 'Wilkinson Public Library',
@@ -2085,7 +2207,7 @@ async function syncNuclaNaturitaEvents() {
       date:      ev.start_date || '',
       endDate:   ev.end_date   || '',
       location:  (ev.venue && ev.venue.venue) ? ev.venue.venue : (ev.venue && ev.venue.address ? ev.venue.address.city : ''),
-      copy:      ev.description ? ev.description.replace(/<[^>]+>/g,'').slice(0,300) : '',
+      copy:      ev.description ? smartTruncate(ev.description.replace(/<[^>]+>/g,''), EVENT_DESC_MAX) : '',
     }));
     console.log(`  Nucla-Naturita events: ${events.length}`);
     return events;
@@ -2166,7 +2288,7 @@ async function syncFreshFoodHubEvents() {
       date:     ev.start_date || '',
       endDate:  ev.end_date   || '',
       location: (ev.venue && ev.venue.venue) ? ev.venue.venue : 'Norwood, CO',
-      copy:     ev.description ? ev.description.replace(/<[^>]+>/g,'').slice(0,300) : '',
+      copy:     ev.description ? smartTruncate(ev.description.replace(/<[^>]+>/g,''), EVENT_DESC_MAX) : '',
     }));
     console.log(`  Fresh Food Hub events: ${events.length}`);
     return events;
@@ -2209,7 +2331,7 @@ async function syncSherbinoEvents() {
         location: (ev.venue && ev.venue.venue) ? ev.venue.venue
                   : (ev.venue && ev.venue.city ? ev.venue.city : 'Ridgway, CO'),
         copy:     ev.description ? decodeHtmlEntities(
-                    ev.description.replace(/<[^>]+>/g, '').slice(0, 300)) : '',
+                    smartTruncate(ev.description.replace(/<[^>]+>/g, ''), EVENT_DESC_MAX)) : '',
         imageUrl: (ev.image && ev.image.url) ? ev.image.url : '',
       }));
     console.log(`  Sherbino events: ${events.length} (within 30 days)`);
@@ -2285,7 +2407,7 @@ async function syncTelluridFoundationEvents() {
 
       // Description: everything after the first date+time block, up to ~300 chars
       const afterFirst = plain.slice(firstDateIdx).replace(dateRe, '').replace(timeM ? timeM[1] : '', '');
-      const copy = afterFirst.replace(location, '').replace(/^[^a-zA-Z]+/, '').slice(0, 300).trim();
+      const copy = smartTruncate(afterFirst.replace(location, '').replace(/^[^a-zA-Z]+/, ''), EVENT_DESC_MAX);
 
       // For multi-date events (same title, two locations), emit one entry per future date
       for (const dm of dateMatches) {
@@ -2597,6 +2719,18 @@ async function main() {
       govHubSrc = replaceJsValue(govHubSrc, 'FRESH_FOOD_HUB_EVENTS', newFfhEvents, false);
       changed = true;
       console.log(`  FRESH_FOOD_HUB_EVENTS updated (was ${existingFfh.length}, now ${newFfhEvents.length})`);
+    }
+  }
+
+
+  // ── 15. Ouray County Events (iCal feed, non-governmental only) ──
+  const newOurayCountyEvents = await syncOurayCountyEvents();
+  if (newOurayCountyEvents !== undefined && newOurayCountyEvents !== null) {
+    const existingOC = extractJsArray(govHubSrc, 'OURAY_COUNTY_EVENTS') || [];
+    if (JSON.stringify(newOurayCountyEvents) !== JSON.stringify(existingOC)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'OURAY_COUNTY_EVENTS', newOurayCountyEvents, false);
+      changed = true;
+      console.log(`  OURAY_COUNTY_EVENTS updated (was ${existingOC.length}, now ${newOurayCountyEvents.length})`);
     }
   }
 
