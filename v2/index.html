@@ -43,15 +43,17 @@
     /* ── Hero — full-bleed banner with photo on right and cream-gradient text panel on left ──
        Image is 1456x1159 (≈5:4). Use `auto 100%` so the photo's height
        fits the hero exactly, natural width pinned to the right edge.
-       This avoids the heavy vertical crop that `cover` produced. */
+       Gradient is wider/softer so the cream-to-photo blend always
+       overlaps the image's left edge regardless of viewport width. */
     .hero {
       position: relative;
       background:
         linear-gradient(90deg,
           var(--bg-warm) 0%,
-          var(--bg-warm) 28%,
-          rgba(253, 251, 246, 0.85) 42%,
-          rgba(253, 251, 246, 0.0) 60%),
+          var(--bg-warm) 32%,
+          rgba(253, 251, 246, 0.92) 42%,
+          rgba(253, 251, 246, 0.55) 55%,
+          rgba(253, 251, 246, 0.0) 75%),
         url('img/telluride-125.jpeg') no-repeat right center / auto 100%,
         var(--bg-hero);
       min-height: 480px;
@@ -291,7 +293,7 @@
       text-align: center;
       background:
         linear-gradient(180deg, rgba(33,68,60,0.55) 0%, rgba(33,68,60,0.55) 100%),
-        url('img/wilson-peak.png') no-repeat center center / cover,
+        url('img/ridgway.jpeg') no-repeat center center / cover,
         var(--forest);
     }
     .donate-card .icon {
@@ -365,7 +367,7 @@
     @media (max-width: 1080px) {
       .hero { min-height: 420px; padding: 60px 0 110px;
         background:
-          linear-gradient(90deg, var(--bg-warm) 0%, var(--bg-warm) 30%, rgba(253,251,246,0.7) 55%, rgba(253,251,246,0.0) 75%),
+          linear-gradient(90deg, var(--bg-warm) 0%, var(--bg-warm) 35%, rgba(253,251,246,0.92) 50%, rgba(253,251,246,0.55) 65%, rgba(253,251,246,0.0) 85%),
           url('img/telluride-125.jpeg') no-repeat right center / auto 100%,
           var(--bg-hero);
       }
