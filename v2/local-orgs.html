@@ -23,6 +23,9 @@
       --forest: #21443c;
       --forest-soft: #2a5347;
       --accent-green: #2f7a5f;
+      --gold: #b58a2c;
+      --gold-soft: rgba(181, 138, 44, 0.16);
+      --gold-border: rgba(181, 138, 44, 0.32);
       --bg-warm: #fdfbf6;
       --bg-hero: #efe9dc;
       --bg-paper: #fffdf9;
@@ -298,6 +301,30 @@
       border-color: rgba(47, 122, 95, 0.32);
     }
     .btn-primary svg { width: 12px; height: 12px; flex-shrink: 0; }
+    /* Donate button — gold pill, sits next to Website. Only renders when
+       the org has a `donate` URL in its data. */
+    .btn-donate {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 700;
+      white-space: nowrap;
+      line-height: 1.2;
+      background: var(--gold-soft);
+      border: 1px solid var(--gold-border);
+      color: var(--gold);
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .btn-donate:hover {
+      background: rgba(181, 138, 44, 0.28);
+      border-color: rgba(181, 138, 44, 0.50);
+    }
+    .btn-donate svg { width: 12px; height: 12px; flex-shrink: 0; fill: currentColor; }
     /* Icon-only social buttons — pushed to the right edge of the actions row. */
     .org-socials {
       display: flex;
@@ -544,6 +571,7 @@
         town: 'Telluride, CO',
         summary: 'Building a stronger future for our region by investing in education, the environment, arts and culture, and community well-being.',
         website: 'https://telluridefoundation.org/',
+        donate: 'https://telluridefoundation.org/donate/',
         social: {
           facebook: 'https://facebook.com/telluridefoundation',
           instagram: 'https://instagram.com/telluridefoundation',
@@ -557,6 +585,7 @@
         town: 'Telluride, CO',
         summary: 'Protecting and connecting wildlife habitat across the San Juan Mountains through conservation, research, and community engagement.',
         website: 'https://sheepmountainalliance.org/',
+        donate: 'https://sheepmountainalliance.org/donate/',
         social: {
           facebook: 'https://facebook.com/sheepmountainalliance',
           instagram: 'https://instagram.com/sheepmountainalliance'
@@ -578,6 +607,7 @@
         town: 'Telluride, CO',
         summary: 'Building community through outdoor adventures, stewardship, and education in the Telluride region.',
         website: 'https://telluridemountainclub.org/',
+        donate: 'https://telluridemountainclub.org/donate/',
         social: {
           instagram: 'https://instagram.com/telluridemtnclub',
           youtube: 'https://youtube.com/@telluridemtnclub'
@@ -590,6 +620,7 @@
         town: 'Telluride, CO',
         summary: 'A welcoming faith community committed to worship, fellowship, and serving our neighbors in the San Juan Mountains.',
         website: 'https://example.com/christ-presbyterian',
+        donate: 'https://example.com/christ-presbyterian/give',
         social: { facebook: 'https://facebook.com/christpresbyterian' },
         logo: 'https://livabletelluride.org/logo/Church.png'
       },
@@ -599,6 +630,7 @@
         town: 'Telluride, CO',
         summary: 'Inspiring young athletes through competitive and recreational skiing, snowboarding, and freeride programs in a mountain community.',
         website: 'https://tssc.com/',
+        donate: 'https://tssc.com/donate/',
         social: {
           facebook: 'https://facebook.com/tellurideski',
           instagram: 'https://instagram.com/tellurideski',
@@ -613,6 +645,7 @@
         town: 'Telluride, CO',
         summary: 'Working with the regional community to lessen our impact on the environment through energy, food, and waste programs.',
         website: 'https://ecoactionpartners.org/',
+        donate: 'https://ecoactionpartners.org/donate/',
         social: {
           facebook: 'https://facebook.com/ecoactionpartners',
           instagram: 'https://instagram.com/ecoactionpartners'
@@ -625,6 +658,7 @@
         town: 'Telluride, CO',
         summary: 'A fraternal service organization serving the Telluride community through scholarships, charitable giving, and family programs.',
         website: 'https://tellurideelks.org/',
+        donate: 'https://tellurideelks.org/donate/',
         social: {
           facebook: 'https://facebook.com/tellurideelks',
           instagram: 'https://instagram.com/tellurideelks',
@@ -690,6 +724,10 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               Website
             </a>
+            ${o.donate ? `<a class="btn-donate" href="${o.donate}" target="_blank" rel="noopener" aria-label="Donate to ${o.name}">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              Donate
+            </a>` : ''}
             ${socialButtonsHtml(o.social)}
           </div>
         </article>
