@@ -51,6 +51,17 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "NTSB gathering details on Frontier Airlines evacuation after plane hit and killed person in Denver",
+    source: "Telluride Times",
+    date: "May 10, 2026",
+    firstSeen: "2026-05-10",
+    newsTopic: "public-safety",
+    copy: "A Frontier Airlines plane hit and killed someone on the runway at Denver International Airport during takeoff, causing an engine fire and forcing an emergency evacuation of 224 passengers and 7 crew members. Twelve passengers suffered minor injuries during the evacuation via emergency slides, with passengers reporting panic as smoke filled the cabin.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_9b365202-fe0b-598d-ada5-f27d878bbeaf.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/b3/bb30350f-f401-55b1-8ef1-47a01fa5d399/69ffaae0caae4.image.jpg?resize=300%2C201"
+  },
+  {
     title: "A Frontier plane hits a pedestrian during takeoff at Denver airport",
     source: "Telluride Times",
     date: "May 9, 2026",
@@ -590,17 +601,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/2e/e2e844f7-8c2c-4eaf-aa50-c6ca0cba18f8/69f174ed2c287.image.jpg?resize=300%2C225"
   },
   {
-    title: "Far from the original in Philadelphia, these fans hunt for the Liberty Bell replica in each state",
-    source: "Telluride Times",
-    date: "April 29, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "government",
-    copy: "In 1950, the Treasury Department commissioned Liberty Bell replicas for each state as part of a savings bond drive, creating a small but growing group of \"bell hunters\" who travel to find them. Tom Campbell, a Fort Collins resident originally from Philadelphia, has become the leading expert on tracking down these 2,080-pound replicas after stumbling upon one in Denver in the late 1990s.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_6c4b6e25-2cb9-51b8-b812-1143e07369b9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/7e/37efb440-e66f-5d94-a2bc-43449e73e748/69f1e9285fdc5.image.jpg?resize=300%2C200"
-  },
-  {
     title: "County Planning Commission 5/14 Meeting in TELLURIDE",
     source: "San Miguel County",
     date: "May 1, 2026",
@@ -845,39 +845,6 @@ const COMMUNITY_EVENTS = [
 ];
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Nature Nurture for Moms with Lauren Norton",
-    link: "https://koto.org/event/nature-nurture-for-moms-with-lauren-norton/",
-    description: "Connect with Mother Nature on this Mother's Day 2026. Join Lauren Kaas Norton for a guided outdoor experience designed to help you slow down, ground yourself, and reconnect with the natural world. Through gentle breathwork, mindful movement, and guided reflection, you’ll explore a new way of being in relationship with the land rooted in presence, awareness, and reciprocity. This experience is open to anyone curious about deepening their connection to nature, whether you’re new to these practices or already walking this path. Come as you are, and leave feeling more centered, supported, and connected.",
-    pubDate: "2026-05-10T12:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/nature-nurture-6.png"
-  },
-  {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-05-10/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-05-10T13:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-05-10/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-05-10T14:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
   {
     title: "Piano on the Patio with Oliver",
     link: "https://koto.org/event/piano-on-the-patio-with-oliver/",
