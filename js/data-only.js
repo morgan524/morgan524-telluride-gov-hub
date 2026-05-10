@@ -1377,37 +1377,59 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Safe @ Home",
-    link: "https://telluridelibrary.libcal.com/event/16273538?hs=a",
-    description: "9:30 AM – 11:00 AM · This course will provide basic skills to ensure that your child remains safe when home alone for short periods of time. for 3rd graders and up (parents are encouraged to attend). Este curso proporcionar&aacute; habilidades b&aacute;sicas para garantizar que su hijo permanezca seguro cuando est&eacute; solo en casa por per&iacute;odos cortos de tiempo. para estudiantes de 3 grado en adelante (Se recomienda asistencia de padres)",
-    pubDate: "2026-05-09T09:30:00.000Z",
+    title: "CANCELLED Gentle Yoga with Kristen Milord",
+    link: "https://telluridelibrary.libcal.com/event/16515736?hs=a",
+    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-05-10T11:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_22_17_09_43.png"
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
   },
   {
-    title: "CANCELLED - Balance in Motion - Equilibrio en Movimiento",
-    link: "https://telluridelibrary.libcal.com/event/16535297?hs=a",
-    description: "10:00 AM – 11:00 AM · Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Mu&eacute;vase, respire y ll&eacute;nese de energ&iacute;a en esta din&aacute;mica clase biling&uuml;e, dirigido por Lauren Norton, dise&ntilde;ada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energ&iacute;a de la danza, y la presencia equilibrante del yoga y la respiraci&oacute;n, esta sesi&oacute;n le dejar&aacute; sinti&eacute;ndose fuerte, en armon&iacute;a y revitalizado/a. …",
-    pubDate: "2026-05-09T10:00:00.000Z",
+    title: "Drop-In Tech Time with Oliver",
+    link: "https://telluridelibrary.libcal.com/event/15970373?hs=a",
+    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
+    pubDate: "2026-05-10T13:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "2nd Floor Desk",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+  },
+  {
+    title: "POSTPONED: Holding Space/Espacio de Espera con Daniel Kanow",
+    link: "https://telluridelibrary.libcal.com/event/16042597?hs=a",
+    description: "1:00 PM – 3:00 PM · ATTENTION: IN ORDER TO ATTEND THIS WORKSHOP, YOU WILL HAVE NEEDED TO HAVE SIGNED UP FOR AND ATTENDED THE PREVIOUS TWO SESSIONS WHICH STARTED ON APRIL 26TH. ATENCI&Oacute;N: PARA ASISTIR A ESTE TALLER, DEBER&Aacute; HABERSE INSCRITO Y HABER ASISTIDO A LAS DOS SESIONES ANTERIORES QUE COMENZARON EL 26TH DE ABRIL. This four-week creative series offers a gentle, supportive space to explore grief and life transitions through art-making. Each session invites participants to engage in guided, low-pressure creative activities designed to support reflection, grounding, and self-expression. No art experience is needed. Participants are free to observe, modify activities, or step away as needed. Sharing is optional, and personal stories are never required. The focus is on healing the process of creative expression and the potential creation of meaningful heartfelt artworks. …",
+    pubDate: "2026-05-10T13:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1740003527.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1767903630.jpg"
   },
   {
-    title: "Creación de Tarjetas en Familia • Family Card making Day",
-    link: "https://telluridelibrary.libcal.com/event/16825037?hs=a",
-    description: "2:30 PM – 4:00 PM · Haz una Tarjetas para el D&iacute;a de las Madres o para alguien que ames! &bull; Make a card for Mother&#39;s Day or for anyone you love!",
-    pubDate: "2026-05-09T14:30:00.000Z",
+    title: "Nature Nurture for Moms/Naturaleza Nutritiva por Mamas",
+    link: "https://telluridelibrary.libcal.com/event/16809307?hs=a",
+    description: "2:00 PM – 4:00 PM · Connect with Mother Nature on this Mother&#39;s Day 2026. Join Lauren Kaas Norton for a guided outdoor experience designed to help you slow down, ground yourself, and reconnect with the natural world. Through gentle breathwork, mindful movement, and guided reflection, you'll explore a new way of being in relationship with the land rooted in presence, awareness, and reciprocity. This experience is open to anyone curious about deepening their connection to nature, whether you're new to these practices or already walking this path. Come as you are, and leave feeling more centered, supported, and connected. Lauren Kaas Norton, founder of Through the Woods, is a certified doula and yoga teacher specializing in nature-based mindfulness, wilderness rites of passage, and full-spectrum doula care. Her work supports individuals through life's transitions with intention and care. Please sign up below. …",
+    pubDate: "2026-05-10T14:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_01_13_20_11.jpeg"
+    location: "Lobby",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_30_17_07_30.jpg"
+  },
+  {
+    title: "CANCELLED Tea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/16567824?hs=a",
+    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
+    pubDate: "2026-05-10T14:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
   }
 ];
 
