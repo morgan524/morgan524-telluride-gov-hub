@@ -3976,17 +3976,6 @@ const COMMUNITY_EVENTS = [
 // ── Bot-managed event arrays (populated every 6h by content-refresh.js) ──
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Gentle Yoga with Kristin Milord",
-    link: "https://koto.org/event/gentle-yoga-with-kristin-milord-2/2026-05-10/",
-    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class is free, but donations to support the instructor are welcome.",
-    pubDate: "2026-05-10T11:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/gentle-yoga-kristen-1.png"
-  },
-  {
     title: "Nature Nurture for Moms with Lauren Norton",
     link: "https://koto.org/event/nature-nurture-for-moms-with-lauren-norton/",
     description: "Connect with Mother Nature on this Mother's Day 2026. Join Lauren Kaas Norton for a guided outdoor experience designed to help you slow down, ground yourself, and reconnect with the natural world. Through gentle breathwork, mindful movement, and guided reflection, you’ll explore a new way of being in relationship with the land rooted in presence, awareness, and reciprocity. This experience is open to anyone curious about deepening their connection to nature, whether you’re new to these practices or already walking this path. Come as you are, and leave feeling more centered, supported, and connected.",
@@ -5128,7 +5117,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-05-09'; // Updated by legal-notice-update task
+const LEGAL_NOTICES_CACHE_DATE = '2026-05-10'; // Updated by legal-notice-update task
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -5805,6 +5794,25 @@ const LEGAL_NOTICES = [
     url: "https://www.telluride.gov/bids.aspx?bidID=129",
     address: "",
     totBidID: "129"
+  },
+  {
+    title: "Water Court Diligence Application -- Norwood Water Commission Reservoir and Pump System (26CW3016)",
+    entity: "Colorado District Court, Water Division No. 4",
+    entityClass: "ent-county",
+    entityLogo: "water_court",
+    icon: "💧",
+    iconClass: "type-bid",
+    type: "Water Court",
+    filterTag: "water-court",
+    summary: "The Norwood Water Commission filed an application to show reasonable diligence in developing conditional water rights for multiple reservoirs and pumps in the San Miguel River basin. The application covers the NWC Beaver Park Reservoir, Ed Joe Draw Reservoir, Old Town Reservoir, Goat Creek Pump system, and Naturita Pumps 1 and 2, all part of an integrated municipal water supply system. These conditional water rights are for irrigation, municipal use, power generation, and augmentation purposes.",
+    deadline: "Not specified in notice",
+    expires: "2026-05-31",
+    dates: "4/9",
+    papers: ["ttimes_0409"],
+    url: "https://www.telluridenews.com/news/legals/article_53f99203-76eb-4168-b3a4-392ac65857e4.html",
+    address: "Multiple locations in San Miguel County including SW1/4 NE1/4 Section 10, T42N R12W; NW1/4 NW1/4 Section 22, T44N R13W; SE1/4 SE1/4 Section 9, T44N R13W; and NE1/4 SW1/4 Section 21, T43N R12W",
+    noticeKey: "26CW3016",
+    caseNumber: "26CW3016"
   }
 ];
 
