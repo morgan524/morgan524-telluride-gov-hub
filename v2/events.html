@@ -836,38 +836,63 @@
             if (typeof WILKINSON_EVENTS !== 'undefined') WILKINSON_EVENTS.forEach(e => pushEvent(e, 'Wilkinson Library'));
             if (typeof COMMUNITY_EVENTS !== 'undefined') COMMUNITY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Community'));
             if (typeof KOTO_COMMUNITY_EVENTS !== 'undefined') KOTO_COMMUNITY_EVENTS.forEach(e => pushEvent(e, 'KOTO'));
+            if (typeof TELLURIDE_FOUNDATION_EVENTS !== 'undefined') TELLURIDE_FOUNDATION_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Telluride Foundation'));
+            if (typeof OURAY_COUNTY_EVENTS !== 'undefined') OURAY_COUNTY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Ouray County'));
 
-            // ── Dedup across sources, two-key match per event ──
-            // Some sources phrase the same event slightly differently (KOTO
-            // adds bilingual subtitle, Wilkinson adds room location). Two
-            // keys make the match resilient: a 12-char title-prefix and a
-            // 3-word bag (stopwords stripped), each paired with the date.
-            // If either key is already seen, the event is a duplicate.
-            function buildKeys(item) {
-              const norm = (item.title || '').toLowerCase()
-                .replace(/[–—]/g, ' ')   // en/em dash → space
-                .replace(/[^a-z0-9 ]+/g, ' ')      // strip punctuation
-                .replace(/\s+/g, ' ').trim();
-              const dateKey = item.date || '';
-              const prefixKey = norm.replace(/ /g, '').slice(0, 12) + '|' + dateKey;
-              const wordsKey = norm.split(' ')
-                .filter(w => w && !/^(the|a|an|of|at|in|on|for|with|to)$/.test(w))
-                .slice(0, 3).join('-') + '|' + dateKey;
-              return [prefixKey, wordsKey];
+            // ── Ridgway/Ouray Localist calendar ──
+            // OURAY_RIDGWAY_EVENTS is baked by content-refresh every 6h.
+            // If present, use it; otherwise fetch live from the Localist API.
+            const pushRidgwayLive = data => {
+              (data.events || []).forEach(ev => {
+                const e = ev.event || ev;
+                pushEvent({
+                  title: e.title || '',
+                  pubDate: e.starts_at || '',
+                  location: (e.location && e.location.name)
+                    ? e.location.name + ', Ridgway' : 'Ouray/Ridgway area',
+                  description: (e.description_text || '').slice(0, 600),
+                  link: e.url || `https://events.ourayridgwayevents.com/event/${e.urlname || e.id}`,
+                  imageUrl: (e.photo && e.photo.url) ? e.photo.url : '',
+                }, 'Ouray/Ridgway');
+              });
+            };
+
+            // ── Dedup + render — called after all sources are loaded ──
+            function finishAndRender() {
+              function buildKeys(item) {
+                const norm = (item.title || '').toLowerCase()
+                  .replace(/[–—]/g, ' ').replace(/[^a-z0-9 ]+/g, ' ')
+                  .replace(/\s+/g, ' ').trim();
+                const dateKey = item.date || '';
+                const prefixKey = norm.replace(/ /g, '').slice(0, 12) + '|' + dateKey;
+                const wordsKey = norm.split(' ')
+                  .filter(w => w && !/^(the|a|an|of|at|in|on|for|with|to)$/.test(w))
+                  .slice(0, 3).join('-') + '|' + dateKey;
+                return [prefixKey, wordsKey];
+              }
+              const seenKeys = new Set();
+              const deduped = live.filter(item => {
+                const keys = buildKeys(item);
+                if (keys.some(k => seenKeys.has(k))) return false;
+                keys.forEach(k => seenKeys.add(k));
+                return true;
+              });
+              if (deduped.length > 0) {
+                EVENTS.length = 0;
+                deduped.sort((a,b) => a.date.localeCompare(b.date));
+                deduped.forEach(e => EVENTS.push(e));
+                render();
+              }
             }
-            const seenKeys = new Set();
-            const deduped = live.filter(item => {
-              const keys = buildKeys(item);
-              if (keys.some(k => seenKeys.has(k))) return false;
-              keys.forEach(k => seenKeys.add(k));
-              return true;
-            });
 
-            if (deduped.length > 0) {
-              EVENTS.length = 0;
-              deduped.sort((a,b) => a.date.localeCompare(b.date));
-              deduped.forEach(e => EVENTS.push(e));
-              render();
+            // Ridgway/Ouray Localist calendar — use baked array or live fetch
+            if (typeof OURAY_RIDGWAY_EVENTS !== 'undefined' && OURAY_RIDGWAY_EVENTS.length > 0) {
+              OURAY_RIDGWAY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Ouray/Ridgway'));
+              finishAndRender();
+            } else {
+              fetch('https://events.ourayridgwayevents.com/api/2/events?school=ridgwayouray&days=30&pp=50')
+                .then(r => r.json()).then(pushRidgwayLive).catch(() => {})
+                .finally(() => finishAndRender());
             }
           } catch (err) { console.warn('loadLiveEvents failed:', err); }
         };

@@ -41,6 +41,7 @@ const TARGETS = [
   { kind: 'const',    name: 'HUMANE_SOCIETY_ANIMALS' },
   { kind: 'const',    name: 'TELLURIDE_FOUNDATION_EVENTS' },
   { kind: 'const',    name: 'OURAY_COUNTY_EVENTS' },
+  { kind: 'const',    name: 'OURAY_RIDGWAY_EVENTS' },
   { kind: 'const',    name: 'PAPER_LOGOS' },
   { kind: 'const',    name: 'LEGAL_ENTITY_LOGOS' },
   { kind: 'const',    name: 'LEGAL_NOTICES' },
