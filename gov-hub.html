@@ -407,7 +407,7 @@
         date: '2026-05-12', time: '6:00 PM',
         title: 'San Miguel County: Entrepreneurial Work Session',
         sourceKey: 'county', sourceLabel: 'San Miguel County',
-        entityLogo: 'https://livabletelluride.org/logo/SMC.png',
+        entityLogo: 'https://livabletelluride.org/logo/San%20Miguel%20County.png',
         category: 'Work Session',
         summary: 'Joint work session with Town Councils of Norwood and Ophir Sites on regional housing, land-use planning, emergency preparedness, and affordable-housing strategies.',
         location: 'County Annex • Telluride',
@@ -437,7 +437,7 @@
         date: '2026-05-15', time: '8:30 AM',
         title: 'San Miguel County Board of Commissioners',
         sourceKey: 'county', sourceLabel: 'San Miguel County',
-        entityLogo: 'https://livabletelluride.org/logo/SMC.png',
+        entityLogo: 'https://livabletelluride.org/logo/San%20Miguel%20County.png',
         category: 'BOCC Meeting',
         summary: 'Quarterly review of the Open Space program; presentation from Public Health on regional vaccination clinics; discussion of regional broadband expansion grant applications.',
         location: 'County Courthouse • Telluride',
@@ -493,13 +493,13 @@
     const ENTITIES = [
       { key: 'all',       name: 'All Meetings',           logo: 'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png' },
       { key: 'mv',        name: 'Mountain Village',       logo: 'https://townofmountainvillage.com/site/themes/vwtheme/build/img/logos/town-of-mountain-village-logo.png' },
-      { key: 'county',    name: 'San Miguel County',      logo: 'https://livabletelluride.org/logo/SMC.png' },
-      { key: 'norwood',   name: 'Town of Norwood',        logo: 'https://livabletelluride.org/logo/Norwood.png' },
+      { key: 'county',    name: 'San Miguel County',      logo: 'https://livabletelluride.org/logo/San%20Miguel%20County.png' },
+      { key: 'norwood',   name: 'Town of Norwood',        logo: 'https://livabletelluride.org/logo/Norwood%20Town.jpeg' },
       { key: 'school',    name: 'School District R-1',    logo: 'https://livabletelluride.org/logo/School%20District%20Telluride.png' },
       { key: 'fire',      name: 'Fire Protection',        logo: 'https://livabletelluride.org/logo/Fire.png' },
       { key: 'med',       name: 'Telluride Medical',      logo: 'https://livabletelluride.org/logo/Medical.png' },
       { key: 'smart',     name: 'SMART Transit',          logo: 'https://livabletelluride.org/logo/SMART.png' },
-      { key: 'ophir',     name: 'Town of Ophir',          logo: 'https://livabletelluride.org/logo/Ophir.png' }
+      { key: 'ophir',     name: 'Town of Ophir',          logo: 'https://livabletelluride.org/logo/Ophir.jpeg' }
     ];
 
     let MEETINGS = SAMPLE_MEETINGS.slice();
@@ -652,13 +652,13 @@
             if (typeof AI_SUMMARIES === 'undefined') window.AI_SUMMARIES = {};
 
             const fetchers = [
-              ['getCountyCachedMeetings', 'county',    'San Miguel County',     'https://livabletelluride.org/logo/SMC.png'],
+              ['getCountyCachedMeetings', 'county',    'San Miguel County',     'https://livabletelluride.org/logo/San%20Miguel%20County.png'],
               ['getMVMeetings',           'mv',        'Mountain Village',      'https://townofmountainvillage.com/site/themes/vwtheme/build/img/logos/town-of-mountain-village-logo.png'],
               ['getSchoolMeetings',       'school',    'School District R-1',   'https://livabletelluride.org/logo/School%20District%20Telluride.png'],
               ['getFireMeetings',         'fire',      'Fire District',         'https://livabletelluride.org/logo/Fire.png'],
               ['getMedMeetings',          'med',       'Telluride Medical',     'https://livabletelluride.org/logo/Medical.png'],
-              ['getNorwoodMeetings',      'norwood',   'Town of Norwood',       'https://livabletelluride.org/logo/Norwood.png'],
-              ['getOphirMeetings',        'ophir',     'Town of Ophir',         'https://livabletelluride.org/logo/Ophir.png'],
+              ['getNorwoodMeetings',      'norwood',   'Town of Norwood',       'https://livabletelluride.org/logo/Norwood%20Town.jpeg'],
+              ['getOphirMeetings',        'ophir',     'Town of Ophir',         'https://livabletelluride.org/logo/Ophir.jpeg'],
               ['getSmartMeetings',        'smart',     'SMART',                 'https://livabletelluride.org/logo/SMART.png']
             ];
             const live = [];
