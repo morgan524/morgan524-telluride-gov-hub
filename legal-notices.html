@@ -224,49 +224,41 @@
     .notice-facts dd .file-num { font-family: 'SF Mono', Monaco, monospace; font-size: 0.82rem; }
 
     /* Address + map column */
-    /* Location block — sits below the facts at full card width.
-       Inline header (label + address) over a wide, short map preview. */
     .location-col {
       background: var(--bg-paper);
       border: 1px solid var(--border-soft);
       border-radius: 14px;
       padding: 12px 14px;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 6px 14px;
-      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
-    .location-col .map-thumb { grid-column: 1 / -1; }
     .location-label {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       gap: 6px;
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       font-weight: 700;
       color: var(--text-muted);
     }
-    .location-label svg { width: 14px; height: 14px; }
+    .location-label svg { width: 13px; height: 13px; flex-shrink: 0; }
     .location-address {
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       font-weight: 600;
       color: var(--text-primary);
       line-height: 1.35;
-    }
-    .location-coords {
-      font-size: 0.74rem;
-      color: var(--text-muted);
-      font-family: 'SF Mono', Monaco, monospace;
+      padding-left: 19px; /* aligns under the label text, past the pin icon */
     }
     .map-thumb {
       width: 100%;
-      aspect-ratio: 16 / 7;
+      aspect-ratio: 16 / 6;
       border-radius: 10px;
       overflow: hidden;
       border: 1px solid var(--border-soft);
       background: #e0ddd4;
-      margin-top: 8px;
+      margin-top: 6px;
     }
     .map-thumb iframe { width: 100%; height: 100%; border: 0; display: block; }
     .map-link {
@@ -274,6 +266,9 @@
       font-weight: 600;
       color: var(--accent-green);
       text-decoration: none;
+      white-space: nowrap;
+      display: inline-block;
+      margin-top: 2px;
     }
     .map-link:hover { text-decoration: underline; }
 
@@ -641,6 +636,8 @@
       const flag = formatExpiryFlag(notice.expires);
       const linkUrl = notice.url || '#';
       const papersLabel = formatPapers(notice.papers);
+      /* Derive display type: titles starting with "RFP" show "RFP" not "Public Notice" */
+      const displayType = /^rfp\b/i.test(notice.title) ? 'RFP' : (notice.type || 'Notice');
 
       const flagHtml = flag
         ? '<span class="deadline-flag">'
@@ -650,7 +647,7 @@
 
       const factsHtml =
         '<dl class="notice-facts">'
-        + (notice.type     ? '<dt>Type</dt><dd>' + escapeHtml(notice.type) + '</dd>' : '')
+        + (displayType     ? '<dt>Type</dt><dd>' + escapeHtml(displayType) + '</dd>' : '')
         + (notice.deadline ? '<dt>Deadline</dt><dd>' + escapeHtml(notice.deadline) + '</dd>' : '')
         + (notice.dates    ? '<dt>Published</dt><dd>' + escapeHtml(notice.dates) + '</dd>' : '')
         + (papersLabel     ? '<dt>In</dt><dd>' + escapeHtml(papersLabel) + '</dd>' : '')
@@ -684,7 +681,7 @@
         +    '<div class="notice-strip-left">'
         +      '<span class="type-pill">'
         +        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>'
-        +        ' ' + escapeHtml(notice.type || 'Notice')
+        +        ' ' + escapeHtml(displayType)
         +      '</span>'
         +      flagHtml
         +    '</div>'
