@@ -372,26 +372,6 @@
     .sidebar-card .followed-list a:hover { background: var(--bg-paper); }
     .sidebar-card .followed-list svg { width: 14px; height: 14px; opacity: 0.65; }
 
-    /* Design notes panel */
-    .design-notes {
-      max-width: 1280px;
-      margin: 36px auto;
-      padding: 28px 32px;
-      background: #fff8e1;
-      border: 1px solid #f0d68a;
-      border-radius: 14px;
-      font-size: 0.92rem;
-      line-height: 1.6;
-      color: #4d3e10;
-    }
-    .design-notes h2 { margin: 0 0 12px; font-family: var(--font-heading); color: #6b5a1f; }
-    .design-notes h3 { margin: 18px 0 6px; font-size: 1rem; color: #6b5a1f; }
-    .design-notes ul { margin: 6px 0 0 22px; padding: 0; }
-    .design-notes li { margin: 4px 0; }
-    .design-notes code { background: #f6e8b1; padding: 1px 6px; border-radius: 4px; font-size: 0.85rem; }
-    .design-notes table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.86rem; }
-    .design-notes th, .design-notes td { text-align: left; padding: 6px 10px; border-bottom: 1px solid #eddca8; vertical-align: top; }
-    .design-notes th { background: #fbeec5; font-weight: 700; color: #6b5a1f; }
 
     /* Preview banner */
     .preview-banner { background: #fff8e1; border-bottom: 1px solid #f0d68a; padding: 8px 24px; text-align: center; font-size: 0.82rem; color: #6b5a1f; }
@@ -464,55 +444,6 @@
 
   </main>
 
-  <!-- ─────────── DESIGN NOTES (Morgan-facing, not part of final design) ─────────── -->
-  <section class="design-notes">
-    <h2>Design notes — extraction strategy + filter taxonomy</h2>
-
-    <h3>1. What's in the card and why</h3>
-    <p>
-      The card is built around <strong>facts</strong> only — values that any system could read off the published notice (dates, addresses, names, file numbers, contact info). Facts are not copyrightable; the publisher's prose is. The plain-English summary at the top is a short, original synthesis (1–2 sentences) describing what the notice is for, not a paraphrase of the source.
-    </p>
-
-    <h3>2. Suggested filter taxonomy</h3>
-    <p>Based on the notice types San Miguel / Telluride publishes most often. Items marked <code>📍</code> typically have an address and should drive the map column.</p>
-    <table>
-      <tr><th>Filter</th><th>What's included</th><th>📍</th></tr>
-      <tr><td>Public Hearings</td><td>Town Council, P&amp;Z, BOCC proposed actions, ordinance hearings</td><td>sometimes</td></tr>
-      <tr><td>Land Use &amp; Permits</td><td>CUP, variance, subdivision, demo, design review, building permit</td><td>📍 always</td></tr>
-      <tr><td>Water Court &amp; Rights</td><td>Diversion applications, water-court resume notices</td><td>📍 usually (point of diversion)</td></tr>
-      <tr><td>Property &amp; Foreclosure</td><td>Foreclosure, public auction, tax sale, condemnation</td><td>📍 always</td></tr>
-      <tr><td>Estate / Probate</td><td>Notice to creditors, name change, guardianship</td><td>no</td></tr>
-      <tr><td>Bids &amp; RFPs</td><td>Government solicitations for goods/services</td><td>sometimes</td></tr>
-      <tr><td>Bonds &amp; Finance</td><td>Municipal bonds, budget hearings, tax exemption notices</td><td>no</td></tr>
-      <tr><td>Elections</td><td>Candidate filings, ballot measures, polling places</td><td>no</td></tr>
-      <tr><td>Utilities</td><td>Service interruption, rate changes, infrastructure notices</td><td>sometimes</td></tr>
-      <tr><td>Liens &amp; Sales</td><td>Mechanics liens, abandoned vehicle, public sale</td><td>sometimes</td></tr>
-    </table>
-
-    <h3>3. Extraction strategy (when piping from Column)</h3>
-    <ul>
-      <li><strong>Type / category</strong> — derive from the notice's title + body using a regex+keyword classifier. Most notices self-identify in the first 1–3 lines ("CONDITIONAL USE PERMIT APPLICATION", "NOTICE TO CREDITORS", "WATER COURT RESUME").</li>
-      <li><strong>Entity</strong> — usually printed at the top or in a "Filed by:" line. Pattern-match against a known list of local agencies (Town of Telluride, SMC Clerk &amp; Recorder, Water Court Div. 4, etc.).</li>
-      <li><strong>Address</strong> — regex for street numbers + street suffix (Ave, St, Rd, Hwy) inside the body, then geocode via Nominatim/OpenStreetMap (free) or Google Geocoding (paid, more accurate). Cache the lat/lng so the map iframe loads instantly.</li>
-      <li><strong>Hearing date/time</strong> — regex for "Wednesday, May 21, 2026" + "6:00 PM"-style strings; cross-validate against known meeting cadences in Gov-Hub (BOCC every other Tuesday, P&amp;Z 2nd Wed, etc.).</li>
-      <li><strong>Comment deadline</strong> — usually phrased "written comments must be received by..." → regex for the date pattern.</li>
-      <li><strong>File number</strong> — regex for ALL-CAPS prefix + digits (e.g., <code>CUP-2026-0142</code>, <code>2026-CV-0034</code>).</li>
-      <li><strong>Summary synthesis</strong> — Claude API call with the body text + extracted facts; prompt asks for a 1–2 sentence factual summary (no editorial language, no copying source phrasing). Cache by Column notice ID so we only spend tokens once per notice.</li>
-    </ul>
-
-    <h3>4. Action buttons (per card)</h3>
-    <ul>
-      <li><strong>Read Full Notice</strong> → links to the Column source page (always).</li>
-      <li><strong>Add Hearing to Calendar</strong> → only if <code>hearingDate</code> present. Generates Google Calendar quick-add URL with title, location, time, link to source.</li>
-      <li><strong>Submit Comment</strong> → only if <code>commentChannel</code> present. mailto: when channel is email; opens form when channel is URL.</li>
-      <li><strong>Open in Google Maps</strong> → in the map column, only if <code>location</code> present.</li>
-    </ul>
-
-    <h3>5. "Near me" filter (suggested)</h3>
-    <p>
-      Once notices have geocoded addresses, the most valuable filter is <strong>distance from user's address</strong>. The sidebar already has a "Within 0.5 mi of my address" placeholder. Backend: store user's address in localStorage (already done elsewhere on the site for events-near-me); compute distance per notice and sort/filter.
-    </p>
-  </section>
 
   <script>
     /* ── Filter taxonomy — matches the live LEGAL_NOTICES `filterTag` values
