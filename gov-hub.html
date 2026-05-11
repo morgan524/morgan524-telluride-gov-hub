@@ -54,6 +54,34 @@
     .hero h1 { margin: 0 0 8px; font-family: var(--font-heading); font-size: 2.6rem; color: var(--text-primary); }
     .hero p { margin: 0; color: var(--text-secondary); font-size: 1.05rem; max-width: 760px; }
 
+    /* ── Filter chips bar (top) ── */
+    .chip-bar { background: #fff; border-bottom: 1px solid var(--border-soft); }
+    .chip-bar-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 14px 32px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      overflow-x: auto;
+    }
+    .chip {
+      display: inline-block;
+      padding: 7px 16px;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--text-primary);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid var(--border-card);
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+    .chip:hover { background: var(--accent-green-soft); border-color: var(--accent-green-border); color: var(--forest); }
+    .chip.active { background: var(--forest); color: #fff; border-color: var(--forest); }
+
     /* ── Main page layout ── */
     .page-wrap {
       max-width: 1280px;
@@ -102,8 +130,8 @@
     .entity-row:hover { background: var(--accent-green-soft); }
     .entity-row.active { background: var(--accent-green-soft); color: var(--forest); font-weight: 600; }
     .entity-logo {
-      width: 56px;
-      height: 56px;
+      width: 28px;
+      height: 28px;
       border-radius: 6px;
       object-fit: contain;
       background: #fff;
@@ -225,8 +253,8 @@
       line-height: 1.25;
     }
     .meet-entity-logo {
-      width: 96px;
-      height: 96px;
+      width: 56px;
+      height: 56px;
       object-fit: contain;
       flex-shrink: 0;
       background: #fff;
@@ -242,24 +270,6 @@
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
       overflow: hidden;
-    }
-    .meet-preview {
-      font-size: 0.88rem;
-      color: var(--text-secondary);
-      margin: 6px 0 0;
-      background: var(--bg-card, #f8f8f8);
-      border-left: 3px solid var(--accent, #4a7c59);
-      padding: 6px 10px;
-      border-radius: 0 6px 6px 0;
-    }
-    .meet-preview-label {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--accent, #4a7c59);
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      display: block;
-      margin-bottom: 2px;
     }
     .meet-meta {
       font-size: 0.82rem;
@@ -354,6 +364,10 @@
     </div>
   </section>
 
+  <section class="chip-bar">
+    <div class="chip-bar-inner" id="chipRow"></div>
+  </section>
+
   <main class="page-wrap">
     <aside class="sidebar">
       <div class="side-card">
@@ -368,13 +382,7 @@
           <a href="https://townofmountainvillage.com/" target="_blank" rel="noopener">Mountain Village →</a>
           <a href="https://www.sanmiguelcountyco.gov/" target="_blank" rel="noopener">San Miguel County →</a>
           <a href="https://townofnorwood.colorado.gov/" target="_blank" rel="noopener">Town of Norwood →</a>
-          <a href="https://townofophir.com/" target="_blank" rel="noopener">Town of Ophir →</a>
           <a href="https://www.tellurideschool.org/" target="_blank" rel="noopener">School District R-1 →</a>
-          <a href="https://www.telluridefire.com/" target="_blank" rel="noopener">Fire Protection District →</a>
-          <a href="https://www.tellmed.org/" target="_blank" rel="noopener">Telluride Medical Center →</a>
-          <a href="https://www.smarttransit.org/" target="_blank" rel="noopener">SMART Transit →</a>
-          <a href="https://tellurideairport.com/" target="_blank" rel="noopener">Telluride Airport →</a>
-          <a href="https://www.smrha.org/" target="_blank" rel="noopener">SMRHA Housing Auth. →</a>
           <a href="https://sanmiguelcoco.portal.civicclerk.com/" target="_blank" rel="noopener">CivicClerk Agendas →</a>
         </div>
       </div>
@@ -399,7 +407,7 @@
         date: '2026-05-12', time: '6:00 PM',
         title: 'San Miguel County: Entrepreneurial Work Session',
         sourceKey: 'county', sourceLabel: 'San Miguel County',
-        entityLogo: 'https://livabletelluride.org/logo/San%20Miguel%20County.png',
+        entityLogo: 'https://livabletelluride.org/logo/SMC.png',
         category: 'Work Session',
         summary: 'Joint work session with Town Councils of Norwood and Ophir Sites on regional housing, land-use planning, emergency preparedness, and affordable-housing strategies.',
         location: 'County Annex • Telluride',
@@ -409,7 +417,7 @@
         date: '2026-05-13', time: '5:30 PM',
         title: 'Telluride Planning & Zoning Commission Meeting',
         sourceKey: 'telluride', sourceLabel: 'Town of Telluride',
-        entityLogo: 'https://livabletelluride.org/logo/Telluride.png',
+        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Official.png',
         category: 'Planning Commission',
         summary: 'Public hearing on a major lodging-redevelopment proposal at 200 W Pacific Ave; review of short-term rental enforcement updates; staff briefing on the Comprehensive Plan refresh.',
         location: 'Rebekah Hall • Telluride',
@@ -419,7 +427,7 @@
         date: '2026-05-14', time: '7:00 PM',
         title: 'Town of Telluride: Town Council',
         sourceKey: 'telluride', sourceLabel: 'Town of Telluride',
-        entityLogo: 'https://livabletelluride.org/logo/Telluride.png',
+        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Official.png',
         category: 'Council Meeting',
         summary: 'First reading of the FY2027 budget; discussion of Lawson Hill annexation timeline; public comment on parking-program changes; consent agenda routine items.',
         location: 'Rebekah Hall • Telluride',
@@ -429,7 +437,7 @@
         date: '2026-05-15', time: '8:30 AM',
         title: 'San Miguel County Board of Commissioners',
         sourceKey: 'county', sourceLabel: 'San Miguel County',
-        entityLogo: 'https://livabletelluride.org/logo/San%20Miguel%20County.png',
+        entityLogo: 'https://livabletelluride.org/logo/SMC.png',
         category: 'BOCC Meeting',
         summary: 'Quarterly review of the Open Space program; presentation from Public Health on regional vaccination clinics; discussion of regional broadband expansion grant applications.',
         location: 'County Courthouse • Telluride',
@@ -439,7 +447,7 @@
         date: '2026-05-19', time: '5:30 PM',
         title: 'Telluride R-1 School District: Board of Education',
         sourceKey: 'school', sourceLabel: 'Telluride School District',
-        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Town.png',
+        entityLogo: 'https://livabletelluride.org/logo/School%20District%20Telluride.png',
         category: 'School Board',
         summary: 'Adoption of the FY2027 budget; Superintendent’s report on enrollment projections; review of construction-bond project status; public comment.',
         location: 'TMHS Library • Telluride',
@@ -459,7 +467,7 @@
         date: '2026-05-21', time: '6:00 PM',
         title: 'Mountain Village Town Council',
         sourceKey: 'mv', sourceLabel: 'Mountain Village',
-        entityLogo: 'https://livabletelluride.org/logo/Mountain%20Village.png',
+        entityLogo: 'https://townofmountainvillage.com/site/themes/vwtheme/build/img/logos/town-of-mountain-village-logo.png',
         category: 'Council Meeting',
         summary: 'Second reading of short-term rental cap ordinance; review of Town Plaza activation pilot; staff update on Sunset Plaza redevelopment partner selection.',
         location: 'Town Hall • Mountain Village',
@@ -469,7 +477,7 @@
         date: '2026-05-26', time: '6:00 PM',
         title: 'Telluride Fire Protection District Board',
         sourceKey: 'fire', sourceLabel: 'Fire District',
-        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Fire.png',
+        entityLogo: 'https://livabletelluride.org/logo/Fire.png',
         category: 'Fire District',
         summary: 'Wildfire-season readiness briefing; review of mutual-aid agreements with Norwood and Ouray; budget amendment for new wildland engine procurement.',
         location: 'Telluride Fire Station',
@@ -483,23 +491,32 @@
        deferred until their meeting data exists in cached form (currently
        only available via live RSS/API on the legacy single-page site). */
     const ENTITIES = [
-      { key: 'all',       name: 'All Meetings',                logo: 'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png' },
-      { key: 'telluride', name: 'Town of Telluride',           logo: 'https://livabletelluride.org/logo/Telluride%20Town.png' },
-      { key: 'mv',        name: 'Mountain Village',            logo: 'https://livabletelluride.org/logo/Mountain%20Village.png' },
-      { key: 'county',    name: 'San Miguel County',           logo: 'https://livabletelluride.org/logo/San%20Miguel%20County.png' },
-      { key: 'norwood',   name: 'Town of Norwood',             logo: 'https://livabletelluride.org/logo/Norwood.png' },
-      { key: 'ophir',     name: 'Town of Ophir',               logo: 'https://livabletelluride.org/logo/Ophir.png' },
-      { key: 'school',    name: 'School District R-1',         logo: 'https://livabletelluride.org/logo/Telluride%20Town.png' },
-      { key: 'fire',      name: 'Fire Protection District',    logo: 'https://livabletelluride.org/logo/Telluride%20Fire.png' },
-      { key: 'med',       name: 'Telluride Medical Center',    logo: 'https://livabletelluride.org/logo/Medical.jpeg' },
-      { key: 'smart',     name: 'SMART Transit',               logo: 'https://livabletelluride.org/logo/SMART.png' },
-      { key: 'airport',   name: 'Telluride Airport',           logo: 'https://livabletelluride.org/logo/Airport.png' },
-      { key: 'smrha',     name: 'SMRHA Housing Auth.',         logo: 'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png' },
+      { key: 'all',       name: 'All Meetings',           logo: 'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png' },
+      { key: 'mv',        name: 'Mountain Village',       logo: 'https://townofmountainvillage.com/site/themes/vwtheme/build/img/logos/town-of-mountain-village-logo.png' },
+      { key: 'county',    name: 'San Miguel County',      logo: 'https://livabletelluride.org/logo/SMC.png' },
+      { key: 'norwood',   name: 'Town of Norwood',        logo: 'https://livabletelluride.org/logo/Norwood.png' },
+      { key: 'school',    name: 'School District R-1',    logo: 'https://livabletelluride.org/logo/School%20District%20Telluride.png' },
+      { key: 'fire',      name: 'Fire Protection',        logo: 'https://livabletelluride.org/logo/Fire.png' },
+      { key: 'med',       name: 'Telluride Medical',      logo: 'https://livabletelluride.org/logo/Medical.png' },
+      { key: 'smart',     name: 'SMART Transit',          logo: 'https://livabletelluride.org/logo/SMART.png' },
+      { key: 'ophir',     name: 'Town of Ophir',          logo: 'https://livabletelluride.org/logo/Ophir.png' }
     ];
 
     let MEETINGS = SAMPLE_MEETINGS.slice();
     let activeFilter = 'all';
 
+    /* ── Render top chip filter bar (subset of sidebar entities) ── */
+    function chipsHtml() {
+      const TOP_CHIPS = ['all', 'mv', 'county', 'norwood', 'school', 'fire', 'med', 'smart'];
+      return TOP_CHIPS.map(key => {
+        const e = ENTITIES.find(x => x.key === key);
+        if (!e) return '';
+        const cls = key === activeFilter ? 'chip active' : 'chip';
+        const label = key === 'all' ? 'All'
+          : e.name.replace(/^Town of /, '').replace(/ District R-1$/, '').replace(' Protection', '');
+        return '<span class="' + cls + '" data-filter="' + key + '">' + label + '</span>';
+      }).join('');
+    }
 
     /* ── Render sidebar entity list ── */
     function entitiesHtml() {
@@ -557,9 +574,6 @@
         : '';
       const tag = m.category ? '<span class="meet-tag">' + m.category + '</span>' : '';
       const summary = m.summary ? '<p class="meet-summary">' + m.summary + '</p>' : '';
-      const preview = !m.summary && getMeetingPreview && getMeetingPreview(m)
-        ? '<div class="meet-preview"><span class="meet-preview-label">📋 Agenda Preview</span>' + getMeetingPreview(m) + '</div>'
-        : '';
       const loc = m.location ? '<span>📍 ' + m.location + '</span>' : '';
       const time = m.time ? '<span>🕐 ' + m.time + '</span>' : '';
       const meta = (loc || time) ? '<div class="meet-meta">' + time + loc + '</div>' : '';
@@ -584,13 +598,14 @@
            + '<div class="meet-card-head">' + dateBadge
            + '<div class="meet-info">' + tag + '<h2 class="meet-title">' + m.title + '</h2></div>'
            + logo + '</div>'
-           + summary + preview + meta
+           + summary + meta
            + '<div class="meet-actions">' + agendaBtn + recordBtn + commentBtn + '</div>'
            + deadlineNote
            + '</article>';
     }
 
     function render() {
+      document.getElementById('chipRow').innerHTML = chipsHtml();
       document.getElementById('entityList').innerHTML = entitiesHtml();
 
       const filtered = activeFilter === 'all'
@@ -609,7 +624,7 @@
           ev.preventDefault();
           activeFilter = el.dataset.filter;
           render();
-          window.scrollTo({ top: document.querySelector('.meet-grid').offsetTop - 120, behavior: 'smooth' });
+          window.scrollTo({ top: document.querySelector('.chip-bar').offsetTop - 70, behavior: 'smooth' });
         });
       });
     }
@@ -637,15 +652,14 @@
             if (typeof AI_SUMMARIES === 'undefined') window.AI_SUMMARIES = {};
 
             const fetchers = [
-              ['getCountyCachedMeetings', 'county',    'San Miguel County',     'https://livabletelluride.org/logo/San%20Miguel%20County.png'],
-              ['getMVMeetings',           'mv',        'Mountain Village',      'https://livabletelluride.org/logo/Mountain%20Village.png'],
-              ['getSchoolMeetings',       'school',    'School District R-1',   'https://livabletelluride.org/logo/Telluride%20Town.png'],
-              ['getFireMeetings',         'fire',      'Fire District',         'https://livabletelluride.org/logo/Telluride%20Fire.png'],
-              ['getMedMeetings',          'med',       'Telluride Medical',     'https://livabletelluride.org/logo/Medical.jpeg'],
+              ['getCountyCachedMeetings', 'county',    'San Miguel County',     'https://livabletelluride.org/logo/SMC.png'],
+              ['getMVMeetings',           'mv',        'Mountain Village',      'https://townofmountainvillage.com/site/themes/vwtheme/build/img/logos/town-of-mountain-village-logo.png'],
+              ['getSchoolMeetings',       'school',    'School District R-1',   'https://livabletelluride.org/logo/School%20District%20Telluride.png'],
+              ['getFireMeetings',         'fire',      'Fire District',         'https://livabletelluride.org/logo/Fire.png'],
+              ['getMedMeetings',          'med',       'Telluride Medical',     'https://livabletelluride.org/logo/Medical.png'],
               ['getNorwoodMeetings',      'norwood',   'Town of Norwood',       'https://livabletelluride.org/logo/Norwood.png'],
               ['getOphirMeetings',        'ophir',     'Town of Ophir',         'https://livabletelluride.org/logo/Ophir.png'],
-              ['getSmartMeetings',        'smart',     'SMART',                 'https://livabletelluride.org/logo/SMART.png'],
-              ['getAirportMeetings',      'airport',   'Telluride Airport',    'https://livabletelluride.org/logo/Airport.png']
+              ['getSmartMeetings',        'smart',     'SMART',                 'https://livabletelluride.org/logo/SMART.png']
             ];
             const live = [];
             const today = new Date(); today.setHours(0,0,0,0);
