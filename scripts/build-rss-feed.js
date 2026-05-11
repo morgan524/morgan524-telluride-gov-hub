@@ -372,7 +372,7 @@ function writeRssFeed(outPath, title, desc, selfUrl, items) {
     // Make image URL absolute (site-relative paths need the domain prepended)
     let imgUrl = it.imageUrl || null;
     if (imgUrl && imgUrl.startsWith('/')) imgUrl = SITE_URL + imgUrl;
-    const imgHtml = imgUrl ? `<img src="${imgUrl}" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />` : '';
+    const imgHtml = imgUrl ? `<img src="${imgUrl}" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />` : '';
     const descHtml = imgHtml + (it.description || '');
     const mediaTag = imgUrl ? `\n      <media:content url="${xmlEscape(imgUrl)}" medium="image" />` : '';
     return `    <item>
