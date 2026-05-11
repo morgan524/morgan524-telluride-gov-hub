@@ -693,7 +693,8 @@
       if (/yoga|stretch|meditat|pilates|wellness/.test(txt))      return FALLBACK_IMGS.yoga;
       if (/dance|dancing|cardio|zumba|aerobic/.test(txt))         return FALLBACK_IMGS.dance;
       if (/music|concert|band|perform|bluegrass|sing|choir/.test(txt)) return FALLBACK_IMGS.music;
-      if (/legal|clinic|law|attorney|court|justice/.test(txt))    return FALLBACK_IMGS.legal;
+      if (/clean.?up|cleanup|environment|litter|trash|volunteer/.test(txt)) return FALLBACK_IMGS.cleanup;
+      if (/\blegal\b|\bclinic\b|\blaw firm\b|\battorney\b|\bcourthouse\b|\bcourtroom\b|\bjustice\b/.test(txt)) return FALLBACK_IMGS.legal;
       if (/garden|plant|flower|wildflower|nature nurture/.test(txt)) return FALLBACK_IMGS.garden;
       if (/book|read|author|librar|story|storytime|talk/.test(txt)) return FALLBACK_IMGS.book;
       if (/hike|hiking|trail|outdoor|walk|trek|mountain/.test(txt)) return FALLBACK_IMGS.hike;
@@ -702,7 +703,6 @@
       if (/kid|child|youth|family|junior|teen|school/.test(txt))  return FALLBACK_IMGS.kids;
       if (/film|movie|cinema|screen/.test(txt))                   return FALLBACK_IMGS.film;
       if (/tech|computer|digital|phone|device/.test(txt))         return FALLBACK_IMGS.tech;
-      if (/clean.?up|cleanup|environment|litter|trash/.test(txt)) return FALLBACK_IMGS.cleanup;
       return FALLBACK_IMGS.community;
     }
     // ─────────────────────────────────────────────────────────────────────────
