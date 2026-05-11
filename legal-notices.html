@@ -512,29 +512,39 @@
       };
       return map[entityClass] || '📄';
     }
-    /* Format paper-key list ("ttimes", "npost") into a human label. */
+    /* Format paper-key list ("ttimes", "npost", "ttimes_0506") into a human label.
+       Date-stamped variants (ttimes_MMDD, npost_MMDD) resolve to the paper name. */
     const PAPER_NAMES = {
-      'ttimes': 'Telluride Times',
-      'npost':  'Norwood Post',
-      'ttimes_apr2': 'Telluride Times',
-      'ttimes_mar5': 'Telluride Times',
-      'county_web': 'County website',
-      'mv_web':     'Mountain Village website'
+      'ttimes':      'Telluride Times',
+      'npost':       'Norwood Post',
+      'county_web':  'County website',
+      'mv_web':      'Mountain Village website'
     };
+    function paperLabel(k) {
+      if (PAPER_NAMES[k]) return PAPER_NAMES[k];
+      if (/^ttimes/i.test(k)) return 'Telluride Times';
+      if (/^npost/i.test(k))  return 'Norwood Post';
+      return k;
+    }
     function formatPapers(papers) {
       if (!Array.isArray(papers) || papers.length === 0) return '';
       const names = [];
       const seen = new Set();
       papers.forEach(k => {
-        const n = PAPER_NAMES[k] || k;
+        const n = paperLabel(k);
         if (!seen.has(n)) { seen.add(n); names.push(n); }
       });
       return names.join(', ');
     }
+    /* True only for real street addresses — skips maps for legal land descriptions. */
+    function isStreetAddr(addr) {
+      if (!addr) return false;
+      return /\d{1,5}\s+[A-Z]/i.test(addr) && !/Section\s+\d|T\d+[NS]\s*R\d+[EW]|Township|Condominiums?,\s*San Miguel/i.test(addr);
+    }
 
     /* ── Render a single notice card from a LEGAL_NOTICES entry ── */
     function renderNoticeCard(notice) {
-      const hasAddress = !!notice.address;
+      const hasAddress = isStreetAddr(notice.address);
       const flag = formatExpiryFlag(notice.expires);
       const linkUrl = notice.url || '#';
       const papersLabel = formatPapers(notice.papers);
