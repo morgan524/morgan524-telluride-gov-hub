@@ -516,18 +516,57 @@
        once notices have richer tagging. ─────────────────────────────────── */
     const FILTERS = [
       { key: 'all',           label: 'All Notices' },
-      { key: 'land-use',      label: 'Land Use',                  special: 'land-use' },
-      { key: 'nearby',        label: 'Within 0.5 mi of my address', special: 'nearby' },
+      { key: 'land-use',      label: 'Land Use',                    special: 'land-use' },
       { key: 'public-entity', label: 'Public Entity' },
       { key: 'water-court',   label: 'Water Court' },
       { key: 'housing',       label: 'Housing' },
       { key: 'ordinance',     label: 'Ordinance' },
       { key: 'estate',        label: 'Estate / Creditors' },
       { key: 'tax-finance',   label: 'Tax &amp; Finance' },
-      { key: 'utilities',     label: 'Utilities' }
+      { key: 'utilities',     label: 'Utilities' },
+      { key: 'nearby',        label: 'Within 0.5 mi of my address', special: 'nearby' }
     ];
     let activeFilter = 'all';
     let userAddress = '';      /* set when user enters address for nearby filter */
+    let userLatLng  = null;    /* { lat, lng } once geocoded */
+    let geocodeCache = {};     /* address → { lat, lng } to avoid redundant API calls */
+
+    /* ── Haversine distance (miles) between two lat/lng points ── */
+    function haversineMiles(lat1, lng1, lat2, lng2) {
+      const R = 3958.8; // Earth radius in miles
+      const dLat = (lat2 - lat1) * Math.PI / 180;
+      const dLng = (lng2 - lng1) * Math.PI / 180;
+      const a = Math.sin(dLat/2)**2
+              + Math.cos(lat1 * Math.PI/180) * Math.cos(lat2 * Math.PI/180) * Math.sin(dLng/2)**2;
+      return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    }
+
+    /* ── Nominatim geocode (free, no key, 1 req/s limit) ── */
+    function geocode(address) {
+      if (geocodeCache[address]) return Promise.resolve(geocodeCache[address]);
+      const url = 'https://nominatim.openstreetmap.org/search?format=json&limit=1&q='
+                  + encodeURIComponent(address);
+      return fetch(url, { headers: { 'Accept': 'application/json' } })
+        .then(r => r.json())
+        .then(results => {
+          if (!results || !results.length) return null;
+          const pt = { lat: parseFloat(results[0].lat), lng: parseFloat(results[0].lon) };
+          geocodeCache[address] = pt;
+          return pt;
+        })
+        .catch(() => null);
+    }
+
+    /* ── Sequential geocode with 1s delay between calls (Nominatim policy) ── */
+    function geocodeSequential(addresses, delayMs) {
+      return addresses.reduce((chain, addr) => {
+        return chain.then(results =>
+          new Promise(resolve => setTimeout(resolve, delayMs))
+            .then(() => geocode(addr))
+            .then(pt => { results.push({ addr, pt }); return results; })
+        );
+      }, Promise.resolve([]));
+    }
 
     /* ── Helpers ── */
     function escapeHtml(s) {
@@ -639,7 +678,8 @@
         : '<div class="notice-strip-logo" style="font-size:0.72rem;font-weight:600;color:var(--text-secondary);text-align:center;word-break:break-word;">' + escapeHtml(notice.entity || '') + '</div>';
 
       return '<article class="notice-card' + (hasAddress ? '' : ' no-location')
-        + '" data-filter-tag="' + escapeHtml(notice.filterTag || '') + '">'
+        + '" data-filter-tag="' + escapeHtml(notice.filterTag || '') + '"'
+        + (hasAddress ? ' data-address="' + escapeHtml(notice.address) + '"' : '') + '>'
         +  '<div class="notice-strip">'
         +    '<div class="notice-strip-left">'
         +      '<span class="type-pill">'
@@ -692,22 +732,95 @@
       });
     }
     function applyFilter() {
-      document.querySelectorAll('#noticeList .notice-card').forEach(card => {
+      const cards = Array.from(document.querySelectorAll('#noticeList .notice-card'));
+
+      if (activeFilter === 'nearby' && userLatLng) {
+        applyNearbyFilter(cards);
+        return;
+      }
+
+      cards.forEach(card => {
         const tag = card.getAttribute('data-filter-tag') || '';
         let show = false;
         if (activeFilter === 'all') {
           show = true;
         } else if (activeFilter === 'land-use') {
-          /* land-use notices tagged public-entity or ordinance that mention land/permit/zoning */
           show = tag === 'land-use' || tag === 'ordinance' || tag === 'public-entity';
         } else if (activeFilter === 'nearby') {
-          /* if address set, show all (geocoding is client-side future work); otherwise show all */
-          show = true;
+          show = true; /* no address yet — show all until user sets one */
         } else {
           show = tag === activeFilter;
         }
         card.style.display = show ? '' : 'none';
+        card.removeAttribute('data-nearby-status');
       });
+    }
+
+    /* ── Proximity filter — geocodes each notice address vs. userLatLng ── */
+    function applyNearbyFilter(cards) {
+      const RADIUS_MI = 0.5;
+
+      /* Show a "Checking distances…" notice while we work */
+      const list = document.getElementById('noticeList');
+      const spinner = document.createElement('div');
+      spinner.id = 'nearbySpinner';
+      spinner.style.cssText = 'text-align:center;padding:16px 0;color:var(--text-muted);font-size:0.88rem;grid-column:1/-1;';
+      spinner.textContent = 'Checking distances…';
+      list.appendChild(spinner);
+
+      /* Collect cards that have a geocodable address */
+      const toGeocode = [];
+      cards.forEach(card => {
+        const addr = card.getAttribute('data-address') || '';
+        if (addr) toGeocode.push({ card, addr });
+        else {
+          /* No address → can't determine proximity; hide it */
+          card.style.display = 'none';
+        }
+      });
+
+      /* Geocode addresses sequentially (1 per second per Nominatim policy) */
+      geocodeSequential(toGeocode.map(x => x.addr), 1100)
+        .then(results => {
+          results.forEach(({ addr, pt }, i) => {
+            const card = toGeocode[i].card;
+            if (!pt) {
+              /* Geocode failed — show the card (benefit of the doubt) */
+              card.style.display = '';
+              return;
+            }
+            const dist = haversineMiles(userLatLng.lat, userLatLng.lng, pt.lat, pt.lng);
+            card.style.display = dist <= RADIUS_MI ? '' : 'none';
+            if (dist <= RADIUS_MI) {
+              /* Optional: show distance badge */
+              let badge = card.querySelector('.nearby-badge');
+              if (!badge) {
+                badge = document.createElement('span');
+                badge.className = 'nearby-badge';
+                badge.style.cssText = 'display:inline-block;margin-left:8px;padding:2px 8px;border-radius:999px;background:rgba(33,68,60,0.10);color:var(--forest);font-size:0.74rem;font-weight:700;';
+                const strip = card.querySelector('.notice-strip-left');
+                if (strip) strip.appendChild(badge);
+              }
+              badge.textContent = (dist < 0.1 ? (dist * 5280).toFixed(0) + ' ft' : dist.toFixed(2) + ' mi') + ' away';
+            } else {
+              const badge = card.querySelector('.nearby-badge');
+              if (badge) badge.remove();
+            }
+          });
+
+          /* Remove spinner */
+          const s = document.getElementById('nearbySpinner');
+          if (s) s.remove();
+
+          /* If nothing matched, show a message */
+          const visible = cards.filter(c => c.style.display !== 'none').length;
+          if (visible === 0) {
+            const msg = document.createElement('div');
+            msg.style.cssText = 'text-align:center;padding:48px;color:var(--text-muted);grid-column:1/-1;';
+            msg.innerHTML = '<strong>No notices found within 0.5 miles</strong><br><span style="font-size:0.88rem;">Try a different address, or choose "All Notices" to see everything.</span>';
+            list.appendChild(msg);
+          }
+        });
     }
     renderChips();
 
@@ -735,11 +848,35 @@
       document.getElementById('addrModalSubmit').addEventListener('click', function () {
         const val = document.getElementById('addrInput').value.trim();
         if (!val) return;
-        userAddress = val;
-        activeFilter = 'nearby';
-        closeAddressModal();
-        renderChips();
-        applyFilter();
+
+        const btn = this;
+        btn.textContent = 'Locating address…';
+        btn.disabled = true;
+
+        geocode(val).then(pt => {
+          btn.textContent = 'Show nearby notices';
+          btn.disabled = false;
+
+          if (!pt) {
+            /* Show error inside modal */
+            let err = document.getElementById('addrModalErr');
+            if (!err) {
+              err = document.createElement('p');
+              err.id = 'addrModalErr';
+              err.style.cssText = 'color:#a33;font-size:0.84rem;margin-top:8px;';
+              btn.parentNode.insertBefore(err, btn.nextSibling);
+            }
+            err.textContent = 'Address not found — try adding city and state (e.g. "123 Main St, Telluride, CO").';
+            return;
+          }
+
+          userAddress = val;
+          userLatLng  = pt;
+          activeFilter = 'nearby';
+          closeAddressModal();
+          renderChips();
+          applyFilter();
+        });
       });
 
       document.getElementById('addrInput').addEventListener('keydown', function (e) {
@@ -748,7 +885,10 @@
 
       document.getElementById('addrModalClear').addEventListener('click', function () {
         userAddress = '';
+        userLatLng  = null;
         activeFilter = 'all';
+        /* Remove any distance badges */
+        document.querySelectorAll('.nearby-badge').forEach(b => b.remove());
         closeAddressModal();
         renderChips();
         applyFilter();
