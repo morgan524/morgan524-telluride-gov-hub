@@ -5142,6 +5142,7 @@ const LEGAL_ENTITY_LOGOS = {
   mv: '<img src="https://townofmountainvillage.com/site/themes/vwtheme/build/img/logos/town-of-mountain-village-logo.png" alt="Mountain Village">',
   telluride: '<img src="/logo/Telluride%20Official.png" alt="Town of Telluride">',
   housing: '<svg viewBox="0 0 24 24" fill="none"><path d="M3 21V10l9-7 9 7v11H3z" fill="#6b3fa0" opacity="0.15"/><path d="M3 21V10l9-7 9 7v11" stroke="#6b3fa0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="9" y="14" width="6" height="7" rx="0.5" fill="#6b3fa0" opacity="0.3"/><path d="M9 14h6v7H9z" stroke="#6b3fa0" stroke-width="1.2"/><circle cx="12" cy="6" r="0" fill="none"/><path d="M7 21h10" stroke="#6b3fa0" stroke-width="1.8" stroke-linecap="round"/></svg>',
+  ridgway: '<img src="/logo/Ridgway%20Town.png" alt="Town of Ridgway">',
   norwood: '<img src="/logo/Norwood%20Town.jpeg" alt="Town of Norwood">',
   assessor: '<img src="https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=12524" alt="San Miguel County Assessor">',
   water_court: '<img src="logo/water Court.png" alt="Water Court">',
@@ -5150,6 +5151,19 @@ const LEGAL_ENTITY_LOGOS = {
 };
 
 const LEGAL_NOTICES = [
+  {
+    title: "Ridgway Bids & Requests for Proposals",
+    entity: "Town of Ridgway",
+    entityClass: "ent-ridgway",
+    entityLogo: "ridgway",
+    icon: "📋",
+    iconClass: "type-rfp",
+    type: "Bids / RFP",
+    filterTag: "public-entity",
+    summary: "The Town of Ridgway posts active bids and requests for proposals on their website. Check the link for currently open solicitations. Town Hall: 201 N. Railroad St., Ridgway, CO 81432 · (970) 626-5308.",
+    expires: "2026-12-31",
+    url: "https://townofridgway.colorado.gov/resources/requests-for-proposals/bids"
+  },
   {
     title: "Property Tax Exemption -- Seniors, Disabled Veterans & Gold Star Spouses",
     entity: "San Miguel County Assessor",
