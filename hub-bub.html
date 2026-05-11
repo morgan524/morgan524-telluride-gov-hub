@@ -487,6 +487,223 @@
     /* ── Footer ── */
     .hb-footer { text-align: center; color: var(--lt-muted); font-size: 0.82rem; padding: 28px 0 0; margin-top: 40px; border-top: 1px solid var(--lt-line); }
 
+    /* ── Account panel (replaces hb-how) ── */
+    .hb-account-panel {
+      border-radius: var(--lt-radius-xl);
+      border: 1px solid var(--lt-line);
+      background: #fff;
+      box-shadow: var(--lt-shadow-soft);
+      padding: 28px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .hb-account-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(33,68,60,0.09);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .hb-account-icon svg { width: 26px; height: 26px; color: var(--forest); }
+    .hb-account-heading {
+      margin: 0 0 10px;
+      font-family: var(--lt-heading);
+      font-size: 1.3rem;
+      letter-spacing: -0.02em;
+      color: var(--lt-ink);
+    }
+    .hb-account-sub {
+      margin: 0 0 18px;
+      color: var(--lt-muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+    .hb-account-perks {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 22px;
+    }
+    .hb-account-perk {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--lt-ink);
+    }
+    .hb-account-perk svg { width: 16px; height: 16px; color: var(--forest); flex-shrink: 0; }
+    .hb-account-cta {
+      display: block;
+      width: 100%;
+      padding: 13px 18px;
+      background: var(--forest);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(33,68,60,0.22);
+      transition: background 0.15s;
+      margin-bottom: 12px;
+    }
+    .hb-account-cta:hover { background: var(--forest-soft); }
+    .hb-account-login-note {
+      margin: 0;
+      text-align: center;
+      font-size: 0.84rem;
+      color: var(--lt-muted);
+    }
+    .hb-account-login-note a { color: var(--forest); font-weight: 700; }
+
+    /* ── Signup / Login modal ── */
+    .hb-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(20,35,30,0.55);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .hb-modal-overlay.open { display: flex; }
+    .hb-modal {
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: 0 24px 72px rgba(20,40,34,0.22);
+      width: 100%;
+      max-width: 480px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 32px;
+      position: relative;
+    }
+    .hb-modal-close {
+      position: absolute;
+      top: 16px; right: 18px;
+      border: none;
+      background: none;
+      font-size: 1.5rem;
+      line-height: 1;
+      color: var(--lt-muted);
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 8px;
+    }
+    .hb-modal-close:hover { background: var(--lt-cream); color: var(--lt-ink); }
+    .hb-modal h2 {
+      margin: 0 0 4px;
+      font-family: var(--lt-heading);
+      font-size: 1.5rem;
+      letter-spacing: -0.03em;
+      color: var(--lt-ink);
+    }
+    .hb-modal-sub {
+      margin: 0 0 22px;
+      color: var(--lt-muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .hb-modal-field { margin-bottom: 14px; }
+    .hb-modal-field label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--lt-muted);
+    }
+    .hb-modal-field input {
+      width: 100%;
+      height: 44px;
+      padding: 0 14px;
+      border: 1.5px solid var(--lt-line);
+      border-radius: 12px;
+      background: var(--lt-cream);
+      color: var(--lt-ink);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .hb-modal-field input:focus { border-color: var(--forest); box-shadow: 0 0 0 4px rgba(33,68,60,0.10); background: #fff; }
+    .hb-modal-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .hb-freq-group {
+      margin-bottom: 18px;
+    }
+    .hb-freq-label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--lt-muted);
+    }
+    .hb-freq-options { display: flex; flex-direction: column; gap: 8px; }
+    .hb-freq-opt {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 14px;
+      border: 1.5px solid var(--lt-line);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: border-color 0.13s, background 0.13s;
+    }
+    .hb-freq-opt:has(input:checked) { border-color: var(--forest); background: rgba(33,68,60,0.05); }
+    .hb-freq-opt input[type=radio] { margin-top: 2px; accent-color: var(--forest); flex-shrink: 0; width: 16px; height: 16px; }
+    .hb-freq-opt-text strong { display: block; font-size: 0.9rem; font-weight: 700; color: var(--lt-ink); }
+    .hb-freq-opt-text span { font-size: 0.8rem; color: var(--lt-muted); line-height: 1.4; }
+    .hb-modal-notice {
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: rgba(33,68,60,0.06);
+      border: 1px solid rgba(33,68,60,0.12);
+      font-size: 0.8rem;
+      color: var(--lt-muted);
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+    .hb-modal-submit {
+      display: block;
+      width: 100%;
+      padding: 13px;
+      background: var(--forest);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 12px;
+      transition: background 0.15s;
+    }
+    .hb-modal-submit:hover { background: var(--forest-soft); }
+    .hb-modal-submit:disabled { background: #aaa; cursor: default; }
+    .hb-modal-switch {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--lt-muted);
+    }
+    .hb-modal-switch a { color: var(--forest); font-weight: 700; cursor: pointer; }
+    .hb-modal-msg {
+      margin-top: 12px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: none;
+    }
+    .hb-modal-msg.success { background: rgba(33,68,60,0.08); color: var(--forest); border: 1px solid rgba(33,68,60,0.18); }
+    .hb-modal-msg.error   { background: rgba(180,75,60,0.08); color: #a33; border: 1px solid rgba(180,75,60,0.20); }
+
     /* ── Responsive ── */
     @media (max-width: 1024px) {
       .hb-intro { grid-template-columns: 1fr; }
@@ -500,6 +717,7 @@
       .hb-sidebar-col { position: static; }
       .hb-toolbar { grid-template-columns: 1fr; }
       .hb-container { width: calc(100% - 24px); }
+      .hb-modal-row { grid-template-columns: 1fr; }
     }
   </style>
 
@@ -569,7 +787,7 @@
   <section class="hero">
     <div class="hero-inner">
       <h1>💬 Hub-Bub</h1>
-      <p>A space for constructive civic discussion in the Telluride region.</p>
+      <p>Hub-Bub is organized around the way people actually look for civic information: by topic, meeting, source, question, and next step. Use it to ask a precise question, share a public document, summarize a meeting, or propose a practical solution.</p>
     </div>
   </section>
 
@@ -629,18 +847,28 @@
           </div>
         </div>
 
-        <aside class="hb-how" aria-label="How Hub-Bub works">
-          <div>
-            <h2>Designed for useful participation</h2>
-            <ol>
-              <li><strong>Pick a topic.</strong> Housing, land use, budget, water, schools, events, or governance.</li>
-              <li><strong>Choose a post type.</strong> Question, source, meeting takeaway, solution, or community need.</li>
-              <li><strong>Add a next step.</strong> Read, attend, email, volunteer, ask, or watch.</li>
-            </ol>
+        <aside class="hb-account-panel" aria-label="Create a free account">
+          <div class="hb-account-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
-          <div class="hb-status">
-            Best use: help neighbors understand what is happening early enough to participate.
+          <h2 class="hb-account-heading">Commenting requires a free account</h2>
+          <p class="hb-account-sub">Hub-Bub is open to verified Livable Telluride community members. Create your free account to post, comment, and stay in the loop.</p>
+          <div class="hb-account-perks">
+            <div class="hb-account-perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Post questions, sources &amp; meeting takeaways
+            </div>
+            <div class="hb-account-perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Reply to neighbors &amp; follow discussions
+            </div>
+            <div class="hb-account-perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Choose your digest: daily, weekly, or newsletter
+            </div>
           </div>
+          <button class="hb-account-cta" id="hbOpenSignup" type="button">Create your free account</button>
+          <p class="hb-account-login-note">Already have an account? <a href="javascript:void(0)" id="hbOpenLogin">Log in</a></p>
         </aside>
       </section>
 
@@ -888,8 +1116,314 @@
     </div><!-- /.hb-container -->
   </div><!-- /.hb-shell -->
 
+  <!-- ════════════════════ SIGNUP / LOGIN MODAL ════════════════════ -->
+  <div class="hb-modal-overlay" id="hbModalOverlay" role="dialog" aria-modal="true" aria-labelledby="hbModalTitle">
+    <div class="hb-modal" id="hbModalBox">
+      <button class="hb-modal-close" id="hbModalClose" aria-label="Close">×</button>
+
+      <!-- ── SIGNUP panel ── -->
+      <div id="hbSignupPanel">
+        <h2 id="hbModalTitle">Create your free account</h2>
+        <p class="hb-modal-sub">Join the Livable Telluride community. Your account lets you post, comment, and choose how you stay informed.</p>
+
+        <div class="hb-modal-row">
+          <div class="hb-modal-field">
+            <label for="hbSignupFirst">First name</label>
+            <input type="text" id="hbSignupFirst" autocomplete="given-name" placeholder="Jane">
+          </div>
+          <div class="hb-modal-field">
+            <label for="hbSignupLast">Last name</label>
+            <input type="text" id="hbSignupLast" autocomplete="family-name" placeholder="Smith">
+          </div>
+        </div>
+
+        <div class="hb-modal-field">
+          <label for="hbSignupEmail">Email address</label>
+          <input type="email" id="hbSignupEmail" autocomplete="email" placeholder="jane@example.com">
+        </div>
+
+        <div class="hb-modal-field">
+          <label for="hbSignupPassword">Create a password</label>
+          <input type="password" id="hbSignupPassword" autocomplete="new-password" placeholder="At least 8 characters">
+        </div>
+
+        <div class="hb-freq-group">
+          <span class="hb-freq-label">Stay informed — choose your digest</span>
+          <div class="hb-freq-options">
+            <label class="hb-freq-opt">
+              <input type="radio" name="hbFrequency" value="daily">
+              <div class="hb-freq-opt-text">
+                <strong>Daily summaries</strong>
+                <span>A short digest of local news, meetings, and events each morning.</span>
+              </div>
+            </label>
+            <label class="hb-freq-opt">
+              <input type="radio" name="hbFrequency" value="weekly" checked>
+              <div class="hb-freq-opt-text">
+                <strong>Weekly summaries</strong>
+                <span>A weekly roundup of what happened and what's coming up.</span>
+              </div>
+            </label>
+            <label class="hb-freq-opt">
+              <input type="radio" name="hbFrequency" value="newsletter">
+              <div class="hb-freq-opt-text">
+                <strong>Livable Telluride newsletter</strong>
+                <span>Longer-form posts and analysis, sent when published.</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="hb-modal-notice">
+          🔒 Hub-Bub commenting is limited to verified Livable Telluride subscribers. Creating an account subscribes you to the Livable Telluride mailing list. You can unsubscribe at any time.
+        </div>
+
+        <button class="hb-modal-submit" id="hbSignupSubmit" type="button">Create account &amp; join Hub-Bub</button>
+        <div class="hb-modal-switch">Already have an account? <a id="hbSwitchToLogin">Log in instead</a></div>
+        <div class="hb-modal-msg" id="hbSignupMsg"></div>
+      </div>
+
+      <!-- ── LOGIN panel ── -->
+      <div id="hbLoginPanel" style="display:none;">
+        <h2>Log in to Hub-Bub</h2>
+        <p class="hb-modal-sub">Use the email and password you set when you created your account.</p>
+
+        <div class="hb-modal-field">
+          <label for="hbLoginEmail">Email address</label>
+          <input type="email" id="hbLoginEmail" autocomplete="email" placeholder="jane@example.com">
+        </div>
+
+        <div class="hb-modal-field">
+          <label for="hbLoginPassword">Password</label>
+          <input type="password" id="hbLoginPassword" autocomplete="current-password" placeholder="Your password">
+        </div>
+
+        <button class="hb-modal-submit" id="hbLoginSubmit" type="button">Log in</button>
+        <div class="hb-modal-switch">Don't have an account? <a id="hbSwitchToSignup">Create one free</a></div>
+        <div class="hb-modal-msg" id="hbLoginMsg"></div>
+      </div>
+
+    </div>
+  </div>
+
   <!-- hub-bub.js handles Firebase auth, post loading, and all interactions -->
   <script src="js/hub-bub.js"></script>
+
+  <!-- ════════ MODAL WIRING — signup + Mailchimp + Firebase Auth ════════ -->
+  <script>
+  (function () {
+    /* ── Mailchimp JSONP submit ── */
+    const MC_POST = 'https://us15.list-manage.com/subscribe/post-json?u=5d9192289b9af78822f2f69bf&id=f83dc56387&c=?';
+    function mcSubscribe(email, firstName, lastName, frequency, cb) {
+      const freqVal = (frequency === 'newsletter') ? 'weekly' : frequency; // map newsletter → weekly MMERGE9
+      const params = new URLSearchParams({
+        EMAIL:   email,
+        FNAME:   firstName,
+        LNAME:   lastName,
+        MMERGE9: freqVal,
+        'group[7912]': (frequency === 'newsletter') ? '1' : '0',
+      });
+      // JSONP
+      const cbName = '_mc_cb_' + Date.now();
+      window[cbName] = function (data) {
+        delete window[cbName];
+        document.head.removeChild(script);
+        cb(data.result === 'success', data.msg || '');
+      };
+      const script = document.createElement('script');
+      script.src = MC_POST + '&' + params.toString() + '&c=' + cbName;
+      script.onerror = () => { delete window[cbName]; cb(false, 'Network error.'); };
+      document.head.appendChild(script);
+    }
+
+    /* ── Firebase Auth helper ── */
+    function waitForFirebase(fn) {
+      if (window._FIREBASE_READY && window._FIREBASE_AUTH) return fn();
+      let tries = 0;
+      const t = setInterval(() => {
+        tries++;
+        if (window._FIREBASE_READY && window._FIREBASE_AUTH) { clearInterval(t); fn(); }
+        if (tries > 40) { clearInterval(t); }
+      }, 150);
+    }
+
+    /* ── Modal open/close ── */
+    const overlay    = document.getElementById('hbModalOverlay');
+    const signupPanel = document.getElementById('hbSignupPanel');
+    const loginPanel  = document.getElementById('hbLoginPanel');
+
+    function openModal(panel) {
+      overlay.classList.add('open');
+      signupPanel.style.display = panel === 'signup' ? '' : 'none';
+      loginPanel.style.display  = panel === 'login'  ? '' : 'none';
+      clearMsgs();
+    }
+    function closeModal() { overlay.classList.remove('open'); }
+    function clearMsgs() {
+      ['hbSignupMsg','hbLoginMsg'].forEach(id => {
+        const el = document.getElementById(id);
+        el.style.display = 'none'; el.textContent = '';
+        el.className = 'hb-modal-msg';
+      });
+    }
+    function showMsg(id, text, type) {
+      const el = document.getElementById(id);
+      el.textContent = text;
+      el.className = 'hb-modal-msg ' + type;
+      el.style.display = 'block';
+    }
+
+    /* Open triggers */
+    document.getElementById('hbOpenSignup').addEventListener('click', () => openModal('signup'));
+    document.getElementById('hbOpenLogin').addEventListener('click',  () => openModal('login'));
+    document.getElementById('hbModalClose').addEventListener('click', closeModal);
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    /* Switch panels */
+    document.getElementById('hbSwitchToLogin').addEventListener('click', () => {
+      signupPanel.style.display = 'none';
+      loginPanel.style.display  = '';
+      clearMsgs();
+    });
+    document.getElementById('hbSwitchToSignup').addEventListener('click', () => {
+      loginPanel.style.display  = 'none';
+      signupPanel.style.display = '';
+      clearMsgs();
+    });
+
+    /* Also wire legacy hbShowAuth calls from hub-bub.js */
+    window.hbShowAuth = function(mode) { openModal(mode === 'login' ? 'login' : 'signup'); };
+
+    /* ── SIGNUP submit ── */
+    document.getElementById('hbSignupSubmit').addEventListener('click', function () {
+      const btn       = this;
+      const firstName = document.getElementById('hbSignupFirst').value.trim();
+      const lastName  = document.getElementById('hbSignupLast').value.trim();
+      const email     = document.getElementById('hbSignupEmail').value.trim();
+      const password  = document.getElementById('hbSignupPassword').value;
+      const frequency = document.querySelector('input[name="hbFrequency"]:checked')?.value || 'weekly';
+
+      if (!firstName || !lastName) return showMsg('hbSignupMsg', 'Please enter your first and last name.', 'error');
+      if (!email || !email.includes('@')) return showMsg('hbSignupMsg', 'Please enter a valid email address.', 'error');
+      if (password.length < 8)  return showMsg('hbSignupMsg', 'Password must be at least 8 characters.', 'error');
+
+      btn.disabled = true;
+      btn.textContent = 'Creating account…';
+
+      // Step 1: Mailchimp subscribe
+      mcSubscribe(email, firstName, lastName, frequency, function (ok, msg) {
+        if (!ok && !/already subscribed/i.test(msg)) {
+          btn.disabled = false;
+          btn.textContent = 'Create account & join Hub-Bub';
+          return showMsg('hbSignupMsg', 'Subscription error: ' + msg.replace(/<[^>]+>/g, ''), 'error');
+        }
+
+        // Step 2: Firebase Auth — create account
+        waitForFirebase(function () {
+          const { createUserWithEmailAndPassword, updateProfile } =
+            window.firebase?.auth ? {} : {};
+
+          // Use compat SDK if available
+          if (window.firebase && window.firebase.auth) {
+            window.firebase.auth().createUserWithEmailAndPassword(email, password)
+              .then(cred => cred.user.updateDisplayName
+                ? cred.user.updateDisplayName(firstName + ' ' + lastName)
+                : Promise.resolve())
+              .then(() => {
+                btn.disabled = false;
+                btn.textContent = 'Create account & join Hub-Bub';
+                showMsg('hbSignupMsg', '✓ Account created! You can now post and comment on Hub-Bub.', 'success');
+                setTimeout(closeModal, 2200);
+              })
+              .catch(err => {
+                btn.disabled = false;
+                btn.textContent = 'Create account & join Hub-Bub';
+                const friendly = err.code === 'auth/email-already-in-use'
+                  ? 'An account with this email already exists. Try logging in instead.'
+                  : err.message;
+                showMsg('hbSignupMsg', friendly, 'error');
+              });
+          } else {
+            // Modular SDK path
+            import('https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js').then(m => {
+              m.createUserWithEmailAndPassword(window._FIREBASE_AUTH, email, password)
+                .then(cred => m.updateProfile(cred.user, { displayName: firstName + ' ' + lastName }))
+                .then(() => {
+                  btn.disabled = false;
+                  btn.textContent = 'Create account & join Hub-Bub';
+                  showMsg('hbSignupMsg', '✓ Account created! You can now post and comment.', 'success');
+                  setTimeout(closeModal, 2200);
+                })
+                .catch(err => {
+                  btn.disabled = false;
+                  btn.textContent = 'Create account & join Hub-Bub';
+                  const friendly = err.code === 'auth/email-already-in-use'
+                    ? 'An account with this email already exists. Try logging in instead.'
+                    : err.message;
+                  showMsg('hbSignupMsg', friendly, 'error');
+                });
+            });
+          }
+        });
+      });
+    });
+
+    /* ── LOGIN submit ── */
+    document.getElementById('hbLoginSubmit').addEventListener('click', function () {
+      const btn      = this;
+      const email    = document.getElementById('hbLoginEmail').value.trim();
+      const password = document.getElementById('hbLoginPassword').value;
+
+      if (!email) return showMsg('hbLoginMsg', 'Please enter your email.', 'error');
+      if (!password) return showMsg('hbLoginMsg', 'Please enter your password.', 'error');
+
+      btn.disabled = true;
+      btn.textContent = 'Logging in…';
+
+      waitForFirebase(function () {
+        if (window.firebase && window.firebase.auth) {
+          window.firebase.auth().signInWithEmailAndPassword(email, password)
+            .then(() => {
+              btn.disabled = false;
+              btn.textContent = 'Log in';
+              showMsg('hbLoginMsg', '✓ Logged in!', 'success');
+              setTimeout(closeModal, 1200);
+            })
+            .catch(err => {
+              btn.disabled = false;
+              btn.textContent = 'Log in';
+              const friendly = (err.code === 'auth/wrong-password' || err.code === 'auth/user-not-found' || err.code === 'auth/invalid-credential')
+                ? 'Incorrect email or password.'
+                : err.message;
+              showMsg('hbLoginMsg', friendly, 'error');
+            });
+        } else if (window._FIREBASE_AUTH && window._FB_AUTH) {
+          window._FB_AUTH.signInWithEmailAndPassword(window._FIREBASE_AUTH, email, password)
+            .then(() => {
+              btn.disabled = false;
+              btn.textContent = 'Log in';
+              showMsg('hbLoginMsg', '✓ Logged in!', 'success');
+              setTimeout(closeModal, 1200);
+            })
+            .catch(err => {
+              btn.disabled = false;
+              btn.textContent = 'Log in';
+              showMsg('hbLoginMsg', 'Incorrect email or password.', 'error');
+            });
+        }
+      });
+    });
+
+    /* Enter key submit */
+    document.getElementById('hbSignupPassword').addEventListener('keydown', e => {
+      if (e.key === 'Enter') document.getElementById('hbSignupSubmit').click();
+    });
+    document.getElementById('hbLoginPassword').addEventListener('keydown', e => {
+      if (e.key === 'Enter') document.getElementById('hbLoginSubmit').click();
+    });
+  })();
+  </script>
 
   <!-- Sidebar filter wiring — syncs sidebar chips with hub-bub.js's hidden topic/mode bars -->
   <script>
