@@ -184,7 +184,7 @@ function buildMeetingItems(summaries) {
     const sourceLabel = MEETING_SOURCE_LABELS[source] || source;
     items.push({
       title: `[Meeting] ${title} — ${dateStr}`,
-      link: `${SITE_URL}/#meetings`,
+      link: `${SITE_URL}/gov-hub.html`,
       pubDate: meetingDate,
       description: `${sourceLabel} • ${dateStr}\n\n${summary || '(see meeting page for details)'}`,
       categories: ['Meeting', sourceLabel].filter(Boolean),
@@ -259,7 +259,7 @@ function buildEventItems(...sources) {
     ].filter(Boolean).join('\n');
     items.push({
       title: `[Event] ${e.title} — ${e.date || ''}`,
-      link: `${SITE_URL}/#events`,
+      link: `${SITE_URL}/events.html`,
       pubDate: eventDate,      // use actual event date — stable, not refreshed
       description: desc,
       imageUrl: e.img || e.imageUrl || null,

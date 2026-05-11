@@ -670,14 +670,14 @@
             const items = [];
 
             const fetchers = [
-              ['getCountyCachedMeetings', '/v2/gov-hub.html'],
-              ['getMVMeetings',           '/v2/gov-hub.html'],
-              ['getSchoolMeetings',       '/v2/gov-hub.html'],
-              ['getFireMeetings',         '/v2/gov-hub.html'],
-              ['getMedMeetings',          '/v2/gov-hub.html'],
-              ['getNorwoodMeetings',      '/v2/gov-hub.html'],
-              ['getOphirMeetings',        '/v2/gov-hub.html'],
-              ['getSmartMeetings',        '/v2/gov-hub.html']
+              ['getCountyCachedMeetings', '/gov-hub.html'],
+              ['getMVMeetings',           '/gov-hub.html'],
+              ['getSchoolMeetings',       '/gov-hub.html'],
+              ['getFireMeetings',         '/gov-hub.html'],
+              ['getMedMeetings',          '/gov-hub.html'],
+              ['getNorwoodMeetings',      '/gov-hub.html'],
+              ['getOphirMeetings',        '/gov-hub.html'],
+              ['getSmartMeetings',        '/gov-hub.html']
             ];
             fetchers.forEach(([fn, href]) => {
               if (typeof window[fn] !== 'function') return;
@@ -708,7 +708,7 @@
                   date: d,
                   title: e.title,
                   meta: formatDate(d) + (e.location ? ' • ' + e.location : ''),
-                  href: '/v2/events.html'
+                  href: '/events.html'
                 });
               });
             });
