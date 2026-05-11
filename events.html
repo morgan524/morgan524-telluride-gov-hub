@@ -306,6 +306,7 @@
     }
     .event-card .actions {
       display: flex;
+      flex-wrap: wrap;
       gap: 8px;
       margin-top: auto;
       padding-top: 8px;
@@ -776,7 +777,7 @@
                const dt = new Date(dateStr + 'T00:00:00');
                const today = new Date(); today.setHours(0,0,0,0);
                const diff = (dt - today) / 86400000;
-               if (diff < -1 || diff > 30) return;
+               if (diff < 0 || diff > 30) return;
                live.push({
                  title: e.title,
                  date: dateStr,
