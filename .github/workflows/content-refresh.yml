@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: '24'
 
@@ -34,6 +34,11 @@ jobs:
           TT_AUTH_COOKIE: ${{ secrets.TT_AUTH_COOKIE }}
         run: |
           node scripts/content-refresh.js
+        continue-on-error: true
+
+      - name: Regenerate data-only.js from updated gov-hub.js
+        run: |
+          node scripts/extract-data-only.js
         continue-on-error: true
 
       - name: Build RSS feed (feed.xml) for Mailchimp
