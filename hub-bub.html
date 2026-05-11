@@ -5,41 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hub-Bub — Livable Telluride</title>
 
-  <!-- Hub-Bub forum styles -->
+  <!-- Hub-Bub forum styles (legacy overrides in css/hub-bub.css still load for hub-bub.js compat) -->
   <link rel="stylesheet" href="css/hub-bub.css">
 
   <style>
+    /* ── Design-system tokens ── */
     :root {
       --forest: #21443c;
       --forest-soft: #2a5347;
+      --forest-3: #2f6b5b;
+      --lt-cream: #fbf7ef;
+      --lt-cream-2: #f4eddf;
+      --lt-paper: #fffdf8;
+      --lt-ink: #172c26;
+      --lt-muted: #61736d;
+      --lt-soft: rgba(23, 61, 52, 0.10);
+      --lt-line: rgba(23, 61, 52, 0.16);
+      --lt-gold: #b98b34;
+      --lt-gold-soft: rgba(185, 139, 52, 0.14);
+      --lt-blue-soft: rgba(55, 105, 128, 0.12);
+      --lt-red-soft: rgba(180, 75, 60, 0.12);
+      --lt-shadow: 0 18px 55px rgba(20, 40, 34, 0.11);
+      --lt-shadow-soft: 0 8px 24px rgba(20, 40, 34, 0.07);
+      --lt-radius-xl: 28px;
+      --lt-radius-lg: 18px;
+      --lt-radius-md: 12px;
+      --lt-heading: Georgia, "Times New Roman", serif;
+      --lt-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      /* legacy aliases used by hub-bub.js UI */
       --accent-green: #2f7a5f;
       --accent-green-soft: rgba(47, 122, 95, 0.12);
-      --accent-green-border: rgba(47, 122, 95, 0.25);
-      --gold: #b58a2c;
-      --gold-soft: rgba(181, 138, 44, 0.16);
-      --bg-warm: #fdfbf6;
-      --bg-hero: #efe9dc;
-      --bg-paper: #fffdf9;
-      --bg-cream: #f7f1e2;
       --text-primary: #1a2e29;
       --text-secondary: #4a5e57;
       --text-muted: #7a8a85;
       --border-soft: rgba(33, 68, 60, 0.12);
-      --border-card: rgba(33, 68, 60, 0.10);
-      --shadow-card: 0 4px 18px rgba(36, 49, 46, 0.10);
       --font-heading: 'Georgia', 'Times New Roman', serif;
-      --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      --font-main: var(--lt-sans);
     }
+
     * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; font-family: var(--font-main); color: var(--text-primary); background: var(--bg-warm); line-height: 1.5; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--lt-cream); color: var(--lt-ink); font-family: var(--lt-sans); line-height: 1.5; }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    a { color: var(--forest); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 
     /* ── Top nav ── */
-    .topnav { background: #fff; border-bottom: 1px solid var(--border-soft); padding: 14px 0; position: sticky; top: 0; z-index: 50; }
+    .topnav { background: #fff; border-bottom: 1px solid var(--lt-line); padding: 14px 0; position: sticky; top: 0; z-index: 50; }
     .topnav-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; gap: 24px; }
-    .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--forest); font-family: var(--font-heading); font-weight: 700; font-size: 1.15rem; line-height: 1.1; }
+    .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--forest); font-family: var(--lt-heading); font-weight: 700; font-size: 1.15rem; line-height: 1.1; }
     .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
     .topnav-links { display: flex; gap: 22px; margin-left: 28px; flex: 1; flex-wrap: wrap; }
-    .topnav-links a { color: var(--text-primary); text-decoration: none; font-weight: 600; font-size: 0.95rem; padding: 6px 2px; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
+    .topnav-links a { color: var(--lt-ink); text-decoration: none; font-weight: 600; font-size: 0.95rem; padding: 6px 2px; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
     .topnav-links a:hover { color: var(--forest); }
     .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
     .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; white-space: nowrap; }
@@ -47,30 +64,442 @@
     /* ── Hero ── */
     .hero {
       background:
-        linear-gradient(180deg, rgba(239, 233, 220, 0.78) 0%, rgba(239, 233, 220, 0.45) 55%, rgba(239, 233, 220, 0.20) 100%),
+        linear-gradient(180deg, rgba(239,233,220,0.78) 0%, rgba(239,233,220,0.45) 55%, rgba(239,233,220,0.20) 100%),
         url('img/wilson-peak.png') no-repeat center center / cover,
-        var(--bg-hero);
+        #efe9dc;
       padding: 28px 0 24px;
-      border-bottom: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--lt-line);
       min-height: 180px;
     }
     .hero h1 { text-shadow: 0 1px 2px rgba(255,255,255,0.6); }
     .hero p  { text-shadow: 0 1px 2px rgba(255,255,255,0.5); }
     .hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
-    .hero h1 { margin: 0 0 8px; font-family: var(--font-heading); font-size: 2.6rem; color: var(--text-primary); }
+    .hero h1 { margin: 0 0 8px; font-family: var(--lt-heading); font-size: 2.6rem; color: var(--lt-ink); }
     .hero p { margin: 0; color: var(--text-secondary); font-size: 1.05rem; max-width: 760px; }
 
-    /* ── Page body ── */
-    .page-body { max-width: 1280px; margin: 32px auto; padding: 0 32px 60px; }
+    /* ── Shell ── */
+    .hb-shell {
+      background:
+        radial-gradient(circle at 5% 0%, rgba(185,139,52,0.14), transparent 32rem),
+        radial-gradient(circle at 92% 8%, rgba(47,107,91,0.14), transparent 34rem),
+        linear-gradient(180deg, #fffdf8 0%, var(--lt-cream) 52%, #f7f0e5 100%);
+      padding: 32px 0 72px;
+    }
+    .hb-container { width: min(1220px, calc(100% - 32px)); margin: 0 auto; }
+
+    /* ── Intro two-col ── */
+    .hb-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 330px;
+      gap: 28px;
+      align-items: stretch;
+      margin-bottom: 28px;
+    }
+    .hb-intro-main {
+      min-height: 260px;
+      border: 1px solid var(--lt-line);
+      border-radius: var(--lt-radius-xl);
+      padding: clamp(24px, 4vw, 44px);
+      background:
+        linear-gradient(135deg, rgba(255,253,248,0.96), rgba(255,253,248,0.78)),
+        radial-gradient(circle at top right, rgba(185,139,52,0.15), transparent 26rem);
+      box-shadow: var(--lt-shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+    .hb-intro-main::after {
+      content: "";
+      position: absolute;
+      right: -80px; bottom: -110px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      border: 42px solid rgba(23,61,52,0.055);
+      pointer-events: none;
+    }
+    .hb-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(23,61,52,0.08);
+      color: var(--forest);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hb-intro h1 {
+      margin: 0;
+      max-width: 820px;
+      font-family: var(--lt-heading);
+      font-size: clamp(1.8rem, 3.6vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: var(--lt-ink);
+    }
+    .hb-intro p {
+      margin: 18px 0 0;
+      max-width: 760px;
+      color: var(--lt-muted);
+      font-size: clamp(1rem, 1.4vw, 1.1rem);
+    }
+    .hb-intro-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .hb-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--lt-line);
+      background: #fff;
+      color: var(--forest);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+    .hb-action.primary {
+      background: var(--forest);
+      color: #fff;
+      border-color: var(--forest);
+      box-shadow: 0 4px 14px rgba(33,68,60,0.22);
+    }
+    .hb-how {
+      border-radius: var(--lt-radius-xl);
+      border: 1px solid var(--lt-line);
+      background: var(--forest);
+      color: #fff;
+      box-shadow: var(--lt-shadow-soft);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      position: relative;
+    }
+    .hb-how::before {
+      content: "";
+      position: absolute;
+      top: -70px; right: -70px;
+      width: 190px; height: 190px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+    }
+    .hb-how h2 {
+      margin: 0 0 12px;
+      font-family: var(--lt-heading);
+      font-size: 1.45rem;
+      letter-spacing: -0.03em;
+      position: relative;
+      z-index: 1;
+    }
+    .hb-how ol {
+      margin: 0; padding-left: 20px;
+      color: rgba(255,255,255,0.82);
+      position: relative; z-index: 1;
+    }
+    .hb-how li { margin: 10px 0; }
+    .hb-how strong { color: #fff; }
+    .hb-status {
+      margin-top: 16px;
+      padding: 12px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.09);
+      color: rgba(255,255,255,0.85);
+      font-size: 0.92rem;
+      position: relative; z-index: 1;
+    }
+
+    /* ── Board grid ── */
+    .hb-board {
+      display: grid;
+      grid-template-columns: 288px minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    /* ── Sidebar ── */
+    .hb-sidebar-col {
+      position: sticky;
+      top: 90px;
+      display: grid;
+      gap: 14px;
+    }
+    .hb-card {
+      border: 1px solid var(--lt-line);
+      border-radius: var(--lt-radius-xl);
+      background: rgba(255,253,248,0.92);
+      box-shadow: var(--lt-shadow-soft);
+    }
+    .hb-filter-card { padding: 16px; }
+    .hb-card-title {
+      margin: 0 0 4px;
+      font-family: var(--lt-heading);
+      font-size: 1.18rem;
+      letter-spacing: -0.03em;
+      color: var(--lt-ink);
+    }
+    .hb-card-note { margin: 0 0 12px; color: var(--lt-muted); font-size: 0.88rem; }
+    .hb-filter-group {
+      padding-top: 14px;
+      margin-top: 14px;
+      border-top: 1px solid var(--lt-line);
+    }
+    .hb-filter-group:first-of-type { padding-top: 0; margin-top: 0; border-top: 0; }
+    .hb-filter-label {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+      margin: 0 0 8px;
+      color: var(--lt-muted);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hb-search-input {
+      width: 100%;
+      height: 40px;
+      padding: 0 12px;
+      border: 1px solid var(--lt-line);
+      border-radius: 12px;
+      background: #fff;
+      color: var(--lt-ink);
+      outline: none;
+      font-weight: 600;
+      font-size: 0.91rem;
+    }
+    .hb-search-input:focus { border-color: rgba(33,68,60,0.48); box-shadow: 0 0 0 4px rgba(33,68,60,0.08); }
+    .hb-chip-list { display: grid; gap: 6px; }
+    .hb-filter-chip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      width: 100%;
+      border: 1px solid var(--lt-line);
+      background: #fff;
+      color: var(--lt-ink);
+      border-radius: 12px;
+      padding: 8px 10px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-align: left;
+      transition: background 0.12s ease, border-color 0.12s ease;
+    }
+    .hb-filter-chip:hover { border-color: rgba(33,68,60,0.35); background: #f4faf4; }
+    .hb-filter-chip.active { background: var(--forest); color: #fff; border-color: var(--forest); }
+    .hb-clear-btn {
+      width: 100%;
+      margin-top: 12px;
+      border: 1px solid var(--lt-line);
+      background: rgba(255,255,255,0.65);
+      color: var(--forest);
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+    .hb-clear-btn:hover { background: #fff; }
+    .hb-sidebox { padding: 16px; }
+    .hb-sidebox.dark {
+      background: linear-gradient(180deg, var(--forest-soft), #122f29);
+      color: #fff;
+      border-color: rgba(255,255,255,0.08);
+    }
+    .hb-sidebox.dark .hb-card-title { color: #fff; }
+    .hb-sidebox p { margin: 0 0 10px; color: var(--lt-muted); font-size: 0.88rem; }
+    .hb-sidebox.dark p { color: rgba(255,255,255,0.82); }
+    .hb-mini-list { display: grid; gap: 9px; margin-top: 10px; }
+    .hb-mini-item {
+      padding-top: 9px;
+      border-top: 1px solid var(--lt-line);
+      color: var(--lt-ink);
+      font-size: 0.88rem;
+      font-weight: 650;
+    }
+    .hb-mini-item:first-child { border-top: 0; padding-top: 0; }
+    .hb-sidebox.dark .hb-mini-item { border-color: rgba(255,255,255,0.15); color: rgba(255,255,255,0.88); }
+
+    /* ── Main content area ── */
+    .hb-content { min-width: 0; }
+
+    /* ── Auth bar (compact, above composer) ── */
+    .hb-auth-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+      padding: 12px 16px;
+      border: 1px solid var(--lt-line);
+      border-radius: var(--lt-radius-lg);
+      background: rgba(255,253,248,0.92);
+      box-shadow: var(--lt-shadow-soft);
+      font-size: 0.9rem;
+    }
+    .hb-auth-strip a { font-weight: 700; }
+    .hb-auth-strip .hb-auth-user { font-weight: 700; color: var(--forest); }
+    .hb-auth-strip button {
+      border: 1px solid var(--lt-line);
+      background: #fff;
+      color: var(--forest);
+      border-radius: 999px;
+      padding: 5px 12px;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    /* ── Toolbar ── */
+    .hb-toolbar {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 14px;
+      padding: 12px 16px;
+      border-radius: var(--lt-radius-lg);
+      border: 1px solid var(--lt-line);
+      background: rgba(255,253,248,0.92);
+      box-shadow: var(--lt-shadow-soft);
+    }
+    .hb-results { display: flex; align-items: baseline; gap: 8px; }
+    .hb-results strong { font-family: var(--lt-heading); font-size: 1.45rem; letter-spacing: -0.03em; }
+    .hb-results span { color: var(--lt-muted); font-size: 0.9rem; }
+    .hb-sort-wrap { display: flex; align-items: center; gap: 8px; }
+    .hb-sort-wrap label { color: var(--lt-muted); font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; }
+    .hb-sort-select {
+      height: 38px;
+      border: 1px solid var(--lt-line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--lt-ink);
+      padding: 0 12px;
+      font-weight: 700;
+      outline: none;
+      font-size: 0.88rem;
+    }
+
+    /* ── Composer (new shell around existing composer) ── */
+    .hb-composer-shell {
+      margin-bottom: 16px;
+      border: 1px solid var(--lt-line);
+      border-radius: var(--lt-radius-xl);
+      background: rgba(255,253,248,0.92);
+      box-shadow: var(--lt-shadow-soft);
+      overflow: hidden;
+    }
+    .hb-composer-shell-head {
+      padding: 18px 18px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .hb-composer-shell-title { margin: 0; font-family: var(--lt-heading); font-size: 1.45rem; letter-spacing: -0.03em; }
+    .hb-composer-shell-sub { margin: 3px 0 0; color: var(--lt-muted); font-size: 0.9rem; }
+    .hb-composer-shell-inner { padding: 0 18px 18px; }
+
+    /* ── Post cards ── */
+    .hb-posts-feed { display: grid; gap: 14px; }
+    .hb-post-card {
+      padding: 18px;
+      border: 1px solid var(--lt-line);
+      border-radius: var(--lt-radius-xl);
+      background: rgba(255,253,248,0.94);
+      box-shadow: var(--lt-shadow-soft);
+      transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+    }
+    .hb-post-card:hover { transform: translateY(-2px); box-shadow: var(--lt-shadow); border-color: rgba(33,68,60,0.22); }
+    .hb-post-type-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(33,68,60,0.08);
+      color: var(--forest);
+      font-size: 0.74rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .hb-post-type-badge.source { background: var(--lt-blue-soft); }
+    .hb-post-type-badge.debrief { background: var(--lt-gold-soft); }
+    .hb-post-type-badge.solution { background: rgba(47,107,91,0.12); }
+    .hb-post-type-badge.need { background: var(--lt-red-soft); }
+    .hb-tag-pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 4px 9px;
+      background: #fff;
+      border: 1px solid var(--lt-line);
+      color: var(--forest);
+      font-size: 0.76rem;
+      font-weight: 750;
+    }
+
+    /* ── Empty / loading ── */
+    .hb-empty-state {
+      padding: 42px 24px;
+      text-align: center;
+      border: 1px dashed rgba(33,68,60,0.28);
+      border-radius: var(--lt-radius-xl);
+      background: rgba(255,253,248,0.8);
+    }
+    .hb-empty-state h2 { margin: 0; font-family: var(--lt-heading); font-size: 1.6rem; letter-spacing: -0.03em; }
+    .hb-empty-state p { margin: 8px auto 0; max-width: 520px; color: var(--lt-muted); }
+
+    /* ── Legacy hub-bub.js element resets (so they work inside new layout) ── */
+    .hb-wrap { display: contents; }
+    .hb-auth-bar { display: none !important; } /* replaced by hb-auth-strip */
+    .hb-mode-bar { display: none !important; } /* mode filter moved to sidebar */
+    .hb-topic-bar { display: none !important; } /* topic chips moved to sidebar */
+    .hb-sort-bar { display: none !important; }  /* sort moved to toolbar */
+    .hb-grid { display: contents; }
+    /* Composer: strip its own borders/bg since it's inside our shell */
+    .hb-compose {
+      box-shadow: none !important;
+      border: none !important;
+      background: transparent !important;
+      border-radius: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    /* Posts feed: strip its top padding so hb-posts-feed grid controls spacing */
+    #hbPostsFeed { margin-top: 0 !important; }
+    /* Loading spinner stays in feed */
+    .hb-loading { padding: 24px; text-align: center; }
+    .hb-empty { padding: 36px 24px; text-align: center; }
 
     /* ── Footer ── */
-    .copyright { text-align: center; color: var(--text-muted); font-size: 0.82rem; padding: 28px 0 0; margin-top: 40px; border-top: 1px solid var(--border-soft); }
+    .hb-footer { text-align: center; color: var(--lt-muted); font-size: 0.82rem; padding: 28px 0 0; margin-top: 40px; border-top: 1px solid var(--lt-line); }
 
     /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .hb-intro { grid-template-columns: 1fr; }
+      .hb-board { grid-template-columns: 260px minmax(0,1fr); gap: 16px; }
+    }
     @media (max-width: 768px) {
       .topnav-links { display: none; }
       .hero h1 { font-size: 1.9rem; }
-      .page-body { padding: 0 16px 40px; }
+      .hb-intro { grid-template-columns: 1fr; }
+      .hb-board { grid-template-columns: 1fr; }
+      .hb-sidebar-col { position: static; }
+      .hb-toolbar { grid-template-columns: 1fr; }
+      .hb-container { width: calc(100% - 24px); }
     }
   </style>
 
@@ -116,6 +545,7 @@
 </head>
 <body>
 
+  <!-- ════════════════════ NAV ════════════════════ -->
   <header class="topnav">
     <div class="topnav-inner">
       <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
@@ -135,173 +565,314 @@
     </div>
   </header>
 
+  <!-- ════════════════════ HERO ════════════════════ -->
   <section class="hero">
     <div class="hero-inner">
       <h1>💬 Hub-Bub</h1>
-      <p>A space for constructive civic discussion in the Telluride region. Ask questions, share what happened at meetings, link useful sources, and propose practical solutions.</p>
+      <p>A space for constructive civic discussion in the Telluride region.</p>
     </div>
   </section>
 
-  <div class="page-body">
-    <div class="hb-wrap">
+  <!-- ══════════════════ HIDDEN LEGACY ELEMENTS (hub-bub.js targets these IDs) ══════════════════ -->
+  <div class="hb-wrap" style="display:none;" aria-hidden="true">
+    <!-- Auth bar — hub-bub.js updates these spans; we mirror them into #hbAuthStripInner -->
+    <div class="hb-auth-bar" id="hbAuthBar">
+      <span id="hbAuthStatus">Join the conversation — <a href="javascript:void(0)" onclick="hbShowAuth('signup')" style="color:var(--forest);font-weight:700;">Sign up</a> or <a href="javascript:void(0)" onclick="hbShowAuth('login')" style="color:var(--forest);font-weight:700;">Log in</a> to post.</span>
+      <span id="hbAuthUser" style="display:none;" class="hb-user"></span>
+      <button id="hbLogoutBtn" style="display:none;" onclick="hbLogout()">Sign Out</button>
+    </div>
+    <!-- Mode bar — hub-bub.js reads these buttons -->
+    <div class="hb-mode-bar" id="hbModeBar">
+      <button class="hb-mode-btn active" data-hb-mode="all">All Posts</button>
+      <button class="hb-mode-btn" data-hb-mode="question">Questions</button>
+      <button class="hb-mode-btn" data-hb-mode="what-happened">What Happened</button>
+      <button class="hb-mode-btn" data-hb-mode="ideas">Ideas &amp; Solutions</button>
+    </div>
+    <!-- Topic bar — hub-bub.js reads these chips -->
+    <div class="hb-topic-bar" id="hbTopicBar">
+      <button class="hb-topic-chip active" data-hb-topic="all">All</button>
+      <button class="hb-topic-chip" data-hb-topic="housing">Housing</button>
+      <button class="hb-topic-chip" data-hb-topic="land-use">Land Use</button>
+      <button class="hb-topic-chip" data-hb-topic="gondola">Transit / Gondola</button>
+      <button class="hb-topic-chip" data-hb-topic="public-safety">Fire / Safety</button>
+      <button class="hb-topic-chip" data-hb-topic="budget-finance">Budget</button>
+      <button class="hb-topic-chip" data-hb-topic="environment">Environment</button>
+      <button class="hb-topic-chip" data-hb-topic="health-education">Schools</button>
+      <button class="hb-topic-chip" data-hb-topic="legal-governance">Transparency / CORA / Legal</button>
+      <button class="hb-topic-chip" data-hb-topic="community">Community Events</button>
+      <button class="hb-topic-chip" data-hb-topic="volunteer">Local Groups / Volunteerism</button>
+    </div>
+    <!-- Sort bar — hub-bub.js reads these buttons -->
+    <div class="hb-sort-bar">
+      <span>Sort:</span>
+      <button class="hb-sort-opt active" data-hb-sort="newest" onclick="hbSortPosts('newest')">Newest</button>
+      <button class="hb-sort-opt" data-hb-sort="most-discussed" onclick="hbSortPosts('most-discussed')">Most Discussed</button>
+      <button class="hb-sort-opt" data-hb-sort="most-useful" onclick="hbSortPosts('most-useful')">Most Useful</button>
+    </div>
+  </div>
+  <!-- END HIDDEN LEGACY ELEMENTS -->
 
-      <!-- Auth bar -->
-      <div class="hb-auth-bar" id="hbAuthBar">
-        <span id="hbAuthStatus">Join the conversation — <a href="javascript:void(0)" onclick="hbShowAuth('signup')" style="color:var(--forest);font-weight:700;">Sign up</a> or <a href="javascript:void(0)" onclick="hbShowAuth('login')" style="color:var(--forest);font-weight:700;">Log in</a> to post.</span>
-        <span id="hbAuthUser" style="display:none;" class="hb-user"></span>
-        <button id="hbLogoutBtn" style="display:none;" onclick="hbLogout()">Sign Out</button>
-      </div>
+  <!-- ════════════════════ SHELL ════════════════════ -->
+  <div class="hb-shell">
+    <div class="hb-container">
 
-      <!-- Mode switch -->
-      <div class="hb-mode-bar" id="hbModeBar">
-        <button class="hb-mode-btn active" data-hb-mode="all">All Posts</button>
-        <button class="hb-mode-btn" data-hb-mode="question">Questions</button>
-        <button class="hb-mode-btn" data-hb-mode="what-happened">What Happened</button>
-        <button class="hb-mode-btn" data-hb-mode="ideas">Ideas &amp; Solutions</button>
-      </div>
+      <!-- ── Intro two-col ── -->
+      <section class="hb-intro" aria-labelledby="hub-bub-heading">
+        <div class="hb-intro-main">
+          <div class="hb-eyebrow">Hub-Bub civic forum</div>
+          <h1 id="hub-bub-heading">Find the local conversation without digging through the noise.</h1>
+          <p>Hub-Bub is organized around the way people actually look for civic information: by topic, meeting, source, question, and next step. Use it to ask a precise question, share a public document, summarize a meeting, or propose a practical solution.</p>
+          <div class="hb-intro-actions">
+            <a class="hb-action primary" href="#hb-composer-anchor">Start a discussion</a>
+            <a class="hb-action" href="#hb-feed-anchor">Browse current posts</a>
+            <a class="hb-action" href="#hb-guidelines-anchor">Guidelines</a>
+          </div>
+        </div>
 
-      <div class="hb-grid">
-        <!-- ── Main column ── -->
-        <div>
-          <!-- Topic filter chips -->
-          <div class="hb-topic-bar" id="hbTopicBar">
-            <button class="hb-topic-chip active" data-hb-topic="all">All</button>
-            <button class="hb-topic-chip" data-hb-topic="housing">Housing</button>
-            <button class="hb-topic-chip" data-hb-topic="land-use">Land Use</button>
-            <button class="hb-topic-chip" data-hb-topic="gondola">Transit / Gondola</button>
-            <button class="hb-topic-chip" data-hb-topic="public-safety">Fire / Safety</button>
-            <button class="hb-topic-chip" data-hb-topic="budget-finance">Budget</button>
-            <button class="hb-topic-chip" data-hb-topic="environment">Environment</button>
-            <button class="hb-topic-chip" data-hb-topic="health-education">Schools</button>
-            <button class="hb-topic-chip" data-hb-topic="legal-governance">Transparency / CORA / Legal</button>
-            <button class="hb-topic-chip" data-hb-topic="community">Community Events</button>
-            <button class="hb-topic-chip" data-hb-topic="volunteer">Local Groups / Volunteerism</button>
+        <aside class="hb-how" aria-label="How Hub-Bub works">
+          <div>
+            <h2>Designed for useful participation</h2>
+            <ol>
+              <li><strong>Pick a topic.</strong> Housing, land use, budget, water, schools, events, or governance.</li>
+              <li><strong>Choose a post type.</strong> Question, source, meeting takeaway, solution, or community need.</li>
+              <li><strong>Add a next step.</strong> Read, attend, email, volunteer, ask, or watch.</li>
+            </ol>
+          </div>
+          <div class="hb-status">
+            Best use: help neighbors understand what is happening early enough to participate.
+          </div>
+        </aside>
+      </section>
+
+      <!-- ── Board: sidebar + main ── -->
+      <section class="hb-board">
+
+        <!-- ── Sidebar ── -->
+        <aside class="hb-sidebar-col" aria-label="Hub-Bub filters">
+
+          <!-- Filter card -->
+          <section class="hb-card hb-filter-card">
+            <h2 class="hb-card-title">Filter discussions</h2>
+            <p class="hb-card-note">Narrow by topic, type, or action.</p>
+
+            <div class="hb-filter-group">
+              <label class="hb-filter-label" for="hbSideSearch">Search</label>
+              <input id="hbSideSearch" class="hb-search-input" type="search" placeholder="Try "water," "PUD," "budget"">
+            </div>
+
+            <div class="hb-filter-group">
+              <div class="hb-filter-label">Topic</div>
+              <div class="hb-chip-list" id="hbSideTopics">
+                <button class="hb-filter-chip active" data-side-topic="all">All topics</button>
+                <button class="hb-filter-chip" data-side-topic="housing">Housing</button>
+                <button class="hb-filter-chip" data-side-topic="land-use">Land Use</button>
+                <button class="hb-filter-chip" data-side-topic="gondola">Transit / Gondola</button>
+                <button class="hb-filter-chip" data-side-topic="public-safety">Fire / Safety</button>
+                <button class="hb-filter-chip" data-side-topic="budget-finance">Budget / Finance</button>
+                <button class="hb-filter-chip" data-side-topic="environment">Environment</button>
+                <button class="hb-filter-chip" data-side-topic="health-education">Schools</button>
+                <button class="hb-filter-chip" data-side-topic="legal-governance">Transparency / Legal</button>
+                <button class="hb-filter-chip" data-side-topic="community">Community</button>
+                <button class="hb-filter-chip" data-side-topic="volunteer">Local Groups</button>
+              </div>
+            </div>
+
+            <div class="hb-filter-group">
+              <div class="hb-filter-label">Post type</div>
+              <div class="hb-chip-list" id="hbSideModes">
+                <button class="hb-filter-chip active" data-side-mode="all">All types</button>
+                <button class="hb-filter-chip" data-side-mode="question">Questions</button>
+                <button class="hb-filter-chip" data-side-mode="what-happened">What Happened</button>
+                <button class="hb-filter-chip" data-side-mode="ideas">Ideas &amp; Solutions</button>
+              </div>
+            </div>
+
+            <button class="hb-clear-btn" id="hbSideClear" type="button">Clear filters</button>
+          </section>
+
+          <!-- Questions needing answers -->
+          <section class="hb-card hb-sidebox" id="hbUnansweredSidebar">
+            <h2 class="hb-card-title">Questions needing answers</h2>
+            <p>Short, specific questions are the most useful currency in local government.</p>
+            <div class="hb-mini-list" id="hbUnanswered">
+              <div class="hb-mini-item">Which figure is the official cost estimate?</div>
+              <div class="hb-mini-item">Has a wildlife study been submitted?</div>
+              <div class="hb-mini-item">What changed from the last draft?</div>
+              <div class="hb-mini-item">What is the actual deadline for written comments?</div>
+            </div>
+          </section>
+
+          <!-- Activity stats -->
+          <div class="hb-card hb-sidebox">
+            <h2 class="hb-card-title">Activity</h2>
+            <div style="font-size:0.85rem;color:var(--lt-muted);line-height:1.8;margin-top:6px;">
+              <div style="display:flex;justify-content:space-between;"><span>Posts today</span><strong id="hbStatToday">0</strong></div>
+              <div style="display:flex;justify-content:space-between;"><span>This week</span><strong id="hbStatWeek">0</strong></div>
+              <div style="display:flex;justify-content:space-between;"><span>Total discussions</span><strong id="hbStatTotal">0</strong></div>
+              <div style="display:flex;justify-content:space-between;"><span>Contributors</span><strong id="hbStatUsers">0</strong></div>
+            </div>
           </div>
 
-          <!-- Post composer -->
-          <div class="hb-compose" id="hbCompose">
-            <div style="font-size:0.78rem;font-weight:600;color:#888;margin-bottom:8px;">What would you like to share? <span style="color:#c0392b;">[required]</span></div>
-            <div class="hb-post-type-bar" id="hbPostTypeBar">
-              <button class="hb-post-type-btn" data-hb-ptype="question">Ask a Question</button>
-              <button class="hb-post-type-btn" data-hb-ptype="source">Share a Source</button>
-              <button class="hb-post-type-btn" data-hb-ptype="debrief">Meeting Takeaway</button>
-              <button class="hb-post-type-btn" data-hb-ptype="solution">Suggest a Solution</button>
-              <button class="hb-post-type-btn" data-hb-ptype="need">Community Need</button>
-              <button class="hb-post-type-btn" data-hb-ptype="volunteer">Volunteer / Join In</button>
+          <!-- Most useful this week -->
+          <div class="hb-card hb-sidebox">
+            <h2 class="hb-card-title">Most useful this week</h2>
+            <div id="hbMostUseful" class="hb-mini-list" style="margin-top:4px;">
+              <div style="font-size:0.82rem;color:var(--lt-muted);">Loading…</div>
             </div>
+          </div>
 
-            <div class="hb-compose-header">
-              <div class="hb-compose-avatar" id="hbComposeAvatar">?</div>
-              <input type="text" id="hbComposeTitle" placeholder="Subject" onfocus="hbExpandCompose()">
+          <!-- Guidelines (dark) -->
+          <section class="hb-card hb-sidebox dark" id="hb-guidelines-anchor">
+            <h2 class="hb-card-title">Forum guidelines</h2>
+            <div class="hb-mini-list">
+              <div class="hb-mini-item">Ask clear questions — good questions lead to better answers.</div>
+              <div class="hb-mini-item">Share sources — attach documents, link to meeting minutes.</div>
+              <div class="hb-mini-item">Attack ideas, not people — disagree vigorously but constructively.</div>
+              <div class="hb-mini-item">Propose solutions — practical ideas move the conversation forward.</div>
+              <div class="hb-mini-item">This is a public record — posts may be cited in formal public comment.</div>
             </div>
+          </section>
+        </aside>
 
-            <div class="hb-compose-expanded">
-              <textarea id="hbComposeBody" placeholder="Share your thoughts, concerns, or ideas with the community..."></textarea>
+        <!-- ── Main content ── -->
+        <main class="hb-content" id="hb-feed-anchor">
 
-              <!-- Featured photo -->
-              <div class="hb-photo-upload">
-                <button type="button" class="hb-photo-upload-btn" onclick="hbTriggerPhoto()">📷 Add a photo (optional)</button>
-                <input type="file" id="hbPhotoInput" accept="image/png,image/jpeg,image/gif,image/webp" style="display:none;" onchange="hbHandlePhoto(this)">
-                <div class="hb-photo-preview" id="hbPhotoPreview">
-                  <img id="hbPhotoPreviewImg" src="" alt="Photo preview">
-                  <div class="hb-photo-preview-actions">
-                    <button type="button" onclick="hbReplacePhoto()">Replace</button>
-                    <button type="button" onclick="hbRemovePhoto()">Remove</button>
+          <!-- Auth strip -->
+          <div class="hb-auth-strip" id="hbAuthStrip">
+            <span id="hbAuthStripMsg">Join the conversation —
+              <a href="javascript:void(0)" onclick="hbShowAuth('signup')">Sign up</a> or
+              <a href="javascript:void(0)" onclick="hbShowAuth('login')">Log in</a> to post.
+            </span>
+            <span id="hbAuthStripUser" style="display:none;" class="hb-auth-user"></span>
+            <button id="hbAuthStripLogout" style="display:none;" onclick="hbLogout()">Sign out</button>
+          </div>
+
+          <!-- Toolbar: result count + sort -->
+          <div class="hb-toolbar" role="toolbar" aria-label="Sort discussions">
+            <div class="hb-results">
+              <strong id="hbResultCount">—</strong>
+              <span id="hbResultLabel">discussions</span>
+            </div>
+            <div class="hb-sort-wrap">
+              <label for="hbSortSelect">Sort</label>
+              <select id="hbSortSelect" class="hb-sort-select" onchange="hbSortPosts(this.value); document.querySelectorAll('.hb-sort-opt').forEach(b=>b.classList.toggle('active', b.dataset.hbSort===this.value));">
+                <option value="newest">Newest first</option>
+                <option value="most-discussed">Most discussed</option>
+                <option value="most-useful">Most useful</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Composer shell -->
+          <div class="hb-composer-shell" id="hb-composer-anchor">
+            <div class="hb-composer-shell-head">
+              <div>
+                <h2 class="hb-composer-shell-title">Start a discussion</h2>
+                <p class="hb-composer-shell-sub">A good post makes the issue easier for neighbors to understand.</p>
+              </div>
+            </div>
+            <div class="hb-composer-shell-inner">
+              <!-- Existing hub-bub.js composer (all IDs preserved) -->
+              <div class="hb-compose" id="hbCompose">
+                <div style="font-size:0.78rem;font-weight:600;color:#888;margin-bottom:8px;">What would you like to share? <span style="color:#c0392b;">[required]</span></div>
+                <div class="hb-post-type-bar" id="hbPostTypeBar">
+                  <button class="hb-post-type-btn" data-hb-ptype="question">Ask a Question</button>
+                  <button class="hb-post-type-btn" data-hb-ptype="source">Share a Source</button>
+                  <button class="hb-post-type-btn" data-hb-ptype="debrief">Meeting Takeaway</button>
+                  <button class="hb-post-type-btn" data-hb-ptype="solution">Suggest a Solution</button>
+                  <button class="hb-post-type-btn" data-hb-ptype="need">Community Need</button>
+                  <button class="hb-post-type-btn" data-hb-ptype="volunteer">Volunteer / Join In</button>
+                </div>
+                <div class="hb-compose-header">
+                  <div class="hb-compose-avatar" id="hbComposeAvatar">?</div>
+                  <input type="text" id="hbComposeTitle" placeholder="Subject" onfocus="hbExpandCompose()">
+                </div>
+                <div class="hb-compose-expanded">
+                  <textarea id="hbComposeBody" placeholder="Share your thoughts, concerns, or ideas with the community..."></textarea>
+                  <div class="hb-photo-upload">
+                    <button type="button" class="hb-photo-upload-btn" onclick="hbTriggerPhoto()">📷 Add a photo (optional)</button>
+                    <input type="file" id="hbPhotoInput" accept="image/png,image/jpeg,image/gif,image/webp" style="display:none;" onchange="hbHandlePhoto(this)">
+                    <div class="hb-photo-preview" id="hbPhotoPreview">
+                      <img id="hbPhotoPreviewImg" src="" alt="Photo preview">
+                      <div class="hb-photo-preview-actions">
+                        <button type="button" onclick="hbReplacePhoto()">Replace</button>
+                        <button type="button" onclick="hbRemovePhoto()">Remove</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hb-source-fields" id="hbSourceFields">
+                    <div class="hb-compose-field-label">Source link</div>
+                    <input type="url" id="hbSourceUrl" placeholder="https://...">
+                    <div class="hb-compose-field-label">Why it matters</div>
+                    <textarea id="hbSourceWhy" placeholder="What does this source say and why should others read it?" style="min-height:50px;"></textarea>
+                    <div class="hb-compose-field-label">Question it raises</div>
+                    <input type="text" id="hbSourceQuestion" placeholder="What question does this raise for the community?">
+                  </div>
+                  <div class="hb-debrief-fields" id="hbDebriefFields">
+                    <div class="hb-compose-field-label">Meeting name</div>
+                    <input type="text" id="hbDebriefMeeting" placeholder="e.g., Town Council Regular Meeting">
+                    <div class="hb-compose-field-label">Meeting date</div>
+                    <input type="text" id="hbDebriefDate" placeholder="e.g., March 25, 2026">
+                    <div class="hb-compose-field-label">Key takeaways (up to 3)</div>
+                    <textarea id="hbDebriefTakeaways" placeholder="1. &#10;2. &#10;3. " style="min-height:60px;"></textarea>
+                    <div class="hb-compose-field-label">What changed</div>
+                    <textarea id="hbDebriefChanged" placeholder="What decisions were made or what shifted?" style="min-height:40px;"></textarea>
+                    <div class="hb-compose-field-label">What remains unresolved</div>
+                    <textarea id="hbDebriefUnresolved" placeholder="What still needs to be decided or figured out?" style="min-height:40px;"></textarea>
+                    <div class="hb-compose-field-label">Link to agenda / packet / recording (optional)</div>
+                    <input type="url" id="hbDebriefLink" placeholder="https://...">
+                    <div class="hb-compose-field-label">One question for the community</div>
+                    <input type="text" id="hbDebriefQuestion" placeholder="What should neighbors be thinking about?">
+                  </div>
+                  <div style="font-size:0.78rem;font-weight:600;color:#888;margin-bottom:4px;margin-top:10px;">Tag your post: <span style="color:#c0392b;">Required.</span></div>
+                  <div class="hb-compose-tags" id="hbComposeTags">
+                    <button class="hb-compose-tag" data-hb-tag="housing">Housing</button>
+                    <button class="hb-compose-tag" data-hb-tag="land-use">Land Use</button>
+                    <button class="hb-compose-tag" data-hb-tag="gondola">Transit / Gondola</button>
+                    <button class="hb-compose-tag" data-hb-tag="public-safety">Fire / Safety</button>
+                    <button class="hb-compose-tag" data-hb-tag="budget-finance">Budget</button>
+                    <button class="hb-compose-tag" data-hb-tag="environment">Environment</button>
+                    <button class="hb-compose-tag" data-hb-tag="health-education">Schools</button>
+                    <button class="hb-compose-tag" data-hb-tag="legal-governance">Transparency / Legal</button>
+                    <button class="hb-compose-tag" data-hb-tag="community">Community</button>
+                    <button class="hb-compose-tag" data-hb-tag="volunteer">Volunteerism</button>
+                    <button class="hb-compose-tag" data-hb-tag="other">Other</button>
+                  </div>
+                  <div style="font-size:0.78rem;font-weight:600;color:#888;margin-bottom:4px;">What can someone do next?</div>
+                  <div class="hb-nextstep-bar" id="hbNextStepBar">
+                    <button class="hb-nextstep-chip" data-hb-step="attend">Attend</button>
+                    <button class="hb-nextstep-chip" data-hb-step="read">Read</button>
+                    <button class="hb-nextstep-chip" data-hb-step="ask">Ask</button>
+                    <button class="hb-nextstep-chip" data-hb-step="volunteer">Volunteer</button>
+                    <button class="hb-nextstep-chip" data-hb-step="email">Email</button>
+                    <button class="hb-nextstep-chip" data-hb-step="watch">Watch</button>
+                  </div>
+                  <div class="hb-attach-preview" id="hbAttachPreview"></div>
+                  <div class="hb-tone-nudge" id="hbToneNudge">
+                    <div class="hb-tone-nudge-title">Heads up — this might come across as a personal attack</div>
+                    <div class="hb-tone-original" id="hbToneOriginal"></div>
+                    <div style="font-size:0.82rem;color:#555;margin:4px 0;">Here's a way to make the same point without targeting someone personally:</div>
+                    <div class="hb-tone-suggested" id="hbToneSuggested"></div>
+                    <div class="hb-tone-actions">
+                      <button class="hb-tone-btn-use" onclick="hbUseSuggested()">Use suggested version</button>
+                      <button class="hb-tone-btn-keep" onclick="hbKeepOriginal()">Post as written</button>
+                      <button class="hb-tone-btn-edit" onclick="hbEditMore()">Let me edit more</button>
+                    </div>
+                  </div>
+                  <div class="hb-compose-actions">
+                    <div style="display:flex;gap:6px;">
+                      <button class="hb-attach-btn" onclick="hbTriggerAttach()">Attach File</button>
+                      <input type="file" id="hbFileInput" accept=".pdf,.png,.jpg,.jpeg,.gif,.webp" multiple style="display:none;" onchange="hbHandleFiles(this)">
+                    </div>
+                    <button class="hb-post-btn" id="hbPostBtn" onclick="hbSubmitPost()" disabled>Post to Hub-Bub</button>
                   </div>
                 </div>
               </div>
-
-              <!-- Source-specific fields -->
-              <div class="hb-source-fields" id="hbSourceFields">
-                <div class="hb-compose-field-label">Source link</div>
-                <input type="url" id="hbSourceUrl" placeholder="https://...">
-                <div class="hb-compose-field-label">Why it matters</div>
-                <textarea id="hbSourceWhy" placeholder="What does this source say and why should others read it?" style="min-height:50px;"></textarea>
-                <div class="hb-compose-field-label">Question it raises</div>
-                <input type="text" id="hbSourceQuestion" placeholder="What question does this raise for the community?">
-              </div>
-
-              <!-- Meeting debrief fields -->
-              <div class="hb-debrief-fields" id="hbDebriefFields">
-                <div class="hb-compose-field-label">Meeting name</div>
-                <input type="text" id="hbDebriefMeeting" placeholder="e.g., Town Council Regular Meeting">
-                <div class="hb-compose-field-label">Meeting date</div>
-                <input type="text" id="hbDebriefDate" placeholder="e.g., March 25, 2026">
-                <div class="hb-compose-field-label">Key takeaways (up to 3)</div>
-                <textarea id="hbDebriefTakeaways" placeholder="1. &#10;2. &#10;3. " style="min-height:60px;"></textarea>
-                <div class="hb-compose-field-label">What changed</div>
-                <textarea id="hbDebriefChanged" placeholder="What decisions were made or what shifted?" style="min-height:40px;"></textarea>
-                <div class="hb-compose-field-label">What remains unresolved</div>
-                <textarea id="hbDebriefUnresolved" placeholder="What still needs to be decided or figured out?" style="min-height:40px;"></textarea>
-                <div class="hb-compose-field-label">Link to agenda / packet / recording (optional)</div>
-                <input type="url" id="hbDebriefLink" placeholder="https://...">
-                <div class="hb-compose-field-label">One question for the community</div>
-                <input type="text" id="hbDebriefQuestion" placeholder="What should neighbors be thinking about?">
-              </div>
-
-              <!-- Tag selector -->
-              <div style="font-size:0.78rem;font-weight:600;color:#888;margin-bottom:4px;margin-top:10px;">Tag your post: <span style="color:#c0392b;">Required.</span></div>
-              <div class="hb-compose-tags" id="hbComposeTags">
-                <button class="hb-compose-tag" data-hb-tag="housing">Housing</button>
-                <button class="hb-compose-tag" data-hb-tag="land-use">Land Use</button>
-                <button class="hb-compose-tag" data-hb-tag="gondola">Transit / Gondola</button>
-                <button class="hb-compose-tag" data-hb-tag="public-safety">Fire / Safety</button>
-                <button class="hb-compose-tag" data-hb-tag="budget-finance">Budget</button>
-                <button class="hb-compose-tag" data-hb-tag="environment">Environment</button>
-                <button class="hb-compose-tag" data-hb-tag="health-education">Schools</button>
-                <button class="hb-compose-tag" data-hb-tag="legal-governance">Transparency / Legal</button>
-                <button class="hb-compose-tag" data-hb-tag="community">Community</button>
-                <button class="hb-compose-tag" data-hb-tag="volunteer">Volunteerism</button>
-                <button class="hb-compose-tag" data-hb-tag="other">Other</button>
-              </div>
-
-              <!-- Next step chips -->
-              <div style="font-size:0.78rem;font-weight:600;color:#888;margin-bottom:4px;">What can someone do next?</div>
-              <div class="hb-nextstep-bar" id="hbNextStepBar">
-                <button class="hb-nextstep-chip" data-hb-step="attend">Attend</button>
-                <button class="hb-nextstep-chip" data-hb-step="read">Read</button>
-                <button class="hb-nextstep-chip" data-hb-step="ask">Ask</button>
-                <button class="hb-nextstep-chip" data-hb-step="volunteer">Volunteer</button>
-                <button class="hb-nextstep-chip" data-hb-step="email">Email</button>
-                <button class="hb-nextstep-chip" data-hb-step="watch">Watch</button>
-              </div>
-
-              <!-- Attachment preview -->
-              <div class="hb-attach-preview" id="hbAttachPreview"></div>
-
-              <!-- Tone review nudge -->
-              <div class="hb-tone-nudge" id="hbToneNudge">
-                <div class="hb-tone-nudge-title">Heads up — this might come across as a personal attack</div>
-                <div class="hb-tone-original" id="hbToneOriginal"></div>
-                <div style="font-size:0.82rem;color:#555;margin:4px 0;">Here's a way to make the same point without targeting someone personally:</div>
-                <div class="hb-tone-suggested" id="hbToneSuggested"></div>
-                <div class="hb-tone-actions">
-                  <button class="hb-tone-btn-use" onclick="hbUseSuggested()">Use suggested version</button>
-                  <button class="hb-tone-btn-keep" onclick="hbKeepOriginal()">Post as written</button>
-                  <button class="hb-tone-btn-edit" onclick="hbEditMore()">Let me edit more</button>
-                </div>
-              </div>
-
-              <div class="hb-compose-actions">
-                <div style="display:flex;gap:6px;">
-                  <button class="hb-attach-btn" onclick="hbTriggerAttach()">Attach File</button>
-                  <input type="file" id="hbFileInput" accept=".pdf,.png,.jpg,.jpeg,.gif,.webp" multiple style="display:none;" onchange="hbHandleFiles(this)">
-                </div>
-                <button class="hb-post-btn" id="hbPostBtn" onclick="hbSubmitPost()" disabled>Post to Hub-Bub</button>
-              </div>
             </div>
           </div>
 
-          <!-- Sort bar -->
-          <div class="hb-sort-bar">
-            <span>Sort:</span>
-            <button class="hb-sort-opt active" data-hb-sort="newest" onclick="hbSortPosts('newest')">Newest</button>
-            <button class="hb-sort-opt" data-hb-sort="most-discussed" onclick="hbSortPosts('most-discussed')">Most Discussed</button>
-            <button class="hb-sort-opt" data-hb-sort="most-useful" onclick="hbSortPosts('most-useful')">Most Useful</button>
-          </div>
-
-          <!-- Posts feed -->
-          <div id="hbPostsFeed">
+          <!-- Posts feed (populated by hub-bub.js) -->
+          <div id="hbPostsFeed" class="hb-posts-feed">
             <div class="hb-loading" id="hbLoading"><div class="hb-spinner"></div></div>
             <div class="hb-empty" id="hbEmpty" style="display:none;">
               <div class="hb-empty-icon">💬</div>
@@ -309,58 +880,107 @@
               <div class="hb-empty-sub">Be the first to start a constructive conversation about what matters to Telluride.</div>
             </div>
           </div>
-        </div>
 
-        <!-- ── Sidebar ── -->
-        <div>
-          <!-- Questions Needing Answers -->
-          <div class="hb-sidebar" id="hbUnansweredSidebar">
-            <div class="hb-sidebar-title">Questions Needing Answers</div>
-            <div id="hbUnanswered">
-              <div class="hb-unanswered-item">Which figure is the official cost estimate?</div>
-              <div class="hb-unanswered-item">Has a wildlife study been submitted?</div>
-              <div class="hb-unanswered-item">What changed from the last draft?</div>
-              <div class="hb-unanswered-item">What is the actual deadline for written comments?</div>
-            </div>
-          </div>
+        </main>
+      </section>
 
-          <!-- Most Useful This Week -->
-          <div class="hb-sidebar">
-            <div class="hb-sidebar-title">Most Useful This Week</div>
-            <div id="hbMostUseful">
-              <div style="font-size:0.8rem;color:#aaa;padding:8px 0;">Loading...</div>
-            </div>
-          </div>
+      <div class="hb-footer">© 2026 Livable Telluride. All rights reserved.</div>
+    </div><!-- /.hb-container -->
+  </div><!-- /.hb-shell -->
 
-          <!-- Activity stats -->
-          <div class="hb-sidebar">
-            <div class="hb-sidebar-title">Activity</div>
-            <div style="font-size:0.82rem;color:#666;line-height:1.6;">
-              <div style="display:flex;justify-content:space-between;padding:4px 0;"><span>Posts today</span><strong id="hbStatToday">0</strong></div>
-              <div style="display:flex;justify-content:space-between;padding:4px 0;"><span>This week</span><strong id="hbStatWeek">0</strong></div>
-              <div style="display:flex;justify-content:space-between;padding:4px 0;"><span>Total discussions</span><strong id="hbStatTotal">0</strong></div>
-              <div style="display:flex;justify-content:space-between;padding:4px 0;"><span>Contributors</span><strong id="hbStatUsers">0</strong></div>
-            </div>
-          </div>
-
-          <!-- Community Guidelines -->
-          <div class="hb-guidelines">
-            <div class="hb-guidelines-title">Community Guidelines</div>
-            <p style="margin:4px 0;">Hub-Bub is a public civic forum for the Telluride region. All viewpoints are welcome. That said:</p>
-            <p style="margin:4px 0;">&#8226; <strong>Ask clear questions</strong> — good questions lead to better answers.</p>
-            <p style="margin:4px 0;">&#8226; <strong>Share sources</strong> — attach documents, link to meeting minutes, cite records.</p>
-            <p style="margin:4px 0;">&#8226; <strong>Attack ideas, not people</strong> — disagree vigorously but constructively.</p>
-            <p style="margin:4px 0;">&#8226; <strong>Propose solutions</strong> — practical ideas move the conversation forward.</p>
-            <p style="margin:4px 0;">&#8226; <strong>This is a public record</strong> — posts may be referenced in formal public comment.</p>
-          </div>
-        </div>
-      </div><!-- /.hb-grid -->
-
-    </div><!-- /.hb-wrap -->
-
-    <div class="copyright">© 2026 Livable Telluride. All rights reserved.</div>
-  </div><!-- /.page-body -->
-
+  <!-- hub-bub.js handles Firebase auth, post loading, and all interactions -->
   <script src="js/hub-bub.js"></script>
+
+  <!-- Sidebar filter wiring — syncs sidebar chips with hub-bub.js's hidden topic/mode bars -->
+  <script>
+  (function () {
+    // Sync auth strip with hidden auth bar state (hub-bub.js updates hbAuthStatus/hbAuthUser)
+    function syncAuthStrip() {
+      const hiddenStatus  = document.getElementById('hbAuthStatus');
+      const hiddenUser    = document.getElementById('hbAuthUser');
+      const hiddenLogout  = document.getElementById('hbLogoutBtn');
+      const stripMsg      = document.getElementById('hbAuthStripMsg');
+      const stripUser     = document.getElementById('hbAuthStripUser');
+      const stripLogout   = document.getElementById('hbAuthStripLogout');
+      if (!hiddenStatus || !stripMsg) return;
+      const isLoggedIn = hiddenUser && hiddenUser.style.display !== 'none';
+      if (isLoggedIn) {
+        stripMsg.style.display    = 'none';
+        stripUser.style.display   = '';
+        stripUser.textContent     = hiddenUser.textContent;
+        stripLogout.style.display = '';
+      } else {
+        stripMsg.style.display    = '';
+        stripUser.style.display   = 'none';
+        stripLogout.style.display = 'none';
+      }
+    }
+    // Poll auth state every second (hub-bub.js updates DOM asynchronously)
+    setInterval(syncAuthStrip, 1000);
+
+    // Sidebar topic chips → mirror clicks to hidden hbTopicBar
+    document.getElementById('hbSideTopics').addEventListener('click', function (e) {
+      const chip = e.target.closest('[data-side-topic]');
+      if (!chip) return;
+      const topic = chip.dataset.sideTopic;
+      // Update visual state
+      this.querySelectorAll('.hb-filter-chip').forEach(c => c.classList.toggle('active', c === chip));
+      // Fire matching hidden chip
+      const hidden = document.querySelector('[data-hb-topic="' + topic + '"]');
+      if (hidden) hidden.click();
+    });
+
+    // Sidebar mode chips → mirror clicks to hidden hbModeBar
+    document.getElementById('hbSideModes').addEventListener('click', function (e) {
+      const chip = e.target.closest('[data-side-mode]');
+      if (!chip) return;
+      const mode = chip.dataset.sideMode;
+      this.querySelectorAll('.hb-filter-chip').forEach(c => c.classList.toggle('active', c === chip));
+      const hidden = document.querySelector('[data-hb-mode="' + (mode === 'all' ? 'all' : mode) + '"]');
+      if (hidden) hidden.click();
+    });
+
+    // Clear button
+    document.getElementById('hbSideClear').addEventListener('click', function () {
+      // Reset sidebar visuals
+      document.querySelectorAll('#hbSideTopics .hb-filter-chip').forEach((c,i) => c.classList.toggle('active', i===0));
+      document.querySelectorAll('#hbSideModes .hb-filter-chip').forEach((c,i) => c.classList.toggle('active', i===0));
+      document.getElementById('hbSideSearch').value = '';
+      // Fire resets on hidden bars
+      const allTopic = document.querySelector('[data-hb-topic="all"]');
+      if (allTopic) allTopic.click();
+      const allMode = document.querySelector('[data-hb-mode="all"]');
+      if (allMode) allMode.click();
+    });
+
+    // Search field → filter visible posts by text
+    document.getElementById('hbSideSearch').addEventListener('input', function () {
+      const q = this.value.trim().toLowerCase();
+      document.querySelectorAll('#hbPostsFeed .hb-post').forEach(post => {
+        post.style.display = (!q || post.textContent.toLowerCase().includes(q)) ? '' : 'none';
+      });
+      // Update result count
+      const visible = document.querySelectorAll('#hbPostsFeed .hb-post:not([style*="none"])').length;
+      const rc = document.getElementById('hbResultCount');
+      if (rc) rc.textContent = visible;
+    });
+
+    // Sort select → keep hb-sort-opt buttons in sync (hub-bub.js watches those)
+    // (wired via onchange inline above)
+
+    // Update result count when posts change (MutationObserver)
+    const feed = document.getElementById('hbPostsFeed');
+    if (feed && window.MutationObserver) {
+      new MutationObserver(function () {
+        const posts = feed.querySelectorAll('.hb-post');
+        const rc = document.getElementById('hbResultCount');
+        const rl = document.getElementById('hbResultLabel');
+        if (rc) rc.textContent = posts.length || '—';
+        if (rl) rl.textContent = posts.length === 1 ? 'discussion' : 'discussions';
+      }).observe(feed, { childList: true, subtree: true });
+    }
+  })();
+  </script>
+
 </body>
 </html>
