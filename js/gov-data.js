@@ -15,18 +15,21 @@ const COUNTY_CIVICCLERK_IDS = {
   'Planning Commission and Board of County Commissioners Joint Work Session|2026-03-26': 971,
   'Joint Work Session|2026-03-26': 971,
   'Board of County Commissioners Meeting|2026-04-01': 882,
-  'Board of County Commissioners Meeting|2026-04-01': 882,
   'Board of County Commissioners Work Session|2026-04-08': 986,
   'Planning Commission|2026-04-02': 1025,
   'San Miguel County: Planning Commission|2026-04-02': 1025,
   // 2026-05-13 BOCC — partial-date fallback in getCountyAgendaLink will catch
   // any title variation as long as the date matches.
   'Board of County Commissioners Meeting|2026-05-13': 999,
+  // 2026-05-14 Planning Commission — agenda file 1704 confirmed
+  'Planning Commission Meeting|2026-05-14': 919,
+  'Planning Commission|2026-05-14': 919,
 };
 
 const COUNTY_CIVICCLERK_AGENDA_FILES = {
   1025: 1652,  // Planning Commission Apr 2 2026
   999:  1702,  // BOCC May 13 2026
+  919:  1704,  // Planning Commission May 14 2026
 };
 
 const COUNTY_CACHE_DATE = '2026-03-25';
@@ -115,8 +118,18 @@ const COUNTY_CACHED_DATA = [
     title: 'Board of County Commissioners Meeting',
     type: 'bocc',
     location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: null,
+    civicClerkId: 999,
     note: 'Agenda typically posted the Friday before.'
+  },
+  {
+    date: 'May 14, 2026',
+    time: '9:30 AM',
+    title: 'Planning Commission Meeting',
+    type: 'planning',
+    location: '305 W Colorado Ave, Telluride, CO 81435',
+    civicClerkId: 919,
+    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/919/files/agenda/1704',
+    note: 'Public hearings on land use applications and code amendments (footprint definitions, accelerated housing review). Work session on natural medicine code amendments.'
   },
   {
     date: 'May 20, 2026',
@@ -1365,7 +1378,8 @@ const ENTITY_LOGOS = {
   koto: '<img src="/logo/koto-fm-logo.webp" alt="KOTO Community Radio" style="width:100%;height:100%;object-fit:contain;">',
   wilkinson: '<img src="/logo/Wilkenson.png" alt="Wilkinson Public Library" style="width:100%;height:100%;object-fit:contain;">',
   airport: '<img src="/logo/Airport.png" alt="Telluride Regional Airport" style="width:100%;height:100%;object-fit:contain;">',
-  clubs: '<img src="/logo/clubs-icon.png" alt="Local Organizations" style="width:100%;height:100%;object-fit:contain;">'
+  clubs: '<img src="/logo/clubs-icon.png" alt="Local Organizations" style="width:100%;height:100%;object-fit:contain;">',
+  'telluride-com': '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1a3a5c,#2a5a8c);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Telluride.com">🎪</div>'
 };
 
 const TOWN_IMAGES = {

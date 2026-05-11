@@ -573,7 +573,8 @@
       const logo = m.entityLogo
         ? '<img class="meet-entity-logo" src="' + m.entityLogo + '" alt="' + (m.sourceLabel || '') + '" onerror="this.style.display=\'none\'">'
         : '';
-      const tag = m.category ? '<span class="meet-tag">' + m.category + '</span>' : '';
+      const tagLabel = /board/i.test(m.title || '') ? 'Board Meeting' : (m.category || '');
+      const tag = tagLabel ? '<span class="meet-tag">' + tagLabel + '</span>' : '';
       const summary = m.summary ? '<p class="meet-summary">' + m.summary + '</p>' : '';
       const loc = m.location ? '<span>📍 ' + m.location + '</span>' : '';
       const time = m.time ? '<span>🕐 ' + m.time + '</span>' : '';
@@ -682,7 +683,7 @@
                     sourceKey: key,
                     sourceLabel: m.sourceLabel || label,
                     entityLogo: logo,
-                    category: m.category || 'Meeting',
+                    category: /board/i.test(m.title || '') ? 'Board Meeting' : (m.category || 'Meeting'),
                     summary: (typeof getMeetingSummary === 'function' ? (getMeetingSummary(m) || '') : '')
                              || (m.description || ''),
                     location: m.location || '',

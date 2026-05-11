@@ -270,7 +270,7 @@ async function fetchCountyMeetings() {
         location: '',
         source: 'county',
         sourceLabel: 'San Miguel County',
-        category: 'Meeting',
+        category: /board/i.test(displayTitle || '') ? 'Board Meeting' : 'Meeting',
         canceled: isCanceled,
         hasAgenda: hasRealAgenda,
         agendaLink: isCanceled ? null : agendaLink
@@ -309,6 +309,7 @@ function getCountyCachedMeetings() {
           : COUNTY_CIVICCLERK_FALLBACK);
     const categoryLabel = m.type === 'planning'  ? 'Planning Commission'
                         : m.type === 'ssr'       ? 'SSR Roundtable'
+                        : /board/i.test(m.title || '') ? 'Board Meeting'
                         : 'Meeting';
 
     return {
@@ -445,7 +446,7 @@ function getSchoolMeetings() {
       location: m.location || '',
       source: 'school',
       sourceLabel: 'School District R-1',
-      category: m.special ? 'Special Meeting' : (/Work Session/i.test(m.title) ? 'Work Session' : 'Board Meeting'),
+      category: m.special ? 'Special Meeting' : 'Board Meeting',
       canceled: false,
       hasAgenda
     };
@@ -1944,6 +1945,52 @@ async function fetchOurayRidgwayEvents() {
   }
 }
 
+// ── Norwood Town Events / Notices (server-baked from sitemap) ──
+// Bot populates this every 6h via content-refresh.js Task 17.
+// Entries cover meetings, notices, community events, and town closures
+// extracted from norwoodtown.com/sitemap.xml dated URL slugs.
+const NORWOOD_EVENTS = [];
+
+function fetchNorwoodEvents() {
+  if (typeof NORWOOD_EVENTS !== 'undefined' && Array.isArray(NORWOOD_EVENTS) && NORWOOD_EVENTS.length > 0) {
+    return NORWOOD_EVENTS.map(ev => Object.assign({}, ev, {
+      pubDate: ev.pubDate ? new Date(ev.pubDate) : null
+    })).filter(ev => ev.pubDate && !isNaN(ev.pubDate.getTime()));
+  }
+  return [];
+}
+
+// ── Mountain Village Events (server-baked from sitemap + page scrape) ──
+// Bot populates this every 6h via content-refresh.js Task 18.
+// Non-governmental community events from townofmountainvillage.com,
+// with per-occurrence dates generated from the "When" section text.
+const MOUNTAIN_VILLAGE_EVENTS = [];
+
+function fetchMountainVillageEvents() {
+  if (typeof MOUNTAIN_VILLAGE_EVENTS !== 'undefined' && Array.isArray(MOUNTAIN_VILLAGE_EVENTS) && MOUNTAIN_VILLAGE_EVENTS.length > 0) {
+    return MOUNTAIN_VILLAGE_EVENTS.map(ev => Object.assign({}, ev, {
+      pubDate: ev.pubDate ? new Date(ev.pubDate) : null
+    })).filter(ev => ev.pubDate && !isNaN(ev.pubDate.getTime()));
+  }
+  return [];
+}
+
+// ── Telluride.com Events (server-baked from sitemap + JSON-LD / date lists) ──
+// Bot populates this every 6h via content-refresh.js Task 19.
+// Festivals, markets, and recurring events from telluride.com/event/*.
+// Multi-day events generate one entry per day; recurring events generate
+// one entry per listed date within the 60-day window.
+const TELLURIDE_COM_EVENTS = [];
+
+function fetchTelluridComEvents() {
+  if (typeof TELLURIDE_COM_EVENTS !== 'undefined' && Array.isArray(TELLURIDE_COM_EVENTS) && TELLURIDE_COM_EVENTS.length > 0) {
+    return TELLURIDE_COM_EVENTS.map(ev => Object.assign({}, ev, {
+      pubDate: ev.pubDate ? new Date(ev.pubDate) : null
+    })).filter(ev => ev.pubDate && !isNaN(ev.pubDate.getTime()));
+  }
+  return [];
+}
+
 // ── Fetch Telluride Elks Lodge Events ──
 // tellurideelks.org/Events runs on ClubRunner-style CMS — no public REST.
 // Each event is rendered as <div class="EventAndSpeakersItem"> with the
@@ -2021,6 +2068,9 @@ async function fetchAllNews() {
   const elksResults = await fetchElksEvents();
   const orayResults = await fetchOurayRidgwayEvents();
   const ouCountyResults = fetchOurayCountyEvents();
+  const norwoodEvtResults = fetchNorwoodEvents();
+  const mvEvtResults = fetchMountainVillageEvents();
+  const telluridComResults = fetchTelluridComEvents();
 
   // Hardcoded COMMUNITY_EVENTS (from the data array above)
   const hardcodedCommunity = [];
@@ -2065,6 +2115,9 @@ async function fetchAllNews() {
     ...elksResults,           // Telluride Elks Lodge
     ...orayResults,           // Ouray Ridgway Calendar (Localist)
     ...ouCountyResults,       // Ouray County (non-gov community events from iCal)
+    ...norwoodEvtResults,     // Norwood Town events/notices (sitemap)
+    ...mvEvtResults,          // Mountain Village community events (sitemap+pages)
+    ...telluridComResults,    // Telluride.com events (festivals, markets, etc.)
     ...communityResults,      // GitHub-issue community submissions
     ...hardcodedCommunity,    // Hardcoded COMMUNITY_EVENTS
     // Aggregators last — their copies drop out if an original has the event:
@@ -2365,6 +2418,7 @@ function renderBadge(item) {
   else if (item.source === 'ttimes') badgeClass = 'badge-ttimes';
   else if (item.source === 'wilkinson') badgeClass = 'badge-wilkinson';
   else if (item.source === 'koto') badgeClass = 'badge-koto';
+  else if (item.source === 'telluride-com') badgeClass = 'badge-county';
   badges.push(`<span class="source-badge ${badgeClass}">${item.sourceLabel}</span>`);
   if (item.typeLabel) badges.push(`<span class="category-tag">${item.typeLabel}</span>`);
   return badges.join('');

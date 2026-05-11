@@ -2980,6 +2980,425 @@ async function refreshEngageMeetings(existing = []) {
   }
 }
 
+// ══════════════════════════════════════════════════════════════════
+// ── Task 17: Norwood Town events/notices (sitemap approach) ──
+// ══════════════════════════════════════════════════════════════════
+// norwoodtown.com is a React SPA — the /public-notices page renders
+// nothing server-side. We use the sitemap instead: every dated entry
+// has the format https://www.norwoodtown.com/YYYY-MM-DD-slug-title,
+// from which we extract the date and derive a readable title.
+
+async function syncNorwoodEvents() {
+  console.log('\n🏔  Task 17: Syncing Norwood Town events (sitemap)...');
+  const SITEMAP_URL = 'https://www.norwoodtown.com/sitemap.xml';
+  let xml;
+  try {
+    const resp = await fetch(SITEMAP_URL);
+    if (!resp || resp.status !== 200) {
+      console.warn(`  Norwood sitemap HTTP ${resp ? resp.status : 'no response'}`);
+      return null;
+    }
+    xml = resp.text || '';
+  } catch (e) {
+    console.warn(`  Norwood sitemap fetch error: ${e.message}`);
+    return null;
+  }
+
+  const now = Date.now();
+  const past7  = now - 7  * 86400000;
+  const future = now + 90 * 86400000;
+
+  // Slug-title cleaning helpers
+  function slugToTitle(slug) {
+    return slug
+      .replace(/-/g, ' ')
+      .replace(/\b(nwc|nsd|rfp|ton|bocc)\b/gi, s => s.toUpperCase())
+      .replace(/\bmesa\b/gi, 'Mesa')
+      .replace(/\btoo\b/gi, 'too')
+      .replace(/\b\w/g, c => c.toUpperCase())
+      .trim();
+  }
+
+  function classifySlug(slug) {
+    const s = slug.toLowerCase();
+    if (/notice|bid|rfp|request.for.proposal/.test(s)) return 'Public Notice';
+    if (/closed|holiday/.test(s)) return 'Town Closure';
+    if (/music|festival|concert|fair|rodeo|pioneer|car.show/.test(s)) return 'Community Event';
+    if (/board|trustee|planning|commission|meeting|nwc/.test(s)) return 'Government Meeting';
+    return 'Community Event';
+  }
+
+  const dateSlugRe = /https?:\/\/www\.norwoodtown\.com\/(\d{4}-\d{2}-\d{2})-([a-z0-9][^<\s"]+)/gi;
+  const seen = new Set();
+  const events = [];
+  let match;
+
+  while ((match = dateSlugRe.exec(xml)) !== null) {
+    const dateStr = match[1];      // e.g. "2026-05-12"
+    const slug    = match[2];      // e.g. "nwc-meeting"
+    const eventDate = new Date(dateStr + 'T12:00:00');
+    const ms = eventDate.getTime();
+    if (isNaN(ms) || ms < past7 || ms > future) continue;
+    const key = dateStr + '|' + slug;
+    if (seen.has(key)) continue;
+    seen.add(key);
+
+    const title = slugToTitle(slug);
+    const category = classifySlug(slug);
+    const link = 'https://www.norwoodtown.com/' + dateStr + '-' + slug;
+
+    events.push({
+      title,
+      link,
+      description: '',
+      pubDate: eventDate.toISOString(),
+      source: 'norwood',
+      sourceLabel: 'Town of Norwood',
+      category,
+      location: 'Norwood, CO',
+      imageUrl: ''
+    });
+  }
+
+  events.sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
+  console.log(`  Norwood: ${events.length} events/notices from sitemap`);
+  return events;
+}
+
+// ══════════════════════════════════════════════════════════════════
+// ── Task 18: Mountain Village events (sitemap + page scrape) ──
+// ══════════════════════════════════════════════════════════════════
+// The RecurMe calendar on townofmountainvillage.com is AJAX-only;
+// static HTML returns no event links. We use the sitemap for slugs,
+// fetch each individual page for og:title/og:description/og:image,
+// and parse the human-readable "When" section to generate per-
+// occurrence Date objects within the 60-day window.
+
+const MV_GOV_SLUG_RE = /town-council|council-meeting|planning-commission|special-meeting|executive-session|work-session|advisory|certification|training|food-safety|food-protection|business-development|board-of/i;
+
+function parseMVWhenText(whenText, fromMs, toMs) {
+  const dates = [];
+  if (!whenText) return dates;
+  const text = whenText.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+
+  // Pattern 1: "The Nth weekday of each month" (e.g. "The third Wednesday of each month")
+  const ordinalMap = { first:0, second:1, third:2, fourth:3, fifth:4, last:-1 };
+  const weekdayMap = { sunday:0, monday:1, tuesday:2, wednesday:3, thursday:4, friday:5, saturday:6 };
+  const monthlyRe = /(?:the\s+)?(\w+)\s+(sunday|monday|tuesday|wednesday|thursday|friday|saturday)\s+of\s+each\s+month/i;
+  const mMatch = monthlyRe.exec(text);
+  if (mMatch) {
+    const ordinal = ordinalMap[mMatch[1].toLowerCase()];
+    const weekday = weekdayMap[mMatch[2].toLowerCase()];
+    if (ordinal !== undefined && weekday !== undefined) {
+      const cur = new Date(fromMs);
+      cur.setDate(1);
+      cur.setHours(12, 0, 0, 0);
+      // Generate for next 3 months
+      for (let mo = 0; mo < 3; mo++) {
+        const year = cur.getFullYear();
+        const month = cur.getMonth();
+        // Find the Nth weekday
+        let count = -1;
+        let day = new Date(year, month, 1);
+        let target = null;
+        if (ordinal >= 0) {
+          while (day.getMonth() === month) {
+            if (day.getDay() === weekday) {
+              count++;
+              if (count === ordinal) { target = new Date(day); break; }
+            }
+            day.setDate(day.getDate() + 1);
+          }
+        } else {
+          // "last" weekday of the month
+          day = new Date(year, month + 1, 0); // last day of month
+          while (day.getMonth() === month) {
+            if (day.getDay() === weekday) { target = new Date(day); break; }
+            day.setDate(day.getDate() - 1);
+          }
+        }
+        if (target) {
+          target.setHours(12, 0, 0, 0);
+          const ms = target.getTime();
+          if (ms >= fromMs && ms <= toMs) dates.push(target);
+        }
+        cur.setMonth(cur.getMonth() + 1);
+      }
+      return dates;
+    }
+  }
+
+  // Pattern 2: Weekly on a specific weekday (e.g. "Saturdays" / "Every Friday")
+  const weeklyRe = /(?:every\s+|each\s+)?(sunday|monday|tuesday|wednesday|thursday|friday|saturday)s?/i;
+  const wMatch = weeklyRe.exec(text);
+  if (wMatch) {
+    const weekday = weekdayMap[wMatch[1].toLowerCase()];
+    const cur = new Date(fromMs);
+    // Advance to first matching weekday
+    while (cur.getDay() !== weekday) cur.setDate(cur.getDate() + 1);
+    cur.setHours(12, 0, 0, 0);
+    while (cur.getTime() <= toMs) {
+      dates.push(new Date(cur));
+      cur.setDate(cur.getDate() + 7);
+    }
+    return dates;
+  }
+
+  // Pattern 3: Specific dates in text (Month DD, YYYY)
+  const specificRe = /(?:january|february|march|april|may|june|july|august|september|october|november|december)\s+\d{1,2},?\s+\d{4}/gi;
+  let sMatch;
+  while ((sMatch = specificRe.exec(text)) !== null) {
+    const d = new Date(sMatch[0]);
+    if (!isNaN(d.getTime())) {
+      d.setHours(12, 0, 0, 0);
+      const ms = d.getTime();
+      if (ms >= fromMs && ms <= toMs) dates.push(d);
+    }
+  }
+  return dates;
+}
+
+async function syncMountainVillageEvents() {
+  console.log('\n🏔  Task 18: Syncing Mountain Village events (sitemap+pages)...');
+  const SITEMAP_URL = 'https://www.townofmountainvillage.com/sitemap.xml';
+  let sitemapXml;
+  try {
+    const resp = await fetch(SITEMAP_URL);
+    if (!resp || resp.status !== 200) {
+      console.warn(`  MV sitemap HTTP ${resp ? resp.status : 'no response'}`);
+      return null;
+    }
+    sitemapXml = resp.text || '';
+  } catch (e) {
+    console.warn(`  MV sitemap fetch error: ${e.message}`);
+    return null;
+  }
+
+  // Extract event page slugs
+  const slugRe = /https?:\/\/www\.townofmountainvillage\.com\/explore\/events\/all-events\/([^/<">\s]+)\//gi;
+  const slugSet = new Set();
+  let m;
+  while ((m = slugRe.exec(sitemapXml)) !== null) {
+    const slug = m[1];
+    if (!MV_GOV_SLUG_RE.test(slug)) slugSet.add(slug);
+  }
+  const slugs = Array.from(slugSet);
+  console.log(`  MV: ${slugs.length} non-gov event slugs found`);
+
+  const now = Date.now();
+  const fromMs = now - 86400000;        // allow yesterday (in case of timezone)
+  const toMs   = now + 60 * 86400000;  // 60-day window
+
+  const events = [];
+  let fetched = 0;
+
+  for (const slug of slugs) {
+    const url = 'https://www.townofmountainvillage.com/explore/events/all-events/' + slug + '/';
+    let html;
+    try {
+      const resp = await fetch(url);
+      if (!resp || resp.status !== 200) continue;
+      html = resp.text || '';
+      fetched++;
+    } catch (e) {
+      continue;
+    }
+    // Throttle
+    await new Promise(r => setTimeout(r, 400));
+
+    // Extract metadata from og: tags
+    const ogTitle = (html.match(/<meta[^>]+property="og:title"[^>]+content="([^"]+)"/i) || [])[1]
+                 || (html.match(/<meta[^>]+content="([^"]+)"[^>]+property="og:title"/i) || [])[1]
+                 || slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    const ogDesc  = (html.match(/<meta[^>]+property="og:description"[^>]+content="([^"]+)"/i) || [])[1]
+                 || (html.match(/<meta[^>]+content="([^"]+)"[^>]+property="og:description"/i) || [])[1]
+                 || '';
+    const ogImage = (html.match(/<meta[^>]+property="og:image"[^>]+content="([^"]+)"/i) || [])[1]
+                 || (html.match(/<meta[^>]+content="([^"]+)"[^>]+property="og:image"/i) || [])[1]
+                 || '';
+
+    // Extract "When" section
+    const whenMatch = html.match(/When<\/h[123456]>([\s\S]{0,600}?)(?:<h[123456]|<\/section|<\/div)/i)
+                   || html.match(/When<\/strong>([\s\S]{0,400}?)(?:<strong|<\/p|<br\s*\/?>)/i);
+    const whenText = whenMatch ? whenMatch[1] : '';
+
+    const occurrences = parseMVWhenText(whenText, fromMs, toMs);
+    if (occurrences.length === 0) continue;
+
+    const title = decodeHtmlEntities(ogTitle).trim();
+    const description = smartTruncate(decodeHtmlEntities(ogDesc).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(), EVENT_DESC_MAX);
+    const link = url;
+
+    for (const d of occurrences) {
+      events.push({
+        title,
+        link,
+        description,
+        pubDate: d.toISOString(),
+        source: 'mv',
+        sourceLabel: 'Mountain Village',
+        category: 'Community Event',
+        location: 'Mountain Village, CO',
+        imageUrl: ogImage
+      });
+    }
+  }
+
+  events.sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
+  console.log(`  Mountain Village: ${events.length} event occurrences from ${fetched} pages`);
+  return events;
+}
+
+// ══════════════════════════════════════════════════════════════════
+// ── Task 19: Telluride.com events (sitemap + JSON-LD / date list) ──
+// ══════════════════════════════════════════════════════════════════
+// telluride.com is a ProcessWire CMS. We fetch the sitemap to get
+// event slugs, then visit each page: first try JSON-LD Event schema
+// (multi-day festivals have startDate/endDate), then fall back to
+// parsing individual <li> date entries in the "u-featured-bullets"
+// section (recurring events like Farmers Market list each date).
+
+async function syncTelluridComEvents() {
+  console.log('\n🎪  Task 19: Syncing Telluride.com events (sitemap+pages)...');
+  const SITEMAP_URL = 'https://www.telluride.com/sitemap.xml';
+  let sitemapXml;
+  try {
+    const resp = await fetch(SITEMAP_URL);
+    if (!resp || resp.status !== 200) {
+      console.warn(`  Telluride.com sitemap HTTP ${resp ? resp.status : 'no response'}`);
+      return null;
+    }
+    sitemapXml = resp.text || '';
+  } catch (e) {
+    console.warn(`  Telluride.com sitemap fetch error: ${e.message}`);
+    return null;
+  }
+
+  // Extract /event/SLUG URLs (not /events/, /festivals-events/ etc.)
+  const slugRe = /https?:\/\/www\.telluride\.com\/event\/([^/<">\s]+)/gi;
+  const urlSet = new Set();
+  let m;
+  while ((m = slugRe.exec(sitemapXml)) !== null) {
+    urlSet.add('https://www.telluride.com/event/' + m[1]);
+  }
+  const urls = Array.from(urlSet);
+  console.log(`  Telluride.com: ${urls.length} event URLs in sitemap`);
+
+  const now = Date.now();
+  const fromMs = now - 86400000;
+  const toMs   = now + 60 * 86400000;
+
+  const events = [];
+  let fetched = 0;
+
+  for (const url of urls) {
+    let html;
+    try {
+      const resp = await fetch(url);
+      if (!resp || resp.status !== 200) continue;
+      html = resp.text || '';
+      fetched++;
+    } catch (e) {
+      continue;
+    }
+    await new Promise(r => setTimeout(r, 250));
+
+    // Metadata
+    const ogTitle = (html.match(/<meta[^>]+property="og:title"[^>]+content="([^"]+)"/i) || [])[1]
+                 || (html.match(/<meta[^>]+content="([^"]+)"[^>]+property="og:title"/i) || [])[1]
+                 || '';
+    const ogDesc  = (html.match(/<meta[^>]+property="og:description"[^>]+content="([^"]+)"/i) || [])[1]
+                 || (html.match(/<meta[^>]+content="([^"]+)"[^>]+property="og:description"/i) || [])[1]
+                 || '';
+    const ogImage = (html.match(/<meta[^>]+property="og:image"[^>]+content="([^"]+)"/i) || [])[1]
+                 || (html.match(/<meta[^>]+content="([^"]+)"[^>]+property="og:image"/i) || [])[1]
+                 || '';
+
+    if (!ogTitle) continue;
+    const title       = decodeHtmlEntities(ogTitle).trim();
+    const description = smartTruncate(decodeHtmlEntities(ogDesc).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(), EVENT_DESC_MAX);
+
+    // Strategy 1: JSON-LD Event schema
+    const ldBlocks = [];
+    const ldRe = /<script[^>]+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi;
+    let ldMatch;
+    while ((ldMatch = ldRe.exec(html)) !== null) ldBlocks.push(ldMatch[1]);
+
+    let handled = false;
+    for (const block of ldBlocks) {
+      let ld;
+      try { ld = JSON.parse(block); } catch (_) { continue; }
+      const items = Array.isArray(ld) ? ld : [ld];
+      for (const item of items) {
+        if (!item || item['@type'] !== 'Event') continue;
+        const start = item.startDate ? new Date(item.startDate) : null;
+        const end   = item.endDate   ? new Date(item.endDate)   : null;
+        if (!start || isNaN(start.getTime())) continue;
+        const location = (item.location && (item.location.name || item.location.address)) || 'Telluride, CO';
+        // If multi-day, generate one entry per day
+        if (end && !isNaN(end.getTime()) && end > start) {
+          const cur = new Date(start);
+          cur.setHours(12, 0, 0, 0);
+          while (cur <= end) {
+            const ms = cur.getTime();
+            if (ms >= fromMs && ms <= toMs) {
+              events.push({
+                title, link: url, description,
+                pubDate: cur.toISOString(),
+                source: 'telluride-com', sourceLabel: 'Telluride.com',
+                category: 'Community Event',
+                location, imageUrl: ogImage
+              });
+            }
+            cur.setDate(cur.getDate() + 1);
+          }
+        } else {
+          start.setHours(12, 0, 0, 0);
+          const ms = start.getTime();
+          if (ms >= fromMs && ms <= toMs) {
+            events.push({
+              title, link: url, description,
+              pubDate: start.toISOString(),
+              source: 'telluride-com', sourceLabel: 'Telluride.com',
+              category: 'Community Event',
+              location, imageUrl: ogImage
+            });
+          }
+        }
+        handled = true;
+        break;
+      }
+      if (handled) break;
+    }
+    if (handled) continue;
+
+    // Strategy 2: HTML <li> date list (recurring events e.g. Farmers Market)
+    // Look for a "Dates" heading followed by <ul>/<li> items
+    const datesSection = html.match(/(?:Dates?|Schedule)<\/[^>]+>([\s\S]{0,3000}?)(?:<h[123456]|<\/section)/i);
+    if (!datesSection) continue;
+    const listItems = datesSection[1].match(/<li[^>]*>([\s\S]*?)<\/li>/gi) || [];
+    for (const li of listItems) {
+      const rawDate = li.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+      const d = new Date(rawDate);
+      if (isNaN(d.getTime())) continue;
+      d.setHours(12, 0, 0, 0);
+      const ms = d.getTime();
+      if (ms < fromMs || ms > toMs) continue;
+      events.push({
+        title, link: url, description,
+        pubDate: d.toISOString(),
+        source: 'telluride-com', sourceLabel: 'Telluride.com',
+        category: 'Community Event',
+        location: 'Telluride, CO', imageUrl: ogImage
+      });
+    }
+  }
+
+  events.sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
+  console.log(`  Telluride.com: ${events.length} event occurrences from ${fetched} pages`);
+  return events;
+}
+
 async function main() {
   console.log('═══════════════════════════════════════════════');
   console.log('  Telluride Gov Hub — Content Refresh');
@@ -3194,6 +3613,39 @@ async function main() {
     }
   }
 
+
+  // ── 17. Norwood Town Events / Notices (sitemap) ──
+  const newNorwoodEvts = await syncNorwoodEvents();
+  if (newNorwoodEvts !== undefined && newNorwoodEvts !== null) {
+    const existingNE = extractJsArray(govHubSrc, 'NORWOOD_EVENTS') || [];
+    if (JSON.stringify(newNorwoodEvts) !== JSON.stringify(existingNE)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'NORWOOD_EVENTS', newNorwoodEvts, false);
+      changed = true;
+      console.log(`  NORWOOD_EVENTS updated (was ${existingNE.length}, now ${newNorwoodEvts.length})`);
+    }
+  }
+
+  // ── 18. Mountain Village Events (sitemap + page scrape) ──
+  const newMVEvents = await syncMountainVillageEvents();
+  if (newMVEvents !== undefined && newMVEvents !== null) {
+    const existingMV = extractJsArray(govHubSrc, 'MOUNTAIN_VILLAGE_EVENTS') || [];
+    if (JSON.stringify(newMVEvents) !== JSON.stringify(existingMV)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'MOUNTAIN_VILLAGE_EVENTS', newMVEvents, false);
+      changed = true;
+      console.log(`  MOUNTAIN_VILLAGE_EVENTS updated (was ${existingMV.length}, now ${newMVEvents.length})`);
+    }
+  }
+
+  // ── 19. Telluride.com Events (sitemap + JSON-LD / date list) ──
+  const newTelluridComEvents = await syncTelluridComEvents();
+  if (newTelluridComEvents !== undefined && newTelluridComEvents !== null) {
+    const existingTC = extractJsArray(govHubSrc, 'TELLURIDE_COM_EVENTS') || [];
+    if (JSON.stringify(newTelluridComEvents) !== JSON.stringify(existingTC)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'TELLURIDE_COM_EVENTS', newTelluridComEvents, false);
+      changed = true;
+      console.log(`  TELLURIDE_COM_EVENTS updated (was ${existingTC.length}, now ${newTelluridComEvents.length})`);
+    }
+  }
 
   // ── 14. Sherbino Theater Events ──
   const newSherbinoEvents = await syncSherbinoEvents();
