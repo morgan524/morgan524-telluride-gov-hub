@@ -749,10 +749,10 @@
        sample data on any failure. ──────────────────────────────────── */
     function loadLiveEvents() {
       const dataScript = document.createElement('script');
-      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v2';
+      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=' + new Date().toISOString().slice(0,10).replace(/-/g,'');
       dataScript.onload = () => {
         const s = document.createElement('script');
-        s.src = 'https://livabletelluride.org/js/data-only.js?v=v2';
+        s.src = 'https://livabletelluride.org/js/data-only.js?v=' + new Date().toISOString().slice(0,10).replace(/-/g,'');
         s.onload = () => {
           try {
             const live = [];
