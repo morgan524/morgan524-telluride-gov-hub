@@ -1326,7 +1326,7 @@ const ENTITY_LOGOS = {
   school: '<img src="/logo/School%20District%20Telluride.png" alt="Telluride School District" style="width:100%;height:100%;object-fit:contain;">',
   smart: '<img src="/logo/SMART.png" alt="SMART" style="width:100%;height:100%;object-fit:contain;">',
   fire: '<img src="/logo/Telluride Fire.png" alt="Telluride Fire Department" style="width:100%;height:100%;object-fit:contain;">',
-  med: '<img src="/logo/Medical.jpeg" alt="Telluride Medical Center" style="width:100%;height:100%;object-fit:contain;">',
+  med: '<img src="/logo/Telluride%20Hospital%20Dist.jpeg" alt="Telluride Medical Center" style="width:100%;height:100%;object-fit:contain;">',
   norwood: '<img src="/logo/Norwood%20Town.jpeg" alt="Town of Norwood" style="width:100%;height:100%;object-fit:contain;">',
   ophir: '<img src="/logo/Ophir.jpeg" alt="Town of Ophir" style="width:100%;height:100%;object-fit:contain;">',
   ttimes: '<img src="/logo/TT%20Logo.png" alt="The Telluride Times" style="width:100%;height:100%;object-fit:contain;">',
