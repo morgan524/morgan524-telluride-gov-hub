@@ -302,6 +302,19 @@
     .btn-action:hover { background: rgba(47, 122, 95, 0.20); }
     .btn-action.primary { background: var(--forest); color: #fff; border-color: var(--forest); }
     .btn-action.primary:hover { background: var(--forest-soft); }
+    .btn-action.comment { background: var(--gold-soft); color: #7a5c10; border-color: rgba(181,138,44,0.35); }
+    .btn-action.comment:hover { background: rgba(181,138,44,0.26); }
+
+    /* Comment deadline note */
+    .comment-deadline {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+      padding: 6px 10px;
+      background: var(--bg-cream);
+      border-radius: 6px;
+      border-left: 3px solid var(--gold);
+    }
 
     /* Empty / loading state */
     .empty {
@@ -520,6 +533,30 @@
       }).join('');
     }
 
+    /* ── Comment email map ── */
+    const COMMENT_MAP = {
+      telluride: { email: 'townclerk@telluride.gov',                      deadline: 'Written comments must be received by Wednesday at noon prior to the meeting.' },
+      county:    { email: 'bocc@sanmiguelcountyco.gov',                   deadline: 'Written comments must be received by Monday at 4:00 pm prior to the meeting.' },
+      'county-planning': { email: 'planningcommission@sanmiguelcountyco.gov', deadline: 'Written comments must be received by Monday at 4:00 pm prior to the meeting.' },
+      mv:        { email: 'council@mtnvillage.org',                       deadline: 'Written comments must be received by Thursday prior to the meeting.' },
+      'mv-planning': { email: 'planning@mtnvillage.org',                  deadline: 'Written comments must be received by Thursday prior to the meeting.' },
+      fire:      { email: 'pdasaro@telluridefire.com',                    deadline: 'Written comments should be submitted 48 hours before the meeting.' },
+      med:       { email: 'wcrossland@tellmed.org',                       deadline: 'Written comments should be submitted 48 hours before the meeting.' },
+      norwood:   { email: 'cross@norwoodtown.com',                        deadline: 'Written comments should be submitted 48 hours before the meeting.' },
+      ophir:     { email: 'clerk@ophir.us',                               deadline: 'Written comments should be submitted 48 hours before the meeting.' },
+      airport:   { email: 'info@tellurideairport.com',                    deadline: 'Written comments may be submitted to the Airport Authority prior to the meeting.' },
+      smrha:     { email: 'admin@smrha.org',                              deadline: 'Written comments should be submitted prior to the meeting.' },
+    };
+
+    function commentInfo(m) {
+      const title = (m.title || '').toLowerCase();
+      let key = m.sourceKey;
+      // Detect planning/design-review sub-type for county and MV
+      if (key === 'county' && /planning|design review/.test(title)) key = 'county-planning';
+      if (key === 'mv'     && /planning|design review/.test(title)) key = 'mv-planning';
+      return COMMENT_MAP[key] || null;
+    }
+
     /* ── Render meeting cards ── */
     function fmtDateBadge(iso) {
       const d = new Date(iso + 'T00:00:00');
@@ -546,12 +583,24 @@
       const recordBtn = m.recordingUrl
         ? '<a class="btn-action" href="' + m.recordingUrl + '" target="_blank" rel="noopener">Recording</a>'
         : '';
+
+      // Comment button
+      const ci = commentInfo(m);
+      let commentBtn = '';
+      let deadlineNote = '';
+      if (ci) {
+        const subject = encodeURIComponent('Written comments: ' + (m.title || 'Meeting') + ' — ' + (m.date || ''));
+        commentBtn = '<a class="btn-action comment" href="mailto:' + ci.email + '?subject=' + subject + '">✉️ Submit Comment</a>';
+        deadlineNote = '<div class="comment-deadline">📅 ' + ci.deadline + '</div>';
+      }
+
       return '<article class="meet-card">'
            + '<div class="meet-card-head">' + dateBadge
            + '<div class="meet-info">' + tag + '<h2 class="meet-title">' + m.title + '</h2></div>'
            + logo + '</div>'
            + summary + meta
-           + '<div class="meet-actions">' + agendaBtn + recordBtn + '</div>'
+           + '<div class="meet-actions">' + agendaBtn + recordBtn + commentBtn + '</div>'
+           + deadlineNote
            + '</article>';
     }
 
