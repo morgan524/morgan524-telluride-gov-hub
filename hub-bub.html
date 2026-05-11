@@ -106,6 +106,40 @@
       box-shadow: var(--lt-shadow-soft);
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .hb-use-cases {
+      margin-top: auto;
+      padding-top: 28px;
+      display: grid;
+      gap: 10px;
+      position: relative;
+      z-index: 1;
+    }
+    .hb-use-case {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 13px 15px;
+      background: rgba(23,61,52,0.055);
+      border-radius: 14px;
+      font-size: 0.91rem;
+      color: var(--lt-ink);
+      font-weight: 550;
+      line-height: 1.4;
+    }
+    .hb-uc-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(33,68,60,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95em;
+      margin-top: 1px;
     }
     .hb-intro-main::after {
       content: "";
@@ -840,6 +874,20 @@
           <div class="hb-eyebrow">Hub-Bub civic forum</div>
           <h1 id="hub-bub-heading">Find the local conversation without digging through the noise.</h1>
           <p>Use Hub-Bub to ask a precise question, share a public document, summarize a meeting, or propose a practical solution.</p>
+          <div class="hb-use-cases">
+            <div class="hb-use-case">
+              <span class="hb-uc-icon">💬</span>
+              <span>Ask a precise question about any local decision and get answers from community members who were there</span>
+            </div>
+            <div class="hb-use-case">
+              <span class="hb-uc-icon">📄</span>
+              <span>Share agendas, CORA records, and public documents with plain-language context</span>
+            </div>
+            <div class="hb-use-case">
+              <span class="hb-uc-icon">🗳</span>
+              <span>Propose a practical next step and see who agrees — organized by topic, meeting, or issue</span>
+            </div>
+          </div>
         </div>
 
         <aside class="hb-account-panel" aria-label="Create a free account">
