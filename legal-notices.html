@@ -101,55 +101,6 @@
     .filter-opt:hover { background: var(--bg-hero); color: var(--text-primary); }
     .filter-opt.active { background: var(--forest); color: #fff; }
 
-    /* Following card */
-    .following-card {
-      background: #fff;
-      border: 1px solid var(--border-soft);
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: var(--shadow-card);
-    }
-    .following-card-heading {
-      font-size: 0.72rem;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: var(--text-muted);
-      margin: 0 0 12px;
-    }
-    .following-list { display: flex; flex-direction: column; gap: 6px; }
-    .following-pill {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      background: rgba(47, 122, 95, 0.08);
-      border: 1px solid rgba(47, 122, 95, 0.15);
-      border-radius: 10px;
-      color: var(--forest);
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 600;
-      transition: background 0.13s;
-    }
-    .following-pill:hover { background: rgba(47, 122, 95, 0.16); }
-    .following-pill svg { width: 13px; height: 13px; flex-shrink: 0; opacity: 0.85; }
-    .following-add {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 12px;
-      background: #fff;
-      border: 1px dashed var(--border-soft);
-      border-radius: 10px;
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 600;
-      transition: color 0.13s, border-color 0.13s;
-    }
-    .following-add:hover { color: var(--forest); border-color: var(--forest); }
-
     /* Notice card grid */
     .notice-list {
       display: grid;
@@ -376,6 +327,105 @@
       color: var(--text-muted);
     }
 
+    /* Address modal */
+    .addr-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(20,35,30,0.52);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .addr-modal-overlay.open { display: flex; }
+    .addr-modal {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 24px 72px rgba(20,40,34,0.20);
+      width: 100%;
+      max-width: 440px;
+      padding: 28px;
+      position: relative;
+    }
+    .addr-modal-close {
+      position: absolute;
+      top: 14px; right: 16px;
+      border: none;
+      background: none;
+      font-size: 1.4rem;
+      line-height: 1;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 8px;
+    }
+    .addr-modal-close:hover { background: var(--bg-hero); }
+    .addr-modal h2 {
+      margin: 0 0 6px;
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      color: var(--text-primary);
+    }
+    .addr-modal p { margin: 0 0 18px; font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; }
+    .addr-modal-field { margin-bottom: 14px; }
+    .addr-modal-field label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .addr-modal-field input {
+      width: 100%;
+      height: 44px;
+      padding: 0 14px;
+      border: 1.5px solid var(--border-soft);
+      border-radius: 12px;
+      background: var(--bg-warm);
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .addr-modal-field input:focus {
+      border-color: var(--forest);
+      box-shadow: 0 0 0 4px rgba(33,68,60,0.10);
+      background: #fff;
+    }
+    .addr-modal-hint { font-size: 0.78rem; color: var(--text-muted); margin-top: 5px; }
+    .addr-modal-submit {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background: var(--forest);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 6px;
+      transition: background 0.15s;
+    }
+    .addr-modal-submit:hover { background: #2a5347; }
+    .addr-modal-clear {
+      display: block;
+      width: 100%;
+      margin-top: 8px;
+      padding: 10px;
+      background: none;
+      border: 1px solid var(--border-soft);
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+    .addr-modal-clear:hover { color: var(--text-primary); border-color: rgba(33,68,60,0.3); }
+
     /* Responsive */
     @media (max-width: 1100px) {
       .page-wrap { grid-template-columns: 220px 1fr; gap: 20px; }
@@ -428,24 +478,6 @@
         <div class="filter-group" id="chipRow"><!-- populated by JS --></div>
       </div>
 
-      <div class="following-card">
-        <p class="following-card-heading">Following</p>
-        <div class="following-list">
-          <a class="following-pill" href="#">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Within 0.5 mi of my address
-          </a>
-          <a class="following-pill" href="#">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-            Land use &amp; permits
-          </a>
-          <a class="following-pill" href="#">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            Public hearings — Town of Telluride
-          </a>
-          <a class="following-add" href="#">+ Save current filter</a>
-        </div>
-      </div>
     </aside>
 
     <!-- Main content -->
@@ -458,6 +490,25 @@
   </main>
 
 
+  <!-- Address modal -->
+  <div class="addr-modal-overlay" id="addrModalOverlay" role="dialog" aria-modal="true" aria-labelledby="addrModalTitle">
+    <div class="addr-modal">
+      <button class="addr-modal-close" id="addrModalClose" aria-label="Close">×</button>
+      <h2 id="addrModalTitle">
+        <svg style="width:18px;height:18px;vertical-align:-3px;margin-right:6px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Notices near you
+      </h2>
+      <p>Enter your address and we'll show legal notices filed within 0.5 miles of your property.</p>
+      <div class="addr-modal-field">
+        <label for="addrInput">Your address</label>
+        <input type="text" id="addrInput" placeholder="e.g. 123 Main St, Telluride, CO" autocomplete="street-address">
+        <div class="addr-modal-hint">Include street, city, and state for best results.</div>
+      </div>
+      <button class="addr-modal-submit" id="addrModalSubmit" type="button">Show nearby notices</button>
+      <button class="addr-modal-clear" id="addrModalClear" type="button">Clear address &amp; show all</button>
+    </div>
+  </div>
+
   <script>
     /* ── Filter taxonomy — matches the live LEGAL_NOTICES `filterTag` values
        exactly. The richer taxonomy in the design (Public Hearings, Bids/RFPs,
@@ -465,6 +516,8 @@
        once notices have richer tagging. ─────────────────────────────────── */
     const FILTERS = [
       { key: 'all',           label: 'All Notices' },
+      { key: 'land-use',      label: 'Land Use',                  special: 'land-use' },
+      { key: 'nearby',        label: 'Within 0.5 mi of my address', special: 'nearby' },
       { key: 'public-entity', label: 'Public Entity' },
       { key: 'water-court',   label: 'Water Court' },
       { key: 'housing',       label: 'Housing' },
@@ -474,6 +527,7 @@
       { key: 'utilities',     label: 'Utilities' }
     ];
     let activeFilter = 'all';
+    let userAddress = '';      /* set when user enters address for nearby filter */
 
     /* ── Helpers ── */
     function escapeHtml(s) {
@@ -617,11 +671,20 @@
     /* ── Filter render + apply ── */
     function renderChips() {
       const row = document.getElementById('chipRow');
-      row.innerHTML = FILTERS.map(f =>
-        '<button class="filter-opt' + (f.key === activeFilter ? ' active' : '') + '" data-filter="' + f.key + '">' + f.label + '</button>'
-      ).join('');
+      row.innerHTML = FILTERS.map(f => {
+        const isActive = f.key === activeFilter;
+        const nearbyLabel = (f.special === 'nearby' && userAddress)
+          ? 'Within 0.5 mi: ' + userAddress.split(',')[0]
+          : f.label;
+        return '<button class="filter-opt' + (isActive ? ' active' : '') + '" data-filter="' + f.key + '">' + nearbyLabel + '</button>';
+      }).join('');
       row.querySelectorAll('.filter-opt').forEach(btn => {
         btn.addEventListener('click', () => {
+          const f = FILTERS.find(x => x.key === btn.dataset.filter);
+          if (f && f.special === 'nearby') {
+            openAddressModal();
+            return;
+          }
           activeFilter = btn.dataset.filter;
           renderChips();
           applyFilter();
@@ -631,10 +694,66 @@
     function applyFilter() {
       document.querySelectorAll('#noticeList .notice-card').forEach(card => {
         const tag = card.getAttribute('data-filter-tag') || '';
-        card.style.display = (activeFilter === 'all' || tag === activeFilter) ? '' : 'none';
+        let show = false;
+        if (activeFilter === 'all') {
+          show = true;
+        } else if (activeFilter === 'land-use') {
+          /* land-use notices tagged public-entity or ordinance that mention land/permit/zoning */
+          show = tag === 'land-use' || tag === 'ordinance' || tag === 'public-entity';
+        } else if (activeFilter === 'nearby') {
+          /* if address set, show all (geocoding is client-side future work); otherwise show all */
+          show = true;
+        } else {
+          show = tag === activeFilter;
+        }
+        card.style.display = show ? '' : 'none';
       });
     }
     renderChips();
+
+    /* ── Address modal ── */
+    function openAddressModal() {
+      document.getElementById('addrModalOverlay').classList.add('open');
+      const inp = document.getElementById('addrInput');
+      inp.value = userAddress;
+      setTimeout(() => inp.focus(), 80);
+    }
+    function closeAddressModal() {
+      document.getElementById('addrModalOverlay').classList.remove('open');
+    }
+
+    /* Wire modal buttons after DOM is ready */
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('addrModalClose').addEventListener('click', closeAddressModal);
+      document.getElementById('addrModalOverlay').addEventListener('click', function (e) {
+        if (e.target === this) closeAddressModal();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeAddressModal();
+      });
+
+      document.getElementById('addrModalSubmit').addEventListener('click', function () {
+        const val = document.getElementById('addrInput').value.trim();
+        if (!val) return;
+        userAddress = val;
+        activeFilter = 'nearby';
+        closeAddressModal();
+        renderChips();
+        applyFilter();
+      });
+
+      document.getElementById('addrInput').addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') document.getElementById('addrModalSubmit').click();
+      });
+
+      document.getElementById('addrModalClear').addEventListener('click', function () {
+        userAddress = '';
+        activeFilter = 'all';
+        closeAddressModal();
+        renderChips();
+        applyFilter();
+      });
+    });
 
     /* ── Live data: load gov-hub.js, prune expired, render cards ── */
     function loadLiveNotices() {
