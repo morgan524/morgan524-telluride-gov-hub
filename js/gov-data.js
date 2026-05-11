@@ -701,9 +701,9 @@ const RIDGWAY_COUNCIL_URL = 'https://townofridgway.colorado.gov/i-want-to/ridgwa
 const RIDGWAY_CACHE_DATE = '2026-05-11';
 
 const RIDGWAY_CACHED_DATA = [
-  // ── Town Council (2nd Tuesday of each month, 6:00 PM) ──
+  // ── Town Council (2nd Wednesday of each month, 6:00 PM) ──
   {
-    date: 'May 12, 2026',
+    date: 'May 13, 2026',
     time: '6:00 PM',
     title: 'Ridgway Town Council Regular Meeting',
     board: 'council',
@@ -711,7 +711,7 @@ const RIDGWAY_CACHED_DATA = [
     note: 'Agenda typically posted the Friday before.'
   },
   {
-    date: 'June 9, 2026',
+    date: 'June 10, 2026',
     time: '6:00 PM',
     title: 'Ridgway Town Council Regular Meeting',
     board: 'council',
@@ -1358,7 +1358,7 @@ const DEEP_DIVE_PAGES = [
 const ENTITY_LOGOS = {
   telluride: '<img src="/logo/Telluride%20Official.png" alt="Town of Telluride" style="width:100%;height:100%;object-fit:contain;">',
   county: '<img src="/logo/San Miguel County.png" alt="San Miguel County" style="width:100%;height:100%;object-fit:contain;">',
-  mv: '<img src="https://townofmountainvillage.com/site/themes/vwtheme/build/img/logos/town-of-mountain-village-logo.png" alt="Mountain Village" loading="lazy">',
+  mv: '<img src="/logo/Mountain%20village%20Town.jpg" alt="Mountain Village" style="width:100%;height:100%;object-fit:contain;">',
   school: '<img src="/logo/School%20District%20Telluride.png" alt="Telluride School District" style="width:100%;height:100%;object-fit:contain;">',
   smart: '<img src="/logo/SMART.png" alt="SMART" style="width:100%;height:100%;object-fit:contain;">',
   fire: '<img src="/logo/Telluride Fire.png" alt="Telluride Fire Department" style="width:100%;height:100%;object-fit:contain;">',
@@ -1384,7 +1384,7 @@ const ENTITY_LOGOS = {
 
 const TOWN_IMAGES = {
   norwood: '/logo/Norwood%20Town.jpeg',
-  mv: '/logo/Mountain%20Village.png',
+  mv: '/logo/Mountain%20village%20Town.jpg',
   telluride: '/logo/Telluride.png',
   ridgway: '/logo/Ridgway%20Town.png',
   ophir: '/logo/Ophir.jpeg',
