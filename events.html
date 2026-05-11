@@ -748,99 +748,85 @@
        sample EVENTS with COMMUNITY_EVENTS + KOTO_COMMUNITY_EVENTS +
        WILKINSON_EVENTS and re-render. Falls back silently to the
        sample data on any failure. ──────────────────────────────────── */
-    function loadLiveEvents() {
-      const dataScript = document.createElement('script');
-      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=' + new Date().toISOString().slice(0,10).replace(/-/g,'') + '';
-      dataScript.onload = () => {
-        const s = document.createElement('script');
-        s.src = 'https://livabletelluride.org/js/data-only.js?v=' + new Date().toISOString().slice(0,10).replace(/-/g,'') + '';
-        s.onload = () => {
-          try {
-            const live = [];
-            const townFromLocation = (loc='') => {
-              const l = loc.toLowerCase();
-              if (l.includes('mountain village') || /mv/.test(l)) return 'mv';
-              if (l.includes('norwood')) return 'norwood';
-              if (l.includes('ridgway')) return 'ridgway';
-              if (l.includes('ouray')) return 'ouray';
-              if (l.includes('ophir')) return 'ophir';
-              if (l.includes('placerville')) return 'placerville';
-              if (l.includes('nucla') || l.includes('naturita')) return 'nucla-naturita';
-              return 'telluride';
-            };
-            const pushEvent = (e, sourceLabel) => {
-              if (!e || !e.title) return;
-              const start = e.pubDate || e.start_date || e.date || '';
-              const dateStr = start ? new Date(start).toISOString().slice(0,10) : '';
-              if (!dateStr) return;
-              // Only include events in the next 30 days
-              const dt = new Date(dateStr + 'T00:00:00');
-              const today = new Date(); today.setHours(0,0,0,0);
-              const diff = (dt - today) / 86400000;
-              if (diff < -1 || diff > 30) return;
-              live.push({
-                title: e.title,
-                date: dateStr,
-                time: (start && start.includes('T')) ? new Date(start).toLocaleTimeString([], {hour:'numeric', minute:'2-digit'}) : '',
-                location: e.location || '',
-                town: townFromLocation(e.location || ''),
-                summary: (e.description || '').replace(/<[^>]+>/g,'').slice(0, 600),
-                source: sourceLabel || e.sourceLabel || e.source || 'Community',
-                href: e.link || e.href || '#',
-                img: e.imageUrl || e.img || ''
-              });
-            };
-            // ── Source priority — originals first, aggregators last ──
-            // When the same event appears in multiple feeds (Wilkinson posts an
-            // event → KOTO re-lists it on the community calendar → TT picks it
-            // up), we want the canonical-origin source to win. The dedup pass
-            // below is first-seen-wins, so the merge order encodes priority.
-            if (typeof WILKINSON_EVENTS !== 'undefined') WILKINSON_EVENTS.forEach(e => pushEvent(e, 'Wilkinson Library'));
-            if (typeof TJC_EVENTS !== 'undefined') TJC_EVENTS.forEach(e => pushEvent(e, 'Telluride Jewish Community'));
-            if (typeof COMMUNITY_EVENTS !== 'undefined') COMMUNITY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Community'));
-            if (typeof KOTO_COMMUNITY_EVENTS !== 'undefined') KOTO_COMMUNITY_EVENTS.forEach(e => pushEvent(e, 'KOTO'));
+     function loadLiveEvents() {
+       // Load data-only.js directly — contains KOTO/Wilkinson/Community events.
+       // Skipping gov-data.js (142K of meeting/logo data not needed for events page).
+       const s = document.createElement('script');
+       s.src = 'https://livabletelluride.org/js/data-only.js?v=' + new Date().toISOString().slice(0,10).replace(/-/g,'');
+       s.onload = () => {
+           try {
+             const live = [];
+             const townFromLocation = (loc='') => {
+               const l = loc.toLowerCase();
+               if (l.includes('mountain village') || /mv/.test(l)) return 'mv';
+               if (l.includes('norwood')) return 'norwood';
+               if (l.includes('ridgway')) return 'ridgway';
+               if (l.includes('ouray')) return 'ouray';
+               if (l.includes('ophir')) return 'ophir';
+               if (l.includes('placerville')) return 'placerville';
+               if (l.includes('nucla') || l.includes('naturita')) return 'nucla-naturita';
+               return 'telluride';
+             };
+             const pushEvent = (e, sourceLabel) => {
+               if (!e || !e.title) return;
+               const start = e.pubDate || e.start_date || e.date || '';
+               const dateStr = start ? new Date(start).toISOString().slice(0,10) : '';
+               if (!dateStr) return;
+               // Only include events in the next 30 days
+               const dt = new Date(dateStr + 'T00:00:00');
+               const today = new Date(); today.setHours(0,0,0,0);
+               const diff = (dt - today) / 86400000;
+               if (diff < -1 || diff > 30) return;
+               live.push({
+                 title: e.title,
+                 date: dateStr,
+                 time: (start && typeof start === 'string' && start.includes('T')) ? new Date(start).toLocaleTimeString([], {hour:'numeric', minute:'2-digit'}) : '',
+                 location: e.location || '',
+                 town: townFromLocation(e.location || ''),
+                 summary: (e.description || '').replace(/<[^>]+>/g,'').slice(0, 600),
+                 source: sourceLabel || e.sourceLabel || e.source || 'Community',
+                 href: e.link || e.href || '#',
+                 img: e.imageUrl || e.img || ''
+               });
+             };
+             // Source priority: originals first, aggregators last
+             if (typeof WILKINSON_EVENTS !== 'undefined') WILKINSON_EVENTS.forEach(e => pushEvent(e, 'Wilkinson Library'));
+             if (typeof COMMUNITY_EVENTS !== 'undefined') COMMUNITY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Community'));
+             if (typeof KOTO_COMMUNITY_EVENTS !== 'undefined') KOTO_COMMUNITY_EVENTS.forEach(e => pushEvent(e, 'KOTO'));
 
-            // ── Dedup across sources, two-key match per event ──
-            // Some sources phrase the same event slightly differently (KOTO
-            // adds bilingual subtitle, Wilkinson adds room location). Two
-            // keys make the match resilient: a 12-char title-prefix and a
-            // 3-word bag (stopwords stripped), each paired with the date.
-            // If either key is already seen, the event is a duplicate.
-            function buildKeys(item) {
-              const norm = (item.title || '').toLowerCase()
-                .replace(/[–—]/g, ' ')   // en/em dash → space
-                .replace(/[^a-z0-9 ]+/g, ' ')      // strip punctuation
-                .replace(/\s+/g, ' ').trim();
-              const dateKey = item.date || '';
-              const prefixKey = norm.replace(/ /g, '').slice(0, 12) + '|' + dateKey;
-              const wordsKey = norm.split(' ')
-                .filter(w => w && !/^(the|a|an|of|at|in|on|for|with|to)$/.test(w))
-                .slice(0, 3).join('-') + '|' + dateKey;
-              return [prefixKey, wordsKey];
-            }
-            const seenKeys = new Set();
-            const deduped = live.filter(item => {
-              const keys = buildKeys(item);
-              if (keys.some(k => seenKeys.has(k))) return false;
-              keys.forEach(k => seenKeys.add(k));
-              return true;
-            });
+             // Dedup across sources — two keys per event (12-char prefix + 3-word bag), each with date
+             function buildKeys(item) {
+               const norm = (item.title || '').toLowerCase()
+                 .replace(/[\u2013\u2014]/g, ' ')
+                 .replace(/[^a-z0-9 ]+/g, ' ')
+                 .replace(/\s+/g, ' ').trim();
+               const dateKey = item.date || '';
+               const prefixKey = norm.replace(/ /g, '').slice(0, 12) + '|' + dateKey;
+               const wordsKey = norm.split(' ')
+                 .filter(w => w && !/^(the|a|an|of|at|in|on|for|with|to)$/.test(w))
+                 .slice(0, 3).join('-') + '|' + dateKey;
+               return [prefixKey, wordsKey];
+             }
+             const seenKeys = new Set();
+             const deduped = live.filter(item => {
+               const keys = buildKeys(item);
+               if (keys.some(k => seenKeys.has(k))) return false;
+               keys.forEach(k => seenKeys.add(k));
+               return true;
+             });
 
-            if (deduped.length > 0) {
-              EVENTS.length = 0;
-              deduped.sort((a,b) => a.date.localeCompare(b.date));
-              deduped.forEach(e => EVENTS.push(e));
-              render();
-            }
-          } catch (err) { console.warn('loadLiveEvents failed:', err); }
-        };
-        s.onerror = () => console.warn('Could not load /js/data-only.js for live events');
-        document.head.appendChild(s);
-      };
-      dataScript.onerror = () => console.warn('Could not load gov-data.js');
-      document.head.appendChild(dataScript);
-    }
-    loadLiveEvents();
+             if (deduped.length > 0) {
+               EVENTS.length = 0;
+               deduped.sort((a,b) => a.date.localeCompare(b.date));
+               deduped.forEach(e => EVENTS.push(e));
+               render();
+             }
+           } catch (err) { console.warn('loadLiveEvents failed:', err); }
+       };
+       s.onerror = () => console.warn('Could not load data-only.js for live events');
+       document.head.appendChild(s);
+     }
+     loadLiveEvents();
 
   </script>
 </body>

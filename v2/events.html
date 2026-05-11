@@ -748,12 +748,11 @@
        WILKINSON_EVENTS and re-render. Falls back silently to the
        sample data on any failure. ──────────────────────────────────── */
     function loadLiveEvents() {
-      const dataScript = document.createElement('script');
-      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=' + new Date().toISOString().slice(0,10).replace(/-/g,'');
-      dataScript.onload = () => {
-        const s = document.createElement('script');
-        s.src = 'https://livabletelluride.org/js/data-only.js?v=' + new Date().toISOString().slice(0,10).replace(/-/g,'');
-        s.onload = () => {
+      // Load data-only.js directly — contains KOTO/Wilkinson/Community events.
+      // Skipping gov-data.js (142K of meeting/logo data not needed for events page).
+      const s = document.createElement('script');
+      s.src = 'https://livabletelluride.org/js/data-only.js?v=' + new Date().toISOString().slice(0,10).replace(/-/g,'');
+      s.onload = () => {
           try {
             const live = [];
             const townFromLocation = (loc='') => {
@@ -780,7 +779,7 @@
               live.push({
                 title: e.title,
                 date: dateStr,
-                time: (start && start.includes('T')) ? new Date(start).toLocaleTimeString([], {hour:'numeric', minute:'2-digit'}) : '',
+                time: (start && typeof start === 'string' && start.includes('T')) ? new Date(start).toLocaleTimeString([], {hour:'numeric', minute:'2-digit'}) : '',
                 location: e.location || '',
                 town: townFromLocation(e.location || ''),
                 summary: (e.description || '').replace(/<[^>]+>/g,'').slice(0, 600),
@@ -795,7 +794,6 @@
             // up), we want the canonical-origin source to win. The dedup pass
             // below is first-seen-wins, so the merge order encodes priority.
             if (typeof WILKINSON_EVENTS !== 'undefined') WILKINSON_EVENTS.forEach(e => pushEvent(e, 'Wilkinson Library'));
-            if (typeof TJC_EVENTS !== 'undefined') TJC_EVENTS.forEach(e => pushEvent(e, 'Telluride Jewish Community'));
             if (typeof COMMUNITY_EVENTS !== 'undefined') COMMUNITY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Community'));
             if (typeof KOTO_COMMUNITY_EVENTS !== 'undefined') KOTO_COMMUNITY_EVENTS.forEach(e => pushEvent(e, 'KOTO'));
 
@@ -833,11 +831,8 @@
             }
           } catch (err) { console.warn('loadLiveEvents failed:', err); }
         };
-        s.onerror = () => console.warn('Could not load /js/data-only.js for live events');
-        document.head.appendChild(s);
-      };
-      dataScript.onerror = () => console.warn('Could not load gov-data.js');
-      document.head.appendChild(dataScript);
+      s.onerror = () => console.warn('Could not load /js/data-only.js for live events');
+      document.head.appendChild(s);
     }
     loadLiveEvents();
 
