@@ -2112,7 +2112,7 @@ async function syncHumaneSocietyAnimals() {
 // exposes a JSON API for the community-calendar category. Fetch
 // every 6h, filter to events starting in the next 30 days.
 
-const KOTO_TRIBE_API = 'https://koto.org/wp-json/tribe/events/v1/events/?categories=community-calendar&per_page=50';
+const KOTO_TRIBE_API = 'https://koto.org/wp-json/tribe/events/v1/events/?categories=community-calendar&per_page=100';
 
 function decodeHtmlEntities(s) {
   return String(s || '')
