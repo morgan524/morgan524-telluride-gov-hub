@@ -152,11 +152,37 @@
     .notice-strip {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 14px;
       padding: 12px 22px;
       background: var(--bg-paper);
       border-bottom: 1px solid var(--border-soft);
-      flex-wrap: wrap;
+    }
+    .notice-strip-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .notice-strip-logo {
+      flex-shrink: 0;
+      width: 72px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      overflow: hidden;
+      background: transparent;
+    }
+    .notice-strip-logo img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .notice-strip-logo svg {
+      width: 48px;
+      height: 48px;
     }
     .type-pill {
       display: inline-flex;
@@ -171,20 +197,7 @@
       letter-spacing: 0.04em;
     }
     .type-pill svg { width: 14px; height: 14px; }
-    .entity-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 12px;
-      background: rgba(33, 68, 60, 0.06);
-      border: 1px solid var(--border-soft);
-      color: var(--text-secondary);
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 600;
-    }
     .deadline-flag {
-      margin-left: auto;
       display: inline-flex;
       align-items: center;
       gap: 5px;
@@ -557,15 +570,21 @@
           + '</aside>';
       }
 
+      const logoHtml = (typeof LEGAL_ENTITY_LOGOS !== 'undefined' && LEGAL_ENTITY_LOGOS[notice.entityLogo])
+        ? '<div class="notice-strip-logo">' + LEGAL_ENTITY_LOGOS[notice.entityLogo] + '</div>'
+        : '<div class="notice-strip-logo" style="font-size:0.72rem;font-weight:600;color:var(--text-secondary);text-align:center;word-break:break-word;">' + escapeHtml(notice.entity || '') + '</div>';
+
       return '<article class="notice-card' + (hasAddress ? '' : ' no-location')
         + '" data-filter-tag="' + escapeHtml(notice.filterTag || '') + '">'
         +  '<div class="notice-strip">'
-        +    '<span class="type-pill">'
-        +      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>'
-        +      ' ' + escapeHtml(notice.type || 'Notice')
-        +    '</span>'
-        +    '<span class="entity-pill">' + entityEmoji(notice.entityClass) + '  ' + escapeHtml(notice.entity || '') + '</span>'
-        +    flagHtml
+        +    '<div class="notice-strip-left">'
+        +      '<span class="type-pill">'
+        +        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>'
+        +        ' ' + escapeHtml(notice.type || 'Notice')
+        +      '</span>'
+        +      flagHtml
+        +    '</div>'
+        +    logoHtml
         +  '</div>'
         +  '<div class="notice-body">'
         +    '<div>'
