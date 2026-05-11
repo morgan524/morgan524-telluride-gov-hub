@@ -1441,7 +1441,7 @@ const DEEP_DIVE_PAGES = [
 ];
 
 const ENTITY_LOGOS = {
-  telluride: '<img src="/logo/Tellurie%202.png" alt="Town of Telluride" style="width:100%;height:100%;object-fit:contain;">',
+  telluride: '<img src="/logo/Telluride%20Town.png" alt="Town of Telluride" style="width:100%;height:100%;object-fit:contain;">',
   county: '<img src="/logo/San Miguel County.png" alt="San Miguel County" style="width:100%;height:100%;object-fit:contain;">',
   mv: '<img src="/logo/Mountain%20village%20Town.jpg" alt="Mountain Village" style="width:100%;height:100%;object-fit:contain;">',
   school: '<img src="/logo/School%20District%20Telluride.png" alt="Telluride School District" style="width:100%;height:100%;object-fit:contain;">',
