@@ -52,6 +52,7 @@ const EVENT_DESC_MAX = 150;
 
 const MAX_AGENDA_TEXT = 15000;
 const NEWS_MAX_AGE_DAYS = 14;
+const GOV_NEWS_MAX_AGE_DAYS = 45;  // Gov agencies publish less frequently than TT
 
 // ── Agenda Sources ──
 const AGENDA_SOURCES = {
@@ -769,9 +770,12 @@ async function refreshNews(existingTtArticles = []) {
   const existingByHref = new Map(existingTtArticles.map(a => [a.href, a]));
   const articles = [];
   const cutoff = new Date(Date.now() - NEWS_MAX_AGE_DAYS * 86400000);
+  const govCutoff = new Date(Date.now() - GOV_NEWS_MAX_AGE_DAYS * 86400000);
 
-  // Government RSS feeds
+  // Government RSS feeds — use longer 45-day window (gov agencies publish infrequently)
   for (const feed of NEWS_FEEDS) {
+    // Skip "Website News" — just site-management notices ("Stay Connected", etc.)
+    if (feed.category === 'Website News') continue;
     try {
       const resp = await fetch(feed.url);
       if (resp.status !== 200) continue;
@@ -781,14 +785,26 @@ async function refreshNews(existingTtArticles = []) {
 
       for (const item of arr) {
         const pubDate = new Date(item.pubDate || '');
-        if (pubDate < cutoff) continue;
+        if (pubDate < govCutoff) continue;
+        // Skip meeting announcements — covered in Gov-Hub
+        const title = (item.title || '').trim();
+        if (/meeting/i.test(title) && /\d{1,2}[\/-]\d{1,2}|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec/i.test(title)) continue;
+        const enclosure = item.enclosure;
+        const rawImg = (enclosure?.$.url || item['media:thumbnail']?.$.url || '').replace(/[?&]resize=[^&]*/i, '');
+        // Also try to extract image from description HTML
+        let descImg = rawImg;
+        if (!descImg) {
+          const imgMatch = (item.description || '').match(/<img[^>]+src=["']([^"']+)["']/i);
+          if (imgMatch) descImg = imgMatch[1];
+        }
         articles.push({
-          title: (item.title || '').trim(),
+          title,
           source: feed.source,
           date: formatDate(pubDate),
-          newsTopic: classifyNewsTopic(item.title || '', item.description || ''),
-          copy: (item.description || '').replace(/<[^>]+>/g, '').trim().slice(0, 300),
-          href: (item.link || '').trim()
+          newsTopic: classifyNewsTopic(title, item.description || ''),
+          copy: (item.description || '').replace(/<[^>]+>/g, ' ').replace(/&amp;/g,'&').replace(/&nbsp;/g,' ').replace(/\s+/g,' ').trim().slice(0, 300),
+          href: (item.link || '').trim(),
+          img: descImg
         });
       }
     } catch (e) {

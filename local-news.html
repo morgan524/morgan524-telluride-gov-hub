@@ -930,9 +930,16 @@
 
             // ── Collect from sources, then filter, then dedup by title ──
             const live = [];
-            TELLURIDE_TIMES_ARTICLES.slice(0, 30).forEach(a => live.push({
-              title: a.title, source: a.source, sourceKey: 'ttimes',
-              date: a.date, summary: a.copy, href: a.href, img: a.img,
+            // Map source name → sourceKey for correct logo lookup
+            const SOURCE_KEY_MAP = {
+              'Telluride Times': 'ttimes',
+              'Town of Telluride': 'telluride',
+              'San Miguel County': 'county'
+            };
+            TELLURIDE_TIMES_ARTICLES.slice(0, 50).forEach(a => live.push({
+              title: a.title, source: a.source,
+              sourceKey: SOURCE_KEY_MAP[a.source] || 'ttimes',
+              date: a.date, summary: a.copy, href: a.href, img: a.img || '',
               category: a.newsTopic || 'Community'
             }));
             if (typeof KOTO_NEWSCASTS !== 'undefined') {
