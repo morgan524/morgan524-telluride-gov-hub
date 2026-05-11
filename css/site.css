@@ -2315,13 +2315,15 @@
     #tab-meetings .qr-btn { font-size: 0.88rem; padding: 6px 14px; }
     #tab-meetings .qr-btn .qr-count { font-size: 0.81rem; }
 
-    /* ── Agenda link: posted (green bg) vs not-posted (grey) ── */
+    /* ── Agenda link: dark green = agenda available; light = not yet posted ── */
     .agenda-link.agenda-posted {
-      background: var(--forest-soft);
-      color: #f0f0f0;
+      background: var(--forest);
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.18);
     }
     .agenda-link.agenda-posted:hover {
-      background: var(--forest);
+      background: var(--dark-forest, #1a332c);
       color: #fff;
     }
 
