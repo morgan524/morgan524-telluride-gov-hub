@@ -59,7 +59,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Registration is open for Telluride Rotary's annual Hikeathon fundraiser, which aims to raise over $30,000 this year. Several local nonprofits including Eco-Action Partners, Telluride Ski and Snowboard Club, and Telluride Jewish Community have formed teams to participate and raise funds for their own organizations as well.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_13dee22d-ca0a-4c26-aa6e-dc9b48237c1e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/98/f982f29f-8daa-47c5-b33c-bd221752003d/69fa5a362344c.image.jpg?resize=300%2C225"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/98/f982f29f-8daa-47c5-b33c-bd221752003d/69fa5a362344c.image.jpg"
   },
   {
     title: "NTSB gathering details on Frontier Airlines evacuation after plane hit and killed person in Denver",
@@ -70,7 +70,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A Frontier Airlines plane hit and killed someone on the runway at Denver International Airport during takeoff, causing an engine fire and forcing an emergency evacuation of 224 passengers and 7 crew members. Twelve passengers suffered minor injuries during the evacuation via emergency slides, with passengers reporting panic as smoke filled the cabin.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_9b365202-fe0b-598d-ada5-f27d878bbeaf.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/b3/bb30350f-f401-55b1-8ef1-47a01fa5d399/69ffaae0caae4.image.jpg?resize=300%2C201"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/b3/bb30350f-f401-55b1-8ef1-47a01fa5d399/69ffaae0caae4.image.jpg"
   },
   {
     title: "A Frontier plane hits a pedestrian during takeoff at Denver airport",
@@ -92,7 +92,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Ron Allred and Jim Wells bought majority interest in the ski area in 1978 and developed Mountain Village, the airport, and gondola over 25 years, transforming Telluride from a boarded-up mining town into a world-class resort. Allred's daughter Kristi and author David Strauss are writing \"Telluride: A Legacy of Legacies,\" interviewing locals who helped build the community from mid-1970s to 2000.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_c38b03a3-2122-4822-a291-a7b55317bab0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/c5/0c550539-158f-416e-8854-85112f921ef3/69fe061ba1cd9.image.jpg?resize=300%2C225"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/c5/0c550539-158f-416e-8854-85112f921ef3/69fe061ba1cd9.image.jpg"
   },
   {
     title: "Shop students show off",
@@ -103,7 +103,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Middle school shop students recently completed their knick-knack shelves and wooden spoons. They are now starting to build wooden crates.",
     claudeSummary: false,
     href: "https://www.telluridenews.com/norwood_post/article_a544195c-3dec-4f7d-b1af-6ec2608ca417.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/cc/7cc40952-4413-4d9f-b281-4ff3348cf439/69fa5e574d670.image.jpg?resize=300%2C225"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/cc/7cc40952-4413-4d9f-b281-4ff3348cf439/69fa5e574d670.image.jpg"
   },
   {
     title: "California, Nevada and Arizona announce temporary plan to save water from the Colorado River",
@@ -114,7 +114,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Three lower Colorado River states announced emergency water cuts - Nevada and Arizona reducing use by one-third, California by 13% - as drought and overuse threaten Lake Powell and Lake Mead reservoir levels critical for hydropower and water delivery.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_137054fe-c04a-5681-b79b-c1e2088b3c63.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/f6/6f606ce2-4ca6-5126-92f8-60d57f784962/69fe3bc080d49.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/f6/6f606ce2-4ca6-5126-92f8-60d57f784962/69fe3bc080d49.image.jpg"
   },
   {
     title: "The greatest heron",
@@ -125,7 +125,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Male great blue herons start building nests to attract females, who then help complete construction before laying 2-6 pale blue eggs that hatch after 29 days. The fluffy gray chicks grow quickly into North America's largest herons, standing up to 4.5 feet tall with 6+ foot wingspans.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_1deaa175-5c6a-4156-a2e5-b36e9b739931.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/e6/2e633678-6370-4512-92b5-0b1765a25217/69fa58a638daf.image.jpg?resize=300%2C400"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/e6/2e633678-6370-4512-92b5-0b1765a25217/69fa58a638daf.image.jpg"
   },
   {
     title: "Man charged in Colorado firebomb attack on demonstrators to plead guilty to murder",
@@ -136,7 +136,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A man who threw Molotov cocktails at demonstrators on Boulder's Pearl Street Mall last year, killing an 82-year-old woman and injuring a dozen others, is set to plead guilty to murder in state court. He still faces federal hate crime charges and potential death penalty for what prosecutors say was a planned attack targeting people perceived as connected to Israel.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_b30b6aed-46e8-5a99-9fb6-c77bfd748db0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg"
   },
   {
     title: "Telluride Town Council considers amendments to emergency fire restrictions",
@@ -147,7 +147,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Town Council is looking at changing fire ban procedures to let the town manager declare restrictions immediately instead of waiting for a council meeting and vote. The current process can cause delays when coordinating with the county and Mountain Village, who can implement bans faster than Telluride's required council approval.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_74780234-41a7-4a60-84a3-5278e7238f9a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/1c/c1c690df-53af-497b-8b1b-0fd059c75885/69fc4d657a23b.image.jpg?resize=300%2C142"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/1c/c1c690df-53af-497b-8b1b-0fd059c75885/69fc4d657a23b.image.jpg"
   },
   {
     title: "We’re in this together",
@@ -158,7 +158,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A new county survey shows concerning mental health trends locally - 38% feel lonely, 55% had poor mental health days recently, and 33% report excessive drinking versus 20% statewide. The county hired Cole Cooper as its first Behavioral Health Projects Lead and is planning a walk-in behavioral health hub at Society Turn, while residents can already access free therapy sessions through a voter-approved fund by calling Tri-County Health Network.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/norwood_post/article_312e7171-4fbd-48b5-b190-d35e4439e8dc.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/fe/dfeb60ac-288d-4fe5-b2f2-528992d509e8/69fa6216b3098.image.jpg?resize=300%2C400"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/fe/dfeb60ac-288d-4fe5-b2f2-528992d509e8/69fa6216b3098.image.jpg"
   },
   {
     title: "The man who firebombed Colorado demonstrators in 2025, killing 1, is sentenced to life in prison",
@@ -191,7 +191,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Ah Haa's \"May as You Can\" program is back for its third year, offering art classes throughout May on a pay-what-you-can basis to remove financial barriers. Classes range from ceramics and textile mending to family workshops and cooking, with some students paying extra to cover costs for others who attend free.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/arts_and_entertainment/article_526ca757-3b6a-4ed3-a83a-0727b1d76e55.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3e/c3e7b346-f9ad-487f-80f8-a7c72a40a371/69fc4a58b71bc.image.jpg?resize=300%2C400"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3e/c3e7b346-f9ad-487f-80f8-a7c72a40a371/69fc4a58b71bc.image.jpg"
   },
   {
     title: "Lawrence de Bivort",
@@ -202,7 +202,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Lawrence de Bivort, who moved to Telluride with his wife Eileen about ten years ago, has passed away. He was an avid outdoorsman who climbed fourteeners and explored the Southwest, and spent years writing a book on human cultural evolution. He's survived by his son Benjamin, sister Carlyle, and two nieces and nephews.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/obituaries/article_0fde58b6-845c-47a4-af53-0733fb89b0bb.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/92/b92397ab-fccb-4ed9-9d43-2eb1808a2886/69fb527eae2f8.image.jpg?resize=300%2C321"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/92/b92397ab-fccb-4ed9-9d43-2eb1808a2886/69fb527eae2f8.image.jpg"
   },
   {
     title: "A late spring snowstorm slams Colorado, closing schools and disrupting commuters",
@@ -213,7 +213,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Late spring storm dumped over 2 feet of snow in mountain areas like Estes Park, while Denver got about 6 inches and closed schools Wednesday. The heavy, wet snow caused some crashes and downed tree branches, but temperatures are expected to climb back into the 70s by weekend.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_20728449-67c6-551b-8b24-b8ff7c5c661d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/4d/a4df46ad-e4d3-546a-8382-f9aba6b82c82/69fb2b5bd52db.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/4d/a4df46ad-e4d3-546a-8382-f9aba6b82c82/69fb2b5bd52db.image.jpg"
   },
   {
     title: "THS left out of soccer playoffs",
@@ -224,7 +224,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Telluride High girls soccer finished 4-9-1 and missed the Class 2A state playoffs after falling from 20th to 21st in the rankings. The Lady Miners lost 4-1 to Ridgway at home on Senior Night, then dropped a crucial 2-1 road game to Bayfield that sealed their fate.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/sports/article_2f31b789-d089-42b7-9b6c-940afdff77e1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/7d/e7d83b35-cab8-4f44-a707-1078ade52a57/69f9ac3ebf6ec.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/7d/e7d83b35-cab8-4f44-a707-1078ade52a57/69f9ac3ebf6ec.image.jpg"
   },
   {
     title: "Hard work and perseverance",
@@ -235,7 +235,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Darcy Bray graduated last weekend from Colorado Mountain College with her associate’s degree, an achievement she’s been working toward throughout the entirety of her time in high school. Her dedication, perseverance and hard work have truly paid off. Congratulations, Darcy!",
     claudeSummary: false,
     href: "https://www.telluridenews.com/norwood_post/article_f36f75c5-78e6-4fbc-9dd5-51535697d60e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/46/046406e1-b0ed-45f3-88a5-f87d2570e7d3/69fa5cd6c404f.image.jpg?resize=300%2C400"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/46/046406e1-b0ed-45f3-88a5-f87d2570e7d3/69fa5cd6c404f.image.jpg"
   },
   {
     title: "ADL reports a sharp drop in US antisemitic incidents in 2025, driven by a steep fall on campuses",
@@ -246,7 +246,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The ADL reported antisemitic incidents dropped 33% nationwide in 2025 to 6,274 cases, largely due to fewer campus incidents. However, physical assaults hit a record high of 203, and three people were killed in antisemitic attacks, including shootings in DC and a firebombing in Boulder.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_fd5eb38f-870a-5931-a281-fd46c98217ff.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/15/6151511f-d420-5af3-ba21-a347150d4cf9/69fb2ebbc7405.image.jpg?resize=300%2C192"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/15/6151511f-d420-5af3-ba21-a347150d4cf9/69fb2ebbc7405.image.jpg"
   },
   {
     title: "Legals and Public Notices for May 7-13, 2026",
@@ -268,7 +268,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Indigenous communities observed a day to honor missing and murdered relatives, with many wearing red to show support. Native Americans face violence at twice the rate of the general population, with nearly 1,500 active federal cases of missing Native Americans recorded by the FBI. Recent federal initiatives include expanded FBI operations and a new Interior Department task force, though implementation of earlier legislation has been slow.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_ae44c01b-f686-57b2-ae9f-0e1627a4f326.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ee/4ee20253-fa90-5e52-b3d6-f0a5aa554c5d/69f96e150e3e0.image.jpg?resize=300%2C226"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ee/4ee20253-fa90-5e52-b3d6-f0a5aa554c5d/69f96e150e3e0.image.jpg"
   },
   {
     title: "Keeping traditions alive",
@@ -279,7 +279,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Bill Wilson of Knight Canyon Outfitters in Norwood was named \"Outfitter of the Year\" by the Colorado Outfitters Association for his three generations of family business and dedication to ethical hunting. Wilson and other industry leaders say hunting faces growing threats from urban voters and state policies, warning that restrictions could devastate rural economies that depend on hunting revenue.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_f166c0dc-a754-43a1-9784-9facd4674405.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/43/c43e569f-37f2-4543-9cff-45bfa117cf81/69fa5f7853b7c.image.jpg?resize=300%2C315"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/43/c43e569f-37f2-4543-9cff-45bfa117cf81/69fa5f7853b7c.image.jpg"
   },
   {
     title: "Spring plans meet snow in Denver as a late storm could be the season's biggest",
@@ -290,7 +290,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Denver's facing what could be its biggest snowstorm of the season with up to 8 inches expected through Wednesday, following the city's driest winter on record. School districts canceled classes, utilities put crews on standby, and the Rockies postponed games as temperatures plunged overnight.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_df4d81e5-c1f0-558f-a1f4-290dae406595.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/8f/58f263e8-16a8-5781-af16-5d8758db5bc8/69fa387863ba5.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/8f/58f263e8-16a8-5781-af16-5d8758db5bc8/69fa387863ba5.image.jpg"
   },
   {
     title: "CHALKBOARD for the week of May 7-13",
@@ -301,7 +301,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The weekly birthday list includes Ashley LaUond on May 8th, followed by several other community members through May 13th. Regular town meetings continue with the Town Board meeting the second Wednesday at 7 p.m. and School Board on the third Wednesday at 6 p.m. The Farmers Market runs Thursdays 2-6 p.m. through mid-October, and various community services like the food pantry, senior meals, and pickleball continue their regular schedules.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/the_norwood_post/article_2ef5bd86-8794-4816-8ed3-fc76bbd27167.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8b/f8b47ece-f18b-4c64-891d-3517aa2b0690/69fa6fb7bfb2a.image.png?resize=300%2C183"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8b/f8b47ece-f18b-4c64-891d-3517aa2b0690/69fa6fb7bfb2a.image.png"
   },
   {
     title: "You're invited to the groundbreaking of the new Norwood School",
@@ -312,7 +312,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Norwood's holding a groundbreaking ceremony for their new school, funded by a $50+ million state BEST Grant and local bonds. The new campus will house pre-K through 12th grade on 19 acres where the old disc golf course was, replacing the current aging facilities.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/the_norwood_post/article_c205d989-d94a-4e50-bc98-dd81947a31bd.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/03/c0304c73-0b0c-48e4-a100-80e11b1b2499/69fa6eca08f58.image.jpg?resize=300%2C169"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/03/c0304c73-0b0c-48e4-a100-80e11b1b2499/69fa6eca08f58.image.jpg"
   },
   {
     title: "Town of Norwood awarded funding for Norwood Hill improvements",
@@ -323,7 +323,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Norwood secured $1.25 million in state and federal funding to improve safety on Norwood Hill, which has been a longtime concern due to steep grades, sharp curves, and accident history. The town won't have to contribute any local matching funds, and work could start before the 2029 timeline if ready.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/the_norwood_post/article_dad1ad7d-73e3-41de-b2b1-24757153a694.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/7c/57c98200-de4b-4962-86c7-46d1750abfdc/69fa6d93b89e4.image.jpg?resize=300%2C191"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/7c/57c98200-de4b-4962-86c7-46d1750abfdc/69fa6d93b89e4.image.jpg"
   },
   {
     title: "Appreciation for teachers, staff",
@@ -345,7 +345,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Trump administration is suing Denver over its 1989 assault weapons ban, claiming it violates Second Amendment rights. Denver's mayor and police chief rejected federal demands to drop the ban, with Mayor Mike Johnston saying \"hell no\" to rolling back the 37-year-old policy.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_91caa8b8-dec6-5691-807a-44fd78d5be2d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/fc/5fc8dcdd-595e-5e93-b187-5a76035d4985/69fa601618eb0.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/fc/5fc8dcdd-595e-5e93-b187-5a76035d4985/69fa601618eb0.image.jpg"
   },
   {
     title: "Telluride community survey open through May 21",
@@ -356,7 +356,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The town's community survey runs through May 21, measuring livability across 10 categories like economy, housing, safety, and recreation. Last year's results showed Telluride scored well on safety, trails, and recreation, but poorly on affordability - only 1% rated cost of living as good and just 9% said affordable housing was available.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_1145f14a-0b4a-43a7-9dea-4a452d941817.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/25/d257b794-9d6b-4123-b3b4-ee0abf3d9682/69fa52fb225f6.image.jpg?resize=300%2C155"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/25/d257b794-9d6b-4123-b3b4-ee0abf3d9682/69fa52fb225f6.image.jpg"
   },
   {
     title: "Sacred shoes",
@@ -367,7 +367,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The article reflects on the evolution from minimalist \"barefoot\" running shoes to the current popularity of thick-soled Hoka shoes among trail runners. The author reminisces about various worn-out sneakers and boots, including patched-up running shoes and old basketball sneakers, eventually discarding them during spring cleaning. The piece ends with a memory of arriving in the area wearing cross-country ski boots and later buying Chuck Taylor All-Stars with money earned flipping eggs at a local restaurant.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_781f8bdc-69d7-4ec9-9b5a-90c35c968f18.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bc/abc48601-95b9-4206-9f4b-a65102a0747c/69fa55d5a4936.image.jpg?resize=300%2C400"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bc/abc48601-95b9-4206-9f4b-a65102a0747c/69fa55d5a4936.image.jpg"
   },
   {
     title: "Boys’ lax blasts into postseason",
@@ -378,7 +378,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Telluride boys lacrosse team crushed Durango 16-2 on Senior Day to clinch the Mountain League championship and earned the #6 seed in state playoffs. The girls team beat Durango 12-11 in a tight rematch after losing to them earlier in the week, with Parker Shea scoring five goals. Both teams advanced to state tournament play with games scheduled for early May.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/sports/article_10a16ae6-c102-4679-9922-ddab9bdfd4b2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfe83f7a-ec5a-4b87-824b-b7cf86e70644/69f9a893440e8.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfe83f7a-ec5a-4b87-824b-b7cf86e70644/69f9a893440e8.image.jpg"
   },
   {
     title: "Man to plead guilty in Colorado firebombing attack on pro-Israel demonstrators",
@@ -389,7 +389,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "An Egyptian national who threw Molotov cocktails at pro-Israel demonstrators in Boulder plans to change his plea to guilty on state charges. The attack killed an 82-year-old woman and injured a dozen others, with the suspect saying he planned it for a year. He still faces federal hate crime charges and prosecutors are considering the death penalty.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_931f4da9-96f2-578e-97a4-bdf03c024048.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg"
   },
   {
     title: "Telluride CrossFit opens new Lawson Hill gym",
@@ -400,7 +400,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Telluride CrossFit opened their new Lawson Hill location in March after construction wrapped up ahead of schedule. The gym has 140+ members and offers 8-9 weekday classes plus Saturday sessions, with new additions including kids' classes and yoga starting in May.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/business/article_1d5aab25-10fb-4778-b2c1-3973af8a0d9e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/36/7362e16d-547c-4e31-a280-7e922c23bc57/69f9037527be2.image.jpg?resize=300%2C225"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/36/7362e16d-547c-4e31-a280-7e922c23bc57/69f9037527be2.image.jpg"
   },
   {
     title: "States across the wildfire-prone Western US are using AI for early detection",
@@ -411,7 +411,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Western states are deploying AI-enabled cameras to detect wildfires earlier than 911 calls in remote areas. Arizona Public Service has nearly 40 cameras with plans for 71, while California operates over 1,200 through ALERTCalifornia. The technology costs around $50,000 per camera annually but gives firefighters a 45-minute head start on average.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_3d9717e8-6111-5f8d-b69b-3260bf6758a8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3c/c3c369ac-5496-5153-b4fc-3638934dc35a/69f899e7aa3db.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3c/c3c369ac-5496-5153-b4fc-3638934dc35a/69f899e7aa3db.image.jpg"
   },
   {
     title: "Safe actions in work zones can save lives",
@@ -422,7 +422,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Transportation Commissioner for District 8 reflects on becoming more aware of road work dangers after taking the position. CDOT manages 200 construction projects annually, and work zone safety relies on drivers slowing down, avoiding phone use, and following flaggers' directions.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_0527f33c-d1be-4f91-9d6b-a570a138bf81.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/d1/9d1d4b74-6558-4cf1-9ef9-d0848f755a25/69f115f7721a2.image.jpg?resize=300%2C192"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/d1/9d1d4b74-6558-4cf1-9ef9-d0848f755a25/69f115f7721a2.image.jpg"
   },
   {
     title: "The heart of Telluride",
@@ -433,7 +433,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Local artist Brandon Bermel started the Heart of Telluride Project at the Transfer Warehouse, creating an outdoor street art installation that launched on Valentine's Day. Six artists contributed heart-themed pieces to wooden panels on the building's exterior, with community support from Ah Haa School and local businesses providing materials and workspace.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/arts_and_entertainment/article_917b2db3-f982-472d-9198-8dc744073d8e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfed5db9-e7f7-49f6-8189-3174c244d773/69f64afc5f9a1.image.jpg?resize=300%2C412"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfed5db9-e7f7-49f6-8189-3174c244d773/69f64afc5f9a1.image.jpg"
   },
   {
     title: "Rolling in the oats",
@@ -444,7 +444,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A social media influencer is promoting oats as a superfood ingredient, highlighting the ongoing debate between anti-grain advocates and those favoring Mediterranean-style diets with grains. The author reflects on surviving mostly on oatmeal during a broke summer in D.C. in 1978 and notes that while oats are nutritious, they can spike blood sugar without added protein.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_8c228500-61a7-4cf7-b21d-383052bad877.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/be/ebeb8396-3450-4d67-af94-c17626457ff1/69f13862191f6.image.jpg?resize=300%2C400"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/be/ebeb8396-3450-4d67-af94-c17626457ff1/69f13862191f6.image.jpg"
   },
   {
     title: "Jonathan Fouser is Telluride Mountain School’s new head of school",
@@ -455,7 +455,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Jonathan Fouser has been selected as Telluride Mountain School's new head of school after a competitive search that started with 42 candidates. Fouser currently oversees multiple campuses for Brewster American Schools in Spain and has experience founding international schools, teaching English, and outdoor instruction. The school board chose him for his calm leadership style and background in experiential education that aligns with the mountain school's mission.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_77d21881-a251-4576-a200-d746761986e3.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/67/86782a60-11e8-4c7e-8528-ed092884ae87/69f5ab43664e2.image.jpg?resize=300%2C300"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/67/86782a60-11e8-4c7e-8528-ed092884ae87/69f5ab43664e2.image.jpg"
   },
   {
     title: "Town council suspends waitlist policies",
@@ -466,7 +466,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Town council temporarily suspended waitlist policies for deed-restricted rentals through July 31 to fill vacancies faster. The town has 39 empty units (18% vacancy rate) despite a 220-person waitlist, well above the 8% target. Staff blame outdated applications and affordability issues with pricier units.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_766aee5a-65e5-4d4e-af87-0d75148b5bba.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/be/4be5885b-5c31-47e0-a343-371f832e5f5f/69f64629dcef0.image.jpg?resize=300%2C184"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/be/4be5885b-5c31-47e0-a343-371f832e5f5f/69f64629dcef0.image.jpg"
   },
   {
     title: "Sibling stories",
@@ -477,7 +477,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A local bartender at the Vaudeville once worked with his baby strapped to his chest during a comedy show, prompting a customer to warn him that siblings inevitably hate each other. The experience motivated him and his partner to intentionally raise their two kids as best friends through equal treatment, room sharing, and encouraging shared activities. Their approach seems to have worked - the siblings chose to ride together throughout a recent family road trip to California.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_b13bebfd-ba8d-4e2a-8bbe-e534628b63ec.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/44/244939cc-69e1-4024-ae0f-a26ac2a38c3c/69f134d9097db.image.jpg?resize=300%2C400"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/44/244939cc-69e1-4024-ae0f-a26ac2a38c3c/69f134d9097db.image.jpg"
   },
   {
     title: "Paul Wisor resigns as MV Town Manager",
@@ -488,7 +488,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Paul Wisor resigned as Mountain Village Town Manager after participating in an investigation related to the mayor's earlier resignation. His involvement came to light when he revealed he had helped former officials Prohaska and Fee with investor contacts for a ski resort purchase offer that sparked controversy and investigations by both Mountain Village and Telluride.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_2c1cc16d-5e4a-4543-86bd-1faadf9f7028.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/86/38610eb6-050c-4a1d-963e-dd31f000024c/69f4eedeb0d89.image.webp?resize=300%2C450"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/86/38610eb6-050c-4a1d-963e-dd31f000024c/69f4eedeb0d89.image.webp"
   },
   {
     title: "Trump gives go-ahead to major new Canada-US oil pipeline",
@@ -499,7 +499,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Trump approved a 650-mile oil pipeline from Saskatchewan to Montana that would carry two-thirds as much oil as the canceled Keystone XL project. The company behind it has a history of major spills, including 50,000 gallons into the Yellowstone River in 2015, but says it's developed better leak detection technology.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_93f080bd-3bff-5091-afc4-5a9ddae33488.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c9/ec9912c8-b253-5755-acce-42c147636686/69f3c91b34529.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c9/ec9912c8-b253-5755-acce-42c147636686/69f3c91b34529.image.jpg"
   },
   {
     title: "Telski update to council: bike park’s future uncertain",
@@ -510,7 +510,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Telski's Swenson told council the bike park loses money, with busy days seeing only 350-400 riders compared to 6,000-7,000 skiers on good winter days. While no final decision has been made, he acknowledged \"loose discussions\" about permanently discontinuing the bike park after seven years of trying to make it work.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_8e8c2d7e-8aed-42dd-83b6-036f40b6fb54.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/e5/ee56772c-7de4-4126-8ef7-d8bc4dfd4025/69f3c904ec009.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/e5/ee56772c-7de4-4126-8ef7-d8bc4dfd4025/69f3c904ec009.image.jpg"
   },
   {
     title: "Telluride’s ‘I voted/yo voté’ sticker contest winners",
@@ -521,7 +521,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Earlier this year, Telluride and Norwood students participated in a sticker contest, with 18 creative kiddos taking part. The brief, set by the San Miguel County Clerk’s Office, was to devise a design that could be used as the artwork…",
     claudeSummary: false,
     href: "https://www.telluridenews.com/news/article_3022309d-c7c1-4717-85d3-41ac89e3f795.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/9d/79d165ca-16ce-40fa-a9ac-77113d7839c8/69f1660ad0191.image.png?resize=300%2C389"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/9d/79d165ca-16ce-40fa-a9ac-77113d7839c8/69f1660ad0191.image.png"
   },
   {
     title: "Norwood’s ‘I voted/yo voté’ sticker contest winners",
@@ -532,7 +532,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The county clerk thanked everyone who entered Norwood's bilingual voting sticker design contest. All the artwork displayed at the courthouse drew lots of positive comments from visitors.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/norwood_post/article_c9e7d416-2ad4-4332-87ee-6317130f948d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/16/2167c90d-35cd-419c-b2dc-fff803c1b0ba/69f1772f694c3.image.jpg?resize=300%2C225"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/16/2167c90d-35cd-419c-b2dc-fff803c1b0ba/69f1772f694c3.image.jpg"
   },
   {
     title: "Lindsey Vonn tells the AP she is not yet in position emotionally to decide if she will race again",
@@ -543,7 +543,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Lindsey Vonn says she's not emotionally ready to decide whether she'll return to competitive skiing after her severe tibia fracture at Cortina in December. The 41-year-old is progressing from wheelchair to crutches and still needs another surgery, meaning any potential return wouldn't happen until the 2027-28 season at earliest.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_8e0ab335-1e12-5377-af15-ff97d158dede.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/c6/3c6899e9-4691-5fd5-be26-4d01403e1ebf/69f3542094bae.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/c6/3c6899e9-4691-5fd5-be26-4d01403e1ebf/69f3542094bae.image.jpg"
   },
   {
     title: "Here's how to grow your own food with less water, even in a drought",
@@ -554,7 +554,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Record-low snowfall across the West has prompted the earliest drought restrictions in Denver Water's history, with cities implementing outdoor watering limits. Gardening experts recommend water-wise growing techniques like harvesting rainwater, collecting greywater from showers and dishwashing, choosing drought-tolerant plant varieties, improving soil health with compost, and using shade cloths to reduce evaporation.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_62ad4304-c441-5377-acde-86dcbdde9312.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/d2/ed2b9a2e-dea0-5f0d-9b8e-8a1e2e924534/69f3541bd0685.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/d2/ed2b9a2e-dea0-5f0d-9b8e-8a1e2e924534/69f3541bd0685.image.jpg"
   },
   {
     title: "Wishing upon a star",
@@ -565,7 +565,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The SAF Young People's Theater is putting on \"My Son Pinocchio Jr.\" with 30 kids in grades 3-5, featuring the Disney classic with new songs by the \"Wicked\" composer. The show focuses on Geppetto's journey as a father learning to love unconditionally, running about an hour at the Sheridan Opera House May 1-3.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/arts_and_entertainment/article_b3673668-79a5-462d-87a1-05b24411b059.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/cd/4cda66af-af53-48e3-b1b9-8d3dd0c94f9c/69f319f8c70cf.image.jpg?resize=300%2C450"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/cd/4cda66af-af53-48e3-b1b9-8d3dd0c94f9c/69f319f8c70cf.image.jpg"
   },
   {
     title: "Michael J. Ward",
@@ -576,7 +576,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Michael J. Ward, who came to Telluride on a ski trip in 1973 and never left, passed away after spending his final years in Hawaii. He worked as a bartender at the Sheridan, tried carpentry, then became a realtor for over 40 years while raising four kids here. A celebration of life will be held at Town Park on June 6, 2026 from 4-6 PM.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/obituaries/article_da9c1d39-f9b9-4485-8624-6ec4a163e609.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/5f/e5fb35c1-ab7f-4d7a-9f66-70713f0980da/69f387ba057ba.image.jpg?resize=300%2C400"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/5f/e5fb35c1-ab7f-4d7a-9f66-70713f0980da/69f387ba057ba.image.jpg"
   },
   {
     title: "Legals and Public Notices for April 30-May 6, 2026",
@@ -598,7 +598,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Norwood is facing its earliest water restrictions in recent memory, prompting CSU Extension to recommend drought-adapted gardening focused on native perennials over water-hungry annuals. Extension Director Annika Kristiansen and Master Gardener volunteers are advising residents to \"garden with the conditions we have\" by choosing plants suited to our high desert climate and using techniques like hügelkultur for moisture retention.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_a778a9e9-c819-4849-9e80-fad649fa33c6.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/4b/34b91d82-6339-4684-9229-8250f4823b6c/69f1697616de8.image.jpg?resize=300%2C182"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/4b/34b91d82-6339-4684-9229-8250f4823b6c/69f1697616de8.image.jpg"
   },
   {
     title: "County Planning Commission 5/14 Meeting in TELLURIDE",
@@ -807,6 +807,8 @@ const BLOG_POSTS = [
     category: 'Town of Telluride'
   }
 ];
+
+const SMC_ALERTS = [];
 
 const COMMUNITY_EVENTS = [
   {

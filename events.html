@@ -985,6 +985,7 @@ rejectLink.replace('mailto:', 'mailto:') + '\n\n' +
             if (typeof TJC_EVENTS !== 'undefined') TJC_EVENTS.forEach(e => pushEvent(e, 'Telluride Jewish Community'));
             if (typeof COMMUNITY_EVENTS !== 'undefined') COMMUNITY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Community'));
             if (typeof KOTO_COMMUNITY_EVENTS !== 'undefined') KOTO_COMMUNITY_EVENTS.forEach(e => pushEvent(e, 'KOTO'));
+            if (typeof SMC_ALERTS !== 'undefined') SMC_ALERTS.forEach(e => pushEvent(e, 'San Miguel County'));
 
             // ── Dedup across sources, two-key match per event ──
             // Some sources phrase the same event slightly differently (KOTO

@@ -850,7 +850,7 @@ async function refreshNews(existingTtArticles = []) {
           copy,
           claudeSummary,
           href,
-          img: enclosure?.$.url || ''
+          img: (enclosure?.$.url || '').replace(/[?&]resize=[^&]*/i, '')
         });
       }
       if (newCount > 0) console.log(`  Summarized ${newCount} new TT article(s) from full text`);
@@ -1051,7 +1051,7 @@ async function refreshRegionalNews(existingRegional = []) {
           newsTopic: classifyNewsTopic(title, copy),
           copy,
           href,
-          img: enclosure?.$.url || ''
+          img: (enclosure?.$.url || '').replace(/[?&]resize=[^&]*/i, '')
         });
         count++;
       }
@@ -2744,6 +2744,51 @@ async function syncNorwoodMeetings() {
   return entries;
 }
 
+
+// ── SMC AlertCenter: fetch active alerts and store as event-shaped objects ──
+async function refreshSmcAlerts(existingAlerts = []) {
+  console.log('\n🚨 SMC AlertCenter: Refreshing active alerts...');
+  const RSS_URL = 'https://www.sanmiguelcountyco.gov/RSSFeed.aspx?ModID=63&CID=All-0';
+  const cutoff = new Date(Date.now() - 30 * 86400000); // 30-day window
+  const existingByHref = new Map((existingAlerts || []).map(a => [a.href, a]));
+  const alerts = [];
+  try {
+    const resp = await fetch(RSS_URL);
+    if (resp.status !== 200) {
+      console.warn(`  SMC AlertCenter RSS HTTP ${resp.status} — carrying forward existing`);
+      return existingAlerts;
+    }
+    const xml = await parseXml(resp.text);
+    const items = xml?.rss?.channel?.item;
+    const arr = Array.isArray(items) ? items : (items ? [items] : []);
+    for (const item of arr) {
+      const pubDate = new Date(item.pubDate || '');
+      if (isNaN(pubDate) || pubDate < cutoff) continue;
+      const href = (item.link || '').trim();
+      const title = (item.title || '').trim();
+      const desc = (item.description || '').replace(/<[^>]+>/g, ' ')
+        .replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ')
+        .replace(/&#\d+;/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 600);
+      alerts.push({
+        title,
+        source: 'San Miguel County',
+        sourceLabel: 'San Miguel County',
+        category: 'Alert',
+        date: pubDate.toISOString().slice(0, 10),
+        pubDate: pubDate.toISOString(),
+        copy: desc,
+        href,
+        img: ''
+      });
+    }
+    console.log(`  SMC AlertCenter: ${alerts.length} active alert(s)`);
+  } catch (e) {
+    console.warn(`  SMC AlertCenter RSS error: ${e.message} — carrying forward existing`);
+    return existingAlerts;
+  }
+  return alerts;
+}
+
 async function main() {
   console.log('═══════════════════════════════════════════════');
   console.log('  Telluride Gov Hub — Content Refresh');
@@ -2793,6 +2838,14 @@ async function main() {
   const freshRegional = await refreshRegionalNews(existingRegional);
   if (freshRegional.length > 0) {
     govHubSrc = replaceJsValue(govHubSrc, 'REGIONAL_NEWS_ARTICLES', freshRegional, false);
+    changed = true;
+  }
+
+  // ── 2c. SMC AlertCenter ──
+  const existingSmcAlerts = extractJsArray(govHubSrc, 'SMC_ALERTS') || [];
+  const freshSmcAlerts = await refreshSmcAlerts(existingSmcAlerts);
+  if (JSON.stringify(freshSmcAlerts) !== JSON.stringify(existingSmcAlerts)) {
+    govHubSrc = replaceJsValue(govHubSrc, 'SMC_ALERTS', freshSmcAlerts, false);
     changed = true;
   }
 
