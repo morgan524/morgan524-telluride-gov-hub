@@ -90,56 +90,22 @@
     /* ── Intro two-col ── */
     .hb-intro {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 330px;
-      gap: 28px;
-      align-items: stretch;
-      margin-bottom: 28px;
+      grid-template-columns: minmax(0, 1fr) 290px;
+      gap: 18px;
+      align-items: start;
+      margin-bottom: 22px;
     }
     .hb-intro-main {
       min-height: 0;
       border: 1px solid var(--lt-line);
       border-radius: var(--lt-radius-xl);
-      padding: clamp(24px, 4vw, 44px);
+      padding: clamp(18px, 2.8vw, 26px);
       background:
         linear-gradient(135deg, rgba(255,253,248,0.96), rgba(255,253,248,0.78)),
         radial-gradient(circle at top right, rgba(185,139,52,0.15), transparent 26rem);
       box-shadow: var(--lt-shadow-soft);
       position: relative;
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-    .hb-use-cases {
-      margin-top: auto;
-      padding-top: 28px;
-      display: grid;
-      gap: 10px;
-      position: relative;
-      z-index: 1;
-    }
-    .hb-use-case {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 13px 15px;
-      background: rgba(23,61,52,0.055);
-      border-radius: 14px;
-      font-size: 0.91rem;
-      color: var(--lt-ink);
-      font-weight: 550;
-      line-height: 1.4;
-    }
-    .hb-uc-icon {
-      flex-shrink: 0;
-      width: 28px;
-      height: 28px;
-      border-radius: 8px;
-      background: rgba(33,68,60,0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.95em;
-      margin-top: 1px;
     }
     .hb-intro-main::after {
       content: "";
@@ -154,12 +120,12 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 18px;
-      padding: 7px 12px;
+      margin-bottom: 10px;
+      padding: 4px 10px;
       border-radius: 999px;
       background: rgba(23,61,52,0.08);
       color: var(--forest);
-      font-size: 0.78rem;
+      font-size: 0.7rem;
       font-weight: 900;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -168,16 +134,16 @@
       margin: 0;
       max-width: 820px;
       font-family: var(--lt-heading);
-      font-size: clamp(1.8rem, 3.6vw, 3.2rem);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
+      font-size: clamp(1.35rem, 2.4vw, 2rem);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
       color: var(--lt-ink);
     }
     .hb-intro p {
-      margin: 18px 0 0;
+      margin: 10px 0 0;
       max-width: 760px;
       color: var(--lt-muted);
-      font-size: clamp(1rem, 1.4vw, 1.1rem);
+      font-size: 0.92rem;
     }
     .hb-intro-actions {
       display: flex;
@@ -527,64 +493,49 @@
       border: 1px solid var(--lt-line);
       background: #fff;
       box-shadow: var(--lt-shadow-soft);
-      padding: 28px 26px;
+      padding: 20px 20px 18px;
       display: flex;
       flex-direction: column;
       gap: 0;
     }
-    .hb-account-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: rgba(33,68,60,0.09);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 16px;
-    }
-    .hb-account-icon svg { width: 26px; height: 26px; color: var(--forest); }
+    .hb-account-icon { display: none; }
     .hb-account-heading {
       margin: 0 0 10px;
       font-family: var(--lt-heading);
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       letter-spacing: -0.02em;
       color: var(--lt-ink);
     }
-    .hb-account-sub {
-      margin: 0 0 18px;
-      color: var(--lt-muted);
-      font-size: 0.9rem;
-      line-height: 1.55;
-    }
+    .hb-account-sub { display: none; }
     .hb-account-perks {
       display: flex;
       flex-direction: column;
-      gap: 9px;
-      margin-bottom: 22px;
+      gap: 7px;
+      margin-bottom: 16px;
     }
     .hb-account-perk {
       display: flex;
       align-items: center;
-      gap: 9px;
-      font-size: 0.88rem;
+      gap: 8px;
+      font-size: 0.84rem;
       font-weight: 600;
       color: var(--lt-ink);
     }
-    .hb-account-perk svg { width: 16px; height: 16px; color: var(--forest); flex-shrink: 0; }
+    .hb-account-perk svg { width: 14px; height: 14px; color: var(--forest); flex-shrink: 0; }
     .hb-account-cta {
       display: block;
       width: 100%;
-      padding: 13px 18px;
+      padding: 11px 16px;
       background: var(--forest);
       color: #fff;
       border: none;
       border-radius: 999px;
-      font-size: 1rem;
+      font-size: 0.93rem;
       font-weight: 700;
       cursor: pointer;
       box-shadow: 0 4px 14px rgba(33,68,60,0.22);
       transition: background 0.15s;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     .hb-account-cta:hover { background: var(--forest-soft); }
     .hb-account-login-note {
@@ -692,7 +643,7 @@
       transition: border-color 0.13s, background 0.13s;
     }
     .hb-freq-opt:has(input:checked) { border-color: var(--forest); background: rgba(33,68,60,0.05); }
-    .hb-freq-opt input[type=radio] { margin-top: 2px; accent-color: var(--forest); flex-shrink: 0; width: 16px; height: 16px; }
+    .hb-freq-opt input[type=checkbox] { margin-top: 2px; accent-color: var(--forest); flex-shrink: 0; width: 16px; height: 16px; }
     .hb-freq-opt-text strong { display: block; font-size: 0.9rem; font-weight: 700; color: var(--lt-ink); }
     .hb-freq-opt-text span { font-size: 0.8rem; color: var(--lt-muted); line-height: 1.4; }
     .hb-modal-notice {
@@ -874,28 +825,10 @@
           <div class="hb-eyebrow">Hub-Bub civic forum</div>
           <h1 id="hub-bub-heading">Find the local conversation without digging through the noise.</h1>
           <p>Use Hub-Bub to ask a precise question, share a public document, summarize a meeting, or propose a practical solution.</p>
-          <div class="hb-use-cases">
-            <div class="hb-use-case">
-              <span class="hb-uc-icon">💬</span>
-              <span>Ask a precise question about any local decision and get answers from community members who were there</span>
-            </div>
-            <div class="hb-use-case">
-              <span class="hb-uc-icon">📄</span>
-              <span>Share agendas, CORA records, and public documents with plain-language context</span>
-            </div>
-            <div class="hb-use-case">
-              <span class="hb-uc-icon">🗳</span>
-              <span>Propose a practical next step and see who agrees — organized by topic, meeting, or issue</span>
-            </div>
-          </div>
         </div>
 
         <aside class="hb-account-panel" aria-label="Create a free account">
-          <div class="hb-account-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
           <h2 class="hb-account-heading">Commenting requires a free account</h2>
-          <p class="hb-account-sub">Hub-Bub is open to verified Livable Telluride community members. Create your free account to post, comment, and stay in the loop.</p>
           <div class="hb-account-perks">
             <div class="hb-account-perk">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1181,24 +1114,24 @@
         </div>
 
         <div class="hb-freq-group">
-          <span class="hb-freq-label">Stay informed — choose your digest</span>
+          <span class="hb-freq-label">Stay informed — choose what you'd like to receive</span>
           <div class="hb-freq-options">
             <label class="hb-freq-opt">
-              <input type="radio" name="hbFrequency" value="daily">
+              <input type="checkbox" id="hbFreqDaily" value="daily">
               <div class="hb-freq-opt-text">
                 <strong>Daily summaries</strong>
                 <span>A short digest of local news, meetings, and events each morning.</span>
               </div>
             </label>
             <label class="hb-freq-opt">
-              <input type="radio" name="hbFrequency" value="weekly" checked>
+              <input type="checkbox" id="hbFreqWeekly" value="weekly">
               <div class="hb-freq-opt-text">
                 <strong>Weekly summaries</strong>
                 <span>A weekly roundup of what happened and what's coming up.</span>
               </div>
             </label>
             <label class="hb-freq-opt">
-              <input type="radio" name="hbFrequency" value="newsletter">
+              <input type="checkbox" id="hbFreqNewsletter" value="newsletter" checked>
               <div class="hb-freq-opt-text">
                 <strong>Livable Telluride newsletter</strong>
                 <span>Longer-form posts and analysis, sent when published.</span>
@@ -1247,15 +1180,14 @@
   (function () {
     /* ── Mailchimp JSONP submit ── */
     const MC_POST = 'https://us15.list-manage.com/subscribe/post-json?u=5d9192289b9af78822f2f69bf&id=f83dc56387&c=?';
-    function mcSubscribe(email, firstName, lastName, frequency, cb) {
-      const freqVal = (frequency === 'newsletter') ? 'weekly' : frequency; // map newsletter → weekly MMERGE9
+    function mcSubscribe(email, firstName, lastName, digestFreq, includeNewsletter, cb) {
       const params = new URLSearchParams({
-        EMAIL:   email,
-        FNAME:   firstName,
-        LNAME:   lastName,
-        MMERGE9: freqVal,
-        'group[7912]': (frequency === 'newsletter') ? '1' : '0',
+        EMAIL: email,
+        FNAME: firstName,
+        LNAME: lastName,
       });
+      if (digestFreq) params.set('MMERGE9', digestFreq);
+      if (includeNewsletter) params.set('group[7912]', '1');
       // JSONP
       const cbName = '_mc_cb_' + Date.now();
       window[cbName] = function (data) {
@@ -1306,6 +1238,14 @@
       el.style.display = 'block';
     }
 
+    /* Daily/weekly digest are mutually exclusive */
+    document.getElementById('hbFreqDaily').addEventListener('change', function() {
+      if (this.checked) document.getElementById('hbFreqWeekly').checked = false;
+    });
+    document.getElementById('hbFreqWeekly').addEventListener('change', function() {
+      if (this.checked) document.getElementById('hbFreqDaily').checked = false;
+    });
+
     /* Open triggers */
     document.getElementById('hbOpenSignup').addEventListener('click', () => openModal('signup'));
     document.getElementById('hbOpenLogin').addEventListener('click',  () => openModal('login'));
@@ -1335,7 +1275,9 @@
       const lastName  = document.getElementById('hbSignupLast').value.trim();
       const email     = document.getElementById('hbSignupEmail').value.trim();
       const password  = document.getElementById('hbSignupPassword').value;
-      const frequency = document.querySelector('input[name="hbFrequency"]:checked')?.value || 'weekly';
+      const digestFreq = document.getElementById('hbFreqDaily').checked ? 'daily'
+                       : document.getElementById('hbFreqWeekly').checked ? 'weekly' : '';
+      const includeNewsletter = document.getElementById('hbFreqNewsletter').checked;
 
       if (!firstName || !lastName) return showMsg('hbSignupMsg', 'Please enter your first and last name.', 'error');
       if (!email || !email.includes('@')) return showMsg('hbSignupMsg', 'Please enter a valid email address.', 'error');
@@ -1344,8 +1286,8 @@
       btn.disabled = true;
       btn.textContent = 'Creating account…';
 
-      // Step 1: Mailchimp subscribe
-      mcSubscribe(email, firstName, lastName, frequency, function (ok, msg) {
+      // Step 1: Mailchimp subscribe (skip if nothing selected — account-only signup)
+      mcSubscribe(email, firstName, lastName, digestFreq, includeNewsletter, function (ok, msg) {
         if (!ok && !/already subscribed/i.test(msg)) {
           btn.disabled = false;
           btn.textContent = 'Create account & join Hub-Bub';
