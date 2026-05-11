@@ -4,19 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Local News — Livable Telluride</title>
-  <!--
-    ┌─────────────────────────────────────────────────────────────────────┐
-    │ LOCAL PREVIEW FILE — DO NOT COMMIT/DEPLOY                           │
-    │ Standalone redesign of the Local News tab. Self-contained: inline   │
-    │ CSS, inline sample data. Open directly with file:// or via any      │
-    │ local web server. Images and logos point to livabletelluride.org    │
-    │ so they load from anywhere with internet.                           │
-    │                                                                     │
-    │ To update sample articles: edit the ARTICLES const at the bottom.   │
-    │ To use live data: see the commented "OPTIONAL: live data" section   │
-    │ at the very bottom of the script.                                   │
-    └─────────────────────────────────────────────────────────────────────┘
-  -->
   <style>
     /* ─────────────────────────────────────────
        Base + nav (matches the live site's tone)
@@ -532,20 +519,6 @@
       .card-grid { grid-template-columns: 1fr; }
     }
 
-    /* Small "PREVIEW" banner so Morgan never confuses this with the live site */
-    .preview-banner {
-      background: #fff8e1;
-      border-bottom: 1px solid #f0d68a;
-      padding: 8px 24px;
-      text-align: center;
-      font-size: 0.82rem;
-      color: #6b5a1f;
-    }
-    .preview-banner code {
-      background: #f6e8b1;
-      padding: 1px 6px;
-      border-radius: 4px;
-    }
   </style>
 </head>
 <body>
@@ -571,7 +544,7 @@
   <section class="hero">
     <div class="hero-inner">
       <h1>Local News</h1>
-      <p>The latest local news and updates from around the region.</p>
+      <p>The latest local news and updates from Telluride and the surrounding region.</p>
     </div>
   </section>
 
@@ -849,11 +822,15 @@
     render();
 
         function loadLiveData() {
+      // Use a daily cache buster so browsers always pick up today's bot commit.
+      const day = new Date().toISOString().slice(0, 10).replace(/-/g, '');
       const dataScript = document.createElement('script');
-      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v2';
+      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=' + day;
       dataScript.onload = () => {
         const s = document.createElement('script');
-        s.src = 'https://livabletelluride.org/js/data-only.js?v=v2';
+        // gov-hub.js is the bot-updated file — it contains TELLURIDE_TIMES_ARTICLES,
+        // KOTO_NEWSCASTS, etc. data-only.js does NOT have these live data arrays.
+        s.src = 'https://livabletelluride.org/js/gov-hub.js?v=' + day;
         s.onload = () => {
           try {
             if (typeof TELLURIDE_TIMES_ARTICLES === 'undefined') return;
@@ -930,16 +907,9 @@
 
             // ── Collect from sources, then filter, then dedup by title ──
             const live = [];
-            // Map source name → sourceKey for correct logo lookup
-            const SOURCE_KEY_MAP = {
-              'Telluride Times': 'ttimes',
-              'Town of Telluride': 'telluride',
-              'San Miguel County': 'county'
-            };
-            TELLURIDE_TIMES_ARTICLES.slice(0, 50).forEach(a => live.push({
-              title: a.title, source: a.source,
-              sourceKey: SOURCE_KEY_MAP[a.source] || 'ttimes',
-              date: a.date, summary: a.copy, href: a.href, img: a.img || '',
+            TELLURIDE_TIMES_ARTICLES.slice(0, 30).forEach(a => live.push({
+              title: a.title, source: a.source, sourceKey: 'ttimes',
+              date: a.date, summary: a.copy, href: a.href, img: a.img,
               category: a.newsTopic || 'Community'
             }));
             if (typeof KOTO_NEWSCASTS !== 'undefined') {

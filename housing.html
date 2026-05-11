@@ -244,13 +244,15 @@
     }
     .house-actions {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       align-items: center;
       gap: 8px;
       margin-top: auto;
       padding-top: 8px;
       flex-wrap: wrap;
     }
+    .house-actions-left  { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .house-actions-right { display: flex; gap: 6px; align-items: center; flex-shrink: 0; }
     .btn-action {
       display: inline-block;
       background: var(--forest);
@@ -571,24 +573,26 @@
                     + '</div>';
       }
 
-      // Action row buttons
-      const buttons = [];
-      if (l.applyUrl) {
-        buttons.push('<a class="btn-apply" href="' + l.applyUrl + '" target="_blank" rel="noopener">'
-          + '<svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg> Apply Now</a>');
-      }
-      buttons.push('<a class="btn-action' + (l.applyUrl ? ' secondary' : '') + '" href="' + (l.url || '#') + '" target="_blank" rel="noopener">View Details →</a>');
-      // Per-listing eligibility button with location-specific URL
-      buttons.push('<a class="btn-action secondary" href="' + eligibilityUrl(l) + '" target="_blank" rel="noopener">Check Eligibility →</a>');
+      // Action row — left group: View Details + Check Eligibility; right group: phone + email icons
+      const leftBtns = [];
+      leftBtns.push('<a class="btn-action" href="' + (l.url || '#') + '" target="_blank" rel="noopener">View Details →</a>');
+      leftBtns.push('<a class="btn-action secondary" href="' + eligibilityUrl(l) + '" target="_blank" rel="noopener">Check Eligibility →</a>');
+
+      const rightBtns = [];
       if (l.contact && l.contact.phone) {
         const tel = l.contact.phone.replace(/[^+\d]/g, '');
-        buttons.push('<a class="btn-icon" href="tel:' + tel + '" aria-label="Call ' + l.contact.phone + '" title="' + l.contact.phone + '">'
+        rightBtns.push('<a class="btn-icon" href="tel:' + tel + '" aria-label="Call ' + l.contact.phone + '" title="' + l.contact.phone + '">'
           + '<svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg></a>');
       }
       if (l.contact && l.contact.email) {
-        buttons.push('<a class="btn-icon" href="mailto:' + l.contact.email + '" aria-label="Email ' + l.contact.email + '" title="' + l.contact.email + '">'
+        rightBtns.push('<a class="btn-icon" href="mailto:' + l.contact.email + '" aria-label="Email ' + l.contact.email + '" title="' + l.contact.email + '">'
           + '<svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>');
       }
+
+      const actionsHtml = '<div class="house-actions">'
+        + '<div class="house-actions-left">' + leftBtns.join('') + '</div>'
+        + (rightBtns.length ? '<div class="house-actions-right">' + rightBtns.join('') + '</div>' : '')
+        + '</div>';
 
       return '<article class="house-card">'
            + '<div class="house-img-wrap">' + pill + visualHtml + '</div>'
@@ -598,7 +602,7 @@
            +     price
            +   '</div>'
            +   beds + addrLine + summary + lotteryHtml + source
-           +   '<div class="house-actions">' + buttons.join('') + '</div>'
+           +   actionsHtml
            + '</div>'
            + '</article>';
     }
