@@ -35,8 +35,6 @@ const TARGETS = [
   { kind: 'const',    name: 'KOTO_NEWSCASTS' },
   { kind: 'const',    name: 'KOTO_FEATURED_STORIES' },
   { kind: 'const',    name: 'BLOG_POSTS' },
-  { kind: 'const',    name: 'SMC_ALERTS' },
-  { kind: 'const',    name: 'ENGAGE_MEETINGS' },
   { kind: 'const',    name: 'COMMUNITY_EVENTS' },
   { kind: 'const',    name: 'KOTO_COMMUNITY_EVENTS' },
   { kind: 'const',    name: 'WILKINSON_EVENTS' },
@@ -47,6 +45,8 @@ const TARGETS = [
   { kind: 'const',    name: 'LEGAL_ENTITY_LOGOS' },
   { kind: 'const',    name: 'LEGAL_NOTICES' },
   { kind: 'const',    name: 'HOUSING_LISTINGS' },
+  // ── Ridgway agenda PDF map (bot-populated every 6h by syncRidgwayAgendas) ──
+  { kind: 'const',    name: 'RIDGWAY_AGENDA_MAP' },
   // ── Pure get*Meetings normalization functions ──
   { kind: 'function', name: 'getCountyCachedMeetings' },
   { kind: 'function', name: 'getMVMeetings' },

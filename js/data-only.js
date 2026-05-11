@@ -2559,8 +2559,13 @@ function getOphirMeetings() {
 function getRidgwayMeetings() {
   return RIDGWAY_CACHED_DATA.map(m => {
     const eventDate = localDate(m.date);
-    const hasAgenda = !!m.agendaUrl;
-    const link = m.agendaUrl || RIDGWAY_COUNCIL_URL;
+    // RIDGWAY_AGENDA_MAP is bot-populated every 6h from the town council page.
+    // Keys match m.date exactly ("May 13, 2026"). Falls back to any manually-set
+    // m.agendaUrl in RIDGWAY_CACHED_DATA, then to the general council URL.
+    const mappedAgendaUrl = (typeof RIDGWAY_AGENDA_MAP !== 'undefined' && RIDGWAY_AGENDA_MAP[m.date]) || null;
+    const agendaLink = mappedAgendaUrl || m.agendaUrl || null;
+    const hasAgenda = !!agendaLink;
+    const link = agendaLink || RIDGWAY_COUNCIL_URL;
 
     let description = '';
     if (m.note) {
@@ -2570,6 +2575,7 @@ function getRidgwayMeetings() {
     return {
       title: m.title,
       link,
+      agendaLink,
       description,
       eventDate,
       eventDates: '',

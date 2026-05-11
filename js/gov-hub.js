@@ -1875,6 +1875,13 @@ function fetchOurayCountyEvents() {
 // back to a live Localist API call for the initial zero-data state.
 const OURAY_RIDGWAY_EVENTS = [];
 
+// Ridgway Town Council agenda PDFs — populated by content-refresh.js Task 20.
+// Keys are "Month D, YYYY" date strings (e.g. "May 13, 2026").
+// Values are direct PDF URLs to the agenda/packet document.
+// When a matching entry exists, the Gov-Hub card shows a dark-green
+// "Agenda Posted →" button linking straight to the document.
+const RIDGWAY_AGENDA_MAP = {};
+
 async function fetchOurayRidgwayEvents() {
   // Prefer server-baked data (populated every 6h by content-refresh.js Task 16).
   if (typeof OURAY_RIDGWAY_EVENTS !== 'undefined' && Array.isArray(OURAY_RIDGWAY_EVENTS) && OURAY_RIDGWAY_EVENTS.length > 0) {
@@ -7154,6 +7161,8 @@ async function init() {
     // separately.
     const orayGovRaw = newsData.filter(n => n.source === 'oray' && isGovernmentalMeeting(n));
     if (orayGovRaw.length) {
+      // Month name array for RIDGWAY_AGENDA_MAP key formatting
+      const _ridgwayMonths = ['January','February','March','April','May','June','July','August','September','October','November','December'];
       const orayGovMeetings = orayGovRaw.map(m => {
         const loc = (m.location || '').toLowerCase();
         // Ridgway-area markers: "Ridgway", "Log Hill" (Log Hill Mesa is part
@@ -7161,7 +7170,19 @@ async function init() {
         const isRidgway = /\bridgway\b|\blog hill\b/.test(loc);
         const town = isRidgway ? 'ridgway' : 'ouray';
         const label = isRidgway ? 'Ridgway' : 'Ouray';
-        return Object.assign({}, m, { source: town, sourceLabel: label });
+        let agendaLink = m.agendaLink || null;
+        let hasAgenda = m.hasAgenda || false;
+        // For Ridgway Town Council meetings, look up the agenda PDF in
+        // RIDGWAY_AGENDA_MAP (keyed "Month D, YYYY").
+        if (isRidgway && typeof RIDGWAY_AGENDA_MAP !== 'undefined') {
+          const d = m.eventDate instanceof Date ? m.eventDate : (m.pubDate instanceof Date ? m.pubDate : null);
+          if (d && !isNaN(d.getTime())) {
+            const dateKey = `${_ridgwayMonths[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+            const mappedUrl = RIDGWAY_AGENDA_MAP[dateKey];
+            if (mappedUrl) { agendaLink = mappedUrl; hasAgenda = true; }
+          }
+        }
+        return Object.assign({}, m, { source: town, sourceLabel: label, agendaLink, hasAgenda });
       });
       // Idempotent on re-render: filter prior re-tags AND any old 'oray'
       // entries before re-adding.

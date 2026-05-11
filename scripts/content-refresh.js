@@ -218,6 +218,8 @@ const PROXY_HOSTS = new Set([
   'ouraycountyco.gov',
   'www.ouraycountyco.gov',
   'www.norwoodtown.com',
+  'townofridgway.colorado.gov',
+  'www.townofridgway.colorado.gov',
 ]);
 
 function maybeProxy(url) {
@@ -3399,6 +3401,125 @@ async function syncTelluridComEvents() {
   return events;
 }
 
+// ── Task 20: Ridgway Town Council Agenda Scraper ──
+// ══════════════════════════════════════════════════════════════
+//
+// Fetches the Ridgway Town Council meetings page and extracts a map of
+// meeting date → agenda PDF URL.  The page is a plain Drupal CMS table:
+//
+//   <tr>
+//     <td><strong>May 13, 2026</strong></td>
+//     <td>[minutes link or empty]</td>
+//     <td><a href="/sites/.../Town-Council-Regular-Meeting-Packet.pdf">Agenda &amp; Packet</a></td>
+//   </tr>
+//
+// The returned object is written into RIDGWAY_AGENDA_MAP in gov-hub.js so
+// client-side rendering can show a dark-green "Agenda Posted →" button that
+// links directly to the PDF.
+//
+// Fetch strategy: try direct first (Ridgway's Colorado state CMS host is
+// usually reachable from GitHub Actions IPs).  If blocked, fall back to the
+// CF Worker proxy (requires townofridgway.colorado.gov in ALLOWED_HOSTS —
+// already added to the worker source; redeploy if needed).
+//
+async function syncRidgwayAgendas() {
+  const PAGE_URL = 'https://townofridgway.colorado.gov/i-want-to/ridgway-town-council';
+  const SAFARI_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15';
+
+  console.log('\n🏔  Task 20: Scraping Ridgway Town Council agendas...');
+
+  let html = null;
+  // Try direct fetch first
+  try {
+    const resp = await fetch(PAGE_URL, {
+      headers: { 'User-Agent': SAFARI_UA, 'Accept': 'text/html,*/*' }
+    });
+    if (resp.status === 200) {
+      html = resp.text;
+      console.log('  Ridgway agenda page: direct fetch 200');
+    } else {
+      console.warn(`  Ridgway agenda page: direct fetch HTTP ${resp.status}, trying proxy`);
+    }
+  } catch (e) {
+    console.warn(`  Ridgway agenda page: direct fetch error (${e.message}), trying proxy`);
+  }
+
+  // Fallback: CF Worker proxy
+  if (!html) {
+    try {
+      const proxyUrl = maybeProxy(PAGE_URL);
+      if (proxyUrl === PAGE_URL) {
+        console.warn('  No proxy configured — skipping Ridgway agenda scrape');
+        return null;
+      }
+      const resp2 = await fetch(proxyUrl);
+      if (resp2.status === 200) {
+        html = resp2.text;
+        console.log('  Ridgway agenda page: proxy fetch 200');
+      } else {
+        console.warn(`  Ridgway agenda page: proxy fetch HTTP ${resp2.status}`);
+        return null;
+      }
+    } catch (e2) {
+      console.warn(`  Ridgway agenda page: proxy fetch error (${e2.message})`);
+      return null;
+    }
+  }
+
+  // Parse the agenda table.
+  // Row pattern: <td><strong>MONTH DD, YYYY</strong></td> ... <td>...<a href="URL">...</a>...</td>
+  // We extract each <tr> block and look for a date + an agenda PDF link.
+  const agendaMap = {};
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+  // Match each <tr>…</tr> block
+  const rowRe = /<tr[^>]*>([\s\S]*?)<\/tr>/gi;
+  let rowMatch;
+  while ((rowMatch = rowRe.exec(html)) !== null) {
+    const row = rowMatch[1];
+
+    // Extract date from <strong>Month D, YYYY</strong>
+    const dateRe = /<strong[^>]*>\s*((?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s*\d{4})\s*<\/strong>/i;
+    const dateMatch = dateRe.exec(row);
+    if (!dateMatch) continue;
+
+    // Normalise date: "May 13, 2026" — ensure comma
+    let rawDate = dateMatch[1].trim().replace(/\s+/g, ' ');
+    if (!rawDate.includes(',')) rawDate = rawDate.replace(/(\d{4})$/, ', $1');
+    const d = new Date(rawDate);
+    if (isNaN(d.getTime())) continue;
+    const dateKey = `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+
+    // Extract agenda PDF link — prefer links whose text contains "Agenda"
+    const linkRe = /<a[^>]+href="([^"]+\.pdf[^"]*)"[^>]*>([^<]*)<\/a>/gi;
+    let linkMatch;
+    let agendaUrl = null;
+    while ((linkMatch = linkRe.exec(row)) !== null) {
+      const href = linkMatch[1];
+      const text = linkMatch[2];
+      if (/agenda/i.test(text) || /agenda/i.test(href)) {
+        agendaUrl = href.startsWith('http') ? href : `https://townofridgway.colorado.gov${href}`;
+        break;
+      }
+      // Accept any PDF as fallback if no "Agenda" label found
+      if (!agendaUrl) {
+        agendaUrl = href.startsWith('http') ? href : `https://townofridgway.colorado.gov${href}`;
+      }
+    }
+    if (agendaUrl) {
+      agendaMap[dateKey] = agendaUrl;
+    }
+  }
+
+  const count = Object.keys(agendaMap).length;
+  if (count === 0) {
+    console.warn('  No Ridgway agendas found in page — check HTML structure');
+    return null;
+  }
+  console.log(`  Found ${count} Ridgway agenda link(s):`, Object.keys(agendaMap).join(', '));
+  return agendaMap;
+}
+
 async function main() {
   console.log('═══════════════════════════════════════════════');
   console.log('  Telluride Gov Hub — Content Refresh');
@@ -3678,6 +3799,31 @@ async function main() {
       govHubSrc = replaceJsValue(govHubSrc, 'SHERBINO_EVENTS', newSherbinoEvents, false);
       changed = true;
       console.log(`  SHERBINO_EVENTS updated (was ${existingSherbino.length}, now ${newSherbinoEvents.length})`);
+    }
+  }
+
+  // ── Task 20: Ridgway agenda map ──
+  const newRidgwayAgendas = await syncRidgwayAgendas();
+  if (newRidgwayAgendas !== null) {
+    // extractJsObject helper for plain objects (uses the same bracket-matching
+    // logic as extractJsArray but with '{' as the bracket character).
+    const rawObj = (() => {
+      const startRe = /const\s+RIDGWAY_AGENDA_MAP\s*=\s*\{/;
+      const m = startRe.exec(govHubSrc);
+      if (!m) return {};
+      let depth = 0, start = m.index + m[0].length - 1;
+      for (let i = start; i < govHubSrc.length; i++) {
+        if (govHubSrc[i] === '{') depth++;
+        else if (govHubSrc[i] === '}') { depth--; if (depth === 0) {
+          try { return JSON.parse(govHubSrc.slice(start, i + 1)); } catch { return {}; }
+        }}
+      }
+      return {};
+    })();
+    if (JSON.stringify(newRidgwayAgendas) !== JSON.stringify(rawObj)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'RIDGWAY_AGENDA_MAP', newRidgwayAgendas, true);
+      changed = true;
+      console.log(`  RIDGWAY_AGENDA_MAP updated: ${Object.keys(newRidgwayAgendas).length} entries`);
     }
   }
 
