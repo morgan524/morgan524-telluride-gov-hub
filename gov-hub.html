@@ -482,6 +482,16 @@
         summary: 'Wildfire-season readiness briefing; review of mutual-aid agreements with Norwood and Ouray; budget amendment for new wildland engine procurement.',
         location: 'Telluride Fire Station',
         agendaUrl: 'https://www.telluridefire.org/'
+      },
+      {
+        date: '2026-05-20', time: '5:00 PM',
+        title: 'HARC Meeting',
+        sourceKey: 'telluride', sourceLabel: 'Town of Telluride',
+        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Official.png',
+        category: 'HARC Meeting',
+        summary: 'Worksessions on Carhenge (Lot L area sculpture installation) and Shandoka (proposed large-scale development on the west side of Telluride).',
+        location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
+        agendaUrl: 'https://telluride.civicweb.net/filepro/documents/6869'
       }
     ];
 
@@ -500,7 +510,8 @@
       { key: 'fire',      name: 'Fire Protection',        logo: 'https://livabletelluride.org/logo/Telluride%20Fire.png' },
       { key: 'med',       name: 'Telluride Medical',      logo: 'https://livabletelluride.org/logo/Telluride%20Hospital%20Dist.jpeg' },
       { key: 'smart',     name: 'SMART Transit',          logo: 'https://livabletelluride.org/logo/SMART.png' },
-      { key: 'ophir',     name: 'Town of Ophir',          logo: 'https://livabletelluride.org/logo/Ophir.jpeg' }
+      { key: 'ophir',     name: 'Town of Ophir',          logo: 'https://livabletelluride.org/logo/Ophir.jpeg' },
+      { key: 'telluride', name: 'Town of Telluride',      logo: 'https://livabletelluride.org/logo/Telluride%20Official.png' }
     ];
 
     let MEETINGS = SAMPLE_MEETINGS.slice();
@@ -508,7 +519,7 @@
 
     /* ── Render top chip filter bar (subset of sidebar entities) ── */
     function chipsHtml() {
-      const TOP_CHIPS = ['all', 'mv', 'county', 'norwood', 'school', 'fire', 'med', 'smart'];
+      const TOP_CHIPS = ['all', 'mv', 'telluride', 'county', 'norwood', 'school', 'fire', 'med', 'smart'];
       return TOP_CHIPS.map(key => {
         const e = ENTITIES.find(x => x.key === key);
         if (!e) return '';
@@ -537,6 +548,7 @@
     /* ── Comment email map ── */
     const COMMENT_MAP = {
       telluride: { email: 'townclerk@telluride.gov',                      deadline: 'Written comments must be received by Wednesday at noon prior to the meeting.' },
+      'telluride-harc': { email: 'dcandelaria@telluride.gov',             deadline: 'Written comments should be submitted before the meeting. Contact the Historic Preservation Planner for agenda packets.' },
       county:    { email: 'bocc@sanmiguelcountyco.gov',                   deadline: 'Written comments must be received by Monday at 4:00 pm prior to the meeting.' },
       'county-planning': { email: 'planningcommission@sanmiguelcountyco.gov', deadline: 'Written comments must be received by Monday at 4:00 pm prior to the meeting.' },
       mv:        { email: 'council@mtnvillage.org',                       deadline: 'Written comments must be received by Thursday prior to the meeting.' },
@@ -552,9 +564,10 @@
     function commentInfo(m) {
       const title = (m.title || '').toLowerCase();
       let key = m.sourceKey;
-      // Detect planning/design-review sub-type for county and MV
-      if (key === 'county' && /planning|design review/.test(title)) key = 'county-planning';
-      if (key === 'mv'     && /planning|design review/.test(title)) key = 'mv-planning';
+      // Detect planning/design-review sub-type for county and MV, and HARC for Telluride
+      if (key === 'county'    && /planning|design review/.test(title)) key = 'county-planning';
+      if (key === 'mv'        && /planning|design review/.test(title)) key = 'mv-planning';
+      if (key === 'telluride' && /harc|historic|architectural review/.test(title)) key = 'telluride-harc';
       return COMMENT_MAP[key] || null;
     }
 
@@ -662,7 +675,8 @@
               ['getRidgwayMeetings',      'ridgway',   'Town of Ridgway',       'https://livabletelluride.org/logo/Ridgway%20Town.png'],
               ['getNorwoodMeetings',      'norwood',   'Town of Norwood',       'https://livabletelluride.org/logo/Norwood%20Town.jpeg'],
               ['getOphirMeetings',        'ophir',     'Town of Ophir',         'https://livabletelluride.org/logo/Ophir.jpeg'],
-              ['getSmartMeetings',        'smart',     'SMART',                 'https://livabletelluride.org/logo/SMART.png']
+              ['getSmartMeetings',        'smart',     'SMART',                 'https://livabletelluride.org/logo/SMART.png'],
+              ['getTellurideMeetings',    'telluride', 'Town of Telluride',     'https://livabletelluride.org/logo/Telluride%20Official.png']
             ];
             const live = [];
             const today = new Date(); today.setHours(0,0,0,0);

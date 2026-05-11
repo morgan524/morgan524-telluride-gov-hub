@@ -57,6 +57,7 @@ const TARGETS = [
   { kind: 'function', name: 'getOphirMeetings' },
   { kind: 'function', name: 'getAirportMeetings' },
   { kind: 'function', name: 'getSmartMeetings' },
+  { kind: 'function', name: 'getTellurideMeetings' },
   { kind: 'function', name: 'getMeetingSummary' },
 ];
 

@@ -1495,9 +1495,10 @@ const PAPER_LOGOS = {
 const LEGAL_ENTITY_LOGOS = {
   county: '<img src="https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=12524" alt="San Miguel County">',
   mv: '<img src="https://townofmountainvillage.com/site/themes/vwtheme/build/img/logos/town-of-mountain-village-logo.png" alt="Mountain Village">',
-  telluride: '<img src="logo/Telluride.png" alt="Town of Telluride">',
+  telluride: '<img src="/logo/Telluride%20Official.png" alt="Town of Telluride">',
   housing: '<svg viewBox="0 0 24 24" fill="none"><path d="M3 21V10l9-7 9 7v11H3z" fill="#6b3fa0" opacity="0.15"/><path d="M3 21V10l9-7 9 7v11" stroke="#6b3fa0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="9" y="14" width="6" height="7" rx="0.5" fill="#6b3fa0" opacity="0.3"/><path d="M9 14h6v7H9z" stroke="#6b3fa0" stroke-width="1.2"/><circle cx="12" cy="6" r="0" fill="none"/><path d="M7 21h10" stroke="#6b3fa0" stroke-width="1.8" stroke-linecap="round"/></svg>',
-  norwood: '<img src="logo/Norwood.png" alt="Town of Norwood">',
+  ridgway: '<img src="/logo/Ridgway%20Town.png" alt="Town of Ridgway">',
+  norwood: '<img src="/logo/Norwood%20Town.jpeg" alt="Town of Norwood">',
   assessor: '<img src="https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=12524" alt="San Miguel County Assessor">',
   water_court: '<img src="logo/water Court.png" alt="Water Court">',
   ophir: '<svg viewBox="0 0 24 24" fill="none"><path d="M4 18l4-6 4 3 4-5 4 8H4z" fill="#5a7a3a" opacity="0.2"/><path d="M4 18l4-6 4 3 4-5 4 8" stroke="#5a7a3a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="6" r="2" fill="#d4a017"/></svg>',
@@ -1505,6 +1506,19 @@ const LEGAL_ENTITY_LOGOS = {
 };
 
 const LEGAL_NOTICES = [
+  {
+    title: "Ridgway Bids & Requests for Proposals",
+    entity: "Town of Ridgway",
+    entityClass: "ent-ridgway",
+    entityLogo: "ridgway",
+    icon: "📋",
+    iconClass: "type-rfp",
+    type: "Bids / RFP",
+    filterTag: "public-entity",
+    summary: "The Town of Ridgway posts active bids and requests for proposals on their website. Check the link for currently open solicitations. Town Hall: 201 N. Railroad St., Ridgway, CO 81432 · (970) 626-5308.",
+    expires: "2026-12-31",
+    url: "https://townofridgway.colorado.gov/resources/requests-for-proposals/bids"
+  },
   {
     title: "Property Tax Exemption -- Seniors, Disabled Veterans & Gold Star Spouses",
     entity: "San Miguel County Assessor",
@@ -2345,6 +2359,8 @@ const HOUSING_LISTINGS = [
   }
 ];
 
+const RIDGWAY_AGENDA_MAP = {};
+
 function getCountyCachedMeetings() {
   return COUNTY_CACHED_DATA.map(m => {
     const eventDate = localDate(m.date);
@@ -2357,6 +2373,7 @@ function getCountyCachedMeetings() {
           : COUNTY_CIVICCLERK_FALLBACK);
     const categoryLabel = m.type === 'planning'  ? 'Planning Commission'
                         : m.type === 'ssr'       ? 'SSR Roundtable'
+                        : /board/i.test(m.title || '') ? 'Board Meeting'
                         : 'Meeting';
 
     return {
@@ -2403,7 +2420,8 @@ function getMVMeetings() {
       sourceLabel: 'Mountain Village',
       category: m.board === 'drb' ? 'DRB Meeting' : 'Meeting',
       canceled: false,
-      hasAgenda
+      hasAgenda,
+      agendaLink: m.agendaUrl || null
     };
   });
 }
@@ -2431,7 +2449,7 @@ function getSchoolMeetings() {
       location: m.location || '',
       source: 'school',
       sourceLabel: 'School District R-1',
-      category: m.special ? 'Special Meeting' : (/Work Session/i.test(m.title) ? 'Work Session' : 'Board Meeting'),
+      category: m.special ? 'Special Meeting' : 'Board Meeting',
       canceled: false,
       hasAgenda
     };
@@ -2556,40 +2574,6 @@ function getOphirMeetings() {
   });
 }
 
-function getRidgwayMeetings() {
-  return RIDGWAY_CACHED_DATA.map(m => {
-    const eventDate = localDate(m.date);
-    // RIDGWAY_AGENDA_MAP is bot-populated every 6h from the town council page.
-    // Keys match m.date exactly ("May 13, 2026"). Falls back to any manually-set
-    // m.agendaUrl in RIDGWAY_CACHED_DATA, then to the general council URL.
-    const mappedAgendaUrl = (typeof RIDGWAY_AGENDA_MAP !== 'undefined' && RIDGWAY_AGENDA_MAP[m.date]) || null;
-    const agendaLink = mappedAgendaUrl || m.agendaUrl || null;
-    const hasAgenda = !!agendaLink;
-    const link = agendaLink || RIDGWAY_COUNCIL_URL;
-
-    let description = '';
-    if (m.note) {
-      description = m.note;
-    }
-
-    return {
-      title: m.title,
-      link,
-      agendaLink,
-      description,
-      eventDate,
-      eventDates: '',
-      eventTimes: m.time || '',
-      location: '201 N Railroad St, Ridgway, CO 81432',
-      source: 'ridgway',
-      sourceLabel: 'Ridgway',
-      category: 'Council Meeting',
-      canceled: false,
-      hasAgenda
-    };
-  });
-}
-
 function getAirportMeetings() {
   return AIRPORT_CACHED_DATA.map(m => {
     const eventDate = localDate(m.date);
@@ -2638,6 +2622,35 @@ function getSmartMeetings() {
       category: m.special ? 'Special Meeting' : 'Board Meeting',
       canceled: false,
       hasAgenda
+    };
+  });
+}
+
+function getTellurideMeetings() {
+  return TELLURIDE_CACHED_DATA.map(m => {
+    const eventDate = localDate(m.date);
+    const hasAgenda = !!m.agendaUrl;
+    const link = m.agendaUrl || TELLURIDE_HARC_URL;
+
+    let description = '';
+    if (m.note) {
+      description = m.note;
+    }
+
+    return {
+      title: m.special ? m.title + ' -- Special Meeting' : m.title,
+      link,
+      description,
+      eventDate,
+      eventDates: '',
+      eventTimes: m.time || '5:00 PM',
+      location: m.location || 'Rebekah Hall, 201 N. Pine Street, Telluride',
+      source: 'telluride',
+      sourceLabel: 'Town of Telluride',
+      category: 'HARC Meeting',
+      canceled: false,
+      hasAgenda,
+      agendaLink: m.agendaUrl || null
     };
   });
 }

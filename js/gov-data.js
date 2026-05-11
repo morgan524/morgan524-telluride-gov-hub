@@ -581,17 +581,36 @@ const NORWOOD_CACHED_DATA = [
   },
   // ── Planning & Zoning Commission ──
   {
-    date: 'April 27, 2026',
+    date: 'June 15, 2026',
     title: 'Planning and Zoning Commission Meeting',
     board: 'pz',
     agendaUrl: null,
     note: 'Next scheduled P&Z meeting -- agenda posted before the meeting.'
   },
   {
+    date: 'May 18, 2026',
+    title: 'Planning and Zoning Commission Meeting',
+    board: 'pz',
+    agendaUrl: null,
+    note: 'Next scheduled P&Z meeting -- agenda posted before the meeting.'
+  },
+  {
+    date: 'April 20, 2026',
+    title: 'Planning and Zoning Commission Meeting',
+    board: 'pz',
+    agendaUrl: 'https://www.norwoodtown.com/files/9f7d271ce/04.20.2026+P%26Z+BOA+AGENDA.pdf'
+  },
+  {
+    date: 'March 16, 2026',
+    title: 'Planning and Zoning Commission Meeting',
+    board: 'pz',
+    agendaUrl: 'https://www.norwoodtown.com/files/cef2273a3/03.16.2026+P%26Z+BOA+AGENDA.pdf'
+  },
+  {
     date: 'February 23, 2026',
     title: 'Planning and Zoning Commission Meeting',
     board: 'pz',
-    agendaUrl: 'https://www.norwoodtown.com/planning-and-zoning-commission-meetings'
+    agendaUrl: 'https://www.norwoodtown.com/files/b5e6f3c90/02.23.2026+P%26Z+BOA+AGENDA.pdf'
   },
   // ── Water Commission ──
   {
@@ -715,6 +734,72 @@ const RIDGWAY_CACHED_DATA = [
     time: '6:00 PM',
     title: 'Ridgway Town Council Regular Meeting',
     board: 'council',
+    agendaUrl: null
+  }
+];
+
+const TELLURIDE_HARC_URL = 'https://telluride.gov/100/Historic-and-Architectural-Review-Commis';
+
+const TELLURIDE_CACHE_DATE = '2026-05-11';
+
+const TELLURIDE_CACHED_DATA = [
+  // ── Historic and Architectural Review Commission (HARC) ──
+  // Meets 3rd Wednesday of each month at Rebekah Hall, Telluride
+  {
+    date: 'May 20, 2026',
+    title: 'HARC Meeting',
+    board: 'harc',
+    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
+    agendaUrl: 'https://telluride.civicweb.net/filepro/documents/6869',
+    note: 'Agenda includes Carhenge and Shandoka worksessions.'
+  },
+  {
+    date: 'June 17, 2026',
+    title: 'HARC Meeting',
+    board: 'harc',
+    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
+    agendaUrl: null
+  },
+  {
+    date: 'July 15, 2026',
+    title: 'HARC Meeting',
+    board: 'harc',
+    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
+    agendaUrl: null
+  },
+  {
+    date: 'August 19, 2026',
+    title: 'HARC Meeting',
+    board: 'harc',
+    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
+    agendaUrl: null
+  },
+  {
+    date: 'September 16, 2026',
+    title: 'HARC Meeting',
+    board: 'harc',
+    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
+    agendaUrl: null
+  },
+  {
+    date: 'October 21, 2026',
+    title: 'HARC Meeting',
+    board: 'harc',
+    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
+    agendaUrl: null
+  },
+  {
+    date: 'November 18, 2026',
+    title: 'HARC Meeting',
+    board: 'harc',
+    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
+    agendaUrl: null
+  },
+  {
+    date: 'December 16, 2026',
+    title: 'HARC Meeting',
+    board: 'harc',
+    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
     agendaUrl: null
   }
 ];

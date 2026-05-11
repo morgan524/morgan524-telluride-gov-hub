@@ -408,7 +408,8 @@ function getMVMeetings() {
       sourceLabel: 'Mountain Village',
       category: m.board === 'drb' ? 'DRB Meeting' : 'Meeting',
       canceled: false,
-      hasAgenda
+      hasAgenda,
+      agendaLink: m.agendaUrl || null
     };
   });
 }
@@ -1035,6 +1036,35 @@ function renderPasscodeInfo(item) {
   }
   html += '</div>';
   return html;
+}
+
+function getTellurideMeetings() {
+  return TELLURIDE_CACHED_DATA.map(m => {
+    const eventDate = localDate(m.date);
+    const hasAgenda = !!m.agendaUrl;
+    const link = m.agendaUrl || TELLURIDE_HARC_URL;
+
+    let description = '';
+    if (m.note) {
+      description = m.note;
+    }
+
+    return {
+      title: m.special ? m.title + ' -- Special Meeting' : m.title,
+      link,
+      description,
+      eventDate,
+      eventDates: '',
+      eventTimes: m.time || '5:00 PM',
+      location: m.location || 'Rebekah Hall, 201 N. Pine Street, Telluride',
+      source: 'telluride',
+      sourceLabel: 'Town of Telluride',
+      category: 'HARC Meeting',
+      canceled: false,
+      hasAgenda,
+      agendaLink: m.agendaUrl || null
+    };
+  });
 }
 
 function getSmartMeetings() {
