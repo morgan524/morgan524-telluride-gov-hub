@@ -5130,13 +5130,15 @@ function renderLegalNoticesIntoContainer(container) {
     const calBtns = legalCalendarButtons(notice);
 
     let mapHtml = '';
-    if (notice.address) {
+    // Skip map for legal land descriptions (Section/Township/Range) \u2014 ungeocodeable
+    // addresses cause the caption text to ghost over adjacent card content.
+    if (notice.address && isStreetAddr(notice.address)) {
       const mapQ = encodeURIComponent(notice.address);
       mapHtml = '<div class="legal-card-map" onclick="event.stopPropagation();event.preventDefault();">' +
         '<iframe src="https://maps.google.com/maps?q=' + mapQ + '&t=&z=15&ie=UTF8&iwloc=&output=embed" ' +
         'width="100%" height="100%" style="border:0;border-radius:10px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>' +
-        '<div style="font-size:0.65rem;color:var(--text-muted);margin-top:4px;text-align:center;">\ud83d\udccd ' + notice.address + '</div>' +
-      '</div>';
+      '</div>' +
+      '<div style="font-size:0.65rem;color:var(--text-muted);margin-top:6px;text-align:center;">\ud83d\udccd ' + notice.address + '</div>';
     }
 
     html += '<a href="' + linkUrl + '" target="_blank" rel="noopener" class="legal-card" data-filter-tag="' + notice.filterTag + '">' +
@@ -6500,6 +6502,12 @@ function renderNewsWithTopic() {
 }
 
 // Wrap legal notices render to apply topic filter
+// Returns true only for real street addresses — legal land descriptions
+// (Section/Township/Range notation) return false and skip the map embed.
+function isStreetAddr(addr) {
+  return /\d{1,5}\s+[A-Z]/.test(addr) && !/Section\s+\d|T\d+[NS]\s+R\d+[EW]/i.test(addr);
+}
+
 function renderLegalNoticesWithTopic() {
   const container = document.getElementById('legals-content');
   if (!container) return;
@@ -6556,13 +6564,14 @@ function renderLegalNoticesWithTopic() {
 
     // Build map embed if address exists
     let mapHtml = '';
-    if (notice.address) {
+    // Skip map for legal land descriptions (Section/Township/Range) — ungeocodeable.
+    if (notice.address && isStreetAddr(notice.address)) {
       const mapQ = encodeURIComponent(notice.address);
       mapHtml = '<div class="legal-card-map" onclick="event.stopPropagation();event.preventDefault();">' +
         '<iframe src="https://maps.google.com/maps?q=' + mapQ + '&t=&z=15&ie=UTF8&iwloc=&output=embed" ' +
         'width="100%" height="100%" style="border:0;border-radius:10px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>' +
-        '<div style="font-size:0.65rem;color:var(--text-muted);margin-top:4px;text-align:center;">📍 ' + notice.address + '</div>' +
-      '</div>';
+      '</div>' +
+      '<div style="font-size:0.65rem;color:var(--text-muted);margin-top:6px;text-align:center;">📍 ' + notice.address + '</div>';
     }
 
     html += '<a href="' + linkUrl + '" target="_blank" rel="noopener" class="legal-card" data-filter-tag="' + notice.filterTag + '">' +
