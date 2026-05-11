@@ -145,6 +145,23 @@
       color: var(--lt-muted);
       font-size: 0.92rem;
     }
+    .hb-intro-perks {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-top: 14px;
+      position: relative;
+      z-index: 1;
+    }
+    .hb-intro-perk {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--lt-ink);
+    }
+    .hb-intro-perk svg { width: 14px; height: 14px; color: var(--forest); flex-shrink: 0; }
     .hb-intro-actions {
       display: flex;
       flex-wrap: wrap;
@@ -825,6 +842,20 @@
           <div class="hb-eyebrow">Hub-Bub civic forum</div>
           <h1 id="hub-bub-heading">Find the local conversation without digging through the noise.</h1>
           <p>Use Hub-Bub to ask a precise question, share a public document, summarize a meeting, or propose a practical solution.</p>
+          <div class="hb-intro-perks">
+            <div class="hb-intro-perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Post questions, sources &amp; meeting takeaways
+            </div>
+            <div class="hb-intro-perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Reply to neighbors &amp; follow discussions
+            </div>
+            <div class="hb-intro-perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Choose your digest: daily, weekly, or newsletter
+            </div>
+          </div>
         </div>
 
         <aside class="hb-account-panel" aria-label="Create a free account">
