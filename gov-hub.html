@@ -291,11 +291,11 @@
       display: inline-block;
       background: var(--accent-green-soft);
       color: var(--forest);
-      padding: 7px 14px;
+      padding: 5px 11px;
       border-radius: 999px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.82rem;
+      font-size: 0.77rem;
       border: 1px solid var(--accent-green-border);
       transition: background 0.15s;
     }
@@ -578,7 +578,7 @@
       const time = m.time ? '<span>🕐 ' + m.time + '</span>' : '';
       const meta = (loc || time) ? '<div class="meet-meta">' + time + loc + '</div>' : '';
       const agendaBtn = m.agendaUrl
-        ? '<a class="btn-action primary" href="' + m.agendaUrl + '" target="_blank" rel="noopener">View Agenda →</a>'
+        ? '<a class="btn-action' + (m.hasAgenda ? ' primary' : '') + '" href="' + m.agendaUrl + '" target="_blank" rel="noopener">View Agenda →</a>'
         : '';
       const recordBtn = m.recordingUrl
         ? '<a class="btn-action" href="' + m.recordingUrl + '" target="_blank" rel="noopener">Recording</a>'
@@ -684,7 +684,8 @@
                     summary: (typeof getMeetingSummary === 'function' ? (getMeetingSummary(m) || '') : '')
                              || (m.description || ''),
                     location: m.location || '',
-                    agendaUrl: m.agendaLink || m.link || ''
+                    agendaUrl: m.agendaLink || m.link || '',
+                    hasAgenda: !!m.hasAgenda
                   });
                 });
               } catch (e) { console.warn(name + ' failed:', e); }
