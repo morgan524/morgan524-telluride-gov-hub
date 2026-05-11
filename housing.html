@@ -55,33 +55,49 @@
     .hero h1 { margin: 0 0 8px; font-family: var(--font-heading); font-size: 2.6rem; color: var(--text-primary); }
     .hero p { margin: 0; color: var(--text-secondary); font-size: 1.05rem; max-width: 760px; }
 
-    /* ── Filter chips bar (top) ── */
-    .chip-bar { background: #fff; border-bottom: 1px solid var(--border-soft); }
-    .chip-bar-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 14px 32px;
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      align-items: center;
-      overflow-x: auto;
-    }
-    .chip {
-      display: inline-block;
-      padding: 7px 16px;
-      border-radius: 999px;
+    /* ── Sidebar filter panel ── */
+    .filter-panel {
       background: #fff;
-      color: var(--text-primary);
-      font-size: 0.88rem;
-      font-weight: 600;
-      cursor: pointer;
       border: 1px solid var(--border-card);
-      white-space: nowrap;
-      transition: all 0.15s;
+      border-radius: 12px;
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
     }
-    .chip:hover { background: var(--accent-green-soft); border-color: var(--accent-green-border); color: var(--forest); }
-    .chip.active { background: var(--forest); color: #fff; border-color: var(--forest); }
+    .filter-panel-heading {
+      padding: 12px 16px 10px;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .filter-group { padding: 6px 0; }
+    .filter-group + .filter-group { border-top: 1px solid var(--border-soft); }
+    .filter-group-label {
+      padding: 8px 16px 4px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .filter-opt {
+      display: block;
+      width: 100%;
+      padding: 9px 16px;
+      text-align: left;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      transition: background 0.12s, color 0.12s;
+      border-radius: 0;
+    }
+    .filter-opt:hover { background: var(--accent-green-soft); color: var(--forest); }
+    .filter-opt.active { background: var(--forest); color: #fff; }
 
     /* ── Main page layout ── */
     .page-wrap {
@@ -372,17 +388,9 @@
     </div>
   </section>
 
-  <section class="chip-bar">
-    <div class="chip-bar-inner" id="chipRow"></div>
-  </section>
-
   <main class="page-wrap">
     <aside class="sidebar">
-      <div class="elig-card">
-        <h3>Am I qualified for deed-restricted housing?</h3>
-        <p>Most deed-restricted opportunities require working at least 1,400 hours per year in San Miguel, Ouray, San Juan, or Montrose County, plus residency and income criteria.</p>
-        <a class="elig-btn" href="https://smrha.org/" target="_blank" rel="noopener">Check My Eligibility →</a>
-      </div>
+      <div class="filter-panel" id="filterPanel"></div>
       <div class="pine-deco" aria-hidden="true">🌲</div>
     </aside>
 
@@ -485,11 +493,27 @@
     let LISTINGS = SAMPLE_LISTINGS.slice();
     let activeFilter = 'all';
 
-    function chipsHtml() {
-      return FILTERS.map(f => {
-        const cls = f.key === activeFilter ? 'chip active' : 'chip';
-        return '<span class="' + cls + '" data-filter="' + f.key + '">' + f.label + '</span>';
-      }).join('');
+    /* ── Sidebar filter panel ── */
+    const TYPE_FILTERS = FILTERS.slice(0, 4);   // All, Rent, Sale, Lottery
+    const LOC_FILTERS  = FILTERS.slice(4);       // Telluride … Ophir
+
+    function sidebarHtml() {
+      function opt(f) {
+        const cls = f.key === activeFilter ? 'filter-opt active' : 'filter-opt';
+        return '<button class="' + cls + '" data-filter="' + f.key + '">' + f.label + '</button>';
+      }
+      return '<div class="filter-panel-heading">Filter Listings</div>'
+        + '<div class="filter-group">' + TYPE_FILTERS.map(opt).join('') + '</div>'
+        + '<div class="filter-group"><div class="filter-group-label">By Location</div>'
+        + LOC_FILTERS.map(opt).join('') + '</div>';
+    }
+
+    /* ── Location-specific eligibility URL ── */
+    function eligibilityUrl(l) {
+      const text = ((l.address || '') + ' ' + (l.location || '')).toLowerCase();
+      if (/pinion park|norwood/.test(text))          return 'https://smrha.org/pinion-park/';
+      if (/telluride/.test(text) && !/mountain village/.test(text)) return 'https://smrha.org/town-of-telluride/';
+      return 'https://smrha.org/san-miguel-county/';
     }
 
     function matchesFilter(l, key) {
@@ -554,6 +578,8 @@
           + '<svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg> Apply Now</a>');
       }
       buttons.push('<a class="btn-action' + (l.applyUrl ? ' secondary' : '') + '" href="' + (l.url || '#') + '" target="_blank" rel="noopener">View Details →</a>');
+      // Per-listing eligibility button with location-specific URL
+      buttons.push('<a class="btn-action secondary" href="' + eligibilityUrl(l) + '" target="_blank" rel="noopener">Check Eligibility →</a>');
       if (l.contact && l.contact.phone) {
         const tel = l.contact.phone.replace(/[^+\d]/g, '');
         buttons.push('<a class="btn-icon" href="tel:' + tel + '" aria-label="Call ' + l.contact.phone + '" title="' + l.contact.phone + '">'
@@ -578,18 +604,17 @@
     }
 
     function render() {
-      document.getElementById('chipRow').innerHTML = chipsHtml();
+      document.getElementById('filterPanel').innerHTML = sidebarHtml();
       const filtered = LISTINGS.filter(l => matchesFilter(l, activeFilter));
       const grid = document.getElementById('houseGrid');
       grid.innerHTML = filtered.length
         ? filtered.map(houseCard).join('')
         : '<div class="empty">No listings match this filter.</div>';
 
-      document.querySelectorAll('.chip[data-filter]').forEach(c => {
-        c.addEventListener('click', () => {
-          activeFilter = c.dataset.filter;
+      document.querySelectorAll('.filter-opt[data-filter]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeFilter = btn.dataset.filter;
           render();
-          window.scrollTo({ top: document.querySelector('.chip-bar').offsetTop - 70, behavior: 'smooth' });
         });
       });
     }
