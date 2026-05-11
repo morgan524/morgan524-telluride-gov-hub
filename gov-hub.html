@@ -243,6 +243,24 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
+    .meet-preview {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin: 6px 0 0;
+      background: var(--bg-card, #f8f8f8);
+      border-left: 3px solid var(--accent, #4a7c59);
+      padding: 6px 10px;
+      border-radius: 0 6px 6px 0;
+    }
+    .meet-preview-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent, #4a7c59);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      display: block;
+      margin-bottom: 2px;
+    }
     .meet-meta {
       font-size: 0.82rem;
       color: var(--text-muted);
@@ -539,6 +557,9 @@
         : '';
       const tag = m.category ? '<span class="meet-tag">' + m.category + '</span>' : '';
       const summary = m.summary ? '<p class="meet-summary">' + m.summary + '</p>' : '';
+      const preview = !m.summary && getMeetingPreview && getMeetingPreview(m)
+        ? '<div class="meet-preview"><span class="meet-preview-label">📋 Agenda Preview</span>' + getMeetingPreview(m) + '</div>'
+        : '';
       const loc = m.location ? '<span>📍 ' + m.location + '</span>' : '';
       const time = m.time ? '<span>🕐 ' + m.time + '</span>' : '';
       const meta = (loc || time) ? '<div class="meet-meta">' + time + loc + '</div>' : '';
@@ -563,7 +584,7 @@
            + '<div class="meet-card-head">' + dateBadge
            + '<div class="meet-info">' + tag + '<h2 class="meet-title">' + m.title + '</h2></div>'
            + logo + '</div>'
-           + summary + meta
+           + summary + preview + meta
            + '<div class="meet-actions">' + agendaBtn + recordBtn + commentBtn + '</div>'
            + deadlineNote
            + '</article>';

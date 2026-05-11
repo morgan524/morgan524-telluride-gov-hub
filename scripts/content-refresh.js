@@ -393,6 +393,47 @@ Return ONLY valid JSON matching the format specified.`;
   });
 }
 
+// ── Lightweight Claude call — returns plain text (not JSON) ──
+async function callClaudeRaw(prompt) {
+  if (!ANTHROPIC_API_KEY) {
+    console.warn('  ⚠ No ANTHROPIC_API_KEY — skipping Claude preview generation');
+    return null;
+  }
+  const body = JSON.stringify({
+    model: CLAUDE_MODEL,
+    max_tokens: 256,
+    messages: [{ role: 'user', content: prompt }]
+  });
+  return new Promise((resolve, reject) => {
+    const req = https.request({
+      hostname: 'api.anthropic.com',
+      path: '/v1/messages',
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01',
+        'Content-Length': Buffer.byteLength(body)
+      },
+      timeout: 45000
+    }, (res) => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        try {
+          const json = JSON.parse(data);
+          if (json.error) { reject(new Error(json.error.message)); return; }
+          resolve((json.content?.[0]?.text || '').trim());
+        } catch (e) { reject(e); }
+      });
+    });
+    req.on('error', reject);
+    req.on('timeout', () => { req.destroy(); reject(new Error('Claude API timeout')); });
+    req.write(body);
+    req.end();
+  });
+}
+
 // ══════════════════════════════════════════════════════════════
 // ── Task 1: Meeting Agenda Summaries ──
 // ══════════════════════════════════════════════════════════════
@@ -400,7 +441,7 @@ Return ONLY valid JSON matching the format specified.`;
 async function fetchUpcomingMeetings() {
   const meetings = [];
   const now = new Date();
-  const horizon = new Date(now.getTime() + 14 * 86400000); // 14 days ahead
+  const horizon = new Date(now.getTime() + 30 * 86400000); // 30 days ahead
 
   // Telluride — CivicWeb API
   try {
@@ -557,6 +598,148 @@ async function refreshSummaries(existingSummaries) {
   }
 
   console.log(`  Summary refresh complete: ${newCount} new, ${Object.keys(updated).length} total`);
+  return updated;
+}
+
+// ══════════════════════════════════════════════════════════════
+// ── Task 1b: Pre-Meeting Previews (from legal notices + agendas) ──
+// ══════════════════════════════════════════════════════════════
+
+// Entity key mapping: legal notice entityLogo → meeting source key
+const NOTICE_ENTITY_TO_SOURCE = {
+  telluride: 'telluride',
+  county:    'county',
+  mv:        'mv',
+  norwood:   'norwood',
+  ophir:     'ophir',
+  school:    'school',
+  fire:      'fire',
+  med:       'med',
+  smart:     'smart',
+  airport:   'airport',
+  smrha:     'smrha',
+  assessor:  'county',  // assessor notices → county meetings
+};
+
+async function refreshMeetingPreviews(existingPreviews, govHubSrc) {
+  console.log('
+📋 Task 1b: Refreshing meeting previews from legal notices...');
+
+  // Extract current LEGAL_NOTICES from gov-hub.js source
+  let legalNotices = [];
+  try {
+    legalNotices = extractJsArray(govHubSrc, 'LEGAL_NOTICES') || [];
+  } catch (e) {
+    console.warn('  Could not parse LEGAL_NOTICES:', e.message);
+  }
+  console.log(`  Found ${legalNotices.length} legal notices to scan`);
+
+  const meetings = await fetchUpcomingMeetings();
+  console.log(`  Found ${meetings.length} upcoming meetings`);
+
+  if (meetings.length === 0) {
+    console.log('  No upcoming meetings found — skipping preview generation');
+    // Prune expired entries but keep the rest
+    const pruned = {};
+    const now = new Date();
+    for (const [key, val] of Object.entries(existingPreviews)) {
+      const datePart = key.split('|')[1];
+      if (datePart && new Date(datePart) >= now) pruned[key] = val;
+    }
+    return pruned;
+  }
+
+  const updated = {};
+  // Carry forward previews for meetings still in the future
+  const now = new Date();
+  for (const [key, val] of Object.entries(existingPreviews)) {
+    const datePart = key.split('|')[1];
+    if (datePart && new Date(datePart) >= now) updated[key] = val;
+  }
+
+  let newCount = 0;
+
+  for (const m of meetings) {
+    const key = `${m.source}|${m.date}|${m.title}`;
+
+    // Skip if we already have a preview for this meeting
+    if (updated[key]) {
+      console.log(`  ✓ Already have preview for: ${key}`);
+      continue;
+    }
+
+    const meetingDate = new Date(m.date + 'T00:00:00');
+
+    // Find legal notices from the same entity that are likely related to this meeting
+    // A notice is "related" if:
+    //   (a) its entityLogo maps to the meeting's source, AND
+    //   (b) its expiry date is within 60 days of the meeting date (i.e., recently published)
+    const relatedNotices = legalNotices.filter(notice => {
+      const noticeSource = NOTICE_ENTITY_TO_SOURCE[notice.entityLogo];
+      if (noticeSource !== m.source) return false;
+      if (!notice.expires) return false;
+      const expiresDate = new Date(notice.expires + 'T00:00:00');
+      const daysDiff = (expiresDate - meetingDate) / 86400000;
+      // Notice expires within 60 days after meeting OR up to 5 days before meeting
+      return daysDiff >= -5 && daysDiff <= 60;
+    });
+
+    if (relatedNotices.length === 0) {
+      // Also check agenda text for description-based preview
+      if (!m.agendaUrl) {
+        console.log(`  ⊘ No notices or agenda for: ${key}`);
+        continue;
+      }
+    }
+
+    console.log(`  → Generating preview for: ${key} (${relatedNotices.length} notices, agenda: ${!!m.agendaUrl})`);
+
+    try {
+      // Build context from legal notices + agenda text
+      const noticeContext = relatedNotices.map(n =>
+        `[${n.type || 'Notice'}] ${n.title}: ${(n.summary || '').slice(0, 200)}`
+      ).join('
+');
+
+      const agendaText = m.agendaUrl ? await extractAgendaText(m.agendaUrl) : '';
+
+      if (!noticeContext && !agendaText) {
+        console.log(`    Skipped (no context available)`);
+        continue;
+      }
+
+      const contextBlock = [
+        noticeContext ? `RELATED LEGAL NOTICES:
+${noticeContext}` : '',
+        agendaText ? `AGENDA TEXT (excerpt):
+${agendaText.slice(0, 1500)}` : ''
+      ].filter(Boolean).join('
+
+');
+
+      const prompt = `You are summarizing what a local government body is expected to discuss at an upcoming meeting.
+
+Meeting: ${AGENDA_SOURCES[m.source]?.label || m.source} — ${m.title}
+Date: ${m.date}
+
+${contextBlock}
+
+Write a plain-text preview of 50 words or less describing the key issues or agenda items expected at this meeting. Use a neutral, factual tone. No bullet points. No headers. Start directly with the content (e.g., "Council is expected to..." or "Board will consider...").`;
+
+      const response = await callClaudeRaw(prompt);
+      if (response && response.trim()) {
+        updated[key] = response.trim().slice(0, 400); // cap at 400 chars
+        newCount++;
+        console.log(`    ✓ Generated preview (${response.trim().length} chars)`);
+      }
+    } catch (e) {
+      console.warn(`    ✗ Preview generation error: ${e.message}`);
+    }
+
+    await new Promise(r => setTimeout(r, 1200));
+  }
+
+  console.log(`  Preview refresh complete: ${newCount} new, ${Object.keys(updated).length} total`);
   return updated;
 }
 
@@ -2577,6 +2760,14 @@ async function main() {
   if (JSON.stringify(newSummaries) !== JSON.stringify(existingSummaries)) {
     govHubSrc = replaceJsValue(govHubSrc, 'MANUAL_SUMMARIES', newSummaries, true);
     govHubSrc = replaceConstString(govHubSrc, 'MANUAL_SUMMARIES_CACHE_DATE', today());
+    changed = true;
+  }
+
+  // ── 1b. Meeting Previews (from legal notices + agendas) ──
+  const existingPreviews = extractJsObject(govHubSrc, 'MEETING_PREVIEWS') || {};
+  const newPreviews = await refreshMeetingPreviews(existingPreviews, govHubSrc);
+  if (JSON.stringify(newPreviews) !== JSON.stringify(existingPreviews)) {
+    govHubSrc = replaceJsValue(govHubSrc, 'MEETING_PREVIEWS', newPreviews, true);
     changed = true;
   }
 
