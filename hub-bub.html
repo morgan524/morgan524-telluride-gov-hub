@@ -96,7 +96,7 @@
       margin-bottom: 28px;
     }
     .hb-intro-main {
-      min-height: 260px;
+      min-height: 0;
       border: 1px solid var(--lt-line);
       border-radius: var(--lt-radius-xl);
       padding: clamp(24px, 4vw, 44px);
@@ -394,10 +394,10 @@
     /* ── Composer (new shell around existing composer) ── */
     .hb-composer-shell {
       margin-bottom: 16px;
-      border: 1px solid var(--lt-line);
+      border: 2px solid var(--forest);
       border-radius: var(--lt-radius-xl);
       background: rgba(255,253,248,0.92);
-      box-shadow: var(--lt-shadow-soft);
+      box-shadow: var(--lt-shadow-soft), 0 0 0 4px rgba(33,68,60,0.08);
       overflow: hidden;
     }
     .hb-composer-shell-head {
@@ -840,11 +840,6 @@
           <div class="hb-eyebrow">Hub-Bub civic forum</div>
           <h1 id="hub-bub-heading">Find the local conversation without digging through the noise.</h1>
           <p>Use Hub-Bub to ask a precise question, share a public document, summarize a meeting, or propose a practical solution.</p>
-          <div class="hb-intro-actions">
-            <a class="hb-action primary" href="#hb-composer-anchor">Start a discussion</a>
-            <a class="hb-action" href="#hb-feed-anchor">Browse current posts</a>
-            <a class="hb-action" href="#hb-guidelines-anchor">Guidelines</a>
-          </div>
         </div>
 
         <aside class="hb-account-panel" aria-label="Create a free account">
