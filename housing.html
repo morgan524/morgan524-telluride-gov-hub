@@ -192,24 +192,21 @@
     .house-body { padding: 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
     .house-title-row {
       display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
+      flex-direction: column;
+      gap: 4px;
     }
     .house-title {
       font-family: var(--font-heading);
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: var(--text-primary);
       margin: 0;
-      line-height: 1.25;
-      flex: 1;
+      line-height: 1.3;
     }
     .house-price {
       font-family: var(--font-heading);
       font-size: 1.05rem;
       color: var(--forest);
       font-weight: 700;
-      white-space: nowrap;
     }
     .house-beds {
       font-size: 0.88rem;
@@ -528,7 +525,9 @@
         visualHtml = '<img src="' + l.img + '" alt="' + (l.title || '') + '" onerror="this.style.display=\'none\'">';
       }
       const pill = '<span class="' + pillClass(l.type) + '">' + (l.typeLabel || l.type || 'Available') + '</span>';
-      const price = l.price ? '<div class="house-price">' + l.price + '</div>' : '';
+      // Strip redundant "(deed-restricted)" and tier suffix from price — type pill already conveys that
+      const priceClean = (l.price || '').replace(/,?\s*deed[-\s]?restricted/gi, '').replace(/\s*\(\s*\)\s*$/, '').trim();
+      const price = priceClean ? '<div class="house-price">' + priceClean + '</div>' : '';
       const beds = l.beds ? '<div class="house-beds">' + l.beds + (l.location ? ' • ' + l.location : '') + '</div>' : '';
       const addrLine = l.address ? '<div class="house-address">📍 ' + l.address + '</div>' : '';
       const summary = l.summary ? '<p class="house-summary">' + l.summary + '</p>' : '';
@@ -629,7 +628,7 @@
           try {
             if (typeof HOUSING_LISTINGS === 'undefined' || !Array.isArray(HOUSING_LISTINGS)) return;
             const live = HOUSING_LISTINGS.map(l => ({
-              title: (l.title || '').replace(/^[^\w]*\s/, ''),  // strip leading emoji
+              title: (l.title || '').replace(/^[^\w]*\s/, '').replace(/\s*\(deed[-\s]?restricted\)\s*$/i, ''),  // strip emoji + redundant "(Deed-Restricted)"
               type: l.type || '',
               typeLabel: detectTypeLabel(l.type),
               lottery: l.lottery === true,
