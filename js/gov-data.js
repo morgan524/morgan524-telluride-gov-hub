@@ -683,6 +683,29 @@ const OPHIR_CACHED_DATA = [
   }
 ];
 
+const RIDGWAY_COUNCIL_URL = 'https://townofridgway.colorado.gov/i-want-to/ridgway-town-council';
+
+const RIDGWAY_CACHE_DATE = '2026-05-11';
+
+const RIDGWAY_CACHED_DATA = [
+  // ── Town Council (2nd Tuesday of each month, 6:00 PM) ──
+  {
+    date: 'May 12, 2026',
+    time: '6:00 PM',
+    title: 'Ridgway Town Council Regular Meeting',
+    board: 'council',
+    agendaUrl: null,
+    note: 'Agenda typically posted the Friday before.'
+  },
+  {
+    date: 'June 9, 2026',
+    time: '6:00 PM',
+    title: 'Ridgway Town Council Regular Meeting',
+    board: 'council',
+    agendaUrl: null
+  }
+];
+
 const AIRPORT_BOARD_URL = 'https://tellurideairport.com/traa-board-information/';
 
 const AIRPORT_CACHE_DATE = '2026-03-25';
@@ -1327,6 +1350,7 @@ const ENTITY_LOGOS = {
   smart: '<img src="/logo/SMART.png" alt="SMART" style="width:100%;height:100%;object-fit:contain;">',
   fire: '<img src="/logo/Telluride Fire.png" alt="Telluride Fire Department" style="width:100%;height:100%;object-fit:contain;">',
   med: '<img src="/logo/Telluride%20Hospital%20Dist.jpeg" alt="Telluride Medical Center" style="width:100%;height:100%;object-fit:contain;">',
+  ridgway: '<img src="/logo/Ridgway%20Town.png" alt="Town of Ridgway" style="width:100%;height:100%;object-fit:contain;">',
   norwood: '<img src="/logo/Norwood%20Town.jpeg" alt="Town of Norwood" style="width:100%;height:100%;object-fit:contain;">',
   ophir: '<img src="/logo/Ophir.jpeg" alt="Town of Ophir" style="width:100%;height:100%;object-fit:contain;">',
   ttimes: '<img src="/logo/TT%20Logo.png" alt="The Telluride Times" style="width:100%;height:100%;object-fit:contain;">',

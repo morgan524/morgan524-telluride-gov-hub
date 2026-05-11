@@ -2556,6 +2556,34 @@ function getOphirMeetings() {
   });
 }
 
+function getRidgwayMeetings() {
+  return RIDGWAY_CACHED_DATA.map(m => {
+    const eventDate = localDate(m.date);
+    const hasAgenda = !!m.agendaUrl;
+    const link = m.agendaUrl || RIDGWAY_COUNCIL_URL;
+
+    let description = '';
+    if (m.note) {
+      description = m.note;
+    }
+
+    return {
+      title: m.title,
+      link,
+      description,
+      eventDate,
+      eventDates: '',
+      eventTimes: m.time || '',
+      location: '201 N Railroad St, Ridgway, CO 81432',
+      source: 'ridgway',
+      sourceLabel: 'Ridgway',
+      category: 'Council Meeting',
+      canceled: false,
+      hasAgenda
+    };
+  });
+}
+
 function getAirportMeetings() {
   return AIRPORT_CACHED_DATA.map(m => {
     const eventDate = localDate(m.date);
