@@ -810,6 +810,8 @@ const BLOG_POSTS = [
 
 const SMC_ALERTS = [];
 
+const ENGAGE_MEETINGS = [];
+
 const COMMUNITY_EVENTS = [
   {
     title: "2nd Annual Telluride Rotary Hikeathon",

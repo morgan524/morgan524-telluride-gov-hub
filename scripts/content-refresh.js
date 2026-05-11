@@ -2805,6 +2805,106 @@ async function refreshSmcAlerts(existingAlerts = []) {
   return alerts;
 }
 
+
+// ── Engage Telluride — daily scrape of published project key dates ──
+async function refreshEngageMeetings(existing = []) {
+  const BASE = 'https://engagetelluride.org';
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const cutoff = new Date(today.getTime() + 60 * 86400000); // 60 days ahead
+  const results = [];
+
+  try {
+    // 1. Fetch the projects page and extract published slugs
+    const projectsRes = await fetch(BASE + '/projects');
+    if (projectsRes.status !== 200) throw new Error('projects page HTTP ' + projectsRes.status);
+    const projectsHtml = projectsRes.text;
+
+    // Extract href from project-tile__link anchors within published tile blocks
+    const slugSet = new Set();
+    // Tiles: data-state='published' appears in the wrapping div, href in the inner anchor
+    // Pattern: find each tile block marked published, then grab its project-tile__link href
+    const tileBlockRe = /data-state='published'[\s\S]{0,800}?class="project-tile__link"\s+href="(\/[^"]+)"/gi;
+    let m;
+    while ((m = tileBlockRe.exec(projectsHtml)) !== null) slugSet.add(m[1]);
+    // Also the reverse (href before state marker in same card)
+    const tileBlockRe2 = /class="project-tile__link"\s+href="(\/[^"]+)"[\s\S]{0,800}?data-state='published'/gi;
+    while ((m = tileBlockRe2.exec(projectsHtml)) !== null) slugSet.add(m[1]);
+    const slugs = [...slugSet];
+    console.log(`  Engage Telluride: ${slugs.length} published projects found`);
+
+    for (const slug of slugs) {
+      try {
+        // 2. Fetch the project page to find Key Date widget IDs
+        const projRes = await fetch(BASE + slug);
+        if (projRes.status !== 200) continue;
+        const projHtml = projRes.text;
+
+        const widgetIds = [];
+        const widgetRe = /id='KeyDateWidget_(\d+)'/gi;
+        while ((m = widgetRe.exec(projHtml)) !== null) widgetIds.push(m[1]);
+        if (widgetIds.length === 0) continue;
+
+        // 3. Fetch each key dates widget page
+        for (const wid of widgetIds) {
+          try {
+            const kdUrl = BASE + slug + '/widgets/' + wid + '/key_dates';
+            const kdRes = await fetch(kdUrl);
+            if (kdRes.status !== 200) continue;
+            const kdHtml = kdRes.text;
+
+            // Parse keydate-wrap blocks: anchor name, date, heading
+            const wrapRe = /<a name='(\d+)'><\/a>[\s\S]{0,200}?<div class='nomargin keydate__date'>([^<]+)<\/div>\s*<h2 class='keydate__heading'>([^<]+)<\/h2>/gi;
+            while ((m = wrapRe.exec(kdHtml)) !== null) {
+              const anchor = m[1];
+              const rawDate = m[2].trim();
+              const title = m[3].replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').trim();
+
+              const d = new Date(rawDate);
+              if (isNaN(d.getTime())) continue;
+              d.setHours(0, 0, 0, 0);
+              if (d < today || d > cutoff) continue;
+
+              const dateStr = d.toISOString().slice(0, 10);
+              const tl = title.toLowerCase();
+              const board = /\bharc\b/.test(tl) ? 'harc'
+                : /planning\s*&?\s*zoning|p\s*&?\s*z\b/.test(tl) ? 'pz'
+                : /town\s*council/.test(tl) ? 'council'
+                : /ccaase/.test(tl) ? 'ccaase'
+                : /parks/.test(tl) ? 'parks'
+                : /liquor/.test(tl) ? 'liquor'
+                : 'other';
+
+              const projectName = slug.replace(/^\//, '').split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+
+              results.push({ projectName, projectUrl: BASE + slug, title, date: dateStr, board, dateUrl: kdUrl + '#' + anchor });
+            }
+          } catch (e2) {
+            console.warn(`  Engage key_dates error (${slug}/widgets/${wid}): ${e2.message}`);
+          }
+        }
+      } catch (e1) {
+        console.warn(`  Engage project error (${slug}): ${e1.message}`);
+      }
+    }
+
+    // Deduplicate by projectUrl|date|board
+    const seen = new Set();
+    const deduped = results.filter(r => {
+      const key = r.projectUrl + '|' + r.date + '|' + r.board;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+    deduped.sort((a, b) => a.date.localeCompare(b.date));
+    console.log(`  Engage Telluride: ${deduped.length} upcoming key date(s) found`);
+    return deduped;
+
+  } catch (e) {
+    console.warn(`  Engage Telluride scrape error: ${e.message} — carrying forward existing`);
+    return existing;
+  }
+}
+
 async function main() {
   console.log('═══════════════════════════════════════════════');
   console.log('  Telluride Gov Hub — Content Refresh');
@@ -2862,6 +2962,14 @@ async function main() {
   const freshSmcAlerts = await refreshSmcAlerts(existingSmcAlerts);
   if (JSON.stringify(freshSmcAlerts) !== JSON.stringify(existingSmcAlerts)) {
     govHubSrc = replaceJsValue(govHubSrc, 'SMC_ALERTS', freshSmcAlerts, false);
+    changed = true;
+  }
+
+  // ── 2d. Engage Telluride project meeting key dates (daily) ──
+  const existingEngageMeetings = extractJsArray(govHubSrc, 'ENGAGE_MEETINGS') || [];
+  const freshEngageMeetings = await refreshEngageMeetings(existingEngageMeetings);
+  if (JSON.stringify(freshEngageMeetings) !== JSON.stringify(existingEngageMeetings)) {
+    govHubSrc = replaceJsValue(govHubSrc, 'ENGAGE_MEETINGS', freshEngageMeetings, false);
     changed = true;
   }
 

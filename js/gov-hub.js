@@ -2529,6 +2529,38 @@ function icsDataUri(item) {
   return 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
 }
 
+// ── Engage Telluride — find matching projects for a meeting card ──
+// Matches by date (YYYY-MM-DD) and board key
+function getEngageProjects(item) {
+  if (typeof ENGAGE_MEETINGS === 'undefined' || !Array.isArray(ENGAGE_MEETINGS) || ENGAGE_MEETINGS.length === 0) return [];
+  if (!item || !item.eventDate) return [];
+  const dateStr = item.eventDate instanceof Date
+    ? item.eventDate.toISOString().slice(0, 10)
+    : new Date(item.eventDate).toISOString().slice(0, 10);
+  const src = (item.source || '').toLowerCase();
+  const title = (item.title || '').toLowerCase();
+  const board = /harc/.test(title) || /harc/.test(src) ? 'harc'
+    : /planning.*zoning|p&z|p &amp; z/.test(title) || /planning.*zoning/.test(src) ? 'pz'
+    : /council/.test(title) || /council/.test(src) ? 'council'
+    : /ccaase/.test(title) ? 'ccaase'
+    : /parks/.test(title) || /parks/.test(src) ? 'parks'
+    : /liquor/.test(title) || /liquor/.test(src) ? 'liquor'
+    : 'other';
+  return ENGAGE_MEETINGS.filter(e => e.date === dateStr && e.board === board);
+}
+
+function renderEngageProjects(projects) {
+  if (!projects || projects.length === 0) return '';
+  const items = projects.map(p =>
+    '<li><a href="' + p.dateUrl + '" target="_blank" rel="noopener">' +
+    p.projectName + '</a></li>'
+  ).join('');
+  return '<div class="engage-projects">' +
+    '<span class="engage-label">📌 On the agenda via <a href="https://engagetelluride.org/projects" target="_blank" rel="noopener">Engage Telluride</a>:</span>' +
+    '<ul class="engage-list">' + items + '</ul>' +
+    '</div>';
+}
+
 function renderCardActions(item) {
   const gIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>';
   const zoomIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>';
@@ -3960,6 +3992,11 @@ const BLOG_POSTS = [
 // ── SMC AlertCenter — active alerts shown on Events page ──
 // Auto-refreshed every 6h by scripts/content-refresh.js
 const SMC_ALERTS = [];
+
+// ── Engage Telluride — upcoming meeting key dates from published projects ──
+// Auto-refreshed daily by scripts/content-refresh.js
+// Shape: [{ projectName, projectUrl, title, date (YYYY-MM-DD), board, dateUrl }]
+const ENGAGE_MEETINGS = [];
 
 const COMMUNITY_EVENTS = [
   {
@@ -6388,6 +6425,7 @@ function renderMeetingsWithTopic() {
           (item.canceled ? '' : renderPasscodeInfo(item)) +
           (item.canceled ? '' : summaryHtml) +
           (item.canceled ? '' : (item.description ? '<div class="description">' + item.description + '</div>' : '')) +
+          (item.canceled ? '' : renderEngageProjects(getEngageProjects(item))) +
           (item.canceled ? '' : renderOfficialCommentInfo(item)) +
           (item.canceled ? '' : renderQuickReactions(item)) +
           (item.canceled ? '' : renderCardActions(item)) +

@@ -36,6 +36,7 @@ const TARGETS = [
   { kind: 'const',    name: 'KOTO_FEATURED_STORIES' },
   { kind: 'const',    name: 'BLOG_POSTS' },
   { kind: 'const',    name: 'SMC_ALERTS' },
+  { kind: 'const',    name: 'ENGAGE_MEETINGS' },
   { kind: 'const',    name: 'COMMUNITY_EVENTS' },
   { kind: 'const',    name: 'KOTO_COMMUNITY_EVENTS' },
   { kind: 'const',    name: 'WILKINSON_EVENTS' },

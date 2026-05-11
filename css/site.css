@@ -2084,6 +2084,40 @@
       border-radius: 0 6px 6px 0;
       font-style: italic;
     }
+    /* ── Engage Telluride project annotation on meeting cards ── */
+    .engage-projects {
+      margin-top: 8px;
+      padding: 6px 10px;
+      background: rgba(45, 90, 130, 0.05);
+      border-left: 3px solid rgba(45, 90, 130, 0.35);
+      border-radius: 0 6px 6px 0;
+      font-size: 0.78rem;
+      line-height: 1.4;
+    }
+    .engage-label {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    .engage-label a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .engage-list {
+      margin: 3px 0 0 0;
+      padding-left: 16px;
+    }
+    .engage-list li {
+      margin: 2px 0;
+    }
+    .engage-list a {
+      color: #2d5a82;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .engage-list a:hover {
+      text-decoration: underline;
+    }
     /* ── END: AI Summary Styles ── */
 
     /* ── Glossary Tooltips ── */
