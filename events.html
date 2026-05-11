@@ -668,6 +668,45 @@
       return `${days[d.getDay()]}, ${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
     }
 
+
+    // ── Fallback images for events with no photo ─────────────────────────────
+    // Curated Unsplash photos: thematically related but generic enough to
+    // never misrepresent a specific event or person.
+    const FALLBACK_IMGS = {
+      yoga:      'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop&q=80',
+      dance:     'https://images.unsplash.com/photo-1547153760-18fc86324498?w=600&h=400&fit=crop&q=80',
+      music:     'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop&q=80',
+      legal:     'https://images.unsplash.com/photo-1589578527966-fdac0f44566c?w=600&h=400&fit=crop&q=80',
+      garden:    'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop&q=80',
+      book:      'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop&q=80',
+      hike:      'https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&h=400&fit=crop&q=80',
+      art:       'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&h=400&fit=crop&q=80',
+      market:    'https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=600&h=400&fit=crop&q=80',
+      kids:      'https://images.unsplash.com/photo-1509909756405-be0199881695?w=600&h=400&fit=crop&q=80',
+      film:      'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&h=400&fit=crop&q=80',
+      tech:      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop&q=80',
+      cleanup:   'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&q=80',
+      community: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&h=400&fit=crop&q=80',
+    };
+    function getFallbackImg(e) {
+      const txt = ((e.title || '') + ' ' + (e.summary || '') + ' ' + (e.description || '')).toLowerCase();
+      if (/yoga|stretch|meditat|pilates|wellness/.test(txt))      return FALLBACK_IMGS.yoga;
+      if (/dance|dancing|cardio|zumba|aerobic/.test(txt))         return FALLBACK_IMGS.dance;
+      if (/music|concert|band|perform|bluegrass|sing|choir/.test(txt)) return FALLBACK_IMGS.music;
+      if (/legal|clinic|law|attorney|court|justice/.test(txt))    return FALLBACK_IMGS.legal;
+      if (/garden|plant|flower|wildflower|nature nurture/.test(txt)) return FALLBACK_IMGS.garden;
+      if (/book|read|author|librar|story|storytime|talk/.test(txt)) return FALLBACK_IMGS.book;
+      if (/hike|hiking|trail|outdoor|walk|trek|mountain/.test(txt)) return FALLBACK_IMGS.hike;
+      if (/art|gallery|paint|exhibit|craft|pottery/.test(txt))    return FALLBACK_IMGS.art;
+      if (/market|farmer|vendor|fair/.test(txt))                  return FALLBACK_IMGS.market;
+      if (/kid|child|youth|family|junior|teen|school/.test(txt))  return FALLBACK_IMGS.kids;
+      if (/film|movie|cinema|screen/.test(txt))                   return FALLBACK_IMGS.film;
+      if (/tech|computer|digital|phone|device/.test(txt))         return FALLBACK_IMGS.tech;
+      if (/clean.?up|cleanup|environment|litter|trash/.test(txt)) return FALLBACK_IMGS.cleanup;
+      return FALLBACK_IMGS.community;
+    }
+    // ─────────────────────────────────────────────────────────────────────────
+
     function eventCardHtml(e) {
       // Pre-encode the image URL once for the data-bg-img attribute below
       return `
@@ -677,7 +716,7 @@
               <span class="month">${formatMonth(e.date)}</span>
               <span class="day">${formatDay(e.date)}</span>
             </span>
-            <img src="${e.img}" alt="" loading="lazy" onload="handlePortrait(this)" onerror="this.style.opacity=0.3">
+            <img src="${e.img || getFallbackImg(e)}" alt="" loading="lazy" onload="handlePortrait(this)" onerror="this.src=getFallbackImg(e)">
           </div>
           <div class="body">
             <h3>${e.title}</h3>
