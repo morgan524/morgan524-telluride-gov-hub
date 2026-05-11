@@ -256,30 +256,11 @@ async function checkLinks(govHubSrc, pulseSrc) {
 // ══════════════════════════════════════════════════════════════
 
 function checkParity() {
-  console.log('\n📄 Task 5: File parity check...');
-
-  if (!fs.existsSync(INDEX_HTML) || !fs.existsSync(GOVHUB_HTML)) {
-    console.log('  ⚠️ One or both HTML files missing');
-    issues.push('Missing HTML file — index.html or telluride-gov-hub.html');
-    return;
-  }
-
-  const indexHash = crypto.createHash('md5').update(fs.readFileSync(INDEX_HTML)).digest('hex');
-  const govhubHash = crypto.createHash('md5').update(fs.readFileSync(GOVHUB_HTML)).digest('hex');
-
-  if (indexHash !== govhubHash) {
-    // index.html is the canonical source. telluride-gov-hub.html is a
-    // legacy duplicate kept around for backward compat — it must mirror
-    // index.html, never the other way around. Previously this used a
-    // 'larger file wins' heuristic which silently reverted index.html
-    // edits whenever they made the file smaller (e.g. removing a section).
-    // 2026-05-01: switched to one-way sync.
-    console.log('  ⚠️ HTML files out of sync — copying index.html → telluride-gov-hub.html');
-    fs.copyFileSync(INDEX_HTML, GOVHUB_HTML);
-    changed = true;
-  } else {
-    console.log('  ✓ HTML files are in sync');
-  }
+  // 2026-05-10: telluride-gov-hub.html retired. The site now uses a
+  // split-page v2 architecture (index.html, about.html, gov-hub.html, etc.).
+  // telluride-gov-hub.html was archived to Claude/telluride-gov-hub-v1-archive.html.
+  // This task is a no-op going forward.
+  console.log('\n📄 Task 5: File parity check — skipped (telluride-gov-hub.html retired 2026-05-10)');
 }
 
 // ══════════════════════════════════════════════════════════════
