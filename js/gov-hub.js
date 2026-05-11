@@ -3169,6 +3169,17 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Register now for Rotary’s Hikeathon",
+    source: "Telluride Times",
+    date: "May 10, 2026",
+    firstSeen: "2026-05-11",
+    newsTopic: "arts-culture",
+    copy: "Registration is open for Telluride Rotary's annual Hikeathon fundraiser, which aims to raise over $30,000 this year. Several local nonprofits including Eco-Action Partners, Telluride Ski and Snowboard Club, and Telluride Jewish Community have formed teams to participate and raise funds for their own organizations as well.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_13dee22d-ca0a-4c26-aa6e-dc9b48237c1e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/98/f982f29f-8daa-47c5-b33c-bd221752003d/69fa5a362344c.image.jpg?resize=300%2C225"
+  },
+  {
     title: "NTSB gathering details on Frontier Airlines evacuation after plane hit and killed person in Denver",
     source: "Telluride Times",
     date: "May 10, 2026",
@@ -3706,17 +3717,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_a778a9e9-c819-4849-9e80-fad649fa33c6.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/4b/34b91d82-6339-4684-9229-8250f4823b6c/69f1697616de8.image.jpg?resize=300%2C182"
-  },
-  {
-    title: "Norwood Schools Spring Art Show",
-    source: "Telluride Times",
-    date: "April 29, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "education",
-    copy: "Norwood Schools has several upcoming events including spring pictures on April 30th, baseball districts at Del Norte on May 1st, and track meets scheduled for high school students at Pagosa Springs (May 2nd) and Grand Junction (May 6th), plus middle school track at Cedaredge on May 4th.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_db4d7389-4c3a-4cef-bf85-30ddfebbf642.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/2e/e2e844f7-8c2c-4eaf-aa50-c6ca0cba18f8/69f174ed2c287.image.jpg?resize=300%2C225"
   },
   {
     title: "County Planning Commission 5/14 Meeting in TELLURIDE",
@@ -4458,6 +4458,28 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
+  },
+  {
+    title: "Cancer Support Group",
+    link: "https://koto.org/event/cancer-support-group-2/",
+    description: "Join us for a supportive and compassionate space at our Cancer Support Group held every 3rd Thursday of the month from 5:00 PM to 6:00 PM. This group is designed for individuals currently experiencing cancer and for those who are in remission, offering a safe and welcoming environment for sharing personal stories, experiences, and encouragement. Whether you're navigating your cancer journey or reflecting on the road to recovery, this group provides emotional support and the opportunity to connect with others who understand your unique challenges. Come and find strength in the community, share your experiences, and know you're not alone in your journey.",
+    pubDate: "2026-05-21T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/Cancer-Support-Group.png"
+  },
+  {
+    title: "Salon Night at Telluride Arts HQ",
+    link: "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-05-21/",
+    description: "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it here in Telluride. These are evenings for conversation and connection, not lectures or formal programming. They are casual, open, and intentionally unstructured, designed to create the atmosphere where ideas can collide, new friendships form, and creativity sparks. Imagine an evening where musicians talk with writers, painters meet photographers, filmmakers share stories with ceramicists—and the unexpected happens!",
+    pubDate: "2026-05-21T17:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Arts HQ, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
   }
 ];
 const WILKINSON_EVENTS = [
