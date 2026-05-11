@@ -1313,7 +1313,7 @@ const ENTITY_LOGOS = {
   telluride: '<img src="/logo/Telluride%20Town.png" alt="Town of Telluride" style="width:100%;height:100%;object-fit:contain;">',
   county: '<img src="/logo/San Miguel County.png" alt="San Miguel County" style="width:100%;height:100%;object-fit:contain;">',
   mv: '<img src="/logo/Mountain%20village%20Town.jpg" alt="Mountain Village" style="width:100%;height:100%;object-fit:contain;">',
-  school: '<img src="https://files.smartsites.parentsquare.com/3403/design_img__vb3hiz.png" alt="Telluride School District" loading="lazy">',
+  school: '<img src="/logo/School%20District%20Telluride.png" alt="Telluride School District" style="width:100%;height:100%;object-fit:contain;">',
   smart: '<img src="/logo/SMART.png" alt="SMART" style="width:100%;height:100%;object-fit:contain;">',
   fire: '<img src="/logo/Telluride Fire.png" alt="Telluride Fire Department" style="width:100%;height:100%;object-fit:contain;">',
   med: '<img src="/logo/Medical.jpeg" alt="Telluride Medical Center" style="width:100%;height:100%;object-fit:contain;">',
