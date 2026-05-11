@@ -1494,7 +1494,7 @@ const PAPER_LOGOS = {
 
 const LEGAL_ENTITY_LOGOS = {
   county: '<img src="/logo/San%20Miguel%20County.png" alt="San Miguel County">',
-  mv: '<img src="/logo/Mountain%20Village.png" alt="Mountain Village">',
+  mv: '<img src="/logo/Mountain%20village%20Town.jpg" alt="Mountain Village" style="width:100%;height:100%;object-fit:contain;">',
   telluride: '<img src="/logo/Telluride%20Town.png" alt="Town of Telluride">',
   housing: '<svg viewBox="0 0 24 24" fill="none"><path d="M3 21V10l9-7 9 7v11H3z" fill="#6b3fa0" opacity="0.15"/><path d="M3 21V10l9-7 9 7v11" stroke="#6b3fa0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="9" y="14" width="6" height="7" rx="0.5" fill="#6b3fa0" opacity="0.3"/><path d="M9 14h6v7H9z" stroke="#6b3fa0" stroke-width="1.2"/><circle cx="12" cy="6" r="0" fill="none"/><path d="M7 21h10" stroke="#6b3fa0" stroke-width="1.8" stroke-linecap="round"/></svg>',
   ridgway: '<img src="/logo/Ridgway%20Town.png" alt="Town of Ridgway">',
