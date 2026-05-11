@@ -2223,6 +2223,89 @@ async function syncOurayCountyEvents() {
   return events;
 }
 
+// ── Task 16: Ouray/Ridgway Events (Localist JSON API) ──
+// Fetches from events.ourayridgwayevents.com using the same Localist API
+// the client uses, but server-side so the data is baked into gov-hub.js.
+// The client's fetchOurayRidgwayEvents() prefers OURAY_RIDGWAY_EVENTS if
+// it is non-empty, falling back to a live client-side API call.
+const LOCALIST_ORE_URL = 'https://events.ourayridgwayevents.com/api/2/events?school=ridgwayouray&days=60&pp=100';
+
+async function syncOurayRidgwayEvents() {
+  console.log('\n🏔  Task 16: Syncing Ouray/Ridgway events (Localist)...');
+  let json;
+  try {
+    const resp = await fetch(LOCALIST_ORE_URL, {
+      headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36' }
+    });
+    if (!resp || resp.status !== 200) {
+      console.warn(`  Localist API HTTP ${resp ? resp.status : 'no response'}`);
+      return null;
+    }
+    json = JSON.parse(resp.text);
+  } catch (e) {
+    console.warn(`  Localist fetch/parse error: ${e.message}`);
+    return null;
+  }
+
+  const rawEvents = Array.isArray(json && json.events) ? json.events : [];
+  if (rawEvents.length === 0) {
+    console.log('  No events returned from Localist API');
+    return [];
+  }
+
+  const now = Date.now();
+  const horizon = now + 60 * 86400000;
+  const seen = new Set();
+  const events = [];
+  let skippedGov = 0;
+  let skippedPast = 0;
+
+  for (const wrapped of rawEvents) {
+    const ev = wrapped && wrapped.event;
+    if (!ev || ev.private || ev.status !== 'live') continue;
+
+    // Skip government meetings
+    if (GOV_MEETING_PATTERN_NODE.test(ev.title || '')) { skippedGov++; continue; }
+
+    // Parse start date from event_instances
+    const inst = Array.isArray(ev.event_instances) && ev.event_instances[0]
+      && ev.event_instances[0].event_instance;
+    const startStr = inst && inst.start;
+    let startDate = startStr ? new Date(startStr) : (ev.first_date ? new Date(ev.first_date + 'T19:00:00') : null);
+    if (!startDate || isNaN(startDate.getTime())) continue;
+
+    const startMs = startDate.getTime();
+    if (startMs < now - 86400000) { skippedPast++; continue; } // allow today's events
+    if (startMs > horizon) continue;
+
+    const uid = String(ev.id || ev.urlname || ev.title);
+    const key = uid + '|' + startDate.toISOString().slice(0, 10);
+    if (seen.has(key)) continue;
+    seen.add(key);
+
+    // Clean description
+    let desc = (ev.description_text || '')
+      .replace(/\n/g, ' ').replace(/\r?\n+/g, ' ').replace(/\s+/g, ' ').trim();
+    if (/^https?:\/\/\S+$/.test(desc)) desc = '';
+    desc = smartTruncate(desc, EVENT_DESC_MAX);
+
+    events.push({
+      title: (ev.title || '').trim(),
+      link: ev.url || `https://events.ourayridgwayevents.com/event/${ev.urlname || ev.id}`,
+      description: desc,
+      pubDate: startDate.toISOString(),
+      source: 'oray',
+      sourceLabel: 'Ouray Ridgway Calendar',
+      category: 'Community Event',
+      location: ev.location || '',
+      imageUrl: ev.photo_url || ''
+    });
+  }
+
+  console.log(`  Ouray/Ridgway: ${events.length} events (${skippedPast} past, ${skippedGov} gov skipped)`);
+  return events;
+}
+
 async function syncKotoCommunityEvents() {
   console.log('\n🎵 Task 8: Syncing KOTO Community Calendar...');
   let resp;
@@ -3097,6 +3180,17 @@ async function main() {
       govHubSrc = replaceJsValue(govHubSrc, 'OURAY_COUNTY_EVENTS', newOurayCountyEvents, false);
       changed = true;
       console.log(`  OURAY_COUNTY_EVENTS updated (was ${existingOC.length}, now ${newOurayCountyEvents.length})`);
+    }
+  }
+
+  // ── 16. Ouray/Ridgway Events (Localist JSON API) ──
+  const newOurayRidgwayEvents = await syncOurayRidgwayEvents();
+  if (newOurayRidgwayEvents !== undefined && newOurayRidgwayEvents !== null) {
+    const existingOR = extractJsArray(govHubSrc, 'OURAY_RIDGWAY_EVENTS') || [];
+    if (JSON.stringify(newOurayRidgwayEvents) !== JSON.stringify(existingOR)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'OURAY_RIDGWAY_EVENTS', newOurayRidgwayEvents, false);
+      changed = true;
+      console.log(`  OURAY_RIDGWAY_EVENTS updated (was ${existingOR.length}, now ${newOurayRidgwayEvents.length})`);
     }
   }
 

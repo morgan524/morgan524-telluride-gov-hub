@@ -1865,7 +1865,24 @@ function fetchOurayCountyEvents() {
   return [];
 }
 
+// Bot writes here every 6 hours via scripts/content-refresh.js's
+// syncOurayRidgwayEvents(). Uses the Localist JSON API at
+// events.ourayridgwayevents.com/api/2/events?school=ridgwayouray — government
+// meetings are filtered out at bake time so this array contains only
+// community events (concerts, workshops, sports, fairs, etc.).
+// fetchOurayRidgwayEvents() prefers this const when non-empty and falls
+// back to a live Localist API call for the initial zero-data state.
+const OURAY_RIDGWAY_EVENTS = [];
+
 async function fetchOurayRidgwayEvents() {
+  // Prefer server-baked data (populated every 6h by content-refresh.js Task 16).
+  if (typeof OURAY_RIDGWAY_EVENTS !== 'undefined' && Array.isArray(OURAY_RIDGWAY_EVENTS) && OURAY_RIDGWAY_EVENTS.length > 0) {
+    return OURAY_RIDGWAY_EVENTS.map(ev => Object.assign({}, ev, {
+      pubDate: ev.pubDate ? new Date(ev.pubDate) : null,
+      eventDate: ev.pubDate ? new Date(ev.pubDate) : null
+    })).filter(ev => ev.pubDate && !isNaN(ev.pubDate.getTime()));
+  }
+  // Fallback: live Localist API call (runs only before the first bot bake).
   const ORE_URL = 'https://events.ourayridgwayevents.com/api/2/events?school=ridgwayouray&days=30&pp=50';
   try {
     let json;
