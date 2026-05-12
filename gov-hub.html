@@ -510,7 +510,8 @@
         category: 'HARC Meeting',
         summary: 'Worksessions on Carhenge (Lot L area sculpture installation) and Shandoka (proposed large-scale development on the west side of Telluride).',
         location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
-        agendaUrl: 'https://telluride.civicweb.net/filepro/documents/6869'
+        agendaUrl: 'https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8014',
+        hasAgenda: true
       }
     ];
 
@@ -745,10 +746,10 @@
 
 
       const dataScript = document.createElement('script');
-      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v4';
+      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v5';
       dataScript.onload = () => {
         const s = document.createElement('script');
-        s.src = 'https://livabletelluride.org/js/data-only.js?v=v4';
+        s.src = 'https://livabletelluride.org/js/data-only.js?v=v5';
         s.onload = () => {
           try {
             // Stub AI_SUMMARIES so getMeetingSummary() doesn't throw.

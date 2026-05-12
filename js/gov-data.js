@@ -784,6 +784,21 @@ const RIDGWAY_CACHED_DATA = [
   }
 ];
 
+// ── Town of Telluride CivicWeb meeting portal ──
+// Same telluride-co.civicweb.net portal the County uses; Town meetings have
+// their own meeting IDs in the same system.
+const TOWN_CIVICWEB_BASE = 'https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=';
+const TOWN_CIVICWEB_FALLBACK = 'https://telluride-co.civicweb.net/Portal/MeetingTypeList.aspx';
+
+// Map of "title|YYYY-MM-DD" -> CivicWeb meeting ID for Town meetings
+// Find IDs at https://telluride-co.civicweb.net/Portal/MeetingTypeList.aspx
+const TOWN_CIVICWEB_IDS = {
+  'HARC Meeting|2026-05-20': 8014,
+  // Add new entries here as agendas are posted, e.g.:
+  // 'HARC Meeting|2026-06-17': XXXX,
+  // 'Town Council Meeting|2026-MM-DD': XXXX,
+};
+
 const TELLURIDE_HARC_URL = 'https://telluride.gov/100/Historic-and-Architectural-Review-Commis';
 
 const TELLURIDE_CACHE_DATE = '2026-05-11';
@@ -796,7 +811,7 @@ const TELLURIDE_CACHED_DATA = [
     title: 'HARC Meeting',
     board: 'harc',
     location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
-    agendaUrl: 'https://telluride.civicweb.net/filepro/documents/6869',
+    civicWebId: 8014,
     note: 'Agenda includes Carhenge and Shandoka worksessions.'
   },
   {
@@ -1034,7 +1049,7 @@ const WHY_THIS_MATTERS = [
 
   // ── HARC / Historic Preservation ──
   {
-    match: /harc|historic.*architectural.*review|national.*historic.*landmark|historic.*preservation|demolition.*historic/i,
+    match: /(?:harc|historic.*architectural.*review).*(?:demolition|demolish|large.?scale|irreversible)|(?:demolition|demolish).*(?:harc|historic.*landmark|preservation)/i,
     decision: 'Whether to approve exterior alterations, new construction, demolitions, or signage within Telluride\'s National Historic Landmark District.',
     who: 'Property owners seeking approvals, adjacent property owners, and all residents who value the town\'s historic character.',
     stage: 'Check agenda -- HARC reviews can range from minor alterations (staff-level) to full commission hearings for large-scale projects and demolitions.',

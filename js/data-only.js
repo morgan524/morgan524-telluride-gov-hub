@@ -3903,11 +3903,37 @@ function getSmartMeetings() {
   });
 }
 
+function getTownAgendaLink(title, eventDate) {
+  if (!eventDate) return TOWN_CIVICWEB_FALLBACK;
+  const dateKey = eventDate.toISOString().slice(0, 10);
+  // Try exact title match first
+  const exactKey = title + '|' + dateKey;
+  let meetingId = TOWN_CIVICWEB_IDS[exactKey];
+  // Try partial match on date only
+  if (!meetingId) {
+    for (const key of Object.keys(TOWN_CIVICWEB_IDS)) {
+      if (key.endsWith('|' + dateKey)) {
+        meetingId = TOWN_CIVICWEB_IDS[key];
+        break;
+      }
+    }
+  }
+  if (!meetingId) return null;
+  return TOWN_CIVICWEB_BASE + meetingId;
+}
+
 function getTellurideMeetings() {
   return TELLURIDE_CACHED_DATA.map(m => {
     const eventDate = localDate(m.date);
-    const hasAgenda = !!m.agendaUrl;
-    const link = m.agendaUrl || TELLURIDE_HARC_URL;
+    // Explicit agendaUrl overrides everything (legacy/direct PDF links)
+    // civicWebId uses the Town's CivicWeb portal (same system as County)
+    // getTownAgendaLink also checks TOWN_CIVICWEB_IDS by title+date
+    const civicWebLink = m.civicWebId
+      ? TOWN_CIVICWEB_BASE + m.civicWebId
+      : getTownAgendaLink(m.title, eventDate);
+    const agendaLink = m.agendaUrl || civicWebLink;
+    const hasAgenda = !!agendaLink;
+    const link = agendaLink || TELLURIDE_HARC_URL;
 
     let description = '';
     if (m.note) {
@@ -3927,7 +3953,7 @@ function getTellurideMeetings() {
       category: 'HARC Meeting',
       canceled: false,
       hasAgenda,
-      agendaLink: m.agendaUrl || null
+      agendaLink
     };
   });
 }
