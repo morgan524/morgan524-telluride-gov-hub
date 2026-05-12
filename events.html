@@ -28,7 +28,6 @@
       --text-secondary: #4a5e57;
       --text-muted: #7a8a85;
       --border-soft: rgba(33, 68, 60, 0.12);
-      --bg-card: #fff;
       --shadow-card: 0 4px 18px rgba(36, 49, 46, 0.10);
       --font-heading: 'Georgia', 'Times New Roman', serif;
       --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
@@ -98,15 +97,18 @@
     }
 
     /* Filter chips — full-width across the top, above the layout split */
-    /* Filter chips — now live in sidebar */
+    .chips-bar {
+      max-width: 1280px; margin: 0 auto;
+      padding: 28px 32px 0;
+    }
     .filter-chips {
-      display: flex; flex-direction: column; gap: 6px;
-      margin-bottom: 20px;
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin-bottom: 24px;
     }
     .chip {
-      display: block;
-      padding: 8px 14px;
-      border-radius: 10px;
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 999px;
       background: #fff;
       border: 1px solid var(--border-soft);
       color: var(--text-secondary);
@@ -133,11 +135,6 @@
 
     /* Submit Event sidebar card */
     .sidebar { position: sticky; top: 100px; }
-    .sidebar-section-label {
-      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em;
-      text-transform: uppercase; color: var(--text-muted);
-      margin: 0 0 10px;
-    }
     .submit-card {
       background: var(--bg-hero);
       border: 1px solid var(--border-soft);
@@ -455,6 +452,7 @@
       <nav class="topnav-links">
         <a href="/local-news.html">Local News</a>
         <a href="/gov-hub.html">Gov-Hub</a>
+        <a href="/deep-dives.html">Deep Dives</a>
         <a href="/events.html" class="active">Events</a>
         <a href="/hub-bub.html">Hub-Bub</a>
         <a href="/local-orgs.html">Local Orgs</a>
@@ -473,12 +471,12 @@
     </div>
   </section>
 
+  <div class="chips-bar">
+    <div class="filter-chips" id="chipRow"><!-- populated by JS --></div>
+  </div>
+
   <main class="page-wrap">
     <aside class="sidebar">
-      <div style="margin-bottom: 24px;">
-        <p class="sidebar-section-label">Filter by Town</p>
-        <div class="filter-chips" id="chipRow"><!-- populated by JS --></div>
-      </div>
       <div class="submit-card">
         <div class="submit-icon" aria-hidden="true">
           <!-- calendar icon -->
@@ -491,7 +489,7 @@
         </div>
         <h3>Submit an Event</h3>
         <p>Help keep our community calendar full and up to date. Share your event with neighbors and visitors across the region.</p>
-        <button class="submit-btn" onclick="openSubmitModal()">Submit an Event</button>
+        <a class="submit-btn" href="#submit-event">Submit an Event</a>
         <div class="submit-mountains" aria-hidden="true">
           <svg viewBox="0 0 280 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
             <path fill="#a4b3a8" d="M0,60 L40,32 L72,50 L110,22 L150,46 L188,26 L228,44 L260,34 L280,56 L280,80 L0,80 Z"/>
@@ -536,7 +534,7 @@
         </svg>
       </div>
       <div class="submit-strip-text">Have an event to share? Submit it and help build our community calendar.</div>
-      <button class="submit-strip-cta" onclick="openSubmitModal()">Submit an Event →</button>
+      <a class="submit-strip-cta" href="#submit-event">Submit an Event →</a>
     </div>
   </section>
 
@@ -677,11 +675,8 @@
     // never misrepresent a specific event or person.
     const FALLBACK_IMGS = {
       yoga:      'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop&q=80',
-      pilates:   'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=400&fit=crop&q=80',
-      fitness:   'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop&q=80',
       dance:     'https://images.unsplash.com/photo-1547153760-18fc86324498?w=600&h=400&fit=crop&q=80',
       music:     'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop&q=80',
-      techhelp:  'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop&q=80',
       legal:     'https://images.unsplash.com/photo-1589578527966-fdac0f44566c?w=600&h=400&fit=crop&q=80',
       garden:    'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop&q=80',
       book:      'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop&q=80',
@@ -694,25 +689,10 @@
       cleanup:   'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&h=400&fit=crop&q=80',
       community: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&h=400&fit=crop&q=80',
     };
-    // Returns true when a source-supplied image should be ignored because the
-    // source commonly attaches unrelated stock photos to certain event types.
-    function imgNeedsOverride(e) {
-      const t = (e.title || '').toLowerCase();
-      return /pilates|barre|\bmat class\b|\bcore class\b/.test(t)
-          || /tech time|tech help|tech support|drop.in tech|digital help/.test(t);
-    }
-
     function getFallbackImg(e) {
       const txt = ((e.title || '') + ' ' + (e.summary || '') + ' ' + (e.description || '')).toLowerCase();
-      // Pilates / barre / mat work — physically active, NOT meditative
-      if (/pilates|barre|\bcore class\b|\bmat class\b/.test(txt)) return FALLBACK_IMGS.pilates;
-      // General fitness / cardio / stretch (not pilates-specific, not yoga-meditative)
-      if (/\bstretch\b|\bfitness\b|\bcardio\b|zumba|aerobic|\bworkout\b/.test(txt)) return FALLBACK_IMGS.fitness;
-      // Yoga / meditation — calm, meditative imagery
-      if (/\byoga\b|meditat|mindful|\bwellness\b/.test(txt))       return FALLBACK_IMGS.yoga;
-      // Tech help / digital literacy — two people at a laptop
-      if (/tech time|tech help|tech support|drop.in tech|digital help|device help/.test(txt)) return FALLBACK_IMGS.techhelp;
-      if (/dance|dancing/.test(txt))                                return FALLBACK_IMGS.dance;
+      if (/yoga|stretch|meditat|pilates|wellness/.test(txt))      return FALLBACK_IMGS.yoga;
+      if (/dance|dancing|cardio|zumba|aerobic/.test(txt))         return FALLBACK_IMGS.dance;
       if (/music|concert|band|perform|bluegrass|sing|choir/.test(txt)) return FALLBACK_IMGS.music;
       if (/clean.?up|cleanup|environment|litter|trash|volunteer/.test(txt)) return FALLBACK_IMGS.cleanup;
       if (/\blegal\b|\bclinic\b|\blaw firm\b|\battorney\b|\bcourthouse\b|\bcourtroom\b|\bjustice\b/.test(txt)) return FALLBACK_IMGS.legal;
@@ -737,7 +717,7 @@
               <span class="month">${formatMonth(e.date)}</span>
               <span class="day">${formatDay(e.date)}</span>
             </span>
-            <img src="${(e.img && !imgNeedsOverride(e)) ? e.img : getFallbackImg(e)}" alt="" loading="lazy" onload="handlePortrait(this)" onerror="this.src=getFallbackImg(e)">
+            <img src="${e.img || getFallbackImg(e)}" alt="" loading="lazy" onload="handlePortrait(this)" onerror="this.src=getFallbackImg(e)">
           </div>
           <div class="body">
             <h3>${e.title}</h3>
@@ -861,18 +841,14 @@
              const pushRidgwayLive = data => {
                (data.events || []).forEach(ev => {
                  const e = ev.event || ev;
-                 // Date lives in event_instances[0].event_instance.start (not starts_at)
-                 const inst = (e.event_instances || [])[0];
-                 const startAt = inst && inst.event_instance ? inst.event_instance.start : '';
                  pushEvent({
                    title: e.title || '',
-                   pubDate: startAt,
-                   location: e.location_name
-                     ? e.location_name + (e.location_name.toLowerCase().includes('ridgway') || e.location_name.toLowerCase().includes('ouray') ? '' : ', Ouray/Ridgway area')
-                     : 'Ouray/Ridgway area',
+                   pubDate: e.starts_at || '',
+                   location: (e.location && e.location.name)
+                     ? e.location.name + ', Ridgway' : 'Ouray/Ridgway area',
                    description: (e.description_text || '').slice(0, 600),
-                   link: e.localist_url || e.url || `https://events.ourayridgwayevents.com/event/${e.urlname || e.id}`,
-                   imageUrl: e.photo_url || '',
+                   link: e.url || `https://events.ourayridgwayevents.com/event/${e.urlname || e.id}`,
+                   imageUrl: (e.photo && e.photo.url) ? e.photo.url : '',
                  }, 'Ouray/Ridgway');
                });
              };
@@ -923,273 +899,90 @@
 
   </script>
 
-
-  <!-- ── Submit an Event modal ──────────────────────────────── -->
-  <style>
-    .submit-modal-backdrop {
-      display: none;
-      position: fixed; inset: 0; z-index: 1000;
-      background: rgba(0,0,0,0.45);
-      align-items: center; justify-content: center;
-      padding: 16px;
-    }
-    .submit-modal-backdrop.open { display: flex; }
-    .submit-modal {
-      background: var(--bg-card);
-      border-radius: 20px;
-      padding: 36px 32px 32px;
-      width: 100%; max-width: 620px;
-      max-height: 90vh; overflow-y: auto;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-      position: relative;
-    }
-    .submit-modal-close {
-      position: absolute; top: 16px; right: 20px;
-      background: none; border: none; font-size: 1.5rem;
-      color: var(--text-muted); cursor: pointer; line-height: 1;
-      padding: 4px 8px; border-radius: 8px;
-    }
-    .submit-modal-close:hover { background: var(--border-soft); }
-    .submit-modal h2 {
-      font-family: var(--font-head); font-size: 1.55rem;
-      color: var(--forest); margin: 0 0 6px;
-    }
-    .submit-modal p.lead {
-      color: var(--text-muted); font-size: 0.93rem; margin: 0 0 24px;
-    }
-    .submit-modal .ef-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .submit-modal .ef-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
-    .submit-modal label {
-      display: block; font-size: 0.82rem; font-weight: 700;
-      color: var(--forest); margin-bottom: 4px; letter-spacing: 0.01em;
-    }
-    .submit-modal input, .submit-modal textarea {
-      width: 100%; padding: 10px 13px;
-      border: 1px solid var(--border-soft); border-radius: 10px;
-      font-size: 0.92rem; background: var(--bg-hero);
-      color: var(--text-dark); box-sizing: border-box;
-      font-family: inherit;
-    }
-    .submit-modal textarea { resize: vertical; }
-    .submit-modal input:focus, .submit-modal textarea:focus {
-      outline: 2px solid var(--forest); border-color: transparent;
-    }
-    .submit-modal .ef-form { display: grid; gap: 14px; }
-    .submit-modal .ef-submit {
-      width: 100%; padding: 13px;
-      background: var(--forest); color: #fff;
-      border: none; border-radius: 12px;
-      font-size: 0.97rem; font-weight: 700;
-      cursor: pointer; margin-top: 6px;
-      transition: background 0.15s;
-    }
-    .submit-modal .ef-submit:hover { background: var(--forest-soft, #2d5a4e); }
-    @media (max-width: 540px) {
-      .submit-modal .ef-grid-2,
-      .submit-modal .ef-grid-3 { grid-template-columns: 1fr; }
-      .submit-modal { padding: 28px 18px 24px; }
-    }
-  </style>
-
-  <div class="submit-modal-backdrop" id="submitModalBackdrop" role="dialog" aria-modal="true" aria-label="Submit an Event">
-    <div class="submit-modal">
-      <button class="submit-modal-close" onclick="closeSubmitModal()" aria-label="Close">&#x2715;</button>
-      <h2>Submit an Event</h2>
-      <p class="lead">Share a community event with Livable Telluride. We'll review it and add it to the calendar.</p>
-      <form class="ef-form" id="eventSubmitForm">
-        <div class="ef-grid-2">
-          <div>
-            <label>Event Title *</label>
-            <input id="ef-title" type="text" required placeholder="e.g. Wildflower Walk &amp; Talk">
-          </div>
-          <div>
-            <label>Date *</label>
-            <input id="ef-date" type="date" required>
-          </div>
-        </div>
-        <div class="ef-grid-2">
-          <div>
-            <label>Time</label>
-            <input id="ef-time" type="text" placeholder="e.g. 10:00 AM – 12:00 PM">
-          </div>
-          <div>
-            <label>Location</label>
-            <input id="ef-location" type="text" placeholder="e.g. Wilkinson Public Library">
-          </div>
+  <!-- ── Submit an Event form ─────────────────────────────────── -->
+  <section id="submit-event" style="max-width:700px;margin:56px auto 72px;padding:0 24px;">
+    <h2 style="font-family:var(--font-head);font-size:1.65rem;color:var(--forest);margin-bottom:6px;">Submit an Event</h2>
+    <p style="color:var(--text-muted);margin-bottom:28px;font-size:0.97rem;">
+      Share a community event with Livable Telluride. We'll review it and post it to the calendar.
+    </p>
+    <form id="eventSubmitForm" style="display:grid;gap:16px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Event Title *</label>
+          <input id="ef-title" type="text" required placeholder="e.g. Wildflower Walk &amp; Talk"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
         </div>
         <div>
-          <label>Description *</label>
-          <textarea id="ef-desc" required rows="4" placeholder="Tell people what the event is about…"></textarea>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Date *</label>
+          <input id="ef-date" type="date" required
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Time</label>
+          <input id="ef-time" type="text" placeholder="e.g. 10:00 AM – 12:00 PM"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
         </div>
         <div>
-          <label>Event URL / More Info</label>
-          <input id="ef-url" type="url" placeholder="https://…">
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Location</label>
+          <input id="ef-location" type="text" placeholder="e.g. Wilkinson Public Library"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
         </div>
-        <div class="ef-grid-3">
-          <div>
-            <label>Your Name</label>
-            <input id="ef-name" type="text" placeholder="First Last">
-          </div>
-          <div>
-            <label>Your Email</label>
-            <input id="ef-email" type="email" placeholder="you@example.com">
-          </div>
-          <div>
-            <label>Organization</label>
-            <input id="ef-org" type="text" placeholder="Optional">
-          </div>
+      </div>
+      <div>
+        <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Description *</label>
+        <textarea id="ef-desc" required rows="4" placeholder="Tell people what the event is about…"
+          style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);resize:vertical;box-sizing:border-box;"></textarea>
+      </div>
+      <div>
+        <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Event URL / More Info</label>
+        <input id="ef-url" type="url" placeholder="https://…"
+          style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Your Name</label>
+          <input id="ef-name" type="text" placeholder="First Last"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
         </div>
-        <div class="ef-status" id="efStatus"></div>
-        <button type="submit" class="ef-submit" id="efSubmitBtn">Send Submission →</button>
-      </form>
-    </div>
-  </div>
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Your Email</label>
+          <input id="ef-email" type="email" placeholder="you@example.com"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+        </div>
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Organization</label>
+          <input id="ef-org" type="text" placeholder="Optional"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+        </div>
+      </div>
+      <button type="submit"
+        style="width:100%;padding:14px;background:var(--forest);color:#fff;border:none;border-radius:12px;font-size:1rem;font-weight:700;cursor:pointer;margin-top:4px;transition:background 0.15s;">
+        Send Submission →
+      </button>
+    </form>
+    <script>
+      document.getElementById('eventSubmitForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const v = id => document.getElementById(id).value.trim();
+        const subject = encodeURIComponent('Event Submission: ' + (v('ef-title') || '(no title)'));
+        const body = encodeURIComponent(
+          'EVENT SUBMISSION\n' +
+          '================\n' +
+          'Title:        ' + v('ef-title') + '\n' +
+          'Date:         ' + v('ef-date') + '\n' +
+          'Time:         ' + v('ef-time') + '\n' +
+          'Location:     ' + v('ef-location') + '\n' +
+          'Description:\n' + v('ef-desc') + '\n\n' +
+          'Event URL:    ' + v('ef-url') + '\n' +
+          'Submitted by: ' + v('ef-name') + ' <' + v('ef-email') + '>\n' +
+          'Organization: ' + v('ef-org')
+        );
+        window.location.href = 'mailto:info@livabletelluride.org?subject=' + subject + '&body=' + body;
+      });
+    </script>
+  </section>
 
-  <script>
-    function openSubmitModal() {
-      document.getElementById('submitModalBackdrop').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeSubmitModal() {
-      document.getElementById('submitModalBackdrop').classList.remove('open');
-      document.body.style.overflow = '';
-    }
-    // Close on backdrop click
-    document.getElementById('submitModalBackdrop').addEventListener('click', function(e) {
-      if (e.target === this) closeSubmitModal();
-    });
-    // Close on Escape
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeSubmitModal();
-    });
-    // ── EmailJS init ──
-    (function() {
-      try {
-        if (typeof emailjs !== 'undefined') {
-          emailjs.init({ publicKey: 'I_E0eKAfgpTFf3kNK' });
-          window._EMAILJS_SERVICE  = 'service_ubj8ke7';
-          window._EMAILJS_TEMPLATE = 'template_fzf4ul3';
-          window._EMAILJS_READY = true;
-        }
-      } catch(e) { console.warn('EmailJS init failed:', e.message); }
-    })();
-
-    function efShowStatus(msg, type) {
-      const el = document.getElementById('efStatus');
-      el.textContent = msg;
-      el.className = 'ef-status ' + type;
-      el.style.display = 'block';
-    }
-
-    document.getElementById('eventSubmitForm').addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const v = id => document.getElementById(id).value.trim();
-      const title    = v('ef-title');
-      const date     = v('ef-date');
-      const desc     = v('ef-desc');
-      const time     = v('ef-time');
-      const location = v('ef-location');
-      const url      = v('ef-url');
-      const name     = v('ef-name');
-      const email    = v('ef-email');
-      const org      = v('ef-org');
-
-      document.getElementById('efStatus').style.display = 'none';
-
-      if (!title) { efShowStatus('Please enter the event title.', 'error'); return; }
-      if (!date)  { efShowStatus('Please enter the event date.', 'error'); return; }
-      if (!desc)  { efShowStatus('Please add a description.', 'error'); return; }
-
-      const btn = document.getElementById('efSubmitBtn');
-      btn.disabled = true;
-      btn.textContent = 'Submitting…';
-      btn.style.opacity = '0.6';
-
-      // Format date nicely for the email
-      let prettyDate = date;
-      try { prettyDate = new Date(date + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }); } catch(e) {}
-
-      // Build pre-filled GitHub Issue body (key: value pairs the bot reads)
-      let issueBody = 'Event: ' + title + '\n';
-      issueBody += 'Date: ' + date + '\n';
-      if (time)     issueBody += 'Time: ' + time + '\n';
-      if (location) issueBody += 'Location: ' + location + '\n';
-      if (url)      issueBody += 'URL: ' + url + '\n';
-      issueBody += 'Description: ' + desc.slice(0, 300) + '\n';
-      issueBody += '\n---\n';
-      issueBody += 'Submitted by: ' + (name || 'anonymous');
-      if (email) issueBody += ' <' + email + '>';
-      if (org)   issueBody += '\nOrganization: ' + org;
-
-      // One-click approve link → creates a labelled GitHub Issue → bot picks up within 6 hours
-      const approveUrl = 'https://github.com/morgan524/morgan524-telluride-gov-hub/issues/new'
-        + '?title=' + encodeURIComponent('[Event] ' + title)
-        + '&body=' + encodeURIComponent(issueBody)
-        + '&labels=' + encodeURIComponent('approved-event');
-
-      // Human-readable block for the email body
-      let details = 'TITLE:       ' + title + '\n';
-      details    += 'DATE:        ' + prettyDate + '\n';
-      if (time)     details += 'TIME:        ' + time + '\n';
-      if (location) details += 'LOCATION:    ' + location + '\n';
-      if (url)      details += 'EVENT URL:   ' + url + '\n';
-      details    += 'DESCRIPTION:\n' + desc + '\n\n';
-      details    += 'SUBMITTED BY: ' + (name || 'anonymous');
-      if (email) details += ' <' + email + '>';
-      if (org)   details += '\nORGANIZATION: ' + org;
-      details    += '\n\n--- TO APPROVE ---\n';
-      details    += 'Click the Approve button above.\n';
-      details    += 'Review the pre-filled GitHub Issue and click "Submit new issue".\n';
-      details    += 'The event will appear on the calendar within 6 hours automatically.\n';
-      details    += 'To remove it later, close the GitHub Issue.';
-
-      if (!window._EMAILJS_READY) {
-        // Graceful fallback: open mailto
-        const mailto = 'mailto:info@livabletelluride.org'
-          + '?subject=' + encodeURIComponent('Event Submission: ' + title)
-          + '&body=' + encodeURIComponent(details);
-        window.location.href = mailto;
-        btn.disabled = false; btn.textContent = 'Send Submission →'; btn.style.opacity = '1';
-        closeSubmitModal();
-        return;
-      }
-
-      try {
-        await emailjs.send(window._EMAILJS_SERVICE, window._EMAILJS_TEMPLATE, {
-          to_email:     'info@livabletelluride.org',
-          from_name:    name || 'Community member',
-          event_name:   title,
-          event_url:    url || '(none provided)',
-          message:      details,
-          approve_url:  approveUrl,
-          deny_url:     'https://livabletelluride.org/events.html',
-          site_name:    'Livable Telluride',
-          topic:        'Event Submission',
-          comment_body: details,
-          comment_type: 'event_submission',
-          review_url:   approveUrl
-        });
-        efShowStatus('Thanks! Your event has been submitted for review. We’ll add it to the calendar if it’s a good fit.', 'success');
-        document.getElementById('eventSubmitForm').reset();
-      } catch(err) {
-        console.warn('EmailJS send failed:', err);
-        efShowStatus('Something went wrong. Please email info@livabletelluride.org directly with your event details.', 'error');
-      }
-
-      btn.disabled = false;
-      btn.textContent = 'Send Submission →';
-      btn.style.opacity = '1';
-    });
-  </script>
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <style>
-    .ef-status {
-      display: none; padding: 12px 16px; border-radius: 10px;
-      font-size: 0.88rem; font-weight: 600; margin-top: 4px;
-    }
-    .ef-status.success { background: #e6f4ec; color: #1a6636; }
-    .ef-status.error   { background: #fdecea; color: #8b1a1a; }
-  </style>
 </body>
 </html>

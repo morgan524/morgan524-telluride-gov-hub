@@ -446,6 +446,7 @@
       <nav class="topnav-links">
         <a href="/local-news.html">Local News</a>
         <a href="/gov-hub.html">Gov-Hub</a>
+        <a href="/deep-dives.html">Deep Dives</a>
         <a href="/events.html">Events</a>
         <a href="/hub-bub.html">Hub-Bub</a>
         <a href="/local-orgs.html">Local Orgs</a>
@@ -742,7 +743,7 @@
         if (activeFilter === 'all') {
           show = true;
         } else if (activeFilter === 'land-use') {
-          show = tag === 'land-use' || tag === 'ordinance';
+          show = tag === 'land-use' || tag === 'ordinance' || tag === 'public-entity';
         } else if (activeFilter === 'nearby') {
           show = true; /* no address yet — show all until user sets one */
         } else {

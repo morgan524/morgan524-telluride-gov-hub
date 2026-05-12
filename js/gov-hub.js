@@ -1264,6 +1264,22 @@ document.addEventListener('DOMContentLoaded', function() {
   // Set meetings-active on initial load (Gov-Hub is default tab)
   var layout = document.querySelector('.main-layout');
   if (layout) layout.classList.add('meetings-active');
+
+  // Deep-link support: #landuse-{key} from deep-dives.html cards
+  // e.g. /gov-hub.html#landuse-carhenge → switches to land-use tab and selects that topic
+  var hash = window.location.hash;
+  if (hash && hash.startsWith('#landuse-')) {
+    var topicKey = hash.slice('#landuse-'.length);
+    if (typeof LAND_USE_ISSUES !== 'undefined' && LAND_USE_ISSUES[topicKey]) {
+      currentLandUseIssue = topicKey;
+      if (typeof window.switchTab === 'function') {
+        window.switchTab('land-use');
+      }
+      if (typeof renderLandUseTab === 'function') {
+        renderLandUseTab();
+      }
+    }
+  }
 });
 function renderLandUseTab() {
   const topicRow = document.getElementById('landUseTopicRow');

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deep Dives — Livable Telluride</title>
+  <meta name="description" content="In-depth research on the land use issues, ballot measures, and development projects shaping the Telluride region — with timelines, documents, and public meeting records.">
+  <style>
+    /* ─── Shared base — keep in sync with events.html / local-news.html ─── */
+    :root {
+      --forest: #21443c;
+      --forest-soft: #2a5347;
+      --accent-green: #2f7a5f;
+      --bg-warm: #fdfbf6;
+      --bg-hero: #efe9dc;
+      --bg-paper: #fffdf9;
+      --text-primary: #1a2e29;
+      --text-secondary: #4a5e57;
+      --text-muted: #7a8a85;
+      --border-soft: rgba(33, 68, 60, 0.12);
+      --shadow-card: 0 4px 18px rgba(36, 49, 46, 0.10);
+      --font-heading: 'Georgia', 'Times New Roman', serif;
+      --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      font-family: var(--font-main);
+      color: var(--text-primary);
+      background: var(--bg-warm);
+      line-height: 1.5;
+    }
+
+    /* Top nav */
+    .topnav {
+      background: #fff;
+      border-bottom: 1px solid var(--border-soft);
+      padding: 14px 0;
+      position: sticky; top: 0; z-index: 50;
+    }
+    .topnav-inner {
+      max-width: 1280px; margin: 0 auto; padding: 0 32px;
+      display: flex; align-items: center; gap: 24px;
+    }
+    .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
+    .topnav-links { display: flex; gap: 22px; margin-left: 28px; flex: 1; flex-wrap: wrap; }
+    .topnav-links a {
+      color: var(--text-primary); text-decoration: none;
+      font-weight: 600; font-size: 0.95rem;
+      padding: 6px 2px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .topnav-links a:hover { color: var(--forest); }
+    .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
+    .topnav-cta {
+      display: inline-block;
+      background: var(--forest); color: #fff;
+      text-decoration: none;
+      padding: 9px 18px; border-radius: 999px;
+      font-weight: 600; font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    /* Hero */
+    .hero {
+      background:
+        linear-gradient(180deg, rgba(239,233,220,0.78) 0%, rgba(239,233,220,0.45) 55%, rgba(239,233,220,0.20) 100%),
+        url('images/wilson-peak.png') no-repeat center center / cover,
+        var(--bg-hero);
+      padding: 40px 0 32px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+    .hero h1 {
+      margin: 0 0 10px;
+      font-family: var(--font-heading);
+      font-size: 2.6rem; color: var(--text-primary);
+      text-shadow: 0 1px 2px rgba(255,255,255,0.6);
+    }
+    .hero p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 1.05rem; max-width: 640px;
+      text-shadow: 0 1px 2px rgba(255,255,255,0.5);
+    }
+
+    /* Page content */
+    .page-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 36px 32px 64px;
+    }
+
+    /* Section label */
+    .section-intro {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .section-intro h2 {
+      margin: 0;
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      color: var(--text-primary);
+    }
+    .section-intro p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+    }
+
+    /* Card grid — 3 columns */
+    .dive-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    /* Individual card */
+    .dive-card {
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border-soft);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .dive-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(36, 49, 46, 0.13);
+    }
+
+    /* Card image */
+    .dive-card .img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #d4d0c8;
+    }
+    .dive-card .img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+    }
+
+    /* Topic badge overlaid on image */
+    .topic-badge {
+      position: absolute;
+      top: 14px; left: 14px;
+      background: rgba(33, 68, 60, 0.88);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 999px;
+      backdrop-filter: blur(4px);
+    }
+
+    /* Card body */
+    .dive-card .body {
+      padding: 22px 22px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+    .dive-card h3 {
+      margin: 0;
+      font-family: var(--font-heading);
+      font-size: 1.22rem;
+      line-height: 1.3;
+      color: var(--text-primary);
+    }
+    .dive-card .status-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--accent-green);
+      letter-spacing: 0.02em;
+    }
+    .dive-card .status-line::before {
+      content: '';
+      display: inline-block;
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      flex-shrink: 0;
+    }
+    .dive-card .intro-text {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      flex: 1;
+    }
+
+    /* Card footer */
+    .dive-card .card-footer {
+      padding: 0 22px 22px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-explore {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--forest);
+      color: #fff;
+      text-decoration: none;
+      padding: 9px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      transition: background 0.15s;
+    }
+    .btn-explore:hover { background: var(--forest-soft); }
+    .btn-explore .arrow { font-style: normal; transition: transform 0.15s; }
+    .btn-explore:hover .arrow { transform: translateX(3px); }
+
+    /* Info strip at bottom of page */
+    .info-strip {
+      background: var(--bg-hero);
+      border-top: 1px solid var(--border-soft);
+      margin-top: 56px;
+      padding: 36px 0;
+    }
+    .info-strip-inner {
+      max-width: 1280px; margin: 0 auto; padding: 0 32px;
+      display: flex; gap: 40px; align-items: center;
+      flex-wrap: wrap;
+    }
+    .info-strip-text { flex: 1; min-width: 280px; }
+    .info-strip-text h3 {
+      margin: 0 0 8px;
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      color: var(--text-primary);
+    }
+    .info-strip-text p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+    .info-strip-links {
+      display: flex; gap: 12px; flex-wrap: wrap;
+    }
+    .strip-btn {
+      display: inline-block;
+      padding: 10px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border: 1.5px solid var(--forest);
+      color: var(--forest);
+      transition: all 0.15s;
+    }
+    .strip-btn:hover { background: var(--forest); color: #fff; }
+    .strip-btn.filled { background: var(--forest); color: #fff; }
+    .strip-btn.filled:hover { background: var(--forest-soft); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .dive-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 580px) {
+      .dive-grid { grid-template-columns: 1fr; }
+      .topnav-links { display: none; }
+      .hero h1 { font-size: 1.9rem; }
+      .page-wrap { padding: 24px 16px 48px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <header class="topnav">
+    <div class="topnav-inner">
+      <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
+        <img src="logo/Livable Telluride Logo.png" alt="Livable Telluride">
+      </a>
+      <nav class="topnav-links">
+        <a href="/local-news.html">Local News</a>
+        <a href="/gov-hub.html">Gov-Hub</a>
+        <a href="/deep-dives.html" class="active">Deep Dives</a>
+        <a href="/events.html">Events</a>
+        <a href="/hub-bub.html">Hub-Bub</a>
+        <a href="/local-orgs.html">Local Orgs</a>
+        <a href="/housing.html">Housing</a>
+        <a href="/legal-notices.html">Legal Notices</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <a class="topnav-cta" href="https://livabletelluride.org/#tab-subscribe">Subscribe</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Deep Dives</h1>
+      <p>Research-backed explainers on the land use decisions, ballot measures, and development projects that will shape the Telluride region for decades. Timeline, documents, players, and public records — in one place.</p>
+    </div>
+  </section>
+
+  <!-- Cards -->
+  <main class="page-wrap">
+
+    <div class="section-intro">
+      <h2>Active topics</h2>
+      <p>Updated as new filings, meetings, and records become available.</p>
+    </div>
+
+    <div class="dive-grid">
+
+      <!-- 1. Carhenge / Shandoka -->
+      <article class="dive-card">
+        <div class="img-wrap">
+          <img
+            src="https://ehq-production-us-california.imgix.net/6b1af98643c2eb1d96ea48d001eba309fb722ec3/original/1773791842/3923590257fa65a36b9b6893f6d1adc5_Carhenge-Lot-Header.png?auto=compress%2Cformat&w=800"
+            alt="Carhenge / Shandoka redevelopment site"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          >
+          <span class="topic-badge">In-Town Development</span>
+        </div>
+        <div class="body">
+          <h3>Carhenge / Shandoka</h3>
+          <div class="status-line">Entering formal land use review</div>
+          <p class="intro-text">Two of the most significant in-town redevelopment projects advancing simultaneously: Carhenge (700 W Pacific) and Shandoka (Lot L). Both propose replacing surface parking with mixed-use neighborhoods combining housing, community space, and structured parking through the PUD and subdivision process.</p>
+        </div>
+        <div class="card-footer">
+          <a class="btn-explore" href="/gov-hub.html#landuse-carhenge">
+            Explore <span class="arrow">→</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- 2. Society Turn -->
+      <article class="dive-card">
+        <div class="img-wrap">
+          <img
+            src="https://img1.wsimg.com/isteam/ip/3f388f66-602e-4c3d-940c-27e48680fdb9/Society%20Turn%20Aerial.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1200,cg:true"
+            alt="Society Turn aerial view"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          >
+          <span class="topic-badge">Valley Floor Entrance</span>
+        </div>
+        <div class="body">
+          <h3>Society Turn / Valley Floor Entrance</h3>
+          <div class="status-line">High-consequence regional issue — active scrutiny</div>
+          <p class="intro-text">A 19.7-acre mixed-use PUD by Genesee Properties along Highway 145. The project bundles a regional hospital site, employee housing, medical offices, retail, hotel, and conference facilities — raising questions about total scale, traffic, wildfire evacuation, and the valley's single entry/exit point.</p>
+        </div>
+        <div class="card-footer">
+          <a class="btn-explore" href="/gov-hub.html#landuse-society">
+            Explore <span class="arrow">→</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- 3. Gondola 3A -->
+      <article class="dive-card">
+        <div class="img-wrap">
+          <img
+            src="images/blog/gondola-station.png"
+            alt="Telluride gondola station"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          >
+          <span class="topic-badge">Ballot Measure · SMART District</span>
+        </div>
+        <div class="body">
+          <h3>Gondola 3A</h3>
+          <div class="status-line">Funding gap — agreement expires 2027</div>
+          <p class="intro-text">Ballot Issue 3A approved ~$8.2M/year in new SMART district tax revenue marketed as funding a new gondola. But replacement cost is estimated at $120–150M+. CORA records revealed over $175,000 in consultant spending before the ballot referral, including polling and campaign management funded in part by the Four Seasons developer.</p>
+        </div>
+        <div class="card-footer">
+          <a class="btn-explore" href="/gov-hub.html#landuse-gondola">
+            Explore <span class="arrow">→</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- 4. Diamond Ridge -->
+      <article class="dive-card">
+        <div class="img-wrap">
+          <img
+            src="logo/Aldasoro.png"
+            alt="Aldasoro / Diamond Ridge area"
+            loading="lazy"
+            onerror="this.style.display='none'"
+            style="object-position: center top;"
+          >
+          <span class="topic-badge">Courts · Zoning · Housing</span>
+        </div>
+        <div class="body">
+          <h3>Diamond Ridge</h3>
+          <div class="status-line">Courts ruled the County broke its own rules — twice</div>
+          <p class="intro-text">A 105-acre property on Deep Creek Mesa near the Telluride Airport that San Miguel County purchased for $7.2M with plans for high-density affordable housing. Neighboring landowners challenged the rezoning and won twice in court — first on due process and illegal spot zoning grounds, then on a PUD interpretation confirming 35-acre lot restrictions.</p>
+        </div>
+        <div class="card-footer">
+          <a class="btn-explore" href="/gov-hub.html#landuse-diamond">
+            Explore <span class="arrow">→</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- 5. Wildfire Resiliency -->
+      <article class="dive-card">
+        <div class="img-wrap">
+          <img
+            src="logo/Telluride Fire.png"
+            alt="Telluride Fire Protection District"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          >
+          <span class="topic-badge">Fire Code · WUI · Safety</span>
+        </div>
+        <div class="body">
+          <h3>Wildfire Resiliency</h3>
+          <div class="status-line">Multiple bodies weighing adoption simultaneously</div>
+          <p class="intro-text">The Town, San Miguel County, and the Telluride Fire Protection District are all considering Colorado's Wildfire Resiliency Code and the International Wildland Urban Interface (WUI) Code. In a box canyon with one primary exit road, wildfire preparedness is an existential community concern — and no evacuation analysis has been completed for the Society Turn PUD.</p>
+        </div>
+        <div class="card-footer">
+          <a class="btn-explore" href="/gov-hub.html#landuse-wildfire">
+            Explore <span class="arrow">→</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- 6. Code Changes & Accelerated Review -->
+      <article class="dive-card">
+        <div class="img-wrap">
+          <img
+            src="assets/ssr/SMC-Housing-Code-Update-infographic.jpg"
+            alt="SMC Housing Code Update infographic"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          >
+          <span class="topic-badge">Land Use Code · County Policy</span>
+        </div>
+        <div class="body">
+          <h3>Code Changes &amp; Accelerated Review</h3>
+          <div class="status-line">15-month code audit underway — SSR shaping amendments</div>
+          <p class="intro-text">Code reform is often where the biggest long-term land-use changes happen, because one ordinance affects every future project. San Miguel County is undertaking a comprehensive land use code audit funded by a Colorado Proposition 123 grant, with a Stakeholder Strategic Roundtable shaping draft amendments through September 2026.</p>
+        </div>
+        <div class="card-footer">
+          <a class="btn-explore" href="/gov-hub.html#landuse-code">
+            Explore <span class="arrow">→</span>
+          </a>
+        </div>
+      </article>
+
+    </div><!-- /.dive-grid -->
+
+  </main><!-- /.page-wrap -->
+
+  <!-- Info strip -->
+  <section class="info-strip">
+    <div class="info-strip-inner">
+      <div class="info-strip-text">
+        <h3>Follow along on Gov-Hub</h3>
+        <p>Each deep dive is updated automatically when new agendas, filings, and meeting summaries come in. The Gov-Hub tracks meetings for Town Council, Planning &amp; Zoning, the BOCC, SMART, school board, and more — refreshed every 6 hours.</p>
+      </div>
+      <div class="info-strip-links">
+        <a class="strip-btn filled" href="/gov-hub.html">Open Gov-Hub →</a>
+        <a class="strip-btn" href="/local-news.html">Local News</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

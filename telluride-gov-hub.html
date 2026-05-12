@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Government Hub — Livable Telluride</title>
+  <title>Livable Telluride — Your Community. All in One Place.</title>
   <style>
     :root {
       --forest: #21443c;
@@ -11,23 +11,26 @@
       --accent-green: #2f7a5f;
       --accent-green-soft: rgba(47, 122, 95, 0.12);
       --accent-green-border: rgba(47, 122, 95, 0.25);
+      --gold: #b58a2c;
+      --gold-soft: rgba(181, 138, 44, 0.18);
       --bg-warm: #fdfbf6;
       --bg-hero: #efe9dc;
       --bg-paper: #fffdf9;
-      --bg-sidebar: #f5f0e3;
+      --bg-cream: #f7f1e2;
       --text-primary: #1a2e29;
       --text-secondary: #4a5e57;
       --text-muted: #7a8a85;
       --border-soft: rgba(33, 68, 60, 0.12);
       --border-card: rgba(33, 68, 60, 0.10);
       --shadow-card: 0 4px 18px rgba(36, 49, 46, 0.10);
+      --shadow-strong: 0 10px 30px rgba(36, 49, 46, 0.16);
       --font-heading: 'Georgia', 'Times New Roman', serif;
       --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
     }
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; font-family: var(--font-main); color: var(--text-primary); background: var(--bg-warm); line-height: 1.5; }
 
-    /* ── Top nav (shared with other v2 pages) ── */
+    /* ── Top nav ── */
     .topnav { background: #fff; border-bottom: 1px solid var(--border-soft); padding: 14px 0; position: sticky; top: 0; z-index: 50; }
     .topnav-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; gap: 24px; }
     .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--forest); font-family: var(--font-heading); font-weight: 700; font-size: 1.15rem; line-height: 1.1; }
@@ -35,309 +38,382 @@
     .topnav-links { display: flex; gap: 22px; margin-left: 28px; flex: 1; }
     .topnav-links a { color: var(--text-primary); text-decoration: none; font-weight: 600; font-size: 0.95rem; padding: 6px 2px; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
     .topnav-links a:hover { color: var(--forest); }
-    .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
     .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
 
-    /* ── Hero ── shared cream/warm overlay treatment, matches Local News */
+    /* ── Hero — full-bleed banner ──
+       Image is 3111x1159 (≈2.68:1 panorama) with the cream-fade gradient
+       already baked into the photo on the left side, so no CSS gradient
+       layer is needed. `cover` fills the hero; minor side-cropping at
+       very wide viewports is fine because the cream area on the left is
+       wide enough to absorb it. */
     .hero {
-      background:
-        linear-gradient(180deg, rgba(239, 233, 220, 0.78) 0%, rgba(239, 233, 220, 0.45) 55%, rgba(239, 233, 220, 0.20) 100%),
-        url('img/wilson-peak.png') no-repeat center center / cover,
-        var(--bg-hero);
-      padding: 28px 0 24px;
-      border-bottom: 1px solid var(--border-soft);
-      min-height: 200px;
+      position: relative;
+      background: url('img/telluride-125.jpeg') no-repeat center center / cover, var(--bg-warm);
+      min-height: 480px;
+      padding: 80px 0 120px;   /* extra bottom padding for props overlap */
+      overflow: hidden;
     }
-    .hero h1 { text-shadow: 0 1px 2px rgba(255,255,255,0.6); }
-    .hero p  { text-shadow: 0 1px 2px rgba(255,255,255,0.5); }
-    .hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
-    .hero h1 { margin: 0 0 8px; font-family: var(--font-heading); font-size: 2.6rem; color: var(--text-primary); }
-    .hero p { margin: 0; color: var(--text-secondary); font-size: 1.05rem; max-width: 760px; }
-
-    /* ── Filter chips bar (top) ── */
-    .chip-bar { background: #fff; border-bottom: 1px solid var(--border-soft); }
-    .chip-bar-inner {
+    .hero-inner {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 14px 32px;
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      align-items: center;
-      overflow-x: auto;
-    }
-    .chip {
-      display: inline-block;
-      padding: 7px 16px;
-      border-radius: 999px;
-      background: #fff;
-      color: var(--text-primary);
-      font-size: 0.88rem;
-      font-weight: 600;
-      cursor: pointer;
-      border: 1px solid var(--border-card);
-      white-space: nowrap;
-      transition: all 0.15s;
-    }
-    .chip:hover { background: var(--accent-green-soft); border-color: var(--accent-green-border); color: var(--forest); }
-    .chip.active { background: var(--forest); color: #fff; border-color: var(--forest); }
-
-    /* ── Main page layout ── */
-    .page-wrap {
-      max-width: 1280px;
-      margin: 32px auto;
       padding: 0 32px;
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 28px;
-      align-items: start;
+      position: relative;
+    }
+    .hero-text {
+      max-width: 480px;
+    }
+    .hero-overline {
+      color: var(--gold);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      font-size: 0.95rem;
+      margin: 0 0 16px;
+    }
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: 3.4rem;
+      line-height: 1.1;
+      color: var(--forest);
+      margin: 0 0 18px;
+      letter-spacing: -0.5px;
+    }
+    .hero p.lead {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      margin: 0;
+      max-width: 460px;
+      line-height: 1.55;
     }
 
-    /* ── Left sidebar ── */
-    .sidebar { display: flex; flex-direction: column; gap: 18px; position: sticky; top: 110px; }
-
-    .side-card {
+    /* ── Value-prop strip — overlaps the bottom of the hero photo ── */
+    .props {
+      max-width: 1280px;
+      margin: -90px auto 0;     /* pulls strip up onto the bottom of the hero */
+      padding: 0 32px;
+      position: relative;
+      z-index: 5;
+    }
+    .props-card {
       background: #fff;
-      border: 1px solid var(--border-card);
-      border-radius: 12px;
-      padding: 18px;
-      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow-strong);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
     }
-    .side-card h3 {
+    .prop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+      padding: 0 12px;
+      border-right: 1px solid var(--border-soft);
+    }
+    .prop:last-child { border-right: none; }
+    .prop-icon { width: 84px; height: 84px; display: block; object-fit: contain; }
+    .prop h3 {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      color: var(--forest);
+      margin: 4px 0;
+    }
+    .prop p {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.45;
+    }
+
+    /* ── Section heading w/ mountain decoration ── */
+    .section-head {
+      max-width: 1280px;
+      margin: 64px auto 8px;
+      padding: 0 32px;
+      text-align: center;
+    }
+    .section-head .mtn {
+      display: flex; justify-content: center;
+      color: var(--gold);
+      opacity: 0.7;
+      margin-bottom: 10px;
+    }
+    .section-head .mtn img { width: 320px; max-width: 100%; height: auto; opacity: 0.95; }
+    .section-head h2 {
       font-family: var(--font-heading);
       color: var(--forest);
-      font-size: 1.05rem;
-      margin: 0 0 12px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--border-card);
+      font-size: 2rem;
+      margin: 0 0 10px;
+      letter-spacing: -0.3px;
     }
-
-    /* Entity list rows */
-    .entity-list { display: flex; flex-direction: column; gap: 4px; }
-    .entity-row {
-      display: flex;
-      align-items: center;
+    .section-head .rule {
+      display: flex; align-items: center; justify-content: center;
       gap: 10px;
-      padding: 7px 8px;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
-      color: var(--text-primary);
-      font-size: 0.86rem;
-      font-weight: 500;
-      transition: background 0.12s;
+      color: var(--gold);
     }
-    .entity-row:hover { background: var(--accent-green-soft); }
-    .entity-row.active { background: var(--accent-green-soft); color: var(--forest); font-weight: 600; }
-    .entity-logo {
-      width: 28px;
-      height: 28px;
-      border-radius: 6px;
-      object-fit: contain;
-      background: #fff;
-      flex-shrink: 0;
-    }
-    .entity-count {
-      margin-left: auto;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      background: var(--accent-green-soft);
-      padding: 2px 8px;
-      border-radius: 999px;
-      min-width: 22px;
-      text-align: center;
+    .section-head .rule::before, .section-head .rule::after {
+      content: ''; flex: 0 0 64px; height: 1px; background: var(--gold); opacity: 0.5;
     }
 
-    /* Helpful links */
-    .helpful-links { display: flex; flex-direction: column; gap: 6px; }
-    .helpful-links a {
-      display: block;
-      padding: 6px 8px;
-      color: var(--accent-green);
-      text-decoration: none;
-      font-size: 0.86rem;
-      font-weight: 500;
-      border-radius: 6px;
-    }
-    .helpful-links a:hover { background: var(--accent-green-soft); }
-
-    /* Subscribe card */
-    .sub-card {
-      background: linear-gradient(180deg, #2a5347 0%, var(--forest) 100%);
-      color: #fff;
-      border: none;
-      text-align: center;
-    }
-    .sub-card h3 { color: #fff; border-bottom-color: rgba(255,255,255,0.2); }
-    .sub-card p { font-size: 0.85rem; opacity: 0.9; margin: 0 0 14px; }
-    .sub-card a {
-      display: inline-block;
-      background: #fff;
-      color: var(--forest);
-      padding: 9px 18px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    /* ── Main meeting grid ── */
-    .meet-grid {
+    /* ── Explore card grid ── */
+    .explore {
+      max-width: 1280px;
+      margin: 24px auto;
+      padding: 0 32px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
     }
-
-    .meet-card {
+    .ex-card {
       background: #fff;
-      border: 1px solid var(--border-card);
-      border-radius: 12px;
-      padding: 18px;
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 26px;
       box-shadow: var(--shadow-card);
       display: flex;
       flex-direction: column;
-      gap: 10px;
-    }
-    .meet-card-head {
-      display: flex;
       gap: 14px;
-      align-items: flex-start;
-    }
-    .meet-date {
-      flex-shrink: 0;
-      width: 60px;
-      text-align: center;
-      background: var(--bg-sidebar);
-      border-radius: 8px;
-      padding: 8px 4px;
-      border: 1px solid var(--border-card);
-    }
-    .meet-date .month {
-      font-family: var(--font-main);
-      font-weight: 700;
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
-      color: var(--accent-green);
-      text-transform: uppercase;
-    }
-    .meet-date .day {
-      font-family: var(--font-heading);
-      font-size: 1.7rem;
-      font-weight: 700;
-      color: var(--forest);
-      line-height: 1;
-      margin: 2px 0;
-    }
-    .meet-date .year {
-      font-size: 0.7rem;
-      color: var(--text-muted);
-    }
-    .meet-info { flex: 1; min-width: 0; }
-    .meet-tag {
-      display: inline-block;
-      background: var(--accent-green-soft);
-      color: var(--forest);
-      padding: 3px 10px;
-      border-radius: 999px;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-    .meet-title {
-      font-family: var(--font-heading);
-      font-size: 1.1rem;
+      text-decoration: none;
       color: var(--text-primary);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .ex-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(36, 49, 46, 0.14);
+    }
+    .ex-card-head {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .ex-icon { width: 64px; height: 64px; display: block; object-fit: contain; flex-shrink: 0; }
+    .ex-icon-circle { width: 64px; height: 64px; border-radius: 50%; background: var(--accent-green-soft); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ex-icon-circle img { width: 64%; height: 64%; object-fit: contain; }
+    .ex-card h3 {
+      font-family: var(--font-heading);
+      color: var(--forest);
       margin: 0;
-      line-height: 1.25;
+      font-size: 1.25rem;
+      line-height: 1.15;
     }
-    .meet-entity-logo {
-      width: 96px;
-      height: 96px;
-      object-fit: contain;
-      flex-shrink: 0;
-      background: #fff;
-      border-radius: 8px;
-      padding: 4px;
-      border: 1px solid var(--border-card);
+    .ex-card .subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 2px;
     }
-    .meet-summary {
-      font-size: 0.92rem;
+    .ex-card p {
+      font-size: 0.95rem;
       color: var(--text-secondary);
       margin: 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
+      flex: 1;
+    }
+    .ex-card .more {
+      color: var(--accent-green);
+      font-weight: 600;
+      font-size: 0.92rem;
+      margin-top: auto;
+    }
+    /* Center the 7th (orphan) card on its own row in the 3-col grid. */
+    .ex-card-center { grid-column: 2; }
+
+    /* ── This Week + Donate row ── */
+    .week-row {
+      max-width: 1280px;
+      margin: 48px auto;
+      padding: 0 32px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+    .week-card, .donate-card {
+      border-radius: 16px;
+      box-shadow: var(--shadow-card);
       overflow: hidden;
     }
-    .meet-meta {
-      font-size: 0.82rem;
-      color: var(--text-muted);
+    .week-card {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-soft);
+      padding: 24px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      padding-top: 8px;
-      border-top: 1px solid var(--border-card);
+      flex-direction: column;
+      gap: 14px;
     }
-    .meet-meta span { display: inline-flex; align-items: center; gap: 4px; }
-    .meet-actions {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 4px;
+    .week-head { display: flex; align-items: center; gap: 12px; }
+    .week-head .icon {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(33, 68, 60, 0.10);
+      display: flex; align-items: center; justify-content: center;
     }
-    .btn-action {
-      display: inline-block;
-      background: var(--accent-green-soft);
-      color: var(--forest);
-      padding: 5px 11px;
-      border-radius: 999px;
+    .week-head .icon svg { width: 22px; height: 22px; stroke: var(--forest); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .week-head h3 { font-family: var(--font-heading); color: var(--forest); margin: 0; font-size: 1.2rem; }
+    .week-head .sub { font-size: 0.85rem; color: var(--text-muted); margin-top: 2px; }
+    .week-list { display: flex; flex-direction: column; gap: 10px; }
+    .week-item {
+      display: grid;
+      grid-template-columns: 64px 1fr auto;
+      gap: 14px;
+      align-items: center;
+      background: #fff;
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+      padding: 12px 14px;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 0.77rem;
-      border: 1px solid var(--accent-green-border);
+      color: var(--text-primary);
       transition: background 0.15s;
     }
-    .btn-action:hover { background: rgba(47, 122, 95, 0.20); }
-    .btn-action.primary { background: var(--forest); color: #fff; border-color: var(--forest); font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.18); }
-    .btn-action.primary:hover { background: #1a332c; }
-    .btn-action.comment { background: var(--gold-soft); color: #7a5c10; border-color: rgba(181,138,44,0.35); }
-    .btn-action.comment:hover { background: rgba(181,138,44,0.26); }
-
-    /* Comment deadline note */
-    .comment-deadline {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-top: 8px;
-      padding: 6px 10px;
-      background: var(--bg-cream);
-      border-radius: 6px;
-      border-left: 3px solid var(--gold);
+    .week-item:hover { background: var(--bg-warm); }
+    .week-date {
+      width: 56px; text-align: center;
+      background: var(--forest); color: #fff;
+      border-radius: 8px; padding: 8px 4px;
     }
+    .week-date .month { font-size: 0.65rem; letter-spacing: 0.08em; opacity: 0.85; text-transform: uppercase; }
+    .week-date .day { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; line-height: 1; }
+    .week-item .info h4 { font-family: var(--font-main); font-size: 0.98rem; margin: 0 0 4px; color: var(--forest); font-weight: 700; }
+    .week-item .meta { font-size: 0.83rem; color: var(--text-muted); margin: 0; }
+    .week-item .arrow { color: var(--accent-green); font-size: 1.2rem; }
+    .week-foot { text-align: center; margin-top: 6px; }
+    .week-foot a { color: var(--accent-green); font-weight: 600; text-decoration: none; font-size: 0.95rem; }
 
-    /* Empty / loading state */
-    .empty {
-      grid-column: 1 / -1;
+    /* Donate card */
+    .donate-card {
+      position: relative;
+      color: #fff;
+      padding: 40px 28px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
       text-align: center;
-      padding: 48px 16px;
-      color: var(--text-muted);
-      font-size: 0.95rem;
+      background:
+        linear-gradient(180deg, rgba(33,68,60,0.55) 0%, rgba(33,68,60,0.55) 100%),
+        url('img/ridgway.jpeg') no-repeat center center / cover,
+        var(--forest);
     }
+    .donate-card .icon {
+      width: 56px; height: 56px; border-radius: 50%;
+      border: 2px solid #fff;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 14px;
+    }
+    .donate-card .icon svg { width: 26px; height: 26px; stroke: #fff; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .donate-card h3 { font-family: var(--font-heading); font-size: 1.6rem; margin: 0 0 10px; }
+    .donate-card p { max-width: 360px; margin: 0 0 20px; font-size: 0.95rem; opacity: 0.95; line-height: 1.45; }
+    .donate-btn {
+      background: var(--gold); color: #fff;
+      padding: 12px 28px; border-radius: 999px;
+      text-decoration: none; font-weight: 700; font-size: 0.95rem;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .donate-btn:hover { background: #c4982f; }
+    .donate-btn svg { width: 16px; height: 16px; stroke: #fff; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
 
-    /* Responsive */
-    @media (max-width: 1080px) {
-      .meet-grid { grid-template-columns: 1fr; }
+    /* ── Subscribe row ── */
+    .subscribe-row { max-width: 1280px; margin: 0 auto; padding: 0 32px 56px; }
+    .subscribe-card {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 26px 32px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 24px;
+      align-items: center;
+      box-shadow: var(--shadow-card);
     }
-    @media (max-width: 880px) {
+    .subscribe-card .icon { width: 64px; height: 64px; display: block; object-fit: contain; }
+    .subscribe-card .icon img { width: 100%; height: 100%; object-fit: contain; }
+    .subscribe-card .copy h3 { font-family: var(--font-heading); color: var(--forest); margin: 0 0 4px; font-size: 1.2rem; }
+    .subscribe-card .copy p { margin: 0; color: var(--text-secondary); font-size: 0.9rem; }
+    .subscribe-card .form { display: flex; gap: 10px; }
+    .subscribe-card input { padding: 12px 16px; border-radius: 999px; border: 1px solid var(--border-soft); background: #fff; font-size: 0.95rem; min-width: 280px; font-family: var(--font-main); }
+    .subscribe-card .submit { background: var(--forest); color: #fff; padding: 12px 24px; border-radius: 999px; border: none; font-weight: 600; font-size: 0.95rem; cursor: pointer; font-family: var(--font-main); }
+    .subscribe-card .submit:hover { background: var(--forest-soft); }
+
+    /* ── Footer ── */
+    .site-foot { background: #fff; border-top: 1px solid var(--border-soft); padding: 32px 0 0; }
+    .site-foot-inner {
+      max-width: 1280px; margin: 0 auto; padding: 0 32px 28px;
+      display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr 1.2fr;
+      gap: 32px; align-items: start;
+    }
+    .foot-brand { display: flex; flex-direction: column; gap: 6px; }
+    .foot-brand-logo { color: var(--forest); font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 8px; }
+    .foot-brand-logo svg { width: 22px; height: 22px; fill: var(--gold); }
+    .foot-brand-tag { color: var(--gold); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; }
+    .foot-col h4 { font-family: var(--font-main); font-size: 0.95rem; color: var(--forest); margin: 0 0 10px; font-weight: 700; }
+    .foot-col a, .foot-col p { display: block; color: var(--text-secondary); text-decoration: none; font-size: 0.88rem; padding: 3px 0; }
+    .foot-col a:hover { color: var(--forest); }
+    .foot-social { display: flex; gap: 14px; margin-top: 4px; }
+    .foot-social a {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--bg-cream); color: var(--forest);
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none; padding: 0;
+    }
+    .foot-social a img { width: 18px; height: 18px; object-fit: contain; }
+    .foot-social a:hover { background: var(--accent-green-soft); }
+    .foot-mission { background: var(--bg-cream); border-radius: 12px; padding: 16px; font-size: 0.86rem; color: var(--text-secondary); }
+    .foot-mission p { margin: 0; padding: 0; }
+    .foot-bottom { background: var(--forest); color: rgba(255,255,255,0.85); text-align: center; padding: 14px; font-size: 0.85rem; }
+
+    /* ── Responsive ── */
+    @media (max-width: 1080px) {
+      .hero { min-height: 420px; padding: 60px 0 110px;
+        background: url('img/telluride-125.jpeg') no-repeat center center / cover, var(--bg-warm);
+      }
+      .hero h1 { font-size: 2.6rem; }
+      .props-card { grid-template-columns: repeat(2, 1fr); }
+      .prop { border-right: none; border-bottom: 1px solid var(--border-soft); padding-bottom: 16px; }
+      .prop:nth-last-child(-n+2) { border-bottom: none; padding-bottom: 0; }
+      .explore { grid-template-columns: repeat(2, 1fr); }
+      .ex-card-center { grid-column: auto; }   /* center rule only applies in 3-col */
+      .week-row { grid-template-columns: 1fr; }
+      .site-foot-inner { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 720px) {
       .topnav-links { display: none; }
-      .hero h1 { font-size: 1.9rem; }
-      .page-wrap { grid-template-columns: 1fr; }
-      .sidebar { position: static; }
+      .hero { min-height: 360px; padding: 48px 0 110px;
+        background:
+          linear-gradient(180deg, rgba(253,251,246,0.96) 0%, rgba(253,251,246,0.85) 60%, rgba(253,251,246,0.5) 100%),
+          url('img/telluride-125.jpeg') no-repeat center center / cover,
+          var(--bg-hero);
+      }
+      .hero h1 { font-size: 2rem; }
+      .props { margin-top: -70px; }
+      .explore { grid-template-columns: 1fr; }
+      .props-card { grid-template-columns: 1fr; }
+      .prop { border-bottom: 1px solid var(--border-soft); border-right: none; padding-bottom: 16px; }
+      .prop:last-child { border-bottom: none; padding-bottom: 0; }
+      .subscribe-card { grid-template-columns: 1fr; text-align: center; }
+      .subscribe-card .form { flex-direction: column; }
+      .subscribe-card input { min-width: 0; width: 100%; }
+      .site-foot-inner { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
+  <!-- ── Inline SVG icons (Lucide-style strokes) reused across the page ── -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 11l18-5v12L3 14z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></symbol>
+      <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+      <symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M3 7l9-4 9 4"/><path d="M3 21V7"/><path d="M21 21V7"/><path d="M9 21V11"/><path d="M15 21V11"/><path d="M3 10h18"/></symbol>
+      <symbol id="i-newspaper" viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8z"/></symbol>
+      <symbol id="i-mountain" viewBox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></symbol>
+      <symbol id="i-binoculars" viewBox="0 0 24 24"><path d="M5 3h2l1 4-1 4-2-1V3z"/><path d="M19 3h-2l-1 4 1 4 2-1V3z"/><path d="M8 11l-2 6a3 3 0 1 0 6 0v-6"/><path d="M16 11l2 6a3 3 0 1 1-6 0v-6"/><path d="M12 8v3"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+      <symbol id="i-heart-fill" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="currentColor" stroke="none"/></symbol>
+      <symbol id="i-fb" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+      <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></symbol>
+      <symbol id="i-mtn-deco" viewBox="0 0 56 18"><path d="M2 16 L14 4 L20 10 L28 2 L36 10 L42 4 L54 16 Z"/></symbol>
+    </defs>
+  </svg>
+
   <header class="topnav">
     <div class="topnav-inner">
       <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
@@ -345,7 +421,8 @@
       </a>
       <nav class="topnav-links">
         <a href="/local-news.html">Local News</a>
-        <a href="/gov-hub.html" class="active">Gov-Hub</a>
+        <a href="/gov-hub.html">Gov-Hub</a>
+        <a href="/deep-dives.html">Deep Dives</a>
         <a href="/events.html">Events</a>
         <a href="/hub-bub.html">Hub-Bub</a>
         <a href="/local-orgs.html">Local Orgs</a>
@@ -353,304 +430,233 @@
         <a href="/legal-notices.html">Legal Notices</a>
         <a href="/about.html">About</a>
       </nav>
-      <a class="topnav-cta" href="https://livabletelluride.org/#tab-subscribe">Subscribe</a>
+      <a class="topnav-cta" href="#subscribe">Subscribe</a>
     </div>
   </header>
 
+  <!-- ── Hero ── -->
   <section class="hero">
     <div class="hero-inner">
-      <h1>Government Hub</h1>
-      <p>Public meetings, agendas, and AI-generated summaries from the entities that govern Telluride, Mountain Village, San Miguel County, Norwood, Ouray, Ridgway, and the special districts that serve our region.</p>
+      <div class="hero-text">
+        <p class="hero-overline">Inform. Connect. Engage. Together.</p>
+        <h1>Your Community.<br>All in One Place.</h1>
+        <p class="lead">Livable Telluride brings together meetings, events, news, resources, and local voices to keep our mountain communities informed, connected, and empowered.</p>
+      </div>
     </div>
   </section>
 
-  <section class="chip-bar">
-    <div class="chip-bar-inner" id="chipRow"></div>
+  <!-- ── Value-prop strip (overlaps hero) ── -->
+  <section class="props">
+    <div class="props-card">
+      <div class="prop">
+        <img class="prop-icon" src="img/icons/stay_informed_megaphone.png" alt="">
+        <h3>Stay Informed</h3>
+        <p>Get the latest meetings, news, alerts, and updates.</p>
+      </div>
+      <div class="prop">
+        <img class="prop-icon" src="img/icons/get_involved_calendar.png" alt="">
+        <h3>Get Involved</h3>
+        <p>Find events, share your voice, and take action on issues that matter.</p>
+      </div>
+      <div class="prop">
+        <img class="prop-icon" src="img/icons/connect_locally_people.png" alt="">
+        <h3>Connect Locally</h3>
+        <p>Discover local organizations, groups, and services that strengthen our community.</p>
+      </div>
+      <div class="prop">
+        <img class="prop-icon" src="img/icons/stronger_together_handshake.png" alt="">
+        <h3>Stronger Together</h3>
+        <p>Building a livable, inclusive, and sustainable future for all who call this place home.</p>
+      </div>
+    </div>
   </section>
 
-  <main class="page-wrap">
-    <aside class="sidebar">
-      <div class="side-card">
-        <h3>Public Entities</h3>
-        <div class="entity-list" id="entityList"></div>
-      </div>
+  <!-- ── Explore section ── -->
+  <div class="section-head">
+    <div class="mtn"><img src="img/icons/explore_everything_mountain_divider.png" alt=""></div>
+    <h2>Explore Everything We Offer</h2>
+    <div class="rule"><span></span></div>
+  </div>
 
-      <div class="side-card">
-        <h3>Helpful Links</h3>
-        <div class="helpful-links">
-          <a href="https://telluride.gov/" target="_blank" rel="noopener">Town of Telluride →</a>
-          <a href="https://townofmountainvillage.com/" target="_blank" rel="noopener">Mountain Village →</a>
-          <a href="https://www.sanmiguelcountyco.gov/" target="_blank" rel="noopener">San Miguel County →</a>
-          <a href="https://townofnorwood.colorado.gov/" target="_blank" rel="noopener">Town of Norwood →</a>
-          <a href="https://www.tellurideschool.org/" target="_blank" rel="noopener">School District R-1 →</a>
-          <a href="https://sanmiguelcoco.portal.civicclerk.com/" target="_blank" rel="noopener">CivicClerk Agendas →</a>
+  <section class="explore">
+    <a class="ex-card" href="/local-news.html">
+      <div class="ex-card-head">
+        <img class="ex-icon" src="img/icons/local_news_newspaper.png" alt="">
+        <div>
+          <h3>Local News</h3>
+          <div class="subtitle">News &amp; Housing</div>
         </div>
       </div>
-
-      <div class="side-card sub-card">
-        <h3>Never Miss an Update</h3>
-        <p>Get a weekly digest of every public meeting, agenda, and summary in your inbox.</p>
-        <a href="https://livabletelluride.org/#tab-subscribe">Sign Up</a>
+      <p>Read the latest local news, housing updates, and in-depth community reporting.</p>
+      <span class="more">Learn More →</span>
+    </a>
+    <a class="ex-card" href="/gov-hub.html">
+      <div class="ex-card-head">
+        <img class="ex-icon" src="img/icons/gov_hub_public_meetings.png" alt="">
+        <div>
+          <h3>Gov-Hub</h3>
+          <div class="subtitle">Public Meetings &amp; Agendas</div>
+        </div>
       </div>
-    </aside>
+      <p>View upcoming public meetings, read agendas, and stay up to date on local government.</p>
+      <span class="more">Learn More →</span>
+    </a>
+    <a class="ex-card" href="/events.html">
+      <div class="ex-card-head">
+        <img class="ex-icon" src="img/icons/events_community_calendar.png" alt="">
+        <div>
+          <h3>Events</h3>
+          <div class="subtitle">Community Calendar</div>
+        </div>
+      </div>
+      <p>Find local events, workshops, festivals, and important community gatherings.</p>
+      <span class="more">Learn More →</span>
+    </a>
+    <a class="ex-card" href="/local-orgs.html">
+      <div class="ex-card-head">
+        <img class="ex-icon" src="img/icons/local_orgs_organizations_resources.png" alt="">
+        <div>
+          <h3>Local Orgs</h3>
+          <div class="subtitle">Organizations &amp; Resources</div>
+        </div>
+      </div>
+      <p>Discover local non-profits, community groups, and resources making a difference in our region.</p>
+      <span class="more">Learn More →</span>
+    </a>
+    <a class="ex-card" href="/housing.html">
+      <div class="ex-card-head">
+        <div class="ex-icon-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--forest); width: 60%; height: 60%;"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div>
+          <h3>Housing</h3>
+          <div class="subtitle">Listings &amp; Programs</div>
+        </div>
+      </div>
+      <p>Find local rentals, deed-restricted opportunities, and information about regional housing programs.</p>
+      <span class="more">Learn More →</span>
+    </a>
+    <a class="ex-card" href="/legal-notices.html">
+      <div class="ex-card-head">
+        <div class="ex-icon-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--forest); width: 60%; height: 60%;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div>
+          <h3>Legal Notices</h3>
+          <div class="subtitle">Public Notices &amp; Filings</div>
+        </div>
+      </div>
+      <p>Track public hearings, RFPs, water court, estate filings, and other legal notices across the region.</p>
+      <span class="more">Learn More →</span>
+    </a>
+    <a class="ex-card ex-card-center" href="/about.html">
+      <div class="ex-card-head">
+        <div class="ex-icon-circle"><img src="img/icons/community_powered_mountains.png" alt=""></div>
+        <div>
+          <h3>About</h3>
+          <div class="subtitle">Our Mission</div>
+        </div>
+      </div>
+      <p>Learn about Livable Telluride, our mission, and how you can get involved.</p>
+      <span class="more">Learn More →</span>
+    </a>
+  </section>
 
-    <section>
-      <div class="meet-grid" id="meetGrid"></div>
-    </section>
-  </main>
+  <!-- ── This Week + Donate ── -->
+  <section class="week-row">
+    <div class="week-card">
+      <div class="week-head">
+        <div class="icon"><svg><use href="#i-binoculars"/></svg></div>
+        <div>
+          <h3>What's Happening This Week</h3>
+          <div class="sub">A quick look at upcoming meetings and events.</div>
+        </div>
+      </div>
+      <div class="week-list" id="weekList">
+        <a class="week-item" href="/gov-hub.html">
+          <div class="week-date"><div class="month">May</div><div class="day">11</div></div>
+          <div class="info"><h4>Planning &amp; Zoning Commission Meeting</h4><p class="meta">May 11, 2026 • 5:00 PM • Rebekah Hall</p></div>
+          <div class="arrow">›</div>
+        </a>
+        <a class="week-item" href="/events.html">
+          <div class="week-date"><div class="month">May</div><div class="day">13</div></div>
+          <div class="info"><h4>Telluride Farmers Market Opens</h4><p class="meta">May 13, 2026 • 10:00 AM • Town Park</p></div>
+          <div class="arrow">›</div>
+        </a>
+        <a class="week-item" href="/housing.html">
+          <div class="week-date"><div class="month">May</div><div class="day">15</div></div>
+          <div class="info"><h4>Housing Update: Pipeline Projects</h4><p class="meta">May 15, 2026 • 12:00 PM • Online</p></div>
+          <div class="arrow">›</div>
+        </a>
+      </div>
+      <div class="week-foot">
+        <a href="/gov-hub.html">View all meetings and events →</a>
+      </div>
+    </div>
+
+    <div class="donate-card">
+      <div class="icon"><svg><use href="#i-heart"/></svg></div>
+      <h3>Support Our Community</h3>
+      <p>Your donation helps us keep information accessible, amplify local voices, and build a stronger, more livable future for all.</p>
+      <a class="donate-btn" href="https://livabletelluride.org/#tab-about"><svg><use href="#i-heart"/></svg> Donate Today</a>
+    </div>
+  </section>
+
+  <!-- ── Subscribe ── -->
+  <section class="subscribe-row" id="subscribe">
+    <div class="subscribe-card">
+      <div class="icon"><img src="img/icons/subscribe_envelope.png" alt=""></div>
+      <div class="copy">
+        <h3>Never Miss an Update</h3>
+        <p>Subscribe to get the latest meetings, news, events, and opportunities delivered to your inbox.</p>
+      </div>
+      <form class="form" action="https://livabletelluride.org/#tab-subscribe" method="get">
+        <input type="email" placeholder="Enter your email address" aria-label="Email address" required>
+        <button type="submit" class="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="site-foot">
+    <div class="site-foot-inner">
+      <div class="foot-brand">
+        <div class="foot-brand-logo"><img src="img/icons/community_powered_mountains.png" alt="" style="width:28px;height:28px;object-fit:contain;"> Livable Telluride</div>
+        <div class="foot-brand-tag">Inform. Connect. Engage. Together.</div>
+      </div>
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <a href="/">Home</a>
+        <a href="/about.html">About Us</a>
+        <a href="https://livabletelluride.org/#tab-about">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Helpful Links</h4>
+        <a href="https://livabletelluride.org/privacy-policy.html">Privacy Policy</a>
+        <a href="https://livabletelluride.org/#tab-about">Terms of Use</a>
+        <a href="https://livabletelluride.org/data-deletion.html">Accessibility</a>
+      </div>
+      <div class="foot-col">
+        <h4>Follow Us</h4>
+        <div class="foot-social">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><img src="img/icons/facebook_social.png" alt=""></a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/icons/instagram_social.png" alt=""></a>
+          <a href="mailto:info@livabletelluride.org" aria-label="Email"><img src="img/icons/email_social.png" alt=""></a>
+        </div>
+      </div>
+      <div class="foot-mission">
+        <p>Livable Telluride is a community-powered initiative.</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      © 2026 Livable Telluride. All rights reserved.
+    </div>
+  </footer>
 
   <script>
-    /* ── Sample data — falls back to this if /js/gov-hub.js isn't loaded.
-       Real data is wired via loadLiveMeetings() at the bottom. ───────── */
-    const SAMPLE_MEETINGS = [
-      {
-        date: '2026-05-12', time: '6:00 PM',
-        title: 'San Miguel County: Entrepreneurial Work Session',
-        sourceKey: 'county', sourceLabel: 'San Miguel County',
-        entityLogo: 'https://livabletelluride.org/logo/San%20Miguel%20County.png',
-        category: 'Work Session',
-        summary: 'Joint work session with Town Councils of Norwood and Ophir Sites on regional housing, land-use planning, emergency preparedness, and affordable-housing strategies.',
-        location: 'County Annex • Telluride',
-        agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/'
-      },
-      {
-        date: '2026-05-13', time: '5:30 PM',
-        title: 'Telluride Planning & Zoning Commission Meeting',
-        sourceKey: 'telluride', sourceLabel: 'Town of Telluride',
-        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Official.png',
-        category: 'Planning Commission',
-        summary: 'Public hearing on a major lodging-redevelopment proposal at 200 W Pacific Ave; review of short-term rental enforcement updates; staff briefing on the Comprehensive Plan refresh.',
-        location: 'Rebekah Hall • Telluride',
-        agendaUrl: 'https://telluride.gov/'
-      },
-      {
-        date: '2026-05-14', time: '7:00 PM',
-        title: 'Town of Telluride: Town Council',
-        sourceKey: 'telluride', sourceLabel: 'Town of Telluride',
-        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Official.png',
-        category: 'Council Meeting',
-        summary: 'First reading of the FY2027 budget; discussion of Lawson Hill annexation timeline; public comment on parking-program changes; consent agenda routine items.',
-        location: 'Rebekah Hall • Telluride',
-        agendaUrl: 'https://telluride.gov/'
-      },
-      {
-        date: '2026-05-15', time: '8:30 AM',
-        title: 'San Miguel County Board of Commissioners',
-        sourceKey: 'county', sourceLabel: 'San Miguel County',
-        entityLogo: 'https://livabletelluride.org/logo/San%20Miguel%20County.png',
-        category: 'BOCC Meeting',
-        summary: 'Quarterly review of the Open Space program; presentation from Public Health on regional vaccination clinics; discussion of regional broadband expansion grant applications.',
-        location: 'County Courthouse • Telluride',
-        agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/'
-      },
-      {
-        date: '2026-05-19', time: '5:30 PM',
-        title: 'Telluride R-1 School District: Board of Education',
-        sourceKey: 'school', sourceLabel: 'Telluride School District',
-        entityLogo: 'https://livabletelluride.org/logo/School%20District%20Telluride.png',
-        category: 'School Board',
-        summary: 'Adoption of the FY2027 budget; Superintendent’s report on enrollment projections; review of construction-bond project status; public comment.',
-        location: 'TMHS Library • Telluride',
-        agendaUrl: 'https://www.tellurideschool.org/'
-      },
-      {
-        date: '2026-05-20', time: '4:00 PM',
-        title: 'SMART Board of Directors Meeting',
-        sourceKey: 'smart', sourceLabel: 'SMART',
-        entityLogo: 'https://livabletelluride.org/logo/SMART.png',
-        category: 'SMART',
-        summary: 'Approval of summer service schedule changes; quarterly ridership and farebox report; preliminary discussion of the Mountain Village–Telluride frequency upgrade.',
-        location: 'SMART Office • Lawson Hill',
-        agendaUrl: 'https://www.smartbus.org/'
-      },
-      {
-        date: '2026-05-21', time: '6:00 PM',
-        title: 'Mountain Village Town Council',
-        sourceKey: 'mv', sourceLabel: 'Mountain Village',
-        entityLogo: 'https://livabletelluride.org/logo/Mountain%20village%20Town.jpg',
-        category: 'Council Meeting',
-        summary: 'Second reading of short-term rental cap ordinance; review of Town Plaza activation pilot; staff update on Sunset Plaza redevelopment partner selection.',
-        location: 'Town Hall • Mountain Village',
-        agendaUrl: 'https://townofmountainvillage.com/'
-      },
-      {
-        date: '2026-05-26', time: '6:00 PM',
-        title: 'Telluride Fire Protection District Board',
-        sourceKey: 'fire', sourceLabel: 'Fire District',
-        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Fire.png',
-        category: 'Fire District',
-        summary: 'Wildfire-season readiness briefing; review of mutual-aid agreements with Norwood and Ouray; budget amendment for new wildland engine procurement.',
-        location: 'Telluride Fire Station',
-        agendaUrl: 'https://www.telluridefire.org/'
-      },
-      {
-        date: '2026-05-20', time: '5:00 PM',
-        title: 'HARC Meeting',
-        sourceKey: 'telluride', sourceLabel: 'Town of Telluride',
-        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Official.png',
-        category: 'HARC Meeting',
-        summary: 'Worksessions on Carhenge (Lot L area sculpture installation) and Shandoka (proposed large-scale development on the west side of Telluride).',
-        location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
-        agendaUrl: 'https://telluride.civicweb.net/filepro/documents/6869'
-      }
-    ];
-
-    /* ── Entity catalog (sidebar list) ──
-       Entries should match keys returned by the get*Meetings() fetchers in
-       data-only.js. Town of Telluride, Ouray, Ridgway, and SMRHA are
-       deferred until their meeting data exists in cached form (currently
-       only available via live RSS/API on the legacy single-page site). */
-    const ENTITIES = [
-      { key: 'all',       name: 'All Meetings',           logo: 'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png' },
-      { key: 'mv',        name: 'Mountain Village',       logo: 'https://livabletelluride.org/logo/Mountain%20village%20Town.jpg' },
-      { key: 'county',    name: 'San Miguel County',      logo: 'https://livabletelluride.org/logo/San%20Miguel%20County.png' },
-      { key: 'ridgway',   name: 'Town of Ridgway',        logo: 'https://livabletelluride.org/logo/Ridgway%20Town.png' },
-      { key: 'norwood',   name: 'Town of Norwood',        logo: 'https://livabletelluride.org/logo/Norwood%20Town.jpeg' },
-      { key: 'school',    name: 'School District R-1',    logo: 'https://livabletelluride.org/logo/School%20District%20Telluride.png' },
-      { key: 'fire',      name: 'Fire Protection',        logo: 'https://livabletelluride.org/logo/Telluride%20Fire.png' },
-      { key: 'med',       name: 'Telluride Medical',      logo: 'https://livabletelluride.org/logo/Telluride%20Hospital%20Dist.jpeg' },
-      { key: 'smart',     name: 'SMART Transit',          logo: 'https://livabletelluride.org/logo/SMART.png' },
-      { key: 'ophir',     name: 'Town of Ophir',          logo: 'https://livabletelluride.org/logo/Ophir.jpeg' },
-      { key: 'telluride', name: 'Town of Telluride',      logo: 'https://livabletelluride.org/logo/Telluride%20Official.png' }
-    ];
-
-    let MEETINGS = SAMPLE_MEETINGS.slice();
-    let activeFilter = 'all';
-
-    /* ── Render top chip filter bar (subset of sidebar entities) ── */
-    function chipsHtml() {
-      const TOP_CHIPS = ['all', 'mv', 'telluride', 'county', 'norwood', 'school', 'fire', 'med', 'smart'];
-      return TOP_CHIPS.map(key => {
-        const e = ENTITIES.find(x => x.key === key);
-        if (!e) return '';
-        const cls = key === activeFilter ? 'chip active' : 'chip';
-        const label = key === 'all' ? 'All'
-          : e.name.replace(/^Town of /, '').replace(/ District R-1$/, '').replace(' Protection', '');
-        return '<span class="' + cls + '" data-filter="' + key + '">' + label + '</span>';
-      }).join('');
-    }
-
-    /* ── Render sidebar entity list ── */
-    function entitiesHtml() {
-      return ENTITIES.map(e => {
-        const cls = e.key === activeFilter ? 'entity-row active' : 'entity-row';
-        const count = e.key === 'all'
-          ? MEETINGS.length
-          : MEETINGS.filter(m => (m.sourceKey || '').toLowerCase() === e.key).length;
-        return '<a class="' + cls + '" data-filter="' + e.key + '" href="#">'
-             + '<img class="entity-logo" src="' + e.logo + '" alt="" onerror="this.style.visibility=\'hidden\'">'
-             + '<span>' + e.name + '</span>'
-             + '<span class="entity-count">' + count + '</span>'
-             + '</a>';
-      }).join('');
-    }
-
-    /* ── Comment email map ── */
-    const COMMENT_MAP = {
-      telluride: { email: 'townclerk@telluride.gov',                      deadline: 'Written comments must be received by Wednesday at noon prior to the meeting.' },
-      'telluride-harc': { email: 'dcandelaria@telluride.gov',             deadline: 'Written comments should be submitted before the meeting. Contact the Historic Preservation Planner for agenda packets.' },
-      county:    { email: 'bocc@sanmiguelcountyco.gov',                   deadline: 'Written comments must be received by Monday at 4:00 pm prior to the meeting.' },
-      'county-planning': { email: 'planningcommission@sanmiguelcountyco.gov', deadline: 'Written comments must be received by Monday at 4:00 pm prior to the meeting.' },
-      mv:        { email: 'council@mtnvillage.org',                       deadline: 'Written comments must be received by Thursday prior to the meeting.' },
-      'mv-planning': { email: 'planning@mtnvillage.org',                  deadline: 'Written comments must be received by Thursday prior to the meeting.' },
-      fire:      { email: 'pdasaro@telluridefire.com',                    deadline: 'Written comments should be submitted 48 hours before the meeting.' },
-      med:       { email: 'wcrossland@tellmed.org',                       deadline: 'Written comments should be submitted 48 hours before the meeting.' },
-      norwood:   { email: 'cross@norwoodtown.com',                        deadline: 'Written comments should be submitted 48 hours before the meeting.' },
-      ophir:     { email: 'clerk@ophir.us',                               deadline: 'Written comments should be submitted 48 hours before the meeting.' },
-      airport:   { email: 'info@tellurideairport.com',                    deadline: 'Written comments may be submitted to the Airport Authority prior to the meeting.' },
-      smrha:     { email: 'admin@smrha.org',                              deadline: 'Written comments should be submitted prior to the meeting.' },
-    };
-
-    function commentInfo(m) {
-      const title = (m.title || '').toLowerCase();
-      let key = m.sourceKey;
-      // Detect planning/design-review sub-type for county and MV, and HARC for Telluride
-      if (key === 'county'    && /planning|design review/.test(title)) key = 'county-planning';
-      if (key === 'mv'        && /planning|design review/.test(title)) key = 'mv-planning';
-      if (key === 'telluride' && /harc|historic|architectural review/.test(title)) key = 'telluride-harc';
-      return COMMENT_MAP[key] || null;
-    }
-
-    /* ── Render meeting cards ── */
-    function fmtDateBadge(iso) {
-      const d = new Date(iso + 'T00:00:00');
-      const month = d.toLocaleString('en', { month: 'short' });
-      const day = d.getDate();
-      const year = d.getFullYear();
-      return '<div class="meet-date"><div class="month">' + month + '</div>'
-           + '<div class="day">' + day + '</div>'
-           + '<div class="year">' + year + '</div></div>';
-    }
-    function meetingCard(m) {
-      const dateBadge = fmtDateBadge(m.date);
-      const logo = m.entityLogo
-        ? '<img class="meet-entity-logo" src="' + m.entityLogo + '" alt="' + (m.sourceLabel || '') + '" onerror="this.style.display=\'none\'">'
-        : '';
-      const tagLabel = /board/i.test(m.title || '') ? 'Board Meeting' : (m.category || '');
-      const tag = tagLabel ? '<span class="meet-tag">' + tagLabel + '</span>' : '';
-      const summary = m.summary ? '<p class="meet-summary">' + m.summary + '</p>' : '';
-      const loc = m.location ? '<span>📍 ' + m.location + '</span>' : '';
-      const time = m.time ? '<span>🕐 ' + m.time + '</span>' : '';
-      const meta = (loc || time) ? '<div class="meet-meta">' + time + loc + '</div>' : '';
-      const agendaBtn = m.agendaUrl
-        ? '<a class="btn-action' + (m.hasAgenda ? ' primary' : '') + '" href="' + m.agendaUrl + '" target="_blank" rel="noopener">View Agenda →</a>'
-        : '';
-      const recordBtn = m.recordingUrl
-        ? '<a class="btn-action" href="' + m.recordingUrl + '" target="_blank" rel="noopener">Recording</a>'
-        : '';
-
-      // Comment button
-      const ci = commentInfo(m);
-      let commentBtn = '';
-      let deadlineNote = '';
-      if (ci) {
-        const subject = encodeURIComponent('Written comments: ' + (m.title || 'Meeting') + ' — ' + (m.date || ''));
-        commentBtn = '<a class="btn-action comment" href="mailto:' + ci.email + '?subject=' + subject + '">✉️ Submit Comment</a>';
-        deadlineNote = '<div class="comment-deadline">📅 ' + ci.deadline + '</div>';
-      }
-
-      return '<article class="meet-card">'
-           + '<div class="meet-card-head">' + dateBadge
-           + '<div class="meet-info">' + tag + '<h2 class="meet-title">' + m.title + '</h2></div>'
-           + logo + '</div>'
-           + summary + meta
-           + '<div class="meet-actions">' + agendaBtn + recordBtn + commentBtn + '</div>'
-           + deadlineNote
-           + '</article>';
-    }
-
-    function render() {
-      document.getElementById('chipRow').innerHTML = chipsHtml();
-      document.getElementById('entityList').innerHTML = entitiesHtml();
-
-      const filtered = activeFilter === 'all'
-        ? MEETINGS
-        : MEETINGS.filter(m => (m.sourceKey || '').toLowerCase() === activeFilter);
-      const sorted = filtered.slice().sort((a, b) => a.date.localeCompare(b.date));
-
-      const grid = document.getElementById('meetGrid');
-      grid.innerHTML = sorted.length
-        ? sorted.map(meetingCard).join('')
-        : '<div class="empty">No meetings found for this entity in the next 30 days.</div>';
-
-      // Wire chip + entity-row clicks
-      document.querySelectorAll('.chip[data-filter], .entity-row[data-filter]').forEach(el => {
-        el.addEventListener('click', (ev) => {
-          ev.preventDefault();
-          activeFilter = el.dataset.filter;
-          render();
-          window.scrollTo({ top: document.querySelector('.chip-bar').offsetTop - 70, behavior: 'smooth' });
-        });
-      });
-    }
-    render();
-
-    /* ── Live data: pulls meetings from the deployed gov-hub.js. ───────
-       The deployed file exposes get*Meetings() functions per entity,
-       each returning items with {title, eventDate, location, source,
-       sourceLabel, category, hasAgenda, agendaLink, ...}. We call them,
-       normalize to our card schema, and replace MEETINGS. ── */
-    function loadLiveMeetings() {
+    /* ── Live data: pull next 7 days of meetings + events from /js/gov-hub.js
+       and replace the sample week-list. Falls back silently. ─────────── */
+    function loadLiveWeek() {
 
 
       const dataScript = document.createElement('script');
@@ -660,66 +666,79 @@
         s.src = 'https://livabletelluride.org/js/data-only.js?v=v2';
         s.onload = () => {
           try {
-            // Stub AI_SUMMARIES so getMeetingSummary() doesn't throw.
-            // The live site populates this from Firestore at runtime; v2
-            // doesn't (yet), so summaries fall through to MANUAL_SUMMARIES
-            // (which IS in data-only.js) or to the meeting's description.
-            if (typeof AI_SUMMARIES === 'undefined') window.AI_SUMMARIES = {};
+            const today = new Date(); today.setHours(0,0,0,0);
+            const horizon = new Date(today.getTime() + 7 * 86400000);
+            const items = [];
 
             const fetchers = [
-              ['getCountyCachedMeetings', 'county',    'San Miguel County',     'https://livabletelluride.org/logo/San%20Miguel%20County.png'],
-              ['getMVMeetings',           'mv',        'Mountain Village',      'https://livabletelluride.org/logo/Mountain%20village%20Town.jpg'],
-              ['getSchoolMeetings',       'school',    'School District R-1',   'https://livabletelluride.org/logo/School%20District%20Telluride.png'],
-              ['getFireMeetings',         'fire',      'Fire District',         'https://livabletelluride.org/logo/Telluride%20Fire.png'],
-              ['getMedMeetings',          'med',       'Telluride Medical',     'https://livabletelluride.org/logo/Telluride%20Hospital%20Dist.jpeg'],
-              ['getRidgwayMeetings',      'ridgway',   'Town of Ridgway',       'https://livabletelluride.org/logo/Ridgway%20Town.png'],
-              ['getNorwoodMeetings',      'norwood',   'Town of Norwood',       'https://livabletelluride.org/logo/Norwood%20Town.jpeg'],
-              ['getOphirMeetings',        'ophir',     'Town of Ophir',         'https://livabletelluride.org/logo/Ophir.jpeg'],
-              ['getSmartMeetings',        'smart',     'SMART',                 'https://livabletelluride.org/logo/SMART.png'],
-              ['getTellurideMeetings',    'telluride', 'Town of Telluride',     'https://livabletelluride.org/logo/Telluride%20Official.png']
+              ['getCountyCachedMeetings', '/v2/gov-hub.html'],
+              ['getMVMeetings',           '/v2/gov-hub.html'],
+              ['getSchoolMeetings',       '/v2/gov-hub.html'],
+              ['getFireMeetings',         '/v2/gov-hub.html'],
+              ['getMedMeetings',          '/v2/gov-hub.html'],
+              ['getNorwoodMeetings',      '/v2/gov-hub.html'],
+              ['getOphirMeetings',        '/v2/gov-hub.html'],
+              ['getSmartMeetings',        '/v2/gov-hub.html']
             ];
-            const live = [];
-            const today = new Date(); today.setHours(0,0,0,0);
-            const horizon = new Date(today.getTime() + 30 * 86400000);
-            fetchers.forEach(fn => {
-              const [name, key, label, logo] = fn;
-              if (typeof window[name] !== 'function') return;
+            fetchers.forEach(([fn, href]) => {
+              if (typeof window[fn] !== 'function') return;
               try {
-                const arr = window[name]() || [];
-                arr.forEach(m => {
-                  if (!m || !m.eventDate) return;
-                  const d = m.eventDate;
-                  if (d < today || d > horizon) return;
-                  live.push({
-                    date: d.toISOString().slice(0, 10),
-                    time: m.eventTimes || '',
+                (window[fn]() || []).forEach(m => {
+                  if (!m || !m.eventDate || m.eventDate < today || m.eventDate > horizon) return;
+                  items.push({
+                    date: m.eventDate,
                     title: m.title,
-                    sourceKey: key,
-                    sourceLabel: m.sourceLabel || label,
-                    entityLogo: logo,
-                    category: /board/i.test(m.title || '') ? 'Board Meeting' : (m.category || 'Meeting'),
-                    summary: (typeof getMeetingSummary === 'function' ? (getMeetingSummary(m) || '') : '')
-                             || (m.description || ''),
-                    location: m.location || '',
-                    agendaUrl: m.agendaLink || m.link || '',
-                    hasAgenda: !!m.hasAgenda
+                    meta: m.eventTimes
+                      ? formatDate(m.eventDate) + ' • ' + m.eventTimes + (m.location ? ' • ' + m.location : '')
+                      : formatDate(m.eventDate),
+                    href: href
                   });
                 });
-              } catch (e) { console.warn(name + ' failed:', e); }
+              } catch (e) {}
             });
-            if (live.length > 0) {
-              MEETINGS = live.slice().sort((a, b) => a.date.localeCompare(b.date));
-              render();
-            }
-          } catch (err) { console.warn('loadLiveMeetings failed:', err); }
+
+            ['COMMUNITY_EVENTS','KOTO_COMMUNITY_EVENTS','WILKINSON_EVENTS'].forEach(name => {
+              if (typeof window[name] === 'undefined') return;
+              window[name].forEach(e => {
+                const start = e.pubDate || e.start_date || e.date;
+                if (!start) return;
+                const d = new Date(start);
+                d.setHours(0,0,0,0);
+                if (d < today || d > horizon) return;
+                items.push({
+                  date: d,
+                  title: e.title,
+                  meta: formatDate(d) + (e.location ? ' • ' + e.location : ''),
+                  href: '/v2/events.html'
+                });
+              });
+            });
+
+            if (items.length === 0) return;
+            items.sort((a, b) => a.date - b.date);
+            const top = items.slice(0, 5);
+            const list = document.getElementById('weekList');
+            list.innerHTML = top.map(it => {
+              const m = it.date.toLocaleString('en', { month: 'short' });
+              const d = it.date.getDate();
+              return '<a class="week-item" href="' + it.href + '">'
+                   +   '<div class="week-date"><div class="month">' + m + '</div><div class="day">' + d + '</div></div>'
+                   +   '<div class="info"><h4>' + it.title + '</h4><p class="meta">' + it.meta + '</p></div>'
+                   +   '<div class="arrow">›</div>'
+                   + '</a>';
+            }).join('');
+          } catch (err) { console.warn('loadLiveWeek failed:', err); }
         };
-        s.onerror = () => console.warn('Could not load /js/data-only.js for live meetings');
+        s.onerror = () => console.warn('Could not load /js/data-only.js for landing week');
         document.head.appendChild(s);
       };
       dataScript.onerror = () => console.warn('Could not load gov-data.js');
       document.head.appendChild(dataScript);
     }
-    loadLiveMeetings();
+    function formatDate(d) {
+      return d.toLocaleString('en', { month: 'long', day: 'numeric', year: 'numeric' });
+    }
+    loadLiveWeek();
   </script>
 </body>
 </html>
