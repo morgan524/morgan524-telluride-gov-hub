@@ -3176,7 +3176,107 @@ function fetchTelluridComEvents() {
 
 
 // ── Sherbino Theater Events (Ridgway) — bot-populated weekly by Task 14 ──
-const SHERBINO_EVENTS = [];
+const SHERBINO_EVENTS = [
+  {
+    "title": "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
+    "href": "https://sherbino.org/event/monthly-welcome-home-alliance-veterans-coffee-at-the-sherbino/2026-05-12/",
+    "date": "2026-05-12 10:00:00",
+    "endDate": "2026-05-12 12:00:00",
+    "location": "Ridgway, CO",
+    "copy": "",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png"
+  },
+  {
+    "title": "The M Factor 2 Film",
+    "href": "https://sherbino.org/event/m-factor-2-film-panel-ridgway/",
+    "date": "2026-05-12 18:30:00",
+    "endDate": "2026-05-12 20:00:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "Join us May 12 at the Sherbino for a screening of The M Factor 2: Before the Pause – Perimenopause, followed by a panel discussion exploring women’s health, perimenopause, and shared experiences.\n\n\n\n\n\n\t\n\t\t\n\t\t\t\t\t\n\n\t\t\t\t\t\n\t\t\t\t @ \t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\n\n\n\n\nDoors: 6:00 PM || Film: 6:30 PM, Discussion…",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/04/2026-sherb-event-banners-25.png"
+  },
+  {
+    "title": "Chloe Kimes with Heather & Douglas Opening",
+    "href": "https://sherbino.org/event/chloe-kimes-ridgway-live/",
+    "date": "2026-05-13 18:30:00",
+    "endDate": "2026-05-13 21:30:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "\n\t\n\t\t\n\t\t\t\t\t\n\n\t\t\t\t\t\n\t\t\t\t @ \t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\n\n\n\n\n\n\nDoors at 6:30 pm || Opener (Heather & Douglas) at 6:45 pm || Chloe Kimes at 7:30 pm$25 advance / $28 at the door || Limited reserved seating available\n\n\n\nChloe Kimes is described as a “storyteller-in-the-making” with a timeless…",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/03/2026-sherb-event-banners-12.png"
+  },
+  {
+    "title": "Sherbino Writers Room: Sketch Comedy Writing",
+    "href": "https://sherbino.org/event/sherbino-writers-room-sketch-comedy-writing-15/",
+    "date": "2026-05-13 19:00:00",
+    "endDate": "2026-05-13 20:30:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "\n\t\n\t\t\n\t\t\t\t\t\n\n\t\t\t\t\t\n\t\t\t\t @ \t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\n\n\n\n\n\n\nDoors at 6:45 PM || \"Writing\"/Pitching/Editing at 7:00 PM || FREE Creative Experience\n\n\n\nThis Sketch Comedy Writer's Room is at 610 Arts CollectivePlease bring: Your sense of humor, something to write on, and something to write…",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/01/sherb-2026-EVENT-BANNERS-1920-x-1080-px-13.png"
+  },
+  {
+    "title": "Volunteers Needed for Sherbino, 610 & Cora Cleanup Day",
+    "href": "https://sherbino.org/event/volunteers-needed-for-sherbino-610-cora-cleanup-day/",
+    "date": "2026-05-16 09:00:00",
+    "endDate": "2026-05-16 15:00:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "\n\t\n\t\t\n\t\t\t\t\t\n\n\t\t\t\t\t\n\t\t\t\t @ \t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\n\n\n\n\nWe need volunteers to help with Cleanup Day at The Sherbino, 610 Arts Collective, and Cora Annex! Many Volunteers are needed and many roles are available from cleaning to heavy lifting! Go to: https://signup.com/go/eFPDcSU for the full list of…",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/03/may-16-cleanup-day-banner.png"
+  },
+  {
+    "title": "Sherb Sidewalk Celebration ~ Ridgway '26 Grad Parade",
+    "href": "https://sherbino.org/event/ridgway-grad-parade-celebration-sherbino/",
+    "date": "2026-05-22 17:30:00",
+    "endDate": "2026-05-22 19:30:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "\n\t\n\t\t\n\t\t\t\t\t\n\n\t\t\t\t\t\n\t\t\t\t @ \t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\n\n\n\n\nCheer on the Ridgway High School 2026 Graduates from the Sherbino and 610 Sidewalk\n\n\n\nMay 22 | 5:30 ish –7:00 ish | In front of the Sherbino and 610 Arts Collective | Free | Drink Specials in the Sherb\n\n\n\nCelebrate the Ridgway High School Class of…",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/04/2026-sherb-event-banners-26.png"
+  },
+  {
+    "title": "Sherbino Writers Room: Sketch Comedy Writing",
+    "href": "https://sherbino.org/event/sherbino-writers-room-sketch-comedy-writing-16/",
+    "date": "2026-05-27 19:00:00",
+    "endDate": "2026-05-27 20:30:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "\n\t\n\t\t\n\t\t\t\t\t\n\n\t\t\t\t\t\n\t\t\t\t @ \t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\n\n\n\n\n\n\nDoors at 6:45 PM || \"Writing\"/Pitching/Editing at 7:00 PM || FREE Creative ExperiencePlease bring: Your sense of humor, something to write on, and something to write with!Participants get a complimentary beverage or…",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/01/sherb-2026-EVENT-BANNERS-1920-x-1080-px-13.png"
+  },
+  {
+    "title": "The Yawpers",
+    "href": "https://sherbino.org/event/the-yawpers-ridgway-live/",
+    "date": "2026-05-30 20:00:00",
+    "endDate": "2026-05-30 22:00:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "\n\t\n\t\t\n\t\t\t\t\t\n\n\t\t\t\t\t\n\t\t\t\t @ \t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\n\n\n\n\n\n\nDoors: 7:30 pm || Show:  8:00 pm$25 advance / $30 day of show / A limited amount of tables are available for this show\n\n\n\nGet ready for a high-octane night of raw, unapologetic rock and roll as The Yawpers take over the Sherbino stage!\n\n\n\nFor…",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/03/yawpers-no-opener-banner.png"
+  },
+  {
+    "title": "GOLDPINE ~ Live at The Courtyard at 610",
+    "href": "https://sherbino.org/event/goldpine-ridgway-concert-may-31-2026/",
+    "date": "2026-05-31 18:30:00",
+    "endDate": "2026-05-31 20:00:00",
+    "location": "The Courtyard at 610, Ridgway",
+    "copy": "Golpine performs live in the Courtyard at 610 on Sunday, May 31 at 6:30 PM. Presented by The Sherbino.\n\n\n\n\t\n\t\t\n\t\t\t\t\t\n\n\t\t\t\t\t\n\t\t\t\t @ \t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\n\n\n\n\n\nBuy Tickets\n\n\n\n\nGOLDPINE at the Courtyard at 610 (enter via the alley behind the Sherbino and 610 Gallery) || Gates & Bar: 6 pm ||…",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/03/2026-sherb-banners-3.png"
+  },
+  {
+    "title": "The Sherbino Presents: Coral Skye / First Friday Show",
+    "href": "https://sherbino.org/event/the-sherbino-presents-coral-skye-first-friday-show-2/",
+    "date": "2026-06-05 18:00:00",
+    "endDate": "2026-06-05 20:00:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "\n\t\n\t\t\n\t\t\t\t\t\n\n\t\t\t\t\t\n\t\t\t\t @ \t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\n\n\n\n\nFriday, June 5th | 6:00–8:00 pmSherbino “Living Room” Free Show | Cash Bar | Tips EncouragedCelebrate First Friday with an intimate evening of live music at the Sherbino!\n\n\n\nJoin us in the Sherbino’s cozy “Living Room” near the bar for a special…",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/04/coral-skye-web-banner.png"
+  },
+  {
+    "title": "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
+    "href": "https://sherbino.org/event/monthly-welcome-home-alliance-veterans-coffee-at-the-sherbino/2026-06-09/",
+    "date": "2026-06-09 10:00:00",
+    "endDate": "2026-06-09 12:00:00",
+    "location": "Ridgway, CO",
+    "copy": "",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png"
+  }
+];
 
 function fetchSherbinoEvents() {
   if (typeof SHERBINO_EVENTS !== 'undefined' && Array.isArray(SHERBINO_EVENTS) && SHERBINO_EVENTS.length > 0) {
