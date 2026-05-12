@@ -1039,7 +1039,8 @@
             <input id="ef-org" type="text" placeholder="Optional">
           </div>
         </div>
-        <button type="submit" class="ef-submit">Send Submission →</button>
+        <div class="ef-status" id="efStatus"></div>
+        <button type="submit" class="ef-submit" id="efSubmitBtn">Send Submission →</button>
       </form>
     </div>
   </div>
@@ -1061,24 +1062,134 @@
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeSubmitModal();
     });
-    document.getElementById('eventSubmitForm').addEventListener('submit', function(e) {
+    // ── EmailJS init ──
+    (function() {
+      try {
+        if (typeof emailjs !== 'undefined') {
+          emailjs.init({ publicKey: 'I_E0eKAfgpTFf3kNK' });
+          window._EMAILJS_SERVICE  = 'service_ubj8ke7';
+          window._EMAILJS_TEMPLATE = 'template_fzf4ul3';
+          window._EMAILJS_READY = true;
+        }
+      } catch(e) { console.warn('EmailJS init failed:', e.message); }
+    })();
+
+    function efShowStatus(msg, type) {
+      const el = document.getElementById('efStatus');
+      el.textContent = msg;
+      el.className = 'ef-status ' + type;
+      el.style.display = 'block';
+    }
+
+    document.getElementById('eventSubmitForm').addEventListener('submit', async function(e) {
       e.preventDefault();
       const v = id => document.getElementById(id).value.trim();
-      const subject = encodeURIComponent('Event Submission: ' + (v('ef-title') || '(no title)'));
-      const body = encodeURIComponent(
-        'EVENT SUBMISSION\n================\n' +
-        'Title:        ' + v('ef-title') + '\n' +
-        'Date:         ' + v('ef-date') + '\n' +
-        'Time:         ' + v('ef-time') + '\n' +
-        'Location:     ' + v('ef-location') + '\n' +
-        'Description:\n' + v('ef-desc') + '\n\n' +
-        'Event URL:    ' + v('ef-url') + '\n' +
-        'Submitted by: ' + v('ef-name') + ' <' + v('ef-email') + '>\n' +
-        'Organization: ' + v('ef-org')
-      );
-      window.location.href = 'mailto:info@livabletelluride.org?subject=' + subject + '&body=' + body;
-      closeSubmitModal();
+      const title    = v('ef-title');
+      const date     = v('ef-date');
+      const desc     = v('ef-desc');
+      const time     = v('ef-time');
+      const location = v('ef-location');
+      const url      = v('ef-url');
+      const name     = v('ef-name');
+      const email    = v('ef-email');
+      const org      = v('ef-org');
+
+      document.getElementById('efStatus').style.display = 'none';
+
+      if (!title) { efShowStatus('Please enter the event title.', 'error'); return; }
+      if (!date)  { efShowStatus('Please enter the event date.', 'error'); return; }
+      if (!desc)  { efShowStatus('Please add a description.', 'error'); return; }
+
+      const btn = document.getElementById('efSubmitBtn');
+      btn.disabled = true;
+      btn.textContent = 'Submitting…';
+      btn.style.opacity = '0.6';
+
+      // Format date nicely for the email
+      let prettyDate = date;
+      try { prettyDate = new Date(date + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }); } catch(e) {}
+
+      // Build pre-filled GitHub Issue body (key: value pairs the bot reads)
+      let issueBody = 'Event: ' + title + '\n';
+      issueBody += 'Date: ' + date + '\n';
+      if (time)     issueBody += 'Time: ' + time + '\n';
+      if (location) issueBody += 'Location: ' + location + '\n';
+      if (url)      issueBody += 'URL: ' + url + '\n';
+      issueBody += 'Description: ' + desc.slice(0, 300) + '\n';
+      issueBody += '\n---\n';
+      issueBody += 'Submitted by: ' + (name || 'anonymous');
+      if (email) issueBody += ' <' + email + '>';
+      if (org)   issueBody += '\nOrganization: ' + org;
+
+      // One-click approve link → creates a labelled GitHub Issue → bot picks up within 6 hours
+      const approveUrl = 'https://github.com/morgan524/morgan524-telluride-gov-hub/issues/new'
+        + '?title=' + encodeURIComponent('[Event] ' + title)
+        + '&body=' + encodeURIComponent(issueBody)
+        + '&labels=' + encodeURIComponent('approved-event');
+
+      // Human-readable block for the email body
+      let details = 'TITLE:       ' + title + '\n';
+      details    += 'DATE:        ' + prettyDate + '\n';
+      if (time)     details += 'TIME:        ' + time + '\n';
+      if (location) details += 'LOCATION:    ' + location + '\n';
+      if (url)      details += 'EVENT URL:   ' + url + '\n';
+      details    += 'DESCRIPTION:\n' + desc + '\n\n';
+      details    += 'SUBMITTED BY: ' + (name || 'anonymous');
+      if (email) details += ' <' + email + '>';
+      if (org)   details += '\nORGANIZATION: ' + org;
+      details    += '\n\n--- TO APPROVE ---\n';
+      details    += 'Click the Approve button above.\n';
+      details    += 'Review the pre-filled GitHub Issue and click "Submit new issue".\n';
+      details    += 'The event will appear on the calendar within 6 hours automatically.\n';
+      details    += 'To remove it later, close the GitHub Issue.';
+
+      if (!window._EMAILJS_READY) {
+        // Graceful fallback: open mailto
+        const mailto = 'mailto:info@livabletelluride.org'
+          + '?subject=' + encodeURIComponent('Event Submission: ' + title)
+          + '&body=' + encodeURIComponent(details);
+        window.location.href = mailto;
+        btn.disabled = false; btn.textContent = 'Send Submission →'; btn.style.opacity = '1';
+        closeSubmitModal();
+        return;
+      }
+
+      try {
+        await emailjs.send(window._EMAILJS_SERVICE, window._EMAILJS_TEMPLATE, {
+          to_email:     'info@livabletelluride.org',
+          from_name:    name || 'Community member',
+          event_name:   title,
+          event_url:    url || '(none provided)',
+          message:      details,
+          approve_url:  approveUrl,
+          deny_url:     'https://livabletelluride.org/events.html',
+          site_name:    'Livable Telluride',
+          topic:        'Event Submission',
+          comment_body: details,
+          comment_type: 'event_submission',
+          review_url:   approveUrl
+        });
+        efShowStatus('Thanks! Your event has been submitted for review. We’ll add it to the calendar if it’s a good fit.', 'success');
+        document.getElementById('eventSubmitForm').reset();
+      } catch(err) {
+        console.warn('EmailJS send failed:', err);
+        efShowStatus('Something went wrong. Please email info@livabletelluride.org directly with your event details.', 'error');
+      }
+
+      btn.disabled = false;
+      btn.textContent = 'Send Submission →';
+      btn.style.opacity = '1';
     });
   </script>
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <style>
+    .ef-status {
+      display: none; padding: 12px 16px; border-radius: 10px;
+      font-size: 0.88rem; font-weight: 600; margin-top: 4px;
+    }
+    .ef-status.success { background: #e6f4ec; color: #1a6636; }
+    .ef-status.error   { background: #fdecea; color: #8b1a1a; }
+  </style>
 </body>
 </html>
