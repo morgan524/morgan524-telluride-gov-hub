@@ -875,6 +875,33 @@ async function refreshNews(existingTtArticles = []) {
     }
   } catch (e) { console.warn(`  Telluride Times RSS error: ${e.message}`); }
 
+  // ── og:image enhancement pass ──────────────────────────────────────────
+  // For TT articles that don't yet have a hi-res photo, fetch the article
+  // page through the CF Worker proxy and pull <meta property="og:image">.
+  // Cap at 15 new fetches per run (≈5 seconds extra) with a 350 ms delay
+  // between requests to be polite.  The `imgHiRes` flag is persisted on the
+  // article object so already-fetched articles are skipped on future runs.
+  {
+    const OG_MAX_PER_RUN = 15;
+    let ogFetched = 0;
+    for (const art of articles) {
+      if (art.source !== 'Telluride Times') continue;
+      if (art.imgHiRes) continue;           // already have hi-res from a prior run
+      if (ogFetched >= OG_MAX_PER_RUN) break;
+      const ogUrl = await fetchTTOgImage(art.href);
+      if (ogUrl) {
+        art.img = ogUrl;
+        art.imgHiRes = true;
+        ogFetched++;
+      } else {
+        art.imgHiRes = true;                // mark attempted so we don't retry forever
+      }
+      await new Promise(r => setTimeout(r, 350));
+    }
+    if (ogFetched > 0) console.log(`  Fetched og:image for ${ogFetched} TT article(s)`);
+  }
+
+
   // KOTO RSS
   const kotoNewscasts = [];
   const kotoFeatured = [];
@@ -1229,6 +1256,28 @@ async function fetchTTArticleDirect(url) {
     req.on('timeout', () => { req.destroy(); resolve(null); });
   });
 }
+
+/**
+ * Fetch og:image from a Telluride Times article page (unauthenticated, via
+ * the CF Worker proxy). Returns the hi-res image URL string or '' on failure.
+ * The custom fetch() in this script already routes telluridenews.com through
+ * the Worker, so no extra config is needed here.
+ */
+async function fetchTTOgImage(href) {
+  try {
+    const resp = await fetch(href);
+    if (resp.status !== 200) return '';
+    // og:image can appear in two attribute orders
+    const m = resp.text.match(/<meta[^>]+property=["'`]og:image["'`][^>]+content=["'`]([^"'`]+)["'`]/i)
+           || resp.text.match(/<meta[^>]+content=["'`]([^"'`]+)["'`][^>]+property=["'`]og:image["'`]/i);
+    if (!m) return '';
+    // Strip resize query params (same pattern as RSS enclosure cleanup)
+    return m[1].replace(/[?&]resize=[^&]*/i, '').split('?')[0];
+  } catch (_) {
+    return '';
+  }
+}
+
 
 /**
  * Extract and decode all TNCMS-encrypted subscriber content blocks from
