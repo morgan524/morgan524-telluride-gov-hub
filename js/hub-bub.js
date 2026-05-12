@@ -329,11 +329,12 @@
   window.hbTriggerAttach = function() {
     document.getElementById('hbFileInput').click();
   };
+  var HB_DOC_MAX_MB = 20; // per-file limit for documents
   window.hbHandleFiles = function(input) {
     var files = Array.from(input.files);
     files.forEach(function(file) {
-      if (file.size > 10 * 1024 * 1024) {
-        alert('File "' + file.name + '" is too large (max 10MB).');
+      if (file.size > HB_DOC_MAX_MB * 1024 * 1024) {
+        alert('File "' + file.name + '" is too large (max ' + HB_DOC_MAX_MB + ' MB). For large PDFs, consider compressing first.');
         return;
       }
       hbPendingAttachments.push(file);
@@ -700,8 +701,18 @@
     var attachHtml = '';
     if (post.attachments && post.attachments.length) {
       attachHtml = '<div class="hb-post-attachments">' + post.attachments.map(function(a) {
-        var icon = a.type && a.type.startsWith('image/') ? '🖼️' : '📄';
-        return '<a class="hb-post-attach" href="' + hbEsc(a.url) + '" target="_blank">' + icon + ' ' + hbEsc(a.name) + '</a>';
+        var isImage = a.type && a.type.startsWith('image/');
+        var isPdf   = a.type === 'application/pdf' || (a.name && a.name.toLowerCase().endsWith('.pdf'));
+        var isDoc   = !isImage && (isPdf || (a.name && /\.(docx?|txt)$/i.test(a.name)));
+        var icon    = isImage ? '🖼️' : '📄';
+        if (isDoc) {
+          // Open PDFs/documents in the in-page viewer modal
+          return '<a class="hb-post-attach" href="#" onclick="hbOpenDocModal(' +
+            JSON.stringify(a.url) + ',' + JSON.stringify(a.name) + ');return false;">' +
+            icon + ' ' + hbEsc(a.name) + '</a>';
+        }
+        // Images and other files open in a new tab
+        return '<a class="hb-post-attach" href="' + hbEsc(a.url) + '" target="_blank" rel="noopener">' + icon + ' ' + hbEsc(a.name) + '</a>';
       }).join('') + '</div>';
     }
 

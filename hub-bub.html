@@ -1017,17 +1017,6 @@
                 </div>
                 <div class="hb-compose-expanded">
                   <textarea id="hbComposeBody" placeholder="Share your thoughts, concerns, or ideas with the community..."></textarea>
-                  <div class="hb-photo-upload">
-                    <button type="button" class="hb-photo-upload-btn" onclick="hbTriggerPhoto()">📷 Add a photo (optional)</button>
-                    <input type="file" id="hbPhotoInput" accept="image/png,image/jpeg,image/gif,image/webp" style="display:none;" onchange="hbHandlePhoto(this)">
-                    <div class="hb-photo-preview" id="hbPhotoPreview">
-                      <img id="hbPhotoPreviewImg" src="" alt="Photo preview">
-                      <div class="hb-photo-preview-actions">
-                        <button type="button" onclick="hbReplacePhoto()">Replace</button>
-                        <button type="button" onclick="hbRemovePhoto()">Remove</button>
-                      </div>
-                    </div>
-                  </div>
                   <div class="hb-source-fields" id="hbSourceFields">
                     <div class="hb-compose-field-label">Source link</div>
                     <input type="url" id="hbSourceUrl" placeholder="https://...">
@@ -1088,9 +1077,21 @@
                     </div>
                   </div>
                   <div class="hb-compose-actions">
-                    <div style="display:flex;gap:6px;">
-                      <button class="hb-attach-btn" onclick="hbTriggerAttach()">Attach File</button>
-                      <input type="file" id="hbFileInput" accept=".pdf,.png,.jpg,.jpeg,.gif,.webp" multiple style="display:none;" onchange="hbHandleFiles(this)">
+                    <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;">
+                      <!-- Photo button — moved here from above the tags -->
+                      <button type="button" class="hb-attach-btn hb-photo-upload-btn" onclick="hbTriggerPhoto()" title="Add a photo (JPG, PNG, GIF, WebP · max 5 MB)">📷 Add Photo</button>
+                      <input type="file" id="hbPhotoInput" accept="image/png,image/jpeg,image/gif,image/webp" style="display:none;" onchange="hbHandlePhoto(this)">
+                      <!-- Document / file attachment -->
+                      <button class="hb-attach-btn" onclick="hbTriggerAttach()" title="Attach a document (PDF, image · max 10 MB per file)">📄 Attach Document</button>
+                      <input type="file" id="hbFileInput" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg,.gif,.webp" multiple style="display:none;" onchange="hbHandleFiles(this)">
+                      <!-- Inline photo preview (was in its own block above) -->
+                      <div class="hb-photo-preview" id="hbPhotoPreview">
+                        <img id="hbPhotoPreviewImg" src="" alt="Photo preview">
+                        <div class="hb-photo-preview-actions">
+                          <button type="button" onclick="hbReplacePhoto()">Replace</button>
+                          <button type="button" onclick="hbRemovePhoto()">Remove</button>
+                        </div>
+                      </div>
                     </div>
                     <button class="hb-post-btn" id="hbPostBtn" onclick="hbSubmitPost()" disabled>Post to Hub-Bub</button>
                   </div>
@@ -1523,6 +1524,99 @@
       }).observe(feed, { childList: true, subtree: true });
     }
   })();
+  </script>
+
+  <!-- ════════ PDF / Document Viewer Modal ════════
+       Opens when a user clicks a PDF or .doc attachment link in a post.
+       Uses Google Docs Viewer (free, handles multi-page PDFs, no install).
+       Firebase Storage download URLs are publicly accessible signed URLs,
+       so Google Docs Viewer can fetch them directly.
+  ══════════════════════════════════════════════════ -->
+  <div id="hbDocModal" style="
+    display:none; position:fixed; inset:0; z-index:9999;
+    background:rgba(0,0,0,0.72); align-items:center; justify-content:center;
+  ">
+    <div style="
+      background:#fff; border-radius:14px; overflow:hidden;
+      width:min(92vw,960px); height:min(88vh,780px);
+      display:flex; flex-direction:column; box-shadow:0 24px 64px rgba(0,0,0,0.4);
+    ">
+      <div style="
+        display:flex; align-items:center; justify-content:space-between;
+        padding:14px 20px; border-bottom:1px solid #e5e5e5;
+        background:#f9f9f7;
+      ">
+        <div style="font-weight:700;font-size:0.95rem;color:#21443c;" id="hbDocModalTitle">Document</div>
+        <div style="display:flex;gap:10px;align-items:center;">
+          <a id="hbDocModalDownload" href="#" target="_blank" rel="noopener"
+             style="font-size:0.82rem;color:#21443c;font-weight:600;text-decoration:none;
+                    padding:5px 12px;border:1px solid rgba(33,68,60,0.25);border-radius:999px;">
+            ↓ Open / Download
+          </a>
+          <button onclick="hbCloseDocModal()" style="
+            background:none;border:none;cursor:pointer;font-size:1.4rem;
+            color:#666;line-height:1;padding:2px 6px;
+          " title="Close">✕</button>
+        </div>
+      </div>
+      <!-- iframe is injected here by hbOpenDocModal() -->
+      <div id="hbDocModalBody" style="flex:1;overflow:hidden;background:#f0ece4;"></div>
+    </div>
+  </div>
+  <script>
+    window.hbOpenDocModal = function(url, name) {
+      var modal   = document.getElementById('hbDocModal');
+      var body    = document.getElementById('hbDocModalBody');
+      var title   = document.getElementById('hbDocModalTitle');
+      var dlLink  = document.getElementById('hbDocModalDownload');
+      var isPdf   = /\.pdf(\?|$)/i.test(url) || /application\/pdf/i.test(url);
+      var isImage = /\.(png|jpe?g|gif|webp)(\?|$)/i.test(url);
+
+      title.textContent = name || 'Document';
+      dlLink.href = url;
+
+      body.innerHTML = '';
+      if (isImage) {
+        // Show images directly
+        body.innerHTML =
+          '<div style="height:100%;overflow:auto;display:flex;align-items:center;justify-content:center;padding:16px;">' +
+          '<img src="' + url.replace(/"/g,'%22') + '" style="max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.2);" alt="' + (name||'').replace(/"/g,'') + '">' +
+          '</div>';
+      } else if (isPdf) {
+        // Use Google Docs Viewer for multi-page PDFs — renders all pages, no plugin needed
+        var viewerUrl = 'https://docs.google.com/viewer?url=' + encodeURIComponent(url) + '&embedded=true';
+        body.innerHTML =
+          '<iframe src="' + viewerUrl + '" style="width:100%;height:100%;border:none;" allow="fullscreen" title="' + (name||'Document').replace(/"/g,'') + '">' +
+          '</iframe>' +
+          '<div style="position:absolute;bottom:10px;right:14px;font-size:0.72rem;color:#aaa;">Powered by Google Docs Viewer</div>';
+      } else {
+        // Word docs / other — also route through Google Docs Viewer
+        var viewerUrl = 'https://docs.google.com/viewer?url=' + encodeURIComponent(url) + '&embedded=true';
+        body.innerHTML =
+          '<iframe src="' + viewerUrl + '" style="width:100%;height:100%;border:none;" allow="fullscreen" title="' + (name||'Document').replace(/"/g,'') + '">' +
+          '</iframe>';
+      }
+
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    };
+
+    window.hbCloseDocModal = function() {
+      var modal = document.getElementById('hbDocModal');
+      var body  = document.getElementById('hbDocModalBody');
+      modal.style.display = 'none';
+      body.innerHTML = ''; // destroy iframe so it stops loading
+      document.body.style.overflow = '';
+    };
+
+    // Close on backdrop click
+    document.getElementById('hbDocModal').addEventListener('click', function(e) {
+      if (e.target === this) hbCloseDocModal();
+    });
+    // Close on Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') hbCloseDocModal();
+    });
   </script>
 
 </body>
