@@ -28,6 +28,7 @@
       --text-secondary: #4a5e57;
       --text-muted: #7a8a85;
       --border-soft: rgba(33, 68, 60, 0.12);
+      --bg-card: #fff;
       --shadow-card: 0 4px 18px rgba(36, 49, 46, 0.10);
       --font-heading: 'Georgia', 'Times New Roman', serif;
       --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
@@ -97,18 +98,15 @@
     }
 
     /* Filter chips — full-width across the top, above the layout split */
-    .chips-bar {
-      max-width: 1280px; margin: 0 auto;
-      padding: 28px 32px 0;
-    }
+    /* Filter chips — now live in sidebar */
     .filter-chips {
-      display: flex; flex-wrap: wrap; gap: 10px;
-      margin-bottom: 24px;
+      display: flex; flex-direction: column; gap: 6px;
+      margin-bottom: 20px;
     }
     .chip {
-      display: inline-block;
-      padding: 8px 18px;
-      border-radius: 999px;
+      display: block;
+      padding: 8px 14px;
+      border-radius: 10px;
       background: #fff;
       border: 1px solid var(--border-soft);
       color: var(--text-secondary);
@@ -135,6 +133,11 @@
 
     /* Submit Event sidebar card */
     .sidebar { position: sticky; top: 100px; }
+    .sidebar-section-label {
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--text-muted);
+      margin: 0 0 10px;
+    }
     .submit-card {
       background: var(--bg-hero);
       border: 1px solid var(--border-soft);
@@ -470,12 +473,12 @@
     </div>
   </section>
 
-  <div class="chips-bar">
-    <div class="filter-chips" id="chipRow"><!-- populated by JS --></div>
-  </div>
-
   <main class="page-wrap">
     <aside class="sidebar">
+      <div style="margin-bottom: 24px;">
+        <p class="sidebar-section-label">Filter by Town</p>
+        <div class="filter-chips" id="chipRow"><!-- populated by JS --></div>
+      </div>
       <div class="submit-card">
         <div class="submit-icon" aria-hidden="true">
           <!-- calendar icon -->
