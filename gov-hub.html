@@ -198,6 +198,10 @@
       flex-direction: column;
       gap: 10px;
     }
+    .meet-card.has-wtm {
+      border: 2px solid #2d6a4f;
+      box-shadow: 0 0 0 1px rgba(45,106,79,0.12), var(--shadow-card);
+    }
     .meet-card-head {
       display: flex;
       gap: 14px;
@@ -694,7 +698,7 @@
         deadlineNote = '<div class="comment-deadline">📅 ' + ci.deadline + '</div>';
       }
 
-      return '<article class="meet-card">'
+      return '<article class="meet-card' + (wtmText ? ' has-wtm' : '') + '">'
            + '<div class="meet-card-head">' + dateBadge
            + '<div class="meet-info">' + tag + '<h2 class="meet-title">' + m.title + '</h2></div>'
            + logo + '</div>'
