@@ -26,6 +26,11 @@ const COUNTY_CIVICCLERK_IDS = {
   'Planning Commission|2026-05-14': 919,
 };
 
+// eventId -> hosted PDF path (takes priority over CivicClerk viewer link)
+const COUNTY_HOSTED_PACKETS = {
+  919: '/assets/packets/planning-commission-2026-05-14-packet.pdf',  // Planning Commission May 14 2026
+};
+
 const COUNTY_CIVICCLERK_AGENDA_FILES = {
   1025: 1652,  // Planning Commission Apr 2 2026
   999:  1702,  // BOCC May 13 2026
@@ -1265,7 +1270,7 @@ const LAND_USE_ISSUES = {
     controversyUpdate: {
       date: 'May 14, 2026',
       heading: 'May 14 Planning Commission — Fast Track Review',
-      packetHref: 'https://sanmiguelcoco.portal.civicclerk.com/event/919/files/agenda/1705',
+      packetHref: '/assets/packets/planning-commission-2026-05-14-packet.pdf',
       points: [
         { label: 'Why it is before the Commission now',
           text: 'San Miguel County must adopt a qualifying fast-track review process by June 30, 2026 to access Proposition 123 planning and infrastructure grant funds this fiscal year. Missing the June 30 window pushes the deadline to December 31 — and risks losing eligibility altogether. Planning Director Kaye Simonson drafted the amendment; it is Agenda Item 7 at the May 14 Planning Commission meeting, with a Commission recommendation to the BOCC expected.' },

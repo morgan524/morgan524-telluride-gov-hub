@@ -603,6 +603,10 @@
       const key = (m.title || '') + '|' + (m.date || '');
       const eventId = COUNTY_CIVICCLERK_IDS[key];
       if (!eventId) return null;
+      // Prefer hosted PDF (direct download) over CivicClerk viewer
+      if (typeof COUNTY_HOSTED_PACKETS !== 'undefined' && COUNTY_HOSTED_PACKETS[eventId]) {
+        return COUNTY_HOSTED_PACKETS[eventId];
+      }
       const fileId = COUNTY_CIVICCLERK_AGENDA_FILES[eventId];
       if (!fileId) return null;
       return (typeof COUNTY_CIVICCLERK_BASE !== 'undefined' ? COUNTY_CIVICCLERK_BASE : 'https://sanmiguelcoco.portal.civicclerk.com/event/') + eventId + '/files/agenda/' + fileId;
@@ -671,7 +675,9 @@
         : '';
       const pktUrl = getMeetingPacketLink(m);
       const packetBtn = pktUrl
-        ? '<a class="btn-action packet" href="' + pktUrl + '" target="_blank" rel="noopener">⬇ Packet</a>'
+        ? (pktUrl.startsWith('/')
+            ? '<a class="btn-action packet" href="' + pktUrl + '" download>⬇ Download Packet</a>'
+            : '<a class="btn-action packet" href="' + pktUrl + '" target="_blank" rel="noopener">⬇ Packet</a>')
         : '';
       const wtmText = getWTMPopup(m);
       const wtmBtn = wtmText

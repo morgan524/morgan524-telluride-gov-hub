@@ -1088,6 +1088,10 @@ function getMeetingPacketLink(item) {
   const exactKey = cleanT + '|' + dateKey;
   const eventId = COUNTY_CIVICCLERK_IDS[exactKey];
   if (!eventId) return null;
+  // Prefer hosted PDF (direct download) over CivicClerk viewer
+  if (typeof COUNTY_HOSTED_PACKETS !== 'undefined' && COUNTY_HOSTED_PACKETS[eventId]) {
+    return COUNTY_HOSTED_PACKETS[eventId];
+  }
   const fileId = COUNTY_CIVICCLERK_AGENDA_FILES[eventId];
   if (!fileId) return null;
   return COUNTY_CIVICCLERK_BASE + eventId + '/files/agenda/' + fileId;
@@ -7855,7 +7859,9 @@ function renderMeetingsWithTopic() {
         : '<span class="agenda-link" style="opacity:0.5;cursor:default;pointer-events:none;">' + (item.canceled ? 'Canceled' : 'Agenda Posted →') + '</span>';
       const packetUrl = !item.canceled ? getMeetingPacketLink(item) : null;
       const packetBtn = packetUrl
-        ? '<a href="' + packetUrl + '" target="_blank" rel="noopener" class="meeting-packet-btn">⬇ Packet</a>'
+        ? (packetUrl.startsWith('/')
+            ? '<a href="' + packetUrl + '" download class="meeting-packet-btn">⬇ Download Packet</a>'
+            : '<a href="' + packetUrl + '" target="_blank" rel="noopener" class="meeting-packet-btn">⬇ Packet</a>')
         : '';
       const cancelStyle = item.canceled ? ' style="opacity: 0.55; text-decoration: line-through;"' : '';
       const summary = item.canceled ? '' : getMeetingSummary(item);
