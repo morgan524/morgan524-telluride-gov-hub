@@ -415,7 +415,7 @@
     .submit-strip-mountains svg { width: 100%; height: 100%; display: block; }
 
     /* Responsive */
-    @media (max-width: 1100px) {
+    @media (max-width: 768px) {
       .event-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 900px) {
@@ -465,7 +465,7 @@
   <section class="hero">
     <div class="hero-inner">
       <h1>Community Events</h1>
-      <p>classes, meetings, and gatherings near you.</p>
+      <p>Classes, meetings, and gatherings near you.</p>
     </div>
   </section>
 
@@ -902,5 +902,91 @@
     loadLiveEvents();
 
   </script>
+
+  <!-- ── Submit an Event form ─────────────────────────────────── -->
+  <section id="submit-event" style="max-width:700px;margin:56px auto 72px;padding:0 24px;">
+    <h2 style="font-family:var(--font-head);font-size:1.65rem;color:var(--forest);margin-bottom:6px;">Submit an Event</h2>
+    <p style="color:var(--text-muted);margin-bottom:28px;font-size:0.97rem;">
+      Share a community event with Livable Telluride. We'll review it and post it to the calendar.
+    </p>
+    <form id="eventSubmitForm" style="display:grid;gap:16px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Event Title *</label>
+          <input id="ef-title" type="text" required placeholder="e.g. Wildflower Walk &amp; Talk"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+        </div>
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Date *</label>
+          <input id="ef-date" type="date" required
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Time</label>
+          <input id="ef-time" type="text" placeholder="e.g. 10:00 AM – 12:00 PM"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+        </div>
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Location</label>
+          <input id="ef-location" type="text" placeholder="e.g. Wilkinson Public Library"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+        </div>
+      </div>
+      <div>
+        <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Description *</label>
+        <textarea id="ef-desc" required rows="4" placeholder="Tell people what the event is about…"
+          style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);resize:vertical;box-sizing:border-box;"></textarea>
+      </div>
+      <div>
+        <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Event URL / More Info</label>
+        <input id="ef-url" type="url" placeholder="https://…"
+          style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Your Name</label>
+          <input id="ef-name" type="text" placeholder="First Last"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+        </div>
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Your Email</label>
+          <input id="ef-email" type="email" placeholder="you@example.com"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+        </div>
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Organization</label>
+          <input id="ef-org" type="text" placeholder="Optional"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+        </div>
+      </div>
+      <button type="submit"
+        style="width:100%;padding:14px;background:var(--forest);color:#fff;border:none;border-radius:12px;font-size:1rem;font-weight:700;cursor:pointer;margin-top:4px;transition:background 0.15s;">
+        Send Submission →
+      </button>
+    </form>
+    <script>
+      document.getElementById('eventSubmitForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const v = id => document.getElementById(id).value.trim();
+        const subject = encodeURIComponent('Event Submission: ' + (v('ef-title') || '(no title)'));
+        const body = encodeURIComponent(
+          'EVENT SUBMISSION\n' +
+          '================\n' +
+          'Title:        ' + v('ef-title') + '\n' +
+          'Date:         ' + v('ef-date') + '\n' +
+          'Time:         ' + v('ef-time') + '\n' +
+          'Location:     ' + v('ef-location') + '\n' +
+          'Description:\n' + v('ef-desc') + '\n\n' +
+          'Event URL:    ' + v('ef-url') + '\n' +
+          'Submitted by: ' + v('ef-name') + ' <' + v('ef-email') + '>\n' +
+          'Organization: ' + v('ef-org')
+        );
+        window.location.href = 'mailto:info@livabletelluride.org?subject=' + subject + '&body=' + body;
+      });
+    </script>
+  </section>
+
 </body>
 </html>
