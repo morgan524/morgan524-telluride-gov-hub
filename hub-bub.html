@@ -59,7 +59,8 @@
     .topnav-links a { color: var(--lt-ink); text-decoration: none; font-weight: 600; font-size: 0.82rem; padding: 6px 2px; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
     .topnav-links a:hover { color: var(--forest); }
     .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
-    .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 8px 14px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; white-space: nowrap; }
+    .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 8px 14px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; white-space: nowrap; cursor: pointer; border: none; }
+    .topnav-cta-secondary { background: #a8d5b5; color: #1a3a2e; }
 
     /* ── Hero ── */
     .hero {
@@ -891,7 +892,8 @@
         <a href="/legal-notices.html">Legal Notices</a>
         <a href="/about.html">About</a>
       </nav>
-      <a class="topnav-cta" href="https://livabletelluride.org/#tab-subscribe">Subscribe</a>
+      <a class="topnav-cta topnav-cta-secondary" href="javascript:void(0)" onclick="hbShowAuth('signup')">Create Account</a>
+      <a class="topnav-cta" href="javascript:void(0)" onclick="hbShowAuth('login')">Log In</a>
     </div>
   </header>
 
