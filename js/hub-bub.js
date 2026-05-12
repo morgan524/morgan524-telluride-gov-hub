@@ -304,15 +304,18 @@
       hbSetMode(btn.dataset.hbMode);
     });
   });
-  // Topic filter chips
-  document.querySelectorAll('.hb-topic-chip').forEach(function(chip) {
-    chip.addEventListener('click', function() {
-      document.querySelectorAll('.hb-topic-chip').forEach(function(c) { c.classList.remove('active'); });
+  // Topic filter chips — use event delegation so dynamic chips work too
+  var _hbTopicBar = document.getElementById('hbTopicBar');
+  if (_hbTopicBar) {
+    _hbTopicBar.addEventListener('click', function(e) {
+      var chip = e.target.closest('.hb-topic-chip');
+      if (!chip) return;
+      _hbTopicBar.querySelectorAll('.hb-topic-chip').forEach(function(c) { c.classList.remove('active'); });
       chip.classList.add('active');
       hbCurrentTopic = chip.dataset.hbTopic;
       hbRenderPosts();
     });
-  });
+  }
   // Enable/disable post button
   function hbUpdatePostBtn() {
     var title = document.getElementById('hbComposeTitle').value.trim();
@@ -597,6 +600,7 @@
           hbPosts.push(d);
         });
         hbRenderPosts();
+        hbRefreshFilterChips();
         hbRenderTrending();
         hbRenderStats();
         hbRenderMostUseful();
@@ -988,6 +992,161 @@
     hbRenderPosts();
   };
   // ═══════════════════════════════
+  // AUTO-TAG SUGGESTION
+  // Auto-selects the most likely tag(s) based on what the user types.
+  // Runs on every keystroke; only suggests if no tag is manually selected.
+  // ═══════════════════════════════
+  var HB_TAG_KEYWORDS = {
+    'housing': ['housing','rent','deed','affordable','waitlist','evict','landlord','tenant','smrha','telluride housing','workforce','unit','element 52','camel',' lot ','vacancy','zoning','apartment','condo','workforce housing'],
+    'land-use': ['land use','zoning','pud','development','parcel','variance','height','setback','easement','subdivision','annexation','carhenge','diamond','society turn','sunnyside','chair 7','voodoo','lot l','lot r'],
+    'gondola': ['gondola','3a','cable','tramway','aerial','transit corridor','mountain village connector','mvt'],
+    'public-safety': ['fire','wildfire','safety','marshal','police','ems','ambulance','emergency','evacuation','smoke','defensible','resiliency code','noxious'],
+    'budget-finance': ['budget','finance','tax','revenue','bond','debt','million','taxpayer','appropriation','fund','fee','cost','spending','fiscal'],
+    'infrastructure': ['water','sewer','road','infrastructure','utilities','broadband','internet','maintenance','stormwater','trail','sidewalk'],
+    'environment': ['environment','climate','wildlife','habitat','wetland','valley floor','open space','bear creek','eagle','dark sky','carbon','air quality','watershed','riparian','species'],
+    'health-education': ['school','education','student','teacher','hospital','health','medical','clinic','mental health','ems','library','kids','family','youth'],
+    'legal-governance': ['transparency','cora','records','public records','open meeting','sunshine','lawsuit','litigation','governance','ordinance','resolution','motion','vote','appeal','attorney','legal','ethics','conflict','hb24','house bill','colorado law','charter'],
+    'transit': ['transit','bus','parking','traffic','road','highway 145','route','shuttle','rideshare','car-free','parking structure'],
+    'community': ['community','event','festival','bluegrass','mountainfilm','volunteer','fundraiser','celebration','anniversary','arts','culture','local','neighbor'],
+    'other': []
+  };
+
+  function hbSuggestTags() {
+    // Only run if user hasn't manually selected a tag yet
+    var alreadySelected = document.querySelectorAll('.hb-compose-tag.selected');
+    if (alreadySelected.length > 0) return;
+
+    var title = (document.getElementById('hbComposeTitle').value || '').toLowerCase();
+    var body  = (document.getElementById('hbComposeBody').value  || '').toLowerCase();
+    var combined = title + ' ' + body;
+
+    // Score each tag
+    var scores = {};
+    Object.keys(HB_TAG_KEYWORDS).forEach(function(tag) {
+      if (tag === 'other') return;
+      var kws = HB_TAG_KEYWORDS[tag];
+      var score = 0;
+      kws.forEach(function(kw) {
+        if (combined.includes(kw)) score += (title.includes(kw) ? 3 : 1);
+      });
+      if (score > 0) scores[tag] = score;
+    });
+
+    // Pick top tag
+    var best = Object.keys(scores).sort(function(a, b) { return scores[b] - scores[a]; })[0];
+    if (!best) return;
+
+    // Auto-select it and show a subtle hint
+    var tagBtn = document.querySelector('.hb-compose-tag[data-hb-tag="' + best + '"]');
+    if (tagBtn) {
+      tagBtn.classList.add('selected', 'auto-suggested');
+      tagBtn.title = 'Auto-suggested based on your text — click another tag to change';
+      hbUpdatePostBtn();
+      // Show hint label
+      var hint = document.getElementById('hbTagSuggestHint');
+      if (!hint) {
+        hint = document.createElement('div');
+        hint.id = 'hbTagSuggestHint';
+        hint.style.cssText = 'font-size:0.72rem;color:#888;margin-top:3px;';
+        var tagsContainer = document.getElementById('hbComposeTags');
+        if (tagsContainer && tagsContainer.parentNode) {
+          tagsContainer.parentNode.insertBefore(hint, tagsContainer.nextSibling);
+        }
+      }
+      var info = HB_TOPICS[best] || { label: best };
+      hint.textContent = '↑ Auto-tagged as "' + info.label + '" — click a different tag to override';
+    }
+  }
+
+  // Wire auto-tag to title and body inputs (debounced 600ms)
+  var _hbTagDebounce;
+  function hbQueueSuggest() {
+    // Clear the auto-suggestion if user clicks a tag manually
+    clearTimeout(_hbTagDebounce);
+    _hbTagDebounce = setTimeout(hbSuggestTags, 600);
+  }
+  var _titleEl = document.getElementById('hbComposeTitle');
+  var _bodyEl  = document.getElementById('hbComposeBody');
+  if (_titleEl) _titleEl.addEventListener('input', hbQueueSuggest);
+  if (_bodyEl)  _bodyEl.addEventListener('input', hbQueueSuggest);
+
+  // When user manually clicks a tag, clear the auto-suggestion state
+  document.querySelectorAll('.hb-compose-tag').forEach(function(tag) {
+    tag.addEventListener('click', function() {
+      // Remove auto-suggested class from all, clear hint
+      document.querySelectorAll('.hb-compose-tag.auto-suggested').forEach(function(t) {
+        t.classList.remove('auto-suggested');
+        t.title = '';
+      });
+      var hint = document.getElementById('hbTagSuggestHint');
+      if (hint) hint.textContent = '';
+    });
+  });
+
+  // ═══════════════════════════════
+  // DYNAMIC TOPIC FILTER CHIPS
+  // Recomputes the visible filter chips to show the top 10 tags
+  // used in posts from the last 7 days (most active → least active).
+  // Falls back to showing all topics if there's no data yet.
+  // ═══════════════════════════════
+  function hbRefreshFilterChips() {
+    var bar = document.getElementById('hbTopicBar');
+    if (!bar) return;
+
+    var now = new Date();
+    var weekAgo = new Date(now.getTime() - 7 * 86400000);
+
+    // Count tag usage in the last 7 days
+    var tagCounts = {};
+    hbPosts.forEach(function(p) {
+      var d = p.createdAt ? (p.createdAt.toDate ? p.createdAt.toDate() : new Date(p.createdAt)) : null;
+      if (!d || d < weekAgo) return;
+      (p.tags || []).forEach(function(t) {
+        tagCounts[t] = (tagCounts[t] || 0) + 1;
+      });
+    });
+
+    var topTags = Object.keys(tagCounts)
+      .sort(function(a, b) { return tagCounts[b] - tagCounts[a]; })
+      .slice(0, 10);
+
+    // If there's no data for the week, show all known topics
+    if (topTags.length === 0) {
+      topTags = Object.keys(HB_TOPICS).filter(function(t) { return t !== 'other'; });
+    }
+
+    // Re-render the chip bar (always keep "All" first)
+    bar.innerHTML = '';
+    var allChip = document.createElement('button');
+    allChip.className = 'hb-topic-chip' + (hbCurrentTopic === 'all' ? ' active' : '');
+    allChip.dataset.hbTopic = 'all';
+    allChip.textContent = 'All';
+    bar.appendChild(allChip);
+
+    topTags.forEach(function(tag) {
+      var info = HB_TOPICS[tag] || { icon: '💡', label: tag };
+      var chip = document.createElement('button');
+      chip.className = 'hb-topic-chip' + (hbCurrentTopic === tag ? ' active' : '');
+      chip.dataset.hbTopic = tag;
+      // Show post count badge if >0
+      var count = tagCounts[tag] ? ' (' + tagCounts[tag] + ')' : '';
+      chip.textContent = info.icon + ' ' + info.label + count;
+      chip.title = tagCounts[tag] ? tagCounts[tag] + ' post' + (tagCounts[tag] !== 1 ? 's' : '') + ' this week' : '';
+      bar.appendChild(chip);
+    });
+
+    // Re-bind click listeners using event delegation on the bar
+    bar.onclick = function(e) {
+      var chip = e.target.closest('.hb-topic-chip');
+      if (!chip) return;
+      bar.querySelectorAll('.hb-topic-chip').forEach(function(c) { c.classList.remove('active'); });
+      chip.classList.add('active');
+      hbCurrentTopic = chip.dataset.hbTopic;
+      hbRenderPosts();
+    };
+  }
+
+  // ═══════════════════════════════
   // TRENDING SIDEBAR
   // ═══════════════════════════════
   function hbRenderTrending() {
@@ -1178,6 +1337,7 @@
       }
     ];
     hbRenderPosts();
+    hbRefreshFilterChips();
     hbRenderTrending();
     hbRenderStats();
     hbRenderMostUseful();
