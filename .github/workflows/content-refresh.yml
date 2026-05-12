@@ -67,4 +67,5 @@ jobs:
           git commit -m "🔄 Content refresh $(date -u +'%Y-%m-%d %H:%M UTC')
 
           Automated update: meeting summaries, news, community pulse, legal notices, events, deep dive topics"
+          git pull --rebase origin main
           git push
