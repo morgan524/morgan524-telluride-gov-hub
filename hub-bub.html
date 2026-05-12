@@ -565,6 +565,37 @@
       margin-left: 2px;
     }
     .hb-attach-item .hb-remove-attach:hover { opacity: 1; }
+    /* Document icon-only link on post cards */
+    .hb-post-attach-icon {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 1.45rem !important;
+      text-decoration: none !important;
+      line-height: 1 !important;
+      padding: 2px !important;
+      border-radius: 6px !important;
+      transition: transform 0.1s ease, opacity 0.1s ease;
+    }
+    .hb-post-attach-icon:hover { opacity: 0.75; transform: scale(1.12); }
+    /* Admin delete button — top-right of card header, subtle until hovered */
+    .hb-admin-delete-btn {
+      margin-left: auto !important;
+      background: none !important;
+      border: none !important;
+      cursor: pointer !important;
+      font-size: 1.1rem !important;
+      opacity: 0.28 !important;
+      padding: 2px 4px !important;
+      border-radius: 5px !important;
+      transition: opacity 0.15s ease, background 0.15s ease;
+      line-height: 1 !important;
+      align-self: flex-start !important;
+    }
+    .hb-admin-delete-btn:hover {
+      opacity: 1 !important;
+      background: rgba(197,48,48,0.10) !important;
+    }
     /* Posts feed: strip its top padding so hb-posts-feed grid controls spacing */
     #hbPostsFeed { margin-top: 0 !important; }
     /* Loading spinner stays in feed */

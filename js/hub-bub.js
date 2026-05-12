@@ -703,15 +703,14 @@
         var isImage = a.type && a.type.startsWith('image/');
         var isPdf   = a.type === 'application/pdf' || (a.name && a.name.toLowerCase().endsWith('.pdf'));
         var isDoc   = !isImage && (isPdf || (a.name && /\.(docx?|txt)$/i.test(a.name)));
-        var icon    = isImage ? '🖼️' : '📄';
         if (isDoc) {
-          // Open PDFs/documents in the in-page viewer modal
-          return '<a class="hb-post-attach" href="#" onclick="hbOpenDocModal(' +
-            JSON.stringify(a.url) + ',' + JSON.stringify(a.name) + ');return false;">' +
-            icon + ' ' + hbEsc(a.name) + '</a>';
+          // Show icon only — clicking opens the full-page PDF viewer modal
+          return '<a class="hb-post-attach hb-post-attach-icon" href="#" ' +
+            'onclick="hbOpenDocModal(' + JSON.stringify(a.url) + ',' + JSON.stringify(a.name) + ');return false;" ' +
+            'title="' + hbEsc(a.name) + '">📄</a>';
         }
-        // Images and other files open in a new tab
-        return '<a class="hb-post-attach" href="' + hbEsc(a.url) + '" target="_blank" rel="noopener">' + icon + ' ' + hbEsc(a.name) + '</a>';
+        // Images open in a new tab (icon only for consistency)
+        return '<a class="hb-post-attach hb-post-attach-icon" href="' + hbEsc(a.url) + '" target="_blank" rel="noopener" title="' + hbEsc(a.name) + '">🖼️</a>';
       }).join('') + '</div>';
     }
 
@@ -762,12 +761,17 @@
     var contentStart = hasImage ? '<div class="hb-post-content-wrap">' + imageHtml + '<div class="hb-post-content-text">' : '';
     var contentEnd = hasImage ? '</div></div>' : '';
 
+    var adminDeleteBtn = (hbUser && hbUser.email === 'info@livabletelluride.org')
+      ? '<button class="hb-admin-delete-btn" onclick="hbAdminDelete(\'' + post.id + '\')" title="Delete post">🗑</button>'
+      : '';
+
     card.innerHTML =
       '<div class="hb-post-head">' +
         '<div class="hb-post-avatar">' + initial + '</div>' +
         '<div><span class="hb-post-author">' + hbEsc(post.authorName || 'Anonymous') + '</span>' +
         '<div class="hb-post-meta">' + timeStr + '</div></div>' +
         badgeHtml +
+        adminDeleteBtn +
       '</div>' +
       contentStart +
       '<div class="hb-post-title">' + hbEsc(post.title || '') + '</div>' +
@@ -782,7 +786,6 @@
       reactionsHtml +
       '<div class="hb-post-foot">' +
         '<button class="hb-reply-toggle" onclick="hbToggleReplies(\'' + post.id + '\')">💬 <span>' + (post.replyCount || 0) + '</span> replies</button>' +
-        (hbUser && hbUser.email === 'info@livabletelluride.org' ? '<button class="hb-admin-delete-btn" onclick="hbAdminDelete(\'' + post.id + '\')" title="Delete post (admin)">🗑️ Delete</button>' : '') +
       '</div>' +
       '<div class="hb-replies" id="hb-replies-' + post.id + '" style="display:none;"></div>';
     return card;
