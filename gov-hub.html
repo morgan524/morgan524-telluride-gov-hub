@@ -32,8 +32,8 @@
     .topnav-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; gap: 24px; }
     .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--forest); font-family: var(--font-heading); font-weight: 700; font-size: 1.15rem; line-height: 1.1; }
     .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
-    .topnav-links { display: flex; gap: 10px; margin-left: 12px; flex: 1; }
-    .topnav-links a { color: var(--text-primary); text-decoration: none; font-weight: 600; font-size: 0.76rem; padding: 6px 2px; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
+    .topnav-links { display: flex; gap: 14px; margin-left: 16px; flex: 1; }
+    .topnav-links a { color: var(--text-primary); text-decoration: none; font-weight: 600; font-size: 0.82rem; padding: 6px 2px; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
     .topnav-links a:hover { color: var(--forest); }
     .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
     .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 8px 14px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
@@ -198,10 +198,6 @@
       flex-direction: column;
       gap: 10px;
     }
-    .meet-card.has-wtm {
-      border: 2px solid #2d6a4f;
-      box-shadow: 0 0 0 1px rgba(45,106,79,0.12), var(--shadow-card);
-    }
     .meet-card-head {
       display: flex;
       gap: 14px;
@@ -308,24 +304,6 @@
     .btn-action.primary:hover { background: #1a332c; }
     .btn-action.comment { background: var(--gold-soft); color: #7a5c10; border-color: rgba(181,138,44,0.35); }
     .btn-action.comment:hover { background: rgba(181,138,44,0.26); }
-    .btn-action.packet { background: #a8d5b0; color: #1a3d2b; border-color: #7dbb8a; font-weight: 700; }
-    .btn-action.packet:hover { background: #8fca9a; }
-    .btn-action.wtm { background: #fff; color: #8b7250; border-color: #8b7250; font-weight: 700; }
-    .btn-action.wtm:hover { background: #8b7250; color: #fff; }
-
-    /* WTM modal */
-    #wtm-modal { display:none; position:fixed; inset:0; z-index:9000; align-items:center; justify-content:center; }
-    #wtm-modal.open { display:flex; }
-    .wtm-modal-overlay { position:absolute; inset:0; background:rgba(15,25,20,0.55); backdrop-filter:blur(3px); }
-    .wtm-modal-box { position:relative; z-index:1; background:#fff; border-radius:16px; box-shadow:0 24px 64px rgba(10,20,15,0.22); max-width:480px; width:calc(100% - 40px); padding:28px 28px 26px; animation:wtmSlideUp 0.22s ease-out; }
-    .wtm-modal-header { display:flex; align-items:center; gap:8px; margin-bottom:10px; }
-    .wtm-modal-icon { width:18px; height:18px; flex-shrink:0; color:#8b7250; }
-    .wtm-modal-label { font-size:0.68rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:#8b7250; flex:1; }
-    .wtm-modal-close { background:none; border:none; cursor:pointer; font-size:1rem; color:#7a8a85; padding:2px 4px; border-radius:4px; transition:color .15s; }
-    .wtm-modal-close:hover { color:#1a2e29; }
-    .wtm-modal-meeting { font-size:0.88rem; font-weight:700; color:#1a2e29; margin-bottom:14px; line-height:1.35; padding-bottom:12px; border-bottom:1px solid rgba(139,114,80,0.15); }
-    .wtm-modal-body { margin:0; font-size:0.92rem; line-height:1.7; color:#4a5e57; }
-    @keyframes wtmSlideUp { from { opacity:0; transform:translateY(12px) scale(0.97); } to { opacity:1; transform:translateY(0) scale(1); } }
 
     /* Comment deadline note */
     .comment-deadline {
@@ -366,15 +344,14 @@
         <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
       </a>
       <nav class="topnav-links">
-        <a href="/gov-hub.html" class="active">Gov-Hub</a>
         <a href="/local-news.html">Local News</a>
-        <a href="/deep-dives.html">Our News</a>
+        <a href="/gov-hub.html" class="active">Gov-Hub</a>
+        <a href="/deep-dives.html">Deep Dives</a>
         <a href="/events.html">Events</a>
         <a href="/hub-bub.html">Hub-Bub</a>
-        <a href="/housing.html">Housing</a>
-        <a href="/legal-notices.html">Legal Notices</a>
         <a href="/local-orgs.html">Local Orgs</a>
-        <a href="/about.html">About</a>
+        <a href="/housing.html">Housing</a>
+                <a href="/about.html">About</a>
       </nav>
       <a class="topnav-cta" href="https://livabletelluride.org/#tab-subscribe">Subscribe</a>
     </div>
@@ -436,7 +413,7 @@
         date: '2026-05-13', time: '5:30 PM',
         title: 'Telluride Planning & Zoning Commission Meeting',
         sourceKey: 'telluride', sourceLabel: 'Town of Telluride',
-        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Town.png',
+        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Official.png',
         category: 'Planning Commission',
         summary: 'Public hearing on a major lodging-redevelopment proposal at 200 W Pacific Ave; review of short-term rental enforcement updates; staff briefing on the Comprehensive Plan refresh.',
         location: 'Rebekah Hall • Telluride',
@@ -446,7 +423,7 @@
         date: '2026-05-14', time: '7:00 PM',
         title: 'Town of Telluride: Town Council',
         sourceKey: 'telluride', sourceLabel: 'Town of Telluride',
-        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Town.png',
+        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Official.png',
         category: 'Council Meeting',
         summary: 'First reading of the FY2027 budget; discussion of Lawson Hill annexation timeline; public comment on parking-program changes; consent agenda routine items.',
         location: 'Rebekah Hall • Telluride',
@@ -506,12 +483,11 @@
         date: '2026-05-20', time: '5:00 PM',
         title: 'HARC Meeting',
         sourceKey: 'telluride', sourceLabel: 'Town of Telluride',
-        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Town.png',
+        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Official.png',
         category: 'HARC Meeting',
         summary: 'Worksessions on Carhenge (Lot L area sculpture installation) and Shandoka (proposed large-scale development on the west side of Telluride).',
         location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
-        agendaUrl: 'https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8014',
-        hasAgenda: true
+        agendaUrl: 'https://telluride.civicweb.net/filepro/documents/6869'
       }
     ];
 
@@ -531,7 +507,7 @@
       { key: 'med',       name: 'Telluride Medical',      logo: 'https://livabletelluride.org/logo/Telluride%20Hospital%20Dist.jpeg' },
       { key: 'smart',     name: 'SMART Transit',          logo: 'https://livabletelluride.org/logo/SMART.png' },
       { key: 'ophir',     name: 'Town of Ophir',          logo: 'https://livabletelluride.org/logo/Ophir.jpeg' },
-      { key: 'telluride', name: 'Town of Telluride',      logo: 'https://livabletelluride.org/logo/Telluride%20Town.png' }
+      { key: 'telluride', name: 'Town of Telluride',      logo: 'https://livabletelluride.org/logo/Telluride%20Official.png' }
     ];
 
     let MEETINGS = SAMPLE_MEETINGS.slice();
@@ -601,66 +577,6 @@
            + '<div class="day">' + day + '</div>'
            + '<div class="year">' + year + '</div></div>';
     }
-    // ── Packet link lookup (uses gov-data.js constants) ──
-    function getMeetingPacketLink(m) {
-      if (!m || m.sourceKey !== 'county') return null;
-      if (typeof COUNTY_CIVICCLERK_IDS === 'undefined' || typeof COUNTY_CIVICCLERK_AGENDA_FILES === 'undefined') return null;
-      const key = (m.title || '') + '|' + (m.date || '');
-      const eventId = COUNTY_CIVICCLERK_IDS[key];
-      if (!eventId) return null;
-      // Prefer hosted PDF (direct download) over CivicClerk viewer
-      if (typeof COUNTY_HOSTED_PACKETS !== 'undefined' && COUNTY_HOSTED_PACKETS[eventId]) {
-        return COUNTY_HOSTED_PACKETS[eventId];
-      }
-      const fileId = COUNTY_CIVICCLERK_AGENDA_FILES[eventId];
-      if (!fileId) return null;
-      return (typeof COUNTY_CIVICCLERK_BASE !== 'undefined' ? COUNTY_CIVICCLERK_BASE : 'https://sanmiguelcoco.portal.civicclerk.com/event/') + eventId + '/files/agenda/' + fileId;
-    }
-
-    // ── Why This Matters popup lookup ──
-    function getWTMPopup(m) {
-      if (typeof WHY_THIS_MATTERS === 'undefined') return null;
-      const text = (m.title || '') + ' | ' + (m.summary || '');
-      for (var i = 0; i < WHY_THIS_MATTERS.length; i++) {
-        var entry = WHY_THIS_MATTERS[i];
-        if (entry.match && entry.match.test(text)) return entry.popup || entry.decision || null;
-      }
-      return null;
-    }
-
-    function ensureWTMModal() {
-      if (document.getElementById('wtm-modal')) return;
-      var el = document.createElement('div');
-      el.id = 'wtm-modal';
-      el.setAttribute('role', 'dialog');
-      el.setAttribute('aria-modal', 'true');
-      el.innerHTML =
-        '<div class="wtm-modal-overlay" onclick="closeWTMModal()"></div>' +
-        '<div class="wtm-modal-box">' +
-          '<div class="wtm-modal-header">' +
-            '<svg class="wtm-modal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>' +
-            '<span class="wtm-modal-label">Why This Matters</span>' +
-            '<button class="wtm-modal-close" onclick="closeWTMModal()" aria-label="Close">✕</button>' +
-          '</div>' +
-          '<div id="wtm-modal-title" class="wtm-modal-meeting"></div>' +
-          '<p id="wtm-modal-body" class="wtm-modal-body"></p>' +
-        '</div>';
-      document.body.appendChild(el);
-      document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeWTMModal(); });
-    }
-    function openWTMModal(title, text) {
-      ensureWTMModal();
-      document.getElementById('wtm-modal-title').textContent = title;
-      document.getElementById('wtm-modal-body').textContent = text;
-      document.getElementById('wtm-modal').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeWTMModal() {
-      var el = document.getElementById('wtm-modal');
-      if (el) el.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
     function meetingCard(m) {
       const dateBadge = fmtDateBadge(m.date);
       const logo = m.entityLogo
@@ -678,16 +594,6 @@
       const recordBtn = m.recordingUrl
         ? '<a class="btn-action" href="' + m.recordingUrl + '" target="_blank" rel="noopener">Recording</a>'
         : '';
-      const pktUrl = getMeetingPacketLink(m);
-      const packetBtn = pktUrl
-        ? (pktUrl.startsWith('/')
-            ? '<a class="btn-action packet" href="' + pktUrl + '" download>⬇ Download Packet</a>'
-            : '<a class="btn-action packet" href="' + pktUrl + '" target="_blank" rel="noopener">⬇ Packet</a>')
-        : '';
-      const wtmText = getWTMPopup(m);
-      const wtmBtn = wtmText
-        ? '<button class="btn-action wtm" data-wtm-title="' + (m.title || '').replace(/"/g, '&quot;') + '" data-wtm-text="' + wtmText.replace(/"/g, '&quot;') + '" onclick="openWTMModal(this.dataset.wtmTitle,this.dataset.wtmText)">ℹ Why This Matters</button>'
-        : '';
 
       // Comment button
       const ci = commentInfo(m);
@@ -699,12 +605,12 @@
         deadlineNote = '<div class="comment-deadline">📅 ' + ci.deadline + '</div>';
       }
 
-      return '<article class="meet-card' + (wtmText ? ' has-wtm' : '') + '">'
+      return '<article class="meet-card">'
            + '<div class="meet-card-head">' + dateBadge
            + '<div class="meet-info">' + tag + '<h2 class="meet-title">' + m.title + '</h2></div>'
            + logo + '</div>'
            + summary + meta
-           + '<div class="meet-actions">' + agendaBtn + packetBtn + wtmBtn + recordBtn + commentBtn + '</div>'
+           + '<div class="meet-actions">' + agendaBtn + recordBtn + commentBtn + '</div>'
            + deadlineNote
            + '</article>';
     }
@@ -746,10 +652,10 @@
 
 
       const dataScript = document.createElement('script');
-      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v5';
+      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v2';
       dataScript.onload = () => {
         const s = document.createElement('script');
-        s.src = 'https://livabletelluride.org/js/data-only.js?v=v5';
+        s.src = 'https://livabletelluride.org/js/data-only.js?v=v2';
         s.onload = () => {
           try {
             // Stub AI_SUMMARIES so getMeetingSummary() doesn't throw.
@@ -768,7 +674,7 @@
               ['getNorwoodMeetings',      'norwood',   'Town of Norwood',       'https://livabletelluride.org/logo/Norwood%20Town.jpeg'],
               ['getOphirMeetings',        'ophir',     'Town of Ophir',         'https://livabletelluride.org/logo/Ophir.jpeg'],
               ['getSmartMeetings',        'smart',     'SMART',                 'https://livabletelluride.org/logo/SMART.png'],
-              ['getTellurideMeetings',    'telluride', 'Town of Telluride',     'https://livabletelluride.org/logo/Telluride%20Town.png']
+              ['getTellurideMeetings',    'telluride', 'Town of Telluride',     'https://livabletelluride.org/logo/Telluride%20Official.png']
             ];
             const live = [];
             const today = new Date(); today.setHours(0,0,0,0);
