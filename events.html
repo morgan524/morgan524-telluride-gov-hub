@@ -858,14 +858,18 @@
              const pushRidgwayLive = data => {
                (data.events || []).forEach(ev => {
                  const e = ev.event || ev;
+                 // Date lives in event_instances[0].event_instance.start (not starts_at)
+                 const inst = (e.event_instances || [])[0];
+                 const startAt = inst && inst.event_instance ? inst.event_instance.start : '';
                  pushEvent({
                    title: e.title || '',
-                   pubDate: e.starts_at || '',
-                   location: (e.location && e.location.name)
-                     ? e.location.name + ', Ridgway' : 'Ouray/Ridgway area',
+                   pubDate: startAt,
+                   location: e.location_name
+                     ? e.location_name + (e.location_name.toLowerCase().includes('ridgway') || e.location_name.toLowerCase().includes('ouray') ? '' : ', Ouray/Ridgway area')
+                     : 'Ouray/Ridgway area',
                    description: (e.description_text || '').slice(0, 600),
-                   link: e.url || `https://events.ourayridgwayevents.com/event/${e.urlname || e.id}`,
-                   imageUrl: (e.photo && e.photo.url) ? e.photo.url : '',
+                   link: e.localist_url || e.url || `https://events.ourayridgwayevents.com/event/${e.urlname || e.id}`,
+                   imageUrl: e.photo_url || '',
                  }, 'Ouray/Ridgway');
                });
              };
