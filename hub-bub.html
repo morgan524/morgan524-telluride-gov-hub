@@ -1314,13 +1314,18 @@
         </div>
 
         <div class="hb-modal-field">
-          <label for="hbLoginPassword">Password</label>
+          <label for="hbLoginPassword" style="display:flex;justify-content:space-between;align-items:baseline;">
+            Password
+            <a href="javascript:void(0)" onclick="hbForgotPassword()" style="font-size:0.8rem;font-weight:600;color:var(--forest);text-decoration:underline;">Forgot password?</a>
+          </label>
           <input type="password" id="hbLoginPassword" autocomplete="current-password" placeholder="Your password">
         </div>
 
         <button class="hb-modal-submit" id="hbLoginSubmit" type="button">Log in</button>
         <div class="hb-modal-switch">Don't have an account? <a id="hbSwitchToSignup">Create one free</a></div>
+        <div class="hb-modal-msg" id="hbLoginInfo" style="display:none;color:#555;font-size:0.87rem;margin-top:8px;padding:10px 12px;background:#f0f7f4;border-radius:8px;border:1px solid #c5ddd5;"></div>
         <div class="hb-modal-msg" id="hbLoginMsg"></div>
+        <div class="hb-modal-msg" id="hbLoginError" style="display:none;color:#c0392b;font-size:0.87rem;margin-top:8px;padding:10px 12px;background:#fdf0f0;border-radius:8px;border:1px solid #f5c6c6;"></div>
       </div>
 
     </div>
