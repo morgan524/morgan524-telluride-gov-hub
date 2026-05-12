@@ -891,7 +891,6 @@
         <a href="/housing.html">Housing</a>
                 <a href="/about.html">About</a>
       </nav>
-      <a class="topnav-cta topnav-cta-secondary" href="javascript:void(0)" onclick="hbShowAuth('signup')">Create Account</a>
       <a class="topnav-cta" href="javascript:void(0)" onclick="hbShowAuth('login')">Log In</a>
     </div>
   </header>
@@ -922,16 +921,17 @@
     <!-- Topic bar — hub-bub.js reads these chips -->
     <div class="hb-topic-bar" id="hbTopicBar">
       <button class="hb-topic-chip active" data-hb-topic="all">All</button>
+      <button class="hb-topic-chip" data-hb-topic="government">Government</button>
+      <button class="hb-topic-chip" data-hb-topic="events">Events</button>
       <button class="hb-topic-chip" data-hb-topic="housing">Housing</button>
       <button class="hb-topic-chip" data-hb-topic="land-use">Land Use</button>
-      <button class="hb-topic-chip" data-hb-topic="gondola">Transit / Gondola</button>
-      <button class="hb-topic-chip" data-hb-topic="public-safety">Fire / Safety</button>
-      <button class="hb-topic-chip" data-hb-topic="budget-finance">Budget</button>
+      <button class="hb-topic-chip" data-hb-topic="transit">Transit</button>
+      <button class="hb-topic-chip" data-hb-topic="gondola">Gondola</button>
+      <button class="hb-topic-chip" data-hb-topic="budgets">Budgets</button>
       <button class="hb-topic-chip" data-hb-topic="environment">Environment</button>
-      <button class="hb-topic-chip" data-hb-topic="health-education">Schools</button>
-      <button class="hb-topic-chip" data-hb-topic="legal-governance">Transparency / CORA / Legal</button>
-      <button class="hb-topic-chip" data-hb-topic="community">Community Events</button>
-      <button class="hb-topic-chip" data-hb-topic="volunteer">Local Groups / Volunteerism</button>
+      <button class="hb-topic-chip" data-hb-topic="schools">Schools</button>
+      <button class="hb-topic-chip" data-hb-topic="good-news">Good News</button>
+      <button class="hb-topic-chip" data-hb-topic="other">Other</button>
     </div>
     <!-- Sort bar — hub-bub.js reads these buttons -->
     <div class="hb-sort-bar">
@@ -1010,28 +1010,20 @@
               <div class="hb-filter-label">Topic</div>
               <div class="hb-chip-list" id="hbSideTopics">
                 <button class="hb-filter-chip active" data-side-topic="all">All topics</button>
+                <button class="hb-filter-chip" data-side-topic="government">Government</button>
+                <button class="hb-filter-chip" data-side-topic="events">Events</button>
                 <button class="hb-filter-chip" data-side-topic="housing">Housing</button>
                 <button class="hb-filter-chip" data-side-topic="land-use">Land Use</button>
-                <button class="hb-filter-chip" data-side-topic="gondola">Transit / Gondola</button>
-                <button class="hb-filter-chip" data-side-topic="public-safety">Fire / Safety</button>
-                <button class="hb-filter-chip" data-side-topic="budget-finance">Budget / Finance</button>
+                <button class="hb-filter-chip" data-side-topic="transit">Transit</button>
+                <button class="hb-filter-chip" data-side-topic="gondola">Gondola</button>
+                <button class="hb-filter-chip" data-side-topic="budgets">Budgets</button>
                 <button class="hb-filter-chip" data-side-topic="environment">Environment</button>
-                <button class="hb-filter-chip" data-side-topic="health-education">Schools</button>
-                <button class="hb-filter-chip" data-side-topic="legal-governance">Transparency / Legal</button>
-                <button class="hb-filter-chip" data-side-topic="community">Community</button>
-                <button class="hb-filter-chip" data-side-topic="volunteer">Local Groups</button>
+                <button class="hb-filter-chip" data-side-topic="schools">Schools</button>
+                <button class="hb-filter-chip" data-side-topic="good-news">Good News</button>
+                <button class="hb-filter-chip" data-side-topic="other">Other</button>
               </div>
             </div>
 
-            <div class="hb-filter-group">
-              <div class="hb-filter-label">Post type</div>
-              <div class="hb-chip-list" id="hbSideModes">
-                <button class="hb-filter-chip active" data-side-mode="all">All types</button>
-                <button class="hb-filter-chip" data-side-mode="question">Questions</button>
-                <button class="hb-filter-chip" data-side-mode="what-happened">What Happened</button>
-                <button class="hb-filter-chip" data-side-mode="ideas">Ideas &amp; Solutions</button>
-              </div>
-            </div>
 
             <button class="hb-clear-btn" id="hbSideClear" type="button">Clear filters</button>
           </section>
@@ -1309,24 +1301,32 @@
         <h2>Log in to Hub-Bub</h2>
         <p class="hb-modal-sub">Use the email and password you set when you created your account.</p>
 
-        <div class="hb-modal-field">
-          <label for="hbLoginEmail">Email address</label>
-          <input type="email" id="hbLoginEmail" autocomplete="email" placeholder="jane@example.com">
-        </div>
+        <div id="hbLoginFields">
+          <div class="hb-modal-field">
+            <label for="hbLoginEmail">Email address</label>
+            <input type="email" id="hbLoginEmail" autocomplete="email" placeholder="jane@example.com">
+          </div>
 
-        <div class="hb-modal-field">
-          <label for="hbLoginPassword" style="display:flex;justify-content:space-between;align-items:baseline;">
-            Password
-            <a href="javascript:void(0)" onclick="hbForgotPassword()" style="font-size:0.8rem;font-weight:600;color:var(--forest);text-decoration:underline;">Forgot password?</a>
-          </label>
-          <input type="password" id="hbLoginPassword" autocomplete="current-password" placeholder="Your password">
-        </div>
+          <div class="hb-modal-field">
+            <label for="hbLoginPassword" style="display:flex;justify-content:space-between;align-items:baseline;">
+              Password
+              <a href="javascript:void(0)" onclick="hbForgotPassword()" style="font-size:0.8rem;font-weight:600;color:var(--forest);text-decoration:underline;">Forgot password?</a>
+            </label>
+            <input type="password" id="hbLoginPassword" autocomplete="current-password" placeholder="Your password">
+          </div>
 
-        <button class="hb-modal-submit" id="hbLoginSubmit" type="button">Log in</button>
-        <div class="hb-modal-switch">Don't have an account? <a id="hbSwitchToSignup">Create one free</a></div>
-        <div class="hb-modal-msg" id="hbLoginInfo" style="display:none;color:#555;font-size:0.87rem;margin-top:8px;padding:10px 12px;background:#f0f7f4;border-radius:8px;border:1px solid #c5ddd5;"></div>
-        <div class="hb-modal-msg" id="hbLoginMsg"></div>
-        <div class="hb-modal-msg" id="hbLoginError" style="display:none;color:#c0392b;font-size:0.87rem;margin-top:8px;padding:10px 12px;background:#fdf0f0;border-radius:8px;border:1px solid #f5c6c6;"></div>
+          <button class="hb-modal-submit" id="hbLoginSubmit" type="button">Log in</button>
+          <div class="hb-modal-switch">Don't have an account? <a id="hbSwitchToSignup">Create one free</a></div>
+          <div class="hb-modal-msg" id="hbLoginMsg"></div>
+          <div class="hb-modal-msg" id="hbLoginError" style="display:none;color:#c0392b;font-size:0.87rem;margin-top:8px;padding:10px 12px;background:#fdf0f0;border-radius:8px;border:1px solid #f5c6c6;"></div>
+        </div>
+        <!-- Password reset confirmation — shown alone after forgot-password success -->
+        <div id="hbLoginResetView" style="display:none;">
+          <div id="hbLoginInfo" style="color:#555;font-size:0.87rem;padding:14px 16px;background:#f0f7f4;border-radius:10px;border:1px solid #c5ddd5;"></div>
+          <div style="text-align:center;margin-top:18px;">
+            <a href="javascript:void(0)" onclick="hbShowLoginFields()" style="font-size:0.85rem;color:var(--forest);text-decoration:underline;">← Back to log in</a>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -1599,27 +1599,15 @@
       if (hidden) hidden.click();
     });
 
-    // Sidebar mode chips → mirror clicks to hidden hbModeBar
-    document.getElementById('hbSideModes').addEventListener('click', function (e) {
-      const chip = e.target.closest('[data-side-mode]');
-      if (!chip) return;
-      const mode = chip.dataset.sideMode;
-      this.querySelectorAll('.hb-filter-chip').forEach(c => c.classList.toggle('active', c === chip));
-      const hidden = document.querySelector('[data-hb-mode="' + (mode === 'all' ? 'all' : mode) + '"]');
-      if (hidden) hidden.click();
-    });
 
     // Clear button
     document.getElementById('hbSideClear').addEventListener('click', function () {
       // Reset sidebar visuals
       document.querySelectorAll('#hbSideTopics .hb-filter-chip').forEach((c,i) => c.classList.toggle('active', i===0));
-      document.querySelectorAll('#hbSideModes .hb-filter-chip').forEach((c,i) => c.classList.toggle('active', i===0));
       document.getElementById('hbSideSearch').value = '';
-      // Fire resets on hidden bars
+      // Fire reset on hidden topic bar
       const allTopic = document.querySelector('[data-hb-topic="all"]');
       if (allTopic) allTopic.click();
-      const allMode = document.querySelector('[data-hb-mode="all"]');
-      if (allMode) allMode.click();
     });
 
     // Search field → filter visible posts by text

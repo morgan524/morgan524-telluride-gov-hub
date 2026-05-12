@@ -513,6 +513,7 @@
     const FILTERS = [
       { key: 'all',           label: 'All Notices' },
       { key: 'land-use',      label: 'Land Use',                    special: 'land-use' },
+      { key: 'rfp',           label: 'Bids / RFP' },
       { key: 'public-entity', label: 'Public Entity' },
       { key: 'water-court',   label: 'Water Court' },
       { key: 'housing',       label: 'Housing' },
@@ -743,7 +744,7 @@
         if (activeFilter === 'all') {
           show = true;
         } else if (activeFilter === 'land-use') {
-          show = tag === 'land-use' || tag === 'ordinance' || tag === 'public-entity';
+          show = tag === 'land-use' || tag === 'ordinance';
         } else if (activeFilter === 'nearby') {
           show = true; /* no address yet — show all until user sets one */
         } else {

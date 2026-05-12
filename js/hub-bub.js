@@ -165,11 +165,16 @@
     }
     auth.sendPasswordResetEmail(email)
       .then(function() {
-        errEl.style.display = 'none';
+        // Hide the login form and show only the reset confirmation
+        var fieldsDiv = document.getElementById('hbLoginFields');
+        var resetView = document.getElementById('hbLoginResetView');
+        if (fieldsDiv) fieldsDiv.style.display = 'none';
+        if (resetView) resetView.style.display = 'block';
         if (infoEl) {
-          infoEl.innerHTML = 'Password reset email sent to <strong>' + hbEsc(email) + '</strong>.<br><span style="color:#795548;">Important: The email may land in your junk or spam folder — check there if you don\'t see it in your inbox.</span>';
-          infoEl.style.display = 'block';
+          infoEl.innerHTML = 'Password reset email sent to <strong>' + hbEsc(email) + '</strong>.'
+            + '<br><span style="color:#795548;">Important: The email may land in your junk or spam folder — check there if you don\'t see it in your inbox.</span>';
         }
+        errEl.style.display = 'none';
       })
       .catch(function(err) {
         if (infoEl) infoEl.style.display = 'none';
@@ -180,6 +185,12 @@
         errEl.textContent = msg;
         errEl.style.display = 'block';
       });
+  };
+  window.hbShowLoginFields = function() {
+    var fieldsDiv = document.getElementById('hbLoginFields');
+    var resetView = document.getElementById('hbLoginResetView');
+    if (fieldsDiv) fieldsDiv.style.display = '';
+    if (resetView) resetView.style.display = 'none';
   };
   window.hbLogout = function() {
     if (auth) auth.signOut();
