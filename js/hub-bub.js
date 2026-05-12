@@ -39,18 +39,16 @@
   }
   // ─── Topic Definitions (matches Hub's existing taxonomy) ───
   const HB_TOPICS = {
-    'housing': { label: 'Housing', icon: '🏠' },
-    'land-use': { label: 'Land Use', icon: '🏗️' },
-    'gondola': { label: 'Gondola 3A', icon: '🚡' },
-    'public-safety': { label: 'Public Safety', icon: '🔥' },
-    'budget-finance': { label: 'Budget & Finance', icon: '💰' },
-    'infrastructure': { label: 'Infrastructure', icon: '🚰' },
-    'environment': { label: 'Environment', icon: '🌿' },
-    'health-education': { label: 'Health & Education', icon: '🏥' },
-    'legal-governance': { label: 'Legal & Governance', icon: '⚖️' },
-    'transit': { label: 'Transit', icon: '🚌' },
-    'community': { label: 'Community', icon: '🤝' },
-    'other': { label: 'Other', icon: '💡' }
+    'government': { label: 'Government', icon: '🏛️' },
+    'events':     { label: 'Events',     icon: '🎉' },
+    'housing':    { label: 'Housing',    icon: '🏠' },
+    'land-use':   { label: 'Land Use',   icon: '🏗️' },
+    'transit':    { label: 'Transit',    icon: '🚌' },
+    'gondola':    { label: 'Gondola',    icon: '🚡' },
+    'budgets':    { label: 'Budgets',    icon: '💰' },
+    'environment':{ label: 'Environment',icon: '🌿' },
+    'schools':    { label: 'Schools',    icon: '🎓' },
+    'good-news':  { label: 'Good News',  icon: '🌟' }
   };
   // ─── Post Type Definitions ───
   const HB_POST_TYPES = {
@@ -1008,18 +1006,16 @@
   // Runs on every keystroke; only suggests if no tag is manually selected.
   // ═══════════════════════════════
   var HB_TAG_KEYWORDS = {
-    'housing': ['housing','rent','deed','affordable','waitlist','evict','landlord','tenant','smrha','telluride housing','workforce','unit','element 52','camel',' lot ','vacancy','zoning','apartment','condo','workforce housing'],
-    'land-use': ['land use','zoning','pud','development','parcel','variance','height','setback','easement','subdivision','annexation','carhenge','diamond','society turn','sunnyside','chair 7','voodoo','lot l','lot r'],
-    'gondola': ['gondola','3a','cable','tramway','aerial','transit corridor','mountain village connector','mvt'],
-    'public-safety': ['fire','wildfire','safety','marshal','police','ems','ambulance','emergency','evacuation','smoke','defensible','resiliency code','noxious'],
-    'budget-finance': ['budget','finance','tax','revenue','bond','debt','million','taxpayer','appropriation','fund','fee','cost','spending','fiscal'],
-    'infrastructure': ['water','sewer','road','infrastructure','utilities','broadband','internet','maintenance','stormwater','trail','sidewalk'],
-    'environment': ['environment','climate','wildlife','habitat','wetland','valley floor','open space','bear creek','eagle','dark sky','carbon','air quality','watershed','riparian','species'],
-    'health-education': ['school','education','student','teacher','hospital','health','medical','clinic','mental health','ems','library','kids','family','youth'],
-    'legal-governance': ['transparency','cora','records','public records','open meeting','sunshine','lawsuit','litigation','governance','ordinance','resolution','motion','vote','appeal','attorney','legal','ethics','conflict','hb24','house bill','colorado law','charter'],
-    'transit': ['transit','bus','parking','traffic','road','highway 145','route','shuttle','rideshare','car-free','parking structure'],
-    'community': ['community','event','festival','bluegrass','mountainfilm','volunteer','fundraiser','celebration','anniversary','arts','culture','local','neighbor'],
-    'other': []
+    'government': ['town council','board of trustees','bocc','commissioner','ordinance','resolution','vote','motion','governance','charter','mayor','manager','hearing','agenda','minutes','election','cora','public records','open meeting','sunshine','transparency','attorney','ethics','conflict','hb24','house bill','colorado law'],
+    'events': ['festival','concert','market','parade','celebration','exhibit','show','performance','event','mountainfilm','bluegrass','gallery','film','race','tournament','wilkinson','library event','arts','culture'],
+    'housing': ['housing','rent','deed','affordable','waitlist','evict','landlord','tenant','smrha','telluride housing','workforce','unit','element 52','camel',' lot ','vacancy','apartment','condo','workforce housing'],
+    'land-use': ['land use','zoning','pud','development','parcel','variance','height','setback','easement','subdivision','annexation','carhenge','diamond','society turn','sunnyside','chair 7','voodoo','lot l','lot r','planning commission','harc'],
+    'transit': ['transit','bus','parking','traffic','road','highway 145','route','shuttle','rideshare','car-free','parking structure','infrastructure','water','sewer','utilities','broadband','stormwater','sidewalk'],
+    'gondola': ['gondola','3a','cable','tramway','aerial','transit corridor','mountain village connector','mvt','gondola station'],
+    'budgets': ['budget','finance','tax','revenue','bond','debt','million','taxpayer','appropriation','fund','fee','cost','spending','fiscal','audit','levy','mil'],
+    'environment': ['environment','climate','wildlife','habitat','wetland','valley floor','open space','bear creek','eagle','dark sky','carbon','air quality','watershed','riparian','species','wildfire','fire','evacuation','smoke','defensible'],
+    'schools': ['school','education','student','teacher','hospital','health','medical','clinic','mental health','library','kids','family','youth','r-1','telluride school','norwood school'],
+    'good-news': ['great news','exciting','celebrate','congratulate','milestone','achievement','award','grant','success','improvement','open','launch','completed','new park','ribbon','donation','thank']
   };
 
   function hbSuggestTags() {
