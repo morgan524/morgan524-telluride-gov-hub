@@ -522,6 +522,49 @@
       box-shadow: 0 0 0 3px rgba(33,68,60,0.08) !important;
       outline: none !important;
     }
+    /* Tag buttons: grey stroke so they read as distinct interactive boxes */
+    .hb-compose-tag {
+      border: 1.5px solid #c8c8c4 !important;
+      background: #fff !important;
+      color: #444 !important;
+      border-radius: 7px !important;
+      padding: 5px 11px !important;
+      font-size: 0.83rem !important;
+      font-weight: 600 !important;
+      cursor: pointer;
+      transition: border-color 0.13s ease, background 0.13s ease, color 0.13s ease;
+    }
+    .hb-compose-tag:hover {
+      border-color: rgba(33,68,60,0.45) !important;
+      background: rgba(33,68,60,0.05) !important;
+    }
+    .hb-compose-tag.selected,
+    .hb-compose-tag.auto-suggested {
+      border-color: #21443c !important;
+      background: #21443c !important;
+      color: #fff !important;
+    }
+    /* Attached document chips: forest green pill with white text */
+    .hb-attach-item {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: #21443c !important;
+      color: #fff !important;
+      border: none !important;
+      border-radius: 999px !important;
+      padding: 5px 12px !important;
+      font-size: 0.82rem !important;
+      font-weight: 600 !important;
+      margin: 4px 4px 0 0 !important;
+    }
+    .hb-attach-item .hb-remove-attach {
+      cursor: pointer;
+      opacity: 0.75;
+      font-size: 0.78rem;
+      margin-left: 2px;
+    }
+    .hb-attach-item .hb-remove-attach:hover { opacity: 1; }
     /* Posts feed: strip its top padding so hb-posts-feed grid controls spacing */
     #hbPostsFeed { margin-top: 0 !important; }
     /* Loading spinner stays in feed */
@@ -1080,6 +1123,7 @@
                     <button class="hb-compose-tag" data-hb-tag="environment">Environment</button>
                     <button class="hb-compose-tag" data-hb-tag="schools">Schools</button>
                     <button class="hb-compose-tag" data-hb-tag="good-news">Good News</button>
+                    <button class="hb-compose-tag" data-hb-tag="other">Other</button>
                   </div>
                   <!-- Next-step chips hidden to simplify the compose form -->
                   <div class="hb-nextstep-bar" id="hbNextStepBar" style="display:none;">

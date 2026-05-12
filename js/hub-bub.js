@@ -48,7 +48,8 @@
     'budgets':    { label: 'Budgets',    icon: '💰' },
     'environment':{ label: 'Environment',icon: '🌿' },
     'schools':    { label: 'Schools',    icon: '🎓' },
-    'good-news':  { label: 'Good News',  icon: '🌟' }
+    'good-news':  { label: 'Good News',  icon: '🌟' },
+    'other':      { label: 'Other',      icon: '💡' }
   };
   // ─── Post Type Definitions ───
   const HB_POST_TYPES = {
@@ -1015,7 +1016,8 @@
     'budgets': ['budget','finance','tax','revenue','bond','debt','million','taxpayer','appropriation','fund','fee','cost','spending','fiscal','audit','levy','mil'],
     'environment': ['environment','climate','wildlife','habitat','wetland','valley floor','open space','bear creek','eagle','dark sky','carbon','air quality','watershed','riparian','species','wildfire','fire','evacuation','smoke','defensible'],
     'schools': ['school','education','student','teacher','hospital','health','medical','clinic','mental health','library','kids','family','youth','r-1','telluride school','norwood school'],
-    'good-news': ['great news','exciting','celebrate','congratulate','milestone','achievement','award','grant','success','improvement','open','launch','completed','new park','ribbon','donation','thank']
+    'good-news': ['great news','exciting','celebrate','congratulate','milestone','achievement','award','grant','success','improvement','open','launch','completed','new park','ribbon','donation','thank'],
+    'other': []
   };
 
   function hbSuggestTags() {
