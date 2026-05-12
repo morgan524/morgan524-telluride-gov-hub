@@ -1081,6 +1081,18 @@ function getMeetingZoomLink(item) {
 // Each entry contains: { id: 'Meeting ID', passcode: 'Passcode', phone: 'dial-in' }
 // Any field can be omitted if not available.
 
+function getMeetingPacketLink(item) {
+  if (!item || !item.eventDate || item.source !== 'county') return null;
+  const dateKey = item.eventDate.toISOString().slice(0, 10);
+  const cleanT = (item.title || '').replace(/ -- CANCELED$/, '').replace(/ -- Special Meeting$/, '');
+  const exactKey = cleanT + '|' + dateKey;
+  const eventId = COUNTY_CIVICCLERK_IDS[exactKey];
+  if (!eventId) return null;
+  const fileId = COUNTY_CIVICCLERK_AGENDA_FILES[eventId];
+  if (!fileId) return null;
+  return COUNTY_CIVICCLERK_BASE + eventId + '/files/agenda/' + fileId;
+}
+
 function getMeetingPasscode(item) {
   if (!item || !item.eventDate) return null;
 
@@ -7841,6 +7853,10 @@ function renderMeetingsWithTopic() {
       const agendaBadge = (item.hasAgenda && !item.canceled)
         ? '<a href="' + agendaUrl + '" target="_blank" rel="noopener" class="agenda-link agenda-posted">Agenda Posted →</a>'
         : '<span class="agenda-link" style="opacity:0.5;cursor:default;pointer-events:none;">' + (item.canceled ? 'Canceled' : 'Agenda Posted →') + '</span>';
+      const packetUrl = !item.canceled ? getMeetingPacketLink(item) : null;
+      const packetBtn = packetUrl
+        ? '<a href="' + packetUrl + '" target="_blank" rel="noopener" class="meeting-packet-btn">⬇ Packet</a>'
+        : '';
       const cancelStyle = item.canceled ? ' style="opacity: 0.55; text-decoration: line-through;"' : '';
       const summary = item.canceled ? '' : getMeetingSummary(item);
       // START: AI-enhanced summary rendering
@@ -7877,7 +7893,7 @@ function renderMeetingsWithTopic() {
         '<div class="card-body">' +
           '<div class="event-card-main">' +
             '<div class="event-card-content">' +
-          (item.canceled ? '' : renderBadge(item) + ' ' + agendaBadge) +
+          (item.canceled ? '' : renderBadge(item) + ' ' + agendaBadge + packetBtn) +
           '<h3' + cancelStyle + '><a href="' + item.link + '" target="_blank" rel="noopener">' + cleanTitle(item.title, item.source) + '</a></h3>' +
           '<div class="meta">' + fullDate(item.eventDate) + (timePart ? ' · ' + timePart : '') + '</div>' +
           (locationPart ? '<div class="meta">' + locationPart + '</div>' : '') +
