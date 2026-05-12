@@ -3383,6 +3383,39 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Sweet success",
+    source: "Telluride Times",
+    date: "May 12, 2026",
+    firstSeen: "2026-05-12",
+    newsTopic: "sports",
+    copy: "",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/sports/article_89d6205d-3340-4cd9-9e3c-7d05b688bf6e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/67/9672da42-7f48-4249-b019-db5fc45d6ef2/6a034f43b4e8c.image.jpg"
+  },
+  {
+    title: "Building healthier, more resilient communities",
+    source: "Telluride Times",
+    date: "May 12, 2026",
+    firstSeen: "2026-05-12",
+    newsTopic: "community",
+    copy: "",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news_release/article_76785698-df60-47e0-b643-594f8cbd8949.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/89/489e766b-f9b6-40f6-bb59-83fef25f771e/69ff7da2c5799.image.png"
+  },
+  {
+    title: "Register now for Rotary\'s Hikeathon",
+    source: "Telluride Times",
+    date: "May 12, 2026",
+    firstSeen: "2026-05-12",
+    newsTopic: "community",
+    copy: "",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/article_13dee22d-ca0a-4c26-aa6e-dc9b48237c1e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/98/f982f29f-8daa-47c5-b33c-bd221752003d/69fa5a362344c.image.jpg"
+  },
+  {
     title: "A Frontier plane hits a pedestrian during takeoff at Denver airport",
     source: "Telluride Times",
     date: "May 9, 2026",
