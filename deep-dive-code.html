@@ -117,6 +117,10 @@
     .controversy-point:last-child{margin-bottom:0;}
     .controversy-point-label{font-size:0.82rem;font-weight:700;color:var(--forest);margin-bottom:4px;}
     .controversy-point p{margin:0;font-size:0.88rem;line-height:1.65;color:var(--text-secondary);}
+    .controversy-footer{margin-top:20px;padding-top:16px;border-top:1px solid rgba(180,60,40,.15);}
+    .btn-download-packet{display:inline-flex;align-items:center;gap:7px;background:#a8d5b0;color:#1a3d2b;text-decoration:none;font-weight:700;font-size:0.88rem;padding:10px 20px;border-radius:999px;border:1px solid #7dbb8a;transition:background .15s,box-shadow .15s;}
+    .btn-download-packet:hover{background:#8fca9a;box-shadow:0 2px 8px rgba(33,68,60,.18);}
+    .btn-download-packet svg{flex-shrink:0;}
 
     /* Legal issues list */
     .legal-issue-item{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--border-soft);}
@@ -255,6 +259,14 @@
               <p>${esc(pt.text||'')}</p>
             </div>`;
           });
+        }
+        if (cu.packetHref) {
+          html += `<div class="controversy-footer">
+            <a class="btn-download-packet" href="${esc(cu.packetHref)}" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Packet
+            </a>
+          </div>`;
         }
         html += `</div>`;
       }
