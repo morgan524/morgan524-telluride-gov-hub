@@ -488,7 +488,7 @@
         </div>
         <h3>Submit an Event</h3>
         <p>Help keep our community calendar full and up to date. Share your event with neighbors and visitors across the region.</p>
-        <a class="submit-btn" href="#submit-event">Submit an Event</a>
+        <button class="submit-btn" onclick="openSubmitModal()">Submit an Event</button>
         <div class="submit-mountains" aria-hidden="true">
           <svg viewBox="0 0 280 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
             <path fill="#a4b3a8" d="M0,60 L40,32 L72,50 L110,22 L150,46 L188,26 L228,44 L260,34 L280,56 L280,80 L0,80 Z"/>
@@ -533,7 +533,7 @@
         </svg>
       </div>
       <div class="submit-strip-text">Have an event to share? Submit it and help build our community calendar.</div>
-      <a class="submit-strip-cta" href="#submit-event">Submit an Event →</a>
+      <button class="submit-strip-cta" onclick="openSubmitModal()">Submit an Event →</button>
     </div>
   </section>
 
@@ -916,90 +916,162 @@
 
   </script>
 
-  <!-- ── Submit an Event form ─────────────────────────────────── -->
-  <section id="submit-event" style="max-width:700px;margin:56px auto 72px;padding:0 24px;">
-    <h2 style="font-family:var(--font-head);font-size:1.65rem;color:var(--forest);margin-bottom:6px;">Submit an Event</h2>
-    <p style="color:var(--text-muted);margin-bottom:28px;font-size:0.97rem;">
-      Share a community event with Livable Telluride. We'll review it and post it to the calendar.
-    </p>
-    <form id="eventSubmitForm" style="display:grid;gap:16px;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-        <div>
-          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Event Title *</label>
-          <input id="ef-title" type="text" required placeholder="e.g. Wildflower Walk &amp; Talk"
-            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
-        </div>
-        <div>
-          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Date *</label>
-          <input id="ef-date" type="date" required
-            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
-        </div>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-        <div>
-          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Time</label>
-          <input id="ef-time" type="text" placeholder="e.g. 10:00 AM – 12:00 PM"
-            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
-        </div>
-        <div>
-          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Location</label>
-          <input id="ef-location" type="text" placeholder="e.g. Wilkinson Public Library"
-            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
-        </div>
-      </div>
-      <div>
-        <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Description *</label>
-        <textarea id="ef-desc" required rows="4" placeholder="Tell people what the event is about…"
-          style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);resize:vertical;box-sizing:border-box;"></textarea>
-      </div>
-      <div>
-        <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Event URL / More Info</label>
-        <input id="ef-url" type="url" placeholder="https://…"
-          style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
-        <div>
-          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Your Name</label>
-          <input id="ef-name" type="text" placeholder="First Last"
-            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
-        </div>
-        <div>
-          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Your Email</label>
-          <input id="ef-email" type="email" placeholder="you@example.com"
-            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
-        </div>
-        <div>
-          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Organization</label>
-          <input id="ef-org" type="text" placeholder="Optional"
-            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
-        </div>
-      </div>
-      <button type="submit"
-        style="width:100%;padding:14px;background:var(--forest);color:#fff;border:none;border-radius:12px;font-size:1rem;font-weight:700;cursor:pointer;margin-top:4px;transition:background 0.15s;">
-        Send Submission →
-      </button>
-    </form>
-    <script>
-      document.getElementById('eventSubmitForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const v = id => document.getElementById(id).value.trim();
-        const subject = encodeURIComponent('Event Submission: ' + (v('ef-title') || '(no title)'));
-        const body = encodeURIComponent(
-          'EVENT SUBMISSION\n' +
-          '================\n' +
-          'Title:        ' + v('ef-title') + '\n' +
-          'Date:         ' + v('ef-date') + '\n' +
-          'Time:         ' + v('ef-time') + '\n' +
-          'Location:     ' + v('ef-location') + '\n' +
-          'Description:\n' + v('ef-desc') + '\n\n' +
-          'Event URL:    ' + v('ef-url') + '\n' +
-          'Submitted by: ' + v('ef-name') + ' <' + v('ef-email') + '>\n' +
-          'Organization: ' + v('ef-org')
-        );
-        window.location.href = 'mailto:info@livabletelluride.org?subject=' + subject + '&body=' + body;
-      });
-    </script>
-  </section>
 
+  <!-- ── Submit an Event modal ──────────────────────────────── -->
+  <style>
+    .submit-modal-backdrop {
+      display: none;
+      position: fixed; inset: 0; z-index: 1000;
+      background: rgba(0,0,0,0.45);
+      align-items: center; justify-content: center;
+      padding: 16px;
+    }
+    .submit-modal-backdrop.open { display: flex; }
+    .submit-modal {
+      background: var(--bg-card);
+      border-radius: 20px;
+      padding: 36px 32px 32px;
+      width: 100%; max-width: 620px;
+      max-height: 90vh; overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      position: relative;
+    }
+    .submit-modal-close {
+      position: absolute; top: 16px; right: 20px;
+      background: none; border: none; font-size: 1.5rem;
+      color: var(--text-muted); cursor: pointer; line-height: 1;
+      padding: 4px 8px; border-radius: 8px;
+    }
+    .submit-modal-close:hover { background: var(--border-soft); }
+    .submit-modal h2 {
+      font-family: var(--font-head); font-size: 1.55rem;
+      color: var(--forest); margin: 0 0 6px;
+    }
+    .submit-modal p.lead {
+      color: var(--text-muted); font-size: 0.93rem; margin: 0 0 24px;
+    }
+    .submit-modal .ef-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .submit-modal .ef-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+    .submit-modal label {
+      display: block; font-size: 0.82rem; font-weight: 700;
+      color: var(--forest); margin-bottom: 4px; letter-spacing: 0.01em;
+    }
+    .submit-modal input, .submit-modal textarea {
+      width: 100%; padding: 10px 13px;
+      border: 1px solid var(--border-soft); border-radius: 10px;
+      font-size: 0.92rem; background: var(--bg-hero);
+      color: var(--text-dark); box-sizing: border-box;
+      font-family: inherit;
+    }
+    .submit-modal textarea { resize: vertical; }
+    .submit-modal input:focus, .submit-modal textarea:focus {
+      outline: 2px solid var(--forest); border-color: transparent;
+    }
+    .submit-modal .ef-form { display: grid; gap: 14px; }
+    .submit-modal .ef-submit {
+      width: 100%; padding: 13px;
+      background: var(--forest); color: #fff;
+      border: none; border-radius: 12px;
+      font-size: 0.97rem; font-weight: 700;
+      cursor: pointer; margin-top: 6px;
+      transition: background 0.15s;
+    }
+    .submit-modal .ef-submit:hover { background: var(--forest-soft, #2d5a4e); }
+    @media (max-width: 540px) {
+      .submit-modal .ef-grid-2,
+      .submit-modal .ef-grid-3 { grid-template-columns: 1fr; }
+      .submit-modal { padding: 28px 18px 24px; }
+    }
+  </style>
+
+  <div class="submit-modal-backdrop" id="submitModalBackdrop" role="dialog" aria-modal="true" aria-label="Submit an Event">
+    <div class="submit-modal">
+      <button class="submit-modal-close" onclick="closeSubmitModal()" aria-label="Close">&#x2715;</button>
+      <h2>Submit an Event</h2>
+      <p class="lead">Share a community event with Livable Telluride. We'll review it and add it to the calendar.</p>
+      <form class="ef-form" id="eventSubmitForm">
+        <div class="ef-grid-2">
+          <div>
+            <label>Event Title *</label>
+            <input id="ef-title" type="text" required placeholder="e.g. Wildflower Walk &amp; Talk">
+          </div>
+          <div>
+            <label>Date *</label>
+            <input id="ef-date" type="date" required>
+          </div>
+        </div>
+        <div class="ef-grid-2">
+          <div>
+            <label>Time</label>
+            <input id="ef-time" type="text" placeholder="e.g. 10:00 AM – 12:00 PM">
+          </div>
+          <div>
+            <label>Location</label>
+            <input id="ef-location" type="text" placeholder="e.g. Wilkinson Public Library">
+          </div>
+        </div>
+        <div>
+          <label>Description *</label>
+          <textarea id="ef-desc" required rows="4" placeholder="Tell people what the event is about…"></textarea>
+        </div>
+        <div>
+          <label>Event URL / More Info</label>
+          <input id="ef-url" type="url" placeholder="https://…">
+        </div>
+        <div class="ef-grid-3">
+          <div>
+            <label>Your Name</label>
+            <input id="ef-name" type="text" placeholder="First Last">
+          </div>
+          <div>
+            <label>Your Email</label>
+            <input id="ef-email" type="email" placeholder="you@example.com">
+          </div>
+          <div>
+            <label>Organization</label>
+            <input id="ef-org" type="text" placeholder="Optional">
+          </div>
+        </div>
+        <button type="submit" class="ef-submit">Send Submission →</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openSubmitModal() {
+      document.getElementById('submitModalBackdrop').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeSubmitModal() {
+      document.getElementById('submitModalBackdrop').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    // Close on backdrop click
+    document.getElementById('submitModalBackdrop').addEventListener('click', function(e) {
+      if (e.target === this) closeSubmitModal();
+    });
+    // Close on Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeSubmitModal();
+    });
+    document.getElementById('eventSubmitForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const v = id => document.getElementById(id).value.trim();
+      const subject = encodeURIComponent('Event Submission: ' + (v('ef-title') || '(no title)'));
+      const body = encodeURIComponent(
+        'EVENT SUBMISSION\n================\n' +
+        'Title:        ' + v('ef-title') + '\n' +
+        'Date:         ' + v('ef-date') + '\n' +
+        'Time:         ' + v('ef-time') + '\n' +
+        'Location:     ' + v('ef-location') + '\n' +
+        'Description:\n' + v('ef-desc') + '\n\n' +
+        'Event URL:    ' + v('ef-url') + '\n' +
+        'Submitted by: ' + v('ef-name') + ' <' + v('ef-email') + '>\n' +
+        'Organization: ' + v('ef-org')
+      );
+      window.location.href = 'mailto:info@livabletelluride.org?subject=' + subject + '&body=' + body;
+      closeSubmitModal();
+    });
+  </script>
 </body>
 </html>
