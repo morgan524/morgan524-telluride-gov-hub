@@ -495,6 +495,33 @@
       margin: 0 !important;
       padding: 0 !important;
     }
+    /* Subject + body inputs: visible grey border so fields stand out clearly */
+    #hbComposeTitle {
+      border: 1.5px solid #c8c8c4 !important;
+      border-radius: 8px !important;
+      padding: 10px 13px !important;
+      background: #fff !important;
+      font-size: 1rem !important;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    #hbComposeTitle:focus {
+      border-color: rgba(33,68,60,0.55) !important;
+      box-shadow: 0 0 0 3px rgba(33,68,60,0.08) !important;
+      outline: none !important;
+    }
+    #hbComposeBody {
+      border: 1.5px solid #c8c8c4 !important;
+      border-radius: 8px !important;
+      padding: 10px 13px !important;
+      background: #fff !important;
+      font-size: 0.95rem !important;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    #hbComposeBody:focus {
+      border-color: rgba(33,68,60,0.55) !important;
+      box-shadow: 0 0 0 3px rgba(33,68,60,0.08) !important;
+      outline: none !important;
+    }
     /* Posts feed: strip its top padding so hb-posts-feed grid controls spacing */
     #hbPostsFeed { margin-top: 0 !important; }
     /* Loading spinner stays in feed */
@@ -1002,8 +1029,8 @@
             <div class="hb-composer-shell-inner">
               <!-- Existing hub-bub.js composer (all IDs preserved) -->
               <div class="hb-compose" id="hbCompose">
-                <div style="font-size:0.78rem;font-weight:600;color:#888;margin-bottom:8px;">What would you like to share? <span style="color:#c0392b;">[required]</span></div>
-                <div class="hb-post-type-bar" id="hbPostTypeBar">
+                <!-- Category type bar hidden — auto-tag handles type selection -->
+                <div class="hb-post-type-bar" id="hbPostTypeBar" style="display:none;">
                   <button class="hb-post-type-btn" data-hb-ptype="question">Ask a Question</button>
                   <button class="hb-post-type-btn" data-hb-ptype="source">Share a Source</button>
                   <button class="hb-post-type-btn" data-hb-ptype="debrief">Meeting Takeaway</button>
