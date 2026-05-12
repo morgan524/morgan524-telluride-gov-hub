@@ -109,6 +109,22 @@
     .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--forest);text-decoration:none;font-weight:600;font-size:0.88rem;}
     .back-link:hover{text-decoration:underline;}
 
+    /* Controversy update block */
+    .controversy-block{background:#fff;border:1px solid rgba(180,60,40,.2);border-left:4px solid #c0392b;border-radius:12px;padding:24px 26px;margin-bottom:28px;}
+    .controversy-date{font-size:0.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#c0392b;margin:0 0 10px;}
+    .controversy-heading{font-family:var(--font-heading);font-size:1.15rem;color:var(--text-primary);margin:0 0 18px;line-height:1.35;}
+    .controversy-point{margin-bottom:16px;}
+    .controversy-point:last-child{margin-bottom:0;}
+    .controversy-point-label{font-size:0.82rem;font-weight:700;color:var(--forest);margin-bottom:4px;}
+    .controversy-point p{margin:0;font-size:0.88rem;line-height:1.65;color:var(--text-secondary);}
+
+    /* Legal issues list */
+    .legal-issue-item{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--border-soft);}
+    .legal-issue-item:last-child{border-bottom:none;padding-bottom:0;}
+    .legal-issue-icon{font-size:1.3rem;flex-shrink:0;width:28px;text-align:center;padding-top:2px;}
+    .legal-issue-body h4{margin:0 0 5px;font-size:0.9rem;font-weight:700;color:var(--text-primary);line-height:1.35;}
+    .legal-issue-body p{margin:0;font-size:0.84rem;line-height:1.65;color:var(--text-secondary);}
+
     /* Empty state */
     .empty-note{font-size:0.86rem;color:var(--text-muted);font-style:italic;padding:8px 0;}
 
@@ -226,12 +242,45 @@
         html += `</div>`;
       }
 
+      // Controversy update (most recent development)
+      if (issue.controversyUpdate) {
+        const cu = issue.controversyUpdate;
+        html += `<div class="controversy-block">
+          <div class="controversy-date">Latest Development · ${esc(cu.date||'')}</div>
+          <h3 class="controversy-heading">${esc(cu.heading||'')}</h3>`;
+        if (cu.points && cu.points.length) {
+          cu.points.forEach(pt => {
+            html += `<div class="controversy-point">
+              <div class="controversy-point-label">${esc(pt.label||'')}</div>
+              <p>${esc(pt.text||'')}</p>
+            </div>`;
+          });
+        }
+        html += `</div>`;
+      }
+
       // Legal summary
       if (issue.legalSummary) {
         html += `<div class="section legal-card">
-          <div class="legal-label">Legal Issues Summary</div>
+          <div class="legal-label">Specific Concerns with the County's Draft</div>
           <p>${esc(issue.legalSummary)}</p>
         </div>`;
+      }
+
+      // Legal issues (detailed breakdown)
+      if (issue.legalIssues && issue.legalIssues.length) {
+        html += `<div class="section">
+          <div class="section-label">${esc(issue.legalIssuesSub||'Draft Language Concerns')}</div>`;
+        issue.legalIssues.forEach(li => {
+          html += `<div class="legal-issue-item">
+            <div class="legal-issue-icon">${li.icon||'⚠️'}</div>
+            <div class="legal-issue-body">
+              <h4>${esc(li.title||'')}</h4>
+              ${li.copy ? `<p>${esc(li.copy)}</p>` : ''}
+            </div>
+          </div>`;
+        });
+        html += `</div>`;
       }
 
       // Timeline
