@@ -1545,7 +1545,7 @@ const ENTITY_LOGOS = {
 const TOWN_IMAGES = {
   norwood: '/logo/Norwood%20Town.jpeg',
   mv: '/logo/Mountain%20village%20Town.jpg',
-  telluride: '/logo/Telluride.png',
+  telluride: '/logo/Telluride%20Town.png',
   ridgway: '/logo/Ridgway%20Town.png',
   ophir: '/logo/Ophir.jpeg',
   placerville: '/logo/Placerville.png',
