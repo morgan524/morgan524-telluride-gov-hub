@@ -21,7 +21,7 @@ const COUNTY_CIVICCLERK_IDS = {
   // 2026-05-13 BOCC — partial-date fallback in getCountyAgendaLink will catch
   // any title variation as long as the date matches.
   'Board of County Commissioners Meeting|2026-05-13': 999,
-  // 2026-05-14 Planning Commission — agenda file 1704 confirmed
+  // 2026-05-14 Planning Commission — 1705 = full packet, 1704 = agenda only
   'Planning Commission Meeting|2026-05-14': 919,
   'Planning Commission|2026-05-14': 919,
 };
@@ -29,7 +29,7 @@ const COUNTY_CIVICCLERK_IDS = {
 const COUNTY_CIVICCLERK_AGENDA_FILES = {
   1025: 1652,  // Planning Commission Apr 2 2026
   999:  1702,  // BOCC May 13 2026
-  919:  1704,  // Planning Commission May 14 2026
+  919:  1705,  // Planning Commission May 14 2026
 };
 
 const COUNTY_CACHE_DATE = '2026-03-25';
@@ -128,7 +128,7 @@ const COUNTY_CACHED_DATA = [
     type: 'planning',
     location: '305 W Colorado Ave, Telluride, CO 81435',
     civicClerkId: 919,
-    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/919/files/agenda/1704',
+    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/919/files/agenda/1705',
     note: 'Public hearings on land use applications and code amendments (footprint definitions, accelerated housing review). Work session on natural medicine code amendments.'
   },
   {
@@ -1265,7 +1265,7 @@ const LAND_USE_ISSUES = {
     controversyUpdate: {
       date: 'May 14, 2026',
       heading: 'May 14 Planning Commission — Fast Track Review',
-      packetHref: 'https://sanmiguelcoco.portal.civicclerk.com/event/919/files/agenda/1704',
+      packetHref: 'https://sanmiguelcoco.portal.civicclerk.com/event/919/files/agenda/1705',
       points: [
         { label: 'Why it is before the Commission now',
           text: 'San Miguel County must adopt a qualifying fast-track review process by June 30, 2026 to access Proposition 123 planning and infrastructure grant funds this fiscal year. Missing the June 30 window pushes the deadline to December 31 — and risks losing eligibility altogether. Planning Director Kaye Simonson drafted the amendment; it is Agenda Item 7 at the May 14 Planning Commission meeting, with a Commission recommendation to the BOCC expected.' },

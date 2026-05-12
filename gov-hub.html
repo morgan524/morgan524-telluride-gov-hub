@@ -674,10 +674,8 @@
         ? '<a class="btn-action packet" href="' + pktUrl + '" target="_blank" rel="noopener">⬇ Packet</a>'
         : '';
       const wtmText = getWTMPopup(m);
-      const safeTitle = (m.title || '').replace(/'/g, "\'");
-      const safeWtm = wtmText ? wtmText.replace(/'/g, "\'") : '';
       const wtmBtn = wtmText
-        ? '<button class="btn-action wtm" onclick="openWTMModal(\'' + safeTitle + '\',\'' + safeWtm + '\')">ℹ Why This Matters</button>'
+        ? '<button class="btn-action wtm" data-wtm-title="' + (m.title || '').replace(/"/g, '&quot;') + '" data-wtm-text="' + wtmText.replace(/"/g, '&quot;') + '" onclick="openWTMModal(this.dataset.wtmTitle,this.dataset.wtmText)">ℹ Why This Matters</button>'
         : '';
 
       // Comment button
@@ -737,10 +735,10 @@
 
 
       const dataScript = document.createElement('script');
-      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v3';
+      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v4';
       dataScript.onload = () => {
         const s = document.createElement('script');
-        s.src = 'https://livabletelluride.org/js/data-only.js?v=v3';
+        s.src = 'https://livabletelluride.org/js/data-only.js?v=v4';
         s.onload = () => {
           try {
             // Stub AI_SUMMARIES so getMeetingSummary() doesn't throw.
