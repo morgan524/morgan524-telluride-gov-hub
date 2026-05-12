@@ -2430,7 +2430,8 @@ function getMVMeetings() {
 }
 
 function getSchoolMeetings() {
-  return SCHOOL_CACHED_DATA.map(m => {
+  // Map each entry to a card object first
+  const cards = SCHOOL_CACHED_DATA.map(m => {
     const eventDate = localDate(m.date);
     const hasAgenda = !!m.agendaUrl;
     const link = m.agendaUrl || SCHOOL_BOARD_URL;
@@ -2454,9 +2455,58 @@ function getSchoolMeetings() {
       sourceLabel: 'School District R-1',
       category: m.special ? 'Special Meeting' : 'Board Meeting',
       canceled: false,
-      hasAgenda
+      hasAgenda,
+      _rawTime: m.time || ''
     };
   });
+
+  // Merge same-day pairs (e.g. Work Session 3:30 PM + Monthly Meeting 5:15 PM
+  // on the same date) into a single combined card so they don't look like
+  // duplicates.  The earlier meeting's time is shown first; the later meeting's
+  // title becomes the suffix.  Agenda link from whichever entry has one.
+  const merged = [];
+  const seen = new Set();
+  for (let i = 0; i < cards.length; i++) {
+    if (seen.has(i)) continue;
+    const a = cards[i];
+    const dateKey = a.eventDate ? a.eventDate.toISOString().slice(0, 10) : null;
+    let combined = false;
+    for (let j = i + 1; j < cards.length; j++) {
+      if (seen.has(j)) continue;
+      const b = cards[j];
+      const bKey = b.eventDate ? b.eventDate.toISOString().slice(0, 10) : null;
+      if (dateKey && bKey === dateKey) {
+        // Same day — merge: keep earlier time, combine title, keep any agenda
+        const aTime = a._rawTime;
+        const bTime = b._rawTime;
+        const earlier = (!aTime || (bTime && aTime <= bTime)) ? a : b;
+        const later   = earlier === a ? b : a;
+        const hasAgendaCombined = earlier.hasAgenda || later.hasAgenda;
+        const combinedLink = (earlier.hasAgenda ? earlier.link : null) || (later.hasAgenda ? later.link : null) || earlier.link;
+        // Build a short title: strip common "Board of Education " prefix, join with " & "
+        const shorten = t => t.replace(/^Board of Education\s+/i, '').replace(/\s*--\s*Special Meeting$/i, '');
+        const combinedTitle = 'Board of Education ' + shorten(earlier.title) + ' & ' + shorten(later.title);
+        const combinedTime = aTime && bTime ? aTime + ' & ' + bTime : (aTime || bTime);
+        merged.push(Object.assign({}, earlier, {
+          title: combinedTitle,
+          link: combinedLink,
+          eventTimes: combinedTime,
+          hasAgenda: hasAgendaCombined
+        }));
+        seen.add(i);
+        seen.add(j);
+        combined = true;
+        break;
+      }
+    }
+    if (!combined) {
+      seen.add(i);
+      merged.push(a);
+    }
+  }
+
+  // Strip internal helper field
+  return merged.map(({ _rawTime, ...rest }) => rest);
 }
 
 function getFireMeetings() {
