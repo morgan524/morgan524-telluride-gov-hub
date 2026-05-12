@@ -77,10 +77,14 @@ function localDate(str) {
     // new Date("March 31, 2026") may be UTC — re-create as local
     return new Date(d.getFullYear(), d.getMonth(), d.getDate());
   }
-  // Fallback — parse then force to local midnight
+  // Fallback — parse then force to local midnight.
+  // Use UTC components to preserve the intended calendar date when input is a
+  // UTC-midnight timestamp (e.g. RFC 2822 RSS pubDate "+0000"). Using local
+  // getDate() on a UTC-midnight Date returns the previous day in timezones
+  // west of UTC (e.g. MDT = UTC-6).
   const d = new Date(s);
   if (isNaN(d)) return null;
-  return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  return new Date(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
 }
 
 function friendlyDate(d) {
@@ -137,7 +141,14 @@ function dateGroupKey(d) {
   if (typeof d === 'string') d = new Date(d);
   if (!d || isNaN(d)) return '9999-99-99';
   const pad = n => String(n).padStart(2, '0');
-  return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  // Belt-and-suspenders: if a raw UTC-midnight Date slips through, use UTC
+  // components so we don't display the prior day in mountain time.
+  const isUtcMidnight = d.getUTCHours() === 0 && d.getUTCMinutes() === 0 &&
+                        d.getUTCSeconds() === 0 && d.getTime() % 86400000 === 0;
+  const yr  = isUtcMidnight ? d.getUTCFullYear()  : d.getFullYear();
+  const mo  = isUtcMidnight ? d.getUTCMonth()     : d.getMonth();
+  const day = isUtcMidnight ? d.getUTCDate()      : d.getDate();
+  return yr + '-' + pad(mo + 1) + '-' + pad(day);
 }
 
 // ══════════════════════════════════════════════════════
