@@ -3174,6 +3174,67 @@ function fetchTelluridComEvents() {
   return [];
 }
 
+
+// ── Sherbino Theater Events (Ridgway) — bot-populated weekly by Task 14 ──
+const SHERBINO_EVENTS = [];
+
+function fetchSherbinoEvents() {
+  if (typeof SHERBINO_EVENTS !== 'undefined' && Array.isArray(SHERBINO_EVENTS) && SHERBINO_EVENTS.length > 0) {
+    return SHERBINO_EVENTS.map(ev => Object.assign({}, ev, {
+      pubDate: ev.pubDate ? new Date(ev.pubDate) : (ev.date ? new Date(ev.date) : null),
+      source: ev.source || 'sherbino',
+      sourceLabel: ev.sourceLabel || 'The Sherbino',
+      category: 'Community Event'
+    })).filter(ev => ev.pubDate && !isNaN(ev.pubDate.getTime()));
+  }
+  return [];
+}
+
+// ── Nucla-Naturita Events — bot-populated weekly by Task 11 ──
+const NUCLA_NATURITA_EVENTS = [];
+
+function fetchNuclaNaturitaEvents() {
+  if (typeof NUCLA_NATURITA_EVENTS !== 'undefined' && Array.isArray(NUCLA_NATURITA_EVENTS) && NUCLA_NATURITA_EVENTS.length > 0) {
+    return NUCLA_NATURITA_EVENTS.map(ev => Object.assign({}, ev, {
+      pubDate: ev.pubDate ? new Date(ev.pubDate) : (ev.date ? new Date(ev.date) : null),
+      source: ev.source || 'nucla',
+      sourceLabel: ev.sourceLabel || 'Nucla-Naturita',
+      category: 'Community Event'
+    })).filter(ev => ev.pubDate && !isNaN(ev.pubDate.getTime()));
+  }
+  return [];
+}
+
+// ── Club Red Telluride Shows — bot-populated weekly by Task 12 ──
+const CLUB_RED_SHOWS = [];
+
+function fetchClubRedShows() {
+  if (typeof CLUB_RED_SHOWS !== 'undefined' && Array.isArray(CLUB_RED_SHOWS) && CLUB_RED_SHOWS.length > 0) {
+    return CLUB_RED_SHOWS.map(ev => Object.assign({}, ev, {
+      pubDate: ev.pubDate ? new Date(ev.pubDate) : (ev.date ? new Date(ev.date) : null),
+      source: ev.source || 'club-red',
+      sourceLabel: ev.sourceLabel || 'Club Red',
+      category: 'Music & Nightlife'
+    })).filter(ev => ev.pubDate && !isNaN(ev.pubDate.getTime()));
+  }
+  return [];
+}
+
+// ── Fresh Food Hub Events — bot-populated weekly by Task 13 ──
+const FRESH_FOOD_HUB_EVENTS = [];
+
+function fetchFreshFoodHubEvents() {
+  if (typeof FRESH_FOOD_HUB_EVENTS !== 'undefined' && Array.isArray(FRESH_FOOD_HUB_EVENTS) && FRESH_FOOD_HUB_EVENTS.length > 0) {
+    return FRESH_FOOD_HUB_EVENTS.map(ev => Object.assign({}, ev, {
+      pubDate: ev.pubDate ? new Date(ev.pubDate) : (ev.date ? new Date(ev.date) : null),
+      source: ev.source || 'fresh-food-hub',
+      sourceLabel: ev.sourceLabel || 'Fresh Food Hub',
+      category: 'Community Event'
+    })).filter(ev => ev.pubDate && !isNaN(ev.pubDate.getTime()));
+  }
+  return [];
+}
+
 // ── Fetch Telluride Elks Lodge Events ──
 // tellurideelks.org/Events runs on ClubRunner-style CMS — no public REST.
 // Each event is rendered as <div class="EventAndSpeakersItem"> with the
@@ -3249,6 +3310,10 @@ async function fetchAllNews() {
   const alibiResults = await fetchAlibiEvents();
   const sohResults = await fetchSheridanOperaHouseEvents();
   const elksResults = await fetchElksEvents();
+  const sherbinoResults = fetchSherbinoEvents();
+  const nuclaResults = fetchNuclaNaturitaEvents();
+  const clubRedResults = fetchClubRedShows();
+  const freshFoodResults = fetchFreshFoodHubEvents();
   const orayResults = await fetchOurayRidgwayEvents();
   const ouCountyResults = fetchOurayCountyEvents();
   const norwoodEvtResults = fetchNorwoodEvents();
@@ -3283,8 +3348,9 @@ async function fetchAllNews() {
 
   // Combine all sources — Wilkinson library events take priority over KOTO/TT duplicates
   // Source priority for dedup: ORIGINAL sources first (TJC, TF, EcoAction,
-  // SOH, Elks, Wilkinson, Ouray-Ridgway, gov RSS, hardcoded community,
-  // GitHub-issue community), then AGGREGATORS (Telluride Times, KOTO) last.
+  // SOH, Sherbino, Elks, Club Red, Fresh Food Hub, Nucla-Naturita, Wilkinson,
+  // Ouray-Ridgway, gov RSS, hardcoded community, GitHub-issue community),
+  // then AGGREGATORS (Telluride Times, KOTO) last.
   // The dedup below is first-seen-wins, so originals will keep their cards
   // and aggregator versions of the same event drop out.
   const all = [
@@ -3294,11 +3360,15 @@ async function fetchAllNews() {
     ...tfResults,             // Telluride Foundation
     ...ecoResults,            // EcoAction Partners
     ...alibiResults,          // Alibi Telluride (music venue)
+    ...clubRedResults,        // Club Red Telluride (music venue, Mountain Village)
     ...sohResults,            // Sheridan Opera House
+    ...sherbinoResults,       // The Sherbino Theater (Ridgway)
     ...elksResults,           // Telluride Elks Lodge
+    ...freshFoodResults,      // Fresh Food Hub (Norwood area)
     ...orayResults,           // Ouray Ridgway Calendar (Localist)
     ...ouCountyResults,       // Ouray County (non-gov community events from iCal)
     ...norwoodEvtResults,     // Norwood Town events/notices (sitemap)
+    ...nuclaResults,          // Nucla-Naturita community events
     ...mvEvtResults,          // Mountain Village community events (sitemap+pages)
     ...telluridComResults,    // Telluride.com events (festivals, markets, etc.)
     ...communityResults,      // GitHub-issue community submissions

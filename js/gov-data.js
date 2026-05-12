@@ -1464,7 +1464,12 @@ const ENTITY_LOGOS = {
   wilkinson: '<img src="/logo/Wilkenson.png" alt="Wilkinson Public Library" style="width:100%;height:100%;object-fit:contain;">',
   airport: '<img src="/logo/Airport.png" alt="Telluride Regional Airport" style="width:100%;height:100%;object-fit:contain;">',
   clubs: '<img src="/logo/clubs-icon.png" alt="Local Organizations" style="width:100%;height:100%;object-fit:contain;">',
-  'telluride-com': '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1a3a5c,#2a5a8c);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Telluride.com">🎪</div>'
+  'telluride-com': '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1a3a5c,#2a5a8c);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Telluride.com">🎪</div>',
+  sherbino: '<img src="/logo/Sherbino.png" alt="The Sherbino Theater" style="width:100%;height:100%;object-fit:contain;">',
+  nucla: '<img src="/logo/Nucla%20Town.png" alt="Nucla-Naturita" style="width:100%;height:100%;object-fit:contain;">',
+  'club-red': '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#8b1a1a,#cc2200);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Club Red Telluride">🎸</div>',
+  'fresh-food-hub': '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#2d5a1b,#4a8c2a);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Fresh Food Hub">🌽</div>',
+  'humane-society': '<img src="/logo/Telluride%20Humane-400x400.png" alt="Telluride Humane Society" style="width:100%;height:100%;object-fit:contain;">'
 };
 
 const TOWN_IMAGES = {
