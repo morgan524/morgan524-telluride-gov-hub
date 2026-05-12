@@ -369,13 +369,19 @@
     .hb-auth-strip a { font-weight: 700; }
     .hb-auth-strip .hb-auth-user { font-weight: 700; color: var(--forest); }
     .hb-auth-strip button {
-      border: 1px solid var(--lt-line);
+      border: 1.5px solid rgba(33,68,60,0.35);
       background: #fff;
       color: var(--forest);
       border-radius: 999px;
-      padding: 5px 12px;
+      padding: 5px 14px;
       font-size: 0.82rem;
       font-weight: 700;
+      cursor: pointer;
+      transition: background 0.13s ease, color 0.13s ease;
+    }
+    .hb-auth-strip button:hover {
+      background: var(--forest);
+      color: #fff;
     }
 
     /* ── Toolbar ── */
@@ -1075,6 +1081,18 @@
 
         <!-- ── Main content ── -->
         <main class="hb-content" id="hb-feed-anchor">
+
+          <!-- Auth strip: shown when logged in, hidden otherwise -->
+          <div class="hb-auth-strip" id="hbAuthStripBar">
+            <span id="hbAuthStripMsg">
+              <a href="javascript:void(0)" onclick="hbShowAuth('signup')" style="color:var(--forest);">Create a free account</a>
+              &nbsp;or&nbsp;
+              <a href="javascript:void(0)" onclick="hbShowAuth('login')" style="color:var(--forest);">log in</a>
+              to join the conversation.
+            </span>
+            <span id="hbAuthStripUser" style="display:none;" class="hb-auth-user"></span>
+            <button id="hbAuthStripLogout" style="display:none;" onclick="hbLogout()">Sign Out</button>
+          </div>
 
           <!-- Toolbar: result count + sort -->
           <div class="hb-toolbar" role="toolbar" aria-label="Sort discussions">
