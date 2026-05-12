@@ -44,10 +44,10 @@
     }
     .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
-    .topnav-links { display: flex; gap: 10px; margin-left: 12px; flex: 1; flex-wrap: wrap; }
+    .topnav-links { display: flex; gap: 14px; margin-left: 16px; flex: 1; flex-wrap: wrap; }
     .topnav-links a {
       color: var(--text-primary); text-decoration: none;
-      font-weight: 600; font-size: 0.76rem;
+      font-weight: 600; font-size: 0.82rem;
       padding: 6px 2px;
       border-bottom: 2px solid transparent;
       transition: color 0.15s, border-color 0.15s;
@@ -291,14 +291,14 @@
         <img src="logo/Livable Telluride Logo.png" alt="Livable Telluride">
       </a>
       <nav class="topnav-links">
-        <a href="/gov-hub.html">Gov-Hub</a>
         <a href="/local-news.html">Local News</a>
-        <a href="/deep-dives.html" class="active">Our News</a>
+        <a href="/gov-hub.html">Gov-Hub</a>
+        <a href="/deep-dives.html" class="active">Deep Dives</a>
         <a href="/events.html">Events</a>
         <a href="/hub-bub.html">Hub-Bub</a>
+        <a href="/local-orgs.html">Local Orgs</a>
         <a href="/housing.html">Housing</a>
         <a href="/legal-notices.html">Legal Notices</a>
-        <a href="/local-orgs.html">Local Orgs</a>
         <a href="/about.html">About</a>
       </nav>
       <a class="topnav-cta" href="https://livabletelluride.org/#tab-subscribe">Subscribe</a>
@@ -464,6 +464,18 @@
 
     </div><!-- /.dive-grid -->
 
+    <!-- ── Blog / Newsletter posts ── -->
+    <div class="section-intro" style="margin-top:56px;">
+      <h2 class="section-title">Newsletter &amp; Blog Posts</h2>
+      <span class="section-count" id="blogCount"></span>
+    </div>
+    <p style="color:var(--text-secondary);margin:0 0 28px;font-size:0.95rem;">
+      Long-form posts, financial analyses, and newsletters from Livable Telluride — including future Mailchimp editions as they're sent.
+    </p>
+    <div class="blog-grid" id="blogGrid">
+      <p style="color:var(--text-muted);font-size:0.9rem;">Loading posts…</p>
+    </div>
+
   </main><!-- /.page-wrap -->
 
   <!-- Info strip -->
@@ -479,6 +491,141 @@
       </div>
     </div>
   </section>
+
+  <style>
+    /* ── Blog post mini-cards ── */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    @media (max-width: 1100px) { .blog-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 740px)  { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px)  { .blog-grid { grid-template-columns: 1fr; } }
+
+    .blog-card {
+      background: var(--bg-paper);
+      border: 1px solid var(--border-soft);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(36,49,46,0.07);
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.15s, transform 0.15s;
+    }
+    .blog-card:hover { box-shadow: var(--shadow-card); transform: translateY(-2px); }
+
+    .blog-card-img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      display: block;
+      background: var(--bg-hero);
+    }
+    .blog-card-img-placeholder {
+      width: 100%; height: 120px;
+      background: linear-gradient(135deg, var(--forest) 0%, var(--accent-green) 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+    }
+    .blog-card-body {
+      padding: 12px 14px 14px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .blog-card-meta {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .blog-card-meta .sep { opacity: 0.4; }
+    .blog-card h4 {
+      margin: 0;
+      font-family: var(--font-heading);
+      font-size: 0.88rem;
+      line-height: 1.35;
+      color: var(--text-primary);
+    }
+    .blog-card-excerpt {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+      flex: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .blog-card-link {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--forest);
+      text-decoration: none;
+      margin-top: 6px;
+    }
+    .blog-card-link:hover { text-decoration: underline; }
+  </style>
+
+  <script>
+    (function () {
+      const grid = document.getElementById('blogGrid');
+      const countEl = document.getElementById('blogCount');
+
+      function renderBlog(posts) {
+        if (!posts || !posts.length) {
+          grid.innerHTML = '<p style="color:var(--text-muted)">No posts yet.</p>';
+          return;
+        }
+        // Sort newest first
+        const sorted = posts.slice().sort((a, b) => {
+          return new Date(b.date || 0) - new Date(a.date || 0);
+        });
+        if (countEl) countEl.textContent = sorted.length + ' post' + (sorted.length !== 1 ? 's' : '');
+        grid.innerHTML = sorted.map(p => {
+          const href   = p.href || p.url || '#';
+          const title  = p.title || 'Untitled';
+          const date   = p.date || '';
+          const rt     = p.readTime || '';
+          const excerpt = p.excerpt || p.summary || '';
+          const img    = p.image || p.img || '';
+          const imgHtml = img
+            ? `<img class="blog-card-img" src="${img}" alt="${title.replace(/"/g,'&quot;')}" loading="lazy" onerror="this.parentNode.innerHTML='<div class=blog-card-img-placeholder>📝</div>'">`
+            : `<div class="blog-card-img-placeholder">📝</div>`;
+          const metaParts = [date, rt ? rt + ' read' : ''].filter(Boolean);
+          return `
+            <article class="blog-card">
+              ${imgHtml}
+              <div class="blog-card-body">
+                <div class="blog-card-meta">${metaParts.join('<span class="sep">·</span>')}</div>
+                <h4>${title}</h4>
+                ${excerpt ? `<p class="blog-card-excerpt">${excerpt}</p>` : ''}
+                <a class="blog-card-link" href="${href}" target="_blank" rel="noopener">Read post →</a>
+              </div>
+            </article>`;
+        }).join('');
+      }
+
+      // Load data-only.js which contains BLOG_POSTS (bot-updated every 6h)
+      const day = new Date().toISOString().slice(0,10).replace(/-/g,'');
+      const s = document.createElement('script');
+      s.src = 'https://livabletelluride.org/js/data-only.js?v=' + day;
+      s.onload = function () {
+        if (typeof BLOG_POSTS !== 'undefined') {
+          renderBlog(BLOG_POSTS);
+        } else {
+          grid.innerHTML = '<p style="color:var(--text-muted)">Could not load posts.</p>';
+        }
+      };
+      s.onerror = function () {
+        grid.innerHTML = '<p style="color:var(--text-muted)">Could not load posts.</p>';
+      };
+      document.body.appendChild(s);
+    })();
+  </script>
 
 </body>
 </html>
