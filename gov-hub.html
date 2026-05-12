@@ -617,7 +617,8 @@
     }
 
     function render() {
-      document.getElementById('chipRow').innerHTML = chipsHtml();
+      const chipRowEl = document.getElementById('chipRow');
+      if (chipRowEl) chipRowEl.innerHTML = chipsHtml();
       document.getElementById('entityList').innerHTML = entitiesHtml();
 
       const filtered = activeFilter === 'all'
@@ -636,7 +637,8 @@
           ev.preventDefault();
           activeFilter = el.dataset.filter;
           render();
-          window.scrollTo({ top: document.querySelector('.chip-bar').offsetTop - 70, behavior: 'smooth' });
+          const chipBar = document.querySelector('.chip-bar');
+          if (chipBar) window.scrollTo({ top: chipBar.offsetTop - 70, behavior: 'smooth' });
         });
       });
     }
