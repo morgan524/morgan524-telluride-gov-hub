@@ -6153,6 +6153,43 @@ function collectLocalNewsArticles() {
   }
 
 
+  // Telluride Humane Society adoptable animals
+  if (typeof HUMANE_SOCIETY_ANIMALS !== 'undefined') {
+    HUMANE_SOCIETY_ANIMALS.forEach(function(animal) {
+      if (!animal.name) return;
+      // Stable pseudo-random pub date spread across last 7 days, seeded by animal id
+      var seed = animal.id || animal.name;
+      var h = 0;
+      for (var i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) & 0xffff;
+      var daysAgo = h % 7;
+      var pubDate = new Date(Date.now() - daysAgo * 86400000);
+      pubDate.setHours(10, 0, 0, 0);
+      var species = (animal.species || '').toLowerCase();
+      var adoptUrl = species === 'cat'
+        ? 'https://telluridehumanesociety.com/cats/'
+        : 'https://telluridehumanesociety.com/dogs/';
+      var parts = [];
+      if (animal.ageGroup) parts.push(animal.ageGroup);
+      if (animal.sex) parts.push(animal.sex);
+      if (animal.breed) parts.push(animal.breed);
+      articles.push({
+        title: animal.name,
+        link: adoptUrl,
+        summary: parts.join(' · '),
+        source: 'Telluride Humane Society',
+        sourceKey: 'humane-society',
+        newsTopic: 'community',
+        date: pubDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+        pubDate: pubDate,
+        topic: '',
+        imageUrl: animal.photo || '',
+        profileUrl: animal.profileUrl || '',
+        adoptUrl: adoptUrl,
+        animalSpecies: species
+      });
+    });
+  }
+
   // Filter out state-wide / national stories, then deduplicate by title.
   const seen = new Set();
   return articles.filter(a => {
@@ -6197,6 +6234,7 @@ function renderLocalNews(unused, filter) {
   let html = '';
   articles.forEach(item => {
     const isClub = item.sourceKey === 'clubs';
+    const isAnimal = item.sourceKey === 'humane-society';
     const logoHtml = isClub
       ? '<div class="card-logo">' + (ENTITY_LOGOS['clubs'] || '') + '</div>'
       : renderLogo(item.sourceKey);
@@ -6247,6 +6285,25 @@ function renderLocalNews(unused, filter) {
       if (item.link) { html += '<div style="margin-top:8px;"><a href="' + item.link + '" target="_blank" rel="noopener" style="font-size:0.8rem; color:var(--forest); font-weight:600; text-decoration:none;">' + linkLabel + '</a></div>'; }
       html += '</div>'; // close event-card-content
       html += '</div>'; // close event-card-main
+      html += '</div>'; // close card-body
+      html += '</div>'; // close card
+    } else if (isAnimal) {
+      // Humane Society adoptable animal card: photo left, text right, two CTAs
+      var adoptLabel = item.animalSpecies === 'cat' ? 'Adopt a cat →' : 'Adopt a dog →';
+      html += '<div class="card news-article-card" data-source-key="humane-society">';
+      html += '<div class="news-media-col' + (!item.imageUrl ? ' no-image' : '') + '">';
+      if (item.imageUrl) { html += '<div class="event-illustration event-photo" aria-hidden="true"><img src="' + item.imageUrl + '" alt="' + (item.title || 'Adoptable pet') + '" loading="lazy" style="border-radius:8px;"></div>'; }
+      html += '</div>'; // close news-media-col
+      html += '<div class="card-body">';
+      html += '<div class="event-card-content">';
+      html += '<div class="meta" style="margin-bottom:2px;">Telluride Humane Society · ' + (item.date || '') + '</div>';
+      html += '<h3>' + (item.title || 'Adoptable Pet') + '</h3>';
+      if (item.summary) { html += '<div class="description">' + item.summary + '</div>'; }
+      html += '<div style="margin-top:10px; display:flex; gap:12px; flex-wrap:wrap;">';
+      html += '<a href="' + (item.adoptUrl || item.link) + '" target="_blank" rel="noopener" style="font-size:0.8rem; color:var(--forest); font-weight:600; text-decoration:none;">' + adoptLabel + '</a>';
+      if (item.profileUrl) { html += '<a href="' + item.profileUrl + '" target="_blank" rel="noopener" style="font-size:0.8rem; color:var(--text-muted); font-weight:500; text-decoration:none;">View profile →</a>'; }
+      html += '</div>';
+      html += '</div>'; // close event-card-content
       html += '</div>'; // close card-body
       html += '</div>'; // close card
     } else {
