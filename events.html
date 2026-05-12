@@ -54,10 +54,10 @@
     }
     .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
-    .topnav-links { display: flex; gap: 10px; margin-left: 12px; flex: 1; }
+    .topnav-links { display: flex; gap: 14px; margin-left: 16px; flex: 1; }
     .topnav-links a {
       color: var(--text-primary); text-decoration: none;
-      font-weight: 600; font-size: 0.76rem;
+      font-weight: 600; font-size: 0.82rem;
       padding: 6px 2px;
       border-bottom: 2px solid transparent;
       transition: color 0.15s, border-color 0.15s;
@@ -96,37 +96,66 @@
       font-size: 1.05rem; max-width: 640px;
     }
 
-    /* Filter chips — full-width across the top, above the layout split */
-    .chips-bar {
-      max-width: 1280px; margin: 0 auto;
-      padding: 28px 32px 0;
-    }
-    .filter-chips {
-      display: flex; flex-wrap: wrap; gap: 10px;
-      margin-bottom: 24px;
-    }
-    .chip {
-      display: inline-block;
-      padding: 8px 18px;
-      border-radius: 999px;
+    /* Sidebar filter panel */
+    .filter-card {
       background: #fff;
       border: 1px solid var(--border-soft);
-      color: var(--text-secondary);
-      font-size: 0.88rem; font-weight: 600;
-      cursor: pointer;
-      transition: all 0.15s;
+      border-radius: 16px;
+      padding: 18px 0 8px;
+      box-shadow: var(--shadow-card);
+      margin-bottom: 18px;
     }
-    .chip:hover { background: var(--bg-paper); }
-    .chip.active {
-      background: var(--forest); color: #fff;
-      border-color: var(--forest);
+    .filter-card-label {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 0 18px 10px;
+      display: block;
+      border-bottom: 1px solid var(--border-soft);
+      margin-bottom: 6px;
+    }
+    .filter-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 18px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      border-radius: 0;
+      transition: background 0.12s, color 0.12s;
+      border-left: 3px solid transparent;
+      user-select: none;
+    }
+    .filter-option:hover {
+      background: var(--bg-hero);
+      color: var(--forest);
+    }
+    .filter-option.active {
+      color: var(--forest);
+      font-weight: 700;
+      border-left-color: var(--forest);
+      background: rgba(33, 68, 60, 0.06);
+    }
+    .filter-option .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--border-soft);
+      flex-shrink: 0;
+      transition: background 0.12s;
+    }
+    .filter-option.active .dot {
+      background: var(--forest);
     }
 
     /* LEFT sidebar + main content layout */
     .page-wrap {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 0 32px 32px;
+      padding: 28px 32px 32px;
       display: grid;
       grid-template-columns: 260px minmax(0, 1fr);
       gap: 32px;
@@ -424,6 +453,26 @@
       .topnav-links { display: none; }
       .hero h1 { font-size: 2rem; }
       .submit-strip-inner { flex-direction: column; text-align: center; }
+      /* On mobile, filter options scroll horizontally like chips */
+      .filter-card {
+        border-radius: 12px;
+        padding: 12px 0 6px;
+      }
+      #sidebarFilter {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0;
+        padding: 0;
+      }
+      .filter-card-label { width: 100%; border-bottom: none; padding-bottom: 6px; }
+      .filter-option {
+        border-left: none;
+        border-bottom: 2px solid transparent;
+        padding: 6px 14px;
+        font-size: 0.84rem;
+      }
+      .filter-option.active { border-bottom-color: var(--forest); border-left: none; }
     }
     @media (max-width: 640px) {
       .event-grid { grid-template-columns: 1fr; }
@@ -450,14 +499,14 @@
         <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
       </a>
       <nav class="topnav-links">
-        <a href="/gov-hub.html">Gov-Hub</a>
         <a href="/local-news.html">Local News</a>
-        <a href="/deep-dives.html">Our News</a>
+        <a href="/gov-hub.html">Gov-Hub</a>
+        <a href="/deep-dives.html">Deep Dives</a>
         <a href="/events.html" class="active">Events</a>
         <a href="/hub-bub.html">Hub-Bub</a>
+        <a href="/local-orgs.html">Local Orgs</a>
         <a href="/housing.html">Housing</a>
         <a href="/legal-notices.html">Legal Notices</a>
-        <a href="/local-orgs.html">Local Orgs</a>
         <a href="/about.html">About</a>
       </nav>
       <a class="topnav-cta" href="https://livabletelluride.org/#tab-subscribe">Subscribe</a>
@@ -471,12 +520,11 @@
     </div>
   </section>
 
-  <div class="chips-bar">
-    <div class="filter-chips" id="chipRow"><!-- populated by JS --></div>
-  </div>
-
   <main class="page-wrap">
     <aside class="sidebar">
+      <!-- Location filter -->
+      <div class="filter-card" id="sidebarFilter"><!-- populated by JS --></div>
+
       <div class="submit-card">
         <div class="submit-icon" aria-hidden="true">
           <!-- calendar icon -->
@@ -650,11 +698,12 @@
     ];
 
     /* ───────── Render ───────── */
-    function chipsHtml() {
-      return TOWNS.map(t => {
-        const cls = t.key === activeTown ? 'chip active' : 'chip';
-        return `<span class="${cls}" data-town="${t.key}">${t.label}</span>`;
+    function filterHtml() {
+      const opts = TOWNS.map(t => {
+        const cls = t.key === activeTown ? 'filter-option active' : 'filter-option';
+        return `<div class="${cls}" data-town="${t.key}"><span class="dot"></span>${t.label}</div>`;
       }).join('');
+      return `<span class="filter-card-label">Filter by Location</span>${opts}`;
     }
 
     function formatMonth(iso) {
@@ -771,14 +820,14 @@
     window.handlePortrait = handlePortrait;
 
     function render() {
-      document.getElementById('chipRow').innerHTML = chipsHtml();
+      document.getElementById('sidebarFilter').innerHTML = filterHtml();
       const filtered = activeTown === 'all'
         ? EVENTS
         : EVENTS.filter(e => e.town === activeTown);
       document.getElementById('eventGrid').innerHTML = filtered.map(eventCardHtml).join('');
-      document.querySelectorAll('.chip[data-town]').forEach(chip => {
-        chip.addEventListener('click', () => {
-          activeTown = chip.dataset.town;
+      document.querySelectorAll('.filter-option[data-town]').forEach(opt => {
+        opt.addEventListener('click', () => {
+          activeTown = opt.dataset.town;
           render();
         });
       });
