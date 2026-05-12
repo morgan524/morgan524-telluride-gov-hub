@@ -871,6 +871,29 @@ async function refreshNews(existingTtArticles = []) {
     }
   } catch (e) { console.warn(`  Telluride Times RSS error: ${e.message}`); }
 
+  // ── Merge-back: preserve existing TT articles not returned by this RSS run ──
+  // The RSS feed is a rolling window (last 50 articles, last 14 days). If an
+  // article wasn't returned this run — due to timing, a category not yet in
+  // the feed URL, a CF proxy hiccup, or a manually-added entry — it would be
+  // silently dropped when the bot serializes the new array. That's the root
+  // cause of repeated "articles disappeared" incidents.
+  //
+  // Fix: after the RSS pass, scan existingByHref for TT articles that are
+  // still within the 14-day window but not already in the scraped array.
+  // Add them back so manually-added or RSS-delayed articles survive bot runs.
+  {
+    const scrapedHrefs = new Set(articles.map(a => a.href));
+    for (const [href, existing] of existingByHref) {
+      if (scrapedHrefs.has(href)) continue;               // already in this run
+      if (existing.source !== 'Telluride Times') continue; // gov news handled separately
+      const pub = new Date(existing.date || existing.firstSeen || '');
+      if (!isNaN(pub) && pub >= cutoff) {
+        articles.push(existing);   // carry forward — still within window
+        scrapedHrefs.add(href);    // prevent duplication if loop runs twice
+      }
+    }
+  }
+
   // ── og:image enhancement pass ──────────────────────────────────────────
   // For TT articles that don't yet have a hi-res photo, fetch the article
   // page through the CF Worker proxy and pull <meta property="og:image">.
