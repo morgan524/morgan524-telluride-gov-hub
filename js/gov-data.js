@@ -190,9 +190,11 @@ const COUNTY_CACHED_DATA = [
 
 const SMART_BOARD_URL = 'https://smarttelluride.colorado.gov/board-meetings';
 
-const SMART_CACHE_DATE = '2026-05-11';
+const SMART_CACHE_DATE = '2026-05-12';
 
 const SMART_CACHED_DATA = [
+  // ── Upcoming (2nd Thursday of each month, 4:00 PM, SMART Office • Lawson Hill) ──
+  // Note: May meeting moved to 3rd Wednesday (May 20) per board schedule
   {
     date: 'May 20, 2026',
     time: '4:00 PM',
@@ -203,6 +205,34 @@ const SMART_CACHED_DATA = [
     location: 'SMART Office • Lawson Hill',
     note: 'Next scheduled meeting -- agenda and packet will be posted closer to the date.'
   },
+  {
+    date: 'June 11, 2026',
+    time: '4:00 PM',
+    title: 'SMART Board of Directors',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: 'SMART Office • Lawson Hill'
+  },
+  {
+    date: 'July 9, 2026',
+    time: '4:00 PM',
+    title: 'SMART Board of Directors',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: 'SMART Office • Lawson Hill'
+  },
+  {
+    date: 'August 13, 2026',
+    time: '4:00 PM',
+    title: 'SMART Board of Directors',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: 'SMART Office • Lawson Hill'
+  },
+  // ── Recent ──
   {
     date: 'April 9, 2026',
     title: 'SMART Board of Directors',
@@ -414,11 +444,12 @@ const SCHOOL_CACHED_DATA = [
 
 const FIRE_BOARD_URL = 'https://www.telluridefire.com/board-meetings';
 
-const FIRE_CACHE_DATE = '2026-03-24';
+const FIRE_CACHE_DATE = '2026-05-12';
 
 const FIRE_CACHED_DATA = [
+  // ── Upcoming (3rd Tuesday of each month, 5:30 PM) ──
   {
-    date: 'April 21, 2026',
+    date: 'May 19, 2026',
     time: '5:30 PM',
     title: 'Board of Directors Meeting',
     agendaUrl: null,
@@ -428,28 +459,38 @@ const FIRE_CACHED_DATA = [
     note: 'Next scheduled meeting -- agenda typically posted a few days before.'
   },
   {
+    date: 'June 16, 2026',
+    time: '5:30 PM',
+    title: 'Board of Directors Meeting',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: '131 W Columbia Ave, Telluride, CO 81435'
+  },
+  {
+    date: 'July 21, 2026',
+    time: '5:30 PM',
+    title: 'Board of Directors Meeting',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: '131 W Columbia Ave, Telluride, CO 81435'
+  },
+  // ── Recent (with agendas) ──
+  {
+    date: 'April 21, 2026',
+    time: '5:30 PM',
+    title: 'Board of Directors Meeting',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: '131 W Columbia Ave, Telluride, CO 81435'
+  },
+  {
     date: 'March 17, 2026',
     time: '5:30 PM',
     title: 'Board of Directors Meeting',
     agendaUrl: 'https://www.telluridefire.com/files/3d3e8ccfb/Agenda+-March+17th%2C+2026.pdf',
-    packetUrl: null,
-    special: false,
-    location: '131 W Columbia Ave, Telluride, CO 81435'
-  },
-  {
-    date: 'February 17, 2026',
-    time: '5:30 PM',
-    title: 'Board of Directors Meeting',
-    agendaUrl: 'https://www.telluridefire.com/files/286ab5c22/Agenda+-February+17th%2C+2026.pdf',
-    packetUrl: null,
-    special: false,
-    location: '131 W Columbia Ave, Telluride, CO 81435'
-  },
-  {
-    date: 'January 20, 2026',
-    time: '5:30 PM',
-    title: 'Board of Directors Meeting',
-    agendaUrl: 'https://www.telluridefire.com/files/cc0cf8d03/Agenda+-January+20th%2C+2026.pdf',
     packetUrl: null,
     special: false,
     location: '131 W Columbia Ave, Telluride, CO 81435'
@@ -1464,12 +1505,7 @@ const ENTITY_LOGOS = {
   wilkinson: '<img src="/logo/Wilkenson.png" alt="Wilkinson Public Library" style="width:100%;height:100%;object-fit:contain;">',
   airport: '<img src="/logo/Airport.png" alt="Telluride Regional Airport" style="width:100%;height:100%;object-fit:contain;">',
   clubs: '<img src="/logo/clubs-icon.png" alt="Local Organizations" style="width:100%;height:100%;object-fit:contain;">',
-  'telluride-com': '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1a3a5c,#2a5a8c);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Telluride.com">🎪</div>',
-  sherbino: '<img src="/logo/Sherbino.png" alt="The Sherbino Theater" style="width:100%;height:100%;object-fit:contain;">',
-  nucla: '<img src="/logo/Nucla%20Town.png" alt="Nucla-Naturita" style="width:100%;height:100%;object-fit:contain;">',
-  'club-red': '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#8b1a1a,#cc2200);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Club Red Telluride">🎸</div>',
-  'fresh-food-hub': '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#2d5a1b,#4a8c2a);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Fresh Food Hub">🌽</div>',
-  'humane-society': '<img src="/logo/Telluride%20Humane-400x400.png" alt="Telluride Humane Society" style="width:100%;height:100%;object-fit:contain;">'
+  'telluride-com': '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1a3a5c,#2a5a8c);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Telluride.com">🎪</div>'
 };
 
 const TOWN_IMAGES = {
