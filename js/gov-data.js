@@ -966,27 +966,9 @@ const WHY_THIS_MATTERS = [
     context: 'Fire mitigation has been identified as a top community priority for the region\'s future. Notably, the Society Turn PUD -- at the valley\'s single entry/exit point -- has not undergone a wildfire evacuation analysis despite its massive proposed scale.'
   },
 
-  // ── Housing / Deed Restrictions ──
-  {
-    match: /deed\s*restrict|workforce\s*housing\s*deed|housing\s*authority/i,
-    popup: 'Deed restriction terms determine who can live in workforce housing, at what income levels, and at what price. Changes to individual deeds set precedents for the entire program. Nearly one-third of Telluride voters live in town-managed housing — making this one of the most personally relevant items on any agenda. Policy changes here can affect affordability for hundreds of households for decades.',
-    decision: 'Whether to approve modifications to deed-restricted property sales or housing program rules.',
-    who: 'Current and prospective deed-restricted homeowners and renters -- roughly one-third of Telluride voters live in town-managed housing.',
-    stage: 'Check agenda for whether this is an individual property approval or policy change.',
-    impact: 'Deed restriction terms determine who can live in these units, at what income levels, and at what price. Changes to individual deeds can set precedents for the broader program. Policy changes can affect affordability for hundreds of households.',
-    context: 'The housing affordability paradox is acute: at $1M/unit construction costs, 50% AMI tenants ($42K/year) cannot cover financing. Recent projects saw 60% rent increases over two years. Meanwhile, Measure 2B authorized $64M in new Town debt (with $132M in interest) partially collateralized against housing fund revenue -- creating tension between debt service and keeping units affordable.'
-  },
 
-  // ── Budget / Finance ──
-  {
-    match: /budget\s*reduct|budget\s*session|funding.*staffing|proposed\s*construction\s*projects/i,
-    popup: 'The Town\'s budget has grown from ~$10M in 2015 to ~$95M in 2025, with 212 employees. Budget work sessions are where spending priorities are set before formal adoption. Capital project decisions here determine what gets built — and what doesn\'t. Consultant spending totaled $64M over eight years. This is the best window for public input before the budget is locked in.',
-    decision: 'Review of proposed spending, staffing levels, or capital construction projects.',
-    who: 'All taxpayers and service recipients -- budget decisions determine what services are funded and what gets cut.',
-    stage: 'Work session -- input here shapes the final budget before formal adoption.',
-    impact: 'The Town of Telluride\'s budget has grown from ~$10M (2015) to ~$95-100M (2025), with 212 employees (~10% of the population). Capital project decisions at this stage determine which infrastructure investments move forward.',
-    context: 'Consultant spending alone has totaled $64M over 2017-2025, spiking from $1.9M to $10.5M annually. Measure 2B authorized $64M in additional debt (total cost ~$197M with interest) with no specified projects -- giving Town Council broad spending authority via simple resolution.'
-  },
+
+
 
   // ── Gondola / SMART ──
   {
@@ -1018,15 +1000,7 @@ const WHY_THIS_MATTERS = [
     context: 'The hospital district board is weighing significant partnership proposals (Jensen Partners consulting). Meanwhile, the Society Turn developer has reportedly conditioned the hospital\'s land allocation on the broader PUD advancing. Community members may want to ask: can the hospital secure a site without being tied to 300,000+ sq ft of commercial development it doesn\'t control?'
   },
 
-  // ── School District ──
-  {
-    match: /board\s*of\s*education|school\s*district|telluride\s*school/i,
-    decision: 'School board decisions on budget, staffing, facilities, and educational programs.',
-    who: 'Students, families, teachers, and staff -- plus all property taxpayers who fund the district.',
-    stage: 'Check agenda for whether this is a work session, monthly meeting, or special session.',
-    impact: 'Staffing and budget decisions directly affect class sizes, programs offered, and the quality of education. The district is considering 2026-27 budget reductions of ~$655K including cuts to teaching positions.',
-    context: 'The school district operates in a community under intense development pressure. New commercial projects (hotels, restaurants, retail) increase workforce demand but often don\'t directly generate school funding. Meanwhile, housing costs make it increasingly difficult for teachers and staff to live in the community they serve.'
-  },
+
 
   // ── HB24-1107 / Land Use Judicial Review ──
   {
@@ -1077,75 +1051,10 @@ const WHY_THIS_MATTERS = [
     impact: 'DRB decisions control building aesthetics, massing, and materials in Mountain Village. Large projects reviewed here can significantly affect views, traffic, and neighborhood character.',
     context: 'Mountain Village has its own design standards separate from Telluride\'s HARC. Projects like the gondola terminal redesign and resort-area expansions go through DRB review.'
   },
-
-  // ── General fallback for Fire District ──
-  {
-    match: /fire\s*(protection\s*)?district|station\s*3/i,
-    decision: 'Fire district operations, apparatus, and facilities decisions.',
-    who: 'All residents within the fire protection district -- fire and EMS response times and capabilities affect every property and person.',
-    stage: 'Check agenda for specific items.',
-    impact: 'Station 3 updates and apparatus decisions affect the district\'s capacity to respond to structure fires, wildfires, and medical emergencies in a remote mountain setting with limited mutual aid resources.',
-    context: 'The fire district is pursuing wildfire resiliency code adoption alongside the town. As development increases (potentially adding 1,000+ new daily occupants across proposed projects), fire and EMS capacity must keep pace.'
-  }
 ];
 
-const GOV_GLOSSARY = {
-  'PUD': 'Planned Unit Development -- a special zoning tool that lets a developer propose a custom mix of uses (housing, commercial, open space) that wouldn\'t be allowed under standard zoning rules. The trade-off is that developers get flexibility, but the community gets to negotiate conditions.',
-  'deed restriction': 'A legal rule attached to a property\'s title that limits how it can be used -- for example, requiring the owner to live and work locally, or capping resale prices to keep housing affordable.',
-  'deed-restricted': 'Housing with a legal rule on the title that limits who can buy or rent it (usually local workers) and often caps the price to keep it affordable.',
-  'deed restrictions': 'Legal rules attached to property titles that limit how they can be used -- commonly requiring local residency or capping sale/rental prices to keep housing affordable.',
-  'TABOR': 'Taxpayer\'s Bill of Rights -- a Colorado constitutional amendment that limits how much governments can collect and spend. Any new tax or tax increase must be approved by voters.',
-  'enterprise fund': 'A government account that runs like a business -- it pays for itself through fees (like water or sewer charges) rather than taxes. Enterprise funds are exempt from TABOR spending limits.',
-  'first reading': 'The first time a proposed law (ordinance) is formally presented to the council. It\'s an introduction -- no final vote yet. Public comment is usually accepted.',
-  'second reading': 'The second and usually final presentation of a proposed ordinance. This is typically when council takes the official vote to approve or reject it.',
-  'work session': 'An informal meeting where elected officials discuss issues and hear presentations, but don\'t take formal votes. These are often the best time for public input because decisions haven\'t been made yet.',
-  'quasi-judicial hearing': 'A hearing where elected officials act more like judges than legislators. They must base their decision only on evidence presented and existing rules -- not public opinion or politics. Testimony is usually given under oath.',
-  'ballot measure': 'A proposed law or policy question placed on the election ballot for voters to approve or reject directly, instead of being decided by elected officials.',
-  'mill levy': 'A property tax rate -- one "mill" equals $1 of tax for every $1,000 of assessed property value. A 10-mill levy on a home assessed at $500,000 means $5,000 in annual property tax.',
-  'AMI': 'Area Median Income -- the middle-point household income for the region. Used to set eligibility for affordable housing programs. For example, "60% AMI" means a household earning 60% of the area\'s median income.',
-  'ordinance': 'A local law passed by a town council or board of commissioners. Ordinances go through readings and public hearings before they become enforceable.',
-  'resolution': 'A formal statement of a decision or policy position by a governing body. Unlike an ordinance, a resolution is not a law -- it expresses intent or direction.',
-  'Measure 300': 'A 2024 Telluride ballot measure that proposed requiring voter approval for large commercial developments over 36 feet or 10,000 sq ft. It received ~40% YES votes.',
-  'Measure 2B': 'A Telluride ballot measure that authorized $64M in new Town debt (with ~$132M in total interest) for capital projects and housing, partially secured by housing fund revenue.',
-  'CORA': 'Colorado Open Records Act -- a state law giving the public the right to inspect and copy most government records. Agencies must respond to requests within 3 business days.',
-  'HB24-1107': 'Colorado House Bill 24-1107 -- a state law requiring counties with housing shortages to speed up review of affordable housing projects and reduce regulatory barriers.',
-  'HB23-1123': 'Colorado House Bill 23-1123 -- a state law requiring local governments to allow more housing types and streamline housing development approvals.',
-  'comprehensive plan': 'A community\'s long-range blueprint for growth and land use. It guides zoning decisions, infrastructure investments, and development policy for 10-20 years.',
-  'Comp Plan': 'Short for Comprehensive Plan -- a community\'s long-range blueprint for growth and land use that guides zoning, infrastructure, and development policy.',
-  'zoning': 'Local rules that divide a community into areas (zones) and specify what can be built in each -- residential, commercial, industrial, etc. -- plus building height, density, and setback requirements.',
-  'rezoning': 'The process of changing a property\'s zoning designation -- for example, from residential to commercial. Usually requires public hearings and approval by the local governing body.',
-  'setback': 'The minimum required distance between a building and the property line, street, or other boundary. Setbacks control how close structures can be built to each other or to public spaces.',
-  'annexation': 'The process of bringing land outside town boundaries into the town\'s jurisdiction. Once annexed, the land is subject to the town\'s taxes, regulations, and services.',
-  'special meeting': 'A government meeting called outside the regular schedule to address specific urgent items. Public notice requirements still apply.',
-  'public hearing': 'A formal meeting where community members can testify for or against a proposed action. Officials are required to consider this input before voting.',
-  'variance': 'An exception to zoning rules granted for a specific property -- for example, allowing a building to be taller than normally permitted. Requires a showing of hardship.',
-  'defensible space': 'The area around a building where vegetation and materials are managed to reduce wildfire risk. Typically divided into zones extending 100+ feet from the structure.'
-};
 
-const GLOSSARY_TERMS_SORTED = Object.keys(GOV_GLOSSARY).sort((a, b) => b.length - a.length);
 
-const MEETING_ZOOM_LINKS = {
-  // ── Telluride ──
-  'telluride|2026-03-26|Planning & Zoning Commission':
-    'https://us06web.zoom.us/meeting/register/pvzPtHtIRZmah22XUU2xLg',
-
-  'telluride|2026-03-31|Town Council':
-    'https://us06web.zoom.us/meeting/register/xwQzQrv5TcSwUDVj1eylkg',
-
-  // ── County ──
-  'county|2026-03-25|Board of County Commissioners Special Meeting':
-    'https://us02web.zoom.us/meeting/register/OtNb_dreTomuYTpzADMLGQ#/registration',
-};
-
-const SCHOOL_ZOOM_LINK = 'https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09';
-
-const MEETING_PASSCODES = {
-  // ── County BOCC ──
-  'county|2026-03-25|Board of County Commissioners Meeting': {
-    id: '816 3670 5978',
-    passcode: '025045',
-    phone: '719-359-4580 or 253-205-0468'
-  },
   'county|2026-03-25|Board of County Commissioners Special Meeting': {
     id: '816 3670 5978',
     passcode: '025045',
