@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diamond Ridge — Livable Telluride Deep Dive</title>
+  <script>const TOPIC_KEY = 'diamond';</script>
+  <style>
+    :root {
+      --forest: #21443c; --forest-soft: #2a5347; --accent-green: #2f7a5f;
+      --bg-warm: #fdfbf6; --bg-hero: #efe9dc; --bg-paper: #fffdf9;
+      --text-primary: #1a2e29; --text-secondary: #4a5e57; --text-muted: #7a8a85;
+      --border-soft: rgba(33,68,60,0.12); --shadow-card: 0 4px 18px rgba(36,49,46,0.10);
+      --font-heading: 'Georgia','Times New Roman',serif;
+      --font-main: -apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+    }
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;font-family:var(--font-main);color:var(--text-primary);background:var(--bg-warm);line-height:1.5;}
+
+    /* Nav */
+    .topnav{background:#fff;border-bottom:1px solid var(--border-soft);padding:14px 0;position:sticky;top:0;z-index:50;}
+    .topnav-inner{max-width:1280px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:20px;}
+    .topnav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .topnav-logo img{height:80px;width:auto;object-fit:contain;}
+    .topnav-links{display:flex;gap:14px;margin-left:20px;flex:1;flex-wrap:wrap;}
+    .topnav-links a{color:var(--text-primary);text-decoration:none;font-weight:600;font-size:0.82rem;padding:6px 2px;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;white-space:nowrap;}
+    .topnav-links a:hover{color:var(--forest);}
+    .topnav-links a.active{color:var(--forest);border-bottom-color:var(--forest);}
+    .topnav-cta{display:inline-block;background:var(--forest);color:#fff;text-decoration:none;padding:8px 16px;border-radius:999px;font-weight:600;font-size:0.82rem;white-space:nowrap;}
+
+    /* Hero */
+    .hero{position:relative;width:100%;min-height:320px;overflow:hidden;display:flex;align-items:flex-end;}
+    .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,25,20,0.82) 0%,rgba(10,25,20,0.35) 55%,transparent 100%);z-index:2;}
+    .hero-text{position:relative;z-index:3;padding:40px 48px 40px;max-width:1280px;margin:0 auto;width:100%;}
+    .hero-breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+    .hero-breadcrumb a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.88rem;font-weight:600;}
+    .hero-breadcrumb a:hover{color:#fff;}
+    .hero-breadcrumb .sep{color:rgba(255,255,255,0.45);font-size:0.88rem;}
+    .hero-badge{display:inline-block;background:rgba(47,122,95,0.85);color:#fff;font-size:0.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 14px;border-radius:999px;margin-bottom:12px;}
+    .hero-title{margin:0;font-family:var(--font-heading);font-size:2.4rem;color:#fff;line-height:1.2;text-shadow:0 2px 8px rgba(0,0,0,.4);}
+    .hero-status{margin:12px 0 0;font-size:1rem;color:rgba(255,255,255,.85);max-width:640px;}
+
+    /* Page layout */
+    .page-wrap{max-width:1280px;margin:0 auto;padding:40px 48px 64px;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:40px;align-items:start;}
+
+    /* Sections */
+    .section{margin-bottom:36px;}
+    .section-label{font-size:0.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-green);margin:0 0 14px;}
+    .intro-text{font-size:1.05rem;line-height:1.7;color:var(--text-secondary);margin:0;}
+
+    /* Status card */
+    .status-card{background:#fff;border:1px solid var(--border-soft);border-radius:16px;padding:24px;box-shadow:var(--shadow-card);margin-bottom:28px;}
+    .status-title{font-family:var(--font-heading);font-size:1.2rem;color:var(--text-primary);margin:0 0 10px;line-height:1.35;}
+    .status-copy{font-size:0.92rem;line-height:1.65;color:var(--text-secondary);margin:0 0 16px;}
+    .nextstep{background:rgba(47,122,95,.08);border-left:3px solid var(--accent-green);padding:12px 16px;border-radius:0 8px 8px 0;font-size:0.88rem;color:var(--text-secondary);margin:0;}
+    .nextstep strong{color:var(--forest);}
+
+    /* Timeline */
+    .timeline{display:flex;flex-direction:column;gap:0;}
+    .tl-item{display:grid;grid-template-columns:120px 1fr;gap:0 20px;position:relative;}
+    .tl-item::before{content:'';position:absolute;left:119px;top:8px;bottom:-8px;width:1px;background:var(--border-soft);}
+    .tl-item:last-child::before{display:none;}
+    .tl-date{font-size:0.78rem;font-weight:700;color:var(--text-muted);padding:4px 0 24px;text-align:right;}
+    .tl-dot{width:9px;height:9px;border-radius:50%;background:var(--accent-green);border:2px solid #fff;box-shadow:0 0 0 1px var(--accent-green);margin-top:6px;flex-shrink:0;}
+    .tl-body{padding:0 0 24px 20px;}
+    .tl-body h4{margin:0 0 4px;font-size:0.92rem;font-weight:700;color:var(--text-primary);line-height:1.35;}
+    .tl-body p{margin:0;font-size:0.86rem;line-height:1.6;color:var(--text-secondary);}
+    .tl-item.future .tl-date,.tl-item.future .tl-body h4{color:var(--accent-green);}
+    .tl-item.future .tl-dot{background:#fff;border-color:var(--accent-green);}
+
+    /* Sidebar */
+    .sidebar{display:flex;flex-direction:column;gap:22px;position:sticky;top:90px;}
+    .scard{background:#fff;border:1px solid var(--border-soft);border-radius:16px;padding:22px;box-shadow:var(--shadow-card);}
+    .scard-title{font-size:0.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin:0 0 16px;}
+    .metric{padding:10px 0;border-bottom:1px solid var(--border-soft);}
+    .metric:last-child{border-bottom:none;padding-bottom:0;}
+    .metric-label{font-size:0.78rem;color:var(--text-muted);margin-bottom:2px;}
+    .metric-value{font-size:0.95rem;font-weight:700;color:var(--text-primary);line-height:1.3;}
+    .metric-sub{font-size:0.78rem;color:var(--text-secondary);margin-top:2px;line-height:1.4;}
+    .doc-item{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--border-soft);}
+    .doc-item:last-child{border-bottom:none;padding-bottom:0;}
+    .doc-tag{font-size:0.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-green);}
+    .doc-item a{font-size:0.86rem;color:var(--text-primary);text-decoration:none;font-weight:600;line-height:1.35;}
+    .doc-item a:hover{color:var(--forest);}
+    .doc-item p{margin:0;font-size:0.78rem;color:var(--text-secondary);}
+    .player-item{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border-soft);}
+    .player-item:last-child{border-bottom:none;padding-bottom:0;}
+    .player-icon{font-size:1.2rem;flex-shrink:0;width:28px;text-align:center;}
+    .player-body h4{margin:0 0 3px;font-size:0.88rem;font-weight:700;color:var(--text-primary);}
+    .player-body p{margin:0;font-size:0.78rem;color:var(--text-secondary);line-height:1.4;}
+
+    /* Legal summary */
+    .legal-card{background:rgba(33,68,60,.04);border:1px solid rgba(33,68,60,.15);border-radius:16px;padding:24px;}
+    .legal-label{font-size:0.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--forest);margin:0 0 12px;}
+    .legal-card p{margin:0;font-size:0.88rem;line-height:1.65;color:var(--text-secondary);}
+
+    /* News */
+    .news-item{padding:14px 0;border-bottom:1px solid var(--border-soft);}
+    .news-item:last-child{border-bottom:none;}
+    .news-meta{font-size:0.78rem;color:var(--text-muted);margin-bottom:4px;}
+    .news-item a{font-size:0.92rem;font-weight:600;color:var(--text-primary);text-decoration:none;line-height:1.35;display:block;margin-bottom:4px;}
+    .news-item a:hover{color:var(--forest);}
+    .news-item p{margin:0;font-size:0.82rem;color:var(--text-secondary);}
+
+    /* Back link */
+    .back-strip{background:var(--bg-hero);border-bottom:1px solid var(--border-soft);padding:12px 0;}
+    .back-strip-inner{max-width:1280px;margin:0 auto;padding:0 48px;}
+    .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--forest);text-decoration:none;font-weight:600;font-size:0.88rem;}
+    .back-link:hover{text-decoration:underline;}
+
+    /* Empty state */
+    .empty-note{font-size:0.86rem;color:var(--text-muted);font-style:italic;padding:8px 0;}
+
+    @media(max-width:900px){
+      .page-wrap{grid-template-columns:1fr;padding:24px 24px 48px;}
+      .sidebar{position:static;}
+      .hero-text{padding:32px 24px;}
+      .hero-title{font-size:1.8rem;}
+      .topnav-links{display:none;}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="topnav-inner">
+      <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
+        <img src="/logo/Livable Telluride Logo.png" alt="Livable Telluride">
+      </a>
+      <nav class="topnav-links">
+        <a href="/local-news.html">Local News</a>
+        <a href="/gov-hub.html">Gov-Hub</a>
+        <a href="/deep-dives.html">Deep Dives</a>
+        <a href="/events.html">Events</a>
+        <a href="/hub-bub.html">Hub-Bub</a>
+        <a href="/local-orgs.html">Local Orgs</a>
+        <a href="/housing.html">Housing</a>
+        <a href="/legal-notices.html">Legal Notices</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <a class="topnav-cta" href="https://livabletelluride.org/#tab-subscribe">Subscribe</a>
+    </div>
+  </header>
+
+  <div class="back-strip">
+    <div class="back-strip-inner">
+      <a class="back-link" href="/deep-dives.html">← Back to Deep Dives</a>
+    </div>
+  </div>
+
+  <div id="hero-section"></div>
+  <div id="page-content"></div>
+
+  <script src="/js/gov-data.js?v=dd1"></script>
+  <script>
+    // Merge gondola data if present
+    if (typeof GONDOLA_DATA !== 'undefined' && typeof LAND_USE_ISSUES !== 'undefined') {
+      LAND_USE_ISSUES.gondola = GONDOLA_DATA;
+    }
+
+    const FALLBACK_IMAGES = {
+      wildfire: '/logo/Telluride Fire.png',
+      diamond:  '/logo/Aldasoro.png',
+      gondola:  '/images/blog/gondola-station.png',
+    };
+
+    function esc(s) {
+      return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function renderTopic(key) {
+      if (typeof LAND_USE_ISSUES === 'undefined') {
+        document.getElementById('page-content').innerHTML = '<p style="padding:40px">Data not available — please reload.</p>';
+        return;
+      }
+      const issue = LAND_USE_ISSUES[key];
+      if (!issue) { document.getElementById('page-content').innerHTML = '<p style="padding:40px">Topic not found.</p>'; return; }
+
+      const imgSrc = issue.heroImage || FALLBACK_IMAGES[key] || '/images/wilson-peak.png';
+
+      // Hero
+      document.getElementById('hero-section').innerHTML = `
+        <section class="hero" style="min-height:340px;">
+          <img class="hero-img" src="${esc(imgSrc)}" alt="${esc(issue.heroAlt||issue.label||'')}">
+          <div class="hero-overlay"></div>
+          <div class="hero-text">
+            <div class="hero-breadcrumb">
+              <a href="/deep-dives.html">Deep Dives</a>
+              <span class="sep">›</span>
+              <span style="color:rgba(255,255,255,.85);font-size:.88rem;">${esc(issue.label||key)}</span>
+            </div>
+            <h1 class="hero-title">${esc(issue.label||key)}</h1>
+            ${issue.statusTitle ? `<p class="hero-status">${esc(issue.statusTitle)}</p>` : ''}
+            ${issue.heroCredit ? `<p style="margin:8px 0 0;font-size:.72rem;color:rgba(255,255,255,.5);">${esc(issue.heroCredit)}</p>` : ''}
+          </div>
+        </section>`;
+
+      document.title = (issue.label||key) + ' — Livable Telluride Deep Dive';
+
+      // Main columns
+      const mainHtml = buildMain(issue);
+      const sideHtml = buildSidebar(issue);
+
+      document.getElementById('page-content').innerHTML = `
+        <div class="page-wrap">
+          <div class="main-col">${mainHtml}</div>
+          <aside class="sidebar">${sideHtml}</aside>
+        </div>`;
+    }
+
+    function buildMain(issue) {
+      let html = '';
+
+      // Intro
+      if (issue.intro) {
+        html += `<div class="section"><p class="intro-text">${esc(issue.intro)}</p></div>`;
+      }
+
+      // Status + next step
+      if (issue.statusTitle || issue.statusCopy || issue.nextStep) {
+        html += `<div class="status-card">`;
+        if (issue.statusTitle) html += `<h3 class="status-title">${esc(issue.statusTitle)}</h3>`;
+        if (issue.statusCopy)  html += `<p class="status-copy">${esc(issue.statusCopy)}</p>`;
+        if (issue.nextStep)    html += `<p class="nextstep"><strong>Watch for:</strong> ${esc(issue.nextStep)}</p>`;
+        html += `</div>`;
+      }
+
+      // Legal summary
+      if (issue.legalSummary) {
+        html += `<div class="section legal-card">
+          <div class="legal-label">Legal Issues Summary</div>
+          <p>${esc(issue.legalSummary)}</p>
+        </div>`;
+      }
+
+      // Timeline
+      if (issue.timeline && issue.timeline.length) {
+        html += `<div class="section">
+          <div class="section-label">Timeline</div>
+          <div class="timeline">`;
+        issue.timeline.forEach(t => {
+          html += `<div class="tl-item${t.future?' future':''}">
+            <div class="tl-date">${esc(t.date||'')}</div>
+            <div style="display:flex;gap:0;">
+              <div class="tl-dot" style="margin-top:6px;flex-shrink:0;"></div>
+              <div class="tl-body">
+                <h4>${esc(t.title||'')}</h4>
+                ${t.copy ? `<p>${esc(t.copy)}</p>` : ''}
+              </div>
+            </div>
+          </div>`;
+        });
+        html += `</div></div>`;
+      }
+
+      // News
+      if (issue.news && issue.news.length) {
+        html += `<div class="section">
+          <div class="section-label">Recent Coverage</div>`;
+        issue.news.forEach(n => {
+          html += `<div class="news-item">
+            <div class="news-meta">${esc(n.source||'')}${n.date ? ' · '+esc(n.date) : ''}</div>
+            <a href="${esc(n.href||'#')}" target="_blank" rel="noopener">${esc(n.title||'')}</a>
+            ${n.copy ? `<p>${esc(n.copy)}</p>` : ''}
+          </div>`;
+        });
+        html += `</div>`;
+      }
+
+      return html;
+    }
+
+    function buildSidebar(issue) {
+      let html = '';
+
+      // Metrics
+      if (issue.snapshot && issue.snapshot.length) {
+        html += `<div class="scard">
+          <div class="scard-title">Key Facts</div>`;
+        issue.snapshot.forEach(m => {
+          html += `<div class="metric">
+            <div class="metric-label">${esc(m.label||'')}</div>
+            <div class="metric-value">${esc(m.value||'')}</div>
+            ${m.sub ? `<div class="metric-sub">${esc(m.sub)}</div>` : ''}
+          </div>`;
+        });
+        html += `</div>`;
+      }
+
+      // Players
+      if (issue.players && issue.players.length) {
+        html += `<div class="scard">
+          <div class="scard-title">Key Players</div>`;
+        issue.players.forEach(p => {
+          html += `<div class="player-item">
+            <div class="player-icon">${p.icon||'👤'}</div>
+            <div class="player-body">
+              <h4>${esc(p.title||'')}</h4>
+              ${p.copy ? `<p>${esc(p.copy)}</p>` : ''}
+            </div>
+          </div>`;
+        });
+        html += `</div>`;
+      }
+
+      // Documents
+      if (issue.docs && issue.docs.length) {
+        html += `<div class="scard">
+          <div class="scard-title">Key Documents</div>`;
+        issue.docs.forEach(d => {
+          html += `<div class="doc-item">
+            ${d.tag ? `<span class="doc-tag">${esc(d.tag)}</span>` : ''}
+            <a href="${esc(d.href||'#')}" target="_blank" rel="noopener">${esc(d.title||'')}</a>
+            ${d.copy ? `<p>${esc(d.copy)}</p>` : ''}
+          </div>`;
+        });
+        html += `</div>`;
+      }
+
+      // Upcoming meetings
+      if (issue.meetings && issue.meetings.length) {
+        html += `<div class="scard">
+          <div class="scard-title">Upcoming Meetings</div>`;
+        issue.meetings.forEach(m => {
+          html += `<div class="doc-item">
+            <span class="doc-tag">${esc(m.date||'')}${m.time ? ' · '+esc(m.time) : ''}</span>
+            <a href="${esc(m.href||'#')}" target="_blank" rel="noopener">${esc(m.title||'')}</a>
+            ${m.location ? `<p>${esc(m.location)}</p>` : ''}
+          </div>`;
+        });
+        html += `</div>`;
+      }
+
+      return html || '<div class="empty-note">Sidebar data loading…</div>';
+    }
+
+    renderTopic(TOPIC_KEY);
+  </script>
+</body>
+</html>
