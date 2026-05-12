@@ -1981,6 +1981,39 @@ async function fetchSheridanOperaHouseEvents() {
 // (e.g., Wildfire Aware Fair, water summits).
 const OURAY_COUNTY_EVENTS = [
   {
+    title: "CC4CA 2026 Annual Meeting",
+    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3473",
+    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3473",
+    pubDate: "2026-06-10T12:00:00.000Z",
+    source: "ouraycounty",
+    sourceLabel: "Ouray County",
+    category: "Community Event",
+    location: "- Vail CO 81657",
+    imageUrl: ""
+  },
+  {
+    title: "Love Your Trail Day",
+    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3642",
+    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3642",
+    pubDate: "2026-06-06T08:00:00.000Z",
+    source: "ouraycounty",
+    sourceLabel: "Ouray County",
+    category: "Community Event",
+    location: "Uncompahgre River Walk - Ouray CO 81427",
+    imageUrl: ""
+  },
+  {
+    title: "Ouray County EMS Dinner - Community Needs Assessment Follow-Up",
+    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3645",
+    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3645",
+    pubDate: "2026-05-25T17:00:00.000Z",
+    source: "ouraycounty",
+    sourceLabel: "Ouray County",
+    category: "Community Event",
+    location: "- Ouray CO 81427",
+    imageUrl: ""
+  },
+  {
     title: "West Slope Water Summit",
     link: "https://ouraycountyco.gov/Calendar.aspx?EID=3637",
     description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3637",
@@ -2009,7 +2042,1053 @@ function fetchOurayCountyEvents() {
 // community events (concerts, workshops, sports, fairs, etc.).
 // fetchOurayRidgwayEvents() prefers this const when non-empty and falls
 // back to a live Localist API call for the initial zero-data state.
-const OURAY_RIDGWAY_EVENTS = [];
+const OURAY_RIDGWAY_EVENTS = [
+  {
+    title: "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
+    link: "https://sherbino.org/events/",
+    description: "MONTHLY WELCOME HOME ALLIANCE VETERAN’S COFFEE @ THE SHERBINO Every Branch. Every Era. Every Ability. Offering coffee, donuts and camaraderie. Mike Trickey and April Heard will be there bringing information to you on topics such as: Navigating the VA, Housing, Jobs, Volunteer Opportunities, community resources, VA benefits, recreation and mental health. For more information or to offer support (products or monetary), call 970-765-2210 or visit https://www.whafv.org/ Occurs the 2nd Tuesday of Every Month || 10 am - Noon || Free to attend || Vets Only, Please",
+    pubDate: "2026-05-12T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg"
+  },
+  {
+    title: "On Display: Layers of Faces and Life-Paintings by Ruth Higdon and Julie Ahern",
+    link: "https://events.ourayridgwayevents.com/event/layers-of-faces-and-life-paintings-by-ruth-higdon-and-julie-ahern",
+    description: "A duo exhibition of new works by local painters Julie Ahern and Ruth Higdon. More info decker@ridgwayfuse.org",
+    pubDate: "2026-05-12T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52709680184864/huge/bf651b7d434184420bcaf9702ff358cbd88d3b9e.jpg"
+  },
+  {
+    title: "TYLER SIMMONS",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://www.tysimmonsmusic.com/\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-05-12T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "The M Factor 2:  Before the Pause ~ a Film and Panel discussion on Perimenopause",
+    link: "https://sherbino.org/event/m-factor-2-film-panel-ridgway/",
+    description: "Tickets May 12 @ 6:30 pm – 8:00 pm Doors: 6:00 PM || Film: 6:30 PM, Discussion Follows || Entry by Donation Setting and Location: Seated at the Sherbino About The M Factor 2 Film Before the Pause shines a light on perimenopause through real women’s stories—teachers, firefighters, and doctors—showing how silence and stigma derail lives, and why early awareness is essential to protect women’s health, work, and identity. A film by Women in the Room Productions and Take Flight Productions Power of Early Awareness: By pairing personal stories with leading experts the film makes a compelling case that early education and recognition can transform women’s health careers and identity Hidden Reality: Before the Pause shines a light on perimenopause the often ignored decade before menopause that disrupts women’s health lives and sense of stability Dismissed Symptoms: Women are frequently told their symptoms are psychological or insignificant even as they …",
+    pubDate: "2026-05-13T00:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52651376973623/huge/0b145ba800e005cf411abef3100650079d9e247d.jpg"
+  },
+  {
+    title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
+    link: "www.FloatingLotusBrewery.com",
+    description: "Join us at the Lotus for a midweek tradition that brings together musicians, music lovers, and the incredible local talent that makes our community shine. From intimate solo sets to full-band jam sessions with rotating players, Open Mic Night is always full of surprises. Want to play? We’d love to have you — signups begin at 5:30pm. Just bring your instrument and your creativity, and we’ll take care of the rest. Our stage is fully equipped with PA, mics, drums, bass, and everything you need to plug in and play. 🎟️ Free admission 🍻 Grab a beer, settle in, and enjoy the show Come be part of the music — on stage or in the crowd!",
+    pubDate: "2026-05-14T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/ed08b494666358349bc84e969db6e8b262ef71aa.jpg"
+  },
+  {
+    title: "Paint & Sip with Nicole: \"Morning Peaks\"",
+    link: "https://anc.apm.activecommunities.com/weehawkenarts/activity/search/detail/5875?onlineSiteId=0&from_original_cui=true",
+    description: "Paint & Sip with Nicole: \"Morning Peaks\" Cora Annex, Ridgway 6:30pm-8:30pm $49 incl. all supplies and an adult beverage Registration: www.weehawkenarts.org Unwind, sip, and create! Join us for a relaxed painting session designed for all skill levels—no experience needed. Nicole will guide you through the featured painting while you enjoy a beverage of your choice! All art supplies and one adult beverage are included; just bring your creativity! About Nicole Greenfield: Nicole Greenfield is a painter based in Ridgway, Colorado. Working primarily in acrylic and oil, she creates expressive portraits and atmospheric landscapes that explore the quiet intimacy found in observing people and the natural world. Nicole is a self-taught artist who has developed her skills through years of dedicated practice and online learning. …",
+    pubDate: "2026-05-14T00:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52648457990305/huge/7eef9fbe8e9e42d17143c05cd7a3e8515b667f56.jpg"
+  },
+  {
+    title: "CHLOE KIMES ~ Live at the Sherbino with Heather & Douglas Opening!",
+    link: "https://sherbino.org/events/category/music/",
+    description: "CHLOE KIMES || Doors at 6:30 pm || Heather & Douglas at 6:45 pm || Chloe Kimes at 7:30 pm $25 advance / $28 at the door || Limited reserved seating available Chloe Kimes is described as a “storyteller-in-the-making” with a timeless sound rooted in Americana traditions. Fronting a spirited alt-country band, she is quickly emerging as one of the most compelling new voices in contemporary folk and alt-country. A live performance of her song “Coors Light” at WDVX’s Blue Plate Special in Knoxville went viral, amassing more than 4 million views across social media in just one week. In response to overwhelming demand, Kimes recorded a studio version at RCA Studio A with producer Phillip Smith and released the single within weeks of its online debut. Chloe is a Michigan-born singer, songwriter, and bandleader currently based in Nashville, TN. …",
+    pubDate: "2026-05-14T00:45:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52403015268588/huge/ccccef9e7c2dcfc1f1f688551bd0ff7ef17953ec.jpg"
+  },
+  {
+    title: "A Minecraft Movie: Movie Night @ the Wright",
+    link: "https://thewrightoperahouse.org/",
+    description: "A Minecraft Movie: Movie Night @ the Wright WHEN? Wednesday, May 13 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 1h 45min RATING: PG ABOUT THE FILM A Minecraft Movie (2025) transports audiences into the imaginative, block-built world of Minecraft, where creativity is the key to survival. When an unexpected threat emerges, a group of unlikely heroes must learn to craft, build, and work together to protect their world from destruction. A colorful adventure about teamwork, creativity, and the power of imagination. Tickets $5 In-person screening at the historic Wright Opera House Concessions available. Part of Movie Night @ the Wright, bringing film, community, and conversation to downtown Ouray since 1909.",
+    pubDate: "2026-05-14T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52391676764493/huge/375fc7e31f07d1029c24c49de31c3547af1a53ee.jpg"
+  },
+  {
+    title: "Ouray Economic Development Committee",
+    link: "https://events.ourayridgwayevents.com/event/ouray-economic-development-committee",
+    description: "The Ouray Economic Development Committee (OEDC) works as the liaison between the City and the local business community. This includes creating and implementing an Economic Development Plan and economic development incentives to best serve the business community and to align with programs that induce private investment enterprises and commerce. The committee also explores regional economic development efforts with the Town of Ridgway and Ouray County as well as is tasked with developing a Business Expansion and Retention (BEAR) program, participating in policy discussions and revisions to community planning documents, and making recommendations to the City Council about economic incentive requests.",
+    pubDate: "2026-05-14T14:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
+  },
+  {
+    title: "Pilates Mat",
+    link: "https://ridgwaypilates.punchpass.com/catalogs/300",
+    description: "All Levels Pilates Mat class. Classical sequence Int to challenge, strengthen and stretch you wehole body. Every Thursday at 9:30am. Pricing Four lessons for $120 Eight lessons for $200 Become a member and pay $100/month to attend weekly. Purchase a pass here: https://ridgwaypilates.punchpass.com/catalogs/300 Class is limited to six people. Mats are included. Please wear socks, put your hair up and choose clothing free of metal.",
+    pubDate: "2026-05-14T15:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
+  },
+  {
+    title: "On Display: Layers of Faces and Life-Paintings by Ruth Higdon and Julie Ahern",
+    link: "https://events.ourayridgwayevents.com/event/layers-of-faces-and-life-paintings-by-ruth-higdon-and-julie-ahern",
+    description: "A duo exhibition of new works by local painters Julie Ahern and Ruth Higdon. More info decker@ridgwayfuse.org",
+    pubDate: "2026-05-14T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52709680184864/huge/bf651b7d434184420bcaf9702ff358cbd88d3b9e.jpg"
+  },
+  {
+    title: "COMEDY NIGHT",
+    link: "www.FloatingLotusBrewery.com",
+    description: "Bohemian Boys Comedy Club Returns to the Lotus The laughs are back—uncensored and unapologetic. Bohemian Boys Comedy Club is returning to Floating Lotus Brewery for a night of sharp, high-energy stand-up. Expect bold material, quick wit, and plenty of moments that push the line—in the best way. This is edgy, mature comedy intended for adults—not your average open mic, and definitely not for the easily offended. Grab a pint, find your seat, and settle in for a night that hits a little harder than your typical Thursday. Thursday, May 14th Show starts at 7PM $17 Advance / $20 at the Door Seats are limited, and these shows tend to fill up—advance tickets are strongly recommended. Come early, get comfortable, and get ready to laugh.",
+    pubDate: "2026-05-15T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52648717659533/huge/649cc93da4bd5a03f9adfd8f7fe04a76ab80cda9.jpg"
+  },
+  {
+    title: "THIRSTY THURSDAY - Game Night at Floating Lotus",
+    link: "www.FloatingLotusBrewery.com",
+    description: "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who came to have a good time. Happening 7-9pm every week",
+    pubDate: "2026-05-15T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg"
+  },
+  {
+    title: "Steps Tavern Presents Karaoke Night",
+    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
+    description: "Steps Tavern Presents Karaoke Night. Doors Open at 7:00 PM. Karaoke Begins at 8:00 PM",
+    pubDate: "2026-05-15T02:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "STEPS TAVERN",
+    imageUrl: "https://localist-images.azureedge.net/photos/52633505531238/huge/33b9b47c734793a754893ee4e67227b39326b67b.jpg"
+  },
+  {
+    title: "Full-Scale Evacuation Exercise",
+    link: "https://events.ourayridgwayevents.com/event/full-scale-evacuation-exercise",
+    description: "On May 15 from 9am -4pm, Ouray County will conduct a full-scale evacuation exercise utilizing resources from around the County, such as the City of Ouray, Town of Ridgway and County personnel. Residents can expect to see significant first responder activity in and around the Town of Ridgway during this time. This is only an exercise. There is no real emergency. Ouray County residents are encouraged to participate. Participation doesn not require that the scenario take place in your neighborhood. Citizens may volunteer to serve as: EvacueesInjured evacueesIndivisuals with access or functional needsFamily members searching for loved onesGeneral volunteers (roles will be assigned as needed)Residents interested in participating can sign up using the County's Google Form. For more details about this evacuation exercise, click here.",
+    pubDate: "2026-05-15T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray County",
+    imageUrl: "https://localist-images.azureedge.net/photos/52383007527888/huge/5b43c56ea03c7d9c8e3654fb03720c180817cbe3.jpg"
+  },
+  {
+    title: "Faces, Flowers, Rock n Roll:  An Art Show",
+    link: "FloatingLotusBrewery.com",
+    description: "Join us for a weekend of color, character, and creative energy as we feature the work of Daniel Braddix—a true gentleman of the road whose journey from corporate life to wild places has shaped a deeply expressive style. From Big Sur to Maui and now Western Colorado, Daniel paints what he lives: faces full of soul, flowers bursting with life, and moments pulled straight from the edge of adventure. These pieces aren’t just paintings—they’re snapshots of a life lived outside, created in the mountains, deserts, and forests with canvas in one hand and the world in front of him. Come grab a pint, meet the artist, and experience a collection that’s equal parts beauty, grit, and rock n’ roll spirit.",
+    pubDate: "2026-05-15T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52694643294251/huge/8faa7c02217ad28c65635d406cf8d44296cfa174.jpg"
+  },
+  {
+    title: "Ridgway Bird Walks & Talks: Birds of Ridgway State Park",
+    link: "https://weehawkenarts.org/education/adult-art-classes/",
+    description: "Join Mike Campbell, a Colorado native, lifelong birder, retired educator, wildlife artist, bird banding educator, and Friends of Ridgway State Park board member, as he shares his experiences and knowledge of our local feathered friends and the environment we share during a guided Bird Walk & Talk in Ouray County. Small group sizes will allow the experience to be tailored to participants’ knowledge levels and interests. Times, meeting location, and any weather-related updates will be provided via email prior to the event. A waiver needs to be signed before the event. Please do so here. If you're having issues with registration, please email lexi@weehawkenarts.org.",
+    pubDate: "2026-05-16T13:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52384803918022/huge/ed8181025b7e5e255684a399ff4439c3ac9982c8.jpg"
+  },
+  {
+    title: "Free Community Shred Day",
+    link: "https://events.ourayridgwayevents.com/event/shred-day",
+    description: "Alpine Bank invites you to a free on-site document shredding day to securely dispose of unwanted documents with personal information. Staples and paperclips do not need to be removed. Limit 4 boxes per household and business. Donations accepted to benefit Girl Scouts of Colorado Troop #17986.",
+    pubDate: "2026-05-16T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Alpine Bank Ridgway",
+    imageUrl: "https://localist-images.azureedge.net/photos/52818545130383/huge/bf4754150c301fdc61316e2f73266ef866f46f02.jpg"
+  },
+  {
+    title: "Trails Training for Crew Leaders",
+    link: "volunteervoc.org",
+    description: "Get hands-on with stewardship and leadership at Trails Training for Crew Leaders, hosted in partnership with Volunteer for Outdoor Colorado. This training is designed to prepare participants for the upcoming trail work project taking place May 30–31. Learn the fundamentals of trail building, crew leadership, and outdoor project coordination from experienced instructors while gaining practical skills you can apply directly in the field. Whether you’re new to trail work or looking to step into a leadership role, this is a great opportunity to build confidence and capability in a hands-on environment. Join us in supporting our public lands, connecting with like-minded volunteers, and getting ready to make a real impact on Ouray-area trails. Learn more or sign up at volunteervoc.org.",
+    pubDate: "2026-05-16T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52701299047770/huge/1ff0d8d6513ba9eeb96ab4f991e91b8bfc689e77.jpg"
+  },
+  {
+    title: "Cedar Hill Cemetery Spring Clean Up Day (Volunteer)",
+    link: "https://events.ourayridgwayevents.com/event/cedar-hill-cemetery-spring-clean-up-day-volunteer",
+    description: "Every year, the Friends of Cedar Hill Cemetery Non-Profit hosts a Spring Clean-up day to support the cemetery, honor those buried there, and clean up after the rams! (Yes, they really do knock over headstones to scratch an itch.) All are welcome to join us! Please bring gloves, gardening tools, and a smile :)",
+    pubDate: "2026-05-16T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Cedar Hill Cemetery 18510 Highway 550, Ridgway, CO, United States, 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52772277266907/huge/d5a9dc9b64c78e0f660049ca5ab2d28cd0340139.jpg"
+  },
+  {
+    title: "Ridgway Railroad Museum FREE Train Rides",
+    link: "https://www.ridgwayrailroadmuseum.org/",
+    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
+    pubDate: "2026-05-16T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
+  },
+  {
+    title: "Faces, Flowers, Rock n Roll:  An Art Show",
+    link: "FloatingLotusBrewery.com",
+    description: "Join us for a weekend of color, character, and creative energy as we feature the work of Daniel Braddix—a true gentleman of the road whose journey from corporate life to wild places has shaped a deeply expressive style. From Big Sur to Maui and now Western Colorado, Daniel paints what he lives: faces full of soul, flowers bursting with life, and moments pulled straight from the edge of adventure. These pieces aren’t just paintings—they’re snapshots of a life lived outside, created in the mountains, deserts, and forests with canvas in one hand and the world in front of him. Come grab a pint, meet the artist, and experience a collection that’s equal parts beauty, grit, and rock n’ roll spirit.",
+    pubDate: "2026-05-16T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52694643294251/huge/8faa7c02217ad28c65635d406cf8d44296cfa174.jpg"
+  },
+  {
+    title: "Trails Training for Crew Leaders",
+    link: "volunteervoc.org",
+    description: "Get hands-on with stewardship and leadership at Trails Training for Crew Leaders, hosted in partnership with Volunteer for Outdoor Colorado. This training is designed to prepare participants for the upcoming trail work project taking place May 30–31. Learn the fundamentals of trail building, crew leadership, and outdoor project coordination from experienced instructors while gaining practical skills you can apply directly in the field. Whether you’re new to trail work or looking to step into a leadership role, this is a great opportunity to build confidence and capability in a hands-on environment. Join us in supporting our public lands, connecting with like-minded volunteers, and getting ready to make a real impact on Ouray-area trails. Learn more or sign up at volunteervoc.org.",
+    pubDate: "2026-05-17T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52701299047770/huge/1ff0d8d6513ba9eeb96ab4f991e91b8bfc689e77.jpg"
+  },
+  {
+    title: "Wildfire Workshop",
+    link: "https://events.ourayridgwayevents.com/event/wildfire-workshop",
+    description: "Join us to learn how to protect your property from wildfire with tips from local experts. Bring kids to explore fire trucks, meet your local responders, and enjoy burgers and hot dogs. There will be two dates you can join us! April 22, 2026 from 4-7 pm and May 17, 2026 from 12:30 - 3:30 pm located at the Ouray Fire Station.",
+    pubDate: "2026-05-17T18:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Fire Station",
+    imageUrl: "https://localist-images.azureedge.net/photos/52455176717624/huge/dc2edbe63a90246bbcc6cb6b2ca58c2ddfb9e403.jpg"
+  },
+  {
+    title: "PARK - Ultimate Frisbee",
+    link: "https://events.ourayridgwayevents.com/event/park-ultimate-frisbee",
+    description: "Come play frisbee! Anyone is welcome.",
+    pubDate: "2026-05-17T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Fellin Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/51807883052581/huge/9d7f0c7c4c96318902b1dfef1c3f821c9b3189d1.jpg"
+  },
+  {
+    title: "Inner Yoga:  Breathwork & Meditation Workshop",
+    link: "https://www.beetrueyou.com/",
+    description: "Interested in breathwork and starting or deepening your meditation practice? Enjoy diving into ways to develop or deepen your home meditation practice. Includes an all levels yet gentle to moderate yoga class designed to support entering into a deep state of meditation. The class will begin with a moment of bhakti (chanting with harmonium) and a discussion and handout of tips on preparing for or deepening meditation. The class will end with 15 minutes of pranayama (breath work), 15 minutes of guided meditation, 5 minutes of silent seated meditation and 10 minutes of savasana with optional essential oils. Guided introspection on your intentions for your life can be included. Step out back into the world with a vibration of the peace of your soul from stillness and going within yourself. Presented by Elizabeth Lava of Bee True You.",
+    pubDate: "2026-05-17T22:15:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52836703590513/huge/0b139551bb14658eac619d3a5a58309c54795221.jpg"
+  },
+  {
+    title: "Ouray Softball Spring Training",
+    link: "https://events.ourayridgwayevents.com/event/ouray-softball-spring-training",
+    description: "Step onto the field for Ouray Softball Spring Training at Fellin Park. This preseason program is designed to shake off the rust, build skills, and get players ready for summer league action. Open to a range of ages and experience levels, spring training focuses on fundamentals, teamwork, and getting back into the rhythm of the game. Whether you're refining your swing, sharpening fielding skills, or just getting back in the game, it’s a great way to kick off the season. Come ready to play, connect with teammates, and enjoy spring evenings on the diamond in Ouray. Want to join a team, but you aren't already involved? Sign up Here!",
+    pubDate: "2026-05-17T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52701275725771/huge/58498e59bf3c36b5491225bca2838359fa0701bd.jpg"
+  },
+  {
+    title: "On Display: Layers of Faces and Life-Paintings by Ruth Higdon and Julie Ahern",
+    link: "https://events.ourayridgwayevents.com/event/layers-of-faces-and-life-paintings-by-ruth-higdon-and-julie-ahern",
+    description: "A duo exhibition of new works by local painters Julie Ahern and Ruth Higdon. More info decker@ridgwayfuse.org",
+    pubDate: "2026-05-18T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52709680184864/huge/bf651b7d434184420bcaf9702ff358cbd88d3b9e.jpg"
+  },
+  {
+    title: "Senior Lunch by Neighbor to Neighbor",
+    link: "https://www.ourayneighbor.com/services",
+    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
+    pubDate: "2026-05-18T18:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
+  },
+  {
+    title: "WCOC After 5 Monthly Meeting",
+    link: "www.womansclubouraycounty.org/",
+    description: "The Woman's Club of Ouray County hosts WCOC After 5 the third Monday of each month. The \"WCOC After 5\" program has been developed in response for women in our community who cannot make the regular daytime meetings, however would like to be a part of the Woman's Club of Ouray County. This group will also be integral in the WCOC's Mission of Community Service and Philanthropy in Ouray County. Please visit the WCOC website for the location, speaker and meeting details. All Ouray County women are invited!",
+    pubDate: "2026-05-18T23:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Please visit the WCOC website for location information",
+    imageUrl: "https://localist-images.azureedge.net/photos/52338935097442/huge/c9303fa52ac8d19bebfdaf10538caf8eef7e84b4.jpg"
+  },
+  {
+    title: "WCOC After 5 Monthly Meeting",
+    link: "www.womansclubouraycounty.org/",
+    description: "The Woman's Club of Ouray County hosts WCOC After 5 the third Monday of each month. The \"WCOC After 5\" program has been developed in response for women in our community who cannot make the regular daytime meetings, however would like to be a part of the Woman's Club of Ouray County. This group will also be integral in the WCOC's Mission of Community Service and Philanthropy in Ouray County. Please visit the WCOC website for the location, speaker and meeting details. All Ouray County women are invited!",
+    pubDate: "2026-05-18T23:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Please check WCOC website for meeting location",
+    imageUrl: "https://localist-images.azureedge.net/photos/52338935097442/huge/c9303fa52ac8d19bebfdaf10538caf8eef7e84b4.jpg"
+  },
+  {
+    title: "Mid-Year Water Summit",
+    link: "https://www.montrosecounty.net/891/West-Slope-Water-Summit",
+    description: "Don’t miss this opportunity to join community leaders, experts, and stakeholders for important conversations about the future of water in our region. The event is free to the public, but registration is required. We hope to see you there! A complimentary breakfast will be provided. Our speakers include: Commissioner Sue HansenColorado River DistrictUncompahgre Valley Water Users Association (UVWUA)City of Montrose*Speakers are subject to change* Register online at: www.westslopewatersummit.com For questions, please call: 970-252-4508 or pr@montrosecounty.net",
+    pubDate: "2026-05-19T13:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Montrose County Event Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/52807467209523/huge/c271b09abe97ea34769db4577f3e08c068afd95a.jpg"
+  },
+  {
+    title: "On Display: Layers of Faces and Life-Paintings by Ruth Higdon and Julie Ahern",
+    link: "https://events.ourayridgwayevents.com/event/layers-of-faces-and-life-paintings-by-ruth-higdon-and-julie-ahern",
+    description: "A duo exhibition of new works by local painters Julie Ahern and Ruth Higdon. More info decker@ridgwayfuse.org",
+    pubDate: "2026-05-19T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52709680184864/huge/bf651b7d434184420bcaf9702ff358cbd88d3b9e.jpg"
+  },
+  {
+    title: "Woman's Club of Ouray County monthly meeting",
+    link: "www.womansclubouraycounty.org/",
+    description: "All Ouray County women are invited to attend the monthly meeting for the Woman's Club of Ouray County (WCOC). The WCOC, created in 1897, is a local philanthropic and community focused nonprofit organization. Monthly meetings include local speakers, a social hour and discussion regarding events to volunteer in and around Ouray County. For more information about the monthly meeting and the WCOC, please visit the organization's website.",
+    pubDate: "2026-05-19T19:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52338847179921/huge/a804a495547d393d16494cf6fdbbd49572b64a68.jpg"
+  },
+  {
+    title: "DONNY MORALES",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://donnymorales.net/\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-05-19T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "DONNY MORALES",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-05-19T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Decker Room New Volunteer Orientation",
+    link: "www.ridgwayfuse.org",
+    description: "Join our wonderful volunteer team at the Decker! If you would like to help with Gallery Sitting during open hours, events, and more, please attend a New Volunteer Orientation to get started! You'll learn about the Decker Room and the events and programs that take place here. Volunteers should be able to commit to consistent volunteer hours each month! Email decker@ridgwayfuse.org for info and to RSVP.",
+    pubDate: "2026-05-19T22:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52568082541214/huge/49b7c4c5e83ca4147b872fdb5be7fe87b78551c5.jpg"
+  },
+  {
+    title: "Ridgway FUSE Creative Main Street - Committee Meeting",
+    link: "https://www.ridgwayfuse.org/meetings",
+    description: "Ridgway FUSE, a Creative District & Main Street Program, nurtures the cultural and economic vitality of Ridgway, Colorado All Ridgway FUSE Committee Meetings are open to the public. Click here for agendas and notes. Interested residents may apply to serve on the FUSE committee here. Email Tera Wick at twick@town.ridgway.co.us or call 970-626-5308 x 215 with questions.",
+    pubDate: "2026-05-19T23:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52305506266326/huge/6f7fb94915fd0e9d2c59d779c91e1ffdf9538f60.jpg"
+  },
+  {
+    title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
+    link: "www.FloatingLotusBrewery.com",
+    description: "Join us at the Lotus for a midweek tradition that brings together musicians, music lovers, and the incredible local talent that makes our community shine. From intimate solo sets to full-band jam sessions with rotating players, Open Mic Night is always full of surprises. Want to play? We’d love to have you — signups begin at 5:30pm. Just bring your instrument and your creativity, and we’ll take care of the rest. Our stage is fully equipped with PA, mics, drums, bass, and everything you need to plug in and play. 🎟️ Free admission 🍻 Grab a beer, settle in, and enjoy the show Come be part of the music — on stage or in the crowd!",
+    pubDate: "2026-05-21T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/ed08b494666358349bc84e969db6e8b262ef71aa.jpg"
+  },
+  {
+    title: "Elio: Movie Night @ the Wright",
+    link: "https://thewrightoperahouse.org/",
+    description: "Elio: Movie Night @ the Wright WHEN? Wednesday, May 20 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 1h 45min RATING: PG ROTTEN TOMATOES SCORE: 83% ABOUT THE FILM Elio (2025) follows an imaginative young boy who unexpectedly finds himself transported across the universe and mistaken for Earth’s ambassador to an intergalactic council. Surrounded by strange worlds, alien civilizations, and cosmic misunderstandings, Elio must summon courage and creativity to represent humanity among the stars. A vibrant animated adventure about belonging, curiosity, and discovering where you fit in a very big universe. Tickets $5 In-person screening at the historic Wright Opera House Concessions available. Part of Movie Night @ the Wright, bringing film, community, and conversation to downtown Ouray since 1909.",
+    pubDate: "2026-05-21T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52391721703307/huge/95ad92235ac82078ce4d6bac7b11bc8ed33c56dd.jpg"
+  },
+  {
+    title: "Pilates Mat",
+    link: "https://ridgwaypilates.punchpass.com/catalogs/300",
+    description: "All Levels Pilates Mat class. Classical sequence Int to challenge, strengthen and stretch you wehole body. Every Thursday at 9:30am. Pricing Four lessons for $120 Eight lessons for $200 Become a member and pay $100/month to attend weekly. Purchase a pass here: https://ridgwaypilates.punchpass.com/catalogs/300 Class is limited to six people. Mats are included. Please wear socks, put your hair up and choose clothing free of metal.",
+    pubDate: "2026-05-21T15:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
+  },
+  {
+    title: "On Display: Layers of Faces and Life-Paintings by Ruth Higdon and Julie Ahern",
+    link: "https://events.ourayridgwayevents.com/event/layers-of-faces-and-life-paintings-by-ruth-higdon-and-julie-ahern",
+    description: "A duo exhibition of new works by local painters Julie Ahern and Ruth Higdon. More info decker@ridgwayfuse.org",
+    pubDate: "2026-05-21T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52709680184864/huge/bf651b7d434184420bcaf9702ff358cbd88d3b9e.jpg"
+  },
+  {
+    title: "Story and Craft Time",
+    link: "https://events.ourayridgwayevents.com/event/story-and-craft-time",
+    description: "Join us in the Ouray Library from 4:00 p.m. to 4:45 p.m. to hear some fantastic stories and then make a craft that relates to the stories! Ages: Elementary No sign up is required.",
+    pubDate: "2026-05-21T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52763886924533/huge/0d6297caa05f50bc4a1998088745ab111521bfb3.jpg"
+  },
+  {
+    title: "Creative Space: Artist Salon Series",
+    link: "www.ridgwayfuse.org",
+    description: "Join us for the inaugural Creative Space at the Decker Room. Inspired by our vibrant creative community, these monthly events are intended to build creative community across disciplines! With a different focus each time, we will keep things interesting and engaging! Anyone is welcome to attend, and creatives of all kinds are invited. We welcome your ideas for future events! Bring something to eat or drink to share! For our first salon, we will enjoy a performance by Ridgway’s youth voice ensemble. Then we will talk about supporting one another as a creative community! There will be time to socialize and brainstorm about future salon events! To learn more, ask questions, submit ideas, reach out to the Decker Room Coordinator, Arielle. decker@ridgwayfuse.org 872-772-9484",
+    pubDate: "2026-05-22T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52825557353036/huge/60a36c794f611089746f024c76a091b947724470.jpg"
+  },
+  {
+    title: "THIRSTY THURSDAY - Game Night at Floating Lotus",
+    link: "www.FloatingLotusBrewery.com",
+    description: "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who came to have a good time. Happening 7-9pm every week",
+    pubDate: "2026-05-22T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg"
+  },
+  {
+    title: "Steps Tavern Presents Karaoke Night",
+    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
+    description: "Steps Tavern Presents Karaoke Night. Doors Open at 7:00 PM. Karaoke Begins at 8:00 PM",
+    pubDate: "2026-05-22T02:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "STEPS TAVERN",
+    imageUrl: "https://localist-images.azureedge.net/photos/52633505531238/huge/33b9b47c734793a754893ee4e67227b39326b67b.jpg"
+  },
+  {
+    title: "OTG Overnight Trail Maintenance Trip: Cutler Complex",
+    link: "https://ouraytrails.org/volunteers",
+    description: "Enjoy some of the most scenic trails in Colorado while removing down trees or encroaching brush and repairing trails from erosion problems. You will leave the wild with the camaraderie that comes with meeting new friends and helping keep our public land trails safe and sustainable. Please register in advance to join this trail crew event, and participants must have current CPR and First Aid certifications. Click HERE to signup.",
+    pubDate: "2026-05-22T14:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Culter Creek Complex",
+    imageUrl: "https://localist-images.azureedge.net/photos/52789272870069/huge/81634184041be3beb87730d36ba522a5de675e5c.jpg"
+  },
+  {
+    title: "Ridgway Farmers Market",
+    link: "www.ridgwayfarmersmarket.com",
+    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here.",
+    pubDate: "2026-05-22T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
+  },
+  {
+    title: "OLD MAN POLLY",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-05-22T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Sherb Sidewalk Celebration ~ Ridgway ’26 Grad Parade",
+    link: "https://sherbino.org/event/ridgway-grad-parade-celebration-sherbino/",
+    description: "May 22 @ 5:30 pm – 7:30 pm Cheer on the Ridgway High School 2026 Graduates from the Sherbino and 610 Sidewalk May 22 | 5:30 ish –7:00 ish | In front of the Sherbino and 610 Arts Collective | Free | Drink Specials in the Sherb Celebrate the Ridgway High School Class of 2026 with one of the community’s favorite traditions—the graduation parade through town—and join us at the Sherbino for a front-row, high-energy viewing experience. Graduation begins at 5:30 p.m., and once the ceremony wraps, the parade rolls through Ridgway with graduates cruising Clinton Street to cheers from friends, family, and the community. The Sherbino and 610 Arts Collective sidewalk will be fully activated for the occasion, offering a welcoming and festive place to gather as we celebrate this milestone moment. …",
+    pubDate: "2026-05-22T23:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52651419584519/huge/a3422816d62dbb83383d56cd64c5605b85439ba5.jpg"
+  },
+  {
+    title: "OTG Overnight Trail Maintenance Trip: Cutler Complex",
+    link: "https://ouraytrails.org/volunteers",
+    description: "Enjoy some of the most scenic trails in Colorado while removing down trees or encroaching brush and repairing trails from erosion problems. You will leave the wild with the camaraderie that comes with meeting new friends and helping keep our public land trails safe and sustainable. Please register in advance to join this trail crew event, and participants must have current CPR and First Aid certifications. Click HERE to signup.",
+    pubDate: "2026-05-23T06:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Culter Creek Complex",
+    imageUrl: "https://localist-images.azureedge.net/photos/52789272870069/huge/81634184041be3beb87730d36ba522a5de675e5c.jpg"
+  },
+  {
+    title: "Ridgway Railroad Museum FREE Train Rides",
+    link: "https://www.ridgwayrailroadmuseum.org/",
+    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
+    pubDate: "2026-05-23T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
+  },
+  {
+    title: "Ouray Art Walk",
+    link: "https://www.visitouray.com/150",
+    description: "This event invites the public to explore a vibrant outdoor market featuring a variety of art vendors showcasing and selling their work. Guests are welcome to stroll through the vendor tents, discover unique pieces, and connect with local artists in a relaxed, open-air setting. For those looking to elevate their experience, wine and charcuterie will be available with the purchase of a ticket ($32), offering a perfect way to sip, savor, and soak in the atmosphere. In addition, attendees are encouraged to extend their evening by attending the aerial performance at the Wright Opera House, adding a dynamic and artistic element to the overall experience. Whether you’re browsing, shopping, or indulging, this event offers something for everyone to enjoy.",
+    pubDate: "2026-05-23T19:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Main Street",
+    imageUrl: "https://localist-images.azureedge.net/photos/52092499507606/huge/c6fe9a874f25452ba50a6a5c74e2bc27f9eba0d4.jpg"
+  },
+  {
+    title: "High Alpine Aerial presents “In Bloom” Student Showcase",
+    link: "https://thewrightoperahouse.org/",
+    description: "High Alpine Aerial presents “In Bloom” Student Showcase WHEN? Saturday, May 23 Doors at 2:30 pm • Show at 3:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW In Bloom is High Alpine Aerial’s student showcase featuring performers of all ages sharing their latest and greatest aerial acts. After months of practice and dedication, these emerging artists take the stage to celebrate growth, transformation, and artistic expression. Inspired by the spirit of spring, the showcase reflects renewal, courage, and the excitement of developing new skills. Students will present beautiful performances that highlight their hard work and creativity as they take flight in front of a live audience. …",
+    pubDate: "2026-05-23T21:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52382499623067/huge/233cf973030c061bd362a704311e09888fd6c366.jpg"
+  },
+  {
+    title: "Caricature Cartoon Artist; Cahoots Tavern",
+    link: "https://www.cahootstavernouray.com/",
+    description: "Following the Ouray Art walk, come down to Cahoots Tavern to get your very own caricature of yourself. What is a caricature artist? A visual artist who creates exaggerated, often humorous, or satirical portraits of people by highlighting their distinctive features. They distill a subject's likeness into a memorable, cartoon-like sketch, balancing accurate recognition with playful distortion. Cost is based on number of people included and color drawing vs black and white",
+    pubDate: "2026-05-23T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52816363072518/huge/3d630e6fe662e543b92a27b21b52f0093a336d20.jpg"
+  },
+  {
+    title: "High Alpine Aerial presents “In Bloom” Aerial Circ-lesque",
+    link: "https://thewrightoperahouse.org/",
+    description: "WHEN? Saturday, May 23 Doors at 6:30 pm • Show at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW: In Bloom: Aerial Circ-lesque (2026) is an adults-only evening of aerial performance, circus artistry, and burlesque-inspired spectacle presented by High Alpine Aerial. Allow yourself to be transported into the lush gardens of In Bloom as a cast of professional performers delivers a dazzling variety of acts combining strength, grace, and theatrical flair. Suspended high above the stage, artists will push the limits of movement and imagination in a celebration of sensuality, creativity, and bold performance. A party in the garden of earthly delights, this immersive aerial experience promises daring feats of strength and beauty designed to excite the senses. …",
+    pubDate: "2026-05-24T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52375583987748/huge/e1c49a524214d33f684395ec8292f6087472cdc1.jpg"
+  },
+  {
+    title: "OTG Overnight Trail Maintenance Trip: Cutler Complex",
+    link: "https://ouraytrails.org/volunteers",
+    description: "Enjoy some of the most scenic trails in Colorado while removing down trees or encroaching brush and repairing trails from erosion problems. You will leave the wild with the camaraderie that comes with meeting new friends and helping keep our public land trails safe and sustainable. Please register in advance to join this trail crew event, and participants must have current CPR and First Aid certifications. Click HERE to signup.",
+    pubDate: "2026-05-24T06:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Culter Creek Complex",
+    imageUrl: "https://localist-images.azureedge.net/photos/52789272870069/huge/81634184041be3beb87730d36ba522a5de675e5c.jpg"
+  },
+  {
+    title: "PARK - Ultimate Frisbee",
+    link: "https://events.ourayridgwayevents.com/event/park-ultimate-frisbee",
+    description: "Come play frisbee! Anyone is welcome.",
+    pubDate: "2026-05-24T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Fellin Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/51807883052581/huge/9d7f0c7c4c96318902b1dfef1c3f821c9b3189d1.jpg"
+  },
+  {
+    title: "Ouray Softball Spring Training",
+    link: "https://events.ourayridgwayevents.com/event/ouray-softball-spring-training",
+    description: "Step onto the field for Ouray Softball Spring Training at Fellin Park. This preseason program is designed to shake off the rust, build skills, and get players ready for summer league action. Open to a range of ages and experience levels, spring training focuses on fundamentals, teamwork, and getting back into the rhythm of the game. Whether you're refining your swing, sharpening fielding skills, or just getting back in the game, it’s a great way to kick off the season. Come ready to play, connect with teammates, and enjoy spring evenings on the diamond in Ouray. Want to join a team, but you aren't already involved? Sign up Here!",
+    pubDate: "2026-05-24T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52701275725771/huge/58498e59bf3c36b5491225bca2838359fa0701bd.jpg"
+  },
+  {
+    title: "On Display: Layers of Faces and Life-Paintings by Ruth Higdon and Julie Ahern",
+    link: "https://events.ourayridgwayevents.com/event/layers-of-faces-and-life-paintings-by-ruth-higdon-and-julie-ahern",
+    description: "A duo exhibition of new works by local painters Julie Ahern and Ruth Higdon. More info decker@ridgwayfuse.org",
+    pubDate: "2026-05-25T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52709680184864/huge/bf651b7d434184420bcaf9702ff358cbd88d3b9e.jpg"
+  },
+  {
+    title: "Senior Lunch by Neighbor to Neighbor",
+    link: "https://www.ourayneighbor.com/services",
+    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
+    pubDate: "2026-05-25T18:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
+  },
+  {
+    title: "Basketball and Volleyball Tournament - Hot Springs Style",
+    link: "https://events.ourayridgwayevents.com/event/basketball-and-volleyball-tournament-hot-springs-style",
+    description: "Get ready for a fun, fast-paced showdown at the Basketball & Volleyball Tournament – Hot Springs Style! This unique community event brings together friendly competition, mountain-town energy, and a relaxed “only in Ouray” vibe. Teams will face off in both basketball and volleyball throughout the day, with plenty of action, laughter, and community spirit in between games. True to the Hot Springs Style theme, players and spectators alike are encouraged to kick back, enjoy the atmosphere, and make a full day of it—on and off the court. Whether you’re competing or cheering from the sidelines, it’s a great way to connect, play, and celebrate summer in Ouray.",
+    pubDate: "2026-05-25T19:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52701346021520/huge/68ca03e6c3efec8668eb7ddf38f1d90656573dc2.jpg"
+  },
+  {
+    title: "RIDGWAY WRECKING CREW",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-05-25T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "On Display: Layers of Faces and Life-Paintings by Ruth Higdon and Julie Ahern",
+    link: "https://events.ourayridgwayevents.com/event/layers-of-faces-and-life-paintings-by-ruth-higdon-and-julie-ahern",
+    description: "A duo exhibition of new works by local painters Julie Ahern and Ruth Higdon. More info decker@ridgwayfuse.org",
+    pubDate: "2026-05-26T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52709680184864/huge/bf651b7d434184420bcaf9702ff358cbd88d3b9e.jpg"
+  },
+  {
+    title: "CORAL SKYE",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-05-26T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Tourism Advisory Committee",
+    link: "https://cityofouray.com/city_offices/committees___boards/tourism_advisory_committee.php",
+    description: "The Ouray Tourism Advisory Committee (TAC) represents a cross-section of the small businesses, nonprofits, and residents of Ouray. We educate ourselves about best practices in the tourism industry, tourism marketing, and the visitor experience. We gather input, plan, prioritize, measure, and advise the City of Ouray on the best actions to take related to the tourism industry in our community.",
+    pubDate: "2026-05-26T23:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52092171660517/huge/0e628304026c92db25e8df01849c962ac902a3b4.jpg"
+  },
+  {
+    title: "Community Meditation",
+    link: "www.ridgwayfuse.org",
+    description: "Join us for a peer-led weekly meditation series at the Decker Community Room. Free and open to the public! We meet every 1st, 2nd, and 4th Tuesday of the month (all but the 3rd Tuesday!)",
+    pubDate: "2026-05-27T00:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52338340283147/huge/582622671001d9ab20f8c25a5d229c9ecbbba165.jpg"
+  },
+  {
+    title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
+    link: "www.FloatingLotusBrewery.com",
+    description: "Join us at the Lotus for a midweek tradition that brings together musicians, music lovers, and the incredible local talent that makes our community shine. From intimate solo sets to full-band jam sessions with rotating players, Open Mic Night is always full of surprises. Want to play? We’d love to have you — signups begin at 5:30pm. Just bring your instrument and your creativity, and we’ll take care of the rest. Our stage is fully equipped with PA, mics, drums, bass, and everything you need to plug in and play. 🎟️ Free admission 🍻 Grab a beer, settle in, and enjoy the show Come be part of the music — on stage or in the crowd!",
+    pubDate: "2026-05-28T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/ed08b494666358349bc84e969db6e8b262ef71aa.jpg"
+  },
+  {
+    title: "The Lord of the Rings: The Fellowship of the Ring: Movie Night @ The Wright",
+    link: "https://thewrightoperahouse.org/",
+    description: "The Lord of the Rings: The Fellowship of the Ring: Movie Night @ the Wright WHEN? Wednesday, May 27 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 2h 58min RATING: PG-13 ROTTEN TOMATOES SCORE: 91% ABOUT THE FILM This movie was chosen to be just in time for fans of the Genre and precedes our live theatre event: \"Fly, You Fools!\" The Lord of the Rings: The Fellowship of the Ring (2001) follows a young hobbit, Frodo Baggins, as he sets out on a perilous journey to destroy a powerful ring and prevent it from falling into the hands of darkness. Joined by a fellowship of unlikely allies, Frodo travels across Middle-earth facing danger, temptation, and the growing shadow of evil in an epic tale of courage, friendship, and sacrifice. …",
+    pubDate: "2026-05-28T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52568666129757/huge/1fe32b4a28a59494b608daafcb284a172935afe5.jpg"
+  },
+  {
+    title: "Pilates Mat",
+    link: "https://ridgwaypilates.punchpass.com/catalogs/300",
+    description: "All Levels Pilates Mat class. Classical sequence Int to challenge, strengthen and stretch you wehole body. Every Thursday at 9:30am. Pricing Four lessons for $120 Eight lessons for $200 Become a member and pay $100/month to attend weekly. Purchase a pass here: https://ridgwaypilates.punchpass.com/catalogs/300 Class is limited to six people. Mats are included. Please wear socks, put your hair up and choose clothing free of metal.",
+    pubDate: "2026-05-28T15:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
+  },
+  {
+    title: "On Display: Layers of Faces and Life-Paintings by Ruth Higdon and Julie Ahern",
+    link: "https://events.ourayridgwayevents.com/event/layers-of-faces-and-life-paintings-by-ruth-higdon-and-julie-ahern",
+    description: "A duo exhibition of new works by local painters Julie Ahern and Ruth Higdon. More info decker@ridgwayfuse.org",
+    pubDate: "2026-05-28T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52709680184864/huge/bf651b7d434184420bcaf9702ff358cbd88d3b9e.jpg"
+  },
+  {
+    title: "THIRSTY THURSDAY - Game Night at Floating Lotus",
+    link: "www.FloatingLotusBrewery.com",
+    description: "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who came to have a good time. Happening 7-9pm every week",
+    pubDate: "2026-05-29T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg"
+  },
+  {
+    title: "Steps Tavern Presents Karaoke Night",
+    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
+    description: "Steps Tavern Presents Karaoke Night. Doors Open at 7:00 PM. Karaoke Begins at 8:00 PM",
+    pubDate: "2026-05-29T02:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "STEPS TAVERN",
+    imageUrl: "https://localist-images.azureedge.net/photos/52633505531238/huge/33b9b47c734793a754893ee4e67227b39326b67b.jpg"
+  },
+  {
+    title: "Ridgway Last Day of School",
+    link: "https://www.ridgway.k12.co.us/page/district-calendar/",
+    description: "",
+    pubDate: "2026-05-29T06:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
+  },
+  {
+    title: "Ridgway Farmers Market",
+    link: "www.ridgwayfarmersmarket.com",
+    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here.",
+    pubDate: "2026-05-29T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
+  },
+  {
+    title: "Ridgway Railroad Museum FREE Train Rides",
+    link: "https://www.ridgwayrailroadmuseum.org/",
+    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
+    pubDate: "2026-05-29T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
+  },
+  {
+    title: "FLANNEL FEEDBACK",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-05-29T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Final Friday: School's Out Let's Go!",
+    link: "https://www.voyageryouth.org/hubb-teen-events",
+    description: "SCHOOL'S OUT LET'S GO! For Middle & High School Students, Final Friday is reclaiming Voyager as the Teen Center it used to be. 🤘 Come hang out for an evening that mixes chill social time with free food and fun activities. Every month, we have games, art and more available. All we ask is that you clean up after yourself and help us create a welcoming space for everyone. This month, meet Jazzmin, Voyager's new Teen Program Assistant who will be leading Adventure Wednesdays and Multi-Day Trips. We will have a new juggling kit to celebrate and share a party trick that she's been developing as well as Summer Survival Mystery Bags to take home with you. TO RSVP STEP 1: Once a year, make or update an account with Voyager so we have access to important information to best serve the Teens that are attending. …",
+    pubDate: "2026-05-29T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52860999139790/huge/5cdf44deaab00132052e2601f35f9a2a76fc9960.jpg"
+  },
+  {
+    title: "Fly You Fools Presented by UpstART | Opening Night | Fri 5/29/26",
+    link: "https://thewrightoperahouse.org/",
+    description: "Fly You Fools Presented by UpstART | Opening Night | Fri 5/29/26 WHEN? Friday, May 29 Doors at 7:00 pm • Show at 7:30 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Fly, You Fools! is a critically acclaimed physical comedy from the New York–based troupe Recent Cutbacks, making its UK and international stage debut through touring productions like this one. Presented locally by UpstART Theatre, the show delivers a fast-paced parody of epic fantasy storytelling. Three actors and a Foley artist join forces in fellowship to bring an entire fantasy adventure to life in a hilarious one-shot theatrical journey. Blending rapid-fire comedy, inventive stagecraft, live sound effects, and high-energy physical theatre, the production proves that even the smallest band of performers can create a world of heroic proportions. …",
+    pubDate: "2026-05-30T01:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52382837970272/huge/efa20aea189f55b2258da20d2382a48a7bde31a0.jpg"
+  },
+  {
+    title: "Fly, You Fools!: Theatre @ the Wright",
+    link: "https://thewrightoperahouse.org/events/theater/fly-you-fools",
+    description: "Fly, You Fools!: Theatre @ the Wright WHEN? Friday, May 29, 2026 7:30 PM Saturday, May 30, 2026 7:30 PM Sunday, May 31, 2026 4:00 PM Monday, June 1, 2026 7:30 PM WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Fly, You Fools! is a critically acclaimed physical comedy from the New York–based troupe Recent Cutbacks, making its UK and international stage debut through touring productions like this one. Presented locally by UpstART Theatre, the show delivers a fast-paced parody of epic fantasy storytelling. Three actors and a Foley artist join forces in fellowship to bring an entire fantasy adventure to life in a hilarious one-shot theatrical journey. Blending rapid-fire comedy, inventive stagecraft, live sound effects, and high-energy physical theatre, the production proves that even the smallest band of performers can create a world of heroic proportions. …",
+    pubDate: "2026-05-30T01:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52453668754083/huge/7843394b93916f13f7fe41b7d9d36f1a7394be85.jpg"
+  },
+  {
+    title: "OTG Backcountry Trail Maintenance Backpacking Trip",
+    link: "ouraytrails.org",
+    description: "Join the Ouray Trails Group for our first overnight trail stewardship trip of the year on Bear Creek! We’ll focus on tread and drainage repair while enjoying time in the backcountry. This is a backpacking trip—we’ll carry all camping gear and food in from HWY 550, gaining 2,400 feet over 4.2 miles to camp near the Yellowjacket Mine. Expect cold nights, so come prepared with warm clothing and layers. Sign up using this link. For questions, please contact OTG at contactus@ouraytrails.org.",
+    pubDate: "2026-05-30T14:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Bear Creek Trail Head, 2-2.5 miles south of Ouray. Parking on the east side of the highway.",
+    imageUrl: "https://localist-images.azureedge.net/photos/52587455597568/huge/8f3a527aa56803672e93a2f117c5ed9ce3a2fefe.jpg"
+  },
+  {
+    title: "OTG Overnight Trail Maintenance Trip: Bear Creek NRT",
+    link: "https://ouraytrails.org/volunteers",
+    description: "Enjoy some of the most scenic trails in Colorado while removing down trees or encroaching brush and repairing trails from erosion problems. You will leave the wild with the camaraderie that comes with meeting new friends and helping keep our public land trails safe and sustainable. Please register in advance to join this trail crew event, and participants must have current CPR and First Aid certifications. Click HERE to signup.",
+    pubDate: "2026-05-30T14:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Bear Creek Trail Head south of Ouray",
+    imageUrl: "https://localist-images.azureedge.net/photos/52789326237006/huge/bd0e715520daa45a021ccfc75c4938dfef1aed85.jpg"
+  },
+  {
+    title: "Family Fun Fest and Used Book Sale",
+    link: "https://events.ourayridgwayevents.com/event/family-fun-fest-and-used-book-sale",
+    description: "Celebrate the library with a fun and free event for all! Hosted by the Friends of the Ridgway Library, Summer Fun Fest & Book Sale brings readers of all ages together to celebrate summer, reading, and your library. Enjoy a day filled with activities including chalk art, crafts, face painting, shaved ice, a used book sale, a fly fishing clinic for ages 10+, and a bike maintenance clinic — bring your bike! All activities are free and everyone is welcome. Sign up for the bike clinic and fly casting clinic at the library or call 970-626-5252. Volunteers are needed! Contact jill.hepp@friendsofridgwaylibrary.org if you are interested in volunteering. Hosted by Friends of the Ridgway Library.",
+    pubDate: "2026-05-30T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52825416452253/huge/ee71af15803ef954e75a37ca3f3ed58b6210a0c1.jpg"
+  },
+  {
+    title: "Ridgway Railroad Museum FREE Train Rides",
+    link: "https://www.ridgwayrailroadmuseum.org/",
+    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
+    pubDate: "2026-05-30T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
+  },
+  {
+    title: "WOWSERS",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-05-30T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "The Yawpers! Live at the Sherbino",
+    link: "https://sherbino.org/events/category/music/",
+    description: "https://sherbino.org/events/category/music/ Doors at 6:45 pm | Opener at 7:15 pm | The Yawpers at 8:00 pm $25 advance / $30 day of show / A limited amount of tables are available for this show Get ready for a high-octane night of raw, unapologetic rock and roll as The Yawpers take over the Sherbino stage! For over 15 years, The Yawpers have built a reputation as one of the most electrifying rock bands on the road—driven by gritty guitar riffs, relentless energy, and a sound that pulls from garage rock, punk, blues, and Americana. Their live shows are loud, fast, and wildly infectious—exactly the kind of experience that reminds you why rock and roll still matters. Now hitting the road with new music on the horizon, The Yawpers are bringing their signature intensity and edge back to Ridgway. …",
+    pubDate: "2026-05-31T01:15:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52403083528953/huge/e7eb8757e5dcaf8d14e07216a616734c89871529.jpg"
+  },
+  {
+    title: "Fly You Fools Presented by UpstART | Sat 5/30/26",
+    link: "https://thewrightoperahouse.org/",
+    description: "Fly You Fools Presented by UpstART | Sat 5/30/26 WHEN? Saturday, May 30 Doors at 7:00 pm • Show at 7:30 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Fly, You Fools! is a critically acclaimed physical comedy from the New York–based troupe Recent Cutbacks, making its UK and international stage debut through touring productions like this one. Presented locally by UpstART Theatre, the show delivers a fast-paced parody of epic fantasy storytelling. Three actors and a Foley artist join forces in fellowship to bring an entire fantasy adventure to life in a hilarious one-shot theatrical journey. Blending rapid-fire comedy, inventive stagecraft, live sound effects, and high-energy physical theatre, the production proves that even the smallest band of performers can create a world of heroic proportions. Inspired by beloved fantasy tropes and packed with quick wit, physical humor, and theatrical ingenuity, Fly, You Fools! …",
+    pubDate: "2026-05-31T01:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52382802312047/huge/a67b50c8da1618cb52027e9a4b53bfcf4e419f7d.jpg"
+  },
+  {
+    title: "Fly, You Fools!: Theatre @ the Wright",
+    link: "https://thewrightoperahouse.org/events/theater/fly-you-fools",
+    description: "Fly, You Fools!: Theatre @ the Wright WHEN? Friday, May 29, 2026 7:30 PM Saturday, May 30, 2026 7:30 PM Sunday, May 31, 2026 4:00 PM Monday, June 1, 2026 7:30 PM WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Fly, You Fools! is a critically acclaimed physical comedy from the New York–based troupe Recent Cutbacks, making its UK and international stage debut through touring productions like this one. Presented locally by UpstART Theatre, the show delivers a fast-paced parody of epic fantasy storytelling. Three actors and a Foley artist join forces in fellowship to bring an entire fantasy adventure to life in a hilarious one-shot theatrical journey. Blending rapid-fire comedy, inventive stagecraft, live sound effects, and high-energy physical theatre, the production proves that even the smallest band of performers can create a world of heroic proportions. …",
+    pubDate: "2026-05-31T01:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52453668754083/huge/7843394b93916f13f7fe41b7d9d36f1a7394be85.jpg"
+  },
+  {
+    title: "OTG Backcountry Trail Maintenance Backpacking Trip",
+    link: "ouraytrails.org",
+    description: "Join the Ouray Trails Group for our first overnight trail stewardship trip of the year on Bear Creek! We’ll focus on tread and drainage repair while enjoying time in the backcountry. This is a backpacking trip—we’ll carry all camping gear and food in from HWY 550, gaining 2,400 feet over 4.2 miles to camp near the Yellowjacket Mine. Expect cold nights, so come prepared with warm clothing and layers. Sign up using this link. For questions, please contact OTG at contactus@ouraytrails.org.",
+    pubDate: "2026-05-31T06:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Bear Creek Trail Head, 2-2.5 miles south of Ouray. Parking on the east side of the highway.",
+    imageUrl: "https://localist-images.azureedge.net/photos/52587455597568/huge/8f3a527aa56803672e93a2f117c5ed9ce3a2fefe.jpg"
+  },
+  {
+    title: "OTG Overnight Trail Maintenance Trip: Bear Creek NRT",
+    link: "https://ouraytrails.org/volunteers",
+    description: "Enjoy some of the most scenic trails in Colorado while removing down trees or encroaching brush and repairing trails from erosion problems. You will leave the wild with the camaraderie that comes with meeting new friends and helping keep our public land trails safe and sustainable. Please register in advance to join this trail crew event, and participants must have current CPR and First Aid certifications. Click HERE to signup.",
+    pubDate: "2026-05-31T06:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Bear Creek Trail Head south of Ouray",
+    imageUrl: "https://localist-images.azureedge.net/photos/52789326237006/huge/bd0e715520daa45a021ccfc75c4938dfef1aed85.jpg"
+  },
+  {
+    title: "PARK - Ultimate Frisbee",
+    link: "https://events.ourayridgwayevents.com/event/park-ultimate-frisbee",
+    description: "Come play frisbee! Anyone is welcome.",
+    pubDate: "2026-05-31T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Fellin Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/51807883052581/huge/9d7f0c7c4c96318902b1dfef1c3f821c9b3189d1.jpg"
+  },
+  {
+    title: "Ouray Softball Spring Training",
+    link: "https://events.ourayridgwayevents.com/event/ouray-softball-spring-training",
+    description: "Step onto the field for Ouray Softball Spring Training at Fellin Park. This preseason program is designed to shake off the rust, build skills, and get players ready for summer league action. Open to a range of ages and experience levels, spring training focuses on fundamentals, teamwork, and getting back into the rhythm of the game. Whether you're refining your swing, sharpening fielding skills, or just getting back in the game, it’s a great way to kick off the season. Come ready to play, connect with teammates, and enjoy spring evenings on the diamond in Ouray. Want to join a team, but you aren't already involved? Sign up Here!",
+    pubDate: "2026-05-31T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52701275725771/huge/58498e59bf3c36b5491225bca2838359fa0701bd.jpg"
+  },
+  {
+    title: "Summer Soulful Sisters Circle- Free Intro Gathering",
+    link: "https://www.beetrueyou.com/",
+    description: "Accountability Spiritual Community Enless Possibility Bring your Goals, Challenges and Questions. Learn about this unique opportunity for personal growth in community, led by Elizabeth Lava, a highly trained and experienced health, life and spiritual coach. Meet other women who are wanting to grow together in a group and on their own. Handouts and tea will be provided.",
+    pubDate: "2026-05-31T23:15:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52836840684511/huge/6e3df308aea99655628d77e2253a5060af169275.jpg"
+  },
+  {
+    title: "GOLDPINE ~ Live at The Courtyard at 610",
+    link: "https://sherbino.org/event/goldpine-ridgway-concert-may-31-2026/",
+    description: "GOLDPINE at the Courtyard at 610 (enter via the alley behind the Sherbino and 610 Gallery) || Gates & Bar: 6 pm || Showtime: 6:30 pm || All General Admission Seating || $25 advance || $30 day of show || Buy Tickets From Bristol Rhythm & Roots Reunion and the Kansas City Chiefs’ Arrowhead Stadium to listening rooms throughout the United States, husband-wife duo GOLDPINE has been offering their own brand of bold harmony-driven Americana to audiences large and small. WINNER of the 2022 Rocky Mountain Songwriter Contest, their distinctive harmonies are clearly a channel for their sometimes-raucous, sometimes-reminiscent compositions. With an incredible collection of stories about life, love, and purpose, their live performance is a powerful projection of everything Goldpine is about: striking vocals, bold harmony, and introspection into the human experience. …",
+    pubDate: "2026-06-01T00:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52252954261031/huge/a6e0971bed5331dc9b04a9d11a417ef4af3c14c3.jpg"
+  },
+  {
+    title: "Restoration Work Week:  June 1 - June 5, 2026",
+    link: "http://www.ridgwayrailroadmuseum.org/events.html",
+    description: "Come and work on the railroad. We can use your computer skills, woodworking skills, manual labor, painting, etc. Lots of fun work for everyone. Lunch provided.",
+    pubDate: "2026-06-01T06:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52594216043415/huge/422bf6ccf915872b17c354d089ec0b4b7eb791d6.jpg"
+  }
+];
 
 // Ridgway Town Council agenda PDFs — populated by content-refresh.js Task 20.
 // Keys are "Month D, YYYY" date strings (e.g. "May 13, 2026").
@@ -2092,7 +3171,96 @@ async function fetchOurayRidgwayEvents() {
 // Bot populates this every 6h via content-refresh.js Task 17.
 // Entries cover meetings, notices, community events, and town closures
 // extracted from norwoodtown.com/sitemap.xml dated URL slugs.
-const NORWOOD_EVENTS = [];
+const NORWOOD_EVENTS = [
+  {
+    title: "Legacy Documentary Showing The Livery",
+    link: "https://www.norwoodtown.com/2026-05-07-legacy-documentary-showing-the-livery",
+    description: "",
+    pubDate: "2026-05-07T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Calm Conversation With Tri County Network",
+    link: "https://www.norwoodtown.com/2026-05-11-calm-conversation-with-tri-county-network",
+    description: "",
+    pubDate: "2026-05-11T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "NWC Meeting",
+    link: "https://www.norwoodtown.com/2026-05-12-nwc-meeting",
+    description: "",
+    pubDate: "2026-05-12T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Board Of Trustees Meeting",
+    link: "https://www.norwoodtown.com/2026-05-13-board-of-trustees-meeting",
+    description: "",
+    pubDate: "2026-05-13T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Norwood Sanitation District Meeting Meeting",
+    link: "https://www.norwoodtown.com/2026-05-14-norwood-sanitation-district-meeting-meeting",
+    description: "",
+    pubDate: "2026-05-14T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Closed For Memorial Day",
+    link: "https://www.norwoodtown.com/2026-05-25-closed-for-memorial-day",
+    description: "",
+    pubDate: "2026-05-25T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Town Closure",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Music On The Mesa Wolf Jett",
+    link: "https://www.norwoodtown.com/2026-06-13-music-on-the-mesa-wolf-jett",
+    description: "",
+    pubDate: "2026-06-13T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Music On The Mesa The Burroughs",
+    link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
+    description: "",
+    pubDate: "2026-08-08T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  }
+];
 
 function fetchNorwoodEvents() {
   if (typeof NORWOOD_EVENTS !== 'undefined' && Array.isArray(NORWOOD_EVENTS) && NORWOOD_EVENTS.length > 0) {
@@ -3383,37 +4551,88 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Denver airport security initially missed trespasser who was killed by plane on runway",
+    source: "Telluride Times",
+    date: "May 12, 2026",
+    firstSeen: "2026-05-12",
+    newsTopic: "community",
+    copy: "A man who entered Denver airport intending to take his own life was struck and killed by a Frontier Airlines plane during takeoff Friday night. Security initially missed the trespasser when an alarm triggered, mistakenly attributing it to nearby deer, and couldn't intervene in time once he was spotted crossing the runway. The collision caused an engine fire that forced passenger evacuation, injuring 12 people with 5 hospitalized.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_9fc2cb9e-0705-5c97-84c6-e314be457898.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/b3/bb30350f-f401-55b1-8ef1-47a01fa5d399/69ffaae0caae4.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Sweet success",
     source: "Telluride Times",
     date: "May 12, 2026",
     firstSeen: "2026-05-12",
-    newsTopic: "sports",
-    copy: "",
-    claudeSummary: false,
+    newsTopic: "community",
+    copy: "The Telluride High School lacrosse team beat Holy Family 17-7 in the sweet 16, with the Miners jumping ahead early and never trailing after the first quarter. Beck Sommers led the scoring while goalies Bridger Barrett and Dylan Saunders split time in net for the sixth-seeded Miners, who improved to 13-3 overall.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/sports/article_89d6205d-3340-4cd9-9e3c-7d05b688bf6e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/67/9672da42-7f48-4249-b019-db5fc45d6ef2/6a034f43b4e8c.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/67/9672da42-7f48-4249-b019-db5fc45d6ef2/6a034f43b4e8c.image.jpg",
+    imgHiRes: true
   },
   {
-    title: "Building healthier, more resilient communities",
+    title: "2026 NFL schedule: Broncos and Chiefs play in 1st Monday night game of the season",
     source: "Telluride Times",
     date: "May 12, 2026",
     firstSeen: "2026-05-12",
-    newsTopic: "community",
-    copy: "",
-    claudeSummary: false,
-    href: "https://www.telluridenews.com/news_release/article_76785698-df60-47e0-b643-594f8cbd8949.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/89/489e766b-f9b6-40f6-bb59-83fef25f771e/69ff7da2c5799.image.png"
+    newsTopic: "arts-culture",
+    copy: "The Broncos and Chiefs will face off in the first Monday night game of the 2026 NFL season, though Chiefs QB Patrick Mahomes' availability remains uncertain after tearing his ACL and LCL in December. Broncos quarterback Bo Nix is expected ready for training camp after breaking his ankle during the AFC playoffs.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_1f2793ff-0041-5e96-b185-b3d756e5252d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/be/bbeb5f6d-e5cf-57fd-b2ac-6cdf28676ddf/6a031be69f601.image.jpg",
+    imgHiRes: true
   },
   {
-    title: "Register now for Rotary\'s Hikeathon",
+    title: "Suckla settles in as State House session concludes",
     source: "Telluride Times",
-    date: "May 12, 2026",
+    date: "May 11, 2026",
+    firstSeen: "2026-05-12",
+    newsTopic: "education",
+    copy: "Suckla wrapped up his second legislative session, having moved from an off-site office to the Capitol basement as he settles into the role. Six of his nine sponsored bills passed this year, including extending Rico's microgrid grant program and allowing Dolores County commissioners to cut their own salaries. He's focused on bringing rural perspective to the statehouse and says he measures success more by what bad legislation he helps stop than by his own bill count.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_0e6568c2-8995-4eca-ae19-b52af3986ef2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/28/52826a48-fcca-484e-9ab9-69d9f8f4209f/6a0211f371496.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A new place ‘to do the best thing for animals’",
+    source: "Telluride Times",
+    date: "May 11, 2026",
     firstSeen: "2026-05-12",
     newsTopic: "community",
-    copy: "",
-    claudeSummary: false,
+    copy: "Second Chance Animal Resource Center has taken over operations of the Delta Animal Shelter under a new contract with the City of Delta, expanding from their usual Ridgway base. They're planning to add adoption services, foster care, and pet food pantry programs - the first time Delta will have its own adoption program run locally.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_094235cf-a1a8-4a79-aab9-994d5aaef6e2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/88/28830ff9-fa97-48a6-8fbe-9c40740b0658/6a01bd30b3b9a.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Register now for Rotary’s Hikeathon",
+    source: "Telluride Times",
+    date: "May 10, 2026",
+    firstSeen: "2026-05-12",
+    newsTopic: "arts-culture",
+    copy: "Telluride Rotary's annual Hikeathon is accepting registrations, aiming to raise over $30,000 this year. Other nonprofits like Eco-Action Partners, Telluride Ski and Snowboard Club, and Telluride Jewish Community are forming teams to participate and raise funds for their own causes.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_13dee22d-ca0a-4c26-aa6e-dc9b48237c1e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/98/f982f29f-8daa-47c5-b33c-bd221752003d/69fa5a362344c.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/98/f982f29f-8daa-47c5-b33c-bd221752003d/69fa5a362344c.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "NTSB gathering details on Frontier Airlines evacuation after plane hit and killed person in Denver",
+    source: "Telluride Times",
+    date: "May 10, 2026",
+    firstSeen: "2026-05-12",
+    newsTopic: "public-safety",
+    copy: "A Frontier Airlines plane hit and killed someone on the runway at Denver International Airport during takeoff, causing an engine fire and forcing 231 people to evacuate via emergency slides. Twelve passengers suffered minor injuries and five were hospitalized, while the NTSB is reviewing whether the evacuation procedures warrant investigation.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_9b365202-fe0b-598d-ada5-f27d878bbeaf.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/b3/bb30350f-f401-55b1-8ef1-47a01fa5d399/69ffaae0caae4.image.jpg",
+    imgHiRes: true
   },
   {
     title: "A Frontier plane hits a pedestrian during takeoff at Denver airport",
@@ -3424,7 +4643,20 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A Frontier Airlines plane struck a pedestrian during takeoff at Denver International Airport, forcing an emergency stop and evacuation of 231 people on board. The pilot reported an engine fire and smoke in the cabin, leading to passengers evacuating via emergency slides onto the runway.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_ce4f636a-272a-57ad-8442-17632581041f.html",
-    img: ""
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8c/f8cd2100-44dc-5e46-bfc7-7a1d38c7ad3a/69ff31aa9240c.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Building healthier, more resilient communities",
+    source: "Telluride Times",
+    date: "May 9, 2026",
+    firstSeen: "2026-05-12",
+    newsTopic: "land-use",
+    copy: "A training session is being offered on building community resilience using research-based tools focused on positive childhood and adult experiences to help young people thrive. The program targets parents, educators, healthcare workers, and community members, with registration required in advance.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_76785698-df60-47e0-b643-594f8cbd8949.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/89/489e766b-f9b6-40f6-bb59-83fef25f771e/69ff7da2c5799.image.png",
+    imgHiRes: true
   },
   {
     title: "‘Telluride: A Legacy of Legacies’",
@@ -3435,7 +4667,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Ron Allred and Jim Wells bought majority interest in the ski area in 1978 and developed Mountain Village, the airport, and gondola over 25 years, transforming Telluride from a boarded-up mining town into a world-class resort. Allred's daughter Kristi and author David Strauss are writing \"Telluride: A Legacy of Legacies,\" interviewing locals who helped build the community from mid-1970s to 2000.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_c38b03a3-2122-4822-a291-a7b55317bab0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/c5/0c550539-158f-416e-8854-85112f921ef3/69fe061ba1cd9.image.jpg?resize=300%2C225"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/c5/0c550539-158f-416e-8854-85112f921ef3/69fe061ba1cd9.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Shop students show off",
@@ -3446,7 +4679,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Middle school shop students recently completed their knick-knack shelves and wooden spoons. They are now starting to build wooden crates.",
     claudeSummary: false,
     href: "https://www.telluridenews.com/norwood_post/article_a544195c-3dec-4f7d-b1af-6ec2608ca417.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/cc/7cc40952-4413-4d9f-b281-4ff3348cf439/69fa5e574d670.image.jpg?resize=300%2C225"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/cc/7cc40952-4413-4d9f-b281-4ff3348cf439/69fa5e574d670.image.jpg",
+    imgHiRes: true
   },
   {
     title: "California, Nevada and Arizona announce temporary plan to save water from the Colorado River",
@@ -3457,7 +4691,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Three lower Colorado River states announced emergency water cuts - Nevada and Arizona reducing use by one-third, California by 13% - as drought and overuse threaten Lake Powell and Lake Mead reservoir levels critical for hydropower and water delivery.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_137054fe-c04a-5681-b79b-c1e2088b3c63.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/f6/6f606ce2-4ca6-5126-92f8-60d57f784962/69fe3bc080d49.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/f6/6f606ce2-4ca6-5126-92f8-60d57f784962/69fe3bc080d49.image.jpg",
+    imgHiRes: true
   },
   {
     title: "The greatest heron",
@@ -3468,7 +4703,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Male great blue herons start building nests to attract females, who then help complete construction before laying 2-6 pale blue eggs that hatch after 29 days. The fluffy gray chicks grow quickly into North America's largest herons, standing up to 4.5 feet tall with 6+ foot wingspans.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_1deaa175-5c6a-4156-a2e5-b36e9b739931.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/e6/2e633678-6370-4512-92b5-0b1765a25217/69fa58a638daf.image.jpg?resize=300%2C400"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/e6/2e633678-6370-4512-92b5-0b1765a25217/69fa58a638daf.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Man charged in Colorado firebomb attack on demonstrators to plead guilty to murder",
@@ -3479,7 +4715,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A man who threw Molotov cocktails at demonstrators on Boulder's Pearl Street Mall last year, killing an 82-year-old woman and injuring a dozen others, is set to plead guilty to murder in state court. He still faces federal hate crime charges and potential death penalty for what prosecutors say was a planned attack targeting people perceived as connected to Israel.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_b30b6aed-46e8-5a99-9fb6-c77bfd748db0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Telluride Town Council considers amendments to emergency fire restrictions",
@@ -3490,7 +4727,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Town Council is looking at changing fire ban procedures to let the town manager declare restrictions immediately instead of waiting for a council meeting and vote. The current process can cause delays when coordinating with the county and Mountain Village, who can implement bans faster than Telluride's required council approval.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_74780234-41a7-4a60-84a3-5278e7238f9a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/1c/c1c690df-53af-497b-8b1b-0fd059c75885/69fc4d657a23b.image.jpg?resize=300%2C142"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/1c/c1c690df-53af-497b-8b1b-0fd059c75885/69fc4d657a23b.image.jpg",
+    imgHiRes: true
   },
   {
     title: "We’re in this together",
@@ -3578,7 +4816,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Darcy Bray graduated last weekend from Colorado Mountain College with her associate’s degree, an achievement she’s been working toward throughout the entirety of her time in high school. Her dedication, perseverance and hard work have truly paid off. Congratulations, Darcy!",
     claudeSummary: false,
     href: "https://www.telluridenews.com/norwood_post/article_f36f75c5-78e6-4fbc-9dd5-51535697d60e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/46/046406e1-b0ed-45f3-88a5-f87d2570e7d3/69fa5cd6c404f.image.jpg?resize=300%2C400"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/46/046406e1-b0ed-45f3-88a5-f87d2570e7d3/69fa5cd6c404f.image.jpg"
   },
   {
     title: "ADL reports a sharp drop in US antisemitic incidents in 2025, driven by a steep fall on campuses",
@@ -3636,6 +4874,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/8f/58f263e8-16a8-5781-af16-5d8758db5bc8/69fa387863ba5.image.jpg?resize=300%2C200"
   },
   {
+    title: "San Miguel County recognizes National Historic Marker Day",
+    source: "Telluride Times",
+    date: "May 5, 2026",
+    firstSeen: "2026-05-12",
+    newsTopic: "land-use",
+    copy: "San Miguel County joined the national recognition of Historic Marker Day, highlighting the work of its Historical Commission to preserve local markers and plaques. The commission is developing a webpage to help residents and visitors learn about the county's historical markers and their significance.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_743225a7-9d03-4795-8409-086c3af9758b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/40/84034eec-95c3-44a4-8fac-630f3a00bf4b/69fa7a16ce67a.image.jpg"
+  },
+  {
     title: "CHALKBOARD for the week of May 7-13",
     source: "Telluride Times",
     date: "May 5, 2026",
@@ -3678,6 +4927,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_fb79e810-1118-4f69-a3d4-2cb921d8dd13.html",
     img: ""
+  },
+  {
+    title: "Foster homes needed",
+    source: "Telluride Times",
+    date: "May 5, 2026",
+    firstSeen: "2026-05-12",
+    newsTopic: "community",
+    copy: "NEWS RELEASE",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news_release/article_1c4f5f8f-7308-4fbf-8799-2576d6ba9026.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/40/24040efb-65d5-4496-a2c3-fc2a74ff553d/69fa65f39ffe9.image.jpg"
   },
   {
     title: "Trump administration sues Denver over its 1989 assault weapons ban",
@@ -3966,12 +5226,40 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/7e/37efb440-e66f-5d94-a2bc-43449e73e748/69f1e9285fdc5.image.jpg?resize=300%2C200"
   },
   {
+    title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
+    source: "Town of Telluride",
+    date: "April 24, 2026",
+    newsTopic: "infrastructure",
+    copy: "(April 5, 2026) – The Town will implement an updated schedule for the Galloping Goose bus loop during shoulder seasons, transitioning to a single-bus service operating on a 30-minute loop.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=389",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15514"
+  },
+  {
+    title: "Certified Candidates Announced for Telluride Town Council Election",
+    source: "Town of Telluride",
+    date: "April 21, 2026",
+    newsTopic: "government",
+    copy: "(April 21, 2026) – The Town of Telluride will hold a Special Municipal Election on Tuesday, June 30, coordinated with San Miguel County for the Primary Election. The Clerk's Department has certified three candidates eligible to run for elected office.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=390",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15528"
+  },
+  {
     title: "County Planning Commission 5/14 Meeting in TELLURIDE",
     source: "San Miguel County",
     date: "May 1, 2026",
     newsTopic: "land-use",
     copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1393"
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1393",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14225"
+  },
+  {
+    title: "Last Dollar Pass is now open",
+    source: "San Miguel County",
+    date: "May 11, 2026",
+    newsTopic: "community",
+    copy: "Last Dollar Pass is now open",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=523",
+    img: ""
   },
   {
     title: "New Motor Vehicle Office Availability in Egnar! May 13 at 9 am - 3 pm",
@@ -3979,7 +5267,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "May 5, 2026",
     newsTopic: "land-use",
     copy: "The new Motor Vehicle office will be available in Egnar on May 13 from 9 am - 3 pm in the same building as the fire department (5634 County Rd H1). We hope to serve many community members in this area, eliminating the drive to Norwood or Telluride.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=516"
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=516",
+    img: ""
   },
   {
     title: "New Wildfire Information Site Launched",
@@ -3987,13 +5276,31 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "May 1, 2026",
     newsTopic: "public-safety",
     copy: "San Miguel County announces the launch of a new wildfire information site, Living with Wildfire. The site is a resource for preparation, mitigation, evacuation and recovery information. More material will be added soon!",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=522"
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=522",
+    img: ""
+  },
+  {
+    title: "Spring Off-Season Schedule",
+    source: "Town of Telluride",
+    date: "April 24, 2026",
+    newsTopic: "community",
+    copy: "Spring Off-Season Schedule in effect April 6 – May 22, 2026. Service frequency reduced. Check individual route schedules below.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=64",
+    img: ""
   }
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
 // Updated: 2026-04-01  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 5-11-26",
+    source: "KOTO Community Radio",
+    date: "May 12, 2026",
+    newsTopic: "community",
+    copy: "Valley Floor Day Instills Stewardship in a Changing Climate -General Assembly Enters Final Days",
+    href: "https://koto.org/news/newscast-5-11-26/"
+  },
   {
     title: "Newscast 5-8-26",
     source: "KOTO Community Radio",
@@ -4049,21 +5356,20 @@ const KOTO_NEWSCASTS = [
     newsTopic: "land-use",
     copy: "The State of Crime in Telluride; Town Council Pauses Housing Waitlist Policy; Building with Cob",
     href: "https://koto.org/news/newscast-4-29-26/"
-  },
-  {
-    title: "Newscast 4-27-26",
-    source: "KOTO Community Radio",
-    date: "April 28, 2026",
-    newsTopic: "recreation",
-    copy: "A Mountain Village Investigation Update; Coming Up Next, Telluride; Lawmakers Talk Geothermal and Overtime Hours",
-    href: "https://koto.org/news/newscast-4-27-26/"
   }
 ];
 
 // ══════════ KOTO COMMUNITY RADIO — FEATURED STORIES ══════════
 // Updated: 2026-04-01  — refresh periodically from koto.org/news-category/featured-stories/
 const KOTO_FEATURED_STORIES = [
-
+  {
+    title: "Valley Floor Day Instills Stewardship in a Changing Climate",
+    source: "KOTO Community Radio",
+    date: "May 12, 2026",
+    newsTopic: "education",
+    copy: "More than 100 elementary students explored local flora and fauna during Valley Floor Education Day, learning about beavers, owls and ecosystem health through hands-on science.",
+    href: "https://koto.org/news/valley-floor-education-day-telluride-students-wetlands-wildlife-science/"
+  }
 ];
 
 // ══════════════════════════════════════
@@ -4223,138 +5529,6 @@ const COMMUNITY_EVENTS = [
 // ── Bot-managed event arrays (populated every 6h by content-refresh.js) ──
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Gentle Yoga with Kristin Milord",
-    link: "https://koto.org/event/gentle-yoga-with-kristin-milord-2/2026-05-10/",
-    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class is free, but donations to support the instructor are welcome.",
-    pubDate: "2026-05-10T11:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/gentle-yoga-kristen-1.png"
-  },
-  {
-    title: "Nature Nurture for Moms with Lauren Norton",
-    link: "https://koto.org/event/nature-nurture-for-moms-with-lauren-norton/",
-    description: "Connect with Mother Nature on this Mother's Day 2026. Join Lauren Kaas Norton for a guided outdoor experience designed to help you slow down, ground yourself, and reconnect with the natural world. Through gentle breathwork, mindful movement, and guided reflection, you’ll explore a new way of being in relationship with the land rooted in presence, awareness, and reciprocity. This experience is open to anyone curious about deepening their connection to nature, whether you’re new to these practices or already walking this path. Come as you are, and leave feeling more centered, supported, and connected.",
-    pubDate: "2026-05-10T12:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/nature-nurture-6.png"
-  },
-  {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-05-10/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-05-10T13:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-05-10/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-05-10T14:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
-    title: "Piano on the Patio with Oliver",
-    link: "https://koto.org/event/piano-on-the-patio-with-oliver/",
-    description: "Craving a break from the hustle and bustle of your day? Take a lunchtime escape to the library for a dose of tranquility. Settle into a comfy chair and unwind with ethereal piano melodies played live by WPL's very own, Oliver Henry, of Après Nova. Unplug from your devices and bring a book, magazine, or simply enjoy a moment of peace and quiet. This program is a great way to de-stress, recharge, and refocus for the rest of your afternoon. Feel free to bring your lunch and enjoy it while listening to the music! No registration required.",
-    pubDate: "2026-05-11T12:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/PATIO-3.png"
-  },
-  {
-    title: "Savvy Seniors- Open Tech",
-    link: "https://koto.org/event/savvy-seniors-open-tech/",
-    description: "Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music.",
-    pubDate: "2026-05-11T13:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/May26-2.png"
-  },
-  {
-    title: "An Absolute Beginners Guide to Music Theory",
-    link: "https://koto.org/event/an-absolute-beginners-guide-to-music-theory-2/",
-    description: "In this event series, Annie and Rachel will take you on a journey,—starting from the very beginning of reading music—to give you the skills to start reading sheet music on your own.",
-    pubDate: "2026-05-11T17:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/music-theory-2.png"
-  },
-  {
-    title: "Cardio Dance Class with Kelsey",
-    link: "https://koto.org/event/cardio-dance-class-with-kelsey/",
-    description: "Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won't even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. ¡Únete a nosotros para una divertida noche de baile y ejercicio! Te divertirás tanto que ni te darás cuenta de que estás haciendo ejercicio. Dirigido por Kelsey Trottier del Telluride Dance Collective.",
-    pubDate: "2026-05-11T18:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Online Author Talk with Vivienne Ming",
-    link: "https://koto.org/event/online-author-talk-with-vivienne-ming/",
-    description: "Join us for a timely conversation on AI, humanity, and the next steps towards building a better future with self-proclaimed “mad scientist” Dr. Vivienne Ming as we discuss her new book, Robot-Proof: When Machines Have All the Answers, Build Better People. In Robot-Proof, Dr. Vivienne Ming helps readers grasp the ugly and the amazing of how individuals, companies, and societies will respond to the changes that are already taking hold due to the advent of AI. Robot-Proof is a book about people, exploring what it means to be human in an increasingly automated world.",
-    pubDate: "2026-05-12T12:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/vivienne.png"
-  },
-  {
-    title: "Free Legal Clinic – Clínica Jurídica Gratuita",
-    link: "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-05-12/",
-    description: "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
-    pubDate: "2026-05-12T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Script Club with Telluride Theatre",
-    link: "https://koto.org/event/script-club-with-telluride-theatre/",
-    description: "Join us for our newest club, in partnership with Telluride Theatre: SCRIPT CLUB! This quarterly series will explore contemporary classics and modern-day scripts. We will discuss the historic, literary and performative nature of these plays and films. This month, we'll be reading Beauty Queen of Leenane by Martin McDonagh. There are some editions available for check-out through the library or you can contact Kevin Douglas at Telluride Theatre for a pdf (electronic or physical print) of the script: KEVIN@TELLURIDETHEATRE.ORG",
-    pubDate: "2026-05-12T17:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/Script-mar-2.png"
-  },
-  {
-    title: "Book Buzz at Telluride Brewing Co-Lawson Hill",
-    link: "https://koto.org/event/book-buzz-at-telluride-brewing-co-lawson-hill/",
-    description: "Join WPL on the 2nd Tuesday 5:30-6:30PM of each month at TBC in Lawson Hill. We will have a pop-up library for checkouts, talk about new titles. Pick up some DIY color kits for the kids to enjoy 10% discount on food as well as $5 TBC Beers when you show your library card. Don't have a card? We can make one for you on the spot!",
-    pubDate: "2026-05-12T17:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Brewing Company Lawson Hill Taproom",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/book-buzz-6.png"
-  },
-  {
     title: "Lite Lunch Book Club- Wait for Me",
     link: "https://koto.org/event/lite-lunch-book-club-wait-for-me/",
     description: "Join us for a little Lite Lunch and a discussion of Wait for Me by Amy Jo Burns. Space is limited, sign up in advance. Contact tosborne@telluridelibrary.org for a copy of the book.",
@@ -4454,6 +5628,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "West End Stories & Poems",
+    link: "https://koto.org/event/west-end-stories-poems/",
+    description: "Come join the West-Enders and share a story or poem or song about the drought. 6 pm Thursday May 14th at the Naturita Community Library. Free and open to all.",
+    pubDate: "2026-05-14T18:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Naturita Community Library",
+    imageUrl: ""
+  },
+  {
     title: "Outdoor Gear Drive",
     link: "https://koto.org/event/outdoor-gear-drive/2026-05-15/1/",
     description: "Get that unused gear out of your garage and to someone who will happily use it! Telluride Mountain Club is collecting lightly used outdoor gear, including skis, camping gear, bikes, and clothing at Carhenge Parking lot between 10 AM and 2 PM on Friday & Saturday, May 15th & 16th. Gear will be re-distributed at the Community Fiesta.",
@@ -4498,6 +5683,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/04/Gear-Drive-poster-2026.jpg"
   },
   {
+    title: "Talking Gourds Pop-Up Poetry",
+    link: "https://koto.org/event/talking-gourds-pop-up-poetry/",
+    description: "Poet/performer and poetry activist Lawton Eddy, who runs the very successful Season of Words series “Poetry Live at A Church” in Salida, will be in Telluride as off-season is ending to share new work and poems from her book Chasing Grace (2021) at a Talking Gourd’s Pop-Up-Poetry series for locals beginning at 1 pm on Friday, May 15 th , at the Wilkinson Public Library magazine room. Free and open to all. Bring a poem or story to share. The prompt is Chasing Grace.",
+    pubDate: "2026-05-15T13:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
     title: "Clown Sex Ed (Telluride Theatre FRINGE Project)",
     link: "https://koto.org/event/clown-sex-ed-telluride-theatre-fringe-project/2026-05-15/",
     description: "Clown Sex Ed is a hilarious romp through the challenges, failures and horror stories of American sex education. Tara Demmy and Zachary Chiero poke fun at your gym teacher, your health class and your parents' awkward talk and examine not only what they said but more importantly what they left out. Produced by Durango-based Oddball Theatre Company, this off-the-walls comedy \"makes the uncomfortable uproariously funny\" (Broad Street Review). A limited number of Pay-What-You-Can tickets are available per performance. — About Telluride Theatre FRINGE Projects: First launched in 1947, the Edinburgh Fringe Festival provided independent artists a platform to share their work, ranging from new musicals, small immersive performances, and everything in-between. In the spirit of the Fringe, Telluride Theatre is launching a new year-round program: The FRINGE Project. Applications are open to local artists with performance proposals for small-to-medium sized productions of ALL styles.",
@@ -4507,6 +5703,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "The BOB at the Palm Theatre, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/04/clown-sex-ed-hero-image.png"
+  },
+  {
+    title: "Bridal veil Trail Clean-up",
+    link: "https://koto.org/event/bridal-veil-trail-clean-up/",
+    description: "Patagonia and Sheep Mountain Alliance will host a Bridal Veil Trail Clean-Up in celebration of Colorado Public Lands Day! Trail clean up starts at 8 am, there will be coffee from the Pour Over Pedaler. Please bring water, sturdy hiking shoes, and a hat!",
+    pubDate: "2026-05-16T08:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/Bridalveil-Cleanup-Poster-1.png"
   },
   {
     title: "Bilingual Balance in Motion",
@@ -4685,6 +5892,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/04/abril-2.png"
   },
   {
+    title: "\"Rooted\" , A short film showcase and panel on Indigenous land access in Southwest Colorado/Cortometrajes y un panel sobre el acceso a tierra Indigenas en el suroeste de Colorado.",
+    link: "https://koto.org/event/rooted-a-short-film-showcase-and-panel-on-indigenous-land-access-in-southwest-colorado-cortometrajes-y-un-panel-sobre-el-acceso-a-tierra-indigenas-en-el-suroeste-de-colorado/2026-05-20/1/",
+    description: "Please join us at Patagonia Telluride in collaboration with Trees, Water, and People and the Montezuma Land Conservancy for a film screening of \"Rooted\" and a panel discussion on Indigenous land access, water rights, climate change and current issues affecting Indigenous Peoples of the Southwest.",
+    pubDate: "2026-05-20T08:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Patagonia Telluride, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/Rooted_PosterTelluride-2-1-1-1-scaled.jpg"
+  },
+  {
     title: "Beans and Books at Coffee Cowboy",
     link: "https://koto.org/event/beans-and-books-at-coffee-cowboy/",
     description: "What better way to start out your day than by sipping on a hot cup of coffee while chatting with other bibliophiles about books? It's a chance to talk about whatever you have been reading (or listening to) and hear about what other folks have been reading (or listening to). Drop in anytime at the beautiful Coffee Cowboy General Store on the corner of Pacific and Willow the third Wednesday of every month!",
@@ -4718,6 +5936,28 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/04/plant-party-9.png"
   },
   {
+    title: "\"Rooted\" , A short film showcase and panel on Indigenous land access in Southwest Colorado/Cortometrajes y un panel sobre el acceso a tierra Indigenas en el suroeste de Colorado.",
+    link: "https://koto.org/event/rooted-a-short-film-showcase-and-panel-on-indigenous-land-access-in-southwest-colorado-cortometrajes-y-un-panel-sobre-el-acceso-a-tierra-indigenas-en-el-suroeste-de-colorado/2026-05-20/2/",
+    description: "Please join us at Patagonia Telluride in collaboration with Trees, Water, and People and the Montezuma Land Conservancy for a film screening of \"Rooted\" and a panel discussion on Indigenous land access, water rights, climate change and current issues affecting Indigenous Peoples of the Southwest.",
+    pubDate: "2026-05-20T17:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Patagonia Telluride, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/Rooted_PosterTelluride-2-1-1-1-scaled.jpg"
+  },
+  {
+    title: "Telluride Rotary Club Meeting",
+    link: "https://koto.org/event/telluride-rotary-club-meeting-3/",
+    description: "Telluride Rotary Club meets Wednesday, May 20, at 6 p.m. at the Wilkinson Public Library in Telluride. Meetings feature guest speakers and discussion of club projects. Anyone with an interest in networking and service is welcome to drop in as a guest. Email telluriderotary@gmail.com for info or to rsvp.",
+    pubDate: "2026-05-20T18:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/Telluride-Rotary-Logo-White-1.png"
+  },
+  {
     title: "Mountainfilm Festival",
     link: "https://koto.org/event/mountainfilm-festival/",
     description: "Using the power of film, art and ideas, Mountainfilm inspires audiences to create a better world. Held every Memorial Day weekend, the Mountainfilm festival brings together a community of filmmakers and change makers, showcasing documentary films that celebrate adventure, activism, social justice, environment and indomitable spirit.",
@@ -4738,41 +5978,85 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/05/Screenshot-2026-05-08-111935.png"
+  },
+  {
+    title: "Pilates for All Bodies with Laura",
+    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-05-21/",
+    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-05-21T12:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
   }
 ];
 const WILKINSON_EVENTS = [
   {
-    title: "Safe @ Home",
-    link: "https://telluridelibrary.libcal.com/event/16273538?hs=a",
-    description: "9:30 AM – 11:00 AM · This course will provide basic skills to ensure that your child remains safe when home alone for short periods of time. for 3rd graders and up (parents are encouraged to attend). Este curso proporcionar&aacute; habilidades b&aacute;sicas para garantizar que su hijo permanezca seguro cuando est&eacute; solo en casa por per&iacute;odos cortos de tiempo. para estudiantes de 3 grado en adelante (Se recomienda asistencia de padres)",
-    pubDate: "2026-05-09T09:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_22_17_09_43.png"
-  },
-  {
-    title: "CANCELLED - Balance in Motion - Equilibrio en Movimiento",
-    link: "https://telluridelibrary.libcal.com/event/16535297?hs=a",
-    description: "10:00 AM – 11:00 AM · Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Mu&eacute;vase, respire y ll&eacute;nese de energ&iacute;a en esta din&aacute;mica clase biling&uuml;e, dirigido por Lauren Norton, dise&ntilde;ada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energ&iacute;a de la danza, y la presencia equilibrante del yoga y la respiraci&oacute;n, esta sesi&oacute;n le dejar&aacute; sinti&eacute;ndose fuerte, en armon&iacute;a y revitalizado/a. …",
-    pubDate: "2026-05-09T10:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1740003527.jpg"
-  },
-  {
-    title: "Creación de Tarjetas en Familia • Family Card making Day",
-    link: "https://telluridelibrary.libcal.com/event/16825037?hs=a",
-    description: "2:30 PM – 4:00 PM · Haz una Tarjetas para el D&iacute;a de las Madres o para alguien que ames! &bull; Make a card for Mother&#39;s Day or for anyone you love!",
-    pubDate: "2026-05-09T14:30:00.000Z",
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/16762976?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-05-12T10:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_01_13_20_11.jpeg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+  },
+  {
+    title: "Online Author Talk with Vivienne Ming",
+    link: "https://telluridelibrary.libcal.com/event/16560453?hs=a",
+    description: "12:00 PM – 1:00 PM · Join us for a timely conversation on AI, humanity, and the next steps towards building a better future with self-proclaimed \"mad scientist\" Dr. Vivienne Ming as we discuss her new book, Robot-Proof: When Machines Have All the Answers, Build Better People. In Robot-Proof , Dr. Vivienne Ming helps readers grasp the ugly and the amazing of how individuals, companies, and societies will respond to the changes that are already taking hold due to the advent of AI. Robot-Proof is a book about people, exploring what it means to be human in an increasingly automated world. This book presents, then answers, pressing questions that readers may or may not have thought to themselves, such as: What predicts long-term life outcomes across millions of little kids? Why is the Informational-Exploration Paradox the most terrifying phenomenon you've never heard of? …",
+    pubDate: "2026-05-12T12:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_11_15_48_01.jpg"
+  },
+  {
+    title: "I Heart Art",
+    link: "https://telluridelibrary.libcal.com/event/16417092?hs=a",
+    description: "2:30 PM – 4:30 PM",
+    pubDate: "2026-05-12T14:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1771000912.png"
+  },
+  {
+    title: "Free Legal Clinic - Clínica Jurídica Gratuita (Zoom)",
+    link: "https://telluridelibrary.libcal.com/event/16009649?hs=a",
+    description: "4:00 PM – 5:40 PM · A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only.  BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una cl&iacute;nica de asesoramiento jur&iacute;dico GRATUITO para las personas que notienen abogado. Abogados voluntarios responder&aacute;n a preguntas, ayudar&aacute;n a llenar formularios y explicar&aacute;n el proceso y el procedimiento de cuestiones jur&iacute;dicas. Los abogados voluntarios no te representan y esta cl&iacute;nica es s&oacute;lo informativa. CON CITA PREVIA. Llame a 970-728-4519 para m&aacute;s informaci&oacute;n y para registrarse.",
+    pubDate: "2026-05-12T16:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Meeting Room #5 - small",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1760996664.jpg"
+  },
+  {
+    title: "Book Buzz at Telluride Brewing Company",
+    link: "https://telluridelibrary.libcal.com/event/16576522?hs=a",
+    description: "5:30 PM – 6:30 PM · Join WPL on the 2nd Tuesday 5:30-6:30pm of each month at TBC in Lawson Hill May-September. Our queen of Reader&#39;s Advisory, Tiffany Osborne, will be there to talk about our hottest new titles and Miss Melissa will be providing an interactive story time for the kids. We&#39;ll have grab-and-go activity kits for the littles as well, and plenty of books to checkout. ADDED BONUS: Enjoy a 10% discount on food as well as $5 TBC Beers when you show your library card to the TBC staff . Don&#39;t have a card? No problem! We&#39;ll make one for you on the spot!",
+    pubDate: "2026-05-12T17:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Brewing Company",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_13_09_56_40.png"
+  },
+  {
+    title: "Script Club with Telluride Theatre: Beauty Queen of Leenane",
+    link: "https://telluridelibrary.libcal.com/event/14953826?hs=a",
+    description: "5:30 PM – 7:00 PM · Join us for our newest club, in partnership with Telluride Theatre: SCRIPT CLUB! This quarterly series will explore contemporary classics and modern-day scripts. We will discuss the historic, literary and performative nature of these plays and films. This month, we&#39;ll be reading Beauty Queen of Leenane by Martin McDonagh . There are some editions available for check-out through the library or you can contact Kevin Douglas at Telluride Theatre for a pdf (electronic or physical print) of the script: KEVIN@TELLURIDETHEATRE.ORG Please read the play before our meeting if you can. We will discuss the text, watch clips from famous productions/adaptations, and maybe even read some scenes aloud. (No pressure if you're feeling shy!). This month, after the play discussion, we will watch the movie The Banshees of Inisherin , which is the film adaptation of another McDonagh play. …",
+    pubDate: "2026-05-12T17:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_16_38_10.jpg"
   }
 ];
 const HUMANE_SOCIETY_ANIMALS = [
@@ -5344,7 +6628,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-05-09'; // Updated by legal-notice-update task
+const LEGAL_NOTICES_CACHE_DATE = '2026-05-12'; // Updated by legal-notice-update task
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -5876,24 +7160,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluride.gov/bids.aspx?bidID=127",
     address: "",
     totBidID: "127"
-  },
-  {
-    title: "Environmental Assessment -- Telluride Ski Resort Improvements (Forest Service)",
-    entity: "Grand Mesa, Uncompahgre and Gunnison National Forests",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The Grand Mesa, Uncompahgre and Gunnison National Forests has prepared a Draft Environmental Assessment for Telluride Ski Resort improvements including lift replacements, trail construction, and restaurant expansion. The public comment period runs from April 11 to May 11, 2026. Comments must be submitted to be eligible for future objections.",
-    deadline: "May 11, 2026",
-    expires: "2026-05-11",
-    dates: "4/16",
-    papers: ["ttimes_0416"],
-    url: "https://www.telluridenews.com/news/legals/article_c5a54e8f-2fa6-42a2-ba94-3a3828e137ff.html",
-    address: "Telluride Ski Resort area on National Forest System lands and adjacent private lands in Mountain Village and Telluride",
-    noticeKey: "forest-service-tsr-ea-68020"
   },
   {
     title: "Rezoning Application -- 2028 Maverick Way, Norwood",
