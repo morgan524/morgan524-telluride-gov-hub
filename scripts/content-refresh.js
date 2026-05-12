@@ -625,8 +625,7 @@ const NOTICE_ENTITY_TO_SOURCE = {
 };
 
 async function refreshMeetingPreviews(existingPreviews, govHubSrc) {
-  console.log('
-📋 Task 1b: Refreshing meeting previews from legal notices...');
+  console.log('\n📋 Task 1b: Refreshing meeting previews from legal notices...');
 
   // Extract current LEGAL_NOTICES from gov-hub.js source
   let legalNotices = [];
@@ -701,8 +700,7 @@ async function refreshMeetingPreviews(existingPreviews, govHubSrc) {
       // Build context from legal notices + agenda text
       const noticeContext = relatedNotices.map(n =>
         `[${n.type || 'Notice'}] ${n.title}: ${(n.summary || '').slice(0, 200)}`
-      ).join('
-');
+      ).join('\n');
 
       const agendaText = m.agendaUrl ? await extractAgendaText(m.agendaUrl) : '';
 
@@ -716,9 +714,7 @@ async function refreshMeetingPreviews(existingPreviews, govHubSrc) {
 ${noticeContext}` : '',
         agendaText ? `AGENDA TEXT (excerpt):
 ${agendaText.slice(0, 1500)}` : ''
-      ].filter(Boolean).join('
-
-');
+      ].filter(Boolean).join('\n\n');
 
       const prompt = `You are summarizing what a local government body is expected to discuss at an upcoming meeting.
 
