@@ -304,6 +304,24 @@
     .btn-action.primary:hover { background: #1a332c; }
     .btn-action.comment { background: var(--gold-soft); color: #7a5c10; border-color: rgba(181,138,44,0.35); }
     .btn-action.comment:hover { background: rgba(181,138,44,0.26); }
+    .btn-action.packet { background: #a8d5b0; color: #1a3d2b; border-color: #7dbb8a; font-weight: 700; }
+    .btn-action.packet:hover { background: #8fca9a; }
+    .btn-action.wtm { background: #fff; color: #8b7250; border-color: #8b7250; font-weight: 700; }
+    .btn-action.wtm:hover { background: #8b7250; color: #fff; }
+
+    /* WTM modal */
+    #wtm-modal { display:none; position:fixed; inset:0; z-index:9000; align-items:center; justify-content:center; }
+    #wtm-modal.open { display:flex; }
+    .wtm-modal-overlay { position:absolute; inset:0; background:rgba(15,25,20,0.55); backdrop-filter:blur(3px); }
+    .wtm-modal-box { position:relative; z-index:1; background:#fff; border-radius:16px; box-shadow:0 24px 64px rgba(10,20,15,0.22); max-width:480px; width:calc(100% - 40px); padding:28px 28px 26px; animation:wtmSlideUp 0.22s ease-out; }
+    .wtm-modal-header { display:flex; align-items:center; gap:8px; margin-bottom:10px; }
+    .wtm-modal-icon { width:18px; height:18px; flex-shrink:0; color:#8b7250; }
+    .wtm-modal-label { font-size:0.68rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:#8b7250; flex:1; }
+    .wtm-modal-close { background:none; border:none; cursor:pointer; font-size:1rem; color:#7a8a85; padding:2px 4px; border-radius:4px; transition:color .15s; }
+    .wtm-modal-close:hover { color:#1a2e29; }
+    .wtm-modal-meeting { font-size:0.88rem; font-weight:700; color:#1a2e29; margin-bottom:14px; line-height:1.35; padding-bottom:12px; border-bottom:1px solid rgba(139,114,80,0.15); }
+    .wtm-modal-body { margin:0; font-size:0.92rem; line-height:1.7; color:#4a5e57; }
+    @keyframes wtmSlideUp { from { opacity:0; transform:translateY(12px) scale(0.97); } to { opacity:1; transform:translateY(0) scale(1); } }
 
     /* Comment deadline note */
     .comment-deadline {
@@ -578,6 +596,62 @@
            + '<div class="day">' + day + '</div>'
            + '<div class="year">' + year + '</div></div>';
     }
+    // ── Packet link lookup (uses gov-data.js constants) ──
+    function getMeetingPacketLink(m) {
+      if (!m || m.sourceKey !== 'county') return null;
+      if (typeof COUNTY_CIVICCLERK_IDS === 'undefined' || typeof COUNTY_CIVICCLERK_AGENDA_FILES === 'undefined') return null;
+      const key = (m.title || '') + '|' + (m.date || '');
+      const eventId = COUNTY_CIVICCLERK_IDS[key];
+      if (!eventId) return null;
+      const fileId = COUNTY_CIVICCLERK_AGENDA_FILES[eventId];
+      if (!fileId) return null;
+      return (typeof COUNTY_CIVICCLERK_BASE !== 'undefined' ? COUNTY_CIVICCLERK_BASE : 'https://sanmiguelcoco.portal.civicclerk.com/event/') + eventId + '/files/agenda/' + fileId;
+    }
+
+    // ── Why This Matters popup lookup ──
+    function getWTMPopup(m) {
+      if (typeof WHY_THIS_MATTERS === 'undefined') return null;
+      const text = (m.title || '') + ' | ' + (m.summary || '');
+      for (var i = 0; i < WHY_THIS_MATTERS.length; i++) {
+        var entry = WHY_THIS_MATTERS[i];
+        if (entry.match && entry.match.test(text)) return entry.popup || entry.decision || null;
+      }
+      return null;
+    }
+
+    function ensureWTMModal() {
+      if (document.getElementById('wtm-modal')) return;
+      var el = document.createElement('div');
+      el.id = 'wtm-modal';
+      el.setAttribute('role', 'dialog');
+      el.setAttribute('aria-modal', 'true');
+      el.innerHTML =
+        '<div class="wtm-modal-overlay" onclick="closeWTMModal()"></div>' +
+        '<div class="wtm-modal-box">' +
+          '<div class="wtm-modal-header">' +
+            '<svg class="wtm-modal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>' +
+            '<span class="wtm-modal-label">Why This Matters</span>' +
+            '<button class="wtm-modal-close" onclick="closeWTMModal()" aria-label="Close">✕</button>' +
+          '</div>' +
+          '<div id="wtm-modal-title" class="wtm-modal-meeting"></div>' +
+          '<p id="wtm-modal-body" class="wtm-modal-body"></p>' +
+        '</div>';
+      document.body.appendChild(el);
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeWTMModal(); });
+    }
+    function openWTMModal(title, text) {
+      ensureWTMModal();
+      document.getElementById('wtm-modal-title').textContent = title;
+      document.getElementById('wtm-modal-body').textContent = text;
+      document.getElementById('wtm-modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeWTMModal() {
+      var el = document.getElementById('wtm-modal');
+      if (el) el.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
     function meetingCard(m) {
       const dateBadge = fmtDateBadge(m.date);
       const logo = m.entityLogo
@@ -595,6 +669,16 @@
       const recordBtn = m.recordingUrl
         ? '<a class="btn-action" href="' + m.recordingUrl + '" target="_blank" rel="noopener">Recording</a>'
         : '';
+      const pktUrl = getMeetingPacketLink(m);
+      const packetBtn = pktUrl
+        ? '<a class="btn-action packet" href="' + pktUrl + '" target="_blank" rel="noopener">⬇ Packet</a>'
+        : '';
+      const wtmText = getWTMPopup(m);
+      const safeTitle = (m.title || '').replace(/'/g, "\'");
+      const safeWtm = wtmText ? wtmText.replace(/'/g, "\'") : '';
+      const wtmBtn = wtmText
+        ? '<button class="btn-action wtm" onclick="openWTMModal(\'' + safeTitle + '\',\'' + safeWtm + '\')">ℹ Why This Matters</button>'
+        : '';
 
       // Comment button
       const ci = commentInfo(m);
@@ -611,7 +695,7 @@
            + '<div class="meet-info">' + tag + '<h2 class="meet-title">' + m.title + '</h2></div>'
            + logo + '</div>'
            + summary + meta
-           + '<div class="meet-actions">' + agendaBtn + recordBtn + commentBtn + '</div>'
+           + '<div class="meet-actions">' + agendaBtn + packetBtn + wtmBtn + recordBtn + commentBtn + '</div>'
            + deadlineNote
            + '</article>';
     }
@@ -653,10 +737,10 @@
 
 
       const dataScript = document.createElement('script');
-      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v2';
+      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v3';
       dataScript.onload = () => {
         const s = document.createElement('script');
-        s.src = 'https://livabletelluride.org/js/data-only.js?v=v2';
+        s.src = 'https://livabletelluride.org/js/data-only.js?v=v3';
         s.onload = () => {
           try {
             // Stub AI_SUMMARIES so getMeetingSummary() doesn't throw.
