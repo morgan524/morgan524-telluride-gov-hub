@@ -987,41 +987,59 @@ function highlightLegalNamesAndAddresses(text) {
   return text;
 }
 
-// Render the "Why This Matters" button + expandable panel HTML
+// Render the "Why This Matters" button — opens a popup modal
 function renderWhyThisMatters(item, showFaded) {
   const wtm = getWhyThisMatters(item);
-  if (!wtm && !showFaded) return '';
+  if (!wtm) return '';  // Only show button when content exists
 
   const icon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>';
+  const popupText = (wtm.popup || wtm.decision || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
+  const meetingTitle = (item.title || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
 
-  if (!wtm) {
-    // No "Why This Matters" content — hide button entirely
-    return '';
-  }
-
-  const id = 'wtm-' + Math.random().toString(36).slice(2, 9);
-  const arrow = '<svg class="wtm-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>';
-
-  let html = '<button class="wtm-btn" onclick="toggleWTM(\'' + id + '\', this)" aria-expanded="false" aria-controls="' + id + '">' + icon + ' Why This Matters ' + arrow + '</button>';
-  html += '<div class="wtm-panel" id="' + id + '" role="region">';
-  html += '<div class="wtm-row"><div class="wtm-label">What\'s Being Decided</div><div class="wtm-text">' + linkGlossaryTerms(wtm.decision) + '</div></div>';
-  html += '<div class="wtm-row"><div class="wtm-label">Who\'s Affected</div><div class="wtm-text">' + linkGlossaryTerms(wtm.who) + '</div></div>';
-  html += '<div class="wtm-row"><div class="wtm-label">Meeting Stage</div><div class="wtm-text">' + linkGlossaryTerms(wtm.stage) + '</div></div>';
-  html += '<div class="wtm-row"><div class="wtm-label">Practical Impact</div><div class="wtm-text">' + linkGlossaryTerms(wtm.impact) + '</div></div>';
-  if (wtm.context) {
-    html += '<div class="wtm-context"><strong>Background</strong><br>' + linkGlossaryTerms(wtm.context) + '</div>';
-  }
-  html += '</div>';
-  return html;
+  return '<button class="wtm-btn" onclick="openWTMModal(\'' + meetingTitle + '\',\'' + popupText + '\')">' + icon + ' Why This Matters</button>';
 }
 
-function toggleWTM(id, btn) {
-  const panel = document.getElementById(id);
-  if (!panel) return;
-  const isOpen = panel.classList.toggle('open');
-  btn.classList.toggle('open', isOpen);
-  btn.setAttribute('aria-expanded', isOpen);
+// Inject the WTM modal once, lazily
+function ensureWTMModal() {
+  if (document.getElementById('wtm-modal')) return;
+  const el = document.createElement('div');
+  el.id = 'wtm-modal';
+  el.setAttribute('role', 'dialog');
+  el.setAttribute('aria-modal', 'true');
+  el.setAttribute('aria-labelledby', 'wtm-modal-title');
+  el.innerHTML =
+    '<div class="wtm-modal-overlay" onclick="closeWTMModal()"></div>' +
+    '<div class="wtm-modal-box">' +
+      '<div class="wtm-modal-header">' +
+        '<svg class="wtm-modal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>' +
+        '<span class="wtm-modal-label">Why This Matters</span>' +
+        '<button class="wtm-modal-close" onclick="closeWTMModal()" aria-label="Close">\u2715</button>' +
+      '</div>' +
+      '<div id="wtm-modal-title" class="wtm-modal-meeting"></div>' +
+      '<p class="wtm-modal-body" id="wtm-modal-body"></p>' +
+    '</div>';
+  document.body.appendChild(el);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeWTMModal();
+  });
 }
+
+function openWTMModal(meetingTitle, popupText) {
+  ensureWTMModal();
+  document.getElementById('wtm-modal-title').textContent = meetingTitle;
+  document.getElementById('wtm-modal-body').textContent = popupText;
+  const modal = document.getElementById('wtm-modal');
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeWTMModal() {
+  const modal = document.getElementById('wtm-modal');
+  if (modal) modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+window.openWTMModal = openWTMModal;
+window.closeWTMModal = closeWTMModal;
 
 // ══════════════════════════════════════════════════════════════
 // ── Meeting Zoom Links (cached -- update when new agendas post) ──

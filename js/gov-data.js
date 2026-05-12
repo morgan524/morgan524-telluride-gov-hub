@@ -897,6 +897,7 @@ const WHY_THIS_MATTERS = [
   // ── PUD / Zoning / Development ──
   {
     match: /carhenge|700 w pacific/i,
+    popup: 'Town Council is considering a Planned Unit Development at the former Carhenge site — a potential deed-restricted workforce housing project near the gondola. This is a work session: no final vote, but the direction set here shapes the formal application. Key questions: how many units, at what income levels, and how will parking and neighborhood impacts be managed? Work sessions are the best opportunity for public input before review narrows options.',
     decision: 'Whether to approve a Planned Unit Development (PUD) for the former Carhenge site at 700 W Pacific Ave as affordable housing.',
     who: 'Residents seeking affordable housing, adjacent property owners, and anyone concerned about density in the west end of town.',
     stage: 'Work session -- no binding vote, but direction given here shapes the formal application.',
@@ -905,6 +906,7 @@ const WHY_THIS_MATTERS = [
   },
   {
     match: /chair\s*7/i,
+    popup: 'Chair 7 was zoned Open Space District in 1979 — ski uses only, no residential or commercial development. Any rezoning would set a precedent for converting dedicated open space. In September 2025, Town Council said no hotel plans would proceed, but rezoning discussions may continue. Watch closely: once open space is commercially developed in Telluride, it has never been reversed.',
     decision: 'Whether to approve rezoning or development at the Chair 7 base area.',
     who: 'All Telluride residents and visitors -- Chair 7 was dedicated as "Open Space District" in 1979 (ski uses only, no residential or commercial).',
     stage: 'Check agenda for whether this is a work session, public hearing, or vote.',
@@ -913,6 +915,7 @@ const WHY_THIS_MATTERS = [
   },
   {
     match: /society\s*turn/i,
+    popup: 'Society Turn is a proposed ~400,000 sq ft mixed-use project at the valley entrance. The hospital is only about 10% of the total footprint — the rest is commercial. Traffic studies used COVID-era March 2020 data. No wildfire evacuation analysis has been completed for a site sitting at the valley\'s single entry and exit point. Final BOCC approval may be one vote away.',
     decision: 'Whether to advance the Society Turn PUD -- a ~400,000 sq ft mixed-use development at the valley entrance including a hospital, hotel, medical offices, retail, and employee housing.',
     who: 'Every resident of the region. The hospital component (~44,000 sq ft) is roughly 10% of the total development. The remaining ~90% is commercial.',
     stage: 'Check agenda -- the PUD has completed 4 of 5 approval steps. Final approval may be pending.',
@@ -921,6 +924,7 @@ const WHY_THIS_MATTERS = [
   },
   {
     match: /shandoka/i,
+    popup: 'A proposed 900-space parking garage at Shandoka would be one of the largest structures in the region. Combined with Chair 7 and the gondola redesign, these projects represent a massive escalation in commercial infrastructure. More parking directly drives higher visitor volumes — permanently affecting the character of downtown Telluride. The combined scope of all three projects approaches $500 million.',
     decision: 'Whether to approve a large parking structure at Shandoka.',
     who: 'Telluride residents, visitors, Mountain Village commuters, and adjacent neighborhoods.',
     stage: 'Check agenda for current phase.',
@@ -929,6 +933,7 @@ const WHY_THIS_MATTERS = [
   },
   {
     match: /accelerated\s*housing\s*review/i,
+    popup: 'San Miguel County is proposing a 90-day fast-track review for qualifying affordable housing projects. A Prop 123 grant deadline drives the timeline: adopt by June 30 or wait until December 31. The Stakeholder Strategic Roundtable voted 5 to 2 against moving it forward now. All 9 public comments were in opposition. Critics say: fix the broader Land Use Code first, restore the project-size limit, and don\'t create a fast-track before adequate safeguards exist.',
     decision: 'Whether to amend the Land Use Code to implement fast-track 90-day review timelines for qualifying affordable housing development applications.',
     who: 'Developers proposing affordable housing, neighbors of potential development sites, and planning staff who must complete reviews within shortened timelines.',
     stage: 'Work session -- joint Planning Commission and BOCC discussion of proposed code language.',
@@ -937,6 +942,7 @@ const WHY_THIS_MATTERS = [
   },
   {
     match: /comprehensive\s*plan/i,
+    popup: 'A Comprehensive Plan revision sets the rules governing all future land use and zoning — changes that can reshape development patterns for decades. This is one of the most consequential items any planning body considers. Public input at this stage carries the most weight; once formal review begins, options narrow quickly. Recent Plans have been shaped by consultants who simultaneously worked on specific local development projects.',
     decision: 'Review or update of the town\'s Comprehensive Plan -- the foundational document guiding all future land use and zoning decisions.',
     who: 'Every property owner, resident, and business in the jurisdiction. The Comp Plan sets the framework for what can be built where.',
     stage: 'Check agenda -- typically presented as work session or public hearing.',
@@ -947,6 +953,7 @@ const WHY_THIS_MATTERS = [
   // ── Wildfire / Safety ──
   {
     match: /wildfire\s*resiliency\s*code|wildland\s*urban\s*interface|wui\s*code/i,
+    popup: 'The Town and County are considering adopting Colorado\'s Wildfire Resiliency Code and the Wildland Urban Interface Code. In a box canyon with one primary exit road, wildfire evacuation is an existential concern. Adoption means new construction and renovations must meet enhanced standards for building materials, defensible space, and vegetation management. Notably, the Society Turn site — at the valley\'s only entry point — still has no wildfire evacuation analysis.',
     decision: 'Whether to adopt Colorado\'s Wildfire Resiliency Code and/or the International Wildland Urban Interface (WUI) Code, setting construction and land management standards in fire-prone areas.',
     who: 'All property owners (new construction requirements), current residents (evacuation and defensible space), and the fire district (enforcement and response capacity).',
     stage: 'Check agenda -- may be adoption vote or work session.',
@@ -957,6 +964,7 @@ const WHY_THIS_MATTERS = [
   // ── Housing / Deed Restrictions ──
   {
     match: /deed\s*restrict|workforce\s*housing\s*deed|housing\s*authority/i,
+    popup: 'Deed restriction terms determine who can live in workforce housing, at what income levels, and at what price. Changes to individual deeds set precedents for the entire program. Nearly one-third of Telluride voters live in town-managed housing — making this one of the most personally relevant items on any agenda. Policy changes here can affect affordability for hundreds of households for decades.',
     decision: 'Whether to approve modifications to deed-restricted property sales or housing program rules.',
     who: 'Current and prospective deed-restricted homeowners and renters -- roughly one-third of Telluride voters live in town-managed housing.',
     stage: 'Check agenda for whether this is an individual property approval or policy change.',
@@ -967,6 +975,7 @@ const WHY_THIS_MATTERS = [
   // ── Budget / Finance ──
   {
     match: /budget\s*reduct|budget\s*session|funding.*staffing|proposed\s*construction\s*projects/i,
+    popup: 'The Town\'s budget has grown from ~$10M in 2015 to ~$95M in 2025, with 212 employees. Budget work sessions are where spending priorities are set before formal adoption. Capital project decisions here determine what gets built — and what doesn\'t. Consultant spending totaled $64M over eight years. This is the best window for public input before the budget is locked in.',
     decision: 'Review of proposed spending, staffing levels, or capital construction projects.',
     who: 'All taxpayers and service recipients -- budget decisions determine what services are funded and what gets cut.',
     stage: 'Work session -- input here shapes the final budget before formal adoption.',
