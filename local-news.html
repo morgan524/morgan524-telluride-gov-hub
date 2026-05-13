@@ -766,7 +766,6 @@
       dataScript.src = 'https://livabletelluride.org/js/data-only.js?v=' + day;
       dataScript.onload = () => {
         try {
-          try {
             if (typeof TELLURIDE_TIMES_ARTICLES === 'undefined') return;
 
             // ── Redundancy filters (port of live site behavior) ──
