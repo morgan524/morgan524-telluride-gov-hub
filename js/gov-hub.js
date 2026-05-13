@@ -2698,7 +2698,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52092499507606/huge/c6fe9a874f25452ba50a6a5c74e2bc27f9eba0d4.jpg"
   },
   {
-    title: "High Alpine Aerial presents ���In Bloom” Student Showcase",
+    title: "High Alpine Aerial presents “In Bloom” Student Showcase",
     link: "https://thewrightoperahouse.org/",
     description: "High Alpine Aerial presents “In Bloom” Student Showcase WHEN? Saturday, May 23 Doors at 2:30 pm • Show at 3:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW In Bloom is High Alpine Aerial’s student showcase featuring performers of all ages sharing their latest and greatest aerial acts. After months of practice and dedication, these emerging artists take the stage to celebrate growth, transformation, and artistic expression. Inspired by the spirit of spring, the showcase reflects renewal, courage, and the excitement of developing new skills. Students will present beautiful performances that highlight their hard work and creativity as they take flight in front of a live audience. …",
     pubDate: "2026-05-23T21:00:00.000Z",
@@ -4634,15 +4634,135 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Sweet success",
+    title: "Federal judge rules ICE in Colorado violated order limiting warrantless arrests",
     source: "Telluride Times",
     date: "May 12, 2026",
-    firstSeen: "2026-05-12",
+    firstSeen: "2026-05-13",
     newsTopic: "community",
-    copy: "The Telluride High School lacrosse team beat Holy Family 17-7 in the sweet 16, with the Miners jumping ahead early and never trailing after the first quarter. Beck Sommers led the scoring while goalies Bridger Barrett and Dylan Saunders split time in net for the sixth-seeded Miners, who improved to 13-3 overall.",
+    copy: "A federal judge ruled that ICE agents in Colorado violated a court order limiting warrantless arrests and failed to properly train officers or document such arrests. The ruling stems from an ACLU lawsuit over \"collateral arrests\" of people caught up in immigration enforcement actions. ICE must now provide officer training within 45 days and turn over arrest records.",
     claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_89d6205d-3340-4cd9-9e3c-7d05b688bf6e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/67/9672da42-7f48-4249-b019-db5fc45d6ef2/6a034f43b4e8c.image.jpg",
+    href: "https://www.telluridenews.com/news/state/article_6835e55c-d86e-510b-9abd-c6f823a59ecc.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/ac/aac37bc9-0b93-5774-be58-3957819b40cc/6a03a5aa52159.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "CHALKBOARD for the week of May 14-20",
+    source: "Telluride Times",
+    date: "May 12, 2026",
+    firstSeen: "2026-05-13",
+    newsTopic: "government",
+    copy: "This week's birthdays run from May 14-20, including local residents like Asher Ferguson, Marie Neisen, and the Priestley family members. The regular community calendar continues with Town Board meetings second Wednesdays, Farmers Market Thursdays 2-6 p.m., and various services like the food pantry Sundays 3-6 p.m.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/the_norwood_post/article_6db5a92b-5491-4bac-b91c-c21f3ee60db1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/61/e61c1b48-54e4-483a-b1ab-1e99ed6d5d77/6a03b4fae7ac9.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Countywide Spring Clean-Up events return May 15-16",
+    source: "Telluride Times",
+    date: "May 12, 2026",
+    firstSeen: "2026-05-13",
+    newsTopic: "community",
+    copy: "The annual Spring Clean-Up events return May 15-16, with electronics and household waste disposal at Carhenge in Telluride both days, plus Mountain Village and Norwood locations. The fourth annual Trash Bash follows May 17 at Elks Park.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_1ca77ddc-c404-48bd-8ccf-251ceda547b0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/fc/7fcfe0e0-ef57-4065-83b8-194de28aaab7/6a03b367c3759.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Green Grants thanks",
+    source: "Telluride Times",
+    date: "May 12, 2026",
+    firstSeen: "2026-05-13",
+    newsTopic: "community",
+    copy: "Shawnna and Dennis Andrejko wrote to thank EcoAction Partners, specifically Siobhan Montoya Lavender and Kendra Held, along with Town of Telluride's Darin Graber for their help with a Telluride Green Grants project. The couple completed efficiency upgrades through the program that helps residents with sustainability improvements.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_02b77004-73f0-4b36-a906-72b8b5861d5d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Lawton Eddy of Salida performs pop-up poetry May 15",
+    source: "Telluride Times",
+    date: "May 12, 2026",
+    firstSeen: "2026-05-13",
+    newsTopic: "community",
+    copy: "Lawton Eddy from Salida will perform pop-up poetry at the Wilkinson Library Magazine Room on Friday, May 15 at 1 p.m., with the prompt \"chasing grace.\" The free event encourages attendees to bring poems or stories to share, and Eddy has been involved with local poetry festivals and performances since the early 2000s.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_09a57ab6-8638-4062-8bdf-aa60ec487f06.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/3f/d3fbca7e-6388-43f7-adc1-be836916c378/6a03b263064bb.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Mental Health Awareness Month: Shining a Light",
+    source: "Telluride Times",
+    date: "May 12, 2026",
+    firstSeen: "2026-05-13",
+    newsTopic: "health",
+    copy: "Tri-County Health Network is asking local businesses and governments to light their buildings green throughout May for Mental Health Awareness Month. The initiative aims to reduce stigma and encourage conversations about mental health support. Events include wearing green on May 15 and a community discussion May 11 at Norwood Community Center.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_398ee143-ea60-47b8-b5e4-54c6b5213317.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/e6/6e67ae1c-a27c-4cf1-a3a0-6e8e9c4e5360/6a03b16d57978.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Money reset: getting your budget back on track",
+    source: "Telluride Times",
+    date: "May 12, 2026",
+    firstSeen: "2026-05-13",
+    newsTopic: "government",
+    copy: "With housing costs and basic expenses squeezing local budgets harder than usual, Telluride Foundation is offering free financial literacy workshops May 18th at Wilkinson Library - noon-1:30pm in English and 5:30-7pm in Spanish. The Foundation's emergency fund has seen applications jump from 70 to over 500 this year, prompting the partnership with four local banks to help residents build budgeting and savings skills.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_c19ec511-b459-4568-a13d-ec475a100b73.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Create your This is Colorado canvas",
+    source: "Telluride Times",
+    date: "May 12, 2026",
+    firstSeen: "2026-05-13",
+    newsTopic: "arts-culture",
+    copy: "Telluride Arts is hosting a community canvas project at the Mountain Village distillery May 28 where folks can create 12x12 inch pieces expressing what being a Coloradan means to them. The finished canvases will form mosaics displayed at two locations June 15-July 31 as part of Colorado's 150th anniversary celebration.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_8f08686b-e1e8-4aec-8d3f-07f36dd37aff.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/3c/63c47cc3-338c-4e0c-90ef-9a73e5f4e924/6a03af2c08a42.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Why do pets come back?",
+    source: "Telluride Times",
+    date: "May 12, 2026",
+    firstSeen: "2026-05-13",
+    newsTopic: "community",
+    copy: "The local animal shelter reminds folks that returning adopted pets is sometimes necessary due to family emergencies or housing issues, and they welcome animals back without judgment. They're encouraging potential adopters to consider their living situations beforehand, especially breed restrictions from landlords. Two returned pets currently available are Buddy, an active 80-pound mixed breed, and Albus, a friendly cat who needs to be the only feline.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_c79afdcf-67a2-4a53-af38-836434775c16.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/f5/8f5b69c6-c02a-490b-9be5-b2121e993e1e/6a03ae4e06eb8.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Norwood banquet celebrates community standouts",
+    source: "Telluride Times",
+    date: "May 12, 2026",
+    firstSeen: "2026-05-13",
+    newsTopic: "community",
+    copy: "Norwood held its second annual Night of Elegance banquet at the Lone Cone Library, drawing 49 residents for dinner, music and awards. Mesa Rose Kitchen won Business of the Year for the second straight year, while Tom Meehan received the Norwood Noble award after retiring from 47 years as a volunteer firefighter and EMT.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_476e263a-ef79-45ed-96f1-efff9949fec9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/ce/5ce29a5d-8bea-4c87-980e-a850058b903e/6a03852cadbff.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "The condition PCOS is now called PMOS. What to know about the name change and what it means for care",
+    source: "Telluride Times",
+    date: "May 12, 2026",
+    firstSeen: "2026-05-13",
+    newsTopic: "community",
+    copy: "Medical experts have changed the name of PCOS (polycystic ovary syndrome) to PMOS (polycystic ovary metabolic syndrome) after 14 years of collaboration, saying the old name was confusing since the condition doesn't actually involve ovarian cysts. The hormonal condition affects weight, metabolism, mental health, and reproduction, with treatment focusing mainly on lifestyle changes like diet and exercise.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_9576d122-904f-5d3d-98b5-7b18da541ace.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/60/86041077-105e-5b75-a863-8057788e4508/6a039de6576da.image.jpg",
     imgHiRes: true
   },
   {
@@ -4655,6 +4775,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_1f2793ff-0041-5e96-b185-b3d756e5252d.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/be/bbeb5f6d-e5cf-57fd-b2ac-6cdf28676ddf/6a031be69f601.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Sweet success",
+    source: "Telluride Times",
+    date: "May 12, 2026",
+    firstSeen: "2026-05-12",
+    newsTopic: "community",
+    copy: "The Telluride High School lacrosse team beat Holy Family 17-7 in the sweet 16, with the Miners jumping ahead early and never trailing after the first quarter. Beck Sommers led the scoring while goalies Bridger Barrett and Dylan Saunders split time in net for the sixth-seeded Miners, who improved to 13-3 overall.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_89d6205d-3340-4cd9-9e3c-7d05b688bf6e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/67/9672da42-7f48-4249-b019-db5fc45d6ef2/6a034f43b4e8c.image.jpg",
     imgHiRes: true
   },
   {
@@ -5278,39 +5410,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "West End drought survival",
-    source: "Telluride Times",
-    date: "April 29, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "community",
-    copy: "Norwood is facing its earliest water restrictions in recent memory, prompting CSU Extension to recommend drought-adapted gardening focused on native perennials over water-hungry annuals. Extension Director Annika Kristiansen and Master Gardener volunteers are advising residents to \"garden with the conditions we have\" by choosing plants suited to our high desert climate and using techniques like hügelkultur for moisture retention.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_a778a9e9-c819-4849-9e80-fad649fa33c6.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/4b/34b91d82-6339-4684-9229-8250f4823b6c/69f1697616de8.image.jpg?resize=300%2C182"
-  },
-  {
-    title: "Norwood Schools Spring Art Show",
-    source: "Telluride Times",
-    date: "April 29, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "education",
-    copy: "Norwood Schools has several upcoming events including spring pictures on April 30th, baseball districts at Del Norte on May 1st, and track meets scheduled for high school students at Pagosa Springs (May 2nd) and Grand Junction (May 6th), plus middle school track at Cedaredge on May 4th.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_db4d7389-4c3a-4cef-bf85-30ddfebbf642.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/2e/e2e844f7-8c2c-4eaf-aa50-c6ca0cba18f8/69f174ed2c287.image.jpg?resize=300%2C225"
-  },
-  {
-    title: "Far from the original in Philadelphia, these fans hunt for the Liberty Bell replica in each state",
-    source: "Telluride Times",
-    date: "April 29, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "government",
-    copy: "In 1950, the Treasury Department commissioned Liberty Bell replicas for each state as part of a savings bond drive, creating a small but growing group of \"bell hunters\" who travel to find them. Tom Campbell, a Fort Collins resident originally from Philadelphia, has become the leading expert on tracking down these 2,080-pound replicas after stumbling upon one in Denver in the late 1990s.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_6c4b6e25-2cb9-51b8-b812-1143e07369b9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/7e/37efb440-e66f-5d94-a2bc-43449e73e748/69f1e9285fdc5.image.jpg?resize=300%2C200"
-  },
-  {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
     source: "Town of Telluride",
     date: "April 24, 2026",
@@ -5329,6 +5428,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15528"
   },
   {
+    title: "Egnar Enters Stage 1 Fire Restrictions",
+    source: "San Miguel County",
+    date: "May 12, 2026",
+    newsTopic: "public-safety",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1395",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14159"
+  },
+  {
+    title: "Western Slope Wellness Launches Free Regional Mental Health Resource for Western Slope Communities",
+    source: "San Miguel County",
+    date: "May 12, 2026",
+    newsTopic: "health",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1394",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14249"
+  },
+  {
     title: "County Planning Commission 5/14 Meeting in TELLURIDE",
     source: "San Miguel County",
     date: "May 1, 2026",
@@ -5336,6 +5453,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1393",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14225"
+  },
+  {
+    title: "Assessor's Physical Office Closed Friday May 15th",
+    source: "San Miguel County",
+    date: "May 12, 2026",
+    newsTopic: "community",
+    copy: "The Assessor's physical office will be closed on Friday, May 15, due to limited staffing. Staff will be available by phone or email.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=524",
+    img: ""
   },
   {
     title: "Last Dollar Pass is now open",
@@ -6074,6 +6200,50 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
+  },
+  {
+    title: "Cancer Support Group",
+    link: "https://koto.org/event/cancer-support-group-2/",
+    description: "Join us for a supportive and compassionate space at our Cancer Support Group held every 3rd Thursday of the month from 5:00 PM to 6:00 PM. This group is designed for individuals currently experiencing cancer and for those who are in remission, offering a safe and welcoming environment for sharing personal stories, experiences, and encouragement. Whether you're navigating your cancer journey or reflecting on the road to recovery, this group provides emotional support and the opportunity to connect with others who understand your unique challenges. Come and find strength in the community, share your experiences, and know you're not alone in your journey.",
+    pubDate: "2026-05-21T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/Cancer-Support-Group.png"
+  },
+  {
+    title: "Salon Night at Telluride Arts HQ",
+    link: "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-05-21/",
+    description: "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it here in Telluride. These are evenings for conversation and connection, not lectures or formal programming. They are casual, open, and intentionally unstructured, designed to create the atmosphere where ideas can collide, new friendships form, and creativity sparks. Imagine an evening where musicians talk with writers, painters meet photographers, filmmakers share stories with ceramicists—and the unexpected happens!",
+    pubDate: "2026-05-21T17:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Arts HQ, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
+  },
+  {
+    title: "Town Read:  The River's Daughter by Bridget Crocker",
+    link: "https://koto.org/event/town-read-the-rivers-daughter-by-bridget-crocker/",
+    description: "The Town Read, selected by the library, in conjunction with Mountainfilm is The River's Daughter by Bridget Crocker. She will be at the library for a talk and signing. Books available at the event and at the bookstore.",
+    pubDate: "2026-05-21T17:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/Screenshot-2026-05-08-111935.png"
+  },
+  {
+    title: "Up-off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-05-22/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-05-22T10:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   }
 ];
 const WILKINSON_EVENTS = [
@@ -6155,6 +6325,17 @@ const HUMANE_SOCIETY_ANIMALS = [
     photo: "https://new-s3.shelterluv.com/profile-pictures/3d526ad221efcb4f9ce95210e44907f3/97514f84518ad9f760c1921e4e97f094.jpg",
     profileUrl: "https://www.shelterluv.com/embed/animal/213648662",
     summary: "Young Puppy • Cattle Dog, Australian (Red Heeler) / Shepherd • Female"
+  },
+  {
+    id: "TEL-A-181",
+    name: "Annie",
+    species: "Dog",
+    breed: "Collie, Border / Pyrenees, Great",
+    ageGroup: "Young Dog",
+    sex: "Female",
+    photo: "https://new-s3.shelterluv.com/profile-pictures/25b7a402804152231031867f03d44d27/ee52e26ad06de37c29ae074ce78437cc.jpg",
+    profileUrl: "https://www.shelterluv.com/embed/animal/213678848",
+    summary: "Young Dog • Collie, Border / Pyrenees, Great • Female"
   }
 ];
 
@@ -6713,7 +6894,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-05-12'; // Updated by legal-notice-update task
+const LEGAL_NOTICES_CACHE_DATE = '2026-05-13'; // Updated by legal-notice-update task
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -7387,6 +7568,25 @@ const LEGAL_NOTICES = [
     url: "https://www.telluride.gov/bids.aspx?bidID=129",
     address: "",
     totBidID: "129"
+  },
+  {
+    title: "Water Court -- Diligence Application for NWC Conditional Water Rights (Case No. 26CW3016)",
+    entity: "Colorado District Court, Water Division No. 4",
+    entityClass: "ent-county",
+    entityLogo: "water_court",
+    icon: "💧",
+    iconClass: "type-bid",
+    type: "Water Court",
+    filterTag: "water-court",
+    summary: "Norwood Water Commission filed a diligence application in Water Division 4 for multiple conditional water rights including reservoirs and pumps in the San Miguel River basin. The application seeks to show reasonable diligence in developing water rights originally decreed in 2013, with subsequent diligence found in 2019. The water rights are for irrigation, municipal, power generation, augmentation and piscatorial uses serving up to 20,000 acres in the NWC service area.",
+    deadline: "Not specified in notice",
+    expires: "2026-05-31",
+    dates: "4/9",
+    papers: ["ttimes_0409"],
+    url: "https://www.telluridenews.com/news/legals/article_53f99203-76eb-4168-b3a4-392ac65857e4.html",
+    address: "Multiple locations in San Miguel County including SW1/4 NE1/4 Section 10, T42N R12W; NW1/4 NW1/4 Section 22, T44N R13W; SE1/4 SE1/4 Section 9, T44N R13W; and other locations",
+    noticeKey: "26CW3016",
+    caseNumber: "26CW3016"
   }
 ];
 
