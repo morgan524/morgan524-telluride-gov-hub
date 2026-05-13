@@ -55,6 +55,18 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "US overdose deaths fell again in 2025, but some worry about policy and drug supply changes",
+    source: "Telluride Times",
+    date: "May 13, 2026",
+    firstSeen: "2026-05-13",
+    newsTopic: "community",
+    copy: "About 70,000 Americans died of drug overdoses last year — about 14% fewer than the previous year. It was the third straight annual drop, making it the longest decline in decades. The Centers for Disease Control and Prevention released the…",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/state/article_66099b39-b1b8-5596-bab2-43d492ff274a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/7e/f7eaaa55-d2df-5520-b082-970ac4c7d39f/6a048678a0970.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Denver airport security initially missed trespasser who was killed by plane on runway",
     source: "Telluride Times",
     date: "May 12, 2026",
@@ -588,8 +600,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "May 5, 2026",
     firstSeen: "2026-05-12",
     newsTopic: "community",
-    copy: "NEWS RELEASE",
-    claudeSummary: false,
+    copy: "Second Chance Humane Society is seeking foster families, especially with kitten season approaching. They need both long-term fosters for animals until adoption and short-term helpers for weekend stays or monthly breaks for shelter dogs.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_1c4f5f8f-7308-4fbf-8799-2576d6ba9026.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/40/24040efb-65d5-4496-a2c3-fc2a74ff553d/69fa65f39ffe9.image.jpg",
     imgHiRes: true
@@ -675,7 +687,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Western states are deploying AI-enabled cameras to detect wildfires earlier than 911 calls in remote areas. Arizona Public Service has nearly 40 cameras with plans for 71, while California operates over 1,200 through ALERTCalifornia. The technology costs around $50,000 per camera annually but gives firefighters a 45-minute head start on average.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_3d9717e8-6111-5f8d-b69b-3260bf6758a8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3c/c3c369ac-5496-5153-b4fc-3638934dc35a/69f899e7aa3db.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3c/c3c369ac-5496-5153-b4fc-3638934dc35a/69f899e7aa3db.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Safe actions in work zones can save lives",
@@ -686,7 +699,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Transportation Commissioner for District 8 reflects on becoming more aware of road work dangers after taking the position. CDOT manages 200 construction projects annually, and work zone safety relies on drivers slowing down, avoiding phone use, and following flaggers' directions.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_0527f33c-d1be-4f91-9d6b-a570a138bf81.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/d1/9d1d4b74-6558-4cf1-9ef9-d0848f755a25/69f115f7721a2.image.jpg?resize=300%2C192"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/d1/9d1d4b74-6558-4cf1-9ef9-d0848f755a25/69f115f7721a2.image.jpg",
+    imgHiRes: true
   },
   {
     title: "The heart of Telluride",
@@ -697,7 +711,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Local artist Brandon Bermel started the Heart of Telluride Project at the Transfer Warehouse, creating an outdoor street art installation that launched on Valentine's Day. Six artists contributed heart-themed pieces to wooden panels on the building's exterior, with community support from Ah Haa School and local businesses providing materials and workspace.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/arts_and_entertainment/article_917b2db3-f982-472d-9198-8dc744073d8e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfed5db9-e7f7-49f6-8189-3174c244d773/69f64afc5f9a1.image.jpg?resize=300%2C412"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfed5db9-e7f7-49f6-8189-3174c244d773/69f64afc5f9a1.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Rolling in the oats",
@@ -708,7 +723,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A social media influencer is promoting oats as a superfood ingredient, highlighting the ongoing debate between anti-grain advocates and those favoring Mediterranean-style diets with grains. The author reflects on surviving mostly on oatmeal during a broke summer in D.C. in 1978 and notes that while oats are nutritious, they can spike blood sugar without added protein.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_8c228500-61a7-4cf7-b21d-383052bad877.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/be/ebeb8396-3450-4d67-af94-c17626457ff1/69f13862191f6.image.jpg?resize=300%2C400"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/be/ebeb8396-3450-4d67-af94-c17626457ff1/69f13862191f6.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Jonathan Fouser is Telluride Mountain School’s new head of school",
@@ -719,7 +735,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Jonathan Fouser has been selected as Telluride Mountain School's new head of school after a competitive search that started with 42 candidates. Fouser currently oversees multiple campuses for Brewster American Schools in Spain and has experience founding international schools, teaching English, and outdoor instruction. The school board chose him for his calm leadership style and background in experiential education that aligns with the mountain school's mission.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_77d21881-a251-4576-a200-d746761986e3.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/67/86782a60-11e8-4c7e-8528-ed092884ae87/69f5ab43664e2.image.jpg?resize=300%2C300"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/67/86782a60-11e8-4c7e-8528-ed092884ae87/69f5ab43664e2.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Town council suspends waitlist policies",
@@ -730,7 +747,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Town council temporarily suspended waitlist policies for deed-restricted rentals through July 31 to fill vacancies faster. The town has 39 empty units (18% vacancy rate) despite a 220-person waitlist, well above the 8% target. Staff blame outdated applications and affordability issues with pricier units.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_766aee5a-65e5-4d4e-af87-0d75148b5bba.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/be/4be5885b-5c31-47e0-a343-371f832e5f5f/69f64629dcef0.image.jpg?resize=300%2C184"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/be/4be5885b-5c31-47e0-a343-371f832e5f5f/69f64629dcef0.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Sibling stories",
@@ -741,7 +759,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A local bartender at the Vaudeville once worked with his baby strapped to his chest during a comedy show, prompting a customer to warn him that siblings inevitably hate each other. The experience motivated him and his partner to intentionally raise their two kids as best friends through equal treatment, room sharing, and encouraging shared activities. Their approach seems to have worked - the siblings chose to ride together throughout a recent family road trip to California.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_b13bebfd-ba8d-4e2a-8bbe-e534628b63ec.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/44/244939cc-69e1-4024-ae0f-a26ac2a38c3c/69f134d9097db.image.jpg?resize=300%2C400"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/44/244939cc-69e1-4024-ae0f-a26ac2a38c3c/69f134d9097db.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Paul Wisor resigns as MV Town Manager",
@@ -752,7 +771,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Paul Wisor resigned as Mountain Village Town Manager after participating in an investigation related to the mayor's earlier resignation. His involvement came to light when he revealed he had helped former officials Prohaska and Fee with investor contacts for a ski resort purchase offer that sparked controversy and investigations by both Mountain Village and Telluride.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_2c1cc16d-5e4a-4543-86bd-1faadf9f7028.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/86/38610eb6-050c-4a1d-963e-dd31f000024c/69f4eedeb0d89.image.webp?resize=300%2C450"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/86/38610eb6-050c-4a1d-963e-dd31f000024c/69f4eedeb0d89.image.webp",
+    imgHiRes: true
   },
   {
     title: "Trump gives go-ahead to major new Canada-US oil pipeline",
@@ -763,7 +783,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Trump approved a 650-mile oil pipeline from Saskatchewan to Montana that would carry two-thirds as much oil as the canceled Keystone XL project. The company behind it has a history of major spills, including 50,000 gallons into the Yellowstone River in 2015, but says it's developed better leak detection technology.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_93f080bd-3bff-5091-afc4-5a9ddae33488.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c9/ec9912c8-b253-5755-acce-42c147636686/69f3c91b34529.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c9/ec9912c8-b253-5755-acce-42c147636686/69f3c91b34529.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Telski update to council: bike park’s future uncertain",
@@ -1180,17 +1201,6 @@ const COMMUNITY_EVENTS = [
 ];
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Lite Lunch Book Club- Wait for Me",
-    link: "https://koto.org/event/lite-lunch-book-club-wait-for-me/",
-    description: "Join us for a little Lite Lunch and a discussion of Wait for Me by Amy Jo Burns. Space is limited, sign up in advance. Contact tosborne@telluridelibrary.org for a copy of the book.",
-    pubDate: "2026-05-13T12:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/MAYLite26-2.png"
-  },
   {
     title: "Mountain Village annual Community Clean Up Days",
     link: "https://koto.org/event/mountain-village-annual-community-clean-up-days/2026-05-13/",

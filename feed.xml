@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 May 2026 08:39:58 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2026 14:17:33 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
@@ -18,6 +18,16 @@
 Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four weeks of hiking from May 31 through June 28, with a kickoff at 11am on May 31 at the Oak Street gondola plaza. Hike from anywhere and raise funds for the Telluride Rotary Foundation — supporting scholarships, Youth Exchange, international projects, and community grants. 60% of nonprofit team funds go directly back to their nonprofit. Sponsored by Alpine Bank and Jagged Edge Mountain Gear.]]></description>
       <category>Community Event</category>
       <category>Telluride Rotary Club</category>
+    </item>
+    <item>
+      <title>US overdose deaths fell again in 2025, but some worry about policy and drug supply changes</title>
+      <link>https://www.telluridenews.com/news/state/article_66099b39-b1b8-5596-bab2-43d492ff274a.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_66099b39-b1b8-5596-bab2-43d492ff274a.html</guid>
+      <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/7e/f7eaaa55-d2df-5520-b082-970ac4c7d39f/6a048678a0970.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />About 70,000 Americans died of drug overdoses last year — about 14% fewer than the previous year. It was the third straight annual drop, making it the longest decline in decades. The Centers for Disease Control and Prevention released the…]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/7e/f7eaaa55-d2df-5520-b082-970ac4c7d39f/6a048678a0970.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
     </item>
     <item>
       <title>CHALKBOARD for the week of May 14-20</title>
@@ -391,16 +401,6 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>public-safety</category>
-    </item>
-    <item>
-      <title>Art for all</title>
-      <link>https://www.telluridenews.com/arts_and_entertainment/article_526ca757-3b6a-4ed3-a83a-0727b1d76e55.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/arts_and_entertainment/article_526ca757-3b6a-4ed3-a83a-0727b1d76e55.html</guid>
-      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3e/c3e7b346-f9ad-487f-80f8-a7c72a40a371/69fc4a58b71bc.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Ah Haa's "May as You Can" program is back for its third year, offering art classes throughout May on a pay-what-you-can basis to remove financial barriers. Classes range from ceramics and textile mending to family workshops and cooking, with some students paying extra to cover costs for others who attend free.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3e/c3e7b346-f9ad-487f-80f8-a7c72a40a371/69fc4a58b71bc.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>arts-culture</category>
     </item>
   </channel>
 </rss>
