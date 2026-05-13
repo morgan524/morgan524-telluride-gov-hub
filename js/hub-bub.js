@@ -153,44 +153,41 @@
   };
   // hbDoLogin is now handled by addEventListener on #hbLoginBtn below
   window.hbForgotPassword = function() {
-    if (!hbFirebaseReady) { hbShowConfigNeeded(); return; }
-    var email = document.getElementById('hbLoginEmail').value.trim();
-    var errEl = document.getElementById('hbLoginError');
+    var email  = document.getElementById('hbLoginEmail').value.trim();
+    var errEl  = document.getElementById('hbLoginError');
     var infoEl = document.getElementById('hbLoginInfo');
+    var msgEl  = document.getElementById('hbLoginMsg');
+    // Clear ALL previous login messages so nothing from a prior attempt lingers
+    if (msgEl)  { msgEl.textContent = ''; msgEl.style.display = 'none'; msgEl.className = 'hb-modal-msg'; }
+    if (errEl)  { errEl.textContent = '';  errEl.style.display  = 'none'; }
+    if (infoEl) { infoEl.textContent = ''; infoEl.style.display = 'none'; }
     if (!email) {
-      errEl.textContent = 'Please enter your email address above, then click "Forgot your password?" again.';
-      errEl.style.display = 'block';
-      if (infoEl) infoEl.style.display = 'none';
+      if (errEl) { errEl.textContent = 'Please enter your email address above, then click "Forgot password?" again.'; errEl.style.display = 'block'; }
       return;
     }
-    auth.sendPasswordResetEmail(email)
+    // Use window.firebase.auth() directly — same path as the working login button
+    var firebaseAuth = (window.firebase && window.firebase.auth) ? window.firebase.auth() : auth;
+    if (!firebaseAuth) {
+      if (errEl) { errEl.textContent = 'Hub-Bub is not ready yet — please try again in a moment.'; errEl.style.display = 'block'; }
+      return;
+    }
+    firebaseAuth.sendPasswordResetEmail(email)
       .then(function() {
-        // Hide the login form and show only the reset confirmation
-        var fieldsDiv = document.getElementById('hbLoginFields');
-        var resetView = document.getElementById('hbLoginResetView');
-        if (fieldsDiv) fieldsDiv.style.display = 'none';
-        if (resetView) resetView.style.display = 'block';
+        if (errEl)  errEl.style.display  = 'none';
         if (infoEl) {
-          infoEl.innerHTML = 'Password reset email sent to <strong>' + hbEsc(email) + '</strong>.'
-            + '<br><span style="color:#795548;">Important: The email may land in your junk or spam folder — check there if you don\'t see it in your inbox.</span>';
+          infoEl.innerHTML = 'Password reset email sent to <strong>' + hbEsc(email) + '</strong>.<br>'
+            + '<span style="color:#795548;">Check your spam or junk folder if you don\'t see it in your inbox within a few minutes.</span>';
+          infoEl.style.display = 'block';
         }
-        errEl.style.display = 'none';
       })
       .catch(function(err) {
         if (infoEl) infoEl.style.display = 'none';
         var msg = err.message;
-        if (err.code === 'auth/user-not-found') msg = 'No account found with this email address.';
+        if (err.code === 'auth/user-not-found')    msg = 'No account found with this email address.';
         else if (err.code === 'auth/invalid-email') msg = 'Please enter a valid email address.';
         else if (err.code === 'auth/too-many-requests') msg = 'Too many attempts. Please try again in a few minutes.';
-        errEl.textContent = msg;
-        errEl.style.display = 'block';
+        if (errEl) { errEl.textContent = msg; errEl.style.display = 'block'; }
       });
-  };
-  window.hbShowLoginFields = function() {
-    var fieldsDiv = document.getElementById('hbLoginFields');
-    var resetView = document.getElementById('hbLoginResetView');
-    if (fieldsDiv) fieldsDiv.style.display = '';
-    if (resetView) resetView.style.display = 'none';
   };
   window.hbLogout = function() {
     if (auth) auth.signOut();
