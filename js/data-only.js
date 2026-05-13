@@ -67,18 +67,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Federal judge rules ICE in Colorado violated order limiting warrantless arrests",
-    source: "Telluride Times",
-    date: "May 12, 2026",
-    firstSeen: "2026-05-13",
-    newsTopic: "community",
-    copy: "A federal judge ruled that ICE agents in Colorado violated a court order limiting warrantless arrests and failed to properly train officers or document such arrests. The ruling stems from an ACLU lawsuit over \"collateral arrests\" of people caught up in immigration enforcement actions. ICE must now provide officer training within 45 days and turn over arrest records.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_6835e55c-d86e-510b-9abd-c6f823a59ecc.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/ac/aac37bc9-0b93-5774-be58-3957819b40cc/6a03a5aa52159.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "CHALKBOARD for the week of May 14-20",
     source: "Telluride Times",
     date: "May 12, 2026",
@@ -91,15 +79,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Countywide Spring Clean-Up events return May 15-16",
+    title: "Federal judge rules ICE in Colorado violated order limiting warrantless arrests",
     source: "Telluride Times",
     date: "May 12, 2026",
     firstSeen: "2026-05-13",
     newsTopic: "community",
-    copy: "The annual Spring Clean-Up events return May 15-16, with electronics and household waste disposal at Carhenge in Telluride both days, plus Mountain Village and Norwood locations. The fourth annual Trash Bash follows May 17 at Elks Park.",
+    copy: "A federal judge ruled that ICE agents in Colorado violated a court order limiting warrantless arrests and failed to properly train officers or document such arrests. The ruling stems from an ACLU lawsuit over \"collateral arrests\" of people caught up in immigration enforcement actions. ICE must now provide officer training within 45 days and turn over arrest records.",
     claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_1ca77ddc-c404-48bd-8ccf-251ceda547b0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/fc/7fcfe0e0-ef57-4065-83b8-194de28aaab7/6a03b367c3759.image.jpg",
+    href: "https://www.telluridenews.com/news/state/article_6835e55c-d86e-510b-9abd-c6f823a59ecc.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/ac/aac37bc9-0b93-5774-be58-3957819b40cc/6a03a5aa52159.image.jpg",
     imgHiRes: true
   },
   {
@@ -112,6 +100,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_02b77004-73f0-4b36-a906-72b8b5861d5d.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Countywide Spring Clean-Up events return May 15-16",
+    source: "Telluride Times",
+    date: "May 12, 2026",
+    firstSeen: "2026-05-13",
+    newsTopic: "community",
+    copy: "The annual Spring Clean-Up events return May 15-16, with electronics and household waste disposal at Carhenge in Telluride both days, plus Mountain Village and Norwood locations. The fourth annual Trash Bash follows May 17 at Elks Park.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_1ca77ddc-c404-48bd-8ccf-251ceda547b0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/fc/7fcfe0e0-ef57-4065-83b8-194de28aaab7/6a03b367c3759.image.jpg",
     imgHiRes: true
   },
   {
@@ -543,7 +543,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The weekly birthday list includes Ashley LaUond on May 8th, followed by several other community members through May 13th. Regular town meetings continue with the Town Board meeting the second Wednesday at 7 p.m. and School Board on the third Wednesday at 6 p.m. The Farmers Market runs Thursdays 2-6 p.m. through mid-October, and various community services like the food pantry, senior meals, and pickleball continue their regular schedules.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/the_norwood_post/article_2ef5bd86-8794-4816-8ed3-fc76bbd27167.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8b/f8b47ece-f18b-4c64-891d-3517aa2b0690/69fa6fb7bfb2a.image.png?resize=300%2C183"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8b/f8b47ece-f18b-4c64-891d-3517aa2b0690/69fa6fb7bfb2a.image.png",
+    imgHiRes: true
   },
   {
     title: "You're invited to the groundbreaking of the new Norwood School",
@@ -554,7 +555,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Norwood's holding a groundbreaking ceremony for their new school, funded by a $50+ million state BEST Grant and local bonds. The new campus will house pre-K through 12th grade on 19 acres where the old disc golf course was, replacing the current aging facilities.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/the_norwood_post/article_c205d989-d94a-4e50-bc98-dd81947a31bd.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/03/c0304c73-0b0c-48e4-a100-80e11b1b2499/69fa6eca08f58.image.jpg?resize=300%2C169"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/03/c0304c73-0b0c-48e4-a100-80e11b1b2499/69fa6eca08f58.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Town of Norwood awarded funding for Norwood Hill improvements",
@@ -565,7 +567,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Norwood secured $1.25 million in state and federal funding to improve safety on Norwood Hill, which has been a longtime concern due to steep grades, sharp curves, and accident history. The town won't have to contribute any local matching funds, and work could start before the 2029 timeline if ready.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/the_norwood_post/article_dad1ad7d-73e3-41de-b2b1-24757153a694.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/7c/57c98200-de4b-4962-86c7-46d1750abfdc/69fa6d93b89e4.image.jpg?resize=300%2C191"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/7c/57c98200-de4b-4962-86c7-46d1750abfdc/69fa6d93b89e4.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Appreciation for teachers, staff",
@@ -576,7 +579,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Telluride R-1 School District Board of Education officially proclaimed May 4-8, 2026 as Teacher and Staff Appreciation Week. The board resolution encourages students, families and community members to express gratitude to teachers and staff for their commitment to student success.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_fb79e810-1118-4f69-a3d4-2cb921d8dd13.html",
-    img: ""
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
   },
   {
     title: "Foster homes needed",
@@ -587,7 +591,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "NEWS RELEASE",
     claudeSummary: false,
     href: "https://www.telluridenews.com/news_release/article_1c4f5f8f-7308-4fbf-8799-2576d6ba9026.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/40/24040efb-65d5-4496-a2c3-fc2a74ff553d/69fa65f39ffe9.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/40/24040efb-65d5-4496-a2c3-fc2a74ff553d/69fa65f39ffe9.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Trump administration sues Denver over its 1989 assault weapons ban",
@@ -598,7 +603,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Trump administration is suing Denver over its 1989 assault weapons ban, claiming it violates Second Amendment rights. Denver's mayor and police chief rejected federal demands to drop the ban, with Mayor Mike Johnston saying \"hell no\" to rolling back the 37-year-old policy.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_91caa8b8-dec6-5691-807a-44fd78d5be2d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/fc/5fc8dcdd-595e-5e93-b187-5a76035d4985/69fa601618eb0.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/fc/5fc8dcdd-595e-5e93-b187-5a76035d4985/69fa601618eb0.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Telluride community survey open through May 21",
@@ -609,7 +615,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The town's community survey runs through May 21, measuring livability across 10 categories like economy, housing, safety, and recreation. Last year's results showed Telluride scored well on safety, trails, and recreation, but poorly on affordability - only 1% rated cost of living as good and just 9% said affordable housing was available.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_1145f14a-0b4a-43a7-9dea-4a452d941817.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/25/d257b794-9d6b-4123-b3b4-ee0abf3d9682/69fa52fb225f6.image.jpg?resize=300%2C155"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/25/d257b794-9d6b-4123-b3b4-ee0abf3d9682/69fa52fb225f6.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Sacred shoes",
@@ -620,7 +627,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The article reflects on the evolution from minimalist \"barefoot\" running shoes to the current popularity of thick-soled Hoka shoes among trail runners. The author reminisces about various worn-out sneakers and boots, including patched-up running shoes and old basketball sneakers, eventually discarding them during spring cleaning. The piece ends with a memory of arriving in the area wearing cross-country ski boots and later buying Chuck Taylor All-Stars with money earned flipping eggs at a local restaurant.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_781f8bdc-69d7-4ec9-9b5a-90c35c968f18.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bc/abc48601-95b9-4206-9f4b-a65102a0747c/69fa55d5a4936.image.jpg?resize=300%2C400"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bc/abc48601-95b9-4206-9f4b-a65102a0747c/69fa55d5a4936.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Boys’ lax blasts into postseason",
@@ -631,7 +639,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Telluride boys lacrosse team crushed Durango 16-2 on Senior Day to clinch the Mountain League championship and earned the #6 seed in state playoffs. The girls team beat Durango 12-11 in a tight rematch after losing to them earlier in the week, with Parker Shea scoring five goals. Both teams advanced to state tournament play with games scheduled for early May.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/sports/article_10a16ae6-c102-4679-9922-ddab9bdfd4b2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfe83f7a-ec5a-4b87-824b-b7cf86e70644/69f9a893440e8.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfe83f7a-ec5a-4b87-824b-b7cf86e70644/69f9a893440e8.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Man to plead guilty in Colorado firebombing attack on pro-Israel demonstrators",
@@ -642,7 +651,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "An Egyptian national who threw Molotov cocktails at pro-Israel demonstrators in Boulder plans to change his plea to guilty on state charges. The attack killed an 82-year-old woman and injured a dozen others, with the suspect saying he planned it for a year. He still faces federal hate crime charges and prosecutors are considering the death penalty.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_931f4da9-96f2-578e-97a4-bdf03c024048.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Telluride CrossFit opens new Lawson Hill gym",
@@ -653,7 +663,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Telluride CrossFit opened their new Lawson Hill location in March after construction wrapped up ahead of schedule. The gym has 140+ members and offers 8-9 weekday classes plus Saturday sessions, with new additions including kids' classes and yoga starting in May.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/business/article_1d5aab25-10fb-4778-b2c1-3973af8a0d9e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/36/7362e16d-547c-4e31-a280-7e922c23bc57/69f9037527be2.image.jpg?resize=300%2C225"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/36/7362e16d-547c-4e31-a280-7e922c23bc57/69f9037527be2.image.jpg",
+    imgHiRes: true
   },
   {
     title: "States across the wildfire-prone Western US are using AI for early detection",
@@ -894,6 +905,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "community",
     copy: "The Assessor's physical office will be closed on Friday, May 15, due to limited staffing. Staff will be available by phone or email.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=524",
+    img: ""
+  },
+  {
+    title: "Stage 1 Fire Restrictions in effect for Egnar Fire Protection District until further notice",
+    source: "San Miguel County",
+    date: "May 12, 2026",
+    newsTopic: "public-safety",
+    copy: "Stage One fire Restrictions will be in place in the Egnar Fire Protection District until further notice.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=525",
     img: ""
   },
   {
@@ -1670,70 +1690,59 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/16762976?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-05-12T10:30:00.000Z",
+    title: "Lite Lunch- Wait For Me",
+    link: "https://telluridelibrary.libcal.com/event/15497297?hs=a",
+    description: "12:00 PM – 1:00 PM · Join us for a little Lite Lunch and a discussion of Wait for Me by Amy Jo Burns. Space is limited, sign up in advance. Contact tosborne@telluridelibrary.org for a copy of the book. Young folk singer Elle Harlow reaches the height of her prowess in 1973, with two wildly beloved albums to her name and a hidden history of impossible heartbreak. When she sets foot on the famed Grand Ole Opry stage, a far cry from the mountain that raised her, Elle gives the biggest performance of her life. Then, to the dismay of shocked fans, her producer, and the man who still loves her, she vanishes. Almost two decades later, eighteen-year-old Marijohn Shaw is spending her summer pumping gas, writing songs on her broken mandolin, and longing for a mother. …",
+    pubDate: "2026-05-13T12:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_13_23_21.png"
   },
   {
-    title: "Online Author Talk with Vivienne Ming",
-    link: "https://telluridelibrary.libcal.com/event/16560453?hs=a",
-    description: "12:00 PM – 1:00 PM · Join us for a timely conversation on AI, humanity, and the next steps towards building a better future with self-proclaimed \"mad scientist\" Dr. Vivienne Ming as we discuss her new book, Robot-Proof: When Machines Have All the Answers, Build Better People. In Robot-Proof , Dr. Vivienne Ming helps readers grasp the ugly and the amazing of how individuals, companies, and societies will respond to the changes that are already taking hold due to the advent of AI. Robot-Proof is a book about people, exploring what it means to be human in an increasingly automated world. This book presents, then answers, pressing questions that readers may or may not have thought to themselves, such as: What predicts long-term life outcomes across millions of little kids? Why is the Informational-Exploration Paradox the most terrifying phenomenon you've never heard of? …",
-    pubDate: "2026-05-12T12:00:00.000Z",
+    title: "Radio Biblioteca",
+    link: "https://telluridelibrary.libcal.com/event/16824971?hs=a",
+    description: "12:00 PM – 1:00 PM · Escucha a KOTO Miercoles por Medio y conoce las noticias y eventos que tendremos en nuestra comunidad &bull; Tune in to Koto 91.7 FM every other Wednesday and learn about the news and events we will have in our community",
+    pubDate: "2026-05-13T12:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_11_15_48_01.jpg"
+    location: "KOTO Radio Station",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_01_13_13_59.jpeg"
   },
   {
-    title: "I Heart Art",
-    link: "https://telluridelibrary.libcal.com/event/16417092?hs=a",
-    description: "2:30 PM – 4:30 PM",
-    pubDate: "2026-05-12T14:30:00.000Z",
+    title: "Movie and A Snack Club",
+    link: "https://telluridelibrary.libcal.com/event/16575196?hs=a",
+    description: "3:30 PM – 5:30 PM",
+    pubDate: "2026-05-13T15:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1771000912.png"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_29_11_55_43.png"
   },
   {
-    title: "Free Legal Clinic - Clínica Jurídica Gratuita (Zoom)",
-    link: "https://telluridelibrary.libcal.com/event/16009649?hs=a",
-    description: "4:00 PM – 5:40 PM · A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only.  BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una cl&iacute;nica de asesoramiento jur&iacute;dico GRATUITO para las personas que notienen abogado. Abogados voluntarios responder&aacute;n a preguntas, ayudar&aacute;n a llenar formularios y explicar&aacute;n el proceso y el procedimiento de cuestiones jur&iacute;dicas. Los abogados voluntarios no te representan y esta cl&iacute;nica es s&oacute;lo informativa. CON CITA PREVIA. Llame a 970-728-4519 para m&aacute;s informaci&oacute;n y para registrarse.",
-    pubDate: "2026-05-12T16:00:00.000Z",
+    title: "Sewing 101 with Melissa",
+    link: "https://telluridelibrary.libcal.com/event/15970617?hs=a",
+    description: "5:00 PM – 7:00 PM · Don&#39;t throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we&#39;ll provide the sewing materials.",
+    pubDate: "2026-05-13T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Meeting Room #5 - small",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1760996664.jpg"
+    location: "Meeting Room #6 - large",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1717100108.jpg"
   },
   {
-    title: "Book Buzz at Telluride Brewing Company",
-    link: "https://telluridelibrary.libcal.com/event/16576522?hs=a",
-    description: "5:30 PM – 6:30 PM · Join WPL on the 2nd Tuesday 5:30-6:30pm of each month at TBC in Lawson Hill May-September. Our queen of Reader&#39;s Advisory, Tiffany Osborne, will be there to talk about our hottest new titles and Miss Melissa will be providing an interactive story time for the kids. We&#39;ll have grab-and-go activity kits for the littles as well, and plenty of books to checkout. ADDED BONUS: Enjoy a 10% discount on food as well as $5 TBC Beers when you show your library card to the TBC staff . Don&#39;t have a card? No problem! We&#39;ll make one for you on the spot!",
-    pubDate: "2026-05-12T17:30:00.000Z",
+    title: "Wildfire Preparedness/Preparación para Incendios Forestales",
+    link: "https://telluridelibrary.libcal.com/event/16625525?hs=a",
+    description: "5:30 PM – 7:00 PM · Join San Miguel County and the Western Region Wildfire Council  and Telluride Fire Protection District for a presentation on how to prepare for a wildfire and what to do if one arrives. There will also be information about mitigation resources for property owners.  There will be simultaneous Spanish interpretation available.  Habr&aacute; interpretaci&oacute;n en espa&ntilde;ol. &Uacute;nase al Condado de San Miguel, al Distrito de Protecci&oacute;n contra Incendios de Telluride y al Consejo de Incendios Forestales de la Regi&oacute;n Oeste para una presentaci&oacute;n sobre c&oacute;mo prepararse para un incendio forestal y qu&eacute; hacer si ocurre. Tambi&eacute;n habr&aacute; informaci&oacute;n sobre recursos de mitigaci&oacute;n para propietarios de viviendas. Can&#39;t make this presentation?  We will host the same presentation at 1:30 pm on June 1st. (English only presentation)",
+    pubDate: "2026-05-13T17:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Telluride Brewing Company",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_13_09_56_40.png"
-  },
-  {
-    title: "Script Club with Telluride Theatre: Beauty Queen of Leenane",
-    link: "https://telluridelibrary.libcal.com/event/14953826?hs=a",
-    description: "5:30 PM – 7:00 PM · Join us for our newest club, in partnership with Telluride Theatre: SCRIPT CLUB! This quarterly series will explore contemporary classics and modern-day scripts. We will discuss the historic, literary and performative nature of these plays and films. This month, we&#39;ll be reading Beauty Queen of Leenane by Martin McDonagh . There are some editions available for check-out through the library or you can contact Kevin Douglas at Telluride Theatre for a pdf (electronic or physical print) of the script: KEVIN@TELLURIDETHEATRE.ORG Please read the play before our meeting if you can. We will discuss the text, watch clips from famous productions/adaptations, and maybe even read some scenes aloud. (No pressure if you're feeling shy!). This month, after the play discussion, we will watch the movie The Banshees of Inisherin , which is the film adaptation of another McDonagh play. …",
-    pubDate: "2026-05-12T17:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_16_38_10.jpg"
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_30_14_39_36.jpg"
   }
 ];
 
@@ -1835,50 +1844,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
-    link: "https://sherbino.org/events/",
-    description: "MONTHLY WELCOME HOME ALLIANCE VETERAN’S COFFEE @ THE SHERBINO Every Branch. Every Era. Every Ability. Offering coffee, donuts and camaraderie. Mike Trickey and April Heard will be there bringing information to you on topics such as: Navigating the VA, Housing, Jobs, Volunteer Opportunities, community resources, VA benefits, recreation and mental health. For more information or to offer support (products or monetary), call 970-765-2210 or visit https://www.whafv.org/ Occurs the 2nd Tuesday of Every Month || 10 am - Noon || Free to attend || Vets Only, Please",
-    pubDate: "2026-05-12T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg"
-  },
-  {
-    title: "On Display: Layers of Faces and Life-Paintings by Ruth Higdon and Julie Ahern",
-    link: "https://events.ourayridgwayevents.com/event/layers-of-faces-and-life-paintings-by-ruth-higdon-and-julie-ahern",
-    description: "A duo exhibition of new works by local painters Julie Ahern and Ruth Higdon. More info decker@ridgwayfuse.org",
-    pubDate: "2026-05-12T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52709680184864/huge/bf651b7d434184420bcaf9702ff358cbd88d3b9e.jpg"
-  },
-  {
-    title: "TYLER SIMMONS",
-    link: "https://coloradoboydepot.com/calendar/",
-    description: "Live Music\\ https://www.tysimmonsmusic.com/\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-05-12T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "The M Factor 2:  Before the Pause ~ a Film and Panel discussion on Perimenopause",
-    link: "https://sherbino.org/event/m-factor-2-film-panel-ridgway/",
-    description: "Tickets May 12 @ 6:30 pm – 8:00 pm Doors: 6:00 PM || Film: 6:30 PM, Discussion Follows || Entry by Donation Setting and Location: Seated at the Sherbino About The M Factor 2 Film Before the Pause shines a light on perimenopause through real women’s stories—teachers, firefighters, and doctors—showing how silence and stigma derail lives, and why early awareness is essential to protect women’s health, work, and identity. A film by Women in the Room Productions and Take Flight Productions Power of Early Awareness: By pairing personal stories with leading experts the film makes a compelling case that early education and recognition can transform women’s health careers and identity Hidden Reality: Before the Pause shines a light on perimenopause the often ignored decade before menopause that disrupts women’s health lives and sense of stability Dismissed Symptoms: Women are frequently told their symptoms are psychological or insignificant even as they …",
-    pubDate: "2026-05-13T00:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52651376973623/huge/0b145ba800e005cf411abef3100650079d9e247d.jpg"
-  },
   {
     title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
     link: "www.FloatingLotusBrewery.com",
@@ -2716,17 +2681,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52453668754083/huge/7843394b93916f13f7fe41b7d9d36f1a7394be85.jpg"
   },
   {
-    title: "OTG Backcountry Trail Maintenance Backpacking Trip",
-    link: "ouraytrails.org",
-    description: "Join the Ouray Trails Group for our first overnight trail stewardship trip of the year on Bear Creek! We’ll focus on tread and drainage repair while enjoying time in the backcountry. This is a backpacking trip—we’ll carry all camping gear and food in from HWY 550, gaining 2,400 feet over 4.2 miles to camp near the Yellowjacket Mine. Expect cold nights, so come prepared with warm clothing and layers. Sign up using this link. For questions, please contact OTG at contactus@ouraytrails.org.",
-    pubDate: "2026-05-30T14:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Bear Creek Trail Head, 2-2.5 miles south of Ouray. Parking on the east side of the highway.",
-    imageUrl: "https://localist-images.azureedge.net/photos/52587455597568/huge/8f3a527aa56803672e93a2f117c5ed9ce3a2fefe.jpg"
-  },
-  {
     title: "OTG Overnight Trail Maintenance Trip: Bear Creek NRT",
     link: "https://ouraytrails.org/volunteers",
     description: "Enjoy some of the most scenic trails in Colorado while removing down trees or encroaching brush and repairing trails from erosion problems. You will leave the wild with the camaraderie that comes with meeting new friends and helping keep our public land trails safe and sustainable. Please register in advance to join this trail crew event, and participants must have current CPR and First Aid certifications. Click HERE to signup.",
@@ -2804,17 +2758,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52453668754083/huge/7843394b93916f13f7fe41b7d9d36f1a7394be85.jpg"
   },
   {
-    title: "OTG Backcountry Trail Maintenance Backpacking Trip",
-    link: "ouraytrails.org",
-    description: "Join the Ouray Trails Group for our first overnight trail stewardship trip of the year on Bear Creek! We’ll focus on tread and drainage repair while enjoying time in the backcountry. This is a backpacking trip—we’ll carry all camping gear and food in from HWY 550, gaining 2,400 feet over 4.2 miles to camp near the Yellowjacket Mine. Expect cold nights, so come prepared with warm clothing and layers. Sign up using this link. For questions, please contact OTG at contactus@ouraytrails.org.",
-    pubDate: "2026-05-31T06:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Bear Creek Trail Head, 2-2.5 miles south of Ouray. Parking on the east side of the highway.",
-    imageUrl: "https://localist-images.azureedge.net/photos/52587455597568/huge/8f3a527aa56803672e93a2f117c5ed9ce3a2fefe.jpg"
-  },
-  {
     title: "OTG Overnight Trail Maintenance Trip: Bear Creek NRT",
     link: "https://ouraytrails.org/volunteers",
     description: "Enjoy some of the most scenic trails in Colorado while removing down trees or encroaching brush and repairing trails from erosion problems. You will leave the wild with the camaraderie that comes with meeting new friends and helping keep our public land trails safe and sustainable. Please register in advance to join this trail crew event, and participants must have current CPR and First Aid certifications. Click HERE to signup.",
@@ -2879,6 +2822,72 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52594216043415/huge/422bf6ccf915872b17c354d089ec0b4b7eb791d6.jpg"
+  },
+  {
+    title: "Swimming Classes for Kids",
+    link: "https://anc.apm.activecommunities.com/cityofouray/activity/search?activity_select_param=2&viewMode=list",
+    description: "The Ouray Hot Springs summer swim lesson program is a fun and supportive way for kids to build confidence in the water. Two-week sessions run through the summer from June 1 through Aug. 6. Details: ✔️ Classes meet Monday–Thursday for 30 minutes each day ✔️ 8 classes per session ✔️ $45 per session (that’s less than $6 per class!) ✔️ Pool entry during class period included Class Options: Parent Tots: (Under 3 with an adult) Level 1: Beginner Skills (Ages 3+) Level 2: Intermediate Skills (All Ages) Level 3: Advanced Skills (All Ages) 📅 You can register at tinyurl.com/ourayactivities! Registration for each session closes the Friday before the session begins. Questions? Contact our Swim Safety Coordinator at 970-325-3009 or JWyatt@CityofOuray.com.",
+    pubDate: "2026-06-01T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52806871795839/huge/2b4a1f1e03bf8526d92866007630f4a159e579d5.jpg"
+  },
+  {
+    title: "Senior Lunch by Neighbor to Neighbor",
+    link: "https://www.ourayneighbor.com/services",
+    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
+    pubDate: "2026-06-01T18:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
+  },
+  {
+    title: "Monthly Karate in Ouray County",
+    link: "https://weehawkenarts.org/karate-2/",
+    description: "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month. Karate class is a great way to learn skills to keep you safe, stay in shape and strong core movements. Karate believes in using it only to protect self and is taught accordingly. Whether you are new to Karate or a seasoned student, the Sensei will work with your level. Taught in the kyokushin kai-kan style, similar shotokan style of karate, we welcome new students to try this exceptional experience for your mind and body! Mixed ages --- Ages 7 through Adult (extended time for more experience) Mondays in Ouray: St. …",
+    pubDate: "2026-06-01T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg"
+  },
+  {
+    title: "Fly, You Fools!: Theatre @ the Wright",
+    link: "https://thewrightoperahouse.org/events/theater/fly-you-fools",
+    description: "Fly, You Fools!: Theatre @ the Wright WHEN? Friday, May 29, 2026 7:30 PM Saturday, May 30, 2026 7:30 PM Sunday, May 31, 2026 4:00 PM Monday, June 1, 2026 7:30 PM WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Fly, You Fools! is a critically acclaimed physical comedy from the New York–based troupe Recent Cutbacks, making its UK and international stage debut through touring productions like this one. Presented locally by UpstART Theatre, the show delivers a fast-paced parody of epic fantasy storytelling. Three actors and a Foley artist join forces in fellowship to bring an entire fantasy adventure to life in a hilarious one-shot theatrical journey. Blending rapid-fire comedy, inventive stagecraft, live sound effects, and high-energy physical theatre, the production proves that even the smallest band of performers can create a world of heroic proportions. …",
+    pubDate: "2026-06-02T01:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52453668754083/huge/7843394b93916f13f7fe41b7d9d36f1a7394be85.jpg"
+  },
+  {
+    title: "Wright Opera House Guided Tour",
+    link: "wrightoperahouse.org",
+    description: "We're a nonprofit dedicated to bringing world-class performances to Ouray. All guided tours help support our diverse programming! Step behind the scenes of Ouray’s historic gem! Our guided tours offer a unique glimpse into the history, architecture, and stories that make The Wright Opera House truly one-of-a-kind. Tour Days: Tuesday's at 2:00 PM and Wednesday's at 10:00 AMWeekend Tours: Available by request and scheduled around our regular programming. As an active opera house, weekend tours are not offered through our ticketing platform.Tour Fee: $20 per personMinimum Guests: 4 people per tourAccessibility: Fully ADA accessible with elevatorKid-Friendly: Absolutely! A perfect family outingPhoto-Friendly: Yes! Capture this historic beauty (no video during tours, please)Tour Duration: ~1.5 hoursGroups of 25 or more, or for weekend requests: Please contact us directly for pricing and scheduling. …",
+    pubDate: "2026-06-02T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52569865342720/huge/3b2908ddb2fc3d1f0e870007c7b65025c358699f.jpg"
+  },
+  {
+    title: "JACK HAIGHT",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-06-02T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   }
 ];
 
