@@ -60,10 +60,22 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "May 13, 2026",
     firstSeen: "2026-05-13",
     newsTopic: "community",
-    copy: "About 70,000 Americans died of drug overdoses last year — about 14% fewer than the previous year. It was the third straight annual drop, making it the longest decline in decades. The Centers for Disease Control and Prevention released the…",
-    claudeSummary: false,
+    copy: "US overdose deaths dropped again in 2025 across most drug types and states, though Arizona, Colorado and New Mexico saw increases of 10% or more. While researchers are cautiously optimistic, they warn the drug supply keeps evolving with new potent substances like cychlorphine, and recent federal cuts to harm reduction programs could reverse progress.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_66099b39-b1b8-5596-bab2-43d492ff274a.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/7e/f7eaaa55-d2df-5520-b082-970ac4c7d39f/6a048678a0970.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Move to acquire Wilkin Court unit raises questions",
+    source: "Telluride Times",
+    date: "May 13, 2026",
+    firstSeen: "2026-05-13",
+    newsTopic: "housing",
+    copy: "The town wants to purchase a Wilkin Court deed-restricted unit to convert it from Tier 3 to Tier 1, saying this simplifies the affordable housing program. But residents are challenging whether the town actually has legal authority to buy the unit against the owner's wishes, with one attorney arguing the deed restriction gives owners the right to choose their buyer.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_a8fa1aa6-0996-404d-b96d-28b33668f431.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/c4/8c400c14-efca-45da-b5f0-72721a6e54fc/6a04964540393.image.jpg",
     imgHiRes: true
   },
   {
@@ -795,7 +807,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Telski's Swenson told council the bike park loses money, with busy days seeing only 350-400 riders compared to 6,000-7,000 skiers on good winter days. While no final decision has been made, he acknowledged \"loose discussions\" about permanently discontinuing the bike park after seven years of trying to make it work.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_8e8c2d7e-8aed-42dd-83b6-036f40b6fb54.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/e5/ee56772c-7de4-4126-8ef7-d8bc4dfd4025/69f3c904ec009.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/e5/ee56772c-7de4-4126-8ef7-d8bc4dfd4025/69f3c904ec009.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Telluride’s ‘I voted/yo voté’ sticker contest winners",
@@ -806,7 +819,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Earlier this year, Telluride and Norwood students participated in a sticker contest, with 18 creative kiddos taking part. The brief, set by the San Miguel County Clerk’s Office, was to devise a design that could be used as the artwork…",
     claudeSummary: false,
     href: "https://www.telluridenews.com/news/article_3022309d-c7c1-4717-85d3-41ac89e3f795.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/9d/79d165ca-16ce-40fa-a9ac-77113d7839c8/69f1660ad0191.image.png?resize=300%2C389"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/9d/79d165ca-16ce-40fa-a9ac-77113d7839c8/69f1660ad0191.image.png",
+    imgHiRes: true
   },
   {
     title: "Norwood’s ‘I voted/yo voté’ sticker contest winners",
@@ -817,7 +831,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The county clerk thanked everyone who entered Norwood's bilingual voting sticker design contest. All the artwork displayed at the courthouse drew lots of positive comments from visitors.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/norwood_post/article_c9e7d416-2ad4-4332-87ee-6317130f948d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/16/2167c90d-35cd-419c-b2dc-fff803c1b0ba/69f1772f694c3.image.jpg?resize=300%2C225"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/16/2167c90d-35cd-419c-b2dc-fff803c1b0ba/69f1772f694c3.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Lindsey Vonn tells the AP she is not yet in position emotionally to decide if she will race again",
@@ -828,7 +843,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Lindsey Vonn says she's not emotionally ready to decide whether she'll return to competitive skiing after her severe tibia fracture at Cortina in December. The 41-year-old is progressing from wheelchair to crutches and still needs another surgery, meaning any potential return wouldn't happen until the 2027-28 season at earliest.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_8e0ab335-1e12-5377-af15-ff97d158dede.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/c6/3c6899e9-4691-5fd5-be26-4d01403e1ebf/69f3542094bae.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/c6/3c6899e9-4691-5fd5-be26-4d01403e1ebf/69f3542094bae.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Here's how to grow your own food with less water, even in a drought",
@@ -839,7 +855,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Record-low snowfall across the West has prompted the earliest drought restrictions in Denver Water's history, with cities implementing outdoor watering limits. Gardening experts recommend water-wise growing techniques like harvesting rainwater, collecting greywater from showers and dishwashing, choosing drought-tolerant plant varieties, improving soil health with compost, and using shade cloths to reduce evaporation.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_62ad4304-c441-5377-acde-86dcbdde9312.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/d2/ed2b9a2e-dea0-5f0d-9b8e-8a1e2e924534/69f3541bd0685.image.jpg?resize=300%2C200"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/d2/ed2b9a2e-dea0-5f0d-9b8e-8a1e2e924534/69f3541bd0685.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Wishing upon a star",
@@ -850,7 +867,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The SAF Young People's Theater is putting on \"My Son Pinocchio Jr.\" with 30 kids in grades 3-5, featuring the Disney classic with new songs by the \"Wicked\" composer. The show focuses on Geppetto's journey as a father learning to love unconditionally, running about an hour at the Sheridan Opera House May 1-3.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/arts_and_entertainment/article_b3673668-79a5-462d-87a1-05b24411b059.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/cd/4cda66af-af53-48e3-b1b9-8d3dd0c94f9c/69f319f8c70cf.image.jpg?resize=300%2C450"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/cd/4cda66af-af53-48e3-b1b9-8d3dd0c94f9c/69f319f8c70cf.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Michael J. Ward",
@@ -861,7 +879,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Michael J. Ward, who came to Telluride on a ski trip in 1973 and never left, passed away after spending his final years in Hawaii. He worked as a bartender at the Sheridan, tried carpentry, then became a realtor for over 40 years while raising four kids here. A celebration of life will be held at Town Park on June 6, 2026 from 4-6 PM.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/obituaries/article_da9c1d39-f9b9-4485-8624-6ec4a163e609.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/5f/e5fb35c1-ab7f-4d7a-9f66-70713f0980da/69f387ba057ba.image.jpg?resize=300%2C400"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/5f/e5fb35c1-ab7f-4d7a-9f66-70713f0980da/69f387ba057ba.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Legals and Public Notices for April 30-May 6, 2026",
@@ -872,7 +891,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The County Board of Health will consider wastewater treatment regulations on May 20th, while the County Commissioners will review a tree removal application for High Meadow Ranch on Wilson Mesa and a lot line vacation request for Fall Creek Subdivision lots.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
-    img: ""
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
   },
   {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
@@ -1202,39 +1222,6 @@ const COMMUNITY_EVENTS = [
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Mountain Village annual Community Clean Up Days",
-    link: "https://koto.org/event/mountain-village-annual-community-clean-up-days/2026-05-13/",
-    description: "Mountain Village hosts its annual Community Clean Up Day, this year expanding to two days in two different parts of the community! On Wednesday, May 13, Clean Up Day will take place in Village Court Apartments and on Thursday, May 14, a second Clean Up Day will take place in the Meadows Neighborhood. The entire community is invited to participate in either or both of these events. Schedule for each day: Volunteer Registration: Begins at 2:30 p.m. Clean Up: 3 p.m.-5 p.m. – Clean Up in assigned area Gift Card Raffle: bring your trash back to have your name entered into a raffle for $50 Village Market gift cards at 5:15 p.m.",
-    pubDate: "2026-05-13T14:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Sewing 101 with Melissa",
-    link: "https://koto.org/event/sewing-101-with-melissa/2026-05-13/",
-    description: "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
-    pubDate: "2026-05-13T17:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
-  },
-  {
-    title: "Wildfire Preparedness",
-    link: "https://koto.org/event/wildfire-preparedness/",
-    description: "Join San Miguel County and the Western Region Wildfire Council and Telluride Fire Protection District for a presentation on how to prepare for a wildfire and what to do if one arrives. There will also be information about mitigation resources for property owners. There will be simultaneous Spanish interpretation available. Habrá interpretación en español",
-    pubDate: "2026-05-13T17:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/fire-2026.png"
-  },
-  {
     title: "Pilates for All Bodies with Laura",
     link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-05-14/",
     description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
@@ -1301,17 +1288,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Outdoor Gear Drive",
-    link: "https://koto.org/event/outdoor-gear-drive/2026-05-15/1/",
-    description: "Get that unused gear out of your garage and to someone who will happily use it! Telluride Mountain Club is collecting lightly used outdoor gear, including skis, camping gear, bikes, and clothing at Carhenge Parking lot between 10 AM and 2 PM on Friday & Saturday, May 15th & 16th. Gear will be re-distributed at the Community Fiesta.",
-    pubDate: "2026-05-15T08:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Carhenge Parking Lot, TELLURIDE",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/Gear-Drive-poster-2026.jpg"
-  },
-  {
     title: "Up-off Gymnastics, Dance, and Spanish",
     link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-05-15/",
     description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
@@ -1335,9 +1311,9 @@ const KOTO_COMMUNITY_EVENTS = [
   },
   {
     title: "Outdoor Gear Drive",
-    link: "https://koto.org/event/outdoor-gear-drive/2026-05-15/2/",
+    link: "https://koto.org/event/outdoor-gear-drive/2026-05-15/",
     description: "Get that unused gear out of your garage and to someone who will happily use it! Telluride Mountain Club is collecting lightly used outdoor gear, including skis, camping gear, bikes, and clothing at Carhenge Parking lot between 10 AM and 2 PM on Friday & Saturday, May 15th & 16th. Gear will be re-distributed at the Community Fiesta.",
-    pubDate: "2026-05-15T12:00:00.000Z",
+    pubDate: "2026-05-15T10:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
@@ -1398,6 +1374,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://koto.org/wp-content/uploads/2026/04/SMC-Spring-Clean-up-poster-Final.png"
+  },
+  {
+    title: "Outdoor Gear Drive",
+    link: "https://koto.org/event/outdoor-gear-drive/2026-05-16/",
+    description: "Get that unused gear out of your garage and to someone who will happily use it! Telluride Mountain Club is collecting lightly used outdoor gear, including skis, camping gear, bikes, and clothing at Carhenge Parking lot between 10 AM and 2 PM on Friday & Saturday, May 15th & 16th. Gear will be re-distributed at the Community Fiesta.",
+    pubDate: "2026-05-16T10:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Carhenge Parking Lot, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/Gear-Drive-poster-2026.jpg"
   },
   {
     title: "Clown Sex Ed (Telluride Theatre FRINGE Project)",
@@ -2053,6 +2040,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52694643294251/huge/8faa7c02217ad28c65635d406cf8d44296cfa174.jpg"
   },
   {
+    title: "Pint Night benefitting Minerva West",
+    link: "www.FloatingLotusBrewery.com",
+    description: "Hello Minerva Family and Friends! Join us next Saturday May 16th for a Minerva Mingle, 5th Season Celebration and Fundraiser!! Family Friendly Activities and Dance Party! 5 to 9 PM at Floating Lotus Brewery located at 144 Campbell Lane Ridgway, CO 81432 10% of sales for pints of Brews, two flavors of kombucha, and house-made sparkling lemonade will go to Minerva West as a donation. Thank you Kenny and Floating Lotus Brewery! Pizza slices, snacks and baked goods will be available for purchase. Bingo Rounds! $5 donation for a card and the winner takes half the pot. Round #1 @ 6PM. Round #2 @ 7PM 50/50 Donation Raffle: Drawing at 8:30 PM All evening Open Games: Cornhole, ping pong and table games. Dance Party @ 7:30PM Song requests encouraged! Thank You All for your support these last 4 seasons! …",
+    pubDate: "2026-05-16T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/52878500753745/huge/657fb6ba45ea0009309e3927a2325634669c31b5.jpg"
+  },
+  {
     title: "Trails Training for Crew Leaders",
     link: "volunteervoc.org",
     description: "Get hands-on with stewardship and leadership at Trails Training for Crew Leaders, hosted in partnership with Volunteer for Outdoor Colorado. This training is designed to prepare participants for the upcoming trail work project taking place May 30–31. Learn the fundamentals of trail building, crew leadership, and outdoor project coordination from experienced instructors while gaining practical skills you can apply directly in the field. Whether you’re new to trail work or looking to step into a leadership role, this is a great opportunity to build confidence and capability in a hands-on environment. Join us in supporting our public lands, connecting with like-minded volunteers, and getting ready to make a real impact on Ouray-area trails. Learn more or sign up at volunteervoc.org.",
@@ -2381,6 +2379,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
+  },
+  {
+    title: "Hands On History – Butter",
+    link: "https://events.ourayridgwayevents.com/event/hands-on-history-butter",
+    description: "Drop by the Ranch History Museum throughout the afternoon to make some butter with us! We’ll explore the history and various methods of churning butter while making (and tasting!) it ourselves. Fun for all ages.",
+    pubDate: "2026-05-23T19:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52870247236290/huge/4feea89e13fdaede96752f502b9cb6ff04e7f824.jpg"
   },
   {
     title: "Ouray Art Walk",
@@ -2876,28 +2885,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52453668754083/huge/7843394b93916f13f7fe41b7d9d36f1a7394be85.jpg"
-  },
-  {
-    title: "Wright Opera House Guided Tour",
-    link: "wrightoperahouse.org",
-    description: "We're a nonprofit dedicated to bringing world-class performances to Ouray. All guided tours help support our diverse programming! Step behind the scenes of Ouray’s historic gem! Our guided tours offer a unique glimpse into the history, architecture, and stories that make The Wright Opera House truly one-of-a-kind. Tour Days: Tuesday's at 2:00 PM and Wednesday's at 10:00 AMWeekend Tours: Available by request and scheduled around our regular programming. As an active opera house, weekend tours are not offered through our ticketing platform.Tour Fee: $20 per personMinimum Guests: 4 people per tourAccessibility: Fully ADA accessible with elevatorKid-Friendly: Absolutely! A perfect family outingPhoto-Friendly: Yes! Capture this historic beauty (no video during tours, please)Tour Duration: ~1.5 hoursGroups of 25 or more, or for weekend requests: Please contact us directly for pricing and scheduling. …",
-    pubDate: "2026-06-02T20:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52569865342720/huge/3b2908ddb2fc3d1f0e870007c7b65025c358699f.jpg"
-  },
-  {
-    title: "JACK HAIGHT",
-    link: "https://coloradoboydepot.com/calendar/",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-06-02T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   }
 ];
 

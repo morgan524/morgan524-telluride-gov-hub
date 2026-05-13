@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 May 2026 14:17:33 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2026 19:47:47 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
@@ -24,10 +24,20 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <link>https://www.telluridenews.com/news/state/article_66099b39-b1b8-5596-bab2-43d492ff274a.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_66099b39-b1b8-5596-bab2-43d492ff274a.html</guid>
       <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/7e/f7eaaa55-d2df-5520-b082-970ac4c7d39f/6a048678a0970.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />About 70,000 Americans died of drug overdoses last year — about 14% fewer than the previous year. It was the third straight annual drop, making it the longest decline in decades. The Centers for Disease Control and Prevention released the…]]></description>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/7e/f7eaaa55-d2df-5520-b082-970ac4c7d39f/6a048678a0970.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />US overdose deaths dropped again in 2025 across most drug types and states, though Arizona, Colorado and New Mexico saw increases of 10% or more. While researchers are cautiously optimistic, they warn the drug supply keeps evolving with new potent substances like cychlorphine, and recent federal cuts to harm reduction programs could reverse progress.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/7e/f7eaaa55-d2df-5520-b082-970ac4c7d39f/6a048678a0970.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>community</category>
+    </item>
+    <item>
+      <title>Move to acquire Wilkin Court unit raises questions</title>
+      <link>https://www.telluridenews.com/news/article_a8fa1aa6-0996-404d-b96d-28b33668f431.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_a8fa1aa6-0996-404d-b96d-28b33668f431.html</guid>
+      <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/c4/8c400c14-efca-45da-b5f0-72721a6e54fc/6a04964540393.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The town wants to purchase a Wilkin Court deed-restricted unit to convert it from Tier 3 to Tier 1, saying this simplifies the affordable housing program. But residents are challenging whether the town actually has legal authority to buy the unit against the owner's wishes, with one attorney arguing the deed restriction gives owners the right to choose their buyer.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/c4/8c400c14-efca-45da-b5f0-72721a6e54fc/6a04964540393.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>housing</category>
     </item>
     <item>
       <title>CHALKBOARD for the week of May 14-20</title>
@@ -388,16 +398,6 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_0edbe8ac-df62-5ec8-8825-57c179fc633b.html</guid>
       <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The man who firebombed Colorado demonstrators in 2025, killing 1, is sentenced to life in prison.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>public-safety</category>
-    </item>
-    <item>
-      <title>Man accused of firebombing Colorado demonstrators pleads guilty to murder</title>
-      <link>https://www.telluridenews.com/news/state/article_67fbbc41-28b9-5ed3-99f1-824332d7dbf7.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_67fbbc41-28b9-5ed3-99f1-824332d7dbf7.html</guid>
-      <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Man accused of firebombing Colorado demonstrators pleads guilty to murder.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>public-safety</category>
