@@ -841,7 +841,7 @@
        // Load data-only.js directly — contains KOTO/Wilkinson/Community events.
        // Skipping gov-data.js (142K of meeting/logo data not needed for events page).
        const s = document.createElement('script');
-       s.src = 'https://livabletelluride.org/js/data-only.js?v=' + new Date().toISOString().slice(0,10).replace(/-/g,'');
+       s.src = 'https://livabletelluride.org/js/data-only.js?v=' + Math.floor(Date.now()/600000);
        s.onload = () => {
            try {
              const live = [];

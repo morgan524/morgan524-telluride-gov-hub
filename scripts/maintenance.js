@@ -9,7 +9,7 @@
  *   2. Stale news article removal (>14 days)
  *   3. Expired community pulse post removal (>5 days)
  *   4. External link health check
- *   5. File parity check (index.html ↔ telluride-gov-hub.html)
+ *   5. (retired) File parity check
  * ══════════════════════════════════════════════════════════════
  */
 
@@ -23,7 +23,6 @@ const REPO_ROOT = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
 const GOV_HUB_JS = path.join(REPO_ROOT, 'js', 'gov-hub.js');
 const COMMUNITY_PULSE_JS = path.join(REPO_ROOT, 'js', 'community-pulse.js');
 const INDEX_HTML = path.join(REPO_ROOT, 'index.html');
-const GOVHUB_HTML = path.join(REPO_ROOT, 'telluride-gov-hub.html');
 
 const NEWS_MAX_AGE_DAYS = 14;
 const PULSE_MAX_AGE_DAYS = 5;
@@ -252,15 +251,13 @@ async function checkLinks(govHubSrc, pulseSrc) {
 }
 
 // ══════════════════════════════════════════════════════════════
-// ── Task 5: File Parity Check ──
+// ── Task 5: (retired) ──
 // ══════════════════════════════════════════════════════════════
 
 function checkParity() {
-  // 2026-05-10: telluride-gov-hub.html retired. The site now uses a
-  // split-page v2 architecture (index.html, about.html, gov-hub.html, etc.).
-  // telluride-gov-hub.html was archived to Claude/telluride-gov-hub-v1-archive.html.
-  // This task is a no-op going forward.
-  console.log('\n📄 Task 5: File parity check — skipped (telluride-gov-hub.html retired 2026-05-10)');
+  // telluride-gov-hub.html was deleted 2026-05-12. The site uses
+  // a split-page architecture. No file-parity check needed.
+  console.log('\n📄 Task 5: Parity check — skipped (single-source architecture)');
 }
 
 // ══════════════════════════════════════════════════════════════

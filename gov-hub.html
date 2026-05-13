@@ -652,10 +652,10 @@
 
 
       const dataScript = document.createElement('script');
-      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v2';
+      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=' + Math.floor(Date.now()/600000);
       dataScript.onload = () => {
         const s = document.createElement('script');
-        s.src = 'https://livabletelluride.org/js/data-only.js?v=v2';
+        s.src = 'https://livabletelluride.org/js/data-only.js?v=' + Math.floor(Date.now()/600000);
         s.onload = () => {
           try {
             // Stub AI_SUMMARIES so getMeetingSummary() doesn't throw.

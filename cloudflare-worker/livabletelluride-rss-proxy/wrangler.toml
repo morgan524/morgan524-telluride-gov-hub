@@ -1,0 +1,11 @@
+name = "livabletelluride-rss-proxy"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+account_id = "8f020e73de4e9956f0e3ad7dce070ef4"
+
+# After deploy, you'll get a URL like:
+#   https://livabletelluride-rss-proxy.<your-subdomain>.workers.dev
+#
+# To require a shared secret on the proxy (recommended), run:
+#   wrangler secret put PROXY_KEY
+# Then make the GitHub Action send it via the X-Proxy-Key header.

@@ -898,7 +898,7 @@
     function loadLiveNotices() {
 
 
-      const day = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+      const day = Math.floor(Date.now()/600000);
       const dataScript = document.createElement('script');
       dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=' + day;
       dataScript.onload = () => {
