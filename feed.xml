@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 May 2026 08:33:55 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2026 13:56:32 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
@@ -18,6 +18,16 @@
 Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four weeks of hiking from May 31 through June 28, with a kickoff at 11am on May 31 at the Oak Street gondola plaza. Hike from anywhere and raise funds for the Telluride Rotary Foundation — supporting scholarships, Youth Exchange, international projects, and community grants. 60% of nonprofit team funds go directly back to their nonprofit. Sponsored by Alpine Bank and Jagged Edge Mountain Gear.]]></description>
       <category>Community Event</category>
       <category>Telluride Rotary Club</category>
+    </item>
+    <item>
+      <title>‘Hockey diplomacy’</title>
+      <link>https://www.telluridenews.com/sports/article_33649250-20c6-4e8b-8534-3efffb12c77a.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/sports/article_33649250-20c6-4e8b-8534-3efffb12c77a.html</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/9c/c9cea77a-5b08-4460-8aa6-2fee9a39b366/6a03553ac86e0.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />A Telluride youth hockey team will travel to Mongolia June 2-30, becoming the first U.S. team to play hockey there. The 88 participants including players, coaches and parents will also visit China and South Korea as part of the cultural exchange trip organized by Vail International Hockey Club.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/9c/c9cea77a-5b08-4460-8aa6-2fee9a39b366/6a03553ac86e0.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>infrastructure</category>
     </item>
     <item>
       <title>Legals and Public Notices for My 14-20, 2026</title>
@@ -391,16 +401,6 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <description><![CDATA[On this week’s Regional Roundup, we look at how communities across the region are grappling with immigration enforcement. In Durango, Colorado, the District Attorney has filed charges against a federal immigration officer over an alleged assault on a protester outside an U.S. Immigration and Customs Enforcement facility in October 2025. In Glenwood]]></description>
       <category>KOTO Community Radio</category>
       <category>land-use</category>
-    </item>
-    <item>
-      <title>The greatest heron</title>
-      <link>https://www.telluridenews.com/opinion/columnists/article_1deaa175-5c6a-4156-a2e5-b36e9b739931.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/opinion/columnists/article_1deaa175-5c6a-4156-a2e5-b36e9b739931.html</guid>
-      <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/e6/2e633678-6370-4512-92b5-0b1765a25217/69fa58a638daf.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Male great blue herons start building nests to attract females, who then help complete construction before laying 2-6 pale blue eggs that hatch after 29 days. The fluffy gray chicks grow quickly into North America's largest herons, standing up to 4.5 feet tall with 6+ foot wingspans.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/e6/2e633678-6370-4512-92b5-0b1765a25217/69fa58a638daf.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>infrastructure</category>
     </item>
   </channel>
 </rss>

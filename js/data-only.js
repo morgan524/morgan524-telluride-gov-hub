@@ -55,6 +55,18 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "‘Hockey diplomacy’",
+    source: "Telluride Times",
+    date: "May 14, 2026",
+    firstSeen: "2026-05-14",
+    newsTopic: "infrastructure",
+    copy: "A Telluride youth hockey team will travel to Mongolia June 2-30, becoming the first U.S. team to play hockey there. The 88 participants including players, coaches and parents will also visit China and South Korea as part of the cultural exchange trip organized by Vail International Hockey Club.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_33649250-20c6-4e8b-8534-3efffb12c77a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/9c/c9cea77a-5b08-4460-8aa6-2fee9a39b366/6a03553ac86e0.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Legals and Public Notices for My 14-20, 2026",
     source: "Telluride Times",
     date: "May 14, 2026",
@@ -1153,17 +1165,6 @@ const COMMUNITY_EVENTS = [
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-05-14/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-05-14T12:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Mountain Village annual Community Clean Up Days",
     link: "https://koto.org/event/mountain-village-annual-community-clean-up-days/2026-05-14/",
     description: "Mountain Village hosts its annual Community Clean Up Day, this year expanding to two days in two different parts of the community! On Wednesday, May 13, Clean Up Day will take place in Village Court Apartments and on Thursday, May 14, a second Clean Up Day will take place in the Meadows Neighborhood. The entire community is invited to participate in either or both of these events. Schedule for each day: Volunteer Registration: Begins at 2:30 p.m. Clean Up: 3 p.m.-5 p.m. – Clean Up in assigned area Gift Card Raffle: bring your trash back to have your name entered into a raffle for $50 Village Market gift cards at 5:15 p.m.",
@@ -1791,6 +1792,17 @@ const TELLURIDE_FOUNDATION_EVENTS = [
 ];
 
 const OURAY_COUNTY_EVENTS = [
+  {
+    title: "Rollans Park Cleanup",
+    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3643",
+    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3643",
+    pubDate: "2026-06-13T09:00:00.000Z",
+    source: "ouraycounty",
+    sourceLabel: "Ouray County",
+    category: "Community Event",
+    location: "Rollans Park - 257 Sherman St. Ridgway CO 81432",
+    imageUrl: ""
+  },
   {
     title: "CC4CA 2026 Annual Meeting",
     link: "https://ouraycountyco.gov/Calendar.aspx?EID=3473",

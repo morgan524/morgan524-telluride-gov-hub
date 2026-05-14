@@ -2110,6 +2110,17 @@ async function fetchSheridanOperaHouseEvents() {
 // (e.g., Wildfire Aware Fair, water summits).
 const OURAY_COUNTY_EVENTS = [
   {
+    title: "Rollans Park Cleanup",
+    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3643",
+    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3643",
+    pubDate: "2026-06-13T09:00:00.000Z",
+    source: "ouraycounty",
+    sourceLabel: "Ouray County",
+    category: "Community Event",
+    location: "Rollans Park - 257 Sherman St. Ridgway CO 81432",
+    imageUrl: ""
+  },
+  {
     title: "CC4CA 2026 Annual Meeting",
     link: "https://ouraycountyco.gov/Calendar.aspx?EID=3473",
     description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3473",
@@ -3301,17 +3312,6 @@ async function fetchOurayRidgwayEvents() {
 // Entries cover meetings, notices, community events, and town closures
 // extracted from norwoodtown.com/sitemap.xml dated URL slugs.
 const NORWOOD_EVENTS = [
-  {
-    title: "Legacy Documentary Showing The Livery",
-    link: "https://www.norwoodtown.com/2026-05-07-legacy-documentary-showing-the-livery",
-    description: "",
-    pubDate: "2026-05-07T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Community Event",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
   {
     title: "Calm Conversation With Tri County Network",
     link: "https://www.norwoodtown.com/2026-05-11-calm-conversation-with-tri-county-network",
@@ -4684,6 +4684,18 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "‘Hockey diplomacy’",
+    source: "Telluride Times",
+    date: "May 14, 2026",
+    firstSeen: "2026-05-14",
+    newsTopic: "infrastructure",
+    copy: "A Telluride youth hockey team will travel to Mongolia June 2-30, becoming the first U.S. team to play hockey there. The 88 participants including players, coaches and parents will also visit China and South Korea as part of the cultural exchange trip organized by Vail International Hockey Club.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_33649250-20c6-4e8b-8534-3efffb12c77a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/9c/c9cea77a-5b08-4460-8aa6-2fee9a39b366/6a03553ac86e0.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Legals and Public Notices for My 14-20, 2026",
     source: "Telluride Times",
     date: "May 14, 2026",
@@ -5793,17 +5805,6 @@ const COMMUNITY_EVENTS = [
 
 // ── Bot-managed event arrays (populated every 6h by content-refresh.js) ──
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-05-14/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-05-14T12:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Mountain Village annual Community Clean Up Days",
     link: "https://koto.org/event/mountain-village-annual-community-clean-up-days/2026-05-14/",
