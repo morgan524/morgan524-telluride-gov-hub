@@ -2126,6 +2126,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/ed08b494666358349bc84e969db6e8b262ef71aa.jpg"
   },
   {
+    title: "Yoga in the Park- Wednesday evenings",
+    link: "www.beetrueyou.com",
+    description: "For noncyclists and cyclists alike. After an optional social bike ride at 5 pm, wind down for a yoga class in the park 6 - 7 pm. A moderate to advanced vinyasa style class targetting the areas of the body affected by time in the bike saddle and other areas of request. Bring your own mat. If you don't have one, please let me know earlier in the day so I can bring one for you. Meet at the Gazebo south of Chipeta Lodge. If the weather is too inclement, we can meet at the studio at 380 Sherman Street, Ridgway. While this is donation based, please pay before online or in person.",
+    pubDate: "2026-05-14T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Gazebo south of Chipeta Lodge, Ridgway, CO (Or studio if raining)",
+    imageUrl: "https://localist-images.azureedge.net/photos/52880886803755/huge/ba2d24fbf09ba1f9a707a06213d60685581d7322.jpg"
+  },
+  {
     title: "Paint & Sip with Nicole: \"Morning Peaks\"",
     link: "https://anc.apm.activecommunities.com/weehawkenarts/activity/search/detail/5875?onlineSiteId=0&from_original_cui=true",
     description: "Paint & Sip with Nicole: \"Morning Peaks\" Cora Annex, Ridgway 6:30pm-8:30pm $49 incl. all supplies and an adult beverage Registration: www.weehawkenarts.org Unwind, sip, and create! Join us for a relaxed painting session designed for all skill levels—no experience needed. Nicole will guide you through the featured painting while you enjoy a beverage of your choice! All art supplies and one adult beverage are included; just bring your creativity! About Nicole Greenfield: Nicole Greenfield is a painter based in Ridgway, Colorado. Working primarily in acrylic and oil, she creates expressive portraits and atmospheric landscapes that explore the quiet intimacy found in observing people and the natural world. Nicole is a self-taught artist who has developed her skills through years of dedicated practice and online learning. …",
@@ -2210,7 +2221,7 @@ const OURAY_RIDGWAY_EVENTS = [
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
-    location: "Floating Lotus Brewery",
+    location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg"
   },
   {
@@ -2320,7 +2331,7 @@ const OURAY_RIDGWAY_EVENTS = [
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
-    location: "Floating Lotus Brewery",
+    location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52878500753745/huge/657fb6ba45ea0009309e3927a2325634669c31b5.jpg"
   },
   {
@@ -2511,6 +2522,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/ed08b494666358349bc84e969db6e8b262ef71aa.jpg"
   },
   {
+    title: "Yoga in the Park- Wednesday evenings",
+    link: "www.beetrueyou.com",
+    description: "For noncyclists and cyclists alike. After an optional social bike ride at 5 pm, wind down for a yoga class in the park 6 - 7 pm. A moderate to advanced vinyasa style class targetting the areas of the body affected by time in the bike saddle and other areas of request. Bring your own mat. If you don't have one, please let me know earlier in the day so I can bring one for you. Meet at the Gazebo south of Chipeta Lodge. If the weather is too inclement, we can meet at the studio at 380 Sherman Street, Ridgway. While this is donation based, please pay before online or in person.",
+    pubDate: "2026-05-21T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Gazebo south of Chipeta Lodge, Ridgway, CO (Or studio if raining)",
+    imageUrl: "https://localist-images.azureedge.net/photos/52880886803755/huge/ba2d24fbf09ba1f9a707a06213d60685581d7322.jpg"
+  },
+  {
     title: "Elio: Movie Night @ the Wright",
     link: "https://thewrightoperahouse.org/",
     description: "Elio: Movie Night @ the Wright WHEN? Wednesday, May 20 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 1h 45min RATING: PG ROTTEN TOMATOES SCORE: 83% ABOUT THE FILM Elio (2025) follows an imaginative young boy who unexpectedly finds himself transported across the universe and mistaken for Earth’s ambassador to an intergalactic council. Surrounded by strange worlds, alien civilizations, and cosmic misunderstandings, Elio must summon courage and creativity to represent humanity among the stars. A vibrant animated adventure about belonging, curiosity, and discovering where you fit in a very big universe. Tickets $5 In-person screening at the historic Wright Opera House Concessions available. Part of Movie Night @ the Wright, bringing film, community, and conversation to downtown Ouray since 1909.",
@@ -2573,7 +2595,7 @@ const OURAY_RIDGWAY_EVENTS = [
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
-    location: "Floating Lotus Brewery",
+    location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg"
   },
   {
@@ -2841,6 +2863,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/ed08b494666358349bc84e969db6e8b262ef71aa.jpg"
   },
   {
+    title: "Yoga in the Park- Wednesday evenings",
+    link: "www.beetrueyou.com",
+    description: "For noncyclists and cyclists alike. After an optional social bike ride at 5 pm, wind down for a yoga class in the park 6 - 7 pm. A moderate to advanced vinyasa style class targetting the areas of the body affected by time in the bike saddle and other areas of request. Bring your own mat. If you don't have one, please let me know earlier in the day so I can bring one for you. Meet at the Gazebo south of Chipeta Lodge. If the weather is too inclement, we can meet at the studio at 380 Sherman Street, Ridgway. While this is donation based, please pay before online or in person.",
+    pubDate: "2026-05-28T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Gazebo south of Chipeta Lodge, Ridgway, CO (Or studio if raining)",
+    imageUrl: "https://localist-images.azureedge.net/photos/52880886803755/huge/ba2d24fbf09ba1f9a707a06213d60685581d7322.jpg"
+  },
+  {
     title: "The Lord of the Rings: The Fellowship of the Ring: Movie Night @ The Wright",
     link: "https://thewrightoperahouse.org/",
     description: "The Lord of the Rings: The Fellowship of the Ring: Movie Night @ the Wright WHEN? Wednesday, May 27 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 2h 58min RATING: PG-13 ROTTEN TOMATOES SCORE: 91% ABOUT THE FILM This movie was chosen to be just in time for fans of the Genre and precedes our live theatre event: \"Fly, You Fools!\" The Lord of the Rings: The Fellowship of the Ring (2001) follows a young hobbit, Frodo Baggins, as he sets out on a perilous journey to destroy a powerful ring and prevent it from falling into the hands of darkness. Joined by a fellowship of unlikely allies, Frodo travels across Middle-earth facing danger, temptation, and the growing shadow of evil in an epic tale of courage, friendship, and sacrifice. …",
@@ -2881,7 +2914,7 @@ const OURAY_RIDGWAY_EVENTS = [
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
-    location: "Floating Lotus Brewery",
+    location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg"
   },
   {
@@ -3125,39 +3158,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52806871795839/huge/2b4a1f1e03bf8526d92866007630f4a159e579d5.jpg"
-  },
-  {
-    title: "Senior Lunch by Neighbor to Neighbor",
-    link: "https://www.ourayneighbor.com/services",
-    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
-    pubDate: "2026-06-01T18:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
-  },
-  {
-    title: "Monthly Karate in Ouray County",
-    link: "https://weehawkenarts.org/karate-2/",
-    description: "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month. Karate class is a great way to learn skills to keep you safe, stay in shape and strong core movements. Karate believes in using it only to protect self and is taught accordingly. Whether you are new to Karate or a seasoned student, the Sensei will work with your level. Taught in the kyokushin kai-kan style, similar shotokan style of karate, we welcome new students to try this exceptional experience for your mind and body! Mixed ages --- Ages 7 through Adult (extended time for more experience) Mondays in Ouray: St. …",
-    pubDate: "2026-06-01T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg"
-  },
-  {
-    title: "Fly, You Fools!: Theatre @ the Wright",
-    link: "https://thewrightoperahouse.org/events/theater/fly-you-fools",
-    description: "Fly, You Fools!: Theatre @ the Wright WHEN? Friday, May 29, 2026 7:30 PM Saturday, May 30, 2026 7:30 PM Sunday, May 31, 2026 4:00 PM Monday, June 1, 2026 7:30 PM WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Fly, You Fools! is a critically acclaimed physical comedy from the New York–based troupe Recent Cutbacks, making its UK and international stage debut through touring productions like this one. Presented locally by UpstART Theatre, the show delivers a fast-paced parody of epic fantasy storytelling. Three actors and a Foley artist join forces in fellowship to bring an entire fantasy adventure to life in a hilarious one-shot theatrical journey. Blending rapid-fire comedy, inventive stagecraft, live sound effects, and high-energy physical theatre, the production proves that even the smallest band of performers can create a world of heroic proportions. …",
-    pubDate: "2026-06-02T01:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52453668754083/huge/7843394b93916f13f7fe41b7d9d36f1a7394be85.jpg"
   }
 ];
 
@@ -4622,6 +4622,30 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Aspen girls again best Telluride",
+    source: "Telluride Times",
+    date: "May 13, 2026",
+    firstSeen: "2026-05-14",
+    newsTopic: "community",
+    copy: "Aspen defeated Telluride 12-7 in girls lacrosse after a much closer game than their earlier 24-12 matchup this season. The contest was tied 7-7 late in the game before Aspen pulled away with key goals from freshman Chloe Collins and assists from senior Luca Nettleton.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_ae718dcc-b13c-4dc1-afb9-d6340e47869c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/78/678c1443-599c-455e-bc2a-e7fea24dfe43/6a035823e4c42.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Smoking brain (it’s a good thing)",
+    source: "Telluride Times",
+    date: "May 13, 2026",
+    firstSeen: "2026-05-14",
+    newsTopic: "community",
+    copy: "A local writer reflects on the concept of \"smoking brain\" - that uncomfortable feeling when you're pushed to your mental limits, like struggling with a difficult math problem or learning a new language. Drawing on neuroscientist Huberman's research, she explains how this frustration actually triggers brain chemicals that promote learning and growth, challenging the old belief that adult brains can't change.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_933732fe-e0b2-4907-98ba-429519044ca5.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/8c/b8c2d082-d65f-4b07-a422-fff4ca9bf321/6a048e73b6318.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "US overdose deaths fell again in 2025, but some worry about policy and drug supply changes",
     source: "Telluride Times",
     date: "May 13, 2026",
@@ -5354,114 +5378,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Trump gives go-ahead to major new Canada-US oil pipeline",
-    source: "Telluride Times",
-    date: "April 30, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "infrastructure",
-    copy: "Trump approved a 650-mile oil pipeline from Saskatchewan to Montana that would carry two-thirds as much oil as the canceled Keystone XL project. The company behind it has a history of major spills, including 50,000 gallons into the Yellowstone River in 2015, but says it's developed better leak detection technology.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_93f080bd-3bff-5091-afc4-5a9ddae33488.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c9/ec9912c8-b253-5755-acce-42c147636686/69f3c91b34529.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telski update to council: bike park’s future uncertain",
-    source: "Telluride Times",
-    date: "April 30, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "government",
-    copy: "Telski's Swenson told council the bike park loses money, with busy days seeing only 350-400 riders compared to 6,000-7,000 skiers on good winter days. While no final decision has been made, he acknowledged \"loose discussions\" about permanently discontinuing the bike park after seven years of trying to make it work.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_8e8c2d7e-8aed-42dd-83b6-036f40b6fb54.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/e5/ee56772c-7de4-4126-8ef7-d8bc4dfd4025/69f3c904ec009.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride’s ‘I voted/yo voté’ sticker contest winners",
-    source: "Telluride Times",
-    date: "April 30, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "government",
-    copy: "Earlier this year, Telluride and Norwood students participated in a sticker contest, with 18 creative kiddos taking part. The brief, set by the San Miguel County Clerk’s Office, was to devise a design that could be used as the artwork…",
-    claudeSummary: false,
-    href: "https://www.telluridenews.com/news/article_3022309d-c7c1-4717-85d3-41ac89e3f795.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/9d/79d165ca-16ce-40fa-a9ac-77113d7839c8/69f1660ad0191.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Norwood’s ‘I voted/yo voté’ sticker contest winners",
-    source: "Telluride Times",
-    date: "April 30, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "government",
-    copy: "The county clerk thanked everyone who entered Norwood's bilingual voting sticker design contest. All the artwork displayed at the courthouse drew lots of positive comments from visitors.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_c9e7d416-2ad4-4332-87ee-6317130f948d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/16/2167c90d-35cd-419c-b2dc-fff803c1b0ba/69f1772f694c3.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Lindsey Vonn tells the AP she is not yet in position emotionally to decide if she will race again",
-    source: "Telluride Times",
-    date: "April 30, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "public-safety",
-    copy: "Lindsey Vonn says she's not emotionally ready to decide whether she'll return to competitive skiing after her severe tibia fracture at Cortina in December. The 41-year-old is progressing from wheelchair to crutches and still needs another surgery, meaning any potential return wouldn't happen until the 2027-28 season at earliest.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_8e0ab335-1e12-5377-af15-ff97d158dede.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/c6/3c6899e9-4691-5fd5-be26-4d01403e1ebf/69f3542094bae.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Here's how to grow your own food with less water, even in a drought",
-    source: "Telluride Times",
-    date: "April 30, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "infrastructure",
-    copy: "Record-low snowfall across the West has prompted the earliest drought restrictions in Denver Water's history, with cities implementing outdoor watering limits. Gardening experts recommend water-wise growing techniques like harvesting rainwater, collecting greywater from showers and dishwashing, choosing drought-tolerant plant varieties, improving soil health with compost, and using shade cloths to reduce evaporation.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_62ad4304-c441-5377-acde-86dcbdde9312.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/d2/ed2b9a2e-dea0-5f0d-9b8e-8a1e2e924534/69f3541bd0685.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Wishing upon a star",
-    source: "Telluride Times",
-    date: "April 30, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "community",
-    copy: "The SAF Young People's Theater is putting on \"My Son Pinocchio Jr.\" with 30 kids in grades 3-5, featuring the Disney classic with new songs by the \"Wicked\" composer. The show focuses on Geppetto's journey as a father learning to love unconditionally, running about an hour at the Sheridan Opera House May 1-3.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_b3673668-79a5-462d-87a1-05b24411b059.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/cd/4cda66af-af53-48e3-b1b9-8d3dd0c94f9c/69f319f8c70cf.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Michael J. Ward",
-    source: "Telluride Times",
-    date: "April 30, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "community",
-    copy: "Michael J. Ward, who came to Telluride on a ski trip in 1973 and never left, passed away after spending his final years in Hawaii. He worked as a bartender at the Sheridan, tried carpentry, then became a realtor for over 40 years while raising four kids here. A celebration of life will be held at Town Park on June 6, 2026 from 4-6 PM.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/obituaries/article_da9c1d39-f9b9-4485-8624-6ec4a163e609.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/5f/e5fb35c1-ab7f-4d7a-9f66-70713f0980da/69f387ba057ba.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Legals and Public Notices for April 30-May 6, 2026",
-    source: "Telluride Times",
-    date: "April 30, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "infrastructure",
-    copy: "The County Board of Health will consider wastewater treatment regulations on May 20th, while the County Commissioners will review a tree removal application for High Meadow Ranch on Wilson Mesa and a lot line vacation request for Fall Creek Subdivision lots.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
     source: "Town of Telluride",
     date: "April 24, 2026",
@@ -5534,15 +5450,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "New Motor Vehicle Office Availability in Egnar! May 13 at 9 am - 3 pm",
-    source: "San Miguel County",
-    date: "May 5, 2026",
-    newsTopic: "land-use",
-    copy: "The new Motor Vehicle office will be available in Egnar on May 13 from 9 am - 3 pm in the same building as the fire department (5634 County Rd H1). We hope to serve many community members in this area, eliminating the drive to Norwood or Telluride.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=516",
-    img: ""
-  },
-  {
     title: "New Wildfire Information Site Launched",
     source: "San Miguel County",
     date: "May 1, 2026",
@@ -5565,6 +5472,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 // ══════════ KOTO COMMUNITY RADIO — RECENT NEWSCASTS ══════════
 // Updated: 2026-04-01  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 5-13-26",
+    source: "KOTO Community Radio",
+    date: "May 14, 2026",
+    newsTopic: "land-use",
+    copy: "Regional Governments Discuss Impacts of Development; The Joy of Sex Ed…with Clowns; Alex Kelloff Makes Bid for Congress",
+    href: "https://koto.org/news/newscast-5-13-26/"
+  },
   {
     title: "Newscast 5-11-26",
     source: "KOTO Community Radio",
@@ -5620,14 +5535,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "community",
     copy: "Local Governments Plan for Disaster; West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda",
     href: "https://koto.org/news/newscast-4-30-26/"
-  },
-  {
-    title: "Newscast 4-29-26",
-    source: "KOTO Community Radio",
-    date: "April 30, 2026",
-    newsTopic: "land-use",
-    copy: "The State of Crime in Telluride; Town Council Pauses Housing Waitlist Policy; Building with Cob",
-    href: "https://koto.org/news/newscast-4-29-26/"
   }
 ];
 
@@ -6261,6 +6168,50 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Lone Cone Library Norwood",
     imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Bilingual Balance in Motion",
+    link: "https://koto.org/event/bilingual-balance-in-motion/2026-05-23/",
+    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
+    pubDate: "2026-05-23T10:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
+  },
+  {
+    title: "Gentle Yoga with Kristin Milord",
+    link: "https://koto.org/event/gentle-yoga-with-kristin-milord-2/2026-05-24/",
+    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class is free, but donations to support the instructor are welcome.",
+    pubDate: "2026-05-24T11:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/gentle-yoga-kristen-1.png"
+  },
+  {
+    title: "Drop In Tech Time with Oliver",
+    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-05-24/",
+    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
+    pubDate: "2026-05-24T13:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-05-24/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-05-24T14:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   }
 ];
 const WILKINSON_EVENTS = [
@@ -6900,7 +6851,7 @@ document.querySelectorAll('.chip[data-tab-target="legals"]').forEach(chip => {
 // ── Legal Notices Data & Render ─
 // ════════════════════════════════
 
-const LEGAL_NOTICES_CACHE_DATE = '2026-05-13'; // Updated by legal-notice-update task
+const LEGAL_NOTICES_CACHE_DATE = '2026-05-14'; // Updated by legal-notice-update task
 
 const PAPER_LOGOS = {
   ttimes: {
@@ -7432,24 +7383,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluride.gov/bids.aspx?bidID=127",
     address: "",
     totBidID: "127"
-  },
-  {
-    title: "Rezoning Application -- 2028 Maverick Way, Norwood",
-    entity: "Norwood Public Schools",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "Norwood Public Schools has filed a rezoning application for property at 2028 Maverick Way in Norwood. Public hearings are scheduled for Planning and Zoning on April 20, 2026 at 6:30 PM and Norwood Board of Trustees on May 13, 2026 at 7:00 PM.",
-    deadline: "May 13, 2026",
-    expires: "2026-05-13",
-    dates: "4/16",
-    papers: ["ttimes_0416"],
-    url: "https://www.telluridenews.com/news/legals/article_c5a54e8f-2fa6-42a2-ba94-3a3828e137ff.html",
-    address: "2028 Maverick Way, Norwood, CO 81423",
-    noticeKey: "rezoning-2028-maverick-norwood"
   },
   {
     title: "RFP -- County Building Flooring Replacement",
