@@ -55,6 +55,30 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Legals and Public Notices for My 14-20, 2026",
+    source: "Telluride Times",
+    date: "May 14, 2026",
+    firstSeen: "2026-05-14",
+    newsTopic: "recreation",
+    copy: "San Miguel County is seeking contractors for a boiler replacement at Down Valley Park in Placerville, with proposals due June 4. The Town of Telluride is looking for a Deputy Municipal Court Judge, while Mountain Village needs bids for window and door replacement at Mountain Munchkins.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Denver runway fatality reveals a weakness in airport security",
+    source: "Telluride Times",
+    date: "May 14, 2026",
+    firstSeen: "2026-05-14",
+    newsTopic: "community",
+    copy: "A person breached Denver airport's perimeter fence and was killed after being pulled into an aircraft engine, forcing the pilot to abort takeoff and evacuate 224 passengers. The intruder scaled the fence in 15 seconds after airport security missed him on surveillance, mistaking the alarm for deer.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_421115b6-446c-5d25-a14a-6a9fefb7c8d4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/c1/ac134921-b515-5796-ab77-99af996bd75e/69ffaae2560db.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Aspen girls again best Telluride",
     source: "Telluride Times",
     date: "May 13, 2026",
@@ -1638,59 +1662,81 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Lite Lunch- Wait For Me",
-    link: "https://telluridelibrary.libcal.com/event/15497297?hs=a",
-    description: "12:00 PM – 1:00 PM · Join us for a little Lite Lunch and a discussion of Wait for Me by Amy Jo Burns. Space is limited, sign up in advance. Contact tosborne@telluridelibrary.org for a copy of the book. Young folk singer Elle Harlow reaches the height of her prowess in 1973, with two wildly beloved albums to her name and a hidden history of impossible heartbreak. When she sets foot on the famed Grand Ole Opry stage, a far cry from the mountain that raised her, Elle gives the biggest performance of her life. Then, to the dismay of shocked fans, her producer, and the man who still loves her, she vanishes. Almost two decades later, eighteen-year-old Marijohn Shaw is spending her summer pumping gas, writing songs on her broken mandolin, and longing for a mother. …",
-    pubDate: "2026-05-13T12:00:00.000Z",
+    title: "CANCELLEDCommunity Support/ Apoyo Comunitario",
+    link: "https://telluridelibrary.libcal.com/event/16855114?hs=a",
+    description: "9:00 AM – 12:00 PM · Do you need help applying for public assistance programs? Ruth from Tri-County Health Network will provide guidance with filling out applications for SNAP, the Good Neighbor Fund, the Behavioral Health Fund, Medicaid, and can provide support in guiding you towards other helpful community resources. This will be held in Meeting Room #5 on the 2nd Thursday of the month from 9am-12pm . Advance registration is encouraged. &iquest;Necesita ayuda para solicitar programas de asistencia p&uacute;blica? Ruth, de Tri-County Health Network , brindar&aacute; orientaci&oacute;n para completar solicitudes de SNAP, el Fondo Good Neighbor, el Fondo de Salud Mental, Medicaid, y tambi&eacute;n puede apoyarle para conectarse con otros recursos comunitarios. Se llevar&aacute; a cabo en la Sala de reuniones #5 el segundo jueves de cada mes, de 9 a.m. a 12 p.m. Se recomienda registrarse con anticipaci&oacute;n. …",
+    pubDate: "2026-05-14T09:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_13_23_21.png"
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1771543641.jpg"
   },
   {
-    title: "Radio Biblioteca",
-    link: "https://telluridelibrary.libcal.com/event/16824971?hs=a",
-    description: "12:00 PM – 1:00 PM · Escucha a KOTO Miercoles por Medio y conoce las noticias y eventos que tendremos en nuestra comunidad &bull; Tune in to Koto 91.7 FM every other Wednesday and learn about the news and events we will have in our community",
-    pubDate: "2026-05-13T12:00:00.000Z",
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/15223204?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-05-14T10:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "KOTO Radio Station",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_01_13_13_59.jpeg"
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
   },
   {
-    title: "Movie and A Snack Club",
-    link: "https://telluridelibrary.libcal.com/event/16575196?hs=a",
-    description: "3:30 PM – 5:30 PM",
-    pubDate: "2026-05-13T15:30:00.000Z",
+    title: "Pilates for All Bodies",
+    link: "https://telluridelibrary.libcal.com/event/16006639?hs=a",
+    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-05-14T12:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_29_11_55_43.png"
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
   },
   {
-    title: "Sewing 101 with Melissa",
-    link: "https://telluridelibrary.libcal.com/event/15970617?hs=a",
-    description: "5:00 PM – 7:00 PM · Don&#39;t throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we&#39;ll provide the sewing materials.",
-    pubDate: "2026-05-13T17:00:00.000Z",
+    title: "Littles On the Move",
+    link: "https://telluridelibrary.libcal.com/event/13960343?hs=a",
+    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
+    pubDate: "2026-05-14T15:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Meeting Room #6 - large",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1717100108.jpg"
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
   },
   {
-    title: "Wildfire Preparedness/Preparación para Incendios Forestales",
-    link: "https://telluridelibrary.libcal.com/event/16625525?hs=a",
-    description: "5:30 PM – 7:00 PM · Join San Miguel County and the Western Region Wildfire Council  and Telluride Fire Protection District for a presentation on how to prepare for a wildfire and what to do if one arrives. There will also be information about mitigation resources for property owners.  There will be simultaneous Spanish interpretation available.  Habr&aacute; interpretaci&oacute;n en espa&ntilde;ol. &Uacute;nase al Condado de San Miguel, al Distrito de Protecci&oacute;n contra Incendios de Telluride y al Consejo de Incendios Forestales de la Regi&oacute;n Oeste para una presentaci&oacute;n sobre c&oacute;mo prepararse para un incendio forestal y qu&eacute; hacer si ocurre. Tambi&eacute;n habr&aacute; informaci&oacute;n sobre recursos de mitigaci&oacute;n para propietarios de viviendas. Can&#39;t make this presentation?  We will host the same presentation at 1:30 pm on June 1st. (English only presentation)",
-    pubDate: "2026-05-13T17:30:00.000Z",
+    title: "The Spark Lab",
+    link: "https://telluridelibrary.libcal.com/event/15072262?hs=a",
+    description: "3:30 PM – 5:00 PM · Each week we will do a fun activity! First thursdays with Pinhead Second Thursdays with EcoAction partners Fourth Thursdays with Telluride Theatre",
+    pubDate: "2026-05-14T15:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_30_14_39_36.jpg"
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1761421911.png"
+  },
+  {
+    title: "Teen Artist Queeries",
+    link: "https://telluridelibrary.libcal.com/event/16099926?hs=a",
+    description: "4:00 PM – 5:00 PM · Join the WPL, Ah Haa, and the Telluride School District GSA Club, for Artist Queeries : An LGBTQIA+ Club for all youth focused on art.",
+    pubDate: "2026-05-14T16:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Teen Area",
+    imageUrl: ""
+  },
+  {
+    title: "Booze and Books",
+    link: "https://telluridelibrary.libcal.com/event/16590827?hs=a",
+    description: "5:15 PM – 6:30 PM · Sip on a libation while chatting with other bibliophiles about books you have read recently. It&#39;s totally open ended and open to everyone! 5:15 the second Thursday of every month. The library will get some apps for the table; you purchase your own beverage.   Please sign up in advance . On Thursday, May 14th, we will meet at 123 Tacos  at 123 S. Oak St. The rest of our summer season will be at  Liz  at 200 W. Colorado Ave. in Telluride. (Entrance is on Fir St.)",
+    pubDate: "2026-05-14T17:15:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "123 Tacos Restaurant",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_15_54_25.jpg"
   }
 ];
 
@@ -1792,61 +1838,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
-    link: "www.FloatingLotusBrewery.com",
-    description: "Join us at the Lotus for a midweek tradition that brings together musicians, music lovers, and the incredible local talent that makes our community shine. From intimate solo sets to full-band jam sessions with rotating players, Open Mic Night is always full of surprises. Want to play? We’d love to have you — signups begin at 5:30pm. Just bring your instrument and your creativity, and we’ll take care of the rest. Our stage is fully equipped with PA, mics, drums, bass, and everything you need to plug in and play. 🎟️ Free admission 🍻 Grab a beer, settle in, and enjoy the show Come be part of the music — on stage or in the crowd!",
-    pubDate: "2026-05-14T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/ed08b494666358349bc84e969db6e8b262ef71aa.jpg"
-  },
-  {
-    title: "Yoga in the Park- Wednesday evenings",
-    link: "www.beetrueyou.com",
-    description: "For noncyclists and cyclists alike. After an optional social bike ride at 5 pm, wind down for a yoga class in the park 6 - 7 pm. A moderate to advanced vinyasa style class targetting the areas of the body affected by time in the bike saddle and other areas of request. Bring your own mat. If you don't have one, please let me know earlier in the day so I can bring one for you. Meet at the Gazebo south of Chipeta Lodge. If the weather is too inclement, we can meet at the studio at 380 Sherman Street, Ridgway. While this is donation based, please pay before online or in person.",
-    pubDate: "2026-05-14T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Gazebo south of Chipeta Lodge, Ridgway, CO (Or studio if raining)",
-    imageUrl: "https://localist-images.azureedge.net/photos/52880886803755/huge/ba2d24fbf09ba1f9a707a06213d60685581d7322.jpg"
-  },
-  {
-    title: "Paint & Sip with Nicole: \"Morning Peaks\"",
-    link: "https://anc.apm.activecommunities.com/weehawkenarts/activity/search/detail/5875?onlineSiteId=0&from_original_cui=true",
-    description: "Paint & Sip with Nicole: \"Morning Peaks\" Cora Annex, Ridgway 6:30pm-8:30pm $49 incl. all supplies and an adult beverage Registration: www.weehawkenarts.org Unwind, sip, and create! Join us for a relaxed painting session designed for all skill levels—no experience needed. Nicole will guide you through the featured painting while you enjoy a beverage of your choice! All art supplies and one adult beverage are included; just bring your creativity! About Nicole Greenfield: Nicole Greenfield is a painter based in Ridgway, Colorado. Working primarily in acrylic and oil, she creates expressive portraits and atmospheric landscapes that explore the quiet intimacy found in observing people and the natural world. Nicole is a self-taught artist who has developed her skills through years of dedicated practice and online learning. …",
-    pubDate: "2026-05-14T00:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52648457990305/huge/7eef9fbe8e9e42d17143c05cd7a3e8515b667f56.jpg"
-  },
-  {
-    title: "CHLOE KIMES ~ Live at the Sherbino with Heather & Douglas Opening!",
-    link: "https://sherbino.org/events/category/music/",
-    description: "CHLOE KIMES || Doors at 6:30 pm || Heather & Douglas at 6:45 pm || Chloe Kimes at 7:30 pm $25 advance / $28 at the door || Limited reserved seating available Chloe Kimes is described as a “storyteller-in-the-making” with a timeless sound rooted in Americana traditions. Fronting a spirited alt-country band, she is quickly emerging as one of the most compelling new voices in contemporary folk and alt-country. A live performance of her song “Coors Light” at WDVX’s Blue Plate Special in Knoxville went viral, amassing more than 4 million views across social media in just one week. In response to overwhelming demand, Kimes recorded a studio version at RCA Studio A with producer Phillip Smith and released the single within weeks of its online debut. Chloe is a Michigan-born singer, songwriter, and bandleader currently based in Nashville, TN. …",
-    pubDate: "2026-05-14T00:45:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52403015268588/huge/ccccef9e7c2dcfc1f1f688551bd0ff7ef17953ec.jpg"
-  },
-  {
-    title: "A Minecraft Movie: Movie Night @ the Wright",
-    link: "https://thewrightoperahouse.org/",
-    description: "A Minecraft Movie: Movie Night @ the Wright WHEN? Wednesday, May 13 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 1h 45min RATING: PG ABOUT THE FILM A Minecraft Movie (2025) transports audiences into the imaginative, block-built world of Minecraft, where creativity is the key to survival. When an unexpected threat emerges, a group of unlikely heroes must learn to craft, build, and work together to protect their world from destruction. A colorful adventure about teamwork, creativity, and the power of imagination. Tickets $5 In-person screening at the historic Wright Opera House Concessions available. Part of Movie Night @ the Wright, bringing film, community, and conversation to downtown Ouray since 1909.",
-    pubDate: "2026-05-14T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52391676764493/huge/375fc7e31f07d1029c24c49de31c3547af1a53ee.jpg"
-  },
   {
     title: "Ouray Economic Development Committee",
     link: "https://events.ourayridgwayevents.com/event/ouray-economic-development-committee",
@@ -2836,6 +2827,61 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52806871795839/huge/2b4a1f1e03bf8526d92866007630f4a159e579d5.jpg"
+  },
+  {
+    title: "Senior Lunch by Neighbor to Neighbor",
+    link: "https://www.ourayneighbor.com/services",
+    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
+    pubDate: "2026-06-01T18:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
+  },
+  {
+    title: "Monthly Karate in Ouray County",
+    link: "https://weehawkenarts.org/karate-2/",
+    description: "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month. Karate class is a great way to learn skills to keep you safe, stay in shape and strong core movements. Karate believes in using it only to protect self and is taught accordingly. Whether you are new to Karate or a seasoned student, the Sensei will work with your level. Taught in the kyokushin kai-kan style, similar shotokan style of karate, we welcome new students to try this exceptional experience for your mind and body! Mixed ages --- Ages 7 through Adult (extended time for more experience) Mondays in Ouray: St. …",
+    pubDate: "2026-06-01T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg"
+  },
+  {
+    title: "Fly, You Fools!: Theatre @ the Wright",
+    link: "https://thewrightoperahouse.org/events/theater/fly-you-fools",
+    description: "Fly, You Fools!: Theatre @ the Wright WHEN? Friday, May 29, 2026 7:30 PM Saturday, May 30, 2026 7:30 PM Sunday, May 31, 2026 4:00 PM Monday, June 1, 2026 7:30 PM WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Fly, You Fools! is a critically acclaimed physical comedy from the New York–based troupe Recent Cutbacks, making its UK and international stage debut through touring productions like this one. Presented locally by UpstART Theatre, the show delivers a fast-paced parody of epic fantasy storytelling. Three actors and a Foley artist join forces in fellowship to bring an entire fantasy adventure to life in a hilarious one-shot theatrical journey. Blending rapid-fire comedy, inventive stagecraft, live sound effects, and high-energy physical theatre, the production proves that even the smallest band of performers can create a world of heroic proportions. …",
+    pubDate: "2026-06-02T01:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52453668754083/huge/7843394b93916f13f7fe41b7d9d36f1a7394be85.jpg"
+  },
+  {
+    title: "Wright Opera House Guided Tour",
+    link: "wrightoperahouse.org",
+    description: "We're a nonprofit dedicated to bringing world-class performances to Ouray. All guided tours help support our diverse programming! Step behind the scenes of Ouray’s historic gem! Our guided tours offer a unique glimpse into the history, architecture, and stories that make The Wright Opera House truly one-of-a-kind. Tour Days: Tuesday's at 2:00 PM and Wednesday's at 10:00 AMWeekend Tours: Available by request and scheduled around our regular programming. As an active opera house, weekend tours are not offered through our ticketing platform.Tour Fee: $20 per personMinimum Guests: 4 people per tourAccessibility: Fully ADA accessible with elevatorKid-Friendly: Absolutely! A perfect family outingPhoto-Friendly: Yes! Capture this historic beauty (no video during tours, please)Tour Duration: ~1.5 hoursGroups of 25 or more, or for weekend requests: Please contact us directly for pricing and scheduling. …",
+    pubDate: "2026-06-02T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52569865342720/huge/3b2908ddb2fc3d1f0e870007c7b65025c358699f.jpg"
+  },
+  {
+    title: "JACK HAIGHT",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-06-02T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   }
 ];
 
@@ -3511,6 +3557,150 @@ const LEGAL_NOTICES = [
     address: "Multiple locations in San Miguel County including SW1/4 NE1/4 Section 10, T42N R12W; NW1/4 NW1/4 Section 22, T44N R13W; SE1/4 SE1/4 Section 9, T44N R13W; and other locations",
     noticeKey: "26CW3016",
     caseNumber: "26CW3016"
+  },
+  {
+    title: "RFP -- Boiler System Replacement at Down Valley Park",
+    entity: "San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County is requesting proposals from contractors to replace the boiler system at Down Valley Park in Placerville. Information is available online or at the Parks & Open Space department in Telluride. Proposals are due by 5:00 PM on June 4, 2026.",
+    deadline: "June 4, 2026 at 5:00 PM",
+    expires: "2026-06-04",
+    dates: "5/14",
+    papers: ["ttimes_0514"],
+    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
+    address: "Down Valley Park, Placerville, CO",
+    noticeKey: "COL-000133"
+  },
+  {
+    title: "RFP -- Deputy Municipal Court Judge Services",
+    entity: "Town of Telluride",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "The Town of Telluride is inviting proposals from qualified individuals to provide Deputy Municipal Court Judge Services for their Municipal Court of Record. Proposals must be submitted by noon on June 5, 2026, and detailed requirements are available at bit.ly/totbids.",
+    deadline: "June 5, 2026 at 12:00 PM",
+    expires: "2026-06-05",
+    dates: "5/14",
+    papers: ["ttimes_0514"],
+    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
+    address: "Telluride Municipal Court, Telluride, CO",
+    noticeKey: "COL-000140"
+  },
+  {
+    title: "RFP -- Flooring Replacement at County Buildings",
+    entity: "San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County is requesting proposals from contractors to replace flooring at 333 & 305 W. Colorado Ave in Telluride. Information is available online or at the building's 2nd floor, with proposals due by 5:00 PM on Friday, June 5th.",
+    deadline: "June 5, 2026 at 5:00 PM",
+    expires: "2026-06-05",
+    dates: "5/14",
+    papers: ["ttimes_0514"],
+    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
+    address: "333 & 305 W. Colorado Ave, Telluride, CO",
+    noticeKey: "COL-000131"
+  },
+  {
+    title: "Bid Notice -- Mountain Munchkins Windows and Door Replacement",
+    entity: "Town of Mountain Village",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "The Town of Mountain Village is accepting bids for the 2026 Mountain Munchkins Windows and Door Replacement project. Bid packets are available online or at TMV Public Works, with all bids due by noon on May 22, 2026.",
+    deadline: "May 22, 2026 at 12:00 PM",
+    expires: "2026-05-22",
+    dates: "5/14",
+    papers: ["ttimes_0514"],
+    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
+    address: "415 Mountain Village Blvd Building 2, Mountain Village, CO",
+    noticeKey: "COL-000141"
+  },
+  {
+    title: "RFP -- MSE Retaining Wall Design and Construction",
+    entity: "San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County is soliciting proposals for design and construction of a mechanically stabilized earth retaining wall on County Road 58P north of Sawpit. A mandatory pre-bid meeting is May 14, 2026 at 1:00 PM, with proposals due May 26, 2026 at 5:00 PM.",
+    deadline: "May 26, 2026 at 5:00 PM",
+    expires: "2026-05-26",
+    dates: "5/14",
+    papers: ["ttimes_0514"],
+    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
+    address: "County Road 58P north of Sawpit, CO",
+    noticeKey: "COL-000125"
+  },
+  {
+    title: "Public Hearing -- Land Use Code Amendment for Building Footprint Definition",
+    entity: "San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "San Miguel County Board of Commissioners will hold a public hearing on June 3, 2026 at 9:30 AM to consider a Land Use Code amendment adding a definition for 'Building Footprint' and clarifying dimensional references. Written comments must be received by May 27, 2026.",
+    deadline: "June 3, 2026 at 9:30 AM",
+    expires: "2026-06-03",
+    dates: "5/14",
+    papers: ["ttimes_0514"],
+    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
+    address: "333 W Colorado Ave, 2nd FL, Telluride, CO",
+    noticeKey: "COL-000142"
+  },
+  {
+    title: "Public Hearing -- Land Use Code Amendment for Accelerated Housing Review",
+    entity: "San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "smrha",
+    icon: "🏠",
+    iconClass: "type-hearing",
+    type: "Housing Notice",
+    filterTag: "housing",
+    summary: "San Miguel County Board of Commissioners will hold a public hearing on June 3, 2026 at 9:30 AM to consider a Land Use Code amendment adding Section 3-15 for Accelerated Housing Review. Written comments must be received by noon on May 27, 2026.",
+    deadline: "June 3, 2026 at 9:30 AM",
+    expires: "2026-06-03",
+    dates: "5/14",
+    papers: ["ttimes_0514"],
+    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
+    address: "333 W Colorado Ave, 2nd FL, Telluride, CO",
+    noticeKey: "COL-000143"
+  },
+  {
+    title: "Public Hearing -- Substantial PUD Amendment for Increased Floor Area",
+    entity: "Jim Mahoney",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "San Miguel County Board of Commissioners will hold a public hearing on June 3, 2026 at 9:30 AM to consider Jim Mahoney's application for a Substantial PUD Amendment to increase maximum floor area from 6,600 to 7,800 square feet at 780 Vance Drive. Written comments must be received by noon May 26, 2026.",
+    deadline: "June 3, 2026 at 9:30 AM",
+    expires: "2026-06-03",
+    dates: "5/14",
+    papers: ["ttimes_0514"],
+    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
+    address: "780 Vance Drive, Telluride, CO",
+    noticeKey: "COL-000116"
   }
 ];
 
