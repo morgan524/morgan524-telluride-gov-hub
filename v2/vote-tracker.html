@@ -303,6 +303,18 @@ const BOCC_VOTE_ITEMS = [
 
   /* ══ 2024 ══════════════════════════════════════════════════ */
 
+  // Jan 17, 2024 — All commissioners present (3-0)
+  {
+    id:'bv2024-28', date:'2024-01-17', year:2024,
+    meeting:'BOCC — Jan 17, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/695/files',
+    title:'Society Turn PUD Extension — Genesee Properties',
+    description:'Motion to extend the Society Turn Planned Unit Development for Genesee Properties. Motion by Holstrom, seconded by Brown. Passed 3-0.',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+
   // Aug 21, 2024 — All commissioners present (3-0)
   {
     id:'bv2024-01', date:'2024-08-21', year:2024,
@@ -811,13 +823,106 @@ const PC_ALL_MEMBERS = [
   { id:'bayma',        name:'Matthew Bayma',           shortName:'Bayma',        title:'Secretary (as of Sep 2024)' },
   { id:'bald',         name:'Ian Bald',                shortName:'Bald',         title:'Member' },
   { id:'gleason',      name:'Galena Gleason',          shortName:'Gleason',      title:'Member (2024; BOCC 2025+)' },
+  { id:'schillaci',    name:'M.J. Schillaci',          shortName:'Schillaci',    title:'Member (Jan–Jun 2024)' },
   { id:'simpson',      name:'Hallie Bevan Simpson',    shortName:'Simpson',      title:'Senior Alternate (Sep 2024+)' },
   { id:'vangelder',    name:'Robyn Van Gelder',        shortName:'Van Gelder',   title:'Junior Alternate (Sep 2024+)' },
 ];
-const PC_2024 = ['taylor','liftonzoline','bayma','bald','gleason','simpson'];
+const PC_2024 = ['taylor','liftonzoline','bayma','bald','gleason','schillaci','simpson'];
 const PC_2025 = ['taylor','liftonzoline','bayma','bald','simpson','vangelder'];
 
 const PC_VOTE_ITEMS = [
+  // Jan 11, 2024 — Airport Master Plan (contested)
+  {
+    id:'pv2024-08', date:'2024-01-11', year:2024,
+    meeting:'Planning Commission — Jan 11, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/705/files',
+    title:'Telluride Airport Master Plan Adoption',
+    description:'Motion to deny the Telluride Airport Master Plan FAILED 2-3 (Lifton-Zoline, Schillaci in favor of denial; Taylor, Bald, Bayma opposed). Subsequent motion to approve with conditions PASSED 3-2.',
+    tags:['Land Use','Infrastructure'],
+    outcome:'Passed', tally:'3-2',
+    votes:{ taylor:'Yes', liftonzoline:'No', bayma:'Yes', bald:'Yes', schillaci:'No' },
+  },
+
+  // Feb 9, 2024 — La Sal Vista rezoning
+  {
+    id:'pv2024-09', date:'2024-02-09', year:2024,
+    meeting:'Planning Commission — Feb 9, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/650/files',
+    title:'La Sal Vista Rezoning to WMLI (Wildlife-Mountain Land Intensive)',
+    description:'Recommended BOCC approve rezoning of the La Sal Vista property to WMLI. Motion by Bayma. Passed 5-0.',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', schillaci:'Yes' },
+  },
+
+  // Apr 4, 2024 — Community Housing Zone District + deed restriction amendment
+  {
+    id:'pv2024-10', date:'2024-04-04', year:2024,
+    meeting:'Planning Commission — Apr 4, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/558/files',
+    title:'LUC Amendment — Community Housing Zone District (New Article)',
+    description:'Recommended BOCC adopt a new Community Housing Zone District in the Land Use Code. Motion by Lifton-Zoline. Passed 5-0.',
+    tags:['Land Use','Housing'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', schillaci:'Yes' },
+  },
+  {
+    id:'pv2024-11', date:'2024-04-04', year:2024,
+    meeting:'Planning Commission — Apr 4, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/558/files',
+    title:'LUC Sections 5-1304/5/6 Deed Restriction Amendment — TIED (Continued)',
+    description:'Motion to recommend BOCC adopt LUC Sections 5-1304/5/6 deed restriction amendment FAILED on a 2-2 tie — no majority to recommend. Motion by Lifton-Zoline, seconded by Schillaci. Item continued for further discussion.',
+    tags:['Land Use','Housing'],
+    outcome:'Failed', tally:'2-2',
+    votes:{ taylor:'No', liftonzoline:'Yes', bayma:'No', bald:'Absent', schillaci:'Yes' },
+  },
+
+  // May 9, 2024 — Deed restriction amendment second attempt
+  {
+    id:'pv2024-12', date:'2024-05-09', year:2024,
+    meeting:'Planning Commission — May 9, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/510/files',
+    title:'LUC Sections 5-1304/5/6 Deed Restriction Amendment — TIED Again (Continued)',
+    description:'Second attempt to recommend LUC deed restriction amendment again FAILED 2-2. Motion by Lifton-Zoline, seconded by Schillaci. Item continued to June for stakeholder group recommendation.',
+    tags:['Land Use','Housing'],
+    outcome:'Failed', tally:'2-2',
+    votes:{ taylor:'No', liftonzoline:'Yes', bayma:'No', bald:'Absent', schillaci:'Yes' },
+  },
+
+  // Jun 13, 2024 — East End Master Plan + deed restriction forward to BOCC
+  {
+    id:'pv2024-13', date:'2024-06-13', year:2024,
+    meeting:'Planning Commission — Jun 13, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/457/files',
+    title:'East End Master Plan Adoption',
+    description:'Recommended BOCC adopt the East End Master Plan. Motion by Schillaci, seconded by Bald. Passed 5-0.',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', schillaci:'Yes' },
+  },
+  {
+    id:'pv2024-14', date:'2024-06-13', year:2024,
+    meeting:'Planning Commission — Jun 13, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/457/files',
+    title:'LUC Section 5-1305 Deed Restriction — Forward to BOCC with Stakeholder Group Recommendation',
+    description:'Recommended forwarding LUC Section 5-1305 deed restriction language to BOCC incorporating the stakeholder group\'s recommendation. Passed 5-0.',
+    tags:['Land Use','Housing'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', schillaci:'Yes' },
+  },
+
+  // Jul 11, 2024 — Mining SUP (Standard Minerals/Thor Energy) — held in Norwood
+  {
+    id:'pv2024-15', date:'2024-07-11', year:2024,
+    meeting:'Planning Commission — Jul 11, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/422/files',
+    title:'Standard Minerals / Thor Energy — Mining Special Use Permit (Groundhog Area, BLM Lands)',
+    description:'Recommended BOCC approve a Special Use Permit for mining operations by Standard Minerals / Thor Energy on BLM lands in the Groundhog Area. Motion by Gleason, seconded by Taylor. Passed 5-0.',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Absent', bald:'Yes', gleason:'Yes', schillaci:'Absent' },
+  },
+
   // Jul 11, 2024 — Bayma absent (4 voting + alternate); held in Norwood
   {
     id:'pv2024-01', date:'2024-07-11', year:2024,
@@ -2109,9 +2214,9 @@ function switchEntity() {
   if (ent === 'telluride') {
     years = [['', 'All years'], ['2026','2026'], ['2025','2025'], ['2024','2024']];
   } else if (ent === 'bocc') {
-    years = [['', 'All years'], ['2025','2025'], ['2024','2024']];
+    years = [['', 'All years'], ['2026','2026'], ['2025','2025'], ['2024','2024']];
   } else if (ent === 'planning') {
-    years = [['', 'All years'], ['2025','2025'], ['2024','2024']];
+    years = [['', 'All years'], ['2026','2026'], ['2025','2025'], ['2024','2024']];
   } else {
     years = [['', 'All years'], ['2024','2024']];
   }
@@ -2131,11 +2236,14 @@ function renderBoccHeatmap() {
   const yearSel = document.getElementById('filter-year').value;
   const catSel  = hmCatFilter;
 
-  const eras = yearSel === '2025'
+  const eras = yearSel === '2026'
+    ? [{ label:'2026 BOCC', members:BOCC_2025, yearFilter:2026 }]
+    : yearSel === '2025'
     ? [{ label:'2025 BOCC', members:BOCC_2025, yearFilter:2025 }]
     : yearSel === '2024'
     ? [{ label:'2024 BOCC', members:BOCC_2024, yearFilter:2024 }]
-    : [{ label:'2025 BOCC', members:BOCC_2025, yearFilter:2025 },
+    : [{ label:'2026 BOCC', members:BOCC_2025, yearFilter:2026 },
+       { label:'2025 BOCC', members:BOCC_2025, yearFilter:2025 },
        { label:'2024 BOCC', members:BOCC_2024, yearFilter:2024 }];
 
   let html = '';
@@ -2239,11 +2347,14 @@ function renderPlanningHeatmap() {
   const yearSel = document.getElementById('filter-year').value;
   const catSel  = hmCatFilter;
 
-  const eras = yearSel === '2025'
+  const eras = yearSel === '2026'
+    ? [{ label:'2026 Planning Commission', members:PC_2025, yearFilter:2026 }]
+    : yearSel === '2025'
     ? [{ label:'2025 Planning Commission', members:PC_2025, yearFilter:2025 }]
     : yearSel === '2024'
     ? [{ label:'2024 Planning Commission', members:PC_2024, yearFilter:2024 }]
-    : [{ label:'2025 Planning Commission', members:PC_2025, yearFilter:2025 },
+    : [{ label:'2026 Planning Commission', members:PC_2025, yearFilter:2026 },
+       { label:'2025 Planning Commission', members:PC_2025, yearFilter:2025 },
        { label:'2024 Planning Commission', members:PC_2024, yearFilter:2024 }];
 
   let html = '';
