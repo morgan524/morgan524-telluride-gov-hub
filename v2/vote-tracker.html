@@ -215,6 +215,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         <option value="">All years</option>
         <option value="2026">2026</option>
         <option value="2025">2025</option>
+        <option value="2024">2024</option>
       </select>
     </div>
 
@@ -305,6 +306,7 @@ const ALL_MEMBERS = [
 // Council composition by era (for heatmap column selection)
 const COUNCIL_2025_EARLY  = ['errico','fee','arguelles','enright','shaunette','levin','svs'];
 const COUNCIL_2025_LATE   = ['errico','fee','enright','levin','svs','permakoff','stark'];
+const COUNCIL_2024        = ['errico','fee','arguelles','enright','shaunette','levin','svs'];
 const COUNCIL_2026        = ['errico','fee','enright','levin','permakoff','stark','svs'];
 
 /* ─── Vote items ────────────────────────────────────────────── */
@@ -312,6 +314,402 @@ const COUNCIL_2026        = ['errico','fee','enright','levin','permakoff','stark
 // members not present in the votes object = not yet/no longer on council (shown as '–' in heatmap)
 
 const VOTE_ITEMS = [
+
+  /* ══ 2024 ══════════════════════════════════════════════════ */
+
+  // Jan 09, 2024 — Shaunette absent (6 voting)
+  {
+    id:'v2024-01', date:'2024-01-09', year:2024,
+    meeting:'Town Council — Jan 9, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/395298',
+    title:'Housing Acquisition — Spruce House Unit G (SPLIT)',
+    description:'Motion to acquire deed-restricted Spruce House Unit G. Mayor Errico and Councilperson Story Von Spreecken dissented; all others approved the acquisition.',
+    tags:['Housing'],
+    outcome:'Passed', tally:'4-2',
+    votes:{errico:'No',fee:'Yes',arguelles:'Yes',enright:'Yes',shaunette:'Absent',levin:'Yes',svs:'No'}
+  },
+
+  // Jan 30, 2024 — Arguelles absent (6 voting)
+  {
+    id:'v2024-02', date:'2024-01-30', year:2024,
+    meeting:'Town Council — Jan 30, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/396595',
+    title:'Ethics & Commission Code Reform — 2nd Reading',
+    description:'Second reading of ordinance amending the Ethics Code (Ch.2 Art.4) and General Provisions for all advisory commissions. Shaunette was sole dissenting vote.',
+    tags:['Ethics','Governance'],
+    outcome:'Passed', tally:'5-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Absent',enright:'Yes',shaunette:'No',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-03', date:'2024-01-30', year:2024,
+    meeting:'Town Council — Jan 30, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/396595',
+    title:'Gondola — MOU with Telluride Ski & Golf for Chair 7 Base Design',
+    description:'Memorandum of Understanding with Telluride Ski & Golf authorizing joint planning and design work for the Chair 7 base area as part of the Gondola Project.',
+    tags:['Gondola','Infrastructure'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Absent',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-04', date:'2024-01-30', year:2024,
+    meeting:'Town Council — Jan 30, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/396595',
+    title:'CCAASE 2024 Arts & Events Funding',
+    description:'Approved Commission for Community Assistance, Arts and Special Events (CCAASE) funding recommendations for 2024, supporting local arts organizations and community events.',
+    tags:['Arts & Events','Budget'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Absent',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+
+  // Mar 12, 2024 — Arguelles absent (6 voting)
+  {
+    id:'v2024-05', date:'2024-03-12', year:2024,
+    meeting:'Town Council — Mar 12, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/398897',
+    title:'Festival Events Crowd Cap Amendment — FAILED (11,500 Limit)',
+    description:'Motion by Councilperson Shaunette to amend the Festival Events ordinance to reduce the maximum crowd size to 11,500. Only Errico and Shaunette supported the lower cap; motion failed 2-4.',
+    tags:['Special Events','Governance'],
+    outcome:'Failed', tally:'2-4',
+    votes:{errico:'Yes',fee:'No',arguelles:'Absent',enright:'No',shaunette:'Yes',levin:'No',svs:'No'}
+  },
+  {
+    id:'v2024-06', date:'2024-03-12', year:2024,
+    meeting:'Town Council — Mar 12, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/398897',
+    title:'Festival Events Ordinance — 1st Reading',
+    description:'First reading of ordinance amending Municipal Code Chapter 11 Article 4 Festival Events (retaining original crowd cap). Fee and Shaunette dissented; set for public hearing April 2.',
+    tags:['Special Events','Governance'],
+    outcome:'Passed', tally:'4-2',
+    votes:{errico:'Yes',fee:'No',arguelles:'Absent',enright:'Yes',shaunette:'No',levin:'Yes',svs:'Yes'}
+  },
+
+  // Apr 02, 2024 — all 7 present
+  {
+    id:'v2024-07', date:'2024-04-02', year:2024,
+    meeting:'Town Council — Apr 2, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/400420',
+    title:'Festival Events Ordinance — 2nd Reading (SPLIT)',
+    description:'Second reading and approval of ordinance amending Municipal Code Chapter 11 Festival Events. Fee, Shaunette, and Arguelles dissented; passed 4-3 after contentious public hearing.',
+    tags:['Special Events','Governance'],
+    outcome:'Passed', tally:'4-3',
+    votes:{errico:'Yes',fee:'No',arguelles:'No',enright:'Yes',shaunette:'No',levin:'Yes',svs:'Yes'}
+  },
+
+  // Apr 30, 2024 — all 7 present
+  {
+    id:'v2024-08', date:'2024-04-30', year:2024,
+    meeting:'Town Council — Apr 30, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/400768',
+    title:'Voodoo Apartments Use Covenant — Emergency Ordinance',
+    description:'Emergency ordinance imposing a use covenant and regulatory agreement on the Voodoo Apartments (151 S. Willow St.) to lock in affordable housing restrictions. Enright and Arguelles dissented.',
+    tags:['Housing','Land Use'],
+    outcome:'Passed', tally:'5-2',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'No',enright:'No',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-09', date:'2024-04-30', year:2024,
+    meeting:'Town Council — Apr 30, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/400768',
+    title:'Gondola IGA — 2024 Funding Supplement',
+    description:'Approved 2024 Funding Supplement and Amendment to the Intergovernmental Agreement for cost-sharing of the Gondola Project planning and development phase.',
+    tags:['Gondola','Infrastructure','Budget'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+
+  // May 14, 2024 — Arguelles absent (6 voting)
+  {
+    id:'v2024-10', date:'2024-05-14', year:2024,
+    meeting:'Town Council — May 14, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/402644',
+    title:"Ethics Code — 75' Proximity Rule Removal, 1st Reading",
+    description:"First reading of ordinance removing the 75-foot proximity recusal requirement from the Ethics Code (§2-4-20). Story Von Spreecken was sole dissenting vote.",
+    tags:['Ethics','Governance'],
+    outcome:'Passed', tally:'5-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Absent',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'No'}
+  },
+  {
+    id:'v2024-11', date:'2024-05-14', year:2024,
+    meeting:'Town Council — May 14, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/402644',
+    title:'SVS Recusal Scope — No New Hearing on Diamond Ridge',
+    description:"Voted not to schedule a new hearing on the scope of Ashley Story Von Spreecken's recusal on the Diamond Ridge project, following her own statement to Council. SVS recused herself from the vote.",
+    tags:['Ethics','Governance','Land Use'],
+    outcome:'Passed', tally:'5-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Absent',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Recused'}
+  },
+
+  // Jun 04, 2024 — all 7 present
+  {
+    id:'v2024-12', date:'2024-06-04', year:2024,
+    meeting:'Town Council — Jun 4, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/402740',
+    title:"Ethics Code — 75' Proximity Rule Removal, 2nd Reading",
+    description:'Second reading and final approval of ordinance eliminating the 75-foot property proximity recusal rule from the Ethics Code. Arguelles and Story Von Spreecken dissented.',
+    tags:['Ethics','Governance'],
+    outcome:'Passed', tally:'5-2',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'No',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'No'}
+  },
+  {
+    id:'v2024-13', date:'2024-06-04', year:2024,
+    meeting:'Town Council — Jun 4, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/402740',
+    title:'Nonpartisan Elections Code Amendment',
+    description:'Ordinance amending Municipal Code §2-1-90 on nonpartisan election procedures. Errico, Fee, and Story Von Spreecken recused due to proximity conflicts; remaining four members voted unanimously.',
+    tags:['Governance','Elections'],
+    outcome:'Passed', tally:'4-0',
+    votes:{errico:'Recused',fee:'Recused',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Recused'}
+  },
+
+  // Jun 25, 2024 — all 7 present
+  {
+    id:'v2024-14', date:'2024-06-25', year:2024,
+    meeting:'Town Council — Jun 25, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/404333',
+    title:'Town Manager Robson Resignation Accepted',
+    description:"Per Charter §7.2, Council determined that Town Manager Scott Robson's position would be resigned effective a date certain. Enright and Shaunette recused; five remaining members voted unanimously.",
+    tags:['Governance'],
+    outcome:'Passed', tally:'5-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Recused',shaunette:'Recused',levin:'Yes',svs:'Yes'}
+  },
+
+  // Aug 06, 2024 — all 7 present
+  {
+    id:'v2024-15', date:'2024-08-06', year:2024,
+    meeting:'Town Council — Aug 6, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/406069',
+    title:'HARC Design Guidelines — Motion to Deny FAILED',
+    description:'Arguelles moved to deny the updated HARC Design Guidelines ordinance. Only Arguelles and Enright supported denial; the motion failed 2-5, clearing the way for the revised ordinance to pass.',
+    tags:['Historic Preservation','Land Use'],
+    outcome:'Failed', tally:'2-5',
+    votes:{errico:'No',fee:'No',arguelles:'Yes',enright:'Yes',shaunette:'No',levin:'No',svs:'No'}
+  },
+  {
+    id:'v2024-16', date:'2024-08-06', year:2024,
+    meeting:'Town Council — Aug 6, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/406069',
+    title:'HARC Design Guidelines — Amended Approval',
+    description:'Approved updated HARC Design Guidelines (LUC Art.7) with amendment striking language on the Colorado Avenue gateway corridor as an especially sensitive area. Arguelles was sole dissenting vote.',
+    tags:['Historic Preservation','Land Use'],
+    outcome:'Passed', tally:'6-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'No',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-17', date:'2024-08-06', year:2024,
+    meeting:'Town Council — Aug 6, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/406069',
+    title:'Petition for Certiorari — Telluride Locals v. Kavanaugh',
+    description:'Directed Town Attorney and Special Counsel to file a Petition for Writ of Certiorari to the Colorado Supreme Court regarding the Court of Appeals decision in Telluride Locals v. Kavanaugh, 2023 CA 01035. Unanimous.',
+    tags:['Governance'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-18', date:'2024-08-06', year:2024,
+    meeting:'Town Council — Aug 6, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/406069',
+    title:'Wastewater Treatment MOU with Mountain Village',
+    description:'Approved MOU with Mountain Village for joint wastewater treatment operations, with amendment clarifying that the full IGA requires mutual agreement on construction and financing before execution.',
+    tags:['Infrastructure','Intergovernmental'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+
+  // Aug 19, 2024 — all 7 present (special meeting)
+  {
+    id:'v2024-19', date:'2024-08-19', year:2024,
+    meeting:'Town Council — Aug 19, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/406067',
+    title:'P&Z Decision Remand — East Telluride Minor Subdivision',
+    description:'Directed Town Attorney to draft a resolution remanding the June 27, 2024 P&Z approval of a minor subdivision on Lots 5R, 7, 8, 9 Block 20 East Telluride Addition, finding P&Z failed to follow proper hearing procedure. Fee and Errico dissented.',
+    tags:['Land Use','Planning'],
+    outcome:'Passed', tally:'5-2',
+    votes:{errico:'No',fee:'No',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-20', date:'2024-08-19', year:2024,
+    meeting:'Town Council — Aug 19, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/406067',
+    title:'Hire Zoe Dohnal as Town Manager',
+    description:'Approved hiring of Zoe Dohnal as Town Manager under contract terms on record, with addition of $50/month phone and data reimbursement. Passed unanimously.',
+    tags:['Governance','Appointments'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+
+  // Aug 27, 2024 — Arguelles absent (6 voting)
+  {
+    id:'v2024-21', date:'2024-08-27', year:2024,
+    meeting:'Town Council — Aug 27, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/406956',
+    title:'Decline Housing Acquisitions — Mendota F2, 147 S. Tomboy 2A, 226 E. Pacific F',
+    description:"Voted to NOT acquire three deed-restricted units (Mendota F2, 147 S. Tomboy 2A, 226 E. Pacific F). Enright and Levin dissented, preferring to proceed with the acquisitions; Fee and Shaunette's motion to decline prevailed.",
+    tags:['Housing'],
+    outcome:'Passed', tally:'4-2',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Absent',enright:'No',shaunette:'Yes',levin:'No',svs:'Yes'}
+  },
+
+  // Sep 17, 2024 — all 7 present
+  {
+    id:'v2024-22', date:'2024-09-17', year:2024,
+    meeting:'Town Council — Sep 17, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/412926',
+    title:'Film Festival Liquor Permit — Appeal Affirmed',
+    description:"Affirmed Hearing Officer Major's August 13, 2024 decision granting a special event liquor permit to the Telluride Film Festival with conditions, finding the Hearing Officer did not abuse their discretion. Enright was sole dissenting vote.",
+    tags:['Special Events','Governance'],
+    outcome:'Passed', tally:'6-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'No',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+
+  // Oct 08, 2024 — SVS absent (6 voting)
+  {
+    id:'v2024-23', date:'2024-10-08', year:2024,
+    meeting:'Town Council — Oct 8, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/408781',
+    title:'OSC Appointment — Emily Masson FAILED',
+    description:'Motion to appoint Emily Masson to an Open Space Commission alternate seat failed 2-4. Errico, Enright, Shaunette, and Levin dissented; only Fee and Arguelles supported the appointment.',
+    tags:['Appointments','Open Space'],
+    outcome:'Failed', tally:'2-4',
+    votes:{errico:'No',fee:'Yes',arguelles:'Yes',enright:'No',shaunette:'No',levin:'No',svs:'Absent'}
+  },
+  {
+    id:'v2024-24', date:'2024-10-08', year:2024,
+    meeting:'Town Council — Oct 8, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/408781',
+    title:'Housing Acquisition — Entrada Unit J',
+    description:'Resolution authorizing acquisition of deed-restricted Entrada Unit J. Arguelles was sole dissenting vote; all other present members approved the purchase.',
+    tags:['Housing'],
+    outcome:'Passed', tally:'5-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'No',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Absent'}
+  },
+
+  // Oct 29, 2024 — Enright absent for afternoon (6 voting)
+  {
+    id:'v2024-25', date:'2024-10-29', year:2024,
+    meeting:'Town Council — Oct 29, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/410141',
+    title:'Decline Acquisition — Wilkin Court Unit M',
+    description:'Motion to deny acquisition of deed-restricted Wilkin Court Unit M (1001 E. Colorado Ave). Errico and Fee dissented, wanting to proceed with the purchase; majority voted to decline.',
+    tags:['Housing'],
+    outcome:'Passed', tally:'4-2',
+    votes:{errico:'No',fee:'No',arguelles:'Yes',enright:'Absent',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-26', date:'2024-10-29', year:2024,
+    meeting:'Town Council — Oct 29, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/410141',
+    title:'Comprehensive Plan — Engage Logan Simpson',
+    description:'Engaged Logan Simpson to develop the 2024 Telluride Comprehensive Plan and authorized the Town Manager to execute the contract. Passed 6-0 with Enright absent for the afternoon session.',
+    tags:['Planning','Governance'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Absent',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+
+  // Nov 05, 2024 — SVS absent (6 voting)
+  {
+    id:'v2024-27', date:'2024-11-05', year:2024,
+    meeting:'Town Council — Nov 5, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/410137',
+    title:'Shandoka Building F — Financing Ordinance, 1st Reading',
+    description:'First reading of ordinance financing the Shandoka Building F Redevelopment Phase II Affordable Housing Project via ground lease and lease-purchase agreement. Enright was sole dissenting vote.',
+    tags:['Housing','Budget'],
+    outcome:'Passed', tally:'5-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'No',shaunette:'Yes',levin:'Yes',svs:'Absent'}
+  },
+  {
+    id:'v2024-28', date:'2024-11-05', year:2024,
+    meeting:'Town Council — Nov 5, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/410137',
+    title:'Shandoka Building F — Phase II Construction Authorized ($8.4M)',
+    description:'Directed Town to proceed with Shandoka Building F Phase II and authorized the Town Manager to execute a Design/Build contract with Shaw Construction LLC for $8,404,658. Enright was sole dissenting vote.',
+    tags:['Housing','Budget'],
+    outcome:'Passed', tally:'5-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'No',shaunette:'Yes',levin:'Yes',svs:'Absent'}
+  },
+
+  // Nov 19, 2024 — all 7 present
+  {
+    id:'v2024-29', date:'2024-11-19', year:2024,
+    meeting:'Town Council — Nov 19, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/412922',
+    title:'OSC Appointment — Edith Wiley (SPLIT)',
+    description:'Motion to appoint Edith Wiley to an Open Space Commission regular seat passed 4-3. Enright, Shaunette, and Levin dissented in a contentious multi-candidate appointment session.',
+    tags:['Appointments','Open Space'],
+    outcome:'Passed', tally:'4-3',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'No',shaunette:'No',levin:'No',svs:'Yes'}
+  },
+  {
+    id:'v2024-30', date:'2024-11-19', year:2024,
+    meeting:'Town Council — Nov 19, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/412922',
+    title:'OSC Appointment — Thomas Goldsborough FAILED',
+    description:'Motion to appoint Thomas Goldsborough to an Open Space Commission alternate seat failed 3-4. Fee, Enright, Shaunette, and Levin dissented; Errico, Arguelles, and Story Von Spreecken supported the appointment.',
+    tags:['Appointments','Open Space'],
+    outcome:'Failed', tally:'3-4',
+    votes:{errico:'Yes',fee:'No',arguelles:'Yes',enright:'No',shaunette:'No',levin:'No',svs:'Yes'}
+  },
+  {
+    id:'v2024-31', date:'2024-11-19', year:2024,
+    meeting:'Town Council — Nov 19, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/412922',
+    title:'OSC Appointment — Mandie Jue',
+    description:'Motion to appoint Mandie Jue to an Open Space Commission alternate seat passed 5-2. Errico and Arguelles dissented; Enright moved the motion, reflecting the shifting coalition dynamics in this contested session.',
+    tags:['Appointments','Open Space'],
+    outcome:'Passed', tally:'5-2',
+    votes:{errico:'No',fee:'Yes',arguelles:'No',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-32', date:'2024-11-19', year:2024,
+    meeting:'Town Council — Nov 19, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/412922',
+    title:'2025 Budget Adoption',
+    description:'Approved the 2025 Town of Telluride Municipal Budget covering all funds — General, Capital Improvement, Housing, Transportation, Water, Wastewater, Open Space, and more — plus the Five-Year Capital Improvement Plan. Passed unanimously.',
+    tags:['Budget'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-33', date:'2024-11-19', year:2024,
+    meeting:'Town Council — Nov 19, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/412922',
+    title:'Shandoka Building F — Financing Ordinance, 2nd Reading',
+    description:'Second reading and approval of ordinance financing the Shandoka Building F Phase II affordable housing project. Enright was sole dissenting vote.',
+    tags:['Housing','Budget'],
+    outcome:'Passed', tally:'6-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'No',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-34', date:'2024-11-19', year:2024,
+    meeting:'Town Council — Nov 19, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/412922',
+    title:'Expand Pay-to-Park Zones & Increase Rates',
+    description:"Expanded metered pay-to-park zones, increased parking rates, and adopted additional parking restrictions. Directed staff to research a local resident pass option. Passed unanimously.",
+    tags:['Infrastructure','Governance'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-35', date:'2024-11-19', year:2024,
+    meeting:'Town Council — Nov 19, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/412922',
+    title:'Virginia Placer Housing — Phase 2A/2B Financing, 1st Reading',
+    description:'First reading of ordinance financing the Virginia Placer Phase 2A and 2B affordable Housing Project via site & improvement lease and lease-purchase agreement.',
+    tags:['Housing','Budget'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+
+  // Dec 10, 2024 — Arguelles and Shaunette absent (terms ended post-election)
+  {
+    id:'v2024-36', date:'2024-12-10', year:2024,
+    meeting:'Town Council — Dec 10, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/413857',
+    title:'Appoint Daniel Zemke — Municipal Court Judge',
+    description:'Resolution appointing Daniel Zemke as Telluride Municipal Court Judge. Passed unanimously with Arguelles and Shaunette absent (terms ended following the November 2024 election).',
+    tags:['Governance','Appointments'],
+    outcome:'Passed', tally:'5-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Absent',enright:'Yes',shaunette:'Absent',levin:'Yes',svs:'Yes'}
+  },
 
   /* ══ 2025 ══════════════════════════════════════════════════ */
 
@@ -942,9 +1340,12 @@ function renderHeatmapByCategory() {
     : yearSel === '2025'
     ? [{label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true},
        {label:'2025 Council (Nov–Dec transition)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true}]
+    : yearSel === '2024'
+    ? [{label:'2024 Council', members:COUNCIL_2024, yearFilter:2024}]
     : [{label:'2026 Council', members:COUNCIL_2026, yearFilter:2026},
        {label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true},
-       {label:'2025 Council (Nov–Dec)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true}];
+       {label:'2025 Council (Nov–Dec)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true},
+       {label:'2024 Council', members:COUNCIL_2024, yearFilter:2024}];
 
   // All unique categories across filtered votes
   const allCats = [...new Set(VOTE_ITEMS.flatMap(v => v.tags))].sort();
@@ -1075,9 +1476,12 @@ function renderHeatmap() {
     : yearSel === '2025'
     ? [{label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true},
        {label:'2025 Council (Nov–Dec transition)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true}]
+    : yearSel === '2024'
+    ? [{label:'2024 Council', members:COUNCIL_2024, yearFilter:2024}]
     : [{label:'2026 Council', members:COUNCIL_2026, yearFilter:2026},
        {label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true},
-       {label:'2025 Council (Nov–Dec)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true}];
+       {label:'2025 Council (Nov–Dec)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true},
+       {label:'2024 Council', members:COUNCIL_2024, yearFilter:2024}];
 
   let html = '';
   eras.forEach(era => {
