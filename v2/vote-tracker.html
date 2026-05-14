@@ -368,6 +368,27 @@ const BOCC_VOTE_ITEMS = [
     votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
   },
 
+  // Jul 10, 2024 — Waring absent (2-0 throughout)
+  {
+    id:'bv2024-07a', date:'2024-07-10', year:2024,
+    meeting:'BOCC — Jul 10, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Term Limits Ballot Question — Nov 2024 Election (Commissioner Term Limits)',
+    description:'Approved ballot language placing a question to voters on limiting San Miguel County Commissioner terms of office. Waring absent; passed 2-0.',
+    tags:['Governance','Administrative'],
+    outcome:'Passed', tally:'2-0',
+    votes:{ brown:'Yes', waring:'Absent', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-07b', date:'2024-07-10', year:2024,
+    meeting:'BOCC — Jul 10, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Appointment — Linnea Edwards to San Miguel Behavioral Health Services Board',
+    tags:['Administrative'],
+    outcome:'Passed', tally:'2-0',
+    votes:{ brown:'Yes', waring:'Absent', holstrom:'Yes' },
+  },
+
   // Oct 2, 2024 — Waring absent for main session (2-0); all present for CBOE appeals (3-0)
   {
     id:'bv2024-08', date:'2024-10-02', year:2024,
@@ -415,8 +436,8 @@ const BOCC_VOTE_ITEMS = [
     votes:{ brown:'Yes', waring:'Absent', holstrom:'Yes' },
   },
   {
-    id:'bv2024-13', date:'2024-10-02', year:2024,
-    meeting:'BOCC — Oct 2, 2024 (CBOE)',
+    id:'bv2024-13', date:'2024-07-31', year:2024,
+    meeting:'BOCC — Jul 31, 2024 (CBOE)',
     minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
     title:'CBOE Assessment Appeals — Deny All Five (Hein/Solomon, Cole Trust, McCarthy, Kaptur, Petrini)',
     tags:['Assessment Appeals'],
@@ -426,8 +447,8 @@ const BOCC_VOTE_ITEMS = [
 
   // Oct 16, 2024 — All present (3-0)
   {
-    id:'bv2024-14', date:'2024-10-16', year:2024,
-    meeting:'BOCC — Oct 16, 2024',
+    id:'bv2024-14', date:'2024-08-28', year:2024,
+    meeting:'BOCC — Aug 28, 2024',
     minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
     title:'Resolution 2024-37: Reallocation of P&OS Mill Levy Portion for Housing Ballot Measure',
     tags:['Housing', 'Budget & Finance'],
@@ -435,8 +456,8 @@ const BOCC_VOTE_ITEMS = [
     votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
   },
   {
-    id:'bv2024-15', date:'2024-10-16', year:2024,
-    meeting:'BOCC — Oct 16, 2024',
+    id:'bv2024-15', date:'2024-09-04', year:2024,
+    meeting:'BOCC — Sep 4, 2024',
     minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
     title:'Thor Energy — Special Use Permit (Exploration with Revised Condition #9)',
     tags:['Land Use'],
@@ -444,11 +465,20 @@ const BOCC_VOTE_ITEMS = [
     votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
   },
   {
-    id:'bv2024-16', date:'2024-10-16', year:2024,
-    meeting:'BOCC — Oct 16, 2024',
+    id:'bv2024-16', date:'2024-09-04', year:2024,
+    meeting:'BOCC — Sep 4, 2024',
     minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
     title:'Lower Ophir Road Paving — Award Bid to Armor Proseal ($180,000)',
     tags:['Infrastructure'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-16b', date:'2024-09-04', year:2024,
+    meeting:'BOCC — Sep 4, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Planning Commission Appointments — Hallie Simpson (Senior Alt.) & Robyn Van Gelder (Junior Alt.)',
+    tags:['Administrative','Land Use'],
     outcome:'Passed', tally:'3-0',
     votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
   },
@@ -462,8 +492,8 @@ const BOCC_VOTE_ITEMS = [
     votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
   },
   {
-    id:'bv2024-18', date:'2024-10-16', year:2024,
-    meeting:'BOCC — Oct 16, 2024',
+    id:'bv2024-18', date:'2024-09-04', year:2024,
+    meeting:'BOCC — Sep 4, 2024',
     minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
     title:'Letter to State Senators — Dolores River Project (Intergovernmental)',
     tags:['Intergovernmental'],
@@ -472,9 +502,64 @@ const BOCC_VOTE_ITEMS = [
   },
 ];
 
-/* ─── Planning Commission (placeholder) ─────────────────────── */
-const PC_ALL_MEMBERS = [];
-const PC_VOTE_ITEMS  = [];
+/* ─── Planning Commission ────────────────────────────────────── */
+// Members as of 2024; Gleason moved to BOCC District 3 in Jan 2025
+const PC_ALL_MEMBERS = [
+  { id:'taylor',       name:'Lee Taylor',             shortName:'Taylor',       title:'Chair' },
+  { id:'liftonzoline', name:'Josselin Lifton-Zoline',  shortName:'Lifton-Zoline',title:'Vice-Chair' },
+  { id:'bayma',        name:'Matthew Bayma',           shortName:'Bayma',        title:'Secretary (as of Sep 2024)' },
+  { id:'bald',         name:'Ian Bald',                shortName:'Bald',         title:'Member' },
+  { id:'gleason',      name:'Galena Gleason',          shortName:'Gleason',      title:'Member (2024; BOCC 2025+)' },
+  { id:'simpson',      name:'Hallie Bevan Simpson',    shortName:'Simpson',      title:'Senior Alternate (Sep 2024+)' },
+  { id:'vangelder',    name:'Robyn Van Gelder',        shortName:'Van Gelder',   title:'Junior Alternate (Sep 2024+)' },
+];
+const PC_2024 = ['taylor','liftonzoline','bayma','bald','gleason','simpson'];
+
+const PC_VOTE_ITEMS = [
+  // Jul 11, 2024 — Bayma absent (4 voting + alternate); held in Norwood
+  {
+    id:'pv2024-01', date:'2024-07-11', year:2024,
+    meeting:'Planning Commission — Jul 11, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&category_id=24',
+    title:'Land Use Code — Solar Energy Systems (Article 6 New Section)',
+    description:'Recommended BOCC adopt new LUC regulations for Solar Energy Systems. Includes limits on large/medium-scale development on agricultural land. Motion by Gleason, seconded by Taylor.',
+    tags:['Land Use','Energy'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Absent', bald:'Yes', gleason:'Yes', simpson:'Vacant' },
+  },
+  // Sep 12, 2024 — Bayma absent; Simpson joins as senior alternate
+  {
+    id:'pv2024-02', date:'2024-09-12', year:2024,
+    meeting:'Planning Commission — Sep 12, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&category_id=24',
+    title:'Land Use Code — "Family" Definition Update (Article 6)',
+    description:'Recommended BOCC approve amendment to LUC Article 6 updating the definition of "Family." Motion by Gleason, seconded by Bald.',
+    tags:['Land Use','Housing'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Absent', bald:'Yes', gleason:'Yes', simpson:'Yes' },
+  },
+  {
+    id:'pv2024-03', date:'2024-09-12', year:2024,
+    meeting:'Planning Commission — Sep 12, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&category_id=24',
+    title:'Election of Planning Commission Secretary — Matthew Bayma',
+    description:'Nominated and elected Matthew Bayma as Planning Commission Secretary. Motion by Taylor, seconded by Lifton-Zoline.',
+    tags:['Administrative'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Absent', bald:'Yes', gleason:'Yes', simpson:'Yes' },
+  },
+  // Oct 10, 2024 — All members present
+  {
+    id:'pv2024-04', date:'2024-10-10', year:2024,
+    meeting:'Planning Commission — Oct 10, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&category_id=24',
+    title:'Land Use Code — EV Charging Space Requirements (Article 6)',
+    description:'Recommended BOCC adopt LUC amendment requiring minimum 1 EV charging space per 10 parking spots, plus 1 per additional 25 spaces. Motion by Gleason, seconded by Bald.',
+    tags:['Land Use','Infrastructure'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', gleason:'Yes', simpson:'Yes' },
+  },
+];
 
 
 
@@ -1650,7 +1735,7 @@ function switchEntity() {
   } else if (ent === 'bocc') {
     years = [['', 'All years'], ['2024','2024']];
   } else {
-    years = [['', 'All years']];
+    years = [['', 'All years'], ['2024','2024']];
   }
   years.forEach(([val, label]) => {
     const o = document.createElement('option');
@@ -1773,9 +1858,67 @@ function renderBoccHeatmap() {
    PLANNING COMMISSION HEATMAP (placeholder)
 ══════════════════════════════════════════════════════════════ */
 function renderPlanningHeatmap() {
-  document.getElementById('heatmap-content').innerHTML =
-    `<div class="empty-state"><p>County Planning Commission vote data is being compiled and will be available soon.<br>
-    <a href="https://sanmiguelcoco.portal.civicclerk.com/search?q=&category_id=24" target="_blank">View Planning Commission minutes →</a></p></div>`;
+  const yearSel = document.getElementById('filter-year').value;
+  const catSel  = hmCatFilter;
+
+  const eras = yearSel === '2024' || !yearSel
+    ? [{ label:'2024 Planning Commission', members:PC_2024, yearFilter:2024 }]
+    : [];
+
+  if (!eras.length) {
+    document.getElementById('heatmap-content').innerHTML =
+      `<div class="empty-state"><p>No Planning Commission data available for the selected year.</p></div>`;
+    return;
+  }
+
+  let html = '';
+  eras.forEach(era => {
+    let eraVotes = PC_VOTE_ITEMS.filter(v => {
+      if (v.year !== era.yearFilter) return false;
+      if (catSel && !v.tags.includes(catSel)) return false;
+      return true;
+    });
+    if (!eraVotes.length) return;
+
+    // Build member objects for this era
+    const memberObjs = era.members.map(mid => PC_ALL_MEMBERS.find(m => m.id === mid)).filter(Boolean);
+
+    // Header row
+    html += `<section class="era-section">
+      <h2 class="era-heading">${era.label} <span class="vote-count">${eraVotes.length} vote${eraVotes.length===1?'':'s'}</span></h2>
+      <div class="heatmap-scroll">
+      <table class="heatmap-table">
+      <thead><tr>
+        <th class="issue-col">Issue</th>
+        ${memberObjs.map(m=>`<th class="member-col"><span class="member-name">${m.shortName}</span></th>`).join('')}
+      </tr></thead><tbody>`;
+
+    eraVotes.forEach(v => {
+      const outCls = v.outcome === 'Passed' ? 'outcome-pass' : 'outcome-fail';
+      html += `<tr>
+        <td class="issue-cell">
+          <a href="${v.minutesUrl}" target="_blank" class="issue-link">${v.title}</a>
+          <div class="issue-meta">
+            <span class="issue-date">${v.date}</span>
+            <span class="${outCls}">${v.outcome} ${v.tally}</span>
+            ${v.tags.map(t=>`<span class="tag-chip">${t}</span>`).join('')}
+          </div>
+        </td>
+        ${memberObjs.map(m => {
+          const vote = v.votes[m.id];
+          if (!vote || vote === 'Vacant') return `<td class="vote-cell vote-vacant"><span class="vote-text">—</span></td>`;
+          const cls = vote==='Yes'?'vote-yes':vote==='No'?'vote-no':vote==='Recused'?'vote-recused':'vote-absent';
+          const label = vote==='Yes'?'YES':vote==='No'?'NO':vote==='Recused'?'REC':'ABS';
+          return `<td class="vote-cell ${cls}"><span class="vote-text">${label}</span></td>`;
+        }).join('')}
+      </tr>`;
+    });
+
+    html += `</tbody></table></div></section>`;
+  });
+
+  document.getElementById('heatmap-content').innerHTML = html ||
+    `<div class="empty-state"><p>No Planning Commission votes found for the selected filters.</p></div>`;
 }
 
 function renderHeatmap() {
