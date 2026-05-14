@@ -2077,13 +2077,13 @@ function renderHeatmapByCategory() {
   const eras = yearSel === '2026'
     ? [{label:'2026 Council', members:COUNCIL_2026, yearFilter:2026}]
     : yearSel === '2025'
-    ? [{label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true},
-       {label:'2025 Council (Nov–Dec transition)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true}]
+    ? [{label:'2025 Council (Nov–Dec transition)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true},
+       {label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true}]
     : yearSel === '2024'
     ? [{label:'2024 Council', members:COUNCIL_2024, yearFilter:2024}]
     : [{label:'2026 Council', members:COUNCIL_2026, yearFilter:2026},
-       {label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true},
        {label:'2025 Council (Nov–Dec)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true},
+       {label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true},
        {label:'2024 Council', members:COUNCIL_2024, yearFilter:2024}];
 
   // All unique categories across filtered votes
@@ -2464,13 +2464,13 @@ function renderHeatmap() {
   const eras = yearSel === '2026'
     ? [{label:'2026 Council', members:COUNCIL_2026, yearFilter:2026}]
     : yearSel === '2025'
-    ? [{label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true},
-       {label:'2025 Council (Nov–Dec transition)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true}]
+    ? [{label:'2025 Council (Nov–Dec transition)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true},
+       {label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true}]
     : yearSel === '2024'
     ? [{label:'2024 Council', members:COUNCIL_2024, yearFilter:2024}]
     : [{label:'2026 Council', members:COUNCIL_2026, yearFilter:2026},
-       {label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true},
        {label:'2025 Council (Nov–Dec)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true},
+       {label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true},
        {label:'2024 Council', members:COUNCIL_2024, yearFilter:2024}];
 
   let html = '';
