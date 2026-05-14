@@ -148,6 +148,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .hm-cat-btn{padding:5px 13px;border-radius:20px;border:1px solid var(--green-border);background:var(--white);color:var(--text-mid);font-size:12px;font-weight:500;cursor:pointer;transition:background .12s,color .12s,border-color .12s;white-space:nowrap}
 .hm-cat-btn:hover{background:var(--green-pale);border-color:var(--green-light);color:var(--green-dark)}
 .hm-cat-btn.active{background:var(--green-dark);border-color:var(--green-dark);color:#fff;font-weight:600}
+/* ─── Heatmap view-toggle (Issue vs Category) ──────────────── */
+.hm-view-toggle{display:flex;gap:8px;margin-bottom:14px}
+.hm-view-btn{padding:6px 18px;border-radius:20px;border:1px solid var(--green-border);background:var(--white);color:var(--text-mid);font-size:13px;font-weight:500;cursor:pointer;transition:background .12s,color .12s,border-color .12s}
+.hm-view-btn:hover{background:var(--green-pale);border-color:var(--green-light);color:var(--green-dark)}
+.hm-view-btn.active{background:var(--green-dark);border-color:var(--green-dark);color:#fff;font-weight:700}
+
+/* ─── Category-aggregation cells ────────────────────────────── */
+.hm-cat-cell{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:64px;min-height:48px;border-radius:6px;padding:4px 6px;font-weight:700;line-height:1.2}
+.hm-cat-cell .cat-label{font-size:11px;letter-spacing:.5px}
+.hm-cat-cell .cat-counts{font-size:13px;font-weight:800}
+.hm-cat-cell.yes-dom{background:#2f9c6c;color:#fff}
+.hm-cat-cell.no-dom{background:#b5574a;color:#fff}
+.hm-cat-cell.tied{background:#c48a2e;color:#fff}
+.hm-cat-cell.none{background:transparent;color:#e5e7eb}
+
 .heatmap-legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;align-items:center}
 .leg-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text-mid)}
 .leg-swatch{width:18px;height:18px;border-radius:3px}
@@ -219,11 +234,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       </select>
     </div>
 
-    <div class="filter-group">
-      <label class="filter-label">Show votes for</label>
-      <div class="member-filter" id="member-filter"></div>
-    </div>
-
     <button class="clear-btn" onclick="clearFilters()">Clear all filters</button>
   </aside>
 
@@ -239,7 +249,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <!-- ── Heatmap tab ───────────────────────────────────────── -->
     <div id="view-heatmap" style="display:none">
 
-      <!-- Category filter chips -->
+      <!-- View toggle -->
+      <div class="hm-view-toggle">
+        <button class="hm-view-btn active" id="hm-btn-issue" onclick="setHmView('issue')">Votes by Issue</button>
+        <button class="hm-view-btn" id="hm-btn-category" onclick="setHmView('category')">Votes by Category</button>
+      </div>
+
+      <!-- Category filter chips (hidden in category view) -->
       <div class="hm-cat-bar" id="hm-cat-bar"></div>
 
       <div class="heatmap-legend">
@@ -782,8 +798,8 @@ const VOTE_ITEMS = [
 ══════════════════════════════════════════════════════════════ */
 
 let activeTab = 'tracker';
-let activeMemberFilter = new Set(ALL_MEMBERS.map(m => m.id));
 let hmCatFilter = ''; // active category filter for heatmap (empty = all)
+let hmViewMode = 'issue'; // 'issue' or 'category'
 
 function switchTab(tab) {
   activeTab = tab;
@@ -801,21 +817,6 @@ function populateFilters() {
   cats.forEach(c => {
     const o = document.createElement('option'); o.value = c; o.textContent = c; sel.appendChild(o);
   });
-
-  const mf = document.getElementById('member-filter');
-  ALL_MEMBERS.forEach(m => {
-    const label = document.createElement('label');
-    label.className = 'member-chip';
-    label.innerHTML = `<input type="checkbox" checked value="${m.id}" onchange="toggleMember('${m.id}',this.checked)">
-      <span class="dot" style="background:${MEMBER_COLORS[m.id]}"></span>
-      <span>${m.shortName}</span>`;
-    mf.appendChild(label);
-  });
-}
-
-function toggleMember(id, checked) {
-  if (checked) activeMemberFilter.add(id); else activeMemberFilter.delete(id);
-  renderTracker();
 }
 
 function clearFilters() {
@@ -823,8 +824,6 @@ function clearFilters() {
   document.getElementById('filter-year').value = '';
   document.getElementById('filter-cat').value = '';
   document.getElementById('filter-outcome').value = '';
-  activeMemberFilter = new Set(ALL_MEMBERS.map(m => m.id));
-  document.querySelectorAll('#member-filter input').forEach(i => i.checked = true);
   renderTracker();
 }
 
@@ -839,17 +838,6 @@ function getFilteredVotes() {
     if (year && String(v.year) !== year) return false;
     if (cat && !v.tags.includes(cat)) return false;
     if (outcome && v.outcome !== outcome) return false;
-    if (activeMemberFilter.size < ALL_MEMBERS.length) {
-      // Show vote only if ALL active-filtered members appear in this vote's votes obj
-      for (const mid of activeMemberFilter) {
-        if (v.votes[mid] && v.votes[mid] !== 'Vacant') {
-          // member is on this vote, keep it
-        }
-      }
-      // Alternative: show vote if at least one active-filtered member has a non-NC vote
-      const hasRelevant = [...activeMemberFilter].some(mid => v.votes[mid]);
-      if (!hasRelevant) return false;
-    }
     if (q) {
       const hay = (v.title + ' ' + v.description + ' ' + v.tags.join(' ') + ' ' + v.meeting).toLowerCase();
       if (!hay.includes(q)) return false;
@@ -944,11 +932,113 @@ function renderTracker() {
   document.getElementById('tracker-content').innerHTML = html;
 }
 
+
+// ── render heatmap: Votes by Category view ─────────────────
+function renderHeatmapByCategory() {
+  const yearSel = document.getElementById('filter-year').value;
+
+  const eras = yearSel === '2026'
+    ? [{label:'2026 Council', members:COUNCIL_2026, yearFilter:2026}]
+    : yearSel === '2025'
+    ? [{label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true},
+       {label:'2025 Council (Nov–Dec transition)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true}]
+    : [{label:'2026 Council', members:COUNCIL_2026, yearFilter:2026},
+       {label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true},
+       {label:'2025 Council (Nov–Dec)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true}];
+
+  // All unique categories across filtered votes
+  const allCats = [...new Set(VOTE_ITEMS.flatMap(v => v.tags))].sort();
+
+  let html = '';
+  eras.forEach(era => {
+    const eraVotes = VOTE_ITEMS.filter(v => {
+      if (v.year !== era.yearFilter) return false;
+      if (era.earlyOnly) return v.date < '2025-11-01';
+      if (era.lateOnly)  return v.date >= '2025-11-01';
+      return true;
+    });
+    if (!eraVotes.length) return;
+
+    const mems = era.members.map(id => ALL_MEMBERS.find(m => m.id === id));
+
+    // Build per-member, per-category yes/no counts
+    // catStats[cat][memberId] = { yes, no }
+    const catStats = {};
+    allCats.forEach(cat => {
+      catStats[cat] = {};
+      mems.forEach(m => { catStats[cat][m.id] = { yes: 0, no: 0 }; });
+    });
+
+    eraVotes.forEach(v => {
+      v.tags.forEach(cat => {
+        if (!catStats[cat]) return;
+        mems.forEach(m => {
+          const mv = v.votes[m.id];
+          if (mv === 'Yes') catStats[cat][m.id].yes++;
+          else if (mv === 'No') catStats[cat][m.id].no++;
+        });
+      });
+    });
+
+    // Only show categories that have at least one vote in this era
+    const activeCats = allCats.filter(cat =>
+      mems.some(m => catStats[cat][m.id].yes + catStats[cat][m.id].no > 0)
+    );
+    if (!activeCats.length) return;
+
+    html += `<div class="heatmap-wrap">
+      <div class="heatmap-title">${era.label}</div>
+      <table class="heatmap-table">
+        <thead>
+          <tr>
+            <th class="vote-col-th">Category</th>
+            ${mems.map(m => `<th class="hm-member-header">${m.name}<span class="mem-role">${m.title}</span></th>`).join('')}
+          </tr>
+        </thead>
+        <tbody>`;
+
+    activeCats.forEach(cat => {
+      html += `<tr>
+        <td><span class="hm-vote-title">${cat}</span></td>`;
+      mems.forEach(m => {
+        const s = catStats[cat][m.id];
+        const total = s.yes + s.no;
+        if (!total) {
+          html += `<td><div class="hm-cat-cell none"></div></td>`;
+        } else if (s.yes > s.no) {
+          html += `<td><div class="hm-cat-cell yes-dom">
+            <span class="cat-label">YES</span>
+            <span class="cat-counts">${s.yes}/${s.no}</span>
+          </div></td>`;
+        } else if (s.no > s.yes) {
+          html += `<td><div class="hm-cat-cell no-dom">
+            <span class="cat-label">NO</span>
+            <span class="cat-counts">${s.no}/${s.yes}</span>
+          </div></td>`;
+        } else {
+          html += `<td><div class="hm-cat-cell tied">
+            <span class="cat-label">TIED</span>
+            <span class="cat-counts">${s.yes}/${s.no}</span>
+          </div></td>`;
+        }
+      });
+      html += `</tr>`;
+    });
+
+    html += `</tbody></table></div>`;
+  });
+
+  if (!html) html = `<div class="empty-state"><p>No votes found.</p></div>`;
+  document.getElementById('heatmap-content').innerHTML = html;
+}
+
 // ── build heatmap category chip bar ────────────────────────
 function buildHmCatBar() {
   const cats = [...new Set(VOTE_ITEMS.flatMap(v => v.tags))].sort();
   const bar = document.getElementById('hm-cat-bar');
   if (!bar) return;
+  if (hmViewMode === 'category') { bar.style.display = 'none'; return; }
+  bar.style.display = '';
   const allBtn = `<button class="hm-cat-btn${hmCatFilter===''?' active':''}" onclick="setHmCat('')">All categories</button>`;
   const chips = cats.map(c =>
     `<button class="hm-cat-btn${hmCatFilter===c?' active':''}" onclick="setHmCat('${c}')">${c}</button>`
@@ -962,8 +1052,21 @@ function setHmCat(cat) {
   renderHeatmap();
 }
 
+function setHmView(mode) {
+  hmViewMode = mode;
+  // Toggle button active states
+  document.getElementById('hm-btn-issue').classList.toggle('active', mode === 'issue');
+  document.getElementById('hm-btn-category').classList.toggle('active', mode === 'category');
+  // Hide cat-bar in category mode (categories become rows)
+  const bar = document.getElementById('hm-cat-bar');
+  if (bar) bar.style.display = mode === 'category' ? 'none' : '';
+  renderHeatmap();
+}
+
 // ── render heatmap tab ──────────────────────────────────────
 function renderHeatmap() {
+  if (hmViewMode === 'category') { renderHeatmapByCategory(); return; }
+
   const yearSel = document.getElementById('filter-year').value;
   const catSel  = hmCatFilter;
 
