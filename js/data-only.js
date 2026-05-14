@@ -55,6 +55,18 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Denver runway fatality reveals a weakness in airport security",
+    source: "Telluride Times",
+    date: "May 14, 2026",
+    firstSeen: "2026-05-14",
+    newsTopic: "community",
+    copy: "A person breached Denver airport's perimeter fence and was killed after being pulled into an aircraft engine, forcing the pilot to abort takeoff and evacuate 224 passengers. The intruder scaled the fence in 15 seconds after airport security missed him on surveillance, mistaking the alarm for deer.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_421115b6-446c-5d25-a14a-6a9fefb7c8d4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/c1/ac134921-b515-5796-ab77-99af996bd75e/69ffaae2560db.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "‘Hockey diplomacy’",
     source: "Telluride Times",
     date: "May 14, 2026",
@@ -76,18 +88,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Denver runway fatality reveals a weakness in airport security",
-    source: "Telluride Times",
-    date: "May 14, 2026",
-    firstSeen: "2026-05-14",
-    newsTopic: "community",
-    copy: "A person breached Denver airport's perimeter fence and was killed after being pulled into an aircraft engine, forcing the pilot to abort takeoff and evacuate 224 passengers. The intruder scaled the fence in 15 seconds after airport security missed him on surveillance, mistaking the alarm for deer.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_421115b6-446c-5d25-a14a-6a9fefb7c8d4.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/c1/ac134921-b515-5796-ab77-99af996bd75e/69ffaae2560db.image.jpg",
     imgHiRes: true
   },
   {
@@ -1165,39 +1165,6 @@ const COMMUNITY_EVENTS = [
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Mountain Village annual Community Clean Up Days",
-    link: "https://koto.org/event/mountain-village-annual-community-clean-up-days/2026-05-14/",
-    description: "Mountain Village hosts its annual Community Clean Up Day, this year expanding to two days in two different parts of the community! On Wednesday, May 13, Clean Up Day will take place in Village Court Apartments and on Thursday, May 14, a second Clean Up Day will take place in the Meadows Neighborhood. The entire community is invited to participate in either or both of these events. Schedule for each day: Volunteer Registration: Begins at 2:30 p.m. Clean Up: 3 p.m.-5 p.m. – Clean Up in assigned area Gift Card Raffle: bring your trash back to have your name entered into a raffle for $50 Village Market gift cards at 5:15 p.m.",
-    pubDate: "2026-05-14T14:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "The Creative Exchange at Telluride Arts HQ",
-    link: "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-05-14/",
-    description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. Topics may span everything from the business of art and professional development, to creative process, storytelling, collaboration, and the philosophical underpinnings of making art. Whether you’re a full-time working artist, an educator, a student, a maker, or simply someone curious about creative expression, the Creative Exchange is open to you. …",
-    pubDate: "2026-05-14T17:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Arts HQ, TELLURIDE",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png"
-  },
-  {
-    title: "Booze & Books at Uno, Dos, Tres Tacos",
-    link: "https://koto.org/event/booze-books-at-uno-dos-tres-tacos-2/",
-    description: "Sip on a libation while chatting with other bibliophiles about books you have read recently. It's totally open ended and open to everyone! 5:15 the second Thursday of every month. The library will get some apps for the table; you purchase your own beverage. Please sign up in advance. On Thursday, May 14th, we will meet at 123 Tacos at 123 S. Oak St. The rest of our summer season will be at Liz at 200 W. Colorado Ave. in Telluride. (Entrance is on Fir St.)",
-    pubDate: "2026-05-14T17:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Uno, Dos, Tres Tacos, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/new-Booze-and-Books-poster-2.png"
-  },
-  {
     title: "Down Valley Community Potluck",
     link: "https://koto.org/event/down-valley-community-potluck/",
     description: "The Down Valley community Spring Potluck is Thursday, May 14th, from 6-8 p.m. at the historic Placerville Schoolhouse. Bring something tasty to share and bring your own table service and beverages.",
@@ -1206,17 +1173,6 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "",
-    imageUrl: ""
-  },
-  {
-    title: "West End Stories & Poems",
-    link: "https://koto.org/event/west-end-stories-poems/",
-    description: "Come join the West-Enders and share a story or poem or song about the drought. 6 pm Thursday May 14th at the Naturita Community Library. Free and open to all.",
-    pubDate: "2026-05-14T18:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Naturita Community Library",
     imageUrl: ""
   },
   {
@@ -1743,17 +1699,6 @@ const WILKINSON_EVENTS = [
 
 const HUMANE_SOCIETY_ANIMALS = [
   {
-    id: "TEL-A-180",
-    name: "Billie",
-    species: "Dog",
-    breed: "Cattle Dog, Australian (Red Heeler) / Shepherd",
-    ageGroup: "Young Puppy",
-    sex: "Female",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/3d526ad221efcb4f9ce95210e44907f3/97514f84518ad9f760c1921e4e97f094.jpg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/213648662",
-    summary: "Young Puppy • Cattle Dog, Australian (Red Heeler) / Shepherd • Female"
-  },
-  {
     id: "TEL-A-181",
     name: "Annie",
     species: "Dog",
@@ -1763,6 +1708,17 @@ const HUMANE_SOCIETY_ANIMALS = [
     photo: "https://new-s3.shelterluv.com/profile-pictures/25b7a402804152231031867f03d44d27/ee52e26ad06de37c29ae074ce78437cc.jpg",
     profileUrl: "https://www.shelterluv.com/embed/animal/213678848",
     summary: "Young Dog • Collie, Border / Pyrenees, Great • Female"
+  },
+  {
+    id: "TEL-A-182",
+    name: "Bo",
+    species: "Dog",
+    breed: "Shepherd, Australian / Mixed Breed (Medium)",
+    ageGroup: "Young Dog",
+    sex: "Male",
+    photo: "https://new-s3.shelterluv.com/profile-pictures/a74011fc5ea2d10fe35f8de678c96f31/989fa16c7893770d27582a324c4fa712.jpg",
+    profileUrl: "https://www.shelterluv.com/embed/animal/213692298",
+    summary: "Young Dog • Shepherd, Australian / Mixed Breed (Medium) • Male"
   }
 ];
 
@@ -1950,6 +1906,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52384803918022/huge/ed8181025b7e5e255684a399ff4439c3ac9982c8.jpg"
   },
   {
+    title: "OTG Backcountry Trail Crew Leader Training",
+    link: "ouraytrails.org",
+    description: "We are in need of new Trail Crew Leaders and would love to have a good turnout. Even if you don’t want to lead a trip initially, you can learn by working with experienced Trail Crew Leaders through backcountry trips planned for this summer. A two-day Trail Crew Leader course will be held on Saturday and Sunday May 16 & 17 lead by John Hulburd. He is a certified OSI/VOC instructor and has a wealth of knowledge to share in trail building, construction, and maintenance! Sign up using this link. For questions, please contact OTG at contactus@ouraytrails.org.",
+    pubDate: "2026-05-16T14:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52587455597568/huge/8f3a527aa56803672e93a2f117c5ed9ce3a2fefe.jpg"
+  },
+  {
     title: "Free Community Shred Day",
     link: "https://events.ourayridgwayevents.com/event/shred-day",
     description: "Alpine Bank invites you to a free on-site document shredding day to securely dispose of unwanted documents with personal information. Staples and paperclips do not need to be removed. Limit 4 boxes per household and business. Donations accepted to benefit Girl Scouts of Colorado Troop #17986.",
@@ -1959,17 +1926,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Alpine Bank Ridgway",
     imageUrl: "https://localist-images.azureedge.net/photos/52818545130383/huge/bf4754150c301fdc61316e2f73266ef866f46f02.jpg"
-  },
-  {
-    title: "Trails Training for Crew Leaders",
-    link: "volunteervoc.org",
-    description: "Get hands-on with stewardship and leadership at Trails Training for Crew Leaders, hosted in partnership with Volunteer for Outdoor Colorado. This training is designed to prepare participants for the upcoming trail work project taking place May 30–31. Learn the fundamentals of trail building, crew leadership, and outdoor project coordination from experienced instructors while gaining practical skills you can apply directly in the field. Whether you’re new to trail work or looking to step into a leadership role, this is a great opportunity to build confidence and capability in a hands-on environment. Join us in supporting our public lands, connecting with like-minded volunteers, and getting ready to make a real impact on Ouray-area trails. Learn more or sign up at volunteervoc.org.",
-    pubDate: "2026-05-16T15:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52701299047770/huge/1ff0d8d6513ba9eeb96ab4f991e91b8bfc689e77.jpg"
   },
   {
     title: "Cedar Hill Cemetery Spring Clean Up Day (Volunteer)",
@@ -2016,15 +1972,15 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52878500753745/huge/657fb6ba45ea0009309e3927a2325634669c31b5.jpg"
   },
   {
-    title: "Trails Training for Crew Leaders",
-    link: "volunteervoc.org",
-    description: "Get hands-on with stewardship and leadership at Trails Training for Crew Leaders, hosted in partnership with Volunteer for Outdoor Colorado. This training is designed to prepare participants for the upcoming trail work project taking place May 30–31. Learn the fundamentals of trail building, crew leadership, and outdoor project coordination from experienced instructors while gaining practical skills you can apply directly in the field. Whether you’re new to trail work or looking to step into a leadership role, this is a great opportunity to build confidence and capability in a hands-on environment. Join us in supporting our public lands, connecting with like-minded volunteers, and getting ready to make a real impact on Ouray-area trails. Learn more or sign up at volunteervoc.org.",
-    pubDate: "2026-05-17T15:00:00.000Z",
+    title: "OTG Backcountry Trail Crew Leader Training",
+    link: "ouraytrails.org",
+    description: "We are in need of new Trail Crew Leaders and would love to have a good turnout. Even if you don’t want to lead a trip initially, you can learn by working with experienced Trail Crew Leaders through backcountry trips planned for this summer. A two-day Trail Crew Leader course will be held on Saturday and Sunday May 16 & 17 lead by John Hulburd. He is a certified OSI/VOC instructor and has a wealth of knowledge to share in trail building, construction, and maintenance! Sign up using this link. For questions, please contact OTG at contactus@ouraytrails.org.",
+    pubDate: "2026-05-17T14:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52701299047770/huge/1ff0d8d6513ba9eeb96ab4f991e91b8bfc689e77.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/52587455597568/huge/8f3a527aa56803672e93a2f117c5ed9ce3a2fefe.jpg"
   },
   {
     title: "Wildfire Workshop",
@@ -2100,17 +2056,6 @@ const OURAY_RIDGWAY_EVENTS = [
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
-    location: "Please visit the WCOC website for location information",
-    imageUrl: "https://localist-images.azureedge.net/photos/52338935097442/huge/c9303fa52ac8d19bebfdaf10538caf8eef7e84b4.jpg"
-  },
-  {
-    title: "WCOC After 5 Monthly Meeting",
-    link: "www.womansclubouraycounty.org/",
-    description: "The Woman's Club of Ouray County hosts WCOC After 5 the third Monday of each month. The \"WCOC After 5\" program has been developed in response for women in our community who cannot make the regular daytime meetings, however would like to be a part of the Woman's Club of Ouray County. This group will also be integral in the WCOC's Mission of Community Service and Philanthropy in Ouray County. Please visit the WCOC website for the location, speaker and meeting details. All Ouray County women are invited!",
-    pubDate: "2026-05-18T23:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
     location: "Please check WCOC website for meeting location",
     imageUrl: "https://localist-images.azureedge.net/photos/52338935097442/huge/c9303fa52ac8d19bebfdaf10538caf8eef7e84b4.jpg"
   },
@@ -2146,17 +2091,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52338847179921/huge/a804a495547d393d16494cf6fdbbd49572b64a68.jpg"
-  },
-  {
-    title: "DONNY MORALES",
-    link: "https://coloradoboydepot.com/calendar/",
-    description: "Live Music\\ https://donnymorales.net/\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-05-19T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
     title: "DONNY MORALES",
@@ -2676,17 +2610,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52382837970272/huge/efa20aea189f55b2258da20d2382a48a7bde31a0.jpg"
   },
   {
-    title: "Fly, You Fools!: Theatre @ the Wright",
-    link: "https://thewrightoperahouse.org/events/theater/fly-you-fools",
-    description: "Fly, You Fools!: Theatre @ the Wright WHEN? Friday, May 29, 2026 7:30 PM Saturday, May 30, 2026 7:30 PM Sunday, May 31, 2026 4:00 PM Monday, June 1, 2026 7:30 PM WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Fly, You Fools! is a critically acclaimed physical comedy from the New York–based troupe Recent Cutbacks, making its UK and international stage debut through touring productions like this one. Presented locally by UpstART Theatre, the show delivers a fast-paced parody of epic fantasy storytelling. Three actors and a Foley artist join forces in fellowship to bring an entire fantasy adventure to life in a hilarious one-shot theatrical journey. Blending rapid-fire comedy, inventive stagecraft, live sound effects, and high-energy physical theatre, the production proves that even the smallest band of performers can create a world of heroic proportions. …",
-    pubDate: "2026-05-30T01:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52453668754083/huge/7843394b93916f13f7fe41b7d9d36f1a7394be85.jpg"
-  },
-  {
     title: "OTG Overnight Trail Maintenance Trip: Bear Creek NRT",
     link: "https://ouraytrails.org/volunteers",
     description: "Enjoy some of the most scenic trails in Colorado while removing down trees or encroaching brush and repairing trails from erosion problems. You will leave the wild with the camaraderie that comes with meeting new friends and helping keep our public land trails safe and sustainable. Please register in advance to join this trail crew event, and participants must have current CPR and First Aid certifications. Click HERE to signup.",
@@ -2706,7 +2629,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52825416452253/huge/ee71af15803ef954e75a37ca3f3ed58b6210a0c1.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/52886186007930/huge/bfbbb0ceaf2c0b102794d880373c99a34a6c541b.jpg"
   },
   {
     title: "Ridgway Railroad Museum FREE Train Rides",
@@ -2740,17 +2663,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52403083528953/huge/e7eb8757e5dcaf8d14e07216a616734c89871529.jpg"
-  },
-  {
-    title: "Fly You Fools Presented by UpstART | Sat 5/30/26",
-    link: "https://thewrightoperahouse.org/",
-    description: "Fly You Fools Presented by UpstART | Sat 5/30/26 WHEN? Saturday, May 30 Doors at 7:00 pm • Show at 7:30 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Fly, You Fools! is a critically acclaimed physical comedy from the New York–based troupe Recent Cutbacks, making its UK and international stage debut through touring productions like this one. Presented locally by UpstART Theatre, the show delivers a fast-paced parody of epic fantasy storytelling. Three actors and a Foley artist join forces in fellowship to bring an entire fantasy adventure to life in a hilarious one-shot theatrical journey. Blending rapid-fire comedy, inventive stagecraft, live sound effects, and high-energy physical theatre, the production proves that even the smallest band of performers can create a world of heroic proportions. Inspired by beloved fantasy tropes and packed with quick wit, physical humor, and theatrical ingenuity, Fly, You Fools! …",
-    pubDate: "2026-05-31T01:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52382802312047/huge/a67b50c8da1618cb52027e9a4b53bfcf4e419f7d.jpg"
   },
   {
     title: "Fly, You Fools!: Theatre @ the Wright",
@@ -2894,6 +2806,50 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Parks and Recreation Committee (PARC)",
+    link: "https://cityofouray.com/city_offices/committees___boards/parks_and_recreation_committee.php",
+    description: "The Parks and Recreation Committee (PARC) is made up of community members who volunteer their time to support and enhance recreational opportunities in Ouray. PARC organizes safe, family-friendly events that bring the community together. Events include Broomball, Cabin Fever Days, Dodgeball, Softball, and Game Night, among others. The committee works closely with local organizations, businesses, and other City committees to carry out its mission. Community partners include the Ouray Hot Springs Pool & Fitness Center, the Beautification Committee, and the Ouray School District. PARC also plays an important role in developing and implementing master plans for the City’s park system, helping ensure that Ouray’s parks and recreational spaces serve residents and visitors for years to come. Members of the public are welcome to attend these meetings. Meetings: PARC meets monthly on the first Tuesday at 6:00 p.m. …",
+    pubDate: "2026-06-03T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/51579968896083/huge/c6145ef61e306a4ae09b9adae1c263887c36248c.jpg"
+  },
+  {
+    title: "Beautification Committee (OBC)",
+    link: "https://www.cityofouray.com/city_offices/committees___boards/beautification_committee_(obc).php",
+    description: "The Beautification Committee (OBC) works on projects to help beautify the community. The committee oversees the installation of all the flower gardens in the City as well as all the hanging baskets and plantings on Main Street. They have also worked hard over the years to acquire many historic mining pieces and equipment that are displayed throughout the community to recognize Ouray's mining heritage. The committee has also provided direction on signage, light poles, and benches on the public rights of way. The Beautification Committee also plays an important role in developing and implementing master plans for the City’s park system. The committee makes recommendations to the City Council on these many beautification projects as well as the use of dollars from the Beautification Fund. This fund is supported by a portion of the Lodging Occupation Tax and is used exclusively for projects that help beautify the community. …",
+    pubDate: "2026-06-03T14:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Community Center, San Juan Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/50382168464273/huge/9567987a01fc4f1da8e171fabd1eb5b7bdbdccfa.jpg"
+  },
+  {
+    title: "Wright Opera House Guided Tour",
+    link: "wrightoperahouse.org",
+    description: "We're a nonprofit dedicated to bringing world-class performances to Ouray. All guided tours help support our diverse programming! Step behind the scenes of Ouray’s historic gem! Our guided tours offer a unique glimpse into the history, architecture, and stories that make The Wright Opera House truly one-of-a-kind. Tour Days: Tuesday's at 2:00 PM and Wednesday's at 10:00 AMWeekend Tours: Available by request and scheduled around our regular programming. As an active opera house, weekend tours are not offered through our ticketing platform.Tour Fee: $20 per personMinimum Guests: 4 people per tourAccessibility: Fully ADA accessible with elevatorKid-Friendly: Absolutely! A perfect family outingPhoto-Friendly: Yes! Capture this historic beauty (no video during tours, please)Tour Duration: ~1.5 hoursGroups of 25 or more, or for weekend requests: Please contact us directly for pricing and scheduling. …",
+    pubDate: "2026-06-03T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52569865342720/huge/3b2908ddb2fc3d1f0e870007c7b65025c358699f.jpg"
+  },
+  {
+    title: "Zumba Fitness with Tamra",
+    link: "https://zumba.com/p/zumbafitnesswithTamra",
+    description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com. For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra.",
+    pubDate: "2026-06-03T23:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52277881680293/huge/327c868a372da99a8aa625676956ed98bc1b6b79.jpg"
   }
 ];
 
@@ -3717,217 +3673,151 @@ const LEGAL_NOTICES = [
 ];
 
 const HOUSING_LISTINGS = [
-  /* ── Deed-Restricted For Sale — Applications Open ── */
   {
-    title: '🏠 Silver Jack Unit 202 — 3BR Condo (Deed-Restricted)',
-    type: 'deed-sale',
-    lottery: true,
-    address: '155 W Pacific Ave, Telluride, CO 81435',
-    lat: 37.9378, lng: -107.8155,
-    beds: '3 Bedroom, 2 Bath (1,330 sq ft)', price: '$405,507 (Tier 1, deed-restricted)',
-    source: 'SMRHA',
-    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
-    url: 'https://smrha.org/lottery',
-    applyUrl: 'https://smrha.org/lottery',
-    deadline: 'April 10, 2026 at noon',
-    drawingDate: 'April 24, 2026 at 10:00 AM',
-    drawingLocation: 'SMRHA Office, 820 Black Bear Rd, Unit G17, Telluride',
-    pickupLocation: '820 Black Bear Rd, Unit G17, Telluride (or download at smrha.org/lottery)',
-    eligibility: 'Must work 1,400+ hrs/yr in San Miguel, Ouray, San Juan, or Montrose County · Must have lived in 4-county region 12+ months · Household income up to 220% AMI · Asset limits apply',
-    note: 'Ownership lottery under Telluride Affordable Housing Guidelines. Applications available at smrha.org/lottery or pick up in person.'
+    title: "🏠 Element 52 SW-102",
+    type: "deed-sale",
+    address: "398 South Davis Street, Unit SW-102, Telluride, CO 81435",
+    lat: 37.9281,
+    lng: -107.8145,
+    beds: "2 Bedroom, 1 Bath, ~988 sq ft",
+    price: "$352,529 (deed-restricted)",
+    source: "SMRHA",
+    contact: { phone: "(970) 728-3034", email: "admin@smrha.org" },
+    url: "https://smrha.org/element-52-sw-102/",
+    smrhaSlug: "element-52-sw-102",
+    note: "Tier 2 Mitigation Unit. HOA $420.28/mo. Contact SMRHA for eligibility and application details."
   },
   {
-    title: '🏠 Silver Jack Unit 205 — 2BR Condo (Deed-Restricted)',
-    type: 'deed-sale',
-    lottery: true,
-    address: '155 W Pacific Ave, Telluride, CO 81435',
-    lat: 37.9378, lng: -107.8155,
-    beds: '2 Bedroom, 1 Bath (935 sq ft)', price: '$368,620 (Tier 1, deed-restricted)',
-    source: 'SMRHA',
-    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
-    url: 'https://smrha.org/lottery',
-    applyUrl: 'https://smrha.org/lottery',
-    deadline: 'April 10, 2026 at noon',
-    drawingDate: 'April 24, 2026 at 10:00 AM',
-    drawingLocation: 'SMRHA Office, 820 Black Bear Rd, Unit G17, Telluride',
-    pickupLocation: '820 Black Bear Rd, Unit G17, Telluride (or download at smrha.org/lottery)',
-    eligibility: 'Must work 1,400+ hrs/yr in San Miguel, Ouray, San Juan, or Montrose County · Must have lived in 4-county region 12+ months · Household income up to 220% AMI · Asset limits apply',
-    note: 'Ownership lottery under Telluride Affordable Housing Guidelines. Applications available at smrha.org/lottery or pick up in person.'
+    title: "🏠 Silver Jack 202",
+    type: "deed-sale",
+    address: "155 West Pacific Avenue, Unit 202, Telluride, CO 81435",
+    lat: 37.9352,
+    lng: -107.8138,
+    beds: "3 Bedroom, 2 Bath, ~1330 sq ft",
+    price: "$405,507 (deed-restricted)",
+    source: "SMRHA",
+    contact: { phone: "(970) 728-3034", email: "admin@smrha.org" },
+    url: "https://smrha.org/silver-jack-202/",
+    smrhaSlug: "silver-jack-202",
+    note: "Tier 1 Town Constructed Unit. HOA $307.64/mo. Contact SMRHA for eligibility and application details."
   },
   {
-    title: '🏠 Element 52 SW-102 — 2BR Condo (Deed-Restricted)',
-    type: 'deed-sale',
-    lottery: true,
-    address: '398 S Davis St, Telluride, CO 81435',
-    lat: 37.9365, lng: -107.8118,
-    beds: '2 Bedroom, 1 Bath (479 sq ft)', price: '$352,529 (Tier 2, deed-restricted)',
-    source: 'SMRHA',
-    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
-    url: 'https://smrha.org/lottery',
-    applyUrl: 'https://smrha.org/lottery',
-    deadline: 'April 10, 2026 at noon',
-    drawingDate: 'April 24, 2026 at 10:00 AM',
-    drawingLocation: 'SMRHA Office, 820 Black Bear Rd, Unit G17, Telluride',
-    pickupLocation: '820 Black Bear Rd, Unit G17, Telluride (or download at smrha.org/lottery)',
-    eligibility: 'Must work 1,400+ hrs/yr in San Miguel, Ouray, San Juan, or Montrose County · Must have lived in 4-county region 12+ months · Household income up to 220% AMI · Asset limits apply',
-    note: 'Ownership lottery under Telluride Affordable Housing Guidelines. Applications available at smrha.org/lottery or pick up in person.'
-  },
-  /* ── Deed-Restricted For Sale — SMRHA Property Listings ── */
-  {
-    title: '🏠 530 Society Dr Unit B — 3BR Duplex (Deed-Restricted)',
-    type: 'deed-sale',
-    address: '530 Society Dr Unit B, San Miguel County, CO 81435',
-    lat: 37.9252, lng: -107.8335,
-    beds: '3 Bedroom, 2 Bath (1,180 sq ft)', price: '$765,000 (deed-restricted)',
-    source: 'SMRHA',
-    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
-    url: 'https://smrha.org/property-listings/',
-    note: 'Deed-restricted single family duplex in San Miguel County. Contact SMRHA for eligibility and application details.'
+    title: "🏠 Silver Jack 205",
+    type: "deed-sale",
+    address: "155 West Pacific Avenue, Unit 205, Telluride, CO 81435",
+    lat: 37.9352,
+    lng: -107.8138,
+    beds: "2 Bedroom, 1 Bath, ~935 sq ft",
+    price: "$368,620 (deed-restricted)",
+    source: "SMRHA",
+    contact: { phone: "(970) 728-3034", email: "admin@smrha.org" },
+    url: "https://smrha.org/silver-jack-205/",
+    smrhaSlug: "silver-jack-205",
+    note: "Tier 1 Town Constructed Unit. HOA $218.42/mo. Contact SMRHA for eligibility and application details."
   },
   {
-    title: '🏠 1550 Juniper St — 2BR Home, Norwood (Deed-Restricted)',
-    type: 'deed-sale',
-    address: '1550 Juniper St, Norwood, CO 81423',
-    lat: 38.1297, lng: -108.2867,
-    beds: '2 Bedroom, 2 Bath (1,025 sq ft)', price: '$262,895 (deed-restricted)',
-    source: 'SMRHA',
-    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
-    url: 'https://smrha.org/property-listings/',
-    note: 'Deed-restricted home in Pinion Park, Norwood. Contact SMRHA for eligibility and application details.'
+    title: "Room for Rent — In-Town 2BR Condo",
+    type: "deed-rental",
+    address: "Telluride, CO 81435 (in-town)",
+    lat: 37.9375,
+    lng: -107.8123,
+    beds: "1 Room in 2BR",
+    price: "$1,883/mo (deed-restricted)",
+    source: "SMRHA",
+    contact: { phone: "(970) 728-3034", email: "admin@smrha.org" },
+    url: "https://smrha.org/property/in-town-room-for-rent-telluride-co-81435/",
+    note: "Deed-restricted room rental in shared 2BR condo. Contact SMRHA for eligibility."
   },
   {
-    title: '🏠 1545 Juniper St — 3BR Home, Norwood (Deed-Restricted)',
-    type: 'deed-sale',
-    address: '1545 Juniper St, Norwood, CO 81423',
-    lat: 38.1297, lng: -108.2870,
-    beds: '3 Bedroom, 3 Bath (1,216 sq ft)', price: '$381,000 (deed-restricted)',
-    source: 'SMRHA',
-    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
-    url: 'https://smrha.org/property-listings/',
-    note: 'Deed-restricted home in Pinion Park, Norwood. Contact SMRHA for eligibility and application details.'
+    title: "Village Court Apartments — Waitlist",
+    type: "deed-rental",
+    address: "455 Mountain Village Blvd, Mountain Village, CO 81435",
+    lat: 37.9325,
+    lng: -107.8497,
+    beds: "Studio–3 Bedroom",
+    price: "Income-based (deed-restricted)",
+    source: "Town of Mountain Village",
+    contact: { phone: "(970) 729-3419", email: "" },
+    url: "https://townofmountainvillage.com/community/housing/village-court-apartments/",
+    note: "Waitlist is currently capped — not accepting new applications. Check back periodically."
   },
   {
-    title: '🏠 1465 Paradox St — 3BR Home, Norwood (Deed-Restricted)',
-    type: 'deed-sale',
-    address: '1465 Paradox St, Norwood, CO 81423',
-    lat: 38.1295, lng: -108.2855,
-    beds: '3 Bedroom, 3 Bath (1,216 sq ft)', price: '$383,244 (deed-restricted)',
-    source: 'SMRHA',
-    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
-    url: 'https://smrha.org/property-listings/',
-    note: 'Deed-restricted home in Pinion Park, Norwood. Contact SMRHA for eligibility and application details.'
+    title: "Shandoka Townhomes — Waitlist",
+    type: "deed-rental",
+    address: "820 Black Bear Rd, Telluride, CO 81435",
+    lat: 37.9363,
+    lng: -107.8198,
+    beds: "1–3 Bedroom",
+    price: "Income-based (deed-restricted)",
+    source: "Town of Telluride",
+    contact: { phone: "(970) 728-4025", email: "housing@telluride.gov" },
+    url: "https://www.telluride.gov/745/Town-Owned-Rental-Properties",
+    note: "Waitlist-based. Town employee priority. Apply through the Town of Telluride."
   },
   {
-    title: '🏠 1435 Paradox St — 3BR Home, Norwood (Deed-Restricted)',
-    type: 'deed-sale',
-    address: '1435 Paradox St, Norwood, CO 81423',
-    lat: 38.1294, lng: -108.2858,
-    beds: '3 Bedroom, 3 Bath (1,216 sq ft)', price: '$380,523 (deed-restricted)',
-    source: 'SMRHA',
-    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
-    url: 'https://smrha.org/property-listings/',
-    note: 'Deed-restricted home in Pinion Park, Norwood. Contact SMRHA for eligibility and application details.'
+    title: "Virginia Placer Apartments — Waitlist",
+    type: "deed-rental",
+    address: "Virginia Placer, Telluride, CO 81435",
+    lat: 37.938,
+    lng: -107.826,
+    beds: "Studio–2 Bedroom",
+    price: "Income-based (deed-restricted)",
+    source: "Town of Telluride",
+    contact: { phone: "(970) 728-4025", email: "housing@telluride.gov" },
+    url: "https://www.telluride.gov/745/Town-Owned-Rental-Properties",
+    note: "Waitlist-based. Apply through the Town of Telluride Rental Housing division."
   },
   {
-    title: '🏠 1560 Juniper St — 3BR Home, Norwood (Deed-Restricted)',
-    type: 'deed-sale',
-    address: '1560 Juniper St, Norwood, CO 81423',
-    lat: 38.1298, lng: -108.2864,
-    beds: '3 Bedroom, 3 Bath (1,216 sq ft)', price: '$395,000 (deed-restricted)',
-    source: 'SMRHA',
-    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
-    url: 'https://smrha.org/property-listings/',
-    note: 'Deed-restricted home in Pinion Park, Norwood. Contact SMRHA for eligibility and application details.'
-  },
-  /* ── Public / Deed-Restricted Rentals ── */
-  {
-    title: 'Room for Rent — In-Town 2BR Condo',
-    type: 'deed-rental',
-    address: 'Telluride, CO 81435 (in-town)',
-    lat: 37.9375, lng: -107.8123,
-    beds: '1 Room in 2BR', price: '$1,883/mo (deed-restricted)',
-    source: 'SMRHA',
-    contact: { phone: '(970) 728-3034', email: 'admin@smrha.org' },
-    url: 'https://smrha.org/property/in-town-room-for-rent-telluride-co-81435/',
-    note: 'Deed-restricted room rental in shared 2BR condo. Contact SMRHA for eligibility.'
+    title: "Luxury Condo — 395 E Colorado Ave",
+    type: "market-rental",
+    address: "395 E Colorado Ave, Telluride, CO 81435",
+    lat: 37.9375,
+    lng: -107.8095,
+    beds: "3 Bedroom",
+    price: "$2,500/mo",
+    source: "Craigslist",
+    contact: {  },
+    url: "https://westslope.craigslist.org/apa/d/telluride-luxury-condo/7924056218.html",
+    note: "Long-term rental. 3BR condo on E Colorado Ave. Verify availability directly."
   },
   {
-    title: 'Village Court Apartments — Waitlist',
-    type: 'deed-rental',
-    address: '455 Mountain Village Blvd, Mountain Village, CO 81435',
-    lat: 37.9325, lng: -107.8497,
-    beds: 'Studio–3 Bedroom', price: 'Income-based (deed-restricted)',
-    source: 'Town of Mountain Village',
-    contact: { phone: '(970) 729-3419', email: '' },
-    url: 'https://townofmountainvillage.com/community/housing/village-court-apartments/',
-    note: 'Waitlist is currently capped — not accepting new applications. Check back periodically.'
+    title: "1BR Apartment — 545 W Pacific Ave",
+    type: "market-rental",
+    address: "545 W Pacific Ave, Telluride, CO 81435",
+    lat: 37.9378,
+    lng: -107.8155,
+    beds: "1 Bedroom",
+    price: "$1,500/mo",
+    source: "Craigslist",
+    contact: {  },
+    url: "https://westslope.craigslist.org/apa/d/telluride-look-no-further-than-this/7919977718.html",
+    note: "Long-term rental. 1BR on W Pacific Ave. Verify availability directly."
   },
   {
-    title: 'Shandoka Townhomes — Waitlist',
-    type: 'deed-rental',
-    address: '820 Black Bear Rd, Telluride, CO 81435',
-    lat: 37.9363, lng: -107.8198,
-    beds: '1–3 Bedroom', price: 'Income-based (deed-restricted)',
-    source: 'Town of Telluride',
-    contact: { phone: '(970) 728-4025', email: 'housing@telluride.gov' },
-    url: 'https://www.telluride.gov/745/Town-Owned-Rental-Properties',
-    note: 'Waitlist-based. Town employee priority. Apply through the Town of Telluride.'
+    title: "3BR House — 280 Mahoney Dr",
+    type: "market-rental",
+    address: "280 Mahoney Dr, Telluride, CO 81435",
+    lat: 37.941,
+    lng: -107.817,
+    beds: "3 Bedroom",
+    price: "$3,901/mo",
+    source: "Apartments.com",
+    contact: {  },
+    url: "https://www.apartments.com/280-mahoney-dr-telluride-co/zq5w36n/",
+    note: "Market-rate long-term rental. Contact listing agent on Apartments.com."
   },
   {
-    title: 'Virginia Placer Apartments — Waitlist',
-    type: 'deed-rental',
-    address: 'Virginia Placer, Telluride, CO 81435',
-    lat: 37.9380, lng: -107.8260,
-    beds: 'Studio–2 Bedroom', price: 'Income-based (deed-restricted)',
-    source: 'Town of Telluride',
-    contact: { phone: '(970) 728-4025', email: 'housing@telluride.gov' },
-    url: 'https://www.telluride.gov/745/Town-Owned-Rental-Properties',
-    note: 'Waitlist-based. Apply through the Town of Telluride Rental Housing division.'
-  },
-  /* ── Market-Rate Active Listings ── */
-  {
-    title: 'Luxury Condo — 395 E Colorado Ave',
-    type: 'market-rental',
-    address: '395 E Colorado Ave, Telluride, CO 81435',
-    lat: 37.9375, lng: -107.8095,
-    beds: '3 Bedroom', price: '$2,500/mo',
-    source: 'Craigslist',
-    contact: {},
-    url: 'https://westslope.craigslist.org/apa/d/telluride-luxury-condo/7924056218.html',
-    note: 'Long-term rental. 3BR condo on E Colorado Ave. Verify availability directly.'
-  },
-  {
-    title: '1BR Apartment — 545 W Pacific Ave',
-    type: 'market-rental',
-    address: '545 W Pacific Ave, Telluride, CO 81435',
-    lat: 37.9378, lng: -107.8155,
-    beds: '1 Bedroom', price: '$1,500/mo',
-    source: 'Craigslist',
-    contact: {},
-    url: 'https://westslope.craigslist.org/apa/d/telluride-look-no-further-than-this/7919977718.html',
-    note: 'Long-term rental. 1BR on W Pacific Ave. Verify availability directly.'
-  },
-  {
-    title: '3BR House — 280 Mahoney Dr',
-    type: 'market-rental',
-    address: '280 Mahoney Dr, Telluride, CO 81435',
-    lat: 37.9410, lng: -107.8170,
-    beds: '3 Bedroom', price: '$3,901/mo',
-    source: 'Apartments.com',
-    contact: {},
-    url: 'https://www.apartments.com/280-mahoney-dr-telluride-co/zq5w36n/',
-    note: 'Market-rate long-term rental. Contact listing agent on Apartments.com.'
-  },
-  {
-    title: '1BR — 107 W Columbia Ave',
-    type: 'market-rental',
-    address: '107 W Columbia Ave, Telluride, CO 81435',
-    lat: 37.9373, lng: -107.8128,
-    beds: '1 Bedroom', price: '$2,874/mo',
-    source: 'Apartments.com',
-    contact: {},
-    url: 'https://www.apartments.com/107-w-columbia-ave-telluride-co/f1l2ss1/',
-    note: 'Market-rate long-term rental in downtown Telluride.'
+    title: "1BR — 107 W Columbia Ave",
+    type: "market-rental",
+    address: "107 W Columbia Ave, Telluride, CO 81435",
+    lat: 37.9373,
+    lng: -107.8128,
+    beds: "1 Bedroom",
+    price: "$2,874/mo",
+    source: "Apartments.com",
+    contact: {  },
+    url: "https://www.apartments.com/107-w-columbia-ave-telluride-co/f1l2ss1/",
+    note: "Market-rate long-term rental in downtown Telluride."
   }
 ];
 
