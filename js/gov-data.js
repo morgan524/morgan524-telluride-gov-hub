@@ -1463,7 +1463,8 @@ const ENTITY_LOGOS = {
   wilkinson: '<img src="/logo/Wilkenson.png" alt="Wilkinson Public Library" style="width:100%;height:100%;object-fit:contain;">',
   airport: '<img src="/logo/Airport.png" alt="Telluride Regional Airport" style="width:100%;height:100%;object-fit:contain;">',
   clubs: '<img src="/logo/clubs-icon.png" alt="Local Organizations" style="width:100%;height:100%;object-fit:contain;">',
-  'telluride-com': '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1a3a5c,#2a5a8c);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Telluride.com">🎪</div>'
+  'telluride-com': '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1a3a5c,#2a5a8c);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Telluride.com">🎪</div>',
+  smb: '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#4a3010,#7a5020);display:flex;align-items:center;justify-content:center;font-size:1rem;color:#fff;font-weight:700;" title="San Miguel Basin Forum">SMB</div>'
 };
 
 const TOWN_IMAGES = {
@@ -1487,6 +1488,7 @@ const SOURCE_SHORT_NAME = {
   fire: 'First District',
   med: 'Med Center',
   norwood: 'Norwood',
+  smb: 'Basin Forum',
   ophir: 'Ophir',
   airport: 'TEX',
   wilkinson: 'Wilkinson'

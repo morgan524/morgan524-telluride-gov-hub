@@ -1682,6 +1682,64 @@ async function enrichKOTOEvent(item) {
   return item;
 }
 
+// ── Fetch San Miguel Basin Forum RSS (news, nonprofits, community) ────────────
+// Single feed covers all sections; we filter by category downstream.
+async function fetchSMBFeed() {
+  const SMBF_FEED = 'https://sanmiguelbasinforum.com/feed.rss';
+  try {
+    const resp = await fetch(RSS2JSON_PROXY + encodeURIComponent(SMBF_FEED));
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const data = await resp.json();
+    if (data.status !== 'ok' || !data.items) return [];
+
+    const items = [];
+    for (const item of data.items) {
+      const title = (item.title || '').trim();
+
+      // Skip weekly print-edition links (title is just a date like "May 13, 2026")
+      if (/^\w+ \d+, \d{4}$/.test(title)) continue;
+
+      // Skip Spanish translations (author contains "Editora")
+      if (/Editora/i.test(item.author || '')) continue;
+
+      // Skip items with no real description
+      const desc = stripHtml(item.description || item.content || '');
+      if (!desc || desc.length < 20) continue;
+
+      const categories = Array.isArray(item.categories) ? item.categories : [];
+      const isCommunity = categories.some(c => /^community$/i.test(c));
+      const isNonprofit  = categories.some(c => /nonprof/i.test(c));
+
+      const pubDate = item.pubDate ? new Date(item.pubDate) : new Date();
+
+      // Image: rss2json puts enclosure in item.enclosure.link or item.thumbnail
+      let imageUrl = '';
+      if (item.enclosure && item.enclosure.link) imageUrl = item.enclosure.link;
+      else if (item.thumbnail) imageUrl = item.thumbnail;
+
+      items.push({
+        title,
+        link: item.link || '#',
+        description: truncate(desc, 220),
+        summary: truncate(desc, 220),
+        pubDate,
+        source: 'smb',
+        sourceLabel: 'San Miguel Basin Forum',
+        sourceKey: 'smb',
+        category: isCommunity ? 'Community Event' : (isNonprofit ? 'Nonprofits' : (categories[0] || 'News')),
+        imageUrl,
+        isCommunity,
+        isNonprofit,
+        newsTopic: (isCommunity || isNonprofit) ? 'nonprofits' : 'community',
+      });
+    }
+    return items;
+  } catch (err) {
+    console.warn('SMBF feed error:', err.message);
+    return [];
+  }
+}
+
 // ── Fetch KOTO Community Calendar Events (upcoming only) ──
 async function fetchKOTONews() {
   // Reads from KOTO_COMMUNITY_EVENTS, populated server-side every 6h
@@ -3440,6 +3498,9 @@ async function fetchAllNews() {
   const feedResults = await Promise.all(NEWS_FEEDS.map(f => fetchNewsFeed(f)));
   const ttimesResults = await fetchTellurideTimesEvents();
   const kotoResults = await fetchKOTONews();
+  const smbfResults = await fetchSMBFeed();
+  // Cache SMBF news articles for collectLocalNewsArticles()
+  window.__smbfArticlesCache = smbfResults;
   const wilkinsonResults = fetchWilkinsonEvents();
   const communityResults = await fetchCommunityEvents();
   const tjcResults = await fetchTellurideJewishEvents();
@@ -3504,7 +3565,8 @@ async function fetchAllNews() {
     ...hardcodedCommunity,    // Hardcoded COMMUNITY_EVENTS
     // Aggregators last — their copies drop out if an original has the event:
     ...kotoResults,           // KOTO Community Calendar
-    ...ttimesResults          // Telluride Times calendar
+    ...ttimesResults,         // Telluride Times calendar
+    ...smbfResults.filter(i => i.isCommunity) // SMBF community events
   ];
 
   // Normalize pubDate to a real Date object on every item.
@@ -6653,6 +6715,27 @@ function collectLocalNewsArticles() {
     });
   }
 
+
+  // San Miguel Basin Forum news (live-fetched, cached in window.__smbfArticlesCache)
+  if (window.__smbfArticlesCache && Array.isArray(window.__smbfArticlesCache)) {
+    window.__smbfArticlesCache.forEach(a => {
+      if (!a.title) return;
+      const pubDate = a.pubDate instanceof Date ? a.pubDate : new Date(a.pubDate);
+      if (isNaN(pubDate) || pubDate < cutoffDate) return;
+      articles.push({
+        title: a.title,
+        link: a.link,
+        summary: a.summary || a.description || '',
+        source: 'San Miguel Basin Forum',
+        sourceKey: 'smb',
+        newsTopic: a.newsTopic || 'community',
+        date: pubDate.toISOString().slice(0, 10),
+        pubDate: pubDate,
+        topic: a.isCommunity ? 'Community' : (a.isNonprofit ? 'Nonprofits' : ''),
+        imageUrl: a.imageUrl || ''
+      });
+    });
+  }
 
   // Filter out state-wide / national stories, then deduplicate by title.
   const seen = new Set();
