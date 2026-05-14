@@ -2225,6 +2225,7 @@ function switchEntity() {
     o.value = val; o.textContent = label;
     yearSel.appendChild(o);
   });
+  yearSel.selectedIndex = 0; // always reset to "All years" when switching entity
   hmCatFilter = '';
   renderHeatmap();
 }
@@ -2256,7 +2257,7 @@ function renderBoccHeatmap() {
 
     if (!eraVotes.length) return;
 
-    const mems = era.members.map(id => BOCC_ALL_MEMBERS.find(m => m.id === id));
+    const mems = era.members.map(id => BOCC_ALL_MEMBERS.find(m => m.id === id)).filter(Boolean);
 
     const stats = {};
     mems.forEach(m => {
