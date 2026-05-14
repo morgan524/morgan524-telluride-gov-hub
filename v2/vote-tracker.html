@@ -133,7 +133,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .hm-pct-low{background:#b5574a}
 
 /* Vote cells */
-.hm-cell{width:64px;height:36px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:10.5px;font-weight:700;margin:0 auto;cursor:default;transition:transform .1s;letter-spacing:.3px;text-transform:uppercase}
+.hm-cell{width:64px;height:36px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:10.5px;font-weight:700;margin:0 auto;cursor:pointer;transition:transform .1s,opacity .1s;letter-spacing:.3px;text-transform:uppercase}.hm-cell:hover{opacity:.82;transform:scale(1.06)}
 .hm-cell:hover{transform:scale(1.08)}
 .hm-yes-str{background:#2f9c6c;color:#fff}
 .hm-no-str{background:#b5574a;color:#fff}
@@ -155,9 +155,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .hm-view-btn.active{background:var(--green-dark);border-color:var(--green-dark);color:#fff;font-weight:700}
 
 /* ─── Category-aggregation cells ────────────────────────────── */
-.hm-cat-cell{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:64px;min-height:48px;border-radius:6px;padding:4px 6px;font-weight:700;line-height:1.2}
-.hm-cat-cell .cat-label{font-size:11px;letter-spacing:.5px}
-.hm-cat-cell .cat-counts{font-size:13px;font-weight:800}
+.hm-cat-cell{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:80px;min-height:72px;border-radius:6px;padding:6px 8px;font-weight:700;line-height:1.2}
+.hm-cat-cell .cat-label{font-size:22px;letter-spacing:.5px}
+.hm-cat-cell .cat-counts{font-size:26px;font-weight:800}
 .hm-cat-cell.yes-dom{background:#2f9c6c;color:#fff}
 .hm-cat-cell.no-dom{background:#b5574a;color:#fff}
 .hm-cat-cell.tied{background:#c48a2e;color:#fff}
@@ -187,14 +187,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <a href="/v2/gov-hub.html" class="back-link">← Gov Hub</a>
   <div>
     <h1>Town Council — Vote Tracker</h1>
-    <div class="sub">Telluride, Colorado · 2025–2026 · Data from official adopted minutes</div>
+    <div class="sub">Telluride, Colorado · 2024–2026 · Data from official adopted minutes</div>
   </div>
 </header>
 
 <!-- ─── Tab bar + stats ─────────────────────────────────────── -->
 <div class="topbar">
-  <button class="tab-btn active" onclick="switchTab('tracker')" id="tab-tracker">📋 Vote Tracker</button>
-  <button class="tab-btn" onclick="switchTab('heatmap')" id="tab-heatmap">🔥 Heatmap</button>
   <div class="stats-bar">
     <div class="stat"><span class="val" id="stat-votes">—</span><span class="lbl">Votes</span></div>
     <div class="stat"><span class="val" id="stat-split">—</span><span class="lbl">Split</span></div>
@@ -207,48 +205,22 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
   <!-- Sidebar filters -->
   <aside class="sidebar">
-    <input class="search-box" type="search" id="search" placeholder="🔍 Search votes…" oninput="renderTracker()">
-
     <div class="filter-group">
       <label class="filter-label">Year</label>
-      <select class="filter-select" id="filter-year" onchange="renderTracker()">
+      <select class="filter-select" id="filter-year" onchange="renderHeatmap()">
         <option value="">All years</option>
         <option value="2026">2026</option>
         <option value="2025">2025</option>
         <option value="2024">2024</option>
       </select>
     </div>
-
-    <div class="filter-group">
-      <label class="filter-label">Category</label>
-      <select class="filter-select" id="filter-cat" onchange="renderTracker()">
-        <option value="">All categories</option>
-      </select>
-    </div>
-
-    <div class="filter-group">
-      <label class="filter-label">Outcome</label>
-      <select class="filter-select" id="filter-outcome" onchange="renderTracker()">
-        <option value="">All outcomes</option>
-        <option value="Passed">Passed</option>
-        <option value="Failed">Failed</option>
-      </select>
-    </div>
-
-    <button class="clear-btn" onclick="clearFilters()">Clear all filters</button>
   </aside>
 
   <!-- Main content (two tabs) -->
   <main class="main">
 
-    <!-- ── Tracker tab ───────────────────────────────────────── -->
-    <div id="view-tracker">
-      <div class="result-count" id="result-count"></div>
-      <div id="tracker-content"></div>
-    </div>
-
-    <!-- ── Heatmap tab ───────────────────────────────────────── -->
-    <div id="view-heatmap" style="display:none">
+    <!-- ── Heatmap ─────────────────────────────────────────────── -->
+    <div id="view-heatmap">
 
       <!-- View toggle -->
       <div class="hm-view-toggle">
@@ -256,8 +228,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         <button class="hm-view-btn" id="hm-btn-category" onclick="setHmView('category')">Votes by Category</button>
       </div>
 
-      <!-- Category filter chips (hidden in category view) -->
-      <div class="hm-cat-bar" id="hm-cat-bar"></div>
 
       <div class="heatmap-legend">
         <div class="leg-item"><div class="leg-swatch hm-yes-str"></div> YES</div>
@@ -1195,7 +1165,7 @@ const VOTE_ITEMS = [
    RENDER LOGIC
 ══════════════════════════════════════════════════════════════ */
 
-let activeTab = 'tracker';
+let activeTab = 'heatmap';
 let hmCatFilter = ''; // active category filter for heatmap (empty = all)
 let hmViewMode = 'issue'; // 'issue' or 'category'
 
@@ -1205,7 +1175,7 @@ function switchTab(tab) {
   document.getElementById('view-heatmap').style.display  = tab === 'heatmap'  ? '' : 'none';
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('tab-' + tab).classList.add('active');
-  if (tab === 'heatmap') { buildHmCatBar(); renderHeatmap(); }
+  renderHeatmap();
 }
 
 // ── populate category dropdown ──────────────────────────────
@@ -1400,7 +1370,7 @@ function renderHeatmapByCategory() {
 
     activeCats.forEach(cat => {
       html += `<tr>
-        <td><span class="hm-vote-title">${cat}</span></td>`;
+        <td><span class="hm-vote-title" style="font-size:24px;font-weight:700">${cat}</span></td>`;
       mems.forEach(m => {
         const s = catStats[cat][m.id];
         const total = s.yes + s.no;
@@ -1458,9 +1428,6 @@ function setHmView(mode) {
   // Toggle button active states
   document.getElementById('hm-btn-issue').classList.toggle('active', mode === 'issue');
   document.getElementById('hm-btn-category').classList.toggle('active', mode === 'category');
-  // Hide cat-bar in category mode (categories become rows)
-  const bar = document.getElementById('hm-cat-bar');
-  if (bar) bar.style.display = mode === 'category' ? 'none' : '';
   renderHeatmap();
 }
 
@@ -1569,7 +1536,9 @@ function renderHeatmap() {
         else if (mv === 'Recused') { cls = 'hm-rec';     lbl = 'Recused'; }
         else if (mv === 'Absent')  { cls = 'hm-abs';     lbl = 'Absent'; }
         else if (mv === 'Vacant')  { cls = 'hm-vac';     lbl = 'Vacant'; }
-        html += `<td><div class="hm-cell ${cls}" title="${m.name}: ${mv||'Not on Council'}">${lbl}</div></td>`;
+        const cellLink = v.minutesUrl ? `<a href="${v.minutesUrl}" target="_blank" rel="noopener" style="text-decoration:none;display:block">` : '';
+        const cellLinkEnd = v.minutesUrl ? '</a>' : '';
+        html += `<td>${cellLink}<div class="hm-cell ${cls}" title="${m.name}: ${mv||'Not on Council'}. Click to view minutes.">${lbl}</div>${cellLinkEnd}</td>`;
       });
       html += `<td class="hm-outcome ${v.outcome.toLowerCase()}" style="padding:5px 8px;white-space:nowrap">${v.outcome} ${v.tally}</td>`;
       html += `</tr>`;
@@ -1585,8 +1554,8 @@ function renderHeatmap() {
 /* ══════════════════════════════════════════════════════════════
    INIT
 ══════════════════════════════════════════════════════════════ */
-populateFilters();
-renderTracker();
+// Init — heatmap only
+renderHeatmap();
 </script>
 </body>
 </html>
