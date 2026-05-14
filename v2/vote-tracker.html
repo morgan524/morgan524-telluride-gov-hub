@@ -206,6 +206,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <!-- Sidebar filters -->
   <aside class="sidebar">
     <div class="filter-group">
+      <label class="filter-label">Entity</label>
+      <select class="filter-select" id="filter-entity" onchange="switchEntity()">
+        <option value="telluride">Town of Telluride</option>
+        <option value="bocc">County BOCC</option>
+        <option value="planning">County Planning</option>
+      </select>
+    </div>
+    <div class="filter-group">
       <label class="filter-label">Year</label>
       <select class="filter-select" id="filter-year" onchange="renderHeatmap()">
         <option value="">All years</option>
@@ -278,6 +286,197 @@ const COUNCIL_2025_EARLY  = ['errico','fee','arguelles','enright','shaunette','l
 const COUNCIL_2025_LATE   = ['errico','fee','enright','levin','svs','permakoff','stark'];
 const COUNCIL_2024        = ['errico','fee','arguelles','enright','shaunette','levin','svs'];
 const COUNCIL_2026        = ['errico','fee','enright','levin','permakoff','stark','svs'];
+/* ─── BOCC member roster ─────────────────────────────────────── */
+const BOCC_ALL_MEMBERS = [
+  { id:'brown',    name:'Anne Brown',     shortName:'Brown',    title:'District 1 Commissioner' },
+  { id:'waring',   name:'Lance Waring',   shortName:'Waring',   title:'District 2 Commissioner' },
+  { id:'holstrom', name:'Kris Holstrom',  shortName:'Holstrom', title:'District 3 Commissioner (2024)' },
+  { id:'gleason',  name:'Galena Gleason', shortName:'Gleason',  title:'District 3 Commissioner (2025+)' },
+];
+const BOCC_2024 = ['brown', 'waring', 'holstrom'];
+const BOCC_2025 = ['brown', 'waring', 'gleason'];
+
+/* ─── BOCC vote items (2024) ─────────────────────────────────── */
+// Source: San Miguel County BOCC meeting minutes via Granicus / CivicClerk
+// votes: member-id → 'Yes'|'No'|'Recused'|'Absent'|'Vacant'
+const BOCC_VOTE_ITEMS = [
+
+  /* ══ 2024 ══════════════════════════════════════════════════ */
+
+  // Aug 21, 2024 — All commissioners present (3-0)
+  {
+    id:'bv2024-01', date:'2024-08-21', year:2024,
+    meeting:'BOCC — Aug 21, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Resolution 2024-27: Admin Policy Manual Update (Indemnification)',
+    tags:['Policy'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-02', date:'2024-08-21', year:2024,
+    meeting:'BOCC — Aug 21, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Resolution 2024-28: Defense & Indemnification of Sheriff Masters',
+    tags:['Legal'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-03', date:'2024-08-21', year:2024,
+    meeting:'BOCC — Aug 21, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Resolution 2024-29: Defense & Indemnification of County Staff (Friedrich / Ji)',
+    tags:['Legal'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-04', date:'2024-08-21', year:2024,
+    meeting:'BOCC — Aug 21, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Resolution 2024-30: Ethics / Rule of Professional Conduct',
+    tags:['Policy'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-05', date:'2024-08-21', year:2024,
+    meeting:'BOCC — Aug 21, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Resolution 2024-31: Ambulance Services Authorization Opt-Out',
+    tags:['Health & Human Services'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-06', date:'2024-08-21', year:2024,
+    meeting:'BOCC — Aug 21, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'The Shed Youth Hangout: $45,860 Contribution to VooDoo Property Renovation',
+    tags:['Community', 'Budget & Finance'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-07', date:'2024-08-21', year:2024,
+    meeting:'BOCC — Aug 21, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'ECE & Mental Health Fund Backfill (SB 22-238 Distribution)',
+    tags:['Health & Human Services', 'Budget & Finance'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+
+  // Oct 2, 2024 — Waring absent for main session (2-0); all present for CBOE appeals (3-0)
+  {
+    id:'bv2024-08', date:'2024-10-02', year:2024,
+    meeting:'BOCC — Oct 2, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Housing Ballot Language: Mill Levy Amendment for Affordable Housing',
+    tags:['Housing', 'Budget & Finance'],
+    outcome:'Passed', tally:'2-0',
+    votes:{ brown:'Yes', waring:'Absent', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-09', date:'2024-10-02', year:2024,
+    meeting:'BOCC — Oct 2, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Fermi Uranium Corp — Mining Special Use Permit',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'2-0',
+    votes:{ brown:'Yes', waring:'Absent', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-10', date:'2024-10-02', year:2024,
+    meeting:'BOCC — Oct 2, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Parks & Open Space Mill Levy Ballot Submission',
+    tags:['Budget & Finance', 'Land Use'],
+    outcome:'Passed', tally:'2-0',
+    votes:{ brown:'Yes', waring:'Absent', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-11', date:'2024-10-02', year:2024,
+    meeting:'BOCC — Oct 2, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'SMRHA Deed Restriction Exception Request (Housing)',
+    tags:['Housing'],
+    outcome:'Passed', tally:'2-0',
+    votes:{ brown:'Yes', waring:'Absent', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-12', date:'2024-10-02', year:2024,
+    meeting:'BOCC — Oct 2, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Resolution 2024-36: Board Appointment Resolution',
+    tags:['Administrative'],
+    outcome:'Passed', tally:'2-0',
+    votes:{ brown:'Yes', waring:'Absent', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-13', date:'2024-10-02', year:2024,
+    meeting:'BOCC — Oct 2, 2024 (CBOE)',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'CBOE Assessment Appeals — Deny All Five (Hein/Solomon, Cole Trust, McCarthy, Kaptur, Petrini)',
+    tags:['Assessment Appeals'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+
+  // Oct 16, 2024 — All present (3-0)
+  {
+    id:'bv2024-14', date:'2024-10-16', year:2024,
+    meeting:'BOCC — Oct 16, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Resolution 2024-37: Reallocation of P&OS Mill Levy Portion for Housing Ballot Measure',
+    tags:['Housing', 'Budget & Finance'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-15', date:'2024-10-16', year:2024,
+    meeting:'BOCC — Oct 16, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Thor Energy — Special Use Permit (Exploration with Revised Condition #9)',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-16', date:'2024-10-16', year:2024,
+    meeting:'BOCC — Oct 16, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Lower Ophir Road Paving — Award Bid to Armor Proseal ($180,000)',
+    tags:['Infrastructure'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-17', date:'2024-10-16', year:2024,
+    meeting:'BOCC — Oct 16, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'County Attorney Professional Services Contract — Authorization',
+    tags:['Administrative'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-18', date:'2024-10-16', year:2024,
+    meeting:'BOCC — Oct 16, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Letter to State Senators — Dolores River Project (Intergovernmental)',
+    tags:['Intergovernmental'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+];
+
+/* ─── Planning Commission (placeholder) ─────────────────────── */
+const PC_ALL_MEMBERS = [];
+const PC_VOTE_ITEMS  = [];
+
+
 
 /* ─── Vote items ────────────────────────────────────────────── */
 // votes object: member-id → 'Yes'|'No'|'Recused'|'Absent'|'Vacant'
@@ -1303,6 +1502,10 @@ function renderTracker() {
 
 // ── render heatmap: Votes by Category view ─────────────────
 function renderHeatmapByCategory() {
+  const ent = (document.getElementById('filter-entity') || {value:'telluride'}).value;
+  if (ent === 'bocc')     { renderBoccHeatmap();     return; }
+  if (ent === 'planning') { renderPlanningHeatmap();  return; }
+
   const yearSel = document.getElementById('filter-year').value;
 
   const eras = yearSel === '2026'
@@ -1432,8 +1635,155 @@ function setHmView(mode) {
 }
 
 // ── render heatmap tab ──────────────────────────────────────
+
+/* ══════════════════════════════════════════════════════════════
+   ENTITY SWITCHING
+══════════════════════════════════════════════════════════════ */
+function switchEntity() {
+  const ent = document.getElementById('filter-entity').value;
+  const yearSel = document.getElementById('filter-year');
+  yearSel.innerHTML = '';
+
+  let years = [];
+  if (ent === 'telluride') {
+    years = [['', 'All years'], ['2026','2026'], ['2025','2025'], ['2024','2024']];
+  } else if (ent === 'bocc') {
+    years = [['', 'All years'], ['2024','2024']];
+  } else {
+    years = [['', 'All years']];
+  }
+  years.forEach(([val, label]) => {
+    const o = document.createElement('option');
+    o.value = val; o.textContent = label;
+    yearSel.appendChild(o);
+  });
+  hmCatFilter = '';
+  renderHeatmap();
+}
+
+/* ══════════════════════════════════════════════════════════════
+   BOCC HEATMAP
+══════════════════════════════════════════════════════════════ */
+function renderBoccHeatmap() {
+  const yearSel = document.getElementById('filter-year').value;
+  const catSel  = hmCatFilter;
+
+  const eras = yearSel === '2025'
+    ? [{ label:'2025 BOCC', members:BOCC_2025, yearFilter:2025 }]
+    : yearSel === '2024'
+    ? [{ label:'2024 BOCC', members:BOCC_2024, yearFilter:2024 }]
+    : [{ label:'2025 BOCC', members:BOCC_2025, yearFilter:2025 },
+       { label:'2024 BOCC', members:BOCC_2024, yearFilter:2024 }];
+
+  let html = '';
+  eras.forEach(era => {
+    let eraVotes = BOCC_VOTE_ITEMS.filter(v => {
+      if (v.year !== era.yearFilter) return false;
+      if (catSel && !v.tags.includes(catSel)) return false;
+      return true;
+    }).sort((a,b) => b.date.localeCompare(a.date));
+
+    if (!eraVotes.length) return;
+
+    const mems = era.members.map(id => BOCC_ALL_MEMBERS.find(m => m.id === id));
+
+    const stats = {};
+    mems.forEach(m => {
+      let yes = 0, no = 0, total = 0, withMaj = 0;
+      eraVotes.forEach(v => {
+        const mv = v.votes[m.id];
+        if (mv === 'Yes' || mv === 'No') {
+          total++;
+          if (mv === 'Yes') yes++; else no++;
+          const onWinningSide = (v.outcome === 'Passed' && mv === 'Yes') ||
+                                (v.outcome === 'Failed'  && mv === 'No');
+          if (onWinningSide) withMaj++;
+        }
+      });
+      stats[m.id] = { yes, no, total, withMaj };
+    });
+
+    function pctClass(pct) {
+      return pct >= 80 ? 'hm-pct-high' :
+             pct >= 60 ? 'hm-pct-mid-high' :
+             pct >= 40 ? 'hm-pct-mid' : 'hm-pct-low';
+    }
+
+    html += `<div class="heatmap-wrap">
+      <div class="heatmap-title">${era.label}</div>
+      <table class="heatmap-table">
+        <thead>
+          <tr>
+            <th class="vote-col-th">Vote</th>
+            ${mems.map(m => `<th class="hm-member-header">${m.name}<span class="mem-role">${m.title}</span></th>`).join('')}
+            <th class="result-col-th">Result</th>
+          </tr>
+          <tr>
+            <td class="stats-label-cell">Summary</td>
+            ${mems.map(m => {
+              const s = stats[m.id];
+              const pct    = s.total ? Math.round(s.yes / s.total * 100) : 0;
+              const majPct = s.total ? Math.round(s.withMaj / s.total * 100) : 0;
+              return `<td class="hm-stats-cell ${pctClass(pct)}">
+                <span class="pct-num">${pct}%</span>
+                <span class="pct-frac">${s.yes}/${s.total} Yes</span>
+                <span class="pct-maj">${majPct}% w/ majority</span>
+                <span class="pct-total">${s.total} votes cast</span>
+              </td>`;
+            }).join('')}
+            <td style="background:var(--gray-100)"></td>
+          </tr>
+        </thead>
+        <tbody>`;
+
+    eraVotes.forEach(v => {
+      const dateStr = v.date.replace(/^(\d{4})-(\d{2})-(\d{2})$/, (_,y,mo,d) =>
+        `${['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+mo]} ${+d}`);
+      html += `<tr>
+        <td>
+          <a href="${v.minutesUrl}" target="_blank" style="text-decoration:none">
+            <span class="hm-vote-title">${v.title}</span>
+          </a>
+          <span class="hm-vote-meta">${dateStr} · ${v.tags[0]}</span>
+        </td>`;
+      mems.forEach(m => {
+        const mv = v.votes[m.id];
+        let cls = 'hm-nc', lbl = '';
+        if      (mv === 'Yes')     { cls = 'hm-yes-str'; lbl = 'YES'; }
+        else if (mv === 'No')      { cls = 'hm-no-str';  lbl = 'NO'; }
+        else if (mv === 'Recused') { cls = 'hm-rec';     lbl = 'Recused'; }
+        else if (mv === 'Absent')  { cls = 'hm-abs';     lbl = 'Absent'; }
+        else if (mv === 'Vacant')  { cls = 'hm-vac';     lbl = 'Vacant'; }
+        const cellLink = v.minutesUrl ? `<a href="${v.minutesUrl}" target="_blank" rel="noopener" style="text-decoration:none;display:block">` : '';
+        const cellLinkEnd = v.minutesUrl ? '</a>' : '';
+        html += `<td>${cellLink}<div class="hm-cell ${cls}" title="${m.name}: ${mv||'Not on BOCC'}. Click to view minutes.">${lbl}</div>${cellLinkEnd}</td>`;
+      });
+      html += `<td class="hm-outcome ${v.outcome.toLowerCase()}" style="padding:5px 8px;white-space:nowrap">${v.outcome} ${v.tally}</td>`;
+      html += `</tr>`;
+    });
+
+    html += `</tbody></table></div>`;
+  });
+
+  if (!html) html = `<div class="empty-state"><p>No BOCC votes for the selected filters.<br>More meetings being added — <a href="https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26" target="_blank">view all BOCC minutes</a>.</p></div>`;
+  document.getElementById('heatmap-content').innerHTML = html;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PLANNING COMMISSION HEATMAP (placeholder)
+══════════════════════════════════════════════════════════════ */
+function renderPlanningHeatmap() {
+  document.getElementById('heatmap-content').innerHTML =
+    `<div class="empty-state"><p>County Planning Commission vote data is being compiled and will be available soon.<br>
+    <a href="https://sanmiguelcoco.portal.civicclerk.com/search?q=&category_id=24" target="_blank">View Planning Commission minutes →</a></p></div>`;
+}
+
 function renderHeatmap() {
   if (hmViewMode === 'category') { renderHeatmapByCategory(); return; }
+
+  const ent = (document.getElementById('filter-entity') || {value:'telluride'}).value;
+  if (ent === 'bocc')     { renderBoccHeatmap();     return; }
+  if (ent === 'planning') { renderPlanningHeatmap();  return; }
 
   const yearSel = document.getElementById('filter-year').value;
   const catSel  = hmCatFilter;
