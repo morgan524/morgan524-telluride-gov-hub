@@ -2233,7 +2233,7 @@ function renderBoccHeatmap() {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   PLANNING COMMISSION HEATMAP (placeholder)
+   PLANNING COMMISSION HEATMAP
 ══════════════════════════════════════════════════════════════ */
 function renderPlanningHeatmap() {
   const yearSel = document.getElementById('filter-year').value;
@@ -2252,48 +2252,92 @@ function renderPlanningHeatmap() {
       if (v.year !== era.yearFilter) return false;
       if (catSel && !v.tags.includes(catSel)) return false;
       return true;
-    });
+    }).sort((a,b) => b.date.localeCompare(a.date));
+
     if (!eraVotes.length) return;
 
-    // Build member objects for this era
-    const memberObjs = era.members.map(mid => PC_ALL_MEMBERS.find(m => m.id === mid)).filter(Boolean);
+    const mems = era.members.map(id => PC_ALL_MEMBERS.find(m => m.id === id)).filter(Boolean);
 
-    // Header row
-    html += `<section class="era-section">
-      <h2 class="era-heading">${era.label} <span class="vote-count">${eraVotes.length} vote${eraVotes.length===1?'':'s'}</span></h2>
-      <div class="heatmap-scroll">
-      <table class="heatmap-table">
-      <thead><tr>
-        <th class="issue-col">Issue</th>
-        ${memberObjs.map(m=>`<th class="member-col"><span class="member-name">${m.shortName}</span></th>`).join('')}
-      </tr></thead><tbody>`;
-
-    eraVotes.forEach(v => {
-      const outCls = v.outcome === 'Passed' ? 'outcome-pass' : 'outcome-fail';
-      html += `<tr>
-        <td class="issue-cell">
-          <a href="${v.minutesUrl}" target="_blank" class="issue-link">${v.title}</a>
-          <div class="issue-meta">
-            <span class="issue-date">${v.date}</span>
-            <span class="${outCls}">${v.outcome} ${v.tally}</span>
-            ${v.tags.map(t=>`<span class="tag-chip">${t}</span>`).join('')}
-          </div>
-        </td>
-        ${memberObjs.map(m => {
-          const vote = v.votes[m.id];
-          if (!vote || vote === 'Vacant') return `<td class="vote-cell vote-vacant"><span class="vote-text">—</span></td>`;
-          const cls = vote==='Yes'?'vote-yes':vote==='No'?'vote-no':vote==='Recused'?'vote-recused':'vote-absent';
-          const label = vote==='Yes'?'YES':vote==='No'?'NO':vote==='Recused'?'REC':'ABS';
-          return `<td class="vote-cell ${cls}"><span class="vote-text">${label}</span></td>`;
-        }).join('')}
-      </tr>`;
+    const stats = {};
+    mems.forEach(m => {
+      let yes = 0, no = 0, total = 0, withMaj = 0;
+      eraVotes.forEach(v => {
+        const mv = v.votes[m.id];
+        if (mv === 'Yes' || mv === 'No') {
+          total++;
+          if (mv === 'Yes') yes++; else no++;
+          const onWinningSide = (v.outcome === 'Passed' && mv === 'Yes') ||
+                                (v.outcome === 'Failed'  && mv === 'No');
+          if (onWinningSide) withMaj++;
+        }
+      });
+      stats[m.id] = { yes, no, total, withMaj };
     });
 
-    html += `</tbody></table></div></section>`;
+    function pctClass(pct) {
+      return pct >= 80 ? 'hm-pct-high' :
+             pct >= 60 ? 'hm-pct-mid-high' :
+             pct >= 40 ? 'hm-pct-mid' : 'hm-pct-low';
+    }
+
+    html += `<div class="heatmap-wrap">
+      <div class="heatmap-title">${era.label}</div>
+      <table class="heatmap-table">
+        <thead>
+          <tr>
+            <th class="vote-col-th">Vote</th>
+            ${mems.map(m => `<th class="hm-member-header">${m.name}<span class="mem-role">${m.title}</span></th>`).join('')}
+            <th class="result-col-th">Result</th>
+          </tr>
+          <tr>
+            <td class="stats-label-cell">Summary</td>
+            ${mems.map(m => {
+              const s = stats[m.id];
+              const pct    = s.total ? Math.round(s.yes / s.total * 100) : 0;
+              const majPct = s.total ? Math.round(s.withMaj / s.total * 100) : 0;
+              return `<td class="hm-stats-cell ${pctClass(pct)}">
+                <span class="pct-num">${pct}%</span>
+                <span class="pct-frac">${s.yes}/${s.total} Yes</span>
+                <span class="pct-maj">${majPct}% w/ majority</span>
+                <span class="pct-total">${s.total} votes cast</span>
+              </td>`;
+            }).join('')}
+            <td style="background:var(--gray-100)"></td>
+          </tr>
+        </thead>
+        <tbody>`;
+
+    eraVotes.forEach(v => {
+      const dateStr = v.date.replace(/^(\d{4})-(\d{2})-(\d{2})$/, (_,y,mo,d) =>
+        `${['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+mo]} ${+d}`);
+      html += `<tr>
+        <td>
+          <a href="${v.minutesUrl}" target="_blank" style="text-decoration:none">
+            <span class="hm-vote-title">${v.title}</span>
+          </a>
+          <span class="hm-vote-meta">${dateStr} · ${v.tags.join(' · ')}</span>
+        </td>`;
+      mems.forEach(m => {
+        const mv = v.votes[m.id];
+        let cls = 'hm-nc', lbl = '';
+        if      (mv === 'Yes')     { cls = 'hm-yes-str'; lbl = 'YES'; }
+        else if (mv === 'No')      { cls = 'hm-no-str';  lbl = 'NO'; }
+        else if (mv === 'Recused') { cls = 'hm-rec';     lbl = 'Recused'; }
+        else if (mv === 'Absent')  { cls = 'hm-abs';     lbl = 'Absent'; }
+        else if (mv === 'Vacant')  { cls = 'hm-vac';     lbl = 'Vacant'; }
+        const cellLink = v.minutesUrl ? `<a href="${v.minutesUrl}" target="_blank" rel="noopener" style="text-decoration:none;display:block">` : '';
+        const cellLinkEnd = v.minutesUrl ? '</a>' : '';
+        html += `<td>${cellLink}<div class="hm-cell ${cls}" title="${m.name}: ${mv||'Not on PC'}. Click to view minutes.">${lbl}</div>${cellLinkEnd}</td>`;
+      });
+      html += `<td class="hm-outcome ${v.outcome.toLowerCase()}" style="padding:5px 8px;white-space:nowrap">${v.outcome} ${v.tally}</td>`;
+      html += `</tr>`;
+    });
+
+    html += `</tbody></table></div>`;
   });
 
-  document.getElementById('heatmap-content').innerHTML = html ||
-    `<div class="empty-state"><p>No Planning Commission votes found for the selected filters.</p></div>`;
+  if (!html) html = `<div class="empty-state"><p>No Planning Commission votes for the selected filters.<br>More meetings being added — <a href="https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=30" target="_blank">view all PC minutes</a>.</p></div>`;
+  document.getElementById('heatmap-content').innerHTML = html;
 }
 
 function renderHeatmap() {
