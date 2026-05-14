@@ -108,26 +108,41 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 /* ─── Heatmap tab ───────────────────────────────────────────── */
 .heatmap-wrap{overflow-x:auto;margin-bottom:32px}
 .heatmap-title{font-size:15px;font-weight:700;color:var(--green-dark);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--green-border)}
-.heatmap-table{border-collapse:collapse;width:100%;min-width:700px}
-.heatmap-table th{padding:8px 10px;font-size:11px;font-weight:700;color:var(--text-mid);text-transform:uppercase;letter-spacing:.4px;white-space:nowrap;background:var(--white);border-bottom:2px solid var(--green-border);vertical-align:bottom}
-.heatmap-table th.name-col{text-align:left;min-width:200px;max-width:240px}
-.heatmap-table th.member-col{text-align:center;width:80px}
-.heatmap-table td{padding:7px 6px;border-bottom:1px solid var(--gray-100);vertical-align:middle}
+.heatmap-table{border-collapse:collapse;width:100%;min-width:700px;border-spacing:0}
+.heatmap-table td{padding:5px 4px;border-bottom:1px solid var(--gray-100);vertical-align:middle}
 .heatmap-table tr:hover td{background:rgba(23,61,52,.03)}
 .hm-vote-title{font-size:12px;font-weight:600;color:var(--text-dark);display:block;line-height:1.3}
 .hm-vote-meta{font-size:10px;color:var(--text-light);display:block;margin-top:1px}
-.hm-cell{width:44px;height:30px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;margin:0 auto;cursor:default;transition:transform .1s}
-.hm-cell:hover{transform:scale(1.15)}
-.hm-yes-str{background:#166534;color:#fff}
-.hm-yes-mid{background:#4ade80;color:#14532d}
-.hm-no-str{background:#991b1b;color:#fff}
-.hm-no-mid{background:#f87171;color:#7f1d1d}
-.hm-rec{background:#fde68a;color:#78350f}
-.hm-abs{background:var(--gray-200);color:var(--gray-500)}
-.hm-vac{background:var(--gray-100);color:var(--gray-300);border:1px dashed var(--gray-300)}
-.hm-nc{background:transparent;color:var(--gray-200)}/* not on council */
-.hm-outcome.passed{color:var(--green-dark);font-weight:700;font-size:11px}
-.hm-outcome.failed{color:var(--red-dark);font-weight:700;font-size:11px}
+.vote-col-th{text-align:left;min-width:200px;max-width:240px;padding:12px 10px;font-size:11px;font-weight:700;color:var(--text-mid);text-transform:uppercase;letter-spacing:.4px;background:var(--white);border-bottom:2px solid var(--green-border);vertical-align:bottom}
+.result-col-th{text-align:center;padding:12px 10px;font-size:11px;font-weight:700;color:var(--text-mid);text-transform:uppercase;letter-spacing:.4px;background:var(--white);border-bottom:2px solid var(--green-border);vertical-align:bottom;white-space:nowrap}
+
+/* Member name header */
+.hm-member-header{background:var(--green-dark);color:#fff;font-size:13px;font-weight:800;text-align:center;padding:14px 10px 12px;vertical-align:bottom;line-height:1.3;white-space:normal;min-width:90px;max-width:120px}
+.hm-member-header .mem-role{display:block;font-size:9px;font-weight:500;opacity:.6;text-transform:uppercase;letter-spacing:.4px;margin-top:4px}
+
+/* Stats summary row */
+.hm-stats-cell{text-align:center;padding:16px 10px 14px;vertical-align:middle}
+.hm-stats-cell .pct-num{font-size:30px;font-weight:900;display:block;line-height:1;color:#fff}
+.hm-stats-cell .pct-frac{display:block;font-size:12px;font-weight:700;color:rgba(255,255,255,.9);margin-top:5px}
+.hm-stats-cell .pct-maj{display:block;font-size:10.5px;font-weight:600;color:rgba(255,255,255,.75);margin-top:3px}
+.hm-stats-cell .pct-total{display:block;font-size:10px;color:rgba(255,255,255,.55);margin-top:3px}
+.stats-label-cell{font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.5px;padding:8px 10px;vertical-align:middle;background:var(--gray-100)}
+.hm-pct-high{background:#25845a}
+.hm-pct-mid-high{background:#3c7d5f}
+.hm-pct-mid{background:#7a6a3a}
+.hm-pct-low{background:#b5574a}
+
+/* Vote cells */
+.hm-cell{width:64px;height:36px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:10.5px;font-weight:700;margin:0 auto;cursor:default;transition:transform .1s;letter-spacing:.3px;text-transform:uppercase}
+.hm-cell:hover{transform:scale(1.08)}
+.hm-yes-str{background:#2f9c6c;color:#fff}
+.hm-no-str{background:#b5574a;color:#fff}
+.hm-rec{background:#c48a2e;color:#fff;font-size:9.5px}
+.hm-abs{background:#9ca3af;color:#fff}
+.hm-vac{background:#e5e7eb;color:#9ca3af;border:1px dashed #d1d5db;font-size:9px}
+.hm-nc{background:transparent;color:#e5e7eb}
+.hm-outcome.passed{color:var(--green-dark);font-weight:700;font-size:11px;white-space:nowrap}
+.hm-outcome.failed{color:#b5574a;font-weight:700;font-size:11px;white-space:nowrap}
 
 .heatmap-legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;align-items:center}
 .leg-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text-mid)}
@@ -220,12 +235,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <!-- ── Heatmap tab ───────────────────────────────────────── -->
     <div id="view-heatmap" style="display:none">
       <div class="heatmap-legend">
-        <div class="leg-item"><div class="leg-swatch hm-yes-str"></div> Yes</div>
-        <div class="leg-item"><div class="leg-swatch hm-no-str"></div> No</div>
+        <div class="leg-item"><div class="leg-swatch hm-yes-str"></div> YES</div>
+        <div class="leg-item"><div class="leg-swatch hm-no-str"></div> NO</div>
         <div class="leg-item"><div class="leg-swatch hm-rec"></div> Recused</div>
         <div class="leg-item"><div class="leg-swatch hm-abs"></div> Absent</div>
-        <div class="leg-item"><div class="leg-swatch hm-vac" style="border:1px dashed #d1d5db"></div> Vacant seat</div>
-        <div class="leg-item"><div class="leg-swatch" style="background:transparent;border:1px solid #e5e7eb"></div> Not on council</div>
+        <div class="leg-item"><div class="leg-swatch hm-vac" style="border:1px dashed #d1d5db;font-size:9px"></div> Vacant</div>
       </div>
       <div id="heatmap-content"></div>
     </div>
@@ -926,19 +940,17 @@ function renderHeatmap() {
   const yearSel = document.getElementById('filter-year').value;
   const catSel  = document.getElementById('filter-cat').value;
 
-  // Decide which eras to show
   const eras = yearSel === '2026'
-    ? [{label:'2026 Council', members:COUNCIL_2026, yearFilter:2026, late2025:false}]
+    ? [{label:'2026 Council', members:COUNCIL_2026, yearFilter:2026}]
     : yearSel === '2025'
     ? [{label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true},
        {label:'2025 Council (Nov–Dec transition)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true}]
-    : [{label:'2026 Council', members:COUNCIL_2026, yearFilter:2026, late2025:false},
+    : [{label:'2026 Council', members:COUNCIL_2026, yearFilter:2026},
        {label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true},
        {label:'2025 Council (Nov–Dec)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true}];
 
   let html = '';
   eras.forEach(era => {
-    // Filter votes for this era
     let eraVotes = VOTE_ITEMS.filter(v => {
       if (v.year !== era.yearFilter) return false;
       if (catSel && !v.tags.includes(catSel)) return false;
@@ -951,14 +963,58 @@ function renderHeatmap() {
 
     const mems = era.members.map(id => ALL_MEMBERS.find(m => m.id === id));
 
+    // ── Compute per-member summary stats ──────────────────────
+    const stats = {};
+    mems.forEach(m => {
+      let yes = 0, no = 0, total = 0, withMaj = 0;
+      eraVotes.forEach(v => {
+        const mv = v.votes[m.id];
+        if (mv === 'Yes' || mv === 'No') {
+          total++;
+          if (mv === 'Yes') yes++;
+          else no++;
+          const onWinningSide = (v.outcome === 'Passed' && mv === 'Yes') ||
+                                (v.outcome === 'Failed'  && mv === 'No');
+          if (onWinningSide) withMaj++;
+        }
+      });
+      stats[m.id] = { yes, no, total, withMaj };
+    });
+
+    // ── Helper: pct → color class ──────────────────────────────
+    function pctClass(pct) {
+      return pct >= 80 ? 'hm-pct-high' :
+             pct >= 60 ? 'hm-pct-mid-high' :
+             pct >= 40 ? 'hm-pct-mid' : 'hm-pct-low';
+    }
+
     html += `<div class="heatmap-wrap">
       <div class="heatmap-title">${era.label}</div>
       <table class="heatmap-table">
-        <thead><tr>
-          <th class="name-col">Vote</th>
-          ${mems.map(m => `<th class="member-col" style="color:${MEMBER_COLORS[m.id]}">${m.shortName}</th>`).join('')}
-          <th>Result</th>
-        </tr></thead>
+        <thead>
+          <!-- Row 1: member names -->
+          <tr>
+            <th class="vote-col-th">Vote</th>
+            ${mems.map(m => `<th class="hm-member-header">${m.name}<span class="mem-role">${m.title}</span></th>`).join('')}
+            <th class="result-col-th">Result</th>
+          </tr>
+          <!-- Row 2: summary stats per member -->
+          <tr>
+            <td class="stats-label-cell">Summary</td>
+            ${mems.map(m => {
+              const s = stats[m.id];
+              const pct    = s.total ? Math.round(s.yes / s.total * 100) : 0;
+              const majPct = s.total ? Math.round(s.withMaj / s.total * 100) : 0;
+              return `<td class="hm-stats-cell ${pctClass(pct)}">
+                <span class="pct-num">${pct}%</span>
+                <span class="pct-frac">${s.yes}/${s.total} Yes</span>
+                <span class="pct-maj">${majPct}% w/ majority</span>
+                <span class="pct-total">${s.total} votes cast</span>
+              </td>`;
+            }).join('')}
+            <td style="background:var(--gray-100)"></td>
+          </tr>
+        </thead>
         <tbody>`;
 
     eraVotes.forEach(v => {
@@ -973,15 +1029,15 @@ function renderHeatmap() {
         </td>`;
       mems.forEach(m => {
         const mv = v.votes[m.id];
-        let cls = 'hm-nc', lbl = '·';
-        if (mv === 'Yes')     { cls = 'hm-yes-str'; lbl = 'Y'; }
-        else if (mv === 'No') { cls = 'hm-no-str';  lbl = 'N'; }
-        else if (mv === 'Recused') { cls = 'hm-rec'; lbl = '⊘'; }
-        else if (mv === 'Absent')  { cls = 'hm-abs'; lbl = '–'; }
-        else if (mv === 'Vacant')  { cls = 'hm-vac'; lbl = '○'; }
+        let cls = 'hm-nc', lbl = '';
+        if      (mv === 'Yes')     { cls = 'hm-yes-str'; lbl = 'YES'; }
+        else if (mv === 'No')      { cls = 'hm-no-str';  lbl = 'NO'; }
+        else if (mv === 'Recused') { cls = 'hm-rec';     lbl = 'Recused'; }
+        else if (mv === 'Absent')  { cls = 'hm-abs';     lbl = 'Absent'; }
+        else if (mv === 'Vacant')  { cls = 'hm-vac';     lbl = 'Vacant'; }
         html += `<td><div class="hm-cell ${cls}" title="${m.name}: ${mv||'Not on Council'}">${lbl}</div></td>`;
       });
-      html += `<td class="hm-outcome ${v.outcome.toLowerCase()}">${v.outcome} ${v.tally}</td>`;
+      html += `<td class="hm-outcome ${v.outcome.toLowerCase()}" style="padding:5px 8px;white-space:nowrap">${v.outcome} ${v.tally}</td>`;
       html += `</tr>`;
     });
 
