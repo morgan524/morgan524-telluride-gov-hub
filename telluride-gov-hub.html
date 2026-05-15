@@ -4,53 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Telluride Region — Tell-Hub</title>
+  <!-- Preload the LCP hero image so it starts downloading immediately,
+       in parallel with the CSS/JS rather than waiting for layout. -->
+  <link rel="preload" as="image" href="hero-banner.jpeg" fetchpriority="high">
   <!-- Site styles (extracted) -->
-  <link rel="stylesheet" href="css/site.css?v=2026-05-09d-bigger-event-img">
+  <link rel="stylesheet" href="css/site.css?v=2026-05-14-perf">
   <!-- Hub-Bub forum styles (extracted) -->
   <link rel="stylesheet" href="css/hub-bub.css">
-<!-- Firebase SDK (modular, from CDN) -->
-<script type="module">
-  import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js';
-  import { getFirestore, collection, addDoc, setDoc, query, where, orderBy, onSnapshot, doc, updateDoc, deleteDoc, getDocs, increment, serverTimestamp, Timestamp }
-    from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js';
-  import { getAuth, signInWithEmailAndPassword, onAuthStateChanged }
-    from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js';
-
-  // ═══════════════════════════════════════════════════════
-  //  FIREBASE CONFIG — Replace with your own project config
-  //  1. Go to https://console.firebase.google.com
-  //  2. Create a project (or use an existing one)
-  //  3. Add a Web App → copy the firebaseConfig object here
-  //  4. Enable Firestore in the Firebase console
-  // ═══════════════════════════════════════════════════════
-  const firebaseConfig = {
-    apiKey: "AIzaSyCyAjB0RA_LtoETyRqxVJor0lRB4NRyXF0",
-    authDomain: "telluride-gov-hub.firebaseapp.com",
-    projectId: "telluride-gov-hub",
-    storageBucket: "telluride-gov-hub.firebasestorage.app",
-    messagingSenderId: "14117089764",
-    appId: "1:14117089764:web:4287985258f0bc929cd7f1",
-    measurementId: "G-PWNCF2PZQP"
-  };
-
-  // Expose to the global scope so the inline script can use it
-  try {
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-    const auth = getAuth(app);
-    window._FIREBASE_DB = db;
-    window._FIREBASE_AUTH = auth;
-    window._FB = { collection, addDoc, setDoc, query, where, orderBy, onSnapshot, doc, updateDoc, deleteDoc, getDocs, increment, serverTimestamp, Timestamp };
-    window._FB_AUTH = { signInWithEmailAndPassword, onAuthStateChanged };
-    window._FIREBASE_READY = true;
-    // Firebase Firestore initialized
-  } catch (e) {
-    window._FIREBASE_READY = false;
-    console.warn('Firebase not configured — comments will use localStorage fallback.', e.message);
-  }
-</script>
+<!-- Firebase is loaded via the compat-mode <script> tags at the end of the
+     body (one bundle: app + auth + firestore + storage). hub-bub.js
+     initializes the app there with the FIREBASE_CONFIG it owns. Other
+     consumers (js/gov-hub.js) defensively read firebase.firestore() / .auth()
+     via _ltFb() / _ltAuth() helpers — see js/gov-hub.js. Previously this
+     page also loaded the modular SDK 11.6.0 (separate ~200 KB bundle) but
+     that's been retired in favor of compat-only for size. -->
 <!-- EmailJS SDK for comment notification emails -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -2224,8 +2193,8 @@
     <button class="footer-correction-btn" id="correctionFab">✏️ See something wrong? Suggest a Correction</button>
   </div>
 
-<script src="js/gov-data.js?v=2026-05-08y-cowork-bundle"></script>
-<script src="js/gov-hub.js?v=2026-05-09f-150-words"></script>
+<script defer src="js/gov-data.js?v=2026-05-08y-cowork-bundle"></script>
+<script defer src="js/gov-hub.js?v=2026-05-14-reaction-uid"></script>
 
 <!-- ══════════ Events Around Me Modal ══════════ -->
 <div class="prox-modal-overlay" id="proxOverlay">
@@ -2254,7 +2223,7 @@
   </div>
 </div>
 
-<script src="js/events-proximity.js"></script>
+<script defer src="js/events-proximity.js"></script>
 
 <!-- ══════════ CORRECTION / FACT-CHECK MODAL ══════════ -->
 <div class="correction-overlay" id="correctionOverlay">
@@ -2298,7 +2267,7 @@
     <div class="correction-status" id="correctionStatusMsg"></div>
   </div>
 </div>
-<script src="js/corrections.js?v=2026-05-08y-cowork-bundle"></script>
+<script defer src="js/corrections.js?v=2026-05-08y-cowork-bundle"></script>
 <!-- ══════════ HUB-BUB AUTH MODAL ══════════ -->
 <div class="hb-modal-overlay" id="hbAuthModal">
   <div class="hb-modal">
@@ -2384,7 +2353,7 @@
     <span class="nav-label">More</span>
   </button>
 </nav>
-<script src="js/mobile-nav.js"></script>
+<script defer src="js/mobile-nav.js"></script>
 <!-- ══════════ Subscribe Modal ══════════ -->
 <div class="subscribe-modal-overlay" id="subscribeModalOverlay" onclick="if(event.target===this)closeSubscribeModal();">
   <div class="subscribe-modal">
@@ -2392,19 +2361,19 @@
     <div id="subscribeModalBody"></div>
   </div>
 </div>
-<script src="js/subscribe.js"></script>
+<script defer src="js/subscribe.js"></script>
 <!-- ══════════ FIREBASE SDK (compat mode for single-file simplicity) ══════════ -->
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
-<script src="js/community-pulse.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
+<script defer src="js/community-pulse.js"></script>
 <!-- Hub-Bub forum engine (extracted) -->
-<script src="js/hub-bub.js"></script>
+<script defer src="js/hub-bub.js"></script>
 <!-- ── Local Groups Filter ── -->
-<script src="js/local-groups.js"></script>
+<script defer src="js/local-groups.js"></script>
 <!-- Google Translate -->
-<script src="js/legal-standalone.js?v=20260401f"></script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script defer src="js/legal-standalone.js?v=20260401f"></script>
+<script async src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
