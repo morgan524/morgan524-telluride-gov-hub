@@ -1,9 +1,0 @@
-═══════════════════════════════════════════════
-  Telluride Gov Hub — Content Refresh
-  2026-05-15T14:39:41.412Z
-═══════════════════════════════════════════════
-  ✓ Cloudflare Worker /health OK (v1.0.0)
-Fatal error: Error: PROXY_HOSTS drift: the following hosts are in scripts/content-refresh.js but NOT in the Worker's ALLOWED_HOSTS: townofridgway.colorado.gov, www.townofridgway.colorado.gov. Add them to cloudflare-worker/livabletelluride-rss-proxy/worker.js and redeploy.
-    at checkWorkerHealth (/home/runner/work/morgan524-telluride-gov-hub/morgan524-telluride-gov-hub/scripts/content-refresh.js:303:13)
-    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
-    at async main (/home/runner/work/morgan524-telluride-gov-hub/morgan524-telluride-gov-hub/scripts/content-refresh.js:3686:3)

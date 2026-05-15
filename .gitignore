@@ -1,0 +1,23 @@
+# Workflow stdout logs — each .yml under .github/workflows/ pipes its
+# script output to <name>.log via `tee`, then uploads them as build
+# artifacts (see "Upload run logs" step). The `git add -A` commit step
+# that follows would otherwise sweep these into the commit. Keep them
+# out of the repo; the artifact upload preserves them for 14-30 days.
+build-rss-feed.log
+citation-audit.log
+content-refresh.log
+deep-dive.log
+festival-ticket-check.log
+housing-refresh.log
+maintenance.log
+smc-watch.log
+
+# NOTE: `maintenance-issues.log` is intentionally NOT ignored — it's
+# written by scripts/maintenance.js as a human-readable snapshot of
+# issues found during the daily run, and the workflow commits it so
+# the latest snapshot is browsable in the repo. Different intent than
+# the stdout logs above.
+
+# OS / editor scratch
+.DS_Store
+*.swp
