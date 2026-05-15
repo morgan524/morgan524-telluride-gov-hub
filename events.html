@@ -6,13 +6,29 @@
   <title>Community Events — Livable Telluride</title>
   <!--
     ┌─────────────────────────────────────────────────────────────────────┐
-    │ LOCAL PREVIEW FILE — DO NOT COMMIT/DEPLOY                           │
-    │ Standalone redesign of the Events tab. Mirrors local-news-redesign  │
-    │ visual language (same nav, hero, palette) but with town-based       │
-    │ filters, LEFT sidebar (Submit Event), 3-col event card grid, and    │
-    │ a bottom-of-page CTA strip.                                         │
+    │ Standalone Events page — wired to real data via js/data-only.js     │
+    │ (extracted from gov-hub.js on every 6h content-refresh).            │
     │                                                                     │
-    │ To update sample events: edit the EVENTS const at the bottom.       │
+    │ At page load, loadLiveEvents() at the bottom replaces the EVENTS    │
+    │ const with the merge of:                                            │
+    │   - WILKINSON_EVENTS              (Wilkinson Public Library)        │
+    │   - COMMUNITY_EVENTS              (hand-curated + email-to-events)  │
+    │   - KOTO_COMMUNITY_EVENTS         (KOTO Community Calendar)         │
+    │   - TELLURIDE_FOUNDATION_EVENTS   (Telluride Foundation)            │
+    │   - OURAY_COUNTY_EVENTS           (Ouray County iCal)               │
+    │   - OURAY_RIDGWAY_EVENTS          (Localist) — falls back to live   │
+    │   - NORWOOD_EVENTS                (Norwood Town sitemap)            │
+    │   - MOUNTAIN_VILLAGE_EVENTS       (MV community events)             │
+    │   - TELLURIDE_COM_EVENTS          (Telluride.com festivals/markets) │
+    │   - /community-events.json        (GitHub Issues + email-to-events) │
+    │                                                                     │
+    │ The hardcoded EVENTS array below is only used as a fallback if      │
+    │ data-only.js fails to load. Dedup is by 12-char title prefix +      │
+    │ first-3-words bag, paired with date (matches gov-hub.js logic).     │
+    │                                                                     │
+    │ Sources still TODO (live-fetched in gov-hub.js but not yet baked    │
+    │ into data-only.js): gov RSS, EcoAction, Alibi, Sheridan Opera       │
+    │ House, Elks, TJC, Telluride Times calendar, San Miguel Basin Forum. │
     └─────────────────────────────────────────────────────────────────────┘
   -->
   <style>
@@ -878,12 +894,21 @@
                  img: e.imageUrl || e.img || ''
                });
              };
-             // Source priority: originals first, aggregators last
+             // Source priority: originals first, aggregators last. Each source
+             // is guarded by `typeof X !== 'undefined'` so a missing array
+             // (e.g. extract-data-only.js skipped one) just drops that bucket
+             // without breaking the page.
              if (typeof WILKINSON_EVENTS !== 'undefined') WILKINSON_EVENTS.forEach(e => pushEvent(e, 'Wilkinson Library'));
              if (typeof COMMUNITY_EVENTS !== 'undefined') COMMUNITY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Community'));
-             if (typeof KOTO_COMMUNITY_EVENTS !== 'undefined') KOTO_COMMUNITY_EVENTS.forEach(e => pushEvent(e, 'KOTO'));
              if (typeof TELLURIDE_FOUNDATION_EVENTS !== 'undefined') TELLURIDE_FOUNDATION_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Telluride Foundation'));
              if (typeof OURAY_COUNTY_EVENTS !== 'undefined') OURAY_COUNTY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Ouray County'));
+             if (typeof NORWOOD_EVENTS !== 'undefined') NORWOOD_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Norwood'));
+             if (typeof MOUNTAIN_VILLAGE_EVENTS !== 'undefined') MOUNTAIN_VILLAGE_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Mountain Village'));
+             if (typeof TELLURIDE_COM_EVENTS !== 'undefined') TELLURIDE_COM_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Telluride.com'));
+             // KOTO Community Calendar is an aggregator — placed last so its
+             // copies of events already published by an original source drop
+             // out during dedup.
+             if (typeof KOTO_COMMUNITY_EVENTS !== 'undefined') KOTO_COMMUNITY_EVENTS.forEach(e => pushEvent(e, 'KOTO'));
 
              // ── Ridgway/Ouray Localist calendar ──
              const pushRidgwayLive = data => {
@@ -929,15 +954,33 @@
                }
              }
 
-             // Ridgway/Ouray Localist calendar — use baked array or live fetch
-             if (typeof OURAY_RIDGWAY_EVENTS !== 'undefined' && OURAY_RIDGWAY_EVENTS.length > 0) {
-               OURAY_RIDGWAY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Ouray/Ridgway'));
-               finishAndRender();
-             } else {
-               fetch('https://events.ourayridgwayevents.com/api/2/events?school=ridgwayouray&days=30&pp=50')
-                 .then(r => r.json()).then(pushRidgwayLive).catch(() => {})
-                 .finally(() => finishAndRender());
-             }
+             // Run the two async sources (Ridgway Localist + the
+             // community-events.json published by the email-to-events
+             // pipeline) in parallel. finishAndRender fires once both
+             // promises settle, so we render exactly once with the merged
+             // set rather than flickering.
+
+             const ridgwayP = (typeof OURAY_RIDGWAY_EVENTS !== 'undefined' && OURAY_RIDGWAY_EVENTS.length > 0)
+               ? Promise.resolve(OURAY_RIDGWAY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Ouray/Ridgway')))
+               : fetch('https://events.ourayridgwayevents.com/api/2/events?school=ridgwayouray&days=30&pp=50')
+                   .then(r => r.json()).then(pushRidgwayLive).catch(() => {});
+
+             // community-events.json is the email-to-events + GitHub Issues
+             // pipeline (content-refresh Task 5 → writes the file). 10-min
+             // cache buster keeps the page in sync without a hard refresh.
+             const communityJsonP = fetch('/community-events.json?v=' + Math.floor(Date.now()/600000))
+               .then(r => r.ok ? r.json() : [])
+               .then(arr => Array.isArray(arr) ? arr.forEach(e => pushEvent({
+                 title: e.title,
+                 pubDate: e.date,
+                 location: e.location || '',
+                 description: e.description || '',
+                 link: e.sourceUrl || e.link || '',
+                 imageUrl: e.imageUrl || ''
+               }, 'Submitted')) : null)
+               .catch(() => {});
+
+             Promise.allSettled([ridgwayP, communityJsonP]).finally(() => finishAndRender());
            } catch (err) { console.warn('loadLiveEvents failed:', err); }
        };
        s.onerror = () => console.warn('Could not load data-only.js for live events');

@@ -42,6 +42,13 @@ const TARGETS = [
   { kind: 'const',    name: 'TELLURIDE_FOUNDATION_EVENTS' },
   { kind: 'const',    name: 'OURAY_COUNTY_EVENTS' },
   { kind: 'const',    name: 'OURAY_RIDGWAY_EVENTS' },
+  // ── Additional event arrays the bot populates (added 2026-05-15 when
+  //    events.html was wired to read these too). If the bot ever stops
+  //    populating one of these (and the const becomes []), the events
+  //    page just shows fewer cards — no error. ──
+  { kind: 'const',    name: 'NORWOOD_EVENTS' },
+  { kind: 'const',    name: 'MOUNTAIN_VILLAGE_EVENTS' },
+  { kind: 'const',    name: 'TELLURIDE_COM_EVENTS' },
   { kind: 'const',    name: 'PAPER_LOGOS' },
   { kind: 'const',    name: 'LEGAL_ENTITY_LOGOS' },
   { kind: 'const',    name: 'LEGAL_NOTICES' },
