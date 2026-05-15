@@ -55,6 +55,18 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Upcoming TEF events are ‘by us, for us’",
+    source: "Telluride Times",
+    date: "May 15, 2026",
+    firstSeen: "2026-05-15",
+    newsTopic: "community",
+    copy: "Tyler, a local restaurant worker and parent, teamed up with Telluride Education Foundation president Hannah Richman to create fundraising events for the schools after seeing program cuts. The School Supper Club runs May 25-29 with participating restaurants like Cornerhouse, The National, and 221 South Oak donating proceeds, followed by Party in the Park featuring local bands, food vendors, and activities like a mechanical bull.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_1f48aede-d175-43bc-b798-8d9ecad4410f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/20/0206d206-c227-4ced-a75b-1a575f5e764a/6a064b51bf0d7.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "County stakeholders vote against accelerated housing",
     source: "Telluride Times",
     date: "May 14, 2026",
@@ -1176,17 +1188,6 @@ const COMMUNITY_EVENTS = [
 ];
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Up-off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-05-15/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-05-15T10:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
-  },
   {
     title: "San Miguel County Spring Clean Up",
     link: "https://koto.org/event/san-miguel-county-spring-clean-up/2026-05-15/",
