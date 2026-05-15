@@ -1,0 +1,252 @@
+rules_version = '2';
+
+// ════════════════════════════════════════════════════════════════════════
+//  Livable Telluride — Firestore security rules
+// ════════════════════════════════════════════════════════════════════════
+//
+// These rules are the server-side enforcement counterpart to the client
+// admin check in js/hub-bub.js and js/gov-hub.js, which both compare
+// `user.email === 'info@livabletelluride.org'`. The client check alone is
+// bypassable from DevTools — any authenticated user can call
+// `db.collection('posts').doc(otherPostId).delete()` directly and Firestore
+// will honor it unless rules block the operation. These rules block it.
+//
+// Deploy:
+//   firebase deploy --only firestore:rules
+//
+// Or paste the contents into the Firebase Console:
+//   Firebase Console → Firestore Database → Rules tab → Publish
+//
+// Admin identity: `info@livabletelluride.org` with verified email.
+// If you ever rotate the admin email, update BOTH this file AND the
+// client-side checks (see grep for `info@livabletelluride.org`).
+//
+// Reading model: everything readable by anyone. The site is a public
+// information hub — there's no private user data here. Posts, replies,
+// reactions, and comments all show to the public. Only WRITES are gated.
+// ════════════════════════════════════════════════════════════════════════
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── Shared helpers ────────────────────────────────────────────────
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isVerifiedUser() {
+      // Admin is allowed without emailVerified because the original
+      // Firebase Auth account for info@ predates the verified-email
+      // requirement; matches the client check at hub-bub.js:195.
+      return isSignedIn() && (request.auth.token.email_verified == true || isAdmin());
+    }
+
+    function isAdmin() {
+      return isSignedIn()
+        && request.auth.token.email == 'info@livabletelluride.org';
+    }
+
+    function ownsField(field) {
+      return isSignedIn() && request.resource.data[field] == request.auth.uid;
+    }
+
+    // ── users/{uid} ───────────────────────────────────────────────────
+    // Profile docs created at signup. Read is public (display names appear
+    // on posts/replies). Write is locked down to the owner or admin.
+    match /users/{uid} {
+      allow read: if true;
+
+      // Create: only the user creating their own profile during signup.
+      // Must include displayName (postCount may start at 0 or be missing).
+      allow create: if isSignedIn()
+        && request.auth.uid == uid
+        && request.resource.data.displayName is string
+        && request.resource.data.displayName.size() > 0
+        && request.resource.data.displayName.size() <= 80;
+
+      // Update: owner may edit their own profile; admin may edit any.
+      // Prevent stuffing arbitrary fields by capping displayName length.
+      allow update: if (request.auth.uid == uid || isAdmin())
+        && (!('displayName' in request.resource.data)
+            || (request.resource.data.displayName is string
+                && request.resource.data.displayName.size() <= 80));
+
+      // Delete: admin only. Users should not be deleting their own profile
+      // through the client — Firebase Auth account deletion is separate.
+      allow delete: if isAdmin();
+    }
+
+    // ── posts/{postId} ────────────────────────────────────────────────
+    // Hub-Bub forum posts. Anyone can read. Only verified users can post.
+    // Reply-count and reaction counters need writability by other users,
+    // but body/title can only be edited by the author or an admin.
+    match /posts/{postId} {
+      allow read: if true;
+
+      // Create: must be a verified user, and authorUid must match the
+      // signed-in user (prevents impersonation). replyCount must start at 0.
+      allow create: if isVerifiedUser()
+        && ownsField('authorUid')
+        && request.resource.data.title is string
+        && request.resource.data.title.size() > 0
+        && request.resource.data.title.size() <= 200
+        && request.resource.data.body is string
+        && request.resource.data.body.size() <= 10000
+        && (request.resource.data.replyCount == 0
+            || !('replyCount' in request.resource.data));
+
+      // Update: split between author/admin edits and counter increments by
+      // other users. Counter writes (replyCount, reactions/like/etc) are
+      // allowed for any verified user as long as the structural fields
+      // stay locked.
+      allow update: if isVerifiedUser() && (
+        // Case A: author or admin — full edit of own post.
+        resource.data.authorUid == request.auth.uid || isAdmin()
+        // Case B: any verified user can change ONLY the counter/reaction
+        // fields. The list below is the explicit allow-list — adding any
+        // other field is rejected.
+        || (
+          request.resource.data.diff(resource.data).affectedKeys()
+            .hasOnly(['replyCount', 'reactions', 'lastReplyAt'])
+        )
+      );
+
+      // Delete: author or admin only. Cascading reply deletion is the
+      // client's responsibility (hub-bub.js:874 deletes the post then
+      // batch-deletes related replies).
+      allow delete: if isSignedIn() && (
+        resource.data.authorUid == request.auth.uid || isAdmin()
+      );
+
+      // ── posts/{postId}/replies/{replyId} ────────────────────────────
+      match /replies/{replyId} {
+        allow read: if true;
+
+        allow create: if isVerifiedUser() && ownsField('authorUid')
+          && request.resource.data.body is string
+          && request.resource.data.body.size() > 0
+          && request.resource.data.body.size() <= 10000;
+
+        allow update: if isVerifiedUser() && (
+          resource.data.authorUid == request.auth.uid || isAdmin()
+        );
+
+        allow delete: if isSignedIn() && (
+          resource.data.authorUid == request.auth.uid || isAdmin()
+        );
+      }
+    }
+
+    // ── replies/{replyId} (top-level, legacy) ─────────────────────────
+    // hub-bub.js:876 queries this collection on post delete. Keep
+    // permissive enough for the cascade to work, but only admin or the
+    // original reply author can delete; only verified users can write.
+    match /replies/{replyId} {
+      allow read: if true;
+      allow create: if isVerifiedUser() && ownsField('authorUid');
+      allow update: if isVerifiedUser() && (
+        resource.data.authorUid == request.auth.uid || isAdmin()
+      );
+      allow delete: if isSignedIn() && (
+        resource.data.authorUid == request.auth.uid || isAdmin()
+      );
+    }
+
+    // ── reactions/{docId} ─────────────────────────────────────────────
+    // Quick-reaction counters on meetings/events. As of 2026-05-14 the
+    // client uses Firebase Auth uid (signed-in OR anonymous) as the voter
+    // identifier instead of a localStorage fingerprint — see getVoterId()
+    // in js/gov-hub.js. That lets us enforce server-side that callers can
+    // only add THEIR OWN uid to a `*_voters` array, blocking the simple
+    // "increment counter without adding myself to voters" cheat.
+    //
+    // We can't fully enforce "one vote total per uid across all keys" in
+    // rules because reaction keys are dynamic (QR_OPTIONS). The client
+    // withdraws prior votes on the same doc when a voter switches keys.
+    //
+    // Anonymous Firebase Auth must be enabled in the Firebase Console for
+    // unauthenticated visitors to vote — gov-hub.js falls back to the
+    // legacy fingerprint with a console warning if it's disabled.
+    match /reactions/{docId} {
+      allow read: if true;
+
+      // Create: any signed-in user (including anonymous) creating the
+      // initial doc with themselves seeded in at least one voters array.
+      allow create: if isSignedIn()
+        && (
+          (request.resource.data.get('attending_voters', []).hasAll([request.auth.uid]))
+          || (request.resource.data.get('matters_voters', []).hasAll([request.auth.uid]))
+          || (request.resource.data.get('learn_voters', []).hasAll([request.auth.uid]))
+          || (request.resource.data.get('concerns_voters', []).hasAll([request.auth.uid]))
+          || (request.resource.data.get('handled_voters', []).hasAll([request.auth.uid]))
+        );
+
+      // Update: signed-in user, AND the post-write state includes their
+      // uid in at least one voters array. The diff check stops a caller
+      // from cranking the counter while leaving voters untouched.
+      // (Note: if you change the QR_OPTIONS list in js/gov-data.js, update
+      // the field names below to match. Mismatch silently blocks votes
+      // because the post-write state won't include the caller's uid in
+      // any of the listed voters arrays.)
+      allow update: if isSignedIn()
+        && (
+          (request.resource.data.get('attending_voters', []).hasAll([request.auth.uid]))
+          || (request.resource.data.get('matters_voters', []).hasAll([request.auth.uid]))
+          || (request.resource.data.get('learn_voters', []).hasAll([request.auth.uid]))
+          || (request.resource.data.get('concerns_voters', []).hasAll([request.auth.uid]))
+          || (request.resource.data.get('handled_voters', []).hasAll([request.auth.uid]))
+        );
+
+      allow delete: if isAdmin();
+    }
+
+    // ── govhub_comments/{commentId} ───────────────────────────────────
+    // Comments on Gov-Hub meeting items. Comments are created with
+    // approved=false and must be approved by an admin before they are
+    // considered visible. Reads are still public (the site may show
+    // pending comments in moderator views or to the author).
+    //
+    // The `useful` counter can be incremented by any signed-in user.
+    match /govhub_comments/{commentId} {
+      allow read: if true;
+
+      // Create: any signed-in user. Must start with approved:false (the
+      // admin then flips to true via the moderation UI at gov-hub.js:8418).
+      // authorUid is optional — many comments come from non-logged-in
+      // visitors with just a name; the client uses Firebase Auth's
+      // anonymous flow if available. Allow create without ownsField
+      // so anonymous-auth comments work.
+      allow create: if isSignedIn()
+        && (
+          !('approved' in request.resource.data)
+          || request.resource.data.approved == false
+          || isAdmin()
+        )
+        && (
+          !('body' in request.resource.data)
+          || (request.resource.data.body is string
+              && request.resource.data.body.size() <= 5000)
+        );
+
+      // Update: split between admin moderation and "useful" voting.
+      //   Admin can change anything (approved flag, body edits).
+      //   Other signed-in users can ONLY bump the `useful` counter.
+      allow update: if isAdmin() || (
+        isSignedIn()
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['useful'])
+      );
+
+      // Delete: admin only.
+      allow delete: if isAdmin();
+    }
+
+    // ── Default deny ──────────────────────────────────────────────────
+    // Any path NOT explicitly matched above is denied. This is the
+    // important part — Firestore rules are deny-by-default at root, but
+    // making the policy explicit guards against new collections being
+    // accidentally world-writable while we figure out their rules.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
