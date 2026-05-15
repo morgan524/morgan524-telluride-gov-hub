@@ -59,10 +59,10 @@
     }
     .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
-    .topnav-links { display: flex; gap: 22px; margin-left: 28px; flex: 1; }
+    .topnav-links { display: flex; gap: 10px; margin-left: 12px; flex: 1; }
     .topnav-links a {
       color: var(--text-primary); text-decoration: none;
-      font-weight: 600; font-size: 0.95rem;
+      font-weight: 600; font-size: 0.82rem;
       padding: 6px 2px;
       border-bottom: 2px solid transparent;
       transition: color 0.15s, border-color 0.15s;
@@ -73,7 +73,7 @@
       display: inline-block;
       background: var(--forest); color: #fff;
       text-decoration: none;
-      padding: 9px 18px; border-radius: 999px;
+      padding: 8px 14px; border-radius: 999px;
       font-weight: 600; font-size: 0.9rem;
     }
 
@@ -440,17 +440,19 @@
 <body>
   <header class="topnav">
     <div class="topnav-inner">
-      <a class="topnav-logo" href="/v2/" aria-label="Livable Telluride home">
+      <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
         <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
       </a>
       <nav class="topnav-links">
-        <a href="/v2/local-news.html">Local News</a>
-        <a href="/v2/gov-hub.html">Gov-Hub</a>
-        <a href="/v2/events.html">Events</a>
-        <a href="/v2/local-orgs.html" class="active">Local Orgs</a>
-        <a href="/v2/housing.html">Housing</a>
-        <a href="/v2/legal-notices.html">Legal Notices</a>
-        <a href="/v2/about.html">About</a>
+        <a href="/gov-hub.html">Gov-Hub</a>
+        <a href="/local-news.html">Local News</a>
+        <a href="/deep-dives.html">Our News</a>
+        <a href="/events.html">Events</a>
+        <a href="/hub-bub.html">Hub-Bub</a>
+        <a href="/housing.html">Housing</a>
+        <a href="/legal-notices.html">Legal Notices</a>
+        <a href="/local-orgs.html" class="active">Local Orgs</a>
+        <a href="/about.html">About</a>
       </nav>
       <a class="topnav-cta" href="https://livabletelluride.org/#tab-subscribe">Subscribe</a>
     </div>
@@ -754,7 +756,7 @@
        re-render. Falls back silently to sample data on any failure. ───── */
     function loadLiveOrgs() {
       const s = document.createElement('script');
-      s.src = 'https://livabletelluride.org/js/gov-data.js?v=v2';
+      s.src = 'https://livabletelluride.org/js/gov-data.js?v=' + Math.floor(Date.now()/600000);
       s.onload = () => {
         try {
           if (typeof LOCAL_ORGS === 'undefined' || !Array.isArray(LOCAL_ORGS) || LOCAL_ORGS.length === 0) return;

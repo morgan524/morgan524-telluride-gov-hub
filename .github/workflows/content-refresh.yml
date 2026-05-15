@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
           node-version: '24'
 
@@ -39,6 +39,11 @@ jobs:
           RSS_PROXY_URL: ${{ secrets.RSS_PROXY_URL }}
           TT_AUTH_COOKIE: ${{ secrets.TT_AUTH_COOKIE }}
         run: node scripts/content-refresh.js 2>&1 | tee content-refresh.log
+
+      - name: Regenerate data-only.js from updated gov-hub.js
+        run: |
+          node scripts/extract-data-only.js
+        continue-on-error: true
 
       - name: Build RSS feed (feed.xml) for Mailchimp
         run: node scripts/build-rss-feed.js 2>&1 | tee build-rss-feed.log
@@ -62,6 +67,7 @@ jobs:
           git commit -m "🔄 Content refresh $(date -u +'%Y-%m-%d %H:%M UTC')
 
           Automated update: meeting summaries, news, community pulse, legal notices, events, deep dive topics"
+          git pull --rebase origin main
           git push
 
       # Always upload logs so we can debug after the fact (GH only retains

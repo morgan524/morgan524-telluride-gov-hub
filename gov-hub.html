@@ -32,11 +32,11 @@
     .topnav-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; gap: 24px; }
     .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--forest); font-family: var(--font-heading); font-weight: 700; font-size: 1.15rem; line-height: 1.1; }
     .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
-    .topnav-links { display: flex; gap: 22px; margin-left: 28px; flex: 1; }
-    .topnav-links a { color: var(--text-primary); text-decoration: none; font-weight: 600; font-size: 0.95rem; padding: 6px 2px; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
+    .topnav-links { display: flex; gap: 14px; margin-left: 16px; flex: 1; }
+    .topnav-links a { color: var(--text-primary); text-decoration: none; font-weight: 600; font-size: 0.82rem; padding: 6px 2px; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
     .topnav-links a:hover { color: var(--forest); }
     .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
-    .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
+    .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 8px 14px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
 
     /* ── Hero ── shared cream/warm overlay treatment, matches Local News */
     .hero {
@@ -253,8 +253,8 @@
       line-height: 1.25;
     }
     .meet-entity-logo {
-      width: 56px;
-      height: 56px;
+      width: 96px;
+      height: 96px;
       object-fit: contain;
       flex-shrink: 0;
       background: #fff;
@@ -291,17 +291,30 @@
       display: inline-block;
       background: var(--accent-green-soft);
       color: var(--forest);
-      padding: 7px 14px;
+      padding: 5px 11px;
       border-radius: 999px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.82rem;
+      font-size: 0.77rem;
       border: 1px solid var(--accent-green-border);
       transition: background 0.15s;
     }
     .btn-action:hover { background: rgba(47, 122, 95, 0.20); }
-    .btn-action.primary { background: var(--forest); color: #fff; border-color: var(--forest); }
-    .btn-action.primary:hover { background: var(--forest-soft); }
+    .btn-action.primary { background: var(--forest); color: #fff; border-color: var(--forest); font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.18); }
+    .btn-action.primary:hover { background: #1a332c; }
+    .btn-action.comment { background: var(--gold-soft); color: #7a5c10; border-color: rgba(181,138,44,0.35); }
+    .btn-action.comment:hover { background: rgba(181,138,44,0.26); }
+
+    /* Comment deadline note */
+    .comment-deadline {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+      padding: 6px 10px;
+      background: var(--bg-cream);
+      border-radius: 6px;
+      border-left: 3px solid var(--gold);
+    }
 
     /* Empty / loading state */
     .empty {
@@ -327,17 +340,18 @@
 <body>
   <header class="topnav">
     <div class="topnav-inner">
-      <a class="topnav-logo" href="/v2/" aria-label="Livable Telluride home">
+      <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
         <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
       </a>
       <nav class="topnav-links">
-        <a href="/v2/local-news.html">Local News</a>
-        <a href="/v2/gov-hub.html" class="active">Gov-Hub</a>
-        <a href="/v2/events.html">Events</a>
-        <a href="/v2/local-orgs.html">Local Orgs</a>
-        <a href="/v2/housing.html">Housing</a>
-        <a href="/v2/legal-notices.html">Legal Notices</a>
-        <a href="/v2/about.html">About</a>
+        <a href="/local-news.html">Local News</a>
+        <a href="/gov-hub.html" class="active">Gov-Hub</a>
+        <a href="/deep-dives.html">Deep Dives</a>
+        <a href="/events.html">Events</a>
+        <a href="/hub-bub.html">Hub-Bub</a>
+        <a href="/local-orgs.html">Local Orgs</a>
+        <a href="/housing.html">Housing</a>
+                <a href="/about.html">About</a>
       </nav>
       <a class="topnav-cta" href="https://livabletelluride.org/#tab-subscribe">Subscribe</a>
     </div>
@@ -348,10 +362,6 @@
       <h1>Government Hub</h1>
       <p>Public meetings, agendas, and AI-generated summaries from the entities that govern Telluride, Mountain Village, San Miguel County, Norwood, Ouray, Ridgway, and the special districts that serve our region.</p>
     </div>
-  </section>
-
-  <section class="chip-bar">
-    <div class="chip-bar-inner" id="chipRow"></div>
   </section>
 
   <main class="page-wrap">
@@ -393,7 +403,7 @@
         date: '2026-05-12', time: '6:00 PM',
         title: 'San Miguel County: Entrepreneurial Work Session',
         sourceKey: 'county', sourceLabel: 'San Miguel County',
-        entityLogo: 'https://livabletelluride.org/logo/SMC.png',
+        entityLogo: 'https://livabletelluride.org/logo/San%20Miguel%20County.png',
         category: 'Work Session',
         summary: 'Joint work session with Town Councils of Norwood and Ophir Sites on regional housing, land-use planning, emergency preparedness, and affordable-housing strategies.',
         location: 'County Annex • Telluride',
@@ -403,7 +413,7 @@
         date: '2026-05-13', time: '5:30 PM',
         title: 'Telluride Planning & Zoning Commission Meeting',
         sourceKey: 'telluride', sourceLabel: 'Town of Telluride',
-        entityLogo: 'https://livabletelluride.org/logo/Telluride.png',
+        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Town.png',
         category: 'Planning Commission',
         summary: 'Public hearing on a major lodging-redevelopment proposal at 200 W Pacific Ave; review of short-term rental enforcement updates; staff briefing on the Comprehensive Plan refresh.',
         location: 'Rebekah Hall • Telluride',
@@ -413,7 +423,7 @@
         date: '2026-05-14', time: '7:00 PM',
         title: 'Town of Telluride: Town Council',
         sourceKey: 'telluride', sourceLabel: 'Town of Telluride',
-        entityLogo: 'https://livabletelluride.org/logo/Telluride.png',
+        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Town.png',
         category: 'Council Meeting',
         summary: 'First reading of the FY2027 budget; discussion of Lawson Hill annexation timeline; public comment on parking-program changes; consent agenda routine items.',
         location: 'Rebekah Hall • Telluride',
@@ -423,7 +433,7 @@
         date: '2026-05-15', time: '8:30 AM',
         title: 'San Miguel County Board of Commissioners',
         sourceKey: 'county', sourceLabel: 'San Miguel County',
-        entityLogo: 'https://livabletelluride.org/logo/SMC.png',
+        entityLogo: 'https://livabletelluride.org/logo/San%20Miguel%20County.png',
         category: 'BOCC Meeting',
         summary: 'Quarterly review of the Open Space program; presentation from Public Health on regional vaccination clinics; discussion of regional broadband expansion grant applications.',
         location: 'County Courthouse • Telluride',
@@ -433,7 +443,7 @@
         date: '2026-05-19', time: '5:30 PM',
         title: 'Telluride R-1 School District: Board of Education',
         sourceKey: 'school', sourceLabel: 'Telluride School District',
-        entityLogo: 'https://livabletelluride.org/logo/School.png',
+        entityLogo: 'https://livabletelluride.org/logo/School%20District%20Telluride.png',
         category: 'School Board',
         summary: 'Adoption of the FY2027 budget; Superintendent’s report on enrollment projections; review of construction-bond project status; public comment.',
         location: 'TMHS Library • Telluride',
@@ -453,7 +463,7 @@
         date: '2026-05-21', time: '6:00 PM',
         title: 'Mountain Village Town Council',
         sourceKey: 'mv', sourceLabel: 'Mountain Village',
-        entityLogo: 'https://livabletelluride.org/logo/MV.png',
+        entityLogo: 'https://livabletelluride.org/logo/Mountain%20village%20Town.jpg',
         category: 'Council Meeting',
         summary: 'Second reading of short-term rental cap ordinance; review of Town Plaza activation pilot; staff update on Sunset Plaza redevelopment partner selection.',
         location: 'Town Hall • Mountain Village',
@@ -463,11 +473,21 @@
         date: '2026-05-26', time: '6:00 PM',
         title: 'Telluride Fire Protection District Board',
         sourceKey: 'fire', sourceLabel: 'Fire District',
-        entityLogo: 'https://livabletelluride.org/logo/Fire.png',
+        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Fire.png',
         category: 'Fire District',
         summary: 'Wildfire-season readiness briefing; review of mutual-aid agreements with Norwood and Ouray; budget amendment for new wildland engine procurement.',
         location: 'Telluride Fire Station',
         agendaUrl: 'https://www.telluridefire.org/'
+      },
+      {
+        date: '2026-05-20', time: '5:00 PM',
+        title: 'HARC Meeting',
+        sourceKey: 'telluride', sourceLabel: 'Town of Telluride',
+        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Town.png',
+        category: 'HARC Meeting',
+        summary: 'Worksessions on Carhenge (Lot L area sculpture installation) and Shandoka (proposed large-scale development on the west side of Telluride).',
+        location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
+        agendaUrl: 'https://telluride.civicweb.net/filepro/documents/6869'
       }
     ];
 
@@ -478,14 +498,16 @@
        only available via live RSS/API on the legacy single-page site). */
     const ENTITIES = [
       { key: 'all',       name: 'All Meetings',           logo: 'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png' },
-      { key: 'mv',        name: 'Mountain Village',       logo: 'https://livabletelluride.org/logo/MV.png' },
-      { key: 'county',    name: 'San Miguel County',      logo: 'https://livabletelluride.org/logo/SMC.png' },
-      { key: 'norwood',   name: 'Town of Norwood',        logo: 'https://livabletelluride.org/logo/Norwood.png' },
-      { key: 'school',    name: 'School District R-1',    logo: 'https://livabletelluride.org/logo/School.png' },
-      { key: 'fire',      name: 'Fire Protection',        logo: 'https://livabletelluride.org/logo/Fire.png' },
-      { key: 'med',       name: 'Telluride Medical',      logo: 'https://livabletelluride.org/logo/Medical.png' },
+      { key: 'mv',        name: 'Mountain Village',       logo: 'https://livabletelluride.org/logo/Mountain%20village%20Town.jpg' },
+      { key: 'county',    name: 'San Miguel County',      logo: 'https://livabletelluride.org/logo/San%20Miguel%20County.png' },
+      { key: 'ridgway',   name: 'Town of Ridgway',        logo: 'https://livabletelluride.org/logo/Ridgway%20Town.png' },
+      { key: 'norwood',   name: 'Town of Norwood',        logo: 'https://livabletelluride.org/logo/Norwood%20Town.jpeg' },
+      { key: 'school',    name: 'School District R-1',    logo: 'https://livabletelluride.org/logo/School%20District%20Telluride.png' },
+      { key: 'fire',      name: 'Fire Protection',        logo: 'https://livabletelluride.org/logo/Telluride%20Fire.png' },
+      { key: 'med',       name: 'Telluride Medical',      logo: 'https://livabletelluride.org/logo/Telluride%20Hospital%20Dist.jpeg' },
       { key: 'smart',     name: 'SMART Transit',          logo: 'https://livabletelluride.org/logo/SMART.png' },
-      { key: 'ophir',     name: 'Town of Ophir',          logo: 'https://livabletelluride.org/logo/Ophir.png' }
+      { key: 'ophir',     name: 'Town of Ophir',          logo: 'https://livabletelluride.org/logo/Ophir.jpeg' },
+      { key: 'telluride', name: 'Town of Telluride',      logo: 'https://livabletelluride.org/logo/Telluride%20Town.png' }
     ];
 
     let MEETINGS = SAMPLE_MEETINGS.slice();
@@ -493,7 +515,7 @@
 
     /* ── Render top chip filter bar (subset of sidebar entities) ── */
     function chipsHtml() {
-      const TOP_CHIPS = ['all', 'mv', 'county', 'norwood', 'school', 'fire', 'med', 'smart'];
+      const TOP_CHIPS = ['all', 'mv', 'telluride', 'county', 'norwood', 'school', 'fire', 'med', 'smart'];
       return TOP_CHIPS.map(key => {
         const e = ENTITIES.find(x => x.key === key);
         if (!e) return '';
@@ -519,6 +541,32 @@
       }).join('');
     }
 
+    /* ── Comment email map ── */
+    const COMMENT_MAP = {
+      telluride: { email: 'townclerk@telluride.gov',                      deadline: 'Written comments must be received by Wednesday at noon prior to the meeting.' },
+      'telluride-harc': { email: 'dcandelaria@telluride.gov',             deadline: 'Written comments should be submitted before the meeting. Contact the Historic Preservation Planner for agenda packets.' },
+      county:    { email: 'bocc@sanmiguelcountyco.gov',                   deadline: 'Written comments must be received by Monday at 4:00 pm prior to the meeting.' },
+      'county-planning': { email: 'planningcommission@sanmiguelcountyco.gov', deadline: 'Written comments must be received by Monday at 4:00 pm prior to the meeting.' },
+      mv:        { email: 'council@mtnvillage.org',                       deadline: 'Written comments must be received by Thursday prior to the meeting.' },
+      'mv-planning': { email: 'planning@mtnvillage.org',                  deadline: 'Written comments must be received by Thursday prior to the meeting.' },
+      fire:      { email: 'pdasaro@telluridefire.com',                    deadline: 'Written comments should be submitted 48 hours before the meeting.' },
+      med:       { email: 'wcrossland@tellmed.org',                       deadline: 'Written comments should be submitted 48 hours before the meeting.' },
+      norwood:   { email: 'cross@norwoodtown.com',                        deadline: 'Written comments should be submitted 48 hours before the meeting.' },
+      ophir:     { email: 'clerk@ophir.us',                               deadline: 'Written comments should be submitted 48 hours before the meeting.' },
+      airport:   { email: 'info@tellurideairport.com',                    deadline: 'Written comments may be submitted to the Airport Authority prior to the meeting.' },
+      smrha:     { email: 'admin@smrha.org',                              deadline: 'Written comments should be submitted prior to the meeting.' },
+    };
+
+    function commentInfo(m) {
+      const title = (m.title || '').toLowerCase();
+      let key = m.sourceKey;
+      // Detect planning/design-review sub-type for county and MV, and HARC for Telluride
+      if (key === 'county'    && /planning|design review/.test(title)) key = 'county-planning';
+      if (key === 'mv'        && /planning|design review/.test(title)) key = 'mv-planning';
+      if (key === 'telluride' && /harc|historic|architectural review/.test(title)) key = 'telluride-harc';
+      return COMMENT_MAP[key] || null;
+    }
+
     /* ── Render meeting cards ── */
     function fmtDateBadge(iso) {
       const d = new Date(iso + 'T00:00:00');
@@ -534,28 +582,42 @@
       const logo = m.entityLogo
         ? '<img class="meet-entity-logo" src="' + m.entityLogo + '" alt="' + (m.sourceLabel || '') + '" onerror="this.style.display=\'none\'">'
         : '';
-      const tag = m.category ? '<span class="meet-tag">' + m.category + '</span>' : '';
+      const tagLabel = /board/i.test(m.title || '') ? 'Board Meeting' : (m.category || '');
+      const tag = tagLabel ? '<span class="meet-tag">' + tagLabel + '</span>' : '';
       const summary = m.summary ? '<p class="meet-summary">' + m.summary + '</p>' : '';
       const loc = m.location ? '<span>📍 ' + m.location + '</span>' : '';
       const time = m.time ? '<span>🕐 ' + m.time + '</span>' : '';
       const meta = (loc || time) ? '<div class="meet-meta">' + time + loc + '</div>' : '';
       const agendaBtn = m.agendaUrl
-        ? '<a class="btn-action primary" href="' + m.agendaUrl + '" target="_blank" rel="noopener">View Agenda →</a>'
+        ? '<a class="btn-action' + (m.hasAgenda ? ' primary' : '') + '" href="' + m.agendaUrl + '" target="_blank" rel="noopener">View Agenda →</a>'
         : '';
       const recordBtn = m.recordingUrl
         ? '<a class="btn-action" href="' + m.recordingUrl + '" target="_blank" rel="noopener">Recording</a>'
         : '';
+
+      // Comment button
+      const ci = commentInfo(m);
+      let commentBtn = '';
+      let deadlineNote = '';
+      if (ci) {
+        const subject = encodeURIComponent('Written comments: ' + (m.title || 'Meeting') + ' — ' + (m.date || ''));
+        commentBtn = '<a class="btn-action comment" href="mailto:' + ci.email + '?subject=' + subject + '">✉️ Submit Comment</a>';
+        deadlineNote = '<div class="comment-deadline">📅 ' + ci.deadline + '</div>';
+      }
+
       return '<article class="meet-card">'
            + '<div class="meet-card-head">' + dateBadge
            + '<div class="meet-info">' + tag + '<h2 class="meet-title">' + m.title + '</h2></div>'
            + logo + '</div>'
            + summary + meta
-           + '<div class="meet-actions">' + agendaBtn + recordBtn + '</div>'
+           + '<div class="meet-actions">' + agendaBtn + recordBtn + commentBtn + '</div>'
+           + deadlineNote
            + '</article>';
     }
 
     function render() {
-      document.getElementById('chipRow').innerHTML = chipsHtml();
+      const chipRowEl = document.getElementById('chipRow');
+      if (chipRowEl) chipRowEl.innerHTML = chipsHtml();
       document.getElementById('entityList').innerHTML = entitiesHtml();
 
       const filtered = activeFilter === 'all'
@@ -574,7 +636,8 @@
           ev.preventDefault();
           activeFilter = el.dataset.filter;
           render();
-          window.scrollTo({ top: document.querySelector('.chip-bar').offsetTop - 70, behavior: 'smooth' });
+          const chipBar = document.querySelector('.chip-bar');
+          if (chipBar) window.scrollTo({ top: chipBar.offsetTop - 70, behavior: 'smooth' });
         });
       });
     }
@@ -589,10 +652,10 @@
 
 
       const dataScript = document.createElement('script');
-      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v2';
+      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=' + Math.floor(Date.now()/600000);
       dataScript.onload = () => {
         const s = document.createElement('script');
-        s.src = 'https://livabletelluride.org/js/data-only.js?v=v2';
+        s.src = 'https://livabletelluride.org/js/data-only.js?v=' + Math.floor(Date.now()/600000);
         s.onload = () => {
           try {
             // Stub AI_SUMMARIES so getMeetingSummary() doesn't throw.
@@ -602,14 +665,16 @@
             if (typeof AI_SUMMARIES === 'undefined') window.AI_SUMMARIES = {};
 
             const fetchers = [
-              ['getCountyCachedMeetings', 'county',    'San Miguel County',     'https://livabletelluride.org/logo/SMC.png'],
-              ['getMVMeetings',           'mv',        'Mountain Village',      'https://livabletelluride.org/logo/MV.png'],
-              ['getSchoolMeetings',       'school',    'School District R-1',   'https://livabletelluride.org/logo/School.png'],
-              ['getFireMeetings',         'fire',      'Fire District',         'https://livabletelluride.org/logo/Fire.png'],
-              ['getMedMeetings',          'med',       'Telluride Medical',     'https://livabletelluride.org/logo/Medical.png'],
-              ['getNorwoodMeetings',      'norwood',   'Town of Norwood',       'https://livabletelluride.org/logo/Norwood.png'],
-              ['getOphirMeetings',        'ophir',     'Town of Ophir',         'https://livabletelluride.org/logo/Ophir.png'],
-              ['getSmartMeetings',        'smart',     'SMART',                 'https://livabletelluride.org/logo/SMART.png']
+              ['getCountyCachedMeetings', 'county',    'San Miguel County',     'https://livabletelluride.org/logo/San%20Miguel%20County.png'],
+              ['getMVMeetings',           'mv',        'Mountain Village',      'https://livabletelluride.org/logo/Mountain%20village%20Town.jpg'],
+              ['getSchoolMeetings',       'school',    'School District R-1',   'https://livabletelluride.org/logo/School%20District%20Telluride.png'],
+              ['getFireMeetings',         'fire',      'Fire District',         'https://livabletelluride.org/logo/Telluride%20Fire.png'],
+              ['getMedMeetings',          'med',       'Telluride Medical',     'https://livabletelluride.org/logo/Telluride%20Hospital%20Dist.jpeg'],
+              ['getRidgwayMeetings',      'ridgway',   'Town of Ridgway',       'https://livabletelluride.org/logo/Ridgway%20Town.png'],
+              ['getNorwoodMeetings',      'norwood',   'Town of Norwood',       'https://livabletelluride.org/logo/Norwood%20Town.jpeg'],
+              ['getOphirMeetings',        'ophir',     'Town of Ophir',         'https://livabletelluride.org/logo/Ophir.jpeg'],
+              ['getSmartMeetings',        'smart',     'SMART',                 'https://livabletelluride.org/logo/SMART.png'],
+              ['getTellurideMeetings',    'telluride', 'Town of Telluride',     'https://livabletelluride.org/logo/Telluride%20Town.png']
             ];
             const live = [];
             const today = new Date(); today.setHours(0,0,0,0);
@@ -630,11 +695,12 @@
                     sourceKey: key,
                     sourceLabel: m.sourceLabel || label,
                     entityLogo: logo,
-                    category: m.category || 'Meeting',
+                    category: /board/i.test(m.title || '') ? 'Board Meeting' : (m.category || 'Meeting'),
                     summary: (typeof getMeetingSummary === 'function' ? (getMeetingSummary(m) || '') : '')
                              || (m.description || ''),
                     location: m.location || '',
-                    agendaUrl: m.agendaLink || m.link || ''
+                    agendaUrl: m.agendaLink || m.link || '',
+                    hasAgenda: !!m.hasAgenda
                   });
                 });
               } catch (e) { console.warn(name + ' failed:', e); }

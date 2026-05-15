@@ -1,0 +1,2564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telluride Town Council — Vote Tracker</title>
+<style>
+/* ─── Base ─────────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green-dark:#173d34;
+  --green-mid:#1f6f54;
+  --green-light:#2a9468;
+  --green-pale:#e8f4f0;
+  --green-border:#c2ddd6;
+  --text-dark:#1a2420;
+  --text-mid:#3d5249;
+  --text-light:#6b8c82;
+  --bg:#f5f9f7;
+  --white:#ffffff;
+  --red-dark:#9f3f36;
+  --red-mid:#c0544a;
+  --red-pale:#fdf0ef;
+  --amber:#b45309;
+  --amber-pale:#fef3c7;
+  --gray-100:#f3f4f6;
+  --gray-200:#e5e7eb;
+  --gray-300:#d1d5db;
+  --gray-500:#6b7280;
+  --gray-700:#374151;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text-dark);font-size:14px;line-height:1.5}
+
+/* ─── Header ────────────────────────────────────────────────── */
+.page-header{background:var(--green-dark);color:#fff;padding:18px 24px;display:flex;align-items:center;gap:16px}
+.page-header h1{font-size:20px;font-weight:700;letter-spacing:-.3px}
+.page-header .sub{font-size:12px;opacity:.7;margin-top:2px}
+.back-link{color:#fff;text-decoration:none;opacity:.7;font-size:13px;margin-right:8px;white-space:nowrap}
+.back-link:hover{opacity:1}
+
+/* ─── Top bar / tab nav ─────────────────────────────────────── */
+.topbar{background:var(--white);border-bottom:2px solid var(--green-border);display:flex;align-items:center;padding:0 24px;gap:4px}
+.tab-btn{padding:14px 20px;font-size:13px;font-weight:600;cursor:pointer;border:none;background:none;color:var(--text-light);border-bottom:3px solid transparent;margin-bottom:-2px;transition:color .15s,border-color .15s}
+.tab-btn.active{color:var(--green-dark);border-bottom-color:var(--green-dark)}
+.tab-btn:hover:not(.active){color:var(--text-mid)}
+.stats-bar{margin-left:auto;display:flex;gap:20px;align-items:center;padding:8px 0}
+.stat{text-align:right}
+.stat .val{font-size:18px;font-weight:700;color:var(--green-dark);display:block;line-height:1}
+.stat .lbl{font-size:10px;color:var(--text-light);text-transform:uppercase;letter-spacing:.5px}
+
+/* ─── Layout ────────────────────────────────────────────────── */
+.layout{display:flex;min-height:calc(100vh - 110px)}
+.sidebar{width:280px;min-width:280px;background:var(--white);border-right:1px solid var(--green-border);padding:20px;overflow-y:auto}
+.main{flex:1;padding:20px 24px;overflow-x:hidden}
+
+/* ─── Sidebar controls ──────────────────────────────────────── */
+.filter-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--text-light);margin-bottom:8px;display:block}
+.search-box{width:100%;padding:8px 10px;border:1px solid var(--gray-300);border-radius:6px;font-size:13px;outline:none;background:var(--gray-100);margin-bottom:16px}
+.search-box:focus{border-color:var(--green-light);background:#fff;box-shadow:0 0 0 3px rgba(42,148,104,.12)}
+.filter-group{margin-bottom:18px}
+.filter-select{width:100%;padding:7px 10px;border:1px solid var(--gray-300);border-radius:6px;font-size:13px;background:#fff;outline:none;cursor:pointer}
+.filter-select:focus{border-color:var(--green-light)}
+
+.member-filter{display:flex;flex-direction:column;gap:5px}
+.member-chip{display:flex;align-items:center;gap:7px;padding:5px 8px;border-radius:5px;cursor:pointer;transition:background .1s;font-size:12px;color:var(--text-mid)}
+.member-chip:hover{background:var(--gray-100)}
+.member-chip input{accent-color:var(--green-dark);width:13px;height:13px;cursor:pointer}
+.member-chip .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+
+.clear-btn{width:100%;padding:7px;border:1px solid var(--gray-300);border-radius:6px;background:#fff;font-size:12px;color:var(--text-mid);cursor:pointer;margin-top:4px}
+.clear-btn:hover{background:var(--gray-100)}
+
+.result-count{font-size:12px;color:var(--text-light);margin-bottom:16px}
+
+/* ─── Vote cards (Tracker tab) ──────────────────────────────── */
+.meeting-group{margin-bottom:28px}
+.meeting-header{display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--green-border)}
+.meeting-header h3{font-size:13px;font-weight:700;color:var(--green-dark);text-transform:uppercase;letter-spacing:.4px}
+.meeting-header .min-link{font-size:11px;color:var(--green-light);text-decoration:none;margin-left:auto;white-space:nowrap}
+.meeting-header .min-link:hover{text-decoration:underline}
+
+.vote-card{background:var(--white);border:1px solid var(--green-border);border-radius:8px;margin-bottom:10px;overflow:hidden;transition:box-shadow .15s}
+.vote-card:hover{box-shadow:0 2px 8px rgba(23,61,52,.1)}
+.vote-card-top{display:flex;align-items:flex-start;gap:12px;padding:12px 14px}
+.vote-num{font-size:11px;color:var(--text-light);font-weight:600;flex-shrink:0;padding-top:1px}
+.vote-info{flex:1;min-width:0}
+.vote-title{font-size:14px;font-weight:600;color:var(--text-dark);line-height:1.3;margin-bottom:4px}
+.vote-desc{font-size:12px;color:var(--text-mid);line-height:1.4}
+.vote-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0}
+.outcome-badge{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.3px;white-space:nowrap}
+.outcome-badge.passed{background:var(--green-pale);color:var(--green-dark);border:1px solid var(--green-border)}
+.outcome-badge.failed{background:var(--red-pale);color:var(--red-dark);border:1px solid #f5c6c2}
+.tally{font-size:13px;font-weight:700;color:var(--text-mid)}
+
+.vote-pills{display:flex;flex-wrap:wrap;gap:5px;padding:0 14px 12px}
+.pill{display:inline-flex;align-items:center;gap:3px;padding:3px 8px;border-radius:12px;font-size:11px;font-weight:600;white-space:nowrap;line-height:1.2}
+.pill .name{font-weight:400}
+.pill.yes{background:#dcfce7;color:#166534;border:1px solid #bbf7d0}
+.pill.no{background:#fee2e2;color:#991b1b;border:1px solid #fecaca}
+.pill.recused{background:#fef3c7;color:#92400e;border:1px solid #fde68a}
+.pill.absent{background:var(--gray-100);color:var(--gray-500);border:1px solid var(--gray-200)}
+.pill.vacant{background:#f3f4f6;color:#9ca3af;border:1px dashed #d1d5db}
+.pill.notoncil{display:none} /* hide non-council members from pill view */
+
+.vote-tags{display:flex;flex-wrap:wrap;gap:4px;padding:0 14px 10px}
+.tag{padding:2px 7px;border-radius:4px;font-size:10px;font-weight:600;background:var(--green-pale);color:var(--green-dark);letter-spacing:.3px}
+
+/* ─── Heatmap tab ───────────────────────────────────────────── */
+.heatmap-wrap{overflow-x:auto;margin-bottom:32px}
+.heatmap-title{font-size:15px;font-weight:700;color:var(--green-dark);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--green-border)}
+.heatmap-table{border-collapse:collapse;width:100%;min-width:700px;border-spacing:0}
+.heatmap-table td{padding:5px 4px;border-bottom:1px solid var(--gray-100);vertical-align:middle}
+.heatmap-table tr:hover td{background:rgba(23,61,52,.03)}
+.hm-vote-title{font-size:12px;font-weight:600;color:var(--text-dark);display:block;line-height:1.3}
+.hm-vote-meta{font-size:10px;color:var(--text-light);display:block;margin-top:1px}
+.vote-col-th{text-align:left;min-width:200px;max-width:240px;padding:12px 10px;font-size:11px;font-weight:700;color:var(--text-mid);text-transform:uppercase;letter-spacing:.4px;background:var(--white);border-bottom:2px solid var(--green-border);vertical-align:bottom}
+.result-col-th{text-align:center;padding:12px 10px;font-size:11px;font-weight:700;color:var(--text-mid);text-transform:uppercase;letter-spacing:.4px;background:var(--white);border-bottom:2px solid var(--green-border);vertical-align:bottom;white-space:nowrap}
+
+/* Member name header */
+.hm-member-header{background:var(--green-dark);color:#fff;font-size:13px;font-weight:800;text-align:center;padding:14px 10px 12px;vertical-align:bottom;line-height:1.3;white-space:normal;min-width:90px;max-width:120px}
+.hm-member-header .mem-role{display:block;font-size:9px;font-weight:500;opacity:.6;text-transform:uppercase;letter-spacing:.4px;margin-top:4px}
+
+/* Stats summary row */
+.hm-stats-cell{text-align:center;padding:16px 10px 14px;vertical-align:middle}
+.hm-stats-cell .pct-num{font-size:30px;font-weight:900;display:block;line-height:1;color:#fff}
+.hm-stats-cell .pct-frac{display:block;font-size:12px;font-weight:700;color:rgba(255,255,255,.9);margin-top:5px}
+.hm-stats-cell .pct-maj{display:block;font-size:10.5px;font-weight:600;color:rgba(255,255,255,.75);margin-top:3px}
+.hm-stats-cell .pct-total{display:block;font-size:10px;color:rgba(255,255,255,.55);margin-top:3px}
+.stats-label-cell{font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.5px;padding:8px 10px;vertical-align:middle;background:var(--gray-100)}
+.hm-pct-high{background:#25845a}
+.hm-pct-mid-high{background:#3c7d5f}
+.hm-pct-mid{background:#7a6a3a}
+.hm-pct-low{background:#b5574a}
+
+/* Vote cells */
+.hm-cell{width:64px;height:36px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:10.5px;font-weight:700;margin:0 auto;cursor:pointer;transition:transform .1s,opacity .1s;letter-spacing:.3px;text-transform:uppercase}.hm-cell:hover{opacity:.82;transform:scale(1.06)}
+.hm-cell:hover{transform:scale(1.08)}
+.hm-yes-str{background:#2f9c6c;color:#fff}
+.hm-no-str{background:#b5574a;color:#fff}
+.hm-rec{background:#c48a2e;color:#fff;font-size:9.5px}
+.hm-abs{background:#9ca3af;color:#fff}
+.hm-vac{background:#e5e7eb;color:#9ca3af;border:1px dashed #d1d5db;font-size:9px}
+.hm-nc{background:transparent;color:#e5e7eb}
+.hm-outcome.passed{color:var(--green-dark);font-weight:700;font-size:11px;white-space:nowrap}
+.hm-outcome.failed{color:#b5574a;font-weight:700;font-size:11px;white-space:nowrap}
+
+.hm-cat-bar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.hm-cat-btn{padding:5px 13px;border-radius:20px;border:1px solid var(--green-border);background:var(--white);color:var(--text-mid);font-size:12px;font-weight:500;cursor:pointer;transition:background .12s,color .12s,border-color .12s;white-space:nowrap}
+.hm-cat-btn:hover{background:var(--green-pale);border-color:var(--green-light);color:var(--green-dark)}
+.hm-cat-btn.active{background:var(--green-dark);border-color:var(--green-dark);color:#fff;font-weight:600}
+/* ─── Heatmap view-toggle (Issue vs Category) ──────────────── */
+.hm-view-toggle{display:flex;gap:8px;margin-bottom:14px}
+.hm-view-btn{padding:6px 18px;border-radius:20px;border:1px solid var(--green-border);background:var(--white);color:var(--text-mid);font-size:13px;font-weight:500;cursor:pointer;transition:background .12s,color .12s,border-color .12s}
+.hm-view-btn:hover{background:var(--green-pale);border-color:var(--green-light);color:var(--green-dark)}
+.hm-view-btn.active{background:var(--green-dark);border-color:var(--green-dark);color:#fff;font-weight:700}
+
+/* ─── Category-aggregation cells ────────────────────────────── */
+.hm-cat-cell{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:80px;min-height:72px;border-radius:6px;padding:6px 8px;font-weight:700;line-height:1.2}
+.hm-cat-cell .cat-label{font-size:22px;letter-spacing:.5px}
+.hm-cat-cell .cat-counts{font-size:26px;font-weight:800}
+.hm-cat-cell.yes-dom{background:#2f9c6c;color:#fff}
+.hm-cat-cell.no-dom{background:#b5574a;color:#fff}
+.hm-cat-cell.tied{background:#c48a2e;color:#fff}
+.hm-cat-cell.none{background:transparent;color:#e5e7eb}
+
+.heatmap-legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;align-items:center}
+.leg-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text-mid)}
+.leg-swatch{width:18px;height:18px;border-radius:3px}
+
+/* ─── Empty state ───────────────────────────────────────────── */
+.empty-state{text-align:center;padding:60px 20px;color:var(--text-light)}
+.empty-state svg{opacity:.3;margin-bottom:12px}
+.empty-state p{font-size:14px}
+
+/* ─── Responsive ────────────────────────────────────────────── */
+@media(max-width:720px){
+  .sidebar{display:none}
+  .main{padding:14px 16px}
+  .stats-bar{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ─── Page Header ─────────────────────────────────────────── -->
+<header class="page-header">
+  <a href="/v2/gov-hub.html" class="back-link">← Gov Hub</a>
+  <div>
+    <h1>Town Council — Vote Tracker</h1>
+    <div class="sub">Telluride, Colorado · 2024–2026 · Data from official adopted minutes</div>
+  </div>
+</header>
+
+<!-- ─── Tab bar + stats ─────────────────────────────────────── -->
+<div class="topbar">
+  <div class="stats-bar">
+    <div class="stat"><span class="val" id="stat-votes">—</span><span class="lbl">Votes</span></div>
+    <div class="stat"><span class="val" id="stat-split">—</span><span class="lbl">Split</span></div>
+    <div class="stat"><span class="val" id="stat-failed">—</span><span class="lbl">Failed</span></div>
+  </div>
+</div>
+
+<!-- ─── Main layout ─────────────────────────────────────────── -->
+<div class="layout">
+
+  <!-- Sidebar filters -->
+  <aside class="sidebar">
+    <div class="filter-group">
+      <label class="filter-label">Entity</label>
+      <select class="filter-select" id="filter-entity" onchange="switchEntity()">
+        <option value="telluride">Town of Telluride</option>
+        <option value="bocc">County BOCC</option>
+        <option value="planning">County Planning</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label class="filter-label">Year</label>
+      <select class="filter-select" id="filter-year" onchange="renderHeatmap()">
+        <option value="">All years</option>
+        <option value="2026">2026</option>
+        <option value="2025">2025</option>
+        <option value="2024">2024</option>
+      </select>
+    </div>
+  </aside>
+
+  <!-- Main content (two tabs) -->
+  <main class="main">
+
+    <!-- ── Heatmap ─────────────────────────────────────────────── -->
+    <div id="view-heatmap">
+
+      <!-- View toggle -->
+      <div class="hm-view-toggle">
+        <button class="hm-view-btn active" id="hm-btn-issue" onclick="setHmView('issue')">Votes by Issue</button>
+        <button class="hm-view-btn" id="hm-btn-category" onclick="setHmView('category')">Votes by Category</button>
+      </div>
+
+
+      <div class="heatmap-legend">
+        <div class="leg-item"><div class="leg-swatch hm-yes-str"></div> YES</div>
+        <div class="leg-item"><div class="leg-swatch hm-no-str"></div> NO</div>
+        <div class="leg-item"><div class="leg-swatch hm-rec"></div> Recused</div>
+        <div class="leg-item"><div class="leg-swatch hm-abs"></div> Absent</div>
+        <div class="leg-item"><div class="leg-swatch hm-vac" style="border:1px dashed #d1d5db;font-size:9px"></div> Vacant</div>
+      </div>
+      <div id="heatmap-content"></div>
+    </div>
+
+  </main>
+</div>
+
+<script>
+/* ══════════════════════════════════════════════════════════════
+   DATA
+══════════════════════════════════════════════════════════════ */
+
+// Member colors for pill dots
+const MEMBER_COLORS = {
+  errico:    '#173d34',
+  fee:       '#2a7a5e',
+  arguelles: '#7c3aed',
+  enright:   '#1d4ed8',
+  shaunette: '#be185d',
+  levin:     '#b45309',
+  svs:       '#0f766e',
+  permakoff: '#9333ea',
+  stark:     '#0369a1',
+};
+
+// All unique members across 2025–2026
+const ALL_MEMBERS = [
+  { id:'errico',    name:'Teddy Errico',              shortName:'Errico',     title:'Mayor' },
+  { id:'fee',       name:'Meehan Fee',                shortName:'Fee',        title:'Mayor Pro Tem (until Jan 2026)' },
+  { id:'arguelles', name:'Jessie Rae Arguelles',      shortName:'Arguelles',  title:'Councilperson (2025)' },
+  { id:'enright',   name:'Dan Enright',               shortName:'Enright',    title:'Councilperson' },
+  { id:'shaunette', name:'Geneva Shaunette',          shortName:'Shaunette',  title:'Councilperson (2025)' },
+  { id:'levin',     name:'Elena Levin',               shortName:'Levin',      title:'Councilperson → Mayor Pro Tem' },
+  { id:'svs',       name:'Ashley Story Von Spreecken',shortName:'SVS',        title:'Councilperson' },
+  { id:'permakoff', name:'Kristen Permakoff',         shortName:'Permakoff',  title:'Councilperson (Nov 2025+)' },
+  { id:'stark',     name:'Marya Stark',               shortName:'Stark',      title:'Councilperson (Dec 2025+)' },
+];
+
+// Council composition by era (for heatmap column selection)
+const COUNCIL_2025_EARLY  = ['errico','fee','arguelles','enright','shaunette','levin','svs'];
+const COUNCIL_2025_LATE   = ['errico','fee','enright','levin','svs','permakoff','stark'];
+const COUNCIL_2024        = ['errico','fee','arguelles','enright','shaunette','levin','svs'];
+const COUNCIL_2026        = ['errico','fee','enright','levin','permakoff','stark','svs'];
+/* ─── BOCC member roster ─────────────────────────────────────── */
+const BOCC_ALL_MEMBERS = [
+  { id:'brown',    name:'Anne Brown',     shortName:'Brown',    title:'District 1 Commissioner' },
+  { id:'waring',   name:'Lance Waring',   shortName:'Waring',   title:'District 2 Commissioner' },
+  { id:'holstrom', name:'Kris Holstrom',  shortName:'Holstrom', title:'District 3 Commissioner (2024)' },
+  { id:'gleason',  name:'Galena Gleason', shortName:'Gleason',  title:'District 3 Commissioner (2025+)' },
+];
+const BOCC_2024 = ['brown', 'waring', 'holstrom'];
+const BOCC_2025 = ['brown', 'waring', 'gleason'];
+
+/* ─── BOCC vote items (2024) ─────────────────────────────────── */
+// Source: San Miguel County BOCC meeting minutes via Granicus / CivicClerk
+// votes: member-id → 'Yes'|'No'|'Recused'|'Absent'|'Vacant'
+const BOCC_VOTE_ITEMS = [
+
+  /* ══ 2024 ══════════════════════════════════════════════════ */
+
+  // Jan 17, 2024 — All commissioners present (3-0)
+  {
+    id:'bv2024-28', date:'2024-01-17', year:2024,
+    meeting:'BOCC — Jan 17, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/695/files',
+    title:'Society Turn PUD Extension — Genesee Properties',
+    description:'Motion to extend the Society Turn Planned Unit Development for Genesee Properties. Motion by Holstrom, seconded by Brown. Passed 3-0.',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+
+  // Aug 21, 2024 — All commissioners present (3-0)
+  {
+    id:'bv2024-01', date:'2024-08-21', year:2024,
+    meeting:'BOCC — Aug 21, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Resolution 2024-27: Admin Policy Manual Update (Indemnification)',
+    tags:['Policy'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-02', date:'2024-08-21', year:2024,
+    meeting:'BOCC — Aug 21, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Resolution 2024-28: Defense & Indemnification of Sheriff Masters',
+    tags:['Legal'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-03', date:'2024-08-21', year:2024,
+    meeting:'BOCC — Aug 21, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Resolution 2024-29: Defense & Indemnification of County Staff (Friedrich / Ji)',
+    tags:['Legal'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-04', date:'2024-08-21', year:2024,
+    meeting:'BOCC — Aug 21, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Resolution 2024-30: Ethics / Rule of Professional Conduct',
+    tags:['Policy'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-05', date:'2024-08-21', year:2024,
+    meeting:'BOCC — Aug 21, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Resolution 2024-31: Ambulance Services Authorization Opt-Out',
+    tags:['Health & Human Services'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-06', date:'2024-08-21', year:2024,
+    meeting:'BOCC — Aug 21, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'The Shed Youth Hangout: $45,860 Contribution to VooDoo Property Renovation',
+    tags:['Community', 'Budget & Finance'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-07', date:'2024-08-21', year:2024,
+    meeting:'BOCC — Aug 21, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'ECE & Mental Health Fund Backfill (SB 22-238 Distribution)',
+    tags:['Health & Human Services', 'Budget & Finance'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+
+  // Jul 10, 2024 — Waring absent (2-0 throughout)
+  {
+    id:'bv2024-07a', date:'2024-07-10', year:2024,
+    meeting:'BOCC — Jul 10, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Term Limits Ballot Question — Nov 2024 Election (Commissioner Term Limits)',
+    description:'Approved ballot language placing a question to voters on limiting San Miguel County Commissioner terms of office. Waring absent; passed 2-0.',
+    tags:['Governance','Administrative'],
+    outcome:'Passed', tally:'2-0',
+    votes:{ brown:'Yes', waring:'Absent', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-07b', date:'2024-07-10', year:2024,
+    meeting:'BOCC — Jul 10, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Appointment — Linnea Edwards to San Miguel Behavioral Health Services Board',
+    tags:['Administrative'],
+    outcome:'Passed', tally:'2-0',
+    votes:{ brown:'Yes', waring:'Absent', holstrom:'Yes' },
+  },
+
+  // Oct 2, 2024 — Waring absent for main session (2-0); all present for CBOE appeals (3-0)
+  {
+    id:'bv2024-08', date:'2024-10-02', year:2024,
+    meeting:'BOCC — Oct 2, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Housing Ballot Language: Mill Levy Amendment for Affordable Housing',
+    tags:['Housing', 'Budget & Finance'],
+    outcome:'Passed', tally:'2-0',
+    votes:{ brown:'Yes', waring:'Absent', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-09', date:'2024-10-02', year:2024,
+    meeting:'BOCC — Oct 2, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Fermi Uranium Corp — Mining Special Use Permit',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'2-0',
+    votes:{ brown:'Yes', waring:'Absent', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-10', date:'2024-10-02', year:2024,
+    meeting:'BOCC — Oct 2, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Parks & Open Space Mill Levy Ballot Submission',
+    tags:['Budget & Finance', 'Land Use'],
+    outcome:'Passed', tally:'2-0',
+    votes:{ brown:'Yes', waring:'Absent', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-11', date:'2024-10-02', year:2024,
+    meeting:'BOCC — Oct 2, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'SMRHA Deed Restriction Exception Request (Housing)',
+    tags:['Housing'],
+    outcome:'Passed', tally:'2-0',
+    votes:{ brown:'Yes', waring:'Absent', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-12', date:'2024-10-02', year:2024,
+    meeting:'BOCC — Oct 2, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Resolution 2024-36: Board Appointment Resolution',
+    tags:['Administrative'],
+    outcome:'Passed', tally:'2-0',
+    votes:{ brown:'Yes', waring:'Absent', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-13', date:'2024-07-31', year:2024,
+    meeting:'BOCC — Jul 31, 2024 (CBOE)',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'CBOE Assessment Appeals — Deny All Five (Hein/Solomon, Cole Trust, McCarthy, Kaptur, Petrini)',
+    tags:['Assessment Appeals'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+
+  // Oct 16, 2024 — All present (3-0)
+  {
+    id:'bv2024-14', date:'2024-08-28', year:2024,
+    meeting:'BOCC — Aug 28, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Resolution 2024-37: Reallocation of P&OS Mill Levy Portion for Housing Ballot Measure',
+    tags:['Housing', 'Budget & Finance'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-15', date:'2024-09-04', year:2024,
+    meeting:'BOCC — Sep 4, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Thor Energy — Special Use Permit (Exploration with Revised Condition #9)',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-16', date:'2024-09-04', year:2024,
+    meeting:'BOCC — Sep 4, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Lower Ophir Road Paving — Award Bid to Armor Proseal ($180,000)',
+    tags:['Infrastructure'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-16b', date:'2024-09-04', year:2024,
+    meeting:'BOCC — Sep 4, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Planning Commission Appointments — Hallie Simpson (Senior Alt.) & Robyn Van Gelder (Junior Alt.)',
+    tags:['Administrative','Land Use'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-17', date:'2024-10-16', year:2024,
+    meeting:'BOCC — Oct 16, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'County Attorney Professional Services Contract — Authorization',
+    tags:['Administrative'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-18', date:'2024-09-04', year:2024,
+    meeting:'BOCC — Sep 4, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26',
+    title:'Letter to State Senators — Dolores River Project (Intergovernmental)',
+    tags:['Intergovernmental'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  /* ══ Nov–Dec 2024 ══════════════════════════════════════════ */
+
+  // Nov 6, 2024 — All commissioners present (3-0)
+  {
+    id:'bv2024-19', date:'2024-11-06', year:2024,
+    meeting:'BOCC — Nov 6, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/19/overview',
+    title:'Dines Rural Homes — Rural Workforce Housing Exception',
+    tags:['Housing','Land Use'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-20', date:'2024-11-06', year:2024,
+    meeting:'BOCC — Nov 6, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/19/overview',
+    title:'Consent Agenda — Resolutions, Permits & Intergovernmental Items (Nov 6)',
+    tags:['Administrative'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+
+  // Nov 20, 2024 — Waring ABSENT; Brown + Holstrom (2-0)
+  {
+    id:'bv2024-21', date:'2024-11-20', year:2024,
+    meeting:'BOCC — Nov 20, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/32/overview',
+    title:'Ordinances 2024-01 through 2024-04 (2nd Reading) — Parking, Animals, Motor Vehicle Noise, Open Fires',
+    description:'Four second-reading ordinances adopted: county road parking rules, at-large/abandoned animals, motor vehicle noise, and open fires/burning/fireworks.',
+    tags:['Ordinance'],
+    outcome:'Passed', tally:'2-0',
+    votes:{ brown:'Yes', waring:'Absent', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-22', date:'2024-11-20', year:2024,
+    meeting:'BOCC — Nov 20, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/32/overview',
+    title:'Ordinance 2024-05 (Unsafe Buildings, 2nd Reading) — TABLED',
+    description:'Second reading of the unsafe buildings ordinance was tabled.',
+    tags:['Ordinance'],
+    outcome:'Tabled', tally:'2-0',
+    votes:{ brown:'Yes', waring:'Absent', holstrom:'Yes' },
+  },
+  // Dec 18, 2024 — All commissioners present
+  {
+    id:'bv2024-24', date:'2024-12-18', year:2024,
+    meeting:'BOCC — Dec 18, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/33/overview',
+    title:'Gondola 3A IGA — 2nd Supplement (Cost Sharing & Planning)',
+    tags:['Intergovernmental','Land Use'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-25', date:'2024-12-18', year:2024,
+    meeting:'BOCC — Dec 18, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/33/overview',
+    title:'LUC Amendment — Private Camping & Commercial Campgrounds (SPLIT)',
+    description:'Brown voted NO; Waring and Holstrom voted YES to adopt the amendment allowing private camping and commercial campground uses under revised Land Use Code standards.',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'2-1',
+    votes:{ brown:'No', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-26', date:'2024-12-18', year:2024,
+    meeting:'BOCC — Dec 18, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/33/overview',
+    title:'LUC Cleanup & Corrections Amendment',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+  {
+    id:'bv2024-27', date:'2024-12-18', year:2024,
+    meeting:'BOCC — Dec 18, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/33/overview',
+    title:'Budget Resolution 2024-63 — 2025 County Appropriations',
+    tags:['Administrative'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', holstrom:'Yes' },
+  },
+
+  /* ══ 2025 ══════════════════════════════════════════════════ */
+  // New District 3: Galena Gleason (replaced Holstrom Jan 2025)
+
+  // Feb 19, 2025 — Brown / Waring / Gleason (3-0)
+  {
+    id:'bv2025-01', date:'2025-02-19', year:2025,
+    meeting:'BOCC — Feb 19, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/35/overview',
+    title:'Telluride Foundation Housing Opportunity Fund MOU',
+    tags:['Housing'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', gleason:'Yes' },
+  },
+  {
+    id:'bv2025-02', date:'2025-02-19', year:2025,
+    meeting:'BOCC — Feb 19, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/35/overview',
+    title:'Resolution 2025-04 — County Road C.R. K69 Closure',
+    tags:['Infrastructure'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', gleason:'Yes' },
+  },
+
+  // Feb 26, 2025 Special — Brown / Waring / Gleason (3-0)
+  {
+    id:'bv2025-03', date:'2025-02-26', year:2025,
+    meeting:'BOCC Special — Feb 26, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/10/overview',
+    title:'Gondola Project IGA — 2nd Supplement Cost-Sharing for Planning',
+    tags:['Intergovernmental','Land Use'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', gleason:'Yes' },
+  },
+
+  // Mar 5, 2025 — Brown / Waring / Gleason (3-0)
+  {
+    id:'bv2025-04', date:'2025-03-05', year:2025,
+    meeting:'BOCC — Mar 5, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/23/overview',
+    title:'Youth Hangout MOU — Town of Telluride Financial Support',
+    tags:['Administrative'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', gleason:'Yes' },
+  },
+
+  // Mar 19, 2025 — Brown / Waring / Gleason (3-0)
+  {
+    id:'bv2025-05', date:'2025-03-19', year:2025,
+    meeting:'BOCC — Mar 19, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/36/overview',
+    title:'Resolution 2025-06 — CORA Policy Update & County Counsel Addition',
+    description:'Board approved Resolution 2025-06 updating the Administrative Policy Manual CORA (Colorado Open Records Act) policy and adding county counsel provisions.',
+    tags:['Administrative'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', gleason:'Yes' },
+  },
+  {
+    id:'bv2025-06', date:'2025-03-19', year:2025,
+    meeting:'BOCC — Mar 19, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/36/overview',
+    title:'Dolores County Road & Bridge — Gravel Pit Mining Special Use Permit (Public Hearing)',
+    description:'Public hearing and approval of the Dolores County Road and Bridge gravel pit mining special use permit. Previously recommended for approval 5-0 by the Planning Commission (Feb 13, 2025).',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', gleason:'Yes' },
+  },
+  {
+    id:'bv2025-07', date:'2025-03-19', year:2025,
+    meeting:'BOCC — Mar 19, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/36/overview',
+    title:'Ilium Project — Next Phase Approval (Adjacent to County Road)',
+    tags:['Infrastructure'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', gleason:'Yes' },
+  },
+
+  // Mar 26, 2025 Special — Brown + Gleason (2-0; Waring absent)
+  {
+    id:'bv2025-08', date:'2025-03-26', year:2025,
+    meeting:'BOCC Special — Mar 26, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/11/overview',
+    title:'Telluride Foundation Shared Equity Down Payment Assistance MOU',
+    tags:['Housing'],
+    outcome:'Passed', tally:'2-0',
+    votes:{ brown:'Yes', waring:'Absent', gleason:'Yes' },
+  },
+
+  // Apr 2, 2025 — Brown / Waring / Gleason (3-0)
+  {
+    id:'bv2025-09', date:'2025-04-02', year:2025,
+    meeting:'BOCC — Apr 2, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/24/overview',
+    title:'Affordable Housing Deed Restriction — Termination Request Denied',
+    description:'Board voted to deny a request to amend or terminate an affordable housing deed restriction on an accessory dwelling unit.',
+    tags:['Housing'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', gleason:'Yes' },
+  },
+  {
+    id:'bv2025-10', date:'2025-04-02', year:2025,
+    meeting:'BOCC — Apr 2, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/24/overview',
+    title:'San Miguel County-Owned Housing Policy',
+    tags:['Housing'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', gleason:'Yes' },
+  },
+  {
+    id:'bv2025-11', date:'2025-04-02', year:2025,
+    meeting:'BOCC — Apr 2, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/24/overview',
+    title:'Royer Gulch Debris Mitigation — $40,000 Appropriation',
+    tags:['Infrastructure'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', gleason:'Yes' },
+  },
+
+  // Apr 22, 2025 — Brown / Waring / Gleason (3-0)
+  {
+    id:'bv2025-12', date:'2025-04-22', year:2025,
+    meeting:'BOCC — Apr 22, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/12/overview',
+    title:'Society Turn — Preliminary Subdivision Plan Extension',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', gleason:'Yes' },
+  },
+
+  // May 7, 2025 — Brown / Waring / Gleason (3-0)
+  {
+    id:'bv2025-13', date:'2025-05-07', year:2025,
+    meeting:'BOCC — May 7, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/144/overview',
+    title:'GMUG Forest Service Comments — Telluride Ski Resort Improvement Request',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', gleason:'Yes' },
+  },
+  {
+    id:'bv2025-14', date:'2025-05-07', year:2025,
+    meeting:'BOCC — May 7, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/144/overview',
+    title:'Masson v. BOCC — Attorney Fees Settlement Agreement',
+    tags:['Administrative'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', gleason:'Yes' },
+  },
+  {
+    id:'bv2025-15', date:'2025-05-07', year:2025,
+    meeting:'BOCC — May 7, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/144/overview',
+    title:'Land Heritage Fund — $35,000 Conservation Appropriation',
+    tags:['Administrative'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', gleason:'Yes' },
+  },
+
+  // May 14, 2025 Special — Brown / Waring / Gleason (3-0)
+  {
+    id:'bv2025-16', date:'2025-05-14', year:2025,
+    meeting:'BOCC Special — May 14, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/64/overview',
+    title:'Sewer Authority Tri-Party Discussion — Mountain Village, Telluride & County',
+    description:'Board authorized discussion with Town of Mountain Village and Town of Telluride concerning the regional sewer authority and waste water treatment plant.',
+    tags:['Intergovernmental','Infrastructure'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', gleason:'Yes' },
+  },
+  {
+    id:'bv2025-17', date:'2025-05-14', year:2025,
+    meeting:'BOCC Special — May 14, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/64/overview',
+    title:'Resolution 2025-14 — Recording Fee Increase (Effective July 1, 2025)',
+    tags:['Administrative'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', gleason:'Yes' },
+  },
+
+  // May 21, 2025 — Brown absent on one vote; others 3-0
+  {
+    id:'bv2025-18', date:'2025-05-21', year:2025,
+    meeting:'BOCC — May 21, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/38/overview',
+    title:'Resolution 2025-15 — Planning Director Written Interpretation Affirmed',
+    description:'Vice Chair Waring and Commissioner Gleason voted 2-0 (Brown absent) to affirm the Planning Director\'s written interpretation. Motion signed by Vice Chair.',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'2-0',
+    votes:{ brown:'Absent', waring:'Yes', gleason:'Yes' },
+  },
+  {
+    id:'bv2025-19', date:'2025-05-21', year:2025,
+    meeting:'BOCC — May 21, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/38/overview',
+    title:'FAA Grant — Telluride Regional Airport Infrastructure',
+    tags:['Infrastructure'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', gleason:'Yes' },
+  },
+  {
+    id:'bv2025-20', date:'2025-05-21', year:2025,
+    meeting:'BOCC — May 21, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/38/overview',
+    title:'FWS Comment Letter — Waters of the US Regulatory Definition',
+    description:'Board ratified a comment letter to the Fish and Wildlife Service opposing the proposal to rescind the regulatory definition of "waters of the United States."',
+    tags:['Administrative'],
+    outcome:'Passed', tally:'3-0',
+    votes:{ brown:'Yes', waring:'Yes', gleason:'Yes' },
+  },
+
+];
+
+/* ─── Planning Commission ────────────────────────────────────── */
+// Members as of 2024; Gleason moved to BOCC District 3 in Jan 2025
+const PC_ALL_MEMBERS = [
+  { id:'taylor',       name:'Lee Taylor',             shortName:'Taylor',       title:'Chair' },
+  { id:'liftonzoline', name:'Josselin Lifton-Zoline',  shortName:'Lifton-Zoline',title:'Vice-Chair' },
+  { id:'bayma',        name:'Matthew Bayma',           shortName:'Bayma',        title:'Secretary (as of Sep 2024)' },
+  { id:'bald',         name:'Ian Bald',                shortName:'Bald',         title:'Member' },
+  { id:'gleason',      name:'Galena Gleason',          shortName:'Gleason',      title:'Member (2024; BOCC 2025+)' },
+  { id:'schillaci',    name:'M.J. Schillaci',          shortName:'Schillaci',    title:'Member (Jan–Jun 2024)' },
+  { id:'simpson',      name:'Hallie Bevan Simpson',    shortName:'Simpson',      title:'Senior Alternate (Sep 2024+)' },
+  { id:'vangelder',    name:'Robyn Van Gelder',        shortName:'Van Gelder',   title:'Junior Alternate (Sep 2024+)' },
+];
+const PC_2024 = ['taylor','liftonzoline','bayma','bald','gleason','schillaci','simpson'];
+const PC_2025 = ['taylor','liftonzoline','bayma','bald','simpson','vangelder'];
+
+const PC_VOTE_ITEMS = [
+  // Jan 11, 2024 — Airport Master Plan (contested)
+  {
+    id:'pv2024-08', date:'2024-01-11', year:2024,
+    meeting:'Planning Commission — Jan 11, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/705/files',
+    title:'Telluride Airport Master Plan Adoption',
+    description:'Motion to deny the Telluride Airport Master Plan FAILED 2-3 (Lifton-Zoline, Schillaci in favor of denial; Taylor, Bald, Bayma opposed). Subsequent motion to approve with conditions PASSED 3-2.',
+    tags:['Land Use','Infrastructure'],
+    outcome:'Passed', tally:'3-2',
+    votes:{ taylor:'Yes', liftonzoline:'No', bayma:'Yes', bald:'Yes', schillaci:'No' },
+  },
+
+  // Feb 9, 2024 — La Sal Vista rezoning
+  {
+    id:'pv2024-09', date:'2024-02-09', year:2024,
+    meeting:'Planning Commission — Feb 9, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/650/files',
+    title:'La Sal Vista Rezoning to WMLI (Wildlife-Mountain Land Intensive)',
+    description:'Recommended BOCC approve rezoning of the La Sal Vista property to WMLI. Motion by Bayma. Passed 5-0.',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', schillaci:'Yes' },
+  },
+
+  // Apr 4, 2024 — Community Housing Zone District + deed restriction amendment
+  {
+    id:'pv2024-10', date:'2024-04-04', year:2024,
+    meeting:'Planning Commission — Apr 4, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/558/files',
+    title:'LUC Amendment — Community Housing Zone District (New Article)',
+    description:'Recommended BOCC adopt a new Community Housing Zone District in the Land Use Code. Motion by Lifton-Zoline. Passed 5-0.',
+    tags:['Land Use','Housing'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', schillaci:'Yes' },
+  },
+  {
+    id:'pv2024-11', date:'2024-04-04', year:2024,
+    meeting:'Planning Commission — Apr 4, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/558/files',
+    title:'LUC Sections 5-1304/5/6 Deed Restriction Amendment — TIED (Continued)',
+    description:'Motion to recommend BOCC adopt LUC Sections 5-1304/5/6 deed restriction amendment FAILED on a 2-2 tie — no majority to recommend. Motion by Lifton-Zoline, seconded by Schillaci. Item continued for further discussion.',
+    tags:['Land Use','Housing'],
+    outcome:'Failed', tally:'2-2',
+    votes:{ taylor:'No', liftonzoline:'Yes', bayma:'No', bald:'Absent', schillaci:'Yes' },
+  },
+
+  // May 9, 2024 — Deed restriction amendment second attempt
+  {
+    id:'pv2024-12', date:'2024-05-09', year:2024,
+    meeting:'Planning Commission — May 9, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/510/files',
+    title:'LUC Sections 5-1304/5/6 Deed Restriction Amendment — TIED Again (Continued)',
+    description:'Second attempt to recommend LUC deed restriction amendment again FAILED 2-2. Motion by Lifton-Zoline, seconded by Schillaci. Item continued to June for stakeholder group recommendation.',
+    tags:['Land Use','Housing'],
+    outcome:'Failed', tally:'2-2',
+    votes:{ taylor:'No', liftonzoline:'Yes', bayma:'No', bald:'Absent', schillaci:'Yes' },
+  },
+
+  // Jun 13, 2024 — East End Master Plan + deed restriction forward to BOCC
+  {
+    id:'pv2024-13', date:'2024-06-13', year:2024,
+    meeting:'Planning Commission — Jun 13, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/457/files',
+    title:'East End Master Plan Adoption',
+    description:'Recommended BOCC adopt the East End Master Plan. Motion by Schillaci, seconded by Bald. Passed 5-0.',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', schillaci:'Yes' },
+  },
+  {
+    id:'pv2024-14', date:'2024-06-13', year:2024,
+    meeting:'Planning Commission — Jun 13, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/457/files',
+    title:'LUC Section 5-1305 Deed Restriction — Forward to BOCC with Stakeholder Group Recommendation',
+    description:'Recommended forwarding LUC Section 5-1305 deed restriction language to BOCC incorporating the stakeholder group\'s recommendation. Passed 5-0.',
+    tags:['Land Use','Housing'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', schillaci:'Yes' },
+  },
+
+  // Jul 11, 2024 — Mining SUP (Standard Minerals/Thor Energy) — held in Norwood
+  {
+    id:'pv2024-15', date:'2024-07-11', year:2024,
+    meeting:'Planning Commission — Jul 11, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/422/files',
+    title:'Standard Minerals / Thor Energy — Mining Special Use Permit (Groundhog Area, BLM Lands)',
+    description:'Recommended BOCC approve a Special Use Permit for mining operations by Standard Minerals / Thor Energy on BLM lands in the Groundhog Area. Motion by Gleason, seconded by Taylor. Passed 5-0.',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Absent', bald:'Yes', gleason:'Yes', schillaci:'Absent' },
+  },
+
+  // Jul 11, 2024 — Bayma absent (4 voting + alternate); held in Norwood
+  {
+    id:'pv2024-01', date:'2024-07-11', year:2024,
+    meeting:'Planning Commission — Jul 11, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&category_id=24',
+    title:'Land Use Code — Solar Energy Systems (Article 6 New Section)',
+    description:'Recommended BOCC adopt new LUC regulations for Solar Energy Systems. Includes limits on large/medium-scale development on agricultural land. Motion by Gleason, seconded by Taylor.',
+    tags:['Land Use','Energy'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Absent', bald:'Yes', gleason:'Yes', simpson:'Vacant' },
+  },
+  // Sep 12, 2024 — Bayma absent; Simpson joins as senior alternate
+  {
+    id:'pv2024-02', date:'2024-09-12', year:2024,
+    meeting:'Planning Commission — Sep 12, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&category_id=24',
+    title:'Land Use Code — "Family" Definition Update (Article 6)',
+    description:'Recommended BOCC approve amendment to LUC Article 6 updating the definition of "Family." Motion by Gleason, seconded by Bald.',
+    tags:['Land Use','Housing'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Absent', bald:'Yes', gleason:'Yes', simpson:'Yes' },
+  },
+  {
+    id:'pv2024-03', date:'2024-09-12', year:2024,
+    meeting:'Planning Commission — Sep 12, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&category_id=24',
+    title:'Election of Planning Commission Secretary — Matthew Bayma',
+    description:'Nominated and elected Matthew Bayma as Planning Commission Secretary. Motion by Taylor, seconded by Lifton-Zoline.',
+    tags:['Administrative'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Absent', bald:'Yes', gleason:'Yes', simpson:'Yes' },
+  },
+  // Oct 10, 2024 — All members present
+  {
+    id:'pv2024-04', date:'2024-10-10', year:2024,
+    meeting:'Planning Commission — Oct 10, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/search?q=&category_id=24',
+    title:'Land Use Code — EV Charging Space Requirements (Article 6)',
+    description:'Recommended BOCC adopt LUC amendment requiring minimum 1 EV charging space per 10 parking spots, plus 1 per additional 25 spaces. Motion by Gleason, seconded by Bald.',
+    tags:['Land Use','Infrastructure'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', gleason:'Yes', simpson:'Yes' },
+  },
+  // Nov 14, 2024 — 7 members present; Bevan & Van Gelder absent on LUC items
+  {
+    id:'pv2024-05', date:'2024-11-14', year:2024,
+    meeting:'Planning Commission — Nov 14, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/86/overview',
+    title:'LUC Amendment — Private Camping & Commercial Campgrounds (Recommendation to BOCC)',
+    description:'Recommended BOCC adopt LUC amendment allowing private camping and commercial campground uses. Motion by Lifton-Zoline, seconded by Gleason. Bevan and Van Gelder absent for this item. BOCC subsequently approved with Brown dissenting (Dec 18, 2024).',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', gleason:'Yes', simpson:'Absent' },
+  },
+  {
+    id:'pv2024-06', date:'2024-11-14', year:2024,
+    meeting:'Planning Commission — Nov 14, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/86/overview',
+    title:'LUC Cleanup & Corrections — Recommendation to BOCC',
+    description:'Recommended BOCC approve miscellaneous cleanup and corrections to the Land Use Code. Motion by Gleason, seconded by Bevan.',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', gleason:'Yes', simpson:'Yes' },
+  },
+
+  // Dec 12, 2024 — Gleason abstains; Van Gelder absent on substantive vote
+  {
+    id:'pv2024-07', date:'2024-12-12', year:2024,
+    meeting:'Planning Commission — Dec 12, 2024',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/87/overview',
+    title:'LUC Amendment — Excavation & Grading Permit (New Section 5-713)',
+    description:'Recommended BOCC adopt new LUC Section 5-713 creating an Excavation and Grading Permit requirement, and amend Section 5-502. Motion by Bevan, seconded by Lifton-Zoline. Gleason abstained; Van Gelder absent on vote.',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'5-0-1',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', gleason:'Recused', simpson:'Yes' },
+  },
+
+  /* ══ 2025 ══════════════════════════════════════════════════ */
+  // Gleason departed PC to join BOCC (Jan 2025)
+  // Active 2025 members: Taylor, Lifton-Zoline, Bayma, Bald, Simpson (Bevan), Van Gelder
+
+  // Feb 13, 2025 — 5 of 6 voting members present
+  {
+    id:'pv2025-01', date:'2025-02-13', year:2025,
+    meeting:'Planning Commission — Feb 13, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/89/overview',
+    title:'Dolores County Road & Bridge — Gravel Pit Mining Special Use Permit',
+    description:'Recommended BOCC approve a special use permit for the expansion of Dolores County Road and Bridge gravel pit mining on federal lands. Motion by Bayma, seconded by Bald. Van Gelder absent on substantive vote.',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', simpson:'Yes', vangelder:'Absent' },
+  },
+
+  // Mar 13, 2025 — Airport SUP continued to May 8
+  {
+    id:'pv2025-02', date:'2025-03-13', year:2025,
+    meeting:'Planning Commission — Mar 13, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/103/overview',
+    title:'Telluride Regional Airport Wetland Special Use Permit — Continued to May 8',
+    description:'Motion to continue consideration of the two-step Wetland Special Use Permit at 1500 Last Dollar Road to the May 8 meeting, with direction to provide additional information. Motion by Van Gelder, seconded by Bevan. Bayma absent.',
+    tags:['Land Use','Infrastructure'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Absent', bald:'Yes', simpson:'Yes', vangelder:'Yes' },
+  },
+
+  // May 8, 2025 — Airport SUP final recommendation
+  {
+    id:'pv2025-03', date:'2025-05-08', year:2025,
+    meeting:'Planning Commission — May 8, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/92/overview',
+    title:'Telluride Regional Airport Wetland Special Use Permit — Recommend Approve',
+    description:'Recommended BOCC approve the two-step Wetland Special Use Permit for the Telluride Regional Airport at 1500 Last Dollar Road. Continued from March 13 meeting.',
+    tags:['Land Use','Infrastructure'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', simpson:'Yes', vangelder:'Absent' },
+  },
+
+];
+
+
+
+/* ─── Vote items ────────────────────────────────────────────── */
+// votes object: member-id → 'Yes'|'No'|'Recused'|'Absent'|'Vacant'
+// members not present in the votes object = not yet/no longer on council (shown as '–' in heatmap)
+
+const VOTE_ITEMS = [
+
+  /* ══ 2024 ══════════════════════════════════════════════════ */
+
+  // Jan 09, 2024 — Shaunette absent (6 voting)
+  {
+    id:'v2024-01', date:'2024-01-09', year:2024,
+    meeting:'Town Council — Jan 9, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/395298',
+    title:'Housing Acquisition — Spruce House Unit G (SPLIT)',
+    description:'Motion to acquire deed-restricted Spruce House Unit G. Mayor Errico and Councilperson Story Von Spreecken dissented; all others approved the acquisition.',
+    tags:['Housing'],
+    outcome:'Passed', tally:'4-2',
+    votes:{errico:'No',fee:'Yes',arguelles:'Yes',enright:'Yes',shaunette:'Absent',levin:'Yes',svs:'No'}
+  },
+
+  // Jan 30, 2024 — Arguelles absent (6 voting)
+  {
+    id:'v2024-02', date:'2024-01-30', year:2024,
+    meeting:'Town Council — Jan 30, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/396595',
+    title:'Ethics & Commission Code Reform — 2nd Reading',
+    description:'Second reading of ordinance amending the Ethics Code (Ch.2 Art.4) and General Provisions for all advisory commissions. Shaunette was sole dissenting vote.',
+    tags:['Ethics','Governance'],
+    outcome:'Passed', tally:'5-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Absent',enright:'Yes',shaunette:'No',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-03', date:'2024-01-30', year:2024,
+    meeting:'Town Council — Jan 30, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/396595',
+    title:'Gondola — MOU with Telluride Ski & Golf for Chair 7 Base Design',
+    description:'Memorandum of Understanding with Telluride Ski & Golf authorizing joint planning and design work for the Chair 7 base area as part of the Gondola Project.',
+    tags:['Gondola','Infrastructure'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Absent',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-04', date:'2024-01-30', year:2024,
+    meeting:'Town Council — Jan 30, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/396595',
+    title:'CCAASE 2024 Arts & Events Funding',
+    description:'Approved Commission for Community Assistance, Arts and Special Events (CCAASE) funding recommendations for 2024, supporting local arts organizations and community events.',
+    tags:['Arts & Events','Budget'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Absent',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+
+  // Mar 12, 2024 — Arguelles absent (6 voting)
+  {
+    id:'v2024-05', date:'2024-03-12', year:2024,
+    meeting:'Town Council — Mar 12, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/398897',
+    title:'Festival Events Crowd Cap Amendment — FAILED (11,500 Limit)',
+    description:'Motion by Councilperson Shaunette to amend the Festival Events ordinance to reduce the maximum crowd size to 11,500. Only Errico and Shaunette supported the lower cap; motion failed 2-4.',
+    tags:['Special Events','Governance'],
+    outcome:'Failed', tally:'2-4',
+    votes:{errico:'Yes',fee:'No',arguelles:'Absent',enright:'No',shaunette:'Yes',levin:'No',svs:'No'}
+  },
+  {
+    id:'v2024-06', date:'2024-03-12', year:2024,
+    meeting:'Town Council — Mar 12, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/398897',
+    title:'Festival Events Ordinance — 1st Reading',
+    description:'First reading of ordinance amending Municipal Code Chapter 11 Article 4 Festival Events (retaining original crowd cap). Fee and Shaunette dissented; set for public hearing April 2.',
+    tags:['Special Events','Governance'],
+    outcome:'Passed', tally:'4-2',
+    votes:{errico:'Yes',fee:'No',arguelles:'Absent',enright:'Yes',shaunette:'No',levin:'Yes',svs:'Yes'}
+  },
+
+  // Apr 02, 2024 — all 7 present
+  {
+    id:'v2024-07', date:'2024-04-02', year:2024,
+    meeting:'Town Council — Apr 2, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/400420',
+    title:'Festival Events Ordinance — 2nd Reading (SPLIT)',
+    description:'Second reading and approval of ordinance amending Municipal Code Chapter 11 Festival Events. Fee, Shaunette, and Arguelles dissented; passed 4-3 after contentious public hearing.',
+    tags:['Special Events','Governance'],
+    outcome:'Passed', tally:'4-3',
+    votes:{errico:'Yes',fee:'No',arguelles:'No',enright:'Yes',shaunette:'No',levin:'Yes',svs:'Yes'}
+  },
+
+  // Apr 30, 2024 — all 7 present
+  {
+    id:'v2024-08', date:'2024-04-30', year:2024,
+    meeting:'Town Council — Apr 30, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/400768',
+    title:'Voodoo Apartments Use Covenant — Emergency Ordinance',
+    description:'Emergency ordinance imposing a use covenant and regulatory agreement on the Voodoo Apartments (151 S. Willow St.) to lock in affordable housing restrictions. Enright and Arguelles dissented.',
+    tags:['Housing','Land Use'],
+    outcome:'Passed', tally:'5-2',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'No',enright:'No',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-09', date:'2024-04-30', year:2024,
+    meeting:'Town Council — Apr 30, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/400768',
+    title:'Gondola IGA — 2024 Funding Supplement',
+    description:'Approved 2024 Funding Supplement and Amendment to the Intergovernmental Agreement for cost-sharing of the Gondola Project planning and development phase.',
+    tags:['Gondola','Infrastructure','Budget'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+
+  // May 14, 2024 — Arguelles absent (6 voting)
+  {
+    id:'v2024-10', date:'2024-05-14', year:2024,
+    meeting:'Town Council — May 14, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/402644',
+    title:"Ethics Code — 75' Proximity Rule Removal, 1st Reading",
+    description:"First reading of ordinance removing the 75-foot proximity recusal requirement from the Ethics Code (§2-4-20). Story Von Spreecken was sole dissenting vote.",
+    tags:['Ethics','Governance'],
+    outcome:'Passed', tally:'5-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Absent',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'No'}
+  },
+  {
+    id:'v2024-11', date:'2024-05-14', year:2024,
+    meeting:'Town Council — May 14, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/402644',
+    title:'SVS Recusal Scope — No New Hearing on Diamond Ridge',
+    description:"Voted not to schedule a new hearing on the scope of Ashley Story Von Spreecken's recusal on the Diamond Ridge project, following her own statement to Council. SVS recused herself from the vote.",
+    tags:['Ethics','Governance','Land Use'],
+    outcome:'Passed', tally:'5-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Absent',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Recused'}
+  },
+
+  // Jun 04, 2024 — all 7 present
+  {
+    id:'v2024-12', date:'2024-06-04', year:2024,
+    meeting:'Town Council — Jun 4, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/402740',
+    title:"Ethics Code — 75' Proximity Rule Removal, 2nd Reading",
+    description:'Second reading and final approval of ordinance eliminating the 75-foot property proximity recusal rule from the Ethics Code. Arguelles and Story Von Spreecken dissented.',
+    tags:['Ethics','Governance'],
+    outcome:'Passed', tally:'5-2',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'No',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'No'}
+  },
+  {
+    id:'v2024-13', date:'2024-06-04', year:2024,
+    meeting:'Town Council — Jun 4, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/402740',
+    title:'Nonpartisan Elections Code Amendment',
+    description:'Ordinance amending Municipal Code §2-1-90 on nonpartisan election procedures. Errico, Fee, and Story Von Spreecken recused due to proximity conflicts; remaining four members voted unanimously.',
+    tags:['Governance','Elections'],
+    outcome:'Passed', tally:'4-0',
+    votes:{errico:'Recused',fee:'Recused',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Recused'}
+  },
+
+  // Jun 25, 2024 — all 7 present
+  {
+    id:'v2024-14', date:'2024-06-25', year:2024,
+    meeting:'Town Council — Jun 25, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/404333',
+    title:'Town Manager Robson Resignation Accepted',
+    description:"Per Charter §7.2, Council determined that Town Manager Scott Robson's position would be resigned effective a date certain. Enright and Shaunette recused; five remaining members voted unanimously.",
+    tags:['Governance'],
+    outcome:'Passed', tally:'5-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Recused',shaunette:'Recused',levin:'Yes',svs:'Yes'}
+  },
+
+  // Aug 06, 2024 — all 7 present
+  {
+    id:'v2024-15', date:'2024-08-06', year:2024,
+    meeting:'Town Council — Aug 6, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/406069',
+    title:'HARC Design Guidelines — Motion to Deny FAILED',
+    description:'Arguelles moved to deny the updated HARC Design Guidelines ordinance. Only Arguelles and Enright supported denial; the motion failed 2-5, clearing the way for the revised ordinance to pass.',
+    tags:['Historic Preservation','Land Use'],
+    outcome:'Failed', tally:'2-5',
+    votes:{errico:'No',fee:'No',arguelles:'Yes',enright:'Yes',shaunette:'No',levin:'No',svs:'No'}
+  },
+  {
+    id:'v2024-16', date:'2024-08-06', year:2024,
+    meeting:'Town Council — Aug 6, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/406069',
+    title:'HARC Design Guidelines — Amended Approval',
+    description:'Approved updated HARC Design Guidelines (LUC Art.7) with amendment striking language on the Colorado Avenue gateway corridor as an especially sensitive area. Arguelles was sole dissenting vote.',
+    tags:['Historic Preservation','Land Use'],
+    outcome:'Passed', tally:'6-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'No',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-17', date:'2024-08-06', year:2024,
+    meeting:'Town Council — Aug 6, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/406069',
+    title:'Petition for Certiorari — Telluride Locals v. Kavanaugh',
+    description:'Directed Town Attorney and Special Counsel to file a Petition for Writ of Certiorari to the Colorado Supreme Court regarding the Court of Appeals decision in Telluride Locals v. Kavanaugh, 2023 CA 01035. Unanimous.',
+    tags:['Governance'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-18', date:'2024-08-06', year:2024,
+    meeting:'Town Council — Aug 6, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/406069',
+    title:'Wastewater Treatment MOU with Mountain Village',
+    description:'Approved MOU with Mountain Village for joint wastewater treatment operations, with amendment clarifying that the full IGA requires mutual agreement on construction and financing before execution.',
+    tags:['Infrastructure','Intergovernmental'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+
+  // Aug 19, 2024 — all 7 present (special meeting)
+  {
+    id:'v2024-19', date:'2024-08-19', year:2024,
+    meeting:'Town Council — Aug 19, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/406067',
+    title:'P&Z Decision Remand — East Telluride Minor Subdivision',
+    description:'Directed Town Attorney to draft a resolution remanding the June 27, 2024 P&Z approval of a minor subdivision on Lots 5R, 7, 8, 9 Block 20 East Telluride Addition, finding P&Z failed to follow proper hearing procedure. Fee and Errico dissented.',
+    tags:['Land Use','Planning'],
+    outcome:'Passed', tally:'5-2',
+    votes:{errico:'No',fee:'No',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-20', date:'2024-08-19', year:2024,
+    meeting:'Town Council — Aug 19, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/406067',
+    title:'Hire Zoe Dohnal as Town Manager',
+    description:'Approved hiring of Zoe Dohnal as Town Manager under contract terms on record, with addition of $50/month phone and data reimbursement. Passed unanimously.',
+    tags:['Governance','Appointments'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+
+  // Aug 27, 2024 — Arguelles absent (6 voting)
+  {
+    id:'v2024-21', date:'2024-08-27', year:2024,
+    meeting:'Town Council — Aug 27, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/406956',
+    title:'Decline Housing Acquisitions — Mendota F2, 147 S. Tomboy 2A, 226 E. Pacific F',
+    description:"Voted to NOT acquire three deed-restricted units (Mendota F2, 147 S. Tomboy 2A, 226 E. Pacific F). Enright and Levin dissented, preferring to proceed with the acquisitions; Fee and Shaunette's motion to decline prevailed.",
+    tags:['Housing'],
+    outcome:'Passed', tally:'4-2',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Absent',enright:'No',shaunette:'Yes',levin:'No',svs:'Yes'}
+  },
+
+  // Sep 17, 2024 — all 7 present
+  {
+    id:'v2024-22', date:'2024-09-17', year:2024,
+    meeting:'Town Council — Sep 17, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/412926',
+    title:'Film Festival Liquor Permit — Appeal Affirmed',
+    description:"Affirmed Hearing Officer Major's August 13, 2024 decision granting a special event liquor permit to the Telluride Film Festival with conditions, finding the Hearing Officer did not abuse their discretion. Enright was sole dissenting vote.",
+    tags:['Special Events','Governance'],
+    outcome:'Passed', tally:'6-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'No',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+
+  // Oct 08, 2024 — SVS absent (6 voting)
+  {
+    id:'v2024-23', date:'2024-10-08', year:2024,
+    meeting:'Town Council — Oct 8, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/408781',
+    title:'OSC Appointment — Emily Masson FAILED',
+    description:'Motion to appoint Emily Masson to an Open Space Commission alternate seat failed 2-4. Errico, Enright, Shaunette, and Levin dissented; only Fee and Arguelles supported the appointment.',
+    tags:['Appointments','Open Space'],
+    outcome:'Failed', tally:'2-4',
+    votes:{errico:'No',fee:'Yes',arguelles:'Yes',enright:'No',shaunette:'No',levin:'No',svs:'Absent'}
+  },
+  {
+    id:'v2024-24', date:'2024-10-08', year:2024,
+    meeting:'Town Council — Oct 8, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/408781',
+    title:'Housing Acquisition — Entrada Unit J',
+    description:'Resolution authorizing acquisition of deed-restricted Entrada Unit J. Arguelles was sole dissenting vote; all other present members approved the purchase.',
+    tags:['Housing'],
+    outcome:'Passed', tally:'5-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'No',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Absent'}
+  },
+
+  // Oct 29, 2024 — Enright absent for afternoon (6 voting)
+  {
+    id:'v2024-25', date:'2024-10-29', year:2024,
+    meeting:'Town Council — Oct 29, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/410141',
+    title:'Decline Acquisition — Wilkin Court Unit M',
+    description:'Motion to deny acquisition of deed-restricted Wilkin Court Unit M (1001 E. Colorado Ave). Errico and Fee dissented, wanting to proceed with the purchase; majority voted to decline.',
+    tags:['Housing'],
+    outcome:'Passed', tally:'4-2',
+    votes:{errico:'No',fee:'No',arguelles:'Yes',enright:'Absent',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-26', date:'2024-10-29', year:2024,
+    meeting:'Town Council — Oct 29, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/410141',
+    title:'Comprehensive Plan — Engage Logan Simpson',
+    description:'Engaged Logan Simpson to develop the 2024 Telluride Comprehensive Plan and authorized the Town Manager to execute the contract. Passed 6-0 with Enright absent for the afternoon session.',
+    tags:['Planning','Governance'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Absent',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+
+  // Nov 05, 2024 — SVS absent (6 voting)
+  {
+    id:'v2024-27', date:'2024-11-05', year:2024,
+    meeting:'Town Council — Nov 5, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/410137',
+    title:'Shandoka Building F — Financing Ordinance, 1st Reading',
+    description:'First reading of ordinance financing the Shandoka Building F Redevelopment Phase II Affordable Housing Project via ground lease and lease-purchase agreement. Enright was sole dissenting vote.',
+    tags:['Housing','Budget'],
+    outcome:'Passed', tally:'5-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'No',shaunette:'Yes',levin:'Yes',svs:'Absent'}
+  },
+  {
+    id:'v2024-28', date:'2024-11-05', year:2024,
+    meeting:'Town Council — Nov 5, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/410137',
+    title:'Shandoka Building F — Phase II Construction Authorized ($8.4M)',
+    description:'Directed Town to proceed with Shandoka Building F Phase II and authorized the Town Manager to execute a Design/Build contract with Shaw Construction LLC for $8,404,658. Enright was sole dissenting vote.',
+    tags:['Housing','Budget'],
+    outcome:'Passed', tally:'5-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'No',shaunette:'Yes',levin:'Yes',svs:'Absent'}
+  },
+
+  // Nov 19, 2024 — all 7 present
+  {
+    id:'v2024-29', date:'2024-11-19', year:2024,
+    meeting:'Town Council — Nov 19, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/412922',
+    title:'OSC Appointment — Edith Wiley (SPLIT)',
+    description:'Motion to appoint Edith Wiley to an Open Space Commission regular seat passed 4-3. Enright, Shaunette, and Levin dissented in a contentious multi-candidate appointment session.',
+    tags:['Appointments','Open Space'],
+    outcome:'Passed', tally:'4-3',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'No',shaunette:'No',levin:'No',svs:'Yes'}
+  },
+  {
+    id:'v2024-30', date:'2024-11-19', year:2024,
+    meeting:'Town Council — Nov 19, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/412922',
+    title:'OSC Appointment — Thomas Goldsborough FAILED',
+    description:'Motion to appoint Thomas Goldsborough to an Open Space Commission alternate seat failed 3-4. Fee, Enright, Shaunette, and Levin dissented; Errico, Arguelles, and Story Von Spreecken supported the appointment.',
+    tags:['Appointments','Open Space'],
+    outcome:'Failed', tally:'3-4',
+    votes:{errico:'Yes',fee:'No',arguelles:'Yes',enright:'No',shaunette:'No',levin:'No',svs:'Yes'}
+  },
+  {
+    id:'v2024-31', date:'2024-11-19', year:2024,
+    meeting:'Town Council — Nov 19, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/412922',
+    title:'OSC Appointment — Mandie Jue',
+    description:'Motion to appoint Mandie Jue to an Open Space Commission alternate seat passed 5-2. Errico and Arguelles dissented; Enright moved the motion, reflecting the shifting coalition dynamics in this contested session.',
+    tags:['Appointments','Open Space'],
+    outcome:'Passed', tally:'5-2',
+    votes:{errico:'No',fee:'Yes',arguelles:'No',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-32', date:'2024-11-19', year:2024,
+    meeting:'Town Council — Nov 19, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/412922',
+    title:'2025 Budget Adoption',
+    description:'Approved the 2025 Town of Telluride Municipal Budget covering all funds — General, Capital Improvement, Housing, Transportation, Water, Wastewater, Open Space, and more — plus the Five-Year Capital Improvement Plan. Passed unanimously.',
+    tags:['Budget'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-33', date:'2024-11-19', year:2024,
+    meeting:'Town Council — Nov 19, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/412922',
+    title:'Shandoka Building F — Financing Ordinance, 2nd Reading',
+    description:'Second reading and approval of ordinance financing the Shandoka Building F Phase II affordable housing project. Enright was sole dissenting vote.',
+    tags:['Housing','Budget'],
+    outcome:'Passed', tally:'6-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'No',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-34', date:'2024-11-19', year:2024,
+    meeting:'Town Council — Nov 19, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/412922',
+    title:'Expand Pay-to-Park Zones & Increase Rates',
+    description:"Expanded metered pay-to-park zones, increased parking rates, and adopted additional parking restrictions. Directed staff to research a local resident pass option. Passed unanimously.",
+    tags:['Infrastructure','Governance'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2024-35', date:'2024-11-19', year:2024,
+    meeting:'Town Council — Nov 19, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/412922',
+    title:'Virginia Placer Housing — Phase 2A/2B Financing, 1st Reading',
+    description:'First reading of ordinance financing the Virginia Placer Phase 2A and 2B affordable Housing Project via site & improvement lease and lease-purchase agreement.',
+    tags:['Housing','Budget'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+
+  // Dec 10, 2024 — Arguelles and Shaunette absent (terms ended post-election)
+  {
+    id:'v2024-36', date:'2024-12-10', year:2024,
+    meeting:'Town Council — Dec 10, 2024',
+    minutesUrl:'https://telluride-co.civicweb.net/document/413857',
+    title:'Appoint Daniel Zemke — Municipal Court Judge',
+    description:'Resolution appointing Daniel Zemke as Telluride Municipal Court Judge. Passed unanimously with Arguelles and Shaunette absent (terms ended following the November 2024 election).',
+    tags:['Governance','Appointments'],
+    outcome:'Passed', tally:'5-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Absent',enright:'Yes',shaunette:'Absent',levin:'Yes',svs:'Yes'}
+  },
+
+  /* ══ 2025 ══════════════════════════════════════════════════ */
+
+  // Jan 14, 2025 — all 7 members present
+  {
+    id:'v2025-01', date:'2025-01-14', year:2025,
+    meeting:'Town Council — Jan 14, 2025',
+    minutesUrl:'https://telluride-co.civicweb.net/document/415086',
+    title:'Reappoint Kathy Green — Planning & Zoning Commission',
+    description:'Two-year reappointment to the Planning and Zoning Commission; Shaunette dissented.',
+    tags:['Appointments'],
+    outcome:'Passed', tally:'6-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Yes',shaunette:'No',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2025-02', date:'2025-01-14', year:2025,
+    meeting:'Town Council — Jan 14, 2025',
+    minutesUrl:'https://telluride-co.civicweb.net/document/415086',
+    title:'CCAASE 2025 Arts & Events Funding',
+    description:'Approved Commission for Community Assistance, Arts and Special Events (CCAASE) 2025 funding recommendations for local arts and cultural organizations.',
+    tags:['Budget','Arts & Events'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2025-03', date:'2025-01-14', year:2025,
+    meeting:'Town Council — Jan 14, 2025',
+    minutesUrl:'https://telluride-co.civicweb.net/document/415086',
+    title:'Gondola IGA — 2nd Supplement & Amendment',
+    description:'Approved second supplement to the Intergovernmental Agreement for cost-sharing of the Gondola Project planning and development phase.',
+    tags:['Infrastructure','Gondola'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Yes',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2025-04', date:'2025-01-14', year:2025,
+    meeting:'Town Council — Jan 14, 2025',
+    minutesUrl:'https://telluride-co.civicweb.net/document/415086',
+    title:'Short-Term Rental Ordinance — 1st Reading (§6-1-35)',
+    description:'First reading of ordinance amending cumulative short-term rental restrictions. Fee and Arguelles dissented; Story Von Spreecken recused due to property interest.',
+    tags:['Land Use','Housing','STR'],
+    outcome:'Passed', tally:'4-2',
+    votes:{errico:'Yes',fee:'No',arguelles:'No',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Recused'}
+  },
+
+  // Feb 4, 2025 — Arguelles absent (6 present)
+  {
+    id:'v2025-05', date:'2025-02-04', year:2025,
+    meeting:'Town Council — Feb 4, 2025',
+    minutesUrl:'https://telluride-co.civicweb.net/document/415883',
+    title:'Gondola Financing Ordinance — 2nd Reading',
+    description:'Second reading and approval of ordinance concerning the financing of the Gondola Project cost-sharing. Enright was sole dissenting vote.',
+    tags:['Infrastructure','Gondola','Budget'],
+    outcome:'Passed', tally:'5-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Absent',enright:'No',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2025-06', date:'2025-02-04', year:2025,
+    meeting:'Town Council — Feb 4, 2025',
+    minutesUrl:'https://telluride-co.civicweb.net/document/415883',
+    title:'STR Cumulative Rental Ordinance — 2nd Reading',
+    description:'Second reading of ordinance amending Municipal Code §6-1-35 on cumulative short-term rentals. Fee dissented; Story Von Spreecken recused.',
+    tags:['Land Use','Housing','STR'],
+    outcome:'Passed', tally:'4-1',
+    votes:{errico:'Yes',fee:'No',arguelles:'Absent',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Recused'}
+  },
+
+  // Feb 25, 2025 — Arguelles absent (6 present)
+  {
+    id:'v2025-07', date:'2025-02-25', year:2025,
+    meeting:'Town Council — Feb 25, 2025',
+    minutesUrl:'https://telluride-co.civicweb.net/document/417188',
+    title:'Planet Bluegrass Event Exemption',
+    description:'Resolution granting an exemption to Planet Bluegrass from certain Municipal Code requirements for the 2025 Telluride Bluegrass Festival. Enright dissented.',
+    tags:['Special Events','Budget'],
+    outcome:'Passed', tally:'4-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Absent',enright:'No',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+
+  // Apr 29, 2025 — Arguelles absent; Fee left at 2:25pm (5 voting)
+  {
+    id:'v2025-08', date:'2025-04-29', year:2025,
+    meeting:'Town Council — Apr 29, 2025',
+    minutesUrl:'https://telluride-co.civicweb.net/document/419170',
+    title:'Housing Acquisition — 265 S. Davis St. (FAILED)',
+    description:'Resolution authorizing acquisition of deed-restricted unit at 265 S. Davis. Failed with majority dissent: Errico, Enright, and Shaunette voted against the purchase.',
+    tags:['Housing'],
+    outcome:'Failed', tally:'2-3',
+    votes:{errico:'No',fee:'Absent',arguelles:'Absent',enright:'No',shaunette:'No',levin:'Yes',svs:'Yes'}
+  },
+
+  // May 13, 2025 — all 7 present
+  {
+    id:'v2025-09', date:'2025-05-13', year:2025,
+    meeting:'Town Council — May 13, 2025',
+    minutesUrl:'https://telluride-co.civicweb.net/document/419848',
+    title:'OSC Appointment (Jue/Howe) — FAILED',
+    description:'Motion to appoint Mandie Jue and Erin Howe to Open Space Commission failed 3–4; Arguelles, Story Von Spreecken, Enright, and Mayor Errico all dissented.',
+    tags:['Appointments','Open Space'],
+    outcome:'Failed', tally:'3-4',
+    votes:{errico:'No',fee:'Yes',arguelles:'No',enright:'No',shaunette:'Yes',levin:'Yes',svs:'No'}
+  },
+  {
+    id:'v2025-10', date:'2025-05-13', year:2025,
+    meeting:'Town Council — May 13, 2025',
+    minutesUrl:'https://telluride-co.civicweb.net/document/419848',
+    title:'OSC Appointment — Revised (Jue/Griswold)',
+    description:'Revised motion appointing Mandie Jue (regular) and Angela Griswold (alternate) to Open Space Commission. Passed 5-2; Fee and Shaunette dissented.',
+    tags:['Appointments','Open Space'],
+    outcome:'Passed', tally:'5-2',
+    votes:{errico:'Yes',fee:'No',arguelles:'Yes',enright:'Yes',shaunette:'No',levin:'Yes',svs:'Yes'}
+  },
+
+  // Jun 3, 2025 — Arguelles absent (6 present)
+  {
+    id:'v2025-11', date:'2025-06-03', year:2025,
+    meeting:'Town Council — Jun 3, 2025',
+    minutesUrl:'https://telluride-co.civicweb.net/document/420874',
+    title:'Virginia Placer Phase 2A Housing Project',
+    description:'Directed Town to proceed with Virginia Placer Phase 2A workforce housing project and authorized related expenditures. Story Von Spreecken was sole dissent.',
+    tags:['Housing','Budget'],
+    outcome:'Passed', tally:'5-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Absent',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'No'}
+  },
+
+  // Aug 12, 2025 — Arguelles absent (6 present)
+  {
+    id:'v2025-12', date:'2025-08-12', year:2025,
+    meeting:'Town Council — Aug 12, 2025',
+    minutesUrl:'https://telluride-co.civicweb.net/document/424221',
+    title:'Nov 2025 Ballot Question — Community Charter Amendment',
+    description:'Resolution setting form of ballot question for the November 2025 general election regarding a Town Charter amendment. Enright was sole dissent.',
+    tags:['Governance','Charter'],
+    outcome:'Passed', tally:'5-1',
+    votes:{errico:'Yes',fee:'Yes',arguelles:'Absent',enright:'No',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+
+  // Oct 21, 2025 — Arguelles absent (6 present; Fee arrived late)
+  {
+    id:'v2025-13', date:'2025-10-21', year:2025,
+    meeting:'Town Council — Oct 21, 2025',
+    minutesUrl:'https://telluride-co.civicweb.net/document/428062',
+    title:'Vested Property Rights Extension — 219 S. Oak St.',
+    description:'Approved request to extend vested property rights for Certificate of Appropriateness #11062 for 219 S. Oak St. Fee was sole dissenting vote.',
+    tags:['Land Use','Historic Preservation'],
+    outcome:'Passed', tally:'5-1',
+    votes:{errico:'Yes',fee:'No',arguelles:'Absent',enright:'Yes',shaunette:'Yes',levin:'Yes',svs:'Yes'}
+  },
+
+  // Nov 25, 2025 — NEW COUNCIL: Errico, Fee, Enright, Levin, SVS, Permakoff (6; Arguelles/Shaunette no longer serving; Stark not yet appointed)
+  {
+    id:'v2025-14', date:'2025-11-25', year:2025,
+    meeting:'Town Council — Nov 25, 2025',
+    minutesUrl:'https://telluride-co.civicweb.net/document/430348',
+    title:'Fill Council Vacancy by Appointment',
+    description:'Motion to fill the open council seat by appointment process rather than special election. Story Von Spreecken was sole dissent, preferring a public election.',
+    tags:['Governance'],
+    outcome:'Passed', tally:'5-1',
+    votes:{errico:'Yes',fee:'Yes',enright:'Yes',levin:'Yes',svs:'No',permakoff:'Yes'}
+  },
+  {
+    id:'v2025-15', date:'2025-11-25', year:2025,
+    meeting:'Town Council — Nov 25, 2025',
+    minutesUrl:'https://telluride-co.civicweb.net/document/430348',
+    title:'Appoint Meehan Fee — Mayor Pro Tem',
+    description:'Appointed Meehan Fee as Mayor Pro Tem for the new council term.',
+    tags:['Governance','Appointments'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Yes',enright:'Yes',levin:'Yes',svs:'Yes',permakoff:'Yes'}
+  },
+  {
+    id:'v2025-16', date:'2025-11-25', year:2025,
+    meeting:'Town Council — Nov 25, 2025',
+    minutesUrl:'https://telluride-co.civicweb.net/document/430348',
+    title:'Gondola IGA — 3rd Supplement & Amendment',
+    description:'Approved third supplement to the Gondola Project Intergovernmental Agreement for planning and development cost-sharing.',
+    tags:['Infrastructure','Gondola'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Yes',enright:'Yes',levin:'Yes',svs:'Yes',permakoff:'Yes'}
+  },
+
+  // Dec 16, 2025 — NEW MEMBER STARK (7 members after Stark appointed mid-meeting)
+  {
+    id:'v2025-17', date:'2025-12-16', year:2025,
+    meeting:'Town Council — Dec 16, 2025',
+    minutesUrl:'https://telluride-co.civicweb.net/document/430889',
+    title:'Appoint Marya Stark to Council Vacancy',
+    description:'Appointed Marya Stark to fill the open council seat. Errico and Permakoff dissented; Stark was sworn in immediately following the vote.',
+    tags:['Governance','Appointments'],
+    outcome:'Passed', tally:'4-2',
+    votes:{errico:'No',fee:'Yes',enright:'Yes',levin:'Yes',svs:'Yes',permakoff:'No'}
+  },
+  {
+    id:'v2025-18', date:'2025-12-16', year:2025,
+    meeting:'Town Council — Dec 16, 2025',
+    minutesUrl:'https://telluride-co.civicweb.net/document/430889',
+    title:'Planet Bluegrass Festival Exemption (2026)',
+    description:'Resolution granting Planet Bluegrass an exemption from Municipal Code for the 2026 Telluride Bluegrass Festival. Errico and Enright dissented; Story Von Spreecken recused.',
+    tags:['Special Events'],
+    outcome:'Passed', tally:'4-2',
+    votes:{errico:'No',fee:'Yes',enright:'No',levin:'Yes',svs:'Recused',permakoff:'Yes',stark:'Yes'}
+  },
+  {
+    id:'v2025-19', date:'2025-12-16', year:2025,
+    meeting:'Town Council — Dec 16, 2025',
+    minutesUrl:'https://telluride-co.civicweb.net/document/430889',
+    title:'911 E Colorado Ave — Housing Deed Restriction Amendment',
+    description:'Authorized amendment to the deed restriction for the designated affordable housing unit at 911 East Colorado Ave; also first reading of sale ordinance.',
+    tags:['Housing'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',enright:'Yes',levin:'Yes',svs:'Yes',permakoff:'Yes',stark:'Yes'}
+  },
+
+  /* ══ 2026 ══════════════════════════════════════════════════ */
+
+  // Jan 6, 2026 — all 7 present: Errico, Fee, Enright, Levin, Permakoff, Stark, SVS
+  {
+    id:'v2026-01', date:'2026-01-06', year:2026,
+    meeting:'Town Council — Jan 6, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/432101',
+    title:'911 E Colorado Ave — Sale of Deed-Restricted Unit',
+    description:'Final approval of ordinance authorizing the sale of the deed-restricted affordable housing unit at 911 East Colorado Ave.',
+    tags:['Housing'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',enright:'Yes',levin:'Yes',permakoff:'Yes',stark:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2026-02', date:'2026-01-06', year:2026,
+    meeting:'Town Council — Jan 6, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/432101',
+    title:'Colorado Retirement Association — Budget Appropriation',
+    description:'Approved resolution amending the 2025 municipal budget by making supplemental appropriations in connection with the Colorado Retirement Association.',
+    tags:['Budget'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',enright:'Yes',levin:'Yes',permakoff:'Yes',stark:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2026-03', date:'2026-01-06', year:2026,
+    meeting:'Town Council — Jan 6, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/432101',
+    title:'Hansen Trust REP — Land Use Determination',
+    description:'Approved resolution affirming land use determination for the Hansen Trust revocable encroachment permit.',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'7-0',
+    votes:{errico:'Yes',fee:'Yes',enright:'Yes',levin:'Yes',permakoff:'Yes',stark:'Yes',svs:'Yes'}
+  },
+
+  // Jan 20, 2026 — Special Meeting (Fee recused on investigation vote)
+  {
+    id:'v2026-04', date:'2026-01-20', year:2026,
+    meeting:'Special Town Council — Jan 20, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/433218',
+    title:'Authorize Investigation of Mayor Pro Tem Fee',
+    description:'Authorized an independent investigation into Mayor Pro Tem Meehan Fee\'s conduct in connection with negotiations to acquire a majority interest in TSG Ski and Golf LLC while serving as MPT. Fee recused.',
+    tags:['Governance','Ethics'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Recused',enright:'Yes',levin:'Yes',permakoff:'Yes',stark:'Yes',svs:'Yes'}
+  },
+
+  // Jan 27, 2026 — Fee absent/seat vacant
+  {
+    id:'v2026-05', date:'2026-01-27', year:2026,
+    meeting:'Town Council — Jan 27, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/433216',
+    title:'CCAASE 2026 Arts & Events Funding',
+    description:'Approved CCAASE 2026 funding recommendations. Fee seat now vacant following resignation.',
+    tags:['Budget','Arts & Events'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Vacant',enright:'Yes',levin:'Yes',permakoff:'Yes',stark:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2026-06', date:'2026-01-27', year:2026,
+    meeting:'Town Council — Jan 27, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/433216',
+    title:'Housing Acquisition — Deed-Restricted Unit',
+    description:'Resolution authorizing acquisition of a deed-restricted affordable housing unit.',
+    tags:['Housing'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Vacant',enright:'Yes',levin:'Yes',permakoff:'Yes',stark:'Yes',svs:'Yes'}
+  },
+
+  // Feb 6, 2026 — Special Meeting
+  {
+    id:'v2026-07', date:'2026-02-06', year:2026,
+    meeting:'Special Town Council — Feb 6, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/433214',
+    title:'Select ILG as Independent Investigator',
+    description:'Selected ILG (Independent Legal Group) to conduct the investigation into Mayor Pro Tem Fee\'s conduct.',
+    tags:['Governance','Ethics'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Vacant',enright:'Yes',levin:'Yes',permakoff:'Yes',stark:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2026-08', date:'2026-02-06', year:2026,
+    meeting:'Special Town Council — Feb 6, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/433214',
+    title:'Call Special Election to Fill Vacant Seat',
+    description:'Resolution calling a special election to fill the vacant council seat. Permakoff recused due to potential interest in the seat.',
+    tags:['Governance','Elections'],
+    outcome:'Passed', tally:'5-0',
+    votes:{errico:'Yes',fee:'Vacant',enright:'Yes',levin:'Yes',permakoff:'Recused',stark:'Yes',svs:'Yes'}
+  },
+
+  // Feb 24, 2026
+  {
+    id:'v2026-09', date:'2026-02-24', year:2026,
+    meeting:'Town Council — Feb 24, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/436148',
+    title:'Appoint Elena Levin — Mayor Pro Tem',
+    description:'Appointed Councilperson Elena Levin to serve as Mayor Pro Tem, filling the vacancy created by Fee\'s departure.',
+    tags:['Governance','Appointments'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Vacant',enright:'Yes',levin:'Yes',permakoff:'Yes',stark:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2026-10', date:'2026-02-24', year:2026,
+    meeting:'Town Council — Feb 24, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/436148',
+    title:'Mountainfilm Event Exemption (Levin Recused)',
+    description:'Resolution granting Mountainfilm an exemption from Municipal Code for the 2026 Mountainfilm Festival. Levin recused due to organizational affiliation.',
+    tags:['Special Events'],
+    outcome:'Passed', tally:'5-0',
+    votes:{errico:'Yes',fee:'Vacant',enright:'Yes',levin:'Recused',permakoff:'Yes',stark:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2026-11', date:'2026-02-24', year:2026,
+    meeting:'Town Council — Feb 24, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/436148',
+    title:'Special Election — Jun 30 Ballot Date (Stark Recused)',
+    description:'Set June 30 as the date for the special election to fill the vacant council seat. Stark recused.',
+    tags:['Governance','Elections'],
+    outcome:'Passed', tally:'5-0',
+    votes:{errico:'Yes',fee:'Vacant',enright:'Yes',levin:'Yes',permakoff:'Yes',stark:'Recused',svs:'Yes'}
+  },
+  {
+    id:'v2026-12', date:'2026-02-24', year:2026,
+    meeting:'Town Council — Feb 24, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/436148',
+    title:'Refer Permakoff Ethics Complaint to Ethics Commission',
+    description:'Referred the ethics complaint filed against Councilperson Permakoff (Feb 9, 2026) to the Town Ethics Commission for investigation. Permakoff recused.',
+    tags:['Governance','Ethics'],
+    outcome:'Passed', tally:'5-0',
+    votes:{errico:'Yes',fee:'Vacant',enright:'Yes',levin:'Yes',permakoff:'Recused',stark:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2026-13', date:'2026-02-24', year:2026,
+    meeting:'Town Council — Feb 24, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/436148',
+    title:'Housing Acquisition — Element 52 Unit',
+    description:'Resolution authorizing acquisition of a deed-restricted affordable housing unit at Element 52.',
+    tags:['Housing'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Vacant',enright:'Yes',levin:'Yes',permakoff:'Yes',stark:'Yes',svs:'Yes'}
+  },
+  // Mar 17, 2026
+  {
+    id:'v2026-15', date:'2026-03-17', year:2026,
+    meeting:'Town Council — Mar 17, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/437329',
+    title:'Ethics Commission Ratification (Permakoff Recused)',
+    description:'Ratified appointment of member(s) to the Town Ethics Commission to conduct the Permakoff investigation.',
+    tags:['Governance','Ethics'],
+    outcome:'Passed', tally:'5-0',
+    votes:{errico:'Yes',fee:'Vacant',enright:'Yes',levin:'Yes',permakoff:'Recused',stark:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2026-16', date:'2026-03-17', year:2026,
+    meeting:'Town Council — Mar 17, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/437329',
+    title:'Community Management Plan (CMP) Manual Amendments',
+    description:'Approved amendments to the CMP Manual. Mayor Errico cast the sole No vote.',
+    tags:['Land Use','Planning'],
+    outcome:'Passed', tally:'5-1',
+    votes:{errico:'No',fee:'Vacant',enright:'Yes',levin:'Yes',permakoff:'Yes',stark:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2026-17', date:'2026-03-17', year:2026,
+    meeting:'Town Council — Mar 17, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/437329',
+    title:'Wildfire Resiliency Code — 1st Reading',
+    description:'First reading of Wildfire Resiliency Code amendments to the International Fire Code and Land Use Code.',
+    tags:['Environment','Public Safety'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Vacant',enright:'Yes',levin:'Yes',permakoff:'Yes',stark:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2026-18', date:'2026-03-17', year:2026,
+    meeting:'Town Council — Mar 17, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/437329',
+    title:'San Miguel County Facilities MOU',
+    description:'Approved Memorandum of Understanding with San Miguel County for shared facilities. Permakoff cast the sole No vote.',
+    tags:['Infrastructure','Intergovernmental'],
+    outcome:'Passed', tally:'5-1',
+    votes:{errico:'Yes',fee:'Vacant',enright:'Yes',levin:'Yes',permakoff:'No',stark:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2026-19', date:'2026-03-17', year:2026,
+    meeting:'Town Council — Mar 17, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/437329',
+    title:'Special Election IGA (Stark, SVS & Permakoff Recused)',
+    description:'Approved intergovernmental agreement with San Miguel County for administration of the June 30 special election. Stark, Story Von Spreecken, and Permakoff all recused.',
+    tags:['Governance','Elections'],
+    outcome:'Passed', tally:'4-0',
+    votes:{errico:'Yes',fee:'Vacant',enright:'Yes',levin:'Yes',permakoff:'Recused',stark:'Recused',svs:'Recused'}
+  },
+
+  // Mar 31, 2026
+  {
+    id:'v2026-20', date:'2026-03-31', year:2026,
+    meeting:'Town Council — Mar 31, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/438569',
+    title:'HARC Appeal — Continue to Next Meeting',
+    description:'Moved to continue the public hearing on the pending HARC appeal at the request of both parties.',
+    tags:['Land Use','Historic Preservation'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Vacant',enright:'Yes',levin:'Yes',permakoff:'Yes',stark:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2026-21', date:'2026-03-31', year:2026,
+    meeting:'Town Council — Mar 31, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/438569',
+    title:'Wildfire Resiliency Code — Final Adoption (2nd Reading)',
+    description:'Final adoption of the Wildfire Resiliency Code amendments. Unanimously passed on second reading.',
+    tags:['Environment','Public Safety'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Vacant',enright:'Yes',levin:'Yes',permakoff:'Yes',stark:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2026-22', date:'2026-03-31', year:2026,
+    meeting:'Town Council — Mar 31, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/438569',
+    title:'Open Space Commission 2026 Work Plan',
+    description:'Approved the 2026 Open Space Commission Work Plan including restoration, trail, and land acquisition priorities.',
+    tags:['Environment','Open Space'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Vacant',enright:'Yes',levin:'Yes',permakoff:'Yes',stark:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2026-23', date:'2026-03-31', year:2026,
+    meeting:'Town Council — Mar 31, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/438569',
+    title:'Housing Sale Ordinances — 1st Readings',
+    description:'First readings of ordinances authorizing sale of deed-restricted housing units. Two separate resolutions passed unanimously.',
+    tags:['Housing'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Vacant',enright:'Yes',levin:'Yes',permakoff:'Yes',stark:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2026-24', date:'2026-03-31', year:2026,
+    meeting:'Town Council — Mar 31, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/438569',
+    title:'Workforce Housing Deed Restriction — Lot 17',
+    description:'Resolution authorizing acquisition of workforce housing deed restriction on Lot 17.',
+    tags:['Housing'],
+    outcome:'Passed', tally:'6-0',
+    votes:{errico:'Yes',fee:'Vacant',enright:'Yes',levin:'Yes',permakoff:'Yes',stark:'Yes',svs:'Yes'}
+  },
+  {
+    id:'v2026-25', date:'2026-03-31', year:2026,
+    meeting:'Town Council — Mar 31, 2026',
+    minutesUrl:'https://telluride-co.civicweb.net/document/438569',
+    title:'Workforce Housing Deed Restriction — Lot 2 (SVS Recused)',
+    description:'Resolution authorizing acquisition of workforce housing deed restriction on Lot 2. Story Von Spreecken recused due to proximity interest.',
+    tags:['Housing'],
+    outcome:'Passed', tally:'5-0',
+    votes:{errico:'Yes',fee:'Vacant',enright:'Yes',levin:'Yes',permakoff:'Yes',stark:'Yes',svs:'Recused'}
+  },
+
+];
+
+/* ══════════════════════════════════════════════════════════════
+   RENDER LOGIC
+══════════════════════════════════════════════════════════════ */
+
+let activeTab = 'heatmap';
+let hmCatFilter = ''; // active category filter for heatmap (empty = all)
+let hmViewMode = 'issue'; // 'issue' or 'category'
+
+function switchTab(tab) {
+  activeTab = tab;
+  document.getElementById('view-tracker').style.display = tab === 'tracker' ? '' : 'none';
+  document.getElementById('view-heatmap').style.display  = tab === 'heatmap'  ? '' : 'none';
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  renderHeatmap();
+}
+
+// ── populate category dropdown ──────────────────────────────
+function populateFilters() {
+  const cats = [...new Set(VOTE_ITEMS.flatMap(v => v.tags))].sort();
+  const sel = document.getElementById('filter-cat');
+  cats.forEach(c => {
+    const o = document.createElement('option'); o.value = c; o.textContent = c; sel.appendChild(o);
+  });
+}
+
+function clearFilters() {
+  document.getElementById('search').value = '';
+  document.getElementById('filter-year').value = '';
+  document.getElementById('filter-cat').value = '';
+  document.getElementById('filter-outcome').value = '';
+  renderTracker();
+}
+
+// ── filter votes ────────────────────────────────────────────
+function getFilteredVotes() {
+  const q      = document.getElementById('search').value.toLowerCase().trim();
+  const year   = document.getElementById('filter-year').value;
+  const cat    = document.getElementById('filter-cat').value;
+  const outcome = document.getElementById('filter-outcome').value;
+
+  return VOTE_ITEMS.filter(v => {
+    if (year && String(v.year) !== year) return false;
+    if (cat && !v.tags.includes(cat)) return false;
+    if (outcome && v.outcome !== outcome) return false;
+    if (q) {
+      const hay = (v.title + ' ' + v.description + ' ' + v.tags.join(' ') + ' ' + v.meeting).toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+}
+
+// ── pill helper ──────────────────────────────────────────────
+function voteClass(v) {
+  switch(v) {
+    case 'Yes':     return 'yes';
+    case 'No':      return 'no';
+    case 'Recused': return 'recused';
+    case 'Absent':  return 'absent';
+    case 'Vacant':  return 'vacant';
+    default:        return 'notoncil';
+  }
+}
+function voteLabel(v) {
+  return { Yes:'✓', No:'✗', Recused:'⊘', Absent:'–', Vacant:'○' }[v] || '·';
+}
+
+// ── render tracker tab ──────────────────────────────────────
+function renderTracker() {
+  const filtered = getFilteredVotes();
+  document.getElementById('result-count').textContent =
+    `Showing ${filtered.length} of ${VOTE_ITEMS.length} votes`;
+
+  // Update stats bar
+  const split  = filtered.filter(v => v.tally && v.tally.includes('-') && v.tally !== '7-0' && v.tally !== '6-0' && v.tally !== '5-0' && v.tally !== '4-0').length;
+  const failed = filtered.filter(v => v.outcome === 'Failed').length;
+  document.getElementById('stat-votes').textContent  = filtered.length;
+  document.getElementById('stat-split').textContent  = split;
+  document.getElementById('stat-failed').textContent = filtered.filter(v => v.outcome === 'Failed').length;
+
+  if (!filtered.length) {
+    document.getElementById('tracker-content').innerHTML = `
+      <div class="empty-state"><p>No votes match your filters.</p></div>`;
+    return;
+  }
+
+  // Group by meeting
+  const groups = {};
+  filtered.forEach(v => {
+    if (!groups[v.meeting]) groups[v.meeting] = [];
+    groups[v.meeting].push(v);
+  });
+
+  // Sort meetings chronologically (most recent first)
+  const sortedMeetings = Object.keys(groups).sort((a, b) => {
+    const da = groups[a][0].date, db = groups[b][0].date;
+    return db.localeCompare(da);
+  });
+
+  let html = '';
+  sortedMeetings.forEach(meeting => {
+    const votes = groups[meeting];
+    const url = votes[0].minutesUrl;
+    html += `<div class="meeting-group">
+      <div class="meeting-header">
+        <h3>${meeting}</h3>
+        <a class="min-link" href="${url}" target="_blank" rel="noopener">📄 Adopted Minutes ↗</a>
+      </div>`;
+    votes.forEach((v, i) => {
+      const pills = ALL_MEMBERS.map(m => {
+        const mv = v.votes[m.id];
+        if (!mv) return ''; // not on council
+        const cls = voteClass(mv);
+        return `<span class="pill ${cls}">${voteLabel(mv)} <span class="name">${m.shortName}</span></span>`;
+      }).join('');
+      const tags = v.tags.map(t => `<span class="tag">${t}</span>`).join('');
+      html += `<div class="vote-card">
+        <div class="vote-card-top">
+          <span class="vote-num">#${String(i+1).padStart(2,'0')}</span>
+          <div class="vote-info">
+            <div class="vote-title">${v.title}</div>
+            <div class="vote-desc">${v.description}</div>
+          </div>
+          <div class="vote-right">
+            <span class="outcome-badge ${v.outcome.toLowerCase()}">${v.outcome.toUpperCase()}</span>
+            <span class="tally">${v.tally}</span>
+          </div>
+        </div>
+        <div class="vote-pills">${pills}</div>
+        <div class="vote-tags">${tags}</div>
+      </div>`;
+    });
+    html += `</div>`;
+  });
+
+  document.getElementById('tracker-content').innerHTML = html;
+}
+
+
+// ── render heatmap: Votes by Category view ─────────────────
+function renderHeatmapByCategory() {
+  const ent = (document.getElementById('filter-entity') || {value:'telluride'}).value;
+  if (ent === 'bocc')     { renderBoccHeatmap();     return; }
+  if (ent === 'planning') { renderPlanningHeatmap();  return; }
+
+  const yearSel = document.getElementById('filter-year').value;
+
+  const eras = yearSel === '2026'
+    ? [{label:'2026 Council', members:COUNCIL_2026, yearFilter:2026}]
+    : yearSel === '2025'
+    ? [{label:'2025 Council (Nov–Dec transition)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true},
+       {label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true}]
+    : yearSel === '2024'
+    ? [{label:'2024 Council', members:COUNCIL_2024, yearFilter:2024}]
+    : [{label:'2026 Council', members:COUNCIL_2026, yearFilter:2026},
+       {label:'2025 Council (Nov–Dec)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true},
+       {label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true},
+       {label:'2024 Council', members:COUNCIL_2024, yearFilter:2024}];
+
+  // All unique categories across filtered votes
+  const allCats = [...new Set(VOTE_ITEMS.flatMap(v => v.tags))].sort();
+
+  let html = '';
+  eras.forEach(era => {
+    const eraVotes = VOTE_ITEMS.filter(v => {
+      if (v.year !== era.yearFilter) return false;
+      if (era.earlyOnly) return v.date < '2025-11-01';
+      if (era.lateOnly)  return v.date >= '2025-11-01';
+      return true;
+    });
+    if (!eraVotes.length) return;
+
+    const mems = era.members.map(id => ALL_MEMBERS.find(m => m.id === id));
+
+    // Build per-member, per-category yes/no counts
+    // catStats[cat][memberId] = { yes, no }
+    const catStats = {};
+    allCats.forEach(cat => {
+      catStats[cat] = {};
+      mems.forEach(m => { catStats[cat][m.id] = { yes: 0, no: 0 }; });
+    });
+
+    eraVotes.forEach(v => {
+      v.tags.forEach(cat => {
+        if (!catStats[cat]) return;
+        mems.forEach(m => {
+          const mv = v.votes[m.id];
+          if (mv === 'Yes') catStats[cat][m.id].yes++;
+          else if (mv === 'No') catStats[cat][m.id].no++;
+        });
+      });
+    });
+
+    // Only show categories that have at least one vote in this era
+    const activeCats = allCats.filter(cat =>
+      mems.some(m => catStats[cat][m.id].yes + catStats[cat][m.id].no > 0)
+    );
+    if (!activeCats.length) return;
+
+    html += `<div class="heatmap-wrap">
+      <div class="heatmap-title">${era.label}</div>
+      <table class="heatmap-table">
+        <thead>
+          <tr>
+            <th class="vote-col-th">Category</th>
+            ${mems.map(m => `<th class="hm-member-header">${m.name}<span class="mem-role">${m.title}</span></th>`).join('')}
+          </tr>
+        </thead>
+        <tbody>`;
+
+    activeCats.forEach(cat => {
+      html += `<tr>
+        <td><span class="hm-vote-title" style="font-size:24px;font-weight:700">${cat}</span></td>`;
+      mems.forEach(m => {
+        const s = catStats[cat][m.id];
+        const total = s.yes + s.no;
+        if (!total) {
+          html += `<td><div class="hm-cat-cell none"></div></td>`;
+        } else if (s.yes > s.no) {
+          html += `<td><div class="hm-cat-cell yes-dom">
+            <span class="cat-label">YES</span>
+            <span class="cat-counts">${s.yes}/${s.no}</span>
+          </div></td>`;
+        } else if (s.no > s.yes) {
+          html += `<td><div class="hm-cat-cell no-dom">
+            <span class="cat-label">NO</span>
+            <span class="cat-counts">${s.no}/${s.yes}</span>
+          </div></td>`;
+        } else {
+          html += `<td><div class="hm-cat-cell tied">
+            <span class="cat-label">TIED</span>
+            <span class="cat-counts">${s.yes}/${s.no}</span>
+          </div></td>`;
+        }
+      });
+      html += `</tr>`;
+    });
+
+    html += `</tbody></table></div>`;
+  });
+
+  if (!html) html = `<div class="empty-state"><p>No votes found.</p></div>`;
+  document.getElementById('heatmap-content').innerHTML = html;
+}
+
+// ── build heatmap category chip bar ────────────────────────
+function buildHmCatBar() {
+  const cats = [...new Set(VOTE_ITEMS.flatMap(v => v.tags))].sort();
+  const bar = document.getElementById('hm-cat-bar');
+  if (!bar) return;
+  if (hmViewMode === 'category') { bar.style.display = 'none'; return; }
+  bar.style.display = '';
+  const allBtn = `<button class="hm-cat-btn${hmCatFilter===''?' active':''}" onclick="setHmCat('')">All categories</button>`;
+  const chips = cats.map(c =>
+    `<button class="hm-cat-btn${hmCatFilter===c?' active':''}" onclick="setHmCat('${c}')">${c}</button>`
+  ).join('');
+  bar.innerHTML = allBtn + chips;
+}
+
+function setHmCat(cat) {
+  hmCatFilter = cat;
+  buildHmCatBar();
+  renderHeatmap();
+}
+
+function setHmView(mode) {
+  hmViewMode = mode;
+  // Toggle button active states
+  document.getElementById('hm-btn-issue').classList.toggle('active', mode === 'issue');
+  document.getElementById('hm-btn-category').classList.toggle('active', mode === 'category');
+  renderHeatmap();
+}
+
+// ── render heatmap tab ──────────────────────────────────────
+
+/* ══════════════════════════════════════════════════════════════
+   ENTITY SWITCHING
+══════════════════════════════════════════════════════════════ */
+function switchEntity() {
+  const ent = document.getElementById('filter-entity').value;
+  const yearSel = document.getElementById('filter-year');
+  yearSel.innerHTML = '';
+
+  let years = [];
+  if (ent === 'telluride') {
+    years = [['', 'All years'], ['2026','2026'], ['2025','2025'], ['2024','2024']];
+  } else if (ent === 'bocc') {
+    years = [['', 'All years'], ['2026','2026'], ['2025','2025'], ['2024','2024']];
+  } else if (ent === 'planning') {
+    years = [['', 'All years'], ['2026','2026'], ['2025','2025'], ['2024','2024']];
+  } else {
+    years = [['', 'All years'], ['2024','2024']];
+  }
+  years.forEach(([val, label]) => {
+    const o = document.createElement('option');
+    o.value = val; o.textContent = label;
+    yearSel.appendChild(o);
+  });
+  yearSel.selectedIndex = 0; // always reset to "All years" when switching entity
+  hmCatFilter = '';
+  renderHeatmap();
+}
+
+/* ══════════════════════════════════════════════════════════════
+   BOCC HEATMAP
+══════════════════════════════════════════════════════════════ */
+function renderBoccHeatmap() {
+  const yearSel = document.getElementById('filter-year').value;
+  const catSel  = hmCatFilter;
+
+  const eras = yearSel === '2026'
+    ? [{ label:'2026 BOCC', members:BOCC_2025, yearFilter:2026 }]
+    : yearSel === '2025'
+    ? [{ label:'2025 BOCC', members:BOCC_2025, yearFilter:2025 }]
+    : yearSel === '2024'
+    ? [{ label:'2024 BOCC', members:BOCC_2024, yearFilter:2024 }]
+    : [{ label:'2026 BOCC', members:BOCC_2025, yearFilter:2026 },
+       { label:'2025 BOCC', members:BOCC_2025, yearFilter:2025 },
+       { label:'2024 BOCC', members:BOCC_2024, yearFilter:2024 }];
+
+  let html = '';
+  eras.forEach(era => {
+    let eraVotes = BOCC_VOTE_ITEMS.filter(v => {
+      if (v.year !== era.yearFilter) return false;
+      if (catSel && !v.tags.includes(catSel)) return false;
+      return true;
+    }).sort((a,b) => b.date.localeCompare(a.date));
+
+    if (!eraVotes.length) return;
+
+    const mems = era.members.map(id => BOCC_ALL_MEMBERS.find(m => m.id === id)).filter(Boolean);
+
+    const stats = {};
+    mems.forEach(m => {
+      let yes = 0, no = 0, total = 0, withMaj = 0;
+      eraVotes.forEach(v => {
+        const mv = v.votes[m.id];
+        if (mv === 'Yes' || mv === 'No') {
+          total++;
+          if (mv === 'Yes') yes++; else no++;
+          const onWinningSide = (v.outcome === 'Passed' && mv === 'Yes') ||
+                                (v.outcome === 'Failed'  && mv === 'No');
+          if (onWinningSide) withMaj++;
+        }
+      });
+      stats[m.id] = { yes, no, total, withMaj };
+    });
+
+    function pctClass(pct) {
+      return pct >= 80 ? 'hm-pct-high' :
+             pct >= 60 ? 'hm-pct-mid-high' :
+             pct >= 40 ? 'hm-pct-mid' : 'hm-pct-low';
+    }
+
+    html += `<div class="heatmap-wrap">
+      <div class="heatmap-title">${era.label}</div>
+      <table class="heatmap-table">
+        <thead>
+          <tr>
+            <th class="vote-col-th">Vote</th>
+            ${mems.map(m => `<th class="hm-member-header">${m.name}<span class="mem-role">${m.title}</span></th>`).join('')}
+            <th class="result-col-th">Result</th>
+          </tr>
+          <tr>
+            <td class="stats-label-cell">Summary</td>
+            ${mems.map(m => {
+              const s = stats[m.id];
+              const pct    = s.total ? Math.round(s.yes / s.total * 100) : 0;
+              const majPct = s.total ? Math.round(s.withMaj / s.total * 100) : 0;
+              return `<td class="hm-stats-cell ${pctClass(pct)}">
+                <span class="pct-num">${pct}%</span>
+                <span class="pct-frac">${s.yes}/${s.total} Yes</span>
+                <span class="pct-maj">${majPct}% w/ majority</span>
+                <span class="pct-total">${s.total} votes cast</span>
+              </td>`;
+            }).join('')}
+            <td style="background:var(--gray-100)"></td>
+          </tr>
+        </thead>
+        <tbody>`;
+
+    eraVotes.forEach(v => {
+      const dateStr = v.date.replace(/^(\d{4})-(\d{2})-(\d{2})$/, (_,y,mo,d) =>
+        `${['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+mo]} ${+d}`);
+      html += `<tr>
+        <td>
+          <a href="${v.minutesUrl}" target="_blank" style="text-decoration:none">
+            <span class="hm-vote-title">${v.title}</span>
+          </a>
+          <span class="hm-vote-meta">${dateStr} · ${v.tags[0]}</span>
+        </td>`;
+      mems.forEach(m => {
+        const mv = v.votes[m.id];
+        let cls = 'hm-nc', lbl = '';
+        if      (mv === 'Yes')     { cls = 'hm-yes-str'; lbl = 'YES'; }
+        else if (mv === 'No')      { cls = 'hm-no-str';  lbl = 'NO'; }
+        else if (mv === 'Recused') { cls = 'hm-rec';     lbl = 'Recused'; }
+        else if (mv === 'Absent')  { cls = 'hm-abs';     lbl = 'Absent'; }
+        else if (mv === 'Vacant')  { cls = 'hm-vac';     lbl = 'Vacant'; }
+        const cellLink = v.minutesUrl ? `<a href="${v.minutesUrl}" target="_blank" rel="noopener" style="text-decoration:none;display:block">` : '';
+        const cellLinkEnd = v.minutesUrl ? '</a>' : '';
+        html += `<td>${cellLink}<div class="hm-cell ${cls}" title="${m.name}: ${mv||'Not on BOCC'}. Click to view minutes.">${lbl}</div>${cellLinkEnd}</td>`;
+      });
+      html += `<td class="hm-outcome ${v.outcome.toLowerCase()}" style="padding:5px 8px;white-space:nowrap">${v.outcome} ${v.tally}</td>`;
+      html += `</tr>`;
+    });
+
+    html += `</tbody></table></div>`;
+  });
+
+  if (!html) html = `<div class="empty-state"><p>No BOCC votes for the selected filters.<br>More meetings being added — <a href="https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26" target="_blank">view all BOCC minutes</a>.</p></div>`;
+  document.getElementById('heatmap-content').innerHTML = html;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PLANNING COMMISSION HEATMAP
+══════════════════════════════════════════════════════════════ */
+function renderPlanningHeatmap() {
+  const yearSel = document.getElementById('filter-year').value;
+  const catSel  = hmCatFilter;
+
+  const eras = yearSel === '2026'
+    ? [{ label:'2026 Planning Commission', members:PC_2025, yearFilter:2026 }]
+    : yearSel === '2025'
+    ? [{ label:'2025 Planning Commission', members:PC_2025, yearFilter:2025 }]
+    : yearSel === '2024'
+    ? [{ label:'2024 Planning Commission', members:PC_2024, yearFilter:2024 }]
+    : [{ label:'2026 Planning Commission', members:PC_2025, yearFilter:2026 },
+       { label:'2025 Planning Commission', members:PC_2025, yearFilter:2025 },
+       { label:'2024 Planning Commission', members:PC_2024, yearFilter:2024 }];
+
+  let html = '';
+  eras.forEach(era => {
+    let eraVotes = PC_VOTE_ITEMS.filter(v => {
+      if (v.year !== era.yearFilter) return false;
+      if (catSel && !v.tags.includes(catSel)) return false;
+      return true;
+    }).sort((a,b) => b.date.localeCompare(a.date));
+
+    if (!eraVotes.length) return;
+
+    const mems = era.members.map(id => PC_ALL_MEMBERS.find(m => m.id === id)).filter(Boolean);
+
+    const stats = {};
+    mems.forEach(m => {
+      let yes = 0, no = 0, total = 0, withMaj = 0;
+      eraVotes.forEach(v => {
+        const mv = v.votes[m.id];
+        if (mv === 'Yes' || mv === 'No') {
+          total++;
+          if (mv === 'Yes') yes++; else no++;
+          const onWinningSide = (v.outcome === 'Passed' && mv === 'Yes') ||
+                                (v.outcome === 'Failed'  && mv === 'No');
+          if (onWinningSide) withMaj++;
+        }
+      });
+      stats[m.id] = { yes, no, total, withMaj };
+    });
+
+    function pctClass(pct) {
+      return pct >= 80 ? 'hm-pct-high' :
+             pct >= 60 ? 'hm-pct-mid-high' :
+             pct >= 40 ? 'hm-pct-mid' : 'hm-pct-low';
+    }
+
+    html += `<div class="heatmap-wrap">
+      <div class="heatmap-title">${era.label}</div>
+      <table class="heatmap-table">
+        <thead>
+          <tr>
+            <th class="vote-col-th">Vote</th>
+            ${mems.map(m => `<th class="hm-member-header">${m.name}<span class="mem-role">${m.title}</span></th>`).join('')}
+            <th class="result-col-th">Result</th>
+          </tr>
+          <tr>
+            <td class="stats-label-cell">Summary</td>
+            ${mems.map(m => {
+              const s = stats[m.id];
+              const pct    = s.total ? Math.round(s.yes / s.total * 100) : 0;
+              const majPct = s.total ? Math.round(s.withMaj / s.total * 100) : 0;
+              return `<td class="hm-stats-cell ${pctClass(pct)}">
+                <span class="pct-num">${pct}%</span>
+                <span class="pct-frac">${s.yes}/${s.total} Yes</span>
+                <span class="pct-maj">${majPct}% w/ majority</span>
+                <span class="pct-total">${s.total} votes cast</span>
+              </td>`;
+            }).join('')}
+            <td style="background:var(--gray-100)"></td>
+          </tr>
+        </thead>
+        <tbody>`;
+
+    eraVotes.forEach(v => {
+      const dateStr = v.date.replace(/^(\d{4})-(\d{2})-(\d{2})$/, (_,y,mo,d) =>
+        `${['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+mo]} ${+d}`);
+      html += `<tr>
+        <td>
+          <a href="${v.minutesUrl}" target="_blank" style="text-decoration:none">
+            <span class="hm-vote-title">${v.title}</span>
+          </a>
+          <span class="hm-vote-meta">${dateStr} · ${v.tags.join(' · ')}</span>
+        </td>`;
+      mems.forEach(m => {
+        const mv = v.votes[m.id];
+        let cls = 'hm-nc', lbl = '';
+        if      (mv === 'Yes')     { cls = 'hm-yes-str'; lbl = 'YES'; }
+        else if (mv === 'No')      { cls = 'hm-no-str';  lbl = 'NO'; }
+        else if (mv === 'Recused') { cls = 'hm-rec';     lbl = 'Recused'; }
+        else if (mv === 'Absent')  { cls = 'hm-abs';     lbl = 'Absent'; }
+        else if (mv === 'Vacant')  { cls = 'hm-vac';     lbl = 'Vacant'; }
+        const cellLink = v.minutesUrl ? `<a href="${v.minutesUrl}" target="_blank" rel="noopener" style="text-decoration:none;display:block">` : '';
+        const cellLinkEnd = v.minutesUrl ? '</a>' : '';
+        html += `<td>${cellLink}<div class="hm-cell ${cls}" title="${m.name}: ${mv||'Not on PC'}. Click to view minutes.">${lbl}</div>${cellLinkEnd}</td>`;
+      });
+      html += `<td class="hm-outcome ${v.outcome.toLowerCase()}" style="padding:5px 8px;white-space:nowrap">${v.outcome} ${v.tally}</td>`;
+      html += `</tr>`;
+    });
+
+    html += `</tbody></table></div>`;
+  });
+
+  if (!html) html = `<div class="empty-state"><p>No Planning Commission votes for the selected filters.<br>More meetings being added — <a href="https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=30" target="_blank">view all PC minutes</a>.</p></div>`;
+  document.getElementById('heatmap-content').innerHTML = html;
+}
+
+function renderHeatmap() {
+  if (hmViewMode === 'category') { renderHeatmapByCategory(); return; }
+
+  const ent = (document.getElementById('filter-entity') || {value:'telluride'}).value;
+  if (ent === 'bocc')     { renderBoccHeatmap();     return; }
+  if (ent === 'planning') { renderPlanningHeatmap();  return; }
+
+  const yearSel = document.getElementById('filter-year').value;
+  const catSel  = hmCatFilter;
+
+  const eras = yearSel === '2026'
+    ? [{label:'2026 Council', members:COUNCIL_2026, yearFilter:2026}]
+    : yearSel === '2025'
+    ? [{label:'2025 Council (Nov–Dec transition)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true},
+       {label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true}]
+    : yearSel === '2024'
+    ? [{label:'2024 Council', members:COUNCIL_2024, yearFilter:2024}]
+    : [{label:'2026 Council', members:COUNCIL_2026, yearFilter:2026},
+       {label:'2025 Council (Nov–Dec)', members:COUNCIL_2025_LATE, yearFilter:2025, lateOnly:true},
+       {label:'2025 Council (Jan–Oct)', members:COUNCIL_2025_EARLY, yearFilter:2025, earlyOnly:true},
+       {label:'2024 Council', members:COUNCIL_2024, yearFilter:2024}];
+
+  let html = '';
+  eras.forEach(era => {
+    let eraVotes = VOTE_ITEMS.filter(v => {
+      if (v.year !== era.yearFilter) return false;
+      if (catSel && !v.tags.includes(catSel)) return false;
+      if (era.earlyOnly) return v.date < '2025-11-01';
+      if (era.lateOnly)  return v.date >= '2025-11-01';
+      return true;
+    }).sort((a,b) => b.date.localeCompare(a.date));
+
+    if (!eraVotes.length) return;
+
+    const mems = era.members.map(id => ALL_MEMBERS.find(m => m.id === id));
+
+    // ── Compute per-member summary stats ──────────────────────
+    const stats = {};
+    mems.forEach(m => {
+      let yes = 0, no = 0, total = 0, withMaj = 0;
+      eraVotes.forEach(v => {
+        const mv = v.votes[m.id];
+        if (mv === 'Yes' || mv === 'No') {
+          total++;
+          if (mv === 'Yes') yes++;
+          else no++;
+          const onWinningSide = (v.outcome === 'Passed' && mv === 'Yes') ||
+                                (v.outcome === 'Failed'  && mv === 'No');
+          if (onWinningSide) withMaj++;
+        }
+      });
+      stats[m.id] = { yes, no, total, withMaj };
+    });
+
+    // ── Helper: pct → color class ──────────────────────────────
+    function pctClass(pct) {
+      return pct >= 80 ? 'hm-pct-high' :
+             pct >= 60 ? 'hm-pct-mid-high' :
+             pct >= 40 ? 'hm-pct-mid' : 'hm-pct-low';
+    }
+
+    html += `<div class="heatmap-wrap">
+      <div class="heatmap-title">${era.label}</div>
+      <table class="heatmap-table">
+        <thead>
+          <!-- Row 1: member names -->
+          <tr>
+            <th class="vote-col-th">Vote</th>
+            ${mems.map(m => `<th class="hm-member-header">${m.name}<span class="mem-role">${m.title}</span></th>`).join('')}
+            <th class="result-col-th">Result</th>
+          </tr>
+          <!-- Row 2: summary stats per member -->
+          <tr>
+            <td class="stats-label-cell">Summary</td>
+            ${mems.map(m => {
+              const s = stats[m.id];
+              const pct    = s.total ? Math.round(s.yes / s.total * 100) : 0;
+              const majPct = s.total ? Math.round(s.withMaj / s.total * 100) : 0;
+              return `<td class="hm-stats-cell ${pctClass(pct)}">
+                <span class="pct-num">${pct}%</span>
+                <span class="pct-frac">${s.yes}/${s.total} Yes</span>
+                <span class="pct-maj">${majPct}% w/ majority</span>
+                <span class="pct-total">${s.total} votes cast</span>
+              </td>`;
+            }).join('')}
+            <td style="background:var(--gray-100)"></td>
+          </tr>
+        </thead>
+        <tbody>`;
+
+    eraVotes.forEach(v => {
+      const dateStr = v.date.replace(/^(\d{4})-(\d{2})-(\d{2})$/, (_, y,mo,d) =>
+        `${['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+mo]} ${+d}`);
+      html += `<tr>
+        <td>
+          <a href="${v.minutesUrl}" target="_blank" style="text-decoration:none">
+            <span class="hm-vote-title">${v.title}</span>
+          </a>
+          <span class="hm-vote-meta">${dateStr} · ${v.tags[0]}</span>
+        </td>`;
+      mems.forEach(m => {
+        const mv = v.votes[m.id];
+        let cls = 'hm-nc', lbl = '';
+        if      (mv === 'Yes')     { cls = 'hm-yes-str'; lbl = 'YES'; }
+        else if (mv === 'No')      { cls = 'hm-no-str';  lbl = 'NO'; }
+        else if (mv === 'Recused') { cls = 'hm-rec';     lbl = 'Recused'; }
+        else if (mv === 'Absent')  { cls = 'hm-abs';     lbl = 'Absent'; }
+        else if (mv === 'Vacant')  { cls = 'hm-vac';     lbl = 'Vacant'; }
+        const cellLink = v.minutesUrl ? `<a href="${v.minutesUrl}" target="_blank" rel="noopener" style="text-decoration:none;display:block">` : '';
+        const cellLinkEnd = v.minutesUrl ? '</a>' : '';
+        html += `<td>${cellLink}<div class="hm-cell ${cls}" title="${m.name}: ${mv||'Not on Council'}. Click to view minutes.">${lbl}</div>${cellLinkEnd}</td>`;
+      });
+      html += `<td class="hm-outcome ${v.outcome.toLowerCase()}" style="padding:5px 8px;white-space:nowrap">${v.outcome} ${v.tally}</td>`;
+      html += `</tr>`;
+    });
+
+    html += `</tbody></table></div>`;
+  });
+
+  if (!html) html = `<div class="empty-state"><p>No votes for the selected filters.</p></div>`;
+  document.getElementById('heatmap-content').innerHTML = html;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   INIT
+══════════════════════════════════════════════════════════════ */
+// Init — heatmap only
+renderHeatmap();
+</script>
+</body>
+</html>

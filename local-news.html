@@ -4,19 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Local News — Livable Telluride</title>
-  <!--
-    ┌─────────────────────────────────────────────────────────────────────┐
-    │ LOCAL PREVIEW FILE — DO NOT COMMIT/DEPLOY                           │
-    │ Standalone redesign of the Local News tab. Self-contained: inline   │
-    │ CSS, inline sample data. Open directly with file:// or via any      │
-    │ local web server. Images and logos point to livabletelluride.org    │
-    │ so they load from anywhere with internet.                           │
-    │                                                                     │
-    │ To update sample articles: edit the ARTICLES const at the bottom.   │
-    │ To use live data: see the commented "OPTIONAL: live data" section   │
-    │ at the very bottom of the script.                                   │
-    └─────────────────────────────────────────────────────────────────────┘
-  -->
   <style>
     /* ─────────────────────────────────────────
        Base + nav (matches the live site's tone)
@@ -532,36 +519,23 @@
       .card-grid { grid-template-columns: 1fr; }
     }
 
-    /* Small "PREVIEW" banner so Morgan never confuses this with the live site */
-    .preview-banner {
-      background: #fff8e1;
-      border-bottom: 1px solid #f0d68a;
-      padding: 8px 24px;
-      text-align: center;
-      font-size: 0.82rem;
-      color: #6b5a1f;
-    }
-    .preview-banner code {
-      background: #f6e8b1;
-      padding: 1px 6px;
-      border-radius: 4px;
-    }
   </style>
 </head>
 <body>
   <header class="topnav">
     <div class="topnav-inner">
-      <a class="topnav-logo" href="/v2/" aria-label="Livable Telluride home">
+      <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
         <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
       </a>
       <nav class="topnav-links">
-        <a href="/v2/local-news.html" class="active">Local News</a>
-        <a href="/v2/gov-hub.html">Gov-Hub</a>
-        <a href="/v2/events.html">Events</a>
-        <a href="/v2/local-orgs.html">Local Orgs</a>
-        <a href="/v2/housing.html">Housing</a>
-        <a href="/v2/legal-notices.html">Legal Notices</a>
-        <a href="/v2/about.html">About</a>
+        <a href="/local-news.html" class="active">Local News</a>
+        <a href="/gov-hub.html">Gov-Hub</a>
+        <a href="/deep-dives.html">Deep Dives</a>
+        <a href="/events.html">Events</a>
+        <a href="/hub-bub.html">Hub-Bub</a>
+        <a href="/local-orgs.html">Local Orgs</a>
+        <a href="/housing.html">Housing</a>
+                <a href="/about.html">About</a>
       </nav>
       <a class="topnav-cta" href="https://livabletelluride.org/#tab-subscribe">Subscribe</a>
     </div>
@@ -621,10 +595,11 @@
         </div>
       </a>
 
-      <!-- Placeholder for additional sidebar cards (newsletter, sources, etc.) -->
-      <div class="sidebar-placeholder">
-        <h3>More sidebar slots</h3>
-        <p>Placeholder for newsletter signup / "Our News Sources" / etc. Add cards here when ready.</p>
+      <!-- Legal Notices sidebar card -->
+      <div class="sidebar-placeholder" style="border:1px solid #ddd;border-radius:14px;background:#fff;padding:20px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <img src="/logo/Legal Notices.png" alt="Legal Notices" style="width:100%;max-width:200px;height:auto;margin:0 auto 14px;display:block;object-fit:contain;">
+        <p style="font-size:0.85rem;color:#666;margin:0 0 14px;line-height:1.5;">Public notices, RFPs, and government filings required by law to be publicly posted.</p>
+        <a href="/legal-notices.html" style="display:block;background:#21443c;color:#fff;text-decoration:none;padding:10px 16px;border-radius:999px;font-weight:700;font-size:0.9rem;">View Legal Notices →</a>
       </div>
     </aside>
   </main>
@@ -674,82 +649,10 @@
        Replace/extend freely; the layout doesn't care how many.
        Shape: { title, source, sourceKey, date, summary, href, img, category }
        ────────────────────────────────────────────────────────── */
-    const ARTICLES = [
-      {
-        title: "‘Telluride: A Legacy of Legacies’",
-        source: "Telluride Times",
-        sourceKey: "ttimes",
-        date: "May 8, 2026",
-        summary: "Ron Allred and Jim Wells bought majority interest in the ski area in 1978 and developed Mountain Village, the airport, and gondola over 25 years.",
-        href: "https://www.telluridenews.com/news/article_c38b03a3-2122-4822-a291-a7b55317bab0.html",
-        img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/c5/0c550539-158f-416e-8854-85112f921ef3/69fe061ba1cd9.image.jpg?resize=600%2C400",
-        category: "Community",
-        featured: true
-      },
-      {
-        title: "Shop students show off",
-        source: "Telluride Times",
-        sourceKey: "ttimes",
-        date: "May 8, 2026",
-        summary: "Middle school shop students recently completed their knick-knack shelves and wooden spoons. They are now starting to build wooden crates.",
-        href: "https://www.telluridenews.com/norwood_post/article_a544195c-3dec-4f7d-b1af-6ec2608ca417.html",
-        img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/cc/7cc40952-4413-4d9f-b281-4ff3348cf439/69fa5e574d670.image.jpg?resize=600%2C400",
-        category: "Education"
-      },
-      {
-        title: "The greatest heron",
-        source: "Telluride Times",
-        sourceKey: "ttimes",
-        date: "May 8, 2026",
-        summary: "Male great blue herons start building nests to attract females, who then help complete construction before laying 2-6 pale blue eggs.",
-        href: "https://www.telluridenews.com/opinion/columnists/article_1deaa175-5c6a-4156-a2e5-b36e9b739931.html",
-        img: "https://images.unsplash.com/photo-1444930694458-01babe71870d?w=600&h=900&fit=crop",
-        category: "Community"
-      },
-      {
-        title: "We're in this together",
-        source: "Telluride Times",
-        sourceKey: "ttimes",
-        date: "May 7, 2026",
-        summary: "Local mental-health initiatives bring residents together to support each other through difficult times. Free counseling and peer-support groups available weekly.",
-        href: "https://www.telluridenews.com/community/article_we-are-in-this-together.html",
-        img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=900&fit=crop",
-        category: "Community"
-      },
-      {
-        title: "Wildfire awareness fair draws hundreds",
-        source: "KOTO",
-        sourceKey: "koto",
-        date: "May 9, 2026",
-        summary: "Local first responders led demonstrations on home defensible space, evacuation planning, and emergency communications at the Log Hill Fire Station event.",
-        href: "https://koto.org/news/wildfire-awareness-fair/",
-        img: "https://images.unsplash.com/photo-1602523498291-43cffe8ee9e1?w=800&h=600&fit=crop",
-        category: "Public Safety"
-      },
-      {
-        title: "Town Council weighs short-term rental cap",
-        source: "Telluride Times",
-        sourceKey: "ttimes",
-        date: "May 6, 2026",
-        summary: "Public hearing scheduled for May 21 to review proposed changes to short-term rental regulations including a numerical cap and licensing fee adjustments.",
-        href: "https://www.telluridenews.com/news/article_str-cap.html",
-        img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/aa/2aa-council.jpg?resize=600%2C400",
-        category: "Land Use"
-      },
-      {
-        title: "School District announces summer reading list",
-        source: "KOTO",
-        sourceKey: "koto",
-        date: "May 5, 2026",
-        summary: "Telluride School District R-1 released its 2026 summer reading list with selections for K–12. Wilkinson Public Library is offering a parallel book club.",
-        href: "https://koto.org/news/summer-reading-list/",
-        img: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=600&fit=crop",
-        category: "Education"
-      }
-    ];
+    const ARTICLES = []; // populated by loadLiveData() — no hardcoded fallback to avoid stale data
 
     /* ────────── Render ────────── */
-    const CATEGORIES = ['All News', ...new Set(ARTICLES.map(a => a.category))];
+    const CATEGORIES = ['All News', 'Community', 'Education', 'Public Safety', 'Land Use', 'Environment', 'Local Business', 'Events'];
     let activeCategory = 'All News';
 
     function chipsHtml() {
@@ -845,16 +748,24 @@
       });
     }
 
-    render();
+    // Show loading state before live data arrives
+    document.getElementById('featuredCard').innerHTML =
+      '<div style="padding:40px 20px;text-align:center;color:#6b7a6b;font-size:1rem;">' +
+      '<div style="font-size:2rem;margin-bottom:12px;">📰</div>' +
+      'Loading latest news…</div>';
+    document.getElementById('cardGrid').innerHTML = '';
 
         function loadLiveData() {
+      // Use a daily cache buster so browsers always pick up today's bot commit.
+      // 10-minute cache buster — matches GitHub Pages CDN TTL so bot commits appear within 10 min
+      const day = Math.floor(Date.now() / 600000);
+      // data-only.js is the purpose-built v2 data file regenerated from gov-hub.js every 6 hours.
+      // It contains TELLURIDE_TIMES_ARTICLES, KOTO_NEWSCASTS, etc. without the full app code
+      // that would throw errors when loaded outside the main single-page app context.
       const dataScript = document.createElement('script');
-      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v2';
+      dataScript.src = 'https://livabletelluride.org/js/data-only.js?v=' + day;
       dataScript.onload = () => {
-        const s = document.createElement('script');
-        s.src = 'https://livabletelluride.org/js/data-only.js?v=v2';
-        s.onload = () => {
-          try {
+        try {
             if (typeof TELLURIDE_TIMES_ARTICLES === 'undefined') return;
 
             // ── Redundancy filters (port of live site behavior) ──
@@ -963,11 +874,14 @@
             filtered.forEach(a => ARTICLES.push(a));
             if (ARTICLES[0]) ARTICLES[0].featured = true;
             render();
-          } catch (err) { console.warn('loadLiveData filter pass failed:', err); }
-        };
-        document.head.appendChild(s);
+        } catch (err) { console.warn('loadLiveData filter pass failed:', err); }
       };
-      dataScript.onerror = () => console.warn('Could not load gov-data.js');
+      dataScript.onerror = () => {
+        console.warn('Could not load data-only.js');
+        document.getElementById('featuredCard').innerHTML =
+          '<div style="padding:40px 20px;text-align:center;color:#b44;">' +
+          'Could not load news data. <a href="" style="color:#21443c;">Reload</a></div>';
+      };
       document.head.appendChild(dataScript);
     }
     loadLiveData();

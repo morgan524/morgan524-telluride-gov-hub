@@ -54,10 +54,10 @@
     }
     .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
-    .topnav-links { display: flex; gap: 22px; margin-left: 28px; flex: 1; }
+    .topnav-links { display: flex; gap: 14px; margin-left: 16px; flex: 1; }
     .topnav-links a {
       color: var(--text-primary); text-decoration: none;
-      font-weight: 600; font-size: 0.95rem;
+      font-weight: 600; font-size: 0.82rem;
       padding: 6px 2px;
       border-bottom: 2px solid transparent;
       transition: color 0.15s, border-color 0.15s;
@@ -68,7 +68,7 @@
       display: inline-block;
       background: var(--forest); color: #fff;
       text-decoration: none;
-      padding: 9px 18px; border-radius: 999px;
+      padding: 8px 14px; border-radius: 999px;
       font-weight: 600; font-size: 0.9rem;
     }
 
@@ -96,37 +96,66 @@
       font-size: 1.05rem; max-width: 640px;
     }
 
-    /* Filter chips — full-width across the top, above the layout split */
-    .chips-bar {
-      max-width: 1280px; margin: 0 auto;
-      padding: 28px 32px 0;
-    }
-    .filter-chips {
-      display: flex; flex-wrap: wrap; gap: 10px;
-      margin-bottom: 24px;
-    }
-    .chip {
-      display: inline-block;
-      padding: 8px 18px;
-      border-radius: 999px;
+    /* Sidebar filter panel */
+    .filter-card {
       background: #fff;
       border: 1px solid var(--border-soft);
-      color: var(--text-secondary);
-      font-size: 0.88rem; font-weight: 600;
-      cursor: pointer;
-      transition: all 0.15s;
+      border-radius: 16px;
+      padding: 18px 0 8px;
+      box-shadow: var(--shadow-card);
+      margin-bottom: 18px;
     }
-    .chip:hover { background: var(--bg-paper); }
-    .chip.active {
-      background: var(--forest); color: #fff;
-      border-color: var(--forest);
+    .filter-card-label {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 0 18px 10px;
+      display: block;
+      border-bottom: 1px solid var(--border-soft);
+      margin-bottom: 6px;
+    }
+    .filter-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 18px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      border-radius: 0;
+      transition: background 0.12s, color 0.12s;
+      border-left: 3px solid transparent;
+      user-select: none;
+    }
+    .filter-option:hover {
+      background: var(--bg-hero);
+      color: var(--forest);
+    }
+    .filter-option.active {
+      color: var(--forest);
+      font-weight: 700;
+      border-left-color: var(--forest);
+      background: rgba(33, 68, 60, 0.06);
+    }
+    .filter-option .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--border-soft);
+      flex-shrink: 0;
+      transition: background 0.12s;
+    }
+    .filter-option.active .dot {
+      background: var(--forest);
     }
 
     /* LEFT sidebar + main content layout */
     .page-wrap {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 0 32px 32px;
+      padding: 28px 32px 32px;
       display: grid;
       grid-template-columns: 260px minmax(0, 1fr);
       gap: 32px;
@@ -306,6 +335,7 @@
     }
     .event-card .actions {
       display: flex;
+      flex-wrap: wrap;
       gap: 8px;
       margin-top: auto;
       padding-top: 8px;
@@ -414,7 +444,7 @@
     .submit-strip-mountains svg { width: 100%; height: 100%; display: block; }
 
     /* Responsive */
-    @media (max-width: 1100px) {
+    @media (max-width: 768px) {
       .event-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 900px) {
@@ -423,6 +453,26 @@
       .topnav-links { display: none; }
       .hero h1 { font-size: 2rem; }
       .submit-strip-inner { flex-direction: column; text-align: center; }
+      /* On mobile, filter options scroll horizontally like chips */
+      .filter-card {
+        border-radius: 12px;
+        padding: 12px 0 6px;
+      }
+      #sidebarFilter {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0;
+        padding: 0;
+      }
+      .filter-card-label { width: 100%; border-bottom: none; padding-bottom: 6px; }
+      .filter-option {
+        border-left: none;
+        border-bottom: 2px solid transparent;
+        padding: 6px 14px;
+        font-size: 0.84rem;
+      }
+      .filter-option.active { border-bottom-color: var(--forest); border-left: none; }
     }
     @media (max-width: 640px) {
       .event-grid { grid-template-columns: 1fr; }
@@ -445,17 +495,18 @@
 <body>
   <header class="topnav">
     <div class="topnav-inner">
-      <a class="topnav-logo" href="/v2/" aria-label="Livable Telluride home">
+      <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
         <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
       </a>
       <nav class="topnav-links">
-        <a href="/v2/local-news.html">Local News</a>
-        <a href="/v2/gov-hub.html">Gov-Hub</a>
-        <a href="/v2/events.html" class="active">Events</a>
-        <a href="/v2/local-orgs.html">Local Orgs</a>
-        <a href="/v2/housing.html">Housing</a>
-        <a href="/v2/legal-notices.html">Legal Notices</a>
-        <a href="/v2/about.html">About</a>
+        <a href="/local-news.html">Local News</a>
+        <a href="/gov-hub.html">Gov-Hub</a>
+        <a href="/deep-dives.html">Deep Dives</a>
+        <a href="/events.html" class="active">Events</a>
+        <a href="/hub-bub.html">Hub-Bub</a>
+        <a href="/local-orgs.html">Local Orgs</a>
+        <a href="/housing.html">Housing</a>
+                <a href="/about.html">About</a>
       </nav>
       <a class="topnav-cta" href="https://livabletelluride.org/#tab-subscribe">Subscribe</a>
     </div>
@@ -464,16 +515,15 @@
   <section class="hero">
     <div class="hero-inner">
       <h1>Community Events</h1>
-      <p>classes, meetings, and gatherings near you.</p>
+      <p>Classes, meetings, and gatherings near you.</p>
     </div>
   </section>
 
-  <div class="chips-bar">
-    <div class="filter-chips" id="chipRow"><!-- populated by JS --></div>
-  </div>
-
   <main class="page-wrap">
     <aside class="sidebar">
+      <!-- Location filter -->
+      <div class="filter-card" id="sidebarFilter"><!-- populated by JS --></div>
+
       <div class="submit-card">
         <div class="submit-icon" aria-hidden="true">
           <!-- calendar icon -->
@@ -647,11 +697,12 @@
     ];
 
     /* ───────── Render ───────── */
-    function chipsHtml() {
-      return TOWNS.map(t => {
-        const cls = t.key === activeTown ? 'chip active' : 'chip';
-        return `<span class="${cls}" data-town="${t.key}">${t.label}</span>`;
+    function filterHtml() {
+      const opts = TOWNS.map(t => {
+        const cls = t.key === activeTown ? 'filter-option active' : 'filter-option';
+        return `<div class="${cls}" data-town="${t.key}"><span class="dot"></span>${t.label}</div>`;
       }).join('');
+      return `<span class="filter-card-label">Filter by Location</span>${opts}`;
     }
 
     function formatMonth(iso) {
@@ -666,6 +717,45 @@
       return `${days[d.getDay()]}, ${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
     }
 
+
+    // ── Fallback images for events with no photo ─────────────────────────────
+    // Curated Unsplash photos: thematically related but generic enough to
+    // never misrepresent a specific event or person.
+    const FALLBACK_IMGS = {
+      yoga:      'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop&q=80',
+      dance:     'https://images.unsplash.com/photo-1547153760-18fc86324498?w=600&h=400&fit=crop&q=80',
+      music:     'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop&q=80',
+      legal:     'https://images.unsplash.com/photo-1589578527966-fdac0f44566c?w=600&h=400&fit=crop&q=80',
+      garden:    'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop&q=80',
+      book:      'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop&q=80',
+      hike:      'https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&h=400&fit=crop&q=80',
+      art:       'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&h=400&fit=crop&q=80',
+      market:    'https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=600&h=400&fit=crop&q=80',
+      kids:      'https://images.unsplash.com/photo-1509909756405-be0199881695?w=600&h=400&fit=crop&q=80',
+      film:      'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&h=400&fit=crop&q=80',
+      tech:      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop&q=80',
+      cleanup:   'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&h=400&fit=crop&q=80',
+      community: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&h=400&fit=crop&q=80',
+    };
+    function getFallbackImg(e) {
+      const txt = ((e.title || '') + ' ' + (e.summary || '') + ' ' + (e.description || '')).toLowerCase();
+      if (/yoga|stretch|meditat|pilates|wellness/.test(txt))      return FALLBACK_IMGS.yoga;
+      if (/dance|dancing|cardio|zumba|aerobic/.test(txt))         return FALLBACK_IMGS.dance;
+      if (/music|concert|band|perform|bluegrass|sing|choir/.test(txt)) return FALLBACK_IMGS.music;
+      if (/clean.?up|cleanup|environment|litter|trash|volunteer/.test(txt)) return FALLBACK_IMGS.cleanup;
+      if (/\blegal\b|\bclinic\b|\blaw firm\b|\battorney\b|\bcourthouse\b|\bcourtroom\b|\bjustice\b/.test(txt)) return FALLBACK_IMGS.legal;
+      if (/garden|plant|flower|wildflower|nature nurture/.test(txt)) return FALLBACK_IMGS.garden;
+      if (/book|read|author|librar|story|storytime|talk/.test(txt)) return FALLBACK_IMGS.book;
+      if (/hike|hiking|trail|outdoor|walk|trek|mountain/.test(txt)) return FALLBACK_IMGS.hike;
+      if (/art|gallery|paint|exhibit|craft|pottery/.test(txt))    return FALLBACK_IMGS.art;
+      if (/market|farmer|vendor|fair/.test(txt))                  return FALLBACK_IMGS.market;
+      if (/kid|child|youth|family|junior|teen|school/.test(txt))  return FALLBACK_IMGS.kids;
+      if (/film|movie|cinema|screen/.test(txt))                   return FALLBACK_IMGS.film;
+      if (/tech|computer|digital|phone|device/.test(txt))         return FALLBACK_IMGS.tech;
+      return FALLBACK_IMGS.community;
+    }
+    // ─────────────────────────────────────────────────────────────────────────
+
     function eventCardHtml(e) {
       // Pre-encode the image URL once for the data-bg-img attribute below
       return `
@@ -675,7 +765,7 @@
               <span class="month">${formatMonth(e.date)}</span>
               <span class="day">${formatDay(e.date)}</span>
             </span>
-            <img src="${e.img}" alt="" loading="lazy" onload="handlePortrait(this)" onerror="this.style.opacity=0.3">
+            <img src="${e.img || getFallbackImg(e)}" alt="" loading="lazy" onload="handlePortrait(this)" onerror="this.src=getFallbackImg(e)">
           </div>
           <div class="body">
             <h3>${e.title}</h3>
@@ -729,14 +819,14 @@
     window.handlePortrait = handlePortrait;
 
     function render() {
-      document.getElementById('chipRow').innerHTML = chipsHtml();
+      document.getElementById('sidebarFilter').innerHTML = filterHtml();
       const filtered = activeTown === 'all'
         ? EVENTS
         : EVENTS.filter(e => e.town === activeTown);
       document.getElementById('eventGrid').innerHTML = filtered.map(eventCardHtml).join('');
-      document.querySelectorAll('.chip[data-town]').forEach(chip => {
-        chip.addEventListener('click', () => {
-          activeTown = chip.dataset.town;
+      document.querySelectorAll('.filter-option[data-town]').forEach(opt => {
+        opt.addEventListener('click', () => {
+          activeTown = opt.dataset.town;
           render();
         });
       });
@@ -747,100 +837,200 @@
        sample EVENTS with COMMUNITY_EVENTS + KOTO_COMMUNITY_EVENTS +
        WILKINSON_EVENTS and re-render. Falls back silently to the
        sample data on any failure. ──────────────────────────────────── */
-    function loadLiveEvents() {
-      const dataScript = document.createElement('script');
-      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=v2';
-      dataScript.onload = () => {
-        const s = document.createElement('script');
-        s.src = 'https://livabletelluride.org/js/data-only.js?v=v2';
-        s.onload = () => {
-          try {
-            const live = [];
-            const townFromLocation = (loc='') => {
-              const l = loc.toLowerCase();
-              if (l.includes('mountain village') || /mv/.test(l)) return 'mv';
-              if (l.includes('norwood')) return 'norwood';
-              if (l.includes('ridgway')) return 'ridgway';
-              if (l.includes('ouray')) return 'ouray';
-              if (l.includes('ophir')) return 'ophir';
-              if (l.includes('placerville')) return 'placerville';
-              if (l.includes('nucla') || l.includes('naturita')) return 'nucla-naturita';
-              return 'telluride';
-            };
-            const pushEvent = (e, sourceLabel) => {
-              if (!e || !e.title) return;
-              const start = e.pubDate || e.start_date || e.date || '';
-              const dateStr = start ? new Date(start).toISOString().slice(0,10) : '';
-              if (!dateStr) return;
-              // Only include events in the next 30 days
-              const dt = new Date(dateStr + 'T00:00:00');
-              const today = new Date(); today.setHours(0,0,0,0);
-              const diff = (dt - today) / 86400000;
-              if (diff < -1 || diff > 30) return;
-              live.push({
-                title: e.title,
-                date: dateStr,
-                time: (start && start.includes('T')) ? new Date(start).toLocaleTimeString([], {hour:'numeric', minute:'2-digit'}) : '',
-                location: e.location || '',
-                town: townFromLocation(e.location || ''),
-                summary: (e.description || '').replace(/<[^>]+>/g,'').slice(0, 600),
-                source: sourceLabel || e.sourceLabel || e.source || 'Community',
-                href: e.link || e.href || '#',
-                img: e.imageUrl || e.img || ''
-              });
-            };
-            // ── Source priority — originals first, aggregators last ──
-            // When the same event appears in multiple feeds (Wilkinson posts an
-            // event → KOTO re-lists it on the community calendar → TT picks it
-            // up), we want the canonical-origin source to win. The dedup pass
-            // below is first-seen-wins, so the merge order encodes priority.
-            if (typeof WILKINSON_EVENTS !== 'undefined') WILKINSON_EVENTS.forEach(e => pushEvent(e, 'Wilkinson Library'));
-            if (typeof TJC_EVENTS !== 'undefined') TJC_EVENTS.forEach(e => pushEvent(e, 'Telluride Jewish Community'));
-            if (typeof COMMUNITY_EVENTS !== 'undefined') COMMUNITY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Community'));
-            if (typeof KOTO_COMMUNITY_EVENTS !== 'undefined') KOTO_COMMUNITY_EVENTS.forEach(e => pushEvent(e, 'KOTO'));
+     function loadLiveEvents() {
+       // Load data-only.js directly — contains KOTO/Wilkinson/Community events.
+       // Skipping gov-data.js (142K of meeting/logo data not needed for events page).
+       const s = document.createElement('script');
+       s.src = 'https://livabletelluride.org/js/data-only.js?v=' + Math.floor(Date.now()/600000);
+       s.onload = () => {
+           try {
+             const live = [];
+             const townFromLocation = (loc='') => {
+               const l = loc.toLowerCase();
+               if (l.includes('mountain village') || /mv/.test(l)) return 'mv';
+               if (l.includes('norwood')) return 'norwood';
+               if (l.includes('ridgway')) return 'ridgway';
+               if (l.includes('ouray')) return 'ouray';
+               if (l.includes('ophir')) return 'ophir';
+               if (l.includes('placerville')) return 'placerville';
+               if (l.includes('nucla') || l.includes('naturita')) return 'nucla-naturita';
+               return 'telluride';
+             };
+             const pushEvent = (e, sourceLabel) => {
+               if (!e || !e.title) return;
+               const start = e.pubDate || e.start_date || e.date || '';
+               const dateStr = start ? new Date(start).toISOString().slice(0,10) : '';
+               if (!dateStr) return;
+               // Only include events in the next 30 days
+               const dt = new Date(dateStr + 'T00:00:00');
+               const today = new Date(); today.setHours(0,0,0,0);
+               const diff = (dt - today) / 86400000;
+               if (diff < 0 || diff > 30) return;
+               live.push({
+                 title: e.title,
+                 date: dateStr,
+                 time: (start && typeof start === 'string' && start.includes('T')) ? new Date(start).toLocaleTimeString([], {hour:'numeric', minute:'2-digit'}) : '',
+                 location: e.location || '',
+                 town: townFromLocation(e.location || ''),
+                 summary: (e.description || '').replace(/<[^>]+>/g,'').slice(0, 600),
+                 source: sourceLabel || e.sourceLabel || e.source || 'Community',
+                 href: e.link || e.href || '#',
+                 img: e.imageUrl || e.img || ''
+               });
+             };
+             // Source priority: originals first, aggregators last
+             if (typeof WILKINSON_EVENTS !== 'undefined') WILKINSON_EVENTS.forEach(e => pushEvent(e, 'Wilkinson Library'));
+             if (typeof COMMUNITY_EVENTS !== 'undefined') COMMUNITY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Community'));
+             if (typeof KOTO_COMMUNITY_EVENTS !== 'undefined') KOTO_COMMUNITY_EVENTS.forEach(e => pushEvent(e, 'KOTO'));
+             if (typeof TELLURIDE_FOUNDATION_EVENTS !== 'undefined') TELLURIDE_FOUNDATION_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Telluride Foundation'));
+             if (typeof OURAY_COUNTY_EVENTS !== 'undefined') OURAY_COUNTY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Ouray County'));
 
-            // ── Dedup across sources, two-key match per event ──
-            // Some sources phrase the same event slightly differently (KOTO
-            // adds bilingual subtitle, Wilkinson adds room location). Two
-            // keys make the match resilient: a 12-char title-prefix and a
-            // 3-word bag (stopwords stripped), each paired with the date.
-            // If either key is already seen, the event is a duplicate.
-            function buildKeys(item) {
-              const norm = (item.title || '').toLowerCase()
-                .replace(/[–—]/g, ' ')   // en/em dash → space
-                .replace(/[^a-z0-9 ]+/g, ' ')      // strip punctuation
-                .replace(/\s+/g, ' ').trim();
-              const dateKey = item.date || '';
-              const prefixKey = norm.replace(/ /g, '').slice(0, 12) + '|' + dateKey;
-              const wordsKey = norm.split(' ')
-                .filter(w => w && !/^(the|a|an|of|at|in|on|for|with|to)$/.test(w))
-                .slice(0, 3).join('-') + '|' + dateKey;
-              return [prefixKey, wordsKey];
-            }
-            const seenKeys = new Set();
-            const deduped = live.filter(item => {
-              const keys = buildKeys(item);
-              if (keys.some(k => seenKeys.has(k))) return false;
-              keys.forEach(k => seenKeys.add(k));
-              return true;
-            });
+             // ── Ridgway/Ouray Localist calendar ──
+             const pushRidgwayLive = data => {
+               (data.events || []).forEach(ev => {
+                 const e = ev.event || ev;
+                 pushEvent({
+                   title: e.title || '',
+                   pubDate: e.starts_at || '',
+                   location: (e.location && e.location.name)
+                     ? e.location.name + ', Ridgway' : 'Ouray/Ridgway area',
+                   description: (e.description_text || '').slice(0, 600),
+                   link: e.url || `https://events.ourayridgwayevents.com/event/${e.urlname || e.id}`,
+                   imageUrl: (e.photo && e.photo.url) ? e.photo.url : '',
+                 }, 'Ouray/Ridgway');
+               });
+             };
 
-            if (deduped.length > 0) {
-              EVENTS.length = 0;
-              deduped.sort((a,b) => a.date.localeCompare(b.date));
-              deduped.forEach(e => EVENTS.push(e));
-              render();
-            }
-          } catch (err) { console.warn('loadLiveEvents failed:', err); }
-        };
-        s.onerror = () => console.warn('Could not load /js/data-only.js for live events');
-        document.head.appendChild(s);
-      };
-      dataScript.onerror = () => console.warn('Could not load gov-data.js');
-      document.head.appendChild(dataScript);
-    }
-    loadLiveEvents();
+             // ── Dedup + render — called after all sources (incl. async Ridgway) load ──
+             function finishAndRender() {
+               function buildKeys(item) {
+                 const norm = (item.title || '').toLowerCase()
+                   .replace(/[–—]/g, ' ').replace(/[^a-z0-9 ]+/g, ' ')
+                   .replace(/\s+/g, ' ').trim();
+                 const dateKey = item.date || '';
+                 const prefixKey = norm.replace(/ /g, '').slice(0, 12) + '|' + dateKey;
+                 const wordsKey = norm.split(' ')
+                   .filter(w => w && !/^(the|a|an|of|at|in|on|for|with|to)$/.test(w))
+                   .slice(0, 3).join('-') + '|' + dateKey;
+                 return [prefixKey, wordsKey];
+               }
+               const seenKeys = new Set();
+               const deduped = live.filter(item => {
+                 const keys = buildKeys(item);
+                 if (keys.some(k => seenKeys.has(k))) return false;
+                 keys.forEach(k => seenKeys.add(k));
+                 return true;
+               });
+               if (deduped.length > 0) {
+                 EVENTS.length = 0;
+                 deduped.sort((a,b) => a.date.localeCompare(b.date));
+                 deduped.forEach(e => EVENTS.push(e));
+                 render();
+               }
+             }
+
+             // Ridgway/Ouray Localist calendar — use baked array or live fetch
+             if (typeof OURAY_RIDGWAY_EVENTS !== 'undefined' && OURAY_RIDGWAY_EVENTS.length > 0) {
+               OURAY_RIDGWAY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Ouray/Ridgway'));
+               finishAndRender();
+             } else {
+               fetch('https://events.ourayridgwayevents.com/api/2/events?school=ridgwayouray&days=30&pp=50')
+                 .then(r => r.json()).then(pushRidgwayLive).catch(() => {})
+                 .finally(() => finishAndRender());
+             }
+           } catch (err) { console.warn('loadLiveEvents failed:', err); }
+       };
+       s.onerror = () => console.warn('Could not load data-only.js for live events');
+       document.head.appendChild(s);
+     }
+     loadLiveEvents();
 
   </script>
+
+  <!-- ── Submit an Event form ─────────────────────────────────── -->
+  <section id="submit-event" style="max-width:700px;margin:56px auto 72px;padding:0 24px;">
+    <h2 style="font-family:var(--font-head);font-size:1.65rem;color:var(--forest);margin-bottom:6px;">Submit an Event</h2>
+    <p style="color:var(--text-muted);margin-bottom:28px;font-size:0.97rem;">
+      Share a community event with Livable Telluride. We'll review it and post it to the calendar.
+    </p>
+    <form id="eventSubmitForm" style="display:grid;gap:16px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Event Title *</label>
+          <input id="ef-title" type="text" required placeholder="e.g. Wildflower Walk &amp; Talk"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+        </div>
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Date *</label>
+          <input id="ef-date" type="date" required
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Time</label>
+          <input id="ef-time" type="text" placeholder="e.g. 10:00 AM – 12:00 PM"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+        </div>
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Location</label>
+          <input id="ef-location" type="text" placeholder="e.g. Wilkinson Public Library"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+        </div>
+      </div>
+      <div>
+        <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Description *</label>
+        <textarea id="ef-desc" required rows="4" placeholder="Tell people what the event is about…"
+          style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);resize:vertical;box-sizing:border-box;"></textarea>
+      </div>
+      <div>
+        <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Event URL / More Info</label>
+        <input id="ef-url" type="url" placeholder="https://…"
+          style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Your Name</label>
+          <input id="ef-name" type="text" placeholder="First Last"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+        </div>
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Your Email</label>
+          <input id="ef-email" type="email" placeholder="you@example.com"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+        </div>
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Organization</label>
+          <input id="ef-org" type="text" placeholder="Optional"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+        </div>
+      </div>
+      <button type="submit"
+        style="width:100%;padding:14px;background:var(--forest);color:#fff;border:none;border-radius:12px;font-size:1rem;font-weight:700;cursor:pointer;margin-top:4px;transition:background 0.15s;">
+        Send Submission →
+      </button>
+    </form>
+    <script>
+      document.getElementById('eventSubmitForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const v = id => document.getElementById(id).value.trim();
+        const subject = encodeURIComponent('Event Submission: ' + (v('ef-title') || '(no title)'));
+        const body = encodeURIComponent(
+          'EVENT SUBMISSION\n' +
+          '================\n' +
+          'Title:        ' + v('ef-title') + '\n' +
+          'Date:         ' + v('ef-date') + '\n' +
+          'Time:         ' + v('ef-time') + '\n' +
+          'Location:     ' + v('ef-location') + '\n' +
+          'Description:\n' + v('ef-desc') + '\n\n' +
+          'Event URL:    ' + v('ef-url') + '\n' +
+          'Submitted by: ' + v('ef-name') + ' <' + v('ef-email') + '>\n' +
+          'Organization: ' + v('ef-org')
+        );
+        window.location.href = 'mailto:info@livabletelluride.org?subject=' + subject + '&body=' + body;
+      });
+    </script>
+  </section>
+
 </body>
 </html>

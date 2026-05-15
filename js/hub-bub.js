@@ -39,18 +39,17 @@
   }
   // ─── Topic Definitions (matches Hub's existing taxonomy) ───
   const HB_TOPICS = {
-    'housing': { label: 'Housing', icon: '🏠' },
-    'land-use': { label: 'Land Use', icon: '🏗️' },
-    'gondola': { label: 'Gondola 3A', icon: '🚡' },
-    'public-safety': { label: 'Public Safety', icon: '🔥' },
-    'budget-finance': { label: 'Budget & Finance', icon: '💰' },
-    'infrastructure': { label: 'Infrastructure', icon: '🚰' },
-    'environment': { label: 'Environment', icon: '🌿' },
-    'health-education': { label: 'Health & Education', icon: '🏥' },
-    'legal-governance': { label: 'Legal & Governance', icon: '⚖️' },
-    'transit': { label: 'Transit', icon: '🚌' },
-    'community': { label: 'Community', icon: '🤝' },
-    'other': { label: 'Other', icon: '💡' }
+    'government': { label: 'Government', icon: '🏛️' },
+    'events':     { label: 'Events',     icon: '🎉' },
+    'housing':    { label: 'Housing',    icon: '🏠' },
+    'land-use':   { label: 'Land Use',   icon: '🏗️' },
+    'transit':    { label: 'Transit',    icon: '🚌' },
+    'gondola':    { label: 'Gondola',    icon: '🚡' },
+    'budgets':    { label: 'Budgets',    icon: '💰' },
+    'environment':{ label: 'Environment',icon: '🌿' },
+    'schools':    { label: 'Schools',    icon: '🎓' },
+    'good-news':  { label: 'Good News',  icon: '🌟' },
+    'other':      { label: 'Other',      icon: '💡' }
   };
   // ─── Post Type Definitions ───
   const HB_POST_TYPES = {
@@ -154,32 +153,40 @@
   };
   // hbDoLogin is now handled by addEventListener on #hbLoginBtn below
   window.hbForgotPassword = function() {
-    if (!hbFirebaseReady) { hbShowConfigNeeded(); return; }
-    var email = document.getElementById('hbLoginEmail').value.trim();
-    var errEl = document.getElementById('hbLoginError');
+    var email  = document.getElementById('hbLoginEmail').value.trim();
+    var errEl  = document.getElementById('hbLoginError');
     var infoEl = document.getElementById('hbLoginInfo');
+    var msgEl  = document.getElementById('hbLoginMsg');
+    // Clear ALL previous login messages so nothing from a prior attempt lingers
+    if (msgEl)  { msgEl.textContent = ''; msgEl.style.display = 'none'; msgEl.className = 'hb-modal-msg'; }
+    if (errEl)  { errEl.textContent = '';  errEl.style.display  = 'none'; }
+    if (infoEl) { infoEl.textContent = ''; infoEl.style.display = 'none'; }
     if (!email) {
-      errEl.textContent = 'Please enter your email address above, then click "Forgot your password?" again.';
-      errEl.style.display = 'block';
-      if (infoEl) infoEl.style.display = 'none';
+      if (errEl) { errEl.textContent = 'Please enter your email address above, then click "Forgot password?" again.'; errEl.style.display = 'block'; }
       return;
     }
-    auth.sendPasswordResetEmail(email)
+    // Use window.firebase.auth() directly — same path as the working login button
+    var firebaseAuth = (window.firebase && window.firebase.auth) ? window.firebase.auth() : auth;
+    if (!firebaseAuth) {
+      if (errEl) { errEl.textContent = 'Hub-Bub is not ready yet — please try again in a moment.'; errEl.style.display = 'block'; }
+      return;
+    }
+    firebaseAuth.sendPasswordResetEmail(email)
       .then(function() {
-        errEl.style.display = 'none';
+        if (errEl)  errEl.style.display  = 'none';
         if (infoEl) {
-          infoEl.innerHTML = 'Password reset email sent to <strong>' + hbEsc(email) + '</strong>.<br><span style="color:#795548;">Important: The email may land in your junk or spam folder — check there if you don\'t see it in your inbox.</span>';
+          infoEl.innerHTML = 'Password reset email sent to <strong>' + hbEsc(email) + '</strong>.<br>'
+            + '<span style="color:#795548;">Check your spam or junk folder if you don\'t see it in your inbox within a few minutes.</span>';
           infoEl.style.display = 'block';
         }
       })
       .catch(function(err) {
         if (infoEl) infoEl.style.display = 'none';
         var msg = err.message;
-        if (err.code === 'auth/user-not-found') msg = 'No account found with this email address.';
+        if (err.code === 'auth/user-not-found')    msg = 'No account found with this email address.';
         else if (err.code === 'auth/invalid-email') msg = 'Please enter a valid email address.';
         else if (err.code === 'auth/too-many-requests') msg = 'Too many attempts. Please try again in a few minutes.';
-        errEl.textContent = msg;
-        errEl.style.display = 'block';
+        if (errEl) { errEl.textContent = msg; errEl.style.display = 'block'; }
       });
   };
   window.hbLogout = function() {
@@ -304,15 +311,18 @@
       hbSetMode(btn.dataset.hbMode);
     });
   });
-  // Topic filter chips
-  document.querySelectorAll('.hb-topic-chip').forEach(function(chip) {
-    chip.addEventListener('click', function() {
-      document.querySelectorAll('.hb-topic-chip').forEach(function(c) { c.classList.remove('active'); });
+  // Topic filter chips — use event delegation so dynamic chips work too
+  var _hbTopicBar = document.getElementById('hbTopicBar');
+  if (_hbTopicBar) {
+    _hbTopicBar.addEventListener('click', function(e) {
+      var chip = e.target.closest('.hb-topic-chip');
+      if (!chip) return;
+      _hbTopicBar.querySelectorAll('.hb-topic-chip').forEach(function(c) { c.classList.remove('active'); });
       chip.classList.add('active');
       hbCurrentTopic = chip.dataset.hbTopic;
       hbRenderPosts();
     });
-  });
+  }
   // Enable/disable post button
   function hbUpdatePostBtn() {
     var title = document.getElementById('hbComposeTitle').value.trim();
@@ -326,11 +336,12 @@
   window.hbTriggerAttach = function() {
     document.getElementById('hbFileInput').click();
   };
+  var HB_DOC_MAX_MB = 20; // per-file limit for documents
   window.hbHandleFiles = function(input) {
     var files = Array.from(input.files);
     files.forEach(function(file) {
-      if (file.size > 10 * 1024 * 1024) {
-        alert('File "' + file.name + '" is too large (max 10MB).');
+      if (file.size > HB_DOC_MAX_MB * 1024 * 1024) {
+        alert('File "' + file.name + '" is too large (max ' + HB_DOC_MAX_MB + ' MB). For large PDFs, consider compressing first.');
         return;
       }
       hbPendingAttachments.push(file);
@@ -597,6 +608,7 @@
           hbPosts.push(d);
         });
         hbRenderPosts();
+        hbRefreshFilterChips();
         hbRenderTrending();
         hbRenderStats();
         hbRenderMostUseful();
@@ -696,8 +708,17 @@
     var attachHtml = '';
     if (post.attachments && post.attachments.length) {
       attachHtml = '<div class="hb-post-attachments">' + post.attachments.map(function(a) {
-        var icon = a.type && a.type.startsWith('image/') ? '🖼️' : '📄';
-        return '<a class="hb-post-attach" href="' + hbEsc(a.url) + '" target="_blank">' + icon + ' ' + hbEsc(a.name) + '</a>';
+        var isImage = a.type && a.type.startsWith('image/');
+        var isPdf   = a.type === 'application/pdf' || (a.name && a.name.toLowerCase().endsWith('.pdf'));
+        var isDoc   = !isImage && (isPdf || (a.name && /\.(docx?|txt)$/i.test(a.name)));
+        if (isDoc) {
+          // Show icon only — clicking opens the full-page PDF viewer modal
+          return '<a class="hb-post-attach hb-post-attach-icon" href="#" ' +
+            'onclick="hbOpenDocModal(' + JSON.stringify(a.url) + ',' + JSON.stringify(a.name) + ');return false;" ' +
+            'title="' + hbEsc(a.name) + '">📄</a>';
+        }
+        // Images open in a new tab (icon only for consistency)
+        return '<a class="hb-post-attach hb-post-attach-icon" href="' + hbEsc(a.url) + '" target="_blank" rel="noopener" title="' + hbEsc(a.name) + '">🖼️</a>';
       }).join('') + '</div>';
     }
 
@@ -748,12 +769,17 @@
     var contentStart = hasImage ? '<div class="hb-post-content-wrap">' + imageHtml + '<div class="hb-post-content-text">' : '';
     var contentEnd = hasImage ? '</div></div>' : '';
 
+    var adminDeleteBtn = (hbUser && hbUser.email === 'info@livabletelluride.org')
+      ? '<button class="hb-admin-delete-btn" onclick="hbAdminDelete(\'' + post.id + '\')" title="Delete post">🗑</button>'
+      : '';
+
     card.innerHTML =
       '<div class="hb-post-head">' +
         '<div class="hb-post-avatar">' + initial + '</div>' +
         '<div><span class="hb-post-author">' + hbEsc(post.authorName || 'Anonymous') + '</span>' +
         '<div class="hb-post-meta">' + timeStr + '</div></div>' +
         badgeHtml +
+        adminDeleteBtn +
       '</div>' +
       contentStart +
       '<div class="hb-post-title">' + hbEsc(post.title || '') + '</div>' +
@@ -768,7 +794,6 @@
       reactionsHtml +
       '<div class="hb-post-foot">' +
         '<button class="hb-reply-toggle" onclick="hbToggleReplies(\'' + post.id + '\')">💬 <span>' + (post.replyCount || 0) + '</span> replies</button>' +
-        (hbUser && hbUser.email === 'info@livabletelluride.org' ? '<button class="hb-admin-delete-btn" onclick="hbAdminDelete(\'' + post.id + '\')" title="Delete post (admin)">🗑️ Delete</button>' : '') +
       '</div>' +
       '<div class="hb-replies" id="hb-replies-' + post.id + '" style="display:none;"></div>';
     return card;
@@ -988,6 +1013,160 @@
     hbRenderPosts();
   };
   // ═══════════════════════════════
+  // AUTO-TAG SUGGESTION
+  // Auto-selects the most likely tag(s) based on what the user types.
+  // Runs on every keystroke; only suggests if no tag is manually selected.
+  // ═══════════════════════════════
+  var HB_TAG_KEYWORDS = {
+    'government': ['town council','board of trustees','bocc','commissioner','ordinance','resolution','vote','motion','governance','charter','mayor','manager','hearing','agenda','minutes','election','cora','public records','open meeting','sunshine','transparency','attorney','ethics','conflict','hb24','house bill','colorado law'],
+    'events': ['festival','concert','market','parade','celebration','exhibit','show','performance','event','mountainfilm','bluegrass','gallery','film','race','tournament','wilkinson','library event','arts','culture'],
+    'housing': ['housing','rent','deed','affordable','waitlist','evict','landlord','tenant','smrha','telluride housing','workforce','unit','element 52','camel',' lot ','vacancy','apartment','condo','workforce housing'],
+    'land-use': ['land use','zoning','pud','development','parcel','variance','height','setback','easement','subdivision','annexation','carhenge','diamond','society turn','sunnyside','chair 7','voodoo','lot l','lot r','planning commission','harc'],
+    'transit': ['transit','bus','parking','traffic','road','highway 145','route','shuttle','rideshare','car-free','parking structure','infrastructure','water','sewer','utilities','broadband','stormwater','sidewalk'],
+    'gondola': ['gondola','3a','cable','tramway','aerial','transit corridor','mountain village connector','mvt','gondola station'],
+    'budgets': ['budget','finance','tax','revenue','bond','debt','million','taxpayer','appropriation','fund','fee','cost','spending','fiscal','audit','levy','mil'],
+    'environment': ['environment','climate','wildlife','habitat','wetland','valley floor','open space','bear creek','eagle','dark sky','carbon','air quality','watershed','riparian','species','wildfire','fire','evacuation','smoke','defensible'],
+    'schools': ['school','education','student','teacher','hospital','health','medical','clinic','mental health','library','kids','family','youth','r-1','telluride school','norwood school'],
+    'good-news': ['great news','exciting','celebrate','congratulate','milestone','achievement','award','grant','success','improvement','open','launch','completed','new park','ribbon','donation','thank'],
+    'other': []
+  };
+
+  function hbSuggestTags() {
+    // Only run if user hasn't manually selected a tag yet
+    var alreadySelected = document.querySelectorAll('.hb-compose-tag.selected');
+    if (alreadySelected.length > 0) return;
+
+    var title = (document.getElementById('hbComposeTitle').value || '').toLowerCase();
+    var body  = (document.getElementById('hbComposeBody').value  || '').toLowerCase();
+    var combined = title + ' ' + body;
+
+    // Score each tag
+    var scores = {};
+    Object.keys(HB_TAG_KEYWORDS).forEach(function(tag) {
+      if (tag === 'other') return;
+      var kws = HB_TAG_KEYWORDS[tag];
+      var score = 0;
+      kws.forEach(function(kw) {
+        if (combined.includes(kw)) score += (title.includes(kw) ? 3 : 1);
+      });
+      if (score > 0) scores[tag] = score;
+    });
+
+    // Pick top tag
+    var best = Object.keys(scores).sort(function(a, b) { return scores[b] - scores[a]; })[0];
+    if (!best) return;
+
+    // Auto-select it and show a subtle hint
+    var tagBtn = document.querySelector('.hb-compose-tag[data-hb-tag="' + best + '"]');
+    if (tagBtn) {
+      tagBtn.classList.add('selected', 'auto-suggested');
+      tagBtn.title = 'Auto-suggested based on your text — click another tag to change';
+      hbUpdatePostBtn();
+      // Show hint label
+      var hint = document.getElementById('hbTagSuggestHint');
+      if (!hint) {
+        hint = document.createElement('div');
+        hint.id = 'hbTagSuggestHint';
+        hint.style.cssText = 'font-size:0.72rem;color:#888;margin-top:3px;';
+        var tagsContainer = document.getElementById('hbComposeTags');
+        if (tagsContainer && tagsContainer.parentNode) {
+          tagsContainer.parentNode.insertBefore(hint, tagsContainer.nextSibling);
+        }
+      }
+      var info = HB_TOPICS[best] || { label: best };
+      hint.textContent = '↑ Auto-tagged as "' + info.label + '" — click a different tag to override';
+    }
+  }
+
+  // Wire auto-tag to title and body inputs (debounced 600ms)
+  var _hbTagDebounce;
+  function hbQueueSuggest() {
+    // Clear the auto-suggestion if user clicks a tag manually
+    clearTimeout(_hbTagDebounce);
+    _hbTagDebounce = setTimeout(hbSuggestTags, 600);
+  }
+  var _titleEl = document.getElementById('hbComposeTitle');
+  var _bodyEl  = document.getElementById('hbComposeBody');
+  if (_titleEl) _titleEl.addEventListener('input', hbQueueSuggest);
+  if (_bodyEl)  _bodyEl.addEventListener('input', hbQueueSuggest);
+
+  // When user manually clicks a tag, clear the auto-suggestion state
+  document.querySelectorAll('.hb-compose-tag').forEach(function(tag) {
+    tag.addEventListener('click', function() {
+      // Remove auto-suggested class from all, clear hint
+      document.querySelectorAll('.hb-compose-tag.auto-suggested').forEach(function(t) {
+        t.classList.remove('auto-suggested');
+        t.title = '';
+      });
+      var hint = document.getElementById('hbTagSuggestHint');
+      if (hint) hint.textContent = '';
+    });
+  });
+
+  // ═══════════════════════════════
+  // DYNAMIC TOPIC FILTER CHIPS
+  // Recomputes the visible filter chips to show the top 10 tags
+  // used in posts from the last 7 days (most active → least active).
+  // Falls back to showing all topics if there's no data yet.
+  // ═══════════════════════════════
+  function hbRefreshFilterChips() {
+    var bar = document.getElementById('hbTopicBar');
+    if (!bar) return;
+
+    var now = new Date();
+    var weekAgo = new Date(now.getTime() - 7 * 86400000);
+
+    // Count tag usage in the last 7 days
+    var tagCounts = {};
+    hbPosts.forEach(function(p) {
+      var d = p.createdAt ? (p.createdAt.toDate ? p.createdAt.toDate() : new Date(p.createdAt)) : null;
+      if (!d || d < weekAgo) return;
+      (p.tags || []).forEach(function(t) {
+        tagCounts[t] = (tagCounts[t] || 0) + 1;
+      });
+    });
+
+    var topTags = Object.keys(tagCounts)
+      .sort(function(a, b) { return tagCounts[b] - tagCounts[a]; })
+      .slice(0, 10);
+
+    // If there's no data for the week, show all known topics
+    if (topTags.length === 0) {
+      topTags = Object.keys(HB_TOPICS).filter(function(t) { return t !== 'other'; });
+    }
+
+    // Re-render the chip bar (always keep "All" first)
+    bar.innerHTML = '';
+    var allChip = document.createElement('button');
+    allChip.className = 'hb-topic-chip' + (hbCurrentTopic === 'all' ? ' active' : '');
+    allChip.dataset.hbTopic = 'all';
+    allChip.textContent = 'All';
+    bar.appendChild(allChip);
+
+    topTags.forEach(function(tag) {
+      var info = HB_TOPICS[tag] || { icon: '💡', label: tag };
+      var chip = document.createElement('button');
+      chip.className = 'hb-topic-chip' + (hbCurrentTopic === tag ? ' active' : '');
+      chip.dataset.hbTopic = tag;
+      // Show post count badge if >0
+      var count = tagCounts[tag] ? ' (' + tagCounts[tag] + ')' : '';
+      chip.textContent = info.icon + ' ' + info.label + count;
+      chip.title = tagCounts[tag] ? tagCounts[tag] + ' post' + (tagCounts[tag] !== 1 ? 's' : '') + ' this week' : '';
+      bar.appendChild(chip);
+    });
+
+    // Re-bind click listeners using event delegation on the bar
+    bar.onclick = function(e) {
+      var chip = e.target.closest('.hb-topic-chip');
+      if (!chip) return;
+      bar.querySelectorAll('.hb-topic-chip').forEach(function(c) { c.classList.remove('active'); });
+      chip.classList.add('active');
+      hbCurrentTopic = chip.dataset.hbTopic;
+      hbRenderPosts();
+    };
+  }
+
+  // ═══════════════════════════════
   // TRENDING SIDEBAR
   // ═══════════════════════════════
   function hbRenderTrending() {
@@ -1178,6 +1357,7 @@
       }
     ];
     hbRenderPosts();
+    hbRefreshFilterChips();
     hbRenderTrending();
     hbRenderStats();
     hbRenderMostUseful();

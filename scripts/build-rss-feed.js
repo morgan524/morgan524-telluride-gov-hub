@@ -184,7 +184,7 @@ function buildMeetingItems(summaries) {
     const sourceLabel = MEETING_SOURCE_LABELS[source] || source;
     items.push({
       title: `[Meeting] ${title} — ${dateStr}`,
-      link: `${SITE_URL}/#meetings`,
+      link: `${SITE_URL}/gov-hub.html`,
       pubDate: meetingDate,
       description: `${sourceLabel} • ${dateStr}\n\n${summary || '(see meeting page for details)'}`,
       categories: ['Meeting', sourceLabel].filter(Boolean),
@@ -259,7 +259,7 @@ function buildEventItems(...sources) {
     ].filter(Boolean).join('\n');
     items.push({
       title: `[Event] ${e.title} — ${e.date || ''}`,
-      link: `${SITE_URL}/#events`,
+      link: `${SITE_URL}/events.html`,
       pubDate: eventDate,      // use actual event date — stable, not refreshed
       description: desc,
       imageUrl: e.img || e.imageUrl || null,
@@ -372,7 +372,7 @@ function writeRssFeed(outPath, title, desc, selfUrl, items) {
     // Make image URL absolute (site-relative paths need the domain prepended)
     let imgUrl = it.imageUrl || null;
     if (imgUrl && imgUrl.startsWith('/')) imgUrl = SITE_URL + imgUrl;
-    const imgHtml = imgUrl ? `<img src="${imgUrl}" alt="" style="max-width:100%;height:auto;display:block;margin-bottom:8px;" />` : '';
+    const imgHtml = imgUrl ? `<img src="${imgUrl}" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />` : '';
     const descHtml = imgHtml + (it.description || '');
     const mediaTag = imgUrl ? `\n      <media:content url="${xmlEscape(imgUrl)}" medium="image" />` : '';
     return `    <item>

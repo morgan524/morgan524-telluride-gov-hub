@@ -9,7 +9,7 @@
  *   2. Stale news article removal (>14 days)
  *   3. Expired community pulse post removal (>5 days)
  *   4. External link health check
- *   5. File parity check (index.html ↔ telluride-gov-hub.html)
+ *   5. (retired) File parity check
  * ══════════════════════════════════════════════════════════════
  */
 
@@ -23,7 +23,6 @@ const REPO_ROOT = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
 const GOV_HUB_JS = path.join(REPO_ROOT, 'js', 'gov-hub.js');
 const COMMUNITY_PULSE_JS = path.join(REPO_ROOT, 'js', 'community-pulse.js');
 const INDEX_HTML = path.join(REPO_ROOT, 'index.html');
-const GOVHUB_HTML = path.join(REPO_ROOT, 'telluride-gov-hub.html');
 
 const NEWS_MAX_AGE_DAYS = 14;
 const PULSE_MAX_AGE_DAYS = 5;
@@ -278,34 +277,13 @@ async function checkLinks(govHubSrc, pulseSrc) {
 }
 
 // ══════════════════════════════════════════════════════════════
-// ── Task 5: File Parity Check ──
+// ── Task 5: (retired) ──
 // ══════════════════════════════════════════════════════════════
 
 function checkParity() {
-  console.log('\n📄 Task 5: File parity check...');
-
-  if (!fs.existsSync(INDEX_HTML) || !fs.existsSync(GOVHUB_HTML)) {
-    console.log('  ⚠️ One or both HTML files missing');
-    issues.push('Missing HTML file — index.html or telluride-gov-hub.html');
-    return;
-  }
-
-  const indexHash = crypto.createHash('md5').update(fs.readFileSync(INDEX_HTML)).digest('hex');
-  const govhubHash = crypto.createHash('md5').update(fs.readFileSync(GOVHUB_HTML)).digest('hex');
-
-  if (indexHash !== govhubHash) {
-    // index.html is the canonical source. telluride-gov-hub.html is a
-    // legacy duplicate kept around for backward compat — it must mirror
-    // index.html, never the other way around. Previously this used a
-    // 'larger file wins' heuristic which silently reverted index.html
-    // edits whenever they made the file smaller (e.g. removing a section).
-    // 2026-05-01: switched to one-way sync.
-    console.log('  ⚠️ HTML files out of sync — copying index.html → telluride-gov-hub.html');
-    fs.copyFileSync(INDEX_HTML, GOVHUB_HTML);
-    changed = true;
-  } else {
-    console.log('  ✓ HTML files are in sync');
-  }
+  // telluride-gov-hub.html was deleted 2026-05-12. The site uses
+  // a split-page architecture. No file-parity check needed.
+  console.log('\n📄 Task 5: Parity check — skipped (single-source architecture)');
 }
 
 // ══════════════════════════════════════════════════════════════

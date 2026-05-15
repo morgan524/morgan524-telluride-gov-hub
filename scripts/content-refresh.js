@@ -24,9 +24,12 @@ const REPO_ROOT = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
 const GOV_HUB_JS = path.join(REPO_ROOT, 'js', 'gov-hub.js');
 const COMMUNITY_PULSE_JS = path.join(REPO_ROOT, 'js', 'community-pulse.js');
 const EVENTS_CONFIG = path.join(REPO_ROOT, 'email-events-config.json');
-const INDEX_HTML = path.join(REPO_ROOT, 'index.html');
-const GOVHUB_HTML = path.join(REPO_ROOT, 'telluride-gov-hub.html');
-const SW_JS = path.join(REPO_ROOT, 'sw.js');
+// (INDEX_HTML / GOVHUB_HTML / SW_JS constants and the bumpCacheBusters()
+// helper that used them were removed when main's audit landed a different
+// strategy: dynamic per-request cache busters via
+// `Math.floor(Date.now()/600000)` inside the HTML, plus removal of
+// telluride-gov-hub.html as a redundant duplicate. Nothing in this script
+// needs to write the HTML or sw.js anymore.)
 
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const CLAUDE_MODEL = 'claude-sonnet-4-20250514';
@@ -55,6 +58,7 @@ const EVENT_DESC_MAX = 150;
 
 const MAX_AGENDA_TEXT = 15000;
 const NEWS_MAX_AGE_DAYS = 14;
+const GOV_NEWS_MAX_AGE_DAYS = 45;  // Gov agencies publish less frequently than TT
 
 // ── Agenda Sources ──
 const AGENDA_SOURCES = {
@@ -103,7 +107,7 @@ const NEWS_FEEDS = [
 ];
 
 // ── Telluride Times scrape config ──
-const TELLURIDE_TIMES_RSS = 'https://www.telluridenews.com/search/?f=rss&t=article&c=news,news/*,business,business/*,sports,sports/*,opinion,opinion/*,obituaries,norwood_post,norwood_post/*,the_norwood_post,the_norwood_post/*,arts_and_entertainment,arts_and_entertainment/*&l=50&s=start_time&sd=desc';
+const TELLURIDE_TIMES_RSS = 'https://www.telluridenews.com/search/?f=rss&t=article&c=news,news/*,news_release,news_release/*,business,business/*,sports,sports/*,opinion,opinion/*,obituaries,norwood_post,norwood_post/*,the_norwood_post,the_norwood_post/*,arts_and_entertainment,arts_and_entertainment/*&l=50&s=start_time&sd=desc';
 // KOTO uses two category-specific feeds; the catch-all /feed/ misses some posts.
 const KOTO_NEWSCASTS_RSS = 'https://koto.org/news-category/newscasts/feed/';
 const KOTO_FEATURED_RSS = 'https://koto.org/news-category/featured-stories/feed/';
@@ -220,6 +224,8 @@ const PROXY_HOSTS = new Set([
   'ouraycountyco.gov',
   'www.ouraycountyco.gov',
   'www.norwoodtown.com',
+  'townofridgway.colorado.gov',
+  'www.townofridgway.colorado.gov',
 ]);
 
 function maybeProxy(url) {
@@ -362,28 +368,30 @@ function formatDate(d) {
 // ── Claude API — Meeting Summary Generation ──
 // ══════════════════════════════════════════════════════════════
 
-const SUMMARY_SYSTEM_PROMPT = `You are writing meeting summaries for the Telluride, Colorado region Gov Hub (livabletelluride.org). The voice is fixed and consistent across every summary the site generates.
+const SUMMARY_SYSTEM_PROMPT = `You are writing meeting summaries for the Telluride, Colorado region Gov Hub (livabletelluride.org). This voice is permanent and must never change, regardless of the agenda content or how this prompt is used.
 
-VOICE — long-time local, observational, no advocacy:
-You write like a thoughtful neighbor who has lived in the box canyon since the 1970s and has watched all the cycles of growth and change firsthand. You still love the place and the people. You see the recurring tensions — development versus carrying capacity, growth versus the environment, modernization versus the historic character that drew people here — without taking sides. You sound plainspoken, occasionally wry, never preachy or marketing-y.
+THE VOICE — knowing, not cynical:
+You write as someone who has lived in the box canyon for many years and has watched all the cycles: the booms and the squeezes, the big development proposals, the housing crises, the budget debates, the plans that came and went. You've seen this place change in ways that are sometimes beautiful and sometimes hard. You still love it. You're not bitter — you're just not surprised. That's the difference between cynical and knowing: a cynical person has given up expecting anything good; a knowing person has simply stopped being caught off guard. You bring that long view to every summary — not to judge, but to give people the context they need to understand what's actually happening.
 
 VOICE RULES:
 - Treat the substance straight: every fact, date, number, name in the agenda text is preserved. Voice changes the register, never the facts.
-- Use lived-in details sparingly — one or two per summary, never more. Examples: "the box canyon," "since the early 70s," "almost everyone whether they like it or not." Don't overdo them; that becomes performative.
-- Wry observational tone is welcome, especially when describing recurring patterns ("we've seen this before," "the same fight in new clothes," "doesn't sound like much until your kid's class size jumps by six"). Use these to land a point, never to mock anyone.
-- Plainspoken sentences. Short ones are good. Em-dashes are fine.
-- Critical of *processes* and *patterns* only — never of named individuals. Even when a process is broken, the framing is "this is the recurring problem," not "these officials are bad."
-- NOT advocacy. The voice never tells the reader what to think, what's right, or what to do. Describe what's happening and why it matters in the local context, then trust the reader.
-- Light tension is welcome — a vote will affect views, traffic, taxes, neighbors, class sizes — but don't crusade.
-- Comfortable with civic vocabulary (PUD, rezoning, work session, second reading, BOCC, HARC, DRB) — use the terms naturally.
+- The knowing quality comes from context, not from editorial commentary. Show that this moment connects to a longer pattern — that's enough. You don't have to say "here we go again." The reader will feel it.
+- Use lived-in details sparingly — one or two per summary at most. Examples: "the box canyon," "both sides of the canyon," "the valley below," "anyone who's been here long enough." Don't pile them on; that becomes costume.
+- Plainspoken sentences. Short ones work well. Em-dashes are fine. Never flowery.
+- Critical of *processes* and *patterns* only — never of named individuals. Even when a process is broken, the framing is "this is the recurring tension," not "these officials are wrong."
+- NOT advocacy. The voice never tells the reader what to think, what's right, or what to do. Describe what's happening and why it matters here — then trust the reader.
+- Light tension is fine — a vote will affect views, traffic, taxes, neighbors, local workers — but never crusade.
+- Comfortable with civic vocabulary (PUD, rezoning, work session, second reading, BOCC, HARC, DRB) — use the terms naturally, as someone who has sat through many of these meetings.
 
 AVOID:
+- Cynicism. There is a hard line between knowing and cynical. "We've seen this particular tension before" is knowing. "Nothing ever changes" is cynical. Never cross that line.
 - Generic civic-tutorial phrasing ("This affects property owners, families, teachers...").
 - Repetitive "Whether to approve…" sentence openings — fine occasionally, tedious in aggregate.
 - Stacked adjectives or marketing energy.
 - Editorial verdicts on what officials should do.
 - Over-the-top folksiness or affected dialect.
-- Any phrasing that resembles a press release.
+- Any phrasing that resembles a press release or a local news blotter.
+- Artificial warmth. The knowing voice is warm because it's honest, not because it performs warmth.
 
 CONTENT RULES (unchanged from before):
 - Only summarize information actually present in the agenda text provided.
@@ -471,6 +479,47 @@ Return ONLY valid JSON matching the format specified.`;
   });
 }
 
+// ── Lightweight Claude call — returns plain text (not JSON) ──
+async function callClaudeRaw(prompt) {
+  if (!ANTHROPIC_API_KEY) {
+    console.warn('  ⚠ No ANTHROPIC_API_KEY — skipping Claude preview generation');
+    return null;
+  }
+  const body = JSON.stringify({
+    model: CLAUDE_MODEL,
+    max_tokens: 256,
+    messages: [{ role: 'user', content: prompt }]
+  });
+  return new Promise((resolve, reject) => {
+    const req = https.request({
+      hostname: 'api.anthropic.com',
+      path: '/v1/messages',
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01',
+        'Content-Length': Buffer.byteLength(body)
+      },
+      timeout: 45000
+    }, (res) => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        try {
+          const json = JSON.parse(data);
+          if (json.error) { reject(new Error(json.error.message)); return; }
+          resolve((json.content?.[0]?.text || '').trim());
+        } catch (e) { reject(e); }
+      });
+    });
+    req.on('error', reject);
+    req.on('timeout', () => { req.destroy(); reject(new Error('Claude API timeout')); });
+    req.write(body);
+    req.end();
+  });
+}
+
 // ══════════════════════════════════════════════════════════════
 // ── Task 1: Meeting Agenda Summaries ──
 // ══════════════════════════════════════════════════════════════
@@ -478,7 +527,7 @@ Return ONLY valid JSON matching the format specified.`;
 async function fetchUpcomingMeetings() {
   const meetings = [];
   const now = new Date();
-  const horizon = new Date(now.getTime() + 14 * 86400000); // 14 days ahead
+  const horizon = new Date(now.getTime() + 30 * 86400000); // 30 days ahead
 
   // Telluride — CivicWeb API
   try {
@@ -639,6 +688,144 @@ async function refreshSummaries(existingSummaries) {
 }
 
 // ══════════════════════════════════════════════════════════════
+// ── Task 1b: Pre-Meeting Previews (from legal notices + agendas) ──
+// ══════════════════════════════════════════════════════════════
+
+// Entity key mapping: legal notice entityLogo → meeting source key
+const NOTICE_ENTITY_TO_SOURCE = {
+  telluride: 'telluride',
+  county:    'county',
+  mv:        'mv',
+  norwood:   'norwood',
+  ophir:     'ophir',
+  school:    'school',
+  fire:      'fire',
+  med:       'med',
+  smart:     'smart',
+  airport:   'airport',
+  smrha:     'smrha',
+  assessor:  'county',  // assessor notices → county meetings
+};
+
+async function refreshMeetingPreviews(existingPreviews, govHubSrc) {
+  console.log('\n📋 Task 1b: Refreshing meeting previews from legal notices...');
+
+  // Extract current LEGAL_NOTICES from gov-hub.js source
+  let legalNotices = [];
+  try {
+    legalNotices = extractJsArray(govHubSrc, 'LEGAL_NOTICES') || [];
+  } catch (e) {
+    console.warn('  Could not parse LEGAL_NOTICES:', e.message);
+  }
+  console.log(`  Found ${legalNotices.length} legal notices to scan`);
+
+  const meetings = await fetchUpcomingMeetings();
+  console.log(`  Found ${meetings.length} upcoming meetings`);
+
+  if (meetings.length === 0) {
+    console.log('  No upcoming meetings found — skipping preview generation');
+    // Prune expired entries but keep the rest
+    const pruned = {};
+    const now = new Date();
+    for (const [key, val] of Object.entries(existingPreviews)) {
+      const datePart = key.split('|')[1];
+      if (datePart && new Date(datePart) >= now) pruned[key] = val;
+    }
+    return pruned;
+  }
+
+  const updated = {};
+  // Carry forward previews for meetings still in the future
+  const now = new Date();
+  for (const [key, val] of Object.entries(existingPreviews)) {
+    const datePart = key.split('|')[1];
+    if (datePart && new Date(datePart) >= now) updated[key] = val;
+  }
+
+  let newCount = 0;
+
+  for (const m of meetings) {
+    const key = `${m.source}|${m.date}|${m.title}`;
+
+    // Skip if we already have a preview for this meeting
+    if (updated[key]) {
+      console.log(`  ✓ Already have preview for: ${key}`);
+      continue;
+    }
+
+    const meetingDate = new Date(m.date + 'T00:00:00');
+
+    // Find legal notices from the same entity that are likely related to this meeting
+    // A notice is "related" if:
+    //   (a) its entityLogo maps to the meeting's source, AND
+    //   (b) its expiry date is within 60 days of the meeting date (i.e., recently published)
+    const relatedNotices = legalNotices.filter(notice => {
+      const noticeSource = NOTICE_ENTITY_TO_SOURCE[notice.entityLogo];
+      if (noticeSource !== m.source) return false;
+      if (!notice.expires) return false;
+      const expiresDate = new Date(notice.expires + 'T00:00:00');
+      const daysDiff = (expiresDate - meetingDate) / 86400000;
+      // Notice expires within 60 days after meeting OR up to 5 days before meeting
+      return daysDiff >= -5 && daysDiff <= 60;
+    });
+
+    if (relatedNotices.length === 0) {
+      // Also check agenda text for description-based preview
+      if (!m.agendaUrl) {
+        console.log(`  ⊘ No notices or agenda for: ${key}`);
+        continue;
+      }
+    }
+
+    console.log(`  → Generating preview for: ${key} (${relatedNotices.length} notices, agenda: ${!!m.agendaUrl})`);
+
+    try {
+      // Build context from legal notices + agenda text
+      const noticeContext = relatedNotices.map(n =>
+        `[${n.type || 'Notice'}] ${n.title}: ${(n.summary || '').slice(0, 200)}`
+      ).join('\n');
+
+      const agendaText = m.agendaUrl ? await extractAgendaText(m.agendaUrl) : '';
+
+      if (!noticeContext && !agendaText) {
+        console.log(`    Skipped (no context available)`);
+        continue;
+      }
+
+      const contextBlock = [
+        noticeContext ? `RELATED LEGAL NOTICES:
+${noticeContext}` : '',
+        agendaText ? `AGENDA TEXT (excerpt):
+${agendaText.slice(0, 1500)}` : ''
+      ].filter(Boolean).join('\n\n');
+
+      const prompt = `You are summarizing what a local government body is expected to discuss at an upcoming meeting.
+
+Meeting: ${AGENDA_SOURCES[m.source]?.label || m.source} — ${m.title}
+Date: ${m.date}
+
+${contextBlock}
+
+Write a plain-text preview of 50 words or less describing the key issues or agenda items expected at this meeting. Use a neutral, factual tone. No bullet points. No headers. Start directly with the content (e.g., "Council is expected to..." or "Board will consider...").`;
+
+      const response = await callClaudeRaw(prompt);
+      if (response && response.trim()) {
+        updated[key] = response.trim().slice(0, 400); // cap at 400 chars
+        newCount++;
+        console.log(`    ✓ Generated preview (${response.trim().length} chars)`);
+      }
+    } catch (e) {
+      console.warn(`    ✗ Preview generation error: ${e.message}`);
+    }
+
+    await new Promise(r => setTimeout(r, 1200));
+  }
+
+  console.log(`  Preview refresh complete: ${newCount} new, ${Object.keys(updated).length} total`);
+  return updated;
+}
+
+// ══════════════════════════════════════════════════════════════
 // ── Task 2: News Articles (RSS) ──
 // ══════════════════════════════════════════════════════════════
 
@@ -664,9 +851,12 @@ async function refreshNews(existingTtArticles = []) {
   const existingByHref = new Map(existingTtArticles.map(a => [a.href, a]));
   const articles = [];
   const cutoff = new Date(Date.now() - NEWS_MAX_AGE_DAYS * 86400000);
+  const govCutoff = new Date(Date.now() - GOV_NEWS_MAX_AGE_DAYS * 86400000);
 
-  // Government RSS feeds
+  // Government RSS feeds — use longer 45-day window (gov agencies publish infrequently)
   for (const feed of NEWS_FEEDS) {
+    // Skip "Website News" — just site-management notices ("Stay Connected", etc.)
+    if (feed.category === 'Website News') continue;
     try {
       const resp = await fetch(feed.url);
       if (resp.status !== 200) continue;
@@ -676,14 +866,26 @@ async function refreshNews(existingTtArticles = []) {
 
       for (const item of arr) {
         const pubDate = new Date(item.pubDate || '');
-        if (pubDate < cutoff) continue;
+        if (pubDate < govCutoff) continue;
+        // Skip meeting announcements — covered in Gov-Hub
+        const title = (item.title || '').trim();
+        if (/meeting/i.test(title) && /\d{1,2}[\/-]\d{1,2}|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec/i.test(title)) continue;
+        const enclosure = item.enclosure;
+        const rawImg = (enclosure?.$.url || item['media:thumbnail']?.$.url || '').replace(/[?&]resize=[^&]*/i, '');
+        // Also try to extract image from description HTML
+        let descImg = rawImg;
+        if (!descImg) {
+          const imgMatch = (item.description || '').match(/<img[^>]+src=["']([^"']+)["']/i);
+          if (imgMatch) descImg = imgMatch[1];
+        }
         articles.push({
-          title: (item.title || '').trim(),
+          title,
           source: feed.source,
           date: formatDate(pubDate),
-          newsTopic: classifyNewsTopic(item.title || '', item.description || ''),
-          copy: (item.description || '').replace(/<[^>]+>/g, '').trim().slice(0, 300),
-          href: (item.link || '').trim()
+          newsTopic: classifyNewsTopic(title, item.description || ''),
+          copy: (item.description || '').replace(/<[^>]+>/g, ' ').replace(/&amp;/g,'&').replace(/&nbsp;/g,' ').replace(/\s+/g,' ').trim().slice(0, 300),
+          href: (item.link || '').trim(),
+          img: descImg
         });
       }
     } catch (e) {
@@ -745,12 +947,62 @@ async function refreshNews(existingTtArticles = []) {
           copy,
           claudeSummary,
           href,
-          img: enclosure?.$.url || ''
+          img: (enclosure?.$.url || '').replace(/[?&]resize=[^&]*/i, '')
         });
       }
       if (newCount > 0) console.log(`  Summarized ${newCount} new TT article(s) from full text`);
     }
   } catch (e) { console.warn(`  Telluride Times RSS error: ${e.message}`); }
+
+  // ── Merge-back: preserve existing TT articles not returned by this RSS run ──
+  // The RSS feed is a rolling window (last 50 articles, last 14 days). If an
+  // article wasn't returned this run — due to timing, a category not yet in
+  // the feed URL, a CF proxy hiccup, or a manually-added entry — it would be
+  // silently dropped when the bot serializes the new array. That's the root
+  // cause of repeated "articles disappeared" incidents.
+  //
+  // Fix: after the RSS pass, scan existingByHref for TT articles that are
+  // still within the 14-day window but not already in the scraped array.
+  // Add them back so manually-added or RSS-delayed articles survive bot runs.
+  {
+    const scrapedHrefs = new Set(articles.map(a => a.href));
+    for (const [href, existing] of existingByHref) {
+      if (scrapedHrefs.has(href)) continue;               // already in this run
+      if (existing.source !== 'Telluride Times') continue; // gov news handled separately
+      const pub = new Date(existing.date || existing.firstSeen || '');
+      if (!isNaN(pub) && pub >= cutoff) {
+        articles.push(existing);   // carry forward — still within window
+        scrapedHrefs.add(href);    // prevent duplication if loop runs twice
+      }
+    }
+  }
+
+  // ── og:image enhancement pass ──────────────────────────────────────────
+  // For TT articles that don't yet have a hi-res photo, fetch the article
+  // page through the CF Worker proxy and pull <meta property="og:image">.
+  // Cap at 15 new fetches per run (≈5 seconds extra) with a 350 ms delay
+  // between requests to be polite.  The `imgHiRes` flag is persisted on the
+  // article object so already-fetched articles are skipped on future runs.
+  {
+    const OG_MAX_PER_RUN = 15;
+    let ogFetched = 0;
+    for (const art of articles) {
+      if (art.source !== 'Telluride Times') continue;
+      if (art.imgHiRes) continue;           // already have hi-res from a prior run
+      if (ogFetched >= OG_MAX_PER_RUN) break;
+      const ogUrl = await fetchTTOgImage(art.href);
+      if (ogUrl) {
+        art.img = ogUrl;
+        art.imgHiRes = true;
+        ogFetched++;
+      } else {
+        art.imgHiRes = true;                // mark attempted so we don't retry forever
+      }
+      await new Promise(r => setTimeout(r, 350));
+    }
+    if (ogFetched > 0) console.log(`  Fetched og:image for ${ogFetched} TT article(s)`);
+  }
+
 
   // KOTO RSS
   const kotoNewscasts = [];
@@ -835,54 +1087,47 @@ async function refreshNews(existingTtArticles = []) {
     }
   } catch (e) { console.warn(`  Colorado Sun RSS error: ${e.message}`); }
 
-  // ── Town of Ridgway — Press Releases (PENDING: enable after May 8 site migration) ──
-  // The current site (Drupal/Colorado state CMS) has no RSS feed and blocks automated
-  // HTTP access. The new hosting environment goes live ~May 8, 2026.
-  // On Monday May 11, run the Ridgway review scheduled task to:
-  //   1. Check if the new site has RSS feeds (look for <link rel="alternate"> tags)
-  //   2. If yes: add the feed URL below and uncomment the live scraper block
-  //   3. If no RSS: uncomment the homepage HTML scraper below and add
-  //      'townofridgway.colorado.gov' to both PROXY_HOSTS (here) and the
-  //      Cloudflare Worker ALLOWED_HOSTS (worker.js)
-  //
-  // ── Live scraper (uncomment after confirming access) ──
-  // const RIDGWAY_HOME = 'https://townofridgway.colorado.gov/';
-  // const ridgwayArticles = [];
-  // try {
-  //   const resp = await fetch(RIDGWAY_HOME);  // add to PROXY_HOSTS if blocked
-  //   if (resp.status === 200) {
-  //     const html = resp.text;
-  //     // Extract press release links — pattern: <a href="...files/documents/...">Title - Date</a>
-  //     const linkRe = /<a[^>]+href="([^"]*\/files\/documents\/[^"]+\.pdf)"[^>]*>([^<]+?)<\/a>/gi;
-  //     let m;
-  //     while ((m = linkRe.exec(html)) !== null) {
-  //       const href = m[1].startsWith('http') ? m[1] : `https://townofridgway.colorado.gov${m[1]}`;
-  //       const rawText = m[2].replace(/\(opens in new window\)/gi, '').trim();
-  //       // Extract date from link text: "Title - May 1, 2026" or "Title - April 14, 2026"
-  //       const dateMatch = rawText.match(/[-–]\s*((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+\d+,?\s*\d{4})\s*$/i);
-  //       const title = dateMatch ? rawText.slice(0, rawText.lastIndexOf(dateMatch[0])).trim() : rawText;
-  //       const dateStr = dateMatch ? dateMatch[1] : '';
-  //       const pubDate = dateStr ? new Date(dateStr) : new Date();
-  //       if (pubDate < cutoff) continue;
-  //       ridgwayArticles.push({
-  //         title,
-  //         source: 'Town of Ridgway',
-  //         date: formatDate(pubDate),
-  //         firstSeen: existingByHref.has(href)
-  //           ? (existingByHref.get(href).firstSeen || new Date().toISOString().slice(0, 10))
-  //           : new Date().toISOString().slice(0, 10),
-  //         newsTopic: classifyNewsTopic(title, ''),
-  //         copy: `Press release from the Town of Ridgway. Click to view the full PDF.`,
-  //         claudeSummary: false,
-  //         href,
-  //         img: ''
-  //       });
-  //     }
-  //     if (ridgwayArticles.length > 0) console.log(`  Found ${ridgwayArticles.length} Ridgway press release(s)`);
-  //   } else {
-  //     console.warn(`  Ridgway homepage HTTP ${resp.status}`);
-  //   }
-  // } catch (e) { console.warn(`  Ridgway scraper error: ${e.message}`); }
+  // ── Town of Ridgway — Press Releases ──
+  // Drupal 10 / Colorado state CMS. No RSS feed available. Direct HTTP access works (200);
+  // Cloudflare Worker returns 403 for this host so we fetch direct (not via proxy).
+  // Activated 2026-05-11 after confirming site migration completed May 8.
+  const RIDGWAY_HOME = 'https://townofridgway.colorado.gov/';
+  const ridgwayArticles = [];
+  try {
+    const resp = await fetch(RIDGWAY_HOME);
+    if (resp.status === 200) {
+      const html = resp.text;
+      // Extract press release links — pattern: <a href="...files/documents/...pdf">Title - Date</a>
+      const linkRe = /<a[^>]+href="([^"]*\/files\/documents\/[^"]+\.pdf)"[^>]*>([^<]+?)<\/a>/gi;
+      let m;
+      while ((m = linkRe.exec(html)) !== null) {
+        const href = m[1].startsWith('http') ? m[1] : `https://townofridgway.colorado.gov${m[1]}`;
+        const rawText = m[2].replace(/\(opens in new window\)/gi, '').trim();
+        // Extract date from link text: "Title - May 1, 2026" or "Title - April 14, 2026"
+        const dateMatch = rawText.match(/[-–]\s*((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+\d+,?\s*\d{4})\s*$/i);
+        const title = dateMatch ? rawText.slice(0, rawText.lastIndexOf(dateMatch[0])).trim() : rawText;
+        const dateStr = dateMatch ? dateMatch[1] : '';
+        const pubDate = dateStr ? new Date(dateStr) : new Date();
+        if (pubDate < cutoff) continue;
+        ridgwayArticles.push({
+          title,
+          source: 'Town of Ridgway',
+          date: formatDate(pubDate),
+          firstSeen: existingByHref.has(href)
+            ? (existingByHref.get(href).firstSeen || new Date().toISOString().slice(0, 10))
+            : new Date().toISOString().slice(0, 10),
+          newsTopic: classifyNewsTopic(title, ''),
+          copy: `Press release from the Town of Ridgway. Click to view the full PDF.`,
+          claudeSummary: false,
+          href,
+          img: ''
+        });
+      }
+      if (ridgwayArticles.length > 0) console.log(`  Found ${ridgwayArticles.length} Ridgway press release(s)`);
+    } else {
+      console.warn(`  Ridgway homepage HTTP ${resp.status}`);
+    }
+  } catch (e) { console.warn(`  Ridgway scraper error: ${e.message}`); }
 
   // Deduplicate by href
   const seen = new Set();
@@ -895,9 +1140,8 @@ async function refreshNews(existingTtArticles = []) {
   const ttArticles = dedup(articles.filter(a => a.source === 'Telluride Times'));
   const govArticles = dedup(articles.filter(a => a.source !== 'Telluride Times'));
 
-  console.log(`  Found: ${ttArticles.length} Telluride Times, ${govArticles.length} gov news, ${kotoNewscasts.length} KOTO newscasts, ${kotoFeatured.length} KOTO stories, ${csSunArticles.length} Colorado Sun`);
-  // When Ridgway is enabled: add ridgwayArticles to the dedup and log count above
-  return { ttArticles: [...ttArticles, ...govArticles, ...dedup(csSunArticles)], kotoNewscasts: dedup(kotoNewscasts), kotoFeatured: dedup(kotoFeatured) };
+  console.log(`  Found: ${ttArticles.length} Telluride Times, ${govArticles.length} gov news, ${kotoNewscasts.length} KOTO newscasts, ${kotoFeatured.length} KOTO stories, ${csSunArticles.length} Colorado Sun, ${ridgwayArticles.length} Ridgway`);
+  return { ttArticles: [...ttArticles, ...govArticles, ...dedup(csSunArticles), ...dedup(ridgwayArticles)], kotoNewscasts: dedup(kotoNewscasts), kotoFeatured: dedup(kotoFeatured) };
 }
 
 // ══════════════════════════════════════════════════════════════
@@ -946,7 +1190,7 @@ async function refreshRegionalNews(existingRegional = []) {
           newsTopic: classifyNewsTopic(title, copy),
           copy,
           href,
-          img: enclosure?.$.url || ''
+          img: (enclosure?.$.url || '').replace(/[?&]resize=[^&]*/i, '')
         });
         count++;
       }
@@ -1114,6 +1358,28 @@ async function fetchTTArticleDirect(url) {
     req.on('timeout', () => { req.destroy(); resolve(null); });
   });
 }
+
+/**
+ * Fetch og:image from a Telluride Times article page (unauthenticated, via
+ * the CF Worker proxy). Returns the hi-res image URL string or '' on failure.
+ * The custom fetch() in this script already routes telluridenews.com through
+ * the Worker, so no extra config is needed here.
+ */
+async function fetchTTOgImage(href) {
+  try {
+    const resp = await fetch(href);
+    if (resp.status !== 200) return '';
+    // og:image can appear in two attribute orders
+    const m = resp.text.match(/<meta[^>]+property=["'`]og:image["'`][^>]+content=["'`]([^"'`]+)["'`]/i)
+           || resp.text.match(/<meta[^>]+content=["'`]([^"'`]+)["'`][^>]+property=["'`]og:image["'`]/i);
+    if (!m) return '';
+    // Strip resize query params (same pattern as RSS enclosure cleanup)
+    return m[1].replace(/[?&]resize=[^&]*/i, '').split('?')[0];
+  } catch (_) {
+    return '';
+  }
+}
+
 
 /**
  * Extract and decode all TNCMS-encrypted subscriber content blocks from
@@ -1997,7 +2263,7 @@ async function syncHumaneSocietyAnimals() {
 // exposes a JSON API for the community-calendar category. Fetch
 // every 6h, filter to events starting in the next 30 days.
 
-const KOTO_TRIBE_API = 'https://koto.org/wp-json/tribe/events/v1/events/?categories=community-calendar&per_page=50';
+const KOTO_TRIBE_API = 'https://koto.org/wp-json/tribe/events/v1/events/?categories=community-calendar&per_page=100';
 
 function decodeHtmlEntities(s) {
   return String(s || '')
@@ -2107,6 +2373,89 @@ async function syncOurayCountyEvents() {
     });
   }
   console.log(`  Ouray County: ${events.length} non-gov events kept (${skippedGov} gov meetings skipped)`);
+  return events;
+}
+
+// ── Task 16: Ouray/Ridgway Events (Localist JSON API) ──
+// Fetches from events.ourayridgwayevents.com using the same Localist API
+// the client uses, but server-side so the data is baked into gov-hub.js.
+// The client's fetchOurayRidgwayEvents() prefers OURAY_RIDGWAY_EVENTS if
+// it is non-empty, falling back to a live client-side API call.
+const LOCALIST_ORE_URL = 'https://events.ourayridgwayevents.com/api/2/events?school=ridgwayouray&days=60&pp=100';
+
+async function syncOurayRidgwayEvents() {
+  console.log('\n🏔  Task 16: Syncing Ouray/Ridgway events (Localist)...');
+  let json;
+  try {
+    const resp = await fetch(LOCALIST_ORE_URL, {
+      headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36' }
+    });
+    if (!resp || resp.status !== 200) {
+      console.warn(`  Localist API HTTP ${resp ? resp.status : 'no response'}`);
+      return null;
+    }
+    json = JSON.parse(resp.text);
+  } catch (e) {
+    console.warn(`  Localist fetch/parse error: ${e.message}`);
+    return null;
+  }
+
+  const rawEvents = Array.isArray(json && json.events) ? json.events : [];
+  if (rawEvents.length === 0) {
+    console.log('  No events returned from Localist API');
+    return [];
+  }
+
+  const now = Date.now();
+  const horizon = now + 60 * 86400000;
+  const seen = new Set();
+  const events = [];
+  let skippedGov = 0;
+  let skippedPast = 0;
+
+  for (const wrapped of rawEvents) {
+    const ev = wrapped && wrapped.event;
+    if (!ev || ev.private || ev.status !== 'live') continue;
+
+    // Skip government meetings
+    if (GOV_MEETING_PATTERN_NODE.test(ev.title || '')) { skippedGov++; continue; }
+
+    // Parse start date from event_instances
+    const inst = Array.isArray(ev.event_instances) && ev.event_instances[0]
+      && ev.event_instances[0].event_instance;
+    const startStr = inst && inst.start;
+    let startDate = startStr ? new Date(startStr) : (ev.first_date ? new Date(ev.first_date + 'T19:00:00') : null);
+    if (!startDate || isNaN(startDate.getTime())) continue;
+
+    const startMs = startDate.getTime();
+    if (startMs < now - 86400000) { skippedPast++; continue; } // allow today's events
+    if (startMs > horizon) continue;
+
+    const uid = String(ev.id || ev.urlname || ev.title);
+    const key = uid + '|' + startDate.toISOString().slice(0, 10);
+    if (seen.has(key)) continue;
+    seen.add(key);
+
+    // Clean description
+    let desc = (ev.description_text || '')
+      .replace(/\n/g, ' ').replace(/\r?\n+/g, ' ').replace(/\s+/g, ' ').trim();
+    if (/^https?:\/\/\S+$/.test(desc)) desc = '';
+    desc = smartTruncate(desc, EVENT_DESC_MAX);
+
+    events.push({
+      title: (ev.title || '').trim(),
+      link: ev.url || `https://events.ourayridgwayevents.com/event/${ev.urlname || ev.id}`,
+      description: desc,
+      pubDate: startDate.toISOString(),
+      source: 'oray',
+      sourceLabel: 'Ouray Ridgway Calendar',
+      category: 'Community Event',
+      location: ev.location || '',
+      imageUrl: ev.photo_url || ''
+    });
+  }
+
+  console.log(`  Ouray/Ridgway: ${events.length} events (${skippedPast} past, ${skippedGov} gov skipped)`);
   return events;
 }
 
@@ -2639,6 +2988,689 @@ async function syncNorwoodMeetings() {
   return entries;
 }
 
+
+// ── SMC AlertCenter: fetch active alerts and store as event-shaped objects ──
+async function refreshSmcAlerts(existingAlerts = []) {
+  console.log('\n🚨 SMC AlertCenter: Refreshing active alerts...');
+  const RSS_URL = 'https://www.sanmiguelcountyco.gov/RSSFeed.aspx?ModID=63&CID=All-0';
+  const cutoff = new Date(Date.now() - 30 * 86400000); // 30-day window
+  const existingByHref = new Map((existingAlerts || []).map(a => [a.href, a]));
+  const alerts = [];
+  try {
+    const resp = await fetch(RSS_URL);
+    if (resp.status !== 200) {
+      console.warn(`  SMC AlertCenter RSS HTTP ${resp.status} — carrying forward existing`);
+      return existingAlerts;
+    }
+    const xml = await parseXml(resp.text);
+    const items = xml?.rss?.channel?.item;
+    const arr = Array.isArray(items) ? items : (items ? [items] : []);
+    for (const item of arr) {
+      const pubDate = new Date(item.pubDate || '');
+      if (isNaN(pubDate) || pubDate < cutoff) continue;
+      const href = (item.link || '').trim();
+      const title = (item.title || '').trim();
+      const desc = (item.description || '').replace(/<[^>]+>/g, ' ')
+        .replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ')
+        .replace(/&#\d+;/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 600);
+      alerts.push({
+        title,
+        source: 'San Miguel County',
+        sourceLabel: 'San Miguel County',
+        category: 'Alert',
+        date: pubDate.toISOString().slice(0, 10),
+        pubDate: pubDate.toISOString(),
+        copy: desc,
+        href,
+        img: ''
+      });
+    }
+    console.log(`  SMC AlertCenter: ${alerts.length} active alert(s)`);
+  } catch (e) {
+    console.warn(`  SMC AlertCenter RSS error: ${e.message} — carrying forward existing`);
+    return existingAlerts;
+  }
+  return alerts;
+}
+
+
+// ── Engage Telluride — daily scrape of published project key dates ──
+async function refreshEngageMeetings(existing = []) {
+  const BASE = 'https://engagetelluride.org';
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const cutoff = new Date(today.getTime() + 60 * 86400000); // 60 days ahead
+  const results = [];
+
+  try {
+    // 1. Fetch the projects page and extract published slugs
+    const projectsRes = await fetch(BASE + '/projects');
+    if (projectsRes.status !== 200) throw new Error('projects page HTTP ' + projectsRes.status);
+    const projectsHtml = projectsRes.text;
+
+    // Extract href from project-tile__link anchors within published tile blocks
+    const slugSet = new Set();
+    // Tiles: data-state='published' appears in the wrapping div, href in the inner anchor
+    // Pattern: find each tile block marked published, then grab its project-tile__link href
+    const tileBlockRe = /data-state='published'[\s\S]{0,800}?class="project-tile__link"\s+href="(\/[^"]+)"/gi;
+    let m;
+    while ((m = tileBlockRe.exec(projectsHtml)) !== null) slugSet.add(m[1]);
+    // Also the reverse (href before state marker in same card)
+    const tileBlockRe2 = /class="project-tile__link"\s+href="(\/[^"]+)"[\s\S]{0,800}?data-state='published'/gi;
+    while ((m = tileBlockRe2.exec(projectsHtml)) !== null) slugSet.add(m[1]);
+    const slugs = [...slugSet];
+    console.log(`  Engage Telluride: ${slugs.length} published projects found`);
+
+    for (const slug of slugs) {
+      try {
+        // 2. Fetch the project page to find Key Date widget IDs
+        const projRes = await fetch(BASE + slug);
+        if (projRes.status !== 200) continue;
+        const projHtml = projRes.text;
+
+        const widgetIds = [];
+        const widgetRe = /id='KeyDateWidget_(\d+)'/gi;
+        while ((m = widgetRe.exec(projHtml)) !== null) widgetIds.push(m[1]);
+        if (widgetIds.length === 0) continue;
+
+        // 3. Fetch each key dates widget page
+        for (const wid of widgetIds) {
+          try {
+            const kdUrl = BASE + slug + '/widgets/' + wid + '/key_dates';
+            const kdRes = await fetch(kdUrl);
+            if (kdRes.status !== 200) continue;
+            const kdHtml = kdRes.text;
+
+            // Parse keydate-wrap blocks: anchor name, date, heading
+            const wrapRe = /<a name='(\d+)'><\/a>[\s\S]{0,200}?<div class='nomargin keydate__date'>([^<]+)<\/div>\s*<h2 class='keydate__heading'>([^<]+)<\/h2>/gi;
+            while ((m = wrapRe.exec(kdHtml)) !== null) {
+              const anchor = m[1];
+              const rawDate = m[2].trim();
+              const title = m[3].replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').trim();
+
+              const d = new Date(rawDate);
+              if (isNaN(d.getTime())) continue;
+              d.setHours(0, 0, 0, 0);
+              if (d < today || d > cutoff) continue;
+
+              const dateStr = d.toISOString().slice(0, 10);
+              const tl = title.toLowerCase();
+              const board = /\bharc\b/.test(tl) ? 'harc'
+                : /planning\s*&?\s*zoning|p\s*&?\s*z\b/.test(tl) ? 'pz'
+                : /town\s*council/.test(tl) ? 'council'
+                : /ccaase/.test(tl) ? 'ccaase'
+                : /parks/.test(tl) ? 'parks'
+                : /liquor/.test(tl) ? 'liquor'
+                : 'other';
+
+              const projectName = slug.replace(/^\//, '').split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+
+              results.push({ projectName, projectUrl: BASE + slug, title, date: dateStr, board, dateUrl: kdUrl + '#' + anchor });
+            }
+          } catch (e2) {
+            console.warn(`  Engage key_dates error (${slug}/widgets/${wid}): ${e2.message}`);
+          }
+        }
+      } catch (e1) {
+        console.warn(`  Engage project error (${slug}): ${e1.message}`);
+      }
+    }
+
+    // Deduplicate by projectUrl|date|board
+    const seen = new Set();
+    const deduped = results.filter(r => {
+      const key = r.projectUrl + '|' + r.date + '|' + r.board;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+    deduped.sort((a, b) => a.date.localeCompare(b.date));
+    console.log(`  Engage Telluride: ${deduped.length} upcoming key date(s) found`);
+    return deduped;
+
+  } catch (e) {
+    console.warn(`  Engage Telluride scrape error: ${e.message} — carrying forward existing`);
+    return existing;
+  }
+}
+
+// ══════════════════════════════════════════════════════════════════
+// ── Task 17: Norwood Town events/notices (sitemap approach) ──
+// ══════════════════════════════════════════════════════════════════
+// norwoodtown.com is a React SPA — the /public-notices page renders
+// nothing server-side. We use the sitemap instead: every dated entry
+// has the format https://www.norwoodtown.com/YYYY-MM-DD-slug-title,
+// from which we extract the date and derive a readable title.
+
+async function syncNorwoodEvents() {
+  console.log('\n🏔  Task 17: Syncing Norwood Town events (sitemap)...');
+  const SITEMAP_URL = 'https://www.norwoodtown.com/sitemap.xml';
+  let xml;
+  try {
+    const resp = await fetch(SITEMAP_URL);
+    if (!resp || resp.status !== 200) {
+      console.warn(`  Norwood sitemap HTTP ${resp ? resp.status : 'no response'}`);
+      return null;
+    }
+    xml = resp.text || '';
+  } catch (e) {
+    console.warn(`  Norwood sitemap fetch error: ${e.message}`);
+    return null;
+  }
+
+  const now = Date.now();
+  const past7  = now - 7  * 86400000;
+  const future = now + 90 * 86400000;
+
+  // Slug-title cleaning helpers
+  function slugToTitle(slug) {
+    return slug
+      .replace(/-/g, ' ')
+      .replace(/\b(nwc|nsd|rfp|ton|bocc)\b/gi, s => s.toUpperCase())
+      .replace(/\bmesa\b/gi, 'Mesa')
+      .replace(/\btoo\b/gi, 'too')
+      .replace(/\b\w/g, c => c.toUpperCase())
+      .trim();
+  }
+
+  function classifySlug(slug) {
+    const s = slug.toLowerCase();
+    if (/notice|bid|rfp|request.for.proposal/.test(s)) return 'Public Notice';
+    if (/closed|holiday/.test(s)) return 'Town Closure';
+    if (/music|festival|concert|fair|rodeo|pioneer|car.show/.test(s)) return 'Community Event';
+    if (/board|trustee|planning|commission|meeting|nwc/.test(s)) return 'Government Meeting';
+    return 'Community Event';
+  }
+
+  const dateSlugRe = /https?:\/\/www\.norwoodtown\.com\/(\d{4}-\d{2}-\d{2})-([a-z0-9][^<\s"]+)/gi;
+  const seen = new Set();
+  const events = [];
+  let match;
+
+  while ((match = dateSlugRe.exec(xml)) !== null) {
+    const dateStr = match[1];      // e.g. "2026-05-12"
+    const slug    = match[2];      // e.g. "nwc-meeting"
+    const eventDate = new Date(dateStr + 'T12:00:00');
+    const ms = eventDate.getTime();
+    if (isNaN(ms) || ms < past7 || ms > future) continue;
+    const key = dateStr + '|' + slug;
+    if (seen.has(key)) continue;
+    seen.add(key);
+
+    const title = slugToTitle(slug);
+    const category = classifySlug(slug);
+    const link = 'https://www.norwoodtown.com/' + dateStr + '-' + slug;
+
+    events.push({
+      title,
+      link,
+      description: '',
+      pubDate: eventDate.toISOString(),
+      source: 'norwood',
+      sourceLabel: 'Town of Norwood',
+      category,
+      location: 'Norwood, CO',
+      imageUrl: ''
+    });
+  }
+
+  events.sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
+  console.log(`  Norwood: ${events.length} events/notices from sitemap`);
+  return events;
+}
+
+// ══════════════════════════════════════════════════════════════════
+// ── Task 18: Mountain Village events (sitemap + page scrape) ──
+// ══════════════════════════════════════════════════════════════════
+// The RecurMe calendar on townofmountainvillage.com is AJAX-only;
+// static HTML returns no event links. We use the sitemap for slugs,
+// fetch each individual page for og:title/og:description/og:image,
+// and parse the human-readable "When" section to generate per-
+// occurrence Date objects within the 60-day window.
+
+const MV_GOV_SLUG_RE = /town-council|council-meeting|planning-commission|special-meeting|executive-session|work-session|advisory|certification|training|food-safety|food-protection|business-development|board-of/i;
+
+function parseMVWhenText(whenText, fromMs, toMs) {
+  const dates = [];
+  if (!whenText) return dates;
+  const text = whenText.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+
+  // Pattern 1: "The Nth weekday of each month" (e.g. "The third Wednesday of each month")
+  const ordinalMap = { first:0, second:1, third:2, fourth:3, fifth:4, last:-1 };
+  const weekdayMap = { sunday:0, monday:1, tuesday:2, wednesday:3, thursday:4, friday:5, saturday:6 };
+  const monthlyRe = /(?:the\s+)?(\w+)\s+(sunday|monday|tuesday|wednesday|thursday|friday|saturday)\s+of\s+each\s+month/i;
+  const mMatch = monthlyRe.exec(text);
+  if (mMatch) {
+    const ordinal = ordinalMap[mMatch[1].toLowerCase()];
+    const weekday = weekdayMap[mMatch[2].toLowerCase()];
+    if (ordinal !== undefined && weekday !== undefined) {
+      const cur = new Date(fromMs);
+      cur.setDate(1);
+      cur.setHours(12, 0, 0, 0);
+      // Generate for next 3 months
+      for (let mo = 0; mo < 3; mo++) {
+        const year = cur.getFullYear();
+        const month = cur.getMonth();
+        // Find the Nth weekday
+        let count = -1;
+        let day = new Date(year, month, 1);
+        let target = null;
+        if (ordinal >= 0) {
+          while (day.getMonth() === month) {
+            if (day.getDay() === weekday) {
+              count++;
+              if (count === ordinal) { target = new Date(day); break; }
+            }
+            day.setDate(day.getDate() + 1);
+          }
+        } else {
+          // "last" weekday of the month
+          day = new Date(year, month + 1, 0); // last day of month
+          while (day.getMonth() === month) {
+            if (day.getDay() === weekday) { target = new Date(day); break; }
+            day.setDate(day.getDate() - 1);
+          }
+        }
+        if (target) {
+          target.setHours(12, 0, 0, 0);
+          const ms = target.getTime();
+          if (ms >= fromMs && ms <= toMs) dates.push(target);
+        }
+        cur.setMonth(cur.getMonth() + 1);
+      }
+      return dates;
+    }
+  }
+
+  // Pattern 2: Weekly on a specific weekday (e.g. "Saturdays" / "Every Friday")
+  const weeklyRe = /(?:every\s+|each\s+)?(sunday|monday|tuesday|wednesday|thursday|friday|saturday)s?/i;
+  const wMatch = weeklyRe.exec(text);
+  if (wMatch) {
+    const weekday = weekdayMap[wMatch[1].toLowerCase()];
+    const cur = new Date(fromMs);
+    // Advance to first matching weekday
+    while (cur.getDay() !== weekday) cur.setDate(cur.getDate() + 1);
+    cur.setHours(12, 0, 0, 0);
+    while (cur.getTime() <= toMs) {
+      dates.push(new Date(cur));
+      cur.setDate(cur.getDate() + 7);
+    }
+    return dates;
+  }
+
+  // Pattern 3: Specific dates in text (Month DD, YYYY)
+  const specificRe = /(?:january|february|march|april|may|june|july|august|september|october|november|december)\s+\d{1,2},?\s+\d{4}/gi;
+  let sMatch;
+  while ((sMatch = specificRe.exec(text)) !== null) {
+    const d = new Date(sMatch[0]);
+    if (!isNaN(d.getTime())) {
+      d.setHours(12, 0, 0, 0);
+      const ms = d.getTime();
+      if (ms >= fromMs && ms <= toMs) dates.push(d);
+    }
+  }
+  return dates;
+}
+
+async function syncMountainVillageEvents() {
+  console.log('\n🏔  Task 18: Syncing Mountain Village events (sitemap+pages)...');
+  const SITEMAP_URL = 'https://www.townofmountainvillage.com/sitemap.xml';
+  let sitemapXml;
+  try {
+    const resp = await fetch(SITEMAP_URL);
+    if (!resp || resp.status !== 200) {
+      console.warn(`  MV sitemap HTTP ${resp ? resp.status : 'no response'}`);
+      return null;
+    }
+    sitemapXml = resp.text || '';
+  } catch (e) {
+    console.warn(`  MV sitemap fetch error: ${e.message}`);
+    return null;
+  }
+
+  // Extract event page slugs
+  const slugRe = /https?:\/\/www\.townofmountainvillage\.com\/explore\/events\/all-events\/([^/<">\s]+)\//gi;
+  const slugSet = new Set();
+  let m;
+  while ((m = slugRe.exec(sitemapXml)) !== null) {
+    const slug = m[1];
+    if (!MV_GOV_SLUG_RE.test(slug)) slugSet.add(slug);
+  }
+  const slugs = Array.from(slugSet);
+  console.log(`  MV: ${slugs.length} non-gov event slugs found`);
+
+  const now = Date.now();
+  const fromMs = now - 86400000;        // allow yesterday (in case of timezone)
+  const toMs   = now + 60 * 86400000;  // 60-day window
+
+  const events = [];
+  let fetched = 0;
+
+  for (const slug of slugs) {
+    const url = 'https://www.townofmountainvillage.com/explore/events/all-events/' + slug + '/';
+    let html;
+    try {
+      const resp = await fetch(url);
+      if (!resp || resp.status !== 200) continue;
+      html = resp.text || '';
+      fetched++;
+    } catch (e) {
+      continue;
+    }
+    // Throttle
+    await new Promise(r => setTimeout(r, 400));
+
+    // Extract metadata from og: tags
+    const ogTitle = (html.match(/<meta[^>]+property="og:title"[^>]+content="([^"]+)"/i) || [])[1]
+                 || (html.match(/<meta[^>]+content="([^"]+)"[^>]+property="og:title"/i) || [])[1]
+                 || slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    const ogDesc  = (html.match(/<meta[^>]+property="og:description"[^>]+content="([^"]+)"/i) || [])[1]
+                 || (html.match(/<meta[^>]+content="([^"]+)"[^>]+property="og:description"/i) || [])[1]
+                 || '';
+    const ogImage = (html.match(/<meta[^>]+property="og:image"[^>]+content="([^"]+)"/i) || [])[1]
+                 || (html.match(/<meta[^>]+content="([^"]+)"[^>]+property="og:image"/i) || [])[1]
+                 || '';
+
+    // Extract "When" section
+    const whenMatch = html.match(/When<\/h[123456]>([\s\S]{0,600}?)(?:<h[123456]|<\/section|<\/div)/i)
+                   || html.match(/When<\/strong>([\s\S]{0,400}?)(?:<strong|<\/p|<br\s*\/?>)/i);
+    const whenText = whenMatch ? whenMatch[1] : '';
+
+    const occurrences = parseMVWhenText(whenText, fromMs, toMs);
+    if (occurrences.length === 0) continue;
+
+    const title = decodeHtmlEntities(ogTitle).trim();
+    const description = smartTruncate(decodeHtmlEntities(ogDesc).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(), EVENT_DESC_MAX);
+    const link = url;
+
+    for (const d of occurrences) {
+      events.push({
+        title,
+        link,
+        description,
+        pubDate: d.toISOString(),
+        source: 'mv',
+        sourceLabel: 'Mountain Village',
+        category: 'Community Event',
+        location: 'Mountain Village, CO',
+        imageUrl: ogImage
+      });
+    }
+  }
+
+  events.sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
+  console.log(`  Mountain Village: ${events.length} event occurrences from ${fetched} pages`);
+  return events;
+}
+
+// ══════════════════════════════════════════════════════════════════
+// ── Task 19: Telluride.com events (sitemap + JSON-LD / date list) ──
+// ══════════════════════════════════════════════════════════════════
+// telluride.com is a ProcessWire CMS. We fetch the sitemap to get
+// event slugs, then visit each page: first try JSON-LD Event schema
+// (multi-day festivals have startDate/endDate), then fall back to
+// parsing individual <li> date entries in the "u-featured-bullets"
+// section (recurring events like Farmers Market list each date).
+
+async function syncTelluridComEvents() {
+  console.log('\n🎪  Task 19: Syncing Telluride.com events (sitemap+pages)...');
+  const SITEMAP_URL = 'https://www.telluride.com/sitemap.xml';
+  let sitemapXml;
+  try {
+    const resp = await fetch(SITEMAP_URL);
+    if (!resp || resp.status !== 200) {
+      console.warn(`  Telluride.com sitemap HTTP ${resp ? resp.status : 'no response'}`);
+      return null;
+    }
+    sitemapXml = resp.text || '';
+  } catch (e) {
+    console.warn(`  Telluride.com sitemap fetch error: ${e.message}`);
+    return null;
+  }
+
+  // Extract /event/SLUG URLs (not /events/, /festivals-events/ etc.)
+  const slugRe = /https?:\/\/www\.telluride\.com\/event\/([^/<">\s]+)/gi;
+  const urlSet = new Set();
+  let m;
+  while ((m = slugRe.exec(sitemapXml)) !== null) {
+    urlSet.add('https://www.telluride.com/event/' + m[1]);
+  }
+  const urls = Array.from(urlSet);
+  console.log(`  Telluride.com: ${urls.length} event URLs in sitemap`);
+
+  const now = Date.now();
+  const fromMs = now - 86400000;
+  const toMs   = now + 60 * 86400000;
+
+  const events = [];
+  let fetched = 0;
+
+  for (const url of urls) {
+    let html;
+    try {
+      const resp = await fetch(url);
+      if (!resp || resp.status !== 200) continue;
+      html = resp.text || '';
+      fetched++;
+    } catch (e) {
+      continue;
+    }
+    await new Promise(r => setTimeout(r, 250));
+
+    // Metadata
+    const ogTitle = (html.match(/<meta[^>]+property="og:title"[^>]+content="([^"]+)"/i) || [])[1]
+                 || (html.match(/<meta[^>]+content="([^"]+)"[^>]+property="og:title"/i) || [])[1]
+                 || '';
+    const ogDesc  = (html.match(/<meta[^>]+property="og:description"[^>]+content="([^"]+)"/i) || [])[1]
+                 || (html.match(/<meta[^>]+content="([^"]+)"[^>]+property="og:description"/i) || [])[1]
+                 || '';
+    const ogImage = (html.match(/<meta[^>]+property="og:image"[^>]+content="([^"]+)"/i) || [])[1]
+                 || (html.match(/<meta[^>]+content="([^"]+)"[^>]+property="og:image"/i) || [])[1]
+                 || '';
+
+    if (!ogTitle) continue;
+    const title       = decodeHtmlEntities(ogTitle).trim();
+    const description = smartTruncate(decodeHtmlEntities(ogDesc).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(), EVENT_DESC_MAX);
+
+    // Strategy 1: JSON-LD Event schema
+    const ldBlocks = [];
+    const ldRe = /<script[^>]+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi;
+    let ldMatch;
+    while ((ldMatch = ldRe.exec(html)) !== null) ldBlocks.push(ldMatch[1]);
+
+    let handled = false;
+    for (const block of ldBlocks) {
+      let ld;
+      try { ld = JSON.parse(block); } catch (_) { continue; }
+      const items = Array.isArray(ld) ? ld : [ld];
+      for (const item of items) {
+        if (!item || item['@type'] !== 'Event') continue;
+        const start = item.startDate ? new Date(item.startDate) : null;
+        const end   = item.endDate   ? new Date(item.endDate)   : null;
+        if (!start || isNaN(start.getTime())) continue;
+        const location = (item.location && (item.location.name || item.location.address)) || 'Telluride, CO';
+        // If multi-day, generate one entry per day
+        if (end && !isNaN(end.getTime()) && end > start) {
+          const cur = new Date(start);
+          cur.setHours(12, 0, 0, 0);
+          while (cur <= end) {
+            const ms = cur.getTime();
+            if (ms >= fromMs && ms <= toMs) {
+              events.push({
+                title, link: url, description,
+                pubDate: cur.toISOString(),
+                source: 'telluride-com', sourceLabel: 'Telluride.com',
+                category: 'Community Event',
+                location, imageUrl: ogImage
+              });
+            }
+            cur.setDate(cur.getDate() + 1);
+          }
+        } else {
+          start.setHours(12, 0, 0, 0);
+          const ms = start.getTime();
+          if (ms >= fromMs && ms <= toMs) {
+            events.push({
+              title, link: url, description,
+              pubDate: start.toISOString(),
+              source: 'telluride-com', sourceLabel: 'Telluride.com',
+              category: 'Community Event',
+              location, imageUrl: ogImage
+            });
+          }
+        }
+        handled = true;
+        break;
+      }
+      if (handled) break;
+    }
+    if (handled) continue;
+
+    // Strategy 2: HTML <li> date list (recurring events e.g. Farmers Market)
+    // Look for a "Dates" heading followed by <ul>/<li> items
+    const datesSection = html.match(/(?:Dates?|Schedule)<\/[^>]+>([\s\S]{0,3000}?)(?:<h[123456]|<\/section)/i);
+    if (!datesSection) continue;
+    const listItems = datesSection[1].match(/<li[^>]*>([\s\S]*?)<\/li>/gi) || [];
+    for (const li of listItems) {
+      const rawDate = li.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+      const d = new Date(rawDate);
+      if (isNaN(d.getTime())) continue;
+      d.setHours(12, 0, 0, 0);
+      const ms = d.getTime();
+      if (ms < fromMs || ms > toMs) continue;
+      events.push({
+        title, link: url, description,
+        pubDate: d.toISOString(),
+        source: 'telluride-com', sourceLabel: 'Telluride.com',
+        category: 'Community Event',
+        location: 'Telluride, CO', imageUrl: ogImage
+      });
+    }
+  }
+
+  events.sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
+  console.log(`  Telluride.com: ${events.length} event occurrences from ${fetched} pages`);
+  return events;
+}
+
+// ── Task 20: Ridgway Town Council Agenda Scraper ──
+// ══════════════════════════════════════════════════════════════
+//
+// Fetches the Ridgway Town Council meetings page and extracts a map of
+// meeting date → agenda PDF URL.  The page is a plain Drupal CMS table:
+//
+//   <tr>
+//     <td><strong>May 13, 2026</strong></td>
+//     <td>[minutes link or empty]</td>
+//     <td><a href="/sites/.../Town-Council-Regular-Meeting-Packet.pdf">Agenda &amp; Packet</a></td>
+//   </tr>
+//
+// The returned object is written into RIDGWAY_AGENDA_MAP in gov-hub.js so
+// client-side rendering can show a dark-green "Agenda Posted →" button that
+// links directly to the PDF.
+//
+// Fetch strategy: try direct first (Ridgway's Colorado state CMS host is
+// usually reachable from GitHub Actions IPs).  If blocked, fall back to the
+// CF Worker proxy (requires townofridgway.colorado.gov in ALLOWED_HOSTS —
+// already added to the worker source; redeploy if needed).
+//
+async function syncRidgwayAgendas() {
+  const PAGE_URL = 'https://townofridgway.colorado.gov/i-want-to/ridgway-town-council';
+  const SAFARI_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15';
+
+  console.log('\n🏔  Task 20: Scraping Ridgway Town Council agendas...');
+
+  let html = null;
+  // Try direct fetch first
+  try {
+    const resp = await fetch(PAGE_URL, {
+      headers: { 'User-Agent': SAFARI_UA, 'Accept': 'text/html,*/*' }
+    });
+    if (resp.status === 200) {
+      html = resp.text;
+      console.log('  Ridgway agenda page: direct fetch 200');
+    } else {
+      console.warn(`  Ridgway agenda page: direct fetch HTTP ${resp.status}, trying proxy`);
+    }
+  } catch (e) {
+    console.warn(`  Ridgway agenda page: direct fetch error (${e.message}), trying proxy`);
+  }
+
+  // Fallback: CF Worker proxy
+  if (!html) {
+    try {
+      const proxyUrl = maybeProxy(PAGE_URL);
+      if (proxyUrl === PAGE_URL) {
+        console.warn('  No proxy configured — skipping Ridgway agenda scrape');
+        return null;
+      }
+      const resp2 = await fetch(proxyUrl);
+      if (resp2.status === 200) {
+        html = resp2.text;
+        console.log('  Ridgway agenda page: proxy fetch 200');
+      } else {
+        console.warn(`  Ridgway agenda page: proxy fetch HTTP ${resp2.status}`);
+        return null;
+      }
+    } catch (e2) {
+      console.warn(`  Ridgway agenda page: proxy fetch error (${e2.message})`);
+      return null;
+    }
+  }
+
+  // Parse the agenda table.
+  // Row pattern: <td><strong>MONTH DD, YYYY</strong></td> ... <td>...<a href="URL">...</a>...</td>
+  // We extract each <tr> block and look for a date + an agenda PDF link.
+  const agendaMap = {};
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+  // Match each <tr>…</tr> block
+  const rowRe = /<tr[^>]*>([\s\S]*?)<\/tr>/gi;
+  let rowMatch;
+  while ((rowMatch = rowRe.exec(html)) !== null) {
+    const row = rowMatch[1];
+
+    // Extract date from <strong>Month D, YYYY</strong>
+    const dateRe = /<strong[^>]*>\s*((?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s*\d{4})\s*<\/strong>/i;
+    const dateMatch = dateRe.exec(row);
+    if (!dateMatch) continue;
+
+    // Normalise date: "May 13, 2026" — ensure comma
+    let rawDate = dateMatch[1].trim().replace(/\s+/g, ' ');
+    if (!rawDate.includes(',')) rawDate = rawDate.replace(/(\d{4})$/, ', $1');
+    const d = new Date(rawDate);
+    if (isNaN(d.getTime())) continue;
+    const dateKey = `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+
+    // Extract agenda PDF link — prefer links whose text contains "Agenda"
+    const linkRe = /<a[^>]+href="([^"]+\.pdf[^"]*)"[^>]*>([^<]*)<\/a>/gi;
+    let linkMatch;
+    let agendaUrl = null;
+    while ((linkMatch = linkRe.exec(row)) !== null) {
+      const href = linkMatch[1];
+      const text = linkMatch[2];
+      if (/agenda/i.test(text) || /agenda/i.test(href)) {
+        agendaUrl = href.startsWith('http') ? href : `https://townofridgway.colorado.gov${href}`;
+        break;
+      }
+      // Accept any PDF as fallback if no "Agenda" label found
+      if (!agendaUrl) {
+        agendaUrl = href.startsWith('http') ? href : `https://townofridgway.colorado.gov${href}`;
+      }
+    }
+    if (agendaUrl) {
+      agendaMap[dateKey] = agendaUrl;
+    }
+  }
+
+  const count = Object.keys(agendaMap).length;
+  if (count === 0) {
+    console.warn('  No Ridgway agendas found in page — check HTML structure');
+    return null;
+  }
+  console.log(`  Found ${count} Ridgway agenda link(s):`, Object.keys(agendaMap).join(', '));
+  return agendaMap;
+}
+
 async function main() {
   console.log('═══════════════════════════════════════════════');
   console.log('  Telluride Gov Hub — Content Refresh');
@@ -2666,6 +3698,14 @@ async function main() {
     changed = true;
   }
 
+  // ── 1b. Meeting Previews (from legal notices + agendas) ──
+  const existingPreviews = extractJsObject(govHubSrc, 'MEETING_PREVIEWS') || {};
+  const newPreviews = await refreshMeetingPreviews(existingPreviews, govHubSrc);
+  if (JSON.stringify(newPreviews) !== JSON.stringify(existingPreviews)) {
+    govHubSrc = replaceJsValue(govHubSrc, 'MEETING_PREVIEWS', newPreviews, true);
+    changed = true;
+  }
+
   // ── 2. News ──
   const existingTtArticles = extractJsArray(govHubSrc, 'TELLURIDE_TIMES_ARTICLES') || [];
   const { ttArticles, kotoNewscasts, kotoFeatured } = await refreshNews(existingTtArticles);
@@ -2688,6 +3728,22 @@ async function main() {
   const freshRegional = await refreshRegionalNews(existingRegional);
   if (freshRegional.length > 0) {
     govHubSrc = replaceJsValue(govHubSrc, 'REGIONAL_NEWS_ARTICLES', freshRegional, false);
+    changed = true;
+  }
+
+  // ── 2c. SMC AlertCenter ──
+  const existingSmcAlerts = extractJsArray(govHubSrc, 'SMC_ALERTS') || [];
+  const freshSmcAlerts = await refreshSmcAlerts(existingSmcAlerts);
+  if (JSON.stringify(freshSmcAlerts) !== JSON.stringify(existingSmcAlerts)) {
+    govHubSrc = replaceJsValue(govHubSrc, 'SMC_ALERTS', freshSmcAlerts, false);
+    changed = true;
+  }
+
+  // ── 2d. Engage Telluride project meeting key dates (daily) ──
+  const existingEngageMeetings = extractJsArray(govHubSrc, 'ENGAGE_MEETINGS') || [];
+  const freshEngageMeetings = await refreshEngageMeetings(existingEngageMeetings);
+  if (JSON.stringify(freshEngageMeetings) !== JSON.stringify(existingEngageMeetings)) {
+    govHubSrc = replaceJsValue(govHubSrc, 'ENGAGE_MEETINGS', freshEngageMeetings, false);
     changed = true;
   }
 
@@ -2826,6 +3882,50 @@ async function main() {
     }
   }
 
+  // ── 16. Ouray/Ridgway Events (Localist JSON API) ──
+  const newOurayRidgwayEvents = await syncOurayRidgwayEvents();
+  if (newOurayRidgwayEvents !== undefined && newOurayRidgwayEvents !== null) {
+    const existingOR = extractJsArray(govHubSrc, 'OURAY_RIDGWAY_EVENTS') || [];
+    if (JSON.stringify(newOurayRidgwayEvents) !== JSON.stringify(existingOR)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'OURAY_RIDGWAY_EVENTS', newOurayRidgwayEvents, false);
+      changed = true;
+      console.log(`  OURAY_RIDGWAY_EVENTS updated (was ${existingOR.length}, now ${newOurayRidgwayEvents.length})`);
+    }
+  }
+
+
+  // ── 17. Norwood Town Events / Notices (sitemap) ──
+  const newNorwoodEvts = await syncNorwoodEvents();
+  if (newNorwoodEvts !== undefined && newNorwoodEvts !== null) {
+    const existingNE = extractJsArray(govHubSrc, 'NORWOOD_EVENTS') || [];
+    if (JSON.stringify(newNorwoodEvts) !== JSON.stringify(existingNE)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'NORWOOD_EVENTS', newNorwoodEvts, false);
+      changed = true;
+      console.log(`  NORWOOD_EVENTS updated (was ${existingNE.length}, now ${newNorwoodEvts.length})`);
+    }
+  }
+
+  // ── 18. Mountain Village Events (sitemap + page scrape) ──
+  const newMVEvents = await syncMountainVillageEvents();
+  if (newMVEvents !== undefined && newMVEvents !== null) {
+    const existingMV = extractJsArray(govHubSrc, 'MOUNTAIN_VILLAGE_EVENTS') || [];
+    if (JSON.stringify(newMVEvents) !== JSON.stringify(existingMV)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'MOUNTAIN_VILLAGE_EVENTS', newMVEvents, false);
+      changed = true;
+      console.log(`  MOUNTAIN_VILLAGE_EVENTS updated (was ${existingMV.length}, now ${newMVEvents.length})`);
+    }
+  }
+
+  // ── 19. Telluride.com Events (sitemap + JSON-LD / date list) ──
+  const newTelluridComEvents = await syncTelluridComEvents();
+  if (newTelluridComEvents !== undefined && newTelluridComEvents !== null) {
+    const existingTC = extractJsArray(govHubSrc, 'TELLURIDE_COM_EVENTS') || [];
+    if (JSON.stringify(newTelluridComEvents) !== JSON.stringify(existingTC)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'TELLURIDE_COM_EVENTS', newTelluridComEvents, false);
+      changed = true;
+      console.log(`  TELLURIDE_COM_EVENTS updated (was ${existingTC.length}, now ${newTelluridComEvents.length})`);
+    }
+  }
 
   // ── 14. Sherbino Theater Events ──
   const newSherbinoEvents = await syncSherbinoEvents();
@@ -2861,6 +3961,31 @@ async function main() {
     }
   }
 
+  // ── Task 20: Ridgway agenda map ──
+  const newRidgwayAgendas = await syncRidgwayAgendas();
+  if (newRidgwayAgendas !== null) {
+    // extractJsObject helper for plain objects (uses the same bracket-matching
+    // logic as extractJsArray but with '{' as the bracket character).
+    const rawObj = (() => {
+      const startRe = /const\s+RIDGWAY_AGENDA_MAP\s*=\s*\{/;
+      const m = startRe.exec(govHubSrc);
+      if (!m) return {};
+      let depth = 0, start = m.index + m[0].length - 1;
+      for (let i = start; i < govHubSrc.length; i++) {
+        if (govHubSrc[i] === '{') depth++;
+        else if (govHubSrc[i] === '}') { depth--; if (depth === 0) {
+          try { return JSON.parse(govHubSrc.slice(start, i + 1)); } catch { return {}; }
+        }}
+      }
+      return {};
+    })();
+    if (JSON.stringify(newRidgwayAgendas) !== JSON.stringify(rawObj)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'RIDGWAY_AGENDA_MAP', newRidgwayAgendas, true);
+      changed = true;
+      console.log(`  RIDGWAY_AGENDA_MAP updated: ${Object.keys(newRidgwayAgendas).length} entries`);
+    }
+  }
+
   // ── Write files ──
   if (changed) {
     fs.writeFileSync(GOV_HUB_JS, govHubSrc);
@@ -2883,89 +4008,16 @@ async function main() {
     // previous data-only.js until next run.
   }
 
-  // ── Bump cache busters in index.html + sw.js if any cached asset changed ──
-  // Without this, users with the service worker installed (or any aggressive
-  // HTTP cache between us and them) keep serving stale gov-hub.js for hours
-  // or days after a refresh. We bump the `?v=` query string on each cached
-  // asset in index.html AND the SW's CACHE_NAME. Both keys are derived from
-  // the same UTC timestamp so they always agree.
-  if (changed) {
-    try { bumpCacheBusters(); } catch (e) {
-      console.error('⚠️  Cache buster bump failed:', e.message);
-    }
-  }
+  // (Cache-buster auto-bumping removed during the 2026-05-15 merge with
+  // main — main's audit established a dynamic per-request approach in HTML
+  // using `Math.floor(Date.now()/600000)`, which makes a server-side bump
+  // unnecessary.)
 
   // The workflow's "Check for changes" step uses `git diff` to decide
   // whether to commit, so we don't need to signal change-vs-no-change via
   // exit code. Exit 0 on any normal completion — exit 1 (from the catch
   // below) is reserved for fatal errors and will fail the workflow visibly.
   process.exit(0);
-}
-
-// Replace `?v=...` for each tracked asset in index.html with a fresh
-// timestamp, plus the SW CACHE_NAME. Also re-syncs telluride-gov-hub.html
-// (the legacy parity duplicate) so both files match.
-function bumpCacheBusters() {
-  const now = new Date();
-  const pad = n => String(n).padStart(2, '0');
-  const version = now.getUTCFullYear()
-    + '-' + pad(now.getUTCMonth() + 1)
-    + '-' + pad(now.getUTCDate())
-    + '-' + pad(now.getUTCHours()) + pad(now.getUTCMinutes());
-
-  // Files whose `?v=...` should be bumped on every content refresh.
-  // These are the cached assets that change frequently (gov-hub.js carries
-  // the live data; site.css and the others change less often but a single
-  // version stamp keeps things simple). If you add a new versioned script
-  // to index.html, append its base path here.
-  const assetPaths = [
-    'js/gov-hub.js',
-    'js/gov-data.js',
-    'js/corrections.js',
-    'js/legal-standalone.js',
-    'css/site.css'
-  ];
-
-  if (!fs.existsSync(INDEX_HTML)) {
-    console.warn('  ⚠ index.html not found — skipping cache buster bump');
-    return;
-  }
-
-  let html = fs.readFileSync(INDEX_HTML, 'utf8');
-  let bumpedCount = 0;
-  for (const asset of assetPaths) {
-    // Match the asset URL followed by `?v=<anything-not-quote>`. Replace
-    // just the `<anything>` portion. The negative-char-class on the
-    // existing value prevents the regex from greedily eating across quote
-    // boundaries.
-    const escaped = asset.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const re = new RegExp('(' + escaped + '\\?v=)[^"\']+', 'g');
-    const before = html;
-    html = html.replace(re, '$1' + version);
-    if (html !== before) bumpedCount++;
-  }
-
-  if (bumpedCount > 0) {
-    fs.writeFileSync(INDEX_HTML, html);
-    // Keep telluride-gov-hub.html (legacy parity duplicate) in sync.
-    fs.writeFileSync(GOVHUB_HTML, html);
-    console.log(`  Cache busters bumped to ${version} on ${bumpedCount} assets`);
-  }
-
-  // Bump SW CACHE_NAME so a deploy that changes pre-cached static assets
-  // forces a fresh install on next page load. Without this, the SW keeps
-  // serving the old shell from the existing cache key indefinitely.
-  if (fs.existsSync(SW_JS)) {
-    const swSrc = fs.readFileSync(SW_JS, 'utf8');
-    const newSwSrc = swSrc.replace(
-      /const CACHE_NAME = '[^']+';/,
-      `const CACHE_NAME = 'livable-tlr-${version}';`
-    );
-    if (newSwSrc !== swSrc) {
-      fs.writeFileSync(SW_JS, newSwSrc);
-      console.log(`  sw.js CACHE_NAME -> livable-tlr-${version}`);
-    }
-  }
 }
 
 main().catch(err => {

@@ -677,15 +677,9 @@ over the new index.html. This destroyed:
   div removed
 - The cache buster bump on `js/gov-hub.js` — reverted
 
-**Don't re-introduce a two-way sync.** `index.html` is the source of
-truth. `telluride-gov-hub.html` is a legacy duplicate kept around for
-backward compat (some old links may point at it); it must mirror
-`index.html`, never the other way around.
-
-When making edits to index.html, ALSO `cp index.html telluride-gov-hub.html`
-in the same commit so the parity hash matches and the next maintenance
-run is a no-op. (Even though the sync is one-way now, having them match
-avoids unnecessary maintenance commits.)
+**`telluride-gov-hub.html` was permanently deleted 2026-05-12.**
+`index.html` is the only landing page. Do NOT recreate `telluride-gov-hub.html`.
+All changes go to `index.html` only.
 
 ## Other workflows in the same repo
 

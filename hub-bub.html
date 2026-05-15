@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hub-Bub — Livable Telluride</title>
+
+  <!-- Hub-Bub forum styles (legacy overrides in css/hub-bub.css still load for hub-bub.js compat) -->
+  <link rel="stylesheet" href="css/hub-bub.css">
+
+  <style>
+    /* ── Design-system tokens ── */
+    :root {
+      --forest: #21443c;
+      --forest-soft: #2a5347;
+      --forest-3: #2f6b5b;
+      --lt-cream: #fbf7ef;
+      --lt-cream-2: #f4eddf;
+      --lt-paper: #fffdf8;
+      --lt-ink: #172c26;
+      --lt-muted: #61736d;
+      --lt-soft: rgba(23, 61, 52, 0.10);
+      --lt-line: rgba(23, 61, 52, 0.16);
+      --lt-gold: #b98b34;
+      --lt-gold-soft: rgba(185, 139, 52, 0.14);
+      --lt-blue-soft: rgba(55, 105, 128, 0.12);
+      --lt-red-soft: rgba(180, 75, 60, 0.12);
+      --lt-shadow: 0 18px 55px rgba(20, 40, 34, 0.11);
+      --lt-shadow-soft: 0 8px 24px rgba(20, 40, 34, 0.07);
+      --lt-radius-xl: 28px;
+      --lt-radius-lg: 18px;
+      --lt-radius-md: 12px;
+      --lt-heading: Georgia, "Times New Roman", serif;
+      --lt-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      /* legacy aliases used by hub-bub.js UI */
+      --accent-green: #2f7a5f;
+      --accent-green-soft: rgba(47, 122, 95, 0.12);
+      --text-primary: #1a2e29;
+      --text-secondary: #4a5e57;
+      --text-muted: #7a8a85;
+      --border-soft: rgba(33, 68, 60, 0.12);
+      --font-heading: 'Georgia', 'Times New Roman', serif;
+      --font-main: var(--lt-sans);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--lt-cream); color: var(--lt-ink); font-family: var(--lt-sans); line-height: 1.5; }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    a { color: var(--forest); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+    /* ── Top nav ── */
+    .topnav { background: #fff; border-bottom: 1px solid var(--lt-line); padding: 14px 0; position: sticky; top: 0; z-index: 50; }
+    .topnav-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; gap: 24px; }
+    .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--forest); font-family: var(--lt-heading); font-weight: 700; font-size: 1.15rem; line-height: 1.1; }
+    .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
+    .topnav-links { display: flex; gap: 14px; margin-left: 16px; flex: 1; flex-wrap: wrap; }
+    .topnav-links a { color: var(--lt-ink); text-decoration: none; font-weight: 600; font-size: 0.82rem; padding: 6px 2px; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
+    .topnav-links a:hover { color: var(--forest); }
+    .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
+    .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 8px 14px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; white-space: nowrap; cursor: pointer; border: none; }
+    .topnav-cta-secondary { background: #a8d5b5; color: #1a3a2e; }
+
+    /* ── Hero ── */
+    .hero {
+      background:
+        linear-gradient(180deg, rgba(239,233,220,0.78) 0%, rgba(239,233,220,0.45) 55%, rgba(239,233,220,0.20) 100%),
+        url('img/wilson-peak.png') no-repeat center center / cover,
+        #efe9dc;
+      padding: 28px 0 24px;
+      border-bottom: 1px solid var(--lt-line);
+      min-height: 180px;
+    }
+    .hero h1 { text-shadow: 0 1px 2px rgba(255,255,255,0.6); }
+    .hero p  { text-shadow: 0 1px 2px rgba(255,255,255,0.5); }
+    .hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+    .hero h1 { margin: 0 0 8px; font-family: var(--lt-heading); font-size: 2.6rem; color: var(--lt-ink); }
+    .hero p { margin: 0; color: var(--text-secondary); font-size: 1.05rem; max-width: 760px; }
+
+    /* ── Shell ── */
+    .hb-shell {
+      background:
+        radial-gradient(circle at 5% 0%, rgba(185,139,52,0.14), transparent 32rem),
+        radial-gradient(circle at 92% 8%, rgba(47,107,91,0.14), transparent 34rem),
+        linear-gradient(180deg, #fffdf8 0%, var(--lt-cream) 52%, #f7f0e5 100%);
+      padding: 32px 0 72px;
+    }
+    .hb-container { width: min(1220px, calc(100% - 32px)); margin: 0 auto; }
+
+    /* ── Intro two-col ── */
+    .hb-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 290px;
+      gap: 18px;
+      align-items: start;
+      margin-bottom: 22px;
+    }
+    .hb-intro-main {
+      min-height: 0;
+      border: 1px solid var(--lt-line);
+      border-radius: var(--lt-radius-xl);
+      padding: clamp(18px, 2.8vw, 26px);
+      background:
+        linear-gradient(135deg, rgba(255,253,248,0.96), rgba(255,253,248,0.78)),
+        radial-gradient(circle at top right, rgba(185,139,52,0.15), transparent 26rem);
+      box-shadow: var(--lt-shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+    .hb-intro-main::after {
+      content: "";
+      position: absolute;
+      right: -80px; bottom: -110px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      border: 42px solid rgba(23,61,52,0.055);
+      pointer-events: none;
+    }
+    .hb-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(23,61,52,0.08);
+      color: var(--forest);
+      font-size: 0.7rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hb-intro h1 {
+      margin: 0;
+      max-width: 820px;
+      font-family: var(--lt-heading);
+      font-size: clamp(1.35rem, 2.4vw, 2rem);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      color: var(--lt-ink);
+    }
+    .hb-intro p {
+      margin: 10px 0 0;
+      max-width: 760px;
+      color: var(--lt-muted);
+      font-size: 0.92rem;
+    }
+    .hb-intro-perks {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-top: 14px;
+      position: relative;
+      z-index: 1;
+    }
+    .hb-intro-perk {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--lt-ink);
+    }
+    .hb-intro-perk svg { width: 14px; height: 14px; color: var(--forest); flex-shrink: 0; }
+    .hb-intro-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .hb-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--lt-line);
+      background: #fff;
+      color: var(--forest);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+    .hb-action.primary {
+      background: var(--forest);
+      color: #fff;
+      border-color: var(--forest);
+      box-shadow: 0 4px 14px rgba(33,68,60,0.22);
+    }
+    .hb-how {
+      border-radius: var(--lt-radius-xl);
+      border: 1px solid var(--lt-line);
+      background: var(--forest);
+      color: #fff;
+      box-shadow: var(--lt-shadow-soft);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      position: relative;
+    }
+    .hb-how::before {
+      content: "";
+      position: absolute;
+      top: -70px; right: -70px;
+      width: 190px; height: 190px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+    }
+    .hb-how h2 {
+      margin: 0 0 12px;
+      font-family: var(--lt-heading);
+      font-size: 1.45rem;
+      letter-spacing: -0.03em;
+      position: relative;
+      z-index: 1;
+    }
+    .hb-how ol {
+      margin: 0; padding-left: 20px;
+      color: rgba(255,255,255,0.82);
+      position: relative; z-index: 1;
+    }
+    .hb-how li { margin: 10px 0; }
+    .hb-how strong { color: #fff; }
+    .hb-status {
+      margin-top: 16px;
+      padding: 12px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.09);
+      color: rgba(255,255,255,0.85);
+      font-size: 0.92rem;
+      position: relative; z-index: 1;
+    }
+
+    /* ── Board grid ── */
+    .hb-board {
+      display: grid;
+      grid-template-columns: 288px minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    /* ── Sidebar ── */
+    .hb-sidebar-col {
+      position: sticky;
+      top: 90px;
+      display: grid;
+      gap: 14px;
+    }
+    .hb-card {
+      border: 1px solid var(--lt-line);
+      border-radius: var(--lt-radius-xl);
+      background: rgba(255,253,248,0.92);
+      box-shadow: var(--lt-shadow-soft);
+    }
+    .hb-filter-card { padding: 16px; }
+    .hb-card-title {
+      margin: 0 0 4px;
+      font-family: var(--lt-heading);
+      font-size: 1.18rem;
+      letter-spacing: -0.03em;
+      color: var(--lt-ink);
+    }
+    .hb-card-note { margin: 0 0 12px; color: var(--lt-muted); font-size: 0.88rem; }
+    .hb-filter-group {
+      padding-top: 14px;
+      margin-top: 14px;
+      border-top: 1px solid var(--lt-line);
+    }
+    .hb-filter-group:first-of-type { padding-top: 0; margin-top: 0; border-top: 0; }
+    .hb-filter-label {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+      margin: 0 0 8px;
+      color: var(--lt-muted);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hb-search-input {
+      width: 100%;
+      height: 40px;
+      padding: 0 12px;
+      border: 1px solid var(--lt-line);
+      border-radius: 12px;
+      background: #fff;
+      color: var(--lt-ink);
+      outline: none;
+      font-weight: 600;
+      font-size: 0.91rem;
+    }
+    .hb-search-input:focus { border-color: rgba(33,68,60,0.48); box-shadow: 0 0 0 4px rgba(33,68,60,0.08); }
+    .hb-chip-list { display: grid; gap: 6px; }
+    .hb-filter-chip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      width: 100%;
+      border: 1px solid var(--lt-line);
+      background: #fff;
+      color: var(--lt-ink);
+      border-radius: 12px;
+      padding: 8px 10px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-align: left;
+      transition: background 0.12s ease, border-color 0.12s ease;
+    }
+    .hb-filter-chip:hover { border-color: rgba(33,68,60,0.35); background: #f4faf4; }
+    .hb-filter-chip.active { background: var(--forest); color: #fff; border-color: var(--forest); }
+    .hb-clear-btn {
+      width: 100%;
+      margin-top: 12px;
+      border: 1px solid var(--lt-line);
+      background: rgba(255,255,255,0.65);
+      color: var(--forest);
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+    .hb-clear-btn:hover { background: #fff; }
+    .hb-sidebox { padding: 16px; }
+    .hb-sidebox.dark {
+      background: linear-gradient(180deg, var(--forest-soft), #122f29);
+      color: #fff;
+      border-color: rgba(255,255,255,0.08);
+    }
+    .hb-sidebox.dark .hb-card-title { color: #fff; }
+    .hb-sidebox p { margin: 0 0 10px; color: var(--lt-muted); font-size: 0.88rem; }
+    .hb-sidebox.dark p { color: rgba(255,255,255,0.82); }
+    .hb-mini-list { display: grid; gap: 9px; margin-top: 10px; }
+    .hb-mini-item {
+      padding-top: 9px;
+      border-top: 1px solid var(--lt-line);
+      color: var(--lt-ink);
+      font-size: 0.88rem;
+      font-weight: 650;
+    }
+    .hb-mini-item:first-child { border-top: 0; padding-top: 0; }
+    .hb-sidebox.dark .hb-mini-item { border-color: rgba(255,255,255,0.15); color: rgba(255,255,255,0.88); }
+
+    /* ── Main content area ── */
+    .hb-content { min-width: 0; }
+
+    /* ── Auth bar (compact, above composer) ── */
+    .hb-auth-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+      padding: 12px 16px;
+      border: 1px solid var(--lt-line);
+      border-radius: var(--lt-radius-lg);
+      background: rgba(255,253,248,0.92);
+      box-shadow: var(--lt-shadow-soft);
+      font-size: 0.9rem;
+    }
+    .hb-auth-strip a { font-weight: 700; }
+    .hb-auth-strip .hb-auth-user { font-weight: 700; color: var(--forest); }
+    .hb-auth-strip button {
+      border: 1.5px solid rgba(33,68,60,0.35);
+      background: #fff;
+      color: var(--forest);
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.13s ease, color 0.13s ease;
+    }
+    .hb-auth-strip button:hover {
+      background: var(--forest);
+      color: #fff;
+    }
+
+    /* ── Toolbar ── */
+    .hb-toolbar {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 14px;
+      padding: 12px 16px;
+      border-radius: var(--lt-radius-lg);
+      border: 1px solid var(--lt-line);
+      background: rgba(255,253,248,0.92);
+      box-shadow: var(--lt-shadow-soft);
+    }
+    .hb-results { display: flex; align-items: baseline; gap: 8px; }
+    .hb-results strong { font-family: var(--lt-heading); font-size: 1.45rem; letter-spacing: -0.03em; }
+    .hb-results span { color: var(--lt-muted); font-size: 0.9rem; }
+    .hb-sort-wrap { display: flex; align-items: center; gap: 8px; }
+    .hb-sort-wrap label { color: var(--lt-muted); font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; }
+    .hb-sort-select {
+      height: 38px;
+      border: 1px solid var(--lt-line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--lt-ink);
+      padding: 0 12px;
+      font-weight: 700;
+      outline: none;
+      font-size: 0.88rem;
+    }
+
+    /* ── Composer (new shell around existing composer) ── */
+    .hb-composer-shell {
+      margin-bottom: 16px;
+      border: 2px solid var(--forest);
+      border-radius: var(--lt-radius-xl);
+      background: rgba(255,253,248,0.92);
+      box-shadow: var(--lt-shadow-soft), 0 0 0 4px rgba(33,68,60,0.08);
+      overflow: hidden;
+    }
+    .hb-composer-shell-head {
+      padding: 18px 18px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .hb-composer-shell-title { margin: 0; font-family: var(--lt-heading); font-size: 1.45rem; letter-spacing: -0.03em; }
+    .hb-composer-shell-sub { margin: 3px 0 0; color: var(--lt-muted); font-size: 0.9rem; }
+    .hb-composer-shell-inner { padding: 0 18px 18px; }
+
+    /* ── Post cards ── */
+    .hb-posts-feed { display: grid; gap: 14px; }
+    .hb-post-card {
+      padding: 18px;
+      border: 1px solid var(--lt-line);
+      border-radius: var(--lt-radius-xl);
+      background: rgba(255,253,248,0.94);
+      box-shadow: var(--lt-shadow-soft);
+      transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+    }
+    .hb-post-card:hover { transform: translateY(-2px); box-shadow: var(--lt-shadow); border-color: rgba(33,68,60,0.22); }
+    .hb-post-type-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(33,68,60,0.08);
+      color: var(--forest);
+      font-size: 0.74rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .hb-post-type-badge.source { background: var(--lt-blue-soft); }
+    .hb-post-type-badge.debrief { background: var(--lt-gold-soft); }
+    .hb-post-type-badge.solution { background: rgba(47,107,91,0.12); }
+    .hb-post-type-badge.need { background: var(--lt-red-soft); }
+    .hb-tag-pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 4px 9px;
+      background: #fff;
+      border: 1px solid var(--lt-line);
+      color: var(--forest);
+      font-size: 0.76rem;
+      font-weight: 750;
+    }
+
+    /* ── Empty / loading ── */
+    .hb-empty-state {
+      padding: 42px 24px;
+      text-align: center;
+      border: 1px dashed rgba(33,68,60,0.28);
+      border-radius: var(--lt-radius-xl);
+      background: rgba(255,253,248,0.8);
+    }
+    .hb-empty-state h2 { margin: 0; font-family: var(--lt-heading); font-size: 1.6rem; letter-spacing: -0.03em; }
+    .hb-empty-state p { margin: 8px auto 0; max-width: 520px; color: var(--lt-muted); }
+
+    /* ── Legacy hub-bub.js element resets (so they work inside new layout) ── */
+    .hb-wrap { display: contents; }
+    .hb-auth-bar { display: none !important; } /* replaced by hb-auth-strip */
+    .hb-mode-bar { display: none !important; } /* mode filter moved to sidebar */
+    .hb-topic-bar { display: none !important; } /* topic chips moved to sidebar */
+    .hb-sort-bar { display: none !important; }  /* sort moved to toolbar */
+    .hb-grid { display: contents; }
+    /* Composer: strip its own borders/bg since it's inside our shell */
+    .hb-compose {
+      box-shadow: none !important;
+      border: none !important;
+      background: transparent !important;
+      border-radius: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    /* Subject + body inputs: visible grey border so fields stand out clearly */
+    #hbComposeTitle {
+      border: 1.5px solid #c8c8c4 !important;
+      border-radius: 8px !important;
+      padding: 10px 13px !important;
+      background: #fff !important;
+      font-size: 1rem !important;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    #hbComposeTitle:focus {
+      border-color: rgba(33,68,60,0.55) !important;
+      box-shadow: 0 0 0 3px rgba(33,68,60,0.08) !important;
+      outline: none !important;
+    }
+    #hbComposeBody {
+      border: 1.5px solid #c8c8c4 !important;
+      border-radius: 8px !important;
+      padding: 10px 13px !important;
+      background: #fff !important;
+      font-size: 0.95rem !important;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    #hbComposeBody:focus {
+      border-color: rgba(33,68,60,0.55) !important;
+      box-shadow: 0 0 0 3px rgba(33,68,60,0.08) !important;
+      outline: none !important;
+    }
+    /* Tag buttons: grey stroke so they read as distinct interactive boxes */
+    .hb-compose-tag {
+      border: 1.5px solid #c8c8c4 !important;
+      background: #fff !important;
+      color: #444 !important;
+      border-radius: 7px !important;
+      padding: 5px 11px !important;
+      font-size: 0.83rem !important;
+      font-weight: 600 !important;
+      cursor: pointer;
+      transition: border-color 0.13s ease, background 0.13s ease, color 0.13s ease;
+    }
+    .hb-compose-tag:hover {
+      border-color: rgba(33,68,60,0.45) !important;
+      background: rgba(33,68,60,0.05) !important;
+    }
+    .hb-compose-tag.selected,
+    .hb-compose-tag.auto-suggested {
+      border-color: #21443c !important;
+      background: #21443c !important;
+      color: #fff !important;
+    }
+    /* Attached document chips: forest green pill with white text */
+    .hb-attach-item {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: #21443c !important;
+      color: #fff !important;
+      border: none !important;
+      border-radius: 999px !important;
+      padding: 5px 12px !important;
+      font-size: 0.82rem !important;
+      font-weight: 600 !important;
+      margin: 4px 4px 0 0 !important;
+    }
+    .hb-attach-item .hb-remove-attach {
+      cursor: pointer;
+      opacity: 0.75;
+      font-size: 0.78rem;
+      margin-left: 2px;
+    }
+    .hb-attach-item .hb-remove-attach:hover { opacity: 1; }
+    /* Document icon-only link on post cards */
+    .hb-post-attach-icon {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 1.45rem !important;
+      text-decoration: none !important;
+      line-height: 1 !important;
+      padding: 2px !important;
+      border-radius: 6px !important;
+      transition: transform 0.1s ease, opacity 0.1s ease;
+    }
+    .hb-post-attach-icon:hover { opacity: 0.75; transform: scale(1.12); }
+    /* Admin delete button — top-right of card header, subtle until hovered */
+    .hb-admin-delete-btn {
+      margin-left: auto !important;
+      background: none !important;
+      border: none !important;
+      cursor: pointer !important;
+      font-size: 1.1rem !important;
+      opacity: 0.28 !important;
+      padding: 2px 4px !important;
+      border-radius: 5px !important;
+      transition: opacity 0.15s ease, background 0.15s ease;
+      line-height: 1 !important;
+      align-self: flex-start !important;
+    }
+    .hb-admin-delete-btn:hover {
+      opacity: 1 !important;
+      background: rgba(197,48,48,0.10) !important;
+    }
+    /* Posts feed: strip its top padding so hb-posts-feed grid controls spacing */
+    #hbPostsFeed { margin-top: 0 !important; }
+    /* Loading spinner stays in feed */
+    .hb-loading { padding: 24px; text-align: center; }
+    .hb-empty { padding: 36px 24px; text-align: center; }
+
+    /* ── Footer ── */
+    .hb-footer { text-align: center; color: var(--lt-muted); font-size: 0.82rem; padding: 28px 0 0; margin-top: 40px; border-top: 1px solid var(--lt-line); }
+
+    /* ── Account panel (replaces hb-how) ── */
+    .hb-account-panel {
+      border-radius: var(--lt-radius-xl);
+      border: 1px solid var(--lt-line);
+      background: #fff;
+      box-shadow: var(--lt-shadow-soft);
+      padding: 20px 20px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .hb-account-icon { display: none; }
+    .hb-account-heading {
+      margin: 0 0 10px;
+      font-family: var(--lt-heading);
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      color: var(--lt-ink);
+    }
+    .hb-account-sub { display: none; }
+    .hb-account-perks {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 16px;
+    }
+    .hb-account-perk {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--lt-ink);
+    }
+    .hb-account-perk svg { width: 14px; height: 14px; color: var(--forest); flex-shrink: 0; }
+    .hb-account-cta {
+      display: block;
+      width: 100%;
+      padding: 11px 16px;
+      background: var(--forest);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-size: 0.93rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(33,68,60,0.22);
+      transition: background 0.15s;
+      margin-bottom: 10px;
+    }
+    .hb-account-cta:hover { background: var(--forest-soft); }
+    .hb-account-login-note {
+      margin: 0;
+      text-align: center;
+      font-size: 0.84rem;
+      color: var(--lt-muted);
+    }
+    .hb-account-login-note a { color: var(--forest); font-weight: 700; }
+
+    /* ── Signup / Login modal ── */
+    .hb-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(20,35,30,0.55);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .hb-modal-overlay.open { display: flex; }
+    .hb-modal {
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: 0 24px 72px rgba(20,40,34,0.22);
+      width: 100%;
+      max-width: 480px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 32px;
+      position: relative;
+    }
+    .hb-modal-close {
+      position: absolute;
+      top: 16px; right: 18px;
+      border: none;
+      background: none;
+      font-size: 1.5rem;
+      line-height: 1;
+      color: var(--lt-muted);
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 8px;
+    }
+    .hb-modal-close:hover { background: var(--lt-cream); color: var(--lt-ink); }
+    .hb-modal h2 {
+      margin: 0 0 4px;
+      font-family: var(--lt-heading);
+      font-size: 1.5rem;
+      letter-spacing: -0.03em;
+      color: var(--lt-ink);
+    }
+    .hb-modal-sub {
+      margin: 0 0 22px;
+      color: var(--lt-muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .hb-modal-field { margin-bottom: 14px; }
+    .hb-modal-field label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--lt-muted);
+    }
+    .hb-modal-field input {
+      width: 100%;
+      height: 44px;
+      padding: 0 14px;
+      border: 1.5px solid var(--lt-line);
+      border-radius: 12px;
+      background: var(--lt-cream);
+      color: var(--lt-ink);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .hb-modal-field input:focus { border-color: var(--forest); box-shadow: 0 0 0 4px rgba(33,68,60,0.10); background: #fff; }
+    .hb-modal-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .hb-freq-group {
+      margin-bottom: 18px;
+    }
+    .hb-freq-label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--lt-muted);
+    }
+    .hb-freq-options { display: flex; flex-direction: column; gap: 8px; }
+    .hb-freq-opt {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 14px;
+      border: 1.5px solid var(--lt-line);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: border-color 0.13s, background 0.13s;
+    }
+    .hb-freq-opt:has(input:checked) { border-color: var(--forest); background: rgba(33,68,60,0.05); }
+    .hb-freq-opt input[type=checkbox] { margin-top: 2px; accent-color: var(--forest); flex-shrink: 0; width: 16px; height: 16px; }
+    .hb-freq-opt-text strong { display: block; font-size: 0.9rem; font-weight: 700; color: var(--lt-ink); }
+    .hb-freq-opt-text span { font-size: 0.8rem; color: var(--lt-muted); line-height: 1.4; }
+    .hb-modal-notice {
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: rgba(33,68,60,0.06);
+      border: 1px solid rgba(33,68,60,0.12);
+      font-size: 0.8rem;
+      color: var(--lt-muted);
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+    .hb-modal-submit {
+      display: block;
+      width: 100%;
+      padding: 13px;
+      background: var(--forest);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 12px;
+      transition: background 0.15s;
+    }
+    .hb-modal-submit:hover { background: var(--forest-soft); }
+    .hb-modal-submit:disabled { background: #aaa; cursor: default; }
+    .hb-modal-switch {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--lt-muted);
+    }
+    .hb-modal-switch a { color: var(--forest); font-weight: 700; cursor: pointer; }
+    .hb-modal-msg {
+      margin-top: 12px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: none;
+    }
+    .hb-modal-msg.success { background: rgba(33,68,60,0.08); color: var(--forest); border: 1px solid rgba(33,68,60,0.18); }
+    .hb-modal-msg.error   { background: rgba(180,75,60,0.08); color: #a33; border: 1px solid rgba(180,75,60,0.20); }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .hb-intro { grid-template-columns: 1fr; }
+      .hb-board { grid-template-columns: 260px minmax(0,1fr); gap: 16px; }
+    }
+    @media (max-width: 768px) {
+      .topnav-links { display: none; }
+      .hero h1 { font-size: 1.9rem; }
+      .hb-intro { grid-template-columns: 1fr; }
+      .hb-board { grid-template-columns: 1fr; }
+      .hb-sidebar-col { position: static; }
+      .hb-toolbar { grid-template-columns: 1fr; }
+      .hb-container { width: calc(100% - 24px); }
+      .hb-modal-row { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <!-- Firebase SDK (modular) -->
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js';
+    import { getFirestore, collection, addDoc, setDoc, query, where, orderBy, onSnapshot, doc, updateDoc, deleteDoc, getDocs, increment, serverTimestamp, Timestamp }
+      from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js';
+    import { getAuth, signInWithEmailAndPassword, onAuthStateChanged }
+      from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js';
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCyAjB0RA_LtoETyRqxVJor0lRB4NRyXF0",
+      authDomain: "telluride-gov-hub.firebaseapp.com",
+      projectId: "telluride-gov-hub",
+      storageBucket: "telluride-gov-hub.firebasestorage.app",
+      messagingSenderId: "14117089764",
+      appId: "1:14117089764:web:4287985258f0bc929cd7f1",
+      measurementId: "G-PWNCF2PZQP"
+    };
+
+    try {
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+      const auth = getAuth(app);
+      window._FIREBASE_DB = db;
+      window._FIREBASE_AUTH = auth;
+      window._FB = { collection, addDoc, setDoc, query, where, orderBy, onSnapshot, doc, updateDoc, deleteDoc, getDocs, increment, serverTimestamp, Timestamp };
+      window._FB_AUTH = { signInWithEmailAndPassword, onAuthStateChanged };
+      window._FIREBASE_READY = true;
+    } catch (e) {
+      window._FIREBASE_READY = false;
+      console.warn('Firebase not configured — Hub-Bub will use localStorage fallback.', e.message);
+    }
+  </script>
+
+  <!-- EmailJS for comment notification emails -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Firebase compat SDK — ALL four packages required by hub-bub.js -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
+</head>
+<body>
+
+  <!-- ════════════════════ NAV ════════════════════ -->
+  <header class="topnav">
+    <div class="topnav-inner">
+      <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
+        <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
+      </a>
+      <nav class="topnav-links">
+        <a href="/local-news.html">Local News</a>
+        <a href="/gov-hub.html">Gov-Hub</a>
+        <a href="/deep-dives.html">Deep Dives</a>
+        <a href="/events.html">Events</a>
+        <a href="/hub-bub.html" class="active">Hub-Bub</a>
+        <a href="/local-orgs.html">Local Orgs</a>
+        <a href="/housing.html">Housing</a>
+                <a href="/about.html">About</a>
+      </nav>
+      <a class="topnav-cta" href="javascript:void(0)" onclick="hbShowAuth('login')">Log In</a>
+    </div>
+  </header>
+
+  <!-- ════════════════════ HERO ════════════════════ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>💬 Hub-Bub</h1>
+      <p>Hub-Bub is organized around the way people actually look for civic information: by topic, meeting, source, question, and next step.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════ HIDDEN LEGACY ELEMENTS (hub-bub.js targets these IDs) ══════════════════ -->
+  <div class="hb-wrap" style="display:none;" aria-hidden="true">
+    <!-- Auth bar — hub-bub.js updates these spans; we mirror them into #hbAuthStripInner -->
+    <div class="hb-auth-bar" id="hbAuthBar">
+      <span id="hbAuthStatus">Join the conversation — <a href="javascript:void(0)" onclick="hbShowAuth('signup')" style="color:var(--forest);font-weight:700;">Sign up</a> or <a href="javascript:void(0)" onclick="hbShowAuth('login')" style="color:var(--forest);font-weight:700;">Log in</a> to post.</span>
+      <span id="hbAuthUser" style="display:none;" class="hb-user"></span>
+      <button id="hbLogoutBtn" style="display:none;" onclick="hbLogout()">Sign Out</button>
+    </div>
+    <!-- Mode bar — hub-bub.js reads these buttons -->
+    <div class="hb-mode-bar" id="hbModeBar">
+      <button class="hb-mode-btn active" data-hb-mode="all">All Posts</button>
+      <button class="hb-mode-btn" data-hb-mode="question">Questions</button>
+      <button class="hb-mode-btn" data-hb-mode="what-happened">What Happened</button>
+      <button class="hb-mode-btn" data-hb-mode="ideas">Ideas &amp; Solutions</button>
+    </div>
+    <!-- Topic bar — hub-bub.js reads these chips -->
+    <div class="hb-topic-bar" id="hbTopicBar">
+      <button class="hb-topic-chip active" data-hb-topic="all">All</button>
+      <button class="hb-topic-chip" data-hb-topic="government">Government</button>
+      <button class="hb-topic-chip" data-hb-topic="events">Events</button>
+      <button class="hb-topic-chip" data-hb-topic="housing">Housing</button>
+      <button class="hb-topic-chip" data-hb-topic="land-use">Land Use</button>
+      <button class="hb-topic-chip" data-hb-topic="transit">Transit</button>
+      <button class="hb-topic-chip" data-hb-topic="gondola">Gondola</button>
+      <button class="hb-topic-chip" data-hb-topic="budgets">Budgets</button>
+      <button class="hb-topic-chip" data-hb-topic="environment">Environment</button>
+      <button class="hb-topic-chip" data-hb-topic="schools">Schools</button>
+      <button class="hb-topic-chip" data-hb-topic="good-news">Good News</button>
+      <button class="hb-topic-chip" data-hb-topic="other">Other</button>
+    </div>
+    <!-- Sort bar — hub-bub.js reads these buttons -->
+    <div class="hb-sort-bar">
+      <span>Sort:</span>
+      <button class="hb-sort-opt active" data-hb-sort="newest" onclick="hbSortPosts('newest')">Newest</button>
+      <button class="hb-sort-opt" data-hb-sort="most-discussed" onclick="hbSortPosts('most-discussed')">Most Discussed</button>
+      <button class="hb-sort-opt" data-hb-sort="most-useful" onclick="hbSortPosts('most-useful')">Most Useful</button>
+    </div>
+  </div>
+  <!-- END HIDDEN LEGACY ELEMENTS -->
+
+  <!-- ════════════════════ SHELL ════════════════════ -->
+  <div class="hb-shell">
+    <div class="hb-container">
+
+      <!-- ── Intro two-col ── -->
+      <section class="hb-intro" aria-labelledby="hub-bub-heading">
+        <div class="hb-intro-main">
+          <div class="hb-eyebrow">Hub-Bub civic forum</div>
+          <h1 id="hub-bub-heading">Find the local conversation without digging through the noise.</h1>
+          <p>Use Hub-Bub to ask a precise question, share a public document, summarize a meeting, or propose a practical solution.</p>
+          <div class="hb-intro-perks">
+            <div class="hb-intro-perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Post questions, sources &amp; meeting takeaways
+            </div>
+            <div class="hb-intro-perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Reply to neighbors &amp; follow discussions
+            </div>
+            <div class="hb-intro-perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Choose your digest: daily, weekly, or newsletter
+            </div>
+          </div>
+        </div>
+
+        <aside class="hb-account-panel" aria-label="Create a free account">
+          <h2 class="hb-account-heading">Commenting requires a free account</h2>
+          <div class="hb-account-perks">
+            <div class="hb-account-perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Post questions, sources &amp; meeting takeaways
+            </div>
+            <div class="hb-account-perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Reply to neighbors &amp; follow discussions
+            </div>
+            <div class="hb-account-perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Choose your digest: daily, weekly, or newsletter
+            </div>
+          </div>
+          <button class="hb-account-cta" id="hbOpenSignup" type="button">Create Free Account</button>
+          <p class="hb-account-login-note">Already have an account?<br><a href="javascript:void(0)" id="hbOpenLogin">Log in</a></p>
+        </aside>
+      </section>
+
+      <!-- ── Board: sidebar + main ── -->
+      <section class="hb-board">
+
+        <!-- ── Sidebar ── -->
+        <aside class="hb-sidebar-col" aria-label="Hub-Bub filters">
+
+          <!-- Filter card -->
+          <section class="hb-card hb-filter-card">
+            <h2 class="hb-card-title">Filter discussions</h2>
+            <p class="hb-card-note">Narrow by topic, type, or action.</p>
+
+            <div class="hb-filter-group">
+              <label class="hb-filter-label" for="hbSideSearch">Search</label>
+              <input id="hbSideSearch" class="hb-search-input" type="search" placeholder="Try "water," "PUD," "budget"">
+            </div>
+
+            <div class="hb-filter-group">
+              <div class="hb-filter-label">Topic</div>
+              <div class="hb-chip-list" id="hbSideTopics">
+                <button class="hb-filter-chip active" data-side-topic="all">All topics</button>
+                <button class="hb-filter-chip" data-side-topic="government">Government</button>
+                <button class="hb-filter-chip" data-side-topic="events">Events</button>
+                <button class="hb-filter-chip" data-side-topic="housing">Housing</button>
+                <button class="hb-filter-chip" data-side-topic="land-use">Land Use</button>
+                <button class="hb-filter-chip" data-side-topic="transit">Transit</button>
+                <button class="hb-filter-chip" data-side-topic="gondola">Gondola</button>
+                <button class="hb-filter-chip" data-side-topic="budgets">Budgets</button>
+                <button class="hb-filter-chip" data-side-topic="environment">Environment</button>
+                <button class="hb-filter-chip" data-side-topic="schools">Schools</button>
+                <button class="hb-filter-chip" data-side-topic="good-news">Good News</button>
+                <button class="hb-filter-chip" data-side-topic="other">Other</button>
+              </div>
+            </div>
+
+
+            <button class="hb-clear-btn" id="hbSideClear" type="button">Clear filters</button>
+          </section>
+
+          <!-- Questions needing answers -->
+          <section class="hb-card hb-sidebox" id="hbUnansweredSidebar">
+            <h2 class="hb-card-title">Questions needing answers</h2>
+            <p>Short, specific questions are the most useful currency in local government.</p>
+            <div class="hb-mini-list" id="hbUnanswered">
+              <div class="hb-mini-item">Which figure is the official cost estimate?</div>
+              <div class="hb-mini-item">Has a wildlife study been submitted?</div>
+              <div class="hb-mini-item">What changed from the last draft?</div>
+              <div class="hb-mini-item">What is the actual deadline for written comments?</div>
+            </div>
+          </section>
+
+          <!-- Activity stats -->
+          <div class="hb-card hb-sidebox">
+            <h2 class="hb-card-title">Activity</h2>
+            <div style="font-size:0.85rem;color:var(--lt-muted);line-height:1.8;margin-top:6px;">
+              <div style="display:flex;justify-content:space-between;"><span>Posts today</span><strong id="hbStatToday">0</strong></div>
+              <div style="display:flex;justify-content:space-between;"><span>This week</span><strong id="hbStatWeek">0</strong></div>
+              <div style="display:flex;justify-content:space-between;"><span>Total discussions</span><strong id="hbStatTotal">0</strong></div>
+              <div style="display:flex;justify-content:space-between;"><span>Contributors</span><strong id="hbStatUsers">0</strong></div>
+            </div>
+          </div>
+
+          <!-- Most useful this week -->
+          <div class="hb-card hb-sidebox">
+            <h2 class="hb-card-title">Most useful this week</h2>
+            <div id="hbMostUseful" class="hb-mini-list" style="margin-top:4px;">
+              <div style="font-size:0.82rem;color:var(--lt-muted);">Loading…</div>
+            </div>
+          </div>
+
+          <!-- Guidelines (dark) -->
+          <section class="hb-card hb-sidebox dark" id="hb-guidelines-anchor">
+            <h2 class="hb-card-title">Forum guidelines</h2>
+            <div class="hb-mini-list">
+              <div class="hb-mini-item">Ask clear questions — good questions lead to better answers.</div>
+              <div class="hb-mini-item">Share sources — attach documents, link to meeting minutes.</div>
+              <div class="hb-mini-item">Attack ideas, not people — disagree vigorously but constructively.</div>
+              <div class="hb-mini-item">Propose solutions — practical ideas move the conversation forward.</div>
+              <div class="hb-mini-item">This is a public record — posts may be cited in formal public comment.</div>
+            </div>
+          </section>
+        </aside>
+
+        <!-- ── Main content ── -->
+        <main class="hb-content" id="hb-feed-anchor">
+
+          <!-- Auth strip: shown when logged in, hidden otherwise -->
+          <div class="hb-auth-strip" id="hbAuthStripBar">
+            <span id="hbAuthStripMsg">
+              <a href="javascript:void(0)" onclick="hbShowAuth('signup')" style="color:var(--forest);">Create a free account</a>
+              &nbsp;or&nbsp;
+              <a href="javascript:void(0)" onclick="hbShowAuth('login')" style="color:var(--forest);">log in</a>
+              to join the conversation.
+            </span>
+            <span id="hbAuthStripUser" style="display:none;" class="hb-auth-user"></span>
+            <button id="hbAuthStripLogout" style="display:none;" onclick="hbLogout()">Sign Out</button>
+          </div>
+
+          <!-- Toolbar: result count + sort -->
+          <div class="hb-toolbar" role="toolbar" aria-label="Sort discussions">
+            <div class="hb-results">
+              <strong id="hbResultCount">—</strong>
+              <span id="hbResultLabel">discussions</span>
+            </div>
+            <div class="hb-sort-wrap">
+              <label for="hbSortSelect">Sort</label>
+              <select id="hbSortSelect" class="hb-sort-select" onchange="hbSortPosts(this.value); document.querySelectorAll('.hb-sort-opt').forEach(b=>b.classList.toggle('active', b.dataset.hbSort===this.value));">
+                <option value="newest">Newest first</option>
+                <option value="most-discussed">Most discussed</option>
+                <option value="most-useful">Most useful</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Composer shell -->
+          <div class="hb-composer-shell" id="hb-composer-anchor">
+            <div class="hb-composer-shell-head">
+              <div>
+                <h2 class="hb-composer-shell-title">Start a discussion</h2>
+                <p class="hb-composer-shell-sub">A good post makes the issue easier for neighbors to understand.</p>
+              </div>
+            </div>
+            <div class="hb-composer-shell-inner">
+              <!-- Existing hub-bub.js composer (all IDs preserved) -->
+              <div class="hb-compose" id="hbCompose">
+                <!-- Category type bar hidden — auto-tag handles type selection -->
+                <div class="hb-post-type-bar" id="hbPostTypeBar" style="display:none;">
+                  <button class="hb-post-type-btn" data-hb-ptype="question">Ask a Question</button>
+                  <button class="hb-post-type-btn" data-hb-ptype="source">Share a Source</button>
+                  <button class="hb-post-type-btn" data-hb-ptype="debrief">Meeting Takeaway</button>
+                  <button class="hb-post-type-btn" data-hb-ptype="solution">Suggest a Solution</button>
+                  <button class="hb-post-type-btn" data-hb-ptype="need">Community Need</button>
+                  <button class="hb-post-type-btn" data-hb-ptype="volunteer">Volunteer / Join In</button>
+                </div>
+                <div class="hb-compose-header">
+                  <div class="hb-compose-avatar" id="hbComposeAvatar">?</div>
+                  <input type="text" id="hbComposeTitle" placeholder="Subject" onfocus="hbExpandCompose()">
+                </div>
+                <div class="hb-compose-expanded">
+                  <textarea id="hbComposeBody" placeholder="Share your thoughts, concerns, or ideas with the community..."></textarea>
+                  <div class="hb-source-fields" id="hbSourceFields">
+                    <div class="hb-compose-field-label">Source link</div>
+                    <input type="url" id="hbSourceUrl" placeholder="https://...">
+                    <div class="hb-compose-field-label">Why it matters</div>
+                    <textarea id="hbSourceWhy" placeholder="What does this source say and why should others read it?" style="min-height:50px;"></textarea>
+                    <div class="hb-compose-field-label">Question it raises</div>
+                    <input type="text" id="hbSourceQuestion" placeholder="What question does this raise for the community?">
+                  </div>
+                  <div class="hb-debrief-fields" id="hbDebriefFields">
+                    <div class="hb-compose-field-label">Meeting name</div>
+                    <input type="text" id="hbDebriefMeeting" placeholder="e.g., Town Council Regular Meeting">
+                    <div class="hb-compose-field-label">Meeting date</div>
+                    <input type="text" id="hbDebriefDate" placeholder="e.g., March 25, 2026">
+                    <div class="hb-compose-field-label">Key takeaways (up to 3)</div>
+                    <textarea id="hbDebriefTakeaways" placeholder="1. &#10;2. &#10;3. " style="min-height:60px;"></textarea>
+                    <div class="hb-compose-field-label">What changed</div>
+                    <textarea id="hbDebriefChanged" placeholder="What decisions were made or what shifted?" style="min-height:40px;"></textarea>
+                    <div class="hb-compose-field-label">What remains unresolved</div>
+                    <textarea id="hbDebriefUnresolved" placeholder="What still needs to be decided or figured out?" style="min-height:40px;"></textarea>
+                    <div class="hb-compose-field-label">Link to agenda / packet / recording (optional)</div>
+                    <input type="url" id="hbDebriefLink" placeholder="https://...">
+                    <div class="hb-compose-field-label">One question for the community</div>
+                    <input type="text" id="hbDebriefQuestion" placeholder="What should neighbors be thinking about?">
+                  </div>
+                  <div style="font-size:0.78rem;font-weight:600;color:#888;margin-bottom:4px;margin-top:10px;">Tag your post: <span style="color:#c0392b;">Required.</span></div>
+                  <div class="hb-compose-tags" id="hbComposeTags">
+                    <button class="hb-compose-tag" data-hb-tag="government">Government</button>
+                    <button class="hb-compose-tag" data-hb-tag="events">Events</button>
+                    <button class="hb-compose-tag" data-hb-tag="housing">Housing</button>
+                    <button class="hb-compose-tag" data-hb-tag="land-use">Land Use</button>
+                    <button class="hb-compose-tag" data-hb-tag="transit">Transit</button>
+                    <button class="hb-compose-tag" data-hb-tag="gondola">Gondola</button>
+                    <button class="hb-compose-tag" data-hb-tag="budgets">Budgets</button>
+                    <button class="hb-compose-tag" data-hb-tag="environment">Environment</button>
+                    <button class="hb-compose-tag" data-hb-tag="schools">Schools</button>
+                    <button class="hb-compose-tag" data-hb-tag="good-news">Good News</button>
+                    <button class="hb-compose-tag" data-hb-tag="other">Other</button>
+                  </div>
+                  <!-- Next-step chips hidden to simplify the compose form -->
+                  <div class="hb-nextstep-bar" id="hbNextStepBar" style="display:none;">
+                    <button class="hb-nextstep-chip" data-hb-step="attend">Attend</button>
+                    <button class="hb-nextstep-chip" data-hb-step="read">Read</button>
+                    <button class="hb-nextstep-chip" data-hb-step="ask">Ask</button>
+                    <button class="hb-nextstep-chip" data-hb-step="volunteer">Volunteer</button>
+                    <button class="hb-nextstep-chip" data-hb-step="email">Email</button>
+                    <button class="hb-nextstep-chip" data-hb-step="watch">Watch</button>
+                  </div>
+                  <div class="hb-attach-preview" id="hbAttachPreview"></div>
+                  <div class="hb-tone-nudge" id="hbToneNudge">
+                    <div class="hb-tone-nudge-title">Heads up — this might come across as a personal attack</div>
+                    <div class="hb-tone-original" id="hbToneOriginal"></div>
+                    <div style="font-size:0.82rem;color:#555;margin:4px 0;">Here's a way to make the same point without targeting someone personally:</div>
+                    <div class="hb-tone-suggested" id="hbToneSuggested"></div>
+                    <div class="hb-tone-actions">
+                      <button class="hb-tone-btn-use" onclick="hbUseSuggested()">Use suggested version</button>
+                      <button class="hb-tone-btn-keep" onclick="hbKeepOriginal()">Post as written</button>
+                      <button class="hb-tone-btn-edit" onclick="hbEditMore()">Let me edit more</button>
+                    </div>
+                  </div>
+                  <div class="hb-compose-actions">
+                    <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;">
+                      <!-- Photo button — moved here from above the tags -->
+                      <button type="button" class="hb-attach-btn hb-photo-upload-btn" onclick="hbTriggerPhoto()" title="Add a photo (JPG, PNG, GIF, WebP · max 5 MB)">📷 Add Photo</button>
+                      <input type="file" id="hbPhotoInput" accept="image/png,image/jpeg,image/gif,image/webp" style="display:none;" onchange="hbHandlePhoto(this)">
+                      <!-- Document / file attachment -->
+                      <button class="hb-attach-btn" onclick="hbTriggerAttach()" title="Attach a document (PDF, image · max 10 MB per file)">📄 Attach Document</button>
+                      <input type="file" id="hbFileInput" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg,.gif,.webp" multiple style="display:none;" onchange="hbHandleFiles(this)">
+                      <!-- Inline photo preview (was in its own block above) -->
+                      <div class="hb-photo-preview" id="hbPhotoPreview">
+                        <img id="hbPhotoPreviewImg" src="" alt="Photo preview">
+                        <div class="hb-photo-preview-actions">
+                          <button type="button" onclick="hbReplacePhoto()">Replace</button>
+                          <button type="button" onclick="hbRemovePhoto()">Remove</button>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="hb-post-btn" id="hbPostBtn" onclick="hbSubmitPost()" disabled>Post to Hub-Bub</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Posts feed (populated by hub-bub.js) -->
+          <div id="hbPostsFeed" class="hb-posts-feed">
+            <div class="hb-loading" id="hbLoading"><div class="hb-spinner"></div></div>
+            <div class="hb-empty" id="hbEmpty" style="display:none;">
+              <div class="hb-empty-icon">💬</div>
+              <div class="hb-empty-text">No discussions yet</div>
+              <div class="hb-empty-sub">Be the first to start a constructive conversation about what matters to Telluride.</div>
+            </div>
+          </div>
+
+        </main>
+      </section>
+
+      <div class="hb-footer">© 2026 Livable Telluride. All rights reserved.</div>
+    </div><!-- /.hb-container -->
+  </div><!-- /.hb-shell -->
+
+  <!-- ════════════════════ SIGNUP / LOGIN MODAL ════════════════════ -->
+  <div class="hb-modal-overlay" id="hbModalOverlay" role="dialog" aria-modal="true" aria-labelledby="hbModalTitle">
+    <div class="hb-modal" id="hbModalBox">
+      <button class="hb-modal-close" id="hbModalClose" aria-label="Close">×</button>
+
+      <!-- ── SIGNUP panel ── -->
+      <div id="hbSignupPanel">
+        <h2 id="hbModalTitle">Create your free account</h2>
+        <p class="hb-modal-sub">Join the Livable Telluride community. Your account lets you post, comment, and choose how you stay informed.</p>
+
+        <div class="hb-modal-row">
+          <div class="hb-modal-field">
+            <label for="hbSignupFirst">First name</label>
+            <input type="text" id="hbSignupFirst" autocomplete="given-name" placeholder="Jane">
+          </div>
+          <div class="hb-modal-field">
+            <label for="hbSignupLast">Last name</label>
+            <input type="text" id="hbSignupLast" autocomplete="family-name" placeholder="Smith">
+          </div>
+        </div>
+
+        <div class="hb-modal-field">
+          <label for="hbSignupEmail">Email address</label>
+          <input type="email" id="hbSignupEmail" autocomplete="email" placeholder="jane@example.com">
+        </div>
+
+        <div class="hb-modal-field">
+          <label for="hbSignupPassword">Create a password</label>
+          <input type="password" id="hbSignupPassword" autocomplete="new-password" placeholder="At least 8 characters">
+        </div>
+
+        <div class="hb-freq-group">
+          <span class="hb-freq-label">Stay informed — choose what you'd like to receive</span>
+          <div class="hb-freq-options">
+            <label class="hb-freq-opt">
+              <input type="checkbox" id="hbFreqDaily" value="daily">
+              <div class="hb-freq-opt-text">
+                <strong>Daily summaries</strong>
+                <span>A short digest of local news, meetings, and events each morning.</span>
+              </div>
+            </label>
+            <label class="hb-freq-opt">
+              <input type="checkbox" id="hbFreqWeekly" value="weekly">
+              <div class="hb-freq-opt-text">
+                <strong>Weekly summaries</strong>
+                <span>A weekly roundup of what happened and what's coming up.</span>
+              </div>
+            </label>
+            <label class="hb-freq-opt">
+              <input type="checkbox" id="hbFreqNewsletter" value="newsletter" checked>
+              <div class="hb-freq-opt-text">
+                <strong>Livable Telluride newsletter</strong>
+                <span>Longer-form posts and analysis, sent when published.</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="hb-modal-notice">
+          🔒 Hub-Bub commenting is limited to verified Livable Telluride subscribers. Creating an account subscribes you to the Livable Telluride mailing list. You can unsubscribe at any time.
+        </div>
+
+        <button class="hb-modal-submit" id="hbSignupSubmit" type="button">Create account &amp; join Hub-Bub</button>
+        <div class="hb-modal-switch">Already have an account? <a id="hbSwitchToLogin">Log in instead</a></div>
+        <div class="hb-modal-msg" id="hbSignupMsg"></div>
+      </div>
+
+      <!-- ── LOGIN panel ── -->
+      <div id="hbLoginPanel" style="display:none;">
+        <h2>Log in to Hub-Bub</h2>
+        <p class="hb-modal-sub">Use the email and password you set when you created your account.</p>
+
+        <div id="hbLoginFields">
+          <div class="hb-modal-field">
+            <label for="hbLoginEmail">Email address</label>
+            <input type="email" id="hbLoginEmail" autocomplete="email" placeholder="jane@example.com">
+          </div>
+
+          <div class="hb-modal-field">
+            <label for="hbLoginPassword" style="display:flex;justify-content:space-between;align-items:baseline;">
+              Password
+              <a href="javascript:void(0)" onclick="hbForgotPassword()" style="font-size:0.8rem;font-weight:600;color:var(--forest);text-decoration:underline;">Forgot password?</a>
+            </label>
+            <input type="password" id="hbLoginPassword" autocomplete="current-password" placeholder="Your password">
+          </div>
+
+          <button class="hb-modal-submit" id="hbLoginSubmit" type="button">Log in</button>
+          <div class="hb-modal-switch">Don't have an account? <a id="hbSwitchToSignup">Create one free</a></div>
+          <div class="hb-modal-msg" id="hbLoginMsg"></div>
+          <div class="hb-modal-msg" id="hbLoginError" style="display:none;color:#c0392b;font-size:0.87rem;margin-top:8px;padding:10px 12px;background:#fdf0f0;border-radius:8px;border:1px solid #f5c6c6;"></div>
+        </div>
+        <!-- Password reset confirmation — shown alone after forgot-password success -->
+        <div id="hbLoginResetView" style="display:none;">
+          <div id="hbLoginInfo" style="color:#555;font-size:0.87rem;padding:14px 16px;background:#f0f7f4;border-radius:10px;border:1px solid #c5ddd5;"></div>
+          <div style="text-align:center;margin-top:18px;">
+            <a href="javascript:void(0)" onclick="hbShowLoginFields()" style="font-size:0.85rem;color:var(--forest);text-decoration:underline;">← Back to log in</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- hub-bub.js handles Firebase auth, post loading, and all interactions -->
+  <script src="js/hub-bub.js"></script>
+
+  <!-- ════════ MODAL WIRING — signup + Mailchimp + Firebase Auth ════════ -->
+  <script>
+  (function () {
+    /* ── Mailchimp JSONP submit ── */
+    const MC_POST = 'https://us15.list-manage.com/subscribe/post-json?u=5d9192289b9af78822f2f69bf&id=f83dc56387&c=?';
+    function mcSubscribe(email, firstName, lastName, digestFreq, includeNewsletter, cb) {
+      const params = new URLSearchParams({
+        EMAIL: email,
+        FNAME: firstName,
+        LNAME: lastName,
+      });
+      if (digestFreq) params.set('MMERGE9', digestFreq);
+      if (includeNewsletter) params.set('group[7912]', '1');
+      // JSONP
+      const cbName = '_mc_cb_' + Date.now();
+      window[cbName] = function (data) {
+        delete window[cbName];
+        document.head.removeChild(script);
+        cb(data.result === 'success', data.msg || '');
+      };
+      const script = document.createElement('script');
+      script.src = MC_POST + '&' + params.toString() + '&c=' + cbName;
+      script.onerror = () => { delete window[cbName]; cb(false, 'Network error.'); };
+      document.head.appendChild(script);
+    }
+
+    /* ── Firebase Auth helper ── */
+    function waitForFirebase(fn) {
+      if (window._FIREBASE_READY && window._FIREBASE_AUTH) return fn();
+      let tries = 0;
+      const t = setInterval(() => {
+        tries++;
+        if (window._FIREBASE_READY && window._FIREBASE_AUTH) { clearInterval(t); fn(); }
+        if (tries > 40) { clearInterval(t); }
+      }, 150);
+    }
+
+    /* ── Modal open/close ── */
+    const overlay    = document.getElementById('hbModalOverlay');
+    const signupPanel = document.getElementById('hbSignupPanel');
+    const loginPanel  = document.getElementById('hbLoginPanel');
+
+    function openModal(panel) {
+      overlay.classList.add('open');
+      signupPanel.style.display = panel === 'signup' ? '' : 'none';
+      loginPanel.style.display  = panel === 'login'  ? '' : 'none';
+      clearMsgs();
+    }
+    function closeModal() { overlay.classList.remove('open'); }
+    function clearMsgs() {
+      ['hbSignupMsg','hbLoginMsg'].forEach(id => {
+        const el = document.getElementById(id);
+        el.style.display = 'none'; el.textContent = '';
+        el.className = 'hb-modal-msg';
+      });
+    }
+    function showMsg(id, text, type) {
+      const el = document.getElementById(id);
+      el.textContent = text;
+      el.className = 'hb-modal-msg ' + type;
+      el.style.display = 'block';
+    }
+
+    /* Daily/weekly digest are mutually exclusive */
+    document.getElementById('hbFreqDaily').addEventListener('change', function() {
+      if (this.checked) document.getElementById('hbFreqWeekly').checked = false;
+    });
+    document.getElementById('hbFreqWeekly').addEventListener('change', function() {
+      if (this.checked) document.getElementById('hbFreqDaily').checked = false;
+    });
+
+    /* Open triggers */
+    document.getElementById('hbOpenSignup').addEventListener('click', () => openModal('signup'));
+    document.getElementById('hbOpenLogin').addEventListener('click',  () => openModal('login'));
+    document.getElementById('hbModalClose').addEventListener('click', closeModal);
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    /* Switch panels */
+    document.getElementById('hbSwitchToLogin').addEventListener('click', () => {
+      signupPanel.style.display = 'none';
+      loginPanel.style.display  = '';
+      clearMsgs();
+    });
+    document.getElementById('hbSwitchToSignup').addEventListener('click', () => {
+      loginPanel.style.display  = 'none';
+      signupPanel.style.display = '';
+      clearMsgs();
+    });
+
+    /* Also wire legacy hbShowAuth calls from hub-bub.js */
+    window.hbShowAuth = function(mode) { openModal(mode === 'login' ? 'login' : 'signup'); };
+
+    /* ── SIGNUP submit ── */
+    document.getElementById('hbSignupSubmit').addEventListener('click', function () {
+      const btn       = this;
+      const firstName = document.getElementById('hbSignupFirst').value.trim();
+      const lastName  = document.getElementById('hbSignupLast').value.trim();
+      const email     = document.getElementById('hbSignupEmail').value.trim();
+      const password  = document.getElementById('hbSignupPassword').value;
+      const digestFreq = document.getElementById('hbFreqDaily').checked ? 'daily'
+                       : document.getElementById('hbFreqWeekly').checked ? 'weekly' : '';
+      const includeNewsletter = document.getElementById('hbFreqNewsletter').checked;
+
+      if (!firstName || !lastName) return showMsg('hbSignupMsg', 'Please enter your first and last name.', 'error');
+      if (!email || !email.includes('@')) return showMsg('hbSignupMsg', 'Please enter a valid email address.', 'error');
+      if (password.length < 8)  return showMsg('hbSignupMsg', 'Password must be at least 8 characters.', 'error');
+
+      btn.disabled = true;
+      btn.textContent = 'Creating account…';
+
+      // Step 1: Mailchimp subscribe (skip if nothing selected — account-only signup)
+      mcSubscribe(email, firstName, lastName, digestFreq, includeNewsletter, function (ok, msg) {
+        if (!ok && !/already subscribed/i.test(msg)) {
+          btn.disabled = false;
+          btn.textContent = 'Create account & join Hub-Bub';
+          return showMsg('hbSignupMsg', 'Subscription error: ' + msg.replace(/<[^>]+>/g, ''), 'error');
+        }
+
+        // Step 2: Firebase Auth — create account
+        waitForFirebase(function () {
+          const { createUserWithEmailAndPassword, updateProfile } =
+            window.firebase?.auth ? {} : {};
+
+          // Use compat SDK if available
+          if (window.firebase && window.firebase.auth) {
+            window.firebase.auth().createUserWithEmailAndPassword(email, password)
+              .then(cred => cred.user.updateDisplayName
+                ? cred.user.updateDisplayName(firstName + ' ' + lastName)
+                : Promise.resolve())
+              .then(() => {
+                btn.disabled = false;
+                btn.textContent = 'Create account & join Hub-Bub';
+                showMsg('hbSignupMsg', '✓ Account created! You can now post and comment on Hub-Bub.', 'success');
+                setTimeout(closeModal, 2200);
+              })
+              .catch(err => {
+                btn.disabled = false;
+                btn.textContent = 'Create account & join Hub-Bub';
+                const friendly = err.code === 'auth/email-already-in-use'
+                  ? 'An account with this email already exists. Try logging in instead.'
+                  : err.message;
+                showMsg('hbSignupMsg', friendly, 'error');
+              });
+          } else {
+            // Modular SDK path
+            import('https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js').then(m => {
+              m.createUserWithEmailAndPassword(window._FIREBASE_AUTH, email, password)
+                .then(cred => m.updateProfile(cred.user, { displayName: firstName + ' ' + lastName }))
+                .then(() => {
+                  btn.disabled = false;
+                  btn.textContent = 'Create account & join Hub-Bub';
+                  showMsg('hbSignupMsg', '✓ Account created! You can now post and comment.', 'success');
+                  setTimeout(closeModal, 2200);
+                })
+                .catch(err => {
+                  btn.disabled = false;
+                  btn.textContent = 'Create account & join Hub-Bub';
+                  const friendly = err.code === 'auth/email-already-in-use'
+                    ? 'An account with this email already exists. Try logging in instead.'
+                    : err.message;
+                  showMsg('hbSignupMsg', friendly, 'error');
+                });
+            });
+          }
+        });
+      });
+    });
+
+    /* ── LOGIN submit ── */
+    document.getElementById('hbLoginSubmit').addEventListener('click', function () {
+      const btn      = this;
+      const email    = document.getElementById('hbLoginEmail').value.trim();
+      const password = document.getElementById('hbLoginPassword').value;
+
+      if (!email) return showMsg('hbLoginMsg', 'Please enter your email.', 'error');
+      if (!password) return showMsg('hbLoginMsg', 'Please enter your password.', 'error');
+
+      btn.disabled = true;
+      btn.textContent = 'Logging in…';
+
+      waitForFirebase(function () {
+        if (window.firebase && window.firebase.auth) {
+          window.firebase.auth().signInWithEmailAndPassword(email, password)
+            .then(() => {
+              btn.disabled = false;
+              btn.textContent = 'Log in';
+              showMsg('hbLoginMsg', '✓ Logged in!', 'success');
+              setTimeout(closeModal, 1200);
+            })
+            .catch(err => {
+              btn.disabled = false;
+              btn.textContent = 'Log in';
+              const friendly = (err.code === 'auth/wrong-password' || err.code === 'auth/user-not-found' || err.code === 'auth/invalid-credential')
+                ? 'Incorrect email or password.'
+                : err.message;
+              showMsg('hbLoginMsg', friendly, 'error');
+            });
+        } else if (window._FIREBASE_AUTH && window._FB_AUTH) {
+          window._FB_AUTH.signInWithEmailAndPassword(window._FIREBASE_AUTH, email, password)
+            .then(() => {
+              btn.disabled = false;
+              btn.textContent = 'Log in';
+              showMsg('hbLoginMsg', '✓ Logged in!', 'success');
+              setTimeout(closeModal, 1200);
+            })
+            .catch(err => {
+              btn.disabled = false;
+              btn.textContent = 'Log in';
+              showMsg('hbLoginMsg', 'Incorrect email or password.', 'error');
+            });
+        }
+      });
+    });
+
+    /* Enter key submit */
+    document.getElementById('hbSignupPassword').addEventListener('keydown', e => {
+      if (e.key === 'Enter') document.getElementById('hbSignupSubmit').click();
+    });
+    document.getElementById('hbLoginPassword').addEventListener('keydown', e => {
+      if (e.key === 'Enter') document.getElementById('hbLoginSubmit').click();
+    });
+  })();
+  </script>
+
+  <!-- Sidebar filter wiring — syncs sidebar chips with hub-bub.js's hidden topic/mode bars -->
+  <script>
+  (function () {
+    // Sync auth strip with hidden auth bar state (hub-bub.js updates hbAuthStatus/hbAuthUser)
+    function syncAuthStrip() {
+      const hiddenStatus  = document.getElementById('hbAuthStatus');
+      const hiddenUser    = document.getElementById('hbAuthUser');
+      const hiddenLogout  = document.getElementById('hbLogoutBtn');
+      const stripMsg      = document.getElementById('hbAuthStripMsg');
+      const stripUser     = document.getElementById('hbAuthStripUser');
+      const stripLogout   = document.getElementById('hbAuthStripLogout');
+      if (!hiddenStatus || !stripMsg) return;
+      const isLoggedIn = hiddenUser && hiddenUser.style.display !== 'none';
+      if (isLoggedIn) {
+        stripMsg.style.display    = 'none';
+        stripUser.style.display   = '';
+        stripUser.textContent     = hiddenUser.textContent;
+        stripLogout.style.display = '';
+      } else {
+        stripMsg.style.display    = '';
+        stripUser.style.display   = 'none';
+        stripLogout.style.display = 'none';
+      }
+    }
+    // Poll auth state every second (hub-bub.js updates DOM asynchronously)
+    setInterval(syncAuthStrip, 1000);
+
+    // Sidebar topic chips → mirror clicks to hidden hbTopicBar
+    document.getElementById('hbSideTopics').addEventListener('click', function (e) {
+      const chip = e.target.closest('[data-side-topic]');
+      if (!chip) return;
+      const topic = chip.dataset.sideTopic;
+      // Update visual state
+      this.querySelectorAll('.hb-filter-chip').forEach(c => c.classList.toggle('active', c === chip));
+      // Fire matching hidden chip
+      const hidden = document.querySelector('[data-hb-topic="' + topic + '"]');
+      if (hidden) hidden.click();
+    });
+
+
+    // Clear button
+    document.getElementById('hbSideClear').addEventListener('click', function () {
+      // Reset sidebar visuals
+      document.querySelectorAll('#hbSideTopics .hb-filter-chip').forEach((c,i) => c.classList.toggle('active', i===0));
+      document.getElementById('hbSideSearch').value = '';
+      // Fire reset on hidden topic bar
+      const allTopic = document.querySelector('[data-hb-topic="all"]');
+      if (allTopic) allTopic.click();
+    });
+
+    // Search field → filter visible posts by text
+    document.getElementById('hbSideSearch').addEventListener('input', function () {
+      const q = this.value.trim().toLowerCase();
+      document.querySelectorAll('#hbPostsFeed .hb-post').forEach(post => {
+        post.style.display = (!q || post.textContent.toLowerCase().includes(q)) ? '' : 'none';
+      });
+      // Update result count
+      const visible = document.querySelectorAll('#hbPostsFeed .hb-post:not([style*="none"])').length;
+      const rc = document.getElementById('hbResultCount');
+      if (rc) rc.textContent = visible;
+    });
+
+    // Sort select → keep hb-sort-opt buttons in sync (hub-bub.js watches those)
+    // (wired via onchange inline above)
+
+    // Update result count when posts change (MutationObserver)
+    const feed = document.getElementById('hbPostsFeed');
+    if (feed && window.MutationObserver) {
+      new MutationObserver(function () {
+        const posts = feed.querySelectorAll('.hb-post');
+        const rc = document.getElementById('hbResultCount');
+        const rl = document.getElementById('hbResultLabel');
+        if (rc) rc.textContent = posts.length || '—';
+        if (rl) rl.textContent = posts.length === 1 ? 'discussion' : 'discussions';
+      }).observe(feed, { childList: true, subtree: true });
+    }
+  })();
+  </script>
+
+  <!-- ════════ PDF / Document Viewer Modal ════════
+       Opens when a user clicks a PDF or .doc attachment link in a post.
+       Uses Google Docs Viewer (free, handles multi-page PDFs, no install).
+       Firebase Storage download URLs are publicly accessible signed URLs,
+       so Google Docs Viewer can fetch them directly.
+  ══════════════════════════════════════════════════ -->
+  <div id="hbDocModal" style="
+    display:none; position:fixed; inset:0; z-index:9999;
+    background:rgba(0,0,0,0.72); align-items:center; justify-content:center;
+  ">
+    <div style="
+      background:#fff; border-radius:14px; overflow:hidden;
+      width:min(92vw,960px); height:min(88vh,780px);
+      display:flex; flex-direction:column; box-shadow:0 24px 64px rgba(0,0,0,0.4);
+    ">
+      <div style="
+        display:flex; align-items:center; justify-content:space-between;
+        padding:14px 20px; border-bottom:1px solid #e5e5e5;
+        background:#f9f9f7;
+      ">
+        <div style="font-weight:700;font-size:0.95rem;color:#21443c;" id="hbDocModalTitle">Document</div>
+        <div style="display:flex;gap:10px;align-items:center;">
+          <a id="hbDocModalDownload" href="#" target="_blank" rel="noopener"
+             style="font-size:0.82rem;color:#21443c;font-weight:600;text-decoration:none;
+                    padding:5px 12px;border:1px solid rgba(33,68,60,0.25);border-radius:999px;">
+            ↓ Open / Download
+          </a>
+          <button onclick="hbCloseDocModal()" style="
+            background:none;border:none;cursor:pointer;font-size:1.4rem;
+            color:#666;line-height:1;padding:2px 6px;
+          " title="Close">✕</button>
+        </div>
+      </div>
+      <!-- iframe is injected here by hbOpenDocModal() -->
+      <div id="hbDocModalBody" style="flex:1;overflow:hidden;background:#f0ece4;"></div>
+    </div>
+  </div>
+  <script>
+    window.hbOpenDocModal = function(url, name) {
+      var modal   = document.getElementById('hbDocModal');
+      var body    = document.getElementById('hbDocModalBody');
+      var title   = document.getElementById('hbDocModalTitle');
+      var dlLink  = document.getElementById('hbDocModalDownload');
+      var isPdf   = /\.pdf(\?|$)/i.test(url) || /application\/pdf/i.test(url);
+      var isImage = /\.(png|jpe?g|gif|webp)(\?|$)/i.test(url);
+
+      title.textContent = name || 'Document';
+      dlLink.href = url;
+
+      body.innerHTML = '';
+      if (isImage) {
+        // Show images directly
+        body.innerHTML =
+          '<div style="height:100%;overflow:auto;display:flex;align-items:center;justify-content:center;padding:16px;">' +
+          '<img src="' + url.replace(/"/g,'%22') + '" style="max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.2);" alt="' + (name||'').replace(/"/g,'') + '">' +
+          '</div>';
+      } else if (isPdf) {
+        // Use Google Docs Viewer for multi-page PDFs — renders all pages, no plugin needed
+        var viewerUrl = 'https://docs.google.com/viewer?url=' + encodeURIComponent(url) + '&embedded=true';
+        body.innerHTML =
+          '<iframe src="' + viewerUrl + '" style="width:100%;height:100%;border:none;" allow="fullscreen" title="' + (name||'Document').replace(/"/g,'') + '">' +
+          '</iframe>' +
+          '<div style="position:absolute;bottom:10px;right:14px;font-size:0.72rem;color:#aaa;">Powered by Google Docs Viewer</div>';
+      } else {
+        // Word docs / other — also route through Google Docs Viewer
+        var viewerUrl = 'https://docs.google.com/viewer?url=' + encodeURIComponent(url) + '&embedded=true';
+        body.innerHTML =
+          '<iframe src="' + viewerUrl + '" style="width:100%;height:100%;border:none;" allow="fullscreen" title="' + (name||'Document').replace(/"/g,'') + '">' +
+          '</iframe>';
+      }
+
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    };
+
+    window.hbCloseDocModal = function() {
+      var modal = document.getElementById('hbDocModal');
+      var body  = document.getElementById('hbDocModalBody');
+      modal.style.display = 'none';
+      body.innerHTML = ''; // destroy iframe so it stops loading
+      document.body.style.overflow = '';
+    };
+
+    // Close on backdrop click
+    document.getElementById('hbDocModal').addEventListener('click', function(e) {
+      if (e.target === this) hbCloseDocModal();
+    });
+    // Close on Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') hbCloseDocModal();
+    });
+  </script>
+
+</body>
+</html>

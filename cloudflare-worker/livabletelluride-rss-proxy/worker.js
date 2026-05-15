@@ -43,6 +43,9 @@ const ALLOWED_HOSTS = [
   "ouraycountyco.gov",
   "www.ouraycountyco.gov",
   "www.norwoodtown.com",
+  "townofridgway.colorado.gov",
+  "www.townofridgway.colorado.gov",
+  "events.ourayridgwayevents.com",
 ];
 
 // Realistic Safari UA that is known to clear both Telluride Times' rate-limit

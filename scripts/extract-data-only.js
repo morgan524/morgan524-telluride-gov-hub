@@ -41,10 +41,13 @@ const TARGETS = [
   { kind: 'const',    name: 'HUMANE_SOCIETY_ANIMALS' },
   { kind: 'const',    name: 'TELLURIDE_FOUNDATION_EVENTS' },
   { kind: 'const',    name: 'OURAY_COUNTY_EVENTS' },
+  { kind: 'const',    name: 'OURAY_RIDGWAY_EVENTS' },
   { kind: 'const',    name: 'PAPER_LOGOS' },
   { kind: 'const',    name: 'LEGAL_ENTITY_LOGOS' },
   { kind: 'const',    name: 'LEGAL_NOTICES' },
   { kind: 'const',    name: 'HOUSING_LISTINGS' },
+  // ── Ridgway agenda PDF map (bot-populated every 6h by syncRidgwayAgendas) ──
+  { kind: 'const',    name: 'RIDGWAY_AGENDA_MAP' },
   // ── Pure get*Meetings normalization functions ──
   { kind: 'function', name: 'getCountyCachedMeetings' },
   { kind: 'function', name: 'getMVMeetings' },
@@ -55,6 +58,8 @@ const TARGETS = [
   { kind: 'function', name: 'getOphirMeetings' },
   { kind: 'function', name: 'getAirportMeetings' },
   { kind: 'function', name: 'getSmartMeetings' },
+  { kind: 'function', name: 'getTownAgendaLink' },
+  { kind: 'function', name: 'getTellurideMeetings' },
   { kind: 'function', name: 'getMeetingSummary' },
 ];
 

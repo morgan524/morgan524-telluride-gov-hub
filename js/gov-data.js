@@ -15,18 +15,26 @@ const COUNTY_CIVICCLERK_IDS = {
   'Planning Commission and Board of County Commissioners Joint Work Session|2026-03-26': 971,
   'Joint Work Session|2026-03-26': 971,
   'Board of County Commissioners Meeting|2026-04-01': 882,
-  'Board of County Commissioners Meeting|2026-04-01': 882,
   'Board of County Commissioners Work Session|2026-04-08': 986,
   'Planning Commission|2026-04-02': 1025,
   'San Miguel County: Planning Commission|2026-04-02': 1025,
   // 2026-05-13 BOCC — partial-date fallback in getCountyAgendaLink will catch
   // any title variation as long as the date matches.
   'Board of County Commissioners Meeting|2026-05-13': 999,
+  // 2026-05-14 Planning Commission — 1705 = full packet, 1704 = agenda only
+  'Planning Commission Meeting|2026-05-14': 919,
+  'Planning Commission|2026-05-14': 919,
+};
+
+// eventId -> hosted PDF path (takes priority over CivicClerk viewer link)
+const COUNTY_HOSTED_PACKETS = {
+  919: '/assets/packets/planning-commission-2026-05-14-packet.pdf',  // Planning Commission May 14 2026
 };
 
 const COUNTY_CIVICCLERK_AGENDA_FILES = {
   1025: 1652,  // Planning Commission Apr 2 2026
   999:  1702,  // BOCC May 13 2026
+  919:  1705,  // Planning Commission May 14 2026
 };
 
 const COUNTY_CACHE_DATE = '2026-03-25';
@@ -115,8 +123,18 @@ const COUNTY_CACHED_DATA = [
     title: 'Board of County Commissioners Meeting',
     type: 'bocc',
     location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: null,
+    civicClerkId: 999,
     note: 'Agenda typically posted the Friday before.'
+  },
+  {
+    date: 'May 14, 2026',
+    time: '9:30 AM',
+    title: 'Planning Commission Meeting',
+    type: 'planning',
+    location: '305 W Colorado Ave, Telluride, CO 81435',
+    civicClerkId: 919,
+    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/919/files/agenda/1705',
+    note: 'Public hearings on land use applications and code amendments (footprint definitions, accelerated housing review). Work session on natural medicine code amendments.'
   },
   {
     date: 'May 20, 2026',
@@ -177,16 +195,56 @@ const COUNTY_CACHED_DATA = [
 
 const SMART_BOARD_URL = 'https://smarttelluride.colorado.gov/board-meetings';
 
-const SMART_CACHE_DATE = '2026-03-24';
+const SMART_CACHE_DATE = '2026-05-12';
 
 const SMART_CACHED_DATA = [
+  // ── Upcoming (2nd Thursday of each month, 4:00 PM, SMART Office • Lawson Hill) ──
+  // Note: May meeting moved to 3rd Wednesday (May 20) per board schedule
+  {
+    date: 'May 20, 2026',
+    time: '4:00 PM',
+    title: 'SMART Board of Directors',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: 'SMART Office • Lawson Hill',
+    note: 'Next scheduled meeting -- agenda and packet will be posted closer to the date.'
+  },
+  {
+    date: 'June 11, 2026',
+    time: '4:00 PM',
+    title: 'SMART Board of Directors',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: 'SMART Office • Lawson Hill'
+  },
+  {
+    date: 'July 9, 2026',
+    time: '4:00 PM',
+    title: 'SMART Board of Directors',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: 'SMART Office • Lawson Hill'
+  },
+  {
+    date: 'August 13, 2026',
+    time: '4:00 PM',
+    title: 'SMART Board of Directors',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: 'SMART Office • Lawson Hill'
+  },
+  // ── Recent ──
   {
     date: 'April 9, 2026',
     title: 'SMART Board of Directors',
     agendaUrl: null,
     packetUrl: null,
     special: false,
-    note: 'Next scheduled meeting -- agenda and packet will be posted closer to the date.'
+    note: 'April meeting -- agenda and packet posted closer to the date.'
   },
   {
     date: 'March 12, 2026',
@@ -391,11 +449,12 @@ const SCHOOL_CACHED_DATA = [
 
 const FIRE_BOARD_URL = 'https://www.telluridefire.com/board-meetings';
 
-const FIRE_CACHE_DATE = '2026-03-24';
+const FIRE_CACHE_DATE = '2026-05-12';
 
 const FIRE_CACHED_DATA = [
+  // ── Upcoming (3rd Tuesday of each month, 5:30 PM) ──
   {
-    date: 'April 21, 2026',
+    date: 'May 19, 2026',
     time: '5:30 PM',
     title: 'Board of Directors Meeting',
     agendaUrl: null,
@@ -405,28 +464,38 @@ const FIRE_CACHED_DATA = [
     note: 'Next scheduled meeting -- agenda typically posted a few days before.'
   },
   {
+    date: 'June 16, 2026',
+    time: '5:30 PM',
+    title: 'Board of Directors Meeting',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: '131 W Columbia Ave, Telluride, CO 81435'
+  },
+  {
+    date: 'July 21, 2026',
+    time: '5:30 PM',
+    title: 'Board of Directors Meeting',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: '131 W Columbia Ave, Telluride, CO 81435'
+  },
+  // ── Recent (with agendas) ──
+  {
+    date: 'April 21, 2026',
+    time: '5:30 PM',
+    title: 'Board of Directors Meeting',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: '131 W Columbia Ave, Telluride, CO 81435'
+  },
+  {
     date: 'March 17, 2026',
     time: '5:30 PM',
     title: 'Board of Directors Meeting',
     agendaUrl: 'https://www.telluridefire.com/files/3d3e8ccfb/Agenda+-March+17th%2C+2026.pdf',
-    packetUrl: null,
-    special: false,
-    location: '131 W Columbia Ave, Telluride, CO 81435'
-  },
-  {
-    date: 'February 17, 2026',
-    time: '5:30 PM',
-    title: 'Board of Directors Meeting',
-    agendaUrl: 'https://www.telluridefire.com/files/286ab5c22/Agenda+-February+17th%2C+2026.pdf',
-    packetUrl: null,
-    special: false,
-    location: '131 W Columbia Ave, Telluride, CO 81435'
-  },
-  {
-    date: 'January 20, 2026',
-    time: '5:30 PM',
-    title: 'Board of Directors Meeting',
-    agendaUrl: 'https://www.telluridefire.com/files/cc0cf8d03/Agenda+-January+20th%2C+2026.pdf',
     packetUrl: null,
     special: false,
     location: '131 W Columbia Ave, Telluride, CO 81435'
@@ -558,17 +627,36 @@ const NORWOOD_CACHED_DATA = [
   },
   // ── Planning & Zoning Commission ──
   {
-    date: 'April 27, 2026',
+    date: 'June 15, 2026',
     title: 'Planning and Zoning Commission Meeting',
     board: 'pz',
     agendaUrl: null,
     note: 'Next scheduled P&Z meeting -- agenda posted before the meeting.'
   },
   {
+    date: 'May 18, 2026',
+    title: 'Planning and Zoning Commission Meeting',
+    board: 'pz',
+    agendaUrl: null,
+    note: 'Next scheduled P&Z meeting -- agenda posted before the meeting.'
+  },
+  {
+    date: 'April 20, 2026',
+    title: 'Planning and Zoning Commission Meeting',
+    board: 'pz',
+    agendaUrl: 'https://www.norwoodtown.com/files/9f7d271ce/04.20.2026+P%26Z+BOA+AGENDA.pdf'
+  },
+  {
+    date: 'March 16, 2026',
+    title: 'Planning and Zoning Commission Meeting',
+    board: 'pz',
+    agendaUrl: 'https://www.norwoodtown.com/files/cef2273a3/03.16.2026+P%26Z+BOA+AGENDA.pdf'
+  },
+  {
     date: 'February 23, 2026',
     title: 'Planning and Zoning Commission Meeting',
     board: 'pz',
-    agendaUrl: 'https://www.norwoodtown.com/planning-and-zoning-commission-meetings'
+    agendaUrl: 'https://www.norwoodtown.com/files/b5e6f3c90/02.23.2026+P%26Z+BOA+AGENDA.pdf'
   },
   // ── Water Commission ──
   {
@@ -673,6 +761,110 @@ const OPHIR_CACHED_DATA = [
   }
 ];
 
+const RIDGWAY_COUNCIL_URL = 'https://townofridgway.colorado.gov/i-want-to/ridgway-town-council';
+
+const RIDGWAY_CACHE_DATE = '2026-05-11';
+
+const RIDGWAY_CACHED_DATA = [
+  // ── Town Council (2nd Wednesday of each month, 6:00 PM) ──
+  {
+    date: 'May 13, 2026',
+    time: '6:00 PM',
+    title: 'Ridgway Town Council Regular Meeting',
+    board: 'council',
+    agendaUrl: null,
+    note: 'Agenda typically posted the Friday before.'
+  },
+  {
+    date: 'June 10, 2026',
+    time: '6:00 PM',
+    title: 'Ridgway Town Council Regular Meeting',
+    board: 'council',
+    agendaUrl: null
+  }
+];
+
+// ── Town of Telluride CivicWeb meeting portal ──
+// Same telluride-co.civicweb.net portal the County uses; Town meetings have
+// their own meeting IDs in the same system.
+const TOWN_CIVICWEB_BASE = 'https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=';
+const TOWN_CIVICWEB_FALLBACK = 'https://telluride-co.civicweb.net/Portal/MeetingTypeList.aspx';
+
+// Map of "title|YYYY-MM-DD" -> CivicWeb meeting ID for Town meetings
+// Find IDs at https://telluride-co.civicweb.net/Portal/MeetingTypeList.aspx
+const TOWN_CIVICWEB_IDS = {
+  'HARC Meeting|2026-05-20': 8014,
+  // Add new entries here as agendas are posted, e.g.:
+  // 'HARC Meeting|2026-06-17': XXXX,
+  // 'Town Council Meeting|2026-MM-DD': XXXX,
+};
+
+const TELLURIDE_HARC_URL = 'https://telluride.gov/100/Historic-and-Architectural-Review-Commis';
+
+const TELLURIDE_CACHE_DATE = '2026-05-11';
+
+const TELLURIDE_CACHED_DATA = [
+  // ── Historic and Architectural Review Commission (HARC) ──
+  // Meets 3rd Wednesday of each month at Rebekah Hall, Telluride
+  {
+    date: 'May 20, 2026',
+    title: 'HARC Meeting',
+    board: 'harc',
+    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
+    civicWebId: 8014,
+    note: 'Agenda includes Carhenge and Shandoka worksessions.'
+  },
+  {
+    date: 'June 17, 2026',
+    title: 'HARC Meeting',
+    board: 'harc',
+    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
+    agendaUrl: null
+  },
+  {
+    date: 'July 15, 2026',
+    title: 'HARC Meeting',
+    board: 'harc',
+    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
+    agendaUrl: null
+  },
+  {
+    date: 'August 19, 2026',
+    title: 'HARC Meeting',
+    board: 'harc',
+    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
+    agendaUrl: null
+  },
+  {
+    date: 'September 16, 2026',
+    title: 'HARC Meeting',
+    board: 'harc',
+    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
+    agendaUrl: null
+  },
+  {
+    date: 'October 21, 2026',
+    title: 'HARC Meeting',
+    board: 'harc',
+    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
+    agendaUrl: null
+  },
+  {
+    date: 'November 18, 2026',
+    title: 'HARC Meeting',
+    board: 'harc',
+    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
+    agendaUrl: null
+  },
+  {
+    date: 'December 16, 2026',
+    title: 'HARC Meeting',
+    board: 'harc',
+    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
+    agendaUrl: null
+  }
+];
+
 const AIRPORT_BOARD_URL = 'https://tellurideairport.com/traa-board-information/';
 
 const AIRPORT_CACHE_DATE = '2026-03-25';
@@ -725,6 +917,7 @@ const WHY_THIS_MATTERS = [
   // ── PUD / Zoning / Development ──
   {
     match: /carhenge|700 w pacific/i,
+    popup: 'Town Council is considering a Planned Unit Development at the former Carhenge site — a potential deed-restricted workforce housing project near the gondola. This is a work session: no final vote, but the direction set here shapes the formal application. Key questions: how many units, at what income levels, and how will parking and neighborhood impacts be managed? Work sessions are the best opportunity for public input before review narrows options.',
     decision: 'Whether to approve a Planned Unit Development (PUD) for the former Carhenge site at 700 W Pacific Ave as affordable housing.',
     who: 'Residents seeking affordable housing, adjacent property owners, and anyone concerned about density in the west end of town.',
     stage: 'Work session -- no binding vote, but direction given here shapes the formal application.',
@@ -733,6 +926,7 @@ const WHY_THIS_MATTERS = [
   },
   {
     match: /chair\s*7/i,
+    popup: 'Chair 7 was zoned Open Space District in 1979 — ski uses only, no residential or commercial development. Any rezoning would set a precedent for converting dedicated open space. In September 2025, Town Council said no hotel plans would proceed, but rezoning discussions may continue. Watch closely: once open space is commercially developed in Telluride, it has never been reversed.',
     decision: 'Whether to approve rezoning or development at the Chair 7 base area.',
     who: 'All Telluride residents and visitors -- Chair 7 was dedicated as "Open Space District" in 1979 (ski uses only, no residential or commercial).',
     stage: 'Check agenda for whether this is a work session, public hearing, or vote.',
@@ -741,6 +935,7 @@ const WHY_THIS_MATTERS = [
   },
   {
     match: /society\s*turn/i,
+    popup: 'Society Turn is a proposed ~400,000 sq ft mixed-use project at the valley entrance. The hospital is only about 10% of the total footprint — the rest is commercial. Traffic studies used COVID-era March 2020 data. No wildfire evacuation analysis has been completed for a site sitting at the valley\'s single entry and exit point. Final BOCC approval may be one vote away.',
     decision: 'Whether to advance the Society Turn PUD -- a ~400,000 sq ft mixed-use development at the valley entrance including a hospital, hotel, medical offices, retail, and employee housing.',
     who: 'Every resident of the region. The hospital component (~44,000 sq ft) is roughly 10% of the total development. The remaining ~90% is commercial.',
     stage: 'Check agenda -- the PUD has completed 4 of 5 approval steps. Final approval may be pending.',
@@ -749,6 +944,7 @@ const WHY_THIS_MATTERS = [
   },
   {
     match: /shandoka/i,
+    popup: 'A proposed 900-space parking garage at Shandoka would be one of the largest structures in the region. Combined with Chair 7 and the gondola redesign, these projects represent a massive escalation in commercial infrastructure. More parking directly drives higher visitor volumes — permanently affecting the character of downtown Telluride. The combined scope of all three projects approaches $500 million.',
     decision: 'Whether to approve a large parking structure at Shandoka.',
     who: 'Telluride residents, visitors, Mountain Village commuters, and adjacent neighborhoods.',
     stage: 'Check agenda for current phase.',
@@ -757,6 +953,7 @@ const WHY_THIS_MATTERS = [
   },
   {
     match: /accelerated\s*housing\s*review/i,
+    popup: 'San Miguel County is proposing a 90-day fast-track review for qualifying affordable housing projects. A Prop 123 grant deadline drives the timeline: adopt by June 30 or wait until December 31. The Stakeholder Strategic Roundtable voted 5 to 2 against moving it forward now. All 9 public comments were in opposition. Critics say: fix the broader Land Use Code first, restore the project-size limit, and don\'t create a fast-track before adequate safeguards exist.',
     decision: 'Whether to amend the Land Use Code to implement fast-track 90-day review timelines for qualifying affordable housing development applications.',
     who: 'Developers proposing affordable housing, neighbors of potential development sites, and planning staff who must complete reviews within shortened timelines.',
     stage: 'Work session -- joint Planning Commission and BOCC discussion of proposed code language.',
@@ -765,6 +962,7 @@ const WHY_THIS_MATTERS = [
   },
   {
     match: /comprehensive\s*plan/i,
+    popup: 'A Comprehensive Plan revision sets the rules governing all future land use and zoning — changes that can reshape development patterns for decades. This is one of the most consequential items any planning body considers. Public input at this stage carries the most weight; once formal review begins, options narrow quickly. Recent Plans have been shaped by consultants who simultaneously worked on specific local development projects.',
     decision: 'Review or update of the town\'s Comprehensive Plan -- the foundational document guiding all future land use and zoning decisions.',
     who: 'Every property owner, resident, and business in the jurisdiction. The Comp Plan sets the framework for what can be built where.',
     stage: 'Check agenda -- typically presented as work session or public hearing.',
@@ -775,6 +973,7 @@ const WHY_THIS_MATTERS = [
   // ── Wildfire / Safety ──
   {
     match: /wildfire\s*resiliency\s*code|wildland\s*urban\s*interface|wui\s*code/i,
+    popup: 'The Town and County are considering adopting Colorado\'s Wildfire Resiliency Code and the Wildland Urban Interface Code. In a box canyon with one primary exit road, wildfire evacuation is an existential concern. Adoption means new construction and renovations must meet enhanced standards for building materials, defensible space, and vegetation management. Notably, the Society Turn site — at the valley\'s only entry point — still has no wildfire evacuation analysis.',
     decision: 'Whether to adopt Colorado\'s Wildfire Resiliency Code and/or the International Wildland Urban Interface (WUI) Code, setting construction and land management standards in fire-prone areas.',
     who: 'All property owners (new construction requirements), current residents (evacuation and defensible space), and the fire district (enforcement and response capacity).',
     stage: 'Check agenda -- may be adoption vote or work session.',
@@ -782,25 +981,9 @@ const WHY_THIS_MATTERS = [
     context: 'Fire mitigation has been identified as a top community priority for the region\'s future. Notably, the Society Turn PUD -- at the valley\'s single entry/exit point -- has not undergone a wildfire evacuation analysis despite its massive proposed scale.'
   },
 
-  // ── Housing / Deed Restrictions ──
-  {
-    match: /deed\s*restrict|workforce\s*housing\s*deed|housing\s*authority/i,
-    decision: 'Whether to approve modifications to deed-restricted property sales or housing program rules.',
-    who: 'Current and prospective deed-restricted homeowners and renters -- roughly one-third of Telluride voters live in town-managed housing.',
-    stage: 'Check agenda for whether this is an individual property approval or policy change.',
-    impact: 'Deed restriction terms determine who can live in these units, at what income levels, and at what price. Changes to individual deeds can set precedents for the broader program. Policy changes can affect affordability for hundreds of households.',
-    context: 'The housing affordability paradox is acute: at $1M/unit construction costs, 50% AMI tenants ($42K/year) cannot cover financing. Recent projects saw 60% rent increases over two years. Meanwhile, Measure 2B authorized $64M in new Town debt (with $132M in interest) partially collateralized against housing fund revenue -- creating tension between debt service and keeping units affordable.'
-  },
 
-  // ── Budget / Finance ──
-  {
-    match: /budget\s*reduct|budget\s*session|funding.*staffing|proposed\s*construction\s*projects/i,
-    decision: 'Review of proposed spending, staffing levels, or capital construction projects.',
-    who: 'All taxpayers and service recipients -- budget decisions determine what services are funded and what gets cut.',
-    stage: 'Work session -- input here shapes the final budget before formal adoption.',
-    impact: 'The Town of Telluride\'s budget has grown from ~$10M (2015) to ~$95-100M (2025), with 212 employees (~10% of the population). Capital project decisions at this stage determine which infrastructure investments move forward.',
-    context: 'Consultant spending alone has totaled $64M over 2017-2025, spiking from $1.9M to $10.5M annually. Measure 2B authorized $64M in additional debt (total cost ~$197M with interest) with no specified projects -- giving Town Council broad spending authority via simple resolution.'
-  },
+
+
 
   // ── Gondola / SMART ──
   {
@@ -832,15 +1015,7 @@ const WHY_THIS_MATTERS = [
     context: 'The hospital district board is weighing significant partnership proposals (Jensen Partners consulting). Meanwhile, the Society Turn developer has reportedly conditioned the hospital\'s land allocation on the broader PUD advancing. Community members may want to ask: can the hospital secure a site without being tied to 300,000+ sq ft of commercial development it doesn\'t control?'
   },
 
-  // ── School District ──
-  {
-    match: /board\s*of\s*education|school\s*district|telluride\s*school/i,
-    decision: 'School board decisions on budget, staffing, facilities, and educational programs.',
-    who: 'Students, families, teachers, and staff -- plus all property taxpayers who fund the district.',
-    stage: 'Check agenda for whether this is a work session, monthly meeting, or special session.',
-    impact: 'Staffing and budget decisions directly affect class sizes, programs offered, and the quality of education. The district is considering 2026-27 budget reductions of ~$655K including cuts to teaching positions.',
-    context: 'The school district operates in a community under intense development pressure. New commercial projects (hotels, restaurants, retail) increase workforce demand but often don\'t directly generate school funding. Meanwhile, housing costs make it increasingly difficult for teachers and staff to live in the community they serve.'
-  },
+
 
   // ── HB24-1107 / Land Use Judicial Review ──
   {
@@ -874,7 +1049,7 @@ const WHY_THIS_MATTERS = [
 
   // ── HARC / Historic Preservation ──
   {
-    match: /harc|historic.*architectural.*review|national.*historic.*landmark|historic.*preservation|demolition.*historic/i,
+    match: /(?:harc|historic.*architectural.*review).*(?:demolition|demolish|large.?scale|irreversible)|(?:demolition|demolish).*(?:harc|historic.*landmark|preservation)/i,
     decision: 'Whether to approve exterior alterations, new construction, demolitions, or signage within Telluride\'s National Historic Landmark District.',
     who: 'Property owners seeking approvals, adjacent property owners, and all residents who value the town\'s historic character.',
     stage: 'Check agenda -- HARC reviews can range from minor alterations (staff-level) to full commission hearings for large-scale projects and demolitions.',
@@ -891,75 +1066,10 @@ const WHY_THIS_MATTERS = [
     impact: 'DRB decisions control building aesthetics, massing, and materials in Mountain Village. Large projects reviewed here can significantly affect views, traffic, and neighborhood character.',
     context: 'Mountain Village has its own design standards separate from Telluride\'s HARC. Projects like the gondola terminal redesign and resort-area expansions go through DRB review.'
   },
-
-  // ── General fallback for Fire District ──
-  {
-    match: /fire\s*(protection\s*)?district|station\s*3/i,
-    decision: 'Fire district operations, apparatus, and facilities decisions.',
-    who: 'All residents within the fire protection district -- fire and EMS response times and capabilities affect every property and person.',
-    stage: 'Check agenda for specific items.',
-    impact: 'Station 3 updates and apparatus decisions affect the district\'s capacity to respond to structure fires, wildfires, and medical emergencies in a remote mountain setting with limited mutual aid resources.',
-    context: 'The fire district is pursuing wildfire resiliency code adoption alongside the town. As development increases (potentially adding 1,000+ new daily occupants across proposed projects), fire and EMS capacity must keep pace.'
-  }
 ];
 
-const GOV_GLOSSARY = {
-  'PUD': 'Planned Unit Development -- a special zoning tool that lets a developer propose a custom mix of uses (housing, commercial, open space) that wouldn\'t be allowed under standard zoning rules. The trade-off is that developers get flexibility, but the community gets to negotiate conditions.',
-  'deed restriction': 'A legal rule attached to a property\'s title that limits how it can be used -- for example, requiring the owner to live and work locally, or capping resale prices to keep housing affordable.',
-  'deed-restricted': 'Housing with a legal rule on the title that limits who can buy or rent it (usually local workers) and often caps the price to keep it affordable.',
-  'deed restrictions': 'Legal rules attached to property titles that limit how they can be used -- commonly requiring local residency or capping sale/rental prices to keep housing affordable.',
-  'TABOR': 'Taxpayer\'s Bill of Rights -- a Colorado constitutional amendment that limits how much governments can collect and spend. Any new tax or tax increase must be approved by voters.',
-  'enterprise fund': 'A government account that runs like a business -- it pays for itself through fees (like water or sewer charges) rather than taxes. Enterprise funds are exempt from TABOR spending limits.',
-  'first reading': 'The first time a proposed law (ordinance) is formally presented to the council. It\'s an introduction -- no final vote yet. Public comment is usually accepted.',
-  'second reading': 'The second and usually final presentation of a proposed ordinance. This is typically when council takes the official vote to approve or reject it.',
-  'work session': 'An informal meeting where elected officials discuss issues and hear presentations, but don\'t take formal votes. These are often the best time for public input because decisions haven\'t been made yet.',
-  'quasi-judicial hearing': 'A hearing where elected officials act more like judges than legislators. They must base their decision only on evidence presented and existing rules -- not public opinion or politics. Testimony is usually given under oath.',
-  'ballot measure': 'A proposed law or policy question placed on the election ballot for voters to approve or reject directly, instead of being decided by elected officials.',
-  'mill levy': 'A property tax rate -- one "mill" equals $1 of tax for every $1,000 of assessed property value. A 10-mill levy on a home assessed at $500,000 means $5,000 in annual property tax.',
-  'AMI': 'Area Median Income -- the middle-point household income for the region. Used to set eligibility for affordable housing programs. For example, "60% AMI" means a household earning 60% of the area\'s median income.',
-  'ordinance': 'A local law passed by a town council or board of commissioners. Ordinances go through readings and public hearings before they become enforceable.',
-  'resolution': 'A formal statement of a decision or policy position by a governing body. Unlike an ordinance, a resolution is not a law -- it expresses intent or direction.',
-  'Measure 300': 'A 2024 Telluride ballot measure that proposed requiring voter approval for large commercial developments over 36 feet or 10,000 sq ft. It received ~40% YES votes.',
-  'Measure 2B': 'A Telluride ballot measure that authorized $64M in new Town debt (with ~$132M in total interest) for capital projects and housing, partially secured by housing fund revenue.',
-  'CORA': 'Colorado Open Records Act -- a state law giving the public the right to inspect and copy most government records. Agencies must respond to requests within 3 business days.',
-  'HB24-1107': 'Colorado House Bill 24-1107 -- a state law requiring counties with housing shortages to speed up review of affordable housing projects and reduce regulatory barriers.',
-  'HB23-1123': 'Colorado House Bill 23-1123 -- a state law requiring local governments to allow more housing types and streamline housing development approvals.',
-  'comprehensive plan': 'A community\'s long-range blueprint for growth and land use. It guides zoning decisions, infrastructure investments, and development policy for 10-20 years.',
-  'Comp Plan': 'Short for Comprehensive Plan -- a community\'s long-range blueprint for growth and land use that guides zoning, infrastructure, and development policy.',
-  'zoning': 'Local rules that divide a community into areas (zones) and specify what can be built in each -- residential, commercial, industrial, etc. -- plus building height, density, and setback requirements.',
-  'rezoning': 'The process of changing a property\'s zoning designation -- for example, from residential to commercial. Usually requires public hearings and approval by the local governing body.',
-  'setback': 'The minimum required distance between a building and the property line, street, or other boundary. Setbacks control how close structures can be built to each other or to public spaces.',
-  'annexation': 'The process of bringing land outside town boundaries into the town\'s jurisdiction. Once annexed, the land is subject to the town\'s taxes, regulations, and services.',
-  'special meeting': 'A government meeting called outside the regular schedule to address specific urgent items. Public notice requirements still apply.',
-  'public hearing': 'A formal meeting where community members can testify for or against a proposed action. Officials are required to consider this input before voting.',
-  'variance': 'An exception to zoning rules granted for a specific property -- for example, allowing a building to be taller than normally permitted. Requires a showing of hardship.',
-  'defensible space': 'The area around a building where vegetation and materials are managed to reduce wildfire risk. Typically divided into zones extending 100+ feet from the structure.'
-};
 
-const GLOSSARY_TERMS_SORTED = Object.keys(GOV_GLOSSARY).sort((a, b) => b.length - a.length);
 
-const MEETING_ZOOM_LINKS = {
-  // ── Telluride ──
-  'telluride|2026-03-26|Planning & Zoning Commission':
-    'https://us06web.zoom.us/meeting/register/pvzPtHtIRZmah22XUU2xLg',
-
-  'telluride|2026-03-31|Town Council':
-    'https://us06web.zoom.us/meeting/register/xwQzQrv5TcSwUDVj1eylkg',
-
-  // ── County ──
-  'county|2026-03-25|Board of County Commissioners Special Meeting':
-    'https://us02web.zoom.us/meeting/register/OtNb_dreTomuYTpzADMLGQ#/registration',
-};
-
-const SCHOOL_ZOOM_LINK = 'https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09';
-
-const MEETING_PASSCODES = {
-  // ── County BOCC ──
-  'county|2026-03-25|Board of County Commissioners Meeting': {
-    id: '816 3670 5978',
-    passcode: '025045',
-    phone: '719-359-4580 or 253-205-0468'
-  },
   'county|2026-03-25|Board of County Commissioners Special Meeting': {
     id: '816 3670 5978',
     passcode: '025045',
@@ -1081,6 +1191,23 @@ const LAND_USE_ISSUES = {
     statusTitle: 'The code-change process may matter more than any single project.',
     statusCopy: 'San Miguel County is undertaking a comprehensive land use code audit (June 2025 -- Sept 2026) funded by a Colorado Proposition 123 Local Planning Capacity Grant. The Stakeholder Strategic Roundtable (SSR) -- a mix of County staff, planning commissioners, school and housing officials, and 12 appointed community members -- meets monthly to review existing housing policies and shape draft amendments. The County notes this work also positions it for Proposition 123 "Fast Track Approval" funding, but does NOT satisfy SB24-174, which still requires a separate Housing Action Plan by January 1, 2028. If review timelines shorten or approval standards shift through this code audit, the practical balance between faster housing production and meaningful public review, environmental protection, and growth management changes for years to come.',
     nextStep: 'Read the LUCA Draft (April 8, 2026) and the SSR-vs-County redline below, then attend Spring 2026 community review or submit comments to housingupdate@sanmiguelcountyco.gov.',
+    controversyUpdate: {
+      date: 'May 14, 2026',
+      heading: 'May 14 Planning Commission — Fast Track Review',
+      packetHref: '/assets/packets/planning-commission-2026-05-14-packet.pdf',
+      points: [
+        { label: 'Why it is before the Commission now',
+          text: 'San Miguel County must adopt a qualifying fast-track review process by June 30, 2026 to access Proposition 123 planning and infrastructure grant funds this fiscal year. Missing the June 30 window pushes the deadline to December 31 — and risks losing eligibility altogether. Planning Director Kaye Simonson drafted the amendment; it is Agenda Item 7 at the May 14 Planning Commission meeting, with a Commission recommendation to the BOCC expected.' },
+        { label: 'What the amendment actually does',
+          text: 'Eligible projects — those with at least 50% deed-restricted affordable units (rental at or below 120% AMI, for-sale at or below 200% AMI) — would receive a guaranteed 90-day review window. Critically, the amendment does NOT change substantive Land Use Code standards, does not obligate the County to approve any project, and does not allow more market-rate housing. It compresses only the review timeline, not the approval criteria.' },
+        { label: 'SSR position: 5 of 7 members opposed',
+          text: 'At its April 27 meeting the Stakeholder Strategic Roundtable weighed in. Five of seven members opposed moving the amendment forward as Phase 1. Their objections: the County is rushing the fast-track piece ahead of comprehensive code reform; the draft drops the 10-unit project-size cap the SSR had recommended; and other code amendments should be adopted before any accelerated pathway is created for large projects. Two members were in favor.' },
+        { label: 'Public comment: 9 submitted, all in opposition',
+          text: 'Every public comment received before the May 14 meeting opposed the amendment. Commenters — Morgan Smith, Nick Farkouh, Pam Bennett, Scott Bennett, Shellie Duplan (Aldasoro Ranch HOA), Emily Masson, Jolana Vankova, Lauren Murray, and Virginia Lucarelli — raised consistent themes: complete the broader code reform before creating a fast-track; restore the project-size limit; ensure meaningful public notice and hearing rights are not eroded.' },
+        { label: 'The core dispute',
+          text: 'The County\'s position is that the fast-track amendment should come first (Phase 1) to protect grant eligibility while the broader code reform continues in parallel. The SSR majority and virtually all public commenters argue the reverse: finish the comprehensive code overhaul first, then build a fast-track pathway inside a reformed framework with the right safeguards in place. The Planning Commission must decide whether the June 30 grant deadline justifies front-loading the fast-track before those safeguards exist.' }
+      ]
+    },
     metrics: [
       { label: 'Big question', value: 'Speed vs. scrutiny', sub: 'How much process should be compressed in the name of housing delivery?' },
       { label: 'Who is affected', value: 'Every future applicant and every future neighbor', sub: 'Code amendments are system rules, not one-off exceptions.' },
@@ -1092,10 +1219,13 @@ const LAND_USE_ISSUES = {
       { date: 'Summer 2025', title: 'Community Listening Sessions and Code Review begin', copy: 'First series of community listening sessions held October 6-8, 2025; second series held December 8, 2025. SSR formed to advise staff and consultants on housing policy and code amendments.' },
       { date: 'Fall 2025 - Apr 2026', title: 'SSR meetings 1-5 review existing housing regulations', copy: 'The Stakeholder Strategic Roundtable meets monthly (October, December, January, March, April) to review the Community Housing Zone designation and other housing-related rules. Each meeting packet and high-level summary is posted in the project document center.' },
       { date: 'Now -- Spring 2026', title: 'Community Review of Draft Code Amendments', copy: 'Draft amendments developed over winter are now open for community review. This is the engagement window where the actual ordinance text becomes concrete and residents can weigh in on specifics rather than concepts.' },
+      { date: 'Apr 27, 2026', title: 'SSR takes position on Accelerated Housing Review: 5 to 2 opposed', copy: 'Five of seven SSR members voted against advancing the Accelerated Housing Review amendment as Phase 1, citing the missing project-size limit, wanting comprehensive reform first, and concern that the fast-track is being created before adequate safeguards are in place.' },
+      { date: 'May 14, 2026', title: 'Planning Commission considers Accelerated Housing Review amendment (Agenda Item 7)', copy: 'All 9 public comments received were in opposition. SSR voted 5-2 against advancing as Phase 1. Commission recommendation goes to BOCC. County\'s June 30 Prop 123 grant deadline drives the timing.' },
       { date: 'Summer-Fall 2026', title: 'Planning Commission and BOCC Work Sessions, then Final Presentations', copy: 'After community review, the Planning Commission and Board of County Commissioners hold work sessions on draft amendments, followed by final code amendment presentations in the fall.', future: true },
       { date: 'Winter 2026', title: 'Adoption process for the final code amendments', copy: 'The County moves to formal adoption of the updated land use code, completing the 15-month process. Adopted text -- not the summary -- is what governs every future application.', future: true }
     ],
     docs: [
+      { title: 'May 14, 2026 Planning Commission Packet — Agenda Item 7: Accelerated Housing Review', copy: 'Full PC packet for the May 14 meeting, including staff memo, proposed amendment text, SSR April 27 meeting recap, and all 9 public comments received — all in opposition. This is the most current record of where the amendment stands before the Commission vote.', tag: 'May 14 PC Packet', href: 'https://sanmiguelcoco.portal.civicclerk.com/' },
       { title: 'Accelerated Housing Review LUCA Draft (April 8, 2026)', copy: 'The actual draft code amendment text the County is currently moving forward. This is the single most important document: every rule in this draft becomes law if adopted. Read this BEFORE the redline below to see where the County landed.', tag: 'Flagship Draft', href: 'https://www.sanmiguelcountyco.gov/DocumentCenter/View/14055/Accelerated-Housing-Review-LUCA-Draft-04082026?bidId=' },
       { title: 'SSR-vs-County redline (offline copy)', copy: 'Mirror of the redlined Accelerated Housing Review draft, with SSR additions in BLUE and County deletions in RED. Stored on this site so it stays available even if SMC moves or removes the original. Use this to see exactly what the SSR recommended versus what the County kept.', tag: 'Redline (mirror)', href: 'assets/ssr/Accelerated-Housing-Review-LUCA-redline-SSR-vs-County.pdf' },
       { title: 'San Miguel County Housing Code Update (project page)', copy: 'Official SMC project page -- timeline, listening sessions, SSR roster, document center, and Spanish-language information. The canonical entry point for everything happening in this code audit.', tag: 'SMC Project Page', href: 'https://www.sanmiguelcountyco.gov/882/Housing-Code-Update' },
@@ -1312,12 +1442,13 @@ const DEEP_DIVE_PAGES = [
 const ENTITY_LOGOS = {
   telluride: '<img src="/logo/Telluride%20Town.png" alt="Town of Telluride" style="width:100%;height:100%;object-fit:contain;">',
   county: '<img src="/logo/San Miguel County.png" alt="San Miguel County" style="width:100%;height:100%;object-fit:contain;">',
-  mv: '<img src="https://townofmountainvillage.com/site/themes/vwtheme/build/img/logos/town-of-mountain-village-logo.png" alt="Mountain Village" loading="lazy">',
-  school: '<img src="https://files.smartsites.parentsquare.com/3403/design_img__vb3hiz.png" alt="Telluride School District" loading="lazy">',
+  mv: '<img src="/logo/Mountain%20village%20Town.jpg" alt="Mountain Village" style="width:100%;height:100%;object-fit:contain;">',
+  school: '<img src="/logo/School%20District%20Telluride.png" alt="Telluride School District" style="width:100%;height:100%;object-fit:contain;">',
   smart: '<img src="/logo/SMART.png" alt="SMART" style="width:100%;height:100%;object-fit:contain;">',
   fire: '<img src="/logo/Telluride Fire.png" alt="Telluride Fire Department" style="width:100%;height:100%;object-fit:contain;">',
-  med: '<img src="/logo/Medical.jpeg" alt="Telluride Medical Center" style="width:100%;height:100%;object-fit:contain;">',
-  norwood: '<img src="/logo/Norwood.jpeg" alt="Town of Norwood" style="width:100%;height:100%;object-fit:contain;">',
+  med: '<img src="/logo/Telluride%20Hospital%20Dist.jpeg" alt="Telluride Medical Center" style="width:100%;height:100%;object-fit:contain;">',
+  ridgway: '<img src="/logo/Ridgway%20Town.png" alt="Town of Ridgway" style="width:100%;height:100%;object-fit:contain;">',
+  norwood: '<img src="/logo/Norwood%20Town.jpeg" alt="Town of Norwood" style="width:100%;height:100%;object-fit:contain;">',
   ophir: '<img src="/logo/Ophir.jpeg" alt="Town of Ophir" style="width:100%;height:100%;object-fit:contain;">',
   ttimes: '<img src="/logo/TT%20Logo.png" alt="The Telluride Times" style="width:100%;height:100%;object-fit:contain;">',
   tjc: '<img src="/logo/Telluride%20Jewish.webp" alt="Telluride Jewish Community" style="width:100%;height:100%;object-fit:contain;">',
@@ -1331,13 +1462,15 @@ const ENTITY_LOGOS = {
   koto: '<img src="/logo/koto-fm-logo.webp" alt="KOTO Community Radio" style="width:100%;height:100%;object-fit:contain;">',
   wilkinson: '<img src="/logo/Wilkenson.png" alt="Wilkinson Public Library" style="width:100%;height:100%;object-fit:contain;">',
   airport: '<img src="/logo/Airport.png" alt="Telluride Regional Airport" style="width:100%;height:100%;object-fit:contain;">',
-  clubs: '<img src="/logo/clubs-icon.png" alt="Local Organizations" style="width:100%;height:100%;object-fit:contain;">'
+  clubs: '<img src="/logo/clubs-icon.png" alt="Local Organizations" style="width:100%;height:100%;object-fit:contain;">',
+  'telluride-com': '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1a3a5c,#2a5a8c);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Telluride.com">🎪</div>',
+  smb: '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#4a3010,#7a5020);display:flex;align-items:center;justify-content:center;font-size:1rem;color:#fff;font-weight:700;" title="San Miguel Basin Forum">SMB</div>'
 };
 
 const TOWN_IMAGES = {
-  norwood: '/logo/Norwood.jpeg',
-  mv: '/logo/Mountain%20Village.png',
-  telluride: '/logo/Telluride.png',
+  norwood: '/logo/Norwood%20Town.jpeg',
+  mv: '/logo/Mountain%20village%20Town.jpg',
+  telluride: '/logo/Telluride%20Town.png',
   ridgway: '/logo/Ridgway%20Town.png',
   ophir: '/logo/Ophir.jpeg',
   placerville: '/logo/Placerville.png',
@@ -1355,6 +1488,7 @@ const SOURCE_SHORT_NAME = {
   fire: 'First District',
   med: 'Med Center',
   norwood: 'Norwood',
+  smb: 'Basin Forum',
   ophir: 'Ophir',
   airport: 'TEX',
   wilkinson: 'Wilkinson'
