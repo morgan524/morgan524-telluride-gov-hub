@@ -55,6 +55,30 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "County stakeholders vote against accelerated housing",
+    source: "Telluride Times",
+    date: "May 14, 2026",
+    firstSeen: "2026-05-15",
+    newsTopic: "housing",
+    copy: "County stakeholders failed to reach the 70% supermajority needed to approve a fast-track housing review process that would have expedited projects with at least half deed-restricted units within 90 days. The accelerated review was a requirement for accessing Colorado's affordable housing fund established by Proposition 123, but concerns about project size limits led to the proposal being tabled.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_f8f4bfd3-69ee-4f73-ae4f-bb0e751c3324.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/94/394025f8-fde3-4ab8-984d-fa6884441730/6a06482c2b625.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Firehouse visit",
+    source: "Telluride Times",
+    date: "May 14, 2026",
+    firstSeen: "2026-05-15",
+    newsTopic: "public-safety",
+    copy: "Local preschoolers are wrapping up their school year with their last day on May 14 and graduation ceremony on May 19 at 6 p.m. Baseball and high school track teams are competing at State May 15-16, while the middle school band has their concert May 18 at 7 p.m.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_e5fd4a1a-af15-4b7f-9f21-9ac2c18b02f9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/f4/8f492a71-102e-41f3-bd51-ed01b48705d0/6a04915a7faa2.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Denver runway fatality reveals a weakness in airport security",
     source: "Telluride Times",
     date: "May 14, 2026",
@@ -835,18 +859,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Paul Wisor resigns as MV Town Manager",
-    source: "Telluride Times",
-    date: "May 1, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "arts-culture",
-    copy: "Paul Wisor resigned as Mountain Village Town Manager after participating in an investigation related to the mayor's earlier resignation. His involvement came to light when he revealed he had helped former officials Prohaska and Fee with investor contacts for a ski resort purchase offer that sparked controversy and investigations by both Mountain Village and Telluride.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_2c1cc16d-5e4a-4543-86bd-1faadf9f7028.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/86/38610eb6-050c-4a1d-963e-dd31f000024c/69f4eedeb0d89.image.webp",
-    imgHiRes: true
-  },
-  {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
     source: "Town of Telluride",
     date: "April 24, 2026",
@@ -940,6 +952,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 
 const KOTO_NEWSCASTS = [
   {
+    title: "Newscast 5-14-26",
+    source: "KOTO Community Radio",
+    date: "May 15, 2026",
+    newsTopic: "community",
+    copy: "West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda; Listening Club is the Cure for Disintegration",
+    href: "https://koto.org/news/newscast-5-14-26/"
+  },
+  {
     title: "Newscast 5-13-26",
     source: "KOTO Community Radio",
     date: "May 14, 2026",
@@ -994,14 +1014,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "land-use",
     copy: "The city of Durango has proclaimed April 19, 2026 as Ross Anderson Day, marking twenty years since the Native American speed skier set a U.S. speed-skiing record of 154.06 miles per hour. We’ll also hear from a researcher working in Bears Ears who is turning to crowdfunding to continue his work after losing a federal grant. Then, we head to Utah, w",
     href: "https://koto.org/news/newscast-5-1-26/"
-  },
-  {
-    title: "Newscast 4-30-26",
-    source: "KOTO Community Radio",
-    date: "May 1, 2026",
-    newsTopic: "community",
-    copy: "Local Governments Plan for Disaster; West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda",
-    href: "https://koto.org/news/newscast-4-30-26/"
   }
 ];
 
@@ -1164,17 +1176,6 @@ const COMMUNITY_EVENTS = [
 ];
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Down Valley Community Potluck",
-    link: "https://koto.org/event/down-valley-community-potluck/",
-    description: "The Down Valley community Spring Potluck is Thursday, May 14th, from 6-8 p.m. at the historic Placerville Schoolhouse. Bring something tasty to share and bring your own table service and beverages.",
-    pubDate: "2026-05-14T18:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
   {
     title: "Up-off Gymnastics, Dance, and Spanish",
     link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-05-15/",
@@ -1614,6 +1615,50 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "School Supper Club",
+    link: "https://koto.org/event/school-supper-club/",
+    description: "The restaurant community is coming together for a second year to support our public schools! Different restaurants have promotions to encourage participation and build community!",
+    pubDate: "2026-05-25T00:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/2026SSCSavetheDate.png"
+  },
+  {
+    title: "Women's Empowerment Group",
+    link: "https://koto.org/event/womens-empowerment-group-2/",
+    description: "Join Kaity Swick and Sally Harris Porter with Collaborative Trauma Solutions in a women’s empowerment group focused on fostering connections with like-minded women and developing deeper connections with yourselves and each other. We will incorporate somatic practices, mindfulness exercises and practical tools rooted in mind-body awareness. This will be held in a group setting and will be a trauma-informed and non-judgmental space created to strengthen community and provide a safe space to express yourself. Kaity and Sally will guide the group with relevant topics and supportive tools, so all you have to do is show up with an open mind. Please sign up here if you are interested: https://forms.gle/RLxaexLJar4Vpnhp7",
+    pubDate: "2026-05-26T17:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/Women-Empowerment-4.png"
+  },
+  {
+    title: "George Gage SkateBoarding Movie",
+    link: "https://koto.org/event/george-gage-skateboarding-movie/",
+    description: "Skateboard (1978, PG, 97 min.) was the first feature film to depict the height of the 70s skateboard craze. Many refer to it as the Bad News Bears of the sport. It’s star studded cast includes Alan Garfield, 70s teen idol Leif Garrett, skateboarding legend Tony Alva, and iconic female freestyler and member of the Skateboarding Hall of Fame Ellen O’Neal. It's also the first film Telluride local George Gage ever made! (George is also the founder of the legendary Billy Ball soft ball team.) This screening is free and open to the public, but a hat will be passed for donations to a fund to provide scholarships (or is is skaterships?) for kids who want to attend Telluride Skateboard Camp and could use a little financial help. A Hollywood agent finds himself in debt to a powerful bookie. …",
+    pubDate: "2026-05-26T18:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://koto.org/event/mahjongg-for-independent-players-3/",
+    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you'd like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-05-27T13:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/mahjong-6-1.png"
   }
 ];
 
@@ -3015,24 +3060,6 @@ const LEGAL_NOTICES = [
     papers: ["ttimes_apr2"]
   },
   {
-    title: "Planning Commission Meeting -- Regular Meeting Agenda",
-    entity: "San Miguel County Planning Commission",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "San Miguel County Planning Commission will hold a regular meeting on May 14, 2026 at 9:30 AM. The meeting includes public hearings on land use applications, land use code amendments regarding footprint definitions and accelerated housing review, and a work session on natural medicine code amendments.",
-    deadline: "May 14, 2026 at 9:30 AM",
-    expires: "2026-05-14",
-    dates: "5/6",
-    papers: ["ttimes_0506"],
-    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    address: "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
-    noticeKey: "planning-comm-2026-05-14"
-  },
-  {
     title: "Ordinance -- Community Development Code Amendment for Wildfire Resilience (Passed Second Reading)",
     entity: "Town of Mountain Village",
     entityClass: "ent-county",
@@ -3157,42 +3184,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
     address: "Lots 5 and 6 Block M Ophir",
     noticeKey: "owts-variance-croke-ophir-2026"
-  },
-  {
-    title: "Special Use Permit -- Scenic and Social Application (Parcel #452726103022)",
-    entity: "San Miguel County Planning Commission",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "San Miguel County Planning Commission will hold a public hearing on a Scenic and Social Special Use Permit application. The hearing is scheduled for May 14, 2026 at 10:30 a.m. at the Sheriffs Annex Building in Norwood. Written comments must be received by noon on April 30, 2026.",
-    deadline: "April 30, 2026 (noon for comments); May 14, 2026 (hearing)",
-    expires: "2026-05-14",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "488 S. Avalon Dr., Norwood, CO (Parcel #452726103022)",
-    noticeKey: "sup-scenic-social-452726103022"
-  },
-  {
-    title: "Special Use Permit -- Construction/Contractor Office and Staging Area (Parcel #452726103022)",
-    entity: "San Miguel County Planning Commission",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "John Miller of Ponderosa Planning & Design, on behalf of Kurt Works Inc. and Kurt Crockett, has applied for a Special Use Permit to establish a Construction/Contractor Office and Staging Area for an excavation and grading business. Public hearing scheduled for May 14, 2026 at 10:45 a.m. Written comments due by noon on April 30, 2026.",
-    deadline: "April 30, 2026 (noon for comments); May 14, 2026 (hearing)",
-    expires: "2026-05-14",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "488 S. Avalon Dr., Norwood, CO (Parcel #452726103022)",
-    noticeKey: "sup-contractor-staging-452726103022"
   },
   {
     title: "RFP -- Flooring Replacement at County Buildings",
