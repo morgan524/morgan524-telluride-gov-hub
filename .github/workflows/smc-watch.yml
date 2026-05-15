@@ -15,6 +15,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   watch:
@@ -29,7 +30,7 @@ jobs:
           node-version: '24'
 
       - name: Run SMC watcher
-        run: node scripts/smc-housing-code-watch.js
+        run: node scripts/smc-housing-code-watch.js 2>&1 | tee smc-watch.log
 
       - name: Commit & push if anything changed
         run: |
@@ -42,3 +43,45 @@ jobs:
           git add assets/ssr
           git commit -m "🛰 SMC Housing Code Update mirror $(date -u +%F\ %H:%MZ)"
           git push origin HEAD
+
+      - name: Upload run logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: smc-watch-logs-${{ github.run_id }}
+          path: '*.log'
+          retention-days: 14
+          if-no-files-found: ignore
+
+      - name: Open or update CI Health issue on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_TITLE: '🚨 SMC Housing Code Watch workflow is failing'
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set +e
+          NUM=$(gh issue list --state open --search "$ISSUE_TITLE in:title" --json number --jq '.[0].number // empty')
+          NOW=$(date -u +'%Y-%m-%d %H:%M UTC')
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body "Another failure at $NOW. Run: $RUN_URL"
+          else
+            gh issue create \
+              --title "$ISSUE_TITLE" \
+              --body "$(printf 'The scheduled SMC Housing Code Watch workflow failed.\n\nFirst observed: %s\nRun: %s\n\nLogs are attached to the run as an artifact. This issue auto-closes when the next run succeeds.' "$NOW" "$RUN_URL")"
+          fi
+          exit 0
+
+      - name: Close CI Health issue on success
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_TITLE: '🚨 SMC Housing Code Watch workflow is failing'
+        run: |
+          set +e
+          NUM=$(gh issue list --state open --search "$ISSUE_TITLE in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body "✅ Workflow recovered at $(date -u +'%Y-%m-%d %H:%M UTC'). Closing."
+            gh issue close "$NUM"
+          fi
+          exit 0

@@ -231,11 +231,34 @@ https://livabletelluride-rss-proxy.morgan-8f0.workers.dev
 
 ## Worker source of truth
 
-Lives under `cloudflare-worker/livabletelluride-rss-proxy/` in this workspace:
+Lives under `cloudflare-worker/livabletelluride-rss-proxy/` in this
+workspace — now in version control (was previously dangling on disk
+outside git, so a fresh clone couldn't redeploy from the repo):
 
 - `worker.js`     — the actual Worker code (allow-list, /health, /proxy)
 - `wrangler.toml` — wrangler config; account_id is hard-coded
 - `README.md`     — deploy and wiring instructions
+
+**Pre-flight health check (as of 2026-05-14):** `scripts/content-refresh.js`
+calls the Worker's `/health` endpoint at the start of every run. Two things
+get checked:
+
+1. **Reachability** — if `RSS_PROXY_URL` is set but the Worker doesn't
+   return HTTP 200, the script throws a fatal error with deploy
+   instructions. The `if: failure()` step in `content-refresh.yml`
+   then opens a tracked GitHub Issue automatically. Previously a deleted
+   or paused Worker would silently produce an empty refresh and you'd
+   only notice days later when the news section went stale.
+
+2. **Allow-list drift** — `/health` returns the Worker's current
+   `ALLOWED_HOSTS`. The script asserts that every host in its local
+   `PROXY_HOSTS` is also on the Worker's list. If a host was added to
+   `scripts/content-refresh.js` but never to `worker.js` (or vice
+   versa), the script fails fast at startup. Previously this manifested
+   as "one host mysteriously stopped working" weeks later.
+
+When `RSS_PROXY_URL` is unset (local dev), the health check logs `ℹ`
+and returns — no failure.
 
 To redeploy:
 
@@ -660,6 +683,40 @@ All changes go to `index.html` only.
 
 ## Other workflows in the same repo
 
+## Liveness checks — `scripts/maintenance.js` (daily, ~2026-05-14)
+
+The daily maintenance run now does three liveness probes against the
+off-machine pipeline to catch silent failures that wouldn't show up as a
+workflow failure on their own:
+
+1. **`feed.xml` freshness** — fetches `https://livabletelluride.org/feed.xml`,
+   parses `<lastBuildDate>`. Flags if it's older than 12 hours (suggests
+   `content-refresh.yml` stopped running or `build-rss-feed.js` regressed).
+
+2. **Event Sheet CSV reachability** — fetches the `sheetCsvUrl` from
+   `email-events-config.json`. Flags if it returns non-200, or returns 200
+   but with the wrong header row (Google Sheets publish-to-web sometimes
+   serves HTML for the wrong tab even though the URL still resolves).
+
+3. **Mailchimp digest campaigns** — opt-in via `MAILCHIMP_API_KEY` secret.
+   Calls `GET /3.0/campaigns?status=sent&type=rss`. Flags if no RSS-driven
+   campaign has been sent in the last 48 hours (suggests the campaign was
+   paused, deleted, or the feed URL was changed). When the secret isn't
+   set, the check logs `ℹ` and skips — no failure.
+
+   To turn on: create a Mailchimp API key at
+   `https://us15.admin.mailchimp.com/account/api/`, then add it as a
+   GitHub Actions secret named `MAILCHIMP_API_KEY`. No other config
+   needed — `maintenance.yml` already passes it through to the script
+   when present.
+
+Each check pushes a human-readable description to `maintenance-issues.log`
+on failure (does NOT fail the workflow — they're advisory). The existing
+"Report issues" step surfaces the file as a `::warning::` annotation on
+the workflow run.
+
+## Other workflows in the same repo
+
 - `housing-refresh.yml` — daily housing listing refresh
 - `maintenance.yml`     — daily site cleanup (stale articles, expired
                            legal notices, daily review markdown)
@@ -792,6 +849,61 @@ digest, extend the `main()` builder to read those arrays from `js/gov-hub.js`
 and produce more `buildXItems(...)` flatMaps. The pattern is the same as the
 existing news/legal builders.
 
+## Firestore security rules — single source of truth is `firestore.rules`
+
+The site's Firebase Firestore rules live in `firestore.rules` at the repo
+root, wired up via `firebase.json`. They enforce server-side what the
+client-side admin check (`user.email === 'info@livabletelluride.org'`,
+~6 callsites across `js/hub-bub.js` and `js/gov-hub.js`) cannot — without
+these rules, any authenticated user can DevTools their way into deleting
+any post, flipping `approved: true` on any comment, or stuffing reaction
+counters, because the client checks alone are bypassable.
+
+**Collections protected:**
+- `users/{uid}` — owner writes only (or admin)
+- `posts/{postId}` + `posts/{postId}/replies/{replyId}` — verified users
+  create their own, author or admin edits/deletes; counter fields
+  (`replyCount`, `reactions`, `lastReplyAt`) can be bumped by other
+  verified users via a `diff().affectedKeys().hasOnly([...])` allow-list
+- `replies` (top-level, legacy) — same shape as the subcollection
+- `reactions/{docId}` — signed-in users (including anonymous Firebase
+  Auth users) can create/update counters; admin-only delete. As of
+  2026-05-14 the client uses Firebase Auth uid as the voter identifier
+  (see `getVoterId()` in `js/gov-hub.js`) and the rules enforce that
+  every write must place the caller's uid into at least one of the
+  voters arrays (`attending_voters`, `matters_voters`, `learn_voters`,
+  `concerns_voters`, `handled_voters` — the suffixes of `QR_OPTIONS` in
+  `js/gov-data.js`). If you ever change `QR_OPTIONS`, update `firestore.rules`
+  to match or reactions silently fail to write.
+
+  **Manual one-time setup required:** anonymous Firebase Auth must be
+  enabled in the Firebase Console (Authentication → Sign-in method →
+  Anonymous → Enable). Until it is, anonymous visitors fall back to a
+  localStorage fingerprint that the new rules reject, so reactions only
+  work for users who have signed into Hub-Bub. The fallback logs a
+  one-time `console.warn` with the enable URL so you'll spot it in DevTools.
+- `govhub_comments/{commentId}` — anyone signed-in can create with
+  `approved: false`; admin flips to `approved: true`; the `useful`
+  counter is the only field other users can update
+- Default-deny on any unmatched path
+
+**Deploy:**
+```bash
+firebase deploy --only firestore:rules
+# or paste firestore.rules into:
+# Firebase Console → Firestore Database → Rules → Publish
+```
+
+**If you rotate the admin email** — currently `info@livabletelluride.org`
+— update BOTH the client check sites (grep for the literal string) AND
+the `isAdmin()` function in `firestore.rules`. The two MUST agree.
+
+**Future improvement:** replace email-based admin check with Firebase
+Custom Claims (`request.auth.token.admin == true`) set via the Firebase
+Admin SDK. That eliminates the email-as-identity coupling and lets you
+have multiple admins without touching code. Out of scope for the
+initial rules deploy.
+
 ## Email addresses on the project
 
 The `livabletelluride.org` domain has three role addresses, each with a
@@ -828,9 +940,11 @@ live INSIDE a Google account, not in this repo.
         - writes a row to the "Event Inbox" Google Sheet
         - applies a "Processed" Gmail label so each thread runs once
         - emails info@livabletelluride.org a receipt summary
-        Source: scripts/../email-to-events-appscript.js (in this repo,
-        but the deployed copy lives in the Gmail account's
-        Extensions → Apps Script editor)
+        Source: email-to-events-appscript.SOURCE.js at the repo root.
+        The .SOURCE suffix is a flag — this file does not run anywhere.
+        The deployed copy lives inside the events@ Gmail account at
+        Extensions → Apps Script. Edits here are reference-only until
+        someone manually pastes them into the Apps Script editor.
         │
         ▼
    3. Google Sheet "Event Inbox", published as CSV.
@@ -869,10 +983,13 @@ Walk this in order; each step rules out one stage of the pipeline.
    (sender's deliverability, Google's spam filter, etc.) — not on us.
 
 2. **Confirm the Apps Script is deployed and running.** In the Gmail
-   account: Extensions → Apps Script → check that `email-to-events-appscript.js`
-   is present and `setupTrigger` was run. Triggers tab should show two:
+   account: Extensions → Apps Script → check the project is present and
+   `setupTrigger` was run. Triggers tab should show two:
    `processNewEmails` (every 5 min) and `checkAddedEvents` (every 10 min).
-   If those don't exist, follow `EMAIL-EVENTS-SETUP.md` to install.
+   If those don't exist, paste the contents of
+   `email-to-events-appscript.SOURCE.js` (at the repo root) into the
+   Apps Script editor, save, then run `setupTrigger` once and authorize.
+   See the file's top-of-file header for full deploy instructions.
 
 3. **Check the Apps Script's Execution log.** Apps Script editor → Executions
    tab. Look for recent `processNewEmails` runs and what they logged. The
@@ -1018,9 +1135,11 @@ this fix.
 
 ### Operational notes for editing the pipeline
 
-- **Editing the parser?** Update `email-to-events-appscript.js` here AND
-  paste the updated copy into the Gmail account's Apps Script editor.
-  Without the second step the live behavior doesn't change.
+- **Editing the parser?** Update `email-to-events-appscript.SOURCE.js`
+  here AND paste the updated copy into the events@ Gmail account's
+  Apps Script editor. Without the second step the live behavior does
+  not change. The `.SOURCE` suffix in the filename and the prominent
+  header comment exist specifically to prevent this footgun.
 - **Changing Sheet shape?** Headers must match `appendToSheet()`'s order
   exactly (Status | Title | Date | EndDate | Location | Time | Description |
   SourceURL | SubmittedAt | EmailSubject | EmailFrom). Reordering breaks
@@ -1040,6 +1159,19 @@ this fix.
   `<enclosure>`. The script tolerates a missing `img`. If many cards on the
   live site render without thumbnails, look at whether the upstream RSS
   shape has changed.
-- **Site cache busters** — when changing `js/gov-hub.js` or `css/site.css`,
-  bump the `?v=` query string in `index.html` so browsers actually pick up
-  the change. The bot does NOT bump cache busters automatically.
+- **Site cache busters — auto-bumped by content-refresh.js** (as of
+  2026-05-14). The `bumpCacheBusters()` function at the end of
+  `scripts/content-refresh.js` updates the `?v=...` query string on
+  `js/gov-hub.js`, `js/gov-data.js`, `js/corrections.js`,
+  `js/legal-standalone.js`, and `css/site.css` whenever the refresh
+  produced any change. It also bumps `CACHE_NAME` in `sw.js` so the
+  Service Worker invalidates its pre-cached shell. Both keys are derived
+  from the same UTC timestamp (`YYYY-MM-DD-HHMM`) so they always agree.
+  When making manual edits to those assets between scheduled refreshes,
+  you can still bump the `?v=` strings yourself; the next bot run will
+  overwrite with its own stamp.
+
+  If you add a NEW versioned asset to `index.html`, also append its path
+  to the `assetPaths` array inside `bumpCacheBusters()`, and seed it with
+  any `?v=initial` value (the regex only matches assets that already have
+  a `?v=`).

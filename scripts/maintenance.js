@@ -47,6 +47,32 @@ function checkUrl(url) {
   });
 }
 
+// Fetch text body + status + headers, with a timeout. Used by the liveness
+// checks below (feed.xml freshness, Google Sheet CSV reachability) where
+// we need to inspect content, not just status.
+function fetchText(url, timeoutMs = 10000, headers = {}) {
+  return new Promise((resolve, reject) => {
+    const mod = url.startsWith('https') ? https : http;
+    const req = mod.get(url, {
+      headers: {
+        'User-Agent': 'TellurideGovHub/2.0 (liveness-check)',
+        ...headers
+      },
+      timeout: timeoutMs
+    }, (res) => {
+      // Follow redirects once (Google Sheets pub URLs sometimes 302).
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        return fetchText(res.headers.location, timeoutMs, headers).then(resolve, reject);
+      }
+      let data = '';
+      res.on('data', c => data += c);
+      res.on('end', () => resolve({ status: res.statusCode, body: data, headers: res.headers }));
+    });
+    req.on('error', reject);
+    req.on('timeout', () => { req.destroy(); reject(new Error('Timeout after ' + timeoutMs + 'ms')); });
+  });
+}
+
 // ── JS file parsing helpers ──
 function extractJsArray(source, varName) {
   const startRe = new RegExp(`const\\s+${varName}\\s*=\\s*\\[`);
@@ -261,6 +287,163 @@ function checkParity() {
 }
 
 // ══════════════════════════════════════════════════════════════
+// ── Liveness checks: off-machine pipeline health ──
+// ══════════════════════════════════════════════════════════════
+//
+// The site has three "scheduled updates that happen off your machine"
+// risks where the pipeline can break silently:
+//   1. feed.xml stops being regenerated (content-refresh.yml broken,
+//      build-rss-feed.js broken, GitHub Pages not serving)
+//   2. Event-Sheet publish-to-web URL stops returning CSV (Apps Script
+//      dead, Sheet deleted, publish disabled)
+//   3. Mailchimp digest campaign paused (no API key check today, so we
+//      can't detect this without opting in via MAILCHIMP_API_KEY)
+//
+// Each check pushes a human-readable description to `issues[]`. The
+// existing "Report issues" step in maintenance.yml turns the file into
+// a workflow warning, and the new failure-tracker step opens a tracked
+// GitHub Issue if the workflow itself dies.
+
+const FEED_URL = 'https://livabletelluride.org/feed.xml';
+const FEED_STALE_HOURS = 12;
+const EVENTS_CONFIG_FILE = path.join(REPO_ROOT, 'email-events-config.json');
+const MAILCHIMP_STALE_HOURS = 48;
+
+async function checkFeedFreshness() {
+  console.log('\n📰 Liveness: feed.xml freshness...');
+  try {
+    const res = await fetchText(FEED_URL, 10000);
+    if (res.status !== 200) {
+      issues.push(`feed.xml fetch returned HTTP ${res.status} — Mailchimp digest can't consume the feed. URL: ${FEED_URL}`);
+      return;
+    }
+    const m = res.body.match(/<lastBuildDate>([^<]+)<\/lastBuildDate>/);
+    if (!m) {
+      issues.push(`feed.xml does not contain <lastBuildDate> — RSS format may have broken in scripts/build-rss-feed.js`);
+      return;
+    }
+    const lastBuild = new Date(m[1]);
+    if (isNaN(lastBuild)) {
+      issues.push(`feed.xml <lastBuildDate> is not a parseable date: "${m[1]}"`);
+      return;
+    }
+    const hoursAgo = (Date.now() - lastBuild.getTime()) / 3600000;
+    if (hoursAgo > FEED_STALE_HOURS) {
+      issues.push(
+        `feed.xml is STALE — lastBuildDate was ${hoursAgo.toFixed(1)}h ago ` +
+        `(threshold: ${FEED_STALE_HOURS}h). Either content-refresh.yml stopped ` +
+        `running, build-rss-feed.js is failing silently, or GitHub Pages isn't ` +
+        `picking up commits. Check Actions tab for the most recent Content ` +
+        `Refresh run.`
+      );
+    } else {
+      console.log(`  ✓ feed.xml is fresh (lastBuildDate ${hoursAgo.toFixed(1)}h ago)`);
+    }
+  } catch (e) {
+    issues.push(`feed.xml fetch failed: ${e.message}`);
+  }
+}
+
+async function checkEventsSheet() {
+  console.log('\n📥 Liveness: event Sheet CSV reachability...');
+  let config;
+  try {
+    const raw = fs.readFileSync(EVENTS_CONFIG_FILE, 'utf8');
+    config = JSON.parse(raw);
+  } catch (e) {
+    issues.push(`email-events-config.json missing or unreadable — email-to-events pipeline is misconfigured`);
+    return;
+  }
+  if (!config.sheetCsvUrl) {
+    console.log('  ℹ email-events-config.json has no sheetCsvUrl — pipeline is intentionally disabled');
+    return;
+  }
+  try {
+    const res = await fetchText(config.sheetCsvUrl, 15000);
+    if (res.status !== 200) {
+      issues.push(
+        `Event Sheet CSV returned HTTP ${res.status}. The publish-to-web URL ` +
+        `may have been disabled. Re-publish via Google Sheets → File → ` +
+        `Share → Publish to web → Publish.`
+      );
+      return;
+    }
+    // Google Sheets publish-to-web sometimes serves HTML if "Stop publishing"
+    // was clicked, even though the URL still returns 200. The CSV must have
+    // the expected header row to be useful to content-refresh.js Task 5.
+    const firstLine = (res.body || '').split('\n')[0];
+    if (!/Status/i.test(firstLine) || !/Title/i.test(firstLine)) {
+      issues.push(
+        `Event Sheet CSV does not look like the expected schema. First row: ` +
+        `"${firstLine.slice(0, 120)}". Expected to start with "Status,Title,Date,..." — ` +
+        `the publish URL may be serving the wrong sheet tab or an HTML error page.`
+      );
+      return;
+    }
+    const rowCount = res.body.split('\n').filter(l => l.trim()).length - 1;
+    console.log(`  ✓ Event Sheet CSV reachable (${rowCount} data rows)`);
+  } catch (e) {
+    issues.push(`Event Sheet CSV fetch failed: ${e.message}`);
+  }
+}
+
+async function checkMailchimpDigests() {
+  console.log('\n📧 Liveness: Mailchimp digest campaigns...');
+  const apiKey = process.env.MAILCHIMP_API_KEY;
+  if (!apiKey) {
+    console.log('  ℹ MAILCHIMP_API_KEY not set — skipping digest campaign check.');
+    console.log('     To enable: create an API key at https://us15.admin.mailchimp.com/account/api/');
+    console.log('     and add it as a GitHub Actions secret named MAILCHIMP_API_KEY.');
+    return;
+  }
+  // Mailchimp API keys carry their data-center suffix: e.g. "abc123-us15".
+  const dc = (apiKey.split('-')[1] || 'us15');
+  const url = `https://${dc}.api.mailchimp.com/3.0/campaigns?status=sent&type=rss&count=10&sort_field=send_time&sort_dir=DESC`;
+  try {
+    const res = await fetchText(url, 15000, {
+      // Mailchimp accepts HTTP Basic with "anystring:<api-key>".
+      'Authorization': 'Basic ' + Buffer.from('anystring:' + apiKey).toString('base64'),
+      'Accept': 'application/json'
+    });
+    if (res.status === 401) {
+      issues.push(`Mailchimp API returned 401 — MAILCHIMP_API_KEY is invalid or revoked`);
+      return;
+    }
+    if (res.status !== 200) {
+      issues.push(`Mailchimp API returned HTTP ${res.status} for campaigns list`);
+      return;
+    }
+    let parsed;
+    try { parsed = JSON.parse(res.body); }
+    catch (_) { issues.push('Mailchimp API returned non-JSON body'); return; }
+    const campaigns = parsed.campaigns || [];
+    if (campaigns.length === 0) {
+      issues.push(
+        `No RSS-driven Mailchimp campaigns have EVER been sent. The daily / ` +
+        `weekly digest campaigns may not be configured. Set them up at ` +
+        `https://us15.admin.mailchimp.com/ → Campaigns → Create → RSS-driven email.`
+      );
+      return;
+    }
+    const latest = campaigns[0];
+    const sentAt = new Date(latest.send_time);
+    const hoursSinceLast = (Date.now() - sentAt.getTime()) / 3600000;
+    if (hoursSinceLast > MAILCHIMP_STALE_HOURS) {
+      issues.push(
+        `Newest Mailchimp RSS campaign was sent ${hoursSinceLast.toFixed(0)}h ago ` +
+        `(threshold: ${MAILCHIMP_STALE_HOURS}h). The daily digest may be paused. ` +
+        `Check https://us15.admin.mailchimp.com/ → Campaigns and confirm the ` +
+        `RSS-driven campaign is enabled and points at livabletelluride.org/feed.xml.`
+      );
+    } else {
+      console.log(`  ✓ Latest Mailchimp RSS campaign sent ${hoursSinceLast.toFixed(1)}h ago — "${latest.settings && latest.settings.subject_line || '?'}"`);
+    }
+  } catch (e) {
+    issues.push(`Mailchimp API check failed: ${e.message}`);
+  }
+}
+
+// ══════════════════════════════════════════════════════════════
 // ── Main ──
 // ══════════════════════════════════════════════════════════════
 
@@ -279,6 +462,12 @@ async function main() {
   pulseSrc = cleanupPulse(pulseSrc);
   await checkLinks(govHubSrc, pulseSrc);
   checkParity();
+
+  // Liveness checks (off-machine pipeline health). Each soft-fails into
+  // `issues` so all three run even if an earlier one finds a problem.
+  await checkFeedFreshness();
+  await checkEventsSheet();
+  await checkMailchimpDigests();
 
   // Write updated files
   if (changed) {

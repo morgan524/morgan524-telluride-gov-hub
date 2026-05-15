@@ -1,20 +1,41 @@
 /**
- * ═══════════════════════════════════════════════════════════
- * LIVABLE TELLURIDE — Email-to-Events Google Apps Script
- * ═══════════════════════════════════════════════════════════
+ * ═══════════════════════════════════════════════════════════════════
+ * LIVABLE TELLURIDE — Email-to-Events Google Apps Script (SOURCE COPY)
+ * ═══════════════════════════════════════════════════════════════════
  *
- * Deploy this script on the dedicated Gmail account.
- * It processes incoming emails, extracts event details,
- * and writes them to a Google Sheet for the site to pick up.
+ * ⚠️  THIS FILE DOES NOT RUN ANYWHERE. It is a reference / source copy.
  *
- * SETUP:
+ *     The script that ACTUALLY runs the email-to-events pipeline lives
+ *     inside the events@livabletelluride.org Gmail account, at:
+ *
+ *       https://script.google.com/  → "Email-to-Events" project
+ *       (or: events@ → Extensions → Apps Script)
+ *
+ *     Editing THIS file changes nothing in production. To deploy a
+ *     change you MUST also:
+ *       1. Open the Apps Script editor in the events@ account
+ *       2. Paste the new code over the existing project
+ *       3. Save (Cmd-S / Ctrl-S)
+ *       4. If you added/removed a trigger function, re-run setupTrigger()
+ *
+ *     This file lives in version control so changes are reviewable and
+ *     diffable, and so a future maintainer can re-create the deployed
+ *     script if it's ever lost. But step 2 above is the gate — without
+ *     it, the bug you "fixed" here is still live.
+ *
+ * ═══════════════════════════════════════════════════════════════════
+ *
+ * FIRST-TIME SETUP (only if the deployed script is being recreated):
  * 1. Open Google Sheets → create a new sheet called "Event Inbox"
  * 2. Add headers in Row 1: Status | Title | Date | EndDate | Location | Time | Description | SourceURL | SubmittedAt | EmailSubject | EmailFrom
  * 3. Publish the sheet: File → Share → Publish to web (as CSV, entire document)
- * 4. Copy the published CSV URL — you'll need it for the scheduled task
+ * 4. Copy the published CSV URL into email-events-config.json (sheetCsvUrl field)
  * 5. Open Extensions → Apps Script → paste this code → Save
  * 6. Run "setupTrigger" once to create the auto-check trigger
  * 7. Authorize when prompted
+ *
+ * See CLAUDE.md "Email-to-events ingestion pipeline" for the full
+ * architecture and debug runbook.
  */
 
 // ── CONFIG ──

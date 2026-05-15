@@ -62,6 +62,53 @@ function truncate(text, maxLen = 200) {
   return text.slice(0, maxLen).replace(/\s+\S*$/, '') + '…';
 }
 
+// HTML-escape any value for safe interpolation into innerHTML or quoted
+// attributes. Use on EVERY field that originates from RSS, the
+// email-to-events Sheet pipeline, the corrections form, or any other
+// external source — a malicious title/location/description otherwise
+// executes script when rendered.
+function ltEsc(s) {
+  if (s === null || s === undefined) return '';
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+// Firebase access — returns the compat Firestore instance once
+// firebase-firestore-compat.js has loaded AND `firebase.initializeApp` has
+// been called by hub-bub.js (which carries the canonical config). Returns
+// null while either of those is still pending. All gov-hub Firebase
+// callers are interaction-time (reactions, comments, the moderation
+// modal), so by the time they fire hub-bub.js has long since initialised.
+function _ltFb() {
+  if (typeof firebase === 'undefined' || !firebase.apps || !firebase.apps.length) return null;
+  try { return firebase.firestore(); } catch(e) { return null; }
+}
+function _ltAuth() {
+  if (typeof firebase === 'undefined' || !firebase.apps || !firebase.apps.length) return null;
+  try { return firebase.auth(); } catch(e) { return null; }
+}
+
+// Sanitize a URL for use in an href/src attribute. Returns '#' for any
+// scheme other than http/https/mailto/tel (blocking javascript:, data:,
+// vbscript:, etc.) and HTML-escapes the result for safe attribute use.
+function ltSafeUrl(u) {
+  if (u === null || u === undefined) return '#';
+  const s = String(u).trim();
+  if (!s) return '#';
+  const schemeMatch = s.match(/^([a-z][a-z0-9+.-]*):/i);
+  if (schemeMatch) {
+    const scheme = schemeMatch[1].toLowerCase();
+    if (scheme !== 'http' && scheme !== 'https' && scheme !== 'mailto' && scheme !== 'tel') {
+      return '#';
+    }
+  }
+  return ltEsc(s);
+}
+
 // Parse a date string into a LOCAL-midnight Date (avoids UTC-to-Mountain off-by-one).
 // Accepts "March 31, 2026", "2026-03-31", "2026-03-31T10:00:00", etc.
 function localDate(str) {
@@ -1413,14 +1460,14 @@ function renderLandUseTab() {
     </div>`;
   timelineEl.innerHTML = [...issue.timeline].reverse().map(event => `
     <div class="landuse-event ${event.future ? 'future' : ''}">
-      <div class="landuse-event-date">${event.date}</div>
-      <div class="landuse-event-title">${event.title}</div>
-      <div class="landuse-event-copy">${event.copy}</div>
+      <div class="landuse-event-date">${ltEsc(event.date)}</div>
+      <div class="landuse-event-title">${ltEsc(event.title)}</div>
+      <div class="landuse-event-copy">${ltEsc(event.copy)}</div>
     </div>`).join('');
   docsEl.innerHTML = issue.docs.map(doc => `
-    <a class="landuse-doc-item" href="${doc.href}" target="_blank" rel="noopener">
-      <div><strong>${doc.title}</strong><span>${doc.copy}</span></div>
-      <div class="landuse-doc-tag">${doc.tag}</div>
+    <a class="landuse-doc-item" href="${ltSafeUrl(doc.href)}" target="_blank" rel="noopener">
+      <div><strong>${ltEsc(doc.title)}</strong><span>${ltEsc(doc.copy)}</span></div>
+      <div class="landuse-doc-tag">${ltEsc(doc.tag)}</div>
     </a>`).join('');
 
   const meetingsPanel = meetingsEl.closest('.landuse-panel');
@@ -1431,9 +1478,9 @@ function renderLandUseTab() {
     if (issue.meetings && issue.meetings.length) {
       meetingsEl.innerHTML = issue.meetings.map(item => `
         <div class="landuse-compact-item">
-          <div class="landuse-compact-meta">${item.date}${item.time ? ' · ' + item.time : ''}</div>
-          <a class="landuse-compact-title" href="${item.href}" target="_blank" rel="noopener">${item.title}</a>
-          <div class="landuse-compact-copy">${item.source}${item.location ? '<br>' + item.location : ''}${item.zoom ? '<br>' + item.zoom : ''}</div>
+          <div class="landuse-compact-meta">${ltEsc(item.date)}${item.time ? ' · ' + ltEsc(item.time) : ''}</div>
+          <a class="landuse-compact-title" href="${ltSafeUrl(item.href)}" target="_blank" rel="noopener">${ltEsc(item.title)}</a>
+          <div class="landuse-compact-copy">${ltEsc(item.source)}${item.location ? '<br>' + ltEsc(item.location) : ''}${item.zoom ? '<br>' + ltEsc(item.zoom) : ''}</div>
         </div>`).join('');
     } else {
       const allMeetings = window.__allMeetingsCache || [];
@@ -1447,9 +1494,9 @@ function renderLandUseTab() {
       }).slice(0, 4);
       meetingsEl.innerHTML = meetings.length ? meetings.map(item => `
         <div class="landuse-compact-item">
-          <div class="landuse-compact-meta">${friendlyDate(item.eventDate)}${item.eventTimes ? ' · ' + item.eventTimes : ''}</div>
-          <a class="landuse-compact-title" href="${item.link}" target="_blank" rel="noopener">${item.title}</a>
-          <div class="landuse-compact-copy">${item.sourceLabel}${item.location ? '<br>' + item.location : ''}</div>
+          <div class="landuse-compact-meta">${friendlyDate(item.eventDate)}${item.eventTimes ? ' · ' + ltEsc(item.eventTimes) : ''}</div>
+          <a class="landuse-compact-title" href="${ltSafeUrl(item.link)}" target="_blank" rel="noopener">${ltEsc(item.title)}</a>
+          <div class="landuse-compact-copy">${ltEsc(item.sourceLabel)}${item.location ? '<br>' + ltEsc(item.location) : ''}</div>
         </div>`).join('') : '<div class="landuse-empty">No upcoming land-use meetings found right now. Check the agenda portals above.</div>';
     }
   }
@@ -1466,9 +1513,9 @@ function renderLandUseTab() {
       if (legalP)  legalP.textContent  = issue.legalIssuesSub   || 'Key legal and transparency questions surrounding this topic.';
       legalEl.innerHTML = issue.legalIssues.map(item => `
         <div class="landuse-player">
-          <div class="landuse-player-icon">${item.icon}</div>
-          <div><div class="landuse-player-title">${item.title}</div>
-          <div class="landuse-player-copy">${item.copy}</div></div>
+          <div class="landuse-player-icon">${ltEsc(item.icon)}</div>
+          <div><div class="landuse-player-title">${ltEsc(item.title)}</div>
+          <div class="landuse-player-copy">${ltEsc(item.copy)}</div></div>
         </div>`).join('');
     } else {
       legalPanel.style.display = 'none';
@@ -1479,9 +1526,9 @@ function renderLandUseTab() {
   if (issue.news && issue.news.length) {
     newsEl.innerHTML = issue.news.map(item => `
       <div class="landuse-compact-item">
-        <div class="landuse-compact-meta">${item.source} · ${item.date}</div>
-        <a class="landuse-compact-title" href="${item.href}" target="_blank" rel="noopener">${item.title}</a>
-        <div class="landuse-compact-copy">${item.copy}</div>
+        <div class="landuse-compact-meta">${ltEsc(item.source)} · ${ltEsc(item.date)}</div>
+        <a class="landuse-compact-title" href="${ltSafeUrl(item.href)}" target="_blank" rel="noopener">${ltEsc(item.title)}</a>
+        <div class="landuse-compact-copy">${ltEsc(item.copy)}</div>
       </div>`).join('');
   } else {
     const allNews = window.__allNewsCache || [];
@@ -1494,16 +1541,16 @@ function renderLandUseTab() {
     }).slice(0, 4);
     newsEl.innerHTML = news.length ? news.map(item => `
       <div class="landuse-compact-item">
-        <div class="landuse-compact-meta">${item.sourceLabel} · ${fullDate(item.pubDate)}</div>
-        <a class="landuse-compact-title" href="${item.link}" target="_blank" rel="noopener">${item.title}</a>
-        <div class="landuse-compact-copy">${item.description || 'Open the full item for details.'}</div>
+        <div class="landuse-compact-meta">${ltEsc(item.sourceLabel)} · ${fullDate(item.pubDate)}</div>
+        <a class="landuse-compact-title" href="${ltSafeUrl(item.link)}" target="_blank" rel="noopener">${ltEsc(item.title)}</a>
+        <div class="landuse-compact-copy">${ltEsc(item.description || 'Open the full item for details.')}</div>
       </div>`).join('') : '<div class="landuse-empty">No recent land-use-related coverage surfaced from the current feeds.</div>';
   }
 
   playersEl.innerHTML = issue.players.map(player => `
     <div class="landuse-player">
-      <div class="landuse-player-badge">${player.icon}</div>
-      <div><strong>${player.title}</strong><span>${player.copy}</span></div>
+      <div class="landuse-player-badge">${ltEsc(player.icon)}</div>
+      <div><strong>${ltEsc(player.title)}</strong><span>${ltEsc(player.copy)}</span></div>
     </div>`).join('');
 
   // Optional roster panel (e.g. SSR for Code Changes & Accelerated Review).
@@ -1515,15 +1562,15 @@ function renderLandUseTab() {
       rosterPanel.style.display = '';
       const r = issue.roster;
       rosterEl.innerHTML = `
-        ${r.title ? `<div class="landuse-roster-title">${r.title}</div>` : ''}
-        ${r.subtitle ? `<div class="landuse-roster-sub">${r.subtitle}</div>` : ''}
+        ${r.title ? `<div class="landuse-roster-title">${ltEsc(r.title)}</div>` : ''}
+        ${r.subtitle ? `<div class="landuse-roster-sub">${ltEsc(r.subtitle)}</div>` : ''}
         ${r.groups.map(g => `
           <div class="landuse-roster-group">
-            <div class="landuse-roster-label">${g.label}</div>
+            <div class="landuse-roster-label">${ltEsc(g.label)}</div>
             <ul class="landuse-roster-members">
               ${g.members.map(m => `
                 <li class="landuse-roster-member">
-                  <strong>${m.name}</strong>${m.role ? `<span> &mdash; ${m.role}</span>` : ''}
+                  <strong>${ltEsc(m.name)}</strong>${m.role ? `<span> &mdash; ${ltEsc(m.role)}</span>` : ''}
                 </li>`).join('')}
             </ul>
           </div>`).join('')}
@@ -3863,8 +3910,8 @@ function renderBadge(item) {
   else if (item.source === 'wilkinson') badgeClass = 'badge-wilkinson';
   else if (item.source === 'koto') badgeClass = 'badge-koto';
   else if (item.source === 'telluride-com') badgeClass = 'badge-county';
-  badges.push(`<span class="source-badge ${badgeClass}">${item.sourceLabel}</span>`);
-  if (item.typeLabel) badges.push(`<span class="category-tag">${item.typeLabel}</span>`);
+  badges.push(`<span class="source-badge ${badgeClass}">${ltEsc(item.sourceLabel)}</span>`);
+  if (item.typeLabel) badges.push(`<span class="category-tag">${ltEsc(item.typeLabel)}</span>`);
   return badges.join('');
 }
 
@@ -4215,7 +4262,50 @@ function meetingReactionId(item) {
   return 'mtg_' + Math.abs(h).toString(36);
 }
 
-// Simple fingerprint for IP-like dedup (uses localStorage as proxy since true IP requires server)
+// Stable per-device voter id used for one-vote-per-device on the Quick
+// Reactions buttons. Order of preference:
+//   1. Real signed-in Hub-Bub uid (best — survives device wipes, follows
+//      the user across browsers).
+//   2. Anonymous Firebase Auth uid (good — managed by Firebase, persists
+//      in IndexedDB so survives localStorage clears; auto-created on
+//      first vote if Anonymous sign-in is enabled in the project).
+//   3. localStorage random fingerprint (legacy — only used if Anonymous
+//      auth is disabled in the Firebase Console. Trivially resettable.)
+//
+// Migrating from option 3 to options 1/2 is a one-way data improvement:
+// rules can enforce one-vote-per-uid in the future, but rules can never
+// enforce one-vote-per-fingerprint (the client controls the value).
+// Existing reaction docs with fingerprint voters keep working — fingerprints
+// and uids both live as strings in the same `_voters` arrays.
+async function getVoterId() {
+  const auth = _ltAuth();
+  if (auth) {
+    if (auth.currentUser) return auth.currentUser.uid;
+    // Try anonymous sign-in. Requires "Anonymous" provider to be enabled
+    // at console.firebase.google.com → Authentication → Sign-in method.
+    // If disabled, the call throws auth/operation-not-allowed; we fall
+    // through to the legacy fingerprint and log a one-time hint.
+    try {
+      const cred = await auth.signInAnonymously();
+      if (cred && cred.user) return cred.user.uid;
+    } catch (e) {
+      if (!window.__qr_anon_warned) {
+        window.__qr_anon_warned = true;
+        console.warn(
+          'Anonymous Firebase Auth disabled — Quick Reactions falling back ' +
+          'to localStorage fingerprint dedup. To upgrade to durable, ' +
+          'spoof-resistant per-device dedup, enable Anonymous sign-in at ' +
+          'console.firebase.google.com → Authentication → Sign-in method.'
+        );
+      }
+    }
+  }
+  return getDeviceFingerprint();
+}
+
+// Legacy fingerprint — kept as a fallback for the case where Firebase
+// Anonymous Auth is disabled in the project. New code should prefer
+// getVoterId() above.
 function getDeviceFingerprint() {
   let fp = localStorage.getItem('_qr_fp');
   if (!fp) {
@@ -4226,39 +4316,50 @@ function getDeviceFingerprint() {
 }
 
 async function loadReactionCounts(docId) {
-  if (!window._FIREBASE_READY || !window._FIREBASE_DB) return null;
-  const db = window._FIREBASE_DB;
-  const FB = window._FB;
+  const db = _ltFb();
+  if (!db) return null;
   try {
-    const snap = await FB.getDocs(FB.query(FB.collection(db, 'reactions'), FB.where('__name__', '==', docId)));
-    if (!snap.empty) return snap.docs[0].data();
+    const snap = await db.collection('reactions').doc(docId).get();
+    if (snap.exists) return snap.data();
   } catch(e) { console.warn('loadReactionCounts error:', e); }
   return null;
 }
 
 async function submitReaction(docId, key) {
-  if (!window._FIREBASE_READY || !window._FIREBASE_DB) return;
-  const db = window._FIREBASE_DB;
-  const FB = window._FB;
-  const fp = getDeviceFingerprint();
+  const db = _ltFb();
+  if (!db) return;
+  const voterId = await getVoterId();
   const votersField = key + '_voters';
   try {
-    const ref = FB.doc(db, 'reactions', docId);
-    const snap = await FB.getDocs(FB.query(FB.collection(db, 'reactions'), FB.where('__name__', '==', docId)));
-    if (snap.empty) {
-      const data = { created: FB.serverTimestamp() };
+    const ref = db.collection('reactions').doc(docId);
+    const snap = await ref.get();
+    if (!snap.exists) {
+      const data = { created: firebase.firestore.FieldValue.serverTimestamp() };
       QR_OPTIONS.forEach(o => { data[o.key] = 0; data[o.key + '_voters'] = []; });
       data[key] = 1;
-      data[votersField] = [fp];
-      await FB.setDoc(ref, data);
+      data[votersField] = [voterId];
+      await ref.set(data);
     } else {
-      const existingData = snap.docs[0].data();
+      const existingData = snap.data();
       const voters = existingData[votersField] || [];
-      if (voters.includes(fp)) return null; // already voted
+      if (voters.includes(voterId)) return null; // already voted
+      // Also check: did the same voter vote for a different option on this
+      // doc? If so, withdraw their previous vote (one reaction per voter
+      // per doc). Without this, a user who can clear localStorage today
+      // could vote on every option; with uid-based voterId this becomes
+      // a real check rather than security theatre.
       const updateData = {};
-      updateData[key] = FB.increment(1);
-      updateData[votersField] = [...voters, fp];
-      await FB.updateDoc(ref, updateData);
+      QR_OPTIONS.forEach(o => {
+        if (o.key === key) return;
+        const otherVoters = existingData[o.key + '_voters'] || [];
+        if (otherVoters.includes(voterId)) {
+          updateData[o.key] = firebase.firestore.FieldValue.increment(-1);
+          updateData[o.key + '_voters'] = otherVoters.filter(v => v !== voterId);
+        }
+      });
+      updateData[key] = firebase.firestore.FieldValue.increment(1);
+      updateData[votersField] = [...voters, voterId];
+      await ref.update(updateData);
     }
     return true;
   } catch(e) { console.warn('submitReaction error:', e); return null; }
@@ -4365,17 +4466,20 @@ function renderQuickReactions(item) {
 
   // Load counts async after render
   setTimeout(() => {
-    loadReactionCounts(docId).then(data => {
+    loadReactionCounts(docId).then(async data => {
       if (!data) return;
       const container = document.querySelector(`.quick-reactions[data-reaction-id="${docId}"]`);
       if (!container) return;
-      const fp = getDeviceFingerprint();
+      // getVoterId() may trigger an anonymous sign-in on first call this
+      // session — that's fine, it's a single round-trip and the result is
+      // cached by Firebase Auth in IndexedDB for next time.
+      const voterId = await getVoterId();
       container.querySelectorAll('.qr-btn').forEach(btn => {
         const key = btn.dataset.key;
         const count = data[key] || 0;
         const voters = data[key + '_voters'] || [];
         btn.querySelector('.qr-count').textContent = count > 0 ? count : '';
-        if (voters.includes(fp)) btn.classList.add('voted');
+        if (voters.includes(voterId)) btn.classList.add('voted');
       });
     });
   }, 100);
@@ -4502,7 +4606,7 @@ function renderNews(items, filter) {
     html += `<div class="date-group">${friendlyDate(firstItem.pubDate)}</div>`;
     groups[dateKey].forEach(item => {
       const moreInfo = item.source === 'ttimes'
-        ? `<a href="${item.link}" target="_blank" rel="noopener" class="agenda-link" style="margin-top:6px; display:inline-block;">More Information →</a>`
+        ? `<a href="${ltSafeUrl(item.link)}" target="_blank" rel="noopener" class="agenda-link" style="margin-top:6px; display:inline-block;">More Information →</a>`
         : '';
 
       let calendarBtnHtml = '';
@@ -4514,7 +4618,7 @@ function renderNews(items, filter) {
           location: item.location || ''
         });
         const gIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>';
-        calendarBtnHtml = `<div class="card-actions"><a href="${googleCalUrl(calItem)}" target="_blank" rel="noopener" class="cal-btn" title="Add to Google Calendar">${gIcon} Add to Google Calendar</a></div>`;
+        calendarBtnHtml = `<div class="card-actions"><a href="${ltSafeUrl(googleCalUrl(calItem))}" target="_blank" rel="noopener" class="cal-btn" title="Add to Google Calendar">${gIcon} Add to Google Calendar</a></div>`;
       }
 
       // Check if this news item matches a festival — if so, show ticket button
@@ -4523,30 +4627,30 @@ function renderNews(items, filter) {
       TELLURIDE_FESTIVALS.forEach(fest => {
         const festLower = fest.name.toLowerCase().replace(/\s*\(.*\)\s*/, ''); // strip parenthetical
         if (fest.ticketUrl && titleLower.includes(festLower.split(' ').slice(0, 2).join(' '))) {
-          festivalTicketHtml = `<a href="${fest.ticketUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:inline-flex;align-items:center;gap:4px;margin-top:6px;padding:5px 14px;background:var(--accent-green);color:#fff;border-radius:6px;font-size:0.72rem;font-weight:700;text-decoration:none;">${fest.ticketLabel}</a>`;
+          festivalTicketHtml = `<a href="${ltSafeUrl(fest.ticketUrl)}" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:inline-flex;align-items:center;gap:4px;margin-top:6px;padding:5px 14px;background:var(--accent-green);color:#fff;border-radius:6px;font-size:0.72rem;font-weight:700;text-decoration:none;">${ltEsc(fest.ticketLabel)}</a>`;
         }
       });
       // Community events with ticket URLs
       if (item.source === 'community' && item.ticketUrl && !festivalTicketHtml) {
-        festivalTicketHtml = `<a href="${item.ticketUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:inline-flex;align-items:center;gap:4px;margin-top:6px;padding:5px 14px;background:var(--accent-green);color:#fff;border-radius:6px;font-size:0.72rem;font-weight:700;text-decoration:none;">Get Tickets</a>`;
+        festivalTicketHtml = `<a href="${ltSafeUrl(item.ticketUrl)}" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:inline-flex;align-items:center;gap:4px;margin-top:6px;padding:5px 14px;background:var(--accent-green);color:#fff;border-radius:6px;font-size:0.72rem;font-weight:700;text-decoration:none;">Get Tickets</a>`;
       }
 
       html += `
-        <div class="card" data-source="${item.source}">
+        <div class="card" data-source="${ltEsc(item.source)}">
           <div class="card-body">
             <div class="event-card-main">
               <div class="event-card-content">
                 ${renderBadge(item)} ${moreInfo}
-                <h3><a href="${item.link}" target="_blank" rel="noopener">${cleanTitle(item.title, item.source)}</a></h3>
+                <h3><a href="${ltSafeUrl(item.link)}" target="_blank" rel="noopener">${ltEsc(cleanTitle(item.title, item.source))}</a></h3>
                 ${item.pubDate ? `<div class="meta">${fullDate(item.pubDate)}</div>` : ''}
-                ${item.location ? `<div class="meta"><span class="location">📍 ${item.location}</span></div>` : ''}
-                ${item.description ? `<div class="description">${item.description}</div>` : ''}
+                ${item.location ? `<div class="meta"><span class="location">📍 ${ltEsc(item.location)}</span></div>` : ''}
+                ${item.description ? `<div class="description">${ltEsc(item.description)}</div>` : ''}
                 ${festivalTicketHtml}
                 ${calendarBtnHtml}
               </div>
               ${item.imageUrl
-                ? `<div class="event-illustration event-photo" aria-hidden="true"><img src="${item.imageUrl}" alt="${item.title}" loading="lazy"></div>`
-                : `<div class="event-illustration event-photo" aria-hidden="true"><img src="${getTownImage(item)}" alt="${item.location || 'Event'}" loading="lazy"></div>`}
+                ? `<div class="event-illustration event-photo" aria-hidden="true"><img src="${ltSafeUrl(item.imageUrl)}" alt="${ltEsc(item.title)}" loading="lazy"></div>`
+                : `<div class="event-illustration event-photo" aria-hidden="true"><img src="${ltSafeUrl(getTownImage(item))}" alt="${ltEsc(item.location || 'Event')}" loading="lazy"></div>`}
             </div>
           </div>
         </div>`;
@@ -5582,28 +5686,28 @@ const KOTO_NEWSCASTS = [
     href: "https://koto.org/news/newscast-5-8-26/"
   },
   {
-    title: "Newscast 5-7-26",
-    source: "KOTO Community Radio",
-    date: "May 8, 2026",
-    newsTopic: "public-safety",
-    copy: "The Bears Are Back in Town; Federal Firefighting in the Region Sees Shift; The Wonder, Intimacy, and Hope of “Appalachia”",
-    href: "https://koto.org/news/newscast-5-7-26/"
+    title: 'Newscast 5-7-26',
+    source: 'KOTO Community Radio',
+    date: 'May 8, 2026',
+    newsTopic: 'public-safety',
+    copy: 'The Bears Are Back in Town; Federal Firefighting in the Region Sees Shift; The Wonder, Intimacy, and Hope of “Appalachia”',
+    href: 'https://koto.org/news/newscast-5-7-26/'
   },
   {
-    title: "Newscast 5-6-26",
-    source: "KOTO Community Radio",
-    date: "May 7, 2026",
-    newsTopic: "public-safety",
-    copy: "Mountain Village Addresses Wildfire with Forest Management; Cat Movie Fisher with Risho Unda; Telluride Yoga Festival Brings Longevity and Service",
-    href: "https://koto.org/news/newscast-5-6-26/"
+    title: 'Newscast 5-6-26',
+    source: 'KOTO Community Radio',
+    date: 'May 7, 2026',
+    newsTopic: 'public-safety',
+    copy: 'Mountain Village Addresses Wildfire with Forest Management; Cat Movie Fisher with Risho Unda; Telluride Yoga Festival Brings Longevity and Service',
+    href: 'https://koto.org/news/newscast-5-6-26/'
   },
   {
-    title: "Newscast 5-4-26",
-    source: "KOTO Community Radio",
-    date: "May 5, 2026",
-    newsTopic: "recreation",
-    copy: "Paul Wisor Steps Down as Mountain Village Town Manager; General Assembly Enters Its Final Days",
-    href: "https://koto.org/news/newscast-5-4-26/"
+    title: 'Newscast 5-4-26',
+    source: 'KOTO Community Radio',
+    date: 'May 5, 2026',
+    newsTopic: 'recreation',
+    copy: 'Paul Wisor Steps Down as Mountain Village Town Manager; General Assembly Enters Its Final Days',
+    href: 'https://koto.org/news/newscast-5-4-26/'
   },
   {
     title: "Newscast 5-1-26",
@@ -6710,7 +6814,7 @@ function renderLocalNews(unused, filter) {
       ? '<div class="card-logo">' + (ENTITY_LOGOS['clubs'] || '') + '</div>'
       : renderLogo(item.sourceKey);
     const topicBadge = item.topic
-      ? '<span style="display:inline-block; font-size:0.72rem; padding:2px 8px; background:rgba(33,68,60,0.08); color:var(--forest); border-radius:6px; font-weight:600; margin-left:6px;">' + item.topic + '</span>'
+      ? '<span style="display:inline-block; font-size:0.72rem; padding:2px 8px; background:rgba(33,68,60,0.08); color:var(--forest); border-radius:6px; font-weight:600; margin-left:6px;">' + ltEsc(item.topic) + '</span>'
       : '';
 
     // Article image on right side — same pattern as Wilkinson Library cards (skip for club posts unless they have clubInfo)
@@ -6718,17 +6822,17 @@ function renderLocalNews(unused, filter) {
     if (item.clubInfo) {
       const ci = item.clubInfo;
       imageHtml = '<div class="club-info-box">'
-        + '<div class="club-info-header">' + (ci.name || 'Club Info') + '</div>'
-        + '<div class="club-info-row"><span class="club-info-label">Meets:</span> ' + (ci.meetings || '') + '</div>'
-        + '<div class="club-info-row"><span class="club-info-label"></span> ' + (ci.location1 || '') + '</div>'
-        + '<div class="club-info-row"><span class="club-info-label"></span> ' + (ci.location2 || '') + '</div>'
-        + '<div class="club-info-row"><span class="club-info-label">President:</span> ' + (ci.president || '') + '</div>'
-        + '<div class="club-info-row"><span class="club-info-label">Email:</span> <a href="mailto:' + (ci.email || '') + '" style="color:var(--forest);">' + (ci.email || '') + '</a></div>'
-        + (ci.note ? '<div style="font-size:0.72rem; color:var(--text-muted); font-style:italic; margin-top:2px;">' + ci.note + '</div>' : '')
-        + '<a href="' + (ci.website || '#') + '" target="_blank" rel="noopener" class="club-info-link">Click for more club info</a>'
+        + '<div class="club-info-header">' + ltEsc(ci.name || 'Club Info') + '</div>'
+        + '<div class="club-info-row"><span class="club-info-label">Meets:</span> ' + ltEsc(ci.meetings || '') + '</div>'
+        + '<div class="club-info-row"><span class="club-info-label"></span> ' + ltEsc(ci.location1 || '') + '</div>'
+        + '<div class="club-info-row"><span class="club-info-label"></span> ' + ltEsc(ci.location2 || '') + '</div>'
+        + '<div class="club-info-row"><span class="club-info-label">President:</span> ' + ltEsc(ci.president || '') + '</div>'
+        + '<div class="club-info-row"><span class="club-info-label">Email:</span> <a href="mailto:' + ltSafeUrl(ci.email || '') + '" style="color:var(--forest);">' + ltEsc(ci.email || '') + '</a></div>'
+        + (ci.note ? '<div style="font-size:0.72rem; color:var(--text-muted); font-style:italic; margin-top:2px;">' + ltEsc(ci.note) + '</div>' : '')
+        + '<a href="' + ltSafeUrl(ci.website || '#') + '" target="_blank" rel="noopener" class="club-info-link">Click for more club info</a>'
         + '</div>';
     } else if (!isClub && item.imageUrl) {
-      imageHtml = '<div class="event-illustration event-photo" aria-hidden="true"><img src="' + item.imageUrl + '" alt="' + (item.title || '') + '" loading="lazy"></div>';
+      imageHtml = '<div class="event-illustration event-photo" aria-hidden="true"><img src="' + ltSafeUrl(item.imageUrl) + '" alt="' + ltEsc(item.title || '') + '" loading="lazy"></div>';
     }
 
     const linkLabel = isClub ? 'Read full post →' : 'Read full article →';
@@ -6745,32 +6849,32 @@ function renderLocalNews(unused, filter) {
     const logoInner = ENTITY_LOGOS[item.sourceKey] || '';
     if (item.clubInfo) {
       // Club card: keep original grid layout with club-info-box on the right
-      html += '<div class="card' + clubClass + '" data-source-key="' + (item.sourceKey || '') + '">';
+      html += '<div class="card' + clubClass + '" data-source-key="' + ltEsc(item.sourceKey || '') + '">';
       html += '<div class="card-body">';
       html += '<div class="event-card-main news-card-img-left has-club-info">';
       html += imageHtml;
       html += '<div class="event-card-content">';
-      html += '<div class="meta" style="margin-bottom:2px;">' + (item.source || '') + (item.date ? ' · ' + item.date : '') + topicBadge + newsTopicBadge + '</div>';
-      html += '<h3>' + (item.link ? '<a href="' + item.link + '" target="_blank" rel="noopener">' + (item.title || 'Untitled') + '</a>' : (item.title || 'Untitled')) + '</h3>';
-      if (item.summary) { html += '<div class="description">' + item.summary + '</div>'; }
-      if (item.link) { html += '<div style="margin-top:8px;"><a href="' + item.link + '" target="_blank" rel="noopener" style="font-size:0.8rem; color:var(--forest); font-weight:600; text-decoration:none;">' + linkLabel + '</a></div>'; }
+      html += '<div class="meta" style="margin-bottom:2px;">' + ltEsc(item.source || '') + (item.date ? ' · ' + ltEsc(item.date) : '') + topicBadge + newsTopicBadge + '</div>';
+      html += '<h3>' + (item.link ? '<a href="' + ltSafeUrl(item.link) + '" target="_blank" rel="noopener">' + ltEsc(item.title || 'Untitled') + '</a>' : ltEsc(item.title || 'Untitled')) + '</h3>';
+      if (item.summary) { html += '<div class="description">' + ltEsc(item.summary) + '</div>'; }
+      if (item.link) { html += '<div style="margin-top:8px;"><a href="' + ltSafeUrl(item.link) + '" target="_blank" rel="noopener" style="font-size:0.8rem; color:var(--forest); font-weight:600; text-decoration:none;">' + ltEsc(linkLabel) + '</a></div>'; }
       html += '</div>'; // close event-card-content
       html += '</div>'; // close event-card-main
       html += '</div>'; // close card-body
       html += '</div>'; // close card
     } else {
       // News article: logo + image stacked in left col, text in right col
-      html += '<div class="card news-article-card" data-source-key="' + (item.sourceKey || '') + '">';
+      html += '<div class="card news-article-card" data-source-key="' + ltEsc(item.sourceKey || '') + '">';
       html += '<div class="news-media-col' + (!item.imageUrl ? ' no-image' : '') + '">';
       if (logoInner) { html += '<div class="news-source-logo">' + logoInner + '</div>'; }
       if (item.imageUrl) { html += imageHtml; }
       html += '</div>'; // close news-media-col
       html += '<div class="card-body">';
       html += '<div class="event-card-content">';
-      html += '<div class="meta" style="margin-bottom:2px;">' + (item.source || '') + (item.date ? ' · ' + item.date : '') + topicBadge + newsTopicBadge + '</div>';
-      html += '<h3>' + (item.link ? '<a href="' + item.link + '" target="_blank" rel="noopener">' + (item.title || 'Untitled') + '</a>' : (item.title || 'Untitled')) + '</h3>';
-      if (item.summary) { html += '<div class="description">' + item.summary + '</div>'; }
-      if (item.link) { html += '<div style="margin-top:8px;"><a href="' + item.link + '" target="_blank" rel="noopener" style="font-size:0.8rem; color:var(--forest); font-weight:600; text-decoration:none;">' + linkLabel + '</a></div>'; }
+      html += '<div class="meta" style="margin-bottom:2px;">' + ltEsc(item.source || '') + (item.date ? ' · ' + ltEsc(item.date) : '') + topicBadge + newsTopicBadge + '</div>';
+      html += '<h3>' + (item.link ? '<a href="' + ltSafeUrl(item.link) + '" target="_blank" rel="noopener">' + ltEsc(item.title || 'Untitled') + '</a>' : ltEsc(item.title || 'Untitled')) + '</h3>';
+      if (item.summary) { html += '<div class="description">' + ltEsc(item.summary) + '</div>'; }
+      if (item.link) { html += '<div style="margin-top:8px;"><a href="' + ltSafeUrl(item.link) + '" target="_blank" rel="noopener" style="font-size:0.8rem; color:var(--forest); font-weight:600; text-decoration:none;">' + ltEsc(linkLabel) + '</a></div>'; }
       html += '</div>'; // close event-card-content
       html += '</div>'; // close card-body
       html += '</div>'; // close card
@@ -6991,83 +7095,83 @@ const LEGAL_NOTICES = [
     papers: ["ttimes", "npost"]
   },
   {
-    title: "RFP -- Floor Replacement for Courthouse & Miramonte Building",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "RFP",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking proposals for a contractor to replace flooring at 333 & 305 W. Colorado Ave, Telluride. RFP info available at sanmiguelcountyco.gov/Bids.aspx or 333 W. Colorado Ave 2nd flr, Telluride. Contact Greg Pollio at (970) 369-5432 or gregp@sanmiguelcountyco.gov. Deadline extended to May 23.",
-    deadline: "Proposals due May 23, 2026 at 5:00 PM",
-    expires: "2026-05-23",
-    dates: "4/2, 4/7, 4/16, 4/23",
-    papers: ["ttimes_apr2", "county_web"],
-    url: "https://www.sanmiguelcountyco.gov/Bids.aspx"
+    title: 'RFP -- Floor Replacement for Courthouse & Miramonte Building',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏛️',
+    iconClass: 'type-rfp',
+    type: 'RFP',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County is seeking proposals for a contractor to replace flooring at 333 & 305 W. Colorado Ave, Telluride. RFP info available at sanmiguelcountyco.gov/Bids.aspx or 333 W. Colorado Ave 2nd flr, Telluride. Contact Greg Pollio at (970) 369-5432 or gregp@sanmiguelcountyco.gov. Deadline extended to May 23.',
+    deadline: 'Proposals due May 23, 2026 at 5:00 PM',
+    expires: '2026-05-23',
+    dates: '4/2, 4/7, 4/16, 4/23',
+    papers: ['ttimes_apr2', 'county_web'],
+    url: 'https://www.sanmiguelcountyco.gov/Bids.aspx'
   },
   {
-    title: "Notice of Vesting -- 116 E Columbia Ave Remodel Addition",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏗️",
-    iconClass: "type-rfp",
-    type: "Land Use",
-    filterTag: "ordinance",
-    summary: "A site-specific development plan and vested property right has been approved for the 116 E Columbia Remodel Addition (Historic Residential zone, Block 7 Telluride). Owner: Drift Mine LLC and AZ LL. Applicant: Shift Architects, Kristine Perpar. Approved February 18, 2026.",
-    deadline: "Subject to referendum and judicial review",
-    expires: "2026-05-18",
-    dates: "3/5",
-    papers: ["ttimes_mar5"],
-    address: "116 E Columbia Ave, Telluride, CO"
+    title: 'Notice of Vesting -- 116 E Columbia Ave Remodel Addition',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🏗️',
+    iconClass: 'type-rfp',
+    type: 'Land Use',
+    filterTag: 'ordinance',
+    summary: 'A site-specific development plan and vested property right has been approved for the 116 E Columbia Remodel Addition (Historic Residential zone, Block 7 Telluride). Owner: Drift Mine LLC and AZ LL. Applicant: Shift Architects, Kristine Perpar. Approved February 18, 2026.',
+    deadline: 'Subject to referendum and judicial review',
+    expires: '2026-05-18',
+    dates: '3/5',
+    papers: ['ttimes_mar5'],
+    address: '116 E Columbia Ave, Telluride, CO'
   },
   {
-    title: "Notice of Vesting -- Korn Residence, 566 W Columbia Ave",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏗️",
-    iconClass: "type-rfp",
-    type: "Land Use",
-    filterTag: "ordinance",
-    summary: "A site-specific development plan and vested property right has been approved for the Korn Residence (Historic Residential zone, Lot 24A Block 9 West Telluride). Small-scale addition increasing floor area by more than 25%, small-scale repositioning of a designated THAS primary structure, minor scale alteration, and insubstantial scale addition. Owner: Korn David & Kristin Family Trust. Applicant: Shift Architects, Kristine Perpar. Approved March 18, 2026.",
-    deadline: "Subject to referendum and judicial review",
-    expires: "2026-06-18",
-    dates: "4/2",
-    papers: ["ttimes_apr2"],
-    address: "566 W Columbia Ave, Telluride, CO"
+    title: 'Notice of Vesting -- Korn Residence, 566 W Columbia Ave',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🏗️',
+    iconClass: 'type-rfp',
+    type: 'Land Use',
+    filterTag: 'ordinance',
+    summary: 'A site-specific development plan and vested property right has been approved for the Korn Residence (Historic Residential zone, Lot 24A Block 9 West Telluride). Small-scale addition increasing floor area by more than 25%, small-scale repositioning of a designated THAS primary structure, minor scale alteration, and insubstantial scale addition. Owner: Korn David & Kristin Family Trust. Applicant: Shift Architects, Kristine Perpar. Approved March 18, 2026.',
+    deadline: 'Subject to referendum and judicial review',
+    expires: '2026-06-18',
+    dates: '4/2',
+    papers: ['ttimes_apr2'],
+    address: '566 W Columbia Ave, Telluride, CO'
   },
   {
-    title: "Notice of Vesting -- 108 N Columbine Minor Addition/Remodel",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏗️",
-    iconClass: "type-rfp",
-    type: "Land Use",
-    filterTag: "ordinance",
-    summary: "A site-specific development plan and vested property right has been approved for 108 N Columbine Minor Addition/Remodel (Residential zone, Lot 1R Block 24 East Telluride). Minor scale addition increasing floor area by more than 25% and resulting in 1,000-2,500 sq ft, outside of the THLD but within the HPOD. Owner: ZKLF LLC. Applicant: McAllister Architects, Michael McAllister. Approved March 18, 2026.",
-    deadline: "Subject to referendum and judicial review",
-    expires: "2026-06-18",
-    dates: "4/2",
-    papers: ["ttimes_apr2"],
-    address: "108 N Columbine St, Telluride, CO"
+    title: 'Notice of Vesting -- 108 N Columbine Minor Addition/Remodel',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🏗️',
+    iconClass: 'type-rfp',
+    type: 'Land Use',
+    filterTag: 'ordinance',
+    summary: 'A site-specific development plan and vested property right has been approved for 108 N Columbine Minor Addition/Remodel (Residential zone, Lot 1R Block 24 East Telluride). Minor scale addition increasing floor area by more than 25% and resulting in 1,000-2,500 sq ft, outside of the THLD but within the HPOD. Owner: ZKLF LLC. Applicant: McAllister Architects, Michael McAllister. Approved March 18, 2026.',
+    deadline: 'Subject to referendum and judicial review',
+    expires: '2026-06-18',
+    dates: '4/2',
+    papers: ['ttimes_apr2'],
+    address: '108 N Columbine St, Telluride, CO'
   },
   {
-    title: "Notice of Vesting -- Fulton Residence (Hillside Transitional)",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏗️",
-    iconClass: "type-rfp",
-    type: "Land Use",
-    filterTag: "ordinance",
-    summary: "A site-specific development plan and vested property right has been approved for the Fulton Residence (Hillside Transitional zone, Lot 7R Block E North Telluride). Small-scale new construction of a principal structure containing 2,500 sq ft or more of floor area, on a lot with pre-construction grade or slope of building site coverage of 25% or greater. Owner: Tio Rico LLC. Applicant: William Erwin, ASUL. Approved March 18, 2026.",
-    deadline: "Subject to referendum and judicial review",
-    expires: "2026-06-18",
-    dates: "4/2",
-    papers: ["ttimes_apr2"]
+    title: 'Notice of Vesting -- Fulton Residence (Hillside Transitional)',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🏗️',
+    iconClass: 'type-rfp',
+    type: 'Land Use',
+    filterTag: 'ordinance',
+    summary: 'A site-specific development plan and vested property right has been approved for the Fulton Residence (Hillside Transitional zone, Lot 7R Block E North Telluride). Small-scale new construction of a principal structure containing 2,500 sq ft or more of floor area, on a lot with pre-construction grade or slope of building site coverage of 25% or greater. Owner: Tio Rico LLC. Applicant: William Erwin, ASUL. Approved March 18, 2026.',
+    deadline: 'Subject to referendum and judicial review',
+    expires: '2026-06-18',
+    dates: '4/2',
+    papers: ['ttimes_apr2']
   },
   {
     title: "Ordinance -- Community Development Code Amendment for Wildfire Resilience (Passed Second Reading)",
@@ -7124,76 +7228,76 @@ const LEGAL_NOTICES = [
     noticeKey: "mv-ord-multiple-2026"
   },
   {
-    title: "Public Hearing -- Onsite Wastewater Treatment Systems Regulations",
-    entity: "San Miguel County Board of Health",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "💧",
-    iconClass: "type-hearing",
-    type: "Utilities",
-    filterTag: "utilities",
-    summary: "San Miguel County Board of Health will consider regulatory options related to Colorado Regulation 43 for Onsite Wastewater Treatment Systems on May 20, 2026. The meeting provides opportunity for public comment and participation.",
-    deadline: "May 20, 2026",
-    expires: "2026-05-20",
-    dates: "5/6",
-    papers: ["ttimes_0506"],
-    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    address: "333 West Colorado Ave, 2nd floor, Telluride, CO 81423",
-    noticeKey: "boh-owts-reg-2026-05-20"
+    title: 'RFP -- Flooring Replacement at County Buildings',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏛️',
+    iconClass: 'type-rfp',
+    type: 'Public Notice',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County requests proposals for a contractor to replace flooring at 333 & 305 W. Colorado Ave, Telluride. RFP information is available on the county website or at the specified address. Deadline for proposals is 5:00 PM on Friday, June 5th.',
+    deadline: 'June 5, 2026 at 5:00 PM',
+    expires: '2026-06-05',
+    dates: '5/6',
+    papers: ['ttimes_0506'],
+    url: 'https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html',
+    address: '333 & 305 W. Colorado Ave, Telluride, CO',
+    noticeKey: 'rfp-flooring-2026'
   },
   {
-    title: "RFP -- Flooring Replacement at County Buildings",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County requests proposals for a contractor to replace flooring at 333 & 305 W. Colorado Ave, Telluride. RFP information is available on the county website or at the specified address. Deadline for proposals is 5:00 PM on Friday, June 5th.",
-    deadline: "June 5, 2026 at 5:00 PM",
-    expires: "2026-06-05",
-    dates: "5/6",
-    papers: ["ttimes_0506"],
-    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    address: "333 & 305 W. Colorado Ave, Telluride, CO",
-    noticeKey: "rfp-flooring-2026"
+    title: 'RFP -- Boiler System Replacement at Down Valley Park',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏛️',
+    iconClass: 'type-rfp',
+    type: 'Public Notice',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County requests proposals for a contractor to replace the boiler system at the Down Valley Park in Placerville. RFP information is available on the county website or at Parks & Open Space department. Deadline for proposals is 5:00 PM on June 4th.',
+    deadline: 'June 4, 2026 at 5:00 PM',
+    expires: '2026-06-04',
+    dates: '5/6',
+    papers: ['ttimes_0506'],
+    url: 'https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html',
+    address: 'Down Valley Park, Placerville',
+    noticeKey: 'rfp-boiler-placerville-2026'
   },
   {
-    title: "RFP -- Boiler System Replacement at Down Valley Park",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County requests proposals for a contractor to replace the boiler system at the Down Valley Park in Placerville. RFP information is available on the county website or at Parks & Open Space department. Deadline for proposals is 5:00 PM on June 4th.",
-    deadline: "June 4, 2026 at 5:00 PM",
-    expires: "2026-06-04",
-    dates: "5/6",
-    papers: ["ttimes_0506"],
-    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    address: "Down Valley Park, Placerville",
-    noticeKey: "rfp-boiler-placerville-2026"
+    title: 'Public Hearing -- OWTS Variance Application (Sheamus Croke - Ophir)',
+    entity: 'San Miguel County Board of Health',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '💧',
+    iconClass: 'type-hearing',
+    type: 'Utilities',
+    filterTag: 'utilities',
+    summary: 'San Miguel County Board of Health will consider an OWTS Variance Application for Sheamus Croke, owner of Lots 5 and 6 Block M Ophir, to reduce setback from Soil Treatment Area to southwest property line from 10 feet to 2 feet. Public hearing scheduled for May 27, 2026 at 2:00 PM.',
+    deadline: 'May 27, 2026 at 2:00 PM',
+    expires: '2026-05-27',
+    dates: '5/6',
+    papers: ['ttimes_0506'],
+    url: 'https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html',
+    address: 'Lots 5 and 6 Block M Ophir',
+    noticeKey: 'owts-variance-croke-ophir-2026'
   },
   {
-    title: "Public Hearing -- OWTS Variance Application (Sheamus Croke - Ophir)",
-    entity: "San Miguel County Board of Health",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "💧",
-    iconClass: "type-hearing",
-    type: "Utilities",
-    filterTag: "utilities",
-    summary: "San Miguel County Board of Health will consider an OWTS Variance Application for Sheamus Croke, owner of Lots 5 and 6 Block M Ophir, to reduce setback from Soil Treatment Area to southwest property line from 10 feet to 2 feet. Public hearing scheduled for May 27, 2026 at 2:00 PM.",
-    deadline: "May 27, 2026 at 2:00 PM",
-    expires: "2026-05-27",
-    dates: "5/6",
-    papers: ["ttimes_0506"],
-    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    address: "Lots 5 and 6 Block M Ophir",
-    noticeKey: "owts-variance-croke-ophir-2026"
+    title: 'RFP -- Flooring Replacement at County Buildings',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏛️',
+    iconClass: 'type-rfp',
+    type: 'Public Notice',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County is requesting proposals from contractors to replace flooring at 333 & 305 W. Colorado Ave in Telluride. Contact Greg Pollio for information. Proposals must be submitted by 5:00 PM on Friday, May 24th.',
+    deadline: 'May 24, 2026 (5:00 PM)',
+    expires: '2026-05-24',
+    dates: '4/23',
+    papers: ['ttimes_0423'],
+    url: 'https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html',
+    address: '333 & 305 W. Colorado Ave, Telluride, CO',
+    noticeKey: 'rfp-flooring-colorado-ave'
   },
   {
     title: "RFP -- Flooring Replacement at County Buildings",
@@ -7214,175 +7318,177 @@ const LEGAL_NOTICES = [
     noticeKey: "rfp-flooring-colorado-ave"
   },
   {
-    title: "RFP -- Landscape Improvements at Galloping Goose Park",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals for landscape improvements to the Galloping Goose Park in Telluride. Contact Janet Kask at Parks & Open Space department for information. Proposals due by 5:00 PM on Friday, May 22nd.",
-    deadline: "May 22, 2026 (5:00 PM)",
-    expires: "2026-05-22",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "Galloping Goose Park, Telluride, CO",
-    noticeKey: "rfp-galloping-goose-landscape"
+    title: 'Request for Proposal -- Request for Proposal for Boiler Replacement at the Down Valley Park',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏛️',
+    iconClass: 'type-rfp',
+    type: 'Request for Proposal',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County is seeking qualified respondents for: Request for Proposal for Boiler Replacement at the Down Valley Park.',
+    deadline: 'Closes 6/4/2026',
+    expires: '2026-06-04',
+    dates: '5/7',
+    url: 'https://www.sanmiguelcountyco.gov/bids.aspx?bidID=205',
+    address: '',
+    smcBidID: '205'
   },
   {
-    title: "Request for Proposal -- Foundation Repairs at the Placerville Schoolhouse",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Foundation Repairs at the Placerville Schoolhouse.",
-    deadline: "Open until contracted",
-    expires: "2026-08-05",
-    dates: "5/7",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=188",
-    address: "",
-    smcBidID: "188"
+    title: 'Request for Proposal -- Request for Proposal for Floor Replacement at Courthouse and Miramonte Building',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏛️',
+    iconClass: 'type-rfp',
+    type: 'Request for Proposal',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County is seeking qualified respondents for: Request for Proposal for Floor Replacement at Courthouse and Miramonte Building.',
+    deadline: 'Closes 6/5/2026',
+    expires: '2026-06-05',
+    dates: '5/7',
+    url: 'https://www.sanmiguelcountyco.gov/bids.aspx?bidID=204',
+    address: '',
+    smcBidID: '204'
   },
   {
-    title: "Request for Proposal -- Trout Lake Water Tank Roofing",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Trout Lake Water Tank Roofing.",
-    deadline: "Open until contracted",
-    expires: "2026-08-05",
-    dates: "5/7",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=187",
-    address: "",
-    smcBidID: "187"
+    title: 'Request for Proposal -- Request for Proposal for San Miguel County Galloping Goose Park',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏛️',
+    iconClass: 'type-rfp',
+    type: 'Request for Proposal',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County is seeking qualified respondents for: Request for Proposal for San Miguel County Galloping Goose Park.',
+    deadline: 'Closes 5/22/2026',
+    expires: '2026-05-22',
+    dates: '5/7',
+    url: 'https://www.sanmiguelcountyco.gov/bids.aspx?bidID=202',
+    address: '',
+    smcBidID: '202'
   },
   {
-    title: "Request for Proposal -- Request for Proposal for Boiler Replacement at the Down Valley Park",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Request for Proposal for Boiler Replacement at the Down Valley Park.",
-    deadline: "Closes 6/4/2026",
-    expires: "2026-06-04",
-    dates: "5/7",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=205",
-    address: "",
-    smcBidID: "205"
+    title: 'Request for Quote -- Request for Quote: Material Hauling',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏛️',
+    iconClass: 'type-rfp',
+    type: 'Request for Quote',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County is seeking qualified respondents for: Request for Quote: Material Hauling.',
+    deadline: 'Open until contracted',
+    expires: '2026-08-05',
+    dates: '5/7',
+    url: 'https://www.sanmiguelcountyco.gov/bids.aspx?bidID=159',
+    address: '',
+    smcBidID: '159'
   },
   {
-    title: "Request for Proposal -- Request for Proposal for Floor Replacement at Courthouse and Miramonte Building",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Request for Proposal for Floor Replacement at Courthouse and Miramonte Building.",
-    deadline: "Closes 6/5/2026",
-    expires: "2026-06-05",
-    dates: "5/7",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=204",
-    address: "",
-    smcBidID: "204"
+    title: 'Request for Proposal -- Soil Preparation and Regrading of Mill Creek Park Site',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏛️',
+    iconClass: 'type-rfp',
+    type: 'Request for Proposal',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County is seeking qualified respondents for: Soil Preparation and Regrading of Mill Creek Park Site.',
+    deadline: 'Open until contracted',
+    expires: '2026-08-05',
+    dates: '5/7',
+    url: 'https://www.sanmiguelcountyco.gov/bids.aspx?bidID=189',
+    address: '',
+    smcBidID: '189'
   },
   {
-    title: "Request for Proposal -- Request for Proposal for San Miguel County Galloping Goose Park",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Request for Proposal for San Miguel County Galloping Goose Park.",
-    deadline: "Closes 5/22/2026",
-    expires: "2026-05-22",
-    dates: "5/7",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=202",
-    address: "",
-    smcBidID: "202"
+    title: 'Request for Proposal -- Request for Proposal for San Miguel County Road 58P Retaining Wall Construction',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏛️',
+    iconClass: 'type-rfp',
+    type: 'Request for Proposal',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County is seeking qualified respondents for: Request for Proposal for San Miguel County Road 58P Retaining Wall Construction.',
+    deadline: 'Closes 5/26/2026',
+    expires: '2026-05-26',
+    dates: '5/7',
+    url: 'https://www.sanmiguelcountyco.gov/bids.aspx?bidID=203',
+    address: '',
+    smcBidID: '203'
   },
   {
-    title: "Request for Quote -- Request for Quote: Material Hauling",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Quote",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Request for Quote: Material Hauling.",
-    deadline: "Open until contracted",
-    expires: "2026-08-05",
-    dates: "5/7",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=159",
-    address: "",
-    smcBidID: "159"
+    title: 'Request for Proposal -- Deputy Municipal Court Judge',
+    entity: 'Town of Telluride',
+    entityClass: 'ent-county',
+    entityLogo: 'telluride',
+    icon: '🏛️',
+    iconClass: 'type-rfp',
+    type: 'Request for Proposal',
+    filterTag: 'public-entity',
+    summary: 'Town of Telluride is seeking qualified respondents for: Deputy Municipal Court Judge.',
+    deadline: 'Closes 6/4/2026',
+    expires: '2026-06-04',
+    dates: '5/7',
+    url: 'https://www.telluride.gov/bids.aspx?bidID=127',
+    address: '',
+    totBidID: '127'
   },
   {
-    title: "Request for Proposal -- Soil Preparation and Regrading of Mill Creek Park Site",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Soil Preparation and Regrading of Mill Creek Park Site.",
-    deadline: "Open until contracted",
-    expires: "2026-08-05",
-    dates: "5/7",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=189",
-    address: "",
-    smcBidID: "189"
+    title: 'RFP -- County Building Flooring Replacement',
+    entity: 'San Miguel County',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏛️',
+    iconClass: 'type-rfp',
+    type: 'Public Notice',
+    filterTag: 'public-entity',
+    summary: 'San Miguel County is requesting proposals from contractors to replace flooring at 333 & 305 W. Colorado Ave in Telluride. RFP information is available on the county website or at the county offices. Proposals are due by 5:00 PM on Friday, May 24th.',
+    deadline: 'May 24, 2026 at 5:00 PM',
+    expires: '2026-05-24',
+    dates: '4/16',
+    papers: ['ttimes_0416'],
+    url: 'https://www.telluridenews.com/news/legals/article_c5a54e8f-2fa6-42a2-ba94-3a3828e137ff.html',
+    address: '333 & 305 W. Colorado Ave, Telluride, CO',
+    noticeKey: 'rfp-flooring-333-305-colorado'
   },
   {
-    title: "Request for Proposal -- Request for Proposal for San Miguel County Road 58P Retaining Wall Construction",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Request for Proposal for San Miguel County Road 58P Retaining Wall Construction.",
-    deadline: "Closes 5/26/2026",
-    expires: "2026-05-26",
-    dates: "5/7",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=203",
-    address: "",
-    smcBidID: "203"
+    title: 'Public Meeting -- Onsite Wastewater Treatment Systems Regulation (Board of Health)',
+    entity: 'San Miguel County Board of Health',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏛️',
+    iconClass: 'type-rfp',
+    type: 'Public Notice',
+    filterTag: 'public-entity',
+    summary: 'The San Miguel County Board of Health will consider regulatory options related to Colorado Regulation 43 for onsite wastewater treatment systems during their May 20, 2026 meeting. The meeting will provide opportunity for public comment and participation. Written comments must be received by May 19, 2026.',
+    deadline: 'May 19, 2026',
+    expires: '2026-05-20',
+    dates: '4/30',
+    papers: ['ttimes_0430'],
+    url: 'https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html',
+    address: '333 West Colorado Ave, 2nd floor, Telluride, CO 81423',
+    noticeKey: 'boh-wastewater-reg43-052026'
   },
   {
-    title: "Request for Proposal -- Deputy Municipal Court Judge",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "Town of Telluride is seeking qualified respondents for: Deputy Municipal Court Judge.",
-    deadline: "Closes 6/4/2026",
-    expires: "2026-06-04",
-    dates: "5/7",
-    url: "https://www.telluride.gov/bids.aspx?bidID=127",
-    address: "",
-    totBidID: "127"
+    title: 'Public Hearing -- Tree Removal Application (Elm Creek Reserve High Meadow Ranch)',
+    entity: 'San Miguel County Board of Commissioners',
+    entityClass: 'ent-county',
+    entityLogo: 'county',
+    icon: '🏛️',
+    iconClass: 'type-rfp',
+    type: 'Public Notice',
+    filterTag: 'public-entity',
+    summary: 'Cari Johnson on behalf of VM West LLC has applied for tree removal permits on Elm Creek Reserve\'s High Meadow Ranch on Wilson Mesa across five parcels. The Board of County Commissioners will hold a public meeting on May 20, 2026 at 9:30 AM. Written comments must be received by May 12, 2026.',
+    deadline: 'May 12, 2026',
+    expires: '2026-05-20',
+    dates: '4/30',
+    papers: ['ttimes_0430'],
+    url: 'https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html',
+    address: 'Wilson Mesa parcels #478301200005, #478301300006, #478313007001, #478313200015, #478312200001',
+    noticeKey: 'tree-removal-elmcreek-478301200005'
   },
   {
     title: "RFP -- County Building Flooring Replacement",
@@ -8172,10 +8278,10 @@ function renderMeetingsWithTopic() {
     html += '<div class="date-group">' + friendlyDate(firstItem.eventDate) + '</div>';
     groups[dateKey].forEach(item => {
       const timePart = item.eventTimes || '';
-      const locationPart = item.location ? '<span class="location">📍 ' + item.location + '</span>' : '';
+      const locationPart = item.location ? '<span class="location">📍 ' + ltEsc(item.location) + '</span>' : '';
       const agendaUrl = item.agendaLink || item.link;
       const agendaBadge = (item.hasAgenda && !item.canceled)
-        ? '<a href="' + agendaUrl + '" target="_blank" rel="noopener" class="agenda-link agenda-posted">Agenda Posted →</a>'
+        ? '<a href="' + ltSafeUrl(agendaUrl) + '" target="_blank" rel="noopener" class="agenda-link agenda-posted">Agenda Posted →</a>'
         : '<span class="agenda-link" style="opacity:0.5;cursor:default;pointer-events:none;">' + (item.canceled ? 'Canceled' : 'Agenda Posted →') + '</span>';
       const packetUrl = !item.canceled ? getMeetingPacketLink(item) : null;
       const packetBtn = packetUrl
@@ -8206,15 +8312,18 @@ function renderMeetingsWithTopic() {
       if (aiWhyMatters && !getWhyThisMatters(item)) {
         summaryHtml += '<div class="ai-why-matters">' + linkGlossaryTerms(aiWhyMatters) + '</div>';
       }
-      // Correction link at bottom of summary box
+      // Correction link at bottom of summary box.
+      // Title is passed via a data-* attribute (HTML-escaped) and read inside
+      // the onclick handler via this.dataset, instead of being interpolated
+      // into the inline JS string — otherwise a backslash + quote in the
+      // title would break out of the JS string.
       if (summaryHtml) {
-        var safeT = (item.title || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
-        summaryHtml += '<a class="correction-inline-link" onclick="openCorrectionModal(\'' + safeT + '\', \'meetings\')">✏️ Suggested change to summary?</a>';
+        summaryHtml += '<a class="correction-inline-link" data-correction-title="' + ltEsc(item.title || '') + '" data-correction-type="meetings" onclick="openCorrectionModal(this.dataset.correctionTitle, this.dataset.correctionType)">✏️ Suggested change to summary?</a>';
         summaryHtml += '</div>';
       }
       // END: AI-enhanced summary rendering
 
-      html += '<div class="card" data-source="' + item.source + '">' +
+      html += '<div class="card" data-source="' + ltEsc(item.source) + '">' +
         renderLogo(item.source) +
         '<div class="card-body">' +
           '<div class="event-card-main">' +
@@ -8226,7 +8335,7 @@ function renderMeetingsWithTopic() {
           (item.canceled ? '' : renderWhyThisMatters(item, true)) +
           (item.canceled ? '' : renderPasscodeInfo(item)) +
           (item.canceled ? '' : summaryHtml) +
-          (item.canceled ? '' : (item.description ? '<div class="description">' + item.description + '</div>' : '')) +
+          (item.canceled ? '' : (item.description ? '<div class="description">' + ltEsc(item.description) + '</div>' : '')) +
           (item.canceled ? '' : renderOfficialCommentInfo(item)) +
           (item.canceled ? '' : renderQuickReactions(item)) +
           (item.canceled ? '' : renderCardActions(item)) +
@@ -9201,24 +9310,24 @@ function renderUpcomingEventsSidebar() {
       dateDisplay += ' — ' + months[ev.endDate.getMonth()] + ' ' + ev.endDate.getDate();
     }
 
-    html += '<a href="' + (ev.href || '#') + '" target="_blank" rel="noopener" style="display:block;text-decoration:none;color:inherit;padding:10px;border-radius:12px;border:1.5px solid rgba(33,68,60,0.12);background:rgba(255,255,255,0.7);transition:border-color 0.18s,box-shadow 0.18s;" onmouseover="this.style.borderColor=\'rgba(47,86,77,0.35)\';this.style.boxShadow=\'0 4px 12px rgba(47,86,77,0.1)\'" onmouseout="this.style.borderColor=\'rgba(33,68,60,0.12)\';this.style.boxShadow=\'none\'">' +
+    html += '<a href="' + ltSafeUrl(ev.href || '#') + '" target="_blank" rel="noopener" style="display:block;text-decoration:none;color:inherit;padding:10px;border-radius:12px;border:1.5px solid rgba(33,68,60,0.12);background:rgba(255,255,255,0.7);transition:border-color 0.18s,box-shadow 0.18s;" onmouseover="this.style.borderColor=\'rgba(47,86,77,0.35)\';this.style.boxShadow=\'0 4px 12px rgba(47,86,77,0.1)\'" onmouseout="this.style.borderColor=\'rgba(33,68,60,0.12)\';this.style.boxShadow=\'none\'">' +
       '<div style="display:flex;gap:10px;align-items:flex-start;">' +
         '<div style="flex-shrink:0;width:52px;height:58px;border-radius:10px;background:linear-gradient(180deg,var(--accent-green),#1a3e36);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(33,68,60,0.2);">' +
           '<div style="font-size:0.69rem;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;line-height:1;margin-bottom:1px;">' + monthStr + '</div>' +
           '<div style="font-size:1.375rem;font-weight:900;line-height:1;">' + dayStr + '</div>' +
         '</div>' +
         '<div style="min-width:0;">' +
-          '<div style="font-size:0.975rem;font-weight:800;color:var(--text-primary);line-height:1.3;margin-bottom:2px;">' + ev.title + '</div>' +
-          '<div style="font-size:0.81rem;color:var(--text-muted);line-height:1.3;">' + ev.source + '</div>' +
+          '<div style="font-size:0.975rem;font-weight:800;color:var(--text-primary);line-height:1.3;margin-bottom:2px;">' + ltEsc(ev.title) + '</div>' +
+          '<div style="font-size:0.81rem;color:var(--text-muted);line-height:1.3;">' + ltEsc(ev.source) + '</div>' +
         '</div>' +
       '</div>' +
       '<div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:4px;">' +
         '<span style="font-size:0.775rem;padding:3px 8px;border-radius:6px;background:rgba(33,68,60,0.08);color:var(--forest);font-weight:700;">' + countdown + '</span>' +
-        (ev.eventTimes ? '<span style="font-size:0.775rem;padding:3px 8px;border-radius:6px;background:rgba(166,143,87,0.12);color:#8b7332;font-weight:600;">⏰ ' + ev.eventTimes + '</span>' : '') +
+        (ev.eventTimes ? '<span style="font-size:0.775rem;padding:3px 8px;border-radius:6px;background:rgba(166,143,87,0.12);color:#8b7332;font-weight:600;">⏰ ' + ltEsc(ev.eventTimes) + '</span>' : '') +
       '</div>' +
-      (ev.beneficiary ? '<div style="margin-top:6px;font-size:0.81rem;color:var(--text-secondary);line-height:1.35;">❤️ <strong>Benefits:</strong> ' + ev.beneficiary + '</div>' : '') +
-      (ev.location ? '<div style="font-size:0.775rem;color:var(--text-muted);margin-top:3px;">📍 ' + ev.location + '</div>' : '') +
-      (ev.sponsors ? '<div style="font-size:0.75rem;color:var(--text-muted);margin-top:3px;font-style:italic;">Sponsored by ' + ev.sponsors + '</div>' : '') +
+      (ev.beneficiary ? '<div style="margin-top:6px;font-size:0.81rem;color:var(--text-secondary);line-height:1.35;">❤️ <strong>Benefits:</strong> ' + ltEsc(ev.beneficiary) + '</div>' : '') +
+      (ev.location ? '<div style="font-size:0.775rem;color:var(--text-muted);margin-top:3px;">📍 ' + ltEsc(ev.location) + '</div>' : '') +
+      (ev.sponsors ? '<div style="font-size:0.75rem;color:var(--text-muted);margin-top:3px;font-style:italic;">Sponsored by ' + ltEsc(ev.sponsors) + '</div>' : '') +
     '</a>';
   });
 
@@ -9248,25 +9357,35 @@ function updateEventsHeroFestivals() {
       timing = dateLabel;
     }
     const logoHtml = f.logo
-      ? '<div style="width:100%;height:56px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:6px;margin-bottom:4px;"><img src="' + f.logo + '" alt="' + f.name + '" style="max-width:100%;max-height:56px;object-fit:contain;" onerror="this.parentElement.innerHTML=\'<span style=font-size:1.8rem>' + f.icon + '</span>\'"></div>'
-      : '<div style="font-size:1.8rem;margin-bottom:4px;">' + f.icon + '</div>';
+      ? '<div style="width:100%;height:56px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:6px;margin-bottom:4px;"><img src="' + ltSafeUrl(f.logo) + '" alt="' + ltEsc(f.name) + '" class="lt-festival-hero-img" data-fallback-icon="' + ltEsc(f.icon) + '" style="max-width:100%;max-height:56px;object-fit:contain;"></div>'
+      : '<div style="font-size:1.8rem;margin-bottom:4px;">' + ltEsc(f.icon) + '</div>';
     const linkUrl = f.url || f.ticketUrl || '';
     if (linkUrl) {
-      html += '<a href="' + linkUrl + '" target="_blank" rel="noopener" style="background:rgba(255,255,255,0.7);border-radius:8px;padding:8px 10px;text-align:center;text-decoration:none;color:inherit;">'
+      html += '<a href="' + ltSafeUrl(linkUrl) + '" target="_blank" rel="noopener" style="background:rgba(255,255,255,0.7);border-radius:8px;padding:8px 10px;text-align:center;text-decoration:none;color:inherit;">'
         + logoHtml
-        + '<div style="font-size:0.75rem;font-weight:700;color:var(--text-primary);line-height:1.3;margin:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + f.name + '</div>'
+        + '<div style="font-size:0.75rem;font-weight:700;color:var(--text-primary);line-height:1.3;margin:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + ltEsc(f.name) + '</div>'
         + '<div style="font-size:0.7rem;color:var(--text-muted);">' + timing + '</div>'
         + '</a>';
     } else {
       html += '<div style="background:rgba(255,255,255,0.7);border-radius:8px;padding:8px 10px;text-align:center;">'
         + logoHtml
-        + '<div style="font-size:0.75rem;font-weight:700;color:var(--text-primary);line-height:1.3;margin:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + f.name + '</div>'
+        + '<div style="font-size:0.75rem;font-weight:700;color:var(--text-primary);line-height:1.3;margin:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + ltEsc(f.name) + '</div>'
         + '<div style="font-size:0.7rem;color:var(--text-muted);">' + timing + '</div>'
         + '</div>';
     }
   });
   html += '</div>';
   container.innerHTML = html;
+  // Wire image-error fallback safely (no inline onerror — avoids string-in-string injection).
+  container.querySelectorAll('.lt-festival-hero-img').forEach(img => {
+    img.addEventListener('error', () => {
+      const icon = img.getAttribute('data-fallback-icon') || '';
+      const span = document.createElement('span');
+      span.style.fontSize = '1.8rem';
+      span.textContent = icon;
+      img.replaceWith(span);
+    }, { once: true });
+  });
   container.style.display = 'block';
 }
 
@@ -9304,10 +9423,15 @@ function renderFestivalCalendar() {
     const cardBorder = isFeatured ? 'border-color:rgba(198,148,55,0.4);' : '';
     const cardBg = isFeatured ? 'background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(249,246,240,0.92));' : 'background:rgba(255,255,255,0.92);';
 
-    // Logo box: image or wordmark fallback
+    // Logo box: image or wordmark fallback.
+    // Fallback wordmark uses the first two words of f.name. The image's
+    // error handler is wired up after innerHTML via addEventListener below
+    // (avoids interpolating attacker-controllable strings into inline JS).
+    const wordmarkWords = (f.name || '').split(' ').slice(0, 2);
+    const wordmarkHtml = '<div style="font-weight:900;font-size:0.72rem;line-height:1.1;letter-spacing:-0.02em;text-align:center;color:var(--text-primary);">' + wordmarkWords.map(ltEsc).join('<br>') + '</div>';
     const logoInner = f.logo
-      ? '<img src="' + f.logo + '" alt="' + f.name + '" style="width:100%;height:100%;object-fit:contain;display:block;" onerror="this.parentElement.innerHTML=\'<div style=font-weight:900;font-size:0.7rem;line-height:1.1;letter-spacing:-0.02em;text-align:center;color:var(--text-primary)>' + f.name.split(' ').slice(0,2).join('<br>').replace(/'/g,'') + '</div>\'">'
-      : '<div style="font-weight:900;font-size:0.72rem;line-height:1.1;letter-spacing:-0.02em;text-align:center;color:var(--text-primary);">' + f.name.split(' ').slice(0,2).join('<br>') + '</div>';
+      ? '<img src="' + ltSafeUrl(f.logo) + '" alt="' + ltEsc(f.name) + '" class="lt-festival-cal-img" data-fallback-words="' + ltEsc(wordmarkWords.join('|')) + '" style="width:100%;height:100%;object-fit:contain;display:block;">'
+      : wordmarkHtml;
 
     // Buy button — color depends on ticketStatus
     let buyBtn = '';
@@ -9336,14 +9460,14 @@ function renderFestivalCalendar() {
         btnShadow = '0 8px 16px rgba(34,69,62,0.2)';
       }
       if (!f.passed && btnLabel) {
-        buyBtn = '<a href="' + f.ticketUrl + '" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:flex;align-items:center;justify-content:center;gap:6px;width:100%;min-height:38px;padding:0 12px;border-radius:10px;text-decoration:none;font-weight:800;font-size:0.78rem;letter-spacing:-0.01em;color:' + btnColor + ';background:' + btnBg + ';box-shadow:' + btnShadow + ';">' + btnLabel + '</a>';
+        buyBtn = '<a href="' + ltSafeUrl(f.ticketUrl) + '" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="display:flex;align-items:center;justify-content:center;gap:6px;width:100%;min-height:38px;padding:0 12px;border-radius:10px;text-decoration:none;font-weight:800;font-size:0.78rem;letter-spacing:-0.01em;color:' + btnColor + ';background:' + btnBg + ';box-shadow:' + btnShadow + ';">' + ltEsc(btnLabel) + '</a>';
       }
     }
 
     // Festival site link chip
     let siteChip = '';
     if (f.url && !f.passed) {
-      siteChip = '<a href="' + f.url + '" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:0 10px;border-radius:8px;text-decoration:none;font-size:0.68rem;font-weight:800;color:var(--forest);background:rgba(39,69,63,0.07);border:1px solid rgba(39,69,63,0.12);white-space:nowrap;">Festival Site</a>';
+      siteChip = '<a href="' + ltSafeUrl(f.url) + '" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:0 10px;border-radius:8px;text-decoration:none;font-size:0.68rem;font-weight:800;color:var(--forest);background:rgba(39,69,63,0.07);border:1px solid rgba(39,69,63,0.12);white-space:nowrap;">Festival Site</a>';
     }
 
     html += '<div style="border:1px solid rgba(221,210,196,0.85);border-radius:16px;overflow:hidden;box-shadow:0 6px 16px rgba(32,48,45,0.08);' + cardBg + cardBorder + opacity + '">'
@@ -9353,7 +9477,7 @@ function renderFestivalCalendar() {
           + logoInner
         + '</div>'
         + '<div>'
-          + '<div style="font-size:0.82rem;font-weight:800;line-height:1.1;letter-spacing:-0.02em;color:var(--text-primary);">' + f.name + '</div>'
+          + '<div style="font-size:0.82rem;font-weight:800;line-height:1.1;letter-spacing:-0.02em;color:var(--text-primary);">' + ltEsc(f.name) + '</div>'
           + '<div style="font-size:0.72rem;color:var(--text-secondary);font-weight:700;margin-top:2px;">' + dateRange + ', ' + year + '</div>'
           + statusBadge
         + '</div>'
@@ -9366,6 +9490,20 @@ function renderFestivalCalendar() {
   });
 
   container.innerHTML = html;
+  // Wire image-error fallback safely (no inline onerror — avoids string-in-string injection).
+  container.querySelectorAll('.lt-festival-cal-img').forEach(img => {
+    img.addEventListener('error', () => {
+      const words = (img.getAttribute('data-fallback-words') || '').split('|');
+      const div = document.createElement('div');
+      div.style.cssText = 'font-weight:900;font-size:0.7rem;line-height:1.1;letter-spacing:-0.02em;text-align:center;color:var(--text-primary);';
+      words.forEach((w, i) => {
+        if (i > 0) div.appendChild(document.createElement('br'));
+        div.appendChild(document.createTextNode(w));
+      });
+      const parent = img.parentElement;
+      if (parent) parent.replaceChild(div, img);
+    }, { once: true });
+  });
 }
 
 function updateLeftSidebar() {
@@ -9766,7 +9904,7 @@ scheduleNextRefresh();
     const COOLDOWN_MS = 24 * 60 * 60 * 1000;     // 24 hours per topic
 
     // ── Detect Firebase availability ──
-    function useFirestore() { return !!(window._FIREBASE_READY && window._FIREBASE_DB && window._FB); }
+    function useFirestore() { return !!_ltFb(); }
 
     // ── Toxicity filter ──
     const TOXIC_PATTERNS = [
@@ -9805,18 +9943,19 @@ scheduleNextRefresh();
 
     // Write seed comments to Firestore if collection is empty
     async function seedFirestore(topic) {
-      const FB = window._FB, db = window._FIREBASE_DB;
-      const colRef = FB.collection(db, 'govhub_comments');
-      const q = FB.query(colRef, FB.where('topic', '==', topic));
+      const db = _ltFb();
+      if (!db) return;
+      const colRef = db.collection('govhub_comments');
+      const q = colRef.where('topic', '==', topic);
       return new Promise(resolve => {
-        const unsub = FB.onSnapshot(q, async snap => {
+        const unsub = q.onSnapshot(async snap => {
           unsub(); // one-time check
           if (snap.empty) {
             const seeds = SEED_COMMENTS[topic] || [];
             for (const s of seeds) {
-              await FB.addDoc(colRef, {
+              await colRef.add({
                 ...s,
-                createdAt: FB.Timestamp.fromMillis(s.timestamp)
+                createdAt: firebase.firestore.Timestamp.fromMillis(s.timestamp)
               });
             }
           }
@@ -9827,10 +9966,11 @@ scheduleNextRefresh();
 
     // Start real-time listener for a topic
     function listenFirestore(topic) {
-      const FB = window._FB, db = window._FIREBASE_DB;
-      const colRef = FB.collection(db, 'govhub_comments');
-      const q = FB.query(colRef, FB.where('topic', '==', topic), FB.orderBy('timestamp', 'desc'));
-      FB.onSnapshot(q, snap => {
+      const db = _ltFb();
+      if (!db) return;
+      const colRef = db.collection('govhub_comments');
+      const q = colRef.where('topic', '==', topic).orderBy('timestamp', 'desc');
+      q.onSnapshot(snap => {
         _cache[topic] = snap.docs.map(d => ({ ...d.data(), _docId: d.id }));
         renderComments(topic, _currentSort[topic]);
       }, err => {
@@ -9843,12 +9983,12 @@ scheduleNextRefresh();
 
     // Save comment to Firestore
     async function saveFirestore(comment) {
-      const FB = window._FB, db = window._FIREBASE_DB;
-      const colRef = FB.collection(db, 'govhub_comments');
-      const docRef = await FB.addDoc(colRef, {
+      const db = _ltFb();
+      if (!db) return;
+      const docRef = await db.collection('govhub_comments').add({
         ...comment,
         approved: false,
-        createdAt: FB.serverTimestamp()
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
       });
       // Send moderation email notification
       if (window._sendCommentNotification) {
@@ -9858,9 +9998,11 @@ scheduleNextRefresh();
 
     // Increment useful count in Firestore
     async function voteFirestore(docId) {
-      const FB = window._FB, db = window._FIREBASE_DB;
-      const docRef = FB.doc(db, 'govhub_comments', docId);
-      await FB.updateDoc(docRef, { useful: FB.increment(1) });
+      const db = _ltFb();
+      if (!db) return;
+      await db.collection('govhub_comments').doc(docId).update({
+        useful: firebase.firestore.FieldValue.increment(1)
+      });
     }
 
     // ══════════════════════════════════════════════
@@ -10195,21 +10337,24 @@ scheduleNextRefresh();
     async function handleModeration(user) {
       statusEl.textContent = 'Loading comment...';
       try {
-        const FB = window._FB, db = window._FIREBASE_DB;
-        const docRef = FB.doc(db, 'govhub_comments', commentId);
+        const db = _ltFb();
+        if (!db) {
+          statusEl.textContent = 'Firebase not ready. Reload the page.';
+          return;
+        }
+        const docRef = db.collection('govhub_comments').doc(commentId);
 
         // Fetch the comment
-        const q = FB.query(FB.collection(db, 'govhub_comments'), FB.where('__name__', '==', commentId));
-        const snap = await FB.getDocs(q);
+        const snap = await docRef.get();
 
-        if (snap.empty) {
+        if (!snap.exists) {
           statusEl.textContent = 'Comment not found. It may have already been removed.';
           return;
         }
 
-        const data = snap.docs[0].data();
+        const data = snap.data();
         commentEl.style.display = 'block';
-        commentEl.innerHTML = '<strong>' + (data.fname || '') + ' ' + (data.lname || '') + '</strong> on <em>' + (data.topic || 'unknown') + '</em><br><br>' + (data.body || '');
+        commentEl.innerHTML = '<strong>' + ltEsc(data.fname || '') + ' ' + ltEsc(data.lname || '') + '</strong> on <em>' + ltEsc(data.topic || 'unknown') + '</em><br><br>' + ltEsc(data.body || '');
 
         if (data.approved === true) {
           statusEl.textContent = 'This comment is already approved.';
@@ -10219,12 +10364,12 @@ scheduleNextRefresh();
 
         // If action was in URL, execute immediately
         if (action === 'approve') {
-          await FB.updateDoc(docRef, { approved: true });
+          await docRef.update({ approved: true });
           statusEl.textContent = 'Comment approved!';
           statusEl.style.color = '#2e7d32';
           return;
         } else if (action === 'deny') {
-          await FB.deleteDoc(docRef);
+          await docRef.delete();
           statusEl.textContent = 'Comment denied and removed.';
           statusEl.style.color = '#c62828';
           commentEl.style.display = 'none';
@@ -10240,13 +10385,13 @@ scheduleNextRefresh();
           <button id="mod-close" style="flex:1;padding:12px;background:#666;color:#fff;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:0.95rem;">Close</button>
         `;
         actionsEl.querySelector('#mod-approve').addEventListener('click', async () => {
-          await FB.updateDoc(docRef, { approved: true });
+          await docRef.update({ approved: true });
           statusEl.textContent = 'Comment approved!';
           statusEl.style.color = '#2e7d32';
           actionsEl.style.display = 'none';
         });
         actionsEl.querySelector('#mod-deny').addEventListener('click', async () => {
-          await FB.deleteDoc(docRef);
+          await docRef.delete();
           statusEl.textContent = 'Comment denied and removed.';
           statusEl.style.color = '#c62828';
           commentEl.style.display = 'none';
@@ -10262,13 +10407,15 @@ scheduleNextRefresh();
       }
     }
 
-    // Check auth state
+    // Check auth state. Poll until hub-bub.js has initialized Firebase
+    // and the compat Auth SDK is ready; then attach the listener.
     function waitForAuth() {
-      if (!window._FB_AUTH || !window._FIREBASE_AUTH) {
+      const auth = _ltAuth();
+      if (!auth) {
         setTimeout(waitForAuth, 200);
         return;
       }
-      window._FB_AUTH.onAuthStateChanged(window._FIREBASE_AUTH, (user) => {
+      auth.onAuthStateChanged((user) => {
         if (user && user.email === 'info@livabletelluride.org') {
           handleModeration(user);
         } else {
@@ -10280,7 +10427,7 @@ scheduleNextRefresh();
           loginBtn.addEventListener('click', async () => {
             loginErr.style.display = 'none';
             try {
-              const cred = await window._FB_AUTH.signInWithEmailAndPassword(window._FIREBASE_AUTH, 'info@livabletelluride.org', pwInput.value);
+              const cred = await auth.signInWithEmailAndPassword('info@livabletelluride.org', pwInput.value);
               loginEl.style.display = 'none';
               handleModeration(cred.user);
             } catch (e) {

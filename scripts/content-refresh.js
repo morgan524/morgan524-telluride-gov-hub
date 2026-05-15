@@ -24,6 +24,12 @@ const REPO_ROOT = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
 const GOV_HUB_JS = path.join(REPO_ROOT, 'js', 'gov-hub.js');
 const COMMUNITY_PULSE_JS = path.join(REPO_ROOT, 'js', 'community-pulse.js');
 const EVENTS_CONFIG = path.join(REPO_ROOT, 'email-events-config.json');
+// (INDEX_HTML / GOVHUB_HTML / SW_JS constants and the bumpCacheBusters()
+// helper that used them were removed when main's audit landed a different
+// strategy: dynamic per-request cache busters via
+// `Math.floor(Date.now()/600000)` inside the HTML, plus removal of
+// telluride-gov-hub.html as a redundant duplicate. Nothing in this script
+// needs to write the HTML or sw.js anymore.)
 
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const CLAUDE_MODEL = 'claude-sonnet-4-20250514';
@@ -229,6 +235,83 @@ function maybeProxy(url) {
   try { host = new URL(url).hostname; } catch (_) { return url; }
   if (!PROXY_HOSTS.has(host)) return url;
   return proxyBase.replace(/\/$/, '') + '/proxy?url=' + encodeURIComponent(url);
+}
+
+// Probe the Cloudflare Worker's /health endpoint at startup. The Worker is
+// a single point of failure: if it's deleted, paused, or its URL rotates
+// without RSS_PROXY_URL being updated, every RSS fetch silently falls back
+// to direct (which is blocked at the IP level by Telluride Times and KOTO)
+// and the news section goes quietly empty. Fail loud and early instead.
+// Also cross-check that the Worker's allow-list matches our local
+// PROXY_HOSTS, since drift between the two manifests as "this one host
+// mysteriously stops working" months later.
+async function checkWorkerHealth() {
+  const proxyBase = process.env.RSS_PROXY_URL;
+  if (!proxyBase) {
+    console.log('  ℹ RSS_PROXY_URL not set — running with direct fetches (dev mode)');
+    return;
+  }
+  const healthUrl = proxyBase.replace(/\/$/, '') + '/health';
+  let resp;
+  try {
+    // Use the raw https module here, not our `fetch()` helper — `fetch()`
+    // routes proxyable hosts through this same Worker, which would create
+    // a circular dependency on health-check.
+    resp = await new Promise((resolve, reject) => {
+      const mod = healthUrl.startsWith('https') ? https : http;
+      const req = mod.get(healthUrl, { timeout: 10000 }, (res) => {
+        let data = '';
+        res.on('data', c => data += c);
+        res.on('end', () => resolve({ status: res.statusCode, text: data }));
+      });
+      req.on('error', reject);
+      req.on('timeout', () => { req.destroy(); reject(new Error('Timeout')); });
+    });
+  } catch (e) {
+    throw new Error(
+      `Cloudflare Worker health check FAILED — could not reach ${healthUrl}: ${e.message}. ` +
+      `The Worker is the only path through which RSS feeds from telluridenews.com, koto.org, ` +
+      `and the gov sites work (direct fetches are IP-blocked). Either re-deploy the worker ` +
+      `(see cloudflare-worker/livabletelluride-rss-proxy/README.md) or update the RSS_PROXY_URL secret.`
+    );
+  }
+  if (resp.status !== 200) {
+    throw new Error(
+      `Cloudflare Worker /health returned HTTP ${resp.status}. ` +
+      `Expected 200. The Worker may be paused, mis-configured, or returning a CF error page.`
+    );
+  }
+  let body;
+  try { body = JSON.parse(resp.text); } catch (_) {
+    throw new Error(`Cloudflare Worker /health returned non-JSON body. Got: ${resp.text.slice(0, 200)}`);
+  }
+  console.log(`  ✓ Cloudflare Worker /health OK (v${body.version || '?'})`);
+
+  // Drift check: warn if our local PROXY_HOSTS contains a host the Worker
+  // hasn't allow-listed. A mismatch means a fetch through the proxy will
+  // return 403 from the Worker — we want to know before it silently kills
+  // a feed for a week.
+  if (Array.isArray(body.allowed)) {
+    const workerAllowed = new Set(body.allowed);
+    const missing = [...PROXY_HOSTS].filter(h => !workerAllowed.has(h));
+    const stale = [...workerAllowed].filter(h => !PROXY_HOSTS.has(h));
+    if (missing.length > 0) {
+      // Treat as fatal — this is the exact silent-failure pattern we're
+      // trying to eliminate. The user must add the host to the Worker's
+      // ALLOWED_HOSTS and redeploy (see CLAUDE.md "Manual operations
+      // cheat sheet" → "Add a host to the allow-list").
+      throw new Error(
+        `PROXY_HOSTS drift: the following hosts are in scripts/content-refresh.js but ` +
+        `NOT in the Worker's ALLOWED_HOSTS: ${missing.join(', ')}. ` +
+        `Add them to cloudflare-worker/livabletelluride-rss-proxy/worker.js and redeploy.`
+      );
+    }
+    if (stale.length > 0) {
+      // Worker has a host that the script doesn't use any more — just
+      // informational; not worth failing on.
+      console.warn(`  ⚠ Worker allow-list has unused hosts: ${stale.join(', ')}`);
+    }
+  }
 }
 
 function fetch(url, opts = {}) {
@@ -3594,6 +3677,14 @@ async function main() {
   console.log(`  ${new Date().toISOString()}`);
   console.log('═══════════════════════════════════════════════');
 
+  // Pre-flight: the Cloudflare Worker proxy is required for the
+  // IP-blocked feeds (Telluride Times, KOTO). If it's broken, fail
+  // loud at the top — better than silently producing an empty refresh
+  // and only noticing days later when the news section goes stale.
+  // The failure-tracker step in content-refresh.yml will turn this into
+  // a tracked GitHub Issue automatically.
+  await checkWorkerHealth();
+
   let govHubSrc = readJsFile(GOV_HUB_JS);
   let pulseSrc = readJsFile(COMMUNITY_PULSE_JS);
   let changed = false;
@@ -3917,8 +4008,16 @@ async function main() {
     // previous data-only.js until next run.
   }
 
-  // Signal to the workflow whether there are changes
-  process.exit(changed ? 0 : 78); // 78 = "neutral" in GitHub Actions
+  // (Cache-buster auto-bumping removed during the 2026-05-15 merge with
+  // main — main's audit established a dynamic per-request approach in HTML
+  // using `Math.floor(Date.now()/600000)`, which makes a server-side bump
+  // unnecessary.)
+
+  // The workflow's "Check for changes" step uses `git diff` to decide
+  // whether to commit, so we don't need to signal change-vs-no-change via
+  // exit code. Exit 0 on any normal completion — exit 1 (from the catch
+  // below) is reserved for fatal errors and will fail the workflow visibly.
+  process.exit(0);
 }
 
 main().catch(err => {
