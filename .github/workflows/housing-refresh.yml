@@ -23,7 +23,7 @@ jobs:
           node-version: '24'
 
       - name: Run housing refresh
-        run: node scripts/housing-refresh.js 2>&1 | tee housing-refresh.log
+        run: node scripts/housing-refresh.js 2>&1 | tee /tmp/housing-refresh.log
 
       - name: Check for changes
         id: changes
@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: housing-refresh-logs-${{ github.run_id }}
-          path: '*.log'
+          path: '/tmp/*.log'
           retention-days: 14
           if-no-files-found: ignore
 

@@ -23,7 +23,7 @@ jobs:
           node-version: '24'
 
       - name: Run festival ticket status check
-        run: node scripts/festival-ticket-check.js 2>&1 | tee festival-ticket-check.log
+        run: node scripts/festival-ticket-check.js 2>&1 | tee /tmp/festival-ticket-check.log
 
       - name: Check for changes
         id: changes
@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: festival-ticket-check-logs-${{ github.run_id }}
-          path: '*.log'
+          path: '/tmp/*.log'
           retention-days: 14
           if-no-files-found: ignore
 

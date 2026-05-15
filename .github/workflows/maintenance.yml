@@ -28,7 +28,7 @@ jobs:
           # Mailchimp RSS-driven digest campaigns are still running. Without
           # it, the campaign-paused check is skipped (and logs an ℹ note).
           MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
-        run: node scripts/maintenance.js 2>&1 | tee maintenance.log
+        run: node scripts/maintenance.js 2>&1 | tee /tmp/maintenance.log
 
       - name: Check for changes
         id: changes
@@ -60,7 +60,7 @@ jobs:
         with:
           name: maintenance-logs-${{ github.run_id }}
           path: |
-            *.log
+            /tmp/*.log
             maintenance-issues.log
           retention-days: 14
           if-no-files-found: ignore
