@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 May 2026 08:43:43 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2026 13:54:08 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
@@ -18,6 +18,16 @@
 Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four weeks of hiking from May 31 through June 28, with a kickoff at 11am on May 31 at the Oak Street gondola plaza. Hike from anywhere and raise funds for the Telluride Rotary Foundation — supporting scholarships, Youth Exchange, international projects, and community grants. 60% of nonprofit team funds go directly back to their nonprofit. Sponsored by Alpine Bank and Jagged Edge Mountain Gear.]]></description>
       <category>Community Event</category>
       <category>Telluride Rotary Club</category>
+    </item>
+    <item>
+      <title>Upcoming TEF events are ‘by us, for us’</title>
+      <link>https://www.telluridenews.com/news/article_1f48aede-d175-43bc-b798-8d9ecad4410f.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_1f48aede-d175-43bc-b798-8d9ecad4410f.html</guid>
+      <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/20/0206d206-c227-4ced-a75b-1a575f5e764a/6a064b51bf0d7.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Tyler, a local restaurant worker and parent, teamed up with Telluride Education Foundation president Hannah Richman to create fundraising events for the schools after seeing program cuts. The School Supper Club runs May 25-29 with participating restaurants like Cornerhouse, The National, and 221 South Oak donating proceeds, followed by Party in the Park featuring local bands, food vendors, and activities like a mechanical bull.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/20/0206d206-c227-4ced-a75b-1a575f5e764a/6a064b51bf0d7.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
     </item>
     <item>
       <title>County stakeholders vote against accelerated housing</title>
@@ -391,15 +401,6 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8c/f8cd2100-44dc-5e46-bfc7-7a1d38c7ad3a/69ff31aa9240c.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>community</category>
-    </item>
-    <item>
-      <title>Newscast 5-8-26</title>
-      <link>https://koto.org/news/newscast-5-8-26/</link>
-      <guid isPermaLink="false">https://koto.org/news/newscast-5-8-26/</guid>
-      <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[On this week’s Regional Roundup, we look at how communities across the region are grappling with immigration enforcement. In Durango, Colorado, the District Attorney has filed charges against a federal immigration officer over an alleged assault on a protester outside an U.S. Immigration and Customs Enforcement facility in October 2025. In Glenwood]]></description>
-      <category>KOTO Community Radio</category>
-      <category>land-use</category>
     </item>
   </channel>
 </rss>
