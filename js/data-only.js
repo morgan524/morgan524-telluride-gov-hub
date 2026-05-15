@@ -1664,81 +1664,48 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "CANCELLEDCommunity Support/ Apoyo Comunitario",
-    link: "https://telluridelibrary.libcal.com/event/16855114?hs=a",
-    description: "9:00 AM – 12:00 PM · Do you need help applying for public assistance programs? Ruth from Tri-County Health Network will provide guidance with filling out applications for SNAP, the Good Neighbor Fund, the Behavioral Health Fund, Medicaid, and can provide support in guiding you towards other helpful community resources. This will be held in Meeting Room #5 on the 2nd Thursday of the month from 9am-12pm . Advance registration is encouraged. &iquest;Necesita ayuda para solicitar programas de asistencia p&uacute;blica? Ruth, de Tri-County Health Network , brindar&aacute; orientaci&oacute;n para completar solicitudes de SNAP, el Fondo Good Neighbor, el Fondo de Salud Mental, Medicaid, y tambi&eacute;n puede apoyarle para conectarse con otros recursos comunitarios. Se llevar&aacute; a cabo en la Sala de reuniones #5 el segundo jueves de cada mes, de 9 a.m. a 12 p.m. Se recomienda registrarse con anticipaci&oacute;n. …",
-    pubDate: "2026-05-14T09:00:00.000Z",
+    title: "You & Me / Tu y Yo",
+    link: "https://telluridelibrary.libcal.com/event/15184968?hs=a",
+    description: "10:30 AM – 11:00 AM · Join us every Friday for a fun and engaging parent-child program designed for preschoolers! Each week, we explore a new theme through hands-on activities that spark creativity, curiosity, and learning. 1st Friday: Art - Get creative with fun art projects designed for little hands! 2nd Friday: Toddler Chef - Stir, mix, and create easy, tasty treats while learning basic kitchen skills. 3rd Friday: STEM - Dive into simple science, technology, engineering, and math experiments that inspire wonder. 4th Friday: Crafts - Enjoy making fun crafts together. &Uacute;nase a nosotros todos los viernes para un programa divertido e interactvio para padres e hijos, &iexcl;dise&ntilde;ado para ni&ntilde;os en edad preescolar! Cada semana exploramos un nuevo tema a trav&eacute;s de actividades pr&aacute;cticas que despiertan la creatividad, la curiosidad y el aprendizaje. …",
+    pubDate: "2026-05-15T10:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1771543641.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755554174.png"
   },
   {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/15223204?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-05-14T10:30:00.000Z",
+    title: "Fridays Creativos",
+    link: "https://telluridelibrary.libcal.com/event/15586654?hs=a",
+    description: "3:30 PM – 5:30 PM · Esta clase est&aacute; dise&ntilde;ada para introducir a los artistas al mundo de los medios 2D y 3D. Se utiliza una amplia gama de materiales de arte, como pasteles al &oacute;leo, materiales reciclados, pintura acr&iacute;lica y mucho m&aacute;s. Los estudiantes aprender&aacute;n siguiendo a la profesora con un m&eacute;todo paso a paso que les va a permitir ver c&oacute;mo sus proyectos toman forma de principio a fin. Para inscripciones, contactese con Domi 970.728.4519 Ext: 112 Edades: K-4to grado (5-10 a&ntilde;os)   This class is designed to introduce artists to the world of both 2D and 3D media. Using a wide range of art supplies such as recycled materials, oil pastels, acrylic paint, and so much more. Students will learn by following the teacher in a step-by-step method that allows the child to see projects take shape from beginning to end. Ages: K-4th grade (5-10years old)",
+    pubDate: "2026-05-15T15:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+    location: "Ahh Haa School of Arts",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1760909407.png"
   },
   {
-    title: "Pilates for All Bodies",
-    link: "https://telluridelibrary.libcal.com/event/16006639?hs=a",
-    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-05-14T12:30:00.000Z",
+    title: "Teen Ping Pong",
+    link: "https://telluridelibrary.libcal.com/event/15976840?hs=a",
+    description: "4:00 PM – 6:00 PM · Come stop by the library every Friday after school for open Ping Pong for Teenagers in the Magazine Room.",
+    pubDate: "2026-05-15T16:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1765562739.png"
+  },
+  {
+    title: "Consejería Universitaria • College Counseling",
+    link: "https://telluridelibrary.libcal.com/event/16811556?hs=a",
+    description: "5:30 PM – 7:00 PM · El proceso de solicitud de ingreso a la universidad resulta abrumador. Existen innumerables t&eacute;rminos que aprender, formularios que completar y decisiones que tomar para garantizar que su estudiante cuente con las mejores opciones. Este programa gratuito de asesoramiento universitario est&aacute; dise&ntilde;ado para familias de primera generaci&oacute;n que no saben por d&oacute;nde empezar. Solicite la oportunidad de trabajar de manera individual con un asesor acad&eacute;mico profesional para comprender mejor el proceso, planificar con antelaci&oacute;n y tomar la decisi&oacute;n correcta. Este programa tendr&aacute; una duraci&oacute;n de dos a&ntilde;os y acompa&ntilde;ar&aacute; a su estudiante desde la primavera de su d&eacute;cimo grado hasta las etapas de identificaci&oacute;n de universidades y presentaci&oacute;n de solicitudes. &bull; The process of applying to college is daunting. There are countless terms to learn, forms to complete, and decisions to make to ensure that your student has the best options. …",
+    pubDate: "2026-05-15T17:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
-  },
-  {
-    title: "Littles On the Move",
-    link: "https://telluridelibrary.libcal.com/event/13960343?hs=a",
-    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
-    pubDate: "2026-05-14T15:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
-  },
-  {
-    title: "The Spark Lab",
-    link: "https://telluridelibrary.libcal.com/event/15072262?hs=a",
-    description: "3:30 PM – 5:00 PM · Each week we will do a fun activity! First thursdays with Pinhead Second Thursdays with EcoAction partners Fourth Thursdays with Telluride Theatre",
-    pubDate: "2026-05-14T15:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1761421911.png"
-  },
-  {
-    title: "Teen Artist Queeries",
-    link: "https://telluridelibrary.libcal.com/event/16099926?hs=a",
-    description: "4:00 PM – 5:00 PM · Join the WPL, Ah Haa, and the Telluride School District GSA Club, for Artist Queeries : An LGBTQIA+ Club for all youth focused on art.",
-    pubDate: "2026-05-14T16:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Teen Area",
-    imageUrl: ""
-  },
-  {
-    title: "Booze and Books",
-    link: "https://telluridelibrary.libcal.com/event/16590827?hs=a",
-    description: "5:15 PM – 6:30 PM · Sip on a libation while chatting with other bibliophiles about books you have read recently. It&#39;s totally open ended and open to everyone! 5:15 the second Thursday of every month. The library will get some apps for the table; you purchase your own beverage.   Please sign up in advance . On Thursday, May 14th, we will meet at 123 Tacos  at 123 S. Oak St. The rest of our summer season will be at  Liz  at 200 W. Colorado Ave. in Telluride. (Entrance is on Fir St.)",
-    pubDate: "2026-05-14T17:15:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "123 Tacos Restaurant",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_15_54_25.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_29_15_54_54.png"
   }
 ];
 
@@ -1851,72 +1818,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "Ouray Economic Development Committee",
-    link: "https://events.ourayridgwayevents.com/event/ouray-economic-development-committee",
-    description: "The Ouray Economic Development Committee (OEDC) works as the liaison between the City and the local business community. This includes creating and implementing an Economic Development Plan and economic development incentives to best serve the business community and to align with programs that induce private investment enterprises and commerce. The committee also explores regional economic development efforts with the Town of Ridgway and Ouray County as well as is tasked with developing a Business Expansion and Retention (BEAR) program, participating in policy discussions and revisions to community planning documents, and making recommendations to the City Council about economic incentive requests.",
-    pubDate: "2026-05-14T14:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
-  },
-  {
-    title: "Pilates Mat",
-    link: "https://ridgwaypilates.punchpass.com/catalogs/300",
-    description: "All Levels Pilates Mat class. Classical sequence Int to challenge, strengthen and stretch you wehole body. Every Thursday at 9:30am. Pricing Four lessons for $120 Eight lessons for $200 Become a member and pay $100/month to attend weekly. Purchase a pass here: https://ridgwaypilates.punchpass.com/catalogs/300 Class is limited to six people. Mats are included. Please wear socks, put your hair up and choose clothing free of metal.",
-    pubDate: "2026-05-14T15:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
-  },
-  {
-    title: "On Display: Layers of Faces and Life-Paintings by Ruth Higdon and Julie Ahern",
-    link: "https://events.ourayridgwayevents.com/event/layers-of-faces-and-life-paintings-by-ruth-higdon-and-julie-ahern",
-    description: "A duo exhibition of new works by local painters Julie Ahern and Ruth Higdon. More info decker@ridgwayfuse.org",
-    pubDate: "2026-05-14T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52709680184864/huge/bf651b7d434184420bcaf9702ff358cbd88d3b9e.jpg"
-  },
-  {
-    title: "COMEDY NIGHT",
-    link: "www.FloatingLotusBrewery.com",
-    description: "Bohemian Boys Comedy Club Returns to the Lotus The laughs are back—uncensored and unapologetic. Bohemian Boys Comedy Club is returning to Floating Lotus Brewery for a night of sharp, high-energy stand-up. Expect bold material, quick wit, and plenty of moments that push the line—in the best way. This is edgy, mature comedy intended for adults—not your average open mic, and definitely not for the easily offended. Grab a pint, find your seat, and settle in for a night that hits a little harder than your typical Thursday. Thursday, May 14th Show starts at 7PM $17 Advance / $20 at the Door Seats are limited, and these shows tend to fill up—advance tickets are strongly recommended. Come early, get comfortable, and get ready to laugh.",
-    pubDate: "2026-05-15T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52648717659533/huge/649cc93da4bd5a03f9adfd8f7fe04a76ab80cda9.jpg"
-  },
-  {
-    title: "THIRSTY THURSDAY - Game Night at Floating Lotus",
-    link: "www.FloatingLotusBrewery.com",
-    description: "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who came to have a good time. Happening 7-9pm every week",
-    pubDate: "2026-05-15T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg"
-  },
-  {
-    title: "Steps Tavern Presents Karaoke Night",
-    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
-    description: "Steps Tavern Presents Karaoke Night. Doors Open at 7:00 PM. Karaoke Begins at 8:00 PM",
-    pubDate: "2026-05-15T02:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "STEPS TAVERN",
-    imageUrl: "https://localist-images.azureedge.net/photos/52633505531238/huge/33b9b47c734793a754893ee4e67227b39326b67b.jpg"
-  },
   {
     title: "Full-Scale Evacuation Exercise",
     link: "https://events.ourayridgwayevents.com/event/full-scale-evacuation-exercise",
@@ -2895,6 +2796,72 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52277881680293/huge/327c868a372da99a8aa625676956ed98bc1b6b79.jpg"
+  },
+  {
+    title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
+    link: "www.FloatingLotusBrewery.com",
+    description: "Join us at the Lotus for a midweek tradition that brings together musicians, music lovers, and the incredible local talent that makes our community shine. From intimate solo sets to full-band jam sessions with rotating players, Open Mic Night is always full of surprises. Want to play? We’d love to have you — signups begin at 5:30pm. Just bring your instrument and your creativity, and we’ll take care of the rest. Our stage is fully equipped with PA, mics, drums, bass, and everything you need to plug in and play. 🎟️ Free admission 🍻 Grab a beer, settle in, and enjoy the show Come be part of the music — on stage or in the crowd!",
+    pubDate: "2026-06-04T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/ed08b494666358349bc84e969db6e8b262ef71aa.jpg"
+  },
+  {
+    title: "Summer Bingo - Wednesday Night at Ouray Elks Lodge",
+    link: "Www.ourayelks.org",
+    description: "OPEN TO THE PUBLIC Come see our beautiful historic lodge while joining us in playing bingo! Doors Open at 5:30 pm, Early Bird Bingo 6:00 and Regular Bingo starts at 7:00pm Concessions available to purchase",
+    pubDate: "2026-06-04T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52440353082990/huge/849a6c82c22aa4e9cf19e3fc7490b7c928059ded.jpg"
+  },
+  {
+    title: "Yoga in the Park- Wednesday evenings",
+    link: "www.beetrueyou.com",
+    description: "For noncyclists and cyclists alike. After an optional social bike ride at 5 pm, wind down for a yoga class in the park 6 - 7 pm. A moderate to advanced vinyasa style class targetting the areas of the body affected by time in the bike saddle and other areas of request. Bring your own mat. If you don't have one, please let me know earlier in the day so I can bring one for you. Meet at the Gazebo south of Chipeta Lodge. If the weather is too inclement, we can meet at the studio at 380 Sherman Street, Ridgway. While this is donation based, please pay before online or in person.",
+    pubDate: "2026-06-04T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Gazebo south of Chipeta Lodge, Ridgway, CO (Or studio if raining)",
+    imageUrl: "https://localist-images.azureedge.net/photos/52880886803755/huge/ba2d24fbf09ba1f9a707a06213d60685581d7322.jpg"
+  },
+  {
+    title: "Indiana Jones and the Last Crusade: CO-150 Film Festival Screening @ the Wright",
+    link: "wrightoperahouse.org",
+    description: "Indiana Jones and the Last Crusade: CO-150 Film Festival Screening @ the Wright WHEN? Wednesday, June 3 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 2h 7min RATING: PG-13 ROTTEN TOMATOES SCORE: 84% ABOUT THE FILM Indiana Jones and the Last Crusade (1989) follows legendary archaeologist Indiana Jones as he races across Europe and the Middle East in search of the Holy Grail while trying to rescue his kidnapped father. Blending action, humor, ancient mysteries, and unforgettable set pieces, the film remains one of the most beloved adventure movies ever made. This special Colorado-themed screening also highlights the film’s surprising connections to the American West. …",
+    pubDate: "2026-06-04T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52880057442920/huge/28c2e72d06258101855099bea6c7cc466c6c9b07.jpg"
+  },
+  {
+    title: "Pilates Mat",
+    link: "https://ridgwaypilates.punchpass.com/catalogs/300",
+    description: "All Levels Pilates Mat class. Classical sequence Int to challenge, strengthen and stretch you wehole body. Every Thursday at 9:30am. Pricing Four lessons for $120 Eight lessons for $200 Become a member and pay $100/month to attend weekly. Purchase a pass here: https://ridgwaypilates.punchpass.com/catalogs/300 Class is limited to six people. Mats are included. Please wear socks, put your hair up and choose clothing free of metal.",
+    pubDate: "2026-06-04T15:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
+  },
+  {
+    title: "Wild West Wonder Wander: Kris Batchelder Art Opening Reception @ the Wright",
+    link: "wrightoperahouse.org",
+    description: "Wild West Wonder Wander: Kris Batchelder Art Opening Reception @ the Wright WHEN? Thursday, June 4 4:00 pm – 6:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT The Ouray County Arts Association presents Wild West Wonder Wander, an opening reception celebrating the work of Colorado collage artist Kris Batchelder. Kris is a self-created paper collage artist whose work is deeply inspired by the outdoors, wildlife, and the adventurous spirit of the American West. Having spent years exploring wilderness landscapes and outdoor communities around the world, her pieces reflect both a love of nature and a desire to inspire others to experience it for themselves. Recently returning to Colorado after time spent living in Wyoming, Kris has found new inspiration in Ridgway and the greater Ouray area, places she first fell in love with years ago during an early visit to the region. …",
+    pubDate: "2026-06-04T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52886404587594/huge/0c51371f7fbb6f19dc67e815e978b33092a15b0c.jpg"
   }
 ];
 
