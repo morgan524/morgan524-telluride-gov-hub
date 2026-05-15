@@ -1,0 +1,7 @@
+═══════════════════════════════════════════════
+  Building RSS feed for Mailchimp
+  2026-05-15T14:39:41.684Z
+═══════════════════════════════════════════════
+  Loaded: 73 TT/gov articles, 8 KOTO newscasts, 1 KOTO features, 1 meeting summaries, 2 events, 12 blog posts
+  Emitting 40 items to feed.xml (max: 40)
+✅ Wrote /home/runner/work/morgan524-telluride-gov-hub/morgan524-telluride-gov-hub/feed.xml (47254 bytes)
