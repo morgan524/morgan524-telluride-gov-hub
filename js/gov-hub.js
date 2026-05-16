@@ -5580,30 +5580,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: 'Town council suspends waitlist policies',
-    source: 'Telluride Times',
-    date: 'May 2, 2026',
-    firstSeen: '2026-05-07',
-    newsTopic: 'housing',
-    copy: 'Town council temporarily suspended waitlist policies for deed-restricted rentals through July 31 to fill vacancies faster. The town has 39 empty units (18% vacancy rate) despite a 220-person waitlist, well above the 8% target. Staff blame outdated applications and affordability issues with pricier units.',
-    claudeSummary: true,
-    href: 'https://www.telluridenews.com/news/article_766aee5a-65e5-4d4e-af87-0d75148b5bba.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/be/4be5885b-5c31-47e0-a343-371f832e5f5f/69f64629dcef0.image.jpg',
-    imgHiRes: true
-  },
-  {
-    title: 'Sibling stories',
-    source: 'Telluride Times',
-    date: 'May 2, 2026',
-    firstSeen: '2026-05-07',
-    newsTopic: 'community',
-    copy: 'A local bartender at the Vaudeville once worked with his baby strapped to his chest during a comedy show, prompting a customer to warn him that siblings inevitably hate each other. The experience motivated him and his partner to intentionally raise their two kids as best friends through equal treatment, room sharing, and encouraging shared activities. Their approach seems to have worked - the siblings chose to ride together throughout a recent family road trip to California.',
-    claudeSummary: true,
-    href: 'https://www.telluridenews.com/opinion/columnists/article_b13bebfd-ba8d-4e2a-8bbe-e534628b63ec.html',
-    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/44/244939cc-69e1-4024-ae0f-a26ac2a38c3c/69f134d9097db.image.jpg',
-    imgHiRes: true
-  },
-  {
     title: 'Egnar Enters Stage 1 Fire Restrictions',
     source: 'San Miguel County',
     date: 'May 12, 2026',
@@ -5654,36 +5630,36 @@ const TELLURIDE_TIMES_ARTICLES = [
 // Updated: 2026-04-01  — refresh periodically from koto.org/news-category/newscasts/
 const KOTO_NEWSCASTS = [
   {
-    title: "Newscast 5-14-26",
-    source: "KOTO Community Radio",
-    date: "May 15, 2026",
-    newsTopic: "community",
-    copy: "West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda; Listening Club is the Cure for Disintegration",
-    href: "https://koto.org/news/newscast-5-14-26/"
+    title: 'Newscast 5-14-26',
+    source: 'KOTO Community Radio',
+    date: 'May 15, 2026',
+    newsTopic: 'community',
+    copy: 'West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda; Listening Club is the Cure for Disintegration',
+    href: 'https://koto.org/news/newscast-5-14-26/'
   },
   {
-    title: "Newscast 5-13-26",
-    source: "KOTO Community Radio",
-    date: "May 14, 2026",
-    newsTopic: "land-use",
-    copy: "Regional Governments Discuss Impacts of Development; The Joy of Sex Ed…with Clowns; Alex Kelloff Makes Bid for Congress",
-    href: "https://koto.org/news/newscast-5-13-26/"
+    title: 'Newscast 5-13-26',
+    source: 'KOTO Community Radio',
+    date: 'May 14, 2026',
+    newsTopic: 'land-use',
+    copy: 'Regional Governments Discuss Impacts of Development; The Joy of Sex Ed…with Clowns; Alex Kelloff Makes Bid for Congress',
+    href: 'https://koto.org/news/newscast-5-13-26/'
   },
   {
-    title: "Newscast 5-11-26",
-    source: "KOTO Community Radio",
-    date: "May 12, 2026",
-    newsTopic: "community",
-    copy: "Valley Floor Day Instills Stewardship in a Changing Climate -General Assembly Enters Final Days",
-    href: "https://koto.org/news/newscast-5-11-26/"
+    title: 'Newscast 5-11-26',
+    source: 'KOTO Community Radio',
+    date: 'May 12, 2026',
+    newsTopic: 'community',
+    copy: 'Valley Floor Day Instills Stewardship in a Changing Climate -General Assembly Enters Final Days',
+    href: 'https://koto.org/news/newscast-5-11-26/'
   },
   {
-    title: "Newscast 5-8-26",
-    source: "KOTO Community Radio",
-    date: "May 9, 2026",
-    newsTopic: "land-use",
-    copy: "On this week’s Regional Roundup, we look at how communities across the region are grappling with immigration enforcement. In Durango, Colorado, the District Attorney has filed charges against a federal immigration officer over an alleged assault on a protester outside an U.S. Immigration and Customs Enforcement facility in October 2025. In Glenwood",
-    href: "https://koto.org/news/newscast-5-8-26/"
+    title: 'Newscast 5-8-26',
+    source: 'KOTO Community Radio',
+    date: 'May 9, 2026',
+    newsTopic: 'land-use',
+    copy: 'On this week’s Regional Roundup, we look at how communities across the region are grappling with immigration enforcement. In Durango, Colorado, the District Attorney has filed charges against a federal immigration officer over an alleged assault on a protester outside an U.S. Immigration and Customs Enforcement facility in October 2025. In Glenwood',
+    href: 'https://koto.org/news/newscast-5-8-26/'
   },
   {
     title: 'Newscast 5-7-26',
@@ -5708,14 +5684,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: 'recreation',
     copy: 'Paul Wisor Steps Down as Mountain Village Town Manager; General Assembly Enters Its Final Days',
     href: 'https://koto.org/news/newscast-5-4-26/'
-  },
-  {
-    title: "Newscast 5-1-26",
-    source: "KOTO Community Radio",
-    date: "May 2, 2026",
-    newsTopic: "land-use",
-    copy: "The city of Durango has proclaimed April 19, 2026 as Ross Anderson Day, marking twenty years since the Native American speed skier set a U.S. speed-skiing record of 154.06 miles per hour. We’ll also hear from a researcher working in Bears Ears who is turning to crowdfunding to continue his work after losing a federal grant. Then, we head to Utah, w",
-    href: "https://koto.org/news/newscast-5-1-26/"
   }
 ];
 
