@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 May 2026 19:22:50 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2026 02:26:31 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
@@ -318,16 +318,6 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <category>public-safety</category>
     </item>
     <item>
-      <title>Building healthier, more resilient communities</title>
-      <link>https://www.telluridenews.com/news_release/article_76785698-df60-47e0-b643-594f8cbd8949.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news_release/article_76785698-df60-47e0-b643-594f8cbd8949.html</guid>
-      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/89/489e766b-f9b6-40f6-bb59-83fef25f771e/69ff7da2c5799.image.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />A training session is being offered on building community resilience using research-based tools focused on positive childhood and adult experiences to help young people thrive. The program targets parents, educators, healthcare workers, and community members, with registration required in advance.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/89/489e766b-f9b6-40f6-bb59-83fef25f771e/69ff7da2c5799.image.png" medium="image" />
-      <category>Telluride Times</category>
-      <category>land-use</category>
-    </item>
-    <item>
       <title>Egnar Enters Stage 1 Fire Restrictions</title>
       <link>https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1395</link>
       <guid isPermaLink="false">https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1395</guid>
@@ -390,16 +380,6 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Last Dollar Pass is now open]]></description>
       <category>San Miguel County</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>A Frontier plane hits a pedestrian during takeoff at Denver airport</title>
-      <link>https://www.telluridenews.com/news/state/article_ce4f636a-272a-57ad-8442-17632581041f.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_ce4f636a-272a-57ad-8442-17632581041f.html</guid>
-      <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8c/f8cd2100-44dc-5e46-bfc7-7a1d38c7ad3a/69ff31aa9240c.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />A Frontier Airlines plane struck a pedestrian during takeoff at Denver International Airport, forcing an emergency stop and evacuation of 231 people on board. The pilot reported an engine fire and smoke in the cabin, leading to passengers evacuating via emergency slides onto the runway.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8c/f8cd2100-44dc-5e46-bfc7-7a1d38c7ad3a/69ff31aa9240c.image.jpg" medium="image" />
-      <category>Telluride Times</category>
       <category>community</category>
     </item>
   </channel>
