@@ -1354,28 +1354,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/05/Hikathon-simplified-logo-SMALL.png"
   },
   {
-    title: "San Miguel County Spring Clean Up",
-    link: "https://koto.org/event/san-miguel-county-spring-clean-up/2026-05-16/",
-    description: "It's that time of year again! Join in for San Miguel County's annual Spring Clean Up Events May 15th in Telluride and Mountain Village and May 16th in Telluride and Norwood. Visit ecoactionpartners.org/spring-cleanup-events for more details or call EcoAction at 970-728-1340.",
-    pubDate: "2026-05-16T10:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/SMC-Spring-Clean-up-poster-Final.png"
-  },
-  {
-    title: "Outdoor Gear Drive",
-    link: "https://koto.org/event/outdoor-gear-drive/2026-05-16/",
-    description: "Get that unused gear out of your garage and to someone who will happily use it! Telluride Mountain Club is collecting lightly used outdoor gear, including skis, camping gear, bikes, and clothing at Carhenge Parking lot between 10 AM and 2 PM on Friday & Saturday, May 15th & 16th. Gear will be re-distributed at the Community Fiesta.",
-    pubDate: "2026-05-16T10:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Carhenge Parking Lot, TELLURIDE",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/Gear-Drive-poster-2026.jpg"
-  },
-  {
     title: "Clown Sex Ed (Telluride Theatre FRINGE Project)",
     link: "https://koto.org/event/clown-sex-ed-telluride-theatre-fringe-project/2026-05-16/",
     description: "Clown Sex Ed is a hilarious romp through the challenges, failures and horror stories of American sex education. Tara Demmy and Zachary Chiero poke fun at your gym teacher, your health class and your parents' awkward talk and examine not only what they said but more importantly what they left out. Produced by Durango-based Oddball Theatre Company, this off-the-walls comedy \"makes the uncomfortable uproariously funny\" (Broad Street Review). A limited number of Pay-What-You-Can tickets are available per performance. — About Telluride Theatre FRINGE Projects: First launched in 1947, the Edinburgh Fringe Festival provided independent artists a platform to share their work, ranging from new musicals, small immersive performances, and everything in-between. In the spirit of the Fringe, Telluride Theatre is launching a new year-round program: The FRINGE Project. Applications are open to local artists with performance proposals for small-to-medium sized productions of ALL styles.",
