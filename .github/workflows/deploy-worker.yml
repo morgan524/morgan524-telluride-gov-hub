@@ -1,0 +1,16 @@
+name: Deploy Cloudflare Worker
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy RSS proxy Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLAIR_WORKER }}
+          workingDirectory: cloudflare-worker/livabletelluride-rss-proxy

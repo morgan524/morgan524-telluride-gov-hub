@@ -38,7 +38,9 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           RSS_PROXY_URL: ${{ secrets.RSS_PROXY_URL }}
           TT_AUTH_COOKIE: ${{ secrets.TT_AUTH_COOKIE }}
-        run: node scripts/content-refresh.js 2>&1 | tee /tmp/content-refresh.log
+        run: |
+          set -o pipefail
+          node scripts/content-refresh.js 2>&1 | tee /tmp/content-refresh.log
 
       - name: Regenerate data-only.js from updated gov-hub.js
         run: |
@@ -46,12 +48,16 @@ jobs:
         continue-on-error: true
 
       - name: Build RSS feed (feed.xml) for Mailchimp
-        run: node scripts/build-rss-feed.js 2>&1 | tee /tmp/build-rss-feed.log
+        run: |
+          set -o pipefail
+          node scripts/build-rss-feed.js 2>&1 | tee /tmp/build-rss-feed.log
 
       - name: Run Deep Dive topic update
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: node scripts/deep-dive-refresh.js 2>&1 | tee /tmp/deep-dive.log
+        run: |
+          set -o pipefail
+          node scripts/deep-dive-refresh.js 2>&1 | tee /tmp/deep-dive.log
 
       - name: Check for changes
         id: changes
