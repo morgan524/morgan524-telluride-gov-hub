@@ -54,6 +54,18 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Rural Homes Colorado to build workforce housing for MV",
+    source: "Telluride Times",
+    date: "May 17, 2026",
+    firstSeen: "2026-05-17",
+    newsTopic: "housing",
+    copy: "Mountain Village has partnered with nonprofit Rural Homes Colorado to develop workforce housing on town-donated land, with construction expected to start fall 2027 and residents moving in by late 2028. Rural Homes uses modular construction to keep costs down and has built 49 homes in Norwood, Ridgway and Ouray since 2021.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_9bb0b443-6b90-42fe-a3bc-0162f255e88a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/10/010ec66b-45b0-4c16-a613-ad59e52b90e8/6a08c4a872f36.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Commissioners discuss housing vacancy tax",
     source: "Telluride Times",
     date: "May 16, 2026",
@@ -1318,17 +1330,6 @@ const COMMUNITY_EVENTS = [
 ];
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Gentle Yoga with Kristin Milord",
-    link: "https://koto.org/event/gentle-yoga-with-kristin-milord-2/2026-05-17/",
-    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class is free, but donations to support the instructor are welcome.",
-    pubDate: "2026-05-17T11:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/gentle-yoga-kristen-1.png"
-  },
   {
     title: "Drop In Tech Time with Oliver",
     link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-05-17/",
