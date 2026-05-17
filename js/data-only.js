@@ -1817,37 +1817,70 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Balance in Motion - Equilibrio en Movimiento",
-    link: "https://telluridelibrary.libcal.com/event/16535298?hs=a",
-    description: "10:00 AM – 11:00 AM · Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Mu&eacute;vase, respire y ll&eacute;nese de energ&iacute;a en esta din&aacute;mica clase biling&uuml;e, dirigido por Lauren Norton, dise&ntilde;ada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energ&iacute;a de la danza, y la presencia equilibrante del yoga y la respiraci&oacute;n, esta sesi&oacute;n le dejar&aacute; sinti&eacute;ndose fuerte, en armon&iacute;a y revitalizado/a. …",
-    pubDate: "2026-05-16T10:00:00.000Z",
+    title: "Trash Bash",
+    link: "https://telluridelibrary.libcal.com/event/16767575?hs=a",
+    description: "10:00 AM – 2:00 PM · Join the Library Team for the Town of Telluride&#39;s Trash Bash! Swing by the library any time between 10am and 2pm to pick up your trash bag from the front desk. All ages are welcome. Free pizza (and a free margarita ticket for 21+) will be provided for anyone who returns a bag of trash. Help keep our town clean!",
+    pubDate: "2026-05-17T10:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lobby",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_43_09.jpg"
+  },
+  {
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://telluridelibrary.libcal.com/event/16515737?hs=a",
+    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-05-17T11:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
+  },
+  {
+    title: "Drop-In Tech Time with Oliver",
+    link: "https://telluridelibrary.libcal.com/event/15970374?hs=a",
+    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
+    pubDate: "2026-05-17T13:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "2nd Floor Desk",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+  },
+  {
+    title: "Holding Space/Espacio de Espera con Daniel Kanow",
+    link: "https://telluridelibrary.libcal.com/event/16042598?hs=a",
+    description: "1:00 PM – 3:00 PM · ATTENTION: IN ORDER TO ATTEND THIS WORKSHOP, YOU WILL HAVE NEEDED TO HAVE SIGNED UP FOR AND ATTENDED THE PREVIOUS THREE SESSIONS WHICH STARTED ON APRIL 26TH. ATENCI&Oacute;N: PARA ASISTIR A ESTE TALLER, DEBER&Aacute; HABERSE INSCRITO Y HABER ASISTIDO A LAS TRES SESIONES ANTERIORES QUE COMENZARON EL 26TH DE ABRIL. This four-week creative series offers a gentle, supportive space to explore grief and life transitions through art-making. Each session invites participants to engage in guided, low-pressure creative activities designed to support reflection, grounding, and self-expression. No art experience is needed. Participants are free to observe, modify activities, or step away as needed. Sharing is optional, and personal stories are never required. The focus is on healing the process of creative expression and the potential creation of meaningful heartfelt artworks. …",
+    pubDate: "2026-05-17T13:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1740003527.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1767903630.jpg"
   },
   {
-    title: "Studio Ghibli Movie Matinee: Kiki&#039;s Delivery Service",
-    link: "https://telluridelibrary.libcal.com/event/16037381?hs=a",
-    description: "2:00 PM – 4:00 PM",
-    pubDate: "2026-05-16T14:00:00.000Z",
+    title: "Cíclica & Humana",
+    link: "https://telluridelibrary.libcal.com/event/16761258?hs=a",
+    description: "2:00 PM – 3:30 PM · C&iacute;clica & Humana es un proyecto que busca abrir un espacio para mujeres en el que podamos comprender el funcionamiento de nuestro ciclo hormonal y reconectar con nuestra feminidad desde el amor propio. El proyecto estar&aacute; organizado en 6 encuentros: 1. La feminidad y el Utero  2. Como Entender nuestro cuerpo?  3. Ciclo 1: Fase Lutea  4. Ciclo 2: Menstruaci&oacute;n  5. Ciclo 3: Fase Folicular  6. Ciclo 4: Fase Ovulaci&oacute;n  Por favor de registrase con Claudia para estas clases.",
+    pubDate: "2026-05-17T14:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_29_11_54_12.png"
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_14_18_33.jpg"
   },
   {
-    title: "Hora de Cuentos Bilingües • Bilingual Storytime",
-    link: "https://telluridelibrary.libcal.com/event/16825055?hs=a",
-    description: "3:00 PM – 3:30 PM",
-    pubDate: "2026-05-16T15:00:00.000Z",
+    title: "Tea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/16567825?hs=a",
+    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
+    pubDate: "2026-05-17T14:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_01_13_22_23.jpeg"
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
   }
 ];
 
@@ -1960,83 +1993,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "Ridgway Bird Walks & Talks: Birds of Ridgway State Park",
-    link: "https://weehawkenarts.org/education/adult-art-classes/",
-    description: "Join Mike Campbell, a Colorado native, lifelong birder, retired educator, wildlife artist, bird banding educator, and Friends of Ridgway State Park board member, as he shares his experiences and knowledge of our local feathered friends and the environment we share during a guided Bird Walk & Talk in Ouray County. Small group sizes will allow the experience to be tailored to participants’ knowledge levels and interests. Times, meeting location, and any weather-related updates will be provided via email prior to the event. A waiver needs to be signed before the event. Please do so here. If you're having issues with registration, please email lexi@weehawkenarts.org.",
-    pubDate: "2026-05-16T13:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52384803918022/huge/ed8181025b7e5e255684a399ff4439c3ac9982c8.jpg"
-  },
-  {
-    title: "OTG Backcountry Trail Crew Leader Training",
-    link: "ouraytrails.org",
-    description: "We are in need of new Trail Crew Leaders and would love to have a good turnout. Even if you don’t want to lead a trip initially, you can learn by working with experienced Trail Crew Leaders through backcountry trips planned for this summer. A two-day Trail Crew Leader course will be held on Saturday and Sunday May 16 & 17 lead by John Hulburd. He is a certified OSI/VOC instructor and has a wealth of knowledge to share in trail building, construction, and maintenance! Sign up using this link. For questions, please contact OTG at contactus@ouraytrails.org.",
-    pubDate: "2026-05-16T14:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52587455597568/huge/8f3a527aa56803672e93a2f117c5ed9ce3a2fefe.jpg"
-  },
-  {
-    title: "Free Community Shred Day",
-    link: "https://events.ourayridgwayevents.com/event/shred-day",
-    description: "Alpine Bank invites you to a free on-site document shredding day to securely dispose of unwanted documents with personal information. Staples and paperclips do not need to be removed. Limit 4 boxes per household and business. Donations accepted to benefit Girl Scouts of Colorado Troop #17986.",
-    pubDate: "2026-05-16T15:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Alpine Bank Ridgway",
-    imageUrl: "https://localist-images.azureedge.net/photos/52818545130383/huge/bf4754150c301fdc61316e2f73266ef866f46f02.jpg"
-  },
-  {
-    title: "Cedar Hill Cemetery Spring Clean Up Day (Volunteer)",
-    link: "https://events.ourayridgwayevents.com/event/cedar-hill-cemetery-spring-clean-up-day-volunteer",
-    description: "Every year, the Friends of Cedar Hill Cemetery Non-Profit hosts a Spring Clean-up day to support the cemetery, honor those buried there, and clean up after the rams! (Yes, they really do knock over headstones to scratch an itch.) All are welcome to join us! Please bring gloves, gardening tools, and a smile :)",
-    pubDate: "2026-05-16T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Cedar Hill Cemetery 18510 Highway 550, Ridgway, CO, United States, 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52772277266907/huge/d5a9dc9b64c78e0f660049ca5ab2d28cd0340139.jpg"
-  },
-  {
-    title: "Ridgway Railroad Museum FREE Train Rides",
-    link: "https://www.ridgwayrailroadmuseum.org/",
-    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
-    pubDate: "2026-05-16T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
-  },
-  {
-    title: "Faces, Flowers, Rock n Roll:  An Art Show",
-    link: "FloatingLotusBrewery.com",
-    description: "Join us for a weekend of color, character, and creative energy as we feature the work of Daniel Braddix—a true gentleman of the road whose journey from corporate life to wild places has shaped a deeply expressive style. From Big Sur to Maui and now Western Colorado, Daniel paints what he lives: faces full of soul, flowers bursting with life, and moments pulled straight from the edge of adventure. These pieces aren’t just paintings—they’re snapshots of a life lived outside, created in the mountains, deserts, and forests with canvas in one hand and the world in front of him. Come grab a pint, meet the artist, and experience a collection that’s equal parts beauty, grit, and rock n’ roll spirit.",
-    pubDate: "2026-05-16T20:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52694643294251/huge/8faa7c02217ad28c65635d406cf8d44296cfa174.jpg"
-  },
-  {
-    title: "Pint Night benefitting Minerva West",
-    link: "www.FloatingLotusBrewery.com",
-    description: "Hello Minerva Family and Friends! Join us next Saturday May 16th for a Minerva Mingle, 5th Season Celebration and Fundraiser!! Family Friendly Activities and Dance Party! 5 to 9 PM at Floating Lotus Brewery located at 144 Campbell Lane Ridgway, CO 81432 10% of sales for pints of Brews, two flavors of kombucha, and house-made sparkling lemonade will go to Minerva West as a donation. Thank you Kenny and Floating Lotus Brewery! Pizza slices, snacks and baked goods will be available for purchase. Bingo Rounds! $5 donation for a card and the winner takes half the pot. Round #1 @ 6PM. Round #2 @ 7PM 50/50 Donation Raffle: Drawing at 8:30 PM All evening Open Games: Cornhole, ping pong and table games. Dance Party @ 7:30PM Song requests encouraged! Thank You All for your support these last 4 seasons! …",
-    pubDate: "2026-05-16T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52878500753745/huge/657fb6ba45ea0009309e3927a2325634669c31b5.jpg"
-  },
   {
     title: "OTG Backcountry Trail Crew Leader Training",
     link: "ouraytrails.org",
@@ -3004,6 +2960,83 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52886404587594/huge/0c51371f7fbb6f19dc67e815e978b33092a15b0c.jpg"
+  },
+  {
+    title: "Ouray Mountain Air Music Series",
+    link: "www.ouraymusicseries.com",
+    description: "2026 Lineup to be announced on April 15th, 2026.",
+    pubDate: "2026-06-05T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52187874790497/huge/0ec868c32c29ca61d72952fc7cdf98df2de26a98.jpg"
+  },
+  {
+    title: "THIRSTY THURSDAY - Game Night at Floating Lotus",
+    link: "www.FloatingLotusBrewery.com",
+    description: "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who came to have a good time. Happening 7-9pm every week",
+    pubDate: "2026-06-05T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg"
+  },
+  {
+    title: "Steps Tavern Presents Karaoke Night",
+    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
+    description: "Steps Tavern Presents Karaoke Night. Doors Open at 7:00 PM. Karaoke Begins at 8:00 PM",
+    pubDate: "2026-06-05T02:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "STEPS TAVERN",
+    imageUrl: "https://localist-images.azureedge.net/photos/52633505531238/huge/33b9b47c734793a754893ee4e67227b39326b67b.jpg"
+  },
+  {
+    title: "Ridgway Farmers Market",
+    link: "www.ridgwayfarmersmarket.com",
+    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here.",
+    pubDate: "2026-06-05T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
+  },
+  {
+    title: "Ridgway Railroad Museum FREE Train Rides",
+    link: "https://www.ridgwayrailroadmuseum.org/",
+    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
+    pubDate: "2026-06-05T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
+  },
+  {
+    title: "True Grit Historic Walking Tours",
+    link: "https://truegrittours.org/true-grit-tours ",
+    description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
+    pubDate: "2026-06-05T21:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52285883190282/huge/99283c09e34ca5aeabd7006cca2ba5b2b28899c3.jpg"
+  },
+  {
+    title: "BOXCAR",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-06-05T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   }
 ];
 
