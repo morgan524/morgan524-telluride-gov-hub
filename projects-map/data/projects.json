@@ -143,7 +143,7 @@
     "whyItMatters": "The Carhenge site (Lots 34 and 34B) is a Town-owned surface parking lot in southwest Telluride. The Town and Design Workshop are advancing a concept for mixed-use housing, underground parking, and community-serving commercial uses through a full entitlement gauntlet: HARC design review, PUD, Subdivision, and Large Scale Activity applications. As of May 2026 the project is in HARC work session review, with a broader public hearing process ahead. This is one of the last large, Town-owned development sites in Telluride proper.",
     "deepDiveUrl": "https://engagetelluride.org/carhenge-lot-redevelopment-project",
     "primarySourceUrl": "https://engagetelluride.org/32089/widgets/113355/documents/80980",
-    "lastUpdated": "2026-05-15",
+    "lastUpdated": "2026-05-17",
     "sourceConfidence": "Confirmed",
     "editorialStatus": "Ready",
     "estimatedTotalCost": 198817800,
@@ -151,7 +151,9 @@
     "costNote": "Estimate \u2014 based on Canyonlands/Tower House comparable ($867/SF all-in ex-land) applied to 213,400 SF above-grade program (sum of Buildings A\u2013F per Exhibit C site plan), plus 230 underground parking spaces \u00d7 $60,000/space. Town-owned land ($0 acquisition). 230 units / $864,000 per unit.",
     "cameraBearing": 90,
     "cameraPitch": 55,
-    "cameraZoom": 17.4
+    "cameraZoom": 17.4,
+    "publiclyFunded": true,
+    "costTrackerKey": "Carhenge"
   },
   {
     "id": "chair-7-open-space",
@@ -270,7 +272,7 @@
     "owner": "Town of Mountain Village",
     "deepDiveUrl": "",
     "primarySourceUrl": "",
-    "lastUpdated": "2026-05-15",
+    "lastUpdated": "2026-05-17",
     "sourceConfidence": "Confirmed",
     "editorialStatus": "Ready",
     "cameraZoom": 17.6,
@@ -340,7 +342,9 @@
         "subtype": "Market"
       }
     ],
-    "costNote": "Project cost $44.64M \u00f7 ~59,400 SF = $751/SF construction. Sales revenue $29.70M against project cost yields $14.94M subsidy + $1.6M property = $16.54M total funding gap. Per-unit subsidy: $337,515. Source: Town of Mountain Village BOCC worksession slide, May 2026."
+    "costNote": "Project cost $44.64M \u00f7 ~59,400 SF = $751/SF construction. Sales revenue $29.70M against project cost yields $14.94M subsidy + $1.6M property = $16.54M total funding gap. Per-unit subsidy: $337,515. Source: Town of Mountain Village BOCC worksession slide, May 2026.",
+    "publiclyFunded": true,
+    "costTrackerKey": "Ilium"
   },
   {
     "id": "shandoka-lot-l",
@@ -386,7 +390,7 @@
     "owner": "Town of Telluride",
     "deepDiveUrl": "https://livabletelluride.org/",
     "primarySourceUrl": "https://engagetelluride.org/",
-    "lastUpdated": "2026-05-15",
+    "lastUpdated": "2026-05-17",
     "tags": [
       "parking-garage",
       "affordable-housing",
@@ -396,7 +400,8 @@
     ],
     "cameraZoom": 17.4,
     "cameraPitch": 55,
-    "cameraBearing": 90
+    "cameraBearing": 90,
+    "publiclyFunded": true
   },
   {
     "id": "six-senses-mountain-village",
@@ -544,7 +549,7 @@
     "whyItMatters": "VooDoo is a 27-unit affordable housing project financed with approximately $27.4 million in public funds. A balloon payment of roughly $23 million comes due around 2032. The project demonstrates both the community's commitment to workforce housing and the fiscal risks of the financing model used.",
     "deepDiveUrl": "https://livabletelluride.org/the-voodoo-project/",
     "primarySourceUrl": "",
-    "lastUpdated": "2026-05-16",
+    "lastUpdated": "2026-05-17",
     "sourceConfidence": "Confirmed",
     "editorialStatus": "Ready",
     "estimatedTotalCost": 27400000,
@@ -552,6 +557,8 @@
     "costNote": "Confirmed \u2014 $27.4M public financing per Town debt records. 27 units / $1,015,000 per unit.",
     "cameraZoom": 17.4,
     "cameraPitch": 60,
-    "cameraBearing": -22
+    "cameraBearing": -22,
+    "publiclyFunded": true,
+    "costTrackerKey": "VooDoo"
   }
 ]

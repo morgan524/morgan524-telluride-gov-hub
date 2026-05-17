@@ -671,6 +671,13 @@ function openDrawer(project) {
       <div class="drawer-meta">${project.projectType.join(' · ')} &nbsp;·&nbsp; ${project.communityArea}</div>
     </div>
     <div class="drawer-body">
+      ${project.publiclyFunded ? `
+        <a class="drawer-btn drawer-btn-primary drawer-cost-tracker-btn"
+           href="cost-tracker.html${project.costTrackerKey ? '?project=' + encodeURIComponent(project.costTrackerKey) : ''}"
+           target="_blank" rel="noopener"
+           style="display:flex;align-items:center;justify-content:center;gap:8px;background:#b98b34;color:#fff;font-weight:800;letter-spacing:0.02em;text-transform:uppercase;font-size:0.78rem;padding:14px 16px;border-radius:12px;margin-bottom:14px;text-decoration:none;box-shadow:0 4px 14px rgba(185,139,52,0.32);">
+          📊 Cost &amp; Debt Tracker →
+        </a>` : ''}
       ${project.estimatedTotalCost ? `
         <div class="drawer-section drawer-cost-banner">
           <div class="drawer-label">Estimated Project Cost</div>

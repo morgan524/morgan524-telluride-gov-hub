@@ -8,10 +8,87 @@
   <link href="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.css" rel="stylesheet">
   <script src="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.js"></script>
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Site top nav — same component used on the rest of livabletelluride.org.
+       Kept self-contained here so projects-map/ remains independently
+       deployable and the rest of the site's CSS isn't required. */
+    :root {
+      --tn-forest: #21443c;
+      --tn-text:   #1a2e29;
+      --tn-border: rgba(33, 68, 60, 0.12);
+    }
+    .topnav {
+      background: #fff;
+      border-bottom: 1px solid var(--tn-border);
+      padding: 14px 0;
+      flex-shrink: 0;
+      z-index: 100;
+    }
+    .topnav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
+    .topnav-links { display: flex; gap: 14px; margin-left: 16px; flex: 1; }
+    .topnav-links a {
+      color: var(--tn-text);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.82rem;
+      padding: 6px 2px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    .topnav-links a:hover { color: var(--tn-forest); }
+    .topnav-links a.active {
+      color: var(--tn-forest);
+      border-bottom-color: var(--tn-forest);
+    }
+    .topnav-cta {
+      display: inline-block;
+      background: var(--tn-forest);
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    @media (max-width: 880px) {
+      .topnav-links { display: none; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- Site top nav (same component used across livabletelluride.org) -->
+<header class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
+      <img src="/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
+    </a>
+    <nav class="topnav-links">
+      <a href="/local-news.html">Local News</a>
+      <a href="/gov-hub.html">Gov-Hub</a>
+      <a href="/deep-dives.html">Deep Dives</a>
+      <a href="/events.html">Events</a>
+      <a href="/hub-bub.html">Hub-Bub</a>
+      <a href="/local-orgs.html">Local Orgs</a>
+      <a href="/projects-map/" class="active">Projects Map</a>
+      <a href="/about.html">About</a>
+    </nav>
+    <a class="topnav-cta" href="https://livabletelluride.org/#tab-subscribe">Subscribe</a>
+  </div>
+</header>
+
+<!-- Page-specific header (project map title + Submit Missing button) -->
 <div id="header">
   <div id="header-left">
     <h1>Valley Project Map</h1>

@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Project AMI Mix vs. Debt Service — Housing Finance Gap</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root {
+  --forest:#173d34; --forest2:#245347; --sage:#dce9e2; --cream:#fbf7ef; --paper:#fffdf8;
+  --ink:#172c26; --muted:#5f706a; --line:rgba(23,61,52,.18); --gold:#b98b34; --red:#9d3f36;
+  --blue1:#225f78; --blue2:#2f7893; --blue3:#4c91a9; --blue4:#79b1c2;
+  --shadow:0 14px 34px rgba(20,40,34,.12);
+  --heading:Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:linear-gradient(180deg,#fffdf8,var(--cream));line-height:1.5}
+.wrap{width:min(1220px,calc(100% - 32px));margin:auto;padding:34px 0 70px}
+.hero{display:grid;grid-template-columns:1fr;gap:18px;margin-bottom:18px}
+.card,.heroMain,.heroSide{border:1px solid var(--line);border-radius:28px;background:rgba(255,253,248,.97);box-shadow:var(--shadow)}
+.heroMain{padding:clamp(24px,4vw,42px)} .heroSide{padding:22px;background:linear-gradient(180deg,var(--forest2),#122f29);color:white}
+.eyebrow{display:inline-flex;padding:7px 12px;border-radius:999px;background:rgba(23,61,52,.09);color:var(--forest);font-size:.78rem;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:var(--heading);font-size:clamp(2.1rem,5vw,4.6rem);line-height:.96;letter-spacing:-.055em;margin:0;text-align:center}
+h2,h3{font-family:var(--heading);letter-spacing:-.035em;margin:0 0 8px}
+p{color:var(--muted)} .heroSide p,.heroSide li{color:rgba(255,255,255,.84)}
+.big{font-family:var(--heading);font-size:3rem;font-weight:900;line-height:1;letter-spacing:-.055em;margin:16px 0 6px}
+.summaryList{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+.summaryList div{padding:10px 11px;border-radius:14px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.14)}
+.summaryList span{display:block;font-size:.68rem;font-weight:950;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.summaryList strong{display:block;margin-top:3px;font-family:var(--heading);font-size:1.45rem;line-height:1.05;letter-spacing:-.04em;color:#fff}
+.summaryList small{display:block;margin-top:5px;font-size:.68rem;line-height:1.25;color:rgba(255,255,255,.66);font-weight:650}
+#summarySubsidyRow.hidden{display:none}
+
+#summaryBalloonBox.balloonDue{
+  background:#9d3f36;
+  border-color:#c98278;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.16);
+}
+#summaryBalloonBox.balloonDue span,
+#summaryBalloonBox.balloonDue strong,
+#summaryBalloonBox.balloonDue small{color:#fff;}
+.summaryList .summaryWide{
+  grid-column:1 / -1;
+  width:min(620px,100%);
+  justify-self:center;
+}
+
+#summarySubsidyRow.deficit,
+#summaryBalloonDueRow.deficit{
+  background:#9d3f36;
+  border-color:#c98278;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.16);
+}
+#summarySubsidyRow.deficit span,
+#summarySubsidyRow.deficit strong,
+#summarySubsidyRow.deficit small,
+#summaryBalloonDueRow.deficit span,
+#summaryBalloonDueRow.deficit strong,
+#summaryBalloonDueRow.deficit small{color:#fff;}
+.note{margin-top:18px;padding:12px 14px;border-radius:16px;background:rgba(185,139,52,.14);color:#5d4a21;font-weight:750}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:16px}.debtOnlyGrid{max-width:620px}
+.stat{padding:16px} .label{font-size:.72rem;font-weight:950;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.value{font-family:var(--heading);font-size:1.95rem;color:var(--forest);font-weight:900;letter-spacing:-.05em;line-height:1.05;margin-top:5px}
+.layout{display:grid;grid-template-columns:340px minmax(0,1fr);gap:18px;align-items:start}
+.fixedAssumptions{padding:18px 20px;margin-bottom:16px}
+.fixedAssumptions h2{font-size:1.85rem;margin-bottom:6px}
+.assumptionGrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;margin-top:12px}
+.assumptionTile{background:#f7f3ec;border:1px solid var(--line);border-radius:16px;padding:12px}
+.assumptionTile strong{display:block;color:var(--forest);font-size:1.45rem;line-height:1;font-weight:950}
+.assumptionTile span{display:block;margin-top:7px;font-size:.72rem;color:var(--muted);font-weight:900;text-transform:uppercase;letter-spacing:.06em;line-height:1.18}
+.assumptionNote{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:12px}
+.assumptionNote p{margin:0;background:rgba(23,61,52,.055);border-radius:14px;padding:11px 12px;font-weight:750}
+
+.side{position:sticky;top:16px;display:grid;gap:14px} .controls{padding:16px}
+.group{border-top:1px solid var(--line);margin-top:14px;padding-top:14px} .group:first-child{border-top:0;margin-top:0;padding-top:0}
+select,input[type=number]{width:100%;height:42px;border:1px solid var(--line);border-radius:12px;padding:0 10px;font-weight:850;background:#fff;color:var(--ink)}
+.inputRow{display:grid;grid-template-columns:1fr 84px;gap:8px;align-items:center;margin:8px 0}
+.inputRow span{font-size:.86rem;color:var(--muted);font-weight:800}
+.chartCard{padding:18px;margin-bottom:16px} .chartHead{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:12px}
+.pill{display:inline-flex;border-radius:999px;background:rgba(23,61,52,.09);color:var(--forest);font-weight:950;padding:7px 10px;font-size:.8rem;white-space:nowrap}
+.chartWrap{height:500px;position:relative}
+.chartWrap.short{height:390px}
+.tableWrap{overflow:auto} table{width:100%;border-collapse:collapse;min-width:980px;background:#fff} th,td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:right;font-size:.9rem} th:first-child,td:first-child{text-align:left} th{background:#f3eee5;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em}
+.warn{padding:14px;border-left:4px solid var(--red);background:rgba(157,63,54,.09);border-radius:0 14px 14px 0;color:#5f302b;font-weight:750}
+.good{display:none;padding:12px;border-left:4px solid var(--forest);background:rgba(23,61,52,.08);border-radius:0 14px 14px 0;color:var(--forest);font-weight:850;margin-top:10px}
+.gapSummary{
+  display:none;
+  padding:18px 20px;
+  border-left:6px solid var(--red);
+  background:rgba(157,63,54,.09);
+  border-radius:0 18px 18px 0;
+  color:#71332e;
+  font-weight:950;
+  font-size:1.45rem;
+  line-height:1.25;
+  margin-top:14px;
+}
+.gapSummary.surplus{
+  border-left-color:var(--forest);
+  background:rgba(23,61,52,.08);
+  color:var(--forest);
+}
+.gapSummary small{
+  display:block;
+  margin-top:6px;
+  font-size:.88rem;
+  font-weight:850;
+  color:inherit;
+  opacity:.82;
+}
+.mixWarning{display:none;margin-top:10px;padding:10px 12px;border-radius:14px;background:rgba(157,63,54,.1);color:#71332e;font-weight:850;border:1px solid rgba(157,63,54,.25)}
+.mixActions{display:flex;gap:8px;margin-top:10px}
+.mixBtn{flex:1;border:1px solid var(--line);border-radius:12px;height:40px;font-weight:950;cursor:pointer;background:#fff;color:var(--forest)}
+.mixBtn.primary{background:var(--forest);color:#fff;border-color:var(--forest)}
+.mixBtn:hover{filter:brightness(.97)}
+.mixApplied{margin-top:8px;font-size:.78rem;color:var(--muted);font-weight:800;line-height:1.35}
+.assumptions{display:grid;grid-template-columns:1fr;gap:8px;margin-top:8px}
+.assumption{background:#f7f3ec;border:1px solid var(--line);border-radius:14px;padding:9px 10px}
+.assumption strong{display:block;color:var(--forest);font-size:1.1rem}
+.assumption span{display:block;font-size:.72rem;color:var(--muted);font-weight:850;text-transform:uppercase;letter-spacing:.04em}
+.legend-note{font-size:.88rem;color:var(--muted);margin-top:8px}
+@media(max-width:980px){.hero,.layout{grid-template-columns:1fr}.side{position:static}.grid{grid-template-columns:1fr 1fr}.summaryList{grid-template-columns:1fr}.assumptionGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.assumptionNote{grid-template-columns:1fr}}
+@media(max-width:620px){.grid,.assumptionGrid{grid-template-columns:1fr}}
+
+.fullWidthTable{
+  width:100%;
+  margin-top:18px;
+  margin-bottom:18px;
+}
+.fullWidthTable table{
+  min-width:1180px;
+}
+
+</style>
+</head>
+<body>
+<main class="wrap">
+<section class="hero">
+  <div class="heroMain">
+    <h1 id="dynamicProjectTitle">Debt vs. Income for Carhenge Lot Redevelopment</h1>
+  </div>
+  <aside class="heroSide">
+    <h2>Project Finance Summary</h2>
+    <div class="summaryList">
+      <div><span>Total Cost of Project</span><strong id="summaryTotalProjectCost">—</strong><small>Total loan payments over term + any balloon principal due at maturity + land cost.</small></div>
+      <div><span>Cost Per Unit</span><strong id="summaryPerUnitCost">—</strong><small>Total cost divided by total housing units.</small></div>
+      <div><span>Annual Debt Service If Fully Amortized</span><strong id="summaryFullyAmortizedAnnual">—</strong><small>No balloon; full construction principal amortized over same term.</small></div>
+      <div><span>Annual Debt Service</span><strong id="summaryAnnualCostAmortized">—</strong></div>
+      <div id="summaryBalloonBox"><span>Balloon Payment</span><strong id="summaryBalloonPayment">—</strong><small id="summaryBalloonDueText">No balloon payment entered.</small></div>
+      <div><span>Total Annual Income</span><strong id="summaryAnnualIncome">—</strong></div>
+      <div id="summarySubsidyRow" class="summaryWide"><span>Total Annual Subsidy Required</span><strong id="summaryAnnualSubsidy">—</strong><small id="summarySubsidyPercent">—</small></div>
+    </div>
+  </aside>
+</section>
+
+<section class="layout">
+  <aside class="side">
+    <section class="card controls">
+      <h2>Project assumptions</h2>
+      <div class="group">
+        <div class="label">Project</div>
+        <select id="projectSelect"></select>
+      </div>
+      <div class="group">
+        <div class="label">Fixed project values</div>
+        <div class="assumptions">
+          <div class="assumption"><strong id="fixedResidential">—</strong><span>Residential sf</span></div>
+          <div class="assumption"><strong id="fixedCommercial">—</strong><span>Commercial sf</span></div>
+          <div class="assumption"><strong id="fixedUnits">—</strong><span>Housing units</span></div>
+          <div class="assumption"><strong id="fixedLandCost">—</strong><span>Land cost assumption</span></div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="label">Construction cost / sf</div>
+        <input id="costPerSf" type="number" value="1000" step="50">
+      </div>
+      <div class="group">
+        <div class="label">Interest rate</div>
+        <input id="interest" type="number" value="6" step="0.25">
+      </div>
+      <div class="group">
+        <div class="label">Term, years</div>
+        <input id="term" type="number" value="30" step="1">
+      </div>
+      <div class="group">
+        <div class="label">User-added balloon payment due at end of loan</div>
+        <input id="balloonPayment" type="text" value="0" inputmode="numeric">
+        <p class="legend-note">Balloon method used here: the non-balloon principal is amortized annually; the balloon principal pays interest each year and remains due at maturity. This lowers annual debt service only modestly because interest still accrues on the balloon amount.</p>
+      </div>
+      <div class="group">
+        <div class="label">Project AMI mix</div>
+        <div class="inputRow"><span>50% AMI</span><input id="draftMix50" type="number" value="17" step="1"></div>
+        <div class="inputRow"><span>75% AMI</span><input id="draftMix75" type="number" value="17" step="1"></div>
+        <div class="inputRow"><span>100% AMI</span><input id="draftMix100" type="number" value="17" step="1"></div>
+        <div class="inputRow"><span>125% AMI</span><input id="draftMix125" type="number" value="17" step="1"></div>
+        <div class="inputRow"><span>150% AMI</span><input id="draftMix150" type="number" value="16" step="1"></div>
+        <div class="inputRow"><span>175% AMI</span><input id="draftMix175" type="number" value="16" step="1"></div>
+        <div class="mixWarning" id="mixWarning">AMI mix must total 100% before changes can be applied. Current draft total: <span id="mixTotal">—</span>%.</div>
+        <div class="mixActions">
+          <button class="mixBtn" type="button" id="resetMix">Reset Mix</button>
+          <button class="mixBtn primary" type="button" id="applyMix">Apply Mix</button>
+        </div>
+        <div class="mixApplied" id="mixApplied">Applied mix: 20 / 20 / 20 / 15 / 10 / 15 = 100%</div>
+      </div>
+    </section>  </aside>
+
+  <section>
+    <section class="card chartCard">
+      <div class="chartHead">
+        <div><h2>AMI Band Rent Capacity vs. Balloon-Adjusted Annual Debt Service</h2><p class="label">Red outline = annual debt service for the square footage assigned to that AMI band. Blue fill = income-supported rent capacity.</p></div>
+        <span class="pill">Balloon-adjusted annual dollars</span>
+      </div>
+      <div class="chartWrap"><canvas id="bandChart"></canvas></div>
+      
+    </section>
+
+    <section class="card chartCard">
+      <div class="chartHead">
+        <div><h2>Total Project Debt Service vs. Income — Balloon-Adjusted</h2></div>
+        <span class="pill">Project total</span>
+      </div>
+      <div class="chartWrap short"><canvas id="totalChart"></canvas></div>
+      <p class="gapSummary" id="mixOk">—</p>
+    </section>
+  </section>
+</section>
+
+
+    <section class="card chartCard tableWrap fullWidthTable">
+      <h2>Calculation and Debt vs Income</h2>
+      <table id="calcTable"></table>
+    </section>
+
+<section class="card fixedAssumptions">
+  <div class="chartHead">
+    <div>
+      <h2>Fixed Assumptions</h2>
+      <p class="label">These values are held constant unless changed by selecting a different project.</p>
+    </div>
+    <span class="pill">Model assumptions</span>
+  </div>
+  <div class="assumptionGrid">
+    <div class="assumptionTile"><strong>40%</strong><span>Single-person households</span></div>
+    <div class="assumptionTile"><strong>35%</strong><span>Two-person households</span></div>
+    <div class="assumptionTile"><strong>25%</strong><span>Four-person households</span></div>
+    <div class="assumptionTile"><strong id="fixedAssumptionResidential">—</strong><span>Residential square feet</span></div>
+    <div class="assumptionTile"><strong id="fixedAssumptionCommercial">—</strong><span>Commercial square feet</span></div>
+    <div class="assumptionTile"><strong id="fixedAssumptionLand">—</strong><span>Land cost, not debt-serviced</span></div>
+    <div class="assumptionTile"><strong id="fixedAssumptionUpfront">—</strong><span>Upfront grants/payments</span></div>
+  </div>
+  <div class="assumptionNote">
+    <p>Each AMI band uses one blended income number from the household-size mix above.</p>
+    <p id="projectNote">Project-specific assumptions will appear here.</p>
+  </div>
+</section>
+</main>
+
+<script>
+const INCOMES = {"50% AMI": {"Single": 41850, "Two people": 47800, "Family of four": 59750}, "75% AMI": {"Single": 62775.0, "Two people": 71700.0, "Family of four": 89625.0}, "100% AMI": {"Single": 83700, "Two people": 95600, "Family of four": 119500}, "125% AMI": {"Single": 104625.0, "Two people": 119500.0, "Family of four": 149375.0}};
+INCOMES["150% AMI"] = {
+  "Single": INCOMES["100% AMI"]["Single"] * 1.5,
+  "Two people": INCOMES["100% AMI"]["Two people"] * 1.5,
+  "Family of four": INCOMES["100% AMI"]["Family of four"] * 1.5
+};
+INCOMES["175% AMI"] = {
+  "Single": INCOMES["100% AMI"]["Single"] * 1.75,
+  "Two people": INCOMES["100% AMI"]["Two people"] * 1.75,
+  "Family of four": INCOMES["100% AMI"]["Family of four"] * 1.75
+};
+const PROJECTS = {"Carhenge": {"residentialSf": 150100, "commercialSf": 9900, "units": 225, "commercialRentPsf": 3.0, "label": "Carhenge Lot Redevelopment", "note": "Default uses 150,100 residential sf, 9,900 commercial sf, and 225 housing units. Fixed land-cost assumption: $10,000,000. Land cost is included in total project cost reporting but excluded from annual debt-service calculations.", "landCost": 10000000, "upfrontGrant": 0, "upfrontTownPayment": 0, "upfrontPayments": 0, "baseBalloonPayment": 0}, "VooDoo": {"residentialSf": 39818, "commercialSf": 3000, "units": 27, "commercialRentPsf": 3.0, "label": "VooDoo Affordable Housing", "note": "Default uses 42,818 total sf less roughly 3,000 commercial sf, leaving 39,818 residential sf and 27 housing units. Fixed land-cost assumption: $5,000,000. Land cost is included in total project cost reporting but excluded from annual debt-service calculations. Upfront funding assumption: $2,000,000 grant plus $4,000,000 Town payment. These reduce financed principal but are still included in total project cost.", "landCost": 5000000, "upfrontGrant": 2000000, "upfrontTownPayment": 4000000, "upfrontPayments": 6000000, "baseBalloonPayment": 0}, "Ilium": {"residentialSf": 59404, "commercialSf": 0, "units": 49, "commercialRentPsf": 0, "label": "Ilium Workforce Housing", "note": "Default uses 59,404 residential sf and 49 housing units. No separate land-cost assumption is currently included.", "landCost": 0, "upfrontGrant": 0, "upfrontTownPayment": 0, "upfrontPayments": 0, "baseBalloonPayment": 0}};
+const amiLevels = ["50% AMI", "75% AMI", "100% AMI", "125% AMI", "150% AMI", "175% AMI"];
+const householdMix = {"Single":0.40, "Two people":0.35, "Family of four":0.25};
+const colors = {
+  "50% AMI":"#225f78",
+  "75% AMI":"#2f7893",
+  "100% AMI":"#4c91a9",
+  "125% AMI":"#79b1c2",
+  "150% AMI":"#9bc6d2",
+  "175% AMI":"#bedbe1",
+  gap:"#a8463c",
+  debt:"#173d34",
+  commercial:"#b98b34",
+  surplus:"#1f6f9b"
+};
+const fmt = new Intl.NumberFormat("en-US", {style:"currency", currency:"USD", maximumFractionDigits:0});
+const compact = new Intl.NumberFormat("en-US", {notation:"compact", maximumFractionDigits:1});
+const num = new Intl.NumberFormat("en-US");
+
+function parseMoneyInput(value) {
+  return Number(String(value || "0").replace(/[^0-9.-]/g, "")) || 0;
+}
+
+function formatNumberInput(el) {
+  const raw = parseMoneyInput(el.value);
+  el.value = num.format(raw);
+}
+
+let charts = {};
+let appliedMix = {
+  "50% AMI": 0.17,
+  "75% AMI": 0.17,
+  "100% AMI": 0.17,
+  "125% AMI": 0.17,
+  "150% AMI": 0.16,
+  "175% AMI": 0.16
+};
+
+function annualDebt(principal, ratePct, years, balloon = 0) {
+  // Balloon structure assumption:
+  // 1. The non-balloon principal is amortized over the loan term.
+  // 2. The balloon principal is not amortized, but interest is paid on it annually.
+  // 3. The balloon principal remains due at maturity.
+  const safeBalloon = Math.min(Math.max(balloon, 0), principal);
+  const amortizedPrincipal = Math.max(principal - safeBalloon, 0);
+  const monthlyRate = ratePct / 100 / 12;
+  const annualRate = ratePct / 100;
+  const n = years * 12;
+  let annualAmortizedPayment = 0;
+  if (amortizedPrincipal > 0) {
+    const pmt = amortizedPrincipal * (monthlyRate * Math.pow(1+monthlyRate,n)) / (Math.pow(1+monthlyRate,n)-1);
+    annualAmortizedPayment = pmt * 12;
+  }
+  const annualBalloonInterest = safeBalloon * annualRate;
+  return annualAmortizedPayment + annualBalloonInterest;
+}
+
+function totalRepaymentCost(annualDebtService, years, balloon = 0) {
+  return annualDebtService * years + balloon;
+}
+
+function blendedIncome(ami) {
+  const row = INCOMES[ami];
+  return row["Single"] * householdMix["Single"] +
+         row["Two people"] * householdMix["Two people"] +
+         row["Family of four"] * householdMix["Family of four"];
+}
+
+function inputs() {
+  const project = PROJECTS[document.getElementById("projectSelect").value];
+  return {
+    project,
+    costPerSf: +document.getElementById("costPerSf").value,
+    interest: +document.getElementById("interest").value,
+    term: +document.getElementById("term").value,
+    commercialRentPsf: project.commercialRentPsf,
+    balloonPayment: (project.baseBalloonPayment || 0) + parseMoneyInput(document.getElementById("balloonPayment").value),
+    mix: appliedMix
+  };
+}
+
+function bandRows() {
+  const x = inputs();
+  const grossResidentialPrincipal = x.project.residentialSf * x.costPerSf;
+  const grossCommercialPrincipal = x.project.commercialSf * x.costPerSf;
+  const grossConstructionPrincipal = grossResidentialPrincipal + grossCommercialPrincipal;
+  const upfrontPayments = Math.min(Math.max(x.project.upfrontPayments || 0, 0), grossConstructionPrincipal);
+
+  // Upfront grants/payments reduce the amount financed, but remain part of total project cost.
+  const financedConstructionPrincipal = Math.max(grossConstructionPrincipal - upfrontPayments, 0);
+  const residentialShare = grossConstructionPrincipal > 0 ? grossResidentialPrincipal / grossConstructionPrincipal : 0;
+  const commercialShare = grossConstructionPrincipal > 0 ? grossCommercialPrincipal / grossConstructionPrincipal : 0;
+  const residentialPrincipal = financedConstructionPrincipal * residentialShare;
+  const commercialPrincipal = financedConstructionPrincipal * commercialShare;
+
+  const cappedBalloon = Math.min(Math.max(x.balloonPayment, 0), financedConstructionPrincipal);
+  const residentialBalloon = financedConstructionPrincipal > 0 ? cappedBalloon * (residentialPrincipal / financedConstructionPrincipal) : 0;
+  const commercialBalloon = financedConstructionPrincipal > 0 ? cappedBalloon * (commercialPrincipal / financedConstructionPrincipal) : 0;
+
+  const residentialDebt = annualDebt(residentialPrincipal, x.interest, x.term, residentialBalloon);
+  const commercialDebt = annualDebt(commercialPrincipal, x.interest, x.term, commercialBalloon);
+  const totalDebt = residentialDebt + commercialDebt;
+  const fullyAmortizedDebt = annualDebt(financedConstructionPrincipal, x.interest, x.term, 0);
+  const commercialRent = x.project.commercialSf * x.project.commercialRentPsf * 12;
+
+  return amiLevels.map(ami => {
+    const units = x.project.units * x.mix[ami];
+    const assignedSf = x.project.residentialSf * x.mix[ami];
+    const assignedPrincipal = residentialPrincipal * x.mix[ami];
+    const assignedBalloon = residentialBalloon * x.mix[ami];
+    const assignedDebt = totalDebt * x.mix[ami];
+    const income = blendedIncome(ami);
+    const annualRentPerUnit = income * 0.30;
+    const annualRentCapacity = annualRentPerUnit * units;
+    return {
+      ami, units, assignedSf, assignedBalloon, blendedIncome: income, annualRentPerUnit,
+      annualRentCapacity, assignedDebt,
+      bandGap: Math.max(assignedDebt - annualRentCapacity, 0),
+      totalDebt, fullyAmortizedDebt, commercialRent, commercialDebt, commercialBalloon,
+      totalConstructionPrincipal: grossConstructionPrincipal,
+      financedConstructionPrincipal,
+      upfrontPayments,
+      cappedBalloon
+    };
+  });
+}
+
+function updateFixedValues() {
+  const x = inputs();
+  document.getElementById("fixedResidential").textContent = num.format(x.project.residentialSf) + " sf";
+  document.getElementById("fixedCommercial").textContent = num.format(x.project.commercialSf) + " sf";
+  document.getElementById("fixedUnits").textContent = num.format(x.project.units);
+  document.getElementById("fixedLandCost").textContent = fmt.format(x.project.landCost || 0);
+  document.getElementById("fixedAssumptionResidential").textContent = num.format(x.project.residentialSf) + " sf";
+  document.getElementById("fixedAssumptionCommercial").textContent = num.format(x.project.commercialSf) + " sf";
+  document.getElementById("fixedAssumptionLand").textContent = fmt.format(x.project.landCost || 0);
+  if (document.getElementById("fixedAssumptionUpfront")) document.getElementById("fixedAssumptionUpfront").textContent = fmt.format(x.project.upfrontPayments || 0);
+  document.getElementById("projectNote").textContent = x.project.note;
+  document.getElementById("dynamicProjectTitle").textContent = "Debt vs. Income for " + x.project.label;
+}
+
+function totals(data) {
+  const rent = data.reduce((s,d)=>s+d.annualRentCapacity,0);
+  const totalDebt = data[0].totalDebt;
+  const commercialRent = data[0].commercialRent;
+  const netGap = Math.max(totalDebt - rent - commercialRent, 0);
+  const residentialDebt = data.reduce((s,d)=>s+d.assignedDebt,0);
+  return {rent,totalDebt,commercialRent,netGap,residentialDebt};
+}
+
+
+function draftMixValues() {
+  return {
+    "50% AMI": +document.getElementById("draftMix50").value,
+    "75% AMI": +document.getElementById("draftMix75").value,
+    "100% AMI": +document.getElementById("draftMix100").value,
+    "125% AMI": +document.getElementById("draftMix125").value,
+    "150% AMI": +document.getElementById("draftMix150").value,
+    "175% AMI": +document.getElementById("draftMix175").value
+  };
+}
+
+function draftMixTotal() {
+  return Object.values(draftMixValues()).reduce((a,b)=>a+b,0);
+}
+
+function updateDraftWarning() {
+  const total = draftMixTotal();
+  document.getElementById("mixTotal").textContent = total.toFixed(0);
+  const bad = Math.abs(total - 100) > 0.001;
+  document.getElementById("mixWarning").style.display = bad ? "block" : "none";
+  return !bad;
+}
+
+function updateAppliedMixLabel() {
+  const vals = amiLevels.map(ami => Math.round(appliedMix[ami] * 100));
+  document.getElementById("mixApplied").textContent = `Applied mix: ${vals.join(" / ")} = 100%`;
+}
+
+function applyDraftMix() {
+  if (!updateDraftWarning()) return;
+  const draft = draftMixValues();
+  appliedMix = {};
+  amiLevels.forEach(ami => appliedMix[ami] = draft[ami] / 100);
+  updateAppliedMixLabel();
+  update();
+}
+
+function resetDraftMix() {
+  const reset = {
+    "draftMix50": 17,
+    "draftMix75": 17,
+    "draftMix100": 17,
+    "draftMix125": 17,
+    "draftMix150": 16,
+    "draftMix175": 16
+  };
+  Object.entries(reset).forEach(([id,val]) => document.getElementById(id).value = val);
+  updateDraftWarning();
+}
+
+function updateStats(data) {
+  const x = inputs();
+  const t = totals(data);
+  const mixTotal = Object.values(appliedMix).reduce((a,b)=>a+b,0) * 100;
+  const totalIncome = t.rent + t.commercialRent;
+  const surplus = Math.max(totalIncome - t.totalDebt, 0);
+  const cappedBalloon = Math.min(x.balloonPayment, data[0].financedConstructionPrincipal);
+  const annualSubsidy = Math.max(t.totalDebt - totalIncome, 0);
+
+  const landCost = x.project.landCost || 0;
+  const totalProjectCost = totalRepaymentCost(t.totalDebt, x.term, cappedBalloon) + landCost + (data[0].upfrontPayments || 0);
+  const perUnitCost = x.project.units ? totalProjectCost / x.project.units : 0;
+
+  document.getElementById("summaryTotalProjectCost").textContent = fmt.format(totalProjectCost);
+  document.getElementById("summaryPerUnitCost").textContent = fmt.format(x.project.units ? totalProjectCost / x.project.units : 0);
+  document.getElementById("summaryAnnualCostAmortized").textContent = fmt.format(t.totalDebt);
+  const balloonDueYear = new Date().getFullYear() + x.term;
+  document.getElementById("summaryBalloonPayment").textContent = fmt.format(cappedBalloon);
+  document.getElementById("summaryBalloonDueText").textContent = cappedBalloon > 0 ? "Due in " + balloonDueYear : "No balloon payment entered.";
+  document.getElementById("summaryBalloonBox").classList.toggle("balloonDue", cappedBalloon > 0);
+  document.getElementById("summaryFullyAmortizedAnnual").textContent = fmt.format(data[0].fullyAmortizedDebt);
+  document.getElementById("summaryAnnualIncome").textContent = fmt.format(totalIncome);
+  document.getElementById("summaryAnnualSubsidy").textContent = fmt.format(annualSubsidy);
+  const subsidyPctOfIncome = totalIncome > 0 ? (annualSubsidy / totalIncome) * 100 : 0;
+  document.getElementById("summarySubsidyPercent").textContent = annualSubsidy > 0
+    ? subsidyPctOfIncome.toFixed(1) + "% of annual income"
+    : "";
+  document.getElementById("summarySubsidyRow").classList.toggle("hidden", annualSubsidy <= 0);
+  document.getElementById("summarySubsidyRow").classList.toggle("deficit", annualSubsidy > 0);
+
+  const badMix = Math.abs(mixTotal - 100) > 0.001;
+  const gapBox = document.getElementById("mixOk");
+  gapBox.style.display = badMix ? "none" : "block";
+  gapBox.classList.toggle("surplus", surplus > 0);
+  if (!badMix) {
+    gapBox.innerHTML = surplus > 0
+      ? `Annual income exceeds debt service by ${fmt.format(surplus)}.<small>Total annual income: ${fmt.format(totalIncome)} · Annual debt service: ${fmt.format(t.totalDebt)}</small>`
+      : `Annual amount not covered by project income: ${fmt.format(t.netGap)}.<small>Total annual income: ${fmt.format(totalIncome)} · Annual debt service: ${fmt.format(t.totalDebt)}</small>`;
+  }
+  if (document.getElementById("heroGap")) document.getElementById("heroGap").textContent = badMix ? "Fix AMI mix" : (surplus > 0 ? "+" + fmt.format(surplus) + "/yr" : fmt.format(t.netGap) + "/yr");
+}
+
+function renderBandChart(data) {
+  const ctx = document.getElementById("bandChart");
+  if (charts.band) charts.band.destroy();
+
+  charts.band = new Chart(ctx, {
+    type:"bar",
+    data:{
+      labels:data.map(d=>`${d.ami}\n${d.units.toFixed(0)} units`),
+      datasets:[
+        {
+          label:"Assigned share of annual debt service",
+          data:data.map(d=>d.assignedDebt),
+          backgroundColor:data.map(d => d.annualRentCapacity >= d.assignedDebt ? "rgba(31,111,155,0.035)" : "rgba(168,70,60,0.035)"),
+          borderColor:data.map(d => d.annualRentCapacity >= d.assignedDebt ? colors.surplus : colors.gap),
+          borderWidth:3,
+          borderRadius:8,
+          grouped:false,
+          barPercentage:0.52,
+          categoryPercentage:0.64,
+          order:1
+        },
+        {
+          label:"Annual rent capacity at 30% of income",
+          data:data.map(d=>d.annualRentCapacity),
+          backgroundColor:data.map(d=>colors[d.ami]),
+          borderColor:data.map(d=>colors[d.ami]),
+          borderWidth:1,
+          borderRadius:8,
+          grouped:false,
+          barPercentage:0.38,
+          categoryPercentage:0.64,
+          order:2
+        }
+      ]
+    },
+    options:{
+      responsive:true,
+      maintainAspectRatio:false,
+      plugins:{
+        tooltip:{callbacks:{label:c=>{
+          const d = data[c.dataIndex];
+          if (c.dataset.label === "Assigned annual debt service") {
+            const surplus = Math.max(d.annualRentCapacity - d.assignedDebt, 0);
+            const gap = Math.max(d.assignedDebt - d.annualRentCapacity, 0);
+            return [
+              `Assigned share of annual debt service: ${fmt.format(d.assignedDebt)}/yr`,
+              `Rent capacity: ${fmt.format(d.annualRentCapacity)}/yr`,
+              d.annualRentCapacity >= d.assignedDebt
+                ? `Surplus above debt: ${fmt.format(surplus)}/yr`
+                : `Annual deficiency: ${fmt.format(gap)}/yr`
+            ];
+          }
+          return `${c.dataset.label}: ${fmt.format(c.raw)}/yr`;
+        }}},
+        legend:{labels:{boxWidth:18,font:{weight:"700"}}}
+      },
+      scales:{
+        x:{stacked:false,grid:{display:false}},
+        y:{stacked:false,ticks:{callback:v=>"$"+compact.format(v)},grid:{color:"rgba(23,61,52,.12)"}}
+      }
+    }
+  });
+}
+
+function renderTotalChart(data) {
+  const ctx = document.getElementById("totalChart");
+  if (charts.total) charts.total.destroy();
+  const t = totals(data);
+  const surplus = Math.max((t.rent + t.commercialRent) - t.totalDebt, 0);
+  const hasSurplus = surplus > 0;
+
+  charts.total = new Chart(ctx, {
+    type:"bar",
+    data:{
+      labels:["Whole project"],
+      datasets:[
+        {
+          label: hasSurplus ? "Surplus outline" : "Total annual debt service outline",
+          data:[hasSurplus ? (t.rent + t.commercialRent) : t.totalDebt],
+          backgroundColor: hasSurplus ? "rgba(31,111,155,0.025)" : "rgba(168,70,60,0.025)",
+          borderColor: hasSurplus ? colors.surplus : colors.gap,
+          borderWidth:4,
+          borderRadius:8,
+          grouped:false,
+          stack:"outline",
+          barPercentage:0.26,
+          categoryPercentage:0.48,
+          maxBarThickness:135,
+          order:1
+        },
+        ...data.map(d=>({
+          label:d.ami + " rent capacity",
+          data:[d.annualRentCapacity],
+          backgroundColor:colors[d.ami],
+          borderRadius:8,
+          grouped:false,
+          stack:"project",
+          barPercentage:0.19,
+          categoryPercentage:0.48,
+          maxBarThickness:98,
+          order:2
+        })),
+        {
+          label:"Commercial rent income",
+          data:[t.commercialRent],
+          backgroundColor:colors.commercial,
+          borderRadius:8,
+          grouped:false,
+          stack:"project",
+          barPercentage:0.19,
+          categoryPercentage:0.48,
+          maxBarThickness:98,
+          order:2
+        },
+        {
+          label: hasSurplus ? "Surplus above annual debt service" : "Unpaid annual debt service",
+          data:[hasSurplus ? surplus : t.netGap],
+          backgroundColor: hasSurplus ? "rgba(31,111,155,0.06)" : "rgba(168,70,60,0.035)",
+          borderColor: hasSurplus ? colors.surplus : colors.gap,
+          borderWidth:0,
+          borderRadius:8,
+          grouped:false,
+          stack:"project",
+          barPercentage:0.19,
+          categoryPercentage:0.48,
+          maxBarThickness:98,
+          order:2
+        }
+      ]
+    },
+    options:{
+      responsive:true,
+      maintainAspectRatio:false,
+      plugins:{
+        tooltip:{callbacks:{label:c=>{
+          if (c.dataset.label === "Total annual debt service outline" || c.dataset.label === "Surplus outline") {
+            return [
+              `Debt service: ${fmt.format(t.totalDebt)}/yr`,
+              `Income capacity: ${fmt.format(t.rent + t.commercialRent)}/yr`,
+              hasSurplus ? `Surplus: ${fmt.format(surplus)}/yr` : `Unpaid debt service: ${fmt.format(t.netGap)}/yr`
+            ];
+          }
+          if (c.dataset.label === "Unpaid annual debt service") {
+            return `Unpaid debt service: ${fmt.format(t.netGap)}/yr`;
+          }
+          if (c.dataset.label === "Surplus above annual debt service") {
+            return `Surplus above debt: ${fmt.format(surplus)}/yr`;
+          }
+          return `${c.dataset.label}: ${fmt.format(c.raw)}/yr`;
+        }}},
+        legend:{
+          labels:{
+            boxWidth:18,
+            font:{weight:"700"},
+            filter:item => item.text !== "Surplus outline" && item.text !== "Total annual debt service outline"
+          }
+        }
+      },
+      scales:{
+        x:{stacked:true,grid:{display:false}},
+        y:{stacked:true,ticks:{callback:v=>"$"+compact.format(v)},grid:{color:"rgba(23,61,52,.12)"}}
+      }
+    }
+  });
+}
+
+function renderTable(data) {
+  const x = inputs();
+  const t = totals(data);
+  const totalIncome = t.rent + t.commercialRent;
+  const yearlyDifference = totalIncome - t.totalDebt;
+  const isDeficit = yearlyDifference < 0;
+  const deficitAmount = Math.abs(Math.min(yearlyDifference, 0));
+  const debtNotCarriedPct = t.totalDebt > 0 ? (deficitAmount / t.totalDebt) * 100 : 0;
+
+  document.getElementById("calcTable").innerHTML = `<thead><tr>
+    <th>AMI band</th><th>Units</th><th>Assigned residential sf</th><th>Blended income</th><th>Rent capacity / unit</th><th>Total rent capacity</th><th>Assigned annual debt service</th><th>Assigned balloon</th><th>Band deficiency</th>
+  </tr></thead><tbody>` + data.map(d => `<tr>
+    <td>${d.ami}</td>
+    <td>${d.units.toFixed(1)}</td>
+    <td>${num.format(d.assignedSf)}</td>
+    <td>${fmt.format(d.blendedIncome)}</td>
+    <td>${fmt.format(d.annualRentPerUnit)}</td>
+    <td><strong>${fmt.format(d.annualRentCapacity)}</strong></td>
+    <td>${fmt.format(d.assignedDebt)}</td>
+    <td>${fmt.format(d.assignedBalloon)}</td>
+    <td><strong>${fmt.format(d.bandGap)}</strong></td>
+  </tr>`).join("") + `<tr>
+    <td><strong>Commercial offset</strong></td>
+    <td>—</td>
+    <td>${num.format(x.project.commercialSf)}</td>
+    <td>Market rent</td>
+    <td>${fmt.format(x.commercialRentPsf)} / sf / mo × 12</td>
+    <td><strong>${fmt.format(t.commercialRent)}</strong></td>
+    <td>${fmt.format(data[0].commercialDebt)}</td>
+    <td>—</td>
+    <td>Offset against project gap</td>
+  </tr><tr>
+    <td><strong>Upfront grants and payments</strong></td>
+    <td>—</td>
+    <td>—</td>
+    <td>Fixed assumption</td>
+    <td>Reduces financed principal</td>
+    <td><strong>${fmt.format(data[0].upfrontPayments || 0)}</strong></td>
+    <td>Excluded from annual debt</td>
+    <td>—</td>
+    <td>Included in total cost</td>
+  </tr><tr>
+    <td><strong>Land cost assumption</strong></td>
+    <td>—</td>
+    <td>—</td>
+    <td>Fixed assumption</td>
+    <td>Not debt-serviced</td>
+    <td>—</td>
+    <td>Excluded from annual debt</td>
+    <td>—</td>
+    <td><strong>${fmt.format(x.project.landCost || 0)}</strong></td>
+  </tr><tr>
+    <td><strong>Total project</strong></td>
+    <td>${num.format(x.project.units)}</td>
+    <td>${num.format(x.project.residentialSf + x.project.commercialSf)}</td>
+    <td>—</td>
+    <td>—</td>
+    <td><strong>${fmt.format(totalIncome)}</strong></td>
+    <td><strong>${fmt.format(t.totalDebt)}</strong></td>
+    <td><strong>${fmt.format(Math.min(x.balloonPayment, data[0].financedConstructionPrincipal))}</strong></td>
+    <td><strong>${fmt.format(t.netGap)}</strong></td>
+  </tr><tr>
+    <td><strong>Debt-cost comparison</strong></td>
+    <td colspan="4">Fully amortized repayment over term vs. balloon structure repayment over term. Balloon structure includes annual interest on the balloon principal plus balloon principal due at maturity.</td>
+    <td><strong>${fmt.format(data[0].fullyAmortizedDebt * x.term)}</strong></td>
+    <td><strong>${fmt.format(totalRepaymentCost(t.totalDebt, x.term, Math.min(x.balloonPayment, data[0].financedConstructionPrincipal)))}</strong></td>
+    <td colspan="2">Balloon principal remains due at maturity.</td>
+  </tr><tr>
+    <td><strong>Total construction + land cost</strong></td>
+    <td colspan="7">Construction cost is based on residential + commercial square footage. Upfront grants/payments and land cost are included in total cost; upfront payments reduce financed principal, while land cost is excluded from annual debt service.</td>
+    <td><strong>${fmt.format(((x.project.residentialSf + x.project.commercialSf) * x.costPerSf) + (x.project.landCost || 0))}</strong></td>
+  </tr><tr class="${isDeficit ? "netDeficit" : "netSurplus"}">
+    <td><strong>Yearly difference: income minus debt</strong></td>
+    <td colspan="4">${isDeficit ? "Deficit" : "Positive / surplus"}</td>
+    <td><strong>${fmt.format(totalIncome)}</strong></td>
+    <td><strong>${fmt.format(t.totalDebt)}</strong></td>
+    <td>—</td>
+    <td><strong>${isDeficit ? "-" : "+"}${fmt.format(Math.abs(yearlyDifference))}</strong></td>
+  </tr><tr class="debtPct ${isDeficit ? "" : "neutral"}">
+    <td><strong>Percent of annual debt not carried by rents</strong></td>
+    <td colspan="7">${isDeficit ? "Income-supported rent and commercial income do not fully carry the annual debt service." : "Income-supported rent and commercial income carry the annual debt service."}</td>
+    <td><strong>${isDeficit ? debtNotCarriedPct.toFixed(1) + "%" : "0.0%"}</strong></td>
+  </tr></tbody>`;
+}
+function update() {
+  const data = bandRows();
+  updateStats(data);
+  renderBandChart(data);
+  renderTotalChart(data);
+  renderTable(data);
+}
+
+function init() {
+  const select = document.getElementById("projectSelect");
+  Object.keys(PROJECTS).forEach(key => {
+    const opt = document.createElement("option");
+    opt.value = key;
+    opt.textContent = PROJECTS[key].label;
+    select.appendChild(opt);
+  });
+  // Honor ?project=<key> on the URL so the Projects Map drawer's
+  // "Cost & Debt Tracker" button can pre-select the right project.
+  // Falls back to Carhenge if missing/unknown.
+  const urlKey = new URLSearchParams(location.search).get("project");
+  select.value = (urlKey && PROJECTS[urlKey]) ? urlKey : "Carhenge";
+  select.addEventListener("change", () => {
+    const p = PROJECTS[select.value];
+    updateFixedValues();
+    update();
+  });
+  document.querySelectorAll("input").forEach(el=>{
+    if (el.id.startsWith("draftMix")) {
+      el.addEventListener("input", updateDraftWarning);
+    } else if (el.id === "balloonPayment") {
+      el.addEventListener("input", update);
+      el.addEventListener("blur", () => { formatNumberInput(el); update(); });
+    } else {
+      el.addEventListener("input", update);
+    }
+  });
+  document.getElementById("applyMix").addEventListener("click", applyDraftMix);
+  document.getElementById("resetMix").addEventListener("click", resetDraftMix);
+  formatNumberInput(document.getElementById("balloonPayment"));
+  updateFixedValues();
+  updateDraftWarning();
+  updateAppliedMixLabel();
+  update();
+}
+init();
+</script>
+</body>
+</html>
