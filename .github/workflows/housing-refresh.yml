@@ -23,7 +23,9 @@ jobs:
           node-version: '24'
 
       - name: Run housing refresh
-        run: node scripts/housing-refresh.js 2>&1 | tee /tmp/housing-refresh.log
+        run: |
+          set -o pipefail
+          node scripts/housing-refresh.js 2>&1 | tee /tmp/housing-refresh.log
 
       - name: Check for changes
         id: changes

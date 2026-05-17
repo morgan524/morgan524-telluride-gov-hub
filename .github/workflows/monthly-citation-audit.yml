@@ -23,7 +23,9 @@ jobs:
           node-version: '24'
 
       - name: Run citation audit
-        run: node scripts/citation-audit.js 2>&1 | tee /tmp/citation-audit.log
+        run: |
+          set -o pipefail
+          node scripts/citation-audit.js 2>&1 | tee /tmp/citation-audit.log
 
       - name: Upload run logs
         if: always()
