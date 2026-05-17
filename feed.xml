@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 May 2026 18:58:35 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 02:35:46 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
@@ -18,6 +18,16 @@
 Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four weeks of hiking from May 31 through June 28, with a kickoff at 11am on May 31 at the Oak Street gondola plaza. Hike from anywhere and raise funds for the Telluride Rotary Foundation — supporting scholarships, Youth Exchange, international projects, and community grants. 60% of nonprofit team funds go directly back to their nonprofit. Sponsored by Alpine Bank and Jagged Edge Mountain Gear.]]></description>
       <category>Community Event</category>
       <category>Telluride Rotary Club</category>
+    </item>
+    <item>
+      <title>Commissioners discuss housing vacancy tax</title>
+      <link>https://www.telluridenews.com/news/article_b1076477-13fb-4a95-b379-541028f46b0b.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_b1076477-13fb-4a95-b379-541028f46b0b.html</guid>
+      <pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/8a/38a1605e-6b18-4b84-aa3e-fc7736a15baa/6a08d4817c43d.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />County commissioners are exploring a vacancy tax on empty residential properties after the state legislature failed to pass a bill giving local governments that authority. With San Miguel County's housing vacancy rate at 45% and declining revenue from the current mitigation fee funding source, commissioners see the tax as a way to incentivize property use and generate affordable housing funds, though no vote was taken.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/8a/38a1605e-6b18-4b84-aa3e-fc7736a15baa/6a08d4817c43d.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>housing</category>
     </item>
     <item>
       <title>Learning life-saving skills</title>
@@ -384,16 +394,6 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/3c/63c47cc3-338c-4e0c-90ef-9a73e5f4e924/6a03af2c08a42.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>arts-culture</category>
-    </item>
-    <item>
-      <title>Why do pets come back?</title>
-      <link>https://www.telluridenews.com/news_release/article_c79afdcf-67a2-4a53-af38-836434775c16.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news_release/article_c79afdcf-67a2-4a53-af38-836434775c16.html</guid>
-      <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/f5/8f5b69c6-c02a-490b-9be5-b2121e993e1e/6a03ae4e06eb8.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The local animal shelter reminds folks that returning adopted pets is sometimes necessary due to family emergencies or housing issues, and they welcome animals back without judgment. They're encouraging potential adopters to consider their living situations beforehand, especially breed restrictions from landlords. Two returned pets currently available are Buddy, an active 80-pound mixed breed, and Albus, a friendly cat who needs to be the only feline.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/f5/8f5b69c6-c02a-490b-9be5-b2121e993e1e/6a03ae4e06eb8.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
     </item>
   </channel>
 </rss>

@@ -54,6 +54,18 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Commissioners discuss housing vacancy tax",
+    source: "Telluride Times",
+    date: "May 16, 2026",
+    firstSeen: "2026-05-17",
+    newsTopic: "housing",
+    copy: "County commissioners are exploring a vacancy tax on empty residential properties after the state legislature failed to pass a bill giving local governments that authority. With San Miguel County's housing vacancy rate at 45% and declining revenue from the current mitigation fee funding source, commissioners see the tax as a way to incentivize property use and generate affordable housing funds, though no vote was taken.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_b1076477-13fb-4a95-b379-541028f46b0b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/8a/38a1605e-6b18-4b84-aa3e-fc7736a15baa/6a08d4817c43d.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Learning life-saving skills",
     source: "Telluride Times",
     date: "May 16, 2026",
@@ -870,42 +882,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "The heart of Telluride",
-    source: "Telluride Times",
-    date: "May 3, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "land-use",
-    copy: "Local artist Brandon Bermel started the Heart of Telluride Project at the Transfer Warehouse, creating an outdoor street art installation that launched on Valentine's Day. Six artists contributed heart-themed pieces to wooden panels on the building's exterior, with community support from Ah Haa School and local businesses providing materials and workspace.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_917b2db3-f982-472d-9198-8dc744073d8e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfed5db9-e7f7-49f6-8189-3174c244d773/69f64afc5f9a1.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Rolling in the oats",
-    source: "Telluride Times",
-    date: "May 3, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "community",
-    copy: "A social media influencer is promoting oats as a superfood ingredient, highlighting the ongoing debate between anti-grain advocates and those favoring Mediterranean-style diets with grains. The author reflects on surviving mostly on oatmeal during a broke summer in D.C. in 1978 and notes that while oats are nutritious, they can spike blood sugar without added protein.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_8c228500-61a7-4cf7-b21d-383052bad877.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/be/ebeb8396-3450-4d67-af94-c17626457ff1/69f13862191f6.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Jonathan Fouser is Telluride Mountain School’s new head of school",
-    source: "Telluride Times",
-    date: "May 3, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "education",
-    copy: "Jonathan Fouser has been selected as Telluride Mountain School's new head of school after a competitive search that started with 42 candidates. Fouser currently oversees multiple campuses for Brewster American Schools in Spain and has experience founding international schools, teaching English, and outdoor instruction. The school board chose him for his calm leadership style and background in experiential education that aligns with the mountain school's mission.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_77d21881-a251-4576-a200-d746761986e3.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/67/86782a60-11e8-4c7e-8528-ed092884ae87/69f5ab43664e2.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
     source: "Town of Telluride",
     date: "April 24, 2026",
@@ -1007,7 +983,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "DOLA Economic Vitality Community Session on May 27, 2026",
     source: "Town of Ridgway",
-    date: "May 16, 2026",
+    date: "May 17, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1018,7 +994,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "CO Main Street Architect Visits on May 27-28, 2026",
     source: "Town of Ridgway",
-    date: "May 16, 2026",
+    date: "May 17, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1051,7 +1027,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Ridgway Tourism Marketing Survey Now Open through May 15th!",
     source: "Town of Ridgway",
-    date: "May 16, 2026",
+    date: "May 17, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1062,7 +1038,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "2026 Street Grading / Improvement Schedule",
     source: "Town of Ridgway",
-    date: "May 16, 2026",
+    date: "May 17, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1073,7 +1049,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "May 16, 2026",
+    date: "May 17, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1342,28 +1318,6 @@ const COMMUNITY_EVENTS = [
 ];
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Sign Up for Telluride Rotary Club Annual Hikeathon",
-    link: "https://koto.org/event/sign-up-for-telluride-rotary-club-annual-hikeathon/",
-    description: "Telluride Rotary Club has announced the second-annual community Hikeathon for the month of June! You can participate as an individual or team, and you can hike anywhere you like. Go to http://go.dojiggy.io/telluriderotaryhikeathon2026 to sign-up and register. Set a goal for miles you'll hike from Sunday, May 31, through Sunday, June 28, then ask friends and families to pledge an amount of money for each mile hiked (or to donate a flat amount if they prefer). Funds raised will support Telluride Rotary Foundation's community service projects, youth exchange program, and college scholarships. Nonprofits that participate as a team can keep 60% of the money they raise to support their nonprofit too! Rotary needs your participation!",
-    pubDate: "2026-05-15T00:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/Hikathon-simplified-logo-SMALL.png"
-  },
-  {
-    title: "Clown Sex Ed (Telluride Theatre FRINGE Project)",
-    link: "https://koto.org/event/clown-sex-ed-telluride-theatre-fringe-project/2026-05-16/",
-    description: "Clown Sex Ed is a hilarious romp through the challenges, failures and horror stories of American sex education. Tara Demmy and Zachary Chiero poke fun at your gym teacher, your health class and your parents' awkward talk and examine not only what they said but more importantly what they left out. Produced by Durango-based Oddball Theatre Company, this off-the-walls comedy \"makes the uncomfortable uproariously funny\" (Broad Street Review). A limited number of Pay-What-You-Can tickets are available per performance. — About Telluride Theatre FRINGE Projects: First launched in 1947, the Edinburgh Fringe Festival provided independent artists a platform to share their work, ranging from new musicals, small immersive performances, and everything in-between. In the spirit of the Fringe, Telluride Theatre is launching a new year-round program: The FRINGE Project. Applications are open to local artists with performance proposals for small-to-medium sized productions of ALL styles.",
-    pubDate: "2026-05-16T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "The BOB at the Palm Theatre, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/clown-sex-ed-hero-image.png"
-  },
   {
     title: "Gentle Yoga with Kristin Milord",
     link: "https://koto.org/event/gentle-yoga-with-kristin-milord-2/2026-05-17/",
@@ -1792,6 +1746,72 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
+  },
+  {
+    title: "West End Democrats of San Miguel & Montrose County 2026 Primary Voter Listening Session",
+    link: "https://koto.org/event/west-end-democrats-of-san-miguel-montrose-county-2026-primary-voter-listening-session/",
+    description: "Join us for an informal moderated listening session to hear our local voter's concerns and priorities. These will be shared with all of the Democratic Primary Candidates. Will will share a list of all of the candidates for Governor, Attorney General, U.S. House of Representatives, Secretary of State, and Treasurer. The date is Saturday, May 30th at the Lone Cone Library in Norwood from 11am to Noon. We really need to hear from our young voters! What are your concerns? Tell us what is important to you.",
+    pubDate: "2026-05-30T11:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: ""
+  },
+  {
+    title: "Party in the Park",
+    link: "https://koto.org/event/party-in-the-park/",
+    description: "TEF and there&#8230; are organizing our second annual Party in the Park! There will be great food and drinks, fun games, and amazing music, to celebrate our community!! All proceeds support our public schools!",
+    pubDate: "2026-05-30T13:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Town Park, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/PITP-STD.png"
+  },
+  {
+    title: "Gentle Yoga with Kristin Milord",
+    link: "https://koto.org/event/gentle-yoga-with-kristin-milord-2/2026-05-31/",
+    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class is free, but donations to support the instructor are welcome.",
+    pubDate: "2026-05-31T11:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/gentle-yoga-kristen-1.png"
+  },
+  {
+    title: "Drop In Tech Time with Oliver",
+    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-05-31/",
+    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
+    pubDate: "2026-05-31T13:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-05-31/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-05-31T14:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Telluride Science Town Talks",
+    link: "https://koto.org/event/telluride-science-town-talks/2026-06-02/",
+    description: "Big science. Small town. Every Tuesday from June 2- August 11, Telluride Science invites the public to sit down with some of the world’s most brilliant researchers for a conversation that might just change how you see the world. Town Talks cover everything from quantum computing and climate solutions to the latest in medicine and energy — accessible, thought-provoking, and completely free. Please note, there is no Town Talk on July 7.",
+    pubDate: "2026-06-02T18:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Conference Center, Mountain Village",
+    imageUrl: ""
   }
 ];
 
