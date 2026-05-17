@@ -1959,6 +1959,123 @@ const LOCAL_ORGS = [
       donate: "https://www.telluridechurch.org/give/",
       social: {},
       logo: "https://livabletelluride.org/logo/Church.png"
+    },
+    /* ── 12 additional verified Telluride-area orgs (2026-05-16 expansion) ── */
+    {
+      name: "KOTO Community Radio",
+      category: "nonprofits",
+      town: "Telluride",
+      summary: "Community radio station broadcasting on 91.7 FM (Telluride) and 105.5 FM (Norwood). Listener-supported nonprofit serving the San Juan region with local news, music, public affairs, and a community events calendar since 1975.",
+      website: "https://koto.org/",
+      donate: "https://koto.org/donate/",
+      social: { facebook: "https://www.facebook.com/KOTOCommunityRadio/", instagram: "https://www.instagram.com/kotoradio/" },
+      logo: "https://livabletelluride.org/logo/koto-fm-logo.webp"
+    },
+    {
+      name: "Telluride Humane Society",
+      category: "nonprofits",
+      town: "Telluride",
+      summary: "Animal welfare nonprofit serving the San Miguel Basin since 1995. Runs the regional shelter, adoption program, low-cost spay/neuter, and humane education. All adoptable cats and dogs are listed on the Local News tab.",
+      website: "https://telluridehumanesociety.com/",
+      donate: "https://telluridehumanesociety.com/donate/",
+      social: { facebook: "https://www.facebook.com/TellurideHumaneSociety/", instagram: "https://www.instagram.com/telluridehumanesociety/" },
+      logo: "https://livabletelluride.org/logo/Telluride%20Humane-400x400.png"
+    },
+    {
+      name: "Wilkinson Public Library",
+      category: "nonprofits",
+      town: "Telluride",
+      summary: "Telluride's public library, hosting community programs, author talks, kids' storytime, tech help, meeting rooms, and a robust event calendar. Special district funded through the Telluride Library District.",
+      website: "https://telluridelibrary.org/",
+      social: { facebook: "https://www.facebook.com/wilkinsonpubliclibrary/", instagram: "https://www.instagram.com/wilkinsonpubliclibrary/" },
+      logo: "https://livabletelluride.org/logo/Wilkenson.png"
+    },
+    {
+      name: "Sheridan Opera House",
+      category: "nonprofits",
+      town: "Telluride",
+      summary: "Historic 1913 opera house in downtown Telluride, owned and operated by the Sheridan Arts Foundation. Hosts concerts, films, theater, festivals, and the youth Young People's Theater program.",
+      website: "https://sheridanoperahouse.com/",
+      donate: "https://sheridanoperahouse.com/donate/",
+      social: { facebook: "https://www.facebook.com/SheridanOperaHouse/", instagram: "https://www.instagram.com/sheridanoperahouse/" },
+      logo: "https://livabletelluride.org/logo/Sheridan%20Opera%20House.png"
+    },
+    {
+      name: "Telluride Mountain Village Owners Association (TMVOA)",
+      category: "clubs",
+      town: "Mountain Village",
+      summary: "Property owners' association governing common areas and amenities in Mountain Village — gondola maintenance contributions, recreation programs, special events, and homeowner services.",
+      website: "https://tmvoa.org/",
+      social: { facebook: "https://www.facebook.com/tmvoa/" },
+      logo: "https://livabletelluride.org/logo/TMVOA%20Logo.png"
+    },
+    {
+      name: "Telluride Film Festival",
+      category: "nonprofits",
+      town: "Telluride",
+      summary: "Independent film festival held every Labor Day weekend since 1974. Nonprofit dedicated to the art of cinema, runs year-round educational programs including the Filmmakers of Tomorrow student program.",
+      website: "https://telluridefilmfestival.org/",
+      donate: "https://telluridefilmfestival.org/support/",
+      social: { facebook: "https://www.facebook.com/telluridefilmfestival/", instagram: "https://www.instagram.com/telluridefilmfestival/", twitter: "https://twitter.com/telluride" },
+      logo: "https://livabletelluride.org/logo/Film%20fest.jpg"
+    },
+    {
+      name: "Telluride Bluegrass Festival (Planet Bluegrass)",
+      category: "nonprofits",
+      town: "Telluride",
+      summary: "Four-day bluegrass and roots music festival held each June since 1973 in Town Park. Run by Planet Bluegrass; pairs with the Town of Telluride on community events and sustainability programs.",
+      website: "https://bluegrass.com/telluride/",
+      social: { facebook: "https://www.facebook.com/PlanetBluegrass/", instagram: "https://www.instagram.com/planetbluegrass/" },
+      logo: "https://livabletelluride.org/logo/Blue%20Grass.jpeg"
+    },
+    {
+      name: "Mountainfilm",
+      category: "nonprofits",
+      town: "Telluride",
+      summary: "Documentary film festival held over Memorial Day weekend since 1979. Year-round nonprofit operating the Mountainfilm on Tour program in dozens of cities and the Adventure Film Camp for youth.",
+      website: "https://www.mountainfilm.org/",
+      donate: "https://www.mountainfilm.org/support/",
+      social: { facebook: "https://www.facebook.com/mountainfilm/", instagram: "https://www.instagram.com/mountainfilm/" },
+      logo: "https://livabletelluride.org/logo/Mountain%20Film.png"
+    },
+    {
+      name: "Telluride Mushroom Festival",
+      category: "nonprofits",
+      town: "Telluride",
+      summary: "Four-day August festival celebrating fungi through forays, lectures, art, and the Telluride Mushroom Parade. Run as a program of the Telluride Institute since 1981.",
+      website: "https://shroomfest.com/",
+      donate: "https://shroomfest.com/get-involved/",
+      social: { facebook: "https://www.facebook.com/tellurideshroomfest/", instagram: "https://www.instagram.com/tellurideshroomfest/" },
+      logo: "https://livabletelluride.org/logo/Mushroom.png"
+    },
+    {
+      name: "Original Thinkers",
+      category: "nonprofits",
+      town: "Telluride",
+      summary: "Annual fall festival of ideas held in Telluride, pairing original films with live conversation. Year-round speaker series and the Original Thinkers Quarterly podcast.",
+      website: "https://originalthinkers.com/",
+      social: { facebook: "https://www.facebook.com/originalthinkers/", instagram: "https://www.instagram.com/originalthinkers/" },
+      logo: "https://livabletelluride.org/logo/Original%20Thinkers.png"
+    },
+    {
+      name: "Habitat for Humanity of the San Juans",
+      category: "nonprofits",
+      town: "Ridgway",
+      summary: "Affordable housing nonprofit serving San Miguel, Ouray, Hinsdale, and surrounding counties. Builds and rehabs homes with partner families and runs a ReStore (Ridgway) selling donated home goods to fund builds.",
+      website: "https://www.habitatsanjuans.org/",
+      donate: "https://www.habitatsanjuans.org/donate",
+      social: { facebook: "https://www.facebook.com/HabitatforHumanityoftheSanJuans/" },
+      logo: "https://livabletelluride.org/logo/Habitat-for-Humanit-Logo.jpg"
+    },
+    {
+      name: "Telluride Adaptive Sports Program",
+      category: "recreation",
+      town: "Telluride",
+      summary: "Nonprofit providing adaptive winter and summer recreation experiences for people with physical, cognitive, sensory, and emotional disabilities. Winter ski/snowboard programs with the Telluride Ski Resort; summer hiking, cycling, and water programs.",
+      website: "https://tellurideadaptivesports.org/",
+      donate: "https://tellurideadaptivesports.org/donate/",
+      social: { facebook: "https://www.facebook.com/TellurideAdaptiveSportsProgram/", instagram: "https://www.instagram.com/tellurideadaptivesports/" },
+      logo: "https://livabletelluride.org/logo/Telluride%20Ski%20Club.webp"
     }
 ];
 

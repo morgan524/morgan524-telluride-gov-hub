@@ -221,21 +221,22 @@
       box-shadow: 0 10px 24px rgba(36, 49, 46, 0.10);
     }
     .org-head {
-      display: grid;
-      grid-template-columns: 64px minmax(0, 1fr);
-      gap: 14px;
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      gap: 12px;
+      text-align: center;
     }
     .org-logo {
-      width: 64px; height: 64px;
-      border-radius: 14px;
+      width: 120px; height: 120px;
+      border-radius: 16px;
       background: var(--bg-paper);
       border: 1px solid var(--border-soft);
       display: flex; align-items: center; justify-content: center;
       overflow: hidden;
     }
     .org-logo img {
-      max-width: 84%; max-height: 84%;
+      max-width: 90%; max-height: 90%;
       object-fit: contain;
     }
     .org-card h3 {
@@ -244,6 +245,7 @@
       font-size: 1.18rem;
       line-height: 1.25;
       color: var(--text-primary);
+      text-align: center;
     }
     .org-meta {
       display: flex;
@@ -450,6 +452,7 @@
         <a href="/events.html">Events</a>
         <a href="/hub-bub.html">Hub-Bub</a>
         <a href="/housing.html">Housing</a>
+        <a href="/projects-map/">Projects Map</a>
         <a href="/legal-notices.html">Legal Notices</a>
         <a href="/local-orgs.html" class="active">Local Orgs</a>
         <a href="/about.html">About</a>
