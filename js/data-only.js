@@ -54,6 +54,30 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Tiny patients, big fight: NICU parents win leave in 2 states and push for more",
+    source: "Telluride Times",
+    date: "May 17, 2026",
+    firstSeen: "2026-05-17",
+    newsTopic: "housing",
+    copy: "A Fort Collins couple faced the difficult choice between working while their baby was in the NICU or using up parental leave before bringing her home. Colorado became the first state to offer paid NICU leave in January - 12 weeks on top of regular parental leave - while Illinois will start offering 10-20 days unpaid next month.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_972ba0ce-4c07-5b4f-9b1e-7d3dc9268852.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/0e/e0e2f3ab-4e6e-58b6-83ea-c282291ca3c3/6a09c00146405.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Tiny patients, big fight: NICU parents win leave in 2 states and push for more",
+    source: "Telluride Times",
+    date: "May 17, 2026",
+    firstSeen: "2026-05-17",
+    newsTopic: "housing",
+    copy: "A Colorado couple faced the dilemma many NICU parents know - work while their baby was hospitalized or save parental leave for later. Colorado became the first state in January to offer paid NICU leave (12 weeks), while Illinois will start a smaller unpaid program next month.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_fd56087d-96f6-5692-8644-bb2754f3d21b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/0e/e0e2f3ab-4e6e-58b6-83ea-c282291ca3c3/6a09c00146405.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Rural Homes Colorado to build workforce housing for MV",
     source: "Telluride Times",
     date: "May 17, 2026",
@@ -1331,28 +1355,6 @@ const COMMUNITY_EVENTS = [
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-05-17/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-05-17T13:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-05-17/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-05-17T14:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
     title: "Savvy Seniors- Open Tech",
     link: "https://koto.org/event/savvy-seniors-open-tech-2/",
     description: "Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music.",
@@ -1840,6 +1842,17 @@ const WILKINSON_EVENTS = [
     imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
   },
   {
+    title: "CANCELLED Holding Space/Espacio de Espera con Daniel Kanow",
+    link: "https://telluridelibrary.libcal.com/event/16042598?hs=a",
+    description: "1:00 PM – 3:00 PM · ATTENTION: IN ORDER TO ATTEND THIS WORKSHOP, YOU WILL HAVE NEEDED TO HAVE SIGNED UP FOR AND ATTENDED THE PREVIOUS THREE SESSIONS WHICH STARTED ON APRIL 26TH. ATENCI&Oacute;N: PARA ASISTIR A ESTE TALLER, DEBER&Aacute; HABERSE INSCRITO Y HABER ASISTIDO A LAS TRES SESIONES ANTERIORES QUE COMENZARON EL 26TH DE ABRIL. This four-week creative series offers a gentle, supportive space to explore grief and life transitions through art-making. Each session invites participants to engage in guided, low-pressure creative activities designed to support reflection, grounding, and self-expression. No art experience is needed. Participants are free to observe, modify activities, or step away as needed. Sharing is optional, and personal stories are never required. The focus is on healing the process of creative expression and the potential creation of meaningful heartfelt artworks. …",
+    pubDate: "2026-05-17T13:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1767903630.jpg"
+  },
+  {
     title: "Drop-In Tech Time with Oliver",
     link: "https://telluridelibrary.libcal.com/event/15970374?hs=a",
     description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
@@ -1849,17 +1862,6 @@ const WILKINSON_EVENTS = [
     category: "Library Event",
     location: "2nd Floor Desk",
     imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
-  },
-  {
-    title: "Holding Space/Espacio de Espera con Daniel Kanow",
-    link: "https://telluridelibrary.libcal.com/event/16042598?hs=a",
-    description: "1:00 PM – 3:00 PM · ATTENTION: IN ORDER TO ATTEND THIS WORKSHOP, YOU WILL HAVE NEEDED TO HAVE SIGNED UP FOR AND ATTENDED THE PREVIOUS THREE SESSIONS WHICH STARTED ON APRIL 26TH. ATENCI&Oacute;N: PARA ASISTIR A ESTE TALLER, DEBER&Aacute; HABERSE INSCRITO Y HABER ASISTIDO A LAS TRES SESIONES ANTERIORES QUE COMENZARON EL 26TH DE ABRIL. This four-week creative series offers a gentle, supportive space to explore grief and life transitions through art-making. Each session invites participants to engage in guided, low-pressure creative activities designed to support reflection, grounding, and self-expression. No art experience is needed. Participants are free to observe, modify activities, or step away as needed. Sharing is optional, and personal stories are never required. The focus is on healing the process of creative expression and the potential creation of meaningful heartfelt artworks. …",
-    pubDate: "2026-05-17T13:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1767903630.jpg"
   },
   {
     title: "Cíclica & Humana",
