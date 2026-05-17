@@ -7,10 +7,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Deploy RSS proxy Worker
         uses: cloudflare/wrangler-action@v3
         with:
-          apiToken: ${{ secrets.CLOUDFLAIR_WORKER }}
+          # Prefer CLOUDFLARE_WORKER (correct spelling); fall back to the
+          # historical CLOUDFLAIR_WORKER while the GitHub secret is being
+          # renamed in repo Settings → Secrets and variables → Actions.
+          apiToken: ${{ secrets.CLOUDFLARE_WORKER || secrets.CLOUDFLAIR_WORKER }}
+          # Explicit accountId so the deploy isn't dependent on
+          # wrangler.toml still hardcoding it.
+          accountId: 8f020e73de4e9956f0e3ad7dce070ef4
           workingDirectory: cloudflare-worker/livabletelluride-rss-proxy
