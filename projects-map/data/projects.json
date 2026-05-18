@@ -584,6 +584,7 @@
     "cameraBearing": 90,
     "cameraPitch": 55,
     "cameraZoom": 17.6,
-    "publiclyFunded": true
+    "publiclyFunded": true,
+    "costTrackerKey": "Fruen"
   }
 ]

@@ -631,6 +631,75 @@ body {
      filter inside the slide-out drawer still gives the same filtering. */
   #preset-buttons { display: none !important; }
 
+  /* Right drawer (project details) becomes a BOTTOM SHEET on mobile so the
+     user can see the map AND the project info at the same time. Three
+     heights: collapsed (small peek), default (~55% screen), expanded
+     (full screen). User toggles via the drag-handle bar at the top. */
+  #drawer {
+    top: auto !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 55vh !important;
+    max-height: 55vh;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.18) !important;
+    transform: translateY(100%);
+    transition: transform 0.24s ease, height 0.24s ease, max-height 0.24s ease;
+  }
+  #drawer.open {
+    right: 0 !important;
+    transform: translateY(0);
+  }
+  #drawer.expanded {
+    height: 92vh !important;
+    max-height: 92vh;
+  }
+  #drawer.collapsed {
+    height: 64px !important;
+    max-height: 64px;
+  }
+  /* Drag handle bar at the top of the drawer — tap to cycle through
+     collapsed → default → expanded → default → collapsed. */
+  .drawer-toggle-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    flex-shrink: 0;
+    cursor: pointer;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+  }
+  .drawer-toggle-bar::before {
+    content: '';
+    width: 44px;
+    height: 5px;
+    border-radius: 999px;
+    background: #c4c8c2;
+  }
+  .drawer-toggle-bar:hover::before { background: #9aa2a0; }
+  /* In collapsed mode, swap the drawer header background to white so the
+     project-name peek looks clean above the map */
+  #drawer.collapsed .drawer-body { display: none; }
+  #drawer.collapsed .drawer-header {
+    background: #fff;
+    color: var(--green-dark);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  #drawer.collapsed .drawer-close,
+  #drawer.collapsed .drawer-title,
+  #drawer.collapsed .drawer-status-badge,
+  #drawer.collapsed .drawer-meta { color: var(--green-dark); }
+}
+/* Desktop default: toggle bar is hidden (drawer slides in from the right). */
+.drawer-toggle-bar { display: none; }
+@media (max-width: 860px) {
+  .drawer-toggle-bar { display: flex; }
+
   /* Allow filters to scroll when the panel itself is the scroll container */
   #filters { max-height: none; overflow: visible; }
 }

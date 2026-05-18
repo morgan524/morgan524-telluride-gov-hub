@@ -392,6 +392,7 @@ function buildFilterUI() {
 
 function renderChips(containerId, values, filterKey) {
   const container = document.getElementById(containerId);
+  if (!container) return;  // filter UI removed (mobile + desktop) — no-op
   values.forEach(val => {
     const chip = document.createElement('button');
     chip.className = 'filter-chip';
@@ -664,6 +665,7 @@ function openDrawer(project) {
   })();
 
   drawer.innerHTML = `
+    <div class="drawer-toggle-bar" onclick="toggleDrawerHeight()" title="Tap to expand or collapse"></div>
     <div class="drawer-header">
       <button class="drawer-close" onclick="closeDrawer()" title="Close">✕</button>
       <div class="drawer-status-badge" style="outline:1px solid rgba(255,255,255,0.35)">${project.status}</div>
@@ -745,6 +747,25 @@ function closeDrawer() {
 
 // Expose for inline handlers
 window.closeDrawer = closeDrawer;
+
+// ─── Mobile bottom-sheet drawer height toggle ────────────────────────────────
+// Cycles: default (~55% screen) → expanded (full) → collapsed (peek) → default.
+// Only relevant on mobile (≤860px); on desktop the .expanded / .collapsed
+// classes are no-ops since the drawer's CSS isn't bottom-sheet there.
+function toggleDrawerHeight() {
+  const d = document.getElementById('drawer');
+  if (!d) return;
+  if (d.classList.contains('expanded')) {
+    d.classList.remove('expanded');
+    d.classList.add('collapsed');
+  } else if (d.classList.contains('collapsed')) {
+    d.classList.remove('collapsed');
+    // → default state (no class)
+  } else {
+    d.classList.add('expanded');
+  }
+}
+window.toggleDrawerHeight = toggleDrawerHeight;
 
 // ─── Mobile left-panel drawer toggle ──────────────────────────────────────────
 function initMobilePanelToggle() {
