@@ -577,24 +577,47 @@
     "location": "Telluride",
     "communityArea": "Telluride",
     "jurisdiction": "Town of Telluride / San Miguel County",
-    "projectType": "Commercial",
+    "projectType": [
+      "Commercial"
+    ],
     "status": "Under Review",
     "latitude": 37.938147,
     "longitude": -107.813432,
     "geometryType": "polygon",
     "squareFootage": 16400,
     "housingUnits": 0,
-    "hotelRooms": 0,
+    "hotelRooms": null,
     "estimatedEmployees": 79,
     "publicDebtSubsidy": null,
-    "publiclyFunded": true,
-    "waterUtilityIssue": false,
-    "trafficIssue": false,
+    "waterUtilityIssue": "Unknown",
+    "trafficIssue": "Unknown",
     "decisionBody": "HARC, Town Council, BOCC",
     "nextMeetingDate": null,
+    "nextMeetingType": "",
+    "nextMeetingTime": "",
+    "publicCommentDeadline": null,
+    "upcomingHearings": [],
+    "documents": [
+      {
+        "title": "335 W Colorado \u2014 HARC Work Session Packet (May 21, 2025)",
+        "url": "",
+        "date": "2025-05-21",
+        "size": "9 MB"
+      }
+    ],
     "keyQuestion": "Will the new County/Town facilities consolidation deliver a building proportional to the 79 staff it's intended to house, and at what public cost?",
     "whyItMatters": "335 W Colorado is the County-owned site planned to consolidate ~79 staff currently spread across Town Hall, Rebekah Hall, Parks and Rec, Community Services, and the Marshal's Office. The project's footprint (full 9,365 SF lot at 1.75:1 FAR = ~16,400 SF over 3 floors at the 35-ft historic-commercial maximum) anchors the next decade of municipal service delivery and falls within the Telluride Historic Landmark District's Main Street Commercial Treatment Area.",
+    "deepDiveUrl": "",
     "primarySourceUrl": "",
-    "deepDiveUrl": ""
+    "lastUpdated": "2026-05-18",
+    "sourceConfidence": "Confirmed",
+    "editorialStatus": "Ready",
+    "estimatedTotalCost": 16400000,
+    "estimatedCostPerUnit": null,
+    "costNote": "Rough order-of-magnitude only: ~16,400 sf at $1,000/sf commercial = ~$16.4M construction. Excludes land (already County-owned), soft costs, and shed-repositioning work. Refine once schematic design advances.",
+    "cameraBearing": 90,
+    "cameraPitch": 55,
+    "cameraZoom": 17.6,
+    "publiclyFunded": true
   }
 ]
