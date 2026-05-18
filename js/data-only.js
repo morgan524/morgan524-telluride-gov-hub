@@ -54,6 +54,18 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Tiny patients, big fight: NICU parents win leave in 2 states and push for more",
+    source: "Telluride Times",
+    date: "May 17, 2026",
+    firstSeen: "2026-05-17",
+    newsTopic: "housing",
+    copy: "A Fort Collins couple faced the difficult choice between working while their baby was in the NICU or using up parental leave before bringing her home. Colorado became the first state to offer paid NICU leave in January - 12 weeks on top of regular parental leave - while Illinois will start offering 10-20 days unpaid next month.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_972ba0ce-4c07-5b4f-9b1e-7d3dc9268852.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/0e/e0e2f3ab-4e6e-58b6-83ea-c282291ca3c3/6a09c00146405.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Trump administration rescinds Public Lands Rule",
     source: "Telluride Times",
     date: "May 17, 2026",
@@ -74,18 +86,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A Colorado couple faced the dilemma many NICU parents know - work while their baby was hospitalized or save parental leave for later. Colorado became the first state in January to offer paid NICU leave (12 weeks), while Illinois will start a smaller unpaid program next month.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_fd56087d-96f6-5692-8644-bb2754f3d21b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/0e/e0e2f3ab-4e6e-58b6-83ea-c282291ca3c3/6a09c00146405.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Tiny patients, big fight: NICU parents win leave in 2 states and push for more",
-    source: "Telluride Times",
-    date: "May 17, 2026",
-    firstSeen: "2026-05-17",
-    newsTopic: "housing",
-    copy: "A Fort Collins couple faced the difficult choice between working while their baby was in the NICU or using up parental leave before bringing her home. Colorado became the first state to offer paid NICU leave in January - 12 weeks on top of regular parental leave - while Illinois will start offering 10-20 days unpaid next month.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_972ba0ce-4c07-5b4f-9b1e-7d3dc9268852.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/0e/e0e2f3ab-4e6e-58b6-83ea-c282291ca3c3/6a09c00146405.image.jpg",
     imgHiRes: true
   },
@@ -1851,70 +1851,81 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Trash Bash",
-    link: "https://telluridelibrary.libcal.com/event/16767575?hs=a",
-    description: "10:00 AM – 2:00 PM · Join the Library Team for the Town of Telluride&#39;s Trash Bash! Swing by the library any time between 10am and 2pm to pick up your trash bag from the front desk. All ages are welcome. Free pizza (and a free margarita ticket for 21+) will be provided for anyone who returns a bag of trash. Help keep our town clean!",
-    pubDate: "2026-05-17T10:00:00.000Z",
+    title: "Book Buzz with the Pour Over Pedaler",
+    link: "https://telluridelibrary.libcal.com/event/16687358?hs=a",
+    description: "9:00 AM – 10:00 AM · Get the scoop on the hottest new titles at the library during Book Buzz ! Discover upcoming releases, hidden gems, and staff favorites while enjoying a complimentary handcrafted coffee from Luke of The Pour Over Pedaler . Come sip, socialize, and leave with your next great read!",
+    pubDate: "2026-05-18T09:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Lobby",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_43_09.jpg"
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_23_14_12_02.jpg"
   },
   {
-    title: "Gentle Yoga with Kristen Milord",
-    link: "https://telluridelibrary.libcal.com/event/16515737?hs=a",
-    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
-    pubDate: "2026-05-17T11:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
-  },
-  {
-    title: "CANCELLED Holding Space/Espacio de Espera con Daniel Kanow",
-    link: "https://telluridelibrary.libcal.com/event/16042598?hs=a",
-    description: "1:00 PM – 3:00 PM · ATTENTION: IN ORDER TO ATTEND THIS WORKSHOP, YOU WILL HAVE NEEDED TO HAVE SIGNED UP FOR AND ATTENDED THE PREVIOUS THREE SESSIONS WHICH STARTED ON APRIL 26TH. ATENCI&Oacute;N: PARA ASISTIR A ESTE TALLER, DEBER&Aacute; HABERSE INSCRITO Y HABER ASISTIDO A LAS TRES SESIONES ANTERIORES QUE COMENZARON EL 26TH DE ABRIL. This four-week creative series offers a gentle, supportive space to explore grief and life transitions through art-making. Each session invites participants to engage in guided, low-pressure creative activities designed to support reflection, grounding, and self-expression. No art experience is needed. Participants are free to observe, modify activities, or step away as needed. Sharing is optional, and personal stories are never required. The focus is on healing the process of creative expression and the potential creation of meaningful heartfelt artworks. …",
-    pubDate: "2026-05-17T13:00:00.000Z",
+    title: "Musik for Kinders",
+    link: "https://telluridelibrary.libcal.com/event/16567230?hs=a",
+    description: "10:30 AM – 11:30 AM",
+    pubDate: "2026-05-18T10:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1767903630.jpg"
+    imageUrl: ""
   },
   {
-    title: "Drop-In Tech Time with Oliver",
-    link: "https://telluridelibrary.libcal.com/event/15970374?hs=a",
-    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
-    pubDate: "2026-05-17T13:00:00.000Z",
+    title: "Money Reset-Financial Literacy Class",
+    link: "https://telluridelibrary.libcal.com/event/16663331?hs=a",
+    description: "12:00 PM – 1:30 PM · Get your budget back on track! Join us for Money Reset, a financial literacy class, with the Telluride Foundation , ANB Bank and Alpine Bank. This class is free and open to the public. Food will be provided. Register in advance here if possible so we know how much food to buy for lunch.  If you would prefer to join via Zoom, please register for the Zoom Link here .",
+    pubDate: "2026-05-18T12:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "2nd Floor Desk",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_05_13_19_38.jpg"
   },
   {
-    title: "Cíclica & Humana",
-    link: "https://telluridelibrary.libcal.com/event/16761258?hs=a",
-    description: "2:00 PM – 3:30 PM · C&iacute;clica & Humana es un proyecto que busca abrir un espacio para mujeres en el que podamos comprender el funcionamiento de nuestro ciclo hormonal y reconectar con nuestra feminidad desde el amor propio. El proyecto estar&aacute; organizado en 6 encuentros: 1. La feminidad y el Utero  2. Como Entender nuestro cuerpo?  3. Ciclo 1: Fase Lutea  4. Ciclo 2: Menstruaci&oacute;n  5. Ciclo 3: Fase Folicular  6. Ciclo 4: Fase Ovulaci&oacute;n  Por favor de registrase con Claudia para estas clases.",
-    pubDate: "2026-05-17T14:00:00.000Z",
+    title: "Savvy Seniors- Open Tech",
+    link: "https://telluridelibrary.libcal.com/event/16557840?hs=a",
+    description: "1:30 PM – 2:30 PM",
+    pubDate: "2026-05-18T13:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_14_18_33.jpg"
+    location: "Meeting Room #6 - large",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_12_12_49.png"
   },
   {
-    title: "Tea and Tarot",
-    link: "https://telluridelibrary.libcal.com/event/16567825?hs=a",
-    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
-    pubDate: "2026-05-17T14:30:00.000Z",
+    title: "Hobby Hopping / Salta Hobbies",
+    link: "https://telluridelibrary.libcal.com/event/16802128?hs=a",
+    description: "4:00 PM – 5:00 PM · Come find out! Every Monday we will introduce teens to a new hobby in a fun, no-pressure setting. No experience needed- just show up and try something new!  Free and open to teens in 6-12th grades. ------------------------------------------------------ &iexcl;Ven a descubrirlo! Cada lunes presentaremos un nuevo hobby en un ambiente divertido y sin presi&oacute;n. No se necesita experiencia- &iexcl;solo ven y prueba algo nuevo!",
+    pubDate: "2026-05-18T16:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_28_12_44_40.png"
+  },
+  {
+    title: "Reinicio Financiero-Clase de educación financiera",
+    link: "https://telluridelibrary.libcal.com/event/16654391?hs=a",
+    description: "5:30 PM – 7:00 PM · Organizar tu Presupuesto. &Uacute;nase a nosotros para Reinicio Financiero, una clase de educaci&oacute;n financiera, con Telluride Foundation , ANB Bank y Alpine Bank. Esta clase es gratuita y abierta al p&uacute;blico. Se proporcionar&aacute; comida y cuidado de ni&ntilde;os. Favor de registrarse aqu&iacute; .",
+    pubDate: "2026-05-18T17:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_05_13_19_54.jpg"
+  },
+  {
+    title: "The Listening Club: The Cure - Disintegration",
+    link: "https://telluridelibrary.libcal.com/event/15299647?hs=a",
+    description: "6:00 PM – 7:00 PM · Take some time to listen to the month&#39;s featured album. Then, join The Listening Club the fourth Monday of each month for a deep discussion of the album lead by your album guide for the evening. Your knowledgeable guide will bring you cultural, historical, and musical context that will surprise and delight you, as well as bring you a greater understanding of the music you are hearing. It&#39;s like a book club, but for albums! Come join the fun at Telluride Music Company and get into a raffle for a vinyl copy of the month&#39;s featured album and enjoy some FREE pizza with the discussion. Bring your own beverage. ( Signing up here in advance helps us know how much pizza to order! ) Thanks to Telluride Music and KOTO Community Radio for the support. …",
+    pubDate: "2026-05-18T18:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Music Company",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715207112.jpg"
   }
 ];
 
@@ -2016,61 +2027,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "OTG Backcountry Trail Crew Leader Training",
-    link: "ouraytrails.org",
-    description: "We are in need of new Trail Crew Leaders and would love to have a good turnout. Even if you don’t want to lead a trip initially, you can learn by working with experienced Trail Crew Leaders through backcountry trips planned for this summer. A two-day Trail Crew Leader course will be held on Saturday and Sunday May 16 & 17 lead by John Hulburd. He is a certified OSI/VOC instructor and has a wealth of knowledge to share in trail building, construction, and maintenance! Sign up using this link. For questions, please contact OTG at contactus@ouraytrails.org.",
-    pubDate: "2026-05-17T14:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52587455597568/huge/8f3a527aa56803672e93a2f117c5ed9ce3a2fefe.jpg"
-  },
-  {
-    title: "Wildfire Workshop",
-    link: "https://events.ourayridgwayevents.com/event/wildfire-workshop",
-    description: "Join us to learn how to protect your property from wildfire with tips from local experts. Bring kids to explore fire trucks, meet your local responders, and enjoy burgers and hot dogs. There will be two dates you can join us! April 22, 2026 from 4-7 pm and May 17, 2026 from 12:30 - 3:30 pm located at the Ouray Fire Station.",
-    pubDate: "2026-05-17T18:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Fire Station",
-    imageUrl: "https://localist-images.azureedge.net/photos/52455176717624/huge/dc2edbe63a90246bbcc6cb6b2ca58c2ddfb9e403.jpg"
-  },
-  {
-    title: "PARK - Ultimate Frisbee",
-    link: "https://events.ourayridgwayevents.com/event/park-ultimate-frisbee",
-    description: "Come play frisbee! Anyone is welcome.",
-    pubDate: "2026-05-17T20:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Fellin Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/51807883052581/huge/9d7f0c7c4c96318902b1dfef1c3f821c9b3189d1.jpg"
-  },
-  {
-    title: "Inner Yoga:  Breathwork & Meditation Workshop",
-    link: "https://www.beetrueyou.com/",
-    description: "Interested in breathwork and starting or deepening your meditation practice? Enjoy diving into ways to develop or deepen your home meditation practice. Includes an all levels yet gentle to moderate yoga class designed to support entering into a deep state of meditation. The class will begin with a moment of bhakti (chanting with harmonium) and a discussion and handout of tips on preparing for or deepening meditation. The class will end with 15 minutes of pranayama (breath work), 15 minutes of guided meditation, 5 minutes of silent seated meditation and 10 minutes of savasana with optional essential oils. Guided introspection on your intentions for your life can be included. Step out back into the world with a vibration of the peace of your soul from stillness and going within yourself. Presented by Elizabeth Lava of Bee True You.",
-    pubDate: "2026-05-17T22:15:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52836703590513/huge/0b139551bb14658eac619d3a5a58309c54795221.jpg"
-  },
-  {
-    title: "Ouray Softball Spring Training",
-    link: "https://events.ourayridgwayevents.com/event/ouray-softball-spring-training",
-    description: "Step onto the field for Ouray Softball Spring Training at Fellin Park. This preseason program is designed to shake off the rust, build skills, and get players ready for summer league action. Open to a range of ages and experience levels, spring training focuses on fundamentals, teamwork, and getting back into the rhythm of the game. Whether you're refining your swing, sharpening fielding skills, or just getting back in the game, it’s a great way to kick off the season. Come ready to play, connect with teammates, and enjoy spring evenings on the diamond in Ouray. Want to join a team, but you aren't already involved? Sign up Here!",
-    pubDate: "2026-05-17T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52701275725771/huge/58498e59bf3c36b5491225bca2838359fa0701bd.jpg"
-  },
   {
     title: "On Display: Layers of Faces and Life-Paintings by Ruth Higdon and Julie Ahern",
     link: "https://events.ourayridgwayevents.com/event/layers-of-faces-and-life-paintings-by-ruth-higdon-and-julie-ahern",
@@ -3060,6 +3016,61 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Art Opening-Karen Keene Day",
+    link: "https://events.ourayridgwayevents.com/event/art-opening-karen-keene-day",
+    description: "“Painting Evolution Of Moments With Wild Horses 1999-2026” By Artist Karen Keene Day Join us for a retrospective of Karen's work that spans almost 30 years! Including some exciting process pieces and of course her signature large-format, captivating horse portraits. During Ridgway's First Friday Art Walk. More info decker@ridgwayfuse.org",
+    pubDate: "2026-06-05T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52709607614558/huge/4004c3e46daab151739f91ab158182bf8b6c5793.jpg"
+  },
+  {
+    title: "First Friday Art Walk",
+    link: "www.ridgwayfuse.org/firstfridays ",
+    description: "Discover new work, celebrate openings and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits and special programming — perfect for art lovers and casual browsers alike. Plan your route with the interactive map here: First Friday Map Expect a range of media — painting, photography (including Ouray Image Photography at Treehouse Studio), mixed media and fine craft — and opportunities to talk with the artists who made it. Participating venues include Mountain Girl Gallery, Decker Community Room and Galelry Timber Creek, Fabula, The Vault Vintage and Consignment, 610 Arts Collective, Sherbino Theater, Space to Create Gallery and many more, organized by Ridgway FUSE Creative Main Street and local partners. Come for the art, stay for the community — First Friday is a highlight of Ridgway’s cultural calendar.",
+    pubDate: "2026-06-05T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Downtown Ridgway, CO",
+    imageUrl: "https://localist-images.azureedge.net/photos/52365755793700/huge/95103614f2ba8e83504827d7da75c53b3814a972.jpg"
+  },
+  {
+    title: "First Friday Art Walk with Walter St.Clair",
+    link: "https://www.instagram.com/mountaingirlgallery/",
+    description: "Join us at the Mountain Girl Gallery on Friday, June 5 for our 9th Anniversary celebration featuring the sweets sounds of Walter St.Clair on the porch.",
+    pubDate: "2026-06-05T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52372912892394/huge/571ed29f2fe398fbe38b9d73af3e8e3e0168844d.jpg"
+  },
+  {
+    title: "First Friday Live Music - Coral Skye",
+    link: "https://sherbino.org/event/the-sherbino-presents-coral-skye-first-friday-show-2/",
+    description: "Friday, June 5th | 6:00–8:00 pm Sherbino “Living Room” Free Show | Cash Bar | Tips Encouraged Celebrate First Friday with an intimate evening of live music at the Sherbino! Join us in the Sherbino’s cozy “Living Room” near the bar for a special performance by Coral Skye. Coral is a musician out of Montrose, CO who enjoys sharing her pop “acousti-soul” style of music. With a decade of professional performances under her belt, she has entertained all sorts of audiences, from festival crowds to local nursing home residents and students in school programs. Her inspiration comes from the power of music, family members and the support of her caring audiences. She has opened up for names like Survivor at the Olathe Corn Festival and Big Head Todd and the Monsters at The Bridges concert in Montrose. …",
+    pubDate: "2026-06-06T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52687172889799/huge/7521571e527cc0dc1f360803533c1c60fa3cbb12.jpg"
+  },
+  {
+    title: "Music Bingo @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/music-bingo-the-wright",
+    description: "Music Bingo @ the Wright WHEN? Doors at 6:30 pm • Event at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT It’s bingo. But louder. And somehow emotionally complicated. Battle for glory using songs, questionable music knowledge, accidental dancing, and the sudden realization that one hit from 2007 still lives in your head rent-free. Expect singalongs, dramatic betrayals, nostalgic bangers, deep cuts, and at least one person absolutely convinced they should have won three rounds ago. Whether you’re a human jukebox or someone who confidently calls every song “that one TikTok song,” Music Bingo welcomes all skill levels and levels of chaos. Free to attend In-person event at the historic Wright Opera House Part of programming at the Wright Opera House, bringing arts, conversation, and community to downtown Ouray since 1889.",
+    pubDate: "2026-06-06T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52886458731201/huge/e99a2ec1f365e0aaf580bfd7ce874919c7d87cbf.jpg"
   }
 ];
 
