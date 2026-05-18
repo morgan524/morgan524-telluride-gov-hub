@@ -211,18 +211,10 @@ function loadMassingLayer() {
     }
   });
 
-  // Add existing-buildings layer for surrounding context.
-  //
-  // FLAT-ALIGNED (2026-05-18): all existing buildings extrude from the
-  // Telluride town-floor baseline (2666 m) up to a uniform 8 m / ~26 ft
-  // slab, ignoring terrain. Same alignment as proposed-massing-flat-layer
-  // (also pinned to 2666). Without this, buildings on Kid's Hill (terrain
-  // ~2700 m → tops ~2712 m) towered ~30 m above the flat Carhenge pad
-  // (~2680 m), making the existing context read as 2–3× the proposed
-  // massing's height. The trade-off: per-building height variation from
-  // Mapbox tiles is dropped, and existing buildings on MV/Aldasoro
-  // hillsides will appear at the wrong elevation. Acceptable because the
-  // map's current focus is the Telluride-town project cluster.
+  // Add existing-buildings layer for surrounding context. Same identity
+  // mapping pattern as Mapbox doc Option 2: height from `height` field,
+  // base from `min_height`. Now visible starting at zoom 13 (was 15) so
+  // proposed massing has neighbors to compare against from a wider view.
   map.addLayer({
     id: 'existing-buildings-3d',
     type: 'fill-extrusion',
@@ -233,14 +225,26 @@ function loadMassingLayer() {
     layout: { visibility: 'none' },
     paint: {
       'fill-extrusion-color': '#c8c0b4',
-      // Static values — flat-alignment is picky about expressions on
-      // the base/height it pairs with (see proposed-massing-flat-layer
-      // notes above).
-      'fill-extrusion-base':              2666,
-      'fill-extrusion-height':            2674, // 8 m above baseline
-      'fill-extrusion-base-alignment':    'flat',
-      'fill-extrusion-height-alignment':  'flat',
-      'fill-extrusion-opacity':           0.55,
+      // Identity mapping — height/min_height from Mapbox Streets v8
+      // building tiles. Brief fade-in over zoom 13 → 13.5 to avoid a
+      // hard pop when crossing the minzoom threshold.
+      // Mapbox Streets v8 building heights for Telluride often run ~2× real
+      // (OSM tags inflated by attic/parapet rules). Scale by 0.5, then cap
+      // at 12 m (~40 ft) so the tallest OSM-tagged buildings on the slope
+      // (Mountainside Inn cluster, Camel's Garden) don't tower over the
+      // 2–3-story buildings across W Pacific Ave. The cap matches the
+      // Telluride town 35 ft ridge limit + a little parapet allowance.
+      'fill-extrusion-height': [
+        'interpolate', ['linear'], ['zoom'],
+        13,   0,
+        13.5, ['min', 12, ['*', 0.5, ['coalesce', ['get', 'height'], 6]]],
+      ],
+      'fill-extrusion-base': [
+        'interpolate', ['linear'], ['zoom'],
+        13,   0,
+        13.5, ['coalesce', ['get', 'min_height'], 0],
+      ],
+      'fill-extrusion-opacity': 0.55,
       'fill-extrusion-vertical-gradient': true,
     },
   }, 'proposed-massing-layer'); // render existing buildings BEHIND proposed massing
