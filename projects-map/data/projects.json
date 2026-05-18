@@ -42,7 +42,7 @@
   },
   {
     "id": "canyonlands-tower-house",
-    "name": "Canyonlands / Tower House Affordable Housing",
+    "name": "Canyonlands / Tower House Housing",
     "shortName": "Canyonlands",
     "location": "Tower House + Canyonlands — west end of Colorado Ave, Telluride",
     "communityArea": "Telluride",
@@ -352,7 +352,7 @@
   },
   {
     "id": "shandoka-lot-l",
-    "name": "Shandoka Lot L — Parking Garage & Affordable Housing",
+    "name": "Shandoka Lot L — Parking Garage & Housing",
     "shortName": "Shandoka Lot L",
     "location": "Southwest Telluride — near Lift 7 / San Miguel River",
     "communityArea": "Telluride",
@@ -531,7 +531,7 @@
   },
   {
     "id": "voodoo-affordable-housing",
-    "name": "VooDoo Affordable Housing",
+    "name": "VooDoo Housing",
     "shortName": "VooDoo Housing",
     "location": "Telluride — corner of S Willow & W Pacific",
     "communityArea": "Telluride",
