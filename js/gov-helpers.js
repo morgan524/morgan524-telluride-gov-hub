@@ -1211,7 +1211,7 @@ const KOTO_FEATURED_STORIES = [
 const BLOG_POSTS = [
   {
     title: 'From "Let the People Decide" to "Livable Telluride"',
-    url: 'https://livabletelluride.org/from-let-the-people-decide-to-livable-telluride',
+    url: 'https://livabletelluride.org/Blog%20Posts/from-let-the-people-decide-to-livable-telluride',
     date: 'Feb 23, 2026',
     readTime: '3 min',
     image: '/images/blog/let-the-people-decide.jpg',
@@ -1220,7 +1220,7 @@ const BLOG_POSTS = [
   },
   {
     title: 'As the Society Turns (the Survey Episode)',
-    url: 'https://livabletelluride.org/societyturnpud',
+    url: 'https://livabletelluride.org/Blog%20Posts/societyturnpud',
     date: 'Oct 14, 2025',
     readTime: '2 min',
     image: '/images/blog/society-turn-survey.png',
@@ -1229,7 +1229,7 @@ const BLOG_POSTS = [
   },
   {
     title: 'As the Society Turns (the PUD Episode)',
-    url: 'https://livabletelluride.org/as-the-society-turns-the-pud-episode',
+    url: 'https://livabletelluride.org/Blog%20Posts/as-the-society-turns-the-pud-episode',
     date: 'Oct 11, 2025',
     readTime: '5 min',
     image: '/images/blog/society-turn-pud.png',
@@ -1238,7 +1238,7 @@ const BLOG_POSTS = [
   },
   {
     title: 'Saturday Shot of Finance: If VooDoo Were a Private Development, Would It Already Be Bankrupt?',
-    url: 'https://livabletelluride.org/saturday-shot-of-finance-if-voodoo-were-a-private-development-would-it-already-be-bankrupt',
+    url: 'https://livabletelluride.org/Blog%20Posts/saturday-shot-of-finance-if-voodoo-were-a-private-development-would-it-already-be-bankrupt',
     date: 'Oct 11, 2025',
     readTime: '4 min',
     image: '/images/blog/voodoo-finance.png',
@@ -1247,7 +1247,7 @@ const BLOG_POSTS = [
   },
   {
     title: 'Why is Rent So Damn High In Telluride!',
-    url: 'https://livabletelluride.org/why-is-rent-so-damn-high-in-telluride',
+    url: 'https://livabletelluride.org/Blog%20Posts/why-is-rent-so-damn-high-in-telluride',
     date: 'Sep 15, 2025',
     readTime: '5 min',
     image: '/images/blog/rent-so-damn-high.png',
@@ -1256,7 +1256,7 @@ const BLOG_POSTS = [
   },
   {
     title: 'From $36 Million to $103 Million: How Telluride Became Richer Than a Lottery Winner',
-    url: 'https://livabletelluride.org/from-36-million-to-103-million-how-telluride-became-richer-than-a-lottery-winner',
+    url: 'https://livabletelluride.org/Blog%20Posts/from-36-million-to-103-million-how-telluride-became-richer-than-a-lottery-winner',
     date: 'Sep 13, 2025',
     readTime: '3 min',
     image: '/images/blog/36-to-103-million.png',
@@ -1265,7 +1265,7 @@ const BLOG_POSTS = [
   },
   {
     title: "Canyonlands Development: A Closer Look at Telluride's Financing",
-    url: 'https://livabletelluride.org/canyonlands-development-a-closer-look-at-telluride-s-financing',
+    url: 'https://livabletelluride.org/Blog%20Posts/canyonlands-development-a-closer-look-at-telluride-s-financing',
     date: 'Jul 28, 2025',
     readTime: '4 min',
     image: '/images/blog/canyonlands.png',
@@ -1274,7 +1274,7 @@ const BLOG_POSTS = [
   },
   {
     title: 'Empowering Telluride: The Future of Lot L Development',
-    url: 'https://livabletelluride.org/empowering-telluride-the-future-of-lot-l-development',
+    url: 'https://livabletelluride.org/Blog%20Posts/empowering-telluride-the-future-of-lot-l-development',
     date: 'Jul 27, 2025',
     readTime: '2 min',
     image: '/images/blog/lot-l.png',
@@ -1283,7 +1283,7 @@ const BLOG_POSTS = [
   },
   {
     title: 'The Sunnyside Project',
-    url: 'https://livabletelluride.org/the-sunnyside-project',
+    url: 'https://livabletelluride.org/Blog%20Posts/the-sunnyside-project',
     date: 'Jul 27, 2025',
     readTime: '2 min',
     image: '/images/blog/sunnyside.png',
@@ -1292,7 +1292,7 @@ const BLOG_POSTS = [
   },
   {
     title: 'The VooDoo Project',
-    url: 'https://livabletelluride.org/the-voodoo-project',
+    url: 'https://livabletelluride.org/Blog%20Posts/the-voodoo-project',
     date: 'Jul 27, 2025',
     readTime: '2 min',
     image: '/images/blog/voodoo-project.png',
@@ -1301,7 +1301,7 @@ const BLOG_POSTS = [
   },
   {
     title: 'The Chair 7 Development Controversy',
-    url: 'https://livabletelluride.org/the-chair-7-development-controversy',
+    url: 'https://livabletelluride.org/Blog%20Posts/the-chair-7-development-controversy',
     date: 'Jul 25, 2025',
     readTime: '3 min',
     image: '/images/blog/chair-7.png',
@@ -1310,7 +1310,7 @@ const BLOG_POSTS = [
   },
   {
     title: 'The Gondola Station',
-    url: 'https://livabletelluride.org/the-gondola-station',
+    url: 'https://livabletelluride.org/Blog%20Posts/the-gondola-station',
     date: 'Jul 2, 2025',
     readTime: '1 min',
     image: '/images/blog/gondola-station.png',
