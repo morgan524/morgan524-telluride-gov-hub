@@ -1384,6 +1384,7 @@ const LAND_USE_ISSUES = {
   },
   diamond: {
     label: 'Diamond Ridge',
+    heroImage: '/images/Diamond%20Ridge.png',
     intro: 'Diamond Ridge is a 105-acre property on Deep Creek Mesa near the Telluride Airport that San Miguel County and the Town of Telluride purchased for $7.2M with plans for high-density affordable housing. Neighboring landowners challenged the rezoning and won twice in court -- first on due process and illegal spot zoning grounds, then on a PUD interpretation that further restricts development. A $5M state grant expired due to the County\'s failed legal strategy, and the land remains idle.',
     statusTitle: 'The courts ruled the County broke its own rules -- twice.',
     statusCopy: 'In 2022, the BOCC rushed through a rezone of 39 acres from protected Forestry/Agricultural land to a brand-new Community Housing zone allowing 20 units per acre. The district court found that a commissioner who helped engineer the purchase and rezone behind the scenes refused to recuse, denying landowners due process. The court also found the rezone was illegal spot zoning that ignored the Master Plan. A second 2024 ruling confirmed that the Diamond Ranch lots are part of the 1991 Aldasoro PUD, meaning they are restricted to one home per 35 acres. The County has appealed the PUD ruling but has not attempted a new rezoning.',

@@ -140,6 +140,57 @@
       .hero-title{font-size:1.8rem;}
       .topnav-links{display:none;}
     }
+  
+    /* ── Translate widget + mobile nav (added 2026-05-18) ── */
+    .topnav-translate { display: inline-flex; align-items: center; margin-right: 10px; }
+    .topnav-translate .goog-te-gadget { font-size: 0 !important; line-height: 1; }
+    .topnav-translate .goog-te-gadget-simple {
+      background: transparent !important;
+      border: 1px solid #d4dad0 !important;
+      border-radius: 999px !important;
+      padding: 7px 14px !important;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+      font-size: 0.82rem !important;
+      cursor: pointer;
+      line-height: 1.2 !important;
+    }
+    .topnav-translate .goog-te-gadget-simple .goog-te-menu-value { color: #2d4a3e !important; }
+    .topnav-translate .goog-te-gadget-simple .goog-te-menu-value span { color: #2d4a3e !important; border: none !important; }
+    .topnav-translate img.goog-te-gadget-icon { display: none !important; }
+    body { top: 0 !important; }
+    .goog-te-banner-frame, .skiptranslate iframe.goog-te-banner-frame { display: none !important; visibility: hidden !important; }
+    .goog-tooltip, .goog-tooltip:hover { display: none !important; }
+    .goog-text-highlight { background: none !important; box-shadow: none !important; }
+
+    .topnav-hamburger {
+      display: none; background: none; border: none; cursor: pointer;
+      font-size: 1.5rem; line-height: 1; padding: 4px 8px; color: #2d4a3e;
+    }
+    .topnav-hamburger:focus { outline: 2px solid #2d4a3e; outline-offset: 2px; }
+
+    @media (max-width: 860px) {
+      .topnav-inner { position: relative; flex-wrap: nowrap; }
+      .topnav-links {
+        display: none !important;
+        position: absolute; top: calc(100% + 1px); left: 0; right: 0;
+        background: #fff; flex-direction: column !important; gap: 0 !important;
+        padding: 8px 0; margin: 0 !important;
+        border-top: 1px solid #d4dad0;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        z-index: 60;
+      }
+      .topnav-links.open { display: flex !important; }
+      .topnav-links a {
+        padding: 14px 24px !important; border-bottom: 1px solid #f0f0ec !important;
+        font-size: 1rem !important;
+      }
+      .topnav-links a:last-child { border-bottom: none !important; }
+      .topnav-hamburger { display: block; }
+      .topnav-translate { margin-right: 6px; }
+      .topnav-translate .goog-te-gadget-simple { padding: 5px 10px !important; font-size: 0.75rem !important; }
+      .topnav-cta { padding: 7px 12px !important; font-size: 0.8rem !important; }
+    }
+
   </style>
 </head>
 <body>
@@ -159,7 +210,9 @@
         <a href="/projects-map/">Projects Map</a>
         <a href="/about.html">About</a>
       </nav>
+      <div id="google_translate_element" class="topnav-translate"></div>
       <a class="topnav-cta" href="https://livabletelluride.org/#tab-subscribe">Subscribe</a>
+      <button class="topnav-hamburger" aria-label="Open navigation menu" aria-expanded="false" id="topnavHamburger" type="button">☰</button>
     </div>
   </header>
 
@@ -398,5 +451,47 @@
 
     renderTopic(TOPIC_KEY);
   </script>
+
+<!-- Google Translate widget + mobile nav toggle (added 2026-05-18) -->
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'es,fr,de,zh-CN,zh-TW,ja,ko,ar,ru,pt,it,vi,hi,nl,pl,tr,uk,sv,no,da,fi,el,he,th,id',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+(function(){
+  var s = document.createElement('script');
+  s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  s.async = true;
+  document.head.appendChild(s);
+})();
+(function(){
+  function init(){
+    var btn = document.getElementById('topnavHamburger');
+    if (!btn) return;
+    var links = document.querySelector('.topnav-links');
+    if (!links) return;
+    btn.addEventListener('click', function(){
+      var open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? '✕' : '☰';
+    });
+    // close drawer when a link is clicked
+    links.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        links.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.textContent = '☰';
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else { init(); }
+})();
+</script>
 </body>
 </html>
