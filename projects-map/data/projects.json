@@ -28,7 +28,7 @@
     "whyItMatters": "Case 2023CV30044 involves enforcement of the Aldasoro PUD in Diamond Ranch. The case raises broader questions about how San Miguel County oversees approved planned unit developments over time \u2014 and what happens when conditions aren't enforced.",
     "deepDiveUrl": "",
     "primarySourceUrl": "https://www.courts.state.co.us/",
-    "lastUpdated": "2026-05-13",
+    "lastUpdated": "2026-05-17",
     "sourceConfidence": "Estimated",
     "editorialStatus": "Needs Review",
     "estimatedTotalCost": null,
@@ -36,7 +36,9 @@
     "costNote": null,
     "cameraZoom": 16,
     "cameraPitch": 60,
-    "cameraBearing": -22
+    "cameraBearing": -22,
+    "publiclyFunded": true,
+    "costTrackerKey": "DiamondRidge"
   },
   {
     "id": "canyonlands-tower-house",
@@ -515,12 +517,14 @@
     "whyItMatters": "The Sunnyside project is one of several housing initiatives aimed at addressing Telluride's severe shortage of workforce housing. The project's financing structure and unit count will affect how many workers can afford to live in town rather than commuting 25+ miles daily.",
     "deepDiveUrl": "https://livabletelluride.org/the-sunnyside-project/",
     "primarySourceUrl": "",
-    "lastUpdated": "2026-05-13",
+    "lastUpdated": "2026-05-17",
     "sourceConfidence": "Estimated",
     "editorialStatus": "Needs Review",
     "estimatedTotalCost": null,
     "estimatedCostPerUnit": null,
-    "costNote": null
+    "costNote": null,
+    "publiclyFunded": true,
+    "costTrackerKey": "Sunnyside"
   },
   {
     "id": "voodoo-affordable-housing",
