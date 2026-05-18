@@ -68,6 +68,13 @@ const TARGETS = [
   { kind: 'function', name: 'getTownAgendaLink' },
   { kind: 'function', name: 'getTellurideMeetings' },
   { kind: 'function', name: 'getMeetingSummary' },
+  // ── Zoom / Passcode helpers — gov-hub.html's standalone meetingCard
+  //    needs these to render the Zoom Access panel. They read globals
+  //    that live in gov-data.js (MEETING_ZOOM_LINKS, MEETING_PASSCODES,
+  //    SCHOOL_ZOOM_LINK) — gov-hub.html loads gov-data.js so those are
+  //    in scope at runtime. ──
+  { kind: 'function', name: 'getMeetingZoomLink' },
+  { kind: 'function', name: 'getMeetingPasscode' },
 ];
 
 /**
