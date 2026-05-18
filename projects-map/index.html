@@ -168,8 +168,19 @@
 <!-- MAIN -->
 <div id="main">
 
+  <!-- Mobile-only: backdrop that closes the left panel when tapped -->
+  <div id="mobile-panel-backdrop" aria-hidden="true"></div>
+
+  <!-- Mobile-only: floating button on the map that opens the left panel -->
+  <button id="mobile-filter-toggle" type="button" aria-label="Open filters and project list" aria-controls="left-panel" aria-expanded="false">
+    <span aria-hidden="true">☰</span> Filters &amp; Projects
+  </button>
+
   <!-- LEFT PANEL -->
   <div id="left-panel">
+
+    <!-- Mobile-only: close button inside the panel -->
+    <button id="mobile-panel-close" type="button" aria-label="Close filters and project list">✕</button>
 
     <!-- Search -->
     <div id="search-box">

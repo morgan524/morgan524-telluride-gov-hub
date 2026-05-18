@@ -746,5 +746,42 @@ function closeDrawer() {
 // Expose for inline handlers
 window.closeDrawer = closeDrawer;
 
+// ─── Mobile left-panel drawer toggle ──────────────────────────────────────────
+function initMobilePanelToggle() {
+  const toggle   = document.getElementById('mobile-filter-toggle');
+  const closeBtn = document.getElementById('mobile-panel-close');
+  const backdrop = document.getElementById('mobile-panel-backdrop');
+  const panel    = document.getElementById('left-panel');
+  if (!toggle || !closeBtn || !backdrop || !panel) return;
+
+  function open() {
+    panel.classList.add('open');
+    backdrop.classList.add('open');
+    document.body.classList.add('left-panel-open');
+    toggle.setAttribute('aria-expanded', 'true');
+  }
+  function close() {
+    panel.classList.remove('open');
+    backdrop.classList.remove('open');
+    document.body.classList.remove('left-panel-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+  toggle.addEventListener('click', open);
+  closeBtn.addEventListener('click', close);
+  backdrop.addEventListener('click', close);
+  // Tapping a project in the list closes the panel so the user sees the map
+  panel.addEventListener('click', function(e) {
+    const item = e.target.closest('.project-item');
+    if (item) close();
+  });
+  // Esc closes the panel
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && panel.classList.contains('open')) close();
+  });
+}
+
 // ─── Start ────────────────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', function() {
+  init();
+  initMobilePanelToggle();
+});
