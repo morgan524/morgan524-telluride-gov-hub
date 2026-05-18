@@ -137,6 +137,16 @@
     .topnav-translate .goog-te-gadget-simple .goog-te-menu-value { color: #2d4a3e !important; }
     .topnav-translate .goog-te-gadget-simple .goog-te-menu-value span { color: #2d4a3e !important; border: none !important; }
     .topnav-translate img.goog-te-gadget-icon { display: none !important; }
+    .topnav-translate-reset {
+      display: none; background: transparent; border: 1px solid #d4dad0;
+      border-radius: 999px; padding: 7px 12px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.78rem; cursor: pointer; color: #2d4a3e;
+      margin-right: 10px; line-height: 1.2;
+    }
+    .topnav-translate-reset:hover { background: #f3f5ef; }
+    body.translated-ltr .topnav-translate-reset,
+    body.translated-rtl .topnav-translate-reset { display: inline-block; }
     body { top: 0 !important; }
     .goog-te-banner-frame, .skiptranslate iframe.goog-te-banner-frame { display: none !important; visibility: hidden !important; }
     .goog-tooltip, .goog-tooltip:hover { display: none !important; }
@@ -191,6 +201,7 @@
                 <a href="/about.html">About</a>
       </nav>
       <div id="google_translate_element" class="topnav-translate"></div>
+      <button id="topnavTranslateReset" class="topnav-translate-reset" type="button" title="Show original (English)" onclick="lvResetTranslation()">↺ EN</button>
       <a class="topnav-cta" href="https://livabletelluride.org/#tab-subscribe">Subscribe</a>
       <button class="topnav-hamburger" aria-label="Open navigation menu" aria-expanded="false" id="topnavHamburger" type="button">☰</button>
     </div>
@@ -393,6 +404,16 @@
 
 <!-- Google Translate widget + mobile nav toggle (added 2026-05-18) -->
 <script>
+function lvResetTranslation() {
+  var expires = '=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+  var domains = ['', '.' + location.hostname, location.hostname];
+  domains.forEach(function(d){
+    var c = 'googtrans' + expires + '; path=/';
+    if (d) c += '; domain=' + d;
+    document.cookie = c;
+  });
+  location.reload();
+}
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
     pageLanguage: 'en',
