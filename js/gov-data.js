@@ -1798,6 +1798,7 @@ const LOCAL_ORGS = [
       town: "Mountain Village",
       summary: "Service club supporting scholarships, Youth Exchange, international projects, and community grants through the Telluride Rotary Foundation. \"Mountain High Service.\"",
       website: "https://portal.clubrunner.ca/3291",
+      donate: "https://portal.clubrunner.ca/3291/donate",
       social: { facebook: "https://www.facebook.com/telluriderotary/", instagram: "https://www.instagram.com/telluriderotary/" },
       logo: "https://clubrunner.blob.core.windows.net/00000003291/thumb/ClubLogo/clublogo.png"
     },
@@ -1871,6 +1872,7 @@ const LOCAL_ORGS = [
       town: "Telluride",
       summary: "Provides youth soccer programs, training, and recreational opportunities for young players in Telluride and the surrounding region. Programs for a range of ages and skill levels.",
       website: "https://www.telluridesoccer.com/",
+      donate: "https://www.telluridesoccer.com/donate/",
       social: {},
       logo: "https://livabletelluride.org/logo/Telluride%20Soccer.jpeg"
     },
@@ -1935,6 +1937,7 @@ const LOCAL_ORGS = [
       town: "Telluride",
       summary: "With roots dating to 1889 as a Congregational church, it became Presbyterian in 1938. A loving and accepting fellowship emphasizing hospitality and community, with children's ministry, contemplative gardens, and local outreach initiatives.",
       website: "https://christpresbyterianchurchtelluride.com/",
+      donate: "https://give.tithe.ly/?locationId=0a4029c9-d139-4987-b918-ae3e308bd39e",
       social: {},
       logo: "https://livabletelluride.org/logo/Church.png"
     },
@@ -1994,6 +1997,7 @@ const LOCAL_ORGS = [
       town: "Telluride",
       summary: "Telluride's public library, hosting community programs, author talks, kids' storytime, tech help, meeting rooms, and a robust event calendar. Special district funded through the Telluride Library District.",
       website: "https://telluridelibrary.org/",
+      donate: "https://telluridelibrary.org/donate/",
       social: { facebook: "https://www.facebook.com/wilkinsonpubliclibrary/", instagram: "https://www.instagram.com/wilkinsonpubliclibrary/" },
       logo: "https://livabletelluride.org/logo/Wilkenson.png"
     },
