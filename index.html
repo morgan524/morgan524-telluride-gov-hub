@@ -673,12 +673,20 @@
               try {
                 (window[fn]() || []).forEach(m => {
                   if (!m || !m.eventDate || m.eventDate < today || m.eventDate > horizon) return;
+                  // Always prepend the public entity (sourceLabel) so each
+                  // meeting card identifies who's holding it — title alone
+                  // (e.g. "Planning and Zoning Commission Meeting") doesn't
+                  // tell you whether that's Norwood, San Miguel County, etc.
+                  const entity = m.sourceLabel || '';
+                  const metaParts = [];
+                  if (entity) metaParts.push(entity);
+                  metaParts.push(formatDate(m.eventDate));
+                  if (m.eventTimes) metaParts.push(m.eventTimes);
+                  if (m.location) metaParts.push(m.location);
                   items.push({
                     date: m.eventDate,
                     title: m.title,
-                    meta: m.eventTimes
-                      ? formatDate(m.eventDate) + ' • ' + m.eventTimes + (m.location ? ' • ' + m.location : '')
-                      : formatDate(m.eventDate),
+                    meta: metaParts.join(' • '),
                     href: href
                   });
                 });
@@ -693,10 +701,15 @@
                 const d = new Date(start);
                 d.setHours(0,0,0,0);
                 if (d < today || d > horizon) return;
+                const entity = e.sourceLabel || e.source || '';
+                const metaParts = [];
+                if (entity) metaParts.push(entity);
+                metaParts.push(formatDate(d));
+                if (e.location) metaParts.push(e.location);
                 items.push({
                   date: d,
                   title: e.title,
-                  meta: formatDate(d) + (e.location ? ' • ' + e.location : ''),
+                  meta: metaParts.join(' • '),
                   href: '/v2/events.html'
                 });
               });
