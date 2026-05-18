@@ -337,7 +337,7 @@ body.is-completed .calc-summary-row    { display: none; }
 <main class="wrap">
 <section class="hero">
   <div class="heroMain">
-    <h1 id="dynamicProjectTitle">Debt vs. Income for Carhenge Project</h1>
+    <h1 id="dynamicProjectTitle">Debt vs. Income<br>for Carhenge Project</h1>
   </div>
   <aside class="heroSide">
     <h2>Project Finance Summary</h2>
@@ -846,7 +846,11 @@ function updateFixedValues() {
   }
   renderProjectNote(x.project.note);
   const projectKey = document.getElementById("projectSelect").value;
-  document.getElementById("dynamicProjectTitle").textContent = "Debt vs. Income for " + projectDisplayName(projectKey) + " Project";
+  const titleEl = document.getElementById("dynamicProjectTitle");
+  titleEl.textContent = "";
+  titleEl.appendChild(document.createTextNode("Debt vs. Income"));
+  titleEl.appendChild(document.createElement("br"));
+  titleEl.appendChild(document.createTextNode("for " + projectDisplayName(projectKey) + " Project"));
 }
 
 // Project key → display nickname for the H1 title. Explicit map so a
