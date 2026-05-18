@@ -362,8 +362,8 @@ body.is-completed .calc-summary-row    { display: none; }
            (Shandoka). Strips out garage + shared facilities + land so the figure
            reflects only what the housing itself costs to build. -->
       <div id="summaryTotalHousingBox" style="display:none"><span>Total Cost of Housing</span><strong id="summaryTotalHousing">—</strong><small>Housing construction only — residential sf × cost / sf input. Excludes land, garage, and shared facilities.</small></div>
-      <!-- 2. Cost Per Unit -->
-      <div><span id="summaryPerUnitCostLabel">Cost Per Unit</span><strong id="summaryPerUnitCost">—</strong><small id="summaryPerUnitCostNote">Total cost divided by total housing units.</small></div>
+      <!-- 2. Cost Per Unit (hidden when project has 0 housing units, e.g. Fruen) -->
+      <div id="summaryPerUnitCostBox"><span id="summaryPerUnitCostLabel">Cost Per Unit</span><strong id="summaryPerUnitCost">—</strong><small id="summaryPerUnitCostNote">Total cost divided by total housing units.</small></div>
       <!-- 3. Cost per Square Foot — total project cost over total residential + commercial sf -->
       <div><span id="summaryPerSfCostLabel">Cost per Square Foot</span><strong id="summaryPerSfCost">—</strong><small id="summaryPerSfCostNote">Total cost divided by total residential + commercial square footage.</small></div>
       <!-- Average Rental Price — weighted avg monthly rent across the
@@ -379,7 +379,9 @@ body.is-completed .calc-summary-row    { display: none; }
            by sf per market unit. -->
       <div id="summaryRequiredSalePerSfBox" style="display:none"><span>Required per sf Price of Market Units</span><strong id="summaryRequiredSalePerSf">—</strong><small id="summaryRequiredSalePerSfNote">Per square foot for the market units to break even.</small></div>
       <!-- 3. Total Possible Income by AMI Level (residential + commercial) -->
-      <div><span>Total Possible Income by AMI Level</span><strong id="summaryAnnualIncome">—</strong><small id="summaryAnnualIncomeNote">Modeled residential rent capacity at the project's AMI mix + commercial rent estimate.</small></div>
+      <!-- Hidden when project has 0 housing units AND no commercial rent
+           (e.g. Fruen — fully municipal, no income to model). -->
+      <div id="summaryAnnualIncomeBox"><span>Total Possible Income by AMI Level</span><strong id="summaryAnnualIncome">—</strong><small id="summaryAnnualIncomeNote">Modeled residential rent capacity at the project's AMI mix + commercial rent estimate.</small></div>
       <!-- 4. Annual Debt Service (responds to toggle) -->
       <div><span id="summaryAnnualDebtLabel">Annual Debt Service (Fully Amortized)</span><strong id="summaryAnnualCostAmortized">—</strong><small id="summaryAnnualDebtNote">No balloon; full construction principal amortized over term.</small></div>
       <!-- 5. Balloon Payment (green/$0 in amortized mode, red/full in balloon mode) -->
@@ -1085,6 +1087,19 @@ function updateStats(data) {
   const housingTotalCost = housingConstruction + housingLandAllocation;
   const housingBox = document.getElementById("summaryTotalHousingBox");
   if (housingBox) housingBox.style.display = housingOnly ? "" : "none";
+
+  // Hide housing/rent-specific summary tiles when the project has no
+  // housing units AND no commercial rent (e.g. Fruen — fully municipal
+  // building). Showing "$0" for Cost-Per-Unit / Average Rental Price /
+  // Total Possible Income reads as missing data, not as "intentionally
+  // none" — better to omit the tiles entirely.
+  const noIncomeProject = !x.units && !(x.project.commercialRentPsf > 0);
+  const perUnitBox  = document.getElementById("summaryPerUnitCostBox");
+  const avgRentBox  = document.getElementById("summaryAverageRentBox");
+  const incomeBox   = document.getElementById("summaryAnnualIncomeBox");
+  if (perUnitBox) perUnitBox.style.display = noIncomeProject ? "none" : "";
+  if (avgRentBox) avgRentBox.style.display = noIncomeProject ? "none" : "";
+  if (incomeBox)  incomeBox.style.display  = noIncomeProject ? "none" : "";
   if (housingOnly) {
     document.getElementById("summaryTotalHousing").textContent = fmt.format(housingTotalCost);
     document.getElementById("summaryPerUnitCost").textContent = fmt.format(x.units ? housingTotalCost / x.units : 0);
