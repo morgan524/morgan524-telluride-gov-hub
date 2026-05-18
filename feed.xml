@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 May 2026 15:17:15 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 19:31:52 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
@@ -18,6 +18,38 @@
 Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four weeks of hiking from May 31 through June 28, with a kickoff at 11am on May 31 at the Oak Street gondola plaza. Hike from anywhere and raise funds for the Telluride Rotary Foundation — supporting scholarships, Youth Exchange, international projects, and community grants. 60% of nonprofit team funds go directly back to their nonprofit. Sponsored by Alpine Bank and Jagged Edge Mountain Gear.]]></description>
       <category>Community Event</category>
       <category>Telluride Rotary Club</category>
+    </item>
+    <item>
+      <title>[Meeting] SMART Board of Directors — 2026-05-20</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/smart%7C2026-05-20%7CSMART%20Board%20of%20Directors</guid>
+      <pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[SMART Transit • 2026-05-20
+
+Virtual-only meeting. The Gondola update is the agenda's headline — that's the project that drives SMART's 3A ballot context. Resolution 2026-8 appoints Marya Stark to the Investment Committee. Q4 2025 / annual performance report and the May Ops report round out the formal business. The board closes in executive session under §24-6-402(4)(b) to confer with counsel on Masson v. SMC BOCC. Anyone tracking how the gondola conversation is evolving should bookmark the live link.]]></description>
+      <category>Meeting</category>
+      <category>SMART Transit</category>
+    </item>
+    <item>
+      <title>[Meeting] General Assembly Meeting — 2026-05-19</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/ophir%7C2026-05-19%7CGeneral%20Assembly%20Meeting</guid>
+      <pubDate>Tue, 19 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Ophir • 2026-05-19
+
+Charter Review Committee update tops the substantive list — Charter language work is the closest Ophir gets to code revision. Town Buildings Electrification & Solar gets a Wheels-led briefing alongside Lane Masters. Manager's report covers the New Dominion USFS project and two wildfire prep items: a Western Wildfire Council rapid risk assessment for the Town and fuel-reduction work at Town Hall and East Ophir. The agenda also notes the recent passing of John Eagle. A full evening for a town this size.]]></description>
+      <category>Meeting</category>
+      <category>Town of Ophir</category>
+    </item>
+    <item>
+      <title>Busy, but feeling good</title>
+      <link>https://www.telluridenews.com/business/article_f5789cb8-8bff-49d1-a78a-3006cc453e19.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/business/article_f5789cb8-8bff-49d1-a78a-3006cc453e19.html</guid>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/26/526c819e-4c2e-45ff-81cc-66df69bc7fea/6a0b3366e0158.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Dr. Geetter at Medicine Ranch is hosting a mental health lecture on May 21 during Mountainfilm, kicking off a busy summer of events. He's also working with the Telluride Men's Health Club on suicide awareness and featuring local artisans in his shop, all while maintaining his positive outlook on the community's resilience.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/26/526c819e-4c2e-45ff-81cc-66df69bc7fea/6a0b3366e0158.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>infrastructure</category>
     </item>
     <item>
       <title>Trump administration rescinds Public Lands Rule</title>
@@ -38,6 +70,17 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/5d/e5dde20d-6cde-562d-ac58-8f35803d191d/6a0a11cd27eb3.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>government</category>
+    </item>
+    <item>
+      <title>[Meeting] Planning and Zoning Commission Meeting — 2026-05-18</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/norwood%7C2026-05-18%7CPlanning%20and%20Zoning%20Commission%20Meeting</guid>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Norwood • 2026-05-18
+
+Two code items on the table — a Land Use Code update and a Colorado Wildfire Resiliency Code progress check. The CWRC has been winding through subcommittee work across the region for months; tonight's discussion is P&Z's chance to weigh in before the next draft. The LUC update is at the stage where text changes accumulate quickly. April 20 minutes on consent. The kind of agenda that reads quiet but quietly reshapes what gets built and how.]]></description>
+      <category>Meeting</category>
+      <category>Town of Norwood</category>
     </item>
     <item>
       <title>Tiny patients, big fight: NICU parents win leave in 2 states and push for more</title>
@@ -352,46 +395,6 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/7e/f7eaaa55-d2df-5520-b082-970ac4c7d39f/6a048678a0970.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />US overdose deaths dropped again in 2025 across most drug types and states, though Arizona, Colorado and New Mexico saw increases of 10% or more. While researchers are cautiously optimistic, they warn the drug supply keeps evolving with new potent substances like cychlorphine, and recent federal cuts to harm reduction programs could reverse progress.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/7e/f7eaaa55-d2df-5520-b082-970ac4c7d39f/6a048678a0970.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Move to acquire Wilkin Court unit raises questions</title>
-      <link>https://www.telluridenews.com/news/article_a8fa1aa6-0996-404d-b96d-28b33668f431.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/article_a8fa1aa6-0996-404d-b96d-28b33668f431.html</guid>
-      <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/c4/8c400c14-efca-45da-b5f0-72721a6e54fc/6a04964540393.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The town wants to purchase a Wilkin Court deed-restricted unit to convert it from Tier 3 to Tier 1, saying this simplifies the affordable housing program. But residents are challenging whether the town actually has legal authority to buy the unit against the owner's wishes, with one attorney arguing the deed restriction gives owners the right to choose their buyer.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/c4/8c400c14-efca-45da-b5f0-72721a6e54fc/6a04964540393.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>housing</category>
-    </item>
-    <item>
-      <title>CHALKBOARD for the week of May 14-20</title>
-      <link>https://www.telluridenews.com/the_norwood_post/article_6db5a92b-5491-4bac-b91c-c21f3ee60db1.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/the_norwood_post/article_6db5a92b-5491-4bac-b91c-c21f3ee60db1.html</guid>
-      <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/61/e61c1b48-54e4-483a-b1ab-1e99ed6d5d77/6a03b4fae7ac9.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />This week's birthdays run from May 14-20, including local residents like Asher Ferguson, Marie Neisen, and the Priestley family members. The regular community calendar continues with Town Board meetings second Wednesdays, Farmers Market Thursdays 2-6 p.m., and various services like the food pantry Sundays 3-6 p.m.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/61/e61c1b48-54e4-483a-b1ab-1e99ed6d5d77/6a03b4fae7ac9.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>government</category>
-    </item>
-    <item>
-      <title>Federal judge rules ICE in Colorado violated order limiting warrantless arrests</title>
-      <link>https://www.telluridenews.com/news/state/article_6835e55c-d86e-510b-9abd-c6f823a59ecc.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_6835e55c-d86e-510b-9abd-c6f823a59ecc.html</guid>
-      <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/ac/aac37bc9-0b93-5774-be58-3957819b40cc/6a03a5aa52159.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />A federal judge ruled that ICE agents in Colorado violated a court order limiting warrantless arrests and failed to properly train officers or document such arrests. The ruling stems from an ACLU lawsuit over "collateral arrests" of people caught up in immigration enforcement actions. ICE must now provide officer training within 45 days and turn over arrest records.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/ac/aac37bc9-0b93-5774-be58-3957819b40cc/6a03a5aa52159.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Green Grants thanks</title>
-      <link>https://www.telluridenews.com/opinion/letters_to_editor/article_02b77004-73f0-4b36-a906-72b8b5861d5d.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/opinion/letters_to_editor/article_02b77004-73f0-4b36-a906-72b8b5861d5d.html</guid>
-      <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Shawnna and Dennis Andrejko wrote to thank EcoAction Partners, specifically Siobhan Montoya Lavender and Kendra Held, along with Town of Telluride's Darin Graber for their help with a Telluride Green Grants project. The couple completed efficiency upgrades through the program that helps residents with sustainability improvements.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>community</category>
     </item>
