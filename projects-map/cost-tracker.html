@@ -296,6 +296,8 @@ body.is-completed .calc-summary-row    { display: none; }
       <div><span>Total Cost of Project</span><strong id="summaryTotalProjectCost">—</strong><small id="summaryTotalProjectCostNote">Total loan payments over term + land cost + upfront payments.</small></div>
       <!-- 2. Cost Per Unit -->
       <div><span>Cost Per Unit</span><strong id="summaryPerUnitCost">—</strong><small>Total cost divided by total housing units.</small></div>
+      <!-- 3. Cost per Square Foot — total project cost over total residential + commercial sf -->
+      <div><span>Cost per Square Foot</span><strong id="summaryPerSfCost">—</strong><small>Total cost divided by total residential + commercial square footage.</small></div>
       <!-- Average Rental Price — weighted avg monthly rent across the
            active AMI mix. For Rent + Free Market mode, scoped to the
            affordable share only (market units are sold, not rented). -->
@@ -985,6 +987,8 @@ function updateStats(data) {
   document.getElementById("summaryTotalProjectCostNote").textContent =
     "Construction principal (sf × cost/sf) + land cost" + utilityNote + ". One-time outlay — excludes financing interest paid over the loan term.";
   document.getElementById("summaryPerUnitCost").textContent = fmt.format(x.units ? totalProjectCost / x.units : 0);
+  const totalSf = x.residentialSf + (x.project.commercialSf || 0);
+  document.getElementById("summaryPerSfCost").textContent = totalSf ? fmt.format(totalProjectCost / totalSf) : "—";
 
   // Annual Debt Service — label + value + helper note change with mode
   document.getElementById("summaryAnnualDebtLabel").textContent = isAmort

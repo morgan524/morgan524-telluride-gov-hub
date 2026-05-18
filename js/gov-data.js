@@ -391,19 +391,10 @@ const SCHOOL_CACHED_DATA = [
     note: 'Next scheduled monthly meeting -- agenda posted closer to the date.'
   },
   {
-    date: 'May 12, 2026',
-    time: '5:15 PM',
-    title: 'Telluride Board of Education Special Meeting',
-    agendaUrl: 'https://www.tellurideschool.org/agendasandminutes#docaccess-7bfb6768652d3c9355af6d54116a1d52',
-    packetUrl: null,
-    special: true,
-    location: 'Bridal Veil District Conference Room / Zoom'
-  },
-  {
     date: 'May 18, 2026',
     time: '3:30 PM',
     title: 'Telluride Board of Education Work Session',
-    agendaUrl: null,
+    agendaUrl: 'https://www.tellurideschool.org/agendasandminutes#docaccess-7bfb6768652d3c9355af6d54116a1d52',
     packetUrl: null,
     special: false,
     location: 'Bridal Veil District Conference Room / Zoom'
