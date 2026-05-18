@@ -1488,7 +1488,7 @@ const GONDOLA_DATA = {
 };
 
 const DEEP_DIVE_PAGES = [
-  { label: 'Telluride Debt', href: '/the-growing-weight-of-tellurides-debt/' }
+  { label: 'Telluride Debt', href: '/Blog%20Posts/the-growing-weight-of-tellurides-debt/' }
 ];
 
 const ENTITY_LOGOS = {
