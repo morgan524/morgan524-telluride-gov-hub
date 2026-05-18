@@ -1069,7 +1069,14 @@ const WHY_THIS_MATTERS = [
 ];
 
 
-
+// ── Meeting Zoom passcodes / dial-in info ──
+// Key format: "source|YYYY-MM-DD|meeting title" (matches MEETING_ZOOM_LINKS).
+// Consumed by gov-hub.js: getMeetingZoomLink() / passcode renderer (~1172).
+// NOTE: the `const MEETING_PASSCODES = {` opener was lost in a prior edit;
+// restored 2026-05-18. Without it the whole gov-data.js fails to parse and
+// every const declared below (LOCAL_ORGS, LAND_USE_ISSUES, ENTITY_LOGOS,
+// DEEP_DIVE_PAGES, etc.) becomes undefined in the browser.
+const MEETING_PASSCODES = {
   'county|2026-03-25|Board of County Commissioners Special Meeting': {
     id: '816 3670 5978',
     passcode: '025045',
