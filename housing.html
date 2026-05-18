@@ -653,7 +653,7 @@
       dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=' + Math.floor(Date.now()/600000);
       dataScript.onload = () => {
         const s = document.createElement('script');
-        s.src = 'https://livabletelluride.org/js/data-only.js?v=' + Math.floor(Date.now()/600000);
+        s.src = 'https://livabletelluride.org/js/gov-helpers.js?v=' + Math.floor(Date.now()/600000);
         s.onload = () => {
           try {
             if (typeof HOUSING_LISTINGS === 'undefined' || !Array.isArray(HOUSING_LISTINGS)) return;
@@ -685,7 +685,7 @@
             }
           } catch (err) { console.warn('loadLiveHousing failed:', err); }
         };
-        s.onerror = () => console.warn('Could not load /js/data-only.js for housing');
+        s.onerror = () => console.warn('Could not load /js/gov-helpers.js for housing');
         document.head.appendChild(s);
       };
       dataScript.onerror = () => console.warn('Could not load gov-data.js');

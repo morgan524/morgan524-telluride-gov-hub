@@ -5,7 +5,7 @@
  * ══════════════════════════════════════════════════════════════
  *
  * Emits feed.xml at the repo root from the canonical site data in
- * js/gov-hub.js (news articles, KOTO newscasts/features, legal notices).
+ * js/gov-helpers.js (news articles, KOTO newscasts/features, legal notices).
  *
  * Mailchimp's "RSS-driven email" campaign type reads this feed and emails
  * subscribers a daily digest of the newest items. Each item has a stable
@@ -24,7 +24,7 @@ const fs = require('fs');
 const path = require('path');
 
 const REPO_ROOT = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
-const GOV_HUB_JS = path.join(REPO_ROOT, 'js', 'gov-hub.js');
+const GOV_HELPERS_JS = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
 const FEED_OUT = path.join(REPO_ROOT, 'feed.xml');
 const BLOG_FEED_OUT = path.join(REPO_ROOT, 'feed-blog.xml');
 
@@ -43,7 +43,7 @@ const MAX_EVENTS = 10;              // cap event items per build
 const MAX_BLOG = 8;                 // cap blog items per build
 
 // ──────────────────────────────────────────────────────────────
-// Read js/gov-hub.js and extract the relevant arrays/objects.
+// Read js/gov-helpers.js and extract the relevant arrays/objects.
 // Reuses the same Function-eval trick as content-refresh.js.
 // ──────────────────────────────────────────────────────────────
 
@@ -303,7 +303,7 @@ function main() {
   console.log(`  ${new Date().toISOString()}`);
   console.log('═══════════════════════════════════════════════');
 
-  const src = fs.readFileSync(GOV_HUB_JS, 'utf8');
+  const src = fs.readFileSync(GOV_HELPERS_JS, 'utf8');
   const tt = extractJsArray(src, 'TELLURIDE_TIMES_ARTICLES') || [];
   const koNews = extractJsArray(src, 'KOTO_NEWSCASTS') || [];
   const koFeat = extractJsArray(src, 'KOTO_FEATURED_STORIES') || [];

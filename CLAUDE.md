@@ -1,5 +1,38 @@
 # Telluride Gov Hub / Livable Telluride — Project Memory
 
+## JS file architecture (refactored 2026-05-18 — read this first)
+
+Two JS data files. No more `data-only.js` or extract-data-only.js step:
+
+  - **`js/gov-data.js`** — Static config + zoom data: CACHED_DATA arrays
+    per source, MEETING_ZOOM_LINKS, MEETING_PASSCODES, SCHOOL_ZOOM_LINK,
+    ENTITY_REMOTE, LOCAL_ORGS, ENTITY_LOGOS, LAND_USE_ISSUES,
+    DEEP_DIVE_PAGES, TELLURIDE_FESTIVALS, QR_OPTIONS, etc.
+  - **`js/gov-helpers.js`** — Bot-managed data + pure helper functions:
+    MANUAL_SUMMARIES, TELLURIDE_TIMES_ARTICLES, KOTO_NEWSCASTS,
+    KOTO_FEATURED_STORIES, BLOG_POSTS, COMMUNITY_EVENTS,
+    KOTO_COMMUNITY_EVENTS, WILKINSON_EVENTS, HUMANE_SOCIETY_ANIMALS,
+    LEGAL_NOTICES, HOUSING_LISTINGS, RIDGWAY_AGENDA_MAP, plus helpers
+    (getMeetingSummary, getMeetingZoomLink, getMeetingPasscode,
+    get*Meetings, localDate, truncate, isBadSummary). Used to be
+    auto-generated as `data-only.js` from `gov-hub.js`; now it's the
+    single source of truth.
+
+Every HTML page loads `gov-data.js` + `gov-helpers.js`. **No page loads
+`js/gov-hub.js` directly.** All bot scripts (`content-refresh.js`,
+`maintenance.js`, `build-rss-feed.js`, `housing-refresh.js`,
+`deep-dive-refresh.js`) read/write `gov-helpers.js` directly — no
+extraction step.
+
+`js/gov-hub.js` is **dead code** retained for git history. Don't edit it.
+
+**To make an edit live:** edit `gov-data.js` (static config) OR
+`gov-helpers.js` (bot data + helpers). Commit + push. GitHub Pages
+serves it within ~1–2 min; cache-busters auto-bump every 10 min so
+browsers refetch.
+
+---
+
 This is the memory file Claude should read first when working on the
 livabletelluride.org / Telluride Gov Hub project. It captures the deployed
 architecture, the live URLs and secrets, the operational rhythm, and the
@@ -53,7 +86,7 @@ optionally MMERGE10/11.
 ### Blog architecture: Mailchimp campaigns are the source of truth
 
 The Blog tab on livabletelluride.org reads from a `BLOG_POSTS` const
-in `js/gov-hub.js`. That array has two kinds of entries:
+in `js/gov-helpers.js`. That array has two kinds of entries:
 
 - **Hand-curated posts** (`source: 'livable-telluride.org'`) — 12 posts
   migrated 2026-04-30 from the legacy `LIVABLE_BLOG_POSTS` array (now
@@ -161,7 +194,7 @@ and aren't used for anything in the current campaign segments.
 
 Replaced 14 references to the dead domain `telluride-co.gov` with
 `telluride.gov` across `scripts/content-refresh.js` (RSS URLs that had
-been failing every run), `index.html`, `js/gov-hub.js` (housing
+been failing every run), `index.html`, `js/gov-helpers.js` (housing
 contact emails), `js/corrections.js`, `the-growing-weight-of-tellurides-debt/index.html`,
 and `telluride-gov-hub.html`. **Do NOT touch `telluride-co.civicweb.net`** —
 that's a real, separate domain hosting Telluride's CivicWeb agenda
@@ -182,7 +215,7 @@ portal. Confirmed working 2026-04-30: `https://telluride.gov/` returns
    │           - ANTHROPIC_API_KEY  (for meeting-summary generation)
    │           - RSS_PROXY_URL      (= the Cloudflare Worker URL below)
    ├── scripts/content-refresh.js   (the news/legal/pulse refresher)
-   ├── js/gov-hub.js                (the data file that the live site loads)
+   ├── js/gov-helpers.js                (the data file that the live site loads)
    ├── js/community-pulse.js
    └── … rest of the site
                                        │
@@ -201,7 +234,7 @@ portal. Confirmed working 2026-04-30: `https://telluride.gov/` returns
                           │  telluride-co.civicweb.net, …        │
                           └──────────────────────────────────────┘
                                        │
-                                       ▼  result merged into js/gov-hub.js
+                                       ▼  result merged into js/gov-helpers.js
                                           and pushed by the workflow as
                                           "🔄 Content refresh YYYY-MM-DD HH:MM UTC"
 
@@ -312,7 +345,7 @@ Important behaviors:
   from the live site — it's intentional pruning, not a bug. Adjust the
   constant if a section needs a longer window.
 - **The "no diff, no commit" pattern:** if all five tasks run successfully
-  but produce identical output to what's already in `js/gov-hub.js`, the
+  but produce identical output to what's already in `js/gov-helpers.js`, the
   workflow's "Commit and push" step is *skipped*. That's correct behavior,
   not a failure. Use `git log --grep "Content refresh"` and the per-run logs
   in GitHub Actions to debug.
@@ -329,7 +362,7 @@ https://www.shelterluv.com/api/v3/available-animals/36337
 Returns dogs and cats currently up for adoption. `scripts/content-refresh.js`
 Task 7 (`syncHumaneSocietyAnimals`) hits this endpoint, parses each
 animal record, and writes a normalized `HUMANE_SOCIETY_ANIMALS` array
-into `js/gov-hub.js`. The animal record schema we keep:
+into `js/gov-helpers.js`. The animal record schema we keep:
 
 ```js
 { id, name, species, breed, ageGroup, sex, photo, profileUrl, summary }
@@ -350,7 +383,7 @@ availability list, its card drops off the Local News tab on the next
 refresh. There is no manual cleanup step.
 
 Cards are rendered by `collectLocalNewsArticles()` + `renderLocalNews()`
-in `js/gov-hub.js`. Each animal becomes one card with `sourceKey: 'humane-society'`.
+in `js/gov-helpers.js`. Each animal becomes one card with `sourceKey: 'humane-society'`.
 Card-specific behavior:
 
 - **Small source logo is hidden** for humane-society cards (the animal
@@ -386,14 +419,14 @@ https://koto.org/wp-json/tribe/events/v1/events/?categories=community-calendar
 this API every 6 hours via the Cloudflare Worker proxy, filters to
 events whose `start_date` is within the next 7 days (or still
 in-progress now), and writes a normalized `KOTO_COMMUNITY_EVENTS`
-array into `js/gov-hub.js`. Each entry:
+array into `js/gov-helpers.js`. Each entry:
 
 ```js
 { title, link, description, pubDate (ISO string), source: 'koto',
   sourceLabel: 'KOTO', category: 'Community Event', location, imageUrl }
 ```
 
-`fetchKOTONews()` in `js/gov-hub.js` reads this server-curated array
+`fetchKOTONews()` in `js/gov-helpers.js` reads this server-curated array
 first. It only falls back to the old client-side proxy-scrape path
 (`CODETABS_PROXY` / `ALLORIGINS_PROXY`) if the const is empty —
 which should only happen on a brand-new repo before the first
@@ -449,7 +482,7 @@ phrase the same event:
    days don't collapse.
 
 **Implementation** is `eventSourcePriority()` and `eventDedupKey()`
-inside the events-collect function in `js/gov-hub.js`. The merged
+inside the events-collect function in `js/gov-helpers.js`. The merged
 array is sorted by `(date asc, priority asc)` BEFORE the
 first-seen-wins filter, so the highest-priority source for each
 duplicate set is the one that survives.
@@ -474,13 +507,13 @@ placeholder.
 To add a new branded local group:
 1. `cp <file>.png /tmp/deploy/telluride/logo/`
 2. Add `logo: '/logo/<file>.png'` to that group's `LOCAL_GROUP_SCHEDULES`
-   entry in `js/gov-hub.js`.
+   entry in `js/gov-helpers.js`.
 
 Already wired: `Telluride Rotary.png`, `Elks.png`, `TMVOA Logo.png`.
 
 ## Local News card overrides
 
-`LOCAL_NEWS_LINK_OVERRIDES` (in `js/gov-hub.js`) is a title→URL map.
+`LOCAL_NEWS_LINK_OVERRIDES` (in `js/gov-helpers.js`) is a title→URL map.
 At render time, when an article's title matches a key, the
 "Read full article →" link goes to the override URL instead of the
 article's original `href`. Used when an article ANNOUNCES something
@@ -506,7 +539,7 @@ child-level `align-self` is the bulletproof rule. Belt + suspenders
 
 ## Events tab card sort: mix sources within each day
 
-`renderNews()` in `js/gov-hub.js` sorts events with TWO passes
+`renderNews()` in `js/gov-helpers.js` sorts events with TWO passes
 (both using the same logic, applied before and after the
 `slice(0,50)` cap):
 
@@ -533,14 +566,14 @@ https://koto.org/wp-json/tribe/events/v1/events/?categories=community-calendar
 `scripts/content-refresh.js` Task 8 (`syncKotoCommunityEvents`) hits
 this every 6h, filters to events whose `start_date` is within the
 next 7 days (or still in-progress now), and writes a normalized
-`KOTO_COMMUNITY_EVENTS` array into `js/gov-hub.js`. Schema:
+`KOTO_COMMUNITY_EVENTS` array into `js/gov-helpers.js`. Schema:
 
 ```js
 { title, link, description, pubDate (ISO), source: 'koto',
   sourceLabel: 'KOTO', category: 'Community Event', location, imageUrl }
 ```
 
-`fetchKOTONews()` in `js/gov-hub.js` reads this server-curated array
+`fetchKOTONews()` in `js/gov-helpers.js` reads this server-curated array
 first; falls back to legacy client-side proxy-scrape only if the
 const is empty.
 
@@ -552,14 +585,14 @@ platform), api_events.php endpoint with `cid=19928&days=7`.
 `scripts/content-refresh.js` Task 9 (`syncWilkinsonEvents`) parses
 the HTML response (LibCal returns table-formatted HTML, not JSON),
 fetches each event's detail page for the `og:image`, and writes
-`WILKINSON_EVENTS` into `js/gov-hub.js`. Filtered to next 7 days.
+`WILKINSON_EVENTS` into `js/gov-helpers.js`. Filtered to next 7 days.
 Schema same as KOTO above but with `source: 'wilkinson'`.
 
 The HTML parser splits on `<table class="...s-lc-ea-tb...">` and
 extracts the title, From/To times, location, and description rows.
 HTML entities are decoded via `decodeHtmlEntities()` before storage.
 
-`fetchWilkinsonEvents()` (sync function in `js/gov-hub.js`, called
+`fetchWilkinsonEvents()` (sync function in `js/gov-helpers.js`, called
 synchronously from the events-render path) reads the const directly.
 
 If LibCal ever changes the api_events.php response format, update
@@ -567,7 +600,7 @@ If LibCal ever changes the api_events.php response format, update
 
 ## Local News card filtering (`isRedundantLocalNewsTitle`)
 
-`collectLocalNewsArticles()` in `js/gov-hub.js` runs every TT/gov entry
+`collectLocalNewsArticles()` in `js/gov-helpers.js` runs every TT/gov entry
 through `isRedundantLocalNewsTitle(title)` and SKIPS items that are
 already covered by other tabs:
 
@@ -646,7 +679,7 @@ this list before changing anything:
 folder) is mostly for reading and editing; the workflows deploy from
 `origin/main`. As a result:
 
-- `js/gov-hub.js` in the workspace is *frequently out of date* relative to
+- `js/gov-helpers.js` in the workspace is *frequently out of date* relative to
   the live site. The bot commits to GitHub many times a day; the workspace
   is only fresh after a manual `git pull` (we don't do that automatically).
 - The site you see at livabletelluride.org reflects the latest `origin/main`,
@@ -675,7 +708,7 @@ over the new index.html. This destroyed:
   drop Monthly button) — restored to the pre-Round-1 form
 - The 2026-04-30 Blog tab addition — entire nav button + tab-content
   div removed
-- The cache buster bump on `js/gov-hub.js` — reverted
+- The cache buster bump on `js/gov-helpers.js` — reverted
 
 **`telluride-gov-hub.html` was permanently deleted 2026-05-12.**
 `index.html` is the only landing page. Do NOT recreate `telluride-gov-hub.html`.
@@ -746,8 +779,8 @@ does.
 - **Rotate the Worker URL:** redeploy with a different script name, then
   update the `RSS_PROXY_URL` secret in the GitHub repo (Settings → Secrets
   and variables → Actions → RSS_PROXY_URL).
-- **Find what last touched js/gov-hub.js:**
-  `git log -1 --pretty=fuller -- js/gov-hub.js` from the repo.
+- **Find what last touched js/gov-helpers.js:**
+  `git log -1 --pretty=fuller -- js/gov-helpers.js` from the repo.
 
 ## Cloudflare account context
 
@@ -762,7 +795,7 @@ does.
 ## Email subscriptions / Mailchimp daily digest
 
 **Important architectural fact (easy to misread).** The site has a Mailchimp
-signup form (`js/gov-hub.js` ~line 6357), but **no code anywhere in this
+signup form (`js/gov-helpers.js` ~line 6357), but **no code anywhere in this
 project sends digest emails**. There is no Firebase function, GH workflow,
 or Cloudflare Worker that emails subscribers. The form is a vanilla
 JSONP-embed signup — it just adds the email + frequency preference to
@@ -772,7 +805,7 @@ Layout of the pieces:
 
 | Component                    | Where it lives                                  | Owner          |
 | ---------------------------- | ----------------------------------------------- | -------------- |
-| Subscribe form (UI)          | `js/gov-hub.js` ~6357                            | This repo      |
+| Subscribe form (UI)          | `js/gov-helpers.js` ~6357                            | This repo      |
 | Mailchimp audience           | `letpeopledecide.us15.list-manage.com`, list `f83dc56387` | Mailchimp UI |
 | Frequency preference         | merge field `MMERGE9` ("daily" / "weekly" / …)  | Mailchimp     |
 | Topics & sources              | interest groups under category `7912`           | Mailchimp     |
@@ -781,7 +814,7 @@ Layout of the pieces:
 
 The `feed.xml` half is automated:
 
-- `scripts/build-rss-feed.js` reads `js/gov-hub.js` (TT articles, KOTO
+- `scripts/build-rss-feed.js` reads `js/gov-helpers.js` (TT articles, KOTO
   newscasts/features, legal notices) and emits `feed.xml` at the repo root.
 - The content-refresh workflow runs it every 6 hours alongside the news scrape,
   so the feed is always fresh.
@@ -845,7 +878,7 @@ Knobs:
 - `MAX_LEGAL_NOTICES = 8` — never let legal notices push out news.
 
 If you want meeting summaries / Hub-Bub posts / housing listings in the
-digest, extend the `main()` builder to read those arrays from `js/gov-hub.js`
+digest, extend the `main()` builder to read those arrays from `js/gov-helpers.js`
 and produce more `buildXItems(...)` flatMaps. The pattern is the same as the
 existing news/legal builders.
 
@@ -854,7 +887,7 @@ existing news/legal builders.
 The site's Firebase Firestore rules live in `firestore.rules` at the repo
 root, wired up via `firebase.json`. They enforce server-side what the
 client-side admin check (`user.email === 'info@livabletelluride.org'`,
-~6 callsites across `js/hub-bub.js` and `js/gov-hub.js`) cannot — without
+~6 callsites across `js/hub-bub.js` and `js/gov-helpers.js`) cannot — without
 these rules, any authenticated user can DevTools their way into deleting
 any post, flipping `approved: true` on any comment, or stuffing reaction
 counters, because the client checks alone are bypassable.
@@ -869,7 +902,7 @@ counters, because the client checks alone are bypassable.
 - `reactions/{docId}` — signed-in users (including anonymous Firebase
   Auth users) can create/update counters; admin-only delete. As of
   2026-05-14 the client uses Firebase Auth uid as the voter identifier
-  (see `getVoterId()` in `js/gov-hub.js`) and the rules enforce that
+  (see `getVoterId()` in `js/gov-helpers.js`) and the rules enforce that
   every write must place the caller's uid into at least one of the
   voters arrays (`attending_voters`, `matters_voters`, `learn_voters`,
   `concerns_voters`, `handled_voters` — the suffixes of `QR_OPTIONS` in
@@ -911,7 +944,7 @@ different job. Easy to mix them up — keep them straight:
 
 | Address                          | Role                                       | Where it appears                                                                                          |
 | -------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| `info@livabletelluride.org`      | Main public contact + Hub-Bub admin identity | 14 places: contact links across the site, corrections form, event-submission backup, Mailchimp signup wrap-up, **hardcoded admin check in `js/hub-bub.js` and `js/gov-hub.js` (`user.email === 'info@livabletelluride.org'`)**, and the destination for Apps-Script confirmation emails. If you log into Hub-Bub / Firebase Auth as this address, the UI grants moderator privileges. |
+| `info@livabletelluride.org`      | Main public contact + Hub-Bub admin identity | 14 places: contact links across the site, corrections form, event-submission backup, Mailchimp signup wrap-up, **hardcoded admin check in `js/hub-bub.js` and `js/gov-helpers.js` (`user.email === 'info@livabletelluride.org'`)**, and the destination for Apps-Script confirmation emails. If you log into Hub-Bub / Firebase Auth as this address, the UI grants moderator privileges. |
 | `bot@livabletelluride.org`       | Git commit author for automated workflows  | All four GH Actions workflows set `git config user.email "bot@livabletelluride.org"` so commits are attributed to "Gov Hub Bot". Nothing reads mail here; it's just an identity string. |
 | `events@livabletelluride.org`    | Inbox for the email-to-events pipeline     | Only used by the Apps Script + Google Sheet flow described below. Treat it as a service inbox, not a contact. |
 
@@ -1162,7 +1195,7 @@ this fix.
 - **Site cache busters — auto-bumped by content-refresh.js** (as of
   2026-05-14). The `bumpCacheBusters()` function at the end of
   `scripts/content-refresh.js` updates the `?v=...` query string on
-  `js/gov-hub.js`, `js/gov-data.js`, `js/corrections.js`,
+  `js/gov-helpers.js`, `js/gov-data.js`, `js/corrections.js`,
   `js/legal-standalone.js`, and `css/site.css` whenever the refresh
   produced any change. It also bumps `CACHE_NAME` in `sw.js` so the
   Service Worker invalidates its pre-cached shell. Both keys are derived

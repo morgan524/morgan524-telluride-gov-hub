@@ -516,7 +516,7 @@
 
     /* ── Entity catalog (sidebar list) ──
        Entries should match keys returned by the get*Meetings() fetchers in
-       data-only.js. Town of Telluride, Ouray, Ridgway, and SMRHA are
+       gov-helpers.js. Town of Telluride, Ouray, Ridgway, and SMRHA are
        deferred until their meeting data exists in cached form (currently
        only available via live RSS/API on the legacy single-page site). */
     const ENTITIES = [
@@ -605,7 +605,7 @@
        MEETING_PASSCODES / SCHOOL_ZOOM_LINK from gov-data.js and
        ENTITY_REMOTE for the per-entity livestream URL. Helpers
        getMeetingZoomLink / getMeetingPasscode are pulled in via
-       data-only.js (extracted from gov-hub.js by extract-data-only.js). ── */
+       gov-helpers.js (extracted from gov-hub.js by extract-gov-helpers.js). ── */
     function zoomPanel(m) {
       const item = { source: m.sourceKey, eventDate: new Date(m.date + 'T00:00:00'), title: m.title };
       const zoomUrl = (typeof getMeetingZoomLink === 'function') ? getMeetingZoomLink(item) : '';
@@ -713,13 +713,13 @@
       dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=' + Math.floor(Date.now()/600000);
       dataScript.onload = () => {
         const s = document.createElement('script');
-        s.src = 'https://livabletelluride.org/js/data-only.js?v=' + Math.floor(Date.now()/600000);
+        s.src = 'https://livabletelluride.org/js/gov-helpers.js?v=' + Math.floor(Date.now()/600000);
         s.onload = () => {
           try {
             // Stub AI_SUMMARIES so getMeetingSummary() doesn't throw.
             // The live site populates this from Firestore at runtime; v2
             // doesn't (yet), so summaries fall through to MANUAL_SUMMARIES
-            // (which IS in data-only.js) or to the meeting's description.
+            // (which IS in gov-helpers.js) or to the meeting's description.
             if (typeof AI_SUMMARIES === 'undefined') window.AI_SUMMARIES = {};
 
             const fetchers = [
@@ -769,7 +769,7 @@
             }
           } catch (err) { console.warn('loadLiveMeetings failed:', err); }
         };
-        s.onerror = () => console.warn('Could not load /js/data-only.js for live meetings');
+        s.onerror = () => console.warn('Could not load /js/gov-helpers.js for live meetings');
         document.head.appendChild(s);
       };
       dataScript.onerror = () => console.warn('Could not load gov-data.js');
