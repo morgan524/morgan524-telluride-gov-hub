@@ -3488,35 +3488,24 @@ async function syncTelluridComEvents() {
         const end   = item.endDate   ? new Date(item.endDate)   : null;
         if (!start || isNaN(start.getTime())) continue;
         const location = (item.location && (item.location.name || item.location.address)) || 'Telluride, CO';
-        // If multi-day, generate one entry per day
-        if (end && !isNaN(end.getTime()) && end > start) {
-          const cur = new Date(start);
-          cur.setHours(12, 0, 0, 0);
-          while (cur <= end) {
-            const ms = cur.getTime();
-            if (ms >= fromMs && ms <= toMs) {
-              events.push({
-                title, link: url, description,
-                pubDate: cur.toISOString(),
-                source: 'telluride-com', sourceLabel: 'Telluride.com',
-                category: 'Community Event',
-                location, imageUrl: ogImage
-              });
-            }
-            cur.setDate(cur.getDate() + 1);
+        // Multi-day festivals get ONE entry on the start day. The renderer
+        // (js/gov-hub.js — see ev.endDate handling) shows a date range like
+        // "May 1 — May 3" when endDate is present, so the user still sees
+        // the full span without the event card duplicating every day.
+        start.setHours(12, 0, 0, 0);
+        const ms = start.getTime();
+        if (ms >= fromMs && ms <= toMs) {
+          const ev = {
+            title, link: url, description,
+            pubDate: start.toISOString(),
+            source: 'telluride-com', sourceLabel: 'Telluride.com',
+            category: 'Community Event',
+            location, imageUrl: ogImage
+          };
+          if (end && !isNaN(end.getTime()) && end > start) {
+            ev.endDate = end.toISOString();
           }
-        } else {
-          start.setHours(12, 0, 0, 0);
-          const ms = start.getTime();
-          if (ms >= fromMs && ms <= toMs) {
-            events.push({
-              title, link: url, description,
-              pubDate: start.toISOString(),
-              source: 'telluride-com', sourceLabel: 'Telluride.com',
-              category: 'Community Event',
-              location, imageUrl: ogImage
-            });
-          }
+          events.push(ev);
         }
         handled = true;
         break;
