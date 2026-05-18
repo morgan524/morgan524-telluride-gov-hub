@@ -75,7 +75,7 @@
     "whyItMatters": "These two Town-owned parcels \u2014 0.33 AC Tower House and 0.20 AC Canyonlands \u2014 represent some of the last infill land in west Telluride purchased specifically for affordable housing. The 2023 program called for 35\u201345 units, ~85% deed-restricted at 80\u2013150% AMI, with a mix of rental and for-sale units. Construction is now underway (basement level as of May 2026). The San Miguel County Housing Needs Assessment estimated a shortfall of 800+ units by 2026 \u2014 this project is one of the Town's direct responses.",
     "deepDiveUrl": "https://livabletelluride.org/from-36-million-to-103-million-how-telluride-became-richer-than-a-lottery-winner/",
     "primarySourceUrl": "",
-    "lastUpdated": "2026-05-13",
+    "lastUpdated": "2026-05-17",
     "sourceConfidence": "Confirmed",
     "editorialStatus": "Ready",
     "secondarySourceUrl": "https://livabletelluride.org/canyonlands-development-a-closer-look-at-telluride-s-financing/",
@@ -84,7 +84,9 @@
     "costNote": "Estimate \u2014 $3M land + $26M construction loan + $4.7M soft costs (18%) + $1.4M water/sewer tap fee waivers (~35 taps \u00d7 $40K). 40 units / $877,000 per unit.",
     "cameraZoom": 18.6,
     "cameraPitch": 60,
-    "cameraBearing": -22
+    "cameraBearing": -22,
+    "publiclyFunded": true,
+    "costTrackerKey": "Canyonlands"
   },
   {
     "id": "carhenge-lot",
