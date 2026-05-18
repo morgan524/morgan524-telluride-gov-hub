@@ -12,7 +12,7 @@ const STATIC_ASSETS = [
   '/index.html',
   '/css/site.css',
   '/css/hub-bub.css',
-  '/js/gov-hub.js',
+  '/js/gov-helpers.js',
   '/js/community-pulse.js',
   '/js/hub-bub.js',
   '/js/events-proximity.js',

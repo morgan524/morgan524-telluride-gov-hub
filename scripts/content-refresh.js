@@ -21,7 +21,7 @@ const path = require('path');
 
 // ── Config ──
 const REPO_ROOT = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
-const GOV_HUB_JS = path.join(REPO_ROOT, 'js', 'gov-hub.js');
+const GOV_HELPERS_JS = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
 const COMMUNITY_PULSE_JS = path.join(REPO_ROOT, 'js', 'community-pulse.js');
 const EVENTS_CONFIG = path.join(REPO_ROOT, 'email-events-config.json');
 // (INDEX_HTML / GOVHUB_HTML / SW_JS constants and the bumpCacheBusters()
@@ -116,7 +116,7 @@ const COLORADO_SUN_RSS = 'https://coloradosun.com/feed/';
 const COLORADO_SUN_KEYWORDS = /telluride|san\s+miguel\s+county|mountain\s+village|ridgway|telski|chuck\s+horning/i;
 
 // ── Regional News Feeds ──
-// Sources with working RSS feeds. Articles go into REGIONAL_NEWS_ARTICLES in gov-hub.js.
+// Sources with working RSS feeds. Articles go into REGIONAL_NEWS_ARTICLES in gov-helpers.js.
 // Sources without RSS (SMB Forum, Sheep Mountain Alliance, WEEDC, Town of Nucla) are
 // registered in CP_SOURCES (community-pulse.js) as website links instead.
 const REGIONAL_NEWS_FEEDS = [
@@ -729,7 +729,7 @@ const NOTICE_ENTITY_TO_SOURCE = {
 async function refreshMeetingPreviews(existingPreviews, govHubSrc) {
   console.log('\n📋 Task 1b: Refreshing meeting previews from legal notices...');
 
-  // Extract current LEGAL_NOTICES from gov-hub.js source
+  // Extract current LEGAL_NOTICES from gov-helpers.js source
   let legalNotices = [];
   try {
     legalNotices = extractJsArray(govHubSrc, 'LEGAL_NOTICES') || [];
@@ -2397,7 +2397,7 @@ async function syncOurayCountyEvents() {
 
 // ── Task 16: Ouray/Ridgway Events (Localist JSON API) ──
 // Fetches from events.ourayridgwayevents.com using the same Localist API
-// the client uses, but server-side so the data is baked into gov-hub.js.
+// the client uses, but server-side so the data is baked into gov-helpers.js.
 // The client's fetchOurayRidgwayEvents() prefers OURAY_RIDGWAY_EVENTS if
 // it is non-empty, falling back to a live client-side API call.
 const LOCALIST_ORE_URL = 'https://events.ourayridgwayevents.com/api/2/events?school=ridgwayouray&days=60&pp=100';
@@ -3508,7 +3508,7 @@ async function syncTelluridComEvents() {
         if (!start || isNaN(start.getTime())) continue;
         const location = (item.location && (item.location.name || item.location.address)) || 'Telluride, CO';
         // Multi-day festivals get ONE entry on the start day. The renderer
-        // (js/gov-hub.js — see ev.endDate handling) shows a date range like
+        // (js/gov-helpers.js — see ev.endDate handling) shows a date range like
         // "May 1 — May 3" when endDate is present, so the user still sees
         // the full span without the event card duplicating every day.
         start.setHours(12, 0, 0, 0);
@@ -3572,7 +3572,7 @@ async function syncTelluridComEvents() {
 //     <td><a href="/sites/.../Town-Council-Regular-Meeting-Packet.pdf">Agenda &amp; Packet</a></td>
 //   </tr>
 //
-// The returned object is written into RIDGWAY_AGENDA_MAP in gov-hub.js so
+// The returned object is written into RIDGWAY_AGENDA_MAP in gov-helpers.js so
 // client-side rendering can show a dark-green "Agenda Posted →" button that
 // links directly to the PDF.
 //
@@ -3693,7 +3693,7 @@ async function main() {
   // a tracked GitHub Issue automatically.
   await checkWorkerHealth();
 
-  let govHubSrc = readJsFile(GOV_HUB_JS);
+  let govHubSrc = readJsFile(GOV_HELPERS_JS);
   let pulseSrc = readJsFile(COMMUNITY_PULSE_JS);
   let changed = false;
 
@@ -3996,25 +3996,19 @@ async function main() {
 
   // ── Write files ──
   if (changed) {
-    fs.writeFileSync(GOV_HUB_JS, govHubSrc);
+    fs.writeFileSync(GOV_HELPERS_JS, govHubSrc);
     fs.writeFileSync(COMMUNITY_PULSE_JS, pulseSrc);
     console.log('\n✅ Files updated — changes will be committed by the workflow.');
   } else {
     console.log('\n✓ No changes detected — nothing to commit.');
   }
 
-  // ── Regenerate js/data-only.js from gov-hub.js ──
-  // v2 pages load this clean data-only file instead of gov-hub.js so they
-  // don't pick up the live single-page DOM-touching top-level code (which
-  // throws on v2 pages and silently halts script execution before consts
-  // like HOUSING_LISTINGS get defined). See scripts/extract-data-only.js.
-  try {
-    require('child_process').execSync('node scripts/extract-data-only.js', { stdio: 'inherit' });
-  } catch (err) {
-    console.error('⚠️  data-only.js regeneration failed:', err.message);
-    // Don't fail the whole refresh — v2 pages will keep working with the
-    // previous data-only.js until next run.
-  }
+  // ── Note: the old "regenerate data-only.js from gov-helpers.js" step has been
+  // retired (2026-05-18). Everything that used to live in gov-helpers.js + be
+  // mirrored to data-only.js is now in gov-helpers.js as the ONE source of
+  // truth. Bots (this script, maintenance.js, build-rss-feed.js,
+  // housing-refresh.js, deep-dive-refresh.js) read/write gov-helpers.js
+  // directly. All HTML pages load gov-helpers.js. No extraction step. ──
 
   // (Cache-buster auto-bumping removed during the 2026-05-15 merge with
   // main — main's audit established a dynamic per-request approach in HTML

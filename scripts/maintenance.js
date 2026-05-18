@@ -20,7 +20,7 @@ const path = require('path');
 const crypto = require('crypto');
 
 const REPO_ROOT = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
-const GOV_HUB_JS = path.join(REPO_ROOT, 'js', 'gov-hub.js');
+const GOV_HELPERS_JS = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
 const COMMUNITY_PULSE_JS = path.join(REPO_ROOT, 'js', 'community-pulse.js');
 const INDEX_HTML = path.join(REPO_ROOT, 'index.html');
 
@@ -459,7 +459,7 @@ async function main() {
   console.log(`  ${new Date().toISOString()}`);
   console.log('═══════════════════════════════════════════════');
 
-  let govHubSrc = fs.readFileSync(GOV_HUB_JS, 'utf8');
+  let govHubSrc = fs.readFileSync(GOV_HELPERS_JS, 'utf8');
   let pulseSrc = fs.readFileSync(COMMUNITY_PULSE_JS, 'utf8');
 
   // Run all maintenance tasks
@@ -477,7 +477,7 @@ async function main() {
 
   // Write updated files
   if (changed) {
-    fs.writeFileSync(GOV_HUB_JS, govHubSrc);
+    fs.writeFileSync(GOV_HELPERS_JS, govHubSrc);
     fs.writeFileSync(COMMUNITY_PULSE_JS, pulseSrc);
     console.log('\n✅ Maintenance complete — files updated.');
   } else {

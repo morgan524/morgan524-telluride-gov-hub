@@ -6,7 +6,7 @@
   <title>Community Events — Livable Telluride</title>
   <!--
     ┌─────────────────────────────────────────────────────────────────────┐
-    │ Standalone Events page — wired to real data via js/data-only.js     │
+    │ Standalone Events page — wired to real data via js/gov-helpers.js     │
     │ (extracted from gov-hub.js on every 6h content-refresh).            │
     │                                                                     │
     │ At page load, loadLiveEvents() at the bottom replaces the EVENTS    │
@@ -23,11 +23,11 @@
     │   - /community-events.json        (GitHub Issues + email-to-events) │
     │                                                                     │
     │ The hardcoded EVENTS array below is only used as a fallback if      │
-    │ data-only.js fails to load. Dedup is by 12-char title prefix +      │
+    │ gov-helpers.js fails to load. Dedup is by 12-char title prefix +      │
     │ first-3-words bag, paired with date (matches gov-hub.js logic).     │
     │                                                                     │
     │ Sources still TODO (live-fetched in gov-hub.js but not yet baked    │
-    │ into data-only.js): gov RSS, EcoAction, Alibi, Sheridan Opera       │
+    │ into gov-helpers.js): gov RSS, EcoAction, Alibi, Sheridan Opera       │
     │ House, Elks, TJC, Telluride Times calendar, San Miguel Basin Forum. │
     └─────────────────────────────────────────────────────────────────────┘
   -->
@@ -855,10 +855,10 @@
        WILKINSON_EVENTS and re-render. Falls back silently to the
        sample data on any failure. ──────────────────────────────────── */
      function loadLiveEvents() {
-       // Load data-only.js directly — contains KOTO/Wilkinson/Community events.
+       // Load gov-helpers.js directly — contains KOTO/Wilkinson/Community events.
        // Skipping gov-data.js (142K of meeting/logo data not needed for events page).
        const s = document.createElement('script');
-       s.src = 'https://livabletelluride.org/js/data-only.js?v=' + Math.floor(Date.now()/600000);
+       s.src = 'https://livabletelluride.org/js/gov-helpers.js?v=' + Math.floor(Date.now()/600000);
        s.onload = () => {
            try {
              const live = [];
@@ -897,7 +897,7 @@
              };
              // Source priority: originals first, aggregators last. Each source
              // is guarded by `typeof X !== 'undefined'` so a missing array
-             // (e.g. extract-data-only.js skipped one) just drops that bucket
+             // (e.g. extract-gov-helpers.js skipped one) just drops that bucket
              // without breaking the page.
              if (typeof WILKINSON_EVENTS !== 'undefined') WILKINSON_EVENTS.forEach(e => pushEvent(e, 'Wilkinson Library'));
              if (typeof COMMUNITY_EVENTS !== 'undefined') COMMUNITY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Community'));
@@ -984,7 +984,7 @@
              Promise.allSettled([ridgwayP, communityJsonP]).finally(() => finishAndRender());
            } catch (err) { console.warn('loadLiveEvents failed:', err); }
        };
-       s.onerror = () => console.warn('Could not load data-only.js for live events');
+       s.onerror = () => console.warn('Could not load gov-helpers.js for live events');
        document.head.appendChild(s);
      }
      loadLiveEvents();

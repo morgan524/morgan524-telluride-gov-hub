@@ -6,7 +6,7 @@
  * Runs as part of the content-refresh GitHub Action.
  * Pulls recent Town of Telluride and San Miguel County meeting
  * agendas + news, asks Claude whether each item touches a Deep Dive
- * topic, and writes factual updates into DEEP_DIVE_UPDATES in gov-hub.js.
+ * topic, and writes factual updates into DEEP_DIVE_UPDATES in gov-helpers.js.
  *
  * Rules enforced in the Claude prompt:
  *   - Report only what was actually decided, discussed, or scheduled
@@ -23,7 +23,7 @@ const fs     = require('fs');
 const path   = require('path');
 
 const REPO_ROOT  = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
-const GOV_HUB_JS = path.join(REPO_ROOT, 'js', 'gov-hub.js');
+const GOV_HELPERS_JS = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
 
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const CLAUDE_MODEL      = 'claude-haiku-4-5-20251001'; // fast + cheap for triage
@@ -31,7 +31,7 @@ const USER_AGENT        = 'LivableTelluride-Bot/1.0 (+https://livabletelluride.o
 
 // ── Deep Dive topic keyword map ───────────────────────────────────────────────
 // Only content that matches at least one keyword is sent to Claude.
-// Keys match LAND_USE_ISSUES object keys in gov-hub.js.
+// Keys match LAND_USE_ISSUES object keys in gov-helpers.js.
 const TOPICS = {
   carhenge: {
     label: 'Carhenge / Shandoka',
@@ -285,7 +285,7 @@ function serializeUpdates(arr) {
 function patchDeepDiveUpdates(src, newArr) {
   const re = /const DEEP_DIVE_UPDATES\s*=\s*\[/;
   const m  = re.exec(src);
-  if (!m) { console.warn('DEEP_DIVE_UPDATES not found in gov-hub.js'); return src; }
+  if (!m) { console.warn('DEEP_DIVE_UPDATES not found in gov-helpers.js'); return src; }
   let depth = 0, start = m.index;
   for (let i = m.index + m[0].length - 1; i < src.length; i++) {
     if (src[i] === '[') depth++;
@@ -331,7 +331,7 @@ async function main() {
   }
 
   // Read current state
-  let src = fs.readFileSync(GOV_HUB_JS, 'utf8');
+  let src = fs.readFileSync(GOV_HELPERS_JS, 'utf8');
   const existing = extractDeepDiveUpdates(src);
   console.log('Existing DEEP_DIVE_UPDATES: ' + existing.length + ' entries');
 
@@ -436,7 +436,7 @@ async function main() {
   // ── Write back ────────────────────────────────────────────────────────────
   if (newCount > 0 || pruned.length < existing.length) {
     src = patchDeepDiveUpdates(src, allUpdates);
-    fs.writeFileSync(GOV_HUB_JS, src, 'utf8');
+    fs.writeFileSync(GOV_HELPERS_JS, src, 'utf8');
     console.log('\nWrote ' + allUpdates.length + ' total entries to DEEP_DIVE_UPDATES (' + newCount + ' new)');
   } else {
     console.log('\nNo changes — DEEP_DIVE_UPDATES unchanged');

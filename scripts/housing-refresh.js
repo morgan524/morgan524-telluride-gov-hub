@@ -25,7 +25,7 @@ const fs    = require('fs');
 const path  = require('path');
 
 const REPO_ROOT   = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
-const GOV_HUB_JS  = path.join(REPO_ROOT, 'js', 'gov-hub.js');
+const GOV_HELPERS_JS  = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
 
 const SMRHA_WP_API = 'https://smrha.org/wp-json/wp/v2/posts?per_page=20&status=publish' +
                      '&_fields=id,slug,link,title,excerpt,date';
@@ -265,9 +265,9 @@ async function main() {
   console.log('  ' + new Date().toISOString());
   console.log('═══════════════════════════════════════════════\n');
 
-  const govHubSrc = fs.readFileSync(GOV_HUB_JS, 'utf8');
+  const govHubSrc = fs.readFileSync(GOV_HELPERS_JS, 'utf8');
   const existingListings = extractJsArray(govHubSrc, 'HOUSING_LISTINGS') || [];
-  console.log('  Current listings in gov-hub.js: ' + existingListings.length);
+  console.log('  Current listings in gov-helpers.js: ' + existingListings.length);
 
   // Partition: SMRHA for-sale (auto-managed) vs everything else
   // "auto" = has smrhaSlug, OR is source=SMRHA + type=deed-sale + hosted on smrha.org
@@ -320,7 +320,7 @@ async function main() {
   }
 
   const updated = replaceJsArray(govHubSrc, 'HOUSING_LISTINGS', merged);
-  fs.writeFileSync(GOV_HUB_JS, updated, 'utf8');
+  fs.writeFileSync(GOV_HELPERS_JS, updated, 'utf8');
 
   console.log('\n✅ Updated HOUSING_LISTINGS:');
   console.log('   ' + freshSmrha.length + ' SMRHA for-sale + ' + keepListings.length + ' other = ' + merged.length + ' total');

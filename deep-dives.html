@@ -609,10 +609,10 @@
         }).join('');
       }
 
-      // Load data-only.js which contains BLOG_POSTS (bot-updated every 6h)
+      // Load gov-helpers.js which contains BLOG_POSTS (bot-updated every 6h)
       const day = Math.floor(Date.now()/600000);
       const s = document.createElement('script');
-      s.src = 'https://livabletelluride.org/js/data-only.js?v=' + day;
+      s.src = 'https://livabletelluride.org/js/gov-helpers.js?v=' + day;
       s.onload = function () {
         if (typeof BLOG_POSTS !== 'undefined') {
           renderBlog(BLOG_POSTS);

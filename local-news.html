@@ -767,11 +767,11 @@
       // Use a daily cache buster so browsers always pick up today's bot commit.
       // 10-minute cache buster — matches GitHub Pages CDN TTL so bot commits appear within 10 min
       const day = Math.floor(Date.now() / 600000);
-      // data-only.js is the purpose-built v2 data file regenerated from gov-hub.js every 6 hours.
+      // gov-helpers.js is the purpose-built v2 data file regenerated from gov-hub.js every 6 hours.
       // It contains TELLURIDE_TIMES_ARTICLES, KOTO_NEWSCASTS, etc. without the full app code
       // that would throw errors when loaded outside the main single-page app context.
       const dataScript = document.createElement('script');
-      dataScript.src = 'https://livabletelluride.org/js/data-only.js?v=' + day;
+      dataScript.src = 'https://livabletelluride.org/js/gov-helpers.js?v=' + day;
       dataScript.onload = () => {
         try {
             if (typeof TELLURIDE_TIMES_ARTICLES === 'undefined') return;
@@ -885,7 +885,7 @@
         } catch (err) { console.warn('loadLiveData filter pass failed:', err); }
       };
       dataScript.onerror = () => {
-        console.warn('Could not load data-only.js');
+        console.warn('Could not load gov-helpers.js');
         document.getElementById('featuredCard').innerHTML =
           '<div style="padding:40px 20px;text-align:center;color:#b44;">' +
           'Could not load news data. <a href="" style="color:#21443c;">Reload</a></div>';
