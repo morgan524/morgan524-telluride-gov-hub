@@ -282,6 +282,28 @@
       border-top: 1px solid var(--border-card);
     }
     .meet-meta span { display: inline-flex; align-items: center; gap: 4px; }
+
+    /* Zoom Access panel — sits between meta and action buttons. */
+    .zoom-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 10px 12px;
+      background: var(--accent-green-soft);
+      border: 1px solid var(--accent-green-border);
+      border-radius: 8px;
+      font-size: 0.82rem;
+      color: var(--text-primary);
+    }
+    .zoom-panel .zoom-info { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; }
+    .zoom-panel .zoom-info span { display: inline-flex; gap: 4px; }
+    .zoom-panel .zoom-label { color: var(--forest); font-weight: 700; margin-right: 6px; }
+    .zoom-panel .zoom-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
+    .zoom-panel .btn-action.zoom    { background: var(--forest); color: #fff; border-color: var(--forest); }
+    .zoom-panel .btn-action.zoom:hover { background: #1a332c; }
+    .zoom-panel .btn-action.youtube { background: #c4302b; color: #fff; border-color: #a82822; }
+    .zoom-panel .btn-action.youtube:hover { background: #a82822; }
+
     .meet-actions {
       display: flex;
       gap: 8px;
@@ -578,6 +600,39 @@
            + '<div class="day">' + day + '</div>'
            + '<div class="year">' + year + '</div></div>';
     }
+    /* ── Zoom Access panel (Meeting ID + passcode + phone + Join Zoom +
+       optional YouTube/livestream button). Reads MEETING_ZOOM_LINKS /
+       MEETING_PASSCODES / SCHOOL_ZOOM_LINK from gov-data.js and
+       ENTITY_REMOTE for the per-entity livestream URL. Helpers
+       getMeetingZoomLink / getMeetingPasscode are pulled in via
+       data-only.js (extracted from gov-hub.js by extract-data-only.js). ── */
+    function zoomPanel(m) {
+      const item = { source: m.sourceKey, eventDate: new Date(m.date + 'T00:00:00'), title: m.title };
+      const zoomUrl = (typeof getMeetingZoomLink === 'function') ? getMeetingZoomLink(item) : '';
+      const info    = (typeof getMeetingPasscode === 'function') ? getMeetingPasscode(item) : null;
+      const remote  = (typeof ENTITY_REMOTE !== 'undefined') ? (ENTITY_REMOTE[m.sourceKey] || {}) : {};
+      const showLivestream = !!remote.livestream;
+      if ((!info || !info.passcode) && !zoomUrl && !showLivestream) return '';
+
+      let parts = '';
+      if (info && info.id)       parts += '<span><strong>Meeting ID:</strong> ' + info.id + '</span>';
+      if (info && info.passcode) parts += '<span><strong>Passcode:</strong> ' + info.passcode + '</span>';
+      if (info && info.phone)    parts += '<span><strong>Phone:</strong> ' + info.phone + '</span>';
+
+      const buttons = [];
+      if (zoomUrl) {
+        buttons.push('<a class="btn-action zoom" href="' + zoomUrl + '" target="_blank" rel="noopener">📹 Join Zoom</a>');
+      }
+      if (showLivestream) {
+        buttons.push('<a class="btn-action youtube" href="' + remote.livestream + '" target="_blank" rel="noopener">▶️ ' + (remote.livestreamLabel || 'Livestream') + '</a>');
+      }
+
+      return '<div class="zoom-panel">'
+           +   (parts ? '<div class="zoom-info"><strong class="zoom-label">Zoom Access</strong>' + parts + '</div>' : '')
+           +   (buttons.length ? '<div class="zoom-buttons">' + buttons.join('') + '</div>' : '')
+           + '</div>';
+    }
+
     function meetingCard(m) {
       const dateBadge = fmtDateBadge(m.date);
       const logo = m.entityLogo
@@ -589,6 +644,7 @@
       const loc = m.location ? '<span>📍 ' + m.location + '</span>' : '';
       const time = m.time ? '<span>🕐 ' + m.time + '</span>' : '';
       const meta = (loc || time) ? '<div class="meet-meta">' + time + loc + '</div>' : '';
+      const zoom = zoomPanel(m);
       const agendaBtn = m.agendaUrl
         ? '<a class="btn-action' + (m.hasAgenda ? ' primary' : '') + '" href="' + m.agendaUrl + '" target="_blank" rel="noopener">View Agenda →</a>'
         : '';
@@ -611,6 +667,7 @@
            + '<div class="meet-info">' + tag + '<h2 class="meet-title">' + m.title + '</h2></div>'
            + logo + '</div>'
            + summary + meta
+           + zoom
            + '<div class="meet-actions">' + agendaBtn + recordBtn + commentBtn + '</div>'
            + deadlineNote
            + '</article>';
