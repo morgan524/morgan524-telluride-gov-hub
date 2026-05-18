@@ -385,9 +385,9 @@
       "constructionStart": null,
       "completionExpected": null
     },
-    "estimatedTotalCost": 127290000,
-    "estimatedCostPerUnit": 2314364,
-    "costNote": "Model — 57,600 sf housing × $1,000/sf = $57.6M housing construction + $59.69M fixed facilities + $10M land = $127.29M total / 55 units = $2,314,364 per unit. Fixed facilities estimate: 900-space parking garage ~$54M (~$60K/space, mountain-resort structured-parking rate), commercial fit-out ~$1.23M, bike parking ~$60K, park + pedestrian alley ~$1.4M, multi-use community building ~$3M. Variable cost/sf input on the tracker applies only to housing construction; garage and shared facilities are fixed estimates pending verified bids. Alternative 3A program assumed (estimated from Alt 2B in the May 2026 feasibility study).",
+    "estimatedTotalCost": 130859350,
+    "estimatedCostPerUnit": 2379261,
+    "costNote": "Model — 61,922 sf housing × $1,000/sf = $61.92M housing construction + $58.94M fixed facilities + $10M land = $130.86M total / 55 units = $2,379,261 per unit. Fixed facilities estimate: 900-space parking garage ~$54M (~$60K/space, mountain-resort structured-parking rate), commercial fit-out ~$1.10M, bike parking ~$58K, 2 park areas ~$1.2M, multi-use community building ~$2.58M. Variable cost/sf input on the tracker applies only to housing construction; garage and shared facilities are fixed estimates pending verified bids. Alternative 2A program (Alt 2 in the May 2026 feasibility study).",
     "deedRestricted": true,
     "deedRestrictedPercent": 100,
     "applicant": "Design Workshop (on behalf of Town of Telluride)",
