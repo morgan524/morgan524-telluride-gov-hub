@@ -626,8 +626,10 @@ body {
      poke out from behind the panel */
   body.left-panel-open #mobile-filter-toggle { display: none; }
 
-  /* Preset buttons: nudge down so they don't collide with the toggle */
-  #preset-buttons { top: 60px; }
+  /* Preset region-zoom buttons: hidden on mobile — they wrap to 3 rows of
+     chips on a narrow viewport and blanket the map. The Community Area
+     filter inside the slide-out drawer still gives the same filtering. */
+  #preset-buttons { display: none !important; }
 
   /* Allow filters to scroll when the panel itself is the scroll container */
   #filters { max-height: none; overflow: visible; }

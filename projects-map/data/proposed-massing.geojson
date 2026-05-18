@@ -20664,18 +20664,18 @@
       "properties": {
         "id": "fruen-building-massing",
         "project_id": "fruen-building",
-        "name": "Fruen Building \u2014 335 W Colorado",
+        "name": "Fruen Building \u2014 335 W Colorado (Floors 1\u20132)",
         "status": "Under Review",
         "project_type": "Commercial offices / mixed-use",
-        "height_ft": 35,
-        "height_m": 10.67,
-        "base_m": 0,
-        "floors": 3,
+        "height_ft": 23.3,
+        "height_m": 7.11,
+        "base_m": 0.0,
+        "floors": 2,
         "sqft": 16400,
         "hotel_rooms": null,
         "housing_units": 0,
         "source_confidence": "HARC Work Session packet (5/21/2025)",
-        "source_note": "Footprint extracted from assets/Fruen Building/Fruen.svg (SW-corner geo-tag at lat 37.938014, lon -107.813621; scale 0.1105 m/SVG-unit derived from PDF lot width 75 ft = 206.85 SVG units). Rect rotated 17.23\u00b0. Dimensions match the 9,365 SF lot. FAR 1.75:1 \u2192 ~16,400 SF over 3 floors per the HARC packet (Town/County offices + 2,600 SF retail).",
+        "source_note": "Lower 2 floors of the Fruen Building (full 75'\u00d7125' footprint, 0.1105 m/SVG-unit derived from PDF lot width). SW-corner geo-tag at lat 37.938014, lon -107.813621. Top-floor setback (patio) is represented as a separate upper-mass feature with smaller footprint and elevated base.",
         "deep_dive_url": "",
         "primary_source_url": "",
         "last_updated": "2026-05-18"
@@ -20703,6 +20703,75 @@
             [
               -107.8134925,
               37.9383408
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fruen-building-top-floor-massing",
+        "project_id": "fruen-building",
+        "name": "Fruen Building \u2014 Top Floor (Setback w/ Patio)",
+        "status": "Under Review",
+        "project_type": "Commercial offices",
+        "height_ft": 11.7,
+        "height_m": 3.56,
+        "base_m": 7.11,
+        "floors": 1,
+        "sqft": null,
+        "hotel_rooms": null,
+        "housing_units": 0,
+        "source_confidence": "HARC Work Session packet (5/21/2025)",
+        "source_note": "Top-floor setback extracted from yellow polygon (.st1, #eaea8c) in Fruen.svg. Footprint is smaller than the lower 2 floors, with the difference forming the open-air roof patio. Base elevation set to the top of floor 2; height = 1 floor.",
+        "deep_dive_url": "",
+        "primary_source_url": "",
+        "last_updated": "2026-05-18"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -107.8134414,
+              37.9383292
+            ],
+            [
+              -107.8134414,
+              37.9383292
+            ],
+            [
+              -107.8134936,
+              37.938342
+            ],
+            [
+              -107.8135816,
+              37.9381183
+            ],
+            [
+              -107.8135294,
+              37.9381055
+            ],
+            [
+              -107.8135486,
+              37.9380566
+            ],
+            [
+              -107.8133508,
+              37.9380082
+            ],
+            [
+              -107.8132435,
+              37.9382808
+            ],
+            [
+              -107.8134414,
+              37.9383292
+            ],
+            [
+              -107.8134414,
+              37.9383292
             ]
           ]
         ]
