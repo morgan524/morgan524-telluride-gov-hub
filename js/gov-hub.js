@@ -842,7 +842,19 @@ async function loadAISummaries() {
 // ── Manual/fallback summaries (preserved from original) ──
 // Last updated: 2026-04-03T12:00 (automated scan — Town Council confirmed Apr 28 (was ~Apr 21); new THA meetings Apr 23/24/28 discovered; Election Commission Apr 29 new; Parks & Rec rescheduled to Apr 29; Liquor Licensing Apr 23 new; School District Special Meeting Apr 20 added to cache; HARC Apr 15 Published=true, summary current; SMRHA Apr 13 1pm Zoom confirmed; no new agendas posted for BOCC Apr 22/29, SMART Apr 9, MV Council Apr 23, School Apr 20/27/28, Fire ~Apr 21, Med Apr 23; BOCC Apr 8 work session event 986 — JS portal, no agenda visible yet)
 const MANUAL_SUMMARIES = {
+  // ── May 2026 meetings (manual until bot's auto-summary catches up) ──
+  // Written in the established voice — ≤100 words, hierarchy: code changes
+  // first, then land use, then everything else. The bot's Task 1 will
+  // overwrite these into Firestore once it processes each agenda URL.
 
+  'norwood|2026-05-18|Planning and Zoning Commission Meeting':
+    "Two code items on the table — a Land Use Code update and a Colorado Wildfire Resiliency Code progress check. The CWRC has been winding through subcommittee work across the region for months; tonight's discussion is P&Z's chance to weigh in before the next draft. The LUC update is at the stage where text changes accumulate quickly. April 20 minutes on consent. The kind of agenda that reads quiet but quietly reshapes what gets built and how.",
+
+  'ophir|2026-05-19|General Assembly Meeting':
+    "Charter Review Committee update tops the substantive list — Charter language work is the closest Ophir gets to code revision. Town Buildings Electrification & Solar gets a Wheels-led briefing alongside Lane Masters. Manager's report covers the New Dominion USFS project and two wildfire prep items: a Western Wildfire Council rapid risk assessment for the Town and fuel-reduction work at Town Hall and East Ophir. The agenda also notes the recent passing of John Eagle. A full evening for a town this size.",
+
+  'smart|2026-05-20|SMART Board of Directors':
+    "Virtual-only meeting. The Gondola update is the agenda's headline — that's the project that drives SMART's 3A ballot context. Resolution 2026-8 appoints Marya Stark to the Investment Committee. Q4 2025 / annual performance report and the May Ops report round out the formal business. The board closes in executive session under §24-6-402(4)(b) to confer with counsel on Masson v. SMC BOCC. Anyone tracking how the gondola conversation is evolving should bookmark the live link.",
 };
 
 // ── Unified summary lookup: AI first, then manual fallback ──
