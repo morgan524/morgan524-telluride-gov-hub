@@ -536,9 +536,9 @@ function getSchoolMeetings() {
         const later   = earlier === a ? b : a;
         const hasAgendaCombined = earlier.hasAgenda || later.hasAgenda;
         const combinedLink = (earlier.hasAgenda ? earlier.link : null) || (later.hasAgenda ? later.link : null) || earlier.link;
-        // Build a short title: strip common "Board of Education " prefix, join with " & "
-        const shorten = t => t.replace(/^Board of Education\s+/i, '').replace(/\s*--\s*Special Meeting$/i, '');
-        const combinedTitle = 'Board of Education ' + shorten(earlier.title) + ' & ' + shorten(later.title);
+        // Build a short title: strip common "Telluride Board of Education " prefix, join with " & "
+        const shorten = t => t.replace(/^(Telluride\s+)?Board of Education\s+/i, '').replace(/\s*--\s*Special Meeting$/i, '');
+        const combinedTitle = 'Telluride Board of Education ' + shorten(earlier.title) + ' & ' + shorten(later.title);
         const combinedTime = aTime && bTime ? aTime + ' & ' + bTime : (aTime || bTime);
         merged.push(Object.assign({}, earlier, {
           title: combinedTitle,
@@ -1184,15 +1184,12 @@ function renderPasscodeInfo(item) {
   const zoomUrl = getMeetingZoomLink(item);
   const remote = ENTITY_REMOTE[item.source] || {};
 
-  // Only show livestream button on the day of the meeting
-  const today = new Date();
-  const isToday = item.eventDate &&
-    item.eventDate.getFullYear() === today.getFullYear() &&
-    item.eventDate.getMonth() === today.getMonth() &&
-    item.eventDate.getDate() === today.getDate();
-  const showLivestream = isToday && remote.livestream;
+  // Show livestream button whenever the source entity has a livestream URL
+  // (was previously day-of only). User wants the link discoverable in advance
+  // so attendees can bookmark / set reminders.
+  const showLivestream = !!remote.livestream;
 
-  // Only render if we have passcode info, a zoom link, or a livestream today
+  // Only render if we have passcode info, a zoom link, or a livestream
   if ((!info || !info.passcode) && !zoomUrl && !showLivestream) return '';
 
   const zoomIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>';
@@ -4480,14 +4477,9 @@ function renderCardActions(item) {
   html += `<a href="${outlookCalUrl(item)}" target="_blank" rel="noopener" class="cal-btn" title="Add to Outlook Calendar">${gIcon} Outlook</a>`;
   html += `<a href="${icsDataUri(item)}" download="${item.title.replace(/[^a-zA-Z0-9]/g, '_')}.ics" class="cal-btn" title="Download .ics file (Apple Calendar, etc.)">${gIcon} iCal</a>`;
 
-  // ── Livestream button (day-of only) ──
+  // ── Livestream button — shown whenever the source has a livestream URL ──
   const remote = ENTITY_REMOTE[item.source] || {};
-  const today = new Date();
-  const isToday = item.eventDate &&
-    item.eventDate.getFullYear() === today.getFullYear() &&
-    item.eventDate.getMonth() === today.getMonth() &&
-    item.eventDate.getDate() === today.getDate();
-  if (isToday && remote.livestream) {
+  if (remote.livestream) {
     const ytIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>';
     html += `<a href="${remote.livestream}" target="_blank" rel="noopener" class="livestream-link" title="${remote.livestreamLabel || 'Watch'}">${ytIcon} ${remote.livestreamLabel || 'Watch Live'}</a>`;
   }
@@ -4595,7 +4587,7 @@ function renderOfficialCommentInfo(item) {
     if (/board of county commissioners|bocc/.test(titleLower)) return 'the BOCC';
     if (/design review|drc/.test(titleLower)) return 'the Design Review Board';
     if (/housing authority/.test(titleLower)) return 'the Housing Authority';
-    if (/school.*board|board of education/.test(titleLower)) return 'the School Board';
+    if (/school.*board|board of education/.test(titleLower)) return 'the Telluride Board of Education';
     if (/board of trustees/.test(titleLower)) return 'the Board of Trustees';
     if (/board of directors/.test(titleLower)) return 'the Board of Directors';
     if (/town board/.test(titleLower)) return 'the Town Board';
