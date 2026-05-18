@@ -42,11 +42,6 @@ jobs:
           set -o pipefail
           node scripts/content-refresh.js 2>&1 | tee /tmp/content-refresh.log
 
-      - name: Regenerate data-only.js from updated gov-hub.js
-        run: |
-          node scripts/extract-data-only.js
-        continue-on-error: true
-
       - name: Build RSS feed (feed.xml) for Mailchimp
         run: |
           set -o pipefail

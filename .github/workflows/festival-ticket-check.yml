@@ -37,7 +37,7 @@ jobs:
         run: |
           git config user.name "Gov Hub Bot"
           git config user.email "bot@livabletelluride.org"
-          git add js/gov-hub.js
+          git add js/gov-data.js
           git commit -m "🎟️ Festival ticket status update $(date -u +'%Y-%m-%d')
 
           Automated weekly check: updated ticketStatus/promo for changed festivals"

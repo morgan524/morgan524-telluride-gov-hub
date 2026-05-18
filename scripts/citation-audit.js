@@ -77,7 +77,7 @@ function main() {
 
   // Also audit any URLs in the JS files that point to legal databases
   console.log('\n  Checking legal database URL patterns in JS files...');
-  const jsFiles = ['js/gov-hub.js'];
+  const jsFiles = ['js/gov-data.js', 'js/gov-helpers.js'];
   for (const rel of jsFiles) {
     const filePath = path.join(REPO_ROOT, rel);
     if (!fs.existsSync(filePath)) continue;

@@ -6,7 +6,7 @@
  *
  * For each festival with a ticketUrl, fetches the page and looks
  * for sold-out / available signals in the raw HTML.
- * Patches ticketStatus and promo in js/gov-hub.js if anything changed.
+ * Patches ticketStatus and promo in js/gov-data.js if anything changed.
  * ══════════════════════════════════════════════════════════════
  */
 
@@ -16,7 +16,7 @@ const fs    = require('fs');
 const path  = require('path');
 
 const REPO_ROOT  = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
-const GOV_HUB_JS = path.join(REPO_ROOT, 'js', 'gov-hub.js');
+const GOV_DATA_JS = path.join(REPO_ROOT, 'js', 'gov-data.js');
 
 const USER_AGENT    = 'Mozilla/5.0 (compatible; LivableTelluride-Bot/1.0; +https://livabletelluride.org)';
 const FETCH_TIMEOUT = 15000;
@@ -96,7 +96,7 @@ function detectStatus(html) {
   return null; // inconclusive — JS-heavy or unusual page
 }
 
-// ── gov-hub.js patcher ────────────────────────────────────────────────────────
+// ── gov-data.js patcher ───────────────────────────────────────────────────────
 function patchFestival(src, festName, newStatus, newPromo) {
   const escapedName = festName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const objRe = new RegExp(
@@ -145,9 +145,9 @@ function buildPromo(fest, newStatus, oldPromo) {
 // ── Main ──────────────────────────────────────────────────────────────────────
 async function main() {
   console.log('Festival ticket status check — ' + new Date().toUTCString());
-  console.log('Reading ' + GOV_HUB_JS + '\n');
+  console.log('Reading ' + GOV_DATA_JS + '\n');
 
-  let src = fs.readFileSync(GOV_HUB_JS, 'utf8');
+  let src = fs.readFileSync(GOV_DATA_JS, 'utf8');
 
   // Extract TELLURIDE_FESTIVALS array block
   const arrayMatch = src.match(/const TELLURIDE_FESTIVALS\s*=\s*\[([\s\S]*?)\];/);
@@ -225,8 +225,8 @@ async function main() {
   }
 
   if (changeCount > 0) {
-    fs.writeFileSync(GOV_HUB_JS, currentSrc, 'utf8');
-    console.log('\nWrote ' + changeCount + ' change(s) to gov-hub.js');
+    fs.writeFileSync(GOV_DATA_JS, currentSrc, 'utf8');
+    console.log('\nWrote ' + changeCount + ' change(s) to gov-data.js');
   } else {
     console.log('\nNo changes — all statuses current');
   }
