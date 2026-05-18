@@ -443,6 +443,57 @@
       .topnav-cta { display: none !important; }
     }
 
+    /* ── Valley Project Map card ── */
+    .valley-map-row { max-width: 1280px; margin: 0 auto; padding: 0 32px 56px; display: flex; justify-content: center; }
+    .valley-map-card {
+      width: min(460px, 100%);
+      background: #fff;
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(20, 40, 34, 0.08);
+      padding: 30px 28px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .valley-map-card .map-icon { width: min(310px, 88%); margin: 0 auto 22px; display: block; }
+    .valley-map-card .map-icon svg { width: 100%; height: auto; display: block; }
+    .valley-map-card h2 {
+      margin: 0 0 14px;
+      font-family: var(--font-heading);
+      font-size: 2.35rem;
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      color: var(--forest);
+    }
+    .valley-map-card p {
+      margin: 0 auto 26px;
+      max-width: 335px;
+      color: var(--text-secondary);
+      font-size: 1.08rem;
+      line-height: 1.45;
+    }
+    .valley-map-card a.valley-map-cta {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-width: 285px; padding: 14px 22px;
+      border-radius: 999px; background: var(--forest); color: #fff; text-decoration: none;
+      font-weight: 800; font-size: 1.05rem;
+      box-shadow: 0 5px 14px rgba(23, 68, 55, 0.22);
+      transition: background 0.16s ease, transform 0.16s ease;
+    }
+    .valley-map-card a.valley-map-cta:hover { background: var(--forest-soft); transform: translateY(-1px); }
+    .valley-map-card .pin { animation: vm-pulse 2.2s ease-in-out infinite; transform-origin: center; }
+    .valley-map-card .pin:nth-of-type(2) { animation-delay: .25s; }
+    .valley-map-card .pin:nth-of-type(3) { animation-delay: .5s; }
+    @keyframes vm-pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.08); opacity: .88; }
+    }
+    @media (max-width: 480px) {
+      .valley-map-row { padding: 0 18px 40px; }
+      .valley-map-card { padding: 24px 20px 26px; }
+      .valley-map-card h2 { font-size: 2rem; }
+      .valley-map-card a.valley-map-cta { min-width: 0; width: 100%; }
+    }
   </style>
 </head>
 <body>
@@ -601,6 +652,61 @@
       <p>Learn about Livable Telluride, our mission, and how you can get involved.</p>
       <span class="more">Learn More →</span>
     </a>
+  </section>
+
+  <!-- ── Valley Project Map card ── -->
+  <section class="valley-map-row" aria-label="Valley Project Map">
+    <div class="valley-map-card">
+      <div class="map-icon" aria-hidden="true">
+        <svg viewBox="0 0 520 360" xmlns="http://www.w3.org/2000/svg" role="img">
+          <defs>
+            <linearGradient id="vmMountainShade" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#f7f4ec"/>
+              <stop offset="1" stop-color="#e8efe8"/>
+            </linearGradient>
+            <filter id="vmSoftShadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#173f35" flood-opacity="0.18"/>
+            </filter>
+          </defs>
+          <path d="M78 168 L160 70 L226 150 L300 48 L442 170" fill="none" stroke="#173f35" stroke-width="7" stroke-linejoin="round"/>
+          <path d="M160 70 L184 154 L212 118 L226 150" fill="none" stroke="#9aa889" stroke-width="3"/>
+          <path d="M300 48 L322 160 L352 112 L442 170" fill="none" stroke="#9aa889" stroke-width="3"/>
+          <path d="M116 168 L164 114 L200 169" fill="url(#vmMountainShade)" stroke="#173f35" stroke-width="3" opacity=".92"/>
+          <path d="M230 171 L300 80 L386 172" fill="url(#vmMountainShade)" stroke="#173f35" stroke-width="3" opacity=".92"/>
+          <path d="M72 258 C118 228 164 228 212 252 C255 274 304 275 350 254 C392 235 428 236 462 254"
+                fill="none" stroke="#173f35" stroke-width="7" stroke-linecap="round"/>
+          <path d="M68 282 C132 248 186 258 238 282 C295 309 366 304 454 274"
+                fill="none" stroke="#2f7a5f" stroke-width="4" stroke-linecap="round"/>
+          <path d="M94 226 C156 214 208 218 262 236 C320 255 374 250 428 224"
+                fill="none" stroke="#b98b34" stroke-width="4" stroke-linecap="round"/>
+          <rect x="86" y="202" width="348" height="98" rx="18" fill="none" stroke="#173f35" stroke-width="4" opacity=".85"/>
+          <path d="M116 282 L150 248 L190 266 L230 232 L280 256 L324 224 L396 278"
+                fill="none" stroke="#173f35" stroke-width="3" opacity=".55"/>
+          <path d="M132 222 H212 M142 236 H248 M304 234 H386 M292 250 H416"
+                stroke="#9aa889" stroke-width="3" stroke-linecap="round"/>
+          <g class="pin" filter="url(#vmSoftShadow)">
+            <path d="M154 188 C154 169 170 154 190 154 C210 154 226 169 226 188 C226 215 190 244 190 244 C190 244 154 215 154 188Z"
+                  fill="#b4493f" stroke="#ffffff" stroke-width="5"/>
+            <circle cx="190" cy="188" r="13" fill="#ffffff"/>
+          </g>
+          <g class="pin" filter="url(#vmSoftShadow)">
+            <path d="M284 182 C284 163 300 148 320 148 C340 148 356 163 356 182 C356 209 320 238 320 238 C320 238 284 209 284 182Z"
+                  fill="#2f7a5f" stroke="#ffffff" stroke-width="5"/>
+            <circle cx="320" cy="182" r="13" fill="#ffffff"/>
+          </g>
+          <g class="pin" filter="url(#vmSoftShadow)">
+            <path d="M356 244 C356 228 370 214 386 214 C402 214 416 228 416 244 C416 267 386 291 386 291 C386 291 356 267 356 244Z"
+                  fill="#d48737" stroke="#ffffff" stroke-width="5"/>
+            <circle cx="386" cy="244" r="10" fill="#ffffff"/>
+          </g>
+          <path d="M64 232 L78 202 L92 232 H84 L98 258 H58 L72 232 Z" fill="#173f35" opacity=".95"/>
+          <path d="M448 230 L462 200 L476 230 H468 L482 256 H442 L456 230 Z" fill="#173f35" opacity=".95"/>
+        </svg>
+      </div>
+      <h2>Valley<br>Project Map</h2>
+      <p>See major projects across the valley, from housing and hotels to public infrastructure, in one interactive map.</p>
+      <a class="valley-map-cta" href="/projects-map/">Explore the Valley Map →</a>
+    </div>
   </section>
 
   <!-- ── This Week + Donate ── -->
