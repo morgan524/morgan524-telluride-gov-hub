@@ -326,7 +326,7 @@ body.is-completed .calc-summary-row    { display: none; }
            projects that aren't carrying a balloon read consistently. -->
       <div id="summaryMarketRateBox" style="display:none;background:#2f7a5f;border-color:#5fa389;box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);"><span style="color:#fff">Market-Rate Sales Estimate</span><strong id="summaryMarketRateValue" style="color:#fff">—</strong><small id="summaryMarketRateNote" style="color:#fff">Unverified estimate — to be updated when specific sale prices are disclosed.</small></div>
       <!-- 6. Total Annual Subsidy Required (full-width if displayed) -->
-      <div id="summarySubsidyRow" class="summaryWide"><span>Total Annual Subsidy Required</span><strong id="summaryAnnualSubsidy">—</strong><small id="summarySubsidyPercent">—</small></div>
+      <div id="summarySubsidyRow" class="summaryWide"><span id="summarySubsidyLabel">Total Annual Subsidy Required</span><strong id="summaryAnnualSubsidy">—</strong><small id="summarySubsidyPercent">—</small></div>
     </div>
   </aside>
 </section>
@@ -1136,21 +1136,36 @@ function updateStats(data) {
         + " · Effective at " + inc.vacancyPct + "% vacancy: " + fmt.format(totalIncome);
   document.getElementById("summaryAnnualIncomeNote").textContent = incomeNote;
 
-  document.getElementById("summaryAnnualSubsidy").textContent = fmt.format(annualSubsidy);
-  const subsidyPctOfIncome = totalIncome > 0 ? (annualSubsidy / totalIncome) * 100 : 0;
-  // In rentFreemarket mode the card stays visible but shows $0 plus a
-  // break-even note instead of being hidden — keeps the "Subsidy" slot
-  // in the summary grid filled and tells the user *why* it's zero.
-  document.getElementById("summarySubsidyPercent").textContent = isRentFreemarket
-    ? "Project breaks even at the Required Sale Price above."
-    : (annualSubsidy > 0 ? subsidyPctOfIncome.toFixed(1) + "% of annual income" : "");
-  // Housing-only projects (Shandoka) hide the subsidy row entirely —
-  // the housing's debt-vs-income picture is shown via the AMI chart, and
-  // a project-level subsidy figure would conflate housing rent with
-  // garage/facility costs that aren't supposed to be rent-supported.
-  const hideSubsidy = housingOnly || (!isRentFreemarket && annualSubsidy <= 0);
-  document.getElementById("summarySubsidyRow").classList.toggle("hidden", hideSubsidy);
-  document.getElementById("summarySubsidyRow").classList.toggle("deficit", !housingOnly && annualSubsidy > 0);
+  // Housing-only mode (Shandoka) uses a different subsidy semantic: the
+  // ENTIRE project ($127M+ including garage + facilities + land) is
+  // hypothetically financed at the same interest/term, and the total
+  // annual debt service is offset by ALL project income (housing AMI rent
+  // + commercial / community rent). The leftover is the annual subsidy
+  // the Town would carry to make the whole development pencil.
+  if (housingOnly) {
+    const entireProjectAnnualDebt = totalProjectCost * pmtFactor(x.interest, x.term);
+    const housingRentEff = displayedTotalIncome;
+    const allProjectIncome = housingRentEff + commercialRentAnnual;
+    const entireProjectSubsidy = Math.max(entireProjectAnnualDebt - allProjectIncome, 0);
+    document.getElementById("summarySubsidyLabel").textContent = "Total Annual Subsidy — Including Entire Development";
+    document.getElementById("summaryAnnualSubsidy").textContent = fmt.format(entireProjectSubsidy);
+    document.getElementById("summarySubsidyPercent").textContent =
+      "Entire-project annual debt service " + fmt.format(entireProjectAnnualDebt) + "/yr"
+      + " (full " + fmt.format(totalProjectCost) + " project cost amortized at " + x.interest + "% over " + x.term + " yr)"
+      + " less " + fmt.format(housingRentEff) + "/yr housing AMI rent"
+      + " less " + fmt.format(commercialRentAnnual) + "/yr commercial + community rent.";
+    document.getElementById("summarySubsidyRow").classList.toggle("hidden", false);
+    document.getElementById("summarySubsidyRow").classList.toggle("deficit", entireProjectSubsidy > 0);
+  } else {
+    document.getElementById("summarySubsidyLabel").textContent = "Total Annual Subsidy Required";
+    document.getElementById("summaryAnnualSubsidy").textContent = fmt.format(annualSubsidy);
+    const subsidyPctOfIncome = totalIncome > 0 ? (annualSubsidy / totalIncome) * 100 : 0;
+    document.getElementById("summarySubsidyPercent").textContent = isRentFreemarket
+      ? "Project breaks even at the Required Sale Price above."
+      : (annualSubsidy > 0 ? subsidyPctOfIncome.toFixed(1) + "% of annual income" : "");
+    document.getElementById("summarySubsidyRow").classList.toggle("hidden", !isRentFreemarket && annualSubsidy <= 0);
+    document.getElementById("summarySubsidyRow").classList.toggle("deficit", annualSubsidy > 0);
+  }
 
   // Gap summary banner under the totals chart — uses the toggle-aware
   // debt figure so the "Annual amount not covered" value flips between
