@@ -1072,7 +1072,7 @@ const WHY_THIS_MATTERS = [
 // ── Meeting Zoom / Passcode data ──
 // ══════════════════════════════════════════════════════════════
 //
-// Three pieces consumed by js/gov-hub.js:
+// Three pieces consumed by js/gov-helpers.js:
 //   1. MEETING_ZOOM_LINKS  — registration / join URLs per meeting
 //                            (keyed "source|YYYY-MM-DD|meeting title")
 //   2. SCHOOL_ZOOM_LINK    — School District R-1 uses the same Zoom
@@ -1084,7 +1084,7 @@ const WHY_THIS_MATTERS = [
 // NOTE: ALL THREE of these declarations were lost in a single edit
 // (commit b65a4b2). MEETING_PASSCODES restored 2026-05-18 along with
 // MEETING_ZOOM_LINKS (empty default) and SCHOOL_ZOOM_LINK. Without
-// them, gov-hub.js getMeetingZoomLink() throws ReferenceError on every
+// them, gov-helpers.js getMeetingZoomLink() throws ReferenceError on every
 // meeting card → Zoom panel never renders. Add the URLs as new
 // agendas post; see the "Memory: deep-link URL patterns" memory file
 // for the per-source pattern.
@@ -2137,7 +2137,7 @@ const LOCAL_ORGS = [
 
 /* ── Telluride Jewish Community events — bot will refresh this ── */
 /* Source: https://www.telluridejewishcommunity.com/events?format=json
-   The fetchTellurideJewishEvents() helper in gov-hub.js prefers this const
+   The fetchTellurideJewishEvents() helper in gov-helpers.js prefers this const
    over the live JSON fetch when present. v2/events.html reads TJC_EVENTS
    directly via data-only.js extraction. */
 const TJC_EVENTS = [

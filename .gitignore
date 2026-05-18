@@ -21,3 +21,11 @@ smc-watch.log
 # OS / editor scratch
 .DS_Store
 *.swp
+
+# Sibling project — the Valley Project Map is a separate GitHub repo
+# (morgan524/livable-telluride-valley-map) with its own GitHub Pages
+# deploy. It's cloned alongside this repo as a working directory:
+#   cd <project-root> && git clone https://github.com/morgan524/livable-telluride-valley-map.git valley-map
+# That nested checkout would otherwise show as untracked in gov-hub; this
+# rule excludes it from gov-hub's index.
+/valley-map/

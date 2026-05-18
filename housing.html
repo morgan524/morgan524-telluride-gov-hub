@@ -403,7 +403,7 @@
   </main>
 
   <script>
-    /* ── Sample data — falls back to this if /js/gov-hub.js isn't loaded.
+    /* ── Sample data — falls back to this if /js/gov-helpers.js isn't loaded.
        Real data comes from HOUSING_LISTINGS via loadLiveHousing(). ───── */
     const SAMPLE_LISTINGS = [
       {
@@ -625,7 +625,7 @@
     }
     render();
 
-    /* ── Live data: pulls HOUSING_LISTINGS from /js/gov-hub.js. ────────
+    /* ── Live data: pulls HOUSING_LISTINGS from /js/gov-helpers.js. ────────
        The deployed const has fields {title, type, lottery, address,
        beds, price, source, url, applyUrl, deadline, eligibility, note,
        lat, lng, ...}. We map to our card schema. ── */
