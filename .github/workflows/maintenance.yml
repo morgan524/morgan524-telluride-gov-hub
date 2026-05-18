@@ -27,7 +27,10 @@ jobs:
           # Optional. When present, the liveness checks confirm that the
           # Mailchimp RSS-driven digest campaigns are still running. Without
           # it, the campaign-paused check is skipped (and logs an ℹ note).
-          MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
+          # Prefer MAILCHIMP_API_KEY_NEW (current key, rotated 2026-05-18);
+          # fall back to MAILCHIMP_API_KEY for backward compatibility while
+          # the old secret is being removed from repo Settings → Secrets.
+          MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY_NEW || secrets.MAILCHIMP_API_KEY }}
         run: |
           set -o pipefail
           node scripts/maintenance.js 2>&1 | tee /tmp/maintenance.log
