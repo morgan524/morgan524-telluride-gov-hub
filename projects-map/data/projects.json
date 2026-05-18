@@ -460,15 +460,15 @@
     "name": "Sunnyside Housing Project",
     "shortName": "Sunnyside",
     "location": "Telluride",
-    "communityArea": "Telluride",
+    "communityArea": "County",
     "jurisdiction": "Town of Telluride",
     "projectType": [
       "Housing"
     ],
     "status": "Built",
-    "latitude": 37.9451,
-    "longitude": -107.8087,
-    "geometryType": "point",
+    "latitude": 37.951437,
+    "longitude": -107.856516,
+    "geometryType": "polygon",
     "squareFootage": 29718,
     "housingUnits": 30,
     "hotelRooms": null,
@@ -490,7 +490,10 @@
     "estimatedCostPerUnit": 516103,
     "costNote": "Model \u2014 29,718 sf \u00d7 $521/sf = $15.48M total / 30 units = $516,103 per unit. Land contributed by San Miguel County (no purchase cost). $11.965M financed across Series 2021A/B bonds maturing 2040 with $6.17M principal balloon. Town cash subsidy $3.51M.",
     "publiclyFunded": true,
-    "costTrackerKey": "Sunnyside"
+    "costTrackerKey": "Sunnyside",
+    "cameraBearing": 90,
+    "cameraPitch": 55,
+    "cameraZoom": 17.4
   },
   {
     "id": "voodoo-affordable-housing",
