@@ -142,7 +142,8 @@ const COUNTY_CACHED_DATA = [
     title: 'Board of County Commissioners Meeting',
     type: 'bocc',
     location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: null,
+    civicClerkId: 896,
+    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/896/files/agenda/1716',
     note: 'Agenda typically posted the Friday before.'
   },
   {
@@ -204,11 +205,10 @@ const SMART_CACHED_DATA = [
     date: 'May 20, 2026',
     time: '4:00 PM',
     title: 'SMART Board of Directors',
-    agendaUrl: null,
+    agendaUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART%20Board%20Agenda_May%2014th%202026_distributed.pdf',
     packetUrl: null,
     special: false,
-    location: 'SMART Office • Lawson Hill',
-    note: 'Next scheduled meeting -- agenda and packet will be posted closer to the date.'
+    location: 'SMART Office • Lawson Hill'
   },
   {
     date: 'June 11, 2026',
@@ -363,7 +363,7 @@ const SCHOOL_CACHED_DATA = [
   {
     date: 'April 20, 2026',
     time: '5:15 PM',
-    title: 'Board of Education Special Meeting',
+    title: 'Telluride Board of Education Special Meeting',
     agendaUrl: null,
     packetUrl: null,
     special: true,
@@ -373,7 +373,7 @@ const SCHOOL_CACHED_DATA = [
   {
     date: 'April 27, 2026',
     time: '3:30 PM',
-    title: 'Board of Education Work Session',
+    title: 'Telluride Board of Education Work Session',
     agendaUrl: null,
     packetUrl: null,
     special: false,
@@ -383,7 +383,7 @@ const SCHOOL_CACHED_DATA = [
   {
     date: 'April 28, 2026',
     time: '5:15 PM',
-    title: 'Board of Education Monthly Meeting',
+    title: 'Telluride Board of Education Monthly Meeting',
     agendaUrl: null,
     packetUrl: null,
     special: false,
@@ -391,9 +391,18 @@ const SCHOOL_CACHED_DATA = [
     note: 'Next scheduled monthly meeting -- agenda posted closer to the date.'
   },
   {
+    date: 'May 12, 2026',
+    time: '5:15 PM',
+    title: 'Telluride Board of Education Special Meeting',
+    agendaUrl: 'https://www.tellurideschool.org/agendasandminutes#docaccess-7bfb6768652d3c9355af6d54116a1d52',
+    packetUrl: null,
+    special: true,
+    location: 'Bridal Veil District Conference Room / Zoom'
+  },
+  {
     date: 'May 18, 2026',
     time: '3:30 PM',
-    title: 'Board of Education Work Session',
+    title: 'Telluride Board of Education Work Session',
     agendaUrl: null,
     packetUrl: null,
     special: false,
@@ -402,8 +411,8 @@ const SCHOOL_CACHED_DATA = [
   {
     date: 'May 19, 2026',
     time: '5:15 PM',
-    title: 'Board of Education Monthly Meeting',
-    agendaUrl: null,
+    title: 'Telluride Board of Education Monthly Meeting',
+    agendaUrl: 'https://www.tellurideschool.org/agendasandminutes#docaccess-3724e3e121e28cab3856a1aad5398144',
     packetUrl: null,
     special: false,
     location: 'Bridal Veil District Conference Room / Zoom'
@@ -411,7 +420,7 @@ const SCHOOL_CACHED_DATA = [
   {
     date: 'June 9, 2026',
     time: '3:30 PM',
-    title: 'Board of Education Work Session',
+    title: 'Telluride Board of Education Work Session',
     agendaUrl: null,
     packetUrl: null,
     special: false,
@@ -420,7 +429,7 @@ const SCHOOL_CACHED_DATA = [
   {
     date: 'June 9, 2026',
     time: '5:15 PM',
-    title: 'Board of Education Monthly Meeting',
+    title: 'Telluride Board of Education Monthly Meeting',
     agendaUrl: null,
     packetUrl: null,
     special: false,
@@ -430,7 +439,7 @@ const SCHOOL_CACHED_DATA = [
   {
     date: 'March 16, 2026',
     time: '3:30 PM',
-    title: 'Board of Education Work Session',
+    title: 'Telluride Board of Education Work Session',
     agendaUrl: 'https://files.smartsites.parentsquare.com/3403/31626_ws_packet.pdf',
     packetUrl: null,
     special: false,
@@ -439,7 +448,7 @@ const SCHOOL_CACHED_DATA = [
   {
     date: 'March 17, 2026',
     time: '5:15 PM',
-    title: 'Board of Education Monthly Meeting',
+    title: 'Telluride Board of Education Monthly Meeting',
     agendaUrl: 'https://files.smartsites.parentsquare.com/3403/31726_mm_packet.pdf',
     packetUrl: null,
     special: false,
@@ -637,8 +646,7 @@ const NORWOOD_CACHED_DATA = [
     date: 'May 18, 2026',
     title: 'Planning and Zoning Commission Meeting',
     board: 'pz',
-    agendaUrl: null,
-    note: 'Next scheduled P&Z meeting -- agenda posted before the meeting.'
+    agendaUrl: 'https://www.norwoodtown.com/planning-and-zoning-commission-meetings#docaccess-5850a6d289f0a356a61967ed2c3082e8'
   },
   {
     date: 'April 20, 2026',
@@ -707,7 +715,7 @@ const OPHIR_CACHED_DATA = [
     date: 'May 19, 2026',
     title: 'General Assembly Meeting',
     board: 'ga',
-    agendaUrl: null
+    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/May-19%2C-2026-Agenda.pdf'
   },
   {
     date: 'June 16, 2026',
@@ -1069,13 +1077,34 @@ const WHY_THIS_MATTERS = [
 ];
 
 
-// ── Meeting Zoom passcodes / dial-in info ──
-// Key format: "source|YYYY-MM-DD|meeting title" (matches MEETING_ZOOM_LINKS).
-// Consumed by gov-hub.js: getMeetingZoomLink() / passcode renderer (~1172).
-// NOTE: the `const MEETING_PASSCODES = {` opener was lost in a prior edit;
-// restored 2026-05-18. Without it the whole gov-data.js fails to parse and
-// every const declared below (LOCAL_ORGS, LAND_USE_ISSUES, ENTITY_LOGOS,
-// DEEP_DIVE_PAGES, etc.) becomes undefined in the browser.
+// ══════════════════════════════════════════════════════════════
+// ── Meeting Zoom / Passcode data ──
+// ══════════════════════════════════════════════════════════════
+//
+// Three pieces consumed by js/gov-hub.js:
+//   1. MEETING_ZOOM_LINKS  — registration / join URLs per meeting
+//                            (keyed "source|YYYY-MM-DD|meeting title")
+//   2. SCHOOL_ZOOM_LINK    — School District R-1 uses the same Zoom
+//                            room for every meeting, so a single
+//                            constant is checked first for source='school'
+//   3. MEETING_PASSCODES   — Meeting ID + passcode + phone, same key
+//                            shape as MEETING_ZOOM_LINKS
+//
+// NOTE: ALL THREE of these declarations were lost in a single edit
+// (commit b65a4b2). MEETING_PASSCODES restored 2026-05-18 along with
+// MEETING_ZOOM_LINKS (empty default) and SCHOOL_ZOOM_LINK. Without
+// them, gov-hub.js getMeetingZoomLink() throws ReferenceError on every
+// meeting card → Zoom panel never renders. Add the URLs as new
+// agendas post; see the "Memory: deep-link URL patterns" memory file
+// for the per-source pattern.
+
+const MEETING_ZOOM_LINKS = {
+  // Add entries as they appear in agenda PDFs, e.g.
+  // 'telluride|2026-06-17|HARC Meeting': 'https://us06web.zoom.us/meeting/register/...',
+};
+
+const SCHOOL_ZOOM_LINK = 'https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09';
+
 const MEETING_PASSCODES = {
   'county|2026-03-25|Board of County Commissioners Special Meeting': {
     id: '816 3670 5978',
