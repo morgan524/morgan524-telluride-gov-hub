@@ -1092,6 +1092,14 @@ const WHY_THIS_MATTERS = [
 const MEETING_ZOOM_LINKS = {
   // Add entries as they appear in agenda PDFs, e.g.
   // 'telluride|2026-06-17|HARC Meeting': 'https://us06web.zoom.us/meeting/register/...',
+
+  // ── May 2026 meetings (extracted from posted agendas) ──
+  'norwood|2026-05-18|Planning and Zoning Commission Meeting':
+    'https://us02web.zoom.us/j/85001344971',
+  'ophir|2026-05-19|General Assembly Meeting':
+    'https://us02web.zoom.us/j/86701438435',
+  'smart|2026-05-20|SMART Board of Directors':
+    'https://us02web.zoom.us/j/84956549553?pwd=ufEmj1aZHEU6r8ocV7KV3YGbS403wI.1',
 };
 
 const SCHOOL_ZOOM_LINK = 'https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09';
@@ -1121,6 +1129,23 @@ const MEETING_PASSCODES = {
   '__school_default__': {
     id: '865 8512 4120',
     passcode: 'TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09',
+    phone: ''
+  },
+
+  // ── May 2026 meetings (extracted from posted agendas) ──
+  'norwood|2026-05-18|Planning and Zoning Commission Meeting': {
+    id: '850 0134 4971',
+    passcode: '8142302',
+    phone: ''
+  },
+  'ophir|2026-05-19|General Assembly Meeting': {
+    id: '867 0143 8435',
+    passcode: '373146',
+    phone: '+1-669-900-6833 (San Jose)'
+  },
+  'smart|2026-05-20|SMART Board of Directors': {
+    id: '849 5654 9553',
+    passcode: '(use Zoom link — passcode embedded in URL)',
     phone: ''
   }
 };
