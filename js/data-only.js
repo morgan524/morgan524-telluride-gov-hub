@@ -1342,39 +1342,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/04/May26-2-1.png"
   },
   {
-    title: "Book Buzz w/The Pour Over Pedaler",
-    link: "https://koto.org/event/book-buzz-w-the-pour-over-pedaler/",
-    description: "Come enjoy learning about the hottest new titles in the library and enjoy a free coffee from Luke, The Pour Over Pedaler.",
-    pubDate: "2026-05-18T09:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/book-buzz-5.png"
-  },
-  {
-    title: "Money Reset: Getting Your Budget on Track – A Free Financial Literacy Class",
-    link: "https://koto.org/event/money-reset-getting-your-budget-on-track-a-free-financial-literacy-class/2026-05-18/1/",
-    description: "The Telluride Foundation is partnering with four local banks, the Wilkinson Library, and Collaborative Action for Immigrants (CAFI) to offer a free financial literacy class, in both English and Spanish, on Monday, May 18. The English workshop will be held from noon to 1:30 p.m. in the Program Room at the Wilkinson Public Library, with lunch provided, and is also available via Zoom. For those attending the afternoon session via Zoom, participants located in the Norwood/Nucla/Naturita area can go to Citizens State Bank, Naturita branch, where they will be live-streaming the event and providing light food and drink. The Spanish workshop runs from 5:30 to 7:00 p.m. in the Library's Program Room, with light food and childcare provided. Classes are free and open to the public, and registration for all classes (Zoom, Citizens State Bank, or in-person) is requested: https://forms.gle/CjepTJxqoCfGwdt17",
-    pubDate: "2026-05-18T12:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/Financial-Literacy-Class_EnglichAndSpanish_FINAL-scaled.jpg"
-  },
-  {
-    title: "Savvy Seniors- Open Tech",
-    link: "https://koto.org/event/savvy-seniors-open-tech-2/",
-    description: "Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music.",
-    pubDate: "2026-05-18T13:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/May26-2-1.png"
-  },
-  {
     title: "Money Reset: Getting Your Budget on Track – A Free Financial Literacy Class",
     link: "https://koto.org/event/money-reset-getting-your-budget-on-track-a-free-financial-literacy-class/2026-05-18/2/",
     description: "The Telluride Foundation is partnering with four local banks, the Wilkinson Library, and Collaborative Action for Immigrants (CAFI) to offer a free financial literacy class, in both English and Spanish, on Monday, May 18. The English workshop will be held from noon to 1:30 p.m. in the Program Room at the Wilkinson Public Library, with lunch provided, and is also available via Zoom. For those attending the afternoon session via Zoom, participants located in the Norwood/Nucla/Naturita area can go to Citizens State Bank, Naturita branch, where they will be live-streaming the event and providing light food and drink. The Spanish workshop runs from 5:30 to 7:00 p.m. in the Library's Program Room, with light food and childcare provided. Classes are free and open to the public, and registration for all classes (Zoom, Citizens State Bank, or in-person) is requested: https://forms.gle/CjepTJxqoCfGwdt17",
@@ -3076,17 +3043,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Calm Conversation With Tri County Network",
-    link: "https://www.norwoodtown.com/2026-05-11-calm-conversation-with-tri-county-network",
-    description: "",
-    pubDate: "2026-05-11T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Community Event",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-05-12-nwc-meeting",
     description: "",
@@ -4627,9 +4583,9 @@ function getSchoolMeetings() {
         const later   = earlier === a ? b : a;
         const hasAgendaCombined = earlier.hasAgenda || later.hasAgenda;
         const combinedLink = (earlier.hasAgenda ? earlier.link : null) || (later.hasAgenda ? later.link : null) || earlier.link;
-        // Build a short title: strip common "Board of Education " prefix, join with " & "
-        const shorten = t => t.replace(/^Board of Education\s+/i, '').replace(/\s*--\s*Special Meeting$/i, '');
-        const combinedTitle = 'Board of Education ' + shorten(earlier.title) + ' & ' + shorten(later.title);
+        // Build a short title: strip common "Telluride Board of Education " prefix, join with " & "
+        const shorten = t => t.replace(/^(Telluride\s+)?Board of Education\s+/i, '').replace(/\s*--\s*Special Meeting$/i, '');
+        const combinedTitle = 'Telluride Board of Education ' + shorten(earlier.title) + ' & ' + shorten(later.title);
         const combinedTime = aTime && bTime ? aTime + ' & ' + bTime : (aTime || bTime);
         merged.push(Object.assign({}, earlier, {
           title: combinedTitle,
