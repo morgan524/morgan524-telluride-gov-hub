@@ -1,13 +1,13 @@
 /* js/gov-helpers.js — bot-managed data + pure helper functions.
  *
- * Loaded by EVERY page (after gov-data.js, before gov-hub.js if at all).
- *   Legacy index.html:    gov-data.js + gov-helpers.js + gov-hub.js
+ * Loaded by EVERY page (after gov-data.js, before gov-helpers.js if at all).
+ *   Legacy index.html:    gov-data.js + gov-helpers.js + gov-helpers.js
  *   v2 standalone pages:  gov-data.js + gov-helpers.js
  *
- * This used to be auto-generated as data-only.js from gov-hub.js by
+ * This used to be auto-generated as data-only.js from gov-helpers.js by
  * scripts/extract-data-only.js. As of 2026-05-18 it's the SINGLE SOURCE
  * of truth — both the content-refresh bot and humans edit it directly,
- * and gov-hub.js no longer carries duplicates of these consts.
+ * and gov-helpers.js no longer carries duplicates of these consts.
  *
  * Depends on gov-data.js (must load first) for COUNTY_CACHED_DATA,
  * MV_CACHED_DATA, COUNTY_CIVICCLERK_BASE, MEETING_ZOOM_LINKS,
