@@ -242,8 +242,14 @@ async function checkLinks(govHubSrc, pulseSrc) {
   urlRe.lastIndex = 0;
   while ((m = urlRe.exec(pulseSrc)) !== null) allUrls.add(m[0]);
 
-  // Filter to actual content URLs (not API endpoints or internal refs)
+  // Filter to actual content URLs (not API endpoints or internal refs).
+  // Also drop URLs that captured template-literal source fragments — the
+  // regex above doesn't exclude `$` or `{`, so an expression like
+  // `${ev.urlname || ev.id}` inside a backtick string gets caught up to
+  // the first whitespace as a fake URL. Anything containing `${` is
+  // source code, not a real link.
   const contentUrls = [...allUrls].filter(u =>
+    !u.includes('${') &&
     !u.includes('api.codetabs.com') &&
     !u.includes('api.allorigins.win') &&
     !u.includes('api.rss2json.com') &&
