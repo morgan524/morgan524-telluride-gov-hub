@@ -5185,15 +5185,15 @@ document.querySelectorAll('.chip[data-tab-target="local-news"]').forEach(chip =>
 // Updated: 2026-04-01  — refresh periodically from telluridenews.com
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "Tiny patients, big fight: NICU parents win leave in 2 states and push for more",
+    title: "Trump administration rescinds Public Lands Rule",
     source: "Telluride Times",
     date: "May 17, 2026",
-    firstSeen: "2026-05-17",
-    newsTopic: "housing",
-    copy: "A Fort Collins couple faced the difficult choice between working while their baby was in the NICU or using up parental leave before bringing her home. Colorado became the first state to offer paid NICU leave in January - 12 weeks on top of regular parental leave - while Illinois will start offering 10-20 days unpaid next month.",
+    firstSeen: "2026-05-18",
+    newsTopic: "arts-culture",
+    copy: "The Trump administration rescinded the Public Lands Rule, which would have given conservation equal weight with mining, drilling, and grazing when considering uses for BLM lands. The move affects 298,733 acres of BLM land in San Miguel County and will impact ongoing planning for the Uncompahgre Resource Management Plan.",
     claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_972ba0ce-4c07-5b4f-9b1e-7d3dc9268852.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/0e/e0e2f3ab-4e6e-58b6-83ea-c282291ca3c3/6a09c00146405.image.jpg",
+    href: "https://www.telluridenews.com/news/article_8b172d1f-535e-4d09-b70c-ed1a18b83bde.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/4a/04a53e93-4905-40fc-8659-1f3e4c69202f/6a0a0e02139c0.image.jpg",
     imgHiRes: true
   },
   {
@@ -5206,6 +5206,30 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_fd56087d-96f6-5692-8644-bb2754f3d21b.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/0e/e0e2f3ab-4e6e-58b6-83ea-c282291ca3c3/6a09c00146405.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Tiny patients, big fight: NICU parents win leave in 2 states and push for more",
+    source: "Telluride Times",
+    date: "May 17, 2026",
+    firstSeen: "2026-05-17",
+    newsTopic: "housing",
+    copy: "A Fort Collins couple faced the difficult choice between working while their baby was in the NICU or using up parental leave before bringing her home. Colorado became the first state to offer paid NICU leave in January - 12 weeks on top of regular parental leave - while Illinois will start offering 10-20 days unpaid next month.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_972ba0ce-4c07-5b4f-9b1e-7d3dc9268852.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/0e/e0e2f3ab-4e6e-58b6-83ea-c282291ca3c3/6a09c00146405.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Cassidy tried to get along with Trump after his impeachment vote. Retribution came anyway",
+    source: "Telluride Times",
+    date: "May 17, 2026",
+    firstSeen: "2026-05-18",
+    newsTopic: "government",
+    copy: "Senator Cassidy finished third in Saturday's primary despite outspending rivals, unable to overcome Trump's opposition five years after voting to convict him during impeachment. Trump-endorsed Julia Letlow led the voting and will face state Treasurer John Fleming in the June 27 runoff for the Republican nomination.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_1b4aa47e-075a-5201-80b4-8260d28c5013.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/5d/e5dde20d-6cde-562d-ac58-8f35803d191d/6a0a11cd27eb3.image.jpg",
     imgHiRes: true
   },
   {
@@ -6001,54 +6025,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Man to plead guilty in Colorado firebombing attack on pro-Israel demonstrators",
-    source: "Telluride Times",
-    date: "May 4, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "public-safety",
-    copy: "An Egyptian national who threw Molotov cocktails at pro-Israel demonstrators in Boulder plans to change his plea to guilty on state charges. The attack killed an 82-year-old woman and injured a dozen others, with the suspect saying he planned it for a year. He still faces federal hate crime charges and prosecutors are considering the death penalty.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_931f4da9-96f2-578e-97a4-bdf03c024048.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride CrossFit opens new Lawson Hill gym",
-    source: "Telluride Times",
-    date: "May 4, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "community",
-    copy: "Telluride CrossFit opened their new Lawson Hill location in March after construction wrapped up ahead of schedule. The gym has 140+ members and offers 8-9 weekday classes plus Saturday sessions, with new additions including kids' classes and yoga starting in May.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/business/article_1d5aab25-10fb-4778-b2c1-3973af8a0d9e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/36/7362e16d-547c-4e31-a280-7e922c23bc57/69f9037527be2.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "States across the wildfire-prone Western US are using AI for early detection",
-    source: "Telluride Times",
-    date: "May 4, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "public-safety",
-    copy: "Western states are deploying AI-enabled cameras to detect wildfires earlier than 911 calls in remote areas. Arizona Public Service has nearly 40 cameras with plans for 71, while California operates over 1,200 through ALERTCalifornia. The technology costs around $50,000 per camera annually but gives firefighters a 45-minute head start on average.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_3d9717e8-6111-5f8d-b69b-3260bf6758a8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3c/c3c369ac-5496-5153-b4fc-3638934dc35a/69f899e7aa3db.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Safe actions in work zones can save lives",
-    source: "Telluride Times",
-    date: "May 4, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "community",
-    copy: "The Transportation Commissioner for District 8 reflects on becoming more aware of road work dangers after taking the position. CDOT manages 200 construction projects annually, and work zone safety relies on drivers slowing down, avoiding phone use, and following flaggers' directions.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_0527f33c-d1be-4f91-9d6b-a570a138bf81.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/d1/9d1d4b74-6558-4cf1-9ef9-d0848f755a25/69f115f7721a2.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
     source: "Town of Telluride",
     date: "April 24, 2026",
@@ -6150,7 +6126,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "DOLA Economic Vitality Community Session on May 27, 2026",
     source: "Town of Ridgway",
-    date: "May 17, 2026",
+    date: "May 18, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -6161,7 +6137,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "CO Main Street Architect Visits on May 27-28, 2026",
     source: "Town of Ridgway",
-    date: "May 17, 2026",
+    date: "May 18, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -6194,7 +6170,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Ridgway Tourism Marketing Survey Now Open through May 15th!",
     source: "Town of Ridgway",
-    date: "May 17, 2026",
+    date: "May 18, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -6205,7 +6181,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "2026 Street Grading / Improvement Schedule",
     source: "Town of Ridgway",
-    date: "May 17, 2026",
+    date: "May 18, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -6216,7 +6192,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "May 17, 2026",
+    date: "May 18, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -6958,6 +6934,61 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Conference Center, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Bardic Trails Online Poetry Night",
+    link: "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-06-02/",
+    description: "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit to get the zoom link each month, Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of California Feb. …",
+    pubDate: "2026-06-02T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg"
+  },
+  {
+    title: "Pilates for All Bodies with Laura",
+    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-06-04/",
+    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-06-04T12:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Art Walk Telluride",
+    link: "https://koto.org/event/art-walk-telluride/2026-06-04/",
+    description: "Join us the first Thursday of every month for Telluride's Art Walk. It will be an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists. From 5–7 pm, participating venues will open their doors, showcasing new collections and inviting art lovers to explore the vibrant gallery scene. Find what's new on www.telluridearts.org Note: Special Edition Art Walk May 21st.",
+    pubDate: "2026-06-04T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png"
+  },
+  {
+    title: "Up-off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-06-05/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-06-05T10:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "The Science of Connection: How our Relationships with Animals Shape Health and Wellbeing",
+    link: "https://koto.org/event/the-science-of-connection-how-our-relationships-with-animals-shape-health-and-wellbeing/",
+    description: "Dr. Kevin Morris, from the University of Denver, Graduate School of Social Services, The Institute for Human Animal Connection (IHAC), will visit Telluride Science & Innovation Center on Friday, June 5th, for a presentation called \"The Science of Connection: How our Relationships with Animals Shape Health and Wellbeing.\" Dr. Morris has done numerous studies and has worked with Veterans, prison inmates, underprivileged children and underserved communities to study and improve the bond and relationships between animals and humans. Free and open to the public.",
+    pubDate: "2026-06-05T17:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Science &#038; Innovation Center, TELLURIDE",
+    imageUrl: ""
   }
 ];
 const WILKINSON_EVENTS = [
@@ -7039,17 +7070,6 @@ const HUMANE_SOCIETY_ANIMALS = [
     photo: "https://new-s3.shelterluv.com/profile-pictures/25b7a402804152231031867f03d44d27/ee52e26ad06de37c29ae074ce78437cc.jpg",
     profileUrl: "https://www.shelterluv.com/embed/animal/213678848",
     summary: "Young Dog • Collie, Border / Pyrenees, Great • Female"
-  },
-  {
-    id: "TEL-A-182",
-    name: "Bo",
-    species: "Dog",
-    breed: "Shepherd, Australian / Mixed Breed (Medium)",
-    ageGroup: "Young Dog",
-    sex: "Male",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/a74011fc5ea2d10fe35f8de678c96f31/989fa16c7893770d27582a324c4fa712.jpg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/213692298",
-    summary: "Young Dog • Shepherd, Australian / Mixed Breed (Medium) • Male"
   }
 ];
 
