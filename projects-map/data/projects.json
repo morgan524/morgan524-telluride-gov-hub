@@ -1,8 +1,8 @@
 [
   {
     "id": "aldasoro-pud",
-    "name": "Aldasoro PUD / Diamond Ridge",
-    "shortName": "Aldasoro PUD",
+    "name": "Diamond Ridge",
+    "shortName": "Diamond Ridge",
     "location": "Aldasoro Mesa \u2014 west of Telluride",
     "communityArea": "East End",
     "jurisdiction": "San Miguel County",
@@ -158,43 +158,6 @@
     "cameraZoom": 17.4,
     "publiclyFunded": true,
     "costTrackerKey": "Carhenge"
-  },
-  {
-    "id": "chair-7-open-space",
-    "name": "Chair 7 / Former Hotel Development",
-    "shortName": "Chair 7",
-    "location": "Mountain Village / Chair 7 lift area",
-    "communityArea": "Mountain Village",
-    "jurisdiction": "San Miguel County Open Space District",
-    "projectType": [
-      "Open Space",
-      "Hotel/Lodging",
-      "Legal/Governance"
-    ],
-    "status": "Proposed",
-    "latitude": 37.928,
-    "longitude": -107.862,
-    "geometryType": "point",
-    "squareFootage": null,
-    "housingUnits": null,
-    "hotelRooms": null,
-    "estimatedEmployees": null,
-    "publicDebtSubsidy": null,
-    "waterUtilityIssue": "Unknown",
-    "trafficIssue": "Medium",
-    "decisionBody": "BOCC / Open Space District Board",
-    "nextMeetingDate": null,
-    "publicCommentDeadline": null,
-    "keyQuestion": "Was the Chair 7 area effectively dedicated to the Open Space District in 1979, and does a former hotel concept on that land honor or violate that public commitment?",
-    "whyItMatters": "In 1979, the Chair 7 area was understood by many to be dedicated to San Miguel County's Open Space District. A subsequent hotel development concept raised questions about whether that public land commitment can be unwound decades later.",
-    "deepDiveUrl": "https://livabletelluride.org/Blog%20Posts/the-chair-7-development-controversy/",
-    "primarySourceUrl": "",
-    "lastUpdated": "2026-05-13",
-    "sourceConfidence": "Estimated",
-    "editorialStatus": "Needs Review",
-    "estimatedTotalCost": null,
-    "estimatedCostPerUnit": null,
-    "costNote": null
   },
   {
     "id": "four-seasons-mountain-village",
@@ -459,7 +422,7 @@
     "name": "Society Turn PUD",
     "shortName": "Society Turn",
     "location": "Society Turn \u2014 Hwy 145 & Society Drive",
-    "communityArea": "East End",
+    "communityArea": "County",
     "jurisdiction": "San Miguel County",
     "projectType": [
       "Medical",
@@ -467,7 +430,7 @@
       "Hotel",
       "Land Use"
     ],
-    "status": "Under Review",
+    "status": "Approved",
     "latitude": 37.949832,
     "longitude": -107.874382,
     "geometryType": "point",
@@ -502,7 +465,7 @@
     "projectType": [
       "Housing"
     ],
-    "status": "Under Review",
+    "status": "Built",
     "latitude": 37.9451,
     "longitude": -107.8087,
     "geometryType": "point",
@@ -540,7 +503,7 @@
       "Housing",
       "Public Finance/Debt"
     ],
-    "status": "Approved",
+    "status": "Built",
     "latitude": 37.936065,
     "longitude": -107.809564,
     "geometryType": "polygon",

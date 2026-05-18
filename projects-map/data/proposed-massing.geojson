@@ -7671,55 +7671,6 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "chair-7-massing",
-        "project_id": "chair-7-open-space",
-        "name": "Chair 7 Redevelopment Area",
-        "status": "Proposed",
-        "project_type": "Open Space / Hotel / Land Use",
-        "height_ft": 60,
-        "height_m": 18.29,
-        "base_m": 0,
-        "floors": 5,
-        "sqft": 120000,
-        "hotel_rooms": 80,
-        "housing_units": null,
-        "source_confidence": "Unknown",
-        "source_note": "Placeholder massing only. Chair 7 redevelopment concept has been discussed publicly but no formal application or site plan has been filed. 50m \u00d7 45m footprint \u00d7 5 floors is a speculative scale based on rumored 80-room hotel.",
-        "deep_dive_url": "https://livabletelluride.org/the-chair-7-development-controversy/",
-        "primary_source_url": "",
-        "last_updated": "2026-05-15"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -107.862285,
-              37.927797
-            ],
-            [
-              -107.861715,
-              37.927797
-            ],
-            [
-              -107.861715,
-              37.928203
-            ],
-            [
-              -107.862285,
-              37.928203
-            ],
-            [
-              -107.862285,
-              37.927797
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "shandoka-lot-l-bldg-a-massing",
         "project_id": "shandoka-lot-l",
         "name": "Shandoka Lot L \u2014 Building A (NW commercial/transit wing)",
