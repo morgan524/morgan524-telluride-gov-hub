@@ -226,17 +226,36 @@
     .v-card:hover .v-cta { background: var(--forest-soft); }
     /* Center the 7th (orphan) card on its own row in the 3-col grid. */
     .v-card-center { grid-column: 2; }
-    /* Logo variant: existing PNG logos sit in the same card slot but get a
-       white inset so the logo image isn't cropped by the card's rounded
-       corners. Used for Housing + Legal Notices, which already have nice
-       on-brand logo art rather than a vintage illustration. */
-    .v-card .v-logo {
+    /* Logo variant: existing on-brand PNG logos (Housing + Legal Notices)
+       sized to the SAME 335×335 square box as the vintage illustrations.
+       The source PNGs have an off-white background (~#fefbfa) with their
+       own internal decorative box. We use `mix-blend-mode: multiply` on
+       the image so those white pixels blend invisibly into our warmer
+       frame color, leaving only the icon art floating on the orangish
+       frame — no double-box effect. */
+    .v-card .v-logo-frame {
       width: 100%;
-      max-width: 240px;
-      height: 235px;
+      max-width: 335px;
+      aspect-ratio: 1 / 1;
+      margin: 0 auto 22px;
+      background: #f4e8d3;            /* warmer orangish cream — visible behind the icon */
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .v-card .v-logo {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
       object-fit: contain;
       display: block;
-      margin: 0 auto 22px;
+      mix-blend-mode: multiply;       /* white background of PNG vanishes into frame */
+      filter: saturate(0.95);
     }
 
     /* ── This Week + Donate row ── */
@@ -588,19 +607,19 @@
       <span class="v-cta">Learn More →</span>
     </a>
     <a class="v-card" href="/housing.html">
-      <img class="v-logo" src="/logo/Housing Search.png" alt="Housing">
+      <div class="v-logo-frame"><img class="v-logo" src="/logo/Housing Search.png" alt="Housing"></div>
       <h3>Housing</h3>
       <p>Local rentals, deed-restricted opportunities, lottery listings, and regional housing programs.</p>
       <span class="v-cta">View Housing →</span>
     </a>
     <a class="v-card" href="/legal-notices.html">
-      <img class="v-logo" src="/logo/Legal Notices.png" alt="Legal Notices">
+      <div class="v-logo-frame"><img class="v-logo" src="/logo/Legal Notices.png" alt="Legal Notices"></div>
       <h3>Legal Notices</h3>
       <p>Public hearings, RFPs, water court, estate filings, and other legal notices across the region.</p>
       <span class="v-cta">View Legal Notices →</span>
     </a>
     <a class="v-card v-card-center" href="/projects-map/">
-      <img class="v-img" src="img/cards/valley_project_map.jpg" alt="Vintage illustrated Valley Project Map emblem with mountains, map, and project pins">
+      <div class="v-logo-frame"><img class="v-logo" src="img/cards/valley_project_map.jpg" alt="Vintage illustrated Valley Project Map emblem with mountains, map, and project pins"></div>
       <h3>Valley Project Map</h3>
       <p>See major projects across the valley, from housing and hotels to public infrastructure, in one interactive map.</p>
       <span class="v-cta">Explore the Valley Map →</span>
