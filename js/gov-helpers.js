@@ -1252,17 +1252,6 @@ const COMMUNITY_EVENTS = [
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Online Author Talk with Nir Eyal",
-    link: "https://koto.org/event/online-author-talk-with-nir-eyal/",
-    description: "What if the only thing standing between you and the seemingly impossible…was belief? This is the question posed by bestselling author Nir Eyal in his new work, Beyond Belief. Most of your limits aren’t physical. They’re psychological. In Beyond Belief, Nir Eyal reveals how the hidden assumptions you carry shape what you see, how you feel, and what you do—and how to replace them with beliefs that unlock your true potential.",
-    pubDate: "2026-05-19T12:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/nir.png"
-  },
-  {
     title: "Talking Gourds Presents Stories and Poems",
     link: "https://koto.org/event/talking-gourds-presents-stories-and-poems/2026-05-19/",
     description: "The Telluride Institute’s Talking Gourds Poetry Program is hosting a live Stories & Poems series at the Wilkinson Public Library magazine room on the third Tuesday of every month at 5:30 pm. Following the featured poet's or story teller's reading we will hold a Talking Gourds sharing circle going around the room to let everyone speak. Attendees are encouraged to bring their own work or someone else’s that they like to share. For more information, visit the Telluride Institute Talking Gourds website: tellurideinstitute.org/talking-gourds",
@@ -2941,17 +2930,6 @@ const OURAY_RIDGWAY_EVENTS = [
 ];
 
 const NORWOOD_EVENTS = [
-  {
-    title: "NWC Meeting",
-    link: "https://www.norwoodtown.com/2026-05-12-nwc-meeting",
-    description: "",
-    pubDate: "2026-05-12T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-05-13-board-of-trustees-meeting",
