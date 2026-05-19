@@ -68,6 +68,18 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Mahoney sets State standard … twice",
+    source: "Telluride Times",
+    date: "May 19, 2026",
+    firstSeen: "2026-05-19",
+    newsTopic: "community",
+    copy: "Telluride junior Mahoney set new state records in both the 100 and 200 meters at the state championships, clocking 10.83 in the 100 and dealing with a 45-minute lightning delay before his 200 final. His 17 points helped Telluride finish 19th as a team, making both school and state history.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_7554c1af-188d-4958-b4eb-d99606cae703.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/78/f788412a-63b4-45dd-a492-93b90cafd637/6a0c1f226d915.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "New Mexico wildfire sparked by fatal medical plane crash spreads quickly in rural area",
     source: "Telluride Times",
     date: "May 18, 2026",
@@ -864,15 +876,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1394",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14249"
-  },
-  {
-    title: "County Planning Commission 5/14 Meeting in TELLURIDE",
-    source: "San Miguel County",
-    date: "May 1, 2026",
-    newsTopic: "land-use",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1393",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14225"
   },
   {
     title: "Many County Offices Closed May 21-25, 2026. Please plan ahead!",
@@ -1736,81 +1739,59 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Book Buzz with the Pour Over Pedaler",
-    link: "https://telluridelibrary.libcal.com/event/16687358?hs=a",
-    description: "9:00 AM – 10:00 AM · Get the scoop on the hottest new titles at the library during Book Buzz ! Discover upcoming releases, hidden gems, and staff favorites while enjoying a complimentary handcrafted coffee from Luke of The Pour Over Pedaler . Come sip, socialize, and leave with your next great read!",
-    pubDate: "2026-05-18T09:00:00.000Z",
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/16762977?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-05-19T10:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_23_14_12_02.jpg"
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
   },
   {
-    title: "Musik for Kinders",
-    link: "https://telluridelibrary.libcal.com/event/16567230?hs=a",
-    description: "10:30 AM – 11:30 AM",
-    pubDate: "2026-05-18T10:30:00.000Z",
+    title: "Online Author Talk with Nir Eyal",
+    link: "https://telluridelibrary.libcal.com/event/16560471?hs=a",
+    description: "12:00 PM – 1:00 PM · What if the only thing standing between you and the seemingly impossible&hellip;was belief? This is the question posed by bestselling author Nir Eyal in his new work, Beyond Belief . Most of your limits aren't physical. They're psychological. In Beyond Belief , Nir Eyal reveals how the hidden assumptions you carry shape what you see, how you feel, and what you do—and how to replace them with beliefs that unlock your true potential. Grounded in neuroscience, psychology, and unforgettable case studies, Eyal introduces the Three Powers of Belief: Attention, Anticipation, and Agency. Mastering these powers transforms how you see challenges, feel about the future, and act when it matters most. You'll learn how to: Spot hidden opportunities and solutions others overlook. Reclaim your mood, energy, and confidence by reshaping your beliefs. Stay calm, decisive, and in control when life feels uncertain. …",
+    pubDate: "2026-05-19T12:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: ""
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_11_15_52_27.jpg"
   },
   {
-    title: "Money Reset-Financial Literacy Class",
-    link: "https://telluridelibrary.libcal.com/event/16663331?hs=a",
-    description: "12:00 PM – 1:30 PM · Get your budget back on track! Join us for Money Reset, a financial literacy class, with the Telluride Foundation , ANB Bank and Alpine Bank. This class is free and open to the public. Food will be provided. Register in advance here if possible so we know how much food to buy for lunch.  If you would prefer to join via Zoom, please register for the Zoom Link here .",
-    pubDate: "2026-05-18T12:00:00.000Z",
+    title: "I Heart Art",
+    link: "https://telluridelibrary.libcal.com/event/16417093?hs=a",
+    description: "2:30 PM – 4:30 PM",
+    pubDate: "2026-05-19T14:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_05_13_19_38.jpg"
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1771000912.png"
   },
   {
-    title: "Savvy Seniors- Open Tech",
-    link: "https://telluridelibrary.libcal.com/event/16557840?hs=a",
-    description: "1:30 PM – 2:30 PM",
-    pubDate: "2026-05-18T13:30:00.000Z",
+    title: "Talking Gourds Presents: Stories and Poems-Danny Rosen",
+    link: "https://telluridelibrary.libcal.com/event/15798223?hs=a",
+    description: "5:15 PM – 7:00 PM · The Telluride Institute's Talking Gourds Poetry Program is hosting a live Stories & Poems series at the Wilkinson Public Library magazine room on the third Tuesday of every month at 5:15 pm. Following the featured poet&#39;s or story teller&#39;s reading we will hold a Talking Gourds sharing circle going around the room to let everyone speak. Attendees are encouraged to bring their own work or someone else's that they like to share. For more information, visit the Telluride Institute Talking Gourds website: tellurideinstitute.org/talking-gourds Jan. 20 / Tanya Ishikawa of Montrose Feb. 17 / Karen Bellerose of Lawson Mar. 17 / Mary Hearding of Rico Apr 21 / Joan Shapiro of Ridgway May 19 / Danny Rosen of Fruita June 16 / Paulo Munguia of Montrose July 21 / Peter Waldor of Trout Lake Aug. …",
+    pubDate: "2026-05-19T17:15:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Meeting Room #6 - large",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_12_12_49.png"
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_04_15_58_44.jpg"
   },
   {
-    title: "Hobby Hopping / Salta Hobbies",
-    link: "https://telluridelibrary.libcal.com/event/16802128?hs=a",
-    description: "4:00 PM – 5:00 PM · Come find out! Every Monday we will introduce teens to a new hobby in a fun, no-pressure setting. No experience needed- just show up and try something new!  Free and open to teens in 6-12th grades. ------------------------------------------------------ &iexcl;Ven a descubrirlo! Cada lunes presentaremos un nuevo hobby en un ambiente divertido y sin presi&oacute;n. No se necesita experiencia- &iexcl;solo ven y prueba algo nuevo!",
-    pubDate: "2026-05-18T16:00:00.000Z",
+    title: "Spanish Happy Hour",
+    link: "https://telluridelibrary.libcal.com/event/16007999?hs=a",
+    description: "5:30 PM – 6:30 PM · Practice your Spanish skills with other Spanish speakers at La Cocina. The Library will provide appetizers, and the bar will be available for you to purchase a beverage of your choice. Registration is not required, but it helps us have an idea of how many people will be in attendance, and therefore how much food to order.  All levels welcome!",
+    pubDate: "2026-05-19T17:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_28_12_44_40.png"
-  },
-  {
-    title: "Reinicio Financiero-Clase de educación financiera",
-    link: "https://telluridelibrary.libcal.com/event/16654391?hs=a",
-    description: "5:30 PM – 7:00 PM · Organizar tu Presupuesto. &Uacute;nase a nosotros para Reinicio Financiero, una clase de educaci&oacute;n financiera, con Telluride Foundation , ANB Bank y Alpine Bank. Esta clase es gratuita y abierta al p&uacute;blico. Se proporcionar&aacute; comida y cuidado de ni&ntilde;os. Favor de registrarse aqu&iacute; .",
-    pubDate: "2026-05-18T17:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_05_13_19_54.jpg"
-  },
-  {
-    title: "The Listening Club: The Cure - Disintegration",
-    link: "https://telluridelibrary.libcal.com/event/15299647?hs=a",
-    description: "6:00 PM – 7:00 PM · Take some time to listen to the month&#39;s featured album. Then, join The Listening Club the fourth Monday of each month for a deep discussion of the album lead by your album guide for the evening. Your knowledgeable guide will bring you cultural, historical, and musical context that will surprise and delight you, as well as bring you a greater understanding of the music you are hearing. It&#39;s like a book club, but for albums! Come join the fun at Telluride Music Company and get into a raffle for a vinyl copy of the month&#39;s featured album and enjoy some FREE pizza with the discussion. Bring your own beverage. ( Signing up here in advance helps us know how much pizza to order! ) Thanks to Telluride Music and KOTO Community Radio for the support. …",
-    pubDate: "2026-05-18T18:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Music Company",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715207112.jpg"
+    location: "La Cocina de Luz Restaurant",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715701794.jpg"
   }
 ];
 
@@ -1897,54 +1878,10 @@ const OURAY_COUNTY_EVENTS = [
     category: "Community Event",
     location: "- Ouray CO 81427",
     imageUrl: ""
-  },
-  {
-    title: "West Slope Water Summit",
-    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3637",
-    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3637",
-    pubDate: "2026-05-19T07:30:00.000Z",
-    source: "ouraycounty",
-    sourceLabel: "Ouray County",
-    category: "Community Event",
-    location: "Montrose County Event Center - 1036 N 7th St Montrose CO 81401",
-    imageUrl: ""
   }
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "On Display: Layers of Faces and Life-Paintings by Ruth Higdon and Julie Ahern",
-    link: "https://events.ourayridgwayevents.com/event/layers-of-faces-and-life-paintings-by-ruth-higdon-and-julie-ahern",
-    description: "A duo exhibition of new works by local painters Julie Ahern and Ruth Higdon. More info decker@ridgwayfuse.org",
-    pubDate: "2026-05-18T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52709680184864/huge/bf651b7d434184420bcaf9702ff358cbd88d3b9e.jpg"
-  },
-  {
-    title: "Senior Lunch by Neighbor to Neighbor",
-    link: "https://www.ourayneighbor.com/services",
-    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
-    pubDate: "2026-05-18T18:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
-  },
-  {
-    title: "WCOC After 5 Monthly Meeting",
-    link: "www.womansclubouraycounty.org/",
-    description: "The Woman's Club of Ouray County hosts WCOC After 5 the third Monday of each month. The \"WCOC After 5\" program has been developed in response for women in our community who cannot make the regular daytime meetings, however would like to be a part of the Woman's Club of Ouray County. This group will also be integral in the WCOC's Mission of Community Service and Philanthropy in Ouray County. Please visit the WCOC website for the location, speaker and meeting details. All Ouray County women are invited!",
-    pubDate: "2026-05-18T23:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Please check WCOC website for meeting location",
-    imageUrl: "https://localist-images.azureedge.net/photos/52338935097442/huge/c9303fa52ac8d19bebfdaf10538caf8eef7e84b4.jpg"
-  },
   {
     title: "Mid-Year Water Summit",
     link: "https://www.montrosecounty.net/891/West-Slope-Water-Summit",
@@ -2956,6 +2893,50 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Downtown Ridgway, CO",
     imageUrl: "https://localist-images.azureedge.net/photos/52365755793700/huge/95103614f2ba8e83504827d7da75c53b3814a972.jpg"
+  },
+  {
+    title: "First Friday Art Walk with Walter St.Clair",
+    link: "https://www.instagram.com/mountaingirlgallery/",
+    description: "Join us at the Mountain Girl Gallery on Friday, June 5 for our 9th Anniversary celebration featuring the sweets sounds of Walter St.Clair on the porch.",
+    pubDate: "2026-06-05T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52372912892394/huge/571ed29f2fe398fbe38b9d73af3e8e3e0168844d.jpg"
+  },
+  {
+    title: "First Friday Live Music - Coral Skye",
+    link: "https://sherbino.org/event/the-sherbino-presents-coral-skye-first-friday-show-2/",
+    description: "Friday, June 5th | 6:00–8:00 pm Sherbino “Living Room” Free Show | Cash Bar | Tips Encouraged Celebrate First Friday with an intimate evening of live music at the Sherbino! Join us in the Sherbino’s cozy “Living Room” near the bar for a special performance by Coral Skye. Coral is a musician out of Montrose, CO who enjoys sharing her pop “acousti-soul” style of music. With a decade of professional performances under her belt, she has entertained all sorts of audiences, from festival crowds to local nursing home residents and students in school programs. Her inspiration comes from the power of music, family members and the support of her caring audiences. She has opened up for names like Survivor at the Olathe Corn Festival and Big Head Todd and the Monsters at The Bridges concert in Montrose. …",
+    pubDate: "2026-06-06T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52687172889799/huge/7521571e527cc0dc1f360803533c1c60fa3cbb12.jpg"
+  },
+  {
+    title: "Music Bingo @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/music-bingo-the-wright",
+    description: "Music Bingo @ the Wright WHEN? Doors at 6:30 pm • Event at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT It’s bingo. But louder. And somehow emotionally complicated. Battle for glory using songs, questionable music knowledge, accidental dancing, and the sudden realization that one hit from 2007 still lives in your head rent-free. Expect singalongs, dramatic betrayals, nostalgic bangers, deep cuts, and at least one person absolutely convinced they should have won three rounds ago. Whether you’re a human jukebox or someone who confidently calls every song “that one TikTok song,” Music Bingo welcomes all skill levels and levels of chaos. Free to attend In-person event at the historic Wright Opera House Part of programming at the Wright Opera House, bringing arts, conversation, and community to downtown Ouray since 1889.",
+    pubDate: "2026-06-06T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52886458731201/huge/e99a2ec1f365e0aaf580bfd7ce874919c7d87cbf.jpg"
+  },
+  {
+    title: "Love Your Trail: Volunteer Trail Work Day",
+    link: "https://lp.constantcontactpages.com/ev/reg/fem7328",
+    description: "Help care for one of Ouray’s most beloved paths! Join us for a volunteer trail work day on the Uncompahgre Riverwalk Trail to improve the section just north of town. We’ll tackle projects that make a big difference, including replacing fence posts, repairing erosion damage, and trimming back overgrowth to keep the trail safe and beautiful for everyone. DATE: June 6, 2026 | 8 AM – 2 PM WHERE: Meet at the end of Uncompahgre St. off Hwy 550 at the Uncompahgre Riverwalk Trail WHAT TO BRING: Work gloves and a willingness to get your hands a little dirty for a good cause. REGISTER: tinyurl.com/ouraytrail Whether you’re a regular trail user or just want to give back to the community, we’d love to have you out there! This event is made possible by the Colorado West Land Trust and Uncompahgre Watershed Partnership.",
+    pubDate: "2026-06-06T14:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Uncompahgre River Walk Trail at the end of Uncompahgre St. off Hwy 550",
+    imageUrl: "https://localist-images.azureedge.net/photos/52516139023881/huge/445e4bb836fb3e8bffde1ab67060aff6c65050ce.jpg"
   }
 ];
 
