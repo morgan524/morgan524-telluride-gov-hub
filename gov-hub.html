@@ -199,6 +199,11 @@
       flex-direction: column;
       gap: 10px;
     }
+    /* Highlight cards that touch a code amendment or high-level land-use issue */
+    .meet-card.has-wtm {
+      border: 2px solid #2d6a4f;
+      box-shadow: 0 0 0 1px rgba(45,106,79,0.12), var(--shadow-card);
+    }
     .meet-card-head {
       display: flex;
       gap: 14px;
@@ -327,6 +332,22 @@
     .btn-action.primary:hover { background: #1a332c; }
     .btn-action.comment { background: var(--gold-soft); color: #7a5c10; border-color: rgba(181,138,44,0.35); }
     .btn-action.comment:hover { background: rgba(181,138,44,0.26); }
+    .btn-action.wtm { background: #fff; color: #8b7250; border-color: #8b7250; font-weight: 700; }
+    .btn-action.wtm:hover { background: #8b7250; color: #fff; }
+
+    /* "Why This Matters" modal */
+    #wtm-modal { display:none; position:fixed; inset:0; z-index:9000; align-items:center; justify-content:center; }
+    #wtm-modal.open { display:flex; }
+    .wtm-modal-overlay { position:absolute; inset:0; background:rgba(15,25,20,0.55); backdrop-filter:blur(3px); }
+    .wtm-modal-box { position:relative; z-index:1; background:#fff; border-radius:16px; box-shadow:0 24px 64px rgba(10,20,15,0.22); max-width:480px; width:calc(100% - 40px); padding:28px 28px 26px; animation:wtmSlideUp 0.22s ease-out; }
+    .wtm-modal-header { display:flex; align-items:center; gap:8px; margin-bottom:10px; }
+    .wtm-modal-icon { width:18px; height:18px; flex-shrink:0; color:#8b7250; }
+    .wtm-modal-label { font-size:0.68rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:#8b7250; flex:1; }
+    .wtm-modal-close { background:none; border:none; cursor:pointer; font-size:1rem; color:#7a8a85; padding:2px 4px; border-radius:4px; transition:color .15s; }
+    .wtm-modal-close:hover { color:#1a2e29; }
+    .wtm-modal-meeting { font-size:0.88rem; font-weight:700; color:#1a2e29; margin-bottom:14px; line-height:1.35; padding-bottom:12px; border-bottom:1px solid rgba(139,114,80,0.15); }
+    .wtm-modal-body { margin:0; font-size:0.92rem; line-height:1.7; color:#4a5e57; white-space:pre-wrap; }
+    @keyframes wtmSlideUp { from { opacity:0; transform:translateY(12px) scale(0.97); } to { opacity:1; transform:translateY(0) scale(1); } }
 
     /* Comment deadline note */
     .comment-deadline {
@@ -697,6 +718,58 @@
            + '</div>';
     }
 
+    // ── "Why This Matters" popup lookup ──
+    // Scans the meeting's title + summary against the WHY_THIS_MATTERS array
+    // in gov-data.js. Each entry has a regex (`match`) that fires on a
+    // specific code-amendment or high-level land-use topic (Comp Plan,
+    // wildfire code, Society Turn, Carhenge, etc.) — not on individual
+    // residential project reviews. Returns the entry's `popup` text (or
+    // `decision` as fallback), or null if no entry matches.
+    function getWTMEntry(m) {
+      if (typeof WHY_THIS_MATTERS === 'undefined') return null;
+      const text = (m.title || '') + ' | ' + (m.summary || '') + ' | ' + (m.description || '');
+      for (let i = 0; i < WHY_THIS_MATTERS.length; i++) {
+        const entry = WHY_THIS_MATTERS[i];
+        if (entry.match && entry.match.test(text)) return entry;
+      }
+      return null;
+    }
+
+    function ensureWTMModal() {
+      if (document.getElementById('wtm-modal')) return;
+      const el = document.createElement('div');
+      el.id = 'wtm-modal';
+      el.setAttribute('role', 'dialog');
+      el.setAttribute('aria-modal', 'true');
+      el.innerHTML =
+        '<div class="wtm-modal-overlay" onclick="closeWTMModal()"></div>' +
+        '<div class="wtm-modal-box">' +
+          '<div class="wtm-modal-header">' +
+            '<svg class="wtm-modal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>' +
+            '<span class="wtm-modal-label">Why This Matters</span>' +
+            '<button class="wtm-modal-close" onclick="closeWTMModal()" aria-label="Close">✕</button>' +
+          '</div>' +
+          '<div id="wtm-modal-title" class="wtm-modal-meeting"></div>' +
+          '<p id="wtm-modal-body" class="wtm-modal-body"></p>' +
+        '</div>';
+      document.body.appendChild(el);
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeWTMModal(); });
+    }
+    function openWTMModal(title, text) {
+      ensureWTMModal();
+      document.getElementById('wtm-modal-title').textContent = title;
+      document.getElementById('wtm-modal-body').textContent = text;
+      document.getElementById('wtm-modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeWTMModal() {
+      const el = document.getElementById('wtm-modal');
+      if (el) el.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    window.openWTMModal = openWTMModal;
+    window.closeWTMModal = closeWTMModal;
+
     function meetingCard(m) {
       const dateBadge = fmtDateBadge(m.date);
       const logo = m.entityLogo
@@ -716,6 +789,17 @@
         ? '<a class="btn-action" href="' + m.recordingUrl + '" target="_blank" rel="noopener">Recording</a>'
         : '';
 
+      // "Why This Matters" button + card highlight when the meeting touches
+      // a code amendment or high-level land-use issue.
+      const wtm = getWTMEntry(m);
+      const wtmText = wtm ? (wtm.popup || wtm.decision || '') : '';
+      const safeTitle = (m.title || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
+      const safeWtm = wtmText.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+      const wtmBtn = wtmText
+        ? '<button class="btn-action wtm" onclick="openWTMModal(\'' + safeTitle + '\',\'' + safeWtm + '\')">ℹ Why This Matters</button>'
+        : '';
+      const cardClass = wtmText ? 'meet-card has-wtm' : 'meet-card';
+
       // Comment button
       const ci = commentInfo(m);
       let commentBtn = '';
@@ -726,13 +810,13 @@
         deadlineNote = '<div class="comment-deadline">📅 ' + ci.deadline + '</div>';
       }
 
-      return '<article class="meet-card">'
+      return '<article class="' + cardClass + '">'
            + '<div class="meet-card-head">' + dateBadge
            + '<div class="meet-info">' + tag + '<h2 class="meet-title">' + m.title + '</h2></div>'
            + logo + '</div>'
            + summary + meta
            + zoom
-           + '<div class="meet-actions">' + agendaBtn + recordBtn + commentBtn + '</div>'
+           + '<div class="meet-actions">' + agendaBtn + wtmBtn + recordBtn + commentBtn + '</div>'
            + deadlineNote
            + '</article>';
     }
