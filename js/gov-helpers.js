@@ -68,6 +68,18 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "New Mexico wildfire sparked by fatal medical plane crash spreads quickly in rural area",
+    source: "Telluride Times",
+    date: "May 18, 2026",
+    firstSeen: "2026-05-19",
+    newsTopic: "public-safety",
+    copy: "A medical plane crash in New Mexico sparked a wildfire that doubled to over 19 square miles between Sunday and Monday morning. More than 600 firefighters are battling the blaze in steep terrain, working to protect evacuated cattle ranches and the community of Arabella amid red flag conditions with 20-30 mph winds.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_e905dbce-0fed-5240-93f4-648f460f0e69.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/ac/2ac4c526-79e0-546d-8e03-002c7e877354/6a0b78166dc04.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Busy, but feeling good",
     source: "Telluride Times",
     date: "May 18, 2026",
@@ -800,124 +812,13 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "San Miguel County recognizes National Historic Marker Day",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    firstSeen: "2026-05-12",
+    title: "Telluride Barricade Passes Mailed to Town Residents",
+    source: "Town of Telluride",
+    date: "May 19, 2026",
     newsTopic: "land-use",
-    copy: "San Miguel County joined the national recognition of Historic Marker Day, highlighting the work of its Historical Commission to preserve local markers and plaques. The commission is developing a webpage to help residents and visitors learn about the county's historical markers and their significance.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_743225a7-9d03-4795-8409-086c3af9758b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/40/84034eec-95c3-44a4-8fac-630f3a00bf4b/69fa7a16ce67a.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "CHALKBOARD for the week of May 7-13",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "government",
-    copy: "The weekly birthday list includes Ashley LaUond on May 8th, followed by several other community members through May 13th. Regular town meetings continue with the Town Board meeting the second Wednesday at 7 p.m. and School Board on the third Wednesday at 6 p.m. The Farmers Market runs Thursdays 2-6 p.m. through mid-October, and various community services like the food pantry, senior meals, and pickleball continue their regular schedules.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/the_norwood_post/article_2ef5bd86-8794-4816-8ed3-fc76bbd27167.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8b/f8b47ece-f18b-4c64-891d-3517aa2b0690/69fa6fb7bfb2a.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "You're invited to the groundbreaking of the new Norwood School",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "education",
-    copy: "Norwood's holding a groundbreaking ceremony for their new school, funded by a $50+ million state BEST Grant and local bonds. The new campus will house pre-K through 12th grade on 19 acres where the old disc golf course was, replacing the current aging facilities.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/the_norwood_post/article_c205d989-d94a-4e50-bc98-dd81947a31bd.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/03/c0304c73-0b0c-48e4-a100-80e11b1b2499/69fa6eca08f58.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Town of Norwood awarded funding for Norwood Hill improvements",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "community",
-    copy: "Norwood secured $1.25 million in state and federal funding to improve safety on Norwood Hill, which has been a longtime concern due to steep grades, sharp curves, and accident history. The town won't have to contribute any local matching funds, and work could start before the 2029 timeline if ready.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/the_norwood_post/article_dad1ad7d-73e3-41de-b2b1-24757153a694.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/7c/57c98200-de4b-4962-86c7-46d1750abfdc/69fa6d93b89e4.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Appreciation for teachers, staff",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "education",
-    copy: "The Telluride R-1 School District Board of Education officially proclaimed May 4-8, 2026 as Teacher and Staff Appreciation Week. The board resolution encourages students, families and community members to express gratitude to teachers and staff for their commitment to student success.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_fb79e810-1118-4f69-a3d4-2cb921d8dd13.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Foster homes needed",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    firstSeen: "2026-05-12",
-    newsTopic: "community",
-    copy: "Second Chance Humane Society is seeking foster families, especially with kitten season approaching. They need both long-term fosters for animals until adoption and short-term helpers for weekend stays or monthly breaks for shelter dogs.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_1c4f5f8f-7308-4fbf-8799-2576d6ba9026.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/40/24040efb-65d5-4496-a2c3-fc2a74ff553d/69fa65f39ffe9.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Trump administration sues Denver over its 1989 assault weapons ban",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "public-safety",
-    copy: "The Trump administration is suing Denver over its 1989 assault weapons ban, claiming it violates Second Amendment rights. Denver's mayor and police chief rejected federal demands to drop the ban, with Mayor Mike Johnston saying \"hell no\" to rolling back the 37-year-old policy.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_91caa8b8-dec6-5691-807a-44fd78d5be2d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/fc/5fc8dcdd-595e-5e93-b187-5a76035d4985/69fa601618eb0.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride community survey open through May 21",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "community",
-    copy: "The town's community survey runs through May 21, measuring livability across 10 categories like economy, housing, safety, and recreation. Last year's results showed Telluride scored well on safety, trails, and recreation, but poorly on affordability - only 1% rated cost of living as good and just 9% said affordable housing was available.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_1145f14a-0b4a-43a7-9dea-4a452d941817.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/25/d257b794-9d6b-4123-b3b4-ee0abf3d9682/69fa52fb225f6.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Sacred shoes",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "arts-culture",
-    copy: "The article reflects on the evolution from minimalist \"barefoot\" running shoes to the current popularity of thick-soled Hoka shoes among trail runners. The author reminisces about various worn-out sneakers and boots, including patched-up running shoes and old basketball sneakers, eventually discarding them during spring cleaning. The piece ends with a memory of arriving in the area wearing cross-country ski boots and later buying Chuck Taylor All-Stars with money earned flipping eggs at a local restaurant.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_781f8bdc-69d7-4ec9-9b5a-90c35c968f18.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bc/abc48601-95b9-4206-9f4b-a65102a0747c/69fa55d5a4936.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Boys’ lax blasts into postseason",
-    source: "Telluride Times",
-    date: "May 5, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "education",
-    copy: "The Telluride boys lacrosse team crushed Durango 16-2 on Senior Day to clinch the Mountain League championship and earned the #6 seed in state playoffs. The girls team beat Durango 12-11 in a tight rematch after losing to them earlier in the week, with Parker Shea scoring five goals. Both teams advanced to state tournament play with games scheduled for early May.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_10a16ae6-c102-4679-9922-ddab9bdfd4b2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/fe/cfe83f7a-ec5a-4b87-824b-b7cf86e70644/69f9a893440e8.image.jpg",
-    imgHiRes: true
+    copy: "(May 18, 2026) - The Telluride Parks & Recreation Department has mailed two 2026 Barricade Passes to all residential property owners within the barricade boundary and who either receive a Town water bill or hold a Town parking permit.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=391",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15546"
   },
   {
     title: "Galloping Goose Refines Shoulder Season Schedule to Improve Reliability",
@@ -992,15 +893,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Last Dollar Pass is now open",
-    source: "San Miguel County",
-    date: "May 11, 2026",
-    newsTopic: "community",
-    copy: "Last Dollar Pass is now open",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=523",
-    img: ""
-  },
-  {
     title: "New Wildfire Information Site Launched",
     source: "San Miguel County",
     date: "May 1, 2026",
@@ -1021,7 +913,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "DOLA Economic Vitality Community Session on May 27, 2026",
     source: "Town of Ridgway",
-    date: "May 18, 2026",
+    date: "May 19, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1032,7 +924,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "CO Main Street Architect Visits on May 27-28, 2026",
     source: "Town of Ridgway",
-    date: "May 18, 2026",
+    date: "May 19, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1065,7 +957,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Ridgway Tourism Marketing Survey Now Open through May 15th!",
     source: "Town of Ridgway",
-    date: "May 18, 2026",
+    date: "May 19, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1076,7 +968,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "2026 Street Grading / Improvement Schedule",
     source: "Town of Ridgway",
-    date: "May 18, 2026",
+    date: "May 19, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1087,7 +979,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "May 18, 2026",
+    date: "May 19, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1131,6 +1023,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 5-18-26",
+    source: "KOTO Community Radio",
+    date: "May 19, 2026",
+    newsTopic: "health",
+    copy: "Survey Looks at Health and Wellbeing in the Region; Coming Up Next, Telluride; General Assembly Adjourns",
+    href: "https://koto.org/news/newscast-5-18-26/"
+  },
   {
     title: "Newscast 5-15-26",
     source: "KOTO Community Radio",
@@ -1186,14 +1086,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "public-safety",
     copy: "Mountain Village Addresses Wildfire with Forest Management; Cat Movie Fisher with Risho Unda; Telluride Yoga Festival Brings Longevity and Service",
     href: "https://koto.org/news/newscast-5-6-26/"
-  },
-  {
-    title: "Newscast 5-4-26",
-    source: "KOTO Community Radio",
-    date: "May 5, 2026",
-    newsTopic: "recreation",
-    copy: "Paul Wisor Steps Down as Mountain Village Town Manager; General Assembly Enters Its Final Days",
-    href: "https://koto.org/news/newscast-5-4-26/"
   }
 ];
 
@@ -1356,17 +1248,6 @@ const COMMUNITY_EVENTS = [
 ];
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "The Listening Club: The Cure's Disintegration w/ Sam Burgess",
-    link: "https://koto.org/event/the-listening-club-the-cures-disintegration-w-sam-burgess/",
-    description: "Take some time to listen to the month's featured album. Then, join The Listening Club the fourth Monday of each month for a deep discussion of the album lead by your album guide for the evening. Your knowledgeable guide will bring you cultural, historical, and musical context that will surprise and delight you, as well as bring you a greater understanding of the music you are hearing. It's like a book club, but for albums! Come join the fun at Telluride Music Company and get into a raffle for a vinyl copy of the month's featured album and enjoy some FREE pizza with the discussion. Bring your own beverage. (Signing up here in advance helps us know how much pizza to order!)",
-    pubDate: "2026-05-18T18:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/The-Listening-Club-2.png"
-  },
   {
     title: "Online Author Talk with Nir Eyal",
     link: "https://koto.org/event/online-author-talk-with-nir-eyal/",
@@ -1816,6 +1697,39 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Science &#038; Innovation Center, TELLURIDE",
+    imageUrl: ""
+  },
+  {
+    title: "Lone Cone Librarys Annual Community Yard Sale & Bbq",
+    link: "https://koto.org/event/lone-cone-librarys-annual-community-yard-sale-bbq/",
+    description: "Our favorite spring tradition is back – the Lone Cone Library Community Yard Sale! Come browse treasures, support your neighbors, and enjoy a relaxed day on the lawn. Interested in being a vendor? Spaces are available for $10. If you’d like to reserve a spot, just fill out our quick sign‑up form at the front desk or below. Vendors are responsible for set up and clean-up of their items. Any items left behind will be taken care of in a respectful way (Donating, discarding, etc). 🍔 Community BBQ • 12–2pm Swing by for lunch while you shop. $10 per plate, includes a hamburger, a side, a drink and a cookie. Have items you no longer need? You can donate gently‑used items to the library ahead of the sale. We’ll add them to our tables, and all proceeds from donated items go directly toward supporting library programs.",
+    pubDate: "2026-06-06T09:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/2890-scaled.jpg"
+  },
+  {
+    title: "Bilingual Balance in Motion",
+    link: "https://koto.org/event/bilingual-balance-in-motion/2026-06-06/",
+    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
+    pubDate: "2026-06-06T10:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
+  },
+  {
+    title: "Drop In Tech Time with Oliver",
+    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-06-07/",
+    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
+    pubDate: "2026-06-07T13:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
   }
 ];
@@ -2397,13 +2311,13 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Basketball and Volleyball Tournament - Hot Springs Style",
     link: "https://events.ourayridgwayevents.com/event/basketball-and-volleyball-tournament-hot-springs-style",
-    description: "Get ready for a fun, fast-paced showdown at the Basketball & Volleyball Tournament – Hot Springs Style! This unique community event brings together friendly competition, mountain-town energy, and a relaxed “only in Ouray” vibe. Teams will face off in both basketball and volleyball throughout the day, with plenty of action, laughter, and community spirit in between games. True to the Hot Springs Style theme, players and spectators alike are encouraged to kick back, enjoy the atmosphere, and make a full day of it—on and off the court. Whether you’re competing or cheering from the sidelines, it’s a great way to connect, play, and celebrate summer in Ouray.",
+    description: "🏀🏐 Take on the competition this Memorial Day at the Ouray Hot Springs! Get ready for a fun, fast-paced showdown at the Basketball & Volleyball Tournament – Hot Springs Style! Join us on May 25 for a casual basketball and volleyball tournament. Signups begin at noon, with games happening in the activity pool and shallow pool around 2 PM. Grab your friends and enjoy a fun afternoon at the pool!",
     pubDate: "2026-05-25T19:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52701346021520/huge/68ca03e6c3efec8668eb7ddf38f1d90656573dc2.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/52701346021520/huge/63080493e21c290f2831737b304b5c49b5e1128c.jpg"
   },
   {
     title: "RIDGWAY WRECKING CREW",
@@ -2461,7 +2375,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52338340283147/huge/582622671001d9ab20f8c25a5d229c9ecbbba165.jpg"
   },
   {
-    title: "Building & Business Architect Visits",
+    title: "Architect Visits",
     link: "https://events.ourayridgwayevents.com/event/downtown-ridgway-building-business-site-visits",
     description: "🏛 Downtown Ridgway Building & Business Architect Visits Building and business owners in downtown Ridgway are invited to schedule a one-on-one site visit with Larry Lucas, Colorado Main Street Architect with the Colorado Department of Local Affairs. 🗓 Wednesday, May 27 3-4:30 Thursday, May 28, 2026 9-noon What to expect: • Discuss your building’s challenges and opportunities • Learn about State resources that may support your vision • Explore ways to incorporate your business brand into an existing building These individualized visits are designed to help strengthen and enhance downtown Ridgway businesses and properties. ⏰ Limited time slots available. Request a visit: Tera Wick 📧 twick@town.ridgway.co.us 📞 (970) 626-5308 ext. 215",
     pubDate: "2026-05-27T21:00:00.000Z",
@@ -2469,7 +2383,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52922601691326/huge/6b8aa1c6d17b4481c4a40da5d59300b266419c89.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/52923266176703/huge/17ce6cf32219a6489fe0eadd05e563d6fa26ab5a.jpg"
   },
   {
     title: "Economic Vitality Meeting",
@@ -2516,7 +2430,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52568666129757/huge/1fe32b4a28a59494b608daafcb284a172935afe5.jpg"
   },
   {
-    title: "Building & Business Architect Visits",
+    title: "Architect Visits",
     link: "https://events.ourayridgwayevents.com/event/downtown-ridgway-building-business-site-visits",
     description: "🏛 Downtown Ridgway Building & Business Architect Visits Building and business owners in downtown Ridgway are invited to schedule a one-on-one site visit with Larry Lucas, Colorado Main Street Architect with the Colorado Department of Local Affairs. 🗓 Wednesday, May 27 3-4:30 Thursday, May 28, 2026 9-noon What to expect: • Discuss your building’s challenges and opportunities • Learn about State resources that may support your vision • Explore ways to incorporate your business brand into an existing building These individualized visits are designed to help strengthen and enhance downtown Ridgway businesses and properties. ⏰ Limited time slots available. Request a visit: Tera Wick 📧 twick@town.ridgway.co.us 📞 (970) 626-5308 ext. 215",
     pubDate: "2026-05-28T15:00:00.000Z",
@@ -2524,7 +2438,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52922601691326/huge/6b8aa1c6d17b4481c4a40da5d59300b266419c89.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/52923266176703/huge/17ce6cf32219a6489fe0eadd05e563d6fa26ab5a.jpg"
   },
   {
     title: "Pilates Mat",
@@ -3226,22 +3140,6 @@ const LEGAL_NOTICES = [
     dates: "4/2, 4/7, 4/16, 4/23",
     papers: ["ttimes_apr2", "county_web"],
     url: "https://www.sanmiguelcountyco.gov/Bids.aspx"
-  },
-  {
-    title: "Notice of Vesting -- 116 E Columbia Ave Remodel Addition",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏗️",
-    iconClass: "type-rfp",
-    type: "Land Use",
-    filterTag: "ordinance",
-    summary: "A site-specific development plan and vested property right has been approved for the 116 E Columbia Remodel Addition (Historic Residential zone, Block 7 Telluride). Owner: Drift Mine LLC and AZ LL. Applicant: Shift Architects, Kristine Perpar. Approved February 18, 2026.",
-    deadline: "Subject to referendum and judicial review",
-    expires: "2026-05-18",
-    dates: "3/5",
-    papers: ["ttimes_mar5"],
-    address: "116 E Columbia Ave, Telluride, CO"
   },
   {
     title: "Notice of Vesting -- Korn Residence, 566 W Columbia Ave",
