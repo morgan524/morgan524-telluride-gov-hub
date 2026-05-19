@@ -22,6 +22,7 @@ const path = require('path');
 // ── Config ──
 const REPO_ROOT = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
 const GOV_HELPERS_JS = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
+const GOV_DATA_JS = path.join(REPO_ROOT, 'js', 'gov-data.js');
 const COMMUNITY_PULSE_JS = path.join(REPO_ROOT, 'js', 'community-pulse.js');
 const EVENTS_CONFIG = path.join(REPO_ROOT, 'email-events-config.json');
 // (INDEX_HTML / GOVHUB_HTML / SW_JS constants and the bumpCacheBusters()
@@ -543,10 +544,55 @@ async function callClaudeRaw(prompt) {
 // ── Task 1: Meeting Agenda Summaries ──
 // ══════════════════════════════════════════════════════════════
 
+// Pull hand-curated meetings from the CACHED_DATA arrays in gov-data.js.
+// Anything inside the next-30-day window with an agendaUrl gets a chance at
+// summary generation. Sources covered: MV, Fire, Med, School, Ophir, SMART,
+// Norwood, Airport — the bot-driven entities that don't have a CivicWeb /
+// RSS feed of their own.
+function loadCachedMeetings(now, horizon) {
+  const arrays = [
+    { name: 'MV_CACHED_DATA',      source: 'mv' },
+    { name: 'FIRE_CACHED_DATA',    source: 'fire' },
+    { name: 'MED_CACHED_DATA',     source: 'med' },
+    { name: 'SCHOOL_CACHED_DATA',  source: 'school' },
+    { name: 'OPHIR_CACHED_DATA',   source: 'ophir' },
+    { name: 'SMART_CACHED_DATA',   source: 'smart' },
+    { name: 'NORWOOD_CACHED_DATA', source: 'norwood' },
+    { name: 'AIRPORT_CACHED_DATA', source: 'airport' }
+  ];
+  const src = readJsFile(GOV_DATA_JS);
+  const out = [];
+  for (const { name, source } of arrays) {
+    const arr = extractJsArray(src, name) || [];
+    for (const m of arr) {
+      if (!m || !m.date) continue;
+      const mDate = new Date(m.date);
+      if (isNaN(mDate)) continue;
+      if (mDate < now || mDate > horizon) continue;
+      out.push({
+        source,
+        date: mDate.toISOString().split('T')[0],
+        title: m.title || 'Meeting',
+        agendaUrl: m.agendaUrl || ''
+      });
+    }
+  }
+  return out;
+}
+
 async function fetchUpcomingMeetings() {
   const meetings = [];
   const now = new Date();
   const horizon = new Date(now.getTime() + 30 * 86400000); // 30 days ahead
+
+  // Hand-curated CACHED_DATA arrays from gov-data.js (MV, Fire, Med, School,
+  // Ophir, SMART, Norwood, Airport). Includes whatever agendaUrls have been
+  // detected by the per-source scrapers (Task 0) earlier in this run.
+  try {
+    meetings.push(...loadCachedMeetings(now, horizon));
+  } catch (e) {
+    console.warn('  gov-data.js cached-meetings load error:', e.message);
+  }
 
   // Telluride — CivicWeb API
   try {
@@ -3008,6 +3054,181 @@ async function syncNorwoodMeetings() {
 }
 
 
+// ─────────────────────────────────────────────────────────────────────
+// Per-source agenda-URL detection for entities whose CACHED_DATA arrays
+// in gov-data.js are hand-curated (MV, Fire, Med). These return
+// { "Month D, YYYY": "https://...agenda.pdf" } maps; main() patches the
+// matching entry's agendaUrl in gov-data.js so the data layer stays
+// authoritative and downstream helpers/summary generation pick it up.
+// ─────────────────────────────────────────────────────────────────────
+
+const MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const MONTH_LOOKUP = {};
+MONTH_NAMES.forEach((m, i) => {
+  MONTH_LOOKUP[m.toLowerCase()] = i;
+  MONTH_LOOKUP[m.slice(0, 3).toLowerCase()] = i;
+});
+
+function dateKeyFromYMD(y, m0, d) {
+  return `${MONTH_NAMES[m0]} ${parseInt(d, 10)}, ${y}`;
+}
+
+async function fetchPage(url, label) {
+  try {
+    const target = maybeProxy(url);
+    const resp = await fetch(target);
+    if (resp.status !== 200) {
+      console.warn(`  ${label}: HTTP ${resp.status}`);
+      return null;
+    }
+    return resp.text;
+  } catch (e) {
+    console.warn(`  ${label}: fetch error (${e.message})`);
+    return null;
+  }
+}
+
+// Mountain Village — PDFs at townofmountainvillage.com/site/assets/files/<id>/
+// Filename pattern: <month>_<dd>-_<yyyy>_town_council_meeting_agenda(?:-N)?.pdf
+async function syncMVAgendas() {
+  console.log('\n⛰  Syncing Mountain Village agenda PDFs...');
+  const PAGE = 'https://townofmountainvillage.com/government/town-council/town-council/';
+  const html = await fetchPage(PAGE, 'MV town-council page');
+  if (!html) return null;
+
+  // Match every site/assets/files/<id>/<slug>.pdf that looks like an agenda
+  const pdfRe = /site\/assets\/files\/(\d+)\/([a-z0-9_-]+)\.pdf/gi;
+  const map = {};
+  let m;
+  while ((m = pdfRe.exec(html)) !== null) {
+    const slug = m[2].toLowerCase();
+    if (!/agenda/.test(slug)) continue;
+    // Match filenames like  "may_21-_2026_town_council_meeting_agenda(-1)"
+    // or "01_january_28-_2026_special_town_council_meeting_agenda".
+    const sm = /(?:^|_)([a-z]+)_(\d{1,2})[-_]+(\d{4})_/.exec(slug);
+    if (!sm) continue;
+    const mIdx = MONTH_LOOKUP[sm[1]];
+    if (mIdx === undefined) continue;
+    const key = dateKeyFromYMD(sm[3], mIdx, sm[2]);
+    const url = 'https://townofmountainvillage.com/' + m[0];
+    // Prefer agenda over packet; prefer most-recent (highest file id) variant
+    if (!map[key] || parseInt(m[1], 10) > parseInt(map[key].id, 10)) {
+      map[key] = { url, id: m[1], slug };
+    }
+  }
+  const result = {};
+  Object.keys(map).forEach(k => { result[k] = map[k].url; });
+  console.log(`  Found ${Object.keys(result).length} MV agenda PDF(s)`);
+  return result;
+}
+
+// Shared parser for the Traction Rec CMS used by both Fire and Hospital
+// Districts. Walks meeting slug positions and PDF positions independently,
+// then pairs each meeting with the first agenda PDF that falls between it
+// and the next meeting slug. This avoids the trap where a future meeting
+// (no agenda yet) on the listing page borrows the next past meeting's PDF.
+function parseTractionRecAgendas(html, host) {
+  const meetingRe = /\/(\d{4})-(\d{2})-(\d{2})-[a-z0-9-]*(?:board|meeting)[a-z0-9-]*/g;
+  const pdfRe = /\/files\/([a-z0-9]+)\/([^"'\s<>]*[Aa]genda[^"'\s<>]*\.pdf)/g;
+  const meetings = [];
+  const pdfs = [];
+  let m;
+  while ((m = meetingRe.exec(html)) !== null) {
+    meetings.push({ pos: m.index, year: m[1], month: m[2], day: m[3] });
+  }
+  while ((m = pdfRe.exec(html)) !== null) {
+    pdfs.push({ pos: m.index, hash: m[1], name: m[2] });
+  }
+  // Dedupe meetings by date, keeping the FIRST occurrence (which is where
+  // the card starts on the page); the duplicates are just second anchors
+  // inside the same card.
+  const seen = new Set();
+  const uniqMeetings = [];
+  for (const mt of meetings) {
+    const key = `${mt.year}-${mt.month}-${mt.day}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    uniqMeetings.push(mt);
+  }
+  const map = {};
+  for (let i = 0; i < uniqMeetings.length; i++) {
+    const mt = uniqMeetings[i];
+    const nextPos = i + 1 < uniqMeetings.length ? uniqMeetings[i + 1].pos : Infinity;
+    const candidate = pdfs.find(p => p.pos > mt.pos && p.pos < nextPos);
+    if (!candidate) continue;
+    const key = dateKeyFromYMD(mt.year, parseInt(mt.month, 10) - 1, mt.day);
+    map[key] = `https://${host}/files/${candidate.hash}/${candidate.name}`;
+  }
+  return map;
+}
+
+async function syncFireAgendas() {
+  console.log('\n🚒 Syncing Fire District agenda PDFs...');
+  const PAGE = 'https://www.telluridefire.com/board-meetings';
+  const html = await fetchPage(PAGE, 'Fire District board-meetings page');
+  if (!html) return null;
+  const map = parseTractionRecAgendas(html, 'www.telluridefire.com');
+  console.log(`  Found ${Object.keys(map).length} Fire District agenda PDF(s)`);
+  return map;
+}
+
+async function syncMedAgendas() {
+  console.log('\n🏥 Syncing Hospital District agenda PDFs...');
+  const PAGE = 'https://www.tellmed.org/board-meetings';
+  const html = await fetchPage(PAGE, 'Hospital District board-meetings page');
+  if (!html) return null;
+  const map = parseTractionRecAgendas(html, 'www.tellmed.org');
+  console.log(`  Found ${Object.keys(map).length} Hospital District agenda PDF(s)`);
+  return map;
+}
+
+// Patches gov-data.js in place: for each (date → url) in `agendaMap`, finds
+// the matching entry inside the given CACHED_DATA array and rewrites its
+// `agendaUrl:` field. Scoped to the named array's brace block so the same
+// date string in a different entity's array is untouched. Returns the
+// updated source plus a count of fields changed.
+function patchAgendaUrls(govDataSrc, arrayName, agendaMap) {
+  const startRe = new RegExp('const\\s+' + arrayName + '\\s*=\\s*\\[', 'g');
+  const startMatch = startRe.exec(govDataSrc);
+  if (!startMatch) return { src: govDataSrc, changed: 0 };
+
+  let depth = 0;
+  const arrStart = startMatch.index + startMatch[0].length - 1;
+  let arrEnd = arrStart;
+  for (let i = arrStart; i < govDataSrc.length; i++) {
+    if (govDataSrc[i] === '[') depth++;
+    else if (govDataSrc[i] === ']') {
+      depth--;
+      if (depth === 0) { arrEnd = i; break; }
+    }
+  }
+  const before = govDataSrc.slice(0, arrStart + 1);
+  let body = govDataSrc.slice(arrStart + 1, arrEnd);
+  const after = govDataSrc.slice(arrEnd);
+
+  let changed = 0;
+  Object.keys(agendaMap).forEach(dateKey => {
+    const url = agendaMap[dateKey];
+    if (!url) return;
+    // Build a regex that finds a single entry block starting with `date: '<dateKey>'`
+    // (single-quoted, just like the source) and ending at the entry-closing `},`.
+    const escDate = dateKey.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const entryRe = new RegExp(
+      "(\\{[^{}]*date:\\s*'" + escDate + "'[^{}]*?agendaUrl:\\s*)(null|'[^']*')",
+      'g'
+    );
+    body = body.replace(entryRe, (full, prefix, current) => {
+      const newVal = "'" + url + "'";
+      if (current === newVal) return full;
+      changed++;
+      return prefix + newVal;
+    });
+  });
+
+  return { src: before + body + after, changed };
+}
+
+
 // ── SMC AlertCenter: fetch active alerts and store as event-shaped objects ──
 async function refreshSmcAlerts(existingAlerts = []) {
   console.log('\n🚨 SMC AlertCenter: Refreshing active alerts...');
@@ -3694,8 +3915,34 @@ async function main() {
   await checkWorkerHealth();
 
   let govHubSrc = readJsFile(GOV_HELPERS_JS);
+  let govDataSrc = readJsFile(GOV_DATA_JS);
   let pulseSrc = readJsFile(COMMUNITY_PULSE_JS);
   let changed = false;
+  let govDataChanged = false;
+
+  // ── 0. Per-source agenda URL detection (MV / Fire / Med) ──
+  // Patches CACHED_DATA entries in gov-data.js with newly-published agenda
+  // PDF URLs. Runs BEFORE summary generation so any agenda detected this
+  // run can be summarized in the same run.
+  for (const [arrName, syncFn] of [
+    ['MV_CACHED_DATA',   syncMVAgendas],
+    ['FIRE_CACHED_DATA', syncFireAgendas],
+    ['MED_CACHED_DATA',  syncMedAgendas]
+  ]) {
+    try {
+      const agendaMap = await syncFn();
+      if (agendaMap && Object.keys(agendaMap).length > 0) {
+        const { src, changed: n } = patchAgendaUrls(govDataSrc, arrName, agendaMap);
+        if (n > 0) {
+          govDataSrc = src;
+          govDataChanged = true;
+          console.log(`  ${arrName}: patched ${n} agendaUrl field(s)`);
+        }
+      }
+    } catch (e) {
+      console.warn(`  ${arrName} agenda sync error: ${e.message}`);
+    }
+  }
 
   // ── 1. Meeting Summaries ──
   const existingSummaries = extractJsObject(govHubSrc, 'MANUAL_SUMMARIES') || {};
@@ -4000,7 +4247,12 @@ async function main() {
     fs.writeFileSync(COMMUNITY_PULSE_JS, pulseSrc);
     console.log('\n✅ Files updated — changes will be committed by the workflow.');
   } else {
-    console.log('\n✓ No changes detected — nothing to commit.');
+    console.log('\n✓ No gov-helpers / pulse changes — nothing to commit.');
+  }
+  if (govDataChanged) {
+    fs.writeFileSync(GOV_DATA_JS, govDataSrc);
+    console.log('✅ gov-data.js updated with newly-detected agenda URLs.');
+    changed = true;
   }
 
   // ── Note: the old "regenerate data-only.js from gov-helpers.js" step has been

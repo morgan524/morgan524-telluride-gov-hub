@@ -838,24 +838,39 @@
               ['getOphirMeetings',        '/v2/gov-hub.html'],
               ['getSmartMeetings',        '/v2/gov-hub.html']
             ];
+            // Override the helper's sourceLabel for sources where the
+            // natural label is either an internal code (TEX, SMART Transit)
+            // or doesn't match the entity name the public knows (School
+            // District R-1 vs. Telluride Board of Education).
+            const SOURCE_DISPLAY = {
+              school:  'Telluride Board of Education',
+              airport: 'TRAA',
+              smart:   'SMART',
+              med:     'Hospital District'
+            };
+            function prependEntity(title, source, sourceLabel) {
+              const entity = SOURCE_DISPLAY[source] || sourceLabel || '';
+              if (!entity) return title;
+              if ((title || '').toLowerCase().includes(entity.toLowerCase())) return title;
+              return entity + ' ' + title;
+            }
+
             fetchers.forEach(([fn, href]) => {
               if (typeof window[fn] !== 'function') return;
               try {
                 (window[fn]() || []).forEach(m => {
                   if (!m || !m.eventDate || m.eventDate < today || m.eventDate > horizon) return;
-                  // Always prepend the public entity (sourceLabel) so each
-                  // meeting card identifies who's holding it — title alone
-                  // (e.g. "Planning and Zoning Commission Meeting") doesn't
-                  // tell you whether that's Norwood, San Miguel County, etc.
-                  const entity = m.sourceLabel || '';
+                  // Title now carries the public entity name (e.g. "Fire District
+                  // Board of Directors Meeting") so a glance at the card tells you
+                  // who's holding it. Meta line drops the entity to avoid repeat.
+                  const displayTitle = prependEntity(m.title, m.source, m.sourceLabel);
                   const metaParts = [];
-                  if (entity) metaParts.push(entity);
                   metaParts.push(formatDate(m.eventDate));
                   if (m.eventTimes) metaParts.push(m.eventTimes);
                   if (m.location) metaParts.push(m.location);
                   items.push({
                     date: m.eventDate,
-                    title: m.title,
+                    title: displayTitle,
                     meta: metaParts.join(' • '),
                     href: href
                   });
@@ -871,6 +886,9 @@
                 const d = new Date(start);
                 d.setHours(0,0,0,0);
                 if (d < today || d > horizon) return;
+                // Events are public-facing already (KOTO / Wilkinson / community)
+                // and their titles don't have the "Board of X" generic-meeting
+                // ambiguity, so leave them untouched — entity stays in the meta.
                 const entity = e.sourceLabel || e.source || '';
                 const metaParts = [];
                 if (entity) metaParts.push(entity);
