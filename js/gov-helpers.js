@@ -99,6 +99,30 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Colorado's top court orders children's hospital to resume gender-affirming care for minors",
+    source: "Telluride Times",
+    date: "May 19, 2026",
+    firstSeen: "2026-05-20",
+    newsTopic: "health",
+    copy: "Colorado's Supreme Court ordered Children's Hospital Colorado to resume gender-affirming care for minors after four transgender girls sued, claiming the hospital violated state anti-discrimination law. The 5-2 ruling came after the hospital stopped these services following a federal investigation.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_8e1b844e-d9ba-58dc-b1a8-754933a96518.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A return to the mountains",
+    source: "Telluride Times",
+    date: "May 19, 2026",
+    firstSeen: "2026-05-20",
+    newsTopic: "housing",
+    copy: "A former Telluride restaurant manager who helped open Allred's and Alpino Vino is returning after a decade in Vail to run The Alpine Club, a new private club being developed by Southworth and local residents Scott and Lauren Woodward. The project will completely reimagine the space with a restaurant, bar, chef's counter, après ski lounge, and various amenities.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/business/article_e144854e-3e45-4876-a1b1-e40d947ec150.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/0b/50bee733-1e7b-45b2-bfe4-25b65a3fefa0/6a0b3830a98bc.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Mahoney sets State standard … twice",
     source: "Telluride Times",
     date: "May 19, 2026",
@@ -759,102 +783,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "A late spring snowstorm slams Colorado, closing schools and disrupting commuters",
-    source: "Telluride Times",
-    date: "May 6, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "education",
-    copy: "Late spring storm dumped over 2 feet of snow in mountain areas like Estes Park, while Denver got about 6 inches and closed schools Wednesday. The heavy, wet snow caused some crashes and downed tree branches, but temperatures are expected to climb back into the 70s by weekend.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_20728449-67c6-551b-8b24-b8ff7c5c661d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/4d/a4df46ad-e4d3-546a-8382-f9aba6b82c82/69fb2b5bd52db.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "THS left out of soccer playoffs",
-    source: "Telluride Times",
-    date: "May 6, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "community",
-    copy: "Telluride High girls soccer finished 4-9-1 and missed the Class 2A state playoffs after falling from 20th to 21st in the rankings. The Lady Miners lost 4-1 to Ridgway at home on Senior Night, then dropped a crucial 2-1 road game to Bayfield that sealed their fate.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_2f31b789-d089-42b7-9b6c-940afdff77e1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/7d/e7d83b35-cab8-4f44-a707-1078ade52a57/69f9ac3ebf6ec.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Hard work and perseverance",
-    source: "Telluride Times",
-    date: "May 6, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "education",
-    copy: "Darcy Bray graduated last weekend from Colorado Mountain College with her associate’s degree, an achievement she’s been working toward throughout the entirety of her time in high school. Her dedication, perseverance and hard work have truly paid off. Congratulations, Darcy!",
-    claudeSummary: false,
-    href: "https://www.telluridenews.com/norwood_post/article_f36f75c5-78e6-4fbc-9dd5-51535697d60e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/46/046406e1-b0ed-45f3-88a5-f87d2570e7d3/69fa5cd6c404f.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "ADL reports a sharp drop in US antisemitic incidents in 2025, driven by a steep fall on campuses",
-    source: "Telluride Times",
-    date: "May 6, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "arts-culture",
-    copy: "The ADL reported antisemitic incidents dropped 33% nationwide in 2025 to 6,274 cases, largely due to fewer campus incidents. However, physical assaults hit a record high of 203, and three people were killed in antisemitic attacks, including shootings in DC and a firebombing in Boulder.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_fd5eb38f-870a-5931-a281-fd46c98217ff.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/15/6151511f-d420-5af3-ba21-a347150d4cf9/69fb2ebbc7405.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Legals and Public Notices for May 7-13, 2026",
-    source: "Telluride Times",
-    date: "May 6, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "community",
-    copy: "The Town of Mountain Village passed an ordinance on second reading updating their Community Development Code to comply with Colorado Wildfire Resilience Code requirements. San Miguel County has a planning meeting May 14th covering several land use applications and code amendments, including accelerated housing review and natural medicine regulations.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Indigenous people honor and raise awareness for relatives who are missing or have been killed",
-    source: "Telluride Times",
-    date: "May 6, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "community",
-    copy: "Indigenous communities observed a day to honor missing and murdered relatives, with many wearing red to show support. Native Americans face violence at twice the rate of the general population, with nearly 1,500 active federal cases of missing Native Americans recorded by the FBI. Recent federal initiatives include expanded FBI operations and a new Interior Department task force, though implementation of earlier legislation has been slow.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_ae44c01b-f686-57b2-ae9f-0e1627a4f326.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ee/4ee20253-fa90-5e52-b3d6-f0a5aa554c5d/69f96e150e3e0.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Keeping traditions alive",
-    source: "Telluride Times",
-    date: "May 6, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "community",
-    copy: "Bill Wilson of Knight Canyon Outfitters in Norwood was named \"Outfitter of the Year\" by the Colorado Outfitters Association for his three generations of family business and dedication to ethical hunting. Wilson and other industry leaders say hunting faces growing threats from urban voters and state policies, warning that restrictions could devastate rural economies that depend on hunting revenue.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_f166c0dc-a754-43a1-9784-9facd4674405.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/43/c43e569f-37f2-4543-9cff-45bfa117cf81/69fa5f7853b7c.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Spring plans meet snow in Denver as a late storm could be the season's biggest",
-    source: "Telluride Times",
-    date: "May 6, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "recreation",
-    copy: "Denver's facing what could be its biggest snowstorm of the season with up to 8 inches expected through Wednesday, following the city's driest winter on record. School districts canceled classes, utilities put crews on standby, and the Rockies postponed games as temperatures plunged overnight.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_df4d81e5-c1f0-558f-a1f4-290dae406595.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/8f/58f263e8-16a8-5781-af16-5d8758db5bc8/69fa387863ba5.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Telluride Barricade Passes Mailed to Town Residents",
     source: "Town of Telluride",
     date: "May 19, 2026",
@@ -918,15 +846,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Stage 1 Fire Restrictions in effect for Egnar Fire Protection District until further notice",
-    source: "San Miguel County",
-    date: "May 12, 2026",
-    newsTopic: "public-safety",
-    copy: "Stage One fire Restrictions will be in place in the Egnar Fire Protection District until further notice.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=525",
-    img: ""
-  },
-  {
     title: "New Wildfire Information Site Launched",
     source: "San Miguel County",
     date: "May 1, 2026",
@@ -958,7 +877,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "DOLA Economic Vitality Community Session on May 27, 2026",
     source: "Town of Ridgway",
-    date: "May 19, 2026",
+    date: "May 20, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -969,7 +888,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "CO Main Street Architect Visits on May 27-28, 2026",
     source: "Town of Ridgway",
-    date: "May 19, 2026",
+    date: "May 20, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1002,7 +921,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Ridgway Tourism Marketing Survey Now Open through May 15th!",
     source: "Town of Ridgway",
-    date: "May 19, 2026",
+    date: "May 20, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1013,7 +932,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "2026 Street Grading / Improvement Schedule",
     source: "Town of Ridgway",
-    date: "May 19, 2026",
+    date: "May 20, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1024,7 +943,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "May 19, 2026",
+    date: "May 20, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1569,6 +1488,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/05/Create-Cocktails-1-scaled.jpg"
   },
   {
+    title: "KOTO KOOKout at Greenwoods!",
+    link: "https://koto.org/event/koto-kookout-at-greenwoods/",
+    description: "KOOKout with KOTO in Ridgway ATTENTION RIDGWAY AND OURAY RESIDENTS! JOIN US FOR OUR INAUGURAL KOTO KOOKout!! Thursday, May 28 5 – 8 PM | Greenwoods Live music with T Bone, plus free apps & KOOK bumper stickers! Help shape the future of 90.3 FM K-O-O-K Now proudly serving Ouray County!",
+    pubDate: "2026-05-28T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
+  },
+  {
     title: "Up-off Gymnastics, Dance, and Spanish",
     link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-05-29/",
     description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
@@ -1604,7 +1534,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "West End Democrats of San Miguel & Montrose County 2026 Primary Voter Listening Session",
     link: "https://koto.org/event/west-end-democrats-of-san-miguel-montrose-county-2026-primary-voter-listening-session/",
-    description: "Join us for an informal moderated listening session to hear our local voter's concerns and priorities. These will be shared with all of the Democratic Primary Candidates. Will will share a list of all of the candidates for Governor, Attorney General, U.S. House of Representatives, Secretary of State, and Treasurer. The date is Saturday, May 30th at the Lone Cone Library in Norwood from 11am to Noon. We really need to hear from our young voters! What are your concerns? Tell us what is important to you.",
+    description: "Tired of being assaulted by nonstop political campaign blather? Here’s an idea: a session where YOU get to express YOUR needs and pressing issues and to have those important concerns relayed to the folks running in the June 30 th primary election in Colorado. No campaign rhetoric, no stump speeches, just a chance for you to voice YOUR concerns. The West End Democrats of San Miguel and Montrose County invite you to a one-hour, informal listening session moderated by Emmy Award winning broadcast journalist Judy Muller. We especially urge younger, independent, and unaffiliated voters to attend. What are your concerns and issues? Please let us know so that we can relay them to all the candidates, a list which includes Governor, Attorney General, U.S. House of Representatives, Secretary of State and Treasurer. We will make sure you are heard! …",
     pubDate: "2026-05-30T11:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -1743,6 +1673,61 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
+  },
+  {
+    title: "Drop In Tech Time with Oliver",
+    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-06-07/",
+    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
+    pubDate: "2026-06-07T13:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-06-07/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-06-07T14:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Free Legal Clinic – Clínica Jurídica Gratuita",
+    link: "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-06-09/",
+    description: "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
+    pubDate: "2026-06-09T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Science Town Talks",
+    link: "https://koto.org/event/telluride-science-town-talks/2026-06-09/",
+    description: "Big science. Small town. Every Tuesday from June 2- August 11, Telluride Science invites the public to sit down with some of the world’s most brilliant researchers for a conversation that might just change how you see the world. Town Talks cover everything from quantum computing and climate solutions to the latest in medicine and energy — accessible, thought-provoking, and completely free. Please note, there is no Town Talk on July 7.",
+    pubDate: "2026-06-09T18:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Conference Center, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Sewing 101 with Melissa",
+    link: "https://koto.org/event/sewing-101-with-melissa/2026-06-10/",
+    description: "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
+    pubDate: "2026-06-10T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
   }
 ];
 

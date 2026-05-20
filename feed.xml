@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 May 2026 19:49:12 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 02:44:20 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
@@ -51,6 +51,26 @@ Agenda not yet available]]></description>
 Agenda not yet available]]></description>
       <category>Meeting</category>
       <category>airport</category>
+    </item>
+    <item>
+      <title>Colorado&apos;s top court orders children&apos;s hospital to resume gender-affirming care for minors</title>
+      <link>https://www.telluridenews.com/news/state/article_8e1b844e-d9ba-58dc-b1a8-754933a96518.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_8e1b844e-d9ba-58dc-b1a8-754933a96518.html</guid>
+      <pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Colorado's Supreme Court ordered Children's Hospital Colorado to resume gender-affirming care for minors after four transgender girls sued, claiming the hospital violated state anti-discrimination law. The 5-2 ruling came after the hospital stopped these services following a federal investigation.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>health</category>
+    </item>
+    <item>
+      <title>A return to the mountains</title>
+      <link>https://www.telluridenews.com/business/article_e144854e-3e45-4876-a1b1-e40d947ec150.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/business/article_e144854e-3e45-4876-a1b1-e40d947ec150.html</guid>
+      <pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/0b/50bee733-1e7b-45b2-bfe4-25b65a3fefa0/6a0b3830a98bc.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />A former Telluride restaurant manager who helped open Allred's and Alpino Vino is returning after a decade in Vail to run The Alpine Club, a new private club being developed by Southworth and local residents Scott and Lauren Woodward. The project will completely reimagine the space with a restaurant, bar, chef's counter, après ski lounge, and various amenities.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/0b/50bee733-1e7b-45b2-bfe4-25b65a3fefa0/6a0b3830a98bc.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>housing</category>
     </item>
     <item>
       <title>[Meeting] SMART Board of Directors — 2026-05-20</title>
@@ -381,24 +401,6 @@ Two code items on the table — a Land Use Code update and a Colorado Wildfire R
       <description><![CDATA[<img src="https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14252" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />San Miguel County • May 15, 2026]]></description>
       <media:content url="https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14252" medium="image" />
       <category>San Miguel County</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Many County Offices Closed May 21-25, 2026. Please plan ahead!</title>
-      <link>https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=526</link>
-      <guid isPermaLink="false">https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=526</guid>
-      <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Due to all-staff training and the Memorial Day holiday, many offices will be closed from Thursday, May 21-Monday, May 25, reopening May 26. Please plan ahead! Contact individual departments for their closures.]]></description>
-      <category>San Miguel County</category>
-      <category>arts-culture</category>
-    </item>
-    <item>
-      <title>Newscast 5-14-26</title>
-      <link>https://koto.org/news/newscast-5-14-26/</link>
-      <guid isPermaLink="false">https://koto.org/news/newscast-5-14-26/</guid>
-      <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda; Listening Club is the Cure for Disintegration]]></description>
-      <category>KOTO Community Radio</category>
       <category>community</category>
     </item>
   </channel>
