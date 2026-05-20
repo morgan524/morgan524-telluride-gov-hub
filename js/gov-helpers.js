@@ -1733,59 +1733,59 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/16762977?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-05-19T10:30:00.000Z",
+    title: "Beans & Books",
+    link: "https://telluridelibrary.libcal.com/event/16249439?hs=a",
+    description: "8:30 AM – 9:30 AM · What better way to start out your day than by sipping on a hot cup of coffee while chatting with other bibliophiles about books? It&#39;s a chance to talk about whatever you have been reading (or listening to) and hear about what other folks have been reading (or listening to). Drop in anytime at the beautiful Coffee Cowboy General Store on the corner of Pacific and Willow the third Wednesday of every month!",
+    pubDate: "2026-05-20T08:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+    location: "Coffee Cowboy General Store",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1762980178.jpg"
   },
   {
-    title: "Online Author Talk with Nir Eyal",
-    link: "https://telluridelibrary.libcal.com/event/16560471?hs=a",
-    description: "12:00 PM – 1:00 PM · What if the only thing standing between you and the seemingly impossible&hellip;was belief? This is the question posed by bestselling author Nir Eyal in his new work, Beyond Belief . Most of your limits aren't physical. They're psychological. In Beyond Belief , Nir Eyal reveals how the hidden assumptions you carry shape what you see, how you feel, and what you do—and how to replace them with beliefs that unlock your true potential. Grounded in neuroscience, psychology, and unforgettable case studies, Eyal introduces the Three Powers of Belief: Attention, Anticipation, and Agency. Mastering these powers transforms how you see challenges, feel about the future, and act when it matters most. You'll learn how to: Spot hidden opportunities and solutions others overlook. Reclaim your mood, energy, and confidence by reshaping your beliefs. Stay calm, decisive, and in control when life feels uncertain. …",
-    pubDate: "2026-05-19T12:00:00.000Z",
+    title: "Library Closed for Staff Training",
+    link: "https://telluridelibrary.libcal.com/event/16786172?hs=a",
+    description: "9:00 AM – 1:00 PM",
+    pubDate: "2026-05-20T09:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: ""
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://telluridelibrary.libcal.com/event/16767649?hs=a",
+    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-05-20T13:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg"
+  },
+  {
+    title: "Kids Cook",
+    link: "https://telluridelibrary.libcal.com/event/16417038?hs=a",
+    description: "3:30 PM – 4:30 PM",
+    pubDate: "2026-05-20T15:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_11_15_52_27.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1771000762.png"
   },
   {
-    title: "I Heart Art",
-    link: "https://telluridelibrary.libcal.com/event/16417093?hs=a",
-    description: "2:30 PM – 4:30 PM",
-    pubDate: "2026-05-19T14:30:00.000Z",
+    title: "Plant Party Kick Off! Plant Crafts and Free Books!",
+    link: "https://telluridelibrary.libcal.com/event/16593812?hs=a",
+    description: "5:30 PM – 7:00 PM · Kick off our new Plant Party series with inspiration from For The Love of House Plants ! This first gathering celebrates all things green-whether you&#39;re nurturing your first pathos or managing a full indoor jungle. We&#39;ll explore simple care tips, share plant stories, and connect with fellow plant enthusiasts in a relaxed welcoming space. Come ready to learn, swap ideas, and grow your love of houseplants.  The first 10 people to sign up will receive a free copy of the book ! Don&#39;t worry, you do not need the book to participate we will have plenty of information and fun for everyone. We also have a fun, free plant craft for the first meeting!",
+    pubDate: "2026-05-20T17:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1771000912.png"
-  },
-  {
-    title: "Talking Gourds Presents: Stories and Poems-Danny Rosen",
-    link: "https://telluridelibrary.libcal.com/event/15798223?hs=a",
-    description: "5:15 PM – 7:00 PM · The Telluride Institute's Talking Gourds Poetry Program is hosting a live Stories & Poems series at the Wilkinson Public Library magazine room on the third Tuesday of every month at 5:15 pm. Following the featured poet&#39;s or story teller&#39;s reading we will hold a Talking Gourds sharing circle going around the room to let everyone speak. Attendees are encouraged to bring their own work or someone else's that they like to share. For more information, visit the Telluride Institute Talking Gourds website: tellurideinstitute.org/talking-gourds Jan. 20 / Tanya Ishikawa of Montrose Feb. 17 / Karen Bellerose of Lawson Mar. 17 / Mary Hearding of Rico Apr 21 / Joan Shapiro of Ridgway May 19 / Danny Rosen of Fruita June 16 / Paulo Munguia of Montrose July 21 / Peter Waldor of Trout Lake Aug. …",
-    pubDate: "2026-05-19T17:15:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_04_15_58_44.jpg"
-  },
-  {
-    title: "Spanish Happy Hour",
-    link: "https://telluridelibrary.libcal.com/event/16007999?hs=a",
-    description: "5:30 PM – 6:30 PM · Practice your Spanish skills with other Spanish speakers at La Cocina. The Library will provide appetizers, and the bar will be available for you to purchase a beverage of your choice. Registration is not required, but it helps us have an idea of how many people will be in attendance, and therefore how much food to order.  All levels welcome!",
-    pubDate: "2026-05-19T17:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "La Cocina de Luz Restaurant",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715701794.jpg"
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_23_14_24_14.jpg"
   }
 ];
 
@@ -1876,83 +1876,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "Mid-Year Water Summit",
-    link: "https://www.montrosecounty.net/891/West-Slope-Water-Summit",
-    description: "Don’t miss this opportunity to join community leaders, experts, and stakeholders for important conversations about the future of water in our region. The event is free to the public, but registration is required. We hope to see you there! A complimentary breakfast will be provided. Our speakers include: Commissioner Sue HansenColorado River DistrictUncompahgre Valley Water Users Association (UVWUA)City of Montrose*Speakers are subject to change* Register online at: www.westslopewatersummit.com For questions, please call: 970-252-4508 or pr@montrosecounty.net",
-    pubDate: "2026-05-19T13:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Montrose County Event Center",
-    imageUrl: "https://localist-images.azureedge.net/photos/52807467209523/huge/c271b09abe97ea34769db4577f3e08c068afd95a.jpg"
-  },
-  {
-    title: "On Display: Layers of Faces and Life-Paintings by Ruth Higdon and Julie Ahern",
-    link: "https://events.ourayridgwayevents.com/event/layers-of-faces-and-life-paintings-by-ruth-higdon-and-julie-ahern",
-    description: "A duo exhibition of new works by local painters Julie Ahern and Ruth Higdon. More info decker@ridgwayfuse.org",
-    pubDate: "2026-05-19T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52709680184864/huge/bf651b7d434184420bcaf9702ff358cbd88d3b9e.jpg"
-  },
-  {
-    title: "Woman's Club of Ouray County monthly meeting",
-    link: "www.womansclubouraycounty.org/",
-    description: "All Ouray County women are invited to attend the monthly meeting for the Woman's Club of Ouray County (WCOC). The WCOC, created in 1897, is a local philanthropic and community focused nonprofit organization. Monthly meetings include local speakers, a social hour and discussion regarding events to volunteer in and around Ouray County. For more information about the monthly meeting and the WCOC, please visit the organization's website.",
-    pubDate: "2026-05-19T19:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52338847179921/huge/a804a495547d393d16494cf6fdbbd49572b64a68.jpg"
-  },
-  {
-    title: "DONNY MORALES",
-    link: "https://coloradoboydepot.com/calendar/",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-05-19T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Decker Room New Volunteer Orientation",
-    link: "www.ridgwayfuse.org",
-    description: "Join our wonderful volunteer team at the Decker! If you would like to help with Gallery Sitting during open hours, events, and more, please attend a New Volunteer Orientation to get started! You'll learn about the Decker Room and the events and programs that take place here. Volunteers should be able to commit to consistent volunteer hours each month! Email decker@ridgwayfuse.org for info and to RSVP.",
-    pubDate: "2026-05-19T22:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52568082541214/huge/49b7c4c5e83ca4147b872fdb5be7fe87b78551c5.jpg"
-  },
-  {
-    title: "Ouray Chamber Business After Hours",
-    link: "https://events.ourayridgwayevents.com/event/ouray-chamber-business-after-hours-6969",
-    description: "Come out to our last Business After Hours before the start of another busy summer season!. Complimentary food & beverages, free drawing, great company! Join us and enjoy community camaraderie and conversation! Tuesday, May 19th, 5-7 pm.",
-    pubDate: "2026-05-19T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Twin Peaks Lodge & Hot Springs",
-    imageUrl: "https://localist-images.azureedge.net/photos/52887190516306/huge/af5fb66f902f09a66ca9c228a70e74ef075d320a.jpg"
-  },
-  {
-    title: "Ridgway FUSE Creative Main Street - Committee Meeting",
-    link: "https://www.ridgwayfuse.org/meetings",
-    description: "Ridgway FUSE, a Creative District & Main Street Program, nurtures the cultural and economic vitality of Ridgway, Colorado All Ridgway FUSE Committee Meetings are open to the public. Click here for agendas and notes. Interested residents may apply to serve on the FUSE committee here. Email Tera Wick at twick@town.ridgway.co.us or call 970-626-5308 x 215 with questions.",
-    pubDate: "2026-05-19T23:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52305506266326/huge/6f7fb94915fd0e9d2c59d779c91e1ffdf9538f60.jpg"
-  },
   {
     title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
     link: "www.FloatingLotusBrewery.com",
@@ -2909,6 +2832,83 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Uncompahgre River Walk Trail at the end of Uncompahgre St. off Hwy 550",
     imageUrl: "https://localist-images.azureedge.net/photos/52516139023881/huge/5b4a0efa0ce13ac6d736cbe1dadddee60e5bbc1b.jpg"
+  },
+  {
+    title: "Community Cleanup",
+    link: "https://events.ourayridgwayevents.com/event/community-cleanup",
+    description: "Bring your unwanted items to Community Cleanup Day on Saturday, June 6, 9 AM–4 PM. It’s an easy way to dispose of junk without a special trip to the dump. Drop-off locations: 📍 RV parking area: landfill items, e-waste, & recycling 📍 Rotary Park: green waste (You can bring yard debris to Rotary Park starting May 8. Please stack branches neatly with cut ends facing the road (under 12\" diameter only). No soil accepted.) ACCEPTABLE Dried Out Paint (start drying it out now!)Scrap LumberFurnitureBuilding MaterialElectronic WasteRecyclingYard Debris NOT ACCEPTABLE Wet PaintLiquidsTiresStainCleanersBatteriesMattressesNote: RV parking in the RV lot will not be available that day Thanks for helping keep our community clean and beautiful! And big thanks to Bruin Waste and Sav-a-Tree for their partnership in making this happen! ♻️",
+    pubDate: "2026-06-06T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "RV Parking Lot at the end of 9th Ave. ",
+    imageUrl: "https://localist-images.azureedge.net/photos/52765189321282/huge/e3707690cdec408c4fcf20e6d47b246aa2076c25.jpg"
+  },
+  {
+    title: "Ridgway Railroad Museum FREE Train Rides",
+    link: "https://www.ridgwayrailroadmuseum.org/",
+    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
+    pubDate: "2026-06-06T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
+  },
+  {
+    title: "THE EXPANSIVE VIEW: ATMOSPHERIC PERSPECTIVE IN WATERCOLOR WITH ANITA WINTERS",
+    link: "https://weehawkenarts.org/education/adult-art-classes/",
+    description: "The Expansive View - Watercolor Class with Anita Winter June 6, 10am-3pm Cora Annex, Ridgway Tuition: $85 Learn how to give your paintings depth by using atmospheric perspective. In this step by step watercolor class you will learn how to use value, color and texture to create distance in your paintings. Participants are invited to bring their own watercolor supplies (a basic range such as blues, greens, and primary colors; a palette; an assortment of brushes; and at least four 11×14 sheets of watercolor paper). For those looking to expand their materials, Anita Winters recommends the following items from Blick.com: Palette: i.e. …",
+    pubDate: "2026-06-06T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52745264474804/huge/ce202ee1eb38e710a712202d02b030db716d6461.jpg"
+  },
+  {
+    title: "COREY HOOKER & THE MOTEL PROPHETS",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-06-06T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "PARK - Ultimate Frisbee",
+    link: "https://events.ourayridgwayevents.com/event/park-ultimate-frisbee",
+    description: "Come play frisbee! Anyone is welcome.",
+    pubDate: "2026-06-07T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Fellin Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/51807883052581/huge/9d7f0c7c4c96318902b1dfef1c3f821c9b3189d1.jpg"
+  },
+  {
+    title: "Ridgway Bird Walks & Talks: Birds and Bikes",
+    link: "https://weehawkenarts.org/education/adult-art-classes/",
+    description: "Join Mike Campbell, a Colorado native, lifelong birder, retired educator, wildlife artist, bird banding educator, and Friends of Ridgway State Park board member, as he shares his experiences and knowledge of our local feathered friends and the environment we share during a guided Bird Walk & Talk in Ouray County. Bikes are required - participants will be riding! the group will meet in downtown Ridgway and bike no more than 5 miles on a mix of paved and dirt roads to reach excellent birding spots in and around town. Small group sizes will allow the experience to be tailored to participants’ knowledge levels and interests. Times, meeting location, and any weather-related updates will be provided via email prior to the event. A waiver needs to be signed before the event. Please do so here. If you're having issues with registration, please email lexi@weehawkenarts.org.",
+    pubDate: "2026-06-08T14:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52393360061357/huge/dcc540c5e8c42ba92a7bee91cc3bccf0ba5c48e9.jpg"
+  },
+  {
+    title: "On Display: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
+    link: "https://events.ourayridgwayevents.com/event/painting-evolution-of-moments-with-wild-horses-1999-2026-artist-karen-keene-day",
+    description: "Enjoy nearly 3 decades or work from local painter, Karen Keene Day. Info decker@ridgwayfuse.org",
+    pubDate: "2026-06-08T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52709642938173/huge/e2c21f0b2c1fb10c06c021e9b9d55a9ea535bccc.jpg"
   }
 ];
 
