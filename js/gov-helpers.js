@@ -99,6 +99,30 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Telluride Ethics Commission holds first meeting in 19 years",
+    source: "Telluride Times",
+    date: "May 20, 2026",
+    firstSeen: "2026-05-20",
+    newsTopic: "government",
+    copy: "The Town Ethics Commission met for the first time since 2005 to review a complaint against Councilwoman Kristen Permanoff for making an insulting comment during a Zoom council meeting in January. Permanoff, who thought she was muted while dealing with a family emergency, apologized publicly and personally to the speaker she interrupted, though the complaint came from a third party. The commission ultimately found no ethical violation occurred.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_456c78de-b779-48b0-8c6b-7b83f3783a07.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/3b/b3bef5c4-c3cb-4d04-a298-e72ee9d1fa09/6a0dc7899b070.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "This year's most endangered historic places nod to America 250 and the promise of equality for all",
+    source: "Telluride Times",
+    date: "May 20, 2026",
+    firstSeen: "2026-05-20",
+    newsTopic: "land-use",
+    copy: "The National Trust for Historic Preservation released its 2026 most endangered places list, featuring 11 sites across America that highlight the principle of equality, with each receiving a $25,000 grant. Sites include the Ben Moore Hotel in Montgomery where civil rights leaders stayed, the Tule Lake Japanese American segregation center, and Angel Island immigration station.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_4d87e910-1d10-5e25-9af6-0032fbc0f6f9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/08/d08dd411-5461-5062-ba2c-5ac383a44e51/6a0d9f6f18404.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Colorado's top court orders children's hospital to resume gender-affirming care for minors",
     source: "Telluride Times",
     date: "May 19, 2026",
@@ -108,6 +132,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_8e1b844e-d9ba-58dc-b1a8-754933a96518.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Intergovernmental meeting considers large-scale projects",
+    source: "Telluride Times",
+    date: "May 20, 2026",
+    firstSeen: "2026-05-20",
+    newsTopic: "health",
+    copy: "Regional officials met to discuss coordination on large development projects after several communities said they were caught off guard by the Four Seasons project in Mountain Village. Towns like Ridgway and Naturita are now housing construction workers, straining local resources and infrastructure, with Ridgway suing over zoning violations at worker housing.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_ab40e47c-2e12-4591-ba16-71b511df9bf2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/5a/85a13aa6-b1b6-4623-9baa-57f77227e78e/6a0d7c50103a8.image.jpg",
     imgHiRes: true
   },
   {
@@ -1212,17 +1248,6 @@ const COMMUNITY_EVENTS = [
 ];
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Beans and Books at Coffee Cowboy",
-    link: "https://koto.org/event/beans-and-books-at-coffee-cowboy/",
-    description: "What better way to start out your day than by sipping on a hot cup of coffee while chatting with other bibliophiles about books? It's a chance to talk about whatever you have been reading (or listening to) and hear about what other folks have been reading (or listening to). Drop in anytime at the beautiful Coffee Cowboy General Store on the corner of Pacific and Willow the third Wednesday of every month!",
-    pubDate: "2026-05-20T08:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Coffee Cowboy General Store, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/beans-books-5.png"
-  },
   {
     title: "Mahjongg for Independent Players",
     link: "https://koto.org/event/mahjongg-for-independent-players-2/",
@@ -2913,17 +2938,6 @@ const OURAY_RIDGWAY_EVENTS = [
 ];
 
 const NORWOOD_EVENTS = [
-  {
-    title: "Board Of Trustees Meeting",
-    link: "https://www.norwoodtown.com/2026-05-13-board-of-trustees-meeting",
-    description: "",
-    pubDate: "2026-05-13T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
   {
     title: "Norwood Sanitation District Meeting Meeting",
     link: "https://www.norwoodtown.com/2026-05-14-norwood-sanitation-district-meeting-meeting",
