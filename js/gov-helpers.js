@@ -102,6 +102,30 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "THS track wins big",
+    source: "Telluride Times",
+    date: "May 20, 2026",
+    firstSeen: "2026-05-21",
+    newsTopic: "education",
+    copy: "THS girls track team had a strong showing at state championships, with their 4x800 relay team finishing first in 9:44.46, coming within 11 seconds of the 2A record. Austin Coom won her second straight 800m title in 2:11.45, missing the state record by just 0.02 seconds, while the Lady Miners placed 10th overall as a team.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_05e1f911-c5b9-4b4b-ba4f-b633a1d3a7c5.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/27/92731cb4-0e96-430e-a9f6-8e46805b1b02/6a0c21f8d29e5.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "The plant that outlasted the miners",
+    source: "Telluride Times",
+    date: "May 20, 2026",
+    firstSeen: "2026-05-21",
+    newsTopic: "recreation",
+    copy: "Miners in the old West planted rhubarb for its hardy nature and tangy spring flavor when fresh fruit wasn't available most of the year. The author's 1893 house likely has rhubarb from that original planting still thriving in the yard. Rhubarb plants still mark abandoned mining settlements across the high country, with one historic camp above Gunnison actually named Pie Plant.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_d561c5b3-49d8-4a93-90c3-0948eee9e33a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/1d/d1d8e35f-1f8d-4d2f-a595-78ce88f351de/6a0d87534309b.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "This year's most endangered historic places nod to America 250 and the promise of equality for all",
     source: "Telluride Times",
     date: "May 20, 2026",
@@ -738,88 +762,13 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Man charged in Colorado firebomb attack on demonstrators to plead guilty to murder",
-    source: "Telluride Times",
-    date: "May 7, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "public-safety",
-    copy: "A man who threw Molotov cocktails at demonstrators on Boulder's Pearl Street Mall last year, killing an 82-year-old woman and injuring a dozen others, is set to plead guilty to murder in state court. He still faces federal hate crime charges and potential death penalty for what prosecutors say was a planned attack targeting people perceived as connected to Israel.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_b30b6aed-46e8-5a99-9fb6-c77bfd748db0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/67/d67d68d6-eb78-53a3-bec2-e05a4c063c21/69f906e808dfd.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride Town Council considers amendments to emergency fire restrictions",
-    source: "Telluride Times",
-    date: "May 7, 2026",
-    firstSeen: "2026-05-08",
-    newsTopic: "public-safety",
-    copy: "Town Council is looking at changing fire ban procedures to let the town manager declare restrictions immediately instead of waiting for a council meeting and vote. The current process can cause delays when coordinating with the county and Mountain Village, who can implement bans faster than Telluride's required council approval.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_74780234-41a7-4a60-84a3-5278e7238f9a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/1c/c1c690df-53af-497b-8b1b-0fd059c75885/69fc4d657a23b.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "We’re in this together",
-    source: "Telluride Times",
-    date: "May 7, 2026",
-    firstSeen: "2026-05-08",
-    newsTopic: "arts-culture",
-    copy: "A new county survey shows concerning mental health trends locally - 38% feel lonely, 55% had poor mental health days recently, and 33% report excessive drinking versus 20% statewide. The county hired Cole Cooper as its first Behavioral Health Projects Lead and is planning a walk-in behavioral health hub at Society Turn, while residents can already access free therapy sessions through a voter-approved fund by calling Tri-County Health Network.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_312e7171-4fbd-48b5-b190-d35e4439e8dc.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/fe/dfeb60ac-288d-4fe5-b2f2-528992d509e8/69fa6216b3098.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "The man who firebombed Colorado demonstrators in 2025, killing 1, is sentenced to life in prison",
-    source: "Telluride Times",
-    date: "May 7, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "public-safety",
-    copy: "The man who firebombed Colorado demonstrators in 2025, killing 1, is sentenced to life in prison.",
-    claudeSummary: false,
-    href: "https://www.telluridenews.com/news/state/article_0edbe8ac-df62-5ec8-8825-57c179fc633b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Man accused of firebombing Colorado demonstrators pleads guilty to murder",
-    source: "Telluride Times",
-    date: "May 7, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "public-safety",
-    copy: "Man accused of firebombing Colorado demonstrators pleads guilty to murder.",
-    claudeSummary: false,
-    href: "https://www.telluridenews.com/news/state/article_67fbbc41-28b9-5ed3-99f1-824332d7dbf7.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Art for all",
-    source: "Telluride Times",
-    date: "May 7, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "arts-culture",
-    copy: "Ah Haa's \"May as You Can\" program is back for its third year, offering art classes throughout May on a pay-what-you-can basis to remove financial barriers. Classes range from ceramics and textile mending to family workshops and cooking, with some students paying extra to cover costs for others who attend free.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_526ca757-3b6a-4ed3-a83a-0727b1d76e55.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/3e/c3e7b346-f9ad-487f-80f8-a7c72a40a371/69fc4a58b71bc.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Lawrence de Bivort",
-    source: "Telluride Times",
-    date: "May 7, 2026",
-    firstSeen: "2026-05-07",
-    newsTopic: "community",
-    copy: "Lawrence de Bivort, who moved to Telluride with his wife Eileen about ten years ago, has passed away. He was an avid outdoorsman who climbed fourteeners and explored the Southwest, and spent years writing a book on human cultural evolution. He's survived by his son Benjamin, sister Carlyle, and two nieces and nephews.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/obituaries/article_0fde58b6-845c-47a4-af53-0733fb89b0bb.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/92/b92397ab-fccb-4ed9-9d43-2eb1808a2886/69fb527eae2f8.image.jpg",
-    imgHiRes: true
+    title: "Telluride Housing Authority Launches Tenant Advisory Committee",
+    source: "Town of Telluride",
+    date: "May 21, 2026",
+    newsTopic: "housing",
+    copy: "(May 20, 2026) – Telluride, CO – The THA is now accepting applications for the newly established Tenant Advisory Committee, a resident-led group created to strengthen communication between tenants living in Town-managed rental housing and Town leadership.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=392",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15549"
   },
   {
     title: "Telluride Barricade Passes Mailed to Town Residents",
@@ -916,7 +865,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "DOLA Economic Vitality Community Session on May 27, 2026",
     source: "Town of Ridgway",
-    date: "May 20, 2026",
+    date: "May 21, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -927,7 +876,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "CO Main Street Architect Visits on May 27-28, 2026",
     source: "Town of Ridgway",
-    date: "May 20, 2026",
+    date: "May 21, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -960,7 +909,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "May 20, 2026",
+    date: "May 21, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1004,6 +953,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 5-20-26",
+    source: "KOTO Community Radio",
+    date: "May 21, 2026",
+    newsTopic: "government",
+    copy: "Telluride School District to Ask Voters for More Funding; Cat Movie Fisher with Risho Unda; InVINCEble Comes to Mountainfilm",
+    href: "https://koto.org/news/newscast-5-20-26/"
+  },
   {
     title: "Newscast 5-18-26",
     source: "KOTO Community Radio",
@@ -1059,14 +1016,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "public-safety",
     copy: "The Bears Are Back in Town; Federal Firefighting in the Region Sees Shift; The Wonder, Intimacy, and Hope of “Appalachia”",
     href: "https://koto.org/news/newscast-5-7-26/"
-  },
-  {
-    title: "Newscast 5-6-26",
-    source: "KOTO Community Radio",
-    date: "May 7, 2026",
-    newsTopic: "public-safety",
-    copy: "Mountain Village Addresses Wildfire with Forest Management; Cat Movie Fisher with Risho Unda; Telluride Yoga Festival Brings Longevity and Service",
-    href: "https://koto.org/news/newscast-5-6-26/"
   }
 ];
 
@@ -1679,6 +1628,39 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
+  },
+  {
+    title: "Low Energy & Carbon Code Training",
+    link: "https://koto.org/event/low-energy-carbon-code-training/",
+    description: "Join this free, full-day training with code experts that will teach you how to design and build to the Low Energy and Carbon Code (LECC) and regional amendments. Leave with an understanding of electric, EV and solar-ready requirements, how the LECC compares to previous energy codes, and the 3 compliance pathways. Location: Ridgway Town Hall and Zoom Register on EcoAction Partners website: www.ecoactionpartners.org/energy-codes",
+    pubDate: "2026-06-11T09:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/03/LECC-Training-June-26-Final-Flyer.png"
+  },
+  {
+    title: "Pilates for All Bodies with Laura",
+    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-06-11/",
+    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-06-11T12:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "The Creative Exchange at Telluride Arts HQ",
+    link: "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-06-11/",
+    description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. Topics may span everything from the business of art and professional development, to creative process, storytelling, collaboration, and the philosophical underpinnings of making art. Whether you’re a full-time working artist, an educator, a student, a maker, or simply someone curious about creative expression, the Creative Exchange is open to you. …",
+    pubDate: "2026-06-11T17:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Arts HQ, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png"
   }
 ];
 
@@ -2203,17 +2185,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52880886803755/huge/ba2d24fbf09ba1f9a707a06213d60685581d7322.jpg"
   },
   {
-    title: "The Lord of the Rings: The Fellowship of the Ring: Movie Night @ The Wright",
-    link: "https://thewrightoperahouse.org/",
-    description: "The Lord of the Rings: The Fellowship of the Ring: Movie Night @ the Wright WHEN? Wednesday, May 27 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 2h 58min RATING: PG-13 ROTTEN TOMATOES SCORE: 91% ABOUT THE FILM This movie was chosen to be just in time for fans of the Genre and precedes our live theatre event: \"Fly, You Fools!\" The Lord of the Rings: The Fellowship of the Ring (2001) follows a young hobbit, Frodo Baggins, as he sets out on a perilous journey to destroy a powerful ring and prevent it from falling into the hands of darkness. Joined by a fellowship of unlikely allies, Frodo travels across Middle-earth facing danger, temptation, and the growing shadow of evil in an epic tale of courage, friendship, and sacrifice. …",
-    pubDate: "2026-05-28T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52568666129757/huge/1fe32b4a28a59494b608daafcb284a172935afe5.jpg"
-  },
-  {
     title: "Pilates Mat",
     link: "https://ridgwaypilates.punchpass.com/catalogs/300",
     description: "All Levels Pilates Mat class. Classical sequence Int to challenge, strengthen and stretch you wehole body. Every Thursday at 9:30am. Pricing Four lessons for $120 Eight lessons for $200 Become a member and pay $100/month to attend weekly. Purchase a pass here: https://ridgwaypilates.punchpass.com/catalogs/300 Class is limited to six people. Mats are included. Please wear socks, put your hair up and choose clothing free of metal.",
@@ -2234,6 +2205,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52709680184864/huge/bf651b7d434184420bcaf9702ff358cbd88d3b9e.jpg"
+  },
+  {
+    title: "The Lord of the Rings: The Fellowship of the Ring: Movie Night @ The Wright",
+    link: "https://thewrightoperahouse.org/",
+    description: "The Lord of the Rings: The Fellowship of the Ring: Movie Night @ the Wright WHEN? Wednesday, May 28 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 2h 58min RATING: PG-13 ROTTEN TOMATOES SCORE: 91% ABOUT THE FILM This movie was chosen to be just in time for fans of the Genre and precedes our live theatre event: \"Fly, You Fools!\" The Lord of the Rings: The Fellowship of the Ring (2001) follows a young hobbit, Frodo Baggins, as he sets out on a perilous journey to destroy a powerful ring and prevent it from falling into the hands of darkness. Joined by a fellowship of unlikely allies, Frodo travels across Middle-earth facing danger, temptation, and the growing shadow of evil in an epic tale of courage, friendship, and sacrifice. …",
+    pubDate: "2026-05-29T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52568666129757/huge/1fe32b4a28a59494b608daafcb284a172935afe5.jpg"
   },
   {
     title: "THIRSTY THURSDAY - Game Night at Floating Lotus",
@@ -2722,13 +2704,13 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "First Friday Art Walk",
     link: "www.ridgwayfuse.org/firstfridays ",
-    description: "Discover new work, celebrate openings and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits and special programming — perfect for art lovers and casual browsers alike. Plan your route with the interactive map here: First Friday Map Expect a range of media — painting, photography, mixed media and fine craft — and opportunities to talk with the artists who made it. Participating venues include Mountain Girl Gallery, Decker Community Room and Galelry Timber Creek, Fabula, The Vault Vintage and Consignment, 610 Arts Collective, Sherbino Theater, Space to Create Gallery and many more, organized by Ridgway FUSE Creative Main Street and local partners. Come for the art, stay for the community — First Friday is a highlight of Ridgway’s cultural calendar. NEW! 🎨🛍️ Shop local. Win local. Celebrate local. …",
+    description: "Discover new work, celebrate openings and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits and special programming — perfect for art lovers and casual browsers alike. NEW! 🎨🛍️ Shop local. Win local. Celebrate local. 🎶🍷 Starting this June, your First Friday stroll through Ridgway could score you a $100 gift card to your favorite local business. 👀 Here’s how it works: ✨ Shop during First Friday ✨ Text your receipts from participating businesses ✨ Submit up to 3 receipts each month ✨ Two winners drawn monthly! Every receipt = another chance to win while supporting the galleries, shops, restaurants, artists, makers, and small businesses that make Ridgway feel like Ridgway. 📸 Text receipts to: (970) 316-3197 —or drop them off at Town Hall within 48 hours. …",
     pubDate: "2026-06-05T23:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Downtown Ridgway, CO",
-    imageUrl: "https://localist-images.azureedge.net/photos/52941153435060/huge/dc729fbf88a6f447ca628b5fb8f55a6f54663d2f.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg"
   },
   {
     title: "First Friday Art Walk with Walter St.Clair",
@@ -3342,42 +3324,6 @@ const LEGAL_NOTICES = [
     noticeKey: "rfp-flooring-333-305-colorado"
   },
   {
-    title: "Public Meeting -- Onsite Wastewater Treatment Systems Regulation (Board of Health)",
-    entity: "San Miguel County Board of Health",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The San Miguel County Board of Health will consider regulatory options related to Colorado Regulation 43 for onsite wastewater treatment systems during their May 20, 2026 meeting. The meeting will provide opportunity for public comment and participation. Written comments must be received by May 19, 2026.",
-    deadline: "May 19, 2026",
-    expires: "2026-05-20",
-    dates: "4/30",
-    papers: ["ttimes_0430"],
-    url: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
-    address: "333 West Colorado Ave, 2nd floor, Telluride, CO 81423",
-    noticeKey: "boh-wastewater-reg43-052026"
-  },
-  {
-    title: "Public Hearing -- Tree Removal Application (Elm Creek Reserve High Meadow Ranch)",
-    entity: "San Miguel County Board of Commissioners",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "Cari Johnson on behalf of VM West LLC has applied for tree removal permits on Elm Creek Reserve's High Meadow Ranch on Wilson Mesa across five parcels. The Board of County Commissioners will hold a public meeting on May 20, 2026 at 9:30 AM. Written comments must be received by May 12, 2026.",
-    deadline: "May 12, 2026",
-    expires: "2026-05-20",
-    dates: "4/30",
-    papers: ["ttimes_0430"],
-    url: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
-    address: "Wilson Mesa parcels #478301200005, #478301300006, #478313007001, #478313200015, #478312200001",
-    noticeKey: "tree-removal-elmcreek-478301200005"
-  },
-  {
     title: "RFP -- County Building Flooring Replacement",
     entity: "San Miguel County",
     entityClass: "ent-county",
@@ -3394,60 +3340,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_c5a54e8f-2fa6-42a2-ba94-3a3828e137ff.html",
     address: "333 & 305 W. Colorado Ave, Telluride, CO",
     noticeKey: "rfp-flooring-333-305-colorado"
-  },
-  {
-    title: "Public Meeting -- Onsite Wastewater Treatment Systems Regulation (Board of Health)",
-    entity: "San Miguel County Board of Health",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The San Miguel County Board of Health will consider regulatory options related to Colorado Regulation 43 for onsite wastewater treatment systems during their May 20, 2026 meeting. The meeting will provide opportunity for public comment and participation. Written comments must be received by May 19, 2026.",
-    deadline: "May 19, 2026",
-    expires: "2026-05-20",
-    dates: "4/30",
-    papers: ["ttimes_0430"],
-    url: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
-    address: "333 West Colorado Ave, 2nd floor, Telluride, CO 81423",
-    noticeKey: "boh-wastewater-reg43-052026"
-  },
-  {
-    title: "Public Hearing -- Tree Removal Application (Elm Creek Reserve High Meadow Ranch)",
-    entity: "San Miguel County Board of Commissioners",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "Cari Johnson on behalf of VM West LLC has applied for tree removal permits on Elm Creek Reserve's High Meadow Ranch on Wilson Mesa across five parcels. The Board of County Commissioners will hold a public meeting on May 20, 2026 at 9:30 AM. Written comments must be received by May 12, 2026.",
-    deadline: "May 12, 2026",
-    expires: "2026-05-20",
-    dates: "4/30",
-    papers: ["ttimes_0430"],
-    url: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
-    address: "Wilson Mesa parcels #478301200005, #478301300006, #478313007001, #478313200015, #478312200001",
-    noticeKey: "tree-removal-elmcreek-478301200005"
-  },
-  {
-    title: "Public Hearing -- Lot Line Vacation (Fall Creek Subdivision No. 2)",
-    entity: "San Miguel County Board of Commissioners",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "Ray Bowers on behalf of Cigmire LLC seeks a subdivision exemption for lot line vacation between Lots 51 and 52 in Fall Creek Subdivision No. 2 to increase buildability of lot 52. Public hearing scheduled for May 20, 2026 at 9:30 AM. Written comments must be received by May 11, 2026.",
-    deadline: "May 11, 2026",
-    expires: "2026-05-20",
-    dates: "4/30",
-    papers: ["ttimes_0430"],
-    url: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
-    address: "Fall Creek Subdivision No. 2, Lots 51-52 (parcels #456318203006, #456318203005)",
-    noticeKey: "lot-line-vacation-fallcreek-456318203006"
   },
   {
     title: "Property Tax Exemption -- Senior Citizens and Veterans with Disability",
