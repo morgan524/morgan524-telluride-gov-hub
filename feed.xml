@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 May 2026 09:30:48 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2026 14:54:37 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Design Review Board — 2026-06-04</title>
@@ -120,6 +120,16 @@ The May 28 regular board meeting agenda hasn't been posted yet, so there's no wa
       <media:content url="https://www.telluride.gov/ImageRepository/Document?documentID=15549" medium="image" />
       <category>Town of Telluride</category>
       <category>housing</category>
+    </item>
+    <item>
+      <title>What’s Happening: A literary festival in the mountains</title>
+      <link>https://coloradosun.com/2026/05/21/whats-happening-colorado-mountain-words-literary-festival-crested-butte/</link>
+      <guid isPermaLink="false">https://coloradosun.com/2026/05/21/whats-happening-colorado-mountain-words-literary-festival-crested-butte/</guid>
+      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2025/12/IMG_2919-scaled.jpg?fit=1024%2C768&amp;quality=85&amp;ssl=1" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Plus: a free concert in Rangely, an adventure film festival in Telluride and a night for local journalism]]></description>
+      <media:content url="https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2025/12/IMG_2919-scaled.jpg?fit=1024%2C768&amp;amp;quality=85&amp;amp;ssl=1" medium="image" />
+      <category>Colorado Sun</category>
+      <category>arts-culture</category>
     </item>
     <item>
       <title>Newscast 5-20-26</title>
@@ -403,16 +413,6 @@ Two code items on the table — a Land Use Code update and a Colorado Wildfire R
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/3e/43e515a2-f472-4cf6-abaa-8065fa6a5641/6a0642203b240.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>education</category>
-    </item>
-    <item>
-      <title>Seeds of motherhood</title>
-      <link>https://www.telluridenews.com/opinion/columnists/article_cbfd4cab-6e21-4681-ae0f-8f35fc8eca9b.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/opinion/columnists/article_cbfd4cab-6e21-4681-ae0f-8f35fc8eca9b.html</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/1a/a1a74b80-0896-421a-9999-e5f3d6b186c7/6a04900858af0.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Carol Hiatt reflects on raising her daughter Madison in the mountains, sharing memories from first ski lessons to snowmobile mishaps to Sunday afternoons reading by the fire. Now an adult, Madison has grown into a skilled woman who bakes bread and hosts board games, embodying the nurturing home environment she grew up with while developing her own distinct traits.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/1a/a1a74b80-0896-421a-9999-e5f3d6b186c7/6a04900858af0.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
     </item>
   </channel>
 </rss>

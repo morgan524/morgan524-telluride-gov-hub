@@ -903,6 +903,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "What’s Happening: A literary festival in the mountains",
+    source: "Colorado Sun",
+    date: "May 21, 2026",
+    firstSeen: "2026-05-21",
+    newsTopic: "arts-culture",
+    copy: "Plus: a free concert in Rangely, an adventure film festival in Telluride and a night for local journalism",
+    claudeSummary: false,
+    href: "https://coloradosun.com/2026/05/21/whats-happening-colorado-mountain-words-literary-festival-crested-butte/",
+    img: "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2025/12/IMG_2919-scaled.jpg?fit=1024%2C768&amp;quality=85&amp;ssl=1"
+  },
+  {
     title: "Ridgway Offers Convenient Online Payments with Xpress Bill Pay",
     source: "Town of Ridgway",
     date: "May 19, 2026",
@@ -1239,17 +1250,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://koto.org/wp-content/uploads/2026/04/Ocean-Symp-Garth-Andy3-2-scaled.jpg"
-  },
-  {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-05-21/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-05-21T12:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
   },
   {
     title: "Cancer Support Group",
@@ -1739,7 +1739,7 @@ const WILKINSON_EVENTS = [
     imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
   },
   {
-    title: "Pilates for All Bodies",
+    title: "CANCELLED Pilates for All Bodies",
     link: "https://telluridelibrary.libcal.com/event/16555985?hs=a",
     description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
     pubDate: "2026-05-21T12:30:00.000Z",
@@ -2665,17 +2665,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52886404587594/huge/0c51371f7fbb6f19dc67e815e978b33092a15b0c.jpg"
   },
   {
-    title: "Ouray Mountain Air Music Series",
-    link: "www.ouraymusicseries.com",
-    description: "2026 Lineup to be announced on April 15th, 2026.",
-    pubDate: "2026-06-05T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52187874790497/huge/0ec868c32c29ca61d72952fc7cdf98df2de26a98.jpg"
-  },
-  {
     title: "THIRSTY THURSDAY - Game Night at Floating Lotus",
     link: "www.FloatingLotusBrewery.com",
     description: "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who came to have a good time. Happening 7-9pm every week",
@@ -2916,21 +2905,21 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
+  },
+  {
+    title: "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
+    link: "https://sherbino.org/events/",
+    description: "MONTHLY WELCOME HOME ALLIANCE VETERAN’S COFFEE @ THE SHERBINO Every Branch. Every Era. Every Ability. Offering coffee, donuts and camaraderie. Mike Trickey and April Heard will be there bringing information to you on topics such as: Navigating the VA, Housing, Jobs, Volunteer Opportunities, community resources, VA benefits, recreation and mental health. For more information or to offer support (products or monetary), call 970-765-2210 or visit https://www.whafv.org/ Occurs the 2nd Tuesday of Every Month || 10 am - Noon || Free to attend || Vets Only, Please",
+    pubDate: "2026-06-09T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg"
   }
 ];
 
 const NORWOOD_EVENTS = [
-  {
-    title: "Norwood Sanitation District Meeting Meeting",
-    link: "https://www.norwoodtown.com/2026-05-14-norwood-sanitation-district-meeting-meeting",
-    description: "",
-    pubDate: "2026-05-14T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-05-18-planning-and-zoning-commission-meeting",
