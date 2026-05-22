@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 May 2026 14:27:53 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 19:28:54 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Design Review Board — 2026-06-04</title>
@@ -40,6 +40,16 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
 The May 28 regular board meeting agenda hasn't been posted yet, so there's no way to know what's coming up.]]></description>
       <category>Meeting</category>
       <category>Telluride Medical Center</category>
+    </item>
+    <item>
+      <title>Highway 62 closed between Ridgway and Placerville</title>
+      <link>https://www.telluridenews.com/news/article_042cbb30-7003-4b76-8bc3-a40b5a124367.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_042cbb30-7003-4b76-8bc3-a40b5a124367.html</guid>
+      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bf/abfd96db-450e-40ba-8a54-74fb95a45581/6a1082ef543f9.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The San Miguel County Sheriff’s office reported that Highway 62 is closed as of 9:43 a.m. on Friday, May 22 due to an accident involving a semi-truck on the highway that is currently blocking both lanes of traffic.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bf/abfd96db-450e-40ba-8a54-74fb95a45581/6a1082ef543f9.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>housing</category>
     </item>
     <item>
       <title>Fabulous freeriders</title>
@@ -399,17 +409,6 @@ Agenda not yet available]]></description>
 Virtual-only meeting. The Gondola update is the agenda's headline — that's the project that drives SMART's 3A ballot context. Resolution 2026-8 appoints Marya Stark to the Investment Committee. Q4 2025 / annual performance report and the May Ops report round out the formal business. The board closes in executive session under §24-6-402(4)(b) to confer with counsel on Masson v. SMC BOCC. Anyone tracking how the gondola conversation is evolving should bookmark the live link.]]></description>
       <category>Meeting</category>
       <category>SMART Transit</category>
-    </item>
-    <item>
-      <title>[Meeting] The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. — 2026-05-20</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/ouray%7C2026-05-20%7CThe%20Planning%20Commission%20will%20conduct%20a%20work%20session%20to%20review%20and%20discuss%20possib</guid>
-      <pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[ouray • 2026-05-20
-
-Land Use Code definitions review · Planning Commission work session]]></description>
-      <category>Meeting</category>
-      <category>ouray</category>
     </item>
   </channel>
 </rss>
