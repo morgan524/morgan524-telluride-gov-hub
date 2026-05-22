@@ -107,8 +107,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "May 22, 2026",
     firstSeen: "2026-05-22",
     newsTopic: "arts-culture",
-    copy: "If it seems like The Telluride Times’ Mountainfilm coverage is focused largely on homegrown talent, that’s because it is.",
-    claudeSummary: false,
+    copy: "Several local filmmakers are featured at this year's Mountainfilm, including Ben Knight who brought two films: \"Best Day Ever\" about adaptive bike riders building a Vermont bike park, and \"Teeth to the Wind\" about climbers Michael Gardner and Sam Hennessey. Knight, known for blending humor with serious subjects, says people seek him out because of his sensitive editing style.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/arts_and_entertainment/article_fb3ab976-5bf3-4e28-b091-a80cee11fed9.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/70/8709cb40-2ae2-41f6-baeb-aeac7f6208de/6a0e81f164e4d.image.jpg",
     imgHiRes: true
@@ -258,6 +258,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Town council discusses strategies to address housing policies",
+    source: "Telluride Times",
+    date: "May 21, 2026",
+    firstSeen: "2026-05-22",
+    newsTopic: "housing",
+    copy: "Town Council is forming a 9-member committee of housing project residents to provide feedback on rental policies, with participants getting rent credits for their service. Due to local criticism and staff capacity limits, they're also hiring outside consultants to review housing policies more quickly than staff could manage internally.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_aa3cb7e5-739c-474d-8a71-d46a4d7296e8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ec/4ecb883f-23a1-4d1d-bddd-dfd4266f8781/6a0fd7c8a2481.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Local filmmaker Ken Bailey honors Telluride��s beloved Lissa Margetts",
     source: "Telluride Times",
     date: "May 21, 2026",
@@ -294,18 +306,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "A community worth fighting for",
-    source: "Telluride Times",
-    date: "May 21, 2026",
-    firstSeen: "2026-05-21",
-    newsTopic: "community",
-    copy: "A candidate for San Miguel County Commissioner is highlighting concerns about housing affordability, workforce retention, and community sustainability. They're emphasizing the need for affordable housing that matches local wages, better regional coordination, and more transparent decision-making processes.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/article_eb9b3a02-15be-4e45-a36a-a3399f6daf37.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/d1/8d1a0c86-e85c-4bb7-a99d-efcb3ded31c6/6a0ea13a5b911.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Una comunidad por la que vale la pena luchar",
     source: "Telluride Times",
     date: "May 21, 2026",
@@ -315,6 +315,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/article_220cea39-7b74-4304-b7f6-68aa9d22c930.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/85/385ea219-d90e-46b3-ae19-f24d72946c06/6a0ea32eaa922.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A community worth fighting for",
+    source: "Telluride Times",
+    date: "May 21, 2026",
+    firstSeen: "2026-05-21",
+    newsTopic: "community",
+    copy: "A candidate for San Miguel County Commissioner is highlighting concerns about housing affordability, workforce retention, and community sustainability. They're emphasizing the need for affordable housing that matches local wages, better regional coordination, and more transparent decision-making processes.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/article_eb9b3a02-15be-4e45-a36a-a3399f6daf37.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/d1/8d1a0c86-e85c-4bb7-a99d-efcb3ded31c6/6a0ea13a5b911.image.jpg",
     imgHiRes: true
   },
   {
@@ -1855,92 +1867,37 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Writing Workshop with Bridget Crocker",
-    link: "https://telluridelibrary.libcal.com/event/16804433?hs=a",
-    description: "9:00 AM – 11:00 AM · Join us for a writing workshop with Bridget Crocker, author of The River&#39;s Daughter . Cultivating the Spirit of Place in Writing How can we best infuse the spirit of nature into our writing? In this two-hour writing workshop, we'll explore tools and practices for deepening our relationship with place. We'll learn how to transform our creative intuition into sensory-driven prose that gives voice to the places we love and elevates our understanding of the natural world.  And be sure to attend Bridget&#39;s talk and signing at 5:30 the evening of the 21st!  More info here:  https://telluridelibrary.libcal.com/event/16553029",
-    pubDate: "2026-05-21T09:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_12_15_47_16.webp"
-  },
-  {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/15223206?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-05-21T10:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
-  },
-  {
-    title: "Pilates for All Bodies",
-    link: "https://telluridelibrary.libcal.com/event/16555985?hs=a",
-    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-05-21T12:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
-  },
-  {
-    title: "Littles On the Move",
-    link: "https://telluridelibrary.libcal.com/event/13960344?hs=a",
-    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
-    pubDate: "2026-05-21T15:30:00.000Z",
+    title: "You & Me / Tu y Yo",
+    link: "https://telluridelibrary.libcal.com/event/15184969?hs=a",
+    description: "10:30 AM – 11:00 AM · Join us every Friday for a fun and engaging parent-child program designed for preschoolers! Each week, we explore a new theme through hands-on activities that spark creativity, curiosity, and learning. 1st Friday: Art - Get creative with fun art projects designed for little hands! 2nd Friday: Toddler Chef - Stir, mix, and create easy, tasty treats while learning basic kitchen skills. 3rd Friday: STEM - Dive into simple science, technology, engineering, and math experiments that inspire wonder. 4th Friday: Crafts - Enjoy making fun crafts together. &Uacute;nase a nosotros todos los viernes para un programa divertido e interactvio para padres e hijos, &iexcl;dise&ntilde;ado para ni&ntilde;os en edad preescolar! Cada semana exploramos un nuevo tema a trav&eacute;s de actividades pr&aacute;cticas que despiertan la creatividad, la curiosidad y el aprendizaje. …",
+    pubDate: "2026-05-22T10:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755554174.png"
   },
   {
-    title: "The Spark Lab with EcoAction Partners",
-    link: "https://telluridelibrary.libcal.com/event/15072263?hs=a",
-    description: "3:30 PM – 4:30 PM · Each week we will do a fun activity! First thursdays with Pinhead Second Thursdays with EcoAction partners Fourth Thursdays with Telluride Theatre",
-    pubDate: "2026-05-21T15:30:00.000Z",
+    title: "Cine de las Montanas",
+    link: "https://telluridelibrary.libcal.com/event/16825118?hs=a",
+    description: "3:00 PM – 5:00 PM · El Cine de las Monta&ntilde;as, tra&iacute;do a nosotros gracias a Mountain Film, celebra la aventura, la cultura de monta&ntilde;a, el activismo y la justicia social en comunidades diversas a trav&eacute;s de documentales, cortos y largometrajes. &iexcl;Este a&ntilde;o tendremos a cineastas presentes que nos contar&aacute;n del proceso de su documental! Este evento es gratis y abierto para todos",
+    pubDate: "2026-05-22T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1761421911.png"
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_01_13_24_09.png"
   },
   {
-    title: "Teen Reimagining Our Community",
-    link: "https://telluridelibrary.libcal.com/event/16099976?hs=a",
-    description: "4:00 PM – 5:00 PM · Join us for a Teen conversation series called \"Reimagining Our Community\". In this series, we will present a series of fictional scenarios to be \"Reimagined\", that will allow for growth, healing, and community building around difficult topics. This will be a safe space with support available for big emotions.  Jan 29 - Digital Health & AI Feb 26 - Career/Future Anxiety Mar 26 - Friendships & Cliques Apr 30 - Racism May 21 - Bullying",
-    pubDate: "2026-05-21T16:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1767388133.png"
-  },
-  {
-    title: "Cancer Support Group",
-    link: "https://telluridelibrary.libcal.com/event/16067710?hs=a",
-    description: "5:00 PM – 6:00 PM · Join us for a supportive and compassionate space at our Cancer Support Group held every 3rd Thursday of the month from 5:00 PM to 6:00 PM . This group is designed for individuals currently experiencing cancer and for those who are in remission, offering a safe and welcoming environment for sharing personal stories, experiences, and encouragement. Whether you&#39;re navigating your cancer journey or reflecting on the road to recovery, this group provides emotional support and the opportunity to connect with others who understand your unique challenges. Come and find strength in the community, share your experiences, and know you&#39;re not alone in your journey.",
-    pubDate: "2026-05-21T17:00:00.000Z",
+    title: "Teen Ping Pong",
+    link: "https://telluridelibrary.libcal.com/event/15976841?hs=a",
+    description: "4:00 PM – 6:00 PM · Come stop by the library every Friday after school for open Ping Pong for Teenagers in the Magazine Room.",
+    pubDate: "2026-05-22T16:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_02_26_11_55_25.jpg"
-  },
-  {
-    title: "Mountainfilm Town Read: The River&#039;s Daughter with Bridget Crocker",
-    link: "https://telluridelibrary.libcal.com/event/16553029?hs=a",
-    description: "5:30 PM – 7:00 PM · Join us for the annual Mountainfilm Town Read, a partnership between Wilkinson Public Library and Mountainfilm in which we bring to Telluride an author who embodies \"indomitable spirit\". This year we are excited to host Bridget Crocker , author of the memoir The River&#39;s Daughter , for a talk and signing on Thursday, May 21st at 5:30 pm. Between the Covers bookstore will be at the event selling books. You can also check out one of the library&#39;s copies or listen to the audio book on Hoopla . Bridget will also lead a writing workshop at the library from 9:00 - 11:00 the morning of the 21st. The topic is Cultivating the Spirit of Place in Writing. Sign up here: https://telluridelibrary.libcal.com/event/16804433 You can also catch Bridget at a Mountainfilm Coffee Talk on Saturday, May 23rd at 8:00 am at Hotel Telluride. …",
-    pubDate: "2026-05-21T17:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_28_08_55_23.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1765562739.png"
   }
 ];
 
@@ -2021,72 +1978,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "Pilates Mat",
-    link: "https://ridgwaypilates.punchpass.com/catalogs/300",
-    description: "All Levels Pilates Mat class. Classical sequence Int to challenge, strengthen and stretch you wehole body. Every Thursday at 9:30am. Pricing Four lessons for $120 Eight lessons for $200 Become a member and pay $100/month to attend weekly. Purchase a pass here: https://ridgwaypilates.punchpass.com/catalogs/300 Class is limited to six people. Mats are included. Please wear socks, put your hair up and choose clothing free of metal.",
-    pubDate: "2026-05-21T15:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
-  },
-  {
-    title: "On Display: Layers of Faces and Life-Paintings by Ruth Higdon and Julie Ahern",
-    link: "https://events.ourayridgwayevents.com/event/layers-of-faces-and-life-paintings-by-ruth-higdon-and-julie-ahern",
-    description: "A duo exhibition of new works by local painters Julie Ahern and Ruth Higdon. More info decker@ridgwayfuse.org",
-    pubDate: "2026-05-21T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52709680184864/huge/bf651b7d434184420bcaf9702ff358cbd88d3b9e.jpg"
-  },
-  {
-    title: "Story and Craft Time",
-    link: "https://events.ourayridgwayevents.com/event/story-and-craft-time",
-    description: "Join us in the Ouray Library from 4:00 p.m. to 4:45 p.m. to hear some fantastic stories and then make a craft that relates to the stories! Ages: Elementary No sign up is required.",
-    pubDate: "2026-05-21T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52763886924533/huge/0d6297caa05f50bc4a1998088745ab111521bfb3.jpg"
-  },
-  {
-    title: "Creative Space: Artist Salon Series",
-    link: "www.ridgwayfuse.org",
-    description: "Join us for the inaugural Creative Space at the Decker Room. Inspired by our vibrant creative community, these monthly events are intended to build creative community across disciplines! With a different focus each time, we will keep things interesting and engaging! Anyone is welcome to attend, and creatives of all kinds are invited. We welcome your ideas for future events! Bring something to eat or drink to share! For our first salon, we will enjoy a performance by Ridgway’s youth voice ensemble. Then we will talk about supporting one another as a creative community! There will be time to socialize and brainstorm about future salon events! To learn more, ask questions, submit ideas, reach out to the Decker Room Coordinator, Arielle. decker@ridgwayfuse.org 872-772-9484",
-    pubDate: "2026-05-22T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52825557353036/huge/60a36c794f611089746f024c76a091b947724470.jpg"
-  },
-  {
-    title: "THIRSTY THURSDAY - Game Night at Floating Lotus",
-    link: "www.FloatingLotusBrewery.com",
-    description: "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who came to have a good time. Happening 7-9pm every week",
-    pubDate: "2026-05-22T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg"
-  },
-  {
-    title: "Steps Tavern Presents Karaoke Night",
-    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
-    description: "Steps Tavern Presents Karaoke Night. Doors Open at 7:00 PM. Karaoke Begins at 8:00 PM",
-    pubDate: "2026-05-22T02:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "STEPS TAVERN",
-    imageUrl: "https://localist-images.azureedge.net/photos/52633505531238/huge/33b9b47c734793a754893ee4e67227b39326b67b.jpg"
-  },
   {
     title: "OTG Overnight Trail Maintenance Trip: Cutler Complex",
     link: "https://ouraytrails.org/volunteers",
@@ -3054,6 +2945,61 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
+  },
+  {
+    title: "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
+    link: "https://sherbino.org/events/",
+    description: "MONTHLY WELCOME HOME ALLIANCE VETERAN’S COFFEE @ THE SHERBINO Every Branch. Every Era. Every Ability. Offering coffee, donuts and camaraderie. Mike Trickey and April Heard will be there bringing information to you on topics such as: Navigating the VA, Housing, Jobs, Volunteer Opportunities, community resources, VA benefits, recreation and mental health. For more information or to offer support (products or monetary), call 970-765-2210 or visit https://www.whafv.org/ Occurs the 2nd Tuesday of Every Month || 10 am - Noon || Free to attend || Vets Only, Please",
+    pubDate: "2026-06-09T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg"
+  },
+  {
+    title: "On Display: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
+    link: "https://events.ourayridgwayevents.com/event/painting-evolution-of-moments-with-wild-horses-1999-2026-artist-karen-keene-day",
+    description: "Enjoy nearly 3 decades or work from local painter, Karen Keene Day. Info decker@ridgwayfuse.org",
+    pubDate: "2026-06-09T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52709642938173/huge/e2c21f0b2c1fb10c06c021e9b9d55a9ea535bccc.jpg"
+  },
+  {
+    title: "Wright Opera House Guided Tour",
+    link: "wrightoperahouse.org",
+    description: "We're a nonprofit dedicated to bringing world-class performances to Ouray. All guided tours help support our diverse programming! Step behind the scenes of Ouray’s historic gem! Our guided tours offer a unique glimpse into the history, architecture, and stories that make The Wright Opera House truly one-of-a-kind. Tour Days: Tuesday's at 2:00 PM and Wednesday's at 10:00 AMWeekend Tours: Available by request and scheduled around our regular programming. As an active opera house, weekend tours are not offered through our ticketing platform.Tour Fee: $20 per personMinimum Guests: 4 people per tourAccessibility: Fully ADA accessible with elevatorKid-Friendly: Absolutely! A perfect family outingPhoto-Friendly: Yes! Capture this historic beauty (no video during tours, please)Tour Duration: ~1.5 hoursGroups of 25 or more, or for weekend requests: Please contact us directly for pricing and scheduling. …",
+    pubDate: "2026-06-09T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52569865342720/huge/3b2908ddb2fc3d1f0e870007c7b65025c358699f.jpg"
+  },
+  {
+    title: "DAVE MENSCH",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-06-09T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Nature Journaling in the Field with Mary Menz and Sandy Dick",
+    link: "https://weehawkenarts.org/education/adult-art-classes/",
+    description: "Nature Journaling in the Field June 10 Wednesday 8:00am to Noon $49-$69 Registration: www.weehawkenarts.org Join Colorado Native Plant Masters Mary Menz and Sandra Dick as they explore Ouray County wildflowers and natural settings. In this session, you’ll sit in quiet spots and draw what you see to help you hone ID skills. We’ll talk about interesting characteristics of plants and their historical uses. Participants will receive small sketchbooks and will work in pencil, but are welcome to bring their own supplies such as colored pencils, watercolors, etc. Registration includes a copy of their book Common Wildflowers of the San Juan Mountains ($49) or Wildflowers of Colorado’s Western Slope ($69). All groups are limited to 12 participants. Participants will meet and carpooling is recommended (we help facilitate this effort at the meet up location)—specific directions and more information will be provided via email prior to the event. …",
+    pubDate: "2026-06-10T14:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52648536856781/huge/9a9c3474332959978afbd4a529a9a2418e1b0636.jpg"
   }
 ];
 
