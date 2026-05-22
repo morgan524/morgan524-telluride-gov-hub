@@ -102,13 +102,109 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Mountainfilm homecoming",
+    source: "Telluride Times",
+    date: "May 22, 2026",
+    firstSeen: "2026-05-22",
+    newsTopic: "arts-culture",
+    copy: "If it seems like The Telluride Times’ Mountainfilm coverage is focused largely on homegrown talent, that’s because it is.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_fb3ab976-5bf3-4e28-b091-a80cee11fed9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/70/8709cb40-2ae2-41f6-baeb-aeac7f6208de/6a0e81f164e4d.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Colorado Democrats censure governor for conspiracy theorist sentence commutation",
+    source: "Telluride Times",
+    date: "May 21, 2026",
+    firstSeen: "2026-05-21",
+    newsTopic: "government",
+    copy: "Governor Polis commuted former Mesa County Clerk Tina Peters' 9-year sentence for copying election computer systems, reducing her prison time to end June 1st. The Colorado Democratic Party censured Polis after 700 members petitioned against the decision, calling it a dangerous precedent.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_f4202a41-f9f2-562d-8d97-2c1f2db524f4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/1e/b1ec7de1-b5e3-5e4e-95b3-697a44fdd763/6a0f5f485e3db.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "‘There’ll be a lot of connection’",
+    source: "Telluride Times",
+    date: "May 21, 2026",
+    firstSeen: "2026-05-22",
+    newsTopic: "arts-culture",
+    copy: "The HBO documentary series \"The Dark Wizard\" about legendary climber and BASE jumper Dean Potter will screen at Mountainfilm this week. Potter, who died in 2015 during a proximity flight in Yosemite, once parachuted onto Colorado Avenue here in 2014. Local climber and filmmaker Jim Hurst was among Potter's close friends and appears prominently in the four-part series, which explores Potter's complex personality and tragic death.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_b40e80a2-d383-43d1-bff3-566e31012b76.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/2e/92ec7600-dfe0-407f-9fa0-15ff6755550d/6a0e7e4111eb8.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Records of a relationship with the land",
+    source: "Telluride Times",
+    date: "May 21, 2026",
+    firstSeen: "2026-05-22",
+    newsTopic: "arts-culture",
+    copy: "Cristina MitterMeier, this year's Mountainfilm guest director and founder of the International League of Conservation Photographers, is showing 10 selected photos at Fringe Gallery during the festival. The retrospective spans nearly two decades of her work, featuring images from Ethiopia, British Columbia, India and other locations that explore the relationship between indigenous peoples and wild places.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_9fd8c3e4-4231-41ef-baa3-40cbe4e5b00a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/10/8100ce08-0402-427d-8011-6b7d34f2f9ac/6a0e7393477d2.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Super solar project",
+    source: "Telluride Times",
+    date: "May 21, 2026",
+    firstSeen: "2026-05-22",
+    newsTopic: "community",
+    copy: "Rainbow Preschool installed solar panels on their roof through a partnership with Active Energies Solar, generating 12,200 kW-h annually with 131% energy offset. The project was funded partly through Town of Telluride Green Grant money and has an 8% annual return.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_47be9c09-3df7-4adb-ad86-52fcdacec827.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Green Grants thanks",
+    source: "Telluride Times",
+    date: "May 21, 2026",
+    firstSeen: "2026-05-22",
+    newsTopic: "community",
+    copy: "Local residents Shawnna and Dennis Andrejko thanked EcoAction Partners, particularly Siobhan Montoya Lavender and Kendra Held, plus Town staffer Darin Graber for help with their Telluride Green Grants project. The program helps residents complete home efficiency upgrades.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_020283e8-4a89-40fe-b595-6ad1fdec878a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Endorsing Marya",
+    source: "Telluride Times",
+    date: "May 21, 2026",
+    firstSeen: "2026-05-22",
+    newsTopic: "community",
+    copy: "Marya Stark, a six-month Town Council appointee, helped create an Economic Resilience Workgroup after last winter's mountain closure hurt local businesses. County Commissioner Anne Brown is endorsing Stark for a full four-year term, citing her policy and finance background.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_9c315856-90b1-43ac-b572-99eea53ab25e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "End housing bottlenecks",
+    source: "Telluride Times",
+    date: "May 21, 2026",
+    firstSeen: "2026-05-22",
+    newsTopic: "housing",
+    copy: "Five deed-restricted homes are sitting unsold in Pinion Park while local teachers, healthcare workers, and young families can't qualify under current housing authority requirements. The writer notes many residents earn too much for assistance programs but not enough to meet the rigid lending and qualification standards, creating a bottleneck that's forcing people to keep renting or leave town.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_71288668-53cf-41d2-ade1-f8b82cabe11c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
     title: "We can't all be friends",
     source: "Telluride Times",
     date: "May 21, 2026",
     firstSeen: "2026-05-21",
     newsTopic: "community",
-    copy: "NEWS RELEASE",
-    claudeSummary: false,
+    copy: "The local Second Chance Humane Society has several long-term shelter animals who need to be the only pet in their home, including Howard the cat, Lexi the dog, and Rocko, a senior dog who's been waiting over a year for adoption. These single-pet animals often form especially strong bonds with their human families.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_e2a979c9-1565-4b23-beee-604ab2b4c557.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/95/195498f7-845f-4453-a79c-6146255d99e0/6a0f608a39c4c.image.jpg",
     imgHiRes: true
@@ -119,8 +215,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "May 21, 2026",
     firstSeen: "2026-05-21",
     newsTopic: "community",
-    copy: "NEWS RELEASE",
-    claudeSummary: false,
+    copy: "Hoary cress, an invasive plant from Europe and Asia, has been spreading aggressively in our area since the early 1900s through both seeds and roots that can extend 15 feet annually. The white-flowered weed creates monocultures that crowd out native plants and is toxic to cattle, making it particularly problematic for agricultural land. San Miguel County's Vegetation Control office is asking residents to help eliminate infestations and offers cost-share funding and management assistance.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_d439160d-ed6b-42b5-83d4-54d8349c1212.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/50/650998f1-88f8-4789-8485-a2b816eb74e4/6a0f5fe1c753b.image.png",
     imgHiRes: true
@@ -135,18 +231,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/norwood_post/article_ec1eed12-c369-4710-90bc-847fc7b0ee67.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/f3/2f39c500-3189-4393-b516-c6d0843b5bd2/6a0f5ef43d5e0.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Colorado Democrats censure governor for conspiracy theorist sentence commutation",
-    source: "Telluride Times",
-    date: "May 21, 2026",
-    firstSeen: "2026-05-21",
-    newsTopic: "government",
-    copy: "Governor Polis commuted former Mesa County Clerk Tina Peters' 9-year sentence for copying election computer systems, reducing her prison time to end June 1st. The Colorado Democratic Party censured Polis after 700 members petitioned against the decision, calling it a dangerous precedent.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_f4202a41-f9f2-562d-8d97-2c1f2db524f4.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/1e/b1ec7de1-b5e3-5e4e-95b3-697a44fdd763/6a0f5f485e3db.image.jpg",
     imgHiRes: true
   },
   {
@@ -846,52 +930,13 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "‘Telluride: A Legacy of Legacies’",
-    source: "Telluride Times",
-    date: "May 8, 2026",
-    firstSeen: "2026-05-09",
-    newsTopic: "recreation",
-    copy: "Ron Allred and Jim Wells bought majority interest in the ski area in 1978 and developed Mountain Village, the airport, and gondola over 25 years, transforming Telluride from a boarded-up mining town into a world-class resort. Allred's daughter Kristi and author David Strauss are writing \"Telluride: A Legacy of Legacies,\" interviewing locals who helped build the community from mid-1970s to 2000.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_c38b03a3-2122-4822-a291-a7b55317bab0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/c5/0c550539-158f-416e-8854-85112f921ef3/69fe061ba1cd9.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Shop students show off",
-    source: "Telluride Times",
-    date: "May 8, 2026",
-    firstSeen: "2026-05-09",
-    newsTopic: "education",
-    copy: "Middle school shop students recently completed their knick-knack shelves and wooden spoons. They are now starting to build wooden crates.",
-    claudeSummary: false,
-    href: "https://www.telluridenews.com/norwood_post/article_a544195c-3dec-4f7d-b1af-6ec2608ca417.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/cc/7cc40952-4413-4d9f-b281-4ff3348cf439/69fa5e574d670.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "California, Nevada and Arizona announce temporary plan to save water from the Colorado River",
-    source: "Telluride Times",
-    date: "May 8, 2026",
-    firstSeen: "2026-05-09",
-    newsTopic: "infrastructure",
-    copy: "Three lower Colorado River states announced emergency water cuts - Nevada and Arizona reducing use by one-third, California by 13% - as drought and overuse threaten Lake Powell and Lake Mead reservoir levels critical for hydropower and water delivery.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_137054fe-c04a-5681-b79b-c1e2088b3c63.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/f6/6f606ce2-4ca6-5126-92f8-60d57f784962/69fe3bc080d49.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "The greatest heron",
-    source: "Telluride Times",
-    date: "May 8, 2026",
-    firstSeen: "2026-05-08",
-    newsTopic: "infrastructure",
-    copy: "Male great blue herons start building nests to attract females, who then help complete construction before laying 2-6 pale blue eggs that hatch after 29 days. The fluffy gray chicks grow quickly into North America's largest herons, standing up to 4.5 feet tall with 6+ foot wingspans.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_1deaa175-5c6a-4156-a2e5-b36e9b739931.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/e6/2e633678-6370-4512-92b5-0b1765a25217/69fa58a638daf.image.jpg",
-    imgHiRes: true
+    title: "Telluride Marshal’s Department Arrests Individual for Failure to Register as a Sex Offender",
+    source: "Town of Telluride",
+    date: "May 22, 2026",
+    newsTopic: "public-safety",
+    copy: "Content Notice: This communication contains information related to sexual violence/child abuse. Reader discretion is advised.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=393",
+    img: ""
   },
   {
     title: "Telluride Barricade Passes Mailed to Town Residents",
@@ -919,15 +964,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "(April 5, 2026) – The Town will implement an updated schedule for the Galloping Goose bus loop during shoulder seasons, transitioning to a single-bus service operating on a 30-minute loop.",
     href: "https://www.telluride.gov/CivicAlerts.aspx?aid=389",
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15514"
-  },
-  {
-    title: "Certified Candidates Announced for Telluride Town Council Election",
-    source: "Town of Telluride",
-    date: "April 21, 2026",
-    newsTopic: "government",
-    copy: "(April 21, 2026) – The Town of Telluride will hold a Special Municipal Election on Tuesday, June 30, coordinated with San Miguel County for the Primary Election. The Clerk's Department has certified three candidates eligible to run for elected office.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=390",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15528"
   },
   {
     title: "Egnar Enters Stage 1 Fire Restrictions",
@@ -999,7 +1035,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "DOLA Economic Vitality Community Session on May 27, 2026",
     source: "Town of Ridgway",
-    date: "May 21, 2026",
+    date: "May 22, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1010,7 +1046,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "CO Main Street Architect Visits on May 27-28, 2026",
     source: "Town of Ridgway",
-    date: "May 21, 2026",
+    date: "May 22, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1043,7 +1079,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "May 21, 2026",
+    date: "May 22, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1087,6 +1123,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 5-21-26",
+    source: "KOTO Community Radio",
+    date: "May 22, 2026",
+    newsTopic: "community",
+    copy: "West End Roundup with the San Miguel Basin Forum; Kris Tompkins on Rewilding the Mind; A Placerville Poetry Box",
+    href: "https://koto.org/news/newscast-5-21-26/"
+  },
   {
     title: "Newscast 5-20-26",
     source: "KOTO Community Radio",
@@ -1142,18 +1186,18 @@ const KOTO_NEWSCASTS = [
     newsTopic: "land-use",
     copy: "On this week’s Regional Roundup, we look at how communities across the region are grappling with immigration enforcement. In Durango, Colorado, the District Attorney has filed charges against a federal immigration officer over an alleged assault on a protester outside an U.S. Immigration and Customs Enforcement facility in October 2025. In Glenwood",
     href: "https://koto.org/news/newscast-5-8-26/"
-  },
-  {
-    title: "Newscast 5-7-26",
-    source: "KOTO Community Radio",
-    date: "May 8, 2026",
-    newsTopic: "public-safety",
-    copy: "The Bears Are Back in Town; Federal Firefighting in the Region Sees Shift; The Wonder, Intimacy, and Hope of “Appalachia”",
-    href: "https://koto.org/news/newscast-5-7-26/"
   }
 ];
 
 const KOTO_FEATURED_STORIES = [
+  {
+    title: "A Placerville Poetry Box",
+    source: "KOTO Community Radio",
+    date: "May 22, 2026",
+    newsTopic: "infrastructure",
+    copy: "A bright yellow poetry box on the side of the road in San Miguel Canyon offers people driving to and fro a place to stop, write, and share poems. Created by local poet Rosemerry Wahtola Trommer, the poetry box is an opportunity to pause, reflect, and embrace a sense of community.",
+    href: "https://koto.org/news/san-miguel-canyon-telluride-poetry-box-colorado/"
+  },
   {
     title: "Valley Floor Day Instills Stewardship in a Changing Climate",
     source: "KOTO Community Radio",
@@ -1740,6 +1784,72 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Arts HQ, TELLURIDE",
     imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png"
+  },
+  {
+    title: "Up-off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-06-12/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-06-12T10:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Mass Movement",
+    link: "https://koto.org/event/mass-movement/",
+    description: "Over the past 10 years, Mass Movement has taken place as an annual celebration of dance in our small mountain town. We bring together local dancers and choreographers and also invite visiting choreographers and dancers from the region. Mass Movement is a celebration to find what moves you, whether you are on stage performing or participating as an audience member. This performance has been a platform and catalyst for the growth of the dance community here in Telluride. TDC and Palm Arts are excited to include Palm Arts Dance as an additional partnership this year and provide programming that invites local youth to participate in an intergenerational performance experience.",
+    pubDate: "2026-06-12T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Michael D. Palm Theater, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Mass Movement",
+    link: "https://koto.org/event/mass-movement-3/",
+    description: "Over the past 10 years, Mass Movement has taken place as an annual celebration of dance in our small mountain town. We bring together local dancers and choreographers and also invite visiting choreographers and dancers from the region. Mass Movement is a celebration to find what moves you, whether you are on stage performing or participating as an audience member. This performance has been a platform and catalyst for the growth of the dance community here in Telluride. TDC and Palm Arts are excited to include Palm Arts Dance as an additional partnership this year and provide programming that invites local youth to participate in an intergenerational performance experience.",
+    pubDate: "2026-06-12T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Michael D. Palm Theater, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Bilingual Balance in Motion",
+    link: "https://koto.org/event/bilingual-balance-in-motion/2026-06-13/",
+    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
+    pubDate: "2026-06-13T10:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
+  },
+  {
+    title: "Drop In Tech Time with Oliver",
+    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-06-14/",
+    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
+    pubDate: "2026-06-14T13:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-06-14/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-06-14T14:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   }
 ];
 
@@ -2240,6 +2350,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52922480227239/huge/947d1bad2aeb685f292e305dab2d8be8b33038c5.jpg"
+  },
+  {
+    title: "Rooftop Rhythm",
+    link: "https://events.ourayridgwayevents.com/event/rooftop-rhythm",
+    description: "Chipeta Lodge Resort + Spa announces \"Rooftop Rhythm\" on Wednesday at 5:30-8:30 PM on the rooftop at White Buffalo Restaurant + Bar. First up, James O. Patterson joins us Wednesday May 27th, 2026. Come for cocktails, casual dining, and incomparable sunsets.",
+    pubDate: "2026-05-27T23:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52948785665803/huge/11d4d632f53929a839e01aa0a3c9aeb19b288438.jpg"
   },
   {
     title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
@@ -2933,17 +3054,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
-  },
-  {
-    title: "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
-    link: "https://sherbino.org/events/",
-    description: "MONTHLY WELCOME HOME ALLIANCE VETERAN’S COFFEE @ THE SHERBINO Every Branch. Every Era. Every Ability. Offering coffee, donuts and camaraderie. Mike Trickey and April Heard will be there bringing information to you on topics such as: Navigating the VA, Housing, Jobs, Volunteer Opportunities, community resources, VA benefits, recreation and mental health. For more information or to offer support (products or monetary), call 970-765-2210 or visit https://www.whafv.org/ Occurs the 2nd Tuesday of Every Month || 10 am - Noon || Free to attend || Vets Only, Please",
-    pubDate: "2026-06-09T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg"
   }
 ];
 
@@ -3178,24 +3288,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
     address: "Village Creek Condominiums, San Miguel County, Colorado",
     noticeKey: "village-creek-condo-amend-2026"
-  },
-  {
-    title: "Ordinance -- Multiple Ordinances First Reading (Public Hearing Scheduled)",
-    entity: "Town of Mountain Village",
-    entityClass: "ent-county",
-    entityLogo: "mv",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "Town of Mountain Village passed three ordinances on first reading on April 23, 2026 including lighting regulations, building regulations, and emergency water usage restrictions. Second reading and public hearing will be held May 21, 2026 at 2:00 PM.",
-    deadline: "May 21, 2026 at 2:00 PM",
-    expires: "2026-05-21",
-    dates: "5/6",
-    papers: ["ttimes_0506"],
-    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    address: "Mountain Village Town Hall, Mountain Village",
-    noticeKey: "mv-ord-multiple-2026"
   },
   {
     title: "RFP -- Flooring Replacement at County Buildings",
