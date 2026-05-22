@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 May 2026 08:54:54 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 14:27:53 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Design Review Board — 2026-06-04</title>
@@ -40,6 +40,16 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
 The May 28 regular board meeting agenda hasn't been posted yet, so there's no way to know what's coming up.]]></description>
       <category>Meeting</category>
       <category>Telluride Medical Center</category>
+    </item>
+    <item>
+      <title>Fabulous freeriders</title>
+      <link>https://www.telluridenews.com/sports/article_6e1ffe99-1c70-4fd9-9041-b6bbe7ffbf17.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/sports/article_6e1ffe99-1c70-4fd9-9041-b6bbe7ffbf17.html</guid>
+      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/18/51817d31-e00d-4991-a117-0ae9f2544bb4/6a0e8d025f075.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Four Telluride Ski & Snowboard Club freeride athletes qualified for junior championships at Kicking Horse, competing against the top 5-10% of Western Hemisphere athletes despite limited snow this season. Local skiers placed well, with Cieciuch finishing 6th in U19 women's division and three others making finals in the natural terrain competition.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/18/51817d31-e00d-4991-a117-0ae9f2544bb4/6a0e8d025f075.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>recreation</category>
     </item>
     <item>
       <title>Mountainfilm homecoming</title>
@@ -297,16 +307,6 @@ The May 28 regular board meeting agenda hasn't been posted yet, so there's no wa
       <media:content url="https://www.telluride.gov/ImageRepository/Document?documentID=15549" medium="image" />
       <category>Town of Telluride</category>
       <category>housing</category>
-    </item>
-    <item>
-      <title>What’s Happening: A literary festival in the mountains</title>
-      <link>https://coloradosun.com/2026/05/21/whats-happening-colorado-mountain-words-literary-festival-crested-butte/</link>
-      <guid isPermaLink="false">https://coloradosun.com/2026/05/21/whats-happening-colorado-mountain-words-literary-festival-crested-butte/</guid>
-      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2025/12/IMG_2919-scaled.jpg?fit=1024%2C768&amp;quality=85&amp;ssl=1" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Plus: a free concert in Rangely, an adventure film festival in Telluride and a night for local journalism]]></description>
-      <media:content url="https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2025/12/IMG_2919-scaled.jpg?fit=1024%2C768&amp;amp;quality=85&amp;amp;ssl=1" medium="image" />
-      <category>Colorado Sun</category>
-      <category>arts-culture</category>
     </item>
     <item>
       <title>Newscast 5-20-26</title>

@@ -102,6 +102,18 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Fabulous freeriders",
+    source: "Telluride Times",
+    date: "May 22, 2026",
+    firstSeen: "2026-05-22",
+    newsTopic: "recreation",
+    copy: "Four Telluride Ski & Snowboard Club freeride athletes qualified for junior championships at Kicking Horse, competing against the top 5-10% of Western Hemisphere athletes despite limited snow this season. Local skiers placed well, with Cieciuch finishing 6th in U19 women's division and three others making finals in the natural terrain competition.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_6e1ffe99-1c70-4fd9-9041-b6bbe7ffbf17.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/18/51817d31-e00d-4991-a117-0ae9f2544bb4/6a0e8d025f075.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Mountainfilm homecoming",
     source: "Telluride Times",
     date: "May 22, 2026",
@@ -1023,17 +1035,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "What’s Happening: A literary festival in the mountains",
-    source: "Colorado Sun",
-    date: "May 21, 2026",
-    firstSeen: "2026-05-21",
-    newsTopic: "arts-culture",
-    copy: "Plus: a free concert in Rangely, an adventure film festival in Telluride and a night for local journalism",
-    claudeSummary: false,
-    href: "https://coloradosun.com/2026/05/21/whats-happening-colorado-mountain-words-literary-festival-crested-butte/",
-    img: "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2025/12/IMG_2919-scaled.jpg?fit=1024%2C768&amp;quality=85&amp;ssl=1"
-  },
-  {
     title: "Ridgway Offers Convenient Online Payments with Xpress Bill Pay",
     source: "Town of Ridgway",
     date: "May 19, 2026",
@@ -1378,17 +1379,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://koto.org/wp-content/uploads/2026/04/Ocean-Symp-Garth-Andy3-2-scaled.jpg"
-  },
-  {
-    title: "Up-off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-05-22/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-05-22T10:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   },
   {
     title: "Bilingual Balance in Motion",
