@@ -102,13 +102,37 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "Highway 62 closed between Ridgway and Placerville",
+    title: "‘An energizing time’ for Telluride Arts",
+    source: "Telluride Times",
+    date: "May 22, 2026",
+    firstSeen: "2026-05-23",
+    newsTopic: "arts-culture",
+    copy: "Jessica Galbo took over as executive director of Telluride Arts last August and has introduced new programs like Salon Night and Creative Exchange. She's submitted a revised proposal to the town for reopening the Transfer Warehouse with basic improvements rather than the originally planned multi-level cultural center due to cost overruns.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_128c5f8b-2b08-49be-a4a8-38b2391f8bca.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/36/a36d5b63-9f47-4d58-92e9-928b3254d8de/6a0e8fb4dffba.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "To the center",
+    source: "Telluride Times",
+    date: "May 22, 2026",
+    firstSeen: "2026-05-23",
+    newsTopic: "arts-culture",
+    copy: "Campers found their favorite cottonwood grove empty and hiked to ancient ruins in a canyon, discovering what appeared to be petroglyphs and a grave site among fallen boulders. A sunrise hike revealed pottery fragments at a pueblo site, including a water vessel rim that made them reflect on how magical modern plumbing would seem to the ancient inhabitants.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_602ad3ac-3179-4220-ab72-4d185d88b067.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/59/959d5cc4-78a6-457b-81aa-ed98ec623895/6a0d8930da86d.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Highway 62 between Ridgway and Placerville re-opens",
     source: "Telluride Times",
     date: "May 22, 2026",
     firstSeen: "2026-05-22",
     newsTopic: "housing",
-    copy: "The San Miguel County Sheriff’s office reported that Highway 62 is closed as of 9:43 a.m. on Friday, May 22 due to an accident involving a semi-truck on the highway that is currently blocking both lanes of traffic.",
-    claudeSummary: false,
+    copy: "Highway 62 between Ridgway and Placerville closed for several hours today after a house blocked both lanes near mile marker 9, about four miles west of Dallas Divide. A crane from Montrose was brought in to move the structure, and the sheriff's office provided detour routes using county roads 56V and 58P. The highway reopened around 4 p.m.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_042cbb30-7003-4b76-8bc3-a40b5a124367.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bf/abfd96db-450e-40ba-8a54-74fb95a45581/6a1082ef543f9.image.jpg",
     imgHiRes: true
@@ -942,30 +966,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "A Frontier plane hits a pedestrian during takeoff at Denver airport",
-    source: "Telluride Times",
-    date: "May 9, 2026",
-    firstSeen: "2026-05-09",
-    newsTopic: "community",
-    copy: "A Frontier Airlines plane struck a pedestrian during takeoff at Denver International Airport, forcing an emergency stop and evacuation of 231 people on board. The pilot reported an engine fire and smoke in the cabin, leading to passengers evacuating via emergency slides onto the runway.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_ce4f636a-272a-57ad-8442-17632581041f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8c/f8cd2100-44dc-5e46-bfc7-7a1d38c7ad3a/69ff31aa9240c.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Building healthier, more resilient communities",
-    source: "Telluride Times",
-    date: "May 9, 2026",
-    firstSeen: "2026-05-12",
-    newsTopic: "land-use",
-    copy: "A training session is being offered on building community resilience using research-based tools focused on positive childhood and adult experiences to help young people thrive. The program targets parents, educators, healthcare workers, and community members, with registration required in advance.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_76785698-df60-47e0-b643-594f8cbd8949.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/89/489e766b-f9b6-40f6-bb59-83fef25f771e/69ff7da2c5799.image.png",
-    imgHiRes: true
-  },
-  {
     title: "Telluride Marshal’s Department Arrests Individual for Failure to Register as a Sex Offender",
     source: "Town of Telluride",
     date: "May 22, 2026",
@@ -1060,7 +1060,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "DOLA Economic Vitality Community Session on May 27, 2026",
     source: "Town of Ridgway",
-    date: "May 22, 2026",
+    date: "May 23, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1071,7 +1071,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "CO Main Street Architect Visits on May 27-28, 2026",
     source: "Town of Ridgway",
-    date: "May 22, 2026",
+    date: "May 23, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1104,7 +1104,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "May 22, 2026",
+    date: "May 23, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1148,6 +1148,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 5-22-26",
+    source: "KOTO Community Radio",
+    date: "May 23, 2026",
+    newsTopic: "government",
+    copy: "On this week’s Regional Roundup, we hear how Utah residents are pushing back against a proposed data center, and we'll hear a report on a new management plan for the Maroon Bells area in Western Colorado. We'll also hear about the nuances of party affiliation ahead of Wyoming’s primary elections, and the environmental benefits of mushroom cultivati",
+    href: "https://koto.org/news/newscast-5-22-26/"
+  },
   {
     title: "Newscast 5-21-26",
     source: "KOTO Community Radio",
@@ -1203,14 +1211,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "community",
     copy: "Valley Floor Day Instills Stewardship in a Changing Climate -General Assembly Enters Final Days",
     href: "https://koto.org/news/newscast-5-11-26/"
-  },
-  {
-    title: "Newscast 5-8-26",
-    source: "KOTO Community Radio",
-    date: "May 9, 2026",
-    newsTopic: "land-use",
-    copy: "On this week’s Regional Roundup, we look at how communities across the region are grappling with immigration enforcement. In Durango, Colorado, the District Attorney has filed charges against a federal immigration officer over an alleged assault on a protester outside an U.S. Immigration and Customs Enforcement facility in October 2025. In Glenwood",
-    href: "https://koto.org/news/newscast-5-8-26/"
   }
 ];
 
@@ -1381,17 +1381,6 @@ const COMMUNITY_EVENTS = [
 ];
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Mountainfilm Festival",
-    link: "https://koto.org/event/mountainfilm-festival/",
-    description: "Using the power of film, art and ideas, Mountainfilm inspires audiences to create a better world. Held every Memorial Day weekend, the Mountainfilm festival brings together a community of filmmakers and change makers, showcasing documentary films that celebrate adventure, activism, social justice, environment and indomitable spirit.",
-    pubDate: "2026-05-21T00:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/Ocean-Symp-Garth-Andy3-2-scaled.jpg"
-  },
   {
     title: "Bilingual Balance in Motion",
     link: "https://koto.org/event/bilingual-balance-in-motion/2026-05-23/",
@@ -1864,6 +1853,72 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Talking Gourds Presents Stories and Poems",
+    link: "https://koto.org/event/talking-gourds-presents-stories-and-poems/2026-06-16/",
+    description: "The Telluride Institute’s Talking Gourds Poetry Program is hosting a live Stories & Poems series at the Wilkinson Public Library magazine room on the third Tuesday of every month at 5:30 pm. Following the featured poet's or story teller's reading we will hold a Talking Gourds sharing circle going around the room to let everyone speak. Attendees are encouraged to bring their own work or someone else’s that they like to share. For more information, visit the Telluride Institute Talking Gourds website: tellurideinstitute.org/talking-gourds",
+    pubDate: "2026-06-16T17:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Science Town Talks",
+    link: "https://koto.org/event/telluride-science-town-talks/2026-06-16/",
+    description: "Big science. Small town. Every Tuesday from June 2- August 11, Telluride Science invites the public to sit down with some of the world’s most brilliant researchers for a conversation that might just change how you see the world. Town Talks cover everything from quantum computing and climate solutions to the latest in medicine and energy — accessible, thought-provoking, and completely free. Please note, there is no Town Talk on July 7.",
+    pubDate: "2026-06-16T18:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Conference Center, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Pilates for All Bodies with Laura",
+    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-06-18/",
+    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-06-18T12:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Salon Night at Telluride Arts HQ",
+    link: "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-06-18/",
+    description: "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it here in Telluride. These are evenings for conversation and connection, not lectures or formal programming. They are casual, open, and intentionally unstructured, designed to create the atmosphere where ideas can collide, new friendships form, and creativity sparks. Imagine an evening where musicians talk with writers, painters meet photographers, filmmakers share stories with ceramicists—and the unexpected happens!",
+    pubDate: "2026-06-18T17:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Arts HQ, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
+  },
+  {
+    title: "Up-off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-06-19/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-06-19T10:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Bilingual Balance in Motion",
+    link: "https://koto.org/event/bilingual-balance-in-motion/2026-06-20/",
+    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
+    pubDate: "2026-06-20T10:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
   }
 ];
 
@@ -2192,7 +2247,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Basketball and Volleyball Tournament - Hot Springs Style",
     link: "https://events.ourayridgwayevents.com/event/basketball-and-volleyball-tournament-hot-springs-style",
-    description: "🏀🏐 Take on the competition this Memorial Day at the Ouray Hot Springs! Get ready for a fun, fast-paced showdown at the Basketball & Volleyball Tournament – Hot Springs Style! Join us on May 25 for a casual basketball and volleyball tournament. Signups begin at noon, with games happening in the activity pool and shallow pool around 2 PM. Grab your friends and enjoy a fun afternoon at the pool!",
+    description: "���🏐 Take on the competition this Memorial Day at the Ouray Hot Springs! Get ready for a fun, fast-paced showdown at the Basketball & Volleyball Tournament – Hot Springs Style! Join us on May 25 for a casual basketball and volleyball tournament. Signups begin at noon, with games happening in the activity pool and shallow pool around 2 PM. Grab your friends and enjoy a fun afternoon at the pool!",
     pubDate: "2026-05-25T19:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -2269,7 +2324,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Rooftop Rhythm",
     link: "https://events.ourayridgwayevents.com/event/rooftop-rhythm",
-    description: "Chipeta Lodge Resort + Spa announces \"Rooftop Rhythm\" on Wednesday at 5:30-8:30 PM on the rooftop at White Buffalo Restaurant + Bar. First up, James O. Patterson joins us Wednesday May 27th, 2026. Come for cocktails, casual dining, and incomparable sunsets.",
+    description: "Chipeta Lodge Resort + Spa announces \"Rooftop Rhythm\" on Wednesday at 5:30-8:30 PM on the rooftop at White Buffalo Restaurant + Bar. First up, James O. Patterson joins us Wednesday May 27th, 2026. Come for cocktails, casual dining, and incomparable sunsets. This Wednesday's featured burger specials include the Fuddrucker Smashburger, a Green Chile Cheeseburger, & an Adobo Black Bean Veggie Burger, all served with crispy fries and option add-ons. Bring your friends, grab a seat on the rooftop, and settle in for a spectacular summer evening.",
     pubDate: "2026-05-27T23:30:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -3373,23 +3428,6 @@ const LEGAL_NOTICES = [
     smcBidID: "204"
   },
   {
-    title: "Request for Proposal -- Request for Proposal for San Miguel County Galloping Goose Park",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Request for Proposal for San Miguel County Galloping Goose Park.",
-    deadline: "Closes 5/22/2026",
-    expires: "2026-05-22",
-    dates: "5/7",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=202",
-    address: "",
-    smcBidID: "202"
-  },
-  {
     title: "Request for Quote -- Request for Quote: Material Hauling",
     entity: "San Miguel County",
     entityClass: "ent-county",
@@ -3619,24 +3657,6 @@ const LEGAL_NOTICES = [
     noticeKey: "COL-000131"
   },
   {
-    title: "Bid Notice -- Mountain Munchkins Windows and Door Replacement",
-    entity: "Town of Mountain Village",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The Town of Mountain Village is accepting bids for the 2026 Mountain Munchkins Windows and Door Replacement project. Bid packets are available online or at TMV Public Works, with all bids due by noon on May 22, 2026.",
-    deadline: "May 22, 2026 at 12:00 PM",
-    expires: "2026-05-22",
-    dates: "5/14",
-    papers: ["ttimes_0514"],
-    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
-    address: "415 Mountain Village Blvd Building 2, Mountain Village, CO",
-    noticeKey: "COL-000141"
-  },
-  {
     title: "RFP -- MSE Retaining Wall Design and Construction",
     entity: "San Miguel County",
     entityClass: "ent-county",
@@ -3851,24 +3871,6 @@ const LEGAL_NOTICES = [
     address: "122 43ZS Road, Norwood, CO 81423 (Section 26, T45N, R13W)",
     noticeKey: "foreclosure-202601",
     caseNumber: "202601"
-  },
-  {
-    title: "RFP -- Landscape Improvements at Galloping Goose Park",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County requests proposals for landscape improvements to the Galloping Goose Park in Telluride. Proposals are due by 5:00 PM Friday, May 22 via email or drop-off at Parks & Open Space department.",
-    deadline: "May 22, 2026 at 5:00 PM",
-    expires: "2026-05-22",
-    dates: "5/21",
-    papers: ["ttimes_0521"],
-    url: "https://www.telluridenews.com/news/legals/article_d3659378-b06b-4e27-9b53-ec57d83a4b86.html",
-    address: "Galloping Goose Park, Telluride, CO",
-    noticeKey: "rfp-galloping-goose-col-000117"
   },
   {
     title: "RFP -- Deputy Municipal Court Judge Services",
