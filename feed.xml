@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 May 2026 08:12:27 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2026 13:12:45 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Design Review Board — 2026-06-04</title>
@@ -40,6 +40,16 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
 The May 28 regular board meeting agenda hasn't been posted yet, so there's no way to know what's coming up.]]></description>
       <category>Meeting</category>
       <category>Telluride Medical Center</category>
+    </item>
+    <item>
+      <title>Telluride School District has its ‘back against the wall’</title>
+      <link>https://www.telluridenews.com/news/article_3980a9b3-d3e7-4778-8ce3-eedacfdafbb1.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_3980a9b3-d3e7-4778-8ce3-eedacfdafbb1.html</guid>
+      <pubDate>Sat, 23 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/c8/8c887b07-9980-46d7-a28d-0a499366b784/6a115e7a12ca3.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The school district faces a major budget shortfall due to new state funding formulas and is asking voters to approve a mill levy override that would cost homeowners less than $10 monthly per million dollars of property value. Declining enrollment from 910 students in 2020 to an anticipated 620, plus the district's reclassification from "rural" to "town" status, has created a funding gap of nearly $6,000 per student below what adequacy studies say is needed.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/c8/8c887b07-9980-46d7-a28d-0a499366b784/6a115e7a12ca3.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>government</category>
     </item>
     <item>
       <title>‘An energizing time’ for Telluride Arts</title>
@@ -397,16 +407,6 @@ Agenda not yet available]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/3b/b3bef5c4-c3cb-4d04-a298-e72ee9d1fa09/6a0dc7899b070.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>government</category>
-    </item>
-    <item>
-      <title>Colorado&apos;s top court orders children&apos;s hospital to resume gender-affirming care for minors</title>
-      <link>https://www.telluridenews.com/news/state/article_8e1b844e-d9ba-58dc-b1a8-754933a96518.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_8e1b844e-d9ba-58dc-b1a8-754933a96518.html</guid>
-      <pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Colorado's Supreme Court ordered Children's Hospital Colorado to resume gender-affirming care for minors after four transgender girls sued, claiming the hospital violated state anti-discrimination law. The 5-2 ruling came after the hospital stopped these services following a federal investigation.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>health</category>
     </item>
   </channel>
 </rss>

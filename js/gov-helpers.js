@@ -102,6 +102,18 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Telluride School District has its ‘back against the wall’",
+    source: "Telluride Times",
+    date: "May 23, 2026",
+    firstSeen: "2026-05-23",
+    newsTopic: "government",
+    copy: "The school district faces a major budget shortfall due to new state funding formulas and is asking voters to approve a mill levy override that would cost homeowners less than $10 monthly per million dollars of property value. Declining enrollment from 910 students in 2020 to an anticipated 620, plus the district's reclassification from \"rural\" to \"town\" status, has created a funding gap of nearly $6,000 per student below what adequacy studies say is needed.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_3980a9b3-d3e7-4778-8ce3-eedacfdafbb1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/c8/8c887b07-9980-46d7-a28d-0a499366b784/6a115e7a12ca3.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "‘An energizing time’ for Telluride Arts",
     source: "Telluride Times",
     date: "May 22, 2026",
@@ -1381,17 +1393,6 @@ const COMMUNITY_EVENTS = [
 ];
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Bilingual Balance in Motion",
-    link: "https://koto.org/event/bilingual-balance-in-motion/2026-05-23/",
-    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
-    pubDate: "2026-05-23T10:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
-  },
   {
     title: "Gentle Yoga with Kristin Milord",
     link: "https://koto.org/event/gentle-yoga-with-kristin-milord-2/2026-05-24/",
