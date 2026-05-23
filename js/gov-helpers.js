@@ -126,18 +126,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Highway 62 between Ridgway and Placerville re-opens",
-    source: "Telluride Times",
-    date: "May 22, 2026",
-    firstSeen: "2026-05-22",
-    newsTopic: "housing",
-    copy: "Highway 62 between Ridgway and Placerville closed for several hours today after a house blocked both lanes near mile marker 9, about four miles west of Dallas Divide. A crane from Montrose was brought in to move the structure, and the sheriff's office provided detour routes using county roads 56V and 58P. The highway reopened around 4 p.m.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_042cbb30-7003-4b76-8bc3-a40b5a124367.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bf/abfd96db-450e-40ba-8a54-74fb95a45581/6a1082ef543f9.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Fabulous freeriders",
     source: "Telluride Times",
     date: "May 22, 2026",
@@ -330,6 +318,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Una comunidad por la que vale la pena luchar",
+    source: "Telluride Times",
+    date: "May 21, 2026",
+    firstSeen: "2026-05-21",
+    newsTopic: "community",
+    copy: "A candidate is running for County Commissioner, expressing concern that the community is disappearing despite the landscape remaining. They're focusing on housing affordability for local workers, noting that rising costs have pushed out families while many houses sit empty most of the year. The candidate emphasizes balancing growth with infrastructure limits and keeping housing prices aligned with what local workers actually earn.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/article_220cea39-7b74-4304-b7f6-68aa9d22c930.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/85/385ea219-d90e-46b3-ae19-f24d72946c06/6a0ea32eaa922.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Legals and Public Notices for May 21-27, 2026",
     source: "Telluride Times",
     date: "May 21, 2026",
@@ -351,18 +351,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: false,
     href: "https://www.telluridenews.com/obituaries/article_467ebd46-0fe4-4a28-9789-a00f3d07c759.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/0c/90c5d817-5d85-4aa1-880d-9f48bc91b178/6a0dc90a85e7b.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Una comunidad por la que vale la pena luchar",
-    source: "Telluride Times",
-    date: "May 21, 2026",
-    firstSeen: "2026-05-21",
-    newsTopic: "community",
-    copy: "A candidate is running for County Commissioner, expressing concern that the community is disappearing despite the landscape remaining. They're focusing on housing affordability for local workers, noting that rising costs have pushed out families while many houses sit empty most of the year. The candidate emphasizes balancing growth with infrastructure limits and keeping housing prices aligned with what local workers actually earn.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/article_220cea39-7b74-4304-b7f6-68aa9d22c930.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/85/385ea219-d90e-46b3-ae19-f24d72946c06/6a0ea32eaa922.image.jpg",
     imgHiRes: true
   },
   {
@@ -711,6 +699,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/sports/article_ae718dcc-b13c-4dc1-afb9-d6340e47869c.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/78/678c1443-599c-455e-bc2a-e7fea24dfe43/6a035823e4c42.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Highway 62 between Ridgway and Placerville re-opens",
+    source: "Telluride Times",
+    date: "May 22, 2026",
+    firstSeen: "2026-05-22",
+    newsTopic: "housing",
+    copy: "Highway 62 between Ridgway and Placerville closed for several hours today after a house blocked both lanes near mile marker 9, about four miles west of Dallas Divide. A crane from Montrose was brought in to move the structure, and the sheriff's office provided detour routes using county roads 56V and 58P. The highway reopened around 4 p.m.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_042cbb30-7003-4b76-8bc3-a40b5a124367.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bf/abfd96db-450e-40ba-8a54-74fb95a45581/6a1082ef543f9.image.jpg",
     imgHiRes: true
   },
   {
@@ -1924,37 +1924,26 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "You & Me / Tu y Yo",
-    link: "https://telluridelibrary.libcal.com/event/15184969?hs=a",
-    description: "10:30 AM – 11:00 AM · Join us every Friday for a fun and engaging parent-child program designed for preschoolers! Each week, we explore a new theme through hands-on activities that spark creativity, curiosity, and learning. 1st Friday: Art - Get creative with fun art projects designed for little hands! 2nd Friday: Toddler Chef - Stir, mix, and create easy, tasty treats while learning basic kitchen skills. 3rd Friday: STEM - Dive into simple science, technology, engineering, and math experiments that inspire wonder. 4th Friday: Crafts - Enjoy making fun crafts together. &Uacute;nase a nosotros todos los viernes para un programa divertido e interactvio para padres e hijos, &iexcl;dise&ntilde;ado para ni&ntilde;os en edad preescolar! Cada semana exploramos un nuevo tema a trav&eacute;s de actividades pr&aacute;cticas que despiertan la creatividad, la curiosidad y el aprendizaje. …",
-    pubDate: "2026-05-22T10:30:00.000Z",
+    title: "Mountainfilm Coffee Talk: Artists, Activists & Iconoclasts",
+    link: "https://telluridelibrary.libcal.com/event/16886399?hs=a",
+    description: "8:00 AM – 9:00 AM · This group of artists, iconoclasts and activists explore how creativity and a willingness to step out of the box, can help us make sense of the world and give us hope for a better one. They challenge the status quo and share what we can learn from those who dare to see the world differently. Panelists:  Dr. Adam Cruise, John Colette, Aaron Huey, Elif Koyut&uuml;rk Hazen, Faridah Gbadamosi Mountainfilm Coffee Talks are free and open to the public.  No pass needed.   https://mountainfilm.eventive.org/schedule/69efd9c197ae725b10bfaa88",
+    pubDate: "2026-05-23T08:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755554174.png"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_12_15_37_51.jpg"
   },
   {
-    title: "Cine de las Montanas",
-    link: "https://telluridelibrary.libcal.com/event/16825118?hs=a",
-    description: "3:00 PM – 5:00 PM · El Cine de las Monta&ntilde;as, tra&iacute;do a nosotros gracias a Mountain Film, celebra la aventura, la cultura de monta&ntilde;a, el activismo y la justicia social en comunidades diversas a trav&eacute;s de documentales, cortos y largometrajes. &iexcl;Este a&ntilde;o tendremos a cineastas presentes que nos contar&aacute;n del proceso de su documental! Este evento es gratis y abierto para todos",
-    pubDate: "2026-05-22T15:00:00.000Z",
+    title: "CANCELLED - Balance in Motion - Equilibrio en Movimiento",
+    link: "https://telluridelibrary.libcal.com/event/16535299?hs=a",
+    description: "10:00 AM – 11:00 AM · Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Mu&eacute;vase, respire y ll&eacute;nese de energ&iacute;a en esta din&aacute;mica clase biling&uuml;e, dirigido por Lauren Norton, dise&ntilde;ada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energ&iacute;a de la danza, y la presencia equilibrante del yoga y la respiraci&oacute;n, esta sesi&oacute;n le dejar&aacute; sinti&eacute;ndose fuerte, en armon&iacute;a y revitalizado/a. …",
+    pubDate: "2026-05-23T10:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_01_13_24_09.png"
-  },
-  {
-    title: "Teen Ping Pong",
-    link: "https://telluridelibrary.libcal.com/event/15976841?hs=a",
-    description: "4:00 PM – 6:00 PM · Come stop by the library every Friday after school for open Ping Pong for Teenagers in the Magazine Room.",
-    pubDate: "2026-05-22T16:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1765562739.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1740003527.jpg"
   }
 ];
 
@@ -2035,61 +2024,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "OTG Overnight Trail Maintenance Trip: Cutler Complex",
-    link: "https://ouraytrails.org/volunteers",
-    description: "Enjoy some of the most scenic trails in Colorado while removing down trees or encroaching brush and repairing trails from erosion problems. You will leave the wild with the camaraderie that comes with meeting new friends and helping keep our public land trails safe and sustainable. Please register in advance to join this trail crew event, and participants must have current CPR and First Aid certifications. Click HERE to signup.",
-    pubDate: "2026-05-22T14:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Culter Creek Complex",
-    imageUrl: "https://localist-images.azureedge.net/photos/52789272870069/huge/81634184041be3beb87730d36ba522a5de675e5c.jpg"
-  },
-  {
-    title: "Ridgway Farmers Market",
-    link: "www.ridgwayfarmersmarket.com",
-    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here.",
-    pubDate: "2026-05-22T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
-  },
-  {
-    title: "OLD MAN POLLY",
-    link: "https://coloradoboydepot.com/calendar/",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-05-22T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "One Night! Weehawken Youth Art Show",
-    link: "https://www.facebook.com/events/1602276291260066",
-    description: "Join us for the Weehawken Youth Art Show this Friday! Come enjoy a fun showcase of artwork created by our amazing young artists (ages 5–12) this spring. Bring family, friends, neighbors—everyone’s welcome! Friday, May 22 5:00–6:30 PM Cora Annex, 145 N Cora Street, Ridgway And if you’re around after—stick around to cheer on the Ridgway High School graduation parade right outside on the Sherbino sidewalk",
-    pubDate: "2026-05-22T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52956931739699/huge/baddc5f3e98ecefc8131772d7d5acd07f33fedd8.jpg"
-  },
-  {
-    title: "Sherb Sidewalk Celebration ~ Ridgway ’26 Grad Parade",
-    link: "https://sherbino.org/event/ridgway-grad-parade-celebration-sherbino/",
-    description: "May 22 @ 5:30 pm – 7:30 pm Cheer on the Ridgway High School 2026 Graduates from the Sherbino and 610 Sidewalk May 22 | 5:30 ish –7:00 ish | In front of the Sherbino and 610 Arts Collective | Free | Drink Specials in the Sherb Celebrate the Ridgway High School Class of 2026 with one of the community’s favorite traditions—the graduation parade through town—and join us at the Sherbino for a front-row, high-energy viewing experience. Graduation begins at 5:30 p.m., and once the ceremony wraps, the parade rolls through Ridgway with graduates cruising Clinton Street to cheers from friends, family, and the community. The Sherbino and 610 Arts Collective sidewalk will be fully activated for the occasion, offering a welcoming and festive place to gather as we celebrate this milestone moment. …",
-    pubDate: "2026-05-22T23:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52651419584519/huge/a3422816d62dbb83383d56cd64c5605b85439ba5.jpg"
-  },
   {
     title: "OTG Overnight Trail Maintenance Trip: Cutler Complex",
     link: "https://ouraytrails.org/volunteers",
@@ -2247,7 +2181,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Basketball and Volleyball Tournament - Hot Springs Style",
     link: "https://events.ourayridgwayevents.com/event/basketball-and-volleyball-tournament-hot-springs-style",
-    description: "���🏐 Take on the competition this Memorial Day at the Ouray Hot Springs! Get ready for a fun, fast-paced showdown at the Basketball & Volleyball Tournament – Hot Springs Style! Join us on May 25 for a casual basketball and volleyball tournament. Signups begin at noon, with games happening in the activity pool and shallow pool around 2 PM. Grab your friends and enjoy a fun afternoon at the pool!",
+    description: "🏀🏐 Take on the competition this Memorial Day at the Ouray Hot Springs! Get ready for a fun, fast-paced showdown at the Basketball & Volleyball Tournament – Hot Springs Style! Join us on May 25 for a casual basketball and volleyball tournament. Signups begin at noon, with games happening in the activity pool and shallow pool around 2 PM. Grab your friends and enjoy a fun afternoon at the pool!",
     pubDate: "2026-05-25T19:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -3068,6 +3002,50 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52569865342720/huge/3b2908ddb2fc3d1f0e870007c7b65025c358699f.jpg"
+  },
+  {
+    title: "DAVE MENSCH",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-06-09T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Nature Journaling in the Field with Mary Menz and Sandy Dick",
+    link: "https://weehawkenarts.org/education/adult-art-classes/",
+    description: "Nature Journaling in the Field June 10 Wednesday 8:00am to Noon $49-$69 Registration: www.weehawkenarts.org Join Colorado Native Plant Masters Mary Menz and Sandra Dick as they explore Ouray County wildflowers and natural settings. In this session, you’ll sit in quiet spots and draw what you see to help you hone ID skills. We’ll talk about interesting characteristics of plants and their historical uses. Participants will receive small sketchbooks and will work in pencil, but are welcome to bring their own supplies such as colored pencils, watercolors, etc. Registration includes a copy of their book Common Wildflowers of the San Juan Mountains ($49) or Wildflowers of Colorado’s Western Slope ($69). All groups are limited to 12 participants. Participants will meet and carpooling is recommended (we help facilitate this effort at the meet up location)—specific directions and more information will be provided via email prior to the event. …",
+    pubDate: "2026-06-10T14:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52648536856781/huge/9a9c3474332959978afbd4a529a9a2418e1b0636.jpg"
+  },
+  {
+    title: "Wright Opera House Guided Tour",
+    link: "wrightoperahouse.org",
+    description: "We're a nonprofit dedicated to bringing world-class performances to Ouray. All guided tours help support our diverse programming! Step behind the scenes of Ouray’s historic gem! Our guided tours offer a unique glimpse into the history, architecture, and stories that make The Wright Opera House truly one-of-a-kind. Tour Days: Tuesday's at 2:00 PM and Wednesday's at 10:00 AMWeekend Tours: Available by request and scheduled around our regular programming. As an active opera house, weekend tours are not offered through our ticketing platform.Tour Fee: $20 per personMinimum Guests: 4 people per tourAccessibility: Fully ADA accessible with elevatorKid-Friendly: Absolutely! A perfect family outingPhoto-Friendly: Yes! Capture this historic beauty (no video during tours, please)Tour Duration: ~1.5 hoursGroups of 25 or more, or for weekend requests: Please contact us directly for pricing and scheduling. …",
+    pubDate: "2026-06-10T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52569865342720/huge/3b2908ddb2fc3d1f0e870007c7b65025c358699f.jpg"
+  },
+  {
+    title: "Splash Into STEAM",
+    link: "https://events.ourayridgwayevents.com/event/splash-into-steam",
+    description: "Splash Into STEAM is a fun, hands‑on Girl Scout Buddies Drop‑In Event where girls and their friends explore science and engineering through water play! Build a floating boat, experiment with cleaning dirty water, and design a water run to see how water moves. Jump in anytime, try one station or all three, and make a splash while learning together! 💦🔬👧 This event is open to all girls and their friends. You don't have to be a Girl Scout.",
+    pubDate: "2026-06-10T18:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52744270535881/huge/2c61b5d27b015d45fb42faf91991d5314cc4e592.jpg"
   }
 ];
 
