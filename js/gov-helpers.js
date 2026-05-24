@@ -102,6 +102,18 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "The science of connection",
+    source: "Telluride Times",
+    date: "May 24, 2026",
+    firstSeen: "2026-05-24",
+    newsTopic: "community",
+    copy: "Dr. Kevin Morris from the University of Denver will speak Friday June 5th at 5:30 p.m. at the Science Center about his research on human-animal connections and health. He's studying how psychiatric service dogs help veterans with PTSD and plans future research on veterans and horses.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_702af9d4-c819-4687-a223-a924539cf04b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/00/0005938d-e480-4c36-85a6-b9e7b590e264/6a1149294f3df.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Commissioners discuss building codes",
     source: "Telluride Times",
     date: "May 23, 2026",
@@ -1381,17 +1393,6 @@ const COMMUNITY_EVENTS = [
 ];
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Gentle Yoga with Kristin Milord",
-    link: "https://koto.org/event/gentle-yoga-with-kristin-milord-2/2026-05-24/",
-    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class is free, but donations to support the instructor are welcome.",
-    pubDate: "2026-05-24T11:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/gentle-yoga-kristen-1.png"
-  },
   {
     title: "Drop In Tech Time with Oliver",
     link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-05-24/",

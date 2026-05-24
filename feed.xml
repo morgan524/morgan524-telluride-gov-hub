@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 May 2026 08:23:54 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2026 13:12:24 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Design Review Board — 2026-06-04</title>
@@ -40,6 +40,16 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
 The May 28 regular board meeting agenda hasn't been posted yet, so there's no way to know what's coming up.]]></description>
       <category>Meeting</category>
       <category>Telluride Medical Center</category>
+    </item>
+    <item>
+      <title>The science of connection</title>
+      <link>https://www.telluridenews.com/news/article_702af9d4-c819-4687-a223-a924539cf04b.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_702af9d4-c819-4687-a223-a924539cf04b.html</guid>
+      <pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/00/0005938d-e480-4c36-85a6-b9e7b590e264/6a1149294f3df.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Dr. Kevin Morris from the University of Denver will speak Friday June 5th at 5:30 p.m. at the Science Center about his research on human-animal connections and health. He's studying how psychiatric service dogs help veterans with PTSD and plans future research on veterans and horses.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/00/0005938d-e480-4c36-85a6-b9e7b590e264/6a1149294f3df.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
     </item>
     <item>
       <title>Commissioners discuss building codes</title>
@@ -397,16 +407,6 @@ Agenda not yet available]]></description>
 Agenda not yet available]]></description>
       <category>Meeting</category>
       <category>airport</category>
-    </item>
-    <item>
-      <title>This year&apos;s most endangered historic places nod to America 250 and the promise of equality for all</title>
-      <link>https://www.telluridenews.com/news/state/article_4d87e910-1d10-5e25-9af6-0032fbc0f6f9.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_4d87e910-1d10-5e25-9af6-0032fbc0f6f9.html</guid>
-      <pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/08/d08dd411-5461-5062-ba2c-5ac383a44e51/6a0d9f6f18404.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The National Trust for Historic Preservation released its 2026 most endangered places list, featuring 11 sites across America that highlight the principle of equality, with each receiving a $25,000 grant. Sites include the Ben Moore Hotel in Montgomery where civil rights leaders stayed, the Tule Lake Japanese American segregation center, and Angel Island immigration station.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/08/d08dd411-5461-5062-ba2c-5ac383a44e51/6a0d9f6f18404.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>land-use</category>
     </item>
   </channel>
 </rss>
