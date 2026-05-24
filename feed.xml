@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 May 2026 19:03:29 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2026 02:43:25 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Design Review Board — 2026-06-04</title>
@@ -40,6 +40,16 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
 The May 28 regular board meeting agenda hasn't been posted yet, so there's no way to know what's coming up.]]></description>
       <category>Meeting</category>
       <category>Telluride Medical Center</category>
+    </item>
+    <item>
+      <title>Commissioners discuss building codes</title>
+      <link>https://www.telluridenews.com/news/article_7f836f62-2a1a-411d-89f5-a3fb0891ea64.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_7f836f62-2a1a-411d-89f5-a3fb0891ea64.html</guid>
+      <pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/0c/60c0e092-0602-4354-97f2-7f80200b5c2c/6a1154ab94555.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />San Miguel County commissioners are discussing updating building codes from 2018 to 2024 standards, which would require more energy-efficient construction with stricter requirements for walls, windows, lighting and air leakage. The new codes would start in 2027 and align with state mandates requiring all Colorado jurisdictions to adopt low-energy building codes by 2030.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/0c/60c0e092-0602-4354-97f2-7f80200b5c2c/6a1154ab94555.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>land-use</category>
     </item>
     <item>
       <title>Telluride School District has its ‘back against the wall’</title>
@@ -397,16 +407,6 @@ Agenda not yet available]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/08/d08dd411-5461-5062-ba2c-5ac383a44e51/6a0d9f6f18404.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>land-use</category>
-    </item>
-    <item>
-      <title>Telluride Ethics Commission holds first meeting in 19 years</title>
-      <link>https://www.telluridenews.com/news/article_456c78de-b779-48b0-8c6b-7b83f3783a07.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/article_456c78de-b779-48b0-8c6b-7b83f3783a07.html</guid>
-      <pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/3b/b3bef5c4-c3cb-4d04-a298-e72ee9d1fa09/6a0dc7899b070.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The Town Ethics Commission met for the first time since 2005 to review a complaint against Councilwoman Kristen Permanoff for making an insulting comment during a Zoom council meeting in January. Permanoff, who thought she was muted while dealing with a family emergency, apologized publicly and personally to the speaker she interrupted, though the complaint came from a third party. The commission ultimately found no ethical violation occurred.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/3b/b3bef5c4-c3cb-4d04-a298-e72ee9d1fa09/6a0dc7899b070.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>government</category>
     </item>
   </channel>
 </rss>

@@ -102,6 +102,18 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Commissioners discuss building codes",
+    source: "Telluride Times",
+    date: "May 23, 2026",
+    firstSeen: "2026-05-24",
+    newsTopic: "land-use",
+    copy: "San Miguel County commissioners are discussing updating building codes from 2018 to 2024 standards, which would require more energy-efficient construction with stricter requirements for walls, windows, lighting and air leakage. The new codes would start in 2027 and align with state mandates requiring all Colorado jurisdictions to adopt low-energy building codes by 2030.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_7f836f62-2a1a-411d-89f5-a3fb0891ea64.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/0c/60c0e092-0602-4354-97f2-7f80200b5c2c/6a1154ab94555.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Telluride School District has its ‘back against the wall’",
     source: "Telluride Times",
     date: "May 23, 2026",
@@ -954,30 +966,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Register now for Rotary’s Hikeathon",
-    source: "Telluride Times",
-    date: "May 10, 2026",
-    firstSeen: "2026-05-12",
-    newsTopic: "arts-culture",
-    copy: "Telluride Rotary's annual Hikeathon is accepting registrations, aiming to raise over $30,000 this year. Other nonprofits like Eco-Action Partners, Telluride Ski and Snowboard Club, and Telluride Jewish Community are forming teams to participate and raise funds for their own causes.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_13dee22d-ca0a-4c26-aa6e-dc9b48237c1e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/98/f982f29f-8daa-47c5-b33c-bd221752003d/69fa5a362344c.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "NTSB gathering details on Frontier Airlines evacuation after plane hit and killed person in Denver",
-    source: "Telluride Times",
-    date: "May 10, 2026",
-    firstSeen: "2026-05-12",
-    newsTopic: "public-safety",
-    copy: "A Frontier Airlines plane hit and killed someone on the runway at Denver International Airport during takeoff, causing an engine fire and forcing 231 people to evacuate via emergency slides. Twelve passengers suffered minor injuries and five were hospitalized, while the NTSB is reviewing whether the evacuation procedures warrant investigation.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_9b365202-fe0b-598d-ada5-f27d878bbeaf.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/b3/bb30350f-f401-55b1-8ef1-47a01fa5d399/69ffaae0caae4.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Telluride Marshal’s Department Arrests Individual for Failure to Register as a Sex Offender",
     source: "Town of Telluride",
     date: "May 22, 2026",
@@ -1072,7 +1060,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "DOLA Economic Vitality Community Session on May 27, 2026",
     source: "Town of Ridgway",
-    date: "May 23, 2026",
+    date: "May 24, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1083,7 +1071,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "CO Main Street Architect Visits on May 27-28, 2026",
     source: "Town of Ridgway",
-    date: "May 23, 2026",
+    date: "May 24, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1116,7 +1104,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "May 23, 2026",
+    date: "May 24, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1920,6 +1908,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
+  },
+  {
+    title: "Drop In Tech Time with Oliver",
+    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-06-21/",
+    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
+    pubDate: "2026-06-21T13:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
   }
 ];
 
@@ -3182,22 +3181,6 @@ const LEGAL_NOTICES = [
     expires: "2026-07-15",
     dates: "2/5 through 7/9 (biweekly)",
     papers: ["ttimes", "npost"]
-  },
-  {
-    title: "RFP -- Floor Replacement for Courthouse & Miramonte Building",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "RFP",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking proposals for a contractor to replace flooring at 333 & 305 W. Colorado Ave, Telluride. RFP info available at sanmiguelcountyco.gov/Bids.aspx or 333 W. Colorado Ave 2nd flr, Telluride. Contact Greg Pollio at (970) 369-5432 or gregp@sanmiguelcountyco.gov. Deadline extended to May 23.",
-    deadline: "Proposals due May 23, 2026 at 5:00 PM",
-    expires: "2026-05-23",
-    dates: "4/2, 4/7, 4/16, 4/23",
-    papers: ["ttimes_apr2", "county_web"],
-    url: "https://www.sanmiguelcountyco.gov/Bids.aspx"
   },
   {
     title: "Notice of Vesting -- Korn Residence, 566 W Columbia Ave",
