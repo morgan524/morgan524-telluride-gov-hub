@@ -350,6 +350,92 @@ Important behaviors:
   not a failure. Use `git log --grep "Content refresh"` and the per-run logs
   in GitHub Actions to debug.
 
+## San Miguel County meetings — agenda links + summaries (CivicClerk)
+
+> Added 2026-05-24 on branch `claude/telluride-website-access-RTdxF` to fix
+> "BOCC meeting has an agenda posted online but our site shows no link and no
+> summary." **The CivicClerk-API parts were authored in a no-network sandbox
+> and need ONE live verification pass before merging to `main` — see the
+> ⚠ VERIFY-BEFORE-MERGE notes in `scripts/content-refresh.js`.**
+
+San Miguel County's BOCC and Planning Commission meetings live on the
+**CivicClerk portal** (`sanmiguelcoco.portal.civicclerk.com`, a React SPA
+backed by an OData API at `sanmiguelcoco.api.civicclerk.com`). Two separate
+systems feed the county's Gov-Hub cards, and BOTH used to leave county
+meetings stranded:
+
+- **The displayed meeting + agenda link** comes only from `COUNTY_CACHED_DATA`
+  in `js/gov-data.js` via `getCountyCachedMeetings()` in `js/gov-helpers.js`.
+  Each entry's link is built from `agendaUrl` (preferred) or `civicClerkId`
+  (`/event/{id}/files`), else it falls back to the portal homepage with
+  `hasAgenda:false` (no "Agenda Posted →" button). These were hand-maintained:
+  someone had to look up the CivicClerk event ID + agenda file ID after each
+  agenda dropped (e.g. May 14 = `919/1705`, May 20 = `896/1716`). Future
+  meetings sat at `civicClerkId:null` / no `agendaUrl` until a human filled
+  them in — which is exactly why May 27 had no link.
+- **The summary** comes from `content-refresh.js` Task 1, which only
+  summarizes meetings returned by `loadCachedMeetings()` (the gov-data
+  CACHED_DATA arrays) plus the per-source feeds in `fetchUpcomingMeetings()`.
+  **`COUNTY_CACHED_DATA` was deliberately excluded from `loadCachedMeetings()`**
+  on the assumption the county was covered by the `AGENDA_SOURCES.county` RSS
+  calendar (`sanmiguelcountyco.gov/RSSFeed.aspx?ModID=58`). But that legacy
+  CivicPlus feed no longer carries BOCC/PC meetings since the county moved to
+  CivicClerk, so county summaries had stopped generating entirely (there were
+  ZERO `county|...` keys in `MANUAL_SUMMARIES`).
+
+**The 2026-05-24 fix — three pieces:**
+
+1. **`loadCachedMeetings()` now includes `COUNTY_CACHED_DATA`** (source
+   `county`). Any county entry within the 30-day window with an `agendaUrl`
+   gets a Claude summary, exactly like MV/Fire/Med/School. Entries without a
+   posted agenda get the same generic "agenda not yet posted" placeholder the
+   other entities get.
+2. **`syncCountyAgendas()`** (a new Task-0 sync, wired alongside
+   `syncMVAgendas`/`syncFireAgendas`/`syncMedAgendas`) queries the CivicClerk
+   Events API, matches each upcoming event to a `COUNTY_CACHED_DATA` entry
+   **by date**, and returns `{ 'Month D, YYYY': agendaUrl }` for
+   `patchAgendaUrls()` to write into `js/gov-data.js`. The agenda URL uses the
+   same `/event/{id}/files/agenda/{fileId}` deep-link pattern as the
+   hand-curated entries. So once the county posts an agenda, the next 6-hour
+   run auto-fills the link — no more manual event-ID lookups.
+3. **`extractAgendaText()` is CivicClerk-aware**: a portal agenda deep-link
+   is rewritten to the CivicClerk file plaintext-stream API before fetching
+   (the portal URL itself is a JS-app route and returns only the SPA shell).
+   A length sanity-check discards junk so an unverified/erroring endpoint
+   falls back to a safe generic summary rather than feeding Claude garbage.
+
+For `patchAgendaUrls()` to fill them, the future county entries (May 27 +
+June) were given an explicit `agendaUrl: null` field (the patcher rewrites
+`agendaUrl: null` → `agendaUrl: '<url>'`, scoped to the entry whose `date:`
+matches; it can't touch an entry that lacks the field).
+
+**⚠ Needs live verification before merging to main** (sandbox had no outbound
+network, so the CivicClerk API shapes are from convention, not confirmed):
+- Confirm `GET https://sanmiguelcoco.api.civicclerk.com/v1/Events` returns
+  `{ value: [ { id, startDateTime, publishedFiles:[{fileId,type,name}] } ] }`
+  (adjust field access in `syncCountyAgendas()` if the detector logs
+  "0 county agenda link(s)"). `$expand=publishedFiles` may or may not be
+  needed/accepted.
+- Confirm the `GetMeetingFileStream(fileId=…,plainText=true)` endpoint used
+  by `extractAgendaText()` actually returns agenda text.
+- If the GitHub-runner IP gets blocked by CivicClerk (403), add
+  `sanmiguelcoco.api.civicclerk.com` + `sanmiguelcoco.portal.civicclerk.com`
+  to BOTH `PROXY_HOSTS` (content-refresh.js) AND the Worker's `ALLOWED_HOSTS`
+  (`cloudflare-worker/livabletelluride-rss-proxy/worker.js`) and redeploy —
+  the startup health check fails the run if those two lists drift.
+- Everything is wrapped defensively: on any non-200, shape mismatch, or
+  network error the sync returns `{}` and writes nothing, so a wrong guess
+  can't corrupt `gov-data.js` — worst case county links/summaries just stay
+  as they are today.
+
+**Immediate May 27 meeting:** once this is merged and verified, the next
+content-refresh run should auto-detect and link the already-posted May 27
+BOCC agenda. If you want it live sooner without waiting on verification, set
+`agendaUrl` on the May 27 entry in `js/gov-data.js` by hand (copy the
+CivicClerk event ID + agenda file ID from the portal, same as the May 14/20
+entries) and add a `county|2026-05-27|Board of County Commissioners Meeting`
+key to `MANUAL_SUMMARIES` in `js/gov-helpers.js`.
+
 ## Telluride Humane Society — adoptable animals on Local News
 
 Live at /#local-news and refreshed every 6 hours. Source of truth is

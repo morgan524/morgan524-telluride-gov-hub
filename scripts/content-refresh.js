@@ -546,11 +546,20 @@ async function callClaudeRaw(prompt) {
 
 // Pull hand-curated meetings from the CACHED_DATA arrays in gov-data.js.
 // Anything inside the next-30-day window with an agendaUrl gets a chance at
-// summary generation. Sources covered: MV, Fire, Med, School, Ophir, SMART,
-// Norwood, Airport — the bot-driven entities that don't have a CivicWeb /
-// RSS feed of their own.
+// summary generation. Sources covered: County, MV, Fire, Med, School, Ophir,
+// SMART, Norwood, Airport — the bot-driven entities that don't have a CivicWeb
+// / RSS feed of their own.
+//
+// COUNTY_CACHED_DATA is included here so San Miguel County BOCC / Planning
+// Commission meetings get Claude summaries. (Previously county was omitted on
+// the assumption it was covered by the AGENDA_SOURCES.county RSS calendar path
+// in fetchUpcomingMeetings — but that legacy CivicPlus feed no longer carries
+// these meetings since the county moved to the CivicClerk portal, so county
+// summaries had stopped generating entirely. The agendaUrl for each county
+// entry is filled in by syncCountyAgendas() in Task 0.)
 function loadCachedMeetings(now, horizon) {
   const arrays = [
+    { name: 'COUNTY_CACHED_DATA',  source: 'county' },
     { name: 'MV_CACHED_DATA',      source: 'mv' },
     { name: 'FIRE_CACHED_DATA',    source: 'fire' },
     { name: 'MED_CACHED_DATA',     source: 'med' },
@@ -676,6 +685,20 @@ async function fetchUpcomingMeetings() {
 
 async function extractAgendaText(url) {
   if (!url) return '';
+  // CivicClerk portal agenda deep-links (.../event/{id}/files/agenda/{fileId})
+  // are React-SPA routes: fetching them server-side returns the app shell, not
+  // the agenda. Rewrite to the CivicClerk file plaintext stream API so the
+  // summarizer gets real agenda text. If this endpoint doesn't return usable
+  // text, the sanity check below discards it and the meeting falls back to a
+  // safe generic "agenda posted" summary (no hallucination from app HTML).
+  // ⚠ VERIFY-BEFORE-MERGE: the GetMeetingFileStream endpoint shape is from
+  // CivicClerk API convention, not confirmed live (sandbox had no network).
+  const cc = url.match(/portal\.civicclerk\.com\/event\/(\d+)\/files\/agenda\/(\d+)/);
+  const isCivicClerk = !!cc;
+  if (cc) {
+    const fileId = cc[2];
+    url = `https://sanmiguelcoco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=${fileId},plainText=true)`;
+  }
   try {
     const resp = await fetch(url);
     if (resp.status !== 200) return '';
@@ -690,6 +713,10 @@ async function extractAgendaText(url) {
       .replace(/&gt;/g, '>')
       .replace(/\s+/g, ' ')
       .trim();
+    // For CivicClerk we don't fully trust the unverified endpoint: if it gave
+    // back something too short to be an agenda (an error page, JSON envelope,
+    // or binary stripped to noise), discard it rather than feed Claude junk.
+    if (isCivicClerk && text.length < 200) return '';
     return text.slice(0, MAX_AGENDA_TEXT);
   } catch (e) {
     console.warn('  Agenda extract error:', e.message);
@@ -3182,6 +3209,100 @@ async function syncMedAgendas() {
   return map;
 }
 
+// ── San Miguel County — CivicClerk portal agenda detection ──
+// SMC's BOCC and Planning Commission meetings live on the CivicClerk portal
+// (sanmiguelcoco.portal.civicclerk.com), a React SPA backed by a public OData
+// API at sanmiguelcoco.api.civicclerk.com. The legacy CivicPlus calendar RSS
+// (AGENDA_SOURCES.county.calendarUrl, ModID=58 on sanmiguelcountyco.gov) no
+// longer carries these meetings, which is why county agenda links and
+// summaries had silently stopped updating.
+//
+// This queries the CivicClerk Events API, matches each upcoming event to a
+// COUNTY_CACHED_DATA entry BY DATE (patchAgendaUrls only touches entries whose
+// `date:` matches, so we never invent a meeting), and returns
+// { 'Month D, YYYY': agendaUrl } using the same deep-link pattern the
+// hand-curated entries use: /event/{eventId}/files/agenda/{fileId}.
+//
+// ⚠ VERIFY-BEFORE-MERGE: this change was authored in a sandbox with no
+// outbound network, so the CivicClerk API response shape below (OData
+// `value[]` with `startDateTime` + `publishedFiles[].{fileId,type,name}`) was
+// written from CivicClerk's known API conventions but NOT confirmed against
+// the live endpoint. Before merging to main, run this once (or curl
+// `https://sanmiguelcoco.api.civicclerk.com/v1/Events`) and confirm the field
+// names. If the detector logs "0 county agenda link(s)", adjust the field
+// access below. The function is fully defensive — on any shape mismatch,
+// non-200, or network error it logs and returns {}, so it can never write bad
+// data into gov-data.js.
+const COUNTY_CIVICCLERK_API = 'https://sanmiguelcoco.api.civicclerk.com/v1/Events';
+const COUNTY_CIVICCLERK_PORTAL_BASE = 'https://sanmiguelcoco.portal.civicclerk.com';
+
+async function syncCountyAgendas() {
+  console.log('\n🏛  Syncing San Miguel County (CivicClerk) agendas...');
+  let json;
+  try {
+    // No $filter (some OData servers reject unknown fields); fetch a window
+    // and filter client-side. $expand=publishedFiles asks the API to inline
+    // each event's files; if the server ignores or rejects it we degrade to
+    // whatever `publishedFiles` shape is returned inline.
+    const url = COUNTY_CIVICCLERK_API +
+      '?$orderby=startDateTime&$top=200&$expand=publishedFiles';
+    const resp = await fetch(url);
+    if (resp.status !== 200) {
+      console.warn(`  CivicClerk API HTTP ${resp.status} — skipping county agenda sync`);
+      return {};
+    }
+    json = JSON.parse(resp.text);
+  } catch (e) {
+    console.warn(`  CivicClerk API error: ${e.message} — skipping county agenda sync`);
+    return {};
+  }
+
+  const events = Array.isArray(json?.value) ? json.value
+               : Array.isArray(json) ? json : [];
+  if (events.length === 0) {
+    console.warn('  CivicClerk API returned 0 events — check API shape (see VERIFY note)');
+    return {};
+  }
+
+  const now = new Date(); now.setHours(0, 0, 0, 0);
+  const horizon = new Date(now.getTime() + 45 * 86400000); // 45 days ahead
+  const map = {};
+
+  for (const ev of events) {
+    const id = ev.id ?? ev.eventId ?? ev.Id ?? ev.EventId;
+    const startRaw = ev.startDateTime || ev.startDate || ev.eventDate ||
+                     ev.StartDateTime || ev.start;
+    if (!id || !startRaw) continue;
+    const d = new Date(startRaw);
+    if (isNaN(d.getTime()) || d < now || d > horizon) continue;
+
+    // Find a published agenda file. Prefer a file whose type is exactly
+    // "Agenda"; fall back to any file whose name mentions "agenda"; finally
+    // accept an "Agenda Packet" / packet so at least the link resolves.
+    const files = ev.publishedFiles || ev.PublishedFiles || ev.files || [];
+    if (!Array.isArray(files) || files.length === 0) continue;
+    const agendaFile =
+      files.find(f => /^agenda$/i.test(String(f.type || f.fileType || f.documentType || ''))) ||
+      files.find(f => /agenda/i.test(String(f.name || f.fileName || ''))) ||
+      files.find(f => /packet/i.test(String(f.type || f.name || '')));
+    if (!agendaFile) continue;
+
+    const fileId = agendaFile.fileId ?? agendaFile.id ?? agendaFile.FileId;
+    const agendaUrl = fileId
+      ? `${COUNTY_CIVICCLERK_PORTAL_BASE}/event/${id}/files/agenda/${fileId}`
+      : `${COUNTY_CIVICCLERK_PORTAL_BASE}/event/${id}/files`;
+
+    const key = dateKeyFromYMD(d.getFullYear(), d.getMonth(), d.getDate());
+    // If two events share a date (e.g. a work session + regular meeting),
+    // keep the first agenda found — patchAgendaUrls matches by date and would
+    // otherwise overwrite. A same-day collision is rare for the county.
+    if (!map[key]) map[key] = agendaUrl;
+  }
+
+  console.log(`  Found ${Object.keys(map).length} county agenda link(s)`);
+  return map;
+}
+
 // Patches gov-data.js in place: for each (date → url) in `agendaMap`, finds
 // the matching entry inside the given CACHED_DATA array and rewrites its
 // `agendaUrl:` field. Scoped to the named array's brace block so the same
@@ -3925,9 +4046,10 @@ async function main() {
   // PDF URLs. Runs BEFORE summary generation so any agenda detected this
   // run can be summarized in the same run.
   for (const [arrName, syncFn] of [
-    ['MV_CACHED_DATA',   syncMVAgendas],
-    ['FIRE_CACHED_DATA', syncFireAgendas],
-    ['MED_CACHED_DATA',  syncMedAgendas]
+    ['MV_CACHED_DATA',     syncMVAgendas],
+    ['FIRE_CACHED_DATA',   syncFireAgendas],
+    ['MED_CACHED_DATA',    syncMedAgendas],
+    ['COUNTY_CACHED_DATA', syncCountyAgendas]
   ]) {
     try {
       const agendaMap = await syncFn();

@@ -153,6 +153,7 @@ const COUNTY_CACHED_DATA = [
     type: 'bocc',
     location: '305 W Colorado Ave, Telluride, CO 81435',
     civicClerkId: null,
+    agendaUrl: null,
     note: 'Agenda typically posted the Friday before.'
   },
   // ── June 2026 ──
@@ -163,6 +164,7 @@ const COUNTY_CACHED_DATA = [
     type: 'bocc',
     location: '305 W Colorado Ave, Telluride, CO 81435',
     civicClerkId: null,
+    agendaUrl: null,
     note: 'Agenda typically posted the Friday before.'
   },
   {
@@ -172,6 +174,7 @@ const COUNTY_CACHED_DATA = [
     type: 'bocc',
     location: '305 W Colorado Ave, Telluride, CO 81435',
     civicClerkId: null,
+    agendaUrl: null,
     note: 'Agenda typically posted the Friday before.'
   },
   {
@@ -181,6 +184,7 @@ const COUNTY_CACHED_DATA = [
     type: 'bocc',
     location: '305 W Colorado Ave, Telluride, CO 81435',
     civicClerkId: null,
+    agendaUrl: null,
     note: 'Agenda typically posted the Friday before.'
   },
   {
@@ -190,6 +194,7 @@ const COUNTY_CACHED_DATA = [
     type: 'bocc',
     location: '305 W Colorado Ave, Telluride, CO 81435',
     civicClerkId: null,
+    agendaUrl: null,
     note: 'Agenda typically posted the Friday before.'
   }
 ];
