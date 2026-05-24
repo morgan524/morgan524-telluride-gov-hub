@@ -1924,10 +1924,10 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Mountainfilm Coffee Talk: Artists, Activists & Iconoclasts",
-    link: "https://telluridelibrary.libcal.com/event/16886399?hs=a",
-    description: "8:00 AM – 9:00 AM · This group of artists, iconoclasts and activists explore how creativity and a willingness to step out of the box, can help us make sense of the world and give us hope for a better one. They challenge the status quo and share what we can learn from those who dare to see the world differently. Panelists:  Dr. Adam Cruise, John Colette, Aaron Huey, Elif Koyut&uuml;rk Hazen, Faridah Gbadamosi Mountainfilm Coffee Talks are free and open to the public.  No pass needed.   https://mountainfilm.eventive.org/schedule/69efd9c197ae725b10bfaa88",
-    pubDate: "2026-05-23T08:00:00.000Z",
+    title: "Mountainfilm Coffee Talk: Our Public Lands, Our Access",
+    link: "https://telluridelibrary.libcal.com/event/16886470?hs=a",
+    description: "8:00 AM – 9:00 AM · Public lands belong to the people. In the West we know how vital access to public lands is. This panel discusses the progress in expanding access, including adaptive trails and inclusive infrastructure, as well as the critical importance of safeguarding our national parks, public lands and rivers as shared resources for generations to come. Panelists:  Berne Broudy, Greg Durso, Kevin Fedarko, Dillon Osleger, Griffin Post Mountainfilm Coffee Talks are free and open to the public.  No pass needed.   https://mountainfilm.eventive.org/schedule/69efd9c197ae725b10bfaa97",
+    pubDate: "2026-05-24T08:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
@@ -1935,15 +1935,48 @@ const WILKINSON_EVENTS = [
     imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_12_15_37_51.jpg"
   },
   {
-    title: "CANCELLED - Balance in Motion - Equilibrio en Movimiento",
-    link: "https://telluridelibrary.libcal.com/event/16535299?hs=a",
-    description: "10:00 AM – 11:00 AM · Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Mu&eacute;vase, respire y ll&eacute;nese de energ&iacute;a en esta din&aacute;mica clase biling&uuml;e, dirigido por Lauren Norton, dise&ntilde;ada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energ&iacute;a de la danza, y la presencia equilibrante del yoga y la respiraci&oacute;n, esta sesi&oacute;n le dejar&aacute; sinti&eacute;ndose fuerte, en armon&iacute;a y revitalizado/a. …",
-    pubDate: "2026-05-23T10:00:00.000Z",
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://telluridelibrary.libcal.com/event/16515738?hs=a",
+    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-05-24T11:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
+  },
+  {
+    title: "Familias Cocinan Con Manolo Betancur",
+    link: "https://telluridelibrary.libcal.com/event/16818453?hs=a",
+    description: "11:00 AM – 1:00 PM · &iexcl;Ven y aprende a cocinar AREPAS COLOMBIANAS con Manolo! Manolo Betancur emigr&oacute; a Estados Unidos buscando el sue&ntilde;o americano y huyendo de la guerra en Colombia, donde fue capit&aacute;n del ej&eacute;rcito. Sus pesadillas del pasado impulsan su misi&oacute;n: crear empleos para inmigrantes en su panader&iacute;a en Carolina del Norte. En la puerta, un cartel lo dice claro: \"Hecho en Estados Unidos por manos inmigrantes.\"",
+    pubDate: "2026-05-24T11:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Ahh Haa School of Arts",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_30_13_04_22.png"
+  },
+  {
+    title: "CANCELLED - Drop-In Tech Time with Oliver",
+    link: "https://telluridelibrary.libcal.com/event/15970375?hs=a",
+    description: "1:00 PM – 3:00 PM",
+    pubDate: "2026-05-24T13:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1740003527.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/16567826?hs=a",
+    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
+    pubDate: "2026-05-24T14:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
   }
 ];
 
@@ -2024,105 +2057,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "OTG Overnight Trail Maintenance Trip: Cutler Complex",
-    link: "https://ouraytrails.org/volunteers",
-    description: "Enjoy some of the most scenic trails in Colorado while removing down trees or encroaching brush and repairing trails from erosion problems. You will leave the wild with the camaraderie that comes with meeting new friends and helping keep our public land trails safe and sustainable. Please register in advance to join this trail crew event, and participants must have current CPR and First Aid certifications. Click HERE to signup.",
-    pubDate: "2026-05-23T06:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Culter Creek Complex",
-    imageUrl: "https://localist-images.azureedge.net/photos/52789272870069/huge/81634184041be3beb87730d36ba522a5de675e5c.jpg"
-  },
-  {
-    title: "Live Music: Multi Barbershop Quartet",
-    link: "https://cpw.state.co.us/state-parks/ridgway-state-park",
-    description: "Come enjoy an incredible evening of live music by a multi Barbershop Quartet! With a stunning back drop of the lake your night will be full of awe and oldies. It's a short walk to join us at the Overlook southwest of the Visitor Center, 28555 US-550, Ridgway, CO 81432.",
-    pubDate: "2026-05-23T12:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52957764677090/huge/ffaab58b58745da5e21b32be1f2596aad0ac9ef0.jpg"
-  },
-  {
-    title: "Ridgway Railroad Museum FREE Train Rides",
-    link: "https://www.ridgwayrailroadmuseum.org/",
-    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
-    pubDate: "2026-05-23T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
-  },
-  {
-    title: "Hands On History – Butter",
-    link: "https://events.ourayridgwayevents.com/event/hands-on-history-butter",
-    description: "Drop by the Ranch History Museum throughout the afternoon to make some butter with us! We’ll explore the history and various methods of churning butter while making (and tasting!) it ourselves. Fun for all ages.",
-    pubDate: "2026-05-23T19:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52870247236290/huge/4feea89e13fdaede96752f502b9cb6ff04e7f824.jpg"
-  },
-  {
-    title: "Ouray Art Walk",
-    link: "https://www.visitouray.com/150",
-    description: "This event invites the public to explore a vibrant outdoor market featuring a variety of art vendors showcasing and selling their work. Guests are welcome to stroll through the vendor tents, discover unique pieces, and connect with local artists in a relaxed, open-air setting. For those looking to elevate their experience, wine and charcuterie will be available with the purchase of a ticket ($32), offering a perfect way to sip, savor, and soak in the atmosphere. In addition, attendees are encouraged to extend their evening by attending the aerial performance at the Wright Opera House, adding a dynamic and artistic element to the overall experience. Whether you’re browsing, shopping, or indulging, this event offers something for everyone to enjoy.",
-    pubDate: "2026-05-23T19:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Main Street",
-    imageUrl: "https://localist-images.azureedge.net/photos/52092499507606/huge/c6fe9a874f25452ba50a6a5c74e2bc27f9eba0d4.jpg"
-  },
-  {
-    title: "High Alpine Aerial presents “In Bloom” Student Showcase",
-    link: "https://thewrightoperahouse.org/",
-    description: "High Alpine Aerial presents “In Bloom” Student Showcase WHEN? Saturday, May 23 Doors at 2:30 pm • Show at 3:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW In Bloom is High Alpine Aerial’s student showcase featuring performers of all ages sharing their latest and greatest aerial acts. After months of practice and dedication, these emerging artists take the stage to celebrate growth, transformation, and artistic expression. Inspired by the spirit of spring, the showcase reflects renewal, courage, and the excitement of developing new skills. Students will present beautiful performances that highlight their hard work and creativity as they take flight in front of a live audience. …",
-    pubDate: "2026-05-23T21:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52382499623067/huge/233cf973030c061bd362a704311e09888fd6c366.jpg"
-  },
-  {
-    title: "Caricature Cartoon Artist; Cahoots Tavern",
-    link: "https://www.cahootstavernouray.com/",
-    description: "Following the Ouray Art walk, come down to Cahoots Tavern to get your very own caricature of yourself. What is a caricature artist? A visual artist who creates exaggerated, often humorous, or satirical portraits of people by highlighting their distinctive features. They distill a subject's likeness into a memorable, cartoon-like sketch, balancing accurate recognition with playful distortion. Cost is based on number of people included and color drawing vs black and white",
-    pubDate: "2026-05-23T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52816363072518/huge/3d630e6fe662e543b92a27b21b52f0093a336d20.jpg"
-  },
-  {
-    title: "High Alpine Aerial presents “In Bloom” Aerial Circ-lesque",
-    link: "https://thewrightoperahouse.org/",
-    description: "WHEN? Saturday, May 23 Doors at 6:30 pm • Show at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW: In Bloom: Aerial Circ-lesque (2026) is an adults-only evening of aerial performance, circus artistry, and burlesque-inspired spectacle presented by High Alpine Aerial. Allow yourself to be transported into the lush gardens of In Bloom as a cast of professional performers delivers a dazzling variety of acts combining strength, grace, and theatrical flair. Suspended high above the stage, artists will push the limits of movement and imagination in a celebration of sensuality, creativity, and bold performance. A party in the garden of earthly delights, this immersive aerial experience promises daring feats of strength and beauty designed to excite the senses. …",
-    pubDate: "2026-05-24T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52375583987748/huge/e1c49a524214d33f684395ec8292f6087472cdc1.jpg"
-  },
-  {
-    title: "Vibrant Underground: Jack Haight’s Red Mountain Revival, Tyler Simmons, DJ Straylight",
-    link: "https://events.ourayridgwayevents.com/event/vibrant-underground-jack-haights-red-mountain-revival-tyler-simmons-dj-straylight",
-    description: "Jams, blues, and beats at Ouray Books on Saturday night, May 23, presented by Vibrant. Tyler Simmons opens with his signature guitar jam style, Jack Haight's Red Mountain Revival brings a bluesy rock set with mountain energy, and the Vibrant DJ crew keeps the party going until close. Powered by the Mountain Creature Sound System, the clearest and punchiest sound in the West. Local baked goods and nonalcoholic beverages available for purchase. Feel free to BYOB!",
-    pubDate: "2026-05-24T02:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Books",
-    imageUrl: "https://localist-images.azureedge.net/photos/52880802425330/huge/159b585b839f745ecd5444f2f4b61ae0f9aec381.jpg"
-  },
   {
     title: "OTG Overnight Trail Maintenance Trip: Cutler Complex",
     link: "https://ouraytrails.org/volunteers",
@@ -3046,6 +2980,83 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52744270535881/huge/2c61b5d27b015d45fb42faf91991d5314cc4e592.jpg"
+  },
+  {
+    title: "Zumba Fitness with Tamra",
+    link: "https://zumba.com/p/zumbafitnesswithTamra",
+    description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com. For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra.",
+    pubDate: "2026-06-10T23:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52277881680293/huge/327c868a372da99a8aa625676956ed98bc1b6b79.jpg"
+  },
+  {
+    title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
+    link: "www.FloatingLotusBrewery.com",
+    description: "Join us at the Lotus for a midweek tradition that brings together musicians, music lovers, and the incredible local talent that makes our community shine. From intimate solo sets to full-band jam sessions with rotating players, Open Mic Night is always full of surprises. Want to play? We’d love to have you — signups begin at 5:30pm. Just bring your instrument and your creativity, and we’ll take care of the rest. Our stage is fully equipped with PA, mics, drums, bass, and everything you need to plug in and play. 🎟️ Free admission 🍻 Grab a beer, settle in, and enjoy the show Come be part of the music — on stage or in the crowd!",
+    pubDate: "2026-06-11T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/ed08b494666358349bc84e969db6e8b262ef71aa.jpg"
+  },
+  {
+    title: "Summer Bingo - Wednesday Night at Ouray Elks Lodge",
+    link: "Www.ourayelks.org",
+    description: "OPEN TO THE PUBLIC Come see our beautiful historic lodge while joining us in playing bingo! Doors Open at 5:30 pm, Early Bird Bingo 6:00 and Regular Bingo starts at 7:00pm Concessions available to purchase",
+    pubDate: "2026-06-11T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52440353082990/huge/849a6c82c22aa4e9cf19e3fc7490b7c928059ded.jpg"
+  },
+  {
+    title: "Yoga in the Park- Wednesday evenings",
+    link: "www.beetrueyou.com",
+    description: "For noncyclists and cyclists alike. After an optional social bike ride at 5 pm, wind down for a yoga class in the park 6 - 7 pm. A moderate to advanced vinyasa style class targetting the areas of the body affected by time in the bike saddle and other areas of request. Bring your own mat. If you don't have one, please let me know earlier in the day so I can bring one for you. Meet at the Gazebo south of Chipeta Lodge. If the weather is too inclement, we can meet at the studio at 380 Sherman Street, Ridgway. While this is donation based, please pay before online or in person.",
+    pubDate: "2026-06-11T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Gazebo south of Chipeta Lodge, Ridgway, CO (Or studio if raining)",
+    imageUrl: "https://localist-images.azureedge.net/photos/52880886803755/huge/ba2d24fbf09ba1f9a707a06213d60685581d7322.jpg"
+  },
+  {
+    title: "It Was Just An Accident: Movie Night @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/it-was-just-an-accident-movie-night-the-wright",
+    description: "It Was Just An Accident: Movie Night @ the Wright WHEN? Wednesday, June 10 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 1h 52min RATING: PG-13 ROTTEN TOMATOES SCORE: 98%! ABOUT THE FILM It Was Just An Accident (2025) follows a seemingly ordinary event that spirals into a chain reaction of misunderstandings, consequences, and unexpected revelations. As tensions rise and lives intersect, the film explores how a single moment can reshape relationships and alter the course of multiple lives. Blending dark humor, emotional tension, and sharp social observation, the story gradually uncovers the complicated truths hidden beneath everyday appearances. A suspenseful and thought-provoking drama about chance, accountability, and the ripple effects of human decisions. Tickets $5 In-person screening at the historic Wright Opera House Concessions available. …",
+    pubDate: "2026-06-11T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52886546383646/huge/a127886b72fb3a600be995c26a811e7c6fba5849.jpg"
+  },
+  {
+    title: "Ouray Economic Development Committee",
+    link: "https://events.ourayridgwayevents.com/event/ouray-economic-development-committee",
+    description: "The Ouray Economic Development Committee (OEDC) works as the liaison between the City and the local business community. This includes creating and implementing an Economic Development Plan and economic development incentives to best serve the business community and to align with programs that induce private investment enterprises and commerce. The committee also explores regional economic development efforts with the Town of Ridgway and Ouray County as well as is tasked with developing a Business Expansion and Retention (BEAR) program, participating in policy discussions and revisions to community planning documents, and making recommendations to the City Council about economic incentive requests.",
+    pubDate: "2026-06-11T14:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
+  },
+  {
+    title: "Cedar Hill Cemetery Tour",
+    link: "www.ouraycountyhistoricalsociety.org",
+    description: "Tour of Cedar Hill Cemetery, Ouray led by Alice Leeper. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay",
+    pubDate: "2026-06-11T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Cedar Hill Cemetery ",
+    imageUrl: "https://localist-images.azureedge.net/photos/52278066168507/huge/2100ef3a6df421f4cc351fc153ebe5f196fc7df6.jpg"
   }
 ];
 
