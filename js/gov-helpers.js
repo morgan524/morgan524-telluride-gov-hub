@@ -102,9 +102,6 @@ const MANUAL_SUMMARIES = {
   "county|2026-05-25|Open Space Commission Meeting":
     "Open Space Commission meeting",
 
-  "county|2026-05-27|Board of County Commissioners Special Meeting in Telluride 2:00 pm - 2:45 pm":
-    "Special meeting in Telluride · Work session at Placerville School House · No published agenda items",
-
   "county|2026-06-03|Board of County Commissioners Meeting":
     "Regular commissioner meeting · Agenda details not yet available",
 
