@@ -71,8 +71,15 @@ const AGENDA_SOURCES = {
   },
   county: {
     label: 'San Miguel County',
+    // CivicClerk migrated off the legacy CivicEngage RSS some time before
+    // 2026-05-25 — that feed (sanmiguelcountyco.gov/RSSFeed.aspx?ModID=58)
+    // still returns items but with:
+    //   (a) <pubDate> = when the announcement was posted (not the event date)
+    //   (b) <link> = legacy Calendar.aspx?EID=... URL with no agenda PDF
+    // The new CivicClerk system exposes an OData v4 API and the portal URL
+    // pattern /event/<eventId>/files/agenda/<fileId> for direct PDF access.
     portalBase: 'https://sanmiguelcoco.portal.civicclerk.com',
-    calendarUrl: 'https://sanmiguelcountyco.gov/RSSFeed.aspx?ModID=58',
+    apiBase:    'https://sanmiguelcoco.api.civicclerk.com/v1',
     type: 'civicclerk'
   },
   mv: {
@@ -614,26 +621,11 @@ async function fetchUpcomingMeetings() {
     }
   } catch (e) { console.warn('  CivicWeb fetch error:', e.message); }
 
-  // County — RSS calendar
+  // San Miguel County — CivicClerk OData API.  See notes in AGENDA_SOURCES.county.
   try {
-    const resp = await fetch(AGENDA_SOURCES.county.calendarUrl);
-    if (resp.status === 200) {
-      const xml = await parseXml(resp.text);
-      const items = xml?.rss?.channel?.item;
-      const arr = Array.isArray(items) ? items : (items ? [items] : []);
-      for (const item of arr) {
-        const mDate = new Date(item.pubDate || item['a10:updated'] || '');
-        if (mDate >= now && mDate <= horizon) {
-          meetings.push({
-            source: 'county',
-            date: mDate.toISOString().split('T')[0],
-            title: item.title || 'County Meeting',
-            agendaUrl: item.link || ''
-          });
-        }
-      }
-    }
-  } catch (e) { console.warn('  County RSS error:', e.message); }
+    const countyMeetings = await fetchSmcCountyMeetings(now, horizon);
+    meetings.push(...countyMeetings);
+  } catch (e) { console.warn('  SMC County CivicClerk fetch error:', e.message); }
 
 
   // Ouray County — CivicPlus AgendaCenter RSS (both boards)
@@ -676,6 +668,13 @@ async function fetchUpcomingMeetings() {
 
 async function extractAgendaText(url) {
   if (!url) return '';
+  // CivicClerk portal URLs serve a React SPA shell — fetching them returns
+  // only `<!doctype html>` boilerplate with zero agenda content (the PDF
+  // loads inside a DocAccess viewer iframe, gated by a per-request url_hash
+  // that requires the SPA to compute). Don't waste a Claude call on the
+  // SPA HTML; return empty so refreshSummaries falls back to the API-
+  // sourced agendaSeedText (eventName + description + agendaName).
+  if (/\.portal\.civicclerk\.com\//i.test(url)) return '';
   try {
     const resp = await fetch(url);
     if (resp.status !== 200) return '';
@@ -697,6 +696,90 @@ async function extractAgendaText(url) {
   }
 }
 
+/**
+ * Fetch upcoming San Miguel County meetings from the CivicClerk OData API.
+ *
+ *   GET /v1/Events?$filter=startDateTime ge <today> and startDateTime le <horizon>
+ *
+ * Returns one meeting object per upcoming event with:
+ *   - source: 'county'
+ *   - date: 'YYYY-MM-DD' (real event date, not RSS pubDate)
+ *   - title: eventName
+ *   - agendaUrl: portal /event/<id>/files/agenda/<fileId> URL when a
+ *     publishedFile of type "Agenda" exists; otherwise empty string
+ *   - hasAgenda: boolean
+ *   - agendaSeedText: a fallback "agenda body" cobbled together from the
+ *     API's eventName + eventDescription + agendaName + categoryName.
+ *     Used by refreshSummaries when extractAgendaText can't reach the
+ *     actual PDF (which is always, for now — see note in extractAgendaText).
+ *
+ * The CivicClerk OData endpoint also offers GetEventFileStream(fileId,
+ * fileType, plainText=true) which would give the PDF as text, but the
+ * function requires the SPA's DocAccess url_hash and returns 500 from a
+ * server-side curl. Pulling that off needs a headless browser; not in
+ * scope for now. The seed text is a deliberate stop-gap so cards still
+ * get *some* AI summary instead of being summary-less.
+ */
+async function fetchSmcCountyMeetings(now, horizon) {
+  const out = [];
+  const toIso = (d) => d.toISOString().split('.')[0] + 'Z'; // OData wants no millis
+  const filter = `startDateTime ge ${toIso(now)} and startDateTime le ${toIso(horizon)}`;
+  const url = `${AGENDA_SOURCES.county.apiBase}/Events?` +
+    `$filter=${encodeURIComponent(filter)}` +
+    `&$orderby=startDateTime` +
+    `&$top=100`;
+  const resp = await fetch(url);
+  if (resp.status !== 200) {
+    console.warn(`  CivicClerk API returned HTTP ${resp.status}`);
+    return out;
+  }
+  let parsed;
+  try { parsed = JSON.parse(resp.text); }
+  catch (e) {
+    console.warn('  CivicClerk JSON parse error:', e.message);
+    return out;
+  }
+  const events = Array.isArray(parsed.value) ? parsed.value : [];
+  for (const ev of events) {
+    if (!ev || ev.isDeleted) continue;
+    if (ev.isPublished && String(ev.isPublished).toLowerCase() !== 'published') continue;
+    const startDate = new Date(ev.startDateTime || ev.eventDate);
+    if (isNaN(startDate)) continue;
+    // The OData filter already bounds the range; this guard catches edge
+    // cases (timezone math, removed events).
+    if (startDate < now || startDate > horizon) continue;
+
+    const agendaFile = Array.isArray(ev.publishedFiles)
+      ? ev.publishedFiles.find((f) => f && f.type === 'Agenda')
+      : null;
+    const agendaUrl = agendaFile
+      ? `${AGENDA_SOURCES.county.portalBase}/event/${ev.id}/files/agenda/${agendaFile.fileId}`
+      : '';
+
+    // Build a structured "seed" agenda body. Not the actual PDF content
+    // (see extractAgendaText note), but more useful for Claude than just
+    // the title — captures category, agenda title, free-text description.
+    const seedParts = [
+      ev.categoryName ? `Category: ${ev.categoryName}` : '',
+      ev.eventName    ? `Event: ${ev.eventName}`       : '',
+      ev.agendaName   ? `Agenda: ${ev.agendaName}`     : '',
+      ev.eventDescription ? `Description: ${ev.eventDescription}` : '',
+      agendaFile?.name ? `Agenda file: ${agendaFile.name}` : '',
+    ].filter(Boolean);
+    const agendaSeedText = seedParts.join('\n');
+
+    out.push({
+      source: 'county',
+      date: startDate.toISOString().split('T')[0],
+      title: (ev.eventName || 'County Meeting').trim(),
+      agendaUrl,
+      hasAgenda: !!agendaUrl,
+      agendaSeedText,
+    });
+  }
+  return out;
+}
+
 async function refreshSummaries(existingSummaries) {
   console.log('\n📋 Task 1: Refreshing meeting summaries...');
   const meetings = await fetchUpcomingMeetings();
@@ -713,7 +796,17 @@ async function refreshSummaries(existingSummaries) {
     }
 
     console.log(`  → Generating summary for: ${key}`);
-    const agendaText = await extractAgendaText(m.agendaUrl);
+    let agendaText = await extractAgendaText(m.agendaUrl);
+
+    // Fallback: when the agenda URL is unreachable (CivicClerk SPA shells,
+    // PDFs we can't extract server-side) but the source still gave us
+    // structured metadata about the meeting, hand that to Claude instead
+    // of bailing. Better-than-nothing summary based on title + category
+    // + agenda name + description.
+    if (!agendaText && m.agendaSeedText) {
+      agendaText = m.agendaSeedText;
+      console.log(`    Using API-sourced seed text (${agendaText.length} chars; PDF body not reachable)`);
+    }
 
     if (!agendaText && !ANTHROPIC_API_KEY) {
       console.log(`    Skipped (no agenda text and no API key)`);
