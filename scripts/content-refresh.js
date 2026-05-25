@@ -412,6 +412,12 @@ AVOID:
 CONTENT RULES:
 - Only summarize information actually present in the agenda text provided.
 - If the agenda text is sparse or missing, say so briefly in the voice. Do NOT invent topics.
+- For the no-agenda case specifically: write a SINGLE sentence stating
+  the agenda hasn't been posted yet, in the form "The [date] [meeting
+  title] agenda hasn't been posted yet." Do NOT add a tail like
+  "so there's no way to know what's coming up" or any other commentary
+  about the absence — the absence is the message, no further philosophy
+  needed. Topics array should be empty in this case.
 - Never hallucinate names, vote counts, or decisions not in the source text.
 - Define government jargon inline only when essential — the site has a glossary tooltip layer that handles most terms.
 - The "why it matters" section should connect agenda items to key local issues when relevant, written in the voice.

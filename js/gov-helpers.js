@@ -73,7 +73,7 @@ const MANUAL_SUMMARIES = {
     "Agenda not yet available",
 
   "med|2026-05-28|Regular Board Meeting":
-    "The May 28 regular board meeting agenda hasn't been posted yet, so there's no way to know what's coming up.",
+    "The May 28 regular board meeting agenda hasn't been posted yet.",
 
   "school|2026-06-09|Telluride Board of Education Work Session":
     "Agenda not yet available",
