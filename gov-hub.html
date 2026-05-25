@@ -34,7 +34,7 @@
     .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
     .topnav-links { display: flex; gap: 14px; margin-left: 16px; flex: 1; }
     .topnav-links a {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text-primary); text-decoration: none; font-weight: 600; font-size: 0.82rem; padding: 6px 2px; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text-primary); text-decoration: none; font-weight: 600; font-size: 0.76rem; white-space: nowrap; padding: 6px 2px; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
     .topnav-links a:hover { color: var(--forest); }
     .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
     .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 8px 14px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
@@ -766,10 +766,25 @@
       // MEETING_ZOOM_LINKS / MEETING_PASSCODES config for sources
       // without an agenda PDF (most non-Telluride / non-CivicClerk
       // entities). Key shape matches MANUAL_SUMMARIES: source|date|title.
-      const agendaMetaKey = m.sourceKey + '|' + m.date + '|' + m.title;
-      const agendaMeta = (typeof MEETING_AGENDA_META !== 'undefined')
-        ? (MEETING_AGENDA_META[agendaMetaKey] || null)
-        : null;
+      //
+      // Exact-title lookup is brittle because COUNTY_CACHED_DATA.title
+      // (what shows on the card, e.g. "Board of County Commissioners
+      // Meeting") often differs from the CivicClerk eventName used as
+      // the storage key (e.g. "...Special Meeting in Telluride 2:00 pm -
+      // 2:45 pm"). Fall back to a source|date prefix match when exact
+      // fails AND there's only one such entry on that day — that
+      // uniquely identifies the meeting in practice.
+      let agendaMeta = null;
+      if (typeof MEETING_AGENDA_META !== 'undefined') {
+        const exact = MEETING_AGENDA_META[m.sourceKey + '|' + m.date + '|' + m.title];
+        if (exact) {
+          agendaMeta = exact;
+        } else {
+          const prefix = m.sourceKey + '|' + m.date + '|';
+          const matches = Object.keys(MEETING_AGENDA_META).filter((k) => k.startsWith(prefix));
+          if (matches.length === 1) agendaMeta = MEETING_AGENDA_META[matches[0]];
+        }
+      }
 
       const staticZoomUrl = (typeof getMeetingZoomLink === 'function') ? getMeetingZoomLink(item) : '';
       const staticInfo    = (typeof getMeetingPasscode === 'function') ? getMeetingPasscode(item) : null;

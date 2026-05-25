@@ -154,10 +154,7 @@ const MANUAL_SUMMARIES = {
     "Meeting scheduled for first Monday of the month · Commission reviews open space acquisitions and management · Advises Town Council on comprehensive plan elements",
 
   "telluride|2026-05-28|Planning & Zoning Commission - May 28 2026":
-    "No specific agenda items available",
-
-  "county|2026-05-27|Board of County Commissioners Special Meeting in Telluride 2:00 pm - 2:45 pm":
-    "Septic system variances for two Ophir properties · Terminating deed restrictions on Society Drive lot · State housing planning grant acceptance · Placerville corridor beautification discussion · Fire District Station #3 expansion plans"
+    "No specific agenda items available"
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
