@@ -229,7 +229,17 @@
 
 </div><!-- /main -->
 
-<script src="js/app.js"></script>
+<!-- js/app.js loaded with a dynamic cache-buster (Math.floor(Date.now()/600000)
+     → bumps every ~10 min) so edits to app.js reach users within that window
+     instead of being held back by browser cache. Matches the pattern used by
+     gov-hub.html / hub-bub.html / deep-dive-*.html across the rest of the site. -->
+<script>
+  (function() {
+    var s = document.createElement('script');
+    s.src = 'js/app.js?v=' + Math.floor(Date.now() / 600000);
+    document.head.appendChild(s);
+  })();
+</script>
 
 <!-- Google Translate widget + mobile nav toggle (added 2026-05-18) -->
 <script>
