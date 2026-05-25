@@ -227,6 +227,17 @@
     var v = Math.floor(Date.now() / 600000);
     var s = document.createElement('script');
     s.src = '/js/gov-data.js?v=' + v;
+    // Once gov-data.js finishes loading, set a flag the bottom-of-page
+    // bootstrap polls for. The earlier "retry on 50ms timer up to 2 sec"
+    // wasn't reliable enough — some users were still seeing
+    // "Data not available — please reload." Belt + suspenders: the
+    // flag tells the bootstrap exactly when data is ready, and the
+    // bootstrap also keeps a timer fallback in case onload misfires.
+    s.onload = function() { window.__GOV_DATA_READY = true; };
+    s.onerror = function() {
+      console.error('gov-data.js failed to load:', s.src);
+      window.__GOV_DATA_FAILED = true;
+    };
     document.head.appendChild(s);
   </script>
   <script>
@@ -253,14 +264,19 @@
 
     function renderTopic(key, retries) {
       // gov-data.js loads via the async dynamic-cache-buster <script> above.
-      // If this function is called before that download finishes — which
-      // happens on most cold loads — LAND_USE_ISSUES isn't defined yet.
-      // Retry on a short timer up to ~2 seconds before showing the
-      // bail-out message. Same fix needed on every deep-dive-*.html page.
+      // The loader sets window.__GOV_DATA_READY in its onload, and
+      // __GOV_DATA_FAILED in its onerror. Wait for either — up to 6 sec —
+      // before bailing.
       retries = retries || 0;
-      if (typeof LAND_USE_ISSUES === 'undefined') {
-        if (retries < 40) return setTimeout(function() { renderTopic(key, retries + 1); }, 50);
+      var ready = (typeof LAND_USE_ISSUES !== 'undefined') || window.__GOV_DATA_READY;
+      var failed = window.__GOV_DATA_FAILED;
+      if (!ready && !failed) {
+        if (retries < 120) return setTimeout(function() { renderTopic(key, retries + 1); }, 50);
         document.getElementById('page-content').innerHTML = '<p style="padding:40px">Data not available — please reload.</p>';
+        return;
+      }
+      if (failed || typeof LAND_USE_ISSUES === 'undefined') {
+        document.getElementById('page-content').innerHTML = '<p style="padding:40px">Couldn\'t load /js/gov-data.js. Check your network and reload.</p>';
         return;
       }
       // Merge any external topic blobs that loaded before us (e.g. GONDOLA_DATA
