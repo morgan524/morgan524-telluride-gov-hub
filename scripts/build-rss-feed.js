@@ -110,13 +110,29 @@ function withinWindow(d, days) {
   return (Date.now() - d.getTime()) / 86400000 <= days;
 }
 
-// True if d falls in [now - daysBehind, now + daysAhead]. Used for meetings
-// (which want recent past + upcoming) and events (which only want upcoming
-// but with a small grace window for events that started today).
+// True if d falls in [today - daysBehind, today + daysAhead]. Compares at
+// UTC-day granularity, NOT milliseconds — and NOT local time.
+//
+// The naive `(meetingDate.getTime() - Date.now()) / 86400000` approach has
+// two latent bugs:
+//   1. A meeting whose date string is "2026-05-25" parses to 00:00 UTC.
+//      When this runs at noon UTC the raw delta is -12 hours = -0.5 days,
+//      which under a `daysBehind=0` rule would (wrongly) exclude today's
+//      meeting.
+//   2. Mixing the bare-string UTC parse with `setHours(0,0,0,0)` (which
+//      uses LOCAL time) produces a different "today" depending on the
+//      machine's timezone. In MDT (UTC-6) "today's local midnight" is
+//      6h ahead of "today's UTC midnight" — enough to flip the comparison.
+//
+// Snapping BOTH sides to UTC midnight via Date.UTC() makes the result
+// timezone-stable: same answer in UTC, MDT, or anywhere else.
 function withinRollingWindow(d, daysBehind, daysAhead) {
   if (!d) return false;
-  const deltaMs = d.getTime() - Date.now();
-  return deltaMs >= -daysBehind * 86400000 && deltaMs <= daysAhead * 86400000;
+  const now = new Date();
+  const todayUtc  = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+  const targetUtc = Date.UTC(d.getUTCFullYear(),   d.getUTCMonth(),   d.getUTCDate());
+  const deltaDays = Math.round((targetUtc - todayUtc) / 86400000);
+  return deltaDays >= -daysBehind && deltaDays <= daysAhead;
 }
 
 // Map MANUAL_SUMMARIES key prefix → readable source label.
@@ -180,7 +196,12 @@ function buildMeetingItems(summaries) {
     const [source, dateStr, ...titleParts] = parts;
     const title = titleParts.join('|');
     const meetingDate = parseDate(dateStr);
-    if (!withinRollingWindow(meetingDate, 7, MAX_FUTURE_DAYS)) continue;
+    // Only TODAY-and-future meetings in the digest. Previously this allowed
+    // 7 days backward, which meant the 2026-05-25 daily blast included
+    // meetings from 2026-05-20 — all four of them already past. The digest
+    // is for *upcoming* meetings; if a meeting already happened, surfacing
+    // it in an email a recipient reads at lunch is actively confusing.
+    if (!withinRollingWindow(meetingDate, 0, MAX_FUTURE_DAYS)) continue;
     const sourceLabel = MEETING_SOURCE_LABELS[source] || source;
     items.push({
       title: `[Meeting] ${title} — ${dateStr}`,
