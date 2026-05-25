@@ -102,6 +102,18 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Council recaps winter housing program",
+    source: "Telluride Times",
+    date: "May 25, 2026",
+    firstSeen: "2026-05-25",
+    newsTopic: "housing",
+    copy: "Town's winter RV camping program at the north park completed its fourth season, housing 9 people in allocated spaces from late November to mid-April. The program collected $9,300 in revenue against roughly $10,000 in operating costs, with some outstanding rent balances still owed.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_327f40ba-0bc6-4509-8436-c136f3e02e2c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/29/d29fa0d0-0b04-43b4-98e5-996ff4d4a8e1/6a115714a006d.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Responding when disaster strikes",
     source: "Telluride Times",
     date: "May 24, 2026",
@@ -111,18 +123,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_495ca062-80ec-438c-8f0a-a42fa8d758e6.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/d5/6d52cd96-9fea-49b0-94a0-f02a885a8548/6a115bfaf164d.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "‘He says “yes” to everything.’",
-    source: "Telluride Times",
-    date: "May 24, 2026",
-    firstSeen: "2026-05-25",
-    newsTopic: "education",
-    copy: "Chochi, a Rotary Youth Exchange student who had never heard of Telluride before arriving, has won over the community with his infectious positivity and willingness to try everything. Despite being new to snow and activities like basketball, he helped the golf team reach state championships for the first time and earned spirit awards along the way.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_95d8abdb-cfbb-4583-8420-a5de13732d9f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/2a/42a7051a-c0d6-4202-a625-3fee32668761/6a1159940d283.image.jpg",
     imgHiRes: true
   },
   {
@@ -699,6 +699,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_f8f4bfd3-69ee-4f73-ae4f-bb0e751c3324.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/94/394025f8-fde3-4ab8-984d-fa6884441730/6a06482c2b625.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "‘He says “yes” to everything.’",
+    source: "Telluride Times",
+    date: "May 24, 2026",
+    firstSeen: "2026-05-25",
+    newsTopic: "education",
+    copy: "Chochi, a Rotary Youth Exchange student who had never heard of Telluride before arriving, has won over the community with his infectious positivity and willingness to try everything. Despite being new to snow and activities like basketball, he helped the golf team reach state championships for the first time and earned spirit awards along the way.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_95d8abdb-cfbb-4583-8420-a5de13732d9f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/2a/42a7051a-c0d6-4202-a625-3fee32668761/6a1159940d283.image.jpg",
     imgHiRes: true
   },
   {
@@ -1896,59 +1908,15 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Mountainfilm Coffee Talk: Our Public Lands, Our Access",
-    link: "https://telluridelibrary.libcal.com/event/16886470?hs=a",
-    description: "8:00 AM – 9:00 AM · Public lands belong to the people. In the West we know how vital access to public lands is. This panel discusses the progress in expanding access, including adaptive trails and inclusive infrastructure, as well as the critical importance of safeguarding our national parks, public lands and rivers as shared resources for generations to come. Panelists:  Berne Broudy, Greg Durso, Kevin Fedarko, Dillon Osleger, Griffin Post Mountainfilm Coffee Talks are free and open to the public.  No pass needed.   https://mountainfilm.eventive.org/schedule/69efd9c197ae725b10bfaa97",
-    pubDate: "2026-05-24T08:00:00.000Z",
+    title: "Holiday - Library Closed",
+    link: "https://telluridelibrary.libcal.com/event/15920090?hs=a",
+    description: "Monday, May – Monday, May",
+    pubDate: "2026-05-25T00:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_12_15_37_51.jpg"
-  },
-  {
-    title: "Gentle Yoga with Kristen Milord",
-    link: "https://telluridelibrary.libcal.com/event/16515738?hs=a",
-    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
-    pubDate: "2026-05-24T11:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
-  },
-  {
-    title: "Familias Cocinan Con Manolo Betancur",
-    link: "https://telluridelibrary.libcal.com/event/16818453?hs=a",
-    description: "11:00 AM – 1:00 PM · &iexcl;Ven y aprende a cocinar AREPAS COLOMBIANAS con Manolo! Manolo Betancur emigr&oacute; a Estados Unidos buscando el sue&ntilde;o americano y huyendo de la guerra en Colombia, donde fue capit&aacute;n del ej&eacute;rcito. Sus pesadillas del pasado impulsan su misi&oacute;n: crear empleos para inmigrantes en su panader&iacute;a en Carolina del Norte. En la puerta, un cartel lo dice claro: \"Hecho en Estados Unidos por manos inmigrantes.\"",
-    pubDate: "2026-05-24T11:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Ahh Haa School of Arts",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_30_13_04_22.png"
-  },
-  {
-    title: "CANCELLED - Drop-In Tech Time with Oliver",
-    link: "https://telluridelibrary.libcal.com/event/15970375?hs=a",
-    description: "1:00 PM – 3:00 PM",
-    pubDate: "2026-05-24T13:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://telluridelibrary.libcal.com/event/16567826?hs=a",
-    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
-    pubDate: "2026-05-24T14:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+    imageUrl: ""
   }
 ];
 
@@ -2029,39 +1997,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "OTG Overnight Trail Maintenance Trip: Cutler Complex",
-    link: "https://ouraytrails.org/volunteers",
-    description: "Enjoy some of the most scenic trails in Colorado while removing down trees or encroaching brush and repairing trails from erosion problems. You will leave the wild with the camaraderie that comes with meeting new friends and helping keep our public land trails safe and sustainable. Please register in advance to join this trail crew event, and participants must have current CPR and First Aid certifications. Click HERE to signup.",
-    pubDate: "2026-05-24T06:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Culter Creek Complex",
-    imageUrl: "https://localist-images.azureedge.net/photos/52789272870069/huge/81634184041be3beb87730d36ba522a5de675e5c.jpg"
-  },
-  {
-    title: "PARK - Ultimate Frisbee",
-    link: "https://events.ourayridgwayevents.com/event/park-ultimate-frisbee",
-    description: "Come play frisbee! Anyone is welcome.",
-    pubDate: "2026-05-24T20:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Fellin Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/51807883052581/huge/9d7f0c7c4c96318902b1dfef1c3f821c9b3189d1.jpg"
-  },
-  {
-    title: "Ouray Softball Spring Training",
-    link: "https://events.ourayridgwayevents.com/event/ouray-softball-spring-training",
-    description: "Step onto the field for Ouray Softball Spring Training at Fellin Park. This preseason program is designed to shake off the rust, build skills, and get players ready for summer league action. Open to a range of ages and experience levels, spring training focuses on fundamentals, teamwork, and getting back into the rhythm of the game. Whether you're refining your swing, sharpening fielding skills, or just getting back in the game, it’s a great way to kick off the season. Come ready to play, connect with teammates, and enjoy spring evenings on the diamond in Ouray. Want to join a team, but you aren't already involved? Sign up Here!",
-    pubDate: "2026-05-24T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52701275725771/huge/58498e59bf3c36b5491225bca2838359fa0701bd.jpg"
-  },
   {
     title: "On Display: Layers of Faces and Life-Paintings by Ruth Higdon and Julie Ahern",
     link: "https://events.ourayridgwayevents.com/event/layers-of-faces-and-life-paintings-by-ruth-higdon-and-julie-ahern",
@@ -3029,6 +2964,39 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Cedar Hill Cemetery ",
     imageUrl: "https://localist-images.azureedge.net/photos/52278066168507/huge/2100ef3a6df421f4cc351fc153ebe5f196fc7df6.jpg"
+  },
+  {
+    title: "Low Energy Carbon Code Training",
+    link: "https://www.ecoactionpartners.org/energy-codes",
+    description: "EcoAction Partners is facilitating a regional cohort across San Miguel, Ouray and San Juan counties to support collaborative discussion and implementation support for the state's building energy code requirements. Regional building code consistency, with varying amendments as appropriate for each jurisdiction, has proven beneficial to the regional building community and for enforcement over the years. This work is funded by the Energy Code Adoption and Enforcement Grant Program, from the Colorado Energy Office, and supported by Lotus Engineering & Sustainability and NORESCO. Low Energy & Carbon Code (LECC) Training: March 26, 2026 (9am-5pm) Who: Whole building contractor community What: LECC & Regional Amendments Training Where: Ridgway Town Hall & Zoom (Zoom Link to be provided to registrants) Why: Prepare for adoption by regional governments and get your questions answered Registration REQUIRED FOR LUNCH",
+    pubDate: "2026-06-11T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52444204372144/huge/b898ad2e5fd77ff7c0562156e047d7da5afebb95.jpg"
+  },
+  {
+    title: "Pilates Mat",
+    link: "https://ridgwaypilates.punchpass.com/catalogs/300",
+    description: "All Levels Pilates Mat class. Classical sequence Int to challenge, strengthen and stretch you wehole body. Every Thursday at 9:30am. Pricing Four lessons for $120 Eight lessons for $200 Become a member and pay $100/month to attend weekly. Purchase a pass here: https://ridgwaypilates.punchpass.com/catalogs/300 Class is limited to six people. Mats are included. Please wear socks, put your hair up and choose clothing free of metal.",
+    pubDate: "2026-06-11T15:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
+  },
+  {
+    title: "On Display: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
+    link: "https://events.ourayridgwayevents.com/event/painting-evolution-of-moments-with-wild-horses-1999-2026-artist-karen-keene-day",
+    description: "Enjoy nearly 3 decades or work from local painter, Karen Keene Day. Info decker@ridgwayfuse.org",
+    pubDate: "2026-06-11T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52709642938173/huge/e2c21f0b2c1fb10c06c021e9b9d55a9ea535bccc.jpg"
   }
 ];
 

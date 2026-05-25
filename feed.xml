@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 May 2026 02:52:34 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 09:57:14 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Design Review Board — 2026-06-04</title>
@@ -40,6 +40,16 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
 The May 28 regular board meeting agenda hasn't been posted yet, so there's no way to know what's coming up.]]></description>
       <category>Meeting</category>
       <category>Telluride Medical Center</category>
+    </item>
+    <item>
+      <title>Council recaps winter housing program</title>
+      <link>https://www.telluridenews.com/news/article_327f40ba-0bc6-4509-8436-c136f3e02e2c.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_327f40ba-0bc6-4509-8436-c136f3e02e2c.html</guid>
+      <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/29/d29fa0d0-0b04-43b4-98e5-996ff4d4a8e1/6a115714a006d.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Town's winter RV camping program at the north park completed its fourth season, housing 9 people in allocated spaces from late November to mid-April. The program collected $9,300 in revenue against roughly $10,000 in operating costs, with some outstanding rent balances still owed.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/29/d29fa0d0-0b04-43b4-98e5-996ff4d4a8e1/6a115714a006d.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>housing</category>
     </item>
     <item>
       <title>Responding when disaster strikes</title>
@@ -396,15 +406,6 @@ The May 28 regular board meeting agenda hasn't been posted yet, so there's no wa
       <media:content url="https://www.telluride.gov/ImageRepository/Document?documentID=15549" medium="image" />
       <category>Town of Telluride</category>
       <category>housing</category>
-    </item>
-    <item>
-      <title>Newscast 5-20-26</title>
-      <link>https://koto.org/news/newscast-5-20-26/</link>
-      <guid isPermaLink="false">https://koto.org/news/newscast-5-20-26/</guid>
-      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Telluride School District to Ask Voters for More Funding; Cat Movie Fisher with Risho Unda; InVINCEble Comes to Mountainfilm]]></description>
-      <category>KOTO Community Radio</category>
-      <category>government</category>
     </item>
   </channel>
 </rss>
