@@ -59,7 +59,7 @@ function isBadSummary(text) {
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
   "county|2026-05-27|Board of County Commissioners Special Meeting in Telluride 2:00 pm - 2:45 pm":
-    "[object Object]"
+    {"zoomUrl":"https://us02web.zoom.us/meeting/register/Tg73_6Q9SouIp8dXx71sfg","meetingId":"886 0088 9761","passcode":"042834","phone":"719-359-4580"}
 };
 
 const MANUAL_SUMMARIES = {
@@ -3797,96 +3797,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_d3659378-b06b-4e27-9b53-ec57d83a4b86.html",
     address: "113 W Columbia Ave, Telluride, Colorado",
     noticeKey: "ordinance-gas-franchise-1425"
-  },
-  {
-    title: "Special Use Permit -- Scenic and Social Use (Parcel #452726103022)",
-    entity: "San Miguel County Planning Commission",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "San Miguel County Planning Commission will hold a public hearing on a Special Use Permit application for scenic and social use of property. The hearing is scheduled for May 14, 2026 at 10:30 a.m. at the Sheriff's Annex Building in Norwood. Written comments must be received by noon on April 30, 2026.",
-    deadline: "2026-04-30 12:00",
-    expires: "2026-05-14",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "488 S. Avalon Dr., Norwood, CO, Parcel #452726103022",
-    noticeKey: "special-use-452726103022-scenic"
-  },
-  {
-    title: "Special Use Permit -- Construction/Contractor Office and Staging Area (Parcel #452726103022)",
-    entity: "San Miguel County Planning Commission",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "John Miller on behalf of Kurt Works Inc. and Kurt Crockett has applied for a Special Use Permit to establish a construction/contractor office and staging area for excavation and grading business operations. The San Miguel County Planning Commission will hold a public hearing on May 14, 2026 at 10:45 a.m. Written comments must be received by noon on April 30, 2026.",
-    deadline: "2026-04-30 12:00",
-    expires: "2026-05-14",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "488 S. Avalon Dr., Norwood, CO, Parcel #452726103022",
-    noticeKey: "special-use-452726103022-contractor"
-  },
-  {
-    title: "RFP -- Flooring Replacement at County Buildings",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals for a contractor to replace flooring at 333 & 305 W. Colorado Ave in Telluride. Proposals must be submitted by 5:00 PM on Friday, May 24th either via email or dropped off at the Maintenance department. Contact Greg Pollio for more information.",
-    deadline: "2026-05-24 17:00",
-    expires: "2026-05-24",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "333 & 305 W. Colorado Ave, Telluride, CO",
-    noticeKey: "rfp-flooring-telluride-2026"
-  },
-  {
-    title: "RFP -- Landscape Improvements at Galloping Goose Park",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals for landscape improvements to the Galloping Goose Park in Telluride. Proposals must be submitted by 5:00 PM on Friday, May 22 either via email or dropped off at the Parks & Open Space department. Contact Janet Kask for more information.",
-    deadline: "2026-05-22 17:00",
-    expires: "2026-05-22",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "Galloping Goose Park, Telluride, CO",
-    noticeKey: "rfp-galloping-goose-landscape-2026"
-  },
-  {
-    title: "ITB -- Mill Creek Pressure Reducing Valve Vault Installation",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "💧",
-    iconClass: "type-hearing",
-    type: "Utilities",
-    filterTag: "utilities",
-    summary: "The Town of Telluride is soliciting sealed bids for a PRV vault installation project at Mill Creek. Bids must be received by 4 PM on Thursday, April 30, 2026 at the Public Works & Transit Facility or via confirmed electronic submission. Bid documents are available through Public Works or online.",
-    deadline: "2026-04-30 16:00",
-    expires: "2026-04-30",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "Mill Creek, Telluride, CO",
-    noticeKey: "itb-mill-creek-prv-2026"
   }
 ];
 
