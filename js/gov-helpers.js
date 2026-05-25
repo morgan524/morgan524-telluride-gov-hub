@@ -50,6 +50,15 @@ function isBadSummary(text) {
   return false;
 }
 
+// Per-meeting Zoom info parsed out of the agenda PDF by
+// scripts/content-refresh.js (parseZoomFromAgenda). Keyed by the same
+// source|date|title string as MANUAL_SUMMARIES. Read by zoomPanel() in
+// gov-hub.html in preference to the static MEETING_ZOOM_LINKS /
+// MEETING_PASSCODES config — agenda-extracted info is per-meeting and
+// stays current automatically; the static config is the fallback for
+// sources without a PDF agenda.
+const MEETING_AGENDA_META = {};
+
 const MANUAL_SUMMARIES = {
   "norwood|2026-05-18|Planning and Zoning Commission Meeting":
     "Two code items on the table — a Land Use Code update and a Colorado Wildfire Resiliency Code progress check. The CWRC has been winding through subcommittee work across the region for months; tonight's discussion is P&Z's chance to weigh in before the next draft. The LUC update is at the stage where text changes accumulate quickly. April 20 minutes on consent. The kind of agenda that reads quiet but quietly reshapes what gets built and how.",

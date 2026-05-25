@@ -760,11 +760,34 @@
        gov-helpers.js (extracted from gov-hub.js by extract-gov-helpers.js). ── */
     function zoomPanel(m) {
       const item = { source: m.sourceKey, eventDate: new Date(m.date + 'T00:00:00'), title: m.title };
-      const zoomUrl = (typeof getMeetingZoomLink === 'function') ? getMeetingZoomLink(item) : '';
-      const info    = (typeof getMeetingPasscode === 'function') ? getMeetingPasscode(item) : null;
+
+      // Per-meeting Zoom info parsed from the agenda PDF (preferred,
+      // because it's automatically current). Falls back to the static
+      // MEETING_ZOOM_LINKS / MEETING_PASSCODES config for sources
+      // without an agenda PDF (most non-Telluride / non-CivicClerk
+      // entities). Key shape matches MANUAL_SUMMARIES: source|date|title.
+      const agendaMetaKey = m.sourceKey + '|' + m.date + '|' + m.title;
+      const agendaMeta = (typeof MEETING_AGENDA_META !== 'undefined')
+        ? (MEETING_AGENDA_META[agendaMetaKey] || null)
+        : null;
+
+      const staticZoomUrl = (typeof getMeetingZoomLink === 'function') ? getMeetingZoomLink(item) : '';
+      const staticInfo    = (typeof getMeetingPasscode === 'function') ? getMeetingPasscode(item) : null;
+
+      const zoomUrl = (agendaMeta && agendaMeta.zoomUrl) || staticZoomUrl;
+      const info = {
+        id:       (agendaMeta && agendaMeta.meetingId) || (staticInfo && staticInfo.id)       || '',
+        passcode: (agendaMeta && agendaMeta.passcode)  || (staticInfo && staticInfo.passcode) || '',
+        phone:    (agendaMeta && agendaMeta.phone)     || (staticInfo && staticInfo.phone)    || '',
+      };
+      if (!info.id && !info.passcode && !info.phone) {
+        // Preserve old "no info" semantics for the bail-out check below.
+        info.id = info.passcode = info.phone = '';
+      }
+
       const remote  = (typeof ENTITY_REMOTE !== 'undefined') ? (ENTITY_REMOTE[m.sourceKey] || {}) : {};
       const showLivestream = !!remote.livestream;
-      if ((!info || !info.passcode) && !zoomUrl && !showLivestream) return '';
+      if (!info.passcode && !info.id && !zoomUrl && !showLivestream) return '';
 
       let parts = '';
       if (info && info.id)       parts += '<span><strong>Meeting ID:</strong> ' + info.id + '</span>';

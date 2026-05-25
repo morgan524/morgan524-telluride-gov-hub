@@ -666,8 +666,14 @@ async function fetchUpcomingMeetings() {
   return meetings;
 }
 
+/**
+ * Returns { text, urls } — both the extracted agenda text and any PDF
+ * link-annotation URLs (used by parseZoomFromAgenda to find Zoom URLs
+ * that don't appear in the visible text layer). For HTML agenda pages,
+ * urls is empty; only PDF extractors populate it.
+ */
 async function extractAgendaText(url) {
-  if (!url) return '';
+  if (!url) return { text: '', urls: [] };
   // CivicClerk portal URLs serve a React SPA shell — a bare fetch returns
   // only `<!doctype html>` boilerplate. The actual PDF is loaded inside a
   // DocAccess viewer iframe, gated by a per-request url_hash that the SPA
@@ -677,25 +683,35 @@ async function extractAgendaText(url) {
   // Playwright isn't available locally / the PDF response wasn't captured.
   if (/\.portal\.civicclerk\.com\//i.test(url)) {
     try {
-      const { extractCivicClerkAgendaPdf, extractTextFromPdfBuffer } = require('./civicclerk-pdf');
+      const { extractCivicClerkAgendaPdf, extractPdfContent } = require('./civicclerk-pdf');
       const t0 = Date.now();
       const pdfBuf = await extractCivicClerkAgendaPdf(url);
       if (!pdfBuf) {
         console.log(`    CivicClerk Playwright: no PDF intercepted (${Date.now() - t0} ms)`);
-        return '';
+        return { text: '', urls: [] };
       }
-      const text = await extractTextFromPdfBuffer(pdfBuf);
+      const { text, urls } = await extractPdfContent(pdfBuf);
       const cleaned = text.replace(/\s+/g, ' ').trim();
-      console.log(`    CivicClerk Playwright: ${cleaned.length} chars from PDF (${pdfBuf.length} bytes, ${Date.now() - t0} ms)`);
-      return cleaned.slice(0, MAX_AGENDA_TEXT);
+      console.log(`    CivicClerk Playwright: ${cleaned.length} chars from PDF (${pdfBuf.length} bytes, ${urls.length} URLs, ${Date.now() - t0} ms)`);
+      return { text: cleaned.slice(0, MAX_AGENDA_TEXT), urls };
     } catch (e) {
       console.warn(`    CivicClerk Playwright error: ${e.message}`);
-      return '';
+      return { text: '', urls: [] };
     }
   }
   try {
     const resp = await fetch(url);
-    if (resp.status !== 200) return '';
+    if (resp.status !== 200) return { text: '', urls: [] };
+    // Pull href URLs from the raw HTML before tag-stripping — agenda info
+    // pages from CivicWeb / CivicEngage often link to the actual PDF and
+    // Zoom URL via <a href>.
+    const hrefRe = /href=["']([^"']+)["']/gi;
+    const urls = [];
+    let mh;
+    while ((mh = hrefRe.exec(resp.text)) !== null) {
+      const u = mh[1];
+      if (/^https?:/i.test(u)) urls.push(u);
+    }
     // Strip HTML tags, clean whitespace
     let text = resp.text
       .replace(/<script[\s\S]*?<\/script>/gi, '')
@@ -707,11 +723,59 @@ async function extractAgendaText(url) {
       .replace(/&gt;/g, '>')
       .replace(/\s+/g, ' ')
       .trim();
-    return text.slice(0, MAX_AGENDA_TEXT);
+    return { text: text.slice(0, MAX_AGENDA_TEXT), urls };
   } catch (e) {
     console.warn('  Agenda extract error:', e.message);
-    return '';
+    return { text: '', urls: [] };
   }
+}
+
+/**
+ * Parse Zoom meeting info from agenda text + URL list. CivicClerk and
+ * CivicWeb agenda PDFs reliably include all four fields near the top:
+ *   - Zoom URL (as a hyperlink annotation; comes via urls[])
+ *   - Meeting ID    e.g.  "Meeting ID# 886 0088 9761"
+ *   - Passcode      e.g.  "Passcode # 042834"
+ *   - Phone number  e.g.  "Join by phone at 719-359-4580"
+ * Returns an object with whichever fields could be extracted (possibly
+ * empty). Caller decides whether to write the empty object — for the
+ * gov-helpers.js MEETING_AGENDA_META map we only store entries with at
+ * least one of zoomUrl / meetingId set.
+ */
+function parseZoomFromAgenda(text, urls) {
+  const out = {};
+  if (!text && (!urls || !urls.length)) return out;
+
+  if (Array.isArray(urls)) {
+    const zoomLink = urls.find((u) => /\bzoom\.us\//i.test(u));
+    if (zoomLink) out.zoomUrl = zoomLink;
+  }
+
+  const t = String(text || '').replace(/\s+/g, ' ');
+
+  // If no Zoom URL came from annotations, look in the visible text too
+  // (some HTML agenda pages print the URL inline).
+  if (!out.zoomUrl) {
+    const inline = t.match(/https?:\/\/(?:[a-z0-9-]+\.)?zoom\.us\/[^\s)\]>,]+/i);
+    if (inline) out.zoomUrl = inline[0];
+  }
+
+  // Meeting ID — formats: "Meeting ID# 886 0088 9761", "Meeting ID 886 0088 9761",
+  // "Meeting ID: 886 0088 9761". Allow optional internal spaces.
+  const id = t.match(/Meeting\s*ID\s*[#:]?\s*(\d[\d\s]{7,16}\d)/i);
+  if (id) out.meetingId = id[1].trim().replace(/\s+/g, ' ');
+
+  // Passcode — formats: "Passcode # 042834", "Passcode: 042834", "Password: ...".
+  // Allow alphanumerics + a few punctuation chars; cap at 30 chars so we
+  // don't accidentally swallow following sentence text.
+  const pc = t.match(/Pass(?:code|word)\s*[#:]?\s*([A-Za-z0-9._-]{4,30})/i);
+  if (pc) out.passcode = pc[1].trim();
+
+  // Phone — first US-format (XXX-XXX-XXXX or with parens) in the text.
+  const ph = t.match(/(?:\b\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}\b)/);
+  if (ph) out.phone = ph[0];
+
+  return out;
 }
 
 /**
@@ -875,23 +939,55 @@ async function fetchSmcCountyMeetings(now, horizon) {
   return out;
 }
 
-async function refreshSummaries(existingSummaries) {
+async function refreshSummaries(existingSummaries, existingAgendaMeta) {
   console.log('\n📋 Task 1: Refreshing meeting summaries...');
   const meetings = await fetchUpcomingMeetings();
   console.log(`  Found ${meetings.length} upcoming meetings`);
 
   const updated = { ...existingSummaries };
+  const meta    = { ...(existingAgendaMeta || {}) };
   let newCount = 0;
 
   for (const m of meetings) {
     const key = `${m.source}|${m.date}|${m.title}`;
-    if (updated[key]) {
-      console.log(`  ✓ Already have summary for: ${key}`);
+
+    // Always (re)extract agenda zoom info if we don't have it yet —
+    // separate from whether we already have a summary. A meeting might
+    // have its summary cached from a prior run that didn't yet know how
+    // to read PDF annotations.
+    const needAgendaZoom = !meta[key];
+
+    if (updated[key] && !needAgendaZoom) {
+      console.log(`  ✓ Already have summary + zoom meta for: ${key}`);
+      continue;
+    }
+    if (updated[key] && needAgendaZoom && !m.agendaUrl) {
+      // Have summary; no agenda URL to fetch zoom info from; skip.
       continue;
     }
 
     console.log(`  → Generating summary for: ${key}`);
-    let agendaText = await extractAgendaText(m.agendaUrl);
+    let { text: agendaText, urls: agendaUrls } = await extractAgendaText(m.agendaUrl);
+
+    // Parse Zoom info from the agenda (text + PDF link annotations) and
+    // stash it in MEETING_AGENDA_META keyed by source|date|title. Used
+    // by gov-hub.html zoomPanel() to render the Zoom card on meetings
+    // whose agenda PDF carries the Meeting ID / Passcode / phone /
+    // join URL (every BOCC CivicClerk PDF, most CivicWeb PDFs).
+    if (m.agendaUrl && (agendaText || (agendaUrls && agendaUrls.length))) {
+      const zoom = parseZoomFromAgenda(agendaText, agendaUrls);
+      if (zoom.zoomUrl || zoom.meetingId) {
+        meta[key] = zoom;
+        const fields = Object.keys(zoom).filter(k => zoom[k]).join(', ');
+        console.log(`    Zoom meta: ${fields}`);
+      }
+    }
+
+    if (updated[key]) {
+      // Had summary already; only the zoom-meta update mattered. Skip
+      // the Claude call (which we'd otherwise re-do unnecessarily).
+      continue;
+    }
 
     // Fallback: when the agenda URL is unreachable (CivicClerk SPA shells,
     // PDFs we can't extract server-side) but the source still gave us
@@ -932,16 +1028,18 @@ async function refreshSummaries(existingSummaries) {
     await new Promise(r => setTimeout(r, 1500));
   }
 
-  // Prune summaries older than 30 days
+  // Prune summaries + agenda-meta older than 30 days
   for (const key of Object.keys(updated)) {
     const parts = key.split('|');
-    if (parts[1] && daysAgo(parts[1]) > 30) {
-      delete updated[key];
-    }
+    if (parts[1] && daysAgo(parts[1]) > 30) delete updated[key];
+  }
+  for (const key of Object.keys(meta)) {
+    const parts = key.split('|');
+    if (parts[1] && daysAgo(parts[1]) > 30) delete meta[key];
   }
 
-  console.log(`  Summary refresh complete: ${newCount} new, ${Object.keys(updated).length} total`);
-  return updated;
+  console.log(`  Summary refresh complete: ${newCount} new summaries, ${Object.keys(updated).length} total; ${Object.keys(meta).length} agenda-meta entries`);
+  return { summaries: updated, agendaMeta: meta };
 }
 
 // ══════════════════════════════════════════════════════════════
@@ -1042,7 +1140,12 @@ async function refreshMeetingPreviews(existingPreviews, govHubSrc) {
         `[${n.type || 'Notice'}] ${n.title}: ${(n.summary || '').slice(0, 200)}`
       ).join('\n');
 
-      const agendaText = m.agendaUrl ? await extractAgendaText(m.agendaUrl) : '';
+      // extractAgendaText now returns { text, urls } — we only need the
+      // text portion here. urls are consumed by refreshSummaries' zoom-meta
+      // extraction path, not by previews.
+      const { text: agendaText } = m.agendaUrl
+        ? await extractAgendaText(m.agendaUrl)
+        : { text: '' };
 
       if (!noticeContext && !agendaText) {
         console.log(`    Skipped (no context available)`);
@@ -4136,12 +4239,22 @@ async function main() {
     }
   }
 
-  // ── 1. Meeting Summaries ──
+  // ── 1. Meeting Summaries + Agenda-derived Zoom info ──
+  // refreshSummaries now also parses Zoom URL / Meeting ID / Passcode /
+  // Phone out of each agenda PDF (CivicClerk + CivicWeb) and stores it
+  // in a parallel MEETING_AGENDA_META map. gov-hub.html zoomPanel reads
+  // that map first, falling back to the static MEETING_ZOOM_LINKS /
+  // MEETING_PASSCODES config for sources without an agenda PDF.
   const existingSummaries = extractJsObject(govHubSrc, 'MANUAL_SUMMARIES') || {};
-  const newSummaries = await refreshSummaries(existingSummaries);
+  const existingMeta      = extractJsObject(govHubSrc, 'MEETING_AGENDA_META') || {};
+  const { summaries: newSummaries, agendaMeta: newMeta } = await refreshSummaries(existingSummaries, existingMeta);
   if (JSON.stringify(newSummaries) !== JSON.stringify(existingSummaries)) {
     govHubSrc = replaceJsValue(govHubSrc, 'MANUAL_SUMMARIES', newSummaries, true);
     govHubSrc = replaceConstString(govHubSrc, 'MANUAL_SUMMARIES_CACHE_DATE', today());
+    changed = true;
+  }
+  if (JSON.stringify(newMeta) !== JSON.stringify(existingMeta)) {
+    govHubSrc = replaceJsValue(govHubSrc, 'MEETING_AGENDA_META', newMeta, true);
     changed = true;
   }
 

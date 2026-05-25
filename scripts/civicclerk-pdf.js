@@ -102,39 +102,52 @@ async function extractCivicClerkAgendaPdf(portalUrl, opts = {}) {
  * are logged but don't abort the whole extraction.
  */
 async function extractTextFromPdfBuffer(buffer) {
-  if (!buffer || !buffer.length) return '';
+  const { text } = await extractPdfContent(buffer);
+  return text;
+}
+
+/**
+ * Extract BOTH text and link annotations from a PDF buffer. Used when
+ * callers need to find URLs that aren't visible in the text layer —
+ * e.g. agenda PDFs that print "Zoom Protocol Link to join" but only
+ * carry the actual Zoom URL as a hyperlink annotation on the word "Link".
+ *
+ * Returns: { text: string, urls: string[] } where urls is the de-duped
+ * list of all `/URI` annotation targets, in document order.
+ */
+async function extractPdfContent(buffer) {
+  if (!buffer || !buffer.length) return { text: '', urls: [] };
   const pdfjsLib = require('pdfjs-dist/legacy/build/pdf.js');
-  // Worker is required even when we don't render. Point at the bundled
-  // worker so pdfjs doesn't try to fetch one over the network.
   try {
     pdfjsLib.GlobalWorkerOptions.workerSrc = require.resolve('pdfjs-dist/legacy/build/pdf.worker.js');
-  } catch { /* on some packagings the workerSrc is auto-resolved */ }
+  } catch { /* auto-resolved in some packagings */ }
 
   const data = new Uint8Array(buffer);
-  const pdf = await pdfjsLib.getDocument({
-    data,
-    disableFontFace: true,
-    verbosity: 0,
-  }).promise;
+  const pdf = await pdfjsLib.getDocument({ data, disableFontFace: true, verbosity: 0 }).promise;
 
   const chunks = [];
+  const urlSet = new Set();
   for (let i = 1; i <= pdf.numPages; i++) {
     try {
       const page = await pdf.getPage(i);
       const content = await page.getTextContent();
       chunks.push(content.items.map((it) => it.str).join(' '));
+      const annots = await page.getAnnotations();
+      for (const a of annots) {
+        if (a && a.url && /^https?:/i.test(a.url)) urlSet.add(a.url);
+      }
     } catch (e) {
-      // Skip the unreadable page, keep going.
       if (process.env.DEBUG_CIVICCLERK) {
         console.warn(`  pdfjs page ${i} extract warning: ${e.message}`);
       }
     }
   }
-  return chunks.join('\n');
+  return { text: chunks.join('\n'), urls: Array.from(urlSet) };
 }
 
 module.exports = {
   extractCivicClerkAgendaPdf,
   extractTextFromPdfBuffer,
+  extractPdfContent,
   closeBrowser,
 };
