@@ -1391,8 +1391,21 @@
     </div>
   </div>
 
-  <!-- hub-bub.js handles Firebase auth, post loading, and all interactions -->
-  <script src="js/hub-bub.js"></script>
+  <!-- hub-bub.js handles Firebase auth, post loading, and all interactions.
+       Loaded with a dynamic cache-buster (same pattern as gov-hub.html for
+       js/gov-data.js + js/gov-helpers.js) so a fresh hub-bub.js gets
+       picked up at most ~10 minutes after a push, regardless of what
+       the browser's cache policy would do. Without this, the bare
+       `<script src="js/hub-bub.js">` was being cached indefinitely and
+       bug fixes (e.g. the 2026-05-25 Forgot-Password view-swap) didn't
+       reach users until they hard-refreshed. -->
+  <script>
+    (function() {
+      var s = document.createElement('script');
+      s.src = 'js/hub-bub.js?v=' + Math.floor(Date.now() / 600000);
+      document.head.appendChild(s);
+    })();
+  </script>
 
   <!-- ════════ MODAL WIRING — signup + Mailchimp + Firebase Auth ════════ -->
   <script>
