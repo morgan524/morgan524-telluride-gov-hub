@@ -235,9 +235,15 @@
       LAND_USE_ISSUES.gondola = GONDOLA_DATA;
     }
 
+    // Fallbacks for when LAND_USE_ISSUES[key].heroImage isn't set (or
+    // when gov-data.js hasn't loaded yet at first paint). For diamond
+    // this MUST match the canonical heroImage value, because users with
+    // a stale cached gov-data.js (one that pre-dates the heroImage
+    // field) would otherwise still see the Aldasoro logo even though
+    // the data file has been updated. Belt + suspenders.
     const FALLBACK_IMAGES = {
       wildfire: '/logo/Telluride Fire.png',
-      diamond:  '/logo/Aldasoro.png',
+      diamond:  '/images/Diamond%20Ridge.jpg',
       gondola:  '/images/blog/gondola-station.png',
     };
 
