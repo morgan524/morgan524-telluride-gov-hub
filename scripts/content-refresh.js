@@ -457,7 +457,7 @@ KEY LOCAL ISSUES IN THE TELLURIDE REGION:
 
 OUTPUT FORMAT (JSON):
 {
-  "shortSummary": "1-3 sentence overview for the meeting card",
+  "shortSummary": "1-3 sentence overview for the meeting card — TARGET 40-60 WORDS. This is the field displayed on the card; it should read as a complete thought, not a fragment. Lead with the most consequential items (code changes / land use) and gesture at the rest. Voice-rule compliant.",
   "topics": ["topic 1", "topic 2", "topic 3"],
   "whyItMatters": "Paragraph connecting to key local issues, or empty string"
 }`;
@@ -914,9 +914,13 @@ async function refreshSummaries(existingSummaries) {
         m.title, m.date, agendaText
       );
       if (result?.shortSummary) {
-        // Format as the flat summary string that gov-hub.js expects
+        // Format as the flat summary string that gov-hub.js expects.
+        // Prefer shortSummary (~50-word prose overview) — gives the
+        // meeting card a substantive sentence or two instead of a row
+        // of short topic bullets. Falls back to joined topics when
+        // shortSummary is missing (e.g. older Claude responses).
         const topicBullets = (result.topics || []).join(' · ');
-        updated[key] = topicBullets || result.shortSummary;
+        updated[key] = result.shortSummary || topicBullets;
         newCount++;
         console.log(`    ✓ Generated summary (${result.topics?.length || 0} topics)`);
       }
