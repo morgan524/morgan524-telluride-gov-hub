@@ -306,8 +306,16 @@
     .zoom-panel .zoom-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
     .zoom-panel .btn-action.zoom    { background: var(--forest); color: #fff; border-color: var(--forest); }
     .zoom-panel .btn-action.zoom:hover { background: #1a332c; }
-    .zoom-panel .btn-action.youtube { background: #a0463d; color: #fff; border-color: #823831; }
-    .zoom-panel .btn-action.youtube:hover { background: #823831; }
+    /* Livestream button — two states:
+       FUTURE (default): darker brown so it doesn't compete with the active
+       look. Same visual weight, lower saturation — signals "available, but
+       not happening right now."
+       ACTIVE (.active): brick red, full saturation — signals "live now."
+       isLivestreamActive(m) in zoomPanel toggles the .active class. */
+    .zoom-panel .btn-action.youtube { background: #5c3a2e; color: #fff; border-color: #4a2d23; }
+    .zoom-panel .btn-action.youtube:hover { background: #4a2d23; }
+    .zoom-panel .btn-action.youtube.active { background: #a0463d; border-color: #823831; }
+    .zoom-panel .btn-action.youtube.active:hover { background: #823831; }
 
     .meet-actions {
       display: flex;
@@ -686,6 +694,61 @@
            + '<div class="day">' + day + '</div>'
            + '<div class="year">' + year + '</div></div>';
     }
+    /**
+     * True when right now is within the meeting's live window — used to
+     * paint the Livestream button in the bright "live" color (brick red)
+     * instead of the default darker brown. Heuristic, tuned for the gov
+     * hub's actual data:
+     *
+     *   1. The meeting date (YYYY-MM-DD) must equal local today.
+     *   2. If the title contains a parseable time RANGE (e.g.
+     *      "2:00 pm - 6:30 pm"), use that window + 15min grace at the end
+     *      to forgive late joiners.
+     *   3. If the title has only a START time ("9:30 AM"), assume the
+     *      meeting runs ~3h from that point.
+     *   4. If no time is parseable, treat the whole meeting-day from 8am
+     *      to 10pm local as "active" — better than going completely dark
+     *      on the user when our title-parsing misses a quirky format.
+     */
+    function isLivestreamActive(m) {
+      if (!m || !m.date) return false;
+      const now = new Date();
+      const todayLocal = now.getFullYear() + '-' +
+        String(now.getMonth() + 1).padStart(2, '0') + '-' +
+        String(now.getDate()).padStart(2, '0');
+      if (m.date !== todayLocal) return false;
+
+      function toMinutes(h, mm, ap) {
+        let H = parseInt(h, 10);
+        const M = parseInt(mm || '0', 10);
+        const isPM = /^p/i.test(ap || '');
+        if (isPM && H !== 12) H += 12;
+        if (!isPM && H === 12) H = 0;
+        return H * 60 + M;
+      }
+
+      const title = String(m.title || '');
+      let startMin = 8 * 60;   // default: 8am
+      let endMin = 22 * 60;    // default: 10pm
+
+      const rangeRe = /(\d{1,2})(?::(\d{2}))?\s*([ap])\.?m\.?\s*[-–]\s*(\d{1,2})(?::(\d{2}))?\s*([ap])\.?m\.?/i;
+      const rangeMatch = title.match(rangeRe);
+      if (rangeMatch) {
+        startMin = toMinutes(rangeMatch[1], rangeMatch[2], rangeMatch[3]);
+        endMin   = toMinutes(rangeMatch[4], rangeMatch[5], rangeMatch[6]) + 15;
+      } else {
+        const singleRe = /(\d{1,2})(?::(\d{2}))?\s*([ap])\.?m\.?/i;
+        const single = title.match(singleRe);
+        if (single) {
+          startMin = toMinutes(single[1], single[2], single[3]);
+          endMin = startMin + 3 * 60;
+        }
+      }
+
+      const nowMin = now.getHours() * 60 + now.getMinutes();
+      return nowMin >= startMin && nowMin <= endMin;
+    }
+
     /* ── Zoom Access panel (Meeting ID + passcode + phone + Join Zoom +
        optional YouTube/livestream button). Reads MEETING_ZOOM_LINKS /
        MEETING_PASSCODES / SCHOOL_ZOOM_LINK from gov-data.js and
@@ -710,7 +773,8 @@
         buttons.push('<a class="btn-action zoom" href="' + zoomUrl + '" target="_blank" rel="noopener">📹 Join Zoom</a>');
       }
       if (showLivestream) {
-        buttons.push('<a class="btn-action youtube" href="' + remote.livestream + '" target="_blank" rel="noopener">▶️ ' + (remote.livestreamLabel || 'Livestream') + '</a>');
+        const liveClass = isLivestreamActive(m) ? ' active' : '';
+        buttons.push('<a class="btn-action youtube' + liveClass + '" href="' + remote.livestream + '" target="_blank" rel="noopener">▶️ ' + (remote.livestreamLabel || 'Livestream') + '</a>');
       }
 
       return '<div class="zoom-panel">'
