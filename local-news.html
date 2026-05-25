@@ -292,13 +292,24 @@
       display: block;
     }
     /* KOTO brand-logo fallback — render as a contained logo on a warm
-       cream backdrop, not a cropped photo. */
+       cream backdrop, not a cropped photo. The Letters-to-the-Editor
+       icon uses the same class so it's contained (not cropped) too. */
     .card .img-wrap img.koto-fallback,
     .featured-card .img-wrap-featured img.koto-fallback {
       object-fit: contain;
       padding: 18px;
       background: #f4ead0;
     }
+
+    /* Byline for Letters to the Editor — sits directly between the icon
+       image and the title. Subdued so the title still leads. */
+    .letter-author {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #6b6b6b;
+      margin-bottom: 6px;
+    }
+    .featured-card .letter-author { font-size: 0.95rem; }
     /* Portrait images: switch to contain so the whole image shows, and
        fill the letterboxed side bars with a blurred copy of the same
        image (Apple Music / Spotify treatment). The portrait class is
@@ -741,9 +752,18 @@
       return `<img class="${cls}" src="${url}" alt="" onerror="this.style.display='none'">`;
     }
 
-    /* Image to render in the card visual area. KOTO articles don't carry
-       enclosure images, so use the cow brand-logo as a fallback. */
+    /* Image to render in the card visual area.
+       - Letters to the Editor: TT's RSS returns the site-default masthead
+         image as the enclosure, which produces three identical-looking
+         cards in a row whenever a few letters publish on the same day.
+         Override with our own letter icon for visual distinction.
+       - KOTO: no enclosure → cow brand-logo fallback.
+       - Everything else: enclosure image (a.img). */
+    function isLetterToEditor(a) {
+      return a && a.href && /\/letters_to_editor\//i.test(a.href);
+    }
     function imgFor(a) {
+      if (isLetterToEditor(a)) return '/logo/Letter%20to%20Editor.png';
       if (a.img) return a.img;
       if (a.sourceKey === 'koto') return 'img/koto-cow.webp';
       return '';
@@ -752,13 +772,20 @@
     function featuredHtml(a) {
       const src = imgFor(a);
       const isKotoFallback = !a.img && a.sourceKey === 'koto';
+      const isLetter = isLetterToEditor(a);
+      const imgClass = isKotoFallback || isLetter ? 'class="koto-fallback"' : '';
+      const onload = imgClass ? '' : 'onload="handlePortrait(this)"';
       const imgEl = src
-        ? `<img src="${src}" alt="" loading="lazy" ${isKotoFallback ? 'class="koto-fallback"' : 'onload="handlePortrait(this)"'} onerror="this.style.background='#ddd'">`
+        ? `<img src="${src}" alt="" loading="lazy" ${imgClass} ${onload} onerror="this.style.background='#ddd'">`
+        : '';
+      const authorLine = (isLetter && a.letterAuthor)
+        ? `<div class="letter-author">By ${a.letterAuthor}</div>`
         : '';
       return `
         <div class="img-wrap-featured">${imgEl}</div>
         <div class="body">
           <span class="featured-tag">Featured</span>
+          ${authorLine}
           <h2><a href="${a.href}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${a.title}</a></h2>
           <div class="meta">
             <span>${a.source}</span>
@@ -776,13 +803,25 @@
     function cardHtml(a) {
       const src = imgFor(a);
       const isKotoFallback = !a.img && a.sourceKey === 'koto';
+      const isLetter = isLetterToEditor(a);
+      // Use the koto-fallback `object-fit:contain` styling for the letter
+      // icon too so it doesn't get cropped by the 4:3 cover crop.
+      const imgClass = isKotoFallback || isLetter ? 'class="koto-fallback"' : '';
+      const onload = imgClass ? '' : 'onload="handlePortrait(this)"';
       const imgEl = src
-        ? `<img src="${src}" alt="" loading="lazy" ${isKotoFallback ? 'class="koto-fallback"' : 'onload="handlePortrait(this)"'} onerror="this.style.opacity=0.3">`
+        ? `<img src="${src}" alt="" loading="lazy" ${imgClass} ${onload} onerror="this.style.opacity=0.3">`
+        : '';
+      // Author byline for Letters to the Editor — sits directly under the
+      // image (above the title). a.letterAuthor populated by content-refresh
+      // for newly-fetched letters; older entries omit the byline gracefully.
+      const authorLine = (isLetter && a.letterAuthor)
+        ? `<div class="letter-author">By ${a.letterAuthor}</div>`
         : '';
       return `
         <article class="card">
           <div class="img-wrap">${imgEl}</div>
           <div class="body">
+            ${authorLine}
             <h3><a href="${a.href}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${a.title}</a></h3>
             <div class="meta">
               <span>${a.source}</span>

@@ -1285,6 +1285,8 @@ async function refreshNews(existingTtArticles = []) {
         // New article — try to get full text and summarize
         let copy = rssCopy;
         let claudeSummary = false;
+        let letterAuthor = '';
+        const isLetter = /\/letters_to_editor\//i.test(href);
         if (TT_AUTH_COOKIE) {
           try {
             const title = (item.title || '').trim();
@@ -1295,6 +1297,9 @@ async function refreshNews(existingTtArticles = []) {
                 copy = await summarizeTTArticle(title, fullText, rssCopy);
                 claudeSummary = true;
                 newCount++;
+                // For letters, parse the signature so the card can display
+                // "By <Author>" under the icon. See extractLetterAuthor.
+                if (isLetter) letterAuthor = extractLetterAuthor(fullText);
               }
             }
             // Small delay between fetches — be polite to TT's servers
@@ -1315,7 +1320,10 @@ async function refreshNews(existingTtArticles = []) {
           copy,
           claudeSummary,
           href,
-          img: (enclosure?.$.url || '').replace(/[?&]resize=[^&]*/i, '')
+          img: (enclosure?.$.url || '').replace(/[?&]resize=[^&]*/i, ''),
+          // Only set when populated — keeps serialized output clean for
+          // non-letter articles where the field would always be ''.
+          ...(letterAuthor ? { letterAuthor } : {}),
         });
       }
       if (newCount > 0) console.log(`  Summarized ${newCount} new TT article(s) from full text`);
@@ -1601,6 +1609,41 @@ async function refreshCommunityPulse(existingPosts) {
  * Priority: (1) TNCMS subscriber-only encrypted blocks, (2) open asset-body div.
  * Returns plain text or null if nothing usable was found.
  */
+/**
+ * Pull the author of a Letter to the Editor from the decoded article
+ * body. TT letters reliably end with a closing salutation ("Sincerely,"
+ * "Yours," "Thanks,", etc.) followed by 1-3 lines: the name, then often
+ * a title/affiliation. This returns the name (and optional title) as a
+ * single string suitable for rendering as "By <result>" on a card.
+ * Returns '' when no plausible signature can be parsed.
+ */
+function extractLetterAuthor(fullText) {
+  if (!fullText) return '';
+  // Look in the last ~700 chars — letter bodies wrap with the signature
+  // close to the end, after the salutation.
+  const tail = fullText.slice(-700);
+  const sigRe = /(?:Sincerely|Yours(?:\s+truly)?|Best(?:\s+regards)?|Thanks|Thank\s+you|Regards|Cheers|Respectfully)[,. ]+\s*([A-Z][A-Za-z'’\-.]+(?:\s+[A-Z][A-Za-z'’\-.]+){0,3})/;
+  const sig = tail.match(sigRe);
+  if (sig) {
+    let author = sig[1].trim();
+    // Look at what immediately follows the name — often a title/role
+    // ("Director, Rainbow Preschool") on its own short line.
+    const after = tail.slice(tail.indexOf(sig[0]) + sig[0].length).trim();
+    const nextLine = after.match(/^[\s,]*([A-Za-z][^,\n]{2,80}?)(?:\.\s|\n|$)/);
+    if (nextLine && /^[A-Z]/.test(nextLine[1]) && !/^(?:and|or|the|to)\b/i.test(nextLine[1])) {
+      author += ', ' + nextLine[1].trim();
+    }
+    return author.slice(0, 100);
+  }
+  // Fallback: scan the last ~5 short lines for a Title-Case name line.
+  const lines = tail.split(/[\n.]+/).map(s => s.trim()).filter(s => s && s.length < 80);
+  for (let i = lines.length - 1; i >= Math.max(0, lines.length - 6); i--) {
+    const m = lines[i].match(/^([A-Z][A-Za-z'’\-.]+(?:\s+[A-Z][A-Za-z'’\-.]+){1,3})\s*$/);
+    if (m) return m[1];
+  }
+  return '';
+}
+
 function extractTTArticleText(html) {
   // 1. Paywalled blocks (most articles)
   const tncmsText = extractTncmsText(html);
