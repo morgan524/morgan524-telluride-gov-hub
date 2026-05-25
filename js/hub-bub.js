@@ -1404,14 +1404,16 @@
     if (secs < 604800) return Math.floor(secs / 86400) + 'd ago';
     return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   }
-  // ─── Bind login button via addEventListener (more reliable than inline onclick) ───
-  // The button's HTML id is `hbLoginSubmit` (see hub-bub.html). An earlier
-  // version of this file looked up the wrong id (`hbLoginBtn`), so the
-  // listener never attached and clicking "Log in" did nothing visible.
-  // Tolerate either id during the next deploy cycle in case some other
-  // template still uses the old name.
-  var loginBtn = document.getElementById('hbLoginSubmit')
-              || document.getElementById('hbLoginBtn');
+  // ─── Login button — DISABLED here, handled by the inline IIFE in
+  //     hub-bub.html (search for "LOGIN submit"). That handler uses
+  //     waitForFirebase() and the compat SDK initialized at the top of
+  //     this file. Wiring two listeners to the same button (this one
+  //     plus the inline one) caused both to fire on each click — the
+  //     duplicate didn't directly break login, but it was noise and
+  //     made the failure mode harder to diagnose. Keeping the bind
+  //     guard `if (false)` so a future grep for hbLoginBtn / hbLoginSubmit
+  //     still finds context, without actually attaching the listener.
+  var loginBtn = false ? document.getElementById('hbLoginSubmit') : null;
   if (loginBtn) {
     loginBtn.addEventListener('click', function(e) {
       e.preventDefault();

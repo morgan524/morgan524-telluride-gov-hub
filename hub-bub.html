@@ -1434,13 +1434,38 @@
     }
 
     /* ── Firebase Auth helper ── */
+    // Accept EITHER Firebase SDK path as "ready":
+    //   compat:  window.firebase.auth   (set up by js/hub-bub.js, the
+    //            canonical init for this page)
+    //   modular: window._FIREBASE_READY + window._FIREBASE_AUTH (an
+    //            alternate init path the inline login/signup handlers
+    //            were designed to handle as a fallback)
+    //
+    // Until 2026-05-25 this only checked the modular flags, which
+    // js/hub-bub.js never sets — waitForFirebase timed out after 6s
+    // and the inline login handler silently never invoked fn(). User
+    // would click "Log in", see "Logging in…" for a moment, then
+    // nothing. Accepting compat too makes the click flow through
+    // immediately. On timeout we now surface a visible error instead
+    // of failing silently.
     function waitForFirebase(fn) {
-      if (window._FIREBASE_READY && window._FIREBASE_AUTH) return fn();
+      function isReady() {
+        return (window.firebase && window.firebase.auth) ||
+               (window._FIREBASE_READY && window._FIREBASE_AUTH);
+      }
+      if (isReady()) return fn();
       let tries = 0;
       const t = setInterval(() => {
         tries++;
-        if (window._FIREBASE_READY && window._FIREBASE_AUTH) { clearInterval(t); fn(); }
-        if (tries > 40) { clearInterval(t); }
+        if (isReady()) { clearInterval(t); fn(); }
+        else if (tries > 40) {
+          clearInterval(t);
+          // Surface the failure so the user isn't left staring at a
+          // "Logging in…" button forever.
+          showMsg('hbLoginMsg', 'Firebase didn\'t finish loading. Refresh the page and try again.', 'error');
+          var btn = document.getElementById('hbLoginSubmit');
+          if (btn) { btn.disabled = false; btn.textContent = 'Log in'; }
+        }
       }, 150);
     }
 
