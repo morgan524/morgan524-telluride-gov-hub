@@ -237,7 +237,18 @@
   <div id="hero-section"></div>
   <div id="page-content"></div>
 
-  <script src="/js/gov-data.js?v=dd1"></script>
+  <script>
+    // Dynamic cache-buster (Math.floor(Date.now()/600000) → bumps every
+    // 10 min) replaces the static `?v=dd1` that was never updated, leaving
+    // browsers with whatever they cached on first visit. Without this, edits
+    // to heroImage / LAND_USE_ISSUES in gov-data.js never reached users —
+    // e.g. the May 25 Diamond Ridge heroImage update was invisible until
+    // each user manually hard-refreshed.
+    var v = Math.floor(Date.now() / 600000);
+    var s = document.createElement('script');
+    s.src = '/js/gov-data.js?v=' + v;
+    document.head.appendChild(s);
+  </script>
   <script>
     // Merge gondola data if present
     if (typeof GONDOLA_DATA !== 'undefined' && typeof LAND_USE_ISSUES !== 'undefined') {
