@@ -148,12 +148,13 @@ const COUNTY_CACHED_DATA = [
   },
   {
     date: 'May 27, 2026',
-    time: '9:30 AM - 3:00 PM',
-    title: 'Board of County Commissioners Meeting',
+    time: '2:00 PM - 6:30 PM',
+    title: 'Board of County Commissioners Special Meeting in Telluride 2:00 pm - 2:45 pm',
     type: 'bocc',
-    location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: null,
-    note: 'Agenda typically posted the Friday before.'
+    location: '305 W Colorado Ave, Telluride (2-2:45 pm) then Placerville School House (work session 4-6:30 pm)',
+    civicClerkId: 1035,
+    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/1035/files/agenda/1760',
+    note: 'Special meeting + work session. Agenda posted May 22.'
   },
   // ── June 2026 ──
   {
