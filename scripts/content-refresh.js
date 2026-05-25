@@ -955,7 +955,15 @@ async function refreshSummaries(existingSummaries, existingAgendaMeta) {
     // separate from whether we already have a summary. A meeting might
     // have its summary cached from a prior run that didn't yet know how
     // to read PDF annotations.
-    const needAgendaZoom = !meta[key];
+    //
+    // The valid shape is `{zoomUrl?, meetingId?, passcode?, phone?}` — an
+    // object. A prior bug serialized the object as the literal string
+    // "[object Object]"; we treat any non-object value (or empty object)
+    // as missing so the broken entries get retried by the next run.
+    const existingZoom = meta[key];
+    const needAgendaZoom = !existingZoom
+      || typeof existingZoom !== 'object'
+      || (!existingZoom.zoomUrl && !existingZoom.meetingId);
 
     if (updated[key] && !needAgendaZoom) {
       console.log(`  ✓ Already have summary + zoom meta for: ${key}`);
@@ -2333,8 +2341,15 @@ function serializeObject(varName, obj) {
   // chars, and unicode without manual escaping.  The keys produced are valid
   // ECMAScript object property names because every JSON-stringified string is
   // a valid JS string literal.
+  //
+  // Values get JSON.stringify(v) directly (NOT JSON.stringify(String(v)))
+  // — String({...}) coerces nested objects to the literal "[object Object]"
+  // before JSON sees them, producing useless garbage in the output. With
+  // raw JSON.stringify, string values land as quoted strings and nested
+  // objects land as valid inline JSON ({"zoomUrl":"…","meetingId":"…"}).
+  // (For MEETING_AGENDA_META, which has object values.)
   const entries = Object.entries(obj).map(([k, v]) => {
-    return `  ${JSON.stringify(String(k))}:\n    ${JSON.stringify(String(v))}`;
+    return `  ${JSON.stringify(String(k))}:\n    ${JSON.stringify(v)}`;
   });
   return `const ${varName} = {\n${entries.join(',\n\n')}\n};`;
 }
