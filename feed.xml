@@ -6,29 +6,18 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 May 2026 15:28:56 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 15:36:07 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
-      <title>[Meeting] Design Review Board — 2026-06-04</title>
+      <title>[Meeting] Open Space Commission - Jun 01 2026 — 2026-06-01</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/mv%7C2026-06-04%7CDesign%20Review%20Board</guid>
-      <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Mountain Village • 2026-06-04
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-01%7COpen%20Space%20Commission%20-%20Jun%2001%202026</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-06-01
 
-Agenda not yet available]]></description>
+Meeting scheduled for first Monday of the month · Commission reviews open space acquisitions and management · Advises Town Council on comprehensive plan elements]]></description>
       <category>Meeting</category>
-      <category>Mountain Village</category>
-    </item>
-    <item>
-      <title>[Meeting] Board of County Commissioners Meeting — 2026-06-03</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-06-03%7CBoard%20of%20County%20Commissioners%20Meeting</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[San Miguel County • 2026-06-03
-
-Regular commissioner meeting · Agenda details not yet available]]></description>
-      <category>Meeting</category>
-      <category>San Miguel County</category>
+      <category>Town of Telluride</category>
     </item>
     <item>
       <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
@@ -51,6 +40,17 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
 The May 28 regular board meeting agenda hasn't been posted yet, so there's no way to know what's coming up.]]></description>
       <category>Meeting</category>
       <category>Telluride Medical Center</category>
+    </item>
+    <item>
+      <title>[Meeting] Planning &amp; Zoning Commission - May 28 2026 — 2026-05-28</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-05-28%7CPlanning%20%26%20Zoning%20Commission%20-%20May%2028%202026</guid>
+      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-05-28
+
+No specific agenda items available]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
     </item>
     <item>
       <title>[Meeting] Board of County Commissioners Special Meeting in Telluride 2:00 pm - 2:45 pm — 2026-05-27</title>

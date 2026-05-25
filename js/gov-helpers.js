@@ -118,7 +118,34 @@ const MANUAL_SUMMARIES = {
     "Agenda details pending · Trail and open space management · Development review matters",
 
   "county|2026-06-24|Board of County Commissioners Work Session":
-    "Work session agenda pending"
+    "Work session agenda pending",
+
+  "telluride|2026-06-17|Historic & Architectural Review Commission Chair - Jun 17 2026":
+    "The agenda content for this Historic & Architectural Review Commission meeting isn't available yet — just the meeting date and a list of past meetings going back to 2018.",
+
+  "telluride|2026-06-17|Historic & Architectural Review Commission - Jun 17 2026":
+    "Meeting information unavailable",
+
+  "telluride|2026-06-17|Parks & Recreation Commission - Jun 17 2026":
+    "Meeting scheduled for June 17, 2026",
+
+  "telluride|2026-06-09|Town Council - Jun 09 2026":
+    "Agenda not yet published",
+
+  "telluride|2026-06-03|Ecology Commission - Jun 03 2026":
+    "Monthly Ecology Commission meeting · Human-wildlife interaction oversight · General commission business",
+
+  "telluride|2026-06-03|Commission for Community Assistance, Arts & Special Events - Jun 03 2026":
+    "The agenda text for this Commission for Community Assistance, Arts & Special Events meeting is missing — only the portal navigation and meeting list appears.",
+
+  "telluride|2026-06-03|Telluride Housing Authority Subcommittee - Jun 03 2026":
+    "Meeting agenda not yet available",
+
+  "telluride|2026-06-01|Open Space Commission - Jun 01 2026":
+    "Meeting scheduled for first Monday of the month · Commission reviews open space acquisitions and management · Advises Town Council on comprehensive plan elements",
+
+  "telluride|2026-05-28|Planning & Zoning Commission - May 28 2026":
+    "No specific agenda items available"
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
