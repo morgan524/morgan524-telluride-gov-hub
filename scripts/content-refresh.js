@@ -3535,6 +3535,81 @@ async function syncMedAgendas() {
   return map;
 }
 
+// San Miguel County — queries CivicClerk OData for upcoming events whose
+// names match BOCC / Planning Commission / Open Space / etc., and returns
+// a {dateKey: agendaUrl} map keyed by the gov-data.js date format
+// ("Mon D, YYYY"). patchAgendaUrls() then folds the URLs into
+// COUNTY_CACHED_DATA entries — both updating existing `agendaUrl:` fields
+// and inserting new ones for entries that don't have the field yet (e.g.
+// future BOCC stubs created with just `civicClerkId: null`).
+//
+// Why this exists: hand-curated entries in COUNTY_CACHED_DATA often lag
+// the actual CivicClerk events. Special meetings or schedule changes
+// would leave the "View Agenda" button on the gov-hub card pointing at
+// the CivicClerk portal home page instead of the real PDF. This fixes
+// that automatically for any upcoming event that's been published.
+async function syncCountyAgendas() {
+  console.log('\n🏛  Syncing San Miguel County agenda URLs from CivicClerk...');
+  const now = new Date();
+  const horizon = new Date(now.getTime() + 45 * 86400000);
+  const toIso = (d) => d.toISOString().split('.')[0] + 'Z';
+  const filter = `startDateTime ge ${toIso(now)} and startDateTime le ${toIso(horizon)}`;
+  const url = `${AGENDA_SOURCES.county.apiBase}/Events?` +
+    `$filter=${encodeURIComponent(filter)}` +
+    `&$orderby=startDateTime` +
+    `&$top=100`;
+
+  const map = {};
+  let resp;
+  try {
+    resp = await fetch(url);
+  } catch (e) {
+    console.warn(`  CivicClerk fetch error: ${e.message}`);
+    return map;
+  }
+  if (resp.status !== 200) {
+    console.warn(`  CivicClerk API returned HTTP ${resp.status}`);
+    return map;
+  }
+  let parsed;
+  try { parsed = JSON.parse(resp.text); }
+  catch (e) {
+    console.warn(`  CivicClerk JSON parse error: ${e.message}`);
+    return map;
+  }
+  const events = Array.isArray(parsed.value) ? parsed.value : [];
+  const months = ['January','February','March','April','May','June',
+                  'July','August','September','October','November','December'];
+  for (const ev of events) {
+    if (!ev || ev.isDeleted) continue;
+    if (ev.isPublished && String(ev.isPublished).toLowerCase() !== 'published') continue;
+    // Limit to BOCC / Open Space / Planning to avoid stomping on unrelated
+    // CACHED entries with the same date.
+    if (!/board of county commissioners|planning commission|open space/i.test(ev.eventName || '')) continue;
+    const pubFiles = Array.isArray(ev.publishedFiles) ? ev.publishedFiles : [];
+    const agendaFile = pubFiles.find(f => f && f.type === 'Agenda');
+    if (!agendaFile) continue;
+    const agendaUrl =
+      `${AGENDA_SOURCES.county.portalBase}/event/${ev.id}/files/agenda/${agendaFile.fileId}`;
+    const start = new Date(ev.startDateTime || ev.eventDate);
+    if (isNaN(start)) continue;
+    // gov-data.js dates are in MT local calendar terms ("May 27, 2026"),
+    // not UTC. CivicClerk timestamps come back in UTC but the date portion
+    // is reliable for events scheduled in MT — so use the UTC date here,
+    // matching how `localDate('May 27, 2026')` reads the gov-data string.
+    const dateKey = `${months[start.getUTCMonth()]} ${start.getUTCDate()}, ${start.getUTCFullYear()}`;
+    // First-write wins. If the same date has multiple matching events
+    // (e.g. a regular BOCC + a special session), the hand-curated entry's
+    // title should govern which one the card displays — but we can't know
+    // that from here. Take the first; if it's wrong, the entry's
+    // `agendaUrl:` can be set by hand and it won't be overwritten (the
+    // updater only fires when the URL would actually change).
+    if (!map[dateKey]) map[dateKey] = agendaUrl;
+  }
+  console.log(`  Found ${Object.keys(map).length} County agenda URL(s) on CivicClerk`);
+  return map;
+}
+
 // Patches gov-data.js in place: for each (date → url) in `agendaMap`, finds
 // the matching entry inside the given CACHED_DATA array and rewrites its
 // `agendaUrl:` field. Scoped to the named array's brace block so the same
@@ -3563,18 +3638,39 @@ function patchAgendaUrls(govDataSrc, arrayName, agendaMap) {
   Object.keys(agendaMap).forEach(dateKey => {
     const url = agendaMap[dateKey];
     if (!url) return;
-    // Build a regex that finds a single entry block starting with `date: '<dateKey>'`
-    // (single-quoted, just like the source) and ending at the entry-closing `},`.
     const escDate = dateKey.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const entryRe = new RegExp(
+
+    // Pass 1: update existing `agendaUrl: null` or `agendaUrl: '<old>'`.
+    const updateRe = new RegExp(
       "(\\{[^{}]*date:\\s*'" + escDate + "'[^{}]*?agendaUrl:\\s*)(null|'[^']*')",
       'g'
     );
-    body = body.replace(entryRe, (full, prefix, current) => {
+    let matched = false;
+    body = body.replace(updateRe, (full, prefix, current) => {
+      matched = true;
       const newVal = "'" + url + "'";
       if (current === newVal) return full;
       changed++;
       return prefix + newVal;
+    });
+    if (matched) return;
+
+    // Pass 2: the entry exists but has no `agendaUrl:` field — insert one.
+    // We anchor on a trailing field (location, type, civicClerkId, note) so
+    // we land inside the same entry. Greedy `*` here (vs `*?` in Pass 1)
+    // so we attach to the LAST such field in the entry, which keeps the
+    // inserted agendaUrl near the end of the field list instead of awkwardly
+    // squeezed between `time:` and `title:`.
+    const insertRe = new RegExp(
+      "(\\{[^{}]*date:\\s*'" + escDate + "'[^{}]*)(\\b(?:note|location|civicClerkId|type|time)\\s*:\\s*(?:'(?:[^'\\\\]|\\\\.)*'|null|true|false|\\d+))",
+      'g'
+    );
+    body = body.replace(insertRe, (full, before, lastField) => {
+      // Indent the new line to match surrounding fields (look back for indent).
+      const m = before.match(/\n(\s+)[^\n]*$/);
+      const indent = m ? m[1] : '    ';
+      changed++;
+      return before + lastField + ',\n' + indent + "agendaUrl: '" + url + "'";
     });
   });
 
@@ -4278,9 +4374,10 @@ async function main() {
   // PDF URLs. Runs BEFORE summary generation so any agenda detected this
   // run can be summarized in the same run.
   for (const [arrName, syncFn] of [
-    ['MV_CACHED_DATA',   syncMVAgendas],
-    ['FIRE_CACHED_DATA', syncFireAgendas],
-    ['MED_CACHED_DATA',  syncMedAgendas]
+    ['MV_CACHED_DATA',     syncMVAgendas],
+    ['FIRE_CACHED_DATA',   syncFireAgendas],
+    ['MED_CACHED_DATA',    syncMedAgendas],
+    ['COUNTY_CACHED_DATA', syncCountyAgendas]
   ]) {
     try {
       const agendaMap = await syncFn();
