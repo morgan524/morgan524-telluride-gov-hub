@@ -245,11 +245,21 @@
       return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
     }
 
-    function renderTopic(key) {
+    function renderTopic(key, retries) {
+      // gov-data.js loads via the async dynamic-cache-buster <script> above.
+      // If this function is called before that download finishes — which
+      // happens on most cold loads — LAND_USE_ISSUES isn't defined yet.
+      // Retry on a short timer up to ~2 seconds before showing the
+      // bail-out message. Same fix needed on every deep-dive-*.html page.
+      retries = retries || 0;
       if (typeof LAND_USE_ISSUES === 'undefined') {
+        if (retries < 40) return setTimeout(function() { renderTopic(key, retries + 1); }, 50);
         document.getElementById('page-content').innerHTML = '<p style="padding:40px">Data not available — please reload.</p>';
         return;
       }
+      // Merge any external topic blobs that loaded before us (e.g. GONDOLA_DATA
+      // from the gondola page). Safe to run on every retry — idempotent.
+      if (typeof GONDOLA_DATA !== 'undefined') LAND_USE_ISSUES.gondola = GONDOLA_DATA;
       const issue = LAND_USE_ISSUES[key];
       if (!issue) { document.getElementById('page-content').innerHTML = '<p style="padding:40px">Topic not found.</p>'; return; }
 
