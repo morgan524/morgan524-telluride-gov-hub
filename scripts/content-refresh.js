@@ -65,7 +65,15 @@ const GOV_NEWS_MAX_AGE_DAYS = 45;  // Gov agencies publish less frequently than 
 const AGENDA_SOURCES = {
   telluride: {
     label: 'Town of Telluride',
-    meetingsApi: 'https://telluride-co.civicweb.net/Services/MeetingsService.svc/meetings',
+    // The CivicWeb meetings endpoint requires BOTH from= and to= query
+    // params — without them it returns `[]` (which is what the previous
+    // bare-endpoint call was getting, undetected since 2026-04-30). The
+    // Portal's own calendar.js (Portal/MeetingSchedule.aspx) uses the
+    // same shape: from=YYYY-MM-DD with to=9999-12-31 as the far-future
+    // sentinel. Real fields on the response: Id, Name, MeetingDate,
+    // MeetingDateTime, MeetingLocation, Published, TypeId — see
+    // fetchTownTellurideMeetings() below.
+    meetingsApiBase: 'https://telluride-co.civicweb.net/Services/MeetingsService.svc/meetings',
     detailBase: 'https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=',
     type: 'civicweb'
   },
@@ -601,25 +609,11 @@ async function fetchUpcomingMeetings() {
     console.warn('  gov-data.js cached-meetings load error:', e.message);
   }
 
-  // Telluride — CivicWeb API
+  // Town of Telluride — CivicWeb meetings API.  See fetchTownTellurideMeetings()
   try {
-    const resp = await fetch(AGENDA_SOURCES.telluride.meetingsApi);
-    if (resp.status === 200) {
-      const data = JSON.parse(resp.text);
-      const items = data.d || data || [];
-      for (const m of (Array.isArray(items) ? items : [])) {
-        const mDate = new Date(m.Date || m.date || m.MeetingDate);
-        if (mDate >= now && mDate <= horizon) {
-          meetings.push({
-            source: 'telluride',
-            date: mDate.toISOString().split('T')[0],
-            title: m.Title || m.MeetingName || m.Body || 'Meeting',
-            agendaUrl: m.AgendaUrl || (m.Id ? AGENDA_SOURCES.telluride.detailBase + m.Id : '')
-          });
-        }
-      }
-    }
-  } catch (e) { console.warn('  CivicWeb fetch error:', e.message); }
+    const tttMeetings = await fetchTownTellurideMeetings(now, horizon);
+    meetings.push(...tttMeetings);
+  } catch (e) { console.warn('  Telluride CivicWeb fetch error:', e.message); }
 
   // San Miguel County — CivicClerk OData API.  See notes in AGENDA_SOURCES.county.
   try {
@@ -694,6 +688,83 @@ async function extractAgendaText(url) {
     console.warn('  Agenda extract error:', e.message);
     return '';
   }
+}
+
+/**
+ * Fetch upcoming Town of Telluride meetings from the CivicWeb meetings API.
+ *
+ *   GET /Services/MeetingsService.svc/meetings?from=YYYY-MM-DD&to=9999-12-31
+ *
+ * Three bugs in the previous code that this fix corrects:
+ *   1. The bare endpoint (no query params) returns `[]`. Both `from` and
+ *      `to` are required; the Portal's own calendar.js passes
+ *      `to=9999-12-31` as the far-future sentinel.
+ *   2. The previous code looked for m.Title || m.MeetingName || m.Body.
+ *      The API actually returns `m.Name` — every record was falling
+ *      through to the 'Meeting' default, which would have produced
+ *      worthless titles even if data had been flowing.
+ *   3. No `hasAgenda` flag. The API exposes `m.Published: bool` —
+ *      true once the agenda PDF is available on the meeting info page.
+ *
+ * The agendaUrl points at the meeting INFORMATION page (not the agenda
+ * PDF directly). CivicWeb embeds agenda + minutes + media links on
+ * that page; extractAgendaText can scrape it because it's static HTML
+ * (no SPA shell, unlike CivicClerk).
+ */
+async function fetchTownTellurideMeetings(now, horizon) {
+  const out = [];
+  const fromStr = now.toISOString().split('T')[0];                // YYYY-MM-DD
+  const url = `${AGENDA_SOURCES.telluride.meetingsApiBase}` +
+    `?from=${encodeURIComponent(fromStr)}` +
+    `&to=${encodeURIComponent('9999-12-31')}`;
+  const resp = await fetch(url);
+  if (resp.status !== 200) {
+    console.warn(`  CivicWeb meetings API HTTP ${resp.status}`);
+    return out;
+  }
+  let items;
+  try {
+    const parsed = JSON.parse(resp.text);
+    items = Array.isArray(parsed) ? parsed : (parsed?.d || []);
+  } catch (e) {
+    console.warn('  CivicWeb JSON parse error:', e.message);
+    return out;
+  }
+  for (const m of items) {
+    if (!m) continue;
+    const mDate = new Date(m.MeetingDate || m.MeetingDateTime || '');
+    if (isNaN(mDate)) continue;
+    if (mDate < now || mDate > horizon) continue;
+
+    // Filter out cancelled meetings — they're in the feed with names
+    // like "CANCELLED: Planning & Zoning Commission Chair - May 28 2026"
+    // and "(Cancelled) Town Council Retreat - Jun 04 2026". Surfacing
+    // them as upcoming would be misleading.
+    if (m.Name && /^(?:\(?cancelled?\)?:?\s*|CANCELLED\b)/i.test(m.Name.trim())) continue;
+
+    const agendaUrl = m.Id
+      ? `${AGENDA_SOURCES.telluride.detailBase}${m.Id}`
+      : '';
+    // Seed text from API metadata — fallback when extractAgendaText can't
+    // pull useful body from the meeting info page (eg. agenda not yet
+    // published, just a placeholder page).
+    const seedParts = [
+      m.Name           ? `Meeting: ${m.Name}`                : '',
+      m.MeetingDateTime ? `When: ${m.MeetingDateTime}`       : '',
+      m.MeetingLocation ? `Location: ${m.MeetingLocation}`   : '',
+      m.Published === true ? 'Agenda published.' : 'Agenda not yet published.',
+    ].filter(Boolean);
+
+    out.push({
+      source: 'telluride',
+      date: mDate.toISOString().split('T')[0],
+      title: (m.Name || 'Town of Telluride Meeting').trim(),
+      agendaUrl,
+      hasAgenda: !!agendaUrl && m.Published === true,
+      agendaSeedText: seedParts.join('\n'),
+    });
+  }
+  return out;
 }
 
 /**
