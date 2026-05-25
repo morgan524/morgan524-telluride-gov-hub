@@ -57,7 +57,10 @@ function isBadSummary(text) {
 // MEETING_PASSCODES config — agenda-extracted info is per-meeting and
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
-const MEETING_AGENDA_META = {};
+const MEETING_AGENDA_META = {
+  "county|2026-05-27|Board of County Commissioners Special Meeting in Telluride 2:00 pm - 2:45 pm":
+    "[object Object]"
+};
 
 const MANUAL_SUMMARIES = {
   "norwood|2026-05-18|Planning and Zoning Commission Meeting":
