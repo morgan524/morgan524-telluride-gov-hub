@@ -304,14 +304,17 @@
     .zoom-panel .zoom-info span { display: inline-flex; gap: 4px; }
     .zoom-panel .zoom-label { color: var(--forest); font-weight: 700; margin-right: 6px; }
     .zoom-panel .zoom-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
-    .zoom-panel .btn-action.zoom    { background: var(--forest); color: #fff; border-color: var(--forest); }
-    .zoom-panel .btn-action.zoom:hover { background: #1a332c; }
-    /* Livestream button — two states:
-       FUTURE (default): darker brown so it doesn't compete with the active
-       look. Same visual weight, lower saturation — signals "available, but
-       not happening right now."
-       ACTIVE (.active): brick red, full saturation — signals "live now."
-       isLivestreamActive(m) in zoomPanel toggles the .active class. */
+    /* Join Zoom + Livestream buttons share the same "is the meeting
+       happening RIGHT NOW?" coloring scheme:
+         FUTURE (default): darker brown so it doesn't compete with the
+           active look — signals "available, but not happening yet."
+         ACTIVE (.active): brick red, full saturation — signals "live now."
+       isLivestreamActive(m) in zoomPanel toggles the .active class on
+       both buttons together (a meeting being live makes both relevant). */
+    .zoom-panel .btn-action.zoom    { background: #5c3a2e; color: #fff; border-color: #4a2d23; }
+    .zoom-panel .btn-action.zoom:hover { background: #4a2d23; }
+    .zoom-panel .btn-action.zoom.active { background: #a0463d; border-color: #823831; }
+    .zoom-panel .btn-action.zoom.active:hover { background: #823831; }
     .zoom-panel .btn-action.youtube { background: #5c3a2e; color: #fff; border-color: #4a2d23; }
     .zoom-panel .btn-action.youtube:hover { background: #4a2d23; }
     .zoom-panel .btn-action.youtube.active { background: #a0463d; border-color: #823831; }
@@ -768,13 +771,18 @@
       if (info && info.passcode) parts += '<span><strong>Passcode:</strong> ' + info.passcode + '</span>';
       if (info && info.phone)    parts += '<span><strong>Phone:</strong> ' + info.phone + '</span>';
 
+      // Both buttons share the same active/upcoming color state — one
+      // call to isLivestreamActive(m) drives both classes. Push order
+      // matters: Zoom on the LEFT, Livestream on the RIGHT when both
+      // are present. (.zoom-buttons is `display: flex` so they sit
+      // side by side; flex-wrap kicks in only at very narrow widths.)
+      const activeClass = isLivestreamActive(m) ? ' active' : '';
       const buttons = [];
       if (zoomUrl) {
-        buttons.push('<a class="btn-action zoom" href="' + zoomUrl + '" target="_blank" rel="noopener">📹 Join Zoom</a>');
+        buttons.push('<a class="btn-action zoom' + activeClass + '" href="' + zoomUrl + '" target="_blank" rel="noopener">📹 Join Zoom</a>');
       }
       if (showLivestream) {
-        const liveClass = isLivestreamActive(m) ? ' active' : '';
-        buttons.push('<a class="btn-action youtube' + liveClass + '" href="' + remote.livestream + '" target="_blank" rel="noopener">▶️ ' + (remote.livestreamLabel || 'Livestream') + '</a>');
+        buttons.push('<a class="btn-action youtube' + activeClass + '" href="' + remote.livestream + '" target="_blank" rel="noopener">▶️ ' + (remote.livestreamLabel || 'Livestream') + '</a>');
       }
 
       return '<div class="zoom-panel">'
