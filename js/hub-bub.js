@@ -179,6 +179,14 @@
             + '<span style="color:#795548;">Check your spam or junk folder if you don\'t see it in your inbox within a few minutes.</span>';
           infoEl.style.display = 'block';
         }
+        // The success message lives inside #hbLoginResetView, which has
+        // display:none by default. Without swapping the two sub-panels
+        // the user sees nothing happen and assumes the button is broken.
+        // Hide the email/password fields and show the reset confirmation.
+        var fields = document.getElementById('hbLoginFields');
+        var reset  = document.getElementById('hbLoginResetView');
+        if (fields) fields.style.display = 'none';
+        if (reset)  reset.style.display  = 'block';
       })
       .catch(function(err) {
         if (infoEl) infoEl.style.display = 'none';
@@ -188,6 +196,19 @@
         else if (err.code === 'auth/too-many-requests') msg = 'Too many attempts. Please try again in a few minutes.';
         if (errEl) { errEl.textContent = msg; errEl.style.display = 'block'; }
       });
+  };
+  // The "← Back to log in" link inside #hbLoginResetView calls this — was
+  // referenced in HTML but never defined, so the user got stuck on the
+  // reset confirmation screen.
+  window.hbShowLoginFields = function() {
+    var fields = document.getElementById('hbLoginFields');
+    var reset  = document.getElementById('hbLoginResetView');
+    var errEl  = document.getElementById('hbLoginError');
+    var infoEl = document.getElementById('hbLoginInfo');
+    if (reset)  reset.style.display  = 'none';
+    if (fields) fields.style.display = 'block';
+    if (errEl)  { errEl.textContent  = ''; errEl.style.display  = 'none'; }
+    if (infoEl) { infoEl.innerHTML   = ''; infoEl.style.display = 'none'; }
   };
   window.hbLogout = function() {
     if (auth) auth.signOut();

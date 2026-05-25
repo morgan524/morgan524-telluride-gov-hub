@@ -1330,17 +1330,10 @@
           <span class="hb-freq-label">Stay informed — choose what you'd like to receive</span>
           <div class="hb-freq-options">
             <label class="hb-freq-opt">
-              <input type="checkbox" id="hbFreqDaily" value="daily">
-              <div class="hb-freq-opt-text">
-                <strong>Daily summaries</strong>
-                <span>A short digest of local news, meetings, and events each morning.</span>
-              </div>
-            </label>
-            <label class="hb-freq-opt">
               <input type="checkbox" id="hbFreqWeekly" value="weekly">
               <div class="hb-freq-opt-text">
-                <strong>Weekly summaries</strong>
-                <span>A weekly roundup of what happened and what's coming up.</span>
+                <strong>Weekly look-ahead</strong>
+                <span>A weekly summary of upcoming meetings — agendas, comment deadlines, and what's worth watching.</span>
               </div>
             </label>
             <label class="hb-freq-opt">
@@ -1464,13 +1457,10 @@
       el.style.display = 'block';
     }
 
-    /* Daily/weekly digest are mutually exclusive */
-    document.getElementById('hbFreqDaily').addEventListener('change', function() {
-      if (this.checked) document.getElementById('hbFreqWeekly').checked = false;
-    });
-    document.getElementById('hbFreqWeekly').addEventListener('change', function() {
-      if (this.checked) document.getElementById('hbFreqDaily').checked = false;
-    });
+    /* Daily digest was retired 2026-05-25 — only the Weekly look-ahead
+       and the Newsletter remain. No mutually-exclusive pairing needed
+       because the two remaining options are independent (you can want
+       both, or neither). */
 
     /* Open triggers */
     document.getElementById('hbOpenSignup').addEventListener('click', () => openModal('signup'));
@@ -1501,8 +1491,8 @@
       const lastName  = document.getElementById('hbSignupLast').value.trim();
       const email     = document.getElementById('hbSignupEmail').value.trim();
       const password  = document.getElementById('hbSignupPassword').value;
-      const digestFreq = document.getElementById('hbFreqDaily').checked ? 'daily'
-                       : document.getElementById('hbFreqWeekly').checked ? 'weekly' : '';
+      // Daily digest retired 2026-05-25; only 'weekly' or '' (none) now.
+      const digestFreq = document.getElementById('hbFreqWeekly').checked ? 'weekly' : '';
       const includeNewsletter = document.getElementById('hbFreqNewsletter').checked;
 
       if (!firstName || !lastName) return showMsg('hbSignupMsg', 'Please enter your first and last name.', 'error');
