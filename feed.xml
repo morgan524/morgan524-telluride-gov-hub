@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 May 2026 14:45:13 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 15:28:56 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Design Review Board — 2026-06-04</title>
@@ -18,6 +18,17 @@
 Agenda not yet available]]></description>
       <category>Meeting</category>
       <category>Mountain Village</category>
+    </item>
+    <item>
+      <title>[Meeting] Board of County Commissioners Meeting — 2026-06-03</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-06-03%7CBoard%20of%20County%20Commissioners%20Meeting</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[San Miguel County • 2026-06-03
+
+Regular commissioner meeting · Agenda details not yet available]]></description>
+      <category>Meeting</category>
+      <category>San Miguel County</category>
     </item>
     <item>
       <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
@@ -40,6 +51,17 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
 The May 28 regular board meeting agenda hasn't been posted yet, so there's no way to know what's coming up.]]></description>
       <category>Meeting</category>
       <category>Telluride Medical Center</category>
+    </item>
+    <item>
+      <title>[Meeting] Board of County Commissioners Special Meeting in Telluride 2:00 pm - 2:45 pm — 2026-05-27</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-05-27%7CBoard%20of%20County%20Commissioners%20Special%20Meeting%20in%20Telluride%202%3A00%20pm%20-%202%3A45%20pm</guid>
+      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[San Miguel County • 2026-05-27
+
+Special meeting in Telluride · Work session at Placerville School House · No published agenda items]]></description>
+      <category>Meeting</category>
+      <category>San Miguel County</category>
     </item>
     <item>
       <title>Council recaps winter housing program</title>
@@ -70,6 +92,17 @@ The May 28 regular board meeting agenda hasn't been posted yet, so there's no wa
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/2a/42a7051a-c0d6-4202-a625-3fee32668761/6a1159940d283.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>education</category>
+    </item>
+    <item>
+      <title>[Meeting] Open Space Commission Meeting — 2026-05-25</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-05-25%7COpen%20Space%20Commission%20Meeting</guid>
+      <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[San Miguel County • 2026-05-25
+
+Open Space Commission meeting]]></description>
+      <category>Meeting</category>
+      <category>San Miguel County</category>
     </item>
     <item>
       <title>The science of connection</title>
@@ -376,36 +409,6 @@ The May 28 regular board meeting agenda hasn't been posted yet, so there's no wa
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/27/92731cb4-0e96-430e-a9f6-8e46805b1b02/6a0c21f8d29e5.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>education</category>
-    </item>
-    <item>
-      <title>The plant that outlasted the miners</title>
-      <link>https://www.telluridenews.com/opinion/columnists/article_d561c5b3-49d8-4a93-90c3-0948eee9e33a.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/opinion/columnists/article_d561c5b3-49d8-4a93-90c3-0948eee9e33a.html</guid>
-      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/1d/d1d8e35f-1f8d-4d2f-a595-78ce88f351de/6a0d87534309b.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Miners in the old West planted rhubarb for its hardy nature and tangy spring flavor when fresh fruit wasn't available most of the year. The author's 1893 house likely has rhubarb from that original planting still thriving in the yard. Rhubarb plants still mark abandoned mining settlements across the high country, with one historic camp above Gunnison actually named Pie Plant.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/1d/d1d8e35f-1f8d-4d2f-a595-78ce88f351de/6a0d87534309b.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>recreation</category>
-    </item>
-    <item>
-      <title>Telluride Barricade Passes Mailed to Town Residents</title>
-      <link>https://www.telluride.gov/CivicAlerts.aspx?aid=391</link>
-      <guid isPermaLink="false">https://www.telluride.gov/CivicAlerts.aspx?aid=391</guid>
-      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.gov/ImageRepository/Document?documentID=15546" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />(May 18, 2026) - The Telluride Parks & Recreation Department has mailed two 2026 Barricade Passes to all residential property owners within the barricade boundary and who either receive a Town water bill or hold a Town parking permit.]]></description>
-      <media:content url="https://www.telluride.gov/ImageRepository/Document?documentID=15546" medium="image" />
-      <category>Town of Telluride</category>
-      <category>land-use</category>
-    </item>
-    <item>
-      <title>Telluride Housing Authority Launches Tenant Advisory Committee</title>
-      <link>https://www.telluride.gov/CivicAlerts.aspx?aid=392</link>
-      <guid isPermaLink="false">https://www.telluride.gov/CivicAlerts.aspx?aid=392</guid>
-      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.gov/ImageRepository/Document?documentID=15549" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />(May 20, 2026) – Telluride, CO – The THA is now accepting applications for the newly established Tenant Advisory Committee, a resident-led group created to strengthen communication between tenants living in Town-managed rental housing and Town leadership.]]></description>
-      <media:content url="https://www.telluride.gov/ImageRepository/Document?documentID=15549" medium="image" />
-      <category>Town of Telluride</category>
-      <category>housing</category>
     </item>
   </channel>
 </rss>
