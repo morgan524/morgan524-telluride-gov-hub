@@ -1299,6 +1299,45 @@ const KOTO_FEATURED_STORIES = [
   }
 ];
 
+// San Miguel Basin Forum (West End — Norwood, Nucla, Naturita, Paradox).
+// Populated by scripts/content-refresh.js → pullSmbForum() every 6 hours.
+// Schema: { title, source: 'San Miguel Basin Forum', sourceKey: 'smb',
+// date, firstSeen, datePublished, newsTopic, copy, href, img }.
+// Carry-forward logic in pullSmbForum() preserves in-window entries that
+// aren't on the current landing page so SMBF's quick front-page rotation
+// doesn't drop stories prematurely.
+//
+// Seeded with two recent articles so the Local News tab shows SMBF
+// coverage immediately on deploy, before the next content-refresh tick.
+// The bot will overwrite this array (and extend the field set with
+// `firstSeen`) on its next 6-hour run.
+const SMB_FORUM_ARTICLES = [
+  {
+    title: "Jackson McCabe is Pinhead history ‘pintern’",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "May 12, 2026",
+    firstSeen: "2026-05-25",
+    datePublished: "2026-05-13",
+    newsTopic: "community",
+    copy: "Jackson McCabe, a junior at Nucla High School, will do a small “pinternship” in Washington, D.C. this summer. The Pinhead Institute of Telluride, a Smithsonian Affiliate, is sponsoring the trip.",
+    href: "https://www.sanmiguelbasinforum.com/stories/jackson-mccabe-is-pinhead-history-pintern,114883",
+    img: "https://zeta.creativecirclecdn.com/smb/original/20260512-170032-0b9-F1%20-%20pinhead.jpg"
+  },
+  {
+    title: "Town secures $1.25M for Norwood Hill improvements",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "May 5, 2026",
+    firstSeen: "2026-05-25",
+    datePublished: "2026-05-06",
+    newsTopic: "infrastructure",
+    copy: "The Town of Norwood will receive $1.25 million in state funding for safety and accessibility upgrades along Norwood Hill, the steep CDOT corridor that connects the mesa to the valley.",
+    href: "https://www.sanmiguelbasinforum.com/stories/town-secures-125m-for-norwood-hill-improvements,114098",
+    img: ""
+  }
+];
+
 const BLOG_POSTS = [
   {
     title: 'From "Let the People Decide" to "Livable Telluride"',

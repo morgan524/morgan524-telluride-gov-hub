@@ -46,6 +46,10 @@ const ALLOWED_HOSTS = [
   "townofridgway.colorado.gov",
   "www.townofridgway.colorado.gov",
   "events.ourayridgwayevents.com",
+  // San Miguel Basin Forum (West End news) — Creative Circle CMS, same
+  // as Telluride Times. Direct fetches from GH runners get 403/429.
+  "sanmiguelbasinforum.com",
+  "www.sanmiguelbasinforum.com",
 ];
 
 // Realistic Safari UA that is known to clear both Telluride Times' rate-limit

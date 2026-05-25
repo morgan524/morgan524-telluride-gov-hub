@@ -767,6 +767,9 @@
       if (isLetterToEditor(a)) return '/logo/Letter%20to%20Editor.png';
       if (a.img) return a.img;
       if (a.sourceKey === 'koto') return 'img/koto-cow.webp';
+      // SMBF: fall back to the masthead logo when the article didn't have
+      // a photo on the landing page. Matches the KOTO cow pattern.
+      if (a.sourceKey === 'smb') return '/logo/San%20Miguel%20Basis%20Logo.jpg';
       return '';
     }
 
@@ -962,6 +965,22 @@
               KOTO_NEWSCASTS.slice(0, 15).forEach(a => live.push({
                 title: a.title, source: 'KOTO', sourceKey: 'koto',
                 date: a.date, summary: a.copy, href: a.href, img: a.img || '',
+                category: a.newsTopic || 'Community'
+              }));
+            }
+            // San Miguel Basin Forum — West End paper (Norwood/Nucla/Naturita).
+            // Populated by content-refresh.js Task 2 → pullSmbForum().
+            // Defensive: pre-bot rollout the const may still be undefined on
+            // older cached gov-helpers.js copies.
+            if (typeof SMB_FORUM_ARTICLES !== 'undefined') {
+              SMB_FORUM_ARTICLES.slice(0, 15).forEach(a => live.push({
+                title: a.title,
+                source: 'San Miguel Basin Forum',
+                sourceKey: 'smb',
+                date: a.date,
+                summary: a.copy,
+                href: a.href,
+                img: a.img || '',
                 category: a.newsTopic || 'Community'
               }));
             }

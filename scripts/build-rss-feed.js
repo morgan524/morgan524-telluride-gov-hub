@@ -328,6 +328,7 @@ function main() {
   const tt = extractJsArray(src, 'TELLURIDE_TIMES_ARTICLES') || [];
   const koNews = extractJsArray(src, 'KOTO_NEWSCASTS') || [];
   const koFeat = extractJsArray(src, 'KOTO_FEATURED_STORIES') || [];
+  const smbf = extractJsArray(src, 'SMB_FORUM_ARTICLES') || [];
   const summaries = extractJsObject(src, 'MANUAL_SUMMARIES') || {};
   const events = extractJsArray(src, 'COMMUNITY_EVENTS') || [];
   const blogPosts = extractJsArray(src, 'BLOG_POSTS') || [];
@@ -343,13 +344,14 @@ function main() {
     console.warn(`  community-events.json parse error: ${e.message}`);
   }
 
-  console.log(`  Loaded: ${tt.length} TT/gov articles, ${koNews.length} KOTO newscasts, ${koFeat.length} KOTO features, ${Object.keys(summaries).length} meeting summaries, ${events.length + jsonEvents.length} events, ${blogPosts.length} blog posts`);
+  console.log(`  Loaded: ${tt.length} TT/gov articles, ${koNews.length} KOTO newscasts, ${koFeat.length} KOTO features, ${smbf.length} SMBF articles, ${Object.keys(summaries).length} meeting summaries, ${events.length + jsonEvents.length} events, ${blogPosts.length} blog posts`);
 
   // Main digest feed: news + meetings + events. Blog posts get their own feed.
   let items = [
     ...buildNewsItems('tt', tt, 'Telluride Times'),
     ...buildNewsItems('koto-newscasts', koNews, 'KOTO Community Radio'),
     ...buildNewsItems('koto-features', koFeat, 'KOTO Community Radio'),
+    ...buildNewsItems('smbf', smbf, 'San Miguel Basin Forum'),
     ...buildMeetingItems(summaries),
     ...buildEventItems(events, jsonEvents),
   ];

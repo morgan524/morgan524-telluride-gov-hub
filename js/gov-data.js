@@ -1518,7 +1518,10 @@ const ENTITY_LOGOS = {
   airport: '<img src="/logo/Airport.png" alt="Telluride Regional Airport" style="width:100%;height:100%;object-fit:contain;">',
   clubs: '<img src="/logo/clubs-icon.png" alt="Local Organizations" style="width:100%;height:100%;object-fit:contain;">',
   'telluride-com': '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1a3a5c,#2a5a8c);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Telluride.com">🎪</div>',
-  smb: '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#4a3010,#7a5020);display:flex;align-items:center;justify-content:center;font-size:1rem;color:#fff;font-weight:700;" title="San Miguel Basin Forum">SMB</div>'
+  // San Miguel Basin Forum — masthead logo file lives at
+  // /logo/San Miguel Basis Logo.jpg (note: filename intentionally has
+  // "Basis" not "Basin" — kept as-is to match the on-disk filename).
+  smb: '<img src="/logo/San%20Miguel%20Basis%20Logo.jpg" alt="San Miguel Basin Forum" style="width:100%;height:100%;object-fit:contain;">'
 };
 
 const TOWN_IMAGES = {

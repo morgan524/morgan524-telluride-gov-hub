@@ -242,6 +242,12 @@ const PROXY_HOSTS = new Set([
   'www.norwoodtown.com',
   'townofridgway.colorado.gov',
   'www.townofridgway.colorado.gov',
+  // San Miguel Basin Forum (West End news) — Creative Circle CMS that
+  // blocks GH runner IPs the same way Telluride Times does. Note: SMBF
+  // has disabled the /search/?f=rss endpoint that TT exposes, so the
+  // refresh scrapes the /news/ landing page HTML instead.
+  'sanmiguelbasinforum.com',
+  'www.sanmiguelbasinforum.com',
 ]);
 
 function maybeProxy(url) {
@@ -1197,6 +1203,203 @@ Write a plain-text preview of 50 words or less describing the key issues or agen
 // ── Task 2: News Articles (RSS) ──
 // ══════════════════════════════════════════════════════════════
 
+// ── San Miguel Basin Forum (West End news) ──
+// SMBF uses Creative Circle CMS (same as Telluride Times) but has the
+// /search/?f=rss endpoint DISABLED — returns 403 from Varnish — so we
+// scrape the /news/ landing page HTML instead.
+//
+// Each article card lives in a <div class="landing-story row"> block
+// with shape:
+//
+//   <a href='/stories/<slug>,<id>?'>
+//     <img class="photo" src="https://zeta.creativecirclecdn.com/...">
+//   </a>
+//   <h3 class='heading-3'><a href='/stories/<slug>,<id>?'>Title</a></h3>
+//   <div class='lead'><p>Summary text...</p>
+//
+// Dates aren't on the landing page; on first sighting of an article we
+// fetch the detail page once and pull `datePublished` from its
+// schema.org JSON-LD ("@type":"NewsArticle"). Cached on the article
+// object so subsequent runs skip the re-fetch.
+//
+// Carry-forward: any existing SMBF article within the news window that
+// isn't on this run's landing page is preserved. SMBF runs a short
+// front-page rotation (~6 stories visible at a time); without the
+// carry-forward the third-most-recent article would vanish from the
+// site within a day of a new story being posted.
+const SMBF_NEWS_URL = 'https://www.sanmiguelbasinforum.com/news/';
+// First-sighting detail-page fetches per run. Each fetch takes ~600 ms
+// (network + 350 ms politeness delay). Sized generously so every article
+// on the landing page (~25 today) gets a verified datePublished from
+// JSON-LD on the first run; subsequent runs only hit detail pages for
+// new entries (cached `datePublished` on the article object → skip).
+// At 30 × 600 ms ≈ 18 s — comfortably inside the 6-hour cron budget.
+const SMBF_DETAIL_FETCH_MAX = 30;
+// SMBF publishes weekly (≈ 1 story per week). The default 14-day news
+// window would leave at most 1-2 visible at a time, which would feel
+// like the source had been dropped again whenever there was a gap.
+// 35 days keeps ~4-5 stories visible — closer to the SMBF homepage
+// itself, which shows the same 5-or-so most-recent stories all week.
+const SMBF_MAX_AGE_DAYS = 35;
+
+async function pullSmbForum(existingSmbArticles = []) {
+  console.log('\n🌄 San Miguel Basin Forum: scraping landing page...');
+  const cutoff = new Date(Date.now() - SMBF_MAX_AGE_DAYS * 86400000);
+  const existingByHref = new Map(existingSmbArticles.map(a => [a.href, a]));
+  const out = [];
+
+  let html;
+  try {
+    const resp = await fetch(SMBF_NEWS_URL);
+    if (resp.status !== 200) {
+      console.warn(`  SMBF news page HTTP ${resp.status} — carrying existing forward`);
+      // Carry forward all in-window existing entries on error
+      for (const [, art] of existingByHref) {
+        const pub = new Date(art.date || art.firstSeen || '');
+        if (!isNaN(pub) && pub >= cutoff) out.push(art);
+      }
+      return out;
+    }
+    html = resp.text;
+  } catch (e) {
+    console.warn(`  SMBF fetch error: ${e.message} — carrying existing forward`);
+    for (const [, art] of existingByHref) {
+      const pub = new Date(art.date || art.firstSeen || '');
+      if (!isNaN(pub) && pub >= cutoff) out.push(art);
+    }
+    return out;
+  }
+
+  const decode = (s) => s
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(parseInt(d, 10)))
+    .replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&nbsp;/g, ' ');
+
+  // Split the HTML on landing-story block boundaries — each one is a
+  // self-contained article card with image + headline + lead.  Then
+  // extract each piece scoped to its own block (this is much more
+  // robust than the previous "look backward 2 KB" image-pairing
+  // approach, which grabbed the previous card's photo whenever blocks
+  // were < 2 KB apart).
+  const blocks = html.split(/<div\s+class=["']landing-story[^"']*["'][^>]*>/i);
+  // First piece is everything before the first landing-story — drop it.
+  blocks.shift();
+
+  const items = [];
+  const seenHrefs = new Set();
+  for (const block of blocks) {
+    const h3 = /<h3[^>]*class=['"][^'"]*heading-3[^'"]*['"][^>]*>\s*<a[^>]+href=['"]([^'"]+)['"][^>]*>([\s\S]*?)<\/a>\s*<\/h3>/.exec(block);
+    if (!h3) continue;
+    let rawHref = h3[1].trim().replace(/\?$/, '');
+    const fullHref = rawHref.startsWith('http')
+      ? rawHref
+      : 'https://www.sanmiguelbasinforum.com' + (rawHref.startsWith('/') ? '' : '/') + rawHref;
+    if (seenHrefs.has(fullHref)) continue;
+    seenHrefs.add(fullHref);
+    const title = decode(h3[2].replace(/<[^>]+>/g, '').trim());
+    if (!title) continue;
+    const leadM = /<div\s+class=['"]lead['"][^>]*>\s*<p[^>]*>([\s\S]*?)<\/p>/i.exec(block);
+    const lead = leadM
+      ? decode(leadM[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim())
+      : '';
+    const imgM = /<img[^>]*class=["'][^"']*photo[^"']*["'][^>]*src=["']([^"']+)["']/i.exec(block);
+    const img = imgM ? imgM[1] : '';
+    items.push({ href: fullHref, title, lead, img });
+  }
+
+  // Resolve dates. For articles we've already seen, reuse the cached
+  // date. For new ones, fetch the detail page (up to SMBF_DETAIL_FETCH_MAX
+  // per run) and extract datePublished from JSON-LD.
+  //
+  // An article ONLY makes it into the output if we have a verified
+  // datePublished — either cached from a prior run or freshly extracted
+  // from JSON-LD. This avoids the failure mode where an article whose
+  // detail fetch hit the cap or returned a parse miss gets stamped with
+  // "today" and then sneaks past the 14-day cutoff filter. With cap=30
+  // and a typical landing-page of ~25, every new article gets fetched
+  // in a single run.
+  let detailFetches = 0;
+  for (const it of items) {
+    const cached = existingByHref.get(it.href);
+    if (cached && cached.datePublished) {
+      it.datePublished = cached.datePublished;
+      it.date = cached.date || formatDate(new Date(cached.datePublished));
+      it.firstSeen = cached.firstSeen;
+      continue;
+    }
+    if (detailFetches >= SMBF_DETAIL_FETCH_MAX) {
+      // Out of budget this run — leave datePublished unset so the
+      // filter below drops the article. Next run picks it up.
+      it.datePublished = '';
+      continue;
+    }
+    try {
+      const dResp = await fetch(it.href);
+      if (dResp.status === 200) {
+        const ldMatch = /"datePublished"\s*:\s*"([^"]+)"/.exec(dResp.text);
+        if (ldMatch) {
+          it.datePublished = ldMatch[1];
+          it.date = formatDate(new Date(ldMatch[1]));
+          it.firstSeen = new Date().toISOString().slice(0, 10);
+        }
+        // If the lead from the landing page was empty, the detail's
+        // schema.org "description" is a usable fallback.
+        if (!it.lead) {
+          const dM = /"description"\s*:\s*"([^"]+)"/.exec(dResp.text);
+          if (dM) it.lead = decode(dM[1].replace(/\\u([0-9a-f]{4})/gi, (_, h) => String.fromCharCode(parseInt(h, 16))));
+        }
+      }
+    } catch (e) {
+      console.warn(`  SMBF detail fetch failed (${it.href}): ${e.message}`);
+    }
+    detailFetches++;
+    await new Promise(r => setTimeout(r, 350));
+  }
+
+  // Build the canonical article shape, filtered by the news window.
+  // Articles without a verified datePublished are dropped entirely —
+  // see the loop above for why.
+  for (const it of items) {
+    if (!it.datePublished) continue;
+    const pub = new Date(it.datePublished);
+    if (isNaN(pub) || pub < cutoff) continue;
+    out.push({
+      title: it.title,
+      source: 'San Miguel Basin Forum',
+      sourceKey: 'smb',
+      date: it.date,
+      firstSeen: it.firstSeen,
+      datePublished: it.datePublished,
+      newsTopic: classifyNewsTopic(it.title, it.lead),
+      copy: (it.lead || '').slice(0, 300),
+      href: it.href,
+      img: it.img || '',
+    });
+  }
+
+  // Carry-forward: any existing in-window article not on the current
+  // landing page survives.  Prevents older stories from vanishing on
+  // SMBF's quick front-page rotation.
+  const scrapedHrefs = new Set(out.map(a => a.href));
+  for (const [href, art] of existingByHref) {
+    if (scrapedHrefs.has(href)) continue;
+    const pub = new Date(art.datePublished || art.date || art.firstSeen || '');
+    if (!isNaN(pub) && pub >= cutoff) out.push(art);
+  }
+
+  // Newest first.
+  out.sort((a, b) => {
+    const da = new Date(a.datePublished || a.date || 0).getTime();
+    const db = new Date(b.datePublished || b.date || 0).getTime();
+    return db - da;
+  });
+
+  console.log(`  SMBF: ${out.length} article(s) ready (${detailFetches} detail fetches this run)`);
+  return out;
+}
+
 function classifyNewsTopic(title, desc) {
   const text = `${title} ${desc}`.toLowerCase();
   if (/zoning|planning|land.use|pud|development|building|permit|harc|historic/i.test(text)) return 'land-use';
@@ -1212,7 +1415,7 @@ function classifyNewsTopic(title, desc) {
   return 'community';
 }
 
-async function refreshNews(existingTtArticles = []) {
+async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
   console.log('\n📰 Task 2: Refreshing news articles...');
   // Build a lookup of articles we already have Claude summaries for, keyed by href.
   // These survive the refresh — we carry the cached summary forward instead of re-fetching.
@@ -1516,8 +1719,25 @@ async function refreshNews(existingTtArticles = []) {
   const ttArticles = dedup(articles.filter(a => a.source === 'Telluride Times'));
   const govArticles = dedup(articles.filter(a => a.source !== 'Telluride Times'));
 
-  console.log(`  Found: ${ttArticles.length} Telluride Times, ${govArticles.length} gov news, ${kotoNewscasts.length} KOTO newscasts, ${kotoFeatured.length} KOTO stories, ${csSunArticles.length} Colorado Sun, ${ridgwayArticles.length} Ridgway`);
-  return { ttArticles: [...ttArticles, ...govArticles, ...dedup(csSunArticles), ...dedup(ridgwayArticles)], kotoNewscasts: dedup(kotoNewscasts), kotoFeatured: dedup(kotoFeatured) };
+  // San Miguel Basin Forum — runs as part of the same news refresh tick
+  // so it stays on the regular 6-hour schedule. Stored separately in
+  // SMB_FORUM_ARTICLES so a future tweak to TT scraping can't accidentally
+  // drop the SMBF data.
+  let smbArticles = [];
+  try {
+    smbArticles = await pullSmbForum(existingSmbArticles);
+  } catch (e) {
+    console.warn(`  SMBF refresh error: ${e.message} — preserving existing`);
+    smbArticles = existingSmbArticles || [];
+  }
+
+  console.log(`  Found: ${ttArticles.length} Telluride Times, ${govArticles.length} gov news, ${kotoNewscasts.length} KOTO newscasts, ${kotoFeatured.length} KOTO stories, ${csSunArticles.length} Colorado Sun, ${ridgwayArticles.length} Ridgway, ${smbArticles.length} SMBF`);
+  return {
+    ttArticles: [...ttArticles, ...govArticles, ...dedup(csSunArticles), ...dedup(ridgwayArticles)],
+    kotoNewscasts: dedup(kotoNewscasts),
+    kotoFeatured: dedup(kotoFeatured),
+    smbArticles
+  };
 }
 
 // ══════════════════════════════════════════════════════════════
@@ -4423,7 +4643,12 @@ async function main() {
 
   // ── 2. News ──
   const existingTtArticles = extractJsArray(govHubSrc, 'TELLURIDE_TIMES_ARTICLES') || [];
-  const { ttArticles, kotoNewscasts, kotoFeatured } = await refreshNews(existingTtArticles);
+  // SMBF lives in its own array — kept isolated from TT so a future TT
+  // scraper change can't accidentally drop SMBF entries (user explicitly
+  // asked that it be on a regular schedule and "not lost in other updates").
+  const existingSmbArticles = extractJsArray(govHubSrc, 'SMB_FORUM_ARTICLES') || [];
+  const { ttArticles, kotoNewscasts, kotoFeatured, smbArticles } =
+    await refreshNews(existingTtArticles, existingSmbArticles);
   if (ttArticles.length > 0) {
     govHubSrc = replaceJsValue(govHubSrc, 'TELLURIDE_TIMES_ARTICLES', ttArticles, false);
     changed = true;
@@ -4434,6 +4659,13 @@ async function main() {
   }
   if (kotoFeatured.length > 0) {
     govHubSrc = replaceJsValue(govHubSrc, 'KOTO_FEATURED_STORIES', kotoFeatured, false);
+    changed = true;
+  }
+  // SMBF: write whenever the array changed in any way (length, content,
+  // ordering). Skip the write only when byte-identical to preserve the
+  // "no diff, no commit" optimization in the workflow.
+  if (JSON.stringify(smbArticles) !== JSON.stringify(existingSmbArticles)) {
+    govHubSrc = replaceJsValue(govHubSrc, 'SMB_FORUM_ARTICLES', smbArticles, false);
     changed = true;
   }
 

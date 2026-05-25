@@ -350,6 +350,48 @@ Important behaviors:
   not a failure. Use `git log --grep "Content refresh"` and the per-run logs
   in GitHub Actions to debug.
 
+## San Miguel Basin Forum — West End news on Local News
+
+Live at /#local-news and refreshed every 6 hours alongside TT/KOTO.
+Storage: `SMB_FORUM_ARTICLES` in `js/gov-helpers.js`. Renderer:
+`local-news.html` `loadLiveData()` slices the first 15.
+
+**SMBF uses Creative Circle CMS** (same publishing platform as
+Telluride Times) BUT has the `/search/?f=rss` RSS endpoint DISABLED —
+returns HTTP 403 from Varnish. So instead of TT's RSS pattern, the
+refresh scrapes the `/news/` landing page HTML and pairs each
+`<div class="landing-story row">` block with its `<h3 class="heading-3">`
+headline, `<div class="lead">` summary, and `<img class="photo">`.
+
+Dates come from each article's schema.org JSON-LD: on first sighting
+of an article, `pullSmbForum()` fetches the detail page once and
+extracts `"datePublished":"YYYY-MM-DD"`. The value is cached on the
+article object (`a.datePublished`) so subsequent runs skip the fetch.
+Articles without a verified `datePublished` are DROPPED (intentional —
+prevents stale articles from getting today's date and sneaking past
+the cutoff filter when the detail fetch fails).
+
+Knobs in `scripts/content-refresh.js`:
+- `SMBF_NEWS_URL` — the landing page to scrape.
+- `SMBF_DETAIL_FETCH_MAX = 30` — per-run cap on detail-page fetches.
+  Should comfortably exceed the landing-page card count (~25).
+- `SMBF_MAX_AGE_DAYS = 35` — wider than the 14-day default because
+  SMBF only publishes ~1 story per week.
+
+Cloudflare Worker allow-list: `sanmiguelbasinforum.com` and
+`www.sanmiguelbasinforum.com` are in both `cloudflare-worker/.../worker.js`
+ALLOWED_HOSTS and `scripts/content-refresh.js` PROXY_HOSTS. The
+preflight drift check at refresh-start guarantees these stay in sync.
+
+Logo: `/logo/San Miguel Basis Logo.jpg` (note: filename intentionally
+"Basis" not "Basin" — kept as user provided it). Wired into
+`ENTITY_LOGOS['smb']` in `gov-data.js` and as a fallback img in
+`local-news.html`'s `imgFor()`.
+
+Digest: `scripts/build-rss-feed.js` includes SMBF articles in
+`feed.xml` alongside TT/KOTO via `buildNewsItems('smbf', smbf, ...)`,
+so daily/weekly Mailchimp digests include West End stories.
+
 ## Telluride Humane Society — adoptable animals on Local News
 
 Live at /#local-news and refreshed every 6 hours. Source of truth is
