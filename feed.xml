@@ -6,8 +6,63 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 May 2026 15:43:46 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 15:53:09 GMT</lastBuildDate>
     <ttl>360</ttl>
+    <item>
+      <title>[Meeting] Design Review Board — 2026-06-04</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/mv%7C2026-06-04%7CDesign%20Review%20Board</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Mountain Village • 2026-06-04
+
+Agenda not yet available]]></description>
+      <category>Meeting</category>
+      <category>Mountain Village</category>
+    </item>
+    <item>
+      <title>[Meeting] Board of County Commissioners Meeting — 2026-06-03</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-06-03%7CBoard%20of%20County%20Commissioners%20Meeting</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[San Miguel County • 2026-06-03
+
+Regular commissioner meeting · Agenda details not yet available]]></description>
+      <category>Meeting</category>
+      <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Meeting] Ecology Commission - Jun 03 2026 — 2026-06-03</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-03%7CEcology%20Commission%20-%20Jun%2003%202026</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-06-03
+
+Monthly Ecology Commission meeting · Human-wildlife interaction oversight · General commission business]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>[Meeting] Commission for Community Assistance, Arts &amp; Special Events - Jun 03 2026 — 2026-06-03</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-03%7CCommission%20for%20Community%20Assistance%2C%20Arts%20%26%20Special%20Events%20-%20Jun%2003%202026</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-06-03
+
+The agenda text for this Commission for Community Assistance, Arts & Special Events meeting is missing — only the portal navigation and meeting list appears.]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>[Meeting] Telluride Housing Authority Subcommittee - Jun 03 2026 — 2026-06-03</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-03%7CTelluride%20Housing%20Authority%20Subcommittee%20-%20Jun%2003%202026</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-06-03
+
+Meeting agenda not yet available]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
+    </item>
     <item>
       <title>[Meeting] Open Space Commission - Jun 01 2026 — 2026-06-01</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
@@ -59,7 +114,7 @@ No specific agenda items available]]></description>
       <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[San Miguel County • 2026-05-27
 
-Special meeting in Telluride · Work session at Placerville School House · No published agenda items]]></description>
+Septic system variances for two Ophir properties · Terminating deed restrictions on Society Drive lot · State housing planning grant acceptance · Placerville corridor beautification discussion · Fire District Station #3 expansion plans]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -359,56 +414,6 @@ Open Space Commission meeting]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/56/1569aecb-bff4-4012-84f5-d88df962005b/6a06d485894c5.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>arts-culture</category>
-    </item>
-    <item>
-      <title>Una comunidad por la que vale la pena luchar</title>
-      <link>https://www.telluridenews.com/opinion/article_220cea39-7b74-4304-b7f6-68aa9d22c930.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/opinion/article_220cea39-7b74-4304-b7f6-68aa9d22c930.html</guid>
-      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/85/385ea219-d90e-46b3-ae19-f24d72946c06/6a0ea32eaa922.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />A candidate is running for County Commissioner, expressing concern that the community is disappearing despite the landscape remaining. They're focusing on housing affordability for local workers, noting that rising costs have pushed out families while many houses sit empty most of the year. The candidate emphasizes balancing growth with infrastructure limits and keeping housing prices aligned with what local workers actually earn.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/85/385ea219-d90e-46b3-ae19-f24d72946c06/6a0ea32eaa922.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Legals and Public Notices for May 21-27, 2026</title>
-      <link>https://www.telluridenews.com/news/legals/article_d3659378-b06b-4e27-9b53-ec57d83a4b86.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/legals/article_d3659378-b06b-4e27-9b53-ec57d83a4b86.html</guid>
-      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />San Miguel County is seeking contractors for flooring replacement at two downtown Telluride buildings and a boiler system replacement at Down Valley Park in Placerville, with proposal deadlines in early June. A foreclosure sale notice has been filed for a property owned by Sandra G. Esch with an outstanding balance of $115,217.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Patricia Siger</title>
-      <link>https://www.telluridenews.com/obituaries/article_467ebd46-0fe4-4a28-9789-a00f3d07c759.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/obituaries/article_467ebd46-0fe4-4a28-9789-a00f3d07c759.html</guid>
-      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/0c/90c5d817-5d85-4aa1-880d-9f48bc91b178/6a0dc90a85e7b.image.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Patricia Siger (nee Warren), of Lutherville-Timonium, MD, passed away on Friday, May 8th, 2026, at the age of 80. She is survived by her devoted husband, Joel Siger; caring sister-in-law, Lynn Guldan; loving sister, Judy (Richard) Shilling; and beloved nephews,…]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/0c/90c5d817-5d85-4aa1-880d-9f48bc91b178/6a0dc90a85e7b.image.png" medium="image" />
-      <category>Telluride Times</category>
-      <category>government</category>
-    </item>
-    <item>
-      <title>A community worth fighting for</title>
-      <link>https://www.telluridenews.com/opinion/article_eb9b3a02-15be-4e45-a36a-a3399f6daf37.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/opinion/article_eb9b3a02-15be-4e45-a36a-a3399f6daf37.html</guid>
-      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/d1/8d1a0c86-e85c-4bb7-a99d-efcb3ded31c6/6a0ea13a5b911.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />A candidate for San Miguel County Commissioner is highlighting concerns about housing affordability, workforce retention, and community sustainability. They're emphasizing the need for affordable housing that matches local wages, better regional coordination, and more transparent decision-making processes.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/d1/8d1a0c86-e85c-4bb7-a99d-efcb3ded31c6/6a0ea13a5b911.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>THS track wins big</title>
-      <link>https://www.telluridenews.com/sports/article_05e1f911-c5b9-4b4b-ba4f-b633a1d3a7c5.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/sports/article_05e1f911-c5b9-4b4b-ba4f-b633a1d3a7c5.html</guid>
-      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/27/92731cb4-0e96-430e-a9f6-8e46805b1b02/6a0c21f8d29e5.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />THS girls track team had a strong showing at state championships, with their 4x800 relay team finishing first in 9:44.46, coming within 11 seconds of the 2A record. Austin Coom won her second straight 800m title in 2:11.45, missing the state record by just 0.02 seconds, while the Lady Miners placed 10th overall as a team.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/27/92731cb4-0e96-430e-a9f6-8e46805b1b02/6a0c21f8d29e5.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>education</category>
     </item>
   </channel>
 </rss>

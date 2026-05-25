@@ -142,7 +142,10 @@ const MANUAL_SUMMARIES = {
     "Meeting scheduled for first Monday of the month · Commission reviews open space acquisitions and management · Advises Town Council on comprehensive plan elements",
 
   "telluride|2026-05-28|Planning & Zoning Commission - May 28 2026":
-    "No specific agenda items available"
+    "No specific agenda items available",
+
+  "county|2026-05-27|Board of County Commissioners Special Meeting in Telluride 2:00 pm - 2:45 pm":
+    "Septic system variances for two Ophir properties · Terminating deed restrictions on Society Drive lot · State housing planning grant acceptance · Placerville corridor beautification discussion · Fire District Station #3 expansion plans"
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
@@ -2133,7 +2136,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Economic Vitality Conversation",
     link: "https://events.ourayridgwayevents.com/event/economic-vitality-meeting",
-    description: "📣 Community Conversation: Economic Vitality Data Join us for an engaging discussion with special guests Matt Gordon and Larry Lucas from the Colorado Department of Local Affairs. Who should attend? Local leaders, business owners, economic development professionals, entrepreneurs, and interested community members. All community members are welcome. Discussion topics include: • Communicating Ridgway’s opportunities and key community data to businesses, entrepreneurs, and investors • Identifying available data, gaps, and community needs This conversation builds on goals from the Town Master Plan, Ridgway FUSE Creative Main Street, and broader regional initiatives. SEE FULL AGENDA HERE Interested in attending? RSVP to Tera Wick at twick@town.ridgway.co.us or call (970) 626-5308 ext. 215.",
+    description: "📣 Community Conversation: Economic Vitality Data Join us for an engaging discussion with special guests Matt Gordon and Larry Lucas from the Colorado Department of Local Affairs. Who should attend? Local leaders, business owners, economic development professionals, entrepreneurs, and interested community members. All community members are welcome. Discussion topics include: • Communicating Ridgway’s opportunities and key community data to businesses, entrepreneurs, and investors ��� Identifying available data, gaps, and community needs This conversation builds on goals from the Town Master Plan, Ridgway FUSE Creative Main Street, and broader regional initiatives. SEE FULL AGENDA HERE Interested in attending? RSVP to Tera Wick at twick@town.ridgway.co.us or call (970) 626-5308 ext. 215.",
     pubDate: "2026-05-27T23:30:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
