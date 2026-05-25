@@ -114,9 +114,12 @@
     });
     var infoEl = document.getElementById('hbLoginInfo');
     if (infoEl) { infoEl.style.display = 'none'; infoEl.innerHTML = ''; }
-    // Reset login button state
-    var lb = document.getElementById('hbLoginBtn');
-    if (lb) { lb.textContent = 'Log In'; lb.disabled = false; }
+    // Reset login button state. Same id-typo guard as the bind site below
+    // — id in HTML is `hbLoginSubmit`, an earlier version looked up
+    // `hbLoginBtn` and silently no-op'd.
+    var lb = document.getElementById('hbLoginSubmit')
+          || document.getElementById('hbLoginBtn');
+    if (lb) { lb.textContent = 'Log in'; lb.disabled = false; }
   };
   window.hbCloseAuth = function() {
     document.getElementById('hbAuthModal').classList.remove('open');
@@ -1402,7 +1405,13 @@
     return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   }
   // ─── Bind login button via addEventListener (more reliable than inline onclick) ───
-  var loginBtn = document.getElementById('hbLoginBtn');
+  // The button's HTML id is `hbLoginSubmit` (see hub-bub.html). An earlier
+  // version of this file looked up the wrong id (`hbLoginBtn`), so the
+  // listener never attached and clicking "Log in" did nothing visible.
+  // Tolerate either id during the next deploy cycle in case some other
+  // template still uses the old name.
+  var loginBtn = document.getElementById('hbLoginSubmit')
+              || document.getElementById('hbLoginBtn');
   if (loginBtn) {
     loginBtn.addEventListener('click', function(e) {
       e.preventDefault();
