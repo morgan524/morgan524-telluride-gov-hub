@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 May 2026 19:10:09 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 02:52:34 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Design Review Board — 2026-06-04</title>
@@ -40,6 +40,26 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
 The May 28 regular board meeting agenda hasn't been posted yet, so there's no way to know what's coming up.]]></description>
       <category>Meeting</category>
       <category>Telluride Medical Center</category>
+    </item>
+    <item>
+      <title>Responding when disaster strikes</title>
+      <link>https://www.telluridenews.com/news/article_495ca062-80ec-438c-8f0a-a42fa8d758e6.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_495ca062-80ec-438c-8f0a-a42fa8d758e6.html</guid>
+      <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/d5/6d52cd96-9fea-49b0-94a0-f02a885a8548/6a115bfaf164d.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />San Miguel County Emergency Manager Shannon Armstrong and the Telluride Foundation have formed the San Juan Regional COAD - a network of about 80 nonprofits, businesses and agencies across three counties to coordinate disaster response. The group focuses mainly on wildfire preparedness but also handles floods, severe weather and other emergencies, with strong community participation exceeding organizers' expectations.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/d5/6d52cd96-9fea-49b0-94a0-f02a885a8548/6a115bfaf164d.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
+    </item>
+    <item>
+      <title>‘He says “yes” to everything.’</title>
+      <link>https://www.telluridenews.com/news/article_95d8abdb-cfbb-4583-8420-a5de13732d9f.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_95d8abdb-cfbb-4583-8420-a5de13732d9f.html</guid>
+      <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/2a/42a7051a-c0d6-4202-a625-3fee32668761/6a1159940d283.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Chochi, a Rotary Youth Exchange student who had never heard of Telluride before arriving, has won over the community with his infectious positivity and willingness to try everything. Despite being new to snow and activities like basketball, he helped the golf team reach state championships for the first time and earned spirit awards along the way.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/2a/42a7051a-c0d6-4202-a625-3fee32668761/6a1159940d283.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>education</category>
     </item>
     <item>
       <title>The science of connection</title>
@@ -385,28 +405,6 @@ The May 28 regular board meeting agenda hasn't been posted yet, so there's no wa
       <description><![CDATA[Telluride School District to Ask Voters for More Funding; Cat Movie Fisher with Risho Unda; InVINCEble Comes to Mountainfilm]]></description>
       <category>KOTO Community Radio</category>
       <category>government</category>
-    </item>
-    <item>
-      <title>[Meeting] Town Council Meeting — 2026-05-21</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/mv%7C2026-05-21%7CTown%20Council%20Meeting</guid>
-      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Mountain Village • 2026-05-21
-
-Agenda not yet available]]></description>
-      <category>Meeting</category>
-      <category>Mountain Village</category>
-    </item>
-    <item>
-      <title>[Meeting] TRAA Board of Commissioners Meeting — 2026-05-21</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/airport%7C2026-05-21%7CTRAA%20Board%20of%20Commissioners%20Meeting</guid>
-      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[airport • 2026-05-21
-
-Agenda not yet available]]></description>
-      <category>Meeting</category>
-      <category>airport</category>
     </item>
   </channel>
 </rss>

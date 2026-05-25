@@ -102,6 +102,30 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Responding when disaster strikes",
+    source: "Telluride Times",
+    date: "May 24, 2026",
+    firstSeen: "2026-05-25",
+    newsTopic: "community",
+    copy: "San Miguel County Emergency Manager Shannon Armstrong and the Telluride Foundation have formed the San Juan Regional COAD - a network of about 80 nonprofits, businesses and agencies across three counties to coordinate disaster response. The group focuses mainly on wildfire preparedness but also handles floods, severe weather and other emergencies, with strong community participation exceeding organizers' expectations.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_495ca062-80ec-438c-8f0a-a42fa8d758e6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/d5/6d52cd96-9fea-49b0-94a0-f02a885a8548/6a115bfaf164d.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "‘He says “yes” to everything.’",
+    source: "Telluride Times",
+    date: "May 24, 2026",
+    firstSeen: "2026-05-25",
+    newsTopic: "education",
+    copy: "Chochi, a Rotary Youth Exchange student who had never heard of Telluride before arriving, has won over the community with his infectious positivity and willingness to try everything. Despite being new to snow and activities like basketball, he helped the golf team reach state championships for the first time and earned spirit awards along the way.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_95d8abdb-cfbb-4583-8420-a5de13732d9f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/2a/42a7051a-c0d6-4202-a625-3fee32668761/6a1159940d283.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "The science of connection",
     source: "Telluride Times",
     date: "May 24, 2026",
@@ -954,30 +978,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Suckla settles in as State House session concludes",
-    source: "Telluride Times",
-    date: "May 11, 2026",
-    firstSeen: "2026-05-12",
-    newsTopic: "education",
-    copy: "Suckla wrapped up his second legislative session, having moved from an off-site office to the Capitol basement as he settles into the role. Six of his nine sponsored bills passed this year, including extending Rico's microgrid grant program and allowing Dolores County commissioners to cut their own salaries. He's focused on bringing rural perspective to the statehouse and says he measures success more by what bad legislation he helps stop than by his own bill count.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_0e6568c2-8995-4eca-ae19-b52af3986ef2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/28/52826a48-fcca-484e-9ab9-69d9f8f4209f/6a0211f371496.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A new place ‘to do the best thing for animals’",
-    source: "Telluride Times",
-    date: "May 11, 2026",
-    firstSeen: "2026-05-12",
-    newsTopic: "community",
-    copy: "Second Chance Animal Resource Center has taken over operations of the Delta Animal Shelter under a new contract with the City of Delta, expanding from their usual Ridgway base. They're planning to add adoption services, foster care, and pet food pantry programs - the first time Delta will have its own adoption program run locally.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_094235cf-a1a8-4a79-aab9-994d5aaef6e2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/88/28830ff9-fa97-48a6-8fbe-9c40740b0658/6a01bd30b3b9a.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Telluride Marshal’s Department Arrests Individual for Failure to Register as a Sex Offender",
     source: "Town of Telluride",
     date: "May 22, 2026",
@@ -1054,7 +1054,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "DOLA Economic Vitality Community Session on May 27, 2026",
     source: "Town of Ridgway",
-    date: "May 24, 2026",
+    date: "May 25, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1065,7 +1065,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "CO Main Street Architect Visits on May 27-28, 2026",
     source: "Town of Ridgway",
-    date: "May 24, 2026",
+    date: "May 25, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1098,7 +1098,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "May 24, 2026",
+    date: "May 25, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1880,6 +1880,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-06-21/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-06-21T14:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   }
 ];
 
@@ -3292,42 +3303,6 @@ const LEGAL_NOTICES = [
     noticeKey: "owts-variance-croke-ophir-2026"
   },
   {
-    title: "RFP -- Flooring Replacement at County Buildings",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals from contractors to replace flooring at 333 & 305 W. Colorado Ave in Telluride. Contact Greg Pollio for information. Proposals must be submitted by 5:00 PM on Friday, May 24th.",
-    deadline: "May 24, 2026 (5:00 PM)",
-    expires: "2026-05-24",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "333 & 305 W. Colorado Ave, Telluride, CO",
-    noticeKey: "rfp-flooring-colorado-ave"
-  },
-  {
-    title: "RFP -- Flooring Replacement at County Buildings",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals from contractors to replace flooring at 333 & 305 W. Colorado Ave in Telluride. Contact Greg Pollio for information. Proposals must be submitted by 5:00 PM on Friday, May 24th.",
-    deadline: "May 24, 2026 (5:00 PM)",
-    expires: "2026-05-24",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "333 & 305 W. Colorado Ave, Telluride, CO",
-    noticeKey: "rfp-flooring-colorado-ave"
-  },
-  {
     title: "Request for Proposal -- Request for Proposal for Boiler Replacement at the Down Valley Park",
     entity: "San Miguel County",
     entityClass: "ent-county",
@@ -3428,42 +3403,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluride.gov/bids.aspx?bidID=127",
     address: "",
     totBidID: "127"
-  },
-  {
-    title: "RFP -- County Building Flooring Replacement",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals from contractors to replace flooring at 333 & 305 W. Colorado Ave in Telluride. RFP information is available on the county website or at the county offices. Proposals are due by 5:00 PM on Friday, May 24th.",
-    deadline: "May 24, 2026 at 5:00 PM",
-    expires: "2026-05-24",
-    dates: "4/16",
-    papers: ["ttimes_0416"],
-    url: "https://www.telluridenews.com/news/legals/article_c5a54e8f-2fa6-42a2-ba94-3a3828e137ff.html",
-    address: "333 & 305 W. Colorado Ave, Telluride, CO",
-    noticeKey: "rfp-flooring-333-305-colorado"
-  },
-  {
-    title: "RFP -- County Building Flooring Replacement",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals from contractors to replace flooring at 333 & 305 W. Colorado Ave in Telluride. RFP information is available on the county website or at the county offices. Proposals are due by 5:00 PM on Friday, May 24th.",
-    deadline: "May 24, 2026 at 5:00 PM",
-    expires: "2026-05-24",
-    dates: "4/16",
-    papers: ["ttimes_0416"],
-    url: "https://www.telluridenews.com/news/legals/article_c5a54e8f-2fa6-42a2-ba94-3a3828e137ff.html",
-    address: "333 & 305 W. Colorado Ave, Telluride, CO",
-    noticeKey: "rfp-flooring-333-305-colorado"
   },
   {
     title: "Property Tax Exemption -- Senior Citizens and Veterans with Disability",
