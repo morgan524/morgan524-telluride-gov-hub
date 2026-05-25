@@ -23,9 +23,41 @@ jobs:
           node-version: '24'
 
       - name: Install dependencies
+        # `npm install` (no args) reads scripts/package.json — previously
+        # this step did `npm install xml2js` which silently ignored the
+        # other deps listed there. The 2026-05-25 BOCC PDF extractor work
+        # added playwright + pdfjs-dist; both need to land here.
         run: |
           cd scripts
-          npm install xml2js
+          npm install
+
+      # Cache the Playwright Chromium binary across runs. The cache key is
+      # pinned to the installed playwright version so a version bump
+      # invalidates the cache and triggers a fresh download.
+      - name: Get installed Playwright version
+        id: pw-version
+        run: |
+          v=$(node -p "require('./scripts/node_modules/playwright/package.json').version")
+          echo "version=$v" >> $GITHUB_OUTPUT
+
+      - name: Cache Playwright browsers
+        id: pw-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.pw-version.outputs.version }}
+
+      - name: Install Playwright Chromium (cache miss — download binary + deps)
+        if: steps.pw-cache.outputs.cache-hit != 'true'
+        run: |
+          cd scripts
+          npx playwright install chromium --with-deps
+
+      - name: Install Playwright Chromium OS deps only (cache hit)
+        if: steps.pw-cache.outputs.cache-hit == 'true'
+        run: |
+          cd scripts
+          npx playwright install-deps chromium
 
       # No `continue-on-error` below: per-task RSS / API failures are already
       # isolated via try/catch inside each script, so transient feed errors

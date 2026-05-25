@@ -662,13 +662,31 @@ async function fetchUpcomingMeetings() {
 
 async function extractAgendaText(url) {
   if (!url) return '';
-  // CivicClerk portal URLs serve a React SPA shell — fetching them returns
-  // only `<!doctype html>` boilerplate with zero agenda content (the PDF
-  // loads inside a DocAccess viewer iframe, gated by a per-request url_hash
-  // that requires the SPA to compute). Don't waste a Claude call on the
-  // SPA HTML; return empty so refreshSummaries falls back to the API-
-  // sourced agendaSeedText (eventName + description + agendaName).
-  if (/\.portal\.civicclerk\.com\//i.test(url)) return '';
+  // CivicClerk portal URLs serve a React SPA shell — a bare fetch returns
+  // only `<!doctype html>` boilerplate. The actual PDF is loaded inside a
+  // DocAccess viewer iframe, gated by a per-request url_hash that the SPA
+  // computes in-browser. We use Playwright to navigate the SPA the same
+  // way a user would and intercept the PDF response from the network.
+  // Falls back to '' (→ agendaSeedText fallback in refreshSummaries) if
+  // Playwright isn't available locally / the PDF response wasn't captured.
+  if (/\.portal\.civicclerk\.com\//i.test(url)) {
+    try {
+      const { extractCivicClerkAgendaPdf, extractTextFromPdfBuffer } = require('./civicclerk-pdf');
+      const t0 = Date.now();
+      const pdfBuf = await extractCivicClerkAgendaPdf(url);
+      if (!pdfBuf) {
+        console.log(`    CivicClerk Playwright: no PDF intercepted (${Date.now() - t0} ms)`);
+        return '';
+      }
+      const text = await extractTextFromPdfBuffer(pdfBuf);
+      const cleaned = text.replace(/\s+/g, ' ').trim();
+      console.log(`    CivicClerk Playwright: ${cleaned.length} chars from PDF (${pdfBuf.length} bytes, ${Date.now() - t0} ms)`);
+      return cleaned.slice(0, MAX_AGENDA_TEXT);
+    } catch (e) {
+      console.warn(`    CivicClerk Playwright error: ${e.message}`);
+      return '';
+    }
+  }
   try {
     const resp = await fetch(url);
     if (resp.status !== 200) return '';
@@ -4435,10 +4453,27 @@ async function main() {
   // whether to commit, so we don't need to signal change-vs-no-change via
   // exit code. Exit 0 on any normal completion — exit 1 (from the catch
   // below) is reserved for fatal errors and will fail the workflow visibly.
+  await closeCivicClerkBrowserIfOpen();
   process.exit(0);
 }
 
-main().catch(err => {
+// Best-effort cleanup of the Playwright Chromium process if extractAgendaText
+// launched one during the run. process.exit() would kill it anyway but
+// explicit close avoids dangling-handle warnings in the workflow logs.
+async function closeCivicClerkBrowserIfOpen() {
+  try {
+    const mod = require('./civicclerk-pdf');
+    if (mod && typeof mod.closeBrowser === 'function') {
+      await mod.closeBrowser();
+    }
+  } catch {
+    // Module not installed (running on a host without scripts/node_modules,
+    // or before `npm install`) — nothing to close.
+  }
+}
+
+main().catch(async (err) => {
   console.error('Fatal error:', err);
+  await closeCivicClerkBrowserIfOpen();
   process.exit(1);
 });
