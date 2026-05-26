@@ -1980,11 +1980,13 @@ const PC_ALL_MEMBERS = [
   { id:'bald',         name:'Ian Bald',                shortName:'Bald',         title:'Member' },
   { id:'gleason',      name:'Galena Gleason',          shortName:'Gleason',      title:'Member (2024; BOCC 2025+)' },
   { id:'schillaci',    name:'M.J. Schillaci',          shortName:'Schillaci',    title:'Member (Jan–Jun 2024)' },
-  { id:'simpson',      name:'Hallie Bevan Simpson',    shortName:'Simpson',      title:'Senior Alternate (Sep 2024+)' },
-  { id:'vangelder',    name:'Robyn Van Gelder',        shortName:'Van Gelder',   title:'Junior Alternate (Sep 2024+)' },
+  { id:'simpson',      name:'Hallie Bevan Simpson',    shortName:'Simpson',      title:'Senior Alternate (Sep 2024+); Vice Chair as of Jan 2025' },
+  { id:'vangelder',    name:'Robyn Van Gelder',        shortName:'Van Gelder',   title:'Junior Alternate (Sep 2024 – Jan 2026)' },
+  { id:'otwell',       name:'Fletcher Otwell',         shortName:'Otwell',       title:'Senior Alternate (Feb 2026+; replaced Van Gelder)' },
 ];
 const PC_2024 = ['taylor','liftonzoline','bayma','bald','gleason','schillaci','simpson'];
 const PC_2025 = ['taylor','liftonzoline','bayma','bald','simpson','vangelder'];
+const PC_2026 = ['taylor','liftonzoline','bayma','bald','simpson','otwell'];
 
 const PC_VOTE_ITEMS = [
   // Jan 11, 2024 — Airport Master Plan (contested)
@@ -2239,6 +2241,105 @@ const PC_VOTE_ITEMS = [
     tags:['Land Use','Natural Resources','Governance'],
     outcome:'Passed', tally:'5-0',
     votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', simpson:'Yes', vangelder:'Absent' },
+  },
+
+  /* ── Nov 13, 2025 — Bald + Taylor + Bayma + Lifton-Zoline +
+       Bevan Simpson; Van Gelder Senior Alt (alternate seat).
+       Substantive votes 5-0; Van Gelder did not vote.  ── */
+  {
+    id:'pv2025-08', date:'2025-11-13', year:2025,
+    meeting:'Planning Commission — Nov 13, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/98/overview',
+    title:'Illium IPOA Substantial PUD Amendment — Continued to December 11, 2025',
+    description:'Continued the Illium IPOA Substantial PUD Amendment to the December 11, 2025 PC meeting (later continued again to Jan 8, 2026 where it was approved). Motion by Bevan Simpson, seconded by Lifton-Zoline.',
+    tags:['Land Use','PUD','Housing'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', simpson:'Yes', vangelder:'Absent' },
+  },
+  {
+    id:'pv2025-09', date:'2025-11-13', year:2025,
+    meeting:'Planning Commission — Nov 13, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/98/overview',
+    title:'Telluride Land Works SUP — Continued to December 8 (Site Visit + Updated Site Plan)',
+    description:'Continued the Telluride Land Works Special Use Permit application to the December 8 PC meeting with a request for an updated site plan responsive to the concerns raised during discussion (berms, site modifications to address surrounding-resident concerns, limit activity on the property including no major movement of materials) + a follow-up from the County Attorney on questions raised about Land Use Code compliance. (Application withdrawn at Dec 11 meeting.) Motion by Lifton-Zoline, seconded by Bayma.',
+    tags:['Land Use','SUP'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', simpson:'Yes', vangelder:'Absent' },
+  },
+
+  /* ── Dec 11, 2025 — Bald + Taylor + Lifton-Zoline + Van Gelder
+       Senior Alt covering for absent Bayma + Bevan Simpson; 4-0.
+       Bayma and Bevan Simpson absent; Van Gelder voting as alt. ── */
+  {
+    id:'pv2025-10', date:'2025-12-11', year:2025,
+    meeting:'Planning Commission — Dec 11, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/926/overview',
+    title:'Illium IPOA Substantial PUD Amendment — Continued to January 8, 2026',
+    description:'Continued the Illium IPOA Substantial PUD Amendment to the January 8, 2026 PC meeting. Motion by Lifton-Zoline, seconded by Bald.',
+    tags:['Land Use','PUD','Housing'],
+    outcome:'Passed', tally:'4-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Absent', bald:'Yes', simpson:'Absent', vangelder:'Yes' },
+  },
+  {
+    id:'pv2025-11', date:'2025-12-11', year:2025,
+    meeting:'Planning Commission — Dec 11, 2025',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/926/overview',
+    title:'LUC Amendment §5-3001 — Recommend BOCC Remove Colorado Sales Tax License Requirement for STRs',
+    description:'Recommended the BOCC approve amendments to the Land Use Code §5-3001 for the purpose of removing the requirement for Short-Term Rental licensees to obtain a Colorado Sales Tax License. Finding: proposed amendment complies with the standards of LUC §5-1802 (LUC Amendments) and is consistent with §1-4 (Purposes of the LUC). Motion by Lifton-Zoline, seconded by Bald. (Later adopted by BOCC on Feb 4, 2026 as Resolution 2026-07.)',
+    tags:['Land Use','STR'],
+    outcome:'Passed', tally:'4-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Absent', bald:'Yes', simpson:'Absent', vangelder:'Yes' },
+  },
+
+  /* ── Jan 8, 2026 — Bald + Taylor + Lifton-Zoline + Bayma +
+       Bevan Simpson; Van Gelder Senior Alt (last meeting; Fletcher
+       Otwell replaces her at Feb 12). 5-0 votes. ── */
+  {
+    id:'pv2026-01', date:'2026-01-08', year:2026,
+    meeting:'Planning Commission — Jan 8, 2026',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/915/overview',
+    title:'2026 PC Officer Elections — Taylor (Chair), Lifton-Zoline (Vice Chair), Bayma (Secretary)',
+    description:'Elected the 2026 Planning Commission officers, keeping the prior slate: Lee Taylor as Chair, Josselin Lifton-Zoline as Vice Chair, Mathew Bayma as Secretary. Motion by Bevan Simpson, seconded by Bald.',
+    tags:['Governance'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', simpson:'Yes', vangelder:'Absent' },
+  },
+  {
+    id:'pv2026-02', date:'2026-01-08', year:2026,
+    meeting:'Planning Commission — Jan 8, 2026',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/915/overview',
+    title:'Illium IPOA Substantial PUD Amendment — Recommend BOCC APPROVE (+20 Residential Units, Conditions)',
+    description:'Recommended the BOCC approve the Illium Park Owners Association Substantial PUD Amendment for Lots 400-444 of Illium Industrial Park (Lawson Hill PUD). Adds uses pp, qq, and rr to page 21 of the matrix; consolidates notes e. and bb. into note i.; adds 20 units of residential density with a friendly amendment to: (1) require all written representations of the applicant + supplements as conditions of approval; (2) assign units of density to individual lots by way of Insubstantial PUD Amendments; (3) require new County Deed Restrictions and Covenants prepared and recorded concurrently at construction; (4) require any conversion of existing units or new residential/commercial units to apply for and receive a development permit prior to construction; (5) require residential units NOT to be located on the ground floor (level accessed from road) of primary buildings except for entrances and utility areas; (6) variety stores stand-alone or in mixed-use building, individual variety stores not exceeding approximately 1,000 s.f. in area. Finding: proposed use is consistent with County Master Plan and complies with LUC §5-1503 substantial amendment and §5-1803 rezoning. Motion by Bevan Simpson, seconded by Bayma. (Later approved 2-1 by BOCC on Feb 18, 2026 as Resolution 2026-08; Brown opposed.)',
+    tags:['Land Use','PUD','Housing'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', simpson:'Yes', vangelder:'Absent' },
+  },
+
+  /* ── Feb 12, 2026 — Bald + Taylor + Lifton-Zoline + Bayma +
+       Bevan Simpson + Fletcher Otwell (new Senior Alt, replacing
+       Van Gelder). 5-0 votes. ── */
+  {
+    id:'pv2026-03', date:'2026-02-12', year:2026,
+    meeting:'Planning Commission — Feb 12, 2026',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/916/overview',
+    title:'Lot 14-13 Elk Meadows Lawson Hill PUD — Recommend Substantial PUD Amendment (Expand Max Footprint 612 → 1,200 sq ft)',
+    description:'Recommended the BOCC approve a Substantial PUD Amendment for Lot 14-13 Elk Meadows Lawson Hill PUD to expand the maximum allowable building footprint from 612 sq ft to 1,200 sq ft. Finding: proposed use is consistent with County Master Plan and complies with LUC §5-1503 (substantial amendment) and §5-1803 (rezoning); subject to terms and conditions 1-3 as presented. Motion by Lifton-Zoline, seconded by Bald. (Later approved by BOCC on March 18, 2026 as Resolution 2026-13.)',
+    tags:['Land Use','PUD'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Yes', simpson:'Yes', otwell:'Absent' },
+  },
+
+  /* ── Mar 12, 2026 — Taylor + Lifton-Zoline + Bayma + Bevan
+       Simpson (Bald + Otwell absent). 4-0 vote. ── */
+  {
+    id:'pv2026-04', date:'2026-03-12', year:2026,
+    meeting:'Planning Commission — March 12, 2026',
+    minutesUrl:'https://sanmiguelcoco.portal.civicclerk.com/event/917/overview',
+    title:'Recommend BOCC Adopt Colorado Wildfire Resiliency Code by April 1, 2026 (per SB 23-166)',
+    description:'Recommended the BOCC adopt the Colorado Wildfire Resiliency Code by April 1, 2026, pursuant to Senate Bill 23-166. Motion by Lifton-Zoline, seconded by Bevan Simpson. (Later adopted by BOCC on April 1, 2026 as Resolution 2026-14 for unincorporated SMC, effective July 1, 2026.)',
+    tags:['Wildfire','Land Use','Public Safety'],
+    outcome:'Passed', tally:'4-0',
+    votes:{ taylor:'Yes', liftonzoline:'Yes', bayma:'Yes', bald:'Absent', simpson:'Yes', otwell:'Absent' },
   },
 
   // Mar 26, 2026 — Joint PC + BOCC WORK SESSION on Accelerated Housing Review
@@ -3545,12 +3646,12 @@ function renderPlanningHeatmap() {
   const catSel  = hmCatFilter;
 
   const eras = yearSel === '2026'
-    ? [{ label:'2026 San Miguel Planning Commission', members:PC_2025, yearFilter:2026 }]
+    ? [{ label:'2026 San Miguel Planning Commission', members:PC_2026, yearFilter:2026 }]
     : yearSel === '2025'
     ? [{ label:'2025 San Miguel Planning Commission', members:PC_2025, yearFilter:2025 }]
     : yearSel === '2024'
     ? [{ label:'2024 San Miguel Planning Commission', members:PC_2024, yearFilter:2024 }]
-    : [{ label:'2026 San Miguel Planning Commission', members:PC_2025, yearFilter:2026 },
+    : [{ label:'2026 San Miguel Planning Commission', members:PC_2026, yearFilter:2026 },
        { label:'2025 San Miguel Planning Commission', members:PC_2025, yearFilter:2025 },
        { label:'2024 San Miguel Planning Commission', members:PC_2024, yearFilter:2024 }];
 
