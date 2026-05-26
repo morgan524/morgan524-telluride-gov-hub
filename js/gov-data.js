@@ -153,7 +153,7 @@ const COUNTY_CACHED_DATA = [
     type: 'bocc',
     location: '305 W Colorado Ave, Telluride (2-2:45 pm) then Placerville School House (work session 4-6:30 pm)',
     civicClerkId: 1035,
-    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/1035/files/agenda/1760',
+    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/1035/files/agenda/1762',
     note: 'Special meeting + work session. Agenda posted May 22.'
   },
   // ── June 2026 ──

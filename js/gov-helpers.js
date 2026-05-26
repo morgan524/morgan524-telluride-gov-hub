@@ -174,6 +174,18 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Gabriel Landeskog uses in-skate sensors, AI-driven movement platform to manage his knee and workload",
+    source: "Telluride Times",
+    date: "May 26, 2026",
+    firstSeen: "2026-05-26",
+    newsTopic: "community",
+    copy: "Gabriel Landeskog is using AI-powered sensors in his skates to monitor his surgically repaired knee and prevent overexertion during training and games. The technology from Vancouver company Plantiga tracks his movement patterns and biomechanics, flagging potential issues before he feels them.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_fd43bc8f-8803-5f9a-8e79-6724fb70fea8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/fe/5fe07e55-c0c6-553d-a8ed-4a84aa4394cc/6a15708f94453.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Colorado’s largest gas spill contaminates Southern Ute drinking water",
     source: "Telluride Times",
     date: "May 26, 2026",
@@ -1152,7 +1164,6 @@ const KOTO_FEATURED_STORIES = [
 // page over the coming weeks, the bot will add them with firstSeen=today
 // and the array will naturally shed the sentinels via the same logic.
 const SMB_FORUM_ARTICLES = [
-  // ── Visible: featured on launch day (2026-05-26) ──
   {
     title: "Jackson McCabe is Pinhead history ‘pintern’",
     source: "San Miguel Basin Forum",
@@ -1170,38 +1181,264 @@ const SMB_FORUM_ARTICLES = [
     sourceKey: "smb",
     date: "May 26, 2026",
     firstSeen: "2026-05-26",
-    newsTopic: "infrastructure",
+    newsTopic: "arts-culture",
     copy: "Last week, the Town of Norwood announced it had been awarded $1,250,000 in funding through the Colorado Department of Transportation's Highway Safety Improvement Program (HSIP). Town Manager Sara …",
     href: "https://www.sanmiguelbasinforum.com/stories/town-secures-125m-for-norwood-hill-improvements,114098",
     img: ""
   },
-  // ── Suppressed: other articles currently on the SMBF landing page,
-  //    seeded as "already known" so the first bot run after deploy
-  //    doesn't re-stamp them with today's date. Hidden by the
-  //    35-day-firstSeen filter in local-news.html. ──
-  { title: "Pierce said drought plan is forthcoming; 'be responsible with water'", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/pierce-said-drought-plan-is-forthcoming-be-responsible-with-water,110627", img: "" },
-  { title: "Brent Garber tells his side of the Bucktail Fire", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "public-safety", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/brent-garber-tells-his-side-of-the-bucktail-fire,108448", img: "" },
-  { title: "Boys are state bound!", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/boys-are-state-bound,107655", img: "" },
-  { title: "It snowed, but it's not looking good", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/it-snowed-but-its-not-looking-good,107656", img: "" },
-  { title: "VFW honors Wytulka as Colorado high school teacher of the year", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "education", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/vfw-honors-wytulka-as-colorado-high-school-teacher-of-the-year,105139", img: "" },
-  { title: "Paula Brown and Brad Miller run for Nucla mayor", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "government", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/paula-brown-and-brad-miller-run-for-nucla-mayor,104248", img: "" },
-  { title: "Norwood girl breaks Guinness World Records for hula hooping", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/norwood-girl-breaks-guinness-world-records-for-hula-hooping,103348", img: "" },
-  { title: "Zandon Bray: Release pause welcome, won't solve every problem", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/zandon-bray-release-pause-welcome-wont-solve-every-problem,102328", img: "" },
-  { title: "West End encouraged to attend the ag econ summit", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/west-end-encouraged-to-attend-the-ag-econ-summit,101454", img: "" },
-  { title: "West End sentiments differ on TelSki strike", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/west-end-sentiments-differ-on-telski-strike,99774", img: "" },
-  { title: "Tim Pierce discusses current situation", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/tim-pierce-discusses-current-situation,95910", img: "" },
-  { title: "Stakeholders question SMC regs", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "government", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/stakeholders-question-smc-regs,93497", img: "" },
-  { title: "Cossey never applied for man-camp, Covualt never worked one", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/cossey-never-applied-for-man-camp-covualt-never-worked-one,92290", img: "" },
-  { title: "West End FLL team heads to state tournament", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "education", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/west-end-fll-team-heads-to-state-tournament,92291", img: "" },
-  { title: "Locals question man-camps, infrastructure in community meetings", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/locals-question-man-camps-infrastructure-in-community-meetings,90857", img: "" },
-  { title: "Coram talks solar, school, cell towers", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "government", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/coram-talks-solar-school-cell-towers,89627", img: "" },
-  { title: "Norwood voters to decide on new school", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "education", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/norwood-voters-to-decide-on-new-school,88387", img: "" },
-  { title: "Rimrockers help miners find records", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/rimrockers-help-miners-find-records,83408", img: "" },
-  { title: "Community benefit coalition forms", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/community-benefit-coalition-forms,83412", img: "" },
-  { title: "Town clean-up day is Oct. 18", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/town-clean-up-day-is-oct-18,81168", img: "" },
-  { title: "West End explores manufacturing possibilities", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/west-end-explores-manufacturing-possibilities,80123", img: "" },
-  { title: "Uranium industry could be on upswing", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/uranium-industry-could-be-on-upswing,79240", img: "" },
-  { title: "Leopard frogs appear in Nucla, Part 2", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/leopard-frogs-appear-in-nucla-part-2,78176", img: "" }
+  {
+    title: "Pierce said drought plan is forthcoming; ‘be responsible with water’",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "infrastructure",
+    copy: "With snowpack at a 30-year low, Tim Pierce, of Mustang Water Authority, told the Forum the repercussions are less water in the river. He said that means significantly less water this year, so …",
+    href: "https://www.sanmiguelbasinforum.com/stories/pierce-said-drought-plan-is-forthcoming-be-responsible-with-water,110627",
+    img: ""
+  },
+  {
+    title: "Brent Garber tells his side of the Bucktail Fire",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "housing",
+    copy: "Many in the West End know Brent Garber. He’s responsible for starting the Bucktail Fire in August of 2024, which burned more than 7,000 acres. He was sentenced in July of 2025, receiving multiple …",
+    href: "https://www.sanmiguelbasinforum.com/stories/brent-garber-tells-his-side-of-the-bucktail-fire,108448",
+    img: ""
+  },
+  {
+    title: "Boys are state bound!",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "community",
+    copy: "The Nucla Mustangs, now 25-0, are headed to the state tournament in Greeley. Head coach Mike Rummel told the Forum March 8 it was very exciting. “It has been a goal for the boys for a few …",
+    href: "https://www.sanmiguelbasinforum.com/stories/boys-are-state-bound,107655",
+    img: "https://zeta.creativecirclecdn.com/smb/original/20260310-211136-873-front%20page%20pic.jpeg"
+  },
+  {
+    title: "It snowed, but it’s not looking good",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "community",
+    copy: "Yes, it did snow over the weekend, a welcome change of weather for anyone hoping the Western Slope gets precipitation this spring. Lifetime rancher and member of Mex & Sons cattle operation in …",
+    href: "https://www.sanmiguelbasinforum.com/stories/it-snowed-but-its-not-looking-good,107656",
+    img: ""
+  },
+  {
+    title: "VFW honors Wytulka as Colorado high school teacher of the year",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "education",
+    copy: "Nucla’s high school teacher, coach and school counselor Debbie Wytulka has received a prestigious state award by the VFW. Nominated by West End Public Schools and representing the 12th VFW district …",
+    href: "https://www.sanmiguelbasinforum.com/stories/vfw-honors-wytulka-as-colorado-high-school-teacher-of-the-year,105139",
+    img: "https://zeta.creativecirclecdn.com/smb/original/20260218-101646-ba8-F4%20-%20vfw%20debbie.jpg"
+  },
+  {
+    title: "Paula Brown and Brad Miller run for Nucla mayor",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "government",
+    copy: "Incumbent Paula Brown is seeking reelection for the seat of Nucla mayor; her campaign opponent is Brad Miller. The Forum asked both candidates about their backgrounds and reasons for wanting to to …",
+    href: "https://www.sanmiguelbasinforum.com/stories/paula-brown-and-brad-miller-run-for-nucla-mayor,104248",
+    img: ""
+  },
+  {
+    title: "Norwood girl breaks Guinness World Records for hula hooping",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "education",
+    copy: "Ember Alexander, an 11-year-old girl in the fifth grade at Norwood Elementary School, set out to make history in the Guinness World Records and did so last week, on Jan. 27, after hula hooping for …",
+    href: "https://www.sanmiguelbasinforum.com/stories/norwood-girl-breaks-guinness-world-records-for-hula-hooping,103348",
+    img: "https://zeta.creativecirclecdn.com/smb/original/20260204-121432-f93-F4%20-%20ember.jpeg"
+  },
+  {
+    title: "Zandon Bray: Release pause welcome, won’t solve every problem",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "government",
+    copy: "Zandon Bray, who is a member of a multi-generational ranching family and District 9 board member for the Colorado Farm Bureau, confirmed with the Forum on Jan. 24 that last week yet another wolf in …",
+    href: "https://www.sanmiguelbasinforum.com/stories/zandon-bray-release-pause-welcome-wont-solve-every-problem,102328",
+    img: ""
+  },
+  {
+    title: "West End encouraged to attend the ag econ summit",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "arts-culture",
+    copy: "Janie VanWinkle, well-known cattlewoman and originally of Nucla, told the Forum last week she hopes folks from the West End attend the Economic Impact of Agriculture on Western Colorado Summit in …",
+    href: "https://www.sanmiguelbasinforum.com/stories/west-end-encouraged-to-attend-the-ag-econ-summit,101454",
+    img: ""
+  },
+  {
+    title: "West End sentiments differ on TelSki strike",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "recreation",
+    copy: "The Telluride Ski Patrol labor strike is not just an East End issue. Many people who live in Norwood, Nucla and Naturita work for Telluride Ski Resort, as snow groomers, in the offices and for ski …",
+    href: "https://www.sanmiguelbasinforum.com/stories/west-end-sentiments-differ-on-telski-strike,99774",
+    img: ""
+  },
+  {
+    title: "Tim Pierce discusses current situation",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "housing",
+    copy: "Tim Pierce, of Mustang Water, told the Forum last week that “to be quite blunt, Mustang Water is at its limit with the existing system.” He said one further upgrade can be made to add a …",
+    href: "https://www.sanmiguelbasinforum.com/stories/tim-pierce-discusses-current-situation,95910",
+    img: ""
+  },
+  {
+    title: "Stakeholders question SMC regs",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "community",
+    copy: "San Miguel County has been in the process of updating mining regulations, and for the last year has held a series of meetings and asked for public comment. While the county has not finalized anything …",
+    href: "https://www.sanmiguelbasinforum.com/stories/stakeholders-question-smc-regs,93497",
+    img: ""
+  },
+  {
+    title: "Cossey never applied for man camp; Covault never worked one",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "housing",
+    copy: "Last week, the San Miguel Basin Forum ran a lengthy story about the Nov. 8 meeting at Norwood Town Hall, a meeting held for community updates on the Four Seasons’ workforce housing plans, as …",
+    href: "https://www.sanmiguelbasinforum.com/stories/cossey-never-applied-for-man-camp-covualt-never-worked-one,92290",
+    img: ""
+  },
+  {
+    title: "West End FLL team heads to state tournament",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "community",
+    copy: "Nov. 15 was a busy day for local kids in the First Lego League (FLL) program. They got up early, but instead of heading to Durango, where regionals are typically held, they traveled to Ridgway. This …",
+    href: "https://www.sanmiguelbasinforum.com/stories/west-end-fll-team-heads-to-state-tournament,92291",
+    img: "https://zeta.creativecirclecdn.com/smb/original/20251119-103041-15a-youth%20main%20w%20story.jpg"
+  },
+  {
+    title: "Locals question man camps, infrastructure in community meetings",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "infrastructure",
+    copy: "Two meetings to update community and get feedback on the Four Seasons project happened last week, Nov. 5 and Nov. 8. The Forum attended the Nov. 8 meeting at Norwood Town Hall from 6 to 8 p.m. Then, …",
+    href: "https://www.sanmiguelbasinforum.com/stories/locals-question-man-camps-infrastructure-in-community-meetings,90857",
+    img: "https://zeta.creativecirclecdn.com/smb/original/20251112-105813-532-man%20camps.jpg"
+  },
+  {
+    title: "Coram talks solar, school, cell towers",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "education",
+    copy: "Don Coram, Republican Colorado State Senator for 2017-2022 and of Montrose, attended the public solar meeting in the West End, held Oct. 2 at Nucla Community Center, along with about 40 other …",
+    href: "https://www.sanmiguelbasinforum.com/stories/coram-talks-solar-school-cell-towers,89627",
+    img: "https://zeta.creativecirclecdn.com/smb/original/20251104-200746-bc7-front%20page%20pic.jpg"
+  },
+  {
+    title: "Norwood voters to decide on new school",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "government",
+    copy: "The Nov. 4 election will determine whether or not Norwood voters pass a bond for a new school. A debatable issue, the bond didn’t pass the last time two times it was up for a vote. The Forum …",
+    href: "https://www.sanmiguelbasinforum.com/stories/norwood-voters-to-decide-on-new-school,88387",
+    img: ""
+  },
+  {
+    title: "Rimrockers help miners find records",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "land-use",
+    copy: "Years ago, a donation of files was given to Rimrocker Historical Society by one who wishes to remain anonymous, but who did work on original mining safety claims. Over time, the Rimrocker ladies took …",
+    href: "https://www.sanmiguelbasinforum.com/stories/rimrockers-help-miners-find-records,83408",
+    img: ""
+  },
+  {
+    title: "Community Benefit Coalition forms",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "community",
+    copy: "A new coalition of community leaders, business representatives, and local stakeholders has formed to ensure that the West End Communities continue to thrive while responsibly managing growth …",
+    href: "https://www.sanmiguelbasinforum.com/stories/community-benefit-coalition-forms,83412",
+    img: ""
+  },
+  {
+    title: "Town clean-up day is Oct. 18",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "government",
+    copy: "The Nucla Town Board of Trustees assembled Sept. 10 for a regular meeting. It’s yet to be determined who will replace Town Manager Melissa Lampshire who resigned earlier this summer. West …",
+    href: "https://www.sanmiguelbasinforum.com/stories/town-clean-up-day-is-oct-18,81168",
+    img: ""
+  },
+  {
+    title: "West End explores manufacturing possibilities",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "land-use",
+    copy: "The West End Economic Development Corporation (WEEDC) is eyeing a manufacturing opportunity that could impact Nucla and Naturita. WEEDC Executive Director Makayla Gordon told the Forum last Friday …",
+    href: "https://www.sanmiguelbasinforum.com/stories/west-end-explores-manufacturing-possibilities,80123",
+    img: ""
+  },
+  {
+    title: "Uranium industry could be on upswing",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "land-use",
+    copy: "In June representatives from Montrose County reported on a permitted uranium project in Utah’s Lisbon Valley. Then, county representatives said the project was “beginning to bring …",
+    href: "https://www.sanmiguelbasinforum.com/stories/uranium-industry-could-be-on-upswing,79240",
+    img: ""
+  },
+  {
+    title: "Leopard frogs appear in Nucla, Part 2",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "Jan 1, 2025",
+    firstSeen: "2025-01-01",
+    newsTopic: "arts-culture",
+    copy: "Last week, the Forum reported on northern leopard frog sightings in the West End. Many landowners have claimed they rarely see the species anymore, but others have said they’re seeing the …",
+    href: "https://www.sanmiguelbasinforum.com/stories/leopard-frogs-appear-in-nucla-part-2,78176",
+    img: "https://zeta.creativecirclecdn.com/smb/original/20250827-085129-c80-F1%20-%20jump.jpg"
+  }
 ];
 
 const BLOG_POSTS = [
@@ -2071,17 +2308,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52922480227239/huge/947d1bad2aeb685f292e305dab2d8be8b33038c5.jpg"
-  },
-  {
-    title: "Rooftop Rhythm",
-    link: "https://events.ourayridgwayevents.com/event/rooftop-rhythm",
-    description: "Chipeta Lodge Resort + Spa announces \"Rooftop Rhythm\" on Wednesday at 5:30-8:30 PM on the rooftop at White Buffalo Restaurant + Bar. First up, James O. Patterson joins us Wednesday May 27th, 2026. Come for cocktails, casual dining, and incomparable sunsets. This Wednesday's featured burger specials include the Fuddrucker Smashburger, a Green Chile Cheeseburger, & an Adobo Black Bean Veggie Burger, all served with crispy fries and option add-ons. Bring your friends, grab a seat on the rooftop, and settle in for a spectacular summer evening.",
-    pubDate: "2026-05-27T23:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52948785665803/huge/11d4d632f53929a839e01aa0a3c9aeb19b288438.jpg"
   },
   {
     title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
@@ -3017,6 +3243,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg"
+  },
+  {
+    title: "Steps Tavern Presents Karaoke Night",
+    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
+    description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM.",
+    pubDate: "2026-06-12T02:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "STEPS TAVERN",
+    imageUrl: "https://localist-images.azureedge.net/photos/52985439397427/huge/7a32dc0ce7dd0fa5fc146521f201b6616af6feca.jpg"
   }
 ];
 
@@ -3033,6 +3270,39 @@ const NORWOOD_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "NWC Meeting",
+    link: "https://www.norwoodtown.com/2026-06-09-nwc-meeting",
+    description: "",
+    pubDate: "2026-06-09T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Board Of Trustees Meeting",
+    link: "https://www.norwoodtown.com/2026-06-10-board-of-trustees-meeting",
+    description: "",
+    pubDate: "2026-06-10T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Norwood Sanitation District Meeting Meeting",
+    link: "https://www.norwoodtown.com/2026-06-11-norwood-sanitation-district-meeting-meeting",
+    description: "",
+    pubDate: "2026-06-11T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
     title: "Music On The Mesa Wolf Jett",
     link: "https://www.norwoodtown.com/2026-06-13-music-on-the-mesa-wolf-jett",
     description: "",
@@ -3040,6 +3310,17 @@ const NORWOOD_EVENTS = [
     source: "norwood",
     sourceLabel: "Town of Norwood",
     category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Planning And Zoning Commission Meeting",
+    link: "https://www.norwoodtown.com/2026-06-15-planning-and-zoning-commission-meeting",
+    description: "",
+    pubDate: "2026-06-15T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
     location: "Norwood, CO",
     imageUrl: ""
   },
@@ -3757,96 +4038,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_d3659378-b06b-4e27-9b53-ec57d83a4b86.html",
     address: "113 W Columbia Ave, Telluride, Colorado",
     noticeKey: "ordinance-gas-franchise-1425"
-  },
-  {
-    title: "Special Use Permit -- Scenic and Social Special Use (Planning Commission)",
-    entity: "San Miguel County Planning Commission",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "San Miguel County Planning Commission will hold a public hearing on a Scenic and Social Special Use Permit application. The hearing will be held May 14, 2026 at 10:30 a.m. at the Sheriffs Annex Building in Norwood. Written comments must be received by noon April 30, 2026.",
-    deadline: "April 30, 2026",
-    expires: "2026-05-14",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "Norwood area (specific address not clearly stated)",
-    noticeKey: "scenic-social-permit-may-2026"
-  },
-  {
-    title: "Special Use Permit -- Construction/Contractor Office and Staging Area (Kurt Crockett)",
-    entity: "San Miguel County Planning Commission",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "John Miller on behalf of Kurt Works Inc. and Kurt Crockett has applied for a Special Use Permit to establish a Construction/Contractor Office and Staging Area at 488 S. Avalon Dr., Norwood. San Miguel County Planning Commission will hold a public hearing May 14, 2026 at 10:45 a.m. Written comments due by noon April 30, 2026.",
-    deadline: "April 30, 2026",
-    expires: "2026-05-14",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "488 S. Avalon Dr., Norwood, CO (Parcel #452726103022)",
-    noticeKey: "construction-staging-488-avalon"
-  },
-  {
-    title: "RFP -- Flooring Replacement at County Buildings",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County requests proposals for a contractor to replace flooring at 333 & 305 W. Colorado Ave, Telluride. Contact Greg Pollio for information. Proposals are due by 5:00 PM Friday, May 24th.",
-    deadline: "May 24, 2026",
-    expires: "2026-05-24",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "333 & 305 W. Colorado Ave, Telluride, CO",
-    noticeKey: "rfp-flooring-colorado-ave"
-  },
-  {
-    title: "RFP -- Galloping Goose Park Landscape Improvements",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County requests proposals for landscape improvements to the Galloping Goose Park in Telluride. Contact Janet Kask at Parks & Open Space department for information. Proposals are due by 5:00 PM Friday, May 22.",
-    deadline: "May 22, 2026",
-    expires: "2026-05-22",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "Galloping Goose Park, Telluride, CO",
-    noticeKey: "rfp-galloping-goose-landscape"
-  },
-  {
-    title: "ITB -- Mill Creek PRV Vault Installation",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "💧",
-    iconClass: "type-hearing",
-    type: "Utilities",
-    filterTag: "utilities",
-    summary: "Town of Telluride is seeking sealed bids for a Mill Creek Prefab Pressure Reducing Valve Vault Installation project. Bids must be received by 4 PM, Thursday, April 30, 2026 at Public Works facility or via electronic submission.",
-    deadline: "April 30, 2026",
-    expires: "2026-04-30",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "Mill Creek area, Telluride, CO",
-    noticeKey: "itb-mill-creek-prv-2026"
   }
 ];
 
