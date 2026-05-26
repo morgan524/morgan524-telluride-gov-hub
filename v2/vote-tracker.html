@@ -2392,6 +2392,12 @@ const TOMV_2026 = ['pearson','magid','mogenson','duprey','gomez','arguelles','ja
 // council at the time of each vote is simply absent from that
 // vote's `votes` object (renders as "Not on Council").
 const TOMV_2025 = ['prohaska','pearson','magid','mogenson','duprey','gomez','arguelles','gilbride'];
+// 2024 had the same 7 voting members as pre-Jul 2025 (Prohaska Mayor,
+// Pearson Mayor Pro Tem, Gilbride, Mogenson, Duprey, Magid, Gomez).
+// Arguelles was elected to replace Gilbride at the July 2025 election
+// and isn't on the 2024 council; she is omitted from this era's
+// `votes` maps and renders as "Not on Council".
+const TOMV_2024 = ['prohaska','pearson','magid','mogenson','duprey','gomez','gilbride'];
 
 const TOMV_VOTE_ITEMS = [
   /* ── January 7, 2026 — Special JOINT Meeting (MV + Telluride Town
@@ -2810,6 +2816,84 @@ const TOMV_VOTE_ITEMS = [
     tags:['Governance','Administrative'],
     outcome:'Passed', tally:'7-0',
     votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', gilbride:'Yes' },
+  },
+
+  /* ──────────────────────  2024  ──────────────────────────────
+     Roster: Prohaska (Mayor), Pearson (Mayor Pro Tem), Mogenson,
+     Gilbride, Duprey, Magid, Gomez (Rick). Same 7 members through
+     mid-2025. Arguelles wasn't elected until July 2025 (omitted
+     from 2024 votes — renders as "Not on Council"). */
+
+  /* ── January 18, 2024 — Prohaska absent; 6-0 / 5-1 votes. ── */
+  {
+    id:'mv2024-J1', date:'2024-01-18', year:2024,
+    meeting:'Mountain Village Town Council — Jan 18, 2024',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/40000/january_18-_2024_town_council_meeting_minutes.pdf',
+    title:'Re-Certify Mountain Village Promotional Association (MVPA) Common Consumption Area',
+    description:'Re-certified the Mountain Village Promotional Association and Common Consumption Area with the condition that the applicant shall provide an updated insurance certificate to the Clerk\'s office by July 16, 2024 to show coverage for the remainder of the 2024 calendar year.',
+    tags:['Land Use','Liquor'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ prohaska:'Absent', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', gilbride:'Yes' },
+  },
+  {
+    id:'mv2024-J2', date:'2024-01-18', year:2024,
+    meeting:'Mountain Village Town Council — Jan 18, 2024',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/40000/january_18-_2024_town_council_meeting_minutes.pdf',
+    title:'Ordinance Reenacting CDC §17.4.13.M with Corrections (Second Reading + Adoption)',
+    description:'Finally adopted an Ordinance reenacting CDC §17.4.13.M (Community Development Code) with corrections on second reading.',
+    tags:['Land Use','Administrative'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ prohaska:'Absent', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', gilbride:'Yes' },
+  },
+  {
+    id:'mv2024-J3', date:'2024-01-18', year:2024,
+    meeting:'Mountain Village Town Council — Jan 18, 2024',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/40000/january_18-_2024_town_council_meeting_minutes.pdf',
+    title:'Resolution — CUP for Wok of Joy Food Trailer at Conference Center Plaza (Lot OS 3XRR) — SPLIT 5-1, Mogenson Opposed',
+    description:'Approved a Resolution granting a Conditional Use Permit for a mobile food truck/trailer (Wok of Joy) to be located in Conference Center Plaza on Tract OS 3XRR, with 7 conditions: (1) CUP valid 3 years (expires Dec 31, 2026); (2) building permit required for electric power source; (3) plaza license agreement + monthly electric billing; (4) Telluride Fire Protection District compliance per IFC §319; (5) avoid driving over underground parking structures; (6) BDAC/DRB/Outreach/CommDev review of vehicle design; (7) execute plaza license agreement before operation. Mogenson dissented.',
+    tags:['Land Use','Business Development'],
+    outcome:'Passed', tally:'5-1',
+    votes:{ prohaska:'Absent', pearson:'Yes', magid:'Yes', mogenson:'No', duprey:'Yes', gomez:'Yes', gilbride:'Yes' },
+  },
+  {
+    id:'mv2024-J4', date:'2024-01-18', year:2024,
+    meeting:'Mountain Village Town Council — Jan 18, 2024',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/40000/january_18-_2024_town_council_meeting_minutes.pdf',
+    title:'Resolution DENYING CUP for Driveway Access on Lot OSP-18A to Lot SS811 — SPLIT 5-1, Pearson Opposed',
+    description:'Denied a Resolution that would have approved a Conditional Use Permit for a driveway access on Lot OSP-18A to the adjacent Lot SS811. Mayor Pro Tem Pearson dissented (would have approved the CUP).',
+    tags:['Land Use'],
+    outcome:'Passed', tally:'5-1',
+    votes:{ prohaska:'Absent', pearson:'No', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', gilbride:'Yes' },
+  },
+  {
+    id:'mv2024-J5', date:'2024-01-18', year:2024,
+    meeting:'Mountain Village Town Council — Jan 18, 2024',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/40000/january_18-_2024_town_council_meeting_minutes.pdf',
+    title:'Ordinance — Vested Property Rights Extension for Lot 27A, TBD Lost Creek Lane (CDC §17.4.17) — First Reading',
+    description:'Approved on first reading an Ordinance extending Vested Property Rights at Lot 27A, Parcel 3R, TBD Lost Creek Lane from April 6, 2024 to April 6, 2027, pursuant to CDC §17.4.17. Conditions: (1) Owner to revise documents to include vested-rights statement per C.R.S. §24-68-101; (2) Town to publish newspaper notice within 14 days; (3) all previous 2022 Design Review conditions remain applicable. Set second reading for February 15, 2024.',
+    tags:['Land Use','Vested Rights'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ prohaska:'Absent', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', gilbride:'Yes' },
+  },
+  {
+    id:'mv2024-J6', date:'2024-01-18', year:2024,
+    meeting:'Mountain Village Town Council — Jan 18, 2024',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/40000/january_18-_2024_town_council_meeting_minutes.pdf',
+    title:'Settlement Agreement with Ken Alexander re Temporary Restraining Order (MV Municipal Court Case 24M01) — SPLIT 5-1, Duprey Opposed',
+    description:'Approved a Settlement Agreement with Ken Alexander regarding the temporary restraining order in Mountain Village Municipal Court Case No. 24M01, with the understanding that this settlement does not address fines/penalties (to be assessed later). Pete Duprey dissented.',
+    tags:['Legal','Land Use'],
+    outcome:'Passed', tally:'5-1',
+    votes:{ prohaska:'Absent', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'No', gomez:'Yes', gilbride:'Yes' },
+  },
+  {
+    id:'mv2024-J7', date:'2024-01-18', year:2024,
+    meeting:'Mountain Village Town Council — Jan 18, 2024',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/40000/january_18-_2024_town_council_meeting_minutes.pdf',
+    title:'Ordinance — Helicopter Landing within Town (New MV Municipal Code Chapter 10.13) — First Reading',
+    description:'Approved on first reading an Ordinance adding new Chapter 10.13 to the Mountain Village Municipal Code concerning helicopters, with the change that helicopters cannot land any place that is not Town-approved. Set second reading, public hearing, and final Council vote for February 15, 2024.',
+    tags:['Public Safety','Administrative'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ prohaska:'Absent', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', gilbride:'Yes' },
   },
 
   /* ── March 20, 2025 — Mayor Prohaska arrived 2:06 pm; early
@@ -4669,7 +4753,7 @@ function switchEntity() {
   } else if (ent === 'planning') {
     years = [['', 'All years'], ['2026','2026'], ['2025','2025'], ['2024','2024']];
   } else if (ent === 'tomv') {
-    years = [['', 'All years'], ['2026','2026'], ['2025','2025']];
+    years = [['', 'All years'], ['2026','2026'], ['2025','2025'], ['2024','2024']];
   } else {
     years = [['', 'All years'], ['2024','2024']];
   }
@@ -4916,8 +5000,11 @@ function renderTomvHeatmap() {
     ? [{ label:'2026 Mountain Village Town Council', members:TOMV_2026, yearFilter:2026 }]
     : yearSel === '2025'
     ? [{ label:'2025 Mountain Village Town Council', members:TOMV_2025, yearFilter:2025 }]
+    : yearSel === '2024'
+    ? [{ label:'2024 Mountain Village Town Council', members:TOMV_2024, yearFilter:2024 }]
     : [{ label:'2026 Mountain Village Town Council', members:TOMV_2026, yearFilter:2026 },
-       { label:'2025 Mountain Village Town Council', members:TOMV_2025, yearFilter:2025 }];
+       { label:'2025 Mountain Village Town Council', members:TOMV_2025, yearFilter:2025 },
+       { label:'2024 Mountain Village Town Council', members:TOMV_2024, yearFilter:2024 }];
 
   let html = '';
   eras.forEach(era => {
