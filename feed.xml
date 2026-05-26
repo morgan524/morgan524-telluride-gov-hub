@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 May 2026 02:43:40 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 09:45:58 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Design Review Board — 2026-06-04</title>
@@ -128,6 +128,16 @@ The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted 
 The commissioners will handle two septic system variances in Ophir, consider ending a deed restriction on Society Drive, and hold a work session with Placerville residents about corridor beautification and Fire District expansion plans.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>Colorado’s largest gas spill contaminates Southern Ute drinking water</title>
+      <link>https://www.telluridenews.com/news/article_a401808e-d76b-453a-9470-28c44d15bc85.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_a401808e-d76b-453a-9470-28c44d15bc85.html</guid>
+      <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/9c/59c7ef9a-77e8-4717-8ead-905c0bdf40a1/6a152a6cde813.image.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />A Houston-based company's leaking 40-year-old gas pipeline contaminated Southern Ute drinking water wells with what the tribe estimates at 200,000 gallons of gasoline, discovered by a rancher's cows in December. Enterprise Products disputes the spill size and says it's working with agencies on cleanup, but tribal leaders and county officials say the response has been too slow.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/9c/59c7ef9a-77e8-4717-8ead-905c0bdf40a1/6a152a6cde813.image.png" medium="image" />
+      <category>Telluride Times</category>
+      <category>infrastructure</category>
     </item>
     <item>
       <title>‘He says “yes” to everything.’</title>
@@ -402,16 +412,6 @@ The commissioners will handle two septic system variances in Ophir, consider end
       <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/e8/de8a56cd-ebcd-4b1f-aff4-159bfe4a09aa/6a06d97e6bb3d.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Filmmakers Beth and George Gage will premiere their documentary "InVINCEble" at Mountainfilm, telling the story of USC basketball player Vince Iwuchukwu who suffered cardiac arrest during practice at age 18. The film explores sudden cardiac arrest among young athletes and the mental challenges when health issues threaten sports careers.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/e8/de8a56cd-ebcd-4b1f-aff4-159bfe4a09aa/6a06d97e6bb3d.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>arts-culture</category>
-    </item>
-    <item>
-      <title>Local filmmaker Ken Bailey honors Telluride��s beloved Lissa Margetts</title>
-      <link>https://www.telluridenews.com/arts_and_entertainment/article_d78ea7ff-7d61-460a-ba50-81a4dfed4e55.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/arts_and_entertainment/article_d78ea7ff-7d61-460a-ba50-81a4dfed4e55.html</guid>
-      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/56/1569aecb-bff4-4012-84f5-d88df962005b/6a06d485894c5.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Ken Bailey finished a documentary about Lissa Margetts, who ran the Rocky Mountain Ark Wildlife Rehabilitation Center and cared for thousands of injured animals before her death in 2018. He found forgotten footage from 20+ years ago and turned it into "The Mountain Ark," screening at Mountainfilm.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/56/1569aecb-bff4-4012-84f5-d88df962005b/6a06d485894c5.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>arts-culture</category>
     </item>

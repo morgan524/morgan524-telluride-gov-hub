@@ -174,6 +174,18 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Colorado’s largest gas spill contaminates Southern Ute drinking water",
+    source: "Telluride Times",
+    date: "May 26, 2026",
+    firstSeen: "2026-05-26",
+    newsTopic: "infrastructure",
+    copy: "A Houston-based company's leaking 40-year-old gas pipeline contaminated Southern Ute drinking water wells with what the tribe estimates at 200,000 gallons of gasoline, discovered by a rancher's cows in December. Enterprise Products disputes the spill size and says it's working with agencies on cleanup, but tribal leaders and county officials say the response has been too slow.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_a401808e-d76b-453a-9470-28c44d15bc85.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/9c/59c7ef9a-77e8-4717-8ead-905c0bdf40a1/6a152a6cde813.image.png",
+    imgHiRes: true
+  },
+  {
     title: "‘He says “yes” to everything.’",
     source: "Telluride Times",
     date: "May 24, 2026",
@@ -1847,7 +1859,50 @@ const KOTO_COMMUNITY_EVENTS = [
 ];
 
 const WILKINSON_EVENTS = [
-
+  {
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/15223207?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-05-26T10:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+  },
+  {
+    title: "I Heart Art",
+    link: "https://telluridelibrary.libcal.com/event/15072183?hs=a",
+    description: "2:30 PM – 5:00 PM · Looking for a fun and enriching way to spend your afternoons? Join us Tuesdays for I Heart Art, designed especially for kids aged 5-12!  &iquest;Buscas una manera divertida de pasar tus tardes? &iexcl;Unete a nuestro programa extracurricular, dise&ntilde;ado especialmente para ni&ntilde;os de 5 a 12 a&ntilde;os!",
+    pubDate: "2026-05-26T14:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Kids Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1761421573.png"
+  },
+  {
+    title: "Screening of Skateboard",
+    link: "https://telluridelibrary.libcal.com/event/16560177?hs=a",
+    description: "5:30 PM – 7:00 PM · Skateboard (1978, PG, 97 min.) was the first feature film to depict the height of the 70s skateboard craze. Many refer to it as the Bad News Bears of the sport. It's star studded cast includes Alan Garfield , 70s teen idol Leif Garrett , skateboarding legend Tony Alva , and iconic female freestyler and member of the Skateboarding Hall of Fame Ellen O'Neal . It&#39;s also the first film Telluride local George Gage ever made! (George is also the founder of the legendary Billy Ball soft ball team .) This screening is free and open to the public, but a hat will be passed for donations to a fund to provide scholarships (or is is skaterships?) for kids who want to attend Telluride Skateboard Camp and could use a little financial help. …",
+    pubDate: "2026-05-26T17:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_28_08_48_32.webp"
+  },
+  {
+    title: "Women&#039;s Empowerment Group",
+    link: "https://telluridelibrary.libcal.com/event/16270083?hs=a",
+    description: "5:30 PM – 7:00 PM · Join Kaity Swick and Sally Harris Porter with Collaborative Trauma Solutions in a women's empowerment group focused on fostering connections with like-minded women and developing deeper connections with yourselves and each other. We will incorporate somatic practices, mindfulness exercises and practical tools rooted in mind-body awareness. This will be held in a group setting and will be a trauma-informed and non-judgmental space created to strengthen community and provide a safe space to express yourself. Kaity and Sally will guide the group with relevant topics and supportive tools, so all you have to do is show up with an open mind. Please sign up here if you are interested: https://forms.gle/ RLxaexLJar4Vpnhp7 Kaity Swick, LPCC - Kaity works with children and adults as a Mental Health Counselor and supports the community as an Early Childhood Mental Health Consultant. …",
+    pubDate: "2026-05-26T17:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_23_14_44_28.jpg"
+  }
 ];
 
 const HUMANE_SOCIETY_ANIMALS = [
@@ -1916,50 +1971,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "On Display: Layers of Faces and Life-Paintings by Ruth Higdon and Julie Ahern",
-    link: "https://events.ourayridgwayevents.com/event/layers-of-faces-and-life-paintings-by-ruth-higdon-and-julie-ahern",
-    description: "A duo exhibition of new works by local painters Julie Ahern and Ruth Higdon. More info decker@ridgwayfuse.org",
-    pubDate: "2026-05-25T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52709680184864/huge/bf651b7d434184420bcaf9702ff358cbd88d3b9e.jpg"
-  },
-  {
-    title: "Senior Lunch by Neighbor to Neighbor",
-    link: "https://www.ourayneighbor.com/services",
-    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
-    pubDate: "2026-05-25T18:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
-  },
-  {
-    title: "Basketball and Volleyball Tournament - Hot Springs Style",
-    link: "https://events.ourayridgwayevents.com/event/basketball-and-volleyball-tournament-hot-springs-style",
-    description: "🏀🏐 Take on the competition this Memorial Day at the Ouray Hot Springs! Get ready for a fun, fast-paced showdown at the Basketball & Volleyball Tournament – Hot Springs Style! Join us on May 25 for a casual basketball and volleyball tournament. Signups begin at noon, with games happening in the activity pool and shallow pool around 2 PM. Grab your friends and enjoy a fun afternoon at the pool!",
-    pubDate: "2026-05-25T19:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52701346021520/huge/63080493e21c290f2831737b304b5c49b5e1128c.jpg"
-  },
-  {
-    title: "RIDGWAY WRECKING CREW",
-    link: "https://coloradoboydepot.com/calendar/",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-05-25T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
   {
     title: "On Display: Layers of Faces and Life-Paintings by Ruth Higdon and Julie Ahern",
     link: "https://events.ourayridgwayevents.com/event/layers-of-faces-and-life-paintings-by-ruth-higdon-and-julie-ahern",
@@ -2916,6 +2927,50 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52444204372144/huge/b898ad2e5fd77ff7c0562156e047d7da5afebb95.jpg"
+  },
+  {
+    title: "Pilates Mat",
+    link: "https://ridgwaypilates.punchpass.com/catalogs/300",
+    description: "All Levels Pilates Mat class. Classical sequence Int to challenge, strengthen and stretch you wehole body. Every Thursday at 9:30am. Pricing Four lessons for $120 Eight lessons for $200 Become a member and pay $100/month to attend weekly. Purchase a pass here: https://ridgwaypilates.punchpass.com/catalogs/300 Class is limited to six people. Mats are included. Please wear socks, put your hair up and choose clothing free of metal.",
+    pubDate: "2026-06-11T15:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
+  },
+  {
+    title: "On Display: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
+    link: "https://events.ourayridgwayevents.com/event/painting-evolution-of-moments-with-wild-horses-1999-2026-artist-karen-keene-day",
+    description: "Enjoy nearly 3 decades or work from local painter, Karen Keene Day. Info decker@ridgwayfuse.org",
+    pubDate: "2026-06-11T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52709642938173/huge/e2c21f0b2c1fb10c06c021e9b9d55a9ea535bccc.jpg"
+  },
+  {
+    title: "Ouray Mountain Air Music Series",
+    link: "www.ouraymusicseries.com",
+    description: "Set in the heart of Ouray, the Mountain Air Music Series has become a signature summer tradition, offering a welcoming space for families, friends, and visitors of all ages to gather and unwind. Surrounded by breathtaking mountain views, the series creates an atmosphere that is equal parts relaxing and energizing—where laughter, community spirit, and live music blend seamlessly in one unforgettable outdoor experience. What makes the series truly special is the lineup of talented bands who bring both heart and authenticity to the stage. Each group shares a deep passion for music and a genuine appreciation for performing in small communities like Ouray. With diverse styles ranging across genres, the concerts draw loyal fans who follow their favorite bands, as well as a wide mix of local and regional music lovers. …",
+    pubDate: "2026-06-12T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52951532621249/huge/45a880540db97b7292e967c6f16b980532044c29.jpg"
+  },
+  {
+    title: "THIRSTY THURSDAY - Game Night at Floating Lotus",
+    link: "www.FloatingLotusBrewery.com",
+    description: "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who came to have a good time. Happening 7-9pm every week",
+    pubDate: "2026-06-12T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg"
   }
 ];
 
