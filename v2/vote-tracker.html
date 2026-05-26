@@ -209,6 +209,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <label class="filter-label">Entity</label>
       <select class="filter-select" id="filter-entity" onchange="switchEntity()">
         <option value="telluride">Town of Telluride</option>
+        <option value="tomv">Mountain Village Town Council</option>
         <option value="bocc">San Miguel BOCC</option>
         <option value="planning">San Miguel Planning Commission</option>
       </select>
@@ -2350,6 +2351,347 @@ const PC_VOTE_ITEMS = [
 
 ];
 
+/* ─── Town of Mountain Village Town Council ─────────────────── */
+// Source: minutes downloaded by hand from
+//   https://townofmountainvillage.com/government/town-council/town-council/
+// (the website is gated by Cloudflare Bot Management — direct
+// scraping returns 403, even via the project's existing CF Worker
+// proxy.  PDF text is extractable with pdfjs once the PDFs are
+// stored locally.)
+//
+// Officer rotation during 2026 (visible in the heatmap):
+//   - Mayor Martinique Prohaska resigned between Jan 7 and Jan 25.
+//   - Jan 28 special meeting: Scott Pearson elected Mayor; Tucker
+//     Magid elected Mayor Pro Tem.
+//   - Feb 19 regular meeting: Dan Jansen appointed to the vacant
+//     seat (Prohaska's seat).
+//
+// `votes` is keyed by lowercase last name. `Recused` is used for
+// formally-stated recusals (e.g., Prohaska Jan 7 joint meeting,
+// Arguelles before the labor-dispute discussion). `Absent` covers
+// "left early" or "not present".
+const TOMV_ALL_MEMBERS = [
+  { id:'pearson',   name:'Scott Pearson',          shortName:'Pearson',     title:'Mayor (as of Jan 28, 2026); prev Mayor Pro Tem' },
+  { id:'magid',     name:'Tucker Magid',           shortName:'Magid',       title:'Mayor Pro Tem (as of Jan 28, 2026)' },
+  { id:'mogenson',  name:'Harvey Mogenson',        shortName:'Mogenson',    title:'Council Member' },
+  { id:'duprey',    name:'Pete Duprey',            shortName:'Duprey',      title:'Council Member' },
+  { id:'gomez',     name:'Huascar E. (Rick) Gomez', shortName:'Gomez',      title:'Council Member' },
+  { id:'arguelles', name:'Alline Arguelles',       shortName:'Arguelles',   title:'Council Member' },
+  { id:'jansen',    name:'Dan Jansen',             shortName:'Jansen',      title:'Council Member (appointed Feb 19, 2026 to fill vacancy)' },
+  { id:'prohaska',  name:'Martinique Prohaska',    shortName:'Prohaska',    title:'Mayor (resigned ~late Jan 2026)' },
+];
+const TOMV_2026 = ['pearson','magid','mogenson','duprey','gomez','arguelles','jansen','prohaska'];
+
+const TOMV_VOTE_ITEMS = [
+  /* ── January 7, 2026 — Special JOINT Meeting (MV + Telluride Town
+       Council) — Community Support During TSG Labor Dispute.
+       MV attendance: Pearson (Mayor Pro Tem presiding), Mogenson,
+       Duprey, Magid, Gomez, Arguelles (recused before labor-
+       dispute discussion).  Mayor Prohaska RECUSED.  Jansen had
+       not yet been appointed. ── */
+  {
+    id:'mv2026-01', date:'2026-01-07', year:2026,
+    meeting:'Mountain Village + Telluride Joint Special — Jan 7, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48343/january_7-_2026_special_joint_town_council_meeting_minutes.pdf',
+    title:'Resolution — Appropriate $100,000 to 2026 Budget for the Telluride Good Neighbor Fund',
+    description:'In a special joint meeting of the MV and Telluride Town Councils held during the TSG (Telluride Ski & Golf) labor dispute, the MV Town Council appropriated additional sums of money to the 2026 budget in support of the Telluride Good Neighbor Fund in the amount of $100,000. Mayor Prohaska recused; Arguelles recused herself prior to the labor-dispute discussion (separate matter).',
+    tags:['Budget & Finance','Community Support'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes', prohaska:'Recused' },
+  },
+
+  /* ── January 15, 2026 — Regular Meeting.  Attendance: Pearson
+       (Mayor Pro Tem presiding), Mogenson, Duprey, Magid, Gomez,
+       Arguelles. Prohaska absent. Gomez left at 2:47 pm (some
+       items voted 5-0 thereafter).  Jansen not yet appointed. ── */
+  {
+    id:'mv2026-02', date:'2026-01-15', year:2026,
+    meeting:'Mountain Village Town Council — Jan 15, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48344/january_15-_2026_town_council_meeting_minutes.pdf',
+    title:'Re-Certify Mountain Village Promotional Association (MVPA) Common Consumption Area',
+    description:'Re-certified the Mountain Village Promotional Association and Common Consumption Area, with conditions: (1) applicant shall provide an updated insurance certificate to the Clerk\'s Office by June 1, 2026 to show coverage for the remainder of the 2026 calendar year; (2) applicant will provide the renewed MVPA-TSG Open Space License Agreement; (3) the hours of operation will follow the gondola schedule.',
+    tags:['Land Use','Liquor'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes', prohaska:'Absent' },
+  },
+  {
+    id:'mv2026-03', date:'2026-01-15', year:2026,
+    meeting:'Mountain Village Town Council — Jan 15, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48344/january_15-_2026_town_council_meeting_minutes.pdf',
+    title:'Ordinance Repealing COVID-19 Ordinances and Resolutions — First Reading',
+    description:'Approved on first reading an Ordinance repealing the Town\'s COVID-19 ordinances and resolutions, and set the second-reading public hearing and final Council vote for February 19, 2026.',
+    tags:['Administrative','Public Health'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Absent', arguelles:'Yes', prohaska:'Absent' },
+  },
+  {
+    id:'mv2026-04', date:'2026-01-15', year:2026,
+    meeting:'Mountain Village Town Council — Jan 15, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48344/january_15-_2026_town_council_meeting_minutes.pdf',
+    title:'Private Road Special Use Permit with USFS — Water Tank Access',
+    description:'Approved the Private Road Special Use Permit (OMB No. 0596-0082) with the U.S. Department of Agriculture/Forest Service for water tank access, and authorized the Mayor Pro Tem to sign it.',
+    tags:['Land Use','Federal','Infrastructure'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes', prohaska:'Absent' },
+  },
+  {
+    id:'mv2026-05', date:'2026-01-15', year:2026,
+    meeting:'Mountain Village Town Council — Jan 15, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48344/january_15-_2026_town_council_meeting_minutes.pdf',
+    title:'Ordinance Prohibiting Graywater Use + Treatment Works in Town — First Reading',
+    description:'Approved on first reading an Ordinance prohibiting the use of graywater and the installation of graywater treatment works within municipal boundaries; set the second-reading, public hearing, and final Council vote for February 19, 2026.',
+    tags:['Land Use','Water','Climate'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Absent', arguelles:'Yes', prohaska:'Absent' },
+  },
+  {
+    id:'mv2026-06', date:'2026-01-15', year:2026,
+    meeting:'Mountain Village Town Council — Jan 15, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48344/january_15-_2026_town_council_meeting_minutes.pdf',
+    title:'Ordinance — Density Transfer + Rezone for Lot 42B, Unit 41C (CDC §17.4.9 & §17.4.10)',
+    description:'Adopted an Ordinance regarding a Density Transfer and Rezone application, pursuant to CDC §17.4.9 & §17.4.10, to transfer 0.25 multi-family density units (0.25 person equivalent) from the Mountain Village Density Bank to Lot 42B, Unit 41C. Conditions: (1) approval conditional until density units are obtained — expires if not obtained within 18 months; (2) once density obtained, applicant must go through Class 1 Application to transfer density into their name before transfer onto Unit 41C; (3) applicant shall work with Blue Mesa HOA to update declarations to recognize Unit 41C as one Lodge unit (declaration amendment must occur prior to and as a condition of the density transfer); (4) owner of record of density in the bank shall be responsible for all dues, fees, and taxes associated with the assigned density and zoning until transferred.',
+    tags:['Land Use','Density Transfer','Rezone'],
+    outcome:'Passed', tally:'5-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Absent', arguelles:'Yes', prohaska:'Absent' },
+  },
+  {
+    id:'mv2026-07', date:'2026-01-15', year:2026,
+    meeting:'Mountain Village Town Council — Jan 15, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48344/january_15-_2026_town_council_meeting_minutes.pdf',
+    title:'Resolution — Height Variance at Lot 165-3, 130 Cortina Drive (+19 ft Max / +3 ft Avg Above Allowable)',
+    description:'Approved a Resolution granting a height variance allowing a maximum height of 19 feet above the allowable and an average height of 3 feet above the allowable, per the CDC height restrictions for portions of a new single-family detached condominium located at Lot 165 Unit 3 / 130 Cortina Drive. Conditions: (1) variance valid only with the design presented for Initial DRB review on Jan 8, 2026, and only for the 18-month period of that design approval (with one allowable 6-month extension); (2) variance specific to the area described in staff memo figure 6 and represented in DRB-approved drawings.',
+    tags:['Land Use','Variance'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes', prohaska:'Absent' },
+  },
+
+  /* ── January 25, 2026 — Special meeting devoted entirely to
+       executive session re Mayor Prohaska's recent resignation,
+       CORA procedures, and a Town-Manager personnel matter.  No
+       substantive open-session votes were taken (not in tracker). */
+
+  /* ── January 28, 2026 — Special Meeting.  Officer elections to
+       fill the Mayor + Mayor Pro Tem vacancies created by
+       Prohaska's resignation. ── */
+  {
+    id:'mv2026-08', date:'2026-01-28', year:2026,
+    meeting:'Mountain Village Town Council Special — Jan 28, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48346/january_28-_2026_special_town_council_meeting_minutes.pdf',
+    title:'Officer Election — Scott Pearson elected Mayor',
+    description:'Council unanimously elected Scott Pearson to the position of Mayor following Martinique Prohaska\'s resignation. Mayor Pearson presided for the remainder of the meeting.',
+    tags:['Governance'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2026-09', date:'2026-01-28', year:2026,
+    meeting:'Mountain Village Town Council Special — Jan 28, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48346/january_28-_2026_special_town_council_meeting_minutes.pdf',
+    title:'Officer Election — Tucker Magid elected Mayor Pro Tem',
+    description:'Council unanimously elected Tucker Magid to the position of Mayor Pro Tem. Oaths of office were administered by Town Clerk Susan Johnston.',
+    tags:['Governance'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+
+  /* ── February 19, 2026 — Regular Meeting.  Attendance: Pearson
+       (now Mayor), Magid (Mayor Pro Tem), Mogenson, Duprey, Gomez,
+       Arguelles. Jansen appointed mid-meeting (Item 18). ── */
+  {
+    id:'mv2026-10', date:'2026-02-19', year:2026,
+    meeting:'Mountain Village Town Council — Feb 19, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48468/february_19-_2026_town_council_meeting_minutes.pdf',
+    title:'Consent Agenda — Voter Service & Polling Center IGA + Acting Town Manager Contract for Michelle Bulson',
+    description:'Consent agenda items including: approval of January 2026 meeting minutes; an intergovernmental agreement between San Miguel County and the Town designating the Town as an alternate Voter Service and Polling Center (VSPC) in the event of an emergency; an employment contract for Michelle Bulson as Acting Town Manager. Item 4g (Telski Lift Ticket Kiosks License) was pulled to a separate vote.',
+    tags:['Intergovernmental','Administrative'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2026-11', date:'2026-02-19', year:2026,
+    meeting:'Mountain Village Town Council — Feb 19, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48468/february_19-_2026_town_council_meeting_minutes.pdf',
+    title:'License Agreement with Telluride Ski & Golf — Lift Ticket Kiosks on Town Property',
+    description:'Approved the License Agreement with Telluride Ski & Golf to locate lift-ticket kiosks on Town Property, with three conditions: (1) clarification of the term; (2) typo correction in section 3 — "liable form" to "liable for"; (3) language change — "good condition" to "original condition".',
+    tags:['Land Use','Economic Development'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2026-12', date:'2026-02-19', year:2026,
+    meeting:'Mountain Village Town Council — Feb 19, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48468/february_19-_2026_town_council_meeting_minutes.pdf',
+    title:'Ordinance Repealing COVID-19 Ordinances and Resolutions — Second Reading + Adoption',
+    description:'After a public hearing with no public comment, finally adopted the Ordinance repealing the Town\'s COVID-19 ordinances and resolutions on second reading.',
+    tags:['Administrative','Public Health'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2026-13', date:'2026-02-19', year:2026,
+    meeting:'Mountain Village Town Council — Feb 19, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48468/february_19-_2026_town_council_meeting_minutes.pdf',
+    title:'Ordinance Prohibiting Graywater Use + Treatment Works — Second Reading + Adoption',
+    description:'After a public hearing (public comment from Jonathan Greenspan and Jolana Vanek), finally adopted the Ordinance prohibiting the use of graywater and the installation of graywater treatment works within municipal boundaries on second reading.',
+    tags:['Land Use','Water','Climate'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2026-14', date:'2026-02-19', year:2026,
+    meeting:'Mountain Village Town Council — Feb 19, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48468/february_19-_2026_town_council_meeting_minutes.pdf',
+    title:'Resolution — Purchase of 5 Acres from Alexander Ranch LLLP (and Authorized Signer)',
+    description:'Adopted a Resolution approving the Purchase of Real Property (5 acres of land) from Alexander Ranch LLLP, and appointed an authorized signer for closing.',
+    tags:['Land Use','Real Estate'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2026-15', date:'2026-02-19', year:2026,
+    meeting:'Mountain Village Town Council — Feb 19, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48468/february_19-_2026_town_council_meeting_minutes.pdf',
+    title:'Declaration of Restrictive Covenant — Alexander Ranch LLLP 5-Acre Parcel',
+    description:'Approved the Declaration of Restrictive Covenant included in the packet and the recordation of the same against the 5 acres of land being purchased from Alexander Ranch LLLP.',
+    tags:['Land Use','Real Estate'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2026-16', date:'2026-02-19', year:2026,
+    meeting:'Mountain Village Town Council — Feb 19, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48468/february_19-_2026_town_council_meeting_minutes.pdf',
+    title:'Resolution — Adopt Mountain Village Community Resilience ADVISORY Plan (SPLIT 5-1, Mogenson Opposed)',
+    description:'Adopted a Resolution adopting the Mountain Village Community Resilience Plan, with a friendly amendment to add "Advisory" to the title (renamed Mountain Village Community Resilience Advisory Plan). Harvey Mogenson was the sole dissenting vote.',
+    tags:['Climate','Public Safety','Land Use'],
+    outcome:'Passed', tally:'5-1',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'No', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2026-17', date:'2026-02-19', year:2026,
+    meeting:'Mountain Village Town Council — Feb 19, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48468/february_19-_2026_town_council_meeting_minutes.pdf',
+    title:'Ratify Engagement of Wheeler Trigg O\'Donnell LLP — Internal Investigation',
+    description:'Ratified the hiring of Wheeler Trigg O\'Donnell LLP to conduct an internal investigation for the Town, and the engagement letter previously signed by the Mayor for that purpose.',
+    tags:['Administrative','Legal'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2026-18', date:'2026-02-19', year:2026,
+    meeting:'Mountain Village Town Council — Feb 19, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48468/february_19-_2026_town_council_meeting_minutes.pdf',
+    title:'Council Appointment — Dan Jansen to Fill Vacant Council Seat',
+    description:'Appointed Dan Jansen to the recently vacated Town Council seat (Prohaska\'s seat). Oath of office administered by Town Clerk Susan Johnston. Six applicants were considered: Turner James, Dan Jansen, Heather Knox, and Jonathan Greenspan (plus 2 others). Public comment from Susanne Connolly, Jolana Vanek, and Paul Savage.',
+    tags:['Governance'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+
+  /* ── March 19, 2026 — Regular Meeting.  Full 7-member council
+       now seated (Jansen added Feb 19).  Many 7-0 votes. ── */
+  {
+    id:'mv2026-19', date:'2026-03-19', year:2026,
+    meeting:'Mountain Village Town Council — Mar 19, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48737/march_19-_2026_town_council_meeting_minutes.pdf',
+    title:'VCA Resident Advisory Committee — Framework Amendments (Public Meetings + Doors Unlocked)',
+    description:'Sitting as the Mountain Village Housing Authority, approved the revised Village Court Apartments (VCA) Resident Committee Framework with two amendments: (1) meetings must be public and the doors must remain unlocked; (2) Huascar E. (Rick) Gomez added as the Council appointee.',
+    tags:['Housing','Governance'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes', jansen:'Yes' },
+  },
+  {
+    id:'mv2026-20', date:'2026-03-19', year:2026,
+    meeting:'Mountain Village Town Council — Mar 19, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48737/march_19-_2026_town_council_meeting_minutes.pdf',
+    title:'Resolution — Revise 2026 Village Court Apartments Rent and Fee Schedule',
+    description:'Sitting as the Mountain Village Housing Authority, adopted a Resolution revising the 2026 Village Court Apartments Rent and Fee Schedule to reflect a change in the fee for in-office credit card payments.',
+    tags:['Housing','Budget & Finance'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes', jansen:'Yes' },
+  },
+  {
+    id:'mv2026-21', date:'2026-03-19', year:2026,
+    meeting:'Mountain Village Town Council — Mar 19, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48737/march_19-_2026_town_council_meeting_minutes.pdf',
+    title:'First Amended Maintenance Obligations Agreement — Town + See Forever Village 1',
+    description:'Approved the first Amended and Reinstated Agreement Regarding Maintenance Obligations between the Town and the See Forever Village Owners Association, Inc.',
+    tags:['Land Use','Administrative'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes', jansen:'Yes' },
+  },
+  {
+    id:'mv2026-22', date:'2026-03-19', year:2026,
+    meeting:'Mountain Village Town Council — Mar 19, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48737/march_19-_2026_town_council_meeting_minutes.pdf',
+    title:'IGA with SMART — Remittance of Lift Tax Revenue',
+    description:'Approved the Intergovernmental Agreement for Remittance of Lift Tax Revenue between the Town and the San Miguel Authority for Regional Transportation (SMART).',
+    tags:['Intergovernmental','Tax','Infrastructure'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes', jansen:'Yes' },
+  },
+  {
+    id:'mv2026-23', date:'2026-03-19', year:2026,
+    meeting:'Mountain Village Town Council — Mar 19, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48737/march_19-_2026_town_council_meeting_minutes.pdf',
+    title:'Amended Bluegrass Festival Agreement (2026 – 2030) — Telluride Bluegrass Festival, Inc.',
+    description:'Approved an Amended and Restated Agreement between the Town of Mountain Village and the Telluride Bluegrass Festival, Inc. regarding the production of the Bluegrass Festival for 2026 through 2030.',
+    tags:['Arts & Culture','Economic Development'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes', jansen:'Yes' },
+  },
+  {
+    id:'mv2026-24', date:'2026-03-19', year:2026,
+    meeting:'Mountain Village Town Council — Mar 19, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48737/march_19-_2026_town_council_meeting_minutes.pdf',
+    title:'Ordinance — CDC Amendments for Compliance with Colorado Wildfire Resiliency Code (First Reading)',
+    description:'Approved on first reading an Ordinance amending the Community Development Code: changes to CDC §17.5.6 (Building Design) and addition of §17.7.22 (Colorado Wildfire Resiliency Code, CWRC). Set the second-reading, public hearing, and final Council vote for April 23, 2026, with an effective date of July 1, 2026.',
+    tags:['Wildfire','Land Use','Public Safety'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes', jansen:'Yes' },
+  },
+  {
+    id:'mv2026-25', date:'2026-03-19', year:2026,
+    meeting:'Mountain Village Town Council — Mar 19, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48737/march_19-_2026_town_council_meeting_minutes.pdf',
+    title:'Ordinance — Background Check Process for Massage Facility Operators, Owners, and Employees (First Reading)',
+    description:'Approved on first reading an Ordinance creating a background check process for prospective massage facility operators, owners, and employees. Set the second-reading, public hearing, and final Council vote for April 23, 2026.',
+    tags:['Public Safety','Administrative'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes', jansen:'Yes' },
+  },
+  {
+    id:'mv2026-26', date:'2026-03-19', year:2026,
+    meeting:'Mountain Village Town Council — Mar 19, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48737/march_19-_2026_town_council_meeting_minutes.pdf',
+    title:'Ordinance — Adjust Certain Penalties in Mountain Village Municipal Code (First Reading)',
+    description:'Approved on first reading an Ordinance adjusting certain penalties in the Mountain Village Municipal Code, and set the second-reading, public hearing, and final Council vote for April 23, 2026.',
+    tags:['Administrative','Public Safety'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes', jansen:'Yes' },
+  },
+  {
+    id:'mv2026-27', date:'2026-03-19', year:2026,
+    meeting:'Mountain Village Town Council — Mar 19, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48737/march_19-_2026_town_council_meeting_minutes.pdf',
+    title:'Resolution Concerning Records Retention Policies',
+    description:'Approved a Resolution concerning record retention policies for the Town.',
+    tags:['Administrative'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes', jansen:'Yes' },
+  },
+  {
+    id:'mv2026-28', date:'2026-03-19', year:2026,
+    meeting:'Mountain Village Town Council — Mar 19, 2026',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48737/march_19-_2026_town_council_meeting_minutes.pdf',
+    title:'Council Boards and Commissions Appointments — 2026 Slate',
+    description:'Approved the 2026 Council appointments to all 18 boards and committees: Budget & Finance (Duprey, Pearson, Mogenson); Collaborative Action for Immigrants (Gomez); Colorado Flights Alliance (Jansen); Telluride Conference Center Committee (Magid, Jansen); Ethics Commission (Duprey; Magid alt); Gondola Committee (Mogenson, Pearson, Magid); Housing Policy (Arguelles, Mogenson); Infrastructure (Duprey, Magid, Pearson); Mountain Village Business Development Advisory Group (Jansen, Duprey, Arguelles); Plaza Vending (Arguelles); Retail Strategy (Arguelles, Duprey — new committee); SMART (Magid, Mogenson; Jansen alt); Telluride Historical Museum (Arguelles); Telluride Tourism Board (Gomez); Transportation & Parking (Duprey); Ski Ranches Working Group (Mogenson, Pearson); Public Art Commission (Pearson); VCA Resident Committee Council Rep (Gomez).',
+    tags:['Governance'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes', jansen:'Yes' },
+  },
+
+];
 
 
 /* ─── Vote items ────────────────────────────────────────────── */
@@ -3368,6 +3710,7 @@ function renderHeatmapByCategory() {
   const ent = (document.getElementById('filter-entity') || {value:'telluride'}).value;
   if (ent === 'bocc')     { renderBoccHeatmap();     return; }
   if (ent === 'planning') { renderPlanningHeatmap();  return; }
+  if (ent === 'tomv')     { renderTomvHeatmap();      return; }
 
   const yearSel = document.getElementById('filter-year').value;
 
@@ -3514,6 +3857,11 @@ function switchEntity() {
     years = [['', 'All years'], ['2026','2026'], ['2025','2025'], ['2024','2024']];
   } else if (ent === 'planning') {
     years = [['', 'All years'], ['2026','2026'], ['2025','2025'], ['2024','2024']];
+  } else if (ent === 'tomv') {
+    // 2026 added first; prior years will be backfilled as the user
+    // downloads more minutes PDFs (TOMV's website is gated by
+    // Cloudflare Bot Mgmt, so we can't scrape directly).
+    years = [['', 'All years'], ['2026','2026']];
   } else {
     years = [['', 'All years'], ['2024','2024']];
   }
@@ -3749,12 +4097,118 @@ function renderPlanningHeatmap() {
   document.getElementById('heatmap-content').innerHTML = html;
 }
 
+/* ══════════════════════════════════════════════════════════════
+   MOUNTAIN VILLAGE TOWN COUNCIL HEATMAP
+══════════════════════════════════════════════════════════════ */
+function renderTomvHeatmap() {
+  const yearSel = document.getElementById('filter-year').value;
+  const catSel  = hmCatFilter;
+
+  const eras = yearSel === '2026'
+    ? [{ label:'2026 Mountain Village Town Council', members:TOMV_2026, yearFilter:2026 }]
+    : [{ label:'2026 Mountain Village Town Council', members:TOMV_2026, yearFilter:2026 }];
+
+  let html = '';
+  eras.forEach(era => {
+    let eraVotes = TOMV_VOTE_ITEMS.filter(v => {
+      if (v.year !== era.yearFilter) return false;
+      if (catSel && !v.tags.includes(catSel)) return false;
+      return true;
+    }).sort((a,b) => b.date.localeCompare(a.date));
+
+    if (!eraVotes.length) return;
+
+    const mems = era.members.map(id => TOMV_ALL_MEMBERS.find(m => m.id === id)).filter(Boolean);
+
+    const stats = {};
+    mems.forEach(m => {
+      let yes = 0, no = 0, total = 0, withMaj = 0;
+      eraVotes.forEach(v => {
+        const mv = v.votes[m.id];
+        if (mv === 'Yes' || mv === 'No') {
+          total++;
+          if (mv === 'Yes') yes++; else no++;
+          const onWinningSide = (v.outcome === 'Passed' && mv === 'Yes') ||
+                                (v.outcome === 'Failed'  && mv === 'No');
+          if (onWinningSide) withMaj++;
+        }
+      });
+      stats[m.id] = { yes, no, total, withMaj };
+    });
+
+    function pctClass(pct) {
+      return pct >= 80 ? 'hm-pct-high' :
+             pct >= 60 ? 'hm-pct-mid-high' :
+             pct >= 40 ? 'hm-pct-mid' : 'hm-pct-low';
+    }
+
+    html += `<div class="heatmap-wrap">
+      <div class="heatmap-title">${era.label}</div>
+      <table class="heatmap-table">
+        <thead>
+          <tr>
+            <th class="vote-col-th">Vote</th>
+            ${mems.map(m => `<th class="hm-member-header">${m.name}<span class="mem-role">${m.title}</span></th>`).join('')}
+            <th class="result-col-th">Result</th>
+          </tr>
+          <tr>
+            <td class="stats-label-cell">Summary</td>
+            ${mems.map(m => {
+              const s = stats[m.id];
+              const pct    = s.total ? Math.round(s.yes / s.total * 100) : 0;
+              const majPct = s.total ? Math.round(s.withMaj / s.total * 100) : 0;
+              return `<td class="hm-stats-cell ${pctClass(pct)}">
+                <span class="pct-num">${pct}%</span>
+                <span class="pct-frac">${s.yes}/${s.total} Yes</span>
+                <span class="pct-maj">${majPct}% w/ majority</span>
+                <span class="pct-total">${s.total} votes cast</span>
+              </td>`;
+            }).join('')}
+            <td style="background:var(--gray-100)"></td>
+          </tr>
+        </thead>
+        <tbody>`;
+
+    eraVotes.forEach(v => {
+      const dateStr = v.date.replace(/^(\d{4})-(\d{2})-(\d{2})$/, (_,y,mo,d) =>
+        `${['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+mo]} ${+d}`);
+      html += `<tr>
+        <td>
+          <a href="${v.minutesUrl}" target="_blank" style="text-decoration:none">
+            <span class="hm-vote-title">${v.title}</span>
+          </a>
+          <span class="hm-vote-meta">${dateStr} · ${v.tags.join(' · ')}</span>
+        </td>`;
+      mems.forEach(m => {
+        const mv = v.votes[m.id];
+        let cls = 'hm-nc', lbl = '';
+        if      (mv === 'Yes')     { cls = 'hm-yes-str'; lbl = 'YES'; }
+        else if (mv === 'No')      { cls = 'hm-no-str';  lbl = 'NO'; }
+        else if (mv === 'Recused') { cls = 'hm-rec';     lbl = 'Recused'; }
+        else if (mv === 'Absent')  { cls = 'hm-abs';     lbl = 'Absent'; }
+        else if (mv === 'Vacant')  { cls = 'hm-vac';     lbl = 'Vacant'; }
+        const cellLink = v.minutesUrl ? `<a href="${v.minutesUrl}" target="_blank" rel="noopener" style="text-decoration:none;display:block">` : '';
+        const cellLinkEnd = v.minutesUrl ? '</a>' : '';
+        html += `<td>${cellLink}<div class="hm-cell ${cls}" title="${m.name}: ${mv||'Not on Council'}. Click to view minutes.">${lbl}</div>${cellLinkEnd}</td>`;
+      });
+      html += `<td class="hm-outcome ${v.outcome.toLowerCase()}" style="padding:5px 8px;white-space:nowrap">${v.outcome} ${v.tally}</td>`;
+      html += `</tr>`;
+    });
+
+    html += `</tbody></table></div>`;
+  });
+
+  if (!html) html = `<div class="empty-state"><p>No Mountain Village Town Council votes for the selected filters.<br>More meetings being added as minutes PDFs become available — <a href="https://townofmountainvillage.com/government/town-council/town-council/" target="_blank">view all Town Council minutes</a>.</p></div>`;
+  document.getElementById('heatmap-content').innerHTML = html;
+}
+
 function renderHeatmap() {
   if (hmViewMode === 'category') { renderHeatmapByCategory(); return; }
 
   const ent = (document.getElementById('filter-entity') || {value:'telluride'}).value;
   if (ent === 'bocc')     { renderBoccHeatmap();     return; }
   if (ent === 'planning') { renderPlanningHeatmap();  return; }
+  if (ent === 'tomv')     { renderTomvHeatmap();      return; }
 
   const yearSel = document.getElementById('filter-year').value;
   const catSel  = hmCatFilter;
