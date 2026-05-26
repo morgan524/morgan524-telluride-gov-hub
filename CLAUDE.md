@@ -407,8 +407,12 @@ animal record, and writes a normalized `HUMANE_SOCIETY_ANIMALS` array
 into `js/gov-helpers.js`. The animal record schema we keep:
 
 ```js
-{ id, name, species, breed, ageGroup, sex, photo, profileUrl, summary }
+{ id, name, species, breed, ageGroup, sex, photo, profileUrl, summary,
+  firstSeen, revealDate, lastSeen }
 ```
+
+The three trailing scheduling fields are added by the sync (NOT the
+API) and control the staggered reveal behavior described below.
 
 Important shapes to remember when reading the Shelterluv response:
 - `age_group` is an OBJECT (`{name: "Young Dog", duration: "(1-5 years)", ...}`).
@@ -418,31 +422,58 @@ Important shapes to remember when reading the Shelterluv response:
   directly, that's an object.
 - `species` is `"Dog"` or `"Cat"`. Other values are filtered out.
 
-**Adopted animals auto-disappear.** Task 7 REPLACES the entire
-`HUMANE_SOCIETY_ANIMALS` array with the current API response on every
-6-hour run. So when a pet is adopted and falls off Shelterluv's
-availability list, its card drops off the Local News tab on the next
-refresh. There is no manual cleanup step.
+### Staggered reveal scheduling (2026-05-26)
 
-Cards are rendered by `collectLocalNewsArticles()` + `renderLocalNews()`
-in `js/gov-helpers.js`. Each animal becomes one card with `sourceKey: 'humane-society'`.
-Card-specific behavior:
+Per user direction: animals shouldn't all land on Local News the same
+day they get added to Shelterluv. Rules:
+
+1. The day an animal is FIRST SEEN on Shelterluv, the bot stores it
+   with `firstSeen = today` and tentatively `revealDate = today`. The
+   card becomes eligible to render on `local-news.html` on its
+   `revealDate`.
+2. If multiple animals of the same species are first-seen on the same
+   day, only ONE reveals immediately. The second is queued for +2
+   days, the third +4 days, etc. Dogs and cats run independent queues
+   so they don't compete with each other.
+3. If a new animal arrives while an existing same-species animal is
+   still queued (its `revealDate` is in the future), the newcomer
+   chains onto the back of the queue at `latest_existing_revealDate
+   + 2 days` — so users see a steady drip, not a clump.
+4. Cards drop when EITHER (a) `revealDate` is more than 30 days in
+   the past OR (b) the animal disappears from the Shelterluv API
+   (= adopted or removed). Whichever happens first.
+
+The state machine lives entirely inside `syncHumaneSocietyAnimals` —
+it runs every 6 hours, carries `firstSeen` / `revealDate` forward
+across runs, and re-derives the visible set deterministically. The
+renderer (`local-news.html`'s `loadLiveData()`) just compares each
+entry's `revealDate` against today's ISO date and skips queued ones.
+
+### Carry-forward on API errors
+
+If the Shelterluv fetch or JSON parse errors, the sync returns the
+existing array unchanged — animal cards survive transient outages
+instead of vanishing when the API hiccups. (Previously it returned
+`null` and the caller skipped the write, which had the same effect
+in practice but was easy to misread.)
+
+### Card rendering
+
+Each animal becomes one card with `sourceKey: 'humane-society'`,
+sorted into the Local News feed by `revealDate`. The card itself
+follows the normal layout: title ("Meet <Name> — adoptable
+dog/cat at Telluride Humane Society"), photo, summary, link to the
+Shelterluv profile page (`profileUrl`).
+
+Per-card behavior (some inherited from v1 / not all reimplemented in
+the v2 standalone `local-news.html` yet):
 
 - **Small source logo is hidden** for humane-society cards (the animal
   photo is the brand marker; hiding the small logo gives the title text
   more horizontal room).
-- **Primary CTA** is `Adopt a dog →` or `Adopt a cat →`, linking to
-  `https://telluridehumanesociety.com/dogs/` or `/cats/` (the form on
-  those pages).
-- **Secondary link** is `View dog/cat profile →`, linking to the
-  individual animal's Shelterluv embed page (from `profileUrl`).
 - **Suggest Correction** is suppressed via the
-  `js/corrections.js` skip-list (alongside `ttimes` and `koto` —
+  `js/corrections.js` skip-list (alongside `ttimes`, `koto`, `smb` —
   corrections to upstream-sourced cards belong to the source).
-- **Pub dates are randomized** across the last ~7 days using a stable
-  hash of the animal id, so the 4-or-so animal cards interleave with
-  KOTO and TT cards instead of all bunching at the top. Same hash =
-  same date across page loads, so cards don't shuffle on refresh.
 
 Adding to `corrections.js`'s skip-list when introducing new
 upstream-sourced card sources: see `addCorrectionTriggers()` around

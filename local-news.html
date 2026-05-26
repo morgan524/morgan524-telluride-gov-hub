@@ -770,6 +770,10 @@
       // SMBF: fall back to the masthead logo when the article didn't have
       // a photo on the landing page. Matches the KOTO cow pattern.
       if (a.sourceKey === 'smb') return '/logo/San%20Miguel%20Basis%20Logo.jpg';
+      // Telluride Humane Society: photos always come from Shelterluv,
+      // but cover the edge case where the API returns an animal without
+      // one by falling back to the THS shield.
+      if (a.sourceKey === 'humane-society') return '/logo/Telluride%20Humane-400x400.png';
       return '';
     }
 
@@ -983,6 +987,44 @@
                 img: a.img || '',
                 category: a.newsTopic || 'Community'
               }));
+            }
+            // Telluride Humane Society — adoptable dogs and cats.
+            // Populated by content-refresh.js Task 7. Each entry carries a
+            // `revealDate` (ISO YYYY-MM-DD) that tells us when the card
+            // becomes eligible to show. Per the staggering rules, when
+            // multiple same-species animals are first-seen on the same
+            // day only the first reveals immediately; siblings are
+            // queued +2 / +4 / +6 days. Cards drop when (a) revealDate
+            // is more than 30 days ago or (b) the animal disappears
+            // from the Shelterluv API; both are enforced bot-side.
+            if (typeof HUMANE_SOCIETY_ANIMALS !== 'undefined') {
+              const todayIso = new Date().toISOString().slice(0, 10);
+              const isoToHuman = (iso) => {
+                if (!iso) return '';
+                const [y, m, d] = iso.split('-').map(Number);
+                if (!y) return '';
+                const months = ['January','February','March','April','May','June',
+                                'July','August','September','October','November','December'];
+                return `${months[m-1]} ${d}, ${y}`;
+              };
+              HUMANE_SOCIETY_ANIMALS.forEach(a => {
+                if (!a || !a.id) return;
+                if (a.revealDate && a.revealDate > todayIso) return; // queued — not yet
+                const isDog = a.species === 'Dog';
+                const speciesNoun = isDog ? 'dog' : (a.species === 'Cat' ? 'cat' : 'pet');
+                // Use revealDate as the article date so the card sorts in
+                // alongside news from the day the animal first appeared.
+                live.push({
+                  title: `Meet ${a.name} — adoptable ${speciesNoun} at Telluride Humane Society`,
+                  source: 'Telluride Humane Society',
+                  sourceKey: 'humane-society',
+                  date: isoToHuman(a.revealDate || a.firstSeen) || '',
+                  summary: a.summary || `${a.name} is available for adoption at Telluride Humane Society.`,
+                  href: a.profileUrl || `https://telluridehumanesociety.com/${speciesNoun}s/`,
+                  img: a.photo || '',
+                  category: isDog ? 'Adopt a Dog' : 'Adopt a Cat'
+                });
+              });
             }
             const seen = new Set();
             const filtered = live.filter(a => {

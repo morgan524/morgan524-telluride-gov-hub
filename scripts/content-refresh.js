@@ -2827,25 +2827,62 @@ async function syncMailchimpBlog(existingPosts) {
 const SHELTERLUV_GID = 36337;
 const SHELTERLUV_API = `https://www.shelterluv.com/api/v3/available-animals/${SHELTERLUV_GID}`;
 
-async function syncHumaneSocietyAnimals() {
+// Staggering rules (per user, 2026-05-26):
+//
+// 1. The day an animal is FIRST SEEN on Shelterluv, it appears on
+//    Local News with photo + description + link to its profile page.
+// 2. Each card stays visible until either (a) 30 days have elapsed
+//    since its reveal date OR (b) the animal is no longer listed on
+//    Shelterluv (= adopted or otherwise removed) — whichever comes
+//    first.
+// 3. If multiple animals of the same species are first-seen on the
+//    same day, only ONE appears immediately; the next is queued for
+//    2 days later, the next 2 days after that, etc. Dogs and cats
+//    are independent queues so they don't compete with each other.
+//
+// Implementation: HUMANE_SOCIETY_ANIMALS entries now carry three
+// scheduling fields the renderer reads:
+//   - firstSeen   ISO date the bot first observed this animal in the API
+//   - revealDate  ISO date the card becomes eligible to render (today
+//                 for the first new-of-its-species, +2/+4/+6 days for
+//                 same-day siblings, or pushed further out if an
+//                 existing queued sibling is still pending)
+//   - lastSeen    ISO date of the most recent API tick that returned
+//                 this animal (used to detect "still listed" — if
+//                 lastSeen falls behind today by a full refresh
+//                 cycle it means the animal is gone from Shelterluv
+//                 and the entry gets dropped)
+//
+// The state machine is implemented inside syncHumaneSocietyAnimals
+// rather than in the renderer so the schedule is computed exactly
+// once per refresh tick (=  deterministic across cache busters and
+// across the two cards rendering on Local News + the future digest).
+function _addDays(iso, n) {
+  const d = new Date(iso + 'T00:00:00Z');
+  d.setUTCDate(d.getUTCDate() + n);
+  return d.toISOString().slice(0, 10);
+}
+
+async function syncHumaneSocietyAnimals(existingAnimals) {
   console.log('\n🐾 Task 7: Syncing Telluride Humane Society adoptable animals...');
+  const carry = Array.isArray(existingAnimals) ? existingAnimals : [];
   let resp;
   try {
     resp = await fetch(SHELTERLUV_API);
   } catch (e) {
-    console.warn(`  Fetch error: ${e.message}`);
-    return null;
+    console.warn(`  Fetch error: ${e.message} — preserving existing list`);
+    return carry;
   }
   if (!resp || resp.status !== 200) {
-    console.warn(`  Shelterluv API HTTP ${resp ? resp.status : 'no response'}`);
-    return null;
+    console.warn(`  Shelterluv API HTTP ${resp ? resp.status : 'no response'} — preserving existing list`);
+    return carry;
   }
   let payload;
   try {
     payload = JSON.parse(resp.text);
   } catch (e) {
-    console.warn(`  JSON parse error: ${e.message}`);
-    return null;
+    console.warn(`  JSON parse error: ${e.message} — preserving existing list`);
+    return carry;
   }
   // Endpoint returns either { animals: [...] } or a bare array. Normalize.
   const arr = Array.isArray(payload)
@@ -2853,7 +2890,8 @@ async function syncHumaneSocietyAnimals() {
     : (payload && Array.isArray(payload.animals) ? payload.animals : []);
   console.log(`  Shelterluv returned ${arr.length} adoptable animal(s)`);
 
-  const animals = [];
+  // ── Parse the current API response into our internal shape ──
+  const apiAnimals = [];
   for (const a of arr) {
     if (!a) continue;
     const id = String(a.uniqueId || a.nid || a.id || '').trim();
@@ -2878,11 +2916,8 @@ async function syncHumaneSocietyAnimals() {
     if (breed) summaryParts.push(breed);
     if (a.sex) summaryParts.push(a.sex);
     const summary = summaryParts.join(' • ');
-    animals.push({
-      id,
-      name,
-      species,
-      breed,
+    apiAnimals.push({
+      id, name, species, breed,
       ageGroup: ageGroupName,
       sex: a.sex || '',
       photo,
@@ -2890,8 +2925,85 @@ async function syncHumaneSocietyAnimals() {
       summary,
     });
   }
-  console.log(`  Parsed ${animals.length} dogs/cats (${animals.filter(x=>x.species==='Dog').length} dogs, ${animals.filter(x=>x.species==='Cat').length} cats)`);
-  return animals;
+  const apiById = new Map(apiAnimals.map(a => [a.id, a]));
+
+  // ── Pass 1: carry forward existing animals that are still listed ──
+  // Refresh photo/breed/summary in case the shelter updated them, but
+  // KEEP the immutable scheduling fields (firstSeen, revealDate).
+  // Drop animals that disappeared from the API (= adopted/removed) and
+  // animals whose 30-day window has elapsed.
+  const today = new Date().toISOString().slice(0, 10);
+  const dropBefore = _addDays(today, -30);
+  const out = [];
+  for (const ex of carry) {
+    if (!ex || !ex.id) continue;
+    const fresh = apiById.get(ex.id);
+    if (!fresh) continue;                                  // no longer listed
+    if (ex.revealDate && ex.revealDate < dropBefore) continue; // > 30 days old
+    out.push({
+      ...fresh,
+      firstSeen:  ex.firstSeen  || today,
+      revealDate: ex.revealDate || today,
+      lastSeen:   today,
+    });
+  }
+
+  // ── Pass 2: add brand-new animals with staggered reveal dates ──
+  // Dogs and cats are independent queues. For each species:
+  //   1. Find the latest revealDate among the existing same-species
+  //      animals we're carrying forward.  If that's in the future
+  //      (= an already-queued sibling hasn't shown yet), the first
+  //      newcomer is scheduled for that revealDate + 2 days — so
+  //      newcomers chain neatly onto the existing queue instead of
+  //      crowding the visible window.
+  //   2. If everything existing has already been revealed, the first
+  //      newcomer reveals TODAY (i.e. immediately).
+  //   3. Each subsequent newcomer in the same batch gets +2 days.
+  const carriedIds = new Set(out.map(a => a.id));
+  const newcomers = apiAnimals.filter(a => !carriedIds.has(a.id));
+
+  function stagger(species, batch) {
+    if (batch.length === 0) return [];
+    const sameSpecies = out.filter(a => a.species === species);
+    let firstReveal = today;
+    if (sameSpecies.length > 0) {
+      const latestReveal = sameSpecies.reduce(
+        (m, a) => (a.revealDate > m ? a.revealDate : m), ''
+      );
+      // Any same-species entry whose revealDate is in the future means
+      // there's still a queue ahead of us. Chain onto it +2 days.
+      if (latestReveal > today) {
+        firstReveal = _addDays(latestReveal, 2);
+      }
+    }
+    return batch.map((a, i) => ({
+      ...a,
+      firstSeen:  today,
+      revealDate: i === 0 ? firstReveal : _addDays(firstReveal, i * 2),
+      lastSeen:   today,
+    }));
+  }
+
+  const newDogs = stagger('Dog', newcomers.filter(a => a.species === 'Dog'));
+  const newCats = stagger('Cat', newcomers.filter(a => a.species === 'Cat'));
+  out.push(...newDogs, ...newCats);
+
+  // ── Reporting ──
+  const dogs = out.filter(a => a.species === 'Dog').length;
+  const cats = out.filter(a => a.species === 'Cat').length;
+  const visibleToday = out.filter(a => a.revealDate <= today).length;
+  const queued = out.length - visibleToday;
+  if (newcomers.length > 0) {
+    console.log(`  ${newcomers.length} new animal(s) ingested (${newDogs.length} dogs / ${newCats.length} cats)`);
+    if (newDogs.length > 1 || newCats.length > 1) {
+      const dogQueue = newDogs.map(d => `${d.name} ${d.revealDate}`).join(', ');
+      const catQueue = newCats.map(c => `${c.name} ${c.revealDate}`).join(', ');
+      if (dogQueue) console.log(`    Dog reveal queue: ${dogQueue}`);
+      if (catQueue) console.log(`    Cat reveal queue: ${catQueue}`);
+    }
+  }
+  console.log(`  ${out.length} tracked total (${dogs} dogs, ${cats} cats); ${visibleToday} visible today, ${queued} queued for future reveal`);
+  return out;
 }
 
 // ══════════════════════════════════════════════════════════════
@@ -4740,9 +4852,13 @@ async function main() {
   }
 
   // ── 7. Telluride Humane Society Adoptable Animals ──
-  const newAnimals = await syncHumaneSocietyAnimals();
-  if (newAnimals !== null && newAnimals !== undefined) {
-    const existingAnimals = extractJsArray(govHubSrc, 'HUMANE_SOCIETY_ANIMALS') || [];
+  // Pass the existing array IN so syncHumaneSocietyAnimals can preserve
+  // each animal's `firstSeen` / `revealDate` (the stagger scheduling
+  // fields) across runs. On API error the sync returns the existing
+  // list unchanged.
+  const existingAnimals = extractJsArray(govHubSrc, 'HUMANE_SOCIETY_ANIMALS') || [];
+  const newAnimals = await syncHumaneSocietyAnimals(existingAnimals);
+  if (Array.isArray(newAnimals)) {
     if (JSON.stringify(newAnimals) !== JSON.stringify(existingAnimals)) {
       govHubSrc = replaceJsValue(govHubSrc, 'HUMANE_SOCIETY_ANIMALS', newAnimals, false);
       changed = true;
