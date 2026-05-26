@@ -27,20 +27,22 @@ fi
 mkdir -p "$PENDING_DIR"
 
 # Format: date | source-flag | path
+# All 13 PDFs are now text-extractable in place (user ran ocrmypdf on
+# the 6 scanned ones; pdfjs sees the OCR text layer directly).
 MEETINGS=(
-  "2024-04-04 | --pdf  | $HOME/Downloads/Minutes/2024/april_4-_2024_special_town_council_meeting_minutes.pdf"
-  "2024-05-16 | --pdf  | $HOME/Downloads/Minutes/2024/may_16-_2024_town_council_meeting_minutes.pdf"
-  "2024-06-12 | --text | /tmp/mv2024-june_12-_2024_special_town_council_meeting_minutes.txt"
-  "2024-06-20 | --text | /tmp/mv2024-june_20-_2024_town_council_meeting_minutes.txt"
-  "2024-07-09 | --pdf  | $HOME/Downloads/Minutes/2024/july_9-_2024_special_joint_town_council_meeting_minutes.pdf"
-  "2024-07-18 | --pdf  | $HOME/Downloads/Minutes/2024/july_18-_2024_town_council_meeting_minutes.pdf"
-  "2024-08-15 | --text | /tmp/mv2024-august_15-_2024_town_council_meeting_minutes.txt"
-  "2024-09-19 | --pdf  | $HOME/Downloads/Minutes/2024/september_19-_2024_town_council_meeting_minutes.pdf"
-  "2024-10-09 | --pdf  | $HOME/Downloads/Minutes/2024/october_9-_2024_town_council_special_meeting_minutes.pdf"
-  "2024-10-17 | --pdf  | $HOME/Downloads/Minutes/2024/october_17-_2024_town_council_meeting_minutes.pdf"
-  "2024-11-04 | --text | /tmp/mv2024-november_4-_2024_special_town_council_meeting_minutes.txt"
-  "2024-11-21 | --text | /tmp/mv2024-november_21-_2024_town_council_meeting_minutes-1.txt"
-  "2024-12-12 | --text | /tmp/mv2024-december_12-_2024_town_council_meeting_minutes.txt"
+  "2024-04-04 | --pdf | $HOME/Downloads/Minutes/2024/april_4-_2024_special_town_council_meeting_minutes.pdf"
+  "2024-05-16 | --pdf | $HOME/Downloads/Minutes/2024/may_16-_2024_town_council_meeting_minutes.pdf"
+  "2024-06-12 | --pdf | $HOME/Downloads/Minutes/2024/june_12-_2024_special_town_council_meeting_minutes.pdf"
+  "2024-06-20 | --pdf | $HOME/Downloads/Minutes/2024/june_20-_2024_town_council_meeting_minutes.pdf"
+  "2024-07-09 | --pdf | $HOME/Downloads/Minutes/2024/july_9-_2024_special_joint_town_council_meeting_minutes.pdf"
+  "2024-07-18 | --pdf | $HOME/Downloads/Minutes/2024/july_18-_2024_town_council_meeting_minutes.pdf"
+  "2024-08-15 | --pdf | $HOME/Downloads/Minutes/2024/august_15-_2024_town_council_meeting_minutes.pdf"
+  "2024-09-19 | --pdf | $HOME/Downloads/Minutes/2024/september_19-_2024_town_council_meeting_minutes.pdf"
+  "2024-10-09 | --pdf | $HOME/Downloads/Minutes/2024/october_9-_2024_town_council_special_meeting_minutes.pdf"
+  "2024-10-17 | --pdf | $HOME/Downloads/Minutes/2024/october_17-_2024_town_council_meeting_minutes.pdf"
+  "2024-11-04 | --pdf | $HOME/Downloads/Minutes/2024/november_4-_2024_special_town_council_meeting_minutes.pdf"
+  "2024-11-21 | --pdf | $HOME/Downloads/Minutes/2024/november_21-_2024_town_council_meeting_minutes-1.pdf"
+  "2024-12-12 | --pdf | $HOME/Downloads/Minutes/2024/december_12-_2024_town_council_meeting_minutes.pdf"
 )
 
 ENTITY=tomv
