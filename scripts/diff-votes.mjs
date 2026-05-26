@@ -129,15 +129,19 @@ function titleKey(t) {
   return titleWords(t).slice(0, 8).join(' ');
 }
 
-// Jaccard similarity on the de-stopworded word sets. Returns 0..1.
+// Sørensen-Dice coefficient on the de-stopworded word sets. Returns
+// 0..1. Better than Jaccard when set sizes are very asymmetric — which
+// is the common case here, because hand-curated titles include detail
+// words (member names, lot numbers, conditions) that the model's
+// shorter titles don't. Jaccard penalizes that asymmetry; Dice doesn't.
 function titleSimilarity(a, b) {
   const A = new Set(titleWords(a));
   const B = new Set(titleWords(b));
   if (!A.size && !B.size) return 0;
   let inter = 0;
   for (const w of A) if (B.has(w)) inter++;
-  const union = A.size + B.size - inter;
-  return union ? inter / union : 0;
+  const denom = A.size + B.size;
+  return denom ? (2 * inter) / denom : 0;
 }
 
 const committedByKey = new Map();
@@ -147,30 +151,46 @@ const extractedByKey = new Map();
 pending.entries.forEach(e => extractedByKey.set(titleKey(e.title), e));
 
 // Match pass — pair each committed entry to its best extracted match
-// by Jaccard title similarity (≥0.4 threshold). One-to-one: an
-// extracted entry can only match one committed entry.
-const SIM_THRESHOLD = 0.4;
-const matches = [];
-const missedByModel = [];
-const usedExtracted = new Set();
-
+// by Sørensen-Dice title similarity (≥0.3 threshold). One-to-one: an
+// extracted entry can only match one committed entry, and we pair
+// globally-best-first to avoid order-of-iteration affecting results.
+const SIM_THRESHOLD = 0.3;
+// Compute all (committed, extracted) similarity scores, then assign
+// greedily best-first. This way the most confident pair claims its
+// extracted entry before lower-confidence pairs can wrongly grab it.
+const pairs = [];
 committed.forEach(c => {
-  let best = null;
-  let bestScore = 0;
   pending.entries.forEach(e => {
-    if (usedExtracted.has(e.id)) return;
-    const s = titleSimilarity(c.title, e.title);
-    if (s > bestScore) { bestScore = s; best = e; }
+    pairs.push({ c, e, score: titleSimilarity(c.title, e.title) });
   });
-  if (best && bestScore >= SIM_THRESHOLD) {
-    matches.push({ committed: c, extracted: best, score: bestScore });
-    usedExtracted.add(best.id);
-  } else {
-    missedByModel.push({ entry: c, bestCandidate: best, bestScore });
-  }
 });
+pairs.sort((a, b) => b.score - a.score);
 
-// Anything extracted that wasn't claimed by a committed entry
+const matches = [];
+const usedCommitted = new Set();
+const usedExtracted = new Set();
+for (const p of pairs) {
+  if (p.score < SIM_THRESHOLD) break;
+  if (usedCommitted.has(p.c.id) || usedExtracted.has(p.e.id)) continue;
+  matches.push({ committed: p.c, extracted: p.e, score: p.score });
+  usedCommitted.add(p.c.id);
+  usedExtracted.add(p.e.id);
+}
+
+const missedByModel = committed
+  .filter(c => !usedCommitted.has(c.id))
+  .map(c => {
+    // Surface closest below-threshold candidate (if any) so user can
+    // judge whether it's a near-miss worth lowering threshold for.
+    let bestC = null, bestS = 0;
+    pending.entries.forEach(e => {
+      if (usedExtracted.has(e.id)) return;
+      const s = titleSimilarity(c.title, e.title);
+      if (s > bestS) { bestS = s; bestC = e; }
+    });
+    return { entry: c, bestCandidate: bestC, bestScore: bestS };
+  });
+
 const onlyInExtracted = pending.entries.filter(e => !usedExtracted.has(e.id));
 
 // ─────── Field-level diffs on matched pairs ─────────────
