@@ -102,18 +102,42 @@ console.log(`Committed entries on ${pending.date}: ${committed.length}`);
 console.log(`Extracted entries:                   ${pending.entries.length}`);
 
 // ─────── Fuzzy match titles ─────────────
-function titleKey(t) {
+// Stopwords that carry little signal in vote titles — used by titleWords
+// and titleKey alike. Includes common procedural noise the model adds
+// that doesn't appear in hand-curated titles (and vice versa).
+const TITLE_STOPWORDS = new Set([
+  'the','and','for','with','from','that','this','was','are','were','will','have','has','had',
+  'ordinance','resolution','motion','consideration','approval','approved','approving',
+  'first','second','third','reading','public','hearing','council','vote','meeting',
+  'town','village','mountain','town','board','committee','commission','authority',
+  'regular','special','set','setting','final','agenda','item','section','pursuant',
+  'amending','amended','amendment','amendments','adopting','adopted','adoption',
+  'regarding','related','relating','application','applications','staff','request',
+  'requested','agreement','intergovernmental','iga'
+]);
+
+function titleWords(t) {
   return (t || '')
     .toLowerCase()
-    // Strip only the trailing dissent/abstention/recusal annotation —
-    // titles use em-dashes as ordinary separators, so we can't strip
-    // on the first one.
     .replace(/\s*—\s*(split|tabled|failed|recused?)\b.*$/i, '')
     .replace(/[^a-z0-9 ]+/g, ' ')
     .split(/\s+/)
-    .filter(w => w.length > 2)
-    .slice(0, 8)
-    .join(' ');
+    .filter(w => w.length > 3 && !TITLE_STOPWORDS.has(w));
+}
+
+function titleKey(t) {
+  return titleWords(t).slice(0, 8).join(' ');
+}
+
+// Jaccard similarity on the de-stopworded word sets. Returns 0..1.
+function titleSimilarity(a, b) {
+  const A = new Set(titleWords(a));
+  const B = new Set(titleWords(b));
+  if (!A.size && !B.size) return 0;
+  let inter = 0;
+  for (const w of A) if (B.has(w)) inter++;
+  const union = A.size + B.size - inter;
+  return union ? inter / union : 0;
 }
 
 const committedByKey = new Map();
@@ -122,43 +146,39 @@ committed.forEach(c => committedByKey.set(titleKey(c.title), c));
 const extractedByKey = new Map();
 pending.entries.forEach(e => extractedByKey.set(titleKey(e.title), e));
 
-// Match pass
+// Match pass — pair each committed entry to its best extracted match
+// by Jaccard title similarity (≥0.4 threshold). One-to-one: an
+// extracted entry can only match one committed entry.
+const SIM_THRESHOLD = 0.4;
 const matches = [];
 const missedByModel = [];
-const onlyInExtracted = [];
+const usedExtracted = new Set();
 
 committed.forEach(c => {
-  const key = titleKey(c.title);
-  if (extractedByKey.has(key)) {
-    matches.push({ committed: c, extracted: extractedByKey.get(key) });
+  let best = null;
+  let bestScore = 0;
+  pending.entries.forEach(e => {
+    if (usedExtracted.has(e.id)) return;
+    const s = titleSimilarity(c.title, e.title);
+    if (s > bestScore) { bestScore = s; best = e; }
+  });
+  if (best && bestScore >= SIM_THRESHOLD) {
+    matches.push({ committed: c, extracted: best, score: bestScore });
+    usedExtracted.add(best.id);
   } else {
-    // Try a looser match: 3-word prefix
-    const partial = key.split(' ').slice(0, 3).join(' ');
-    let alt = null;
-    for (const [k, e] of extractedByKey) {
-      if (k.startsWith(partial) || partial && k.includes(partial.split(' ')[0])) { alt = e; break; }
-    }
-    if (alt) matches.push({ committed: c, extracted: alt, fuzzy: true });
-    else missedByModel.push(c);
+    missedByModel.push({ entry: c, bestCandidate: best, bestScore });
   }
 });
 
-pending.entries.forEach(e => {
-  const key = titleKey(e.title);
-  if (![...committedByKey.keys()].some(k => k === key || k.includes(key.split(' ').slice(0, 3).join(' ')))) {
-    onlyInExtracted.push(e);
-  }
-});
+// Anything extracted that wasn't claimed by a committed entry
+const onlyInExtracted = pending.entries.filter(e => !usedExtracted.has(e.id));
 
 // ─────── Field-level diffs on matched pairs ─────────────
 const diffs = [];
-matches.forEach(({ committed: c, extracted: e, fuzzy }) => {
-  const d = { id: c.id, extractedId: e.id, fuzzy: !!fuzzy, deltas: [] };
+matches.forEach(({ committed: c, extracted: e, score }) => {
+  const d = { id: c.id, extractedId: e.id, score, deltas: [] };
   if (c.outcome !== e.outcome) d.deltas.push(`outcome: "${c.outcome}" → "${e.outcome}"`);
   if (c.tally !== e.tally) d.deltas.push(`tally: "${c.tally}" → "${e.tally}"`);
-  if (titleKey(c.title) !== titleKey(e.title) && !fuzzy) {
-    d.deltas.push(`title key differs`);
-  }
   // Vote-by-vote
   const allKeys = new Set([...Object.keys(c.votes || {}), ...Object.keys(e.votes || {})]);
   for (const k of allKeys) {
@@ -179,18 +199,25 @@ if (matches.length) {
 
 if (missedByModel.length) {
   console.log(`\n── Committed but NOT extracted (${missedByModel.length}):`);
-  missedByModel.forEach(c => console.log(`   ✗ ${c.id}  ${c.title.slice(0, 70)}`));
+  missedByModel.forEach(m => {
+    console.log(`   ✗ ${m.entry.id}  ${m.entry.title.slice(0, 70)}`);
+    if (m.bestCandidate) {
+      console.log(`     (closest extracted: ${m.bestCandidate.id} "${m.bestCandidate.title.slice(0, 50)}…" similarity=${m.bestScore.toFixed(2)})`);
+    }
+  });
 }
 
 if (onlyInExtracted.length) {
   console.log(`\n── Extracted but NOT committed (${onlyInExtracted.length}):`);
+  console.log(`   (Model captured these; you didn't. Could be legitimate finds`);
+  console.log(`    OR over-eager extraction. Judgment call per entry.)`);
   onlyInExtracted.forEach(e => console.log(`   ? ${e.id}  ${e.title.slice(0, 70)}`));
 }
 
 if (diffs.length) {
-  console.log(`\n── Field-level differences:`);
+  console.log(`\n── Field-level differences (in matched pairs):`);
   diffs.forEach(d => {
-    console.log(`\n   ${d.id} ↔ ${d.extractedId}${d.fuzzy ? '  (fuzzy match)' : ''}`);
+    console.log(`\n   ${d.id} ↔ ${d.extractedId}  (similarity=${d.score.toFixed(2)})`);
     d.deltas.forEach(delta => console.log(`     • ${delta}`));
   });
 }
