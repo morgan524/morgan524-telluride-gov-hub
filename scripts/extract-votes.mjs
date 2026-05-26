@@ -39,7 +39,10 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { resolve, dirname, basename, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createRequire } from 'node:module';
 import https from 'node:https';
+
+const require = createRequire(import.meta.url);
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = resolve(__dirname, '..');
@@ -105,10 +108,12 @@ console.log(`Roster: ${roster.join(', ')}`);
 
 // ───────────────────────── PDF / text loading ───────────────────────
 async function extractPdfText(pdfPath) {
-  const { default: pdfjsLib } = await import('pdfjs-dist/legacy/build/pdf.mjs');
+  // pdfjs-dist v3 ships only a CommonJS build under legacy/; use
+  // createRequire to load it from this .mjs file.
+  const pdfjsLib = require('pdfjs-dist/legacy/build/pdf.js');
   try {
-    pdfjsLib.GlobalWorkerOptions.workerSrc = (await import.meta.resolve?.('pdfjs-dist/legacy/build/pdf.worker.mjs')) ?? '';
-  } catch { /* ignore — worker auto-resolves in many builds */ }
+    pdfjsLib.GlobalWorkerOptions.workerSrc = require.resolve('pdfjs-dist/legacy/build/pdf.worker.js');
+  } catch { /* worker auto-resolves in many packagings */ }
 
   const buffer = readFileSync(pdfPath);
   const data = new Uint8Array(buffer);
