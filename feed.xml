@@ -6,19 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 May 2026 14:59:44 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 20:06:13 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Meeting] Design Review Board — 2026-06-04</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/mv%7C2026-06-04%7CDesign%20Review%20Board</guid>
-      <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Mountain Village • 2026-06-04
-
-Agenda not yet available]]></description>
-      <category>Meeting</category>
-      <category>Mountain Village</category>
-    </item>
     <item>
       <title>[Meeting] Board of County Commissioners Meeting — 2026-06-03</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
@@ -62,6 +51,17 @@ The agenda text for this Commission for Community Assistance, Arts & Special Eve
 Meeting agenda not yet available]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>[Meeting] The Planning Commission will conduct a regular meeting and hold a public hearing to consider and make recommendation on an application for a 6-lot regular PUD in the South Mesa Zone (Packet Materials are attached to the agenda) — 2026-06-03</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/ouray%7C2026-06-03%7CThe%20Planning%20Commission%20will%20conduct%20a%20regular%20meeting%20and%20hold%20a%20public%20hearing</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[ouray • 2026-06-03
+
+The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.]]></description>
+      <category>Meeting</category>
+      <category>ouray</category>
     </item>
     <item>
       <title>[Meeting] Open Space Commission - Jun 01 2026 — 2026-06-01</title>
@@ -140,6 +140,16 @@ The commissioners will handle two septic system variances in Ophir, consider end
       <category>community</category>
     </item>
     <item>
+      <title>Supreme Court won&apos;t intervene in discrimination suit led by Black ex-head coach Flores against NFL</title>
+      <link>https://www.telluridenews.com/news/state/article_15cfeabf-da1d-59af-b7db-1a98f8e909f3.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_15cfeabf-da1d-59af-b7db-1a98f8e909f3.html</guid>
+      <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/6f/66f49c03-5ba9-549d-8ed6-b7101ae68775/6a15ba1f0eba6.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The Supreme Court declined to hear the NFL's appeal of a discrimination lawsuit filed by former Dolphins coach Brian Flores and two other Black coaches alleging racist hiring practices. The decision means the case will proceed in lower courts rather than through NFL arbitration, with Flores and colleagues Steve Wilks and Ray Horton claiming they were denied fair opportunities for coaching positions.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/6f/66f49c03-5ba9-549d-8ed6-b7101ae68775/6a15ba1f0eba6.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
+    </item>
+    <item>
       <title>Colorado’s largest gas spill contaminates Southern Ute drinking water</title>
       <link>https://www.telluridenews.com/news/article_a401808e-d76b-453a-9470-28c44d15bc85.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/news/article_a401808e-d76b-453a-9470-28c44d15bc85.html</guid>
@@ -148,6 +158,15 @@ The commissioners will handle two septic system variances in Ophir, consider end
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/9c/59c7ef9a-77e8-4717-8ead-905c0bdf40a1/6a152a6cde813.image.png" medium="image" />
       <category>Telluride Times</category>
       <category>infrastructure</category>
+    </item>
+    <item>
+      <title>Stage 1 Fire Restrictions in effect for Egnar Fire Protection District until further notice</title>
+      <link>https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=525</link>
+      <guid isPermaLink="false">https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=525</guid>
+      <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Stage One fire Restrictions will be in place in the Egnar Fire Protection District until further notice.]]></description>
+      <category>San Miguel County</category>
+      <category>public-safety</category>
     </item>
     <item>
       <title>Jackson McCabe is Pinhead history ‘pintern’</title>
@@ -393,26 +412,6 @@ The commissioners will handle two septic system variances in Ophir, consider end
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/1e/b1ec7de1-b5e3-5e4e-95b3-697a44fdd763/6a0f5f485e3db.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>government</category>
-    </item>
-    <item>
-      <title>We can&apos;t all be friends</title>
-      <link>https://www.telluridenews.com/news_release/article_e2a979c9-1565-4b23-beee-604ab2b4c557.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news_release/article_e2a979c9-1565-4b23-beee-604ab2b4c557.html</guid>
-      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/95/195498f7-845f-4453-a79c-6146255d99e0/6a0f608a39c4c.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The local Second Chance Humane Society has several long-term shelter animals who need to be the only pet in their home, including Howard the cat, Lexi the dog, and Rocko, a senior dog who's been waiting over a year for adoption. These single-pet animals often form especially strong bonds with their human families.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/95/195498f7-845f-4453-a79c-6146255d99e0/6a0f608a39c4c.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Weed of the month: hoary cress</title>
-      <link>https://www.telluridenews.com/news_release/article_d439160d-ed6b-42b5-83d4-54d8349c1212.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news_release/article_d439160d-ed6b-42b5-83d4-54d8349c1212.html</guid>
-      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/50/650998f1-88f8-4789-8485-a2b816eb74e4/6a0f5fe1c753b.image.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Hoary cress, an invasive plant from Europe and Asia, has been spreading aggressively in our area since the early 1900s through both seeds and roots that can extend 15 feet annually. The white-flowered weed creates monocultures that crowd out native plants and is toxic to cattle, making it particularly problematic for agricultural land. San Miguel County's Vegetation Control office is asking residents to help eliminate infestations and offers cost-share funding and management assistance.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/50/650998f1-88f8-4789-8485-a2b816eb74e4/6a0f5fe1c753b.image.png" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
     </item>
   </channel>
 </rss>
