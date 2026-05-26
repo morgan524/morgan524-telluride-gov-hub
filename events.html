@@ -568,6 +568,133 @@
       .topnav-cta { display: none !important; }
     }
 
+    /* ─── Weather widget (top of events column) ─── */
+    /* Data: Open-Meteo (free, no key, CORS-OK). Coords centered on
+       Telluride proper (37.9375, -107.8123). Times shown in the
+       America/Denver tz returned by Open-Meteo so the day labels are
+       always "today / tomorrow / …" relative to the valley, not the
+       browser. */
+    .weather-card {
+      background: linear-gradient(135deg, #f3f6f4 0%, #e9eee8 100%);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 18px 22px;
+      box-shadow: var(--shadow-card);
+      margin-bottom: 22px;
+      display: grid;
+      grid-template-columns: minmax(180px, 1fr) minmax(0, 2fr);
+      gap: 18px;
+      align-items: center;
+      min-height: 132px;
+    }
+    .weather-current {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .weather-icon {
+      font-size: 2.6rem;
+      line-height: 1;
+      width: 56px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .weather-current-info { display: flex; flex-direction: column; gap: 2px; }
+    .weather-temp {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1;
+      letter-spacing: -0.01em;
+    }
+    .weather-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    .weather-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .weather-location {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .weather-forecast {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .weather-day {
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(33, 68, 60, 0.08);
+      border-radius: 10px;
+      padding: 10px 6px 8px;
+      text-align: center;
+      display: flex; flex-direction: column; gap: 2px;
+      align-items: center;
+    }
+    .weather-day-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .weather-day-icon { font-size: 1.4rem; line-height: 1.1; }
+    .weather-day-temps {
+      font-size: 0.82rem;
+      color: var(--text-primary);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .weather-day-temps .lo { color: var(--text-muted); font-weight: 500; }
+    .weather-day-precip {
+      font-size: 0.66rem;
+      color: var(--accent-green);
+      font-weight: 600;
+      min-height: 0.85rem;
+    }
+    .weather-credit {
+      grid-column: 1 / -1;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-align: right;
+      opacity: 0.7;
+      margin-top: -2px;
+    }
+    .weather-credit a { color: inherit; text-decoration: none; }
+    .weather-credit a:hover { text-decoration: underline; }
+
+    /* Skeleton / error states */
+    .weather-card[data-state="loading"] .weather-current,
+    .weather-card[data-state="loading"] .weather-forecast { opacity: 0.4; }
+    .weather-card[data-state="error"] {
+      display: block;
+      text-align: center;
+      padding: 16px 22px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      min-height: 0;
+    }
+
+    /* Stack on narrow viewports */
+    @media (max-width: 760px) {
+      .weather-card {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .weather-forecast { gap: 6px; }
+      .weather-day { padding: 8px 4px 6px; }
+      .weather-day-temps { font-size: 0.76rem; }
+      .weather-icon { font-size: 2.2rem; }
+      .weather-temp { font-size: 1.7rem; }
+    }
   </style>
 </head>
 <body>
@@ -636,6 +763,29 @@
     </aside>
 
     <div>
+      <!-- Weather widget: current conditions + 5-day forecast.
+           Populated by initWeather() at the bottom of the page from the
+           Open-Meteo API (free, no key, CORS-friendly). Sits above the
+           event grid so visitors can see what to dress for at the same
+           time they're scanning the calendar. -->
+      <div class="weather-card" id="weatherCard" data-state="loading" aria-label="Local weather forecast">
+        <div class="weather-current">
+          <div class="weather-icon" id="wxIcon" aria-hidden="true">⛅</div>
+          <div class="weather-current-info">
+            <div class="weather-location">Telluride · Now</div>
+            <div class="weather-temp" id="wxTemp">—°</div>
+            <div class="weather-desc" id="wxDesc">Loading…</div>
+            <div class="weather-meta" id="wxMeta"></div>
+          </div>
+        </div>
+        <div class="weather-forecast" id="wxForecast" aria-label="5-day forecast">
+          <!-- populated by JS -->
+        </div>
+        <div class="weather-credit">
+          Weather by <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>
+        </div>
+      </div>
+
       <div class="event-grid" id="eventGrid"><!-- populated by JS --></div>
     </div>
   </main>
@@ -1191,6 +1341,238 @@ function googleTranslateElementInit() {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else { init(); }
+})();
+</script>
+
+<!-- Weather widget loader. Two-API setup so the widget keeps working when
+     one provider is having a bad day:
+       1) NWS (api.weather.gov) — authoritative US source, gridpoint for
+          Telluride is GJT/116,49 (one-time lookup from /points). Free,
+          no key, sends Access-Control-Allow-Origin: *.
+       2) Open-Meteo fallback if NWS errors. Free, no key, also CORS-OK.
+     Both are pinned to America/Denver time so day labels read
+     "Today / Tomorrow / …" in valley terms regardless of where the
+     visitor's browser is. -->
+<script>
+(function() {
+  const CARD = () => document.getElementById('weatherCard');
+  // NWS gridpoint resolved 2026-05-26 via /points/37.9375,-107.8123.
+  // The grid only changes if NOAA regrids GJT WFO — rare.
+  const NWS_FORECAST  = 'https://api.weather.gov/gridpoints/GJT/116,49/forecast';
+  const NWS_HOURLY    = 'https://api.weather.gov/gridpoints/GJT/116,49/forecast/hourly';
+  // NWS asks for a User-Agent identifying the app; not required for
+  // browser requests but good citizenship.
+  const NWS_HEADERS   = { 'Accept': 'application/geo+json' };
+
+  // ── NWS shortForecast → emoji ────────────────────────────────────
+  // NWS prose mixes day/night and chance/likely words. Match by intent
+  // (most specific first → thunder beats rain beats partly-cloudy).
+  function nwsIcon(short, isDaytime) {
+    const s = (short || '').toLowerCase();
+    if (/thunder/.test(s))                              return '⛈️';
+    if (/blizzard|heavy snow/.test(s))                  return '❄️';
+    if (/snow shower|flurr/.test(s))                    return '🌨️';
+    if (/snow/.test(s))                                 return '🌨️';
+    if (/freezing/.test(s))                             return '🌧️';
+    if (/heavy rain/.test(s))                           return '🌧️';
+    if (/rain shower|showers?/.test(s) && /rain/.test(s)) return '🌧️';
+    if (/showers?/.test(s) && !/snow/.test(s))          return '🌦️';
+    if (/rain|drizzle/.test(s))                         return '🌧️';
+    if (/fog|haze/.test(s))                             return '🌫️';
+    if (/wind/.test(s) && /sun|clear/.test(s))          return isDaytime ? '🌤️' : '🌙';
+    if (/cloudy/.test(s) && /partly/.test(s))           return isDaytime ? '⛅'  : '☁️';
+    if (/cloudy/.test(s) && /mostly/.test(s))           return '☁️';
+    if (/overcast|cloudy/.test(s))                      return '☁️';
+    if (/sunny/.test(s) && /partly/.test(s))            return '⛅';
+    if (/sunny/.test(s) && /mostly/.test(s))            return '🌤️';
+    if (/sunny|clear/.test(s))                          return isDaytime ? '☀️' : '🌙';
+    return '🌡️';
+  }
+
+  // "Today" / "Tomorrow" / weekday for the date inside an NWS period.
+  // NWS period.startTime is an ISO with offset; we want the calendar
+  // day in valley time. The offset in the string IS valley time, so
+  // splitting at 'T' and grabbing the date prefix is safe.
+  function dayLabel(period, idx, todayValleyDate, tomorrowValleyDate) {
+    // NWS sometimes labels the very first period "This Afternoon" or
+    // "Overnight"; prefer that name for idx 0.
+    if (idx === 0) return 'Today';
+    if (idx === 1) return 'Tomorrow';
+    return period.name.split(' ')[0].slice(0, 3); // "Wednesday" → "Wed"
+  }
+
+  function setError() {
+    const c = CARD();
+    if (!c) return;
+    c.setAttribute('data-state', 'error');
+    c.innerHTML = '<div>Weather temporarily unavailable.</div>';
+  }
+
+  // ── Render: current + 5-day from NWS forecast/hourly + forecast ──
+  function renderNws(hourlyData, forecastData) {
+    const card = CARD();
+    if (!card) return false;
+
+    // Current: first hourly period.
+    const current = hourlyData?.properties?.periods?.[0];
+    if (!current) return false;
+    const curIcon = nwsIcon(current.shortForecast, current.isDaytime);
+    document.getElementById('wxIcon').textContent = curIcon;
+    document.getElementById('wxTemp').textContent = `${current.temperature}°${current.temperatureUnit || 'F'}`;
+    document.getElementById('wxDesc').textContent = current.shortForecast || '';
+    const hum = current.relativeHumidity?.value;
+    const meta = [
+      current.windSpeed ? `${current.windSpeed} ${current.windDirection || ''}`.trim() + ' wind' : '',
+      (typeof hum === 'number') ? `${Math.round(hum)}% humidity` : ''
+    ].filter(Boolean).join(' · ');
+    document.getElementById('wxMeta').textContent = meta;
+
+    // Daily: pair each "Day" with its following "Night" → hi / lo.
+    // NWS first period might be "Tonight" (after ~5pm); when so, we
+    // don't have a "today's hi" — show the first daytime hi instead.
+    const periods = forecastData?.properties?.periods || [];
+    const days = [];
+    for (let i = 0; i < periods.length && days.length < 5; i++) {
+      const p = periods[i];
+      if (!p.isDaytime) continue;
+      const next = periods[i + 1] || null;
+      days.push({
+        name: p.name,
+        hi: p.temperature,
+        lo: (next && !next.isDaytime) ? next.temperature : null,
+        short: p.shortForecast,
+        icon: nwsIcon(p.shortForecast, true),
+        pop: p.probabilityOfPrecipitation?.value ?? null
+      });
+    }
+    if (!days.length) return false;
+
+    const grid = document.getElementById('wxForecast');
+    grid.innerHTML = '';
+    days.forEach((d, idx) => {
+      const popText = (typeof d.pop === 'number' && d.pop >= 20)
+        ? `${d.pop}% 💧`
+        : '';
+      const label = idx === 0 ? 'Today'
+                  : idx === 1 ? 'Tomorrow'
+                  : d.name.split(' ')[0].slice(0, 3);
+      const el = document.createElement('div');
+      el.className = 'weather-day';
+      el.innerHTML =
+        `<div class="weather-day-label">${label}</div>` +
+        `<div class="weather-day-icon" title="${d.short || ''}">${d.icon}</div>` +
+        `<div class="weather-day-temps">${d.hi}° ` +
+          (d.lo !== null ? `<span class="lo">${d.lo}°</span>` : '') +
+        `</div>` +
+        `<div class="weather-day-precip">${popText}</div>`;
+      grid.appendChild(el);
+    });
+
+    card.removeAttribute('data-state');
+    // Re-label credit since we switched providers.
+    const credit = card.querySelector('.weather-credit');
+    if (credit) {
+      credit.innerHTML =
+        'Data: <a href="https://www.weather.gov/gjt/" target="_blank" rel="noopener noreferrer">NWS Grand Junction</a>';
+    }
+    return true;
+  }
+
+  // ── Open-Meteo fallback (older code path; kept as a backup) ──────
+  // Returns true if it rendered, false if it failed.
+  async function tryOpenMeteo() {
+    const url =
+      'https://api.open-meteo.com/v1/forecast' +
+      '?latitude=37.9375&longitude=-107.8123' +
+      '&current=temperature_2m,weather_code,wind_speed_10m,relative_humidity_2m' +
+      '&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max' +
+      '&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch' +
+      '&timezone=America%2FDenver&forecast_days=5';
+    let data;
+    try {
+      const r = await fetch(url);
+      if (!r.ok) return false;
+      data = await r.json();
+    } catch { return false; }
+    if (!data?.current || !data?.daily) return false;
+
+    // WMO → emoji (small subset; expand if you see new codes in the wild)
+    const wmo = {
+      0:'☀️',1:'🌤️',2:'⛅',3:'☁️',45:'🌫️',48:'🌫️',
+      51:'🌦️',53:'🌦️',55:'🌦️',56:'🌧️',57:'🌧️',
+      61:'🌧️',63:'🌧️',65:'🌧️',66:'🌧️',67:'🌧️',
+      71:'🌨️',73:'🌨️',75:'❄️',77:'🌨️',
+      80:'🌦️',81:'🌧️',82:'⛈️',85:'🌨️',86:'❄️',
+      95:'⛈️',96:'⛈️',99:'⛈️'
+    };
+    const labels = {
+      0:'Clear',1:'Mostly Sunny',2:'Partly Cloudy',3:'Overcast',
+      45:'Fog',48:'Freezing Fog',51:'Drizzle',53:'Drizzle',55:'Drizzle',
+      61:'Rain',63:'Rain',65:'Heavy Rain',71:'Snow',73:'Snow',75:'Heavy Snow',
+      80:'Showers',81:'Showers',82:'Heavy Showers',85:'Snow Showers',
+      95:'Thunderstorm',96:'Thunderstorm',99:'Severe Storm'
+    };
+
+    const card = CARD();
+    if (!card) return false;
+    const c = data.current;
+    document.getElementById('wxIcon').textContent = wmo[c.weather_code] || '🌡️';
+    document.getElementById('wxTemp').textContent = Math.round(c.temperature_2m) + '°F';
+    document.getElementById('wxDesc').textContent = labels[c.weather_code] || '';
+    document.getElementById('wxMeta').textContent =
+      `${Math.round(c.wind_speed_10m || 0)} mph wind · ${Math.round(c.relative_humidity_2m || 0)}% humidity`;
+
+    const d = data.daily;
+    const grid = document.getElementById('wxForecast');
+    grid.innerHTML = '';
+    for (let i = 0; i < (d.time || []).length; i++) {
+      const [y, mo, da] = d.time[i].split('-').map(Number);
+      const dt = new Date(Date.UTC(y, mo - 1, da));
+      const lbl = i === 0 ? 'Today'
+                : i === 1 ? 'Tomorrow'
+                : ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dt.getUTCDay()];
+      const pop = (typeof d.precipitation_probability_max?.[i] === 'number' && d.precipitation_probability_max[i] >= 20)
+        ? `${d.precipitation_probability_max[i]}% 💧` : '';
+      const el = document.createElement('div');
+      el.className = 'weather-day';
+      el.innerHTML =
+        `<div class="weather-day-label">${lbl}</div>` +
+        `<div class="weather-day-icon" title="${labels[d.weather_code[i]] || ''}">${wmo[d.weather_code[i]] || '🌡️'}</div>` +
+        `<div class="weather-day-temps">${Math.round(d.temperature_2m_max[i])}° ` +
+          `<span class="lo">${Math.round(d.temperature_2m_min[i])}°</span></div>` +
+        `<div class="weather-day-precip">${pop}</div>`;
+      grid.appendChild(el);
+    }
+    card.removeAttribute('data-state');
+    return true;
+  }
+
+  async function initWeather() {
+    if (!CARD()) return;
+    // Try NWS first (authoritative US source). Run forecast + hourly in
+    // parallel so we don't wait for two round-trips serially.
+    try {
+      const [fr, hr] = await Promise.all([
+        fetch(NWS_FORECAST, { headers: NWS_HEADERS }),
+        fetch(NWS_HOURLY,   { headers: NWS_HEADERS })
+      ]);
+      if (fr.ok && hr.ok) {
+        const [forecastData, hourlyData] = await Promise.all([fr.json(), hr.json()]);
+        if (renderNws(hourlyData, forecastData)) return;
+      }
+    } catch (e) {
+      console.warn('NWS weather fetch failed, trying Open-Meteo:', e);
+    }
+    // Fallback
+    const ok = await tryOpenMeteo();
+    if (!ok) setError();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initWeather);
+  } else {
+    initWeather();
+  }
 })();
 </script>
 </body>
