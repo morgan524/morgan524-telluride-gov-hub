@@ -157,10 +157,34 @@ const MANUAL_SUMMARIES = {
     "No specific agenda items available",
 
   "county|2026-05-27|Board of County Commissioners Special Meeting in Telluride 2:00 pm - 2:45 pm":
-    "The commissioners will handle two septic system variances in Ophir, consider ending a deed restriction on Society Drive, and hold a work session with Placerville residents about corridor beautification and Fire District expansion plans."
+    "The commissioners will handle two septic system variances in Ophir, consider ending a deed restriction on Society Drive, and hold a work session with Placerville residents about corridor beautification and Fire District expansion plans.",
+
+  "med|2026-06-25|Regular Board Meeting":
+    "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
+    "The Jun 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
+    "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet."
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "‘He says “yes” to everything.’",
+    source: "Telluride Times",
+    date: "May 24, 2026",
+    firstSeen: "2026-05-25",
+    newsTopic: "education",
+    copy: "Chochi, a Rotary Youth Exchange student who had never heard of Telluride before arriving, has won over the community with his infectious positivity and willingness to try everything. Despite being new to snow and activities like basketball, he helped the golf team reach state championships for the first time and earned spirit awards along the way.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_95d8abdb-cfbb-4583-8420-a5de13732d9f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/2a/42a7051a-c0d6-4202-a625-3fee32668761/6a1159940d283.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Council recaps winter housing program",
     source: "Telluride Times",
@@ -762,18 +786,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "‘He says “yes” to everything.’",
-    source: "Telluride Times",
-    date: "May 24, 2026",
-    firstSeen: "2026-05-25",
-    newsTopic: "education",
-    copy: "Chochi, a Rotary Youth Exchange student who had never heard of Telluride before arriving, has won over the community with his infectious positivity and willingness to try everything. Despite being new to snow and activities like basketball, he helped the golf team reach state championships for the first time and earned spirit awards along the way.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_95d8abdb-cfbb-4583-8420-a5de13732d9f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/2a/42a7051a-c0d6-4202-a625-3fee32668761/6a1159940d283.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Firehouse visit",
     source: "Telluride Times",
     date: "May 14, 2026",
@@ -882,174 +894,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Denver airport security initially missed trespasser who was killed by plane on runway",
-    source: "Telluride Times",
-    date: "May 12, 2026",
-    firstSeen: "2026-05-12",
-    newsTopic: "community",
-    copy: "A man who entered Denver airport intending to take his own life was struck and killed by a Frontier Airlines plane during takeoff Friday night. Security initially missed the trespasser when an alarm triggered, mistakenly attributing it to nearby deer, and couldn't intervene in time once he was spotted crossing the runway. The collision caused an engine fire that forced passenger evacuation, injuring 12 people with 5 hospitalized.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_9fc2cb9e-0705-5c97-84c6-e314be457898.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/b3/bb30350f-f401-55b1-8ef1-47a01fa5d399/69ffaae0caae4.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "CHALKBOARD for the week of May 14-20",
-    source: "Telluride Times",
-    date: "May 12, 2026",
-    firstSeen: "2026-05-13",
-    newsTopic: "government",
-    copy: "This week's birthdays run from May 14-20, including local residents like Asher Ferguson, Marie Neisen, and the Priestley family members. The regular community calendar continues with Town Board meetings second Wednesdays, Farmers Market Thursdays 2-6 p.m., and various services like the food pantry Sundays 3-6 p.m.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/the_norwood_post/article_6db5a92b-5491-4bac-b91c-c21f3ee60db1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/61/e61c1b48-54e4-483a-b1ab-1e99ed6d5d77/6a03b4fae7ac9.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Federal judge rules ICE in Colorado violated order limiting warrantless arrests",
-    source: "Telluride Times",
-    date: "May 12, 2026",
-    firstSeen: "2026-05-13",
-    newsTopic: "community",
-    copy: "A federal judge ruled that ICE agents in Colorado violated a court order limiting warrantless arrests and failed to properly train officers or document such arrests. The ruling stems from an ACLU lawsuit over \"collateral arrests\" of people caught up in immigration enforcement actions. ICE must now provide officer training within 45 days and turn over arrest records.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_6835e55c-d86e-510b-9abd-c6f823a59ecc.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/ac/aac37bc9-0b93-5774-be58-3957819b40cc/6a03a5aa52159.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Green Grants thanks",
-    source: "Telluride Times",
-    date: "May 12, 2026",
-    firstSeen: "2026-05-13",
-    newsTopic: "community",
-    copy: "Shawnna and Dennis Andrejko wrote to thank EcoAction Partners, specifically Siobhan Montoya Lavender and Kendra Held, along with Town of Telluride's Darin Graber for their help with a Telluride Green Grants project. The couple completed efficiency upgrades through the program that helps residents with sustainability improvements.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_02b77004-73f0-4b36-a906-72b8b5861d5d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Countywide Spring Clean-Up events return May 15-16",
-    source: "Telluride Times",
-    date: "May 12, 2026",
-    firstSeen: "2026-05-13",
-    newsTopic: "community",
-    copy: "The annual Spring Clean-Up events return May 15-16, with electronics and household waste disposal at Carhenge in Telluride both days, plus Mountain Village and Norwood locations. The fourth annual Trash Bash follows May 17 at Elks Park.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_1ca77ddc-c404-48bd-8ccf-251ceda547b0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/fc/7fcfe0e0-ef57-4065-83b8-194de28aaab7/6a03b367c3759.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Lawton Eddy of Salida performs pop-up poetry May 15",
-    source: "Telluride Times",
-    date: "May 12, 2026",
-    firstSeen: "2026-05-13",
-    newsTopic: "community",
-    copy: "Lawton Eddy from Salida will perform pop-up poetry at the Wilkinson Library Magazine Room on Friday, May 15 at 1 p.m., with the prompt \"chasing grace.\" The free event encourages attendees to bring poems or stories to share, and Eddy has been involved with local poetry festivals and performances since the early 2000s.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_09a57ab6-8638-4062-8bdf-aa60ec487f06.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/3f/d3fbca7e-6388-43f7-adc1-be836916c378/6a03b263064bb.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Mental Health Awareness Month: Shining a Light",
-    source: "Telluride Times",
-    date: "May 12, 2026",
-    firstSeen: "2026-05-13",
-    newsTopic: "health",
-    copy: "Tri-County Health Network is asking local businesses and governments to light their buildings green throughout May for Mental Health Awareness Month. The initiative aims to reduce stigma and encourage conversations about mental health support. Events include wearing green on May 15 and a community discussion May 11 at Norwood Community Center.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_398ee143-ea60-47b8-b5e4-54c6b5213317.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/e6/6e67ae1c-a27c-4cf1-a3a0-6e8e9c4e5360/6a03b16d57978.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Money reset: getting your budget back on track",
-    source: "Telluride Times",
-    date: "May 12, 2026",
-    firstSeen: "2026-05-13",
-    newsTopic: "government",
-    copy: "With housing costs and basic expenses squeezing local budgets harder than usual, Telluride Foundation is offering free financial literacy workshops May 18th at Wilkinson Library - noon-1:30pm in English and 5:30-7pm in Spanish. The Foundation's emergency fund has seen applications jump from 70 to over 500 this year, prompting the partnership with four local banks to help residents build budgeting and savings skills.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_c19ec511-b459-4568-a13d-ec475a100b73.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Create your This is Colorado canvas",
-    source: "Telluride Times",
-    date: "May 12, 2026",
-    firstSeen: "2026-05-13",
-    newsTopic: "arts-culture",
-    copy: "Telluride Arts is hosting a community canvas project at the Mountain Village distillery May 28 where folks can create 12x12 inch pieces expressing what being a Coloradan means to them. The finished canvases will form mosaics displayed at two locations June 15-July 31 as part of Colorado's 150th anniversary celebration.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_8f08686b-e1e8-4aec-8d3f-07f36dd37aff.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/3c/63c47cc3-338c-4e0c-90ef-9a73e5f4e924/6a03af2c08a42.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Why do pets come back?",
-    source: "Telluride Times",
-    date: "May 12, 2026",
-    firstSeen: "2026-05-13",
-    newsTopic: "community",
-    copy: "The local animal shelter reminds folks that returning adopted pets is sometimes necessary due to family emergencies or housing issues, and they welcome animals back without judgment. They're encouraging potential adopters to consider their living situations beforehand, especially breed restrictions from landlords. Two returned pets currently available are Buddy, an active 80-pound mixed breed, and Albus, a friendly cat who needs to be the only feline.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_c79afdcf-67a2-4a53-af38-836434775c16.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/f5/8f5b69c6-c02a-490b-9be5-b2121e993e1e/6a03ae4e06eb8.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Norwood banquet celebrates community standouts",
-    source: "Telluride Times",
-    date: "May 12, 2026",
-    firstSeen: "2026-05-13",
-    newsTopic: "community",
-    copy: "Norwood held its second annual Night of Elegance banquet at the Lone Cone Library, drawing 49 residents for dinner, music and awards. Mesa Rose Kitchen won Business of the Year for the second straight year, while Tom Meehan received the Norwood Noble award after retiring from 47 years as a volunteer firefighter and EMT.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_476e263a-ef79-45ed-96f1-efff9949fec9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/ce/5ce29a5d-8bea-4c87-980e-a850058b903e/6a03852cadbff.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "The condition PCOS is now called PMOS. What to know about the name change and what it means for care",
-    source: "Telluride Times",
-    date: "May 12, 2026",
-    firstSeen: "2026-05-13",
-    newsTopic: "community",
-    copy: "Medical experts have changed the name of PCOS (polycystic ovary syndrome) to PMOS (polycystic ovary metabolic syndrome) after 14 years of collaboration, saying the old name was confusing since the condition doesn't actually involve ovarian cysts. The hormonal condition affects weight, metabolism, mental health, and reproduction, with treatment focusing mainly on lifestyle changes like diet and exercise.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_9576d122-904f-5d3d-98b5-7b18da541ace.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/60/86041077-105e-5b75-a863-8057788e4508/6a039de6576da.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "2026 NFL schedule: Broncos and Chiefs play in 1st Monday night game of the season",
-    source: "Telluride Times",
-    date: "May 12, 2026",
-    firstSeen: "2026-05-12",
-    newsTopic: "arts-culture",
-    copy: "The Broncos and Chiefs will face off in the first Monday night game of the 2026 NFL season, though Chiefs QB Patrick Mahomes' availability remains uncertain after tearing his ACL and LCL in December. Broncos quarterback Bo Nix is expected ready for training camp after breaking his ankle during the AFC playoffs.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_1f2793ff-0041-5e96-b185-b3d756e5252d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/be/bbeb5f6d-e5cf-57fd-b2ac-6cdf28676ddf/6a031be69f601.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Sweet success",
-    source: "Telluride Times",
-    date: "May 12, 2026",
-    firstSeen: "2026-05-12",
-    newsTopic: "community",
-    copy: "The Telluride High School lacrosse team beat Holy Family 17-7 in the sweet 16, with the Miners jumping ahead early and never trailing after the first quarter. Beck Sommers led the scoring while goalies Bridger Barrett and Dylan Saunders split time in net for the sixth-seeded Miners, who improved to 13-3 overall.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_89d6205d-3340-4cd9-9e3c-7d05b688bf6e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/67/9672da42-7f48-4249-b019-db5fc45d6ef2/6a034f43b4e8c.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Telluride Marshal’s Department Arrests Individual for Failure to Register as a Sex Offender",
     source: "Town of Telluride",
     date: "May 22, 2026",
@@ -1095,15 +939,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14249"
   },
   {
-    title: "Many County Offices Closed May 21-25, 2026. Please plan ahead!",
-    source: "San Miguel County",
-    date: "May 15, 2026",
-    newsTopic: "arts-culture",
-    copy: "Due to all-staff training and the Memorial Day holiday, many offices will be closed from Thursday, May 21-Monday, May 25, reopening May 26. Please plan ahead! Contact individual departments for their closures.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=526",
-    img: ""
-  },
-  {
     title: "New Wildfire Information Site Launched",
     source: "San Miguel County",
     date: "May 1, 2026",
@@ -1126,7 +961,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "DOLA Economic Vitality Community Session on May 27, 2026",
     source: "Town of Ridgway",
-    date: "May 25, 2026",
+    date: "May 26, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1137,7 +972,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "CO Main Street Architect Visits on May 27-28, 2026",
     source: "Town of Ridgway",
-    date: "May 25, 2026",
+    date: "May 26, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1157,20 +992,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Town Manager's Report",
-    source: "Town of Ridgway",
-    date: "May 12, 2026",
-    firstSeen: "2026-05-16",
-    newsTopic: "community",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Manager%27s-Report---May-12%2C-2026.pdf",
-    img: ""
-  },
-  {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "May 25, 2026",
+    date: "May 26, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1269,14 +1093,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "land-use",
     copy: "Regional Governments Discuss Impacts of Development; The Joy of Sex Ed…with Clowns; Alex Kelloff Makes Bid for Congress",
     href: "https://koto.org/news/newscast-5-13-26/"
-  },
-  {
-    title: "Newscast 5-11-26",
-    source: "KOTO Community Radio",
-    date: "May 12, 2026",
-    newsTopic: "community",
-    copy: "Valley Floor Day Instills Stewardship in a Changing Climate -General Assembly Enters Final Days",
-    href: "https://koto.org/news/newscast-5-11-26/"
   }
 ];
 
@@ -1288,14 +1104,6 @@ const KOTO_FEATURED_STORIES = [
     newsTopic: "infrastructure",
     copy: "A bright yellow poetry box on the side of the road in San Miguel Canyon offers people driving to and fro a place to stop, write, and share poems. Created by local poet Rosemerry Wahtola Trommer, the poetry box is an opportunity to pause, reflect, and embrace a sense of community.",
     href: "https://koto.org/news/san-miguel-canyon-telluride-poetry-box-colorado/"
-  },
-  {
-    title: "Valley Floor Day Instills Stewardship in a Changing Climate",
-    source: "KOTO Community Radio",
-    date: "May 12, 2026",
-    newsTopic: "education",
-    copy: "More than 100 elementary students explored local flora and fauna during Valley Floor Education Day, learning about beavers, owls and ecosystem health through hands-on science.",
-    href: "https://koto.org/news/valley-floor-education-day-telluride-students-wetlands-wildlife-science/"
   }
 ];
 
@@ -1319,8 +1127,8 @@ const SMB_FORUM_ARTICLES = [
     date: "May 12, 2026",
     firstSeen: "2026-05-25",
     datePublished: "2026-05-13",
-    newsTopic: "community",
-    copy: "Jackson McCabe, a junior at Nucla High School, will do a small “pinternship” in Washington, D.C. this summer. The Pinhead Institute of Telluride, a Smithsonian Affiliate, is sponsoring the trip.",
+    newsTopic: "education",
+    copy: "Jackson McCabe, a junior at Nucla High School, will do a small “pinternship” in Washington, D.C. this summer. The Pinhead Institute of Telluride, a Smithsonian Affiliate, is sponsoring the …",
     href: "https://www.sanmiguelbasinforum.com/stories/jackson-mccabe-is-pinhead-history-pintern,114883",
     img: "https://zeta.creativecirclecdn.com/smb/original/20260512-170032-0b9-F1%20-%20pinhead.jpg"
   },
@@ -1331,8 +1139,8 @@ const SMB_FORUM_ARTICLES = [
     date: "May 5, 2026",
     firstSeen: "2026-05-25",
     datePublished: "2026-05-06",
-    newsTopic: "infrastructure",
-    copy: "The Town of Norwood will receive $1.25 million in state funding for safety and accessibility upgrades along Norwood Hill, the steep CDOT corridor that connects the mesa to the valley.",
+    newsTopic: "arts-culture",
+    copy: "Last week, the Town of Norwood announced it had been awarded $1,250,000 in funding through the Colorado Department of Transportation's Highway Safety Improvement Program (HSIP). Town Manager Sara …",
     href: "https://www.sanmiguelbasinforum.com/stories/town-secures-125m-for-norwood-hill-improvements,114098",
     img: ""
   }
@@ -2002,21 +1810,44 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-22/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-06-22T09:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-23/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-06-23T09:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Science Town Talks",
+    link: "https://koto.org/event/telluride-science-town-talks/2026-06-23/",
+    description: "Big science. Small town. Every Tuesday from June 2- August 11, Telluride Science invites the public to sit down with some of the world’s most brilliant researchers for a conversation that might just change how you see the world. Town Talks cover everything from quantum computing and climate solutions to the latest in medicine and energy — accessible, thought-provoking, and completely free. Please note, there is no Town Talk on July 7.",
+    pubDate: "2026-06-23T18:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Conference Center, Mountain Village",
+    imageUrl: ""
   }
 ];
 
 const WILKINSON_EVENTS = [
-  {
-    title: "Holiday - Library Closed",
-    link: "https://telluridelibrary.libcal.com/event/15920090?hs=a",
-    description: "Monday, May – Monday, May",
-    pubDate: "2026-05-25T00:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: ""
-  }
+
 ];
 
 const HUMANE_SOCIETY_ANIMALS = [
@@ -2264,13 +2095,13 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Steps Tavern Presents Karaoke Night",
     link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
-    description: "Steps Tavern Presents Karaoke Night. Doors Open at 7:00 PM. Karaoke Begins at 8:00 PM",
+    description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM.",
     pubDate: "2026-05-29T02:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "STEPS TAVERN",
-    imageUrl: "https://localist-images.azureedge.net/photos/52633505531238/huge/33b9b47c734793a754893ee4e67227b39326b67b.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/52985439397427/huge/7a32dc0ce7dd0fa5fc146521f201b6616af6feca.jpg"
   },
   {
     title: "Ridgway Last Day of School",
@@ -2693,13 +2524,13 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Steps Tavern Presents Karaoke Night",
     link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
-    description: "Steps Tavern Presents Karaoke Night. Doors Open at 7:00 PM. Karaoke Begins at 8:00 PM",
+    description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM.",
     pubDate: "2026-06-05T02:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "STEPS TAVERN",
-    imageUrl: "https://localist-images.azureedge.net/photos/52633505531238/huge/33b9b47c734793a754893ee4e67227b39326b67b.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/52985439397427/huge/7a32dc0ce7dd0fa5fc146521f201b6616af6feca.jpg"
   },
   {
     title: "Ridgway Farmers Market",
