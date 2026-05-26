@@ -1,0 +1,61 @@
+{
+  "_comment": "Per-entity config for scripts/extract-votes.mjs. Each entity has a rosters[] array with date-ranged member lists (end:null means current). The id strings MUST match the IDs used in v2/vote-tracker.html *_ALL_MEMBERS arrays.",
+
+  "tomv": {
+    "label": "Mountain Village Town Council",
+    "meetingPrefix": "Mountain Village Town Council",
+    "idPrefix": "mv",
+    "rosters": [
+      {
+        "start": "2024-01-01",
+        "end":   "2025-07-16",
+        "members": ["prohaska", "pearson", "magid", "mogenson", "duprey", "gomez", "gilbride"],
+        "_note": "Prohaska Mayor, Pearson Mayor Pro Tem; Gilbride seat replaced by Arguelles at Jul 17 2025 sworn-in."
+      },
+      {
+        "start": "2025-07-17",
+        "end":   "2026-01-27",
+        "members": ["prohaska", "pearson", "magid", "mogenson", "duprey", "gomez", "arguelles"],
+        "_note": "Arguelles sworn in Jul 17, 2025 (replacing Gilbride)."
+      },
+      {
+        "start": "2026-01-28",
+        "end":   "2026-02-18",
+        "members": ["pearson", "magid", "mogenson", "duprey", "gomez", "arguelles"],
+        "_note": "Prohaska resigned late Jan 2026; Pearson became Mayor, Magid Mayor Pro Tem. 6 voting members until Jansen appointed."
+      },
+      {
+        "start": "2026-02-19",
+        "end":   null,
+        "members": ["pearson", "magid", "mogenson", "duprey", "gomez", "arguelles", "jansen"],
+        "_note": "Jansen appointed Feb 19, 2026 to fill vacancy."
+      }
+    ],
+    "urlTemplate": "https://townofmountainvillage.com/site/assets/files/{ASSET_ID}/{SLUG}.pdf",
+    "insertionAnchorRe": "/\\* ── [A-Z][a-z]+ \\d+, \\d{4}.*?── \\*/",
+    "_insertionNotes": "Entries are inserted in date order. The script finds the chronologically-next /* ── DATE ── */ block after the target date and inserts BEFORE it. Caller is expected to verify."
+  },
+
+  "bocc": {
+    "label": "San Miguel County Board of County Commissioners",
+    "meetingPrefix": "SMC BOCC",
+    "idPrefix": "bocc",
+    "rosters": [
+      {
+        "start": "2025-01-01",
+        "end":   null,
+        "members": ["caton", "schillaci", "craighead"],
+        "_note": "Standard 3-commissioner board. Adjust if a seat changed mid-term."
+      }
+    ],
+    "_warning": "Roster is a placeholder — verify against the actual *_ALL_MEMBERS array in vote-tracker.html before relying on it for backfill."
+  },
+
+  "pc": {
+    "label": "San Miguel County Planning Commission",
+    "meetingPrefix": "SMC Planning Commission",
+    "idPrefix": "pc",
+    "rosters": [],
+    "_warning": "Roster intentionally empty — fill from v2/vote-tracker.html PC_*_ALL_MEMBERS before using."
+  }
+}
