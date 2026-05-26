@@ -4744,6 +4744,10 @@ const DRB_ALL_MEMBERS = [
   { id:'garner',  name:'Greer Garner',  shortName:'Garner',  title:'Board Member' },
 ];
 const DRB_2026 = ['brown','miller','newton','eckman','bennett','kramer','craige','austin','garner'];
+const DRB_2025 = ['brown','miller','newton','eckman','bennett','kramer','craige','austin','garner'];
+// Roster identical 2025 → 2026; all 9 members carried over. Reappointment
+// terms started Apr 25, 2024 (Brown, Bennett, Miller, Craige, Austin as 1st alt)
+// plus Newton, Eckman, Kramer, Garner as additional board appointments.
 
 const DRB_VOTE_ITEMS = [
   /* entries inserted via scripts/insert-votes.mjs */
@@ -6235,7 +6239,7 @@ function switchEntity() {
   } else if (ent === 'tomv') {
     years = [['', 'All years'], ['2026','2026'], ['2025','2025'], ['2024','2024']];
   } else if (ent === 'drb') {
-    years = [['', 'All years'], ['2026','2026']];
+    years = [['', 'All years'], ['2026','2026'], ['2025','2025']];
   } else {
     years = [['', 'All years'], ['2024','2024']];
   }
@@ -6591,7 +6595,10 @@ function renderDrbHeatmap() {
 
   const eras = yearSel === '2026'
     ? [{ label:'2026 MV Design Review Board', members:DRB_2026, yearFilter:2026 }]
-    : [{ label:'2026 MV Design Review Board', members:DRB_2026, yearFilter:2026 }];
+    : yearSel === '2025'
+    ? [{ label:'2025 MV Design Review Board', members:DRB_2025, yearFilter:2025 }]
+    : [{ label:'2026 MV Design Review Board', members:DRB_2026, yearFilter:2026 },
+       { label:'2025 MV Design Review Board', members:DRB_2025, yearFilter:2025 }];
 
   let html = '';
   eras.forEach(era => {
