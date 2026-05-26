@@ -2379,15 +2379,19 @@ const TOMV_ALL_MEMBERS = [
   { id:'arguelles', name:'Alline Arguelles',       shortName:'Arguelles',   title:'Council Member' },
   { id:'jansen',    name:'Dan Jansen',             shortName:'Jansen',      title:'Council Member (appointed Feb 19, 2026 to fill vacancy)' },
   { id:'prohaska',  name:'Martinique Prohaska',    shortName:'Prohaska',    title:'Mayor (resigned ~late Jan 2026)' },
+  { id:'gilbride',  name:'Jack Gilbride',          shortName:'Gilbride',    title:'Council Member (Jan – mid-2025 term; replaced by Arguelles in Jul 2025 election)' },
 ];
 const TOMV_2026 = ['pearson','magid','mogenson','duprey','gomez','arguelles','jansen','prohaska'];
-// 2025 had the same 7 members.  Prohaska was Mayor + Pearson Vice Mayor
-// for the full year; Jansen wasn't appointed until Feb 19, 2026.
-// Mogenson, Gomez (Rick), and Arguelles were ELECTED to the council in
-// the July 2025 election (sworn in at the July 17, 2025 meeting); the
-// council members who served Jan – mid-July 2025 may differ — TODO
-// confirm if/when the user provides 2024 minutes.
-const TOMV_2025 = ['prohaska','pearson','magid','mogenson','duprey','gomez','arguelles'];
+// 2025 roster: 7 voting members, but the seats changed mid-year.
+// Jan – Jul 17, 2025:  Prohaska (Mayor), Pearson (Mayor Pro Tem),
+//                      Gilbride, Mogenson, Duprey, Magid, Gomez.
+// Jul 17, 2025 onward: Prohaska, Pearson, Mogenson, Duprey, Magid,
+//                      Gomez, ARGUELLES (replaced Gilbride; sworn in
+//                      with Mogenson + Gomez at Jul 17 meeting).
+// The heatmap shows all 8 IDs as columns; whichever wasn't on the
+// council at the time of each vote is simply absent from that
+// vote's `votes` object (renders as "Not on Council").
+const TOMV_2025 = ['prohaska','pearson','magid','mogenson','duprey','gomez','arguelles','gilbride'];
 
 const TOMV_VOTE_ITEMS = [
   /* ── January 7, 2026 — Special JOINT Meeting (MV + Telluride Town
@@ -2699,14 +2703,117 @@ const TOMV_VOTE_ITEMS = [
   },
 
   /* ────────────────────────  2025  ────────────────────────────
-     Council seats (Jul 17, 2025 → end of year): Prohaska (Mayor),
-     Pearson (Mayor Pro Tem), Mogenson, Duprey, Magid, Gomez (Rick),
-     Arguelles. Mogenson, Gomez, and Arguelles were sworn in on
-     July 17, 2025 (newly elected).  Pre-July 2025 roster is TBD
-     (pending the user's Jan – Jun 2025 minutes review). */
+     Council seats Jan – mid-Jul 2025:  Prohaska (Mayor), Pearson
+     (Mayor Pro Tem), GILBRIDE, Mogenson, Duprey, Magid, Gomez (Rick).
+     Jul 17, 2025 onward: Gilbride replaced by ARGUELLES (Mogenson +
+     Gomez were also up for re-election in Jul 2025 and re-elected).
+     Mid-year seat changes are reflected in each vote's `votes` map:
+     pre-Jul entries omit `arguelles`; post-Jul entries omit
+     `gilbride`. */
 
-  /* ── July 17, 2025 — First meeting of new term; all 7 sworn-in
-       members present. ── */
+  /* ── January 16, 2025 — Gilbride absent; 6 voting (Prohaska,
+       Pearson, Mogenson, Duprey, Magid, Gomez). ── */
+  {
+    id:'mv2025-J1', date:'2025-01-16', year:2025,
+    meeting:'Mountain Village Town Council — Jan 16, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/45300/january_16-_2025_town_council_meeting_minutes.pdf',
+    title:'Re-Certify Mountain Village Promotional Association (MVPA) Common Consumption Area',
+    description:'Re-certified the Mountain Village Promotional Association and Common Consumption Area with conditions: (1) applicant shall provide an insurance certificate to the Clerk\'s office by June 1, 2025 to show coverage for the remainder of the 2025 calendar year; (2) applicant will provide a summer security plan agreement before the April 24, 2025 Town Council meeting.',
+    tags:['Land Use','Liquor'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', gilbride:'Absent' },
+  },
+  {
+    id:'mv2025-J2', date:'2025-01-16', year:2025,
+    meeting:'Mountain Village Town Council — Jan 16, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/45300/january_16-_2025_town_council_meeting_minutes.pdf',
+    title:'Ordinance — Amending Town Use Tax Provisions (First Reading)',
+    description:'Approved on first reading an Ordinance amending Town Use Tax Provisions, pursuant to §17.4.7 of the CDC. Set the second reading, public hearing, and final Council vote for February 20, 2025.',
+    tags:['Tax','Budget & Finance'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', gilbride:'Absent' },
+  },
+  {
+    id:'mv2025-J3', date:'2025-01-16', year:2025,
+    meeting:'Mountain Village Town Council — Jan 16, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/45300/january_16-_2025_town_council_meeting_minutes.pdf',
+    title:'Ordinance — Rezone of Lot 81A-R2 Unit 1, TBD Raccoon Lane (First Reading)',
+    description:'Approved on first reading an Ordinance regarding a rezone application for Lot 81A-R2 Unit 1, TBD Raccoon Lane, pursuant to CDC §17.4.7. Set second reading and public hearing for February 20, 2025.',
+    tags:['Land Use','Rezone'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', gilbride:'Absent' },
+  },
+
+  /* ── January 28, 2025 Special — Gondola Station Planning Workshop;
+       Gilbride absent.  No substantive open-session votes taken
+       (workshop only — boundary discussion, leadership decisions
+       review, schedule).  Per established tracker convention,
+       work-session-only meetings are not included. */
+
+  /* ── February 20, 2025 — All 7 present. ── */
+  {
+    id:'mv2025-F1', date:'2025-02-20', year:2025,
+    meeting:'Mountain Village Town Council — Feb 20, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/45561/february_20-_2025_town_council_meeting_minutes.pdf',
+    title:'Resolution — Appropriating Sums of Money Related to Boiler Replacements',
+    description:'Approved a Resolution appropriating sums of money related to boiler replacements at Town facilities.',
+    tags:['Budget & Finance','Infrastructure'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', gilbride:'Yes' },
+  },
+  {
+    id:'mv2025-F2', date:'2025-02-20', year:2025,
+    meeting:'Mountain Village Town Council — Feb 20, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/45561/february_20-_2025_town_council_meeting_minutes.pdf',
+    title:'IGA with San Miguel County — Noxious Weed Management + Control Services for Mountain Village',
+    description:'Approved an intergovernmental agreement between San Miguel County and the Town of Mountain Village concerning noxious weed management and control services through 2030.',
+    tags:['Intergovernmental','Land Use'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', gilbride:'Yes' },
+  },
+  {
+    id:'mv2025-F3', date:'2025-02-20', year:2025,
+    meeting:'Mountain Village Town Council — Feb 20, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/45561/february_20-_2025_town_council_meeting_minutes.pdf',
+    title:'MOU — Town of Mountain Village + Illium Property Owners Association: Shared Water Facilities',
+    description:'Approved a Memorandum of Understanding between the Illium Property Owners Association and the Town of Mountain Village for shared water facilities and separate legal water rights related to the Illium Housing Parcel in Illium Valley. The Council took no formal action regarding existing or new water facilities, and to authorize staff to make any final non-substantive changes.',
+    tags:['Intergovernmental','Water','Housing'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', gilbride:'Yes' },
+  },
+  {
+    id:'mv2025-F4', date:'2025-02-20', year:2025,
+    meeting:'Mountain Village Town Council — Feb 20, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/45561/february_20-_2025_town_council_meeting_minutes.pdf',
+    title:'Ordinance — Density Clarification & Correction for Lots 1001 + 1005R (Village Court Apartments) — First Reading',
+    description:'Approved on first reading an Ordinance clarifying and correcting the density allocated to Lots 1001 and 1005R, commonly called Village Court Apartments. Set second reading, public hearing, and final Council vote for March 20, 2025.',
+    tags:['Land Use','Housing','Density Transfer'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', gilbride:'Yes' },
+  },
+  {
+    id:'mv2025-F5', date:'2025-02-20', year:2025,
+    meeting:'Mountain Village Town Council — Feb 20, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/45561/february_20-_2025_town_council_meeting_minutes.pdf',
+    title:'Ordinance — Amending Town Use Tax Provisions (Second Reading + Adoption)',
+    description:'Finally adopted an Ordinance amending Town Use Tax Provisions on second reading.',
+    tags:['Tax','Budget & Finance'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', gilbride:'Yes' },
+  },
+  {
+    id:'mv2025-F6', date:'2025-02-20', year:2025,
+    meeting:'Mountain Village Town Council — Feb 20, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/45561/february_20-_2025_town_council_meeting_minutes.pdf',
+    title:'Ordinance — Mayoral and Council Compensation (First Reading)',
+    description:'Approved on first reading an Ordinance and Code Amendment for Mayoral and Council Compensation. Set second reading, public hearing, and final Council vote for March 20, 2025.',
+    tags:['Governance','Administrative'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', gilbride:'Yes' },
+  },
+
+  /* ── July 17, 2025 — First meeting of new term; Mogenson, Gomez,
+       and Arguelles sworn in (replacing Gilbride). ── */
   {
     id:'mv2025-01', date:'2025-07-17', year:2025,
     meeting:'Mountain Village Town Council — Jul 17, 2025',
