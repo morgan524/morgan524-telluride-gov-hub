@@ -259,7 +259,7 @@ ${minutesText}
 Extract every substantive vote. Use the record_votes tool to return the JSON array.`;
 
 // ─────────────────────────── Claude call ────────────────────────────
-function callClaude() {
+function callClaudeOnce() {
   const body = JSON.stringify({
     model: CLAUDE_MODEL,
     max_tokens: 8192,
@@ -293,7 +293,15 @@ function callClaude() {
       res.on('end', () => {
         try {
           const json = JSON.parse(data);
-          if (json.error) return reject(new Error(json.error.message || JSON.stringify(json.error)));
+          if (json.error) {
+            const err = new Error(json.error.message || JSON.stringify(json.error));
+            err.statusCode = res.statusCode;
+            // Anthropic sets retry-after on 429 (sometimes; not always).
+            // Also exposes a reset epoch in anthropic-ratelimit-*-reset headers.
+            err.retryAfterSec = parseInt(res.headers['retry-after'] || '0', 10) || null;
+            err.resetAt = res.headers['anthropic-ratelimit-input-tokens-reset'] || null;
+            return reject(err);
+          }
           const toolUse = (json.content || []).find(b => b.type === 'tool_use' && b.name === 'record_votes');
           if (!toolUse) return reject(new Error(`No tool_use block in response. Stop reason: ${json.stop_reason}. First content type: ${json.content?.[0]?.type}`));
           resolve({ entries: toolUse.input.entries, usage: json.usage });
@@ -307,6 +315,32 @@ function callClaude() {
     req.write(body);
     req.end();
   });
+}
+
+// Call with automatic retry on rate-limit (429). Anthropic returns
+// either a retry-after header (in seconds) or an ISO timestamp in
+// anthropic-ratelimit-input-tokens-reset. Falls back to 65s if both
+// are missing (the bucket is per-minute, so 65s clears it).
+async function callClaude() {
+  const MAX_RETRIES = 4;
+  for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+    try {
+      return await callClaudeOnce();
+    } catch (e) {
+      const isRateLimit = e.statusCode === 429 || /rate limit/i.test(e.message);
+      if (!isRateLimit || attempt === MAX_RETRIES) throw e;
+
+      let waitSec = e.retryAfterSec || 0;
+      if (!waitSec && e.resetAt) {
+        const resetMs = new Date(e.resetAt).getTime();
+        waitSec = Math.max(5, Math.ceil((resetMs - Date.now()) / 1000) + 2);
+      }
+      if (!waitSec) waitSec = 65;
+
+      console.log(`  ⚠ Rate-limited (attempt ${attempt}/${MAX_RETRIES}). Waiting ${waitSec}s before retry...`);
+      await new Promise(r => setTimeout(r, waitSec * 1000));
+    }
+  }
 }
 
 let entries, usage;
