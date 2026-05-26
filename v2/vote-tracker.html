@@ -209,8 +209,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <label class="filter-label">Entity</label>
       <select class="filter-select" id="filter-entity" onchange="switchEntity()">
         <option value="telluride">Town of Telluride</option>
-        <option value="bocc">County BOCC</option>
-        <option value="planning">County Planning</option>
+        <option value="bocc">San Miguel BOCC</option>
+        <option value="planning">San Miguel Planning Commission</option>
       </select>
     </div>
     <div class="filter-group">
@@ -2268,14 +2268,14 @@ function renderBoccHeatmap() {
   const catSel  = hmCatFilter;
 
   const eras = yearSel === '2026'
-    ? [{ label:'2026 BOCC', members:BOCC_2025, yearFilter:2026 }]
+    ? [{ label:'2026 San Miguel BOCC', members:BOCC_2025, yearFilter:2026 }]
     : yearSel === '2025'
-    ? [{ label:'2025 BOCC', members:BOCC_2025, yearFilter:2025 }]
+    ? [{ label:'2025 San Miguel BOCC', members:BOCC_2025, yearFilter:2025 }]
     : yearSel === '2024'
-    ? [{ label:'2024 BOCC', members:BOCC_2024, yearFilter:2024 }]
-    : [{ label:'2026 BOCC', members:BOCC_2025, yearFilter:2026 },
-       { label:'2025 BOCC', members:BOCC_2025, yearFilter:2025 },
-       { label:'2024 BOCC', members:BOCC_2024, yearFilter:2024 }];
+    ? [{ label:'2024 San Miguel BOCC', members:BOCC_2024, yearFilter:2024 }]
+    : [{ label:'2026 San Miguel BOCC', members:BOCC_2025, yearFilter:2026 },
+       { label:'2025 San Miguel BOCC', members:BOCC_2025, yearFilter:2025 },
+       { label:'2024 San Miguel BOCC', members:BOCC_2024, yearFilter:2024 }];
 
   let html = '';
   eras.forEach(era => {
@@ -2379,14 +2379,14 @@ function renderPlanningHeatmap() {
   const catSel  = hmCatFilter;
 
   const eras = yearSel === '2026'
-    ? [{ label:'2026 Planning Commission', members:PC_2025, yearFilter:2026 }]
+    ? [{ label:'2026 San Miguel Planning Commission', members:PC_2025, yearFilter:2026 }]
     : yearSel === '2025'
-    ? [{ label:'2025 Planning Commission', members:PC_2025, yearFilter:2025 }]
+    ? [{ label:'2025 San Miguel Planning Commission', members:PC_2025, yearFilter:2025 }]
     : yearSel === '2024'
-    ? [{ label:'2024 Planning Commission', members:PC_2024, yearFilter:2024 }]
-    : [{ label:'2026 Planning Commission', members:PC_2025, yearFilter:2026 },
-       { label:'2025 Planning Commission', members:PC_2025, yearFilter:2025 },
-       { label:'2024 Planning Commission', members:PC_2024, yearFilter:2024 }];
+    ? [{ label:'2024 San Miguel Planning Commission', members:PC_2024, yearFilter:2024 }]
+    : [{ label:'2026 San Miguel Planning Commission', members:PC_2025, yearFilter:2026 },
+       { label:'2025 San Miguel Planning Commission', members:PC_2025, yearFilter:2025 },
+       { label:'2024 San Miguel Planning Commission', members:PC_2024, yearFilter:2024 }];
 
   let html = '';
   eras.forEach(era => {
