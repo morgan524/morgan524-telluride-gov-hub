@@ -2381,6 +2381,13 @@ const TOMV_ALL_MEMBERS = [
   { id:'prohaska',  name:'Martinique Prohaska',    shortName:'Prohaska',    title:'Mayor (resigned ~late Jan 2026)' },
 ];
 const TOMV_2026 = ['pearson','magid','mogenson','duprey','gomez','arguelles','jansen','prohaska'];
+// 2025 had the same 7 members.  Prohaska was Mayor + Pearson Vice Mayor
+// for the full year; Jansen wasn't appointed until Feb 19, 2026.
+// Mogenson, Gomez (Rick), and Arguelles were ELECTED to the council in
+// the July 2025 election (sworn in at the July 17, 2025 meeting); the
+// council members who served Jan – mid-July 2025 may differ — TODO
+// confirm if/when the user provides 2024 minutes.
+const TOMV_2025 = ['prohaska','pearson','magid','mogenson','duprey','gomez','arguelles'];
 
 const TOMV_VOTE_ITEMS = [
   /* ── January 7, 2026 — Special JOINT Meeting (MV + Telluride Town
@@ -2689,6 +2696,417 @@ const TOMV_VOTE_ITEMS = [
     tags:['Governance'],
     outcome:'Passed', tally:'7-0',
     votes:{ pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes', jansen:'Yes' },
+  },
+
+  /* ────────────────────────  2025  ────────────────────────────
+     Council seats (Jul 17, 2025 → end of year): Prohaska (Mayor),
+     Pearson (Mayor Pro Tem), Mogenson, Duprey, Magid, Gomez (Rick),
+     Arguelles. Mogenson, Gomez, and Arguelles were sworn in on
+     July 17, 2025 (newly elected).  Pre-July 2025 roster is TBD
+     (pending the user's Jan – Jun 2025 minutes review). */
+
+  /* ── July 17, 2025 — First meeting of new term; all 7 sworn-in
+       members present. ── */
+  {
+    id:'mv2025-01', date:'2025-07-17', year:2025,
+    meeting:'Mountain Village Town Council — Jul 17, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47000/july_17-_2025_town_council_meeting_minutes.pdf',
+    title:'2025 Officer Elections — Prohaska as Mayor, Pearson as Mayor Pro Tem',
+    description:'Following swearing-in of newly-elected Council members (Mogenson, Gomez, Arguelles), the Council elected officers: Martinique Prohaska to the position of Mayor (Motion Pearson, second Gomez, unanimous) and Scott Pearson to the position of Mayor Pro Tem (Motion Prohaska, second Magid, unanimous). Oaths of office administered by Town Clerk Susan Johnston.',
+    tags:['Governance'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-02', date:'2025-07-17', year:2025,
+    meeting:'Mountain Village Town Council — Jul 17, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47000/july_17-_2025_town_council_meeting_minutes.pdf',
+    title:'2025-2026 Council Boards & Commissions Appointments — Full Slate',
+    description:'Approved 18 boards/committees appointments via separate unanimous motions: Ethics Commission (Duprey reg; Magid alt); Budget & Finance (Duprey, Mogenson, Pearson); Colorado Flights Alliance (Gomez reg; Arguelles alt); Telluride Historical Museum (Arguelles); Transportation & Parking (Duprey, Mogenson); Region 10 (Pearson); TMVOA Gondola Committee (Prohaska, Mogenson, Pearson); Colorado Communities for Climate Action (Prohaska); MV Community Grant Committee (Arguelles, Prohaska); Telluride Conference Center Work Group (Magid, Pearson); SMART (Magid, Mogenson; Gomez alt); CAFI (Gomez); Plaza Vending (Pearson); BDAG (Arguelles, Pearson, Duprey); Telluride Tourism Board (Gomez); Wastewater (Duprey, Magid); Infrastructure/Housing (Duprey, Magid, Pearson); Public Arts Commission (Mogenson); Ski Ranches Working Group (Mogenson, Prohaska).',
+    tags:['Governance'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-03', date:'2025-07-17', year:2025,
+    meeting:'Mountain Village Town Council — Jul 17, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47000/july_17-_2025_town_council_meeting_minutes.pdf',
+    title:'Consent Agenda — IGA with SMC as Fiscal Agent for Homeland Security Grant',
+    description:'Consent agenda including approval of June 18, 2025 meeting minutes and ratification of an intergovernmental agreement with San Miguel County as the Fiscal Agent for a Homeland Security Grant.',
+    tags:['Intergovernmental','Public Safety'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-04', date:'2025-07-17', year:2025,
+    meeting:'Mountain Village Town Council — Jul 17, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47000/july_17-_2025_town_council_meeting_minutes.pdf',
+    title:'Resolution — Appropriating Sums of Money for Boiler Replacements',
+    description:'Approved a Resolution appropriating sums of money related to boiler replacements at Town facilities.',
+    tags:['Budget & Finance','Infrastructure'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-05', date:'2025-07-17', year:2025,
+    meeting:'Mountain Village Town Council — Jul 17, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47000/july_17-_2025_town_council_meeting_minutes.pdf',
+    title:'Resolution — Impose Open Fire Restriction',
+    description:'Approved a Resolution imposing an open fire restriction within Town boundaries (wildfire mitigation).',
+    tags:['Wildfire','Public Safety'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-06', date:'2025-07-17', year:2025,
+    meeting:'Mountain Village Town Council — Jul 17, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47000/july_17-_2025_town_council_meeting_minutes.pdf',
+    title:'Pre-Development Agreement with Triumph Development West for Ilium Housing',
+    description:'Sitting as the MV Housing Authority, approved a Pre-Development Agreement with Triumph West Development LLC for the development of Ilium, with an amendment requiring a Notice to Proceed prior to the Project Design and Entitlement Phase, along with modified language regarding a 4% development fee.',
+    tags:['Housing','Land Use'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-07', date:'2025-07-17', year:2025,
+    meeting:'Mountain Village Town Council — Jul 17, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47000/july_17-_2025_town_council_meeting_minutes.pdf',
+    title:'Resolution — CUP for Spider Jump + Zipline Ground School at OS3U Active Open Space',
+    description:'Approved a Resolution granting a Conditional Use Permit for the placement of a Spider Jump and Zipline Ground School activity structures on OS3U Active Open Space, with conditions: (1) applicant shall secure the structure and other elements that might attract public access when closed; (2) applicant shall re-vegetate all disturbed areas and provide seating for spectators; (3) CUP valid for 3 years with annual review by Planning Division staff; (4) Town reserves right to revoke if the location is found to be in conflict with future gondola construction.',
+    tags:['Land Use','Recreation'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-08', date:'2025-07-17', year:2025,
+    meeting:'Mountain Village Town Council — Jul 17, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47000/july_17-_2025_town_council_meeting_minutes.pdf',
+    title:'Ordinance Amending CDC §17.5.13 (Sign Regulations) — Second Reading + Adoption',
+    description:'Finally adopted an Ordinance amending Community Development Code §17.5.13 Sign Regulations on second reading.',
+    tags:['Land Use','Administrative'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-09', date:'2025-07-17', year:2025,
+    meeting:'Mountain Village Town Council — Jul 17, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47000/july_17-_2025_town_council_meeting_minutes.pdf',
+    title:'Resolution DENYING CUP for Temporary Parking Lot on Lots 122 / 123 / OS-1R2 (SPLIT 5-2, Prohaska + Pearson Opposed)',
+    description:'After a contentious public hearing with 10 public comments, first a motion to continue this item failed 2-5 (Prohaska + Pearson supporting continuance). Council then approved a Resolution DENYING the conditional use permit for a temporary parking lot on Lots 122, 123, and OS-1R2 pursuant to CDC §17.4.14, with the Mayor and Mayor Pro Tem dissenting.',
+    tags:['Land Use','Parking'],
+    outcome:'Passed', tally:'5-2',
+    votes:{ prohaska:'No', pearson:'No', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-10', date:'2025-07-17', year:2025,
+    meeting:'Mountain Village Town Council — Jul 17, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47000/july_17-_2025_town_council_meeting_minutes.pdf',
+    title:'Resolution — Pickleball Court Siting in Front Yard of Lot 705R, 132 Adams Ranch Rd (SPLIT 5-2, Duprey + Mogenson Opposed)',
+    description:'Approved a Resolution allowing the siting of a pickleball court in the front yard of Lot 705R, 132 Adams Ranch Rd, pursuant to CDC §17.4.16. Condition: homeowners shall only use equipment listed as "quiet or noise reducing" for both paddles and balls. Duprey and Mogenson dissented.',
+    tags:['Land Use','Recreation'],
+    outcome:'Passed', tally:'5-2',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'No', duprey:'No', gomez:'Yes', arguelles:'Yes' },
+  },
+
+  /* ── August 21, 2025 ── */
+  {
+    id:'mv2025-11', date:'2025-08-21', year:2025,
+    meeting:'Mountain Village Town Council — Aug 21, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47159/august_21-_2025_town_council_meeting_minutes.pdf',
+    title:'Emergency Ordinance — Special Mail Ballot Election for Lift Tax Ballot Question on November 4, 2025',
+    description:'Approved an emergency Ordinance calling for a Special Mail Ballot Election in connection with a Lift Tax ballot question on November 4, 2025.',
+    tags:['Tax','Governance','Ballot Measure'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-12', date:'2025-08-21', year:2025,
+    meeting:'Mountain Village Town Council — Aug 21, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47159/august_21-_2025_town_council_meeting_minutes.pdf',
+    title:'Ordinance — Density Transfer + Rezone Lots 901-R2, 902-R2, 908, 904 (Transfer 2 SF Units to Density Bank) — First Reading',
+    description:'Approved on first reading an Ordinance regarding the Density Transfer and Rezone application, pursuant to CDC §§17.4.9 & 17.4.10, to transfer 2 single-family density units (8-person total equivalent density) from Lots 902-R2 and 908 to the density bank. Conditions including: prior to recordation, owner must obtain Town Council approval of Class 5 Minor Subdivision; owner of record of density in the bank responsible for all dues/fees/taxes until transferred; all representations of applicant are conditions of approval; town staff to update density bank and lot list. Second reading set for September 18, 2025.',
+    tags:['Land Use','Density Transfer','Rezone'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-13', date:'2025-08-21', year:2025,
+    meeting:'Mountain Village Town Council — Aug 21, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47159/august_21-_2025_town_council_meeting_minutes.pdf',
+    title:'Resolution — CUP for Temporary Rain Tent at San Sophia Overlook (Lot OSP-49R)',
+    description:'Approved by Resolution a Conditional Use Permit request for the placement of a temporary rain tent on Lot OSP-49R at San Sophia Overlook, with two conditions: (1) applicant shall re-vegetate all disturbed areas at the end of the CUP period; (2) CUP valid for 18 months.',
+    tags:['Land Use','Recreation'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-14', date:'2025-08-21', year:2025,
+    meeting:'Mountain Village Town Council — Aug 21, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47159/august_21-_2025_town_council_meeting_minutes.pdf',
+    title:'Resolution — 13.5\' Height Variance at Lot 161A-4 Unit 6, TBD Bridge Ln (Coonskin View Plane)',
+    description:'Approved a Resolution granting a 13.5\' height variance to the Coonskin View Plane for Lot 161A-4 Unit 6, TBD Bridge Lane.',
+    tags:['Land Use','Variance'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-15', date:'2025-08-21', year:2025,
+    meeting:'Mountain Village Town Council — Aug 21, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47159/august_21-_2025_town_council_meeting_minutes.pdf',
+    title:'Resolution — Consent to TMVOA Amended General Declaration',
+    description:'Approved a Resolution providing Town consent to certain amendments to the General Declaration of Telluride Mountain Village.',
+    tags:['Land Use','PUD'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+
+  /* ── October 9, 2025 Special (Budget Workshop) ── */
+  {
+    id:'mv2025-16', date:'2025-10-09', year:2025,
+    meeting:'Mountain Village Town Council Special — Oct 9, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47625/october_9-_2025_special_town_council_meeting_minutes.pdf',
+    title:'Resolution Supporting Ballot Issue A',
+    description:'In a special budget-workshop meeting that included review of various department budgets and the Mountain Village Housing Authority (Affordable Housing Development Fund, Mortgage Assistance Fund — Council requested discontinuation; VCA rate changes deferred to Oct 16), the Council adopted a Resolution of the Town Council in support of Ballot Issue A.',
+    tags:['Ballot Measure','Tax'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+
+  /* ── October 16, 2025 ── */
+  {
+    id:'mv2025-17', date:'2025-10-16', year:2025,
+    meeting:'Mountain Village Town Council — Oct 16, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47749/october_16-_2025_town_council_meeting_minutes.pdf',
+    title:'Resolution — Appropriating Additional Sums to 2025 Budget',
+    description:'Approved a Resolution appropriating additional sums of money for the 2025 Budget year for the purposes noted in the resolution.',
+    tags:['Budget & Finance'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-18', date:'2025-10-16', year:2025,
+    meeting:'Mountain Village Town Council — Oct 16, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47749/october_16-_2025_town_council_meeting_minutes.pdf',
+    title:'Resolution — 2026 Village Court Apartments Fee Schedule (SPLIT 6-1, Arguelles Opposed)',
+    description:'Sitting as the MV Housing Authority, approved a Resolution adopting certain proposed fee schedules of Village Court Apartments for the 2026 budget year. Alline Arguelles was the sole dissenting vote.',
+    tags:['Housing','Budget & Finance'],
+    outcome:'Passed', tally:'6-1',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'No' },
+  },
+  {
+    id:'mv2025-19', date:'2025-10-16', year:2025,
+    meeting:'Mountain Village Town Council — Oct 16, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47749/october_16-_2025_town_council_meeting_minutes.pdf',
+    title:'Ordinance — Miscellaneous Changes to Mountain Village Municipal Code (First Reading)',
+    description:'Approved on first reading an Ordinance making miscellaneous changes to the Town of Mountain Village Municipal Code, with direction to staff to re-word three discussed sections regarding dog violations, 3-wheeled vehicles, and unlawful conduct on public property. Second reading set for November 20, 2025.',
+    tags:['Administrative','Public Safety'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-20', date:'2025-10-16', year:2025,
+    meeting:'Mountain Village Town Council — Oct 16, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47749/october_16-_2025_town_council_meeting_minutes.pdf',
+    title:'Third Supplement to Gondola Project IGA — Cost-Sharing of Planning & Project Development Phase',
+    description:'Approved the Third Supplement and Amendment to the Intergovernmental Agreement for cost-sharing of the planning and Gondola project development phase for the 2026 budget year.',
+    tags:['Intergovernmental','Infrastructure','Gondola'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-21', date:'2025-10-16', year:2025,
+    meeting:'Mountain Village Town Council — Oct 16, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47749/october_16-_2025_town_council_meeting_minutes.pdf',
+    title:'Ordinance Amending Ord 2021-13 — Density Transfer + Rezone at Lot 30, 98 Aspen Ridge (Second Reading)',
+    description:'Approved an Ordinance clarifying and correcting Ordinance No. 2021-13, Density Transfer and Rezone at Lot 30, 98 Aspen Ridge, on second reading.',
+    tags:['Land Use','Density Transfer','Rezone'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-22', date:'2025-10-16', year:2025,
+    meeting:'Mountain Village Town Council — Oct 16, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47749/october_16-_2025_town_council_meeting_minutes.pdf',
+    title:'Resolution — Height Variance at Lot 166AR2-3, TBD Stonegate Drive (4.6\' max / 4\'-6.5" avg)',
+    description:'Adopted a Resolution approving a height variance allowing a maximum height variance of 4.6 feet above the allowable and a maximum average height of 4\'-6.5", per CDC height restrictions for portions of a new single-family home at Lot 166AR2-3, TBD Stonegate Drive. Conditions: variance valid only with the design presented for initial DRB review on October 2, 2025, valid for 18 months (with one allowable 6-month extension); variance specific to the area described in the staff memo + DRB-approved drawings.',
+    tags:['Land Use','Variance'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+
+  /* ── November 20, 2025 ── */
+  {
+    id:'mv2025-23', date:'2025-11-20', year:2025,
+    meeting:'Mountain Village Town Council — Nov 20, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47953/november_20_2025_town_council_meeting_minutes.pdf',
+    title:'Consent Agenda — Mountain Village Zero-Emission Vehicle Transition Plan: Grand Award',
+    description:'Consent agenda approving the Town of Mountain Village\'s Grand Award for the Mountain Village Zero-Emission Vehicle Transition Plan, plus minutes from October 9 and 16, 2025 meetings.',
+    tags:['Climate','Infrastructure'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-24', date:'2025-11-20', year:2025,
+    meeting:'Mountain Village Town Council — Nov 20, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47953/november_20_2025_town_council_meeting_minutes.pdf',
+    title:'Ordinance Adopting the 2026 Budget — First Reading (SPLIT 6-1, Mogenson Opposed)',
+    description:'Approved on first reading an Ordinance adopting the 2026 Budget for the Town of Mountain Village. Harvey Mogenson was the sole dissenting vote.',
+    tags:['Budget & Finance'],
+    outcome:'Passed', tally:'6-1',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'No', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-25', date:'2025-11-20', year:2025,
+    meeting:'Mountain Village Town Council — Nov 20, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47953/november_20_2025_town_council_meeting_minutes.pdf',
+    title:'Ordinance Levying Property Taxes for 2025 (Collected in 2026) — First Reading',
+    description:'Approved on first reading an Ordinance of the Town levying property taxes for the year 2025 to be collected in 2026.',
+    tags:['Tax','Budget & Finance'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-26', date:'2025-11-20', year:2025,
+    meeting:'Mountain Village Town Council — Nov 20, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47953/november_20_2025_town_council_meeting_minutes.pdf',
+    title:'Resolution — Adopting the 2026 Fee Schedules',
+    description:'Approved a Resolution adopting the 2026 Fee Schedules for the Town.',
+    tags:['Budget & Finance'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-27', date:'2025-11-20', year:2025,
+    meeting:'Mountain Village Town Council — Nov 20, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47953/november_20_2025_town_council_meeting_minutes.pdf',
+    title:'Ordinance — Establish + Operate Town Water and Sewer Enterprises (First Reading)',
+    description:'Approved on first reading an Ordinance regarding the establishment and operation of Town water and sewer enterprises. Second reading set for December 11, 2025.',
+    tags:['Infrastructure','Water','Administrative'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-28', date:'2025-11-20', year:2025,
+    meeting:'Mountain Village Town Council — Nov 20, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47953/november_20_2025_town_council_meeting_minutes.pdf',
+    title:'Ordinance — Miscellaneous Municipal Code Changes (Second Reading + Adoption)',
+    description:'Finally adopted an Ordinance amending provisions in Titles 6, 8, 9, and 10 of the Town Municipal Code, with the addition of defining language regarding "Last mile delivery vehicles."',
+    tags:['Administrative','Public Safety'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-29', date:'2025-11-20', year:2025,
+    meeting:'Mountain Village Town Council — Nov 20, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47953/november_20_2025_town_council_meeting_minutes.pdf',
+    title:'2025-2026 Telluride Ski & Golf Winter Parking Agreement',
+    description:'Approved a memorandum of understanding between TSG and the Town of Mountain Village regarding parking at the gondola parking garage and meadows parking lot, contingent upon confirmation that the signature is valid on the MOU.',
+    tags:['Intergovernmental','Parking'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-30', date:'2025-11-20', year:2025,
+    meeting:'Mountain Village Town Council — Nov 20, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47953/november_20_2025_town_council_meeting_minutes.pdf',
+    title:'Ordinance Amending CDC §17.6.2 Special Event Regulations + Special Event Guidelines (First Reading)',
+    description:'Approved on first reading an Ordinance regarding proposed changes to the Community Development Code §§17.6.2 Special Event Regulations, 17.8.1 Definitions, 17.6.7 Busking Regulations, and 17.4.2 Table 4-1 Development Application Classes, and the adoption of special event guidelines (Exhibit B). Second reading set for December 11, 2025.',
+    tags:['Land Use','Events'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-31', date:'2025-11-20', year:2025,
+    meeting:'Mountain Village Town Council — Nov 20, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47953/november_20_2025_town_council_meeting_minutes.pdf',
+    title:'Ordinance — Density Transfer + Rezone Lot 42B Unit 41C (First Reading; CDC §§17.4.9 & 17.4.10)',
+    description:'Approved on first reading an Ordinance regarding a Density Transfer and Rezone application to transfer 0.25 multi-family density units (0.25 person equivalent) from the Mountain Village Density Bank to Lot 42B, Unit 41C, with conditions: (1) Density Transfer + Rezoning conditional until density units are obtained (expires if not obtained within 18 months); (2) applicant must go through Class 1 Application to transfer density into their name; (3) applicant shall work with Blue Mesa HOA to update declarations to recognize Unit 41C as one Lodge unit; (4) owner of record of density in the bank responsible for dues/fees/taxes. Second reading set for January 15, 2026.',
+    tags:['Land Use','Density Transfer','Rezone'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-32', date:'2025-11-20', year:2025,
+    meeting:'Mountain Village Town Council — Nov 20, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/47953/november_20_2025_town_council_meeting_minutes.pdf',
+    title:'Earthwork Easement Vacation for Lot 360',
+    description:'Approved the vacation of an Earthwork Easement on Lot 360, as identified in Exhibit B, based on the evidence provided within the staff report of record dated November 11, 2025.',
+    tags:['Land Use','Easement'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+
+  /* ── December 11, 2025 — Gomez absent (left at 2:55, returned 6:41
+       — missed several substantive votes mid-meeting). ── */
+  {
+    id:'mv2025-33', date:'2025-12-11', year:2025,
+    meeting:'Mountain Village Town Council — Dec 11, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48028/december_11-_2025_town_council_minutes.pdf',
+    title:'Mountain Village Metro District — 2026 Budget, Appropriations, and 2025 Mill Levy (3 Resolutions)',
+    description:'Sitting as the Board of Directors for the Dissolved Mountain Village Metropolitan District, adopted three Resolutions: (a) approving the 2026 Mountain Village Metro District Budget; (b) appropriating sums of money for 2026; (c) setting the Mill Levy for 2025 to be collected in 2026.',
+    tags:['Budget & Finance','Tax'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-34', date:'2025-12-11', year:2025,
+    meeting:'Mountain Village Town Council — Dec 11, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48028/december_11-_2025_town_council_minutes.pdf',
+    title:'Resolution — Appropriating Additional Amounts to the 2025 Budget',
+    description:'Approved a Resolution appropriating additional amounts to the 2025 Budget for the Town.',
+    tags:['Budget & Finance'],
+    outcome:'Passed', tally:'7-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Yes', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-35', date:'2025-12-11', year:2025,
+    meeting:'Mountain Village Town Council — Dec 11, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48028/december_11-_2025_town_council_minutes.pdf',
+    title:'Ordinance Adopting the 2026 Budget — Second Reading (SPLIT 5-1, Mogenson Opposed; Gomez Absent)',
+    description:'After a public hearing with no public comment, finally adopted an Ordinance adopting the 2026 Budget on second reading. Harvey Mogenson dissented; Huascar E. Gomez (Rick) had left the meeting earlier and was absent for this vote.',
+    tags:['Budget & Finance'],
+    outcome:'Passed', tally:'5-1',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'No', duprey:'Yes', gomez:'Absent', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-36', date:'2025-12-11', year:2025,
+    meeting:'Mountain Village Town Council — Dec 11, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48028/december_11-_2025_town_council_minutes.pdf',
+    title:'Ordinance Levying Property Taxes for 2025 (Second Reading + Adoption)',
+    description:'After a public hearing (public comment from Richard Thorpe and Yolana Vanek), finally adopted an Ordinance of the Town levying property taxes for the year 2025 to be collected in 2026 on second reading. Gomez absent.',
+    tags:['Tax','Budget & Finance'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Absent', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-37', date:'2025-12-11', year:2025,
+    meeting:'Mountain Village Town Council — Dec 11, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48028/december_11-_2025_town_council_minutes.pdf',
+    title:'Ordinance — Town Water and Sewer Enterprises (Second Reading + Adoption)',
+    description:'After a public hearing (public comment from Jonathan Greenspan), finally adopted an Ordinance regarding the establishment and operation of Town water and sewer enterprises on second reading. Gomez absent.',
+    tags:['Infrastructure','Water','Administrative'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Absent', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-38', date:'2025-12-11', year:2025,
+    meeting:'Mountain Village Town Council — Dec 11, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48028/december_11-_2025_town_council_minutes.pdf',
+    title:'Settlement Agreement — Gondola Plaza Parking Condo Association + TMVOA',
+    description:'Approved the settlement agreement and release with Gondola Plaza Parking Condo Association and Telluride Mountain Village Owners Association (TMVOA) authorizing the Mayor and Town Clerk to execute. Gomez absent.',
+    tags:['Legal','Land Use'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Absent', arguelles:'Yes' },
+  },
+  {
+    id:'mv2025-39', date:'2025-12-11', year:2025,
+    meeting:'Mountain Village Town Council — Dec 11, 2025',
+    minutesUrl:'https://townofmountainvillage.com/site/assets/files/48028/december_11-_2025_town_council_minutes.pdf',
+    title:'Ordinance Amending CDC §17.6.2 Special Event Regulations + Special Event Guidelines (Second Reading + Adoption)',
+    description:'After a public hearing with no public comment, finally adopted an Ordinance regarding the proposed changes to the Community Development Code §§17.6.2 Special Event Regulations, 17.8.1 Definitions, 17.6.7 Busking Regulations, and 17.4.2 Table 4-1 Development Application Classes, and the adoption of the special event guidelines, replacing the word "adverse" with "material adverse impact" in the definition. Gomez absent.',
+    tags:['Land Use','Events'],
+    outcome:'Passed', tally:'6-0',
+    votes:{ prohaska:'Yes', pearson:'Yes', magid:'Yes', mogenson:'Yes', duprey:'Yes', gomez:'Absent', arguelles:'Yes' },
   },
 
 ];
@@ -3858,10 +4276,7 @@ function switchEntity() {
   } else if (ent === 'planning') {
     years = [['', 'All years'], ['2026','2026'], ['2025','2025'], ['2024','2024']];
   } else if (ent === 'tomv') {
-    // 2026 added first; prior years will be backfilled as the user
-    // downloads more minutes PDFs (TOMV's website is gated by
-    // Cloudflare Bot Mgmt, so we can't scrape directly).
-    years = [['', 'All years'], ['2026','2026']];
+    years = [['', 'All years'], ['2026','2026'], ['2025','2025']];
   } else {
     years = [['', 'All years'], ['2024','2024']];
   }
@@ -4106,7 +4521,10 @@ function renderTomvHeatmap() {
 
   const eras = yearSel === '2026'
     ? [{ label:'2026 Mountain Village Town Council', members:TOMV_2026, yearFilter:2026 }]
-    : [{ label:'2026 Mountain Village Town Council', members:TOMV_2026, yearFilter:2026 }];
+    : yearSel === '2025'
+    ? [{ label:'2025 Mountain Village Town Council', members:TOMV_2025, yearFilter:2025 }]
+    : [{ label:'2026 Mountain Village Town Council', members:TOMV_2026, yearFilter:2026 },
+       { label:'2025 Mountain Village Town Council', members:TOMV_2025, yearFilter:2025 }];
 
   let html = '';
   eras.forEach(era => {
