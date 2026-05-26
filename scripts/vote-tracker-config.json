@@ -36,6 +36,22 @@
     "_insertionNotes": "Entries are inserted in date order. The script finds the chronologically-next /* ── DATE ── */ block after the target date and inserts BEFORE it. Caller is expected to verify."
   },
 
+  "drb": {
+    "label": "Mountain Village Design Review Board",
+    "meetingPrefix": "MV Design Review Board",
+    "idPrefix": "drb",
+    "rosters": [
+      {
+        "start": "2024-04-25",
+        "end":   null,
+        "members": ["brown", "miller", "newton", "eckman", "bennett", "kramer", "craige", "austin", "garner"],
+        "_note": "9-member board. Reappointment terms started Apr 25 2024. Roster confirmed stable across Jan 8 / Feb 5 / Mar 5 / Apr 2 2026 meetings."
+      }
+    ],
+    "urlTemplate": "https://townofmountainvillage.com/site/assets/files/{ASSET_ID}/{SLUG}.pdf",
+    "_insertionNotes": "DRB entries inserted between TOMV and BOCC sections; entity-scoped insertion in insert-votes.mjs handles the rest."
+  },
+
   "bocc": {
     "label": "San Miguel County Board of County Commissioners",
     "meetingPrefix": "SMC BOCC",

@@ -51,9 +51,19 @@ console.log(`Loaded ${pending.length} pending files`);
 // ─────── Identify dates already committed in tracker ─────────────
 // Scope by ID prefix so Town of MV (mv) doesn't get confused with
 // Planning Commission (pv), BOCC (bocc), etc. — different entities
-// often have meetings on overlapping dates.
+// often have meetings on overlapping dates. Each entity's ID prefix
+// in vote-tracker.html doesn't always match its CLI name; this map
+// holds the mapping.
+const ENTITY_ID_PREFIX = {
+  tomv:    'mv',     // Mountain Village Town Council    → id:'mv2024-...'
+  drb:     'drb',    // MV Design Review Board           → id:'drb2026-...'
+  bocc:    'bv',     // SMC Board of County Commissioners → id:'bv2024-...'
+  pc:      'pv',     // SMC Planning Commission          → id:'pv2024-...'
+  planning:'pv',     // alias
+  telluride:'v',     // Town of Telluride                → id:'v2025-...'
+};
 const tracker = readFileSync(TRACKER_PATH, 'utf8');
-const idPrefix = ENTITY === 'tomv' ? 'mv' : ENTITY; // small map; extend as needed
+const idPrefix = ENTITY_ID_PREFIX[ENTITY] || ENTITY;
 const entityEntryRe = new RegExp(
   `id:\\s*['"]${idPrefix}\\d+-[^'"]+['"][^}]*?date:\\s*['"](\\d{4}-\\d{2}-\\d{2})['"]`,
   'gs'
