@@ -104,9 +104,9 @@ const renameMap = {};          // oldId → newId, globally
 for (const p of toInsert) {
   const entries = p.data.entries;
   if (entries.length === 0) continue;
-  // Extract prefix: strip "mv2024-" + trailing digits.
+  // Extract prefix: strip "<letters>YYYY-" + trailing digits.
   const firstId = entries[0].id;
-  const match = firstId.match(/^(mv\d{4}-)([A-Z]+)\d+$/);
+  const match = firstId.match(/^([a-z]+\d{4}-)([A-Z]+)\d+$/);
   if (!match) {
     console.warn(`  ⚠ ${p.data.date}: unexpected id format "${firstId}", entries kept as-is`);
     continue;
@@ -215,44 +215,69 @@ const entityYearRe = new RegExp(
   'gs'
 );
 const yearMatches = [...tracker.matchAll(entityYearRe)];
-if (yearMatches.length === 0) {
-  console.error(`No entries with id:'${idPrefix}...' year:${YEAR} found in tracker. Refusing to insert.`);
-  process.exit(2);
-}
-const lastYearMatch = yearMatches[yearMatches.length - 1];
-console.log(`\nLast existing ${idPrefix} year-${YEAR} entry at byte offset ${lastYearMatch.index}`);
 
-// Walk forward from that match to find the closing `},\n` of the
-// containing object literal.
-let pos = lastYearMatch.index;
-let depth = 0, inStr = null;
+// If no existing entries for this entity+year exist, fall back to
+// inserting at the top of the entity's _VOTE_ITEMS array (right after
+// the opening `[`). This is the path for standing up a fresh entity.
 let closingPos = -1;
-// Walk backward to find the `{` that opens this entry, then forward
-// to its matching close.
-while (pos > 0 && tracker[pos] !== '{') pos--;
-for (let j = pos; j < tracker.length; j++) {
-  const c = tracker[j];
-  if (inStr) {
-    if (c === '\\') { j++; continue; }
-    if (c === inStr) inStr = null;
-    continue;
+if (yearMatches.length === 0) {
+  // Convert idPrefix to the array name. The HTML uses uppercase
+  // entity names per existing convention (TOMV_VOTE_ITEMS, etc.).
+  const ARRAY_NAME = {
+    mv: 'TOMV_VOTE_ITEMS', drb: 'DRB_VOTE_ITEMS', bv: 'BOCC_VOTE_ITEMS',
+    pv: 'PC_VOTE_ITEMS', v: 'VOTE_ITEMS'
+  }[idPrefix] || `${idPrefix.toUpperCase()}_VOTE_ITEMS`;
+  const arrayOpenRe = new RegExp(`const\\s+${ARRAY_NAME}\\s*=\\s*\\[`);
+  const m = tracker.match(arrayOpenRe);
+  if (!m) {
+    console.error(`No existing ${idPrefix} year-${YEAR} entries AND no ${ARRAY_NAME} array declaration in tracker. Cannot insert.`);
+    process.exit(2);
   }
-  if (c === "'" || c === '"' || c === '`') { inStr = c; continue; }
-  if (c === '{') depth++;
-  else if (c === '}') {
-    depth--;
-    if (depth === 0) {
-      // Find the comma after `}` and the newline after that
-      let k = j + 1;
-      while (k < tracker.length && tracker[k] !== '\n') k++;
-      closingPos = k + 1; // insert at start of next line
-      break;
+  // Insert AFTER the opening `[` and any blank/comment lines that follow.
+  let after = m.index + m[0].length;
+  // Skip newline + any consecutive blank/comment lines until first `{`
+  // or another non-whitespace non-comment char.
+  while (after < tracker.length && tracker[after] !== '{') {
+    if (tracker[after] === ']') break; // empty array body
+    after++;
+  }
+  // Walk back to the most recent newline to keep clean indentation.
+  while (after > 0 && tracker[after - 1] !== '\n') after--;
+  closingPos = after;
+  console.log(`\nFirst-time insert for ${idPrefix}: at start of ${ARRAY_NAME} array (byte offset ${closingPos})`);
+} else {
+  const lastYearMatch = yearMatches[yearMatches.length - 1];
+  console.log(`\nLast existing ${idPrefix} year-${YEAR} entry at byte offset ${lastYearMatch.index}`);
+
+  // Walk backward to find the `{` that opens this entry, then forward
+  // to find its matching `}` and the comma+newline after.
+  let pos = lastYearMatch.index;
+  let depth = 0, inStr = null;
+  while (pos > 0 && tracker[pos] !== '{') pos--;
+  for (let j = pos; j < tracker.length; j++) {
+    const c = tracker[j];
+    if (inStr) {
+      if (c === '\\') { j++; continue; }
+      if (c === inStr) inStr = null;
+      continue;
+    }
+    if (c === "'" || c === '"' || c === '`') { inStr = c; continue; }
+    if (c === '{') depth++;
+    else if (c === '}') {
+      depth--;
+      if (depth === 0) {
+        // Find the comma after `}` and the newline after that
+        let k = j + 1;
+        while (k < tracker.length && tracker[k] !== '\n') k++;
+        closingPos = k + 1; // insert at start of next line
+        break;
+      }
     }
   }
-}
-if (closingPos < 0) {
-  console.error('Could not find end of last year-matching entry. Aborting.');
-  process.exit(3);
+  if (closingPos < 0) {
+    console.error('Could not find end of last year-matching entry. Aborting.');
+    process.exit(3);
+  }
 }
 
 // Trim consecutive blank lines after closingPos for clean insertion.
