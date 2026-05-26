@@ -363,20 +363,40 @@ refresh scrapes the `/news/` landing page HTML and pairs each
 `<div class="landing-story row">` block with its `<h3 class="heading-3">`
 headline, `<div class="lead">` summary, and `<img class="photo">`.
 
-Dates come from each article's schema.org JSON-LD: on first sighting
-of an article, `pullSmbForum()` fetches the detail page once and
-extracts `"datePublished":"YYYY-MM-DD"`. The value is cached on the
-article object (`a.datePublished`) so subsequent runs skip the fetch.
-Articles without a verified `datePublished` are DROPPED (intentional —
-prevents stale articles from getting today's date and sneaking past
-the cutoff filter when the detail fetch fails).
+**Date model — print-first publishing convention (2026-05-26).**
+SMBF is a print-first weekly. Stories appear in the print edition
+days-to-weeks before they're posted online, so the article's online
+byline date (`datePublished` in schema.org JSON-LD) understates
+freshness. Per user direction we use a different convention than
+TT/KOTO: the "publish date" shown on Local News = the day the bot
+first observes the story on the SMBF website (`firstSeen`), NOT the
+byline date. The displayed `date` field mirrors `firstSeen` in human
+form. Side benefit: no per-article detail-page fetches are needed
+anymore — the landing page has everything the renderer reads.
+
+**No-flood seeding.** On the very first run after deploy, every
+article on SMBF's landing page would otherwise look "new" and get
+stamped with today's date — flooding Local News with 25 stories of
+varying actual age. To prevent this, `SMB_FORUM_ARTICLES` in
+`js/gov-helpers.js` is seeded with the entire current landing page:
+the two articles the user wanted to feature on launch day carry
+`firstSeen` = launch date (visible), the other 23 carry a sentinel
+`firstSeen='2025-01-01'` so the bot recognises them as "already
+known" and `local-news.html`'s 35-day-firstSeen filter hides them.
+As real new stories appear at the top of the landing page over the
+following weeks, the bot adds them with today's `firstSeen` and the
+sentinel entries gradually fall out of relevance.
 
 Knobs in `scripts/content-refresh.js`:
 - `SMBF_NEWS_URL` — the landing page to scrape.
-- `SMBF_DETAIL_FETCH_MAX = 30` — per-run cap on detail-page fetches.
-  Should comfortably exceed the landing-page card count (~25).
-- `SMBF_MAX_AGE_DAYS = 35` — wider than the 14-day default because
-  SMBF only publishes ~1 story per week.
+- `SMBF_MAX_AGE_DAYS = 35` — articles whose `firstSeen` is older than
+  this AND that have rolled off the landing page get dropped. The
+  35-day window is wider than the 14-day default because SMBF only
+  publishes ~1 story per week.
+
+In `local-news.html`'s `loadLiveData()`, the same 35-day window is
+applied as a display filter on `firstSeen` — sentinel-dated entries
+never render even though they live in the array.
 
 Cloudflare Worker allow-list: `sanmiguelbasinforum.com` and
 `www.sanmiguelbasinforum.com` are in both `cloudflare-worker/.../worker.js`

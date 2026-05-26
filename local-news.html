@@ -974,19 +974,37 @@
             }
             // San Miguel Basin Forum — West End paper (Norwood/Nucla/Naturita).
             // Populated by content-refresh.js Task 2 → pullSmbForum().
-            // Defensive: pre-bot rollout the const may still be undefined on
-            // older cached gov-helpers.js copies.
+            //
+            // Two filters:
+            //   1. firstSeen must be within the last 35 days. Older entries
+            //      live in the array as "known" (so the bot doesn't
+            //      re-detect them on every run) but don't display. SMBF
+            //      is print-first; the display date = the day WE first
+            //      saw the article on the website, NOT the byline date.
+            //   2. The .slice(0, 15) cap stops the list from blowing up
+            //      if a long stretch of new articles all land in-window.
+            //
+            // Defensive: pre-bot rollout the const may still be undefined
+            // on older cached gov-helpers.js copies.
             if (typeof SMB_FORUM_ARTICLES !== 'undefined') {
-              SMB_FORUM_ARTICLES.slice(0, 15).forEach(a => live.push({
-                title: a.title,
-                source: 'San Miguel Basin Forum',
-                sourceKey: 'smb',
-                date: a.date,
-                summary: a.copy,
-                href: a.href,
-                img: a.img || '',
-                category: a.newsTopic || 'Community'
-              }));
+              const smbCutoffIso = (() => {
+                const d = new Date();
+                d.setDate(d.getDate() - 35);
+                return d.toISOString().slice(0, 10);
+              })();
+              SMB_FORUM_ARTICLES
+                .filter(a => a && a.firstSeen && a.firstSeen >= smbCutoffIso)
+                .slice(0, 15)
+                .forEach(a => live.push({
+                  title: a.title,
+                  source: 'San Miguel Basin Forum',
+                  sourceKey: 'smb',
+                  date: a.date,
+                  summary: a.copy,
+                  href: a.href,
+                  img: a.img || '',
+                  category: a.newsTopic || 'Community'
+                }));
             }
             // Telluride Humane Society — adoptable dogs and cats.
             // Populated by content-refresh.js Task 7. Each entry carries a

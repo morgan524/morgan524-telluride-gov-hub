@@ -1122,23 +1122,43 @@ const KOTO_FEATURED_STORIES = [
 // San Miguel Basin Forum (West End — Norwood, Nucla, Naturita, Paradox).
 // Populated by scripts/content-refresh.js → pullSmbForum() every 6 hours.
 // Schema: { title, source: 'San Miguel Basin Forum', sourceKey: 'smb',
-// date, firstSeen, datePublished, newsTopic, copy, href, img }.
-// Carry-forward logic in pullSmbForum() preserves in-window entries that
-// aren't on the current landing page so SMBF's quick front-page rotation
-// doesn't drop stories prematurely.
+//   date, firstSeen, newsTopic, copy, href, img }.
 //
-// Seeded with two recent articles so the Local News tab shows SMBF
-// coverage immediately on deploy, before the next content-refresh tick.
-// The bot will overwrite this array (and extend the field set with
-// `firstSeen`) on its next 6-hour run.
+// Date model (2026-05-26): "Publish date" on the site = the day WE
+// first observe the article on SMBF (`firstSeen`), NOT the article's
+// own byline date. SMBF is print-first and stories appear in the
+// print edition well before they're posted online, so trusting the
+// online byline would understate freshness. The displayed `date`
+// field mirrors `firstSeen` in human form.
+//
+// Carry-forward in pullSmbForum() preserves entries whose firstSeen
+// is within the 35-day window even when they roll off SMBF's short
+// front-page rotation.
+//
+// ── Seeded for first-deploy ──
+//
+// The top two entries are the two articles the user wanted to feature
+// as the launch pair (today = 2026-05-26).
+//
+// The remaining 23 entries are the OTHER articles currently on the
+// SMBF landing page, stamped with sentinel firstSeen='2025-01-01'.
+// They exist solely so that on the bot's first run after deploy,
+// pullSmbForum() recognises them as "already known" and DOESN'T
+// flood the Local News tab by stamping all 25 articles with today's
+// date. Local News applies its own 35-day-firstSeen filter, so these
+// sentinel-dated entries never display — they just block re-detection.
+//
+// As genuinely-new articles appear at the top of the SMBF landing
+// page over the coming weeks, the bot will add them with firstSeen=today
+// and the array will naturally shed the sentinels via the same logic.
 const SMB_FORUM_ARTICLES = [
+  // ── Visible: featured on launch day (2026-05-26) ──
   {
     title: "Jackson McCabe is Pinhead history ‘pintern’",
     source: "San Miguel Basin Forum",
     sourceKey: "smb",
-    date: "May 12, 2026",
-    firstSeen: "2026-05-25",
-    datePublished: "2026-05-13",
+    date: "May 26, 2026",
+    firstSeen: "2026-05-26",
     newsTopic: "education",
     copy: "Jackson McCabe, a junior at Nucla High School, will do a small “pinternship” in Washington, D.C. this summer. The Pinhead Institute of Telluride, a Smithsonian Affiliate, is sponsoring the …",
     href: "https://www.sanmiguelbasinforum.com/stories/jackson-mccabe-is-pinhead-history-pintern,114883",
@@ -1148,14 +1168,40 @@ const SMB_FORUM_ARTICLES = [
     title: "Town secures $1.25M for Norwood Hill improvements",
     source: "San Miguel Basin Forum",
     sourceKey: "smb",
-    date: "May 5, 2026",
-    firstSeen: "2026-05-25",
-    datePublished: "2026-05-06",
-    newsTopic: "arts-culture",
+    date: "May 26, 2026",
+    firstSeen: "2026-05-26",
+    newsTopic: "infrastructure",
     copy: "Last week, the Town of Norwood announced it had been awarded $1,250,000 in funding through the Colorado Department of Transportation's Highway Safety Improvement Program (HSIP). Town Manager Sara …",
     href: "https://www.sanmiguelbasinforum.com/stories/town-secures-125m-for-norwood-hill-improvements,114098",
     img: ""
-  }
+  },
+  // ── Suppressed: other articles currently on the SMBF landing page,
+  //    seeded as "already known" so the first bot run after deploy
+  //    doesn't re-stamp them with today's date. Hidden by the
+  //    35-day-firstSeen filter in local-news.html. ──
+  { title: "Pierce said drought plan is forthcoming; 'be responsible with water'", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/pierce-said-drought-plan-is-forthcoming-be-responsible-with-water,110627", img: "" },
+  { title: "Brent Garber tells his side of the Bucktail Fire", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "public-safety", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/brent-garber-tells-his-side-of-the-bucktail-fire,108448", img: "" },
+  { title: "Boys are state bound!", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/boys-are-state-bound,107655", img: "" },
+  { title: "It snowed, but it's not looking good", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/it-snowed-but-its-not-looking-good,107656", img: "" },
+  { title: "VFW honors Wytulka as Colorado high school teacher of the year", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "education", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/vfw-honors-wytulka-as-colorado-high-school-teacher-of-the-year,105139", img: "" },
+  { title: "Paula Brown and Brad Miller run for Nucla mayor", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "government", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/paula-brown-and-brad-miller-run-for-nucla-mayor,104248", img: "" },
+  { title: "Norwood girl breaks Guinness World Records for hula hooping", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/norwood-girl-breaks-guinness-world-records-for-hula-hooping,103348", img: "" },
+  { title: "Zandon Bray: Release pause welcome, won't solve every problem", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/zandon-bray-release-pause-welcome-wont-solve-every-problem,102328", img: "" },
+  { title: "West End encouraged to attend the ag econ summit", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/west-end-encouraged-to-attend-the-ag-econ-summit,101454", img: "" },
+  { title: "West End sentiments differ on TelSki strike", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/west-end-sentiments-differ-on-telski-strike,99774", img: "" },
+  { title: "Tim Pierce discusses current situation", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/tim-pierce-discusses-current-situation,95910", img: "" },
+  { title: "Stakeholders question SMC regs", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "government", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/stakeholders-question-smc-regs,93497", img: "" },
+  { title: "Cossey never applied for man-camp, Covualt never worked one", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/cossey-never-applied-for-man-camp-covualt-never-worked-one,92290", img: "" },
+  { title: "West End FLL team heads to state tournament", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "education", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/west-end-fll-team-heads-to-state-tournament,92291", img: "" },
+  { title: "Locals question man-camps, infrastructure in community meetings", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/locals-question-man-camps-infrastructure-in-community-meetings,90857", img: "" },
+  { title: "Coram talks solar, school, cell towers", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "government", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/coram-talks-solar-school-cell-towers,89627", img: "" },
+  { title: "Norwood voters to decide on new school", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "education", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/norwood-voters-to-decide-on-new-school,88387", img: "" },
+  { title: "Rimrockers help miners find records", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/rimrockers-help-miners-find-records,83408", img: "" },
+  { title: "Community benefit coalition forms", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/community-benefit-coalition-forms,83412", img: "" },
+  { title: "Town clean-up day is Oct. 18", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/town-clean-up-day-is-oct-18,81168", img: "" },
+  { title: "West End explores manufacturing possibilities", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/west-end-explores-manufacturing-possibilities,80123", img: "" },
+  { title: "Uranium industry could be on upswing", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/uranium-industry-could-be-on-upswing,79240", img: "" },
+  { title: "Leopard frogs appear in Nucla, Part 2", source: "San Miguel Basin Forum", sourceKey: "smb", date: "Jan 1, 2025", firstSeen: "2025-01-01", newsTopic: "community", copy: "", href: "https://www.sanmiguelbasinforum.com/stories/leopard-frogs-appear-in-nucla-part-2,78176", img: "" }
 ];
 
 const BLOG_POSTS = [

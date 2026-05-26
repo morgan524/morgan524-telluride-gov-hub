@@ -1208,8 +1208,7 @@ Write a plain-text preview of 50 words or less describing the key issues or agen
 // /search/?f=rss endpoint DISABLED — returns 403 from Varnish — so we
 // scrape the /news/ landing page HTML instead.
 //
-// Each article card lives in a <div class="landing-story row"> block
-// with shape:
+// Each article card lives in a <div class="landing-story row"> block:
 //
 //   <a href='/stories/<slug>,<id>?'>
 //     <img class="photo" src="https://zeta.creativecirclecdn.com/...">
@@ -1217,24 +1216,26 @@ Write a plain-text preview of 50 words or less describing the key issues or agen
 //   <h3 class='heading-3'><a href='/stories/<slug>,<id>?'>Title</a></h3>
 //   <div class='lead'><p>Summary text...</p>
 //
-// Dates aren't on the landing page; on first sighting of an article we
-// fetch the detail page once and pull `datePublished` from its
-// schema.org JSON-LD ("@type":"NewsArticle"). Cached on the article
-// object so subsequent runs skip the re-fetch.
+// ─ Date handling (2026-05-26: print-edition convention) ─
 //
-// Carry-forward: any existing SMBF article within the news window that
-// isn't on this run's landing page is preserved. SMBF runs a short
-// front-page rotation (~6 stories visible at a time); without the
-// carry-forward the third-most-recent article would vanish from the
-// site within a day of a new story being posted.
+// SMBF runs a print-first weekly. Stories appear in the print edition
+// well before they're posted online, so the byline date inside each
+// article's JSON-LD (`datePublished`) lags reality. Per user
+// direction, we treat the "publish date" for our site as the day WE
+// first observe the story on the SMBF website — i.e. `firstSeen` —
+// not the article's byline date. Side-effect: we no longer need the
+// per-article detail-page fetch the previous implementation used to
+// pull JSON-LD; the landing page is all the data the renderer needs.
+//
+// Carry-forward: when an article we've already filed drops off the
+// SMBF front-page rotation (which is short — ~5 stories visible at a
+// time) but is still within the 35-day window, we keep it in our
+// array. The display layer in local-news.html applies its own
+// 35-day filter against `firstSeen`, so seed entries with sentinel
+// firstSeen='2025-01-01' get hidden without being deleted (used to
+// suppress the initial-deployment flood: see the 23 ancient-dated
+// seed entries in js/gov-helpers.js).
 const SMBF_NEWS_URL = 'https://www.sanmiguelbasinforum.com/news/';
-// First-sighting detail-page fetches per run. Each fetch takes ~600 ms
-// (network + 350 ms politeness delay). Sized generously so every article
-// on the landing page (~25 today) gets a verified datePublished from
-// JSON-LD on the first run; subsequent runs only hit detail pages for
-// new entries (cached `datePublished` on the article object → skip).
-// At 30 × 600 ms ≈ 18 s — comfortably inside the 6-hour cron budget.
-const SMBF_DETAIL_FETCH_MAX = 30;
 // SMBF publishes weekly (≈ 1 story per week). The default 14-day news
 // window would leave at most 1-2 visible at a time, which would feel
 // like the source had been dropped again whenever there was a gap.
@@ -1246,28 +1247,18 @@ async function pullSmbForum(existingSmbArticles = []) {
   console.log('\n🌄 San Miguel Basin Forum: scraping landing page...');
   const cutoff = new Date(Date.now() - SMBF_MAX_AGE_DAYS * 86400000);
   const existingByHref = new Map(existingSmbArticles.map(a => [a.href, a]));
-  const out = [];
 
   let html;
   try {
     const resp = await fetch(SMBF_NEWS_URL);
     if (resp.status !== 200) {
-      console.warn(`  SMBF news page HTTP ${resp.status} — carrying existing forward`);
-      // Carry forward all in-window existing entries on error
-      for (const [, art] of existingByHref) {
-        const pub = new Date(art.date || art.firstSeen || '');
-        if (!isNaN(pub) && pub >= cutoff) out.push(art);
-      }
-      return out;
+      console.warn(`  SMBF news page HTTP ${resp.status} — preserving existing list`);
+      return existingSmbArticles;
     }
     html = resp.text;
   } catch (e) {
-    console.warn(`  SMBF fetch error: ${e.message} — carrying existing forward`);
-    for (const [, art] of existingByHref) {
-      const pub = new Date(art.date || art.firstSeen || '');
-      if (!isNaN(pub) && pub >= cutoff) out.push(art);
-    }
-    return out;
+    console.warn(`  SMBF fetch error: ${e.message} — preserving existing list`);
+    return existingSmbArticles;
   }
 
   const decode = (s) => s
@@ -1279,13 +1270,9 @@ async function pullSmbForum(existingSmbArticles = []) {
 
   // Split the HTML on landing-story block boundaries — each one is a
   // self-contained article card with image + headline + lead.  Then
-  // extract each piece scoped to its own block (this is much more
-  // robust than the previous "look backward 2 KB" image-pairing
-  // approach, which grabbed the previous card's photo whenever blocks
-  // were < 2 KB apart).
+  // extract each piece scoped to its own block.
   const blocks = html.split(/<div\s+class=["']landing-story[^"']*["'][^>]*>/i);
-  // First piece is everything before the first landing-story — drop it.
-  blocks.shift();
+  blocks.shift(); // first piece is everything before the first card
 
   const items = [];
   const seenHrefs = new Set();
@@ -1309,94 +1296,68 @@ async function pullSmbForum(existingSmbArticles = []) {
     items.push({ href: fullHref, title, lead, img });
   }
 
-  // Resolve dates. For articles we've already seen, reuse the cached
-  // date. For new ones, fetch the detail page (up to SMBF_DETAIL_FETCH_MAX
-  // per run) and extract datePublished from JSON-LD.
-  //
-  // An article ONLY makes it into the output if we have a verified
-  // datePublished — either cached from a prior run or freshly extracted
-  // from JSON-LD. This avoids the failure mode where an article whose
-  // detail fetch hit the cap or returned a parse miss gets stamped with
-  // "today" and then sneaks past the 14-day cutoff filter. With cap=30
-  // and a typical landing-page of ~25, every new article gets fetched
-  // in a single run.
-  let detailFetches = 0;
+  // ── Build the output array ──
+  // First pass: every article currently on the landing page. If we've
+  // already seen it (in `existingByHref`), preserve its firstSeen
+  // (a.k.a. the publish date we display). Otherwise mark it new today.
+  const todayIso = new Date().toISOString().slice(0, 10);
+  const todayHuman = formatDate(new Date());
+  const out = [];
+  let newCount = 0;
   for (const it of items) {
     const cached = existingByHref.get(it.href);
-    if (cached && cached.datePublished) {
-      it.datePublished = cached.datePublished;
-      it.date = cached.date || formatDate(new Date(cached.datePublished));
-      it.firstSeen = cached.firstSeen;
-      continue;
+    if (cached) {
+      // Refresh content (title/lead/img may have been edited upstream)
+      // but KEEP the original firstSeen / date so the article's display
+      // date doesn't move around on us.
+      out.push({
+        title: it.title || cached.title,
+        source: 'San Miguel Basin Forum',
+        sourceKey: 'smb',
+        date: cached.date || todayHuman,
+        firstSeen: cached.firstSeen || todayIso,
+        newsTopic: classifyNewsTopic(it.title, it.lead),
+        copy: (it.lead || cached.copy || '').slice(0, 300),
+        href: it.href,
+        img: it.img || cached.img || '',
+      });
+    } else {
+      // Brand new to us.  PUBLISH DATE = TODAY, regardless of the
+      // article's own byline date (see top-of-section note about
+      // SMBF's print-first publishing cadence).
+      newCount++;
+      out.push({
+        title: it.title,
+        source: 'San Miguel Basin Forum',
+        sourceKey: 'smb',
+        date: todayHuman,
+        firstSeen: todayIso,
+        newsTopic: classifyNewsTopic(it.title, it.lead),
+        copy: (it.lead || '').slice(0, 300),
+        href: it.href,
+        img: it.img || '',
+      });
     }
-    if (detailFetches >= SMBF_DETAIL_FETCH_MAX) {
-      // Out of budget this run — leave datePublished unset so the
-      // filter below drops the article. Next run picks it up.
-      it.datePublished = '';
-      continue;
-    }
-    try {
-      const dResp = await fetch(it.href);
-      if (dResp.status === 200) {
-        const ldMatch = /"datePublished"\s*:\s*"([^"]+)"/.exec(dResp.text);
-        if (ldMatch) {
-          it.datePublished = ldMatch[1];
-          it.date = formatDate(new Date(ldMatch[1]));
-          it.firstSeen = new Date().toISOString().slice(0, 10);
-        }
-        // If the lead from the landing page was empty, the detail's
-        // schema.org "description" is a usable fallback.
-        if (!it.lead) {
-          const dM = /"description"\s*:\s*"([^"]+)"/.exec(dResp.text);
-          if (dM) it.lead = decode(dM[1].replace(/\\u([0-9a-f]{4})/gi, (_, h) => String.fromCharCode(parseInt(h, 16))));
-        }
-      }
-    } catch (e) {
-      console.warn(`  SMBF detail fetch failed (${it.href}): ${e.message}`);
-    }
-    detailFetches++;
-    await new Promise(r => setTimeout(r, 350));
   }
 
-  // Build the canonical article shape, filtered by the news window.
-  // Articles without a verified datePublished are dropped entirely —
-  // see the loop above for why.
-  for (const it of items) {
-    if (!it.datePublished) continue;
-    const pub = new Date(it.datePublished);
-    if (isNaN(pub) || pub < cutoff) continue;
-    out.push({
-      title: it.title,
-      source: 'San Miguel Basin Forum',
-      sourceKey: 'smb',
-      date: it.date,
-      firstSeen: it.firstSeen,
-      datePublished: it.datePublished,
-      newsTopic: classifyNewsTopic(it.title, it.lead),
-      copy: (it.lead || '').slice(0, 300),
-      href: it.href,
-      img: it.img || '',
-    });
-  }
-
-  // Carry-forward: any existing in-window article not on the current
-  // landing page survives.  Prevents older stories from vanishing on
-  // SMBF's quick front-page rotation.
+  // Second pass: carry forward existing articles that have rolled off
+  // the landing page but are still within the 35-day window. Once
+  // they're both off-landing AND past the window, drop them.
   const scrapedHrefs = new Set(out.map(a => a.href));
   for (const [href, art] of existingByHref) {
     if (scrapedHrefs.has(href)) continue;
-    const pub = new Date(art.datePublished || art.date || art.firstSeen || '');
-    if (!isNaN(pub) && pub >= cutoff) out.push(art);
+    const seenAt = art.firstSeen ? new Date(art.firstSeen + 'T00:00:00Z') : null;
+    if (seenAt && !isNaN(seenAt) && seenAt >= cutoff) out.push(art);
   }
 
-  // Newest first.
+  // Newest first, by firstSeen.
   out.sort((a, b) => {
-    const da = new Date(a.datePublished || a.date || 0).getTime();
-    const db = new Date(b.datePublished || b.date || 0).getTime();
+    const da = a.firstSeen ? new Date(a.firstSeen + 'T00:00:00Z').getTime() : 0;
+    const db = b.firstSeen ? new Date(b.firstSeen + 'T00:00:00Z').getTime() : 0;
     return db - da;
   });
 
-  console.log(`  SMBF: ${out.length} article(s) ready (${detailFetches} detail fetches this run)`);
+  console.log(`  SMBF: ${out.length} article(s) tracked (${newCount} new today)`);
   return out;
 }
 
