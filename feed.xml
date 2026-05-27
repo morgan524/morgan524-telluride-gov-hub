@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 May 2026 15:26:59 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 20:11:03 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Board of County Commissioners Meeting — 2026-06-03</title>
@@ -119,6 +119,16 @@ The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted 
       <category>Town of Telluride</category>
     </item>
     <item>
+      <title>US Supreme Court settles long-running water dispute over dwindling Rio Grande</title>
+      <link>https://www.telluridenews.com/news/state/article_ec16ddd6-59c4-5d79-b1cd-562da53b058d.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_ec16ddd6-59c4-5d79-b1cd-562da53b058d.html</guid>
+      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/d7/5d733892-c447-5597-ac43-e080d5af12f7/6a1727b561bb6.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The Supreme Court settled a decade-long water dispute between New Mexico and Texas over Rio Grande usage, requiring New Mexico to cut groundwater pumping by 18,200 acre-feet annually and retire over 14 square miles of farmland. The agreement aims to restore order to water-sharing between the states as drought conditions worsen along the river that originates in Colorado.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/d7/5d733892-c447-5597-ac43-e080d5af12f7/6a1727b561bb6.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>infrastructure</category>
+    </item>
+    <item>
       <title>It’s a wrap</title>
       <link>https://www.telluridenews.com/arts_and_entertainment/article_fb7ed56b-afa8-4c5d-ae54-3f5a43bfa3ff.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/arts_and_entertainment/article_fb7ed56b-afa8-4c5d-ae54-3f5a43bfa3ff.html</guid>
@@ -136,6 +146,15 @@ The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted 
       <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/34/434e7b74-b0b7-41c3-ba73-05a9b9fa0810/6a1535cb82c0a.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Local gymnasts had a strong showing at state and regional meets this year. Several Telluride Gymnastics team members placed in top 10 finishes, with highlights including Abigail Mann taking third on vault at state and first at regionals, and multiple Gold-level athletes earning fifth-place all-around titles.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/34/434e7b74-b0b7-41c3-ba73-05a9b9fa0810/6a1535cb82c0a.image.jpg" medium="image" />
       <category>Telluride Times</category>
+      <category>community</category>
+    </item>
+    <item>
+      <title>here</title>
+      <link>https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Water-Shut-Off-Notice-Press-Release-2026-05-27.pdf</link>
+      <guid isPermaLink="false">https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Water-Shut-Off-Notice-Press-Release-2026-05-27.pdf</guid>
+      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Press release from the Town of Ridgway. Click to view the full PDF.]]></description>
+      <category>Town of Ridgway</category>
       <category>community</category>
     </item>
     <item>
@@ -394,25 +413,6 @@ The commissioners will handle two septic system variances in Ophir, consider end
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ec/4ecb883f-23a1-4d1d-bddd-dfd4266f8781/6a0fd7c8a2481.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>housing</category>
-    </item>
-    <item>
-      <title>Highway 62 between Ridgway and Placerville re-opens</title>
-      <link>https://www.telluridenews.com/news/article_042cbb30-7003-4b76-8bc3-a40b5a124367.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/article_042cbb30-7003-4b76-8bc3-a40b5a124367.html</guid>
-      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bf/abfd96db-450e-40ba-8a54-74fb95a45581/6a1082ef543f9.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Highway 62 between Ridgway and Placerville closed for several hours today after a house blocked both lanes near mile marker 9, about four miles west of Dallas Divide. A crane from Montrose was brought in to move the structure, and the sheriff's office provided detour routes using county roads 56V and 58P. The highway reopened around 4 p.m.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bf/abfd96db-450e-40ba-8a54-74fb95a45581/6a1082ef543f9.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>housing</category>
-    </item>
-    <item>
-      <title>Telluride Marshal’s Department Arrests Individual for Failure to Register as a Sex Offender</title>
-      <link>https://www.telluride.gov/CivicAlerts.aspx?aid=393</link>
-      <guid isPermaLink="false">https://www.telluride.gov/CivicAlerts.aspx?aid=393</guid>
-      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Content Notice: This communication contains information related to sexual violence/child abuse. Reader discretion is advised.]]></description>
-      <category>Town of Telluride</category>
-      <category>public-safety</category>
     </item>
   </channel>
 </rss>
