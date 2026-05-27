@@ -564,6 +564,10 @@
       var imageUrl = results[0];
       var attachments = results[1];
       var postData = {
+        // authorUid is required by firestore.rules' ownsField('authorUid')
+        // check; authorId is kept for backward compat with older readers
+        // (hbRenderTrending et al. that look up p.authorId for the user map).
+        authorUid: hbUser.uid,
         authorId: hbUser.uid,
         authorName: hbUser.displayName || 'Anonymous',
         title: title,
@@ -1044,6 +1048,9 @@
     btn.disabled = true;
     btn.textContent = '...';
     db.collection('posts').doc(postId).collection('replies').add({
+      // See note in createPost — rules require authorUid; authorId kept for
+      // any reader that still looks for it.
+      authorUid: hbUser.uid,
       authorId: hbUser.uid,
       authorName: hbUser.displayName || 'Anonymous',
       body: body,
