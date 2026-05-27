@@ -2109,48 +2109,48 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/15223207?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-05-26T10:30:00.000Z",
+    title: "Radio Biblioteca",
+    link: "https://telluridelibrary.libcal.com/event/16824973?hs=a",
+    description: "12:00 PM – 1:00 PM · Escucha a KOTO Miercoles por Medio y conoce las noticias y eventos que tendremos en nuestra comunidad &bull; Tune in to Koto 91.7 FM every other Wednesday and learn about the news and events we will have in our community",
+    pubDate: "2026-05-27T12:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+    location: "KOTO Radio Station",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_01_13_13_59.jpeg"
   },
   {
-    title: "I Heart Art",
-    link: "https://telluridelibrary.libcal.com/event/15072183?hs=a",
-    description: "2:30 PM – 5:00 PM · Looking for a fun and enriching way to spend your afternoons? Join us Tuesdays for I Heart Art, designed especially for kids aged 5-12!  &iquest;Buscas una manera divertida de pasar tus tardes? &iexcl;Unete a nuestro programa extracurricular, dise&ntilde;ado especialmente para ni&ntilde;os de 5 a 12 a&ntilde;os!",
-    pubDate: "2026-05-26T14:30:00.000Z",
+    title: "Mahjongg for Independent Players",
+    link: "https://telluridelibrary.libcal.com/event/16767650?hs=a",
+    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-05-27T13:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1761421573.png"
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg"
   },
   {
-    title: "CANCELLED Women&#039;s Empowerment Group",
-    link: "https://telluridelibrary.libcal.com/event/16270083?hs=a",
-    description: "5:30 PM – 7:00 PM · Join Kaity Swick and Sally Harris Porter with Collaborative Trauma Solutions in a women's empowerment group focused on fostering connections with like-minded women and developing deeper connections with yourselves and each other. We will incorporate somatic practices, mindfulness exercises and practical tools rooted in mind-body awareness. This will be held in a group setting and will be a trauma-informed and non-judgmental space created to strengthen community and provide a safe space to express yourself. Kaity and Sally will guide the group with relevant topics and supportive tools, so all you have to do is show up with an open mind. Please sign up here if you are interested: https://forms.gle/ RLxaexLJar4Vpnhp7 Kaity Swick, LPCC - Kaity works with children and adults as a Mental Health Counselor and supports the community as an Early Childhood Mental Health Consultant. …",
-    pubDate: "2026-05-26T17:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_23_14_44_28.jpg"
-  },
-  {
-    title: "Screening of Skateboard",
-    link: "https://telluridelibrary.libcal.com/event/16560177?hs=a",
-    description: "5:30 PM – 7:00 PM · Skateboard (1978, PG, 97 min.) was the first feature film to depict the height of the 70s skateboard craze. Many refer to it as the Bad News Bears of the sport. It's star studded cast includes Alan Garfield , 70s teen idol Leif Garrett , skateboarding legend Tony Alva , and iconic female freestyler and member of the Skateboarding Hall of Fame Ellen O'Neal . It&#39;s also the first film Telluride local George Gage ever made! (George is also the founder of the legendary Billy Ball soft ball team .) This screening is free and open to the public, but a hat will be passed for donations to a fund to provide scholarships (or is is skaterships?) for kids who want to attend Telluride Skateboard Camp and could use a little financial help. …",
-    pubDate: "2026-05-26T17:30:00.000Z",
+    title: "Movie and A Snack Club",
+    link: "https://telluridelibrary.libcal.com/event/15067984?hs=a",
+    description: "3:30 PM – 5:00 PM · Join us every Wednesday for a fun and tasty adventure in the kitchen! Learn how to make delicious and creative snacks using safe cooking tools alongside other young chefs. Free and open to kids ages 5-12.  &Uuml;nete a nosotros todos los mi&eacute;rcoles para una divertida y sabrosa aventura en la cocina. Aprende a hacer bocadillos deliciosos y creativos usando herramientas de cocina seguras junto a otros j&oacute;venes chefs. Gratis y abierto para ni&ntilde;os de 5 a 12 a&ntilde;os.",
+    pubDate: "2026-05-27T15:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_28_08_48_32.webp"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1761422148.png"
+  },
+  {
+    title: "Romance with Rachel",
+    link: "https://telluridelibrary.libcal.com/event/16590830?hs=a",
+    description: "5:30 PM – 7:00 PM · If you haven&#39;t been paying attention.... Romance is IN! Welcome to Wilkinson&#39;s newest book club celebrating the sales-sweeping genre on love and all its glory—Romance with Rachel. Each month, join Rachel in reading a romance novel from a new subgenre and then engage the group in discussion about all the nitty gritty details. At the end of the event, our ravenous romance readers will collaboratively choose the novel for the next month. May&#39;s book is \"The Elsewhere Express\" by Samantha Sotto Yambao—a cozier magical realism romance. Five copies will be first come, first serve for registrees. Reach out to Rachel at rbrand@telluridelibrary.org if you have trouble acquiring a copy. Location TBD, Rachel will reach out the week of the event to confirm. Description below: When you lose your way in life, the Elsewhere Express just might find you. …",
+    pubDate: "2026-05-27T17:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_27_11_15_40.png"
   }
 ];
 
@@ -2242,50 +2242,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "On Display: Layers of Faces and Life-Paintings by Ruth Higdon and Julie Ahern",
-    link: "https://events.ourayridgwayevents.com/event/layers-of-faces-and-life-paintings-by-ruth-higdon-and-julie-ahern",
-    description: "A duo exhibition of new works by local painters Julie Ahern and Ruth Higdon. More info decker@ridgwayfuse.org",
-    pubDate: "2026-05-26T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52709680184864/huge/bf651b7d434184420bcaf9702ff358cbd88d3b9e.jpg"
-  },
-  {
-    title: "CORAL SKYE",
-    link: "https://coloradoboydepot.com/calendar/",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-05-26T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Tourism Advisory Committee",
-    link: "https://cityofouray.com/city_offices/committees___boards/tourism_advisory_committee.php",
-    description: "The Ouray Tourism Advisory Committee (TAC) represents a cross-section of the small businesses, nonprofits, and residents of Ouray. We educate ourselves about best practices in the tourism industry, tourism marketing, and the visitor experience. We gather input, plan, prioritize, measure, and advise the City of Ouray on the best actions to take related to the tourism industry in our community.",
-    pubDate: "2026-05-26T23:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52092171660517/huge/0e628304026c92db25e8df01849c962ac902a3b4.jpg"
-  },
-  {
-    title: "Community Meditation",
-    link: "www.ridgwayfuse.org",
-    description: "Join us for a peer-led weekly meditation series at the Decker Community Room. Free and open to the public! We meet every 1st, 2nd, and 4th Tuesday of the month (all but the 3rd Tuesday!)",
-    pubDate: "2026-05-27T00:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52338340283147/huge/582622671001d9ab20f8c25a5d229c9ecbbba165.jpg"
-  },
   {
     title: "Economic Vitality Conversation",
     link: "https://events.ourayridgwayevents.com/event/economic-vitality-meeting",
@@ -3242,6 +3198,50 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52886546383646/huge/a127886b72fb3a600be995c26a811e7c6fba5849.jpg"
+  },
+  {
+    title: "Ouray Economic Development Committee",
+    link: "https://events.ourayridgwayevents.com/event/ouray-economic-development-committee",
+    description: "The Ouray Economic Development Committee (OEDC) works as the liaison between the City and the local business community. This includes creating and implementing an Economic Development Plan and economic development incentives to best serve the business community and to align with programs that induce private investment enterprises and commerce. The committee also explores regional economic development efforts with the Town of Ridgway and Ouray County as well as is tasked with developing a Business Expansion and Retention (BEAR) program, participating in policy discussions and revisions to community planning documents, and making recommendations to the City Council about economic incentive requests.",
+    pubDate: "2026-06-11T14:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
+  },
+  {
+    title: "Cedar Hill Cemetery Tour",
+    link: "www.ouraycountyhistoricalsociety.org",
+    description: "Tour of Cedar Hill Cemetery, Ouray led by Alice Leeper. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay",
+    pubDate: "2026-06-11T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Cedar Hill Cemetery ",
+    imageUrl: "https://localist-images.azureedge.net/photos/52278066168507/huge/2100ef3a6df421f4cc351fc153ebe5f196fc7df6.jpg"
+  },
+  {
+    title: "Low Energy Carbon Code Training",
+    link: "https://www.ecoactionpartners.org/energy-codes",
+    description: "EcoAction Partners is facilitating a regional cohort across San Miguel, Ouray and San Juan counties to support collaborative discussion and implementation support for the state's building energy code requirements. Regional building code consistency, with varying amendments as appropriate for each jurisdiction, has proven beneficial to the regional building community and for enforcement over the years. This work is funded by the Energy Code Adoption and Enforcement Grant Program, from the Colorado Energy Office, and supported by Lotus Engineering & Sustainability and NORESCO. Low Energy & Carbon Code (LECC) Training: March 26, 2026 (9am-5pm) Who: Whole building contractor community What: LECC & Regional Amendments Training Where: Ridgway Town Hall & Zoom (Zoom Link to be provided to registrants) Why: Prepare for adoption by regional governments and get your questions answered Registration REQUIRED FOR LUNCH",
+    pubDate: "2026-06-11T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52444204372144/huge/b898ad2e5fd77ff7c0562156e047d7da5afebb95.jpg"
+  },
+  {
+    title: "Pilates Mat",
+    link: "https://ridgwaypilates.punchpass.com/catalogs/300",
+    description: "All Levels Pilates Mat class. Classical sequence Int to challenge, strengthen and stretch you wehole body. Every Thursday at 9:30am. Pricing Four lessons for $120 Eight lessons for $200 Become a member and pay $100/month to attend weekly. Purchase a pass here: https://ridgwaypilates.punchpass.com/catalogs/300 Class is limited to six people. Mats are included. Please wear socks, put your hair up and choose clothing free of metal.",
+    pubDate: "2026-06-11T15:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
   }
 ];
 
