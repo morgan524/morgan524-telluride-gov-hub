@@ -250,15 +250,42 @@
     .hb-badge-need { background: #FCE4EC; color: #C62828; }
     .hb-badge-volunteer { background: #E0F7FA; color: #00695C; }
     .hb-badge-general { background: var(--sand); color: var(--forest-soft); }
-    .hb-post-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-    .hb-post-avatar {
-      width: 34px; height: 34px; border-radius: 50%; background: var(--forest-soft);
-      color: #fff; display: flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 0.8rem; flex-shrink: 0;
+    /* Card head: [avatar] [title-stack(title + byline)] [badge] [admin-x]
+       Title goes top-left (was previously buried inside the body column);
+       byline (author + time) sits directly under it. align-items:flex-start
+       so the badge sits visually with the title row, not centered on the
+       full stack. */
+    .hb-post-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
     }
-    .hb-post-meta { font-size: 0.78rem; color: #888; }
-    .hb-post-author { font-weight: 700; color: var(--forest); }
-    .hb-post-title { font-size: 1.05rem; font-weight: 700; color: #222; margin-bottom: 6px; }
+    .hb-post-avatar {
+      width: 36px; height: 36px; border-radius: 50%; background: var(--forest-soft);
+      color: #fff; display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .hb-post-headline { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+    .hb-post-title {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: #1a2e29;
+      line-height: 1.25;
+      margin: 0;
+    }
+    .hb-post-byline {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      color: #6b7975;
+      flex-wrap: wrap;
+    }
+    .hb-post-author { font-weight: 600; color: var(--forest); }
+    .hb-post-sep { color: #b5beba; }
+    .hb-post-meta { color: #888; }
     .hb-post-body {
       font-size: 0.88rem; color: #444; line-height: 1.6; margin-bottom: 10px;
       white-space: pre-wrap; word-wrap: break-word;

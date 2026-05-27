@@ -865,8 +865,9 @@
     var leftColHtml = featuredHtml + attachImagesHtml + attachDocsHtml;
     var hasLeftCol = leftColHtml.length > 0;
 
+    // Title moved out of the right column to the card head (top-left).
+    // Right column now leads with the category tag, then body / extras.
     var rightColHtml =
-      '<div class="hb-post-title">' + hbEsc(post.title || '') + '</div>' +
       tagsHtml +
       '<div class="hb-post-body' + (isLong ? ' truncated' : '') + '">' + hbEsc(bodyText) + '</div>' +
       (isLong ? '<button class="hb-read-more" onclick="hbExpandPost(this)">Read more</button>' : '') +
@@ -894,11 +895,19 @@
           ? hbResolveName(hbUser)
           : (post.authorName || 'Anonymous'));
 
+    // Head now stacks: title on top, author + time below. Avatar still on
+    // the far left; badge (post type) + admin delete button on the far right.
     card.innerHTML =
       '<div class="hb-post-head">' +
         '<div class="hb-post-avatar">' + initial + '</div>' +
-        '<div><span class="hb-post-author">' + hbEsc(displayAuthor) + '</span>' +
-        '<div class="hb-post-meta">' + timeStr + '</div></div>' +
+        '<div class="hb-post-headline">' +
+          '<div class="hb-post-title">' + hbEsc(post.title || '') + '</div>' +
+          '<div class="hb-post-byline">' +
+            '<span class="hb-post-author">' + hbEsc(displayAuthor) + '</span>' +
+            '<span class="hb-post-sep">·</span>' +
+            '<span class="hb-post-meta">' + timeStr + '</span>' +
+          '</div>' +
+        '</div>' +
         badgeHtml +
         adminDeleteBtn +
       '</div>' +
