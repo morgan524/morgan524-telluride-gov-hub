@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 May 2026 09:39:22 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 15:26:59 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Board of County Commissioners Meeting — 2026-06-03</title>
@@ -119,6 +119,16 @@ The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted 
       <category>Town of Telluride</category>
     </item>
     <item>
+      <title>It’s a wrap</title>
+      <link>https://www.telluridenews.com/arts_and_entertainment/article_fb7ed56b-afa8-4c5d-ae54-3f5a43bfa3ff.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/arts_and_entertainment/article_fb7ed56b-afa8-4c5d-ae54-3f5a43bfa3ff.html</guid>
+      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/3a/a3a31761-8d88-4191-8917-c18600aaa617/6a17011608bd7.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Mountainfilm wrapped up another year showcasing documentaries focused on environmental protection, social justice, and personal resilience. Films featured everything from women inmates helping restore endangered butterflies in Oregon prisons to wildfire survivors in California, plus local wildlife rehabilitator Lissa Margetts in "The Mountain Ark."]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/3a/a3a31761-8d88-4191-8917-c18600aaa617/6a17011608bd7.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
+    </item>
+    <item>
       <title>Vaulting to success — and fun</title>
       <link>https://www.telluridenews.com/sports/article_d89d2da5-9ccd-49c8-bae9-66b744d58c4f.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/sports/article_d89d2da5-9ccd-49c8-bae9-66b744d58c4f.html</guid>
@@ -127,6 +137,15 @@ The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted 
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/34/434e7b74-b0b7-41c3-ba73-05a9b9fa0810/6a1535cb82c0a.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>community</category>
+    </item>
+    <item>
+      <title>Ridgway Youth Advisory Council Meeting Agenda</title>
+      <link>https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/YAC-Meeting-Agenda-%26-Packet---June-1%2C-2026.pdf</link>
+      <guid isPermaLink="false">https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/YAC-Meeting-Agenda-%26-Packet---June-1%2C-2026.pdf</guid>
+      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Press release from the Town of Ridgway. Click to view the full PDF.]]></description>
+      <category>Town of Ridgway</category>
+      <category>government</category>
     </item>
     <item>
       <title>[Meeting] Board of County Commissioners Special Meeting in Telluride 2:00 pm - 2:45 pm — 2026-05-27</title>
@@ -394,24 +413,6 @@ The commissioners will handle two septic system variances in Ophir, consider end
       <description><![CDATA[Content Notice: This communication contains information related to sexual violence/child abuse. Reader discretion is advised.]]></description>
       <category>Town of Telluride</category>
       <category>public-safety</category>
-    </item>
-    <item>
-      <title>Newscast 5-21-26</title>
-      <link>https://koto.org/news/newscast-5-21-26/</link>
-      <guid isPermaLink="false">https://koto.org/news/newscast-5-21-26/</guid>
-      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[West End Roundup with the San Miguel Basin Forum; Kris Tompkins on Rewilding the Mind; A Placerville Poetry Box]]></description>
-      <category>KOTO Community Radio</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>A Placerville Poetry Box</title>
-      <link>https://koto.org/news/san-miguel-canyon-telluride-poetry-box-colorado/</link>
-      <guid isPermaLink="false">https://koto.org/news/san-miguel-canyon-telluride-poetry-box-colorado/</guid>
-      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[A bright yellow poetry box on the side of the road in San Miguel Canyon offers people driving to and fro a place to stop, write, and share poems. Created by local poet Rosemerry Wahtola Trommer, the poetry box is an opportunity to pause, reflect, and embrace a sense of community.]]></description>
-      <category>KOTO Community Radio</category>
-      <category>infrastructure</category>
     </item>
   </channel>
 </rss>

@@ -177,6 +177,18 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "It’s a wrap",
+    source: "Telluride Times",
+    date: "May 27, 2026",
+    firstSeen: "2026-05-27",
+    newsTopic: "community",
+    copy: "Mountainfilm wrapped up another year showcasing documentaries focused on environmental protection, social justice, and personal resilience. Films featured everything from women inmates helping restore endangered butterflies in Oregon prisons to wildfire survivors in California, plus local wildlife rehabilitator Lissa Margetts in \"The Mountain Ark.\"",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_fb7ed56b-afa8-4c5d-ae54-3f5a43bfa3ff.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/3a/a3a31761-8d88-4191-8917-c18600aaa617/6a17011608bd7.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Vaulting to success — and fun",
     source: "Telluride Times",
     date: "May 26, 2026",
@@ -390,7 +402,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_47be9c09-3df7-4adb-ad86-52fcdacec827.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
+    imgHiRes: true,
+    letterAuthor: "Megan Berry Director, Rainbow Preschool"
   },
   {
     title: "Green Grants thanks",
@@ -402,7 +415,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_020283e8-4a89-40fe-b595-6ad1fdec878a.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
+    imgHiRes: true,
+    letterAuthor: "Shawnna"
   },
   {
     title: "Endorsing Marya",
@@ -414,7 +428,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_9c315856-90b1-43ac-b572-99eea53ab25e.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
+    imgHiRes: true,
+    letterAuthor: "Anne Brown San Miguel"
   },
   {
     title: "End housing bottlenecks",
@@ -426,7 +441,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_71288668-53cf-41d2-ade1-f8b82cabe11c.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
+    imgHiRes: true,
+    letterAuthor: "Shannon Farley"
   },
   {
     title: "We can't all be friends",
@@ -1015,25 +1031,14 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Ridgway Planning Commission Meeting Agenda",
+    title: "Ridgway Youth Advisory Council Meeting Agenda",
     source: "Town of Ridgway",
-    date: "May 20, 2026",
-    firstSeen: "2026-05-16",
-    newsTopic: "land-use",
+    date: "June 1, 2026",
+    firstSeen: "2026-05-27",
+    newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---May-20%2C-2026.pdf",
-    img: ""
-  },
-  {
-    title: "Notice of Public Hearing - River Park, Ridgway Business Park, Phase 3 Final Plat",
-    source: "Town of Ridgway",
-    date: "May 20, 2026",
-    firstSeen: "2026-05-16",
-    newsTopic: "recreation",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.05.20_public-hearing-notice.pdf",
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/YAC-Meeting-Agenda-%26-Packet---June-1%2C-2026.pdf",
     img: ""
   },
   {
@@ -1577,17 +1582,6 @@ const COMMUNITY_EVENTS = [
 ];
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Mahjongg for Independent Players",
-    link: "https://koto.org/event/mahjongg-for-independent-players-3/",
-    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you'd like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-05-27T13:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/mahjong-6-1.png"
-  },
   {
     title: "Romance with Rachel Book Club",
     link: "https://koto.org/event/romance-with-rachel-book-club-2/",
