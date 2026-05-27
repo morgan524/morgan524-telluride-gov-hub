@@ -586,6 +586,73 @@
       transition: transform 0.1s ease, opacity 0.1s ease;
     }
     .hb-post-attach-icon:hover { opacity: 0.75; transform: scale(1.12); }
+    /* Image attachments on post cards — show as large preview, clickable
+       to open full-size in a new tab. Floats to one side via the wrapping
+       .hb-post-attachments flex layout (which now wraps row→column on
+       narrow screens). */
+    .hb-post-attachments {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+    .hb-post-attach-image {
+      display: block;
+      max-width: 360px;
+      flex: 0 1 360px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(36, 49, 46, 0.12);
+      border: 1px solid rgba(33, 68, 60, 0.08);
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .hb-post-attach-image:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(36, 49, 46, 0.18);
+    }
+    .hb-post-attach-image img {
+      display: block;
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+    }
+    /* Document attachments on post cards — tile card with icon + name +
+       CTA. PDF opens in a new tab (browser handles rendering); other
+       docs route through hbOpenDocModal (Google Docs Viewer iframe). */
+    .hb-post-attach-doc {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      background: #f7f3ea;
+      border: 1px solid rgba(33, 68, 60, 0.12);
+      border-radius: 10px;
+      text-decoration: none;
+      color: #21443c;
+      font-size: 0.88rem;
+      transition: background 0.12s, transform 0.12s;
+      max-width: 280px;
+    }
+    .hb-post-attach-doc:hover {
+      background: #ede5d2;
+      transform: translateY(-1px);
+    }
+    .hb-post-attach-doc .hb-attach-icon { font-size: 1.4rem; line-height: 1; }
+    .hb-post-attach-doc .hb-attach-name {
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+    .hb-post-attach-doc .hb-attach-cta {
+      font-size: 0.75rem;
+      color: #2f7a5f;
+      font-weight: 700;
+      white-space: nowrap;
+    }
     /* Admin delete button — top-right of card header, subtle until hovered */
     .hb-admin-delete-btn {
       margin-left: auto !important;

@@ -780,15 +780,30 @@
       attachHtml = '<div class="hb-post-attachments">' + post.attachments.map(function(a) {
         var isImage = a.type && a.type.startsWith('image/');
         var isPdf   = a.type === 'application/pdf' || (a.name && a.name.toLowerCase().endsWith('.pdf'));
-        var isDoc   = !isImage && (isPdf || (a.name && /\.(docx?|txt)$/i.test(a.name)));
-        if (isDoc) {
-          // Show icon only — clicking opens the full-page PDF viewer modal
-          return '<a class="hb-post-attach hb-post-attach-icon" href="#" ' +
-            'onclick="hbOpenDocModal(' + JSON.stringify(a.url) + ',' + JSON.stringify(a.name) + ');return false;" ' +
-            'title="' + hbEsc(a.name) + '">📄</a>';
+        if (isImage) {
+          // Large preview thumbnail — clicking opens full-size in a new tab
+          return '<a class="hb-post-attach-image" href="' + hbEsc(a.url) + '" target="_blank" rel="noopener" title="' + hbEsc(a.name) + '">' +
+            '<img src="' + hbEsc(a.url) + '" alt="' + hbEsc(a.name) + '" loading="lazy">' +
+          '</a>';
         }
-        // Images open in a new tab (icon only for consistency)
-        return '<a class="hb-post-attach hb-post-attach-icon" href="' + hbEsc(a.url) + '" target="_blank" rel="noopener" title="' + hbEsc(a.name) + '">🖼️</a>';
+        if (isPdf) {
+          // PDF tile card — opens in a new tab (browser's built-in PDF viewer
+          // handles rendering reliably). Avoids the Google Docs Viewer iframe
+          // which silently fails when Firebase Storage URLs include auth tokens.
+          return '<a class="hb-post-attach-doc" href="' + hbEsc(a.url) + '" target="_blank" rel="noopener" title="' + hbEsc(a.name) + '">' +
+            '<span class="hb-attach-icon">📄</span>' +
+            '<span class="hb-attach-name">' + hbEsc(a.name) + '</span>' +
+            '<span class="hb-attach-cta">Open PDF →</span>' +
+          '</a>';
+        }
+        // Other documents (Word, txt, etc.) — route through the Docs Viewer modal
+        return '<a class="hb-post-attach-doc" href="#" ' +
+          'onclick="hbOpenDocModal(' + JSON.stringify(a.url) + ',' + JSON.stringify(a.name) + ');return false;" ' +
+          'title="' + hbEsc(a.name) + '">' +
+          '<span class="hb-attach-icon">📄</span>' +
+          '<span class="hb-attach-name">' + hbEsc(a.name) + '</span>' +
+          '<span class="hb-attach-cta">Open →</span>' +
+        '</a>';
       }).join('') + '</div>';
     }
 
