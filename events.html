@@ -235,6 +235,142 @@
     }
     .submit-mountains svg { width: 100%; height: 100%; display: block; }
 
+    /* ── View toggle (List | Calendar) ─────────────────────────── */
+    .view-toggle {
+      display: inline-flex;
+      gap: 0;
+      margin-bottom: 18px;
+      border: 1px solid var(--border-soft);
+      border-radius: 999px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: var(--shadow-card);
+    }
+    .view-toggle button {
+      appearance: none;
+      background: transparent;
+      border: none;
+      padding: 9px 22px;
+      font-family: var(--font-main);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .view-toggle button:hover { color: var(--forest); }
+    .view-toggle button.active {
+      background: var(--forest);
+      color: #fff;
+    }
+    .view-toggle button svg {
+      width: 16px; height: 16px;
+      stroke: currentColor; stroke-width: 2;
+      fill: none; stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    /* ── Calendar view ─────────────────────────────────────────── */
+    .cal-month {
+      background: #fff;
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 22px;
+      box-shadow: var(--shadow-card);
+    }
+    .cal-month-title {
+      font-family: var(--font-heading);
+      font-size: 1.55rem;
+      color: var(--forest);
+      margin: 0 0 16px;
+      text-align: center;
+    }
+    .cal-weekdays {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 6px;
+      margin-bottom: 6px;
+      font-family: var(--font-main);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-align: center;
+    }
+    .cal-weekdays > div { padding: 4px 0; }
+    .cal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 6px;
+    }
+    .cal-cell {
+      min-height: 96px;
+      background: var(--bg-paper);
+      border: 1px solid var(--border-soft);
+      border-radius: 8px;
+      padding: 6px 6px 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      overflow: hidden;
+    }
+    .cal-cell-empty {
+      background: transparent;
+      border: 1px dashed transparent;
+    }
+    .cal-cell-past { opacity: 0.45; }
+    .cal-day-num {
+      font-family: var(--font-main);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      align-self: flex-end;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+    .cal-today {
+      background: rgba(47, 122, 95, 0.08);
+      border-color: var(--accent-green);
+    }
+    .cal-today .cal-day-num {
+      color: var(--forest);
+      background: var(--accent-green);
+      color: #fff;
+      border-radius: 999px;
+      padding: 2px 7px;
+      font-size: 0.72rem;
+    }
+    .cal-event {
+      display: block;
+      font-family: var(--font-main);
+      font-size: 0.72rem;
+      line-height: 1.2;
+      padding: 3px 6px;
+      background: var(--forest);
+      color: #fff;
+      border-radius: 4px;
+      text-decoration: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: background 0.12s;
+    }
+    .cal-event:hover { background: var(--forest-soft); }
+    .cal-event-time {
+      font-weight: 600;
+      opacity: 0.85;
+      margin-right: 3px;
+    }
+    .cal-more {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      padding: 0 6px;
+    }
+
     /* Event card grid — 3 columns on widest, scales down */
     .event-grid {
       display: grid;
@@ -786,7 +922,20 @@
         </div>
       </div>
 
+      <!-- View toggle: List (default) | Calendar -->
+      <div class="view-toggle" role="tablist" aria-label="Event view">
+        <button type="button" id="viewListBtn" class="active" role="tab" aria-selected="true">
+          <svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          List
+        </button>
+        <button type="button" id="viewCalBtn" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Calendar
+        </button>
+      </div>
+
       <div class="event-grid" id="eventGrid"><!-- populated by JS --></div>
+      <div id="eventCalendar" style="display:none;"><!-- populated by JS when calendar view active --></div>
     </div>
   </main>
 
@@ -1050,12 +1199,100 @@
     }
     window.handlePortrait = handlePortrait;
 
+    /* View state: 'list' (default) or 'calendar' */
+    let activeView = 'list';
+
+    /* ── Calendar rendering ─────────────────────────────────────
+       Always render the current month. Render the next month too
+       when at least one event in the filtered set falls in it
+       (events.html ingestion caps the set at "next 30 days," so
+       this is the only way the calendar ever spans two months). */
+    function renderCalendarView(events) {
+      const today = new Date(); today.setHours(0,0,0,0);
+      const curStart = new Date(today.getFullYear(), today.getMonth(), 1);
+      const nextStart = new Date(today.getFullYear(), today.getMonth() + 1, 1);
+
+      const hasNextMonthEvents = events.some(e => {
+        const d = new Date(e.date + 'T12:00:00');
+        return d >= nextStart;
+      });
+
+      const html = [renderMonth(curStart, events, today)];
+      if (hasNextMonthEvents) html.push(renderMonth(nextStart, events, today));
+      return html.join('');
+    }
+
+    function renderMonth(monthStart, events, today) {
+      const year = monthStart.getFullYear();
+      const month = monthStart.getMonth();
+      const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      const firstDayOfWeek = monthStart.getDay(); // 0 = Sunday
+
+      // Bucket events by day-of-month (only events in this month).
+      const byDay = {};
+      events.forEach(e => {
+        const d = new Date(e.date + 'T12:00:00');
+        if (d.getFullYear() !== year || d.getMonth() !== month) return;
+        const day = d.getDate();
+        (byDay[day] = byDay[day] || []).push(e);
+      });
+
+      const cells = [];
+      for (let i = 0; i < firstDayOfWeek; i++) {
+        cells.push('<div class="cal-cell cal-cell-empty"></div>');
+      }
+      for (let day = 1; day <= daysInMonth; day++) {
+        const isToday = today.getFullYear() === year && today.getMonth() === month && today.getDate() === day;
+        const isPast  = new Date(year, month, day) < today;
+        const cls = ['cal-cell'];
+        if (isToday) cls.push('cal-today');
+        else if (isPast) cls.push('cal-cell-past');
+        const evs = (byDay[day] || []).slice(0, 3);
+        const overflow = (byDay[day] || []).length - evs.length;
+        const chips = evs.map(e => {
+          const safeTitle = (e.title || '').replace(/"/g, '&quot;');
+          const fullLabel = (e.time ? e.time + ' — ' : '') + e.title + (e.location ? ' @ ' + e.location : '');
+          const timeShort = e.time ? e.time.split(/[–-]/)[0].trim() : '';
+          const href = (e.href && e.href !== '#') ? e.href : null;
+          const inner = (timeShort ? `<span class="cal-event-time">${timeShort}</span>` : '') + safeTitle;
+          return href
+            ? `<a class="cal-event" href="${href}" target="_blank" rel="noopener" title="${fullLabel.replace(/"/g, '&quot;')}">${inner}</a>`
+            : `<span class="cal-event" title="${fullLabel.replace(/"/g, '&quot;')}">${inner}</span>`;
+        }).join('');
+        const moreLine = overflow > 0 ? `<div class="cal-more">+${overflow} more</div>` : '';
+        cells.push(`<div class="${cls.join(' ')}"><div class="cal-day-num">${day}</div>${chips}${moreLine}</div>`);
+      }
+
+      return `
+        <div class="cal-month">
+          <h2 class="cal-month-title">${monthNames[month]} ${year}</h2>
+          <div class="cal-weekdays">
+            <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+          </div>
+          <div class="cal-grid">${cells.join('')}</div>
+        </div>
+      `;
+    }
+
     function render() {
       document.getElementById('sidebarFilter').innerHTML = filterHtml();
       const filtered = activeTown === 'all'
         ? EVENTS
         : EVENTS.filter(e => e.town === activeTown);
-      document.getElementById('eventGrid').innerHTML = filtered.map(eventCardHtml).join('');
+
+      const grid = document.getElementById('eventGrid');
+      const cal  = document.getElementById('eventCalendar');
+      if (activeView === 'calendar') {
+        grid.style.display = 'none';
+        cal.style.display = '';
+        cal.innerHTML = renderCalendarView(filtered);
+      } else {
+        cal.style.display = 'none';
+        grid.style.display = '';
+        grid.innerHTML = filtered.map(eventCardHtml).join('');
+      }
+
       document.querySelectorAll('.filter-option[data-town]').forEach(opt => {
         opt.addEventListener('click', () => {
           activeTown = opt.dataset.town;
@@ -1063,6 +1300,18 @@
         });
       });
     }
+
+    function setView(view) {
+      activeView = view;
+      document.getElementById('viewListBtn').classList.toggle('active', view === 'list');
+      document.getElementById('viewListBtn').setAttribute('aria-selected', view === 'list');
+      document.getElementById('viewCalBtn').classList.toggle('active', view === 'calendar');
+      document.getElementById('viewCalBtn').setAttribute('aria-selected', view === 'calendar');
+      render();
+    }
+    document.getElementById('viewListBtn').addEventListener('click', () => setView('list'));
+    document.getElementById('viewCalBtn').addEventListener('click',  () => setView('calendar'));
+
     render();
     /* ── Live data: pulls events from the deployed gov-hub.js. ────────
        If the script loads and the expected consts exist, replace the
