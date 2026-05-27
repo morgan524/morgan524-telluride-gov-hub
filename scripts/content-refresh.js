@@ -1440,9 +1440,32 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
         const enclosure = item.enclosure;
         const rssCopy = (item.description || '').replace(/<[^>]+>/g, '').trim().slice(0, 300);
 
-        // If we already have a Claude summary for this article, carry it forward unchanged
+        // If we already have a Claude summary for this article, carry it forward.
+        // One-shot backfill: cached letters that pre-date the letterAuthor
+        // feature (commit 7f615b7) lack the field, leaving their cards without
+        // the "By <author>" byline. Re-fetch just the full text (no re-summarize)
+        // so we can extract the signature.
         if (existingByHref.has(href) && existingByHref.get(href).claudeSummary) {
-          articles.push(existingByHref.get(href));
+          const cached = existingByHref.get(href);
+          const isLetterCached = /\/letters_to_editor\//i.test(href);
+          if (isLetterCached && !cached.letterAuthor && TT_AUTH_COOKIE) {
+            try {
+              const result = await fetchTTArticleDirect(href);
+              if (result && result.status === 200) {
+                const fullText = extractTTArticleText(result.text);
+                const author = fullText ? extractLetterAuthor(fullText) : '';
+                if (author) {
+                  articles.push({ ...cached, letterAuthor: author });
+                  await new Promise(r => setTimeout(r, 800));
+                  continue;
+                }
+              }
+              await new Promise(r => setTimeout(r, 800));
+            } catch (e) {
+              console.warn(`  Could not backfill letterAuthor for ${href}: ${e.message}`);
+            }
+          }
+          articles.push(cached);
           continue;
         }
 
