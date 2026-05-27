@@ -569,7 +569,7 @@
         // (hbRenderTrending et al. that look up p.authorId for the user map).
         authorUid: hbUser.uid,
         authorId: hbUser.uid,
-        authorName: hbUser.displayName || 'Anonymous',
+        authorName: hbResolveName(hbUser),
         title: title,
         body: body,
         tags: selectedTags,
@@ -775,36 +775,48 @@
       badgeHtml = '<span class="hb-badge hb-badge-' + post.postType + '">' + typeInfo.icon + ' ' + typeInfo.label + '</span>';
     }
 
-    var attachHtml = '';
+    // Split attachments into images (top of left column) and docs (below).
+    var attachImagesHtml = '';
+    var attachDocsHtml = '';
     if (post.attachments && post.attachments.length) {
-      attachHtml = '<div class="hb-post-attachments">' + post.attachments.map(function(a) {
+      var imgParts = [];
+      var docParts = [];
+      post.attachments.forEach(function(a) {
         var isImage = a.type && a.type.startsWith('image/');
         var isPdf   = a.type === 'application/pdf' || (a.name && a.name.toLowerCase().endsWith('.pdf'));
         if (isImage) {
           // Large preview thumbnail — clicking opens full-size in a new tab
-          return '<a class="hb-post-attach-image" href="' + hbEsc(a.url) + '" target="_blank" rel="noopener" title="' + hbEsc(a.name) + '">' +
-            '<img src="' + hbEsc(a.url) + '" alt="' + hbEsc(a.name) + '" loading="lazy">' +
-          '</a>';
-        }
-        if (isPdf) {
+          imgParts.push(
+            '<a class="hb-post-attach-image" href="' + hbEsc(a.url) + '" target="_blank" rel="noopener" title="' + hbEsc(a.name) + '">' +
+              '<img src="' + hbEsc(a.url) + '" alt="' + hbEsc(a.name) + '" loading="lazy">' +
+            '</a>'
+          );
+        } else if (isPdf) {
           // PDF tile card — opens in a new tab (browser's built-in PDF viewer
           // handles rendering reliably). Avoids the Google Docs Viewer iframe
           // which silently fails when Firebase Storage URLs include auth tokens.
-          return '<a class="hb-post-attach-doc" href="' + hbEsc(a.url) + '" target="_blank" rel="noopener" title="' + hbEsc(a.name) + '">' +
-            '<span class="hb-attach-icon">📄</span>' +
-            '<span class="hb-attach-name">' + hbEsc(a.name) + '</span>' +
-            '<span class="hb-attach-cta">Open PDF →</span>' +
-          '</a>';
+          docParts.push(
+            '<a class="hb-post-attach-doc" href="' + hbEsc(a.url) + '" target="_blank" rel="noopener" title="' + hbEsc(a.name) + '">' +
+              '<span class="hb-attach-icon">📄</span>' +
+              '<span class="hb-attach-name">' + hbEsc(a.name) + '</span>' +
+              '<span class="hb-attach-cta">Open PDF →</span>' +
+            '</a>'
+          );
+        } else {
+          // Other documents (Word, txt, etc.) — route through the Docs Viewer modal
+          docParts.push(
+            '<a class="hb-post-attach-doc" href="#" ' +
+              'onclick="hbOpenDocModal(' + JSON.stringify(a.url) + ',' + JSON.stringify(a.name) + ');return false;" ' +
+              'title="' + hbEsc(a.name) + '">' +
+              '<span class="hb-attach-icon">📄</span>' +
+              '<span class="hb-attach-name">' + hbEsc(a.name) + '</span>' +
+              '<span class="hb-attach-cta">Open →</span>' +
+            '</a>'
+          );
         }
-        // Other documents (Word, txt, etc.) — route through the Docs Viewer modal
-        return '<a class="hb-post-attach-doc" href="#" ' +
-          'onclick="hbOpenDocModal(' + JSON.stringify(a.url) + ',' + JSON.stringify(a.name) + ');return false;" ' +
-          'title="' + hbEsc(a.name) + '">' +
-          '<span class="hb-attach-icon">📄</span>' +
-          '<span class="hb-attach-name">' + hbEsc(a.name) + '</span>' +
-          '<span class="hb-attach-cta">Open →</span>' +
-        '</a>';
-      }).join('') + '</div>';
+      });
+      if (imgParts.length) attachImagesHtml = imgParts.join('');
+      if (docParts.length) attachDocsHtml = '<div class="hb-post-attach-docs">' + docParts.join('') + '</div>';
     }
 
     // Next step cue
@@ -844,37 +856,53 @@
     });
     reactionsHtml += '</div>';
 
-    // Build featured image HTML (left side of card)
-    var hasImage = post.imageUrl && post.imageUrl.length > 0;
-    var imageHtml = hasImage
-      ? '<div class="hb-post-image"><a href="' + hbEsc(post.imageUrl) + '" target="_blank"><img src="' + hbEsc(post.imageUrl) + '" alt="Post photo" loading="lazy"></a></div>'
+    // Featured image (post.imageUrl) sits at the very top of the left
+    // column. Attached image previews stack below it; doc tiles below those.
+    var hasFeatured = post.imageUrl && post.imageUrl.length > 0;
+    var featuredHtml = hasFeatured
+      ? '<a class="hb-post-attach-image hb-post-attach-featured" href="' + hbEsc(post.imageUrl) + '" target="_blank" rel="noopener"><img src="' + hbEsc(post.imageUrl) + '" alt="Post photo" loading="lazy"></a>'
       : '';
+    var leftColHtml = featuredHtml + attachImagesHtml + attachDocsHtml;
+    var hasLeftCol = leftColHtml.length > 0;
 
-    // Wrap title+body+extras in a flex row when an image is present
-    var contentStart = hasImage ? '<div class="hb-post-content-wrap">' + imageHtml + '<div class="hb-post-content-text">' : '';
-    var contentEnd = hasImage ? '</div></div>' : '';
-
-    var adminDeleteBtn = (hbUser && hbUser.email === 'info@livabletelluride.org')
-      ? '<button class="hb-admin-delete-btn" onclick="hbAdminDelete(\'' + post.id + '\')" title="Delete post">🗑</button>'
-      : '';
-
-    card.innerHTML =
-      '<div class="hb-post-head">' +
-        '<div class="hb-post-avatar">' + initial + '</div>' +
-        '<div><span class="hb-post-author">' + hbEsc(post.authorName || 'Anonymous') + '</span>' +
-        '<div class="hb-post-meta">' + timeStr + '</div></div>' +
-        badgeHtml +
-        adminDeleteBtn +
-      '</div>' +
-      contentStart +
+    var rightColHtml =
       '<div class="hb-post-title">' + hbEsc(post.title || '') + '</div>' +
       tagsHtml +
       '<div class="hb-post-body' + (isLong ? ' truncated' : '') + '">' + hbEsc(bodyText) + '</div>' +
       (isLong ? '<button class="hb-read-more" onclick="hbExpandPost(this)">Read more</button>' : '') +
       debriefHtml +
-      sourceHtml +
-      contentEnd +
-      attachHtml +
+      sourceHtml;
+
+    var wrappedBody = hasLeftCol
+      ? '<div class="hb-post-content-wrap">' +
+          '<div class="hb-post-left-col">' + leftColHtml + '</div>' +
+          '<div class="hb-post-content-text">' + rightColHtml + '</div>' +
+        '</div>'
+      : rightColHtml;
+
+    var adminDeleteBtn = (hbUser && hbUser.email === 'info@livabletelluride.org')
+      ? '<button class="hb-admin-delete-btn" onclick="hbAdminDelete(\'' + post.id + '\')" title="Delete post">🗑</button>'
+      : '';
+
+    // Last-resort name fallback at render time: if a legacy post stored
+    // 'Anonymous' AND the current viewer is the author, show the viewer's
+    // resolved name instead of the stale 'Anonymous' string. Other viewers
+    // still see whatever was stored.
+    var displayAuthor = post.authorName && post.authorName !== 'Anonymous'
+      ? post.authorName
+      : (hbUser && (post.authorUid === hbUser.uid || post.authorId === hbUser.uid)
+          ? hbResolveName(hbUser)
+          : (post.authorName || 'Anonymous'));
+
+    card.innerHTML =
+      '<div class="hb-post-head">' +
+        '<div class="hb-post-avatar">' + initial + '</div>' +
+        '<div><span class="hb-post-author">' + hbEsc(displayAuthor) + '</span>' +
+        '<div class="hb-post-meta">' + timeStr + '</div></div>' +
+        badgeHtml +
+        adminDeleteBtn +
+      '</div>' +
+      wrappedBody +
       nextStepHtml +
       reactionsHtml +
       '<div class="hb-post-foot">' +
@@ -1067,7 +1095,7 @@
       // any reader that still looks for it.
       authorUid: hbUser.uid,
       authorId: hbUser.uid,
-      authorName: hbUser.displayName || 'Anonymous',
+      authorName: hbResolveName(hbUser),
       body: body,
       createdAt: firebase.firestore.FieldValue.serverTimestamp()
     }).then(function() {
@@ -1459,6 +1487,24 @@
     var div = document.createElement('div');
     div.appendChild(document.createTextNode(s));
     return div.innerHTML;
+  }
+  /* Resolve a display name from a Firebase Auth user object.
+     Priority: displayName → email prefix titlecased → 'Anonymous'.
+     Why: not every user has set displayName (older accounts, admin
+     account predates the signup flow), and showing "Anonymous" by
+     default looks like a bug to readers. */
+  function hbResolveName(user) {
+    if (!user) return 'Anonymous';
+    if (user.displayName && user.displayName.trim()) return user.displayName.trim();
+    if (user.email) {
+      var prefix = user.email.split('@')[0];
+      if (prefix) {
+        return prefix.split(/[._-]+/).map(function(s) {
+          return s ? s.charAt(0).toUpperCase() + s.slice(1).toLowerCase() : '';
+        }).filter(Boolean).join(' ');
+      }
+    }
+    return 'Anonymous';
   }
   function hbTimeAgo(date) {
     var secs = Math.floor((new Date() - date) / 1000);
