@@ -768,12 +768,12 @@
       }).join('') + '</div>';
     }
 
-    // Post type badge
+    // Post-type badge (Question / Discussion / Debrief / Source) — hidden
+    // from rendered cards per user request 2026-05-27. The category tags
+    // (Housing / Land Use / etc.) carry the topical signal; the post-type
+    // badge was redundant noise. postType is still STORED on the doc so a
+    // future feature can filter/sort by it; we just don't display it.
     var badgeHtml = '';
-    if (post.postType) {
-      var typeInfo = HB_POST_TYPES[post.postType] || { label: post.postType, icon: '💡' };
-      badgeHtml = '<span class="hb-badge hb-badge-' + post.postType + '">' + typeInfo.icon + ' ' + typeInfo.label + '</span>';
-    }
 
     // Split attachments into images (top of left column) and docs (below).
     var attachImagesHtml = '';
