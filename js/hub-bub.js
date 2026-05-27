@@ -101,26 +101,41 @@
   // ═══════════════════════════════
   // AUTH FUNCTIONS
   // ═══════════════════════════════
-  window.hbShowAuth = function(mode) {
-    var modal = document.getElementById('hbAuthModal');
-    modal.classList.add('open');
-    document.getElementById('hbSignupForm').style.display = mode === 'signup' ? '' : 'none';
-    document.getElementById('hbLoginForm').style.display = mode === 'login' ? '' : 'none';
-    document.getElementById('hbVerifyForm').style.display = mode === 'verify' ? '' : 'none';
-    // Clear errors and info messages
-    ['hbSignupError','hbLoginError'].forEach(function(id) {
-      var el = document.getElementById(id);
-      if (el) { el.style.display = 'none'; el.textContent = ''; }
-    });
-    var infoEl = document.getElementById('hbLoginInfo');
-    if (infoEl) { infoEl.style.display = 'none'; infoEl.innerHTML = ''; }
-    // Reset login button state. Same id-typo guard as the bind site below
-    // — id in HTML is `hbLoginSubmit`, an earlier version looked up
-    // `hbLoginBtn` and silently no-op'd.
-    var lb = document.getElementById('hbLoginSubmit')
-          || document.getElementById('hbLoginBtn');
-    if (lb) { lb.textContent = 'Log in'; lb.disabled = false; }
-  };
+  // hub-bub.html (post-2026-05-25 modal redesign) defines its OWN
+  // window.hbShowAuth wired to the new modal IDs (#hbModalOverlay /
+  // #hbLoginPanel / #hbSignupPanel). hub-bub.js is loaded async and
+  // used to clobber that working definition with the version below —
+  // which references the OLD modal IDs (#hbAuthModal / #hbLoginForm
+  // etc.) that no longer exist in the DOM, so clicks on the topnav
+  // "Log In" threw `Cannot read properties of null` on the
+  // modal.classList.add('open') line. Guard the assignment so the
+  // legacy version only takes effect if no one else has wired it.
+  if (!window.hbShowAuth) {
+    window.hbShowAuth = function(mode) {
+      var modal = document.getElementById('hbAuthModal');
+      if (!modal) return; // No legacy modal in DOM — caller should provide its own hbShowAuth.
+      modal.classList.add('open');
+      var sf = document.getElementById('hbSignupForm');
+      var lf = document.getElementById('hbLoginForm');
+      var vf = document.getElementById('hbVerifyForm');
+      if (sf) sf.style.display = mode === 'signup' ? '' : 'none';
+      if (lf) lf.style.display = mode === 'login' ? '' : 'none';
+      if (vf) vf.style.display = mode === 'verify' ? '' : 'none';
+      // Clear errors and info messages
+      ['hbSignupError','hbLoginError'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) { el.style.display = 'none'; el.textContent = ''; }
+      });
+      var infoEl = document.getElementById('hbLoginInfo');
+      if (infoEl) { infoEl.style.display = 'none'; infoEl.innerHTML = ''; }
+      // Reset login button state. Same id-typo guard as the bind site below
+      // — id in HTML is `hbLoginSubmit`, an earlier version looked up
+      // `hbLoginBtn` and silently no-op'd.
+      var lb = document.getElementById('hbLoginSubmit')
+            || document.getElementById('hbLoginBtn');
+      if (lb) { lb.textContent = 'Log in'; lb.disabled = false; }
+    };
+  }
   window.hbCloseAuth = function() {
     document.getElementById('hbAuthModal').classList.remove('open');
   };
