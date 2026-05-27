@@ -44,6 +44,24 @@ var CHECK_LABEL = 'Processed';  // Gmail label applied after processing
 var MAX_EMAILS_PER_RUN = 10;
 var NOTIFY_EMAIL = 'info@livabletelluride.org';
 
+// Approve/Deny alias addresses. Both are Workspace aliases that deliver
+// to events@livabletelluride.org. When you forward a submission email to
+// one of these, the handler below recognizes the recipient and writes a
+// Sheet row with the matching Status.
+var APPROVE_ALIAS = 'approve@livabletelluride.org';
+var DENY_ALIAS    = 'deny@livabletelluride.org';
+var APPROVED_LABEL = 'Approved';
+var DENIED_LABEL   = 'Denied';
+
+// Senders allowed to trigger approval/denial. Add additional addresses
+// (e.g. a co-organizer) here if you want them to be able to approve
+// events by forwarding. Sender check uses includes() against the From
+// header, so case + name-wrapping ("Morgan Smith <morgan@...>") is fine.
+var TRUSTED_APPROVERS = [
+  'info@livabletelluride.org',
+  'morgancsmith99@gmail.com'
+];
+
 // Senders whose mail must NEVER be parsed as an event. Google account-security
 // notices, mailer-daemon bounces, calendar invites from automated systems,
 // noreply addresses generally — all show up in the inbox unread and would
@@ -64,6 +82,49 @@ function isSystemSender(from) {
   if (!from) return false;
   for (var i = 0; i < SYSTEM_SENDER_PATTERNS.length; i++) {
     if (SYSTEM_SENDER_PATTERNS[i].test(from)) return true;
+  }
+  return false;
+}
+
+/**
+ * Was this message addressed to approve@ or deny@?
+ *
+ * Gmail aliases preserve the original recipient address in the
+ * To/Cc headers AND in Delivered-To / X-Original-To headers. We
+ * scan both because some forwarders strip one but not the other:
+ *   - msg.getTo() / getCc() — what the sender typed
+ *   - getRawContent() — the SMTP envelope, including Delivered-To
+ *
+ * Returns 'approve' | 'deny' | null.
+ */
+function detectApproveDenyAction(msg) {
+  var addresses = ((msg.getTo() || '') + ' ' + (msg.getCc() || '')).toLowerCase();
+  try {
+    var raw = msg.getRawContent() || '';
+    // Pull Delivered-To and X-Original-To headers (these are the actual
+    // SMTP destinations; alias delivery shows here even when To: doesn't).
+    var headerMatches = raw.match(/^(Delivered-To|X-Original-To):\s*([^\r\n]+)/gim) || [];
+    addresses += ' ' + headerMatches.join(' ').toLowerCase();
+  } catch (e) {
+    // getRawContent can throw on very large messages; fall back to To/Cc only
+    Logger.log('  detectApproveDenyAction: raw read failed: ' + e.message);
+  }
+  if (addresses.indexOf(APPROVE_ALIAS.toLowerCase()) !== -1) return 'approve';
+  if (addresses.indexOf(DENY_ALIAS.toLowerCase()) !== -1)    return 'deny';
+  return null;
+}
+
+/**
+ * Is this From address allowed to trigger approve/deny? Whitelist check
+ * is a soft guard — without it, anyone who guessed the alias could
+ * approve fake events. From headers come as "Name <addr@host>" so we
+ * do a substring match.
+ */
+function isTrustedApprover(from) {
+  if (!from) return false;
+  var lower = from.toLowerCase();
+  for (var i = 0; i < TRUSTED_APPROVERS.length; i++) {
+    if (lower.indexOf(TRUSTED_APPROVERS[i].toLowerCase()) !== -1) return true;
   }
   return false;
 }
@@ -120,8 +181,33 @@ function processNewEmails() {
   threads.forEach(function(thread) {
     var messages = thread.getMessages();
     Logger.log('Processing thread: ' + thread.getFirstMessageSubject() + ' (' + messages.length + ' messages)');
+    var threadAction = null;  // 'approve' | 'deny' | null — drives label choice
     messages.forEach(function(msg) {
       if (msg.isUnread()) {
+        // ── approve@ / deny@ alias path ──
+        // When the user forwards a submission email to approve@ or deny@,
+        // detect that here and short-circuit the normal "event-signal"
+        // filter — the user's forward IS the signal. parseEventEmail's
+        // optional second arg overrides the resulting Sheet Status.
+        var action = detectApproveDenyAction(msg);
+        if (action) {
+          if (!isTrustedApprover(msg.getFrom())) {
+            Logger.log('  IGNORED approve/deny — untrusted sender: ' + msg.getFrom());
+            msg.markRead();
+            return;
+          }
+          var eventData = parseEventEmail(msg, { action: action });
+          if (eventData) {
+            Logger.log('  ' + action.toUpperCase() + ' from ' + msg.getFrom() + ': ' + eventData.title);
+            appendToSheet(sheet, eventData);
+            newEvents.push(eventData);
+            threadAction = action;
+          }
+          msg.markRead();
+          return;
+        }
+
+        // ── normal events@ direct-receive path ──
         var eventData = parseEventEmail(msg);
         if (eventData) {
           Logger.log('Parsed event: ' + eventData.title);
@@ -132,6 +218,10 @@ function processNewEmails() {
       }
     });
     thread.addLabel(label);
+    // Stack a more specific label on top so approved/denied threads are
+    // visually distinct from normal "Processed" forwards in Gmail.
+    if (threadAction === 'approve') thread.addLabel(getOrCreateLabel(APPROVED_LABEL));
+    if (threadAction === 'deny')    thread.addLabel(getOrCreateLabel(DENIED_LABEL));
   });
 
   // Send notification for newly received events
@@ -147,6 +237,51 @@ function processNewEmails() {
  * Send notification when new event emails are received and parsed.
  */
 function sendReceiptNotification(events) {
+  // Group by action so each path gets a notification that accurately
+  // describes what happened. A single batch can contain a mix if multiple
+  // forwards land between two trigger ticks.
+  var approved = events.filter(function(e) { return e.action === 'approve'; });
+  var denied   = events.filter(function(e) { return e.action === 'deny'; });
+  var direct   = events.filter(function(e) { return !e.action; });
+
+  if (approved.length) sendActionNotification(approved, 'approve');
+  if (denied.length)   sendActionNotification(denied, 'deny');
+  if (direct.length)   sendDirectReceiptNotification(direct);
+}
+
+function sendActionNotification(events, action) {
+  var n = events.length;
+  var verb = action === 'approve' ? 'approved' : 'denied';
+  var emoji = action === 'approve' ? '✅' : '❌';
+  var subject = 'Livable Telluride: ' + n + ' event' + (n > 1 ? 's' : '') + ' ' + verb;
+  var body = emoji + ' The following event' + (n > 1 ? 's were' : ' was') + ' ' + verb + ':\n\n';
+
+  events.forEach(function(ev, i) {
+    body += '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n';
+    body += (i + 1) + '. ' + ev.title + '\n';
+    if (ev.date) body += '   Date: ' + ev.date + '\n';
+    if (ev.location) body += '   Location: ' + ev.location + '\n';
+    if (ev.time) body += '   Time: ' + ev.time + '\n';
+    if (ev.description) body += '   Details: ' + ev.description.substring(0, 200) + '\n';
+    if (ev.sourceUrl) body += '   Link: ' + ev.sourceUrl + '\n';
+    body += '   From: ' + ev.emailFrom + '\n\n';
+  });
+
+  body += '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n';
+  if (action === 'approve') {
+    body += 'These events will appear on livabletelluride.org/events within 6 hours\n';
+    body += '(the next content-refresh run).\n\n';
+  } else {
+    body += 'These events were recorded with Status=skipped for the audit trail.\n';
+    body += 'They will NOT appear on the site.\n\n';
+  }
+  body += 'Review or edit the Sheet:\n';
+  body += SpreadsheetApp.getActiveSpreadsheet().getUrl() + '\n';
+
+  MailApp.sendEmail(NOTIFY_EMAIL, subject, body);
+}
+
+function sendDirectReceiptNotification(events) {
   var subject = 'Livable Telluride: ' + events.length + ' new event' + (events.length > 1 ? 's' : '') + ' received';
   var body = 'The following event' + (events.length > 1 ? 's were' : ' was') + ' received via Events@livabletelluride.org and queued for the website:\n\n';
 
@@ -217,16 +352,22 @@ function checkAddedEvents() {
 /**
  * Parse an email into event fields.
  * Handles both structured forwarded emails and free-form text.
+ *
+ * opts.action ('approve' | 'deny') overrides the resulting Sheet Status
+ * and skips the system-sender + event-signal filters (because the user
+ * explicitly chose to forward — that IS the signal).
  */
-function parseEventEmail(msg) {
+function parseEventEmail(msg, opts) {
+  opts = opts || {};
+  var action = opts.action || null;
   var subject = msg.getSubject() || '';
   var body = msg.getPlainBody() || '';
   var from = msg.getFrom() || '';
   var received = msg.getDate();
 
-  // Skip automated / system senders (Google security alerts, bounces, etc.).
-  // These show up unread in events@ and would otherwise be queued as fake events.
-  if (isSystemSender(from)) {
+  // Skip automated / system senders — UNLESS this is an explicit approve/deny
+  // forward, in which case the user has already vouched for the message.
+  if (!action && isSystemSender(from)) {
     Logger.log('  Skipping system sender: ' + from + ' / subject="' + subject + '"');
     return null;
   }
@@ -245,6 +386,14 @@ function parseEventEmail(msg) {
     body = body.replace(/^To:.*$/im, '');
   }
 
+  // The events.html form prefixes the body with "EVENT SUBMISSION" and an
+  // "===" rule; strip those so they don't end up in the parsed description.
+  body = body.replace(/^EVENT SUBMISSION\s*\n=+\s*\n/im, '');
+  // Submitted-by / Organization lines belong on the audit trail, not in
+  // the public description.
+  body = body.replace(/^Submitted by:.*$/im, '');
+  body = body.replace(/^Organization:.*$/im, '');
+
   // Extract fields using common patterns
   var title = extractField(body, subject, 'title') || cleanSubject(subject);
   var date = extractField(body, subject, 'date') || '';
@@ -254,19 +403,28 @@ function parseEventEmail(msg) {
   var description = extractDescription(body) || body.substring(0, 500).trim();
   var sourceUrl = extractUrl(body) || '';
 
-  // Require at least one positive event-like signal before queueing. Without
-  // any of these, the email is almost certainly not an event submission and
-  // shouldn't go on the calendar.
-  var isForward = /^\s*(fwd?|fw)\s*:/i.test(subject);
-  var hasEventKeyword = /\bevent\b|\bfundraiser\b|\bconcert\b|\bworkshop\b|\bmeeting\b|\bworkshop\b|\bopen\s+house\b|\bgala\b|\bbenefit\b/i.test(subject);
-  var hasDateLocOrTime = !!(date || location || time);
-  if (!isForward && !hasEventKeyword && !hasDateLocOrTime) {
-    Logger.log('  Skipping (no event signal): from=' + from + ' subject="' + subject + '"');
-    return null;
+  // Require at least one positive event-like signal before queueing — UNLESS
+  // this is an explicit approve/deny forward. Without the signal AND without
+  // an action, the email is almost certainly not an event submission.
+  if (!action) {
+    var isForward = /^\s*(fwd?|fw)\s*:/i.test(subject);
+    var hasEventKeyword = /\bevent\b|\bfundraiser\b|\bconcert\b|\bworkshop\b|\bmeeting\b|\bworkshop\b|\bopen\s+house\b|\bgala\b|\bbenefit\b/i.test(subject);
+    var hasDateLocOrTime = !!(date || location || time);
+    if (!isForward && !hasEventKeyword && !hasDateLocOrTime) {
+      Logger.log('  Skipping (no event signal): from=' + from + ' subject="' + subject + '"');
+      return null;
+    }
   }
 
+  // Status mapping:
+  //   action === 'approve' → 'new'      (next content-refresh picks it up)
+  //   action === 'deny'    → 'skipped'  (audit trail, never goes live)
+  //   no action            → 'new'      (original direct-to-events@ flow)
+  var status = action === 'deny' ? 'skipped' : 'new';
+
   return {
-    status: 'new',
+    status: status,
+    action: action,  // 'approve' | 'deny' | null — drives notification copy
     title: title,
     date: date,
     endDate: endDate,
