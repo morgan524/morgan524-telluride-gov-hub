@@ -210,7 +210,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <select class="filter-select" id="filter-entity" onchange="switchEntity()">
         <option value="telluride">Town of Telluride</option>
         <option value="tomv">Mountain Village Town Council</option>
-        <option value="drb">MV Design Review Board</option>
+        <option value="drb">Mountain Village Design Review</option>
         <option value="bocc">San Miguel BOCC</option>
         <option value="planning">San Miguel Planning Commission</option>
       </select>
@@ -4735,7 +4735,8 @@ const TOMV_VOTE_ITEMS = [
 const DRB_ALL_MEMBERS = [
   { id:'brown',   name:'Banks Brown',   shortName:'Brown',   title:'Chair' },
   { id:'miller',  name:'Adam Miller',   shortName:'Miller',  title:'Board Member' },
-  { id:'newton',  name:'Liz Newton',    shortName:'Newton',  title:'Board Member' },
+  { id:'newton',  name:'Liz Newton',    shortName:'Newton',  title:'Board Member (Apr 2024+)' },
+  { id:'caton',   name:'Liz Caton',     shortName:'Caton',   title:'Board Member (through Apr 2024)' },
   { id:'eckman',  name:'David Eckman',  shortName:'Eckman',  title:'Board Member' },
   { id:'bennett', name:'Scott Bennett', shortName:'Bennett', title:'Board Member' },
   { id:'kramer',  name:'Ellen Kramer',  shortName:'Kramer',  title:'Board Member' },
@@ -4745,9 +4746,13 @@ const DRB_ALL_MEMBERS = [
 ];
 const DRB_2026 = ['brown','miller','newton','eckman','bennett','kramer','craige','austin','garner'];
 const DRB_2025 = ['brown','miller','newton','eckman','bennett','kramer','craige','austin','garner'];
+const DRB_2024 = ['brown','miller','newton','caton','eckman','bennett','kramer','craige','austin','garner'];
 // Roster identical 2025 → 2026; all 9 members carried over. Reappointment
 // terms started Apr 25, 2024 (Brown, Bennett, Miller, Craige, Austin as 1st alt)
 // plus Newton, Eckman, Kramer, Garner as additional board appointments.
+// 2024 spans a mid-year roster change: Caton held the seat Jan-Apr, Newton
+// took over by May 2; DRB_2024 lists both so the heatmap renders columns
+// for everyone who voted in any 2024 meeting.
 
 const DRB_VOTE_ITEMS = [
   /* entries inserted via scripts/insert-votes.mjs */
@@ -6688,7 +6693,7 @@ function switchEntity() {
   } else if (ent === 'tomv') {
     years = [['', 'All years'], ['2026','2026'], ['2025','2025'], ['2024','2024']];
   } else if (ent === 'drb') {
-    years = [['', 'All years'], ['2026','2026'], ['2025','2025']];
+    years = [['', 'All years'], ['2026','2026'], ['2025','2025'], ['2024','2024']];
   } else {
     years = [['', 'All years'], ['2024','2024']];
   }
@@ -7046,8 +7051,11 @@ function renderDrbHeatmap() {
     ? [{ label:'2026 MV Design Review Board', members:DRB_2026, yearFilter:2026 }]
     : yearSel === '2025'
     ? [{ label:'2025 MV Design Review Board', members:DRB_2025, yearFilter:2025 }]
+    : yearSel === '2024'
+    ? [{ label:'2024 MV Design Review Board', members:DRB_2024, yearFilter:2024 }]
     : [{ label:'2026 MV Design Review Board', members:DRB_2026, yearFilter:2026 },
-       { label:'2025 MV Design Review Board', members:DRB_2025, yearFilter:2025 }];
+       { label:'2025 MV Design Review Board', members:DRB_2025, yearFilter:2025 },
+       { label:'2024 MV Design Review Board', members:DRB_2024, yearFilter:2024 }];
 
   let html = '';
   eras.forEach(era => {

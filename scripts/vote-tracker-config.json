@@ -42,10 +42,16 @@
     "idPrefix": "drb",
     "rosters": [
       {
+        "start": "2024-01-01",
+        "end":   "2024-04-24",
+        "members": ["brown", "miller", "caton", "eckman", "bennett", "kramer", "craige", "austin", "garner"],
+        "_note": "Pre-reappointment 2024 roster: Liz Caton held the seat later taken by Newton. Confirmed across Jan 4 / Feb 1 / Mar 7 / Apr 4 minutes."
+      },
+      {
         "start": "2024-04-25",
         "end":   null,
         "members": ["brown", "miller", "newton", "eckman", "bennett", "kramer", "craige", "austin", "garner"],
-        "_note": "9-member board. Reappointment terms started Apr 25 2024. Roster confirmed stable across Jan 8 / Feb 5 / Mar 5 / Apr 2 2026 meetings."
+        "_note": "9-member board. Reappointment terms started Apr 25 2024. Newton replaced Caton (confirmed at May 2, 2024 meeting). Roster confirmed stable across Jan 8 / Feb 5 / Mar 5 / Apr 2 2026 meetings."
       }
     ],
     "urlTemplate": "https://townofmountainvillage.com/site/assets/files/{ASSET_ID}/{SLUG}.pdf",
