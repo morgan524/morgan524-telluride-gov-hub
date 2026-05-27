@@ -1238,9 +1238,12 @@
         (byDay[day] = byDay[day] || []).push(e);
       });
 
-      const cells = [];
+      // Build cells with a `hasContent` flag so we can drop leading
+      // weeks that are entirely past + empty (the big blank stretches
+      // before today on the current month).
+      const cellData = [];
       for (let i = 0; i < firstDayOfWeek; i++) {
-        cells.push('<div class="cal-cell cal-cell-empty"></div>');
+        cellData.push({ html: '<div class="cal-cell cal-cell-empty"></div>', hasContent: false });
       }
       for (let day = 1; day <= daysInMonth; day++) {
         const isToday = today.getFullYear() === year && today.getMonth() === month && today.getDate() === day;
@@ -1253,16 +1256,37 @@
         const chips = evs.map(e => {
           const safeTitle = (e.title || '').replace(/"/g, '&quot;');
           const fullLabel = (e.time ? e.time + ' — ' : '') + e.title + (e.location ? ' @ ' + e.location : '');
-          const timeShort = e.time ? e.time.split(/[–-]/)[0].trim() : '';
           const href = (e.href && e.href !== '#') ? e.href : null;
-          const inner = (timeShort ? `<span class="cal-event-time">${timeShort}</span>` : '') + safeTitle;
           return href
-            ? `<a class="cal-event" href="${href}" target="_blank" rel="noopener" title="${fullLabel.replace(/"/g, '&quot;')}">${inner}</a>`
-            : `<span class="cal-event" title="${fullLabel.replace(/"/g, '&quot;')}">${inner}</span>`;
+            ? `<a class="cal-event" href="${href}" target="_blank" rel="noopener" title="${fullLabel.replace(/"/g, '&quot;')}">${safeTitle}</a>`
+            : `<span class="cal-event" title="${fullLabel.replace(/"/g, '&quot;')}">${safeTitle}</span>`;
         }).join('');
         const moreLine = overflow > 0 ? `<div class="cal-more">+${overflow} more</div>` : '';
-        cells.push(`<div class="${cls.join(' ')}"><div class="cal-day-num">${day}</div>${chips}${moreLine}</div>`);
+        // hasContent = today, future, or has events. Past-empty days
+        // still render inside a kept week (for column alignment) but
+        // don't on their own qualify a week to be shown.
+        const hasContent = isToday || !isPast || evs.length > 0;
+        cellData.push({
+          html: `<div class="${cls.join(' ')}"><div class="cal-day-num">${day}</div>${chips}${moreLine}</div>`,
+          hasContent
+        });
       }
+
+      // Group cells into week rows of 7.
+      const weeks = [];
+      for (let i = 0; i < cellData.length; i += 7) {
+        weeks.push(cellData.slice(i, i + 7));
+      }
+
+      // Drop leading weeks where no day has content (entirely past + empty).
+      while (weeks.length > 0 && !weeks[0].some(c => c.hasContent)) {
+        weeks.shift();
+      }
+
+      // If every week was dropped, this month has nothing to show.
+      if (weeks.length === 0) return '';
+
+      const cells = weeks.flatMap(week => week.map(c => c.html));
 
       return `
         <div class="cal-month">
