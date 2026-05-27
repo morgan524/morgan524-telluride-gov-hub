@@ -639,8 +639,22 @@
 
     <aside class="sidebar">
 
-      <!-- Support / Donate card -->
-      <a class="support-card" href="#donate" aria-label="Learn how to support Livable Telluride">
+      <!-- Legal Notices sidebar card -->
+      <div class="sidebar-placeholder" style="border:1px solid #ddd;border-radius:14px;background:#fff;padding:20px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <img src="/logo/Legal Notices.png" alt="Legal Notices" style="width:100%;max-width:200px;height:auto;margin:0 auto 14px;display:block;object-fit:contain;">
+        <p style="font-size:0.85rem;color:#666;margin:0 0 14px;line-height:1.5;">Public notices, RFPs, and government filings required by law to be publicly posted.</p>
+        <a href="/legal-notices.html" style="display:block;background:#21443c;color:#fff;text-decoration:none;padding:10px 16px;border-radius:999px;font-weight:700;font-size:0.9rem;">View Legal Notices →</a>
+      </div>
+
+      <!-- Housing sidebar card -->
+      <div class="sidebar-placeholder" style="border:1px solid #ddd;border-radius:14px;background:#fff;padding:20px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);margin-top:18px;">
+        <img src="/logo/Housing Search.png" alt="Housing" style="width:100%;max-width:200px;height:auto;margin:0 auto 14px;display:block;object-fit:contain;">
+        <p style="font-size:0.85rem;color:#666;margin:0 0 14px;line-height:1.5;">Local rentals, deed-restricted opportunities, lottery listings, and regional housing programs.</p>
+        <a href="/housing.html" style="display:block;background:#21443c;color:#fff;text-decoration:none;padding:10px 16px;border-radius:999px;font-weight:700;font-size:0.9rem;">View Housing →</a>
+      </div>
+
+      <!-- Support / Donate card — sits at the bottom of the sidebar -->
+      <a class="support-card" href="#donate" aria-label="Learn how to support Livable Telluride" style="margin-top:18px;">
         <div class="support-icon" aria-hidden="true">
           <!-- 'group of people' icon (Lucide-style users-2) -->
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -672,20 +686,6 @@
           </svg>
         </div>
       </a>
-
-      <!-- Legal Notices sidebar card -->
-      <div class="sidebar-placeholder" style="border:1px solid #ddd;border-radius:14px;background:#fff;padding:20px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
-        <img src="/logo/Legal Notices.png" alt="Legal Notices" style="width:100%;max-width:200px;height:auto;margin:0 auto 14px;display:block;object-fit:contain;">
-        <p style="font-size:0.85rem;color:#666;margin:0 0 14px;line-height:1.5;">Public notices, RFPs, and government filings required by law to be publicly posted.</p>
-        <a href="/legal-notices.html" style="display:block;background:#21443c;color:#fff;text-decoration:none;padding:10px 16px;border-radius:999px;font-weight:700;font-size:0.9rem;">View Legal Notices →</a>
-      </div>
-
-      <!-- Housing sidebar card -->
-      <div class="sidebar-placeholder" style="border:1px solid #ddd;border-radius:14px;background:#fff;padding:20px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);margin-top:18px;">
-        <img src="/logo/Housing Search.png" alt="Housing" style="width:100%;max-width:200px;height:auto;margin:0 auto 14px;display:block;object-fit:contain;">
-        <p style="font-size:0.85rem;color:#666;margin:0 0 14px;line-height:1.5;">Local rentals, deed-restricted opportunities, lottery listings, and regional housing programs.</p>
-        <a href="/housing.html" style="display:block;background:#21443c;color:#fff;text-decoration:none;padding:10px 16px;border-radius:999px;font-weight:700;font-size:0.9rem;">View Housing →</a>
-      </div>
     </aside>
   </main>
 
@@ -780,8 +780,9 @@
     function featuredHtml(a) {
       const src = imgFor(a);
       const isKotoFallback = !a.img && a.sourceKey === 'koto';
+      const isSmbFallback = !a.img && a.sourceKey === 'smb';
       const isLetter = isLetterToEditor(a);
-      const imgClass = isKotoFallback || isLetter ? 'class="koto-fallback"' : '';
+      const imgClass = isKotoFallback || isSmbFallback || isLetter ? 'class="koto-fallback"' : '';
       const onload = imgClass ? '' : 'onload="handlePortrait(this)"';
       const imgEl = src
         ? `<img src="${src}" alt="" loading="lazy" ${imgClass} ${onload} onerror="this.style.background='#ddd'">`
@@ -811,10 +812,12 @@
     function cardHtml(a) {
       const src = imgFor(a);
       const isKotoFallback = !a.img && a.sourceKey === 'koto';
+      const isSmbFallback = !a.img && a.sourceKey === 'smb';
       const isLetter = isLetterToEditor(a);
-      // Use the koto-fallback `object-fit:contain` styling for the letter
-      // icon too so it doesn't get cropped by the 4:3 cover crop.
-      const imgClass = isKotoFallback || isLetter ? 'class="koto-fallback"' : '';
+      // Use the koto-fallback `object-fit:contain` styling for letter
+      // icons and the SMB masthead fallback too so they aren't cropped
+      // by the 4:3 cover crop.
+      const imgClass = isKotoFallback || isSmbFallback || isLetter ? 'class="koto-fallback"' : '';
       const onload = imgClass ? '' : 'onload="handlePortrait(this)"';
       const imgEl = src
         ? `<img src="${src}" alt="" loading="lazy" ${imgClass} ${onload} onerror="this.style.opacity=0.3">`
