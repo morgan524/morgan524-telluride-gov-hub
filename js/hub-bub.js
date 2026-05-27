@@ -623,7 +623,34 @@
       setTimeout(hbLoadPosts, 1500);
     }).catch(function(err) {
       console.error('Hub-Bub post error:', err);
-      alert('Could not publish your post. Please try again.');
+      // Surface the real reason (Firebase Storage rules denial, CORS, quota,
+      // network, etc.) so the user can act on it instead of just retrying.
+      // Common code mappings:
+      //   storage/unauthorized       → Firebase Storage rules deny this path
+      //   storage/quota-exceeded     → bucket is full
+      //   storage/retry-limit-exceeded → CORS / network / slow upload
+      //   permission-denied (Firestore) → Firestore rules don't allow this write
+      var msg = 'Could not publish your post.';
+      if (err && err.code) {
+        if (/unauthorized/i.test(err.code)) {
+          msg += '\n\nThe photo upload was rejected by storage permissions. '
+              +  'If you can post WITHOUT a photo, this is the issue.';
+        } else if (/quota|exceeded/i.test(err.code)) {
+          msg += '\n\nStorage quota exceeded. Try a smaller photo, or notify the admin.';
+        } else if (/retry-limit|network|timeout/i.test(err.code)) {
+          msg += '\n\nUpload failed — could be a network issue or the photo is very large. '
+              +  'Try again, or try a smaller photo.';
+        } else if (/permission-denied/i.test(err.code)) {
+          msg += '\n\nYour account isn\'t allowed to post. Verify your email is confirmed, then retry.';
+        } else {
+          msg += '\n\n(' + err.code + ') ' + (err.message || '');
+        }
+      } else if (err && err.message) {
+        msg += '\n\n' + err.message;
+      } else {
+        msg += ' Please try again.';
+      }
+      alert(msg);
       postBtn.textContent = 'Post to Hub-Bub';
       postBtn.disabled = false;
     });

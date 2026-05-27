@@ -1,0 +1,53 @@
+rules_version = '2';
+
+// ═══════════════════════════════════════════════════════════════════
+// Firebase Storage security rules for Livable Telluride / Hub-Bub
+// ═══════════════════════════════════════════════════════════════════
+//
+// Hub-Bub uses Firebase Storage for two upload paths from js/hub-bub.js:
+//
+//   1. Featured photo on a post:
+//        hub-bub/{uid}/photo_{timestamp}_{filename}
+//
+//   2. File attachments on a post:
+//        hub-bub/{uid}/{timestamp}_{filename}
+//
+// In both cases the {uid} is the Firebase Auth uid of the post author.
+// We let any signed-in user write under their OWN uid path, but block
+// writes under other users' uid paths. Reads are public so post images
+// render without an auth challenge.
+//
+// Size cap: 10 MB per upload — keeps the bucket reasonable on the
+// free Spark tier (5 GB total) and discourages drive-by abuse. Bump
+// up to 25 MB if users complain about high-res photos getting
+// rejected.
+//
+// Admin (info@livabletelluride.org) gets full read/write — mirrors
+// the Firestore admin check in firestore.rules.
+//
+// Deploy with: firebase deploy --only storage
+// Or paste contents into: Firebase Console → Storage → Rules → Publish
+
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function isAdmin() {
+      return request.auth != null && request.auth.token.email == 'info@livabletelluride.org';
+    }
+
+    // Hub-Bub user uploads — photo + attachments on posts.
+    match /hub-bub/{uid}/{filename=**} {
+      // Public read so post images render for everyone
+      allow read: if true;
+      // Write: signed-in, owns the uid path, size cap, optional content-type
+      allow write: if request.auth != null
+                && (request.auth.uid == uid || isAdmin())
+                && request.resource.size < 10 * 1024 * 1024;
+    }
+
+    // Default deny for any other path
+    match /{allPaths=**} {
+      allow read, write: if isAdmin();
+    }
+  }
+}
