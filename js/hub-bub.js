@@ -1080,44 +1080,117 @@
     var textarea = document.getElementById('hb-reply-text-' + postId);
     var body = textarea.value.trim();
     if (!body) return;
-    // Tone check on reply too
+
+    // Tone check — if flagged, prompt with a real modal (custom buttons,
+    // not native confirm() which can't be re-labeled). Resolves to:
+    //   'accept'    → use the suggested rephrase
+    //   'original'  → post the user's exact text
+    //   'cancel'    → abort, return to the textarea
     var tone = hbAnalyzeTone(body);
+    var bodyPromise;
     if (tone && tone.flagged) {
-      if (!confirm('This reply may come across as a personal attack. Suggested alternative:\n\n"' + (TONE_SUGGESTIONS[tone.category] || TONE_SUGGESTIONS['general']) + '"\n\nPost as written anyway?')) {
-        return;
-      }
-    }
-    var btn = textarea.nextElementSibling;
-    btn.disabled = true;
-    btn.textContent = '...';
-    db.collection('posts').doc(postId).collection('replies').add({
-      // See note in createPost — rules require authorUid; authorId kept for
-      // any reader that still looks for it.
-      authorUid: hbUser.uid,
-      authorId: hbUser.uid,
-      authorName: hbResolveName(hbUser),
-      body: body,
-      createdAt: firebase.firestore.FieldValue.serverTimestamp()
-    }).then(function() {
-      // Increment reply count on parent post
-      return db.collection('posts').doc(postId).update({
-        replyCount: firebase.firestore.FieldValue.increment(1)
+      var suggestion = TONE_SUGGESTIONS[tone.category] || TONE_SUGGESTIONS['general'];
+      bodyPromise = hbShowReplyToneModal(suggestion).then(function(choice) {
+        if (choice === 'cancel') return null;       // user dismissed
+        if (choice === 'accept') {
+          textarea.value = suggestion;
+          return suggestion;
+        }
+        return body;                                 // 'original'
       });
-    }).then(function() {
-      textarea.value = '';
-      btn.disabled = false;
-      btn.textContent = 'Reply';
-      hbLoadReplies(postId, document.getElementById('hb-replies-' + postId));
-      // Update local cache
-      var post = hbPosts.find(function(p) { return p.id === postId; });
-      if (post) post.replyCount = (post.replyCount || 0) + 1;
-      hbRenderTrending();
-    }).catch(function(err) {
-      console.error('Reply error:', err);
-      btn.disabled = false;
-      btn.textContent = 'Reply';
+    } else {
+      bodyPromise = Promise.resolve(body);
+    }
+
+    bodyPromise.then(function(finalBody) {
+      if (!finalBody) return;
+      var btn = textarea.nextElementSibling;
+      btn.disabled = true;
+      btn.textContent = '...';
+      db.collection('posts').doc(postId).collection('replies').add({
+        // See note in createPost — rules require authorUid; authorId kept for
+        // any reader that still looks for it.
+        authorUid: hbUser.uid,
+        authorId: hbUser.uid,
+        authorName: hbResolveName(hbUser),
+        body: finalBody,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+      }).then(function() {
+        // Increment reply count on parent post. Allowed by firestore.rules
+        // Case B (counter allow-list) for any verified user.
+        return db.collection('posts').doc(postId).update({
+          replyCount: firebase.firestore.FieldValue.increment(1)
+        });
+      }).then(function() {
+        textarea.value = '';
+        btn.disabled = false;
+        btn.textContent = 'Reply';
+        hbLoadReplies(postId, document.getElementById('hb-replies-' + postId));
+        // Update local cache
+        var post = hbPosts.find(function(p) { return p.id === postId; });
+        if (post) post.replyCount = (post.replyCount || 0) + 1;
+        // Refresh the counter span in the rendered card. Without this, the
+        // toggle button keeps showing the stale count until a full page reload.
+        var card = document.querySelector('.hb-post[data-post-id="' + postId + '"]');
+        var counterSpan = card && card.querySelector('.hb-reply-toggle span');
+        if (counterSpan) {
+          counterSpan.textContent = post
+            ? post.replyCount
+            : ((parseInt(counterSpan.textContent, 10) || 0) + 1);
+        }
+        hbRenderTrending();
+      }).catch(function(err) {
+        console.error('Reply error:', err);
+        // Surface real reason so the user knows what to fix (e.g.
+        // permission-denied when their account isn't verified).
+        var msg = 'Could not post your reply.';
+        if (err && err.code) msg += ' (' + err.code + ')';
+        if (err && err.message) msg += '\n\n' + err.message;
+        alert(msg);
+        btn.disabled = false;
+        btn.textContent = 'Reply';
+      });
     });
   };
+
+  /* Tone-nudge modal for replies. Promise-based so the caller can
+     act on the user's choice without callback gymnastics. Buttons:
+       [Post Original]    → resolve('original')
+       [Accept Revision]  → resolve('accept')
+       [Backdrop click / Escape] → resolve('cancel')  */
+  function hbShowReplyToneModal(suggestion) {
+    return new Promise(function(resolve) {
+      var modal = document.getElementById('hbReplyToneModal');
+      if (!modal) {
+        // Defensive: modal HTML missing from page → fall back to native
+        // confirm so we never silently swallow the suggestion.
+        var ok = confirm('This reply may come across as a personal attack.\n\nSuggested alternative:\n"' + suggestion + '"\n\nClick OK to Accept Revision, Cancel to Post Original.');
+        resolve(ok ? 'accept' : 'original');
+        return;
+      }
+      document.getElementById('hbReplyToneSuggested').textContent = suggestion;
+      modal.style.display = 'flex';
+
+      function settle(choice) {
+        modal.style.display = 'none';
+        acceptBtn.onclick = null;
+        origBtn.onclick = null;
+        modal.removeEventListener('click', backdrop);
+        document.removeEventListener('keydown', escHandler);
+        resolve(choice);
+      }
+      function backdrop(e) { if (e.target === modal) settle('cancel'); }
+      function escHandler(e) { if (e.key === 'Escape') settle('cancel'); }
+
+      var acceptBtn = document.getElementById('hbReplyToneAccept');
+      var origBtn   = document.getElementById('hbReplyToneOriginal');
+      acceptBtn.onclick = function() { settle('accept'); };
+      origBtn.onclick   = function() { settle('original'); };
+      modal.addEventListener('click', backdrop);
+      document.addEventListener('keydown', escHandler);
+    });
+  }
+  window.hbShowReplyToneModal = hbShowReplyToneModal;
   // ═══════════════════════════════
   // SORT
   // ═══════════════════════════════
