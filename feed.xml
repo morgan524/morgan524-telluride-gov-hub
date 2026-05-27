@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 May 2026 20:06:13 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 02:53:35 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Board of County Commissioners Meeting — 2026-06-03</title>
@@ -117,6 +117,16 @@ No specific agenda items available]]></description>
 The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>Vaulting to success — and fun</title>
+      <link>https://www.telluridenews.com/sports/article_d89d2da5-9ccd-49c8-bae9-66b744d58c4f.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/sports/article_d89d2da5-9ccd-49c8-bae9-66b744d58c4f.html</guid>
+      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/34/434e7b74-b0b7-41c3-ba73-05a9b9fa0810/6a1535cb82c0a.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Local gymnasts had a strong showing at state and regional meets this year. Several Telluride Gymnastics team members placed in top 10 finishes, with highlights including Abigail Mann taking third on vault at state and first at regionals, and multiple Gold-level athletes earning fifth-place all-around titles.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/34/434e7b74-b0b7-41c3-ba73-05a9b9fa0810/6a1535cb82c0a.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
     </item>
     <item>
       <title>[Meeting] Board of County Commissioners Special Meeting in Telluride 2:00 pm - 2:45 pm — 2026-05-27</title>
@@ -402,16 +412,6 @@ The commissioners will handle two septic system variances in Ophir, consider end
       <description><![CDATA[A bright yellow poetry box on the side of the road in San Miguel Canyon offers people driving to and fro a place to stop, write, and share poems. Created by local poet Rosemerry Wahtola Trommer, the poetry box is an opportunity to pause, reflect, and embrace a sense of community.]]></description>
       <category>KOTO Community Radio</category>
       <category>infrastructure</category>
-    </item>
-    <item>
-      <title>Colorado Democrats censure governor for conspiracy theorist sentence commutation</title>
-      <link>https://www.telluridenews.com/news/state/article_f4202a41-f9f2-562d-8d97-2c1f2db524f4.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_f4202a41-f9f2-562d-8d97-2c1f2db524f4.html</guid>
-      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/1e/b1ec7de1-b5e3-5e4e-95b3-697a44fdd763/6a0f5f485e3db.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Governor Polis commuted former Mesa County Clerk Tina Peters' 9-year sentence for copying election computer systems, reducing her prison time to end June 1st. The Colorado Democratic Party censured Polis after 700 members petitioned against the decision, calling it a dangerous precedent.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/1e/b1ec7de1-b5e3-5e4e-95b3-697a44fdd763/6a0f5f485e3db.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>government</category>
     </item>
   </channel>
 </rss>

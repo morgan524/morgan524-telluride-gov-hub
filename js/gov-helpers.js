@@ -177,6 +177,18 @@ const MANUAL_SUMMARIES = {
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Vaulting to success — and fun",
+    source: "Telluride Times",
+    date: "May 26, 2026",
+    firstSeen: "2026-05-27",
+    newsTopic: "community",
+    copy: "Local gymnasts had a strong showing at state and regional meets this year. Several Telluride Gymnastics team members placed in top 10 finishes, with highlights including Abigail Mann taking third on vault at state and first at regionals, and multiple Gold-level athletes earning fifth-place all-around titles.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_d89d2da5-9ccd-49c8-bae9-66b744d58c4f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/34/434e7b74-b0b7-41c3-ba73-05a9b9fa0810/6a1535cb82c0a.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Gabriel Landeskog uses in-skate sensors, AI-driven movement platform to manage his knee and workload",
     source: "Telluride Times",
     date: "May 26, 2026",
@@ -873,18 +885,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Aspen girls again best Telluride",
-    source: "Telluride Times",
-    date: "May 13, 2026",
-    firstSeen: "2026-05-14",
-    newsTopic: "community",
-    copy: "Aspen defeated Telluride 12-7 in girls lacrosse after a much closer game than their earlier 24-12 matchup this season. The contest was tied 7-7 late in the game before Aspen pulled away with key goals from freshman Chloe Collins and assists from senior Luca Nettleton.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_ae718dcc-b13c-4dc1-afb9-d6340e47869c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/78/678c1443-599c-455e-bc2a-e7fea24dfe43/6a035823e4c42.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Highway 62 between Ridgway and Placerville re-opens",
     source: "Telluride Times",
     date: "May 22, 2026",
@@ -894,42 +894,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_042cbb30-7003-4b76-8bc3-a40b5a124367.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bf/abfd96db-450e-40ba-8a54-74fb95a45581/6a1082ef543f9.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Smoking brain (it’s a good thing)",
-    source: "Telluride Times",
-    date: "May 13, 2026",
-    firstSeen: "2026-05-14",
-    newsTopic: "community",
-    copy: "A local writer reflects on the concept of \"smoking brain\" - that uncomfortable feeling when you're pushed to your mental limits, like struggling with a difficult math problem or learning a new language. Drawing on neuroscientist Huberman's research, she explains how this frustration actually triggers brain chemicals that promote learning and growth, challenging the old belief that adult brains can't change.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_933732fe-e0b2-4907-98ba-429519044ca5.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/8c/b8c2d082-d65f-4b07-a422-fff4ca9bf321/6a048e73b6318.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "US overdose deaths fell again in 2025, but some worry about policy and drug supply changes",
-    source: "Telluride Times",
-    date: "May 13, 2026",
-    firstSeen: "2026-05-13",
-    newsTopic: "community",
-    copy: "US overdose deaths dropped again in 2025 across most drug types and states, though Arizona, Colorado and New Mexico saw increases of 10% or more. While researchers are cautiously optimistic, they warn the drug supply keeps evolving with new potent substances like cychlorphine, and recent federal cuts to harm reduction programs could reverse progress.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_66099b39-b1b8-5596-bab2-43d492ff274a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/7e/f7eaaa55-d2df-5520-b082-970ac4c7d39f/6a048678a0970.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Move to acquire Wilkin Court unit raises questions",
-    source: "Telluride Times",
-    date: "May 13, 2026",
-    firstSeen: "2026-05-13",
-    newsTopic: "housing",
-    copy: "The town wants to purchase a Wilkin Court deed-restricted unit to convert it from Tier 3 to Tier 1, saying this simplifies the affordable housing program. But residents are challenging whether the town actually has legal authority to buy the unit against the owner's wishes, with one attorney arguing the deed restriction gives owners the right to choose their buyer.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_a8fa1aa6-0996-404d-b96d-28b33668f431.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/c4/8c400c14-efca-45da-b5f0-72721a6e54fc/6a04964540393.image.jpg",
     imgHiRes: true
   },
   {
@@ -1009,7 +973,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "DOLA Economic Vitality Community Session on May 27, 2026",
     source: "Town of Ridgway",
-    date: "May 26, 2026",
+    date: "May 27, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1020,7 +984,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "CO Main Street Architect Visits on May 27-28, 2026",
     source: "Town of Ridgway",
-    date: "May 26, 2026",
+    date: "May 27, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1042,7 +1006,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "May 26, 2026",
+    date: "May 27, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1614,17 +1578,6 @@ const COMMUNITY_EVENTS = [
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "School Supper Club",
-    link: "https://koto.org/event/school-supper-club/",
-    description: "The restaurant community is coming together for a second year to support our public schools! Different restaurants have promotions to encourage participation and build community!",
-    pubDate: "2026-05-25T00:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/2026SSCSavetheDate.png"
-  },
-  {
     title: "Mahjongg for Independent Players",
     link: "https://koto.org/event/mahjongg-for-independent-players-3/",
     description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you'd like to join so we can make sure we have enough tables set up for everyone!",
@@ -1845,6 +1798,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Town Talk: The Science of Connection",
+    link: "https://koto.org/event/town-talk-the-science-of-connection/",
+    description: "What does science have to say about the bonds we form with other animals — and why do those bonds matter so deeply for our health? In this talk, Dr. Kevin Morris, American Humane endowed chair and executive director of the University of Denver’s Institute for Human-Animal Connection, explores the emerging research behind human-animal relationships and what it means for individual and community well-being. Drawing on a remarkable career that spans molecular biology, cancer research, and social work, Dr. Morris bridges disciplines to illuminate how our lives with other animals are not just emotionally meaningful, but biologically and socially profound. His work challenges us to think about health as something shared across species — and to consider what a more equitable, science-informed relationship with the animal world could look like for all of us. This event is free and open to the public but RSVP is required at https://form.jotform.com/ 261447761087060",
+    pubDate: "2026-06-05T17:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Innovation Center",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/0605-science-connect_invite-1.jpg"
+  },
+  {
     title: "Lone Cone Librarys Annual Community Yard Sale & Bbq",
     link: "https://koto.org/event/lone-cone-librarys-annual-community-yard-sale-bbq/",
     description: "Our favorite spring tradition is back – the Lone Cone Library Community Yard Sale! Come browse treasures, support your neighbors, and enjoy a relaxed day on the lawn. Interested in being a vendor? Spaces are available for $10. If you’d like to reserve a spot, just fill out our quick sign‑up form at the front desk or below. Vendors are responsible for set up and clean-up of their items. Any items left behind will be taken care of in a respectful way (Donating, discarding, etc). 🍔 Community BBQ • 12–2pm Swing by for lunch while you shop. $10 per plate, includes a hamburger, a side, a drink and a cookie. Have items you no longer need? You can donate gently‑used items to the library ahead of the sale. We’ll add them to our tables, and all proceeds from donated items go directly toward supporting library programs.",
@@ -1909,6 +1873,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Conference Center, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Town Talk: Can we change the weather (and do we really want to?)",
+    link: "https://koto.org/event/town-talk-can-we-change-the-weather-and-do-we-really-want-to/",
+    description: "This town talk will be presented by Derek Posselt, Principal Scientist, NASA Jet Propulsion Laboratory. If you live on planet Earth, you have had to worry about the weather at some point. Most of us have heard some version of the expression: “If you don’t like the weather, wait 5 minutes, and it will change.” Many of us wish we had the ability to do something about it. This is not a new impulse. Humans have been trying to change the weather for over a century. Posselt will review the ways people have tried to modify the weather, what has worked (and what hasn’t), and whether it is, in fact, a good idea to try in the first place.",
+    pubDate: "2026-06-09T18:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Innovation Center",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A.png"
   },
   {
     title: "Sewing 101 with Melissa",
@@ -2043,6 +2018,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Town Talk: Good Vibrations",
+    link: "https://koto.org/event/town-talk-good-vibrations/",
+    description: "This town talk will be presented by Matthias Heyden, Arizona State University. Water is far more than a refreshing drink — its unique molecular properties make life possible. By forming a dynamic network of weak chemical bonds, water acts as both a selective solvent and a kind of molecular lubricant, driving the assembly of cells and keeping the tiny protein machines inside them flexible and in constant motion. Understanding the role water plays in the generation of these vibrations is one of the great frontiers of modern science, with real-world implications for greener industrial chemistry and smarter, safer drug design.",
+    pubDate: "2026-06-16T18:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Innovation Center",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A-1.png"
+  },
+  {
     title: "Pilates for All Bodies with Laura",
     link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-06-18/",
     description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
@@ -2118,28 +2104,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
-  },
-  {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-23/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-06-23T09:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride Science Town Talks",
-    link: "https://koto.org/event/telluride-science-town-talks/2026-06-23/",
-    description: "Big science. Small town. Every Tuesday from June 2- August 11, Telluride Science invites the public to sit down with some of the world’s most brilliant researchers for a conversation that might just change how you see the world. Town Talks cover everything from quantum computing and climate solutions to the latest in medicine and energy — accessible, thought-provoking, and completely free. Please note, there is no Town Talk on July 7.",
-    pubDate: "2026-06-23T18:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Conference Center, Mountain Village",
-    imageUrl: ""
   }
 ];
 
@@ -2167,6 +2131,17 @@ const WILKINSON_EVENTS = [
     imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1761421573.png"
   },
   {
+    title: "CANCELLED Women&#039;s Empowerment Group",
+    link: "https://telluridelibrary.libcal.com/event/16270083?hs=a",
+    description: "5:30 PM – 7:00 PM · Join Kaity Swick and Sally Harris Porter with Collaborative Trauma Solutions in a women's empowerment group focused on fostering connections with like-minded women and developing deeper connections with yourselves and each other. We will incorporate somatic practices, mindfulness exercises and practical tools rooted in mind-body awareness. This will be held in a group setting and will be a trauma-informed and non-judgmental space created to strengthen community and provide a safe space to express yourself. Kaity and Sally will guide the group with relevant topics and supportive tools, so all you have to do is show up with an open mind. Please sign up here if you are interested: https://forms.gle/ RLxaexLJar4Vpnhp7 Kaity Swick, LPCC - Kaity works with children and adults as a Mental Health Counselor and supports the community as an Early Childhood Mental Health Consultant. …",
+    pubDate: "2026-05-26T17:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Magazine Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_23_14_44_28.jpg"
+  },
+  {
     title: "Screening of Skateboard",
     link: "https://telluridelibrary.libcal.com/event/16560177?hs=a",
     description: "5:30 PM – 7:00 PM · Skateboard (1978, PG, 97 min.) was the first feature film to depict the height of the 70s skateboard craze. Many refer to it as the Bad News Bears of the sport. It's star studded cast includes Alan Garfield , 70s teen idol Leif Garrett , skateboarding legend Tony Alva , and iconic female freestyler and member of the Skateboarding Hall of Fame Ellen O'Neal . It&#39;s also the first film Telluride local George Gage ever made! (George is also the founder of the legendary Billy Ball soft ball team .) This screening is free and open to the public, but a hat will be passed for donations to a fund to provide scholarships (or is is skaterships?) for kids who want to attend Telluride Skateboard Camp and could use a little financial help. …",
@@ -2176,17 +2151,6 @@ const WILKINSON_EVENTS = [
     category: "Library Event",
     location: "Program Room",
     imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_28_08_48_32.webp"
-  },
-  {
-    title: "Women&#039;s Empowerment Group",
-    link: "https://telluridelibrary.libcal.com/event/16270083?hs=a",
-    description: "5:30 PM – 7:00 PM · Join Kaity Swick and Sally Harris Porter with Collaborative Trauma Solutions in a women's empowerment group focused on fostering connections with like-minded women and developing deeper connections with yourselves and each other. We will incorporate somatic practices, mindfulness exercises and practical tools rooted in mind-body awareness. This will be held in a group setting and will be a trauma-informed and non-judgmental space created to strengthen community and provide a safe space to express yourself. Kaity and Sally will guide the group with relevant topics and supportive tools, so all you have to do is show up with an open mind. Please sign up here if you are interested: https://forms.gle/ RLxaexLJar4Vpnhp7 Kaity Swick, LPCC - Kaity works with children and adults as a Mental Health Counselor and supports the community as an Early Childhood Mental Health Consultant. …",
-    pubDate: "2026-05-26T17:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_23_14_44_28.jpg"
   }
 ];
 
@@ -2521,17 +2485,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52886186007930/huge/bfbbb0ceaf2c0b102794d880373c99a34a6c541b.jpg"
   },
   {
-    title: "Ouray County Baseball - 11u and 13u Baseball vs. Crested Butte",
-    link: "https://events.ourayridgwayevents.com/event/ouray-county-baseball-11u-and-13u-baseball-vs-crested-butte",
-    description: "Ouray County Baseball will be hosting Crested Butte on Saturday, May 30th for a triple-header of baseball games. Games should start around 10am, 12pm, and 2pm. Concessions will be available all day in the Pavilion. Come down and support our youth baseball kids!",
-    pubDate: "2026-05-30T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52118491920073/huge/3dbe7337a4e4a30f8e58354941900aecdbdcea60.jpg"
-  },
-  {
     title: "Ridgway Railroad Museum FREE Train Rides",
     link: "https://www.ridgwayrailroadmuseum.org/",
     description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
@@ -2552,6 +2505,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ute Indian Museum",
     imageUrl: "https://localist-images.azureedge.net/photos/52957925886030/huge/5ff9950ecfead1ac4b649b9f36306fddef0b157f.jpg"
+  },
+  {
+    title: "Ouray County Baseball - 11u and 13u Baseball vs. Crested Butte",
+    link: "https://events.ourayridgwayevents.com/event/ouray-county-baseball-11u-and-13u-baseball-vs-crested-butte",
+    description: "Ouray County Baseball will be hosting Crested Butte on Saturday, May 30th for a triple-header of baseball games. Games should start around 11am, 1pm, and 3pm. Concessions will be available all day in the Pavilion. Come down and support our youth baseball kids!",
+    pubDate: "2026-05-30T17:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52118491920073/huge/c7a7be70cc5e959127954f6aa1421cfb638dcbb3.jpg"
   },
   {
     title: "WOWSERS",
@@ -2961,6 +2925,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52992080608980/huge/8c22fb5996a75e65ccc502afcc04ec5d3f26df04.jpg"
   },
   {
+    title: "First Friday - Opening Reception for Todd Mayfield's \"Southwestern Impressionism\"",
+    link: "https://sherbino.org/event/southwestern-impressionism-todd-mayfield-ridgway/",
+    description: "June 5 | 5:00–7:00 PM | 610 Arts Collective | Free The 610 Arts Collective is pleased to present Southwestern Impressionism, a vibrant June exhibition featuring the work of Ouray artist Todd Mayfield. The exhibit will be on view June 2–26, 2026, at the 610 Arts Collective in Ridgway, Colorado. Drawing inspiration from the color, energy, and spirit of the American Southwest, Mayfield’s paintings are bold, expressive, and deeply rooted in a sense of place. Working primarily in acrylics, his pieces blend vivid palettes, movement, texture, and striking composition to create works that feel both contemporary and timeless. From powerful portraiture to richly layered abstract and figurative forms, Southwestern Impressionism celebrates the beauty, culture, and emotional landscape of the West. Please join us for an Artist Reception on Friday, June 5th, where guests can enjoy refreshments, meet Todd Mayfield, and learn more about the creative process behind the work. …",
+    pubDate: "2026-06-05T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52995996265018/huge/36e8fc7211df0a9f45d2eade27a757aa4f475c6a.jpg"
+  },
+  {
     title: "First Friday Art Walk",
     link: "www.ridgwayfuse.org/firstfridays ",
     description: "Discover new work, celebrate openings and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits and special programming — perfect for art lovers and casual browsers alike. NEW! 🎨🛍️ Shop local. Win local. Celebrate local. 🎶🍷 Starting this June, your First Friday stroll through Ridgway could score you a $100 gift card to your favorite local business. 👀 Here’s how it works: ✨ Shop during First Friday ✨ Text your receipts from participating businesses ✨ Submit up to 3 receipts each month ✨ Two winners drawn monthly! Every receipt = another chance to win while supporting the galleries, shops, restaurants, artists, makers, and small businesses that make Ridgway feel like Ridgway. 📸 Text receipts to: (970) 316-3197 —or drop them off at Town Hall within 48 hours. …",
@@ -3134,7 +3109,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Silvershield Trailhead",
-    imageUrl: "https://localist-images.azureedge.net/photos/52993254837385/huge/48f148e0834d16e5b6071e1a1b7a70ed90282727.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/52993254837385/huge/4f776574a23d4fa60707a34a824293cc3de18e38.jpg"
   },
   {
     title: "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
@@ -3267,17 +3242,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52886546383646/huge/a127886b72fb3a600be995c26a811e7c6fba5849.jpg"
-  },
-  {
-    title: "Ouray Economic Development Committee",
-    link: "https://events.ourayridgwayevents.com/event/ouray-economic-development-committee",
-    description: "The Ouray Economic Development Committee (OEDC) works as the liaison between the City and the local business community. This includes creating and implementing an Economic Development Plan and economic development incentives to best serve the business community and to align with programs that induce private investment enterprises and commerce. The committee also explores regional economic development efforts with the Town of Ridgway and Ouray County as well as is tasked with developing a Business Expansion and Retention (BEAR) program, participating in policy discussions and revisions to community planning documents, and making recommendations to the City Council about economic incentive requests.",
-    pubDate: "2026-06-11T14:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
   }
 ];
 
@@ -3653,23 +3617,6 @@ const LEGAL_NOTICES = [
     smcBidID: "189"
   },
   {
-    title: "Request for Proposal -- Request for Proposal for San Miguel County Road 58P Retaining Wall Construction",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Request for Proposal for San Miguel County Road 58P Retaining Wall Construction.",
-    deadline: "Closes 5/26/2026",
-    expires: "2026-05-26",
-    dates: "5/7",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=203",
-    address: "",
-    smcBidID: "203"
-  },
-  {
     title: "Request for Proposal -- Deputy Municipal Court Judge",
     entity: "Town of Telluride",
     entityClass: "ent-county",
@@ -3810,24 +3757,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
     address: "333 & 305 W. Colorado Ave, Telluride, CO",
     noticeKey: "COL-000131"
-  },
-  {
-    title: "RFP -- MSE Retaining Wall Design and Construction",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is soliciting proposals for design and construction of a mechanically stabilized earth retaining wall on County Road 58P north of Sawpit. A mandatory pre-bid meeting is May 14, 2026 at 1:00 PM, with proposals due May 26, 2026 at 5:00 PM.",
-    deadline: "May 26, 2026 at 5:00 PM",
-    expires: "2026-05-26",
-    dates: "5/14",
-    papers: ["ttimes_0514"],
-    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
-    address: "County Road 58P north of Sawpit, CO",
-    noticeKey: "COL-000125"
   },
   {
     title: "Public Hearing -- Land Use Code Amendment for Building Footprint Definition",
