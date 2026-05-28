@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 May 2026 23:18:13 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2026 23:46:53 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Design Review Board — 2026-06-04</title>
@@ -59,7 +59,7 @@ The agenda text for this Commission for Community Assistance, Arts & Special Eve
       <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-06-03
 
-Meeting agenda not yet available]]></description>
+The Jun 03 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -125,6 +125,16 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/b2/db20b18b-c9d2-42f6-bb7c-d51da2923086/6a17f88a91426.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>recreation</category>
+    </item>
+    <item>
+      <title>Norwood School breaks ground</title>
+      <link>https://www.telluridenews.com/gallery/news/article_bb23a8b7-4634-46aa-997f-ed192e5fe5a9.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/gallery/news/article_bb23a8b7-4634-46aa-997f-ed192e5fe5a9.html</guid>
+      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/a2/2a2a4618-f6fe-4938-a72a-199d3eee76b4/6a18cdfe2fa15.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Telluride Times • May 28, 2026]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/a2/2a2a4618-f6fe-4938-a72a-199d3eee76b4/6a18cdfe2fa15.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>education</category>
     </item>
     <item>
       <title>‘Refreshed’ Wild West Fest is back</title>
@@ -401,15 +411,6 @@ The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted 
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/59/959d5cc4-78a6-457b-81aa-ed98ec623895/6a0d8930da86d.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>arts-culture</category>
-    </item>
-    <item>
-      <title>Newscast 5-22-26</title>
-      <link>https://koto.org/news/newscast-5-22-26/</link>
-      <guid isPermaLink="false">https://koto.org/news/newscast-5-22-26/</guid>
-      <pubDate>Sat, 23 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[On this week’s Regional Roundup, we hear how Utah residents are pushing back against a proposed data center, and we'll hear a report on a new management plan for the Maroon Bells area in Western Colorado. We'll also hear about the nuances of party affiliation ahead of Wyoming’s primary elections, and the environmental benefits of mushroom cultivati]]></description>
-      <category>KOTO Community Radio</category>
-      <category>government</category>
     </item>
   </channel>
 </rss>

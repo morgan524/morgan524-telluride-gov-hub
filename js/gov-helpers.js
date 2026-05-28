@@ -151,7 +151,7 @@ const MANUAL_SUMMARIES = {
     "The agenda text for this Commission for Community Assistance, Arts & Special Events meeting is missing — only the portal navigation and meeting list appears.",
 
   "telluride|2026-06-03|Telluride Housing Authority Subcommittee - Jun 03 2026":
-    "Meeting agenda not yet available",
+    "The Jun 03 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-06-01|Open Space Commission - Jun 01 2026":
     "Meeting scheduled for first Monday of the month · Commission reviews open space acquisitions and management · Advises Town Council on comprehensive plan elements",
@@ -166,7 +166,7 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The Jun 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
     "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
@@ -213,6 +213,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/business/article_9834d2c4-5e92-4023-b1a2-e7280515c851.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/b2/db20b18b-c9d2-42f6-bb7c-d51da2923086/6a17f88a91426.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Norwood School breaks ground",
+    source: "Telluride Times",
+    date: "May 28, 2026",
+    firstSeen: "2026-05-28",
+    newsTopic: "education",
+    copy: "",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/gallery/news/article_bb23a8b7-4634-46aa-997f-ed192e5fe5a9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/a2/2a2a4618-f6fe-4938-a72a-199d3eee76b4/6a18cdfe2fa15.image.jpg",
     imgHiRes: true
   },
   {
