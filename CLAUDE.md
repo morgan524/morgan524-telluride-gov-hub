@@ -985,6 +985,21 @@ these rules, any authenticated user can DevTools their way into deleting
 any post, flipping `approved: true` on any comment, or stuffing reaction
 counters, because the client checks alone are bypassable.
 
+**Email verification was DROPPED 2026-05-28 — do not reintroduce.** The
+verify flow was too unreliable (emails to spam, dead-end Firebase landing
+page, stale tokens, device rate-limits) and blocked legitimate users.
+`isVerifiedUser()` in `firestore.rules` no longer checks `email_verified`
+— it now means "signed in with a real email account (password signup, not
+anonymous) OR admin." The matching client gates in `js/hub-bub.js`
+(hbExpandCompose, post/reply/reaction submits, hbUpdateAuthUI) were also
+relaxed to only require a logged-in user, and `hub-bub.html` no longer
+sends verification emails or shows verify/resend UI. All three layers must
+stay consistent. See the `hub-bub-auth` memory note for the full picture.
+Also note Hub-Bub runs TWO Firebase SDKs (modular v11 inline + compat v10
+in hub-bub.js), posts must carry BOTH `authorUid` (rule) and `authorId`
+(legacy readers), and photo uploads are governed by `storage.rules`
+(deploy with `firebase deploy --only storage`).
+
 **Collections protected:**
 - `users/{uid}` — owner writes only (or admin)
 - `posts/{postId}` + `posts/{postId}/replies/{replyId}` — verified users
