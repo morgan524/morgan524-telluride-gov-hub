@@ -59,7 +59,10 @@ function isBadSummary(text) {
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
   "county|2026-05-27|Board of County Commissioners Special Meeting in Telluride 2:00 pm - 2:45 pm":
-    {"zoomUrl":"https://us02web.zoom.us/meeting/register/Tg73_6Q9SouIp8dXx71sfg","meetingId":"886 0088 9761","passcode":"042834","phone":"719-359-4580"}
+    {"zoomUrl":"https://us02web.zoom.us/meeting/register/Tg73_6Q9SouIp8dXx71sfg","meetingId":"886 0088 9761","passcode":"042834","phone":"719-359-4580"},
+
+  "county|2026-06-11|Planning Commission Meeting":
+    {"zoomUrl":"https://us06web.zoom.us/j/89317090915?pwd=s1SDCrhwsjqY7klJbBNGI7Oyc3Sg2U.1","meetingId":"893 1709 0915","passcode":"670854","phone":"970-728-3844"}
 };
 
 const MANUAL_SUMMARIES = {
@@ -176,6 +179,18 @@ const MANUAL_SUMMARIES = {
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Man arrested for hiding sex offender status",
+    source: "Telluride Times",
+    date: "May 27, 2026",
+    firstSeen: "2026-05-28",
+    newsTopic: "community",
+    copy: "Deputies arrested a man who allegedly concealed his identity and sex offender status while working locally as a DJ. The suspect was previously convicted in 2013 for attempted sexual assault on a child and is scheduled for a court hearing June 16.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_70cc432e-aea1-4dac-91e0-f3a7a5fde25a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/c2/ac24a6b9-6aa6-47dc-a16b-5637a70ad6bb/6a16fe812e569.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "US Supreme Court settles long-running water dispute over dwindling Rio Grande",
     source: "Telluride Times",
@@ -853,66 +868,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "County stakeholders vote against accelerated housing",
-    source: "Telluride Times",
-    date: "May 14, 2026",
-    firstSeen: "2026-05-15",
-    newsTopic: "housing",
-    copy: "County stakeholders failed to reach the 70% supermajority needed to approve a fast-track housing review process that would have expedited projects with at least half deed-restricted units within 90 days. The accelerated review was a requirement for accessing Colorado's affordable housing fund established by Proposition 123, but concerns about project size limits led to the proposal being tabled.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_f8f4bfd3-69ee-4f73-ae4f-bb0e751c3324.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/94/394025f8-fde3-4ab8-984d-fa6884441730/6a06482c2b625.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Firehouse visit",
-    source: "Telluride Times",
-    date: "May 14, 2026",
-    firstSeen: "2026-05-15",
-    newsTopic: "public-safety",
-    copy: "Local preschoolers are wrapping up their school year with their last day on May 14 and graduation ceremony on May 19 at 6 p.m. Baseball and high school track teams are competing at State May 15-16, while the middle school band has their concert May 18 at 7 p.m.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_e5fd4a1a-af15-4b7f-9f21-9ac2c18b02f9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/f4/8f492a71-102e-41f3-bd51-ed01b48705d0/6a04915a7faa2.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Denver runway fatality reveals a weakness in airport security",
-    source: "Telluride Times",
-    date: "May 14, 2026",
-    firstSeen: "2026-05-14",
-    newsTopic: "community",
-    copy: "A person breached Denver airport's perimeter fence and was killed after being pulled into an aircraft engine, forcing the pilot to abort takeoff and evacuate 224 passengers. The intruder scaled the fence in 15 seconds after airport security missed him on surveillance, mistaking the alarm for deer.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_421115b6-446c-5d25-a14a-6a9fefb7c8d4.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/c1/ac134921-b515-5796-ab77-99af996bd75e/69ffaae2560db.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "‘Hockey diplomacy’",
-    source: "Telluride Times",
-    date: "May 14, 2026",
-    firstSeen: "2026-05-14",
-    newsTopic: "infrastructure",
-    copy: "A Telluride youth hockey team will travel to Mongolia June 2-30, becoming the first U.S. team to play hockey there. The 88 participants including players, coaches and parents will also visit China and South Korea as part of the cultural exchange trip organized by Vail International Hockey Club.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_33649250-20c6-4e8b-8534-3efffb12c77a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/9c/c9cea77a-5b08-4460-8aa6-2fee9a39b366/6a03553ac86e0.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Legals and Public Notices for My 14-20, 2026",
-    source: "Telluride Times",
-    date: "May 14, 2026",
-    firstSeen: "2026-05-14",
-    newsTopic: "recreation",
-    copy: "San Miguel County is seeking contractors for a boiler replacement at Down Valley Park in Placerville, with proposals due June 4. The Town of Telluride is looking for a Deputy Municipal Court Judge, while Mountain Village needs bids for window and door replacement at Mountain Munchkins.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Highway 62 between Ridgway and Placerville re-opens",
     source: "Telluride Times",
     date: "May 22, 2026",
@@ -990,7 +945,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "here",
     source: "Town of Ridgway",
-    date: "May 27, 2026",
+    date: "May 28, 2026",
     firstSeen: "2026-05-27",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1012,7 +967,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "DOLA Economic Vitality Community Session on May 27, 2026",
     source: "Town of Ridgway",
-    date: "May 27, 2026",
+    date: "May 28, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1023,7 +978,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "CO Main Street Architect Visits on May 27-28, 2026",
     source: "Town of Ridgway",
-    date: "May 27, 2026",
+    date: "May 28, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1032,20 +987,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "SH62 Banner Structure Project completed; Request form now available",
-    source: "Town of Ridgway",
-    date: "May 14, 2026",
-    firstSeen: "2026-05-16",
-    newsTopic: "community",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/SH62-Banner-Structure-Press-Release-2026-05-14.pdf",
-    img: ""
-  },
-  {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "May 27, 2026",
+    date: "May 28, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1078,6 +1022,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 5-27-26",
+    source: "KOTO Community Radio",
+    date: "May 28, 2026",
+    newsTopic: "community",
+    copy: "Man Arrested for Failure to Register as Sex Offender; The Impetus of Dance in Unlikely Spaces",
+    href: "https://koto.org/news/newscast-5-27-26/"
+  },
   {
     title: "Newscast 5-22-26",
     source: "KOTO Community Radio",
@@ -1125,14 +1077,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "community",
     copy: "West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda; Listening Club is the Cure for Disintegration",
     href: "https://koto.org/news/newscast-5-14-26/"
-  },
-  {
-    title: "Newscast 5-13-26",
-    source: "KOTO Community Radio",
-    date: "May 14, 2026",
-    newsTopic: "land-use",
-    copy: "Regional Governments Discuss Impacts of Development; The Joy of Sex Ed…with Clowns; Alex Kelloff Makes Bid for Congress",
-    href: "https://koto.org/news/newscast-5-13-26/"
   }
 ];
 
@@ -1859,6 +1803,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   },
   {
+    title: "The Box: How Anxiety, Perfectionism, and People-Pleasing Kept Me Trapped at WPL",
+    link: "https://koto.org/event/the-box-how-anxiety-perfectionism-and-people-pleasing-kept-me-trapped-at-wpl/",
+    description: "Join us on Monday, June 8th at 5:30 for a talk by well-being strategist, high-performance coach, bestselling author, and speaker Wendy Robbins ! The Box: How Anxiety, Perfectionism, and People-Pleasing Kept Me Trapped — and the Steps That Set Me Free You built the walls. You have the key. What if the anxiety, perfectionism, and people-pleasing you've spent your life managing aren't your greatest liabilities — but your biggest untapped assets? For over 40 years, Wendy Tamis Robbins hid in plain sight. From the outside, she had everything: Ivy-League grad, Div. 1 Athlete, Big Law attorney. On the inside, she was living with chronic anxiety, OCD, panic disorder, depression, substance abuse, and suicidal ideation — managing it all behind a flawless performance of having it all together. Then came a colon cancer diagnosis. And instead of breaking her, it broke her open. …",
+    pubDate: "2026-06-08T17:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
+  },
+  {
     title: "Free Legal Clinic – Clínica Jurídica Gratuita",
     link: "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-06-09/",
     description: "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
@@ -2105,6 +2060,17 @@ const KOTO_COMMUNITY_EVENTS = [
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-22/",
     description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
     pubDate: "2026-06-22T09:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-23/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-06-23T09:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
@@ -2401,6 +2367,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52860999139790/huge/5cdf44deaab00132052e2601f35f9a2a76fc9960.jpg"
+  },
+  {
+    title: "Exploration of Native Plants: From Pinyon Pine to Cacti",
+    link: "https://events.ourayridgwayevents.com/event/exploration-of-native-plants-from-pinyon-pine-to-cacti",
+    description: "Exploration of Native Plants: From Pinyon Pine to Cacti Join us at the Visitors Center to explore the fascinating world of our local flora, tracing the incredible journey from majestic pinyon pines to resilient blooming cacti. Come discover the amazing plants that call Ridgway home! This program is part of the Ridgway State Park Summer Program Series. There's no charge for the program, but you do need a State Park Pass for your vehicle. You can purchase one at the fee station on the way in.",
+    pubDate: "2026-05-30T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53002601838729/huge/67c528e46d1f056e52205af24b3ed7d699fc8d04.jpg"
   },
   {
     title: "Fly You Fools Presented by UpstART | Opening Night | Fri 5/29/26",
@@ -2909,6 +2886,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52372912892394/huge/571ed29f2fe398fbe38b9d73af3e8e3e0168844d.jpg"
   },
   {
+    title: "The Bug Stops Here! Our Tiny Neighbors",
+    link: "https://cpw.state.co.us/events?f%5B0%5D=state_parks%3A186",
+    description: "“The Bug Stops Here! Our Tiny Neighbors” by area entomolgist Melissa Schriener Come discover the incredible survival adaptations of our multi-legged neighbors and learn why these misunderstood creatures are absolutely vital to the high-desert ecosystem. There's no charge for the program, but you do need a State Park Pass for your vehicle. You can purchase one at the fee station on the way in. This program is part of the Ridgway State Park Summer Program Series.",
+    pubDate: "2026-06-05T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53002635976132/huge/477796cac3dfc2e50c58fd02ecea457263bcf44a.jpg"
+  },
+  {
     title: "First Friday Live Music - Coral Skye",
     link: "https://sherbino.org/event/the-sherbino-presents-coral-skye-first-friday-show-2/",
     description: "Friday, June 5th | 6:00–8:00 pm Sherbino “Living Room” Free Show | Cash Bar | Tips Encouraged Celebrate First Friday with an intimate evening of live music at the Sherbino! Join us in the Sherbino’s cozy “Living Room” near the bar for a special performance by Coral Skye. Coral is a musician out of Montrose, CO who enjoys sharing her pop “acousti-soul” style of music. With a decade of professional performances under her belt, she has entertained all sorts of audiences, from festival crowds to local nursing home residents and students in school programs. Her inspiration comes from the power of music, family members and the support of her caring audiences. She has opened up for names like Survivor at the Olathe Corn Festival and Big Head Todd and the Monsters at The Bridges concert in Montrose. …",
@@ -2964,6 +2952,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52765189321282/huge/e3707690cdec408c4fcf20e6d47b246aa2076c25.jpg"
   },
   {
+    title: "Hooked on Fishing: Kids Fishing Clinic!",
+    link: "https://cpw.state.co.us/events?f%5B0%5D=state_parks%3A186",
+    description: "Hooked on Fishing: Kids Fishing Clinic! This free clinic is the perfect way for kids to learn the ropes of fishing in a supportive, hands-on environment. Our friendly team will walk the kids through everything they need to know to get a nibble on the line. There's no charge for the program, but you do need a State Park Pass for your vehicle. You can purchase one at the fee station on the way in. This program is part of the Ridgway State Park Summer Program Series.",
+    pubDate: "2026-06-06T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53002673613905/huge/db3bf2a8daa98babb9d6f40f922684124ebe6871.jpg"
+  },
+  {
     title: "Ridgway Railroad Museum FREE Train Rides",
     link: "https://www.ridgwayrailroadmuseum.org/",
     description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
@@ -2995,6 +2994,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Sunset Hike with the Park Naturalist",
+    link: "https://cpw.state.co.us/events?f%5B0%5D=state_parks%3A186",
+    description: "Sunset Hike with the Park Naturalist Celebrate National Trails Day with an unforgettable evening stroll as the mountains light up in stunning alpenglow. Join a park naturalist to uncover the cool secrets of the park’s wildlife, geological wonders, and unforgettable trails during the most beautiful hour of the day. There's no charge for the program, but you do need a State Park Pass for your vehicle. You can purchase one at the fee station on the way in. This program is part of the Ridgway State Park Summer Program Series.",
+    pubDate: "2026-06-07T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53002695709901/huge/753cc7395c40b32d8b0a4b8a3898370c0a86f720.jpg"
   },
   {
     title: "2-Day Trail Stewardship Trip: Middle Cimarron & Porphyry Basin",
@@ -3204,50 +3214,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
-  },
-  {
-    title: "Cedar Hill Cemetery Tour",
-    link: "www.ouraycountyhistoricalsociety.org",
-    description: "Tour of Cedar Hill Cemetery, Ouray led by Alice Leeper. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay",
-    pubDate: "2026-06-11T15:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Cedar Hill Cemetery ",
-    imageUrl: "https://localist-images.azureedge.net/photos/52278066168507/huge/2100ef3a6df421f4cc351fc153ebe5f196fc7df6.jpg"
-  },
-  {
-    title: "Low Energy Carbon Code Training",
-    link: "https://www.ecoactionpartners.org/energy-codes",
-    description: "EcoAction Partners is facilitating a regional cohort across San Miguel, Ouray and San Juan counties to support collaborative discussion and implementation support for the state's building energy code requirements. Regional building code consistency, with varying amendments as appropriate for each jurisdiction, has proven beneficial to the regional building community and for enforcement over the years. This work is funded by the Energy Code Adoption and Enforcement Grant Program, from the Colorado Energy Office, and supported by Lotus Engineering & Sustainability and NORESCO. Low Energy & Carbon Code (LECC) Training: March 26, 2026 (9am-5pm) Who: Whole building contractor community What: LECC & Regional Amendments Training Where: Ridgway Town Hall & Zoom (Zoom Link to be provided to registrants) Why: Prepare for adoption by regional governments and get your questions answered Registration REQUIRED FOR LUNCH",
-    pubDate: "2026-06-11T15:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52444204372144/huge/b898ad2e5fd77ff7c0562156e047d7da5afebb95.jpg"
-  },
-  {
-    title: "Pilates Mat",
-    link: "https://ridgwaypilates.punchpass.com/catalogs/300",
-    description: "All Levels Pilates Mat class. Classical sequence Int to challenge, strengthen and stretch you wehole body. Every Thursday at 9:30am. Pricing Four lessons for $120 Eight lessons for $200 Become a member and pay $100/month to attend weekly. Purchase a pass here: https://ridgwaypilates.punchpass.com/catalogs/300 Class is limited to six people. Mats are included. Please wear socks, put your hair up and choose clothing free of metal.",
-    pubDate: "2026-06-11T15:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
-  },
-  {
-    title: "On Display: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
-    link: "https://events.ourayridgwayevents.com/event/painting-evolution-of-moments-with-wild-horses-1999-2026-artist-karen-keene-day",
-    description: "Enjoy nearly 3 decades or work from local painter, Karen Keene Day. Info decker@ridgwayfuse.org",
-    pubDate: "2026-06-11T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52709642938173/huge/e2c21f0b2c1fb10c06c021e9b9d55a9ea535bccc.jpg"
   }
 ];
 
@@ -3535,24 +3501,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
     address: "Down Valley Park, Placerville",
     noticeKey: "rfp-boiler-placerville-2026"
-  },
-  {
-    title: "Public Hearing -- OWTS Variance Application (Sheamus Croke - Ophir)",
-    entity: "San Miguel County Board of Health",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "💧",
-    iconClass: "type-hearing",
-    type: "Utilities",
-    filterTag: "utilities",
-    summary: "San Miguel County Board of Health will consider an OWTS Variance Application for Sheamus Croke, owner of Lots 5 and 6 Block M Ophir, to reduce setback from Soil Treatment Area to southwest property line from 10 feet to 2 feet. Public hearing scheduled for May 27, 2026 at 2:00 PM.",
-    deadline: "May 27, 2026 at 2:00 PM",
-    expires: "2026-05-27",
-    dates: "5/6",
-    papers: ["ttimes_0506"],
-    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    address: "Lots 5 and 6 Block M Ophir",
-    noticeKey: "owts-variance-croke-ophir-2026"
   },
   {
     title: "Request for Proposal -- Request for Proposal for Boiler Replacement at the Down Valley Park",
@@ -3997,6 +3945,96 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_d3659378-b06b-4e27-9b53-ec57d83a4b86.html",
     address: "113 W Columbia Ave, Telluride, Colorado",
     noticeKey: "ordinance-gas-franchise-1425"
+  },
+  {
+    title: "Special Use Permit -- Scenic and Social Application (Planning Commission Hearing)",
+    entity: "San Miguel County Planning Commission",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "San Miguel County Planning Commission will hold a public hearing on a Scenic and Social Special Use Permit application. The hearing is scheduled for May 14, 2026 at 10:30 a.m. at the Sheriffs Annex Building in Norwood and online. Written comments must be received by noon on April 30, 2026.",
+    deadline: "April 30, 2026 at noon (comment deadline); May 14, 2026 (hearing date)",
+    expires: "2026-05-14",
+    dates: "4/23",
+    papers: ["ttimes_0423"],
+    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
+    address: "Sheriffs Annex Building, 1110 Summit Street, Norwood, CO",
+    noticeKey: "scenic-social-permit-may14"
+  },
+  {
+    title: "Special Use Permit -- Construction/Contractor Office and Staging Area (Kurt Works Inc.)",
+    entity: "Kurt Works Inc./Kurt Crockett",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "John Miller of Ponderosa Planning & Design, on behalf of Kurt Works Inc. and Kurt Crockett, has applied for a Special Use Permit to establish a Construction/Contractor Office and Staging Area at 488 S. Avalon Dr., Norwood. The Planning Commission will hold a public hearing on May 14, 2026 at 10:45 a.m. Written comments are due by noon on April 30, 2026.",
+    deadline: "April 30, 2026 at noon (comment deadline); May 14, 2026 (hearing date)",
+    expires: "2026-05-14",
+    dates: "4/23",
+    papers: ["ttimes_0423"],
+    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
+    address: "488 S. Avalon Dr., Norwood, CO (Parcel #452726103022)",
+    noticeKey: "contractor-staging-452726103022"
+  },
+  {
+    title: "RFP -- Flooring Replacement at County Buildings",
+    entity: "San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County is requesting proposals from contractors to replace flooring at 333 & 305 W. Colorado Ave in Telluride. RFP information is available online or at the county offices. Proposals are due by 5:00 PM on Friday, May 24th.",
+    deadline: "May 24, 2026 at 5:00 PM",
+    expires: "2026-05-24",
+    dates: "4/23",
+    papers: ["ttimes_0423"],
+    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
+    address: "333 & 305 W. Colorado Ave, Telluride, CO",
+    noticeKey: "rfp-flooring-colorado-ave"
+  },
+  {
+    title: "RFP -- Landscape Improvements at Galloping Goose Park",
+    entity: "San Miguel County Parks & Open Space",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County Parks & Open Space is seeking contractor proposals for landscape improvements to the Galloping Goose Park in Telluride. RFP information is available online or at the Parks & Open Space department. Proposals are due by 5:00 PM on Friday, May 22, 2026.",
+    deadline: "May 22, 2026 at 5:00 PM",
+    expires: "2026-05-22",
+    dates: "4/23",
+    papers: ["ttimes_0423"],
+    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
+    address: "Galloping Goose Park, Telluride, CO",
+    noticeKey: "rfp-galloping-goose-landscape"
+  },
+  {
+    title: "Invitation for Bids -- Mill Creek PRV Vault Installation",
+    entity: "Town of Telluride",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "💧",
+    iconClass: "type-hearing",
+    type: "Utilities",
+    filterTag: "utilities",
+    summary: "The Town of Telluride is accepting sealed bids for a 2026 Mill Creek Prefab Pressure Reducing Valve Vault Installation project. Bids must be received by 4 PM on Thursday, April 30, 2026 at the Public Works facility or via electronic submission. Bid documents are available through Public Works or online.",
+    deadline: "April 30, 2026 at 4:00 PM",
+    expires: "2026-04-30",
+    dates: "4/23",
+    papers: ["ttimes_0423"],
+    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
+    address: "Mill Creek area, Telluride, CO",
+    noticeKey: "itb-mill-creek-prv-2026"
   }
 ];
 

@@ -6,8 +6,19 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 May 2026 20:11:03 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2026 02:40:32 GMT</lastBuildDate>
     <ttl>360</ttl>
+    <item>
+      <title>[Meeting] Design Review Board — 2026-06-04</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/mv%7C2026-06-04%7CDesign%20Review%20Board</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Mountain Village • 2026-06-04
+
+Agenda not yet available]]></description>
+      <category>Meeting</category>
+      <category>Mountain Village</category>
+    </item>
     <item>
       <title>[Meeting] Board of County Commissioners Meeting — 2026-06-03</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
@@ -84,6 +95,25 @@ Meeting scheduled for first Monday of the month · Commission reviews open space
 Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four weeks of hiking from May 31 through June 28, with a kickoff at 11am on May 31 at the Oak Street gondola plaza. Hike from anywhere and raise funds for the Telluride Rotary Foundation — supporting scholarships, Youth Exchange, international projects, and community grants. 60% of nonprofit team funds go directly back to their nonprofit. Sponsored by Alpine Bank and Jagged Edge Mountain Gear.]]></description>
       <category>Community Event</category>
       <category>Telluride Rotary Club</category>
+    </item>
+    <item>
+      <title>Man arrested for hiding sex offender status</title>
+      <link>https://www.telluridenews.com/news/article_70cc432e-aea1-4dac-91e0-f3a7a5fde25a.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_70cc432e-aea1-4dac-91e0-f3a7a5fde25a.html</guid>
+      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/c2/ac24a6b9-6aa6-47dc-a16b-5637a70ad6bb/6a16fe812e569.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Deputies arrested a man who allegedly concealed his identity and sex offender status while working locally as a DJ. The suspect was previously convicted in 2013 for attempted sexual assault on a child and is scheduled for a court hearing June 16.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/c2/ac24a6b9-6aa6-47dc-a16b-5637a70ad6bb/6a16fe812e569.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
+    </item>
+    <item>
+      <title>Newscast 5-27-26</title>
+      <link>https://koto.org/news/newscast-5-27-26/</link>
+      <guid isPermaLink="false">https://koto.org/news/newscast-5-27-26/</guid>
+      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Man Arrested for Failure to Register as Sex Offender; The Impetus of Dance in Unlikely Spaces]]></description>
+      <category>KOTO Community Radio</category>
+      <category>community</category>
     </item>
     <item>
       <title>[Meeting] Regular Board Meeting — 2026-05-28</title>
@@ -165,17 +195,6 @@ The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted 
       <description><![CDATA[Press release from the Town of Ridgway. Click to view the full PDF.]]></description>
       <category>Town of Ridgway</category>
       <category>government</category>
-    </item>
-    <item>
-      <title>[Meeting] Board of County Commissioners Special Meeting in Telluride 2:00 pm - 2:45 pm — 2026-05-27</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-05-27%7CBoard%20of%20County%20Commissioners%20Special%20Meeting%20in%20Telluride%202%3A00%20pm%20-%202%3A45%20pm</guid>
-      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[San Miguel County • 2026-05-27
-
-The commissioners will handle two septic system variances in Ophir, consider ending a deed restriction on Society Drive, and hold a work session with Placerville residents about corridor beautification and Fire District expansion plans.]]></description>
-      <category>Meeting</category>
-      <category>San Miguel County</category>
     </item>
     <item>
       <title>Gabriel Landeskog uses in-skate sensors, AI-driven movement platform to manage his knee and workload</title>
@@ -345,74 +364,50 @@ The commissioners will handle two septic system variances in Ophir, consider end
       <category>arts-culture</category>
     </item>
     <item>
-      <title>‘There’ll be a lot of connection’</title>
-      <link>https://www.telluridenews.com/arts_and_entertainment/article_b40e80a2-d383-43d1-bff3-566e31012b76.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/arts_and_entertainment/article_b40e80a2-d383-43d1-bff3-566e31012b76.html</guid>
+      <title>Highway 62 between Ridgway and Placerville re-opens</title>
+      <link>https://www.telluridenews.com/news/article_042cbb30-7003-4b76-8bc3-a40b5a124367.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_042cbb30-7003-4b76-8bc3-a40b5a124367.html</guid>
       <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/2e/92ec7600-dfe0-407f-9fa0-15ff6755550d/6a0e7e4111eb8.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The HBO documentary series "The Dark Wizard" about legendary climber and BASE jumper Dean Potter will screen at Mountainfilm this week. Potter, who died in 2015 during a proximity flight in Yosemite, once parachuted onto Colorado Avenue here in 2014. Local climber and filmmaker Jim Hurst was among Potter's close friends and appears prominently in the four-part series, which explores Potter's complex personality and tragic death.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/2e/92ec7600-dfe0-407f-9fa0-15ff6755550d/6a0e7e4111eb8.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>arts-culture</category>
-    </item>
-    <item>
-      <title>Records of a relationship with the land</title>
-      <link>https://www.telluridenews.com/arts_and_entertainment/article_9fd8c3e4-4231-41ef-baa3-40cbe4e5b00a.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/arts_and_entertainment/article_9fd8c3e4-4231-41ef-baa3-40cbe4e5b00a.html</guid>
-      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/10/8100ce08-0402-427d-8011-6b7d34f2f9ac/6a0e7393477d2.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Cristina MitterMeier, this year's Mountainfilm guest director and founder of the International League of Conservation Photographers, is showing 10 selected photos at Fringe Gallery during the festival. The retrospective spans nearly two decades of her work, featuring images from Ethiopia, British Columbia, India and other locations that explore the relationship between indigenous peoples and wild places.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/10/8100ce08-0402-427d-8011-6b7d34f2f9ac/6a0e7393477d2.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>arts-culture</category>
-    </item>
-    <item>
-      <title>Super solar project</title>
-      <link>https://www.telluridenews.com/opinion/letters_to_editor/article_47be9c09-3df7-4adb-ad86-52fcdacec827.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/opinion/letters_to_editor/article_47be9c09-3df7-4adb-ad86-52fcdacec827.html</guid>
-      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Rainbow Preschool installed solar panels on their roof through a partnership with Active Energies Solar, generating 12,200 kW-h annually with 131% energy offset. The project was funded partly through Town of Telluride Green Grant money and has an 8% annual return.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Green Grants thanks</title>
-      <link>https://www.telluridenews.com/opinion/letters_to_editor/article_020283e8-4a89-40fe-b595-6ad1fdec878a.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/opinion/letters_to_editor/article_020283e8-4a89-40fe-b595-6ad1fdec878a.html</guid>
-      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Local residents Shawnna and Dennis Andrejko thanked EcoAction Partners, particularly Siobhan Montoya Lavender and Kendra Held, plus Town staffer Darin Graber for help with their Telluride Green Grants project. The program helps residents complete home efficiency upgrades.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Endorsing Marya</title>
-      <link>https://www.telluridenews.com/opinion/letters_to_editor/article_9c315856-90b1-43ac-b572-99eea53ab25e.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/opinion/letters_to_editor/article_9c315856-90b1-43ac-b572-99eea53ab25e.html</guid>
-      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Marya Stark, a six-month Town Council appointee, helped create an Economic Resilience Workgroup after last winter's mountain closure hurt local businesses. County Commissioner Anne Brown is endorsing Stark for a full four-year term, citing her policy and finance background.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>End housing bottlenecks</title>
-      <link>https://www.telluridenews.com/opinion/letters_to_editor/article_71288668-53cf-41d2-ade1-f8b82cabe11c.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/opinion/letters_to_editor/article_71288668-53cf-41d2-ade1-f8b82cabe11c.html</guid>
-      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Five deed-restricted homes are sitting unsold in Pinion Park while local teachers, healthcare workers, and young families can't qualify under current housing authority requirements. The writer notes many residents earn too much for assistance programs but not enough to meet the rigid lending and qualification standards, creating a bottleneck that's forcing people to keep renting or leave town.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bf/abfd96db-450e-40ba-8a54-74fb95a45581/6a1082ef543f9.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Highway 62 between Ridgway and Placerville closed for several hours today after a house blocked both lanes near mile marker 9, about four miles west of Dallas Divide. A crane from Montrose was brought in to move the structure, and the sheriff's office provided detour routes using county roads 56V and 58P. The highway reopened around 4 p.m.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bf/abfd96db-450e-40ba-8a54-74fb95a45581/6a1082ef543f9.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>housing</category>
     </item>
     <item>
-      <title>Town council discusses strategies to address housing policies</title>
-      <link>https://www.telluridenews.com/news/article_aa3cb7e5-739c-474d-8a71-d46a4d7296e8.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/article_aa3cb7e5-739c-474d-8a71-d46a4d7296e8.html</guid>
+      <title>Telluride Marshal’s Department Arrests Individual for Failure to Register as a Sex Offender</title>
+      <link>https://www.telluride.gov/CivicAlerts.aspx?aid=393</link>
+      <guid isPermaLink="false">https://www.telluride.gov/CivicAlerts.aspx?aid=393</guid>
       <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ec/4ecb883f-23a1-4d1d-bddd-dfd4266f8781/6a0fd7c8a2481.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Town Council is forming a 9-member committee of housing project residents to provide feedback on rental policies, with participants getting rent credits for their service. Due to local criticism and staff capacity limits, they're also hiring outside consultants to review housing policies more quickly than staff could manage internally.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ec/4ecb883f-23a1-4d1d-bddd-dfd4266f8781/6a0fd7c8a2481.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>housing</category>
+      <description><![CDATA[Content Notice: This communication contains information related to sexual violence/child abuse. Reader discretion is advised.]]></description>
+      <category>Town of Telluride</category>
+      <category>public-safety</category>
+    </item>
+    <item>
+      <title>Newscast 5-21-26</title>
+      <link>https://koto.org/news/newscast-5-21-26/</link>
+      <guid isPermaLink="false">https://koto.org/news/newscast-5-21-26/</guid>
+      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[West End Roundup with the San Miguel Basin Forum; Kris Tompkins on Rewilding the Mind; A Placerville Poetry Box]]></description>
+      <category>KOTO Community Radio</category>
+      <category>community</category>
+    </item>
+    <item>
+      <title>A Placerville Poetry Box</title>
+      <link>https://koto.org/news/san-miguel-canyon-telluride-poetry-box-colorado/</link>
+      <guid isPermaLink="false">https://koto.org/news/san-miguel-canyon-telluride-poetry-box-colorado/</guid>
+      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[A bright yellow poetry box on the side of the road in San Miguel Canyon offers people driving to and fro a place to stop, write, and share poems. Created by local poet Rosemerry Wahtola Trommer, the poetry box is an opportunity to pause, reflect, and embrace a sense of community.]]></description>
+      <category>KOTO Community Radio</category>
+      <category>infrastructure</category>
+    </item>
+    <item>
+      <title>DOLA Economic Vitality Community Session on May 27, 2026</title>
+      <link>https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/EV-Posters-for-Ridgway-DOLA-visit-May-2026_1.pdf</link>
+      <guid isPermaLink="false">https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/EV-Posters-for-Ridgway-DOLA-visit-May-2026_1.pdf</guid>
+      <pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Press release from the Town of Ridgway. Click to view the full PDF.]]></description>
+      <category>Town of Ridgway</category>
+      <category>community</category>
     </item>
   </channel>
 </rss>
