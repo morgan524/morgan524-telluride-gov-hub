@@ -618,7 +618,7 @@
       { key: 'norwood',   name: 'Town of Norwood',        logo: 'https://livabletelluride.org/logo/Norwood%20Town.jpeg' },
       { key: 'school',    name: 'School District R-1',    logo: 'https://livabletelluride.org/logo/School%20District%20Telluride.png' },
       { key: 'fire',      name: 'Fire Protection',        logo: 'https://livabletelluride.org/logo/Telluride%20Fire.png' },
-      { key: 'med',       name: 'Telluride Medical',      logo: 'https://livabletelluride.org/logo/Telluride%20Hospital%20Dist.jpeg' },
+      { key: 'med',       name: 'Telluride Regional Medical Center',      logo: 'https://livabletelluride.org/logo/Telluride%20Hospital%20Dist.jpeg' },
       { key: 'smart',     name: 'SMART Transit',          logo: 'https://livabletelluride.org/logo/SMART.png' },
       { key: 'ophir',     name: 'Town of Ophir',          logo: 'https://livabletelluride.org/logo/Ophir.jpeg' },
       { key: 'telluride', name: 'Town of Telluride',      logo: 'https://livabletelluride.org/logo/Telluride%20Town.png' }
@@ -875,6 +875,23 @@
     window.openWTMModal = openWTMModal;
     window.closeWTMModal = closeWTMModal;
 
+    // Returns a title that always leads with the entity name.
+    // Skips the prefix if a distinctive label word already appears in the title
+    // (handles "Mountain Village Town Council", "San Miguel County Board…", etc.)
+    function buildDisplayTitle(m) {
+      const label = (m.sourceLabel || '').trim();
+      const title = (m.title || '').trim();
+      if (!label || title.toLowerCase().startsWith(label.toLowerCase())) return title;
+      // Skip common words that appear in many titles and aren't entity-distinctive
+      const COMMON = new Set(['town','city','of','the','and','board','meeting',
+                              'commission','committee','district','village','regional',
+                              'county','council','center']);
+      const labelWords = label.toLowerCase().split(/\s+/).filter(w => w.length >= 4 && !COMMON.has(w));
+      const titleLc = title.toLowerCase();
+      if (labelWords.length && labelWords.some(w => titleLc.includes(w))) return title;
+      return label + ' — ' + title;
+    }
+
     function meetingCard(m) {
       const dateBadge = fmtDateBadge(m.date);
       const logo = m.entityLogo
@@ -917,7 +934,7 @@
 
       return '<article class="' + cardClass + '">'
            + '<div class="meet-card-head">' + dateBadge
-           + '<div class="meet-info">' + tag + '<h2 class="meet-title">' + m.title + '</h2></div>'
+           + '<div class="meet-info">' + tag + '<h2 class="meet-title">' + buildDisplayTitle(m) + '</h2></div>'
            + logo + '</div>'
            + summary + meta
            + zoom
@@ -980,7 +997,7 @@
               ['getMVMeetings',           'mv',        'Mountain Village',      'https://livabletelluride.org/logo/Mountain%20village%20Town.jpg'],
               ['getSchoolMeetings',       'school',    'School District R-1',   'https://livabletelluride.org/logo/School%20District%20Telluride.png'],
               ['getFireMeetings',         'fire',      'Fire District',         'https://livabletelluride.org/logo/Telluride%20Fire.png'],
-              ['getMedMeetings',          'med',       'Telluride Medical',     'https://livabletelluride.org/logo/Telluride%20Hospital%20Dist.jpeg'],
+              ['getMedMeetings',          'med',       'Telluride Regional Medical Center',     'https://livabletelluride.org/logo/Telluride%20Hospital%20Dist.jpeg'],
               ['getRidgwayMeetings',      'ridgway',   'Town of Ridgway',       'https://livabletelluride.org/logo/Ridgway%20Town.png'],
               ['getNorwoodMeetings',      'norwood',   'Town of Norwood',       'https://livabletelluride.org/logo/Norwood%20Town.jpeg'],
               ['getOphirMeetings',        'ophir',     'Town of Ophir',         'https://livabletelluride.org/logo/Ophir.jpeg'],
