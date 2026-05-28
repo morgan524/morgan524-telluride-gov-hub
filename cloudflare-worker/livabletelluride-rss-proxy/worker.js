@@ -46,6 +46,15 @@ const ALLOWED_HOSTS = [
   "townofridgway.colorado.gov",
   "www.townofridgway.colorado.gov",
   "events.ourayridgwayevents.com",
+  // Direct-PDF agenda hosts (Med / Fire / Ophir). Their agendas are plain
+  // .pdf links and these origins can block GH-runner IPs; route via the
+  // Worker so content-refresh can fetch + parse them. Added 2026-05-28.
+  "tellmed.org",
+  "www.tellmed.org",
+  "telluridefire.com",
+  "www.telluridefire.com",
+  "townofophir.colorado.gov",
+  "www.townofophir.colorado.gov",
   // San Miguel Basin Forum (West End news) — Creative Circle CMS, same
   // as Telluride Times. Direct fetches from GH runners get 403/429.
   "sanmiguelbasinforum.com",

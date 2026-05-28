@@ -242,6 +242,17 @@ const PROXY_HOSTS = new Set([
   'www.norwoodtown.com',
   'townofridgway.colorado.gov',
   'www.townofridgway.colorado.gov',
+  // Direct-PDF agenda hosts. These serve the agenda as a plain .pdf and
+  // (like the news origins) can block GH-runner IPs, so route through the
+  // Worker. Added 2026-05-28 after Med/Fire/Ophir meetings were missing
+  // summaries + Zoom info — their agenda PDFs were fetched direct and
+  // never reached / never parsed.
+  'tellmed.org',
+  'www.tellmed.org',
+  'telluridefire.com',
+  'www.telluridefire.com',
+  'townofophir.colorado.gov',
+  'www.townofophir.colorado.gov',
   // San Miguel Basin Forum (West End news) — Creative Circle CMS that
   // blocks GH runner IPs the same way Telluride Times does. Note: SMBF
   // has disabled the /search/?f=rss endpoint that TT exposes, so the
@@ -358,6 +369,34 @@ function fetch(url, opts = {}) {
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => resolve({ status: res.statusCode, text: data, headers: res.headers }));
+    });
+    req.on('error', reject);
+    req.on('timeout', () => { req.destroy(); reject(new Error('Timeout')); });
+  });
+}
+
+// Binary-safe variant of fetch(). The string-accumulating fetch() above
+// corrupts binary payloads (data += chunk coerces bytes through utf-8),
+// so PDF/image bodies must use this. Returns { status, buffer, headers }.
+// Routes through maybeProxy + follows redirects, same as fetch().
+function fetchBuffer(url, opts = {}) {
+  url = maybeProxy(url);
+  return new Promise((resolve, reject) => {
+    const mod = url.startsWith('https') ? https : http;
+    const req = mod.get(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15',
+        'Accept': 'application/pdf,*/*',
+        ...opts.headers
+      },
+      timeout: 20000
+    }, (res) => {
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        return fetchBuffer(res.headers.location, opts).then(resolve).catch(reject);
+      }
+      const chunks = [];
+      res.on('data', chunk => chunks.push(chunk));
+      res.on('end', () => resolve({ status: res.statusCode, buffer: Buffer.concat(chunks), headers: res.headers }));
     });
     req.on('error', reject);
     req.on('timeout', () => { req.destroy(); reject(new Error('Timeout')); });
@@ -702,6 +741,28 @@ async function extractAgendaText(url) {
       return { text: cleaned.slice(0, MAX_AGENDA_TEXT), urls };
     } catch (e) {
       console.warn(`    CivicClerk Playwright error: ${e.message}`);
+      return { text: '', urls: [] };
+    }
+  }
+  // Direct-PDF agenda (tellmed.org, telluridefire.com, SMART, MV packets,
+  // etc.). The generic HTML path below tag-strips the response as text,
+  // which turns a binary PDF into garbage — no usable agenda text, so no
+  // AI summary and no Zoom parsing. Detect the .pdf URL, fetch the bytes,
+  // and run the same pdfjs extractor used for CivicClerk PDFs.
+  if (/\.pdf(\?|$)/i.test(url)) {
+    try {
+      const { extractPdfContent } = require('./civicclerk-pdf');
+      const resp = await fetchBuffer(url);
+      if (resp.status !== 200 || !resp.buffer || !resp.buffer.length) {
+        console.warn(`    Direct PDF fetch failed (status ${resp.status}) for ${url}`);
+        return { text: '', urls: [] };
+      }
+      const { text, urls } = await extractPdfContent(resp.buffer);
+      const cleaned = (text || '').replace(/\s+/g, ' ').trim();
+      console.log(`    Direct PDF: ${cleaned.length} chars (${resp.buffer.length} bytes, ${urls.length} URLs)`);
+      return { text: cleaned.slice(0, MAX_AGENDA_TEXT), urls };
+    } catch (e) {
+      console.warn(`    Direct PDF extract error: ${e.message}`);
       return { text: '', urls: [] };
     }
   }
