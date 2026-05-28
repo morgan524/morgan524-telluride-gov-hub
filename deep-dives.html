@@ -148,6 +148,13 @@
       width: 100%; height: 100%;
       object-fit: cover; display: block;
     }
+    /* Card image is a link to the deep-dive page (wrapped by JS at load).
+       The anchor must fill the wrap so the image keeps its 16:9 size. */
+    .dive-card .img-wrap a.img-link {
+      display: block; width: 100%; height: 100%;
+    }
+    .dive-card .img-wrap a.img-link img { transition: transform 0.25s ease; }
+    .dive-card .img-wrap a.img-link:hover img { transform: scale(1.04); }
 
     /* Topic badge overlaid on image */
     .topic-badge {
@@ -695,6 +702,25 @@
         grid.innerHTML = '<p style="color:var(--text-muted)">Could not load posts.</p>';
       };
       document.body.appendChild(s);
+    })();
+
+    /* Make each deep-dive card's image a hyperlink to that card's page.
+       The destination is derived from the card's existing "Explore →"
+       button so there's a single source of truth and any future card is
+       covered automatically. */
+    (function linkifyCardImages() {
+      document.querySelectorAll('.dive-card').forEach(function (card) {
+        var explore = card.querySelector('.btn-explore');
+        var img = card.querySelector('.img-wrap img');
+        if (!explore || !img || img.closest('a')) return;
+        var a = document.createElement('a');
+        a.href = explore.getAttribute('href');
+        a.className = 'img-link';
+        var title = card.querySelector('h3');
+        a.setAttribute('aria-label', title ? title.textContent.trim() : 'Open deep dive');
+        img.parentNode.insertBefore(a, img);
+        a.appendChild(img);
+      });
     })();
   </script>
 
