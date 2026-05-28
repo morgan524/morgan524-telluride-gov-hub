@@ -738,14 +738,14 @@
             const items = [];
 
             const fetchers = [
-              ['getCountyCachedMeetings', '/v2/gov-hub.html'],
-              ['getMVMeetings',           '/v2/gov-hub.html'],
-              ['getSchoolMeetings',       '/v2/gov-hub.html'],
-              ['getFireMeetings',         '/v2/gov-hub.html'],
-              ['getMedMeetings',          '/v2/gov-hub.html'],
-              ['getNorwoodMeetings',      '/v2/gov-hub.html'],
-              ['getOphirMeetings',        '/v2/gov-hub.html'],
-              ['getSmartMeetings',        '/v2/gov-hub.html']
+              ['getCountyCachedMeetings', '/gov-hub.html'],
+              ['getMVMeetings',           '/gov-hub.html'],
+              ['getSchoolMeetings',       '/gov-hub.html'],
+              ['getFireMeetings',         '/gov-hub.html'],
+              ['getMedMeetings',          '/gov-hub.html'],
+              ['getNorwoodMeetings',      '/gov-hub.html'],
+              ['getOphirMeetings',        '/gov-hub.html'],
+              ['getSmartMeetings',        '/gov-hub.html']
             ];
             // Override the helper's sourceLabel for sources where the
             // natural label is either an internal code (TEX, SMART Transit)
@@ -807,7 +807,7 @@
                   date: d,
                   title: e.title,
                   meta: metaParts.join(' • '),
-                  href: '/v2/events.html'
+                  href: '/events.html'
                 });
               });
             });
