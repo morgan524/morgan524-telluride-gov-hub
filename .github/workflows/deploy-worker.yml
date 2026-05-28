@@ -2,6 +2,18 @@ name: Deploy Cloudflare Worker
 
 on:
   workflow_dispatch:
+  # Auto-deploy whenever the Worker's source changes on main. This closes
+  # the drift window that previously bricked content-refresh: editing
+  # ALLOWED_HOSTS in worker.js (to match a new PROXY_HOSTS entry) used to
+  # require a SEPARATE manual deploy, and any content-refresh run that
+  # fired in between failed its fatal preflight drift check — taking down
+  # ALL summaries/news/events, not just the new source. Now the redeploy
+  # happens on the same push that edits the allow-list, in lockstep.
+  push:
+    branches: [main]
+    paths:
+      - 'cloudflare-worker/livabletelluride-rss-proxy/worker.js'
+      - 'cloudflare-worker/livabletelluride-rss-proxy/wrangler.toml'
 
 jobs:
   deploy:

@@ -718,10 +718,13 @@
     var loadEl = document.getElementById('hbLoading');
     var emptyEl = document.getElementById('hbEmpty');
     if (loadEl) loadEl.style.display = 'none';
-    // Filter by topic
-    var filtered = hbPosts;
+    // Filter by topic. NOTE: start from a COPY of hbPosts — the sort step
+    // below must never mutate the source array, or switching back to
+    // "Newest" after "Most Discussed"/"Most Useful" wouldn't restore date
+    // order (the .sort() would have reordered hbPosts itself).
+    var filtered = hbPosts.slice();
     if (hbCurrentTopic !== 'all') {
-      filtered = hbPosts.filter(function(p) {
+      filtered = filtered.filter(function(p) {
         return p.tags && p.tags.indexOf(hbCurrentTopic) !== -1;
       });
     }
@@ -733,7 +736,7 @@
     } else if (hbCurrentMode === 'ideas') {
       filtered = filtered.filter(function(p) { return p.postType === 'solution' || p.postType === 'need' || p.postType === 'volunteer'; });
     }
-    // Sort
+    // Sort (operates on the `filtered` copy only — see note above).
     if (hbCurrentSort === 'most-discussed') {
       filtered.sort(function(a, b) { return (b.replyCount || 0) - (a.replyCount || 0); });
     } else if (hbCurrentSort === 'most-useful') {
@@ -741,6 +744,14 @@
         var aTotalReactions = Object.values(a.reactions || {}).reduce(function(sum, val) { return sum + val; }, 0);
         var bTotalReactions = Object.values(b.reactions || {}).reduce(function(sum, val) { return sum + val; }, 0);
         return bTotalReactions - aTotalReactions;
+      });
+    } else {
+      // 'newest' (default) — explicit createdAt-desc so chronological order
+      // is always restored, even after a prior most-discussed/useful sort.
+      filtered.sort(function(a, b) {
+        var ad = a.createdAt ? (a.createdAt.toDate ? a.createdAt.toDate() : new Date(a.createdAt)) : new Date(0);
+        var bd = b.createdAt ? (b.createdAt.toDate ? b.createdAt.toDate() : new Date(b.createdAt)) : new Date(0);
+        return bd - ad;
       });
     }
     // Clear existing posts (keep loading/empty divs)

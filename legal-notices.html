@@ -775,7 +775,22 @@
     /* ── Filter render + apply ── */
     function renderChips() {
       const row = document.getElementById('chipRow');
-      row.innerHTML = FILTERS.map(f => {
+      // Only show a chip when at least one current notice carries its tag, so
+      // we never render a chip that filters to an empty list (e.g. Bids/RFP,
+      // Estate, Utilities with no matching notices). "All Notices" and the
+      // "Within 0.5 mi" proximity tool always show; "Land Use" matches
+      // land-use OR ordinance, mirroring applyFilter(). Re-runs after the
+      // notices load, so chips appear automatically when matching data exists.
+      const present = new Set(
+        Array.from(document.querySelectorAll('#noticeList .notice-card'))
+          .map(c => c.getAttribute('data-filter-tag') || '')
+      );
+      const hasMatches = (f) => {
+        if (f.key === 'all' || f.special === 'nearby') return true;
+        if (f.key === 'land-use') return present.has('land-use') || present.has('ordinance');
+        return present.has(f.key);
+      };
+      row.innerHTML = FILTERS.filter(hasMatches).map(f => {
         const isActive = f.key === activeFilter;
         const nearbyLabel = (f.special === 'nearby' && userAddress)
           ? 'Within 0.5 mi: ' + userAddress.split(',')[0]
@@ -985,6 +1000,7 @@
             }
             const list = document.getElementById('noticeList');
             list.innerHTML = active.map(renderNoticeCard).join('');
+            renderChips();   // re-render chips now that cards (and their tags) exist
             applyFilter();
           } catch (err) {
             console.warn('loadLiveNotices failed:', err);

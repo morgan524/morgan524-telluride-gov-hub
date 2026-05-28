@@ -566,14 +566,26 @@
     const LOC_FILTERS  = FILTERS.slice(4);       // Telluride … Ophir
 
     function sidebarHtml() {
+      // Only show a filter chip when at least one current listing matches it
+      // (except "All", always shown). Prevents dead chips like "Lottery" or
+      // "Norwood" that would always render an empty list. Re-runs on every
+      // render(), so chips reappear automatically if matching data arrives.
+      function visible(f) {
+        return f.key === 'all' || LISTINGS.some(function(l) { return matchesFilter(l, f.key); });
+      }
       function opt(f) {
         const cls = f.key === activeFilter ? 'filter-opt active' : 'filter-opt';
         return '<button class="' + cls + '" data-filter="' + f.key + '">' + f.label + '</button>';
       }
-      return '<div class="filter-panel-heading">Filter Listings</div>'
-        + '<div class="filter-group">' + TYPE_FILTERS.map(opt).join('') + '</div>'
-        + '<div class="filter-group"><div class="filter-group-label">By Location</div>'
-        + LOC_FILTERS.map(opt).join('') + '</div>';
+      const typeChips = TYPE_FILTERS.filter(visible).map(opt).join('');
+      const locChips  = LOC_FILTERS.filter(visible).map(opt).join('');
+      let html = '<div class="filter-panel-heading">Filter Listings</div>'
+        + '<div class="filter-group">' + typeChips + '</div>';
+      if (locChips) {
+        html += '<div class="filter-group"><div class="filter-group-label">By Location</div>'
+          + locChips + '</div>';
+      }
+      return html;
     }
 
     /* ── Location-specific eligibility URL ── */

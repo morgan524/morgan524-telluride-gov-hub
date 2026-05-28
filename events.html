@@ -977,7 +977,7 @@
       { key: 'ouray',       label: 'Ouray' },
       { key: 'ophir',       label: 'Ophir' },
       { key: 'placerville', label: 'Placerville' },
-      { key: 'nucla',       label: 'Nucla / Naturita' }
+      { key: 'nucla-naturita', label: 'Nucla / Naturita' }
     ];
     let activeTown = 'all';
 
@@ -1079,10 +1079,16 @@
 
     /* ───────── Render ───────── */
     function filterHtml() {
-      const opts = TOWNS.map(t => {
-        const cls = t.key === activeTown ? 'filter-option active' : 'filter-option';
-        return `<div class="${cls}" data-town="${t.key}"><span class="dot"></span>${t.label}</div>`;
-      }).join('');
+      // Only show a location chip when at least one event is in that town
+      // (except "All"). Avoids dead chips like Ophir/Placerville/Nucla when
+      // there are no current events there. Re-runs in render(), so a chip
+      // reappears automatically once an event for that town arrives.
+      const opts = TOWNS
+        .filter(t => t.key === 'all' || EVENTS.some(e => e.town === t.key))
+        .map(t => {
+          const cls = t.key === activeTown ? 'filter-option active' : 'filter-option';
+          return `<div class="${cls}" data-town="${t.key}"><span class="dot"></span>${t.label}</div>`;
+        }).join('');
       return `<span class="filter-card-label">Filter by Location</span>${opts}`;
     }
 

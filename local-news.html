@@ -740,6 +740,67 @@
     const CATEGORIES = ['All News', 'Community', 'Education', 'Public Safety', 'Land Use', 'Environment', 'Local Business', 'Events'];
     let activeCategory = 'All News';
 
+    /* ──────────────────────────────────────────────────────────
+       Sort each story into one of the filter-chip categories.
+
+       The filter chips were inert because every article was being
+       stamped 'Community' (or a pet category that isn't a chip), so
+       clicking Education / Public Safety / etc. matched nothing.
+
+       Strategy, in order:
+       1. Trust the bot's `newsTopic` when it maps cleanly and
+          specifically to a chip (education / public-safety / land-use
+          / housing). These tags are reliable.
+       2. Otherwise keyword-scan the title + summary. This is the ONLY
+          way to populate Environment / Local Business / Events, which
+          the bot's newsTopic taxonomy doesn't cover at all.
+       3. Otherwise fall back to the "soft" newsTopic default
+          (community/government/health → Community, recreation →
+          Environment, infrastructure → Land Use, arts-culture → Events).
+       4. If nothing matches, return null — the story still appears under
+          "All News" but is NOT sorted into any specific tag (per request:
+          "for articles outside of the tags, they will not be sorted").
+       ────────────────────────────────────────────────────────── */
+    // Most-specific first; first match wins.
+    const CATEGORY_KEYWORDS = [
+      ['Public Safety',  /\b(wildfire|fire district|firefighter|fire department|structure fire|police|sheriff|deput(?:y|ies)|marshal|arrested?|\bcrime\b|burglary|theft|robbery|assault|homicide|shooting|search[ -]and[ -]rescue|\bsar\b|evacuat\w*|\bemergenc\w+|ambulance|paramedic|\bems\b|first responder|avalanche|missing (?:person|hiker|skier|man|woman)|\brescue\b|fatal\w*|\bcrash\b|collision|\bdui\b|overdose|public safety)\b/i],
+      ['Education',      /\b(schools?|students?|teachers?|classroom|board of education|superintendent|\bcollege\b|universit\w+|scholarship|graduat\w+|kindergarten|preschool|curriculum|tuition|pinhead institute|telluride mountain school|after-?school|early childhood)\b/i],
+      ['Environment',    /\b(wildlife|\bbears?\b|\belk\b|\bdeer\b|\blynx\b|beavers?|\btrout\b|\briver\b|watershed|water quality|snowpack|drought|\bforests?\b|conservation|\bclimate\b|\bcarbon\b|recycl\w+|compost\w*|open space|ecosystem|pollution|air quality|reclamation|superfund|tailings|\bsolar\b|renewable|wetlands?|habitat|endangered|\btrails?\b|trailhead|backcountry)\b/i],
+      ['Land Use',       /\b(zoning|rezon\w+|\bdevelopment\b|planning commission|land[ -]use|subdivision|building permit|\bconstruction\b|\bhousing\b|affordable housing|deed[- ]restrict\w*|short[- ]term rental|\bstrs?\b|variance|setbacks?|master plan|comprehensive plan|\bdensity\b|annexation|easement|\bparcel\b|workforce housing|condos?|apartments?)\b/i],
+      ['Local Business', /\b(restaurants?|\bcaf[eé]\b|coffee shop|brewer\w+|distiller\w+|\bshops?\b|\bstores?\b|retail|\bbusiness(?:es)?\b|grand opening|re-?open\w*|storefront|chamber of commerce|economic development|\btourism\b|entrepreneur\w*|start-?ups?|boutique|\bhotels?\b|\blodges?\b|\binns?\b|ski resort|telski)\b/i],
+      ['Events',         /\b(festival|\bconcerts?\b|\bgala\b|fundraiser|\bbenefit\b|performances?|\bexhibits?\b|gallery (?:show|opening)|screening|\bfilms?\b|mountainfilm|bluegrass|\bjazz\b|\bblues\b|symphony|theatre|theater|\bopera\b|art walk|\bparade\b|celebration|premiere|showcase|live music|\bcomedy\b)\b/i],
+    ];
+    const HARD_TOPIC_MAP = {
+      'education': 'Education',
+      'public-safety': 'Public Safety',
+      'land-use': 'Land Use',
+      'housing': 'Land Use',
+    };
+    const SOFT_TOPIC_DEFAULT = {
+      'community': 'Community',
+      'government': 'Community',
+      'health': 'Community',
+      'recreation': 'Environment',
+      'infrastructure': 'Land Use',
+      'arts-culture': 'Events',
+    };
+    function categorizeArticle(a) {
+      // Humane Society adoptable-pet cards → Community (closest chip).
+      if (a.sourceKey === 'humane-society') return 'Community';
+      const topic = (a.newsTopic || '').toLowerCase();
+      // 1. Reliable bot tag wins outright.
+      if (HARD_TOPIC_MAP[topic]) return HARD_TOPIC_MAP[topic];
+      // 2. Keyword scan (fills Environment / Local Business / Events).
+      const text = ((a.title || '') + ' ' + (a.summary || '')).toLowerCase();
+      for (const [cat, re] of CATEGORY_KEYWORDS) {
+        if (re.test(text)) return cat;
+      }
+      // 3. Soft newsTopic default.
+      if (SOFT_TOPIC_DEFAULT[topic]) return SOFT_TOPIC_DEFAULT[topic];
+      // 4. Uncategorized — shows only under "All News".
+      return null;
+    }
+
     function chipsHtml() {
       return CATEGORIES.map(c => {
         const cls = c === activeCategory ? 'chip active' : 'chip';
@@ -966,13 +1027,13 @@
             TELLURIDE_TIMES_ARTICLES.slice(0, 30).forEach(a => live.push({
               title: a.title, source: a.source, sourceKey: 'ttimes',
               date: a.date, summary: a.copy, href: a.href, img: a.img,
-              category: a.newsTopic || 'Community'
+              newsTopic: a.newsTopic || ''
             }));
             if (typeof KOTO_NEWSCASTS !== 'undefined') {
               KOTO_NEWSCASTS.slice(0, 15).forEach(a => live.push({
                 title: a.title, source: 'KOTO', sourceKey: 'koto',
                 date: a.date, summary: a.copy, href: a.href, img: a.img || '',
-                category: a.newsTopic || 'Community'
+                newsTopic: a.newsTopic || ''
               }));
             }
             // San Miguel Basin Forum — West End paper (Norwood/Nucla/Naturita).
@@ -1006,7 +1067,7 @@
                   summary: a.copy,
                   href: a.href,
                   img: a.img || '',
-                  category: a.newsTopic || 'Community'
+                  newsTopic: a.newsTopic || ''
                 }));
             }
             // Telluride Humane Society — adoptable dogs and cats.
@@ -1043,10 +1104,15 @@
                   summary: a.summary || `${a.name} is available for adoption at Telluride Humane Society.`,
                   href: a.profileUrl || `https://telluridehumanesociety.com/${speciesNoun}s/`,
                   img: a.photo || '',
-                  category: isDog ? 'Adopt a Dog' : 'Adopt a Cat'
+                  newsTopic: ''  // category assigned below via categorizeArticle (sourceKey)
                 });
               });
             }
+            // Sort every story into a filter-chip category (or null →
+            // appears under All News only). Done after collection so all
+            // sources go through the same categorizer.
+            live.forEach(a => { a.category = categorizeArticle(a); });
+
             const seen = new Set();
             const filtered = live.filter(a => {
               if (!shouldKeep(a)) return false;

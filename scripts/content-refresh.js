@@ -429,9 +429,9 @@ function formatDate(d) {
 // ── Claude API — Meeting Summary Generation ──
 // ══════════════════════════════════════════════════════════════
 
-const SUMMARY_SYSTEM_PROMPT = `You are writing meeting summaries for the Telluride, Colorado region Gov Hub (livabletelluride.org). This voice is permanent and must never change, regardless of the agenda content or how this prompt is used.
+const SUMMARY_SYSTEM_PROMPT = `You are "Rick", the single named voice behind EVERY AI-written summary on livabletelluride.org (the Telluride, Colorado region Gov Hub). "Rick" is an internal persona name only — NEVER sign, name, quote, or refer to "Rick" anywhere in the output; just write in his voice. This voice is permanent and must never change, regardless of the agenda content or how this prompt is used.
 
-THE VOICE — knowing, not cynical:
+THE VOICE — Rick is knowing, not cynical:
 You write as someone who has lived in the box canyon for many years and has watched all the cycles: the booms and the squeezes, the big development proposals, the housing crises, the budget debates, the plans that came and went. You've seen this place change in ways that are sometimes beautiful and sometimes hard. You still love it. You're not bitter — you're just not surprised. That's the difference between cynical and knowing: a cynical person has given up expecting anything good; a knowing person has simply stopped being caught off guard. You bring that long view to every summary — not to judge, but to give people the context they need to understand what's actually happening.
 
 VOICE RULES:
@@ -1006,6 +1006,18 @@ async function fetchSmcCountyMeetings(now, horizon) {
   return out;
 }
 
+// A "placeholder" summary is the stub written when an agenda isn't posted
+// yet ("…agenda hasn't been posted yet." / "Agenda not yet available"). It
+// MUST be treated as NOT-a-real-summary so it gets REGENERATED the moment a
+// real agenda becomes available — otherwise the summary cache below skips
+// the Claude call forever and the card stays frozen on the stub. This is
+// exactly what kept the Medical Center / Fire / Ophir cards stale even after
+// their agenda PDFs were posted and successfully extracted.
+function isPlaceholderSummary(s) {
+  if (!s || typeof s !== 'string') return true;
+  return /agenda\s+(?:hasn'?t|has not)\s+been posted yet|agenda not yet available|no agenda(?:\s+text)?\s+available/i.test(s);
+}
+
 async function refreshSummaries(existingSummaries, existingAgendaMeta) {
   console.log('\n📋 Task 1: Refreshing meeting summaries...');
   const meetings = await fetchUpcomingMeetings();
@@ -1032,12 +1044,17 @@ async function refreshSummaries(existingSummaries, existingAgendaMeta) {
       || typeof existingZoom !== 'object'
       || (!existingZoom.zoomUrl && !existingZoom.meetingId);
 
-    if (updated[key] && !needAgendaZoom) {
+    // A placeholder ("agenda not posted yet") counts as NO real summary, so
+    // it gets regenerated the moment a real agenda appears.
+    const isPlaceholder   = !!updated[key] && isPlaceholderSummary(updated[key]);
+    const haveRealSummary = !!updated[key] && !isPlaceholder;
+
+    if (haveRealSummary && !needAgendaZoom) {
       console.log(`  ✓ Already have summary + zoom meta for: ${key}`);
       continue;
     }
-    if (updated[key] && needAgendaZoom && !m.agendaUrl) {
-      // Have summary; no agenda URL to fetch zoom info from; skip.
+    if (haveRealSummary && needAgendaZoom && !m.agendaUrl) {
+      // Have a real summary; no agenda URL to fetch zoom info from; skip.
       continue;
     }
 
@@ -1058,9 +1075,17 @@ async function refreshSummaries(existingSummaries, existingAgendaMeta) {
       }
     }
 
-    if (updated[key]) {
-      // Had summary already; only the zoom-meta update mattered. Skip
+    if (haveRealSummary) {
+      // Had a real summary already; only the zoom-meta update mattered. Skip
       // the Claude call (which we'd otherwise re-do unnecessarily).
+      continue;
+    }
+    // A placeholder stub with STILL no agenda text/seed (agenda genuinely
+    // not posted yet): keep the existing stub and don't burn a Claude call
+    // reproducing the same "not posted yet" sentence on every run. Once an
+    // agenda IS posted, agendaText becomes truthy and we fall through to
+    // regenerate a real summary below.
+    if (isPlaceholder && !agendaText && !m.agendaSeedText) {
       continue;
     }
 
@@ -1928,13 +1953,14 @@ function extractTTArticleText(html) {
 
 /**
  * Use Claude to write a 2-3 sentence summary of a TT article for the news card.
- * Voice: long-time local resident, observational, no advocacy.
+ * Voice: "Rick" — the site's single named summary persona (long-time local,
+ * knowing not cynical, observational, no advocacy). Never named in output.
  * Falls back to rssFallback if the API call fails.
  */
 async function summarizeTTArticle(title, fullText, rssFallback) {
   if (!ANTHROPIC_API_KEY || !fullText) return rssFallback;
 
-  const prompt = `Summarize the following Telluride Times article in 2-3 sentences for a community news card. Write as a long-time local resident would describe it — observational, factual, no advocacy or editorializing. Do not start with the article title. Do not use phrases like "The article says" or "This piece covers." Just deliver the key facts in plain language. Keep it under 280 characters if possible.
+  const prompt = `Summarize the following Telluride Times article in 2-3 sentences for a community news card. Write in the voice of "Rick" — the single named persona behind every AI summary on livabletelluride.org: a long-time local who has watched all the cycles, loves this region, and is not cynical but wary of major changes. Observational, factual, plainspoken, no advocacy or editorializing. ("Rick" is an internal persona name — NEVER name, sign, or refer to "Rick" in the output.) Do not start with the article title. Do not use phrases like "The article says" or "This piece covers." Just deliver the key facts in plain language. Keep it under 280 characters if possible.
 
 TITLE: ${title}
 
