@@ -1467,6 +1467,7 @@
 
           <button class="hb-modal-submit" id="hbLoginSubmit" type="button">Log in</button>
           <div class="hb-modal-switch">Don't have an account? <a id="hbSwitchToSignup">Create one free</a></div>
+          <div class="hb-modal-switch" style="margin-top:6px;">Didn't get the confirmation email? <a href="javascript:void(0)" onclick="hbResendVerification()" style="color:var(--forest);font-weight:700;">Resend verification</a></div>
           <div class="hb-modal-msg" id="hbLoginMsg"></div>
           <div class="hb-modal-msg" id="hbLoginError" style="display:none;color:#c0392b;font-size:0.87rem;margin-top:8px;padding:10px 12px;background:#fdf0f0;border-radius:8px;border:1px solid #f5c6c6;"></div>
         </div>
@@ -1768,6 +1769,43 @@
         }
       });
     });
+
+    /* Resend the email-verification link. Firebase requires the user to be
+       authenticated to resend, so we sign in with the entered credentials
+       first, then send the link (and skip if already verified). Uses the
+       compat SDK (always loaded); the login fields supply the email/pw. */
+    window.hbResendVerification = function () {
+      const email    = document.getElementById('hbLoginEmail').value.trim();
+      const password = document.getElementById('hbLoginPassword').value;
+      if (!email || !password) {
+        return showMsg('hbLoginMsg', 'Enter your email and password above first — we sign you in to send a fresh verification link.', 'error');
+      }
+      showMsg('hbLoginMsg', 'Sending verification email…', 'success');
+      waitForFirebase(function () {
+        if (!(window.firebase && window.firebase.auth)) {
+          return showMsg('hbLoginMsg', 'Still loading — try again in a moment.', 'error');
+        }
+        window.firebase.auth().signInWithEmailAndPassword(email, password)
+          .then(function () {
+            const u = window.firebase.auth().currentUser;
+            if (!u) throw new Error('No current user after sign-in.');
+            if (u.emailVerified) {
+              showMsg('hbLoginMsg', '✓ Your email is already verified — just log in.', 'success');
+              return;
+            }
+            return u.sendEmailVerification().then(function () {
+              showMsg('hbLoginMsg', '✓ Verification email sent to ' + email + '. Check your inbox/spam, click the link, then reload this page.', 'success');
+            });
+          })
+          .catch(function (err) {
+            const code = (err && err.code) || '';
+            const friendly = /wrong-password|user-not-found|invalid-credential/.test(code)
+              ? 'Incorrect email or password — we need them to send a new verification link.'
+              : (err && err.message) || 'Could not send the verification email.';
+            showMsg('hbLoginMsg', friendly, 'error');
+          });
+      });
+    };
 
     /* Enter key submit */
     document.getElementById('hbSignupPassword').addEventListener('keydown', e => {
