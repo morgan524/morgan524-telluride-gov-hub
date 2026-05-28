@@ -4704,7 +4704,8 @@ function getMVMeetings() {
       category: m.board === 'drb' ? 'DRB Meeting' : 'Meeting',
       canceled: false,
       hasAgenda,
-      agendaLink: m.agendaUrl || null
+      agendaLink: m.agendaUrl || null,
+      packetUrl: m.packetUrl || null
     };
   });
 }
@@ -4736,6 +4737,7 @@ function getSchoolMeetings() {
       category: m.special ? 'Special Meeting' : 'Board Meeting',
       canceled: false,
       hasAgenda,
+      packetUrl: m.packetUrl || null,
       _rawTime: m.time || ''
     };
   });
@@ -4771,7 +4773,8 @@ function getSchoolMeetings() {
           title: combinedTitle,
           link: combinedLink,
           eventTimes: combinedTime,
-          hasAgenda: hasAgendaCombined
+          hasAgenda: hasAgendaCombined,
+          packetUrl: earlier.packetUrl || later.packetUrl || null
         }));
         seen.add(i);
         seen.add(j);
@@ -4814,7 +4817,8 @@ function getFireMeetings() {
       sourceLabel: 'Fire District',
       category: m.special ? 'Special Meeting' : 'Board Meeting',
       canceled: false,
-      hasAgenda
+      hasAgenda,
+      packetUrl: m.packetUrl || null
     };
   });
 }
@@ -4844,7 +4848,8 @@ function getMedMeetings() {
       sourceLabel: 'Medical Center',
       category: m.special ? 'Special Meeting' : 'Board Meeting',
       canceled: false,
-      hasAgenda
+      hasAgenda,
+      packetUrl: m.packetUrl || null
     };
   });
 }
@@ -4954,7 +4959,8 @@ function getSmartMeetings() {
       sourceLabel: 'SMART Transit',
       category: m.special ? 'Special Meeting' : 'Board Meeting',
       canceled: false,
-      hasAgenda
+      hasAgenda,
+      packetUrl: m.packetUrl || null
     };
   });
 }

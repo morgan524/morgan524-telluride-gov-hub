@@ -341,6 +341,13 @@
     .btn-action:hover { background: rgba(47, 122, 95, 0.20); }
     .btn-action.primary { background: var(--forest); color: #fff; border-color: var(--forest); font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.18); }
     .btn-action.primary:hover { background: #1a332c; }
+    /* Light-green placeholder state for the Agenda Packet button when no
+       packet is posted yet — looks like a btn-action but isn't clickable. */
+    .btn-action.btn-action-empty { cursor: default; opacity: 0.75; }
+    .btn-action.btn-action-empty:hover { background: var(--accent-green-soft); }
+    /* Second action row (comment / why-this-matters / recording) sits on
+       its own line below the two agenda buttons. */
+    .meet-actions-secondary { margin-top: 6px; }
     .btn-action.comment { background: var(--gold-soft); color: #7a5c10; border-color: rgba(181,138,44,0.35); }
     .btn-action.comment:hover { background: rgba(181,138,44,0.26); }
     .btn-action.wtm { background: #fff; color: #8b7250; border-color: #8b7250; font-weight: 700; }
@@ -907,6 +914,13 @@
       const agendaBtn = m.agendaUrl
         ? '<a class="btn-action' + (m.hasAgenda ? ' primary' : '') + '" href="' + m.agendaUrl + '" target="_blank" rel="noopener">View Agenda →</a>'
         : '';
+      // Agenda Packet: always shown. Dark green (primary) + downloads when a
+      // packet PDF is posted; light green, non-clickable placeholder when not.
+      // `download` works for same-origin packets; cross-origin PDFs (most
+      // gov sites) ignore it and open in a new tab — still the right result.
+      const packetBtn = m.packetUrl
+        ? '<a class="btn-action primary" href="' + m.packetUrl + '" download target="_blank" rel="noopener">📦 Agenda Packet ↓</a>'
+        : '<span class="btn-action btn-action-empty" title="Agenda packet not yet posted" aria-disabled="true">📦 Agenda Packet</span>';
       const recordBtn = m.recordingUrl
         ? '<a class="btn-action" href="' + m.recordingUrl + '" target="_blank" rel="noopener">Recording</a>'
         : '';
@@ -938,7 +952,13 @@
            + logo + '</div>'
            + summary + meta
            + zoom
-           + '<div class="meet-actions">' + agendaBtn + wtmBtn + recordBtn + commentBtn + '</div>'
+           // Row 1: the two agenda buttons (View Agenda + Agenda Packet).
+           // Row 2: everything else (Submit Comment, Why This Matters,
+           // Recording) on the line below.
+           + '<div class="meet-actions meet-actions-agenda">' + agendaBtn + packetBtn + '</div>'
+           + ((commentBtn || wtmBtn || recordBtn)
+               ? '<div class="meet-actions meet-actions-secondary">' + commentBtn + wtmBtn + recordBtn + '</div>'
+               : '')
            + deadlineNote
            + '</article>';
     }
@@ -1028,7 +1048,8 @@
                              || (m.description || ''),
                     location: m.location || '',
                     agendaUrl: m.agendaLink || m.link || '',
-                    hasAgenda: !!m.hasAgenda
+                    hasAgenda: !!m.hasAgenda,
+                    packetUrl: m.packetUrl || ''
                   });
                 });
               } catch (e) { console.warn(name + ' failed:', e); }
