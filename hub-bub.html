@@ -1727,11 +1727,22 @@
       waitForFirebase(function () {
         if (window.firebase && window.firebase.auth) {
           window.firebase.auth().signInWithEmailAndPassword(email, password)
-            .then(() => {
+            .then((cred) => {
               btn.disabled = false;
               btn.textContent = 'Log in';
-              showMsg('hbLoginMsg', '✓ Logged in!', 'success');
-              setTimeout(closeModal, 1200);
+              // If the account isn't email-verified, the post UI stays
+              // locked even though auth succeeded — tell the user why,
+              // instead of a bare "✓ Logged in!" followed by nothing
+              // visibly changing.
+              const u = window.firebase.auth().currentUser || (cred && cred.user);
+              const isAdmin = u && u.email === 'info@livabletelluride.org';
+              if (u && !u.emailVerified && !isAdmin) {
+                showMsg('hbLoginMsg', '✓ Signed in — but please verify your email first. Check your inbox/spam for the confirmation link, then reload to post.', 'success');
+                setTimeout(closeModal, 4000);
+              } else {
+                showMsg('hbLoginMsg', '✓ Logged in!', 'success');
+                setTimeout(closeModal, 1200);
+              }
             })
             .catch(err => {
               btn.disabled = false;
@@ -1792,8 +1803,23 @@
         stripLogout.style.display = 'none';
       }
     }
-    // Poll auth state every second (hub-bub.js updates DOM asynchronously)
+    // Poll auth state every second as a backstop (hub-bub.js updates the
+    // hidden auth bar asynchronously)…
     setInterval(syncAuthStrip, 1000);
+    // …but also react INSTANTLY: watch the hidden auth bar for changes so
+    // the visible strip flips the moment login/logout lands, instead of
+    // lagging up to a full second (which read as "login didn't work").
+    (function () {
+      const hiddenUser   = document.getElementById('hbAuthUser');
+      const hiddenStatus = document.getElementById('hbAuthStatus');
+      if (window.MutationObserver) {
+        const obs = new MutationObserver(syncAuthStrip);
+        const opts = { attributes: true, attributeFilter: ['style'], childList: true, characterData: true, subtree: true };
+        if (hiddenUser)   obs.observe(hiddenUser, opts);
+        if (hiddenStatus) obs.observe(hiddenStatus, opts);
+      }
+      syncAuthStrip();
+    })();
 
     // Sidebar topic chips → mirror clicks to hidden hbTopicBar
     document.getElementById('hbSideTopics').addEventListener('click', function (e) {
