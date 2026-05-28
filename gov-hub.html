@@ -617,18 +617,23 @@
        gov-helpers.js. Town of Telluride, Ouray, Ridgway, and SMRHA are
        deferred until their meeting data exists in cached form (currently
        only available via live RSS/API on the legacy single-page site). */
+    // 'all' is pinned first (it's the select-all, not an entity); every
+    // other tracked entity follows in alphabetical order by name. Keep this
+    // list in sync with the loadLiveMeetings fetchers below — every entity
+    // we track should appear here even when it has zero current meetings.
     const ENTITIES = [
-      { key: 'all',       name: 'All Meetings',           logo: 'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png' },
-      { key: 'mv',        name: 'Mountain Village',       logo: 'https://livabletelluride.org/logo/Mountain%20village%20Town.jpg' },
-      { key: 'county',    name: 'San Miguel County',      logo: 'https://livabletelluride.org/logo/San%20Miguel%20County.png' },
-      { key: 'ridgway',   name: 'Town of Ridgway',        logo: 'https://livabletelluride.org/logo/Ridgway%20Town.png' },
-      { key: 'norwood',   name: 'Town of Norwood',        logo: 'https://livabletelluride.org/logo/Norwood%20Town.jpeg' },
-      { key: 'school',    name: 'School District R-1',    logo: 'https://livabletelluride.org/logo/School%20District%20Telluride.png' },
-      { key: 'fire',      name: 'Fire Protection',        logo: 'https://livabletelluride.org/logo/Telluride%20Fire.png' },
-      { key: 'med',       name: 'Telluride Regional Medical Center',      logo: 'https://livabletelluride.org/logo/Telluride%20Hospital%20Dist.jpeg' },
-      { key: 'smart',     name: 'SMART Transit',          logo: 'https://livabletelluride.org/logo/SMART.png' },
-      { key: 'ophir',     name: 'Town of Ophir',          logo: 'https://livabletelluride.org/logo/Ophir.jpeg' },
-      { key: 'telluride', name: 'Town of Telluride',      logo: 'https://livabletelluride.org/logo/Telluride%20Town.png' }
+      { key: 'all',       name: 'All Meetings',                        logo: 'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png' },
+      { key: 'fire',      name: 'Fire Protection',                     logo: 'https://livabletelluride.org/logo/Telluride%20Fire.png' },
+      { key: 'mv',        name: 'Mountain Village',                    logo: 'https://livabletelluride.org/logo/Mountain%20village%20Town.jpg' },
+      { key: 'county',    name: 'San Miguel County',                   logo: 'https://livabletelluride.org/logo/San%20Miguel%20County.png' },
+      { key: 'school',    name: 'School District R-1',                 logo: 'https://livabletelluride.org/logo/School%20District%20Telluride.png' },
+      { key: 'smart',     name: 'SMART Transit',                       logo: 'https://livabletelluride.org/logo/SMART.png' },
+      { key: 'airport',   name: 'Telluride Regional Airport',          logo: 'https://livabletelluride.org/logo/Airport.png' },
+      { key: 'med',       name: 'Telluride Regional Medical Center',   logo: 'https://livabletelluride.org/logo/Telluride%20Hospital%20Dist.jpeg' },
+      { key: 'norwood',   name: 'Town of Norwood',                     logo: 'https://livabletelluride.org/logo/Norwood%20Town.jpeg' },
+      { key: 'ophir',     name: 'Town of Ophir',                       logo: 'https://livabletelluride.org/logo/Ophir.jpeg' },
+      { key: 'ridgway',   name: 'Town of Ridgway',                     logo: 'https://livabletelluride.org/logo/Ridgway%20Town.png' },
+      { key: 'telluride', name: 'Town of Telluride',                   logo: 'https://livabletelluride.org/logo/Telluride%20Town.png' }
     ];
 
     let MEETINGS = SAMPLE_MEETINGS.slice();
@@ -1022,6 +1027,7 @@
               ['getNorwoodMeetings',      'norwood',   'Town of Norwood',       'https://livabletelluride.org/logo/Norwood%20Town.jpeg'],
               ['getOphirMeetings',        'ophir',     'Town of Ophir',         'https://livabletelluride.org/logo/Ophir.jpeg'],
               ['getSmartMeetings',        'smart',     'SMART',                 'https://livabletelluride.org/logo/SMART.png'],
+              ['getAirportMeetings',      'airport',   'Telluride Regional Airport', 'https://livabletelluride.org/logo/Airport.png'],
               ['getTellurideMeetings',    'telluride', 'Town of Telluride',     'https://livabletelluride.org/logo/Telluride%20Town.png']
             ];
             const live = [];
