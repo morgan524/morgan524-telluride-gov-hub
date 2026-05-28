@@ -1429,7 +1429,7 @@
           <span class="hb-freq-label">Stay informed — choose what you'd like to receive</span>
           <div class="hb-freq-options">
             <label class="hb-freq-opt">
-              <input type="checkbox" id="hbFreqWeekly" value="weekly">
+              <input type="checkbox" id="hbFreqWeekly" value="weekly" checked>
               <div class="hb-freq-opt-text">
                 <strong>Weekly look-ahead</strong>
                 <span>A weekly summary of upcoming meetings — agendas, comment deadlines, and what's worth watching.</span>
@@ -1620,6 +1620,29 @@
 
     /* Also wire legacy hbShowAuth calls from hub-bub.js */
     window.hbShowAuth = function(mode) { openModal(mode === 'login' ? 'login' : 'signup'); };
+
+    /* ── Deep-link entry points ──
+       Other pages' "Subscribe" / "Sign Up" CTAs link to
+       /hub-bub.html#signup (or #login). Auto-open the matching modal on
+       load. If an ?email= query param is present (passed by the homepage
+       subscribe form), pre-fill the signup email field so the visitor
+       doesn't retype it. */
+    (function deepLinkOpen() {
+      try {
+        var params = new URLSearchParams(location.search);
+        var emailParam = params.get('email');
+        if (emailParam) {
+          var emailField = document.getElementById('hbSignupEmail');
+          if (emailField) emailField.value = emailParam;
+        }
+        var hash = (location.hash || '').toLowerCase();
+        if (hash === '#signup' || (emailParam && hash !== '#login')) {
+          openModal('signup');
+        } else if (hash === '#login') {
+          openModal('login');
+        }
+      } catch (e) { /* non-fatal */ }
+    })();
 
     /* ── SIGNUP submit ── */
     document.getElementById('hbSignupSubmit').addEventListener('click', function () {
