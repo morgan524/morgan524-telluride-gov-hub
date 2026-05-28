@@ -62,6 +62,10 @@
     .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
     .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 8px 14px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; white-space: nowrap; cursor: pointer; border: none; }
     .topnav-cta-secondary { background: #a8d5b5; color: #1a3a2e; }
+    /* Topnav auth area: stacks the Log Out button with the signed-in
+       user's first name beneath it. */
+    .topnav-auth { display: inline-flex; flex-direction: column; align-items: center; gap: 2px; }
+    .topnav-auth-name { font-size: 0.68rem; font-weight: 700; color: var(--text-muted, #7a8a85); line-height: 1; max-width: 90px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
     /* ── Hero ── */
     .hero {
@@ -1055,7 +1059,7 @@
       </nav>
       <div id="google_translate_element" class="topnav-translate"></div>
       <button id="topnavTranslateReset" class="topnav-translate-reset" type="button" title="Show original (English)" onclick="lvResetTranslation()">↺ EN</button>
-      <a class="topnav-cta" id="hbTopnavAuth" data-auth="out" href="javascript:void(0)" onclick="hbTopnavAuthClick()">Log In</a>
+      <div class="topnav-auth" id="hbTopnavAuth" data-auth="out"><a class="topnav-cta" href="javascript:void(0)" onclick="hbShowAuth('login')">Log In</a></div>
       <button class="topnav-hamburger" aria-label="Open navigation menu" aria-expanded="false" id="topnavHamburger" type="button">☰</button>
     </div>
   </header>
@@ -1885,26 +1889,34 @@
       var el = document.getElementById('hbTopnavAuth');
       if (!el) return;
       var u = currentFirebaseUser();
+      var first = u ? (u.displayName || u.email || 'Account').trim().split(/[\s@]/)[0] : '';
+      // Only rebuild when the state actually changes (avoids clobbering the
+      // button every 1s poll tick).
+      var key = u ? ('in:' + first) : 'out';
+      if (el.dataset.renderKey === key) return;
+      el.dataset.renderKey = key;
       if (u) {
-        var first = (u.displayName || u.email || 'Account').trim().split(/[\s@]/)[0];
-        el.textContent = '👤 ' + first;
         el.dataset.auth = 'in';
-        el.title = 'Signed in as ' + (u.email || first) + ' — click to log out';
+        var safe = (u.email || first).replace(/"/g, '&quot;');
+        // Log Out button with the signed-in user's first name beneath it.
+        el.innerHTML =
+          '<button class="topnav-cta" type="button" onclick="hbTopnavLogout()">Log Out</button>' +
+          '<span class="topnav-auth-name" title="Signed in as ' + safe + '">' + first + '</span>';
       } else {
-        el.textContent = 'Log In';
         el.dataset.auth = 'out';
-        el.title = '';
+        el.innerHTML = '<a class="topnav-cta" href="javascript:void(0)" onclick="hbShowAuth(\'login\')">Log In</a>';
       }
     }
-    window.hbTopnavAuthClick = function () {
-      var el = document.getElementById('hbTopnavAuth');
-      if (el && el.dataset.auth === 'in') {
+    window.hbTopnavLogout = function () {
+      try {
         if (typeof window.hbLogout === 'function') window.hbLogout();
-        else { try { window.firebase.auth().signOut(); } catch (e) {} }
-        syncTopnavAuth();
-      } else {
-        hbShowAuth('login');
-      }
+        else if (window.firebase && window.firebase.auth) window.firebase.auth().signOut();
+        else if (window._FIREBASE_AUTH && window._FB_AUTH && window._FB_AUTH.signOut) window._FB_AUTH.signOut(window._FIREBASE_AUTH);
+      } catch (e) {}
+      // Force an immediate re-render to the logged-out state.
+      var el = document.getElementById('hbTopnavAuth');
+      if (el) el.dataset.renderKey = '';
+      syncTopnavAuth();
     };
     // Attach an auth listener so the topnav flips instantly on login/logout.
     // NB: waitForFirebase() lives in a separate (earlier) <script> block and
