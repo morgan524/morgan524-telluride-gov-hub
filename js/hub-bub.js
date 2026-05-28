@@ -274,10 +274,34 @@
     var compose = document.getElementById('hbCompose');
     compose.classList.add('expanded');
     var isAdmin = hbUser && hbUser.email === 'info@livabletelluride.org';
-    if (!hbUser || (!hbUser.emailVerified && !isAdmin)) {
+    // Not logged in → open the signup/login modal.
+    if (!hbUser) {
       hbShowAuth('signup');
       compose.classList.remove('expanded');
+      return;
     }
+    // Logged in but email not verified → posting is blocked server-side
+    // (firestore.rules isVerifiedUser), so don't pretend the composer is
+    // usable. Explain it and offer to resend the verification email —
+    // showing the signup page here was the confusing "I'm logged in but it
+    // asks me to sign up again" bug.
+    if (!hbUser.emailVerified && !isAdmin) {
+      compose.classList.remove('expanded');
+      var email = hbUser.email || 'your email';
+      var resend = confirm(
+        'You\'re signed in as ' + email + ', but your email isn\'t verified yet — '
+        + 'verification is required before posting.\n\n'
+        + 'Click OK to resend the verification link, then click it from your '
+        + 'inbox (check spam) and reload this page.'
+      );
+      if (resend && hbUser.sendEmailVerification) {
+        hbUser.sendEmailVerification()
+          .then(function () { alert('Verification email sent to ' + email + '.'); })
+          .catch(function (e) { alert('Could not send the verification email: ' + (e && e.message || e)); });
+      }
+      return;
+    }
+    // Logged in + verified (or admin): composer stays open.
   };
   // ─── Conversation Starter ───
   window.hbRespondToStarter = function() {

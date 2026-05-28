@@ -1055,7 +1055,7 @@
       </nav>
       <div id="google_translate_element" class="topnav-translate"></div>
       <button id="topnavTranslateReset" class="topnav-translate-reset" type="button" title="Show original (English)" onclick="lvResetTranslation()">↺ EN</button>
-      <a class="topnav-cta" href="javascript:void(0)" onclick="hbShowAuth('login')">Log In</a>
+      <a class="topnav-cta" id="hbTopnavAuth" data-auth="out" href="javascript:void(0)" onclick="hbTopnavAuthClick()">Log In</a>
       <button class="topnav-hamburger" aria-label="Open navigation menu" aria-expanded="false" id="topnavHamburger" type="button">☰</button>
     </div>
   </header>
@@ -1803,9 +1803,60 @@
         stripLogout.style.display = 'none';
       }
     }
+    // Topnav login indicator. Shows the logged-in user's FIRST NAME (so they
+    // know they're signed in) whenever Firebase has a current user — verified
+    // or not, since "am I logged in" is separate from "can I post" (posting
+    // needs a verified email). Reads currentUser directly rather than the
+    // verified-gated hidden auth bar.
+    function currentFirebaseUser() {
+      try {
+        if (window.firebase && window.firebase.auth) return window.firebase.auth().currentUser;
+        if (window._FIREBASE_AUTH) return window._FIREBASE_AUTH.currentUser;
+      } catch (e) {}
+      return null;
+    }
+    function syncTopnavAuth() {
+      var el = document.getElementById('hbTopnavAuth');
+      if (!el) return;
+      var u = currentFirebaseUser();
+      if (u) {
+        var first = (u.displayName || u.email || 'Account').trim().split(/[\s@]/)[0];
+        el.textContent = '👤 ' + first;
+        el.dataset.auth = 'in';
+        el.title = 'Signed in as ' + (u.email || first) + ' — click to log out';
+      } else {
+        el.textContent = 'Log In';
+        el.dataset.auth = 'out';
+        el.title = '';
+      }
+    }
+    window.hbTopnavAuthClick = function () {
+      var el = document.getElementById('hbTopnavAuth');
+      if (el && el.dataset.auth === 'in') {
+        if (typeof window.hbLogout === 'function') window.hbLogout();
+        else { try { window.firebase.auth().signOut(); } catch (e) {} }
+        syncTopnavAuth();
+      } else {
+        hbShowAuth('login');
+      }
+    };
+    // Attach an auth listener so the topnav flips instantly on login/logout.
+    // NB: waitForFirebase() lives in a separate (earlier) <script> block and
+    // is NOT in scope here — calling it threw a ReferenceError that halted
+    // this block (killing the poll + observer below). Attach inline, guarded;
+    // the 1s poll is the backstop if Firebase isn't ready yet.
+    try {
+      if (window.firebase && window.firebase.auth) {
+        window.firebase.auth().onAuthStateChanged(syncTopnavAuth);
+      } else if (window._FIREBASE_AUTH && window._FB_AUTH && window._FB_AUTH.onAuthStateChanged) {
+        window._FB_AUTH.onAuthStateChanged(window._FIREBASE_AUTH, syncTopnavAuth);
+      }
+    } catch (e) {}
+    syncTopnavAuth();
+
     // Poll auth state every second as a backstop (hub-bub.js updates the
     // hidden auth bar asynchronously)…
-    setInterval(syncAuthStrip, 1000);
+    setInterval(function () { syncAuthStrip(); syncTopnavAuth(); }, 1000);
     // …but also react INSTANTLY: watch the hidden auth bar for changes so
     // the visible strip flips the moment login/logout lands, instead of
     // lagging up to a full second (which read as "login didn't work").
