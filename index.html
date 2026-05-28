@@ -647,22 +647,14 @@
           <div class="sub">A quick look at upcoming meetings and events.</div>
         </div>
       </div>
+      <!-- Populated by loadLiveWeek() from /js/gov-helpers.js (refreshed every
+           6h by content-refresh.yml). The placeholder below shows only until
+           the live data loads, or if JS is unavailable — no hardcoded sample
+           dates, so a JS failure never surfaces stale/fake meetings. -->
       <div class="week-list" id="weekList">
-        <a class="week-item" href="/gov-hub.html">
-          <div class="week-date"><div class="month">May</div><div class="day">11</div></div>
-          <div class="info"><h4>Planning &amp; Zoning Commission Meeting</h4><p class="meta">May 11, 2026 • 5:00 PM • Rebekah Hall</p></div>
-          <div class="arrow">›</div>
-        </a>
-        <a class="week-item" href="/events.html">
-          <div class="week-date"><div class="month">May</div><div class="day">13</div></div>
-          <div class="info"><h4>Telluride Farmers Market Opens</h4><p class="meta">May 13, 2026 • 10:00 AM • Town Park</p></div>
-          <div class="arrow">›</div>
-        </a>
-        <a class="week-item" href="/housing.html">
-          <div class="week-date"><div class="month">May</div><div class="day">15</div></div>
-          <div class="info"><h4>Housing Update: Pipeline Projects</h4><p class="meta">May 15, 2026 • 12:00 PM • Online</p></div>
-          <div class="arrow">›</div>
-        </a>
+        <div class="week-item" style="cursor:default;">
+          <div class="info"><p class="meta" id="weekListPlaceholder">Loading this week's meetings and events…</p></div>
+        </div>
       </div>
       <div class="week-foot">
         <a href="/gov-hub.html">View all meetings and events →</a>
@@ -708,7 +700,7 @@
       <div class="foot-col">
         <h4>Helpful Links</h4>
         <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/privacy-policy.html">Terms of Use</a>
+        <a href="/terms-of-use.html">Terms of Use</a>
         <a href="/data-deletion.html">Data Deletion</a>
       </div>
       <div class="foot-col">
@@ -820,10 +812,18 @@
               });
             });
 
-            if (items.length === 0) return;
+            const list = document.getElementById('weekList');
+            if (items.length === 0) {
+              // No upcoming items — show a friendly empty state instead of
+              // leaving the "Loading…" placeholder hanging forever.
+              list.innerHTML = '<div class="week-item" style="cursor:default;">'
+                + '<div class="info"><p class="meta">No public meetings or events in the next 7 days. '
+                + '<a href="/gov-hub.html" style="color:var(--accent-green);font-weight:600;">Browse the full calendar →</a></p></div>'
+                + '</div>';
+              return;
+            }
             items.sort((a, b) => a.date - b.date);
             const top = items.slice(0, 5);
-            const list = document.getElementById('weekList');
             list.innerHTML = top.map(it => {
               const m = it.date.toLocaleString('en', { month: 'short' });
               const d = it.date.getDate();
@@ -833,13 +833,23 @@
                    +   '<div class="arrow">›</div>'
                    + '</a>';
             }).join('');
-          } catch (err) { console.warn('loadLiveWeek failed:', err); }
+          } catch (err) { console.warn('loadLiveWeek failed:', err); weekFallback(); }
         };
-        s.onerror = () => console.warn('Could not load /js/gov-helpers.js for landing week');
+        s.onerror = () => { console.warn('Could not load /js/gov-helpers.js for landing week'); weekFallback(); };
         document.head.appendChild(s);
       };
-      dataScript.onerror = () => console.warn('Could not load gov-data.js');
+      dataScript.onerror = () => { console.warn('Could not load gov-data.js'); weekFallback(); };
       document.head.appendChild(dataScript);
+    }
+    // Graceful degradation: if the live data can't load, point visitors at
+    // the full calendar instead of a stuck "Loading…" line.
+    function weekFallback() {
+      const list = document.getElementById('weekList');
+      if (!list) return;
+      list.innerHTML = '<div class="week-item" style="cursor:default;">'
+        + '<div class="info"><p class="meta">'
+        + '<a href="/gov-hub.html" style="color:var(--accent-green);font-weight:600;">View this week\'s meetings and events →</a>'
+        + '</p></div></div>';
     }
     function formatDate(d) {
       return d.toLocaleString('en', { month: 'long', day: 'numeric', year: 'numeric' });
