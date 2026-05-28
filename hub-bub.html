@@ -1442,7 +1442,7 @@
         </div>
 
         <div class="hb-modal-notice">
-          🔒 Posting on Hub-Bub requires a verified email. After you sign up we'll email you a verification link — click it to start posting. <strong>Check your spam/junk folder</strong> if it's not in your inbox within a few minutes. Creating an account also subscribes you to the Livable Telluride mailing list (unsubscribe anytime).
+          🔒 A free account lets you post and comment on Hub-Bub. Creating an account also subscribes you to the Livable Telluride mailing list — you can unsubscribe at any time.
         </div>
 
         <button class="hb-modal-submit" id="hbSignupSubmit" type="button">Create account &amp; join Hub-Bub</button>
@@ -1471,7 +1471,6 @@
 
           <button class="hb-modal-submit" id="hbLoginSubmit" type="button">Log in</button>
           <div class="hb-modal-switch">Don't have an account? <a id="hbSwitchToSignup">Create one free</a></div>
-          <div class="hb-modal-switch" style="margin-top:6px;">Didn't get the confirmation email? <a href="javascript:void(0)" onclick="hbResendVerification()" style="color:var(--forest);font-weight:700;">Resend verification</a></div>
           <div class="hb-modal-msg" id="hbLoginMsg"></div>
           <div class="hb-modal-msg" id="hbLoginError" style="display:none;color:#c0392b;font-size:0.87rem;margin-top:8px;padding:10px 12px;background:#fdf0f0;border-radius:8px;border:1px solid #f5c6c6;"></div>
         </div>
@@ -1696,16 +1695,14 @@
             window.firebase.auth().createUserWithEmailAndPassword(email, password)
               .then(cred => {
                 const u = cred.user;
-                const named = u.updateDisplayName ? u.updateDisplayName(firstName + ' ' + lastName) : Promise.resolve();
-                // Send the email-verification link (posting is gated on it),
-                // with a continue URL back to Hub-Bub.
-                return named.then(() => hbSendVerification(u));
+                // Email verification dropped 2026-05-28 — just set the name.
+                return u.updateDisplayName ? u.updateDisplayName(firstName + ' ' + lastName) : Promise.resolve();
               })
               .then(() => {
                 btn.disabled = false;
                 btn.textContent = 'Create account & join Hub-Bub';
-                showMsg('hbSignupMsg', '✓ Account created! We emailed a verification link to ' + email + '. Click it to start posting — and check your spam/junk folder if you don\'t see it.', 'success');
-                setTimeout(closeModal, 4500);
+                showMsg('hbSignupMsg', '✓ Account created! You can now post and comment on Hub-Bub.', 'success');
+                setTimeout(closeModal, 2200);
               })
               .catch(err => {
                 btn.disabled = false;
@@ -1719,17 +1716,12 @@
             // Modular SDK path
             import('https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js').then(m => {
               m.createUserWithEmailAndPassword(window._FIREBASE_AUTH, email, password)
-                .then(cred => m.updateProfile(cred.user, { displayName: firstName + ' ' + lastName })
-                  .then(() => {
-                    if (!m.sendEmailVerification) return Promise.resolve();
-                    return m.sendEmailVerification(cred.user, { url: HB_VERIFY_CONTINUE_URL })
-                      .catch(() => m.sendEmailVerification(cred.user)); // fall back if continue URL not authorized
-                  }))
+                .then(cred => m.updateProfile(cred.user, { displayName: firstName + ' ' + lastName }))
                 .then(() => {
                   btn.disabled = false;
                   btn.textContent = 'Create account & join Hub-Bub';
-                  showMsg('hbSignupMsg', '✓ Account created! We emailed a verification link to ' + email + '. Click it to start posting — and check your spam/junk folder if you don\'t see it.', 'success');
-                  setTimeout(closeModal, 4500);
+                  showMsg('hbSignupMsg', '✓ Account created! You can now post and comment on Hub-Bub.', 'success');
+                  setTimeout(closeModal, 2200);
                 })
                 .catch(err => {
                   btn.disabled = false;
@@ -1763,19 +1755,10 @@
             .then((cred) => {
               btn.disabled = false;
               btn.textContent = 'Log in';
-              // If the account isn't email-verified, the post UI stays
-              // locked even though auth succeeded — tell the user why,
-              // instead of a bare "✓ Logged in!" followed by nothing
-              // visibly changing.
-              const u = window.firebase.auth().currentUser || (cred && cred.user);
-              const isAdmin = u && u.email === 'info@livabletelluride.org';
-              if (u && !u.emailVerified && !isAdmin) {
-                showMsg('hbLoginMsg', '✓ Signed in — but please verify your email first. Check your inbox/spam for the confirmation link, then reload to post.', 'success');
-                setTimeout(closeModal, 4000);
-              } else {
-                showMsg('hbLoginMsg', '✓ Logged in!', 'success');
-                setTimeout(closeModal, 1200);
-              }
+              // Email verification no longer required (dropped 2026-05-28) —
+              // any signed-in user can post.
+              showMsg('hbLoginMsg', '✓ Logged in!', 'success');
+              setTimeout(closeModal, 1200);
             })
             .catch(err => {
               btn.disabled = false;

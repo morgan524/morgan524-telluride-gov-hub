@@ -238,7 +238,9 @@
     var logoutBtn = document.getElementById('hbLogoutBtn');
     var avatarEl = document.getElementById('hbComposeAvatar');
     var isAdmin = user && user.email === 'info@livabletelluride.org';
-    if (user && (user.emailVerified || isAdmin)) {
+    // Email verification no longer required (dropped 2026-05-28) — any
+    // signed-in user is treated as logged in and may post.
+    if (user) {
       var name = user.displayName || (isAdmin ? 'Admin' : 'User');
       statusEl.style.display = 'none';
       userEl.style.display = '';
@@ -258,8 +260,7 @@
   if (hbFirebaseReady) {
     auth.onAuthStateChanged(function(user) {
       hbUpdateAuthUI(user);
-      var isAdmin = user && user.email === 'info@livabletelluride.org';
-      if (user && (user.emailVerified || isAdmin)) {
+      if (user) {
         hbLoadPosts();
       }
     });
@@ -274,51 +275,14 @@
     var compose = document.getElementById('hbCompose');
     compose.classList.add('expanded');
     var isAdmin = hbUser && hbUser.email === 'info@livabletelluride.org';
-    // Not logged in → open the signup/login modal.
+    // Not logged in → open the signup/login modal. Any signed-in user can
+    // post — email verification was dropped 2026-05-28.
     if (!hbUser) {
       hbShowAuth('signup');
       compose.classList.remove('expanded');
       return;
     }
-    // Logged in but email not verified → posting is blocked server-side
-    // (firestore.rules isVerifiedUser), so don't pretend the composer is
-    // usable. Explain it and offer to resend the verification email —
-    // showing the signup page here was the confusing "I'm logged in but it
-    // asks me to sign up again" bug.
-    if (!hbUser.emailVerified && !isAdmin) {
-      compose.classList.remove('expanded');
-      // The cached auth token can lag a just-completed verification (the user
-      // clicked the link in another tab). Refresh it before concluding they're
-      // unverified — otherwise they'd keep getting "verify your email" even
-      // after verifying.
-      var proceed = function () {
-        if (hbUser.emailVerified) {
-          hbUpdateAuthUI(hbUser);          // refresh the whole auth UI
-          compose.classList.add('expanded'); // now allowed to post
-          return;
-        }
-        var email = hbUser.email || 'your email';
-        var resend = confirm(
-          'You\'re signed in as ' + email + ', but your email isn\'t verified yet — '
-          + 'verification is required before posting.\n\n'
-          + 'Click OK to resend the verification link, then click it from your '
-          + 'inbox (check spam) and reload this page.'
-        );
-        if (resend && hbUser.sendEmailVerification) {
-          var CONTINUE = 'https://livabletelluride.org/hub-bub.html';
-          hbUser.sendEmailVerification({ url: CONTINUE })
-            .catch(function (e) {
-              // continue-URL domain not authorized yet → send without it
-              return (e && /continue-uri/.test(e.code || '')) ? hbUser.sendEmailVerification() : Promise.reject(e);
-            })
-            .then(function () { alert('Verification email sent to ' + email + '. Check your inbox/spam.'); })
-            .catch(function (e) { alert('Could not send the verification email: ' + (e && e.message || e)); });
-        }
-      };
-      if (hbUser.reload) { hbUser.reload().then(proceed).catch(proceed); } else { proceed(); }
-      return;
-    }
-    // Logged in + verified (or admin): composer stays open.
+    // Logged in: composer stays open.
   };
   // ─── Conversation Starter ───
   window.hbRespondToStarter = function() {
@@ -550,7 +514,7 @@
   // ═══════════════════════════════
   window.hbSubmitPost = function() {
     var isAdmin = hbUser && hbUser.email === 'info@livabletelluride.org';
-    if (!hbUser || (!hbUser.emailVerified && !isAdmin)) { hbShowAuth('login'); return; }
+    if (!hbUser) { hbShowAuth('login'); return; }
     if (!hbFirebaseReady) { hbShowConfigNeeded(); return; }
     var body = document.getElementById('hbComposeBody').value.trim();
     // Run tone check first
@@ -975,7 +939,7 @@
   // REACTIONS
   // ═══════════════════════════════
   window.hbReact = function(postId, reactionType) {
-    if (!hbUser || !hbUser.emailVerified) { hbShowAuth('login'); return; }
+    if (!hbUser) { hbShowAuth('login'); return; }
     if (!hbFirebaseReady) return;
     var ref = db.collection('posts').doc(postId);
     var uid = hbUser.uid;
@@ -1015,7 +979,7 @@
   // VOTING (KEPT FOR BACKWARD COMPATIBILITY)
   // ═══════════════════════════════
   window.hbVote = function(postId, dir) {
-    if (!hbUser || !hbUser.emailVerified) { hbShowAuth('login'); return; }
+    if (!hbUser) { hbShowAuth('login'); return; }
     if (!hbFirebaseReady) return;
     var ref = db.collection('posts').doc(postId);
     var uid = hbUser.uid;
@@ -1125,7 +1089,7 @@
     container.appendChild(div);
   }
   window.hbPostReply = function(postId) {
-    if (!hbUser || !hbUser.emailVerified) { hbShowAuth('login'); return; }
+    if (!hbUser) { hbShowAuth('login'); return; }
     if (!hbFirebaseReady) return;
     var textarea = document.getElementById('hb-reply-text-' + postId);
     var body = textarea.value.trim();
@@ -1673,15 +1637,7 @@
         }
         auth.signInWithEmailAndPassword(email, pass)
           .then(function(cred) {
-            var isAdmin = cred.user.email === 'info@livabletelluride.org';
-            if (!isAdmin && !cred.user.emailVerified) {
-              errEl.textContent = 'Please verify your email first. Check your inbox for the verification link.';
-              errEl.style.display = 'block';
-              auth.signOut();
-              loginBtn.textContent = 'Log In';
-              loginBtn.disabled = false;
-              return;
-            }
+            // Email verification no longer required (dropped 2026-05-28).
             hbCloseAuth();
             loginBtn.textContent = 'Log In';
             loginBtn.disabled = false;

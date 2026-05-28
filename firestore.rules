@@ -35,10 +35,15 @@ service cloud.firestore {
     }
 
     function isVerifiedUser() {
-      // Admin is allowed without emailVerified because the original
-      // Firebase Auth account for info@ predates the verified-email
-      // requirement; matches the client check at hub-bub.js:195.
-      return isSignedIn() && (request.auth.token.email_verified == true || isAdmin());
+      // Email-verification requirement DROPPED 2026-05-28: the verify flow
+      // was too unreliable (emails to spam, dead-end landing page, stale
+      // tokens) and blocked legitimate users. Now any signed-in user with a
+      // real email account (i.e. a password signup, not an anonymous
+      // session) may post; admin always allowed. The function name is kept
+      // because it's referenced throughout the rules — it now means
+      // "a signed-in account that can post", verification no longer required.
+      // To restore verification, re-add: request.auth.token.email_verified == true
+      return isSignedIn() && (request.auth.token.email != null || isAdmin());
     }
 
     function isAdmin() {
