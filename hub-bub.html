@@ -1677,15 +1677,16 @@
       btn.disabled = true;
       btn.textContent = 'Creating account…';
 
-      // Step 1: Mailchimp subscribe (skip if nothing selected — account-only signup)
+      // Step 1: Mailchimp subscribe — BEST EFFORT, never blocks account
+      // creation. A mailing-list hiccup (Mailchimp down, weird response,
+      // etc.) must not stop someone from getting their Hub-Bub account and
+      // being logged in. Failures are logged, not surfaced as a hard error.
       mcSubscribe(email, firstName, lastName, digestFreq, includeNewsletter, function (ok, msg) {
         if (!ok && !/already subscribed/i.test(msg)) {
-          btn.disabled = false;
-          btn.textContent = 'Create account & join Hub-Bub';
-          return showMsg('hbSignupMsg', 'Subscription error: ' + msg.replace(/<[^>]+>/g, ''), 'error');
+          console.warn('Hub-Bub signup: Mailchimp subscribe failed (continuing to create account): ' + msg);
         }
 
-        // Step 2: Firebase Auth — create account
+        // Step 2: Firebase Auth — create account (auto-signs the user in)
         waitForFirebase(function () {
           const { createUserWithEmailAndPassword, updateProfile } =
             window.firebase?.auth ? {} : {};
