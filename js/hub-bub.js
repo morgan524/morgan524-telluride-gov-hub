@@ -287,18 +287,35 @@
     // asks me to sign up again" bug.
     if (!hbUser.emailVerified && !isAdmin) {
       compose.classList.remove('expanded');
-      var email = hbUser.email || 'your email';
-      var resend = confirm(
-        'You\'re signed in as ' + email + ', but your email isn\'t verified yet — '
-        + 'verification is required before posting.\n\n'
-        + 'Click OK to resend the verification link, then click it from your '
-        + 'inbox (check spam) and reload this page.'
-      );
-      if (resend && hbUser.sendEmailVerification) {
-        hbUser.sendEmailVerification()
-          .then(function () { alert('Verification email sent to ' + email + '.'); })
-          .catch(function (e) { alert('Could not send the verification email: ' + (e && e.message || e)); });
-      }
+      // The cached auth token can lag a just-completed verification (the user
+      // clicked the link in another tab). Refresh it before concluding they're
+      // unverified — otherwise they'd keep getting "verify your email" even
+      // after verifying.
+      var proceed = function () {
+        if (hbUser.emailVerified) {
+          hbUpdateAuthUI(hbUser);          // refresh the whole auth UI
+          compose.classList.add('expanded'); // now allowed to post
+          return;
+        }
+        var email = hbUser.email || 'your email';
+        var resend = confirm(
+          'You\'re signed in as ' + email + ', but your email isn\'t verified yet — '
+          + 'verification is required before posting.\n\n'
+          + 'Click OK to resend the verification link, then click it from your '
+          + 'inbox (check spam) and reload this page.'
+        );
+        if (resend && hbUser.sendEmailVerification) {
+          var CONTINUE = 'https://livabletelluride.org/hub-bub.html';
+          hbUser.sendEmailVerification({ url: CONTINUE })
+            .catch(function (e) {
+              // continue-URL domain not authorized yet → send without it
+              return (e && /continue-uri/.test(e.code || '')) ? hbUser.sendEmailVerification() : Promise.reject(e);
+            })
+            .then(function () { alert('Verification email sent to ' + email + '. Check your inbox/spam.'); })
+            .catch(function (e) { alert('Could not send the verification email: ' + (e && e.message || e)); });
+        }
+      };
+      if (hbUser.reload) { hbUser.reload().then(proceed).catch(proceed); } else { proceed(); }
       return;
     }
     // Logged in + verified (or admin): composer stays open.

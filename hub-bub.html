@@ -1592,6 +1592,25 @@
        because the two remaining options are independent (you can want
        both, or neither). */
 
+    /* Send an email-verification link with a continue URL so the
+       post-verification Firebase page has a "Continue → Hub-Bub" link
+       back to the site (otherwise the user lands on a dead-end
+       firebaseapp.com page). The continue URL's domain must be in
+       Firebase Auth → Authorized domains; if it isn't yet, Firebase
+       rejects it, so we fall back to a plain send (lands on the default
+       page) rather than failing to send at all. Compat-SDK user. */
+    const HB_VERIFY_CONTINUE_URL = 'https://livabletelluride.org/hub-bub.html';
+    function hbSendVerification(user) {
+      if (!user || !user.sendEmailVerification) return Promise.resolve();
+      return user.sendEmailVerification({ url: HB_VERIFY_CONTINUE_URL }).catch(function (e) {
+        var code = (e && e.code) || '';
+        if (/unauthorized-continue-uri|invalid-continue-uri|missing-continue-uri/.test(code)) {
+          return user.sendEmailVerification();
+        }
+        throw e;
+      });
+    }
+
     /* Open triggers */
     document.getElementById('hbOpenSignup').addEventListener('click', () => openModal('signup'));
     document.getElementById('hbOpenLogin').addEventListener('click',  () => openModal('login'));
@@ -1674,8 +1693,9 @@
               .then(cred => {
                 const u = cred.user;
                 const named = u.updateDisplayName ? u.updateDisplayName(firstName + ' ' + lastName) : Promise.resolve();
-                // Send the email-verification link (posting is gated on it).
-                return named.then(() => u.sendEmailVerification ? u.sendEmailVerification() : Promise.resolve());
+                // Send the email-verification link (posting is gated on it),
+                // with a continue URL back to Hub-Bub.
+                return named.then(() => hbSendVerification(u));
               })
               .then(() => {
                 btn.disabled = false;
@@ -1696,7 +1716,11 @@
             import('https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js').then(m => {
               m.createUserWithEmailAndPassword(window._FIREBASE_AUTH, email, password)
                 .then(cred => m.updateProfile(cred.user, { displayName: firstName + ' ' + lastName })
-                  .then(() => m.sendEmailVerification ? m.sendEmailVerification(cred.user) : Promise.resolve()))
+                  .then(() => {
+                    if (!m.sendEmailVerification) return Promise.resolve();
+                    return m.sendEmailVerification(cred.user, { url: HB_VERIFY_CONTINUE_URL })
+                      .catch(() => m.sendEmailVerification(cred.user)); // fall back if continue URL not authorized
+                  }))
                 .then(() => {
                   btn.disabled = false;
                   btn.textContent = 'Create account & join Hub-Bub';
@@ -1797,7 +1821,7 @@
               showMsg('hbLoginMsg', '✓ Your email is already verified — just log in.', 'success');
               return;
             }
-            return u.sendEmailVerification().then(function () {
+            return hbSendVerification(u).then(function () {
               showMsg('hbLoginMsg', '✓ Verification email sent to ' + email + '. Check your inbox/spam, click the link, then reload this page.', 'success');
             });
           })
