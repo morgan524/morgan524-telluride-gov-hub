@@ -381,9 +381,26 @@
     document.getElementById('hbFileInput').click();
   };
   var HB_DOC_MAX_MB = 20; // per-file limit for documents
+  // Allow-list for attachments: images + common document types. Blocks
+  // executables/scripts/archives/etc. Checked by MIME first; falls back to
+  // file extension when the browser reports an empty type. Enforced again
+  // server-side in storage.rules (this is just the friendly client guard).
+  var HB_ALLOWED_EXT = /\.(jpe?g|png|gif|webp|heic|heif|pdf|docx?|txt|rtf)$/i;
+  function hbIsAllowedUpload(file) {
+    var t = (file.type || '').toLowerCase();
+    if (t.indexOf('image/') === 0) return true;
+    if (t === 'application/pdf') return true;
+    if (/msword|wordprocessingml|officedocument|rtf|text\/plain/.test(t)) return true;
+    if (!t && HB_ALLOWED_EXT.test(file.name || '')) return true; // empty MIME → trust extension
+    return false;
+  }
   window.hbHandleFiles = function(input) {
     var files = Array.from(input.files);
     files.forEach(function(file) {
+      if (!hbIsAllowedUpload(file)) {
+        alert('"' + file.name + '" can\'t be attached. Allowed file types: images (JPG/PNG/GIF/WebP), PDF, Word, and text documents.');
+        return;
+      }
       if (file.size > HB_DOC_MAX_MB * 1024 * 1024) {
         alert('File "' + file.name + '" is too large (max ' + HB_DOC_MAX_MB + ' MB). For large PDFs, consider compressing first.');
         return;
@@ -1023,13 +1040,37 @@
   window.hbAdminDelete = function(postId) {
     if (!hbUser || hbUser.email !== 'info@livabletelluride.org') return;
     if (!confirm('Are you sure you want to delete this post? This cannot be undone.')) return;
-    db.collection('posts').doc(postId).delete().then(function() {
-      // Also delete all replies for this post
+    // First read the post to collect its Storage file URLs (featured photo +
+    // attachments), so we can delete those objects too and not leave orphans
+    // in the bucket. Then delete the doc, its replies, and the files.
+    db.collection('posts').doc(postId).get().then(function(snap) {
+      var data = snap.exists ? (snap.data() || {}) : {};
+      var fileUrls = [];
+      if (data.imageUrl) fileUrls.push(data.imageUrl);
+      if (Array.isArray(data.attachments)) {
+        data.attachments.forEach(function(a) { if (a && a.url) fileUrls.push(a.url); });
+      }
+      return db.collection('posts').doc(postId).delete().then(function() { return fileUrls; });
+    }).then(function(fileUrls) {
+      // Delete reply docs (legacy top-level collection keyed by postId).
       db.collection('replies').where('postId', '==', postId).get().then(function(snapshot) {
         var batch = db.batch();
         snapshot.forEach(function(doc) { batch.delete(doc.ref); });
         return batch.commit();
-      });
+      }).catch(function() {});
+      // Delete the post's Storage files — best effort; a failure here must
+      // not block or error the post deletion (the doc is already gone).
+      if (storage && fileUrls.length) {
+        fileUrls.forEach(function(url) {
+          try {
+            storage.refFromURL(url).delete().catch(function(e) {
+              console.warn('Storage cleanup: could not delete ' + url + ' — ' + ((e && e.code) || e));
+            });
+          } catch (e) {
+            console.warn('Storage cleanup: unrecognized URL, skipped: ' + url);
+          }
+        });
+      }
       hbLoadPosts();
     }).catch(function(err) {
       alert('Error deleting post: ' + err.message);
