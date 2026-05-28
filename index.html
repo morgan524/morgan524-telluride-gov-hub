@@ -780,11 +780,20 @@
                   metaParts.push(formatDate(m.eventDate));
                   if (m.eventTimes) metaParts.push(m.eventTimes);
                   if (m.location) metaParts.push(m.location);
+                  // Link target: if an agenda is posted, go straight to it
+                  // (agendaLink, or `link` which holds the agenda PDF for
+                  // sources like the Hospital District). Otherwise default
+                  // to the Gov-Hub page. Mirrors gov-hub.html's own
+                  // agendaUrl = agendaLink || link normalization, gated on
+                  // hasAgenda so we only deep-link when an agenda exists.
+                  const agendaUrl = m.agendaLink || m.link || '';
+                  const meetingHref = (m.hasAgenda && agendaUrl) ? agendaUrl : href;
                   items.push({
                     date: m.eventDate,
                     title: displayTitle,
                     meta: metaParts.join(' • '),
-                    href: href
+                    href: meetingHref,
+                    external: /^https?:\/\//i.test(meetingHref)
                   });
                 });
               } catch (e) {}
@@ -830,7 +839,10 @@
             list.innerHTML = top.map(it => {
               const m = it.date.toLocaleString('en', { month: 'short' });
               const d = it.date.getDate();
-              return '<a class="week-item" href="' + it.href + '">'
+              // External agenda links (PDFs / portals) open in a new tab;
+              // internal /gov-hub.html and /events.html links stay in-tab.
+              const tgt = it.external ? ' target="_blank" rel="noopener"' : '';
+              return '<a class="week-item" href="' + it.href + '"' + tgt + '>'
                    +   '<div class="week-date"><div class="month">' + m + '</div><div class="day">' + d + '</div></div>'
                    +   '<div class="info"><h4>' + it.title + '</h4><p class="meta">' + it.meta + '</p></div>'
                    +   '<div class="arrow">›</div>'
