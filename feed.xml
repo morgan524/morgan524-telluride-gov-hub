@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 May 2026 02:40:32 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2026 09:56:45 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Design Review Board — 2026-06-04</title>
@@ -95,6 +95,26 @@ Meeting scheduled for first Monday of the month · Commission reviews open space
 Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four weeks of hiking from May 31 through June 28, with a kickoff at 11am on May 31 at the Oak Street gondola plaza. Hike from anywhere and raise funds for the Telluride Rotary Foundation — supporting scholarships, Youth Exchange, international projects, and community grants. 60% of nonprofit team funds go directly back to their nonprofit. Sponsored by Alpine Bank and Jagged Edge Mountain Gear.]]></description>
       <category>Community Event</category>
       <category>Telluride Rotary Club</category>
+    </item>
+    <item>
+      <title>‘Refreshed’ Wild West Fest is back</title>
+      <link>https://www.telluridenews.com/news/article_59368846-14d1-48b6-af76-572d06c92b15.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_59368846-14d1-48b6-af76-572d06c92b15.html</guid>
+      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/d6/cd6adb7e-6b3f-4df9-ad01-30f555752e79/6a17f3c41f222.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Wild West Fest returns in 2026 after a year hiatus, with organizers making changes based on kid feedback from surveys. The updated program includes more horseback riding through partnerships with local outfitters and shorter activity sessions instead of multi-day commitments.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/d6/cd6adb7e-6b3f-4df9-ad01-30f555752e79/6a17f3c41f222.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>arts-culture</category>
+    </item>
+    <item>
+      <title>Legals and Public Notices for May 28-June 3, 2026</title>
+      <link>https://www.telluridenews.com/obituaries/article_0adc5789-cb68-4509-b7a8-1e8bf62a4c8e.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/obituaries/article_0adc5789-cb68-4509-b7a8-1e8bf62a4c8e.html</guid>
+      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />A local resident named Kendal Dawn Oakleaf Smith has petitioned San Miguel County Court for a name change to Kendal Dawn Oakleaf Smith. The Colorado Community Action Association is accepting applications through June 3rd for a basic income research project offering $13,000 one-time payments to eligible county residents. The county is also seeking contractors for flooring replacement projects and a boiler system replacement at Down Valley Park.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
     </item>
     <item>
       <title>Man arrested for hiding sex offender status</title>
@@ -389,24 +409,6 @@ The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted 
       <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[West End Roundup with the San Miguel Basin Forum; Kris Tompkins on Rewilding the Mind; A Placerville Poetry Box]]></description>
       <category>KOTO Community Radio</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>A Placerville Poetry Box</title>
-      <link>https://koto.org/news/san-miguel-canyon-telluride-poetry-box-colorado/</link>
-      <guid isPermaLink="false">https://koto.org/news/san-miguel-canyon-telluride-poetry-box-colorado/</guid>
-      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[A bright yellow poetry box on the side of the road in San Miguel Canyon offers people driving to and fro a place to stop, write, and share poems. Created by local poet Rosemerry Wahtola Trommer, the poetry box is an opportunity to pause, reflect, and embrace a sense of community.]]></description>
-      <category>KOTO Community Radio</category>
-      <category>infrastructure</category>
-    </item>
-    <item>
-      <title>DOLA Economic Vitality Community Session on May 27, 2026</title>
-      <link>https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/EV-Posters-for-Ridgway-DOLA-visit-May-2026_1.pdf</link>
-      <guid isPermaLink="false">https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/EV-Posters-for-Ridgway-DOLA-visit-May-2026_1.pdf</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Press release from the Town of Ridgway. Click to view the full PDF.]]></description>
-      <category>Town of Ridgway</category>
       <category>community</category>
     </item>
   </channel>
