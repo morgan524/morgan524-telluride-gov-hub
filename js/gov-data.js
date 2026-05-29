@@ -2049,6 +2049,14 @@ const LOCAL_ORGS = [
       logo: "https://livabletelluride.org/logo/Wilkenson.png"
     },
     {
+      name: "Friends of the Wilkinson Public Library",
+      category: "nonprofits",
+      town: "Telluride",
+      summary: "Volunteer nonprofit supporting Wilkinson Public Library through fundraising, advocacy, and programming the library's operating budget alone can't cover.",
+      website: "https://www.telluridelibrary.org/fol",
+      logo: "https://livabletelluride.org/logo/Telluriden%20FOT%20Library.webp"
+    },
+    {
       name: "Sheridan Opera House",
       category: "nonprofits",
       town: "Telluride",
