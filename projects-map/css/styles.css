@@ -125,39 +125,6 @@ body {
   line-height: 1.2;
 }
 
-/* FILTERS */
-#filters {
-  padding: 8px 10px;
-  border-bottom: 1px solid var(--border);
-  overflow-y: auto;
-  flex-shrink: 0;
-  max-height: 180px;
-}
-.filter-section { margin-bottom: 6px; }
-.filter-section:last-child { margin-bottom: 0; }
-.filter-label {
-  font-size: 0.6rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-muted);
-  margin-bottom: 3px;
-  font-weight: 600;
-}
-.filter-chips { display: flex; flex-wrap: wrap; gap: 3px; }
-.filter-chip {
-  padding: 2px 7px;
-  border: 1px solid #d1d5db;
-  border-radius: 99px;
-  background: white;
-  font-size: 0.68rem;
-  cursor: pointer;
-  color: #374151;
-  transition: all 0.12s;
-  white-space: nowrap;
-}
-.filter-chip:hover { border-color: var(--green-mid); color: var(--green-mid); }
-.filter-chip.active { background: var(--green-dark); color: white; border-color: var(--green-dark); }
-
 /* PROJECT LIST */
 #project-list {
   flex: 1;

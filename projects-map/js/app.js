@@ -38,7 +38,7 @@ const MASSING_COLORS = {
 // ─── State ────────────────────────────────────────────────────────────────────
 let allProjects      = [];
 let filteredProjects = [];
-let activeFilters    = { search: '', type: null, status: null, communityArea: null, sourceConfidence: null };
+let activeFilters    = { search: '' };  // only the search box remains; chip filters were removed
 let map;
 let markers          = []; // { mapMarker, el, project }
 let activeProject    = null;
@@ -71,7 +71,6 @@ async function init() {
   }
 
   buildPresetButtons();
-  buildFilterUI();
   buildLegend();
   applyFilters();
 
@@ -370,48 +369,6 @@ function buildPresetButtons() {
   });
 }
 
-// ─── Filter UI ───────────────────────────────────────────────────────────────
-function buildFilterUI() {
-  const types       = new Set();
-  const statuses    = new Set();
-  const areas       = new Set();
-  const confidences = new Set();
-
-  allProjects.forEach(p => {
-    p.projectType.forEach(t => types.add(t));
-    statuses.add(p.status);
-    areas.add(p.communityArea);
-    confidences.add(p.sourceConfidence);
-  });
-
-  renderChips('filter-type',       [...types].sort(),      'type');
-  renderChips('filter-status',     [...statuses].sort(),   'status');
-  renderChips('filter-area',       [...areas].sort(),      'communityArea');
-  renderChips('filter-confidence', [...confidences].sort(),'sourceConfidence');
-}
-
-function renderChips(containerId, values, filterKey) {
-  const container = document.getElementById(containerId);
-  if (!container) return;  // filter UI removed (mobile + desktop) — no-op
-  values.forEach(val => {
-    const chip = document.createElement('button');
-    chip.className = 'filter-chip';
-    chip.textContent = val;
-    chip.addEventListener('click', () => {
-      if (activeFilters[filterKey] === val) {
-        activeFilters[filterKey] = null;
-        chip.classList.remove('active');
-      } else {
-        container.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
-        activeFilters[filterKey] = val;
-        chip.classList.add('active');
-      }
-      applyFilters();
-    });
-    container.appendChild(chip);
-  });
-}
-
 // ─── Legend ───────────────────────────────────────────────────────────────────
 function buildLegend() {
   const container = document.getElementById('legend-items');
@@ -459,10 +416,6 @@ function applyFilters() {
       ].join(' ').toLowerCase();
       if (!haystack.includes(activeFilters.search)) return false;
     }
-    if (activeFilters.type         && !p.projectType.includes(activeFilters.type)) return false;
-    if (activeFilters.status       && p.status !== activeFilters.status)           return false;
-    if (activeFilters.communityArea && p.communityArea !== activeFilters.communityArea) return false;
-    if (activeFilters.sourceConfidence && p.sourceConfidence !== activeFilters.sourceConfidence) return false;
     return true;
   });
 
@@ -492,7 +445,7 @@ function setMassingFilters(extra) {
 function updateMassingFilter() {
   if (!massingLoaded) return;
   const visibleIds = filteredProjects.map(p => p.id);
-  const hasActiveFilter = Object.values(activeFilters).some(v => v !== null && v !== '');
+  const hasActiveFilter = !!activeFilters.search;
   if (hasActiveFilter) {
     setMassingFilters(['in', ['get', 'project_id'], ['literal', visibleIds]]);
   } else {
