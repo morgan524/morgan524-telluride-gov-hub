@@ -88,7 +88,7 @@ const MANUAL_SUMMARIES = {
     "Agenda not yet available",
 
   "med|2026-05-28|Regular Board Meeting":
-    "The May 28 regular board meeting agenda hasn't been posted yet.",
+    "A regular Telluride Hospital District board meeting. Past the consent agenda and the April draft financials, the substance is in Board Matters — updates on the new facility, partnership talks, and early mill levy considerations. The mill levy is the one to watch; that's the property-tax lever that funds the district. CEO and Foundation/campaign reports round it out. In person at 333 W. Colorado Ave. or by Zoom.",
 
   "school|2026-06-09|Telluride Board of Education Work Session":
     "Agenda not yet available",
@@ -1637,6 +1637,47 @@ const COMMUNITY_EVENTS = [
     beneficiary: "Tri-County Health Network"
   }
 ];
+
+// ── Music on the Green — Mountain Village summer concert series ──
+// Free-form curated series (Beyond the Groove / sunsetconcertseries.com).
+// Every Friday 5–7 PM at Reflection Plaza (next to Hotel Madeline) in
+// Mountain Village. events.html reads this via its pushEvent loop, so each
+// concert renders as its own card on the Events tab within the rolling
+// 60-day look-ahead window. Per-band photos live in /img/music-on-the-green/.
+// Update this list each season from https://sunsetconcertseries.com/music-on-the-green
+const MUSIC_ON_THE_GREEN = (function () {
+  const SERIES_LINK = 'https://sunsetconcertseries.com/music-on-the-green';
+  const LOCATION = 'Reflection Plaza (next to Hotel Madeline), Mountain Village';
+  const TIME = '5:00 – 7:00 PM';
+  const lineup = [
+    { date: '2026-05-29', band: 'Dori Freeman',                   slug: 'dori-freeman' },
+    { date: '2026-06-05', band: 'Madeline Hawthorne',             slug: 'madeline-hawthorne' },
+    { date: '2026-06-12', band: 'J Plank & the Bernese Rescue Band', slug: 'j-plank' },
+    { date: '2026-06-19', band: 'The Lowest Pair',                slug: 'the-lowest-pair' },
+    { date: '2026-06-26', band: 'LVDY',                           slug: 'lvdy' },
+    { date: '2026-07-10', band: 'Alex Maryol',                    slug: 'alex-maryol' },
+    { date: '2026-07-17', band: 'Sway Wild',                      slug: 'sway-wild' },
+    { date: '2026-07-24', band: 'Jon Stickley Trio',              slug: 'jon-stickley-trio' },
+    { date: '2026-07-31', band: 'South Austin Moonlighters',      slug: 'south-austin-moonlighters' },
+    { date: '2026-08-07', band: 'Logan Metz',                     slug: 'logan-metz' },
+    { date: '2026-08-14', band: 'Ben Musser & Walker Young',      slug: 'ben-musser-walker-young' },
+    { date: '2026-08-21', band: 'Ray Wylie Hubbard',             slug: 'ray-wylie-hubbard' },
+    { date: '2026-08-28', band: 'Cristina Vane',                  slug: 'cristina-vane' },
+    { date: '2026-09-04', band: 'Daniel Rodriguez',               slug: 'daniel-rodriguez' },
+    { date: '2026-09-11', band: 'Danno Simpson',                  slug: 'danno-simpson' },
+    { date: '2026-09-18', band: 'Leon Timbo',                     slug: 'leon-timbo' },
+  ];
+  return lineup.map(c => ({
+    title: c.band + ' — Music on the Green',
+    date: c.date,
+    time: TIME,
+    location: LOCATION,
+    description: 'Outdoor summer concert in Mountain Village\'s Music on the Green series, presented by Beyond the Groove. Live music at Reflection Plaza (next to Hotel Madeline), Fridays 5–7 PM. This week: ' + c.band + '.',
+    href: SERIES_LINK,
+    imageUrl: '/img/music-on-the-green/' + c.slug + '.jpg',
+    sourceLabel: 'Music on the Green',
+  }));
+})();
 
 const KOTO_COMMUNITY_EVENTS = [
   {

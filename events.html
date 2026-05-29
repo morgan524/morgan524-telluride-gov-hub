@@ -1211,8 +1211,8 @@
     /* ── Calendar rendering ─────────────────────────────────────
        Always render the current month. Render the next month too
        when at least one event in the filtered set falls in it
-       (events.html ingestion caps the set at "next 30 days," so
-       this is the only way the calendar ever spans two months). */
+       (events.html ingestion caps the set at "next 60 days," so
+       the calendar can span up to three months). */
     function renderCalendarView(events) {
       const today = new Date(); today.setHours(0,0,0,0);
       const curStart = new Date(today.getFullYear(), today.getMonth(), 1);
@@ -1372,15 +1372,18 @@
                const start = e.pubDate || e.start_date || e.date || '';
                const dateStr = start ? new Date(start).toISOString().slice(0,10) : '';
                if (!dateStr) return;
-               // Only include events in the next 30 days
+               // Only include events in the next 60 days (rolling look-ahead
+               // so multi-week series like Music on the Green show what's coming).
                const dt = new Date(dateStr + 'T00:00:00');
                const today = new Date(); today.setHours(0,0,0,0);
                const diff = (dt - today) / 86400000;
-               if (diff < 0 || diff > 30) return;
+               if (diff < 0 || diff > 60) return;
                live.push({
                  title: e.title,
                  date: dateStr,
-                 time: (start && typeof start === 'string' && start.includes('T')) ? new Date(start).toLocaleTimeString([], {hour:'numeric', minute:'2-digit'}) : '',
+                 // Prefer an explicit time string (e.g. curated "5:00 – 7:00 PM");
+                 // otherwise derive it from an ISO datetime when present.
+                 time: e.time || ((start && typeof start === 'string' && start.includes('T')) ? new Date(start).toLocaleTimeString([], {hour:'numeric', minute:'2-digit'}) : ''),
                  location: e.location || '',
                  town: townFromLocation(e.location || ''),
                  summary: (e.description || '').replace(/<[^>]+>/g,'').slice(0, 600),
@@ -1395,6 +1398,7 @@
              // without breaking the page.
              if (typeof WILKINSON_EVENTS !== 'undefined') WILKINSON_EVENTS.forEach(e => pushEvent(e, 'Wilkinson Library'));
              if (typeof COMMUNITY_EVENTS !== 'undefined') COMMUNITY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Community'));
+             if (typeof MUSIC_ON_THE_GREEN !== 'undefined') MUSIC_ON_THE_GREEN.forEach(e => pushEvent(e, e.sourceLabel || 'Music on the Green'));
              if (typeof TELLURIDE_FOUNDATION_EVENTS !== 'undefined') TELLURIDE_FOUNDATION_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Telluride Foundation'));
              if (typeof OURAY_COUNTY_EVENTS !== 'undefined') OURAY_COUNTY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Ouray County'));
              if (typeof NORWOOD_EVENTS !== 'undefined') NORWOOD_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Norwood'));
