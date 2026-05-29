@@ -652,6 +652,10 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 2rem;
     }
+    /* Anchor wrapping the image makes the card visual clickable in addition
+       to the "Read post →" link below. display:block so it doesn't add an
+       inline baseline gap under the image. */
+    .blog-card-img-link { display: block; }
     .blog-card-body {
       padding: 12px 14px 14px;
       flex: 1;
@@ -716,9 +720,14 @@
           const rt     = p.readTime || '';
           const excerpt = p.excerpt || p.summary || '';
           const img    = p.image || p.img || '';
+          const safeTitle = title.replace(/"/g,'&quot;');
+          // Wrap the image (or placeholder) in an anchor so the card visual is
+          // clickable, matching the "Read post →" link below. onerror replaces
+          // just the <img> (this.outerHTML) with the placeholder — the previous
+          // `this.parentNode.innerHTML = …` would wipe the entire article body.
           const imgHtml = img
-            ? `<img class="blog-card-img" src="${img}" alt="${title.replace(/"/g,'&quot;')}" loading="lazy" onerror="this.parentNode.innerHTML='<div class=blog-card-img-placeholder>📝</div>'">`
-            : `<div class="blog-card-img-placeholder">📝</div>`;
+            ? `<a class="blog-card-img-link" href="${href}" target="_blank" rel="noopener" aria-label="${safeTitle}"><img class="blog-card-img" src="${img}" alt="${safeTitle}" loading="lazy" onerror="this.outerHTML='<div class=blog-card-img-placeholder>📝</div>'"></a>`
+            : `<a class="blog-card-img-link" href="${href}" target="_blank" rel="noopener" aria-label="${safeTitle}"><div class="blog-card-img-placeholder">📝</div></a>`;
           const metaParts = [date, rt ? rt + ' read' : ''].filter(Boolean);
           return `
             <article class="blog-card">
