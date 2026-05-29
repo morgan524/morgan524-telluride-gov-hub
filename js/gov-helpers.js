@@ -151,7 +151,7 @@ const MANUAL_SUMMARIES = {
     "The agenda text for this Commission for Community Assistance, Arts & Special Events meeting is missing — only the portal navigation and meeting list appears.",
 
   "telluride|2026-06-03|Telluride Housing Authority Subcommittee - Jun 03 2026":
-    "The Jun 03 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The Jun 03 2026 Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-06-01|Open Space Commission - Jun 01 2026":
     "Meeting scheduled for first Monday of the month · Commission reviews open space acquisitions and management · Advises Town Council on comprehensive plan elements",
@@ -166,10 +166,10 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -880,66 +880,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Colorado's Democratic governor commutes ex-election clerk Tina Peters' sentence after Trump pressure",
-    source: "Telluride Times",
-    date: "May 15, 2026",
-    firstSeen: "2026-05-16",
-    newsTopic: "government",
-    copy: "Governor Polis commuted former Mesa County election clerk Tina Peters' prison sentence after she was convicted of allowing unauthorized access to voting equipment in 2021. Peters had smuggled in an associate of MyPillow's Mike Lindell to copy election computer servers, later shared at a \"cybersymposium.\" Trump celebrated the decision while Secretary of State Griswold called it \"selling out our state's justice system.\"",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_9e3062ea-83f3-51a0-9f48-6a2e62d31d45.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/1e/b1ec7de1-b5e3-5e4e-95b3-697a44fdd763/6a0794aa1edc4.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Colorado's Democratic governor commutes the sentence of elections clerk Tina Peters after pressure from President Trump",
-    source: "Telluride Times",
-    date: "May 15, 2026",
-    firstSeen: "2026-05-16",
-    newsTopic: "government",
-    copy: "Colorado's Democratic governor commutes the sentence of elections clerk Tina Peters after pressure from President Trump.",
-    claudeSummary: false,
-    href: "https://www.telluridenews.com/news/state/article_3013befe-22ca-5e49-ab32-450e2db1936e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Bike safety concern prompts a ‘bold move’",
-    source: "Telluride Times",
-    date: "May 15, 2026",
-    firstSeen: "2026-05-16",
-    newsTopic: "education",
-    copy: "A Mountain School student completed her capstone project on bike safety after noticing many local teenagers not wearing helmets. Her research found 40% of surveyed kids don't wear helmets, and she observed unsafe practices like multiple riders on e-bikes designed for fewer people.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_5690068e-7e59-46e4-b19c-d4e45b334750.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/3e/43e515a2-f472-4cf6-abaa-8065fa6a5641/6a0642203b240.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Seeds of motherhood",
-    source: "Telluride Times",
-    date: "May 15, 2026",
-    firstSeen: "2026-05-16",
-    newsTopic: "community",
-    copy: "Carol Hiatt reflects on raising her daughter Madison in the mountains, sharing memories from first ski lessons to snowmobile mishaps to Sunday afternoons reading by the fire. Now an adult, Madison has grown into a skilled woman who bakes bread and hosts board games, embodying the nurturing home environment she grew up with while developing her own distinct traits.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_cbfd4cab-6e21-4681-ae0f-8f35fc8eca9b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/1a/a1a74b80-0896-421a-9999-e5f3d6b186c7/6a04900858af0.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Upcoming TEF events are ‘by us, for us’",
-    source: "Telluride Times",
-    date: "May 15, 2026",
-    firstSeen: "2026-05-15",
-    newsTopic: "community",
-    copy: "Tyler, a local restaurant worker and parent, teamed up with Telluride Education Foundation president Hannah Richman to create fundraising events for the schools after seeing program cuts. The School Supper Club runs May 25-29 with participating restaurants like Cornerhouse, The National, and 221 South Oak donating proceeds, followed by Party in the Park featuring local bands, food vendors, and activities like a mechanical bull.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_1f48aede-d175-43bc-b798-8d9ecad4410f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/20/0206d206-c227-4ced-a75b-1a575f5e764a/6a064b51bf0d7.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Highway 62 between Ridgway and Placerville re-opens",
     source: "Telluride Times",
     date: "May 22, 2026",
@@ -1035,7 +975,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "here",
     source: "Town of Ridgway",
-    date: "May 28, 2026",
+    date: "May 29, 2026",
     firstSeen: "2026-05-27",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1057,7 +997,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "DOLA Economic Vitality Community Session on May 27, 2026",
     source: "Town of Ridgway",
-    date: "May 28, 2026",
+    date: "May 29, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1068,7 +1008,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "CO Main Street Architect Visits on May 27-28, 2026",
     source: "Town of Ridgway",
-    date: "May 28, 2026",
+    date: "May 29, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1079,7 +1019,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "May 28, 2026",
+    date: "May 29, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1112,6 +1052,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 5-28-26",
+    source: "KOTO Community Radio",
+    date: "May 29, 2026",
+    newsTopic: "public-safety",
+    copy: "Telluride Fire Plans for Station 3 Expansion; West End Roundup with the San Miguel Basin Forum; Wear a Lifejacket and Don’t Touch the Wildlife",
+    href: "https://koto.org/news/newscast-5-28-26/"
+  },
   {
     title: "Newscast 5-27-26",
     source: "KOTO Community Radio",
@@ -1159,14 +1107,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "land-use",
     copy: "On this week’s Regional Roundup, we hear about the Trump administration’s decision to rescind the Public Lands Rule, and we hear a report on the success of wildlife crossings in Wyoming. As bears become more active, we hear why communities need to be bear aware, and we'll hear about efforts across the region to protect dark skies from light polluti",
     href: "https://koto.org/news/newscast-5-15-26/"
-  },
-  {
-    title: "Newscast 5-14-26",
-    source: "KOTO Community Radio",
-    date: "May 15, 2026",
-    newsTopic: "community",
-    copy: "West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda; Listening Club is the Cure for Disintegration",
-    href: "https://koto.org/news/newscast-5-14-26/"
   }
 ];
 
@@ -2163,6 +2103,28 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-22/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-06-22T09:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-23/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-06-23T09:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
   }
 ];
 
