@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 May 2026 14:53:56 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2026 20:16:49 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Telluride Board of Education Work Session — 2026-06-09</title>
@@ -296,15 +296,6 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <category>community</category>
     </item>
     <item>
-      <title>Water service outage planned for night of May 28th</title>
-      <link>https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Water-Shut-Off-Notice-Press-Release-2026-05-27.pdf</link>
-      <guid isPermaLink="false">https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Water-Shut-Off-Notice-Press-Release-2026-05-27.pdf</guid>
-      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Press release from the Town of Ridgway. Click to view the full PDF.]]></description>
-      <category>Town of Ridgway</category>
-      <category>infrastructure</category>
-    </item>
-    <item>
       <title>Ridgway Youth Advisory Council Meeting Agenda</title>
       <link>https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/YAC-Meeting-Agenda-%26-Packet---June-1%2C-2026.pdf</link>
       <guid isPermaLink="false">https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/YAC-Meeting-Agenda-%26-Packet---June-1%2C-2026.pdf</guid>
@@ -312,6 +303,15 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <description><![CDATA[Press release from the Town of Ridgway. Click to view the full PDF.]]></description>
       <category>Town of Ridgway</category>
       <category>government</category>
+    </item>
+    <item>
+      <title>Water service outage planned for night of May 28th</title>
+      <link>https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Water-Shut-Off-Notice-Press-Release-2026-05-27.pdf</link>
+      <guid isPermaLink="false">https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Water-Shut-Off-Notice-Press-Release-2026-05-27.pdf</guid>
+      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Press release from the Town of Ridgway. Click to view the full PDF.]]></description>
+      <category>Town of Ridgway</category>
+      <category>infrastructure</category>
     </item>
     <item>
       <title>Gabriel Landeskog uses in-skate sensors, AI-driven movement platform to manage his knee and workload</title>
