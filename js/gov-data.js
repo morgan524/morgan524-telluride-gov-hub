@@ -1857,7 +1857,7 @@ const LOCAL_ORGS = [
       summary: "Provides fire protection, emergency response, technical rescue, and public safety services for the Telluride Fire Protection District and surrounding communities. Volunteers welcome.",
       website: "https://telluridefire.com/",
       donate: "https://www.telluridefire.com/donate",
-      social: {},
+      social: { facebook: "https://www.facebook.com/telluridevfd/", instagram: "https://www.instagram.com/telluridefpd/" },
       logo: "https://livabletelluride.org/logo/Telluride%20Fire.png"
     },
     {
@@ -1866,7 +1866,7 @@ const LOCAL_ORGS = [
       town: "Norwood",
       summary: "Public recreation agency serving over 418,500 acres since 2008. Offers year-round programs including Nordic skiing, ice rink, disc golf, pickleball, fitness classes, youth sports, and arts programming. Manages The Livery event venue, 90+ miles of trails, and community facilities.",
       website: "https://www.norwoodparkandrec.org/",
-      social: {},
+      social: { facebook: "https://www.facebook.com/norwoodrec/" },
       logo: "https://livabletelluride.org/logo/Norwood%20Parks.png"
     },
     {
@@ -1891,7 +1891,8 @@ const LOCAL_ORGS = [
       town: "Norwood",
       summary: "Part of Colorado State University Extension, 4-H provides project-based learning for youth across agriculture, livestock, horticulture, natural resources, and home &amp; family topics. Members join a local club to participate in hands-on activities, fairs, and community service.",
       website: "https://sanmiguel.extension.colostate.edu/smb-club-list/",
-      social: {},
+      donate: "https://extension.colostate.edu/san-miguel/give/",
+      social: { facebook: "https://www.facebook.com/people/Colorado-State-University-Extension-San-Miguel-Basin-4-H/100079938742937/" },
       logo: "https://livabletelluride.org/logo/4-h.png"
     },
     {
@@ -1921,7 +1922,7 @@ const LOCAL_ORGS = [
       summary: "Provides youth soccer programs, training, and recreational opportunities for young players in Telluride and the surrounding region. Programs for a range of ages and skill levels.",
       website: "https://www.telluridesoccer.com/",
       donate: "https://www.telluridesoccer.com/donate/",
-      social: {},
+      social: { facebook: "https://www.facebook.com/Telluridesoccer/" },
       logo: "https://livabletelluride.org/logo/Telluride%20Soccer.jpeg"
     },
     {
@@ -1958,7 +1959,7 @@ const LOCAL_ORGS = [
       town: "Norwood",
       summary: "Supports local business growth and community development in Norwood, Colorado. Maintains a business directory, facilitates networking, and promotes area tourism and economic vitality for this small mountain community.",
       website: "https://norwoodcolorado.com/",
-      social: {},
+      social: { facebook: "https://www.facebook.com/p/Norwood-Chamber-of-Commerce-of-Wrights-Mesa-61554955367435/" },
       logo: "https://livabletelluride.org/logo/norwood-chamber.png"
     },
     {
@@ -1986,7 +1987,7 @@ const LOCAL_ORGS = [
       summary: "With roots dating to 1889 as a Congregational church, it became Presbyterian in 1938. A loving and accepting fellowship emphasizing hospitality and community, with children's ministry, contemplative gardens, and local outreach initiatives.",
       website: "https://christpresbyterianchurchtelluride.com/",
       donate: "https://give.tithe.ly/?locationId=0a4029c9-d139-4987-b918-ae3e308bd39e",
-      social: {},
+      social: { facebook: "https://www.facebook.com/p/Christ-Presbyterian-Church-Telluride-61562972470758/", youtube: "https://www.youtube.com/@ChristPresbyterianChurch-sd1nx" },
       logo: "https://livabletelluride.org/logo/Church.png"
     },
     {
@@ -1996,7 +1997,7 @@ const LOCAL_ORGS = [
       summary: "Historic Catholic parish established in 1896, serving the Telluride community at 8,750 feet in the San Juan Mountains. Part of the Diocese of Pueblo, also operating a mission in Nucla.",
       website: "https://stpatrickstelluride.com/",
       donate: "https://stpatrickstelluride.com/donate/",
-      social: {},
+      social: { facebook: "https://www.facebook.com/StPatricksTelluride/" },
       logo: "https://livabletelluride.org/logo/Church.png"
     },
     {
@@ -2015,7 +2016,7 @@ const LOCAL_ORGS = [
       summary: "Non-denominational Christian church serving the Telluride community with worship services, community outreach, and fellowship programs in a welcoming mountain-town setting.",
       website: "https://www.telluridechurch.org/",
       donate: "https://www.telluridechurch.org/give/",
-      social: {},
+      social: { facebook: "https://www.facebook.com/Telluride-Christian-Fellowship-47477149350", youtube: "https://www.youtube.com/@tcf8750" },
       logo: "https://livabletelluride.org/logo/Church.png"
     },
     /* ── 12 additional verified Telluride-area orgs (2026-05-16 expansion) ── */
@@ -2045,6 +2046,8 @@ const LOCAL_ORGS = [
       town: "Ridgway",
       summary: "Regional no-kill animal shelter based in Ridgway, serving the San Miguel and Ouray county region. Runs adoption, foster, low-cost spay/neuter, and humane-education programs.",
       website: "https://secondchancehumane.org/",
+      donate: "https://secondchancehumane.org/support-us/donate",
+      social: { facebook: "https://www.facebook.com/SecondChanceHumaneSociety", instagram: "https://www.instagram.com/secondchancehumanesociety/", twitter: "https://x.com/chancehumane", youtube: "https://www.youtube.com/channel/UC-gw9lq86637HbTJ0su2iiA" },
       logo: "https://livabletelluride.org/logo/Second%20Chance.webp"
     },
     {

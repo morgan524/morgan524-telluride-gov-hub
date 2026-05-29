@@ -360,6 +360,102 @@
     }
     .btn-social svg { width: 13px; height: 13px; }
 
+    /* ── Add-Organization modal ───────────────────────────────────────
+       Replaces the legacy mailto: button. Submitting still emails
+       info@livabletelluride.org (via a built mailto: URL) so the
+       processing pipeline doesn't change. */
+    #lvAddOrgOverlay {
+      position: fixed; inset: 0;
+      background: rgba(20,40,34,0.66);
+      z-index: 9999;
+      display: none;
+      align-items: center; justify-content: center;
+      padding: 20px;
+    }
+    #lvAddOrgOverlay.open { display: flex; }
+    #lvAddOrgModal {
+      background: #fff;
+      border-radius: 16px;
+      max-width: 520px;
+      width: 100%;
+      padding: 32px 28px 26px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+      font-family: var(--font-main);
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    #lvAddOrgModal h2 {
+      font-family: var(--font-heading);
+      color: var(--forest);
+      font-size: 1.55rem;
+      margin: 0 0 6px;
+      line-height: 1.2;
+    }
+    #lvAddOrgModal .lv-add-dek {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      margin: 0 0 18px;
+      line-height: 1.55;
+    }
+    #lvAddOrgModal .row { display: flex; flex-direction: column; gap: 6px; margin-bottom: 13px; }
+    #lvAddOrgModal label {
+      font-size: 0.74rem; font-weight: 700;
+      color: var(--forest);
+      letter-spacing: 0.04em; text-transform: uppercase;
+    }
+    #lvAddOrgModal label .req { color: var(--gold); margin-left: 2px; }
+    #lvAddOrgModal input,
+    #lvAddOrgModal select,
+    #lvAddOrgModal textarea {
+      padding: 10px 12px;
+      border: 1px solid rgba(33,68,60,0.20);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      background: #fff;
+      color: var(--text-primary);
+      width: 100%;
+    }
+    #lvAddOrgModal textarea { resize: vertical; min-height: 70px; }
+    #lvAddOrgModal input:focus,
+    #lvAddOrgModal select:focus,
+    #lvAddOrgModal textarea:focus {
+      outline: 2px solid var(--accent-green);
+      outline-offset: -1px;
+      border-color: transparent;
+    }
+    #lvAddOrgModal .lv-add-actions {
+      display: flex; gap: 12px; align-items: center;
+      margin-top: 14px; flex-wrap: wrap;
+    }
+    #lvAddOrgModal button[type="submit"] {
+      background: var(--forest); color: #fff;
+      border: none; border-radius: 999px;
+      padding: 11px 24px; font-weight: 700;
+      font-size: 0.95rem; cursor: pointer;
+      font-family: inherit;
+    }
+    #lvAddOrgModal button[type="submit"]:hover { background: var(--forest-soft); }
+    #lvAddOrgModal .lv-add-fine { font-size: 0.8rem; color: var(--text-muted); }
+    #lvAddOrgModal .lv-add-close {
+      position: absolute; top: 10px; right: 12px;
+      background: none; border: none; font-size: 1.6rem;
+      color: var(--text-muted); cursor: pointer; line-height: 1;
+      padding: 6px 10px; border-radius: 6px;
+    }
+    #lvAddOrgModal .lv-add-close:hover {
+      background: rgba(0,0,0,0.04); color: var(--text-primary);
+    }
+    #lvAddOrgModal .lv-add-msg {
+      font-size: 0.88rem; margin: 4px 0 0; min-height: 1em; line-height: 1.45;
+    }
+    #lvAddOrgModal .lv-add-msg.error { color: #b44b3c; }
+    #lvAddOrgModal .lv-add-msg.success { color: var(--accent-green); font-weight: 600; }
+    @media (max-width: 480px) {
+      #lvAddOrgModal { padding: 26px 20px 22px; }
+    }
+
     /* Bottom CTA strip — full-bleed */
     .add-org-strip {
       position: relative;
@@ -551,7 +647,7 @@
         <h3>Add Your<br>Organization</h3>
         <div class="rule"></div>
         <p>Is your organization missing from our list? Help keep our directory up to date and complete.</p>
-        <a class="add-org-btn" href="mailto:info@livabletelluride.org?subject=Add%20my%20organization%20to%20Livable%20Telluride&amp;body=Organization%20name%3A%0A%0AWebsite%3A%0A%0ACategory%20(service%20club%2C%20recreation%2C%20church%2C%20youth%2C%20business%2C%20or%20nonprofit)%3A%0A%0ATown%3A%0A%0AShort%20description%20(1-2%20sentences)%3A%0A%0ASocial%20media%20(optional)%3A%0A%0ALogo%3A%20please%20attach%20to%20this%20email">Add Your Organization</a>
+        <a class="add-org-btn" href="javascript:void(0)" onclick="lvShowAddOrg()">Add Your Organization</a>
         <div class="sidebar-mountains" aria-hidden="true">
           <svg viewBox="0 0 280 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
             <path fill="#a4b3a8" d="M0,68 L40,32 L72,52 L110,18 L150,46 L188,22 L228,44 L260,32 L280,58 L280,90 L0,90 Z"/>
@@ -595,7 +691,7 @@
         </svg>
       </div>
       <div class="add-org-strip-text">Know of a local organization we should feature? Help us keep this directory up to date.</div>
-      <a class="add-org-strip-cta" href="mailto:info@livabletelluride.org?subject=Add%20my%20organization%20to%20Livable%20Telluride&amp;body=Organization%20name%3A%0A%0AWebsite%3A%0A%0ACategory%20(service%20club%2C%20recreation%2C%20church%2C%20youth%2C%20business%2C%20or%20nonprofit)%3A%0A%0ATown%3A%0A%0AShort%20description%20(1-2%20sentences)%3A%0A%0ASocial%20media%20(optional)%3A%0A%0ALogo%3A%20please%20attach%20to%20this%20email">Add Your Organization →</a>
+      <a class="add-org-strip-cta" href="javascript:void(0)" onclick="lvShowAddOrg()">Add Your Organization →</a>
     </div>
   </section>
 
@@ -836,7 +932,129 @@
     }
     loadLiveOrgs();
 
+    /* ── Add-Organization modal — show / hide / submit ──────────────
+       Submitting builds a mailto: URL to info@livabletelluride.org
+       (with all the form fields prefilled in the body) and opens
+       the user's mail client. Keeps the existing intake flow but
+       gives users a real form UI instead of asking them to fill
+       fields inside their mail app's blank body. */
+    window.lvShowAddOrg = function () {
+      var ov = document.getElementById('lvAddOrgOverlay');
+      if (!ov) return;
+      var msg = document.getElementById('lvAddOrgMsg');
+      if (msg) { msg.className = 'lv-add-msg'; msg.textContent = ''; }
+      ov.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      setTimeout(function () {
+        var first = document.getElementById('lvAddOrgName');
+        if (first) first.focus();
+      }, 60);
+    };
+    window.lvHideAddOrg = function () {
+      var ov = document.getElementById('lvAddOrgOverlay');
+      if (ov) ov.classList.remove('open');
+      document.body.style.overflow = '';
+    };
+    window.lvSubmitAddOrg = function (event) {
+      if (event && event.preventDefault) event.preventDefault();
+      var name = document.getElementById('lvAddOrgName').value.trim();
+      var web  = document.getElementById('lvAddOrgWebsite').value.trim();
+      var cat  = document.getElementById('lvAddOrgCategory').value;
+      var loc  = document.getElementById('lvAddOrgLocation').value.trim();
+      var desc = document.getElementById('lvAddOrgDesc').value.trim();
+      var soc  = document.getElementById('lvAddOrgSocial').value.trim();
+      var msg  = document.getElementById('lvAddOrgMsg');
+
+      if (!name || !cat || !loc) {
+        msg.className = 'lv-add-msg error';
+        msg.textContent = 'Please fill in organization name, category, and location.';
+        return false;
+      }
+
+      var lines = [
+        'Organization name: ' + name,
+        'Website: ' + (web || '(none provided)'),
+        'Category: ' + cat,
+        'Location: ' + loc,
+        'Short description: ' + (desc || '(none provided)'),
+        'Social media: ' + (soc || '(none provided)'),
+        '',
+        '— Submitted from local-orgs.html'
+      ];
+      var subject = 'Add my organization: ' + name;
+      var body = lines.join('\n');
+      var mailto = 'mailto:info@livabletelluride.org'
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(body);
+
+      msg.className = 'lv-add-msg success';
+      msg.textContent = '✓ Opening your mail client — please send the prefilled email to complete your submission.';
+      // Slight delay so the success message renders before the mail handler fires.
+      setTimeout(function () { window.location.href = mailto; }, 150);
+      setTimeout(window.lvHideAddOrg, 2500);
+      return false;
+    };
+
+    /* Close on overlay click or Escape */
+    document.addEventListener('click', function (e) {
+      var ov = document.getElementById('lvAddOrgOverlay');
+      if (ov && e.target === ov) window.lvHideAddOrg();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        var ov = document.getElementById('lvAddOrgOverlay');
+        if (ov && ov.classList.contains('open')) window.lvHideAddOrg();
+      }
+    });
   </script>
+
+  <!-- ── Add-Organization modal ───────────────────────────────────── -->
+  <div id="lvAddOrgOverlay" role="dialog" aria-modal="true" aria-labelledby="lvAddOrgTitle">
+    <div id="lvAddOrgModal">
+      <button type="button" class="lv-add-close" aria-label="Close" onclick="lvHideAddOrg()">×</button>
+      <h2 id="lvAddOrgTitle">Add Your Organization</h2>
+      <p class="lv-add-dek">Tell us about a local organization that should be on this directory. Fields marked <span style="color:var(--gold);font-weight:700">*</span> are required.</p>
+      <form id="lvAddOrgForm" onsubmit="return lvSubmitAddOrg(event);" novalidate>
+        <div class="row">
+          <label for="lvAddOrgName">Organization name <span class="req">*</span></label>
+          <input id="lvAddOrgName" name="name" type="text" required autocomplete="organization">
+        </div>
+        <div class="row">
+          <label for="lvAddOrgWebsite">Website</label>
+          <input id="lvAddOrgWebsite" name="website" type="url" placeholder="https://example.org" autocomplete="url">
+        </div>
+        <div class="row">
+          <label for="lvAddOrgCategory">Category <span class="req">*</span></label>
+          <select id="lvAddOrgCategory" name="category" required>
+            <option value="" disabled selected>Choose a category…</option>
+            <option value="service club">Service club</option>
+            <option value="recreation">Recreation</option>
+            <option value="church">Church</option>
+            <option value="youth">Youth</option>
+            <option value="business">Business</option>
+            <option value="nonprofit">Nonprofit</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="lvAddOrgLocation">Location <span class="req">*</span></label>
+          <input id="lvAddOrgLocation" name="location" type="text" placeholder="Telluride, Norwood, Ridgway…" required>
+        </div>
+        <div class="row">
+          <label for="lvAddOrgDesc">Short description (1-2 sentences)</label>
+          <textarea id="lvAddOrgDesc" name="description" rows="2"></textarea>
+        </div>
+        <div class="row">
+          <label for="lvAddOrgSocial">Social media (optional)</label>
+          <input id="lvAddOrgSocial" name="social" type="text" placeholder="Facebook, Instagram, X, YouTube — paste any URLs">
+        </div>
+        <p class="lv-add-msg" id="lvAddOrgMsg" role="status" aria-live="polite"></p>
+        <div class="lv-add-actions">
+          <button type="submit">Submit</button>
+          <span class="lv-add-fine">Goes to info@livabletelluride.org</span>
+        </div>
+      </form>
+    </div>
+  </div>
 
 <!-- Google Translate widget + mobile nav toggle (added 2026-05-18) -->
 <script>
