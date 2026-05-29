@@ -676,13 +676,13 @@
         <h3>Never Miss an Update</h3>
         <p>Subscribe to get the latest meetings, news, events, and opportunities delivered to your inbox.</p>
       </div>
-      <!-- Submitting routes to the Hub-Bub "Create your free account" modal,
-           carrying the typed email so the signup form pre-fills it. A plain
-           GET form would strip the #signup hash, so we navigate via JS. -->
-      <form class="form" onsubmit="lvShowSubscribe((this.querySelector('input[type=email]')||{}).value || ''); return false;">
-        <input type="email" placeholder="Enter your email address" aria-label="Email address" required>
-        <button type="submit" class="submit">Subscribe</button>
-      </form>
+      <!-- Subscribe button opens the canonical in-page signup modal
+           (lvShowSubscribe). Until 2026-05-29 this was a 2-field form
+           (email input + submit) that called lvShowSubscribe with the
+           typed email as a hint, but the modal collects email itself
+           anyway — having two email entry points was redundant and
+           tripped users up. -->
+      <button type="button" class="submit" onclick="lvShowSubscribe()">📬 Subscribe</button>
     </div>
   </section>
 
