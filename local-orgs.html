@@ -990,32 +990,29 @@
 
       if (!name || !cat || !loc) {
         msg.className = 'lv-add-msg error';
-        msg.textContent = 'Please fill in organization name, category, and location.';
+        msg.textContent = 'Please fill in organization name, category, and town.';
         return false;
       }
 
-      // Browsers can't transmit file attachments via mailto: — so we ask
-      // the user to drag the file into the email window after it opens.
-      // Include the filename + size in the body so info@ knows whether
-      // the attachment was forgotten.
-      var logoLine;
-      if (logoFile) {
-        var kb = Math.round(logoFile.size / 1024);
-        logoLine = 'Logo: ' + logoFile.name + ' (' + kb + ' KB) — PLEASE ATTACH THIS FILE TO THE EMAIL BEFORE SENDING';
-      } else {
-        logoLine = 'Logo: (none provided)';
-      }
-
+      // Email body matches the canonical format shown to the user:
+      // each label on its own line, blank lines between. The "Logo:
+      // please attach to this email" line stays static — browsers
+      // can't carry attachments through mailto:, so the user drops
+      // the file into the email window after it opens.
       var lines = [
         'Organization name: ' + name,
-        'Website: ' + (web || '(none provided)'),
-        'Category: ' + cat,
-        'Location: ' + loc,
-        'Short description: ' + (desc || '(none provided)'),
-        'Social media: ' + (soc || '(none provided)'),
-        logoLine,
         '',
-        '— Submitted from local-orgs.html'
+        'Website: ' + web,
+        '',
+        'Category (service club, recreation, church, youth, business, or nonprofit): ' + cat,
+        '',
+        'Town: ' + loc,
+        '',
+        'Short description (1-2 sentences): ' + desc,
+        '',
+        'Social media (optional): ' + soc,
+        '',
+        'Logo: please attach to this email'
       ];
       var subject = 'Add my organization: ' + name;
       var body = lines.join('\n');
@@ -1109,8 +1106,8 @@
           </select>
         </div>
         <div class="row">
-          <label for="lvAddOrgLocation">Location <span class="req">*</span></label>
-          <input id="lvAddOrgLocation" name="location" type="text" placeholder="Telluride, Norwood, Ridgway…" required>
+          <label for="lvAddOrgLocation">Town <span class="req">*</span></label>
+          <input id="lvAddOrgLocation" name="town" type="text" placeholder="Telluride, Norwood, Ridgway…" required>
         </div>
         <div class="row">
           <label for="lvAddOrgDesc">Short description (1-2 sentences)</label>
