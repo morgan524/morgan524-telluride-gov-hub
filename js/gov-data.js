@@ -2039,6 +2039,14 @@ const LOCAL_ORGS = [
       logo: "https://livabletelluride.org/logo/Telluride%20Humane-400x400.png"
     },
     {
+      name: "Second Chance Humane Society",
+      category: "nonprofits",
+      town: "Ridgway",
+      summary: "Regional no-kill animal shelter based in Ridgway, serving the San Miguel and Ouray county region. Runs adoption, foster, low-cost spay/neuter, and humane-education programs.",
+      website: "https://secondchancehumane.org/",
+      logo: "https://livabletelluride.org/logo/Second%20Chance.webp"
+    },
+    {
       name: "Wilkinson Public Library",
       category: "nonprofits",
       town: "Telluride",
