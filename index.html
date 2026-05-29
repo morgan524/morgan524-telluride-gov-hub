@@ -35,7 +35,7 @@
     .topnav-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; gap: 24px; }
     .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--forest); font-family: var(--font-heading); font-weight: 700; font-size: 1.15rem; line-height: 1.1; }
     .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
-    .topnav-links { display: flex; gap: 12px; margin-left: 16px; flex: 1; }
+    .topnav-links { display: flex; gap: 14px; margin-left: 16px; flex: 1; }
     .topnav-links a {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       color: var(--text-primary); text-decoration: none; font-weight: 600;
@@ -538,7 +538,6 @@
         <a href="/hub-bub.html">Hub-Bub</a>
         <a href="/local-orgs.html">Local Orgs</a>
         <a href="/projects-map/">Projects Map</a>
-                <a href="/about.html">About</a>
         <a href="/donate.html">Donate</a>
       </nav>
       <div id="google_translate_element" class="topnav-translate"></div>
@@ -687,6 +686,34 @@
     </div>
   </section>
 
+  <!-- ── About (content moved here from the former /about.html) ── -->
+  <style>
+    .about-row { background:#fff; padding:48px 0; border-top:1px solid var(--border-soft, #e5e7eb); }
+    .about-row .about-inner { max-width:900px; margin:0 auto; padding:0 32px; }
+    .about-row h2 { font-size:1.7rem; color:var(--forest, #21443c); margin:0 0 6px; }
+    .about-row h3 { font-size:1.15rem; color:var(--forest, #21443c); margin:26px 0 8px; }
+    .about-row .about-lead { color:var(--text-muted, #5b6b62); font-size:1.05rem; margin:0 0 8px; }
+    .about-row p { line-height:1.7; color:#374151; margin:0 0 12px; }
+  </style>
+  <section class="about-row" id="about">
+    <div class="about-inner">
+      <h2>About Livable Telluride</h2>
+      <p class="about-lead">A civic information hub for every resident — before the decisions are final. Independent, ad-free, and built for the whole region: West End to Mountain Village, across the full political spectrum.</p>
+
+      <h3>Our Mission</h3>
+      <p>In <em>Bowling Alone</em>, Robert Putnam documented what happens when people stop showing up to civic life. Local governments grow less accountable. Decisions on budgets, land use, debt, and zoning move forward with little public scrutiny. The voices that stay at the table are typically those with a direct financial stake in the outcome — not because anyone is acting in bad faith, but because everyone else has tuned out.</p>
+      <p>Livable Telluride exists to close that gap. We are a civic information hub for the whole county — West End to Mountain Village, across the full political spectrum — bringing government meetings, local news, and community information together in one place, always linked back to original sources. As an IRS-approved 501(c)(3) educational nonprofit, we will never charge for access and rely solely on tax-deductible donations.</p>
+
+      <h3>Our Story</h3>
+      <p>We grew out of "Let the People Decide," the grassroots effort behind Measure 300 in November 2024. During that campaign, the same concern surfaced repeatedly: residents cared deeply, but felt they were learning about major decisions late — through fragments and social media arguments — after the important planning work was already final.</p>
+      <p>The Society Turn PUD was a clear example. Most residents knew about the planned hospital at the site. Far fewer knew it was only a small part of a much larger development — roughly 300,000 square feet of free-market commercial space and a 125-room hotel. The question wasn't what to think about it. It was simpler: how can residents meaningfully participate if they don't know what's actually being proposed? Livable Telluride is our ongoing answer to that question.</p>
+
+      <h3>What "Livable" Means</h3>
+      <p>"Livable" is not code for no growth, or for drawing a line between locals and newcomers. It means asking the self-government questions that deserve answers <em>before</em> decisions are finalized — not after: What kind of growth? For whose benefit? Who can afford it when done? What infrastructure is required? How much water? How much traffic? What long-term public debt? Through what public process?</p>
+      <p>These are not anti-growth questions. They are self-government questions — the kind a functioning community asks of itself, across the full range of political views, before the future is already decided.</p>
+    </div>
+  </section>
+
   <!-- ── Footer ── -->
   <footer class="site-foot">
     <div class="site-foot-inner">
@@ -697,7 +724,7 @@
       <div class="foot-col">
         <h4>Quick Links</h4>
         <a href="/">Home</a>
-        <a href="/about.html">About Us</a>
+        <a href="/#about">About Us</a>
         <a href="mailto:info@livabletelluride.org">Contact</a>
       </div>
       <div class="foot-col">
