@@ -802,7 +802,17 @@ function initMobilePanelToggle() {
 }
 
 // ─── Start ────────────────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', function() {
+// app.js is injected via a dynamically-appended <script> (async) near the end
+// of index.html, so DOMContentLoaded has usually ALREADY fired by the time this
+// runs — a plain addEventListener('DOMContentLoaded', …) would then never fire
+// and the map/list would never initialize. Guard on readyState so we run
+// immediately if the DOM is already parsed, and wait only if it genuinely isn't.
+function startProjectsMap() {
   init();
   initMobilePanelToggle();
-});
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', startProjectsMap);
+} else {
+  startProjectsMap();
+}
