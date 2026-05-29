@@ -6,10 +6,19 @@
  * to subscribe to the newsletter, not visit the forum.
  *
  * This module exposes lvShowSubscribe(emailHint?) on window. Calling it
- * opens an in-page overlay with First name / Last name / Email / digest
- * frequency, and submits directly to the same Mailchimp audience the
- * Hub-Bub signup uses (us15 dc, audience f83dc56387, account
- * 5d9192289b9af78822f2f69bf — see CLAUDE.md "Subscription + Blog Architecture").
+ * opens an in-page overlay with First name / Last name / Email and submits
+ * directly to the same Mailchimp audience the Hub-Bub signup uses
+ * (us15 dc, audience f83dc56387, account 5d9192289b9af78822f2f69bf — see
+ * CLAUDE.md "Subscription + Blog Architecture").
+ *
+ * Default behavior (post-2026-05-29 unification): every submission auto-
+ * sets MMERGE9=weekly (subscriber receives the Weekly look-ahead digest)
+ * AND group[7912]=1 (subscriber receives newsletter / blog posts). The
+ * previous daily/weekly dropdown was removed — daily was retired
+ * 2026-05-25 — and the newsletter-vs-digest choice was hidden because
+ * the lightweight Subscribe modal shouldn't surface either decision.
+ * Users who want to opt out of one or the other can do so from any
+ * Mailchimp email's footer.
  *
  * Forum account creation (Firebase auth) is intentionally NOT done here.
  * Newsletter subscribers don't need a Hub-Bub account; if they do, they can
@@ -65,7 +74,7 @@
       '<div id="ltSubModal">' +
         '<button type="button" class="lt-sub-close" aria-label="Close" onclick="lvHideSubscribe()">×</button>' +
         '<h2 id="ltSubTitle">Subscribe to Livable Telluride</h2>' +
-        '<p class="lt-sub-dek">Get a daily or weekly digest of meetings, news, events, and opportunities delivered to your inbox.</p>' +
+        '<p class="lt-sub-dek">You\'ll receive our weekly look-ahead of upcoming meetings, news, and events — plus our newsletter when new posts are published.</p>' +
         '<form id="ltSubForm" onsubmit="return lvSubmitSubscribe(event);" novalidate>' +
           '<div class="row-2col">' +
             '<div class="row">' +
@@ -80,13 +89,6 @@
           '<div class="row">' +
             '<label for="ltSubEmail">Email</label>' +
             '<input id="ltSubEmail" name="EMAIL" type="email" required autocomplete="email">' +
-          '</div>' +
-          '<div class="row">' +
-            '<label for="ltSubFreq">How often?</label>' +
-            '<select id="ltSubFreq" name="MMERGE9">' +
-              '<option value="daily">Daily digest</option>' +
-              '<option value="weekly" selected>Weekly digest</option>' +
-            '</select>' +
           '</div>' +
           '<p class="lt-sub-msg" id="ltSubMsg" role="status" aria-live="polite"></p>' +
           '<div class="lt-sub-actions">' +
@@ -136,7 +138,6 @@
     var fname = document.getElementById('ltSubFname').value.trim();
     var lname = document.getElementById('ltSubLname').value.trim();
     var email = document.getElementById('ltSubEmail').value.trim();
-    var freq  = document.getElementById('ltSubFreq').value;
     var msg   = document.getElementById('ltSubMsg');
     var btn   = document.getElementById('ltSubSubmit');
 
@@ -152,13 +153,20 @@
 
     // Mailchimp JSONP — same shape Hub-Bub uses. Returns
     // {result:'success'|'error', msg:'...'} via callback.
+    //
+    // Unified signup defaults (2026-05-29):
+    //   MMERGE9 = 'weekly'  → subscriber receives Weekly look-ahead digest
+    //   group[7912] = '1'   → subscriber receives newsletter / blog posts
+    // No UI for these — keeps the modal lightweight. Users can opt out
+    // of either via the standard Mailchimp footer in any campaign email.
     var cb = '_ltSubCb_' + Date.now() + '_' + Math.floor(Math.random() * 1e6);
     var script = document.createElement('script');
     var params = [
       'EMAIL='  + encodeURIComponent(email),
       'FNAME='  + encodeURIComponent(fname),
       'LNAME='  + encodeURIComponent(lname),
-      'MMERGE9=' + encodeURIComponent(freq),
+      'MMERGE9=weekly',
+      'group%5B7912%5D=1',
       'c=' + encodeURIComponent(cb)
     ].join('&');
 

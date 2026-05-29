@@ -1548,8 +1548,18 @@
   <!-- ════════ MODAL WIRING — signup + Mailchimp + Firebase Auth ════════ -->
   <script>
   (function () {
-    /* ── Mailchimp JSONP submit ── */
-    const MC_POST = 'https://us15.list-manage.com/subscribe/post-json?u=5d9192289b9af78822f2f69bf&id=f83dc56387&c=?';
+    /* ── Mailchimp JSONP submit ──
+       IMPORTANT: must use the audience-specific subdomain
+       (letpeopledecide.us15.list-manage.com), NOT the bare us15
+       datacenter host. Mailchimp's JSONP form-embed endpoint only
+       lives at <audience>.<dc>.list-manage.com. Until 2026-05-29
+       this used the bare datacenter URL, so every Hub-Bub signup
+       silently failed to land in Mailchimp — the script callback
+       returned an error, mcSubscribe's caller logged a console.warn
+       (best-effort), and Firebase account creation proceeded. Users
+       got a Hub-Bub forum account but never received the digest or
+       blog posts. Always preserve the audience subdomain. */
+    const MC_POST = 'https://letpeopledecide.us15.list-manage.com/subscribe/post-json?u=5d9192289b9af78822f2f69bf&id=f83dc56387';
     function mcSubscribe(email, firstName, lastName, digestFreq, includeNewsletter, cb) {
       const params = new URLSearchParams({
         EMAIL: email,
@@ -1558,7 +1568,10 @@
       });
       if (digestFreq) params.set('MMERGE9', digestFreq);
       if (includeNewsletter) params.set('group[7912]', '1');
-      // JSONP
+      // JSONP — supply the callback name explicitly via `&c=` (the
+      // function name window[cbName] must match). No `c=?` placeholder
+      // in MC_POST, otherwise two `c=` params race and Mailchimp picks
+      // whichever it parses last.
       const cbName = '_mc_cb_' + Date.now();
       window[cbName] = function (data) {
         delete window[cbName];
