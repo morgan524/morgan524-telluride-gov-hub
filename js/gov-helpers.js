@@ -151,7 +151,7 @@ const MANUAL_SUMMARIES = {
     "The agenda text for this Commission for Community Assistance, Arts & Special Events meeting is missing — only the portal navigation and meeting list appears.",
 
   "telluride|2026-06-03|Telluride Housing Authority Subcommittee - Jun 03 2026":
-    "The Jun 03 2026 Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The Jun 03 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-06-01|Open Space Commission - Jun 01 2026":
     "Meeting scheduled for first Monday of the month · Commission reviews open space acquisitions and management · Advises Town Council on comprehensive plan elements",
@@ -169,7 +169,7 @@ const MANUAL_SUMMARIES = {
     "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -179,6 +179,18 @@ const MANUAL_SUMMARIES = {
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Despite scrutiny, special education money flows to for-profit residential treatment centers",
+    source: "Telluride Times",
+    date: "May 29, 2026",
+    firstSeen: "2026-05-29",
+    newsTopic: "government",
+    copy: "Special education money is flowing to for-profit residential treatment centers through regulatory loopholes, with facilities operating on individual school district contracts and drawing out-of-state students to avoid oversight. A 2022 study found only half of states have certification processes for these centers, and most don't track students sent out of state, creating gaps in monitoring when kids are placed far from home. California has nearly 300 students currently placed out-of-state despite banning similar placements for foster care, highlighting how education funding remains a \"fraught loophole\" that advocates say puts vulnerable children at risk.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_751f25eb-9668-5d58-af46-14a2b20d70e2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/9d/19dde105-5d91-5038-aa53-3a465c7cfee0/6a196caf5f462.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "MV Town Council discusses expanding employee housing site",
     source: "Telluride Times",
@@ -997,11 +1009,11 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "here",
+    title: "Water service outage planned for night of May 28th",
     source: "Town of Ridgway",
-    date: "May 29, 2026",
+    date: "May 27, 2026",
     firstSeen: "2026-05-27",
-    newsTopic: "community",
+    newsTopic: "infrastructure",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Water-Shut-Off-Notice-Press-Release-2026-05-27.pdf",
@@ -1644,17 +1656,6 @@ const MUSIC_ON_THE_GREEN = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Up-off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-05-29/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-05-29T10:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
-  },
   {
     title: "Impetus – A site-specific dance performace",
     link: "https://koto.org/event/impetus-a-site-specific-dance-performace/",
