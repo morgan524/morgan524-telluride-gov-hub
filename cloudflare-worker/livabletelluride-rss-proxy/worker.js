@@ -59,6 +59,12 @@ const ALLOWED_HOSTS = [
   // as Telluride Times. Direct fetches from GH runners get 403/429.
   "sanmiguelbasinforum.com",
   "www.sanmiguelbasinforum.com",
+  // Sheridan Opera House — WordPress + Modern Events Calendar Lite.
+  // /events/ landing page parsed for the 3 upcoming events. Direct
+  // fetch works as of 2026-05-29 but added defensively in case nginx
+  // / Yoast / a future WAF rule starts blocking GH runner IPs.
+  "sheridanoperahouse.com",
+  "www.sheridanoperahouse.com",
 ];
 
 // Realistic Safari UA that is known to clear both Telluride Times' rate-limit

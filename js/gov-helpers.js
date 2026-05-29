@@ -2187,6 +2187,54 @@ const HUMANE_SOCIETY_ANIMALS = [
 
 ];
 
+/* Sheridan Opera House events — refreshed by syncSheridanEvents() every 6 hours.
+ * Schema mirrors WILKINSON_EVENTS: { title, link, description, pubDate,
+ * endDate?, source, sourceLabel, category, location, imageUrl }.
+ * pubDate is the start date (ISO YYYY-MM-DD). endDate is present only on
+ * multi-day shows. events.html renders multi-day events as ONE card on
+ * the start date with "Jun 1 — Jun 5" subtitle.
+ *
+ * Seeded 2026-05-29 with the 3 events that were live on Sheridan's
+ * /events/ page at the time of wiring (so the Events tab shows
+ * something on Day 1 instead of waiting for the next 6-hour refresh).
+ * Bot overwrites this on first run. */
+const SHERIDAN_EVENTS = [
+  {
+    title: "32nd Annual Wild West Fest",
+    link: "https://sheridanoperahouse.com/events/32nd-annual-wild-west-fest/",
+    description: "Show at the Sheridan Opera House. See the Sheridan page for tickets and details.",
+    pubDate: "2026-06-01",
+    endDate: "2026-06-05",
+    source: "sheridan",
+    sourceLabel: "Sheridan Opera House",
+    category: "Concert / Performance",
+    location: "Sheridan Opera House • Telluride, CO",
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2025/03/WWF-Logo-Color-With-Layers.png"
+  },
+  {
+    title: "Wild West Fest Roundup Day",
+    link: "https://sheridanoperahouse.com/events/wild-west-fest-roundup-day/",
+    description: "Show at the Sheridan Opera House. See the Sheridan page for tickets and details.",
+    pubDate: "2026-06-05",
+    source: "sheridan",
+    sourceLabel: "Sheridan Opera House",
+    category: "Concert / Performance",
+    location: "Sheridan Opera House • Telluride, CO",
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/05/Wild-West-Fest-Roundup-Day-Image.png"
+  },
+  {
+    title: "The Fretliners Live in Concert",
+    link: "https://sheridanoperahouse.com/events/the-fretliners-live-in-concert-2/",
+    description: "Show at the Sheridan Opera House. See the Sheridan page for tickets and details.",
+    pubDate: "2026-06-13",
+    source: "sheridan",
+    sourceLabel: "Sheridan Opera House",
+    category: "Concert / Performance",
+    location: "Sheridan Opera House • Telluride, CO",
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/03/unnamed-file.png"
+  }
+];
+
 const TELLURIDE_FOUNDATION_EVENTS = [
   {
     title: "Creating with AI: The Tools Worth Using & How to Actually Use Them",

@@ -259,6 +259,13 @@ const PROXY_HOSTS = new Set([
   // refresh scrapes the /news/ landing page HTML instead.
   'sanmiguelbasinforum.com',
   'www.sanmiguelbasinforum.com',
+  // Sheridan Opera House — WordPress + Modern Events Calendar Lite plugin.
+  // Parser scrapes /events/ landing page (3 upcoming events advertised).
+  // Direct fetch works as of 2026-05-29; added to the proxy list defensively
+  // since the host has nginx + Yoast and could plausibly start filtering
+  // GH runner IPs the way TT and KOTO did.
+  'sheridanoperahouse.com',
+  'www.sheridanoperahouse.com',
 ]);
 
 function maybeProxy(url) {
@@ -3478,6 +3485,167 @@ async function syncWilkinsonEvents() {
 }
 
 
+// ══════════════════════════════════════════════════════════════
+// ── Task 10b: Sheridan Opera House events ──
+// ══════════════════════════════════════════════════════════════
+//
+// Source: https://sheridanoperahouse.com/events/
+// Platform: WordPress + Modern Events Calendar Lite (MEC) by Webnus.
+//
+// The /events/ landing page only renders the next ~3 upcoming events
+// — that's the listing MEC is configured to show on this site. MEC's
+// REST endpoints (/wp-json/mec/v1/events) return empty without
+// auth, and the generic WP REST endpoint (/wp-json/wp/v2/mec-events)
+// returns 333 lifetime events but no event-date metadata (MEC stores
+// it in postmeta which isn't whitelisted on this site). So we parse
+// the public listing HTML instead, which is plenty since Sheridan
+// curates what they advertise.
+//
+// HTML shape per event (one mec-event-list block per show):
+//   <div class="mec-event-image"><a href="<event-permalink>" ...>
+//     <img src="<thumb>" ...></a></div>
+//   <div class="mec-event-date mec-color"><i></i>
+//     <span class="mec-start-date-label">Jun 13 2026</span></div>     ← single day
+//   <div class="mec-event-date mec-color"><i></i>
+//     <span class="mec-start-date-label">Jun 01 - 05 2026</span></div> ← multi-day
+//   <div class="mec-event-time mec-color"></div>                     ← usually empty
+//   <h4 class="mec-event-title"><a ...>Event Title</a></h4>
+//
+// Multi-day events get ONE card on their start date (per the
+// "multi-day events first day only" memory note); endDate is set so
+// events.html renders "Jun 1 — Jun 5".
+
+const SHERIDAN_EVENTS_URL = 'https://sheridanoperahouse.com/events/';
+
+const MONTH_ABBR = {
+  jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5,
+  jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11,
+};
+
+// Parse "Jun 13 2026" → { startDate: '2026-06-13', endDate: '2026-06-13' }
+// Parse "Jun 01 - 05 2026" → { startDate: '2026-06-01', endDate: '2026-06-05' }
+// Parse "Jun 28 - Jul 02 2026" (cross-month) → { startDate: '2026-06-28', endDate: '2026-07-02' }
+function parseSheridanDate(label) {
+  if (!label) return null;
+  const s = String(label).trim();
+  // Single-day:  "Jun 13 2026"
+  let m = s.match(/^(\w{3})\s+(\d{1,2})\s+(\d{4})$/i);
+  if (m) {
+    const mon = MONTH_ABBR[m[1].toLowerCase()];
+    if (mon == null) return null;
+    const iso = `${m[3]}-${String(mon + 1).padStart(2, '0')}-${String(parseInt(m[2], 10)).padStart(2, '0')}`;
+    return { startDate: iso, endDate: iso };
+  }
+  // Same-month range:  "Jun 01 - 05 2026"
+  m = s.match(/^(\w{3})\s+(\d{1,2})\s*-\s*(\d{1,2})\s+(\d{4})$/i);
+  if (m) {
+    const mon = MONTH_ABBR[m[1].toLowerCase()];
+    if (mon == null) return null;
+    const monStr = String(mon + 1).padStart(2, '0');
+    return {
+      startDate: `${m[4]}-${monStr}-${String(parseInt(m[2], 10)).padStart(2, '0')}`,
+      endDate:   `${m[4]}-${monStr}-${String(parseInt(m[3], 10)).padStart(2, '0')}`,
+    };
+  }
+  // Cross-month range:  "Jun 28 - Jul 02 2026"
+  m = s.match(/^(\w{3})\s+(\d{1,2})\s*-\s*(\w{3})\s+(\d{1,2})\s+(\d{4})$/i);
+  if (m) {
+    const mon1 = MONTH_ABBR[m[1].toLowerCase()];
+    const mon2 = MONTH_ABBR[m[3].toLowerCase()];
+    if (mon1 == null || mon2 == null) return null;
+    return {
+      startDate: `${m[5]}-${String(mon1 + 1).padStart(2, '0')}-${String(parseInt(m[2], 10)).padStart(2, '0')}`,
+      endDate:   `${m[5]}-${String(mon2 + 1).padStart(2, '0')}-${String(parseInt(m[4], 10)).padStart(2, '0')}`,
+    };
+  }
+  return null;
+}
+
+function parseSheridanEvents(html) {
+  if (!html) return [];
+  // Split on the event-image marker so each chunk is exactly one event.
+  // MEC's list-classic skin renders each event as:
+  //   <div class="mec-event-image"><a href="..."><img src="..."></a></div>
+  //   <div class="mec-event-date"><span class="mec-start-date-label">…</span></div>
+  //   <div class="mec-event-time"></div>
+  //   <h4 class="mec-event-title"><a href="..." data-event-id="...">…</a></h4>
+  // The image div is a clean boundary. Earlier "scan around the date span"
+  // strategy mis-attributed images because adjacent events sit within the
+  // 3000-char window and .match() returned the FIRST hit instead of the
+  // event-local one.
+  const chunks = html.split(/<div class="mec-event-image">/).slice(1);
+  const events = [];
+  for (const chunk of chunks) {
+    const block = chunk.slice(0, 6000); // each event block fits comfortably
+    // Image
+    let imageUrl = '';
+    const imgMatch = block.match(/<a[^>]*>[^<]*<img[^>]*src="([^"]+)"/);
+    if (imgMatch) {
+      // Strip WP's "-150x150" size suffix so we get a higher-res thumb.
+      imageUrl = imgMatch[1].replace(/-\d+x\d+(\.\w+)$/, '$1');
+    }
+    // Date label
+    const dateMatch = block.match(/<span class="mec-start-date-label">([^<]+)<\/span>/);
+    if (!dateMatch) continue;
+    const dateLabel = decodeHtmlEntities(dateMatch[1].trim());
+    const dates = parseSheridanDate(dateLabel);
+    if (!dates) continue;
+    // Title + link
+    const titleMatch = block.match(/<h4 class="mec-event-title"[^>]*>\s*<a[^>]*href="([^"]+)"[^>]*>([^<]+)<\/a>/);
+    if (!titleMatch) continue;
+    const link = titleMatch[1];
+    const title = decodeHtmlEntities(titleMatch[2].trim());
+    if (!title || !link) continue;
+    events.push({
+      title, link, imageUrl, dateLabel,
+      startDate: dates.startDate,
+      endDate:   dates.endDate,
+    });
+  }
+  return events;
+}
+
+async function syncSheridanEvents() {
+  console.log('\n🎭 Task 10b: Syncing Sheridan Opera House events...');
+  let resp;
+  try { resp = await fetch(SHERIDAN_EVENTS_URL); }
+  catch (e) { console.warn(`  Fetch error: ${e.message}`); return null; }
+  if (!resp || resp.status !== 200) {
+    console.warn(`  Sheridan HTTP ${resp ? resp.status : 'no response'}`);
+    return null;
+  }
+  const parsed = parseSheridanEvents(resp.text);
+  console.log(`  Listing has ${parsed.length} event block(s)`);
+  // Filter to next 60 days (forward window, matching events.html's
+  // render filter so we don't waste storage on items the client drops).
+  const now = new Date(); now.setHours(0, 0, 0, 0);
+  const horizon = now.getTime() + 60 * 86400000;
+  const events = [];
+  for (const p of parsed) {
+    const startMs = new Date(p.startDate + 'T00:00:00').getTime();
+    if (isNaN(startMs)) continue;
+    if (startMs < now.getTime() - 86400000) continue;  // already past
+    if (startMs > horizon) continue;                    // beyond 60 days
+    events.push({
+      title:       p.title,
+      link:        p.link,
+      description: 'Show at the Sheridan Opera House. See the Sheridan page for tickets and details.',
+      pubDate:     p.startDate,
+      endDate:     p.endDate !== p.startDate ? p.endDate : undefined,
+      source:      'sheridan',
+      sourceLabel: 'Sheridan Opera House',
+      category:    'Concert / Performance',
+      location:    'Sheridan Opera House • Telluride, CO',
+      imageUrl:    p.imageUrl || '',
+    });
+  }
+  // Sort ascending by start date
+  events.sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
+  console.log(`  Kept ${events.length} Sheridan event(s) within 60 days`);
+  return events;
+}
+
+
 // ── Task 11: Nucla-Naturita Events (Tribe Events API, weekly) ──
 // Source: https://nucla-naturita.com/events/
 // Checks the Tribe Events API every Monday; returns [] on other days.
@@ -5002,6 +5170,17 @@ async function main() {
       govHubSrc = replaceJsValue(govHubSrc, 'WILKINSON_EVENTS', newWilkinsonEvents, false);
       changed = true;
       console.log(`  WILKINSON_EVENTS updated (was ${existingWilk.length}, now ${newWilkinsonEvents.length})`);
+    }
+  }
+
+  // ── 10b. Sheridan Opera House Events ──
+  const newSheridanEvents = await syncSheridanEvents();
+  if (newSheridanEvents !== null && newSheridanEvents !== undefined) {
+    const existingSheridan = extractJsArray(govHubSrc, 'SHERIDAN_EVENTS') || [];
+    if (JSON.stringify(newSheridanEvents) !== JSON.stringify(existingSheridan)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'SHERIDAN_EVENTS', newSheridanEvents, false);
+      changed = true;
+      console.log(`  SHERIDAN_EVENTS updated (was ${existingSheridan.length}, now ${newSheridanEvents.length})`);
     }
   }
 
