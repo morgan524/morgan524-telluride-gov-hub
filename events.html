@@ -1369,7 +1369,21 @@
              const pushEvent = (e, sourceLabel) => {
                if (!e || !e.title) return;
                const start = e.pubDate || e.start_date || e.date || '';
-               const dateStr = start ? new Date(start).toISOString().slice(0,10) : '';
+               // Resolve the calendar date in Mountain Time (America/Denver) so
+               // a Friday-evening MT event renders on Friday for all viewers —
+               // not bumped to Saturday by the toISOString UTC slip. Date-only
+               // strings ("2026-05-29") pass through as-is (otherwise new Date
+               // parses them as UTC midnight and MT becomes the previous day).
+               let dateStr = '';
+               if (start) {
+                 const s = String(start);
+                 if (/^\d{4}-\d{2}-\d{2}$/.test(s)) {
+                   dateStr = s;
+                 } else {
+                   const d = new Date(s);
+                   if (!isNaN(d)) dateStr = d.toLocaleDateString('en-CA', { timeZone: 'America/Denver' });
+                 }
+               }
                if (!dateStr) return;
                // Only include events in the next 60 days (rolling look-ahead
                // so multi-week series like Music on the Green show what's coming).
@@ -1381,8 +1395,9 @@
                  title: e.title,
                  date: dateStr,
                  // Prefer an explicit time string (e.g. curated "5:00 – 7:00 PM");
-                 // otherwise derive it from an ISO datetime when present.
-                 time: e.time || ((start && typeof start === 'string' && start.includes('T')) ? new Date(start).toLocaleTimeString([], {hour:'numeric', minute:'2-digit'}) : ''),
+                 // otherwise derive it from an ISO datetime in Mountain Time so
+                 // an 8pm MT event reads "8:00 PM" for every viewer.
+                 time: e.time || ((start && typeof start === 'string' && start.includes('T')) ? new Date(start).toLocaleTimeString('en-US', { timeZone: 'America/Denver', hour: 'numeric', minute: '2-digit' }) : ''),
                  location: e.location || '',
                  town: townFromLocation(e.location || ''),
                  summary: (e.description || '').replace(/<[^>]+>/g,'').slice(0, 600),

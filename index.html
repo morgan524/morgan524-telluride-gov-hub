@@ -831,8 +831,21 @@
               window[name].forEach(e => {
                 const start = e.pubDate || e.start_date || e.date;
                 if (!start) return;
-                const d = new Date(start);
-                d.setHours(0,0,0,0);
+                // Resolve the calendar date in Mountain Time so a Friday-evening
+                // MT event lands on Friday for all viewers (events are hyperlocal
+                // to MT). Date-only strings ("2026-05-29") pass through as-is
+                // to avoid the new Date() UTC-midnight slip.
+                let dateStr = '';
+                const _ss = String(start);
+                if (/^\d{4}-\d{2}-\d{2}$/.test(_ss)) {
+                  dateStr = _ss;
+                } else {
+                  const _dd = new Date(_ss);
+                  if (!isNaN(_dd)) dateStr = _dd.toLocaleDateString('en-CA', { timeZone: 'America/Denver' });
+                }
+                if (!dateStr) return;
+                const [_y, _m, _dd2] = dateStr.split('-').map(Number);
+                const d = new Date(_y, _m - 1, _dd2);
                 if (d < today || d > horizon) return;
                 // Events are public-facing already (KOTO / Wilkinson / community)
                 // and their titles don't have the "Board of X" generic-meeting

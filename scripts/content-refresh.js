@@ -425,6 +425,27 @@ function formatDate(d) {
   return new Date(d).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 }
 
+// Returns a Date representing the moment when the Mountain Time clock reads
+// year-monthIdx-day hour:minute. Use this when parsing a no-timezone local
+// time from an upstream source (KOTO Tribe API, Wilkinson LibCal) on the bot
+// runner (UTC). Otherwise `new Date("2026-05-29T19:30:00")` would treat
+// 19:30 as UTC and the stored ISO would be off by 6–7 hours (event listed
+// at 1:30 PM MDT instead of 7:30 PM MDT). DST-aware via probing both MDT
+// (-06:00) and MST (-07:00) and picking the offset whose round-trip MT
+// hour matches what we asked for.
+function mtMoment(year, monthIdx, day, hour, minute) {
+  for (const offHours of [6, 7]) {
+    const asUTC = Date.UTC(year, monthIdx, day, hour + offHours, minute, 0);
+    const cand = new Date(asUTC);
+    const rendered = parseInt(cand.toLocaleString('en-US', {
+      timeZone: 'America/Denver', hour12: false, hour: '2-digit'
+    }), 10);
+    if (rendered === hour) return cand;
+  }
+  // Fallback: MDT (May–Oct most years for the Telluride season).
+  return new Date(Date.UTC(year, monthIdx, day, hour + 6, minute, 0));
+}
+
 // ══════════════════════════════════════════════════════════════
 // ── Claude API — Meeting Summary Generation ──
 // ══════════════════════════════════════════════════════════════
@@ -3302,10 +3323,20 @@ async function syncKotoCommunityEvents() {
     if (!e || !e.title) continue;
     const startStr = e.start_date || '';
     if (!startStr) continue;
-    const start = new Date(startStr.replace(' ', 'T'));
+    // Tribe API returns "YYYY-MM-DD HH:MM:SS" in the site's local TZ (Mountain
+    // for KOTO). Parsing with `new Date()` on the bot's UTC runner would
+    // interpret it as UTC — a 7:30 PM MDT concert would store 19:30Z and then
+    // render as 1:30 PM MDT on the events page. Construct in MT explicitly.
+    const _sm = startStr.match(/^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})/);
+    const start = _sm
+      ? mtMoment(+_sm[1], +_sm[2] - 1, +_sm[3], +_sm[4], +_sm[5])
+      : new Date(startStr);
     if (isNaN(start.getTime())) continue;
     const endStr = e.end_date || startStr;
-    const end = new Date(endStr.replace(' ', 'T'));
+    const _em = endStr.match(/^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})/);
+    const end = _em
+      ? mtMoment(+_em[1], +_em[2] - 1, +_em[3], +_em[4], +_em[5])
+      : new Date(endStr);
     if (!isNaN(end.getTime()) && end.getTime() < now) continue;
     if (start.getTime() > horizon) continue;
     const description = smartTruncate(decodeHtmlEntities(
@@ -3373,8 +3404,23 @@ function parseWilkinsonHtml(html) {
     // Description (s-lc-ea-tdes — sometimes present)
     const descMatch = /<tr class="s-lc-ea-tdes"[\s\S]*?<td>([\s\S]*?)<\/td>\s*<\/tr>/i.exec(segment);
     const description = descMatch ? descMatch[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim() : '';
-    // Parse "From" datetime ("8:00 AM Friday, May 1, 2026" -> Date)
-    const fromDate = new Date(fromStr.replace(/^(\d+:\d+\s*[AP]M)\s+\w+,\s+/, '$1 '));
+    // Parse "From" datetime ("8:00 AM Friday, May 1, 2026" -> Date in MT).
+    // LibCal renders times in the library's local TZ (Mountain); parsing with
+    // `new Date()` on the bot's UTC runner would treat 8:00 AM as 8:00 UTC =
+    // 2:00 AM MDT. Construct explicitly in MT via mtMoment.
+    let fromDate;
+    {
+      const wm = fromStr.match(/^(\d{1,2}):(\d{2})\s*([AP])M\s+\w+,\s+([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})$/i);
+      if (!wm) continue;
+      let h = parseInt(wm[1], 10);
+      const min = parseInt(wm[2], 10);
+      if (/P/i.test(wm[3]) && h < 12) h += 12;
+      if (/A/i.test(wm[3]) && h === 12) h = 0;
+      const monthIdx = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
+        .indexOf(wm[4].toLowerCase().slice(0, 3));
+      if (monthIdx < 0) continue;
+      fromDate = mtMoment(parseInt(wm[6], 10), monthIdx, parseInt(wm[5], 10), h, min);
+    }
     if (isNaN(fromDate.getTime())) continue;
     events.push({ title, link, fromDate, fromStr, toStr, location, description });
   }

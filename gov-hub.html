@@ -1068,8 +1068,13 @@
                   if (!m || !m.eventDate) return;
                   const d = m.eventDate;
                   if (d < today || d > horizon) return;
+                  // m.eventDate was constructed at LOCAL midnight by localDate().
+                  // Read the calendar date back via LOCAL components — using
+                  // toISOString() would shift to the previous day for any
+                  // viewer east of UTC (e.g. Europe/Asia).
+                  const _pad = n => String(n).padStart(2, '0');
                   live.push({
-                    date: d.toISOString().slice(0, 10),
+                    date: d.getFullYear() + '-' + _pad(d.getMonth() + 1) + '-' + _pad(d.getDate()),
                     time: m.eventTimes || '',
                     title: m.title,
                     sourceKey: key,
