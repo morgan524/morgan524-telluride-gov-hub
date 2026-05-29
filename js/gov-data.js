@@ -1007,7 +1007,7 @@ const WHY_THIS_MATTERS = [
 
   // ── Medical Center / Hospital ──
   {
-    match: /jensen\s*partners|healthcare\s*partnership|new\s*facility.*med|hospital\s*district/i,
+    match: /jensen\s*partners|healthcare\s*partnership|new\s*(?:hospital\s*)?facility/i,
     decision: 'Whether to pursue a healthcare partnership and/or new medical facility -- potentially tied to the Society Turn development.',
     who: 'All residents who rely on local healthcare, hospital district taxpayers, and the broader region served by Telluride Medical Center.',
     stage: 'Check agenda -- special meetings indicate active decision-making.',
@@ -1057,15 +1057,12 @@ const WHY_THIS_MATTERS = [
     context: 'Telluride is a designated National Historic Landmark District -- one of the highest levels of historic recognition in the U.S. Development pressure from luxury construction and resort expansion creates ongoing tension between preservation and modernization. HARC also reviews projects tied to larger land use applications (Shandoka, Carhenge) that advance through P&Z and Council.'
   },
 
-  // ── DRB / Design Review Board (Mountain Village) ──
-  {
-    match: /design\s*review\s*board|drb|mountain\s*village.*design/i,
-    decision: 'Whether to approve architectural designs, site plans, and exterior modifications within Mountain Village.',
-    who: 'Property owners, developers, and Mountain Village residents affected by building design and neighborhood character.',
-    stage: 'Check agenda for specific project reviews.',
-    impact: 'DRB decisions control building aesthetics, massing, and materials in Mountain Village. Large projects reviewed here can significantly affect views, traffic, and neighborhood character.',
-    context: 'Mountain Village has its own design standards separate from Telluride\'s HARC. Projects like the gondola terminal redesign and resort-area expansions go through DRB review.'
-  },
+  // NOTE: There is intentionally NO generic per-body entry here (e.g. a
+  // "Design Review Board" or "Planning Commission" matcher). "Why This
+  // Matters" should fire ONLY when a meeting touches a substantive, Deep-Dive
+  // / key-issue topic — not on every routine meeting of a given body. A DRB or
+  // P&Z meeting that actually takes up the gondola terminal, Society Turn,
+  // Carhenge, a code amendment, etc. will match the topic entries above.
 ];
 
 

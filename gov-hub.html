@@ -866,15 +866,43 @@
             '<button class="wtm-modal-close" onclick="closeWTMModal()" aria-label="Close">✕</button>' +
           '</div>' +
           '<div id="wtm-modal-title" class="wtm-modal-meeting"></div>' +
-          '<p id="wtm-modal-body" class="wtm-modal-body"></p>' +
+          '<div id="wtm-modal-body" class="wtm-modal-body"></div>' +
         '</div>';
       document.body.appendChild(el);
       document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeWTMModal(); });
     }
-    function openWTMModal(title, text) {
+    // Map a WHY_THIS_MATTERS entry to its Deep Dive page (by topic keywords in
+    // the entry's match regex) so the modal can link out to the fuller context
+    // + the source documents we already host on the deep-dive pages.
+    function deepDiveFor(entry) {
+      const src = (entry && entry.match && entry.match.source || '').toLowerCase();
+      if (/carhenge|shandoka|chair\s*7/.test(src))                 return '/deep-dive-carhenge.html';
+      if (/society|jensen|healthcare|facility|hospital/.test(src)) return '/deep-dive-society.html';
+      if (/accelerated|comprehensive|forestry/.test(src))          return '/deep-dive-code.html';
+      if (/wildfire|wui/.test(src))                                return '/deep-dive-wildfire.html';
+      if (/gondola|smart/.test(src))                               return '/deep-dive-gondola.html';
+      if (/lucarelli|aldasoro|diamond/.test(src))                  return '/deep-dive-diamond.html';
+      return null;
+    }
+    function openWTMModal(title, idx) {
       ensureWTMModal();
+      const entry = (typeof WHY_THIS_MATTERS !== 'undefined' && WHY_THIS_MATTERS[idx]) || null;
       document.getElementById('wtm-modal-title').textContent = title;
-      document.getElementById('wtm-modal-body').textContent = text;
+      const body = document.getElementById('wtm-modal-body');
+      if (entry) {
+        // ~100 words of context + history: the current stakes (popup/impact)
+        // plus the historical background, then a link to the Deep Dive and the
+        // source documents we already host there.
+        const now = entry.popup || entry.impact || entry.decision || '';
+        const history = entry.context || '';
+        const dd = deepDiveFor(entry);
+        body.innerHTML =
+          (now ? '<p style="margin:0 0 12px;">' + now + '</p>' : '') +
+          (history ? '<p style="margin:0 0 12px;"><strong>Background &amp; history:</strong> ' + history + '</p>' : '') +
+          (dd ? '<a href="' + dd + '" style="display:inline-flex;align-items:center;gap:6px;margin-top:4px;font-weight:700;color:var(--forest,#21443c);text-decoration:none;">📄 Read the full Deep Dive — context &amp; source documents →</a>' : '');
+      } else {
+        body.textContent = '';
+      }
       document.getElementById('wtm-modal').classList.add('open');
       document.body.style.overflow = 'hidden';
     }
@@ -932,13 +960,12 @@
       // "Why This Matters" button + card highlight when the meeting touches
       // a code amendment or high-level land-use issue.
       const wtm = getWTMEntry(m);
-      const wtmText = wtm ? (wtm.popup || wtm.decision || '') : '';
+      const wtmIdx = wtm ? WHY_THIS_MATTERS.indexOf(wtm) : -1;
       const safeTitle = (m.title || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
-      const safeWtm = wtmText.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-      const wtmBtn = wtmText
-        ? '<button class="btn-action wtm" onclick="openWTMModal(\'' + safeTitle + '\',\'' + safeWtm + '\')">ℹ Why This Matters</button>'
+      const wtmBtn = wtm
+        ? '<button class="btn-action wtm" onclick="openWTMModal(\'' + safeTitle + '\',' + wtmIdx + ')">ℹ Why This Matters</button>'
         : '';
-      const cardClass = wtmText ? 'meet-card has-wtm' : 'meet-card';
+      const cardClass = wtm ? 'meet-card has-wtm' : 'meet-card';
 
       // Comment button
       const ci = commentInfo(m);
