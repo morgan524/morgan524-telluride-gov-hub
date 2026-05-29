@@ -166,7 +166,7 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
     "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
@@ -179,6 +179,30 @@ const MANUAL_SUMMARIES = {
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "MV Town Council discusses expanding employee housing site",
+    source: "Telluride Times",
+    date: "May 29, 2026",
+    firstSeen: "2026-05-29",
+    newsTopic: "housing",
+    copy: "Mountain Village Town Council is considering adding 15 employee apartments to an existing workforce housing site, which would require rezoning but maintain the same total amounts of multifamily and open space. The proposal has hit resistance from council members and residents who want to preserve an existing park area where families play flag football, even though the overall open space would stay the same. There's also discussion about loosening deed restrictions so the housing isn't just for Telski employees.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_8d5bb5ae-775c-4765-b15f-8f7ca0efafd8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/80/e80695c4-157a-4535-a45c-d37d302ce2e7/6a17ffb51d8b2.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "The Dirty Turkeys at The Alibi",
+    source: "Telluride Times",
+    date: "May 29, 2026",
+    firstSeen: "2026-05-29",
+    newsTopic: "community",
+    copy: "Psychedelic rockers The Dirty Turkeys play The Alibi on May 29, 9-11:30 p.m. The Boulder-based band have dubbed their sound “acid cow punk,” describing it as a fusion of psychedelia, surf, punk and outlaw country. Formed in fall 2022, The…",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_666e5b48-9a9c-42ec-bc42-40729fefb441.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/57/857ec873-03a9-440a-b259-f9c1533ef0d8/6a19249f960e8.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Claude Lemieux, the feisty four-time Stanley Cup champion for Avalanche, Devils and Habs, dies at 60",
     source: "Telluride Times",
@@ -2130,70 +2154,26 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Coffee and Climate Conversation",
-    link: "https://telluridelibrary.libcal.com/event/15835906?hs=a",
-    description: "8:30 AM – 9:30 AM · For decades, environmental advocacy has shaped communities across San Miguel County. From our biggest wins, such as establishing the Valley Floor Conservation easement or creating a comprehensive Climate Action Plan, to ongoing conversations around land use, energy, waste and water issues in the face of our changing climate, our community continues to mobilize around the landscapes we call home. Join Sheep Mountain Alliance, EcoAction Partners, and local environmental advocates Joan May and Art Goodtimes for a discussion about environmentalism in our community over the decades: where have we been, and what will we do next? Whose voices should we center in these conversations, and how can we come together across different interest groups to envision a sustainable future? Join us for this exciting discussion about our region's environmental legacy and future. As always, coffee, tea and pastries kindly provided. …",
-    pubDate: "2026-05-28T08:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_30_09_17_45.jpg"
-  },
-  {
-    title: "Summer Kick Off for Teens! ¡Celebración de Verano para Adolescentes!",
-    link: "https://telluridelibrary.libcal.com/event/16905563?hs=a",
-    description: "10:00 AM – 6:00 PM · These events will take place in the teen area of the library. The teen area is for grades 6th-12th. We welcome rising 6th graders on the last day of school. Crafts All Day l 10:00 AM - 6:00 PM  Lego Competition l 12:30 PM  Hamilton Screening l 3:00 PM  ------------------------------------------------------------------------------------------------------------------ Estos eventos se llevar&aacute;n a cabo en el &aacute;rea de teens de la biblioteca. El &aacute;rea de teens es para estudiantes de 6&deg; a 12&deg; grado. &iexcl;Damos la bienvenida a las futuros estudiantes de 6&deg; grado el &uacute;ltimo d&iacute;a de clases! Manualidades Todo el D &iacute; a  l 10:00 AM - 6:00 PM Competenica de LEGO l 12:30 PM Proyecci &oacute; n de Hamilton  l 3:00 PM",
-    pubDate: "2026-05-28T10:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_15_11_28_09.png"
-  },
-  {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/15223208?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-05-28T10:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Kids Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
-  },
-  {
-    title: "CANCELLED Pilates for All Bodies",
-    link: "https://telluridelibrary.libcal.com/event/16536257?hs=a",
-    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-05-28T12:30:00.000Z",
+    title: "You & Me / Tu y Yo",
+    link: "https://telluridelibrary.libcal.com/event/15184970?hs=a",
+    description: "10:30 AM – 11:00 AM · Join us every Friday for a fun and engaging parent-child program designed for preschoolers! Each week, we explore a new theme through hands-on activities that spark creativity, curiosity, and learning. 1st Friday: Art - Get creative with fun art projects designed for little hands! 2nd Friday: Toddler Chef - Stir, mix, and create easy, tasty treats while learning basic kitchen skills. 3rd Friday: STEM - Dive into simple science, technology, engineering, and math experiments that inspire wonder. 4th Friday: Crafts - Enjoy making fun crafts together. &Uacute;nase a nosotros todos los viernes para un programa divertido e interactvio para padres e hijos, &iexcl;dise&ntilde;ado para ni&ntilde;os en edad preescolar! Cada semana exploramos un nuevo tema a trav&eacute;s de actividades pr&aacute;cticas que despiertan la creatividad, la curiosidad y el aprendizaje. …",
+    pubDate: "2026-05-29T10:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755554174.png"
   },
   {
-    title: "Summer Kick off for Children! ¡Celebración de Verano!",
-    link: "https://telluridelibrary.libcal.com/event/15822060?hs=a",
-    description: "12:30 PM – 5:30 PM · Popsicles & Art l 12:30-1:30 PM Drop by for a cool treat and get creative.  Mind Blown Magic Show l 1:30 PM Watch as impossible things happen right before your eyes in the interactive, mind-bending magic show the whole family will love.  Movie Matinee: Sponge Bob Square Pants l 3:00 PM Sit back, relax, and enjoy a movie! ------------------------------------------------------------------------------------------------------------------------- Paletas y Arte l 12:30 PM Pasa por la biblioteca para disfrutar una paleta refrescante y despertar tu creatividad. Show de Magia l 1:30 PM Observa c&oacute;mo suceden cosas imposibles ante tus propios ojos en este interactivo e incre&iacute;ble show de magia que toda la familia amar&aacute;. Tarde de Pel&iacute;cula : Bob Esponja Pantalones Cuadrados l 3:00 PM Si&eacute;ntate, rel&aacute;jate y disfruta de una pel&iacute;cula.",
-    pubDate: "2026-05-28T12:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_09_46.png"
-  },
-  {
-    title: "Littles On the Move",
-    link: "https://telluridelibrary.libcal.com/event/13960345?hs=a",
-    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
-    pubDate: "2026-05-28T15:30:00.000Z",
+    title: "Teen Ping Pong",
+    link: "https://telluridelibrary.libcal.com/event/15976842?hs=a",
+    description: "4:00 PM – 6:00 PM · Come stop by the library every Friday after school for open Ping Pong for Teenagers in the Magazine Room.",
+    pubDate: "2026-05-29T16:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1765562739.png"
   }
 ];
 
@@ -2285,72 +2265,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "Pilates Mat",
-    link: "https://ridgwaypilates.punchpass.com/catalogs/300",
-    description: "All Levels Pilates Mat class. Classical sequence Int to challenge, strengthen and stretch you wehole body. Every Thursday at 9:30am. Pricing Four lessons for $120 Eight lessons for $200 Become a member and pay $100/month to attend weekly. Purchase a pass here: https://ridgwaypilates.punchpass.com/catalogs/300 Class is limited to six people. Mats are included. Please wear socks, put your hair up and choose clothing free of metal.",
-    pubDate: "2026-05-28T15:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
-  },
-  {
-    title: "On Display: Layers of Faces and Life-Paintings by Ruth Higdon and Julie Ahern",
-    link: "https://events.ourayridgwayevents.com/event/layers-of-faces-and-life-paintings-by-ruth-higdon-and-julie-ahern",
-    description: "A duo exhibition of new works by local painters Julie Ahern and Ruth Higdon. More info decker@ridgwayfuse.org",
-    pubDate: "2026-05-28T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52709680184864/huge/bf651b7d434184420bcaf9702ff358cbd88d3b9e.jpg"
-  },
-  {
-    title: "KOTO KOOKout!",
-    link: "https://events.ourayridgwayevents.com/event/koto-kookout-5093",
-    description: "Ouray County residents! Join the KOTO-FM team for live music, free apps and to learn more about our new signal, K-O-O-K 90.3 FM serving the communities of Ridgway and Ouray. Help us shape the future of KOOK! We want to hear from you. The event is from 5-8 p.m. Thursday, May 28th at Greenwood's. All are welcome.",
-    pubDate: "2026-05-28T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52987257606208/huge/e68035b65d14f912955a49b9253687ae7418e7a8.jpg"
-  },
-  {
-    title: "The Lord of the Rings: The Fellowship of the Ring: Movie Night @ The Wright",
-    link: "https://thewrightoperahouse.org/",
-    description: "The Lord of the Rings: The Fellowship of the Ring: Movie Night @ the Wright WHEN? Wednesday, May 28 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 2h 58min RATING: PG-13 ROTTEN TOMATOES SCORE: 91% ABOUT THE FILM This movie was chosen to be just in time for fans of the Genre and precedes our live theatre event: \"Fly, You Fools!\" The Lord of the Rings: The Fellowship of the Ring (2001) follows a young hobbit, Frodo Baggins, as he sets out on a perilous journey to destroy a powerful ring and prevent it from falling into the hands of darkness. Joined by a fellowship of unlikely allies, Frodo travels across Middle-earth facing danger, temptation, and the growing shadow of evil in an epic tale of courage, friendship, and sacrifice. …",
-    pubDate: "2026-05-29T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52568666129757/huge/1fe32b4a28a59494b608daafcb284a172935afe5.jpg"
-  },
-  {
-    title: "THIRSTY THURSDAY - Game Night at Floating Lotus",
-    link: "www.FloatingLotusBrewery.com",
-    description: "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who came to have a good time. Happening 7-9pm every week",
-    pubDate: "2026-05-29T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg"
-  },
-  {
-    title: "Steps Tavern Presents Karaoke Night",
-    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
-    description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM.",
-    pubDate: "2026-05-29T02:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "STEPS TAVERN",
-    imageUrl: "https://localist-images.azureedge.net/photos/52985439397427/huge/7a32dc0ce7dd0fa5fc146521f201b6616af6feca.jpg"
-  },
   {
     title: "Ridgway Last Day of School",
     link: "https://www.ridgway.k12.co.us/page/district-calendar/",
@@ -3307,6 +3221,83 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52951532621249/huge/45a880540db97b7292e967c6f16b980532044c29.jpg"
+  },
+  {
+    title: "THIRSTY THURSDAY - Game Night at Floating Lotus",
+    link: "www.FloatingLotusBrewery.com",
+    description: "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who came to have a good time. Happening 7-9pm every week",
+    pubDate: "2026-06-12T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg"
+  },
+  {
+    title: "Steps Tavern Presents Karaoke Night",
+    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
+    description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM.",
+    pubDate: "2026-06-12T02:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "STEPS TAVERN",
+    imageUrl: "https://localist-images.azureedge.net/photos/52985439397427/huge/7a32dc0ce7dd0fa5fc146521f201b6616af6feca.jpg"
+  },
+  {
+    title: "Ridgway Farmers Market",
+    link: "www.ridgwayfarmersmarket.com",
+    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here.",
+    pubDate: "2026-06-12T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
+  },
+  {
+    title: "Ridgway Railroad Museum FREE Train Rides",
+    link: "https://www.ridgwayrailroadmuseum.org/",
+    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
+    pubDate: "2026-06-12T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
+  },
+  {
+    title: "True Grit Historic Walking Tours",
+    link: "https://truegrittours.org/true-grit-tours ",
+    description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
+    pubDate: "2026-06-12T21:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52285883190282/huge/99283c09e34ca5aeabd7006cca2ba5b2b28899c3.jpg"
+  },
+  {
+    title: "FLANNEL FEEDBACK",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-06-12T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "ROCC'n By The River Summer Dinner",
+    link: "https://roccsummerdinner2026.rsvpify.com/?group=e01b5e91-6d69-432f-8dc1-101f63d09c89&view=Wall",
+    description: "Guest speaker is Heather Hansman author of Fierce Country: The Untold Story of Three Women Who Ignited America’s Love for the Wild. She brings to life the untold stories of these women who shaped the wild places we love--and shares fresh inspiration to protecting them. We hope you can attend! Catering by Stefan Davenport Music by local musicians Doug & Heather TICKETS ARE LIMITED AND HAVE SOLD OUT IN THE PAST Click the website link to buy tickets",
+    pubDate: "2026-06-12T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Pa-Co-Chu-Puk ",
+    imageUrl: "https://localist-images.azureedge.net/photos/52773337940831/huge/16b7fad506150558489741f3cda5604bf1be060a.jpg"
   }
 ];
 
