@@ -1,45 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Livable Telluride — Daily Digest</title>
+    <title>Livable Telluride — Weekly Digest</title>
     <link>https://livabletelluride.org</link>
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
-    <description>News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).</description>
+    <description>This week&apos;s news, upcoming Gov-Hub meetings, and events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 May 2026 21:06:44 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2026 00:13:01 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
-      <title>[Meeting] Telluride Board of Education Work Session — 2026-06-09</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/school%7C2026-06-09%7CTelluride%20Board%20of%20Education%20Work%20Session</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Telluride School District • 2026-06-09
+      <title>[Sat, Jun 6] Bilingual Balance in Motion</title>
+      <link>https://koto.org/event/bilingual-balance-in-motion/2026-06-06/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/bilingual%20balance%20in%20motion%7C2026-06-06</guid>
+      <pubDate>Sat, 06 Jun 2026 16:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Wilkinson Public Library, Telluride
 
-Agenda not yet available]]></description>
-      <category>Meeting</category>
-      <category>Telluride School District</category>
+Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
     <item>
-      <title>[Meeting] Telluride Board of Education Monthly Meeting — 2026-06-09</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/school%7C2026-06-09%7CTelluride%20Board%20of%20Education%20Monthly%20Meeting</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Telluride School District • 2026-06-09
+      <title>[Sat, Jun 6] Lone Cone Librarys Annual Community Yard Sale &amp; Bbq</title>
+      <link>https://koto.org/event/lone-cone-librarys-annual-community-yard-sale-bbq/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/lone%20cone%20librarys%20annual%7C2026-06-06</guid>
+      <pubDate>Sat, 06 Jun 2026 15:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/2890-scaled.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Lone Cone Library Norwood
 
-Agenda not yet available]]></description>
-      <category>Meeting</category>
-      <category>Telluride School District</category>
+Our favorite spring tradition is back – the Lone Cone Library Community Yard Sale! Come browse treasures, support your neighbors, and enjoy a relaxed day on the lawn. Interested in being a vendor? Spaces are available for $10. If you’d like to reserve a spot, just fill out our quick sign‑up form at the front desk or below. Vendors are responsible for set up and clean-up of their items. Any items left behind will be taken care of in a respectful way (Donating, discarding, etc). 🍔 Community BBQ • 12–2pm Swing by for lunch while you shop. $10 per plate, includes a hamburger, a side, a drink and a cookie. Have items you no longer need? You can donate gently‑used items to the library ahead of the sale. We’ll add them to our tables, and all proceeds from donated items go directly toward supporting library programs.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/05/2890-scaled.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
     <item>
-      <title>[Meeting] Board of Trustees Meeting — 2026-06-09</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/norwood%7C2026-06-09%7CBoard%20of%20Trustees%20Meeting</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Norwood • 2026-06-09
+      <title>[Sat, Jun 6] Mars SUCKS! (Telluride Theatre FRINGE Project)</title>
+      <link>https://koto.org/event/mars-sucks-telluride-theatre-fringe-project/2026-06-05/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/mars%20sucks%20telluride%20theatre%7C2026-06-06</guid>
+      <pubDate>Sat, 06 Jun 2026 01:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/mars-sucks-thundertix.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Michael D. Palm Theater, Telluride
 
-Agenda not yet available]]></description>
-      <category>Meeting</category>
-      <category>Town of Norwood</category>
+Mars SUCKS! (Telluride Theatre FRINGE Project) June 4 & 5 7 – 8:45pm @ The Michael D. Palm Theatre In an otherworldly performance, author and explorer Craig Childs brings a form of live cinema to the Palm, featuring live music by Beth Quist. This visual, musical, spoken word event mixes science, storytelling, and a crazy desert adventure. We'll be leaving the planet, so buckle up. Seating is limited. Pay-What-You-Can Tickets are available. Learn more on Telluride Theatre's website ( www.telluridetheatre.org )]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/05/mars-sucks-thundertix.png" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 5] The Science of Connection: How our Relationships with Animals Shape Health and Wellbeing</title>
+      <link>https://koto.org/event/the-science-of-connection-how-our-relationships-with-animals-shape-health-and-wellbeing/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/the%20science%20of%20connection%7C2026-06-05</guid>
+      <pubDate>Fri, 05 Jun 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Telluride Science &#038; Innovation Center, TELLURIDE
+
+Dr. Kevin Morris, from the University of Denver, Graduate School of Social Services, The Institute for Human Animal Connection (IHAC), will visit Telluride Science & Innovation Center on Friday, June 5th, for a presentation called "The Science of Connection: How our Relationships with Animals Shape Health and Wellbeing." Dr. Morris has done numerous studies and has worked with Veterans, prison inmates, underprivileged children and underserved communities to study and improve the bond and relationships between animals and humans. Free and open to the public.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 5] Town Talk: The Science of Connection</title>
+      <link>https://koto.org/event/town-talk-the-science-of-connection/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/town%20talk%20the%20science%7C2026-06-05</guid>
+      <pubDate>Fri, 05 Jun 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/0605-science-connect_invite-1.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Telluride Innovation Center
+
+What does science have to say about the bonds we form with other animals — and why do those bonds matter so deeply for our health? In this talk, Dr. Kevin Morris, American Humane endowed chair and executive director of the University of Denver’s Institute for Human-Animal Connection, explores the emerging research behind human-animal relationships and what it means for individual and community well-being. Drawing on a remarkable career that spans molecular biology, cancer research, and social work, Dr. Morris bridges disciplines to illuminate how our lives with other animals are not just emotionally meaningful, but biologically and socially profound. His work challenges us to think about health as something shared across species — and to consider what a more equitable, science-informed relationship with the animal world could look like for all of us. This event is free and open to the public but RSVP is required at https://form.jotform.com/ 261447761087060]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/05/0605-science-connect_invite-1.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 5] Up-off Gymnastics, Dance, and Spanish</title>
+      <link>https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-06-05/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/up%20off%20gymnastics%20dance%7C2026-06-05</guid>
+      <pubDate>Fri, 05 Jun 2026 16:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Lone Cone Library Norwood
+
+We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 5] Mars SUCKS! (Telluride Theatre FRINGE Project)</title>
+      <link>https://koto.org/event/mars-sucks-telluride-theatre-fringe-project/2026-06-04/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/mars%20sucks%20telluride%20theatre%7C2026-06-05</guid>
+      <pubDate>Fri, 05 Jun 2026 01:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/mars-sucks-thundertix.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Michael D. Palm Theater, Telluride
+
+Mars SUCKS! (Telluride Theatre FRINGE Project) June 4 & 5 7 – 8:45pm @ The Michael D. Palm Theatre In an otherworldly performance, author and explorer Craig Childs brings a form of live cinema to the Palm, featuring live music by Beth Quist. This visual, musical, spoken word event mixes science, storytelling, and a crazy desert adventure. We'll be leaving the planet, so buckle up. Seating is limited. Pay-What-You-Can Tickets are available. Learn more on Telluride Theatre's website ( www.telluridetheatre.org )]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/05/mars-sucks-thundertix.png" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 5] Wild West Fest Roundup Day</title>
+      <link>https://sheridanoperahouse.com/events/wild-west-fest-roundup-day/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/wild%20west%20fest%20roundup%7C2026-06-05</guid>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2026/05/Wild-West-Fest-Roundup-Day-Image.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
+📍 Sheridan Opera House • Telluride, CO
+
+Show at the Sheridan Opera House. See the Sheridan page for tickets and details.]]></description>
+      <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2026/05/Wild-West-Fest-Roundup-Day-Image.png" medium="image" />
+      <category>Community Event</category>
+      <category>Sheridan Opera House</category>
+    </item>
+    <item>
+      <title>[Thu, Jun 4] Art Walk Telluride</title>
+      <link>https://koto.org/event/art-walk-telluride/2026-06-04/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/art%20walk%20telluride%7C2026-06-04</guid>
+      <pubDate>Thu, 04 Jun 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+
+Join us the first Thursday of every month for Telluride's Art Walk. It will be an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists. From 5–7 pm, participating venues will open their doors, showcasing new collections and inviting art lovers to explore the vibrant gallery scene. Find what's new on www.telluridearts.org Note: Special Edition Art Walk May 21st.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Thu, Jun 4] Pilates for All Bodies with Laura</title>
+      <link>https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-06-04/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/pilates%20for%20all%20bodies%7C2026-06-04</guid>
+      <pubDate>Thu, 04 Jun 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
     <item>
       <title>[Meeting] Design Review Board — 2026-06-04</title>
@@ -51,6 +145,44 @@ Agenda not yet available]]></description>
 Agenda not yet available]]></description>
       <category>Meeting</category>
       <category>Mountain Village</category>
+    </item>
+    <item>
+      <title>[Thu, Jun 4] Goldpine w/ Corey Hooker</title>
+      <link>https://www.alibitelluride.com/calendar#eca-event=goldpine-w-corey-hooker</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/goldpine%20w%20corey%20hooker%7C2026-06-04</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://ucarecdn.com/93f72103-743c-4fcb-9eb9-4f1de89a45df/-/crop/1860x930/0,244/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
+📍 The Alibi • Telluride, CO
+🕒 8:30 PM
+
+Bold + gold harmonies straight from Nashville. Winner of the Rocky Mountain Song competition.]]></description>
+      <media:content url="https://ucarecdn.com/93f72103-743c-4fcb-9eb9-4f1de89a45df/-/crop/1860x930/0,244/-/preview/" medium="image" />
+      <category>Community Event</category>
+      <category>The Alibi</category>
+    </item>
+    <item>
+      <title>[Wed, Jun 3] Bardic Trails Online Poetry Night</title>
+      <link>https://koto.org/event/bardic-trails-online-poetry-night-3/2026-06-02/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/bardic%20trails%20online%20poetry%7C2026-06-03</guid>
+      <pubDate>Wed, 03 Jun 2026 01:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+
+The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit to get the zoom link each month, Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of California Feb. …]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Wed, Jun 3] Telluride Science Town Talks</title>
+      <link>https://koto.org/event/telluride-science-town-talks/2026-06-02/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20science%20town%20talks%7C2026-06-03</guid>
+      <pubDate>Wed, 03 Jun 2026 00:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Telluride Conference Center, Mountain Village
+
+Big science. Small town. Every Tuesday from June 2- August 11, Telluride Science invites the public to sit down with some of the world’s most brilliant researchers for a conversation that might just change how you see the world. Town Talks cover everything from quantum computing and climate solutions to the latest in medicine and energy — accessible, thought-provoking, and completely free. Please note, there is no Town Talk on July 7.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
     <item>
       <title>[Meeting] Board of County Commissioners Meeting — 2026-06-03</title>
@@ -119,15 +251,127 @@ Meeting scheduled for first Monday of the month · Commission reviews open space
       <category>Town of Telluride</category>
     </item>
     <item>
-      <title>[Event] 2nd Annual Telluride Rotary Hikeathon — May 31, 2026</title>
-      <link>https://livabletelluride.org/events.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/2nd%20Annual%20Telluride%20Rotary%20Hikeathon%7CMay%2031%2C%202026</guid>
-      <pubDate>Sun, 31 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[📍 Oak Street Gondola Plaza, Telluride
+      <title>[Mon, Jun 1] 32nd Annual Wild West Fest</title>
+      <link>https://sheridanoperahouse.com/events/32nd-annual-wild-west-fest/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/32nd%20annual%20wild%20west%7C2026-06-01</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2025/03/WWF-Logo-Color-With-Layers.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
+📍 Sheridan Opera House • Telluride, CO
+
+Show at the Sheridan Opera House. See the Sheridan page for tickets and details.]]></description>
+      <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2025/03/WWF-Logo-Color-With-Layers.png" medium="image" />
+      <category>Community Event</category>
+      <category>Sheridan Opera House</category>
+    </item>
+    <item>
+      <title>[Sun, May 31] Tea and Tarot</title>
+      <link>https://koto.org/event/tea-and-tarot/2026-05-31/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/tea%20and%20tarot%7C2026-05-31</guid>
+      <pubDate>Sun, 31 May 2026 20:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/04/tea-1.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2025/04/tea-1.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sun, May 31] Drop In Tech Time with Oliver</title>
+      <link>https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-05-31/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/drop%20in%20tech%20time%7C2026-05-31</guid>
+      <pubDate>Sun, 31 May 2026 19:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sun, May 31] Gentle Yoga with Kristin Milord</title>
+      <link>https://koto.org/event/gentle-yoga-with-kristin-milord-2/2026-05-31/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/gentle%20yoga%20with%20kristin%7C2026-05-31</guid>
+      <pubDate>Sun, 31 May 2026 17:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/04/gentle-yoga-kristen-1.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class is free, but donations to support the instructor are welcome.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/04/gentle-yoga-kristen-1.png" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sun, May 31] 2nd Annual Telluride Rotary Hikeathon</title>
+      <link>https://www.facebook.com/telluriderotary/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/2nd%20annual%20telluride%20rotary%7C2026-05-31</guid>
+      <pubDate>Sun, 31 May 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 Telluride Rotary Club
+📍 Oak Street Gondola Plaza, Telluride
 🕒 11:00 AM kickoff
+
 Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four weeks of hiking from May 31 through June 28, with a kickoff at 11am on May 31 at the Oak Street gondola plaza. Hike from anywhere and raise funds for the Telluride Rotary Foundation — supporting scholarships, Youth Exchange, international projects, and community grants. 60% of nonprofit team funds go directly back to their nonprofit. Sponsored by Alpine Bank and Jagged Edge Mountain Gear.]]></description>
       <category>Community Event</category>
       <category>Telluride Rotary Club</category>
+    </item>
+    <item>
+      <title>[Sat, May 30] Party in the Park</title>
+      <link>https://koto.org/event/party-in-the-park/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/party%20in%20the%20park%7C2026-05-30</guid>
+      <pubDate>Sat, 30 May 2026 19:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/PITP-STD.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Town Park, Telluride
+
+TEF and there&#8230; are organizing our second annual Party in the Park! There will be great food and drinks, fun games, and amazing music, to celebrate our community!! All proceeds support our public schools!]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/05/PITP-STD.png" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sat, May 30] West End Democrats of San Miguel &amp; Montrose County 2026 Primary Voter Listening Session</title>
+      <link>https://koto.org/event/west-end-democrats-of-san-miguel-montrose-county-2026-primary-voter-listening-session/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/west%20end%20democrats%20of%7C2026-05-30</guid>
+      <pubDate>Sat, 30 May 2026 17:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Lone Cone Library Norwood
+
+Tired of being assaulted by nonstop political campaign blather? Here’s an idea: a session where YOU get to express YOUR needs and pressing issues and to have those important concerns relayed to the folks running in the June 30 th primary election in Colorado. No campaign rhetoric, no stump speeches, just a chance for you to voice YOUR concerns. The West End Democrats of San Miguel and Montrose County invite you to a one-hour, informal listening session moderated by Emmy Award winning broadcast journalist Judy Muller. We especially urge younger, independent, and unaffiliated voters to attend. What are your concerns and issues? Please let us know so that we can relay them to all the candidates, a list which includes Governor, Attorney General, U.S. House of Representatives, Secretary of State and Treasurer. We will make sure you are heard! …]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sat, May 30] Bilingual Balance in Motion</title>
+      <link>https://koto.org/event/bilingual-balance-in-motion/2026-05-30/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/bilingual%20balance%20in%20motion%7C2026-05-30</guid>
+      <pubDate>Sat, 30 May 2026 16:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sat, May 30] Impetus – A site-specific dance performace</title>
+      <link>https://koto.org/event/impetus-a-site-specific-dance-performace/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/impetus%20a%20site%20specific%7C2026-05-30</guid>
+      <pubDate>Sat, 30 May 2026 01:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/impetus-no-fringe-logo.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+
+Impetus is a 45-minute site-specific movement performance utilizing the unique landscape of the skatepark. Dancers use momentum, gravity, and interaction with each other to create a cyclical feeling, mimicking the energetic frustrations many of us are feeling with the state of the world today. This event is FREE and open to the public, all ages welcome. Donations will be collected at the event.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/05/impetus-no-fringe-logo.png" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>Newscast 5-28-26</title>
+      <link>https://koto.org/news/newscast-5-28-26/</link>
+      <guid isPermaLink="false">https://koto.org/news/newscast-5-28-26/</guid>
+      <pubDate>Fri, 29 May 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[Telluride Fire Plans for Station 3 Expansion; West End Roundup with the San Miguel Basin Forum; Wear a Lifejacket and Don’t Touch the Wildlife]]></description>
+      <category>KOTO Community Radio</category>
+      <category>public-safety</category>
     </item>
     <item>
       <title>From mentees to THS grads</title>
@@ -180,13 +424,31 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <category>community</category>
     </item>
     <item>
-      <title>Newscast 5-28-26</title>
-      <link>https://koto.org/news/newscast-5-28-26/</link>
-      <guid isPermaLink="false">https://koto.org/news/newscast-5-28-26/</guid>
-      <pubDate>Fri, 29 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Telluride Fire Plans for Station 3 Expansion; West End Roundup with the San Miguel Basin Forum; Wear a Lifejacket and Don’t Touch the Wildlife]]></description>
+      <title>Road and Bridge Office Closed on June 2nd 2026</title>
+      <link>https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=528</link>
+      <guid isPermaLink="false">https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=528</guid>
+      <pubDate>Thu, 28 May 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[The Road and Bridge office in Norwood will be closed on Tuesday, June 2, 2026. The office will open on Wednesday, June 3rd, with normal business hours.]]></description>
+      <category>San Miguel County</category>
+      <category>infrastructure</category>
+    </item>
+    <item>
+      <title>Ophir Pass is now Open</title>
+      <link>https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=527</link>
+      <guid isPermaLink="false">https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=527</guid>
+      <pubDate>Thu, 28 May 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[Ophir Pass is now Open]]></description>
+      <category>San Miguel County</category>
+      <category>community</category>
+    </item>
+    <item>
+      <title>Newscast 5-27-26</title>
+      <link>https://koto.org/news/newscast-5-27-26/</link>
+      <guid isPermaLink="false">https://koto.org/news/newscast-5-27-26/</guid>
+      <pubDate>Thu, 28 May 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[Man Arrested for Failure to Register as Sex Offender; The Impetus of Dance in Unlikely Spaces]]></description>
       <category>KOTO Community Radio</category>
-      <category>public-safety</category>
+      <category>community</category>
     </item>
     <item>
       <title>Claude Lemieux, the feisty four-time Stanley Cup champion for Avalanche, Devils and Habs, dies at 60</title>
@@ -259,33 +521,6 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <category>community</category>
     </item>
     <item>
-      <title>Road and Bridge Office Closed on June 2nd 2026</title>
-      <link>https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=528</link>
-      <guid isPermaLink="false">https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=528</guid>
-      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[The Road and Bridge office in Norwood will be closed on Tuesday, June 2, 2026. The office will open on Wednesday, June 3rd, with normal business hours.]]></description>
-      <category>San Miguel County</category>
-      <category>infrastructure</category>
-    </item>
-    <item>
-      <title>Ophir Pass is now Open</title>
-      <link>https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=527</link>
-      <guid isPermaLink="false">https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=527</guid>
-      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Ophir Pass is now Open]]></description>
-      <category>San Miguel County</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Newscast 5-27-26</title>
-      <link>https://koto.org/news/newscast-5-27-26/</link>
-      <guid isPermaLink="false">https://koto.org/news/newscast-5-27-26/</guid>
-      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Man Arrested for Failure to Register as Sex Offender; The Impetus of Dance in Unlikely Spaces]]></description>
-      <category>KOTO Community Radio</category>
-      <category>community</category>
-    </item>
-    <item>
       <title>US Supreme Court settles long-running water dispute over dwindling Rio Grande</title>
       <link>https://www.telluridenews.com/news/state/article_ec16ddd6-59c4-5d79-b1cd-562da53b058d.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_ec16ddd6-59c4-5d79-b1cd-562da53b058d.html</guid>
@@ -334,6 +569,15 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <category>infrastructure</category>
     </item>
     <item>
+      <title>Stage 1 Fire Restrictions in effect for Egnar Fire Protection District until further notice</title>
+      <link>https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=525</link>
+      <guid isPermaLink="false">https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=525</guid>
+      <pubDate>Tue, 26 May 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[Stage One fire Restrictions will be in place in the Egnar Fire Protection District until further notice.]]></description>
+      <category>San Miguel County</category>
+      <category>public-safety</category>
+    </item>
+    <item>
       <title>Gabriel Landeskog uses in-skate sensors, AI-driven movement platform to manage his knee and workload</title>
       <link>https://www.telluridenews.com/news/state/article_fd43bc8f-8803-5f9a-8e79-6724fb70fea8.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_fd43bc8f-8803-5f9a-8e79-6724fb70fea8.html</guid>
@@ -362,15 +606,6 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/9c/59c7ef9a-77e8-4717-8ead-905c0bdf40a1/6a152a6cde813.image.png" medium="image" />
       <category>Telluride Times</category>
       <category>infrastructure</category>
-    </item>
-    <item>
-      <title>Stage 1 Fire Restrictions in effect for Egnar Fire Protection District until further notice</title>
-      <link>https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=525</link>
-      <guid isPermaLink="false">https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=525</guid>
-      <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Stage One fire Restrictions will be in place in the Egnar Fire Protection District until further notice.]]></description>
-      <category>San Miguel County</category>
-      <category>public-safety</category>
     </item>
     <item>
       <title>Jackson McCabe is Pinhead history ‘pintern’</title>
@@ -410,6 +645,26 @@ Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four 
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/29/d29fa0d0-0b04-43b4-98e5-996ff4d4a8e1/6a115714a006d.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>housing</category>
+    </item>
+    <item>
+      <title>Responding when disaster strikes</title>
+      <link>https://www.telluridenews.com/news/article_495ca062-80ec-438c-8f0a-a42fa8d758e6.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_495ca062-80ec-438c-8f0a-a42fa8d758e6.html</guid>
+      <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/d5/6d52cd96-9fea-49b0-94a0-f02a885a8548/6a115bfaf164d.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />San Miguel County Emergency Manager Shannon Armstrong and the Telluride Foundation have formed the San Juan Regional COAD - a network of about 80 nonprofits, businesses and agencies across three counties to coordinate disaster response. The group focuses mainly on wildfire preparedness but also handles floods, severe weather and other emergencies, with strong community participation exceeding organizers' expectations.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/d5/6d52cd96-9fea-49b0-94a0-f02a885a8548/6a115bfaf164d.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
+    </item>
+    <item>
+      <title>The science of connection</title>
+      <link>https://www.telluridenews.com/news/article_702af9d4-c819-4687-a223-a924539cf04b.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_702af9d4-c819-4687-a223-a924539cf04b.html</guid>
+      <pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/00/0005938d-e480-4c36-85a6-b9e7b590e264/6a1149294f3df.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Dr. Kevin Morris from the University of Denver will speak Friday June 5th at 5:30 p.m. at the Science Center about his research on human-animal connections and health. He's studying how psychiatric service dogs help veterans with PTSD and plans future research on veterans and horses.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/00/0005938d-e480-4c36-85a6-b9e7b590e264/6a1149294f3df.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
     </item>
   </channel>
 </rss>

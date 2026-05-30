@@ -30,16 +30,25 @@ const BLOG_FEED_OUT = path.join(REPO_ROOT, 'feed-blog.xml');
 
 const SITE_URL = 'https://livabletelluride.org';
 const COMMUNITY_EVENTS_JSON = path.join(REPO_ROOT, 'community-events.json');
-const FEED_TITLE = 'Livable Telluride — Daily Digest';
-const FEED_DESC = 'News, upcoming meetings, and community events for the Telluride region (Town of Telluride, Mountain Village, San Miguel County, and surrounding communities).';
+// 2026-05-29: renamed from "Daily Digest" — the daily campaign was
+// retired 2026-05-25 and the only consumer is now the Weekly digest
+// Mailchimp campaign. Description updated to match the broader
+// content: news + Gov-Hub meetings coming up + events for the week.
+const FEED_TITLE = 'Livable Telluride — Weekly Digest';
+const FEED_DESC = 'This week\'s news, upcoming Gov-Hub meetings, and events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).';
 const BLOG_FEED_TITLE = 'Livable Telluride — Blog';
 const BLOG_FEED_DESC = 'Long-form posts from Livable Telluride on housing, land use, civic decisions, and the issues shaping our valley.';
 const MAX_AGE_DAYS = 7;             // backward window for news + blog
-const MAX_FUTURE_DAYS = 14;         // forward window for meetings (only emit upcoming meetings within 14d)
-const MAX_EVENT_FUTURE_DAYS = 60;   // forward window for events (events starting within 60d)
-const MAX_ITEMS = 40;               // hard cap on feed size
-const MAX_MEETINGS = 10;            // cap upcoming-meeting items per build
-const MAX_EVENTS = 10;              // cap event items per build
+// Weekly digest windows (2026-05-29) — "Gov-Hub coming up + events for
+// the week." Tightened from 14/60 → 7 because the only consumer of
+// feed.xml is the Mailchimp Weekly digest campaign; longer windows
+// surfaced too many far-future items that a weekly email recipient
+// can't act on.
+const MAX_FUTURE_DAYS = 7;          // forward window for meetings
+const MAX_EVENT_FUTURE_DAYS = 7;    // forward window for events
+const MAX_ITEMS = 60;               // hard cap on feed size
+const MAX_MEETINGS = 15;            // cap upcoming-meeting items per build
+const MAX_EVENTS = 25;              // cap event items per build (multi-source)
 const MAX_BLOG = 8;                 // cap blog items per build
 
 // ──────────────────────────────────────────────────────────────
@@ -264,32 +273,110 @@ function eventSendSlot(eventDate, today) {
   return `${yr}-B${Math.ceil(wk / 2)}`;
 }
 
+/**
+ * Source priority for cross-source event dedup. Lower wins on the same
+ * (normalized-title + date) key. Matches the priority list in
+ * gov-helpers.js eventSourcePriority() (events.html dedup).
+ *
+ * Mirroring keeps the digest and the Events tab consistent — a
+ * Sheridan show that's ALSO on telluride.com (the aggregator)
+ * renders the Sheridan version on the site AND the Sheridan
+ * version in the email.
+ */
+const EVENT_SOURCE_PRIORITY = {
+  wilkinson:           0,
+  koto:                1,
+  sheridan:            2,
+  alibi:               2,
+  sherbino:            2,
+  tellurideFoundation: 2,
+  'TF Foundation':     2,
+  musicOnTheGreen:     3,
+  mountainvillage:     3,
+  community:           3,
+  email:               3,
+  'telluride-com':     4,
+};
+
+function eventPriority(src) {
+  if (src == null) return 5;
+  const p = EVENT_SOURCE_PRIORITY[src];
+  return p != null ? p : 5;
+}
+
+function normalizeEventTitle(t) {
+  return String(t || '')
+    .toLowerCase()
+    // Drop a trailing venue suffix like "Tea & Tarot: Wilkinson Library, 2:30-4:30 pm"
+    .replace(/:\s*[^:]*library.*$/i, '')
+    .replace(/,\s*\d+(:\d+)?\s*-\s*\d+(:\d+)?\s*[ap]\.?m\.?.*$/i, '')
+    .replace(/&/g, ' and ')
+    .replace(/[^\w\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .split(/\s+/)
+    .slice(0, 4)
+    .join(' ');
+}
+
+function pickEventDate(e) {
+  // Accept any of the field aliases the various source schemas use.
+  return e.date || e.pubDate || e.startDate || e.Date || e.start_date || e.start;
+}
+
 function buildEventItems(...sources) {
   const events = sources.flatMap((s) => Array.isArray(s) ? s : []);
-  const today = new Date();
-  today.setUTCHours(0, 0, 0, 0);
-  const items = [];
+
+  // ── Pass 1: filter window + dedup keyed by (title-key + date) ──
+  // Lower-priority source loses on collision; if priorities tie, first-seen wins
+  // (sources are passed in priority order in main()).
+  const winners = new Map(); // key -> event
   for (const e of events) {
     if (!e || !e.title) continue;
-    const eventDate = parseDate(e.date || e.startDate || e.Date);
-    if (!withinRollingWindow(eventDate, 1, MAX_EVENT_FUTURE_DAYS)) continue;
-    const desc = [
-      e.location ? `📍 ${e.location}` : null,
-      e.eventTimes || e.time ? `🕒 ${e.eventTimes || e.time}` : null,
-      e.copy || e.description || '',
-    ].filter(Boolean).join('\n');
+    const eventDate = parseDate(pickEventDate(e));
+    if (!withinRollingWindow(eventDate, 0, MAX_EVENT_FUTURE_DAYS)) continue;
+    const dateStr = eventDate.toISOString().slice(0, 10);
+    const key = `${normalizeEventTitle(e.title)}|${dateStr}`;
+    const existing = winners.get(key);
+    if (!existing || eventPriority(e.source) < eventPriority(existing.source)) {
+      winners.set(key, { ...e, _date: eventDate, _dateStr: dateStr });
+    }
+  }
+
+  // ── Pass 2: build RSS items ──
+  const items = [];
+  for (const e of winners.values()) {
+    const niceDate = e._date.toLocaleDateString('en-US', {
+      weekday: 'short', month: 'short', day: 'numeric', timeZone: 'UTC',
+    });
+    const descParts = [];
+    if (e.sourceLabel || e.source) descParts.push(`🎫 ${e.sourceLabel || e.source}`);
+    if (e.location) descParts.push(`📍 ${e.location}`);
+    if (e.time || e.eventTimes) descParts.push(`🕒 ${e.time || e.eventTimes}`);
+    // Blank line then body
+    descParts.push('');
+    const body = String(e.description || e.copy || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    if (body) descParts.push(body);
     items.push({
-      title: `[Event] ${e.title} — ${e.date || ''}`,
-      link: `${SITE_URL}/events.html`,
-      pubDate: eventDate,      // use actual event date — stable, not refreshed
-      description: desc,
-      imageUrl: e.img || e.imageUrl || null,
-      categories: ['Community Event', e.source].filter(Boolean),
-      // Stable GUID — each event appears in the email exactly once (when first added)
-      guid: `${SITE_URL}/event/${encodeURIComponent(`${e.title.slice(0, 80)}|${e.date || ''}`)}`,
+      title: `[${niceDate}] ${e.title}`,
+      // Prefer the SOURCE link (Sheridan / Alibi / Wilkinson detail page) so
+      // subscribers can click straight through to tickets / RSVPs / details.
+      // Only fall back to the local events page when no source URL exists
+      // (legacy hand-curated COMMUNITY_EVENTS without href).
+      link: e.link || e.href || `${SITE_URL}/events.html`,
+      pubDate: e._date,
+      description: descParts.join('\n'),
+      imageUrl: e.imageUrl || e.img || null,
+      categories: ['Community Event', e.sourceLabel || e.source].filter(Boolean),
+      // Stable GUID — each event appears in the email exactly once.
+      // Use the normalized title+date so cross-source dupes (Sheridan vs
+      // telluride.com vs TT) collapse into one GUID even if they slip
+      // through the Pass 1 dedup with a slightly different display title.
+      guid: `${SITE_URL}/event/${encodeURIComponent(`${normalizeEventTitle(e.title)}|${e._dateStr}`)}`,
     });
   }
-  items.sort((a, b) => parseDate(a.description.split('\n')[0]) - parseDate(b.description.split('\n')[0]) || a.title.localeCompare(b.title));
+  // Sort by event date ascending — earliest first (most actionable in a digest).
+  items.sort((a, b) => a.pubDate - b.pubDate);
   return items.slice(0, MAX_EVENTS);
 }
 
@@ -333,6 +420,22 @@ function main() {
   const events = extractJsArray(src, 'COMMUNITY_EVENTS') || [];
   const blogPosts = extractJsArray(src, 'BLOG_POSTS') || [];
 
+  // ── Broaden the digest (2026-05-29): pull the next 7 days of events
+  //    from EVERY live source the Events tab reads, not just the
+  //    hand-curated COMMUNITY_EVENTS + email-submitted JSON. Listed in
+  //    PRIORITY ORDER (highest-priority venue first) so when the dedup
+  //    map sees a cross-source duplicate it keeps the authoritative
+  //    source's link/image/description. The Mailchimp Weekly campaign
+  //    uses this as a "what's coming up at the venues" section.
+  const wilkinsonEvents = extractJsArray(src, 'WILKINSON_EVENTS') || [];
+  const kotoEvents      = extractJsArray(src, 'KOTO_COMMUNITY_EVENTS') || [];
+  const sheridanEvents  = extractJsArray(src, 'SHERIDAN_EVENTS') || [];
+  const alibiEvents     = extractJsArray(src, 'ALIBI_EVENTS') || [];
+  const sherbinoEvents  = extractJsArray(src, 'SHERBINO_EVENTS') || [];
+  const tfEvents        = extractJsArray(src, 'TF_FOUNDATION_EVENTS') || [];
+  const motgEvents      = extractJsArray(src, 'MUSIC_ON_THE_GREEN') || [];
+  const tcomEvents      = extractJsArray(src, 'TELLURIDE_COM_EVENTS') || [];
+
   // community-events.json holds events submitted via email-to-events pipeline
   let jsonEvents = [];
   try {
@@ -344,7 +447,14 @@ function main() {
     console.warn(`  community-events.json parse error: ${e.message}`);
   }
 
-  console.log(`  Loaded: ${tt.length} TT/gov articles, ${koNews.length} KOTO newscasts, ${koFeat.length} KOTO features, ${smbf.length} SMBF articles, ${Object.keys(summaries).length} meeting summaries, ${events.length + jsonEvents.length} events, ${blogPosts.length} blog posts`);
+  const totalEventInputs =
+    events.length + jsonEvents.length +
+    wilkinsonEvents.length + kotoEvents.length +
+    sheridanEvents.length + alibiEvents.length +
+    sherbinoEvents.length + tfEvents.length +
+    motgEvents.length + tcomEvents.length;
+
+  console.log(`  Loaded: ${tt.length} TT/gov articles, ${koNews.length} KOTO newscasts, ${koFeat.length} KOTO features, ${smbf.length} SMBF articles, ${Object.keys(summaries).length} meeting summaries, ${totalEventInputs} event candidates (across 10 source arrays), ${blogPosts.length} blog posts`);
 
   // Main digest feed: news + meetings + events. Blog posts get their own feed.
   let items = [
@@ -353,7 +463,22 @@ function main() {
     ...buildNewsItems('koto-features', koFeat, 'KOTO Community Radio'),
     ...buildNewsItems('smbf', smbf, 'San Miguel Basin Forum'),
     ...buildMeetingItems(summaries),
-    ...buildEventItems(events, jsonEvents),
+    // Event arrays in PRIORITY ORDER — Wilkinson (0) before KOTO (1)
+    // before venues (2) before Music on the Green (3) before hand-curated
+    // / email (3) before telluride.com aggregator (4). When the dedup
+    // map sees a collision, the EARLIER source wins.
+    ...buildEventItems(
+      wilkinsonEvents,
+      kotoEvents,
+      sheridanEvents,
+      alibiEvents,
+      sherbinoEvents,
+      tfEvents,
+      motgEvents,
+      events,
+      jsonEvents,
+      tcomEvents,
+    ),
   ];
 
   // De-duplicate by guid, keep newest pubDate, sort newest first, cap.
