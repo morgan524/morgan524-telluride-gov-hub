@@ -850,7 +850,7 @@
         <a href="/donate.html">Donate</a>
       </nav>
       <button id="lvLangToggle" class="topnav-lang-toggle" type="button" onclick="lvToggleLang()" title="Cambiar idioma / Switch language">Español</button>
-      <div id="lvLangWidget" style="display:none" aria-hidden="true"></div>
+      <div id="lvLangWidget" aria-hidden="true"></div>
       <a class="topnav-cta" href="/hub-bub.html#login">Log In</a>
       <button class="topnav-hamburger" aria-label="Open navigation menu" aria-expanded="false" id="topnavHamburger" type="button">☰</button>
     </div>
@@ -1634,8 +1634,10 @@ function googleTranslateElementInit() {
   hideCss.textContent = [
     '.topnav-lang-toggle { display: inline-flex; align-items: center; padding: 6px 14px; border: 1px solid rgba(33,68,60,0.25); border-radius: 999px; background: #fff; color: #2d4a3e; font-size: 0.82rem; font-weight: 600; font-family: inherit; cursor: pointer; margin-right: 8px; transition: background 0.12s; }',
     '.topnav-lang-toggle:hover { background: #f5f1ea; }',
-    '.goog-te-banner-frame, .skiptranslate, .goog-te-gadget { display: none !important; }',
-    'body { top: 0 !important; position: static !important; }',
+    '.goog-te-banner-frame { display: none !important; }',
+    '.goog-te-gadget { display: none !important; }',
+    'body { top: 0 !important; }',
+    '#lvLangWidget { position: absolute; left: -9999px; top: -9999px; opacity: 0; height: 0; overflow: hidden; }',
     'font[style*="background-color"] { background: transparent !important; box-shadow: none !important; }',
     '.goog-tooltip, .goog-tooltip:hover { display: none !important; }',
     '.goog-text-highlight { background: none !important; box-shadow: none !important; }'
