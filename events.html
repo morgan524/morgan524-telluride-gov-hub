@@ -1428,7 +1428,13 @@
                  time: e.time || ((start && typeof start === 'string' && start.includes('T')) ? new Date(start).toLocaleTimeString('en-US', { timeZone: 'America/Denver', hour: 'numeric', minute: '2-digit' }) : ''),
                  location: e.location || '',
                  town: townFromLocation(e.location || ''),
-                 summary: (e.description || '').replace(/<[^>]+>/g,'').slice(0, 600),
+                 // Read every field alias the various source schemas use.
+                 // COMMUNITY_EVENTS (hand-curated) uses `copy`; bot-synced
+                 // sources use `description`; some legacy entries use
+                 // `summary`. Until 2026-05-30 this only read `description`,
+                 // so the Hikeathon-style COMMUNITY_EVENTS entries shipped
+                 // with their copy ignored and the card showed an empty body.
+                 summary: (e.description || e.copy || e.summary || '').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim().slice(0, 600),
                  source: sourceLabel || e.sourceLabel || e.source || 'Community',
                  href: e.link || e.href || '#',
                  img: e.imageUrl || e.img || ''

@@ -3645,7 +3645,12 @@ async function syncSheridanEvents() {
     events.push({
       title:       p.title,
       link:        p.link,
-      description: 'Show at the Sheridan Opera House. See the Sheridan page for tickets and details.',
+      // Sheridan's listing page has no per-event blurb. Leave description
+      // empty so syncEventDescriptions() (the Rick generator at the end of
+      // main()) fills it with a real Rick-voice summary based on the
+      // title + venue. Better than shipping the same generic boilerplate
+      // for every show.
+      description: '',
       pubDate:     p.startDate,
       endDate:     p.endDate !== p.startDate ? p.endDate : undefined,
       source:      'sheridan',
@@ -5147,6 +5152,138 @@ async function syncRidgwayAgendas() {
   return agendaMap;
 }
 
+// ══════════════════════════════════════════════════════════════
+// ── Rick AI summary generator for events without source content ──
+// ══════════════════════════════════════════════════════════════
+//
+// Every event on livabletelluride.org/events.html has a summary block
+// that needs ~40-100 words explaining what the event is. Most sources
+// give us this for free:
+//   - Wilkinson Library — full description from LibCal HTML
+//   - KOTO Community Calendar — Tribe Events `description` field
+//   - The Alibi — `shortDescription` from the ECA API
+//   - telluride.com — tooltip text from fcEventsData
+//   - COMMUNITY_EVENTS / community-events.json — hand-written `copy`
+//
+// But some sources only give us title + venue + date:
+//   - Sheridan Opera House — MEC listing page has no per-event blurb
+//   - Email-submitted events sometimes omit a description
+//   - Future sources we haven't picked a parser for yet
+//
+// For those, we ask Claude (acting as "Rick" — see the SUMMARY_SYSTEM_PROMPT
+// at the top of this file and the voice_rick memory note) to write a
+// short, grounded 2-sentence event summary based on whatever metadata
+// we DO have. The output gets written into the event's `description`
+// field so events.html doesn't need to know which summaries are AI.
+//
+// CACHING: Claude API calls cost money, and the bot runs every 6 hours
+// with ~250 events on average. Caching is essential. We key by
+// (source|title|date) and persist to data/event-summaries-cache.json.
+// Once an event has a Rick summary, it stays cached until the title
+// or date changes. Cache lives in the repo so it persists across
+// runner invocations.
+
+// fs + path already required at the top of the file (lines 19-20).
+// REPO_ROOT already defined at line 23.
+const EVENT_SUMMARY_CACHE_PATH = path.join(REPO_ROOT, 'data', 'event-summaries-cache.json');
+
+const RICK_EVENT_USER_PROMPT_TEMPLATE = (e) => `Write a 2-sentence (40-70 word) description for this event, to display on a Telluride community events page. Stay grounded — DO NOT invent facts you weren't told (specific times, prices, lineup names, performer biographies, ticket details). If the title or context is sparse, write a generic but accurate description ("a concert at The Alibi" / "a free library program for kids") rather than making things up. No sign-off, no quotes, no "Rick says", no calls to action. Plain prose.
+
+Title: ${e.title || '(no title)'}
+Date: ${e.pubDate || e.date || '(no date)'}
+${e.time ? 'Time: ' + e.time + '\n' : ''}Location: ${e.location || '(no location)'}
+Source/Venue: ${e.sourceLabel || e.source || '(unknown)'}
+Category: ${e.category || '(general)'}
+Existing description (may be empty or generic): ${(e.description || e.copy || '').slice(0, 300) || '(none)'}`;
+
+function loadEventSummaryCache() {
+  try {
+    if (fs.existsSync(EVENT_SUMMARY_CACHE_PATH)) {
+      return JSON.parse(fs.readFileSync(EVENT_SUMMARY_CACHE_PATH, 'utf8')) || {};
+    }
+  } catch (e) { console.warn(`  Cache parse error: ${e.message}`); }
+  return {};
+}
+
+function saveEventSummaryCache(cache) {
+  try {
+    const dir = path.dirname(EVENT_SUMMARY_CACHE_PATH);
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(EVENT_SUMMARY_CACHE_PATH, JSON.stringify(cache, null, 2));
+  } catch (e) { console.warn(`  Cache write error: ${e.message}`); }
+}
+
+function eventSummaryCacheKey(e) {
+  const src   = String(e.source || e.sourceLabel || 'unknown').toLowerCase().slice(0, 30);
+  const title = String(e.title || '').toLowerCase().replace(/\s+/g, ' ').trim().slice(0, 80);
+  const date  = String(e.pubDate || e.date || '').slice(0, 10);
+  return `${src}|${title}|${date}`;
+}
+
+/**
+ * True if this event's description is either missing or so generic
+ * that it doesn't actually tell the user anything specific. The
+ * threshold is 80 characters because under that we tend to have
+ * boilerplate like "Show at the Sheridan Opera House."
+ */
+function eventNeedsSummary(e) {
+  const desc = (e.description || e.copy || '').trim();
+  if (desc.length < 80) return true;
+  if (/^show at the/i.test(desc)) return true;
+  if (/see the .* page for tickets and details/i.test(desc)) return true;
+  return false;
+}
+
+/**
+ * Fill in `description` on every event across the given arrays where
+ * one is missing/boilerplate. Returns the count of events updated.
+ * Caches generated summaries to avoid re-calling the API on every cron
+ * tick. Skips silently if ANTHROPIC_API_KEY is not set.
+ */
+async function syncEventDescriptions(eventArrays) {
+  console.log('\n🎤 Task 21: Rick AI summaries for events with no source content...');
+  if (!ANTHROPIC_API_KEY) {
+    console.log('  ⚠ No ANTHROPIC_API_KEY — skipping Rick summary generation');
+    return 0;
+  }
+
+  const cache = loadEventSummaryCache();
+  const all = eventArrays.flatMap(a => Array.isArray(a) ? a : []);
+  const candidates = all.filter(eventNeedsSummary);
+  console.log(`  ${candidates.length} event(s) need a description (out of ${all.length} total)`);
+
+  let cacheHits = 0, generated = 0, errors = 0;
+  for (const ev of candidates) {
+    const key = eventSummaryCacheKey(ev);
+    if (cache[key]) {
+      ev.description = cache[key];
+      cacheHits++;
+      continue;
+    }
+    // Generate via Claude
+    try {
+      const text = await callClaudeRaw(RICK_EVENT_USER_PROMPT_TEMPLATE(ev));
+      if (text && text.length >= 40) {
+        ev.description = text;
+        cache[key] = text;
+        generated++;
+      } else {
+        errors++;
+        console.warn(`    ⚠ Empty/short response for: ${ev.title}`);
+      }
+      // Small pause to avoid spamming the API
+      await new Promise(r => setTimeout(r, 250));
+    } catch (e) {
+      errors++;
+      console.warn(`    ✗ Claude error for "${ev.title}": ${e.message}`);
+    }
+  }
+
+  saveEventSummaryCache(cache);
+  console.log(`  Rick: ${cacheHits} from cache, ${generated} newly generated, ${errors} errors`);
+  return generated;
+}
+
 async function main() {
   console.log('═══════════════════════════════════════════════');
   console.log('  Telluride Gov Hub — Content Refresh');
@@ -5539,6 +5676,34 @@ async function main() {
       changed = true;
       console.log(`  RIDGWAY_AGENDA_MAP updated: ${Object.keys(newRidgwayAgendas).length} entries`);
     }
+  }
+
+  // ── Task 21: Rick AI summaries for events with no source content ──
+  // Runs AFTER all event syncs so it sees the freshest versions of each
+  // array. Reads the per-source arrays back out of govHubSrc (which has
+  // them as JS literals), generates Rick summaries for entries with no
+  // description, then writes the patched arrays back into govHubSrc.
+  const eventArrayNames = [
+    'WILKINSON_EVENTS', 'KOTO_COMMUNITY_EVENTS', 'SHERIDAN_EVENTS',
+    'ALIBI_EVENTS', 'SHERBINO_EVENTS', 'TF_FOUNDATION_EVENTS',
+    'MUSIC_ON_THE_GREEN', 'COMMUNITY_EVENTS', 'TELLURIDE_COM_EVENTS',
+    'OURAY_COUNTY_EVENTS', 'MOUNTAIN_VILLAGE_EVENTS', 'NORWOOD_EVENTS',
+  ];
+  const arraySnapshot = {};
+  for (const name of eventArrayNames) {
+    arraySnapshot[name] = extractJsArray(govHubSrc, name) || [];
+  }
+  const flattened = Object.values(arraySnapshot);
+  const updated = await syncEventDescriptions(flattened);
+  if (updated > 0) {
+    // Some descriptions were generated — write each array back into govHubSrc
+    for (const name of eventArrayNames) {
+      const arr = arraySnapshot[name];
+      if (!arr || arr.length === 0) continue;
+      govHubSrc = replaceJsValue(govHubSrc, name, arr, false);
+    }
+    changed = true;
+    console.log(`  ${updated} event description(s) generated by Rick — gov-helpers.js will commit.`);
   }
 
   // ── Write files ──
