@@ -65,6 +65,16 @@ const ALLOWED_HOSTS = [
   // / Yoast / a future WAF rule starts blocking GH runner IPs.
   "sheridanoperahouse.com",
   "www.sheridanoperahouse.com",
+  // Alibi Telluride — events served by Event Calendar App (the
+  // alibi.com Squarespace native calendar is dormant; the live
+  // events are in the embedded ECA widget). Parser hits ECA API.
+  "alibitelluride.com",
+  "www.alibitelluride.com",
+  "api.eventcalendarapp.com",
+  // Telluride.com — community calendar. /festivals-events/events/
+  // ships all events inline as fcEventsData (300+ entries).
+  "telluride.com",
+  "www.telluride.com",
 ];
 
 // Realistic Safari UA that is known to clear both Telluride Times' rate-limit

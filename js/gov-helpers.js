@@ -2187,6 +2187,52 @@ const HUMANE_SOCIETY_ANIMALS = [
 
 ];
 
+/* The Alibi events — refreshed by syncAlibiEvents() every 6 hours.
+ * Source: Event Calendar App (api.eventcalendarapp.com, calendar 14036).
+ * Same schema as WILKINSON_EVENTS / SHERIDAN_EVENTS.
+ * Link uses #eca-event=<friendlyUrl> fragment so users land on the
+ * Alibi's own /calendar page with the event modal pre-opened.
+ * Seeded 2026-05-29 with 3 events so the Events tab shows content
+ * on Day 1; bot overwrites on first run. */
+const ALIBI_EVENTS = [
+  {
+    title: "The Dirty Turkeys X Trestles",
+    link: "https://www.alibitelluride.com/calendar#eca-event=the-dirty-turkeys-x-trestles",
+    description: "With a sound they’ve dubbed “Acid Cow Punk,” a gritty fusion of psychedelia, surf, punk, and outlaw country.",
+    pubDate: "2026-05-29",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/60bf1a01-4f21-4be4-b641-138b6b06241a/-/crop/1080x540/0,859/-/preview/"
+  },
+  {
+    title: "Goldpine w/ Corey Hooker",
+    link: "https://www.alibitelluride.com/calendar#eca-event=goldpine-w-corey-hooker",
+    description: "Bold + gold harmonies straight from Nashville. Winner of the Rocky Mountain Song competition.",
+    pubDate: "2026-06-04",
+    time: "8:30 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/93f72103-743c-4fcb-9eb9-4f1de89a45df/-/crop/1860x930/0,244/-/preview/"
+  },
+  {
+    title: "North Fork Crossing w/ Brendan Forrest",
+    link: "https://www.alibitelluride.com/calendar#eca-event=north-folk-crossing",
+    description: "North Fork Crossing is a new-age Bluegrass band drawing on Traditional roots.",
+    pubDate: "2026-06-12",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/f1d0587b-ecc4-4749-9dc7-6d561e93a852/-/crop/2500x1251/0,210/-/preview/"
+  }
+];
+
 /* Sheridan Opera House events — refreshed by syncSheridanEvents() every 6 hours.
  * Schema mirrors WILKINSON_EVENTS: { title, link, description, pubDate,
  * endDate?, source, sourceLabel, category, location, imageUrl }.

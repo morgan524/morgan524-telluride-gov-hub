@@ -266,6 +266,22 @@ const PROXY_HOSTS = new Set([
   // GH runner IPs the way TT and KOTO did.
   'sheridanoperahouse.com',
   'www.sheridanoperahouse.com',
+  // Alibi Telluride — events are NOT in Squarespace's native calendar
+  // (that's dormant, last update October 2023). The live events are
+  // served by Event Calendar App (eventcalendarapp.com), embedded
+  // via a div with calendar_id=14036 widgetUuid=bd9b821e-... on the
+  // /calendar page. Parser hits the API directly.
+  'alibitelluride.com',
+  'www.alibitelluride.com',
+  'api.eventcalendarapp.com',
+  // Telluride.com — community calendar that aggregates events from
+  // many local venues + groups. The /festivals-events/events/ page
+  // ships all events inline as window.fcEventsData (300+ entries
+  // with title, start/end dates, image, summary). Parser hits THIS
+  // page once and extracts the array — much faster than the old
+  // sitemap+per-page approach (which made 300+ HTTP requests).
+  'telluride.com',
+  'www.telluride.com',
 ]);
 
 function maybeProxy(url) {
@@ -3646,6 +3662,171 @@ async function syncSheridanEvents() {
 }
 
 
+// ══════════════════════════════════════════════════════════════
+// ── Task 10c: The Alibi Telluride (Event Calendar App API) ──
+// ══════════════════════════════════════════════════════════════
+//
+// Alibi is a Squarespace site, but their NATIVE Squarespace events
+// collection is dormant (last update October 2023). The live shows
+// are served by Event Calendar App (eventcalendarapp.com), embedded
+// on /calendar via a div with calendar_id=14036 and a widget UUID.
+// The widget JS hits api.eventcalendarapp.com/events?id=…&widgetUuid=…
+// and we hit the same URL directly.
+//
+// Each event has: summary (title), shortDescription, image, friendlyUrl,
+// timezoneStart / timezoneEnd (no-TZ ISO in venue's local time, i.e. MT),
+// utcStartTime / utcEndTime (epoch seconds).
+//
+// Link policy: we link back to the Alibi's own page with the event's
+// hash fragment, so the user lands at alibitelluride.com (not the
+// third-party widget host) with the event modal pre-opened:
+//   https://www.alibitelluride.com/calendar#eca-event=<friendlyUrl>
+
+const ALIBI_ECA_URL =
+  'https://api.eventcalendarapp.com/events' +
+  '?id=14036&widgetUuid=bd9b821e-5a19-48b2-8c28-3dd0b4718bc1';
+
+async function syncAlibiEvents() {
+  console.log('\n🎸 Task 10c: Syncing The Alibi events (Event Calendar App)...');
+  let resp;
+  try { resp = await fetch(ALIBI_ECA_URL); }
+  catch (e) { console.warn(`  ECA fetch error: ${e.message}`); return null; }
+  if (!resp || resp.status !== 200) {
+    console.warn(`  ECA HTTP ${resp ? resp.status : 'no response'}`);
+    return null;
+  }
+  let data;
+  try { data = JSON.parse(resp.text); }
+  catch (e) { console.warn(`  ECA JSON parse error: ${e.message}`); return null; }
+  const all = (data && Array.isArray(data.events)) ? data.events : [];
+  console.log(`  ECA returned ${all.length} event(s) total`);
+
+  const now = Date.now();
+  const horizon = now + 60 * 86400000;
+  const events = [];
+  for (const e of all) {
+    if (!e || !e.summary) continue;
+    const utc = (typeof e.utcStartTime === 'number') ? e.utcStartTime * 1000 : null;
+    if (utc == null) continue;
+    if (utc < now - 86400000) continue;  // already past
+    if (utc > horizon) continue;          // beyond 60 days
+    // timezoneStart is the no-TZ ISO in MT — date portion is what events.html
+    // wants for the calendar bucket; time portion goes in the separate `time`.
+    const tzStart = String(e.timezoneStart || '');
+    const dateStr = tzStart.slice(0, 10);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) continue;
+    let timeStr = '';
+    const tm = tzStart.match(/T(\d{2}):(\d{2})/);
+    if (tm) {
+      const h = parseInt(tm[1], 10);
+      const m = tm[2];
+      const hr12 = ((h + 11) % 12) + 1;
+      timeStr = `${hr12}:${m} ${h < 12 ? 'AM' : 'PM'}`;
+    }
+    const desc = smartTruncate(
+      decodeHtmlEntities(String(e.shortDescription || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()),
+      EVENT_DESC_MAX
+    ) || 'Live music at The Alibi.';
+    events.push({
+      title:       decodeHtmlEntities(e.summary).trim(),
+      link:        `https://www.alibitelluride.com/calendar#eca-event=${e.friendlyUrl || ''}`,
+      description: desc,
+      pubDate:     dateStr,
+      time:        timeStr,
+      source:      'alibi',
+      sourceLabel: 'The Alibi',
+      category:    'Live Music',
+      location:    'The Alibi • Telluride, CO',
+      imageUrl:    e.image || e.thumbnail || '',
+    });
+  }
+  events.sort((a, b) => a.pubDate.localeCompare(b.pubDate));
+  console.log(`  Kept ${events.length} Alibi event(s) within 60 days`);
+  return events;
+}
+
+
+// ══════════════════════════════════════════════════════════════
+// ── Task 19 (REPLACED): Telluride.com fcEventsData parser ──
+// ══════════════════════════════════════════════════════════════
+//
+// Old strategy (still callable as syncTellurideComEventsLegacy below)
+// hit the sitemap, extracted ~300 /event/<slug> URLs, fetched each
+// page, and parsed JSON-LD Event schemas. That worked but ran 300+
+// HTTP requests every 6 hours — slow and a noisy neighbor.
+//
+// New strategy: telluride.com/festivals-events/events/ ships ALL
+// events inline as `window.fcEventsData=[…]` — a 410-element array
+// with start, end, url, title HTML, eventContent (tooltip with
+// <img src=…>), and color. One request, dozens of events.
+
+const TELLURIDE_COM_EVENTS_URL = 'https://www.telluride.com/festivals-events/events/';
+
+async function syncTelluridComEventsFast() {
+  console.log('\n🎪 Task 19: Syncing Telluride.com events (fcEventsData)...');
+  let resp;
+  try { resp = await fetch(TELLURIDE_COM_EVENTS_URL); }
+  catch (e) { console.warn(`  telluride.com fetch error: ${e.message}`); return null; }
+  if (!resp || resp.status !== 200) {
+    console.warn(`  telluride.com HTTP ${resp ? resp.status : 'no response'}`);
+    return null;
+  }
+  const html = resp.text || '';
+  const m = html.match(/fcEventsData\s*=\s*(\[[\s\S]*?\])\s*;/);
+  if (!m) {
+    console.warn('  fcEventsData array not found in HTML — page layout may have changed');
+    return null;
+  }
+  let arr;
+  try { arr = JSON.parse(m[1]); }
+  catch (e) { console.warn(`  fcEventsData parse error: ${e.message}`); return null; }
+  console.log(`  fcEventsData has ${arr.length} entries`);
+
+  const todayMs = Date.now();
+  const today = new Date(todayMs); today.setUTCHours(0, 0, 0, 0);
+  const horizon = today.getTime() + 60 * 86400000;
+  const events = [];
+  for (const e of arr) {
+    if (!e || !e.start || !e.url) continue;
+    // start/end are YYYY-MM-DD
+    const startMs = new Date(e.start + 'T00:00:00Z').getTime();
+    if (isNaN(startMs)) continue;
+    if (startMs < today.getTime() - 86400000) continue;
+    if (startMs > horizon) continue;
+    // Extract clean title from the link variant: <a href="...">TITLE</a>
+    let title = '';
+    const tm = (e.title || '').match(/fc-event-title--link[^>]*>\s*<a[^>]*>([^<]+)</);
+    if (tm) title = decodeHtmlEntities(tm[1]).trim();
+    if (!title) continue;
+    // Extract image from eventContent tooltip
+    const imMatch = (e.eventContent || '').match(/<img[^>]+src="([^"]+)"/);
+    let imageUrl = imMatch ? imMatch[1] : '';
+    if (imageUrl && imageUrl.startsWith('/')) imageUrl = 'https://www.telluride.com' + imageUrl;
+    // Extract summary from eventContent tooltip's <p>...</p>
+    let summary = '';
+    const sm = (e.eventContent || '').match(/<p>([^<]+)</);
+    if (sm) summary = decodeHtmlEntities(sm[1]).trim();
+    summary = smartTruncate(summary, EVENT_DESC_MAX);
+    const link = (e.url || '').startsWith('http') ? e.url : 'https://www.telluride.com' + e.url;
+    events.push({
+      title,
+      link,
+      description: summary,
+      pubDate:     e.start,
+      endDate:     (e.end && e.end !== e.start) ? e.end : undefined,
+      source:      'telluride-com',
+      sourceLabel: 'Telluride.com',
+      category:    'Community Event',
+      location:    'Telluride, CO',
+      imageUrl,
+    });
+  }
+  events.sort((a, b) => a.pubDate.localeCompare(b.pubDate));
+  console.log(`  Kept ${events.length} telluride.com event(s) within 60 days`);
+  return events;
+}
+
+
 // ── Task 11: Nucla-Naturita Events (Tribe Events API, weekly) ──
 // Source: https://nucla-naturita.com/events/
 // Checks the Tribe Events API every Monday; returns [] on other days.
@@ -5184,6 +5365,17 @@ async function main() {
     }
   }
 
+  // ── 10c. The Alibi (Event Calendar App) ──
+  const newAlibiEvents = await syncAlibiEvents();
+  if (newAlibiEvents !== null && newAlibiEvents !== undefined) {
+    const existingAlibi = extractJsArray(govHubSrc, 'ALIBI_EVENTS') || [];
+    if (JSON.stringify(newAlibiEvents) !== JSON.stringify(existingAlibi)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'ALIBI_EVENTS', newAlibiEvents, false);
+      changed = true;
+      console.log(`  ALIBI_EVENTS updated (was ${existingAlibi.length}, now ${newAlibiEvents.length})`);
+    }
+  }
+
   // ── 10. Telluride Foundation Events ──
   const newTfEvents = await syncTelluridFoundationEvents();
   if (newTfEvents !== null && newTfEvents !== undefined) {
@@ -5275,8 +5467,12 @@ async function main() {
     }
   }
 
-  // ── 19. Telluride.com Events (sitemap + JSON-LD / date list) ──
-  const newTelluridComEvents = await syncTelluridComEvents();
+  // ── 19. Telluride.com Events (fcEventsData fast parser, 2026-05-29) ──
+  // Previous implementation (syncTelluridComEvents) fetched the sitemap
+  // then each /event/<slug>/ page individually — 300+ HTTP requests
+  // per run. The new fast version hits one page and parses the inline
+  // fcEventsData array. Old function kept above for fallback.
+  const newTelluridComEvents = await syncTelluridComEventsFast();
   if (newTelluridComEvents !== undefined && newTelluridComEvents !== null) {
     const existingTC = extractJsArray(govHubSrc, 'TELLURIDE_COM_EVENTS') || [];
     if (JSON.stringify(newTelluridComEvents) !== JSON.stringify(existingTC)) {
