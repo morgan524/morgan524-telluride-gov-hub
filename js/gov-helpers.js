@@ -154,7 +154,7 @@ const MANUAL_SUMMARIES = {
     "The agenda text for this Commission for Community Assistance, Arts & Special Events meeting is missing — only the portal navigation and meeting list appears.",
 
   "telluride|2026-06-03|Telluride Housing Authority Subcommittee - Jun 03 2026":
-    "The Jun 03 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The June 3rd Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-06-01|Open Space Commission - Jun 01 2026":
     "Meeting scheduled for first Monday of the month · Commission reviews open space acquisitions and management · Advises Town Council on comprehensive plan elements",
@@ -172,7 +172,7 @@ const MANUAL_SUMMARIES = {
     "The Jun 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -182,6 +182,18 @@ const MANUAL_SUMMARIES = {
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Kick-off to adventure",
+    source: "Telluride Times",
+    date: "May 30, 2026",
+    firstSeen: "2026-05-30",
+    newsTopic: "community",
+    copy: "Telluride Academy is gearing up for its 10-week summer season with 120 camps serving over 700 kids, from day camps for younger ones to multi-day backcountry adventures for teens. The program offers significant tuition assistance for local families and maintains a device-free policy to get kids unplugged and outside.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_570c06c7-2d4d-4dd8-8349-90541606b9f6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/04/104c5465-3a28-4379-9a51-c069fc546c61/6a1a90ee9adc7.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "From mentees to THS grads",
     source: "Telluride Times",

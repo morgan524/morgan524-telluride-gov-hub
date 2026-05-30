@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s news, upcoming Gov-Hub meetings, and events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 May 2026 08:24:14 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2026 13:17:41 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Thu, Jun 4] Art Walk Telluride</title>
@@ -200,7 +200,7 @@ The agenda text for this Commission for Community Assistance, Arts & Special Eve
       <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-06-03
 
-The Jun 03 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.]]></description>
+The June 3rd Telluride Housing Authority Subcommittee agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -404,6 +404,16 @@ Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norto
       <media:content url="https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>Kick-off to adventure</title>
+      <link>https://www.telluridenews.com/news/article_570c06c7-2d4d-4dd8-8349-90541606b9f6.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_570c06c7-2d4d-4dd8-8349-90541606b9f6.html</guid>
+      <pubDate>Sat, 30 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/04/104c5465-3a28-4379-9a51-c069fc546c61/6a1a90ee9adc7.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Telluride Academy is gearing up for its 10-week summer season with 120 camps serving over 700 kids, from day camps for younger ones to multi-day backcountry adventures for teens. The program offers significant tuition assistance for local families and maintains a device-free policy to get kids unplugged and outside.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/04/104c5465-3a28-4379-9a51-c069fc546c61/6a1a90ee9adc7.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
     </item>
     <item>
       <title>Newscast 5-29-26</title>
@@ -666,15 +676,6 @@ Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norto
       <media:content url="https://zeta.creativecirclecdn.com/smb/original/20260512-170032-0b9-F1%20-%20pinhead.jpg" medium="image" />
       <category>San Miguel Basin Forum</category>
       <category>education</category>
-    </item>
-    <item>
-      <title>Town secures $1.25M for Norwood Hill improvements</title>
-      <link>https://www.sanmiguelbasinforum.com/stories/town-secures-125m-for-norwood-hill-improvements,114098</link>
-      <guid isPermaLink="false">https://www.sanmiguelbasinforum.com/stories/town-secures-125m-for-norwood-hill-improvements,114098</guid>
-      <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Last week, the Town of Norwood announced it had been awarded $1,250,000 in funding through the Colorado Department of Transportation's Highway Safety Improvement Program (HSIP). Town Manager Sara …]]></description>
-      <category>San Miguel Basin Forum</category>
-      <category>arts-culture</category>
     </item>
   </channel>
 </rss>
