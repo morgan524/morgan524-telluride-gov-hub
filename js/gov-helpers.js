@@ -169,10 +169,10 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The Jun 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -2160,26 +2160,15 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "You & Me / Tu y Yo",
-    link: "https://telluridelibrary.libcal.com/event/15184970?hs=a",
-    description: "10:30 AM – 11:00 AM · Join us every Friday for a fun and engaging parent-child program designed for preschoolers! Each week, we explore a new theme through hands-on activities that spark creativity, curiosity, and learning. 1st Friday: Art - Get creative with fun art projects designed for little hands! 2nd Friday: Toddler Chef - Stir, mix, and create easy, tasty treats while learning basic kitchen skills. 3rd Friday: STEM - Dive into simple science, technology, engineering, and math experiments that inspire wonder. 4th Friday: Crafts - Enjoy making fun crafts together. &Uacute;nase a nosotros todos los viernes para un programa divertido e interactvio para padres e hijos, &iexcl;dise&ntilde;ado para ni&ntilde;os en edad preescolar! Cada semana exploramos un nuevo tema a trav&eacute;s de actividades pr&aacute;cticas que despiertan la creatividad, la curiosidad y el aprendizaje. …",
-    pubDate: "2026-05-29T16:30:00.000Z",
+    title: "Balance in Motion - Equilibrio en Movimiento",
+    link: "https://telluridelibrary.libcal.com/event/16536381?hs=a",
+    description: "10:00 AM – 11:00 AM · Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Mu&eacute;vase, respire y ll&eacute;nese de energ&iacute;a en esta din&aacute;mica clase biling&uuml;e, dirigido por Lauren Norton, dise&ntilde;ada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energ&iacute;a de la danza, y la presencia equilibrante del yoga y la respiraci&oacute;n, esta sesi&oacute;n le dejar&aacute; sinti&eacute;ndose fuerte, en armon&iacute;a y revitalizado/a. …",
+    pubDate: "2026-05-30T16:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755554174.png"
-  },
-  {
-    title: "Teen Ping Pong",
-    link: "https://telluridelibrary.libcal.com/event/15976842?hs=a",
-    description: "4:00 PM – 6:00 PM · Come stop by the library every Friday after school for open Ping Pong for Teenagers in the Magazine Room.",
-    pubDate: "2026-05-29T22:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Magazine Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1765562739.png"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1740003527.jpg"
   }
 ];
 
@@ -2195,18 +2184,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "The Dirty Turkeys X Trestles",
-    link: "https://www.alibitelluride.com/calendar#eca-event=the-dirty-turkeys-x-trestles",
-    description: "With a sound they’ve dubbed “Acid Cow Punk,” a gritty fusion of psychedelia, sur...",
-    pubDate: "2026-05-29",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/60bf1a01-4f21-4be4-b641-138b6b06241a/-/crop/1080x540/0,859/-/preview/"
-  },
   {
     title: "Goldpine w/ Corey Hooker",
     link: "https://www.alibitelluride.com/calendar#eca-event=goldpine-w-corey-hooker",
@@ -2464,7 +2441,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "32nd Annual Wild West Fest",
     link: "https://sheridanoperahouse.com/events/32nd-annual-wild-west-fest/",
-    description: "The 32nd Annual Wild West Fest returns to the Sheridan Opera House for another year of western-themed entertainment. This longstanding community tradition celebrates the region's frontier heritage with performances at Telluride's historic venue.",
+    description: "",
     pubDate: "2026-06-01",
     endDate: "2026-06-05",
     source: "sheridan",
@@ -2476,7 +2453,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Wild West Fest Roundup Day",
     link: "https://sheridanoperahouse.com/events/wild-west-fest-roundup-day/",
-    description: "Wild West Fest Roundup Day brings western-themed entertainment to the historic Sheridan Opera House on June 5th, 2026. This concert and performance event celebrates frontier culture and cowboy traditions in Telluride's beloved downtown venue.",
+    description: "",
     pubDate: "2026-06-05",
     endDate: "undefined",
     source: "sheridan",
@@ -2488,7 +2465,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "The Fretliners Live in Concert",
     link: "https://sheridanoperahouse.com/events/the-fretliners-live-in-concert-2/",
-    description: "The Fretliners will perform live in concert at the Sheridan Opera House on June 13, 2026. This musical performance takes place at Telluride's historic downtown venue.",
+    description: "",
     pubDate: "2026-06-13",
     endDate: "undefined",
     source: "sheridan",
@@ -2583,83 +2560,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "Ridgway Last Day of School",
-    link: "https://www.ridgway.k12.co.us/page/district-calendar/",
-    description: "",
-    pubDate: "2026-05-29T06:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
-  },
-  {
-    title: "Ridgway Farmers Market",
-    link: "www.ridgwayfarmersmarket.com",
-    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here.",
-    pubDate: "2026-05-29T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
-  },
-  {
-    title: "Ridgway Railroad Museum FREE Train Rides",
-    link: "https://www.ridgwayrailroadmuseum.org/",
-    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
-    pubDate: "2026-05-29T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
-  },
-  {
-    title: "Final Friday: School's Out Let's Go!",
-    link: "https://www.voyageryouth.org/hubb-teen-events",
-    description: "SCHOOL'S OUT LET'S GO! For Middle & High School Students, Final Friday is reclaiming Voyager as the Teen Center it used to be. 🤘 Come hang out for an evening that mixes chill social time with free food and fun activities. Every month, we have games, art and more available. All we ask is that you clean up after yourself and help us create a welcoming space for everyone. This month, meet Jazzmin, Voyager's new Teen Program Assistant who will be leading Adventure Wednesdays and Multi-Day Trips. We will have a new juggling kit to celebrate and share a party trick that she's been developing as well as Summer Survival Mystery Bags to take home with you. TO RSVP STEP 1: Once a year, make or update an account with Voyager so we have access to important information to best serve the Teens that are attending. …",
-    pubDate: "2026-05-29T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52860999139790/huge/5cdf44deaab00132052e2601f35f9a2a76fc9960.jpg"
-  },
-  {
-    title: "WRECKING CREW",
-    link: " https://coloradoboydepot.com/calendar",
-    description: "Live Music\\ coloradoboydepot.com/calendar/",
-    pubDate: "2026-05-29T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53021017184789/huge/cb45345647e4b72b33241547edc1be094fc23338.jpg"
-  },
-  {
-    title: "Exploration of Native Plants: From Pinyon Pine to Cacti",
-    link: "https://events.ourayridgwayevents.com/event/exploration-of-native-plants-from-pinyon-pine-to-cacti",
-    description: "Exploration of Native Plants: From Pinyon Pine to Cacti Join us at the Visitors Center to explore the fascinating world of our local flora, tracing the incredible journey from majestic pinyon pines to resilient blooming cacti. Come discover the amazing plants that call Ridgway home! This program is part of the Ridgway State Park Summer Program Series. There's no charge for the program, but you do need a State Park Pass for your vehicle. You can purchase one at the fee station on the way in.",
-    pubDate: "2026-05-30T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53002601838729/huge/67c528e46d1f056e52205af24b3ed7d699fc8d04.jpg"
-  },
-  {
-    title: "Fly You Fools Presented by UpstART | Opening Night | Fri 5/29/26",
-    link: "https://thewrightoperahouse.org/",
-    description: "Fly You Fools Presented by UpstART | Opening Night | Fri 5/29/26 WHEN? Friday, May 29 Doors at 7:00 pm • Show at 7:30 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Fly, You Fools! is a critically acclaimed physical comedy from the New York–based troupe Recent Cutbacks, making its UK and international stage debut through touring productions like this one. Presented locally by UpstART Theatre, the show delivers a fast-paced parody of epic fantasy storytelling. Three actors and a Foley artist join forces in fellowship to bring an entire fantasy adventure to life in a hilarious one-shot theatrical journey. Blending rapid-fire comedy, inventive stagecraft, live sound effects, and high-energy physical theatre, the production proves that even the smallest band of performers can create a world of heroic proportions. …",
-    pubDate: "2026-05-30T01:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52382837970272/huge/efa20aea189f55b2258da20d2382a48a7bde31a0.jpg"
-  },
   {
     title: "OTG Overnight Trail Maintenance Trip: Bear Creek NRT",
     link: "https://ouraytrails.org/volunteers",
@@ -3156,7 +3056,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52709607614558/huge/4004c3e46daab151739f91ab158182bf8b6c5793.jpg"
   },
   {
-    title: "DJ Dance Party at the Bank Building",
+    title: "First Friday - DJ Dance Party at the Bank Building",
     link: "Ridgwaypilates.com",
     description: "Join Ridgway Pilates and DJ M2 for a free dance party out front of the historic Bank Building on First Friday. We will be showcasing the work of Tammi Brazee inside with free champagne and tours of our beautiful studio. We are offering summer Pilates specials only available in person. Join us for some fun inside and out. Get your groove on!",
     pubDate: "2026-06-05T23:00:00.000Z",
@@ -3616,6 +3516,83 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
+  },
+  {
+    title: "Ridgway Railroad Museum FREE Train Rides",
+    link: "https://www.ridgwayrailroadmuseum.org/",
+    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
+    pubDate: "2026-06-12T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
+  },
+  {
+    title: "True Grit Historic Walking Tours",
+    link: "https://truegrittours.org/true-grit-tours ",
+    description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
+    pubDate: "2026-06-12T21:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52285883190282/huge/99283c09e34ca5aeabd7006cca2ba5b2b28899c3.jpg"
+  },
+  {
+    title: "FLANNEL FEEDBACK",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-06-12T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "ROCC'n By The River Summer Dinner",
+    link: "https://roccsummerdinner2026.rsvpify.com/?group=e01b5e91-6d69-432f-8dc1-101f63d09c89&view=Wall",
+    description: "Guest speaker is Heather Hansman author of Fierce Country: The Untold Story of Three Women Who Ignited America’s Love for the Wild. She brings to life the untold stories of these women who shaped the wild places we love--and shares fresh inspiration to protecting them. We hope you can attend! Catering by Stefan Davenport Music by local musicians Doug & Heather TICKETS ARE LIMITED AND HAVE SOLD OUT IN THE PAST Click the website link to buy tickets",
+    pubDate: "2026-06-12T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Pa-Co-Chu-Puk ",
+    imageUrl: "https://localist-images.azureedge.net/photos/52773337940831/huge/16b7fad506150558489741f3cda5604bf1be060a.jpg"
+  },
+  {
+    title: "ORGANTIC - Live @ Floating Lotus Brewery",
+    link: "www.FloatingLotusBrewery.com",
+    description: "Join us Friday, June 12 for a night of global grooves and high-energy instrumental jams on the outdoor stage at Floating Lotus Brewery! Featuring local favorites Organtic — a 5-piece instrumental group blending reggae, funk, afrobeat, Latin jazz, and jamband influences into a deep, danceable sonic journey. Their live shows are packed with rhythm, improvisation, and contagious energy that keeps the crowd moving all night long. Come support local music, grab a beer, and kick off your summer weekend under the Ridgway skies. 💵 $10 Cover 👨‍👩‍👧 All Ages Welcome",
+    pubDate: "2026-06-13T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52878975083462/huge/5d86abd02cae768f6aabc574f4fcfd17ed09e474.jpg"
+  },
+  {
+    title: "Trivia Night @ the Wright",
+    link: "https://thewrightoperahouse.org/",
+    description: "Trivia Night @ the Wright WHEN? Friday, June 12 Doors at 6:30 pm • Event at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Come test the true limits of the human mind at Trivia Night @ the Wright, where obscure facts become temporary personality traits. Questions may include history, movies, science, music, local lore, accidental expertise, and things you absolutely learned once in 8th grade and never expected to need again. Bring a team, bring a friend, or arrive alone like a mysterious wandering scholar of useless information. Competitive spirits, wild guesses, and dramatic confidence are all encouraged. No studying required. In fact, studying may make things worse. Free to attend In-person event at the historic Wright Opera House Part of programming at the Wright Opera House, bringing arts, conversation, and community to downtown Ouray since 1889.",
+    pubDate: "2026-06-13T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52886675356003/huge/9fd471ff714c45bd18ae9a67be7d9b0872cd5a56.jpg"
+  },
+  {
+    title: "High Step Society - Live",
+    link: "https://sherbino.org/event/high-step-society/",
+    description: "Doors at 7 pm || Show at 7:30 pm || Dancehall-style show with limited seating || Tickets: $25 advance / $30 day of show || A limited number of reserved tables are available. GA Tickets can be found under the venue diagram. Reserved tables are found by hovering over the diagram. GA seats are available in the bar area. Get ready for a high-energy night of vintage glamour and modern beats when High Step Society brings their electrifying electro-swing sound to the Sherbino. Part big band, part dance-floor DJ set, High Step Society delivers a high-flying, beat-dropping performance that blends the swagger of the Jazz Age with bass-heavy electronic grooves. Sultry, effervescent, low-down, dirty, and irresistibly danceable, this seven-piece powerhouse throws jazz straight back onto the dance floor where it belongs. Based between Portland, OR and New Orleans, LA, High Step Society has been a favorite on the U.S. …",
+    pubDate: "2026-06-13T01:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52993729729431/huge/e1d998becabcdd783bde62126a99bfdfad6d9a7d.jpg"
   }
 ];
 
@@ -3623,7 +3600,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Memorial Day",
     link: "https://www.norwoodtown.com/2026-05-25-closed-for-memorial-day",
-    description: "The Town of Norwood will be closed on Memorial Day in observance of the federal holiday. Municipal offices and services will resume normal operations the following business day.",
+    description: "",
     pubDate: "2026-05-25T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -3634,7 +3611,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-06-09-nwc-meeting",
-    description: "The Town of Norwood will hold a meeting for the NWC on June 9th. This government meeting will take place in Norwood, Colorado.",
+    description: "",
     pubDate: "2026-06-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -3645,7 +3622,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-06-10-board-of-trustees-meeting",
-    description: "The Town of Norwood Board of Trustees will hold a meeting in Norwood. This government meeting provides an opportunity for community members to observe local municipal proceedings and decision-making processes.",
+    description: "",
     pubDate: "2026-06-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -3656,7 +3633,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting Meeting",
     link: "https://www.norwoodtown.com/2026-06-11-norwood-sanitation-district-meeting-meeting",
-    description: "The Norwood Sanitation District will hold a meeting in Norwood, Colorado. This government meeting provides an opportunity for community members to learn about sanitation district operations and participate in local governance.",
+    description: "",
     pubDate: "2026-06-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -3667,7 +3644,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa Wolf Jett",
     link: "https://www.norwoodtown.com/2026-06-13-music-on-the-mesa-wolf-jett",
-    description: "Music On The Mesa presents Wolf Jett performing in Norwood. This community music event takes place on the mesa, offering live entertainment in a scenic outdoor setting.",
+    description: "",
     pubDate: "2026-06-13T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -3678,7 +3655,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-06-15-planning-and-zoning-commission-meeting",
-    description: "The Town of Norwood Planning and Zoning Commission will hold a public meeting to review development proposals, zoning applications, and land use matters affecting the community. This government meeting provides an opportunity for public input on planning decisions within Norwood's jurisdiction.",
+    description: "",
     pubDate: "2026-06-15T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -3689,7 +3666,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5373,7 +5350,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Telluride Theatre&#039;s Annual Shakespeare in the Park",
     link: "https://www.telluride.com/event/telluride-theatres-annual-shakespeare-in-the-park/",
-    description: "Telluride Theatre presents its annual Shakespeare in the Park performance, bringing classic drama to an outdoor setting in Telluride. This community theater event offers residents and visitors the opportunity to enjoy professional Shakespeare productions in a scenic mountain environment.",
+    description: "Stay tuned for updates about the 2026 event!",
     pubDate: "2026-07-17",
     endDate: "2026-07-26",
     source: "telluride-com",
