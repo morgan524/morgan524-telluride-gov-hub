@@ -961,6 +961,10 @@
             //    gov-data.js) plus a date pattern in the title.
             // 3. Drop state/national stories that don't reference any local
             //    geography. See isStatewideOrNationalNews().
+            // 4. Drop concert/show announcements at local venues
+            //    ("The Dirty Turkeys at The Alibi") — already on the
+            //    Events tab via SHERIDAN_EVENTS / ALIBI_EVENTS / etc.
+            //    Detected by venue mention + announcement verbiage.
             const LEGAL_ROUNDUP_RE = /^Legals?\b.*Notices?\b/i;
             const HAS_DATE_RE = /\b\d{1,2}\/\d{1,2}(\/\d{2,4})?\b/;
             function isGovMeetingAnnouncement(title) {
@@ -970,6 +974,36 @@
               // Require a date/time hint OR explicit "Meeting" word so we
               // don't accidentally drop news ARTICLES about councils.
               return HAS_DATE_RE.test(title) || /\bmeeting\b/i.test(title);
+            }
+            /**
+             * Detect concert / show / live-music announcements at known
+             * Telluride-region venues. These are duplicated on the Events
+             * tab (Sheridan/Alibi/Sherbino/KOTO/Wilkinson have their own
+             * scrapers), so showing them on Local News too is noise.
+             *
+             * Strategy: match a venue mention combined with announcement
+             * verbiage ("at The Alibi" / "plays Sheridan" / "live at" /
+             * "concert at" / "NIGHTGRASS - …"). News ARTICLES about a
+             * venue (renovations, fundraisers without a single performer
+             * named, hires, etc.) still pass through because they don't
+             * match this performer-at-venue shape.
+             */
+            function isVenueEventAnnouncement(title) {
+              if (!title) return false;
+              var t = String(title);
+              // <X> at (the) Alibi / Sheridan / Sherbino / Palm / etc.
+              if (/\bat\s+(the\s+)?(alibi|sheridan(\s+opera(\s+house)?)?|sherbino(\s+theater)?|palm\s+theatre|telluride\s+theatre|new\s+sheridan|club\s+red|fly\s+me\s+to\s+the\s+moon)\b/i.test(t)) return true;
+              // <X> plays Alibi / Sheridan / etc.
+              if (/\bplays?\s+(the\s+)?(alibi|sheridan|sherbino|palm|telluride\s+theatre|club\s+red)\b/i.test(t)) return true;
+              // <X> live at / live in concert / live in concert at
+              if (/\blive\s+(at|in\s+concert)\b/i.test(t)) return true;
+              // <X> concert at / show at / set at / gig at — tight pattern
+              if (/\b(concert|show|gig|set|performance|dj\s+set)\s+(at|in)\b/i.test(t)) return true;
+              // Sheridan late-night series & similar branded recurring slots
+              if (/\b(nightgrass|telluride\s+jazz|noon\s+tunes|sunset\s+concert)\b/i.test(t)) return true;
+              // "Tonight at the X" / "Friday night at the X" style
+              if (/\b(tonight|tomorrow|friday|saturday|sunday|monday|tuesday|wednesday|thursday)\s+(night\s+)?at\s+(the\s+)?(alibi|sheridan|sherbino|palm|telluride\s+theatre|club\s+red)\b/i.test(t)) return true;
+              return false;
             }
             function isStatewideOrNationalNews(item) {
               const title = (item.title || '').toLowerCase();
@@ -1018,6 +1052,7 @@
               if (LEGAL_ROUNDUP_RE.test(t)) return false;
               if (isGovMeetingAnnouncement(t)) return false;
               if (isStatewideOrNationalNews(article)) return false;
+              if (isVenueEventAnnouncement(t)) return false;
               return true;
             }
 
