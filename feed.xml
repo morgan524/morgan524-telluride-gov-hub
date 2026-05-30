@@ -6,8 +6,21 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s news, upcoming Gov-Hub meetings, and events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 May 2026 00:49:30 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2026 02:37:49 GMT</lastBuildDate>
     <ttl>360</ttl>
+    <item>
+      <title>[Fri, Jun 5] Wild West Fest Roundup Day</title>
+      <link>https://sheridanoperahouse.com/events/wild-west-fest-roundup-day/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/wild%20west%20fest%20roundup%7C2026-06-05</guid>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2026/05/Wild-West-Fest-Roundup-Day-Image.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
+📍 Sheridan Opera House • Telluride, CO
+
+Wild West Fest Roundup Day brings western-themed entertainment to the historic Sheridan Opera House on June 5th, 2026. This concert and performance event celebrates frontier culture and cowboy traditions in Telluride's beloved downtown venue.]]></description>
+      <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2026/05/Wild-West-Fest-Roundup-Day-Image.png" medium="image" />
+      <category>Community Event</category>
+      <category>Sheridan Opera House</category>
+    </item>
     <item>
       <title>[Thu, Jun 4] Art Walk Telluride</title>
       <link>https://koto.org/event/art-walk-telluride/2026-06-04/</link>
@@ -200,7 +213,7 @@ The agenda text for this Commission for Community Assistance, Arts & Special Eve
       <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-06-03
 
-The June 3 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.]]></description>
+The Jun 03 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -273,7 +286,7 @@ Meeting scheduled for first Monday of the month · Commission reviews open space
       <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2025/03/WWF-Logo-Color-With-Layers.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
 📍 Sheridan Opera House • Telluride, CO
 
-Show at the Sheridan Opera House. See the Sheridan page for tickets and details.]]></description>
+The 32nd Annual Wild West Fest returns to the Sheridan Opera House for another year of western-themed entertainment. This longstanding community tradition celebrates the region's frontier heritage with performances at Telluride's historic venue.]]></description>
       <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2025/03/WWF-Logo-Color-With-Layers.png" medium="image" />
       <category>Community Event</category>
       <category>Sheridan Opera House</category>
@@ -390,18 +403,6 @@ Tired of being assaulted by nonstop political campaign blather? Here’s an idea
 
 Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.]]></description>
       <media:content url="https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Sat, May 30] Impetus – A site-specific dance performace</title>
-      <link>https://koto.org/event/impetus-a-site-specific-dance-performace/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/impetus%20a%20site%20specific%7C2026-05-30</guid>
-      <pubDate>Sat, 30 May 2026 01:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/impetus-no-fringe-logo.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-
-Impetus is a 45-minute site-specific movement performance utilizing the unique landscape of the skatepark. Dancers use momentum, gravity, and interaction with each other to create a cyclical feeling, mimicking the energetic frustrations many of us are feeling with the state of the world today. This event is FREE and open to the public, all ages welcome. Donations will be collected at the event.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/05/impetus-no-fringe-logo.png" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
     </item>

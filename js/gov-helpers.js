@@ -154,7 +154,7 @@ const MANUAL_SUMMARIES = {
     "The agenda text for this Commission for Community Assistance, Arts & Special Events meeting is missing — only the portal navigation and meeting list appears.",
 
   "telluride|2026-06-03|Telluride Housing Authority Subcommittee - Jun 03 2026":
-    "The June 3 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The Jun 03 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-06-01|Open Space Commission - Jun 01 2026":
     "Meeting scheduled for first Monday of the month · Commission reviews open space acquisitions and management · Advises Town Council on comprehensive plan elements",
@@ -169,10 +169,10 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The Jun 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -1572,16 +1572,7 @@ const COMMUNITY_EVENTS = [
     notable: true,
     beneficiary: "Telluride Rotary Foundation — scholarships, Youth Exchange & community grants",
     sponsors: "Alpine Bank, Jagged Edge Mountain Gear",
-    clubInfo: {
-      name: "Telluride Rotary Club",
-      meetings: "1st & 3rd Wednesdays, 6:00 PM (social at 5:30)",
-      location1: "1st Wed — Mountain Lodge, 457 Mountain Village Blvd",
-      location2: "3rd Wed — Announced Telluride location",
-      president: "Kate Wadley",
-      email: "telluriderotary@gmail.com",
-      website: "https://portal.clubrunner.ca/3291",
-      note: "No meetings in April. In-person & online options available."
-    }
+    clubInfo: { name: "Telluride Rotary Club", meetings: "1st & 3rd Wednesdays, 6:00 PM (social at 5:30)", location1: "1st Wed — Mountain Lodge, 457 Mountain Village Blvd", location2: "3rd Wed — Announced Telluride location", president: "Kate Wadley", email: "telluriderotary@gmail.com", website: "https://portal.clubrunner.ca/3291", note: "No meetings in April. In-person & online options available." }
   },
   {
     title: "Elks Lodge Comedy Night with Cindy Pierce",
@@ -1637,17 +1628,6 @@ const MUSIC_ON_THE_GREEN = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Impetus – A site-specific dance performace",
-    link: "https://koto.org/event/impetus-a-site-specific-dance-performace/",
-    description: "Impetus is a 45-minute site-specific movement performance utilizing the unique landscape of the skatepark. Dancers use momentum, gravity, and interaction with each other to create a cyclical feeling, mimicking the energetic frustrations many of us are feeling with the state of the world today. This event is FREE and open to the public, all ages welcome. Donations will be collected at the event.",
-    pubDate: "2026-05-30T01:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/impetus-no-fringe-logo.png"
-  },
   {
     title: "Bilingual Balance in Motion",
     link: "https://koto.org/event/bilingual-balance-in-motion/2026-05-30/",
@@ -2484,7 +2464,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "32nd Annual Wild West Fest",
     link: "https://sheridanoperahouse.com/events/32nd-annual-wild-west-fest/",
-    description: "Show at the Sheridan Opera House. See the Sheridan page for tickets and details.",
+    description: "The 32nd Annual Wild West Fest returns to the Sheridan Opera House for another year of western-themed entertainment. This longstanding community tradition celebrates the region's frontier heritage with performances at Telluride's historic venue.",
     pubDate: "2026-06-01",
     endDate: "2026-06-05",
     source: "sheridan",
@@ -2496,8 +2476,9 @@ const SHERIDAN_EVENTS = [
   {
     title: "Wild West Fest Roundup Day",
     link: "https://sheridanoperahouse.com/events/wild-west-fest-roundup-day/",
-    description: "Show at the Sheridan Opera House. See the Sheridan page for tickets and details.",
+    description: "Wild West Fest Roundup Day brings western-themed entertainment to the historic Sheridan Opera House on June 5th, 2026. This concert and performance event celebrates frontier culture and cowboy traditions in Telluride's beloved downtown venue.",
     pubDate: "2026-06-05",
+    endDate: "undefined",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
     category: "Concert / Performance",
@@ -2507,8 +2488,9 @@ const SHERIDAN_EVENTS = [
   {
     title: "The Fretliners Live in Concert",
     link: "https://sheridanoperahouse.com/events/the-fretliners-live-in-concert-2/",
-    description: "Show at the Sheridan Opera House. See the Sheridan page for tickets and details.",
+    description: "The Fretliners will perform live in concert at the Sheridan Opera House on June 13, 2026. This musical performance takes place at Telluride's historic downtown venue.",
     pubDate: "2026-06-13",
+    endDate: "undefined",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
     category: "Concert / Performance",
@@ -3641,7 +3623,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Memorial Day",
     link: "https://www.norwoodtown.com/2026-05-25-closed-for-memorial-day",
-    description: "",
+    description: "The Town of Norwood will be closed on Memorial Day in observance of the federal holiday. Municipal offices and services will resume normal operations the following business day.",
     pubDate: "2026-05-25T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -3652,7 +3634,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-06-09-nwc-meeting",
-    description: "",
+    description: "The Town of Norwood will hold a meeting for the NWC on June 9th. This government meeting will take place in Norwood, Colorado.",
     pubDate: "2026-06-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -3663,7 +3645,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-06-10-board-of-trustees-meeting",
-    description: "",
+    description: "The Town of Norwood Board of Trustees will hold a meeting in Norwood. This government meeting provides an opportunity for community members to observe local municipal proceedings and decision-making processes.",
     pubDate: "2026-06-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -3674,7 +3656,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting Meeting",
     link: "https://www.norwoodtown.com/2026-06-11-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "The Norwood Sanitation District will hold a meeting in Norwood, Colorado. This government meeting provides an opportunity for community members to learn about sanitation district operations and participate in local governance.",
     pubDate: "2026-06-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -3685,7 +3667,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa Wolf Jett",
     link: "https://www.norwoodtown.com/2026-06-13-music-on-the-mesa-wolf-jett",
-    description: "",
+    description: "Music On The Mesa presents Wolf Jett performing in Norwood. This community music event takes place on the mesa, offering live entertainment in a scenic outdoor setting.",
     pubDate: "2026-06-13T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -3696,7 +3678,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-06-15-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "The Town of Norwood Planning and Zoning Commission will hold a public meeting to review development proposals, zoning applications, and land use matters affecting the community. This government meeting provides an opportunity for public input on planning decisions within Norwood's jurisdiction.",
     pubDate: "2026-06-15T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -3707,7 +3689,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5391,7 +5373,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Telluride Theatre&#039;s Annual Shakespeare in the Park",
     link: "https://www.telluride.com/event/telluride-theatres-annual-shakespeare-in-the-park/",
-    description: "Stay tuned for updates about the 2026 event!",
+    description: "Telluride Theatre presents its annual Shakespeare in the Park performance, bringing classic drama to an outdoor setting in Telluride. This community theater event offers residents and visitors the opportunity to enjoy professional Shakespeare productions in a scenic mountain environment.",
     pubDate: "2026-07-17",
     endDate: "2026-07-26",
     source: "telluride-com",
