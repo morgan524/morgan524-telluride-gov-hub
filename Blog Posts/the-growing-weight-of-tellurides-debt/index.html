@@ -988,9 +988,54 @@
     .tabor-tests { grid-template-columns: 1fr; }
     .cost-bars { flex-direction: column; height: auto; align-items: center; }
   }
+
+  /* === SITE TOP NAV (canonical, matches deep-dive pages) === */
+  .topnav { background:#fff; border-bottom:1px solid rgba(33,68,60,0.12); padding:14px 0; position:sticky; top:0; z-index:50; }
+  .topnav-inner { max-width:1280px; margin:0 auto; padding:0 32px; display:flex; align-items:center; gap:20px; }
+  .topnav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+  .topnav-logo img { height:80px; width:auto; object-fit:contain; }
+  .topnav-links { display:flex; gap:14px; margin-left:20px; flex:1; flex-wrap:wrap; }
+  .topnav-links a { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; color:#1a2e29; text-decoration:none; font-weight:600; font-size:0.76rem; white-space:nowrap; padding:6px 2px; border-bottom:2px solid transparent; transition:color .15s,border-color .15s; }
+  .topnav-links a:hover { color:#21443c; }
+  .topnav-links a.active { color:#21443c; border-bottom-color:#21443c; }
+  .topnav-cta { display:inline-block; background:#21443c; color:#fff; text-decoration:none; padding:8px 16px; border-radius:999px; font-weight:600; font-size:0.9rem; white-space:nowrap; }
+  .topnav-hamburger { display:none; background:none; border:none; cursor:pointer; font-size:1.5rem; line-height:1; padding:4px 8px; color:#2d4a3e; }
+  .topnav-hamburger:focus { outline:2px solid #2d4a3e; outline-offset:2px; }
+  @media (max-width:860px) {
+    .topnav-inner { position:relative; flex-wrap:nowrap; }
+    .topnav-links { display:none !important; position:absolute; top:calc(100% + 1px); left:0; right:0; background:#fff; flex-direction:column !important; gap:0 !important; padding:8px 0; margin:0 !important; border-top:1px solid #d4dad0; box-shadow:0 4px 16px rgba(0,0,0,0.08); z-index:60; }
+    .topnav-links.open { display:flex !important; }
+    .topnav-links a { padding:14px 24px !important; border-bottom:1px solid #f0f0ec !important; font-size:1rem !important; }
+    .topnav-links a:last-child { border-bottom:none !important; }
+    .topnav-hamburger { display:block; }
+    .topnav-cta { display:none !important; }
+  }
 </style>
 </head>
 <body>
+
+<!-- SITE TOP NAV -->
+<header class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
+      <img src="/logo/Livable Telluride Logo.png" alt="Livable Telluride">
+    </a>
+    <nav class="topnav-links">
+      <a href="/local-news.html">Local News</a>
+      <a href="/gov-hub.html">Gov-Hub</a>
+      <a href="/deep-dives.html" class="active">Deep Dives</a>
+      <a href="/events.html">Events</a>
+      <a href="/hub-bub.html">Hub-Bub</a>
+      <a href="/local-orgs.html">Local Orgs</a>
+      <a href="/projects-map/">Projects Map</a>
+      <a href="/donate.html">Donate</a>
+    </nav>
+    <button id="lvLangToggle" class="topnav-lang-toggle" type="button" onclick="lvToggleLang()" title="Cambiar idioma / Switch language">Español</button>
+    <div id="lvLangWidget" aria-hidden="true"></div>
+    <a class="topnav-cta" href="/hub-bub.html#login">Log In</a>
+    <button class="topnav-hamburger" aria-label="Open navigation menu" aria-expanded="false" id="topnavHamburger" type="button">☰</button>
+  </div>
+</header>
 
 <div class="tooltip" id="tooltip"></div>
 
@@ -1923,6 +1968,87 @@ function renderAll() {
 // ===== INIT =====
 window.addEventListener('load', renderAll);
 window.addEventListener('resize', () => { renderTreemap(); });
+</script>
+
+<!-- SITE TOP NAV: EN/ES toggle + mobile hamburger (same as deep-dive pages) -->
+<script>
+// EN/ES language toggle — Google Translate is the engine; we hide its UI
+// chrome and expose a single binary pill. Cookie: googtrans=/en/<lang>.
+function lvCurrentLang() {
+  var m = document.cookie.match(/googtrans=\/en\/([a-z]+)/);
+  return m ? m[1] : 'en';
+}
+function lvSetTransCookie(value) {
+  var expires = '=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+  var domains = ['', '.' + location.hostname, location.hostname];
+  domains.forEach(function(d){
+    var c = 'googtrans' + (value ? '=/en/' + value : expires) + '; path=/';
+    if (d) c += '; domain=' + d;
+    document.cookie = c;
+  });
+}
+function lvToggleLang() {
+  var cur = lvCurrentLang();
+  lvSetTransCookie(cur === 'es' ? '' : 'es');
+  location.reload();
+}
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'es',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+  }, 'lvLangWidget');
+}
+(function(){
+  var hideCss = document.createElement('style');
+  hideCss.textContent = [
+    '.topnav-lang-toggle { display: inline-flex; align-items: center; padding: 6px 14px; border: 1px solid rgba(33,68,60,0.25); border-radius: 999px; background: #fff; color: #2d4a3e; font-size: 0.82rem; font-weight: 600; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; cursor: pointer; margin-right: 8px; transition: background 0.12s; }',
+    '.topnav-lang-toggle:hover { background: #f5f1ea; }',
+    '.goog-te-banner-frame { display: none !important; }',
+    '.goog-te-gadget { display: none !important; }',
+    'body { top: 0 !important; }',
+    '#lvLangWidget { position: absolute; left: -9999px; top: -9999px; opacity: 0; height: 0; overflow: hidden; }',
+    'font[style*="background-color"] { background: transparent !important; box-shadow: none !important; }',
+    '.goog-tooltip, .goog-tooltip:hover { display: none !important; }',
+    '.goog-text-highlight { background: none !important; box-shadow: none !important; }'
+  ].join('\n');
+  document.head.appendChild(hideCss);
+  function setLabel() {
+    var btn = document.getElementById('lvLangToggle');
+    if (btn) btn.textContent = lvCurrentLang() === 'es' ? 'English' : 'Español';
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setLabel);
+  } else { setLabel(); }
+  var s = document.createElement('script');
+  s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  s.async = true;
+  document.head.appendChild(s);
+})();
+(function(){
+  function init(){
+    var btn = document.getElementById('topnavHamburger');
+    if (!btn) return;
+    var links = document.querySelector('.topnav-links');
+    if (!links) return;
+    btn.addEventListener('click', function(){
+      var open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? '✕' : '☰';
+    });
+    links.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        links.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.textContent = '☰';
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else { init(); }
+})();
 </script>
 </body>
 </html>
