@@ -44,6 +44,45 @@ restructure the script), update this file in the same commit.
 
 ---
 
+## Mailchimp two-subscription model (restructured 2026-05-31)
+
+The audience now has exactly **two opt-in subscriptions**, both as interest
+groups in a single checkbox category **"Email Subscriptions" (category ID
+`7915`)** on the Livable Telluride audience (`f83dc56387`, numeric list id
+`318095`, single opt-in):
+
+- **Newsletter** — interest ID `24641` (blog posts / long-form).
+- **Weekly Update** — interest ID `24642` (the weekly look-ahead digest).
+
+What changed on 2026-05-31:
+- The old **"Topics of Interest" category (`7912`)** — ~25 vestigial
+  topic/source groups left over from the deleted interests page — was
+  **deleted entirely**. Any code referencing `group[7912]` is obsolete.
+- All ~846 existing subscribers were **bulk-added to BOTH** new groups
+  (everyone defaults to both).
+- The **"Livable Telluride RSS Weekly"** RSS campaign (`feed.xml`, Mondays
+  7 AM Boise) was **retargeted from a tiny `Frequency=weekly` segment
+  (7–8 people) to the Weekly Update group (`24642`, ~846 recipients)** and
+  resumed. The weekly now goes to everyone; opt-outs are honored because it
+  targets the group.
+- Signups (`hub-bub.html` `mcSubscribe`, `js/lt-subscribe.js`) now set both
+  groups via the Mailchimp interest format **`group[7915][24641]` and
+  `group[7915][24642]`** (replacing the old `group[7912]=1`). `MMERGE9` is
+  still set but is no longer used for campaign targeting.
+  ⚠️ **Unverified:** a live test signup succeeded but the test address
+  hard-bounced (Cleaned), so group attachment for NEW signups wasn't
+  confirmed. Verify with a deliverable test email; if it fails, the
+  fallback is the legacy bitmask `group[7915]=<bits>` or a Mailchimp
+  automation that adds new subscribers to both groups.
+- Subscribers can toggle each subscription via the standard "Update your
+  preferences" footer link (group checkboxes); a custom preferences center
+  was not built.
+
+The older notes below predate this restructure — treat the `7912` /
+`Frequency` references as historical.
+
+---
+
 ## Subscription + Blog Architecture (updated 2026-04-30)
 
 Major refactor of the Mailchimp pipeline. Three Mailchimp campaigns now
