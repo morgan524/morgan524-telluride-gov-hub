@@ -468,11 +468,44 @@
     letter-spacing: 0.08em;
     margin-top: 0.3rem;
   }
+
+  /* === TOTAL SUBSIDY BOX === */
+  .subsidy-box {
+    margin-top: 1.75rem;
+    border: 2px solid var(--negative);
+    border-radius: 12px;
+    background: var(--accent-light);
+    padding: 1.5rem 1.75rem;
+    text-align: center;
+  }
+  .subsidy-box .subsidy-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+  .subsidy-box .subsidy-number {
+    font-family: var(--serif, Georgia, serif);
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 700;
+    color: var(--negative);
+    line-height: 1.1;
+    margin: 0.4rem 0 0.6rem;
+  }
+  .subsidy-box .subsidy-sub {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .debt-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.5rem 0; }
   .debt-table {
     width: 100%;
+    min-width: 880px;
     border-collapse: collapse;
     font-size: 0.82rem;
-    margin: 1.5rem 0;
   }
   .debt-table thead th {
     text-align: left;
@@ -845,29 +878,45 @@
     align-items: flex-end;
     gap: 1rem;
     margin: 2rem 0;
-    height: 280px;
-    padding: 1.5rem 1rem;
+    height: 300px;
+    padding: 2rem 1rem 1rem;
     background: white;
     border: 1px solid var(--border-light);
     border-radius: 6px;
   }
   .cost-bar-item {
     flex: 1;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: flex-end;
+    gap: 0.4rem;
+  }
+  .cost-bar-track {
+    flex: 1 1 auto;
+    width: 62%;
+    min-height: 0;
+    display: flex;
+    align-items: flex-end;
   }
   .cost-bar-value {
+    position: absolute;
+    top: -1.5rem;
+    left: 0;
+    right: 0;
+    text-align: center;
     font-family: var(--serif);
     font-size: 0.95rem;
     font-weight: 700;
     color: var(--text);
+    white-space: nowrap;
   }
   .cost-bar-fill {
     width: 100%;
     border-radius: 3px 3px 0 0;
     position: relative;
+    min-height: 4px;
   }
   .cost-bar-label {
     text-align: center;
@@ -986,7 +1035,9 @@
     .treemap-container { aspect-ratio: 1 / 1; }
     .risk-grid { grid-template-columns: 1fr; }
     .tabor-tests { grid-template-columns: 1fr; }
-    .cost-bars { flex-direction: column; height: auto; align-items: center; }
+    .cost-bars { flex-direction: column; height: auto; align-items: stretch; gap: 1.75rem; }
+    .cost-bar-item { flex: 0 0 auto; height: 150px; }
+    .cost-bar-track { width: 100%; }
   }
 
   /* === SITE TOP NAV (canonical, matches deep-dive pages) === */
@@ -1141,6 +1192,7 @@
       </div>
     </div>
 
+    <div class="debt-table-wrap">
     <table class="debt-table">
       <thead>
         <tr>
@@ -1148,8 +1200,9 @@
           <th>Bond Year</th>
           <th>Principal</th>
           <th>Annual Debt Service</th>
-          <th>Annual Revenue</th>
-          <th>NOI DSCR</th>
+          <th>Rent Revenue</th>
+          <th title="Adjusted revenue: tenant rent minus cash operating expenses — the cash actually available to service debt.">Net Op. Income</th>
+          <th>NOI DSCR <sup>⁴</sup></th>
           <th>Balloon Payment</th>
           <th>Balloon Year</th>
         </tr>
@@ -1161,6 +1214,7 @@
           <td>$3,990,000 +<span title="COP Series 2024 (Building F Phase 1) and COP Series 2025 (Building F Phase 2, $8.47M capital outlay) were issued against the Shandoka Fund after the 2021 series, raising annual debt service from $401,464 to $966,958.">¹</span></td>
           <td>$966,958</td>
           <td>$2,185,957</td>
+          <td>$901,385</td>
           <td><span class="coverage-bad">0.93x</span></td>
           <td>$3,620,000</td>
           <td>~2040</td>
@@ -1171,6 +1225,7 @@
           <td>$8,602,000</td>
           <td>$518,151</td>
           <td>$706,221</td>
+          <td>$455,486</td>
           <td><span class="coverage-bad">0.88x</span></td>
           <td>$3,040,000</td>
           <td>2036</td>
@@ -1181,6 +1236,7 @@
           <td>$11,965,000</td>
           <td>$591,800</td>
           <td>$685,000</td>
+          <td>—<span title="No operating-cost figure was published for Sunnyside in the May 2026 review, so its net operating income cannot be derived.">²</span></td>
           <td><span class="coverage-bad">0.50x</span><span title="Sunnyside was not re-analyzed in the May 2026 primary-source review; figures are prior estimates. The review confirms only Sunnyside's $377,000 annual moral-obligation subsidy.">²</span></td>
           <td>$6,170,000</td>
           <td>2040</td>
@@ -1191,6 +1247,7 @@
           <td>$22,065,000 <span title="Signed bond certificates (Series 2022A $6.07M @ 4.690%, 2022B $2.245M @ 5.860%, 2023 $13.75M @ 5.520%, all maturing Dec. 1, 2032) total $22,065,000. The Town's budget book debt schedule shows $21,370,000; the report treats the certificates as authoritative.">¹</span></td>
           <td>$1,190,240</td>
           <td>$872,000</td>
+          <td>$737,902</td>
           <td><span class="coverage-bad">0.62x</span></td>
           <td>$23,045,864</td>
           <td>2032</td>
@@ -1199,9 +1256,10 @@
           <td><span class="project-name"><span class="project-dot" style="background:#16a085"></span>CanyonLands (Est.)</span></td>
           <td>2024</td>
           <td>$26,575,000</td>
-          <td>$994,500 <span title="Estimate. Debt service assumes the Town's stated $10M for-sale buydown reduces principal to $16.575M at 6%. The report finds AMI-capped for-sale proceeds are likely closer to $6.6M, which would leave ~$19.9M outstanding and raise debt service to ~$1.2M/yr.">¹</span></td>
-          <td>$767,448</td>
-          <td><span class="coverage-bad">0.47x</span></td>
+          <td>~$994,500 <span title="Estimate. Debt service assumes the Town's stated $10M for-sale buydown reduces principal to $16.575M at 6%. The report finds AMI-capped for-sale proceeds are likely closer to $6.6M, which would leave ~$19.9M outstanding and raise debt service to ~$1.2M/yr.">¹</span></td>
+          <td>~$767,448 <span title="Estimate. Projected rent for the 28 rental units from the CanyonLands working spreadsheet at an average 120% AMI (2022 AMI basis); 2024 AMI levels would raise this to roughly $840K–$856K.">¹</span></td>
+          <td>~$467,448 <span title="Estimate. Projected rent ~$767,448 minus estimated cash operating expenses of ~$300,000.">¹</span></td>
+          <td><span class="coverage-bad">~0.47x</span></td>
           <td>TBD</td>
           <td>TBD</td>
         </tr>
@@ -1211,23 +1269,25 @@
           <td>Total</td>
           <td></td>
           <td>$73,197,000</td>
-          <td>$4,261,649</td>
-          <td>$5,216,626</td>
+          <td>~$4,261,649</td>
+          <td>~$5,216,626</td>
+          <td>~$2,562,221 <span title="Four analyzed projects; Sunnyside excluded (no operating-cost data).">³</span></td>
           <td></td>
           <td>$35,875,864</td>
           <td></td>
         </tr>
       </tfoot>
     </table>
-
-    <div class="annotation" style="margin-top:1.5rem;">
-      <strong>NOI DSCR below 1.0x = cannot self-fund.</strong> Coverage shown is the Net Operating Income Debt Service Coverage Ratio — tenant rent minus cash operating costs, divided by annual debt service (the metric revenue-bond rating agencies use). On this basis, all four projects examined in the May 2026 primary-source review fall below 1.0x: rent does not cover operating costs plus debt service. Per that review, the <strong>true annual subsidy</strong> (total annual cost minus tenant rent) is roughly <strong>$452K for VooDoo, $527K for CanyonLands (est.), $66K for Shandoka, and $63K for Virginia Placer — about $1.1M/year combined</strong>, on top of the disclosed moral-obligation payments. The gap is filled by Town tax revenues — a structural dependency that grows riskier in an economic downturn.
     </div>
 
-    <div style="margin-top:1rem;font-size:0.8rem;color:var(--text-secondary);line-height:1.6;">
-      <p style="margin-bottom:0.4rem;"><strong>¹</strong> Figures reflect a May 2026 review based solely on primary sources. VooDoo bond terms are from the signed bond certificates ($22.065M total; the Town budget book debt schedule shows $21.37M). CanyonLands debt service is an estimate that assumes the Town's stated $10M for-sale buydown; the review finds AMI-capped for-sale proceeds are likely closer to $6.6M. Shandoka now carries three bond series (THA 2021 + COP 2024 + COP 2025), raising annual debt service from $401,464 to $966,958.</p>
-      <p style="margin-bottom:0.4rem;"><strong>²</strong> Sunnyside was not re-analyzed in the May 2026 review; its figures are prior estimates. The review confirms only Sunnyside's $377,000 annual moral-obligation subsidy.</p>
-      <p style="margin:0;"><strong>Sources:</strong> Town of Telluride 2025 Budget Book and Oct. 9, 2025 Town Council budget packet (<a href="https://www.telluride.gov/122/Budget-Financial-Statements" target="_blank" rel="noopener">telluride.gov</a>); signed VooDoo bond certificates (Series 2022A, 2022B, 2023); Nov. 19, 2024 CanyonLands/Tower House bond memorandum; THA audited financial statements (FY2023–2024); and actual FY2025 VooDoo rental income reported by <em>The Colorado Sun</em> (April 19, 2026).</p>
+    <div class="subsidy-box">
+      <div class="subsidy-label">Total Annual <span style="font-size:1.18em;font-weight:800;">Non-amortized</span> Estimated Subsidies Required by the Town <sup>⁵</sup></div>
+      <div class="subsidy-number">~$1.1 Million / year</div>
+    </div>
+
+    <div class="subsidy-box">
+      <div class="subsidy-label">Total Annual <span style="font-size:1.18em;font-weight:800;">Amortized</span> Estimated Subsidies Required by the Town <sup>⁶</sup></div>
+      <div class="subsidy-number">~$5.95 Million / year</div>
     </div>
   </section>
 </div>
@@ -1444,33 +1504,45 @@
 
     <div class="cost-bars">
       <div class="cost-bar-item">
-        <div class="cost-bar-value">$410K</div>
-        <div class="cost-bar-fill" style="height: 43%; background: #c0392b;"></div>
+        <div class="cost-bar-track">
+          <div class="cost-bar-fill" style="height: 43%; background: #c0392b;">
+            <div class="cost-bar-value">$410K</div>
+          </div>
+        </div>
         <div class="cost-bar-label">Virginia Placer</div>
         <div class="cost-bar-year">2017</div>
       </div>
       <div class="cost-bar-item">
-        <div class="cost-bar-value">$567K</div>
-        <div class="cost-bar-fill" style="height: 59%; background: #e67e22;"></div>
+        <div class="cost-bar-track">
+          <div class="cost-bar-fill" style="height: 59%; background: #e67e22;">
+            <div class="cost-bar-value">$567K</div>
+          </div>
+        </div>
         <div class="cost-bar-label">Sunnyside</div>
         <div class="cost-bar-year">2021</div>
       </div>
       <div class="cost-bar-item">
-        <div class="cost-bar-value">$681K</div>
-        <div class="cost-bar-fill" style="height: 71%; background: #16a085;"></div>
+        <div class="cost-bar-track">
+          <div class="cost-bar-fill" style="height: 71%; background: #16a085;">
+            <div class="cost-bar-value">$681K</div>
+          </div>
+        </div>
         <div class="cost-bar-label">CanyonLands</div>
         <div class="cost-bar-year">2024</div>
       </div>
       <div class="cost-bar-item">
-        <div class="cost-bar-value">$955K</div>
-        <div class="cost-bar-fill" style="height: 100%; background: #8e44ad;"></div>
+        <div class="cost-bar-track">
+          <div class="cost-bar-fill" style="height: 100%; background: #8e44ad;">
+            <div class="cost-bar-value">$955K</div>
+          </div>
+        </div>
         <div class="cost-bar-label">VooDoo</div>
         <div class="cost-bar-year">2022</div>
       </div>
     </div>
 
     <div class="annotation">
-      <strong>VooDoo's all-in cost</strong> includes $20.1M in bonds (3 series), $4.7M in cash subsidies from the Affordable Housing Fund, and ~$1M in waived tap fees. For comparison, the national median for multifamily construction is $150K-$250K per unit.
+      <strong>VooDoo's all-in cost</strong> includes $22.1M in bonds (3 series), $4.7M in cash subsidies from the Affordable Housing Fund, and ~$1M in waived tap fees. For comparison, the national median for multifamily construction is $150K-$250K per unit.
     </div>
   </section>
 </div>
@@ -1500,59 +1572,19 @@
   </section>
 </div>
 
-<!-- GOVERNANCE CONTEXT SECTION -->
+<!-- NOTES & SOURCES -->
 <div class="container">
-  <section class="debt-section">
-    <div class="section-label">Governance & Oversight</div>
-    <div class="section-title">Ski Resort Scandal Raises Governance Questions</div>
-
-    <div class="gov-timeline">
-      <div class="timeline-event">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <p><strong>Jan 2026:</strong> $127.5M offer to acquire 51% of Telluride Ski Resort surfaces — elected officials allegedly involved</p>
-        </div>
-      </div>
-
-      <div class="timeline-event">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <p><strong>Jan 2026:</strong> Mayor Pro Tem Meehan Fee resigns under investigation</p>
-        </div>
-      </div>
-
-      <div class="timeline-event">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <p><strong>Jan 2026:</strong> Mountain Village Mayor Marti Prohaska resigns</p>
-        </div>
-      </div>
-
-      <div class="timeline-event">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <p><strong>Jan 2026:</strong> Town Manager Paul Wisor placed on administrative leave</p>
-        </div>
-      </div>
-
-      <div class="timeline-event">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <p><strong>Jan 2026:</strong> Telski files civil conspiracy lawsuit alleging officials colluded to harm resort</p>
-        </div>
-      </div>
-
-      <div class="timeline-event">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <p><strong>Ongoing:</strong> Both Telluride and Mountain Village launch investigations</p>
-        </div>
-      </div>
+  <section class="debt-section" style="margin-bottom:2rem;">
+    <div class="section-label">Notes &amp; Sources</div>
+    <div style="font-size:0.82rem;color:var(--text-secondary);line-height:1.65;max-width:820px;">
+      <p style="margin:0 0 0.6rem;"><strong>¹</strong> Figures reflect a May 2026 review based solely on primary sources. VooDoo bond terms are from the signed bond certificates ($22.065M total; the Town budget book debt schedule shows $21.37M). CanyonLands debt service and rent are estimates: debt service assumes the Town's stated $10M for-sale buydown, while the review finds AMI-capped for-sale proceeds are likely closer to $6.6M (which would leave ~$19.9M outstanding and raise debt service to ~$1.2M/yr). Shandoka now carries three bond series (THA 2021 + COP 2024 + COP 2025), raising annual debt service from $401,464 to $966,958.</p>
+      <p style="margin:0 0 0.6rem;"><strong>²</strong> Sunnyside was not re-analyzed in the May 2026 review; its figures are prior estimates and no operating-cost figure was published, so its net operating income is not shown. The review confirms only Sunnyside's $377,000 annual moral-obligation subsidy.</p>
+      <p style="margin:0 0 0.6rem;"><strong>³</strong> Net operating income (tenant rent minus cash operating expenses) and its portfolio total exclude Sunnyside, for which no operating-cost figure is available. The 0.70x portfolio NOI coverage compares the four analyzed projects' ~$2.56M combined net operating income to their ~$3.67M combined annual debt service.</p>
+      <p style="margin:0 0 0.6rem;"><strong>⁴ NOI DSCR below 1.0x = cannot self-fund.</strong> Coverage shown is the Net Operating Income Debt Service Coverage Ratio — tenant rent minus cash operating costs, divided by annual debt service (the metric revenue-bond rating agencies use). On this basis, all four projects examined in the May 2026 primary-source review fall below 1.0x: rent does not cover operating costs plus debt service. Per that review, the true annual subsidy (total annual cost minus tenant rent) is roughly $452K for VooDoo, $527K for CanyonLands (est.), $66K for Shandoka, and $63K for Virginia Placer — about $1.1M/year combined, on top of the disclosed moral-obligation payments. The gap is filled by Town tax revenues — a structural dependency that grows riskier in an economic downturn.</p>
+      <p style="margin:0 0 0.6rem;"><strong>⁵ Non-amortized subsidy (~$1,107,628/yr).</strong> The gap between each project's tenant rent and its full annual cost (debt service + operating expenses), summed across the four analyzed projects: VooDoo ~$452K · CanyonLands ~$527K (est.) · Shandoka ~$66K · Virginia Placer ~$63K. This is the minimum recurring cash the Town must inject each year to keep these projects current, on top of the disclosed moral-obligation payments. It reflects interest-only debt service and does not set aside any of the balloon principal.</p>
+      <p style="margin:0 0 0.6rem;"><strong>⁶ Amortized subsidy (~$5.95M/yr).</strong> Adds the balloon principal — set aside over the years until each balloon comes due — to the non-amortized operating gap above. Balloon set-asides: VooDoo $23,045,864 ÷ 6 yrs (2032) ≈ $3,840,977/yr; Virginia Placer $3,040,000 ÷ 10 (2036) ≈ $304,000; Shandoka $3,620,000 ÷ 14 (2040) ≈ $258,571; Sunnyside $6,170,000 ÷ 14 (2040) ≈ $440,714 — about $4.84M/yr, plus the $1.11M operating gap ≈ $5.95M/yr. Only VooDoo's annualized figure (~$3.84M/yr) appears in the May 2026 review; the other three apply the same balloon ÷ years-to-maturity method.</p>
+      <p style="margin:0;"><strong>Sources:</strong> Town of Telluride 2025 Budget Book and Oct. 9, 2025 Town Council budget packet (<a href="https://www.telluride.gov/122/Budget-Financial-Statements" target="_blank" rel="noopener">telluride.gov</a>); signed VooDoo bond certificates (Series 2022A, 2022B, 2023); Nov. 19, 2024 CanyonLands/Tower House bond memorandum; THA audited financial statements (FY2023–2024); and actual FY2025 VooDoo rental income reported by <em>The Colorado Sun</em> (April 19, 2026).</p>
     </div>
-
-    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 1.5rem 0;">
-      The Town Council and THA Board are the same people. The officials who authorized $76M+ in housing bonds without voter approval operate within the same governance structure that produced this undisclosed acquisition attempt. A forensic investigation should determine whether officials who resigned or are under investigation played roles in THA bond approvals, vendor selection, or project oversight.
-    </p>
   </section>
 </div>
 
