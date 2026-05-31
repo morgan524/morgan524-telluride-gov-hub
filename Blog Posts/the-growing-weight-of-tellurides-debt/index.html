@@ -1658,6 +1658,24 @@
   </section>
 </div>
 
+<!-- CORRECTION CTA -->
+<div class="container">
+  <div style="max-width:760px;margin:1rem auto 2.5rem;padding:2rem 1.75rem;text-align:center;background:#fff;border:1px solid var(--border,#e0ddd8);border-radius:14px;">
+    <h3 style="font-family:var(--serif,Georgia,serif);font-size:1.3rem;font-weight:700;color:var(--text,#1a1a1a);margin:0 0 0.5rem;">See anything wrong with this report?</h3>
+    <p style="font-size:0.95rem;color:var(--text-secondary,#666);line-height:1.6;max-width:520px;margin:0 auto 1.25rem;">We want every Deep Dive to be accurate. If a number or fact looks off, let us know and we&#39;ll take a look.</p>
+    <a id="ddCorrectionBtn" href="mailto:info@livabletelluride.org?subject=Deep%20Dive%20correction" style="display:inline-block;background:#21443c;color:#fff;text-decoration:none;font-weight:600;font-size:0.95rem;padding:12px 26px;border-radius:999px;">Let us know &rarr;</a>
+  </div>
+</div>
+<script>
+  (function(){
+    var b = document.getElementById('ddCorrectionBtn');
+    if (!b) return;
+    var subj = 'Deep Dive correction: ' + document.title;
+    var body = 'Page: ' + location.href + '\n\nWhat looks wrong:\n';
+    b.href = 'mailto:info@livabletelluride.org?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body);
+  })();
+</script>
+
 <!-- FOOTER -->
 <footer class="footer">
   <p>Budget data from the Town of Telluride 2024 Budget Request and Town Council Budget Meeting materials (October 2023). Debt data from THA Financial Statements, bond documents, and Livable Telluride Debt Analysis (March 2026). Forensic screening data from THA Financial Statements, bond documents, Livable Telluride Debt Analysis (March 2026), and Colorado Revised Statutes. Population estimate: ~2,417 (World Population Review, 2026). Per-capita figures are approximate. For the full budget book, visit <a href="https://www.telluride.gov/122/Budget-Financial-Statements" target="_blank">telluride.gov</a>.</p>
