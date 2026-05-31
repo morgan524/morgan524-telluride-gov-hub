@@ -192,6 +192,24 @@
     font-weight: 500;
   }
 
+  /* === EXECUTIVE SUMMARY === */
+  .exec-summary {
+    padding-top: 2.5rem;
+  }
+  .exec-summary .section-title {
+    margin-bottom: 1rem;
+  }
+  .exec-summary p {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 720px;
+    margin-bottom: 1rem;
+  }
+  .exec-summary p:last-child {
+    margin-bottom: 0;
+  }
+
   /* === TREEMAP === */
   .treemap-section {
     padding: 2rem 0 3rem;
@@ -984,6 +1002,16 @@
   <div class="byline">2024 Budget Data &middot; Source: Town of Telluride Budget Book</div>
 </header>
 
+<!-- EXECUTIVE SUMMARY -->
+<div class="container">
+  <section class="exec-summary">
+    <div class="section-title">Executive Summary</div>
+    <p>Over the past decade, Telluride has pursued an ambitious affordable housing strategy financed through a combination of dedicated tax revenues and long-term debt. While these efforts have produced valuable housing assets, they have also created a growing portfolio of financial obligations that deserve careful public review.</p>
+    <p>The Town's total budget has increased from approximately $32 million in 2017 to more than $103 million in 2025. During that same period, the Affordable Housing Fund grew from roughly $1.5 million to over $11 million annually. Housing-related debt now exceeds $76 million, with roughly $36 million in future balloon payments due between 2032 and 2040 — the largest a $23 million lump sum on the VooDoo project in December 2032.</p>
+    <p>The central question is not whether affordable housing is important. It is whether the Town's current financing model remains sustainable under changing economic conditions.</p>
+  </section>
+</div>
+
 <!-- HERO STATS -->
 <div class="hero-stats">
   <div class="hero-stat">
@@ -1059,8 +1087,8 @@
         <div class="ds-label">Balloon Payments Due</div>
       </div>
       <div class="debt-stat">
-        <div class="ds-number warning">0.35x</div>
-        <div class="ds-label">Effective Coverage Ratio</div>
+        <div class="ds-number warning">0.70x</div>
+        <div class="ds-label">Portfolio NOI Coverage</div>
       </div>
       <div class="debt-stat">
         <div class="ds-number warning">$814K</div>
@@ -1076,7 +1104,7 @@
           <th>Principal</th>
           <th>Annual Debt Service</th>
           <th>Annual Revenue</th>
-          <th>Coverage</th>
+          <th>NOI DSCR</th>
           <th>Balloon Payment</th>
           <th>Balloon Year</th>
         </tr>
@@ -1084,11 +1112,11 @@
       <tbody>
         <tr>
           <td><span class="project-name"><span class="project-dot" style="background:#2c5f8a"></span>Shandoka</span></td>
-          <td>2021</td>
-          <td>$3,990,000</td>
-          <td>$635,032</td>
-          <td>$2,000,000</td>
-          <td><span class="coverage-ok">3.15x</span></td>
+          <td>2021–25</td>
+          <td>$3,990,000 +<span title="COP Series 2024 (Building F Phase 1) and COP Series 2025 (Building F Phase 2, $8.47M capital outlay) were issued against the Shandoka Fund after the 2021 series, raising annual debt service from $401,464 to $966,958.">¹</span></td>
+          <td>$966,958</td>
+          <td>$2,185,957</td>
+          <td><span class="coverage-bad">0.93x</span></td>
           <td>$3,620,000</td>
           <td>~2040</td>
         </tr>
@@ -1096,9 +1124,9 @@
           <td><span class="project-name"><span class="project-dot" style="background:#c0392b"></span>Virginia Placer</span></td>
           <td>2017</td>
           <td>$8,602,000</td>
-          <td>$518,871</td>
-          <td>$575,000</td>
-          <td><span class="coverage-bad">0.58x</span></td>
+          <td>$518,151</td>
+          <td>$706,221</td>
+          <td><span class="coverage-bad">0.88x</span></td>
           <td>$3,040,000</td>
           <td>2036</td>
         </tr>
@@ -1108,27 +1136,27 @@
           <td>$11,965,000</td>
           <td>$591,800</td>
           <td>$685,000</td>
-          <td><span class="coverage-bad">0.50x</span></td>
+          <td><span class="coverage-bad">0.50x</span><span title="Sunnyside was not re-analyzed in the May 2026 primary-source review; figures are prior estimates. The review confirms only Sunnyside's $377,000 annual moral-obligation subsidy.">²</span></td>
           <td>$6,170,000</td>
           <td>2040</td>
         </tr>
         <tr>
           <td><span class="project-name"><span class="project-dot" style="background:#8e44ad"></span>VooDoo</span></td>
           <td>2022-23</td>
-          <td>$21,370,000</td>
+          <td>$22,065,000 <span title="Signed bond certificates (Series 2022A $6.07M @ 4.690%, 2022B $2.245M @ 5.860%, 2023 $13.75M @ 5.520%, all maturing Dec. 1, 2032) total $22,065,000. The Town's budget book debt schedule shows $21,370,000; the report treats the certificates as authoritative.">¹</span></td>
           <td>$1,190,240</td>
-          <td>$620,000</td>
-          <td><span class="coverage-bad">0.66x</span></td>
+          <td>$872,000</td>
+          <td><span class="coverage-bad">0.62x</span></td>
           <td>$23,045,864</td>
           <td>2032</td>
         </tr>
         <tr>
           <td><span class="project-name"><span class="project-dot" style="background:#16a085"></span>CanyonLands (Est.)</span></td>
           <td>2024</td>
-          <td>$26,000,000</td>
-          <td>$556,000</td>
-          <td>$606,000</td>
-          <td><span class="coverage-bad">0.50x</span></td>
+          <td>$26,575,000</td>
+          <td>$994,500 <span title="Estimate. Debt service assumes the Town's stated $10M for-sale buydown reduces principal to $16.575M at 6%. The report finds AMI-capped for-sale proceeds are likely closer to $6.6M, which would leave ~$19.9M outstanding and raise debt service to ~$1.2M/yr.">¹</span></td>
+          <td>$767,448</td>
+          <td><span class="coverage-bad">0.47x</span></td>
           <td>TBD</td>
           <td>TBD</td>
         </tr>
@@ -1137,9 +1165,9 @@
         <tr>
           <td>Total</td>
           <td></td>
-          <td>$71,927,000</td>
-          <td>$3,491,943</td>
-          <td>$4,486,000</td>
+          <td>$73,197,000</td>
+          <td>$4,261,649</td>
+          <td>$5,216,626</td>
           <td></td>
           <td>$35,875,864</td>
           <td></td>
@@ -1148,7 +1176,13 @@
     </table>
 
     <div class="annotation" style="margin-top:1.5rem;">
-      <strong>Coverage below 1.0x = cannot self-fund.</strong> Four of five projects generate less rental income than their annual debt service requires. The gap is filled by Town tax revenues — a structural dependency that grows riskier in an economic downturn.
+      <strong>NOI DSCR below 1.0x = cannot self-fund.</strong> Coverage shown is the Net Operating Income Debt Service Coverage Ratio — tenant rent minus cash operating costs, divided by annual debt service (the metric revenue-bond rating agencies use). On this basis, all four projects examined in the May 2026 primary-source review fall below 1.0x: rent does not cover operating costs plus debt service. Per that review, the <strong>true annual subsidy</strong> (total annual cost minus tenant rent) is roughly <strong>$452K for VooDoo, $527K for CanyonLands (est.), $66K for Shandoka, and $63K for Virginia Placer — about $1.1M/year combined</strong>, on top of the disclosed moral-obligation payments. The gap is filled by Town tax revenues — a structural dependency that grows riskier in an economic downturn.
+    </div>
+
+    <div style="margin-top:1rem;font-size:0.8rem;color:var(--text-secondary);line-height:1.6;">
+      <p style="margin-bottom:0.4rem;"><strong>¹</strong> Figures reflect a May 2026 review based solely on primary sources. VooDoo bond terms are from the signed bond certificates ($22.065M total; the Town budget book debt schedule shows $21.37M). CanyonLands debt service is an estimate that assumes the Town's stated $10M for-sale buydown; the review finds AMI-capped for-sale proceeds are likely closer to $6.6M. Shandoka now carries three bond series (THA 2021 + COP 2024 + COP 2025), raising annual debt service from $401,464 to $966,958.</p>
+      <p style="margin-bottom:0.4rem;"><strong>²</strong> Sunnyside was not re-analyzed in the May 2026 review; its figures are prior estimates. The review confirms only Sunnyside's $377,000 annual moral-obligation subsidy.</p>
+      <p style="margin:0;"><strong>Sources:</strong> Town of Telluride 2025 Budget Book and Oct. 9, 2025 Town Council budget packet (<a href="https://www.telluride.gov/122/Budget-Financial-Statements" target="_blank" rel="noopener">telluride.gov</a>); signed VooDoo bond certificates (Series 2022A, 2022B, 2023); Nov. 19, 2024 CanyonLands/Tower House bond memorandum; THA audited financial statements (FY2023–2024); and actual FY2025 VooDoo rental income reported by <em>The Colorado Sun</em> (April 19, 2026).</p>
     </div>
   </section>
 </div>
@@ -1167,7 +1201,7 @@
     </div>
 
     <div style="margin-top: 2rem;">
-      <div class="section-label" style="margin-bottom: 0.5rem;">Revenue vs. Debt Service by Project</div>
+      <div class="section-label" style="margin-bottom: 0.5rem;">Net Operating Income vs. Debt Service by Project</div>
       <div class="coverage-visual" id="coverageVisual"></div>
     </div>
   </section>
@@ -1210,13 +1244,13 @@
       <div class="risk-card high">
         <span class="risk-badge high">HIGH</span>
         <h3>VooDoo: $23M Bullet Payment, Dec 2032</h3>
-        <p>All three VooDoo bond series (2022A at 4.69%, 2022B at 5.86%, 2023 at 5.86%) mature simultaneously in December 2032. The $23.05M balloon appears to exceed total expected rental income over the bond's remaining life. No public refinancing plan has been identified, which could create significant exposure for taxpayers.</p>
+        <p>All three VooDoo bond series (2022A at 4.69%, 2022B at 5.86%, 2023 at 5.52%) mature simultaneously in December 2032. The $23.05M balloon appears to exceed total expected rental income over the bond's remaining life. No public refinancing plan has been identified, which could create significant exposure for taxpayers.</p>
       </div>
 
       <div class="risk-card high">
         <span class="risk-badge high">HIGH</span>
         <h3>Per-Unit Cost Escalation: +133%</h3>
-        <p>All-in public cost per housing unit has risen from $410K (Virginia Placer, 2017) to $955K (VooDoo, 2022). VooDoo received $4.7M in cash subsidies plus $1M in waived tap fees on top of $20.1M in bonds. Construction cost inflation alone may not fully explain this trajectory, raising questions about cost controls.</p>
+        <p>All-in public cost per housing unit has risen from $410K (Virginia Placer, 2017) to $955K (VooDoo, 2022). VooDoo received $4.7M in cash subsidies plus $1M in waived tap fees on top of $22.1M in bonds. Construction cost inflation alone may not fully explain this trajectory, raising questions about cost controls.</p>
       </div>
 
       <div class="risk-card high">
@@ -1228,7 +1262,7 @@
       <div class="risk-card high">
         <span class="risk-badge high">HIGH</span>
         <h3>CanyonLands: $26.6M Through Wisconsin Conduit</h3>
-        <p>A $26.6M bond routed through the Wisconsin Public Finance Authority, held by a special-purpose LLC where THA owns just 0.1%. The Town advanced $1.5M in pre-development costs subordinate to the bond. Coverage ratio: 0.50x. A Replenishment Resolution may create a political obligation to backstop the debt — a structure that could pose real risk to taxpayers if revenues fall short.</p>
+        <p>A $26.575M bond routed through the Wisconsin Public Finance Authority, held by a special-purpose LLC (Servitas-Telluride Housing I) where THA owns just 0.1%. The Town advanced $1.5M in pre-development costs. NOI coverage: 0.48x pre-buydown — the project does not reach 1.0x in any modeled scenario, including the Town's own best-case $10M for-sale buydown (0.77x). A Replenishment Resolution may create a political obligation to backstop the debt — a structure that could pose real risk to taxpayers if revenues fall short.</p>
       </div>
 
       <div class="risk-card medium">
@@ -1583,12 +1617,15 @@ const balloons = [
   { project: "Sunnyside", amount: 6170000, year: 2040, color: "#e67e22" },
 ];
 
+// "revenue" here is Net Operating Income (tenant rent minus cash operating costs);
+// ratio is NOI DSCR = NOI / debtService. Figures per May 2026 primary-source review.
+// Sunnyside was not re-analyzed; it retains prior estimates.
 const coverageData = [
-  { name: "Shandoka", revenue: 2000000, debtService: 635032, color: "#2c5f8a", ratio: 3.15 },
-  { name: "Virginia\nPlacer", revenue: 575000, debtService: 518871, color: "#c0392b", ratio: 0.58 },
+  { name: "Shandoka", revenue: 901385, debtService: 966958, color: "#2c5f8a", ratio: 0.93 },
+  { name: "Virginia\nPlacer", revenue: 455486, debtService: 518151, color: "#c0392b", ratio: 0.88 },
   { name: "Sunnyside", revenue: 685000, debtService: 591800, color: "#e67e22", ratio: 0.50 },
-  { name: "VooDoo", revenue: 620000, debtService: 1190240, color: "#8e44ad", ratio: 0.66 },
-  { name: "Canyon-\nLands", revenue: 606000, debtService: 556000, color: "#16a085", ratio: 0.50 },
+  { name: "VooDoo", revenue: 737902, debtService: 1190240, color: "#8e44ad", ratio: 0.62 },
+  { name: "Canyon-\nLands", revenue: 467448, debtService: 994500, color: "#16a085", ratio: 0.47 },
 ];
 
 // ===== FORMAT HELPERS =====
@@ -1840,7 +1877,7 @@ function renderCoverage() {
   // legend
   const legend = document.createElement('div');
   legend.style.cssText = 'display:flex;gap:1.5rem;justify-content:center;margin-top:0.5rem;font-size:0.68rem;color:var(--text-tertiary);';
-  legend.innerHTML = '<span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;background:#aaa;opacity:0.3;border-radius:2px;display:inline-block"></span> Revenue</span><span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;background:#aaa;border-radius:2px;display:inline-block"></span> Debt Service</span><span style="display:flex;align-items:center;gap:4px"><span style="color:var(--positive);font-weight:700">1.0x+</span> Self-funding</span><span style="display:flex;align-items:center;gap:4px"><span style="color:var(--negative);font-weight:700">&lt;1.0x</span> Needs subsidy</span>';
+  legend.innerHTML = '<span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;background:#aaa;opacity:0.3;border-radius:2px;display:inline-block"></span> Net op. income</span><span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;background:#aaa;border-radius:2px;display:inline-block"></span> Debt Service</span><span style="display:flex;align-items:center;gap:4px"><span style="color:var(--positive);font-weight:700">1.0x+</span> Self-funding</span><span style="display:flex;align-items:center;gap:4px"><span style="color:var(--negative);font-weight:700">&lt;1.0x</span> Needs subsidy</span>';
   container.parentElement.appendChild(legend);
 }
 
