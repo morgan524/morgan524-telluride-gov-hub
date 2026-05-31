@@ -169,10 +169,10 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -181,7 +181,7 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "The June 30, 2026 Town Council agenda hasn't been posted yet."
+    "The June 30 2026 Town Council agenda hasn't been posted yet."
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
@@ -2140,15 +2140,37 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Balance in Motion - Equilibrio en Movimiento",
-    link: "https://telluridelibrary.libcal.com/event/16536381?hs=a",
-    description: "10:00 AM – 11:00 AM · Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Mu&eacute;vase, respire y ll&eacute;nese de energ&iacute;a en esta din&aacute;mica clase biling&uuml;e, dirigido por Lauren Norton, dise&ntilde;ada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energ&iacute;a de la danza, y la presencia equilibrante del yoga y la respiraci&oacute;n, esta sesi&oacute;n le dejar&aacute; sinti&eacute;ndose fuerte, en armon&iacute;a y revitalizado/a. …",
-    pubDate: "2026-05-30T16:00:00.000Z",
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://telluridelibrary.libcal.com/event/16536433?hs=a",
+    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-05-31T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1740003527.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
+  },
+  {
+    title: "Drop-In Tech Time with Oliver",
+    link: "https://telluridelibrary.libcal.com/event/15970376?hs=a",
+    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
+    pubDate: "2026-05-31T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "2nd Floor Desk",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/16567827?hs=a",
+    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
+    pubDate: "2026-05-31T20:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
   }
 ];
 
@@ -2403,6 +2425,18 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://ucarecdn.com/656ff21a-f248-4773-bd89-1ce49203874c/-/crop/3674x1471/0,691/-/preview/"
+  },
+  {
+    title: "The Mammoths",
+    link: "https://www.alibitelluride.com/calendar#eca-event=the-mammoths",
+    description: "Hailing from Austin, TX, fuzz rockers The Mammoths fuse ‘70s inspired psychedeli...",
+    pubDate: "2026-07-29",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/e85f9702-e225-45cd-9c77-3b9d939c883b/-/crop/4096x2049/0,547/-/preview/"
   }
 ];
 
@@ -2544,94 +2578,6 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "OTG Overnight Trail Maintenance Trip: Bear Creek NRT",
     link: "https://ouraytrails.org/volunteers",
     description: "Enjoy some of the most scenic trails in Colorado while removing down trees or encroaching brush and repairing trails from erosion problems. You will leave the wild with the camaraderie that comes with meeting new friends and helping keep our public land trails safe and sustainable. Please register in advance to join this trail crew event, and participants must have current CPR and First Aid certifications. Click HERE to signup.",
-    pubDate: "2026-05-30T14:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Bear Creek Trail Head south of Ouray",
-    imageUrl: "https://localist-images.azureedge.net/photos/52789326237006/huge/bd0e715520daa45a021ccfc75c4938dfef1aed85.jpg"
-  },
-  {
-    title: "Family Fun Fest and Used Book Sale",
-    link: "https://events.ourayridgwayevents.com/event/family-fun-fest-and-used-book-sale",
-    description: "Celebrate the library with a fun and free event for all! Hosted by the Friends of the Ridgway Library, Summer Fun Fest & Book Sale brings readers of all ages together to celebrate summer, reading, and your library. Enjoy a day filled with activities including chalk art, crafts, face painting, shaved ice, a used book sale, a fly fishing clinic for ages 10+, and a bike maintenance clinic — bring your bike! All activities are free and everyone is welcome. Sign up for the bike clinic and fly casting clinic at the library or call 970-626-5252. Volunteers are needed! Contact jill.hepp@friendsofridgwaylibrary.org if you are interested in volunteering. Hosted by Friends of the Ridgway Library.",
-    pubDate: "2026-05-30T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52886186007930/huge/bfbbb0ceaf2c0b102794d880373c99a34a6c541b.jpg"
-  },
-  {
-    title: "Ridgway Railroad Museum FREE Train Rides",
-    link: "https://www.ridgwayrailroadmuseum.org/",
-    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
-    pubDate: "2026-05-30T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
-  },
-  {
-    title: "Ute Indian Museum Community Appreciation Festival",
-    link: "https://events.ourayridgwayevents.com/event/ute-indian-museum-community-appreciation-festival",
-    description: "Ute Indian Museum | Free Community Celebration Saturday, May 30 | 10am–3pm Spend the day with us at the Ute Indian Museum for a free, all-ages celebration of Native culture and community. Browse Native American vendors, explore a native created immersive gallery, and stay for a live cultural performance at noon. Ther performance includes: World Champion Hoop DancersFlute PlayingStorytelling Free admission. All ages welcome.",
-    pubDate: "2026-05-30T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ute Indian Museum",
-    imageUrl: "https://localist-images.azureedge.net/photos/52957925886030/huge/5ff9950ecfead1ac4b649b9f36306fddef0b157f.jpg"
-  },
-  {
-    title: "Ouray County Baseball - 11u and 13u Baseball vs. Crested Butte",
-    link: "https://events.ourayridgwayevents.com/event/ouray-county-baseball-11u-and-13u-baseball-vs-crested-butte",
-    description: "Ouray County Baseball will be hosting Crested Butte on Saturday, May 30th for a triple-header of baseball games. Games should start around 11am, 1pm, and 3pm. Concessions will be available all day in the Pavilion. Come down and support our youth baseball kids!",
-    pubDate: "2026-05-30T17:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52118491920073/huge/c7a7be70cc5e959127954f6aa1421cfb638dcbb3.jpg"
-  },
-  {
-    title: "WOWSERS",
-    link: "https://coloradoboydepot.com/calendar/",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-05-30T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "The Yawpers! Live at the Sherbino",
-    link: "https://sherbino.org/events/category/music/",
-    description: "https://sherbino.org/events/category/music/ Doors at 6:45 pm | Opener at 7:15 pm | The Yawpers at 8:00 pm $25 advance / $30 day of show / A limited amount of tables are available for this show Get ready for a high-octane night of raw, unapologetic rock and roll as The Yawpers take over the Sherbino stage! For over 15 years, The Yawpers have built a reputation as one of the most electrifying rock bands on the road—driven by gritty guitar riffs, relentless energy, and a sound that pulls from garage rock, punk, blues, and Americana. Their live shows are loud, fast, and wildly infectious—exactly the kind of experience that reminds you why rock and roll still matters. Now hitting the road with new music on the horizon, The Yawpers are bringing their signature intensity and edge back to Ridgway. …",
-    pubDate: "2026-05-31T01:15:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52403083528953/huge/e7eb8757e5dcaf8d14e07216a616734c89871529.jpg"
-  },
-  {
-    title: "Fly, You Fools!: Theatre @ the Wright",
-    link: "https://thewrightoperahouse.org/events/theater/fly-you-fools",
-    description: "Fly, You Fools!: Theatre @ the Wright WHEN? Friday, May 29, 2026 7:30 PM Saturday, May 30, 2026 7:30 PM Sunday, May 31, 2026 4:00 PM Monday, June 1, 2026 7:30 PM WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Fly, You Fools! is a critically acclaimed physical comedy from the New York–based troupe Recent Cutbacks, making its UK and international stage debut through touring productions like this one. Presented locally by UpstART Theatre, the show delivers a fast-paced parody of epic fantasy storytelling. Three actors and a Foley artist join forces in fellowship to bring an entire fantasy adventure to life in a hilarious one-shot theatrical journey. Blending rapid-fire comedy, inventive stagecraft, live sound effects, and high-energy physical theatre, the production proves that even the smallest band of performers can create a world of heroic proportions. …",
-    pubDate: "2026-05-31T01:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52453668754083/huge/7843394b93916f13f7fe41b7d9d36f1a7394be85.jpg"
-  },
-  {
-    title: "OTG Overnight Trail Maintenance Trip: Bear Creek NRT",
-    link: "https://ouraytrails.org/volunteers",
-    description: "Enjoy some of the most scenic trails in Colorado while removing down trees or encroaching brush and repairing trails from erosion problems. You will leave the wild with the camaraderie that comes with meeting new friends and helping keep our public land trails safe and sustainable. Please register in advance to join this trail crew event, and participants must have current CPR and First Aid certifications. Click HERE to signup.",
     pubDate: "2026-05-31T06:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -2649,6 +2595,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Fellin Park",
     imageUrl: "https://localist-images.azureedge.net/photos/51807883052581/huge/9d7f0c7c4c96318902b1dfef1c3f821c9b3189d1.jpg"
+  },
+  {
+    title: "Fly, You Fools!: Theatre @ the Wright",
+    link: "https://thewrightoperahouse.org/events/theater/fly-you-fools",
+    description: "Fly, You Fools!: Theatre @ the Wright WHEN? Friday, May 29, 2026 7:30 PM Saturday, May 30, 2026 7:30 PM Sunday, May 31, 2026 4:00 PM Monday, June 1, 2026 7:30 PM WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Fly, You Fools! is a critically acclaimed physical comedy from the New York–based troupe Recent Cutbacks, making its UK and international stage debut through touring productions like this one. Presented locally by UpstART Theatre, the show delivers a fast-paced parody of epic fantasy storytelling. Three actors and a Foley artist join forces in fellowship to bring an entire fantasy adventure to life in a hilarious one-shot theatrical journey. Blending rapid-fire comedy, inventive stagecraft, live sound effects, and high-energy physical theatre, the production proves that even the smallest band of performers can create a world of heroic proportions. …",
+    pubDate: "2026-05-31T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52453668754083/huge/7843394b93916f13f7fe41b7d9d36f1a7394be85.jpg"
   },
   {
     title: "Ouray Softball Spring Training",
@@ -3562,6 +3519,94 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52993729729431/huge/e1d998becabcdd783bde62126a99bfdfad6d9a7d.jpg"
+  },
+  {
+    title: "2-Day Trail Stewardship Trip: Wright's Lake to Blue Lakes Pass",
+    link: "https://ouraytrails.org/volunteers",
+    description: "Join Ouray Trail Group Crew Leader Richfor a two-day stewardship trip from Wright's Lake to Blue Lakes Pass. Volunteers will perform trail maintenance while enjoying the spectacular scenery of Colorado’s backcountry. This is a rewarding opportunity to help maintain local trails alongside fellow volunteers. There's no cost, but please register.",
+    pubDate: "2026-06-13T14:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Wright's Lake Trailhead",
+    imageUrl: "https://localist-images.azureedge.net/photos/52932411507464/huge/45ad0cb327371f83a5fd76657c690337ddf55ebc.jpg"
+  },
+  {
+    title: "San Juan Trail Triathlon",
+    link: "https://sanjuantrailtri.com/",
+    description: "DASH * PADDLE * PEDAL 3.5 mile run 1.5 mile paddle 8 mile mountain Divisions for individual racers, teams, and teens ages 12+ Money raised from this event directly benefits Montrose Recreation Foundation and Voyager Youth Program.",
+    pubDate: "2026-06-13T14:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway State Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/52922710682794/huge/7d09aec1e654bda398931d637d11654a01f64323.jpg"
+  },
+  {
+    title: "Shifting Consciousness with Food and Your SELF",
+    link: "https://www.beetrueyou.com/",
+    description: "A transformative, one-day retreat to reimagine your relationship with food, self-care, and belonging. Christine will guide you through powerful, paradigm-shifting topics—including the paradox of permission and what it means to truly belong as you are, breaking free from quick-fix self-care, and redefining the difference between healing and “fixing.” Explore authentic nutrition through the practice of attunement. Paired with Elisabeth’s spiritually grounded facilitation, the experience weaves together mindfulness, movement, meditation, and meaningful connection. Through guided reflection and supportive group sharing, you’ll gain both insight and practical tools to cultivate a more compassionate, sustainable relationship with your body and yourself.",
+    pubDate: "2026-06-13T14:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52836723968745/huge/c5e17d886587b3f2d245b1852b2398f4bc7df65e.jpg"
+  },
+  {
+    title: "Rollans Park Cleanup",
+    link: "https://www.uncompahgrewatershed.org/events/",
+    description: "Come help clean up Rollans Park in Ridgway and be treated with a breakfast burrito and conversation with UWP staff and board members. UWP has adopted this important park that protects and provides access to the Uncompahgre River. We make an annual effort through the Adopt-a-Park Program to pick up litter and branches and do other maintenance around the park. This event is supported by the Town of Ridgway. Please email tanya@uncompahgrewatershed.org to sign up!",
+    pubDate: "2026-06-13T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53001642609887/huge/fb9f391ed3891621f3b5be49abe7ace84d5ddd9c.jpg"
+  },
+  {
+    title: "Dallas Park Cemetery Tour",
+    link: "www.ouraycountyhistoricalsociety.org",
+    description: "Tour of Dallas Park Cemetery Tour, led by Coleen McElroy. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay",
+    pubDate: "2026-06-13T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Dallas Park Cemetery ",
+    imageUrl: "https://localist-images.azureedge.net/photos/52462667793124/huge/857907efd93056a1ba298d906bd6d5231a5f9d13.jpg"
+  },
+  {
+    title: "Ridgway Railroad Museum FREE Train Rides",
+    link: "https://www.ridgwayrailroadmuseum.org/",
+    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
+    pubDate: "2026-06-13T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
+  },
+  {
+    title: "Spring Colors Gourd Bowls with Janice Reich",
+    link: "https://weehawkenarts.org/education/adult-art-classes/",
+    description: "Spring Colors Gourd Bowls with Janice Reich Alcohol Dye Technique with Seagrass Rim Saturday, June 13, 2026 | 10 am – 2 pm (includes a lunch break) Cora Annex, Ridgway (145 N. Cora St., Ridgway, CO 81432) Tuition: $75 Registration: www.weehawkenarts.org In this class, students will learn the basics of weaving seagrass around a gourd rim and working with TransTint alcohol dyes. When mixed, blended, or layered, these dyes create a wide range of vibrant colors and beautiful effects. Techniques may include dabbing, dripping, sponging, painting, and blending with alcohol dyes to achieve unique surface designs. Be bold—go with the color! All materials will be supplied by the instructor. If you have favorite beads or small embellishments, feel free to bring them along to personalize your bowl. About the Instructor: Shape, color, and texture lie at the heart of Janice’s artistic exploration. …",
+    pubDate: "2026-06-13T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52648597926478/huge/cb32e72fdc1ada493249dea5fe1899d8db619801.jpg"
+  },
+  {
+    title: "Happy Little Trees: Classes @ the Wright",
+    link: "https://www.zeffy.com/en-US/ticketing/emma-kalf-bob-ross-painting-classes",
+    description: "Happy Little Trees: Classes @ the Wright WHEN? Classes at 10:30 am WHERE? Wright Community Room Wright Opera House 472 Main St. Ouray, Colorado TICKETS: $55 Per Class (All supplies are included + coffee!) ABOUT THE CLASS Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All supplies are included, and no prior painting experience is necessary. Just bring your curiosity and enjoy a relaxed, creative morning inspired by the joy of painting. …",
+    pubDate: "2026-06-13T16:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52373044220947/huge/1d3e4ebb5835fbe0ed89bf2b3588d8e41db8f444.jpg"
   }
 ];
 
