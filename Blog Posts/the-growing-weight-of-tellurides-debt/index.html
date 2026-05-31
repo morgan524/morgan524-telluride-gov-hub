@@ -177,24 +177,30 @@
     text-transform: uppercase;
     color: var(--text-tertiary);
     margin-bottom: 0.5rem;
+    text-align: center;
   }
   .section-title {
     font-family: var(--serif);
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    text-align: center;
   }
   .section-intro {
     font-size: 0.9rem;
     color: var(--text-secondary);
     margin-bottom: 2rem;
     max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: 500;
+    text-align: center;
   }
 
   /* === EXECUTIVE SUMMARY === */
   .exec-summary {
     padding-top: 2.5rem;
+    text-align: center;
   }
   .exec-summary .section-title {
     margin-bottom: 1rem;
@@ -204,7 +210,7 @@
     line-height: 1.7;
     color: var(--text-secondary);
     max-width: 720px;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
   }
   .exec-summary p:last-child {
     margin-bottom: 0;
@@ -491,7 +497,24 @@
     font-weight: 700;
     color: var(--negative);
     line-height: 1.1;
-    margin: 0.4rem 0 0.6rem;
+    margin: 0.4rem 0 0.4rem;
+  }
+  .subsidy-box .subsidy-pct {
+    font-family: var(--serif, Georgia, serif);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--negative);
+    margin: 0 0 0.6rem;
+  }
+  .subsidy-box .subsidy-pct span {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-top: 0.15rem;
   }
   .subsidy-box .subsidy-sub {
     font-size: 0.85rem;
@@ -1303,11 +1326,13 @@
     <div class="subsidy-box">
       <div class="subsidy-label">Total Annual <span style="font-size:1.18em;font-weight:800;">Non-amortized</span> Estimated Subsidies Required by the Town <sup>⁵</sup></div>
       <div class="subsidy-number">~$1.1 Million / year</div>
+      <div class="subsidy-pct">≈ 20% <span>of total annual cost ($5.64M) not covered by rent</span></div>
     </div>
 
     <div class="subsidy-box">
       <div class="subsidy-label">Total Annual <span style="font-size:1.18em;font-weight:800;">Amortized</span> Estimated Subsidies Required by the Town <sup>⁶</sup></div>
       <div class="subsidy-number">~$5.95 Million / year</div>
+      <div class="subsidy-pct">≈ 57% <span>of total annual cost ($10.48M) not covered by rent</span></div>
     </div>
 
     <div class="subsidy-calc">
@@ -1334,6 +1359,21 @@
     <div style="margin-top: 2rem;">
       <div class="section-label" style="margin-bottom: 0.5rem;">Net Operating Income vs. Debt Service by Project</div>
       <div class="coverage-visual" id="coverageVisual"></div>
+    </div>
+  </section>
+</div>
+
+<!-- TOTAL BONDED DEBT -->
+<div class="container">
+  <section class="debt-section">
+    <div class="section-label">Total Bonded Debt by Project</div>
+    <div class="section-title">~$82 Million in Total Bonded Debt</div>
+    <div class="section-intro">The full bonded principal the Telluride Housing Authority carries across all five projects — none of it approved by public vote. CanyonLands ($26.6M) and VooDoo ($22.1M) alone account for more than half of the ~$81.7M total.</div>
+
+    <div class="balloon-timeline" id="bondedDebtTimeline"></div>
+
+    <div class="annotation">
+      <strong>A floor, not a ceiling:</strong> The ~$81.7M shown reflects documented principal, including Shandoka's COP Series 2025 ($8.47M). It excludes the COP Series 2024 principal (its dollar amount was never separately published — only its $213,569 annual debt service), so the true total is somewhat higher.
     </div>
   </section>
 </div>
@@ -1610,7 +1650,7 @@
       <p style="margin:0 0 0.6rem;"><strong>⁵ Non-amortized subsidy (~$1,107,628/yr).</strong> The gap between each project's tenant rent and its full annual cost (debt service + operating expenses), summed across the four analyzed projects: VooDoo ~$452K · CanyonLands ~$527K (est.) · Shandoka ~$66K · Virginia Placer ~$63K. This is the minimum recurring cash the Town must inject each year to keep these projects current, on top of the disclosed moral-obligation payments. It reflects interest-only debt service and does not set aside any of the balloon principal.</p>
       <p style="margin:0 0 0.6rem;"><strong>⁶ Amortized subsidy (~$5.95M/yr).</strong> Adds the balloon principal — set aside over the years until each balloon comes due — to the non-amortized operating gap above. Balloon set-asides: VooDoo $23,045,864 ÷ 6 yrs (2032) ≈ $3,840,977/yr; Virginia Placer $3,040,000 ÷ 10 (2036) ≈ $304,000; Shandoka $3,620,000 ÷ 14 (2040) ≈ $258,571; Sunnyside $6,170,000 ÷ 14 (2040) ≈ $440,714 — about $4.84M/yr, plus the $1.11M operating gap ≈ $5.95M/yr. Only VooDoo's annualized figure (~$3.84M/yr) appears in the May 2026 review; the other three apply the same balloon ÷ years-to-maturity method.</p>
       <p style="margin:0 0 0.6rem;"><strong>⁷ Net Operating Income Debt Service Coverage Ratio (Portfolio).</strong> $2,562,221 net operating income ÷ $3,669,849 annual debt service = 0.70× (70%). Across the four analyzed THA projects, net operating income covers only about 70% of annual debt service. The remaining ~30% ($1,107,628 / year) is the required annual subsidy by the Town.</p>
-      <p style="margin:0;"><strong>Sources:</strong> <a href="https://www.telluride.gov/122/Budget-Financial-Statements" target="_blank" rel="noopener">Town of Telluride 2025 Budget Book</a> and the <a href="https://www.telluride.gov/AgendaCenter" target="_blank" rel="noopener">Oct. 9, 2025 Town Council budget packet</a>; signed VooDoo bond certificates (Series 2022A, 2022B, 2023 — on file with THA); the Nov. 19, 2024 CanyonLands/Tower House bond memorandum (<a href="https://www.telluride.gov/AgendaCenter" target="_blank" rel="noopener">Town Council agenda</a>, on file); THA audited financial statements (<a href="https://www.telluride.gov/DocumentCenter/View/14568" target="_blank" rel="noopener">FY2023</a>, <a href="https://www.telluride.gov/DocumentCenter/View/15268" target="_blank" rel="noopener">FY2024</a>); and actual FY2025 VooDoo rental income reported by <a href="https://coloradosun.com" target="_blank" rel="noopener"><em>The Colorado Sun</em></a> (April 19, 2026).</p>
+      <p style="margin:0;"><strong>Sources:</strong> <a href="https://www.telluride.gov/122/Budget-Financial-Statements" target="_blank" rel="noopener">Town of Telluride 2025 Budget Book</a> and the <a href="/source-document.html?doc=2025-10-09-town-council-budget-packet.pdf" target="_blank" rel="noopener">Oct. 9, 2025 Town Council budget packet</a>; signed <a href="/source-document.html?doc=voodoo-bond-certificates.pdf" target="_blank" rel="noopener">VooDoo bond certificates</a> (Series 2022A, 2022B, 2023); <a href="/source-document.html?doc=voodoo-moral-obligation-resolution-23-2022.pdf" target="_blank" rel="noopener">Town Council Resolution No. 23 (2022)</a> (VooDoo moral obligation); the Nov. 19, 2024 <a href="/source-document.html?doc=canyonlands-bond.pdf" target="_blank" rel="noopener">CanyonLands / Tower House bond document</a>; THA audited financial statements (<a href="https://www.telluride.gov/DocumentCenter/View/14568" target="_blank" rel="noopener">FY2023</a>, <a href="https://www.telluride.gov/DocumentCenter/View/15268" target="_blank" rel="noopener">FY2024</a>); and actual FY2025 VooDoo rental income reported by <a href="https://coloradosun.com" target="_blank" rel="noopener"><em>The Colorado Sun</em></a> (April 19, 2026).</p>
     </div>
   </section>
 </div>
@@ -1719,6 +1759,16 @@ const balloons = [
   { project: "Virginia Placer", amount: 3040000, year: 2036, color: "#c0392b" },
   { project: "Shandoka Lot E", amount: 3620000, year: 2040, color: "#2c5f8a" },
   { project: "Sunnyside", amount: 6170000, year: 2040, color: "#e67e22" },
+];
+
+// Total bonded principal by project (documented; Shandoka incl. COP 2025,
+// excl. unpublished COP 2024 principal). Sorted largest first.
+const bondedDebt = [
+  { project: "CanyonLands", amount: 26575000, year: 2024, color: "#16a085" },
+  { project: "VooDoo", amount: 22065000, year: "2022-23", color: "#8e44ad" },
+  { project: "Shandoka", amount: 12464000, year: "2021-25", color: "#2c5f8a" },
+  { project: "Sunnyside", amount: 11965000, year: 2021, color: "#e67e22" },
+  { project: "Virginia Placer", amount: 8602000, year: 2017, color: "#c0392b" },
 ];
 
 // "revenue" here is Net Operating Income (tenant rent minus cash operating costs);
@@ -1949,6 +1999,30 @@ function renderBalloons() {
   });
 }
 
+// ===== TOTAL BONDED DEBT TIMELINE =====
+function renderBondedDebt() {
+  const container = document.getElementById('bondedDebtTimeline');
+  if (!container) return;
+  container.innerHTML = '';
+  const maxAmt = Math.max(...bondedDebt.map(b => b.amount));
+
+  bondedDebt.forEach(b => {
+    const widthPct = (b.amount / maxAmt) * 100;
+    const val = currentView === 'percapita' ? perCap(b.amount) : fmt(b.amount);
+    const ev = document.createElement('div');
+    ev.className = 'balloon-event';
+    ev.innerHTML = `
+      <span class="be-year">${b.year}</span>
+      <span class="be-dot"></span>
+      <div class="be-bar" style="width:${Math.max(widthPct, 18)}%; background:${b.color}">
+        ${val}
+      </div>
+      <div class="be-label">${b.project} — ${currentView === 'percapita' ? fmtFull(b.amount) + ' total' : perCap(b.amount) + ' per resident'}</div>
+    `;
+    container.appendChild(ev);
+  });
+}
+
 // ===== COVERAGE VISUAL =====
 function renderCoverage() {
   const container = document.getElementById('coverageVisual');
@@ -2021,6 +2095,7 @@ function renderAll() {
   renderTreemap();
   renderDeptBars();
   renderBalloons();
+  renderBondedDebt();
   renderCoverage();
 }
 
