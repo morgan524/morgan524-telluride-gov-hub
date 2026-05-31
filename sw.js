@@ -1,11 +1,20 @@
 /**
  * Livable Telluride — Service Worker
  * Strategy:
- *   - Static shell (HTML, CSS, JS, logos): cache-first, refresh in background
- *   - Everything else (RSS feeds, Firebase, external APIs): network-first
+ *   - HTML (the shell): network-first with cache fallback for offline.
+ *     Mobile users get fresh HTML on every connected visit, so new nav
+ *     links / inline scripts / structure ship immediately. Cached shell
+ *     is the offline fallback only.
+ *   - Static CSS / JS / logos: cache-first, refresh in background
+ *     (stale-while-revalidate).
+ *   - Everything else (RSS feeds, Firebase, external APIs): network-first.
+ *
+ * If you change the cached-asset list or this fetch strategy in a way that
+ * needs existing PWA installs to drop old entries, BUMP CACHE_NAME — the
+ * activate handler purges every cache whose name doesn't match.
  */
 
-const CACHE_NAME = 'livable-tlr-v1';
+const CACHE_NAME = 'livable-tlr-v2';
 
 const STATIC_ASSETS = [
   '/',
@@ -44,7 +53,12 @@ self.addEventListener('activate', event => {
   self.clients.claim();
 });
 
-// Fetch: cache-first for static assets, network-first for everything else
+// Fetch: cache-first for static CSS/JS/logos, network-first for HTML and
+// everything else. HTML deliberately falls into the network-first branch so
+// fresh shell markup (new nav links, inline scripts, structural changes)
+// ships to mobile on the next connected visit instead of being trapped behind
+// stale-while-revalidate. The pre-cached HTML in STATIC_ASSETS still serves
+// as the offline fallback via caches.match in the network-first .catch.
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
 
@@ -57,8 +71,6 @@ self.addEventListener('fetch', event => {
     url.pathname.startsWith('/css/') ||
     url.pathname.startsWith('/js/') ||
     url.pathname.startsWith('/logo/') ||
-    url.pathname === '/' ||
-    url.pathname === '/index.html' ||
     url.pathname === '/manifest.json';
 
   if (isStatic) {

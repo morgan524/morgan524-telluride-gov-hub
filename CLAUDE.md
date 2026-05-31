@@ -1278,19 +1278,27 @@ this fix.
   `<enclosure>`. The script tolerates a missing `img`. If many cards on the
   live site render without thumbnails, look at whether the upstream RSS
   shape has changed.
-- **Site cache busters — auto-bumped by content-refresh.js** (as of
-  2026-05-14). The `bumpCacheBusters()` function at the end of
-  `scripts/content-refresh.js` updates the `?v=...` query string on
-  `js/gov-helpers.js`, `js/gov-data.js`, `js/corrections.js`,
-  `js/legal-standalone.js`, and `css/site.css` whenever the refresh
-  produced any change. It also bumps `CACHE_NAME` in `sw.js` so the
-  Service Worker invalidates its pre-cached shell. Both keys are derived
-  from the same UTC timestamp (`YYYY-MM-DD-HHMM`) so they always agree.
-  When making manual edits to those assets between scheduled refreshes,
-  you can still bump the `?v=` strings yourself; the next bot run will
-  overwrite with its own stamp.
-
-  If you add a NEW versioned asset to `index.html`, also append its path
-  to the `assetPaths` array inside `bumpCacheBusters()`, and seed it with
-  any `?v=initial` value (the regex only matches assets that already have
-  a `?v=`).
+- **Cache freshness on mobile (PWA / Service Worker)** — handled by
+  `sw.js`'s fetch strategy, NOT by an auto-bumper. Earlier docs claimed a
+  `bumpCacheBusters()` function in `scripts/content-refresh.js` was
+  bumping `?v=...` strings + `CACHE_NAME` on every refresh; that function
+  never actually existed, and `CACHE_NAME` sat at `livable-tlr-v1` for
+  weeks while the SW cache-firsted `/index.html` — which silently froze
+  the home-page shell on mobile installs (commit on branch
+  `claude/telluride-website-access-RTdxF`, 2026-05-24).
+  Current strategy (post-fix):
+    - **HTML** (`/`, `/index.html`, all sub-pages): network-first with
+      cache fallback. Mobile gets fresh HTML on every connected visit;
+      the pre-cached shell in `STATIC_ASSETS` only kicks in offline.
+    - **CSS / JS / logos / manifest**: cache-first with background
+      revalidate (stale-while-revalidate). Eventually consistent.
+    - **`js/gov-data.js` and `js/gov-helpers.js`**: index.html appends a
+      dynamic `?v=` query string (`Math.floor(Date.now()/600000)`, a
+      10-minute bucket) so each unique URL forces a cache miss → fresh
+      fetch every 10 minutes regardless of SW behavior.
+    - **Everything else** (RSS, Firebase, external APIs): network-first.
+  If you change the SW's fetch strategy or `STATIC_ASSETS` list in a way
+  that needs existing PWA installs to drop old entries, BUMP `CACHE_NAME`
+  in `sw.js` — the activate handler purges every cache whose name doesn't
+  match. There is no auto-bump cron; one-shot manual bump is the
+  intended mechanism.
