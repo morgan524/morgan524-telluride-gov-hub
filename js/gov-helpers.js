@@ -154,7 +154,7 @@ const MANUAL_SUMMARIES = {
     "The agenda text for this Commission for Community Assistance, Arts & Special Events meeting is missing — only the portal navigation and meeting list appears.",
 
   "telluride|2026-06-03|Telluride Housing Authority Subcommittee - Jun 03 2026":
-    "The June 3 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The Jun 03 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-06-01|Open Space Commission - Jun 01 2026":
     "Meeting scheduled for first Monday of the month · Commission reviews open space acquisitions and management · Advises Town Council on comprehensive plan elements",
@@ -169,7 +169,7 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
     "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
@@ -178,10 +178,49 @@ const MANUAL_SUMMARIES = {
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
 
   "ouray|2026-06-03|The Planning Commission will conduct a regular meeting and hold a public hearing to consider and make recommendation on an application for a 6-lot regular PUD in the South Mesa Zone (Packet Materials are attached to the agenda)":
-    "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county."
+    "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
+
+  "telluride|2026-06-30|Town Council - Jun 30 2026":
+    "The June 30, 2026 Town Council agenda hasn't been posted yet."
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Claude Lemieux's brain is being donated to Boston University's CTE Center, his family says",
+    source: "Telluride Times",
+    date: "May 31, 2026",
+    firstSeen: "2026-05-31",
+    newsTopic: "community",
+    copy: "Former NHL player Claude Lemieux's family has donated his brain to Boston University's CTE Center for research following his death. The family gave permission for any findings to be shared publicly with Lemieux's name attached, hoping the research will lead to better understanding and protection for future athletes.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_05584188-d4ca-5265-9e80-3448018427fd.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/47/d47cedf3-7a73-5a48-a684-99d3efe90552/6a18b5e2b4ec0.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Housing and mental health",
+    source: "Telluride Times",
+    date: "May 30, 2026",
+    firstSeen: "2026-05-31",
+    newsTopic: "housing",
+    copy: "Local healthcare providers are reporting that housing instability has become a major driver of stress, anxiety and worsening mental health among patients. Dr. Sharon Grundy notes that uncertain housing affects everything from sleep to chronic condition management, while Tri-County Health Network has advocated with Town Council about housing policies that particularly challenge immigrant and Spanish-speaking residents. One local couple saw their Town-owned rental jump from $2,450 to $4,400 monthly under new policies, forcing them to question whether staying in Telluride remains viable despite their deep community ties.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_82784adf-bcaf-458a-a47e-25d04eeb187a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/61/16137491-cbb9-48aa-beb2-abece96f516e/6a18c781afb5e.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Mountains matter: notes from the UNMP Summit",
+    source: "Telluride Times",
+    date: "May 30, 2026",
+    firstSeen: "2026-05-31",
+    newsTopic: "recreation",
+    copy: "The UN Mountain Partnership summit in Andorra brought together 150 representatives from 50+ countries to tackle climate change impacts on mountain regions, with Telluride Institute among just four North American groups attending. The numbers tell the story: 186 French Alps ski areas have permanently closed, developing mountain countries need $187 billion annually for climate adaptation but received only $13.8 billion in 2022, and back home Mount Hood Meadows just closed a month early with 100 inches below normal snowpack.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_be1f24b0-2b42-454b-966c-2e8c825bb36e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/5f/85f9cd72-a2fd-4bcc-b4de-5fa0be078976/6a18dad99fd26.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Kick-off to adventure",
     source: "Telluride Times",
@@ -871,66 +910,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Tiny patients, big fight: NICU parents win leave in 2 states and push for more",
-    source: "Telluride Times",
-    date: "May 17, 2026",
-    firstSeen: "2026-05-17",
-    newsTopic: "housing",
-    copy: "A Fort Collins couple faced the difficult choice between working while their baby was in the NICU or using up parental leave before bringing her home. Colorado became the first state to offer paid NICU leave in January - 12 weeks on top of regular parental leave - while Illinois will start offering 10-20 days unpaid next month.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_972ba0ce-4c07-5b4f-9b1e-7d3dc9268852.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/0e/e0e2f3ab-4e6e-58b6-83ea-c282291ca3c3/6a09c00146405.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Trump administration rescinds Public Lands Rule",
-    source: "Telluride Times",
-    date: "May 17, 2026",
-    firstSeen: "2026-05-18",
-    newsTopic: "arts-culture",
-    copy: "The Trump administration rescinded the Public Lands Rule, which would have given conservation equal weight with mining, drilling, and grazing when considering uses for BLM lands. The move affects 298,733 acres of BLM land in San Miguel County and will impact ongoing planning for the Uncompahgre Resource Management Plan.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_8b172d1f-535e-4d09-b70c-ed1a18b83bde.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/4a/04a53e93-4905-40fc-8659-1f3e4c69202f/6a0a0e02139c0.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Tiny patients, big fight: NICU parents win leave in 2 states and push for more",
-    source: "Telluride Times",
-    date: "May 17, 2026",
-    firstSeen: "2026-05-17",
-    newsTopic: "housing",
-    copy: "A Colorado couple faced the dilemma many NICU parents know - work while their baby was hospitalized or save parental leave for later. Colorado became the first state in January to offer paid NICU leave (12 weeks), while Illinois will start a smaller unpaid program next month.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_fd56087d-96f6-5692-8644-bb2754f3d21b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/0e/e0e2f3ab-4e6e-58b6-83ea-c282291ca3c3/6a09c00146405.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Cassidy tried to get along with Trump after his impeachment vote. Retribution came anyway",
-    source: "Telluride Times",
-    date: "May 17, 2026",
-    firstSeen: "2026-05-18",
-    newsTopic: "government",
-    copy: "Senator Cassidy finished third in Saturday's primary despite outspending rivals, unable to overcome Trump's opposition five years after voting to convict him during impeachment. Trump-endorsed Julia Letlow led the voting and will face state Treasurer John Fleming in the June 27 runoff for the Republican nomination.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_1b4aa47e-075a-5201-80b4-8260d28c5013.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/5d/e5dde20d-6cde-562d-ac58-8f35803d191d/6a0a11cd27eb3.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Rural Homes Colorado to build workforce housing for MV",
-    source: "Telluride Times",
-    date: "May 17, 2026",
-    firstSeen: "2026-05-17",
-    newsTopic: "housing",
-    copy: "Mountain Village has partnered with nonprofit Rural Homes Colorado to develop workforce housing on town-donated land, with construction expected to start fall 2027 and residents moving in by late 2028. Rural Homes uses modular construction to keep costs down and has built 49 homes in Norwood, Ridgway and Ouray since 2021.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_9bb0b443-6b90-42fe-a3bc-0162f255e88a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/10/010ec66b-45b0-4c16-a613-ad59e52b90e8/6a08c4a872f36.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Highway 62 between Ridgway and Placerville re-opens",
     source: "Telluride Times",
     date: "May 22, 2026",
@@ -1037,7 +1016,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "May 30, 2026",
+    date: "May 31, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1641,17 +1620,6 @@ const MUSIC_ON_THE_GREEN = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Party in the Park",
-    link: "https://koto.org/event/party-in-the-park/",
-    description: "TEF and there&#8230; are organizing our second annual Party in the Park! There will be great food and drinks, fun games, and amazing music, to celebrate our community!! All proceeds support our public schools!",
-    pubDate: "2026-05-30T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Town Park, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/PITP-STD.png"
-  },
-  {
     title: "Gentle Yoga with Kristin Milord",
     link: "https://koto.org/event/gentle-yoga-with-kristin-milord-2/2026-05-31/",
     description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class is free, but donations to support the instructor are welcome.",
@@ -2144,6 +2112,28 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Conference Center, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Town Talk: Small Molecules at the Origins of Life",
+    link: "https://koto.org/event/town-talk-small-molecules-at-the-origins-of-life/",
+    description: "This town talk will be presented by David Lancy, University of Buffalo. How did the atoms in the universe come together to form life? At the heart of this mystery is the conversion of small molecules into the building blocks of life, driven by metallocofactors—enzyme-like catalysts conserved across all domains of life. The chemical ancestors of these metallocofactors are thought to have been active prior to the traditional bounds of life, such as dynamic molecular architectures at mineral surfaces in early oceans. Understanding these chemistries in unusual abiotic environments enables unique insight into how life may have started and evolved into its present form. In this talk, I will share some of the exciting new developments in the science of extraterrestrial photosynthesis (the search for light-harvesting life on other planets) and other metal-based processes that underpin life on Earth, and possibly the cosmos.",
+    pubDate: "2026-06-24T00:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Innovation Center",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A-2.png"
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-24/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-06-24T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
   }
 ];
@@ -3658,54 +3648,6 @@ const NORWOOD_EVENTS = [
 const MOUNTAIN_VILLAGE_EVENTS = [];
 
 const TELLURIDE_COM_EVENTS = [
-  {
-    title: "Music on the Green Summer Concert Series",
-    link: "https://www.telluride.com/event/music-on-the-green-summer-concert-series/",
-    description: "The Telluride Mountain Village Owners Association (TMVOA) and Beyond the Groove Productions Present Music on the Green …",
-    pubDate: "2026-05-29",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/44414/16c6ff81-d87c-823e-1bd2-8a66b859eb9d.800x533.webp"
-  },
-  {
-    title: "Telluride Farmers&#039; Market",
-    link: "https://www.telluride.com/event/telluride-farmers-market/",
-    description: "The Telluride Farmers' Market provides the highest quality produce, animal products, prepared food and more to …",
-    pubDate: "2026-05-29",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/44554/img_0071.800x533.webp"
-  },
-  {
-    title: "Telluride Farmers&#039; Market Music Series",
-    link: "https://www.telluride.com/event/telluride-farmers-market-music-series/",
-    description: "Augment Music Project sponsors local music in various ways, including weekly performances at the Telluride Farmers' …",
-    pubDate: "2026-05-29",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/54793/20240705_111835.800x533.webp"
-  },
-  {
-    title: "The Dirty Turkeys",
-    link: "https://www.telluride.com/event/the-dirty-turkeys/",
-    description: "With a sound they’ve dubbed “Acid Cow Punk,” a gritty fusion of psychedelia, surf, punk, and outlaw country, The …",
-    pubDate: "2026-05-29",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/58216/screenshot_2026-04-09_at_1_54_21_pm.800x533.webp"
-  },
   {
     title: "Party in the Park",
     link: "https://www.telluride.com/event/party-in-the-park/",
@@ -5661,6 +5603,54 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/44886/sunsetconcert.800x533.webp"
+  },
+  {
+    title: "Games on the Green",
+    link: "https://www.telluride.com/event/games-on-the-green/",
+    description: "Head to The Madeline on Wednesdays and Thursdays this summer for Games on the Green! They will have classic lawn games …",
+    pubDate: "2026-07-30",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62453/mtv_summer_selects_lowres-62-2100x1401-5ba5db78-3cf7-49e2-a790-62927e14c194.800x533.webp"
+  },
+  {
+    title: "Historic Walking Tour",
+    link: "https://www.telluride.com/event/historic-walking-tour/",
+    description: "Take a historic tour of Telluride on foot! These historic walking tours are led by historian Ashley Boling, and leave …",
+    pubDate: "2026-07-30",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/48069/walkingtour_tabloidsize_2021.800x533.webp"
+  },
+  {
+    title: "Telluride Gold Kings",
+    link: "https://www.telluride.com/event/telluride-gold-kings/",
+    description: "Dance and sing along with the Telluride Gold Kings every Thursday this summer. Free admission!",
+    pubDate: "2026-07-30",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp"
+  },
+  {
+    title: "Telluride Reserve",
+    link: "https://www.telluride.com/event/telluride-reserve/",
+    description: "Telluride Reserve is more than an event—it is an intimate gathering where stories are shared, flavors are discovered, …",
+    pubDate: "2026-07-30",
+    endDate: "2026-08-02",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/36164/dsc8590_1.800x533.webp"
   }
 ];
 
