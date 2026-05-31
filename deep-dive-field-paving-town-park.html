@@ -376,6 +376,21 @@
     </section>
 
     <p class="source-note">Source base: Town of Telluride Engage Telluride project page for Town Park Oval &amp; Warner Field Improvements, including posted lifecycle, budget, and important document links. Illustrative Site Plan SC-1.0 by Charles Cunniffe Architects (2025), reproduced from the Town's posted project documents.</p>
+  <!-- CORRECTION FOOTER -->
+  <footer style="max-width:760px;margin:56px auto 72px;padding:32px 28px;text-align:center;background:var(--bg-paper,#fffdf9);border:1px solid var(--border-soft,rgba(33,68,60,0.12));border-radius:14px;">
+    <h3 style="font-family:var(--font-heading,Georgia,'Times New Roman',serif);font-size:1.3rem;color:var(--text-primary,#1a2e29);margin:0 0 8px;">See anything wrong with this report?</h3>
+    <p style="font-size:0.95rem;color:var(--text-secondary,#4a5e57);line-height:1.6;max-width:520px;margin:0 auto 20px;">We want every Deep Dive to be accurate. If a number or fact looks off, let us know and we&#39;ll take a look.</p>
+    <a id="ddCorrectionBtn" href="mailto:info@livabletelluride.org?subject=Deep%20Dive%20correction" style="display:inline-block;background:var(--forest,#21443c);color:#fff;text-decoration:none;font-weight:600;font-size:0.95rem;padding:12px 26px;border-radius:999px;">Let us know &rarr;</a>
+  </footer>
+  <script>
+    (function(){
+      var b = document.getElementById('ddCorrectionBtn');
+      if (!b) return;
+      var subj = 'Deep Dive correction: ' + document.title;
+      var body = 'Page: ' + location.href + '\n\nWhat looks wrong:\n';
+      b.href = 'mailto:info@livabletelluride.org?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body);
+    })();
+  </script>
   </main>
 </body>
 </html>
