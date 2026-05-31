@@ -1567,7 +1567,11 @@
         LNAME: lastName,
       });
       if (digestFreq) params.set('MMERGE9', digestFreq);
-      if (includeNewsletter) params.set('group[7912]', '1');
+      // "Email Subscriptions" group category 7915 (created 2026-05-31, replacing
+      // the deleted "Topics of Interest" category 7912): Newsletter = 24641,
+      // Weekly Update = 24642. Mailchimp interest format is group[<catId>][<interestId>]=<interestId>.
+      if (includeNewsletter) params.set('group[7915][24641]', '24641');
+      if (digestFreq) params.set('group[7915][24642]', '24642');
       // JSONP — supply the callback name explicitly via `&c=` (the
       // function name window[cbName] must match). No `c=?` placeholder
       // in MC_POST, otherwise two `c=` params race and Mailchimp picks

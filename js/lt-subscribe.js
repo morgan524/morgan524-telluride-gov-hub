@@ -166,7 +166,10 @@
       'FNAME='  + encodeURIComponent(fname),
       'LNAME='  + encodeURIComponent(lname),
       'MMERGE9=weekly',
-      'group%5B7912%5D=1',
+      // "Email Subscriptions" category 7915: Newsletter=24641, Weekly Update=24642
+      // (replaced deleted "Topics of Interest" category 7912 on 2026-05-31).
+      'group%5B7915%5D%5B24641%5D=24641',
+      'group%5B7915%5D%5B24642%5D=24642',
       'c=' + encodeURIComponent(cb)
     ].join('&');
 
