@@ -154,7 +154,7 @@ const MANUAL_SUMMARIES = {
     "The agenda text for this Commission for Community Assistance, Arts & Special Events meeting is missing — only the portal navigation and meeting list appears.",
 
   "telluride|2026-06-03|Telluride Housing Authority Subcommittee - Jun 03 2026":
-    "The Jun 03 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The June 3 Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-06-01|Open Space Commission - Jun 01 2026":
     "Meeting scheduled for first Monday of the month · Commission reviews open space acquisitions and management · Advises Town Council on comprehensive plan elements",
@@ -172,7 +172,7 @@ const MANUAL_SUMMARIES = {
     "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -185,6 +185,18 @@ const MANUAL_SUMMARIES = {
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Magnificent mycology",
+    source: "Telluride Times",
+    date: "May 31, 2026",
+    firstSeen: "2026-05-31",
+    newsTopic: "education",
+    copy: "A Telluride elementary student's first-grade mushroom report sparked a lasting interest in mycology that's now taking him to state science fairs. His latest project tested how oyster mushrooms can clean petroleum from soil, finding that plants make the best partners for this natural pollution removal process. The kid's gone from learning to eat mushrooms safely to winning state awards for studying how fungi can help fix environmental problems.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_d2bcd352-e44d-4fac-ad58-391aac53ee0b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/58/758f20d6-231c-4e40-9061-c98267b9e950/6a1a94a423135.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Claude Lemieux's brain is being donated to Boston University's CTE Center, his family says",
     source: "Telluride Times",

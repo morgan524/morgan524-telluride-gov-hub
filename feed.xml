@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s news, upcoming Gov-Hub meetings, and events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 May 2026 08:41:26 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2026 13:27:00 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Fri, Jun 5] Wild West Fest Roundup Day</title>
@@ -238,7 +238,7 @@ The agenda text for this Commission for Community Assistance, Arts & Special Eve
       <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-06-03
 
-The Jun 03 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.]]></description>
+The June 3 Housing Authority Subcommittee agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -379,6 +379,16 @@ Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays f
       <media:content url="https://koto.org/wp-content/uploads/2026/04/gentle-yoga-kristen-1.png" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>Magnificent mycology</title>
+      <link>https://www.telluridenews.com/news/article_d2bcd352-e44d-4fac-ad58-391aac53ee0b.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_d2bcd352-e44d-4fac-ad58-391aac53ee0b.html</guid>
+      <pubDate>Sun, 31 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/58/758f20d6-231c-4e40-9061-c98267b9e950/6a1a94a423135.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />A Telluride elementary student's first-grade mushroom report sparked a lasting interest in mycology that's now taking him to state science fairs. His latest project tested how oyster mushrooms can clean petroleum from soil, finding that plants make the best partners for this natural pollution removal process. The kid's gone from learning to eat mushrooms safely to winning state awards for studying how fungi can help fix environmental problems.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/58/758f20d6-231c-4e40-9061-c98267b9e950/6a1a94a423135.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>education</category>
     </item>
     <item>
       <title>Claude Lemieux&apos;s brain is being donated to Boston University&apos;s CTE Center, his family says</title>
@@ -666,16 +676,6 @@ Head to the Telluride High School back parking lot on Sunday, May 31 from 12 p.m
       <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/fe/5fe07e55-c0c6-553d-a8ed-4a84aa4394cc/6a15708f94453.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Gabriel Landeskog is using AI-powered sensors in his skates to monitor his surgically repaired knee and prevent overexertion during training and games. The technology from Vancouver company Plantiga tracks his movement patterns and biomechanics, flagging potential issues before he feels them.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/fe/5fe07e55-c0c6-553d-a8ed-4a84aa4394cc/6a15708f94453.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Supreme Court won&apos;t intervene in discrimination suit led by Black ex-head coach Flores against NFL</title>
-      <link>https://www.telluridenews.com/news/state/article_15cfeabf-da1d-59af-b7db-1a98f8e909f3.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_15cfeabf-da1d-59af-b7db-1a98f8e909f3.html</guid>
-      <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/6f/66f49c03-5ba9-549d-8ed6-b7101ae68775/6a15ba1f0eba6.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The Supreme Court declined to hear the NFL's appeal of a discrimination lawsuit filed by former Dolphins coach Brian Flores and two other Black coaches alleging racist hiring practices. The decision means the case will proceed in lower courts rather than through NFL arbitration, with Flores and colleagues Steve Wilks and Ray Horton claiming they were denied fair opportunities for coaching positions.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/6f/66f49c03-5ba9-549d-8ed6-b7101ae68775/6a15ba1f0eba6.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>community</category>
     </item>
