@@ -500,6 +500,34 @@
     max-width: 760px;
     margin: 0 auto;
   }
+  .subsidy-calc {
+    margin-top: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fff;
+    padding: 1.25rem 1.5rem;
+  }
+  .subsidy-calc-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 0.6rem;
+  }
+  .subsidy-calc-eq {
+    font-family: var(--serif, Georgia, serif);
+    font-size: 1.05rem;
+    color: var(--text);
+    margin-bottom: 0.6rem;
+  }
+  .subsidy-calc-eq strong { color: var(--negative); white-space: nowrap; }
+  .subsidy-calc-note {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+  .subsidy-calc-note strong { color: var(--negative); }
   .debt-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.5rem 0; }
   .debt-table {
     width: 100%;
@@ -626,7 +654,7 @@
     margin: 1.5rem 0;
     border-radius: 6px;
     overflow: hidden;
-    height: 120px;
+    height: 240px;
   }
   .cov-bar {
     display: flex;
@@ -1103,7 +1131,7 @@
   <section class="exec-summary">
     <div class="section-title">Executive Summary</div>
     <p>Over the past decade, Telluride has pursued an ambitious affordable housing strategy financed through a combination of dedicated tax revenues and long-term debt. While these efforts have produced valuable housing assets, they have also created a growing portfolio of financial obligations that deserve careful public review.</p>
-    <p>The Town's total budget has increased from approximately $32 million in 2017 to more than $103 million in 2025. During that same period, the Affordable Housing Fund grew from roughly $1.5 million to over $11 million annually. Housing-related debt now exceeds $76 million, with roughly $36 million in future balloon payments due between 2032 and 2040 — the largest a $23 million lump sum on the VooDoo project in December 2032.</p>
+    <p>The Town's total budget has increased from approximately $32 million in 2017 to more than $103 million in 2025. During that same period, the Affordable Housing Fund grew from roughly $1.5 million to over $11 million annually. Housing-related debt now exceeds $81 million, with roughly $36 million in future balloon payments due between 2032 and 2040 — the largest a $23 million lump sum on the VooDoo project in December 2032.</p>
     <p>The central question is not whether affordable housing is important. It is whether the Town's current financing model remains sustainable under changing economic conditions.</p>
   </section>
 </div>
@@ -1170,12 +1198,12 @@
 <div class="container">
   <section class="debt-section">
     <div class="section-label">Housing Debt Portfolio</div>
-    <div class="section-title">$76M+ in Bonded Debt — and ~$36M in Balloon Payments</div>
-    <div class="section-intro">The Telluride Housing Authority has accumulated more than $76 million in bonded debt across five projects — none approved by public vote. Most projects cannot cover their own debt service from rental income alone.</div>
+    <div class="section-title">$81M+ in Bonded Debt — and ~$36M in Balloon Payments</div>
+    <div class="section-intro">The Telluride Housing Authority has accumulated more than $81 million in bonded debt across five projects — none approved by public vote. Most projects cannot cover their own debt service from rental income alone.</div>
 
     <div class="debt-hero-stats">
       <div class="debt-stat">
-        <div class="ds-number">$76M+</div>
+        <div class="ds-number">$81M+</div>
         <div class="ds-label">Total Bonded Debt</div>
       </div>
       <div class="debt-stat">
@@ -1187,8 +1215,8 @@
         <div class="ds-label">Portfolio NOI Coverage</div>
       </div>
       <div class="debt-stat">
-        <div class="ds-number warning">$814K</div>
-        <div class="ds-label">Annual Town Subsidy</div>
+        <div class="ds-number warning">~$1.1M</div>
+        <div class="ds-label">Required Annual Subsidy</div>
       </div>
     </div>
 
@@ -1211,7 +1239,7 @@
         <tr>
           <td><span class="project-name"><span class="project-dot" style="background:#2c5f8a"></span>Shandoka</span></td>
           <td>2021–25</td>
-          <td>$3,990,000 +<span title="COP Series 2024 (Building F Phase 1) and COP Series 2025 (Building F Phase 2, $8.47M capital outlay) were issued against the Shandoka Fund after the 2021 series, raising annual debt service from $401,464 to $966,958.">¹</span></td>
+          <td>$12,464,000 <span title="Includes the 2021 series ($3,990,000) and COP Series 2025 ($8,474,000, Building F Phase 2). COP Series 2024 (Building F Phase 1) added further debt (annual service $213,569), but its principal is not separately published — so the portfolio total is a floor. Together these raised Shandoka's annual debt service from $401,464 to $966,958.">¹</span></td>
           <td>$966,958</td>
           <td>$2,185,957</td>
           <td>$901,385</td>
@@ -1268,7 +1296,7 @@
         <tr>
           <td>Total</td>
           <td></td>
-          <td>$73,197,000</td>
+          <td>$81,671,000 <span title="Floor — excludes COP Series 2024 principal, which is not separately published.">¹</span></td>
           <td>~$4,261,649</td>
           <td>~$5,216,626</td>
           <td>~$2,562,221 <span title="Four analyzed projects; Sunnyside excluded (no operating-cost data).">³</span></td>
@@ -1289,6 +1317,12 @@
       <div class="subsidy-label">Total Annual <span style="font-size:1.18em;font-weight:800;">Amortized</span> Estimated Subsidies Required by the Town <sup>⁶</sup></div>
       <div class="subsidy-number">~$5.95 Million / year</div>
     </div>
+
+    <div class="subsidy-calc">
+      <div class="subsidy-calc-title">Net Operating Income Debt Service Coverage Ratio (Portfolio)</div>
+      <div class="subsidy-calc-eq">$2,562,221 net operating income &divide; $3,669,849 annual debt service = <strong>0.70&times; (70%)</strong></div>
+      <div class="subsidy-calc-note">Across the four analyzed THA projects, net operating income covers only about <strong>70%</strong> of annual debt service. The remaining <strong>~30% ($1,107,628 / year)</strong> is the required annual subsidy by the Town.</div>
+    </div>
   </section>
 </div>
 
@@ -1296,7 +1330,7 @@
 <div class="container">
   <section class="debt-section">
     <div class="section-label">Balloon Payment Timeline</div>
-    <div class="section-title">~$36 Million in Concentrated Risk</div>
+    <div class="section-title">~$36 Million in Balloon Payments with No Reserve</div>
     <div class="section-intro">Four projects carry balloon payments — lump sums due at maturity that must be refinanced or paid in full. They cluster between 2032 and 2040. The largest — VooDoo's $23M, due in 2032 — exceeds the project's total expected rental income over its remaining bond life.</div>
 
     <div class="balloon-timeline" id="balloonTimeline"></div>
@@ -1324,7 +1358,7 @@
     <div class="risk-grid">
       <div class="risk-card critical">
         <span class="risk-badge critical">CRITICAL</span>
-        <h3>$76M+ in Bonds Without Voter Approval</h3>
+        <h3>$81M+ in Bonds Without Voter Approval</h3>
         <p>None of the five THA bond issuances were submitted to voters. The Town Charter states all public debt must be voter-approved. Conduit structures — including routing CanyonLands through a Wisconsin authority — could raise serious questions about whether TABOR and local charter requirements were circumvented.</p>
       </div>
 
@@ -1343,7 +1377,7 @@
       <div class="risk-card critical">
         <span class="risk-badge critical">CRITICAL</span>
         <h3>Structural Revenue Deficits May Violate §29-4-214</h3>
-        <p>Colorado law prohibits housing authority bonds from being "payable out of any funds other than those of the authority." Town tax revenue subsidies of $814K+/year and the $11.1M Shandoka Fund may violate this prohibition in substance — a question that poses real legal and financial risk if challenged.</p>
+        <p>Colorado law prohibits housing authority bonds from being "payable out of any funds other than those of the authority." Town tax-revenue subsidies of ~$1.1M/year and the $11.1M Shandoka Fund may violate this prohibition in substance — a question that poses real legal and financial risk if challenged.</p>
       </div>
 
       <div class="risk-card high">
@@ -1360,8 +1394,8 @@
 
       <div class="risk-card high">
         <span class="risk-badge high">HIGH</span>
-        <h3>$814K Annual Subsidy Acknowledged in Budget</h3>
-        <p>THA's own 2025 budget explicitly includes "moral obligation" subsidy line items: $219K for VooDoo, $218K for Virginia Placer, $377K for Sunnyside. The Finance Director's October 2024 memo simultaneously states enterprise funds should be "entirely or predominately self-supporting" — an apparent tension that could undermine the legal basis for THA's enterprise status.</p>
+        <h3>~$1.1M True Annual Subsidy Required</h3>
+        <p>Net operating income covers only ~70% of debt service, so the Town must inject roughly $1.1M/year (debt service plus operating costs, minus tenant rent) across the four analyzed projects. The 2025 budget explicitly books only part of this as "moral obligation" line items ($219K for VooDoo, $218K for Virginia Placer, $377K for Sunnyside), even as the Finance Director's October 2024 memo states enterprise funds should be "entirely or predominately self-supporting" — an apparent tension that could undermine the legal basis for THA's enterprise status.</p>
       </div>
 
       <div class="risk-card high">
@@ -1418,7 +1452,7 @@
         </div>
         <div class="test-row">
           <div class="test-label-inner">Actual</div>
-          <div class="test-value">$814K subsidy/yr</div>
+          <div class="test-value">~$1.1M subsidy/yr</div>
         </div>
         <div class="test-row">
           <div class="test-label-inner">Result</div>
@@ -1445,7 +1479,7 @@
     </div>
 
     <div class="annotation legal">
-      <strong>Legal implications if THA loses enterprise status:</strong> (a) all future debt requires voter approval; (b) any taxpayer may sue for restitution at 10% annual interest for 4 prior fiscal years under C.R.S. §29-4-207; (c) bond covenants requiring enterprise status could trigger technical default; and (d) the Town's own Charter mandate that "all public debt must be voter approved" would retroactively apply to all $76M+ in outstanding bonds.
+      <strong>Legal implications if THA loses enterprise status:</strong> (a) all future debt requires voter approval; (b) any taxpayer may sue for restitution at 10% annual interest for 4 prior fiscal years under C.R.S. §29-4-207; (c) bond covenants requiring enterprise status could trigger technical default; and (d) the Town's own Charter mandate that "all public debt must be voter approved" would retroactively apply to all $81M+ in outstanding bonds.
     </div>
   </section>
 </div>
@@ -1483,12 +1517,12 @@
         <div class="cascade-circle">4</div>
         <h3>Annual Appropriation Defense Fails</h3>
         <div class="cascade-statute">In re Interrogatories on H.B. 99-1325</div>
-        <p>Non-appropriation would trigger default on $76M in bonds and loss of public housing. The Colorado Supreme Court requires courts to examine the "entire obligation as a whole" — economic compulsion is not genuine discretion.</p>
+        <p>Non-appropriation would trigger default on $81M in bonds and loss of public housing. The Colorado Supreme Court requires courts to examine the "entire obligation as a whole" — economic compulsion is not genuine discretion.</p>
       </div>
 
       <div class="cascade-step">
         <div class="cascade-circle">5</div>
-        <h3>All $76M+ Bonds Issued Without Required Voter Approval</h3>
+        <h3>All $81M+ Bonds Issued Without Required Voter Approval</h3>
         <div class="cascade-statute">Colo. Const. art. X, §20</div>
         <p>TABOR's voter-approval mandate applies. No THA bond has ever received a public vote. The Town Charter independently requires voter approval for all public debt.</p>
       </div>
@@ -1577,12 +1611,13 @@
   <section class="debt-section" style="margin-bottom:2rem;">
     <div class="section-label">Notes &amp; Sources</div>
     <div style="font-size:0.82rem;color:var(--text-secondary);line-height:1.65;max-width:820px;">
-      <p style="margin:0 0 0.6rem;"><strong>¹</strong> Figures reflect a May 2026 review based solely on primary sources. VooDoo bond terms are from the signed bond certificates ($22.065M total; the Town budget book debt schedule shows $21.37M). CanyonLands debt service and rent are estimates: debt service assumes the Town's stated $10M for-sale buydown, while the review finds AMI-capped for-sale proceeds are likely closer to $6.6M (which would leave ~$19.9M outstanding and raise debt service to ~$1.2M/yr). Shandoka now carries three bond series (THA 2021 + COP 2024 + COP 2025), raising annual debt service from $401,464 to $966,958.</p>
+      <p style="margin:0 0 0.6rem;"><strong>¹</strong> Figures reflect a May 2026 review based solely on primary sources. VooDoo bond terms are from the signed bond certificates ($22.065M total; the Town budget book debt schedule shows $21.37M). CanyonLands debt service and rent are estimates: debt service assumes the Town's stated $10M for-sale buydown, while the review finds AMI-capped for-sale proceeds are likely closer to $6.6M (which would leave ~$19.9M outstanding and raise debt service to ~$1.2M/yr). Shandoka now carries three bond series (THA 2021 + COP 2024 + COP 2025), raising annual debt service from $401,464 to $966,958. Shandoka's principal shown here ($12,464,000) includes the 2021 series ($3.99M) and COP 2025 ($8.47M); COP Series 2024's principal is not separately published (only its $213,569 annual debt service), so the ~$81.7M portfolio total is a floor — actual bonded debt is somewhat higher.</p>
       <p style="margin:0 0 0.6rem;"><strong>²</strong> Sunnyside was not re-analyzed in the May 2026 review; its figures are prior estimates and no operating-cost figure was published, so its net operating income is not shown. The review confirms only Sunnyside's $377,000 annual moral-obligation subsidy.</p>
       <p style="margin:0 0 0.6rem;"><strong>³</strong> Net operating income (tenant rent minus cash operating expenses) and its portfolio total exclude Sunnyside, for which no operating-cost figure is available. The 0.70x portfolio NOI coverage compares the four analyzed projects' ~$2.56M combined net operating income to their ~$3.67M combined annual debt service.</p>
       <p style="margin:0 0 0.6rem;"><strong>⁴ NOI DSCR below 1.0x = cannot self-fund.</strong> Coverage shown is the Net Operating Income Debt Service Coverage Ratio — tenant rent minus cash operating costs, divided by annual debt service (the metric revenue-bond rating agencies use). On this basis, all four projects examined in the May 2026 primary-source review fall below 1.0x: rent does not cover operating costs plus debt service. Per that review, the true annual subsidy (total annual cost minus tenant rent) is roughly $452K for VooDoo, $527K for CanyonLands (est.), $66K for Shandoka, and $63K for Virginia Placer — about $1.1M/year combined, on top of the disclosed moral-obligation payments. The gap is filled by Town tax revenues — a structural dependency that grows riskier in an economic downturn.</p>
       <p style="margin:0 0 0.6rem;"><strong>⁵ Non-amortized subsidy (~$1,107,628/yr).</strong> The gap between each project's tenant rent and its full annual cost (debt service + operating expenses), summed across the four analyzed projects: VooDoo ~$452K · CanyonLands ~$527K (est.) · Shandoka ~$66K · Virginia Placer ~$63K. This is the minimum recurring cash the Town must inject each year to keep these projects current, on top of the disclosed moral-obligation payments. It reflects interest-only debt service and does not set aside any of the balloon principal.</p>
       <p style="margin:0 0 0.6rem;"><strong>⁶ Amortized subsidy (~$5.95M/yr).</strong> Adds the balloon principal — set aside over the years until each balloon comes due — to the non-amortized operating gap above. Balloon set-asides: VooDoo $23,045,864 ÷ 6 yrs (2032) ≈ $3,840,977/yr; Virginia Placer $3,040,000 ÷ 10 (2036) ≈ $304,000; Shandoka $3,620,000 ÷ 14 (2040) ≈ $258,571; Sunnyside $6,170,000 ÷ 14 (2040) ≈ $440,714 — about $4.84M/yr, plus the $1.11M operating gap ≈ $5.95M/yr. Only VooDoo's annualized figure (~$3.84M/yr) appears in the May 2026 review; the other three apply the same balloon ÷ years-to-maturity method.</p>
+      <p style="margin:0 0 0.6rem;"><strong>⁷ Net Operating Income Debt Service Coverage Ratio (Portfolio).</strong> $2,562,221 net operating income ÷ $3,669,849 annual debt service = 0.70× (70%). Across the four analyzed THA projects, net operating income covers only about 70% of annual debt service. The remaining ~30% ($1,107,628 / year) is the required annual subsidy by the Town.</p>
       <p style="margin:0;"><strong>Sources:</strong> Town of Telluride 2025 Budget Book and Oct. 9, 2025 Town Council budget packet (<a href="https://www.telluride.gov/122/Budget-Financial-Statements" target="_blank" rel="noopener">telluride.gov</a>); signed VooDoo bond certificates (Series 2022A, 2022B, 2023); Nov. 19, 2024 CanyonLands/Tower House bond memorandum; THA audited financial statements (FY2023–2024); and actual FY2025 VooDoo rental income reported by <em>The Colorado Sun</em> (April 19, 2026).</p>
     </div>
   </section>
@@ -1929,8 +1964,8 @@ function renderCoverage() {
   const maxVal = Math.max(...coverageData.map(d => Math.max(d.revenue, d.debtService)));
 
   coverageData.forEach(d => {
-    const revH = (d.revenue / maxVal) * 75;
-    const dsH = (d.debtService / maxVal) * 75;
+    const revH = (d.revenue / maxVal) * 150;
+    const dsH = (d.debtService / maxVal) * 150;
     const ratioColor = d.ratio >= 1.0 ? 'var(--positive)' : 'var(--negative)';
 
     const bar = document.createElement('div');
