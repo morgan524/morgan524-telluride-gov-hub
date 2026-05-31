@@ -604,11 +604,14 @@
     font-weight: 700;
     border-top: 2px solid var(--border);
     padding: 0.7rem 0.8rem;
+    vertical-align: middle;
+    white-space: nowrap;
   }
   .debt-table tfoot td:not(:first-child) {
     text-align: right;
     font-family: var(--serif);
   }
+  .debt-table tfoot td sup { font-weight: 600; }
 
   /* Balloon timeline */
   .balloon-timeline {
@@ -1243,8 +1246,8 @@
           <th>Bond Year</th>
           <th>Principal</th>
           <th>Annual Debt Service</th>
-          <th>Rent Revenue</th>
           <th title="Adjusted revenue: tenant rent minus cash operating expenses — the cash actually available to service debt.">Net Op. Income</th>
+          <th title="The annual subsidy each project requires: annual debt service minus net operating income — the cost the Town must cover beyond what rent and operations provide.">Net Subsidized Cost</th>
           <th>NOI DSCR <sup>⁴</sup></th>
           <th>Balloon Payment</th>
           <th>Balloon Year</th>
@@ -1256,8 +1259,8 @@
           <td>2021–25</td>
           <td>$12,464,000 <span title="Includes the 2021 series ($3,990,000) and COP Series 2025 ($8,474,000, Building F Phase 2). COP Series 2024 (Building F Phase 1) added further debt (annual service $213,569), but its principal is not separately published — so the portfolio total is a floor. Together these raised Shandoka's annual debt service from $401,464 to $966,958.">¹</span></td>
           <td>$966,958</td>
-          <td>$2,185,957</td>
           <td>$901,385</td>
+          <td>$65,573</td>
           <td><span class="coverage-bad">0.93x</span></td>
           <td>$3,620,000</td>
           <td>~2040</td>
@@ -1267,8 +1270,8 @@
           <td>2017</td>
           <td>$8,602,000</td>
           <td>$518,151</td>
-          <td>$706,221</td>
           <td>$455,486</td>
+          <td>$62,665</td>
           <td><span class="coverage-bad">0.88x</span></td>
           <td>$3,040,000</td>
           <td>2036</td>
@@ -1278,9 +1281,9 @@
           <td>2021</td>
           <td>$11,965,000</td>
           <td>$591,800</td>
-          <td>$685,000</td>
           <td>—<span title="No operating-cost figure was published for Sunnyside in the May 2026 review, so its net operating income cannot be derived.">²</span></td>
-          <td><span class="coverage-bad">0.50x</span><span title="Sunnyside was not re-analyzed in the May 2026 primary-source review; figures are prior estimates. The review confirms only Sunnyside's $377,000 annual moral-obligation subsidy.">²</span></td>
+          <td>—<span title="No operating-cost figure was published for Sunnyside, so its net subsidized cost cannot be derived. The review confirms a $377,000 annual moral-obligation subsidy.">²</span></td>
+          <td><span class="coverage-bad">0.50x</span><span title="Sunnyside was not re-analyzed in the May 2026 primary-source review; figures are prior estimates.">²</span></td>
           <td>$6,170,000</td>
           <td>2040</td>
         </tr>
@@ -1289,8 +1292,8 @@
           <td>2022-23</td>
           <td>$22,065,000 <span title="Signed bond certificates (Series 2022A $6.07M @ 4.690%, 2022B $2.245M @ 5.860%, 2023 $13.75M @ 5.520%, all maturing Dec. 1, 2032) total $22,065,000. The Town's budget book debt schedule shows $21,370,000; the report treats the certificates as authoritative.">¹</span></td>
           <td>$1,190,240</td>
-          <td>$872,000</td>
           <td>$737,902</td>
+          <td>$452,338</td>
           <td><span class="coverage-bad">0.62x</span></td>
           <td>$23,045,864</td>
           <td>2032</td>
@@ -1300,8 +1303,8 @@
           <td>2024</td>
           <td>$26,575,000</td>
           <td>~$994,500 <span title="Estimate. Debt service assumes the Town's stated $10M for-sale buydown reduces principal to $16.575M at 6%. The report finds AMI-capped for-sale proceeds are likely closer to $6.6M, which would leave ~$19.9M outstanding and raise debt service to ~$1.2M/yr.">¹</span></td>
-          <td>~$767,448 <span title="Estimate. Projected rent for the 28 rental units from the CanyonLands working spreadsheet at an average 120% AMI (2022 AMI basis); 2024 AMI levels would raise this to roughly $840K–$856K.">¹</span></td>
           <td>~$467,448 <span title="Estimate. Projected rent ~$767,448 minus estimated cash operating expenses of ~$300,000.">¹</span></td>
+          <td>~$527,052 <span title="Estimate. Annual debt service (~$994,500) minus net operating income (~$467,448).">¹</span></td>
           <td><span class="coverage-bad">~0.47x</span></td>
           <td>TBD</td>
           <td>TBD</td>
@@ -1311,10 +1314,10 @@
         <tr>
           <td>Total</td>
           <td></td>
-          <td>$81,671,000 <span title="Floor — excludes COP Series 2024 principal, which is not separately published.">¹</span></td>
+          <td>$81,671,000&nbsp;<sup title="Floor — excludes COP Series 2024 principal, which is not separately published.">¹</sup></td>
           <td>~$4,261,649</td>
-          <td>~$5,216,626</td>
-          <td>~$2,562,221 <span title="Four analyzed projects; Sunnyside excluded (no operating-cost data).">³</span></td>
+          <td>~$2,562,221&nbsp;<sup title="Four analyzed projects; Sunnyside excluded (no operating-cost data).">³</sup></td>
+          <td>~$1,107,628&nbsp;<sup title="Four analyzed projects; Sunnyside excluded (no operating-cost data).">³</sup></td>
           <td></td>
           <td>$35,875,864</td>
           <td></td>
