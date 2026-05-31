@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s news, upcoming Gov-Hub meetings, and events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 May 2026 13:27:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2026 19:10:11 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Fri, Jun 5] Wild West Fest Roundup Day</title>
@@ -19,6 +19,20 @@
       <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2026/05/Wild-West-Fest-Roundup-Day-Image.png" medium="image" />
       <category>Community Event</category>
       <category>Sheridan Opera House</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 5] Hunter Archer</title>
+      <link>https://www.alibitelluride.com/calendar#eca-event=hunter-archer</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/hunter%20archer%7C2026-06-05</guid>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://ucarecdn.com/c7420c42-86af-4ec6-a525-64326df630ec/-/crop/3180x1588/0,756/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
+📍 The Alibi • Telluride, CO
+🕒 9:00 PM
+
+Hunter Archer & The Quiver are Country/Bluegrass band hailing from Steamboat S...]]></description>
+      <media:content url="https://ucarecdn.com/c7420c42-86af-4ec6-a525-64326df630ec/-/crop/3180x1588/0,756/-/preview/" medium="image" />
+      <category>Community Event</category>
+      <category>The Alibi</category>
     </item>
     <item>
       <title>[Fri, Jun 5] Music on the Green Summer Concert Series</title>
@@ -238,7 +252,7 @@ The agenda text for this Commission for Community Assistance, Arts & Special Eve
       <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-06-03
 
-The June 3 Housing Authority Subcommittee agenda hasn't been posted yet.]]></description>
+The June 3, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -366,19 +380,6 @@ The Sheridan Arts Foundation invites you to be a part of one of the most meaning
       <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg" medium="image" />
       <category>Community Event</category>
       <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Sun, May 31] Gentle Yoga with Kristin Milord</title>
-      <link>https://koto.org/event/gentle-yoga-with-kristin-milord-2/2026-05-31/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/gentle%20yoga%20with%20kristin%7C2026-05-31</guid>
-      <pubDate>Sun, 31 May 2026 17:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/04/gentle-yoga-kristen-1.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Wilkinson Public Library, Telluride
-
-Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class is free, but donations to support the instructor are welcome.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/04/gentle-yoga-kristen-1.png" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>Magnificent mycology</title>
