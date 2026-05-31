@@ -356,7 +356,7 @@
         html += `<div class="section">
           <div class="section-label">Timeline</div>
           <div class="timeline">`;
-        issue.timeline.forEach(t => {
+        issue.timeline.slice().reverse().forEach(t => {
           html += `<div class="tl-item${t.future?' future':''}">
             <div class="tl-date">${esc(t.date||'')}</div>
             <div style="display:flex;gap:0;">
