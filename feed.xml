@@ -6,72 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s news, upcoming Gov-Hub meetings, and events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jun 2026 11:23:58 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2026 17:29:42 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Fri, Jun 5] Wild West Fest Roundup Day</title>
-      <link>https://sheridanoperahouse.com/events/wild-west-fest-roundup-day/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/wild%20west%20fest%20roundup%7C2026-06-05</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2026/05/Wild-West-Fest-Roundup-Day-Image.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
-📍 Sheridan Opera House • Telluride, CO
-]]></description>
-      <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2026/05/Wild-West-Fest-Roundup-Day-Image.png" medium="image" />
-      <category>Community Event</category>
-      <category>Sheridan Opera House</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 5] Hunter Archer</title>
-      <link>https://www.alibitelluride.com/calendar#eca-event=hunter-archer</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/hunter%20archer%7C2026-06-05</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://ucarecdn.com/c7420c42-86af-4ec6-a525-64326df630ec/-/crop/3180x1588/0,756/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
-📍 The Alibi • Telluride, CO
-🕒 9:00 PM
-
-Hunter Archer & The Quiver are Country/Bluegrass band hailing from Steamboat S...]]></description>
-      <media:content url="https://ucarecdn.com/c7420c42-86af-4ec6-a525-64326df630ec/-/crop/3180x1588/0,756/-/preview/" medium="image" />
-      <category>Community Event</category>
-      <category>The Alibi</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 5] Music on the Green Summer Concert Series</title>
-      <link>https://www.telluride.com/event/music-on-the-green-summer-concert-series/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/music%20on%20the%20green%7C2026-06-05</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/44414/16c6ff81-d87c-823e-1bd2-8a66b859eb9d.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-The Telluride Mountain Village Owners Association (TMVOA) and Beyond the Groove Productions Present Music on the Green …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/44414/16c6ff81-d87c-823e-1bd2-8a66b859eb9d.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 5] Telluride Farmers&amp;#039; Market</title>
-      <link>https://www.telluride.com/event/telluride-farmers-market/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20farmers%20and%20039%7C2026-06-05</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/44554/img_0071.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-The Telluride Farmers' Market provides the highest quality produce, animal products, prepared food and more to …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/44554/img_0071.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Thu, Jun 4] Art Walk Telluride</title>
-      <link>https://koto.org/event/art-walk-telluride/2026-06-04/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/art%20walk%20telluride%7C2026-06-04</guid>
-      <pubDate>Thu, 04 Jun 2026 23:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-
-Join us the first Thursday of every month for Telluride's Art Walk. It will be an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists. From 5–7 pm, participating venues will open their doors, showcasing new collections and inviting art lovers to explore the vibrant gallery scene. Find what's new on www.telluridearts.org Note: Special Edition Art Walk May 21st.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
     <item>
       <title>[Thu, Jun 4] Pilates for All Bodies with Laura</title>
       <link>https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-06-04/</link>
@@ -201,6 +137,43 @@ In an otherworldly performance, author and explorer Craig Childs brings a form o
       <category>Telluride.com</category>
     </item>
     <item>
+      <title>[Wed, Jun 3] Plant Bingo!</title>
+      <link>https://koto.org/event/plant-bingo/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/plant%20bingo%7C2026-06-03</guid>
+      <pubDate>Wed, 03 Jun 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/plant.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Bring a little green into your routine with Plant Bingo! Play a few lively rounds of bingo for the chance to win easy-care houseplants, cuttings, and fun plant themed prizes. Whether you're a seasoned plant lover or just getting started, this relaxed social evening is a great way to grow your collection, meet some fellow plant people and pick pick up a few tips along the way. Free and open to the public.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/05/plant.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Wed, Jun 3] Colorado Secretary of State candidate Amanda Gonzales meet and greet in Telluride</title>
+      <link>https://koto.org/event/colorado-secretary-of-state-candidate-amanda-gonzales-meet-and-greet-in-telluride/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/colorado%20secretary%20of%20state%7C2026-06-03</guid>
+      <pubDate>Wed, 03 Jun 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+
+The public is invited to meet Colorado Secretary of State candidate Amanda Gonzales, who will be at Society Telluride on Main St on Wednesday, June 3rd from 5:30-7:00pm. This event is open to all.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Wed, Jun 3] Mahjongg for Independent Players</title>
+      <link>https://koto.org/event/mahjongg-for-independent-players-4/2026-06-03/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/mahjongg%20for%20independent%20players%7C2026-06-03</guid>
+      <pubDate>Wed, 03 Jun 2026 19:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/mahj.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/05/mahj.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
       <title>[Wed, Jun 3] Bardic Trails Online Poetry Night</title>
       <link>https://koto.org/event/bardic-trails-online-poetry-night-3/2026-06-02/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/bardic%20trails%20online%20poetry%7C2026-06-03</guid>
@@ -252,7 +225,7 @@ The agenda text for this Commission for Community Assistance, Arts & Special Eve
       <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-06-03
 
-The June 3, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.]]></description>
+The June 3 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -292,6 +265,32 @@ Head to the Wilkinson Public Library on the first Wednesday of the month this su
       <media:content url="https://www.telluride.com/site/assets/files/62443/sweet_sounds_5.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Tue, Jun 2] Make your own Hula Hoop for Adults</title>
+      <link>https://koto.org/event/make-your-own-hula-hoop-for-adults/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/make%20your%20own%20hula%7C2026-06-02</guid>
+      <pubDate>Tue, 02 Jun 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/hula.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Get festival-ready and create your own custom hula hoop with Deb Gesmundo on the Library Patio! All supplies are provided, and no experience is necessary. This free workshop is for adults only and is limited to 15 participants. Registration is required at telluridelibrary.org.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/05/hula.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Tue, Jun 2] Future Ready: Investing Basics with Alpine Bank</title>
+      <link>https://koto.org/event/future-ready-investing-basics-with-alpine-bank/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/future%20ready%20investing%20basics%7C2026-06-02</guid>
+      <pubDate>Tue, 02 Jun 2026 18:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/money-scaled.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Join us for an engaging conversation on the fundamentals of investing and strategies for building long-term wealth, presented in partnership with Alpine Bank. Featured speakers include Dylan Brooks, CFP®, of 1st and Main Investment Advisors; Jennifer Hawley of Alpine Bank Wealth Management; and Jon Martin of Edward Jones.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/05/money-scaled.png" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
     <item>
       <title>[Tue, Jun 2] Historic Walking Tour</title>
@@ -372,16 +371,6 @@ Take a historic tour of Telluride on foot! These historic walking tours are led 
       <category>Wilkinson Public Library</category>
     </item>
     <item>
-      <title>Let there be baseball</title>
-      <link>https://www.telluridenews.com/sports/article_604e7808-2cac-43cd-980d-cffc79b88aee.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/sports/article_604e7808-2cac-43cd-980d-cffc79b88aee.html</guid>
-      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/3a/33ac04dc-472c-4521-91c6-1622585fdb71/6a18c92358e80.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Ouray County Baseball has launched a JV team through Ridgway School District with players from three towns, and is now raising $3 million for a new CHSAA-regulation field after the town approved their plans. They're hosting a fundraising event June 12 at Ridgway Athletic Park, complete with home run derby and dunk tank, hoping to build what could become a regional draw for Southwest Colorado baseball.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/3a/33ac04dc-472c-4521-91c6-1622585fdb71/6a18c92358e80.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>housing</category>
-    </item>
-    <item>
       <title>Colorado elections clerk set to be released from prison Monday based on her sentence commutation</title>
       <link>https://www.telluridenews.com/news/state/article_931dd54d-a664-51d4-9de8-37dc88e1923f.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_931dd54d-a664-51d4-9de8-37dc88e1923f.html</guid>
@@ -390,6 +379,26 @@ Take a historic tour of Telluride on foot! These historic walking tours are led 
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>government</category>
+    </item>
+    <item>
+      <title>Former Colorado elections clerk Tina Peters released from prison after scheme to copy her county&apos;s election system</title>
+      <link>https://www.telluridenews.com/news/state/article_282a700e-c727-5f63-bd41-46344645257f.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_282a700e-c727-5f63-bd41-46344645257f.html</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Former Colorado elections clerk Tina Peters released from prison after scheme to copy her county's election system.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>government</category>
+    </item>
+    <item>
+      <title>Let there be baseball</title>
+      <link>https://www.telluridenews.com/sports/article_604e7808-2cac-43cd-980d-cffc79b88aee.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/sports/article_604e7808-2cac-43cd-980d-cffc79b88aee.html</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/3a/33ac04dc-472c-4521-91c6-1622585fdb71/6a18c92358e80.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Ouray County Baseball has launched a JV team through Ridgway School District with players from three towns, and is now raising $3 million for a new CHSAA-regulation field after the town approved their plans. They're hosting a fundraising event June 12 at Ridgway Athletic Park, complete with home run derby and dunk tank, hoping to build what could become a regional draw for Southwest Colorado baseball.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/3a/33ac04dc-472c-4521-91c6-1622585fdb71/6a18c92358e80.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>housing</category>
     </item>
     <item>
       <title>Keeping your best friend safe</title>
@@ -669,16 +678,6 @@ The Sheridan Arts Foundation invites you to be a part of one of the most meaning
       <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/3a/a3a31761-8d88-4191-8917-c18600aaa617/6a17011608bd7.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Mountainfilm wrapped up another year showcasing documentaries focused on environmental protection, social justice, and personal resilience. Films featured everything from women inmates helping restore endangered butterflies in Oregon prisons to wildfire survivors in California, plus local wildlife rehabilitator Lissa Margetts in "The Mountain Ark."]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/3a/a3a31761-8d88-4191-8917-c18600aaa617/6a17011608bd7.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Vaulting to success — and fun</title>
-      <link>https://www.telluridenews.com/sports/article_d89d2da5-9ccd-49c8-bae9-66b744d58c4f.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/sports/article_d89d2da5-9ccd-49c8-bae9-66b744d58c4f.html</guid>
-      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/34/434e7b74-b0b7-41c3-ba73-05a9b9fa0810/6a1535cb82c0a.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Local gymnasts had a strong showing at state and regional meets this year. Several Telluride Gymnastics team members placed in top 10 finishes, with highlights including Abigail Mann taking third on vault at state and first at regionals, and multiple Gold-level athletes earning fifth-place all-around titles.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/34/434e7b74-b0b7-41c3-ba73-05a9b9fa0810/6a1535cb82c0a.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>community</category>
     </item>

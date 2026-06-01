@@ -154,7 +154,7 @@ const MANUAL_SUMMARIES = {
     "The agenda text for this Commission for Community Assistance, Arts & Special Events meeting is missing — only the portal navigation and meeting list appears.",
 
   "telluride|2026-06-03|Telluride Housing Authority Subcommittee - Jun 03 2026":
-    "The June 3, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The June 3 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-06-01|Open Space Commission - Jun 01 2026":
     "Meeting scheduled for first Monday of the month · Commission reviews open space acquisitions and management · Advises Town Council on comprehensive plan elements",
@@ -172,7 +172,7 @@ const MANUAL_SUMMARIES = {
     "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
+    "The June 25 agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -187,31 +187,19 @@ const MANUAL_SUMMARIES = {
     "The July 1st Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The Jul 01 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
     "The July 1 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The July 1, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
-    "The July 1st San Miguel County commissioners agenda hasn't been posted yet."
+    "The July 1 Board of County Commissioners agenda hasn't been posted yet."
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
-  {
-    title: "Let there be baseball",
-    source: "Telluride Times",
-    date: "June 1, 2026",
-    firstSeen: "2026-06-01",
-    newsTopic: "housing",
-    copy: "Ouray County Baseball has launched a JV team through Ridgway School District with players from three towns, and is now raising $3 million for a new CHSAA-regulation field after the town approved their plans. They're hosting a fundraising event June 12 at Ridgway Athletic Park, complete with home run derby and dunk tank, hoping to build what could become a regional draw for Southwest Colorado baseball.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_604e7808-2cac-43cd-980d-cffc79b88aee.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/3a/33ac04dc-472c-4521-91c6-1622585fdb71/6a18c92358e80.image.jpg",
-    imgHiRes: true
-  },
   {
     title: "Colorado elections clerk set to be released from prison Monday based on her sentence commutation",
     source: "Telluride Times",
@@ -222,6 +210,30 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_931dd54d-a664-51d4-9de8-37dc88e1923f.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Former Colorado elections clerk Tina Peters released from prison after scheme to copy her county's election system",
+    source: "Telluride Times",
+    date: "June 1, 2026",
+    firstSeen: "2026-06-01",
+    newsTopic: "government",
+    copy: "Former Colorado elections clerk Tina Peters released from prison after scheme to copy her county's election system.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/state/article_282a700e-c727-5f63-bd41-46344645257f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Let there be baseball",
+    source: "Telluride Times",
+    date: "June 1, 2026",
+    firstSeen: "2026-06-01",
+    newsTopic: "housing",
+    copy: "Ouray County Baseball has launched a JV team through Ridgway School District with players from three towns, and is now raising $3 million for a new CHSAA-regulation field after the town approved their plans. They're hosting a fundraising event June 12 at Ridgway Athletic Park, complete with home run derby and dunk tank, hoping to build what could become a regional draw for Southwest Colorado baseball.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_604e7808-2cac-43cd-980d-cffc79b88aee.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/3a/33ac04dc-472c-4521-91c6-1622585fdb71/6a18c92358e80.image.jpg",
     imgHiRes: true
   },
   {
@@ -1650,6 +1662,39 @@ const MUSIC_ON_THE_GREEN = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
+    title: "Wildfire Preparedness",
+    link: "https://koto.org/event/wildfire-preparedness-2/",
+    description: "Join San Miguel County and the Western Region Wildfire Council and Telluride Fire Protection District for a presentation on how to prepare for a wildfire and what to do if one arrives. There will also be information about mitigation resources for property owners.",
+    pubDate: "2026-06-01T19:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/wild.jpg"
+  },
+  {
+    title: "Future Ready: Investing Basics with Alpine Bank",
+    link: "https://koto.org/event/future-ready-investing-basics-with-alpine-bank/",
+    description: "Join us for an engaging conversation on the fundamentals of investing and strategies for building long-term wealth, presented in partnership with Alpine Bank. Featured speakers include Dylan Brooks, CFP®, of 1st and Main Investment Advisors; Jennifer Hawley of Alpine Bank Wealth Management; and Jon Martin of Edward Jones.",
+    pubDate: "2026-06-02T18:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/money-scaled.png"
+  },
+  {
+    title: "Make your own Hula Hoop for Adults",
+    link: "https://koto.org/event/make-your-own-hula-hoop-for-adults/",
+    description: "Get festival-ready and create your own custom hula hoop with Deb Gesmundo on the Library Patio! All supplies are provided, and no experience is necessary. This free workshop is for adults only and is limited to 15 participants. Registration is required at telluridelibrary.org.",
+    pubDate: "2026-06-02T23:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/hula.jpg"
+  },
+  {
     title: "Bardic Trails Online Poetry Night",
     link: "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-06-02/",
     description: "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit to get the zoom link each month, Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of California Feb. …",
@@ -1659,6 +1704,39 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg"
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-06-03/",
+    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-06-03T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
+  },
+  {
+    title: "Plant Bingo!",
+    link: "https://koto.org/event/plant-bingo/",
+    description: "Bring a little green into your routine with Plant Bingo! Play a few lively rounds of bingo for the chance to win easy-care houseplants, cuttings, and fun plant themed prizes. Whether you're a seasoned plant lover or just getting started, this relaxed social evening is a great way to grow your collection, meet some fellow plant people and pick pick up a few tips along the way. Free and open to the public.",
+    pubDate: "2026-06-03T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/plant.jpg"
+  },
+  {
+    title: "Colorado Secretary of State candidate Amanda Gonzales meet and greet in Telluride",
+    link: "https://koto.org/event/colorado-secretary-of-state-candidate-amanda-gonzales-meet-and-greet-in-telluride/",
+    description: "The public is invited to meet Colorado Secretary of State candidate Amanda Gonzales, who will be at Society Telluride on Main St on Wednesday, June 3rd from 5:30-7:00pm. This event is open to all.",
+    pubDate: "2026-06-03T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
   },
   {
     title: "Pilates for All Bodies with Laura",
@@ -1793,6 +1871,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "First Aid and CPR Certification",
+    link: "https://koto.org/event/first-aid-and-cpr-certification/",
+    description: "CPR World is offering First Aid and CPR certification on Sunday, June 7, 12:30-5:00pm at the Wilkinson Library. For information and registration, visit cprworld.com or call (970) 729-2779.",
+    pubDate: "2026-06-07T18:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
     title: "Drop In Tech Time with Oliver",
     link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-06-07/",
     description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
@@ -1859,6 +1948,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A.png"
   },
   {
+    title: "Mahjongg for Independent Players",
+    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-06-10/",
+    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-06-10T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
+  },
+  {
     title: "Sewing 101 with Melissa",
     link: "https://koto.org/event/sewing-101-with-melissa/2026-06-10/",
     description: "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
@@ -1901,6 +2001,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Arts HQ, TELLURIDE",
     imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png"
+  },
+  {
+    title: "Rico Trails Alliance Membership Fiesta & Community Dinner",
+    link: "https://koto.org/event/rico-trails-alliance-membership-fiesta-community-dinner/",
+    description: "Kick off the summer at RICO TRAILS ALLIANCE's MEMBERSHIP FIESTA and COMMUNITY DINNER on THURSDAY, JUNE 11 at 6pm. JOIN RTA AT THE GARDEN BAR LOT on Main St. in Rico (Rain or Shine) for YARD GAMES, SILENT AUCTION, DOOR PRIZES (Mezcal Vago, Osprey, Patagonia, Key Lime Air, Dolores Bike Hostel y mucho mas!) YOUR FIRST DRINK IS ON RTA and RTA MEMBERS RECEIVE A COMPLIMENTARY “SOUTH OF THE BORDER” DINNER with Rico celebrity chef Will Nolan of Black Salt Hospitality. Visit RTA's BLOG at RICOTRAILSALLIANCE.ORG to see the menu and sign up to reserve a FREE BIKE TUNE by Ridgway Wrench while you party! If you’re not a current RTA Member, you can purchase your RTA Membership on our website or at the Fiesta. DINNER/DRINKS may also be purchased at the door for $25/$5… a great deal! EVERYONE WELCOME",
+    pubDate: "2026-06-12T00:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Garden Bar lot, 20 S. Glasgow, Rico",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/POSTER-socials-Summer-Membership-Party-2026-scaled.jpg"
   },
   {
     title: "Up-off Gymnastics, Dance, and Spanish",
@@ -2013,6 +2124,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A-1.png"
   },
   {
+    title: "Mahjongg for Independent Players",
+    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-06-17/",
+    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-06-17T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
+  },
+  {
     title: "Pilates for All Bodies with Laura",
     link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-06-18/",
     description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
@@ -2055,116 +2177,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
-  },
-  {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-06-21/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-06-21T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-06-21/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-06-21T20:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-22/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-06-22T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-23/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-06-23T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride Science Town Talks",
-    link: "https://koto.org/event/telluride-science-town-talks/2026-06-23/",
-    description: "Big science. Small town. Every Tuesday from June 9- August 11, Telluride Science invites the public to sit down with some of the world’s most brilliant researchers for a conversation that might just change how you see the world. Town Talks cover everything from quantum computing and climate solutions to the latest in medicine and energy — accessible, thought-provoking, and completely free. Please note, there is no Town Talk on July 7. All Town Talks will be held at the Telluride Conference Center in Mountain Village (with the exception of July 28) . Town Talks start at 6:30 pm (doors open at 6 pm).The schedule is as follows: June 9: Can we change the weather (And do we really want to?) by Derek Posselt NASA Jet Propulsion Laboratory June 16: Good Vibrations – Water, Proteins, and the Molecular Motions that Make Biology Possible by Matthias Heyden, Arizona State Univ. …",
-    pubDate: "2026-06-24T00:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Conference Center, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Town Talk: Small Molecules at the Origins of Life",
-    link: "https://koto.org/event/town-talk-small-molecules-at-the-origins-of-life/",
-    description: "This town talk will be presented by David Lancy, University of Buffalo. How did the atoms in the universe come together to form life? At the heart of this mystery is the conversion of small molecules into the building blocks of life, driven by metallocofactors—enzyme-like catalysts conserved across all domains of life. The chemical ancestors of these metallocofactors are thought to have been active prior to the traditional bounds of life, such as dynamic molecular architectures at mineral surfaces in early oceans. Understanding these chemistries in unusual abiotic environments enables unique insight into how life may have started and evolved into its present form. In this talk, I will share some of the exciting new developments in the science of extraterrestrial photosynthesis (the search for light-harvesting life on other planets) and other metal-based processes that underpin life on Earth, and possibly the cosmos.",
-    pubDate: "2026-06-24T00:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Innovation Center",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A-2.png"
-  },
-  {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-24/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-06-24T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic | 105 | 3.0+ | Golden Hour",
-    link: "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-06-24/",
-    description: "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning the point off of an overhead winner. Suitable for levels 3.0+, this game is not only a workout and a ton of fun, but it will improve your tennis game by: Teaching you when to play near the net player. Improve your overall net game. Encourage you to practice being aggressive at the net. Finding a backhand volley. Execute deep lobs.",
-    pubDate: "2026-06-24T23:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-25/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-06-25T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-06-25/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-06-25T18:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
   }
 ];
 
@@ -3711,17 +3723,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Closed For Memorial Day",
-    link: "https://www.norwoodtown.com/2026-05-25-closed-for-memorial-day",
-    description: "",
-    pubDate: "2026-05-25T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Town Closure",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-06-09-nwc-meeting",
     description: "",
@@ -4033,6 +4034,18 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/49618/screenshot_2025-05-21_at_3_45_34_pm.800x533.webp"
   },
   {
+    title: "Colorado Shelby Rally",
+    link: "https://www.telluride.com/event/colorado-shelby-rally/",
+    description: "5th Annual Colorado Shelby Rally makes a stop in Mountain Village this year! Be sure to check out all the cars on the …",
+    pubDate: "2026-06-06",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62631/img_9126_1740x870.800x533.webp"
+  },
+  {
     title: "Historic Walking Tour",
     link: "https://www.telluride.com/event/historic-walking-tour/",
     description: "Take a historic tour of Telluride on foot! These historic walking tours are led by historian Ashley Boling, and leave …",
@@ -4283,6 +4296,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62303/screenshot_2026-04-29_at_2_54_10_pm.800x533.webp"
+  },
+  {
+    title: "Fire and Ice Cream: Wildfire Education Ice Cream Social",
+    link: "https://www.telluride.com/event/fire-and-ice-community-wildfire-education-ice-cream-social/",
+    description: "The Town of Mountain Village Police Department, San Miguel County Office of Emergency Management and Telluride Fire …",
+    pubDate: "2026-06-14",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/53605/download.800x533.webp"
   },
   {
     title: "Calder Allen",
