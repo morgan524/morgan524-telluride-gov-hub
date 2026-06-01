@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s news, upcoming Gov-Hub meetings, and events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jun 2026 17:29:42 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2026 21:29:44 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Thu, Jun 4] Pilates for All Bodies with Laura</title>
@@ -225,7 +225,7 @@ The agenda text for this Commission for Community Assistance, Arts & Special Eve
       <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-06-03
 
-The June 3 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.]]></description>
+The June 3, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -371,6 +371,46 @@ Take a historic tour of Telluride on foot! These historic walking tours are led 
       <category>Wilkinson Public Library</category>
     </item>
     <item>
+      <title>Youth still served (just differently for a while)</title>
+      <link>https://www.telluridenews.com/news/article_37a03647-d1ec-48fc-8829-ee4373559b5a.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_37a03647-d1ec-48fc-8829-ee4373559b5a.html</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/85/385842a0-96c9-4b78-85e5-78a8d2d39088/6a1dd99ed7988.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The library's youth area is getting a renovation with new carpets, shelving, paint, and a custom playscape to replace the aging treehouse, while teen and tween spaces remain open during construction. The project had to start in June despite summer programming because of contractor delays, but library director Peggy Parrish says they'll be ready by September 1st before Film Festival. Some folks are questioning why they're changing what was already working fine for kids.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/85/385842a0-96c9-4b78-85e5-78a8d2d39088/6a1dd99ed7988.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>housing</category>
+    </item>
+    <item>
+      <title>A foot up</title>
+      <link>https://www.telluridenews.com/opinion/columnists/article_c6d534ab-a901-4227-929a-5e5f512a2bd9.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/opinion/columnists/article_c6d534ab-a901-4227-929a-5e5f512a2bd9.html</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/82/382a382e-3855-4ef7-806f-faba2d535523/6a192af2d8365.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />A local writer reflects on foot problems after years of hiking, table-waiting, and city walking, detailing various treatments from surgery to shock wave therapy for conditions like Morton's neuroma and bunions. The piece notes that while modern shoes may pamper our feet, they've also made them weaker compared to traditional cultures that went barefoot, and that 75% of Americans deal with foot issues despite having access to better footwear than miners who worked in hard leather boots year-round.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/82/382a382e-3855-4ef7-806f-faba2d535523/6a192af2d8365.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>arts-culture</category>
+    </item>
+    <item>
+      <title>Pride Month 2026 has begun. Here&apos;s what to expect for the LGBTQ+ celebrations</title>
+      <link>https://www.telluridenews.com/news/state/article_182f85c0-ab8d-54b3-bc72-ae46c634936d.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_182f85c0-ab8d-54b3-bc72-ae46c634936d.html</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/17/e174862d-e689-5e26-b523-f24505a7eb0f/6a1de5ae18036.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Pride Month 2026 is underway with celebrations spanning from major cities to small towns, though the landscape has shifted considerably. Some corporate sponsors have pulled back following policy changes, while recent Supreme Court rulings and state restrictions have added new challenges to what began as protests after the 1969 Stonewall raid. The events maintain their mix of celebration and resistance, from traditional parades to community nights, even as organizers navigate a more complex political environment than in recent decades.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/17/e174862d-e689-5e26-b523-f24505a7eb0f/6a1de5ae18036.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>public-safety</category>
+    </item>
+    <item>
+      <title>Russell Wilson finalizing deal to join CBS Sports, AP source says</title>
+      <link>https://www.telluridenews.com/news/state/article_e5de6dfb-2931-5df4-8b92-8ed9f22bf8e2.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_e5de6dfb-2931-5df4-8b92-8ed9f22bf8e2.html</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Quarterback Russell Wilson is finalizing a deal to join CBS Sports and "The NFL Today" desk, replacing Matt Ryan who left for a front office role with the Falcons. Wilson, who spent 14 seasons in the league including that Super Bowl win with Seattle back in 2013, most recently played for the Giants after stops in Denver and Pittsburgh.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>arts-culture</category>
+    </item>
+    <item>
       <title>Colorado elections clerk set to be released from prison Monday based on her sentence commutation</title>
       <link>https://www.telluridenews.com/news/state/article_931dd54d-a664-51d4-9de8-37dc88e1923f.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_931dd54d-a664-51d4-9de8-37dc88e1923f.html</guid>
@@ -379,6 +419,76 @@ Take a historic tour of Telluride on foot! These historic walking tours are led 
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>government</category>
+    </item>
+    <item>
+      <title>Chalkboard week of May 28-June 3</title>
+      <link>https://www.telluridenews.com/norwood_post/article_57382ef3-2ef9-4f8e-be89-f6a22e3cb1b5.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/norwood_post/article_57382ef3-2ef9-4f8e-be89-f6a22e3cb1b5.html</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/68/86897cd3-c9cb-4b41-bb5b-835407120d9f/6a1dd0ef0e241.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />This week's community birthdays include residents from May 28 through June 3, with local kids and adults celebrating. The regular schedule continues with town board meetings, farmers market on Thursdays, senior meals twice weekly, food pantry on Sundays, and pickleball sessions multiple times a week at the school.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/68/86897cd3-c9cb-4b41-bb5b-835407120d9f/6a1dd0ef0e241.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>government</category>
+    </item>
+    <item>
+      <title>Marya Stark for town council</title>
+      <link>https://www.telluridenews.com/opinion/letters_to_editor/article_3a10daa4-2137-4eb1-8fff-077a41f1f53c.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/opinion/letters_to_editor/article_3a10daa4-2137-4eb1-8fff-077a41f1f53c.html</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />This is an endorsement letter from Adrienne Christy supporting Marya Stark's reelection to Telluride Town Council. Christy praises Stark's prepared, thoughtful approach to meetings and her ability to listen to constituents while maintaining focus on both short-term issues and long-term planning. The endorser emphasizes Stark's fiscal responsibility and her potential to help bridge community divisions in an increasingly polarized political environment.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>government</category>
+    </item>
+    <item>
+      <title>Urging a vote for Marya Stark</title>
+      <link>https://www.telluridenews.com/opinion/letters_to_editor/article_0d781c0e-fd5a-487f-82a4-f84e5490e41b.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/opinion/letters_to_editor/article_0d781c0e-fd5a-487f-82a4-f84e5490e41b.html</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Marya Stark was appointed to fill a vacant town council seat this winter from a pool of nearly a dozen applicants. The endorsement letter highlights her background spanning nonprofit, government and private sectors, plus degrees in business and data analytics. Her supporter emphasizes her ability to balance fiscal management with community listening as Telluride navigates growth pressures.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>government</category>
+    </item>
+    <item>
+      <title>TBC supports teachers</title>
+      <link>https://www.telluridenews.com/opinion/letters_to_editor/article_5968bae2-1e30-494a-9b75-5f4c64590b51.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/opinion/letters_to_editor/article_5968bae2-1e30-494a-9b75-5f4c64590b51.html</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Dear Editor,]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>education</category>
+    </item>
+    <item>
+      <title>Telluride Brewing Company&apos;s Face Down Brown Ale takes silver at World Beer Cup</title>
+      <link>https://www.telluridenews.com/news_release/article_523ccd12-7851-4aad-b1a9-189ef901b885.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news_release/article_523ccd12-7851-4aad-b1a9-189ef901b885.html</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/45/e455771d-f657-4a8b-b0ae-39cd5c01778b/6a1dc891decc8.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Telluride Brewing Company's Face Down Brown Ale won silver at the World Beer Cup, adding to an already solid collection of gold medals from previous competitions. The brewery celebrated at their Lawson Hill location with locals watching the awards live, and co-founder Chris Fish credited the production team for maintaining consistent quality over the years.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/45/e455771d-f657-4a8b-b0ae-39cd5c01778b/6a1dc891decc8.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
+    </item>
+    <item>
+      <title>So you&apos;ve found some kittens</title>
+      <link>https://www.telluridenews.com/news_release/article_67f9c6c7-8e42-404b-a8d7-cd8a7d25fd10.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news_release/article_67f9c6c7-8e42-404b-a8d7-cd8a7d25fd10.html</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/62/06256b5d-f736-4f5e-a644-44c50f0974e9/6a1dc0e753520.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />When you find kittens, don't rush to rescue them right away. Kittens under 6 weeks are better off with mom - watch from 35 feet for a few hours or leave a flour ring to check for her footprints before taking action. Second Chance can help with spay/neuter services when they're old enough, and they're featuring Speedy, a 3-year-old lap cat who loves following people around.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/62/06256b5d-f736-4f5e-a644-44c50f0974e9/6a1dc0e753520.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
+    </item>
+    <item>
+      <title>County offers cost-share funding for noxious weed control</title>
+      <link>https://www.telluridenews.com/news_release/article_70261750-b5d8-4895-bd7a-f728def47885.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news_release/article_70261750-b5d8-4895-bd7a-f728def47885.html</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/e0/1e0d9139-05c3-4882-a9a7-de3e67a8e2b4/6a1dc18f782e7.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />San Miguel County is offering cost-share funding to help private landowners tackle noxious weeds, covering up to 50% of herbicide costs or $125 per acre, whichever is less, with a $500 cap per applicant. The program covers state and county-listed problem weeds, with herbicides purchased through the county and funding awarded first-come, first-served until the money runs out.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/e0/1e0d9139-05c3-4882-a9a7-de3e67a8e2b4/6a1dc18f782e7.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
     </item>
     <item>
       <title>Former Colorado elections clerk Tina Peters released from prison after scheme to copy her county&apos;s election system</title>
@@ -571,113 +681,6 @@ The Sheridan Arts Foundation invites you to be a part of one of the most meaning
       <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/85/d8594810-80a8-59b4-890a-7244b3410a62/6a18b5e0f3c11.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Claude Lemieux, the four-time Stanley Cup champion known for his gritty play with the Avalanche, Devils and Canadiens, died at 60. The former playoff MVP had just served as Montreal's torch bearer three days earlier at their playoff game. He scored nearly 400 goals over 21 NHL seasons.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/85/d8594810-80a8-59b4-890a-7244b3410a62/6a18b5e0f3c11.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Summertime means Music on the Green</title>
-      <link>https://www.telluridenews.com/news_release/article_5ab17cdd-56f8-40ff-924d-952b470c2352.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news_release/article_5ab17cdd-56f8-40ff-924d-952b470c2352.html</guid>
-      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/7a/b7acfc05-77ea-4560-905f-b58e3262b0d4/6a18bd7a43676.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The free Music on the Green summer concert series kicks off May 29 with Dori Freeman performing from 5-7 p.m., followed by weekly shows through September featuring artists like Ray Wylie Hubbard and Jon Stickley Trio. The concerts happen in Mountain Village with mountain views and are sponsored by TMVOA, Madeline Hotel, and the Town of Mountain Village.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/7a/b7acfc05-77ea-4560-905f-b58e3262b0d4/6a18bd7a43676.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>arts-culture</category>
-    </item>
-    <item>
-      <title>Telluride Racquet Club steps into new era</title>
-      <link>https://www.telluridenews.com/business/article_9834d2c4-5e92-4023-b1a2-e7280515c851.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/business/article_9834d2c4-5e92-4023-b1a2-e7280515c851.html</guid>
-      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/b2/db20b18b-c9d2-42f6-bb7c-d51da2923086/6a17f88a91426.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The Telluride Racquet Club expects 15,000 players this summer, up from 1,000 in its first year, with three tennis courts plus a social court area, two platform tennis courts that convert to pickleball in summer. Owner Fey brings in four collegiate tennis pros each season and offers leagues, clinics and lessons through a user-friendly app called Play by Point.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/b2/db20b18b-c9d2-42f6-bb7c-d51da2923086/6a17f88a91426.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>recreation</category>
-    </item>
-    <item>
-      <title>Norwood School breaks ground</title>
-      <link>https://www.telluridenews.com/gallery/news/article_bb23a8b7-4634-46aa-997f-ed192e5fe5a9.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/gallery/news/article_bb23a8b7-4634-46aa-997f-ed192e5fe5a9.html</guid>
-      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/a2/2a2a4618-f6fe-4938-a72a-199d3eee76b4/6a18cdfe2fa15.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Telluride Times • May 28, 2026]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/a2/2a2a4618-f6fe-4938-a72a-199d3eee76b4/6a18cdfe2fa15.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>education</category>
-    </item>
-    <item>
-      <title>‘Refreshed’ Wild West Fest is back</title>
-      <link>https://www.telluridenews.com/news/article_59368846-14d1-48b6-af76-572d06c92b15.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/article_59368846-14d1-48b6-af76-572d06c92b15.html</guid>
-      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/d6/cd6adb7e-6b3f-4df9-ad01-30f555752e79/6a17f3c41f222.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Wild West Fest returns in 2026 after a year hiatus, with organizers making changes based on kid feedback from surveys. The updated program includes more horseback riding through partnerships with local outfitters and shorter activity sessions instead of multi-day commitments.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/d6/cd6adb7e-6b3f-4df9-ad01-30f555752e79/6a17f3c41f222.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>arts-culture</category>
-    </item>
-    <item>
-      <title>Legals and Public Notices for May 28-June 3, 2026</title>
-      <link>https://www.telluridenews.com/obituaries/article_0adc5789-cb68-4509-b7a8-1e8bf62a4c8e.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/obituaries/article_0adc5789-cb68-4509-b7a8-1e8bf62a4c8e.html</guid>
-      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />A local resident named Kendal Dawn Oakleaf Smith has petitioned San Miguel County Court for a name change to Kendal Dawn Oakleaf Smith. The Colorado Community Action Association is accepting applications through June 3rd for a basic income research project offering $13,000 one-time payments to eligible county residents. The county is also seeking contractors for flooring replacement projects and a boiler system replacement at Down Valley Park.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Man arrested for hiding sex offender status</title>
-      <link>https://www.telluridenews.com/news/article_70cc432e-aea1-4dac-91e0-f3a7a5fde25a.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/article_70cc432e-aea1-4dac-91e0-f3a7a5fde25a.html</guid>
-      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/c2/ac24a6b9-6aa6-47dc-a16b-5637a70ad6bb/6a16fe812e569.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Deputies arrested a man who allegedly concealed his identity and sex offender status while working locally as a DJ. The suspect was previously convicted in 2013 for attempted sexual assault on a child and is scheduled for a court hearing June 16.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/c2/ac24a6b9-6aa6-47dc-a16b-5637a70ad6bb/6a16fe812e569.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Road and Bridge Office Closed on June 2nd 2026</title>
-      <link>https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=528</link>
-      <guid isPermaLink="false">https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=528</guid>
-      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[The Road and Bridge office in Norwood will be closed on Tuesday, June 2, 2026. The office will open on Wednesday, June 3rd, with normal business hours.]]></description>
-      <category>San Miguel County</category>
-      <category>infrastructure</category>
-    </item>
-    <item>
-      <title>Ophir Pass is now Open</title>
-      <link>https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=527</link>
-      <guid isPermaLink="false">https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=527</guid>
-      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Ophir Pass is now Open]]></description>
-      <category>San Miguel County</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Newscast 5-27-26</title>
-      <link>https://koto.org/news/newscast-5-27-26/</link>
-      <guid isPermaLink="false">https://koto.org/news/newscast-5-27-26/</guid>
-      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Man Arrested for Failure to Register as Sex Offender; The Impetus of Dance in Unlikely Spaces]]></description>
-      <category>KOTO Community Radio</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>US Supreme Court settles long-running water dispute over dwindling Rio Grande</title>
-      <link>https://www.telluridenews.com/news/state/article_ec16ddd6-59c4-5d79-b1cd-562da53b058d.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_ec16ddd6-59c4-5d79-b1cd-562da53b058d.html</guid>
-      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/d7/5d733892-c447-5597-ac43-e080d5af12f7/6a1727b561bb6.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The Supreme Court settled a decade-long water dispute between New Mexico and Texas over Rio Grande usage, requiring New Mexico to cut groundwater pumping by 18,200 acre-feet annually and retire over 14 square miles of farmland. The agreement aims to restore order to water-sharing between the states as drought conditions worsen along the river that originates in Colorado.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/d7/5d733892-c447-5597-ac43-e080d5af12f7/6a1727b561bb6.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>infrastructure</category>
-    </item>
-    <item>
-      <title>It’s a wrap</title>
-      <link>https://www.telluridenews.com/arts_and_entertainment/article_fb7ed56b-afa8-4c5d-ae54-3f5a43bfa3ff.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/arts_and_entertainment/article_fb7ed56b-afa8-4c5d-ae54-3f5a43bfa3ff.html</guid>
-      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/3a/a3a31761-8d88-4191-8917-c18600aaa617/6a17011608bd7.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Mountainfilm wrapped up another year showcasing documentaries focused on environmental protection, social justice, and personal resilience. Films featured everything from women inmates helping restore endangered butterflies in Oregon prisons to wildfire survivors in California, plus local wildlife rehabilitator Lissa Margetts in "The Mountain Ark."]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/3a/a3a31761-8d88-4191-8917-c18600aaa617/6a17011608bd7.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>community</category>
     </item>
