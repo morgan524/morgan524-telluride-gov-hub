@@ -371,6 +371,7 @@
   function hbUpdatePostBtn() {
     var title = document.getElementById('hbComposeTitle').value.trim();
     var body = document.getElementById('hbComposeBody').value.trim();
+    var linkUrl = (document.getElementById('hbComposeLinkUrl') || {value:''}).value.trim();
     var tags = document.querySelectorAll('.hb-compose-tag.selected');
     document.getElementById('hbPostBtn').disabled = !(title && body && tags.length > 0);
   }
@@ -598,6 +599,7 @@
         postType: hbSelectedPostType || 'question',
         attachments: attachments,
         imageUrl: imageUrl || null,
+        linkUrl: linkUrl || null,
         createdAt: firebase.firestore.FieldValue.serverTimestamp(),
         replyCount: 0,
         upvotes: 0,
@@ -636,6 +638,8 @@
       document.querySelectorAll('.hb-compose-tag.selected').forEach(function(t) { t.classList.remove('selected'); });
       document.querySelectorAll('[data-hb-ptype]').forEach(function(b) { b.classList.remove('active'); });
       document.querySelectorAll('[data-hb-step]').forEach(function(b) { b.classList.remove('selected'); });
+      var _lr=document.getElementById('hbComposeLinkRow'),_li=document.getElementById('hbComposeLinkUrl'),_lb=document.getElementById('hbComposeLinkBtn');
+      if(_lr)_lr.style.display='none'; if(_li)_li.value=''; if(_lb)_lb.style.background='';
       hbPendingAttachments = [];
       hbRenderAttachPreview();
       hbRemovePhoto();
@@ -873,6 +877,9 @@
     if (postTypeClass === 'source' && post.sourceUrl) {
       sourceHtml = '<div class="hb-source-link"><a href="' + hbEsc(post.sourceUrl) + '" target="_blank">View Source Document</a></div>';
     }
+    var linkPreviewHtml = post.linkUrl
+      ? '<div class="hb-post-link-preview" data-link-url="' + hbEsc(post.linkUrl) + '"></div>'
+      : '';
 
     // Constructive reactions
     var reactionsHtml = '<div class="hb-reactions">';
@@ -905,7 +912,8 @@
       '<div class="hb-post-body' + (isLong ? ' truncated' : '') + '">' + hbEsc(bodyText) + '</div>' +
       (isLong ? '<button class="hb-read-more" onclick="hbExpandPost(this)">Read more</button>' : '') +
       debriefHtml +
-      sourceHtml;
+      sourceHtml +
+      linkPreviewHtml;
 
     var wrappedBody = hasLeftCol
       ? '<div class="hb-post-content-wrap">' +
@@ -951,6 +959,10 @@
         '<button class="hb-reply-toggle" onclick="hbToggleReplies(\'' + post.id + '\')">💬 <span>' + (post.replyCount || 0) + '</span> replies</button>' +
       '</div>' +
       '<div class="hb-replies" id="hb-replies-' + post.id + '" style="display:none;"></div>';
+    if (post.linkUrl) {
+      var _ph=card.querySelector('.hb-post-link-preview');
+      if(_ph) hbFetchOgPreview(post.linkUrl,function(data){hbRenderLinkPreview(data,post.linkUrl,_ph);});
+    }
     return card;
   }
   window.hbExpandPost = function(btn) {
@@ -1116,14 +1128,21 @@
           var time = r.createdAt ? hbTimeAgo(r.createdAt.toDate ? r.createdAt.toDate() : new Date(r.createdAt)) : 'just now';
           var div = document.createElement('div');
           div.className = 'hb-reply';
-          div.innerHTML =
-            '<div class="hb-reply-head">' +
-              '<div class="hb-reply-avatar">' + initial + '</div>' +
-              '<span class="hb-reply-author">' + hbEsc(r.authorName || 'Anonymous') + '</span>' +
-              '<span class="hb-reply-time">' + time + '</span>' +
-            '</div>' +
-            '<div class="hb-reply-body">' + hbEsc(r.body || '') + '</div>';
+          var _rLinkHtml=r.linkUrl?'<div class="hb-reply-link-preview" data-link-url="'+hbEsc(r.linkUrl)+'"></div>':'';
+          div.innerHTML=
+            '<div class="hb-reply-head">'+
+              '<div class="hb-reply-avatar">'+initial+'</div>'+
+              '<span class="hb-reply-author">'+hbEsc(r.authorName||'Anonymous')+'</span>'+
+              '<span class="hb-reply-time">'+time+'</span>'+
+            '</div>'+
+            '<div class="hb-reply-body">'+hbEsc(r.body||'')+'</div>'+
+            _rLinkHtml;
           container.appendChild(div);
+          if(r.linkUrl){
+            (function(url,el){
+              hbFetchOgPreview(url,function(data){hbRenderLinkPreview(data,url,el);});
+            })(r.linkUrl,div.querySelector('.hb-reply-link-preview'));
+          }
         });
         hbAddReplyCompose(postId, container);
       })
@@ -1137,15 +1156,33 @@
     div.className = 'hb-reply-compose';
     div.innerHTML =
       '<textarea placeholder="Write a reply..." id="hb-reply-text-' + postId + '"></textarea>' +
-      '<button onclick="hbPostReply(\'' + postId + '\')">Reply</button>';
+      '<div class="hb-reply-url-row" id="hb-reply-url-row-' + postId + '" style="display:none;">' +
+        '<input type="url" class="hb-reply-url-input" id="hb-reply-url-' + postId + '"' +
+        ' placeholder="https://… — the page image will appear with your reply"></div>' +
+      '<div class="hb-reply-actions">' +
+        '<button class="hb-reply-link-btn" id="hb-reply-link-btn-' + postId + '"' +
+        ' onclick="hbToggleReplyUrl(\'' + postId + '\')" title="Add a URL">🔗 Add Link</button>' +
+        '<button onclick="hbPostReply(\'' + postId + '\')">Reply</button>' +
+      '</div>';
     container.appendChild(div);
   }
+  window.hbToggleReplyUrl = function(postId) {
+    var row=document.getElementById('hb-reply-url-row-'+postId);
+    var btn=document.getElementById('hb-reply-link-btn-'+postId);
+    if(!row)return;
+    var open=row.style.display==='none';
+    row.style.display=open?'':'none';
+    if(btn)btn.style.background=open?'#d0e8d0':'';
+    if(open){var inp=document.getElementById('hb-reply-url-'+postId);if(inp)inp.focus();}
+  };
   window.hbPostReply = function(postId) {
     if (!hbUser) { hbShowAuth('login'); return; }
     if (!hbFirebaseReady) return;
-    var textarea = document.getElementById('hb-reply-text-' + postId);
-    var body = textarea.value.trim();
-    if (!body) return;
+    var textarea=document.getElementById('hb-reply-text-'+postId);
+    var _rli=document.getElementById('hb-reply-url-'+postId);
+    var replyLinkUrl=_rli?_rli.value.trim():'';
+    var body=textarea.value.trim();
+    if(!body)return;
 
     // Tone check — if flagged, prompt with a real modal (custom buttons,
     // not native confirm() which can't be re-labeled). Resolves to:
@@ -1180,6 +1217,7 @@
         authorId: hbUser.uid,
         authorName: hbResolveName(hbUser),
         body: finalBody,
+        linkUrl: replyLinkUrl || null,
         createdAt: firebase.firestore.FieldValue.serverTimestamp()
       }).then(function() {
         // Increment reply count on parent post. Allowed by firestore.rules
@@ -1188,10 +1226,12 @@
           replyCount: firebase.firestore.FieldValue.increment(1)
         });
       }).then(function() {
-        textarea.value = '';
-        btn.disabled = false;
-        btn.textContent = 'Reply';
-        hbLoadReplies(postId, document.getElementById('hb-replies-' + postId));
+        textarea.value='';
+        if(_rli)_rli.value='';
+        var _rrr=document.getElementById('hb-reply-url-row-'+postId),_rlb=document.getElementById('hb-reply-link-btn-'+postId);
+        if(_rrr)_rrr.style.display='none'; if(_rlb)_rlb.style.background='';
+        btn.disabled=false; btn.textContent='Reply';
+        hbLoadReplies(postId,document.getElementById('hb-replies-'+postId));
         // Update local cache
         var post = hbPosts.find(function(p) { return p.id === postId; });
         if (post) post.replyCount = (post.replyCount || 0) + 1;
@@ -1627,6 +1667,41 @@
     div.appendChild(document.createTextNode(s));
     return div.innerHTML;
   }
+
+  // ── Open-Graph link-preview helpers ────────────────────────────────────────
+  var HB_OG_CACHE = {};
+  var HB_OG_WORKER = 'https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/og';
+
+  function hbFetchOgPreview(url, cb) {
+    if (!url) return;
+    if (HB_OG_CACHE[url] !== undefined) { cb(HB_OG_CACHE[url]); return; }
+    fetch(HB_OG_WORKER + '?url=' + encodeURIComponent(url))
+      .then(function(r) { return r.ok ? r.json() : null; })
+      .then(function(data) { HB_OG_CACHE[url] = data || null; cb(HB_OG_CACHE[url]); })
+      .catch(function() { HB_OG_CACHE[url] = null; });
+  }
+
+  function hbRenderLinkPreview(data, url, containerEl) {
+    if (!data || (!data.imageUrl && !data.title)) return;
+    if (!containerEl || containerEl.querySelector('.hb-og-preview')) return;
+    var hostname = '';
+    try { hostname = new URL(url).hostname; } catch(e) { hostname = url; }
+    var imgHtml = data.imageUrl
+      ? '<img class="hb-og-img" src="' + hbEsc(data.imageUrl) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
+      : '';
+    var card = document.createElement('a');
+    card.className = 'hb-og-preview';
+    card.href = url; card.target = '_blank'; card.rel = 'noopener';
+    card.innerHTML = imgHtml +
+      '<div class="hb-og-text">' +
+        (data.title ? '<div class="hb-og-title">' + hbEsc(data.title) + '</div>' : '') +
+        (data.description ? '<div class="hb-og-desc">' + hbEsc(data.description.substring(0, 160)) + '</div>' : '') +
+        '<div class="hb-og-domain">' + hbEsc(hostname) + '</div>' +
+      '</div>';
+    containerEl.appendChild(card);
+  }
+
+
   /* Resolve a display name from a Firebase Auth user object.
      Priority: displayName → email prefix titlecased → 'Anonymous'.
      Why: not every user has set displayName (older accounts, admin

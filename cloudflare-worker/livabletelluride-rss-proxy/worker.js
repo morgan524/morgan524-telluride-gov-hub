@@ -172,6 +172,52 @@ export default {
     if (url.pathname === "/health") {
       return Response.json({ ok: true, version: VERSION, allowed: ALLOWED_HOSTS });
     }
+    if (url.pathname === "/og") {
+      // Open-Graph extractor — fetches any public page and returns
+      // { imageUrl, title, description } as JSON for Hub-Bub link previews.
+      const corsH = { "Access-Control-Allow-Origin": "*", "Content-Type": "application/json" };
+      if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: corsH });
+      const targetUrl = url.searchParams.get("url");
+      if (!targetUrl) return new Response(JSON.stringify({ error: "No url param" }), { status: 400, headers: corsH });
+      let pu;
+      try { pu = new URL(targetUrl); } catch { return new Response(JSON.stringify({ error: "Invalid URL" }), { status: 400, headers: corsH }); }
+      if (pu.protocol !== "https:" && pu.protocol !== "http:") {
+        return new Response(JSON.stringify({ error: "Only http/https" }), { status: 400, headers: corsH });
+      }
+      try {
+        const resp = await fetch(targetUrl, {
+          headers: { "User-Agent": REAL_UA, "Accept": "text/html,application/xhtml+xml,*/*;q=0.8" },
+          redirect: "follow",
+          cf: { cacheTtl: 3600, cacheEverything: true },
+        });
+        const html = await resp.text();
+        function metaContent(patterns) {
+          for (const re of patterns) { const m = html.match(re); if (m) return m[1].trim(); }
+          return null;
+        }
+        const imageUrl = metaContent([
+          /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i,
+          /<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i,
+          /<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/i,
+          /<meta[^>]+content=["']([^"']+)["'][^>]+name=["']twitter:image["']/i,
+        ]);
+        const title = metaContent([
+          /<meta[^>]+property=["']og:title["'][^>]+content=["']([^"']+)["']/i,
+          /<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:title["']/i,
+          /<title[^>]*>([^<]+)<\/title>/i,
+        ]);
+        const description = metaContent([
+          /<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']+)["']/i,
+          /<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:description["']/i,
+        ]);
+        return new Response(
+          JSON.stringify({ imageUrl: imageUrl || null, title: title || null, description: description || null }),
+          { status: 200, headers: { ...corsH, "Cache-Control": "public, max-age=3600" } }
+        );
+      } catch (err) {
+        return new Response(JSON.stringify({ error: "Fetch failed", detail: String(err) }), { status: 502, headers: corsH });
+      }
+    }
     if (url.pathname === "/proxy") {
       return handleProxy(request, url, env);
     }

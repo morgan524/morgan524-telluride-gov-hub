@@ -917,6 +917,34 @@
     }
     .hb-modal-msg.success { background: rgba(33,68,60,0.08); color: var(--forest); border: 1px solid rgba(33,68,60,0.18); }
     .hb-modal-msg.error   { background: rgba(180,75,60,0.08); color: #a33; border: 1px solid rgba(180,75,60,0.20); }
+      /* ── og:image link-preview card (posts + replies) ─────────────────── */
+      .hb-og-preview {
+        display: flex; flex-direction: column; text-decoration: none; color: inherit;
+        border: 1px solid #ddd; border-radius: 8px; overflow: hidden;
+        margin-top: 10px; background: #fafafa; transition: box-shadow .15s;
+      }
+      .hb-og-preview:hover { box-shadow: 0 2px 10px rgba(0,0,0,.12); }
+      .hb-og-img { width: 100%; max-height: 220px; object-fit: cover; display: block; border-bottom: 1px solid #eee; }
+      .hb-og-text { padding: 10px 12px; }
+      .hb-og-title { font-weight: 700; font-size: .92rem; color: #1a1a1a; margin-bottom: 3px; }
+      .hb-og-desc  { font-size: .82rem; color: #555; margin-bottom: 4px;
+                     overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+      .hb-og-domain { font-size: .76rem; color: #21443c; font-weight: 600; }
+      /* ── Reply compose URL row ─────────────────────────────────────────── */
+      .hb-reply-url-row { margin: 4px 0; }
+      .hb-reply-url-input {
+        width: 100%; box-sizing: border-box; padding: 7px 10px;
+        border: 1px solid #ccc; border-radius: 6px; font-size: .85rem; font-family: inherit;
+      }
+      .hb-reply-url-input:focus { outline: none; border-color: #21443c; }
+      .hb-reply-actions { display: flex; gap: 6px; align-items: center; margin-top: 6px; }
+      .hb-reply-link-btn {
+        padding: 5px 10px; font-size: .82rem; border: 1px solid #ccc;
+        border-radius: 6px; background: #fff; cursor: pointer; transition: background .15s;
+      }
+      .hb-reply-link-btn:hover { background: #e8f0e8; }
+
+
 
     /* ── Responsive ── */
     @media (max-width: 1024px) {
@@ -1348,6 +1376,12 @@
                       <button class="hb-tone-btn-edit" onclick="hbEditMore()">Let me edit more</button>
                     </div>
                   </div>
+                  <!-- URL input row (hidden until 🔗 Add Link is clicked) -->
+                  <div id="hbComposeLinkRow" style="display:none;margin:6px 0 2px;">
+                    <input type="url" id="hbComposeLinkUrl"
+                           placeholder="https://... — the page’s hero image will appear on your post"
+                           style="width:100%;box-sizing:border-box;padding:7px 10px;border:1px solid #ccc;border-radius:6px;font-size:0.88rem;">
+                  </div>
                   <div class="hb-compose-actions">
                     <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;">
                       <!-- Photo button — moved here from above the tags -->
@@ -1355,6 +1389,8 @@
                       <input type="file" id="hbPhotoInput" accept="image/png,image/jpeg,image/gif,image/webp" style="display:none;" onchange="hbHandlePhoto(this)">
                       <!-- Document / file attachment -->
                       <button class="hb-attach-btn" onclick="hbTriggerAttach()" title="Attach a document (PDF, image · max 10 MB per file)">📄 Attach Document</button>
+                      <!-- URL link button — adds a link preview (og:image) to the post -->
+                      <button type="button" class="hb-attach-btn" onclick="hbToggleComposeLink()" id="hbComposeLinkBtn" title="Add a URL — the page’s image will appear on your post">🔗 Add Link</button>
                       <input type="file" id="hbFileInput" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg,.gif,.webp" multiple style="display:none;" onchange="hbHandleFiles(this)">
                       <!-- Inline photo preview (was in its own block above) -->
                       <div class="hb-photo-preview" id="hbPhotoPreview">
@@ -1702,6 +1738,17 @@
        load. If an ?email= query param is present (passed by the homepage
        subscribe form), pre-fill the signup email field so the visitor
        doesn't retype it. */
+    /* Toggle the URL-link row in the main composer */
+    window.hbToggleComposeLink = function() {
+      var row = document.getElementById('hbComposeLinkRow');
+      var btn = document.getElementById('hbComposeLinkBtn');
+      if (!row) return;
+      var open = row.style.display === 'none';
+      row.style.display = open ? '' : 'none';
+      if (btn) btn.style.background = open ? '#d0e8d0' : '';
+      if (open) { var inp = document.getElementById('hbComposeLinkUrl'); if (inp) inp.focus(); }
+    };
+
     (function deepLinkOpen() {
       try {
         var params = new URLSearchParams(location.search);
@@ -1741,10 +1788,17 @@
       // creation. A mailing-list hiccup (Mailchimp down, weird response,
       // etc.) must not stop someone from getting their Hub-Bub account and
       // being logged in. Failures are logged, not surfaced as a hard error.
+      // Show immediate feedback so existing subscribers don't see a blank
+      // button during the Mailchimp round-trip.
+      showMsg('hbSignupMsg', 'Creating your account…', 'info');
+
       mcSubscribe(email, firstName, lastName, digestFreq, includeNewsletter, function (ok, msg) {
-        if (!ok && !/already subscribed/i.test(msg)) {
-          console.warn('Hub-Bub signup: Mailchimp subscribe failed (continuing to create account): ' + msg);
-        }
+        // Mailchimp is BEST-EFFORT — existing subscribers (already in the list)
+        // will get ok=false with an "already subscribed" message. Any other
+        // Mailchimp failure (network, quota, etc.) is also non-fatal. We log
+        // it and always proceed to Firebase account creation so that having an
+        // existing Mailchimp subscription never blocks getting a Hub-Bub login.
+        if (!ok) console.warn('Hub-Bub signup: Mailchimp (' + (msg||'unknown') + ') — proceeding to Firebase.');
 
         // Step 2: Firebase Auth — create account (auto-signs the user in)
         waitForFirebase(function () {
