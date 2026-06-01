@@ -172,7 +172,7 @@ const MANUAL_SUMMARIES = {
     "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -181,10 +181,34 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "The June 30, 2026 Town Council agenda hasn't been posted yet."
+    "The June 30 2026 Town Council agenda hasn't been posted yet.",
+
+  "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
+    "The Jul 01 2026 Ecology Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
+    "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+
+  "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
+    "The July 1st Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+
+  "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
+    "The July 1 Liquor Licensing Authority agenda hasn't been posted yet."
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Keeping your best friend safe",
+    source: "Telluride Times",
+    date: "May 31, 2026",
+    firstSeen: "2026-06-01",
+    newsTopic: "recreation",
+    copy: "Dog trainer Bob Hennessy and Telluride Humane Society's Ellen Williamson warn that smaller dogs face higher risks of going missing in our terrain, with predators and dense aspen forests making recovery difficult. Local incidents show dogs wander off chasing wildlife or getting spooked - size often determines survival odds when they're lost for days or weeks. Basic precautions like solid recall training, long leashes, ID tags, and proper pet-sitting instructions can prevent most problems.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_5f3ef39b-499d-4e79-b90a-69cfdf465ab8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/b3/eb3af0a8-31b4-47c4-925d-83fe041f59f1/6a1a98691b071.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Magnificent mycology",
     source: "Telluride Times",
@@ -898,30 +922,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "New Mexico wildfire sparked by fatal medical plane crash spreads quickly in rural area",
-    source: "Telluride Times",
-    date: "May 18, 2026",
-    firstSeen: "2026-05-19",
-    newsTopic: "public-safety",
-    copy: "A medical plane crash in New Mexico sparked a wildfire that doubled to over 19 square miles between Sunday and Monday morning. More than 600 firefighters are battling the blaze in steep terrain, working to protect evacuated cattle ranches and the community of Arabella amid red flag conditions with 20-30 mph winds.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_e905dbce-0fed-5240-93f4-648f460f0e69.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/ac/2ac4c526-79e0-546d-8e03-002c7e877354/6a0b78166dc04.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Busy, but feeling good",
-    source: "Telluride Times",
-    date: "May 18, 2026",
-    firstSeen: "2026-05-18",
-    newsTopic: "infrastructure",
-    copy: "Dr. Geetter at Medicine Ranch is hosting a mental health lecture on May 21 during Mountainfilm, kicking off a busy summer of events. He's also working with the Telluride Men's Health Club on suicide awareness and featuring local artisans in his shop, all while maintaining his positive outlook on the community's resilience.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/business/article_f5789cb8-8bff-49d1-a78a-3006cc453e19.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/26/526c819e-4c2e-45ff-81cc-66df69bc7fea/6a0b3366e0158.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Highway 62 between Ridgway and Placerville re-opens",
     source: "Telluride Times",
     date: "May 22, 2026",
@@ -1019,7 +1019,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "May 31, 2026",
+    date: "June 1, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1623,28 +1623,6 @@ const MUSIC_ON_THE_GREEN = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-05-31/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-05-31T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-05-31/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-05-31T20:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
     title: "Bardic Trails Online Poetry Night",
     link: "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-06-02/",
     description: "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit to get the zoom link each month, Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of California Feb. …",
@@ -2127,6 +2105,39 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Tennis Clinic | 105 | 3.0+ | Golden Hour",
+    link: "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-06-24/",
+    description: "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning the point off of an overhead winner. Suitable for levels 3.0+, this game is not only a workout and a ton of fun, but it will improve your tennis game by: Teaching you when to play near the net player. Improve your overall net game. Encourage you to practice being aggressive at the net. Finding a backhand volley. Execute deep lobs.",
+    pubDate: "2026-06-24T23:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-25/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-06-25T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Pilates for All Bodies with Laura",
+    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-06-25/",
+    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-06-25T18:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
   }
 ];
 
@@ -2453,6 +2464,18 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://ucarecdn.com/e85f9702-e225-45cd-9c77-3b9d939c883b/-/crop/4096x2049/0,547/-/preview/"
+  },
+  {
+    title: "Nik Parr & the Selfless Lovers",
+    link: "https://www.alibitelluride.com/calendar#eca-event=nik-parr-and-the-selfless-lovers",
+    description: "Nik Parr & The Selfless Lovers are a high-energy, piano-driven roots rock band h...",
+    pubDate: "2026-07-30",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/5e2a35ce-6185-49b8-9c47-4f5ecdbf4b5b/-/crop/1080x541/0,225/-/preview/"
   }
 ];
 
@@ -3709,18 +3732,6 @@ const NORWOOD_EVENTS = [
 const MOUNTAIN_VILLAGE_EVENTS = [];
 
 const TELLURIDE_COM_EVENTS = [
-  {
-    title: "Party in the Park",
-    link: "https://www.telluride.com/event/party-in-the-park/",
-    description: "Head to Town Park for Party in the Park, benefiting Telluride Schools and the Telluride Education Foundation on May …",
-    pubDate: "2026-05-30",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/58124/download_10.800x533.webp"
-  },
   {
     title: "Bike Rodeo",
     link: "https://www.telluride.com/event/bike-rodeo/",
@@ -5712,6 +5723,78 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/36164/dsc8590_1.800x533.webp"
+  },
+  {
+    title: "Music on the Green Summer Concert Series",
+    link: "https://www.telluride.com/event/music-on-the-green-summer-concert-series/",
+    description: "The Telluride Mountain Village Owners Association (TMVOA) and Beyond the Groove Productions Present Music on the Green …",
+    pubDate: "2026-07-31",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/44414/16c6ff81-d87c-823e-1bd2-8a66b859eb9d.800x533.webp"
+  },
+  {
+    title: "Telluride Farmers&#039; Market",
+    link: "https://www.telluride.com/event/telluride-farmers-market/",
+    description: "The Telluride Farmers' Market provides the highest quality produce, animal products, prepared food and more to …",
+    pubDate: "2026-07-31",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/44554/img_0071.800x533.webp"
+  },
+  {
+    title: "Telluride Farmers&#039; Market Music Series",
+    link: "https://www.telluride.com/event/telluride-farmers-market-music-series/",
+    description: "Augment Music Project sponsors local music in various ways, including weekly performances at the Telluride Farmers' …",
+    pubDate: "2026-07-31",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/54793/20240705_111835.800x533.webp"
+  },
+  {
+    title: "San Miguel Basin Fair and Rodeo",
+    link: "https://www.telluride.com/event/san-miguel-basin-fair-and-rodeo/",
+    description: "The San Miguel Basin Fair takes place every summer at the San Miguel County Fairgrounds in Norwood. Livestock shows …",
+    pubDate: "2026-07-31",
+    endDate: "2026-08-02",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/44941/60e630d2b3fd1_image.800x533.webp"
+  },
+  {
+    title: "New York Philharmonic Brass Quintet",
+    link: "https://www.telluride.com/event/new-york-philharmonic-brass-quintet/",
+    description: "The incredible New York Philharmonic Principal Brass Quintet perform in Telluride! Don’t miss the best brass players …",
+    pubDate: "2026-07-31",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62212/nyp_brass.800x533.webp"
+  },
+  {
+    title: "The Brass Family",
+    link: "https://www.telluride.com/event/the-brass-family/",
+    description: "“The Brass Family” – with the New York Philharmonic Principal Brass Quintet Learn all about brass instruments in …",
+    pubDate: "2026-07-31",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62214/nyp_education.800x533.webp"
   }
 ];
 
@@ -6052,25 +6135,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluride.gov/bids.aspx?bidID=129",
     address: "",
     totBidID: "129"
-  },
-  {
-    title: "Water Court -- Diligence Application for NWC Conditional Water Rights (Case No. 26CW3016)",
-    entity: "Colorado District Court, Water Division No. 4",
-    entityClass: "ent-county",
-    entityLogo: "water_court",
-    icon: "💧",
-    iconClass: "type-bid",
-    type: "Water Court",
-    filterTag: "water-court",
-    summary: "Norwood Water Commission filed a diligence application in Water Division 4 for multiple conditional water rights including reservoirs and pumps in the San Miguel River basin. The application seeks to show reasonable diligence in developing water rights originally decreed in 2013, with subsequent diligence found in 2019. The water rights are for irrigation, municipal, power generation, augmentation and piscatorial uses serving up to 20,000 acres in the NWC service area.",
-    deadline: "Not specified in notice",
-    expires: "2026-05-31",
-    dates: "4/9",
-    papers: ["ttimes_0409"],
-    url: "https://www.telluridenews.com/news/legals/article_53f99203-76eb-4168-b3a4-392ac65857e4.html",
-    address: "Multiple locations in San Miguel County including SW1/4 NE1/4 Section 10, T42N R12W; NW1/4 NW1/4 Section 22, T44N R13W; SE1/4 SE1/4 Section 9, T44N R13W; and other locations",
-    noticeKey: "26CW3016",
-    caseNumber: "26CW3016"
   },
   {
     title: "RFP -- Boiler System Replacement at Down Valley Park",
