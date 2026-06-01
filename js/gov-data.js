@@ -2230,6 +2230,16 @@ const LOCAL_ORGS = [
       donate: "https://tithe.ly/give?c=722193",
       social: { facebook: "https://www.facebook.com/ucsjridgway" },
       logo: "https://livabletelluride.org/logo/Ridgway%20United%20Church.jpg"
+    },
+    {
+      name: "Voyager Youth Program",
+      category: "youth",
+      town: "Ouray",
+      summary: "Ouray County youth nonprofit offering after-school enrichment for elementary students, summer programs for kids and tweens, and the H.U.B.B. teen program with events, volunteering, and internships.",
+      website: "https://www.voyageryouth.org/our-history",
+      donate: "https://www.paypal.com/donate/?hosted_button_id=LVGG2YTMFAP9J",
+      social: { facebook: "https://www.facebook.com/voyageryouth/", instagram: "https://www.instagram.com/voyageryouth/" },
+      logo: "https://livabletelluride.org/logo/Ouray%20Voyager%20Youth.jpg"
     }
 ];
 
