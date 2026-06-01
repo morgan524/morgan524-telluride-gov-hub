@@ -1691,24 +1691,7 @@
        because the two remaining options are independent (you can want
        both, or neither). */
 
-    /* Send an email-verification link with a continue URL so the
-       post-verification Firebase page has a "Continue → Hub-Bub" link
-       back to the site (otherwise the user lands on a dead-end
-       firebaseapp.com page). The continue URL's domain must be in
-       Firebase Auth → Authorized domains; if it isn't yet, Firebase
-       rejects it, so we fall back to a plain send (lands on the default
-       page) rather than failing to send at all. Compat-SDK user. */
-    const HB_VERIFY_CONTINUE_URL = 'https://livabletelluride.org/hub-bub.html';
-    function hbSendVerification(user) {
-      if (!user || !user.sendEmailVerification) return Promise.resolve();
-      return user.sendEmailVerification({ url: HB_VERIFY_CONTINUE_URL }).catch(function (e) {
-        var code = (e && e.code) || '';
-        if (/unauthorized-continue-uri|invalid-continue-uri|missing-continue-uri/.test(code)) {
-          return user.sendEmailVerification();
-        }
-        throw e;
-      });
-    }
+    /* hbSendVerification removed 2026-05-31 — email verification dropped 2026-05-28 */
 
     /* Open triggers */
     document.getElementById('hbOpenSignup').addEventListener('click', () => openModal('signup'));
@@ -1900,42 +1883,7 @@
       });
     });
 
-    /* Resend the email-verification link. Firebase requires the user to be
-       authenticated to resend, so we sign in with the entered credentials
-       first, then send the link (and skip if already verified). Uses the
-       compat SDK (always loaded); the login fields supply the email/pw. */
-    window.hbResendVerification = function () {
-      const email    = document.getElementById('hbLoginEmail').value.trim();
-      const password = document.getElementById('hbLoginPassword').value;
-      if (!email || !password) {
-        return showMsg('hbLoginMsg', 'Enter your email and password above first — we sign you in to send a fresh verification link.', 'error');
-      }
-      showMsg('hbLoginMsg', 'Sending verification email…', 'success');
-      waitForFirebase(function () {
-        if (!(window.firebase && window.firebase.auth)) {
-          return showMsg('hbLoginMsg', 'Still loading — try again in a moment.', 'error');
-        }
-        window.firebase.auth().signInWithEmailAndPassword(email, password)
-          .then(function () {
-            const u = window.firebase.auth().currentUser;
-            if (!u) throw new Error('No current user after sign-in.');
-            if (u.emailVerified) {
-              showMsg('hbLoginMsg', '✓ Your email is already verified — just log in.', 'success');
-              return;
-            }
-            return hbSendVerification(u).then(function () {
-              showMsg('hbLoginMsg', '✓ Verification email sent to ' + email + '. Check your inbox/spam, click the link, then reload this page.', 'success');
-            });
-          })
-          .catch(function (err) {
-            const code = (err && err.code) || '';
-            const friendly = /wrong-password|user-not-found|invalid-credential/.test(code)
-              ? 'Incorrect email or password — we need them to send a new verification link.'
-              : (err && err.message) || 'Could not send the verification email.';
-            showMsg('hbLoginMsg', friendly, 'error');
-          });
-      });
-    };
+    /* hbResendVerification removed 2026-05-31 — email verification dropped 2026-05-28 */
 
     /* Enter key submit */
     document.getElementById('hbSignupPassword').addEventListener('keydown', e => {
