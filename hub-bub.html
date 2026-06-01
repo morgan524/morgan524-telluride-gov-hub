@@ -1609,9 +1609,14 @@
         <p class="hb-modal-sub">Use the email and password you set when you created your account.</p>
 
         <div id="hbLoginFields">
+          <!-- Real <form> with username/current-password autocomplete so the
+               browser's password manager offers to save + autofill the login
+               on this device. The submit logic runs on the form's submit
+               event (preventDefault), which is what triggers the save prompt. -->
+          <form id="hbLoginForm" novalidate>
           <div class="hb-modal-field">
             <label for="hbLoginEmail">Email address</label>
-            <input type="email" id="hbLoginEmail" autocomplete="email" placeholder="jane@example.com">
+            <input type="email" id="hbLoginEmail" name="username" autocomplete="username" placeholder="jane@example.com">
           </div>
 
           <div class="hb-modal-field">
@@ -1619,10 +1624,11 @@
               Password
               <a href="javascript:void(0)" onclick="hbForgotPassword()" style="font-size:0.8rem;font-weight:600;color:var(--forest);text-decoration:underline;">Forgot password?</a>
             </label>
-            <input type="password" id="hbLoginPassword" autocomplete="current-password" placeholder="Your password">
+            <input type="password" id="hbLoginPassword" name="password" autocomplete="current-password" placeholder="Your password">
           </div>
 
-          <button class="hb-modal-submit" id="hbLoginSubmit" type="button">Log in</button>
+          <button class="hb-modal-submit" id="hbLoginSubmit" type="submit">Log in</button>
+          </form>
           <div class="hb-modal-switch">Don't have an account? <a id="hbSwitchToSignup">Create one free</a></div>
           <div class="hb-modal-msg" id="hbLoginMsg"></div>
           <div class="hb-modal-msg" id="hbLoginError" style="display:none;color:#c0392b;font-size:0.87rem;margin-top:8px;padding:10px 12px;background:#fdf0f0;border-radius:8px;border:1px solid #f5c6c6;"></div>
@@ -1910,8 +1916,10 @@
     });
 
     /* ── LOGIN submit ── */
-    document.getElementById('hbLoginSubmit').addEventListener('click', function () {
-      const btn      = this;
+    document.getElementById('hbLoginForm').addEventListener('submit', function (e) {
+      e.preventDefault();   // SPA login — no navigation; the submit event still
+                            // fires the browser's "save password?" prompt.
+      const btn      = document.getElementById('hbLoginSubmit');
       const email    = document.getElementById('hbLoginEmail').value.trim();
       const password = document.getElementById('hbLoginPassword').value;
 
@@ -1959,12 +1967,11 @@
 
     /* hbResendVerification removed 2026-05-31 — email verification dropped 2026-05-28 */
 
-    /* Enter key submit */
+    /* Enter key submit (signup only — the login form submits natively on
+       Enter now that it's a real <form>; binding a click here too would
+       double-fire the submit handler). */
     document.getElementById('hbSignupPassword').addEventListener('keydown', e => {
       if (e.key === 'Enter') document.getElementById('hbSignupSubmit').click();
-    });
-    document.getElementById('hbLoginPassword').addEventListener('keydown', e => {
-      if (e.key === 'Enter') document.getElementById('hbLoginSubmit').click();
     });
   })();
   </script>

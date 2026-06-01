@@ -993,7 +993,7 @@ const WHY_THIS_MATTERS = [
     who: 'Every commuter, worker, and visitor who uses the gondola, plus all property taxpayers in the SMART district.',
     stage: 'Check agenda for specific action items.',
     impact: 'The gondola (built 1996) is critical regional infrastructure. The current funding agreement expires in 2027. Ballot Issue 3A approved ~$8.2M/year in new tax revenue, but a replacement gondola is estimated at $120-150M+ -- leaving a significant funding gap.',
-    context: 'CORA records revealed over $175,000 in consultant spending before the 3A ballot referral, including $68K on polling (Keating Research) and $170K on project management (Kerry Donovan/Ulysses). "Friends of the Gondola" raised $130K, with $60K from TMVOA and $60K from the Four Seasons developer. The campaign marketed the measure as funding a "new gondola" but the actual revenue only covers a fraction of replacement cost.'
+    context: 'CORA records revealed over $175,000 in consultant spending before the 3A ballot referral, including $68K on polling (Keating Research) and $170K on project management (Ulysses Consulting). "Friends of the Gondola" raised $130K, with $60K from TMVOA and $60K from the Four Seasons developer. The campaign marketed the measure as funding a "new gondola" but the actual revenue only covers a fraction of replacement cost.'
   },
 
   // ── BOCC / Lucarelli Litigation ──
@@ -1435,10 +1435,10 @@ const LAND_USE_ISSUES = {
 };
 
 const GONDOLA_DATA = {
-  legalSummary: 'This case involved a challenge to the 3A campaign claiming that SMART failed to provide adequate TABOR notice because voters were not told where, when, or how to submit opposing comments for inclusion in the ballot notice. Additionally, the 3A campaign was claimed to be misleading in suggesting the measure would meaningfully fund a new gondola. The district court rejected the plaintiff\'s election claims. However, rather than let the matter rest, the public entities of Mountain Village, Town of Telluride, and SMART brought motions seeking attorney fees for just under $100,000. Plaintiff believes these claims were vindictive and is currently appealing such award in court.',
+  legalSummary: 'This case involved a challenge to the 3A campaign claiming that SMART failed to provide adequate TABOR notice because voters were not told where, when, or how to submit opposing comments for inclusion in the ballot notice. Additionally, the 3A campaign was claimed to be misleading in suggesting the measure would meaningfully fund a new gondola. The district court rejected the plaintiff\'s election claims. However, rather than let the matter rest, the public entities of Mountain Village, Town of Telluride, and SMART brought motions seeking attorney fees for just over $100,000. Plaintiff is currently appealing such award in court.',
   intro: 'Ballot Issue 3A approved ~$8.2M/year in new SMART district tax revenue marketed as funding a new gondola. But the current gondola (built 1996) has a replacement cost estimated at $120-150M+, leaving a significant funding gap. CORA records revealed over $175,000 in consultant spending before the ballot referral.',
   statusTitle: 'The gondola funding agreement expires in 2027 -- and the math does not add up.',
-  statusCopy: '3A revenue covers a fraction of the replacement cost. CORA requests uncovered $68K on polling (Keating Research), $170K on project management (Kerry Donovan/Ulysses), and "Friends of the Gondola" raising $130K -- including $60K from TMVOA and $60K from the Four Seasons developer. The campaign marketed the measure as funding a "new gondola" but actual revenue only covers operating and partial capital costs.',
+  statusCopy: '3A revenue covers a fraction of the replacement cost. CORA requests uncovered $68K on polling (Keating Research), $170K on project management (Ulysses Consulting), and "Friends of the Gondola" raising $130K -- including $60K from TMVOA and $60K from the Four Seasons developer. The campaign marketed the measure as funding a "new gondola" but actual revenue only covers operating and partial capital costs.',
   nextStep: 'Watch SMART Board meetings for capital planning, funding strategy, and any new ballot measures or intergovernmental agreements.',
   metrics: [
     { label: 'Core tension', value: '$8.2M/year approved vs. $120-150M+ replacement cost', sub: 'The ballot measure was marketed as funding a new gondola but the revenue covers a fraction of the estimated replacement cost.' },
@@ -1461,7 +1461,7 @@ const GONDOLA_DATA = {
   ],
   legalIssues: [
     { icon: '💰', title: 'Funding gap and voter expectations', copy: '3A was marketed as funding a "new gondola," but ~$8.2M/year covers only a fraction of the $120-150M+ estimated replacement cost. Whether the ballot language created enforceable voter expectations is an open question.' },
-    { icon: '📋', title: 'Pre-ballot consultant spending', copy: 'CORA records revealed $68K on polling (Keating Research), $170K on project management (Kerry Donovan/Ulysses), and a "Friends of the Gondola" campaign raising $130K -- including $60K from TMVOA and $60K from a Four Seasons developer. The timing and sourcing of this spending raise transparency concerns.' },
+    { icon: '📋', title: 'Pre-ballot consultant spending', copy: 'CORA records revealed $68K on polling (Keating Research), $170K on project management (Ulysses Consulting), and a "Friends of the Gondola" campaign raising $130K -- including $60K from TMVOA and $60K from a Four Seasons developer. The timing and sourcing of this spending raise transparency concerns.' },
     { icon: '🔍', title: 'CORA compliance and public records', copy: 'Multiple CORA requests were required to piece together the full picture of pre-ballot spending. Delayed or incomplete responses raise questions about compliance with Colorado open records requirements.' },
     { icon: '⚖️', title: 'Intergovernmental authority and SMART governance', copy: 'The SMART district spans multiple jurisdictions. Questions persist about accountability, board governance, and whether the taxing authority is being used consistent with its enabling legislation.' }
   ],

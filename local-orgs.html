@@ -140,7 +140,50 @@
     }
 
     /* Add-Your-Organization sidebar card */
-    .sidebar { position: sticky; top: 100px; }
+    .sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 18px; }
+
+    /* Location filter card (left sidebar, mirrors Gov-Hub's entity list) */
+    .loc-card {
+      background: #fff;
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 18px 18px 20px;
+      box-shadow: var(--shadow-card);
+    }
+    .loc-card h3 {
+      margin: 0 0 12px;
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      color: var(--text-primary);
+    }
+    .loc-list { display: flex; flex-direction: column; gap: 4px; }
+    .loc-item {
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      background: none;
+      color: var(--text-secondary);
+      font-size: 0.9rem; font-weight: 600;
+      font-family: inherit;
+      text-align: left;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .loc-item:hover { background: var(--bg-paper); color: var(--text-primary); }
+    .loc-item.active { background: var(--forest); color: #fff; border-color: var(--forest); }
+    .loc-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .loc-count {
+      flex: 0 0 auto;
+      background: rgba(33,68,60,0.08);
+      color: var(--text-muted);
+      border-radius: 999px;
+      padding: 1px 9px;
+      font-size: 0.78rem; font-weight: 700;
+    }
+    .loc-item.active .loc-count { background: rgba(255,255,255,0.22); color: #fff; }
+    .org-empty { color: var(--text-muted); font-size: 0.95rem; padding: 20px 4px; }
     .add-org-card {
       background: var(--bg-hero);
       border: 1px solid var(--border-soft);
@@ -655,6 +698,10 @@
   <main class="page-wrap">
 
     <aside class="sidebar">
+      <div class="loc-card">
+        <h3>Filter by Location</h3>
+        <div class="loc-list" id="locList"><!-- populated by JS --></div>
+      </div>
       <div class="add-org-card">
         <div class="add-org-icon" aria-hidden="true">
           <!-- clipboard-plus icon -->
@@ -736,6 +783,7 @@
       nonprofits: 'Nonprofit'
     };
     let activeCat = 'all';
+    let activeTown = 'all';
 
     /* Sample orgs — real Telluride-area groups + real logos. Each org may
        carry any subset of social: { facebook, instagram, twitter, youtube }.
@@ -921,12 +969,41 @@
       `;
     }
 
+    /* Distinct towns present in the data, alphabetical, with counts. Derived
+       from ORGS so it tracks the live data automatically. Orgs with no town
+       only appear under "All Locations". */
+    function locationList() {
+      const counts = {};
+      ORGS.forEach(o => { if (o.town) counts[o.town] = (counts[o.town] || 0) + 1; });
+      return Object.keys(counts)
+        .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }))
+        .map(t => ({ key: t, label: t, count: counts[t] }));
+    }
+    function renderLocList() {
+      const locList = document.getElementById('locList');
+      if (!locList) return;
+      const locs = [{ key: 'all', label: 'All Locations', count: ORGS.length }].concat(locationList());
+      locList.innerHTML = locs.map(l => {
+        const cls = l.key === activeTown ? 'loc-item active' : 'loc-item';
+        const key = String(l.key).replace(/"/g, '&quot;');
+        return `<button type="button" class="${cls}" data-town="${key}"><span class="loc-name">${l.label}</span><span class="loc-count">${l.count}</span></button>`;
+      }).join('');
+      locList.querySelectorAll('.loc-item[data-town]').forEach(it => {
+        it.addEventListener('click', () => { activeTown = it.dataset.town; render(); });
+      });
+    }
     function render() {
       document.getElementById('chipRow').innerHTML = chipsHtml();
-      const filtered = activeCat === 'all'
-        ? ORGS
-        : ORGS.filter(o => o.category === activeCat);
-      document.getElementById('orgGrid').innerHTML = filtered.map(orgCardHtml).join('');
+      renderLocList();
+      let list = ORGS.slice();
+      if (activeCat !== 'all')  list = list.filter(o => o.category === activeCat);
+      if (activeTown !== 'all') list = list.filter(o => o.town === activeTown);
+      // Alphabetical by org name (case-insensitive).
+      list.sort((a, b) => (a.name || '').localeCompare(b.name || '', undefined, { sensitivity: 'base' }));
+      const grid = document.getElementById('orgGrid');
+      grid.innerHTML = list.length
+        ? list.map(orgCardHtml).join('')
+        : '<p class="org-empty">No organizations match these filters.</p>';
       document.querySelectorAll('.chip[data-cat]').forEach(chip => {
         chip.addEventListener('click', () => {
           activeCat = chip.dataset.cat;
