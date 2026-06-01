@@ -39,11 +39,12 @@
     .topnav-links a {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       color: var(--text-primary); text-decoration: none; font-weight: 600;
-      /* 0.82rem → 0.76rem so the 9 links + language selector all fit on
-         one line at the default 1280px max-width. Combined with
-         white-space:nowrap so a two-word label like "Local News" doesn't
-         split into "Local" / "News" when the row gets tight. */
-      font-size: 0.76rem;
+      /* 0.92rem — bumped up from 0.76rem to better fill the nav bar. The
+         8 links + language selector + CTA still fit on one line at the
+         1280px max-width (intrinsic row ≈1007px < 1216px inner). Combined
+         with white-space:nowrap so a two-word label like "Local News"
+         doesn't split into "Local" / "News" when the row gets tight. */
+      font-size: 0.92rem;
       white-space: nowrap;
       padding: 6px 2px; border-bottom: 2px solid transparent;
       transition: color 0.15s, border-color 0.15s;

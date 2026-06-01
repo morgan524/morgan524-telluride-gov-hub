@@ -139,36 +139,13 @@
   window.hbCloseAuth = function() {
     document.getElementById('hbAuthModal').classList.remove('open');
   };
-  window.hbDoSignup = function() {
-    if (!hbFirebaseReady) { hbShowConfigNeeded(); return; }
-    var name = document.getElementById('hbSignupName').value.trim();
-    var email = document.getElementById('hbSignupEmail').value.trim();
-    var pass = document.getElementById('hbSignupPassword').value;
-    var errEl = document.getElementById('hbSignupError');
-    if (!name) { errEl.textContent = 'Please enter a display name.'; errEl.style.display = 'block'; return; }
-    if (!email) { errEl.textContent = 'Please enter your email.'; errEl.style.display = 'block'; return; }
-    if (pass.length < 6) { errEl.textContent = 'Password must be at least 6 characters.'; errEl.style.display = 'block'; return; }
-    auth.createUserWithEmailAndPassword(email, pass)
-      .then(function(cred) {
-        return cred.user.updateProfile({ displayName: name }).then(function() {
-          return cred.user.sendEmailVerification();
-        }).then(function() {
-          // Save user profile to Firestore
-          return db.collection('users').doc(cred.user.uid).set({
-            displayName: name,
-            createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-            postCount: 0
-          });
-        });
-      })
-      .then(function() {
-        document.getElementById('hbVerifyEmail').textContent = email;
-        hbShowAuth('verify');
-      })
-      .catch(function(err) {
-        errEl.textContent = err.message; errEl.style.display = 'block';
-      });
-  };
+  // NOTE: the old window.hbDoSignup() lived here and was removed 2026-06-01.
+  // It was dead code — never called anywhere, read a `hbSignupName` field
+  // that no longer exists, only required a single name, used a 6-char
+  // password minimum, and re-introduced the email verification step that
+  // was dropped 2026-05-28. The live signup is the inline handler bound to
+  // #hbSignupSubmit in hub-bub.html (separate First/Last name fields, both
+  // required; 8-char password; no verification).
   // hbDoLogin is now handled by addEventListener on #hbLoginBtn below
   window.hbForgotPassword = function() {
     var email  = document.getElementById('hbLoginEmail').value.trim();
