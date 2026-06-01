@@ -696,7 +696,7 @@
       border: none !important;
       cursor: pointer !important;
       font-size: 1.1rem !important;
-      opacity: 0.28 !important;
+      opacity: 0.75 !important;
       padding: 2px 4px !important;
       border-radius: 5px !important;
       transition: opacity 0.15s ease, background 0.15s ease;
@@ -707,6 +707,47 @@
       opacity: 1 !important;
       background: rgba(197,48,48,0.10) !important;
     }
+    /* Author/admin action cluster (edit + delete), top-right of card header */
+    .hb-post-actions { margin-left: auto; display: flex; gap: 2px; align-self: flex-start; }
+    .hb-post-action-btn {
+      background: none; border: none; cursor: pointer;
+      font-size: 1rem; opacity: 0.75; padding: 2px 5px;
+      border-radius: 5px; line-height: 1;
+      transition: opacity 0.15s ease, background 0.15s ease;
+    }
+    .hb-post-action-btn:hover { opacity: 1; background: rgba(33,68,60,0.10); }
+    .hb-post-actions .hb-admin-delete-btn { margin-left: 0 !important; align-self: center !important; }
+    /* Inline edit form — hides the read-only title/body while open */
+    .hb-post.editing .hb-post-title,
+    .hb-post.editing .hb-post-body,
+    .hb-post.editing .hb-read-more { display: none; }
+    .hb-edit-form {
+      margin: 10px 0 4px; padding: 12px;
+      border: 1px solid var(--border-soft, #d8e0db);
+      border-radius: 10px; background: #f7faf8;
+    }
+    .hb-edit-label {
+      display: block; font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.03em;
+      color: #6a7a73; margin: 0 0 4px;
+    }
+    .hb-edit-title, .hb-edit-body {
+      width: 100%; box-sizing: border-box; padding: 8px 10px; margin-bottom: 10px;
+      border: 1px solid #ccc; border-radius: 6px; font-family: inherit; font-size: 0.9rem;
+    }
+    .hb-edit-body { resize: vertical; min-height: 90px; line-height: 1.5; }
+    .hb-edit-title:focus, .hb-edit-body:focus { outline: none; border-color: #21443c; }
+    .hb-edit-actions { display: flex; align-items: center; gap: 8px; }
+    .hb-edit-save {
+      background: var(--forest, #21443c); color: #fff; border: none; cursor: pointer;
+      padding: 7px 14px; border-radius: 6px; font-weight: 600; font-size: 0.85rem;
+    }
+    .hb-edit-save:disabled { opacity: 0.6; cursor: default; }
+    .hb-edit-cancel {
+      background: #fff; color: #555; border: 1px solid #ccc; cursor: pointer;
+      padding: 7px 12px; border-radius: 6px; font-size: 0.85rem;
+    }
+    .hb-edit-msg { font-size: 0.8rem; color: #a33; }
     /* Posts feed: strip its top padding so hb-posts-feed grid controls spacing */
     #hbPostsFeed { margin-top: 0 !important; }
     /* Loading spinner stays in feed */
@@ -930,6 +971,37 @@
       .hb-og-desc  { font-size: .82rem; color: #555; margin-bottom: 4px;
                      overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
       .hb-og-domain { font-size: .76rem; color: #21443c; font-weight: 600; }
+      /* og:image fallback card (no preview image available) renders text-only */
+      .hb-og-preview.hb-og-textonly { background: #f5f5f3; }
+      /* ── Social-media warning + live composer link preview ─────────────── */
+      .hb-link-warning {
+        font-size: .76rem; color: #8a6d1f; background: #fdf6e3;
+        border: 1px solid #f0e3bf; border-radius: 6px;
+        padding: 6px 9px; margin-top: 6px; line-height: 1.35;
+      }
+      .hb-compose-link-preview { margin-top: 8px; }
+      .hb-clp-loading, .hb-clp-empty { font-size: .8rem; color: #777; padding: 6px 2px; }
+      .hb-clp-card {
+        display: flex; gap: 10px; align-items: center;
+        border: 1px solid #ddd; border-radius: 8px; background: #fafafa; padding: 8px;
+      }
+      .hb-clp-card img {
+        width: 64px; height: 64px; object-fit: cover; border-radius: 6px;
+        flex: 0 0 auto; background: #eee;
+      }
+      .hb-clp-text { min-width: 0; flex: 1; }
+      .hb-clp-title {
+        font-weight: 700; font-size: .85rem; color: #1a1a1a;
+        overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+      }
+      .hb-clp-domain { font-size: .74rem; color: #21443c; font-weight: 600; margin-top: 2px; }
+      .hb-clp-note { font-size: .74rem; color: #777; margin-top: 3px; line-height: 1.3; }
+      .hb-clp-note.ok { color: #2f7a5f; }
+      .hb-clp-note.warn { color: #8a6d1f; }
+      .hb-clp-remove {
+        flex: 0 0 auto; background: none; border: none; color: #a33;
+        font-size: 1.2rem; cursor: pointer; padding: 0 4px; line-height: 1;
+      }
       /* ── Reply compose URL row ─────────────────────────────────────────── */
       .hb-reply-url-row { margin: 4px 0; }
       .hb-reply-url-input {
@@ -1381,6 +1453,8 @@
                     <input type="url" id="hbComposeLinkUrl"
                            placeholder="https://... — the page’s hero image will appear on your post"
                            style="width:100%;box-sizing:border-box;padding:7px 10px;border:1px solid #ccc;border-radius:6px;font-size:0.88rem;">
+                    <div class="hb-link-warning">⚠️ Social media links won’t show any image from the post, but you can add the link if you like.</div>
+                    <div id="hbComposeLinkPreview" class="hb-compose-link-preview"></div>
                   </div>
                   <div class="hb-compose-actions">
                     <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;">

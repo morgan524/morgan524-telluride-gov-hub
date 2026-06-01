@@ -354,6 +354,88 @@
   }
   document.getElementById('hbComposeTitle').addEventListener('input', hbUpdatePostBtn);
   document.getElementById('hbComposeBody').addEventListener('input', hbUpdatePostBtn);
+
+  // ── Link preview: live composer preview + paste-to-unfurl ──────────────
+  // (a) typing/pasting in the URL field shows a live thumbnail so the author
+  //     sees the photo before posting; (b) pasting a URL straight into the
+  //     body auto-detects it and fills the URL field, so they don't have to
+  //     click "Add Link" first. hbFetchOgPreview / hbEsc are hoisted decls.
+  (function wireComposerLinkPreview() {
+    var bodyEl = document.getElementById('hbComposeBody');
+    var urlEl  = document.getElementById('hbComposeLinkUrl');
+    var rowEl  = document.getElementById('hbComposeLinkRow');
+    var prevEl = document.getElementById('hbComposeLinkPreview');
+    if (!urlEl || !prevEl) return;
+    var debTimer = null, lastPreviewed = '', autoLink = '';
+
+    function clearPreview() { lastPreviewed = ''; prevEl.innerHTML = ''; }
+
+    function showPreview(url) {
+      url = (url || '').trim();
+      if (url === lastPreviewed) return;
+      lastPreviewed = url;
+      if (!/^https?:\/\//i.test(url)) { prevEl.innerHTML = ''; return; }
+      prevEl.innerHTML = '<div class="hb-clp-loading">Loading preview…</div>';
+      hbFetchOgPreview(url, function(data) {
+        // Drop stale responses if the field changed while fetching.
+        if ((urlEl.value || '').trim() !== url) return;
+        var host = ''; try { host = new URL(url).hostname; } catch(e) { host = url; }
+        var hasImg = !!(data && data.imageUrl);
+        var note = hasImg
+          ? '<div class="hb-clp-note ok">✓ This image will appear on your post.</div>'
+          : '<div class="hb-clp-note warn">No preview image for this link — your post will show a text link card. (Facebook, Instagram &amp; other social links can’t show a photo.)</div>';
+        prevEl.innerHTML =
+          '<div class="hb-clp-card">' +
+            (hasImg ? '<img src="' + hbEsc(data.imageUrl) + '" alt="" onerror="this.remove()">' : '') +
+            '<div class="hb-clp-text">' +
+              '<div class="hb-clp-title">' + hbEsc((data && data.title) || host) + '</div>' +
+              '<div class="hb-clp-domain">' + hbEsc(host) + '</div>' +
+              note +
+            '</div>' +
+            '<button type="button" class="hb-clp-remove" title="Remove link" aria-label="Remove link">×</button>' +
+          '</div>';
+        prevEl.querySelector('.hb-clp-remove').addEventListener('click', function() {
+          urlEl.value = ''; autoLink = ''; clearPreview();
+        });
+      });
+    }
+
+    urlEl.addEventListener('input', function() {
+      // Hand-editing the field detaches it from body auto-detection.
+      if (urlEl.value.trim() !== autoLink) autoLink = '';
+      clearTimeout(debTimer);
+      debTimer = setTimeout(function() { showPreview(urlEl.value); }, 500);
+    });
+
+    // Auto-detect the first URL typed/pasted into the body.
+    function scanBody() {
+      var m = (bodyEl.value || '').match(/https?:\/\/[^\s<>"')]+/i);
+      var found = m ? m[0] : '';
+      var current = urlEl.value.trim();
+      if (found) {
+        // Fill only if the field is empty or still holds a prior auto value,
+        // so we never clobber a URL the author typed by hand.
+        if ((!current || current === autoLink) && found !== current) {
+          urlEl.value = found;
+          autoLink = found;
+          if (rowEl && rowEl.style.display === 'none') rowEl.style.display = '';
+          showPreview(found);
+        }
+      } else if (current && current === autoLink) {
+        // The auto-detected URL was removed from the body → clear it.
+        urlEl.value = ''; autoLink = ''; clearPreview();
+      }
+    }
+    if (bodyEl) {
+      bodyEl.addEventListener('input', scanBody);
+      bodyEl.addEventListener('paste', function() { setTimeout(scanBody, 0); });
+    }
+
+    // Exposed so hbSubmitPost's reset can fully clear the preview state
+    // (programmatic value changes don't fire 'input', so lastPreviewed
+    // would otherwise go stale and suppress the next identical URL).
+    window.hbResetLinkPreview = function() { urlEl.value = ''; autoLink = ''; clearPreview(); };
+  })();
   // File attachments
   window.hbTriggerAttach = function() {
     document.getElementById('hbFileInput').click();
@@ -617,6 +699,7 @@
       document.querySelectorAll('[data-hb-step]').forEach(function(b) { b.classList.remove('selected'); });
       var _lr=document.getElementById('hbComposeLinkRow'),_li=document.getElementById('hbComposeLinkUrl'),_lb=document.getElementById('hbComposeLinkBtn');
       if(_lr)_lr.style.display='none'; if(_li)_li.value=''; if(_lb)_lb.style.background='';
+      if(window.hbResetLinkPreview)window.hbResetLinkPreview();
       hbPendingAttachments = [];
       hbRenderAttachPreview();
       hbRemovePhoto();
@@ -899,8 +982,18 @@
         '</div>'
       : rightColHtml;
 
-    var adminDeleteBtn = (hbUser && hbUser.email === 'info@livabletelluride.org')
-      ? '<button class="hb-admin-delete-btn" onclick="hbAdminDelete(\'' + post.id + '\')" title="Delete post">🗑</button>'
+    // Edit + Delete actions — shown to the post's author OR the admin.
+    // firestore.rules enforces the same (author/admin) server-side, so this
+    // is a UI convenience, not the security boundary.
+    var canManagePost = hbUser && (
+      hbUser.email === 'info@livabletelluride.org' ||
+      post.authorUid === hbUser.uid || post.authorId === hbUser.uid
+    );
+    var ownerActionsHtml = canManagePost
+      ? '<div class="hb-post-actions">' +
+          '<button class="hb-post-action-btn" onclick="hbEditPost(\'' + post.id + '\')" title="Edit post">✎</button>' +
+          '<button class="hb-post-action-btn hb-admin-delete-btn" onclick="hbDeletePost(\'' + post.id + '\')" title="Delete post">🗑</button>' +
+        '</div>'
       : '';
 
     // Last-resort name fallback at render time: if a legacy post stored
@@ -924,10 +1017,11 @@
             '<span class="hb-post-author">' + hbEsc(displayAuthor) + '</span>' +
             '<span class="hb-post-sep">·</span>' +
             '<span class="hb-post-meta">' + timeStr + '</span>' +
+            (post.editedAt ? '<span class="hb-post-sep">·</span><span class="hb-post-meta">edited</span>' : '') +
           '</div>' +
         '</div>' +
         badgeHtml +
-        adminDeleteBtn +
+        ownerActionsHtml +
       '</div>' +
       wrappedBody +
       nextStepHtml +
@@ -1037,14 +1131,18 @@
   // ═══════════════════════════════
   // ADMIN DELETE
   // ═══════════════════════════════
-  window.hbAdminDelete = function(postId) {
-    if (!hbUser || hbUser.email !== 'info@livabletelluride.org') return;
+  window.hbDeletePost = function(postId) {
+    if (!hbUser) return;
     if (!confirm('Are you sure you want to delete this post? This cannot be undone.')) return;
     // First read the post to collect its Storage file URLs (featured photo +
     // attachments), so we can delete those objects too and not leave orphans
     // in the bucket. Then delete the doc, its replies, and the files.
     db.collection('posts').doc(postId).get().then(function(snap) {
       var data = snap.exists ? (snap.data() || {}) : {};
+      // Author OR admin only (mirrors firestore.rules; server enforces too).
+      var isAdmin = hbUser.email === 'info@livabletelluride.org';
+      var isAuthor = data.authorUid === hbUser.uid || data.authorId === hbUser.uid;
+      if (!isAdmin && !isAuthor) { alert('You can only delete your own posts.'); throw new Error('__abort__'); }
       var fileUrls = [];
       if (data.imageUrl) fileUrls.push(data.imageUrl);
       if (Array.isArray(data.attachments)) {
@@ -1073,7 +1171,77 @@
       }
       hbLoadPosts();
     }).catch(function(err) {
+      if (err && err.message === '__abort__') return;  // permission gate, already messaged
       alert('Error deleting post: ' + err.message);
+    });
+  };
+  // Backward-compat alias: older cached markup may still reference hbAdminDelete.
+  window.hbAdminDelete = window.hbDeletePost;
+
+  // Author/admin in-place editor — edits title + body of a post. Loads the
+  // current values fresh from Firestore (the card shows a truncated body),
+  // shows an inline form, and on save writes {title, body, editedAt} then
+  // reloads the feed. firestore.rules' Case-A update allows author/admin to
+  // change these fields; other users are limited to counter writes.
+  window.hbEditPost = function(postId) {
+    if (!hbUser) return;
+    var card = document.querySelector('.hb-post[data-post-id="' + (window.CSS && CSS.escape ? CSS.escape(postId) : postId) + '"]');
+    if (!card || card.querySelector('.hb-edit-form')) return;  // already editing
+    db.collection('posts').doc(postId).get().then(function(snap) {
+      if (!snap.exists) { alert('This post no longer exists.'); return; }
+      var d = snap.data() || {};
+      var isAdmin = hbUser.email === 'info@livabletelluride.org';
+      var isAuthor = d.authorUid === hbUser.uid || d.authorId === hbUser.uid;
+      if (!isAdmin && !isAuthor) { alert('You can only edit your own posts.'); return; }
+
+      var form = document.createElement('div');
+      form.className = 'hb-edit-form';
+      form.innerHTML =
+        '<label class="hb-edit-label">Title</label>' +
+        '<input type="text" class="hb-edit-title" maxlength="200">' +
+        '<label class="hb-edit-label">Post</label>' +
+        '<textarea class="hb-edit-body" maxlength="10000" rows="6"></textarea>' +
+        '<div class="hb-edit-actions">' +
+          '<button type="button" class="hb-edit-save">Save changes</button>' +
+          '<button type="button" class="hb-edit-cancel">Cancel</button>' +
+          '<span class="hb-edit-msg"></span>' +
+        '</div>';
+      form.querySelector('.hb-edit-title').value = d.title || '';
+      form.querySelector('.hb-edit-body').value = d.body || '';
+
+      // Hide the read-only title/body while editing, insert the form below head.
+      card.classList.add('editing');
+      var head = card.querySelector('.hb-post-head');
+      if (head) head.insertAdjacentElement('afterend', form); else card.insertBefore(form, card.firstChild);
+      form.querySelector('.hb-edit-body').focus();
+      form.scrollIntoView({ block: 'center', behavior: 'smooth' });
+
+      form.querySelector('.hb-edit-cancel').addEventListener('click', function() {
+        card.classList.remove('editing');
+        form.remove();
+      });
+      form.querySelector('.hb-edit-save').addEventListener('click', function() {
+        var t = form.querySelector('.hb-edit-title').value.trim();
+        var b = form.querySelector('.hb-edit-body').value.trim();
+        var msg = form.querySelector('.hb-edit-msg');
+        if (!t) { msg.textContent = 'A title is required.'; return; }
+        if (t.length > 200) { msg.textContent = 'Title must be 200 characters or fewer.'; return; }
+        if (b.length > 10000) { msg.textContent = 'Post is too long (10,000 character max).'; return; }
+        var saveBtn = this;
+        saveBtn.disabled = true; saveBtn.textContent = 'Saving…';
+        db.collection('posts').doc(postId).update({
+          title: t,
+          body: b,
+          editedAt: firebase.firestore.FieldValue.serverTimestamp()
+        }).then(function() {
+          hbLoadPosts();   // re-render with updated content + "edited" marker
+        }).catch(function(err) {
+          saveBtn.disabled = false; saveBtn.textContent = 'Save changes';
+          msg.textContent = 'Error saving: ' + err.message;
+        });
+      });
+    }).catch(function(err) {
+      alert('Could not load this post for editing: ' + err.message);
     });
   };
   // ═══════════════════════════════
@@ -1135,7 +1303,9 @@
       '<textarea placeholder="Write a reply..." id="hb-reply-text-' + postId + '"></textarea>' +
       '<div class="hb-reply-url-row" id="hb-reply-url-row-' + postId + '" style="display:none;">' +
         '<input type="url" class="hb-reply-url-input" id="hb-reply-url-' + postId + '"' +
-        ' placeholder="https://… — the page image will appear with your reply"></div>' +
+        ' placeholder="https://… — the page image will appear with your reply">' +
+        '<div class="hb-link-warning">⚠️ Social media links won’t show any image from the post, but you can add the link if you like.</div>' +
+      '</div>' +
       '<div class="hb-reply-actions">' +
         '<button class="hb-reply-link-btn" id="hb-reply-link-btn-' + postId + '"' +
         ' onclick="hbToggleReplyUrl(\'' + postId + '\')" title="Add a URL">🔗 Add Link</button>' +
@@ -1659,16 +1829,29 @@
   }
 
   function hbRenderLinkPreview(data, url, containerEl) {
-    if (!data || (!data.imageUrl && !data.title)) return;
     if (!containerEl || containerEl.querySelector('.hb-og-preview')) return;
     var hostname = '';
     try { hostname = new URL(url).hostname; } catch(e) { hostname = url; }
-    var imgHtml = data.imageUrl
-      ? '<img class="hb-og-img" src="' + hbEsc(data.imageUrl) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
-      : '';
     var card = document.createElement('a');
     card.className = 'hb-og-preview';
     card.href = url; card.target = '_blank'; card.rel = 'noopener';
+    // Graceful fallback — the site blocked the preview (e.g. Facebook /
+    // Instagram) or set no Open Graph tags. Still show a clean, clickable
+    // text-only link card so the reference doesn't silently vanish.
+    if (!data || (!data.imageUrl && !data.title)) {
+      card.className += ' hb-og-textonly';
+      card.innerHTML =
+        '<div class="hb-og-text">' +
+          '<div class="hb-og-title">' + hbEsc(hostname) + '</div>' +
+          '<div class="hb-og-domain">' + hbEsc(url) + '</div>' +
+        '</div>';
+      containerEl.appendChild(card);
+      return;
+    }
+    var imgHtml = data.imageUrl
+      ? '<img class="hb-og-img" src="' + hbEsc(data.imageUrl) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
+      : '';
+    if (!data.imageUrl) card.className += ' hb-og-textonly';
     card.innerHTML = imgHtml +
       '<div class="hb-og-text">' +
         (data.title ? '<div class="hb-og-title">' + hbEsc(data.title) + '</div>' : '') +
