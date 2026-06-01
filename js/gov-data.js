@@ -2172,6 +2172,7 @@ const LOCAL_ORGS = [
       summary: "An EFCA-affiliated church in Ouray announcing \"the hope and truth of the Good News.\" Offers Sunday worship, adult and youth Sunday school, children's ministry, Bible studies, and missions involvement.",
       website: "https://ouraychristianfellowship.org/",
       donate: "https://ouraychristianfellowship.org/online-giving/",
+      social: { facebook: "https://www.facebook.com/ouraychristianfellowship/" },
       logo: "https://livabletelluride.org/logo/Ouray%20Christian%20Fellowship.jpg"
     },
     {
@@ -2191,6 +2192,44 @@ const LOCAL_ORGS = [
       website: "https://www.ridgway.k12.co.us/",
       social: { facebook: "https://www.facebook.com/RidgwaySchoolDistrict/", instagram: "https://www.instagram.com/ridgwayschooldistrictr2/" },
       logo: "https://livabletelluride.org/logo/Ridgway%20School.png"
+    },
+    {
+      name: "Trust for Land Restoration",
+      category: "nonprofits",
+      town: "Ridgway",
+      summary: "Ridgway-based land conservation nonprofit working to preserve scenic landscapes and historic sites in the San Juan Mountains and to restore lands degraded by mining across Ouray, San Miguel, and San Juan counties.",
+      website: "https://restorationtrust.org/",
+      donate: "https://restorationtrust.org/donation/",
+      logo: "https://livabletelluride.org/logo/Ridgway%20Land%20Trust.gif"
+    },
+    {
+      name: "Ridgway Fire Protection District",
+      category: "nonprofits",
+      town: "Ridgway",
+      summary: "Volunteer fire protection district covering about 80 square miles of Ouray County including the town of Ridgway, with members trained in structural and wildland firefighting plus emergency medical, hazmat, and vehicle extrication.",
+      website: "https://ridgwayfire.org/",
+      social: { facebook: "https://www.facebook.com/RidgwayFire/", instagram: "https://www.instagram.com/ridgwayfire21" },
+      logo: "https://livabletelluride.org/logo/Ridgway%20Fire.png"
+    },
+    {
+      name: "Ridgway Community Church",
+      category: "churches",
+      town: "Ridgway",
+      summary: "A Bible-preaching, Bible-teaching church in Ridgway with Sunday worship at 10:15 AM, centered on Scripture and \"Giving All to Christ & Christ to All.\"",
+      website: "https://ridgwaychurch.com/",
+      donate: "https://ridgwaychurch.com/giving/",
+      social: { facebook: "https://www.facebook.com/ridgwaycommunitychurch/", instagram: "https://www.instagram.com/ridgwaycommunitychurch/" },
+      logo: "https://livabletelluride.org/logo/Ridgway%20Com%20Church.webp"
+    },
+    {
+      name: "United Church of the San Juans",
+      category: "churches",
+      town: "Ridgway",
+      summary: "An ecumenical united church in Ridgway affiliated with four mainline denominations (ELCA Lutheran, United Methodist, Presbyterian USA, and United Church of Christ), with Sunday worship at 10 AM in person and on Facebook livestream.",
+      website: "https://ucsjridgway.org/",
+      donate: "https://tithe.ly/give?c=722193",
+      social: { facebook: "https://www.facebook.com/ucsjridgway" },
+      logo: "https://livabletelluride.org/logo/Ridgway%20United%20Church.jpg"
     }
 ];
 
