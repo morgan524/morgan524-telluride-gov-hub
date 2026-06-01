@@ -608,6 +608,10 @@
   function hbDoActualPost() {
     var title = document.getElementById('hbComposeTitle').value.trim();
     var body = document.getElementById('hbComposeBody').value.trim();
+    // Optional link URL — read here in the post path's own scope. (It's also
+    // read independently in hbUpdatePostBtn; that local doesn't reach here, so
+    // omitting this line threw "linkUrl is not defined" and blocked posting.)
+    var linkUrl = (document.getElementById('hbComposeLinkUrl') || {value:''}).value.trim();
     var selectedTags = [];
     document.querySelectorAll('.hb-compose-tag.selected').forEach(function(t) {
       selectedTags.push(t.dataset.hbTag);
