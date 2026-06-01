@@ -234,8 +234,8 @@
       transition: background 0.15s;
     }
     .v-card:hover .v-cta { background: var(--forest-soft); }
-    /* Center the 7th (orphan) card on its own row in the 3-col grid. */
-    .v-card-center { grid-column: 2; }
+    /* 8 cards total = 3-3-2 layout; last two share row 3 naturally. */
+    .v-card-center { grid-column: auto; }
     /* Logo variant: existing on-brand PNG logos (Housing + Legal Notices)
        sized to the SAME 335×335 square box as the vintage illustrations.
        The source PNGs have an off-white background (~#fefbfa) with their
@@ -628,7 +628,13 @@
       <p>Public hearings, RFPs, water court, estate filings, and other legal notices across the region.</p>
       <span class="v-cta">View Legal Notices →</span>
     </a>
-    <a class="v-card v-card-center" href="/projects-map/">
+    <a class="v-card" href="/hub-bub.html">
+      <div class="v-logo-frame"><img class="v-logo" src="/logo/Hub-Bub.png" alt="Hub-Bub community forum — Telluride Colorado, Connect Celebrate Community"></div>
+      <h3>Hub-Bub</h3>
+      <p>Join the conversation — post questions, share sources, and connect with your neighbors on local issues.</p>
+      <span class="v-cta">Join the Discussion →</span>
+    </a>
+    <a class="v-card" href="/projects-map/">
       <div class="v-logo-frame"><img class="v-logo" src="img/cards/valley_project_map.jpg" alt="Vintage illustrated Valley Project Map emblem with mountains, map, and project pins"></div>
       <h3>Valley Project Map</h3>
       <p>See major projects across the valley, from housing and hotels to public infrastructure, in one interactive map.</p>
