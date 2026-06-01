@@ -5,7 +5,11 @@
  *   - Everything else (RSS feeds, Firebase, external APIs): network-first
  */
 
-const CACHE_NAME = 'livable-tlr-v1';
+// Bump this version string on any release that must purge the precached
+// shell (the `activate` handler deletes every cache whose key != CACHE_NAME).
+// Needed because `/js/` is served stale-while-revalidate, so an old cached
+// hub-bub.js can otherwise survive a deploy for up to the 10-min ?v= window.
+const CACHE_NAME = 'livable-tlr-v2-20260601';
 
 const STATIC_ASSETS = [
   '/',
