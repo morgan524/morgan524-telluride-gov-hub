@@ -1785,7 +1785,7 @@ const LOCAL_ORGS = [
     {
       name: "EcoAction Partners",
       category: "nonprofits",
-      town: "Ouray",
+      town: "Telluride",
       summary: "Works on environmental sustainability, climate action, waste reduction, energy efficiency, and community sustainability programs across San Miguel and Ouray counties.",
       website: "https://ecoactionpartners.org/",
       donate: "https://www.ecoactionpartners.org/donate",
@@ -1843,7 +1843,7 @@ const LOCAL_ORGS = [
     {
       name: "Rotary Club of Telluride",
       category: "clubs",
-      town: "Mountain Village",
+      town: "Telluride",
       summary: "Service club supporting scholarships, Youth Exchange, international projects, and community grants through the Telluride Rotary Foundation. \"Mountain High Service.\"",
       website: "https://portal.clubrunner.ca/3291",
       donate: "https://portal.clubrunner.ca/3291/donate",
@@ -2154,6 +2154,43 @@ const LOCAL_ORGS = [
       donate: "https://tellurideadaptivesports.org/donate/",
       social: { facebook: "https://www.facebook.com/TellurideAdaptiveSportsProgram/", instagram: "https://www.instagram.com/tellurideadaptivesports/" },
       logo: "https://livabletelluride.org/logo/Telluride%20Ski%20Club.webp"
+    },
+    {
+      name: "Ouray Trail Group",
+      category: "recreation",
+      town: "Ouray",
+      summary: "A nonprofit of volunteers founded in 1986, dedicated to the preservation and safe public use of Ouray County's trails — maintaining 84 mapped trails and providing hiking information across the region.",
+      website: "https://ourayco.org/ouray-trail-group/",
+      donate: "https://ouraytrails.org/support-us",
+      social: { facebook: "https://www.facebook.com/OurayTrailGroup", instagram: "https://www.instagram.com/ouray_trail_group/" },
+      logo: "https://livabletelluride.org/logo/Ouray%20Trail%20Club.webp"
+    },
+    {
+      name: "Ouray Christian Fellowship",
+      category: "churches",
+      town: "Ouray",
+      summary: "An EFCA-affiliated church in Ouray announcing \"the hope and truth of the Good News.\" Offers Sunday worship, adult and youth Sunday school, children's ministry, Bible studies, and missions involvement.",
+      website: "https://ouraychristianfellowship.org/",
+      donate: "https://ouraychristianfellowship.org/online-giving/",
+      logo: "https://livabletelluride.org/logo/Ouray%20Christian%20Fellowship.jpg"
+    },
+    {
+      name: "Ouray School District",
+      category: "youth",
+      town: "Ouray",
+      summary: "Ouray's PK-12 public school district (R-1), focused on educating \"the whole learner\" through diverse academic, arts, and outdoor experiences — \"developing minds to match our mountains.\"",
+      website: "https://www.ourayschool.org/",
+      social: { facebook: "https://www.facebook.com/ourayschool/", instagram: "https://www.instagram.com/ourayschool/" },
+      logo: "https://livabletelluride.org/logo/Ouray%20School%20District.jpg"
+    },
+    {
+      name: "Ridgway School District",
+      category: "youth",
+      town: "Ridgway",
+      summary: "Ridgway's PK-12 public school district (R-2) in Ouray County, serving the Ridgway area with academic, arts, and athletic programs.",
+      website: "https://www.ridgway.k12.co.us/",
+      social: { facebook: "https://www.facebook.com/RidgwaySchoolDistrict/", instagram: "https://www.instagram.com/ridgwayschooldistrictr2/" },
+      logo: "https://livabletelluride.org/logo/Ridgway%20School.png"
     }
 ];
 
