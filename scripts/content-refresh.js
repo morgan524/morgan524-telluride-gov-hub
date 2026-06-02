@@ -2597,9 +2597,11 @@ async function syncEmailEvents() {
           source: 'Community Submitted',
           href: row.SourceURL || row.URL || row.url || row.Link || '',
           // Flyer/logo uploaded via the Submit-an-Event form (Firebase Storage),
-          // carried through the Apps Script "Image" Sheet column. events.html's
-          // community-events.json push maps e.imageUrl onto the card.
-          imageUrl: row.Image || row.image || ''
+          // carried through the Apps Script image Sheet column. events.html's
+          // community-events.json push maps e.imageUrl onto the card. Accept
+          // either header name ("Image" — what the Apps Script writes for a new
+          // sheet — or "HeaderImage" — what the live sheet's column is named).
+          imageUrl: row.Image || row.image || row.HeaderImage || row.headerimage || ''
         });
       }
     }
