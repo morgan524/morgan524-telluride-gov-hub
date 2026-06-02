@@ -91,6 +91,7 @@
 
     /* Hero — same Wilson Peak treatment as Local News */
     .hero {
+      position: relative;
       background:
         linear-gradient(180deg, rgba(239,233,220,0.78) 0%, rgba(239,233,220,0.45) 55%, rgba(239,233,220,0.20) 100%),
         url('img/wilson-peak.png') no-repeat center center / cover,
@@ -576,59 +577,25 @@
       border-color: rgba(33, 68, 60, 0.22);
     }
 
-    /* Bottom CTA strip — full-bleed, mountain illustration */
-    .submit-strip {
-      position: relative;
-      margin-top: 36px;
-      background: var(--bg-hero);
-      border-top: 1px solid var(--border-soft);
-      border-bottom: 1px solid var(--border-soft);
-      overflow: hidden;
-    }
-    .submit-strip-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 28px 32px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      position: relative; z-index: 2;
-    }
-    .submit-strip-icon {
-      width: 56px; height: 56px;
-      flex-shrink: 0;
-      opacity: 0.7;
-    }
-    .submit-strip-icon svg { width: 100%; height: 100%; }
-    .submit-strip-text {
-      flex: 1;
-      font-family: var(--font-heading);
-      font-size: 1.18rem;
-      color: var(--text-primary);
-    }
-    .submit-strip-cta {
+    /* Submit-an-Event CTA — overlaid on the hero image, bottom-right */
+    .hero-submit-cta {
+      position: absolute;
+      right: 32px;
+      bottom: 18px;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 10px 22px;
+      padding: 11px 22px;
       background: var(--forest);
       color: #fff;
       text-decoration: none;
       font-weight: 700;
       font-size: 0.94rem;
       border-radius: 999px;
-      transition: background 0.15s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      transition: background 0.15s, transform 0.15s;
     }
-    .submit-strip-cta:hover { background: var(--forest-soft); }
-    .submit-strip-mountains {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 100%;
-      opacity: 0.30;
-      z-index: 1;
-      pointer-events: none;
-    }
-    .submit-strip-mountains svg { width: 100%; height: 100%; display: block; }
+    .hero-submit-cta:hover { background: var(--forest-soft); transform: translateY(-1px); }
 
     /* Responsive */
     @media (max-width: 768px) {
@@ -639,7 +606,8 @@
       .sidebar { position: static; }
       .topnav-links { display: none; }
       .hero h1 { font-size: 2rem; }
-      .submit-strip-inner { flex-direction: column; text-align: center; }
+      /* On narrow screens drop the button out of the overlay and into flow */
+      .hero-submit-cta { position: static; display: inline-flex; margin: 16px 0 0 32px; }
       /* On mobile, filter options scroll horizontally like chips */
       .filter-card {
         border-radius: 12px;
@@ -896,33 +864,8 @@
       <h1>Community Events</h1>
       <p>Classes, meetings, and gatherings near you.</p>
     </div>
-  </section>
-
-  <!-- Submit CTA strip — moved up to sit just below the header -->
-  <section class="submit-strip">
-    <div class="submit-strip-mountains" aria-hidden="true">
-      <svg viewBox="0 0 1280 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill="#a4b3a8" d="M0,75 L120,32 L240,52 L380,18 L520,46 L660,22 L800,40 L920,28 L1080,50 L1200,30 L1280,52 L1280,100 L0,100 Z"/>
-        <path fill="#7a8d80" d="M0,82 L100,55 L220,72 L360,42 L500,68 L640,48 L780,68 L920,52 L1060,72 L1180,55 L1280,72 L1280,100 L0,100 Z"/>
-        <g fill="#5b6f64">
-          <polygon points="100,68 105,55 110,68"/>
-          <polygon points="106,76 112,60 118,76"/>
-          <polygon points="640,68 645,55 650,68"/>
-        </g>
-      </svg>
-    </div>
-    <div class="submit-strip-inner">
-      <div class="submit-strip-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-          <line x1="16" y1="2" x2="16" y2="6"/>
-          <line x1="8" y1="2" x2="8" y2="6"/>
-          <line x1="3" y1="10" x2="21" y2="10"/>
-        </svg>
-      </div>
-      <div class="submit-strip-text">Have an event to share? Submit it and help build our community calendar.</div>
-      <a class="submit-strip-cta" href="#submit-event">Submit an Event →</a>
-    </div>
+    <!-- Submit CTA — overlaid on the Wilson hero image, bottom-right -->
+    <a class="hero-submit-cta" href="#submit-event">Submit an Event →</a>
   </section>
 
   <main class="page-wrap">
