@@ -2595,7 +2595,11 @@ async function syncEmailEvents() {
           location: row.Location || row.location || '',
           description: row.Description || row.description || '',
           source: 'Community Submitted',
-          href: row.SourceURL || row.URL || row.url || row.Link || ''
+          href: row.SourceURL || row.URL || row.url || row.Link || '',
+          // Flyer/logo uploaded via the Submit-an-Event form (Firebase Storage),
+          // carried through the Apps Script "Image" Sheet column. events.html's
+          // community-events.json push maps e.imageUrl onto the card.
+          imageUrl: row.Image || row.image || ''
         });
       }
     }

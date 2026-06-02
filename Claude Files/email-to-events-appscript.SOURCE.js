@@ -27,7 +27,8 @@
  *
  * FIRST-TIME SETUP (only if the deployed script is being recreated):
  * 1. Open Google Sheets → create a new sheet called "Event Inbox"
- * 2. Add headers in Row 1: Status | Title | Date | EndDate | Location | Time | Description | SourceURL | SubmittedAt | EmailSubject | EmailFrom
+ * 2. Add headers in Row 1: Status | Title | Date | EndDate | Location | Time | Description | SourceURL | SubmittedAt | EmailSubject | EmailFrom | Image
+ *    (Image = flyer URL from the Submit-an-Event form; add it as the LAST/12th column on an existing sheet.)
  * 3. Publish the sheet: File → Share → Publish to web (as CSV, entire document)
  * 4. Copy the published CSV URL into email-events-config.json (sheetCsvUrl field)
  * 5. Open Extensions → Apps Script → paste this code → Save
@@ -402,6 +403,7 @@ function parseEventEmail(msg, opts) {
   var time = extractField(body, subject, 'time') || '';
   var description = extractDescription(body) || body.substring(0, 500).trim();
   var sourceUrl = extractUrl(body) || '';
+  var image = extractImageUrl(body) || '';
 
   // Require at least one positive event-like signal before queueing — UNLESS
   // this is an explicit approve/deny forward. Without the signal AND without
@@ -432,6 +434,7 @@ function parseEventEmail(msg, opts) {
     time: time,
     description: description,
     sourceUrl: sourceUrl,
+    image: image,
     submittedAt: Utilities.formatDate(received, Session.getScriptTimeZone(), 'yyyy-MM-dd HH:mm'),
     emailSubject: subject,
     emailFrom: from
@@ -503,6 +506,17 @@ function extractUrl(body) {
 }
 
 /**
+ * Extract the flyer/logo image URL — the "Flyer image:" line that the events
+ * form + review page emit (the image is uploaded to Firebase Storage). Parsed
+ * separately from extractUrl() so the flyer never clobbers the event's source
+ * URL. Flows into the Sheet's Image column → community-events.json imageUrl.
+ */
+function extractImageUrl(body) {
+  var m = body.match(/Flyer\s*image\s*[:]\s*(https?:\/\/[^\s<>"{}|\\^`\[\]]+)/i);
+  return m ? m[1].trim() : '';
+}
+
+/**
  * Clean up the email subject for use as title
  */
 function cleanSubject(subject) {
@@ -520,7 +534,7 @@ function getOrCreateSheet() {
   var sheet = ss.getSheetByName(SHEET_NAME);
   if (!sheet) {
     sheet = ss.insertSheet(SHEET_NAME);
-    sheet.appendRow(['Status', 'Title', 'Date', 'EndDate', 'Location', 'Time', 'Description', 'SourceURL', 'SubmittedAt', 'EmailSubject', 'EmailFrom']);
+    sheet.appendRow(['Status', 'Title', 'Date', 'EndDate', 'Location', 'Time', 'Description', 'SourceURL', 'SubmittedAt', 'EmailSubject', 'EmailFrom', 'Image']);
     sheet.setFrozenRows(1);
   }
   return sheet;
@@ -541,7 +555,8 @@ function appendToSheet(sheet, data) {
     data.sourceUrl,
     data.submittedAt,
     data.emailSubject,
-    data.emailFrom
+    data.emailFrom,
+    data.image || ''
   ]);
 }
 
