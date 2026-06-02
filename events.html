@@ -1790,7 +1790,7 @@
       // /exec URL (see event-submit-notify-appscript.SOURCE.js). Failure
       // here never blocks the user's thank-you — the queue write already
       // succeeded by the time this runs.
-      const NOTIFY_WEBAPP_URL = '';  // ← paste the Apps Script /exec URL here to enable email alerts
+      const NOTIFY_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbxLZDpn731oh8AqEBCIag4MhH3zt04-pgkAYDXrP_yLipd7OINCYB0ds6TKL7E2lmMZ/exec';  // Apps Script web app — emails info@ on each submission
       function notifyAdmin(sub) {
         if (!NOTIFY_WEBAPP_URL) return;
         try {
