@@ -1401,8 +1401,11 @@ const LAND_USE_ISSUES = {
       { date: 'Next', title: 'Appeals pending', copy: 'The County is appealing the June 2024 PUD determination. If the appeal fails, it would further solidify the existing development restrictions that landowners have fought to preserve. Neighboring property owners are appealing the ruling that the distinct 39 acres the County and Town sought to rezone is not subject to the 1991 PUD\'s unified plan of development.', future: true }
     ],
     docs: [
-      { title: 'Order RE: Petition for Review — Aldasoro PUD (June 2024)', copy: 'Court rules in favor of landowners: Diamond Ranch lots are part of the 1991 Aldasoro PUD unified plan of development. BOCC\'s contrary interpretation vacated. Case No. 23CV30044.', tag: 'Court Order 2024' },
+      { title: 'Order RE: Petition for Review — Aldasoro PUD (June 2024)', copy: 'Court rules in favor of landowners: Diamond Ranch lots are part of the 1991 Aldasoro PUD unified plan of development. BOCC\'s contrary interpretation vacated. Case No. 23CV30044.', tag: 'Court Order 2024', href: '/assets/Diamond%20Ridge/diamond-order-petition-review-2024.pdf' },
       { title: 'Order RE: Rule 106(a)(4) Review — Rezoning (Dec 2022)', copy: 'Court rules in favor of landowners: BOCC\'s rezoning of Diamond Ridge vacated on two grounds -- Commissioner Cooper\'s participation violated due process, and the rezone constituted illegal spot zoning inconsistent with the Master Plan. Case No. 22CV30023.', tag: 'Court Order 2022' },
+      { title: 'Plaintiffs\' Opening Brief (Rule 106 Review)', copy: 'Landowners\' opening brief in the C.R.C.P. 106(a)(4) review of the BOCC\'s Diamond Ridge rezone (Case No. 23CV30044), April 4, 2024.', tag: 'Brief Apr 2024', href: '/assets/Diamond%20Ridge/diamond-opening-brief-2024.pdf' },
+      { title: 'County\'s Answer Brief', copy: 'San Miguel County\'s answer brief responding to the landowners\' Rule 106 petition (Case No. 23CV30044), May 6, 2024.', tag: 'Answer May 2024', href: '/assets/Diamond%20Ridge/diamond-answer-brief-2024.pdf' },
+      { title: 'Plaintiffs\' Reply Brief (C.R.C.P. 106(a) Relief)', copy: 'Landowners\' reply brief in support of C.R.C.P. 106(a) relief (Case No. 23CV30044), May 20, 2024.', tag: 'Reply May 2024', href: '/assets/Diamond%20Ridge/diamond-reply-brief-2024.pdf' },
       { title: 'San Miguel County CivicClerk Portal', copy: 'County-level records including BOCC agendas and Diamond Ridge development materials.', tag: 'County Record', href: 'https://sanmiguelcoco.portal.civicclerk.com/' }
     ],
     legalIssues: [
