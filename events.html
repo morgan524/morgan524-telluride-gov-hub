@@ -1724,7 +1724,7 @@
       </div>
       <div>
         <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Event URL / More Info</label>
-        <input id="ef-url" type="url" placeholder="https://…"
+        <input id="ef-url" type="text" inputmode="url" placeholder="livabletelluride.org or https://…"
           style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
       </div>
       <div>
@@ -1797,6 +1797,10 @@
       }
 
       const v = id => (document.getElementById(id).value || '').trim();
+      // Accept a bare domain (e.g. "livabletelluride.org") — prepend https://
+      // so it's a valid link. The field is type=text now so the browser's URL
+      // validation no longer blocks submission on a missing scheme.
+      const normUrl = u => (u && !/^https?:\/\//i.test(u)) ? 'https://' + u : u;
       const fileInput  = document.getElementById('ef-image');
       const previewWrap= document.getElementById('ef-image-preview');
       const previewImg = document.getElementById('ef-image-preview-img');
@@ -1825,7 +1829,7 @@
         if (v('ef-time'))     p.set('time', v('ef-time'));
         if (v('ef-location')) p.set('location', v('ef-location'));
         p.set('desc', v('ef-desc').slice(0, 800));
-        if (v('ef-url'))   p.set('url', v('ef-url'));
+        if (v('ef-url'))   p.set('url', normUrl(v('ef-url')));
         if (v('ef-name'))  p.set('name', v('ef-name'));
         if (v('ef-email')) p.set('email', v('ef-email'));
         if (v('ef-org'))   p.set('org', v('ef-org'));
@@ -1844,7 +1848,7 @@
           'Time:         ' + v('ef-time') + '\n' +
           'Location:     ' + v('ef-location') + '\n' +
           'Description:\n' + v('ef-desc') + '\n\n' +
-          'Event URL:    ' + v('ef-url') + '\n' +
+          'Event URL:    ' + normUrl(v('ef-url')) + '\n' +
           (imgUrl ? 'Flyer image:  ' + imgUrl + '\n' : '') +
           'Submitted by: ' + v('ef-name') + ' <' + v('ef-email') + '>\n' +
           'Organization: ' + v('ef-org')
