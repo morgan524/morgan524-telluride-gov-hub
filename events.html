@@ -1727,6 +1727,18 @@
         <input id="ef-url" type="url" placeholder="https://…"
           style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
       </div>
+      <div>
+        <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Event Flyer or Logo (optional)</label>
+        <input id="ef-image" type="file" accept="image/png,image/jpeg,image/gif,image/webp"
+          style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.92rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
+        <div id="ef-image-preview" style="display:none;align-items:center;gap:12px;margin-top:10px;">
+          <img id="ef-image-preview-img" src="" alt="Flyer preview"
+            style="max-width:140px;max-height:140px;border-radius:10px;border:1px solid var(--border-soft);object-fit:contain;background:#fff;">
+          <button type="button" id="ef-image-remove"
+            style="padding:6px 12px;border:1px solid var(--border-soft);border-radius:8px;background:#fff;color:#a33;font-size:0.82rem;cursor:pointer;">Remove</button>
+        </div>
+        <div style="font-size:0.78rem;color:var(--text-muted);margin-top:5px;">A flyer or logo helps your event stand out on the calendar. Max 10 MB · PNG, JPG, GIF, or WebP.</div>
+      </div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
         <div>
           <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Your Name</label>
@@ -1748,26 +1760,130 @@
         style="width:100%;padding:14px;background:var(--forest);color:#fff;border:none;border-radius:12px;font-size:1rem;font-weight:700;cursor:pointer;margin-top:4px;transition:background 0.15s;">
         Send Submission →
       </button>
+      <div id="ef-status" style="font-size:0.88rem;text-align:center;min-height:1.2em;margin-top:2px;"></div>
     </form>
+
+    <!-- Firebase compat SDK — used only to upload the optional event flyer to
+         Firebase Storage (same bucket/pattern as Hub-Bub). -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
     <script>
-      document.getElementById('eventSubmitForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const v = id => document.getElementById(id).value.trim();
+    (function () {
+      // ── Submit-an-Event: optional flyer upload → Firebase Storage, then a
+      //    mailto to info@ that links to a /event-review.html draft (rendered
+      //    from URL params) so the approver can SEE the flyer + layout before
+      //    approving/denying. Anonymous Firebase Auth gates the upload. ──────
+      const FB_CONFIG = {
+        apiKey: "AIzaSyCyAjB0RA_LtoETyRqxVJor0lRB4NRyXF0",
+        authDomain: "telluride-gov-hub.firebaseapp.com",
+        projectId: "telluride-gov-hub",
+        storageBucket: "telluride-gov-hub.firebasestorage.app",
+        messagingSenderId: "14117089764",
+        appId: "1:14117089764:web:4287985258f0bc929cd7f1"
+      };
+      let _storage = null, _auth = null;
+      function ensureFirebase() {
+        if (_storage) return Promise.resolve();
+        if (typeof firebase === 'undefined') return Promise.reject(new Error('Firebase failed to load'));
+        if (!firebase.apps.length) firebase.initializeApp(FB_CONFIG);
+        _storage = firebase.storage();
+        _auth = firebase.auth();
+        return Promise.resolve();
+      }
+      function signIn() {
+        if (_auth.currentUser) return Promise.resolve(_auth.currentUser);
+        return _auth.signInAnonymously().then(c => c.user);
+      }
+
+      const v = id => (document.getElementById(id).value || '').trim();
+      const fileInput  = document.getElementById('ef-image');
+      const previewWrap= document.getElementById('ef-image-preview');
+      const previewImg = document.getElementById('ef-image-preview-img');
+      const removeBtn  = document.getElementById('ef-image-remove');
+      const form       = document.getElementById('eventSubmitForm');
+      const statusEl   = document.getElementById('ef-status');
+      const submitBtn  = form.querySelector('button[type="submit"]');
+      let selectedFile = null;
+
+      fileInput.addEventListener('change', function () {
+        const f = this.files && this.files[0];
+        if (!f) { selectedFile = null; previewWrap.style.display = 'none'; return; }
+        if (f.size > 10 * 1024 * 1024) { alert('That image is larger than 10 MB — please pick a smaller file.'); this.value = ''; return; }
+        selectedFile = f;
+        previewImg.src = URL.createObjectURL(f);
+        previewWrap.style.display = 'flex';
+      });
+      removeBtn.addEventListener('click', function () {
+        selectedFile = null; fileInput.value = ''; previewWrap.style.display = 'none';
+      });
+
+      function buildReviewUrl(imgUrl) {
+        const p = new URLSearchParams();
+        p.set('title', v('ef-title'));
+        p.set('date', v('ef-date'));
+        if (v('ef-time'))     p.set('time', v('ef-time'));
+        if (v('ef-location')) p.set('location', v('ef-location'));
+        p.set('desc', v('ef-desc').slice(0, 800));
+        if (v('ef-url'))   p.set('url', v('ef-url'));
+        if (v('ef-name'))  p.set('name', v('ef-name'));
+        if (v('ef-email')) p.set('email', v('ef-email'));
+        if (v('ef-org'))   p.set('org', v('ef-org'));
+        if (imgUrl)        p.set('img', imgUrl);
+        return 'https://livabletelluride.org/event-review.html?' + p.toString();
+      }
+      function openMailto(reviewUrl, imgUrl) {
         const subject = encodeURIComponent('Event Submission: ' + (v('ef-title') || '(no title)'));
+        // Review link FIRST so it survives any mailto-length truncation.
         const body = encodeURIComponent(
-          'EVENT SUBMISSION\n' +
-          '================\n' +
+          'REVIEW / APPROVE THIS EVENT (with flyer preview + Approve/Deny buttons):\n' +
+          reviewUrl + '\n\n' +
+          'EVENT SUBMISSION\n================\n' +
           'Title:        ' + v('ef-title') + '\n' +
           'Date:         ' + v('ef-date') + '\n' +
           'Time:         ' + v('ef-time') + '\n' +
           'Location:     ' + v('ef-location') + '\n' +
           'Description:\n' + v('ef-desc') + '\n\n' +
           'Event URL:    ' + v('ef-url') + '\n' +
+          (imgUrl ? 'Flyer image:  ' + imgUrl + '\n' : '') +
           'Submitted by: ' + v('ef-name') + ' <' + v('ef-email') + '>\n' +
           'Organization: ' + v('ef-org')
         );
         window.location.href = 'mailto:info@livabletelluride.org?subject=' + subject + '&body=' + body;
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!selectedFile) {
+          openMailto(buildReviewUrl(''), '');
+          statusEl.style.color = 'var(--text-secondary)';
+          statusEl.textContent = 'Opening your email app to send the submission…';
+          return;
+        }
+        submitBtn.disabled = true; submitBtn.textContent = 'Uploading flyer…';
+        statusEl.style.color = 'var(--text-secondary)';
+        statusEl.textContent = 'Uploading your flyer…';
+        ensureFirebase()
+          .then(signIn)
+          .then(user => {
+            const safe = selectedFile.name.replace(/[^a-zA-Z0-9._-]/g, '_');
+            const path = 'event-submissions/' + user.uid + '/' + Date.now() + '_' + safe;
+            return _storage.ref(path).put(selectedFile).then(snap => snap.ref.getDownloadURL());
+          })
+          .then(imgUrl => {
+            openMailto(buildReviewUrl(imgUrl), imgUrl);
+            submitBtn.disabled = false; submitBtn.textContent = 'Send Submission →';
+            statusEl.style.color = 'var(--forest)';
+            statusEl.textContent = '✓ Flyer uploaded — opening your email app to send the submission…';
+          })
+          .catch(err => {
+            console.warn('Flyer upload failed:', err);
+            submitBtn.disabled = false; submitBtn.textContent = 'Send Submission →';
+            statusEl.style.color = '#a33';
+            statusEl.textContent = 'Could not upload the flyer (' + (err.message || err) + '). You can submit without it — remove the image and click Send again.';
+          });
       });
+    })();
     </script>
   </section>
 
