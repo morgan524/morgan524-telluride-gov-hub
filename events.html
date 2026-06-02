@@ -181,6 +181,26 @@
 
     /* Submit Event sidebar card */
     .sidebar { position: sticky; top: 100px; }
+
+    /* Festival tickets sidebar card */
+    .festival-sidebar-card {
+      background: rgba(255,255,255,0.85);
+      border: 1px solid var(--border-soft, rgba(33,68,60,0.12));
+      border-radius: 18px;
+      padding: 16px 14px 14px;
+      box-shadow: var(--shadow-card, 0 4px 18px rgba(36,49,46,0.10));
+      margin-bottom: 18px;
+    }
+    .festival-sidebar-head { text-align: center; margin: 0 0 12px; }
+    .festival-sidebar-eyebrow {
+      display: block; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px;
+    }
+    .festival-sidebar-head h3 {
+      margin: 0; font-family: var(--font-heading, Georgia, serif);
+      font-size: 1.25rem; color: var(--forest); letter-spacing: -0.02em;
+    }
+    #sidebarFestivalCalendar { display: grid; gap: 12px; }
     .submit-card {
       background: var(--bg-hero);
       border: 1px solid var(--border-soft);
@@ -883,6 +903,16 @@
       <!-- Location filter -->
       <div class="filter-card" id="sidebarFilter"><!-- populated by JS --></div>
 
+      <!-- Festival tickets sidebar — populated from TELLURIDE_FESTIVALS (gov-data.js)
+           by renderFestivalCalendar(). Ticket button color reflects ticketStatus. -->
+      <div class="festival-sidebar-card" id="sidebarFestivalCard" style="display:none;">
+        <div class="festival-sidebar-head">
+          <span class="festival-sidebar-eyebrow">2026 Festival Season</span>
+          <h3>Festival Tickets</h3>
+        </div>
+        <div id="sidebarFestivalCalendar"><!-- populated by JS --></div>
+      </div>
+
       <div class="submit-card">
         <div class="submit-icon" aria-hidden="true">
           <!-- calendar icon -->
@@ -1376,11 +1406,100 @@
        sample EVENTS with COMMUNITY_EVENTS + KOTO_COMMUNITY_EVENTS +
        WILKINSON_EVENTS and re-render. Falls back silently to the
        sample data on any failure. ──────────────────────────────────── */
+     // ── Festival tickets sidebar (restored from the old gov-hub.js) ──────────
+     //    Driven by TELLURIDE_FESTIVALS (gov-data.js). Buy button color reflects
+     //    ticketStatus: on-sale → gold "Buy Passes Now!", sold-out → rust
+     //    "Passes Sold Out", default → green ticketLabel. Past festivals hidden.
+     function ltEsc(s){ return String(s==null?'':s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+     function ltSafeUrl(u){ u = String(u||''); return /^https?:\/\//i.test(u) ? u : '#'; }
+     function getAllFestivalsForYear(year){
+       if (typeof TELLURIDE_FESTIVALS === 'undefined') return [];
+       const now = new Date();
+       return TELLURIDE_FESTIVALS.map(f => {
+         const start = new Date(year, f.month, f.dayStart);
+         const eMonth = f.endMonth !== undefined ? f.endMonth : f.month;
+         const end = new Date(year, eMonth, f.dayEnd, 23, 59, 59);
+         const daysUntil = Math.ceil((start - now) / 86400000);
+         return { name:f.name, icon:f.icon, logo:f.logo||'', start, end,
+           daysUntil: daysUntil<0?0:daysUntil, happening: start<=now && end>=now,
+           passed: end<now, url:f.url||'', ticketUrl:f.ticketUrl||'',
+           ticketLabel:f.ticketLabel||'Get Tickets', ticketStatus:f.ticketStatus||'default',
+           promo:f.promo||'' };
+       }).sort((a,b) => a.start - b.start);
+     }
+     function renderFestivalCalendar(){
+       const container = document.getElementById('sidebarFestivalCalendar');
+       if (!container || typeof TELLURIDE_FESTIVALS === 'undefined') return;
+       const year = new Date().getFullYear();
+       const festivals = getAllFestivalsForYear(year).filter(f => !f.passed);
+       const monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+       let html = '';
+       festivals.forEach((f, idx) => {
+         const startM = monthShort[f.start.getMonth()];
+         const endM = monthShort[f.end.getMonth()];
+         const dateRange = startM === endM
+           ? startM + ' ' + f.start.getDate() + '–' + f.end.getDate()
+           : startM + ' ' + f.start.getDate() + ' – ' + endM + ' ' + f.end.getDate();
+         let statusBadge = '';
+         if (f.happening) statusBadge = '<div style="display:inline-block;padding:2px 8px;background:#b45309;color:#fff;border-radius:10px;font-size:0.6rem;font-weight:700;margin-top:4px;">HAPPENING NOW</div>';
+         else if (f.daysUntil <= 14) statusBadge = '<div style="display:inline-block;padding:2px 8px;background:#b45309;color:#fff;border-radius:10px;font-size:0.6rem;font-weight:600;margin-top:4px;">COMING SOON</div>';
+         const isFeatured = idx === 0;
+         const cardBorder = isFeatured ? 'border-color:rgba(198,148,55,0.4);' : '';
+         const cardBg = isFeatured ? 'background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(249,246,240,0.92));' : 'background:rgba(255,255,255,0.92);';
+         const wordmarkWords = (f.name || '').split(' ').slice(0, 2);
+         const wordmarkHtml = '<div style="font-weight:900;font-size:0.72rem;line-height:1.1;letter-spacing:-0.02em;text-align:center;color:var(--text-primary);">' + wordmarkWords.map(ltEsc).join('<br>') + '</div>';
+         const logoInner = f.logo
+           ? '<img src="' + ltSafeUrl(f.logo) + '" alt="' + ltEsc(f.name) + '" class="lt-festival-cal-img" data-fallback-words="' + ltEsc(wordmarkWords.join('|')) + '" style="width:100%;height:100%;object-fit:contain;display:block;">'
+           : wordmarkHtml;
+         let buyBtn = '';
+         if (f.ticketUrl) {
+           let btnBg, btnColor, btnLabel, btnShadow;
+           if (f.ticketStatus === 'on-sale') { btnBg='linear-gradient(135deg,#d4a017,#b8860b)'; btnColor='#fff'; btnLabel='Buy Passes Now!'; btnShadow='0 8px 16px rgba(180,130,20,0.25)'; }
+           else if (f.ticketStatus === 'sold-out') { btnBg='linear-gradient(135deg,#a0522d,#8b3a2a)'; btnColor='#fff'; btnLabel='Passes Sold Out'; btnShadow='0 8px 16px rgba(139,58,42,0.2)'; }
+           else { btnBg='linear-gradient(135deg,#2f564d,#22453e)'; btnColor='#fff'; btnLabel=(f.icon||'') + ' ' + (f.ticketLabel || 'Buy Tickets'); btnShadow='0 8px 16px rgba(34,69,62,0.2)'; }
+           if (btnLabel) buyBtn = '<a href="' + ltSafeUrl(f.ticketUrl) + '" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:6px;width:100%;min-height:38px;padding:0 12px;border-radius:10px;text-decoration:none;font-weight:800;font-size:0.78rem;letter-spacing:-0.01em;color:' + btnColor + ';background:' + btnBg + ';box-shadow:' + btnShadow + ';">' + ltEsc(btnLabel) + '</a>';
+         }
+         let siteChip = '';
+         if (f.url) siteChip = '<a href="' + ltSafeUrl(f.url) + '" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:0 10px;border-radius:8px;text-decoration:none;font-size:0.68rem;font-weight:800;color:var(--forest);background:rgba(39,69,63,0.07);border:1px solid rgba(39,69,63,0.12);white-space:nowrap;">Festival Site</a>';
+         html += '<div style="border:1px solid rgba(221,210,196,0.85);border-radius:16px;overflow:hidden;box-shadow:0 6px 16px rgba(32,48,45,0.08);' + cardBg + cardBorder + '">'
+           + '<div style="padding:12px 12px 6px;display:grid;grid-template-columns:56px 1fr;gap:10px;align-items:center;' + (isFeatured ? 'background:linear-gradient(180deg,rgba(198,148,55,0.07),rgba(198,148,55,0));' : '') + '">'
+             + '<div style="width:56px;height:56px;border-radius:14px;background:linear-gradient(180deg,#ffffff,#f6f3ee);border:1px solid rgba(221,210,196,0.95);display:grid;place-items:center;overflow:hidden;padding:5px;">' + logoInner + '</div>'
+             + '<div>'
+               + '<div style="font-size:0.82rem;font-weight:800;line-height:1.1;letter-spacing:-0.02em;color:var(--text-primary);">' + ltEsc(f.name) + '</div>'
+               + '<div style="font-size:0.72rem;color:var(--text-secondary);font-weight:700;margin-top:2px;">' + dateRange + ', ' + year + '</div>'
+               + statusBadge
+             + '</div>'
+           + '</div>'
+           + (buyBtn || siteChip ? '<div style="padding:6px 12px 12px;display:grid;' + (buyBtn && siteChip ? 'grid-template-columns:1fr auto;' : '') + 'gap:8px;align-items:center;">' + buyBtn + siteChip + '</div>' : '')
+         + '</div>';
+       });
+       container.innerHTML = html;
+       const card = document.getElementById('sidebarFestivalCard');
+       if (card) card.style.display = html ? '' : 'none';
+       container.querySelectorAll('.lt-festival-cal-img').forEach(img => {
+         img.addEventListener('error', () => {
+           const words = (img.getAttribute('data-fallback-words') || '').split('|');
+           const div = document.createElement('div');
+           div.style.cssText = 'font-weight:900;font-size:0.7rem;line-height:1.1;letter-spacing:-0.02em;text-align:center;color:var(--text-primary);';
+           words.forEach((w, i) => { if (i > 0) div.appendChild(document.createElement('br')); div.appendChild(document.createTextNode(w)); });
+           const parent = img.parentElement; if (parent) parent.replaceChild(div, img);
+         }, { once: true });
+       });
+     }
+
      function loadLiveEvents() {
-       // Load gov-helpers.js directly — contains KOTO/Wilkinson/Community events.
-       // Skipping gov-data.js (142K of meeting/logo data not needed for events page).
+       // Load gov-data.js FIRST (TELLURIDE_FESTIVALS → festival sidebar + the
+       // 90-day festival cards), then gov-helpers.js (the event data feeds).
+       const _v = Math.floor(Date.now()/600000);
+       const gd = document.createElement('script');
+       gd.src = 'https://livabletelluride.org/js/gov-data.js?v=' + _v;
+       gd.onload = () => { try { renderFestivalCalendar(); } catch(e) { console.warn('renderFestivalCalendar:', e); } loadHelpers(_v); };
+       gd.onerror = () => { console.warn('Could not load gov-data.js (festivals)'); loadHelpers(_v); };
+       document.head.appendChild(gd);
+     }
+     function loadHelpers(_v) {
        const s = document.createElement('script');
-       s.src = 'https://livabletelluride.org/js/gov-helpers.js?v=' + Math.floor(Date.now()/600000);
+       s.src = 'https://livabletelluride.org/js/gov-helpers.js?v=' + _v;
        s.onload = () => {
            try {
              const live = [];
@@ -1414,12 +1533,14 @@
                  }
                }
                if (!dateStr) return;
-               // Only include events in the next 60 days (rolling look-ahead
-               // so multi-week series like Music on the Green show what's coming).
+               // Rolling look-ahead window: 60 days for most events, but 90 days
+               // for festivals (e.isFestival) so the season's big festivals
+               // surface as cards toward the end of the list before they arrive.
                const dt = new Date(dateStr + 'T00:00:00');
                const today = new Date(); today.setHours(0,0,0,0);
                const diff = (dt - today) / 86400000;
-               if (diff < 0 || diff > 60) return;
+               const maxDays = e.isFestival ? 90 : 60;
+               if (diff < 0 || diff > maxDays) return;
                live.push({
                  title: e.title,
                  date: dateStr,
@@ -1450,11 +1571,36 @@
              if (typeof ALIBI_EVENTS !== 'undefined') ALIBI_EVENTS.forEach(e => pushEvent(e, 'The Alibi'));
              if (typeof COMMUNITY_EVENTS !== 'undefined') COMMUNITY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Community'));
              if (typeof MUSIC_ON_THE_GREEN !== 'undefined') MUSIC_ON_THE_GREEN.forEach(e => pushEvent(e, e.sourceLabel || 'Music on the Green'));
+             if (typeof TELLURIDE_FARMERS_MARKET !== 'undefined') TELLURIDE_FARMERS_MARKET.forEach(e => pushEvent(e, e.sourceLabel || 'Telluride Farmers Market'));
              if (typeof TELLURIDE_FOUNDATION_EVENTS !== 'undefined') TELLURIDE_FOUNDATION_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Telluride Foundation'));
              if (typeof OURAY_COUNTY_EVENTS !== 'undefined') OURAY_COUNTY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Ouray County'));
              if (typeof NORWOOD_EVENTS !== 'undefined') NORWOOD_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Norwood'));
              if (typeof MOUNTAIN_VILLAGE_EVENTS !== 'undefined') MOUNTAIN_VILLAGE_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Mountain Village'));
              if (typeof TELLURIDE_COM_EVENTS !== 'undefined') TELLURIDE_COM_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Telluride.com'));
+             // ── Major festivals as cards (TELLURIDE_FESTIVALS from gov-data.js).
+             //    Pushed AFTER telluride.com so its photo cards win dedup for
+             //    festivals it already lists; these fill in the rest (Jazz, Film,
+             //    Mushroom, Autumn Classic, etc.) and use the 90-day festival
+             //    window via isFestival. month/endMonth are 0-indexed. ──
+             if (typeof TELLURIDE_FESTIVALS !== 'undefined') {
+               const _pad = n => String(n).padStart(2, '0');
+               const _yr = new Date().getFullYear();
+               TELLURIDE_FESTIVALS.forEach(f => {
+                 const sm = _pad((f.month || 0) + 1);
+                 const em = _pad((f.endMonth !== undefined ? f.endMonth : (f.month || 0)) + 1);
+                 pushEvent({
+                   title: f.name,
+                   date: _yr + '-' + sm + '-' + _pad(f.dayStart),
+                   endDate: _yr + '-' + em + '-' + _pad(f.dayEnd),
+                   location: 'Telluride',
+                   description: f.promo || (f.name + ' — see the festival site for details and tickets.'),
+                   link: f.url || f.ticketUrl || '',
+                   imageUrl: f.logo || '',
+                   isFestival: true,
+                   sourceLabel: 'Festival'
+                 }, 'Festival');
+               });
+             }
              // KOTO Community Calendar is an aggregator — placed last so its
              // copies of events already published by an original source drop
              // out during dedup.

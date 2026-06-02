@@ -1750,6 +1750,35 @@ const MUSIC_ON_THE_GREEN = (function () {
   }));
 })();
 
+// Telluride Farmers Market — hand-curated weekly series (bots don't touch
+// this), same pattern as MUSIC_ON_THE_GREEN. Every Friday of the 2026 season
+// through the end of September on South Oak Street, 10:30 AM–3:30 PM. The
+// events.html 60-day rolling window only renders upcoming Fridays. Hero image
+// copied locally from thetelluridefarmersmarket.com. Refresh the Fridays list
+// (and re-grab the photo) each season.
+const TELLURIDE_FARMERS_MARKET = (function () {
+  const LINK = 'https://www.thetelluridefarmersmarket.com/';
+  const LOCATION = 'South Oak Street, downtown Telluride';
+  const TIME = '10:30 AM – 3:30 PM';
+  const IMAGE = '/img/telluride-farmers-market.webp';
+  const fridays = [
+    '2026-05-29', '2026-06-05', '2026-06-12', '2026-06-19', '2026-06-26',
+    '2026-07-03', '2026-07-10', '2026-07-17', '2026-07-24', '2026-07-31',
+    '2026-08-07', '2026-08-14', '2026-08-21', '2026-08-28',
+    '2026-09-04', '2026-09-11', '2026-09-18', '2026-09-25',
+  ];
+  return fridays.map(date => ({
+    title: 'Telluride Farmers Market',
+    date: date,
+    time: TIME,
+    location: LOCATION,
+    description: 'The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced within 100 miles of Telluride.',
+    href: LINK,
+    imageUrl: IMAGE,
+    sourceLabel: 'Telluride Farmers Market',
+  }));
+})();
+
 const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Future Ready: Investing Basics with Alpine Bank",
