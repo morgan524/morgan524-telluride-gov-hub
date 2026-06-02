@@ -1406,6 +1406,7 @@ const LAND_USE_ISSUES = {
       { title: 'Plaintiffs\' Opening Brief (Rule 106 Review)', copy: 'Landowners\' opening brief in the C.R.C.P. 106(a)(4) review of the BOCC\'s Diamond Ridge rezone (Case No. 23CV30044), April 4, 2024.', tag: 'Brief Apr 2024', href: '/assets/Diamond%20Ridge/diamond-opening-brief-2024.pdf' },
       { title: 'County\'s Answer Brief', copy: 'San Miguel County\'s answer brief responding to the landowners\' Rule 106 petition (Case No. 23CV30044), May 6, 2024.', tag: 'Answer May 2024', href: '/assets/Diamond%20Ridge/diamond-answer-brief-2024.pdf' },
       { title: 'Plaintiffs\' Reply Brief (C.R.C.P. 106(a) Relief)', copy: 'Landowners\' reply brief in support of C.R.C.P. 106(a) relief (Case No. 23CV30044), May 20, 2024.', tag: 'Reply May 2024', href: '/assets/Diamond%20Ridge/diamond-reply-brief-2024.pdf' },
+      { title: 'Plaintiffs\' Opening Brief in Support of Declaratory Relief (with Exhibits)', copy: 'Landowners\' opening brief seeking declaratory relief, filed Dec 16, 2024, including the full exhibit record (large file).', tag: 'Brief Dec 2024', href: '/assets/Diamond%20Ridge/diamond-declaratory-opening-brief-2024.pdf' },
       { title: 'San Miguel County CivicClerk Portal', copy: 'County-level records including BOCC agendas and Diamond Ridge development materials.', tag: 'County Record', href: 'https://sanmiguelcoco.portal.civicclerk.com/' }
     ],
     legalIssues: [
