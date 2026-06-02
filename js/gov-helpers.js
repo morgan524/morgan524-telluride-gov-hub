@@ -169,7 +169,7 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
     "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
@@ -184,19 +184,19 @@ const MANUAL_SUMMARIES = {
     "The June 30, 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The July 1 Ecology Commission agenda hasn't been posted yet.",
+    "The July 1st Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 1st Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The July 1 agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
     "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
-    "The July 1st County Commissioners agenda hasn't been posted yet."
+    "The July 1st Board of County Commissioners agenda hasn't been posted yet."
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
@@ -1047,18 +1047,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Colorado's top court orders children's hospital to resume gender-affirming care for minors",
-    source: "Telluride Times",
-    date: "May 19, 2026",
-    firstSeen: "2026-05-20",
-    newsTopic: "health",
-    copy: "Colorado's Supreme Court ordered Children's Hospital Colorado to resume gender-affirming care for minors after four transgender girls sued, claiming the hospital violated state anti-discrimination law. The 5-2 ruling came after the hospital stopped these services following a federal investigation.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_8e1b844e-d9ba-58dc-b1a8-754933a96518.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Intergovernmental meeting considers large-scale projects",
     source: "Telluride Times",
     date: "May 20, 2026",
@@ -1068,30 +1056,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/norwood_post/article_ab40e47c-2e12-4591-ba16-71b511df9bf2.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/5a/85a13aa6-b1b6-4623-9baa-57f77227e78e/6a0d7c50103a8.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A return to the mountains",
-    source: "Telluride Times",
-    date: "May 19, 2026",
-    firstSeen: "2026-05-20",
-    newsTopic: "housing",
-    copy: "A former Telluride restaurant manager who helped open Allred's and Alpino Vino is returning after a decade in Vail to run The Alpine Club, a new private club being developed by Southworth and local residents Scott and Lauren Woodward. The project will completely reimagine the space with a restaurant, bar, chef's counter, après ski lounge, and various amenities.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/business/article_e144854e-3e45-4876-a1b1-e40d947ec150.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/0b/50bee733-1e7b-45b2-bfe4-25b65a3fefa0/6a0b3830a98bc.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Mahoney sets State standard … twice",
-    source: "Telluride Times",
-    date: "May 19, 2026",
-    firstSeen: "2026-05-19",
-    newsTopic: "community",
-    copy: "Telluride junior Mahoney set new state records in both the 100 and 200 meters at the state championships, clocking 10.83 in the 100 and dealing with a 45-minute lightning delay before his 200 final. His 17 points helped Telluride finish 19th as a team, making both school and state history.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_7554c1af-188d-4958-b4eb-d99606cae703.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/78/f788412a-63b4-45dd-a492-93b90cafd637/6a0c1f226d915.image.jpg",
     imgHiRes: true
   },
   {
@@ -1179,20 +1143,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Ridgway Offers Convenient Online Payments with Xpress Bill Pay",
-    source: "Town of Ridgway",
-    date: "May 19, 2026",
-    firstSeen: "2026-05-19",
-    newsTopic: "community",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/XPress-Bill-Pay-Press-Release-2026-05-19.pdf",
-    img: ""
-  },
-  {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 1, 2026",
+    date: "June 2, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1236,6 +1189,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 6-1-26",
+    source: "KOTO Community Radio",
+    date: "June 2, 2026",
+    newsTopic: "community",
+    copy: "CDOT Plans for Regional Construction; The Dark Veil of Romance",
+    href: "https://koto.org/news/newscast-6-1-26/"
+  },
   {
     title: "Newscast 5-29-26",
     source: "KOTO Community Radio",
@@ -1283,14 +1244,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "government",
     copy: "Telluride School District to Ask Voters for More Funding; Cat Movie Fisher with Risho Unda; InVINCEble Comes to Mountainfilm",
     href: "https://koto.org/news/newscast-5-20-26/"
-  },
-  {
-    title: "Newscast 5-18-26",
-    source: "KOTO Community Radio",
-    date: "May 19, 2026",
-    newsTopic: "health",
-    copy: "Survey Looks at Health and Wellbeing in the Region; Coming Up Next, Telluride; General Assembly Adjourns",
-    href: "https://koto.org/news/newscast-5-18-26/"
   }
 ];
 
@@ -2300,6 +2253,39 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Arts HQ, TELLURIDE",
     imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
+  },
+  {
+    title: "Up-off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-06-19/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-06-19T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Bilingual Balance in Motion",
+    link: "https://koto.org/event/bilingual-balance-in-motion/2026-06-20/",
+    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
+    pubDate: "2026-06-20T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
+  },
+  {
+    title: "Drop In Tech Time with Oliver",
+    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-06-21/",
+    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
+    pubDate: "2026-06-21T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
   }
 ];
 
@@ -2793,6 +2779,39 @@ const OURAY_COUNTY_EVENTS = [
     category: "Community Event",
     location: "Uncompahgre River Walk - Ouray CO 81427",
     imageUrl: ""
+  },
+  {
+    title: "Town of Ridgway - Coffee and Housing Conversation",
+    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3652",
+    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3652",
+    pubDate: "2026-06-04T08:00:00.000Z",
+    source: "ouraycounty",
+    sourceLabel: "Ouray County",
+    category: "Community Event",
+    location: "Decker Community Room - 675 Clinton St Ridgway CO 81432",
+    imageUrl: ""
+  },
+  {
+    title: "Town of Ridgway - Coffee and Housing Conversation",
+    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3651",
+    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3651",
+    pubDate: "2026-06-03T08:00:00.000Z",
+    source: "ouraycounty",
+    sourceLabel: "Ouray County",
+    category: "Community Event",
+    location: "Ridgway Town Hall - 201 N Railroad St. Ridgway CO 81432",
+    imageUrl: ""
+  },
+  {
+    title: "Town of Ridgway - Housing Happy Hour",
+    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3650",
+    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3650",
+    pubDate: "2026-06-02T16:30:00.000Z",
+    source: "ouraycounty",
+    sourceLabel: "Ouray County",
+    category: "Community Event",
+    location: "Maven Local Eatery - 540 Clinton St Ridgway CO 81432",
+    imageUrl: ""
   }
 ];
 
@@ -2888,7 +2907,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Sips and Housing Solutions Series: Housing Action Plan Outreach Event #1",
     link: "https://events.ourayridgwayevents.com/event/sips-and-housing-solutions-series-housing-action-plan-outreach-event-1",
-    description: "CALLING ALL RIDGWAY WORKFORCE AND AREA RESIDENTS: Please join Points Consulting and Town of Ridgway planning staff at any of our upcoming outreach events for the 2026 HOUSING ACTION PLAN. Your voice matters. Everyone is welcome! Please see this link: tinyurl.com/planridgway for more information and to RSVP. June 2nd: 4:30 - 6:30 PM at Maven Local Eatery | Housing Happy Hour: Drink discounts and free appetizers while supplies last! June 3rd: 8:00-10:00 AM at Town Hall | Coffee and Housing Conversation: Free coffee and treats! June 4th: 8:00-10:00 AM at Decker Community Room | Coffee and Housing Conversation: Free coffee and treats!",
+    description: "CALLING ALL RIDGWAY WORKFORCE AND AREA RESIDENTS: Please join Points Consulting and Town of Ridgway planning staff at any of our upcoming outreach events for the 2026 HOUSING ACTION PLAN. Your voice matters. Everyone is welcome! Please see this link: tinyurl.com/planridgway for more information and to RSVP. June 2nd: 4:30 - 6:30 PM at Maven Local Eatery | Housing Happy Hour: Drink discounts and free appetizers while supplies last! June 3rd: 8:00-10:00 AM at Town Hall | Coffee and Housing Conversation: Free coffee and treats! June 4th: 8:00-10:00 AM at Decker Community Room | Coffee and Housing Conversation: Free coffee and treats! Attendees will have the opportunity enter into a Raffle for a Greenwood's restaurant Gift Card or ISUN local skincare gift package:",
     pubDate: "2026-06-02T22:30:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -2921,7 +2940,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Sips and Housing Solutions Series: Housing Action Plan Outreach Event #2",
     link: "https://events.ourayridgwayevents.com/event/sips-and-housing-solutions-series-housing-action-plan-outreach-event-2",
-    description: "CALLING ALL RIDGWAY WORKFORCE AND AREA RESIDENTS: Please join Points Consulting and Town of Ridgway planning staff at any of our upcoming outreach events for the 2026 HOUSING ACTION PLAN. Your voice matters. Everyone is welcome! Please see this link: tinyurl.com/planridgway for more information and to RSVP. June 2nd: 4:30 - 6:30 PM at Maven Local Eatery | Housing Happy Hour: Drink discounts and free appetizers while supplies last! June 3rd: 8:00-10:00 AM at Town Hall | Coffee and Housing Conversation: Free coffee and treats! June 4th: 8:00-10:00 AM at Decker Community Room | Coffee and Housing Conversation: Free coffee and treats!",
+    description: "CALLING ALL RIDGWAY WORKFORCE AND AREA RESIDENTS: Please join Points Consulting and Town of Ridgway planning staff at any of our upcoming outreach events for the 2026 HOUSING ACTION PLAN. Your voice matters. Everyone is welcome! Please see this link: tinyurl.com/planridgway for more information and to RSVP. June 2nd: 4:30 - 6:30 PM at Maven Local Eatery | Housing Happy Hour: Drink discounts and free appetizers while supplies last! June 3rd: 8:00-10:00 AM at Town Hall | Coffee and Housing Conversation: Free coffee and treats! June 4th: 8:00-10:00 AM at Decker Community Room | Coffee and Housing Conversation: Free coffee and treats! Attendees will have the opportunity enter into a Raffle for a Greenwood's restaurant Gift Card or ISUN local skincare gift package:",
     pubDate: "2026-06-03T14:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -2998,7 +3017,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Sips and Housing Solutions Series: Housing Action Plan June Outreach Event #3",
     link: "https://events.ourayridgwayevents.com/event/sips-and-housing-solutions-series-housing-action-plan-outreach-event-3",
-    description: "CALLING ALL RIDGWAY WORKFORCE AND AREA RESIDENTS: Please join Points Consulting and Town of Ridgway planning staff at any of our upcoming outreach events for the 2026 HOUSING ACTION PLAN. Your voice matters. Everyone is welcome! Please see this link: tinyurl.com/planridgway for more information and to RSVP. June 2nd: 4:30 - 6:30 PM at Maven Local Eatery | Housing Happy Hour: Drink discounts and free appetizers while supplies last! June 3rd: 8:00-10:00 AM at Town Hall | Coffee and Housing Conversation: Free coffee and treats! June 4th: 8:00-10:00 AM at Decker Community Room | Coffee and Housing Conversation: Free coffee and treats!",
+    description: "CALLING ALL RIDGWAY WORKFORCE AND AREA RESIDENTS: Please join Points Consulting and Town of Ridgway planning staff at any of our upcoming outreach events for the 2026 HOUSING ACTION PLAN. Your voice matters. Everyone is welcome! Please see this link: tinyurl.com/planridgway for more information and to RSVP. June 2nd: 4:30 - 6:30 PM at Maven Local Eatery | Housing Happy Hour: Drink discounts and free appetizers while supplies last! June 3rd: 8:00-10:00 AM at Town Hall | Coffee and Housing Conversation: Free coffee and treats! June 4th: 8:00-10:00 AM at Decker Community Room | Coffee and Housing Conversation: Free coffee and treats! Attendees will have the opportunity enter into a Raffle for a Greenwood's restaurant Gift Card or ISUN local skincare gift package:",
     pubDate: "2026-06-04T14:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -3348,7 +3367,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52393360061357/huge/dcc540c5e8c42ba92a7bee91cc3bccf0ba5c48e9.jpg"
   },
   {
-    title: "On Display: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
+    title: "Ongoing: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
     link: "https://events.ourayridgwayevents.com/event/painting-evolution-of-moments-with-wild-horses-1999-2026-artist-karen-keene-day",
     description: "Enjoy nearly 3 decades or work from local painter, Karen Keene Day. Info decker@ridgwayfuse.org",
     pubDate: "2026-06-08T16:00:00.000Z",
@@ -3392,7 +3411,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg"
   },
   {
-    title: "On Display: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
+    title: "Ongoing: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
     link: "https://events.ourayridgwayevents.com/event/painting-evolution-of-moments-with-wild-horses-1999-2026-artist-karen-keene-day",
     description: "Enjoy nearly 3 decades or work from local painter, Karen Keene Day. Info decker@ridgwayfuse.org",
     pubDate: "2026-06-09T16:00:00.000Z",
@@ -3557,7 +3576,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
   },
   {
-    title: "On Display: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
+    title: "Ongoing: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
     link: "https://events.ourayridgwayevents.com/event/painting-evolution-of-moments-with-wild-horses-1999-2026-artist-karen-keene-day",
     description: "Enjoy nearly 3 decades or work from local painter, Karen Keene Day. Info decker@ridgwayfuse.org",
     pubDate: "2026-06-11T16:00:00.000Z",
@@ -3843,7 +3862,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52806871795839/huge/2b4a1f1e03bf8526d92866007630f4a159e579d5.jpg"
   },
   {
-    title: "On Display: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
+    title: "Ongoing: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
     link: "https://events.ourayridgwayevents.com/event/painting-evolution-of-moments-with-wild-horses-1999-2026-artist-karen-keene-day",
     description: "Enjoy nearly 3 decades or work from local painter, Karen Keene Day. Info decker@ridgwayfuse.org",
     pubDate: "2026-06-15T16:00:00.000Z",
@@ -3927,18 +3946,6 @@ const NORWOOD_EVENTS = [
 const MOUNTAIN_VILLAGE_EVENTS = [];
 
 const TELLURIDE_COM_EVENTS = [
-  {
-    title: "Bike Rodeo",
-    link: "https://www.telluride.com/event/bike-rodeo/",
-    description: "Head to the Telluride High School back parking lot on Sunday, May 31 from 12 p.m. to 1:30 p.m. for an afternoon focused …",
-    pubDate: "2026-05-31",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/58118/download_15.800x533.webp"
-  },
   {
     title: "Wild West Fest",
     link: "https://www.telluride.com/event/wild-west-fest/",
@@ -6110,6 +6117,42 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62640/ypt-sumemr-jungle-book.800x533.webp"
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://www.telluride.com/event/movies-under-the-stars/",
+    description: "Bundle up and bring the family down to Conference Center Plaza in Mountain Village for Movies Under the Stars! Movies …",
+    pubDate: "2026-08-01",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/44447/screenshot_2026-05-15_at_3_52_12_pm.800x533.webp"
+  },
+  {
+    title: "Top Chef and Taste of Telluride",
+    link: "https://www.telluride.com/event/top-chef-and-taste-of-telluride/",
+    description: "Top Chef and Taste of Telluride offers up scrumptious food and creative cocktails, a chef competition, silent auction …",
+    pubDate: "2026-08-01",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/44989/screenshot_2024-07-09_at_1_28_41_pm.800x533.webp"
+  },
+  {
+    title: "Natalie Brooke",
+    link: "https://www.telluride.com/event/natalie-brooke/",
+    description: "Natalie Brooke is a rock star. A virtuoso funk / rock keys player leading her powerhouse 4-piece band from the …",
+    pubDate: "2026-08-01",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62666/screenshot_2026-06-01_at_3_29_24_pm.800x533.webp"
   }
 ];
 
