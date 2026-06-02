@@ -7,47 +7,42 @@
   <title>Event Review — Livable Telluride</title>
   <style>
     :root {
-      --forest: #21443c;
-      --forest-soft: #2a5347;
-      --accent-green: #2f7a5f;
-      --gold: #b58a2c;
-      --bg-warm: #fdfbf6;
-      --bg-hero: #efe9dc;
-      --text-primary: #1a2e29;
-      --text-secondary: #4a5e57;
-      --text-muted: #7a8a85;
-      --border-soft: rgba(33, 68, 60, 0.12);
-      --shadow-card: 0 4px 18px rgba(36, 49, 46, 0.10);
+      --forest: #21443c; --forest-soft: #2a5347; --accent-green: #2f7a5f;
+      --gold: #b58a2c; --bg-warm: #fdfbf6; --bg-hero: #efe9dc;
+      --text-primary: #1a2e29; --text-secondary: #4a5e57; --text-muted: #7a8a85;
+      --border-soft: rgba(33, 68, 60, 0.12); --shadow-card: 0 4px 18px rgba(36, 49, 46, 0.10);
       --font-heading: 'Georgia', 'Times New Roman', serif;
       --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
     }
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; font-family: var(--font-main); color: var(--text-primary); background: var(--bg-warm); line-height: 1.5; }
-    .wrap { max-width: 760px; margin: 0 auto; padding: 28px 20px 60px; }
-    .topbar { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+    .wrap { max-width: 780px; margin: 0 auto; padding: 28px 20px 70px; }
     .topbar img { height: 54px; width: auto; }
     .eyebrow { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin: 18px 0 4px; }
     h1.page-title { font-family: var(--font-heading); font-size: 1.8rem; color: var(--forest); margin: 0 0 6px; }
     .sub { color: var(--text-secondary); font-size: 0.95rem; margin: 0 0 22px; }
 
-    .card { background: #fff; border: 1px solid var(--border-soft); border-radius: 18px; box-shadow: var(--shadow-card); overflow: hidden; }
-    .card-flyer { width: 100%; max-height: 460px; object-fit: contain; background: #f3efe6; display: block; border-bottom: 1px solid var(--border-soft); }
-    .card-body { padding: 24px 26px 26px; }
-    .card-body h2 { font-family: var(--font-heading); font-size: 1.7rem; color: var(--forest); margin: 0 0 12px; line-height: 1.15; }
-    .meta-row { display: flex; align-items: center; gap: 9px; color: var(--text-secondary); font-size: 0.98rem; margin: 6px 0; }
+    .card { background: #fff; border: 1px solid var(--border-soft); border-radius: 18px; box-shadow: var(--shadow-card); overflow: hidden; margin-bottom: 22px; }
+    .card-flyer { width: 100%; max-height: 380px; object-fit: contain; background: #f3efe6; display: block; border-bottom: 1px solid var(--border-soft); }
+    .card-body { padding: 22px 24px 22px; }
+    .card-body h2 { font-family: var(--font-heading); font-size: 1.5rem; color: var(--forest); margin: 0 0 12px; line-height: 1.15; }
+    .meta-row { display: flex; align-items: center; gap: 9px; color: var(--text-secondary); font-size: 0.96rem; margin: 6px 0; }
     .meta-row svg { width: 18px; height: 18px; stroke: var(--accent-green); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
-    .desc { white-space: pre-wrap; color: var(--text-primary); font-size: 1rem; line-height: 1.65; margin: 16px 0 0; }
-    .extras { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border-soft); font-size: 0.88rem; color: var(--text-muted); }
+    .desc { white-space: pre-wrap; color: var(--text-primary); font-size: 0.98rem; line-height: 1.6; margin: 14px 0 0; }
+    .extras { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border-soft); font-size: 0.86rem; color: var(--text-muted); }
     .extras a { color: var(--accent-green); font-weight: 600; }
     .extras div { margin: 3px 0; }
-
-    .actions { margin-top: 26px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 15px 18px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 1.02rem; border: none; cursor: pointer; }
+    .actions { margin-top: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 16px; border-radius: 11px; font-weight: 800; font-size: 0.98rem; border: none; cursor: pointer; }
     .btn-approve { background: linear-gradient(135deg, #2f7a5f, #21443c); color: #fff; }
     .btn-deny { background: #fff; color: #a33; border: 1.5px solid rgba(170,51,51,0.4); }
-    .btn:hover { opacity: 0.93; }
-    .note { text-align: center; color: var(--text-muted); font-size: 0.82rem; margin-top: 14px; line-height: 1.5; }
-    .empty { background: #fff; border: 1px solid var(--border-soft); border-radius: 16px; padding: 40px 28px; text-align: center; color: var(--text-secondary); }
+    .btn:disabled { opacity: 0.55; cursor: default; }
+    .empty, .panel { background: #fff; border: 1px solid var(--border-soft); border-radius: 16px; padding: 32px 26px; color: var(--text-secondary); }
+    .panel h3 { font-family: var(--font-heading); color: var(--forest); margin: 0 0 10px; }
+    .panel input { width: 100%; padding: 11px 13px; border: 1px solid var(--border-soft); border-radius: 9px; font-size: 0.95rem; margin-bottom: 12px; background: var(--bg-hero); box-sizing: border-box; }
+    .panel button { background: var(--forest); color: #fff; border: none; border-radius: 10px; padding: 11px 20px; font-weight: 700; cursor: pointer; }
+    .msg { font-size: 0.88rem; margin-top: 10px; min-height: 1.1em; }
+    .signout { float: right; font-size: 0.82rem; color: var(--accent-green); background: none; border: none; cursor: pointer; text-decoration: underline; }
     @media (max-width: 520px) { .actions { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -56,89 +51,149 @@
     <div class="topbar">
       <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
     </div>
-    <div class="eyebrow">Event submission</div>
-    <h1 class="page-title">Review proposed event</h1>
-    <p class="sub">Submitted through the Livable Telluride events form. Use the buttons below to approve (publish to the calendar) or deny.</p>
-
-    <div id="reviewRoot"></div>
+    <div class="eyebrow">Admin</div>
+    <h1 class="page-title">Event submissions</h1>
+    <p class="sub">Review community event submissions. Approve to publish them to the calendar, or deny.</p>
+    <div id="root"><div class="panel">Loading…</div></div>
   </div>
 
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script>
-    // ── Render a proposed event from URL params + wire Approve/Deny mailto.
-    //    All values are submitter-controlled, so escape everything and only
-    //    allow http(s) for the flyer image + event link. ────────────────────
-    (function () {
-      const params = new URLSearchParams(location.search);
-      const get = k => (params.get(k) || '').trim();
-      const safeUrl = u => /^https?:\/\//i.test(u || '') ? u : '';
-      const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+  (function () {
+    const ADMIN_EMAIL = 'info@livabletelluride.org';
+    const FB_CONFIG = {
+      apiKey: "AIzaSyCyAjB0RA_LtoETyRqxVJor0lRB4NRyXF0",
+      authDomain: "telluride-gov-hub.firebaseapp.com",
+      projectId: "telluride-gov-hub",
+      storageBucket: "telluride-gov-hub.firebasestorage.app",
+      messagingSenderId: "14117089764",
+      appId: "1:14117089764:web:4287985258f0bc929cd7f1"
+    };
+    if (!firebase.apps.length) firebase.initializeApp(FB_CONFIG);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    const root = document.getElementById('root');
 
-      const ev = {
-        title: get('title'), date: get('date'), time: get('time'),
-        location: get('location'), desc: get('desc'), url: safeUrl(get('url')),
-        name: get('name'), email: get('email'), org: get('org'), img: safeUrl(get('img'))
-      };
-      const root = document.getElementById('reviewRoot');
+    const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+    const safeUrl = u => /^https?:\/\//i.test(u || '') ? u : '';
+    const icon = {
+      cal:  '<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>',
+      clock:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+      pin:  '<svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>'
+    };
 
-      if (!ev.title && !ev.date) {
-        root.innerHTML = '<div class="empty">No event details found in this link. This page is opened from a link inside an event-submission email.</div>';
-        return;
+    function fmtDate(date) {
+      if (/^\d{4}-\d{2}-\d{2}$/.test(date || '')) {
+        const d = new Date(date + 'T12:00:00');
+        if (!isNaN(d)) return d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
       }
+      return date || '';
+    }
 
-      // Friendly date (date-only string → no timezone slip)
-      let dateLong = ev.date;
-      if (/^\d{4}-\d{2}-\d{2}$/.test(ev.date)) {
-        const d = new Date(ev.date + 'T12:00:00');
-        if (!isNaN(d)) dateLong = d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
-      }
-
-      const icon = {
-        cal:  '<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>',
-        clock:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
-        pin:  '<svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>'
-      };
-
-      let html = '<div class="card">';
-      if (ev.img) html += '<img class="card-flyer" src="' + esc(ev.img) + '" alt="Event flyer" onerror="this.style.display=\'none\'">';
-      html += '<div class="card-body">';
-      html += '<h2>' + (esc(ev.title) || 'Untitled event') + '</h2>';
-      if (dateLong)     html += '<div class="meta-row">' + icon.cal + '<span>' + esc(dateLong) + '</span></div>';
-      if (ev.time)      html += '<div class="meta-row">' + icon.clock + '<span>' + esc(ev.time) + '</span></div>';
-      if (ev.location)  html += '<div class="meta-row">' + icon.pin + '<span>' + esc(ev.location) + '</span></div>';
-      if (ev.desc)      html += '<div class="desc">' + esc(ev.desc) + '</div>';
-      const extras = [];
-      if (ev.url)   extras.push('<div>More info: <a href="' + esc(ev.url) + '" target="_blank" rel="noopener">' + esc(ev.url) + '</a></div>');
-      if (ev.name || ev.email) extras.push('<div>Submitted by: ' + esc(ev.name) + (ev.email ? ' &lt;' + esc(ev.email) + '&gt;' : '') + '</div>');
-      if (ev.org)   extras.push('<div>Organization: ' + esc(ev.org) + '</div>');
-      if (extras.length) html += '<div class="extras">' + extras.join('') + '</div>';
-      html += '</div></div>';
-
-      // Approve / Deny — mailto to approve@/deny@ with the structured details
-      // (the events@ Apps Script parses these into a Sheet row).
-      function decisionBody(decision) {
-        return encodeURIComponent(
-          decision + ' this community event submission.\n\n' +
-          'Title:        ' + ev.title + '\n' +
-          'Date:         ' + ev.date + '\n' +
-          'Time:         ' + ev.time + '\n' +
-          'Location:     ' + ev.location + '\n' +
-          'Description:\n' + ev.desc + '\n\n' +
-          'Event URL:    ' + ev.url + '\n' +
-          (ev.img ? 'Flyer image:  ' + ev.img + '\n' : '') +
-          'Submitted by: ' + ev.name + ' <' + ev.email + '>\n' +
-          'Organization: ' + ev.org
-        );
-      }
-      const subjA = encodeURIComponent('APPROVE: ' + (ev.title || 'event'));
-      const subjD = encodeURIComponent('DENY: ' + (ev.title || 'event'));
-      html += '<div class="actions">'
-        + '<a class="btn btn-approve" href="mailto:approve@livabletelluride.org?subject=' + subjA + '&body=' + decisionBody('APPROVE') + '">✓ Approve &amp; Publish</a>'
-        + '<a class="btn btn-deny" href="mailto:deny@livabletelluride.org?subject=' + subjD + '&body=' + decisionBody('DENY') + '">✕ Deny</a>'
+    function cardHtml(id, d) {
+      const img = safeUrl(d.imageUrl);
+      const url = safeUrl(d.url);
+      let h = '<div class="card" data-id="' + esc(id) + '">';
+      if (img) h += '<img class="card-flyer" src="' + esc(img) + '" alt="" onerror="this.style.display=\'none\'">';
+      h += '<div class="card-body">';
+      h += '<h2>' + (esc(d.title) || 'Untitled event') + '</h2>';
+      if (d.date)     h += '<div class="meta-row">' + icon.cal + '<span>' + esc(fmtDate(d.date)) + '</span></div>';
+      if (d.time)     h += '<div class="meta-row">' + icon.clock + '<span>' + esc(d.time) + '</span></div>';
+      if (d.location) h += '<div class="meta-row">' + icon.pin + '<span>' + esc(d.location) + '</span></div>';
+      if (d.description) h += '<div class="desc">' + esc(d.description) + '</div>';
+      const ex = [];
+      if (url) ex.push('<div>More info: <a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(url) + '</a></div>');
+      if (d.name || d.email) ex.push('<div>Submitted by: ' + esc(d.name || '') + (d.email ? ' &lt;' + esc(d.email) + '&gt;' : '') + '</div>');
+      if (d.org) ex.push('<div>Organization: ' + esc(d.org) + '</div>');
+      if (ex.length) h += '<div class="extras">' + ex.join('') + '</div>';
+      h += '<div class="actions">'
+        + '<button class="btn btn-approve" data-act="approved" data-id="' + esc(id) + '">✓ Approve &amp; Publish</button>'
+        + '<button class="btn btn-deny" data-act="denied" data-id="' + esc(id) + '">✕ Deny</button>'
         + '</div>';
-      html += '<div class="note">Approving opens an email to <strong>approve@livabletelluride.org</strong> (denying → deny@) pre-filled with the event details. Just press send. The event then flows to the calendar through the standard review pipeline.</div>';
+      h += '</div></div>';
+      return h;
+    }
 
-      root.innerHTML = html;
-    })();
+    function decide(id, status, btn) {
+      const card = btn.closest('.card');
+      card.querySelectorAll('button').forEach(b => b.disabled = true);
+      db.collection('event_submissions').doc(id).update({
+        status: status,
+        reviewedAt: firebase.firestore.FieldValue.serverTimestamp()
+      }).then(() => {
+        card.style.transition = 'opacity .3s'; card.style.opacity = '0.35';
+        const note = document.createElement('div');
+        note.style.cssText = 'padding:6px 24px 16px;font-weight:700;color:' + (status === 'approved' ? 'var(--forest)' : '#a33') + ';';
+        note.textContent = status === 'approved' ? '✓ Approved — it will appear on the calendar.' : '✕ Denied.';
+        card.appendChild(note);
+        setTimeout(loadQueue, 1200);
+      }).catch(err => {
+        card.querySelectorAll('button').forEach(b => b.disabled = false);
+        alert('Could not update: ' + (err.message || err));
+      });
+    }
+
+    function loadQueue() {
+      root.innerHTML = '<div class="panel">Loading submissions…</div>';
+      db.collection('event_submissions').where('status', '==', 'pending').get()
+        .then(snap => {
+          const docs = [];
+          snap.forEach(doc => docs.push({ id: doc.id, d: doc.data() || {} }));
+          docs.sort((a, b) => {
+            const ta = a.d.createdAt && a.d.createdAt.seconds || 0;
+            const tb = b.d.createdAt && b.d.createdAt.seconds || 0;
+            return tb - ta;
+          });
+          let html = '<button class="signout" id="signout">Sign out</button>'
+            + '<div style="clear:both"></div>';
+          if (!docs.length) {
+            html += '<div class="empty">🎉 No pending submissions right now.</div>';
+          } else {
+            html += '<p class="sub">' + docs.length + ' submission' + (docs.length === 1 ? '' : 's') + ' awaiting review:</p>';
+            html += docs.map(x => cardHtml(x.id, x.d)).join('');
+          }
+          root.innerHTML = html;
+          document.getElementById('signout').addEventListener('click', () => auth.signOut());
+          root.querySelectorAll('button[data-act]').forEach(b => {
+            b.addEventListener('click', () => decide(b.getAttribute('data-id'), b.getAttribute('data-act'), b));
+          });
+        })
+        .catch(err => {
+          root.innerHTML = '<div class="panel">Could not load submissions: ' + esc(err.message || String(err)) + '</div>';
+        });
+    }
+
+    function loginPanel(msg) {
+      root.innerHTML =
+        '<div class="panel"><h3>Admin sign-in</h3>'
+        + '<p>Sign in as <strong>' + esc(ADMIN_EMAIL) + '</strong> to review event submissions.</p>'
+        + '<input id="li-email" type="email" placeholder="Email" autocomplete="username" value="' + esc(ADMIN_EMAIL) + '">'
+        + '<input id="li-pass" type="password" placeholder="Password" autocomplete="current-password">'
+        + '<button id="li-go">Sign in</button>'
+        + '<div class="msg" id="li-msg" style="color:#a33;">' + esc(msg || '') + '</div></div>';
+      const go = document.getElementById('li-go');
+      const doLogin = () => {
+        const em = document.getElementById('li-email').value.trim();
+        const pw = document.getElementById('li-pass').value;
+        document.getElementById('li-msg').textContent = '';
+        go.disabled = true; go.textContent = 'Signing in…';
+        auth.signInWithEmailAndPassword(em, pw).catch(err => {
+          go.disabled = false; go.textContent = 'Sign in';
+          document.getElementById('li-msg').textContent = (err.code === 'auth/invalid-credential' || err.code === 'auth/wrong-password') ? 'Incorrect email or password.' : (err.message || String(err));
+        });
+      };
+      go.addEventListener('click', doLogin);
+      document.getElementById('li-pass').addEventListener('keydown', e => { if (e.key === 'Enter') doLogin(); });
+    }
+
+    auth.onAuthStateChanged(user => {
+      if (user && user.email === ADMIN_EMAIL) loadQueue();
+      else if (user) loginPanel('That account isn’t an admin. Sign out and use ' + ADMIN_EMAIL + '.');
+      else loginPanel('');
+    });
+  })();
   </script>
 </body>
 </html>

@@ -245,6 +245,33 @@ service cloud.firestore {
       allow delete: if isAdmin();
     }
 
+    // ── event_submissions/{id} ────────────────────────────────────────
+    // Community event submissions from the "Submit an Event" form on
+    // events.html. Anyone signed-in (incl. anonymous) may CREATE a
+    // submission, but only with status 'pending' (they can't self-approve).
+    // Approved submissions are world-readable so the events page can list
+    // them; pending/denied are admin-only. Admin (info@) approves/denies
+    // (update) and deletes. The events page queries status == 'approved';
+    // the admin review queue queries status == 'pending'.
+    match /event_submissions/{id} {
+      // Public read of APPROVED events (events page); admin reads all.
+      allow read: if resource.data.status == 'approved' || isAdmin();
+
+      // Create: signed-in, must start 'pending', title+date required,
+      // and authorUid (if present) must be the caller's uid.
+      allow create: if isSignedIn()
+        && request.resource.data.status == 'pending'
+        && request.resource.data.title is string
+        && request.resource.data.title.size() > 0
+        && request.resource.data.title.size() <= 200
+        && request.resource.data.date is string
+        && (!('description' in request.resource.data)
+            || request.resource.data.description.size() <= 5000);
+
+      // Approve / deny / edit + delete: admin only.
+      allow update, delete: if isAdmin();
+    }
+
     // ── Default deny ──────────────────────────────────────────────────
     // Any path NOT explicitly matched above is denied. This is the
     // important part — Firestore rules are deny-by-default at root, but

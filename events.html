@@ -1676,7 +1676,45 @@
                }, 'Submitted')) : null)
                .catch(() => {});
 
-             Promise.allSettled([ridgwayP, communityJsonP]).finally(() => finishAndRender());
+             // Approved community submissions from Firestore (the in-app
+             // Submit-an-Event flow). Waits briefly for the Firebase SDK
+             // (loaded via the tags near the submit form), then queries
+             // status == 'approved' and pushes each as an event card.
+             const approvedP = new Promise(resolve => {
+               let tries = 0;
+               (function go() {
+                 if (typeof firebase === 'undefined' || !firebase.firestore) {
+                   if (tries++ > 50) return resolve();   // ~5s, then give up
+                   return setTimeout(go, 100);
+                 }
+                 try {
+                   if (!firebase.apps.length) firebase.initializeApp({
+                     apiKey: "AIzaSyCyAjB0RA_LtoETyRqxVJor0lRB4NRyXF0",
+                     authDomain: "telluride-gov-hub.firebaseapp.com",
+                     projectId: "telluride-gov-hub",
+                     storageBucket: "telluride-gov-hub.firebasestorage.app",
+                     messagingSenderId: "14117089764",
+                     appId: "1:14117089764:web:4287985258f0bc929cd7f1"
+                   });
+                   firebase.firestore().collection('event_submissions')
+                     .where('status', '==', 'approved').get()
+                     .then(snap => {
+                       snap.forEach(doc => {
+                         const d = doc.data() || {};
+                         pushEvent({
+                           title: d.title, pubDate: d.date, time: d.time,
+                           location: d.location, description: d.description,
+                           link: d.url, imageUrl: d.imageUrl
+                         }, 'Community Submitted');
+                       });
+                       resolve();
+                     })
+                     .catch(() => resolve());
+                 } catch (e) { resolve(); }
+               })();
+             });
+
+             Promise.allSettled([ridgwayP, communityJsonP, approvedP]).finally(() => finishAndRender());
            } catch (err) { console.warn('loadLiveEvents failed:', err); }
        };
        s.onerror = () => console.warn('Could not load gov-helpers.js for live events');
@@ -1768,6 +1806,7 @@
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
     <script>
     (function () {
       // ── Submit-an-Event: optional flyer upload → Firebase Storage, then a
@@ -1782,13 +1821,14 @@
         messagingSenderId: "14117089764",
         appId: "1:14117089764:web:4287985258f0bc929cd7f1"
       };
-      let _storage = null, _auth = null;
+      let _storage = null, _auth = null, _db = null;
       function ensureFirebase() {
-        if (_storage) return Promise.resolve();
+        if (_db) return Promise.resolve();
         if (typeof firebase === 'undefined') return Promise.reject(new Error('Firebase failed to load'));
         if (!firebase.apps.length) firebase.initializeApp(FB_CONFIG);
         _storage = firebase.storage();
         _auth = firebase.auth();
+        _db = firebase.firestore();
         return Promise.resolve();
       }
       function signIn() {
@@ -1822,69 +1862,58 @@
         selectedFile = null; fileInput.value = ''; previewWrap.style.display = 'none';
       });
 
-      function buildReviewUrl(imgUrl) {
-        const p = new URLSearchParams();
-        p.set('title', v('ef-title'));
-        p.set('date', v('ef-date'));
-        if (v('ef-time'))     p.set('time', v('ef-time'));
-        if (v('ef-location')) p.set('location', v('ef-location'));
-        p.set('desc', v('ef-desc').slice(0, 800));
-        if (v('ef-url'))   p.set('url', normUrl(v('ef-url')));
-        if (v('ef-name'))  p.set('name', v('ef-name'));
-        if (v('ef-email')) p.set('email', v('ef-email'));
-        if (v('ef-org'))   p.set('org', v('ef-org'));
-        if (imgUrl)        p.set('img', imgUrl);
-        return 'https://livabletelluride.org/event-review.html?' + p.toString();
-      }
-      function openMailto(reviewUrl, imgUrl) {
-        const subject = encodeURIComponent('Event Submission: ' + (v('ef-title') || '(no title)'));
-        // Review link FIRST so it survives any mailto-length truncation.
-        const body = encodeURIComponent(
-          'REVIEW / APPROVE THIS EVENT (with flyer preview + Approve/Deny buttons):\n' +
-          reviewUrl + '\n\n' +
-          'EVENT SUBMISSION\n================\n' +
-          'Title:        ' + v('ef-title') + '\n' +
-          'Date:         ' + v('ef-date') + '\n' +
-          'Time:         ' + v('ef-time') + '\n' +
-          'Location:     ' + v('ef-location') + '\n' +
-          'Description:\n' + v('ef-desc') + '\n\n' +
-          'Event URL:    ' + normUrl(v('ef-url')) + '\n' +
-          (imgUrl ? 'Flyer image:  ' + imgUrl + '\n' : '') +
-          'Submitted by: ' + v('ef-name') + ' <' + v('ef-email') + '>\n' +
-          'Organization: ' + v('ef-org')
-        );
-        window.location.href = 'mailto:info@livabletelluride.org?subject=' + subject + '&body=' + body;
-      }
-
+      // Submit: upload the optional flyer to Firebase Storage, then write the
+      // submission to Firestore (status 'pending') and show a thank-you — no
+      // email client. The admin reviews pending items at /event-review.html
+      // and approved events appear on this page automatically.
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-        if (!selectedFile) {
-          openMailto(buildReviewUrl(''), '');
-          statusEl.style.color = 'var(--text-secondary)';
-          statusEl.textContent = 'Opening your email app to send the submission…';
+        if (!v('ef-title') || !v('ef-date') || !v('ef-desc')) {
+          statusEl.style.color = '#a33';
+          statusEl.textContent = 'Please fill in the event title, date, and description.';
           return;
         }
-        submitBtn.disabled = true; submitBtn.textContent = 'Uploading flyer…';
+        submitBtn.disabled = true;
+        submitBtn.textContent = selectedFile ? 'Uploading…' : 'Submitting…';
         statusEl.style.color = 'var(--text-secondary)';
-        statusEl.textContent = 'Uploading your flyer…';
+        statusEl.textContent = selectedFile ? 'Uploading your flyer…' : 'Submitting…';
         ensureFirebase()
           .then(signIn)
           .then(user => {
+            if (!selectedFile) return '';
             const safe = selectedFile.name.replace(/[^a-zA-Z0-9._-]/g, '_');
             const path = 'event-submissions/' + user.uid + '/' + Date.now() + '_' + safe;
             return _storage.ref(path).put(selectedFile).then(snap => snap.ref.getDownloadURL());
           })
           .then(imgUrl => {
-            openMailto(buildReviewUrl(imgUrl), imgUrl);
+            return _db.collection('event_submissions').add({
+              title: v('ef-title'),
+              date: v('ef-date'),
+              time: v('ef-time'),
+              location: v('ef-location'),
+              description: v('ef-desc'),
+              url: normUrl(v('ef-url')),
+              name: v('ef-name'),
+              email: v('ef-email'),
+              org: v('ef-org'),
+              imageUrl: imgUrl || '',
+              status: 'pending',
+              authorUid: (_auth.currentUser && _auth.currentUser.uid) || '',
+              createdAt: firebase.firestore.FieldValue.serverTimestamp()
+            });
+          })
+          .then(() => {
+            form.reset();
+            selectedFile = null; previewWrap.style.display = 'none';
             submitBtn.disabled = false; submitBtn.textContent = 'Send Submission →';
             statusEl.style.color = 'var(--forest)';
-            statusEl.textContent = '✓ Flyer uploaded — opening your email app to send the submission…';
+            statusEl.textContent = '✓ Thank you! Your event was submitted for review. We’ll add it to the calendar once it’s approved.';
           })
           .catch(err => {
-            console.warn('Flyer upload failed:', err);
+            console.warn('Event submission failed:', err);
             submitBtn.disabled = false; submitBtn.textContent = 'Send Submission →';
             statusEl.style.color = '#a33';
-            statusEl.textContent = 'Could not upload the flyer (' + (err.message || err) + '). You can submit without it — remove the image and click Send again.';
+            statusEl.textContent = 'Sorry — could not submit your event (' + (err.message || err) + '). Please try again.';
           });
       });
     })();
