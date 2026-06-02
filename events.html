@@ -1838,6 +1838,30 @@
         return _auth.signInAnonymously().then(c => c.user);
       }
 
+      // ── Admin email heads-up on a new submission ───────────────────────
+      // The submission is also written to Firestore (the canonical review
+      // queue at /event-review.html). This fire-and-forget POST pings a
+      // Google Apps Script web app that emails info@livabletelluride.org a
+      // summary + an Approve/Deny link, so the admin doesn't have to poll
+      // the queue. No-op until NOTIFY_WEBAPP_URL is set to the deployed
+      // /exec URL (see event-submit-notify-appscript.SOURCE.js). Failure
+      // here never blocks the user's thank-you — the queue write already
+      // succeeded by the time this runs.
+      const NOTIFY_WEBAPP_URL = '';  // ← paste the Apps Script /exec URL here to enable email alerts
+      function notifyAdmin(sub) {
+        if (!NOTIFY_WEBAPP_URL) return;
+        try {
+          // text/plain keeps it a CORS "simple request" (no preflight);
+          // mode:'no-cors' because the Apps Script response is opaque to us.
+          fetch(NOTIFY_WEBAPP_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify(sub)
+          }).catch(function () {});
+        } catch (e) { /* never block the thank-you */ }
+      }
+
       const v = id => (document.getElementById(id).value || '').trim();
       // Accept a bare domain (e.g. "livabletelluride.org") — prepend https://
       // so it's a valid link. The field is type=text now so the browser's URL
@@ -1888,7 +1912,7 @@
             return _storage.ref(path).put(selectedFile).then(snap => snap.ref.getDownloadURL());
           })
           .then(imgUrl => {
-            return _db.collection('event_submissions').add({
+            const submission = {
               title: v('ef-title'),
               date: v('ef-date'),
               time: v('ef-time'),
@@ -1900,11 +1924,16 @@
               org: v('ef-org'),
               imageUrl: imgUrl || '',
               status: 'pending',
-              authorUid: (_auth.currentUser && _auth.currentUser.uid) || '',
-              createdAt: firebase.firestore.FieldValue.serverTimestamp()
-            });
+              authorUid: (_auth.currentUser && _auth.currentUser.uid) || ''
+            };
+            return _db.collection('event_submissions').add(
+              Object.assign({}, submission, {
+                createdAt: firebase.firestore.FieldValue.serverTimestamp()
+              })
+            ).then(() => submission);
           })
-          .then(() => {
+          .then(submission => {
+            notifyAdmin(submission);   // fire-and-forget email heads-up
             form.reset();
             selectedFile = null; previewWrap.style.display = 'none';
             submitBtn.disabled = false; submitBtn.textContent = 'Send Submission →';
