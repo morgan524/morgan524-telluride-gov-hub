@@ -172,7 +172,7 @@ const MANUAL_SUMMARIES = {
     "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -181,25 +181,37 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "The June 30, 2026 Town Council agenda hasn't been posted yet.",
+    "The Jun 30 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The July 1st Ecology Commission agenda hasn't been posted yet.",
+    "The July 1 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 1 agenda hasn't been posted yet.",
+    "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
     "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
-    "The July 1st Board of County Commissioners agenda hasn't been posted yet."
+    "The July 1 Board of County Commissioners agenda hasn't been posted yet."
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Telluride and Mountain Village farmers’ markets are open",
+    source: "Telluride Times",
+    date: "June 2, 2026",
+    firstSeen: "2026-06-02",
+    newsTopic: "recreation",
+    copy: "Both farmers' markets are back open, with Telluride's usual fruit vendors hit hard by April frost damage forcing organizers to bring in Palisade growers instead. Mountain Village reports record vendor participation this season, though the dry winter and early warm snap are creating challenges across the region with some orchards and crops likely to be lost entirely.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_b55834a9-3719-4d50-9dc7-897fefde7513.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/64/d6484aff-5bfb-4ff6-be20-dbb3292e170a/6a1e90bbb087e.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Youth still served (just differently for a while)",
     source: "Telluride Times",
@@ -1105,15 +1117,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1395",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14159"
-  },
-  {
-    title: "Western Slope Wellness Launches Free Regional Mental Health Resource for Western Slope Communities",
-    source: "San Miguel County",
-    date: "May 12, 2026",
-    newsTopic: "health",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1394",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14249"
   },
   {
     title: "Road and Bridge Office Closed on June 2nd 2026",
@@ -2291,59 +2294,59 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Musik 4 Kinders",
-    link: "https://telluridelibrary.libcal.com/event/16568414?hs=a",
-    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
-    pubDate: "2026-06-01T16:30:00.000Z",
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/16772754?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-06-02T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
   },
   {
-    title: "Strings in the Stacks: Live Violin with Annie Foxen",
-    link: "https://telluridelibrary.libcal.com/event/16759872?hs=a",
-    description: "12:00 PM – 1:00 PM · Unwind at the library with live violin music from violinist and WPL staff member, Annie Foxen. On the first Monday of every month, Annie fills the library with a calming mix of classical, Celtic, and folk tunes—perfect for reading, relaxing, or simply listening. Free and open to the public. All ages are welcome.",
-    pubDate: "2026-06-01T18:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lobby",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1769020935.jpg"
-  },
-  {
-    title: "Savvy Seniors-Wildfire Preparedness",
-    link: "https://telluridelibrary.libcal.com/event/16667503?hs=a",
-    description: "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone. Join San Miguel County and the Western Region Wildfire Council and Telluride Fire Protection District for a presentation on how to prepare for a wildfire and what to do if one arrives. …",
-    pubDate: "2026-06-01T19:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Meeting Room #6 - large",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_14_06_36.png"
-  },
-  {
-    title: "Wildfire Preparedness",
-    link: "https://telluridelibrary.libcal.com/event/16656434?hs=a",
-    description: "1:30 PM – 2:30 PM · Join San Miguel County and the Western Region Wildfire Council  and Telluride Fire Protection District for a presentation on how to prepare for a wildfire and what to do if one arrives. There will also be information about mitigation resources for property owners.",
-    pubDate: "2026-06-01T19:30:00.000Z",
+    title: "Future Ready: Investing Basics with Alpine Bank",
+    link: "https://telluridelibrary.libcal.com/event/16687533?hs=a",
+    description: "12:00 PM – 1:00 PM · Join us for an engaging conversation on the fundamentals of investing and strategies for building long-term wealth, presented in partnership with Alpine Bank. Featured speakers include Dylan Brooks, CFP&reg;, of 1st and Main Investment Advisors; Jennifer Hawley of Alpine Bank Wealth Management; and Jon Martin of Edward Jones.",
+    pubDate: "2026-06-02T18:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_30_14_39_36.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_14_05_20.png"
   },
   {
-    title: "Cíclica & Humana",
-    link: "https://telluridelibrary.libcal.com/event/16730546?hs=a",
-    description: "5:00 PM – 6:30 PM · C&iacute;clica & Humana es un proyecto que busca abrir un espacio para mujeres en el que podamos comprender el funcionamiento de nuestro ciclo hormonal y reconectar con nuestra feminidad desde el amor propio. El proyecto estar&aacute; organizado en 6 encuentros: 1. La feminidad y el Utero  2. Como Entender nuestro cuerpo?  3. Ciclo 1: Fase Lutea  4. Ciclo 2: Menstruaci&oacute;n  5. Ciclo 3: Fase Folicular  6. Ciclo 4: Fase Ovulaci&oacute;n  Por favor de registrase con Claudia para estas clases.",
-    pubDate: "2026-06-01T23:00:00.000Z",
+    title: "Teen Cook",
+    link: "https://telluridelibrary.libcal.com/event/16935709?hs=a",
+    description: "2:00 PM – 3:00 PM · Join us every Tuesday this summer for Teen Cook, where we prepare a variety of delicious foods and get to try out something new.",
+    pubDate: "2026-06-02T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_14_26_13.png"
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png"
+  },
+  {
+    title: "Make Your Own Hula Hoop for Adults!",
+    link: "https://telluridelibrary.libcal.com/event/16560113?hs=a",
+    description: "5:00 PM – 6:30 PM · Get festival-ready and create your own custom hula hoop with Deb Gesmundo on the Library Patio! All supplies are provided, and no experience is necessary. This free workshop is for adults only and is limited to 15 participants. Registration is required at telluridelibrary.org.",
+    pubDate: "2026-06-02T23:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_01_16_17_15.jpg"
+  },
+  {
+    title: "Bardic Trails Online Poetry Night: Moudi Sbeity",
+    link: "https://telluridelibrary.libcal.com/event/15970600?hs=a",
+    description: "7:00 PM – 8:30 PM · The Telluride Institute&#39;s Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet's work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit < https://www. tellurideinstitute.org/ western-slope-calendar > to get the zoom link each month , Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of California Feb. …",
+    pubDate: "2026-06-03T01:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1769030193.jpg"
   }
 ];
 
@@ -2817,61 +2820,6 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "Restoration Work Week:  June 1 - June 5, 2026",
-    link: "http://www.ridgwayrailroadmuseum.org/events.html",
-    description: "Come and work on the railroad. We can use your computer skills, woodworking skills, manual labor, painting, etc. Lots of fun work for everyone. Lunch provided.",
-    pubDate: "2026-06-01T06:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52594216043415/huge/422bf6ccf915872b17c354d089ec0b4b7eb791d6.jpg"
-  },
-  {
-    title: "Swimming Classes for Kids",
-    link: "https://anc.apm.activecommunities.com/cityofouray/activity/search?activity_select_param=2&viewMode=list",
-    description: "The Ouray Hot Springs summer swim lesson program is a fun and supportive way for kids to build confidence in the water. Two-week sessions run through the summer from June 1 through Aug. 6. Details: ✔️ Classes meet Monday–Thursday for 30 minutes each day ✔️ 8 classes per session ✔️ $45 per session (that’s less than $6 per class!) ✔️ Pool entry during class period included Class Options: Parent Tots: (Under 3 with an adult) Level 1: Beginner Skills (Ages 3+) Level 2: Intermediate Skills (All Ages) Level 3: Advanced Skills (All Ages) 📅 You can register at tinyurl.com/ourayactivities! Registration for each session closes the Friday before the session begins. Questions? Contact our Swim Safety Coordinator at 970-325-3009 or JWyatt@CityofOuray.com.",
-    pubDate: "2026-06-01T15:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52806871795839/huge/2b4a1f1e03bf8526d92866007630f4a159e579d5.jpg"
-  },
-  {
-    title: "Senior Lunch by Neighbor to Neighbor",
-    link: "https://www.ourayneighbor.com/services",
-    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
-    pubDate: "2026-06-01T18:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
-  },
-  {
-    title: "Monthly Karate in Ouray County",
-    link: "https://weehawkenarts.org/karate-2/",
-    description: "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month. Karate class is a great way to learn skills to keep you safe, stay in shape and strong core movements. Karate believes in using it only to protect self and is taught accordingly. Whether you are new to Karate or a seasoned student, the Sensei will work with your level. Taught in the kyokushin kai-kan style, similar shotokan style of karate, we welcome new students to try this exceptional experience for your mind and body! Mixed ages --- Ages 7 through Adult (extended time for more experience) Mondays in Ouray: St. …",
-    pubDate: "2026-06-01T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg"
-  },
-  {
-    title: "Fly, You Fools!: Theatre @ the Wright",
-    link: "https://thewrightoperahouse.org/events/theater/fly-you-fools",
-    description: "Fly, You Fools!: Theatre @ the Wright WHEN? Friday, May 29, 2026 7:30 PM Saturday, May 30, 2026 7:30 PM Sunday, May 31, 2026 4:00 PM Monday, June 1, 2026 7:30 PM WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Fly, You Fools! is a critically acclaimed physical comedy from the New York–based troupe Recent Cutbacks, making its UK and international stage debut through touring productions like this one. Presented locally by UpstART Theatre, the show delivers a fast-paced parody of epic fantasy storytelling. Three actors and a Foley artist join forces in fellowship to bring an entire fantasy adventure to life in a hilarious one-shot theatrical journey. Blending rapid-fire comedy, inventive stagecraft, live sound effects, and high-energy physical theatre, the production proves that even the smallest band of performers can create a world of heroic proportions. …",
-    pubDate: "2026-06-02T01:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52453668754083/huge/7843394b93916f13f7fe41b7d9d36f1a7394be85.jpg"
-  },
-  {
     title: "Introduction to Pickleball Beginner's Clinic",
     link: "ridgwaypickleball.org",
     description: "Hosted by the Ridgway Pickball Club, come learn the basics of the game - how to play, rules & scoring, shots and lingo and basic strategy. You will be playing games by the last part of the clinic! You must register at https://ridgwaypickleball.org/event-6659078 as space is limited. All equipment provided. $10 for non-members/free to members. Check website at www.ridgwaypickleball.org for additional dates as this clinic is being offered once a month through September. If you need more information send an email to ridgwaypickleball@gmail.com",
@@ -2894,7 +2842,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52569865342720/huge/3b2908ddb2fc3d1f0e870007c7b65025c358699f.jpg"
   },
   {
-    title: "JACK HAIGHT",
+    title: "JACK HAIGHT'S RED MOUNTAIN REVIVAL",
     link: "https://coloradoboydepot.com/calendar/",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/",
     pubDate: "2026-06-02T22:00:00.000Z",
@@ -3158,17 +3106,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
-    title: "Art Opening-Karen Keene Day",
-    link: "https://events.ourayridgwayevents.com/event/art-opening-karen-keene-day",
-    description: "“Painting Evolution Of Moments With Wild Horses 1999-2026” By Artist Karen Keene Day Join us for a retrospective of Karen's work that spans almost 30 years! Including some exciting process pieces and of course her signature large-format, captivating horse portraits. During Ridgway's First Friday Art Walk. More info decker@ridgwayfuse.org",
-    pubDate: "2026-06-05T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52709607614558/huge/4004c3e46daab151739f91ab158182bf8b6c5793.jpg"
-  },
-  {
     title: "First Friday - DJ Dance Party at the Bank Building",
     link: "Ridgwaypilates.com",
     description: "Join Ridgway Pilates and DJ M2 for a free dance party out front of the historic Bank Building on First Friday. We will be showcasing the work of Tammi Brazee inside with free champagne and tours of our beautiful studio. We are offering summer Pilates specials only available in person. Join us for some fun inside and out. Get your groove on!",
@@ -3189,6 +3126,28 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52995996265018/huge/36e8fc7211df0a9f45d2eade27a757aa4f475c6a.jpg"
+  },
+  {
+    title: "First Friday Art Opening - Susan Clark",
+    link: "susanclarkart.com",
+    description: "Please join us for an opening reception for Susan Clark, exhibiting at the Space to Create Gallery, in the lobby of the Space to Create building, near Kate's Place. Art will be on display throughout June. Artist Bio: With my art, I capture the spectacular interplay of color, light, and image and then distill it down, while still maintaining the original awe. I like to present the viewer with a different way of seeing images while evoking a sense of enjoyment and creating a smile. My “joie de vivre” is exploring with harmonious color & disappearing for hours to create whimsical and colorful expressive paintings. I paint the Colorado mountains and aspen trees, which surround me and provide a quiet escape. Other subject matter includes a series of pups with expressive personalities, lively bicycles, and an abstract series using my characteristic bold hues, shape, and texture. …",
+    pubDate: "2026-06-05T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "675 Clinton St Ridgway CO",
+    imageUrl: "https://localist-images.azureedge.net/photos/53049928558853/huge/878df75533a15b6d2a8a05f5f84f8420cfc5b10c.jpg"
+  },
+  {
+    title: "First Friday Art Opening-Karen Keene Day",
+    link: "https://events.ourayridgwayevents.com/event/art-opening-karen-keene-day",
+    description: "“Painting Evolution Of Moments With Wild Horses 1999-2026” By Artist Karen Keene Day Join us for a retrospective of Karen's work that spans almost 30 years! Including some exciting process pieces and of course her signature large-format, captivating horse portraits. During Ridgway's First Friday Art Walk. More info decker@ridgwayfuse.org",
+    pubDate: "2026-06-05T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52709607614558/huge/4004c3e46daab151739f91ab158182bf8b6c5793.jpg"
   },
   {
     title: "First Friday Art Walk",
@@ -3367,6 +3326,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52393360061357/huge/dcc540c5e8c42ba92a7bee91cc3bccf0ba5c48e9.jpg"
   },
   {
+    title: "Ongoing - Susan Clark Art Exhibition",
+    link: "susanclarkart.com",
+    description: "Susan Clark's work will be on display in the Space to Create gallery - located in the lobby of the building near Kate's Place - through the month of June. Artist Bio: With my art, I capture the spectacular interplay of color, light, and image and then distill it down, while still maintaining the original awe. I like to present the viewer with a different way of seeing images while evoking a sense of enjoyment and creating a smile. My “joie de vivre” is exploring with harmonious color & disappearing for hours to create whimsical and colorful expressive paintings. I paint the Colorado mountains and aspen trees, which surround me and provide a quiet escape. Other subject matter includes a series of pups with expressive personalities, lively bicycles, and an abstract series using my characteristic bold hues, shape, and texture. …",
+    pubDate: "2026-06-08T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create ",
+    imageUrl: "https://localist-images.azureedge.net/photos/53049566972371/huge/2331d84dd56cccb875a90575974a2a05c051a592.jpg"
+  },
+  {
     title: "Ongoing: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
     link: "https://events.ourayridgwayevents.com/event/painting-evolution-of-moments-with-wild-horses-1999-2026-artist-karen-keene-day",
     description: "Enjoy nearly 3 decades or work from local painter, Karen Keene Day. Info decker@ridgwayfuse.org",
@@ -3409,6 +3379,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg"
+  },
+  {
+    title: "Ongoing - Susan Clark Art Exhibition",
+    link: "susanclarkart.com",
+    description: "Susan Clark's work will be on display in the Space to Create gallery - located in the lobby of the building near Kate's Place - through the month of June. Artist Bio: With my art, I capture the spectacular interplay of color, light, and image and then distill it down, while still maintaining the original awe. I like to present the viewer with a different way of seeing images while evoking a sense of enjoyment and creating a smile. My “joie de vivre” is exploring with harmonious color & disappearing for hours to create whimsical and colorful expressive paintings. I paint the Colorado mountains and aspen trees, which surround me and provide a quiet escape. Other subject matter includes a series of pups with expressive personalities, lively bicycles, and an abstract series using my characteristic bold hues, shape, and texture. …",
+    pubDate: "2026-06-09T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create ",
+    imageUrl: "https://localist-images.azureedge.net/photos/53049566972371/huge/2331d84dd56cccb875a90575974a2a05c051a592.jpg"
   },
   {
     title: "Ongoing: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
@@ -3574,6 +3555,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
+  },
+  {
+    title: "Ongoing - Susan Clark Art Exhibition",
+    link: "susanclarkart.com",
+    description: "Susan Clark's work will be on display in the Space to Create gallery - located in the lobby of the building near Kate's Place - through the month of June. Artist Bio: With my art, I capture the spectacular interplay of color, light, and image and then distill it down, while still maintaining the original awe. I like to present the viewer with a different way of seeing images while evoking a sense of enjoyment and creating a smile. My “joie de vivre” is exploring with harmonious color & disappearing for hours to create whimsical and colorful expressive paintings. I paint the Colorado mountains and aspen trees, which surround me and provide a quiet escape. Other subject matter includes a series of pups with expressive personalities, lively bicycles, and an abstract series using my characteristic bold hues, shape, and texture. …",
+    pubDate: "2026-06-11T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create ",
+    imageUrl: "https://localist-images.azureedge.net/photos/53049566972371/huge/2331d84dd56cccb875a90575974a2a05c051a592.jpg"
   },
   {
     title: "Ongoing: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
@@ -3860,6 +3852,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52806871795839/huge/2b4a1f1e03bf8526d92866007630f4a159e579d5.jpg"
+  },
+  {
+    title: "Ongoing - Susan Clark Art Exhibition",
+    link: "susanclarkart.com",
+    description: "Susan Clark's work will be on display in the Space to Create gallery - located in the lobby of the building near Kate's Place - through the month of June. Artist Bio: With my art, I capture the spectacular interplay of color, light, and image and then distill it down, while still maintaining the original awe. I like to present the viewer with a different way of seeing images while evoking a sense of enjoyment and creating a smile. My “joie de vivre” is exploring with harmonious color & disappearing for hours to create whimsical and colorful expressive paintings. I paint the Colorado mountains and aspen trees, which surround me and provide a quiet escape. Other subject matter includes a series of pups with expressive personalities, lively bicycles, and an abstract series using my characteristic bold hues, shape, and texture. …",
+    pubDate: "2026-06-15T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create ",
+    imageUrl: "https://localist-images.azureedge.net/photos/53049566972371/huge/2331d84dd56cccb875a90575974a2a05c051a592.jpg"
   },
   {
     title: "Ongoing: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
