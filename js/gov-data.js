@@ -1439,6 +1439,7 @@ const LAND_USE_ISSUES = {
 };
 
 const GONDOLA_DATA = {
+  label: 'Gondola 3A',
   legalSummary: 'This case involved a challenge to the 3A campaign claiming that SMART failed to provide adequate TABOR notice because voters were not told where, when, or how to submit opposing comments for inclusion in the ballot notice. Additionally, the 3A campaign was claimed to be misleading in suggesting the measure would meaningfully fund a new gondola. The district court rejected the plaintiff\'s election claims. However, rather than let the matter rest, the public entities of Mountain Village, Town of Telluride, and SMART brought motions seeking attorney fees for just over $100,000. Plaintiff is currently appealing such award in court.',
   intro: 'Ballot Issue 3A approved ~$8.2M/year in new SMART district tax revenue marketed as funding a new gondola. But the current gondola (built 1996) has a replacement cost estimated at $120-150M+, leaving a significant funding gap. CORA records revealed over $175,000 in consultant spending before the ballot referral.',
   statusTitle: 'The gondola funding agreement expires in 2027 -- and the math does not add up.',
