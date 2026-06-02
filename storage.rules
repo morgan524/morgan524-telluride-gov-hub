@@ -69,6 +69,19 @@ service firebase.storage {
                 && request.resource.contentType.matches('image/.*');
     }
 
+    // Org-submission logos — uploaded from the "Add Your Organization"
+    // modal on local-orgs.html. Same pattern as event-submissions:
+    // anonymous Firebase Auth users write under their OWN uid path,
+    // images only, 10 MB cap, public read so review + directory render.
+    //   path: org-submissions/{uid}/{timestamp}_{filename}
+    match /org-submissions/{uid}/{filename=**} {
+      allow read: if true;
+      allow write: if request.auth != null
+                && (request.auth.uid == uid || isAdmin())
+                && request.resource.size < 10 * 1024 * 1024
+                && request.resource.contentType.matches('image/.*');
+    }
+
     // Default deny for any other path
     match /{allPaths=**} {
       allow read, write: if isAdmin();

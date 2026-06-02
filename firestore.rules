@@ -272,6 +272,31 @@ service cloud.firestore {
       allow update, delete: if isAdmin();
     }
 
+    // ── org_submissions/{id} ──────────────────────────────────────────
+    // Local-org directory submissions from the "Add Your Organization"
+    // modal on local-orgs.html. Same model as event_submissions: anyone
+    // signed-in (incl. anonymous) may CREATE with status 'pending';
+    // approved submissions are world-readable so local-orgs.html can list
+    // them; pending/rejected are admin-only. Admin approves/rejects at
+    // /org-review.html (update) and deletes.
+    match /org_submissions/{id} {
+      // Public read of APPROVED orgs (directory); admin reads all.
+      allow read: if resource.data.status == 'approved' || isAdmin();
+
+      // Create: signed-in, must start 'pending', name required, and
+      // authorUid (if present) must be the caller's uid.
+      allow create: if isSignedIn()
+        && request.resource.data.status == 'pending'
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0
+        && request.resource.data.name.size() <= 200
+        && (!('description' in request.resource.data)
+            || request.resource.data.description.size() <= 5000);
+
+      // Approve / reject / edit + delete: admin only.
+      allow update, delete: if isAdmin();
+    }
+
     // ── Default deny ──────────────────────────────────────────────────
     // Any path NOT explicitly matched above is denied. This is the
     // important part — Firestore rules are deny-by-default at root, but

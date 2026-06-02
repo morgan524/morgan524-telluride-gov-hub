@@ -764,6 +764,14 @@
     </div>
   </section>
 
+  <!-- Firebase compat SDK — org submissions write to Firestore + Storage
+       (same project/pattern as events.html), and approved submissions are
+       read back onto the directory. -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
   <script>
     /* Category options */
     const CATEGORIES = [
@@ -1013,21 +1021,150 @@
       });
     }
     render();
+    /* ── Firebase (shared with the submit modal + the approved-orgs feed) ── */
+    const FB_CONFIG = {
+      apiKey: "AIzaSyCyAjB0RA_LtoETyRqxVJor0lRB4NRyXF0",
+      authDomain: "telluride-gov-hub.firebaseapp.com",
+      projectId: "telluride-gov-hub",
+      storageBucket: "telluride-gov-hub.firebasestorage.app",
+      messagingSenderId: "14117089764",
+      appId: "1:14117089764:web:4287985258f0bc929cd7f1"
+    };
+    let _fbStorage = null, _fbAuth = null, _fbDb = null;
+    function ensureFirebase() {
+      if (_fbDb) return Promise.resolve();
+      if (typeof firebase === 'undefined') return Promise.reject(new Error('Firebase failed to load'));
+      if (!firebase.apps.length) firebase.initializeApp(FB_CONFIG);
+      _fbStorage = firebase.storage();
+      _fbAuth = firebase.auth();
+      _fbDb = firebase.firestore();
+      return Promise.resolve();
+    }
+    function fbSignIn() {
+      if (_fbAuth.currentUser) return Promise.resolve(_fbAuth.currentUser);
+      return _fbAuth.signInAnonymously().then(c => c.user);
+    }
+
+    // Admin email heads-up on a new org submission. Same Apps Script web app
+    // as events.html; the generic {subject, fields[]} payload renders a clean
+    // email once the script is re-deployed with the generic branch. No-op if
+    // empty. Failure never blocks the thank-you (Firestore write already done).
+    const NOTIFY_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbxLZDpn731oh8AqEBCIag4MhH3zt04-pgkAYDXrP_yLipd7OINCYB0ds6TKL7E2lmMZ/exec';
+    function notifyOrgAdmin(d) {
+      if (!NOTIFY_WEBAPP_URL) return;
+      try {
+        fetch(NOTIFY_WEBAPP_URL, {
+          method: 'POST', mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            kind: 'org',
+            subject: 'New organization submitted: ' + (d.name || '(unnamed)'),
+            heading: 'New organization submitted',
+            reviewUrl: 'https://livabletelluride.org/org-review.html',
+            imageUrl: d.logoUrl || '',
+            imageLabel: 'Logo',
+            fields: [
+              ['Organization', d.name],
+              ['Website', d.website],
+              ['Donation URL', d.donate],
+              ['Category', d.category],
+              ['Town', d.town],
+              ['Description', d.description],
+              ['Social media', d.social],
+              ['Contact email', d.email]
+            ]
+          })
+        }).catch(function () {});
+      } catch (e) { /* never block the thank-you */ }
+    }
+
+    /* Map the modal's free-text category to the directory's category keys. */
+    const ORG_CAT_MAP = {
+      'service club': 'clubs', 'clubs': 'clubs',
+      'recreation': 'recreation',
+      'church': 'churches', 'churches': 'churches',
+      'youth': 'youth',
+      'business': 'business',
+      'nonprofit': 'nonprofits', 'nonprofits': 'nonprofits'
+    };
+    function mapOrgCategory(c) {
+      return ORG_CAT_MAP[String(c || '').toLowerCase().trim()] || 'nonprofits';
+    }
+    /* Parse a free-text "social media" blob into the {facebook,...} shape the
+       card renderer expects. Matches the URL for each known platform. */
+    function parseSocialText(text) {
+      const t = ' ' + String(text || '') + ' ';
+      const grab = re => { const m = t.match(re); return m ? m[0].trim().replace(/[)\].,;]+$/, '') : null; };
+      const social = {};
+      const fb = grab(/https?:\/\/(www\.)?facebook\.com\/[^\s,]+/i);
+      const ig = grab(/https?:\/\/(www\.)?instagram\.com\/[^\s,]+/i);
+      const tw = grab(/https?:\/\/(www\.)?(x|twitter)\.com\/[^\s,]+/i);
+      const yt = grab(/https?:\/\/(www\.)?(youtube\.com|youtu\.be)\/[^\s,]+/i);
+      if (fb) social.facebook = fb;
+      if (ig) social.instagram = ig;
+      if (tw) social.twitter = tw;
+      if (yt) social.youtube = yt;
+      return Object.keys(social).length ? social : null;
+    }
+    /* A Firestore approved-submission doc → the org card schema. */
+    function submissionToOrg(d) {
+      return {
+        name: d.name || '',
+        category: mapOrgCategory(d.category),
+        town: (d.town || '').trim(),
+        summary: d.description || '',
+        website: /^https?:\/\//i.test(d.website || '') ? d.website : '',
+        donate: /^https?:\/\//i.test(d.donate || '') ? d.donate : '',
+        social: parseSocialText(d.social),
+        logo: /^https?:\/\//i.test(d.logoUrl || '') ? d.logoUrl : ''
+      };
+    }
+
     /* ── Live data: load LOCAL_ORGS from gov-data.js, replace sample ORGS,
+       then append any APPROVED community submissions from Firestore, and
        re-render. Falls back silently to sample data on any failure. ───── */
+    let _baseOrgs = null;   // LOCAL_ORGS once loaded (so the approved feed can append cleanly)
     function loadLiveOrgs() {
       const s = document.createElement('script');
       s.src = 'https://livabletelluride.org/js/gov-data.js?v=' + Math.floor(Date.now()/600000);
       s.onload = () => {
         try {
           if (typeof LOCAL_ORGS === 'undefined' || !Array.isArray(LOCAL_ORGS) || LOCAL_ORGS.length === 0) return;
+          _baseOrgs = LOCAL_ORGS.slice();
           ORGS.length = 0;
-          LOCAL_ORGS.forEach(o => ORGS.push(o));
+          _baseOrgs.forEach(o => ORGS.push(o));
           render();
+          loadApprovedOrgs();
         } catch (err) { console.warn('loadLiveOrgs failed:', err); }
       };
       s.onerror = () => console.warn('Could not load /js/gov-data.js for live orgs');
       document.head.appendChild(s);
+    }
+    /* Pull approved org_submissions and merge them into the grid. De-duped
+       against existing orgs by case-insensitive name so an approved
+       submission that's later hand-curated into LOCAL_ORGS doesn't double up. */
+    function loadApprovedOrgs() {
+      ensureFirebase()
+        .then(() => _fbDb.collection('org_submissions').where('status', '==', 'approved').get())
+        .then(snap => {
+          if (snap.empty) return;
+          const base = _baseOrgs || ORGS.slice();
+          const seen = new Set(base.map(o => (o.name || '').toLowerCase().trim()));
+          const extra = [];
+          snap.forEach(doc => {
+            const o = submissionToOrg(doc.data() || {});
+            const key = o.name.toLowerCase().trim();
+            if (!o.name || seen.has(key)) return;
+            seen.add(key);
+            extra.push(o);
+          });
+          if (!extra.length) return;
+          ORGS.length = 0;
+          base.forEach(o => ORGS.push(o));
+          extra.forEach(o => ORGS.push(o));
+          render();
+        })
+        .catch(err => console.warn('loadApprovedOrgs failed (showing curated orgs only):', err));
     }
     loadLiveOrgs();
 
@@ -1058,13 +1195,16 @@
       if (event && event.preventDefault) event.preventDefault();
       var name = document.getElementById('lvAddOrgName').value.trim();
       var web  = document.getElementById('lvAddOrgWebsite').value.trim();
+      var don  = document.getElementById('lvAddOrgDonate').value.trim();
       var cat  = document.getElementById('lvAddOrgCategory').value;
       var loc  = document.getElementById('lvAddOrgLocation').value.trim();
       var desc = document.getElementById('lvAddOrgDesc').value.trim();
       var soc  = document.getElementById('lvAddOrgSocial').value.trim();
+      var email= document.getElementById('lvAddOrgEmail').value.trim();
       var logoInput = document.getElementById('lvAddOrgLogo');
       var logoFile  = logoInput && logoInput.files && logoInput.files[0] ? logoInput.files[0] : null;
       var msg  = document.getElementById('lvAddOrgMsg');
+      var btn  = document.querySelector('#lvAddOrgForm button[type="submit"]');
 
       if (!name || !cat || !loc) {
         msg.className = 'lv-add-msg error';
@@ -1072,39 +1212,48 @@
         return false;
       }
 
-      // Email body matches the canonical format shown to the user:
-      // each label on its own line, blank lines between. The "Logo:
-      // please attach to this email" line stays static — browsers
-      // can't carry attachments through mailto:, so the user drops
-      // the file into the email window after it opens.
-      var lines = [
-        'Organization name: ' + name,
-        '',
-        'Website: ' + web,
-        '',
-        'Category (service club, recreation, church, youth, business, or nonprofit): ' + cat,
-        '',
-        'Town: ' + loc,
-        '',
-        'Short description (1-2 sentences): ' + desc,
-        '',
-        'Social media (optional): ' + soc,
-        '',
-        'Logo: please attach to this email'
-      ];
-      var subject = 'Add my organization: ' + name;
-      var body = lines.join('\n');
-      var mailto = 'mailto:info@livabletelluride.org'
-        + '?subject=' + encodeURIComponent(subject)
-        + '&body=' + encodeURIComponent(body);
+      // Normalize a bare domain in the URL fields to a full https:// link.
+      var normUrl = function (u) { return (u && !/^https?:\/\//i.test(u)) ? 'https://' + u : u; };
+      web = normUrl(web); don = normUrl(don);
 
-      msg.className = 'lv-add-msg success';
-      msg.textContent = logoFile
-        ? '✓ Opening your mail client — drag "' + logoFile.name + '" into the email window before sending.'
-        : '✓ Opening your mail client — please send the prefilled email to complete your submission.';
-      // Slight delay so the success message renders before the mail handler fires.
-      setTimeout(function () { window.location.href = mailto; }, 150);
-      setTimeout(window.lvHideAddOrg, 3500);
+      if (btn) { btn.disabled = true; btn.textContent = logoFile ? 'Uploading…' : 'Submitting…'; }
+      msg.className = 'lv-add-msg';
+      msg.textContent = logoFile ? 'Uploading your logo…' : 'Submitting…';
+
+      ensureFirebase()
+        .then(fbSignIn)
+        .then(function (user) {
+          if (!logoFile) return '';
+          var safe = logoFile.name.replace(/[^a-zA-Z0-9._-]/g, '_');
+          var path = 'org-submissions/' + user.uid + '/' + Date.now() + '_' + safe;
+          return _fbStorage.ref(path).put(logoFile).then(function (snap) { return snap.ref.getDownloadURL(); });
+        })
+        .then(function (logoUrl) {
+          var submission = {
+            name: name, website: web, donate: don, category: cat,
+            town: loc, description: desc, social: soc, email: email,
+            logoUrl: logoUrl || '', status: 'pending',
+            authorUid: (_fbAuth.currentUser && _fbAuth.currentUser.uid) || ''
+          };
+          return _fbDb.collection('org_submissions').add(
+            Object.assign({}, submission, { createdAt: firebase.firestore.FieldValue.serverTimestamp() })
+          ).then(function () { return submission; });
+        })
+        .then(function (submission) {
+          notifyOrgAdmin(submission);
+          if (btn) { btn.disabled = false; btn.textContent = 'Submit'; }
+          document.getElementById('lvAddOrgForm').reset();
+          var nameEl = document.getElementById('lvAddOrgLogoName');
+          if (nameEl) { nameEl.textContent = 'No file selected'; nameEl.classList.add('empty'); }
+          msg.className = 'lv-add-msg success';
+          msg.textContent = '✓ Thank you! Your organization was submitted for review. We’ll add it to the directory once it’s approved.';
+          setTimeout(window.lvHideAddOrg, 3500);
+        })
+        .catch(function (err) {
+          if (btn) { btn.disabled = false; btn.textContent = 'Submit'; }
+          msg.className = 'lv-add-msg error';
+          msg.textContent = 'Sorry — could not submit (' + (err.message || err) + '). Please try again.';
+        });
       return false;
     };
 
@@ -1172,6 +1321,10 @@
           <input id="lvAddOrgWebsite" name="website" type="url" placeholder="https://example.org" autocomplete="url">
         </div>
         <div class="row">
+          <label for="lvAddOrgDonate">Donation URL (optional)</label>
+          <input id="lvAddOrgDonate" name="donate" type="url" placeholder="https://example.org/donate">
+        </div>
+        <div class="row">
           <label for="lvAddOrgCategory">Category <span class="req">*</span></label>
           <select id="lvAddOrgCategory" name="category" required>
             <option value="" disabled selected>Choose a category…</option>
@@ -1196,6 +1349,10 @@
           <input id="lvAddOrgSocial" name="social" type="text" placeholder="Facebook, Instagram, X, YouTube — paste any URLs">
         </div>
         <div class="row">
+          <label for="lvAddOrgEmail">Your contact email (optional)</label>
+          <input id="lvAddOrgEmail" name="email" type="email" placeholder="So we can follow up if needed" autocomplete="email">
+        </div>
+        <div class="row">
           <label for="lvAddOrgLogo">Logo (optional)</label>
           <div class="lv-file-row">
             <label class="lv-file-pick" for="lvAddOrgLogo">
@@ -1205,12 +1362,12 @@
             <input id="lvAddOrgLogo" name="logo" type="file" accept="image/*">
             <span id="lvAddOrgLogoName" class="lv-file-name empty">No file selected</span>
           </div>
-          <p class="lv-file-hint">PNG / JPG / SVG, up to 2 MB. After you click Submit, drag the file into the email window before sending.</p>
+          <p class="lv-file-hint">PNG / JPG / SVG, up to 2 MB. Uploaded with your submission — no need to email anything.</p>
         </div>
         <p class="lv-add-msg" id="lvAddOrgMsg" role="status" aria-live="polite"></p>
         <div class="lv-add-actions">
           <button type="submit">Submit</button>
-          <span class="lv-add-fine">Goes to info@livabletelluride.org</span>
+          <span class="lv-add-fine">Submitted for review — approved orgs appear in the directory.</span>
         </div>
       </form>
     </div>

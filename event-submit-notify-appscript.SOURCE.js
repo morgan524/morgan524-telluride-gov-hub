@@ -68,23 +68,48 @@ function doGet() {
 }
 
 function sendNotification(d) {
-  var title = (d.title || '(untitled event)').toString();
-  var rows  = [
-    ['Title',        d.title],
-    ['Date',         d.date],
-    ['Time',         d.time],
-    ['Location',     d.location],
-    ['Link',         d.url],
-    ['Submitted by', d.name],
-    ['Email',        d.email],
-    ['Organization', d.org],
-    ['Description',  d.description]
-  ];
+  // Two payload shapes are supported:
+  //   1. GENERIC (any form): { subject, heading, reviewUrl, imageUrl,
+  //      imageLabel, fields: [[label, value], ...] }. Used by the
+  //      "Add Your Organization" modal on local-orgs.html and any future
+  //      form — the website fully controls the email content.
+  //   2. LEGACY EVENT (events.html "Submit an Event"): the flat
+  //      title/date/time/location/url/name/email/org/description/imageUrl
+  //      keys. Kept so the deployed script keeps working for events even
+  //      before this generic version is re-deployed.
+  var isGeneric = d && d.fields && d.fields.length;
+
+  var heading, subject, reviewUrl, imageUrl, imageLabel, rows;
+  if (isGeneric) {
+    heading    = d.heading || 'New submission';
+    subject    = d.subject || heading;
+    reviewUrl  = d.reviewUrl || REVIEW_URL;
+    imageUrl   = d.imageUrl || '';
+    imageLabel = d.imageLabel || 'Image';
+    rows       = d.fields;
+  } else {
+    heading    = 'New event submitted';
+    subject    = 'New event submitted: ' + (d.title || '(untitled event)');
+    reviewUrl  = REVIEW_URL;
+    imageUrl   = d.imageUrl || '';
+    imageLabel = 'Flyer';
+    rows = [
+      ['Title',        d.title],
+      ['Date',         d.date],
+      ['Time',         d.time],
+      ['Location',     d.location],
+      ['Link',         d.url],
+      ['Submitted by', d.name],
+      ['Email',        d.email],
+      ['Organization', d.org],
+      ['Description',  d.description]
+    ];
+  }
 
   var html = '<div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#1a1a1a;line-height:1.5;">';
-  html += '<h2 style="margin:0 0 4px;color:#1f5130;">New event submitted</h2>';
-  html += '<p style="margin:0 0 16px;color:#555;">Someone submitted an event on livabletelluride.org. Review it in the queue:</p>';
-  html += '<p style="margin:0 0 18px;"><a href="' + REVIEW_URL + '" '
+  html += '<h2 style="margin:0 0 4px;color:#1f5130;">' + _esc(heading) + '</h2>';
+  html += '<p style="margin:0 0 16px;color:#555;">Submitted on livabletelluride.org. Review it in the queue:</p>';
+  html += '<p style="margin:0 0 18px;"><a href="' + _esc(reviewUrl) + '" '
         + 'style="display:inline-block;background:#1f5130;color:#fff;text-decoration:none;'
         + 'padding:10px 18px;border-radius:8px;font-weight:700;">Review &amp; Approve →</a></p>';
   html += '<table style="border-collapse:collapse;width:100%;max-width:560px;">';
@@ -98,9 +123,9 @@ function sendNotification(d) {
           + '</tr>';
   });
   html += '</table>';
-  if (d.imageUrl) {
-    html += '<p style="margin:16px 0 4px;font-weight:700;">Flyer:</p>';
-    html += '<img src="' + _esc(d.imageUrl) + '" alt="flyer" '
+  if (imageUrl) {
+    html += '<p style="margin:16px 0 4px;font-weight:700;">' + _esc(imageLabel) + ':</p>';
+    html += '<img src="' + _esc(imageUrl) + '" alt="" '
           + 'style="max-width:320px;border:1px solid #ddd;border-radius:8px;">';
   }
   html += '</div>';
@@ -108,15 +133,24 @@ function sendNotification(d) {
   var plain = rows
     .filter(function (r) { return r[1] != null && String(r[1]).trim(); })
     .map(function (r) { return r[0] + ': ' + r[1]; })
-    .join('\n') + '\n\nReview: ' + REVIEW_URL;
+    .join('\n') + '\n\nReview: ' + reviewUrl;
+
+  // Best-effort reply-to: pull an email from the legacy field or any
+  // generic field labeled like an email.
+  var replyTo = d.email;
+  if (!replyTo && isGeneric) {
+    rows.forEach(function (r) {
+      if (!replyTo && /email/i.test(r[0]) && /\S+@\S+\.\S+/.test(String(r[1] || ''))) replyTo = String(r[1]).trim();
+    });
+  }
 
   MailApp.sendEmail({
     to:       NOTIFY_TO,
-    subject:  'New event submitted: ' + title,
+    subject:  subject,
     name:     SENDER_NAME,
     htmlBody: html,
     body:     plain,
-    replyTo:  (d.email && /\S+@\S+\.\S+/.test(d.email)) ? String(d.email) : undefined
+    replyTo:  (replyTo && /\S+@\S+\.\S+/.test(replyTo)) ? String(replyTo) : undefined
   });
 }
 

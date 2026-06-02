@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Organization Review — Livable Telluride</title>
+  <style>
+    :root {
+      --forest: #21443c; --forest-soft: #2a5347; --accent-green: #2f7a5f;
+      --gold: #b58a2c; --bg-warm: #fdfbf6; --bg-hero: #efe9dc;
+      --text-primary: #1a2e29; --text-secondary: #4a5e57; --text-muted: #7a8a85;
+      --border-soft: rgba(33, 68, 60, 0.12); --shadow-card: 0 4px 18px rgba(36, 49, 46, 0.10);
+      --font-heading: 'Georgia', 'Times New Roman', serif;
+      --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; font-family: var(--font-main); color: var(--text-primary); background: var(--bg-warm); line-height: 1.5; }
+    .wrap { max-width: 780px; margin: 0 auto; padding: 28px 20px 70px; }
+    .topbar img { height: 54px; width: auto; }
+    .eyebrow { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin: 18px 0 4px; }
+    h1.page-title { font-family: var(--font-heading); font-size: 1.8rem; color: var(--forest); margin: 0 0 6px; }
+    .sub { color: var(--text-secondary); font-size: 0.95rem; margin: 0 0 22px; }
+
+    .card { background: #fff; border: 1px solid var(--border-soft); border-radius: 18px; box-shadow: var(--shadow-card); overflow: hidden; margin-bottom: 22px; }
+    .card-logo { width: 100%; max-height: 200px; object-fit: contain; background: #f3efe6; display: block; border-bottom: 1px solid var(--border-soft); padding: 18px; }
+    .card-body { padding: 22px 24px 22px; }
+    .card-body h2 { font-family: var(--font-heading); font-size: 1.5rem; color: var(--forest); margin: 0 0 12px; line-height: 1.15; }
+    .meta-row { display: flex; align-items: center; gap: 9px; color: var(--text-secondary); font-size: 0.96rem; margin: 6px 0; }
+    .meta-row svg { width: 18px; height: 18px; stroke: var(--accent-green); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
+    .desc { white-space: pre-wrap; color: var(--text-primary); font-size: 0.98rem; line-height: 1.6; margin: 14px 0 0; }
+    .extras { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border-soft); font-size: 0.86rem; color: var(--text-muted); }
+    .extras a { color: var(--accent-green); font-weight: 600; word-break: break-all; }
+    .extras div { margin: 3px 0; }
+    .actions { margin-top: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 16px; border-radius: 11px; font-weight: 800; font-size: 0.98rem; border: none; cursor: pointer; }
+    .btn-approve { background: linear-gradient(135deg, #2f7a5f, #21443c); color: #fff; }
+    .btn-deny { background: #fff; color: #a33; border: 1.5px solid rgba(170,51,51,0.4); }
+    .btn:disabled { opacity: 0.55; cursor: default; }
+    .empty, .panel { background: #fff; border: 1px solid var(--border-soft); border-radius: 16px; padding: 32px 26px; color: var(--text-secondary); }
+    .panel h3 { font-family: var(--font-heading); color: var(--forest); margin: 0 0 10px; }
+    .panel input { width: 100%; padding: 11px 13px; border: 1px solid var(--border-soft); border-radius: 9px; font-size: 0.95rem; margin-bottom: 12px; background: var(--bg-hero); box-sizing: border-box; }
+    .panel button { background: var(--forest); color: #fff; border: none; border-radius: 10px; padding: 11px 20px; font-weight: 700; cursor: pointer; }
+    .msg { font-size: 0.88rem; margin-top: 10px; min-height: 1.1em; }
+    .signout { float: right; font-size: 0.82rem; color: var(--accent-green); background: none; border: none; cursor: pointer; text-decoration: underline; }
+    @media (max-width: 520px) { .actions { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
+    </div>
+    <div class="eyebrow">Admin</div>
+    <h1 class="page-title">Organization submissions</h1>
+    <p class="sub">Review community organization submissions. Approve to publish them to the Local Orgs directory, or reject.</p>
+    <div id="root"><div class="panel">Loading…</div></div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script>
+  (function () {
+    const ADMIN_EMAIL = 'info@livabletelluride.org';
+    const FB_CONFIG = {
+      apiKey: "AIzaSyCyAjB0RA_LtoETyRqxVJor0lRB4NRyXF0",
+      authDomain: "telluride-gov-hub.firebaseapp.com",
+      projectId: "telluride-gov-hub",
+      storageBucket: "telluride-gov-hub.firebasestorage.app",
+      messagingSenderId: "14117089764",
+      appId: "1:14117089764:web:4287985258f0bc929cd7f1"
+    };
+    if (!firebase.apps.length) firebase.initializeApp(FB_CONFIG);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    const root = document.getElementById('root');
+
+    const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+    const safeUrl = u => /^https?:\/\//i.test(u || '') ? u : '';
+    const icon = {
+      tag: '<svg viewBox="0 0 24 24"><path d="M20.59 13.41 13.42 20.6a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>',
+      pin: '<svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+      globe: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>'
+    };
+
+    function cardHtml(id, d) {
+      const logo = safeUrl(d.logoUrl);
+      const web = safeUrl(d.website);
+      const don = safeUrl(d.donate);
+      let h = '<div class="card" data-id="' + esc(id) + '">';
+      if (logo) h += '<img class="card-logo" src="' + esc(logo) + '" alt="" onerror="this.style.display=\'none\'">';
+      h += '<div class="card-body">';
+      h += '<h2>' + (esc(d.name) || 'Unnamed organization') + '</h2>';
+      if (d.category) h += '<div class="meta-row">' + icon.tag + '<span>' + esc(d.category) + '</span></div>';
+      if (d.town)     h += '<div class="meta-row">' + icon.pin + '<span>' + esc(d.town) + '</span></div>';
+      if (web)        h += '<div class="meta-row">' + icon.globe + '<span><a href="' + esc(web) + '" target="_blank" rel="noopener" style="color:var(--accent-green);font-weight:600">' + esc(web) + '</a></span></div>';
+      if (d.description) h += '<div class="desc">' + esc(d.description) + '</div>';
+      const ex = [];
+      if (don) ex.push('<div>Donation URL: <a href="' + esc(don) + '" target="_blank" rel="noopener">' + esc(don) + '</a></div>');
+      if (d.social) ex.push('<div>Social: ' + esc(d.social) + '</div>');
+      if (d.email) ex.push('<div>Contact: <a href="mailto:' + esc(d.email) + '">' + esc(d.email) + '</a></div>');
+      if (ex.length) h += '<div class="extras">' + ex.join('') + '</div>';
+      h += '<div class="actions">'
+        + '<button class="btn btn-approve" data-act="approved" data-id="' + esc(id) + '">✓ Approve &amp; Publish</button>'
+        + '<button class="btn btn-deny" data-act="rejected" data-id="' + esc(id) + '">✕ Reject</button>'
+        + '</div>';
+      h += '</div></div>';
+      return h;
+    }
+
+    function decide(id, status, btn) {
+      const card = btn.closest('.card');
+      card.querySelectorAll('button').forEach(b => b.disabled = true);
+      db.collection('org_submissions').doc(id).update({
+        status: status,
+        reviewedAt: firebase.firestore.FieldValue.serverTimestamp()
+      }).then(() => {
+        card.style.transition = 'opacity .3s'; card.style.opacity = '0.35';
+        const note = document.createElement('div');
+        note.style.cssText = 'padding:6px 24px 16px;font-weight:700;color:' + (status === 'approved' ? 'var(--forest)' : '#a33') + ';';
+        note.textContent = status === 'approved' ? '✓ Approved — it will appear in the directory.' : '✕ Rejected.';
+        card.appendChild(note);
+        setTimeout(loadQueue, 1200);
+      }).catch(err => {
+        card.querySelectorAll('button').forEach(b => b.disabled = false);
+        alert('Could not update: ' + (err.message || err));
+      });
+    }
+
+    function loadQueue() {
+      root.innerHTML = '<div class="panel">Loading submissions…</div>';
+      db.collection('org_submissions').where('status', '==', 'pending').get()
+        .then(snap => {
+          const docs = [];
+          snap.forEach(doc => docs.push({ id: doc.id, d: doc.data() || {} }));
+          docs.sort((a, b) => {
+            const ta = a.d.createdAt && a.d.createdAt.seconds || 0;
+            const tb = b.d.createdAt && b.d.createdAt.seconds || 0;
+            return tb - ta;
+          });
+          let html = '<button class="signout" id="signout">Sign out</button>'
+            + '<div style="clear:both"></div>';
+          if (!docs.length) {
+            html += '<div class="empty">🎉 No pending organization submissions right now.</div>';
+          } else {
+            html += '<p class="sub">' + docs.length + ' submission' + (docs.length === 1 ? '' : 's') + ' awaiting review:</p>';
+            html += docs.map(x => cardHtml(x.id, x.d)).join('');
+          }
+          root.innerHTML = html;
+          document.getElementById('signout').addEventListener('click', () => auth.signOut());
+          root.querySelectorAll('button[data-act]').forEach(b => {
+            b.addEventListener('click', () => decide(b.getAttribute('data-id'), b.getAttribute('data-act'), b));
+          });
+        })
+        .catch(err => {
+          root.innerHTML = '<div class="panel">Could not load submissions: ' + esc(err.message || String(err)) + '</div>';
+        });
+    }
+
+    function loginPanel(msg) {
+      root.innerHTML =
+        '<div class="panel"><h3>Admin sign-in</h3>'
+        + '<p>Sign in as <strong>' + esc(ADMIN_EMAIL) + '</strong> to review organization submissions.</p>'
+        + '<input id="li-email" type="email" placeholder="Email" autocomplete="username" value="' + esc(ADMIN_EMAIL) + '">'
+        + '<input id="li-pass" type="password" placeholder="Password" autocomplete="current-password">'
+        + '<button id="li-go">Sign in</button>'
+        + '<div class="msg" id="li-msg" style="color:#a33;">' + esc(msg || '') + '</div></div>';
+      const go = document.getElementById('li-go');
+      const doLogin = () => {
+        const em = document.getElementById('li-email').value.trim();
+        const pw = document.getElementById('li-pass').value;
+        document.getElementById('li-msg').textContent = '';
+        go.disabled = true; go.textContent = 'Signing in…';
+        auth.signInWithEmailAndPassword(em, pw).catch(err => {
+          go.disabled = false; go.textContent = 'Sign in';
+          document.getElementById('li-msg').textContent = (err.code === 'auth/invalid-credential' || err.code === 'auth/wrong-password') ? 'Incorrect email or password.' : (err.message || String(err));
+        });
+      };
+      go.addEventListener('click', doLogin);
+      document.getElementById('li-pass').addEventListener('keydown', e => { if (e.key === 'Enter') doLogin(); });
+    }
+
+    auth.onAuthStateChanged(user => {
+      if (user && user.email === ADMIN_EMAIL) loadQueue();
+      else if (user) loginPanel('That account isn’t an admin. Sign out and use ' + ADMIN_EMAIL + '.');
+      else loginPanel('');
+    });
+  })();
+  </script>
+</body>
+</html>
