@@ -154,7 +154,7 @@ function sendNotification(d) {
   });
 }
 
-/** Run this manually from the editor to test deliverability. */
+/** Run this manually from the editor to test EVENT deliverability. */
 function testSend() {
   sendNotification({
     title: 'TEST — Community Potluck',
@@ -164,6 +164,30 @@ function testSend() {
     name: 'Jane Doe', email: 'jane@example.org',
     org: 'Telluride Neighbors',
     description: 'A test submission to confirm the notifier works end to end.'
+  });
+}
+
+/** Run this manually from the editor to test the ORG (generic) format.
+ *  If you get an email titled "New organization submitted" with a field
+ *  table, the generic code is correctly saved. If you get a blank
+ *  "New event submitted: (untitled event)", this Code.gs is still the OLD
+ *  version — re-paste the whole file, SAVE, and run this again. */
+function orgTest() {
+  sendNotification({
+    kind: 'org',
+    subject: 'New organization submitted: TEST — Editor Org Check',
+    heading: 'New organization submitted',
+    reviewUrl: 'https://livabletelluride.org/org-review.html',
+    imageLabel: 'Logo',
+    fields: [
+      ['Organization', 'TEST — Editor Org Check'],
+      ['Website', 'https://example.org'],
+      ['Donation URL', 'https://example.org/donate'],
+      ['Category', 'nonprofit'],
+      ['Town', 'Telluride, CO'],
+      ['Description', 'Editor-side check that the generic org email format works.'],
+      ['Contact email', 'test@example.org']
+    ]
   });
 }
 

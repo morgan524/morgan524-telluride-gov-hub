@@ -1072,7 +1072,20 @@
               ['Description', d.description],
               ['Social media', d.social],
               ['Contact email', d.email]
-            ]
+            ],
+            // Safety net: legacy event-shaped keys so even an OUT-OF-DATE
+            // notifier script (one without the generic `fields` branch)
+            // still renders the org details instead of a blank "(untitled
+            // event)". The generic branch ignores these when `fields` is set.
+            title: '[ORGANIZATION] ' + (d.name || ''),
+            org: d.category,
+            location: d.town,
+            url: d.website,
+            description: 'Organization directory submission' + (d.description ? ' — ' + d.description : '')
+              + (d.donate ? '\nDonation URL: ' + d.donate : '')
+              + (d.social ? '\nSocial: ' + d.social : '')
+              + (d.email ? '\nContact: ' + d.email : ''),
+            email: d.email
           })
         }).catch(function () {});
       } catch (e) { /* never block the thank-you */ }
