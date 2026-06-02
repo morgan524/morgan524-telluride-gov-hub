@@ -154,7 +154,7 @@ const MANUAL_SUMMARIES = {
     "The agenda text for this Commission for Community Assistance, Arts & Special Events meeting is missing — only the portal navigation and meeting list appears.",
 
   "telluride|2026-06-03|Telluride Housing Authority Subcommittee - Jun 03 2026":
-    "The June 3, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The June 3 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-06-01|Open Space Commission - Jun 01 2026":
     "Meeting scheduled for first Monday of the month · Commission reviews open space acquisitions and management · Advises Town Council on comprehensive plan elements",
@@ -181,16 +181,16 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "The Jun 30 2026 Town Council agenda hasn't been posted yet.",
+    "The June 30, 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
     "The July 1 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The July 1st Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
     "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -1154,6 +1154,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/TreesToPlant%20Brochure%202021.pdf",
+    img: ""
+  },
+  {
+    title: "Notice of Public Hearing June 10, 2026 - Application: River Park, Ridgway Business Park, Filing 3 Final Plat",
+    source: "Town of Ridgway",
+    date: "June 2, 2026",
+    firstSeen: "2026-06-02",
+    newsTopic: "recreation",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.06.10_public-hearing-notice.pdf",
     img: ""
   },
   {

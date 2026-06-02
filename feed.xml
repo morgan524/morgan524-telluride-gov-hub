@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s news, upcoming Gov-Hub meetings, and events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jun 2026 10:15:44 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2026 16:14:16 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Telluride Board of Education Work Session — 2026-06-09</title>
@@ -334,7 +334,7 @@ The agenda text for this Commission for Community Assistance, Arts & Special Eve
       <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-06-03
 
-The June 3, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.]]></description>
+The June 3 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -435,6 +435,15 @@ Head to the Wilkinson Public Library on the first Wednesday of the month this su
       <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/64/d6484aff-5bfb-4ff6-be20-dbb3292e170a/6a1e90bbb087e.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Both farmers' markets are back open, with Telluride's usual fruit vendors hit hard by April frost damage forcing organizers to bring in Palisade growers instead. Mountain Village reports record vendor participation this season, though the dry winter and early warm snap are creating challenges across the region with some orchards and crops likely to be lost entirely.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/64/d6484aff-5bfb-4ff6-be20-dbb3292e170a/6a1e90bbb087e.image.jpg" medium="image" />
       <category>Telluride Times</category>
+      <category>recreation</category>
+    </item>
+    <item>
+      <title>Notice of Public Hearing June 10, 2026 - Application: River Park, Ridgway Business Park, Filing 3 Final Plat</title>
+      <link>https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.06.10_public-hearing-notice.pdf</link>
+      <guid isPermaLink="false">https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.06.10_public-hearing-notice.pdf</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Press release from the Town of Ridgway. Click to view the full PDF.]]></description>
+      <category>Town of Ridgway</category>
       <category>recreation</category>
     </item>
     <item>
@@ -677,16 +686,6 @@ Take a historic tour of Telluride on foot! These historic walking tours are led 
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/d6/ed65dff5-4f05-45d8-9ba8-161870e75b58/6a17fd67e7c20.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>community</category>
-    </item>
-    <item>
-      <title>Prize winners from Mountainfilm 2026</title>
-      <link>https://www.telluridenews.com/arts_and_entertainment/article_0b673172-efaa-40b2-a702-232704b34502.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/arts_and_entertainment/article_0b673172-efaa-40b2-a702-232704b34502.html</guid>
-      <pubDate>Fri, 29 May 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/47/747f11a0-7b75-44c0-adc1-8d286ca26be1/6a192fbecc1e5.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Mountainfilm 2026 wrapped up with awards spanning documentaries, adventure films, and special recognition categories. "Kijuyu Land" took best documentary feature while "Teeth to the Wind" won the Charlie Fowler adventure film award, and Jim Morrison received the lifetime adventure award. The festival continues its tradition of highlighting films about outdoor culture, social issues, and adventure stories that resonate with mountain communities.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/47/747f11a0-7b75-44c0-adc1-8d286ca26be1/6a192fbecc1e5.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>arts-culture</category>
     </item>
   </channel>
 </rss>
