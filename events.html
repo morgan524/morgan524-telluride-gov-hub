@@ -180,7 +180,7 @@
     }
 
     /* Submit Event sidebar card */
-    .sidebar { position: sticky; top: 100px; }
+    .sidebar { position: sticky; top: 100px; max-height: calc(100vh - 120px); overflow-y: auto; }
 
     /* Festival tickets sidebar card */
     .festival-sidebar-card {
@@ -898,6 +898,33 @@
     </div>
   </section>
 
+  <!-- Submit CTA strip — moved up to sit just below the header -->
+  <section class="submit-strip">
+    <div class="submit-strip-mountains" aria-hidden="true">
+      <svg viewBox="0 0 1280 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#a4b3a8" d="M0,75 L120,32 L240,52 L380,18 L520,46 L660,22 L800,40 L920,28 L1080,50 L1200,30 L1280,52 L1280,100 L0,100 Z"/>
+        <path fill="#7a8d80" d="M0,82 L100,55 L220,72 L360,42 L500,68 L640,48 L780,68 L920,52 L1060,72 L1180,55 L1280,72 L1280,100 L0,100 Z"/>
+        <g fill="#5b6f64">
+          <polygon points="100,68 105,55 110,68"/>
+          <polygon points="106,76 112,60 118,76"/>
+          <polygon points="640,68 645,55 650,68"/>
+        </g>
+      </svg>
+    </div>
+    <div class="submit-strip-inner">
+      <div class="submit-strip-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+      </div>
+      <div class="submit-strip-text">Have an event to share? Submit it and help build our community calendar.</div>
+      <a class="submit-strip-cta" href="#submit-event">Submit an Event →</a>
+    </div>
+  </section>
+
   <main class="page-wrap">
     <aside class="sidebar">
       <!-- Location filter -->
@@ -983,32 +1010,6 @@
     </div>
   </main>
 
-  <!-- Bottom CTA strip -->
-  <section class="submit-strip">
-    <div class="submit-strip-mountains" aria-hidden="true">
-      <svg viewBox="0 0 1280 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill="#a4b3a8" d="M0,75 L120,32 L240,52 L380,18 L520,46 L660,22 L800,40 L920,28 L1080,50 L1200,30 L1280,52 L1280,100 L0,100 Z"/>
-        <path fill="#7a8d80" d="M0,82 L100,55 L220,72 L360,42 L500,68 L640,48 L780,68 L920,52 L1060,72 L1180,55 L1280,72 L1280,100 L0,100 Z"/>
-        <g fill="#5b6f64">
-          <polygon points="100,68 105,55 110,68"/>
-          <polygon points="106,76 112,60 118,76"/>
-          <polygon points="640,68 645,55 650,68"/>
-        </g>
-      </svg>
-    </div>
-    <div class="submit-strip-inner">
-      <div class="submit-strip-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-          <line x1="16" y1="2" x2="16" y2="6"/>
-          <line x1="8" y1="2" x2="8" y2="6"/>
-          <line x1="3" y1="10" x2="21" y2="10"/>
-        </svg>
-      </div>
-      <div class="submit-strip-text">Have an event to share? Submit it and help build our community calendar.</div>
-      <a class="submit-strip-cta" href="#submit-event">Submit an Event →</a>
-    </div>
-  </section>
 
   <script>
     /* ───────── Source town options for the chip filter ───────── */
@@ -1457,10 +1458,10 @@
            if (f.ticketStatus === 'on-sale') { btnBg='linear-gradient(135deg,#d4a017,#b8860b)'; btnColor='#fff'; btnLabel='Buy Passes Now!'; btnShadow='0 8px 16px rgba(180,130,20,0.25)'; }
            else if (f.ticketStatus === 'sold-out') { btnBg='linear-gradient(135deg,#a0522d,#8b3a2a)'; btnColor='#fff'; btnLabel='Passes Sold Out'; btnShadow='0 8px 16px rgba(139,58,42,0.2)'; }
            else { btnBg='linear-gradient(135deg,#2f564d,#22453e)'; btnColor='#fff'; btnLabel=(f.icon||'') + ' ' + (f.ticketLabel || 'Buy Tickets'); btnShadow='0 8px 16px rgba(34,69,62,0.2)'; }
-           if (btnLabel) buyBtn = '<a href="' + ltSafeUrl(f.ticketUrl) + '" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:6px;width:100%;min-height:38px;padding:0 12px;border-radius:10px;text-decoration:none;font-weight:800;font-size:0.78rem;letter-spacing:-0.01em;color:' + btnColor + ';background:' + btnBg + ';box-shadow:' + btnShadow + ';">' + ltEsc(btnLabel) + '</a>';
+           if (btnLabel) buyBtn = '<a href="' + ltSafeUrl(f.ticketUrl) + '" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:6px;width:100%;min-height:36px;padding:0 12px;border-radius:10px;text-decoration:none;font-weight:800;font-size:0.72rem;letter-spacing:-0.01em;color:' + btnColor + ';background:' + btnBg + ';box-shadow:' + btnShadow + ';">' + ltEsc(btnLabel) + '</a>';
          }
          let siteChip = '';
-         if (f.url) siteChip = '<a href="' + ltSafeUrl(f.url) + '" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:0 10px;border-radius:8px;text-decoration:none;font-size:0.68rem;font-weight:800;color:var(--forest);background:rgba(39,69,63,0.07);border:1px solid rgba(39,69,63,0.12);white-space:nowrap;">Festival Site</a>';
+         if (f.url) siteChip = '<a href="' + ltSafeUrl(f.url) + '" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;min-height:30px;padding:0 10px;border-radius:8px;text-decoration:none;font-size:0.68rem;font-weight:800;color:var(--forest);background:rgba(39,69,63,0.07);border:1px solid rgba(39,69,63,0.12);white-space:nowrap;">Festival Site</a>';
          html += '<div style="border:1px solid rgba(221,210,196,0.85);border-radius:16px;overflow:hidden;box-shadow:0 6px 16px rgba(32,48,45,0.08);' + cardBg + cardBorder + '">'
            + '<div style="padding:12px 12px 6px;display:grid;grid-template-columns:56px 1fr;gap:10px;align-items:center;' + (isFeatured ? 'background:linear-gradient(180deg,rgba(198,148,55,0.07),rgba(198,148,55,0));' : '') + '">'
              + '<div style="width:56px;height:56px;border-radius:14px;background:linear-gradient(180deg,#ffffff,#f6f3ee);border:1px solid rgba(221,210,196,0.95);display:grid;place-items:center;overflow:hidden;padding:5px;">' + logoInner + '</div>'
@@ -1470,7 +1471,7 @@
                + statusBadge
              + '</div>'
            + '</div>'
-           + (buyBtn || siteChip ? '<div style="padding:6px 12px 12px;display:grid;' + (buyBtn && siteChip ? 'grid-template-columns:1fr auto;' : '') + 'gap:8px;align-items:center;">' + buyBtn + siteChip + '</div>' : '')
+           + (buyBtn || siteChip ? '<div style="padding:6px 12px 12px;display:flex;flex-direction:column;gap:8px;">' + buyBtn + siteChip + '</div>' : '')
          + '</div>';
        });
        container.innerHTML = html;
@@ -1572,6 +1573,7 @@
              if (typeof COMMUNITY_EVENTS !== 'undefined') COMMUNITY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Community'));
              if (typeof MUSIC_ON_THE_GREEN !== 'undefined') MUSIC_ON_THE_GREEN.forEach(e => pushEvent(e, e.sourceLabel || 'Music on the Green'));
              if (typeof TELLURIDE_FARMERS_MARKET !== 'undefined') TELLURIDE_FARMERS_MARKET.forEach(e => pushEvent(e, e.sourceLabel || 'Telluride Farmers Market'));
+             if (typeof TELLURIDE_ROTARY_MEETINGS !== 'undefined') TELLURIDE_ROTARY_MEETINGS.forEach(e => pushEvent(e, e.sourceLabel || 'Telluride Rotary'));
              if (typeof TELLURIDE_FOUNDATION_EVENTS !== 'undefined') TELLURIDE_FOUNDATION_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Telluride Foundation'));
              if (typeof OURAY_COUNTY_EVENTS !== 'undefined') OURAY_COUNTY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Ouray County'));
              if (typeof NORWOOD_EVENTS !== 'undefined') NORWOOD_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Norwood'));

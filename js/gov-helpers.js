@@ -1790,6 +1790,46 @@ const TELLURIDE_FARMERS_MARKET = (function () {
   }));
 })();
 
+// Telluride Rotary Club meetings — hand-curated recurring series (bots don't
+// touch this). 1st & 3rd Wednesdays, 6:00 PM (social 5:30); 1st Wed at
+// Mountain Lodge in Mountain Village, 3rd Wed at an announced Telluride
+// location. No meetings in April. Dates are GENERATED from the viewer's
+// current date at page load (rolling), so the list never goes stale. Schedule
+// + logo from portal.clubrunner.ca/3291.
+const TELLURIDE_ROTARY_MEETINGS = (function () {
+  function nthWeekday(year, month, weekday, n) { // month 0-indexed, weekday 0=Sun..6=Sat
+    const first = new Date(year, month, 1);
+    const day = 1 + ((weekday - first.getDay() + 7) % 7) + (n - 1) * 7;
+    return new Date(year, month, day);
+  }
+  const pad = n => String(n).padStart(2, '0');
+  const iso = d => d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  const out = [];
+  const now = new Date();
+  for (let i = 0; i < 4; i++) {                 // current month + next 3
+    const base = new Date(now.getFullYear(), now.getMonth() + i, 1);
+    const y = base.getFullYear(), m = base.getMonth();
+    if (m === 3) continue;                       // April — no meetings
+    [1, 3].forEach(n => {
+      const d = nthWeekday(y, m, 3, n);          // Wednesday = 3
+      const first = (n === 1);
+      out.push({
+        title: 'Telluride Rotary Club Meeting',
+        date: iso(d),
+        time: '6:00 PM (social at 5:30)',
+        location: first
+          ? 'Mountain Lodge, 457 Mountain Village Blvd, Mountain Village'
+          : 'Announced Telluride location',
+        description: 'Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth Exchange, international projects, and community grants. Guests welcome; in-person & online options available.',
+        href: 'https://portal.clubrunner.ca/3291',
+        imageUrl: '/logo/Telluride%20Rotary.png',
+        sourceLabel: 'Telluride Rotary',
+      });
+    });
+  }
+  return out;
+})();
+
 const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Future Ready: Investing Basics with Alpine Bank",
