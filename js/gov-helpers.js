@@ -154,7 +154,7 @@ const MANUAL_SUMMARIES = {
     "The agenda text for this Commission for Community Assistance, Arts & Special Events meeting is missing — only the portal navigation and meeting list appears.",
 
   "telluride|2026-06-03|Telluride Housing Authority Subcommittee - Jun 03 2026":
-    "The June 3 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The Jun 03 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-06-01|Open Space Commission - Jun 01 2026":
     "Meeting scheduled for first Monday of the month · Commission reviews open space acquisitions and management · Advises Town Council on comprehensive plan elements",
@@ -169,10 +169,10 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission chair meeting agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -181,25 +181,52 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "The June 30, 2026 Town Council agenda hasn't been posted yet.",
+    "The June 30 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The July 1, 2026 Ecology Commission agenda hasn't been posted yet.",
+    "The July 1 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 1 agenda hasn't been posted yet.",
+    "The July 1 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The July 1st Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The Jul 01 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
-    "The July 1 Board of County Commissioners agenda hasn't been posted yet."
+    "The July 1st Board of County Commissioners agenda hasn't been posted yet.",
+
+  "county|2026-06-10|Board of Review and Planning Commission Joint Work Session":
+    "The June 10 Board of Review and Planning Commission joint work session agenda hasn't been posted yet."
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Investigation finds Prohaska ‘technically’ free of ethics violations",
+    source: "Telluride Times",
+    date: "June 2, 2026",
+    firstSeen: "2026-06-02",
+    newsTopic: "community",
+    copy: "An ethics investigation found former Mountain Village mayor Prohaska wasn't \"technically\" in violation when she and councilman Fee met with Telluride Ski Resort owner Chuck Horning about purchasing the resort for $127.5 million, but said her conduct was still inconsistent with ethical obligations. The investigators noted the officials used their political influence as a selling point, though they concluded town manager Wisor acted appropriately since he stood to lose his job if the deal went through.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_2fcca626-62fb-459c-9c24-a3ca6915d695.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/71/d7157d51-a6d7-4ddf-a1e2-8b9ddaeb4c13/6a1f033972ae9.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "The rhubarb in the sugar bowl",
+    source: "Telluride Times",
+    date: "June 2, 2026",
+    firstSeen: "2026-06-02",
+    newsTopic: "community",
+    copy: "A local writer reflects on how childhood creativity once flowed as easily as dipping rhubarb in sugar, when she and a friend would devour books on the school bus then spend hours crafting and sharing stories over the phone. Now she finds herself stuck on a novel that's been brewing for seven years, her writing having become too precious and studied compared to the bold, joyful storytelling of her youth.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_3a837034-4865-44ba-8d1c-f9f4cdfad790.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/93/89317d07-8c35-4d5f-8091-6fe8b02d6df5/6a192d9d2cddf.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Telluride and Mountain Village farmers’ markets are open",
     source: "Telluride Times",
@@ -1883,17 +1910,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Future Ready: Investing Basics with Alpine Bank",
-    link: "https://koto.org/event/future-ready-investing-basics-with-alpine-bank/",
-    description: "Join us for an engaging conversation on the fundamentals of investing and strategies for building long-term wealth, presented in partnership with Alpine Bank. Featured speakers include Dylan Brooks, CFP®, of 1st and Main Investment Advisors; Jennifer Hawley of Alpine Bank Wealth Management; and Jon Martin of Edward Jones.",
-    pubDate: "2026-06-02T18:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/money-scaled.png"
-  },
   {
     title: "Make your own Hula Hoop for Adults",
     link: "https://koto.org/event/make-your-own-hula-hoop-for-adults/",
