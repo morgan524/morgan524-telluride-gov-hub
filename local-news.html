@@ -831,6 +831,7 @@
       // SMBF: fall back to the masthead logo when the article didn't have
       // a photo on the landing page. Matches the KOTO cow pattern.
       if (a.sourceKey === 'smb') return '/logo/San%20Miguel%20Basis%20Logo.jpg';
+      if (a.sourceKey === 'rotary') return '/logo/Telluride%20Rotary.png';
       // Telluride Humane Society: photos always come from Shelterluv,
       // but cover the edge case where the API returns an animal without
       // one by falling back to the THS shield.
@@ -1098,6 +1099,27 @@
                   title: a.title,
                   source: 'San Miguel Basin Forum',
                   sourceKey: 'smb',
+                  date: a.date,
+                  summary: a.copy,
+                  href: a.href,
+                  img: a.img || '',
+                  newsTopic: a.newsTopic || ''
+                }));
+            }
+            // Telluride Rotary news — scraped from ClubRunner by content-refresh
+            // (pullRotaryNews). firstSeen date model; 90-day display window.
+            if (typeof ROTARY_NEWS !== 'undefined') {
+              const rotaryCutoffIso = (() => {
+                const d = new Date(); d.setDate(d.getDate() - 90);
+                return d.toISOString().slice(0, 10);
+              })();
+              ROTARY_NEWS
+                .filter(a => a && a.firstSeen && a.firstSeen >= rotaryCutoffIso)
+                .slice(0, 10)
+                .forEach(a => live.push({
+                  title: a.title,
+                  source: 'Telluride Rotary',
+                  sourceKey: 'rotary',
                   date: a.date,
                   summary: a.copy,
                   href: a.href,

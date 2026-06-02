@@ -1292,6 +1292,13 @@ const KOTO_FEATURED_STORIES = [
 // date. Local News applies its own 35-day-firstSeen filter, so these
 // sentinel-dated entries never display — they just block re-detection.
 //
+// Telluride Rotary news — scraped from portal.clubrunner.ca/3291 by
+// content-refresh.js (pullRotaryNews). Bot-managed; seeded empty. Same
+// firstSeen date model as SMBF (ClubRunner stories carry no publish date).
+// Shape: { title, source, sourceKey:'rotary', date, firstSeen, newsTopic,
+// copy, href, img }. Rendered on Local News via local-news.html loadLiveData.
+const ROTARY_NEWS = [];
+
 // As genuinely-new articles appear at the top of the SMBF landing
 // page over the coming weeks, the bot will add them with firstSeen=today
 // and the array will naturally shed the sentinels via the same logic.
