@@ -282,6 +282,11 @@ const PROXY_HOSTS = new Set([
   // sitemap+per-page approach (which made 300+ HTTP requests).
   'telluride.com',
   'www.telluride.com',
+  // Ouray/Ridgway community calendar — Localist API (same platform as the
+  // school feeds). Already on the Worker allow-list; added here so
+  // syncOurayRidgwayEvents() routes through the proxy and gets protection
+  // if the Localist host ever blocks GH-runner IPs.
+  'events.ourayridgwayevents.com',
 ]);
 
 function maybeProxy(url) {

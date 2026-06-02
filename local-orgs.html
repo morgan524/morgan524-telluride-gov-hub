@@ -404,9 +404,10 @@
     .btn-social svg { width: 13px; height: 13px; }
 
     /* ── Add-Organization modal ───────────────────────────────────────
-       Replaces the legacy mailto: button. Submitting still emails
-       info@livabletelluride.org (via a built mailto: URL) so the
-       processing pipeline doesn't change. */
+       Submitting writes to Firestore (org_submissions, status pending),
+       uploads an optional logo to Storage, and pings the Apps Script
+       notifier. Admin reviews at /org-review.html; approved orgs render
+       on this page. (No mailto — that was the pre-2026-06 flow.) */
     #lvAddOrgOverlay {
       position: fixed; inset: 0;
       background: rgba(20,40,34,0.66);
@@ -1182,11 +1183,10 @@
     loadLiveOrgs();
 
     /* ── Add-Organization modal — show / hide / submit ──────────────
-       Submitting builds a mailto: URL to info@livabletelluride.org
-       (with all the form fields prefilled in the body) and opens
-       the user's mail client. Keeps the existing intake flow but
-       gives users a real form UI instead of asking them to fill
-       fields inside their mail app's blank body. */
+       Submit writes the org to Firestore (org_submissions, status
+       'pending') with an optional logo upload to Storage, then fires the
+       Apps Script email notifier. Admin approves/rejects at
+       /org-review.html; approved orgs are merged onto this directory. */
     window.lvShowAddOrg = function () {
       var ov = document.getElementById('lvAddOrgOverlay');
       if (!ov) return;
