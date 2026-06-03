@@ -405,17 +405,21 @@ function parseEventEmail(msg, opts) {
   var sourceUrl = extractUrl(body) || '';
   var image = extractImageUrl(body) || '';
 
-  // Require at least one positive event-like signal before queueing — UNLESS
-  // this is an explicit approve/deny forward. Without the signal AND without
-  // an action, the email is almost certainly not an event submission.
+  // Direct-to-events@ auto-add is ADMIN-ONLY (2026-06-03). Only a trusted
+  // sender (TRUSTED_APPROVERS = info@livabletelluride.org + morgancsmith99@
+  // gmail.com) may add an event simply by emailing events@. This is the
+  // "no approval step needed because only I can do it" model — the trusted
+  // sender IS the authorization. Anyone else who emails events@ is ignored
+  // (their mail is NOT published). The separate approve@/deny@ forward flow
+  // (action !== null) is unaffected by this gate.
   if (!action) {
-    var isForward = /^\s*(fwd?|fw)\s*:/i.test(subject);
-    var hasEventKeyword = /\bevent\b|\bfundraiser\b|\bconcert\b|\bworkshop\b|\bmeeting\b|\bworkshop\b|\bopen\s+house\b|\bgala\b|\bbenefit\b/i.test(subject);
-    var hasDateLocOrTime = !!(date || location || time);
-    if (!isForward && !hasEventKeyword && !hasDateLocOrTime) {
-      Logger.log('  Skipping (no event signal): from=' + from + ' subject="' + subject + '"');
+    if (!isTrustedApprover(from)) {
+      Logger.log('  Skipping (not a trusted admin sender for direct add): from=' + from);
       return null;
     }
+    // A trusted admin's email IS the event — no keyword/date gate. The
+    // subject becomes the title and the body becomes the description/summary,
+    // plus any Date/Location/Time the body contains (best-effort).
   }
 
   // Status mapping:
