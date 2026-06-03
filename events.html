@@ -603,7 +603,10 @@
     }
     @media (max-width: 900px) {
       .page-wrap { grid-template-columns: 1fr; }
-      .sidebar { position: static; }
+      /* On mobile, show the events first and drop the sidebars (Location
+         filter, Festival Tickets, Submit card) to the BOTTOM of the page. */
+      .sidebar { position: static; order: 2; }
+      .event-main { order: 1; }
       .topnav-links { display: none; }
       .hero h1 { font-size: 2rem; }
       /* On narrow screens drop the button out of the overlay and into flow */
@@ -912,7 +915,7 @@
       </div>
     </aside>
 
-    <div>
+    <div class="event-main">
       <!-- Weather widget: current conditions + 5-day forecast.
            Populated by initWeather() at the bottom of the page from the
            Open-Meteo API (free, no key, CORS-friendly). Sits above the
