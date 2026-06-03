@@ -2883,6 +2883,26 @@ const SHERIDAN_EVENTS = [
   }
 ];
 
+// Telluride Venture Network — entrepreneurial-ecosystem bootcamps from
+// tellurideventurenetwork.com/tvn-events/ (hand-curated; bots don't touch).
+// Multi-day programs: pubDate is the start date; run dates noted in the
+// description. events.html's 60-day window hides past/concluded cohorts
+// (e.g. the Feb–Mar 2026 Strategy & Growth Bootcamp).
+const TELLURIDE_VENTURE_EVENTS = [
+  {
+    title: "Climate Solutions Investment Bootcamp",
+    link: "https://tellurideventurenetwork.com/climate-solutions/",
+    description: "Telluride Venture Network bootcamp for cleantech and climate-focused startups, leveraging Colorado's leadership in the sector — with mentorship and investor connections. Runs June 22 – July 2, 2026.",
+    pubDate: "2026-06-22",
+    endDate: "July 2, 2026",
+    source: "tvn",
+    sourceLabel: "Telluride Venture Network",
+    category: "Community Event",
+    location: "Telluride",
+    imageUrl: "https://tellurideventurenetwork.com/wp-content/uploads/2025/11/Climate-Solutions-7-900x600.png"
+  }
+];
+
 const TELLURIDE_FOUNDATION_EVENTS = [
   {
     title: "Creating with AI: The Tools Worth Using & How to Actually Use Them",

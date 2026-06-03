@@ -1799,6 +1799,26 @@ const TOPIC_DEFINITIONS = {
    as you discover them. */
 const LOCAL_ORGS = [
     {
+      name: "Telluride Mountain Club",
+      category: "recreation",
+      town: "Telluride",
+      summary: "A community catalyst for sustainable outdoor recreation — maintaining trails, climbing and via ferrata routes, and offering backcountry education across the Telluride region.",
+      website: "https://www.telluridemountainclub.org/",
+      donate: "https://www.telluridemountainclub.org/membership/",
+      social: { facebook: "https://www.facebook.com/telluridemountainclub", instagram: "https://www.instagram.com/telluridemountainclub/" },
+      logo: "https://livabletelluride.org/logo/TtMC-logo.webp"
+    },
+    {
+      name: "Telluride Venture Network",
+      category: "business",
+      town: "Telluride",
+      summary: "A nationally recognized, award-winning entrepreneurial ecosystem that supports new, innovative, and growing businesses across Southwest Colorado with mentorship, capital connections, and resources.",
+      website: "https://tellurideventurenetwork.com/",
+      donate: "https://tellurideventurenetwork.com/donate-now/",
+      social: {},
+      logo: "https://livabletelluride.org/logo/Telluride%20Venture%20Net.webp"
+    },
+    {
       name: "Telluride Science",
       category: "nonprofits",
       town: "Telluride",
