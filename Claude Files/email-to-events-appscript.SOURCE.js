@@ -50,6 +50,12 @@ var NOTIFY_EMAIL = 'info@livabletelluride.org';
 // (re-save + re-deploy the web app afterward).
 var SECRET = 'a62a9ec3-5c16-4636-aa98-c91e0305351d';
 
+// Deployed Web App /exec URL — the Approve/Deny buttons point here. The script
+// also tries ScriptApp.getService().getUrl() as a fallback, but hardcoding the
+// known URL is bulletproof. Update this if you ever make a NEW web-app
+// deployment (a new "Manage deployments → New version" keeps the SAME URL).
+var WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbzHHMoZmlBNHxfpaYKvfOeFopudSUNwCtL_ZTL7ID2SRAsL9_Yci8g2ASsiAK3VQD4dXw/exec';
+
 // Approve/Deny alias addresses. Both are Workspace aliases that deliver
 // to events@livabletelluride.org. When you forward a submission email to
 // one of these, the handler below recognizes the recipient and writes a
@@ -292,8 +298,8 @@ function sendActionNotification(events, action) {
 // script's web-app doGet(), which flips the row to 'new' (publish) or
 // 'skipped' (discard). One email per event so each has its own buttons.
 function sendDirectReceiptNotification(events) {
-  var base = '';
-  try { base = ScriptApp.getService().getUrl() || ''; } catch (e) { base = ''; }
+  var base = WEBAPP_URL || '';
+  if (!base) { try { base = ScriptApp.getService().getUrl() || ''; } catch (e) { base = ''; } }
 
   events.forEach(function(ev) {
     var subject = 'Review event: ' + (ev.title || '(untitled)');
