@@ -859,7 +859,12 @@
 
     // Get total reactions
     var totalReactions = Object.values(post.reactions || {}).reduce(function(sum, val) { return sum + val; }, 0);
-    var userReaction = (post.reactors && post.reactors[myUid]) || null;
+    // The user's own reaction is tracked client-side (localStorage) rather than
+    // in a `reactors` map on the post — the Firestore rules only let a non-author
+    // change reactions/replyCount/lastReplyAt, not an arbitrary `reactors` field,
+    // so writing reactors made every non-author reaction silently fail.
+    var userReaction = null;
+    try { userReaction = localStorage.getItem('hb_react_' + post.id) || null; } catch (e) {}
 
     var tagsHtml = '';
     if (post.tags && post.tags.length) {
@@ -1057,34 +1062,34 @@
     if (!hbUser) { hbShowAuth('login'); return; }
     if (!hbFirebaseReady) return;
     var ref = db.collection('posts').doc(postId);
-    var uid = hbUser.uid;
+    var lsKey = 'hb_react_' + postId;
+    var prev = null;
+    try { prev = localStorage.getItem(lsKey) || null; } catch (e) {}
+    var toggleOff = (prev === reactionType);
+
     db.runTransaction(function(tx) {
       return tx.get(ref).then(function(doc) {
-        var data = doc.data();
+        var data = doc.data() || {};
         var reactions = data.reactions || { useful: 0, helpful_source: 0, good_question: 0, learned: 0 };
-        var reactors = data.reactors || {};
-        var currentReaction = reactors[uid];
-
-        // If user already has this reaction, remove it
-        if (currentReaction === reactionType) {
+        if (toggleOff) {
+          // Clicking your current reaction removes it.
           reactions[reactionType] = Math.max(0, (reactions[reactionType] || 0) - 1);
-          delete reactors[uid];
         } else {
-          // Remove old reaction if exists
-          if (currentReaction && reactions[currentReaction]) {
-            reactions[currentReaction] = Math.max(0, (reactions[currentReaction] || 0) - 1);
-          }
-          // Add new reaction
+          // Switch from a previous reaction (if any) to the new one.
+          if (prev && reactions[prev]) reactions[prev] = Math.max(0, (reactions[prev] || 0) - 1);
           reactions[reactionType] = (reactions[reactionType] || 0) + 1;
-          reactors[uid] = reactionType;
         }
-
-        tx.update(ref, {
-          reactions: reactions,
-          reactors: reactors
-        });
+        // Write ONLY `reactions` — the per-post update rule lets any signed-in
+        // user change reactions/replyCount/lastReplyAt, so this succeeds for
+        // everyone (not just the author). The user's own choice is remembered
+        // client-side below so the highlight + toggle work.
+        tx.update(ref, { reactions: reactions });
       });
     }).then(function() {
+      try {
+        if (toggleOff) localStorage.removeItem(lsKey);
+        else localStorage.setItem(lsKey, reactionType);
+      } catch (e) {}
       hbLoadPosts();
     }).catch(function(err) {
       console.error('Reaction error:', err);
