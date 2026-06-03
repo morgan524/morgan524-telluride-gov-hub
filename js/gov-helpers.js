@@ -169,7 +169,7 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The Jun 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
     "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
@@ -181,7 +181,7 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "The June 30 2026 Town Council agenda hasn't been posted yet.",
+    "The June 30, 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
     "The July 1 Ecology Commission agenda hasn't been posted yet.",
@@ -190,10 +190,10 @@ const MANUAL_SUMMARIES = {
     "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 1 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The July 1 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The Jul 01 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
     "The July 1st Board of County Commissioners agenda hasn't been posted yet.",
@@ -203,6 +203,90 @@ const MANUAL_SUMMARIES = {
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "CHALKBOARD",
+    source: "Telluride Times",
+    date: "June 3, 2026",
+    firstSeen: "2026-06-03",
+    newsTopic: "government",
+    copy: "To ensure that your birthday is listed, email utetrailclub@yahoo.com. For other events, email mia.rupani@telluridetimes.com.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/norwood_post/article_db74ca0a-8ff4-4edd-be6c-73149d920ddd.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/a5/ca5fec16-c68c-4ca8-928f-e5332ef5a687/6a1f6f05c9138.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "First Chair Destinations launches in Telluride",
+    source: "Telluride Times",
+    date: "June 2, 2026",
+    firstSeen: "2026-06-03",
+    newsTopic: "community",
+    copy: "A new vacation rental company called First Chair Destinations has launched in Telluride, taking over properties previously managed by Casago and promising a more locally-focused approach than bigger platforms. The company is run by former Wyndham and Vacasa executives and manages about 3,500 homes across mountain and resort destinations in nine states.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_84de633e-983c-45be-ae02-dec34ce8da39.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Fresh Foundation, Food Hub: more than a farmers' market booth",
+    source: "Telluride Times",
+    date: "June 2, 2026",
+    firstSeen: "2026-06-03",
+    newsTopic: "community",
+    copy: "Fresh Foundation runs eight food programs beyond their farmers' market booths, moving $1.4 million worth of local food through the community via wholesale connections, free pantries, senior meals, and markets in Mountain Village and Norwood that take SNAP benefits. They're addressing food insecurity that's easy to miss in our area — 2,400 people used regional food pantries last year, many just a short drive from the wealth of Telluride.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_77fd3c82-539e-47d5-820d-f610c4498a69.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/65/265a630a-8c4a-44d4-95b2-506ec323cc72/6a1f6e65c1014.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "What if anxiety, perfectionism and people-pleasing are assets, not liabilities?",
+    source: "Telluride Times",
+    date: "June 2, 2026",
+    firstSeen: "2026-06-03",
+    newsTopic: "community",
+    copy: "Attorney-turned-coach Jenny Robbins will speak at Wilkinson Public Library on Monday, June 8 at 5:30 p.m. about reframing anxiety and perfectionism as strengths rather than weaknesses. She'll share her personal story of leaving a 26-year legal career after a cancer diagnosis led her to build a coaching business, and attendees get a signed copy of her book \"The Box.\"",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_4a4621a9-cbec-46ad-8a7b-62b50575f9a6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/31/b31e6565-65eb-4410-889b-222758816abf/6a1f6d110fd82.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Telluride Housing Authority launches tenant advisory committee",
+    source: "Telluride Times",
+    date: "June 2, 2026",
+    firstSeen: "2026-06-03",
+    newsTopic: "housing",
+    copy: "NEWS RELEASE",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news_release/article_12442942-2378-4fdb-a325-fcf2aecde27d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Curating good",
+    source: "Telluride Times",
+    date: "June 2, 2026",
+    firstSeen: "2026-06-03",
+    newsTopic: "community",
+    copy: "Curate Telluride, a vacation rental management company, donated over $10,000 to local nonprofits this year through a program where they contribute 1% of commission revenue and homeowners match with either 1% of rental income or seven free nights for community use. The donations went to organizations ranging from the Mustang Sanctuary and Humane Society to youth hockey and the fire department. They're aiming to raise $50,000 next year.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_ae1f8e7b-822e-4cf5-8092-e39f744dfe9d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/de/1de8d61b-6f2b-4b7d-9170-344826fe3cfc/6a1f6bc061552.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Governor Polis signs 'negligently luring bears' bill",
+    source: "Telluride Times",
+    date: "June 2, 2026",
+    firstSeen: "2026-06-03",
+    newsTopic: "community",
+    copy: "Governor Polis signed a new law making it easier to cite people who negligently attract bears by lowering the standard from \"intentionally\" to \"knowingly\" luring them with improperly stored food and trash. The bill eliminates mandatory warnings for first-time offenders and raises fines for repeat violations to $5,000, giving wildlife officers more enforcement tools as human-bear conflicts continue rising across Colorado mountain communities.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_2acc4caf-12eb-443d-af21-eb9a657ec7d6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/84/684d122b-88dd-4691-9a22-166d57eef212/6a1f6a8bc7dcc.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Investigation finds Prohaska ‘technically’ free of ethics violations",
     source: "Telluride Times",
@@ -1038,66 +1122,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "THS track wins big",
-    source: "Telluride Times",
-    date: "May 20, 2026",
-    firstSeen: "2026-05-21",
-    newsTopic: "education",
-    copy: "THS girls track team had a strong showing at state championships, with their 4x800 relay team finishing first in 9:44.46, coming within 11 seconds of the 2A record. Austin Coom won her second straight 800m title in 2:11.45, missing the state record by just 0.02 seconds, while the Lady Miners placed 10th overall as a team.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_05e1f911-c5b9-4b4b-ba4f-b633a1d3a7c5.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/27/92731cb4-0e96-430e-a9f6-8e46805b1b02/6a0c21f8d29e5.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "The plant that outlasted the miners",
-    source: "Telluride Times",
-    date: "May 20, 2026",
-    firstSeen: "2026-05-21",
-    newsTopic: "recreation",
-    copy: "Miners in the old West planted rhubarb for its hardy nature and tangy spring flavor when fresh fruit wasn't available most of the year. The author's 1893 house likely has rhubarb from that original planting still thriving in the yard. Rhubarb plants still mark abandoned mining settlements across the high country, with one historic camp above Gunnison actually named Pie Plant.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_d561c5b3-49d8-4a93-90c3-0948eee9e33a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/1d/d1d8e35f-1f8d-4d2f-a595-78ce88f351de/6a0d87534309b.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "This year's most endangered historic places nod to America 250 and the promise of equality for all",
-    source: "Telluride Times",
-    date: "May 20, 2026",
-    firstSeen: "2026-05-20",
-    newsTopic: "land-use",
-    copy: "The National Trust for Historic Preservation released its 2026 most endangered places list, featuring 11 sites across America that highlight the principle of equality, with each receiving a $25,000 grant. Sites include the Ben Moore Hotel in Montgomery where civil rights leaders stayed, the Tule Lake Japanese American segregation center, and Angel Island immigration station.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_4d87e910-1d10-5e25-9af6-0032fbc0f6f9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/08/d08dd411-5461-5062-ba2c-5ac383a44e51/6a0d9f6f18404.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride Ethics Commission holds first meeting in 19 years",
-    source: "Telluride Times",
-    date: "May 20, 2026",
-    firstSeen: "2026-05-20",
-    newsTopic: "government",
-    copy: "The Town Ethics Commission met for the first time since 2005 to review a complaint against Councilwoman Kristen Permanoff for making an insulting comment during a Zoom council meeting in January. Permanoff, who thought she was muted while dealing with a family emergency, apologized publicly and personally to the speaker she interrupted, though the complaint came from a third party. The commission ultimately found no ethical violation occurred.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_456c78de-b779-48b0-8c6b-7b83f3783a07.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/3b/b3bef5c4-c3cb-4d04-a298-e72ee9d1fa09/6a0dc7899b070.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Intergovernmental meeting considers large-scale projects",
-    source: "Telluride Times",
-    date: "May 20, 2026",
-    firstSeen: "2026-05-20",
-    newsTopic: "health",
-    copy: "Regional officials met to discuss coordination on large development projects after several communities said they were caught off guard by the Four Seasons project in Mountain Village. Towns like Ridgway and Naturita are now housing construction workers, straining local resources and infrastructure, with Ridgway suing over zoning violations at worker housing.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_ab40e47c-2e12-4591-ba16-71b511df9bf2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/5a/85a13aa6-b1b6-4623-9baa-57f77227e78e/6a0d7c50103a8.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Highway 62 between Ridgway and Placerville re-opens",
     source: "Telluride Times",
     date: "May 22, 2026",
@@ -1146,15 +1170,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14159"
   },
   {
-    title: "Road and Bridge Office Closed on June 2nd 2026",
-    source: "San Miguel County",
-    date: "May 28, 2026",
-    newsTopic: "infrastructure",
-    copy: "The Road and Bridge office in Norwood will be closed on Tuesday, June 2, 2026. The office will open on Wednesday, June 3rd, with normal business hours.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=528",
-    img: ""
-  },
-  {
     title: "Ophir Pass is now Open",
     source: "San Miguel County",
     date: "May 28, 2026",
@@ -1175,7 +1190,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 2, 2026",
+    date: "June 3, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1195,14 +1210,14 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Notice and Call of Workshop Meeting of the Ridgway Town Council",
+    title: "Notice and Call of Special Meeting of the Ridgway Town Council",
     source: "Town of Ridgway",
     date: "June 16, 2026",
-    firstSeen: "2026-05-16",
+    firstSeen: "2026-06-03",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Workshop-meeting-notice.pdf",
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Special-Meeting-Notice.pdf",
     img: ""
   },
   {
@@ -1663,112 +1678,121 @@ const SMB_FORUM_ARTICLES = [
 
 const BLOG_POSTS = [
   {
-    title: 'From "Let the People Decide" to "Livable Telluride"',
-    url: 'https://livabletelluride.org/Blog%20Posts/from-let-the-people-decide-to-livable-telluride',
-    date: 'Feb 23, 2026',
-    readTime: '3 min',
-    image: '/images/blog/let-the-people-decide.jpg',
-    summary: 'The story behind our rebrand — why the mission evolved from a single ballot question to a broader effort to keep Telluride livable for the people who actually live here.',
-    category: 'Town of Telluride'
+    title: "Welcome to the New Livable Telluride",
+    date: "Jun 2, 2026",
+    href: "https://mailchi.mp/4f766c920f0e/participate-in-the-bocc-meeting-on-december-20251398",
+    image: "https://mcusercontent.com/5d9192289b9af78822f2f69bf/images/234a1ccb-fc9c-7aab-8d5f-dab36d775b79.png",
+    excerpt: "96 Welcome to the New Livable Telluride Measure 300 process revealed that even in a small, highly engaged community, it is remarkably difficult for residents to keep track of issues ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ",
+    category: "Newsletter",
+    source: "mailchimp"
   },
   {
-    title: 'As the Society Turns (the Survey Episode)',
-    url: 'https://livabletelluride.org/Blog%20Posts/societyturnpud',
-    date: 'Oct 14, 2025',
-    readTime: '2 min',
-    image: '/images/blog/society-turn-survey.png',
-    summary: '106 residents weighed in on Society Turn — 83% knew about the hospital, but nearly 80% had no idea how much else is planned for that site.',
-    category: 'County Issues'
+    title: "From \"Let the People Decide\" to \"Livable Telluride\"",
+    url: "https://livabletelluride.org/Blog%20Posts/from-let-the-people-decide-to-livable-telluride",
+    date: "Feb 23, 2026",
+    readTime: "3 min",
+    image: "/images/blog/let-the-people-decide.jpg",
+    summary: "The story behind our rebrand — why the mission evolved from a single ballot question to a broader effort to keep Telluride livable for the people who actually live here.",
+    category: "Town of Telluride"
   },
   {
-    title: 'As the Society Turns (the PUD Episode)',
-    url: 'https://livabletelluride.org/Blog%20Posts/as-the-society-turns-the-pud-episode',
-    date: 'Oct 11, 2025',
-    readTime: '5 min',
-    image: '/images/blog/society-turn-pud.png',
-    summary: 'A deep dive into the Society Turn PUD that even its loudest critics admit is bigger than anyone realized — and why that matters for the valley\'s future.',
-    category: 'County Issues'
+    title: "As the Society Turns (the Survey Episode)",
+    url: "https://livabletelluride.org/Blog%20Posts/societyturnpud",
+    date: "Oct 14, 2025",
+    readTime: "2 min",
+    image: "/images/blog/society-turn-survey.png",
+    summary: "106 residents weighed in on Society Turn — 83% knew about the hospital, but nearly 80% had no idea how much else is planned for that site.",
+    category: "County Issues"
   },
   {
-    title: 'Saturday Shot of Finance: If VooDoo Were a Private Development, Would It Already Be Bankrupt?',
-    url: 'https://livabletelluride.org/Blog%20Posts/saturday-shot-of-finance-if-voodoo-were-a-private-development-would-it-already-be-bankrupt',
-    date: 'Oct 11, 2025',
-    readTime: '4 min',
-    image: '/images/blog/voodoo-finance.png',
-    summary: 'A family stuck in "affordable housing" with soaring rent asks the question no one at Town Hall wants to answer — do these numbers actually work?',
-    category: 'Town of Telluride'
+    title: "As the Society Turns (the PUD Episode)",
+    url: "https://livabletelluride.org/Blog%20Posts/as-the-society-turns-the-pud-episode",
+    date: "Oct 11, 2025",
+    readTime: "5 min",
+    image: "/images/blog/society-turn-pud.png",
+    summary: "A deep dive into the Society Turn PUD that even its loudest critics admit is bigger than anyone realized — and why that matters for the valley's future.",
+    category: "County Issues"
   },
   {
-    title: 'Why is Rent So Damn High In Telluride!',
-    url: 'https://livabletelluride.org/Blog%20Posts/why-is-rent-so-damn-high-in-telluride',
-    date: 'Sep 15, 2025',
-    readTime: '5 min',
-    image: '/images/blog/rent-so-damn-high.png',
-    summary: 'Sweet Rants lit up with locals doing the math on new housing projects — and the per-unit costs will make your jaw drop.',
-    category: 'Town of Telluride'
+    title: "Saturday Shot of Finance: If VooDoo Were a Private Development, Would It Already Be Bankrupt?",
+    url: "https://livabletelluride.org/Blog%20Posts/saturday-shot-of-finance-if-voodoo-were-a-private-development-would-it-already-be-bankrupt",
+    date: "Oct 11, 2025",
+    readTime: "4 min",
+    image: "/images/blog/voodoo-finance.png",
+    summary: "A family stuck in \"affordable housing\" with soaring rent asks the question no one at Town Hall wants to answer — do these numbers actually work?",
+    category: "Town of Telluride"
   },
   {
-    title: 'From $36 Million to $103 Million: How Telluride Became Richer Than a Lottery Winner',
-    url: 'https://livabletelluride.org/Blog%20Posts/from-36-million-to-103-million-how-telluride-became-richer-than-a-lottery-winner',
-    date: 'Sep 13, 2025',
-    readTime: '3 min',
-    image: '/images/blog/36-to-103-million.png',
-    summary: 'A 930% budget increase in ten years — this breakdown of where all that money went (and keeps going) is essential reading for any Telluride taxpayer.',
-    category: 'Town of Telluride'
+    title: "Why is Rent So Damn High In Telluride!",
+    url: "https://livabletelluride.org/Blog%20Posts/why-is-rent-so-damn-high-in-telluride",
+    date: "Sep 15, 2025",
+    readTime: "5 min",
+    image: "/images/blog/rent-so-damn-high.png",
+    summary: "Sweet Rants lit up with locals doing the math on new housing projects — and the per-unit costs will make your jaw drop.",
+    category: "Town of Telluride"
+  },
+  {
+    title: "From $36 Million to $103 Million: How Telluride Became Richer Than a Lottery Winner",
+    url: "https://livabletelluride.org/Blog%20Posts/from-36-million-to-103-million-how-telluride-became-richer-than-a-lottery-winner",
+    date: "Sep 13, 2025",
+    readTime: "3 min",
+    image: "/images/blog/36-to-103-million.png",
+    summary: "A 930% budget increase in ten years — this breakdown of where all that money went (and keeps going) is essential reading for any Telluride taxpayer.",
+    category: "Town of Telluride"
   },
   {
     title: "Canyonlands Development: A Closer Look at Telluride's Financing",
-    url: 'https://livabletelluride.org/Blog%20Posts/canyonlands-development-a-closer-look-at-telluride-s-financing',
-    date: 'Jul 28, 2025',
-    readTime: '4 min',
-    image: '/images/blog/canyonlands.png',
-    summary: 'The $26.5M Canyonlands project by Clark\'s uses a creative 30-year lease structure that every resident should understand before the bonds come due.',
-    category: 'Town of Telluride'
+    url: "https://livabletelluride.org/Blog%20Posts/canyonlands-development-a-closer-look-at-telluride-s-financing",
+    date: "Jul 28, 2025",
+    readTime: "4 min",
+    image: "/images/blog/canyonlands.png",
+    summary: "The $26.5M Canyonlands project by Clark's uses a creative 30-year lease structure that every resident should understand before the bonds come due.",
+    category: "Town of Telluride"
   },
   {
-    title: 'Empowering Telluride: The Future of Lot L Development',
-    url: 'https://livabletelluride.org/Blog%20Posts/empowering-telluride-the-future-of-lot-l-development',
-    date: 'Jul 27, 2025',
-    readTime: '2 min',
-    image: '/images/blog/lot-l.png',
-    summary: 'A massive parking garage on Lot L could permanently change downtown Telluride\'s character — here\'s why community input matters now, not later.',
-    category: 'Town of Telluride'
+    title: "Empowering Telluride: The Future of Lot L Development",
+    url: "https://livabletelluride.org/Blog%20Posts/empowering-telluride-the-future-of-lot-l-development",
+    date: "Jul 27, 2025",
+    readTime: "2 min",
+    image: "/images/blog/lot-l.png",
+    summary: "A massive parking garage on Lot L could permanently change downtown Telluride's character — here's why community input matters now, not later.",
+    category: "Town of Telluride"
   },
   {
-    title: 'The Sunnyside Project',
-    url: 'https://livabletelluride.org/Blog%20Posts/the-sunnyside-project',
-    date: 'Jul 27, 2025',
-    readTime: '2 min',
-    image: '/images/blog/sunnyside.png',
-    summary: 'Completed before costs spiraled, Sunnyside shows how pre-pandemic housing financing worked — and why today\'s projects can\'t replicate it.',
-    category: 'Town of Telluride'
+    title: "The Sunnyside Project",
+    url: "https://livabletelluride.org/Blog%20Posts/the-sunnyside-project",
+    date: "Jul 27, 2025",
+    readTime: "2 min",
+    image: "/images/blog/sunnyside.png",
+    summary: "Completed before costs spiraled, Sunnyside shows how pre-pandemic housing financing worked — and why today's projects can't replicate it.",
+    category: "Town of Telluride"
   },
   {
-    title: 'The VooDoo Project',
-    url: 'https://livabletelluride.org/Blog%20Posts/the-voodoo-project',
-    date: 'Jul 27, 2025',
-    readTime: '2 min',
-    image: '/images/blog/voodoo-project.png',
-    summary: 'The VooDoo\'s $27.4M price tag for 27 units launched at exactly the wrong time — a cautionary tale of what happens when interest rates hit 7%.',
-    category: 'Town of Telluride'
+    title: "The VooDoo Project",
+    url: "https://livabletelluride.org/Blog%20Posts/the-voodoo-project",
+    date: "Jul 27, 2025",
+    readTime: "2 min",
+    image: "/images/blog/voodoo-project.png",
+    summary: "The VooDoo's $27.4M price tag for 27 units launched at exactly the wrong time — a cautionary tale of what happens when interest rates hit 7%.",
+    category: "Town of Telluride"
   },
   {
-    title: 'The Chair 7 Development Controversy',
-    url: 'https://livabletelluride.org/Blog%20Posts/the-chair-7-development-controversy',
-    date: 'Jul 25, 2025',
-    readTime: '3 min',
-    image: '/images/blog/chair-7.png',
-    summary: 'A hotel and commercial development on open space near the ski area is the most contentious proposal in years — here\'s what the PUD amendment actually allows.',
-    category: 'Town of Telluride'
+    title: "The Chair 7 Development Controversy",
+    url: "https://livabletelluride.org/Blog%20Posts/the-chair-7-development-controversy",
+    date: "Jul 25, 2025",
+    readTime: "3 min",
+    image: "/images/blog/chair-7.png",
+    summary: "A hotel and commercial development on open space near the ski area is the most contentious proposal in years — here's what the PUD amendment actually allows.",
+    category: "Town of Telluride"
   },
   {
-    title: 'The Gondola Station',
-    url: 'https://livabletelluride.org/Blog%20Posts/the-gondola-station',
-    date: 'Jul 2, 2025',
-    readTime: '1 min',
-    image: '/images/blog/gondola-station.png',
-    summary: 'Three design concepts for a new gondola station could reshape downtown — but without a charter amendment, voters won\'t get a say.',
-    category: 'Town of Telluride'
+    title: "The Gondola Station",
+    url: "https://livabletelluride.org/Blog%20Posts/the-gondola-station",
+    date: "Jul 2, 2025",
+    readTime: "1 min",
+    image: "/images/blog/gondola-station.png",
+    summary: "Three design concepts for a new gondola station could reshape downtown — but without a charter amendment, voters won't get a say.",
+    category: "Town of Telluride"
   }
 ];
 
@@ -1910,28 +1934,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Make your own Hula Hoop for Adults",
-    link: "https://koto.org/event/make-your-own-hula-hoop-for-adults/",
-    description: "Get festival-ready and create your own custom hula hoop with Deb Gesmundo on the Library Patio! All supplies are provided, and no experience is necessary. This free workshop is for adults only and is limited to 15 participants. Registration is required at telluridelibrary.org.",
-    pubDate: "2026-06-02T23:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/hula.jpg"
-  },
-  {
-    title: "Bardic Trails Online Poetry Night",
-    link: "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-06-02/",
-    description: "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit to get the zoom link each month, Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of California Feb. …",
-    pubDate: "2026-06-03T01:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg"
-  },
   {
     title: "Mahjongg for Independent Players",
     link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-06-03/",
@@ -2437,6 +2439,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-06-21/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-06-21T20:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   }
 ];
 
@@ -2667,7 +2680,7 @@ const ALIBI_EVENTS = [
     imageUrl: "https://ucarecdn.com/1885a7f2-416e-4cb2-a4e8-f91c7c656895/-/crop/3663x1830/0,126/-/preview/"
   },
   {
-    title: "Wim Tapley & the Cannons",
+    title: "Wim Tapley & the Cannons w/ Waxpool",
     link: "https://www.alibitelluride.com/calendar#eca-event=wim-tapley-and-the-cannons",
     description: "Based in Athens, Georgia, Wim Tapley came of age playing shows in Washington D.C...",
     pubDate: "2026-07-01",
@@ -2797,6 +2810,18 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://ucarecdn.com/5e2a35ce-6185-49b8-9c47-4f5ecdbf4b5b/-/crop/1080x541/0,225/-/preview/"
+  },
+  {
+    title: "Natalie Brooke",
+    link: "https://www.alibitelluride.com/calendar#eca-event=natalie-brooke",
+    description: "Natalie Brooke is a rock star. A virtuoso funk / rock keys player leading her po...",
+    pubDate: "2026-08-01",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/b150a182-60cb-4116-bccf-81a27439a381/-/crop/1080x432/0,36/-/preview/"
   }
 ];
 
@@ -2812,18 +2837,6 @@ const ALIBI_EVENTS = [
  * something on Day 1 instead of waiting for the next 6-hour refresh).
  * Bot overwrites this on first run. */
 const SHERIDAN_EVENTS = [
-  {
-    title: "32nd Annual Wild West Fest",
-    link: "https://sheridanoperahouse.com/events/32nd-annual-wild-west-fest/",
-    description: "",
-    pubDate: "2026-06-01",
-    endDate: "2026-06-05",
-    source: "sheridan",
-    sourceLabel: "Sheridan Opera House",
-    category: "Concert / Performance",
-    location: "Sheridan Opera House • Telluride, CO",
-    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2025/03/WWF-Logo-Color-With-Layers.png"
-  },
   {
     title: "Wild West Fest Roundup Day",
     link: "https://sheridanoperahouse.com/events/wild-west-fest-roundup-day/",
@@ -3815,6 +3828,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52878975083462/huge/5d86abd02cae768f6aabc574f4fcfd17ed09e474.jpg"
   },
   {
+    title: "Ridgway Film Club",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-film-club-8555",
+    description: "Free screening! 7pm at the Decker Room. 675 Clinton St. Summer film screenings will be held on June 12, July 10, and August 14 For movie details, sign up here (movie names released via email the week prior) www.ridgwayfilmclub.wordpress.com",
+    pubDate: "2026-06-13T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53056380145290/huge/4bc303dba2f5121125f911d9a1be0c80caa07512.jpg"
+  },
+  {
     title: "Trivia Night @ the Wright",
     link: "https://thewrightoperahouse.org/",
     description: "Trivia Night @ the Wright WHEN? Friday, June 12 Doors at 6:30 pm • Event at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Come test the true limits of the human mind at Trivia Night @ the Wright, where obscure facts become temporary personality traits. Questions may include history, movies, science, music, local lore, accidental expertise, and things you absolutely learned once in 8th grade and never expected to need again. Bring a team, bring a friend, or arrive alone like a mysterious wandering scholar of useless information. Competitive spirits, wild guesses, and dramatic confidence are all encouraged. No studying required. In fact, studying may make things worse. Free to attend In-person event at the historic Wright Opera House Part of programming at the Wright Opera House, bringing arts, conversation, and community to downtown Ouray since 1889.",
@@ -4000,17 +4024,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Space to Create ",
     imageUrl: "https://localist-images.azureedge.net/photos/53049566972371/huge/2331d84dd56cccb875a90575974a2a05c051a592.jpg"
-  },
-  {
-    title: "Ongoing: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
-    link: "https://events.ourayridgwayevents.com/event/painting-evolution-of-moments-with-wild-horses-1999-2026-artist-karen-keene-day",
-    description: "Enjoy nearly 3 decades or work from local painter, Karen Keene Day. Info decker@ridgwayfuse.org",
-    pubDate: "2026-06-15T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52709642938173/huge/e2c21f0b2c1fb10c06c021e9b9d55a9ea535bccc.jpg"
   }
 ];
 
@@ -4086,18 +4099,6 @@ const NORWOOD_EVENTS = [
 const MOUNTAIN_VILLAGE_EVENTS = [];
 
 const TELLURIDE_COM_EVENTS = [
-  {
-    title: "Wild West Fest",
-    link: "https://www.telluride.com/event/wild-west-fest/",
-    description: "The Sheridan Arts Foundation invites you to be a part of one of the most meaningful and exciting festivals of the …",
-    pubDate: "2026-06-01",
-    endDate: "2026-06-06",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/44391/381695.800x533.webp"
-  },
   {
     title: "Historic Walking Tour",
     link: "https://www.telluride.com/event/historic-walking-tour/",
@@ -5239,6 +5240,18 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/54793/20240705_111835.800x533.webp"
   },
   {
+    title: "Mind Blown",
+    link: "https://www.telluride.com/event/mind-blown/",
+    description: "Prepare to have your mind blown! The magic of Ty Gallenbeck is the #1 show in Colorado according to TripAdvisor. Forbes …",
+    pubDate: "2026-07-03",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
+  },
+  {
     title: "Red, White & Blues",
     link: "https://www.telluride.com/event/red-white-and-blues/",
     description: "Celebrate the Fourth of July with the whole family this year at Mountain Village’s Red, White & Blues …",
@@ -5297,6 +5310,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/44821/download_11.800x533.webp"
+  },
+  {
+    title: "Mind Blown",
+    link: "https://www.telluride.com/event/mind-blown/",
+    description: "Prepare to have your mind blown! The magic of Ty Gallenbeck is the #1 show in Colorado according to TripAdvisor. Forbes …",
+    pubDate: "2026-07-05",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
   },
   {
     title: "Historic Walking Tour",
@@ -5479,6 +5504,18 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/54793/20240705_111835.800x533.webp"
   },
   {
+    title: "Mind Blown",
+    link: "https://www.telluride.com/event/mind-blown/",
+    description: "Prepare to have your mind blown! The magic of Ty Gallenbeck is the #1 show in Colorado according to TripAdvisor. Forbes …",
+    pubDate: "2026-07-10",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
+  },
+  {
     title: "Hardrock Hundred Endurance Run",
     link: "https://www.telluride.com/event/hardrock-100/",
     description: "The Hardrock Hundred Mile Endurance Run is an ultramarathon of 102.5 miles in length, plus 33,197 feet of climb and …",
@@ -5525,6 +5562,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/44447/screenshot_2026-05-15_at_3_52_12_pm.800x533.webp"
+  },
+  {
+    title: "Mind Blown",
+    link: "https://www.telluride.com/event/mind-blown/",
+    description: "Prepare to have your mind blown! The magic of Ty Gallenbeck is the #1 show in Colorado according to TripAdvisor. Forbes …",
+    pubDate: "2026-07-11",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
   },
   {
     title: "North Mississippi Allstars",
@@ -5707,6 +5756,18 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/54793/20240705_111835.800x533.webp"
   },
   {
+    title: "Mind Blown",
+    link: "https://www.telluride.com/event/mind-blown/",
+    description: "Prepare to have your mind blown! The magic of Ty Gallenbeck is the #1 show in Colorado according to TripAdvisor. Forbes …",
+    pubDate: "2026-07-17",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
+  },
+  {
     title: "Ah Haa HAHA",
     link: "https://www.telluride.com/event/ah-haa-haha/",
     description: "The HAHA is a community art event unlike you’ve ever experienced! \n\nHAHA is the immersive art installation event of …",
@@ -5777,6 +5838,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/44447/screenshot_2026-05-15_at_3_52_12_pm.800x533.webp"
+  },
+  {
+    title: "Mind Blown",
+    link: "https://www.telluride.com/event/mind-blown/",
+    description: "Prepare to have your mind blown! The magic of Ty Gallenbeck is the #1 show in Colorado according to TripAdvisor. Forbes …",
+    pubDate: "2026-07-18",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
   },
   {
     title: "Tom Gullikson Tennis Clinic",
@@ -5983,6 +6056,18 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/54793/20240705_111835.800x533.webp"
   },
   {
+    title: "Mind Blown",
+    link: "https://www.telluride.com/event/mind-blown/",
+    description: "Prepare to have your mind blown! The magic of Ty Gallenbeck is the #1 show in Colorado according to TripAdvisor. Forbes …",
+    pubDate: "2026-07-24",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
+  },
+  {
     title: "Summer Spectacular: The Music Man",
     link: "https://www.telluride.com/event/summer-spectacular-the-music-man/",
     description: "SAF’s YPT Summer Spectacular program starts on a Monday, and by Friday, these summer campers have learned an entire …",
@@ -6005,6 +6090,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/44447/screenshot_2026-05-15_at_3_52_12_pm.800x533.webp"
+  },
+  {
+    title: "Mind Blown",
+    link: "https://www.telluride.com/event/mind-blown/",
+    description: "Prepare to have your mind blown! The magic of Ty Gallenbeck is the #1 show in Colorado according to TripAdvisor. Forbes …",
+    pubDate: "2026-07-25",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
   },
   {
     title: "High Country Hustle",
@@ -6269,6 +6366,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/44447/screenshot_2026-05-15_at_3_52_12_pm.800x533.webp"
+  },
+  {
+    title: "Mind Blown",
+    link: "https://www.telluride.com/event/mind-blown/",
+    description: "Prepare to have your mind blown! The magic of Ty Gallenbeck is the #1 show in Colorado according to TripAdvisor. Forbes …",
+    pubDate: "2026-08-01",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
   },
   {
     title: "Top Chef and Taste of Telluride",
