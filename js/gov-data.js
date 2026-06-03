@@ -1791,6 +1791,16 @@ const TOPIC_DEFINITIONS = {
    as you discover them. */
 const LOCAL_ORGS = [
     {
+      name: "Telluride Science",
+      category: "nonprofits",
+      town: "Telluride",
+      summary: "Advances scientific knowledge by bringing global thought-leaders together for workshops on biomedical science, energy, climate, quantum computing, and fundamental research at the Telluride Science & Innovation Center.",
+      website: "https://telluridescience.org/",
+      donate: "https://telluridescience.org/donate/",
+      social: { instagram: "https://www.instagram.com/telluridescience/", twitter: "https://twitter.com/telluridesci" },
+      logo: "https://livabletelluride.org/logo/Telluride%20Science.png"
+    },
+    {
       name: "EcoAction Partners",
       category: "nonprofits",
       town: "Telluride",
