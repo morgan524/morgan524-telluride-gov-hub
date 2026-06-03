@@ -1893,6 +1893,24 @@ const TELLURIDE_FARMERS_MARKET = (function () {
   }));
 })();
 
+// Telluride Science — summer "Town Talk" public-lecture series + workshops at
+// the Telluride Innovation Center (300 S. Townsend), hand-curated (bots don't
+// touch this). Source: https://telluridescience.org/events/ — refresh the
+// lineup each season. The events.html collector applies a rolling 60-day
+// window, so out-of-season entries simply don't render until they approach.
+const TELLURIDE_SCIENCE_EVENTS = [
+  { title: "The Science of Connection: How Our Relationships with Animals Shape Health and Well-Being", date: "2026-06-05", time: "5:30 – 6:30 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "What does science have to say about the bonds we form with other animals?", link: "https://telluridescience.org/event/the-science-of-connection-how-our-relationships-with-animals-shape-health-and-well-being/", sourceLabel: "Telluride Science" },
+  { title: "Town Talk: Can We Change the Weather (and Do We Really Want To?)", date: "2026-06-09", time: "6:30 – 7:30 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "Presented by Derek Posselt, NASA Jet Propulsion Laboratory.", link: "https://telluridescience.org/event/change-the-weather/", sourceLabel: "Telluride Science" },
+  { title: "Workshop: Creating with AI — The Tools Worth Using and How to Use Them", date: "2026-06-12", time: "1:00 – 3:00 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "Hands-on workshop on developing marketing content with AI while keeping your brand voice.", link: "https://telluridescience.org/event/creating-with-ai-the-tools-worth-using-and-how-to-use-them/", sourceLabel: "Telluride Science" },
+  { title: "Town Talk: Good Vibrations — Water, Proteins, and the Molecular Motions that Make Biology Possible", date: "2026-06-16", time: "6:30 – 7:30 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "Water is far more than a refreshing drink — a look at the molecular motions behind biology.", link: "https://telluridescience.org/event/good-vibrations/", sourceLabel: "Telluride Science" },
+  { title: "Town Talk: Small Molecules at the Origins of Life", date: "2026-06-23", time: "6:30 – 7:30 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "Presented by David Lancy, University at Buffalo — how small molecules became the building blocks of life.", link: "https://telluridescience.org/event/small-molecules-at-the-origins-of-life/", sourceLabel: "Telluride Science" },
+  { title: "Town Talk: Tau — A Shape-Shifting Protein That May Hold the Key to Early Detection of Brain Diseases", date: "2026-06-30", time: "6:30 – 7:30 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "Presented by Lukasz Joachimiak on protein misfolding implicated in more than 25 brain diseases.", link: "https://telluridescience.org/event/tau-a-shape-shifting-protein/", sourceLabel: "Telluride Science" },
+  { title: "Town Talk: Breakthroughs in RNA Science — From Basic Research to Medicine", date: "2026-07-14", time: "6:30 – 7:30 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "Presented by Phil Bevilacqua, Penn State University.", link: "https://telluridescience.org/event/breakthroughs-in-rna-science/", sourceLabel: "Telluride Science" },
+  { title: "Town Talk: Clodagh O'Shea, Salk Institute for Biological Studies", date: "2026-07-21", time: "6:30 – 7:30 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "Presented by Clodagh O'Shea of the Salk Institute for Biological Studies (topic to be announced).", link: "https://telluridescience.org/event/clodagh-oshea/", sourceLabel: "Telluride Science" },
+  { title: "Town Talk: The Dual Challenge — Climate and Energy", date: "2026-07-28", time: "6:30 – 7:30 PM", location: "Sheridan Opera House, Telluride", description: "A panel discussion: the world needs both more energy and a stable climate.", link: "https://telluridescience.org/event/the-dual-challenge-climate-and-energy/", sourceLabel: "Telluride Science" },
+  { title: "Town Talk: Single-Molecule Views of Nature's Nanomachines", date: "2026-08-04", time: "6:30 – 7:30 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "Presented by Taekjip (TJ) Ha, Harvard Medical School — proteins as nano-scale machines.", link: "https://telluridescience.org/event/single-molecule-views-of-natures-nanomachines/", sourceLabel: "Telluride Science" }
+];
+
 // Telluride Rotary Club meetings — hand-curated recurring series (bots don't
 // touch this). 1st & 3rd Wednesdays, 6:00 PM (social 5:30); 1st Wed at
 // Mountain Lodge in Mountain Village, 3rd Wed at an announced Telluride
