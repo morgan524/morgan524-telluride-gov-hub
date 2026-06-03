@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s news, upcoming Gov-Hub meetings, and events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jun 2026 16:28:27 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 20:53:48 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Board of Review and Planning Commission Joint Work Session — 2026-06-10</title>
@@ -125,19 +125,6 @@ The Telluride Farmers' Market provides the highest quality produce, animal produ
 
 Get high at the Telluride Balloon Festival! Weather permitting, watch hot air balloons lift off from Telluride Town …]]></description>
       <media:content url="https://www.telluride.com/site/assets/files/28889/1440710568aa5692e4.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 5] The Chemistry of Connection: How Our Relationships With Animals Shape Health and Well-Being</title>
-      <link>https://www.telluride.com/event/the-chemistry-of-connection-how-our-relationships-with-animals-shape-health-and-well-being/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/the%20chemistry%20of%20connection%7C2026-06-05</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62436/tot_animal_talk.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-What does science have to say about the bonds we form with other animals — and why do those bonds matter so deeply …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/62436/tot_animal_talk.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
     </item>
@@ -282,6 +269,19 @@ In an otherworldly performance, author and explorer Craig Childs brings a form o
       <category>Telluride.com</category>
     </item>
     <item>
+      <title>[Thu, Jun 4] Free Tasting</title>
+      <link>https://www.telluride.com/event/free-tasting-at-telluride-wine-merchant/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/free%20tasting%7C2026-06-04</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62697/screenshot_2026-06-03_at_1_50_16_pm.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Free tasting every Thursday from 4-6pm. The theme of the tasting will vary from different seasonal selections in wine, …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/62697/screenshot_2026-06-03_at_1_50_16_pm.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
       <title>[Wed, Jun 3] Plant Bingo!</title>
       <link>https://telluridelibrary.libcal.com/event/16593874?hs=a</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/plant%20bingo%7C2026-06-03</guid>
@@ -369,6 +369,16 @@ The public is invited to meet Colorado Secretary of State candidate Amanda Gonza
       <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png" medium="image" />
       <category>Community Event</category>
       <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>Ted Turner has come and gone</title>
+      <link>https://www.telluridenews.com/opinion/columnists/article_2115e2f9-c198-493f-a7f6-14b7a49182dc.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/opinion/columnists/article_2115e2f9-c198-493f-a7f6-14b7a49182dc.html</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/5a/15a827ae-a819-49d8-8c94-1af8b6799d8d/6a18d5289703b.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />A longtime filmmaker recalls making TNT's first original movie in 1988 and the nerve-wracking private screening for Ted Turner, who unexpectedly broke down in tears afterward because the father-son story reminded him of his own father's suicide. Turner called it possibly the best movie he'd ever seen and became a champion of the film, showing how even media titans carry deep personal wounds that shape their reactions in unexpected ways.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/5a/15a827ae-a819-49d8-8c94-1af8b6799d8d/6a18d5289703b.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>arts-culture</category>
     </item>
     <item>
       <title>CHALKBOARD</title>
@@ -676,16 +686,6 @@ Head to the Wilkinson Public Library on the first Wednesday of the month this su
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>education</category>
-    </item>
-    <item>
-      <title>Telluride Brewing Company&apos;s Face Down Brown Ale takes silver at World Beer Cup</title>
-      <link>https://www.telluridenews.com/news_release/article_523ccd12-7851-4aad-b1a9-189ef901b885.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news_release/article_523ccd12-7851-4aad-b1a9-189ef901b885.html</guid>
-      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/45/e455771d-f657-4a8b-b0ae-39cd5c01778b/6a1dc891decc8.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Telluride Brewing Company's Face Down Brown Ale won silver at the World Beer Cup, adding to an already solid collection of gold medals from previous competitions. The brewery celebrated at their Lawson Hill location with locals watching the awards live, and co-founder Chris Fish credited the production team for maintaining consistent quality over the years.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/45/e455771d-f657-4a8b-b0ae-39cd5c01778b/6a1dc891decc8.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
     </item>
   </channel>
 </rss>
