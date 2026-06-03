@@ -101,20 +101,20 @@ service cloud.firestore {
             || !('replyCount' in request.resource.data));
 
       // Update: split between author/admin edits and counter increments by
-      // other users. Counter writes (replyCount, reactions/like/etc) are
-      // allowed for any verified user as long as the structural fields
-      // stay locked.
-      allow update: if isVerifiedUser() && (
-        // Case A: author or admin — full edit of own post.
-        resource.data.authorUid == request.auth.uid || isAdmin()
-        // Case B: any verified user can change ONLY the counter/reaction
-        // fields. The list below is the explicit allow-list — adding any
-        // other field is rejected.
-        || (
-          request.resource.data.diff(resource.data).affectedKeys()
-            .hasOnly(['replyCount', 'reactions', 'lastReplyAt'])
-        )
-      );
+      // other users.
+      allow update:
+        // Case A: author or admin — full edit of own post (verified only).
+        if (isVerifiedUser()
+            && (resource.data.authorUid == request.auth.uid || isAdmin()))
+        // Case B: ANY signed-in user (including anonymous) can change ONLY
+        // the public counter/reaction fields. The list below is the explicit
+        // allow-list — touching any other field is rejected. Anonymous is
+        // allowed here to match reactions/{docId}: Hub-Bub visitors are
+        // auto-signed-in anonymously for the voter-id system, so requiring a
+        // verified (email) account here silently blocked every 👍/📚/❓/💡.
+        || (isSignedIn()
+            && request.resource.data.diff(resource.data).affectedKeys()
+                 .hasOnly(['replyCount', 'reactions', 'lastReplyAt']));
 
       // Delete: author or admin only. Cascading reply deletion is the
       // client's responsibility (hub-bub.js:874 deletes the post then
