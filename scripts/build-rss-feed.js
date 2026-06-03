@@ -28,6 +28,19 @@ const GOV_HELPERS_JS = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
 const FEED_OUT = path.join(REPO_ROOT, 'feed.xml');
 const BLOG_FEED_OUT = path.join(REPO_ROOT, 'feed-blog.xml');
 
+// ── Per-topic event feeds (pilot, 2026-06) ──
+// Each powers one RSS-driven Mailchimp campaign targeting the matching
+// "Event Topics" interest group, so subscribers only hear about the kinds
+// of events they opted into. `civic` is the Gov-Hub meetings; the other
+// three are events classified by eventCategory(). Add more here + emit a
+// feed below when expanding past the pilot four.
+const CATEGORY_FEEDS = [
+  { key: 'arts',     file: 'feed-arts.xml',     title: 'Livable Telluride — Music, Arts & Festivals', desc: 'Upcoming concerts, film, theater, gallery openings, and festivals across the Telluride region.' },
+  { key: 'civic',    file: 'feed-civic.xml',    title: 'Livable Telluride — Government Meetings',       desc: 'Upcoming council, commission, and board meetings across the region — with comment deadlines.' },
+  { key: 'family',   file: 'feed-family.xml',   title: 'Livable Telluride — Family & Kids',             desc: 'Upcoming storytime, youth programs, and all-ages activities across the Telluride region.' },
+  { key: 'outdoors', file: 'feed-outdoors.xml', title: 'Livable Telluride — Outdoors & Recreation',     desc: 'Upcoming hikes, races, ski events, and stewardship days across the Telluride region.' },
+];
+
 const SITE_URL = 'https://livabletelluride.org';
 const COMMUNITY_EVENTS_JSON = path.join(REPO_ROOT, 'community-events.json');
 // 2026-05-29: renamed from "Daily Digest" — the daily campaign was
@@ -324,6 +337,24 @@ function pickEventDate(e) {
   return e.date || e.pubDate || e.startDate || e.Date || e.start_date || e.start;
 }
 
+// Classify an event into ONE pilot topic (arts / family / outdoors) for the
+// per-topic feeds, or null (→ stays in the main weekly digest only). Order
+// matters: kid-specific wins over outdoors wins over arts. The `civic` topic
+// is NOT assigned here — it's the Gov-Hub meetings (buildMeetingItems).
+// Source-name fallback catches music/arts venues whose event titles are just
+// a band name with no obvious keyword (e.g. Music on the Green).
+const ARTS_SOURCES = /music on the green|sheridan|alibi|sherbino|opera house/i;
+function eventCategory(e) {
+  const src = String(e.source || e.sourceLabel || '');
+  const t = [e.title, e.description, e.copy, e.location, e.sourceLabel]
+    .map((x) => String(x || '')).join(' ').toLowerCase();
+  if (/\b(storytime|story time|kids?|children|youth|teens?|toddler|preschool|all[- ]ages|family|families|scouts?|baby|babies|tween)\b/.test(t)) return 'family';
+  if (/\b(hike|hiking|trail|trailhead|bike|biking|cycling|ski|skiing|nordic|snowshoe|climb|climbing|river|raft|rafting|fish|fishing|paddle|kayak|run|running|race|5k|10k|marathon|clean[- ]?up|stewardship|archery|birding|wildflower|trek)\b/.test(t)) return 'outdoors';
+  if (/\b(concert|live music|music|band|dj|open mic|singer|songwriter|symphony|orchestra|acoustic|jam|film|screening|cinema|movie|gallery|exhibit|exhibition|art walk|artist|theatre|theater|\bplay\b|dance|ballet|opera|festival|fest|jazz|bluegrass|blues|comedy)\b/.test(t)) return 'arts';
+  if (ARTS_SOURCES.test(src)) return 'arts';
+  return null;
+}
+
 function buildEventItems(...sources) {
   const events = sources.flatMap((s) => Array.isArray(s) ? s : []);
 
@@ -367,6 +398,7 @@ function buildEventItems(...sources) {
       pubDate: e._date,
       description: descParts.join('\n'),
       imageUrl: e.imageUrl || e.img || null,
+      _category: eventCategory(e),   // pilot topic key (arts/family/outdoors) or null
       categories: ['Community Event', e.sourceLabel || e.source].filter(Boolean),
       // Stable GUID — each event appears in the email exactly once.
       // Use the normalized title+date so cross-source dupes (Sheridan vs
@@ -456,29 +488,34 @@ function main() {
 
   console.log(`  Loaded: ${tt.length} TT/gov articles, ${koNews.length} KOTO newscasts, ${koFeat.length} KOTO features, ${smbf.length} SMBF articles, ${Object.keys(summaries).length} meeting summaries, ${totalEventInputs} event candidates (across 10 source arrays), ${blogPosts.length} blog posts`);
 
+  // Build meetings + events separately so the per-topic feeds below can
+  // reuse them (civic = meetings; arts/family/outdoors = classified events).
+  const meetingItems = buildMeetingItems(summaries);
+  // Event arrays in PRIORITY ORDER — Wilkinson (0) before KOTO (1)
+  // before venues (2) before Music on the Green (3) before hand-curated
+  // / email (3) before telluride.com aggregator (4). When the dedup
+  // map sees a collision, the EARLIER source wins.
+  const eventItems = buildEventItems(
+    wilkinsonEvents,
+    kotoEvents,
+    sheridanEvents,
+    alibiEvents,
+    sherbinoEvents,
+    tfEvents,
+    motgEvents,
+    events,
+    jsonEvents,
+    tcomEvents,
+  );
+
   // Main digest feed: news + meetings + events. Blog posts get their own feed.
   let items = [
     ...buildNewsItems('tt', tt, 'Telluride Times'),
     ...buildNewsItems('koto-newscasts', koNews, 'KOTO Community Radio'),
     ...buildNewsItems('koto-features', koFeat, 'KOTO Community Radio'),
     ...buildNewsItems('smbf', smbf, 'San Miguel Basin Forum'),
-    ...buildMeetingItems(summaries),
-    // Event arrays in PRIORITY ORDER — Wilkinson (0) before KOTO (1)
-    // before venues (2) before Music on the Green (3) before hand-curated
-    // / email (3) before telluride.com aggregator (4). When the dedup
-    // map sees a collision, the EARLIER source wins.
-    ...buildEventItems(
-      wilkinsonEvents,
-      kotoEvents,
-      sheridanEvents,
-      alibiEvents,
-      sherbinoEvents,
-      tfEvents,
-      motgEvents,
-      events,
-      jsonEvents,
-      tcomEvents,
-    ),
+    ...meetingItems,
+    ...eventItems,
   ];
 
   // De-duplicate by guid, keep newest pubDate, sort newest first, cap.
@@ -511,6 +548,24 @@ function main() {
   //   writeRssFeed(BLOG_FEED_OUT, BLOG_FEED_TITLE, BLOG_FEED_DESC, `${SITE_URL}/feed-blog.xml`, blogItems);
 
   writeRssFeed(FEED_OUT, FEED_TITLE, FEED_DESC, `${SITE_URL}/feed.xml`, items);
+
+  // ── Per-topic event feeds (pilot) ──
+  // civic = the upcoming Gov-Hub meetings; arts/family/outdoors = events
+  // classified by eventCategory(). Each feeds one RSS-driven Mailchimp
+  // campaign targeting the matching "Event Topics" interest group. We always
+  // write the file (even with 0 items) so the feed URL resolves for Mailchimp;
+  // an empty feed simply means that campaign has nothing to send.
+  for (const f of CATEGORY_FEEDS) {
+    const catItems = (f.key === 'civic'
+      ? meetingItems.slice()
+      : eventItems.filter((it) => it._category === f.key))
+      .filter((it) => it.pubDate instanceof Date && !isNaN(it.pubDate.getTime()))
+      .sort((a, b) => a.pubDate - b.pubDate)   // earliest-upcoming first
+      .slice(0, MAX_EVENTS);
+    const outPath = path.join(REPO_ROOT, f.file);
+    writeRssFeed(outPath, f.title, f.desc, `${SITE_URL}/${f.file}`, catItems);
+    console.log(`  Emitting ${catItems.length} items to ${f.file}`);
+  }
 }
 
 function writeRssFeed(outPath, title, desc, selfUrl, items) {

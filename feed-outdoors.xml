@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Livable Telluride — Outdoors &amp; Recreation</title>
+    <link>https://livabletelluride.org</link>
+    <atom:link href="https://livabletelluride.org/feed-outdoors.xml" rel="self" type="application/rss+xml" />
+    <description>Upcoming hikes, races, ski events, and stewardship days across the Telluride region.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Jun 2026 17:04:00 GMT</lastBuildDate>
+    <ttl>360</ttl>
+
+  </channel>
+</rss>
