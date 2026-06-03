@@ -45,6 +45,11 @@ var CHECK_LABEL = 'Processed';  // Gmail label applied after processing
 var MAX_EMAILS_PER_RUN = 10;
 var NOTIFY_EMAIL = 'info@livabletelluride.org';
 
+// Shared secret for the Approve/Deny email buttons. The web-app doGet() checks
+// it so the action links aren't trivially guessable. Random — change anytime
+// (re-save + re-deploy the web app afterward).
+var SECRET = 'a62a9ec3-5c16-4636-aa98-c91e0305351d';
+
 // Approve/Deny alias addresses. Both are Workspace aliases that deliver
 // to events@livabletelluride.org. When you forward a submission email to
 // one of these, the handler below recognizes the recipient and writes a
@@ -200,7 +205,7 @@ function processNewEmails() {
           var eventData = parseEventEmail(msg, { action: action });
           if (eventData) {
             Logger.log('  ' + action.toUpperCase() + ' from ' + msg.getFrom() + ': ' + eventData.title);
-            appendToSheet(sheet, eventData);
+            eventData.row = appendToSheet(sheet, eventData);
             newEvents.push(eventData);
             threadAction = action;
           }
@@ -212,7 +217,7 @@ function processNewEmails() {
         var eventData = parseEventEmail(msg);
         if (eventData) {
           Logger.log('Parsed event: ' + eventData.title);
-          appendToSheet(sheet, eventData);
+          eventData.row = appendToSheet(sheet, eventData);
           newEvents.push(eventData);
         }
         msg.markRead();
@@ -282,27 +287,95 @@ function sendActionNotification(events, action) {
   MailApp.sendEmail(NOTIFY_EMAIL, subject, body);
 }
 
+// Forwarded-to-events@ events are held (Status='hold') and sent to info@ as a
+// REVIEW email with Approve / Deny buttons. The buttons are links to this
+// script's web-app doGet(), which flips the row to 'new' (publish) or
+// 'skipped' (discard). One email per event so each has its own buttons.
 function sendDirectReceiptNotification(events) {
-  var subject = 'Livable Telluride: ' + events.length + ' new event' + (events.length > 1 ? 's' : '') + ' received';
-  var body = 'The following event' + (events.length > 1 ? 's were' : ' was') + ' received via Events@livabletelluride.org and queued for the website:\n\n';
+  var base = '';
+  try { base = ScriptApp.getService().getUrl() || ''; } catch (e) { base = ''; }
 
-  events.forEach(function(ev, i) {
-    body += '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n';
-    body += (i + 1) + '. ' + ev.title + '\n';
-    if (ev.date) body += '   Date: ' + ev.date + '\n';
-    if (ev.location) body += '   Location: ' + ev.location + '\n';
-    if (ev.time) body += '   Time: ' + ev.time + '\n';
-    if (ev.description) body += '   Details: ' + ev.description.substring(0, 200) + '\n';
-    if (ev.sourceUrl) body += '   Link: ' + ev.sourceUrl + '\n';
-    body += '   From: ' + ev.emailFrom + '\n\n';
+  events.forEach(function(ev) {
+    var subject = 'Review event: ' + (ev.title || '(untitled)');
+    var rows = [
+      ['Title', ev.title], ['Date', ev.date], ['Time', ev.time],
+      ['Location', ev.location], ['Description', ev.description],
+      ['Link', ev.sourceUrl], ['Forwarded from', ev.emailFrom]
+    ];
+    var table = '<table style="border-collapse:collapse;width:100%;max-width:560px;">';
+    rows.forEach(function(r) {
+      var v = (r[1] == null ? '' : String(r[1])).trim();
+      if (!v) return;
+      table += '<tr>'
+        + '<td style="padding:6px 10px;border:1px solid #e2e2e2;background:#f7f7f5;font-weight:700;white-space:nowrap;vertical-align:top;">' + esc(r[0]) + '</td>'
+        + '<td style="padding:6px 10px;border:1px solid #e2e2e2;">' + esc(v) + '</td></tr>';
+    });
+    table += '</table>';
+
+    var buttons;
+    if (base && ev.row) {
+      var approveUrl = base + '?action=approve&row=' + ev.row + '&token=' + encodeURIComponent(SECRET);
+      var denyUrl    = base + '?action=deny&row='    + ev.row + '&token=' + encodeURIComponent(SECRET);
+      buttons = '<div style="margin:18px 0;">'
+        + '<a href="' + approveUrl + '" style="display:inline-block;background:#1f5130;color:#fff;text-decoration:none;padding:11px 22px;border-radius:8px;font-weight:700;margin-right:10px;">✓ Approve &amp; Publish</a>'
+        + '<a href="' + denyUrl + '" style="display:inline-block;background:#fff;color:#a33;border:1.5px solid rgba(170,51,51,0.4);text-decoration:none;padding:11px 22px;border-radius:8px;font-weight:700;">✕ Deny</a>'
+        + '</div>'
+        + '<p style="font-size:12px;color:#888;margin:0;">Or edit the row in the Event Inbox sheet, then click Approve.</p>';
+    } else {
+      buttons = '<p style="color:#a33;font-weight:700;">⚠ Approve/Deny buttons unavailable — deploy this script as a Web App (Deploy → New deployment → Web app) so the buttons have a URL. For now, set this row\'s Status to "new" in the sheet to publish it.</p>';
+    }
+
+    var html = '<div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#1a1a1a;line-height:1.5;">'
+      + '<h2 style="margin:0 0 4px;color:#1f5130;">New event forwarded for review</h2>'
+      + '<p style="margin:0 0 16px;color:#555;">Best-guess parse of a forwarded email. Approve to publish it to livabletelluride.org/events, or Deny.</p>'
+      + table + buttons
+      + '<p style="margin:16px 0 0;font-size:12px;color:#999;">Event Inbox sheet: ' + esc(SpreadsheetApp.getActiveSpreadsheet().getUrl()) + '</p>'
+      + '</div>';
+
+    var plain = 'New event forwarded for review: ' + ev.title
+      + '\nDate: ' + (ev.date || '?') + '   Time: ' + (ev.time || '?') + '   Location: ' + (ev.location || '?')
+      + '\n\n' + (ev.description || '')
+      + (base && ev.row ? ('\n\nApprove: ' + base + '?action=approve&row=' + ev.row + '&token=' + SECRET
+                          + '\nDeny:    ' + base + '?action=deny&row='    + ev.row + '&token=' + SECRET) : '');
+
+    MailApp.sendEmail({ to: NOTIFY_EMAIL, subject: subject, name: 'Livable Telluride', htmlBody: html, body: plain });
   });
+}
 
-  body += '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n';
-  body += 'These events will be automatically added to livabletelluride.org within 3 hours.\n';
-  body += 'Review the Event Inbox sheet to edit details before they go live:\n';
-  body += SpreadsheetApp.getActiveSpreadsheet().getUrl() + '\n';
+// HTML-escape helper for the review email.
+function esc(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
 
-  MailApp.sendEmail(NOTIFY_EMAIL, subject, body);
+// ── Web app: the Approve/Deny buttons in the review email link here ──
+// Deploy this script as a Web App (Deploy → New deployment → type "Web app",
+// Execute as: Me [events@], Who has access: Anyone). doGet flips the held row.
+function doGet(e) {
+  var p = (e && e.parameter) || {};
+  var action = (p.action || '').toLowerCase();
+  var row = parseInt(p.row, 10);
+  if (p.token !== SECRET) return htmlPage('This link is invalid or has expired.');
+  if (!row || (action !== 'approve' && action !== 'deny')) return htmlPage('Bad request.');
+
+  var sheet = getOrCreateSheet();
+  if (row < 2 || row > sheet.getLastRow()) return htmlPage('That event row no longer exists.');
+  var cur = String(sheet.getRange(row, 1).getValue()).toLowerCase();
+  var title = sheet.getRange(row, 2).getValue();
+  if (cur !== 'hold') {
+    return htmlPage('Already ' + (cur === 'new' || cur === 'added' || cur === 'notified' ? 'approved' : (cur === 'skipped' ? 'denied' : cur)) + ': “' + title + '”.');
+  }
+  sheet.getRange(row, 1).setValue(action === 'approve' ? 'new' : 'skipped');
+  return htmlPage(action === 'approve'
+    ? '✅ Approved: “' + title + '”. It will appear on livabletelluride.org/events within ~6 hours.'
+    : '✕ Denied: “' + title + '”. It will not be published.');
+}
+
+function htmlPage(msg) {
+  return HtmlService.createHtmlOutput(
+    '<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1">'
+    + '<div style="font-family:-apple-system,Segoe UI,Arial,sans-serif;max-width:480px;margin:48px auto;padding:0 20px;text-align:center;font-size:17px;line-height:1.5;color:#1a2e29;">'
+    + msg + '</div>'
+  );
 }
 
 /**
@@ -423,10 +496,14 @@ function parseEventEmail(msg, opts) {
   }
 
   // Status mapping:
-  //   action === 'approve' → 'new'      (next content-refresh picks it up)
-  //   action === 'deny'    → 'skipped'  (audit trail, never goes live)
-  //   no action            → 'new'      (original direct-to-events@ flow)
-  var status = action === 'deny' ? 'skipped' : 'new';
+  //   action === 'approve' → 'new'     (approve@ alias — publish next refresh)
+  //   action === 'deny'    → 'skipped' (deny@ alias — audit trail, never live)
+  //   no action (forward to events@) → 'hold' — NOT published; instead this
+  //     triggers a review email to info@ with Approve/Deny buttons. Clicking
+  //     Approve flips the row to 'new' (then it publishes); Deny → 'skipped'.
+  var status = action === 'deny' ? 'skipped'
+             : action === 'approve' ? 'new'
+             : 'hold';
 
   return {
     status: status,
@@ -562,6 +639,7 @@ function appendToSheet(sheet, data) {
     data.emailFrom,
     data.image || ''
   ]);
+  return sheet.getLastRow();  // row number of the row just appended
 }
 
 /**
