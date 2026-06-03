@@ -464,7 +464,7 @@ function main() {
   const sheridanEvents  = extractJsArray(src, 'SHERIDAN_EVENTS') || [];
   const alibiEvents     = extractJsArray(src, 'ALIBI_EVENTS') || [];
   const sherbinoEvents  = extractJsArray(src, 'SHERBINO_EVENTS') || [];
-  const tfEvents        = extractJsArray(src, 'TF_FOUNDATION_EVENTS') || [];
+  const tfEvents        = extractJsArray(src, 'TELLURIDE_FOUNDATION_EVENTS') || [];  // const name is TELLURIDE_…, not TF_… (the content-refresh scraper still writes to the defunct TF_ name, leaving this hand-curated const intact)
   const motgEvents      = extractJsArray(src, 'MUSIC_ON_THE_GREEN') || [];
   const tcomEvents      = extractJsArray(src, 'TELLURIDE_COM_EVENTS') || [];
 

@@ -2893,7 +2893,7 @@ const TELLURIDE_FOUNDATION_EVENTS = [
     sourceLabel: "Telluride Foundation",
     category: "Community Event",
     location: "Telluride Innovation Center, Telluride, CO",
-    imageUrl: ""
+    imageUrl: "https://telluridefoundation.org/wp-content/uploads/2026/05/Creating-with-AI-1-scaled.png"
   },
   {
     title: "16th Annual Rundola",
@@ -2904,7 +2904,18 @@ const TELLURIDE_FOUNDATION_EVENTS = [
     sourceLabel: "Telluride Foundation",
     category: "Community Event",
     location: "Telluride Gondola Plaza, Telluride, CO",
-    imageUrl: ""
+    imageUrl: "https://telluridefoundation.org/wp-content/uploads/2026/06/rundola26_680x440.jpg"
+  },
+  {
+    title: "The Dual Challenge: Climate and Energy",
+    link: "https://telluridefoundation.org/tf-events/",
+    description: "A Town Talk panel discussion on what meeting humanity's energy needs while keeping a healthy planet actually requires, featuring climate and energy experts. Free; presented in partnership with Telluride Science.",
+    pubDate: "2026-07-28T18:30:00",
+    source: "tf",
+    sourceLabel: "Telluride Foundation",
+    category: "Community Event",
+    location: "Telluride Innovation Center, Telluride, CO",
+    imageUrl: "https://telluridefoundation.org/wp-content/uploads/2026/06/0728-TT_320-x-212-TF.jpg"
   }
 ];
 
