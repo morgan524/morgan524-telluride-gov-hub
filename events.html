@@ -1447,16 +1447,40 @@
        s.onload = () => {
            try {
              const live = [];
-             const townFromLocation = (loc='') => {
-               const l = loc.toLowerCase();
-               if (l.includes('mountain village') || /mv/.test(l)) return 'mv';
+             // Find a town keyword in an arbitrary string. Returns '' (not
+             // 'telluride') when nothing matches, so callers can fall back.
+             const townFromText = (text='') => {
+               const l = String(text).toLowerCase();
+               if (/\bmountain village\b|\bmtn village\b|\bmv\b/.test(l)) return 'mv';
                if (l.includes('norwood')) return 'norwood';
                if (l.includes('ridgway')) return 'ridgway';
                if (l.includes('ouray')) return 'ouray';
                if (l.includes('ophir')) return 'ophir';
                if (l.includes('placerville')) return 'placerville';
                if (l.includes('nucla') || l.includes('naturita')) return 'nucla-naturita';
-               return 'telluride';
+               if (l.includes('telluride')) return 'telluride';
+               return '';
+             };
+             // Resolve an event's town. Priority: the location field, then the
+             // title, then the SOURCE's home region (so Ouray/Ridgway-calendar
+             // events with a blank location no longer get dumped into the
+             // Telluride bucket — that was the bug). Telluride-area sources
+             // remain the final default.
+             const townFor = (e, sourceLabel='') => {
+               return townFromText(e.location)
+                 || townFromText(e.title)
+                 || (function () {
+                      const src = String(sourceLabel || e.sourceLabel || e.source || '').toLowerCase();
+                      if (src.includes('ouray') || src.includes('ridgway')) {
+                        // Within the combined Ouray/Ridgway calendar, refine by
+                        // the description if it actually names one; else Ridgway.
+                        const d = townFromText(e.description || e.copy || e.summary);
+                        return (d === 'ouray' || d === 'ridgway') ? d : 'ridgway';
+                      }
+                      if (src.includes('norwood')) return 'norwood';
+                      if (src.includes('mountain village') || src.includes('music on the green')) return 'mv';
+                      return 'telluride';
+                    })();
              };
              const pushEvent = (e, sourceLabel) => {
                if (!e || !e.title) return;
@@ -1493,7 +1517,7 @@
                  // an 8pm MT event reads "8:00 PM" for every viewer.
                  time: e.time || ((start && typeof start === 'string' && start.includes('T')) ? new Date(start).toLocaleTimeString('en-US', { timeZone: 'America/Denver', hour: 'numeric', minute: '2-digit' }) : ''),
                  location: e.location || '',
-                 town: townFromLocation(e.location || ''),
+                 town: townFor(e, sourceLabel),
                  // Read every field alias the various source schemas use.
                  // COMMUNITY_EVENTS (hand-curated) uses `copy`; bot-synced
                  // sources use `description`; some legacy entries use
