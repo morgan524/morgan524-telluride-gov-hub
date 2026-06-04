@@ -6,8 +6,30 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s news, upcoming Gov-Hub meetings, and events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jun 2026 20:53:48 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 03:29:37 GMT</lastBuildDate>
     <ttl>360</ttl>
+    <item>
+      <title>[Meeting] SMART Board of Directors — 2026-06-11</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/smart%7C2026-06-11%7CSMART%20Board%20of%20Directors</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[SMART Transit • 2026-06-11
+
+Agenda not yet available]]></description>
+      <category>Meeting</category>
+      <category>SMART Transit</category>
+    </item>
+    <item>
+      <title>[Meeting] Planning Commission Meeting — 2026-06-11</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-06-11%7CPlanning%20Commission%20Meeting</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[San Miguel County • 2026-06-11
+
+Agenda not available]]></description>
+      <category>Meeting</category>
+      <category>San Miguel County</category>
+    </item>
     <item>
       <title>[Meeting] Board of Review and Planning Commission Joint Work Session — 2026-06-10</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
@@ -62,6 +84,109 @@ Agenda not yet available]]></description>
 Agenda not yet published]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>[Sat, Jun 6] CASTLE</title>
+      <link>https://www.alibitelluride.com/calendar#eca-event=castle-6</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/castle%7C2026-06-06</guid>
+      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://ucarecdn.com/7a7f95e2-1fcc-4407-b411-586edd5d1065/-/crop/1545x1546/0,95/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
+📍 The Alibi • Telluride, CO
+🕒 9:00 PM
+
+Having began his journey in Telluride as a ski coach, CASTLE has transitioned to...]]></description>
+      <media:content url="https://ucarecdn.com/7a7f95e2-1fcc-4407-b411-586edd5d1065/-/crop/1545x1546/0,95/-/preview/" medium="image" />
+      <category>Community Event</category>
+      <category>The Alibi</category>
+    </item>
+    <item>
+      <title>[Sat, Jun 6] Huck Finn &amp; Becky Thatcher Day</title>
+      <link>https://www.telluride.com/event/huck-finn-becky-thatcher-day/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/huck%20finn%20and%20becky%7C2026-06-06</guid>
+      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/47903/img_7365-2100x1400-f9628f77-a650-47ed-a69a-f19ab0465d96.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Join the Telluride Elks for a Telluride tradition: Huck Finn and Becky Thatcher Day! On Saturday, June 6, kids 10 and …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/47903/img_7365-2100x1400-f9628f77-a650-47ed-a69a-f19ab0465d96.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Sat, Jun 6] Telluride Brewing Co. Block Party</title>
+      <link>https://www.telluride.com/event/telluride-brewing-co-block-party/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20brewing%20co%20block%7C2026-06-06</guid>
+      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/49618/screenshot_2025-05-21_at_3_45_34_pm.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+The Telluride Brewing Company is hosting its annual block party. Join them Saturday, June 6 from 3 - 7 p.m. for a …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/49618/screenshot_2025-05-21_at_3_45_34_pm.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 5] The Science of Connection: How our Relationships with Animals Shape Health and Wellbeing</title>
+      <link>https://koto.org/event/the-science-of-connection-how-our-relationships-with-animals-shape-health-and-wellbeing/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/the%20science%20of%20connection%7C2026-06-05</guid>
+      <pubDate>Fri, 05 Jun 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Telluride Science &#038; Innovation Center, TELLURIDE
+
+Dr. Kevin Morris, from the University of Denver, Graduate School of Social Services, The Institute for Human Animal Connection (IHAC), will visit Telluride Science & Innovation Center on Friday, June 5th, for a presentation called "The Science of Connection: How our Relationships with Animals Shape Health and Wellbeing." Dr. Morris has done numerous studies and has worked with Veterans, prison inmates, underprivileged children and underserved communities to study and improve the bond and relationships between animals and humans. Free and open to the public.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 5] Town Talk: The Science of Connection</title>
+      <link>https://koto.org/event/town-talk-the-science-of-connection/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/town%20talk%20the%20science%7C2026-06-05</guid>
+      <pubDate>Fri, 05 Jun 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/0605-science-connect_invite-1.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Telluride Innovation Center
+
+What does science have to say about the bonds we form with other animals — and why do those bonds matter so deeply for our health? In this talk, Dr. Kevin Morris, American Humane endowed chair and executive director of the University of Denver’s Institute for Human-Animal Connection, explores the emerging research behind human-animal relationships and what it means for individual and community well-being. Drawing on a remarkable career that spans molecular biology, cancer research, and social work, Dr. Morris bridges disciplines to illuminate how our lives with other animals are not just emotionally meaningful, but biologically and socially profound. His work challenges us to think about health as something shared across species — and to consider what a more equitable, science-informed relationship with the animal world could look like for all of us. This event is free and open to the public but RSVP is required at https://form.jotform.com/ 261447761087060]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/05/0605-science-connect_invite-1.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 5] Wild West Fest Telluride Round-Up</title>
+      <link>https://koto.org/event/wild-west-fest-telluride-round-up/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/wild%20west%20fest%20telluride%7C2026-06-05</guid>
+      <pubDate>Fri, 05 Jun 2026 17:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Elks Park, Telluride
+
+Telluride Roundup Day! OPEN TO THE PUBLIC: Participants invite the town of Telluride to rendezvous at Oak Street Park and Elks Park to enjoy stagecoach, rides, live music, Native American dancing, face painting, carnival games, an old-western photo booth, and a live-action bank robbery with a nickel drop. The week concludes with free line dancing lessons and a concert at the Sheridan Opera House (open to the public). The Roundup will take place from 11am-4pm, with stagecoach rides from 12pm-3pm, and live music by Western Medicine at 1pm and 3pm. The Sheridan Opera House will be open for line dancing lessons at 7pm, followed by Sean DeLand & The Western Slope live in concert.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 5] Up-off Gymnastics, Dance, and Spanish</title>
+      <link>https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-06-05/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/up%20off%20gymnastics%20dance%7C2026-06-05</guid>
+      <pubDate>Fri, 05 Jun 2026 16:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Lone Cone Library Norwood
+
+We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 5] Mars SUCKS! (Telluride Theatre FRINGE Project)</title>
+      <link>https://koto.org/event/mars-sucks-telluride-theatre-fringe-project/2026-06-04/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/mars%20sucks%20telluride%20theatre%7C2026-06-05</guid>
+      <pubDate>Fri, 05 Jun 2026 01:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/mars-sucks-thundertix.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Michael D. Palm Theater, Telluride
+
+Mars SUCKS! (Telluride Theatre FRINGE Project) June 4 & 5 7 – 8:45pm @ The Michael D. Palm Theatre In an otherworldly performance, author and explorer Craig Childs brings a form of live cinema to the Palm, featuring live music by Beth Quist. This visual, musical, spoken word event mixes science, storytelling, and a crazy desert adventure. We'll be leaving the planet, so buckle up. Seating is limited. Pay-What-You-Can Tickets are available. Learn more on Telluride Theatre's website ( www.telluridetheatre.org )]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/05/mars-sucks-thundertix.png" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
     <item>
       <title>[Fri, Jun 5] Wild West Fest Roundup Day</title>
@@ -129,6 +254,19 @@ Get high at the Telluride Balloon Festival! Weather permitting, watch hot air ba
       <category>Telluride.com</category>
     </item>
     <item>
+      <title>[Fri, Jun 5] The Chemistry of Connection: How Our Relationships With Animals Shape Health and Well-Being</title>
+      <link>https://www.telluride.com/event/the-chemistry-of-connection-how-our-relationships-with-animals-shape-health-and-well-being/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/the%20chemistry%20of%20connection%7C2026-06-05</guid>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62436/tot_animal_talk.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+What does science have to say about the bonds we form with other animals — and why do those bonds matter so deeply …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/62436/tot_animal_talk.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
       <title>[Thu, Jun 4] Art Walk Telluride</title>
       <link>https://koto.org/event/art-walk-telluride/2026-06-04/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/art%20walk%20telluride%7C2026-06-04</guid>
@@ -151,6 +289,34 @@ Join us the first Thursday of every month for Telluride's Art Walk. It will be a
 Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>Telluride Elks Lodge celebrates 125 years</title>
+      <link>https://www.telluridenews.com/news/article_386937c3-275b-4201-9e98-a5cec14c3e0e.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_386937c3-275b-4201-9e98-a5cec14c3e0e.html</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/4a/d4add403-c2db-43b7-96ec-6383d82789f5/6a1f45875dc53.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The Telluride Elks Lodge is marking 125 years with 260 members across the region, operating out of the historic Swede-Finn Hall on Pacific Avenue. They've doubled their scholarship awards to $9,000 this year for six students pursuing any post-high school education, and continue hosting longtime community events like Turkey Bingo and Huck Finn Day.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/4a/d4add403-c2db-43b7-96ec-6383d82789f5/6a1f45875dc53.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
+    </item>
+    <item>
+      <title>Newscast 6-3-26</title>
+      <link>https://koto.org/news/newscast-6-3-26/</link>
+      <guid isPermaLink="false">https://koto.org/news/newscast-6-3-26/</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Prohaska, Wisor Cleared from Ethics Violation in Mountain Village Investigation; Mars Sucks, According to Craig Childs; The Box of Anxiety]]></description>
+      <category>KOTO Community Radio</category>
+      <category>recreation</category>
+    </item>
+    <item>
+      <title>Prohaska, Wisor Cleared from Ethics Violation in Mountain Village Investigation</title>
+      <link>https://koto.org/news/telluride-ski-resort-ethics-investigation-prohaska-wisor-fee/</link>
+      <guid isPermaLink="false">https://koto.org/news/telluride-ski-resort-ethics-investigation-prohaska-wisor-fee/</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[An independent investigation into the conversations and actions surrounding an offer to purchase a portion of the Telluride Ski Resort by former Mountain Village Mayor Marti Prohaska and former Telluride Town Councilmember Meehan Fee, with support from former Mountain Village Town Manager Paul Wisor, found that neither Prohaska nor Wisor violated l]]></description>
+      <category>KOTO Community Radio</category>
+      <category>government</category>
     </item>
     <item>
       <title>[Meeting] Design Review Board — 2026-06-04</title>
@@ -282,95 +448,6 @@ Free tasting every Thursday from 4-6pm. The theme of the tasting will vary from 
       <category>Telluride.com</category>
     </item>
     <item>
-      <title>[Wed, Jun 3] Plant Bingo!</title>
-      <link>https://telluridelibrary.libcal.com/event/16593874?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/plant%20bingo%7C2026-06-03</guid>
-      <pubDate>Wed, 03 Jun 2026 23:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_12_18_58.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Lower Terrace - outdoors
-
-5:30 PM – 7:00 PM · Bring a little green into your routine with Plant Bingo! Play a few lively rounds of bingo for the chance to win easy-care houseplants, cuttings, and fun plant themed prizes. Whether you&#39;re a seasoned plant lover or just getting started, this relaxed social evening is a great way to grow your collection, meet some fellow plant people and pick pick up a few tips along the way. Free and open to the public.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_12_18_58.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 3] Colorado Secretary of State candidate Amanda Gonzales meet and greet in Telluride</title>
-      <link>https://koto.org/event/colorado-secretary-of-state-candidate-amanda-gonzales-meet-and-greet-in-telluride/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/colorado%20secretary%20of%20state%7C2026-06-03</guid>
-      <pubDate>Wed, 03 Jun 2026 23:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-
-The public is invited to meet Colorado Secretary of State candidate Amanda Gonzales, who will be at Society Telluride on Main St on Wednesday, June 3rd from 5:30-7:00pm. This event is open to all.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 3] Teen Movie and Ice Cream Club</title>
-      <link>https://telluridelibrary.libcal.com/event/16935729?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/teen%20movie%20and%20ice%7C2026-06-03</guid>
-      <pubDate>Wed, 03 Jun 2026 22:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_12_40_26.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Teen Area
-
-4:00 PM – 6:00 PM · Join us every Wednesday this summer for Teen Movie and Ice Cream Club. We will watch a movie on the teen TV with free ice cream available!]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_12_40_26.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 3] Sweet Sounds - Live Music and Sweet Treats! Grassblasters Bluegrass</title>
-      <link>https://telluridelibrary.libcal.com/event/16604745?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/sweet%20sounds%20live%20music%7C2026-06-03</guid>
-      <pubDate>Wed, 03 Jun 2026 21:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_13_08_18.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Lower Terrace - outdoors
-
-3:30 PM – 4:30 PM · Join us on the library patio for Sweet Sounds , an afternoon of live local music and sweet treats! This free, all-ages program invites you to relax, connect, and enjoy the sounds of our community. Tasty treats will be available while supplies last. Stay for the full performance or drop in for a bit and soak up the atmosphere. This program was made possible by the Augment Music Project. Summer Schedule: June 3rd: Grassblasters Bluegrass (Tom Nading on Guitar, Sam Burgess on Bass, and Danny D&#39;Alessandro on Banjo) July 1st: Aubrey Mable of LVDY August 5th: Speakeasy Jazz Trio (Donavan Dailey on Guitar, Danny D&#39;Alessandro on Sax, John Brown on Bass)]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_13_08_18.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 3] Mahjongg for Independent Players</title>
-      <link>https://telluridelibrary.libcal.com/event/16767651?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/mahjongg%20for%20independent%20players%7C2026-06-03</guid>
-      <pubDate>Wed, 03 Jun 2026 19:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Program Room
-
-1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 3] Online Talk with Smithsonian Curator Mary Savig</title>
-      <link>https://telluridelibrary.libcal.com/event/16953234?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/online%20talk%20with%20smithsonian%7C2026-06-03</guid>
-      <pubDate>Wed, 03 Jun 2026 18:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_16_55_52.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Wilkinson Public Library
-
-12:00 PM – 1:00 PM · Join us for a fascinating discussion with Smithsonian Curator Mary Savig on the history and significance of craft at state fairs—from blue-ribbon quilts to sculpted butter cows, and so much more! A Dolly Parton crop art portrait. Size-96 cowboy boots. A button quilt. State Fairs: Growing American Craft features more than 100 photos of extraordinary and unconventional crafts from state and tribal fairs, including needlework, basketry, jewelry, ceramics, crop art, butter sculpture, and saddles. The catalog highlights personal stories and regional and cultural traditions, creating a vibrant portrait of American life. Come one, come all! State Fairs has a little something for everyone. Register now to hear about the fascinating (and often surprising) world of American state fair crafts! About the Author: Mary Savig is The Fleur and Charles Bresler Curator-in-Charge of the Smithsonian American Art Museum's Renwick Gallery. …]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_16_55_52.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 3] Baby Bop</title>
-      <link>https://telluridelibrary.libcal.com/event/16610070?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/baby%20bop%7C2026-06-03</guid>
-      <pubDate>Wed, 03 Jun 2026 15:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Program Room
-
-9:00 AM – 10:00 AM · Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, dise&ntilde;ada para que cuidadores y peque&ntilde;os se muevan juntos mediante rutinas f&aacute;ciles de seguir. Te espera m&uacute;sica alegre, coreograf&iacute;as sencillas y un ambiente de apoyo centrado en el v&iacute;nculo, el movimiento y la alegr&iacute;a; &iexcl;no se requiere experiencia previa en baile!]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
       <title>Ted Turner has come and gone</title>
       <link>https://www.telluridenews.com/opinion/columnists/article_2115e2f9-c198-493f-a7f6-14b7a49182dc.html</link>
       <guid isPermaLink="false">https://www.telluridenews.com/opinion/columnists/article_2115e2f9-c198-493f-a7f6-14b7a49182dc.html</guid>
@@ -467,87 +544,6 @@ The public is invited to meet Colorado Secretary of State candidate Amanda Gonza
       <description><![CDATA[Mimi Johnson, vocal opponent to the newly erected cell tower in Nucla, shared with the Forum she contacted Nucla Town Hall that she was conducting a Colorado Open Records Act (CORA). In …]]></description>
       <category>San Miguel Basin Forum</category>
       <category>community</category>
-    </item>
-    <item>
-      <title>[Meeting] Board of County Commissioners Meeting — 2026-06-03</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-06-03%7CBoard%20of%20County%20Commissioners%20Meeting</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[San Miguel County • 2026-06-03
-
-Regular commissioner meeting · Agenda details not yet available]]></description>
-      <category>Meeting</category>
-      <category>San Miguel County</category>
-    </item>
-    <item>
-      <title>[Meeting] Ecology Commission - Jun 03 2026 — 2026-06-03</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-03%7CEcology%20Commission%20-%20Jun%2003%202026</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Telluride • 2026-06-03
-
-Monthly Ecology Commission meeting · Human-wildlife interaction oversight · General commission business]]></description>
-      <category>Meeting</category>
-      <category>Town of Telluride</category>
-    </item>
-    <item>
-      <title>[Meeting] Commission for Community Assistance, Arts &amp; Special Events - Jun 03 2026 — 2026-06-03</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-03%7CCommission%20for%20Community%20Assistance%2C%20Arts%20%26%20Special%20Events%20-%20Jun%2003%202026</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Telluride • 2026-06-03
-
-The agenda text for this Commission for Community Assistance, Arts & Special Events meeting is missing — only the portal navigation and meeting list appears.]]></description>
-      <category>Meeting</category>
-      <category>Town of Telluride</category>
-    </item>
-    <item>
-      <title>[Meeting] Telluride Housing Authority Subcommittee - Jun 03 2026 — 2026-06-03</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-03%7CTelluride%20Housing%20Authority%20Subcommittee%20-%20Jun%2003%202026</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Telluride • 2026-06-03
-
-The Jun 03 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.]]></description>
-      <category>Meeting</category>
-      <category>Town of Telluride</category>
-    </item>
-    <item>
-      <title>[Meeting] The Planning Commission will conduct a regular meeting and hold a public hearing to consider and make recommendation on an application for a 6-lot regular PUD in the South Mesa Zone (Packet Materials are attached to the agenda) — 2026-06-03</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/ouray%7C2026-06-03%7CThe%20Planning%20Commission%20will%20conduct%20a%20regular%20meeting%20and%20hold%20a%20public%20hearing</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[ouray • 2026-06-03
-
-The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.]]></description>
-      <category>Meeting</category>
-      <category>ouray</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 3] Games on the Green</title>
-      <link>https://www.telluride.com/event/games-on-the-green/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/games%20on%20the%20green%7C2026-06-03</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62453/mtv_summer_selects_lowres-62-2100x1401-5ba5db78-3cf7-49e2-a790-62927e14c194.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Head to The Madeline on Wednesdays and Thursdays this summer for Games on the Green! They will have classic lawn games …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/62453/mtv_summer_selects_lowres-62-2100x1401-5ba5db78-3cf7-49e2-a790-62927e14c194.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 3] Sweet Sounds</title>
-      <link>https://www.telluride.com/event/sweet-sounds/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/sweet%20sounds%7C2026-06-03</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62443/sweet_sounds_5.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Head to the Wilkinson Public Library on the first Wednesday of the month this summer for live music and sweet treats! …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/62443/sweet_sounds_5.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
     </item>
     <item>
       <title>Investigation finds Prohaska ‘technically’ free of ethics violations</title>

@@ -6,63 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-civic.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming council, commission, and board meetings across the region — with comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jun 2026 20:53:48 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 03:29:37 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Meeting] Board of County Commissioners Meeting — 2026-06-03</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-06-03%7CBoard%20of%20County%20Commissioners%20Meeting</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[San Miguel County • 2026-06-03
-
-Regular commissioner meeting · Agenda details not yet available]]></description>
-      <category>Meeting</category>
-      <category>San Miguel County</category>
-    </item>
-    <item>
-      <title>[Meeting] Ecology Commission - Jun 03 2026 — 2026-06-03</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-03%7CEcology%20Commission%20-%20Jun%2003%202026</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Telluride • 2026-06-03
-
-Monthly Ecology Commission meeting · Human-wildlife interaction oversight · General commission business]]></description>
-      <category>Meeting</category>
-      <category>Town of Telluride</category>
-    </item>
-    <item>
-      <title>[Meeting] Commission for Community Assistance, Arts &amp; Special Events - Jun 03 2026 — 2026-06-03</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-03%7CCommission%20for%20Community%20Assistance%2C%20Arts%20%26%20Special%20Events%20-%20Jun%2003%202026</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Telluride • 2026-06-03
-
-The agenda text for this Commission for Community Assistance, Arts & Special Events meeting is missing — only the portal navigation and meeting list appears.]]></description>
-      <category>Meeting</category>
-      <category>Town of Telluride</category>
-    </item>
-    <item>
-      <title>[Meeting] Telluride Housing Authority Subcommittee - Jun 03 2026 — 2026-06-03</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-03%7CTelluride%20Housing%20Authority%20Subcommittee%20-%20Jun%2003%202026</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Telluride • 2026-06-03
-
-The Jun 03 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.]]></description>
-      <category>Meeting</category>
-      <category>Town of Telluride</category>
-    </item>
-    <item>
-      <title>[Meeting] The Planning Commission will conduct a regular meeting and hold a public hearing to consider and make recommendation on an application for a 6-lot regular PUD in the South Mesa Zone (Packet Materials are attached to the agenda) — 2026-06-03</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/ouray%7C2026-06-03%7CThe%20Planning%20Commission%20will%20conduct%20a%20regular%20meeting%20and%20hold%20a%20public%20hearing</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[ouray • 2026-06-03
-
-The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.]]></description>
-      <category>Meeting</category>
-      <category>ouray</category>
-    </item>
     <item>
       <title>[Meeting] Design Review Board — 2026-06-04</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
@@ -126,6 +71,28 @@ Agenda not yet published]]></description>
       <description><![CDATA[San Miguel County • 2026-06-10
 
 The June 10 Board of Review and Planning Commission joint work session agenda hasn't been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Meeting] SMART Board of Directors — 2026-06-11</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/smart%7C2026-06-11%7CSMART%20Board%20of%20Directors</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[SMART Transit • 2026-06-11
+
+Agenda not yet available]]></description>
+      <category>Meeting</category>
+      <category>SMART Transit</category>
+    </item>
+    <item>
+      <title>[Meeting] Planning Commission Meeting — 2026-06-11</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-06-11%7CPlanning%20Commission%20Meeting</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[San Miguel County • 2026-06-11
+
+Agenda not available]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
