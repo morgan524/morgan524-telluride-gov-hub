@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s news, upcoming Gov-Hub meetings, and events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Jun 2026 09:51:33 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 14:48:04 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] SMART Board of Directors — 2026-06-11</title>
@@ -84,6 +84,17 @@ Agenda not yet available]]></description>
 Agenda not yet published]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>[Meeting] San Miguel Basin Fair Board — 2026-06-08</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-06-08%7CSan%20Miguel%20Basin%20Fair%20Board</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[San Miguel County • 2026-06-08
+
+The San Miguel Basin Fair Board meets to review junior livestock sale terms and update bylaws for the upcoming fair season.]]></description>
+      <category>Meeting</category>
+      <category>San Miguel County</category>
     </item>
     <item>
       <title>[Fri, Jun 5] Mars SUCKS! (Telluride Theatre FRINGE Project)</title>
@@ -672,16 +683,6 @@ Free tasting every Thursday from 4-6pm. The theme of the tasting will vary from 
       <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Former Mesa County elections clerk Tina Peters is being released from prison Monday after Governor Polis commuted her sentence. Peters was convicted in 2024 for allowing an outside computer expert linked to Mike Lindell to copy voting system data after the 2020 election, which was then used to promote false claims about election fraud. The commutation came after Trump pressured Polis and threatened to move federal facilities out of Colorado.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>government</category>
-    </item>
-    <item>
-      <title>Chalkboard week of May 28-June 3</title>
-      <link>https://www.telluridenews.com/norwood_post/article_57382ef3-2ef9-4f8e-be89-f6a22e3cb1b5.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/norwood_post/article_57382ef3-2ef9-4f8e-be89-f6a22e3cb1b5.html</guid>
-      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/68/86897cd3-c9cb-4b41-bb5b-835407120d9f/6a1dd0ef0e241.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />This week's community birthdays include residents from May 28 through June 3, with local kids and adults celebrating. The regular schedule continues with town board meetings, farmers market on Thursdays, senior meals twice weekly, food pantry on Sundays, and pickleball sessions multiple times a week at the school.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/68/86897cd3-c9cb-4b41-bb5b-835407120d9f/6a1dd0ef0e241.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>government</category>
     </item>
