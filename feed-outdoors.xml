@@ -6,21 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-outdoors.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming hikes, races, ski events, and stewardship days across the Telluride region.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Jun 2026 03:29:37 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 09:51:33 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Sat, Jun 6] CASTLE</title>
-      <link>https://www.alibitelluride.com/calendar#eca-event=castle-6</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/castle%7C2026-06-06</guid>
-      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://ucarecdn.com/7a7f95e2-1fcc-4407-b411-586edd5d1065/-/crop/1545x1546/0,95/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
-📍 The Alibi • Telluride, CO
-🕒 9:00 PM
 
-Having began his journey in Telluride as a ski coach, CASTLE has transitioned to...]]></description>
-      <media:content url="https://ucarecdn.com/7a7f95e2-1fcc-4407-b411-586edd5d1065/-/crop/1545x1546/0,95/-/preview/" medium="image" />
-      <category>Community Event</category>
-      <category>The Alibi</category>
-    </item>
   </channel>
 </rss>
