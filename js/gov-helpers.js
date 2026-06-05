@@ -169,10 +169,10 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The Jun 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25, 2026 Planning & Zoning Commission chair meeting agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -181,7 +181,7 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "The June 30 2026 Town Council agenda hasn't been posted yet.",
+    "The Jun 30 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
     "The July 1 Ecology Commission agenda hasn't been posted yet.",
@@ -190,7 +190,7 @@ const MANUAL_SUMMARIES = {
     "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 1 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The Jul 01 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
     "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
