@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-family.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming storytime, youth programs, and all-ages activities across the Telluride region.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jun 2026 02:53:14 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 09:40:51 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Fri, Jun 5] Up-off Gymnastics, Dance, and Spanish</title>
@@ -20,6 +20,19 @@ We are a MOBILE family business offering non-competitive Gymnastics, Preschool S
       <media:content url="https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 5] Telluride Farmers Marketshow: Lawn Games!</title>
+      <link>https://telluridelibrary.libcal.com/event/15564466?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20farmers%20marketshow%20lawn%7C2026-06-05</guid>
+      <pubDate>Fri, 05 Jun 2026 17:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_25_53.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Gondola Plaza - Telluride
+
+11:00 AM – 12:00 PM · Come hangout in the grassy area of the Telluride Gondola Plaza and play lawn games with your friends and family!]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_25_53.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Fri, Jun 5] The Science of Connection: How our Relationships with Animals Shape Health and Wellbeing</title>

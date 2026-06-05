@@ -169,7 +169,7 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
     "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
@@ -181,13 +181,13 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "The June 30, 2026 Town Council agenda hasn't been posted yet.",
+    "The June 30 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
     "The July 1 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
     "The July 1 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
@@ -196,7 +196,7 @@ const MANUAL_SUMMARIES = {
     "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
-    "The July 1 Board of County Commissioners agenda hasn't been posted yet.",
+    "The July 1st Board of County Commissioners agenda hasn't been posted yet.",
 
   "county|2026-06-10|Board of Review and Planning Commission Joint Work Session":
     "The June 10 Board of Review and Planning Commission joint work session agenda hasn't been posted yet.",
@@ -206,6 +206,30 @@ const MANUAL_SUMMARIES = {
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Lady Miners emerge as all-leaguers",
+    source: "Telluride Times",
+    date: "June 5, 2026",
+    firstSeen: "2026-06-05",
+    newsTopic: "education",
+    copy: "The Lady Miners lacrosse team had their most successful season yet, finishing 6-2 in league and 10-5 overall before losing in the first round of state playoffs. Five players earned All-League honors, with Ruby Lake and Mikayla Ialeggio also receiving All-State recognition. The new coach emphasized how the team's chemistry and enthusiasm set this group apart from previous years.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_98a9d187-1dfd-4f4b-b34a-d7405b2cfebb.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/34/b34e32b7-5bb3-4e54-b78e-f3a17eeebfe7/6a210fe78801b.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "We got us a posse",
+    source: "Telluride Times",
+    date: "June 5, 2026",
+    firstSeen: "2026-06-05",
+    newsTopic: "public-safety",
+    copy: "Montrose County's volunteer sheriff's posse is looking for more help, especially on the West End where fewer than 20 people are available to respond to search and rescue, fires, and emergencies across a huge territory. The all-volunteer group saves taxpayers money by handling everything from medical assists to crowd control, but they're stretched thin as recreational use grows in the region.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_a744a27e-74c3-4832-9eec-21602ec87352.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/5b/75bf594d-9886-4fe3-94b6-b1db6eefbb16/6a213427926db.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Homicide convictions reversed for Colorado paramedics who injected ketamine into Elijah McClain",
     source: "Telluride Times",
@@ -1054,15 +1078,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "public-safety",
     copy: "Expanded: Stage One Fire Restrictions will be in place in both the Norwood and Egnar Fire Protection Districts effective Friday 6/5/26 at 11:59 pm.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=525",
-    img: ""
-  },
-  {
-    title: "Ophir Pass is now Open",
-    source: "San Miguel County",
-    date: "May 28, 2026",
-    newsTopic: "community",
-    copy: "Ophir Pass is now Open",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=527",
     img: ""
   },
   {
@@ -2373,92 +2388,26 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Yin Yang Yoga with Miriah",
-    link: "https://telluridelibrary.libcal.com/event/16801134?hs=a",
-    description: "9:00 AM – 10:00 AM · Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses.  We&#39;ll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.  Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.",
-    pubDate: "2026-06-04T15:00:00.000Z",
+    title: "Yoga for ALL with Jane & Jay",
+    link: "https://telluridelibrary.libcal.com/event/15803442?hs=a",
+    description: "8:30 AM – 10:00 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
+    pubDate: "2026-06-05T14:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg"
   },
   {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/16772755?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-06-04T16:30:00.000Z",
+    title: "Telluride Farmers Marketshow: Lawn Games!",
+    link: "https://telluridelibrary.libcal.com/event/15564466?hs=a",
+    description: "11:00 AM – 12:00 PM · Come hangout in the grassy area of the Telluride Gondola Plaza and play lawn games with your friends and family!",
+    pubDate: "2026-06-05T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
-  },
-  {
-    title: "Learn to Play Pickleball!",
-    link: "https://telluridelibrary.libcal.com/event/16897844?hs=a",
-    description: "11:30 AM – 1:00 PM · Our favorite summer series is back, and this time with a twist! Kristen Milord will be teaching adults how to play pickleball at the town courts (thank you, Parks and Recreation). We will offer one class each month for instruction, followed by another session to practice and put what you&#39;ve learned into action. Space is limited. Please sign up in advance.  Join us for some fun and fitness this summer! - June 4th - Learn to Play Pickleball - June 22nd - Play Pickleball (basic knowledge of the game is required) - July 6th - Learn to Play Pickleball - July 23rd - Play Pickleball (basic knowledge of the game is required) - August 6th - Learn to Play Pickleball - August 20th - Play Pickleball (basic knowledge of the game is required)",
-    pubDate: "2026-06-04T17:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Town Park",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_31_10_03_27.png"
-  },
-  {
-    title: "Pilates for All Bodies",
-    link: "https://telluridelibrary.libcal.com/event/16536274?hs=a",
-    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-06-04T18:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
-  },
-  {
-    title: "Littles On the Move",
-    link: "https://telluridelibrary.libcal.com/event/13960346?hs=a",
-    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
-    pubDate: "2026-06-04T21:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
-  },
-  {
-    title: "French Happy Hour",
-    link: "https://telluridelibrary.libcal.com/event/15970652?hs=a",
-    description: "5:00 PM – 6:00 PM · Practice speaking in French with other French speakers in an informal setting at the Alibi. Light snacks are provided and beverages are available to purchase at the bar. Space is limited, sign up at www.telluridelibrary.org.",
-    pubDate: "2026-06-04T23:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "The Alibi",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1747415393.jpg"
-  },
-  {
-    title: "Tarde de Piscina",
-    link: "https://telluridelibrary.libcal.com/event/16773024?hs=a",
-    description: "5:00 PM – 6:30 PM · El tiempo de verano est&aacute; aqu&iacute;, pero &iquest;sab&iacute;as que hay una piscina en el parque del pueblo? Ven a nadar y visita la piscina! Todas las edades son bienvenidas.",
-    pubDate: "2026-06-04T23:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Town Park",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_10_52_52.png"
-  },
-  {
-    title: "Book Launch Party for A. Unda-Tames",
-    link: "https://telluridelibrary.libcal.com/event/16868826?hs=a",
-    description: "6:00 PM – 7:00 PM · Come join WPL as we celebrate local author A. Unda-Tames&#39;s recently released book Dante: A Dark Cartel Romance . Free copies of the book for the first five people who sign up! Otherwise, copies will be available for purchase through the bookstore or via Amazon. This event is in collaboration with Romance with Rachel, which meets the last Wednesday of the month—all are welcome to join! Description below: I didn't fall in love. I walked into a trap—eyes open, wrists bare, heart unguarded. Dante promised escape. Control. Power. Protection. What he gave me was bruises I learned to crave, obedience that felt like choice, and a hunger I didn't recognize until it owned me. He taught me how to kneel. How to break. How to bloom in the dark. I thought I was special. I thought I mattered. …",
-    pubDate: "2026-06-05T00:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_43_53.jpg"
+    location: "Gondola Plaza - Telluride",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_25_53.png"
   }
 ];
 
@@ -2501,18 +2450,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "Goldpine w/ Corey Hooker",
-    link: "https://www.alibitelluride.com/calendar#eca-event=goldpine-w-corey-hooker",
-    description: "Bold + gold harmonies straight from Nashville. Winner of the Rocky Mountain Song...",
-    pubDate: "2026-06-04",
-    time: "8:30 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/93f72103-743c-4fcb-9eb9-4f1de89a45df/-/crop/1860x930/0,244/-/preview/"
-  },
   {
     title: "Hunter Archer",
     link: "https://www.alibitelluride.com/calendar#eca-event=hunter-archer",
@@ -2956,105 +2893,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "Sips and Housing Solutions Series: Housing Action Plan June Outreach Event #3",
-    link: "https://events.ourayridgwayevents.com/event/sips-and-housing-solutions-series-housing-action-plan-outreach-event-3",
-    description: "CALLING ALL RIDGWAY WORKFORCE AND AREA RESIDENTS: Please join Points Consulting and Town of Ridgway planning staff at any of our upcoming outreach events for the 2026 HOUSING ACTION PLAN. Your voice matters. Everyone is welcome! Please see this link: tinyurl.com/planridgway for more information and to RSVP. June 2nd: 4:30 - 6:30 PM at Maven Local Eatery | Housing Happy Hour: Drink discounts and free appetizers while supplies last! June 3rd: 8:00-10:00 AM at Town Hall | Coffee and Housing Conversation: Free coffee and treats! June 4th: 8:00-10:00 AM at Decker Community Room | Coffee and Housing Conversation: Free coffee and treats! Attendees will have the opportunity enter into a Raffle for a Greenwood's restaurant Gift Card or ISUN local skincare gift package:",
-    pubDate: "2026-06-04T14:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg"
-  },
-  {
-    title: "Ouray Youth Summer Programs: Archery at Ridgway State Park",
-    link: "https://anc.apm.activecommunities.com/cityofouray/activity/search/detail/336?onlineSiteId=0&from_original_cui=true",
-    description: "Youth ages 11–16 will learn the basics of archery safety and technique with instruction and equipment provided by Ridgway State Park staff. Participants will meet at the Pa-Co-Chu-Puk area of Ridgway State Park. Please bring snacks, water, and weather-appropriate clothing for the day. REGISTER HERE Scholarships are available if needed. This activity is part of the Youth Adventure Days, sponsored by Ouray's Parks and Recreation Department. For questions, contact Sean Hart at 970-318-1003 or seanhart@cityofouray.com",
-    pubDate: "2026-06-04T15:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52993121954018/huge/5965887f386512b0d03cd940f1ba54e68225dffa.jpg"
-  },
-  {
-    title: "Pilates Mat",
-    link: "https://ridgwaypilates.punchpass.com/catalogs/300",
-    description: "All Levels Pilates Mat class. Classical sequence Int to challenge, strengthen and stretch you wehole body. Every Thursday at 9:30am. Pricing Four lessons for $120 Eight lessons for $200 Become a member and pay $100/month to attend weekly. Purchase a pass here: https://ridgwaypilates.punchpass.com/catalogs/300 Class is limited to six people. Mats are included. Please wear socks, put your hair up and choose clothing free of metal.",
-    pubDate: "2026-06-04T15:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
-  },
-  {
-    title: "Storytime with a Firefighter",
-    link: "https://ouray.colibraries.org/lib-cal/",
-    description: "Join us at Ouray Library from 11:00 a.m. to 11:45 a.m. to listen to some fantastic stories read by a firefighter!",
-    pubDate: "2026-06-04T17:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53011646838988/huge/12e4beac0de2ca67ec7902033e67b225b61e0e9b.jpg"
-  },
-  {
-    title: "Wild West Wonder Wander: Kris Batchelder Art Opening Reception @ the Wright",
-    link: "wrightoperahouse.org",
-    description: "Wild West Wonder Wander: Kris Batchelder Art Opening Reception @ the Wright WHEN? Thursday, June 4 4:00 pm – 6:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT The Ouray County Arts Association presents Wild West Wonder Wander, an opening reception celebrating the work of Colorado collage artist Kris Batchelder. Kris is a self-created paper collage artist whose work is deeply inspired by the outdoors, wildlife, and the adventurous spirit of the American West. Having spent years exploring wilderness landscapes and outdoor communities around the world, her pieces reflect both a love of nature and a desire to inspire others to experience it for themselves. Recently returning to Colorado after time spent living in Wyoming, Kris has found new inspiration in Ridgway and the greater Ouray area, places she first fell in love with years ago during an early visit to the region. …",
-    pubDate: "2026-06-04T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52886404587594/huge/0c51371f7fbb6f19dc67e815e978b33092a15b0c.jpg"
-  },
-  {
-    title: "Music in the Park Beer Tent Fundraiser",
-    link: "https://ouray.colibraries.org/lib-cal/",
-    description: "Come visit the beer tent at the first Music in the Park of the season to support the Ouray Public Library.",
-    pubDate: "2026-06-04T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52958246797759/huge/9d80a9e6b3491bb7d97680483482831a350faf18.jpg"
-  },
-  {
-    title: "Ouray Mountain Air Music Series",
-    link: "www.ouraymusicseries.com",
-    description: "June 4th: AJ Fullerton and Grant Sabin June 11th: Nik Parr & The Selfless Lovers with You Knew Me When June 18th: The Sweet Lizzy Project with Sara Jean Kelley June 25th: Cruz Contreras & The Black Lillies and Griffin William Sherry Set in the heart of Ouray, the Mountain Air Music Series has become a signature summer tradition, offering a welcoming space for families, friends, and visitors of all ages to gather and unwind. Surrounded by breathtaking mountain views, the series creates an atmosphere that is equal parts relaxing and energizing—where laughter, community spirit, and live music blend seamlessly in one unforgettable outdoor experience. What makes the series truly special is the lineup of talented bands who bring both heart and authenticity to the stage. Each group shares a deep passion for music and a genuine appreciation for performing in small communities like Ouray. …",
-    pubDate: "2026-06-05T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52951532621249/huge/45a880540db97b7292e967c6f16b980532044c29.jpg"
-  },
-  {
-    title: "THIRSTY THURSDAY - Game Night at Floating Lotus",
-    link: "www.FloatingLotusBrewery.com",
-    description: "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who came to have a good time. Happening 7-9pm every week",
-    pubDate: "2026-06-05T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg"
-  },
-  {
-    title: "Steps Tavern Presents Karaoke Night",
-    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
-    description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM.",
-    pubDate: "2026-06-05T02:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "STEPS TAVERN",
-    imageUrl: "https://localist-images.azureedge.net/photos/52674051435440/huge/0edd2b82c0939057423977f6ad08ff6143fc3500.jpg"
-  },
   {
     title: "Ridgway Farmers Market",
     link: "www.ridgwayfarmersmarket.com",
@@ -4000,6 +3838,83 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52650481604723/huge/42bc80f9e4801fc659045735a533374c32f0ca75.jpg"
+  },
+  {
+    title: "Zumba Fitness with Tamra",
+    link: "https://zumba.com/p/zumbafitnesswithTamra",
+    description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com. For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra.",
+    pubDate: "2026-06-17T23:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52277881680293/huge/2b6c13a5ecf839308a6e07162c2bf31ca79210c3.jpg"
+  },
+  {
+    title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
+    link: "www.FloatingLotusBrewery.com",
+    description: "Join us at the Lotus for a midweek tradition that brings together musicians, music lovers, and the incredible local talent that makes our community shine. From intimate solo sets to full-band jam sessions with rotating players, Open Mic Night is always full of surprises. Want to play? We’d love to have you — signups begin at 5:30pm. Just bring your instrument and your creativity, and we’ll take care of the rest. Our stage is fully equipped with PA, mics, drums, bass, and everything you need to plug in and play. 🎟️ Free admission 🍻 Grab a beer, settle in, and enjoy the show Come be part of the music — on stage or in the crowd!",
+    pubDate: "2026-06-18T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/ed08b494666358349bc84e969db6e8b262ef71aa.jpg"
+  },
+  {
+    title: "Summer Bingo - Wednesday Night at Ouray Elks Lodge",
+    link: "Www.ourayelks.org",
+    description: "OPEN TO THE PUBLIC Come see our beautiful historic lodge while joining us in playing bingo! Doors Open at 5:30 pm, Early Bird Bingo 6:00 and Regular Bingo starts at 7:00pm Concessions available to purchase",
+    pubDate: "2026-06-18T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52440353082990/huge/849a6c82c22aa4e9cf19e3fc7490b7c928059ded.jpg"
+  },
+  {
+    title: "Yoga in the Park- Wednesday evenings",
+    link: "www.beetrueyou.com",
+    description: "For noncyclists and cyclists alike. After an optional social bike ride at 5 pm, wind down for a yoga class in the park 6 - 7 pm. A moderate to advanced vinyasa style class targetting the areas of the body affected by time in the bike saddle and other areas of request. Bring your own mat. If you don't have one, please let me know earlier in the day so I can bring one for you. Meet at the Gazebo south of Chipeta Lodge. If the weather is too inclement, we can meet at the studio at 380 Sherman Street, Ridgway. While this is donation based, please pay before online or in person.",
+    pubDate: "2026-06-18T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Gazebo south of Chipeta Lodge, Ridgway, CO (Or studio if raining)",
+    imageUrl: "https://localist-images.azureedge.net/photos/52880886803755/huge/ba2d24fbf09ba1f9a707a06213d60685581d7322.jpg"
+  },
+  {
+    title: "Paint & Sip with Nicole: Summer Skies",
+    link: "https://weehawkenarts.org/education/adult-art-classes/",
+    description: "Unwind, sip, and create! Join us for a relaxed painting session designed for all skill levels—no experience needed. Nicole will guide you through the featured painting while you enjoy a beverage of your choice! All art supplies and one adult beverage are included; just bring your creativity! About Nicole Greenfield: Nicole Greenfield is a painter based in Ridgway, Colorado. Working primarily in acrylic and oil, she creates expressive portraits and atmospheric landscapes that explore the quiet intimacy found in observing people and the natural world. Nicole is a self-taught artist who has developed her skills through years of dedicated practice and online learning. She is a proud member of the Mountain Girl Gallery, her work has been commissioned multiple times and featured in exhibitions at multiple local galleries, with additional pieces sold through online platforms. …",
+    pubDate: "2026-06-18T00:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53073595362723/huge/7f7aab2c4b4600a7cf46d711e7cdfb3669483f6a.jpg"
+  },
+  {
+    title: "Ouray International Film Festival",
+    link: "https://www.ourayfilmfestival.com/",
+    description: "Film festivals were founded with a specific purpose in mind: to support the success of film and filmmakers from beyond the mainstream. Some of the most beloved movies of all time got their start at film festivals. Without the infrastructure, support, and community of film festivals, these movies might never have become a part of our collective artistic culture. Our festival stands in this legacy of support. We bring in films from around the United States and across the globe to expose audiences to material they’re unlikely to see on streaming platforms or in theaters. Our filmmakers are established artists in the industry and new voices making their first films; regardless, the movies we screen come from independent spaces that sometimes challenge our conventional notions of what a movie is or can be. At OIFF, we celebrate that independence through films that challenge and inspire. …",
+    pubDate: "2026-06-18T06:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52092563418852/huge/6b966623135c4503564229a4b8f584add6755426.jpg"
+  },
+  {
+    title: "Pilates Mat",
+    link: "https://ridgwaypilates.punchpass.com/catalogs/300",
+    description: "All Levels Pilates Mat class. Classical sequence Int to challenge, strengthen and stretch you wehole body. Every Thursday at 9:30am. Pricing Four lessons for $120 Eight lessons for $200 Become a member and pay $100/month to attend weekly. Purchase a pass here: https://ridgwaypilates.punchpass.com/catalogs/300 Class is limited to six people. Mats are included. Please wear socks, put your hair up and choose clothing free of metal.",
+    pubDate: "2026-06-18T15:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
   }
 ];
 

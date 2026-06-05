@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s news, upcoming Gov-Hub meetings, and events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jun 2026 02:53:14 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 09:40:51 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] SMART Board of Directors — 2026-06-11</title>
@@ -84,17 +84,6 @@ Agenda not yet available]]></description>
 Agenda not yet published]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
-    </item>
-    <item>
-      <title>[Mon, Jun 8] The Box: How Anxiety, Perfectionism, and People-Pleasing Kept Me Trapped at WPL</title>
-      <link>https://koto.org/event/the-box-how-anxiety-perfectionism-and-people-pleasing-kept-me-trapped-at-wpl/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/the%20box%20how%20anxiety%7C2026-06-08</guid>
-      <pubDate>Mon, 08 Jun 2026 23:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-
-Join us on Monday, June 8th at 5:30 for a talk by well-being strategist, high-performance coach, bestselling author, and speaker Wendy Robbins ! The Box: How Anxiety, Perfectionism, and People-Pleasing Kept Me Trapped — and the Steps That Set Me Free You built the walls. You have the key. What if the anxiety, perfectionism, and people-pleasing you've spent your life managing aren't your greatest liabilities — but your biggest untapped assets? For over 40 years, Wendy Tamis Robbins hid in plain sight. From the outside, she had everything: Ivy-League grad, Div. 1 Athlete, Big Law attorney. On the inside, she was living with chronic anxiety, OCD, panic disorder, depression, substance abuse, and suicidal ideation — managing it all behind a flawless performance of having it all together. Then came a colon cancer diagnosis. And instead of breaking her, it broke her open. …]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Mon, Jun 8] Birding with Katie</title>
@@ -299,6 +288,19 @@ What does science have to say about the bonds we form with other animals — and
       <category>KOTO</category>
     </item>
     <item>
+      <title>[Fri, Jun 5] Telluride Farmers Marketshow: Lawn Games!</title>
+      <link>https://telluridelibrary.libcal.com/event/15564466?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20farmers%20marketshow%20lawn%7C2026-06-05</guid>
+      <pubDate>Fri, 05 Jun 2026 17:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_25_53.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Gondola Plaza - Telluride
+
+11:00 AM – 12:00 PM · Come hangout in the grassy area of the Telluride Gondola Plaza and play lawn games with your friends and family!]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_25_53.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
       <title>[Fri, Jun 5] Wild West Fest Telluride Round-Up</title>
       <link>https://koto.org/event/wild-west-fest-telluride-round-up/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/wild%20west%20fest%20telluride%7C2026-06-05</guid>
@@ -322,6 +324,39 @@ We are a MOBILE family business offering non-competitive Gymnastics, Preschool S
       <media:content url="https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 5] Yoga for ALL with Jane &amp; Jay</title>
+      <link>https://telluridelibrary.libcal.com/event/15803442?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/yoga%20for%20all%20with%7C2026-06-05</guid>
+      <pubDate>Fri, 05 Jun 2026 14:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+8:30 AM – 10:00 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>Lady Miners emerge as all-leaguers</title>
+      <link>https://www.telluridenews.com/sports/article_98a9d187-1dfd-4f4b-b34a-d7405b2cfebb.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/sports/article_98a9d187-1dfd-4f4b-b34a-d7405b2cfebb.html</guid>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/34/b34e32b7-5bb3-4e54-b78e-f3a17eeebfe7/6a210fe78801b.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The Lady Miners lacrosse team had their most successful season yet, finishing 6-2 in league and 10-5 overall before losing in the first round of state playoffs. Five players earned All-League honors, with Ruby Lake and Mikayla Ialeggio also receiving All-State recognition. The new coach emphasized how the team's chemistry and enthusiasm set this group apart from previous years.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/34/b34e32b7-5bb3-4e54-b78e-f3a17eeebfe7/6a210fe78801b.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>education</category>
+    </item>
+    <item>
+      <title>We got us a posse</title>
+      <link>https://www.telluridenews.com/news/article_a744a27e-74c3-4832-9eec-21602ec87352.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_a744a27e-74c3-4832-9eec-21602ec87352.html</guid>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/5b/75bf594d-9886-4fe3-94b6-b1db6eefbb16/6a213427926db.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Montrose County's volunteer sheriff's posse is looking for more help, especially on the West End where fewer than 20 people are available to respond to search and rescue, fires, and emergencies across a huge territory. The all-volunteer group saves taxpayers money by handling everything from medical assists to crowd control, but they're stretched thin as recreational use grows in the region.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/5b/75bf594d-9886-4fe3-94b6-b1db6eefbb16/6a213427926db.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>public-safety</category>
     </item>
     <item>
       <title>San Miguel County finalizes deed restriction reversions</title>
@@ -360,19 +395,6 @@ We are a MOBILE family business offering non-competitive Gymnastics, Preschool S
       <description><![CDATA[Norwood Enters Stage 1 Fire Restrictions; West End Roundup with the San Miguel Basin Forum; Taxpayer Dollars Support Mental Health Services]]></description>
       <category>KOTO Community Radio</category>
       <category>public-safety</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 5] Book Launch Party for A. Unda-Tames</title>
-      <link>https://telluridelibrary.libcal.com/event/16868826?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/book%20launch%20party%20for%7C2026-06-05</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_43_53.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Lower Terrace - outdoors
-
-6:00 PM – 7:00 PM · Come join WPL as we celebrate local author A. Unda-Tames&#39;s recently released book Dante: A Dark Cartel Romance . Free copies of the book for the first five people who sign up! Otherwise, copies will be available for purchase through the bookstore or via Amazon. This event is in collaboration with Romance with Rachel, which meets the last Wednesday of the month—all are welcome to join! Description below: I didn't fall in love. I walked into a trap—eyes open, wrists bare, heart unguarded. Dante promised escape. Control. Power. Protection. What he gave me was bruises I learned to crave, obedience that felt like choice, and a hunger I didn't recognize until it owned me. He taught me how to kneel. How to break. How to bloom in the dark. I thought I was special. I thought I mattered. …]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_43_53.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Fri, Jun 5] Wild West Fest Roundup Day</title>
@@ -656,25 +678,6 @@ What does science have to say about the bonds we form with other animals — and
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/de/1de8d61b-6f2b-4b7d-9170-344826fe3cfc/6a1f6bc061552.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>community</category>
-    </item>
-    <item>
-      <title>Governor Polis signs &apos;negligently luring bears&apos; bill</title>
-      <link>https://www.telluridenews.com/news_release/article_2acc4caf-12eb-443d-af21-eb9a657ec7d6.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news_release/article_2acc4caf-12eb-443d-af21-eb9a657ec7d6.html</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/84/684d122b-88dd-4691-9a22-166d57eef212/6a1f6a8bc7dcc.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Governor Polis signed a new law making it easier to cite people who negligently attract bears by lowering the standard from "intentionally" to "knowingly" luring them with improperly stored food and trash. The bill eliminates mandatory warnings for first-time offenders and raises fines for repeat violations to $5,000, giving wildlife officers more enforcement tools as human-bear conflicts continue rising across Colorado mountain communities.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/84/684d122b-88dd-4691-9a22-166d57eef212/6a1f6a8bc7dcc.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Notice and Call of Special Meeting of the Ridgway Town Council</title>
-      <link>https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Special-Meeting-Notice.pdf</link>
-      <guid isPermaLink="false">https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Special-Meeting-Notice.pdf</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Press release from the Town of Ridgway. Click to view the full PDF.]]></description>
-      <category>Town of Ridgway</category>
-      <category>government</category>
     </item>
   </channel>
 </rss>
