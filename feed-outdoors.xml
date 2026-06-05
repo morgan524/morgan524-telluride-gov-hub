@@ -6,8 +6,34 @@
     <atom:link href="https://livabletelluride.org/feed-outdoors.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming hikes, races, ski events, and stewardship days across the Telluride region.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Jun 2026 20:02:06 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 02:53:14 GMT</lastBuildDate>
     <ttl>360</ttl>
+    <item>
+      <title>[Sat, Jun 6] CASTLE</title>
+      <link>https://www.alibitelluride.com/calendar#eca-event=castle-6</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/castle%7C2026-06-06</guid>
+      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://ucarecdn.com/7a7f95e2-1fcc-4407-b411-586edd5d1065/-/crop/1545x1546/0,95/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
+📍 The Alibi • Telluride, CO
+🕒 9:00 PM
 
+Having began his journey in Telluride as a ski coach, CASTLE has transitioned to...]]></description>
+      <media:content url="https://ucarecdn.com/7a7f95e2-1fcc-4407-b411-586edd5d1065/-/crop/1545x1546/0,95/-/preview/" medium="image" />
+      <category>Community Event</category>
+      <category>The Alibi</category>
+    </item>
+    <item>
+      <title>[Sat, Jun 6] Lone Cone Librarys Annual Community Yard Sale &amp; Bbq</title>
+      <link>https://koto.org/event/lone-cone-librarys-annual-community-yard-sale-bbq/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/lone%20cone%20librarys%20annual%7C2026-06-06</guid>
+      <pubDate>Sat, 06 Jun 2026 15:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/2890-scaled.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Lone Cone Library Norwood
+
+Our favorite spring tradition is back – the Lone Cone Library Community Yard Sale! Come browse treasures, support your neighbors, and enjoy a relaxed day on the lawn. Interested in being a vendor? Spaces are available for $10. If you’d like to reserve a spot, just fill out our quick sign‑up form at the front desk or below. Vendors are responsible for set up and clean-up of their items. Any items left behind will be taken care of in a respectful way (Donating, discarding, etc). 🍔 Community BBQ • 12–2pm Swing by for lunch while you shop. $10 per plate, includes a hamburger, a side, a drink and a cookie. Have items you no longer need? You can donate gently‑used items to the library ahead of the sale. We’ll add them to our tables, and all proceeds from donated items go directly toward supporting library programs.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/05/2890-scaled.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
   </channel>
 </rss>

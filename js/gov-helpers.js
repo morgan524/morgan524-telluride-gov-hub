@@ -169,10 +169,10 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -181,22 +181,22 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "The June 30 2026 Town Council agenda hasn't been posted yet.",
+    "The June 30, 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
     "The July 1 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 01 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The July 1 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The July 1, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
-    "The July 1st Board of County Commissioners agenda hasn't been posted yet.",
+    "The July 1 Board of County Commissioners agenda hasn't been posted yet.",
 
   "county|2026-06-10|Board of Review and Planning Commission Joint Work Session":
     "The June 10 Board of Review and Planning Commission joint work session agenda hasn't been posted yet.",
@@ -212,10 +212,34 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 4, 2026",
     firstSeen: "2026-06-04",
     newsTopic: "public-safety",
-    copy: "A Colorado court reversed homicide convictions against two paramedics on Thursday in the ketamine overdose death of Elijah McClain after the Black man was pinned down by police. The court ordered new trials for Aurora Fire Rescue paramedics Jeremy Cooper…",
-    claudeSummary: false,
+    copy: "A Colorado appeals court overturned homicide convictions for two Aurora paramedics who injected ketamine into Elijah McClain in 2019, ordering new trials while upholding one assault conviction. The case, which resulted in rare criminal charges against first responders, has sent ripples through emergency medical services nationwide as paramedics now face potential legal consequences for split-second decisions during police custody situations.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_942f5fa6-f637-5959-8379-e51761c76461.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/c9/0c9575b9-bd39-5284-9b9f-b79c06a62d57/6a21ddc2aaf47.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "San Miguel County finalizes deed restriction reversions",
+    source: "Telluride Times",
+    date: "June 4, 2026",
+    firstSeen: "2026-06-05",
+    newsTopic: "housing",
+    copy: "San Miguel County commissioners have finalized a process allowing certain deed-restricted homeowners to revert to earlier versions of their property covenants after years of what some called coercive covenant changes during sales transactions. Of 206 properties reviewed, 31 owners chose to switch back to previous deed restrictions, with the county acknowledging \"unintentional mistakes\" in how they administered the housing program that began in 2010 and was amended multiple times through 2023.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_86e39f74-98f8-4230-b000-6f94f0e05c80.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c2/ec2c1fea-a838-4050-8fba-1b4c58dfd4b2/6a2086635a139.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "All hail the queen",
+    source: "Telluride Times",
+    date: "June 4, 2026",
+    firstSeen: "2026-06-05",
+    newsTopic: "community",
+    copy: "A local writer shares the story of a garter snake queen who claimed territory beneath a concrete slab, emerging each morning to sun herself on the lawn and raising babies over several summers. The homeowner carefully worked around her domain during mowing and trimming, but this year she hasn't appeared. These quiet wildlife dramas play out all around us if we pay attention.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_0e9cb9a3-e7f0-47e4-b916-2abf20f89a3b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/86/386f6732-2711-4c31-a33f-6a5ca70ff245/6a1fe68850795.image.jpg",
     imgHiRes: true
   },
   {
@@ -979,66 +1003,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "‘An energizing time’ for Telluride Arts",
-    source: "Telluride Times",
-    date: "May 22, 2026",
-    firstSeen: "2026-05-23",
-    newsTopic: "arts-culture",
-    copy: "Jessica Galbo took over as executive director of Telluride Arts last August and has introduced new programs like Salon Night and Creative Exchange. She's submitted a revised proposal to the town for reopening the Transfer Warehouse with basic improvements rather than the originally planned multi-level cultural center due to cost overruns.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_128c5f8b-2b08-49be-a4a8-38b2391f8bca.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/36/a36d5b63-9f47-4d58-92e9-928b3254d8de/6a0e8fb4dffba.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "To the center",
-    source: "Telluride Times",
-    date: "May 22, 2026",
-    firstSeen: "2026-05-23",
-    newsTopic: "arts-culture",
-    copy: "Campers found their favorite cottonwood grove empty and hiked to ancient ruins in a canyon, discovering what appeared to be petroglyphs and a grave site among fallen boulders. A sunrise hike revealed pottery fragments at a pueblo site, including a water vessel rim that made them reflect on how magical modern plumbing would seem to the ancient inhabitants.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_602ad3ac-3179-4220-ab72-4d185d88b067.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/59/959d5cc4-78a6-457b-81aa-ed98ec623895/6a0d8930da86d.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Fabulous freeriders",
-    source: "Telluride Times",
-    date: "May 22, 2026",
-    firstSeen: "2026-05-22",
-    newsTopic: "recreation",
-    copy: "Four Telluride Ski & Snowboard Club freeride athletes qualified for junior championships at Kicking Horse, competing against the top 5-10% of Western Hemisphere athletes despite limited snow this season. Local skiers placed well, with Cieciuch finishing 6th in U19 women's division and three others making finals in the natural terrain competition.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_6e1ffe99-1c70-4fd9-9041-b6bbe7ffbf17.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/18/51817d31-e00d-4991-a117-0ae9f2544bb4/6a0e8d025f075.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Mountainfilm homecoming",
-    source: "Telluride Times",
-    date: "May 22, 2026",
-    firstSeen: "2026-05-22",
-    newsTopic: "arts-culture",
-    copy: "Several local filmmakers are featured at this year's Mountainfilm, including Ben Knight who brought two films: \"Best Day Ever\" about adaptive bike riders building a Vermont bike park, and \"Teeth to the Wind\" about climbers Michael Gardner and Sam Hennessey. Knight, known for blending humor with serious subjects, says people seek him out because of his sensitive editing style.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_fb3ab976-5bf3-4e28-b091-a80cee11fed9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/70/8709cb40-2ae2-41f6-baeb-aeac7f6208de/6a0e81f164e4d.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Highway 62 between Ridgway and Placerville re-opens",
-    source: "Telluride Times",
-    date: "May 22, 2026",
-    firstSeen: "2026-05-22",
-    newsTopic: "housing",
-    copy: "Highway 62 between Ridgway and Placerville closed for several hours today after a house blocked both lanes near mile marker 9, about four miles west of Dallas Divide. A crane from Montrose was brought in to move the structure, and the sheriff's office provided detour routes using county roads 56V and 58P. The highway reopened around 4 p.m.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_042cbb30-7003-4b76-8bc3-a40b5a124367.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/bf/abfd96db-450e-40ba-8a54-74fb95a45581/6a1082ef543f9.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Telluride Marshal’s Department Arrests Individual for Failure to Register as a Sex Offender",
     source: "Town of Telluride",
     date: "May 22, 2026",
@@ -1075,6 +1039,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14159"
   },
   {
+    title: "County Road K68 (Tomboy Road) is now open",
+    source: "San Miguel County",
+    date: "June 4, 2026",
+    newsTopic: "land-use",
+    copy: "County Road K68 (Tomboy Road) is now open from the Town of Telluride to the historic Tomboy townsite. Please contact the Town of Telluride for information regarding road construction impacts on the lower section of the road.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=529",
+    img: ""
+  },
+  {
     title: "Stage 1 Fire Restrictions in effect for Norwood and Egnar Fire Protection Districts",
     source: "San Miguel County",
     date: "June 4, 2026",
@@ -1095,7 +1068,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 4, 2026",
+    date: "June 5, 2026",
     firstSeen: "2026-06-04",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1106,12 +1079,23 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 4, 2026",
+    date: "June 5, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/TreesToPlant%20Brochure%202021.pdf",
+    img: ""
+  },
+  {
+    title: "Ridgway Athletic Park Stakeholder Meeting Notice",
+    source: "Town of Ridgway",
+    date: "June 8, 2026",
+    firstSeen: "2026-06-05",
+    newsTopic: "recreation",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Athletic-Park-Stakeholder-Meeting-Notice.pdf",
     img: ""
   },
   {
@@ -1150,6 +1134,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 6-4-26",
+    source: "KOTO Community Radio",
+    date: "June 5, 2026",
+    newsTopic: "public-safety",
+    copy: "Norwood Enters Stage 1 Fire Restrictions; West End Roundup with the San Miguel Basin Forum; Taxpayer Dollars Support Mental Health Services",
+    href: "https://koto.org/news/newscast-6-4-26/"
+  },
   {
     title: "Newscast 6-3-26",
     source: "KOTO Community Radio",
@@ -1197,14 +1189,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "government",
     copy: "On this week’s Regional Roundup, we hear how Utah residents are pushing back against a proposed data center, and we'll hear a report on a new management plan for the Maroon Bells area in Western Colorado. We'll also hear about the nuances of party affiliation ahead of Wyoming’s primary elections, and the environmental benefits of mushroom cultivati",
     href: "https://koto.org/news/newscast-5-22-26/"
-  },
-  {
-    title: "Newscast 5-21-26",
-    source: "KOTO Community Radio",
-    date: "May 22, 2026",
-    newsTopic: "community",
-    copy: "West End Roundup with the San Miguel Basin Forum; Kris Tompkins on Rewilding the Mind; A Placerville Poetry Box",
-    href: "https://koto.org/news/newscast-5-21-26/"
   }
 ];
 
@@ -1216,14 +1200,6 @@ const KOTO_FEATURED_STORIES = [
     newsTopic: "government",
     copy: "An independent investigation into the conversations and actions surrounding an offer to purchase a portion of the Telluride Ski Resort by former Mountain Village Mayor Marti Prohaska and former Telluride Town Councilmember Meehan Fee, with support from former Mountain Village Town Manager Paul Wisor, found that neither Prohaska nor Wisor violated l",
     href: "https://koto.org/news/telluride-ski-resort-ethics-investigation-prohaska-wisor-fee/"
-  },
-  {
-    title: "A Placerville Poetry Box",
-    source: "KOTO Community Radio",
-    date: "May 22, 2026",
-    newsTopic: "infrastructure",
-    copy: "A bright yellow poetry box on the side of the road in San Miguel Canyon offers people driving to and fro a place to stop, write, and share poems. Created by local poet Rosemerry Wahtola Trommer, the poetry box is an opportunity to pause, reflect, and embrace a sense of community.",
-    href: "https://koto.org/news/san-miguel-canyon-telluride-poetry-box-colorado/"
   }
 ];
 
@@ -1877,28 +1853,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Art Walk Telluride",
-    link: "https://koto.org/event/art-walk-telluride/2026-06-04/",
-    description: "Join us the first Thursday of every month for Telluride's Art Walk. It will be an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists. From 5–7 pm, participating venues will open their doors, showcasing new collections and inviting art lovers to explore the vibrant gallery scene. Find what's new on www.telluridearts.org Note: Special Edition Art Walk May 21st.",
-    pubDate: "2026-06-04T23:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png"
-  },
-  {
-    title: "Mars SUCKS! (Telluride Theatre FRINGE Project)",
-    link: "https://koto.org/event/mars-sucks-telluride-theatre-fringe-project/2026-06-04/",
-    description: "Mars SUCKS! (Telluride Theatre FRINGE Project) June 4 & 5 7 – 8:45pm @ The Michael D. Palm Theatre In an otherworldly performance, author and explorer Craig Childs brings a form of live cinema to the Palm, featuring live music by Beth Quist. This visual, musical, spoken word event mixes science, storytelling, and a crazy desert adventure. We'll be leaving the planet, so buckle up. Seating is limited. Pay-What-You-Can Tickets are available. Learn more on Telluride Theatre's website ( www.telluridetheatre.org )",
-    pubDate: "2026-06-05T01:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Michael D. Palm Theater, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mars-sucks-thundertix.png"
-  },
-  {
     title: "Up-off Gymnastics, Dance, and Spanish",
     link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-06-05/",
     description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
@@ -2042,6 +1996,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   },
   {
+    title: "Birding with Katie",
+    link: "https://koto.org/event/birding-with-katie/2026-06-08/",
+    description: "Join local birder Katie Triest for an intro discussion about the birds of Telluride at the Telluride Patagonia store on June 8th from 5-6 and for a bird walk with Katie leaving from the Telluride Patagonia store on June 9th at 8:30 am. Folks can sign up for the bird walk on Patagonia's Instagram or come on into the Patagonia store. The talk and walk are free and open to all ages.",
+    pubDate: "2026-06-08T23:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Patagonia Telluride, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/1.png"
+  },
+  {
     title: "The Box: How Anxiety, Perfectionism, and People-Pleasing Kept Me Trapped at WPL",
     link: "https://koto.org/event/the-box-how-anxiety-perfectionism-and-people-pleasing-kept-me-trapped-at-wpl/",
     description: "Join us on Monday, June 8th at 5:30 for a talk by well-being strategist, high-performance coach, bestselling author, and speaker Wendy Robbins ! The Box: How Anxiety, Perfectionism, and People-Pleasing Kept Me Trapped — and the Steps That Set Me Free You built the walls. You have the key. What if the anxiety, perfectionism, and people-pleasing you've spent your life managing aren't your greatest liabilities — but your biggest untapped assets? For over 40 years, Wendy Tamis Robbins hid in plain sight. From the outside, she had everything: Ivy-League grad, Div. 1 Athlete, Big Law attorney. On the inside, she was living with chronic anxiety, OCD, panic disorder, depression, substance abuse, and suicidal ideation — managing it all behind a flawless performance of having it all together. Then came a colon cancer diagnosis. And instead of breaking her, it broke her open. …",
@@ -2051,6 +2016,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: ""
+  },
+  {
+    title: "Birding with Katie",
+    link: "https://koto.org/event/birding-with-katie/2026-06-09/",
+    description: "Join local birder Katie Triest for an intro discussion about the birds of Telluride at the Telluride Patagonia store on June 8th from 5-6 and for a bird walk with Katie leaving from the Telluride Patagonia store on June 9th at 8:30 am. Folks can sign up for the bird walk on Patagonia's Instagram or come on into the Patagonia store. The talk and walk are free and open to all ages.",
+    pubDate: "2026-06-09T14:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Patagonia Telluride, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/1.png"
   },
   {
     title: "Free Legal Clinic – Clínica Jurídica Gratuita",
@@ -2117,6 +2093,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Elks Lodge BPOE 692, TELLURIDE",
     imageUrl: "https://koto.org/wp-content/uploads/2026/06/Kickoff-Flyer-New-Small.png"
+  },
+  {
+    title: "\"Forever Wild\" film screening, Celebrating the protection of Telluride's Valley Floor",
+    link: "https://koto.org/event/forever-wild-film-screening-celebrating-the-protection-of-tellurides-valley-floor/",
+    description: "In collaboration with Sheep Mountain Alliance and Eco Action Partners, Patagonia Telluride will host a screening of the film, \"Forever Wild\". We will celebrate Telluride's environmental activists past and present who have fought for the protection of Telluride's precious resources. Discussion to follow film, food provided.",
+    pubDate: "2026-06-10T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Patagonia Telluride, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/FOREVER-WILD-poster.png"
   },
   {
     title: "Low Energy & Carbon Code Training",
@@ -2488,7 +2475,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Pekingese / Mixed Breed (Small) • Female",
     firstSeen: "2026-06-04",
     revealDate: "2026-06-04",
-    lastSeen: "2026-06-04"
+    lastSeen: "2026-06-05"
   },
   {
     id: "TEL-A-184",
@@ -2502,7 +2489,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Unweaned • Retriever, Labrador • Male",
     firstSeen: "2026-06-04",
     revealDate: "2026-06-06",
-    lastSeen: "2026-06-04"
+    lastSeen: "2026-06-05"
   }
 ];
 
@@ -3368,7 +3355,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Ouray Youth Summer Programs: Dinosaur Tracks Hike",
     link: "https://anc.apm.activecommunities.com/cityofouray/activity/search/detail/337?onlineSiteId=0&from_original_cui=true",
-    description: "Youth participants will hike the Silvershield Trail to visit Ouray’s famous dinosaur tracks. This moderately difficult hike takes approximately 2 hours up and 2 hours back down. Participants should come prepared with sturdy hiking footwear, a rain jacket, sunscreen, a warm hat, at least 1 quart of water, and a packed lunch. REGISTER HERE Scholarships are available if needed. This activity is part of the Youth Adventure Days, sponsored by Ouray's Parks and Recreation Department. For questions, contact Sean Hart at 970-318-1003 or seanhart@cityofouray.com",
+    description: "Youth participants will hike the Silvershield Trail to visit Ouray’s famous dinosaur tracks. This moderately difficult hike takes approximately 2 hours up and 2 hours back down. Participants should come prepared with sturdy hiking footwear, a rain jacket, sunscreen, a warm hat, at least 1 quart of water, and a packed lunch. It's approximately a 1,700-foot elevation gain. REGISTER HERE Scholarships are available if needed. This activity is part of the Youth Adventure Days, sponsored by Ouray's Parks and Recreation Department. For questions, contact Sean Hart at 970-318-1003 or seanhart@cityofouray.com",
     pubDate: "2026-06-09T15:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -3993,6 +3980,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52887120617394/huge/59851e9ca29d75054645a0e488e33edbbcf73d69.jpg"
   },
   {
+    title: "OIFF Meet and Greet",
+    link: "https://ouray.colibraries.org/lib-cal/",
+    description: "Join us at Ouray Library at 7:00 p.m. to meet the fantastic founders of the Ouray International Film Festival (OIFF). This will include vivid discussion with Jake Abell and Jared LaCroix and learning about this year's festival scheduling.",
+    pubDate: "2026-06-17T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53074251930089/huge/526dac40d826b77c48509ef674c3ab3d0fc604aa.jpg"
+  },
+  {
     title: "Wildflower Walks & Talks with Mary Menz & Jaime Pisarowicz \"Blaine Basin Trail\"",
     link: "https://weehawkenarts.org/education/adult-art-classes/",
     description: "Wildflower Walks & Talks with Mary Menz & Jaime Pisarowicz \"Blaine Basin Trail\" June 17th Wednesday 8:00am - Noon $49-$69 Registration: www.weehawkenarts.org Different elevations and habitats provide opportunities to view a wide variety of Colorado’s native plants and wildflowers. Ridgway writer and Colorado Native Plant Master Mary Menz and Jaime Pisarowicz will share their extensive plant knowledge and excitement for the area with you. Special guest and fellow NPM Sandra Dick will also join the group as a guide! Registration includes a copy of their book Common Wildflowers of the San Juan Mountains ($49) or Wildflowers of Colorado’s Western Slope ($69). All groups are limited to 12 participants. Participants will meet and carpooling is recommended (we help facilitate this effort at the meet up location)—specific directions and more information will be provided via email prior to the event. A waiver needs to be signed before the event. …",
@@ -4002,17 +4000,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52650481604723/huge/42bc80f9e4801fc659045735a533374c32f0ca75.jpg"
-  },
-  {
-    title: "Zumba Fitness with Tamra",
-    link: "https://zumba.com/p/zumbafitnesswithTamra",
-    description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com. For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra.",
-    pubDate: "2026-06-17T23:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52277881680293/huge/2b6c13a5ecf839308a6e07162c2bf31ca79210c3.jpg"
   }
 ];
 
@@ -4088,30 +4075,6 @@ const NORWOOD_EVENTS = [
 const MOUNTAIN_VILLAGE_EVENTS = [];
 
 const TELLURIDE_COM_EVENTS = [
-  {
-    title: "Games on the Green",
-    link: "https://www.telluride.com/event/games-on-the-green/",
-    description: "Head to The Madeline on Wednesdays and Thursdays this summer for Games on the Green! They will have classic lawn games …",
-    pubDate: "2026-06-03",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62453/mtv_summer_selects_lowres-62-2100x1401-5ba5db78-3cf7-49e2-a790-62927e14c194.800x533.webp"
-  },
-  {
-    title: "Sweet Sounds",
-    link: "https://www.telluride.com/event/sweet-sounds/",
-    description: "Head to the Wilkinson Public Library on the first Wednesday of the month this summer for live music and sweet treats! …",
-    pubDate: "2026-06-03",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62443/sweet_sounds_5.800x533.webp"
-  },
   {
     title: "Games on the Green",
     link: "https://www.telluride.com/event/games-on-the-green/",
@@ -4399,6 +4362,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/46449/mvwmplanetpic2.800x533.webp"
+  },
+  {
+    title: "Forever Wild",
+    link: "https://www.telluride.com/event/forever-wild/",
+    description: "Patagonia Telluride in partnership with Sheep Mountain Alliance and EcoAction Partners will host a film screening of …",
+    pubDate: "2026-06-10",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62747/forever_wild_poster.800x533.webp"
   },
   {
     title: "Creative Exchange",
@@ -4715,14 +4690,14 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Summer Situation: Brazilian Barbecue",
     link: "https://www.telluride.com/event/summer-situation/",
-    description: "Join Ah Haa for a celebratory kickoff to the summer season on Ah Haa’s Sky Deck! Chef Israel Castro, an expert in …",
+    description: "Join Ah Haa for a celebratory kickoff to the summer season on Ah Haa’s stunning rooftop! Chef Israel Castro, an …",
     pubDate: "2026-06-17",
     endDate: "undefined",
     source: "telluride-com",
     sourceLabel: "Telluride.com",
     category: "Community Event",
     location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/58314/screenshot_2026-05-28_at_3_00_36_pm.800x533.webp"
+    imageUrl: "https://www.telluride.com/site/assets/files/58314/download_12.800x533.webp"
   },
   {
     title: "Telluride Arts Salon Night",
@@ -6595,6 +6570,42 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62666/screenshot_2026-06-01_at_3_29_24_pm.800x533.webp"
+  },
+  {
+    title: "Historic Walking Tour",
+    link: "https://www.telluride.com/event/historic-walking-tour/",
+    description: "Take a historic tour of Telluride on foot! These historic walking tours are led by historian Ashley Boling, and leave …",
+    pubDate: "2026-08-04",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/48069/walkingtour_tabloidsize_2021.800x533.webp"
+  },
+  {
+    title: "Town Talks",
+    link: "https://www.telluride.com/event/town-talks/",
+    description: "Each summer, Telluride Science brings together some of the world’s brightest minds to tackle the most pressing …",
+    pubDate: "2026-08-04",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/54293/town-talks-grid1.800x533.webp"
+  },
+  {
+    title: "Augment Summer Music Series",
+    link: "https://www.telluride.com/event/augment-summer-music-series/",
+    description: "Telluride's local non-profit organization Augment Music Project is hosting monthly concerts in Elks Park this summer. …",
+    pubDate: "2026-08-04",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/53672/download_1.800x533.webp"
   }
 ];
 
@@ -6782,41 +6793,6 @@ const LEGAL_NOTICES = [
     noticeKey: "rfp-flooring-2026"
   },
   {
-    title: "RFP -- Boiler System Replacement at Down Valley Park",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County requests proposals for a contractor to replace the boiler system at the Down Valley Park in Placerville. RFP information is available on the county website or at Parks & Open Space department. Deadline for proposals is 5:00 PM on June 4th.",
-    deadline: "June 4, 2026 at 5:00 PM",
-    expires: "2026-06-04",
-    dates: "5/6",
-    papers: ["ttimes_0506"],
-    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    address: "Down Valley Park, Placerville",
-    noticeKey: "rfp-boiler-placerville-2026"
-  },
-  {
-    title: "Request for Proposal -- Request for Proposal for Boiler Replacement at the Down Valley Park",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Request for Proposal for Boiler Replacement at the Down Valley Park.",
-    deadline: "Closes 6/4/2026",
-    expires: "2026-06-04",
-    dates: "5/7",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=205",
-    address: "",
-    smcBidID: "205"
-  },
-  {
     title: "Request for Proposal -- Request for Proposal for Floor Replacement at Courthouse and Miramonte Building",
     entity: "San Miguel County",
     entityClass: "ent-county",
@@ -6866,23 +6842,6 @@ const LEGAL_NOTICES = [
     url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=189",
     address: "",
     smcBidID: "189"
-  },
-  {
-    title: "Request for Proposal -- Deputy Municipal Court Judge",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "Town of Telluride is seeking qualified respondents for: Deputy Municipal Court Judge.",
-    deadline: "Closes 6/4/2026",
-    expires: "2026-06-04",
-    dates: "5/7",
-    url: "https://www.telluride.gov/bids.aspx?bidID=127",
-    address: "",
-    totBidID: "127"
   },
   {
     title: "Property Tax Exemption -- Senior Citizens and Veterans with Disability",
@@ -6935,24 +6894,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluride.gov/bids.aspx?bidID=129",
     address: "",
     totBidID: "129"
-  },
-  {
-    title: "RFP -- Boiler System Replacement at Down Valley Park",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals from contractors to replace the boiler system at Down Valley Park in Placerville. Information is available online or at the Parks & Open Space department in Telluride. Proposals are due by 5:00 PM on June 4, 2026.",
-    deadline: "June 4, 2026 at 5:00 PM",
-    expires: "2026-06-04",
-    dates: "5/14",
-    papers: ["ttimes_0514"],
-    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
-    address: "Down Valley Park, Placerville, CO",
-    noticeKey: "COL-000133"
   },
   {
     title: "RFP -- Deputy Municipal Court Judge Services",
@@ -7098,24 +7039,6 @@ const LEGAL_NOTICES = [
     noticeKey: "rfp-flooring-col-000131"
   },
   {
-    title: "RFP -- Boiler System Replacement at Down Valley Park",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County requests proposals for a contractor to replace the boiler system at the Down Valley Park in Placerville. Proposals are due by 5:00 PM June 4 via email or drop-off at Parks & Open Space department.",
-    deadline: "June 4, 2026 at 5:00 PM",
-    expires: "2026-06-04",
-    dates: "5/21",
-    papers: ["ttimes_0521"],
-    url: "https://www.telluridenews.com/news/legals/article_d3659378-b06b-4e27-9b53-ec57d83a4b86.html",
-    address: "Down Valley Park, Placerville, CO",
-    noticeKey: "rfp-boiler-placerville-col-000133"
-  },
-  {
     title: "Foreclosure Sale -- 122 43ZS Road, Norwood (Sale No. 202601)",
     entity: "San Miguel County Public Trustee",
     entityClass: "ent-county",
@@ -7259,24 +7182,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_f189086a-bd15-49d6-92a1-f8e7553ebb74.html",
     address: "Norwood School District, Norwood, CO",
     noticeKey: "norwood-budget-fy2026-2027"
-  },
-  {
-    title: "RFP -- Boiler System Replacement at Down Valley Park",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals from contractors to replace the boiler system at Down Valley Park in Placerville. RFP information is available on the county website or at the Parks & Open Space department. Proposals must be submitted by 5:00 PM on June 4, 2026 via email or drop-off.",
-    deadline: "2026-06-04",
-    expires: "2026-06-04",
-    dates: "6/4",
-    papers: ["ttimes_0604"],
-    url: "https://www.telluridenews.com/news/legals/article_f189086a-bd15-49d6-92a1-f8e7553ebb74.html",
-    address: "Down Valley Park, Placerville, CO",
-    noticeKey: "rfp-boiler-down-valley-park"
   },
   {
     title: "Foreclosure Sale -- Section 27 Property (Sale No. 202602)",
