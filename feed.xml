@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s news, upcoming Gov-Hub meetings, and events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jun 2026 13:22:21 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 19:14:46 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] SMART Board of Directors — 2026-06-11</title>
@@ -40,6 +40,19 @@ Agenda not available]]></description>
 
 Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.]]></description>
       <media:content url="https://koto.org/wp-content/uploads/2026/02/sewing.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Wed, Jun 10] The Livable Telluride Kick-Off Party</title>
+      <link>https://koto.org/event/the-livable-telluride-kick-off-party/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/the%20livable%20telluride%20kick%7C2026-06-10</guid>
+      <pubDate>Wed, 10 Jun 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/Kickoff-Flyer-New-Small.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Telluride Elks Lodge BPOE 692, TELLURIDE
+
+Join Livable Telluride on Wednesday, June 10 to learn about and celebrate a new community hub for civic engagement across San Miguel County. It's a great way to meet some neighbors and talk about local issues.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/06/Kickoff-Flyer-New-Small.png" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
     </item>
@@ -335,19 +348,6 @@ Telluride Balloon Festival takes place Saturday, June 6 th and Sunday, June 7 th
       <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_13_17_37_22.png" medium="image" />
       <category>Community Event</category>
       <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Sat, Jun 6] Bilingual Balance in Motion</title>
-      <link>https://koto.org/event/bilingual-balance-in-motion/2026-06-06/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/bilingual%20balance%20in%20motion%7C2026-06-06</guid>
-      <pubDate>Sat, 06 Jun 2026 16:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Wilkinson Public Library, Telluride
-
-Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Sat, Jun 6] Lone Cone Librarys Annual Community Yard Sale &amp; Bbq</title>
