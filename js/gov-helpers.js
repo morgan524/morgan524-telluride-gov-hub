@@ -169,10 +169,10 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -181,10 +181,10 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "The Jun 30 2026 Town Council agenda hasn't been posted yet.",
+    "The June 30, 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The July 1, 2026 Ecology Commission agenda hasn't been posted yet.",
+    "The July 1st Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
     "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
@@ -193,7 +193,7 @@ const MANUAL_SUMMARIES = {
     "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The July 1st Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
     "The July 1st Board of County Commissioners agenda hasn't been posted yet.",
@@ -205,10 +205,22 @@ const MANUAL_SUMMARIES = {
     "The San Miguel Basin Fair Board meets to review junior livestock sale terms and update bylaws for the upcoming fair season.",
 
   "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
-    "The July 6 2026 Open Space Commission agenda hasn't been posted yet."
+    "The July 6 Open Space Commission agenda hasn't been posted yet."
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Commissioners approve Accelerated Housing Review",
+    source: "Telluride Times",
+    date: "June 6, 2026",
+    firstSeen: "2026-06-06",
+    newsTopic: "land-use",
+    copy: "County commissioners approved fast-track review for affordable housing projects to qualify for state funding from Proposition 123's housing fund. Projects with 50% or more affordable units will get decisions within 90 days, but the same approval standards and review processes still apply. Some stakeholders had concerns about no size limits on eligible projects, though others supported accessing the available state money.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_756e982e-d9f7-4554-b0a5-6efc70f47375.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/ae/0ae9ed7b-c9f6-4e1d-9d08-009945edf5aa/6a230685dbace.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "What to know about new trials ordered for two paramedics in the death of Elijah McClain",
     source: "Telluride Times",
@@ -1893,17 +1905,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Telluride Balloon Fest 2026",
-    link: "https://koto.org/event/telluride-balloon-fest-2026/2026-06-06/1/",
-    description: "Telluride Balloon Festival takes place Saturday, June 6 th and Sunday, June 7 th . Weather permitting & beginning at 6 a.m. on Saturday & Sunday, watch hot air balloons lift off from Telluride Town Park and float effortlessly over the Telluride Valley. Refreshments will be available for sale at the basketball court in Town Park. Don't miss the Balloon Glow on Main Street on Saturday night – it's an amazing sight! The Main Street Glow takes place from 6-10 p.m. on Saturday night.",
-    pubDate: "2026-06-06T12:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Main Street, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Lone Cone Librarys Annual Community Yard Sale & Bbq",
     link: "https://koto.org/event/lone-cone-librarys-annual-community-yard-sale-bbq/",
@@ -6973,7 +6974,7 @@ const LEGAL_NOTICES = [
     caseNumber: "202602"
   },
   {
-    title: "RFP -- Boiler System Replacement at Down Valley Park",
+    title: "RFP -- Boiler System Replacement at Down Valley Park (COL-000133)",
     entity: "San Miguel County",
     entityClass: "ent-county",
     entityLogo: "county",
@@ -6981,17 +6982,17 @@ const LEGAL_NOTICES = [
     iconClass: "type-rfp",
     type: "Public Notice",
     filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals from contractors to replace the boiler system at Down Valley Park in Placerville. Proposals must be submitted by 5:00 PM on June 4, 2026, either via email or dropped off at the Parks & Open Space department in Telluride.",
-    deadline: "June 4, 2026 at 5:00 PM",
+    summary: "San Miguel County is requesting proposals from contractors to replace the boiler system at the Down Valley Park in Placerville. RFP information is available on the county website or at the Parks & Open Space department in Telluride. Proposals are due by 5:00 PM on June 4, 2026.",
+    deadline: "June 4, 2026 5:00 PM",
     expires: "2026-06-04",
     dates: "5/14",
     papers: ["ttimes_0514"],
     url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
-    address: "Down Valley Park, Placerville, CO",
-    noticeKey: "col-000133"
+    address: "Down Valley Park, Placerville",
+    noticeKey: "rfp-boiler-down-valley-park"
   },
   {
-    title: "RFP -- Deputy Municipal Court Judge Services",
+    title: "RFP -- Deputy Municipal Court Judge Services (COL-000140)",
     entity: "Town of Telluride",
     entityClass: "ent-county",
     entityLogo: "county",
@@ -6999,17 +7000,17 @@ const LEGAL_NOTICES = [
     iconClass: "type-rfp",
     type: "Public Notice",
     filterTag: "public-entity",
-    summary: "The Town of Telluride is inviting proposals from qualified individuals to provide Deputy Municipal Court Judge services for the Municipal Court of Record. Proposals will be accepted until 12:00 PM noon on June 5, 2026.",
-    deadline: "June 5, 2026 at 12:00 PM",
+    summary: "The Town of Telluride is seeking qualified individuals to provide Deputy Municipal Court Judge Services for the Telluride Municipal Court, which is a Court of Record that meets as required. Proposals must be submitted by noon on June 5, 2026, following the specifications detailed in the RFP available at bit.ly/totbids.",
+    deadline: "June 5, 2026 12:00 PM",
     expires: "2026-06-05",
     dates: "5/14",
     papers: ["ttimes_0514"],
     url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
-    address: "Telluride, CO",
-    noticeKey: "col-000140"
+    address: "Telluride Municipal Court",
+    noticeKey: "rfp-deputy-judge-telluride"
   },
   {
-    title: "RFP -- Flooring Replacement at County Buildings",
+    title: "RFP -- Flooring Replacement at County Buildings (COL-000131)",
     entity: "San Miguel County",
     entityClass: "ent-county",
     entityLogo: "county",
@@ -7017,17 +7018,17 @@ const LEGAL_NOTICES = [
     iconClass: "type-rfp",
     type: "Public Notice",
     filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals from contractors to replace flooring at 333 & 305 W. Colorado Ave in Telluride. The deadline for proposals is 5:00 PM on Friday, June 5th, 2026.",
-    deadline: "June 5, 2026 at 5:00 PM",
+    summary: "San Miguel County is requesting proposals from contractors to replace flooring at 333 & 305 W. Colorado Ave in Telluride. RFP information is available on the county website or at the 2nd floor of 333 W. Colorado Ave. Proposals are due by 5:00 PM on Friday, June 5th.",
+    deadline: "June 5, 2026 5:00 PM",
     expires: "2026-06-05",
     dates: "5/14",
     papers: ["ttimes_0514"],
     url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
     address: "333 & 305 W. Colorado Ave, Telluride, CO",
-    noticeKey: "col-000131"
+    noticeKey: "rfp-flooring-colorado-ave"
   },
   {
-    title: "Bid Notice -- Mountain Munchkins Windows and Door Replacement",
+    title: "Bid Notice -- Mountain Munchkins Windows and Door Replacement (COL-000141)",
     entity: "Town of Mountain Village",
     entityClass: "ent-county",
     entityLogo: "county",
@@ -7035,17 +7036,17 @@ const LEGAL_NOTICES = [
     iconClass: "type-rfp",
     type: "Public Notice",
     filterTag: "public-entity",
-    summary: "The Town of Mountain Village is accepting bids for the 2026 Mountain Munchkins Windows and Door Replacement project. All bids must be submitted to Mountain Munchkins at 415 Mountain Village Blvd Building 2 by May 22, 2026 at 12:00 noon.",
-    deadline: "May 22, 2026 at 12:00 noon",
+    summary: "The Town of Mountain Village is accepting bids for the 2026 Mountain Munchkins Windows and Door Replacement project. Bid packets are available on the town website or at the Public Works Department office at 411 Mountain Village Blvd. All bids must be submitted to Mountain Munchkins at 415 Mountain Village Blvd Building 2 by noon on May 22, 2026.",
+    deadline: "May 22, 2026 12:00 PM",
     expires: "2026-05-22",
     dates: "5/14",
     papers: ["ttimes_0514"],
     url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
-    address: "415 Mountain Village Blvd Building 2, Mountain Village, CO",
-    noticeKey: "col-000141"
+    address: "415 Mountain Village Blvd Building 2",
+    noticeKey: "bid-mountain-munchkins-windows"
   },
   {
-    title: "RFP -- MSE Retaining Wall Construction on County Road 58P",
+    title: "RFP -- MSE Retaining Wall on County Road 58P (COL-000125)",
     entity: "San Miguel County",
     entityClass: "ent-county",
     entityLogo: "county",
@@ -7053,17 +7054,17 @@ const LEGAL_NOTICES = [
     iconClass: "type-rfp",
     type: "Public Notice",
     filterTag: "public-entity",
-    summary: "San Miguel County is soliciting proposals for design and construction of a mechanically stabilized earth retaining wall on County Road 58P north of Sawpit, including engineering services. A mandatory pre-bid meeting is May 14, 2026 at 1:00 PM, with proposals due May 26, 2026 at 5:00 PM.",
-    deadline: "May 26, 2026 at 5:00 PM",
+    summary: "San Miguel County is soliciting proposals for the design and construction of a mechanically stabilized earth (MSE) retaining wall on County Road 58P north of Sawpit, including design, engineering, and construction services. A mandatory pre-bid meeting will be held on May 14, 2026 at 1:00 PM MT at the project site. Proposals must be submitted electronically by May 26, 2026 at 5:00 PM MT.",
+    deadline: "May 26, 2026 5:00 PM",
     expires: "2026-05-26",
     dates: "5/14",
     papers: ["ttimes_0514"],
     url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
-    address: "County Road 58P, approximately 0.5 miles north of Sawpit, CO",
-    noticeKey: "col-000125"
+    address: "County Road 58P north of Sawpit, Colorado",
+    noticeKey: "rfp-mse-wall-cr58p"
   },
   {
-    title: "Public Hearing -- Land Use Code Amendment for Building Footprint Definition",
+    title: "Public Hearing -- Land Use Code Amendment for Building Footprint Definition (COL-000142)",
     entity: "San Miguel County Board of Commissioners",
     entityClass: "ent-county",
     entityLogo: "telluride",
@@ -7071,17 +7072,17 @@ const LEGAL_NOTICES = [
     iconClass: "type-hearing",
     type: "Ordinance",
     filterTag: "ordinance",
-    summary: "San Miguel County Board of Commissioners will hold a public hearing on June 3, 2026 at 9:30 AM to consider a Land Use Code amendment adding a definition for 'Building Footprint' and clarifying dimensional references. Written comments must be received by May 27, 2026.",
-    deadline: "June 3, 2026 at 9:30 AM",
+    summary: "San Miguel County Board of Commissioners will hold a public hearing on June 3, 2026 at 9:30 AM to consider a Land Use Code amendment adding a definition for 'Building Footprint' and clarifying dimensional references. This is the second step of a two-step process. Written comments must be received by May 27, 2026 to receive complete consideration.",
+    deadline: "May 27, 2026",
     expires: "2026-06-03",
     dates: "5/14",
     papers: ["ttimes_0514"],
     url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
-    address: "333 W Colorado Ave, 2nd FL, Telluride, CO",
-    noticeKey: "col-000142"
+    address: "333 W Colorado Ave, 2nd FL, Telluride",
+    noticeKey: "luc-amendment-building-footprint"
   },
   {
-    title: "Public Hearing -- Land Use Code Amendment for Accelerated Housing Review",
+    title: "Public Hearing -- Land Use Code Amendment for Accelerated Housing Review (COL-000143)",
     entity: "San Miguel County Board of Commissioners",
     entityClass: "ent-county",
     entityLogo: "smrha",
@@ -7089,32 +7090,50 @@ const LEGAL_NOTICES = [
     iconClass: "type-hearing",
     type: "Housing Notice",
     filterTag: "housing",
-    summary: "San Miguel County Board of Commissioners will hold a public hearing on June 3, 2026 at 9:30 AM to consider a Land Use Code amendment adding a new Section 3-15 for Accelerated Housing Review. Written comments must be received by noon on May 27, 2026.",
-    deadline: "June 3, 2026 at 9:30 AM",
+    summary: "San Miguel County Board of Commissioners will hold a public hearing on June 3, 2026 at 9:30 AM to consider a Land Use Code amendment adding a new Section 3-15 for Accelerated Housing Review with related amendments. This is the second step of a two-step process. Written comments must be received by noon on May 27, 2026.",
+    deadline: "May 27, 2026 12:00 PM",
     expires: "2026-06-03",
     dates: "5/14",
     papers: ["ttimes_0514"],
     url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
-    address: "333 W Colorado Ave, 2nd FL, Telluride, CO",
-    noticeKey: "col-000143"
+    address: "333 W Colorado Ave, 2nd FL, Telluride",
+    noticeKey: "luc-amendment-accelerated-housing"
   },
   {
-    title: "Public Hearing -- Substantial PUD Amendment for 780 Vance Drive",
-    entity: "Jim Mahoney (Applicant)/San Miguel County Board of Commissioners",
+    title: "Public Hearing -- Substantial PUD Amendment for Lawson Hill (COL-000116)",
+    entity: "San Miguel County Board of Commissioners",
     entityClass: "ent-county",
     entityLogo: "telluride",
     icon: "📋",
     iconClass: "type-hearing",
     type: "Ordinance",
     filterTag: "ordinance",
-    summary: "San Miguel County Board of Commissioners will hold a public hearing on June 3, 2026 at 9:30 AM to consider Jim Mahoney's application for a Substantial PUD Amendment to increase maximum floor area from 6,600 to 7,800 square feet at 780 Vance Drive. Written comments must be received by noon on May 26, 2026.",
-    deadline: "June 3, 2026 at 9:30 AM",
+    summary: "San Miguel County Board of Commissioners will hold a public hearing on June 3, 2026 at 9:30 AM to consider an application by Jim Mahoney for a Substantial PUD Amendment to increase the maximum allowed floor area on Lot 400-15, Lawson Hill PUD from 6,600 to 7,800 square feet. This is the second step of the review process. Written comments must be received by noon on May 26, 2026.",
+    deadline: "May 26, 2026 12:00 PM",
     expires: "2026-06-03",
     dates: "5/14",
     papers: ["ttimes_0514"],
     url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
-    address: "780 Vance Drive, Telluride, CO (Parcel No. 456531201028)",
-    noticeKey: "col-000116"
+    address: "780 Vance Drive, Lawson Hill PUD",
+    noticeKey: "pud-amendment-lawson-hill-400-15"
+  },
+  {
+    title: "Notice to First Mortgagees -- Village Creek Condominium Declaration Amendment",
+    entity: "Village Creek Condominium Association",
+    entityClass: "ent-county",
+    entityLogo: "smrha",
+    icon: "🏠",
+    iconClass: "type-hearing",
+    type: "Housing Notice",
+    filterTag: "housing",
+    summary: "Village Creek Condominium Association has issued a proposed First Amendment to the Declaration for Village Creek Condominiums, as established by the Condominium Declaration recorded December 23, 1987. Pursuant to C.R.S. sec. 38-33.3-217, this notice is being published to notify first mortgagees of the proposed amendment.",
+    deadline: "",
+    expires: "2026-07-14",
+    dates: "5/14",
+    papers: ["ttimes_0514"],
+    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
+    address: "Village Creek Condominiums, San Miguel County",
+    noticeKey: "village-creek-condo-amendment"
   }
 ];
 

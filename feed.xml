@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s news, upcoming Gov-Hub meetings, and events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jun 2026 08:31:51 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 13:22:21 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] SMART Board of Directors — 2026-06-11</title>
@@ -29,6 +29,19 @@ Agenda not yet available]]></description>
 Agenda not available]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Wed, Jun 10] Sewing 101 with Melissa</title>
+      <link>https://koto.org/event/sewing-101-with-melissa/2026-06-10/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/sewing%20101%20with%20melissa%7C2026-06-10</guid>
+      <pubDate>Wed, 10 Jun 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/02/sewing.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/02/sewing.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
     <item>
       <title>[Wed, Jun 10] Mahjongg for Independent Players</title>
@@ -350,16 +363,14 @@ Our favorite spring tradition is back – the Lone Cone Library Community Yard S
       <category>KOTO</category>
     </item>
     <item>
-      <title>[Sat, Jun 6] Telluride Balloon Fest 2026</title>
-      <link>https://koto.org/event/telluride-balloon-fest-2026/2026-06-06/1/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20balloon%20fest%202026%7C2026-06-06</guid>
-      <pubDate>Sat, 06 Jun 2026 12:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Main Street, Telluride
-
-Telluride Balloon Festival takes place Saturday, June 6 th and Sunday, June 7 th . Weather permitting & beginning at 6 a.m. on Saturday & Sunday, watch hot air balloons lift off from Telluride Town Park and float effortlessly over the Telluride Valley. Refreshments will be available for sale at the basketball court in Town Park. Don't miss the Balloon Glow on Main Street on Saturday night – it's an amazing sight! The Main Street Glow takes place from 6-10 p.m. on Saturday night.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
+      <title>Commissioners approve Accelerated Housing Review</title>
+      <link>https://www.telluridenews.com/news/article_756e982e-d9f7-4554-b0a5-6efc70f47375.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_756e982e-d9f7-4554-b0a5-6efc70f47375.html</guid>
+      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/ae/0ae9ed7b-c9f6-4e1d-9d08-009945edf5aa/6a230685dbace.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />County commissioners approved fast-track review for affordable housing projects to qualify for state funding from Proposition 123's housing fund. Projects with 50% or more affordable units will get decisions within 90 days, but the same approval standards and review processes still apply. Some stakeholders had concerns about no size limits on eligible projects, though others supported accessing the available state money.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/ae/0ae9ed7b-c9f6-4e1d-9d08-009945edf5aa/6a230685dbace.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>land-use</category>
     </item>
     <item>
       <title>‘If it took a leap of faith, I was willing’</title>
@@ -664,16 +675,6 @@ The Telluride Brewing Company is hosting its annual block party. Join them Satur
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/5a/15a827ae-a819-49d8-8c94-1af8b6799d8d/6a18d5289703b.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>arts-culture</category>
-    </item>
-    <item>
-      <title>CHALKBOARD</title>
-      <link>https://www.telluridenews.com/norwood_post/article_db74ca0a-8ff4-4edd-be6c-73149d920ddd.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/norwood_post/article_db74ca0a-8ff4-4edd-be6c-73149d920ddd.html</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/a5/ca5fec16-c68c-4ca8-928f-e5332ef5a687/6a1f6f05c9138.image.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />This week's community birthdays include Lucas Priestley, Jodie Davis, Audrey Barrett Scholl, and several others from June 4-9. The Norwood Farmers Market continues every Thursday 2-6 p.m. through mid-October, while regular community meetings and services like the food pantry distribution on Sundays keep their usual schedules.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/a5/ca5fec16-c68c-4ca8-928f-e5332ef5a687/6a1f6f05c9138.image.png" medium="image" />
-      <category>Telluride Times</category>
-      <category>government</category>
     </item>
   </channel>
 </rss>
