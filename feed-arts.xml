@@ -6,72 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming concerts, film, theater, gallery openings, and festivals across the Telluride region.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jun 2026 19:50:12 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 02:40:06 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Fri, Jun 5] Wild West Fest Roundup Day</title>
-      <link>https://sheridanoperahouse.com/events/wild-west-fest-roundup-day/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/wild%20west%20fest%20roundup%7C2026-06-05</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2026/05/Wild-West-Fest-Roundup-Day-Image.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
-📍 Sheridan Opera House • Telluride, CO
-]]></description>
-      <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2026/05/Wild-West-Fest-Roundup-Day-Image.png" medium="image" />
-      <category>Community Event</category>
-      <category>Sheridan Opera House</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 5] Hunter Archer</title>
-      <link>https://www.alibitelluride.com/calendar#eca-event=hunter-archer</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/hunter%20archer%7C2026-06-05</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://ucarecdn.com/c7420c42-86af-4ec6-a525-64326df630ec/-/crop/3180x1588/0,756/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
-📍 The Alibi • Telluride, CO
-🕒 9:00 PM
-
-Hunter Archer & The Quiver are Country/Bluegrass band hailing from Steamboat S...]]></description>
-      <media:content url="https://ucarecdn.com/c7420c42-86af-4ec6-a525-64326df630ec/-/crop/3180x1588/0,756/-/preview/" medium="image" />
-      <category>Community Event</category>
-      <category>The Alibi</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 5] Music on the Green Summer Concert Series</title>
-      <link>https://www.telluride.com/event/music-on-the-green-summer-concert-series/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/music%20on%20the%20green%7C2026-06-05</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/44414/16c6ff81-d87c-823e-1bd2-8a66b859eb9d.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-The Telluride Mountain Village Owners Association (TMVOA) and Beyond the Groove Productions Present Music on the Green …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/44414/16c6ff81-d87c-823e-1bd2-8a66b859eb9d.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 5] Telluride Balloon Festival</title>
-      <link>https://www.telluride.com/event/telluride-balloon-festival/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20balloon%20festival%7C2026-06-05</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/28889/1440710568aa5692e4.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Get high at the Telluride Balloon Festival! Weather permitting, watch hot air balloons lift off from Telluride Town …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/28889/1440710568aa5692e4.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 5] Wild West Fest Telluride Round-Up</title>
-      <link>https://koto.org/event/wild-west-fest-telluride-round-up/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/wild%20west%20fest%20telluride%7C2026-06-05</guid>
-      <pubDate>Fri, 05 Jun 2026 17:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Elks Park, Telluride
-
-Telluride Roundup Day! OPEN TO THE PUBLIC: Participants invite the town of Telluride to rendezvous at Oak Street Park and Elks Park to enjoy stagecoach, rides, live music, Native American dancing, face painting, carnival games, an old-western photo booth, and a live-action bank robbery with a nickel drop. The week concludes with free line dancing lessons and a concert at the Sheridan Opera House (open to the public). The Roundup will take place from 11am-4pm, with stagecoach rides from 12pm-3pm, and live music by Western Medicine at 1pm and 3pm. The Sheridan Opera House will be open for line dancing lessons at 7pm, followed by Sean DeLand & The Western Slope live in concert.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
     <item>
       <title>[Sat, Jun 6] Mars SUCKS! (Telluride Theatre FRINGE Project)</title>
       <link>https://koto.org/event/mars-sucks-telluride-theatre-fringe-project/2026-06-05/</link>
@@ -133,6 +69,32 @@ Telluride Balloon Festival takes place Saturday, June 6 th and Sunday, June 7 th
 Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Tue, Jun 9] Augment Summer Music Series</title>
+      <link>https://www.telluride.com/event/augment-summer-music-series/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/augment%20summer%20music%20series%7C2026-06-09</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/53672/download_1.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Telluride's local non-profit organization Augment Music Project is hosting monthly concerts in Elks Park this summer. …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/53672/download_1.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Wed, Jun 10] Forever Wild</title>
+      <link>https://www.telluride.com/event/forever-wild/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/forever%20wild%7C2026-06-10</guid>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62747/forever_wild_poster.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Patagonia Telluride in partnership with Sheep Mountain Alliance and EcoAction Partners will host a film screening of …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/62747/forever_wild_poster.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
     </item>
   </channel>
 </rss>

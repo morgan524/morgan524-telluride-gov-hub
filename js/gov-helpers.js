@@ -169,7 +169,7 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The Jun 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
     "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
@@ -181,28 +181,31 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "The June 30, 2026 Town Council agenda hasn't been posted yet.",
+    "The June 30 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
     "The July 1 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The Jul 01 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The July 1 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The July 1, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
-    "The July 1 Board of County Commissioners agenda hasn't been posted yet.",
+    "The July 1st Board of County Commissioners agenda hasn't been posted yet.",
 
   "county|2026-06-10|Board of Review and Planning Commission Joint Work Session":
     "The June 10 Board of Review and Planning Commission joint work session agenda hasn't been posted yet.",
 
   "county|2026-06-08|San Miguel Basin Fair Board":
-    "The San Miguel Basin Fair Board meets to review junior livestock sale terms and update bylaws for the upcoming fair season."
+    "The San Miguel Basin Fair Board meets to review junior livestock sale terms and update bylaws for the upcoming fair season.",
+
+  "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
+    "The July 6 Open Space Commission agenda hasn't been posted yet."
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
@@ -216,6 +219,30 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_ed7b9cbb-c22f-5f67-acca-7f4b08e0e7c9.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/c6/3c634127-4499-556f-998d-cb3a8ce57ab5/6a21ddc4d7772.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "‘If it took a leap of faith, I was willing’",
+    source: "Telluride Times",
+    date: "June 5, 2026",
+    firstSeen: "2026-06-06",
+    newsTopic: "arts-culture",
+    copy: "Town officials met secretly with Chuck Horning's son Chad in December about buying Telski, leading to the controversial California trip that resulted in three resignations this year. An independent investigation cleared former Mayor Prohaska and Town Manager Wisor of wrongdoing, though they acknowledged the meetings were poorly handled and ultimately unsuccessful.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_cff6929c-5967-4eb0-86a3-ac6ea9cac558.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/40/84063d4f-77dc-49e2-aa44-01fbb325eb32/6a233716d2697.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "The beauty of unsafe seats",
+    source: "Telluride Times",
+    date: "June 5, 2026",
+    firstSeen: "2026-06-06",
+    newsTopic: "arts-culture",
+    copy: "Safe legislative districts where primaries decide winners have created a system where party loyalists control outcomes while independents can't even vote in most states. This has pulled candidates toward ideological extremes, leading to legislative paralysis and opening doors for authoritarians who promise to cut through the gridlock. Competitive districts would shift focus back to pragmatic problem-solving and consensus-building, potentially restoring the legislative branch's ability to function through normal constitutional processes.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_d270be44-3425-4546-984c-3583d8200388.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/7c/c7c4b286-d7fa-45f9-8add-d7e11fd0d011/6a212435c9317.image.jpg",
     imgHiRes: true
   },
   {
@@ -1015,30 +1042,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Commissioners discuss building codes",
-    source: "Telluride Times",
-    date: "May 23, 2026",
-    firstSeen: "2026-05-24",
-    newsTopic: "land-use",
-    copy: "San Miguel County commissioners are discussing updating building codes from 2018 to 2024 standards, which would require more energy-efficient construction with stricter requirements for walls, windows, lighting and air leakage. The new codes would start in 2027 and align with state mandates requiring all Colorado jurisdictions to adopt low-energy building codes by 2030.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_7f836f62-2a1a-411d-89f5-a3fb0891ea64.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/0c/60c0e092-0602-4354-97f2-7f80200b5c2c/6a1154ab94555.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride School District has its ‘back against the wall’",
-    source: "Telluride Times",
-    date: "May 23, 2026",
-    firstSeen: "2026-05-23",
-    newsTopic: "government",
-    copy: "The school district faces a major budget shortfall due to new state funding formulas and is asking voters to approve a mill levy override that would cost homeowners less than $10 monthly per million dollars of property value. Declining enrollment from 910 students in 2020 to an anticipated 620, plus the district's reclassification from \"rural\" to \"town\" status, has created a funding gap of nearly $6,000 per student below what adequacy studies say is needed.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_3980a9b3-d3e7-4778-8ce3-eedacfdafbb1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/c8/8c887b07-9980-46d7-a28d-0a499366b784/6a115e7a12ca3.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Telluride Marshal’s Department Arrests Individual for Failure to Register as a Sex Offender",
     source: "Town of Telluride",
     date: "May 22, 2026",
@@ -1095,7 +1098,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 5, 2026",
+    date: "June 6, 2026",
     firstSeen: "2026-06-04",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1106,7 +1109,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 5, 2026",
+    date: "June 6, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1129,11 +1132,11 @@ const TELLURIDE_TIMES_ARTICLES = [
     title: "Ridgway Town Council Regular Meeting Agenda",
     source: "Town of Ridgway",
     date: "June 10, 2026",
-    firstSeen: "2026-06-05",
+    firstSeen: "2026-06-06",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/00-June-10-agenda.pdf",
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/00-June-10-agenda_0.pdf",
     img: ""
   },
   {
@@ -1172,6 +1175,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 6-5-26",
+    source: "KOTO Community Radio",
+    date: "June 6, 2026",
+    newsTopic: "housing",
+    copy: "On this week's Regional Roundup, we hear about a new agreement signed by counties and conservation districts in Colorado aimed at preventing future reservoirs and water diversions on the Crystal River. We also learn about a major gasoline spill on Southern Ute tribal land in southwest Colorado that is raising concerns about drinking water contamina",
+    href: "https://koto.org/news/newscast-6-5-26/"
+  },
   {
     title: "Newscast 6-4-26",
     source: "KOTO Community Radio",
@@ -1219,14 +1230,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "community",
     copy: "Man Arrested for Failure to Register as Sex Offender; The Impetus of Dance in Unlikely Spaces",
     href: "https://koto.org/news/newscast-5-27-26/"
-  },
-  {
-    title: "Newscast 5-22-26",
-    source: "KOTO Community Radio",
-    date: "May 23, 2026",
-    newsTopic: "government",
-    copy: "On this week’s Regional Roundup, we hear how Utah residents are pushing back against a proposed data center, and we'll hear a report on a new management plan for the Maroon Bells area in Western Colorado. We'll also hear about the nuances of party affiliation ahead of Wyoming’s primary elections, and the environmental benefits of mushroom cultivati",
-    href: "https://koto.org/news/newscast-5-22-26/"
   }
 ];
 
@@ -1891,39 +1894,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Wild West Fest Telluride Round-Up",
-    link: "https://koto.org/event/wild-west-fest-telluride-round-up/",
-    description: "Telluride Roundup Day! OPEN TO THE PUBLIC: Participants invite the town of Telluride to rendezvous at Oak Street Park and Elks Park to enjoy stagecoach, rides, live music, Native American dancing, face painting, carnival games, an old-western photo booth, and a live-action bank robbery with a nickel drop. The week concludes with free line dancing lessons and a concert at the Sheridan Opera House (open to the public). The Roundup will take place from 11am-4pm, with stagecoach rides from 12pm-3pm, and live music by Western Medicine at 1pm and 3pm. The Sheridan Opera House will be open for line dancing lessons at 7pm, followed by Sean DeLand & The Western Slope live in concert.",
-    pubDate: "2026-06-05T17:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Elks Park, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "The Science of Connection: How our Relationships with Animals Shape Health and Wellbeing",
-    link: "https://koto.org/event/the-science-of-connection-how-our-relationships-with-animals-shape-health-and-wellbeing/",
-    description: "Dr. Kevin Morris, from the University of Denver, Graduate School of Social Services, The Institute for Human Animal Connection (IHAC), will visit Telluride Science & Innovation Center on Friday, June 5th, for a presentation called \"The Science of Connection: How our Relationships with Animals Shape Health and Wellbeing.\" Dr. Morris has done numerous studies and has worked with Veterans, prison inmates, underprivileged children and underserved communities to study and improve the bond and relationships between animals and humans. Free and open to the public.",
-    pubDate: "2026-06-05T23:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Science &#038; Innovation Center, TELLURIDE",
-    imageUrl: ""
-  },
-  {
-    title: "Town Talk: The Science of Connection",
-    link: "https://koto.org/event/town-talk-the-science-of-connection/",
-    description: "What does science have to say about the bonds we form with other animals — and why do those bonds matter so deeply for our health? In this talk, Dr. Kevin Morris, American Humane endowed chair and executive director of the University of Denver’s Institute for Human-Animal Connection, explores the emerging research behind human-animal relationships and what it means for individual and community well-being. Drawing on a remarkable career that spans molecular biology, cancer research, and social work, Dr. Morris bridges disciplines to illuminate how our lives with other animals are not just emotionally meaningful, but biologically and socially profound. His work challenges us to think about health as something shared across species — and to consider what a more equitable, science-informed relationship with the animal world could look like for all of us. This event is free and open to the public but RSVP is required at https://form.jotform.com/ 261447761087060",
-    pubDate: "2026-06-05T23:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Innovation Center",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/0605-science-connect_invite-1.jpg"
-  },
-  {
     title: "Mars SUCKS! (Telluride Theatre FRINGE Project)",
     link: "https://koto.org/event/mars-sucks-telluride-theatre-fringe-project/2026-06-05/",
     description: "Mars SUCKS! (Telluride Theatre FRINGE Project) June 4 & 5 7 – 8:45pm @ The Michael D. Palm Theatre In an otherworldly performance, author and explorer Craig Childs brings a form of live cinema to the Palm, featuring live music by Beth Quist. This visual, musical, spoken word event mixes science, storytelling, and a crazy desert adventure. We'll be leaving the planet, so buckle up. Seating is limited. Pay-What-You-Can Tickets are available. Learn more on Telluride Theatre's website ( www.telluridetheatre.org )",
@@ -2064,17 +2034,6 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride Science Town Talks",
-    link: "https://koto.org/event/telluride-science-town-talks/2026-06-09/",
-    description: "Big science. Small town. Every Tuesday from June 9- August 11, Telluride Science invites the public to sit down with some of the world’s most brilliant researchers for a conversation that might just change how you see the world. Town Talks cover everything from quantum computing and climate solutions to the latest in medicine and energy — accessible, thought-provoking, and completely free. Please note, there is no Town Talk on July 7. All Town Talks will be held at the Telluride Conference Center in Mountain Village (with the exception of July 28) . Town Talks start at 6:30 pm (doors open at 6 pm).The schedule is as follows: June 9: Can we change the weather (And do we really want to?) by Derek Posselt NASA Jet Propulsion Laboratory June 16: Good Vibrations – Water, Proteins, and the Molecular Motions that Make Biology Possible by Matthias Heyden, Arizona State Univ. …",
-    pubDate: "2026-06-10T00:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Conference Center, Mountain Village",
     imageUrl: ""
   },
   {
@@ -2395,6 +2354,50 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-22/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-06-22T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-23/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-06-23T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Science Town Talks",
+    link: "https://koto.org/event/telluride-science-town-talks/2026-06-23/",
+    description: "Big science. Small town. Every Tuesday from June 9- August 11, Telluride Science invites the public to sit down with some of the world’s most brilliant researchers for a conversation that might just change how you see the world. Town Talks cover everything from quantum computing and climate solutions to the latest in medicine and energy — accessible, thought-provoking, and completely free. Please note, there is no Town Talk on July 7. All Town Talks will be held at the Telluride Conference Center in Mountain Village (with the exception of July 28) . Town Talks start at 6:30 pm (doors open at 6 pm).The schedule is as follows: June 9: Can we change the weather (And do we really want to?) by Derek Posselt NASA Jet Propulsion Laboratory June 16: Good Vibrations – Water, Proteins, and the Molecular Motions that Make Biology Possible by Matthias Heyden, Arizona State Univ. …",
+    pubDate: "2026-06-24T00:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Conference Center, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Town Talk: Small Molecules at the Origins of Life",
+    link: "https://koto.org/event/town-talk-small-molecules-at-the-origins-of-life/",
+    description: "This town talk will be presented by David Lancy, University of Buffalo. How did the atoms in the universe come together to form life? At the heart of this mystery is the conversion of small molecules into the building blocks of life, driven by metallocofactors—enzyme-like catalysts conserved across all domains of life. The chemical ancestors of these metallocofactors are thought to have been active prior to the traditional bounds of life, such as dynamic molecular architectures at mineral surfaces in early oceans. Understanding these chemistries in unusual abiotic environments enables unique insight into how life may have started and evolved into its present form. In this talk, I will share some of the exciting new developments in the science of extraterrestrial photosynthesis (the search for light-harvesting life on other planets) and other metal-based processes that underpin life on Earth, and possibly the cosmos.",
+    pubDate: "2026-06-24T00:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Innovation Center",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A-2.png"
   }
 ];
 
@@ -2436,7 +2439,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Pekingese / Mixed Breed (Small) • Female",
     firstSeen: "2026-06-04",
     revealDate: "2026-06-04",
-    lastSeen: "2026-06-05"
+    lastSeen: "2026-06-06"
   },
   {
     id: "TEL-A-184",
@@ -2450,7 +2453,21 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Unweaned • Retriever, Labrador • Male",
     firstSeen: "2026-06-04",
     revealDate: "2026-06-06",
-    lastSeen: "2026-06-05"
+    lastSeen: "2026-06-06"
+  },
+  {
+    id: "TEL-A-185",
+    name: "Frankie",
+    species: "Dog",
+    breed: "Bulldog, French",
+    ageGroup: "Young Dog",
+    sex: "Female",
+    photo: "https://new-s3.shelterluv.com/profile-pictures/1df4fca9ccf1aaff944a025028f8ebe1/5183f466479dd2ae60b980fd4b66cb8d.jpg",
+    profileUrl: "https://www.shelterluv.com/embed/animal/213834631",
+    summary: "Young Dog • Bulldog, French • Female",
+    firstSeen: "2026-06-06",
+    revealDate: "2026-06-06",
+    lastSeen: "2026-06-06"
   }
 ];
 
@@ -4003,102 +4020,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [];
 
 const TELLURIDE_COM_EVENTS = [
   {
-    title: "Games on the Green",
-    link: "https://www.telluride.com/event/games-on-the-green/",
-    description: "Head to The Madeline on Wednesdays and Thursdays this summer for Games on the Green! They will have classic lawn games …",
-    pubDate: "2026-06-04",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62453/mtv_summer_selects_lowres-62-2100x1401-5ba5db78-3cf7-49e2-a790-62927e14c194.800x533.webp"
-  },
-  {
-    title: "Historic Walking Tour",
-    link: "https://www.telluride.com/event/historic-walking-tour/",
-    description: "Take a historic tour of Telluride on foot! These historic walking tours are led by historian Ashley Boling, and leave …",
-    pubDate: "2026-06-04",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/48069/walkingtour_tabloidsize_2021.800x533.webp"
-  },
-  {
-    title: "Telluride Art Walk",
-    link: "https://www.telluride.com/event/telluride-art-walk/",
-    description: "The Telluride Art Walk is a lively monthly celebration of art, community, and creativity in downtown Telluride and …",
-    pubDate: "2026-06-04",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/36708/download_2.800x533.webp"
-  },
-  {
-    title: "Goldpine",
-    link: "https://www.telluride.com/event/goldpine/",
-    description: "Bold + gold harmonies straight from Nashville. Winner of the Rocky Mountain Songwriter Contest and seen on NPR's …",
-    pubDate: "2026-06-04",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62300/download_12.800x533.webp"
-  },
-  {
-    title: "Rooftop Pop-Up Local Artist Market",
-    link: "https://www.telluride.com/event/pop-up-local-artist-market/",
-    description: "Shop an incredible rotating selection of Ah Haa’s staff, instructors and open studio memeber’s artwork in the …",
-    pubDate: "2026-06-04",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/58400/screenshot_2026-01-21_at_4_30_00_pm.800x533.webp"
-  },
-  {
-    title: "A Telluride Theatre FRINGE Project: Mars SUCKS!",
-    link: "https://www.telluride.com/event/a-telluride-theatre-fringe-project-mars-sucks/",
-    description: "In an otherworldly performance, author and explorer Craig Childs brings a form of live cinema to the Palm. This visual, …",
-    pubDate: "2026-06-04",
-    endDate: "2026-06-06",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62293/mars_sucks_thundertix.800x533.webp"
-  },
-  {
-    title: "\"Passages in Time\" Exhibition Opening",
-    link: "https://www.telluride.com/event/passages-in-time-featuring-nancy-b-frank-and-micheline-klagsbrun/",
-    description: "\"Passages in Time\" is an exhibition featuring two longtime locals: Nancy B Frank and Micheline Klagsbrun. Each artist …",
-    pubDate: "2026-06-04",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62578/rock_4.800x533.webp"
-  },
-  {
-    title: "Free Tasting",
-    link: "https://www.telluride.com/event/free-tasting-at-telluride-wine-merchant/",
-    description: "Free tasting every Thursday from 4-6pm. The theme of the tasting will vary from different seasonal selections in wine, …",
-    pubDate: "2026-06-04",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62697/screenshot_2026-06-03_at_1_50_16_pm.800x533.webp"
-  },
-  {
     title: "Music on the Green Summer Concert Series",
     link: "https://www.telluride.com/event/music-on-the-green-summer-concert-series/",
     description: "The Telluride Mountain Village Owners Association (TMVOA) and Beyond the Groove Productions Present Music on the Green …",
@@ -4445,6 +4366,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62389/creating_with_ai.800x533.webp"
+  },
+  {
+    title: "Telluride Gold Kings",
+    link: "https://www.telluride.com/event/the-telluride-gold-kings-at-la-cocina-de-luz/",
+    description: "The Telluride Gold Kings perform on the patio of La Cocina de Luz (weather permitting).",
+    pubDate: "2026-06-12",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62755/gold_kings_-_alley.800x533.webp"
   },
   {
     title: "The Fretliners",
@@ -4961,6 +4894,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62170/screenshot_2026-04-09_at_2_02_00_pm.800x533.webp"
+  },
+  {
+    title: "Trick Dog Takeover at Timber Room",
+    link: "https://www.telluride.com/event/trick-dog-takeover-at-timber-room/",
+    description: "San Francisco's acclaimed Trick Dog brings its inventive approach to cocktails to The Madeline Hotel & Residences …",
+    pubDate: "2026-06-26",
+    endDate: "2026-06-28",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62758/trick_dog.800x533.webp"
   },
   {
     title: "Telluride Theatre Muleskinner&#039;s Ball Fundraiser",
@@ -5563,6 +5508,18 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/48187/telluridetable_logoassets_updated-14.800x533.webp"
   },
   {
+    title: "Mauritson Wine Dinner",
+    link: "https://www.telluride.com/event/mauritson-wine-dinner-madeline-hotel-residences/",
+    description: "Join sixth-generation Sonoma winemaker Clay Mauritson for an intimate evening at Madeline Hotel & Residences. For …",
+    pubDate: "2026-07-10",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62760/untitled_design_2.800x533.webp"
+  },
+  {
     title: "Patagonia Telluride Coffee Club",
     link: "https://www.telluride.com/event/patagonia-telluride-coffee-club/",
     description: "Starting in April, Patagonia Telluride is teaming up with The Pour Over Pedaler once a month through October to bring …",
@@ -5621,6 +5578,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62315/img_5733.800x533.webp"
+  },
+  {
+    title: "Meet the Winemaker Hike With Clay Mauritson",
+    link: "https://www.telluride.com/event/meet-the-winemaker-hike-with-clay-mauritson/",
+    description: "Join sixth-generation Sonoma farmer and winemaker Clay Mauritson for an intimate alpine adventure through Telluride's …",
+    pubDate: "2026-07-11",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62762/clay_mauritson__photo_credit_king_lawrence.800x533.webp"
   },
   {
     title: "Historic Walking Tour",
@@ -6533,6 +6502,66 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/53672/download_1.800x533.webp"
+  },
+  {
+    title: "Games on the Green",
+    link: "https://www.telluride.com/event/games-on-the-green/",
+    description: "Head to The Madeline on Wednesdays and Thursdays this summer for Games on the Green! They will have classic lawn games …",
+    pubDate: "2026-08-05",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62453/mtv_summer_selects_lowres-62-2100x1401-5ba5db78-3cf7-49e2-a790-62927e14c194.800x533.webp"
+  },
+  {
+    title: "Sweet Sounds",
+    link: "https://www.telluride.com/event/sweet-sounds/",
+    description: "Head to the Wilkinson Public Library on the first Wednesday of the month this summer for live music and sweet treats! …",
+    pubDate: "2026-08-05",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62443/sweet_sounds_5.800x533.webp"
+  },
+  {
+    title: "Market on the Plaza - Mountain Village",
+    link: "https://www.telluride.com/event/market-on-the-plaza-mountain-village/",
+    description: "Market on the Plaza is a vibrant local community market providing an avenue to support regional and local businesses …",
+    pubDate: "2026-08-05",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/44431/mplantz-3995.800x533.webp"
+  },
+  {
+    title: "Free Wine Tasting",
+    link: "https://www.telluride.com/event/free-wine-tasting/",
+    description: "Join the Mountain Village Wine Merchant every Wednesday for a free wine tasting of three different wines.",
+    pubDate: "2026-08-05",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/46449/mvwmplanetpic2.800x533.webp"
+  },
+  {
+    title: "Sunset Concert Series",
+    link: "https://www.telluride.com/event/sunset-music-concert-series/",
+    description: "The Telluride Mountain Village Owners Association (TMVOA) has announced the return of the Sunset Concert Series for the …",
+    pubDate: "2026-08-05",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/44886/sunsetconcert.800x533.webp"
   }
 ];
 
@@ -6702,41 +6731,6 @@ const LEGAL_NOTICES = [
     noticeKey: "village-creek-condo-amend-2026"
   },
   {
-    title: "RFP -- Flooring Replacement at County Buildings",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County requests proposals for a contractor to replace flooring at 333 & 305 W. Colorado Ave, Telluride. RFP information is available on the county website or at the specified address. Deadline for proposals is 5:00 PM on Friday, June 5th.",
-    deadline: "June 5, 2026 at 5:00 PM",
-    expires: "2026-06-05",
-    dates: "5/6",
-    papers: ["ttimes_0506"],
-    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    address: "333 & 305 W. Colorado Ave, Telluride, CO",
-    noticeKey: "rfp-flooring-2026"
-  },
-  {
-    title: "Request for Proposal -- Request for Proposal for Floor Replacement at Courthouse and Miramonte Building",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Request for Proposal for Floor Replacement at Courthouse and Miramonte Building.",
-    deadline: "Closes 6/5/2026",
-    expires: "2026-06-05",
-    dates: "5/7",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=204",
-    address: "",
-    smcBidID: "204"
-  },
-  {
     title: "Request for Quote -- Request for Quote: Material Hauling",
     entity: "San Miguel County",
     entityClass: "ent-county",
@@ -6787,76 +6781,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
     address: "San Miguel County",
     noticeKey: "property-tax-exemption-2026"
-  },
-  {
-    title: "Request for Proposal -- 2026 Public Restroom Cleaning Services",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "Town of Telluride is seeking qualified respondents for: 2026 Public Restroom Cleaning Services.",
-    deadline: "Closes 6/5/2026",
-    expires: "2026-06-05",
-    dates: "5/9",
-    url: "https://www.telluride.gov/bids.aspx?bidID=128",
-    address: "",
-    totBidID: "128"
-  },
-  {
-    title: "Request for Proposal -- 2026 Town Facilities Janitorial Services",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "Town of Telluride is seeking qualified respondents for: 2026 Town Facilities Janitorial Services.",
-    deadline: "Closes 6/5/2026",
-    expires: "2026-06-05",
-    dates: "5/9",
-    url: "https://www.telluride.gov/bids.aspx?bidID=129",
-    address: "",
-    totBidID: "129"
-  },
-  {
-    title: "RFP -- Deputy Municipal Court Judge Services",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The Town of Telluride is inviting proposals from qualified individuals to provide Deputy Municipal Court Judge Services for their Municipal Court of Record. Proposals must be submitted by noon on June 5, 2026, and detailed requirements are available at bit.ly/totbids.",
-    deadline: "June 5, 2026 at 12:00 PM",
-    expires: "2026-06-05",
-    dates: "5/14",
-    papers: ["ttimes_0514"],
-    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
-    address: "Telluride Municipal Court, Telluride, CO",
-    noticeKey: "COL-000140"
-  },
-  {
-    title: "RFP -- Flooring Replacement at County Buildings",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals from contractors to replace flooring at 333 & 305 W. Colorado Ave in Telluride. Information is available online or at the building's 2nd floor, with proposals due by 5:00 PM on Friday, June 5th.",
-    deadline: "June 5, 2026 at 5:00 PM",
-    expires: "2026-06-05",
-    dates: "5/14",
-    papers: ["ttimes_0514"],
-    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
-    address: "333 & 305 W. Colorado Ave, Telluride, CO",
-    noticeKey: "COL-000131"
   },
   {
     title: "Request for Proposal -- Foundation Repairs at the Placerville Schoolhouse",
@@ -6948,24 +6872,6 @@ const LEGAL_NOTICES = [
     noticeKey: "treasurer-report-2025-jul-dec"
   },
   {
-    title: "RFP -- Flooring Replacement at 333 & 305 W. Colorado Ave",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County requests proposals for a contractor to replace flooring at 333 & 305 W. Colorado Ave, Telluride. Proposals are due by 5:00 PM Friday, June 5th via email or drop-off at the Maintenance department.",
-    deadline: "June 5, 2026 at 5:00 PM",
-    expires: "2026-06-05",
-    dates: "5/21",
-    papers: ["ttimes_0521"],
-    url: "https://www.telluridenews.com/news/legals/article_d3659378-b06b-4e27-9b53-ec57d83a4b86.html",
-    address: "333 & 305 W. Colorado Ave, Telluride, CO",
-    noticeKey: "rfp-flooring-col-000131"
-  },
-  {
     title: "Foreclosure Sale -- 122 43ZS Road, Norwood (Sale No. 202601)",
     entity: "San Miguel County Public Trustee",
     entityClass: "ent-county",
@@ -6983,24 +6889,6 @@ const LEGAL_NOTICES = [
     address: "122 43ZS Road, Norwood, CO 81423 (Section 26, T45N, R13W)",
     noticeKey: "foreclosure-202601",
     caseNumber: "202601"
-  },
-  {
-    title: "RFP -- Deputy Municipal Court Judge Services",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The Town of Telluride is inviting proposals from qualified individuals to provide Deputy Municipal Court Judge Services. Proposals will be accepted until 12:00pm noon on June 5, 2026.",
-    deadline: "June 5, 2026 at 12:00 PM",
-    expires: "2026-06-05",
-    dates: "5/21",
-    papers: ["ttimes_0521"],
-    url: "https://www.telluridenews.com/news/legals/article_d3659378-b06b-4e27-9b53-ec57d83a4b86.html",
-    address: "Telluride Municipal Court, Telluride, CO",
-    noticeKey: "rfp-deputy-judge-col-000140"
   },
   {
     title: "Public Hearing -- Gas Franchise Ordinance for Black Hills Energy",
@@ -7281,6 +7169,9 @@ const HOUSING_LISTINGS = [
 ];
 
 const RIDGWAY_AGENDA_MAP = {
+  "June 10, 2026":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---June-10%2C-2026.pdf",
+
   "May 13, 2026":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---May-13%2C-2026.pdf",
 
