@@ -169,10 +169,10 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The Jun 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -181,19 +181,19 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "The June 30 Town Council agenda hasn't been posted yet.",
+    "The Jun 30 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The July 1 Ecology Commission agenda hasn't been posted yet.",
+    "The July 1, 2026 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 1 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The July 1, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The July 1st Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
     "The July 1st Board of County Commissioners agenda hasn't been posted yet.",
@@ -205,7 +205,7 @@ const MANUAL_SUMMARIES = {
     "The San Miguel Basin Fair Board meets to review junior livestock sale terms and update bylaws for the upcoming fair season.",
 
   "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
-    "The July 6 Open Space Commission agenda hasn't been posted yet."
+    "The July 6 2026 Open Space Commission agenda hasn't been posted yet."
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
@@ -1894,17 +1894,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Mars SUCKS! (Telluride Theatre FRINGE Project)",
-    link: "https://koto.org/event/mars-sucks-telluride-theatre-fringe-project/2026-06-05/",
-    description: "Mars SUCKS! (Telluride Theatre FRINGE Project) June 4 & 5 7 – 8:45pm @ The Michael D. Palm Theatre In an otherworldly performance, author and explorer Craig Childs brings a form of live cinema to the Palm, featuring live music by Beth Quist. This visual, musical, spoken word event mixes science, storytelling, and a crazy desert adventure. We'll be leaving the planet, so buckle up. Seating is limited. Pay-What-You-Can Tickets are available. Learn more on Telluride Theatre's website ( www.telluridetheatre.org )",
-    pubDate: "2026-06-06T01:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Michael D. Palm Theater, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mars-sucks-thundertix.png"
-  },
-  {
     title: "Telluride Balloon Fest 2026",
     link: "https://koto.org/event/telluride-balloon-fest-2026/2026-06-06/1/",
     description: "Telluride Balloon Festival takes place Saturday, June 6 th and Sunday, June 7 th . Weather permitting & beginning at 6 a.m. on Saturday & Sunday, watch hot air balloons lift off from Telluride Town Park and float effortlessly over the Telluride Valley. Refreshments will be available for sale at the basketball court in Town Park. Don't miss the Balloon Glow on Main Street on Saturday night – it's an amazing sight! The Main Street Glow takes place from 6-10 p.m. on Saturday night.",
@@ -2403,26 +2392,15 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Yoga for ALL with Jane & Jay",
-    link: "https://telluridelibrary.libcal.com/event/15803442?hs=a",
-    description: "8:30 AM – 10:00 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
-    pubDate: "2026-06-05T14:30:00.000Z",
+    title: "Fly Tyin&#039; with Ryan: Let&#039;s Explore Bugs!",
+    link: "https://telluridelibrary.libcal.com/event/16571088?hs=a",
+    description: "11:00 AM – 12:00 PM · Join us for a wander along the river to explore bugs! Please register and sign waiver for participation. This program is for children aged 8-12. LIABILITY WAIVER",
+    pubDate: "2026-06-06T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg"
-  },
-  {
-    title: "Telluride Farmers Marketshow: Lawn Games!",
-    link: "https://telluridelibrary.libcal.com/event/15564466?hs=a",
-    description: "11:00 AM – 12:00 PM · Come hangout in the grassy area of the Telluride Gondola Plaza and play lawn games with your friends and family!",
-    pubDate: "2026-06-05T17:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Gondola Plaza - Telluride",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_25_53.png"
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_13_17_37_22.png"
   }
 ];
 
@@ -2479,18 +2457,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "Hunter Archer",
-    link: "https://www.alibitelluride.com/calendar#eca-event=hunter-archer",
-    description: "Hunter Archer & The Quiver are Country/Bluegrass band hailing from Steamboat S...",
-    pubDate: "2026-06-05",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/c7420c42-86af-4ec6-a525-64326df630ec/-/crop/3180x1588/0,756/-/preview/"
-  },
   {
     title: "CASTLE",
     link: "https://www.alibitelluride.com/calendar#eca-event=castle-6",
@@ -2907,164 +2873,10 @@ const OURAY_COUNTY_EVENTS = [
     category: "Community Event",
     location: "Hartwell Park - Ridgway CO 81432",
     imageUrl: ""
-  },
-  {
-    title: "Love Your Trail Day",
-    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3642",
-    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3642",
-    pubDate: "2026-06-06T08:00:00.000Z",
-    source: "ouraycounty",
-    sourceLabel: "Ouray County",
-    category: "Community Event",
-    location: "Uncompahgre River Walk - Ouray CO 81427",
-    imageUrl: ""
   }
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "Ridgway Farmers Market",
-    link: "www.ridgwayfarmersmarket.com",
-    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here.",
-    pubDate: "2026-06-05T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
-  },
-  {
-    title: "Ridgway Railroad Museum FREE Train Rides",
-    link: "https://www.ridgwayrailroadmuseum.org/",
-    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
-    pubDate: "2026-06-05T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
-  },
-  {
-    title: "True Grit Historic Walking Tours",
-    link: "https://truegrittours.org/true-grit-tours ",
-    description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
-    pubDate: "2026-06-05T21:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52285883190282/huge/99283c09e34ca5aeabd7006cca2ba5b2b28899c3.jpg"
-  },
-  {
-    title: "BOXCAR",
-    link: "https://coloradoboydepot.com/calendar/",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-06-05T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "First Friday - DJ Dance Party at the Bank Building",
-    link: "Ridgwaypilates.com",
-    description: "Join Ridgway Pilates and DJ M2 for a free dance party out front of the historic Bank Building on First Friday. We will be showcasing the work of Tammi Brazee inside with free champagne and tours of our beautiful studio. We are offering summer Pilates specials only available in person. Join us for some fun inside and out. Get your groove on!",
-    pubDate: "2026-06-05T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52992080608980/huge/8c22fb5996a75e65ccc502afcc04ec5d3f26df04.jpg"
-  },
-  {
-    title: "First Friday - Opening Reception for Todd Mayfield's \"Southwestern Impressionism\"",
-    link: "https://sherbino.org/event/southwestern-impressionism-todd-mayfield-ridgway/",
-    description: "June 5 | 5:00–7:00 PM | 610 Arts Collective | Free The 610 Arts Collective is pleased to present Southwestern Impressionism, a vibrant June exhibition featuring the work of Ouray artist Todd Mayfield. The exhibit will be on view June 2–26, 2026, at the 610 Arts Collective in Ridgway, Colorado. Drawing inspiration from the color, energy, and spirit of the American Southwest, Mayfield’s paintings are bold, expressive, and deeply rooted in a sense of place. Working primarily in acrylics, his pieces blend vivid palettes, movement, texture, and striking composition to create works that feel both contemporary and timeless. From powerful portraiture to richly layered abstract and figurative forms, Southwestern Impressionism celebrates the beauty, culture, and emotional landscape of the West. Please join us for an Artist Reception on Friday, June 5th, where guests can enjoy refreshments, meet Todd Mayfield, and learn more about the creative process behind the work. …",
-    pubDate: "2026-06-05T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52995996265018/huge/36e8fc7211df0a9f45d2eade27a757aa4f475c6a.jpg"
-  },
-  {
-    title: "First Friday Art Opening - Susan Clark",
-    link: "susanclarkart.com",
-    description: "Please join us for an opening reception for Susan Clark, exhibiting at the Space to Create Gallery, in the lobby of the Space to Create building, near Kate's Place. Art will be on display throughout June. Artist Bio: With my art, I capture the spectacular interplay of color, light, and image and then distill it down, while still maintaining the original awe. I like to present the viewer with a different way of seeing images while evoking a sense of enjoyment and creating a smile. My “joie de vivre” is exploring with harmonious color & disappearing for hours to create whimsical and colorful expressive paintings. I paint the Colorado mountains and aspen trees, which surround me and provide a quiet escape. Other subject matter includes a series of pups with expressive personalities, lively bicycles, and an abstract series using my characteristic bold hues, shape, and texture. …",
-    pubDate: "2026-06-05T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "675 Clinton St Ridgway CO",
-    imageUrl: "https://localist-images.azureedge.net/photos/53049928558853/huge/878df75533a15b6d2a8a05f5f84f8420cfc5b10c.jpg"
-  },
-  {
-    title: "First Friday Art Opening-Karen Keene Day",
-    link: "https://events.ourayridgwayevents.com/event/art-opening-karen-keene-day",
-    description: "“Painting Evolution Of Moments With Wild Horses 1999-2026” By Artist Karen Keene Day Join us for a retrospective of Karen's work that spans almost 30 years! Including some exciting process pieces and of course her signature large-format, captivating horse portraits. During Ridgway's First Friday Art Walk. More info decker@ridgwayfuse.org",
-    pubDate: "2026-06-05T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52709607614558/huge/4004c3e46daab151739f91ab158182bf8b6c5793.jpg"
-  },
-  {
-    title: "First Friday Art Walk",
-    link: "www.ridgwayfuse.org/firstfridays ",
-    description: "Discover new work, celebrate openings and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits and special programming — perfect for art lovers and casual browsers alike. NEW! 🎨🛍️ Shop local. Win local. Celebrate local. 🎶🍷 Starting this June, your First Friday stroll through Ridgway could score you a $100 gift card to your favorite local business. 👀 Here’s how it works: ✨ Shop during First Friday ✨ Text your receipts from participating businesses ✨ Submit up to 3 receipts each month ✨ Two winners drawn monthly! Every receipt = another chance to win while supporting the galleries, shops, restaurants, artists, makers, and small businesses that make Ridgway feel like Ridgway. 📸 Text receipts to: (970) 316-3197 —or drop them off at Town Hall within 48 hours. …",
-    pubDate: "2026-06-05T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Downtown Ridgway, CO",
-    imageUrl: "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg"
-  },
-  {
-    title: "First Friday Art Walk with Walter St.Clair",
-    link: "https://www.instagram.com/mountaingirlgallery/",
-    description: "Join us at the Mountain Girl Gallery on Friday, June 5 for our 9th Anniversary celebration featuring the sweets sounds of Walter St.Clair on the porch.",
-    pubDate: "2026-06-05T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52372912892394/huge/571ed29f2fe398fbe38b9d73af3e8e3e0168844d.jpg"
-  },
-  {
-    title: "The Bug Stops Here! Our Tiny Neighbors",
-    link: "https://cpw.state.co.us/events?f%5B0%5D=state_parks%3A186",
-    description: "“The Bug Stops Here! Our Tiny Neighbors” by area entomolgist Melissa Schriener Come discover the incredible survival adaptations of our multi-legged neighbors and learn why these misunderstood creatures are absolutely vital to the high-desert ecosystem. There's no charge for the program, but you do need a State Park Pass for your vehicle. You can purchase one at the fee station on the way in. This program is part of the Ridgway State Park Summer Program Series.",
-    pubDate: "2026-06-05T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53002635976132/huge/477796cac3dfc2e50c58fd02ecea457263bcf44a.jpg"
-  },
-  {
-    title: "First Friday Live Music - Coral Skye",
-    link: "https://sherbino.org/event/the-sherbino-presents-coral-skye-first-friday-show-2/",
-    description: "Friday, June 5th | 6:00–8:00 pm Sherbino “Living Room” Free Show | Cash Bar | Tips Encouraged Celebrate First Friday with an intimate evening of live music at the Sherbino! Join us in the Sherbino’s cozy “Living Room” near the bar for a special performance by Coral Skye. Coral is a musician out of Montrose, CO who enjoys sharing her pop “acousti-soul” style of music. With a decade of professional performances under her belt, she has entertained all sorts of audiences, from festival crowds to local nursing home residents and students in school programs. Her inspiration comes from the power of music, family members and the support of her caring audiences. She has opened up for names like Survivor at the Olathe Corn Festival and Big Head Todd and the Monsters at The Bridges concert in Montrose. …",
-    pubDate: "2026-06-06T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52687172889799/huge/7521571e527cc0dc1f360803533c1c60fa3cbb12.jpg"
-  },
-  {
-    title: "Music Bingo @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/music-bingo-the-wright",
-    description: "Music Bingo @ the Wright WHEN? Doors at 6:30 pm • Event at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT It’s bingo. But louder. And somehow emotionally complicated. Battle for glory using songs, questionable music knowledge, accidental dancing, and the sudden realization that one hit from 2007 still lives in your head rent-free. Expect singalongs, dramatic betrayals, nostalgic bangers, deep cuts, and at least one person absolutely convinced they should have won three rounds ago. Whether you’re a human jukebox or someone who confidently calls every song “that one TikTok song,” Music Bingo welcomes all skill levels and levels of chaos. Free to attend In-person event at the historic Wright Opera House Part of programming at the Wright Opera House, bringing arts, conversation, and community to downtown Ouray since 1889.",
-    pubDate: "2026-06-06T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52886458731201/huge/e99a2ec1f365e0aaf580bfd7ce874919c7d87cbf.jpg"
-  },
   {
     title: "2-Day Trail Stewardship Trip: Middle Cimarron & Porphyry Basin",
     link: "https://ouraytrails.org/volunteers",
@@ -3944,6 +3756,149 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
+  },
+  {
+    title: "Ongoing - Susan Clark Art Exhibition",
+    link: "susanclarkart.com",
+    description: "Susan Clark's work will be on display in the Space to Create gallery - located in the lobby of the building near Kate's Place - through the month of June. Artist Bio: With my art, I capture the spectacular interplay of color, light, and image and then distill it down, while still maintaining the original awe. I like to present the viewer with a different way of seeing images while evoking a sense of enjoyment and creating a smile. My “joie de vivre” is exploring with harmonious color & disappearing for hours to create whimsical and colorful expressive paintings. I paint the Colorado mountains and aspen trees, which surround me and provide a quiet escape. Other subject matter includes a series of pups with expressive personalities, lively bicycles, and an abstract series using my characteristic bold hues, shape, and texture. …",
+    pubDate: "2026-06-18T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create ",
+    imageUrl: "https://localist-images.azureedge.net/photos/53049566972371/huge/2331d84dd56cccb875a90575974a2a05c051a592.jpg"
+  },
+  {
+    title: "Ongoing: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
+    link: "https://events.ourayridgwayevents.com/event/painting-evolution-of-moments-with-wild-horses-1999-2026-artist-karen-keene-day",
+    description: "Enjoy nearly 3 decades or work from local painter, Karen Keene Day. Info decker@ridgwayfuse.org",
+    pubDate: "2026-06-18T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52709642938173/huge/e2c21f0b2c1fb10c06c021e9b9d55a9ea535bccc.jpg"
+  },
+  {
+    title: "Ouray Mountain Air Music Series",
+    link: "www.ouraymusicseries.com",
+    description: "June 4th: AJ Fullerton and Grant Sabin June 11th: Nik Parr & The Selfless Lovers with You Knew Me When June 18th: The Sweet Lizzy Project with Sara Jean Kelley June 25th: Cruz Contreras & The Black Lillies and Griffin William Sherry Set in the heart of Ouray, the Mountain Air Music Series has become a signature summer tradition, offering a welcoming space for families, friends, and visitors of all ages to gather and unwind. Surrounded by breathtaking mountain views, the series creates an atmosphere that is equal parts relaxing and energizing—where laughter, community spirit, and live music blend seamlessly in one unforgettable outdoor experience. What makes the series truly special is the lineup of talented bands who bring both heart and authenticity to the stage. Each group shares a deep passion for music and a genuine appreciation for performing in small communities like Ouray. …",
+    pubDate: "2026-06-19T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52951532621249/huge/45a880540db97b7292e967c6f16b980532044c29.jpg"
+  },
+  {
+    title: "THIRSTY THURSDAY - Game Night at Floating Lotus",
+    link: "www.FloatingLotusBrewery.com",
+    description: "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who came to have a good time. Happening 7-9pm every week",
+    pubDate: "2026-06-19T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg"
+  },
+  {
+    title: "Steps Tavern Presents Karaoke Night",
+    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
+    description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM.",
+    pubDate: "2026-06-19T02:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "STEPS TAVERN",
+    imageUrl: "https://localist-images.azureedge.net/photos/52674051435440/huge/0edd2b82c0939057423977f6ad08ff6143fc3500.jpg"
+  },
+  {
+    title: "Ouray International Film Festival",
+    link: "https://www.ourayfilmfestival.com/",
+    description: "Film festivals were founded with a specific purpose in mind: to support the success of film and filmmakers from beyond the mainstream. Some of the most beloved movies of all time got their start at film festivals. Without the infrastructure, support, and community of film festivals, these movies might never have become a part of our collective artistic culture. Our festival stands in this legacy of support. We bring in films from around the United States and across the globe to expose audiences to material they’re unlikely to see on streaming platforms or in theaters. Our filmmakers are established artists in the industry and new voices making their first films; regardless, the movies we screen come from independent spaces that sometimes challenge our conventional notions of what a movie is or can be. At OIFF, we celebrate that independence through films that challenge and inspire. …",
+    pubDate: "2026-06-19T06:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52092563418852/huge/6b966623135c4503564229a4b8f584add6755426.jpg"
+  },
+  {
+    title: "Ridgway Farmers Market",
+    link: "www.ridgwayfarmersmarket.com",
+    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here.",
+    pubDate: "2026-06-19T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
+  },
+  {
+    title: "Ridgway Railroad Museum FREE Train Rides",
+    link: "https://www.ridgwayrailroadmuseum.org/",
+    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
+    pubDate: "2026-06-19T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
+  },
+  {
+    title: "Twice Upon a Time: A Theatre Camp Performance",
+    link: "https://sherbino.org/event/twice-upon-a-time-a-theatre-camp-performance/",
+    description: "Doors at 1:00 pm || Show at 1:30 pm || Entry by Donation Twice Upon a Time: A Theatre Camp Performance Directed by Erin Cawley Join our Theatre Camp students for their performance of Twice Upon a Time! Camp students have worked hard all week for this culminating performance! This students in this performance are ages 6-13. While this camp is full please visit weehawkenarts.org for more theater camps and registration info. Play Synopsis: Twice Upon a Time Grandma doesn’t really like fairy tales — she prefers adventure stories about pirates and astronauts. So when her grandkids ask for fairy tales at bedtime, Grandma puts some very silly twists on the classics. “Twice upon a time…” begins each goofy retelling. Cindy-Rella is now an obsessive neat freak who refuses to leave her chores to attend the prince’s barbecue (even with a bouncy castle!). …",
+    pubDate: "2026-06-19T19:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52993792954971/huge/c0636618f641794e118b7899c385c7576b612e44.jpg"
+  },
+  {
+    title: "True Grit Historic Walking Tours",
+    link: "https://truegrittours.org/true-grit-tours ",
+    description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
+    pubDate: "2026-06-19T21:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52285883190282/huge/99283c09e34ca5aeabd7006cca2ba5b2b28899c3.jpg"
+  },
+  {
+    title: "JACK HAIGHT",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-06-19T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Courthouse Blues Band - Live at Floating Lotus Brewery - Outdoor Stage",
+    link: "FloatingLotusBrewery.com",
+    description: "Get ready for a night of authentic Western Colorado blues with Courthouse Blues Band live on the outdoor stage at Floating Lotus Brewery. Known as Ouray County’s jump blues specialists, Courthouse delivers a powerful mix of blues, rock, funk, and soul driven by two standout vocalists, a rock-solid rhythm section, and searing slide guitar. With decades of live performance experience behind them, the band brings the kind of timeless, high-energy blues show that keeps dance floors moving and crowds smiling all night long. Come enjoy a evening of great music, cold beer, and summer vibes in Ridgway.",
+    pubDate: "2026-06-20T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53028256693675/huge/7434caf37a20450c5906fcc5cf44f0186fd4c12d.jpg"
+  },
+  {
+    title: "Ouray International Film Festival",
+    link: "https://www.ourayfilmfestival.com/",
+    description: "Film festivals were founded with a specific purpose in mind: to support the success of film and filmmakers from beyond the mainstream. Some of the most beloved movies of all time got their start at film festivals. Without the infrastructure, support, and community of film festivals, these movies might never have become a part of our collective artistic culture. Our festival stands in this legacy of support. We bring in films from around the United States and across the globe to expose audiences to material they’re unlikely to see on streaming platforms or in theaters. Our filmmakers are established artists in the industry and new voices making their first films; regardless, the movies we screen come from independent spaces that sometimes challenge our conventional notions of what a movie is or can be. At OIFF, we celebrate that independence through films that challenge and inspire. …",
+    pubDate: "2026-06-20T06:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52092563418852/huge/6b966623135c4503564229a4b8f584add6755426.jpg"
   }
 ];
 
@@ -7016,6 +6971,150 @@ const LEGAL_NOTICES = [
     address: "Section 27, Township 45 North, Range 13 West, San Miguel County",
     noticeKey: "foreclosure-202602",
     caseNumber: "202602"
+  },
+  {
+    title: "RFP -- Boiler System Replacement at Down Valley Park",
+    entity: "San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County is requesting proposals from contractors to replace the boiler system at Down Valley Park in Placerville. Proposals must be submitted by 5:00 PM on June 4, 2026, either via email or dropped off at the Parks & Open Space department in Telluride.",
+    deadline: "June 4, 2026 at 5:00 PM",
+    expires: "2026-06-04",
+    dates: "5/14",
+    papers: ["ttimes_0514"],
+    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
+    address: "Down Valley Park, Placerville, CO",
+    noticeKey: "col-000133"
+  },
+  {
+    title: "RFP -- Deputy Municipal Court Judge Services",
+    entity: "Town of Telluride",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "The Town of Telluride is inviting proposals from qualified individuals to provide Deputy Municipal Court Judge services for the Municipal Court of Record. Proposals will be accepted until 12:00 PM noon on June 5, 2026.",
+    deadline: "June 5, 2026 at 12:00 PM",
+    expires: "2026-06-05",
+    dates: "5/14",
+    papers: ["ttimes_0514"],
+    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
+    address: "Telluride, CO",
+    noticeKey: "col-000140"
+  },
+  {
+    title: "RFP -- Flooring Replacement at County Buildings",
+    entity: "San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County is requesting proposals from contractors to replace flooring at 333 & 305 W. Colorado Ave in Telluride. The deadline for proposals is 5:00 PM on Friday, June 5th, 2026.",
+    deadline: "June 5, 2026 at 5:00 PM",
+    expires: "2026-06-05",
+    dates: "5/14",
+    papers: ["ttimes_0514"],
+    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
+    address: "333 & 305 W. Colorado Ave, Telluride, CO",
+    noticeKey: "col-000131"
+  },
+  {
+    title: "Bid Notice -- Mountain Munchkins Windows and Door Replacement",
+    entity: "Town of Mountain Village",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "The Town of Mountain Village is accepting bids for the 2026 Mountain Munchkins Windows and Door Replacement project. All bids must be submitted to Mountain Munchkins at 415 Mountain Village Blvd Building 2 by May 22, 2026 at 12:00 noon.",
+    deadline: "May 22, 2026 at 12:00 noon",
+    expires: "2026-05-22",
+    dates: "5/14",
+    papers: ["ttimes_0514"],
+    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
+    address: "415 Mountain Village Blvd Building 2, Mountain Village, CO",
+    noticeKey: "col-000141"
+  },
+  {
+    title: "RFP -- MSE Retaining Wall Construction on County Road 58P",
+    entity: "San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County is soliciting proposals for design and construction of a mechanically stabilized earth retaining wall on County Road 58P north of Sawpit, including engineering services. A mandatory pre-bid meeting is May 14, 2026 at 1:00 PM, with proposals due May 26, 2026 at 5:00 PM.",
+    deadline: "May 26, 2026 at 5:00 PM",
+    expires: "2026-05-26",
+    dates: "5/14",
+    papers: ["ttimes_0514"],
+    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
+    address: "County Road 58P, approximately 0.5 miles north of Sawpit, CO",
+    noticeKey: "col-000125"
+  },
+  {
+    title: "Public Hearing -- Land Use Code Amendment for Building Footprint Definition",
+    entity: "San Miguel County Board of Commissioners",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "San Miguel County Board of Commissioners will hold a public hearing on June 3, 2026 at 9:30 AM to consider a Land Use Code amendment adding a definition for 'Building Footprint' and clarifying dimensional references. Written comments must be received by May 27, 2026.",
+    deadline: "June 3, 2026 at 9:30 AM",
+    expires: "2026-06-03",
+    dates: "5/14",
+    papers: ["ttimes_0514"],
+    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
+    address: "333 W Colorado Ave, 2nd FL, Telluride, CO",
+    noticeKey: "col-000142"
+  },
+  {
+    title: "Public Hearing -- Land Use Code Amendment for Accelerated Housing Review",
+    entity: "San Miguel County Board of Commissioners",
+    entityClass: "ent-county",
+    entityLogo: "smrha",
+    icon: "🏠",
+    iconClass: "type-hearing",
+    type: "Housing Notice",
+    filterTag: "housing",
+    summary: "San Miguel County Board of Commissioners will hold a public hearing on June 3, 2026 at 9:30 AM to consider a Land Use Code amendment adding a new Section 3-15 for Accelerated Housing Review. Written comments must be received by noon on May 27, 2026.",
+    deadline: "June 3, 2026 at 9:30 AM",
+    expires: "2026-06-03",
+    dates: "5/14",
+    papers: ["ttimes_0514"],
+    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
+    address: "333 W Colorado Ave, 2nd FL, Telluride, CO",
+    noticeKey: "col-000143"
+  },
+  {
+    title: "Public Hearing -- Substantial PUD Amendment for 780 Vance Drive",
+    entity: "Jim Mahoney (Applicant)/San Miguel County Board of Commissioners",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "San Miguel County Board of Commissioners will hold a public hearing on June 3, 2026 at 9:30 AM to consider Jim Mahoney's application for a Substantial PUD Amendment to increase maximum floor area from 6,600 to 7,800 square feet at 780 Vance Drive. Written comments must be received by noon on May 26, 2026.",
+    deadline: "June 3, 2026 at 9:30 AM",
+    expires: "2026-06-03",
+    dates: "5/14",
+    papers: ["ttimes_0514"],
+    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
+    address: "780 Vance Drive, Telluride, CO (Parcel No. 456531201028)",
+    noticeKey: "col-000116"
   }
 ];
 
