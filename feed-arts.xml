@@ -6,13 +6,13 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming concerts, film, theater, gallery openings, and festivals across the Telluride region.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jun 2026 03:00:27 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 08:52:32 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Sun, Jun 7] Telluride Balloon Fest 2026</title>
-      <link>https://koto.org/event/telluride-balloon-fest-2026/2026-06-06/2/</link>
+      <link>https://koto.org/event/telluride-balloon-fest-2026/2026-06-07/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20balloon%20fest%202026%7C2026-06-07</guid>
-      <pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate>
+      <pubDate>Sun, 07 Jun 2026 12:00:00 GMT</pubDate>
       <description><![CDATA[🎫 KOTO
 📍 Main Street, Telluride
 
@@ -21,16 +21,17 @@ Telluride Balloon Festival takes place Saturday, June 6 th and Sunday, June 7 th
       <category>KOTO</category>
     </item>
     <item>
-      <title>[Sun, Jun 7] Drop In Tech Time with Oliver</title>
-      <link>https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-06-07/</link>
+      <title>[Sun, Jun 7] Drop-In Tech Time with Oliver</title>
+      <link>https://telluridelibrary.libcal.com/event/15970377?hs=a</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/drop%20in%20tech%20time%7C2026-06-07</guid>
       <pubDate>Sun, 07 Jun 2026 19:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Wilkinson Public Library, Telluride
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 2nd Floor Desk
 
-Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!]]></description>
+1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg" medium="image" />
       <category>Community Event</category>
-      <category>KOTO</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Tue, Jun 9] Augment Summer Music Series</title>
@@ -55,32 +56,6 @@ Telluride's local non-profit organization Augment Music Project is hosting month
 
 Patagonia Telluride in partnership with Sheep Mountain Alliance and EcoAction Partners will host a film screening of …]]></description>
       <media:content url="https://www.telluride.com/site/assets/files/62747/forever_wild_poster.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 10] &quot;Forever Wild&quot; film screening, Celebrating the protection of Telluride&apos;s Valley Floor</title>
-      <link>https://koto.org/event/forever-wild-film-screening-celebrating-the-protection-of-tellurides-valley-floor/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/forever%20wild%20film%20screening%7C2026-06-10</guid>
-      <pubDate>Wed, 10 Jun 2026 23:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/FOREVER-WILD-poster.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Patagonia Telluride, TELLURIDE
-
-In collaboration with Sheep Mountain Alliance and Eco Action Partners, Patagonia Telluride will host a screening of the film, "Forever Wild". We will celebrate Telluride's environmental activists past and present who have fought for the protection of Telluride's precious resources. Discussion to follow film, food provided.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/06/FOREVER-WILD-poster.png" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Thu, Jun 11] Telluride Gold Kings</title>
-      <link>https://www.telluride.com/event/telluride-gold-kings/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20gold%20kings%7C2026-06-11</guid>
-      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Dance and sing along with the Telluride Gold Kings every Thursday this summer. Free admission!]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
     </item>

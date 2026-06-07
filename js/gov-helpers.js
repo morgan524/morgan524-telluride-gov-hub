@@ -169,7 +169,7 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The Jun 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
     "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
@@ -184,16 +184,16 @@ const MANUAL_SUMMARIES = {
     "The June 30, 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The July 1st Ecology Commission agenda hasn't been posted yet.",
+    "The July 1 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
     "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 1 agenda hasn't been posted yet.",
+    "The July 1 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The Jul 01 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The July 1, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
     "The July 1 Board of County Commissioners agenda hasn't been posted yet.",
@@ -205,7 +205,7 @@ const MANUAL_SUMMARIES = {
     "The San Miguel Basin Fair Board meets to review junior livestock sale terms and update bylaws for the upcoming fair season.",
 
   "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
-    "The July 6 2026 Open Space Commission agenda hasn't been posted yet."
+    "The July 6, 2026 Open Space Commission agenda hasn't been posted yet."
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
@@ -215,8 +215,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 6, 2026",
     firstSeen: "2026-06-07",
     newsTopic: "infrastructure",
-    copy: "Would-be invaders hoping to even glimpse goalies Bridger Barrett and/or Dylan Saunders had to know that if they attacked, they’d probably get whacked. By one, two, or sometimes all three of Telluride’s top defenders — all seniors, all fiendishly adept…",
-    claudeSummary: false,
+    copy: "The Telluride High lacrosse team's senior defensive core, nicknamed the \"Lumberjacks,\" wrapped up four years playing together with another strong season that included a first-place regular season finish and state tournament run. The Miners fell to Grand Junction 9-7 in the state quarterfinals, ending their season, but several players earned all-state honors including Henry Deppen and Leyton Holbrook on the first team.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/sports/article_ec6dffc9-929a-4e69-808e-b1f485096412.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/0a/50ab7c10-3338-4b13-af85-5223da890f35/6a210c33e3bae.image.jpg",
     imgHiRes: true
@@ -227,8 +227,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 6, 2026",
     firstSeen: "2026-06-07",
     newsTopic: "community",
-    copy: "Spring takes its sweet time coming to us in the high country. Never mind the official date of vernal equinox or when spring is marked in the Farmer’s Almanac, spring comes when it is good and ready here. Finally the…",
-    claudeSummary: false,
+    copy: "Southwest Colorado sits along major flyway corridors, bringing waves of neo-tropical birds from late April through early June - songbirds, warblers, swallows and raptors returning to summer territory, with hummingbirds testing gravity around every spring flower. The area around San Miguel County hosts 11,000-15,000 elk according to Parks and Wildlife, and watching the annual cycle of pregnant cows disappearing into sheltered woods before emerging with gangly calves remains one of spring's reliable miracles.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_e85d2fd6-be85-4947-a5fa-dbae79bc61db.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/71/27166196-823f-4be9-8f59-f36960f74cc2/6a21268780f7f.image.jpg",
     imgHiRes: true
@@ -1895,17 +1895,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Telluride Balloon Fest 2026",
-    link: "https://koto.org/event/telluride-balloon-fest-2026/2026-06-06/2/",
-    description: "Telluride Balloon Festival takes place Saturday, June 6 th and Sunday, June 7 th . Weather permitting & beginning at 6 a.m. on Saturday & Sunday, watch hot air balloons lift off from Telluride Town Park and float effortlessly over the Telluride Valley. Refreshments will be available for sale at the basketball court in Town Park. Don't miss the Balloon Glow on Main Street on Saturday night – it's an amazing sight! The Main Street Glow takes place from 6-10 p.m. on Saturday night.",
-    pubDate: "2026-06-07T00:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Main Street, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride Balloon Fest 2026",
     link: "https://koto.org/event/telluride-balloon-fest-2026/2026-06-07/",
     description: "Telluride Balloon Festival takes place Saturday, June 6 th and Sunday, June 7 th . Weather permitting & beginning at 6 a.m. on Saturday & Sunday, watch hot air balloons lift off from Telluride Town Park and float effortlessly over the Telluride Valley. Refreshments will be available for sale at the basketball court in Town Park. Don't miss the Balloon Glow on Main Street on Saturday night – it's an amazing sight! The Main Street Glow takes place from 6-10 p.m. on Saturday night.",
     pubDate: "2026-06-07T12:00:00.000Z",
@@ -2414,15 +2403,81 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Fly Tyin&#039; with Ryan: Let&#039;s Explore Bugs!",
-    link: "https://telluridelibrary.libcal.com/event/16571088?hs=a",
-    description: "11:00 AM – 12:00 PM · Join us for a wander along the river to explore bugs! Please register and sign waiver for participation. This program is for children aged 8-12. LIABILITY WAIVER",
-    pubDate: "2026-06-06T17:00:00.000Z",
+    title: "Parenting Book Club: How to Talk So Little Kids Will Listen",
+    link: "https://telluridelibrary.libcal.com/event/16942420?hs=a",
+    description: "10:30 AM – 11:30 AM · Parenting Book Club discussing How to Talk So Little Kids Will Listen: A Survival Guide to Life With Children Ages 2-7 b Joanna Faber and Julie King. Participants will dive into respectful and effective solutions to the challenges of raising children. This program is being offered in collaboration with Bright Futures and Parents As Teachers. The first 10 registrants will receive a copy of the book to keep. Reach out to madiea@brightfuturesforchildren.org with questions. Child care and snacks will be provided. Club de lectura sobre crianza que abordar&aacute; el libro *How to Talk So Little Kids Will Listen: A Survival Guide to Life With Children Ages 2-7*, de Joanna Faber y Julie King. Los participantes explorar&aacute;n soluciones respetuosas y eficaces para los desaf&iacute;os que conlleva la crianza de los hijos. Este programa se ofrece en colaboraci&oacute;n con Bright Futures y Parents As Teachers. …",
+    pubDate: "2026-06-07T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_13_17_37_22.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_15_34_57.png"
+  },
+  {
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://telluridelibrary.libcal.com/event/16536434?hs=a",
+    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-06-07T17:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
+  },
+  {
+    title: "Caminata por la Naturaleza",
+    link: "https://telluridelibrary.libcal.com/event/16939976?hs=a",
+    description: "11:00 AM – 1:00 PM · Vamos a caminar por la naturaleza, nos vamos a ver en la biblioteca antes de empezar.  La caminata que vamos a caminar es Cornet Falls no esta lejos y toda las edades son bienvenidos.",
+    pubDate: "2026-06-07T17:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lobby",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_21_11_32_31.jpg"
+  },
+  {
+    title: "Drop In Ping Pong",
+    link: "https://telluridelibrary.libcal.com/event/16986216?hs=a",
+    description: "1:00 PM – 3:00 PM · Drop by the library for casual table tennis matches. Our ping pong table will be set up and ready for players of all ages and skill levels. Whether you&#39;re a first-timer or a seasoned player, come enjoy this classic game with family and friends. No registration needed - just drop in! First come, first served (pun intended!) Pase por la biblioteca para partidos casuales de tenis de mesa. Nuestra mesa de ping pong estar&aacute; instalada y lista para jugadores de todas las edades y niveles de habilidad. Ya sea que juegue por primera vez o sea un jugador experimentado, venga a disfrutar de este juego cl&aacute;sico con familia y amigos. No necesita registrarse - &iexcl;simplemente venga!",
+    pubDate: "2026-06-07T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_30_12_13_38.png"
+  },
+  {
+    title: "Drop-In Tech Time with Oliver",
+    link: "https://telluridelibrary.libcal.com/event/15970377?hs=a",
+    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
+    pubDate: "2026-06-07T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "2nd Floor Desk",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+  },
+  {
+    title: "CANCELLED Tea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/16567828?hs=a",
+    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
+    pubDate: "2026-06-07T20:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+  },
+  {
+    title: "Around the World with your Library - Italy",
+    link: "https://telluridelibrary.libcal.com/event/16492008?hs=a",
+    description: "5:30 PM – 6:30 PM · Join us at the Wine Mine for another culinary adventure around the world! This time, we'll explore the diverse foods and wines of Italy's many regions through conversation, tasting, and discovery. This event is for ages 21+ and space is limited, so advance registration is required.",
+    pubDate: "2026-06-07T23:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wine Mine",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_13_13_27.jpg"
   }
 ];
 
@@ -2439,7 +2494,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Pekingese / Mixed Breed (Small) • Female",
     firstSeen: "2026-06-04",
     revealDate: "2026-06-04",
-    lastSeen: "2026-06-06"
+    lastSeen: "2026-06-07"
   },
   {
     id: "TEL-A-184",
@@ -2453,7 +2508,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Unweaned • Retriever, Labrador • Male",
     firstSeen: "2026-06-04",
     revealDate: "2026-06-06",
-    lastSeen: "2026-06-06"
+    lastSeen: "2026-06-07"
   },
   {
     id: "TEL-A-185",
@@ -2467,7 +2522,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Female",
     firstSeen: "2026-06-06",
     revealDate: "2026-06-06",
-    lastSeen: "2026-06-06"
+    lastSeen: "2026-06-07"
   }
 ];
 
@@ -2479,18 +2534,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "CASTLE",
-    link: "https://www.alibitelluride.com/calendar#eca-event=castle-6",
-    description: "Having began his journey in Telluride as a ski coach, CASTLE has transitioned to...",
-    pubDate: "2026-06-06",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/7a7f95e2-1fcc-4407-b411-586edd5d1065/-/crop/1545x1546/0,95/-/preview/"
-  },
   {
     title: "North Fork Crossing w/ Brendan Forrest",
     link: "https://www.alibitelluride.com/calendar#eca-event=north-folk-crossing",
@@ -2911,94 +2954,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "2-Day Trail Stewardship Trip: Middle Cimarron & Porphyry Basin",
-    link: "https://ouraytrails.org/volunteers",
-    description: "Join Ouray Trail Group Crew Leader Kevin for a two-day trail stewardship trip to Middle Cimarron and Porphyry Basin. Volunteers will perform trail maintenance while enjoying the spectacular scenery of Colorado’s backcountry. This horse-supported trip includes pack support for gear and offers a rewarding opportunity to help maintain local trails alongside fellow volunteers. There's no cost, but please register.",
-    pubDate: "2026-06-06T14:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Middle Cimarron Trailhead",
-    imageUrl: "https://localist-images.azureedge.net/photos/52932291535577/huge/c31fed3a3ed404b986c0895b4b749fdccbef4e68.jpg"
-  },
-  {
-    title: "Love Your Trail: Volunteer Trail Work Day",
-    link: "https://lp.constantcontactpages.com/ev/reg/fem7328",
-    description: "Help care for one of Ouray’s most beloved paths! Join us for a volunteer trail work day on the Uncompahgre Riverwalk Trail to improve the section just north of town. We’ll tackle projects that make a big difference, including replacing fence posts, repairing erosion damage, and trimming back overgrowth to keep the trail safe and beautiful for everyone. DATE: June 6, 2026 | 8 AM – 2 PM WHERE: Meet at the end of Uncompahgre St. off Hwy 550 at the Uncompahgre Riverwalk Trail WHAT TO BRING: Work gloves and a willingness to get your hands a little dirty for a good cause. REGISTER: https://lp.constantcontactpages.com/ev/reg/fem7328 Whether you’re a regular trail user or just want to give back to the community, we’d love to have you out there! This event is made possible by the Colorado West Land Trust and Uncompahgre Watershed Partnership.",
-    pubDate: "2026-06-06T14:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Uncompahgre River Walk Trail at the end of Uncompahgre St. off Hwy 550",
-    imageUrl: "https://localist-images.azureedge.net/photos/52516139023881/huge/5b4a0efa0ce13ac6d736cbe1dadddee60e5bbc1b.jpg"
-  },
-  {
-    title: "Community Cleanup",
-    link: "https://events.ourayridgwayevents.com/event/community-cleanup",
-    description: "Bring your unwanted items to Community Cleanup Day on Saturday, June 6, 9 AM–4 PM. It’s an easy way to dispose of junk without a special trip to the dump. Drop-off locations: 📍 RV parking area: landfill items, e-waste, & recycling 📍 Rotary Park: green waste (You can bring yard debris to Rotary Park starting May 8. Please stack branches neatly with cut ends facing the road (under 12\" diameter only). No soil accepted.) ACCEPTABLE Dried Out Paint (start drying it out now!)Scrap LumberFurnitureBuilding MaterialElectronic WasteRecyclingYard Debris NOT ACCEPTABLE Wet PaintLiquidsTiresStainCleanersBatteriesMattressesNote: RV parking in the RV lot will not be available that day Thanks for helping keep our community clean and beautiful! And big thanks to Bruin Waste and Sav-a-Tree for their partnership in making this happen! ♻️",
-    pubDate: "2026-06-06T15:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "RV Parking Lot at the end of 9th Ave. ",
-    imageUrl: "https://localist-images.azureedge.net/photos/52765189321282/huge/e3707690cdec408c4fcf20e6d47b246aa2076c25.jpg"
-  },
-  {
-    title: "Hooked on Fishing: Kids Fishing Clinic!",
-    link: "https://cpw.state.co.us/events?f%5B0%5D=state_parks%3A186",
-    description: "Hooked on Fishing: Kids Fishing Clinic! This free clinic is the perfect way for kids to learn the ropes of fishing in a supportive, hands-on environment. Our friendly team will walk the kids through everything they need to know to get a nibble on the line. There's no charge for the program, but you do need a State Park Pass for your vehicle. You can purchase one at the fee station on the way in. This program is part of the Ridgway State Park Summer Program Series.",
-    pubDate: "2026-06-06T15:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53002673613905/huge/db3bf2a8daa98babb9d6f40f922684124ebe6871.jpg"
-  },
-  {
-    title: "Ridgway Railroad Museum FREE Train Rides",
-    link: "https://www.ridgwayrailroadmuseum.org/",
-    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
-    pubDate: "2026-06-06T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
-  },
-  {
-    title: "THE EXPANSIVE VIEW: ATMOSPHERIC PERSPECTIVE IN WATERCOLOR WITH ANITA WINTERS",
-    link: "https://weehawkenarts.org/education/adult-art-classes/",
-    description: "The Expansive View - Watercolor Class with Anita Winter June 6, 10am-3pm Cora Annex, Ridgway Tuition: $85 Learn how to give your paintings depth by using atmospheric perspective. In this step by step watercolor class you will learn how to use value, color and texture to create distance in your paintings. Participants are invited to bring their own watercolor supplies (a basic range such as blues, greens, and primary colors; a palette; an assortment of brushes; and at least four 11×14 sheets of watercolor paper). For those looking to expand their materials, Anita Winters recommends the following items from Blick.com: Palette: i.e. …",
-    pubDate: "2026-06-06T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52745264474804/huge/ce202ee1eb38e710a712202d02b030db716d6461.jpg"
-  },
-  {
-    title: "COREY HOOKER & THE MOTEL PROPHETS",
-    link: "https://coloradoboydepot.com/calendar/",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-06-06T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Sunset Hike with the Park Naturalist",
-    link: "https://cpw.state.co.us/events?f%5B0%5D=state_parks%3A186",
-    description: "Sunset Hike with the Park Naturalist Celebrate National Trails Day with an unforgettable evening stroll as the mountains light up in stunning alpenglow. Join a park naturalist to uncover the cool secrets of the park’s wildlife, geological wonders, and unforgettable trails during the most beautiful hour of the day. There's no charge for the program, but you do need a State Park Pass for your vehicle. You can purchase one at the fee station on the way in. This program is part of the Ridgway State Park Summer Program Series.",
-    pubDate: "2026-06-07T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53002695709901/huge/753cc7395c40b32d8b0a4b8a3898370c0a86f720.jpg"
-  },
   {
     title: "2-Day Trail Stewardship Trip: Middle Cimarron & Porphyry Basin",
     link: "https://ouraytrails.org/volunteers",
@@ -3933,6 +3888,94 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52092563418852/huge/6b966623135c4503564229a4b8f584add6755426.jpg"
+  },
+  {
+    title: "2-Day Trail Stewardship Trip: Blue Lakes Trail to Upper Lakes",
+    link: "https://ouraytrails.org/volunteers",
+    description: "Join OTG for a two-day stewardship trip to Blue Lakes Trail to Upper Lakes. Volunteers will perform trail maintenance while enjoying the spectacular scenery of Colorado’s backcountry. This is a rewarding opportunity to help maintain local trails alongside fellow volunteers. There's no cost, but please register.",
+    pubDate: "2026-06-20T14:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Blue Lakes Trailhead",
+    imageUrl: "https://localist-images.azureedge.net/photos/52932450369902/huge/9367aba3bb18c48b7da043ad4209431d66d6e66c.jpg"
+  },
+  {
+    title: "3rd Annual Golf Scramble",
+    link: "https://secure.anedot.com/ouray-county-republican-central-committee/faad1068-b55b-433f-9239-4260f4ad824f?utm_source=anedot&utm_medium=qr_code&utm_campaign=golf-tournament",
+    description: "The Ouray County Republican Central Committee invites you to celebrate Amerca's 250 Birthday! Enjoy our 3rd Annual golf scramble at Cobble Creek gof Course. We will have prizes, auctions and candidates. Check-ins start at 7:30 AM. Contact Harry Pritchett for more info: 303-903-1088",
+    pubDate: "2026-06-20T14:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Cobble Creek Golf Course",
+    imageUrl: "https://localist-images.azureedge.net/photos/53002167095509/huge/6af9fa2510a2a027652df3439901bb4612dd83ea.jpg"
+  },
+  {
+    title: "Geology Tour",
+    link: "https://anc.apm.activecommunities.com/cityofouray/activity/search/detail/346?onlineSiteId=0&from_original_cui=true",
+    description: "Step back in time and explore the geology that shaped the San Juan Mountains! Join a local geologist for a guided tour through Ouray’s dramatic landscapes and uncover the ancient volcanic activity, towering cliffs, and unique rock formations that make this region unique. June 20 | 9 AM-Noon Meet at the Ouray Visitor Center Free REGISTER: tinyurl.com/ourayactivities",
+    pubDate: "2026-06-20T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Visitors Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/53082043569103/huge/e08612c4bc7a6a249a359d763236be59ba2522ab.jpg"
+  },
+  {
+    title: "Ridgway Railroad Museum FREE Train Rides",
+    link: "https://www.ridgwayrailroadmuseum.org/",
+    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
+    pubDate: "2026-06-20T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
+  },
+  {
+    title: "Ouray International Film Festival",
+    link: "https://www.ourayfilmfestival.com/",
+    description: "Film festivals were founded with a specific purpose in mind: to support the success of film and filmmakers from beyond the mainstream. Some of the most beloved movies of all time got their start at film festivals. Without the infrastructure, support, and community of film festivals, these movies might never have become a part of our collective artistic culture. Our festival stands in this legacy of support. We bring in films from around the United States and across the globe to expose audiences to material they’re unlikely to see on streaming platforms or in theaters. Our filmmakers are established artists in the industry and new voices making their first films; regardless, the movies we screen come from independent spaces that sometimes challenge our conventional notions of what a movie is or can be. At OIFF, we celebrate that independence through films that challenge and inspire. …",
+    pubDate: "2026-06-21T06:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52092563418852/huge/6b966623135c4503564229a4b8f584add6755426.jpg"
+  },
+  {
+    title: "2-Day Trail Stewardship Trip: Blue Lakes Trail to Upper Lakes",
+    link: "https://ouraytrails.org/volunteers",
+    description: "Join OTG for a two-day stewardship trip to Blue Lakes Trail to Upper Lakes. Volunteers will perform trail maintenance while enjoying the spectacular scenery of Colorado’s backcountry. This is a rewarding opportunity to help maintain local trails alongside fellow volunteers. There's no cost, but please register.",
+    pubDate: "2026-06-21T06:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Blue Lakes Trailhead",
+    imageUrl: "https://localist-images.azureedge.net/photos/52932450369902/huge/9367aba3bb18c48b7da043ad4209431d66d6e66c.jpg"
+  },
+  {
+    title: "Ouray Open Air Market",
+    link: "www.ouray-events.com/open-air",
+    description: "The Ouray Open-Air Market is a brand-new cooperative, organized marketplace designed to provide a dedicated home for small-scale creators & producers. Our core mission is to promote local agriculture and artisan goods while fostering honest, transparent relationships between vendors and the community. This is an entirely fresh platform in town designed to showcase your artisanal goods and services, helping neighbors and visitors know exactly who made the products they love. When and Where? Location: The market will take place in a beautiful open-air setting at Billy Goat Gruff's Patio (located at 4th Ave. + Main Street, Ouray, CO).Schedule: We will operate every Sunday from June 21, 2026, through September 6, 2026.Hours: Market hours are 10:00 AM to 2:00 PM.",
+    pubDate: "2026-06-21T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Billy Goats Gruff Patio",
+    imageUrl: "https://localist-images.azureedge.net/photos/53054893063268/huge/ed5f6f42c1d6a9db337d04171355a33509b6e1d1.jpg"
+  },
+  {
+    title: "PARK - Ultimate Frisbee",
+    link: "https://events.ourayridgwayevents.com/event/park-ultimate-frisbee",
+    description: "Come play frisbee! Anyone is welcome.",
+    pubDate: "2026-06-21T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Fellin Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/51807883052581/huge/9d7f0c7c4c96318902b1dfef1c3f821c9b3189d1.jpg"
   }
 ];
 
