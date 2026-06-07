@@ -169,7 +169,7 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The Jun 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
     "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
@@ -181,22 +181,22 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "The June 30, 2026 Town Council agenda hasn't been posted yet.",
+    "The Jun 30 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The July 1 Ecology Commission agenda hasn't been posted yet.",
+    "The Jul 01 2026 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
     "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 1 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The July 1, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The July 1st Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
-    "The July 1 Board of County Commissioners agenda hasn't been posted yet.",
+    "The July 1st Board of County Commissioners agenda hasn't been posted yet.",
 
   "county|2026-06-10|Board of Review and Planning Commission Joint Work Session":
     "The June 10 Board of Review and Planning Commission joint work session agenda hasn't been posted yet.",
@@ -205,10 +205,22 @@ const MANUAL_SUMMARIES = {
     "The San Miguel Basin Fair Board meets to review junior livestock sale terms and update bylaws for the upcoming fair season.",
 
   "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
-    "The July 6, 2026 Open Space Commission agenda hasn't been posted yet."
+    "The July 6 Open Space Commission agenda hasn't been posted yet."
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "‘Passages in Time’",
+    source: "Telluride Times",
+    date: "June 7, 2026",
+    firstSeen: "2026-06-07",
+    newsTopic: "arts-culture",
+    copy: "Artist Micheline Klagsbrun is showing new resin sculptures and paper works at Fringe Gallery alongside longtime neighbor Nancy B. Frank's \"Earth Gems\" paintings. Klagsbrun's pieces incorporate local elements like elk bone found in the San Juans, while Frank has shifted from her well-known equine work to close-up geological abstractions inspired by photo trips to places like the Grand Canyon and even a Montrose cornfield.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_d5b298e8-0cb0-4ced-9e4b-d4285cb1d866.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/fb/8fb26672-2620-4ecd-9e2d-704686ff34dd/6a21164bcea3c.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "’Jacks prominent amongst kings",
     source: "Telluride Times",
@@ -1893,17 +1905,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Telluride Balloon Fest 2026",
-    link: "https://koto.org/event/telluride-balloon-fest-2026/2026-06-07/",
-    description: "Telluride Balloon Festival takes place Saturday, June 6 th and Sunday, June 7 th . Weather permitting & beginning at 6 a.m. on Saturday & Sunday, watch hot air balloons lift off from Telluride Town Park and float effortlessly over the Telluride Valley. Refreshments will be available for sale at the basketball court in Town Park. Don't miss the Balloon Glow on Main Street on Saturday night – it's an amazing sight! The Main Street Glow takes place from 6-10 p.m. on Saturday night.",
-    pubDate: "2026-06-07T12:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Main Street, Telluride",
-    imageUrl: ""
-  },
   {
     title: "First Aid and CPR Certification",
     link: "https://koto.org/event/first-aid-and-cpr-certification/",

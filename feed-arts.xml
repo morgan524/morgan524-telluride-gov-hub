@@ -6,20 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming concerts, film, theater, gallery openings, and festivals across the Telluride region.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jun 2026 08:52:32 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 13:32:38 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Sun, Jun 7] Telluride Balloon Fest 2026</title>
-      <link>https://koto.org/event/telluride-balloon-fest-2026/2026-06-07/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20balloon%20fest%202026%7C2026-06-07</guid>
-      <pubDate>Sun, 07 Jun 2026 12:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Main Street, Telluride
-
-Telluride Balloon Festival takes place Saturday, June 6 th and Sunday, June 7 th . Weather permitting & beginning at 6 a.m. on Saturday & Sunday, watch hot air balloons lift off from Telluride Town Park and float effortlessly over the Telluride Valley. Refreshments will be available for sale at the basketball court in Town Park. Don't miss the Balloon Glow on Main Street on Saturday night – it's an amazing sight! The Main Street Glow takes place from 6-10 p.m. on Saturday night.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
     <item>
       <title>[Sun, Jun 7] Drop-In Tech Time with Oliver</title>
       <link>https://telluridelibrary.libcal.com/event/15970377?hs=a</link>
@@ -58,6 +46,19 @@ Patagonia Telluride in partnership with Sheep Mountain Alliance and EcoAction Pa
       <media:content url="https://www.telluride.com/site/assets/files/62747/forever_wild_poster.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Wed, Jun 10] &quot;Forever Wild&quot; film screening, Celebrating the protection of Telluride&apos;s Valley Floor</title>
+      <link>https://koto.org/event/forever-wild-film-screening-celebrating-the-protection-of-tellurides-valley-floor/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/forever%20wild%20film%20screening%7C2026-06-10</guid>
+      <pubDate>Wed, 10 Jun 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/FOREVER-WILD-poster.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Patagonia Telluride, TELLURIDE
+
+In collaboration with Sheep Mountain Alliance and Eco Action Partners, Patagonia Telluride will host a screening of the film, "Forever Wild". We will celebrate Telluride's environmental activists past and present who have fought for the protection of Telluride's precious resources. Discussion to follow film, food provided.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/06/FOREVER-WILD-poster.png" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
   </channel>
 </rss>
