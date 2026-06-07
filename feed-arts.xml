@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming concerts, film, theater, gallery openings, and festivals across the Telluride region.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jun 2026 19:14:46 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 03:00:27 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Sun, Jun 7] Telluride Balloon Fest 2026</title>
@@ -55,6 +55,32 @@ Telluride's local non-profit organization Augment Music Project is hosting month
 
 Patagonia Telluride in partnership with Sheep Mountain Alliance and EcoAction Partners will host a film screening of …]]></description>
       <media:content url="https://www.telluride.com/site/assets/files/62747/forever_wild_poster.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Wed, Jun 10] &quot;Forever Wild&quot; film screening, Celebrating the protection of Telluride&apos;s Valley Floor</title>
+      <link>https://koto.org/event/forever-wild-film-screening-celebrating-the-protection-of-tellurides-valley-floor/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/forever%20wild%20film%20screening%7C2026-06-10</guid>
+      <pubDate>Wed, 10 Jun 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/FOREVER-WILD-poster.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Patagonia Telluride, TELLURIDE
+
+In collaboration with Sheep Mountain Alliance and Eco Action Partners, Patagonia Telluride will host a screening of the film, "Forever Wild". We will celebrate Telluride's environmental activists past and present who have fought for the protection of Telluride's precious resources. Discussion to follow film, food provided.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/06/FOREVER-WILD-poster.png" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Thu, Jun 11] Telluride Gold Kings</title>
+      <link>https://www.telluride.com/event/telluride-gold-kings/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20gold%20kings%7C2026-06-11</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Dance and sing along with the Telluride Gold Kings every Thursday this summer. Free admission!]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
     </item>

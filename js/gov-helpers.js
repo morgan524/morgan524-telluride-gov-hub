@@ -169,10 +169,10 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -184,16 +184,16 @@ const MANUAL_SUMMARIES = {
     "The June 30, 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The July 1 Ecology Commission agenda hasn't been posted yet.",
+    "The July 1st Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
     "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 1st agenda hasn't been posted yet.",
+    "The July 1 agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The Jul 01 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
     "The July 1 Board of County Commissioners agenda hasn't been posted yet.",
@@ -205,10 +205,34 @@ const MANUAL_SUMMARIES = {
     "The San Miguel Basin Fair Board meets to review junior livestock sale terms and update bylaws for the upcoming fair season.",
 
   "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
-    "The July 6 Open Space Commission agenda hasn't been posted yet."
+    "The July 6 2026 Open Space Commission agenda hasn't been posted yet."
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "’Jacks prominent amongst kings",
+    source: "Telluride Times",
+    date: "June 6, 2026",
+    firstSeen: "2026-06-07",
+    newsTopic: "infrastructure",
+    copy: "Would-be invaders hoping to even glimpse goalies Bridger Barrett and/or Dylan Saunders had to know that if they attacked, they’d probably get whacked. By one, two, or sometimes all three of Telluride’s top defenders — all seniors, all fiendishly adept…",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/sports/article_ec6dffc9-929a-4e69-808e-b1f485096412.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/0a/50ab7c10-3338-4b13-af85-5223da890f35/6a210c33e3bae.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A song for San Juan springtime",
+    source: "Telluride Times",
+    date: "June 6, 2026",
+    firstSeen: "2026-06-07",
+    newsTopic: "community",
+    copy: "Spring takes its sweet time coming to us in the high country. Never mind the official date of vernal equinox or when spring is marked in the Farmer’s Almanac, spring comes when it is good and ready here. Finally the…",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/opinion/columnists/article_e85d2fd6-be85-4947-a5fa-dbae79bc61db.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/71/27166196-823f-4be9-8f59-f36960f74cc2/6a21268780f7f.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Commissioners approve Accelerated Housing Review",
     source: "Telluride Times",
@@ -1006,18 +1030,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "‘He says “yes” to everything.’",
-    source: "Telluride Times",
-    date: "May 24, 2026",
-    firstSeen: "2026-05-25",
-    newsTopic: "education",
-    copy: "Chochi, a Rotary Youth Exchange student who had never heard of Telluride before arriving, has won over the community with his infectious positivity and willingness to try everything. Despite being new to snow and activities like basketball, he helped the golf team reach state championships for the first time and earned spirit awards along the way.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_95d8abdb-cfbb-4583-8420-a5de13732d9f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/2a/42a7051a-c0d6-4202-a625-3fee32668761/6a1159940d283.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Council recaps winter housing program",
     source: "Telluride Times",
     date: "May 25, 2026",
@@ -1027,30 +1039,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_327f40ba-0bc6-4509-8436-c136f3e02e2c.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/29/d29fa0d0-0b04-43b4-98e5-996ff4d4a8e1/6a115714a006d.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Responding when disaster strikes",
-    source: "Telluride Times",
-    date: "May 24, 2026",
-    firstSeen: "2026-05-25",
-    newsTopic: "community",
-    copy: "San Miguel County Emergency Manager Shannon Armstrong and the Telluride Foundation have formed the San Juan Regional COAD - a network of about 80 nonprofits, businesses and agencies across three counties to coordinate disaster response. The group focuses mainly on wildfire preparedness but also handles floods, severe weather and other emergencies, with strong community participation exceeding organizers' expectations.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_495ca062-80ec-438c-8f0a-a42fa8d758e6.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/d5/6d52cd96-9fea-49b0-94a0-f02a885a8548/6a115bfaf164d.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "The science of connection",
-    source: "Telluride Times",
-    date: "May 24, 2026",
-    firstSeen: "2026-05-24",
-    newsTopic: "community",
-    copy: "Dr. Kevin Morris from the University of Denver will speak Friday June 5th at 5:30 p.m. at the Science Center about his research on human-animal connections and health. He's studying how psychiatric service dogs help veterans with PTSD and plans future research on veterans and horses.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_702af9d4-c819-4687-a223-a924539cf04b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/00/0005938d-e480-4c36-85a6-b9e7b590e264/6a1149294f3df.image.jpg",
     imgHiRes: true
   },
   {
@@ -1110,7 +1098,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 6, 2026",
+    date: "June 7, 2026",
     firstSeen: "2026-06-04",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1121,7 +1109,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 6, 2026",
+    date: "June 7, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1906,17 +1894,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Lone Cone Librarys Annual Community Yard Sale & Bbq",
-    link: "https://koto.org/event/lone-cone-librarys-annual-community-yard-sale-bbq/",
-    description: "Our favorite spring tradition is back – the Lone Cone Library Community Yard Sale! Come browse treasures, support your neighbors, and enjoy a relaxed day on the lawn. Interested in being a vendor? Spaces are available for $10. If you’d like to reserve a spot, just fill out our quick sign‑up form at the front desk or below. Vendors are responsible for set up and clean-up of their items. Any items left behind will be taken care of in a respectful way (Donating, discarding, etc). 🍔 Community BBQ • 12–2pm Swing by for lunch while you shop. $10 per plate, includes a hamburger, a side, a drink and a cookie. Have items you no longer need? You can donate gently‑used items to the library ahead of the sale. We’ll add them to our tables, and all proceeds from donated items go directly toward supporting library programs.",
-    pubDate: "2026-06-06T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/2890-scaled.jpg"
-  },
-  {
     title: "Telluride Balloon Fest 2026",
     link: "https://koto.org/event/telluride-balloon-fest-2026/2026-06-06/2/",
     description: "Telluride Balloon Festival takes place Saturday, June 6 th and Sunday, June 7 th . Weather permitting & beginning at 6 a.m. on Saturday & Sunday, watch hot air balloons lift off from Telluride Town Park and float effortlessly over the Telluride Valley. Refreshments will be available for sale at the basketball court in Town Park. Don't miss the Balloon Glow on Main Street on Saturday night – it's an amazing sight! The Main Street Glow takes place from 6-10 p.m. on Saturday night.",
@@ -2377,6 +2354,61 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Innovation Center",
     imageUrl: "https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A-2.png"
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-24/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-06-24T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-06-24/",
+    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-06-24T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
+  },
+  {
+    title: "Tennis Clinic | 105 | 3.0+ | Golden Hour",
+    link: "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-06-24/",
+    description: "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning the point off of an overhead winner. Suitable for levels 3.0+, this game is not only a workout and a ton of fun, but it will improve your tennis game by: Teaching you when to play near the net player. Improve your overall net game. Encourage you to practice being aggressive at the net. Finding a backhand volley. Execute deep lobs.",
+    pubDate: "2026-06-24T23:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-25/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-06-25T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Pilates for All Bodies with Laura",
+    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-06-25/",
+    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-06-25T18:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
   }
 ];
 
@@ -2740,7 +2772,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "The Fretliners Live in Concert",
     link: "https://sheridanoperahouse.com/events/the-fretliners-live-in-concert-2/",
-    description: "The Fretliners will perform live in concert at the Sheridan Opera House on June 13, 2026. This musical performance takes place at Telluride's historic downtown venue.",
+    description: "",
     pubDate: "2026-06-13",
     endDate: "undefined",
     source: "sheridan",
@@ -2752,7 +2784,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Bluegrass Festival",
     link: "https://sheridanoperahouse.com/events/telluride-bluegrass-festival/",
-    description: "The Telluride Bluegrass Festival presents a concert at the historic Sheridan Opera House. This performance is part of the renowned annual festival celebrating bluegrass music in Telluride.",
+    description: "",
     pubDate: "2026-06-18",
     endDate: "2026-06-21",
     source: "sheridan",
@@ -2764,7 +2796,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "FREE Oak Street Park SummerSHOW Series: Elder Grown",
     link: "https://sheridanoperahouse.com/events/oak-street-park-summershow-series/",
-    description: "The FREE Oak Street Park SummerSHOW Series presents Elder Grown at the Sheridan Opera House in Telluride. This concert is part of the free summer performance series offering live entertainment to the community.",
+    description: "",
     pubDate: "2026-06-25",
     endDate: "undefined",
     source: "sheridan",
@@ -3908,7 +3940,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-06-09-nwc-meeting",
-    description: "The Town of Norwood will hold a meeting for the NWC on June 9th. This government meeting will take place in Norwood, Colorado.",
+    description: "",
     pubDate: "2026-06-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -3919,7 +3951,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-06-10-board-of-trustees-meeting",
-    description: "The Town of Norwood Board of Trustees will hold a meeting in Norwood. This government meeting provides an opportunity for community members to observe local municipal proceedings and decision-making processes.",
+    description: "",
     pubDate: "2026-06-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -3930,7 +3962,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting Meeting",
     link: "https://www.norwoodtown.com/2026-06-11-norwood-sanitation-district-meeting-meeting",
-    description: "The Norwood Sanitation District will hold a meeting in Norwood, Colorado. This government meeting provides an opportunity for community members to learn about sanitation district operations and participate in local governance.",
+    description: "",
     pubDate: "2026-06-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -3941,7 +3973,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa Wolf Jett",
     link: "https://www.norwoodtown.com/2026-06-13-music-on-the-mesa-wolf-jett",
-    description: "Music On The Mesa presents Wolf Jett performing in Norwood. This community music event takes place on the mesa, offering live entertainment in a scenic outdoor setting.",
+    description: "",
     pubDate: "2026-06-13T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -3952,7 +3984,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-06-15-planning-and-zoning-commission-meeting",
-    description: "The Town of Norwood Planning and Zoning Commission will hold a public meeting to review development proposals, zoning applications, and land use matters affecting the community. This government meeting provides an opportunity for public input on planning decisions within Norwood's jurisdiction.",
+    description: "",
     pubDate: "2026-06-15T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -3963,7 +3995,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -3976,90 +4008,6 @@ const NORWOOD_EVENTS = [
 const MOUNTAIN_VILLAGE_EVENTS = [];
 
 const TELLURIDE_COM_EVENTS = [
-  {
-    title: "Music on the Green Summer Concert Series",
-    link: "https://www.telluride.com/event/music-on-the-green-summer-concert-series/",
-    description: "The Telluride Mountain Village Owners Association (TMVOA) and Beyond the Groove Productions Present Music on the Green …",
-    pubDate: "2026-06-05",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/44414/16c6ff81-d87c-823e-1bd2-8a66b859eb9d.800x533.webp"
-  },
-  {
-    title: "Telluride Farmers&#039; Market",
-    link: "https://www.telluride.com/event/telluride-farmers-market/",
-    description: "The Telluride Farmers' Market provides the highest quality produce, animal products, prepared food and more to …",
-    pubDate: "2026-06-05",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/44554/img_0071.800x533.webp"
-  },
-  {
-    title: "Telluride Farmers&#039; Market Music Series",
-    link: "https://www.telluride.com/event/telluride-farmers-market-music-series/",
-    description: "Augment Music Project sponsors local music in various ways, including weekly performances at the Telluride Farmers' …",
-    pubDate: "2026-06-05",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/54793/20240705_111835.800x533.webp"
-  },
-  {
-    title: "Telluride Balloon Festival",
-    link: "https://www.telluride.com/event/telluride-balloon-festival/",
-    description: "Get high at the Telluride Balloon Festival! Weather permitting, watch hot air balloons lift off from Telluride Town …",
-    pubDate: "2026-06-05",
-    endDate: "2026-06-08",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/28889/1440710568aa5692e4.800x533.webp"
-  },
-  {
-    title: "Wild West Fest Roundup",
-    link: "https://www.telluride.com/event/wild-west-fest-roundup/",
-    description: "The public is invited to participate in and celebrate Wild West Fest with the Sheridan Arts Foundation and youth …",
-    pubDate: "2026-06-05",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/47520/wwf_roundup_ttb.800x533.webp"
-  },
-  {
-    title: "The Chemistry of Connection: How Our Relationships With Animals Shape Health and Well-Being",
-    link: "https://www.telluride.com/event/the-chemistry-of-connection-how-our-relationships-with-animals-shape-health-and-well-being/",
-    description: "What does science have to say about the bonds we form with other animals — and why do those bonds matter so deeply …",
-    pubDate: "2026-06-05",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62436/tot_animal_talk.800x533.webp"
-  },
-  {
-    title: "Hunter Archer",
-    link: "https://www.telluride.com/event/hunter-archer/",
-    description: "Hunter Archer & The Quiver are Country/Bluegrass band hailing from Steamboat Springs Colorado. We have been called …",
-    pubDate: "2026-06-05",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62651/screenshot_2026-06-01_at_3_19_14_pm.800x533.webp"
-  },
   {
     title: "Huck Finn & Becky Thatcher Day",
     link: "https://www.telluride.com/event/huck-finn-becky-thatcher-day/",
@@ -5767,7 +5715,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Telluride Theatre&#039;s Annual Shakespeare in the Park",
     link: "https://www.telluride.com/event/telluride-theatres-annual-shakespeare-in-the-park/",
-    description: "Telluride Theatre presents its annual Shakespeare in the Park performance, bringing classic drama to an outdoor setting in Telluride. This community theater event offers residents and visitors the opportunity to enjoy professional Shakespeare productions in a scenic mountain environment.",
+    description: "Stay tuned for updates about the 2026 event!",
     pubDate: "2026-07-17",
     endDate: "2026-07-26",
     source: "telluride-com",
@@ -6519,6 +6467,78 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/44886/sunsetconcert.800x533.webp"
+  },
+  {
+    title: "Games on the Green",
+    link: "https://www.telluride.com/event/games-on-the-green/",
+    description: "Head to The Madeline on Wednesdays and Thursdays this summer for Games on the Green! They will have classic lawn games …",
+    pubDate: "2026-08-06",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62453/mtv_summer_selects_lowres-62-2100x1401-5ba5db78-3cf7-49e2-a790-62927e14c194.800x533.webp"
+  },
+  {
+    title: "Historic Walking Tour",
+    link: "https://www.telluride.com/event/historic-walking-tour/",
+    description: "Take a historic tour of Telluride on foot! These historic walking tours are led by historian Ashley Boling, and leave …",
+    pubDate: "2026-08-06",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/48069/walkingtour_tabloidsize_2021.800x533.webp"
+  },
+  {
+    title: "Telluride Art Walk",
+    link: "https://www.telluride.com/event/telluride-art-walk/",
+    description: "The Telluride Art Walk is a lively monthly celebration of art, community, and creativity in downtown Telluride and …",
+    pubDate: "2026-08-06",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/36708/download_2.800x533.webp"
+  },
+  {
+    title: "Rooftop Pop-Up Local Artist Market",
+    link: "https://www.telluride.com/event/pop-up-local-artist-market/",
+    description: "Shop an incredible rotating selection of Ah Haa’s staff, instructors and open studio memeber’s artwork in the …",
+    pubDate: "2026-08-06",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/58400/screenshot_2026-01-21_at_4_30_00_pm.800x533.webp"
+  },
+  {
+    title: "Free Tasting",
+    link: "https://www.telluride.com/event/free-tasting-at-telluride-wine-merchant/",
+    description: "Free tasting every Thursday from 4-6pm. The theme of the tasting will vary from different seasonal selections in wine, …",
+    pubDate: "2026-08-06",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62697/screenshot_2026-06-03_at_1_50_16_pm.800x533.webp"
+  },
+  {
+    title: "Telluride Gold Kings",
+    link: "https://www.telluride.com/event/telluride-gold-kings/",
+    description: "Dance and sing along with the Telluride Gold Kings every Thursday this summer. Free admission!",
+    pubDate: "2026-08-06",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp"
   }
 ];
 
