@@ -6,21 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming concerts, film, theater, gallery openings, and festivals across the Telluride region.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jun 2026 19:16:07 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2026 03:01:31 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Sun, Jun 7] Drop-In Tech Time with Oliver</title>
-      <link>https://telluridelibrary.libcal.com/event/15970377?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/drop%20in%20tech%20time%7C2026-06-07</guid>
-      <pubDate>Sun, 07 Jun 2026 19:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 2nd Floor Desk
-
-1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
     <item>
       <title>[Tue, Jun 9] Augment Summer Music Series</title>
       <link>https://www.telluride.com/event/augment-summer-music-series/</link>
@@ -57,6 +44,43 @@ Patagonia Telluride in partnership with Sheep Mountain Alliance and EcoAction Pa
 
 In collaboration with Sheep Mountain Alliance and Eco Action Partners, Patagonia Telluride will host a screening of the film, "Forever Wild". We will celebrate Telluride's environmental activists past and present who have fought for the protection of Telluride's precious resources. Discussion to follow film, food provided.]]></description>
       <media:content url="https://koto.org/wp-content/uploads/2026/06/FOREVER-WILD-poster.png" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Thu, Jun 11] Telluride Gold Kings</title>
+      <link>https://www.telluride.com/event/telluride-gold-kings/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20gold%20kings%7C2026-06-11</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Dance and sing along with the Telluride Gold Kings every Thursday this summer. Free admission!]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Thu, Jun 11] Telluride Historical Museum – Moments That Made US: San Miguel Stories – Opening Reception</title>
+      <link>https://koto.org/event/telluride-historical-museum-moments-that-made-us-san-miguel-stories-opening-reception/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20historical%20museum%20moments%7C2026-06-11</guid>
+      <pubDate>Thu, 11 Jun 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+
+Telluride Historical Museum Announces “Moments That Made US: San Miguel Stories”, New 2026-2027 Annual Exhibition for America 250/Colorado 150 Commemoration Telluride, Colorado, June 1, 2026 — Telluride Historical Museum announces its upcoming 2026-2027 annual exhibit, Moments That Made US: San Miguel Stories, a special exhibition during the America 250/Colorado 150 commemoration that explores how generations of Americans in San Miguel County and beyond have given meaning to the ideals set out in the Declaration of Independence. The exhibition looks back across centuries and highlights both challenging and celebratory times, while exploring five themes drawn directly from the Declaration of Independence: Created Equal; Life, Liberty, and the Pursuit of Happiness; Free and Independent States; Consent of the Governed; and We Mutually Pledge. The featured moments weave together multiple perspectives from some of San Miguel County’s most significant stories alongside defining moments from United States history. …]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Thu, Jun 11] The Creative Exchange at Telluride Arts HQ</title>
+      <link>https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-06-11/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/the%20creative%20exchange%20at%7C2026-06-11</guid>
+      <pubDate>Thu, 11 Jun 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Telluride Arts HQ, TELLURIDE
+
+The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. Topics may span everything from the business of art and professional development, to creative process, storytelling, collaboration, and the philosophical underpinnings of making art. Whether you’re a full-time working artist, an educator, a student, a maker, or simply someone curious about creative expression, the Creative Exchange is open to you. …]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
     </item>

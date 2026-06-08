@@ -169,10 +169,10 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The Jun 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -181,22 +181,22 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "The June 30, 2026 Town Council agenda hasn't been posted yet.",
+    "The June 30 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The July 1 Ecology Commission agenda hasn't been posted yet.",
+    "The Jul 01 2026 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The Jul 01 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
     "The July 1 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The July 1, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
-    "The July 1 Board of County Commissioners agenda hasn't been posted yet.",
+    "The July 1st Board of County Commissioners agenda hasn't been posted yet.",
 
   "county|2026-06-10|Board of Review and Planning Commission Joint Work Session":
     "The June 10 Board of Review and Planning Commission joint work session agenda hasn't been posted yet.",
@@ -209,6 +209,54 @@ const MANUAL_SUMMARIES = {
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Telluride Housing Authority launches tenant advisory committee",
+    source: "Telluride Times",
+    date: "June 8, 2026",
+    firstSeen: "2026-06-08",
+    newsTopic: "housing",
+    copy: "The Housing Authority is setting up a tenant advisory committee with seven residents from town-managed properties like Shandoka, Sunnyside, and Virginia Placer to give renters a formal voice in housing decisions. Committee members will get quarterly rent credits and meet at least four times a year in public sessions, with applications due June 17. It's a step toward more structured communication between residents and town hall after years of housing tensions bubbling up at council meetings.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_278f5e0f-f1d4-480c-a1c8-087a763b8de7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "AI workshop helps professionals develop exceptional marketing talent",
+    source: "Telluride Times",
+    date: "June 8, 2026",
+    firstSeen: "2026-06-08",
+    newsTopic: "community",
+    copy: "The Telluride Foundation is hosting an AI workshop for local business owners, nonprofits and community leaders to learn practical applications like creating marketing content, logos, videos and websites. Fort Lewis College's AI Institute director will lead hands-on sessions teaching folks how to choose useful AI tools while keeping their own voice and brand intact.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_99d6ff83-0286-4434-ab90-1642b9ee0001.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/7b/57b30499-f5cc-43ce-bc24-03ca39ef4d21/6a261580225f9.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "All-league soccer honors arrive",
+    source: "Telluride Times",
+    date: "June 7, 2026",
+    firstSeen: "2026-06-08",
+    newsTopic: "community",
+    copy: "Three Telluride High soccer players earned First Team All-League honors despite the team finishing with five straight losses. Goalkeeper Gretchen Vidal, midfielder Kimberly Magana, and defender Bree Gowdy were recognized for their strong play in what coach Justin Chandler called a competitive season against larger schools. The senior class leaves behind a foundation that should help the younger players build for future seasons.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_de6fac43-6a99-4c78-88c8-577bb32f650c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/5a/65a7ce6b-4a17-4d54-9a3c-47e242e70ad2/6a2113e9e6029.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Look up: San Miguel County’s chance to protect the night",
+    source: "Telluride Times",
+    date: "June 7, 2026",
+    firstSeen: "2026-06-08",
+    newsTopic: "recreation",
+    copy: "San Miguel County is pursuing a Dark Sky Reserve designation that would make it the first in the nation to include an entire county as the protective periphery around the Thunder Trails core area. The designation requires community support, a lighting inventory, and property owner cooperation to protect the area's exceptionally dark skies that support wildlife, offer spiritual connection to the cosmos, and could boost shoulder-season tourism.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_6e75af49-a87a-455f-becb-26c944329655.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/e1/1e112b20-7fb8-49e6-a134-29942159a88f/6a2128866742b.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "‘Passages in Time’",
     source: "Telluride Times",
@@ -1042,18 +1090,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Council recaps winter housing program",
-    source: "Telluride Times",
-    date: "May 25, 2026",
-    firstSeen: "2026-05-25",
-    newsTopic: "housing",
-    copy: "Town's winter RV camping program at the north park completed its fourth season, housing 9 people in allocated spaces from late November to mid-April. The program collected $9,300 in revenue against roughly $10,000 in operating costs, with some outstanding rent balances still owed.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_327f40ba-0bc6-4509-8436-c136f3e02e2c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/29/d29fa0d0-0b04-43b4-98e5-996ff4d4a8e1/6a115714a006d.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Telluride Marshal’s Department Arrests Individual for Failure to Register as a Sex Offender",
     source: "Town of Telluride",
     date: "May 22, 2026",
@@ -1110,7 +1146,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 7, 2026",
+    date: "June 8, 2026",
     firstSeen: "2026-06-04",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1121,7 +1157,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 7, 2026",
+    date: "June 8, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1906,39 +1942,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "First Aid and CPR Certification",
-    link: "https://koto.org/event/first-aid-and-cpr-certification/",
-    description: "CPR World is offering First Aid and CPR certification on Sunday, June 7, 12:30-5:00pm at the Wilkinson Library. For information and registration, visit cprworld.com or call (970) 729-2779.",
-    pubDate: "2026-06-07T18:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-06-07/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-06-07T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-06-07/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-06-07T20:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
     title: "Birding with Katie",
     link: "https://koto.org/event/birding-with-katie/2026-06-08/",
     description: "Join local birder Katie Triest for an intro discussion about the birds of Telluride at the Telluride Patagonia store on June 8th from 5-6 and for a bird walk with Katie leaving from the Telluride Patagonia store on June 9th at 8:30 am. Folks can sign up for the bird walk on Patagonia's Instagram or come on into the Patagonia store. The talk and walk are free and open to all ages.",
@@ -2399,6 +2402,50 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
+  },
+  {
+    title: "Trick Dog Takeover at Timber Room",
+    link: "https://koto.org/event/trick-dog-takeover-at-timber-room/",
+    description: "San Francisco's acclaimed Trick Dog brings its inventive approach to cocktails to The Madeline Hotel & Residences for two nights only. Named Best U.S. Cocktail Bar 2025, the celebrated team takes over Timber Room with a menu showcasing the creativity, craftsmanship, and playful spirit that have made it one of the country's most sought-after bar programs. June 26 | Happy Hour on the Terrace The weekend begins on the Timber Room terrace, where mountain views, signature cocktails, and Trick Dog favorites set the tone for a memorable evening. Settle in with drinks, light bites, and good company as the sun dips behind the peaks. June 27 | An Evening in Timber Room Join Trick Dog inside Timber Room for an immersive evening highlighting the bar's acclaimed cocktail program, alongside a curated selection of non-alcoholic offerings and Timber Room's dinner menu. …",
+    pubDate: "2026-06-26T06:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/trick-dog.png"
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-26/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-06-26T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Up-off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-06-26/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-06-26T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Free Youth Tennis & Pickleball Program",
+    link: "https://koto.org/event/free-youth-tennis-pickleball-program/",
+    description: "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who may not be able to participate due to financial constraints. Inclusivity: No one will be turned away based on their ability to pay. No Membership Required. Demo equipment is available at no charge for use during this clinic.",
+    pubDate: "2026-06-26T21:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
   }
 ];
 
@@ -2485,7 +2532,7 @@ const WILKINSON_EVENTS = [
 const HUMANE_SOCIETY_ANIMALS = [
   {
     id: "TEL-A-183",
-    name: "Chloe",
+    name: "ADOPTION PENDING! Chloe",
     species: "Dog",
     breed: "Pekingese / Mixed Breed (Small)",
     ageGroup: "Young Dog",
@@ -2495,7 +2542,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Pekingese / Mixed Breed (Small) • Female",
     firstSeen: "2026-06-04",
     revealDate: "2026-06-04",
-    lastSeen: "2026-06-07"
+    lastSeen: "2026-06-08"
   },
   {
     id: "TEL-A-184",
@@ -2509,7 +2556,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Unweaned • Retriever, Labrador • Male",
     firstSeen: "2026-06-04",
     revealDate: "2026-06-06",
-    lastSeen: "2026-06-07"
+    lastSeen: "2026-06-08"
   },
   {
     id: "TEL-A-185",
@@ -2523,7 +2570,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Female",
     firstSeen: "2026-06-06",
     revealDate: "2026-06-06",
-    lastSeen: "2026-06-07"
+    lastSeen: "2026-06-08"
   }
 ];
 
@@ -4052,42 +4099,6 @@ const NORWOOD_EVENTS = [
 const MOUNTAIN_VILLAGE_EVENTS = [];
 
 const TELLURIDE_COM_EVENTS = [
-  {
-    title: "Huck Finn & Becky Thatcher Day",
-    link: "https://www.telluride.com/event/huck-finn-becky-thatcher-day/",
-    description: "Join the Telluride Elks for a Telluride tradition: Huck Finn and Becky Thatcher Day! On Saturday, June 6, kids 10 and …",
-    pubDate: "2026-06-06",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/47903/img_7365-2100x1400-f9628f77-a650-47ed-a69a-f19ab0465d96.800x533.webp"
-  },
-  {
-    title: "Telluride Brewing Co. Block Party",
-    link: "https://www.telluride.com/event/telluride-brewing-co-block-party/",
-    description: "The Telluride Brewing Company is hosting its annual block party. Join them Saturday, June 6  from 3 - 7 p.m. for a …",
-    pubDate: "2026-06-06",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/49618/screenshot_2025-05-21_at_3_45_34_pm.800x533.webp"
-  },
-  {
-    title: "Colorado Shelby Rally",
-    link: "https://www.telluride.com/event/colorado-shelby-rally/",
-    description: "5th Annual Colorado Shelby Rally makes a stop in Mountain Village this year! Be sure to check out all the cars on the …",
-    pubDate: "2026-06-06",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62631/img_9126_1740x870.800x533.webp"
-  },
   {
     title: "Historic Walking Tour",
     link: "https://www.telluride.com/event/historic-walking-tour/",
@@ -6583,6 +6594,78 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp"
+  },
+  {
+    title: "Music on the Green Summer Concert Series",
+    link: "https://www.telluride.com/event/music-on-the-green-summer-concert-series/",
+    description: "The Telluride Mountain Village Owners Association (TMVOA) and Beyond the Groove Productions Present Music on the Green …",
+    pubDate: "2026-08-07",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/44414/16c6ff81-d87c-823e-1bd2-8a66b859eb9d.800x533.webp"
+  },
+  {
+    title: "Telluride Farmers&#039; Market",
+    link: "https://www.telluride.com/event/telluride-farmers-market/",
+    description: "The Telluride Farmers' Market provides the highest quality produce, animal products, prepared food and more to …",
+    pubDate: "2026-08-07",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/44554/img_0071.800x533.webp"
+  },
+  {
+    title: "Telluride Farmers&#039; Market Music Series",
+    link: "https://www.telluride.com/event/telluride-farmers-market-music-series/",
+    description: "Augment Music Project sponsors local music in various ways, including weekly performances at the Telluride Farmers' …",
+    pubDate: "2026-08-07",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/54793/20240705_111835.800x533.webp"
+  },
+  {
+    title: "Mind Blown",
+    link: "https://www.telluride.com/event/mind-blown/",
+    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of …",
+    pubDate: "2026-08-07",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
+  },
+  {
+    title: "Telluride Jazz Festival",
+    link: "https://www.telluride.com/event/telluride-jazz-festival/",
+    description: "Since 1977, Telluride’s majestic perch high in the San Juan Mountains of southwestern Colorado has been the site of …",
+    pubDate: "2026-08-07",
+    endDate: "2026-08-09",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/28880/14407123460f9210.800x533.webp"
+  },
+  {
+    title: "KOTO Duck Race",
+    link: "https://www.telluride.com/event/koto-duck-race/",
+    description: "The Ducks are trained and ready to rumble! KOTO’s Duck Race is happening on August 7, and there are a ton of …",
+    pubDate: "2026-08-07",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/44995/rubber-duck-race-white-no-rotary-logo-or-heading_20200710-224712.800x533.webp"
   }
 ];
 
