@@ -169,7 +169,7 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The Jun 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
     "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
@@ -181,16 +181,16 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "The June 30 2026 Town Council agenda hasn't been posted yet.",
+    "The June 30, 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The Jul 01 2026 Ecology Commission agenda hasn't been posted yet.",
+    "The July 1st Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The Jul 01 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 1 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
     "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -205,10 +205,22 @@ const MANUAL_SUMMARIES = {
     "The San Miguel Basin Fair Board meets to review junior livestock sale terms and update bylaws for the upcoming fair season.",
 
   "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
-    "The July 6, 2026 Open Space Commission agenda hasn't been posted yet."
+    "The July 6 Open Space Commission agenda hasn't been posted yet."
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Star light, star bright",
+    source: "Telluride Times",
+    date: "June 8, 2026",
+    firstSeen: "2026-06-08",
+    newsTopic: "arts-culture",
+    copy: "Mountain Village is moving its free outdoor movie nights from Reflection Plaza to the Conference Center Plaza this summer, adding real grass instead of astroturf and more space to spread out. They're also starting a family happy hour from 6:30-8 PM before each screening with lawn games and kids' activities, plus nearby food and drink options. The Saturday night movies begin at dusk and wrap up around 10:30, with \"The Sandlot\" playing July 4th as their annual Independence Day tradition.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_861d183a-1113-4971-8823-c67e52cbb30c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/dc/8dc77d1d-b7b9-442a-9b42-870b232ad477/6a23527656816.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Telluride Housing Authority launches tenant advisory committee",
     source: "Telluride Times",
@@ -2451,81 +2463,92 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Parenting Book Club: How to Talk So Little Kids Will Listen",
-    link: "https://telluridelibrary.libcal.com/event/16942420?hs=a",
-    description: "10:30 AM – 11:30 AM · Parenting Book Club discussing How to Talk So Little Kids Will Listen: A Survival Guide to Life With Children Ages 2-7 b Joanna Faber and Julie King. Participants will dive into respectful and effective solutions to the challenges of raising children. This program is being offered in collaboration with Bright Futures and Parents As Teachers. The first 10 registrants will receive a copy of the book to keep. Reach out to madiea@brightfuturesforchildren.org with questions. Child care and snacks will be provided. Club de lectura sobre crianza que abordar&aacute; el libro *How to Talk So Little Kids Will Listen: A Survival Guide to Life With Children Ages 2-7*, de Joanna Faber y Julie King. Los participantes explorar&aacute;n soluciones respetuosas y eficaces para los desaf&iacute;os que conlleva la crianza de los hijos. Este programa se ofrece en colaboraci&oacute;n con Bright Futures y Parents As Teachers. …",
-    pubDate: "2026-06-07T16:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_15_34_57.png"
-  },
-  {
-    title: "Gentle Yoga with Kristen Milord",
-    link: "https://telluridelibrary.libcal.com/event/16536434?hs=a",
-    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
-    pubDate: "2026-06-07T17:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
-  },
-  {
-    title: "Caminata por la Naturaleza",
-    link: "https://telluridelibrary.libcal.com/event/16939976?hs=a",
-    description: "11:00 AM – 1:00 PM · Vamos a caminar por la naturaleza, nos vamos a ver en la biblioteca antes de empezar.  La caminata que vamos a caminar es Cornet Falls no esta lejos y toda las edades son bienvenidos.",
-    pubDate: "2026-06-07T17:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lobby",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_21_11_32_31.jpg"
-  },
-  {
-    title: "Drop In Ping Pong",
-    link: "https://telluridelibrary.libcal.com/event/16986216?hs=a",
-    description: "1:00 PM – 3:00 PM · Drop by the library for casual table tennis matches. Our ping pong table will be set up and ready for players of all ages and skill levels. Whether you&#39;re a first-timer or a seasoned player, come enjoy this classic game with family and friends. No registration needed - just drop in! First come, first served (pun intended!) Pase por la biblioteca para partidos casuales de tenis de mesa. Nuestra mesa de ping pong estar&aacute; instalada y lista para jugadores de todas las edades y niveles de habilidad. Ya sea que juegue por primera vez o sea un jugador experimentado, venga a disfrutar de este juego cl&aacute;sico con familia y amigos. No necesita registrarse - &iexcl;simplemente venga!",
-    pubDate: "2026-06-07T19:00:00.000Z",
+    title: "Musik 4 Kinders",
+    link: "https://telluridelibrary.libcal.com/event/16568415?hs=a",
+    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
+    pubDate: "2026-06-08T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_30_12_13_38.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
   },
   {
-    title: "Drop-In Tech Time with Oliver",
-    link: "https://telluridelibrary.libcal.com/event/15970377?hs=a",
-    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
-    pubDate: "2026-06-07T19:00:00.000Z",
+    title: "Piano on the Patio with Oliver Henry",
+    link: "https://telluridelibrary.libcal.com/event/16644814?hs=a",
+    description: "12:00 PM – 1:00 PM · Craving a break from the hustle and bustle of your day? Take a lunchtime escape to the library for a dose of tranquility on the second Monday of the month from 12-1pm. Settle into a comfy chair and unwind with entrancing piano melodies played live by WPL&#39;s very own, Oliver Henry, of Apr&egrave;s Nova. Unplug from your devices and bring a book, magazine, or simply enjoy a moment of peace and quiet. This program is a great way to de-stress, recharge, and refocus for the rest of your afternoon. Feel free to bring your lunch and enjoy it while listening to the music!",
+    pubDate: "2026-06-08T18:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "2nd Floor Desk",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_27_10_17_04.jpg"
   },
   {
-    title: "CANCELLED Tea and Tarot",
-    link: "https://telluridelibrary.libcal.com/event/16567828?hs=a",
-    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
-    pubDate: "2026-06-07T20:30:00.000Z",
+    title: "Gardening Camp / Campamento de Jardinería",
+    link: "https://telluridelibrary.libcal.com/event/16900648?hs=a",
+    description: "12:30 PM – 3:30 PM · Join us for four fun-filled afternoons of hands-on gardening and learning. Projects and activities will include: planting a garden, garden decor crafts, earthworm play, storytimes, fairy and gnome play, and more! Who: Open to children ages 6-12 who can participate independently (without a parent or caregiver present). Registration : Space is limited- please only register if your child can attend all four days. Final Day: Celebrate with a public \"ribbon cutting\" garden reveal during the last hour of camp- friends and family welcome! What to Bring: A full belly Water bottle Sunhat & sunscreen Extra snacks Some snacks will be provided. All other items are the caregiver&#39;s responsibility. We can&#39;t wait to get garden with you! ------------------------------------------------------------------------------- &iexcl;&Uacute;nanse a nosotros para cuarto tardes llenas de diversion con jardiner&iacute;a y aprendizaje! …",
+    pubDate: "2026-06-08T18:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_14_52_16.png"
   },
   {
-    title: "Around the World with your Library - Italy",
-    link: "https://telluridelibrary.libcal.com/event/16492008?hs=a",
-    description: "5:30 PM – 6:30 PM · Join us at the Wine Mine for another culinary adventure around the world! This time, we'll explore the diverse foods and wines of Italy's many regions through conversation, tasting, and discovery. This event is for ages 21+ and space is limited, so advance registration is required.",
-    pubDate: "2026-06-07T23:30:00.000Z",
+    title: "Savvy Seniors-Grief Session with Maggie",
+    link: "https://telluridelibrary.libcal.com/event/16667522?hs=a",
+    description: "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.",
+    pubDate: "2026-06-08T19:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Wine Mine",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_13_13_27.jpg"
+    location: "Meeting Room #6 - large",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_14_07_32.png"
+  },
+  {
+    title: "Family Movie Matinee: Zootopia 2",
+    link: "https://telluridelibrary.libcal.com/event/15536154?hs=a",
+    description: "The Wilkinson Public Library presents a family movie matinee featuring Zootopia 2 in the Program Room. This library event offers families an opportunity to enjoy the animated sequel together in a community setting.",
+    pubDate: "2026-06-08T20:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_13_17_29_17.png"
+  },
+  {
+    title: "Cocina con Corazón",
+    link: "https://telluridelibrary.libcal.com/event/16941023?hs=a",
+    description: "5:30 PM – 7:00 PM · Tendremos el programa Cocina con Coraz&oacute;n cada mes asociado con Ah Haa para traer m&aacute;s programas para la comunidad de hispanohablantes. Vamos a cocinar gorditas con Lorena.  Este program solamente es para adultos y en espa&ntilde;ol.   &iexcl;Tenemos espacio para 12 adultos, inscr&iacute;bete con Claudia hoy!  Todos los niveles de espa&ntilde;ol son bienvenidos.",
+    pubDate: "2026-06-08T23:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Ahh Haa School of Arts",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_14_24_24.png"
+  },
+  {
+    title: "The Box: An Invitation to Freedom from Anxiety with Wendy Robbins",
+    link: "https://telluridelibrary.libcal.com/event/16349039?hs=a",
+    description: "5:30 PM – 7:00 PM · The Box: How Anxiety, Perfectionism, and People-Pleasing Kept Me Trapped — and the Steps That Set Me Free You built the walls. You have the key. What if the anxiety, perfectionism, and people-pleasing you&#39;ve spent your life managing aren&#39;t your greatest liabilities — but your biggest untapped assets? Join us on Monday, June 8th at 5:30 for a talk by well-being strategist, high-performance coach, bestselling author, and speaker Wendy Tamis Robbins ! For over 40 years, Wendy Tamis Robbins hid in plain sight. From the outside, she had everything: Ivy-League grad, Div. 1 Athlete, Big Law attorney. On the inside, she was living with chronic anxiety, OCD, panic disorder, depression, substance abuse, and suicidal ideation — managing it all behind a flawless performance of having it all together. Then came a colon cancer diagnosis. And instead of breaking her, it broke her open. …",
+    pubDate: "2026-06-08T23:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_07_49.jpeg"
+  },
+  {
+    title: "Cardio Dance (Baile Cardio) with Kelsey",
+    link: "https://telluridelibrary.libcal.com/event/16548369?hs=a",
+    description: "6:00 PM – 7:00 PM · Join us for a fun evening of dancing and getting your heart rate up!  You will be having so much fun, you won&#39;t even know you are exercising!  Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday every month. &iexcl;&Uacute;nete a nosotros para una divertida noche de baile y ejercicio! Te divertir&aacute;s tanto que ni te dar&aacute;s cuenta de que est&aacute;s haciendo ejercicio. Dirigido por Kelsey Trottier del Telluride Dance Collective.",
+    pubDate: "2026-06-09T00:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Upper Terrace",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1768253322.jpg"
   }
 ];
 
@@ -2863,7 +2886,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "The Fretliners Live in Concert",
     link: "https://sheridanoperahouse.com/events/the-fretliners-live-in-concert-2/",
-    description: "",
+    description: "The Fretliners will perform live in concert at the Sheridan Opera House on June 13, 2026. This musical performance takes place at Telluride's historic downtown venue.",
     pubDate: "2026-06-13",
     endDate: "undefined",
     source: "sheridan",
@@ -2875,7 +2898,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Bluegrass Festival",
     link: "https://sheridanoperahouse.com/events/telluride-bluegrass-festival/",
-    description: "",
+    description: "The Telluride Bluegrass Festival presents a concert at the historic Sheridan Opera House. This performance is part of the renowned annual festival celebrating bluegrass music in Telluride.",
     pubDate: "2026-06-18",
     endDate: "2026-06-21",
     source: "sheridan",
@@ -2887,7 +2910,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "FREE Oak Street Park SummerSHOW Series: Elder Grown",
     link: "https://sheridanoperahouse.com/events/oak-street-park-summershow-series/",
-    description: "",
+    description: "The FREE Oak Street Park SummerSHOW Series presents Elder Grown at the Sheridan Opera House in Telluride. This concert is part of the free summer performance series offering live entertainment to the community.",
     pubDate: "2026-06-25",
     endDate: "undefined",
     source: "sheridan",
@@ -3002,28 +3025,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "2-Day Trail Stewardship Trip: Middle Cimarron & Porphyry Basin",
-    link: "https://ouraytrails.org/volunteers",
-    description: "Join Ouray Trail Group Crew Leader Kevin for a two-day trail stewardship trip to Middle Cimarron and Porphyry Basin. Volunteers will perform trail maintenance while enjoying the spectacular scenery of Colorado’s backcountry. This horse-supported trip includes pack support for gear and offers a rewarding opportunity to help maintain local trails alongside fellow volunteers. There's no cost, but please register.",
-    pubDate: "2026-06-07T06:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Middle Cimarron Trailhead",
-    imageUrl: "https://localist-images.azureedge.net/photos/52932291535577/huge/c31fed3a3ed404b986c0895b4b749fdccbef4e68.jpg"
-  },
-  {
-    title: "PARK - Ultimate Frisbee",
-    link: "https://events.ourayridgwayevents.com/event/park-ultimate-frisbee",
-    description: "Come play frisbee! Anyone is welcome.",
-    pubDate: "2026-06-07T20:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Fellin Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/51807883052581/huge/9d7f0c7c4c96318902b1dfef1c3f821c9b3189d1.jpg"
-  },
   {
     title: "Ridgway Bird Walks & Talks: Birds and Bikes",
     link: "https://weehawkenarts.org/education/adult-art-classes/",
@@ -4024,6 +4025,28 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Blue Lakes Trailhead",
     imageUrl: "https://localist-images.azureedge.net/photos/52932450369902/huge/9367aba3bb18c48b7da043ad4209431d66d6e66c.jpg"
+  },
+  {
+    title: "Ouray Open Air Market",
+    link: "www.ouray-events.com/open-air",
+    description: "The Ouray Open-Air Market is a brand-new cooperative, organized marketplace designed to provide a dedicated home for small-scale creators & producers. Our core mission is to promote local agriculture and artisan goods while fostering honest, transparent relationships between vendors and the community. This is an entirely fresh platform in town designed to showcase your artisanal goods and services, helping neighbors and visitors know exactly who made the products they love. When and Where? Location: The market will take place in a beautiful open-air setting at Billy Goat Gruff's Patio (located at 4th Ave. + Main Street, Ouray, CO).Schedule: We will operate every Sunday from June 21, 2026, through September 6, 2026.Hours: Market hours are 10:00 AM to 2:00 PM.",
+    pubDate: "2026-06-21T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Billy Goats Gruff Patio",
+    imageUrl: "https://localist-images.azureedge.net/photos/53054893063268/huge/ed5f6f42c1d6a9db337d04171355a33509b6e1d1.jpg"
+  },
+  {
+    title: "PARK - Ultimate Frisbee",
+    link: "https://events.ourayridgwayevents.com/event/park-ultimate-frisbee",
+    description: "Come play frisbee! Anyone is welcome.",
+    pubDate: "2026-06-21T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Fellin Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/51807883052581/huge/9d7f0c7c4c96318902b1dfef1c3f821c9b3189d1.jpg"
   }
 ];
 
@@ -4031,7 +4054,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-06-09-nwc-meeting",
-    description: "",
+    description: "The Town of Norwood will hold a meeting for the NWC on June 9th. This government meeting will take place in Norwood, Colorado.",
     pubDate: "2026-06-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4042,7 +4065,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-06-10-board-of-trustees-meeting",
-    description: "",
+    description: "The Town of Norwood Board of Trustees will hold a meeting in Norwood. This government meeting provides an opportunity for community members to observe local municipal proceedings and decision-making processes.",
     pubDate: "2026-06-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4053,7 +4076,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting Meeting",
     link: "https://www.norwoodtown.com/2026-06-11-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "The Norwood Sanitation District will hold a meeting in Norwood, Colorado. This government meeting provides an opportunity for community members to learn about sanitation district operations and participate in local governance.",
     pubDate: "2026-06-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4064,7 +4087,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa Wolf Jett",
     link: "https://www.norwoodtown.com/2026-06-13-music-on-the-mesa-wolf-jett",
-    description: "",
+    description: "Music On The Mesa presents Wolf Jett performing in Norwood. This community music event takes place on the mesa, offering live entertainment in a scenic outdoor setting.",
     pubDate: "2026-06-13T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4075,7 +4098,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-06-15-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "The Town of Norwood Planning and Zoning Commission will hold a public meeting to review development proposals, zoning applications, and land use matters affecting the community. This government meeting provides an opportunity for public input on planning decisions within Norwood's jurisdiction.",
     pubDate: "2026-06-15T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4086,7 +4109,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5770,7 +5793,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Telluride Theatre&#039;s Annual Shakespeare in the Park",
     link: "https://www.telluride.com/event/telluride-theatres-annual-shakespeare-in-the-park/",
-    description: "Stay tuned for updates about the 2026 event!",
+    description: "Telluride Theatre presents its annual Shakespeare in the Park performance, bringing classic drama to an outdoor setting in Telluride. This community theater event offers residents and visitors the opportunity to enjoy professional Shakespeare productions in a scenic mountain environment.",
     pubDate: "2026-07-17",
     endDate: "2026-07-26",
     source: "telluride-com",
