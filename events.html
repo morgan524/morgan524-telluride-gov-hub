@@ -1375,6 +1375,20 @@
      // (telluride.com emits "Telluride Theatre&#039;s …"). Decode BEFORE
      // ltEsc so the text is correct, then ltEsc re-escapes it safely.
      function ltDecode(s){ const t = document.createElement('textarea'); t.innerHTML = String(s==null?'':s); return t.value; }
+     // Government meeting notices belong in Gov-Hub, not the community
+     // Events tab. Detect them by their explicit `category` (some feeds,
+     // e.g. norwoodtown.com, tag "Government Meeting"), the auto-generated
+     // "this government meeting" phrasing, or a named governmental body in
+     // the title. Tuned to skip municipal/board/commission/district meetings
+     // while keeping community + club meetings (Rotary, MAC group, etc.).
+     function isGovMeeting(e) {
+       if (!e) return false;
+       if (String(e.category || '').toLowerCase() === 'government meeting') return true;
+       const text = ((e.title || '') + ' ' + (e.description || e.copy || e.summary || '')).toLowerCase();
+       if (/\bthis government meeting\b/.test(text)) return true;
+       const title = (e.title || '').toLowerCase();
+       return /\b(board of trustees|town council|city council|board of county commissioners|county commissioners|planning (and|&) zoning|planning commission|sanitation district|water district|fire district|hospital district|metro(politan)? district|school board|board of education|design review board)\b/.test(title);
+     }
      // Brand-logo overrides for ongoing-event cards. Bot-synced sources
      // (telluride.com) carry a poster image, not the org's logo — match on
      // the (decoded) title or link and substitute a local brand logo.
@@ -1600,6 +1614,7 @@
              };
              const pushEvent = (e, sourceLabel) => {
                if (!e || !e.title) return;
+               if (isGovMeeting(e)) return;   // gov meeting notices live in Gov-Hub, not Events
                const start = e.pubDate || e.start_date || e.date || '';
                // Resolve the calendar date in Mountain Time (America/Denver) so
                // a Friday-evening MT event renders on Friday for all viewers —
