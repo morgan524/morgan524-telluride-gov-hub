@@ -876,6 +876,18 @@
       <!-- Location filter -->
       <div class="filter-card" id="sidebarFilter"><!-- populated by JS --></div>
 
+      <!-- Long-running events sidebar — multi-week events (e.g. the Rotary
+           Hikeathon, May 31–June 28) that span weeks. Rendered here instead
+           of as a single date-pinned card in the grid, by
+           renderLongRunningSidebar(). Sits ABOVE the festival sidebar. -->
+      <div class="festival-sidebar-card" id="sidebarLongRunningCard" style="display:none;">
+        <div class="festival-sidebar-head">
+          <span class="festival-sidebar-eyebrow">Spanning Several Weeks</span>
+          <h3>Ongoing Events</h3>
+        </div>
+        <div id="sidebarLongRunningList"><!-- populated by JS --></div>
+      </div>
+
       <!-- Festival tickets sidebar — populated from TELLURIDE_FESTIVALS (gov-data.js)
            by renderFestivalCalendar(). Ticket button color reflects ticketStatus. -->
       <div class="festival-sidebar-card" id="sidebarFestivalCard" style="display:none;">
@@ -1434,6 +1446,78 @@
        });
      }
 
+     // ── Long-running events sidebar ─────────────────────────────────────
+     //    Multi-week events (span >= 7 days) diverted out of the grid by
+     //    finishAndRender(). Shows the full date range (e.g. "May 31 – June
+     //    28, 2026") with the same info the grid card carries.
+     function googleCalUrlAllDay(title, startIso, endIso, location, details) {
+       const stripDash = s => String(s).replace(/-/g, '');
+       const [ey, em, ed] = String(endIso).split('-').map(Number);
+       // Google all-day end date is EXCLUSIVE → add one day.
+       const endExcl = (ey && em && ed)
+         ? new Date(Date.UTC(ey, em - 1, ed + 1)).toISOString().slice(0, 10).replace(/-/g, '')
+         : stripDash(endIso);
+       const params = new URLSearchParams({
+         action: 'TEMPLATE', text: title || '',
+         dates: stripDash(startIso) + '/' + endExcl,
+         location: location || '', details: details || ''
+       });
+       return 'https://calendar.google.com/calendar/render?' + params.toString();
+     }
+     function renderLongRunningSidebar(items) {
+       const card = document.getElementById('sidebarLongRunningCard');
+       const list = document.getElementById('sidebarLongRunningList');
+       if (!card || !list) return;
+       const months = ['January','February','March','April','May','June',
+                       'July','August','September','October','November','December'];
+       const fmtRange = (s, e) => {
+         const sd = new Date(s + 'T12:00:00'), ed = new Date(e + 'T12:00:00');
+         const sM = months[sd.getMonth()], eM = months[ed.getMonth()];
+         const sameYear = sd.getFullYear() === ed.getFullYear();
+         const left = sM + ' ' + sd.getDate() + (sameYear ? '' : ', ' + sd.getFullYear());
+         const right = (sM === eM && sameYear)
+           ? ed.getDate()
+           : eM + ' ' + ed.getDate();
+         return left + ' – ' + right + ', ' + ed.getFullYear();
+       };
+       const today = new Date(); today.setHours(0,0,0,0);
+       const sorted = (items || []).slice().sort((a,b) => a.date.localeCompare(b.date));
+       let html = '';
+       sorted.forEach(e => {
+         if (!e.endDate) return;
+         const range = fmtRange(e.date, e.endDate);
+         const started = new Date(e.date + 'T00:00:00') <= today;
+         const badge = started
+           ? '<div style="display:inline-block;padding:2px 8px;background:#b45309;color:#fff;border-radius:10px;font-size:0.6rem;font-weight:700;margin-top:5px;">HAPPENING NOW</div>'
+           : '<div style="display:inline-block;padding:2px 8px;background:#2f564d;color:#fff;border-radius:10px;font-size:0.6rem;font-weight:700;margin-top:5px;">UPCOMING</div>';
+         const calUrl = googleCalUrlAllDay(e.title, e.date, e.endDate, e.location, e.summary);
+         const detailsBtn = (e.href && e.href !== '#')
+           ? '<a href="' + ltSafeUrl(e.href) + '" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;min-height:34px;border-radius:10px;text-decoration:none;font-weight:800;font-size:0.72rem;color:var(--text-primary);background:#fff;border:1px solid rgba(221,210,196,0.95);">View Details</a>'
+           : '';
+         const summary = e.summary
+           ? '<div style="font-size:0.72rem;color:var(--text-secondary);margin-top:7px;line-height:1.45;">' + ltEsc(e.summary.slice(0, 160)) + (e.summary.length > 160 ? '…' : '') + '</div>'
+           : '';
+         const locLine = e.location
+           ? '<div style="display:flex;gap:5px;align-items:flex-start;font-size:0.72rem;color:var(--text-secondary);font-weight:600;margin-top:6px;"><span aria-hidden="true">📍</span><span>' + ltEsc(e.location) + '</span></div>'
+           : '';
+         html += '<div style="border:1px solid rgba(221,210,196,0.85);border-radius:16px;overflow:hidden;box-shadow:0 6px 16px rgba(32,48,45,0.08);background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(249,246,240,0.92));margin-bottom:12px;">'
+           + '<div style="padding:12px 13px 13px;">'
+             + '<div style="font-size:0.72rem;font-weight:800;letter-spacing:0.01em;color:var(--forest);">' + ltEsc(range) + '</div>'
+             + '<div style="font-size:0.92rem;font-weight:800;line-height:1.18;letter-spacing:-0.01em;margin-top:3px;color:var(--text-primary);">' + ltEsc(e.title) + '</div>'
+             + badge
+             + locLine
+             + summary
+             + '<div style="display:flex;flex-direction:column;gap:8px;margin-top:11px;">'
+               + '<a href="' + ltSafeUrl(calUrl) + '" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:6px;min-height:34px;border-radius:10px;text-decoration:none;font-weight:800;font-size:0.72rem;color:var(--forest);background:rgba(39,69,63,0.08);border:1px solid rgba(39,69,63,0.15);">📅 Add to Calendar</a>'
+               + detailsBtn
+             + '</div>'
+           + '</div>'
+         + '</div>';
+       });
+       list.innerHTML = html;
+       card.style.display = html ? '' : 'none';
+     }
+
      function loadLiveEvents() {
        // Load gov-data.js FIRST (TELLURIDE_FESTIVALS → festival sidebar + the
        // 90-day festival cards), then gov-helpers.js (the event data feeds).
@@ -1516,17 +1600,27 @@
                // an ongoing event (e.g. a month-long Hikeathon) keeps showing
                // even after its start date has slipped into the past.
                let endDiff = diff;
+               let endDateStr = '';
+               let isLongRunning = false;
                if (e.endDate) {
                  const ed = new Date(String(e.endDate));
                  if (!isNaN(ed)) {
-                   const edStr = ed.toLocaleDateString('en-CA', { timeZone: 'America/Denver' });
-                   endDiff = (new Date(edStr + 'T00:00:00') - today) / 86400000;
+                   endDateStr = ed.toLocaleDateString('en-CA', { timeZone: 'America/Denver' });
+                   endDiff = (new Date(endDateStr + 'T00:00:00') - today) / 86400000;
+                   // "Long-running" = spans a week or more (e.g. the 4-week
+                   // Rotary Hikeathon, May 31–June 28). These render in the
+                   // left sidebar instead of as a single date-pinned card in
+                   // the grid. Festivals have their own sidebar, so exclude.
+                   const spanDays = (new Date(endDateStr + 'T00:00:00') - new Date(dateStr + 'T00:00:00')) / 86400000;
+                   isLongRunning = !e.isFestival && spanDays >= 7;
                  }
                }
                if (endDiff < 0 || diff > maxDays) return;
                live.push({
                  title: e.title,
                  date: dateStr,
+                 endDate: endDateStr,
+                 isLongRunning,
                  // Prefer an explicit time string (e.g. curated "5:00 – 7:00 PM");
                  // otherwise derive it from an ISO datetime in Mountain Time so
                  // an 8pm MT event reads "8:00 PM" for every viewer.
@@ -1628,10 +1722,14 @@
                  keys.forEach(k => seenKeys.add(k));
                  return true;
                });
+               // Divert long-running (multi-week) events into the left
+               // sidebar; the grid shows only normal date-pinned events.
+               renderLongRunningSidebar(deduped.filter(i => i.isLongRunning));
                if (deduped.length > 0) {
                  EVENTS.length = 0;
-                 deduped.sort((a,b) => a.date.localeCompare(b.date));
-                 deduped.forEach(e => EVENTS.push(e));
+                 deduped.filter(i => !i.isLongRunning)
+                   .sort((a,b) => a.date.localeCompare(b.date))
+                   .forEach(e => EVENTS.push(e));
                  render();
                }
              }
