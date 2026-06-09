@@ -34,3 +34,6 @@ smc-watch.log
 # during GH Actions runs and during local dev. Never commit.
 scripts/node_modules/
 node_modules/
+
+# Daily review findings — transient, read by maintenance.yml issue step, never committed
+review-findings.log

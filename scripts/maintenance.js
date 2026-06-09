@@ -18,11 +18,15 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const { execSync } = require('child_process');
 
 const REPO_ROOT = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
 const GOV_HELPERS_JS = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
 const COMMUNITY_PULSE_JS = path.join(REPO_ROOT, 'js', 'community-pulse.js');
 const INDEX_HTML = path.join(REPO_ROOT, 'index.html');
+// Daily deterministic code/site review findings (gitignored — read by the
+// "Daily review findings" issue step in maintenance.yml, never committed).
+const REVIEW_FINDINGS_FILE = path.join(REPO_ROOT, 'review-findings.log');
 
 const NEWS_MAX_AGE_DAYS = 14;
 const PULSE_MAX_AGE_DAYS = 5;
@@ -31,6 +35,7 @@ const LINK_TIMEOUT_MS = 10000;
 
 let issues = [];
 let changed = false;
+let reviewFindings = [];   // daily deterministic code/site review (separate from liveness `issues`)
 
 // ── HTTP helper ──
 function checkUrl(url) {
@@ -453,6 +458,114 @@ async function checkMailchimpDigests() {
 // ── Main ──
 // ══════════════════════════════════════════════════════════════
 
+// ══════════════════════════════════════════════════════════════
+// ── Daily deterministic code/site review ──
+// The pass/fail half of the manual review: JS syntax breakage,
+// broken internal links / missing assets, and top-nav drift.
+// Findings go to reviewFindings[] → review-findings.log → a
+// dedicated GitHub issue (see maintenance.yml). Judgment-level
+// review (data quality, UX) is the weekly Claude pass's job.
+// ══════════════════════════════════════════════════════════════
+
+const CANONICAL_NAV = ['Local News','Gov-Hub','Deep Dives','Events','Hub-Bub','Local Orgs','Projects Map','About','Donate'];
+
+// Every .html that can carry the public top-nav (root + known subdirs).
+function reviewHtmlFiles() {
+  const out = [];
+  for (const d of ['.', 'projects-map', 'v2']) {
+    const dir = path.join(REPO_ROOT, d);
+    if (!fs.existsSync(dir)) continue;
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (e.isFile() && e.name.endsWith('.html')) out.push(path.join(dir, e.name));
+    }
+  }
+  return out;
+}
+
+// 1. JS syntax — node --check every shipped/bot-managed script. A dropped
+//    declaration in gov-data.js/gov-helpers.js silently breaks the site.
+function reviewJsSyntax() {
+  console.log('\n🔎 Review: JS syntax (node --check)');
+  for (const d of ['js', 'scripts']) {
+    const dir = path.join(REPO_ROOT, d);
+    if (!fs.existsSync(dir)) continue;
+    for (const f of fs.readdirSync(dir).filter(x => x.endsWith('.js'))) {
+      try {
+        execSync(`node --check ${JSON.stringify(path.join(dir, f))}`, { stdio: 'pipe' });
+      } catch (e) {
+        const out = ((e.stderr && e.stderr.toString()) || e.message || '');
+        const line = out.split('\n').find(l => /Error/.test(l)) || 'parse error';
+        reviewFindings.push(`JS syntax error in ${d}/${f}: ${line.trim()}`);
+      }
+    }
+  }
+}
+
+// 2. Broken internal links / missing assets — every local href/src that
+//    looks like a real static path must resolve on disk. Conservative:
+//    rejects template literals and JS-built URLs to avoid false positives.
+function reviewBrokenAssets() {
+  console.log('\n🔎 Review: broken internal links / missing assets');
+  const ref = /(?:href|src)\s*=\s*"([^"]+)"/g;
+  for (const fp of reviewHtmlFiles()) {
+    const src = fs.readFileSync(fp, 'utf8');
+    const relName = path.relative(REPO_ROOT, fp);
+    const fileDir = path.dirname(fp);
+    const seen = new Set();
+    let m;
+    while ((m = ref.exec(src)) !== null) {
+      const raw = m[1].trim();
+      // External (non-livabletelluride) hosts, anchors, and non-http schemes — skip.
+      if (/^(https?:)?\/\//i.test(raw) && !/^https?:\/\/(www\.)?livabletelluride\.org/i.test(raw)) continue;
+      if (/^(#|mailto:|tel:|javascript:|data:)/i.test(raw)) continue;
+      let url = raw.replace(/^https?:\/\/(www\.)?livabletelluride\.org/i, '').split('#')[0].split('?')[0];
+      if (!url) continue;
+      // Only plain static path characters count as a real reference. This
+      // rejects ${expr}, ' + var + ', and other runtime-built src/href.
+      if (!/^[\w\-./%~]+$/.test(url)) continue;
+      let rel;
+      try { rel = decodeURIComponent(url); } catch (_) { continue; }
+      if (seen.has(rel)) continue; seen.add(rel);
+      let target = rel.startsWith('/') ? path.join(REPO_ROOT, rel.slice(1)) : path.join(fileDir, rel);
+      if (rel.endsWith('/')) target = path.join(target, 'index.html');
+      if (!fs.existsSync(target)) reviewFindings.push(`Missing asset in ${relName}: "${raw}"`);
+    }
+  }
+}
+
+// 3. Top-nav consistency — every page that carries the public nav must
+//    have the canonical link set (no missing or stray links). Order/style
+//    drift is intentionally not flagged here (too noisy for a daily gate).
+function reviewNav() {
+  console.log('\n🔎 Review: top-nav consistency');
+  const navRe = /<nav class="topnav-links"[^>]*>([\s\S]*?)<\/nav>/;
+  for (const fp of reviewHtmlFiles()) {
+    const m = fs.readFileSync(fp, 'utf8').match(navRe);
+    if (!m) continue; // no public top-nav (legal/admin/utility page) — skip
+    const labels = [...m[1].matchAll(/<a[^>]*>([^<]*)<\/a>/g)]
+      .map(x => x[1].replace(/\s+/g, ' ').trim()).filter(Boolean);
+    const rel = path.relative(REPO_ROOT, fp);
+    const missing = CANONICAL_NAV.filter(c => !labels.includes(c));
+    const extra = labels.filter(l => !CANONICAL_NAV.includes(l));
+    if (missing.length) reviewFindings.push(`Nav in ${rel} missing: ${missing.join(', ')}`);
+    if (extra.length)   reviewFindings.push(`Nav in ${rel} unexpected link(s): ${extra.join(', ')}`);
+  }
+}
+
+function runDailyReview() {
+  reviewJsSyntax();
+  reviewBrokenAssets();
+  reviewNav();
+  if (reviewFindings.length > 0) {
+    console.log(`\n🔎 Daily review: ${reviewFindings.length} finding(s):`);
+    reviewFindings.forEach(f => console.log(`  - ${f}`));
+    fs.writeFileSync(REVIEW_FINDINGS_FILE, reviewFindings.map(f => `- ${f}`).join('\n') + '\n');
+  } else {
+    console.log('\n🔎 Daily review: no findings.');
+    if (fs.existsSync(REVIEW_FINDINGS_FILE)) fs.unlinkSync(REVIEW_FINDINGS_FILE);
+  }
+}
+
 async function main() {
   console.log('═══════════════════════════════════════════════');
   console.log('  Telluride Gov Hub — Daily Maintenance');
@@ -474,6 +587,9 @@ async function main() {
   await checkFeedFreshness();
   await checkEventsSheet();
   await checkMailchimpDigests();
+
+  // Deterministic daily code/site review (JS syntax, broken assets, nav).
+  runDailyReview();
 
   // Write updated files
   if (changed) {
