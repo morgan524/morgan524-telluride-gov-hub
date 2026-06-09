@@ -1799,6 +1799,16 @@ const TOPIC_DEFINITIONS = {
    as you discover them. */
 const LOCAL_ORGS = [
     {
+      name: "Tri-County Health Network",
+      category: "nonprofits",
+      town: "Telluride",
+      summary: "A nonprofit collaborating with communities across southwest Colorado's tri-county region to improve healthcare access for everyone — running programs in health insurance enrollment, care coordination, food security, mental health, and immigrant and family support.",
+      website: "https://tchnetwork.org/",
+      donate: "https://tchnetwork.org/donate/",
+      social: { facebook: "https://www.facebook.com/TriCountyHealthNetworkTelluride", instagram: "https://www.instagram.com/tchn_co/", twitter: "https://twitter.com/TCHNetwork_CO" },
+      logo: "https://livabletelluride.org/logo/Telluride%20Tri-County%20Health.png"
+    },
+    {
       name: "Telluride Mountain Club",
       category: "recreation",
       town: "Telluride",
