@@ -6,21 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-family.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming storytime, youth programs, and all-ages activities across the Telluride region.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Jun 2026 14:39:19 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 20:04:42 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Tue, Jun 9] Birding with Katie</title>
-      <link>https://koto.org/event/birding-with-katie/2026-06-09/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/birding%20with%20katie%7C2026-06-09</guid>
-      <pubDate>Tue, 09 Jun 2026 14:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/1.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Patagonia Telluride, TELLURIDE
-
-Join local birder Katie Triest for an intro discussion about the birds of Telluride at the Telluride Patagonia store on June 8th from 5-6 and for a bird walk with Katie leaving from the Telluride Patagonia store on June 9th at 8:30 am. Folks can sign up for the bird walk on Patagonia's Instagram or come on into the Patagonia store. The talk and walk are free and open to all ages.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/06/1.png" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
     <item>
       <title>[Tue, Jun 9] Storytime / Hora de Cuentos</title>
       <link>https://telluridelibrary.libcal.com/event/16772756?hs=a</link>

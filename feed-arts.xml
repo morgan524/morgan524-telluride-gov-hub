@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming concerts, film, theater, gallery openings, and festivals across the Telluride region.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Jun 2026 14:39:19 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 20:04:42 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Tue, Jun 9] Augment Summer Music Series</title>
@@ -59,6 +59,19 @@ In collaboration with Sheep Mountain Alliance and Eco Action Partners, Patagonia
       <media:content url="https://koto.org/wp-content/uploads/2026/06/FOREVER-WILD-poster.png" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Thu, Jun 11] Telluride Gold Kings</title>
+      <link>https://www.telluride.com/event/telluride-gold-kings/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20gold%20kings%7C2026-06-11</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Dance and sing along with the Telluride Gold Kings every Thursday this summer. Free admission!]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
     </item>
   </channel>
 </rss>

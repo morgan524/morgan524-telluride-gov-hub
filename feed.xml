@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s news, upcoming Gov-Hub meetings, and events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Jun 2026 14:39:19 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 20:04:42 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Board of Directors Meeting — 2026-06-16</title>
@@ -42,6 +42,17 @@ Agenda not yet available]]></description>
       <category>Town of Norwood</category>
     </item>
     <item>
+      <title>[Meeting] Judicial Subcommittee - Jun 12 2026 — 2026-06-12</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-12%7CJudicial%20Subcommittee%20-%20Jun%2012%202026</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-06-12
+
+The June 12, 2026 Judicial Subcommittee agenda hasn't been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
+    </item>
+    <item>
       <title>[Meeting] SMART Board of Directors — 2026-06-11</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/smart%7C2026-06-11%7CSMART%20Board%20of%20Directors</guid>
@@ -70,7 +81,7 @@ Agenda not available]]></description>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-06-11
 
-The June 11 2026 SMART meeting agenda hasn't been posted yet.]]></description>
+The June 11 SMART meeting agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -123,6 +134,19 @@ Take a historic tour of Telluride on foot! These historic walking tours are led 
 
 Free tasting every Thursday from 4-6pm. The theme of the tasting will vary from different seasonal selections in wine, …]]></description>
       <media:content url="https://www.telluride.com/site/assets/files/62697/screenshot_2026-06-03_at_1_50_16_pm.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Thu, Jun 11] Telluride Gold Kings</title>
+      <link>https://www.telluride.com/event/telluride-gold-kings/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20gold%20kings%7C2026-06-11</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Dance and sing along with the Telluride Gold Kings every Thursday this summer. Free admission!]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
     </item>
@@ -184,7 +208,7 @@ Looking to enjoy an afternoon of friendly games of mah-jongg for independent pla
       <guid isPermaLink="false">https://livabletelluride.org/event/town%20talk%20can%20we%7C2026-06-10</guid>
       <pubDate>Wed, 10 Jun 2026 00:30:00 GMT</pubDate>
       <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Telluride Innovation Center
+📍 Telluride Conference Center, Mountain Village
 
 This town talk will be presented by Derek Posselt, Principal Scientist, NASA Jet Propulsion Laboratory. If you live on planet Earth, you have had to worry about the weather at some point. Most of us have heard some version of the expression: “If you don’t like the weather, wait 5 minutes, and it will change.” Many of us wish we had the ability to do something about it. This is not a new impulse. Humans have been trying to change the weather for over a century. Posselt will review the ways people have tried to modify the weather, what has worked (and what hasn’t), and whether it is, in fact, a good idea to try in the first place.]]></description>
       <media:content url="https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A.png" medium="image" />
@@ -359,17 +383,14 @@ The Wilkinson Public Library presents I Heart Art, an outdoor program on the Low
       <category>Wilkinson Public Library</category>
     </item>
     <item>
-      <title>[Tue, Jun 9] Birding with Katie</title>
-      <link>https://koto.org/event/birding-with-katie/2026-06-09/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/birding%20with%20katie%7C2026-06-09</guid>
-      <pubDate>Tue, 09 Jun 2026 14:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/1.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Patagonia Telluride, TELLURIDE
-
-Join local birder Katie Triest for an intro discussion about the birds of Telluride at the Telluride Patagonia store on June 8th from 5-6 and for a bird walk with Katie leaving from the Telluride Patagonia store on June 9th at 8:30 am. Folks can sign up for the bird walk on Patagonia's Instagram or come on into the Patagonia store. The talk and walk are free and open to all ages.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/06/1.png" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
+      <title>Summer air service includes new LA flights</title>
+      <link>https://www.telluridenews.com/news/article_3e628215-2a5a-425f-8152-87b39e99b29b.html</link>
+      <guid isPermaLink="false">https://www.telluridenews.com/news/article_3e628215-2a5a-425f-8152-87b39e99b29b.html</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/74/674c1a2c-a27f-45d3-a156-aa89f61bdc2d/6a282609628ba.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Montrose airport is adding new LA flights this summer along with more frequent service from Chicago and Houston, though Phoenix flights to Telluride got cut back to twice weekly after last winter's ski patrol strike hurt bookings. Overall summer air capacity is projected up about 5% from last year, with strong advance reservations despite concerns about fuel costs from global conflicts affecting travel planning.]]></description>
+      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/74/674c1a2c-a27f-45d3-a156-aa89f61bdc2d/6a282609628ba.image.jpg" medium="image" />
+      <category>Telluride Times</category>
+      <category>community</category>
     </item>
     <item>
       <title>‘Art doesn’t have rules’</title>
@@ -389,6 +410,15 @@ Join local birder Katie Triest for an intro discussion about the birds of Tellur
       <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/97/297812b1-fc13-4f49-a123-b619b6e0015d/6a212c6857b30.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />NASA scientist Derek Posselt will discuss weather modification through cloud seeding at the next Telluride Science Town Talk, exploring how microscopic particles in the atmosphere can be manipulated to trigger precipitation. While some countries actively seed clouds to increase rainfall, Posselt will cover the complex and often unpredictable consequences of interfering with atmospheric systems.]]></description>
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/97/297812b1-fc13-4f49-a123-b619b6e0015d/6a212c6857b30.image.jpg" medium="image" />
       <category>Telluride Times</category>
+      <category>public-safety</category>
+    </item>
+    <item>
+      <title>Finding of the Town Manager Enacting Town Wide Fire Ban</title>
+      <link>https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/POST-Town-Wide-Fire-Ban---Stage-1-Restrictions---June-9%2C-2026---signed_0.pdf</link>
+      <guid isPermaLink="false">https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/POST-Town-Wide-Fire-Ban---Stage-1-Restrictions---June-9%2C-2026---signed_0.pdf</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Press release from the Town of Ridgway. Click to view the full PDF.]]></description>
+      <category>Town of Ridgway</category>
       <category>public-safety</category>
     </item>
     <item>
@@ -660,34 +690,6 @@ Telluride's local non-profit organization Augment Music Project is hosting month
       <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c2/ec2c1fea-a838-4050-8fba-1b4c58dfd4b2/6a2086635a139.image.jpg" medium="image" />
       <category>Telluride Times</category>
       <category>housing</category>
-    </item>
-    <item>
-      <title>All hail the queen</title>
-      <link>https://www.telluridenews.com/opinion/columnists/article_0e9cb9a3-e7f0-47e4-b916-2abf20f89a3b.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/opinion/columnists/article_0e9cb9a3-e7f0-47e4-b916-2abf20f89a3b.html</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/86/386f6732-2711-4c31-a33f-6a5ca70ff245/6a1fe68850795.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />A local writer shares the story of a garter snake queen who claimed territory beneath a concrete slab, emerging each morning to sun herself on the lawn and raising babies over several summers. The homeowner carefully worked around her domain during mowing and trimming, but this year she hasn't appeared. These quiet wildlife dramas play out all around us if we pay attention.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/86/386f6732-2711-4c31-a33f-6a5ca70ff245/6a1fe68850795.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>Ridgway Athletic Park Stakeholder Meeting Notice</title>
-      <link>https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Athletic-Park-Stakeholder-Meeting-Notice.pdf</link>
-      <guid isPermaLink="false">https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Athletic-Park-Stakeholder-Meeting-Notice.pdf</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Press release from the Town of Ridgway. Click to view the full PDF.]]></description>
-      <category>Town of Ridgway</category>
-      <category>recreation</category>
-    </item>
-    <item>
-      <title>Newscast 6-4-26</title>
-      <link>https://koto.org/news/newscast-6-4-26/</link>
-      <guid isPermaLink="false">https://koto.org/news/newscast-6-4-26/</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Norwood Enters Stage 1 Fire Restrictions; West End Roundup with the San Miguel Basin Forum; Taxpayer Dollars Support Mental Health Services]]></description>
-      <category>KOTO Community Radio</category>
-      <category>public-safety</category>
     </item>
   </channel>
 </rss>
