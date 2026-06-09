@@ -1807,6 +1807,7 @@ const COMMUNITY_EVENTS = [
     endDate: "June 28, 2026",
     location: "",
     eventTimes: "11:00 AM kickoff",
+    img: "https://clubrunner.blob.core.windows.net/00000003291/Images/Hikathon-simplified-logo-SMALL.png",
     copy: "Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four weeks of hiking from May 31 through June 28, with a kickoff at 11am on May 31 at the Oak Street gondola plaza. Hike from anywhere and raise funds for the Telluride Rotary Foundation — supporting scholarships, Youth Exchange, international projects, and community grants. 60% of nonprofit team funds go directly back to their nonprofit. Sponsored by Alpine Bank and Jagged Edge Mountain Gear.",
     href: "https://www.facebook.com/telluriderotary/",
     notable: true,
