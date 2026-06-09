@@ -6,19 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-civic.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming council, commission, and board meetings across the region — with comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Jun 2026 20:10:52 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 02:38:53 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Meeting] San Miguel Basin Fair Board — 2026-06-08</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-06-08%7CSan%20Miguel%20Basin%20Fair%20Board</guid>
-      <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[San Miguel County • 2026-06-08
-
-The San Miguel Basin Fair Board meets to review junior livestock sale terms and update bylaws for the upcoming fair season.]]></description>
-      <category>Meeting</category>
-      <category>San Miguel County</category>
-    </item>
     <item>
       <title>[Meeting] Telluride Board of Education Work Session — 2026-06-09</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
@@ -103,7 +92,7 @@ Agenda not available]]></description>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-06-11
 
-The June 11 SMART meeting agenda hasn't been posted yet.]]></description>
+The June 11 SMART agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -117,6 +106,28 @@ The June 11 SMART meeting agenda hasn't been posted yet.]]></description>
 Agenda not yet available]]></description>
       <category>Meeting</category>
       <category>Town of Norwood</category>
+    </item>
+    <item>
+      <title>[Meeting] Board of Directors Meeting — 2026-06-16</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/fire%7C2026-06-16%7CBoard%20of%20Directors%20Meeting</guid>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Telluride Fire Protection District • 2026-06-16
+
+Agenda not yet available]]></description>
+      <category>Meeting</category>
+      <category>Telluride Fire Protection District</category>
+    </item>
+    <item>
+      <title>[Meeting] General Assembly Meeting — 2026-06-16</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/ophir%7C2026-06-16%7CGeneral%20Assembly%20Meeting</guid>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Ophir • 2026-06-16
+
+Agenda not yet available]]></description>
+      <category>Meeting</category>
+      <category>Town of Ophir</category>
     </item>
   </channel>
 </rss>
