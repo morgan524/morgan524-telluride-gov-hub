@@ -1389,6 +1389,15 @@
        const title = (e.title || '').toLowerCase();
        return /\b(board of trustees|town council|city council|board of county commissioners|county commissioners|planning (and|&) zoning|planning commission|sanitation district|water district|fire district|hospital district|metro(politan)? district|school board|board of education|design review board)\b/.test(title);
      }
+     // "Closed for Labor Day"-style holiday/office closure notices aren't
+     // community events. "Closed"/"Closure" = a shutdown announcement;
+     // "Closing" (reception, night, party) IS a real event, so it's
+     // deliberately not matched.
+     function isClosureNotice(e) {
+       if (!e) return false;
+       if (String(e.category || '').toLowerCase() === 'town closure') return true;
+       return /\b(closed|closure)\b/i.test(e.title || '');
+     }
      // Brand-logo overrides for ongoing-event cards. Bot-synced sources
      // (telluride.com) carry a poster image, not the org's logo — match on
      // the (decoded) title or link and substitute a local brand logo.
@@ -1615,6 +1624,7 @@
              const pushEvent = (e, sourceLabel) => {
                if (!e || !e.title) return;
                if (isGovMeeting(e)) return;   // gov meeting notices live in Gov-Hub, not Events
+               if (isClosureNotice(e)) return; // holiday/office closure notices aren't events
                const start = e.pubDate || e.start_date || e.date || '';
                // Resolve the calendar date in Mountain Time (America/Denver) so
                // a Friday-evening MT event renders on Friday for all viewers —
