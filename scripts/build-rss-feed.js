@@ -22,11 +22,22 @@
 
 const fs = require('fs');
 const path = require('path');
+const https = require('https');
+const crypto = require('crypto');
 
 const REPO_ROOT = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
 const GOV_HELPERS_JS = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
 const FEED_OUT = path.join(REPO_ROOT, 'feed.xml');
 const BLOG_FEED_OUT = path.join(REPO_ROOT, 'feed-blog.xml');
+
+// ── "Week Ahead" AI lede + notable-meeting flags ──
+// One Claude call per build (cached by the week's lineup hash) writes a
+// short Rick-voice synthesis that leads the digest, and flags the meetings
+// with a genuinely consequential agenda item. Degrades gracefully: no key
+// / API error / parse error → feed builds normally with no lede or flags.
+const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
+const CLAUDE_MODEL = 'claude-sonnet-4-20250514';
+const WEEK_AHEAD_CACHE = path.join(REPO_ROOT, 'data', 'week-ahead-cache.json');
 
 // ── Per-topic event feeds (pilot, 2026-06) ──
 // Each powers one RSS-driven Mailchimp campaign targeting the matching
@@ -436,10 +447,157 @@ function buildBlogItems(posts) {
 }
 
 // ──────────────────────────────────────────────────────────────
+// "Week Ahead" AI lede + notable-meeting flags
+// ──────────────────────────────────────────────────────────────
+
+function callClaudeJson(prompt, maxTokens) {
+  const body = JSON.stringify({
+    model: CLAUDE_MODEL,
+    max_tokens: maxTokens || 800,
+    messages: [{ role: 'user', content: prompt }],
+  });
+  return new Promise((resolve, reject) => {
+    const req = https.request({
+      hostname: 'api.anthropic.com', path: '/v1/messages', method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01',
+        'Content-Length': Buffer.byteLength(body),
+      },
+      timeout: 45000,
+    }, (res) => {
+      let data = '';
+      res.on('data', (c) => data += c);
+      res.on('end', () => {
+        try {
+          const json = JSON.parse(data);
+          if (json.error) { reject(new Error(json.error.message)); return; }
+          resolve((json.content?.[0]?.text || '').trim());
+        } catch (e) { reject(e); }
+      });
+    });
+    req.on('error', reject);
+    req.on('timeout', () => { req.destroy(); reject(new Error('Claude API timeout')); });
+    req.write(body); req.end();
+  });
+}
+
+function weekAheadPrompt(meetings, events) {
+  return [
+    'You are "Rick" — a long-time Telluride local writing the one-paragraph intro to Livable Telluride\'s weekly community email. You\'ve seen it all, you love this valley, and you\'re not cynical but you pay attention when something real is at stake. Voice: warm, plain-spoken, grounded.',
+    '',
+    'Below are the UPCOMING government meetings and community events for the coming week (Friday through Thursday) across the Telluride region.',
+    '',
+    'Return ONLY a JSON object (no markdown fence) with exactly two fields:',
+    '',
+    '1. "lede": a 2-4 sentence (50-90 word) plain-prose intro that orients a busy local. LEAD with the single biggest or most important thing this week, then briefly fold in the rest. Be specific and grounded — only use what\'s in the lists below; never invent times, prices, lineups, vote outcomes, or details you weren\'t given. No greeting, no sign-off, no "Rick here", no calls to action, no emoji.',
+    '',
+    '2. "notable": an array of the MEETINGS (referenced by their "id") that have a genuinely consequential or actionable item on the agenda — a vote, public hearing, ordinance/code change, contentious land-use or zoning item, budget/mill-levy/tax decision, or an open public-comment opportunity. For each, give a "stake": a one-line (<=15 word) reason a resident should care. ONLY include a meeting if its summary ACTUALLY reveals such an item. If a meeting\'s agenda is "not yet available"/"unavailable"/"TBD"/routine, OMIT it. Returning an empty array is correct and expected when no agendas reveal a real decision.',
+    '',
+    'MEETINGS:',
+    JSON.stringify(meetings, null, 1),
+    '',
+    'EVENTS:',
+    JSON.stringify(events, null, 1),
+  ].join('\n');
+}
+
+async function generateWeekAhead(meetingItems, eventItems) {
+  if (!ANTHROPIC_API_KEY) {
+    console.log('  ℹ No ANTHROPIC_API_KEY — skipping Week Ahead lede + flags');
+    return null;
+  }
+  const meetings = meetingItems.map((m, i) => ({
+    id: i,
+    title: String(m.title || '').replace(/^\[Meeting\]\s*/, ''),
+    summary: String(m.description || '').replace(/\s+/g, ' ').trim().slice(0, 400),
+  }));
+  const events = eventItems.map((e) => ({
+    title: String(e.title || '').replace(/^\[[^\]]*\]\s*/, ''),
+    when: e.pubDate instanceof Date
+      ? e.pubDate.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'UTC' })
+      : '',
+    where: (Array.isArray(e.categories) && e.categories[1]) || '',
+  }));
+  const hash = crypto.createHash('sha1')
+    .update(JSON.stringify({ m: meetings, e: events.map((e) => `${e.title}|${e.when}`) }))
+    .digest('hex');
+
+  try {
+    const cached = JSON.parse(fs.readFileSync(WEEK_AHEAD_CACHE, 'utf8'));
+    if (cached && cached.hash === hash && cached.lede) {
+      console.log('  ✓ Week Ahead cache hit (lineup unchanged)');
+      return { lede: cached.lede, notable: cached.notable || [] };
+    }
+  } catch (_) { /* no cache yet */ }
+
+  let raw;
+  try {
+    raw = await callClaudeJson(weekAheadPrompt(meetings, events), 900);
+  } catch (e) {
+    console.warn(`  ⚠ Week Ahead generation failed: ${e.message} — building feed without it`);
+    return null;
+  }
+  if (!raw) return null;
+  let parsed;
+  try {
+    parsed = JSON.parse(raw.replace(/^```(?:json)?/i, '').replace(/```$/i, '').trim());
+  } catch (e) {
+    console.warn('  ⚠ Week Ahead JSON parse failed — building feed without it');
+    return null;
+  }
+  if (!parsed || typeof parsed.lede !== 'string' || !parsed.lede.trim()) return null;
+  const result = {
+    lede: parsed.lede.trim(),
+    notable: Array.isArray(parsed.notable)
+      ? parsed.notable.filter((n) => n && Number.isInteger(n.id) && typeof n.stake === 'string' && n.stake.trim())
+      : [],
+  };
+  try {
+    fs.mkdirSync(path.dirname(WEEK_AHEAD_CACHE), { recursive: true });
+    fs.writeFileSync(WEEK_AHEAD_CACHE, JSON.stringify({ hash, ...result }, null, 2) + '\n');
+  } catch (_) { /* cache write is best-effort */ }
+  console.log(`  ✓ Week Ahead lede generated (${result.notable.length} notable meeting(s) flagged)`);
+  return result;
+}
+
+// Prepend the lede as the first feed item and flag the notable meetings
+// IN PLACE on their meeting objects. Returns nothing; mutates inputs.
+function applyWeekAhead(items, meetingItems, weekAhead) {
+  if (!weekAhead) return;
+  // Flag notable meetings (objects are shared with `items` by reference).
+  for (const n of weekAhead.notable || []) {
+    const m = meetingItems[n.id];
+    if (!m) continue;
+    if (!/^⚡/.test(m.title)) m.title = '⚡ ' + m.title;
+    m.description = `${m.description}\n\n⚡ Why it matters: ${n.stake.trim()}`;
+  }
+  // Prepend the lede item so it's always first in the email.
+  if (weekAhead.lede) {
+    const now = new Date();
+    const end = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 6));
+    const fmt = (d) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+    const range = `${fmt(now)}–${end.toLocaleDateString('en-US', { day: 'numeric', timeZone: 'UTC' })}`;
+    const yr = now.getUTCFullYear();
+    // Week-stable GUID so Mailchimp sends the lede once per weekly digest.
+    const weekKey = `${yr}-${Math.floor((Date.UTC(yr, now.getUTCMonth(), now.getUTCDate()) - Date.UTC(yr, 0, 1)) / (7 * 86400000))}`;
+    items.unshift({
+      title: `📅 The Week Ahead — ${range}`,
+      link: `${SITE_URL}/events.html`,
+      pubDate: now,
+      description: weekAhead.lede,
+      categories: ['The Week Ahead'],
+      guid: `${SITE_URL}/week-ahead/${weekKey}`,
+    });
+  }
+}
+
+// ──────────────────────────────────────────────────────────────
 // Main
 // ──────────────────────────────────────────────────────────────
 
-function main() {
+async function main() {
   console.log('═══════════════════════════════════════════════');
   console.log('  Building RSS feed for Mailchimp');
   console.log(`  ${new Date().toISOString()}`);
@@ -510,6 +668,12 @@ function main() {
     tcomEvents,
   );
 
+  // "Week Ahead" AI lede + notable-meeting flags (best-effort; null if the
+  // API key is absent or generation fails). Applied to the main feed below.
+  let weekAhead = null;
+  try { weekAhead = await generateWeekAhead(meetingItems, eventItems); }
+  catch (e) { console.warn(`  ⚠ Week Ahead skipped: ${e.message}`); }
+
   // Main digest feed: upcoming Gov-Hub meetings + community events.
   // News was REMOVED 2026-06-09 per request — the weekly email is now a
   // forward-looking "what's coming up" digest only. The news builders and
@@ -533,6 +697,10 @@ function main() {
     .filter((it) => it.pubDate instanceof Date && !isNaN(it.pubDate.getTime()))
     .sort((a, b) => a.pubDate - b.pubDate)
     .slice(0, MAX_ITEMS);
+
+  // Flag the notable meetings (in place) and prepend the Week Ahead lede so
+  // it's the first thing in the email.
+  applyWeekAhead(items, meetingItems, weekAhead);
 
   // No minimum-item filler — if nothing is genuinely new, Mailchimp should not send.
 
@@ -612,4 +780,4 @@ ${itemsXml}
   console.log(`✅ Wrote ${outPath} (${xml.length} bytes)`);
 }
 
-main();
+main().catch((err) => { console.error('Fatal error:', err); process.exit(1); });

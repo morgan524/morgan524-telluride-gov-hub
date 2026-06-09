@@ -75,6 +75,10 @@ jobs:
           node scripts/content-refresh.js 2>&1 | tee /tmp/content-refresh.log
 
       - name: Build RSS feed (feed.xml) for Mailchimp
+        env:
+          # Powers the "Week Ahead" AI lede + notable-meeting flags in
+          # build-rss-feed.js. Absent key → feed still builds, just without them.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           set -o pipefail
           node scripts/build-rss-feed.js 2>&1 | tee /tmp/build-rss-feed.log
