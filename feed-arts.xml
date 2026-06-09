@@ -6,21 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming concerts, film, theater, gallery openings, and festivals across the Telluride region.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Jun 2026 02:38:53 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 09:36:04 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Tue, Jun 9] Cardio Dance (Baile Cardio) with Kelsey</title>
-      <link>https://telluridelibrary.libcal.com/event/16548369?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/cardio%20dance%20baile%20cardio%7C2026-06-09</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1768253322.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Upper Terrace
-
-6:00 PM – 7:00 PM · Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won&#39;t even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday every month. &iexcl;&Uacute;nete a nosotros para una divertida noche de baile y ejercicio! Te divertir&aacute;s tanto que ni te dar&aacute;s cuenta de que est&aacute;s haciendo ejercicio. Dirigido por Kelsey Trottier del Telluride Dance Collective.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1768253322.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
     <item>
       <title>[Tue, Jun 9] Augment Summer Music Series</title>
       <link>https://www.telluride.com/event/augment-summer-music-series/</link>
@@ -33,6 +20,19 @@ Telluride's local non-profit organization Augment Music Project is hosting month
       <media:content url="https://www.telluride.com/site/assets/files/53672/download_1.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Tue, Jun 9] Community Conversations: Beyond the Buzz</title>
+      <link>https://telluridelibrary.libcal.com/event/16781613?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/community%20conversations%20beyond%20the%7C2026-06-09</guid>
+      <pubDate>Tue, 09 Jun 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_21_11_41_24.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+5:00 PM – 7:00 PM · Beyond the Buzz: reimagining festival culture with care and awareness. M&aacute;s all&aacute; del alcohol: cambiando la cultura de festivales con cuidad y conciencia.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_21_11_41_24.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Wed, Jun 10] Forever Wild</title>
@@ -57,43 +57,6 @@ Patagonia Telluride in partnership with Sheep Mountain Alliance and EcoAction Pa
 
 In collaboration with Sheep Mountain Alliance and Eco Action Partners, Patagonia Telluride will host a screening of the film, "Forever Wild". We will celebrate Telluride's environmental activists past and present who have fought for the protection of Telluride's precious resources. Discussion to follow film, food provided.]]></description>
       <media:content url="https://koto.org/wp-content/uploads/2026/06/FOREVER-WILD-poster.png" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Thu, Jun 11] Telluride Gold Kings</title>
-      <link>https://www.telluride.com/event/telluride-gold-kings/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20gold%20kings%7C2026-06-11</guid>
-      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Dance and sing along with the Telluride Gold Kings every Thursday this summer. Free admission!]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Thu, Jun 11] Telluride Historical Museum – Moments That Made US: San Miguel Stories – Opening Reception</title>
-      <link>https://koto.org/event/telluride-historical-museum-moments-that-made-us-san-miguel-stories-opening-reception/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20historical%20museum%20moments%7C2026-06-11</guid>
-      <pubDate>Thu, 11 Jun 2026 23:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-
-Telluride Historical Museum Announces “Moments That Made US: San Miguel Stories”, New 2026-2027 Annual Exhibition for America 250/Colorado 150 Commemoration Telluride, Colorado, June 1, 2026 — Telluride Historical Museum announces its upcoming 2026-2027 annual exhibit, Moments That Made US: San Miguel Stories, a special exhibition during the America 250/Colorado 150 commemoration that explores how generations of Americans in San Miguel County and beyond have given meaning to the ideals set out in the Declaration of Independence. The exhibition looks back across centuries and highlights both challenging and celebratory times, while exploring five themes drawn directly from the Declaration of Independence: Created Equal; Life, Liberty, and the Pursuit of Happiness; Free and Independent States; Consent of the Governed; and We Mutually Pledge. The featured moments weave together multiple perspectives from some of San Miguel County’s most significant stories alongside defining moments from United States history. …]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Thu, Jun 11] The Creative Exchange at Telluride Arts HQ</title>
-      <link>https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-06-11/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/the%20creative%20exchange%20at%7C2026-06-11</guid>
-      <pubDate>Thu, 11 Jun 2026 23:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Telluride Arts HQ, TELLURIDE
-
-The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. Topics may span everything from the business of art and professional development, to creative process, storytelling, collaboration, and the philosophical underpinnings of making art. Whether you’re a full-time working artist, an educator, a student, a maker, or simply someone curious about creative expression, the Creative Exchange is open to you. …]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
     </item>
