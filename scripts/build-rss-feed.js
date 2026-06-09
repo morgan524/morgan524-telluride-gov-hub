@@ -48,7 +48,7 @@ const COMMUNITY_EVENTS_JSON = path.join(REPO_ROOT, 'community-events.json');
 // Mailchimp campaign. Description updated to match the broader
 // content: news + Gov-Hub meetings coming up + events for the week.
 const FEED_TITLE = 'Livable Telluride — Weekly Digest';
-const FEED_DESC = 'This week\'s news, upcoming Gov-Hub meetings, and events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).';
+const FEED_DESC = 'This week\'s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).';
 const BLOG_FEED_TITLE = 'Livable Telluride — Blog';
 const BLOG_FEED_DESC = 'Long-form posts from Livable Telluride on housing, land use, civic decisions, and the issues shaping our valley.';
 const MAX_AGE_DAYS = 7;             // backward window for news + blog (the past week)
@@ -510,17 +510,20 @@ function main() {
     tcomEvents,
   );
 
-  // Main digest feed: news + meetings + events. Blog posts get their own feed.
+  // Main digest feed: upcoming Gov-Hub meetings + community events.
+  // News was REMOVED 2026-06-09 per request — the weekly email is now a
+  // forward-looking "what's coming up" digest only. The news builders and
+  // the tt/koNews/koFeat/smbf extracts above are left in place but unused,
+  // so re-enabling news is a one-line restore here.
   let items = [
-    ...buildNewsItems('tt', tt, 'Telluride Times'),
-    ...buildNewsItems('koto-newscasts', koNews, 'KOTO Community Radio'),
-    ...buildNewsItems('koto-features', koFeat, 'KOTO Community Radio'),
-    ...buildNewsItems('smbf', smbf, 'San Miguel Basin Forum'),
     ...meetingItems,
     ...eventItems,
   ];
 
-  // De-duplicate by guid, keep newest pubDate, sort newest first, cap.
+  // De-duplicate by guid, keeping the later pubDate on a collision. The feed
+  // is now entirely forward-looking, so sort SOONEST-first — a subscriber
+  // reads the week chronologically (nearest items at the top) instead of
+  // farthest-out-first.
   const byGuid = new Map();
   for (const it of items) {
     const cur = byGuid.get(it.guid);
@@ -528,7 +531,7 @@ function main() {
   }
   items = [...byGuid.values()]
     .filter((it) => it.pubDate instanceof Date && !isNaN(it.pubDate.getTime()))
-    .sort((a, b) => b.pubDate - a.pubDate)
+    .sort((a, b) => a.pubDate - b.pubDate)
     .slice(0, MAX_ITEMS);
 
   // No minimum-item filler — if nothing is genuinely new, Mailchimp should not send.
