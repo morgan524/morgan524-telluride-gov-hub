@@ -174,7 +174,8 @@ const COUNTY_CACHED_DATA = [
     type: 'bocc',
     location: '305 W Colorado Ave, Telluride, CO 81435',
     civicClerkId: null,
-    note: 'Agenda typically posted the Friday before.'
+    note: 'Agenda typically posted the Friday before.',
+    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/1040/files/agenda/1857'
   },
   {
     date: 'June 17, 2026',

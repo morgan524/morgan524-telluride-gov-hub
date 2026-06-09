@@ -4,431 +4,17 @@
     <title>Livable Telluride — Weekly Digest</title>
     <link>https://livabletelluride.org</link>
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
-    <description>This week&apos;s news, upcoming Gov-Hub meetings, and events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
+    <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Jun 2026 20:04:42 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 23:13:08 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
-      <title>[Meeting] Board of Directors Meeting — 2026-06-16</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/fire%7C2026-06-16%7CBoard%20of%20Directors%20Meeting</guid>
-      <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Telluride Fire Protection District • 2026-06-16
-
-Agenda not yet available]]></description>
-      <category>Meeting</category>
-      <category>Telluride Fire Protection District</category>
-    </item>
-    <item>
-      <title>[Meeting] General Assembly Meeting — 2026-06-16</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/ophir%7C2026-06-16%7CGeneral%20Assembly%20Meeting</guid>
-      <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Ophir • 2026-06-16
-
-Agenda not yet available]]></description>
-      <category>Meeting</category>
-      <category>Town of Ophir</category>
-    </item>
-    <item>
-      <title>[Meeting] Planning and Zoning Commission Meeting — 2026-06-15</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/norwood%7C2026-06-15%7CPlanning%20and%20Zoning%20Commission%20Meeting</guid>
-      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Norwood • 2026-06-15
-
-Agenda not yet available]]></description>
-      <category>Meeting</category>
-      <category>Town of Norwood</category>
-    </item>
-    <item>
-      <title>[Meeting] Judicial Subcommittee - Jun 12 2026 — 2026-06-12</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-12%7CJudicial%20Subcommittee%20-%20Jun%2012%202026</guid>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Telluride • 2026-06-12
-
-The June 12, 2026 Judicial Subcommittee agenda hasn't been posted yet.]]></description>
-      <category>Meeting</category>
-      <category>Town of Telluride</category>
-    </item>
-    <item>
-      <title>[Meeting] SMART Board of Directors — 2026-06-11</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/smart%7C2026-06-11%7CSMART%20Board%20of%20Directors</guid>
-      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[SMART Transit • 2026-06-11
-
-Agenda not yet available]]></description>
-      <category>Meeting</category>
-      <category>SMART Transit</category>
-    </item>
-    <item>
-      <title>[Meeting] Planning Commission Meeting — 2026-06-11</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-06-11%7CPlanning%20Commission%20Meeting</guid>
-      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[San Miguel County • 2026-06-11
-
-Agenda not available]]></description>
-      <category>Meeting</category>
-      <category>San Miguel County</category>
-    </item>
-    <item>
-      <title>[Meeting] San Miguel Authority for Regional Transportation - Jun 11 2026 — 2026-06-11</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-11%7CSan%20Miguel%20Authority%20for%20Regional%20Transportation%20-%20Jun%2011%202026</guid>
-      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Telluride • 2026-06-11
-
-The June 11 SMART meeting agenda hasn't been posted yet.]]></description>
-      <category>Meeting</category>
-      <category>Town of Telluride</category>
-    </item>
-    <item>
-      <title>[Thu, Jun 11] Creative Exchange</title>
-      <link>https://www.telluride.com/event/creative-exchange/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/creative%20exchange%7C2026-06-11</guid>
-      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/60815/tot_cxe_brittany_miller.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/60815/tot_cxe_brittany_miller.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Thu, Jun 11] Games on the Green</title>
-      <link>https://www.telluride.com/event/games-on-the-green/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/games%20on%20the%20green%7C2026-06-11</guid>
-      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62453/mtv_summer_selects_lowres-62-2100x1401-5ba5db78-3cf7-49e2-a790-62927e14c194.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Head to The Madeline on Wednesdays and Thursdays this summer for Games on the Green! They will have classic lawn games …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/62453/mtv_summer_selects_lowres-62-2100x1401-5ba5db78-3cf7-49e2-a790-62927e14c194.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Thu, Jun 11] Historic Walking Tour</title>
-      <link>https://www.telluride.com/event/historic-walking-tour/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/historic%20walking%20tour%7C2026-06-11</guid>
-      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/48069/walkingtour_tabloidsize_2021.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Take a historic tour of Telluride on foot! These historic walking tours are led by historian Ashley Boling, and leave …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/48069/walkingtour_tabloidsize_2021.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Thu, Jun 11] Free Tasting</title>
-      <link>https://www.telluride.com/event/free-tasting-at-telluride-wine-merchant/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/free%20tasting%7C2026-06-11</guid>
-      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62697/screenshot_2026-06-03_at_1_50_16_pm.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Free tasting every Thursday from 4-6pm. The theme of the tasting will vary from different seasonal selections in wine, …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/62697/screenshot_2026-06-03_at_1_50_16_pm.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Thu, Jun 11] Telluride Gold Kings</title>
-      <link>https://www.telluride.com/event/telluride-gold-kings/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20gold%20kings%7C2026-06-11</guid>
-      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Dance and sing along with the Telluride Gold Kings every Thursday this summer. Free admission!]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 10] &quot;Forever Wild&quot; film screening, Celebrating the protection of Telluride&apos;s Valley Floor</title>
-      <link>https://koto.org/event/forever-wild-film-screening-celebrating-the-protection-of-tellurides-valley-floor/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/forever%20wild%20film%20screening%7C2026-06-10</guid>
-      <pubDate>Wed, 10 Jun 2026 23:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/FOREVER-WILD-poster.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Patagonia Telluride, TELLURIDE
-
-In collaboration with Sheep Mountain Alliance and Eco Action Partners, Patagonia Telluride will host a screening of the film, "Forever Wild". We will celebrate Telluride's environmental activists past and present who have fought for the protection of Telluride's precious resources. Discussion to follow film, food provided.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/06/FOREVER-WILD-poster.png" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 10] Sewing 101 with Melissa</title>
-      <link>https://koto.org/event/sewing-101-with-melissa/2026-06-10/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/sewing%20101%20with%20melissa%7C2026-06-10</guid>
-      <pubDate>Wed, 10 Jun 2026 23:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/02/sewing.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Wilkinson Public Library, Telluride
-
-Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/02/sewing.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 10] The Livable Telluride Kick-Off Party</title>
-      <link>https://koto.org/event/the-livable-telluride-kick-off-party/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/the%20livable%20telluride%20kick%7C2026-06-10</guid>
-      <pubDate>Wed, 10 Jun 2026 23:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/Kickoff-Flyer-New-Small.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Telluride Elks Lodge BPOE 692, TELLURIDE
-
-Join Livable Telluride on Wednesday, June 10 to learn about and celebrate a new community hub for civic engagement across San Miguel County. It's a great way to meet some neighbors and talk about local issues.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/06/Kickoff-Flyer-New-Small.png" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 10] Mahjongg for Independent Players</title>
-      <link>https://koto.org/event/mahjongg-for-independent-players-4/2026-06-10/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/mahjongg%20for%20independent%20players%7C2026-06-10</guid>
-      <pubDate>Wed, 10 Jun 2026 19:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/mahj.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Wilkinson Public Library, Telluride
-
-Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/05/mahj.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 10] Town Talk: Can we change the weather (and do we really want to?)</title>
-      <link>https://koto.org/event/town-talk-can-we-change-the-weather-and-do-we-really-want-to/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/town%20talk%20can%20we%7C2026-06-10</guid>
-      <pubDate>Wed, 10 Jun 2026 00:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Telluride Conference Center, Mountain Village
-
-This town talk will be presented by Derek Posselt, Principal Scientist, NASA Jet Propulsion Laboratory. If you live on planet Earth, you have had to worry about the weather at some point. Most of us have heard some version of the expression: “If you don’t like the weather, wait 5 minutes, and it will change.” Many of us wish we had the ability to do something about it. This is not a new impulse. Humans have been trying to change the weather for over a century. Posselt will review the ways people have tried to modify the weather, what has worked (and what hasn’t), and whether it is, in fact, a good idea to try in the first place.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A.png" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Meeting] Board of Review and Planning Commission Joint Work Session — 2026-06-10</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-06-10%7CBoard%20of%20Review%20and%20Planning%20Commission%20Joint%20Work%20Session</guid>
-      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[San Miguel County • 2026-06-10
-
-The June 10 Board of Review and Planning Commission joint work session agenda hasn't been posted yet.]]></description>
-      <category>Meeting</category>
-      <category>San Miguel County</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 10] Games on the Green</title>
-      <link>https://www.telluride.com/event/games-on-the-green/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/games%20on%20the%20green%7C2026-06-10</guid>
-      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62453/mtv_summer_selects_lowres-62-2100x1401-5ba5db78-3cf7-49e2-a790-62927e14c194.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Head to The Madeline on Wednesdays and Thursdays this summer for Games on the Green! They will have classic lawn games …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/62453/mtv_summer_selects_lowres-62-2100x1401-5ba5db78-3cf7-49e2-a790-62927e14c194.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 10] Market on the Plaza - Mountain Village</title>
-      <link>https://www.telluride.com/event/market-on-the-plaza-mountain-village/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/market%20on%20the%20plaza%7C2026-06-10</guid>
-      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/44431/mplantz-3995.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Market on the Plaza is a vibrant local community market providing an avenue to support regional and local businesses …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/44431/mplantz-3995.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 10] Free Wine Tasting</title>
-      <link>https://www.telluride.com/event/free-wine-tasting/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/free%20wine%20tasting%7C2026-06-10</guid>
-      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/46449/mvwmplanetpic2.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Join the Mountain Village Wine Merchant every Wednesday for a free wine tasting of three different wines.]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/46449/mvwmplanetpic2.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 10] Forever Wild</title>
-      <link>https://www.telluride.com/event/forever-wild/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/forever%20wild%7C2026-06-10</guid>
-      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62747/forever_wild_poster.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Patagonia Telluride in partnership with Sheep Mountain Alliance and EcoAction Partners will host a film screening of …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/62747/forever_wild_poster.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Tue, Jun 9] Book Buzz at Telluride Brewing Company</title>
-      <link>https://telluridelibrary.libcal.com/event/16878593?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/book%20buzz%20at%20telluride%7C2026-06-09</guid>
-      <pubDate>Tue, 09 Jun 2026 23:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_13_09_56_40.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Telluride Brewing Company
-
-5:30 PM – 6:30 PM · Join WPL on the 2nd Tuesday 5:30-6:30pm of each month at TBC in Lawson Hill May-September. Our queen of Reader&#39;s Advisory, Tiffany Osborne, will be there to talk about our hottest new titles and Miss Melissa will be providing an interactive story time for the kids. We&#39;ll have grab-and-go activity kits for the littles as well, and plenty of books to checkout. ADDED BONUS: Enjoy a 10% discount on food as well as $5 TBC Beers when you show your library card to the TBC staff . Don&#39;t have a card? No problem! We&#39;ll make one for you on the spot!]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_13_09_56_40.png" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Tue, Jun 9] Community Conversations: Beyond the Buzz</title>
-      <link>https://telluridelibrary.libcal.com/event/16781613?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/community%20conversations%20beyond%20the%7C2026-06-09</guid>
-      <pubDate>Tue, 09 Jun 2026 23:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_21_11_41_24.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Program Room
-
-5:00 PM – 7:00 PM · Beyond the Buzz: reimagining festival culture with care and awareness. M&aacute;s all&aacute; del alcohol: cambiando la cultura de festivales con cuidad y conciencia.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_21_11_41_24.png" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Tue, Jun 9] Free Legal Clinic - Clínica Jurídica Gratuita (Zoom)</title>
-      <link>https://telluridelibrary.libcal.com/event/16009650?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/free%20legal%20clinic%20cl%7C2026-06-09</guid>
-      <pubDate>Tue, 09 Jun 2026 22:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1760996664.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Meeting Room #5 - small
-
-4:00 PM – 5:40 PM · A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una cl&iacute;nica de asesoramiento jur&iacute;dico GRATUITO para las personas que notienen abogado. Abogados voluntarios responder&aacute;n a preguntas, ayudar&aacute;n a llenar formularios y explicar&aacute;n el proceso y el procedimiento de cuestiones jur&iacute;dicas. Los abogados voluntarios no te representan y esta cl&iacute;nica es s&oacute;lo informativa. CON CITA PREVIA. Llame a 970-728-4519 para m&aacute;s informaci&oacute;n y para registrarse.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1760996664.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Tue, Jun 9] I Heart Art</title>
-      <link>https://telluridelibrary.libcal.com/event/16574860?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/i%20heart%20art%7C2026-06-09</guid>
-      <pubDate>Tue, 09 Jun 2026 20:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_14_13_48_18.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Lower Terrace - outdoors
-
-The Wilkinson Public Library presents I Heart Art, an outdoor program on the Lower Terrace. This library event runs from 2:30 PM to 3:30 PM and offers community members an art-focused activity in an outdoor setting.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_14_13_48_18.png" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Tue, Jun 9] Teen Cook</title>
-      <link>https://telluridelibrary.libcal.com/event/16935710?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/teen%20cook%7C2026-06-09</guid>
-      <pubDate>Tue, 09 Jun 2026 20:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Teen Area
-
-2:00 PM – 3:00 PM · Join us every Tuesday this summer for Teen Cook, where we prepare a variety of delicious foods and get to try out something new.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Tue, Jun 9] Gardening Camp / Campamento de Jardinería</title>
-      <link>https://telluridelibrary.libcal.com/event/16900649?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/gardening%20camp%20campamento%20de%7C2026-06-09</guid>
-      <pubDate>Tue, 09 Jun 2026 18:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_14_52_16.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Wilkinson Public Library
-
-12:30 PM – 3:30 PM · Join us for four fun-filled afternoons of hands-on gardening and learning. Projects and activities will include: planting a garden, garden decor crafts, earthworm play, storytimes, fairy and gnome play, and more! Who: Open to children ages 6-12 who can participate independently (without a parent or caregiver present). Registration : Space is limited- please only register if your child can attend all four days. Final Day: Celebrate with a public "ribbon cutting" garden reveal during the last hour of camp- friends and family welcome! What to Bring: A full belly Water bottle Sunhat & sunscreen Extra snacks Some snacks will be provided. All other items are the caregiver&#39;s responsibility. We can&#39;t wait to get garden with you! ------------------------------------------------------------------------------- &iexcl;&Uacute;nanse a nosotros para cuarto tardes llenas de diversion con jardiner&iacute;a y aprendizaje! …]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_14_52_16.png" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Tue, Jun 9] Storytime / Hora de Cuentos</title>
-      <link>https://telluridelibrary.libcal.com/event/16772756?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/storytime%20hora%20de%20cuentos%7C2026-06-09</guid>
-      <pubDate>Tue, 09 Jun 2026 16:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Lower Terrace - outdoors
-
-10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Tue, Jun 9] DMV2GO</title>
-      <link>https://telluridelibrary.libcal.com/event/15934442?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/dmv2go%7C2026-06-09</guid>
-      <pubDate>Tue, 09 Jun 2026 15:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_05_14_20_20.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Telluride Room
-
-9:00 AM – 5:00 PM · Walk-ins are welcome, but if you&#39;d like to make an appointment, click here . RENEW - An existing Colorado Driver License, ID or Permit REPLACE - A lost or stolen Colorado Driver License, ID or Permit FIRST TIME - Colorado Driver License, ID or Permit* OUT OF STATE TRANSFER - Trade in your existing Driver License, ID or Permit for a Colorado one! * *Please visit DMV.COLORADO.GOV for more information and a list of required documents Bienvenidos sin cita, pero si quieres hacer una cita haga clic aqu&iacute;. RENOVAR - Una Licencia, ID o Permiso Actual de Colorado REEMPLAZAR - Una Licencia, ID o Permiso de Colorado perdida, robada o da&ntilde;ada PRIMERA VEZ - Tramitar Licencia, ID o Permiso de Colorado TRANSFERIR CREDENCIAL DE OTRO ESTADO - Cambie su Licencia, ID o Permiso existente por una de Colorado! …]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_05_14_20_20.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>Summer air service includes new LA flights</title>
-      <link>https://www.telluridenews.com/news/article_3e628215-2a5a-425f-8152-87b39e99b29b.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/article_3e628215-2a5a-425f-8152-87b39e99b29b.html</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/74/674c1a2c-a27f-45d3-a156-aa89f61bdc2d/6a282609628ba.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Montrose airport is adding new LA flights this summer along with more frequent service from Chicago and Houston, though Phoenix flights to Telluride got cut back to twice weekly after last winter's ski patrol strike hurt bookings. Overall summer air capacity is projected up about 5% from last year, with strong advance reservations despite concerns about fuel costs from global conflicts affecting travel planning.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/74/674c1a2c-a27f-45d3-a156-aa89f61bdc2d/6a282609628ba.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
-    </item>
-    <item>
-      <title>‘Art doesn’t have rules’</title>
-      <link>https://www.telluridenews.com/arts_and_entertainment/article_e1e2c626-bbfc-4951-bc6e-a15050714801.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/arts_and_entertainment/article_e1e2c626-bbfc-4951-bc6e-a15050714801.html</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/34/b343974b-19ba-4c8b-bfbb-a4b7b87c8351/6a2309dc993b8.image.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Ashley Shupp grew up in Ridgway, went to Telluride High School, studied art in Pennsylvania, and returned in 2015 to raise her kids here. After learning to sew from a local seamstress in trade for horseback riding lessons, she's built a business creating one-of-a-kind quilted clothing and custom bathing suits from upcycled materials. Her work has been featured in TAB fashion shows for three years running, and she emphasizes sustainability and local craftsmanship as alternatives to fast fashion.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/34/b343974b-19ba-4c8b-bfbb-a4b7b87c8351/6a2309dc993b8.image.png" medium="image" />
-      <category>Telluride Times</category>
-      <category>arts-culture</category>
-    </item>
-    <item>
-      <title>Engineering the weather: Can we? Should we?</title>
-      <link>https://www.telluridenews.com/opinion/columnists/article_bac13c80-0c38-476f-9388-c25175c6ea83.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/opinion/columnists/article_bac13c80-0c38-476f-9388-c25175c6ea83.html</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/97/297812b1-fc13-4f49-a123-b619b6e0015d/6a212c6857b30.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />NASA scientist Derek Posselt will discuss weather modification through cloud seeding at the next Telluride Science Town Talk, exploring how microscopic particles in the atmosphere can be manipulated to trigger precipitation. While some countries actively seed clouds to increase rainfall, Posselt will cover the complex and often unpredictable consequences of interfering with atmospheric systems.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/97/297812b1-fc13-4f49-a123-b619b6e0015d/6a212c6857b30.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>public-safety</category>
-    </item>
-    <item>
-      <title>Finding of the Town Manager Enacting Town Wide Fire Ban</title>
-      <link>https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/POST-Town-Wide-Fire-Ban---Stage-1-Restrictions---June-9%2C-2026---signed_0.pdf</link>
-      <guid isPermaLink="false">https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/POST-Town-Wide-Fire-Ban---Stage-1-Restrictions---June-9%2C-2026---signed_0.pdf</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Press release from the Town of Ridgway. Click to view the full PDF.]]></description>
-      <category>Town of Ridgway</category>
-      <category>public-safety</category>
-    </item>
-    <item>
-      <title>Newscast 6-8-26</title>
-      <link>https://koto.org/news/newscast-6-8-26/</link>
-      <guid isPermaLink="false">https://koto.org/news/newscast-6-8-26/</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Coming Up Next, Telluride; Telluride Dance Collective Moves the Masses]]></description>
-      <category>KOTO Community Radio</category>
-      <category>community</category>
+      <title>📅 The Week Ahead — Jun 9–15</title>
+      <link>https://livabletelluride.org/events.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-22</guid>
+      <pubDate>Tue, 09 Jun 2026 23:13:08 GMT</pubDate>
+      <description><![CDATA[County officials will get their first look at Colorado's new Low Energy and Carbon Code on Tuesday, a set of building standards that could change how structures get approved throughout San Miguel County. Otherwise it's a quiet week for government business, with most agendas still under wraps. The library's hosting everything from gardening camp to a free legal clinic, and there's a Livable Telluride kick-off party Wednesday.]]></description>
+      <category>The Week Ahead</category>
     </item>
     <item>
       <title>[Meeting] Telluride Board of Education Work Session — 2026-06-09</title>
@@ -514,182 +100,358 @@ Telluride's local non-profit organization Augment Music Project is hosting month
       <category>Telluride.com</category>
     </item>
     <item>
-      <title>Alexander Patrick Stanger</title>
-      <link>https://www.telluridenews.com/obituaries/article_9976cc7a-167f-47c7-9142-d701d609ebf4.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/obituaries/article_9976cc7a-167f-47c7-9142-d701d609ebf4.html</guid>
-      <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/eb/2eb921d2-f1e2-46d1-971a-ce5616824ad9/6a26e7eabd339.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Alexander Patrick Stanger passed away, leaving behind his parents, brother Aidon Peter Stanger, grandmother Jennifer Weed, and extended family including aunts, uncles and cousins. He loved travel, music, theater, hiking and cooking, and was remembered as kind, generous and funny by his many friends here and abroad.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/eb/2eb921d2-f1e2-46d1-971a-ce5616824ad9/6a26e7eabd339.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>education</category>
+      <title>[Tue, Jun 9] DMV2GO</title>
+      <link>https://telluridelibrary.libcal.com/event/15934442?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/dmv2go%7C2026-06-09</guid>
+      <pubDate>Tue, 09 Jun 2026 15:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_05_14_20_20.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Telluride Room
+
+9:00 AM – 5:00 PM · Walk-ins are welcome, but if you&#39;d like to make an appointment, click here . RENEW - An existing Colorado Driver License, ID or Permit REPLACE - A lost or stolen Colorado Driver License, ID or Permit FIRST TIME - Colorado Driver License, ID or Permit* OUT OF STATE TRANSFER - Trade in your existing Driver License, ID or Permit for a Colorado one! * *Please visit DMV.COLORADO.GOV for more information and a list of required documents Bienvenidos sin cita, pero si quieres hacer una cita haga clic aqu&iacute;. RENOVAR - Una Licencia, ID o Permiso Actual de Colorado REEMPLAZAR - Una Licencia, ID o Permiso de Colorado perdida, robada o da&ntilde;ada PRIMERA VEZ - Tramitar Licencia, ID o Permiso de Colorado TRANSFERIR CREDENCIAL DE OTRO ESTADO - Cambie su Licencia, ID o Permiso existente por una de Colorado! …]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_05_14_20_20.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
-      <title>Star light, star bright</title>
-      <link>https://www.telluridenews.com/arts_and_entertainment/article_861d183a-1113-4971-8823-c67e52cbb30c.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/arts_and_entertainment/article_861d183a-1113-4971-8823-c67e52cbb30c.html</guid>
-      <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/dc/8dc77d1d-b7b9-442a-9b42-870b232ad477/6a23527656816.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Mountain Village is moving its free outdoor movie nights from Reflection Plaza to the Conference Center Plaza this summer, adding real grass instead of astroturf and more space to spread out. They're also starting a family happy hour from 6:30-8 PM before each screening with lawn games and kids' activities, plus nearby food and drink options. The Saturday night movies begin at dusk and wrap up around 10:30, with "The Sandlot" playing July 4th as their annual Independence Day tradition.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/dc/8dc77d1d-b7b9-442a-9b42-870b232ad477/6a23527656816.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>arts-culture</category>
+      <title>[Tue, Jun 9] Storytime / Hora de Cuentos</title>
+      <link>https://telluridelibrary.libcal.com/event/16772756?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/storytime%20hora%20de%20cuentos%7C2026-06-09</guid>
+      <pubDate>Tue, 09 Jun 2026 16:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Lower Terrace - outdoors
+
+10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
-      <title>Telluride Housing Authority launches tenant advisory committee</title>
-      <link>https://www.telluridenews.com/news_release/article_278f5e0f-f1d4-480c-a1c8-087a763b8de7.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news_release/article_278f5e0f-f1d4-480c-a1c8-087a763b8de7.html</guid>
-      <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The Housing Authority is setting up a tenant advisory committee with seven residents from town-managed properties like Shandoka, Sunnyside, and Virginia Placer to give renters a formal voice in housing decisions. Committee members will get quarterly rent credits and meet at least four times a year in public sessions, with applications due June 17. It's a step toward more structured communication between residents and town hall after years of housing tensions bubbling up at council meetings.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>housing</category>
+      <title>[Tue, Jun 9] Gardening Camp / Campamento de Jardinería</title>
+      <link>https://telluridelibrary.libcal.com/event/16900649?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/gardening%20camp%20campamento%20de%7C2026-06-09</guid>
+      <pubDate>Tue, 09 Jun 2026 18:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_14_52_16.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Wilkinson Public Library
+
+12:30 PM – 3:30 PM · Join us for four fun-filled afternoons of hands-on gardening and learning. Projects and activities will include: planting a garden, garden decor crafts, earthworm play, storytimes, fairy and gnome play, and more! Who: Open to children ages 6-12 who can participate independently (without a parent or caregiver present). Registration : Space is limited- please only register if your child can attend all four days. Final Day: Celebrate with a public "ribbon cutting" garden reveal during the last hour of camp- friends and family welcome! What to Bring: A full belly Water bottle Sunhat & sunscreen Extra snacks Some snacks will be provided. All other items are the caregiver&#39;s responsibility. We can&#39;t wait to get garden with you! ------------------------------------------------------------------------------- &iexcl;&Uacute;nanse a nosotros para cuarto tardes llenas de diversion con jardiner&iacute;a y aprendizaje! …]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_14_52_16.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
-      <title>AI workshop helps professionals develop exceptional marketing talent</title>
-      <link>https://www.telluridenews.com/news_release/article_99d6ff83-0286-4434-ab90-1642b9ee0001.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news_release/article_99d6ff83-0286-4434-ab90-1642b9ee0001.html</guid>
-      <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/7b/57b30499-f5cc-43ce-bc24-03ca39ef4d21/6a261580225f9.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The Telluride Foundation is hosting an AI workshop for local business owners, nonprofits and community leaders to learn practical applications like creating marketing content, logos, videos and websites. Fort Lewis College's AI Institute director will lead hands-on sessions teaching folks how to choose useful AI tools while keeping their own voice and brand intact.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/7b/57b30499-f5cc-43ce-bc24-03ca39ef4d21/6a261580225f9.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
+      <title>[Tue, Jun 9] Teen Cook</title>
+      <link>https://telluridelibrary.libcal.com/event/16935710?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/teen%20cook%7C2026-06-09</guid>
+      <pubDate>Tue, 09 Jun 2026 20:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Teen Area
+
+2:00 PM – 3:00 PM · Join us every Tuesday this summer for Teen Cook, where we prepare a variety of delicious foods and get to try out something new.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
-      <title>All-league soccer honors arrive</title>
-      <link>https://www.telluridenews.com/sports/article_de6fac43-6a99-4c78-88c8-577bb32f650c.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/sports/article_de6fac43-6a99-4c78-88c8-577bb32f650c.html</guid>
-      <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/5a/65a7ce6b-4a17-4d54-9a3c-47e242e70ad2/6a2113e9e6029.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Three Telluride High soccer players earned First Team All-League honors despite the team finishing with five straight losses. Goalkeeper Gretchen Vidal, midfielder Kimberly Magana, and defender Bree Gowdy were recognized for their strong play in what coach Justin Chandler called a competitive season against larger schools. The senior class leaves behind a foundation that should help the younger players build for future seasons.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/5a/65a7ce6b-4a17-4d54-9a3c-47e242e70ad2/6a2113e9e6029.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
+      <title>[Tue, Jun 9] I Heart Art</title>
+      <link>https://telluridelibrary.libcal.com/event/16574860?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/i%20heart%20art%7C2026-06-09</guid>
+      <pubDate>Tue, 09 Jun 2026 20:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_14_13_48_18.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Lower Terrace - outdoors
+
+2:30 PM – 3:30 PM]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_14_13_48_18.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
-      <title>Look up: San Miguel County’s chance to protect the night</title>
-      <link>https://www.telluridenews.com/opinion/columnists/article_6e75af49-a87a-455f-becb-26c944329655.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/opinion/columnists/article_6e75af49-a87a-455f-becb-26c944329655.html</guid>
-      <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/e1/1e112b20-7fb8-49e6-a134-29942159a88f/6a2128866742b.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />San Miguel County is pursuing a Dark Sky Reserve designation that would make it the first in the nation to include an entire county as the protective periphery around the Thunder Trails core area. The designation requires community support, a lighting inventory, and property owner cooperation to protect the area's exceptionally dark skies that support wildlife, offer spiritual connection to the cosmos, and could boost shoulder-season tourism.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/e1/1e112b20-7fb8-49e6-a134-29942159a88f/6a2128866742b.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>recreation</category>
+      <title>[Tue, Jun 9] Free Legal Clinic - Clínica Jurídica Gratuita (Zoom)</title>
+      <link>https://telluridelibrary.libcal.com/event/16009650?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/free%20legal%20clinic%20cl%7C2026-06-09</guid>
+      <pubDate>Tue, 09 Jun 2026 22:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1760996664.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Meeting Room #5 - small
+
+4:00 PM – 5:40 PM · A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una cl&iacute;nica de asesoramiento jur&iacute;dico GRATUITO para las personas que notienen abogado. Abogados voluntarios responder&aacute;n a preguntas, ayudar&aacute;n a llenar formularios y explicar&aacute;n el proceso y el procedimiento de cuestiones jur&iacute;dicas. Los abogados voluntarios no te representan y esta cl&iacute;nica es s&oacute;lo informativa. CON CITA PREVIA. Llame a 970-728-4519 para m&aacute;s informaci&oacute;n y para registrarse.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1760996664.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
-      <title>‘Passages in Time’</title>
-      <link>https://www.telluridenews.com/arts_and_entertainment/article_d5b298e8-0cb0-4ced-9e4b-d4285cb1d866.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/arts_and_entertainment/article_d5b298e8-0cb0-4ced-9e4b-d4285cb1d866.html</guid>
-      <pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/fb/8fb26672-2620-4ecd-9e2d-704686ff34dd/6a21164bcea3c.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Artist Micheline Klagsbrun is showing new resin sculptures and paper works at Fringe Gallery alongside longtime neighbor Nancy B. Frank's "Earth Gems" paintings. Klagsbrun's pieces incorporate local elements like elk bone found in the San Juans, while Frank has shifted from her well-known equine work to close-up geological abstractions inspired by photo trips to places like the Grand Canyon and even a Montrose cornfield.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/fb/8fb26672-2620-4ecd-9e2d-704686ff34dd/6a21164bcea3c.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>arts-culture</category>
+      <title>[Tue, Jun 9] Community Conversations: Beyond the Buzz</title>
+      <link>https://telluridelibrary.libcal.com/event/16781613?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/community%20conversations%20beyond%20the%7C2026-06-09</guid>
+      <pubDate>Tue, 09 Jun 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_21_11_41_24.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+5:00 PM – 7:00 PM · Beyond the Buzz: reimagining festival culture with care and awareness. M&aacute;s all&aacute; del alcohol: cambiando la cultura de festivales con cuidad y conciencia.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_21_11_41_24.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
-      <title>’Jacks prominent amongst kings</title>
-      <link>https://www.telluridenews.com/sports/article_ec6dffc9-929a-4e69-808e-b1f485096412.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/sports/article_ec6dffc9-929a-4e69-808e-b1f485096412.html</guid>
-      <pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/0a/50ab7c10-3338-4b13-af85-5223da890f35/6a210c33e3bae.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The Telluride High lacrosse team's senior defensive core, nicknamed the "Lumberjacks," wrapped up four years playing together with another strong season that included a first-place regular season finish and state tournament run. The Miners fell to Grand Junction 9-7 in the state quarterfinals, ending their season, but several players earned all-state honors including Henry Deppen and Leyton Holbrook on the first team.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/0a/50ab7c10-3338-4b13-af85-5223da890f35/6a210c33e3bae.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>infrastructure</category>
+      <title>[Tue, Jun 9] Book Buzz at Telluride Brewing Company</title>
+      <link>https://telluridelibrary.libcal.com/event/16878593?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/book%20buzz%20at%20telluride%7C2026-06-09</guid>
+      <pubDate>Tue, 09 Jun 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_13_09_56_40.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Telluride Brewing Company
+
+5:30 PM – 6:30 PM · Join WPL on the 2nd Tuesday 5:30-6:30pm of each month at TBC in Lawson Hill May-September. Our queen of Reader&#39;s Advisory, Tiffany Osborne, will be there to talk about our hottest new titles and Miss Melissa will be providing an interactive story time for the kids. We&#39;ll have grab-and-go activity kits for the littles as well, and plenty of books to checkout. ADDED BONUS: Enjoy a 10% discount on food as well as $5 TBC Beers when you show your library card to the TBC staff . Don&#39;t have a card? No problem! We&#39;ll make one for you on the spot!]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_13_09_56_40.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
-      <title>A song for San Juan springtime</title>
-      <link>https://www.telluridenews.com/opinion/columnists/article_e85d2fd6-be85-4947-a5fa-dbae79bc61db.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/opinion/columnists/article_e85d2fd6-be85-4947-a5fa-dbae79bc61db.html</guid>
-      <pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/71/27166196-823f-4be9-8f59-f36960f74cc2/6a21268780f7f.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Southwest Colorado sits along major flyway corridors, bringing waves of neo-tropical birds from late April through early June - songbirds, warblers, swallows and raptors returning to summer territory, with hummingbirds testing gravity around every spring flower. The area around San Miguel County hosts 11,000-15,000 elk according to Parks and Wildlife, and watching the annual cycle of pregnant cows disappearing into sheltered woods before emerging with gangly calves remains one of spring's reliable miracles.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/71/27166196-823f-4be9-8f59-f36960f74cc2/6a21268780f7f.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>community</category>
+      <title>⚡ [Meeting] Board of Review and Planning Commission Joint Work Session — 2026-06-10</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-06-10%7CBoard%20of%20Review%20and%20Planning%20Commission%20Joint%20Work%20Session</guid>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[San Miguel County • 2026-06-10
+
+The county's Board of Review and Planning Commission will hear a presentation on Colorado's new Low Energy and Carbon Code — building standards that could reshape how structures get approved in the box canyon.
+
+⚡ Why it matters: New building codes could reshape construction approval processes countywide]]></description>
+      <category>Meeting</category>
+      <category>San Miguel County</category>
     </item>
     <item>
-      <title>Commissioners approve Accelerated Housing Review</title>
-      <link>https://www.telluridenews.com/news/article_756e982e-d9f7-4554-b0a5-6efc70f47375.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/article_756e982e-d9f7-4554-b0a5-6efc70f47375.html</guid>
-      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/ae/0ae9ed7b-c9f6-4e1d-9d08-009945edf5aa/6a230685dbace.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />County commissioners approved fast-track review for affordable housing projects to qualify for state funding from Proposition 123's housing fund. Projects with 50% or more affordable units will get decisions within 90 days, but the same approval standards and review processes still apply. Some stakeholders had concerns about no size limits on eligible projects, though others supported accessing the available state money.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/ae/0ae9ed7b-c9f6-4e1d-9d08-009945edf5aa/6a230685dbace.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>land-use</category>
+      <title>[Wed, Jun 10] Games on the Green</title>
+      <link>https://www.telluride.com/event/games-on-the-green/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/games%20on%20the%20green%7C2026-06-10</guid>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62453/mtv_summer_selects_lowres-62-2100x1401-5ba5db78-3cf7-49e2-a790-62927e14c194.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Head to The Madeline on Wednesdays and Thursdays this summer for Games on the Green! They will have classic lawn games …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/62453/mtv_summer_selects_lowres-62-2100x1401-5ba5db78-3cf7-49e2-a790-62927e14c194.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
     </item>
     <item>
-      <title>‘If it took a leap of faith, I was willing’</title>
-      <link>https://www.telluridenews.com/news/article_cff6929c-5967-4eb0-86a3-ac6ea9cac558.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/article_cff6929c-5967-4eb0-86a3-ac6ea9cac558.html</guid>
-      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/40/84063d4f-77dc-49e2-aa44-01fbb325eb32/6a233716d2697.image.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Town officials met secretly with Chuck Horning's son Chad in December about buying Telski, leading to the controversial California trip that resulted in three resignations this year. An independent investigation cleared former Mayor Prohaska and Town Manager Wisor of wrongdoing, though they acknowledged the meetings were poorly handled and ultimately unsuccessful.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/40/84063d4f-77dc-49e2-aa44-01fbb325eb32/6a233716d2697.image.png" medium="image" />
-      <category>Telluride Times</category>
-      <category>arts-culture</category>
+      <title>[Wed, Jun 10] Market on the Plaza - Mountain Village</title>
+      <link>https://www.telluride.com/event/market-on-the-plaza-mountain-village/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/market%20on%20the%20plaza%7C2026-06-10</guid>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/44431/mplantz-3995.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Market on the Plaza is a vibrant local community market providing an avenue to support regional and local businesses …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/44431/mplantz-3995.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
     </item>
     <item>
-      <title>The beauty of unsafe seats</title>
-      <link>https://www.telluridenews.com/opinion/columnists/article_d270be44-3425-4546-984c-3583d8200388.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/opinion/columnists/article_d270be44-3425-4546-984c-3583d8200388.html</guid>
-      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/7c/c7c4b286-d7fa-45f9-8add-d7e11fd0d011/6a212435c9317.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Safe legislative districts where primaries decide winners have created a system where party loyalists control outcomes while independents can't even vote in most states. This has pulled candidates toward ideological extremes, leading to legislative paralysis and opening doors for authoritarians who promise to cut through the gridlock. Competitive districts would shift focus back to pragmatic problem-solving and consensus-building, potentially restoring the legislative branch's ability to function through normal constitutional processes.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/7c/c7c4b286-d7fa-45f9-8add-d7e11fd0d011/6a212435c9317.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>arts-culture</category>
+      <title>[Wed, Jun 10] Free Wine Tasting</title>
+      <link>https://www.telluride.com/event/free-wine-tasting/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/free%20wine%20tasting%7C2026-06-10</guid>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/46449/mvwmplanetpic2.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Join the Mountain Village Wine Merchant every Wednesday for a free wine tasting of three different wines.]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/46449/mvwmplanetpic2.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
     </item>
     <item>
-      <title>Ridgway Town Council Regular Meeting Agenda</title>
-      <link>https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/00-June-10-agenda_0.pdf</link>
-      <guid isPermaLink="false">https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/00-June-10-agenda_0.pdf</guid>
-      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Press release from the Town of Ridgway. Click to view the full PDF.]]></description>
-      <category>Town of Ridgway</category>
-      <category>government</category>
+      <title>[Wed, Jun 10] Forever Wild</title>
+      <link>https://www.telluride.com/event/forever-wild/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/forever%20wild%7C2026-06-10</guid>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62747/forever_wild_poster.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Patagonia Telluride in partnership with Sheep Mountain Alliance and EcoAction Partners will host a film screening of …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/62747/forever_wild_poster.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
     </item>
     <item>
-      <title>Newscast 6-5-26</title>
-      <link>https://koto.org/news/newscast-6-5-26/</link>
-      <guid isPermaLink="false">https://koto.org/news/newscast-6-5-26/</guid>
-      <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[On this week's Regional Roundup, we hear about a new agreement signed by counties and conservation districts in Colorado aimed at preventing future reservoirs and water diversions on the Crystal River. We also learn about a major gasoline spill on Southern Ute tribal land in southwest Colorado that is raising concerns about drinking water contamina]]></description>
-      <category>KOTO Community Radio</category>
-      <category>housing</category>
+      <title>[Wed, Jun 10] Town Talk: Can we change the weather (and do we really want to?)</title>
+      <link>https://koto.org/event/town-talk-can-we-change-the-weather-and-do-we-really-want-to/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/town%20talk%20can%20we%7C2026-06-10</guid>
+      <pubDate>Wed, 10 Jun 2026 00:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Telluride Conference Center, Mountain Village
+
+This town talk will be presented by Derek Posselt, Principal Scientist, NASA Jet Propulsion Laboratory. If you live on planet Earth, you have had to worry about the weather at some point. Most of us have heard some version of the expression: “If you don’t like the weather, wait 5 minutes, and it will change.” Many of us wish we had the ability to do something about it. This is not a new impulse. Humans have been trying to change the weather for over a century. Posselt will review the ways people have tried to modify the weather, what has worked (and what hasn’t), and whether it is, in fact, a good idea to try in the first place.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A.png" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
     <item>
-      <title>What to know about new trials ordered for two paramedics in the death of Elijah McClain</title>
-      <link>https://www.telluridenews.com/news/state/article_ed7b9cbb-c22f-5f67-acca-7f4b08e0e7c9.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/state/article_ed7b9cbb-c22f-5f67-acca-7f4b08e0e7c9.html</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/c6/3c634127-4499-556f-998d-cb3a8ce57ab5/6a21ddc4d7772.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />An appeals court ordered new trials for two paramedics convicted in Elijah McClain's 2019 death, saying the trial judge gave faulty jury instructions about the standard of care required. The paramedics had injected the 23-year-old with ketamine after police restrained him following a 911 call about someone "sketchy," leading to his cardiac arrest and death days later. Colorado's attorney general plans to appeal to the state supreme court, which could further delay any retrials.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/c6/3c634127-4499-556f-998d-cb3a8ce57ab5/6a21ddc4d7772.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>public-safety</category>
+      <title>[Wed, Jun 10] Mahjongg for Independent Players</title>
+      <link>https://koto.org/event/mahjongg-for-independent-players-4/2026-06-10/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/mahjongg%20for%20independent%20players%7C2026-06-10</guid>
+      <pubDate>Wed, 10 Jun 2026 19:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/mahj.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/05/mahj.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
     <item>
-      <title>Lady Miners emerge as all-leaguers</title>
-      <link>https://www.telluridenews.com/sports/article_98a9d187-1dfd-4f4b-b34a-d7405b2cfebb.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/sports/article_98a9d187-1dfd-4f4b-b34a-d7405b2cfebb.html</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/34/b34e32b7-5bb3-4e54-b78e-f3a17eeebfe7/6a210fe78801b.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />The Lady Miners lacrosse team had their most successful season yet, finishing 6-2 in league and 10-5 overall before losing in the first round of state playoffs. Five players earned All-League honors, with Ruby Lake and Mikayla Ialeggio also receiving All-State recognition. The new coach emphasized how the team's chemistry and enthusiasm set this group apart from previous years.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/34/b34e32b7-5bb3-4e54-b78e-f3a17eeebfe7/6a210fe78801b.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>education</category>
+      <title>[Wed, Jun 10] Sewing 101 with Melissa</title>
+      <link>https://koto.org/event/sewing-101-with-melissa/2026-06-10/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/sewing%20101%20with%20melissa%7C2026-06-10</guid>
+      <pubDate>Wed, 10 Jun 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/02/sewing.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/02/sewing.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
     <item>
-      <title>We got us a posse</title>
-      <link>https://www.telluridenews.com/news/article_a744a27e-74c3-4832-9eec-21602ec87352.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/article_a744a27e-74c3-4832-9eec-21602ec87352.html</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/5b/75bf594d-9886-4fe3-94b6-b1db6eefbb16/6a213427926db.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />Montrose County's volunteer sheriff's posse is looking for more help, especially on the West End where fewer than 20 people are available to respond to search and rescue, fires, and emergencies across a huge territory. The all-volunteer group saves taxpayers money by handling everything from medical assists to crowd control, but they're stretched thin as recreational use grows in the region.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/5b/75bf594d-9886-4fe3-94b6-b1db6eefbb16/6a213427926db.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>public-safety</category>
+      <title>[Wed, Jun 10] The Livable Telluride Kick-Off Party</title>
+      <link>https://koto.org/event/the-livable-telluride-kick-off-party/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/the%20livable%20telluride%20kick%7C2026-06-10</guid>
+      <pubDate>Wed, 10 Jun 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/Kickoff-Flyer-New-Small.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Telluride Elks Lodge BPOE 692, TELLURIDE
+
+Join Livable Telluride on Wednesday, June 10 to learn about and celebrate a new community hub for civic engagement across San Miguel County. It's a great way to meet some neighbors and talk about local issues.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/06/Kickoff-Flyer-New-Small.png" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
     <item>
-      <title>San Miguel County finalizes deed restriction reversions</title>
-      <link>https://www.telluridenews.com/news/article_86e39f74-98f8-4230-b000-6f94f0e05c80.html</link>
-      <guid isPermaLink="false">https://www.telluridenews.com/news/article_86e39f74-98f8-4230-b000-6f94f0e05c80.html</guid>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c2/ec2c1fea-a838-4050-8fba-1b4c58dfd4b2/6a2086635a139.image.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />San Miguel County commissioners have finalized a process allowing certain deed-restricted homeowners to revert to earlier versions of their property covenants after years of what some called coercive covenant changes during sales transactions. Of 206 properties reviewed, 31 owners chose to switch back to previous deed restrictions, with the county acknowledging "unintentional mistakes" in how they administered the housing program that began in 2010 and was amended multiple times through 2023.]]></description>
-      <media:content url="https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c2/ec2c1fea-a838-4050-8fba-1b4c58dfd4b2/6a2086635a139.image.jpg" medium="image" />
-      <category>Telluride Times</category>
-      <category>housing</category>
+      <title>[Wed, Jun 10] &quot;Forever Wild&quot; film screening, Celebrating the protection of Telluride&apos;s Valley Floor</title>
+      <link>https://koto.org/event/forever-wild-film-screening-celebrating-the-protection-of-tellurides-valley-floor/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/forever%20wild%20film%20screening%7C2026-06-10</guid>
+      <pubDate>Wed, 10 Jun 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/FOREVER-WILD-poster.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Patagonia Telluride, TELLURIDE
+
+In collaboration with Sheep Mountain Alliance and Eco Action Partners, Patagonia Telluride will host a screening of the film, "Forever Wild". We will celebrate Telluride's environmental activists past and present who have fought for the protection of Telluride's precious resources. Discussion to follow film, food provided.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/06/FOREVER-WILD-poster.png" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Meeting] SMART Board of Directors — 2026-06-11</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/smart%7C2026-06-11%7CSMART%20Board%20of%20Directors</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[SMART Transit • 2026-06-11
+
+Agenda not yet available]]></description>
+      <category>Meeting</category>
+      <category>SMART Transit</category>
+    </item>
+    <item>
+      <title>[Meeting] Planning Commission Meeting — 2026-06-11</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-06-11%7CPlanning%20Commission%20Meeting</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[San Miguel County • 2026-06-11
+
+Agenda not available]]></description>
+      <category>Meeting</category>
+      <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Meeting] San Miguel Authority for Regional Transportation - Jun 11 2026 — 2026-06-11</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-11%7CSan%20Miguel%20Authority%20for%20Regional%20Transportation%20-%20Jun%2011%202026</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-06-11
+
+The June 11, 2026 SMART meeting agenda hasn't been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>[Thu, Jun 11] Creative Exchange</title>
+      <link>https://www.telluride.com/event/creative-exchange/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/creative%20exchange%7C2026-06-11</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/60815/tot_cxe_brittany_miller.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/60815/tot_cxe_brittany_miller.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Thu, Jun 11] Games on the Green</title>
+      <link>https://www.telluride.com/event/games-on-the-green/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/games%20on%20the%20green%7C2026-06-11</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62453/mtv_summer_selects_lowres-62-2100x1401-5ba5db78-3cf7-49e2-a790-62927e14c194.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Head to The Madeline on Wednesdays and Thursdays this summer for Games on the Green! They will have classic lawn games …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/62453/mtv_summer_selects_lowres-62-2100x1401-5ba5db78-3cf7-49e2-a790-62927e14c194.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Thu, Jun 11] Historic Walking Tour</title>
+      <link>https://www.telluride.com/event/historic-walking-tour/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/historic%20walking%20tour%7C2026-06-11</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/48069/walkingtour_tabloidsize_2021.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Take a historic tour of Telluride on foot! These historic walking tours are led by historian Ashley Boling, and leave …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/48069/walkingtour_tabloidsize_2021.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Thu, Jun 11] Free Tasting</title>
+      <link>https://www.telluride.com/event/free-tasting-at-telluride-wine-merchant/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/free%20tasting%7C2026-06-11</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62697/screenshot_2026-06-03_at_1_50_16_pm.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Free tasting every Thursday from 4-6pm. The theme of the tasting will vary from different seasonal selections in wine, …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/62697/screenshot_2026-06-03_at_1_50_16_pm.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Thu, Jun 11] Telluride Gold Kings</title>
+      <link>https://www.telluride.com/event/telluride-gold-kings/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20gold%20kings%7C2026-06-11</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Dance and sing along with the Telluride Gold Kings every Thursday this summer. Free admission!]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Meeting] Judicial Subcommittee - Jun 12 2026 — 2026-06-12</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-12%7CJudicial%20Subcommittee%20-%20Jun%2012%202026</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-06-12
+
+The June 12, 2026 Judicial Subcommittee agenda hasn't been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>[Meeting] Planning and Zoning Commission Meeting — 2026-06-15</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/norwood%7C2026-06-15%7CPlanning%20and%20Zoning%20Commission%20Meeting</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Norwood • 2026-06-15
+
+Agenda not yet available]]></description>
+      <category>Meeting</category>
+      <category>Town of Norwood</category>
     </item>
   </channel>
 </rss>

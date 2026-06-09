@@ -65,7 +65,10 @@ const MEETING_AGENDA_META = {
     {"zoomUrl":"https://us06web.zoom.us/j/89317090915?pwd=s1SDCrhwsjqY7klJbBNGI7Oyc3Sg2U.1","meetingId":"893 1709 0915","passcode":"670854","phone":"970-728-3844"},
 
   "county|2026-06-03|Board of County Commissioners Meeting":
-    {"zoomUrl":"https://us02web.zoom.us/j/83995847328","meetingId":"839 9584 7328","passcode":"308083","phone":"719-359-4580"}
+    {"zoomUrl":"https://us02web.zoom.us/j/83995847328","meetingId":"839 9584 7328","passcode":"308083","phone":"719-359-4580"},
+
+  "county|2026-06-10|Board of Review and Planning Commission Joint Work Session":
+    {"zoomUrl":"https://us06web.zoom.us/j/84720329875","phone":"970-728-3844"}
 };
 
 const MANUAL_SUMMARIES = {
@@ -160,10 +163,10 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -172,43 +175,43 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "The June 30, 2026 Town Council agenda hasn't been posted yet.",
+    "The Jun 30 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The July 1st Ecology Commission agenda hasn't been posted yet.",
+    "The July 1 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The Jul 01 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
     "The July 1, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
-    "The July 1 Board of County Commissioners agenda hasn't been posted yet.",
+    "The July 1st Board of County Commissioners agenda hasn't been posted yet.",
 
   "county|2026-06-10|Board of Review and Planning Commission Joint Work Session":
-    "The June 10 Board of Review and Planning Commission joint work session agenda hasn't been posted yet.",
+    "The county's Board of Review and Planning Commission will hear a presentation on Colorado's new Low Energy and Carbon Code — building standards that could reshape how structures get approved in the box canyon.",
 
   "county|2026-06-08|San Miguel Basin Fair Board":
     "The San Miguel Basin Fair Board meets to review junior livestock sale terms and update bylaws for the upcoming fair season.",
 
   "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
-    "The July 6, 2026 Open Space Commission agenda hasn't been posted yet.",
+    "The July 6 Open Space Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-11|San Miguel Authority for Regional Transportation - Jun 11 2026":
-    "The June 11 SMART meeting agenda hasn't been posted yet.",
+    "The June 11, 2026 SMART meeting agenda hasn't been posted yet.",
 
   "county|2026-07-08|Board of County Commissioners Work Session":
-    "The July 8 Board of County Commissioners work session agenda hasn't been posted yet.",
+    "The July 8 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "smart|2026-07-09|SMART Board of Directors":
     "The July 9 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-06-18|Lodging Tax Board 06/18/26":
-    "The June 18, 2026 San Miguel County Lodging Tax Board agenda hasn't been posted yet.",
+    "The June 18 Lodging Tax Board agenda hasn't been posted yet.",
 
   "county|2026-07-09|Planning Commission Meeting":
     "The July 9 Planning Commission agenda hasn't been posted yet.",
@@ -218,6 +221,30 @@ const MANUAL_SUMMARIES = {
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Sweet Sounds among the stacks",
+    source: "Telluride Times",
+    date: "June 9, 2026",
+    firstSeen: "2026-06-09",
+    newsTopic: "arts-culture",
+    copy: "The library has launched several new monthly music series including Sweet Sounds concerts on the terrace (first Wednesdays with free popsicles), Strings in the Stacks violin performances (first Mondays), and Piano on the Patio sessions. Local musicians are stepping up to perform everything from bluegrass to classical, with library staff leading the charge and drawing in passersby who wouldn't normally attend concerts.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_7d9947a8-8ab3-48b8-a836-88957c5584f5.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/ae/bae021a6-01e3-439c-91b1-8061c6f4f049/6a23d86f6d489.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Opioid settlement dollars are saving lives in our region",
+    source: "Telluride Times",
+    date: "June 9, 2026",
+    firstSeen: "2026-06-09",
+    newsTopic: "community",
+    copy: "For the past year, communities across southwest Colorado have been putting opioid settlement dollars to work in ways that are practical, collaborative and lifesaving.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/opinion/columnists/article_3c72f726-b536-4e2d-a537-282124011cc3.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/df/8df9a3b3-328a-424d-a9cf-f14e4ba60364/6a2129e2366d6.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Summer air service includes new LA flights",
     source: "Telluride Times",
@@ -1162,6 +1189,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "public-safety",
     copy: "Expanded: Stage One Fire Restrictions will be in place in both the Norwood and Egnar Fire Protection Districts effective Friday 6/5/26 at 11:59 pm.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=525",
+    img: ""
+  },
+  {
+    title: "Click here for details.",
+    source: "Town of Ridgway",
+    date: "June 9, 2026",
+    firstSeen: "2026-06-09",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Stage-1-Fire-Restrictions-Press-Release-2026-06-09-acc.pdf",
     img: ""
   },
   {
@@ -2487,6 +2525,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
   },
   {
+    title: "Play It Forward – Pickleball for a Purpose!",
+    link: "https://koto.org/event/play-it-forward-pickleball-for-a-purpose/",
+    description: "Hey Telluride – grab your paddle! The San Miguel Resource Center is hosting Play It Forward! Pickleball for a Purpose on Sunday, June 28th at the Telluride Racquet Club. All skill levels welcome – and every point you play supports MSRC's 24/7 crisis hotline and youth prevention programs right here in our community. All levels of play are welcome, and if you don't have a racquet and balls, don't worry. We'll supply that for you! Advanced play will begin at 9:30 a.m., and Beginner & Intermediate play at 12 p.m. (noon). Register now at smrcco.org/events. Play it forward, Telluride!",
+    pubDate: "2026-06-28T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
+  },
+  {
     title: "Pickleball Open Play",
     link: "https://koto.org/event/pickleball-open-play/2026-06-28/",
     description: "Weekly Round Robins Eligibility: Must be rated 2.5+. Requirements: Players should know the rules, scoring, and basic strategy of tennis. Format: Fun, competitive matches with rotating partners each session. Minimum Players: A minimum of 4 players is required for the class to run.",
@@ -2495,17 +2544,6 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-06-28/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-06-28T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
   }
 ];
@@ -2558,7 +2596,7 @@ const WILKINSON_EVENTS = [
   {
     title: "I Heart Art",
     link: "https://telluridelibrary.libcal.com/event/16574860?hs=a",
-    description: "The Wilkinson Public Library presents I Heart Art, an outdoor program on the Lower Terrace. This library event runs from 2:30 PM to 3:30 PM and offers community members an art-focused activity in an outdoor setting.",
+    description: "2:30 PM – 3:30 PM",
     pubDate: "2026-06-09T20:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -2909,7 +2947,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "The Fretliners Live in Concert",
     link: "https://sheridanoperahouse.com/events/the-fretliners-live-in-concert-2/",
-    description: "The Fretliners will perform live in concert at the Sheridan Opera House on June 13, 2026. This musical performance takes place at Telluride's historic downtown venue.",
+    description: "",
     pubDate: "2026-06-13",
     endDate: "undefined",
     source: "sheridan",
@@ -2921,7 +2959,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Bluegrass Festival",
     link: "https://sheridanoperahouse.com/events/telluride-bluegrass-festival/",
-    description: "The Telluride Bluegrass Festival presents a concert at the historic Sheridan Opera House. This performance is part of the renowned annual festival celebrating bluegrass music in Telluride.",
+    description: "",
     pubDate: "2026-06-18",
     endDate: "2026-06-21",
     source: "sheridan",
@@ -2933,7 +2971,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "FREE Oak Street Park SummerSHOW Series: Elder Grown",
     link: "https://sheridanoperahouse.com/events/oak-street-park-summershow-series/",
-    description: "The FREE Oak Street Park SummerSHOW Series presents Elder Grown at the Sheridan Opera House in Telluride. This concert is part of the free summer performance series offering live entertainment to the community.",
+    description: "",
     pubDate: "2026-06-25",
     endDate: "undefined",
     source: "sheridan",
@@ -3144,6 +3182,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52744270535881/huge/2c61b5d27b015d45fb42faf91991d5314cc4e592.jpg"
+  },
+  {
+    title: "Jack Haight Red Mountain Revival",
+    link: "https://www.stelmohotel.com/summer-sound",
+    description: "Western Slope favorite Jack Haight is kicking off our Grand Opening Party following our renovation efforts. We are so excited for this first tune of the Summer Sound Series on Wednesday, June 10th at 5pm. Featuring a passionate local songwriter + full band, Jack Haight's Red Mountain Revival. Come kick back and enjoy the mountain air! No ticket required for this show.",
+    pubDate: "2026-06-10T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53119160417727/huge/6d53129b3cbeb0429fdeb70856d14c6c2b44ac35.jpg"
   },
   {
     title: "Zumba Fitness with Tamra",
@@ -3718,6 +3767,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52650481604723/huge/42bc80f9e4801fc659045735a533374c32f0ca75.jpg"
   },
   {
+    title: "Boxcar Band",
+    link: "https://www.stelmohotel.com/summer-sound",
+    description: "Come enjoy the sounds of summer as the Boxcar Band performs on the patio Wednesday, June 17th at 5pm. A favorite of Southwest Colorado, this group brings a lively, acoustic sound to each performance. No ticket required for this show. We hope to see you there!",
+    pubDate: "2026-06-17T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53119177194372/huge/2eab84f8f8d44ba9710cb110f0a1e305bb2b7f39.jpg"
+  },
+  {
     title: "Zumba Fitness with Tamra",
     link: "https://zumba.com/p/zumbafitnesswithTamra",
     description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com. For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra.",
@@ -4046,28 +4106,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52709642938173/huge/e2c21f0b2c1fb10c06c021e9b9d55a9ea535bccc.jpg"
-  },
-  {
-    title: "Senior Lunch by Neighbor to Neighbor",
-    link: "https://www.ourayneighbor.com/services",
-    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
-    pubDate: "2026-06-22T18:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
-  },
-  {
-    title: "Ouray Youth Summer Programs: Ouray Via Ferrata",
-    link: "https://anc.apm.activecommunities.com/cityofouray/activity/search/detail/338?onlineSiteId=0&from_original_cui=true",
-    description: "Participants will take part in a guided trip on the Ouray Via Ferrata. Please come prepared with sturdy hiking footwear and a small backpack containing a rain jacket, sun protection, water, and snacks. This adventure includes exposure to heights and uneven terrain. REGISTER HERE Scholarships are available if needed. This activity is part of the Youth Adventure Days, sponsored by Ouray's Parks and Recreation Department. For questions, contact Sean Hart at 970-318-1003 or seanhart@cityofouray.com",
-    pubDate: "2026-06-23T14:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Via Ferrata",
-    imageUrl: "https://localist-images.azureedge.net/photos/52993369881829/huge/94195afe1cfd161fd9cb6b8aedcc4a8e0365000c.jpg"
   }
 ];
 
@@ -4075,7 +4113,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-06-09-nwc-meeting",
-    description: "The Town of Norwood will hold a meeting for the NWC on June 9th. This government meeting will take place in Norwood, Colorado.",
+    description: "",
     pubDate: "2026-06-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4086,7 +4124,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Second Amended",
     link: "https://www.norwoodtown.com/2026-06-10-board-of-trustees-second-amended",
-    description: "The Town of Norwood Board of Trustees will hold a meeting regarding a second amended item. This government meeting provides an opportunity for community members to observe local municipal proceedings.",
+    description: "",
     pubDate: "2026-06-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4097,7 +4135,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting Meeting",
     link: "https://www.norwoodtown.com/2026-06-11-norwood-sanitation-district-meeting-meeting",
-    description: "The Norwood Sanitation District will hold a meeting in Norwood, Colorado. This government meeting provides an opportunity for community members to learn about sanitation district operations and participate in local governance.",
+    description: "",
     pubDate: "2026-06-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4108,7 +4146,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa Wolf Jett",
     link: "https://www.norwoodtown.com/2026-06-13-music-on-the-mesa-wolf-jett",
-    description: "Music On The Mesa presents Wolf Jett performing in Norwood. This community music event takes place on the mesa, offering live entertainment in a scenic outdoor setting.",
+    description: "",
     pubDate: "2026-06-13T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4119,7 +4157,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-06-15-planning-and-zoning-commission-meeting",
-    description: "The Town of Norwood Planning and Zoning Commission will hold a public meeting to review development proposals, zoning applications, and land use matters affecting the community. This government meeting provides an opportunity for public input on planning decisions within Norwood's jurisdiction.",
+    description: "",
     pubDate: "2026-06-15T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4130,7 +4168,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4141,7 +4179,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5897,7 +5935,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Telluride Theatre&#039;s Annual Shakespeare in the Park",
     link: "https://www.telluride.com/event/telluride-theatres-annual-shakespeare-in-the-park/",
-    description: "Telluride Theatre presents its annual Shakespeare in the Park performance, bringing classic drama to an outdoor setting in Telluride. This community theater event offers residents and visitors the opportunity to enjoy professional Shakespeare productions in a scenic mountain environment.",
+    description: "Stay tuned for updates about the 2026 event!",
     pubDate: "2026-07-17",
     endDate: "2026-07-26",
     source: "telluride-com",
