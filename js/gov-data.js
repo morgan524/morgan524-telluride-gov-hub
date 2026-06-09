@@ -1799,6 +1799,16 @@ const TOPIC_DEFINITIONS = {
    as you discover them. */
 const LOCAL_ORGS = [
     {
+      name: "Telluride Theatre",
+      category: "nonprofits",
+      town: "Telluride",
+      summary: "Telluride's professional theatre company — producing original works, cabarets, and the beloved summer \"Shakespeare in the Park,\" reimagined classic productions staged at Town Park since 1990 and made accessible and entertaining for everyone.",
+      website: "https://www.telluridetheatre.org/shakespeare",
+      donate: "https://www.telluridetheatre.org/#donate",
+      social: { facebook: "https://www.facebook.com/telluridetheater/", instagram: "https://www.instagram.com/telluridetheatre/" },
+      logo: "https://livabletelluride.org/logo/Telluride%20Theater.png"
+    },
+    {
       name: "Tri-County Health Network",
       category: "nonprofits",
       town: "Telluride",
