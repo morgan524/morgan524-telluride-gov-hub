@@ -1147,19 +1147,29 @@
                                 'July','August','September','October','November','December'];
                 return `${months[m-1]} ${d}, ${y}`;
               };
+              const UNAVAILABLE_NAME = /\b(adoption\s+pending|adopted|on\s+hold|pending\s+adoption|not\s+available|coming\s+soon|in\s+foster|foster\s+only)\b/i;
               HUMANE_SOCIETY_ANIMALS.forEach(a => {
                 if (!a || !a.id) return;
                 if (a.revealDate && a.revealDate > todayIso) return; // queued — not yet
+                // Defense in depth (the sync script already filters these):
+                // skip animals with no real photo (the card would otherwise
+                // show the THS logo as a placeholder), pre-weaning animals,
+                // and any whose name marks them as pending/adopted/on-hold.
+                if (!a.photo) return;
+                if (/^(unweaned|nursing)$/i.test((a.ageGroup || '').trim())) return;
+                if (UNAVAILABLE_NAME.test(a.name || '')) return;
+                const cleanName = (a.name || '').replace(/^\s*(adoption\s+pending!?|adopted|on\s+hold|pending)\s*[-:!]*\s*/i, '').trim();
+                if (!cleanName) return;
                 const isDog = a.species === 'Dog';
                 const speciesNoun = isDog ? 'dog' : (a.species === 'Cat' ? 'cat' : 'pet');
                 // Use revealDate as the article date so the card sorts in
                 // alongside news from the day the animal first appeared.
                 live.push({
-                  title: `Meet ${a.name} — adoptable ${speciesNoun} at Telluride Humane Society`,
+                  title: `Meet ${cleanName} — adoptable ${speciesNoun} at Telluride Humane Society`,
                   source: 'Telluride Humane Society',
                   sourceKey: 'humane-society',
                   date: isoToHuman(a.revealDate || a.firstSeen) || '',
-                  summary: a.summary || `${a.name} is available for adoption at Telluride Humane Society.`,
+                  summary: a.summary || `${cleanName} is available for adoption at Telluride Humane Society.`,
                   href: a.profileUrl || `https://telluridehumanesociety.com/${speciesNoun}s/`,
                   img: a.photo || '',
                   newsTopic: ''  // category assigned below via categorizeArticle (sourceKey)

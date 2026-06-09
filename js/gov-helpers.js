@@ -78,13 +78,7 @@ const MANUAL_SUMMARIES = {
   "smart|2026-05-20|SMART Board of Directors":
     "Virtual-only meeting. The Gondola update is the agenda's headline — that's the project that drives SMART's 3A ballot context. Resolution 2026-8 appoints Marya Stark to the Investment Committee. Q4 2025 / annual performance report and the May Ops report round out the formal business. The board closes in executive session under §24-6-402(4)(b) to confer with counsel on Masson v. SMC BOCC. Anyone tracking how the gondola conversation is evolving should bookmark the live link.",
 
-  "mv|2026-05-21|Town Council Meeting":
-    "Agenda not yet available",
-
   "mv|2026-06-17|Town Council Meeting":
-    "Agenda not yet available",
-
-  "mv|2026-06-04|Design Review Board":
     "Agenda not yet available",
 
   "fire|2026-06-16|Board of Directors Meeting":
@@ -109,9 +103,6 @@ const MANUAL_SUMMARIES = {
     "Agenda not yet available",
 
   "norwood|2026-06-15|Planning and Zoning Commission Meeting":
-    "Agenda not yet available",
-
-  "airport|2026-05-21|TRAA Board of Commissioners Meeting":
     "Agenda not yet available",
 
   "ouray|2026-05-20|The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions.":
@@ -2585,50 +2576,12 @@ const WILKINSON_EVENTS = [
   }
 ];
 
-const HUMANE_SOCIETY_ANIMALS = [
-  {
-    id: "TEL-A-183",
-    name: "ADOPTION PENDING! Chloe",
-    species: "Dog",
-    breed: "Pekingese / Mixed Breed (Small)",
-    ageGroup: "Young Dog",
-    sex: "Female",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/a99f1b065d5aa7e81128ffa3d46e50a3/ace0a26f15425fd64f52910831ebbc9c.jpg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/213821017",
-    summary: "Young Dog • Pekingese / Mixed Breed (Small) • Female",
-    firstSeen: "2026-06-04",
-    revealDate: "2026-06-04",
-    lastSeen: "2026-06-09"
-  },
-  {
-    id: "TEL-A-184",
-    name: "Oaks - Labrador Retriever",
-    species: "Dog",
-    breed: "Retriever, Labrador",
-    ageGroup: "Unweaned",
-    sex: "Male",
-    photo: "",
-    profileUrl: "https://www.shelterluv.com/embed/animal/213821024",
-    summary: "Unweaned • Retriever, Labrador • Male",
-    firstSeen: "2026-06-04",
-    revealDate: "2026-06-06",
-    lastSeen: "2026-06-09"
-  },
-  {
-    id: "TEL-A-185",
-    name: "ADOPTION PENDING! Frankie",
-    species: "Dog",
-    breed: "Bulldog, French",
-    ageGroup: "Young Dog",
-    sex: "Female",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/1df4fca9ccf1aaff944a025028f8ebe1/5183f466479dd2ae60b980fd4b66cb8d.jpg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/213834631",
-    summary: "Young Dog • Bulldog, French • Female",
-    firstSeen: "2026-06-06",
-    revealDate: "2026-06-06",
-    lastSeen: "2026-06-09"
-  }
-];
+// Bot-managed by scripts/content-refresh.js Task 7 (syncHumaneSocietyAnimals).
+// Currently empty: every animal the THS Shelterluv feed lists right now is
+// either pending adoption ("ADOPTION PENDING! …") or pre-weaning/photoless,
+// none of which are advertised as adoptable. The sync filters those out, so
+// this repopulates automatically when THS posts genuinely-available pets.
+const HUMANE_SOCIETY_ANIMALS = [];
 
 /* The Alibi events — refreshed by syncAlibiEvents() every 6 hours.
  * Source: Event Calendar App (api.eventcalendarapp.com, calendar 14036).

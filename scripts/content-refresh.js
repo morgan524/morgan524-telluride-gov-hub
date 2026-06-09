@@ -3115,9 +3115,19 @@ async function syncHumaneSocietyAnimals(existingAnimals) {
   for (const a of arr) {
     if (!a) continue;
     const id = String(a.uniqueId || a.nid || a.id || '').trim();
-    const name = (a.name || '').trim();
+    let name = (a.name || '').trim();
     const species = (a.species || '').trim();
     if (!id || !name || (species !== 'Dog' && species !== 'Cat')) continue;
+    // The shelter encodes adoption status in the NAME field, e.g.
+    // "ADOPTION PENDING! Frankie", "ADOPTED - Rex", "ON HOLD: Chloe".
+    // Animals carrying any such marker are not actually available, so the
+    // "adoptable dog/cat at Telluride Humane Society" card would be wrong.
+    // Skip them. (Strip a leading marker too, as belt-and-suspenders, in
+    // case the shelter ever leaves a clean-but-prefixed name.)
+    const UNAVAILABLE_NAME = /\b(adoption\s+pending|adopted|on\s+hold|pending\s+adoption|not\s+available|coming\s+soon|in\s+foster|foster\s+only)\b/i;
+    if (UNAVAILABLE_NAME.test(name)) continue;
+    name = name.replace(/^\s*(adoption\s+pending!?|adopted|on\s+hold|pending)\s*[-:!]*\s*/i, '').trim();
+    if (!name) continue;
     // Photos are objects ({id, name, url, isCover, ...}). Pull the URL
     // from the cover photo if present, else the first one.
     const photos = Array.isArray(a.photos) ? a.photos : [];
@@ -3126,10 +3136,16 @@ async function syncHumaneSocietyAnimals(existingAnimals) {
       const cover = photos.find(p => p && p.isCover) || photos[0];
       photo = (cover && cover.url) || (typeof cover === 'string' ? cover : '');
     }
+    // No real photo → the card falls back to the THS logo, which looks
+    // like a broken/placeholder card. Require a genuine animal photo.
+    if (!photo) continue;
     // age_group is an object — pull its .name field (e.g. "Young Dog")
     const ageGroupName = (a.age_group && typeof a.age_group === 'object')
       ? (a.age_group.name || '')
       : (typeof a.age_group === 'string' ? a.age_group : '');
+    // Pre-weaning animals ("Unweaned"/"Nursing") aren't yet adoptable —
+    // they're in the system but shouldn't be advertised as available.
+    if (/^(unweaned|nursing)$/i.test(ageGroupName.trim())) continue;
     const breed = [a.breed, a.secondary_breed].filter(Boolean).join(' / ').trim();
     const summaryParts = [];
     if (ageGroupName) summaryParts.push(ageGroupName);

@@ -1511,7 +1511,19 @@
                const today = new Date(); today.setHours(0,0,0,0);
                const diff = (dt - today) / 86400000;
                const maxDays = e.isFestival ? 90 : 60;
-               if (diff < 0 || diff > maxDays) return;
+               // A multi-day event stays current until its END date passes —
+               // gate the "already started" check on endDate when present so
+               // an ongoing event (e.g. a month-long Hikeathon) keeps showing
+               // even after its start date has slipped into the past.
+               let endDiff = diff;
+               if (e.endDate) {
+                 const ed = new Date(String(e.endDate));
+                 if (!isNaN(ed)) {
+                   const edStr = ed.toLocaleDateString('en-CA', { timeZone: 'America/Denver' });
+                   endDiff = (new Date(edStr + 'T00:00:00') - today) / 86400000;
+                 }
+               }
+               if (endDiff < 0 || diff > maxDays) return;
                live.push({
                  title: e.title,
                  date: dateStr,
