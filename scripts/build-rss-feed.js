@@ -51,14 +51,16 @@ const FEED_TITLE = 'Livable Telluride — Weekly Digest';
 const FEED_DESC = 'This week\'s news, upcoming Gov-Hub meetings, and events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).';
 const BLOG_FEED_TITLE = 'Livable Telluride — Blog';
 const BLOG_FEED_DESC = 'Long-form posts from Livable Telluride on housing, land use, civic decisions, and the issues shaping our valley.';
-const MAX_AGE_DAYS = 7;             // backward window for news + blog
-// Weekly digest windows (2026-05-29) — "Gov-Hub coming up + events for
-// the week." Tightened from 14/60 → 7 because the only consumer of
-// feed.xml is the Mailchimp Weekly digest campaign; longer windows
-// surfaced too many far-future items that a weekly email recipient
-// can't act on.
-const MAX_FUTURE_DAYS = 7;          // forward window for meetings
-const MAX_EVENT_FUTURE_DAYS = 7;    // forward window for events
+const MAX_AGE_DAYS = 7;             // backward window for news + blog (the past week)
+// Weekly digest windows. The Mailchimp Weekly digest sends FRIDAY mornings
+// (moved from Monday 2026-06-09), so the forward-looking sections should
+// cover exactly the upcoming Friday→Thursday week. withinRollingWindow is
+// INCLUSIVE on both ends (deltaDays in [0, N]), so N=6 means today (Friday,
+// delta 0) through next Thursday (delta +6) = 7 calendar days, and it stops
+// BEFORE the next Friday — so a next-Friday event lands in next week's email
+// only, never doubled across two weeklies.
+const MAX_FUTURE_DAYS = 6;          // forward window for meetings (Fri→Thu)
+const MAX_EVENT_FUTURE_DAYS = 6;    // forward window for events (Fri→Thu)
 const MAX_ITEMS = 60;               // hard cap on feed size
 const MAX_MEETINGS = 15;            // cap upcoming-meeting items per build
 const MAX_EVENTS = 25;              // cap event items per build (multi-source)
