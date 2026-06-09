@@ -1805,7 +1805,7 @@ const COMMUNITY_EVENTS = [
     source: "Telluride Rotary Club",
     date: "May 31, 2026",
     endDate: "June 28, 2026",
-    location: "Oak Street Gondola Plaza, Telluride",
+    location: "",
     eventTimes: "11:00 AM kickoff",
     copy: "Registration opens April 20 for the 2nd Annual Telluride Rotary Hikeathon. Four weeks of hiking from May 31 through June 28, with a kickoff at 11am on May 31 at the Oak Street gondola plaza. Hike from anywhere and raise funds for the Telluride Rotary Foundation — supporting scholarships, Youth Exchange, international projects, and community grants. 60% of nonprofit team funds go directly back to their nonprofit. Sponsored by Alpine Bank and Jagged Edge Mountain Gear.",
     href: "https://www.facebook.com/telluriderotary/",
@@ -2924,20 +2924,7 @@ const SHERIDAN_EVENTS = [
 // Multi-day programs: pubDate is the start date; run dates noted in the
 // description. events.html's 60-day window hides past/concluded cohorts
 // (e.g. the Feb–Mar 2026 Strategy & Growth Bootcamp).
-const TELLURIDE_VENTURE_EVENTS = [
-  {
-    title: "Climate Solutions Investment Bootcamp",
-    link: "https://tellurideventurenetwork.com/climate-solutions/",
-    description: "Telluride Venture Network bootcamp for cleantech and climate-focused startups, leveraging Colorado's leadership in the sector — with mentorship and investor connections. Runs June 22 – July 2, 2026.",
-    pubDate: "2026-06-22",
-    endDate: "July 2, 2026",
-    source: "tvn",
-    sourceLabel: "Telluride Venture Network",
-    category: "Community Event",
-    location: "Telluride",
-    imageUrl: "https://tellurideventurenetwork.com/wp-content/uploads/2025/11/Climate-Solutions-7-900x600.png"
-  }
-];
+const TELLURIDE_VENTURE_EVENTS = [];
 
 const TELLURIDE_FOUNDATION_EVENTS = [
   {
