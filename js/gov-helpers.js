@@ -166,7 +166,7 @@ const MANUAL_SUMMARIES = {
     "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -178,19 +178,19 @@ const MANUAL_SUMMARIES = {
     "The Jun 30 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The July 1 Ecology Commission agenda hasn't been posted yet.",
+    "The July 1, 2026 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 1st Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The July 1 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
     "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
-    "The July 1 Board of County Commissioners agenda hasn't been posted yet.",
+    "The July 1st Board of County Commissioners agenda hasn't been posted yet.",
 
   "county|2026-06-10|Board of Review and Planning Commission Joint Work Session":
     "The county's Board of Review and Planning Commission will hear a presentation on Colorado's new Low Energy and Carbon Code — building standards that could reshape how structures get approved in the box canyon.",
@@ -199,25 +199,25 @@ const MANUAL_SUMMARIES = {
     "The San Miguel Basin Fair Board meets to review junior livestock sale terms and update bylaws for the upcoming fair season.",
 
   "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
-    "The July 6 2026 Open Space Commission agenda hasn't been posted yet.",
+    "The July 6, 2026 Open Space Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-11|San Miguel Authority for Regional Transportation - Jun 11 2026":
-    "The June 11 SMART agenda hasn't been posted yet.",
+    "The June 11, 2026 SMART agenda hasn't been posted yet.",
 
   "county|2026-07-08|Board of County Commissioners Work Session":
-    "The July 8 Board of County Commissioners work session agenda hasn't been posted yet.",
+    "The July 8 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "smart|2026-07-09|SMART Board of Directors":
     "The July 9 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-06-18|Lodging Tax Board 06/18/26":
-    "The June 18 Lodging Tax Board agenda hasn't been posted yet.",
+    "The June 18, 2026 San Miguel County Lodging Tax Board agenda hasn't been posted yet.",
 
   "county|2026-07-09|Planning Commission Meeting":
-    "The July 9 Planning Commission agenda hasn't been posted yet.",
+    "The July 9, 2026 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-12|Judicial Subcommittee - Jun 12 2026":
-    "The June 12 Judicial Subcommittee agenda hasn't been posted yet."
+    "The June 12, 2026 Judicial Subcommittee agenda hasn't been posted yet."
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
@@ -1271,6 +1271,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/obituaries/article_0adc5789-cb68-4509-b7a8-1e8bf62a4c8e.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     imgHiRes: true
+  },
+  {
+    title: "Town of Telluride Releases Findings of Independent Investigation",
+    source: "Town of Telluride",
+    date: "June 10, 2026",
+    newsTopic: "recreation",
+    copy: "(June 10, 2026) – Telluride, CO – The Town has released the findings of an independent investigation conducted by Investigations Law Group (ILG) regarding former Mayor Pro Tem Meehan Fee’s involvement in discussions and negotiations with Telski.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=394",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15572"
   },
   {
     title: "Telluride Marshal’s Department Arrests Individual for Failure to Register as a Sex Offender",
@@ -3245,17 +3254,6 @@ const OURAY_COUNTY_EVENTS = [
     category: "Community Event",
     location: "Rollans Park - 257 Sherman St. Ridgway CO 81432",
     imageUrl: ""
-  },
-  {
-    title: "CC4CA 2026 Annual Meeting",
-    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3473",
-    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3473",
-    pubDate: "2026-06-10T12:00:00.000Z",
-    source: "ouraycounty",
-    sourceLabel: "Ouray County",
-    category: "Community Event",
-    location: "- Vail CO 81657",
-    imageUrl: ""
   }
 ];
 
@@ -4716,6 +4714,18 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/62769/sunday-rehab-event-image-2200x1237.800x533.webp"
   },
   {
+    title: "Ethan Hale",
+    link: "https://www.telluride.com/event/ethan-hale/",
+    description: "Solo acoustic guitar rock and roll with Ethan Hale at the Sheridan Historic Bar.",
+    pubDate: "2026-06-14",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62804/ethan_hale_2.800x533.webp"
+  },
+  {
     title: "Historic Walking Tour",
     link: "https://www.telluride.com/event/historic-walking-tour/",
     description: "Take a historic tour of Telluride on foot! These historic walking tours are led by historian Ashley Boling, and leave …",
@@ -4942,6 +4952,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62769/sunday-rehab-event-image-2200x1237.800x533.webp"
+  },
+  {
+    title: "Ethan Hale",
+    link: "https://www.telluride.com/event/ethan-hale/",
+    description: "Solo acoustic guitar rock and roll with Ethan Hale at the Sheridan Historic Bar.",
+    pubDate: "2026-06-21",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62804/ethan_hale_2.800x533.webp"
   },
   {
     title: "Historic Walking Tour",
