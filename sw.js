@@ -9,7 +9,7 @@
 // shell (the `activate` handler deletes every cache whose key != CACHE_NAME).
 // Needed because `/js/` is served stale-while-revalidate, so an old cached
 // hub-bub.js can otherwise survive a deploy for up to the 10-min ?v= window.
-const CACHE_NAME = 'livable-tlr-v13-20260603';
+const CACHE_NAME = 'livable-tlr-v14-20260609';
 
 const STATIC_ASSETS = [
   '/',
@@ -57,12 +57,16 @@ self.addEventListener('fetch', event => {
   if (url.origin !== location.origin &&
       !url.hostname.endsWith('firebasestorage.googleapis.com')) return;
 
+  // HTML navigations — including the home page (`/` and `/index.html`) —
+  // go NETWORK-FIRST so a stale cached shell can never strand a user on an
+  // old nav/layout. Every other .html page was already network-first; the
+  // home page was the lone cache-first exception (the mobile-nav bug,
+  // 2026-06-09). Versioned assets (css/js/logo) stay cache-first
+  // (stale-while-revalidate) — their ?v= query busts them.
   const isStatic =
     url.pathname.startsWith('/css/') ||
     url.pathname.startsWith('/js/') ||
     url.pathname.startsWith('/logo/') ||
-    url.pathname === '/' ||
-    url.pathname === '/index.html' ||
     url.pathname === '/manifest.json';
 
   if (isStatic) {
