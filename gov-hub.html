@@ -94,11 +94,24 @@
       align-items: start;
     }
 
-    /* ── Left sidebar: filters (Public Entities) + Vote Tracker + Sign Up,
-       on the side of the meetings. ── */
+    /* ── Left sidebar: the Public Entities filters only, sticky on the side
+       of the meetings. (Vote Tracker + Sign Up moved to .end-cards below.) ── */
     .sidebar { display: flex; flex-direction: column; gap: 18px; position: sticky; top: 110px; }
     /* Right column holds the past-summaries + upcoming-meetings sections. */
     .content-col { display: block; min-width: 0; }
+    /* Vote Tracker + Sign Up: a centered row at the END of the page (both
+       desktop and mobile), below the meetings. */
+    .end-cards {
+      max-width: 1280px;
+      margin: 12px auto 40px;
+      padding: 0 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: center;
+      align-items: stretch;
+    }
+    .end-cards .side-card { flex: 0 1 340px; margin: 0; }
 
     .side-card {
       background: #fff;
@@ -431,7 +444,10 @@
       .topnav-links { display: none; }
       .hero h1 { font-size: 1.9rem; }
       .page-wrap { grid-template-columns: 1fr; }
-      .sidebar { position: static; }
+      /* On mobile the filters drop to the END (below the meetings), not the top */
+      .sidebar { position: static; order: 2; }
+      .content-col { order: 1; }
+      .end-cards { padding: 0 16px; }
     }
   
     /* ── Translate widget + mobile nav (added 2026-05-18) ── */
@@ -533,18 +549,6 @@
         <h3>Public Entities</h3>
         <div class="entity-list" id="entityList"></div>
       </div>
-
-      <a class="side-card vote-tracker-card" href="/v2/vote-tracker.html" style="display:block;text-decoration:none;color:inherit;text-align:center;transition:transform 0.18s, box-shadow 0.18s;">
-        <img src="/logo/Vote%20Tracker%20Logo.png" alt="Vote Tracker" style="width:100%;height:auto;display:block;margin:0 auto 12px;object-fit:contain;">
-        <p style="font-size:0.88rem;color:var(--text-primary);margin:0 0 14px;line-height:1.45;">Every recorded vote by your elected officials — Telluride, Mountain Village, San Miguel County — searchable by member, year, and topic.</p>
-        <span style="display:inline-block;background:var(--accent-green,#21443c);color:#fff;padding:9px 18px;border-radius:999px;font-weight:600;font-size:0.9rem;">View Vote Tracker →</span>
-      </a>
-
-      <div class="side-card sub-card">
-        <h3>Never Miss an Update</h3>
-        <p>Get a weekly digest of every public meeting, agenda, and summary in your inbox.</p>
-        <a href="/hub-bub.html#signup">Sign Up</a>
-      </div>
     </aside>
 
     <div class="content-col">
@@ -558,6 +562,21 @@
       </section>
     </div>
   </main>
+
+  <!-- Vote Tracker + Sign Up: centered row at the end of the page -->
+  <section class="end-cards">
+    <a class="side-card vote-tracker-card" href="/v2/vote-tracker.html" style="text-decoration:none;color:inherit;text-align:center;transition:transform 0.18s, box-shadow 0.18s;">
+      <img src="/logo/Vote%20Tracker%20Logo.png" alt="Vote Tracker" style="width:100%;height:auto;display:block;margin:0 auto 12px;object-fit:contain;">
+      <p style="font-size:0.88rem;color:var(--text-primary);margin:0 0 14px;line-height:1.45;">Every recorded vote by your elected officials — Telluride, Mountain Village, San Miguel County — searchable by member, year, and topic.</p>
+      <span style="display:inline-block;background:var(--accent-green,#21443c);color:#fff;padding:9px 18px;border-radius:999px;font-weight:600;font-size:0.9rem;">View Vote Tracker →</span>
+    </a>
+
+    <div class="side-card sub-card">
+      <h3>Never Miss an Update</h3>
+      <p>Get a weekly digest of every public meeting, agenda, and summary in your inbox.</p>
+      <a href="/hub-bub.html#signup">Sign Up</a>
+    </div>
+  </section>
 
   <script>
     /* ── Sample data — falls back to this if /js/gov-helpers.js isn't loaded.
