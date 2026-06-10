@@ -1831,6 +1831,16 @@ const LOCAL_ORGS = [
       logo: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
     },
     {
+      name: "Telluride Nordic Association",
+      category: "recreation",
+      town: "Telluride",
+      summary: "A Colorado 501(c)(3) nonprofit dedicated to the education and enhancement of Nordic skiing for individuals of all ages and abilities in the Telluride region.",
+      website: "https://www.telluridenordic.com/",
+      donate: "https://pymt-at-telluridenordic-dot-com.square.site/home#ZRYHjz",
+      social: { facebook: "https://www.facebook.com/TellurideNordic", instagram: "https://www.instagram.com/telluridenordicassociation" },
+      logo: "https://livabletelluride.org/logo/Telluride%20Nordic.png"
+    },
+    {
       name: "Telluride Theatre",
       category: "nonprofits",
       town: "Telluride",
