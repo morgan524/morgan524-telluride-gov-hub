@@ -6,20 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-outdoors.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming hikes, races, ski events, and stewardship days across the Telluride region.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jun 2026 02:53:54 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 09:49:07 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Fri, Jun 12] Rico Trails Alliance Membership Fiesta &amp; Community Dinner</title>
-      <link>https://koto.org/event/rico-trails-alliance-membership-fiesta-community-dinner/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/rico%20trails%20alliance%20membership%7C2026-06-12</guid>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/POSTER-socials-Summer-Membership-Party-2026-scaled.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Garden Bar lot, 20 S. Glasgow, Rico
 
-Kick off the summer at RICO TRAILS ALLIANCE's MEMBERSHIP FIESTA and COMMUNITY DINNER on THURSDAY, JUNE 11 at 6pm. JOIN RTA AT THE GARDEN BAR LOT on Main St. in Rico (Rain or Shine) for YARD GAMES, SILENT AUCTION, DOOR PRIZES (Mezcal Vago, Osprey, Patagonia, Key Lime Air, Dolores Bike Hostel y mucho mas!) YOUR FIRST DRINK IS ON RTA and RTA MEMBERS RECEIVE A COMPLIMENTARY “SOUTH OF THE BORDER” DINNER with Rico celebrity chef Will Nolan of Black Salt Hospitality. Visit RTA's BLOG at RICOTRAILSALLIANCE.ORG to see the menu and sign up to reserve a FREE BIKE TUNE by Ridgway Wrench while you party! If you’re not a current RTA Member, you can purchase your RTA Membership on our website or at the Fiesta. DINNER/DRINKS may also be purchased at the door for $25/$5… a great deal! EVERYONE WELCOME]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/05/POSTER-socials-Summer-Membership-Party-2026-scaled.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
   </channel>
 </rss>

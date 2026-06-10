@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming concerts, film, theater, gallery openings, and festivals across the Telluride region.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jun 2026 02:53:54 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 09:49:07 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Wed, Jun 10] Forever Wild</title>
@@ -70,46 +70,6 @@ The Creative Exchange is a brand-new monthly series by Telluride Arts designed f
       <media:content url="https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 12] North Fork Crossing w/ Brendan Forrest</title>
-      <link>https://www.alibitelluride.com/calendar#eca-event=north-folk-crossing</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/north%20fork%20crossing%20w%7C2026-06-12</guid>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://ucarecdn.com/f1d0587b-ecc4-4749-9dc7-6d561e93a852/-/crop/2500x1251/0,210/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
-📍 The Alibi • Telluride, CO
-🕒 9:00 PM
-
-North Fork Crossing is a new-age Bluegrass band that resides between the Traditi...]]></description>
-      <media:content url="https://ucarecdn.com/f1d0587b-ecc4-4749-9dc7-6d561e93a852/-/crop/2500x1251/0,210/-/preview/" medium="image" />
-      <category>Community Event</category>
-      <category>The Alibi</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 12] Music on the Green Summer Concert Series</title>
-      <link>https://www.telluride.com/event/music-on-the-green-summer-concert-series/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/music%20on%20the%20green%7C2026-06-12</guid>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/44414/16c6ff81-d87c-823e-1bd2-8a66b859eb9d.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-The Telluride Mountain Village Owners Association (TMVOA) and Beyond the Groove Productions Present Music on the Green …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/44414/16c6ff81-d87c-823e-1bd2-8a66b859eb9d.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 12] Mass Movement</title>
-      <link>https://www.telluride.com/event/mass-movement/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/mass%20movement%7C2026-06-12</guid>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/55257/download_14.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Over the past 10 years, Mass Movement has taken place as an annual celebration of dance in our small mountain town. …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/55257/download_14.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
     </item>
   </channel>
 </rss>
