@@ -564,6 +564,30 @@ async function generateWeekAhead(meetingItems, eventItems) {
 
 // Prepend the lede as the first feed item and flag the notable meetings
 // IN PLACE on their meeting objects. Returns nothing; mutates inputs.
+// Stable key for "this week" (year + week-of-year), used for the lede GUID
+// and to scope the human-edit override to the correct week.
+function currentWeekKey() {
+  const now = new Date();
+  const yr = now.getUTCFullYear();
+  return `${yr}-${Math.floor((Date.UTC(yr, now.getUTCMonth(), now.getUTCDate()) - Date.UTC(yr, 0, 1)) / (7 * 86400000))}`;
+}
+
+// Human review/edit override. If data/week-ahead-override.json carries a lede
+// for the CURRENT week, it replaces the AI-generated one — this is how a
+// Thursday-review edit reaches Friday's send. Stale overrides (wrong week)
+// are ignored, so last week's edit never leaks into this week.
+function applyLedeOverride(weekAhead) {
+  const file = path.join(REPO_ROOT, 'data', 'week-ahead-override.json');
+  let ov;
+  try { ov = JSON.parse(fs.readFileSync(file, 'utf8')); } catch (_) { return weekAhead; }
+  if (!ov || ov.weekKey !== currentWeekKey() || !ov.lede || !String(ov.lede).trim()) return weekAhead;
+  console.log('  ✓ Week Ahead lede OVERRIDDEN by data/week-ahead-override.json (human edit)');
+  return {
+    lede: String(ov.lede).trim(),
+    notable: Array.isArray(ov.notable) ? ov.notable : (weekAhead ? weekAhead.notable : []),
+  };
+}
+
 function applyWeekAhead(items, meetingItems, weekAhead) {
   if (!weekAhead) return;
   // Flag notable meetings (objects are shared with `items` by reference).
@@ -579,9 +603,8 @@ function applyWeekAhead(items, meetingItems, weekAhead) {
     const end = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 6));
     const fmt = (d) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
     const range = `${fmt(now)}–${end.toLocaleDateString('en-US', { day: 'numeric', timeZone: 'UTC' })}`;
-    const yr = now.getUTCFullYear();
     // Week-stable GUID so Mailchimp sends the lede once per weekly digest.
-    const weekKey = `${yr}-${Math.floor((Date.UTC(yr, now.getUTCMonth(), now.getUTCDate()) - Date.UTC(yr, 0, 1)) / (7 * 86400000))}`;
+    const weekKey = currentWeekKey();
     items.unshift({
       title: `📅 The Week Ahead — ${range}`,
       link: `${SITE_URL}/events.html`,
@@ -673,6 +696,8 @@ async function main() {
   let weekAhead = null;
   try { weekAhead = await generateWeekAhead(meetingItems, eventItems); }
   catch (e) { console.warn(`  ⚠ Week Ahead skipped: ${e.message}`); }
+  // A human edit for this week (data/week-ahead-override.json) wins over the AI.
+  weekAhead = applyLedeOverride(weekAhead);
 
   // Main digest feed: upcoming Gov-Hub meetings + community events.
   // News was REMOVED 2026-06-09 per request — the weekly email is now a

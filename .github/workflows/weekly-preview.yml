@@ -1,0 +1,64 @@
+name: Weekly Email Preview
+
+# Renders the upcoming weekly email (from the committed feed.xml that the
+# 6-hour content-refresh keeps fresh) and emails it to info@ every THURSDAY
+# for review. Edit the "Week Ahead" lede before Friday's send by putting the
+# corrected text in data/week-ahead-override.json (build-rss-feed.js uses it).
+on:
+  schedule:
+    - cron: '0 14 * * 4'   # Thursday 14:00 UTC (~8am Mountain)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    env:
+      # Email send is skipped (just renders + uploads an artifact) until these
+      # secrets are added. PREVIEW_SMTP_USER = a Gmail/Workspace address;
+      # PREVIEW_SMTP_PASS = an app password for it.
+      PREVIEW_SMTP_PASS: ${{ secrets.PREVIEW_SMTP_PASS }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Render weekly preview from feed.xml
+        id: render
+        run: |
+          set -o pipefail
+          node scripts/weekly-preview.js weekly-preview.html 2>&1 | tee /tmp/wp.log
+          echo "subject=$(grep '^SUBJECT=' /tmp/wp.log | sed 's/^SUBJECT=//')" >> "$GITHUB_OUTPUT"
+
+      - name: Email preview to info@livabletelluride.org
+        if: env.PREVIEW_SMTP_PASS != ''
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.PREVIEW_SMTP_USER }}
+          password: ${{ secrets.PREVIEW_SMTP_PASS }}
+          subject: ${{ steps.render.outputs.subject }}
+          to: info@livabletelluride.org
+          from: Livable Telluride <${{ secrets.PREVIEW_SMTP_USER }}>
+          html_body: file://weekly-preview.html
+
+      - name: Note when email isn't configured
+        if: env.PREVIEW_SMTP_PASS == ''
+        run: echo "::warning::PREVIEW_SMTP_PASS secret not set — rendered weekly-preview.html (see artifact) but did not email. Add PREVIEW_SMTP_USER + PREVIEW_SMTP_PASS to enable the Thursday email."
+
+      - name: Upload preview artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-preview
+          path: weekly-preview.html
+          retention-days: 14
+          if-no-files-found: ignore
