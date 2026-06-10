@@ -88,13 +88,17 @@
       max-width: 1280px;
       margin: 32px auto;
       padding: 0 32px;
-      display: block;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      align-items: start;
     }
 
-    /* ── Sidebar cards — moved BELOW the meetings (2026-06-10): the
-       meetings render full-width first, then these cards lay out as a
-       responsive row at the END of the page. ── */
-    .sidebar { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 32px; align-items: start; }
+    /* ── Left sidebar: filters (Public Entities) + Vote Tracker + Sign Up,
+       on the side of the meetings. ── */
+    .sidebar { display: flex; flex-direction: column; gap: 18px; position: sticky; top: 110px; }
+    /* Right column holds the past-summaries + upcoming-meetings sections. */
+    .content-col { display: block; min-width: 0; }
 
     .side-card {
       background: #fff;
@@ -524,15 +528,6 @@
   </section>
 
   <main class="page-wrap">
-    <section id="recapSection" style="display:none">
-      <h2 class="meet-section-heading">📝 Past Meeting Summaries</h2>
-      <div class="meet-grid" id="recapGrid"></div>
-    </section>
-    <section>
-      <h2 class="meet-section-heading" id="upcomingHeading" style="display:none">📅 Upcoming Meetings</h2>
-      <div class="meet-grid" id="meetGrid"></div>
-    </section>
-
     <aside class="sidebar">
       <div class="side-card">
         <h3>Public Entities</h3>
@@ -551,6 +546,17 @@
         <a href="/hub-bub.html#signup">Sign Up</a>
       </div>
     </aside>
+
+    <div class="content-col">
+      <section id="recapSection" style="display:none">
+        <h2 class="meet-section-heading">📝 Past Meeting Summaries</h2>
+        <div class="meet-grid" id="recapGrid"></div>
+      </section>
+      <section>
+        <h2 class="meet-section-heading" id="upcomingHeading" style="display:none">📅 Upcoming Meetings</h2>
+        <div class="meet-grid" id="meetGrid"></div>
+      </section>
+    </div>
   </main>
 
   <script>
