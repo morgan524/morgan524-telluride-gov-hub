@@ -203,6 +203,39 @@
       border: 2px solid #2d6a4f;
       box-shadow: 0 0 0 1px rgba(45,106,79,0.12), var(--shadow-card);
     }
+    /* Section headings separating past summaries from upcoming meetings */
+    .meet-section-heading {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1b4332;
+      margin: 4px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border-card);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    #recapSection { margin-bottom: 32px; }
+    /* Past-meeting recap cards: a warm amber stroke distinguishes a
+       completed meeting (what happened) from upcoming meetings (green). */
+    .meet-card.recap-card {
+      border: 2px solid #b07a2c;
+      box-shadow: 0 0 0 1px rgba(176,122,44,0.10), var(--shadow-card);
+      background: #fffdf8;
+    }
+    .recap-tag {
+      display: inline-block;
+      background: #b07a2c;
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+    .recap-body { font-size: 0.95rem; line-height: 1.55; color: #333; margin: 4px 0 0; }
+    .recap-byline { font-size: 0.78rem; color: #8a6d3b; font-style: italic; margin-top: 6px; }
     .meet-card-head {
       display: flex;
       gap: 14px;
@@ -491,7 +524,12 @@
   </section>
 
   <main class="page-wrap">
+    <section id="recapSection" style="display:none">
+      <h2 class="meet-section-heading">📝 Past Meeting Summaries</h2>
+      <div class="meet-grid" id="recapGrid"></div>
+    </section>
     <section>
+      <h2 class="meet-section-heading" id="upcomingHeading" style="display:none">📅 Upcoming Meetings</h2>
       <div class="meet-grid" id="meetGrid"></div>
     </section>
 
@@ -994,10 +1032,57 @@
            + '</article>';
     }
 
+    // Past-meeting "Rick" recap card. Shown in the Past Meeting Summaries
+    // section for 3 days after the meeting, then drops off automatically.
+    function recapCard(r) {
+      const dateBadge = fmtDateBadge(r.date);
+      const logos = {
+        telluride: 'https://livabletelluride.org/logo/Telluride%20Town.png',
+        county:    'https://livabletelluride.org/logo/San%20Miguel%20County.png',
+        mv:        'https://livabletelluride.org/logo/Mountain%20village%20Town.jpg',
+        ridgway:   'https://livabletelluride.org/logo/Ridgway%20Town.png'
+      };
+      const logoSrc = logos[r.sourceKey] || '';
+      const logo = logoSrc
+        ? '<img class="meet-entity-logo" src="' + logoSrc + '" alt="' + (r.sourceLabel || '') + '" onerror="this.style.display=\'none\'">'
+        : '';
+      const watch = r.videoUrl
+        ? '<a class="btn-action" href="' + r.videoUrl + '" target="_blank" rel="noopener">▶ Watch Recording</a>'
+        : '';
+      return '<article class="meet-card recap-card">'
+           + '<div class="meet-card-head">' + dateBadge
+           + '<div class="meet-info"><span class="recap-tag">Recap</span>'
+           + '<h2 class="meet-title">' + (r.title || '') + '</h2></div>'
+           + logo + '</div>'
+           + '<p class="recap-body">' + (r.recap || '') + '</p>'
+           + '<div class="recap-byline">— Rick, on what happened</div>'
+           + (watch ? '<div class="meet-actions meet-actions-secondary">' + watch + '</div>' : '')
+           + '</article>';
+    }
+
     function render() {
       const chipRowEl = document.getElementById('chipRow');
       if (chipRowEl) chipRowEl.innerHTML = chipsHtml();
       document.getElementById('entityList').innerHTML = entitiesHtml();
+
+      // Past-meeting recaps (visible for 3 days after each meeting).
+      const recapSection = document.getElementById('recapSection');
+      const recapGrid = document.getElementById('recapGrid');
+      const upcomingHeading = document.getElementById('upcomingHeading');
+      let recaps = [];
+      if (typeof MEETING_RECAPS !== 'undefined' && Array.isArray(MEETING_RECAPS)) {
+        const t = new Date(); t.setHours(0, 0, 0, 0);
+        recaps = MEETING_RECAPS.filter(r => {
+          if (!r || !r.date) return false;
+          if (activeFilter !== 'all' && (r.sourceKey || '').toLowerCase() !== activeFilter) return false;
+          const d = new Date(r.date + 'T00:00:00');
+          const end = new Date(d.getTime() + 3 * 86400000);
+          return t >= d && t <= end;
+        }).sort((a, b) => b.date.localeCompare(a.date));
+      }
+      if (recapGrid) recapGrid.innerHTML = recaps.map(recapCard).join('');
+      if (recapSection) recapSection.style.display = recaps.length ? '' : 'none';
+      if (upcomingHeading) upcomingHeading.style.display = recaps.length ? 'flex' : 'none';
 
       const filtered = activeFilter === 'all'
         ? MEETINGS

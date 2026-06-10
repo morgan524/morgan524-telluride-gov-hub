@@ -220,6 +220,49 @@ const MANUAL_SUMMARIES = {
     "The June 12, 2026 Judicial Subcommittee agenda hasn't been posted yet."
 };
 
+/* ── Post-meeting "Rick" recaps ───────────────────────────────────────
+   A plain-spoken ~100-word summary of what happened at a meeting, in the
+   voice of "Rick" (a long-time local). Gov-Hub shows each recap as a
+   "Past Meeting Summaries" card for 3 days after the meeting date, then it
+   drops off automatically. Extracted from the meeting video transcript
+   (see the vote-tracker pipeline). Append new recaps to the TOP.
+   Schema: { sourceKey, sourceLabel, date (YYYY-MM-DD), title, recap,
+             videoUrl }                                                    */
+const MEETING_RECAPS = [
+  { sourceKey:'telluride', sourceLabel:'Town of Telluride', date:'2026-06-09',
+    title:'Town Council — Jun 9, 2026',
+    videoUrl:'https://www.youtube.com/watch?v=vxrKceCqXaM',
+    recap:"A workmanlike June meeting, and mostly the kind of housekeeping this town does well. Council gave first-reading nods to selling two more deed-restricted units (907 East Colorado and Longwell 16) to keep locals housed, accepted a clean 2025 audit, and locked in the Black Hills gas franchise for another stretch. The fire-restriction ordinance passed on second reading — sensible given our summers. Three good neighbors got reappointed to commissions and the airport board. The one that drew a real split was waiving school-district tap fees for teacher housing: it squeaked through 4-2, Stark and Enright unconvinced. Fee was out. Nothing alarming, but worth watching where those exemptions lead." },
+  { sourceKey:'county', sourceLabel:'San Miguel County', date:'2026-06-03',
+    title:'Board of County Commissioners — Jun 3, 2026',
+    videoUrl:'https://www.youtube.com/watch?v=3nSAqRc0Cpk',
+    recap:"A meaty land-and-housing day for the BOCC, and mostly the kind of news that helps folks stay put. They kicked in another $100,000 to the Telluride Foundation's Housing Opportunity Fund — money that's already kept dozens of locals housed — and renamed their new fast-track development rule from 'Accelerated' to 'Prioritized' Housing Review, a tidy little nod that we're not the Front Range and shouldn't pretend to be. A bouldering gym out in Illium got its PUD bump, ADU sizing got cleaned up, and new septic rules were locked in. Everything sailed 3-0. Sensible, neighborly governing." },
+  { sourceKey:'county', sourceLabel:'San Miguel County', date:'2026-05-27',
+    title:'Board of County Commissioners — May 27, 2026',
+    videoUrl:'https://www.youtube.com/watch?v=CkFxc1DpoNM',
+    recap:"Mostly a quiet stretch of careful, neighbor-by-neighbor work. The commissioners cleared two Ophir septic variances — letting tiny old-mining lots shoehorn in a leach field — released a deed restriction up in Lawson Hill, and accepted a state housing-planning grant. All unanimous. You can feel the squeeze in these: less land left, tighter state rules, thinner grant dollars. But the county's doing right by folks trying to build and stay." },
+  { sourceKey:'county', sourceLabel:'San Miguel County', date:'2026-05-20',
+    title:'Board of County Commissioners — May 20, 2026',
+    videoUrl:'https://www.youtube.com/watch?v=xDE7B7x2C5U',
+    recap:"A brisk, good-natured morning out at the County. The commissioners cleared the consent agenda and seated two folks on community boards — Jackie Kenik to the Lone Tree Cemetery and Marcus Kirkwood to the Basin Fairboard — before tightening up the County's drug-and-alcohol policy and trading some fiber line with Clear Networks. Two land-use hearings drew real attention: merging a couple of tight little lots near Sawpit by the river, and a big multi-year logging and fire-mitigation project up on Wilson Mesa. They also adopted the state's septic Regulation 43, keeping variance authority local. Sensible stuff, mostly — though that riverside lot merger bears watching." },
+  { sourceKey:'county', sourceLabel:'San Miguel County', date:'2026-05-14',
+    title:'Planning Commission — May 14, 2026',
+    videoUrl:'https://www.youtube.com/watch?v=R9nnXLvOGCY',
+    recap:"Quiet, workmanlike morning down at the county. The two contested public hearings — Garlock and Crockett out on the Mesas — got tabled and withdrawn, so the Commission turned to the small stuff that actually shapes the place. They blessed a climbing gym for the old tire shop out in Illium, which is a fine reuse of an empty industrial box, and tidied up the code's definition of 'footprint.' The bigger one was accelerated review for affordable housing to keep San Miguel eligible for Prop 123 money — sensible, though I share the stakeholders' wariness about rushing it. All recommendations head to the BOCC." },
+  { sourceKey:'county', sourceLabel:'San Miguel County', date:'2026-05-13',
+    title:'Board of County Commissioners — May 13, 2026',
+    videoUrl:'https://www.youtube.com/watch?v=Q6xLvyjwDgs',
+    recap:"A quieter special session, mostly listening. The board heard a Rights Mesa resident out on a tangled HOA-and-code mess, then sat through the open space work plan — bridal veil deck, the down-valley connector, those black swifts up at the falls. The real talk was housing: a candid sit-down with the Realtors about a vacancy tax that keeps dying at the Capitol, and the hard truth that a few million dollars doesn't build much anymore. Actual votes were modest and unanimous: green grants, a trail-safety letter, gift cards for cleanup volunteers. Sensible, neighborly stuff — no big swings here." },
+  { sourceKey:'telluride', sourceLabel:'Town of Telluride', date:'2026-05-19',
+    title:'Town Council — May 19, 2026',
+    videoUrl:'https://www.youtube.com/watch?v=U3QyzfSWDlE',
+    recap:"Quiet, businesslike morning up at Rebecca Hall — six on the dais, Meehan out. Council leaned into transportation safety, adopting that federal Safe Streets plan and a Vision Zero goal of no traffic deaths by 2040. They bought back another town employee unit at Mandota, took a first pass at tightening the fire-restriction rules ahead of a dry summer, and reappointed Carly Shaw to the election commission. The one that needed real care was the National's rooftop umbrella on Colorado Ave — they granted it, but only seasonally and with strings, mindful of that landmark building. Sensible stuff, nothing rammed through." },
+  { sourceKey:'telluride', sourceLabel:'Town of Telluride', date:'2026-04-28',
+    title:'Town Council — Apr 28, 2026',
+    videoUrl:'https://www.youtube.com/watch?v=vWaP0Ba4GYY',
+    recap:"Quiet, housing-heavy night. The big-ticket Stender HARC appeal got kicked down the road at the appellant's request, so no fireworks there. Council reappointed Peter Sante to Planning & Zoning — good to see folks still willing to serve. The real action was the deed-restricted units: they cleared second readings to sell the Element 52 unit on South Davis and the Silverjack unit on West Pacific, both headed to lottery winners. Then sitting as the Housing Authority, they adopted a policy temporarily suspending some waitlist rules to chip away at vacancies, with a sunset date so it doesn't drift forever. Sensible, steady work — nothing radical." }
+];
+
 const TELLURIDE_TIMES_ARTICLES = [
   {
     title: 'Tracksters cop end-of-season awards',
