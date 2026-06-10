@@ -217,8 +217,8 @@ const SMART_CACHED_DATA = [
     date: 'June 11, 2026',
     time: '4:00 PM',
     title: 'SMART Board of Directors',
-    agendaUrl: null,
-    packetUrl: null,
+    agendaUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART-Board-Agenda_June-11th-2026_distributed.pdf',
+    packetUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART-Board-Meeting-Packet_June-11th-2026.pdf',
     special: false,
     location: 'SMART Office • Lawson Hill'
   },

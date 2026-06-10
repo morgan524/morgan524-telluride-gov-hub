@@ -4459,6 +4459,56 @@ async function syncMedAgendas() {
   return map;
 }
 
+// SMART (Telluride regional transit) — its colorado.gov board-meetings page
+// lists, per month, two direct-PDF links titled "<Month> <YYYY> Board Agenda"
+// and "<Month> <YYYY> Board Packet". (The PDF filenames themselves are wildly
+// inconsistent — "Agenda2025.11.13_r.pdf", "SMART-Board-Agenda_June-11th-2026
+// _distributed.pdf", etc. — so we key off the clean LINK TEXT, not the file
+// name.) SMART meets once a month, so we join the page's (month, year) to the
+// full dates in SMART_CACHED_DATA and return exact-date-keyed agenda + packet
+// maps for patchAgendaUrls(). Returns null on fetch failure (carry forward).
+async function syncSmartAgendas(govDataSrc) {
+  console.log('\n🚌 Syncing SMART agenda + packet PDFs...');
+  const PAGE = AGENDA_SOURCES.smart.pageUrl;
+  const ORIGIN = 'https://smarttelluride.colorado.gov';
+  const html = await fetchPage(PAGE, 'SMART board-meetings page');
+  if (!html) return null;
+
+  // 1. Page anchors → { 'month yyyy': { agendaUrl, packetUrl } }
+  const byMonth = {};
+  const aRe = /<a\b[^>]*href="([^"]+\.pdf[^"]*)"[^>]*>([\s\S]*?)<\/a>/gi;
+  let m;
+  while ((m = aRe.exec(html)) !== null) {
+    let href = m[1];
+    const text = m[2].replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+    if (/special/i.test(text)) continue; // skip special-meeting rows; regular monthly only
+    const t = text.match(/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})\b[\s\S]*?\b(Agenda|Packet)\b/i);
+    if (!t) continue;
+    if (!/^https?:/i.test(href)) href = ORIGIN + (href.startsWith('/') ? href : '/' + href);
+    const key = (t[1] + ' ' + t[2]).toLowerCase();
+    byMonth[key] = byMonth[key] || {};
+    if (/agenda/i.test(t[3])) byMonth[key].agendaUrl = href;
+    else byMonth[key].packetUrl = href;
+  }
+
+  // 2. Join (month, year) to SMART_CACHED_DATA's full dates.
+  const block = (govDataSrc.match(/const\s+SMART_CACHED_DATA\s*=\s*\[[\s\S]*?\n\];/) || [''])[0];
+  const agendaMap = {}, packetMap = {};
+  const dateRe = /date:\s*'([^']+)'/g;
+  let d;
+  while ((d = dateRe.exec(block)) !== null) {
+    const full = d[1]; // e.g. "June 11, 2026"
+    const mm = full.match(/^([A-Za-z]+)\s+\d{1,2},\s*(\d{4})$/);
+    if (!mm) continue;
+    const hit = byMonth[(mm[1] + ' ' + mm[2]).toLowerCase()];
+    if (!hit) continue;
+    if (hit.agendaUrl) agendaMap[full] = hit.agendaUrl;
+    if (hit.packetUrl) packetMap[full] = hit.packetUrl;
+  }
+  console.log(`  SMART: ${Object.keys(byMonth).length} month(s) on page; matched agenda=${Object.keys(agendaMap).length} packet=${Object.keys(packetMap).length}`);
+  return { agendaMap, packetMap };
+}
+
 // San Miguel County — queries CivicClerk OData for upcoming events whose
 // names match BOCC / Planning Commission / Open Space / etc., and returns
 // a {dateKey: agendaUrl} map keyed by the gov-data.js date format
@@ -4539,7 +4589,7 @@ async function syncCountyAgendas() {
 // `agendaUrl:` field. Scoped to the named array's brace block so the same
 // date string in a different entity's array is untouched. Returns the
 // updated source plus a count of fields changed.
-function patchAgendaUrls(govDataSrc, arrayName, agendaMap) {
+function patchAgendaUrls(govDataSrc, arrayName, agendaMap, field = 'agendaUrl') {
   const startRe = new RegExp('const\\s+' + arrayName + '\\s*=\\s*\\[', 'g');
   const startMatch = startRe.exec(govDataSrc);
   if (!startMatch) return { src: govDataSrc, changed: 0 };
@@ -4564,9 +4614,9 @@ function patchAgendaUrls(govDataSrc, arrayName, agendaMap) {
     if (!url) return;
     const escDate = dateKey.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-    // Pass 1: update existing `agendaUrl: null` or `agendaUrl: '<old>'`.
+    // Pass 1: update existing `<field>: null` or `<field>: '<old>'`.
     const updateRe = new RegExp(
-      "(\\{[^{}]*date:\\s*'" + escDate + "'[^{}]*?agendaUrl:\\s*)(null|'[^']*')",
+      "(\\{[^{}]*date:\\s*'" + escDate + "'[^{}]*?" + field + ":\\s*)(null|'[^']*')",
       'g'
     );
     let matched = false;
@@ -4579,7 +4629,7 @@ function patchAgendaUrls(govDataSrc, arrayName, agendaMap) {
     });
     if (matched) return;
 
-    // Pass 2: the entry exists but has no `agendaUrl:` field — insert one.
+    // Pass 2: the entry exists but has no `<field>:` field — insert one.
     // We anchor on a trailing field (location, type, civicClerkId, note) so
     // we land inside the same entry. Greedy `*` here (vs `*?` in Pass 1)
     // so we attach to the LAST such field in the entry, which keeps the
@@ -4594,7 +4644,7 @@ function patchAgendaUrls(govDataSrc, arrayName, agendaMap) {
       const m = before.match(/\n(\s+)[^\n]*$/);
       const indent = m ? m[1] : '    ';
       changed++;
-      return before + lastField + ',\n' + indent + "agendaUrl: '" + url + "'";
+      return before + lastField + ',\n' + indent + field + ": '" + url + "'";
     });
   });
 
@@ -5448,6 +5498,30 @@ async function main() {
     } catch (e) {
       console.warn(`  ${arrName} agenda sync error: ${e.message}`);
     }
+  }
+
+  // ── 0b. SMART agenda + packet (separate: it patches TWO url fields) ──
+  // SMART's colorado.gov page exposes both a "Board Agenda" and a "Board
+  // Packet" PDF per month; patch both onto SMART_CACHED_DATA.
+  try {
+    const smart = await syncSmartAgendas(govDataSrc);
+    if (smart) {
+      let smartChanged = 0;
+      if (Object.keys(smart.agendaMap).length) {
+        const r = patchAgendaUrls(govDataSrc, 'SMART_CACHED_DATA', smart.agendaMap);
+        govDataSrc = r.src; smartChanged += r.changed;
+      }
+      if (Object.keys(smart.packetMap).length) {
+        const r = patchAgendaUrls(govDataSrc, 'SMART_CACHED_DATA', smart.packetMap, 'packetUrl');
+        govDataSrc = r.src; smartChanged += r.changed;
+      }
+      if (smartChanged > 0) {
+        govDataChanged = true;
+        console.log(`  SMART_CACHED_DATA: patched ${smartChanged} url field(s)`);
+      }
+    }
+  } catch (e) {
+    console.warn(`  SMART agenda sync error: ${e.message}`);
   }
 
   // ── 1. Meeting Summaries + Agenda-derived Zoom info ──
