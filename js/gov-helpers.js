@@ -8519,6 +8519,38 @@ function getSmartMeetings() {
   });
 }
 
+// Ridgway Town Council + Planning Commission. Surfaces RIDGWAY_CACHED_DATA
+// stubs (each tagged board:'council'|'pc') and pulls the agenda/packet PDF
+// from RIDGWAY_AGENDA_MAP by date (the bot refreshes that map from the two
+// colorado.gov board pages every 6h). Same single "Town of Ridgway" entity.
+function getRidgwayMeetings() {
+  if (typeof RIDGWAY_CACHED_DATA === 'undefined') return [];
+  const amap = (typeof RIDGWAY_AGENDA_MAP !== 'undefined') ? RIDGWAY_AGENDA_MAP : {};
+  const PC_URL = 'https://townofridgway.colorado.gov/i-want-to/ridgway-planning-commission';
+  return RIDGWAY_CACHED_DATA.map(m => {
+    const eventDate = localDate(m.date);
+    const agendaUrl = m.agendaUrl || amap[m.date] || null;
+    const hasAgenda = !!agendaUrl;
+    const isPC = m.board === 'pc';
+    const baseUrl = isPC ? PC_URL : (typeof RIDGWAY_COUNCIL_URL !== 'undefined' ? RIDGWAY_COUNCIL_URL : PC_URL);
+    return {
+      title: m.title,
+      link: agendaUrl || baseUrl,
+      description: m.note || (hasAgenda ? 'Agenda and full meeting packet available (PDF).' : ''),
+      eventDate,
+      eventDates: '',
+      eventTimes: m.time || '',
+      location: m.location || '',
+      source: 'ridgway',
+      sourceLabel: 'Town of Ridgway',
+      category: /special/i.test(m.title) ? 'Special Meeting' : (isPC ? 'Planning Commission' : 'Town Council'),
+      canceled: false,
+      hasAgenda,
+      packetUrl: null
+    };
+  });
+}
+
 function getTownAgendaLink(title, eventDate) {
   if (!eventDate) return TOWN_CIVICWEB_FALLBACK;
   const dateKey = eventDate.toISOString().slice(0, 10);

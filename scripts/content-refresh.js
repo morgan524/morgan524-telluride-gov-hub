@@ -5225,102 +5225,82 @@ async function syncTelluridComEvents() {
 // CF Worker proxy (requires townofridgway.colorado.gov in ALLOWED_HOSTS —
 // already added to the worker source; redeploy if needed).
 //
-async function syncRidgwayAgendas() {
-  const PAGE_URL = 'https://townofridgway.colorado.gov/i-want-to/ridgway-town-council';
+// Scrape one Ridgway colorado.gov board page (Council or Planning Commission)
+// into a { "Month D, YYYY": agendaUrl } map. Both pages use the same table
+// shape: <tr><td><strong>Month D, YYYY</strong></td> … <td><a>Agenda & Packet</a></td>
+// (+ an optional <a>Minutes</a>). Returns {} on any fetch failure.
+async function scrapeRidgwayAgendaPage(pageUrl, label) {
   const SAFARI_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15';
-
-  console.log('\n🏔  Task 20: Scraping Ridgway Town Council agendas...');
-
   let html = null;
-  // Try direct fetch first
   try {
-    const resp = await fetch(PAGE_URL, {
-      headers: { 'User-Agent': SAFARI_UA, 'Accept': 'text/html,*/*' }
-    });
-    if (resp.status === 200) {
-      html = resp.text;
-      console.log('  Ridgway agenda page: direct fetch 200');
-    } else {
-      console.warn(`  Ridgway agenda page: direct fetch HTTP ${resp.status}, trying proxy`);
-    }
+    const resp = await fetch(pageUrl, { headers: { 'User-Agent': SAFARI_UA, 'Accept': 'text/html,*/*' } });
+    if (resp.status === 200) { html = resp.text; console.log(`  Ridgway ${label}: direct fetch 200`); }
+    else console.warn(`  Ridgway ${label}: direct fetch HTTP ${resp.status}, trying proxy`);
   } catch (e) {
-    console.warn(`  Ridgway agenda page: direct fetch error (${e.message}), trying proxy`);
+    console.warn(`  Ridgway ${label}: direct fetch error (${e.message}), trying proxy`);
   }
-
-  // Fallback: CF Worker proxy
   if (!html) {
     try {
-      const proxyUrl = maybeProxy(PAGE_URL);
-      if (proxyUrl === PAGE_URL) {
-        console.warn('  No proxy configured — skipping Ridgway agenda scrape');
-        return null;
-      }
+      const proxyUrl = maybeProxy(pageUrl);
+      if (proxyUrl === pageUrl) { console.warn(`  No proxy configured — skipping Ridgway ${label}`); return {}; }
       const resp2 = await fetch(proxyUrl);
-      if (resp2.status === 200) {
-        html = resp2.text;
-        console.log('  Ridgway agenda page: proxy fetch 200');
-      } else {
-        console.warn(`  Ridgway agenda page: proxy fetch HTTP ${resp2.status}`);
-        return null;
-      }
+      if (resp2.status === 200) { html = resp2.text; console.log(`  Ridgway ${label}: proxy fetch 200`); }
+      else { console.warn(`  Ridgway ${label}: proxy fetch HTTP ${resp2.status}`); return {}; }
     } catch (e2) {
-      console.warn(`  Ridgway agenda page: proxy fetch error (${e2.message})`);
-      return null;
+      console.warn(`  Ridgway ${label}: proxy fetch error (${e2.message})`); return {};
     }
   }
 
-  // Parse the agenda table.
-  // Row pattern: <td><strong>MONTH DD, YYYY</strong></td> ... <td>...<a href="URL">...</a>...</td>
-  // We extract each <tr> block and look for a date + an agenda PDF link.
   const agendaMap = {};
   const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-
-  // Match each <tr>…</tr> block
   const rowRe = /<tr[^>]*>([\s\S]*?)<\/tr>/gi;
   let rowMatch;
   while ((rowMatch = rowRe.exec(html)) !== null) {
     const row = rowMatch[1];
-
-    // Extract date from <strong>Month D, YYYY</strong>
     const dateRe = /<strong[^>]*>\s*((?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s*\d{4})\s*<\/strong>/i;
     const dateMatch = dateRe.exec(row);
     if (!dateMatch) continue;
-
-    // Normalise date: "May 13, 2026" — ensure comma
     let rawDate = dateMatch[1].trim().replace(/\s+/g, ' ');
     if (!rawDate.includes(',')) rawDate = rawDate.replace(/(\d{4})$/, ', $1');
     const d = new Date(rawDate);
     if (isNaN(d.getTime())) continue;
     const dateKey = `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
 
-    // Extract agenda PDF link — prefer links whose text contains "Agenda"
+    // Prefer an Agenda/Packet link; explicitly skip Minutes-only links.
     const linkRe = /<a[^>]+href="([^"]+\.pdf[^"]*)"[^>]*>([^<]*)<\/a>/gi;
-    let linkMatch;
-    let agendaUrl = null;
+    let linkMatch, agendaUrl = null;
     while ((linkMatch = linkRe.exec(row)) !== null) {
       const href = linkMatch[1];
       const text = linkMatch[2];
-      if (/agenda/i.test(text) || /agenda/i.test(href)) {
+      if (/minutes/i.test(text)) continue;
+      if (/agenda|packet/i.test(text) || /agenda|packet/i.test(href)) {
         agendaUrl = href.startsWith('http') ? href : `https://townofridgway.colorado.gov${href}`;
         break;
       }
-      // Accept any PDF as fallback if no "Agenda" label found
-      if (!agendaUrl) {
-        agendaUrl = href.startsWith('http') ? href : `https://townofridgway.colorado.gov${href}`;
-      }
+      if (!agendaUrl) agendaUrl = href.startsWith('http') ? href : `https://townofridgway.colorado.gov${href}`;
     }
-    if (agendaUrl) {
-      agendaMap[dateKey] = agendaUrl;
-    }
+    if (agendaUrl && !agendaMap[dateKey]) agendaMap[dateKey] = agendaUrl;
   }
+  console.log(`  Ridgway ${label}: ${Object.keys(agendaMap).length} agenda link(s)`);
+  return agendaMap;
+}
 
-  const count = Object.keys(agendaMap).length;
+// Task 20: scrape BOTH Ridgway board pages (Town Council 2nd-Wed, Planning
+// Commission 3rd-Wed) and merge into one date→agenda map for RIDGWAY_AGENDA_MAP.
+// Council and PC never meet on the same date, so a single map serves both;
+// getRidgwayMeetings() in gov-helpers.js looks up the agenda by meeting date.
+async function syncRidgwayAgendas() {
+  console.log('\n🏔  Task 20: Scraping Ridgway Council + Planning Commission agendas...');
+  const council = await scrapeRidgwayAgendaPage('https://townofridgway.colorado.gov/i-want-to/ridgway-town-council', 'Town Council');
+  const pc = await scrapeRidgwayAgendaPage('https://townofridgway.colorado.gov/i-want-to/ridgway-planning-commission', 'Planning Commission');
+  const merged = Object.assign({}, council, pc);
+  const count = Object.keys(merged).length;
   if (count === 0) {
-    console.warn('  No Ridgway agendas found in page — check HTML structure');
+    console.warn('  No Ridgway agendas found — check HTML structure');
     return null;
   }
-  console.log(`  Found ${count} Ridgway agenda link(s):`, Object.keys(agendaMap).join(', '));
-  return agendaMap;
+  console.log(`  Ridgway: ${count} total agenda link(s) (council + PC)`);
+  return merged;
 }
 
 // ══════════════════════════════════════════════════════════════

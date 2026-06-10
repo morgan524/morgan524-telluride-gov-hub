@@ -767,21 +767,42 @@ const RIDGWAY_COUNCIL_URL = 'https://townofridgway.colorado.gov/i-want-to/ridgwa
 
 const RIDGWAY_CACHE_DATE = '2026-05-11';
 
+// Ridgway meeting stubs. Town Council = 2nd Wednesday @ 6:00 PM; Planning
+// Commission = 3rd Wednesday @ 5:30 PM. The agenda/packet PDF for each date is
+// auto-filled from RIDGWAY_AGENDA_MAP (gov-helpers.js), which the bot refreshes
+// from the two colorado.gov board pages every 6h. Keep a couple of future stubs
+// ahead of today so upcoming meetings render before their agenda is posted.
 const RIDGWAY_CACHED_DATA = [
   // ── Town Council (2nd Wednesday of each month, 6:00 PM) ──
   {
-    date: 'May 13, 2026',
+    date: 'June 10, 2026',
+    time: '6:00 PM',
+    title: 'Ridgway Town Council Regular Meeting',
+    board: 'council',
+    agendaUrl: null
+  },
+  {
+    date: 'July 8, 2026',
     time: '6:00 PM',
     title: 'Ridgway Town Council Regular Meeting',
     board: 'council',
     agendaUrl: null,
     note: 'Agenda typically posted the Friday before.'
   },
+  // ── Planning Commission (3rd Wednesday of each month, 5:30 PM) ──
   {
-    date: 'June 10, 2026',
-    time: '6:00 PM',
-    title: 'Ridgway Town Council Regular Meeting',
-    board: 'council',
+    date: 'June 17, 2026',
+    time: '5:30 PM',
+    title: 'Ridgway Planning Commission Meeting',
+    board: 'pc',
+    agendaUrl: null,
+    note: 'Agenda typically posted the week of the meeting.'
+  },
+  {
+    date: 'July 15, 2026',
+    time: '5:30 PM',
+    title: 'Ridgway Planning Commission Meeting',
+    board: 'pc',
     agendaUrl: null
   }
 ];
