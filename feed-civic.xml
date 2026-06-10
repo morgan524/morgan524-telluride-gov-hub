@@ -6,52 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-civic.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming council, commission, and board meetings across the region — with comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Jun 2026 23:13:08 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 02:53:54 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Meeting] Telluride Board of Education Work Session — 2026-06-09</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/school%7C2026-06-09%7CTelluride%20Board%20of%20Education%20Work%20Session</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Telluride School District • 2026-06-09
-
-Agenda not yet available]]></description>
-      <category>Meeting</category>
-      <category>Telluride School District</category>
-    </item>
-    <item>
-      <title>[Meeting] Telluride Board of Education Monthly Meeting — 2026-06-09</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/school%7C2026-06-09%7CTelluride%20Board%20of%20Education%20Monthly%20Meeting</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Telluride School District • 2026-06-09
-
-Agenda not yet available]]></description>
-      <category>Meeting</category>
-      <category>Telluride School District</category>
-    </item>
-    <item>
-      <title>[Meeting] Board of Trustees Meeting — 2026-06-09</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/norwood%7C2026-06-09%7CBoard%20of%20Trustees%20Meeting</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Norwood • 2026-06-09
-
-Agenda not yet available]]></description>
-      <category>Meeting</category>
-      <category>Town of Norwood</category>
-    </item>
-    <item>
-      <title>[Meeting] Town Council - Jun 09 2026 — 2026-06-09</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-09%7CTown%20Council%20-%20Jun%2009%202026</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Telluride • 2026-06-09
-
-Agenda not yet published]]></description>
-      <category>Meeting</category>
-      <category>Town of Telluride</category>
-    </item>
     <item>
       <title>⚡ [Meeting] Board of Review and Planning Commission Joint Work Session — 2026-06-10</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
@@ -61,7 +17,7 @@ Agenda not yet published]]></description>
 
 The county's Board of Review and Planning Commission will hear a presentation on Colorado's new Low Energy and Carbon Code — building standards that could reshape how structures get approved in the box canyon.
 
-⚡ Why it matters: New building codes could reshape construction approval processes countywide]]></description>
+⚡ Why it matters: New building codes could reshape construction approval process countywide]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -94,7 +50,7 @@ Agenda not available]]></description>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-06-11
 
-The June 11, 2026 SMART meeting agenda hasn't been posted yet.]]></description>
+The June 11, 2026 SMART board agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -119,6 +75,28 @@ The June 12, 2026 Judicial Subcommittee agenda hasn't been posted yet.]]></descr
 Agenda not yet available]]></description>
       <category>Meeting</category>
       <category>Town of Norwood</category>
+    </item>
+    <item>
+      <title>[Meeting] Board of Directors Meeting — 2026-06-16</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/fire%7C2026-06-16%7CBoard%20of%20Directors%20Meeting</guid>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Telluride Fire Protection District • 2026-06-16
+
+Agenda not yet available]]></description>
+      <category>Meeting</category>
+      <category>Telluride Fire Protection District</category>
+    </item>
+    <item>
+      <title>[Meeting] General Assembly Meeting — 2026-06-16</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/ophir%7C2026-06-16%7CGeneral%20Assembly%20Meeting</guid>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Ophir • 2026-06-16
+
+Agenda not yet available]]></description>
+      <category>Meeting</category>
+      <category>Town of Ophir</category>
     </item>
   </channel>
 </rss>

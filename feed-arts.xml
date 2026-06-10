@@ -6,34 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming concerts, film, theater, gallery openings, and festivals across the Telluride region.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Jun 2026 23:13:08 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 02:53:54 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Tue, Jun 9] Augment Summer Music Series</title>
-      <link>https://www.telluride.com/event/augment-summer-music-series/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/augment%20summer%20music%20series%7C2026-06-09</guid>
-      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/53672/download_1.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Telluride's local non-profit organization Augment Music Project is hosting monthly concerts in Elks Park this summer. …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/53672/download_1.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Tue, Jun 9] Community Conversations: Beyond the Buzz</title>
-      <link>https://telluridelibrary.libcal.com/event/16781613?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/community%20conversations%20beyond%20the%7C2026-06-09</guid>
-      <pubDate>Tue, 09 Jun 2026 23:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_21_11_41_24.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Program Room
-
-5:00 PM – 7:00 PM · Beyond the Buzz: reimagining festival culture with care and awareness. M&aacute;s all&aacute; del alcohol: cambiando la cultura de festivales con cuidad y conciencia.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_21_11_41_24.png" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
     <item>
       <title>[Wed, Jun 10] Forever Wild</title>
       <link>https://www.telluride.com/event/forever-wild/</link>
@@ -70,6 +44,70 @@ In collaboration with Sheep Mountain Alliance and Eco Action Partners, Patagonia
 
 Dance and sing along with the Telluride Gold Kings every Thursday this summer. Free admission!]]></description>
       <media:content url="https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Thu, Jun 11] Telluride Historical Museum – Moments That Made US: San Miguel Stories – Opening Reception</title>
+      <link>https://koto.org/event/telluride-historical-museum-moments-that-made-us-san-miguel-stories-opening-reception/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20historical%20museum%20moments%7C2026-06-11</guid>
+      <pubDate>Thu, 11 Jun 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+
+Telluride Historical Museum Announces “Moments That Made US: San Miguel Stories”, New 2026-2027 Annual Exhibition for America 250/Colorado 150 Commemoration Telluride, Colorado, June 1, 2026 — Telluride Historical Museum announces its upcoming 2026-2027 annual exhibit, Moments That Made US: San Miguel Stories, a special exhibition during the America 250/Colorado 150 commemoration that explores how generations of Americans in San Miguel County and beyond have given meaning to the ideals set out in the Declaration of Independence. The exhibition looks back across centuries and highlights both challenging and celebratory times, while exploring five themes drawn directly from the Declaration of Independence: Created Equal; Life, Liberty, and the Pursuit of Happiness; Free and Independent States; Consent of the Governed; and We Mutually Pledge. The featured moments weave together multiple perspectives from some of San Miguel County’s most significant stories alongside defining moments from United States history. …]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Thu, Jun 11] The Creative Exchange at Telluride Arts HQ</title>
+      <link>https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-06-11/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/the%20creative%20exchange%20at%7C2026-06-11</guid>
+      <pubDate>Thu, 11 Jun 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Telluride Arts HQ, TELLURIDE
+
+The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. Topics may span everything from the business of art and professional development, to creative process, storytelling, collaboration, and the philosophical underpinnings of making art. Whether you’re a full-time working artist, an educator, a student, a maker, or simply someone curious about creative expression, the Creative Exchange is open to you. …]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 12] North Fork Crossing w/ Brendan Forrest</title>
+      <link>https://www.alibitelluride.com/calendar#eca-event=north-folk-crossing</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/north%20fork%20crossing%20w%7C2026-06-12</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://ucarecdn.com/f1d0587b-ecc4-4749-9dc7-6d561e93a852/-/crop/2500x1251/0,210/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
+📍 The Alibi • Telluride, CO
+🕒 9:00 PM
+
+North Fork Crossing is a new-age Bluegrass band that resides between the Traditi...]]></description>
+      <media:content url="https://ucarecdn.com/f1d0587b-ecc4-4749-9dc7-6d561e93a852/-/crop/2500x1251/0,210/-/preview/" medium="image" />
+      <category>Community Event</category>
+      <category>The Alibi</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 12] Music on the Green Summer Concert Series</title>
+      <link>https://www.telluride.com/event/music-on-the-green-summer-concert-series/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/music%20on%20the%20green%7C2026-06-12</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/44414/16c6ff81-d87c-823e-1bd2-8a66b859eb9d.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+The Telluride Mountain Village Owners Association (TMVOA) and Beyond the Groove Productions Present Music on the Green …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/44414/16c6ff81-d87c-823e-1bd2-8a66b859eb9d.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 12] Mass Movement</title>
+      <link>https://www.telluride.com/event/mass-movement/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/mass%20movement%7C2026-06-12</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/55257/download_14.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Over the past 10 years, Mass Movement has taken place as an annual celebration of dance in our small mountain town. …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/55257/download_14.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
     </item>

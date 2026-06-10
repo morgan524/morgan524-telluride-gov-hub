@@ -163,7 +163,7 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
     "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
@@ -175,19 +175,19 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "The Jun 30 2026 Town Council agenda hasn't been posted yet.",
+    "The June 30 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The July 1 Ecology Commission agenda hasn't been posted yet.",
+    "The July 1, 2026 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The Jul 01 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The July 1, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
     "The July 1st Board of County Commissioners agenda hasn't been posted yet.",
@@ -202,16 +202,16 @@ const MANUAL_SUMMARIES = {
     "The July 6 Open Space Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-11|San Miguel Authority for Regional Transportation - Jun 11 2026":
-    "The June 11, 2026 SMART meeting agenda hasn't been posted yet.",
+    "The June 11, 2026 SMART board agenda hasn't been posted yet.",
 
   "county|2026-07-08|Board of County Commissioners Work Session":
-    "The July 8 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The July 8 Board of County Commissioners work session agenda hasn't been posted yet.",
 
   "smart|2026-07-09|SMART Board of Directors":
     "The July 9 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-06-18|Lodging Tax Board 06/18/26":
-    "The June 18 Lodging Tax Board agenda hasn't been posted yet.",
+    "The June 18 San Miguel County Lodging Tax Board agenda hasn't been posted yet.",
 
   "county|2026-07-09|Planning Commission Meeting":
     "The July 9 Planning Commission agenda hasn't been posted yet.",
@@ -221,6 +221,165 @@ const MANUAL_SUMMARIES = {
 };
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Buddy Davis discusses his great-great-grandfather Quanah Parker at West End Stories and Poems June 11",
+    source: "Telluride Times",
+    date: "June 10, 2026",
+    firstSeen: "2026-06-10",
+    newsTopic: "recreation",
+    copy: "Buddy Davis will share stories about his great-great-grandfather Quanah Parker at West End Stories and Poems on June 11, drawing from S.C. Gwynne's \"Empire of the Summer Moon.\" The monthly gathering at Naturita library is free and open to all ages, with refreshments provided.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_c010642c-d8a2-4c75-a326-9a774d66d2c0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/44/d448ec7c-8eb1-4339-88b0-6c57bc94a99c/6a28c0a207dd5.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "CHALKBOARD week of June 11-17",
+    source: "Telluride Times",
+    date: "June 10, 2026",
+    firstSeen: "2026-06-10",
+    newsTopic: "government",
+    copy: "The weekly community calendar lists birthdays for local residents from June 11-17, along with regular meeting schedules for town board, school board, and chamber of commerce groups. Norwood's weekly happenings include the Thursday farmers market, senior meals on Mondays and Thursdays, Sunday food pantry distribution, and ongoing activities like pickleball games and AA meetings at the medical center.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_dd396515-597f-4179-bb2c-e1bd6aedf5df.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/fc/6fcb28ad-ed38-4621-bfc0-91d5ad3c8e73/6a28c00a053b1.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Carrying the legacy of environmental activism",
+    source: "Telluride Times",
+    date: "June 10, 2026",
+    firstSeen: "2026-06-10",
+    newsTopic: "health",
+    copy: "Local environmentalists and former county commissioners Joan May and Art Goodtimes gathered to discuss how environmental activism has evolved in the Telluride region, from early victories like protecting Sheep Mountain from logging to preserving the Valley Floor. When asked if the community would still unite for such causes today, the room fell quiet - reflecting how much more complex local challenges have become with housing, economic disparity, wildfire risk and drought all competing for attention.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_396bdf01-cb79-49d4-847c-7cab3940e58e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Ruthie Boyd Sheep Mountain, Alliance",
+    imgHiRes: true
+  },
+  {
+    title: "Who gets heard",
+    source: "Telluride Times",
+    date: "June 10, 2026",
+    firstSeen: "2026-06-10",
+    newsTopic: "community",
+    copy: "Current public meetings mostly draw the same small group of people who have time to attend midday sessions, missing voices from working parents, job site workers, rural families, and non-English speakers. Recent meetings in Placerville and Egnar worked better because they focused on listening rather than staff presentations followed by brief public comment periods. Simple tools like phone or text input could help more residents participate without requiring a free afternoon, since good government means using systems that work for people rather than making people work around government schedules.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_08f7067d-98de-471d-9bc4-42b7f39a3230.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Green Grants make a difference",
+    source: "Telluride Times",
+    date: "June 10, 2026",
+    firstSeen: "2026-06-10",
+    newsTopic: "community",
+    copy: "A local family received green energy grants through Eco Action Partners to make their home more energy efficient. The improvements are expected to reduce energy costs while making their house more comfortable. These grant programs help families afford sustainability upgrades they might not otherwise be able to make.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_9d2d657b-6671-40e7-8de8-c33130960de1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "The MarU",
+    imgHiRes: true
+  },
+  {
+    title: "Resolution in support of Initiative 195",
+    source: "Telluride Times",
+    date: "June 10, 2026",
+    firstSeen: "2026-06-10",
+    newsTopic: "community",
+    copy: "The Telluride R-1 School Board has endorsed Initiative 195, which would establish a graduated income tax system projected to bring about $649,000 annually to the local district. The measure would reduce taxes for roughly 98.6% of San Miguel County filers while asking higher earners to pay more, generating at least $2 billion statewide for K-12 education, healthcare and early childhood programs.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_5a76d38a-61af-4d6a-829e-3dbf141ef147.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Cheryl Carstens Miller",
+    imgHiRes: true
+  },
+  {
+    title: "In support of Marya Stark",
+    source: "Telluride Times",
+    date: "June 10, 2026",
+    firstSeen: "2026-06-10",
+    newsTopic: "community",
+    copy: "Dear Editor,",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_b70a1828-f748-4d2c-9c81-f3060f7aaaa5.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A vote for continuity",
+    source: "Telluride Times",
+    date: "June 10, 2026",
+    firstSeen: "2026-06-10",
+    newsTopic: "government",
+    copy: "Dear Editor,",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_cd5e1e04-3b1f-45d8-b5dc-568af06d8807.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Telluride Venture Network hosts Investment Pitch Day",
+    source: "Telluride Times",
+    date: "June 10, 2026",
+    firstSeen: "2026-06-10",
+    newsTopic: "community",
+    copy: "The Telluride Venture Network is hosting a Pitch Day where eight climate and clean technology startups from around Colorado will present to investors and community members, followed by happy hour at the SHOW Bar. The companies range from green steel to hydrogen to EV charging, all part of TVN's Climate Solutions Investment Bootcamp designed to help startups raise capital and scale their businesses.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_ca1cc2b2-5bd3-4792-afe9-23cdbcb5ca9d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/67/26702d0e-ccee-4cfd-8832-d7f217bc0fad/6a28b86493440.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Mountain Village to host Fire and Ice Cream",
+    source: "Telluride Times",
+    date: "June 10, 2026",
+    firstSeen: "2026-06-10",
+    newsTopic: "public-safety",
+    copy: "Mountain Village is hosting a Fire and Ice Cream event from 3-5 p.m. featuring wildfire education booths, free ice cream, live music, and emergency vehicles for kids to explore. Eight local agencies will set up in Heritage Plaza to cover topics like defensible space, evacuation prep, and emergency notifications as the region heads into another dry summer. It's free and open to everyone, with a raffle for folks who visit all the booths.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_161f21fc-b472-44ce-bc0c-6e5c0cd01445.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/fd/4fd86180-7cf2-4fe8-883e-35a0458c4b7d/6a28b49eb2baa.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Telluride High School students receive Seal of Climate Literacy",
+    source: "Telluride Times",
+    date: "June 10, 2026",
+    firstSeen: "2026-06-10",
+    newsTopic: "education",
+    copy: "Six Telluride High School seniors earned the state's first Seal of Climate Literacy by completing environmental coursework, fieldwork, and community projects alongside graduation requirements. The program, supported by EcoAction Partners and student advocacy, will now be offered annually to help prepare students for environmental challenges the region already faces with low snowpack and wildfire concerns.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_6e22e86d-7833-4be6-a7a4-c51e9949e115.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/c7/dc79d188-1227-4649-be03-9e95edc719af/6a28b3f00d5bd.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Noxious Weed of the Month is the musk thistle",
+    source: "Telluride Times",
+    date: "June 10, 2026",
+    firstSeen: "2026-06-10",
+    newsTopic: "community",
+    copy: "San Miguel County is highlighting musk thistle as this month's noxious weed - a European invasive with drooping purple flowers and spiny leaves that's spreading through disturbed areas, pastures and roadsides. Each plant can produce 120,000 seeds that stay viable for a decade, outcompeting native vegetation and creating dense patches that livestock and wildlife avoid.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_607fe193-d89c-49fc-b415-bff141811336.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/05/d0506dc8-9f9e-4b92-a516-939fff40d8af/6a28b346b8201.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Telluride Foundation celebrates 2026 scholars",
+    source: "Telluride Times",
+    date: "June 10, 2026",
+    firstSeen: "2026-06-10",
+    newsTopic: "community",
+    copy: "The Telluride Foundation handed out scholarships to 17 local students this year, including seven Chang Chávez scholars getting up to $420,000 over four years and two Neil Armstrong scholars receiving $20,000 each for STEM studies. New this spring was the Larry Hopkins scholarship honoring a longtime local who ran the Powder House restaurant in the '70s - it went to a Nucla student heading to Colorado Mesa for health science.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_9b1ab7d6-23e0-4d8d-8e48-d433bf388c56.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/6f/f6fc8f90-9145-4bde-a808-1fd672a67916/6a28b22c6f4a8.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Sweet Sounds among the stacks",
     source: "Telluride Times",
@@ -239,8 +398,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 9, 2026",
     firstSeen: "2026-06-09",
     newsTopic: "community",
-    copy: "For the past year, communities across southwest Colorado have been putting opioid settlement dollars to work in ways that are practical, collaborative and lifesaving.",
-    claudeSummary: false,
+    copy: "WCAHEC has installed 14 naloxone dispensers around the region since February and handed out over 5,600 boxes of the overdose-reversing medication, funded by $60,000 in opioid settlement money. The dispensers are showing up in libraries, parks, and health facilities, with training helping locals recognize overdoses and respond quickly. Staff at one local business already used their training and dispenser to save someone's life in a restroom.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_3c72f726-b536-4e2d-a537-282124011cc3.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/df/8df9a3b3-328a-424d-a9cf-f14e4ba60364/6a2129e2366d6.image.jpg",
     imgHiRes: true
@@ -568,8 +727,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Class of 2026 graduated from Norwood Public School on Saturday, May 23. Congratulations, grads!",
     claudeSummary: false,
     href: "https://www.telluridenews.com/gallery/news/article_4a0cf4a2-a573-484f-8001-5ff3315fd164.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/c2/4c25a79b-5c83-4eb6-a714-b0483ada7665/6a2130266bdeb.image.jpg",
-    imgHiRes: true
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/c2/4c25a79b-5c83-4eb6-a714-b0483ada7665/6a2130266bdeb.image.jpg"
   },
   {
     title: "Legals and Public Notices for June 4-10, 2026",
@@ -1102,42 +1260,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Man arrested for hiding sex offender status",
-    source: "Telluride Times",
-    date: "May 27, 2026",
-    firstSeen: "2026-05-28",
-    newsTopic: "community",
-    copy: "Deputies arrested a man who allegedly concealed his identity and sex offender status while working locally as a DJ. The suspect was previously convicted in 2013 for attempted sexual assault on a child and is scheduled for a court hearing June 16.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_70cc432e-aea1-4dac-91e0-f3a7a5fde25a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/c2/ac24a6b9-6aa6-47dc-a16b-5637a70ad6bb/6a16fe812e569.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "US Supreme Court settles long-running water dispute over dwindling Rio Grande",
-    source: "Telluride Times",
-    date: "May 27, 2026",
-    firstSeen: "2026-05-27",
-    newsTopic: "infrastructure",
-    copy: "The Supreme Court settled a decade-long water dispute between New Mexico and Texas over Rio Grande usage, requiring New Mexico to cut groundwater pumping by 18,200 acre-feet annually and retire over 14 square miles of farmland. The agreement aims to restore order to water-sharing between the states as drought conditions worsen along the river that originates in Colorado.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_ec16ddd6-59c4-5d79-b1cd-562da53b058d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/d7/5d733892-c447-5597-ac43-e080d5af12f7/6a1727b561bb6.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "It’s a wrap",
-    source: "Telluride Times",
-    date: "May 27, 2026",
-    firstSeen: "2026-05-27",
-    newsTopic: "community",
-    copy: "Mountainfilm wrapped up another year showcasing documentaries focused on environmental protection, social justice, and personal resilience. Films featured everything from women inmates helping restore endangered butterflies in Oregon prisons to wildfire survivors in California, plus local wildlife rehabilitator Lissa Margetts in \"The Mountain Ark.\"",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_fb7ed56b-afa8-4c5d-ae54-3f5a43bfa3ff.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/3a/a3a31761-8d88-4191-8917-c18600aaa617/6a17011608bd7.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Telluride Marshal’s Department Arrests Individual for Failure to Register as a Sex Offender",
     source: "Town of Telluride",
     date: "May 22, 2026",
@@ -1194,7 +1316,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Click here for details.",
     source: "Town of Ridgway",
-    date: "June 9, 2026",
+    date: "June 10, 2026",
     firstSeen: "2026-06-09",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1205,7 +1327,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 9, 2026",
+    date: "June 10, 2026",
     firstSeen: "2026-06-04",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1216,7 +1338,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 9, 2026",
+    date: "June 10, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1277,17 +1399,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Special-Meeting-Notice.pdf",
-    img: ""
-  },
-  {
-    title: "Water service outage planned for night of May 28th",
-    source: "Town of Ridgway",
-    date: "May 27, 2026",
-    firstSeen: "2026-05-27",
-    newsTopic: "infrastructure",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Water-Shut-Off-Notice-Press-Release-2026-05-27.pdf",
     img: ""
   }
 ];
@@ -2030,28 +2141,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Free Legal Clinic – Clínica Jurídica Gratuita",
-    link: "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-06-09/",
-    description: "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
-    pubDate: "2026-06-09T22:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Town Talk: Can we change the weather (and do we really want to?)",
-    link: "https://koto.org/event/town-talk-can-we-change-the-weather-and-do-we-really-want-to/",
-    description: "This town talk will be presented by Derek Posselt, Principal Scientist, NASA Jet Propulsion Laboratory. If you live on planet Earth, you have had to worry about the weather at some point. Most of us have heard some version of the expression: “If you don’t like the weather, wait 5 minutes, and it will change.” Many of us wish we had the ability to do something about it. This is not a new impulse. Humans have been trying to change the weather for over a century. Posselt will review the ways people have tried to modify the weather, what has worked (and what hasn’t), and whether it is, in fact, a good idea to try in the first place.",
-    pubDate: "2026-06-10T00:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Conference Center, Mountain Village",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A.png"
-  },
-  {
     title: "Mahjongg for Independent Players",
     link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-06-10/",
     description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
@@ -2545,6 +2634,28 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Drop In Tech Time with Oliver",
+    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-06-28/",
+    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
+    pubDate: "2026-06-28T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-06-28/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-06-28T20:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   }
 ];
 
@@ -6903,6 +7014,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
+  },
+  {
+    title: "Sunday Rehab",
+    link: "https://www.telluride.com/event/sunday-rehab/",
+    description: "Sunday Rehab brings the Mountain Lodge pool deck to life every Sunday with brunch, a Bloody Mary and juice bar, food …",
+    pubDate: "2026-08-09",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62769/sunday-rehab-event-image-2200x1237.800x533.webp"
   }
 ];
 
@@ -7232,24 +7355,6 @@ const LEGAL_NOTICES = [
     caseNumber: "202601"
   },
   {
-    title: "Public Hearing -- Gas Franchise Ordinance for Black Hills Energy",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "Telluride Town Council will hold a public hearing on June 9, 2026 at approximately 1:15pm to consider first reading of an ordinance granting a franchise to Black Hills Colorado Gas, Inc. for gas distribution services. The hearing will be hybrid format at 113 W Columbia Ave.",
-    deadline: "June 9, 2026 at 1:15 PM",
-    expires: "2026-06-09",
-    dates: "5/21",
-    papers: ["ttimes_0521"],
-    url: "https://www.telluridenews.com/news/legals/article_d3659378-b06b-4e27-9b53-ec57d83a4b86.html",
-    address: "113 W Columbia Ave, Telluride, Colorado",
-    noticeKey: "ordinance-gas-franchise-1425"
-  },
-  {
     title: "Special Use Permit -- Scenic and Social Special Use (Parcel #452726103022)",
     entity: "San Miguel County Planning Commission",
     entityClass: "ent-county",
@@ -7302,24 +7407,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_f189086a-bd15-49d6-92a1-f8e7553ebb74.html",
     address: "333 West Colorado Ave., Second Floor, Telluride, CO 81435",
     noticeKey: "planning-meeting-2026-06-11"
-  },
-  {
-    title: "School Budget Notice -- Proposed FY 2026-2027 Budget",
-    entity: "Telluride School District R-1",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "Telluride School District R-1 has submitted a proposed budget for fiscal year 2026-2027 beginning July 1, 2026. The budget is available for public inspection at the district office and on their website. The Board of Education will consider adoption at their June 9, 2026 meeting at 9:00 AM, and taxpayers may file objections prior to final adoption.",
-    deadline: "2026-06-09",
-    expires: "2026-06-09",
-    dates: "6/4",
-    papers: ["ttimes_0604"],
-    url: "https://www.telluridenews.com/news/legals/article_f189086a-bd15-49d6-92a1-f8e7553ebb74.html",
-    address: "725 W. Colorado Avenue, Telluride, CO 81435",
-    noticeKey: "telluride-budget-fy2026-2027"
   },
   {
     title: "School Budget Notice -- Proposed FY 2026-2027 Budget",
