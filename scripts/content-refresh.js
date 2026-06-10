@@ -1698,12 +1698,15 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
           continue;
         }
 
-        // New article — try to get full text and summarize
+        // New article — try to get full text and summarize.
         let copy = rssCopy;
         let claudeSummary = false;
         let letterAuthor = '';
         const isLetter = /\/letters_to_editor\//i.test(href);
-        if (TT_AUTH_COOKIE) {
+        // Letters are public (no paywall), and their RSS lead is usually just
+        // the "Dear Editor," salutation — so always fetch+summarize letters,
+        // even when no TT auth cookie is configured.
+        if (TT_AUTH_COOKIE || isLetter) {
           try {
             const title = (item.title || '').trim();
             const result = await fetchTTArticleDirect(href);
@@ -1723,6 +1726,16 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
           } catch (e) {
             console.warn(`  Could not summarize ${href}: ${e.message}`);
           }
+        }
+
+        // Safety net: never let a useless lead (blank, or a bare salutation
+        // like "Dear Editor,") reach a card. Prefer a non-useless RSS lead;
+        // otherwise a neutral placeholder. No fabrication.
+        if (isUselessCopy(copy)) {
+          copy = isLetter
+            ? 'A letter to the editor published in the Telluride Times. Select "Read more" for the full letter.'
+            : (!isUselessCopy(rssCopy) ? rssCopy : ((item.title || '').trim() + '.'));
+          claudeSummary = false;
         }
 
         articles.push({
@@ -2077,6 +2090,15 @@ function extractLetterAuthor(fullText) {
   return '';
 }
 
+// True when a card "copy"/lead is useless to a reader: blank, or just a
+// salutation ("Dear Editor," / "To the Editor"), or too short to be a summary.
+function isUselessCopy(s) {
+  if (!s) return true;
+  const t = String(s).trim();
+  if (/^(?:dear\s+editor|to\s+the\s+editor|editor)\s*[,:.]?\s*$/i.test(t)) return true;
+  return t.replace(/[^a-z]/gi, '').length < 20;
+}
+
 function extractTTArticleText(html) {
   // 1. Paywalled blocks (most articles)
   const tncmsText = extractTncmsText(html);
@@ -2091,6 +2113,25 @@ function extractTTArticleText(html) {
       .replace(/\s{2,}/g, ' ').trim();
     if (plain.length > 100) return plain;
   }
+
+  // 3. Fallback: visible <p> paragraphs, minus the weather-widget lines that
+  //    sit at the top of every TT article. Catches Letters to the Editor,
+  //    whose body isn't always inside the containers above — without this the
+  //    card falls back to the RSS lead, which for a letter is just the bare
+  //    "Dear Editor," salutation.
+  const paras = (html.match(/<p\b[^>]*>([\s\S]*?)<\/p>/gi) || [])
+    .map(p => p
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/&#\d+;/g, ' ').replace(/&[a-z]+;/g, ' ')
+      .replace(/\s{2,}/g, ' ').trim())
+    .filter(t => t && !/\b(?:high|low)\s+\d+\s*f\b|\bmph\b|\bwinds?\s+[nsew]|sunshine|partly cloudy|clear skies|^updated:\s/i.test(t));
+  let joined = paras.join(' ').replace(/\s{2,}/g, ' ').trim();
+  // If the letter salutation is present, start the text there (drops any
+  // leftover weather/preamble before it).
+  const dem = joined.search(/\bdear\s+editor\b/i);
+  if (dem > 0) joined = joined.slice(dem);
+  if (joined.length > 100) return joined;
+
   return null;
 }
 

@@ -360,8 +360,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 10, 2026",
     firstSeen: "2026-06-10",
     newsTopic: "community",
-    copy: "Dear Editor,",
-    claudeSummary: false,
+    copy: "An endorsement letter supporting Marya Stark for a full term on Telluride Town Council. The writer argues that Telluride's decisions matter to the whole region and praises Stark's understanding of finance and government, her open-minded approach to representing constituents, and the mix of recent council experience and relatively fresh perspective she brings.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_b70a1828-f748-4d2c-9c81-f3060f7aaaa5.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     imgHiRes: true
@@ -372,8 +372,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 10, 2026",
     firstSeen: "2026-06-10",
     newsTopic: "government",
-    copy: "Dear Editor,",
-    claudeSummary: false,
+    copy: "An endorsement letter urging voters to re-elect Marya Stark to Telluride Town Council. The writer emphasizes that becoming effective in a complex government role takes time and commitment, points to the challenges facing a tourism-dependent mountain town amid shifting federal and state funding, and argues that Stark's continued service provides valuable continuity.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_cd5e1e04-3b1f-45d8-b5dc-568af06d8807.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     imgHiRes: true
