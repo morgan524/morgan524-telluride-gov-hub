@@ -1800,6 +1800,16 @@ const TOPIC_DEFINITIONS = {
    as you discover them. */
 const LOCAL_ORGS = [
     {
+      name: "Beacon Outreach",
+      category: "nonprofits",
+      town: "Telluride",
+      summary: "A Telluride nonprofit reaching out to the region's seasonal and young-adult workers — building intentional community, mentoring, and hospitality so seasonal workers leave better than they came.",
+      website: "https://www.beacontelluride.com/",
+      donate: "https://www.beacontelluride.com/donate",
+      social: { instagram: "https://www.instagram.com/tellurideya/" },
+      logo: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+    },
+    {
       name: "Telluride Theatre",
       category: "nonprofits",
       town: "Telluride",
