@@ -928,6 +928,25 @@
     </aside>
 
     <div class="event-main">
+      <!-- Featured event of the day. Picked client-side from TODAY's events
+           (Mountain Time) by featuredScore()/FEATURED_PINS, recomputed on
+           every load so it rolls over automatically at midnight. -->
+      <style>
+        .featured-event { position:relative; display:grid; grid-template-columns:260px 1fr; background:#fff; border:1px solid var(--border-soft,#e3e7e0); border-radius:18px; overflow:hidden; box-shadow:0 10px 30px rgba(33,68,60,0.12); margin-bottom:22px; }
+        .featured-event .fe-img { background-size:cover; background-position:center; min-height:190px; background-color:#21443c; }
+        .featured-event .fe-body { padding:22px 24px; }
+        .featured-event .fe-badge { display:inline-block; font-size:0.7rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#d4a017,#b8860b); padding:4px 11px; border-radius:999px; }
+        .featured-event h2 { font-family:var(--font-head,Georgia,serif); color:var(--forest,#21443c); font-size:1.55rem; line-height:1.15; margin:10px 0 8px; }
+        .featured-event .fe-meta { font-size:0.92rem; color:var(--text-muted,#5a6b64); margin:2px 0; display:flex; align-items:center; gap:6px; }
+        .featured-event .fe-sum { font-size:0.95rem; color:var(--text-secondary,#3c4b45); line-height:1.55; margin:10px 0 16px; }
+        .featured-event .fe-actions { display:flex; gap:10px; flex-wrap:wrap; }
+        .featured-event .fe-actions a { display:inline-flex; align-items:center; gap:6px; padding:10px 18px; border-radius:999px; font-weight:700; font-size:0.9rem; text-decoration:none; }
+        .featured-event .fe-go { background:var(--forest,#21443c); color:#fff; }
+        .featured-event .fe-cal { background:rgba(33,68,60,0.08); color:var(--forest,#21443c); border:1px solid rgba(33,68,60,0.15); }
+        @media (max-width:640px){ .featured-event { grid-template-columns:1fr; } .featured-event .fe-img { min-height:170px; } }
+      </style>
+      <div id="featuredEvent" style="display:none;"></div>
+
       <!-- Weather widget: current conditions + 5-day forecast.
            Populated by initWeather() at the bottom of the page from the
            Open-Meteo API (free, no key, CORS-friendly). Sits above the
@@ -1322,7 +1341,97 @@
       `;
     }
 
+    /* ───────── Featured event of the day ─────────
+       Picks the single most-likely-popular event happening TODAY (Mountain
+       Time) and shows it as a hero card above the grid. Recomputed from
+       "today" on every load → rolls over automatically at midnight. A hand
+       pin (FEATURED_PINS) overrides the automatic pick for a given date. */
+
+    // Hand-picked features by date (Mountain Time, YYYY-MM-DD). Value is a
+    // title regex; the matching event that day is featured regardless of score.
+    const FEATURED_PINS = {
+      '2026-06-10': /Livable Telluride Kick-?Off/i,   // Elks Lodge launch party
+    };
+
+    function todayMT() { return new Date().toLocaleDateString('en-CA', { timeZone: 'America/Denver' }); }
+
+    // Pull a start hour (0-23) from free text like "5:00 – 7:00 PM".
+    function featuredStartHour(t) {
+      if (!t) return null;
+      const m = String(t).match(/(\d{1,2})(?::(\d{2}))?\s*(am|pm)?/i);
+      if (!m) return null;
+      let h = parseInt(m[1], 10); const ap = (m[3] || '').toLowerCase();
+      if (ap === 'pm' && h < 12) h += 12;
+      if (ap === 'am' && h === 12) h = 0;
+      return h;
+    }
+
+    // ── Popularity score (the published criteria). Higher = more likely the
+    //    day's headline event. Tune the weights/keyword lists here. ──
+    function featuredScore(e) {
+      const text = ((e.title || '') + ' ' + (e.summary || '') + ' ' + (e.location || '')).toLowerCase();
+      const src = (e.source || '').toLowerCase() + ' ' + text;
+      let s = 0;
+      if (e.isFestival) s += 50;                                                                                    // marquee festival
+      if (/\b(festival|concert|live music|nightgrass|headlin|party|celebrat|fundrais|gala|benefit|kick-?off|premiere|bluegrass|jazz|comedy|showcase|block party|street fair|season opener|grand opening)\b/.test(text)) s += 30;   // big-draw type
+      else if (/\b(market|show|performance|tour|screening|exhibit|talk|lecture|trivia|open mic|tasting|reading|art walk|game night|dance)\b/.test(text)) s += 10;                                                                    // medium-draw
+      if (/\b(meeting|drop-?in|office hours|story ?time|tech time|clinic|support group|mahjongg|knitting|book club|playgroup|toddler|preschool|rehab|sewing|pilates|zumba)\b/.test(text)) s -= 25;                                  // routine / niche
+      if (/sheridan|opera house|palm theat|telluride theatre/.test(src)) s += 15;                                  // top venues
+      else if (/alibi|sherbino|fly me to the moon|club red/.test(src)) s += 10;
+      const h = featuredStartHour(e.time);
+      if (h != null && h >= 16) s += 8;                                                                            // evening
+      const dow = new Date((e.date || todayMT()) + 'T12:00:00').getDay();
+      if (dow === 0 || dow === 5 || dow === 6) s += 6;                                                             // Fri / Sat / Sun
+      if (e.img) s += 5;                                                                                           // has a promo flyer
+      if (/\bfree\b/.test(text)) s += 4;                                                                           // free → broad appeal
+      return s;
+    }
+
+    function pickFeatured(events) {
+      const today = todayMT();
+      const happeningToday = (e) => {
+        if (e.date === today) return true;
+        if (e.endDate) { const ed = new Date(String(e.endDate)); if (!isNaN(ed)) return e.date <= today && ed.toLocaleDateString('en-CA', { timeZone: 'America/Denver' }) >= today; }
+        return false;
+      };
+      const todays = events.filter(happeningToday);
+      const pin = FEATURED_PINS[today];
+      if (pin) { const p = todays.find(e => pin.test(e.title || '')) || events.find(e => pin.test(e.title || '')); if (p) return p; }
+      if (!todays.length) return null;
+      return todays.slice().sort((a, b) => (featuredScore(b) - featuredScore(a)) || ((featuredStartHour(a.time) || 99) - (featuredStartHour(b.time) || 99)))[0];
+    }
+
+    function renderFeatured(events) {
+      const host = document.getElementById('featuredEvent');
+      if (!host) return;
+      const e = pickFeatured(events);
+      if (!e) { host.style.display = 'none'; host.innerHTML = ''; return; }
+      const h = featuredStartHour(e.time);
+      const label = (h != null && h >= 16) ? 'Featured Tonight' : 'Featured Today';
+      const safe = (s) => ltEsc(ltDecode(s || ''));
+      const imgUrl = e.img || getFallbackImg(e);
+      const sum = ltDecode(e.summary || '');
+      const href = (e.href && e.href !== '#') ? e.href : '';
+      host.style.display = '';
+      host.innerHTML =
+        '<article class="featured-event">' +
+          '<div class="fe-img" style="background-image:url(\'' + String(imgUrl).replace(/'/g, "%27") + '\')"></div>' +
+          '<div class="fe-body">' +
+            '<span class="fe-badge">⭐ ' + label + '</span>' +
+            '<h2>' + safe(e.title) + '</h2>' +
+            '<div class="fe-meta">📅 ' + safe(formatLong(e.date)) + (e.time ? ' · ' + safe(e.time) : '') + '</div>' +
+            (e.location ? '<div class="fe-meta">📍 ' + safe(e.location) + '</div>' : '') +
+            (sum ? '<div class="fe-sum">' + ltEsc(sum.slice(0, 220)) + (sum.length > 220 ? '…' : '') + '</div>' : '') +
+            '<div class="fe-actions">' +
+              (href ? '<a class="fe-go" href="' + ltSafeUrl(href) + '" target="_blank" rel="noopener">View Details →</a>' : '') +
+              '<a class="fe-cal" href="' + ltSafeUrl(googleCalUrl(e)) + '" target="_blank" rel="noopener">📅 Add to Calendar</a>' +
+            '</div>' +
+          '</div>' +
+        '</article>';
+    }
+
     function render() {
+      renderFeatured(EVENTS);
       document.getElementById('sidebarFilter').innerHTML = filterHtml();
       const filtered = activeTown === 'all'
         ? EVENTS
