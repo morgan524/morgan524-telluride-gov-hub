@@ -5344,6 +5344,150 @@ async function syncRidgwayAgendas() {
   return merged;
 }
 
+// Generic colorado.gov-style page fetch: try direct, fall back to CF proxy.
+async function fetchGovPage(pageUrl, label) {
+  const SAFARI_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15';
+  try {
+    const resp = await fetch(pageUrl, { headers: { 'User-Agent': SAFARI_UA, 'Accept': 'text/html,*/*' } });
+    if (resp.status === 200) return resp.text;
+    console.warn(`  ${label}: direct HTTP ${resp.status}, trying proxy`);
+  } catch (e) { console.warn(`  ${label}: direct error (${e.message}), trying proxy`); }
+  try {
+    const proxyUrl = maybeProxy(pageUrl);
+    if (proxyUrl === pageUrl) { console.warn(`  ${label}: no proxy configured`); return null; }
+    const resp2 = await fetch(proxyUrl);
+    if (resp2.status === 200) return resp2.text;
+    console.warn(`  ${label}: proxy HTTP ${resp2.status}`);
+  } catch (e2) { console.warn(`  ${label}: proxy error (${e2.message})`); }
+  return null;
+}
+
+// Collect agenda/packet PDF links { href, hay } from a colorado.gov page,
+// dropping obvious non-meeting documents (permits, checklists, FEMA flyers…).
+function collectGovPdfLinks(html, origin) {
+  const out = [];
+  const re = /<a\b[^>]*href="([^"]*\.pdf[^"]*)"[^>]*>([\s\S]*?)<\/a>/gi;
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    const href = m[1].startsWith('http') ? m[1] : origin + (m[1].startsWith('/') ? m[1] : '/' + m[1]);
+    const text = m[2].replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/&#\d+;/g, ' ').replace(/\s+/g, ' ').trim();
+    let fn = ''; try { fn = decodeURIComponent(href.split('/').pop()); } catch { fn = href.split('/').pop(); }
+    const hay = (text + ' ' + fn).replace(/&amp;/g, '&');
+    if (/minutes|permit|checklist|charter|fema|winter\s*storm|warning|emergency|brochure|triangle|operations|application/i.test(hay)) continue;
+    out.push({ href, hay });
+  }
+  return out;
+}
+
+const SCHOOL_MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+// Ophir (General Assembly + Planning & Zoning) — colorado.gov. The two boards'
+// agenda filenames are wildly inconsistent (GA = Month-Day-Year, PZ = Month-Year
+// with no day), so we REVERSE-MATCH: for each OPHIR_CACHED_DATA stub we look for
+// a page link whose text+filename mentions that stub's month + day + year + board
+// keyword (GA vs P&Z). GA and PZ never meet on the same date, so a single
+// { 'Month D, YYYY': url } map (for patchAgendaUrls) serves both.
+async function syncOphirAgendas(govDataSrc) {
+  console.log('\n⛰  Task 20b: Scraping Ophir GA + P&Z agendas...');
+  const ORIGIN = 'https://townofophir.colorado.gov';
+  const gaHtml = await fetchGovPage('https://townofophir.colorado.gov/general-assembly-2', 'Ophir General Assembly');
+  const pzHtml = await fetchGovPage('https://townofophir.colorado.gov/planning-and-zoning', 'Ophir Planning & Zoning');
+  if (!gaHtml && !pzHtml) return null;
+  const links = [
+    ...(gaHtml ? collectGovPdfLinks(gaHtml, ORIGIN) : []),
+    ...(pzHtml ? collectGovPdfLinks(pzHtml, ORIGIN) : [])
+  ];
+  if (!links.length) return null;
+  const block = (govDataSrc.match(/const\s+OPHIR_CACHED_DATA\s*=\s*\[[\s\S]*?\n\];/) || [''])[0];
+  const entries = block.match(/\{[^{}]*\}/g) || [];
+  const map = {};
+  for (const ent of entries) {
+    const dm = ent.match(/date:\s*'([^']+)'/);
+    const bm = ent.match(/board:\s*'(ga|pz)'/);
+    if (!dm || !bm) continue;
+    const date = dm[1], board = bm[1];
+    const mm = date.match(/^(\w+)\s+(\d{1,2}),\s*(\d{4})$/);
+    if (!mm) continue;
+    const mon = mm[1], day = +mm[2], yr = mm[3];
+    const dayRe = new RegExp(`(?:^|[^\\d])${day}(?:st|nd|rd|th)?(?:[^\\d]|$)`);
+    const monRe = new RegExp('\\b' + mon + '\\b', 'i');
+    const boardRe = board === 'ga' ? /\bGA\b|general\s*assembly/i : /\bP\s*&?\s*Z\b|PZ|planning/i;
+    const cands = links.filter(l => monRe.test(l.hay) && l.hay.includes(yr) && dayRe.test(l.hay) && boardRe.test(l.hay));
+    if (!cands.length) continue;
+    cands.sort((a, b) => (/agenda/i.test(b.hay) ? 1 : 0) - (/agenda/i.test(a.hay) ? 1 : 0));
+    map[date] = cands[0].href;
+  }
+  console.log(`  Ophir: matched ${Object.keys(map).length} agenda(s) to stubs`);
+  return Object.keys(map).length ? map : null;
+}
+
+// Telluride School District (Board of Education) — tellurideschool.org. The
+// agenda/packet links carry a clean "M.D.YY" date AND a meeting type in the
+// link text ("8.26.25 Monthly Meeting"). The board holds same-date Work
+// Session + Monthly Meeting pairs, so we match on date AND type, not date alone.
+// Returns a list [{ date:'Month D, YYYY', type:'work'|'monthly'|'special', url }].
+async function syncSchoolAgendas() {
+  console.log('\n🏫 Task 20c: Scraping Telluride Board of Education agendas...');
+  const html = await fetchGovPage('https://www.tellurideschool.org/agendasandminutes', 'School District agendas');
+  if (!html) return null;
+  const out = [];
+  const re = /<a\b[^>]*href="([^"]*\.pdf[^"]*)"[^>]*>([\s\S]*?)<\/a>/gi;
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    const href = m[1].startsWith('http') ? m[1] : 'https://www.tellurideschool.org' + m[1];
+    const text = m[2].replace(/<[^>]+>/g, ' ').replace(/&nbsp;|&#160;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+    const dm = text.match(/\b(\d{1,2})\.(\d{1,2})\.(\d{2})\b/);
+    if (!dm) continue;
+    const mo = +dm[1], da = +dm[2], yr = 2000 + +dm[3];
+    if (mo < 1 || mo > 12 || da < 1 || da > 31) continue;
+    let type = 'monthly';
+    if (/work\s*session/i.test(text)) type = 'work';
+    else if (/special/i.test(text)) type = 'special';
+    out.push({ date: `${SCHOOL_MONTHS[mo - 1]} ${da}, ${yr}`, type, url: href });
+  }
+  console.log(`  School: ${out.length} agenda link(s) parsed`);
+  return out.length ? out : null;
+}
+
+// Patch SCHOOL_CACHED_DATA agendaUrl fields by matching date + meeting type
+// (the board's title encodes the type). Needed because patchAgendaUrls keys on
+// date alone, which can't tell a same-day Work Session from a Monthly Meeting.
+function patchSchoolAgendas(govDataSrc, items) {
+  const sm = /const\s+SCHOOL_CACHED_DATA\s*=\s*\[/.exec(govDataSrc);
+  if (!sm) return { src: govDataSrc, changed: 0 };
+  let depth = 0, arrStart = sm.index + sm[0].length - 1, arrEnd = arrStart;
+  for (let i = arrStart; i < govDataSrc.length; i++) {
+    if (govDataSrc[i] === '[') depth++;
+    else if (govDataSrc[i] === ']') { depth--; if (depth === 0) { arrEnd = i; break; } }
+  }
+  const before = govDataSrc.slice(0, arrStart + 1);
+  const after = govDataSrc.slice(arrEnd);
+  let changed = 0;
+  const body = govDataSrc.slice(arrStart + 1, arrEnd).replace(/\{[^{}]*\}/g, (ent) => {
+    const dm = ent.match(/date:\s*'([^']+)'/);
+    if (!dm) return ent;
+    const titleM = ent.match(/title:\s*'([^']*)'/) || ent.match(/title:\s*"([^"]*)"/);
+    const title = titleM ? titleM[1] : '';
+    let type = 'monthly';
+    if (/work\s*session/i.test(title)) type = 'work';
+    else if (/special/i.test(title)) type = 'special';
+    const hit = items.find(it => it.date === dm[1] && it.type === type);
+    if (!hit) return ent;
+    const newVal = "'" + hit.url + "'";
+    if (/agendaUrl:\s*(?:null|'[^']*')/.test(ent)) {
+      return ent.replace(/agendaUrl:\s*(null|'[^']*')/, (full, cur) => {
+        if (cur === newVal) return full;
+        changed++;
+        return 'agendaUrl: ' + newVal;
+      });
+    }
+    // No agendaUrl field yet — insert one after the title.
+    changed++;
+    return ent.replace(/(title:\s*(?:'[^']*'|"[^"]*"))/, '$1,\n    agendaUrl: ' + newVal);
+  });
+  return { src: before + body + after, changed };
+}
+
 // ══════════════════════════════════════════════════════════════
 // ── Rick AI summary generator for events without source content ──
 // ══════════════════════════════════════════════════════════════
@@ -5543,6 +5687,34 @@ async function main() {
     }
   } catch (e) {
     console.warn(`  SMART agenda sync error: ${e.message}`);
+  }
+
+  // ── 0c. Ophir (GA + P&Z) agenda URLs ──
+  try {
+    const ophirMap = await syncOphirAgendas(govDataSrc);
+    if (ophirMap && Object.keys(ophirMap).length) {
+      const r = patchAgendaUrls(govDataSrc, 'OPHIR_CACHED_DATA', ophirMap);
+      if (r.changed > 0) {
+        govDataSrc = r.src; govDataChanged = true;
+        console.log(`  OPHIR_CACHED_DATA: patched ${r.changed} agendaUrl field(s)`);
+      }
+    }
+  } catch (e) {
+    console.warn(`  Ophir agenda sync error: ${e.message}`);
+  }
+
+  // ── 0d. Telluride Board of Education agenda URLs (date + meeting type) ──
+  try {
+    const schoolItems = await syncSchoolAgendas();
+    if (schoolItems && schoolItems.length) {
+      const r = patchSchoolAgendas(govDataSrc, schoolItems);
+      if (r.changed > 0) {
+        govDataSrc = r.src; govDataChanged = true;
+        console.log(`  SCHOOL_CACHED_DATA: patched ${r.changed} agendaUrl field(s)`);
+      }
+    }
+  } catch (e) {
+    console.warn(`  School agenda sync error: ${e.message}`);
   }
 
   // ── 1. Meeting Summaries + Agenda-derived Zoom info ──
