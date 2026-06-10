@@ -1507,6 +1507,15 @@
        if (String(e.category || '').toLowerCase() === 'town closure') return true;
        return /\b(closed|closure)\b/i.test(e.title || '');
      }
+     // Open-meetings-law attendance notices, not public events. Counties post
+     // "Two or more Commissioners may attend and participate in this event"
+     // on their calendars whenever a quorum might be present at an outside
+     // event — the public isn't invited and there's no real event content.
+     function isAttendanceNotice(e) {
+       if (!e) return false;
+       const text = (e.description || e.copy || e.summary || '');
+       return /\b(two or more|a quorum of|members of the)\b[^.]{0,60}\b(commissioners?|councilors?|council|board|trustees?)\b[^.]{0,60}\bmay\b[^.]{0,30}\b(attend|participate|be present|be in attendance)\b/i.test(text);
+     }
      // Brand-logo overrides for ongoing-event cards. Bot-synced sources
      // (telluride.com) carry a poster image, not the org's logo — match on
      // the (decoded) title or link and substitute a local brand logo.
@@ -1734,6 +1743,7 @@
                if (!e || !e.title) return;
                if (isGovMeeting(e)) return;   // gov meeting notices live in Gov-Hub, not Events
                if (isClosureNotice(e)) return; // holiday/office closure notices aren't events
+               if (isAttendanceNotice(e)) return; // open-meetings "may attend" notices aren't public events
                const start = e.pubDate || e.start_date || e.date || '';
                // Resolve the calendar date in Mountain Time (America/Denver) so
                // a Friday-evening MT event renders on Friday for all viewers —
