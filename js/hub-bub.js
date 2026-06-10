@@ -525,22 +525,33 @@
   // ═══════════════════════════════
   // AI TONE REVIEW
   // ═══════════════════════════════
-  // Personal attack detection patterns
+  // Personal attack detection patterns. Each carries an explicit category
+  // (drives the suggested rephrase) so adding/reordering patterns can't
+  // accidentally mis-map the suggestion.
   var ATTACK_PATTERNS = [
     // Direct "you are" insults
-    /\byou(?:'re| are)\s+(?:an?\s+)?(?:idiot|moron|fool|liar|fraud|crook|corrupt|scum|trash|joke|disgrace|pathetic|worthless|incompetent|stupid|dumb|ignorant|clueless)/i,
+    { category: 'competence', re: /\byou(?:'re| are)\s+(?:an?\s+)?(?:idiot|moron|fool|liar|fraud|crook|corrupt|scum|trash|joke|disgrace|pathetic|worthless|incompetent|stupid|dumb|ignorant|clueless)/i },
     // Name-calling with "is/are"
-    /\b(?:he|she|they|mayor|council\s*(?:man|woman|member|person)?|commissioner|manager|director|board\s*member)\s+(?:is|are)\s+(?:an?\s+)?(?:idiot|moron|fool|liar|fraud|crook|corrupt|scum|trash|joke|disgrace|pathetic|worthless|incompetent|stupid|dumb|ignorant|clueless)/i,
+    { category: 'character', re: /\b(?:he|she|they|mayor|council\s*(?:man|woman|member|person)?|commissioner|manager|director|board\s*member)\s+(?:is|are)\s+(?:an?\s+)?(?:idiot|moron|fool|liar|fraud|crook|corrupt|scum|trash|joke|disgrace|pathetic|worthless|incompetent|stupid|dumb|ignorant|clueless)/i },
     // "[Name] is a/an [insult]"
-    /\b[A-Z][a-z]+(?:\s[A-Z][a-z]+)?\s+is\s+(?:an?\s+)?(?:idiot|moron|fool|liar|fraud|crook|corrupt|scum|trash|joke|disgrace|pathetic|worthless|incompetent|stupid|dumb|ignorant|clueless)/i,
+    { category: 'character', re: /\b[A-Z][a-z]+(?:\s[A-Z][a-z]+)?\s+is\s+(?:an?\s+)?(?:idiot|moron|fool|liar|fraud|crook|corrupt|scum|trash|joke|disgrace|pathetic|worthless|incompetent|stupid|dumb|ignorant|clueless)/i },
     // Imperative attacks
-    /\b(?:shut\s+up|go\s+away|get\s+lost|drop\s+dead|go\s+to\s+hell|f[\*u]ck\s+(?:you|off|yourself))\b/i,
+    { category: 'dismissive', re: /\b(?:shut\s+up|go\s+away|get\s+lost|drop\s+dead|go\s+to\s+hell|f[\*u]ck\s+(?:you|off|yourself))\b/i },
     // Dehumanizing language
-    /\b(?:piece\s+of\s+(?:shit|crap|garbage)|human\s+garbage|waste\s+of\s+(?:space|oxygen|skin))\b/i,
+    { category: 'profanity', re: /\b(?:piece\s+of\s+(?:shit|crap|garbage)|human\s+garbage|waste\s+of\s+(?:space|oxygen|skin))\b/i },
     // Threats
-    /\b(?:i'?ll|we'?ll|gonna|going\s+to)\s+(?:destroy|ruin|end|hurt|get)\s+(?:you|him|her|them)\b/i,
+    { category: 'threat', re: /\b(?:i'?ll|we'?ll|gonna|going\s+to)\s+(?:destroy|ruin|end|hurt|get)\s+(?:you|him|her|them)\b/i },
     // General profanity used at someone
-    /\b(?:f[\*u]ck(?:ing)?|shit(?:ty)?|ass(?:hole)?|bitch|bastard|damn(?:ed)?)\s+(?:you|him|her|them|[A-Z][a-z]+)\b/i,
+    { category: 'profanity', re: /\b(?:f[\*u]ck(?:ing)?|shit(?:ty)?|ass(?:hole)?|bitch|bastard|damn(?:ed)?)\s+(?:you|him|her|them|[A-Z][a-z]+)\b/i },
+    // Personal fitness attacks — "[someone] is (wholly) unsuited/unqualified/unfit/incompetent"
+    { category: 'competence', re: /\b(?:is|are|seems?|sounds?|looks?)\s+(?:wholly|totally|completely|utterly|entirely|clearly|obviously|simply|just|so|quite|rather|absolutely)?\s*(?:unsuited|unqualified|unfit|incompetent|ill-?suited|not\s+(?:at\s+all\s+)?qualified|not\s+fit\b)/i },
+    // Calls to fire / remove / resign a person
+    { category: 'competence', re: /\b(?:should|ought\s+to|needs?\s+to|must|deserves?\s+to|has\s+to)\s+(?:be\s+)?(?:fired|sacked|booted|ousted|let\s+go|forced\s+out|kicked\s+out)\b/i },
+    { category: 'competence', re: /\b(?:should|ought\s+to|needs?\s+to|must|has\s+to)\s+(?:resign|step\s+down|quit)\b/i },
+    // Disparaging someone's credentials — "without any background/credibility"
+    { category: 'character', re: /\bwithout\s+(?:any\s+)?(?:background|credibility|qualifications?|integrity|competence|business)\b/i },
+    // "[person] has no business/credibility/qualifications..."
+    { category: 'character', re: /\b(?:he|she|they|you|[A-Z][a-z]+)\s+(?:has|have|had)\s+no\s+(?:business|credibility|qualifications?|integrity|competence)\b/i },
   ];
   // Suggestion templates — keyed by the type of attack detected
   var TONE_SUGGESTIONS = {
@@ -554,14 +565,8 @@
   function hbAnalyzeTone(text) {
     if (!text || text.length < 10) return null;
     for (var i = 0; i < ATTACK_PATTERNS.length; i++) {
-      if (ATTACK_PATTERNS[i].test(text)) {
-        var category = 'general';
-        if (i <= 0) category = 'competence';
-        else if (i <= 2) category = 'character';
-        else if (i <= 3) category = 'dismissive';
-        else if (i <= 4) category = 'profanity';
-        else if (i === 5) category = 'threat';
-        else category = 'profanity';
+      if (ATTACK_PATTERNS[i].re.test(text)) {
+        var category = ATTACK_PATTERNS[i].category || 'general';
         return {
           flagged: true,
           category: category,

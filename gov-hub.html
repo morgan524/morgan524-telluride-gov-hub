@@ -1095,14 +1095,13 @@
       const upcomingHeading = document.getElementById('upcomingHeading');
       let recaps = [];
       if (typeof MEETING_RECAPS !== 'undefined' && Array.isArray(MEETING_RECAPS)) {
-        const t = new Date(); t.setHours(0, 0, 0, 0);
+        // Show the TWO most recent public-meeting recaps (two cards = one row
+        // on desktop). Respects the active entity filter.
         recaps = MEETING_RECAPS.filter(r => {
           if (!r || !r.date) return false;
           if (activeFilter !== 'all' && (r.sourceKey || '').toLowerCase() !== activeFilter) return false;
-          const d = new Date(r.date + 'T00:00:00');
-          const end = new Date(d.getTime() + 3 * 86400000);
-          return t >= d && t <= end;
-        }).sort((a, b) => b.date.localeCompare(a.date));
+          return true;
+        }).sort((a, b) => b.date.localeCompare(a.date)).slice(0, 2);
       }
       if (recapGrid) recapGrid.innerHTML = recaps.map(recapCard).join('');
       if (recapSection) recapSection.style.display = recaps.length ? '' : 'none';
