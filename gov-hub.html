@@ -88,14 +88,13 @@
       max-width: 1280px;
       margin: 32px auto;
       padding: 0 32px;
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 28px;
-      align-items: start;
+      display: block;
     }
 
-    /* ── Left sidebar ── */
-    .sidebar { display: flex; flex-direction: column; gap: 18px; position: sticky; top: 110px; }
+    /* ── Sidebar cards — moved BELOW the meetings (2026-06-10): the
+       meetings render full-width first, then these cards lay out as a
+       responsive row at the END of the page. ── */
+    .sidebar { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 32px; align-items: start; }
 
     .side-card {
       background: #fff;
@@ -492,6 +491,10 @@
   </section>
 
   <main class="page-wrap">
+    <section>
+      <div class="meet-grid" id="meetGrid"></div>
+    </section>
+
     <aside class="sidebar">
       <div class="side-card">
         <h3>Public Entities</h3>
@@ -510,10 +513,6 @@
         <a href="/hub-bub.html#signup">Sign Up</a>
       </div>
     </aside>
-
-    <section>
-      <div class="meet-grid" id="meetGrid"></div>
-    </section>
   </main>
 
   <script>
