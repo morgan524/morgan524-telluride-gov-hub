@@ -253,6 +253,8 @@ const PROXY_HOSTS = new Set([
   'www.telluridefire.com',
   'townofophir.colorado.gov',
   'www.townofophir.colorado.gov',
+  'townofrico.colorado.gov',
+  'www.townofrico.colorado.gov',
   // San Miguel Basin Forum (West End news) — Creative Circle CMS that
   // blocks GH runner IPs the same way Telluride Times does. Note: SMBF
   // has disabled the /search/?f=rss endpoint that TT exposes, so the
@@ -5344,6 +5346,45 @@ async function syncRidgwayAgendas() {
   return merged;
 }
 
+// Task 20d: scrape the Town of Rico Board of Trustees page into a
+// { "<label>": { agenda, packet, minutes } } map for RICO_AGENDA_MAP.
+// Rico's Drupal page lists each meeting's Agenda / Packet / Minutes as separate
+// PDF links whose VISIBLE TEXT is clean and consistent ("May 2026 Agenda",
+// "June 2026 Special Meeting Packet", "February 2026 Work Session Minutes"),
+// even though the underlying filenames are messy. We group by the label minus
+// its trailing kind word; getRicoMeetings() in gov-helpers.js looks up the
+// "<Month> <Year>" key for each generated 3rd-Wednesday regular meeting.
+async function syncRicoAgendas() {
+  console.log('\n⛏  Task 20d: Scraping Town of Rico Board of Trustees agendas...');
+  const html = await fetchGovPage('https://townofrico.colorado.gov/government/board-of-trustees', 'Rico Board of Trustees');
+  if (!html) return null;
+  const MONTHS = new Set(['January','February','March','April','May','June','July','August','September','October','November','December']);
+  const map = {};
+  const re = /<a\b[^>]*href="([^"]*\.pdf[^"]*)"[^>]*>([\s\S]*?)<\/a>/gi;
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    let href = m[1];
+    if (!href.startsWith('http')) href = 'https://townofrico.colorado.gov' + (href.startsWith('/') ? href : '/' + href);
+    const text = m[2].replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&nbsp;|&#160;/g, ' ').replace(/&#\d+;/g, ' ').replace(/\s+/g, ' ').trim();
+    // Label = everything before the trailing kind word; kind = agenda|packet|minutes.
+    const km = text.match(/^(.*?)\b(Agenda|Packet Addendum|Packet|Minutes)\s*$/i);
+    if (!km) continue;
+    const key = km[1].trim().replace(/[-–]\s*$/, '').trim();
+    const kind = /packet/i.test(km[2]) ? 'packet' : (/minutes/i.test(km[2]) ? 'minutes' : 'agenda');
+    if (!key) continue;
+    const first = key.split(/\s+/)[0];
+    if (!MONTHS.has(first)) continue;                 // must start with a month name
+    const ym = key.match(/\b(20\d\d)\b/);
+    if (!ym || +ym[1] < 2024) continue;               // skip pre-2024 archive
+    if (!map[key]) map[key] = {};
+    if (!map[key][kind]) map[key][kind] = href;
+  }
+  const count = Object.keys(map).length;
+  if (!count) { console.warn('  No Rico agenda links found — check HTML structure'); return null; }
+  console.log(`  Rico: ${count} meeting(s) with agenda/packet/minutes links`);
+  return map;
+}
+
 // Generic colorado.gov-style page fetch: try direct, fall back to CF proxy.
 async function fetchGovPage(pageUrl, label) {
   const SAFARI_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15';
@@ -6072,6 +6113,29 @@ async function main() {
       govHubSrc = replaceJsValue(govHubSrc, 'RIDGWAY_AGENDA_MAP', newRidgwayAgendas, true);
       changed = true;
       console.log(`  RIDGWAY_AGENDA_MAP updated: ${Object.keys(newRidgwayAgendas).length} entries`);
+    }
+  }
+
+  // ── Task 20d: Rico agenda map ──
+  const newRicoAgendas = await syncRicoAgendas();
+  if (newRicoAgendas !== null) {
+    const rawRico = (() => {
+      const startRe = /const\s+RICO_AGENDA_MAP\s*=\s*\{/;
+      const mm = startRe.exec(govHubSrc);
+      if (!mm) return {};
+      let depth = 0, start = mm.index + mm[0].length - 1;
+      for (let i = start; i < govHubSrc.length; i++) {
+        if (govHubSrc[i] === '{') depth++;
+        else if (govHubSrc[i] === '}') { depth--; if (depth === 0) {
+          try { return JSON.parse(govHubSrc.slice(start, i + 1)); } catch { return {}; }
+        }}
+      }
+      return {};
+    })();
+    if (JSON.stringify(newRicoAgendas) !== JSON.stringify(rawRico)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'RICO_AGENDA_MAP', newRicoAgendas, true);
+      changed = true;
+      console.log(`  RICO_AGENDA_MAP updated: ${Object.keys(newRicoAgendas).length} entries`);
     }
   }
 

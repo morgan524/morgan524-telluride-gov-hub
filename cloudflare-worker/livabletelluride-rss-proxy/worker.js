@@ -55,6 +55,8 @@ const ALLOWED_HOSTS = [
   "www.telluridefire.com",
   "townofophir.colorado.gov",
   "www.townofophir.colorado.gov",
+  "townofrico.colorado.gov",
+  "www.townofrico.colorado.gov",
   // San Miguel Basin Forum (West End news) — Creative Circle CMS, same
   // as Telluride Times. Direct fetches from GH runners get 403/429.
   "sanmiguelbasinforum.com",

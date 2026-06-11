@@ -679,6 +679,7 @@
       { key: 'med',       name: 'Telluride Regional Medical Center',   logo: 'https://livabletelluride.org/logo/Telluride%20Hospital%20Dist.jpeg' },
       { key: 'norwood',   name: 'Town of Norwood',                     logo: 'https://livabletelluride.org/logo/Norwood%20Town.jpeg' },
       { key: 'ophir',     name: 'Town of Ophir',                       logo: 'https://livabletelluride.org/logo/Ophir.jpeg' },
+      { key: 'rico',      name: 'Town of Rico',                        logo: 'https://livabletelluride.org/logo/Rico%20Town.png' },
       { key: 'ridgway',   name: 'Town of Ridgway',                     logo: 'https://livabletelluride.org/logo/Ridgway%20Town.png' },
       { key: 'telluride', name: 'Town of Telluride',                   logo: 'https://livabletelluride.org/logo/Telluride%20Town.png' }
     ];
@@ -726,6 +727,7 @@
       med:       { email: 'wcrossland@tellmed.org',                       deadline: 'Written comments should be submitted 48 hours before the meeting.' },
       norwood:   { email: 'cross@norwoodtown.com',                        deadline: 'Written comments should be submitted 48 hours before the meeting.' },
       ophir:     { email: 'clerk@ophir.us',                               deadline: 'Written comments should be submitted 48 hours before the meeting.' },
+      rico:      { email: 'townclerk@ricocolorado.gov',                   deadline: 'Written comments may be submitted to the Town Clerk before the meeting.' },
       airport:   { email: 'info@tellurideairport.com',                    deadline: 'Written comments may be submitted to the Airport Authority prior to the meeting.' },
       smrha:     { email: 'admin@smrha.org',                              deadline: 'Written comments should be submitted prior to the meeting.' },
     };
@@ -1050,7 +1052,8 @@
         telluride: 'https://livabletelluride.org/logo/Telluride%20Town.png',
         county:    'https://livabletelluride.org/logo/San%20Miguel%20County.png',
         mv:        'https://livabletelluride.org/logo/Mountain%20village%20Town.jpg',
-        ridgway:   'https://livabletelluride.org/logo/Ridgway%20Town.png'
+        ridgway:   'https://livabletelluride.org/logo/Ridgway%20Town.png',
+        rico:      'https://livabletelluride.org/logo/Rico%20Town.png'
       };
       const logoSrc = logos[r.sourceKey] || '';
       const logo = logoSrc
@@ -1145,6 +1148,7 @@
               ['getRidgwayMeetings',      'ridgway',   'Town of Ridgway',       'https://livabletelluride.org/logo/Ridgway%20Town.png'],
               ['getNorwoodMeetings',      'norwood',   'Town of Norwood',       'https://livabletelluride.org/logo/Norwood%20Town.jpeg'],
               ['getOphirMeetings',        'ophir',     'Town of Ophir',         'https://livabletelluride.org/logo/Ophir.jpeg'],
+              ['getRicoMeetings',         'rico',      'Town of Rico',          'https://livabletelluride.org/logo/Rico%20Town.png'],
               ['getSmartMeetings',        'smart',     'SMART',                 'https://livabletelluride.org/logo/SMART.png'],
               ['getAirportMeetings',      'airport',   'Telluride Regional Airport', 'https://livabletelluride.org/logo/Airport.png'],
               ['getTellurideMeetings',    'telluride', 'Town of Telluride',     'https://livabletelluride.org/logo/Telluride%20Town.png']

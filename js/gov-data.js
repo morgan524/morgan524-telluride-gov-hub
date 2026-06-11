@@ -763,6 +763,15 @@ const OPHIR_CACHED_DATA = [
   }
 ];
 
+// ── Town of Rico Board of Trustees (colorado.gov / Drupal) ──
+// Meets the 3rd Wednesday of every month at 7:00 PM, Rico Town Hall
+// (2 Commercial St). Agendas/packets posted the Wednesday prior; meetings
+// are also live-streamed on the Town's YouTube channel. getRicoMeetings()
+// in gov-helpers.js generates the upcoming 3rd-Wednesday meetings and pulls
+// each meeting's Agenda/Packet/Minutes PDFs from RICO_AGENDA_MAP, which the
+// bot refreshes from the Board of Trustees page every 6h.
+const RICO_BOARD_URL = 'https://townofrico.colorado.gov/government/board-of-trustees';
+
 const RIDGWAY_COUNCIL_URL = 'https://townofridgway.colorado.gov/i-want-to/ridgway-town-council';
 
 const RIDGWAY_CACHE_DATE = '2026-05-11';
@@ -1540,6 +1549,7 @@ const ENTITY_LOGOS = {
   ridgway: '<img src="/logo/Ridgway%20Town.png" alt="Town of Ridgway" style="width:100%;height:100%;object-fit:contain;">',
   norwood: '<img src="/logo/Norwood%20Town.jpeg" alt="Town of Norwood" style="width:100%;height:100%;object-fit:contain;">',
   ophir: '<img src="/logo/Ophir.jpeg" alt="Town of Ophir" style="width:100%;height:100%;object-fit:contain;">',
+  rico: '<img src="/logo/Rico%20Town.png" alt="Town of Rico" style="width:100%;height:100%;object-fit:contain;">',
   ttimes: '<img src="/logo/TT%20Logo.png" alt="The Telluride Times" style="width:100%;height:100%;object-fit:contain;">',
   tjc: '<img src="/logo/Telluride%20Jewish.webp" alt="Telluride Jewish Community" style="width:100%;height:100%;object-fit:contain;">',
   tf: '<img src="/logo/Telluride%20Foundation.png" alt="Telluride Foundation" style="width:100%;height:100%;object-fit:contain;">',
@@ -1566,6 +1576,7 @@ const TOWN_IMAGES = {
   telluride: '/logo/Telluride%20Town.png',
   ridgway: '/logo/Ridgway%20Town.png',
   ophir: '/logo/Ophir.jpeg',
+  rico: '/logo/Rico%20Town.png',
   placerville: '/logo/Placerville.png',
   ouray: '/logo/Ouray%20Town.png',
   nucla: '/logo/Nucla%20Town.png',
@@ -1583,6 +1594,7 @@ const SOURCE_SHORT_NAME = {
   norwood: 'Norwood',
   smb: 'Basin Forum',
   ophir: 'Ophir',
+  rico: 'Rico',
   airport: 'TEX',
   wilkinson: 'Wilkinson'
 };
@@ -1603,6 +1615,10 @@ const ENTITY_REMOTE = {
     livestreamLabel: 'Livestream'
   },
   school: { hasZoom: true },  // All school board meetings offer Zoom
+  rico: {
+    livestream: 'https://www.youtube.com/@townofrico/streams',
+    livestreamLabel: 'YouTube Live'  // BOT meetings are streamed on the Town's YouTube channel
+  },
   smart: {},
   fire: {},
   med: { hasZoom: true },     // Med Center board meets in-person + Zoom
@@ -1620,6 +1636,7 @@ const ENTITY_ADDRESS = {
   med:       'Telluride Medical Center, 500 W Pacific Ave, Telluride, CO 81435',
   norwood:   'Town of Norwood, 1670 Naturita St, Norwood, CO 81423',
   ophir:     'Town of Ophir, CO 81426',
+  rico:      'Rico Town Hall, 2 Commercial St, Rico, CO 81332',
   airport:   'Terminal Observation Lounge, Telluride Regional Airport, Telluride, CO 81435',
   ttimes:    'Telluride, CO'
 };

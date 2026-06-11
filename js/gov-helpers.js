@@ -8334,6 +8334,58 @@ const RIDGWAY_AGENDA_MAP = {
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.06.30%20%28PC%20Agenda%20Pkt%29_0.pdf"
 };
 
+// ── Town of Rico Board of Trustees agenda/packet/minutes URLs ──
+// Keyed by the meeting label shown on the Board of Trustees page
+// (regular meetings = "<Month> <Year>"; specials/work sessions carry
+// their qualifier). getRicoMeetings() looks up the "<Month> <Year>" key
+// for each generated 3rd-Wednesday meeting. The bot (syncRicoAgendas in
+// content-refresh.js) regenerates this map from the page every 6h, so
+// new agendas/packets/minutes appear automatically as Rico posts them.
+const RICO_AGENDA_MAP = {
+  "June 2026 Special Meeting": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20June%202026%20Agenda%20Special%20Meeting_0.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20June%202026%20Packet%20Special%20Meeting.pdf" },
+  "May 2026": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20May%202026%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20May%202026%20Packet.pdf" },
+  "April 2026": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20April%202026%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20April%202026%20Packet.pdf" },
+  "March 2026": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20March%202026%20Agenda_0.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20March%202026%20Packet.pdf" },
+  "February 2026": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20February%202026%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20February%202026%20Packet.pdf" },
+  "February 2026 Work Session": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20February%202026%20Work%20Session%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20February%202026%20Work%20Session%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/feb%202026%20special%20minutes.pdf" },
+  "January 2026": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20January%202026%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20January%202026%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/January%202026%20minutes.pdf" },
+  "December 2025": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20December%202025%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20December%202025%20Packet_0.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/December%202025%20minutes.pdf" },
+  "December 2025 Special Meeting": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20December%203%202025%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20December%203%202025%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/December%203%202025%20minutes%20special%20meeting.pdf" },
+  "November 2025": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20November%202025%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20November%202025%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/nov%2019_%202025%20minutes.pdf" },
+  "October 2025": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20October%202025%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20October%202025%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/october%202025%20minutes.pdf" },
+  "September 2025": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20September%202025%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20September%202025%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/September%2017%20minutes.pdf" },
+  "August 2025": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20August%202025%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20August%202025%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/August%2020%20minutes.pdf" },
+  "August 2025 Planning Commission and Board of Trustee Joint Meeting": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Planning%20Commission%20and%20Board%20of%20Trustees%20Joint%20Meeting%20Agenda%20August%2013%202025.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Planning%20Commission%20and%20Board%20of%20Trustees%20Joint%20Meeting%20Packet%20August%2013%202025.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/august%2013_%202025%20minutes.pdf" },
+  "July 2025": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20July%202025%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20July%202025%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/July%2016%20minutes.pdf" },
+  "July 2025 Special Meeting": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20July%20Special%20Meeting%202025%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20July%20Special%20Meeting%202025%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/July%209%20minutes.pdf" },
+  "June 2025": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20June%202025%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20June%202025%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/June%2018%20minutes.pdf" },
+  "June 2025 Planning Commission and Board of Trustee Joint Meeting": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Planning%20Commission%20and%20Board%20of%20Trustees%20Joint%20Meeting%20Agenda%20June%2011%202025.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/June%2011%20minutes.pdf" },
+  "May 2025": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20May%202025%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20May%202025%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/minutes%20may%2021%202025.pdf" },
+  "May 2025 Planning Commission and Board of Trustee Joint Meeting": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Planning%20Commission%20and%20Board%20of%20Trustees%20Joint%20Meeting%20Agenda%20May%2014%202025.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Planning%20Commission%20and%20Board%20of%20Trustees%20Joint%20Meeting%20Packet%20May%2014%202025.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/minutes%20may%2014%202025.pdf" },
+  "April 2025": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20April%202025%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20April%202025%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/minutes%20april%2016%202025.pdf" },
+  "March 2025": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20March%202025%20Agenda_0.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20March%202025%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/minutes%20mar%2019%202025.pdf" },
+  "March 2025 Special Meeting": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20March%203rd%202025%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20March%203rd%202025%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/minutes%20mar%203%202025.pdf" },
+  "February 2025": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20February%202025%20Agenda_0.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20February%202025%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/minutes%20feb%2019%202025.pdf" },
+  "January 2025": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20January%202025%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20January%202025%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/minutes%20jan%2015%202025.pdf" },
+  "January 2025 Special Session": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20January%202025%20Agenda%20Special%20Meeting.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20January%202025%20Packet%20Special%20Meeting.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/minutes%20jan%2030%202025.pdf" },
+  "December 2024": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20December%20%202024%20Agenda%20.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20December%20%202024%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/minutes%20December%202024.pdf" },
+  "November 2024": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20November%20%202024%20Agenda%20.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20November%20%202024%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/minutes%20November%202024.pdf" },
+  "October 2024": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20October%202024%20Agenda%20_0.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20October%202024%20Packet_0.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/October%2016_%202024%20minutes.pdf" },
+  "September 2024": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20September%202024%20Agenda%20_0.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20September%202024%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/September_%202024%20minutes.pdf" },
+  "September 2024 Planning Commission and Board of Trustee Joint Meeting": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Planning%20Commission%20and%20Board%20of%20Trustees%20Joint%20Meeting%20Agenda%20September%2011%202024.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Planning%20Commission%20and%20Board%20of%20Trustees%20Joint%20Meeting%20Packet%20September%2011%202024_0.pdf" },
+  "August 2024": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20August%2021%202024%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20August%2021%202024%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/August%2021_%202024%20minutes.pdf" },
+  "July 2024": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20July%2017%202024%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20July%2017%202024%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/July%2017_%202024%20minutes.pdf" },
+  "June 2024": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20June%2019%202024%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20June%2019%202024%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/June%2019_%202024%20minutes.pdf" },
+  "May 2024": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20May%2015%202024%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20May%2015%202024%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/May%2015_%202024%20minutes.pdf" },
+  "April 2024": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20April%2017%202024%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20April%2017%202024%20Packet.pdf" },
+  "March 2024": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20March%2020%202024%20Agenda_1.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20March%2020%202024%20Packet_1.pdf" },
+  "March 2024 VCUP Public Forum": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20March%207%202024%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/March%207%20VCUP%20Public%20Forum%20Handouts_without%20CT.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/3.7.24.pdf" },
+  "March 2024 VCUP Special Session": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20March%206%202024%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20March%206%202024%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/3.6.24.pdf" },
+  "February 2024": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20February%2028%202024%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20February%2028%202024%20Packet.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/2.28.24.pdf" },
+  "February 2024 Sewer Work Session": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20Feb%2015%202024%20Agenda.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Rico%20Wastewater%20Collection%20and%20Treatment%20System%20%281%29.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/2.15.24.pdf" },
+  "January 2024": { "agenda": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20January%2017%202024%20Agenda_0.pdf", "packet": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20January%2017%202024%20Packet_0.pdf", "minutes": "https://townofrico.colorado.gov/sites/townofrico/files/documents/1.17.24.pdf" }
+};
+
 function getCountyCachedMeetings() {
   return COUNTY_CACHED_DATA.map(m => {
     const eventDate = localDate(m.date);
@@ -8685,6 +8737,66 @@ function getRidgwayMeetings() {
       packetUrl: null
     };
   });
+}
+
+// Town of Rico Board of Trustees. Rico meets the 3rd Wednesday of every month
+// at 7:00 PM (Rico Town Hall, 2 Commercial St). Rather than hand-seed stubs,
+// we GENERATE the upcoming regular meetings deterministically from that
+// schedule (so future meetings always appear, even before the bot runs), then
+// enrich each with its Agenda/Packet/Minutes PDFs from RICO_AGENDA_MAP, keyed
+// by "<Month> <Year>" and refreshed from the Board of Trustees page every 6h.
+function getRicoMeetings() {
+  const MONTHS = ['January','February','March','April','May','June','July',
+                  'August','September','October','November','December'];
+  const boardUrl = (typeof RICO_BOARD_URL !== 'undefined')
+    ? RICO_BOARD_URL
+    : 'https://townofrico.colorado.gov/government/board-of-trustees';
+  const amap = (typeof RICO_AGENDA_MAP !== 'undefined') ? RICO_AGENDA_MAP : {};
+
+  // 3rd Wednesday (weekday 3) of a given year/month (month is 0-based).
+  function thirdWednesday(year, month) {
+    const firstDow = new Date(year, month, 1).getDay();      // 0=Sun..6=Sat
+    const firstWed = 1 + ((3 - firstDow + 7) % 7);
+    return firstWed + 14;
+  }
+
+  const out = [];
+  const now = new Date();
+  // Generate the current month + next 3 months of regular meetings. gov-hub.html
+  // filters to today→+30d, so this always yields the next 1–2 upcoming meetings
+  // while staying correct as the window rolls forward month to month.
+  for (let i = 0; i <= 3; i++) {
+    const base = new Date(now.getFullYear(), now.getMonth() + i, 1);
+    const year = base.getFullYear();
+    const month = base.getMonth();
+    const day = thirdWednesday(year, month);
+    const dateStr = MONTHS[month] + ' ' + day + ', ' + year;
+    const eventDate = localDate(dateStr);
+    const monthKey = MONTHS[month] + ' ' + year;
+    const docs = amap[monthKey] || {};
+    const agendaUrl = docs.agenda || null;
+    const hasAgenda = !!agendaUrl;
+    out.push({
+      title: 'Rico Board of Trustees Regular Meeting',
+      link: agendaUrl || boardUrl,
+      description: hasAgenda
+        ? 'Board agenda and full meeting packet available (PDF).'
+        : 'Regular monthly meeting of the Rico Board of Trustees. The agenda and packet are typically posted the Wednesday before the meeting.',
+      eventDate,
+      eventDates: '',
+      eventTimes: '7:00 PM',
+      location: 'Rico Town Hall, 2 Commercial St, Rico',
+      source: 'rico',
+      sourceLabel: 'Town of Rico',
+      category: 'Board Meeting',
+      canceled: false,
+      hasAgenda,
+      agendaLink: agendaUrl,
+      packetUrl: docs.packet || null,
+      minutesUrl: docs.minutes || null
+    });
+  }
+  return out;
 }
 
 function getTownAgendaLink(title, eventDate) {
