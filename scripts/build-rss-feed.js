@@ -46,10 +46,10 @@ const WEEK_AHEAD_CACHE = path.join(REPO_ROOT, 'data', 'week-ahead-cache.json');
 // three are events classified by eventCategory(). Add more here + emit a
 // feed below when expanding past the pilot four.
 const CATEGORY_FEEDS = [
-  { key: 'arts',     file: 'feed-arts.xml',     title: 'Livable Telluride — Music, Arts & Festivals', desc: 'Upcoming concerts, film, theater, gallery openings, and festivals across the Telluride region.' },
+  { key: 'arts',     file: 'feed-arts.xml',     title: 'Livable Telluride — Music, Arts & Festivals', desc: 'Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.' },
   { key: 'civic',    file: 'feed-civic.xml',    title: 'Livable Telluride — Government Meetings',       desc: 'Upcoming council, commission, and board meetings across the region — with comment deadlines.' },
-  { key: 'family',   file: 'feed-family.xml',   title: 'Livable Telluride — Family & Kids',             desc: 'Upcoming storytime, youth programs, and all-ages activities across the Telluride region.' },
-  { key: 'outdoors', file: 'feed-outdoors.xml', title: 'Livable Telluride — Outdoors & Recreation',     desc: 'Upcoming hikes, races, ski events, and stewardship days across the Telluride region.' },
+  { key: 'family',   file: 'feed-family.xml',   title: 'Livable Telluride — Family & Kids',             desc: 'Storytime, youth programs, and all-ages activities — plus upcoming government meetings and comment deadlines.' },
+  { key: 'outdoors', file: 'feed-outdoors.xml', title: 'Livable Telluride — Outdoors & Recreation',     desc: 'Hikes, races, ski events, and stewardship days — plus upcoming government meetings and comment deadlines.' },
 ];
 
 const SITE_URL = 'https://livabletelluride.org';
@@ -754,12 +754,15 @@ async function main() {
   // write the file (even with 0 items) so the feed URL resolves for Mailchimp;
   // an empty feed simply means that campaign has nothing to send.
   for (const f of CATEGORY_FEEDS) {
+    // Every topic feed ALSO carries the Gov-Hub meetings, so a subscriber to
+    // any single interest (arts/family/outdoors) still sees upcoming government
+    // meetings + comment deadlines in that email. (civic IS the meetings.)
     const catItems = (f.key === 'civic'
       ? meetingItems.slice()
-      : eventItems.filter((it) => it._category === f.key))
+      : eventItems.filter((it) => it._category === f.key).concat(meetingItems))
       .filter((it) => it.pubDate instanceof Date && !isNaN(it.pubDate.getTime()))
       .sort((a, b) => a.pubDate - b.pubDate)   // earliest-upcoming first
-      .slice(0, MAX_EVENTS);
+      .slice(0, MAX_ITEMS);
     const outPath = path.join(REPO_ROOT, f.file);
     writeRssFeed(outPath, f.title, f.desc, `${SITE_URL}/${f.file}`, catItems);
     console.log(`  Emitting ${catItems.length} items to ${f.file}`);
