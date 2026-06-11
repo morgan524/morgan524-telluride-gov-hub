@@ -47,6 +47,14 @@
   button.save:disabled{background:#7a8a85;cursor:not-allowed}
   .note{font-size:.8rem;color:var(--muted)}
   .help{font-size:.78rem;color:var(--muted);margin-top:2px}
+  .loadmsg{margin:0 0 16px;font-size:.85rem;padding:9px 12px;border-radius:9px;display:none}
+  .loadmsg.show{display:block}
+  .loadmsg.ok{background:#e7f1ea;color:#1f5840}
+  .loadmsg.info{background:#eef3ef;color:#3a443e}
+  .loadmsg a{color:var(--green);font-weight:600}
+  .sub-status{font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:middle;white-space:nowrap}
+  .sub-status.on{background:#e7f1ea;color:#1f5840}
+  .sub-status.off{background:#f1efe9;color:#8a7a55}
   .msg{font-size:.9rem;margin:14px 0 0;min-height:1em}
   .msg.error{color:#b44b3c}
   .msg.success{color:var(--accent);font-weight:600}
@@ -87,6 +95,7 @@
 
   <main class="wrap">
     <div class="card">
+      <p class="loadmsg" id="profLoadMsg"></p>
       <form id="profForm" onsubmit="return submitProfile(event)" novalidate>
 
         <div class="row-2">
@@ -114,16 +123,16 @@
         <div class="section">Your subscriptions <span class="sub">Choose a subscription only to change it — “Keep as-is” leaves it untouched.</span></div>
 
         <div class="sub">
-          <div><div class="sub-t">Weekly Update</div><div class="sub-d">The Friday look-ahead — upcoming meetings &amp; events.</div></div>
-          <div class="seg" data-interest="24642">
+          <div><div class="sub-t">Weekly Update <span class="sub-status" data-status="weekly"></span></div><div class="sub-d">The Friday look-ahead — upcoming meetings &amp; events.</div></div>
+          <div class="seg" data-sub="weekly">
             <button type="button" class="seg-btn active" data-v="">Keep as-is</button>
             <button type="button" class="seg-btn" data-v="on">Subscribe</button>
             <button type="button" class="seg-btn" data-v="off">Unsubscribe</button>
           </div>
         </div>
         <div class="sub">
-          <div><div class="sub-t">Newsletter</div><div class="sub-d">Long-form posts when we publish them.</div></div>
-          <div class="seg" data-interest="24641">
+          <div><div class="sub-t">Newsletter <span class="sub-status" data-status="newsletter"></span></div><div class="sub-d">Long-form posts when we publish them.</div></div>
+          <div class="seg" data-sub="newsletter">
             <button type="button" class="seg-btn active" data-v="">Keep as-is</button>
             <button type="button" class="seg-btn" data-v="on">Subscribe</button>
             <button type="button" class="seg-btn" data-v="off">Unsubscribe</button>
@@ -171,15 +180,26 @@
     <div class="foot-bottom">© 2026 Livable Telluride. All rights reserved.</div>
   </footer>
 
+<!-- Firebase (compat) — to detect the Hub-Bub login and load the person's own info -->
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
 <script>
-  // ── Wiring to the existing Cloudflare Worker (same contract as lt-profile.js) ──
+  // ── Cloudflare Worker endpoints (Mailchimp API key lives server-side) ──
   const WORKER_ENDPOINT = 'https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/update-profile';
-  // Mailchimp "Email Subscriptions" interest group IDs (category 7915).
-  // Weekly Update = 24642, Newsletter = 24641.
+  const READ_ENDPOINT   = 'https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/profile-read';
 
   function qp(name){ try{ return new URLSearchParams(location.search).get(name) || ''; }catch(_){ return ''; } }
   function val(id){ const el=document.getElementById(id); return el ? el.value.trim() : ''; }
   function setVal(id,v){ const el=document.getElementById(id); if(el&&v) el.value=v; }
+  function flagMissing(){ ['pFirst','pLast'].forEach(id=>{ const el=document.getElementById(id); if(el) el.classList.toggle('missing', !el.value.trim()); }); }
+  function loadMsg(text, cls){ const el=document.getElementById('profLoadMsg'); if(!el) return; el.innerHTML=text; el.className='loadmsg show '+(cls||'info'); }
+  function setSubStatus(key, val){
+    const el=document.querySelector('.sub-status[data-status="'+key+'"]');
+    if(!el) return;
+    if(val===true){ el.textContent='Currently subscribed'; el.className='sub-status on'; }
+    else if(val===false){ el.textContent='Currently not subscribed'; el.className='sub-status off'; }
+    else { el.textContent=''; el.className='sub-status'; }
+  }
 
   // Pre-fill from the email "Update your info" link
   //   /profile.html?email=*|EMAIL|*&fname=*|FNAME|*&lname=*|LNAME|*&town=*|MMERGE6|*&addr=*|MMERGE10|*&radius=*|MMERGE11|*
@@ -189,7 +209,7 @@
   setVal('pTown',   qp('town'));
   setVal('pAddr',   qp('addr'));
   setVal('pRadius', qp('radius'));
-  ['pFirst','pLast'].forEach(id=>{ const el=document.getElementById(id); if(el) el.classList.toggle('missing', !el.value.trim()); });
+  flagMissing();
 
   // Segmented control behaviour
   document.querySelectorAll('.seg').forEach(seg=>{
@@ -200,6 +220,45 @@
       });
     });
   });
+
+  // ── If signed into Hub-Bub, load THIS person's own saved info ──
+  // The Worker verifies the Firebase ID token server-side and only ever
+  // returns the record for the email tied to that token, so no one can read
+  // anyone else's data.
+  (function initProfileLoad(){
+    const loginHint = 'Have an account? <a href="/hub-bub.html#login">Log in</a> and your saved info loads here automatically.';
+    if (!window.firebase || !firebase.initializeApp) { loadMsg(loginHint, 'info'); return; }
+    try {
+      firebase.initializeApp({
+        apiKey: 'AIzaSyCyAjB0RA_LtoETyRqxVJor0lRB4NRyXF0',
+        authDomain: 'telluride-gov-hub.firebaseapp.com',
+        projectId: 'telluride-gov-hub',
+        storageBucket: 'telluride-gov-hub.firebasestorage.app',
+        messagingSenderId: '14117089764',
+        appId: '1:14117089764:web:4287985258f0bc929cd7f1'
+      });
+    } catch(e) { /* already initialized */ }
+    firebase.auth().onAuthStateChanged(function(user){
+      if (!user || !user.email) { loadMsg(loginHint, 'info'); return; }
+      setVal('pEmail', user.email);
+      user.getIdToken().then(function(token){
+        return fetch(READ_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ idToken: token }) });
+      }).then(function(r){ return r.json(); }).then(function(resp){
+        if (resp && resp.ok && resp.found) {
+          const fl = resp.fields || {};
+          setVal('pFirst', fl.FNAME); setVal('pLast', fl.LNAME); setVal('pTown', fl.MMERGE6);
+          setVal('pAddr', fl.MMERGE10); setVal('pRadius', fl.MMERGE11);
+          flagMissing();
+          if (resp.subs) { setSubStatus('weekly', resp.subs.weekly); setSubStatus('newsletter', resp.subs.newsletter); }
+          loadMsg('✓ Loaded your saved info for <strong>'+resp.email+'</strong>. Update anything below — empty boxes are details we don’t have yet.', 'ok');
+        } else if (resp && resp.ok && !resp.found) {
+          loadMsg('You’re signed in as <strong>'+resp.email+'</strong>, but we don’t have a subscription for that address yet. Fill in your info below to get started.', 'info');
+        } else {
+          loadMsg(loginHint, 'info');
+        }
+      }).catch(function(){ loadMsg('Couldn’t load your saved info just now — you can still update anything below.', 'info'); });
+    });
+  })();
 
   window.submitProfile = function(event){
     if(event&&event.preventDefault) event.preventDefault();
@@ -215,18 +274,19 @@
     const a=val('pAddr');   if(a) fields.MMERGE10=a;
     const r=val('pRadius'); if(r) fields.MMERGE11=r;
 
-    // Only subscription changes the person explicitly picked
-    const interests={};
-    document.querySelectorAll('.seg[data-interest]').forEach(seg=>{
+    // Only subscription changes the person explicitly picked (name-based;
+    // the Worker resolves these to the real Mailchimp interest IDs).
+    const subs={};
+    document.querySelectorAll('.seg[data-sub]').forEach(seg=>{
       const active=seg.querySelector('.seg-btn.active');
       const v=active?active.getAttribute('data-v'):'';
-      if(v==='on')  interests[seg.getAttribute('data-interest')]=true;
-      if(v==='off') interests[seg.getAttribute('data-interest')]=false;
+      if(v==='on')  subs[seg.getAttribute('data-sub')]=true;
+      if(v==='off') subs[seg.getAttribute('data-sub')]=false;
     });
 
-    const payload={ email:email, fields:fields, interests:interests };
+    const payload={ email:email, fields:fields, subs:subs };
 
-    if(!Object.keys(fields).length && !Object.keys(interests).length){
+    if(!Object.keys(fields).length && !Object.keys(subs).length){
       msg.className='msg error'; msg.textContent='Nothing to update yet — fill in a field or change a subscription.'; return false;
     }
 

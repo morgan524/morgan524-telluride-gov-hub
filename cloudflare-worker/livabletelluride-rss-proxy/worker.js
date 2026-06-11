@@ -189,6 +189,90 @@ function profileCorsHeaders(origin) {
   };
 }
 
+// Firebase project (public client key — safe to embed). Used to verify a
+// caller's ID token via the Identity Toolkit so a person can only read THEIR
+// OWN profile (the email comes from the verified token, never from input).
+const FIREBASE_API_KEY = "AIzaSyCyAjB0RA_LtoETyRqxVJor0lRB4NRyXF0";
+
+async function verifyFirebaseEmail(idToken) {
+  try {
+    const r = await fetch(
+      "https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=" + FIREBASE_API_KEY,
+      { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ idToken }) }
+    );
+    if (!r.ok) return null;
+    const j = await r.json();
+    const u = j.users && j.users[0];
+    return u && u.email ? String(u.email).toLowerCase() : null;
+  } catch (_) { return null; }
+}
+
+// The embedded signup form uses Mailchimp "web IDs" (group[7915][24641]); the
+// API keys member.interests by a DIFFERENT alphanumeric interest ID. Resolve
+// the real IDs by interest NAME ("Weekly Update" / "Newsletter") so both read
+// and write are correct regardless of the numeric web IDs. Cached per isolate.
+let _interestCache = null;
+async function resolveInterests(env) {
+  if (_interestCache) return _interestCache;
+  const dc = env.MAILCHIMP_API_KEY.split("-")[1] || "us15";
+  const auth = "Basic " + btoa("anystring:" + env.MAILCHIMP_API_KEY);
+  const base = "https://" + dc + ".api.mailchimp.com/3.0/lists/" + MC_LIST_ID;
+  const map = {};
+  try {
+    const cr = await fetch(base + "/interest-categories?count=60", { headers: { Authorization: auth } });
+    const cj = await cr.json();
+    for (const cat of (cj.categories || [])) {
+      const ir = await fetch(base + "/interest-categories/" + cat.id + "/interests?count=200", { headers: { Authorization: auth } });
+      const ij = await ir.json();
+      for (const it of (ij.interests || [])) map[String(it.name || "").trim().toLowerCase()] = it.id;
+    }
+  } catch (_) {}
+  const result = { weekly: map["weekly update"] || null, newsletter: map["newsletter"] || null };
+  if (result.weekly || result.newsletter) _interestCache = result; // cache only a good result
+  return result;
+}
+
+// POST /profile-read { idToken } — returns the signed-in user's own Mailchimp
+// fields + subscription state so the profile page can pre-fill. Token-verified;
+// a non-subscriber gets { ok:true, found:false }.
+async function handleProfileRead(request, env) {
+  const cors = profileCorsHeaders(request.headers.get("Origin") || "");
+  const json = (obj, status) => new Response(JSON.stringify(obj), { status: status || 200, headers: cors });
+  if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
+  if (request.method !== "POST") return json({ ok: false, msg: "POST only" }, 405);
+  if (!env.MAILCHIMP_API_KEY) return json({ ok: false, msg: "Profile lookup isn't configured yet." }, 500);
+
+  let data; try { data = await request.json(); } catch { return json({ ok: false, msg: "Bad request." }, 400); }
+  const idToken = data && data.idToken;
+  if (!idToken) return json({ ok: false, msg: "Not signed in." }, 401);
+  const email = await verifyFirebaseEmail(idToken);
+  if (!email) return json({ ok: false, msg: "We couldn't verify your sign-in." }, 401);
+
+  const dc = env.MAILCHIMP_API_KEY.split("-")[1] || "us15";
+  const apiUrl = "https://" + dc + ".api.mailchimp.com/3.0/lists/" + MC_LIST_ID + "/members/" + md5(email);
+  let resp;
+  try { resp = await fetch(apiUrl, { headers: { Authorization: "Basic " + btoa("anystring:" + env.MAILCHIMP_API_KEY) } }); }
+  catch { return json({ ok: false, msg: "Couldn't reach Mailchimp." }, 502); }
+  if (resp.status === 404) return json({ ok: true, found: false, email });
+  if (!(resp.status >= 200 && resp.status < 300)) return json({ ok: false, msg: "Lookup failed (" + resp.status + ")." });
+
+  const m = await resp.json();
+  const mf = m.merge_fields || {};
+  const mi = m.interests || {};
+  const ids = await resolveInterests(env);
+  return json({
+    ok: true, found: true, email,
+    fields: {
+      FNAME: mf.FNAME || "", LNAME: mf.LNAME || "", MMERGE6: mf.MMERGE6 || "",
+      MMERGE10: mf.MMERGE10 || "", MMERGE11: mf.MMERGE11 || "",
+    },
+    subs: {
+      weekly:     ids.weekly     ? !!mi[ids.weekly]     : null,
+      newsletter: ids.newsletter ? !!mi[ids.newsletter] : null,
+    },
+  });
+}
+
 async function handleUpdateProfile(request, env) {
   const cors = profileCorsHeaders(request.headers.get("Origin") || "");
   const json = (obj, status) => new Response(JSON.stringify(obj), { status: status || 200, headers: cors });
@@ -211,6 +295,13 @@ async function handleUpdateProfile(request, env) {
     for (const [id, on] of Object.entries(data.interests)) {
       if (/^[0-9a-f]+$/i.test(id)) interests[id] = !!on;
     }
+  }
+  // Preferred path: name-based subs resolved to the real Mailchimp interest IDs
+  // (the form's 24641/24642 are web IDs that the API ignores).
+  if (data.subs && typeof data.subs === "object") {
+    const ids = await resolveInterests(env);
+    if (ids.weekly     && typeof data.subs.weekly     === "boolean") interests[ids.weekly]     = data.subs.weekly;
+    if (ids.newsletter && typeof data.subs.newsletter === "boolean") interests[ids.newsletter] = data.subs.newsletter;
   }
   const body = {};
   if (Object.keys(merge_fields).length) body.merge_fields = merge_fields;
@@ -365,6 +456,9 @@ export default {
     const url = new URL(request.url);
     if (url.pathname === "/update-profile") {
       return handleUpdateProfile(request, env);
+    }
+    if (url.pathname === "/profile-read") {
+      return handleProfileRead(request, env);
     }
     if (url.pathname === "/summarize-flyer") {
       return handleSummarizeFlyer(request, env);
