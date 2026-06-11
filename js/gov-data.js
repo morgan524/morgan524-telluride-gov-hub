@@ -470,7 +470,7 @@ const FIRE_CACHED_DATA = [
     date: 'June 16, 2026',
     time: '5:30 PM',
     title: 'Board of Directors Meeting',
-    agendaUrl: null,
+    agendaUrl: 'https://www.telluridefire.com/files/978c9813f/Agenda+-June+16th%2C+2026.pdf',
     packetUrl: null,
     special: false,
     location: '131 W Columbia Ave, Telluride, CO 81435'

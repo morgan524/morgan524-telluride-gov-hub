@@ -6,26 +6,16 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Jun 2026 15:47:37 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 20:16:03 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
-      <title>📅 The Week Ahead — Jun 11–17</title>
-      <link>https://livabletelluride.org/events.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-23</guid>
-      <pubDate>Thu, 11 Jun 2026 15:47:37 GMT</pubDate>
-      <description><![CDATA[SMART's board meets Wednesday to approve a lease with Telluride Gymnastics Academy at 137 Society Drive, marking one of the few concrete decisions on this week's government calendar. Most other meetings across the valley — from Planning Commission to Town Council — haven't posted agendas yet. Community-wise, it's a busy stretch with the Historical Museum opening their new San Miguel Stories exhibit, the Rico Trails Alliance throwing a membership fiesta, and the usual lineup of library programs and farmers market.]]></description>
-      <category>The Week Ahead</category>
-    </item>
-    <item>
-      <title>⚡ [Meeting] SMART Board of Directors — 2026-06-11</title>
+      <title>[Meeting] SMART Board of Directors — 2026-06-11</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/smart%7C2026-06-11%7CSMART%20Board%20of%20Directors</guid>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[SMART Transit • 2026-06-11
 
-SMART's board meets to approve a lease with Telluride Gymnastics Academy at 137 Society Drive, plus the usual gondola update and quarterly reports.
-
-⚡ Why it matters: SMART approving lease deal with gymnastics academy at Society Drive]]></description>
+SMART's board meets to approve a lease with Telluride Gymnastics Academy at 137 Society Drive, plus the usual gondola update and quarterly reports.]]></description>
       <category>Meeting</category>
       <category>SMART Transit</category>
     </item>
@@ -61,19 +51,6 @@ The June 11, 2026 SMART agenda hasn't been posted yet.]]></description>
 
 The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call …]]></description>
       <media:content url="https://www.telluride.com/site/assets/files/60815/download_1.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Thu, Jun 11] Games on the Green</title>
-      <link>https://www.telluride.com/event/games-on-the-green/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/games%20on%20the%20green%7C2026-06-11</guid>
-      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62453/mtv_summer_selects_lowres-62-2100x1401-5ba5db78-3cf7-49e2-a790-62927e14c194.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Head to The Madeline on Wednesdays and Thursdays this summer for Games on the Green! They will have classic lawn games …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/62453/mtv_summer_selects_lowres-62-2100x1401-5ba5db78-3cf7-49e2-a790-62927e14c194.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
     </item>
@@ -381,6 +358,19 @@ The Telluride Mountain Village Owners Association (TMVOA) and Beyond the Groove 
 
 The Telluride Farmers' Market provides the highest quality produce, animal products, prepared food and more to …]]></description>
       <media:content url="https://www.telluride.com/site/assets/files/44554/img_0071.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 12] Telluride Food + Vine</title>
+      <link>https://www.telluride.com/event/telluride-food-vine/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20food%20vine%7C2026-06-12</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/46462/dsc09460-2000x1333-68a9e203-a80e-4c8c-9152-5d77c08fcc52.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Telluride Food + Vine is the area's premier food and wine weekend, providing the ultimate epicurean experience in …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/46462/dsc09460-2000x1333-68a9e203-a80e-4c8c-9152-5d77c08fcc52.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
     </item>
