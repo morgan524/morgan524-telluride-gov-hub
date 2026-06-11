@@ -303,11 +303,69 @@ function md5(string) {
   return (WordToHex(a) + WordToHex(b) + WordToHex(c) + WordToHex(d)).toLowerCase();
 }
 
+// POST /summarize-flyer { imageUrl } → { ok, summary }. Reads the flyer image
+// with Claude (vision) and returns a short factual event summary for the
+// admin event-review page. Needs the ANTHROPIC_API_KEY Worker secret.
+async function handleSummarizeFlyer(request, env) {
+  const cors = profileCorsHeaders(request.headers.get("Origin") || "");
+  const json = (obj, status) => new Response(JSON.stringify(obj), { status: status || 200, headers: cors });
+  if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
+  if (request.method !== "POST") return json({ ok: false, msg: "POST only" }, 405);
+  if (!env.ANTHROPIC_API_KEY) return json({ ok: false, msg: "Flyer summaries aren't configured yet (missing ANTHROPIC_API_KEY)." }, 500);
+
+  let data;
+  try { data = await request.json(); } catch { return json({ ok: false, msg: "Bad request." }, 400); }
+  const imageUrl = String(data.imageUrl || "").trim();
+  if (!/^https:\/\//i.test(imageUrl)) return json({ ok: false, msg: "A flyer image URL is required." }, 400);
+
+  const prompt = "This is a flyer for a community event in the Telluride, Colorado region. "
+    + "Read the text in the image and write a concise, factual 2-3 sentence summary for a community events calendar. "
+    + "State what the event is, plus the date, time, and location if they appear on the flyer. "
+    + "Do NOT invent or infer any detail that is not visibly on the flyer. "
+    + "Write plain prose only - no preamble, no markdown, and do not start with phrases like 'This flyer' or 'The event'.";
+
+  let resp;
+  try {
+    resp = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": env.ANTHROPIC_API_KEY,
+        "anthropic-version": "2023-06-01",
+      },
+      body: JSON.stringify({
+        model: "claude-opus-4-8",
+        max_tokens: 400,
+        messages: [{
+          role: "user",
+          content: [
+            { type: "image", source: { type: "url", url: imageUrl } },
+            { type: "text", text: prompt },
+          ],
+        }],
+      }),
+    });
+  } catch (e) {
+    return json({ ok: false, msg: "Couldn't reach the summarizer - please try again." }, 502);
+  }
+  if (!resp.ok) {
+    const detail = await resp.text().catch(() => "");
+    return json({ ok: false, msg: "Summary failed (" + resp.status + ").", detail: detail.slice(0, 200) }, 502);
+  }
+  const out = await resp.json().catch(() => ({}));
+  const summary = (out.content || []).filter(b => b && b.type === "text").map(b => b.text).join("").trim();
+  if (!summary) return json({ ok: false, msg: "No summary was returned." }, 502);
+  return json({ ok: true, summary });
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     if (url.pathname === "/update-profile") {
       return handleUpdateProfile(request, env);
+    }
+    if (url.pathname === "/summarize-flyer") {
+      return handleSummarizeFlyer(request, env);
     }
     if (request.method !== "GET" && request.method !== "HEAD") {
       return new Response("Method Not Allowed", { status: 405 });

@@ -43,6 +43,11 @@
     .flyer-thumb { max-width: 100%; max-height: 240px; border-radius: 10px; border: 1px solid var(--border-soft); display: block; margin: 0 0 10px; object-fit: contain; background: #f3efe6; }
     .flyer-file { font-size: 0.86rem; color: var(--text-secondary); }
     .flyer-msg { font-size: 0.82rem; margin-top: 6px; min-height: 1em; }
+    .gen-summary-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+    .gen-summary-btn { background: var(--bg-hero); color: var(--forest); border: 1px solid var(--border-soft); border-radius: 9px; padding: 8px 14px; font-size: 0.86rem; font-weight: 700; cursor: pointer; }
+    .gen-summary-btn:hover { background: #e6dfce; }
+    .gen-summary-btn:disabled { opacity: 0.55; cursor: default; }
+    .gen-summary-msg { font-size: 0.82rem; color: var(--text-secondary); }
     @media (max-width: 520px) { .edit-grid { grid-template-columns: 1fr; } }
     .actions { margin-top: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 16px; border-radius: 11px; font-weight: 800; font-size: 0.98rem; border: none; cursor: pointer; }
@@ -124,7 +129,11 @@
       h += '<label class="edit-label">Location</label>'
          + '<input class="edit-input" data-field="location" value="' + esc(d.location || '') + '">';
       h += '<label class="edit-label">Description / summary</label>'
-         + '<textarea class="edit-textarea" data-field="description" rows="6">' + esc(d.description || '') + '</textarea>';
+         + '<textarea class="edit-textarea" data-field="description" rows="6">' + esc(d.description || '') + '</textarea>'
+         + '<div class="gen-summary-row">'
+         + '<button type="button" class="gen-summary-btn">✨ Generate summary from flyer</button>'
+         + '<span class="gen-summary-msg"></span>'
+         + '</div>';
       h += '<label class="edit-label">Link (optional)</label>'
          + '<input class="edit-input" data-field="url" value="' + esc(d.url || '') + '" placeholder="https://…">';
       // Flyer image — shows the current flyer (if any) and lets you upload or
@@ -205,6 +214,35 @@
       });
     }
 
+    // Have Claude read the flyer image and write a summary into the Description
+    // box. Calls the Cloudflare Worker (key stays server-side). Needs a flyer
+    // image uploaded/attached first.
+    const SUMMARIZE_URL = 'https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/summarize-flyer';
+    function generateSummary(btn) {
+      const card = btn.closest('.card');
+      const imgUrl = (card.querySelector('[data-field="imageUrl"]').value || '').trim();
+      const ta = card.querySelector('[data-field="description"]');
+      const msg = card.querySelector('.gen-summary-msg');
+      if (!imgUrl) { msg.style.color = '#a33'; msg.textContent = 'Add a flyer image first, then generate.'; return; }
+      msg.style.color = 'var(--text-secondary)'; msg.textContent = 'Reading the flyer…';
+      btn.disabled = true;
+      fetch(SUMMARIZE_URL, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ imageUrl: imgUrl })
+      }).then(r => r.json()).then(d => {
+        btn.disabled = false;
+        if (d && d.ok && d.summary) {
+          ta.value = d.summary;
+          msg.style.color = 'var(--forest)'; msg.textContent = '✓ Generated — review/edit, then Approve.';
+        } else {
+          msg.style.color = '#a33'; msg.textContent = (d && d.msg) || 'Could not generate a summary.';
+        }
+      }).catch(err => {
+        btn.disabled = false;
+        msg.style.color = '#a33'; msg.textContent = 'Error: ' + (err.message || err);
+      });
+    }
+
     function loadQueue() {
       root.innerHTML = '<div class="panel">Loading submissions…</div>';
       db.collection('event_submissions').where('status', '==', 'pending').get()
@@ -231,6 +269,9 @@
           });
           root.querySelectorAll('.flyer-file').forEach(inp => {
             inp.addEventListener('change', () => handleFlyerUpload(inp));
+          });
+          root.querySelectorAll('.gen-summary-btn').forEach(btn => {
+            btn.addEventListener('click', () => generateSummary(btn));
           });
         })
         .catch(err => {
