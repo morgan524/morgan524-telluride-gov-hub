@@ -1841,6 +1841,25 @@ const LOCAL_ORGS = [
       logo: "https://livabletelluride.org/logo/Telluride%20Nordic.png"
     },
     {
+      name: "Telluride Chamber Music",
+      category: "nonprofits",
+      town: "Telluride",
+      summary: "Chamber music in the Box Canyon since 1973 — bringing world-class musicians to the Telluride region for concerts, workshops, kids' programs, and community performances.",
+      website: "https://telluridechambermusic.org/",
+      donate: "https://app.arts-people.com/index.php?donation=tcm",
+      social: { facebook: "https://www.facebook.com/people/Telluride-Chamber-Music/61577075232852/", instagram: "https://www.instagram.com/telluridechambermusic" },
+      logo: "https://livabletelluride.org/logo/Telluride%20Chamber.png"
+    },
+    {
+      name: "Telluride Choral Society",
+      category: "nonprofits",
+      town: "Telluride",
+      summary: "A community choral society presenting seasonal concerts of classical and contemporary choral music in the Telluride region.",
+      website: "https://www.telluridechoralsociety.org/",
+      donate: "https://www.telluridechoralsociety.org/donate/",
+      logo: "https://livabletelluride.org/logo/Telluride%20Choral.png"
+    },
+    {
       name: "Telluride Theatre",
       category: "nonprofits",
       town: "Telluride",
