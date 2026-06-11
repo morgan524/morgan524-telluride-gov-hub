@@ -1355,6 +1355,51 @@
 
     function todayMT() { return new Date().toLocaleDateString('en-CA', { timeZone: 'America/Denver' }); }
 
+    // ── Location awareness for the featured pick ──
+    // Approximate [lat, lng] for each filter town. Used to rank "closest to
+    // the selected location" when a specific town filter is active.
+    const TOWN_COORDS = {
+      'telluride':      [37.9375, -107.8123],
+      'mv':             [37.9356, -107.8559],
+      'ophir':          [37.8551, -107.8312],
+      'placerville':    [38.0169, -108.0509],
+      'norwood':        [38.1300, -108.2920],
+      'ridgway':        [38.1530, -107.7540],
+      'ouray':          [38.0228, -107.6712],
+      'nucla-naturita': [38.2400, -108.5560]
+    };
+    // Extra place names that aren't filter towns but show up in event
+    // locations, so the featured pick can tell e.g. a Rico event is far from
+    // Telluride instead of inheriting the Telluride bucket's coordinates.
+    const PLACE_COORDS = [
+      ['mountain village', [37.9356, -107.8559]], ['mtn village', [37.9356, -107.8559]],
+      ['rico',          [37.6925, -108.0306]],
+      ['sawpit',        [37.9897, -107.9520]],
+      ['lawson hill',   [37.9300, -107.8600]],
+      ['ophir',         [37.8551, -107.8312]],
+      ['placerville',   [38.0169, -108.0509]],
+      ['norwood',       [38.1300, -108.2920]],
+      ['ridgway',       [38.1530, -107.7540]], ['ridgeway', [38.1530, -107.7540]],
+      ['ouray',         [38.0228, -107.6712]],
+      ['naturita',      [38.2200, -108.5660]], ['nucla', [38.2697, -108.5462]],
+      ['montrose',      [38.4783, -107.8762]],
+      ['telluride',     [37.9375, -107.8123]]
+    ];
+    // Best-guess coordinate for an event: scan its location then title for a
+    // known place; fall back to its assigned town bucket; else Telluride.
+    function eventCoord(e) {
+      const hay = ((e.location || '') + ' ' + (e.title || '')).toLowerCase();
+      for (const [name, c] of PLACE_COORDS) { if (hay.includes(name)) return c; }
+      return TOWN_COORDS[e.town] || TOWN_COORDS['telluride'];
+    }
+    // Squared distance between two [lat, lng] points (good enough for ranking
+    // within this small region; lng scaled for the ~38° latitude).
+    function geoDist(a, b) {
+      if (!a || !b) return Infinity;
+      const dLat = a[0] - b[0], dLng = (a[1] - b[1]) * 0.79;
+      return dLat * dLat + dLng * dLng;
+    }
+
     // Pull a start hour (0-23) from free text like "5:00 – 7:00 PM".
     function featuredStartHour(t) {
       if (!t) return null;
@@ -1387,7 +1432,12 @@
       return s;
     }
 
-    function pickFeatured(events) {
+    // town: the active location filter ('all' or a TOWN key). In the default
+    // 'all' view we feature the day's top event by score. When a specific
+    // location is selected, we instead feature the event located CLOSEST to
+    // that location (an event IN that town wins; otherwise the nearest one),
+    // breaking ties by the same popularity score.
+    function pickFeatured(events, town) {
       const today = todayMT();
       const happeningToday = (e) => {
         if (e.date === today) return true;
@@ -1395,16 +1445,27 @@
         return false;
       };
       const todays = events.filter(happeningToday);
-      const pin = FEATURED_PINS[today];
-      if (pin) { const p = todays.find(e => pin.test(e.title || '')) || events.find(e => pin.test(e.title || '')); if (p) return p; }
+      const byScore = (a, b) => (featuredScore(b) - featuredScore(a)) || ((featuredStartHour(a.time) || 99) - (featuredStartHour(b.time) || 99));
+      // Hand pins are a date-level override and only apply to the default view.
+      if (!town || town === 'all') {
+        const pin = FEATURED_PINS[today];
+        if (pin) { const p = todays.find(e => pin.test(e.title || '')) || events.find(e => pin.test(e.title || '')); if (p) return p; }
+        if (!todays.length) return null;
+        return todays.slice().sort(byScore)[0];
+      }
       if (!todays.length) return null;
-      return todays.slice().sort((a, b) => (featuredScore(b) - featuredScore(a)) || ((featuredStartHour(a.time) || 99) - (featuredStartHour(b.time) || 99)))[0];
+      const target = TOWN_COORDS[town];
+      return todays.slice().sort((a, b) => {
+        const da = geoDist(eventCoord(a), target), db = geoDist(eventCoord(b), target);
+        if (Math.abs(da - db) > 1e-6) return da - db;   // closest to the filter wins
+        return byScore(a, b);                            // tie → popularity
+      })[0];
     }
 
-    function renderFeatured(events) {
+    function renderFeatured(events, town) {
       const host = document.getElementById('featuredEvent');
       if (!host) return;
-      const e = pickFeatured(events);
+      const e = pickFeatured(events, town);
       if (!e) { host.style.display = 'none'; host.innerHTML = ''; return; }
       const h = featuredStartHour(e.time);
       const label = (h != null && h >= 16) ? 'Featured Tonight' : 'Featured Today';
@@ -1431,7 +1492,7 @@
     }
 
     function render() {
-      renderFeatured(EVENTS);
+      renderFeatured(EVENTS, activeTown);
       document.getElementById('sidebarFilter').innerHTML = filterHtml();
       const filtered = activeTown === 'all'
         ? EVENTS
