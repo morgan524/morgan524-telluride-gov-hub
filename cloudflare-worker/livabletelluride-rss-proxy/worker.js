@@ -211,9 +211,13 @@ async function verifyFirebaseEmail(idToken) {
 // API keys member.interests by a DIFFERENT alphanumeric interest ID. Resolve
 // the real IDs by interest NAME ("Weekly Update" / "Newsletter") so both read
 // and write are correct regardless of the numeric web IDs. Cached per isolate.
-let _interestCache = null;
+// Resolves all known subscription groups -> real Mailchimp interest IDs by
+// matching interest NAMES (so the 4 pilot "Event Topics" light up automatically
+// once you create them in Mailchimp). Cached ~5 min so newly-created groups are
+// picked up without a redeploy. Keys whose group doesn't exist yet are null.
+let _interestCache = null, _interestTs = 0;
 async function resolveInterests(env) {
-  if (_interestCache) return _interestCache;
+  if (_interestCache && (Date.now() - _interestTs < 300000)) return _interestCache;
   const dc = env.MAILCHIMP_API_KEY.split("-")[1] || "us15";
   const auth = "Basic " + btoa("anystring:" + env.MAILCHIMP_API_KEY);
   const base = "https://" + dc + ".api.mailchimp.com/3.0/lists/" + MC_LIST_ID;
@@ -227,9 +231,30 @@ async function resolveInterests(env) {
       for (const it of (ij.interests || [])) map[String(it.name || "").trim().toLowerCase()] = it.id;
     }
   } catch (_) {}
-  const result = { weekly: map["weekly update"] || null, newsletter: map["newsletter"] || null };
-  if (result.weekly || result.newsletter) _interestCache = result; // cache only a good result
+  const find = (re) => { for (const n of Object.keys(map)) if (re.test(n)) return map[n]; return null; };
+  const result = {
+    weekly:     find(/weekly/),
+    newsletter: find(/newsletter/),
+    arts:       find(/\barts\b|music|festival/),
+    civic:      find(/government|civic|\bmeetings?\b/),
+    family:     find(/family|kids/),
+    outdoors:   find(/outdoor|recreation/),
+  };
+  if (result.weekly || result.newsletter) { _interestCache = result; _interestTs = Date.now(); } // cache only a good fetch
   return result;
+}
+
+// POST /interests — public, non-PII: which subscription groups currently exist
+// on the list (booleans only), so the profile page shows only real options.
+async function handleInterests(request, env) {
+  const cors = profileCorsHeaders(request.headers.get("Origin") || "");
+  const json = (obj, status) => new Response(JSON.stringify(obj), { status: status || 200, headers: cors });
+  if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
+  if (!env.MAILCHIMP_API_KEY) return json({ ok: false, available: {} });
+  const ids = await resolveInterests(env);
+  const available = {};
+  for (const k of Object.keys(ids)) available[k] = !!ids[k];
+  return json({ ok: true, available });
 }
 
 // POST /profile-read { idToken } — returns the signed-in user's own Mailchimp
@@ -300,8 +325,9 @@ async function handleUpdateProfile(request, env) {
   // (the form's 24641/24642 are web IDs that the API ignores).
   if (data.subs && typeof data.subs === "object") {
     const ids = await resolveInterests(env);
-    if (ids.weekly     && typeof data.subs.weekly     === "boolean") interests[ids.weekly]     = data.subs.weekly;
-    if (ids.newsletter && typeof data.subs.newsletter === "boolean") interests[ids.newsletter] = data.subs.newsletter;
+    for (const [k, v] of Object.entries(data.subs)) {
+      if (ids[k] && typeof v === "boolean") interests[ids[k]] = v;
+    }
   }
   const body = {};
   if (Object.keys(merge_fields).length) body.merge_fields = merge_fields;
@@ -459,6 +485,9 @@ export default {
     }
     if (url.pathname === "/profile-read") {
       return handleProfileRead(request, env);
+    }
+    if (url.pathname === "/interests") {
+      return handleInterests(request, env);
     }
     if (url.pathname === "/summarize-flyer") {
       return handleSummarizeFlyer(request, env);
