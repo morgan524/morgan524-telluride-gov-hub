@@ -187,16 +187,16 @@ const MANUAL_SUMMARIES = {
     "The July 1 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The Jul 01 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The July 1st Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
-    "The July 1st Board of County Commissioners agenda hasn't been posted yet.",
+    "The July 1 Board of County Commissioners agenda hasn't been posted yet.",
 
   "county|2026-06-10|Board of Review and Planning Commission Joint Work Session":
     "The county's Board of Review and Planning Commission will hear a presentation on Colorado's new Low Energy and Carbon Code — building standards that could reshape how structures get approved in the box canyon.",
@@ -270,6 +270,42 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Sunset’s silver jubilee back where it belongs",
+    source: "Telluride Times",
+    date: "June 11, 2026",
+    firstSeen: "2026-06-11",
+    newsTopic: "arts-culture",
+    copy: "The Sunset Concert Series returns to its longtime home at Sunset Plaza for its 25th anniversary season after a location dispute last summer between Telluride Ski & Golf and the Mountain Village Owners Association was resolved. Nine free Wednesday evening concerts run from June 24 through August 19, featuring an eclectic lineup from New Orleans funk to West African jazz to reggae.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_981334cd-cc1a-4d91-9c0b-8a260d824521.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/81/581b8b89-0d7d-4bae-a88d-7610ed764824/6a293887b6430.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Legals and Public Notices for June 11-17, 2026",
+    source: "Telluride Times",
+    date: "June 11, 2026",
+    firstSeen: "2026-06-11",
+    newsTopic: "community",
+    copy: "A San Miguel County property at 1730 Grand Avenue in Norwood is heading to foreclosure auction on July 30th at the Telluride courthouse. The foreclosure stems from the death of the property owners who had a $249,750 loan from 2009 that now has an outstanding balance of over $309,000.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/legals/article_6de56aef-d7ac-4c1e-bb5f-1bc3f669e424.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Judge considers arguments in challenge to New Mexico's universal childcare program",
+    source: "Telluride Times",
+    date: "June 11, 2026",
+    firstSeen: "2026-06-11",
+    newsTopic: "community",
+    copy: "A New Mexico judge is weighing whether to let a lawsuit proceed that challenges the state's universal childcare program, which covers daycare costs for all working families regardless of income. The program launched in November and has already seen enrollment and costs exceed projections, raising sustainability questions even as it's funded by oil and gas revenues. Other states are watching closely as New Mexico becomes the first to offer this level of childcare coverage.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_9ae95e10-abf4-5301-aec8-333fe72aeafb.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/1f/a1f4ddb0-8770-512e-b915-5a58f38d3a2c/6a2a37903fbc4.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Fee failed to maintain line between personal, governmental roles",
     source: "Telluride Times",
@@ -2675,54 +2711,87 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Baby Bop",
-    link: "https://telluridelibrary.libcal.com/event/16610071?hs=a",
-    description: "9:00 AM – 10:00 AM · Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, dise&ntilde;ada para que cuidadores y peque&ntilde;os se muevan juntos mediante rutinas f&aacute;ciles de seguir. Te espera m&uacute;sica alegre, coreograf&iacute;as sencillas y un ambiente de apoyo centrado en el v&iacute;nculo, el movimiento y la alegr&iacute;a; &iexcl;no se requiere experiencia previa en baile!",
-    pubDate: "2026-06-10T15:00:00.000Z",
+    title: "Birding Walk with Katie Triest",
+    link: "https://telluridelibrary.libcal.com/event/16850935?hs=a",
+    description: "8:00 AM – 10:00 AM · Join ornithological expert Katie Triest for this series of chill walks where you&#39;ll learn amazing facts and practice identifying local birds!  Meet at the gondola plaza and we will head down the river trail. Bring your own binoculars if you have them and make sure to dress for variant weather. Be on time, and PLEASE cancel your reservation if you are unable to make it. This event is very popular and the waiting list is long.",
+    pubDate: "2026-06-11T14:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Gondola Plaza - Telluride",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_06_11_55_44.jpg"
+  },
+  {
+    title: "Yin Yang Yoga with Miriah",
+    link: "https://telluridelibrary.libcal.com/event/16801135?hs=a",
+    description: "9:00 AM – 10:00 AM · Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses.  We&#39;ll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.  Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.",
+    pubDate: "2026-06-11T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg"
+  },
+  {
+    title: "Community Support/ Apoyo Comunitario",
+    link: "https://telluridelibrary.libcal.com/event/16855147?hs=a",
+    description: "9:00 AM – 12:00 PM · Do you need help applying for public assistance programs? Ruth from Tri-County Health Network will provide guidance with filling out applications for SNAP, the Good Neighbor Fund, the Behavioral Health Fund, Medicaid, and can provide support in guiding you towards other helpful community resources. This will be held in Meeting Room #5 on the 2nd Thursday of the month from 9am-12pm . Advance registration is encouraged. &iquest;Necesita ayuda para solicitar programas de asistencia p&uacute;blica? Ruth, de Tri-County Health Network , brindar&aacute; orientaci&oacute;n para completar solicitudes de SNAP, el Fondo Good Neighbor, el Fondo de Salud Mental, Medicaid, y tambi&eacute;n puede apoyarle para conectarse con otros recursos comunitarios. Se llevar&aacute; a cabo en la Sala de reuniones #5 el segundo jueves de cada mes, de 9 a.m. a 12 p.m. Se recomienda registrarse con anticipaci&oacute;n. …",
+    pubDate: "2026-06-11T15:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1771543641.jpg"
   },
   {
     title: "DMV2GO",
-    link: "https://telluridelibrary.libcal.com/event/15934443?hs=a",
+    link: "https://telluridelibrary.libcal.com/event/15934444?hs=a",
     description: "9:00 AM – 5:00 PM · Walk-ins are welcome, but if you&#39;d like to make an appointment, click here . RENEW - An existing Colorado Driver License, ID or Permit REPLACE - A lost or stolen Colorado Driver License, ID or Permit FIRST TIME - Colorado Driver License, ID or Permit* OUT OF STATE TRANSFER - Trade in your existing Driver License, ID or Permit for a Colorado one! * *Please visit DMV.COLORADO.GOV for more information and a list of required documents Bienvenidos sin cita, pero si quieres hacer una cita haga clic aqu&iacute;. RENOVAR - Una Licencia, ID o Permiso Actual de Colorado REEMPLAZAR - Una Licencia, ID o Permiso de Colorado perdida, robada o da&ntilde;ada PRIMERA VEZ - Tramitar Licencia, ID o Permiso de Colorado TRANSFERIR CREDENCIAL DE OTRO ESTADO - Cambie su Licencia, ID o Permiso existente por una de Colorado! …",
-    pubDate: "2026-06-10T15:00:00.000Z",
+    pubDate: "2026-06-11T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_05_14_17_20.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_05_14_19_21.jpg"
   },
   {
-    title: "Mountain Village Farmers Marketshow: Native American Hoopdancer ShanDien",
-    link: "https://telluridelibrary.libcal.com/event/15564452?hs=a",
-    description: "11:00 AM – 12:00 PM · ShanDien Sonwai LaRance is a champion hoop dancer and instructor. Growing up immersed in Native American arts and traditions, she shares her culture around the world, acting as an unofficial ambassador for Native American and First Nations peoples.",
-    pubDate: "2026-06-10T17:00:00.000Z",
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/16772757?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-06-11T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Mountain Village Market",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_26_20.png"
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
   },
   {
-    title: "Radio Biblioteca",
-    link: "https://telluridelibrary.libcal.com/event/16958280?hs=a",
-    description: "12:00 PM – 1:00 PM · Escucha a KOTO Miercoles por Medio y conoce las noticias y eventos que tendremos en nuestra comunidad &bull; Tune in to Koto 91.7 FM every other Wednesday and learn about the news and events we will have in our community",
-    pubDate: "2026-06-10T18:00:00.000Z",
+    title: "Learn to Play Pickleball with your family • Aprende a jugar al pickleball con tu familia!",
+    link: "https://telluridelibrary.libcal.com/event/16959456?hs=a",
+    description: "11:30 AM – 1:00 PM · Our favorite summer series is back, and this time with a twist! Kristen Milord will be teaching families how to play pickleball at the town courts (thank you, Parks and Recreation). We will offer one class each month for instruction and practice. Space is limited. Please sign up each family member separately and in advance.  Join us for some fun and fitness this summer!  &bull;  &iexcl;Nuestra serie de verano favorita est&aacute; de regreso, y esta vez con una novedad! Kristen Milord ense&ntilde;ar&aacute; a las familias a jugar pickleball en las canchas municipales (gracias al Departamento de Parques y Recreaci&oacute;n). Ofreceremos una clase cada mes para instrucci&oacute;n y pr&aacute;ctica. El cupo es limitado. Por favor, inscr&iacute;base con antelaci&oacute;n. &iexcl;Acomp&aacute;&ntilde;enos para disfrutar de diversi&oacute;n y actividad f&iacute;sica este verano!",
+    pubDate: "2026-06-11T17:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "KOTO Radio Station",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_10_36_58.png"
+    location: "Telluride Town Park",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_11_39_14.png"
+  },
+  {
+    title: "Pilates for All Bodies",
+    link: "https://telluridelibrary.libcal.com/event/16536275?hs=a",
+    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-06-11T18:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
   },
   {
     title: "Gardening Camp / Campamento de Jardinería",
-    link: "https://telluridelibrary.libcal.com/event/16900650?hs=a",
+    link: "https://telluridelibrary.libcal.com/event/16900651?hs=a",
     description: "12:30 PM – 3:30 PM · Join us for four fun-filled afternoons of hands-on gardening and learning. Projects and activities will include: planting a garden, garden decor crafts, earthworm play, storytimes, fairy and gnome play, and more! Who: Open to children ages 6-12 who can participate independently (without a parent or caregiver present). Registration : Space is limited- please only register if your child can attend all four days. Final Day: Celebrate with a public \"ribbon cutting\" garden reveal during the last hour of camp- friends and family welcome! What to Bring: A full belly Water bottle Sunhat & sunscreen Extra snacks Some snacks will be provided. All other items are the caregiver&#39;s responsibility. We can&#39;t wait to get garden with you! ------------------------------------------------------------------------------- &iexcl;&Uacute;nanse a nosotros para cuarto tardes llenas de diversion con jardiner&iacute;a y aprendizaje! …",
-    pubDate: "2026-06-10T18:30:00.000Z",
+    pubDate: "2026-06-11T18:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
@@ -2730,59 +2799,48 @@ const WILKINSON_EVENTS = [
     imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_14_52_16.png"
   },
   {
-    title: "Mahjongg for Independent Players",
-    link: "https://telluridelibrary.libcal.com/event/16767652?hs=a",
-    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-06-10T19:00:00.000Z",
+    title: "Littles On the Move",
+    link: "https://telluridelibrary.libcal.com/event/13960347?hs=a",
+    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
+    pubDate: "2026-06-11T21:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
   },
   {
-    title: "Teen Movie and Ice Cream Club",
-    link: "https://telluridelibrary.libcal.com/event/16935730?hs=a",
-    description: "4:00 PM – 6:00 PM · Join us every Wednesday this summer for Teen Movie and Ice Cream Club. We will watch a movie on the teen TV with free ice cream available!",
-    pubDate: "2026-06-10T22:00:00.000Z",
+    title: "Online Author Talk with Matt Dinniman",
+    link: "https://telluridelibrary.libcal.com/event/16953271?hs=a",
+    description: "5:00 PM – 6:00 PM · Hold onto your heart-patterned boxers! Matt Dinniman , New York Times bestselling author of the wildly popular (and just plain wild) Dungeon Crawler Carl series, joins us to chat about his latest book, A Parade of Horribles . As chaos and mass panic spread outside the dungeon in the wake of Faction Wars, Carl and Donut find themselves on the tenth floor, where they're forced to compete in a surprisingly normal set of tasks. Well, normal for the dungeon. Races. Get from point A to point B, and don't come in last. After each race, they pick an upgrade for their vehicle and the track gets more challenging. It all seems a little too normal, a little too simple. Ignore those strange glitches that are occurring with increasing frequency. …",
+    pubDate: "2026-06-11T23:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_12_40_26.jpg"
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_17_01_30.jpg"
   },
   {
-    title: "Sewing 101 with Melissa",
-    link: "https://telluridelibrary.libcal.com/event/15970618?hs=a",
-    description: "5:00 PM – 7:00 PM · Don&#39;t throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we&#39;ll provide the sewing materials.",
-    pubDate: "2026-06-10T23:00:00.000Z",
+    title: "Booze and Books",
+    link: "https://telluridelibrary.libcal.com/event/16915185?hs=a",
+    description: "5:15 PM – 6:30 PM · Sip on a libation while chatting with other bibliophiles about books you have read recently. It&#39;s totally open ended and open to everyone! 5:15 the second Thursday of every month. The library will get some apps for the table; you purchase your own beverage.   Please sign up in advance . Meet at  Liz  at 200 W. Colorado Ave. in Telluride. (Entrance is on Fir St.)",
+    pubDate: "2026-06-11T23:15:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Meeting Room #6 - large",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1717100108.jpg"
+    location: "Liz",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_15_54_25.jpg"
   },
   {
-    title: "Cafecito con un Policía",
-    link: "https://telluridelibrary.libcal.com/event/15905932?hs=a",
-    description: "5:30 PM – 6:30 PM · Cafecito con un polic&iacute;a es un programa que pasa cada mes, tienes la oportunidad de tener conversacionales con nuestros polic&iacute;as en la area.",
-    pubDate: "2026-06-10T23:30:00.000Z",
+    title: "The Book Club That is Not a Book Club: Yesteryear",
+    link: "https://telluridelibrary.libcal.com/event/16361731?hs=a",
+    description: "6:30 PM – 7:30 PM · Join us for this fun, one-time only Book Club that is not a Book Club for a discussion about the book that literally EVERYONE is talking about: Yesteryear by Caro Claire Burke. Sign up in advance. 21+ only.",
+    pubDate: "2026-06-12T00:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1766083827.jpg"
-  },
-  {
-    title: "Sound Bath with Danielle Christmas & Ian Wilson",
-    link: "https://telluridelibrary.libcal.com/event/16802610?hs=a",
-    description: "5:30 PM – 7:00 PM · Join us for an hour of traveling through sound and the inner self! In this once a month community event, we are healing the body and auric field with a multitude of sound frequencies. Chimes, 432hz quartz singing bowls, crystal tuning pyramids, rain drums, GALORE! We will also be holding space for group conversation, weaving through topics of spirituality. Bring a blanket, yoga mat, water bottle, journal, and your psycho-spiritual discussion hat! After each sound bath, we will be sticking around for group discussion for a duration of 30 - 40 minutes. Each month will have a different psycho-spiritual topic, and will offer tools to integrate these themes into our daily lives. Join us for this beautiful summer offering! …",
-    pubDate: "2026-06-10T23:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_09_11_28_23.jpg"
+    location: "The Buck",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_13_38_46.jpg"
   }
 ];
 
@@ -3250,105 +3308,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "Nature Journaling in the Field with Mary Menz and Sandy Dick",
-    link: "https://weehawkenarts.org/education/adult-art-classes/",
-    description: "Nature Journaling in the Field June 10 Wednesday 8:00am to Noon $49-$69 Registration: www.weehawkenarts.org Join Colorado Native Plant Masters Mary Menz and Sandra Dick as they explore Ouray County wildflowers and natural settings. In this session, you’ll sit in quiet spots and draw what you see to help you hone ID skills. We’ll talk about interesting characteristics of plants and their historical uses. Participants will receive small sketchbooks and will work in pencil, but are welcome to bring their own supplies such as colored pencils, watercolors, etc. Registration includes a copy of their book Common Wildflowers of the San Juan Mountains ($49) or Wildflowers of Colorado’s Western Slope ($69). All groups are limited to 12 participants. Participants will meet and carpooling is recommended (we help facilitate this effort at the meet up location)—specific directions and more information will be provided via email prior to the event. …",
-    pubDate: "2026-06-10T14:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52648536856781/huge/9a9c3474332959978afbd4a529a9a2418e1b0636.jpg"
-  },
-  {
-    title: "Wright Opera House Guided Tour",
-    link: "wrightoperahouse.org",
-    description: "We're a nonprofit dedicated to bringing world-class performances to Ouray. All guided tours help support our diverse programming! Step behind the scenes of Ouray’s historic gem! Our guided tours offer a unique glimpse into the history, architecture, and stories that make The Wright Opera House truly one-of-a-kind. Tour Days: Tuesday's at 2:00 PM and Wednesday's at 10:00 AMWeekend Tours: Available by request and scheduled around our regular programming. As an active opera house, weekend tours are not offered through our ticketing platform.Tour Fee: $20 per personMinimum Guests: 4 people per tourAccessibility: Fully ADA accessible with elevatorKid-Friendly: Absolutely! A perfect family outingPhoto-Friendly: Yes! Capture this historic beauty (no video during tours, please)Tour Duration: ~1.5 hoursGroups of 25 or more, or for weekend requests: Please contact us directly for pricing and scheduling. …",
-    pubDate: "2026-06-10T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52569865342720/huge/3b2908ddb2fc3d1f0e870007c7b65025c358699f.jpg"
-  },
-  {
-    title: "Splash Into STEAM",
-    link: "https://events.ourayridgwayevents.com/event/splash-into-steam",
-    description: "Splash Into STEAM is a fun, hands‑on Girl Scout Buddies Drop‑In Event where girls and their friends explore science and engineering through water play! Build a floating boat, experiment with cleaning dirty water, and design a water run to see how water moves. Jump in anytime, try one station or all three, and make a splash while learning together! 💦🔬👧 This event is open to all girls and their friends. You don't have to be a Girl Scout.",
-    pubDate: "2026-06-10T18:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52744270535881/huge/2c61b5d27b015d45fb42faf91991d5314cc4e592.jpg"
-  },
-  {
-    title: "Live Music- Jack Haight Red Mountain Revival",
-    link: "https://www.stelmohotel.com/summer-sound/jackhaightrmr",
-    description: "Join us for our Grand Opening on June 10 with Jack Haight’s Red Mountain Revival! Kicking off a summer of live music, craft cocktails, mountain views, and unforgettable nights at the St. Elmo Tavern patio EVERY WEDNESDAY! Western Slope favorite Jack Haight is first up for our Patio Summer Sound Series on Wednesday, June 10th at 5pm. No ticket required for this show. From there, enjoy live music every Wednesday all summer long. Featuring a passionate local songwriter + full band, Jack Haight's Red Mountain Revival. Come kick back and enjoy the mountain air! No ticket required for this show.",
-    pubDate: "2026-06-10T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53119160417727/huge/6d53129b3cbeb0429fdeb70856d14c6c2b44ac35.jpg"
-  },
-  {
-    title: "Zumba Fitness with Tamra",
-    link: "https://zumba.com/p/zumbafitnesswithTamra",
-    description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com. For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra.",
-    pubDate: "2026-06-10T23:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52277881680293/huge/2b6c13a5ecf839308a6e07162c2bf31ca79210c3.jpg"
-  },
-  {
-    title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
-    link: "www.FloatingLotusBrewery.com",
-    description: "Join us at the Lotus for a midweek tradition that brings together musicians, music lovers, and the incredible local talent that makes our community shine. From intimate solo sets to full-band jam sessions with rotating players, Open Mic Night is always full of surprises. Want to play? We’d love to have you — signups begin at 5:30pm. Just bring your instrument and your creativity, and we’ll take care of the rest. Our stage is fully equipped with PA, mics, drums, bass, and everything you need to plug in and play. 🎟️ Free admission 🍻 Grab a beer, settle in, and enjoy the show Come be part of the music — on stage or in the crowd!",
-    pubDate: "2026-06-11T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/ed08b494666358349bc84e969db6e8b262ef71aa.jpg"
-  },
-  {
-    title: "Summer Bingo - Wednesday Night at Ouray Elks Lodge",
-    link: "Www.ourayelks.org",
-    description: "OPEN TO THE PUBLIC Come see our beautiful historic lodge while joining us in playing bingo! Doors Open at 5:30 pm, Early Bird Bingo 6:00 and Regular Bingo starts at 7:00pm Concessions available to purchase",
-    pubDate: "2026-06-11T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52440353082990/huge/849a6c82c22aa4e9cf19e3fc7490b7c928059ded.jpg"
-  },
-  {
-    title: "Yoga in the Park- Wednesday evenings",
-    link: "www.beetrueyou.com",
-    description: "For noncyclists and cyclists alike. After an optional social bike ride at 5 pm, wind down for a yoga class in the park 6 - 7 pm. A moderate to advanced vinyasa style class targetting the areas of the body affected by time in the bike saddle and other areas of request. Bring your own mat. If you don't have one, please let me know earlier in the day so I can bring one for you. Meet at the Gazebo south of Chipeta Lodge. If the weather is too inclement, we can meet at the studio at 380 Sherman Street, Ridgway. While this is donation based, please pay before online or in person.",
-    pubDate: "2026-06-11T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Gazebo south of Chipeta Lodge, Ridgway, CO (Or studio if raining)",
-    imageUrl: "https://localist-images.azureedge.net/photos/52880886803755/huge/ba2d24fbf09ba1f9a707a06213d60685581d7322.jpg"
-  },
-  {
-    title: "It Was Just An Accident: Movie Night @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/it-was-just-an-accident-movie-night-the-wright",
-    description: "It Was Just An Accident: Movie Night @ the Wright WHEN? Wednesday, June 10 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 1h 52min RATING: PG-13 ROTTEN TOMATOES SCORE: 98%! ABOUT THE FILM It Was Just An Accident (2025) follows a seemingly ordinary event that spirals into a chain reaction of misunderstandings, consequences, and unexpected revelations. As tensions rise and lives intersect, the film explores how a single moment can reshape relationships and alter the course of multiple lives. Blending dark humor, emotional tension, and sharp social observation, the story gradually uncovers the complicated truths hidden beneath everyday appearances. A suspenseful and thought-provoking drama about chance, accountability, and the ripple effects of human decisions. Tickets $5 In-person screening at the historic Wright Opera House Concessions available. …",
-    pubDate: "2026-06-11T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52886546383646/huge/a127886b72fb3a600be995c26a811e7c6fba5849.jpg"
-  },
   {
     title: "Ouray Economic Development Committee",
     link: "https://events.ourayridgwayevents.com/event/ouray-economic-development-committee",
@@ -4283,6 +4242,127 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Tourism Advisory Committee",
+    link: "https://cityofouray.com/city_offices/committees___boards/tourism_advisory_committee.php",
+    description: "The Ouray Tourism Advisory Committee (TAC) represents a cross-section of the small businesses, nonprofits, and residents of Ouray. We educate ourselves about best practices in the tourism industry, tourism marketing, and the visitor experience. We gather input, plan, prioritize, measure, and advise the City of Ouray on the best actions to take related to the tourism industry in our community.",
+    pubDate: "2026-06-23T23:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52092171660517/huge/0e628304026c92db25e8df01849c962ac902a3b4.jpg"
+  },
+  {
+    title: "Community Meditation",
+    link: "www.ridgwayfuse.org",
+    description: "Join us for a peer-led weekly meditation series at the Decker Community Room. Free and open to the public! We meet every 1st, 2nd, and 4th Tuesday of the month (all but the 3rd Tuesday!)",
+    pubDate: "2026-06-24T00:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52338340283147/huge/582622671001d9ab20f8c25a5d229c9ecbbba165.jpg"
+  },
+  {
+    title: "Evenings of History 2026 @ the Wright",
+    link: "https://www.ouraycountyhistoricalsociety.org/about-4",
+    description: "Evenings of History 2026 @ the Wright WHEN? Weekly Tuesdays • 7:00 pm – 9:00 pm Doors at 6:30 pm • Presentations at 7:00 pm June 16 June 23 June 30 July 7 July 14 July 21 July 28 August 4 WHERE? Wright Opera House 472 Main St. Ouray, Colorado SERIES: Presented by the Ouray County Historical Society ABOUT THE SERIES Join the Ouray County Historical Society for another season of Evenings of History, a community lecture series exploring the people, places, and stories that shaped Ouray County and the greater San Juan region. From mining legends and frontier photography to fashion, recreation, and Ute history, this year’s lineup offers a fascinating look into the characters and events that helped define the American West. Through local historians, researchers, storytellers, and community experts, Evenings of History continues a longstanding tradition of preserving and sharing the rich heritage of Ouray County. …",
+    pubDate: "2026-06-24T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52887120617394/huge/59851e9ca29d75054645a0e488e33edbbcf73d69.jpg"
+  },
+  {
+    title: "The Courtyard at 610 Presents: Coral Skye",
+    link: "https://sherbino.org/event/coral-skye-courtyard-at-610-ridgway-june-23/",
+    description: "Gates open at 7pm (behind the 610 Gallery and Sherbino) || Show: 7:30 || $10 – Advance / $15 – Day of Show || General Admission Seating || Limited Bar The Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on Clinton St. The entrance is through the alleyway between N Cora St. and N Laura St behind the gallery and The Sherbino Theater. There’s something special about hearing a musician in the setting they were meant for — not over the noise of a crowded bar or restaurant, but up close, under the blue Ridgway sky, where every lyric and guitar line has room to breathe. Join us for an intimate evening with Coral Skye, a Montrose-based singer-songwriter whose soulful acoustic-pop style and warm stage presence have made her a favorite across the Western Slope. …",
+    pubDate: "2026-06-24T01:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53103963612010/huge/28a16641d26bb6b74c4ac5782d7ab3c20c18a8d9.jpg"
+  },
+  {
+    title: "Wildflower Walks & Talks with Mary Menz & Jaime Pisarowicz : “Early Season Wildflowers in Ouray County”",
+    link: "https://weehawkenarts.org/education/adult-art-classes/",
+    description: "Different elevations and habitats provide opportunities to view a wide variety of Colorado’s native plants and wildflowers. Ridgway writer and Colorado Native Plant Master Mary Menz and Jaime Pisarowicz will share their extensive plant knowledge and excitement for the area with you. Special guest and fellow NPM Sandra Dick will also join the group as a guide! Registration includes a copy of their book Common Wildflowers of the San Juan Mountains ($49) or Wildflowers of Colorado’s Western Slope ($69). All groups are limited to 12 participants. Participants will meet and carpooling is recommended (we help facilitate this effort at the meet up location)—specific directions and more information will be provided via email prior to the event. A waiver needs to be signed before the event. Please do so here Please check your email the evening before class for any unexpected cancellations or weather-related updates. …",
+    pubDate: "2026-06-24T14:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "location disclosed via email right before class",
+    imageUrl: "https://localist-images.azureedge.net/photos/53073652493992/huge/202160a6bd8ae2c028c7969e3e4ea812bda5bc4a.jpg"
+  },
+  {
+    title: "Wright Opera House Guided Tour",
+    link: "wrightoperahouse.org",
+    description: "We're a nonprofit dedicated to bringing world-class performances to Ouray. All guided tours help support our diverse programming! Step behind the scenes of Ouray’s historic gem! Our guided tours offer a unique glimpse into the history, architecture, and stories that make The Wright Opera House truly one-of-a-kind. Tour Days: Tuesday's at 2:00 PM and Wednesday's at 10:00 AMWeekend Tours: Available by request and scheduled around our regular programming. As an active opera house, weekend tours are not offered through our ticketing platform.Tour Fee: $20 per personMinimum Guests: 4 people per tourAccessibility: Fully ADA accessible with elevatorKid-Friendly: Absolutely! A perfect family outingPhoto-Friendly: Yes! Capture this historic beauty (no video during tours, please)Tour Duration: ~1.5 hoursGroups of 25 or more, or for weekend requests: Please contact us directly for pricing and scheduling. …",
+    pubDate: "2026-06-24T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52569865342720/huge/3b2908ddb2fc3d1f0e870007c7b65025c358699f.jpg"
+  },
+  {
+    title: "Zumba Fitness with Tamra",
+    link: "https://zumba.com/p/zumbafitnesswithTamra",
+    description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com. For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra.",
+    pubDate: "2026-06-24T23:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52277881680293/huge/2b6c13a5ecf839308a6e07162c2bf31ca79210c3.jpg"
+  },
+  {
+    title: "Creative Space: Artist Salon Series",
+    link: "www.ridgwayfuse.org",
+    description: "Join us for the inaugural Creative Space at the Decker Room. Inspired by our vibrant creative community, these monthly events are intended to build creative community across disciplines! With a different focus each time, we will keep things interesting and engaging! Anyone is welcome to attend, and creatives of all kinds are invited. We welcome your ideas for future events! Bring something to eat or drink to share! For our first salon, we will enjoy a performance by Ridgway’s youth voice ensemble. Then we will talk about supporting one another as a creative community! There will be time to socialize and brainstorm about future salon events! To learn more, ask questions, submit ideas, reach out to the Decker Room Coordinator, Arielle. decker@ridgwayfuse.org 872-772-9484",
+    pubDate: "2026-06-25T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52825557353036/huge/60a36c794f611089746f024c76a091b947724470.jpg"
+  },
+  {
+    title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
+    link: "www.FloatingLotusBrewery.com",
+    description: "Join us at the Lotus for a midweek tradition that brings together musicians, music lovers, and the incredible local talent that makes our community shine. From intimate solo sets to full-band jam sessions with rotating players, Open Mic Night is always full of surprises. Want to play? We’d love to have you — signups begin at 5:30pm. Just bring your instrument and your creativity, and we’ll take care of the rest. Our stage is fully equipped with PA, mics, drums, bass, and everything you need to plug in and play. 🎟️ Free admission 🍻 Grab a beer, settle in, and enjoy the show Come be part of the music — on stage or in the crowd!",
+    pubDate: "2026-06-25T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/ed08b494666358349bc84e969db6e8b262ef71aa.jpg"
+  },
+  {
+    title: "Summer Bingo - Wednesday Night at Ouray Elks Lodge",
+    link: "Www.ourayelks.org",
+    description: "OPEN TO THE PUBLIC Come see our beautiful historic lodge while joining us in playing bingo! Doors Open at 5:30 pm, Early Bird Bingo 6:00 and Regular Bingo starts at 7:00pm Concessions available to purchase",
+    pubDate: "2026-06-25T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52440353082990/huge/849a6c82c22aa4e9cf19e3fc7490b7c928059ded.jpg"
+  },
+  {
+    title: "Yoga in the Park- Wednesday evenings",
+    link: "www.beetrueyou.com",
+    description: "For noncyclists and cyclists alike. After an optional social bike ride at 5 pm, wind down for a yoga class in the park 6 - 7 pm. A moderate to advanced vinyasa style class targetting the areas of the body affected by time in the bike saddle and other areas of request. Bring your own mat. If you don't have one, please let me know earlier in the day so I can bring one for you. Meet at the Gazebo south of Chipeta Lodge. If the weather is too inclement, we can meet at the studio at 380 Sherman Street, Ridgway. While this is donation based, please pay before online or in person.",
+    pubDate: "2026-06-25T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Gazebo south of Chipeta Lodge, Ridgway, CO (Or studio if raining)",
+    imageUrl: "https://localist-images.azureedge.net/photos/52880886803755/huge/ba2d24fbf09ba1f9a707a06213d60685581d7322.jpg"
   }
 ];
 
@@ -7546,6 +7626,61 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_0adc5789-cb68-4509-b7a8-1e8bf62a4c8e.html",
     address: "San Miguel County",
     noticeKey: "tax-exemption-2026"
+  },
+  {
+    title: "Foreclosure Sale -- Hartman Property (Sale No. COL-000156)",
+    entity: "San Miguel County Public Trustee",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "The San Miguel County Public Trustee is conducting a foreclosure sale for property owned by Alexander S. Hartman due to death of all named mortgagors. The property at 1730 Grand Avenue, Norwood will be auctioned on July 30, 2026 at 10:00 AM at the Telluride courthouse to satisfy a debt of $309,162.10.",
+    deadline: "July 30, 2026 at 10:00 AM",
+    expires: "2026-07-30",
+    dates: "6/11",
+    papers: ["ttimes_0611"],
+    url: "https://www.telluridenews.com/news/legals/article_6de56aef-d7ac-4c1e-bb5f-1bc3f669e424.html",
+    address: "Section 27, Township 45 North, Range 13 West (1730 Grand Avenue, Norwood, CO 81423)",
+    noticeKey: "foreclosure-col-000156"
+  },
+  {
+    title: "Foreclosure Sale -- Esch Property (Sale No. 2026-01)",
+    entity: "San Miguel County Public Trustee",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "The San Miguel County Public Trustee is conducting a foreclosure sale for property owned by Sandra G. Esch due to failure to make timely mortgage payments. The property at 122 43ZS Road, Norwood will be auctioned on July 16, 2026 at 10:00 AM at the Telluride courthouse to satisfy a debt of $115,217.40.",
+    deadline: "July 16, 2026 at 10:00 AM",
+    expires: "2026-07-16",
+    dates: "6/11",
+    papers: ["ttimes_0611"],
+    url: "https://www.telluridenews.com/news/legals/article_6de56aef-d7ac-4c1e-bb5f-1bc3f669e424.html",
+    address: "Northwest 1/4 Northwest 1/4, Section 26, Township 45 North, Range 13 West (122 43ZS Road, Norwood, CO 81423)",
+    noticeKey: "foreclosure-2026-01"
+  },
+  {
+    title: "Water Court Application -- Trout Lake Reservoir Storage Rights (Case No. 26CW3028)",
+    entity: "Colorado District Court, Water Division No. 4",
+    entityClass: "ent-county",
+    entityLogo: "water_court",
+    icon: "💧",
+    iconClass: "type-bid",
+    type: "Water Court",
+    filterTag: "water-court",
+    summary: "Telluride Preserve Homeowners Association filed an application to make absolute a 3.0 acre-foot conditional water right from Lake Fork of the San Miguel River for storage in Trout Lake Reservoir. The water right is for replacement of depletions and augmentation purposes, with beneficial use claimed as of June 16, 2025.",
+    deadline: "Statutory protest period (typically 4-6 months from publication)",
+    expires: "2026-08-31",
+    dates: "6/11",
+    papers: ["ttimes_0611"],
+    url: "https://www.telluridenews.com/news/legals/article_6de56aef-d7ac-4c1e-bb5f-1bc3f669e424.html",
+    address: "NE SW Section 8, Township 41 North, Range 9 West, NMPM",
+    noticeKey: "26cw3028",
+    caseNumber: "26CW3028"
   }
 ];
 
