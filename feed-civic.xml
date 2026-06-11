@@ -6,21 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-civic.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming council, commission, and board meetings across the region — with comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jun 2026 20:26:06 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 03:03:28 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>⚡ [Meeting] Board of Review and Planning Commission Joint Work Session — 2026-06-10</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-06-10%7CBoard%20of%20Review%20and%20Planning%20Commission%20Joint%20Work%20Session</guid>
-      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[San Miguel County • 2026-06-10
-
-The county's Board of Review and Planning Commission will hear a presentation on Colorado's new Low Energy and Carbon Code — building standards that could reshape how structures get approved in the box canyon.
-
-⚡ Why it matters: New building standards could change how construction gets approved countywide]]></description>
-      <category>Meeting</category>
-      <category>San Miguel County</category>
-    </item>
     <item>
       <title>⚡ [Meeting] SMART Board of Directors — 2026-06-11</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
@@ -30,7 +17,7 @@ The county's Board of Review and Planning Commission will hear a presentation on
 
 SMART's board meets to approve a lease with Telluride Gymnastics Academy at 137 Society Drive, plus the usual gondola update and quarterly reports.
 
-⚡ Why it matters: Board vote on Telluride Gymnastics Academy lease at Society Drive location]]></description>
+⚡ Why it matters: Board will vote on lease with Telluride Gymnastics Academy]]></description>
       <category>Meeting</category>
       <category>SMART Transit</category>
     </item>
@@ -63,7 +50,7 @@ The June 11, 2026 SMART agenda hasn't been posted yet.]]></description>
       <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-06-12
 
-The June 12 Judicial Subcommittee agenda hasn't been posted yet.]]></description>
+The June 12, 2026 Judicial Subcommittee agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -99,6 +86,61 @@ Agenda not yet available]]></description>
 Agenda not yet available]]></description>
       <category>Meeting</category>
       <category>Town of Ophir</category>
+    </item>
+    <item>
+      <title>[Meeting] Town Council Meeting — 2026-06-17</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/mv%7C2026-06-17%7CTown%20Council%20Meeting</guid>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Mountain Village • 2026-06-17
+
+Agenda not yet available]]></description>
+      <category>Meeting</category>
+      <category>Mountain Village</category>
+    </item>
+    <item>
+      <title>[Meeting] Board of County Commissioners Meeting — 2026-06-17</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-06-17%7CBoard%20of%20County%20Commissioners%20Meeting</guid>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[San Miguel County • 2026-06-17
+
+Regular meeting agenda TBD]]></description>
+      <category>Meeting</category>
+      <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Meeting] Historic &amp; Architectural Review Commission Chair - Jun 17 2026 — 2026-06-17</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-17%7CHistoric%20%26%20Architectural%20Review%20Commission%20Chair%20-%20Jun%2017%202026</guid>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-06-17
+
+The agenda content for this Historic & Architectural Review Commission meeting isn't available yet — just the meeting date and a list of past meetings going back to 2018.]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>[Meeting] Historic &amp; Architectural Review Commission - Jun 17 2026 — 2026-06-17</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-17%7CHistoric%20%26%20Architectural%20Review%20Commission%20-%20Jun%2017%202026</guid>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-06-17
+
+Meeting information unavailable]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>[Meeting] Parks &amp; Recreation Commission - Jun 17 2026 — 2026-06-17</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-17%7CParks%20%26%20Recreation%20Commission%20-%20Jun%2017%202026</guid>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-06-17
+
+Meeting scheduled for June 17, 2026]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
     </item>
   </channel>
 </rss>

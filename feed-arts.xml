@@ -6,34 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming concerts, film, theater, gallery openings, and festivals across the Telluride region.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jun 2026 20:26:06 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 03:03:28 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Wed, Jun 10] Forever Wild</title>
-      <link>https://www.telluride.com/event/forever-wild/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/forever%20wild%7C2026-06-10</guid>
-      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62747/forever_wild_poster.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Patagonia Telluride in partnership with Sheep Mountain Alliance and EcoAction Partners will host a film screening of …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/62747/forever_wild_poster.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 10] &quot;Forever Wild&quot; film screening, Celebrating the protection of Telluride&apos;s Valley Floor</title>
-      <link>https://koto.org/event/forever-wild-film-screening-celebrating-the-protection-of-tellurides-valley-floor/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/forever%20wild%20film%20screening%7C2026-06-10</guid>
-      <pubDate>Wed, 10 Jun 2026 23:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/FOREVER-WILD-poster.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Patagonia Telluride, TELLURIDE
-
-In collaboration with Sheep Mountain Alliance and Eco Action Partners, Patagonia Telluride will host a screening of the film, "Forever Wild". We will celebrate Telluride's environmental activists past and present who have fought for the protection of Telluride's precious resources. Discussion to follow film, food provided.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/06/FOREVER-WILD-poster.png" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
     <item>
       <title>[Thu, Jun 11] Telluride Gold Kings</title>
       <link>https://www.telluride.com/event/telluride-gold-kings/</link>
@@ -70,6 +44,98 @@ The Creative Exchange is a brand-new monthly series by Telluride Arts designed f
       <media:content url="https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 12] North Fork Crossing w/ Brendan Forrest</title>
+      <link>https://www.alibitelluride.com/calendar#eca-event=north-folk-crossing</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/north%20fork%20crossing%20w%7C2026-06-12</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://ucarecdn.com/f1d0587b-ecc4-4749-9dc7-6d561e93a852/-/crop/2500x1251/0,210/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
+📍 The Alibi • Telluride, CO
+🕒 9:00 PM
+
+North Fork Crossing is a new-age Bluegrass band that resides between the Traditi...]]></description>
+      <media:content url="https://ucarecdn.com/f1d0587b-ecc4-4749-9dc7-6d561e93a852/-/crop/2500x1251/0,210/-/preview/" medium="image" />
+      <category>Community Event</category>
+      <category>The Alibi</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 12] Music on the Green Summer Concert Series</title>
+      <link>https://www.telluride.com/event/music-on-the-green-summer-concert-series/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/music%20on%20the%20green%7C2026-06-12</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/44414/16c6ff81-d87c-823e-1bd2-8a66b859eb9d.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+The Telluride Mountain Village Owners Association (TMVOA) and Beyond the Groove Productions Present Music on the Green …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/44414/16c6ff81-d87c-823e-1bd2-8a66b859eb9d.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 12] Mass Movement</title>
+      <link>https://www.telluride.com/event/mass-movement/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/mass%20movement%7C2026-06-12</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/55257/download_14.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Over the past 10 years, Mass Movement has taken place as an annual celebration of dance in our small mountain town. …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/55257/download_14.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 12] North Fork Crossing</title>
+      <link>https://www.telluride.com/event/north-fork-crossing/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/north%20fork%20crossing%7C2026-06-12</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62160/screenshot_2026-04-09_at_1_55_43_pm.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+North Fork Crossing is a new-age Bluegrass band that resides between the Traditional music world with their timeless …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/62160/screenshot_2026-04-09_at_1_55_43_pm.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Sat, Jun 13] The Fretliners Live in Concert</title>
+      <link>https://sheridanoperahouse.com/events/the-fretliners-live-in-concert-2/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/the%20fretliners%20live%20in%7C2026-06-13</guid>
+      <pubDate>Sat, 13 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2026/03/unnamed-file.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
+📍 Sheridan Opera House • Telluride, CO
+]]></description>
+      <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2026/03/unnamed-file.png" medium="image" />
+      <category>Community Event</category>
+      <category>Sheridan Opera House</category>
+    </item>
+    <item>
+      <title>[Sat, Jun 13] Ivanoff (DJ SET)</title>
+      <link>https://www.alibitelluride.com/calendar#eca-event=ivanoff-dj-set</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/ivanoff%20dj%20set%7C2026-06-13</guid>
+      <pubDate>Sat, 13 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://ucarecdn.com/d2c64473-1f50-467d-a322-7085c50094b9/-/crop/1080x541/0,1088/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
+📍 The Alibi • Telluride, CO
+🕒 9:00 PM
+
+IvanOff is a Montana-born tech house producer and DJ. His friends named him Ivan...]]></description>
+      <media:content url="https://ucarecdn.com/d2c64473-1f50-467d-a322-7085c50094b9/-/crop/1080x541/0,1088/-/preview/" medium="image" />
+      <category>Community Event</category>
+      <category>The Alibi</category>
+    </item>
+    <item>
+      <title>[Sat, Jun 13] The Fretliners</title>
+      <link>https://www.telluride.com/event/the-fretliners/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/the%20fretliners%7C2026-06-13</guid>
+      <pubDate>Sat, 13 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/61781/download_13.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+The Fretliners are a band defined by their songwriting—stories carried by powerful harmonies, dynamic arrangements, …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/61781/download_13.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
     </item>
   </channel>
 </rss>

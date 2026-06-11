@@ -71,7 +71,10 @@ const MEETING_AGENDA_META = {
     {"zoomUrl":"https://us06web.zoom.us/j/84720329875","phone":"970-728-3844"},
 
   "smart|2026-06-11|SMART Board of Directors":
-    {"zoomUrl":"https://us02web.zoom.us/j/82926286001?pwd=hhw2xIVjbwIb6pBVuRTO5mtaLM70GN.1"}
+    {"zoomUrl":"https://us02web.zoom.us/j/82926286001?pwd=hhw2xIVjbwIb6pBVuRTO5mtaLM70GN.1"},
+
+  "county|2026-06-18|Lodging Tax Board 06/18/26":
+    {"meetingId":"860 8356 9395","passcode":"993341","phone":"970-728-3844"}
 };
 
 const MANUAL_SUMMARIES = {
@@ -166,10 +169,10 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The Jun 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -178,19 +181,19 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "The June 30, 2026 Town Council agenda hasn't been posted yet.",
+    "The Jun 30 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
     "The July 1 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The Jul 01 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 1 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The July 1, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
     "The July 1st Board of County Commissioners agenda hasn't been posted yet.",
@@ -202,7 +205,7 @@ const MANUAL_SUMMARIES = {
     "The San Miguel Basin Fair Board meets to review junior livestock sale terms and update bylaws for the upcoming fair season.",
 
   "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
-    "The July 6 2026 Open Space Commission agenda hasn't been posted yet.",
+    "The July 6, 2026 Open Space Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-11|San Miguel Authority for Regional Transportation - Jun 11 2026":
     "The June 11, 2026 SMART agenda hasn't been posted yet.",
@@ -214,13 +217,13 @@ const MANUAL_SUMMARIES = {
     "The July 9 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-06-18|Lodging Tax Board 06/18/26":
-    "The June 18 Lodging Tax Board agenda hasn't been posted yet.",
+    "The Lodging Tax Board meets to review tax reports and hear updates from the Norwood Chamber and Telluride Tourism Board — the usual quarterly check-in on how visitor dollars are flowing.",
 
   "county|2026-07-09|Planning Commission Meeting":
     "The July 9 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-12|Judicial Subcommittee - Jun 12 2026":
-    "The June 12 Judicial Subcommittee agenda hasn't been posted yet."
+    "The June 12, 2026 Judicial Subcommittee agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -267,6 +270,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Fee failed to maintain line between personal, governmental roles",
+    source: "Telluride Times",
+    date: "June 10, 2026",
+    firstSeen: "2026-06-11",
+    newsTopic: "recreation",
+    copy: "An investigation found that Mayor Pro Tem Fee blurred the lines between personal and official roles when making an offer to purchase property. The report concluded she created the impression of acting in her governmental capacity by including commitments requiring future town council action and using her official email and title to obtain a publicly-funded flight voucher.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_7f2f7f97-cfba-4bba-8e22-5cedb5539f85.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/5a/85aef2ed-8280-4f11-8866-173f0634354f/6a29f38eddc8b.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Time to sip and savor",
+    source: "Telluride Times",
+    date: "June 10, 2026",
+    firstSeen: "2026-06-11",
+    newsTopic: "arts-culture",
+    copy: "Telluride Food and Wine returns this weekend with events designed to feel more intimate and approachable than typical festivals - organizers are emphasizing connection and community over the usual crowds and sensory overload. The lineup includes a family dinner in Elks Park Saturday, grand tasting at Oak Street Sunday, plus smaller gatherings like whiskey tastings and rosé with croquet on Friday.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_fd47b21d-efda-49de-91bb-6ab239045c11.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/81/a814695f-b105-4dab-ac83-ea77591923fc/6a292c3721640.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Tracksters cop end-of-season awards",
     source: "Telluride Times",
@@ -364,7 +391,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_b70a1828-f748-4d2c-9c81-f3060f7aaaa5.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
+    imgHiRes: true,
+    letterAuthor: "Your"
   },
   {
     title: "A vote for continuity",
@@ -376,7 +404,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_cd5e1e04-3b1f-45d8-b5dc-568af06d8807.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
+    imgHiRes: true,
+    letterAuthor: "Your"
   },
   {
     title: "Telluride Venture Network hosts Investment Pitch Day",
@@ -720,8 +749,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 4, 2026",
     firstSeen: "2026-06-04",
     newsTopic: "public-safety",
-    copy: "Homicide convictions reversed for paramedics who injected ketamine into Elijah McClain after police pinned the Black man.",
-    claudeSummary: false,
+    copy: "A Colorado appeals court overturned homicide convictions for two paramedics who administered a fatal dose of ketamine to Elijah McClain after police restrained him. The reversal comes years after the high-profile case that sparked national attention over police and medical response protocols.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_496178a1-5c94-5741-9d68-77c8563ddeac.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     imgHiRes: true
@@ -782,8 +811,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 4, 2026",
     firstSeen: "2026-06-04",
     newsTopic: "education",
-    copy: "The Class of 2026 graduated from Norwood Public School on Saturday, May 23. Congratulations, grads!",
-    claudeSummary: false,
+    copy: "Norwood Public School graduated its Class of 2026 on May 23rd. San Miguel County commissioners wrapped up a deed restriction reversion process in May to fix inconsistencies and clarify housing policies. Colorado Flights Alliance announced expanded summer air service between Montrose and LAX starting in 2026, while Mountain Village released a 309-page independent investigation report after three months of interviews with local officials and community members.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/gallery/news/article_4a0cf4a2-a573-484f-8001-5ff3315fd164.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/c2/4c25a79b-5c83-4eb6-a714-b0483ada7665/6a2130266bdeb.image.jpg",
     imgHiRes: true
@@ -1247,78 +1276,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Claude Lemieux, the feisty four-time Stanley Cup champion for Avalanche, Devils and Habs, dies at 60",
-    source: "Telluride Times",
-    date: "May 28, 2026",
-    firstSeen: "2026-05-28",
-    newsTopic: "community",
-    copy: "Claude Lemieux, the four-time Stanley Cup champion known for his gritty play with the Avalanche, Devils and Canadiens, died at 60. The former playoff MVP had just served as Montreal's torch bearer three days earlier at their playoff game. He scored nearly 400 goals over 21 NHL seasons.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_83361eac-e7f1-5c15-adcb-f94a6345e4a7.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/85/d8594810-80a8-59b4-890a-7244b3410a62/6a18b5e0f3c11.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Summertime means Music on the Green",
-    source: "Telluride Times",
-    date: "May 28, 2026",
-    firstSeen: "2026-05-28",
-    newsTopic: "arts-culture",
-    copy: "The free Music on the Green summer concert series kicks off May 29 with Dori Freeman performing from 5-7 p.m., followed by weekly shows through September featuring artists like Ray Wylie Hubbard and Jon Stickley Trio. The concerts happen in Mountain Village with mountain views and are sponsored by TMVOA, Madeline Hotel, and the Town of Mountain Village.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_5ab17cdd-56f8-40ff-924d-952b470c2352.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/7a/b7acfc05-77ea-4560-905f-b58e3262b0d4/6a18bd7a43676.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride Racquet Club steps into new era",
-    source: "Telluride Times",
-    date: "May 28, 2026",
-    firstSeen: "2026-05-28",
-    newsTopic: "recreation",
-    copy: "The Telluride Racquet Club expects 15,000 players this summer, up from 1,000 in its first year, with three tennis courts plus a social court area, two platform tennis courts that convert to pickleball in summer. Owner Fey brings in four collegiate tennis pros each season and offers leagues, clinics and lessons through a user-friendly app called Play by Point.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/business/article_9834d2c4-5e92-4023-b1a2-e7280515c851.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/b2/db20b18b-c9d2-42f6-bb7c-d51da2923086/6a17f88a91426.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Norwood School breaks ground",
-    source: "Telluride Times",
-    date: "May 28, 2026",
-    firstSeen: "2026-05-28",
-    newsTopic: "education",
-    copy: "",
-    claudeSummary: false,
-    href: "https://www.telluridenews.com/gallery/news/article_bb23a8b7-4634-46aa-997f-ed192e5fe5a9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/a2/2a2a4618-f6fe-4938-a72a-199d3eee76b4/6a18cdfe2fa15.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "‘Refreshed’ Wild West Fest is back",
-    source: "Telluride Times",
-    date: "May 28, 2026",
-    firstSeen: "2026-05-28",
-    newsTopic: "arts-culture",
-    copy: "Wild West Fest returns in 2026 after a year hiatus, with organizers making changes based on kid feedback from surveys. The updated program includes more horseback riding through partnerships with local outfitters and shorter activity sessions instead of multi-day commitments.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_59368846-14d1-48b6-af76-572d06c92b15.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/d6/cd6adb7e-6b3f-4df9-ad01-30f555752e79/6a17f3c41f222.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Legals and Public Notices for May 28-June 3, 2026",
-    source: "Telluride Times",
-    date: "May 28, 2026",
-    firstSeen: "2026-05-28",
-    newsTopic: "community",
-    copy: "A local resident named Kendal Dawn Oakleaf Smith has petitioned San Miguel County Court for a name change to Kendal Dawn Oakleaf Smith. The Colorado Community Action Association is accepting applications through June 3rd for a basic income research project offering $13,000 one-time payments to eligible county residents. The county is also seeking contractors for flooring replacement projects and a boiler system replacement at Down Valley Park.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/obituaries/article_0adc5789-cb68-4509-b7a8-1e8bf62a4c8e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Releases Findings of Independent Investigation",
     source: "Town of Telluride",
     date: "June 10, 2026",
@@ -1384,7 +1341,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Click here for details.",
     source: "Town of Ridgway",
-    date: "June 10, 2026",
+    date: "June 11, 2026",
     firstSeen: "2026-06-09",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1417,7 +1374,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 10, 2026",
+    date: "June 11, 2026",
     firstSeen: "2026-06-04",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1428,7 +1385,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 10, 2026",
+    date: "June 11, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1472,6 +1429,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 6-10-26",
+    source: "KOTO Community Radio",
+    date: "June 11, 2026",
+    newsTopic: "health",
+    copy: "Telluride Releases Investigation Report; Adventure Race for Mental Health; Bird Song on the San Miguel",
+    href: "https://koto.org/news/newscast-6-10-26/"
+  },
   {
     title: "Newscast 6-8-26",
     source: "KOTO Community Radio",
@@ -1527,14 +1492,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "public-safety",
     copy: "Telluride Fire Plans for Station 3 Expansion; West End Roundup with the San Miguel Basin Forum; Wear a Lifejacket and Don’t Touch the Wildlife",
     href: "https://koto.org/news/newscast-5-28-26/"
-  },
-  {
-    title: "Newscast 5-27-26",
-    source: "KOTO Community Radio",
-    date: "May 28, 2026",
-    newsTopic: "community",
-    copy: "Man Arrested for Failure to Register as Sex Offender; The Impetus of Dance in Unlikely Spaces",
-    href: "https://koto.org/news/newscast-5-27-26/"
   }
 ];
 
@@ -2209,50 +2166,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Mahjongg for Independent Players",
-    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-06-10/",
-    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-06-10T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
-  },
-  {
-    title: "Sewing 101 with Melissa",
-    link: "https://koto.org/event/sewing-101-with-melissa/2026-06-10/",
-    description: "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
-    pubDate: "2026-06-10T23:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
-  },
-  {
-    title: "The Livable Telluride Kick-Off Party",
-    link: "https://koto.org/event/the-livable-telluride-kick-off-party/",
-    description: "Join Livable Telluride on Wednesday, June 10 to learn about and celebrate a new community hub for civic engagement across San Miguel County. It's a great way to meet some neighbors and talk about local issues.",
-    pubDate: "2026-06-10T23:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Elks Lodge BPOE 692, TELLURIDE",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/Kickoff-Flyer-New-Small.png"
-  },
-  {
-    title: "\"Forever Wild\" film screening, Celebrating the protection of Telluride's Valley Floor",
-    link: "https://koto.org/event/forever-wild-film-screening-celebrating-the-protection-of-tellurides-valley-floor/",
-    description: "In collaboration with Sheep Mountain Alliance and Eco Action Partners, Patagonia Telluride will host a screening of the film, \"Forever Wild\". We will celebrate Telluride's environmental activists past and present who have fought for the protection of Telluride's precious resources. Discussion to follow film, food provided.",
-    pubDate: "2026-06-10T23:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Patagonia Telluride, TELLURIDE",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/FOREVER-WILD-poster.png"
-  },
-  {
     title: "Low Energy & Carbon Code Training",
     link: "https://koto.org/event/low-energy-carbon-code-training/",
     description: "Join this free, full-day training with code experts that will teach you how to design and build to the Low Energy and Carbon Code (LECC) and regional amendments. Leave with an understanding of electric, EV and solar-ready requirements, how the LECC compares to previous energy codes, and the 3 compliance pathways. Location: Ridgway Town Hall and Zoom Register on EcoAction Partners website: www.ecoactionpartners.org/energy-codes",
@@ -2724,6 +2637,39 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Telluride Medical Center Foundation Classic",
+    link: "https://koto.org/event/telluride-medical-center-foundation-classic/2026-06-28/",
+    description: "Register Now! Join us for our reimagined and elevated Telluride Medical Center Foundation golf tournament! Sunday, June 28: Calcutta & Cocktails Monday, June 29: Breakfast, Golf, Lunch & Awards",
+    pubDate: "2026-06-29T00:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Golf Club",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/Registration-is-Live.png"
+  },
+  {
+    title: "Telluride Medical Center Foundation Classic",
+    link: "https://koto.org/event/telluride-medical-center-foundation-classic/2026-06-29/",
+    description: "Register Now! Join us for our reimagined and elevated Telluride Medical Center Foundation golf tournament! Sunday, June 28: Calcutta & Cocktails Monday, June 29: Breakfast, Golf, Lunch & Awards",
+    pubDate: "2026-06-29T15:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Golf Club",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/Registration-is-Live.png"
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-29/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-06-29T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
   }
 ];
 
@@ -4424,42 +4370,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [];
 
 const TELLURIDE_COM_EVENTS = [
   {
-    title: "Historic Walking Tour",
-    link: "https://www.telluride.com/event/historic-walking-tour/",
-    description: "Take a historic tour of Telluride on foot! These historic walking tours are led by historian Ashley Boling, and leave …",
-    pubDate: "2026-06-09",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/48069/walkingtour_tabloidsize_2021.800x533.webp"
-  },
-  {
-    title: "Town Talks",
-    link: "https://www.telluride.com/event/town-talks/",
-    description: "Each summer, Telluride Science brings together some of the world’s brightest minds to tackle the most pressing …",
-    pubDate: "2026-06-09",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/54293/town-talks-grid1.800x533.webp"
-  },
-  {
-    title: "Augment Summer Music Series",
-    link: "https://www.telluride.com/event/augment-summer-music-series/",
-    description: "Telluride's local non-profit organization Augment Music Project is hosting monthly concerts in Elks Park this summer. …",
-    pubDate: "2026-06-09",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/53672/download_1.800x533.webp"
-  },
-  {
     title: "Games on the Green",
     link: "https://www.telluride.com/event/games-on-the-green/",
     description: "Head to The Madeline on Wednesdays and Thursdays this summer for Games on the Green! They will have classic lawn games …",
@@ -4517,7 +4427,7 @@ const TELLURIDE_COM_EVENTS = [
     sourceLabel: "Telluride.com",
     category: "Community Event",
     location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/60815/tot_cxe_brittany_miller.800x533.webp"
+    imageUrl: "https://www.telluride.com/site/assets/files/60815/download_1.800x533.webp"
   },
   {
     title: "Games on the Green",
@@ -5741,7 +5651,7 @@ const TELLURIDE_COM_EVENTS = [
     sourceLabel: "Telluride.com",
     category: "Community Event",
     location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/60815/tot_cxe_brittany_miller.800x533.webp"
+    imageUrl: "https://www.telluride.com/site/assets/files/60815/download_1.800x533.webp"
   },
   {
     title: "Games on the Green",
@@ -7437,24 +7347,6 @@ const LEGAL_NOTICES = [
     smcBidID: "187"
   },
   {
-    title: "RFP -- Mountain Village (COL-000150)",
-    entity: "Town of Mountain Village",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The Town of Mountain Village issued an RFP with a submission deadline of 5 p.m. Wednesday, June 10. Contact Molly Norton for more information at mnorton@mtnvillage.org.",
-    deadline: "June 10, 2026 at 5:00 PM",
-    expires: "2026-06-10",
-    dates: "5/21",
-    papers: ["ttimes_0521"],
-    url: "https://www.telluridenews.com/news/legals/article_d3659378-b06b-4e27-9b53-ec57d83a4b86.html",
-    address: "Mountain Village",
-    noticeKey: "rfp-mountain-village-col-000150"
-  },
-  {
     title: "Name Change Petition -- Kendal Dawn Oakleaf Smith (Case 26C11)",
     entity: "San Miguel County Court",
     entityClass: "ent-county",
@@ -7829,10 +7721,10 @@ const RIDGWAY_AGENDA_MAP = {
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Special%20Meeting%20Packet%20-%20January%2026%2C%202026%20UPDATED.pdf",
 
   "January 14, 2026":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Workforce%20Committee%20Jan%2014%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Regular%20Meeting%20Packet%20-%20January%2014%2C%202026_0.pdf",
 
   "December 10, 2025":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Workforce%20Committee%20Dec%2010%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Regular%20Meeting%20Packet%20-%20December%2010%2C%202025.pdf",
 
   "December 3, 2025":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Budget%20Workshop%20Packet%20-%20December%203%2C%202025.pdf",
@@ -7856,7 +7748,7 @@ const RIDGWAY_AGENDA_MAP = {
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Special%20Meeting%20Packet%20-%20July%2024%2C%202025.pdf",
 
   "July 9, 2025":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Workforce%20Committee%20July%209%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Regular%20Meeting%20Packet%20-%20July%209%2C%202025%20UPDATED_0.pdf",
 
   "June 11, 2025":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Regular%20Meeting%20Packet%20-%20June%2011%2C%202025.pdf",
@@ -7871,7 +7763,7 @@ const RIDGWAY_AGENDA_MAP = {
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Special%20Meeting%20Packet%20-%20April%2029%2C%202025_0.pdf",
 
   "April 9, 2025":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Workforce%20Committee%20April%209%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Regular%20Meeting%20Packet%20-%20April%209%2C%202025.pdf",
 
   "March 12, 2025":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Regular%20Meeting%20Packet%20-%20March%2012%2C%202025.pdf",
@@ -7880,10 +7772,10 @@ const RIDGWAY_AGENDA_MAP = {
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Regular%20Meeting%20Packet%20-%20February%2012%2C%202025%20UPDATED.pdf",
 
   "January 8, 2025":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/January%208%202025%20Workforce%20Commitee.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Workforce%20%26%20Affordable%20Housing%20Committee%20Meeting%20Packet%20-%20January%208%2C%202025.pdf",
 
   "December 11, 2024":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/00%20Dec%2011%20tc%20agenda.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Regular%20Meeting%20Packet%20-%20December%2011%2C%202024%20UPDATED.pdf",
 
   "November 13, 2024":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Regular%20Meeting%20Packet%20-%20November%2013%2C%202024.pdf",
@@ -7892,22 +7784,22 @@ const RIDGWAY_AGENDA_MAP = {
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Budget%20Retreat%20Packet%20-%20October%2012%2C%202024.pdf",
 
   "October 9, 2024":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Workforce%20Committee%20Oct%209%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Regular%20Meeting%20Packet%20-%20October%209%2C%202024.pdf",
 
   "September 11, 2024":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/September%2011%20Workforce%20Committee.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Regular%20Meeting%20Packet%20-%20September%2011%2C%202024_0.pdf",
 
   "August 14, 2024":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Regular%20Meeting%20Packet%20-%20August%2014%2C%202024%20UPDATED.pdf",
 
   "July 10, 2024":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Workforce%20Committee%20July%2010%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Regular%20Meeting%20Packet%20-%20July%2010%2C%202024_0.pdf",
 
   "June 12, 2024":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Regular%20Meeting%20Packet%20-%20June%2012%2C%202024.pdf",
 
   "May 8, 2024":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/TC%20Workforce%20Committee%20meeting%20Minutes%20-%20May%208.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Regular%20Meeting%20Packet%20-%20May%208%2C%202024_0.pdf",
 
   "April 10, 2024":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Regular%20Meeting%20Packet%20-%20April%2010%2C%202024.pdf",
@@ -7916,7 +7808,7 @@ const RIDGWAY_AGENDA_MAP = {
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Regular%20Meeting%20Packet%20-%20March%2013%2C%202024%20updated_0.pdf",
 
   "February 14, 2024":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Special%20Meeting%20Packet%20-%20February%2014%2C%202024.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Regular%20Meeting%20Packet%20UPDATED%20-%20February%2014%2C%202024.pdf",
 
   "December 13, 2023":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Meeting%20Packet%20-%20December%2013%2C%202023.pdf",
@@ -7931,106 +7823,103 @@ const RIDGWAY_AGENDA_MAP = {
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Meeting%20Packet%20-%20October%2011%2C%202023.pdf",
 
   "September 13, 2023":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/TC%20meeting%20Minutes%20-%20Sept%2013%2C%202023.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Meeting%20Packet%20-%20September%2013%2C%202023.pdf",
 
   "August 28, 2023":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/TC%20special%20meeting%20minutes%20-%20Aug%2028%2C%202023.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Workforce%20%26%20Affordable%20Housing%20Committee%20Meeting%20Packet%20-%20August%2028%2C%202023.pdf",
 
   "August 9, 2023":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/TC%20meeting%20minutes%20-%20Aug%209%2C%202023.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Meeting%20Packet%20-%20August%209%2C%202023.pdf",
 
   "July 12, 2023":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/TC%20meeting%20minutes%20-%20July%2012%2C%2020230.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Meeting%20Packet%20-July%2012%2C%202023.pdf",
 
   "June 15, 2023":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/June%2015%20workforce%20%26%20affordable%20housing%20committee%20agenda.pdf",
 
   "June 14, 2023":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2023.06.14%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Meeting%20Packet%20-%20June%2014%2C%202023.pdf",
 
   "June 6, 2023":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2023.06.06%20Workforce%20Committee%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Workforce%20%26%20Affordable%20Housing%20Committee%20Meeting%20Packet%20-%20June%206%2C%202023.pdf",
 
   "May 10, 2023":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2023.05.10%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Meeting%20Packet%20-%20May%2010%2C%202023.pdf",
 
   "April 17, 2023":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2023.04.17%20special%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Special%20Meeting%20Packet%20-%20April%2017%2C%202023.pdf",
 
   "April 12, 2023":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2023.04.12%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Meeting%20Packet%20-%20April%2012%2C%202023.pdf",
 
   "March 8, 2023":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2023.03.08%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Meeting%20Packet%20-%20March%208%2C%202023.pdf",
 
   "February 8, 2023":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2023.02.08%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Meeting%20Packet%20-%20February%208%2C%202023_0.pdf",
 
   "January 11, 2023":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2023.01.11%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Meeting%20Packet%20-%20January%2011%2C%202023.pdf",
 
   "November 16, 2023":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/TC%20budget%20workshop%20minutes%20-%20Nov%2015%2C%202023.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Budget%20Workshop%20Packet%20-%20November%2016%2C%202023.pdf",
 
   "February 15, 2023":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2023.02.15%20workshop%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Workshop%20Packet%20-%20February%2015%2C%202023.pdf",
 
   "December 14, 2022":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2022.12.14%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town%20Council%20Packet%20-%20December%2014%2C%202022.pdf",
 
   "November 9, 2022":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2022.11.09%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Updated%20Town%20Council%20Packet%20-%20November%209%2C%202022_0.pdf",
 
   "October 29, 2022":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2022.10.29%20budget%20retreat%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Budget%20Retreat%20Packet%20-%20October%2029%2C%202022.pdf",
 
   "October 12, 2022":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2022.10.12%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Council%20Meeting%20Packet%20-%20October%2012%2C%202022.pdf",
 
   "September 14, 2022":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2022.09.14%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Council%20Meeting%20Packet%20-%20September%2014%2C%202022_0.pdf",
 
   "September 7, 2022":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Sept%207%20special%20meeting%20agenda.pdf",
 
   "August 10, 2022":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2022.08.10%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Council%20Packet%20-%20August%2010%2C%202022.pdf",
 
   "August 3, 2022":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2022.08.03%20special%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/UPDATED%20Special%20Meeting%20Packet%20-%20August%203%2C%202022.pdf",
 
   "July 13, 2022":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2022.07.13%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Council%20Packet%20-%20July%2013%2C%202022.pdf",
 
   "June 8, 2022":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2022.06.08%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Council%20Packet%20-%20June%208%2C%202022.pdf",
 
   "May 11, 2022":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2022.05.11%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Council%20Packet%20-%20May%2011%2C%202022.pdf",
 
   "April 13, 2022":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2022.04.13%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Council%20Packet%20-%20April%2013%2C%202022_0.pdf",
 
   "March 9, 2022":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2022.03.09%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Council%20Packet%20-%20March%209%2C%202022.pdf",
 
   "February 28, 2022":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2022.02.28%20special%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Special%20Meeting%20Packet%20-%20February%2028%2C%202022.pdf",
 
   "February 9, 2022":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2022.02.09%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Council%20Packet%20-%20February%209%2C%202022%20UPDATED.pdf",
 
   "January 12, 2022":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2022.01.12%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Council%20Packet%20-%20January%2012%2C%202022.pdf",
 
   "November 17, 2022":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2022.11.17%20budget%20workshop%20tc%20min.pdf",
-
-  "October 26, 2022":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2022.10.26%20joint%20workshop%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Budget%20Workshop%20Packet%20-%20November%2017%2C%202022.pdf",
 
   "January 27, 2022":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2022.01.27%20joint%20workshop%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Workshop%20Packet.pdf",
 
   "December 8, 2021":
     "http://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Council%20Packet%20-%20December%208%2C%202021.pdf",
@@ -8072,28 +7961,10 @@ const RIDGWAY_AGENDA_MAP = {
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Packet%20-%20January%2013%2C%202021.pdf",
 
   "November 18, 2021":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2021.11.18%20budget%20workshop%20tc%20min.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Budget%20Workshop%20Packet%20-%20November%2018%2C%202021.pdf",
 
   "October 21, 2021":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Workshop%20Packet%20-%20October%2021%2C%202021.pdf",
-
-  "April 1, 2021":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2021.04.01%20joint%20workshop%20tc%20min.pdf",
-
-  "March 4, 2021":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2021.03.04%20joint%20workshop%20tc%20min.pdf",
-
-  "February 18, 2021":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2021.02.18%20joint%20workshop%20tc%20min.pdf",
-
-  "February 4, 2021":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2021.02.04%20joint%20workshop%20tc%20min.pdf",
-
-  "January 21, 2021":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2021.01.21%20joint%20workshop%20tc%20min.pdf",
-
-  "January 7, 2021":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2021.01.07%20joint%20workshop%20tc%20min.pdf",
 
   "December 9, 2020":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Agenda%20Packet%20-%20December%209%2C%202020_1.pdf",
@@ -8143,59 +8014,170 @@ const RIDGWAY_AGENDA_MAP = {
   "March 11, 2020":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.03.11%20TC%20Agenda%20Packet.pdf",
 
-  "February 12, 2020":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.02.12%20tc%20min.pdf",
+  "May 20, 2026":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---May-20%2C-2026.pdf",
 
-  "December 23, 2020":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.12.23%20joint%20workshop%20tc%20min.pdf",
+  "April 15, 2026":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.04.15%20%28PC%20Meeting%20Pkt%29.pdf",
 
-  "December 10, 2020":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.12.10%20joint%20workshop%20tc%20min.pdf",
+  "March 18, 2026":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.03.18%20%28PC%20Meeting%20Pkt%29.pdf",
 
-  "November 25, 2020":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.11.25%20joint%20workshop%20tc%20min.pdf",
+  "February 18, 2026":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.02.18%20PC%20Meeting.pdf",
 
-  "November 10, 2020":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.11.10%20joint%20workshop%20tc%20min.pdf",
+  "November 19, 2025":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20November%2019%2C%202025.pdf",
 
-  "October 29, 2020":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.10.29%20joint%20workshop%20tc%20min.pdf",
+  "October 15, 2025":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20October%2015%2C%202025.pdf",
 
-  "October 15, 2020":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.10.15%20joint%20workshop%20tc%20min.pdf",
+  "September 17, 2025":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20September%2017%2C%202025.pdf",
 
-  "October 1, 2020":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.10.01%20joint%20workshop%20tc%20min.pdf",
+  "August 20, 2025":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20August%2020%2C%202025.pdf",
 
-  "September 3, 2020":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.09.03%20joint%20workshop%20tc%20min.pdf",
+  "June 18, 2025":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20June%2018%202025.pdf",
 
-  "August 20, 2020":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.08.20%20joint%20workshop%20tc%20min.pdf",
+  "May 21, 2025":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20May%2021%2C%202025.pdf",
 
-  "August 6, 2020":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.08.06%20joint%20workshop%20tc%20min.pdf",
+  "April 16, 2025":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20April%2016%2C%202025.pdf",
 
-  "July 23, 2020":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.07.23%20joint%20workshop%20tc%20min.pdf",
+  "March 19, 2025":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20March%2019%2C%202025.pdf",
 
-  "July 16, 2020":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.07.16%20joint%20workshop%20tc%20min.pdf",
+  "February 19, 2025":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20February%2019%2C%202025.pdf",
 
-  "June 18, 2020":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.06.18%20joint%20workshop%20tc%20min.pdf",
+  "January 28, 2025":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20January%2028%2C%202025.pdf",
 
-  "May 28, 2020":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.05.28%20joint%20workshop%20tc%20min.pdf",
+  "November 26, 2024":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20November%2026%2C%202024_0.pdf",
 
-  "May 14, 2020":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.05.14%20joint%20workshop%20tc%20min.pdf",
+  "October 29, 2024":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20October%2029%2C%202024.pdf",
 
-  "April 29, 2020":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.04.29%20joint%20workshop%20tc%20min.pdf",
+  "September 24, 2024":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20September%2024%2C%202024.pdf",
 
-  "February 10, 2020":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.02.10%20joint%20workshop%20tc%20min.pdf"
+  "August 27, 2024":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20August%2027%2C%202024.pdf",
+
+  "July 30, 2024":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20July%2030%2C%202024.pdf",
+
+  "June 25, 2024":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20June%2025%2C%202024.pdf",
+
+  "May 28, 2024":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20May%2028%2C%202024.pdf",
+
+  "April 30, 2024":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20April%2030%2C%202024.pdf",
+
+  "March 26, 2024":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20March%2026%2C%202024.pdf",
+
+  "February 27, 2024":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20February%2027%2C%202024.pdf",
+
+  "October 31, 2023":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20October%2031%2C%202023.pdf",
+
+  "September 26, 2023":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20September%2026%2C%202023.pdf",
+
+  "August 29, 2023":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20August%2029%2C%202023.pdf",
+
+  "June 27, 2023":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20June%2027%2C%202023.pdf",
+
+  "April 25, 2023":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20April%2025%2C%202023.pdf",
+
+  "April 4, 2023":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Special%20Meeting%20Packet%20-%20April%204%2C%202023.pdf",
+
+  "March 28, 2023":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20March%2028%2C%202023.pdf",
+
+  "February 28, 2023":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20February%2028%2C%202023.pdf",
+
+  "January 31, 2023":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20%28updated%29%20-%20January%2031%2C%202023.pdf",
+
+  "January 10, 2023":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway%20Planning%20Commission%20Meeting%20Packet%20-%20January%2010%2C%202023.pdf",
+
+  "November 29, 2022":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20PC%20Meeting%20Packet%20-%20November%2029%2C%202022.pdf",
+
+  "October 25, 2022":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20PC%20Packet%20-%20October%2025%2C%202022.pdf",
+
+  "September 27, 2022":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Planning%20Commission%20Meeting%20Packet%20-%20September%2027%2C%202022.pdf",
+
+  "September 22, 2022":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Special%20Planning%20Commission%20Meeting%20Packet%20-%20September%2022%2C%202022.pdf",
+
+  "August 30, 2022":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Planning%20Commission%20Packet%20-%20August%2030%2C%202022.pdf",
+
+  "July 26, 2022":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Planning%20Commission%20Packet%20-%20July%2026%2C%202022.pdf",
+
+  "June 28, 2022":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Planning%20Commission%20Packet%20-%20June%2028%2C%202022.pdf",
+
+  "May 31, 2022":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Planning%20Commission%20Packet%20-%20May%2031%2C%202022%20compressed.pdf",
+
+  "April 26, 2022":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Planning%20Commission%20Packet%20-%20April%2026%2C%202022.pdf",
+
+  "March 29, 2022":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Planning%20Commission%20Packet%20-%20March%2029%2C%202022.pdf",
+
+  "February 22, 2022":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Planning%20Commission%20Packet%20-%20February%2022%2C%202022.pdf",
+
+  "January 25, 2022":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Planning%20Commission%20Packet%20-%20January%2025%2C%202022.pdf",
+
+  "November 30, 2021":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Planning%20Commission%20Packet%20-%20November%2030%2C%202021.pdf",
+
+  "October 26, 2021":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Planning%20Commission%20Packet%20-%20October%2026%2C%202021%203.pdf",
+
+  "September 28, 2021":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Planning%20Commission%20Packet%20-%20September%2028%2C%202021.pdf",
+
+  "August 31, 2021":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Planning%20Commission%20Packet%20-%20August%2031%2C%202021.pdf",
+
+  "July 27, 2021":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Planning%20Commission%20Packet%20-%20July%2027%2C%202021%20%28updated%29.pdf",
+
+  "July 13, 2021":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Planning%20Commission%20Packet%20-%20July%2013%2C%202021.pdf",
+
+  "May 25, 2021":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Full%20Planning%20Commission%20Packet%20-%20May%2025%2C%202021.pdf",
+
+  "July 28, 2020":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.07.28%20%28PC%20Agenda%20Pkt%29.pdf",
+
+  "June 30, 2020":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.06.30%20%28PC%20Agenda%20Pkt%29_0.pdf"
 };
 
 function getCountyCachedMeetings() {

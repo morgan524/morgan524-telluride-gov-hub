@@ -367,7 +367,7 @@ const SCHOOL_CACHED_DATA = [
     date: 'April 20, 2026',
     time: '5:15 PM',
     title: 'Telluride Board of Education Special Meeting',
-    agendaUrl: null,
+    agendaUrl: 'https://files.smartsites.parentsquare.com/3403/42026_boe_special_meeting.pdf',
     packetUrl: null,
     special: true,
     location: 'Bridal Veil District Conference Room / Zoom',
@@ -387,7 +387,7 @@ const SCHOOL_CACHED_DATA = [
     date: 'April 28, 2026',
     time: '5:15 PM',
     title: 'Telluride Board of Education Monthly Meeting',
-    agendaUrl: null,
+    agendaUrl: 'https://files.smartsites.parentsquare.com/3403/42826_mm_packet.pdf',
     packetUrl: null,
     special: false,
     location: 'Bridal Veil District Conference Room / Zoom',
@@ -397,7 +397,7 @@ const SCHOOL_CACHED_DATA = [
     date: 'May 18, 2026',
     time: '3:30 PM',
     title: 'Telluride Board of Education Work Session',
-    agendaUrl: 'https://www.tellurideschool.org/agendasandminutes#docaccess-7bfb6768652d3c9355af6d54116a1d52',
+    agendaUrl: 'https://files.smartsites.parentsquare.com/3403/51826_ws_packet.pdf',
     packetUrl: null,
     special: false,
     location: 'Bridal Veil District Conference Room / Zoom'
@@ -406,7 +406,7 @@ const SCHOOL_CACHED_DATA = [
     date: 'May 19, 2026',
     time: '5:15 PM',
     title: 'Telluride Board of Education Monthly Meeting',
-    agendaUrl: 'https://www.tellurideschool.org/agendasandminutes#docaccess-3724e3e121e28cab3856a1aad5398144',
+    agendaUrl: 'https://files.smartsites.parentsquare.com/3403/51926_mm_packet.pdf',
     packetUrl: null,
     special: false,
     location: 'Bridal Veil District Conference Room / Zoom'
@@ -424,7 +424,7 @@ const SCHOOL_CACHED_DATA = [
     date: 'June 9, 2026',
     time: '5:15 PM',
     title: 'Telluride Board of Education Monthly Meeting',
-    agendaUrl: null,
+    agendaUrl: 'https://files.smartsites.parentsquare.com/3403/6926_mm_packet.pdf',
     packetUrl: null,
     special: false,
     location: 'Bridal Veil District Conference Room / Zoom'
@@ -702,7 +702,7 @@ const OPHIR_CACHED_DATA = [
     date: 'April 21, 2026',
     title: 'General Assembly Meeting',
     board: 'ga',
-    agendaUrl: null,
+    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/April-21%2C-2026-Regular-GA-Meeting-Packet.pdf',
     note: 'Next scheduled General Assembly -- agenda posted before the meeting.'
   },
   {
