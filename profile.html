@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Profile · Livable Telluride (PROTOTYPE)</title>
+<style>
+  :root{ --green:#21443c; --green-2:#2a5347; --accent:#2f7a5f; --ink:#1a2e29;
+    --muted:#5b665f; --line:#e2e6e3; --bg:#f6f8f6; --warn:#b07a1e; }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
+  a{color:var(--green)}
+  .topbar{display:flex;align-items:center;gap:14px;padding:12px 22px;background:#fff;border-bottom:1px solid var(--line)}
+  .topbar img{height:42px}
+  .topbar .brand{font-weight:700;color:var(--green)}
+  .topbar .nav{margin-left:auto;display:flex;gap:14px;font-size:.85rem}
+  .topbar .nav a{color:var(--ink);text-decoration:none;opacity:.8}
+  .proto{background:#fff7e6;border-bottom:1px solid #f0dca8;color:#7a5b00;font-size:.8rem;padding:8px 22px;text-align:center}
+  .hero{background:linear-gradient(180deg,#eef3ef,#f6f8f6);padding:28px 22px 14px;border-bottom:1px solid var(--line)}
+  .hero-inner{max-width:620px;margin:0 auto}
+  .hero h1{margin:0 0 6px;font-family:Georgia,"Times New Roman",serif;font-size:1.9rem;color:var(--green)}
+  .hero p{margin:0;color:#3a443e}
+  .wrap{max-width:620px;margin:22px auto 50px;padding:0 22px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 24px 22px;box-shadow:0 8px 30px rgba(20,40,34,.05)}
+  .row{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+  .row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+  .row-2 .row{margin-bottom:0}
+  label{font-size:.72rem;font-weight:700;color:var(--green);letter-spacing:.04em;text-transform:uppercase}
+  .hint{font-weight:600;color:var(--muted);text-transform:none;letter-spacing:0}
+  input{padding:11px 12px;border:1px solid rgba(33,68,60,.20);border-radius:9px;font-size:.95rem;font-family:inherit;background:#fff;color:var(--ink);width:100%}
+  input:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
+  input.missing{border-color:#d99a3c;background:#fff9ef}
+  .section{margin:22px 0 10px;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#7a8a85;border-top:1px solid #eef1ee;padding-top:16px}
+  .section .sub{font-weight:600;letter-spacing:0;text-transform:none;color:var(--muted);font-size:.8rem;margin-top:3px}
+  /* subscription rows with segmented control */
+  .sub{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #f1f4f1}
+  .sub:last-of-type{border-bottom:0}
+  .sub-t{font-weight:700;color:#21302b;font-size:.96rem}
+  .sub-d{font-size:.8rem;color:var(--muted)}
+  .seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:#f3f6f3}
+  .seg-btn{border:0;background:transparent;padding:7px 13px;font-size:.8rem;font-weight:600;color:var(--muted);cursor:pointer;font-family:inherit;white-space:nowrap}
+  .seg-btn.active{background:var(--green);color:#fff}
+  .seg-btn.active[data-v="off"]{background:#b44b3c}
+  .actions{display:flex;gap:14px;align-items:center;margin-top:22px;flex-wrap:wrap}
+  button.save{background:var(--green);color:#fff;border:0;border-radius:999px;padding:12px 26px;font-weight:700;font-size:.96rem;cursor:pointer;font-family:inherit}
+  button.save:hover{background:var(--green-2)}
+  button.save:disabled{background:#7a8a85;cursor:not-allowed}
+  .note{font-size:.8rem;color:var(--muted)}
+  .help{font-size:.78rem;color:var(--muted);margin-top:2px}
+  .msg{font-size:.9rem;margin:14px 0 0;min-height:1em}
+  .msg.error{color:#b44b3c}
+  .msg.success{color:var(--accent);font-weight:600}
+  /* Site footer (matches the rest of livabletelluride.org) */
+  .site-foot{background:var(--green);color:#ecf2ee;padding:48px 0 24px;margin-top:40px}
+  .site-foot-inner{max-width:1100px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+  .foot-brand-logo{display:flex;align-items:center;gap:8px;font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:1.2rem;margin-bottom:6px;color:#fff}
+  .foot-brand-tag{font-size:.85rem;color:rgba(255,255,255,.75)}
+  .foot-col h4{font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;margin:0 0 12px;color:rgba(255,255,255,.85)}
+  .foot-col a{display:block;color:rgba(255,255,255,.75);text-decoration:none;font-size:.9rem;padding:2px 0}
+  .foot-col a:hover{color:#fff}
+  .foot-social{display:flex;gap:8px}
+  .foot-social img{width:32px;height:32px;object-fit:contain;opacity:.85}
+  .foot-social a:hover img{opacity:1}
+  .foot-mission{grid-column:1 / -1;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);margin-top:10px}
+  .foot-mission p{margin:0;font-size:.85rem;color:rgba(255,255,255,.7);text-align:center}
+  .foot-bottom{max-width:1100px;margin:24px auto 0;padding:16px 32px 0;border-top:1px solid rgba(255,255,255,.15);text-align:center;font-size:.82rem;color:rgba(255,255,255,.6)}
+  @media(max-width:760px){.site-foot-inner{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.site-foot-inner{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="" onerror="this.style.display='none'">
+    <div class="brand">Livable&nbsp;Telluride</div>
+    <nav class="nav">
+      <a href="https://livabletelluride.org/gov-hub.html">Gov-Hub</a>
+      <a href="https://livabletelluride.org/events.html">Events</a>
+      <a href="https://livabletelluride.org/housing.html">Housing</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Your profile</h1>
+      <p>Update your name, location, and which emails you get. We only change what you enter — nothing you leave alone.</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <div class="card">
+      <form id="profForm" onsubmit="return submitProfile(event)" novalidate>
+
+        <div class="row-2">
+          <div class="row"><label for="pFirst">First name</label><input id="pFirst" type="text" autocomplete="given-name"></div>
+          <div class="row"><label for="pLast">Last name</label><input id="pLast" type="text" autocomplete="family-name"></div>
+        </div>
+
+        <div class="row">
+          <label for="pEmail">Email <span class="hint">— the address you subscribed with</span></label>
+          <input id="pEmail" type="email" autocomplete="email" required placeholder="you@example.com">
+          <span class="help">Want to use a different email address? Just <a href="https://livabletelluride.org/hub-bub.html#signup">sign up with the new one</a> — that creates your new profile.</span>
+        </div>
+
+        <div class="row">
+          <label for="pTown">Town</label>
+          <input id="pTown" type="text" placeholder="e.g. Telluride, Mountain Village, Norwood, Ridgway">
+        </div>
+
+        <div class="section">Events near you <span class="sub">Optional — so we can flag events close to home.</span></div>
+        <div class="row-2">
+          <div class="row"><label for="pAddr">Your address or town</label><input id="pAddr" type="text" placeholder="Address or town"></div>
+          <div class="row"><label for="pRadius">Miles you’ll travel</label><input id="pRadius" type="number" min="1" max="200" placeholder="e.g. 25"></div>
+        </div>
+
+        <div class="section">Your subscriptions <span class="sub">Choose a subscription only to change it — “Keep as-is” leaves it untouched.</span></div>
+
+        <div class="sub">
+          <div><div class="sub-t">Weekly Update</div><div class="sub-d">The Friday look-ahead — upcoming meetings &amp; events.</div></div>
+          <div class="seg" data-interest="24642">
+            <button type="button" class="seg-btn active" data-v="">Keep as-is</button>
+            <button type="button" class="seg-btn" data-v="on">Subscribe</button>
+            <button type="button" class="seg-btn" data-v="off">Unsubscribe</button>
+          </div>
+        </div>
+        <div class="sub">
+          <div><div class="sub-t">Newsletter</div><div class="sub-d">Long-form posts when we publish them.</div></div>
+          <div class="seg" data-interest="24641">
+            <button type="button" class="seg-btn active" data-v="">Keep as-is</button>
+            <button type="button" class="seg-btn" data-v="on">Subscribe</button>
+            <button type="button" class="seg-btn" data-v="off">Unsubscribe</button>
+          </div>
+        </div>
+
+        <p class="msg" id="profMsg" role="status" aria-live="polite"></p>
+        <div class="actions">
+          <button type="submit" class="save" id="profSave">Save my info</button>
+          <span class="note">We only update what you change.</span>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="site-foot-inner">
+      <div class="foot-brand">
+        <div class="foot-brand-logo"><img src="https://livabletelluride.org/img/icons/community_powered_mountains.png" alt="" style="width:28px;height:28px;object-fit:contain;"> Livable Telluride</div>
+        <div class="foot-brand-tag">Inform. Connect. Engage. Together.</div>
+      </div>
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <a href="https://livabletelluride.org/">Home</a>
+        <a href="https://livabletelluride.org/#about">About Us</a>
+        <a href="https://livabletelluride.org/donate.html">Donate</a>
+        <a href="https://livabletelluride.org/profile.html">Your Profile</a>
+      </div>
+      <div class="foot-col">
+        <h4>Helpful Links</h4>
+        <a href="https://livabletelluride.org/privacy-policy.html">Privacy Policy</a>
+        <a href="https://livabletelluride.org/data-deletion.html">Accessibility</a>
+        <a href="mailto:info@livabletelluride.org">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Follow Us</h4>
+        <div class="foot-social">
+          <a href="mailto:info@livabletelluride.org" aria-label="Email"><img src="https://livabletelluride.org/img/icons/email_social.png" alt=""></a>
+        </div>
+      </div>
+      <div class="foot-mission">
+        <p>Livable Telluride is a community-powered initiative.</p>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 Livable Telluride. All rights reserved.</div>
+  </footer>
+
+<script>
+  // ── Wiring to the existing Cloudflare Worker (same contract as lt-profile.js) ──
+  const WORKER_ENDPOINT = 'https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/update-profile';
+  // Mailchimp "Email Subscriptions" interest group IDs (category 7915).
+  // Weekly Update = 24642, Newsletter = 24641.
+
+  function qp(name){ try{ return new URLSearchParams(location.search).get(name) || ''; }catch(_){ return ''; } }
+  function val(id){ const el=document.getElementById(id); return el ? el.value.trim() : ''; }
+  function setVal(id,v){ const el=document.getElementById(id); if(el&&v) el.value=v; }
+
+  // Pre-fill from the email "Update your info" link
+  //   /profile.html?email=*|EMAIL|*&fname=*|FNAME|*&lname=*|LNAME|*&town=*|MMERGE6|*&addr=*|MMERGE10|*&radius=*|MMERGE11|*
+  setVal('pFirst',  qp('fname'));
+  setVal('pLast',   qp('lname'));
+  setVal('pEmail',  qp('email'));
+  setVal('pTown',   qp('town'));
+  setVal('pAddr',   qp('addr'));
+  setVal('pRadius', qp('radius'));
+  ['pFirst','pLast'].forEach(id=>{ const el=document.getElementById(id); if(el) el.classList.toggle('missing', !el.value.trim()); });
+
+  // Segmented control behaviour
+  document.querySelectorAll('.seg').forEach(seg=>{
+    seg.querySelectorAll('.seg-btn').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        seg.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  });
+
+  window.submitProfile = function(event){
+    if(event&&event.preventDefault) event.preventDefault();
+    const msg=document.getElementById('profMsg'), btn=document.getElementById('profSave');
+    const email=val('pEmail');
+    if(!email || email.indexOf('@')<0){ msg.className='msg error'; msg.textContent='Please enter the email address you subscribed with.'; return false; }
+
+    // Only non-empty merge fields (never blanks existing data)
+    const fields={};
+    const f=val('pFirst');  if(f) fields.FNAME=f;
+    const l=val('pLast');   if(l) fields.LNAME=l;
+    const t=val('pTown');   if(t) fields.MMERGE6=t;
+    const a=val('pAddr');   if(a) fields.MMERGE10=a;
+    const r=val('pRadius'); if(r) fields.MMERGE11=r;
+
+    // Only subscription changes the person explicitly picked
+    const interests={};
+    document.querySelectorAll('.seg[data-interest]').forEach(seg=>{
+      const active=seg.querySelector('.seg-btn.active');
+      const v=active?active.getAttribute('data-v'):'';
+      if(v==='on')  interests[seg.getAttribute('data-interest')]=true;
+      if(v==='off') interests[seg.getAttribute('data-interest')]=false;
+    });
+
+    const payload={ email:email, fields:fields, interests:interests };
+
+    if(!Object.keys(fields).length && !Object.keys(interests).length){
+      msg.className='msg error'; msg.textContent='Nothing to update yet — fill in a field or change a subscription.'; return false;
+    }
+
+    msg.className='msg'; msg.textContent='Saving…'; btn.disabled=true;
+    fetch(WORKER_ENDPOINT,{ method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) })
+      .then(r=>r.json().catch(()=>({ok:false,msg:'Unexpected response.'})))
+      .then(resp=>{
+        btn.disabled=false;
+        if(resp&&resp.ok){ msg.className='msg success'; msg.textContent=resp.msg||'Saved — thank you!'; }
+        else { msg.className='msg error'; msg.textContent=(resp&&resp.msg)||'Something went wrong. Please try again.'; }
+      })
+      .catch(()=>{ btn.disabled=false; msg.className='msg error'; msg.textContent='Network error — please try again in a moment.'; });
+    return false;
+  };
+</script>
+</body>
+</html>
