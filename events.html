@@ -1521,7 +1521,9 @@
      // the (decoded) title or link and substitute a local brand logo.
      const ONGOING_EVENT_LOGO_OVERRIDES = [
        { match: /telluride theatre|telluride-theatre|shakespeare in the park/i,
-         logo: 'https://livabletelluride.org/logo/Telluride%20Theater.png' }
+         logo: 'https://livabletelluride.org/logo/Telluride%20Theater.png' },
+       { match: /chamber music|musicfest/i,
+         logo: 'https://livabletelluride.org/logo/Telluride%20Chamber.png' }
      ];
      function getAllFestivalsForYear(year){
        if (typeof TELLURIDE_FESTIVALS === 'undefined') return [];
