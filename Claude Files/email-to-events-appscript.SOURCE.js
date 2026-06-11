@@ -144,6 +144,8 @@ function processNewEmails() {
           var blob = getEventImageBlob(msg);
           if (blob) eventData.image = uploadEventImage(blob, session);
         }
+        // Last resort: a remote flyer linked in the HTML body (<img src>).
+        if (!eventData.image) eventData.image = extractImageFromHtml(msg.getBody());
         eventData.row = appendToSheet(sheet, eventData);                    // audit ('hold')
         eventData.firestoreOk = writeEventToFirestore(eventData, session);  // live review queue
         Logger.log('Queued: "' + eventData.title + '" (firestore=' + eventData.firestoreOk + ', image=' + (eventData.image ? 'yes' : 'no') + ')');
@@ -348,6 +350,16 @@ function parseEventEmail(msg) {
     return null;
   }
 
+  // Strip reply/forward QUOTE MARKERS ("> ") and MOBILE SIGNATURES always —
+  // iPhone/Gmail forwards quote with ">" and rarely include the "Forwarded
+  // message" marker, so without this they leak into the title/description
+  // (e.g. "> > Sent from my iPhone").
+  body = body.replace(/^([ \t]*>[ \t]?)+/gm, '');                        // "> " / "> > " quote prefixes
+  body = body.replace(/^\s*Sent from my [^\n]*$/gim, '');               // "Sent from my iPhone/iPad/…"
+  body = body.replace(/^\s*Get Outlook for [^\n]*$/gim, '');            // Outlook mobile signature
+  body = body.replace(/^\s*-{2,}\s*Original Message\s*-{2,}.*$/gim, ''); // "----- Original Message -----"
+  body = body.replace(/^\s*Begin forwarded message:.*$/gim, '');
+
   // Clean forwarded-message envelope lines — only when an envelope marker is
   // actually present (otherwise these strip a user's literal "Date:" line).
   if (/^-+\s*Forwarded message\s*-+/im.test(body)) {
@@ -369,6 +381,9 @@ function parseEventEmail(msg) {
   var location = extractField(body, subject, 'location') || '';
   var time = extractField(body, subject, 'time') || '';
   var description = extractDescription(body) || body.substring(0, 500).trim();
+  // Don't carry a now-empty body or a leftover signature through as the
+  // description — leave it blank so the reviewer fills it in from the flyer.
+  if (/^\s*$/.test(description) || /^sent from my /i.test(description.trim())) description = '';
   var sourceUrl = extractUrl(body) || '';
   var image = extractImageUrl(body) || '';
 
@@ -445,6 +460,22 @@ function extractUrl(body) {
 function extractImageUrl(body) {
   var m = body.match(/Flyer\s*image\s*[:]\s*(https?:\/\/[^\s<>"{}|\\^`\[\]]+)/i);
   return m ? m[1].trim() : '';
+}
+
+// Last-resort flyer: a remote image linked in the email's HTML body (<img src>).
+// Skips obvious tracking pixels / spacers. Best-effort — the reviewer can always
+// upload a flyer on the review page instead.
+function extractImageFromHtml(html) {
+  if (!html) return '';
+  var re = /<img[^>]+src\s*=\s*["']([^"']+)["']/gi;
+  var m;
+  while ((m = re.exec(html)) !== null) {
+    var u = m[1];
+    if (!/^https?:\/\//i.test(u)) continue;                                  // skip cid:/data:
+    if (/(spacer|pixel|tracking|track|beacon|1x1|open\?|width=1|\bs\.gif)/i.test(u)) continue;
+    return u;
+  }
+  return '';
 }
 
 function cleanSubject(subject) {
