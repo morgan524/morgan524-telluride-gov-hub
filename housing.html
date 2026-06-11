@@ -452,7 +452,31 @@
   <section class="hero">
     <div class="hero-inner">
       <h1>Housing</h1>
-      <p>Local rentals, deed-restricted ownership opportunities, tax-credit listings, and housing-program information for Telluride, Mountain Village, and the surrounding region.</p>
+      <p>Deed-restricted ownership opportunities, income-qualified rentals, and housing-program information for Telluride, Mountain Village, and the surrounding region. This page lists deed-restricted and income-qualified housing only — not free-market listings.</p>
+    </div>
+  </section>
+
+  <section class="housing-info" style="max-width:1100px;margin:18px auto 0;padding:0 20px;">
+    <div style="background:#fff;border:1px solid #e2e6e3;border-left:4px solid #1F4E3D;border-radius:10px;padding:18px 20px;">
+      <h2 style="margin:0 0 8px;font-size:1.12rem;color:#1F4E3D;">Who manages local housing</h2>
+      <p style="margin:0 0 10px;line-height:1.5;">
+        The <strong>San Miguel Regional Housing Authority (SMRHA)</strong> oversees qualification and
+        compliance for <strong>ownership deed-restricted properties</strong> within the Town of Telluride
+        and San Miguel County. Information on available properties, qualifications, and applications:
+      </p>
+      <ul style="margin:0 0 12px;padding-left:20px;line-height:1.7;">
+        <li><a href="https://smrha.org/property-listings/" target="_blank" rel="noopener">Property listings</a></li>
+        <li><a href="https://smrha.org/town-of-telluride/" target="_blank" rel="noopener">Town of Telluride deed-restricted properties</a></li>
+        <li><a href="https://smrha.org/applications/" target="_blank" rel="noopener">Applications</a></li>
+      </ul>
+      <p style="margin:0;line-height:1.5;">
+        <strong>Rentals</strong> are managed by the towns, not SMRHA. The
+        <strong>Telluride Housing Department</strong> manages the Town of Telluride's rental properties —
+        Shandoka, Virginia Placer, Tiny Homes, Sunnyside, Boarding House, and Voodoo
+        (<a href="https://www.telluride.gov/745/Town-Owned-Rental-Properties" target="_blank" rel="noopener">telluride.gov rental housing</a>).
+        <strong>Village Court Apartments</strong> is managed by the
+        <a href="https://townofmountainvillage.com/community/housing/village-court-apartments/" target="_blank" rel="noopener">Town of Mountain Village</a>.
+      </p>
     </div>
   </section>
 
@@ -530,18 +554,6 @@
         source: 'SMRHA',
         url: 'https://smrha.org/',
         img: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=450&fit=crop'
-      },
-      {
-        title: 'Aspen View Condo',
-        type: 'rent',
-        typeLabel: 'For Rent',
-        price: '$3,500/month',
-        beds: '2 Bedroom, 2 Bath',
-        location: 'Mountain Village',
-        summary: 'Furnished condo with ski-area access, hot tub privileges, mountain views, and underground parking.',
-        source: 'Private',
-        url: 'https://smrha.org/',
-        img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=450&fit=crop'
       }
     ];
 
@@ -588,11 +600,24 @@
       return html;
     }
 
-    /* ── Location-specific eligibility URL ── */
+    /* ── Eligibility URL by managing agency ──
+       Town of Telluride RENTALS (Shandoka, Virginia Placer, Tiny Homes,
+       Sunnyside, Boarding House, Voodoo) are run by the Telluride Housing
+       Department — not SMRHA. Village Court is run by the Town of Mountain
+       Village. Everything else (deed-restricted OWNERSHIP + county units) is
+       administered by SMRHA. Check the most specific cases first. */
     function eligibilityUrl(l) {
-      const text = ((l.address || '') + ' ' + (l.location || '')).toLowerCase();
+      const text = ((l.title || '') + ' ' + (l.address || '') + ' '
+                  + (l.location || '') + ' ' + (l.source || '')).toLowerCase();
+      // Town of Telluride rental housing
+      if (/town of telluride|shandoka|virginia placer|tiny home|sunnyside|boarding house|voodoo/.test(text))
+        return 'https://www.telluride.gov/745/Town-Owned-Rental-Properties';
+      // Village Court Apartments (Town of Mountain Village)
+      if (/village court|mountain village/.test(text))
+        return 'https://townofmountainvillage.com/community/housing/village-court-apartments/';
+      // SMRHA-administered deed-restricted ownership + county properties
       if (/pinion park|norwood/.test(text))          return 'https://smrha.org/pinion-park/';
-      if (/telluride/.test(text) && !/mountain village/.test(text)) return 'https://smrha.org/town-of-telluride/';
+      if (/telluride/.test(text))                    return 'https://smrha.org/town-of-telluride/';
       return 'https://smrha.org/san-miguel-county/';
     }
 
@@ -734,7 +759,13 @@
         s.onload = () => {
           try {
             if (typeof HOUSING_LISTINGS === 'undefined' || !Array.isArray(HOUSING_LISTINGS)) return;
-            const live = HOUSING_LISTINGS.map(l => ({
+            // This page lists deed-restricted / income-qualified housing only —
+            // never free-market listings. Drop anything market-rate as a guard.
+            const isFreeMarket = (l) =>
+              /market/i.test(l.type || '') ||
+              /craigslist|apartments\.com|zillow|realtor|trulia|\bmls\b|private/i.test(
+                (l.source || '') + ' ' + (l.url || ''));
+            const live = HOUSING_LISTINGS.filter(l => !isFreeMarket(l)).map(l => ({
               title: (l.title || '').replace(/^[^\w]*\s/, '').replace(/\s*\(deed[-\s]?restricted\)\s*$/i, ''),  // strip emoji + redundant "(Deed-Restricted)"
               type: l.type || '',
               typeLabel: detectTypeLabel(l.type),

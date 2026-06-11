@@ -7762,58 +7762,6 @@ const HOUSING_LISTINGS = [
     url: "https://www.telluride.gov/745/Town-Owned-Rental-Properties",
     note: "Waitlist-based. Apply through the Town of Telluride Rental Housing division."
   },
-  {
-    title: "Luxury Condo — 395 E Colorado Ave",
-    type: "market-rental",
-    address: "395 E Colorado Ave, Telluride, CO 81435",
-    lat: 37.9375,
-    lng: -107.8095,
-    beds: "3 Bedroom",
-    price: "$2,500/mo",
-    source: "Craigslist",
-    contact: {  },
-    url: "https://westslope.craigslist.org/apa/d/telluride-luxury-condo/7924056218.html",
-    note: "Long-term rental. 3BR condo on E Colorado Ave. Verify availability directly."
-  },
-  {
-    title: "1BR Apartment — 545 W Pacific Ave",
-    type: "market-rental",
-    address: "545 W Pacific Ave, Telluride, CO 81435",
-    lat: 37.9378,
-    lng: -107.8155,
-    beds: "1 Bedroom",
-    price: "$1,500/mo",
-    source: "Craigslist",
-    contact: {  },
-    url: "https://westslope.craigslist.org/apa/d/telluride-look-no-further-than-this/7919977718.html",
-    note: "Long-term rental. 1BR on W Pacific Ave. Verify availability directly."
-  },
-  {
-    title: "3BR House — 280 Mahoney Dr",
-    type: "market-rental",
-    address: "280 Mahoney Dr, Telluride, CO 81435",
-    lat: 37.941,
-    lng: -107.817,
-    beds: "3 Bedroom",
-    price: "$3,901/mo",
-    source: "Apartments.com",
-    contact: {  },
-    url: "https://www.apartments.com/280-mahoney-dr-telluride-co/zq5w36n/",
-    note: "Market-rate long-term rental. Contact listing agent on Apartments.com."
-  },
-  {
-    title: "1BR — 107 W Columbia Ave",
-    type: "market-rental",
-    address: "107 W Columbia Ave, Telluride, CO 81435",
-    lat: 37.9373,
-    lng: -107.8128,
-    beds: "1 Bedroom",
-    price: "$2,874/mo",
-    source: "Apartments.com",
-    contact: {  },
-    url: "https://www.apartments.com/107-w-columbia-ave-telluride-co/f1l2ss1/",
-    note: "Market-rate long-term rental in downtown Telluride."
-  }
 ];
 
 const RIDGWAY_AGENDA_MAP = {

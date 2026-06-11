@@ -276,7 +276,15 @@ async function main() {
     (l.source === 'SMRHA' && l.type === 'deed-sale' &&
      l.url && /smrha\.org/.test(l.url));
 
-  const keepListings = existingListings.filter(l => !isSmrhaAuto(l));
+  // Free-market / market-rate listings are NOT shown on this page — it's
+  // deed-restricted & income-qualified housing only. Drop anything that looks
+  // like a market-rate listing so they can never reappear via a refresh.
+  const isFreeMarket = (l) =>
+    /market/i.test(l.type || '') ||
+    /craigslist|apartments\.com|zillow|realtor|trulia|\bmls\b|private/i.test(
+      (l.source || '') + ' ' + (l.url || ''));
+
+  const keepListings = existingListings.filter(l => !isSmrhaAuto(l) && !isFreeMarket(l));
   const oldSmrha     = existingListings.filter(l =>  isSmrhaAuto(l));
   console.log('  Keeping ' + keepListings.length + ' non-SMRHA entries, replacing ' + oldSmrha.length + ' SMRHA entries');
 
