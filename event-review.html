@@ -32,6 +32,15 @@
     .extras { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border-soft); font-size: 0.86rem; color: var(--text-muted); }
     .extras a { color: var(--accent-green); font-weight: 600; }
     .extras div { margin: 3px 0; }
+    /* Editable review fields — admin can fix anything before approving */
+    .edit-label { display: block; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin: 12px 0 4px; }
+    .edit-input, .edit-textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--border-soft); border-radius: 9px; font-size: 0.96rem; font-family: var(--font-main); color: var(--text-primary); background: var(--bg-warm); box-sizing: border-box; }
+    .edit-input:focus, .edit-textarea:focus { outline: none; border-color: var(--accent-green); box-shadow: 0 0 0 3px rgba(47,122,95,0.12); }
+    .edit-title { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--forest); }
+    .edit-textarea { line-height: 1.55; resize: vertical; min-height: 96px; }
+    .edit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .edit-hint { font-size: 0.78rem; color: var(--text-muted); margin: 14px 0 0; }
+    @media (max-width: 520px) { .edit-grid { grid-template-columns: 1fr; } }
     .actions { margin-top: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 16px; border-radius: 11px; font-weight: 800; font-size: 0.98rem; border: none; cursor: pointer; }
     .btn-approve { background: linear-gradient(135deg, #2f7a5f, #21443c); color: #fff; }
@@ -98,16 +107,28 @@
       let h = '<div class="card" data-id="' + esc(id) + '">';
       if (img) h += '<img class="card-flyer" src="' + esc(img) + '" alt="" onerror="this.style.display=\'none\'">';
       h += '<div class="card-body">';
-      h += '<h2>' + (esc(d.title) || 'Untitled event') + '</h2>';
-      if (d.date)     h += '<div class="meta-row">' + icon.cal + '<span>' + esc(fmtDate(d.date)) + '</span></div>';
-      if (d.time)     h += '<div class="meta-row">' + icon.clock + '<span>' + esc(d.time) + '</span></div>';
-      if (d.location) h += '<div class="meta-row">' + icon.pin + '<span>' + esc(d.location) + '</span></div>';
-      if (d.description) h += '<div class="desc">' + esc(d.description) + '</div>';
+      // Every field is editable so you can fix anything (esp. the summary)
+      // before publishing. Approve saves these values; Deny ignores them.
+      h += '<label class="edit-label">Title</label>'
+         + '<input class="edit-input edit-title" data-field="title" value="' + esc(d.title || '') + '">';
+      h += '<div class="edit-grid">'
+         + '<div><label class="edit-label">Date</label>'
+         + '<input class="edit-input" data-field="date" value="' + esc(d.date || '') + '" placeholder="e.g. 2026-06-21 or June 21, 2026"></div>'
+         + '<div><label class="edit-label">Time</label>'
+         + '<input class="edit-input" data-field="time" value="' + esc(d.time || '') + '" placeholder="e.g. 6:00 PM"></div>'
+         + '</div>';
+      h += '<label class="edit-label">Location</label>'
+         + '<input class="edit-input" data-field="location" value="' + esc(d.location || '') + '">';
+      h += '<label class="edit-label">Description / summary</label>'
+         + '<textarea class="edit-textarea" data-field="description" rows="6">' + esc(d.description || '') + '</textarea>';
+      h += '<label class="edit-label">Link (optional)</label>'
+         + '<input class="edit-input" data-field="url" value="' + esc(d.url || '') + '" placeholder="https://…">';
       const ex = [];
-      if (url) ex.push('<div>More info: <a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(url) + '</a></div>');
       if (d.name || d.email) ex.push('<div>Submitted by: ' + esc(d.name || '') + (d.email ? ' &lt;' + esc(d.email) + '&gt;' : '') + '</div>');
       if (d.org) ex.push('<div>Organization: ' + esc(d.org) + '</div>');
+      if (d.emailFrom) ex.push('<div>Forwarded from: ' + esc(d.emailFrom) + '</div>');
       if (ex.length) h += '<div class="extras">' + ex.join('') + '</div>';
+      h += '<p class="edit-hint">Edit any field above, then Approve to publish your changes — or Deny.</p>';
       h += '<div class="actions">'
         + '<button class="btn btn-approve" data-act="approved" data-id="' + esc(id) + '">✓ Approve &amp; Publish</button>'
         + '<button class="btn btn-deny" data-act="denied" data-id="' + esc(id) + '">✕ Deny</button>'
@@ -119,10 +140,17 @@
     function decide(id, status, btn) {
       const card = btn.closest('.card');
       card.querySelectorAll('button').forEach(b => b.disabled = true);
-      db.collection('event_submissions').doc(id).update({
+      const update = {
         status: status,
         reviewedAt: firebase.firestore.FieldValue.serverTimestamp()
-      }).then(() => {
+      };
+      // On approve, persist any edits the admin made to the fields.
+      if (status === 'approved') {
+        card.querySelectorAll('[data-field]').forEach(el => {
+          update[el.getAttribute('data-field')] = (el.value || '').trim();
+        });
+      }
+      db.collection('event_submissions').doc(id).update(update).then(() => {
         card.style.transition = 'opacity .3s'; card.style.opacity = '0.35';
         const note = document.createElement('div');
         note.style.cssText = 'padding:6px 24px 16px;font-weight:700;color:' + (status === 'approved' ? 'var(--forest)' : '#a33') + ';';
