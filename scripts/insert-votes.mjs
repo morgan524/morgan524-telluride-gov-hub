@@ -61,6 +61,7 @@ const ENTITY_ID_PREFIX = {
   pc:      'pv',     // SMC Planning Commission          → id:'pv2024-...'
   planning:'pv',     // alias
   telluride:'v',     // Town of Telluride                → id:'v2025-...'
+  rico:    'rico',   // Town of Rico Board of Trustees   → id:'rico2025-...'
 };
 const tracker = readFileSync(TRACKER_PATH, 'utf8');
 const idPrefix = ENTITY_ID_PREFIX[ENTITY] || ENTITY;

@@ -79,5 +79,26 @@
     "idPrefix": "pc",
     "rosters": [],
     "_warning": "Roster intentionally empty — fill from v2/vote-tracker.html PC_*_ALL_MEMBERS before using."
+  },
+
+  "rico": {
+    "label": "Town of Rico Board of Trustees",
+    "meetingPrefix": "Rico Board of Trustees",
+    "idPrefix": "rico",
+    "rosters": [
+      {
+        "start": "2024-01-01",
+        "end":   "2025-11-19",
+        "members": ["fallon", "hibbard", "willis", "poston", "vernadakis", "dillsworth", "condon"],
+        "_note": "EARLY roster, through the Nov 19 2025 pre-swearing-in vote. Mayor Fallon, Mayor Pro Tem Hibbard. Condon resigned eff. Oct 16 2025 (often absent before that); Dillsworth frequently absent. Tag those votes era:'EARLY'."
+      },
+      {
+        "start": "2025-11-19",
+        "end":   null,
+        "members": ["fallon", "hibbard", "willis", "poston", "vernadakis", "clark", "anderson"],
+        "_note": "LATE roster. Clark & Anderson sworn in Nov 19 2025 (replacing Dillsworth & Condon). Tag 2025 votes era:'LATE', 2026 votes era:'2026'."
+      }
+    ],
+    "_note": "Rico meets the 3rd Wednesday monthly at 7 PM. Minutes are PDFs linked from https://townofrico.colorado.gov/government/board-of-trustees with clean roll-call votes. IMPORTANT: each RICO_VOTE_ITEMS entry must carry an `era` field ('EARLY'|'LATE'|'2026') — renderRicoHeatmap() filters by era, not date, because the Nov 19 2025 meeting spans the board turnover."
   }
 }

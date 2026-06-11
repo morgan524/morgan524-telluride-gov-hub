@@ -258,6 +258,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         <option value="drb">Mountain Village Design Review</option>
         <option value="bocc">San Miguel BOCC</option>
         <option value="planning">San Miguel Planning Commission</option>
+        <option value="rico">Town of Rico Board of Trustees</option>
       </select>
     </div>
     <div class="filter-group">
@@ -342,6 +343,270 @@ const BOCC_ALL_MEMBERS = [
 ];
 const BOCC_2024 = ['brown', 'waring', 'holstrom'];
 const BOCC_2025 = ['brown', 'waring', 'gleason'];
+
+
+/* ─── Town of Rico Board of Trustees roster ──────────────────── */
+const RICO_ALL_MEMBERS = [
+  { id:'fallon',     name:'Patrick Fallon',  shortName:'Fallon',     title:'Mayor' },
+  { id:'hibbard',    name:'Cristal Hibbard', shortName:'Hibbard',    title:'Mayor Pro Tem' },
+  { id:'willis',     name:'Gerrish Willis',  shortName:'Willis',     title:'Trustee' },
+  { id:'poston',     name:'Scott Poston',    shortName:'Poston',     title:'Trustee' },
+  { id:'vernadakis', name:'Benn Vernadakis', shortName:'Vernadakis', title:'Trustee' },
+  { id:'clark',      name:'Thomas Clark',    shortName:'Clark',      title:'Trustee (Nov 2025+)' },
+  { id:'anderson',   name:'Gregg Anderson',  shortName:'Anderson',   title:'Trustee (Nov 2025+)' },
+  { id:'dillsworth', name:'Joe Dillsworth',  shortName:'Dillsworth', title:'Trustee (through Nov 2025)' },
+  { id:'condon',     name:'Chris Condon',    shortName:'Condon',     title:'Trustee (resigned Oct 2025)' },
+];
+// Board composition by era. The board turned over on Nov 19, 2025, so 2025
+// splits into an EARLY roster (through the Nov 19 pre-swearing-in vote) and a
+// LATE roster (Nov 19 post-swearing-in onward). Each vote carries an `era`.
+const RICO_2025_EARLY = ['fallon','hibbard','willis','poston','vernadakis','dillsworth','condon'];
+const RICO_2025_LATE  = ['fallon','hibbard','willis','poston','vernadakis','clark','anderson'];
+const RICO_2026       = ['fallon','hibbard','willis','poston','vernadakis','clark','anderson'];
+/* ─── Town of Rico Board of Trustees vote items ───
+   Source: Rico Town Board meeting minutes (PDF, linked per row).
+   Roster turned over Nov 19, 2025 mid-meeting: outgoing Dillsworth &
+   Condon (Condon resigned Oct 16, 2025) -> incoming Clark & Anderson,
+   sworn in that night. era: EARLY (through the Nov 19 pre-swearing-in
+   budget vote) | LATE (Nov 19 post-swearing-in onward) | 2026.
+   Procedural votes (agenda, minutes, bills, adjournment, continuances)
+   are omitted. votes: id -> 'Yes'|'No'|'Recused'|'Abstain'|'Absent' */
+const RICO_VOTE_ITEMS = [
+  {
+    id:"rico2025-01", date:"2025-09-17", year:2025, era:"EARLY",
+    meeting:"Rico Board of Trustees — Sep 17, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/September%2017%20minutes.pdf",
+    title:"Water usage fee waiver — Account 206 (Mike Curran)",
+    description:"Motion to waive the fee and reduce Account 206 to the standard monthly rate of $42. Moved by Vernadakis, seconded by Condon. Passed 6-0 (Dillsworth absent).",
+    tags:["Utilities"], outcome:"Passed", tally:"6-0",
+    votes:{ fallon:"Yes", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Yes", dillsworth:"Absent", condon:"Yes" }
+  },
+  {
+    id:"rico2025-02", date:"2025-09-17", year:2025, era:"EARLY",
+    meeting:"Rico Board of Trustees — Sep 17, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/September%2017%20minutes.pdf",
+    title:"Resolution 2025-04 — Colorado Parks & Wildlife trail grant application",
+    description:"Resolution supporting a grant application for funds from the Colorado Parks and Wildlife non-motorized trail fund. Passed 6-0 (Dillsworth absent).",
+    tags:["Grants", "Parks & Trails"], outcome:"Passed", tally:"6-0",
+    votes:{ fallon:"Yes", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Yes", dillsworth:"Absent", condon:"Yes" }
+  },
+  {
+    id:"rico2025-03", date:"2025-09-17", year:2025, era:"EARLY",
+    meeting:"Rico Board of Trustees — Sep 17, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/September%2017%20minutes.pdf",
+    title:"Liquor license renewal — Rock Laubster LLC (Mountain Top Liquor)",
+    description:"Motion to approve the liquor license renewal for Rock Laubster LLC, DBA Mountain Top Liquor. Trustee Poston recused himself. Passed 5-0 (Poston recused, Dillsworth absent).",
+    tags:["Liquor License"], outcome:"Passed", tally:"5-0 (1 recused)",
+    votes:{ fallon:"Yes", hibbard:"Yes", willis:"Yes", poston:"Recused", vernadakis:"Yes", dillsworth:"Absent", condon:"Yes" }
+  },
+  {
+    id:"rico2025-04", date:"2025-09-17", year:2025, era:"EARLY",
+    meeting:"Rico Board of Trustees — Sep 17, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/September%2017%20minutes.pdf",
+    title:"Liquor license renewal — Boulder City Mixology (Enterprise Bar & Grill)",
+    description:"Motion to approve the liquor license renewal for Boulder City Mixology LLC, DBA The Enterprise Bar and Grill. Passed 6-0 (Dillsworth absent).",
+    tags:["Liquor License"], outcome:"Passed", tally:"6-0",
+    votes:{ fallon:"Yes", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Yes", dillsworth:"Absent", condon:"Yes" }
+  },
+  {
+    id:"rico2025-05", date:"2025-10-15", year:2025, era:"EARLY",
+    meeting:"Rico Board of Trustees — Oct 15, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/october%202025%20minutes.pdf",
+    title:"Appointment of 2025 general election judges",
+    description:"Motion to approve the 2025 election judges: Mary Hagan, Genevieve Yellowman, and Laurie Adams. Passed 4-0 (Fallon, Dillsworth, Condon absent).",
+    tags:["Elections", "Appointments"], outcome:"Passed", tally:"4-0",
+    votes:{ fallon:"Absent", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Yes", dillsworth:"Absent", condon:"Absent" }
+  },
+  {
+    id:"rico2025-06", date:"2025-10-15", year:2025, era:"EARLY",
+    meeting:"Rico Board of Trustees — Oct 15, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/october%202025%20minutes.pdf",
+    title:"Resolution 2025-05 — supporting ballot measures 1B and 1C",
+    description:"Resolution of the Board supporting ballot measure 1B and ballot measure 1C. Passed 4-0 (Fallon, Dillsworth, Condon absent).",
+    tags:["Elections", "Policy"], outcome:"Passed", tally:"4-0",
+    votes:{ fallon:"Absent", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Yes", dillsworth:"Absent", condon:"Absent" }
+  },
+  {
+    id:"rico2025-07", date:"2025-10-15", year:2025, era:"EARLY",
+    meeting:"Rico Board of Trustees — Oct 15, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/october%202025%20minutes.pdf",
+    title:"Quarter 3 financial statements",
+    description:"Motion to approve the Quarter 3 financial statements. Passed 4-0 (Fallon, Dillsworth, Condon absent).",
+    tags:["Budget & Finance"], outcome:"Passed", tally:"4-0",
+    votes:{ fallon:"Absent", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Yes", dillsworth:"Absent", condon:"Absent" }
+  },
+  {
+    id:"rico2025-08", date:"2025-10-15", year:2025, era:"EARLY",
+    meeting:"Rico Board of Trustees — Oct 15, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/october%202025%20minutes.pdf",
+    title:"Ordinance 2025-05 (first reading) — 2025 budget amendment",
+    description:"First reading of Ordinance 2025-05 amending the year 2025 budget and approving supplemental appropriations of money. Passed 4-0 (Fallon, Dillsworth, Condon absent).",
+    tags:["Budget & Finance"], outcome:"Passed", tally:"4-0",
+    votes:{ fallon:"Absent", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Yes", dillsworth:"Absent", condon:"Absent" }
+  },
+  {
+    id:"rico2025-09", date:"2025-10-15", year:2025, era:"EARLY",
+    meeting:"Rico Board of Trustees — Oct 15, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/october%202025%20minutes.pdf",
+    title:"Letter of support — Rico Trail Alliance / Rico Center grant application",
+    description:"Motion to approve a letter of support for the Rico Trail Alliance Rico Center grant application. Mayor Pro Tem Hibbard abstained. Passed 3-0 (Hibbard abstained; Fallon, Dillsworth, Condon absent).",
+    tags:["Grants", "Parks & Trails"], outcome:"Passed", tally:"3-0 (1 abstain)",
+    votes:{ fallon:"Absent", hibbard:"Abstain", willis:"Yes", poston:"Yes", vernadakis:"Yes", dillsworth:"Absent", condon:"Absent" }
+  },
+  {
+    id:"rico2025-10", date:"2025-10-15", year:2025, era:"EARLY",
+    meeting:"Rico Board of Trustees — Oct 15, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/october%202025%20minutes.pdf",
+    title:"MOU with Rico Fire Protection District — fire station property transfer",
+    description:"MOU between the Town of Rico and the Rico Fire Protection District regarding the transfer of fire station property (lots 9, 10, 11, and 12, block 2). Trustee Vernadakis abstained. Passed 3-0 (Vernadakis abstained; Fallon, Dillsworth, Condon absent).",
+    tags:["Land Use", "Public Safety"], outcome:"Passed", tally:"3-0 (1 abstain)",
+    votes:{ fallon:"Absent", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Abstain", dillsworth:"Absent", condon:"Absent" }
+  },
+  {
+    id:"rico2025-11", date:"2025-10-15", year:2025, era:"EARLY",
+    meeting:"Rico Board of Trustees — Oct 15, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/october%202025%20minutes.pdf",
+    title:"Accept resignation of Trustee Chris Condon",
+    description:"Motion to accept the letter of resignation from Trustee Chris Condon, effective 10/16/2025. Passed 4-0 (Fallon, Dillsworth, Condon absent).",
+    tags:["Appointments"], outcome:"Passed", tally:"4-0",
+    votes:{ fallon:"Absent", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Yes", dillsworth:"Absent", condon:"Absent" }
+  },
+  {
+    id:"rico2025-12", date:"2025-11-19", year:2025, era:"EARLY",
+    meeting:"Rico Board of Trustees — Nov 19, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/nov%2019_%202025%20minutes.pdf",
+    title:"Ordinance 2025-05 (second reading) — 2025 budget amendment",
+    description:"Second reading of Ordinance 2025-05 amending the year 2025 budget and approving supplemental appropriations. Taken before the new trustees were sworn in. Passed 5-0 (Dillsworth, Condon absent).",
+    tags:["Budget & Finance"], outcome:"Passed", tally:"5-0",
+    votes:{ fallon:"Yes", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Yes", dillsworth:"Absent", condon:"Absent" }
+  },
+  {
+    id:"rico2025-13", date:"2025-11-19", year:2025, era:"LATE",
+    meeting:"Rico Board of Trustees — Nov 19, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/nov%2019_%202025%20minutes.pdf",
+    title:"Ordinance 2025-06 (first reading) — 2026 town budget & mill levies",
+    description:"First reading of Ordinance 2025-06 adopting the year 2026 town budget, appropriating sums of money, and setting and certifying town mill levies, with the Manse improvements added as a line item of $43,425. Passed 7-0.",
+    tags:["Budget & Finance"], outcome:"Passed", tally:"7-0",
+    votes:{ fallon:"Yes", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Yes", clark:"Yes", anderson:"Yes" }
+  },
+  {
+    id:"rico2025-14", date:"2025-11-19", year:2025, era:"LATE",
+    meeting:"Rico Board of Trustees — Nov 19, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/nov%2019_%202025%20minutes.pdf",
+    title:"Manse renovation — code-compliance of the Presbyterian Manse",
+    description:"Motion to approve the proposal from Uncle Woody’s Woodwork for code-compliance and renovation of the one-bedroom house at 110 E. Mantz Avenue, not to exceed $33,425 (total project cost not to exceed $43,425). Mayor Fallon and Trustee Vernadakis recused themselves due to financial interest. Passed 5-0 (2 recused).",
+    tags:["Housing", "Budget & Finance"], outcome:"Passed", tally:"5-0 (2 recused)",
+    votes:{ fallon:"Recused", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Recused", clark:"Yes", anderson:"Yes" }
+  },
+  {
+    id:"rico2025-15", date:"2025-11-19", year:2025, era:"LATE",
+    meeting:"Rico Board of Trustees — Nov 19, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/nov%2019_%202025%20minutes.pdf",
+    title:"Ordinance 2025-07 (first reading) — repealing Ordinance no. 241",
+    description:"First reading of Ordinance 2025-07, an ordinance of the Town of Rico repealing Ordinance No. 241. Passed 7-0.",
+    tags:["Policy"], outcome:"Passed", tally:"7-0",
+    votes:{ fallon:"Yes", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Yes", clark:"Yes", anderson:"Yes" }
+  },
+  {
+    id:"rico2025-16", date:"2025-11-19", year:2025, era:"LATE",
+    meeting:"Rico Board of Trustees — Nov 19, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/nov%2019_%202025%20minutes.pdf",
+    title:"Ordinance 2025-08 (first reading) — street reconstruction & maintenance fund mill levy",
+    description:"First reading of Ordinance 2025-08 amending Ordinances 2001-7 and 2005-5 to implement the mill-levy and revenue reallocation for the Street Reconstruction and Maintenance Fund as authorized by the Rico electorate at the November 4, 2025 election. Passed 7-0.",
+    tags:["Budget & Finance", "Streets"], outcome:"Passed", tally:"7-0",
+    votes:{ fallon:"Yes", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Yes", clark:"Yes", anderson:"Yes" }
+  },
+  {
+    id:"rico2025-17", date:"2025-11-19", year:2025, era:"LATE",
+    meeting:"Rico Board of Trustees — Nov 19, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/nov%2019_%202025%20minutes.pdf",
+    title:"Water usage fee waiver — Account 120 (Jude Guthridge)",
+    description:"Motion to approve a reduction of Account No. 120’s water bill from $2,362 to the standard monthly rate of $42. Passed 7-0.",
+    tags:["Utilities"], outcome:"Passed", tally:"7-0",
+    votes:{ fallon:"Yes", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Yes", clark:"Yes", anderson:"Yes" }
+  },
+  {
+    id:"rico2025-18", date:"2025-12-17", year:2025, era:"LATE",
+    meeting:"Rico Board of Trustees — Dec 17, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/December%202025%20minutes.pdf",
+    title:"Ordinance 2025-07 (second reading) — repealing Ordinance no. 241",
+    description:"Second reading of Ordinance 2025-07, an ordinance of the Town of Rico repealing Ordinance No. 241. Passed 6-0 (Vernadakis absent).",
+    tags:["Policy"], outcome:"Passed", tally:"6-0",
+    votes:{ fallon:"Yes", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Absent", clark:"Yes", anderson:"Yes" }
+  },
+  {
+    id:"rico2025-19", date:"2025-12-17", year:2025, era:"LATE",
+    meeting:"Rico Board of Trustees — Dec 17, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/December%202025%20minutes.pdf",
+    title:"Resolution 2025-06 — 2026 water rate & fee schedule",
+    description:"Resolution 2025-06 setting the water rate and fee schedule for January 1–December 31, 2026, and providing for the annual adjustment of the water rate and fee schedule. Passed 6-0 (Vernadakis absent).",
+    tags:["Utilities"], outcome:"Passed", tally:"6-0",
+    votes:{ fallon:"Yes", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Absent", clark:"Yes", anderson:"Yes" }
+  },
+  {
+    id:"rico2025-20", date:"2025-12-17", year:2025, era:"LATE",
+    meeting:"Rico Board of Trustees — Dec 17, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/December%202025%20minutes.pdf",
+    title:"Appointment of Planning Commission seats",
+    description:"Motion to appoint Andrew Romanyshyn and Kiplynn Smith to two-year Planning Commission terms starting January 2026. Passed 6-0 (Vernadakis absent).",
+    tags:["Appointments", "Land Use"], outcome:"Passed", tally:"6-0",
+    votes:{ fallon:"Yes", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Absent", clark:"Yes", anderson:"Yes" }
+  },
+  {
+    id:"rico2025-21", date:"2025-12-17", year:2025, era:"LATE",
+    meeting:"Rico Board of Trustees — Dec 17, 2025",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/December%202025%20minutes.pdf",
+    title:"Appointment to SMART Board of Directors",
+    description:"Motion to appoint Gregg Anderson to the San Miguel Authority for Regional Transportation (SMART) Board of Directors seat. Passed 6-0 (Vernadakis absent).",
+    tags:["Appointments"], outcome:"Passed", tally:"6-0",
+    votes:{ fallon:"Yes", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Absent", clark:"Yes", anderson:"Yes" }
+  },
+  {
+    id:"rico2026-01", date:"2026-01-28", year:2026, era:"2026",
+    meeting:"Rico Board of Trustees — Jan 28, 2026",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/January%202026%20minutes.pdf",
+    title:"Zone Amendment — Atlantic Cable Headframe parcel (Endless Possibilities LLC)",
+    description:"Motion to approve the zone amendment from historic commercial to commercial for the Atlantic Cable Headframe parcel, Endless Possibilities LLC applicant. Passed 7-0.",
+    tags:["Land Use"], outcome:"Passed", tally:"7-0",
+    votes:{ fallon:"Yes", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Yes", clark:"Yes", anderson:"Yes" }
+  },
+  {
+    id:"rico2026-02", date:"2026-01-28", year:2026, era:"2026",
+    meeting:"Rico Board of Trustees — Jan 28, 2026",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/January%202026%20minutes.pdf",
+    title:"Special Use Permit — community microgrid (San Miguel Power Association)",
+    description:"Motion to approve a Special Use Permit for a community microgrid at 101 South Glasgow (San Miguel Power Association applicant), with nine conditions covering fire-safety documentation, suppression equipment, emergency-response training, expansion limits, lighting, performance reporting, decommissioning, a 55 dB noise cap, and Fire Marshal approval. Passed 7-0.",
+    tags:["Land Use", "Utilities"], outcome:"Passed", tally:"7-0",
+    votes:{ fallon:"Yes", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Yes", clark:"Yes", anderson:"Yes" }
+  },
+  {
+    id:"rico2026-03", date:"2026-01-28", year:2026, era:"2026",
+    meeting:"Rico Board of Trustees — Jan 28, 2026",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/January%202026%20minutes.pdf",
+    title:"Letter of support — Rico Fire Protection District EMS & Trauma (EMTS) grant",
+    description:"Motion to approve a letter of support for the Rico Fire Protection District EMS & Trauma Services (EMTS) grant request. Trustees Vernadakis and Anderson recused themselves. Passed 5-0 (2 recused).",
+    tags:["Grants", "Public Safety"], outcome:"Passed", tally:"5-0 (2 recused)",
+    votes:{ fallon:"Yes", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Recused", clark:"Yes", anderson:"Recused" }
+  },
+  {
+    id:"rico2026-04", date:"2026-01-28", year:2026, era:"2026",
+    meeting:"Rico Board of Trustees — Jan 28, 2026",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/January%202026%20minutes.pdf",
+    title:"Quarter 4 financial statements",
+    description:"Motion to approve the Quarter 4 financial statements. Passed 7-0.",
+    tags:["Budget & Finance"], outcome:"Passed", tally:"7-0",
+    votes:{ fallon:"Yes", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Yes", clark:"Yes", anderson:"Yes" }
+  },
+  {
+    id:"rico2026-05", date:"2026-01-28", year:2026, era:"2026",
+    meeting:"Rico Board of Trustees — Jan 28, 2026",
+    minutesUrl:"https://townofrico.colorado.gov/sites/townofrico/files/documents/January%202026%20minutes.pdf",
+    title:"Liquor license renewal — Rico High INC (Prospector)",
+    description:"Motion to approve a liquor license renewal for Rico High INC, DBA Prospector, upon payment of their fees. Passed 7-0.",
+    tags:["Liquor License"], outcome:"Passed", tally:"7-0",
+    votes:{ fallon:"Yes", hibbard:"Yes", willis:"Yes", poston:"Yes", vernadakis:"Yes", clark:"Yes", anderson:"Yes" }
+  },
+];
 
 /* ─── BOCC vote items (2024) ─────────────────────────────────── */
 // Source: San Miguel County BOCC meeting minutes via Granicus / CivicClerk
@@ -6687,6 +6952,7 @@ function renderHeatmapByCategory() {
   if (ent === 'planning') { renderPlanningHeatmap();  return; }
   if (ent === 'tomv')     { renderTomvHeatmap();      return; }
   if (ent === 'drb')      { renderDrbHeatmap();       return; }
+  if (ent === 'rico')     { renderRicoHeatmap();      return; }
 
   const yearSel = document.getElementById('filter-year').value;
 
@@ -6837,6 +7103,8 @@ function switchEntity() {
     years = [['', 'All years'], ['2026','2026'], ['2025','2025'], ['2024','2024']];
   } else if (ent === 'drb') {
     years = [['', 'All years'], ['2026','2026'], ['2025','2025'], ['2024','2024']];
+  } else if (ent === 'rico') {
+    years = [['', 'All years'], ['2026','2026'], ['2025','2025']];
   } else {
     years = [['', 'All years'], ['2024','2024']];
   }
@@ -6958,6 +7226,124 @@ function renderBoccHeatmap() {
   });
 
   if (!html) html = `<div class="empty-state"><p>No BOCC votes for the selected filters.<br>More meetings being added — <a href="https://sanmiguelcoco.portal.civicclerk.com/search?q=&filters=Minutes&category_id=26" target="_blank">view all BOCC minutes</a>.</p></div>`;
+  document.getElementById('heatmap-content').innerHTML = html;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   TOWN OF RICO HEATMAP
+   The board turned over on Nov 19, 2025, so 2025 renders as two
+   eras (EARLY = through Nov 18, LATE = Nov 19+), each date-bounded
+   so the right seven seats show for each meeting.
+══════════════════════════════════════════════════════════════ */
+function renderRicoHeatmap() {
+  const yearSel = document.getElementById('filter-year').value;
+  const catSel  = hmCatFilter;
+
+  const ERA_2026  = { label:'2026 Rico Board of Trustees', members:RICO_2026, eraKey:'2026' };
+  const ERA_LATE  = { label:'2025 Rico Board of Trustees (Nov 19 – Dec)', members:RICO_2025_LATE, eraKey:'LATE' };
+  const ERA_EARLY = { label:'2025 Rico Board of Trustees (Jan – Nov 19)', members:RICO_2025_EARLY, eraKey:'EARLY' };
+
+  const eras = yearSel === '2026'
+    ? [ERA_2026]
+    : yearSel === '2025'
+    ? [ERA_LATE, ERA_EARLY]
+    : [ERA_2026, ERA_LATE, ERA_EARLY];
+
+  let html = '';
+  eras.forEach(era => {
+    // Filter by the explicit `era` tag, not date — the Nov 19, 2025 meeting
+    // spans the board turnover (the pre-swearing-in vote belongs to EARLY,
+    // the rest of that night to LATE), which a date cutoff can't split.
+    let eraVotes = RICO_VOTE_ITEMS.filter(v => {
+      if (v.era !== era.eraKey) return false;
+      if (catSel && !v.tags.includes(catSel)) return false;
+      return true;
+    }).sort((a,b) => b.date.localeCompare(a.date));
+
+    if (!eraVotes.length) return;
+
+    const mems = era.members.map(id => RICO_ALL_MEMBERS.find(m => m.id === id)).filter(Boolean);
+
+    const stats = {};
+    mems.forEach(m => {
+      let yes = 0, no = 0, total = 0, withMaj = 0;
+      eraVotes.forEach(v => {
+        const mv = v.votes[m.id];
+        if (mv === 'Yes' || mv === 'No') {
+          total++;
+          if (mv === 'Yes') yes++; else no++;
+          const onWinningSide = (v.outcome === 'Passed' && mv === 'Yes') ||
+                                (v.outcome === 'Failed'  && mv === 'No');
+          if (onWinningSide) withMaj++;
+        }
+      });
+      stats[m.id] = { yes, no, total, withMaj };
+    });
+
+    function pctClass(pct) {
+      return pct >= 80 ? 'hm-pct-high' :
+             pct >= 60 ? 'hm-pct-mid-high' :
+             pct >= 40 ? 'hm-pct-mid' : 'hm-pct-low';
+    }
+
+    html += `<div class="heatmap-wrap">
+      <div class="heatmap-title">${era.label}</div>
+      <table class="heatmap-table">
+        <thead>
+          <tr>
+            <th class="vote-col-th">Vote</th>
+            ${mems.map(m => `<th class="hm-member-header">${m.name}<span class="mem-role">${m.title}</span></th>`).join('')}
+            <th class="result-col-th">Result</th>
+          </tr>
+          <tr>
+            <td class="stats-label-cell">Summary</td>
+            ${mems.map(m => {
+              const s = stats[m.id];
+              const pct    = s.total ? Math.round(s.yes / s.total * 100) : 0;
+              const majPct = s.total ? Math.round(s.withMaj / s.total * 100) : 0;
+              return `<td class="hm-stats-cell ${pctClass(pct)}">
+                <span class="pct-num">${pct}%</span>
+                <span class="pct-frac">${s.yes}/${s.total} Yes</span>
+                <span class="pct-maj">${majPct}% w/ majority</span>
+                <span class="pct-total">${s.total} votes cast</span>
+              </td>`;
+            }).join('')}
+            <td style="background:var(--gray-100)"></td>
+          </tr>
+        </thead>
+        <tbody>`;
+
+    eraVotes.forEach(v => {
+      const dateStr = v.date.replace(/^(\d{4})-(\d{2})-(\d{2})$/, (_,y,mo,d) =>
+        `${['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+mo]} ${+d}`);
+      html += `<tr>
+        <td>
+          <a href="${v.minutesUrl}" target="_blank" style="text-decoration:none">
+            <span class="hm-vote-title">${v.title}</span>
+          </a>
+          <span class="hm-vote-meta">${dateStr} · ${v.tags[0]}</span>
+        </td>`;
+      mems.forEach(m => {
+        const mv = v.votes[m.id];
+        let cls = 'hm-nc', lbl = '';
+        if      (mv === 'Yes')     { cls = 'hm-yes-str'; lbl = 'YES'; }
+        else if (mv === 'No')      { cls = 'hm-no-str';  lbl = 'NO'; }
+        else if (mv === 'Recused') { cls = 'hm-rec';     lbl = 'Recused'; }
+        else if (mv === 'Abstain') { cls = 'hm-rec';     lbl = 'Abstain'; }
+        else if (mv === 'Absent')  { cls = 'hm-abs';     lbl = 'Absent'; }
+        else if (mv === 'Vacant')  { cls = 'hm-vac';     lbl = 'Vacant'; }
+        const cellLink = v.minutesUrl ? `<a href="${v.minutesUrl}" target="_blank" rel="noopener" style="text-decoration:none;display:block">` : '';
+        const cellLinkEnd = v.minutesUrl ? '</a>' : '';
+        html += `<td>${cellLink}<div class="hm-cell ${cls}" title="${m.name}: ${mv||'Not on the Board'}. Click to view minutes.">${lbl}</div>${cellLinkEnd}</td>`;
+      });
+      html += `<td class="hm-outcome ${v.outcome.toLowerCase()}" style="padding:5px 8px;white-space:nowrap">${v.outcome} ${v.tally}</td>`;
+      html += `</tr>`;
+    });
+
+    html += `</tbody></table></div>`;
+  });
+
+  if (!html) html = `<div class="empty-state"><p>No Town of Rico votes for the selected filters.<br>More meetings being added — <a href="https://townofrico.colorado.gov/government/board-of-trustees" target="_blank">view all Rico Board of Trustees minutes</a>.</p></div>`;
   document.getElementById('heatmap-content').innerHTML = html;
 }
 
@@ -7302,6 +7688,7 @@ function renderHeatmap() {
   if (ent === 'planning') { renderPlanningHeatmap();  return; }
   if (ent === 'tomv')     { renderTomvHeatmap();      return; }
   if (ent === 'drb')      { renderDrbHeatmap();       return; }
+  if (ent === 'rico')     { renderRicoHeatmap();      return; }
 
   const yearSel = document.getElementById('filter-year').value;
   const catSel  = hmCatFilter;
