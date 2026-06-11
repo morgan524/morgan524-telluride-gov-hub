@@ -135,9 +135,18 @@ function processNewEmails() {
       if (!msg.isUnread()) return;
       var eventData = parseEventEmail(msg);
       if (eventData) {
-        eventData.row = appendToSheet(sheet, eventData);            // audit ('hold')
-        eventData.firestoreOk = writeEventToFirestore(eventData);   // live review queue
-        Logger.log('Queued: "' + eventData.title + '" (firestore=' + eventData.firestoreOk + ')');
+        var session = fbAnonSession();
+        // If the event was forwarded AS an image (no flyer URL in the text),
+        // grab the largest image attachment / inline image, upload it to
+        // Firebase Storage, and use it as the flyer so it shows on the review
+        // page and the published event card.
+        if (session && !eventData.image) {
+          var blob = getEventImageBlob(msg);
+          if (blob) eventData.image = uploadEventImage(blob, session);
+        }
+        eventData.row = appendToSheet(sheet, eventData);                    // audit ('hold')
+        eventData.firestoreOk = writeEventToFirestore(eventData, session);  // live review queue
+        Logger.log('Queued: "' + eventData.title + '" (firestore=' + eventData.firestoreOk + ', image=' + (eventData.image ? 'yes' : 'no') + ')');
         newEvents.push(eventData);
       }
       msg.markRead();
@@ -155,28 +164,80 @@ function processNewEmails() {
 
 // ── Firebase: anonymous sign-in → write to event_submissions (pending) ──
 
-// Get a short-lived anonymous Firebase id token so the Firestore create
-// passes the `isSignedIn()` rule. Returns the idToken or null.
-function fbAnonToken() {
+// Start a short-lived anonymous Firebase session so the Firestore create
+// passes the `isSignedIn()` rule and the Storage upload can write under the
+// caller's own uid path. Returns { idToken, localId } or null.
+function fbAnonSession() {
   try {
     var resp = UrlFetchApp.fetch(
       'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=' + FB_API_KEY,
       { method: 'post', contentType: 'application/json',
         payload: JSON.stringify({ returnSecureToken: true }), muteHttpExceptions: true });
     var data = JSON.parse(resp.getContentText() || '{}');
-    if (!data.idToken) Logger.log('  fbAnonToken: ' + resp.getResponseCode() + ' ' + resp.getContentText().substring(0, 200));
-    return data.idToken || null;
+    if (!data.idToken) { Logger.log('  fbAnonSession: ' + resp.getResponseCode() + ' ' + resp.getContentText().substring(0, 200)); return null; }
+    return { idToken: data.idToken, localId: data.localId };
   } catch (e) {
-    Logger.log('  fbAnonToken error: ' + e.message);
+    Logger.log('  fbAnonSession error: ' + e.message);
     return null;
+  }
+}
+
+// Pull the best flyer image from a forwarded email: the LARGEST image
+// attachment or inline image (the main flyer; tiny logos/signatures lose).
+// Returns a Blob or null.
+function getEventImageBlob(msg) {
+  try {
+    var atts = msg.getAttachments({ includeInlineImages: true, includeAttachments: true });
+    var best = null, bestSize = 0;
+    for (var i = 0; i < atts.length; i++) {
+      var a = atts[i];
+      if ((a.getContentType() || '').indexOf('image/') !== 0) continue;
+      var size = a.getBytes().length;
+      if (size > bestSize && size < 10 * 1024 * 1024) { best = a; bestSize = size; }
+    }
+    return best;
+  } catch (e) {
+    Logger.log('  getEventImageBlob error: ' + e.message);
+    return null;
+  }
+}
+
+// Upload a flyer image to Firebase Storage at event-submissions/<uid>/… (the
+// same path + rules the website "Submit an Event" form uses) and return a
+// public download URL. Returns '' on failure.
+function uploadEventImage(blob, session) {
+  if (!blob || !session || !session.idToken) return '';
+  try {
+    var bucket = FB_PROJECT + '.firebasestorage.app';
+    var name = (blob.getName() || 'flyer').replace(/[^a-zA-Z0-9._-]/g, '_');
+    var path = 'event-submissions/' + session.localId + '/' + Date.now() + '_' + name;
+    var url = 'https://firebasestorage.googleapis.com/v0/b/' + bucket
+            + '/o?uploadType=media&name=' + encodeURIComponent(path);
+    var resp = UrlFetchApp.fetch(url, {
+      method: 'post',
+      contentType: blob.getContentType() || 'image/jpeg',
+      headers: { Authorization: 'Bearer ' + session.idToken },
+      payload: blob.getBytes(),
+      muteHttpExceptions: true });
+    if (resp.getResponseCode() !== 200) {
+      Logger.log('  Storage upload ' + resp.getResponseCode() + ': ' + resp.getContentText().substring(0, 300));
+      return '';
+    }
+    var meta = JSON.parse(resp.getContentText() || '{}');
+    if (!meta.downloadTokens) return '';
+    return 'https://firebasestorage.googleapis.com/v0/b/' + bucket + '/o/'
+         + encodeURIComponent(path) + '?alt=media&token=' + meta.downloadTokens;
+  } catch (e) {
+    Logger.log('  uploadEventImage error: ' + e.message);
+    return '';
   }
 }
 
 // Write one parsed event into Firestore event_submissions (status 'pending').
 // Field names match what events.html reads for approved submissions
 // (title/date/time/location/description/url/imageUrl) so it renders identically.
-function writeEventToFirestore(ev) {
-  var token = fbAnonToken();
+function writeEventToFirestore(ev, session) {
+  var token = session && session.idToken;
   if (!token) return false;
   var s = function(v) { return { stringValue: String(v == null ? '' : v) }; };
   var fields = {
