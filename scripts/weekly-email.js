@@ -231,17 +231,12 @@ const evRow = (e) => {
   return `<tr><td style="padding:13px 0;border-top:1px solid #eef1ee;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>${img}<td valign="top">${text}</td></tr></table></td></tr>`;
 };
 const eh = chosen.map(evRow).join('');
-// "Actions You Can Take This Week" — regenerates each week from the meetings in
-// the summary above: one comment opportunity per board, plus an evergreen
-// submit-an-event action.
-const ACT = '#2f7a5f';
-const actionRow = (m) => {
-  const board = boardName(m.name, m.src);
-  const agendaLink = m.hasAgenda ? `<a href="${esc(m.agenda)}" style="color:#5a6b64;text-decoration:none;border-bottom:1px solid #cbd3cf;font-size:12.5px;margin-left:14px;">Read the agenda →</a>` : '';
-  return `<tr><td style="padding:13px 0;border-top:1px solid #eef1ee;"><span style="display:inline-block;background:#21443c;color:#fff;font-size:13px;font-weight:700;padding:5px 13px;border-radius:5px;white-space:nowrap;letter-spacing:.02em;">${esc(wd(m.date)).toUpperCase()}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin:6px 0 3px;">Weigh in on the ${esc(board)} meeting</div><div style="font-size:13px;color:#5a6b64;line-height:1.5;margin-bottom:8px;">Public comment becomes part of the record — send yours before the meeting.</div><a href="${esc(commentMailto(m))}" style="display:inline-block;background:${ACT};color:#fff;text-decoration:none;font-size:10.5px;font-weight:600;padding:3px 10px;border-radius:4px;">Comment</a>${agendaLink}</td></tr>`;
-};
-const submitEventAction = `<tr><td style="padding:13px 0;border-top:1px solid #eef1ee;"><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-bottom:3px;">Have a community event?</div><div style="font-size:13px;color:#5a6b64;line-height:1.5;margin-bottom:9px;">Add it to the calendar so the whole valley sees it.</div><a href="${SITE}/events.html#submit" style="display:inline-block;background:${ACT};color:#fff;text-decoration:none;font-size:12.5px;font-weight:700;padding:8px 15px;border-radius:5px;">Submit an event →</a></td></tr>`;
-const ah = meetings.map(actionRow).join('') + submitEventAction;
+// A single closing note in Rick's voice at the very end of the email: civic
+// engagement is valuable in every form — weighing in on a meeting, or simply
+// turning out for a concert or a gallery opening. Replaces the old per-meeting
+// "Actions You Can Take This Week" button list. (COMMENT_MAP / commentMailto()
+// recipient wiring above is left in place for possible reuse.)
+const closingNote = `<tr><td style="padding:28px 34px 6px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="background:#f1ece1;border-left:4px solid #21443c;border-radius:6px;padding:19px 22px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;margin-bottom:9px;">Why Showing Up Matters</div><p style="margin:0;font-size:14.5px;line-height:1.7;color:#2c3b35;">After enough years here, you learn that the decisions shaping this valley rarely arrive with a drumroll — they get made while most folks are looking the other way. The fix is simple: keep showing up. Read an agenda and email the board before a vote, or just turn out — for a council meeting, a concert on the green, an opening at the gallery. None of it is too small. A community that keeps paying attention to itself, in the big ways and the little ones, is one that stays livable.</p></td></tr></table></td></tr>`;
 const section = (label, rows) => rows ? `<tr><td style="padding:24px 34px 0;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;border-bottom:1px solid #d4c9b0;padding-bottom:8px;">→ ${label}</div><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}</table></td></tr>` : '';
 // Conditional per-interest extras — each block renders only for subscribers in
 // that Mailchimp "Event Topics" group. The *|INTERESTED|* tags are raw (NOT
@@ -262,8 +257,8 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
     <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#2f7a5f;background:rgba(47,122,95,.1);padding:3px 10px;border-radius:999px;">📅 The Week Ahead</span>
     <p style="margin:11px 0 0;font-size:15.5px;line-height:1.65;color:#2c3b35;">${esc(LEDE)}</p></td></tr>
   ${section('Public Meetings This Week', mh)}
-  ${section('Actions You Can Take This Week', ah)}
   ${section('One Event a Day', eh)}${topicHtml}
+  ${closingNote}
   <tr><td style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
     <div style="font-family:Georgia,serif;font-size:13px;font-weight:700;color:#21443c;">Livable Telluride</div>
     <div style="font-size:12px;color:#7a8a85;line-height:1.6;margin-top:4px;">Community information for Telluride, Mountain Village &amp; San Miguel County.<br>
