@@ -27,8 +27,9 @@
   .row-2 .row{margin-bottom:0}
   label{font-size:.72rem;font-weight:700;color:var(--green);letter-spacing:.04em;text-transform:uppercase}
   .hint{font-weight:600;color:var(--muted);text-transform:none;letter-spacing:0}
-  input{padding:11px 12px;border:1px solid rgba(33,68,60,.20);border-radius:9px;font-size:.95rem;font-family:inherit;background:#fff;color:var(--ink);width:100%}
-  input:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
+  input,select{padding:11px 12px;border:1px solid rgba(33,68,60,.20);border-radius:9px;font-size:.95rem;font-family:inherit;background:#fff;color:var(--ink);width:100%}
+  select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2321443c' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:34px}
+  input:focus,select:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
   input.missing{border-color:#d99a3c;background:#fff9ef}
   .section{margin:22px 0 10px;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#7a8a85;border-top:1px solid #eef1ee;padding-top:16px}
   .section .sub{font-weight:600;letter-spacing:0;text-transform:none;color:var(--muted);font-size:.8rem;margin-top:3px}
@@ -112,8 +113,14 @@
         </div>
 
         <div class="row">
-          <label for="pTown">Town</label>
-          <input id="pTown" type="text" placeholder="e.g. Telluride, Mountain Village, Norwood, Ridgway">
+          <label for="pRegion">Region</label>
+          <select id="pRegion">
+            <option value="">— Select your region —</option>
+            <option value="East End">East End</option>
+            <option value="West End">West End</option>
+            <option value="Ridgway/Ouray">Ridgway/Ouray</option>
+          </select>
+          <span class="help">East End = Telluride, Mountain Village, Ophir · West End = Norwood, Nucla, Naturita · Ridgway/Ouray = Ouray County</span>
         </div>
 
         <div class="section">Events near you <span class="sub">Optional — so we can flag events close to home.</span></div>
@@ -228,6 +235,16 @@
   function qp(name){ try{ return new URLSearchParams(location.search).get(name) || ''; }catch(_){ return ''; } }
   function val(id){ const el=document.getElementById(id); return el ? el.value.trim() : ''; }
   function setVal(id,v){ const el=document.getElementById(id); if(el&&v) el.value=v; }
+  // Region select — set it from a stored value, inferring the region from a
+  // legacy free-text town if MMERGE6 still holds one (e.g. "Norwood" → West End).
+  function setRegion(v){
+    const sel=document.getElementById('pRegion'); if(!sel||!v) return;
+    const low=String(v).trim().toLowerCase(); let r='';
+    if(/east end|telluride|mountain village|\bophir\b|sawpit/.test(low)) r='East End';
+    else if(/west end|norwood|nucla|naturita|paradox|redvale|egnar/.test(low)) r='West End';
+    else if(/ridgway|ouray/.test(low)) r='Ridgway/Ouray';
+    if(r) sel.value=r;
+  }
   function flagMissing(){ ['pFirst','pLast'].forEach(id=>{ const el=document.getElementById(id); if(el) el.classList.toggle('missing', !el.value.trim()); }); }
   function loadMsg(text, cls){ const el=document.getElementById('profLoadMsg'); if(!el) return; el.innerHTML=text; el.className='loadmsg show '+(cls||'info'); }
   function setSubStatus(key, val){
@@ -243,7 +260,7 @@
   setVal('pFirst',  qp('fname'));
   setVal('pLast',   qp('lname'));
   setVal('pEmail',  qp('email'));
-  setVal('pTown',   qp('town'));
+  setRegion(qp('region') || qp('town'));
   setVal('pAddr',   qp('addr'));
   setVal('pRadius', qp('radius'));
   flagMissing();
@@ -292,7 +309,7 @@
       }).then(function(r){ return r.json(); }).then(function(resp){
         if (resp && resp.ok && resp.found) {
           const fl = resp.fields || {};
-          setVal('pFirst', fl.FNAME); setVal('pLast', fl.LNAME); setVal('pTown', fl.MMERGE6);
+          setVal('pFirst', fl.FNAME); setVal('pLast', fl.LNAME); setRegion(fl.MMERGE6);
           setVal('pAddr', fl.MMERGE10); setVal('pRadius', fl.MMERGE11);
           flagMissing();
           if (resp.subs) { Object.keys(resp.subs).forEach(function(k){ setSubStatus(k, resp.subs[k]); }); }
@@ -316,7 +333,7 @@
     const fields={};
     const f=val('pFirst');  if(f) fields.FNAME=f;
     const l=val('pLast');   if(l) fields.LNAME=l;
-    const t=val('pTown');   if(t) fields.MMERGE6=t;
+    const t=val('pRegion'); if(t) fields.MMERGE6=t;
     const a=val('pAddr');   if(a) fields.MMERGE10=a;
     const r=val('pRadius'); if(r) fields.MMERGE11=r;
 

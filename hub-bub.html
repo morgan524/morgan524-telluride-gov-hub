@@ -877,7 +877,8 @@
       text-transform: uppercase;
       color: var(--lt-muted);
     }
-    .hb-modal-field input {
+    .hb-modal-field input,
+    .hb-modal-field select {
       width: 100%;
       height: 44px;
       padding: 0 14px;
@@ -889,7 +890,13 @@
       outline: none;
       transition: border-color 0.15s, box-shadow 0.15s;
     }
-    .hb-modal-field input:focus { border-color: var(--forest); box-shadow: 0 0 0 4px rgba(33,68,60,0.10); background: #fff; }
+    .hb-modal-field select {
+      appearance: none; -webkit-appearance: none; font-family: inherit;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2321443c' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px;
+    }
+    .hb-modal-field input:focus,
+    .hb-modal-field select:focus { border-color: var(--forest); box-shadow: 0 0 0 4px rgba(33,68,60,0.10); background: #fff; }
     .hb-modal-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     .hb-freq-group {
       margin-bottom: 18px;
@@ -1526,7 +1533,7 @@
           </div>
 
           <div class="hb-footer-legal">
-            <p class="hb-footer-fineprint" style="margin-bottom:10px;">Already subscribed? <a href="/profile.html" style="color:var(--forest);font-weight:700;">Update your info &amp; preferences</a> — add your name, town, or change which emails you get.</p>
+            <p class="hb-footer-fineprint" style="margin-bottom:10px;">Already subscribed? <a href="/profile.html" style="color:var(--forest);font-weight:700;">Update your info &amp; preferences</a> — add your name, region, or change which emails you get.</p>
             <p class="hb-footer-fineprint">Hub-Bub is a community discussion forum and is not legal, financial, medical, or professional advice. Views expressed by users are their own and do not represent Livable Telluride. See also our <a href="/terms-of-use.html">Terms of Use</a>, <a href="/privacy-policy.html">Privacy Policy</a>, and <a href="/data-deletion.html">Data Deletion</a> pages.</p>
             <p class="hb-footer-copy">© 2026 Livable Telluride. All rights reserved.</p>
           </div>
@@ -1566,6 +1573,16 @@
           <input type="password" id="hbSignupPassword" autocomplete="new-password" placeholder="At least 8 characters">
         </div>
 
+        <div class="hb-modal-field">
+          <label for="hbSignupRegion">Your region</label>
+          <select id="hbSignupRegion">
+            <option value="">— Select your region —</option>
+            <option value="East End">East End (Telluride, Mountain Village, Ophir)</option>
+            <option value="West End">West End (Norwood, Nucla, Naturita)</option>
+            <option value="Ridgway/Ouray">Ridgway / Ouray</option>
+          </select>
+        </div>
+
         <div class="hb-freq-group">
           <span class="hb-freq-label">Stay informed — choose what you'd like to receive</span>
           <div class="hb-freq-options">
@@ -1581,6 +1598,40 @@
               <div class="hb-freq-opt-text">
                 <strong>Livable Telluride newsletter</strong>
                 <span>Longer-form posts and analysis, sent when published.</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="hb-freq-group">
+          <span class="hb-freq-label">Event topics — add any to your weekly email (optional)</span>
+          <div class="hb-freq-options">
+            <label class="hb-freq-opt">
+              <input type="checkbox" class="hb-topic-cb" value="arts">
+              <div class="hb-freq-opt-text">
+                <strong>Music, Arts &amp; Festivals</strong>
+                <span>Concerts, film, theater, gallery openings, and festivals.</span>
+              </div>
+            </label>
+            <label class="hb-freq-opt">
+              <input type="checkbox" class="hb-topic-cb" value="civic">
+              <div class="hb-freq-opt-text">
+                <strong>Government Meetings</strong>
+                <span>Council, commission, and board meetings — with comment deadlines.</span>
+              </div>
+            </label>
+            <label class="hb-freq-opt">
+              <input type="checkbox" class="hb-topic-cb" value="family">
+              <div class="hb-freq-opt-text">
+                <strong>Family &amp; Kids</strong>
+                <span>Storytime, youth programs, and all-ages activities.</span>
+              </div>
+            </label>
+            <label class="hb-freq-opt">
+              <input type="checkbox" class="hb-topic-cb" value="outdoors">
+              <div class="hb-freq-opt-text">
+                <strong>Outdoors &amp; Recreation</strong>
+                <span>Hikes, races, ski events, and stewardship days.</span>
               </div>
             </label>
           </div>
@@ -1668,12 +1719,13 @@
        got a Hub-Bub forum account but never received the digest or
        blog posts. Always preserve the audience subdomain. */
     const MC_POST = 'https://letpeopledecide.us15.list-manage.com/subscribe/post-json?u=5d9192289b9af78822f2f69bf&id=f83dc56387';
-    function mcSubscribe(email, firstName, lastName, digestFreq, includeNewsletter, cb) {
+    function mcSubscribe(email, firstName, lastName, digestFreq, includeNewsletter, region, cb) {
       const params = new URLSearchParams({
         EMAIL: email,
         FNAME: firstName,
         LNAME: lastName,
       });
+      if (region) params.set('MMERGE6', region);   // Region (East End / West End / Ridgway/Ouray)
       if (digestFreq) params.set('MMERGE9', digestFreq);
       // "Email Subscriptions" group category 7915 (created 2026-05-31, replacing
       // the deleted "Topics of Interest" category 7912): Newsletter = 24641,
@@ -1831,6 +1883,12 @@
       // Daily digest retired 2026-05-25; only 'weekly' or '' (none) now.
       const digestFreq = document.getElementById('hbFreqWeekly').checked ? 'weekly' : '';
       const includeNewsletter = document.getElementById('hbFreqNewsletter').checked;
+      const region = document.getElementById('hbSignupRegion').value;
+      // Event Topics opt-ins (arts/civic/family/outdoors) — set via the Worker
+      // (name-based) AFTER the member is created, since the JSONP form-embed
+      // path would need each group's numeric web ID.
+      const topics = Array.prototype.map.call(
+        document.querySelectorAll('.hb-topic-cb:checked'), function (c) { return c.value; });
 
       if (!firstName || !lastName) return showMsg('hbSignupMsg', 'Please enter your first and last name.', 'error');
       if (!email || !email.includes('@')) return showMsg('hbSignupMsg', 'Please enter a valid email address.', 'error');
@@ -1847,13 +1905,27 @@
       // button during the Mailchimp round-trip.
       showMsg('hbSignupMsg', 'Creating your account…', 'info');
 
-      mcSubscribe(email, firstName, lastName, digestFreq, includeNewsletter, function (ok, msg) {
+      mcSubscribe(email, firstName, lastName, digestFreq, includeNewsletter, region, function (ok, msg) {
         // Mailchimp is BEST-EFFORT — existing subscribers (already in the list)
         // will get ok=false with an "already subscribed" message. Any other
         // Mailchimp failure (network, quota, etc.) is also non-fatal. We log
         // it and always proceed to Firebase account creation so that having an
         // existing Mailchimp subscription never blocks getting a Hub-Bub login.
         if (!ok) console.warn('Hub-Bub signup: Mailchimp (' + (msg||'unknown') + ') — proceeding to Firebase.');
+
+        // Event Topics opt-ins — best-effort, fire-and-forget. The member was
+        // just created (or already existed), so the Worker PATCHes by email and
+        // resolves each topic name → real Mailchimp interest ID. CORS-locked to
+        // the live site; failure is non-fatal (topics just stay unset).
+        if (topics.length) {
+          const subs = {}; topics.forEach(function (t) { subs[t] = true; });
+          try {
+            fetch('https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/update-profile', {
+              method: 'POST', headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email: email, subs: subs })
+            }).catch(function () {});
+          } catch (e) {}
+        }
 
         // Step 2: Firebase Auth — create account (auto-signs the user in)
         waitForFirebase(function () {
