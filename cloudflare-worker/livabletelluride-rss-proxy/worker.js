@@ -496,7 +496,9 @@ function b64url(buf) {
 // HMAC key derived from a stable secret (no extra secret to manage). The
 // Accept/Deny links are unforgeable because only the Worker holds this seed.
 async function modHmacKey(env) {
-  const seed = (env.FIREBASE_SERVICE_ACCOUNT || env.ANTHROPIC_API_KEY || "fallback") + "|hubbub-moderation-v1";
+  // Seed from a STABLE secret only — NOT FIREBASE_SERVICE_ACCOUNT, so adding or
+  // rotating that key doesn't invalidate outstanding Accept/Deny links.
+  const seed = (env.MODERATION_SECRET || env.ANTHROPIC_API_KEY || "fallback") + "|hubbub-moderation-v1";
   return crypto.subtle.importKey("raw", new TextEncoder().encode(seed),
     { name: "HMAC", hash: "SHA-256" }, false, ["sign", "verify"]);
 }
