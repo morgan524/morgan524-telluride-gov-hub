@@ -17,14 +17,23 @@
  * Edit the LEDE const below each week (the voice-y intro).
  */
 const fs = require('fs');
+const path = require('path');
 const GD = process.argv[2], GH = process.argv[3];
 const WEEK_START = process.argv[4] || new Date().toISOString().slice(0, 10);
 const LABEL = process.argv[5] || 'This Week';
 const OUT = process.argv[6] || 'weekly-email.html';
 const PREVIEW = !!process.env.WEEKLY_PREVIEW;   // render an info@ review draft (banner + topic sections shown inline, merge tags neutralised) instead of the paste-ready Mailchimp HTML
 
-// ── Edit this each week ──
-const LEDE = "The government calendar bunches up on Wednesday the 17th — Mountain Village Town Council, the San Miguel County Commissioners, Telluride’s HARC, and Ridgway’s Planning Commission all meet the same day, so if land use and what gets built next is your thing, that’s the day to show up. Norwood’s Planning and Zoning Commission kicks the week off on Monday, and summer’s hitting full stride across the box canyon.";
+// ── Week Ahead lede — edit data/week-ahead-lede.json (no code change needed).
+// That file is a map keyed by week-start (the Monday the email covers,
+// YYYY-MM-DD), with a "default" fallback. WEEK_START is computed by the Saturday
+// workflow. If the file is missing/unreadable, fall back to a built-in string.
+const FALLBACK_LEDE = "A fresh week across the box canyon — public meetings, community events, and a few ways to get involved are all below.";
+let LEDE = FALLBACK_LEDE;
+try {
+  const ledeMap = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'week-ahead-lede.json'), 'utf8'));
+  LEDE = ledeMap[WEEK_START] || ledeMap.default || FALLBACK_LEDE;
+} catch (e) { console.error('week-ahead-lede.json not read (' + e.message + ') — using fallback lede'); }
 
 // 7-day window [WEEK_START, WEEK_START+6]
 const startD = new Date(WEEK_START + 'T00:00:00');
