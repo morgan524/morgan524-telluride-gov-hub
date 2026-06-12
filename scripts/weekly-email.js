@@ -142,7 +142,20 @@ const mh = meetings.map((m) => {
   const link = m.hasAgenda ? `<a href="${esc(m.agenda)}" style="color:#2f7a5f;text-decoration:none;border-bottom:1px solid #2f7a5f;font-size:12.5px;font-weight:600;">View agenda →</a>` : `<a href="${esc(m.link)}" style="color:#2f7a5f;text-decoration:none;border-bottom:1px solid #2f7a5f;font-size:12.5px;font-weight:600;">Meeting info →</a>`;
   return `<tr><td style="padding:13px 0;border-top:1px solid #eef1ee;"><span style="display:inline-block;background:#21443c;color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(m.date)).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(m.src)}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;">${esc(m.name)}</div><div style="font-size:13.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${esc(m.summary)}</div>${link}</td></tr>`;
 }).join('');
-const eh = chosen.map((e) => `<tr><td style="padding:13px 0;border-top:1px solid #eef1ee;"><div style="font-size:12px;font-weight:800;color:#2f7a5f;">${esc(wd(e.date))}</div><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:2px;"><a href="${esc(safeUrl(e.href))}" style="color:#1a2e29;text-decoration:none;">${esc(e.title)}</a></div><div style="font-size:13.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${esc(trunc(e.summary, 190))}</div><a href="${esc(safeUrl(e.href))}" style="color:#2f7a5f;text-decoration:none;border-bottom:1px solid #2f7a5f;font-size:12.5px;font-weight:600;">Details →</a></td></tr>`).join('');
+const EV_ACCENT = '#b5552c'; // warm terracotta — complements the forest-green meeting badge
+const eh = chosen.map((e) => {
+  const u = safeUrl(e.href);
+  const badge = `<span style="display:inline-block;background:${EV_ACCENT};color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(e.date)).toUpperCase()}</span>`;
+  const loc = e.location ? `<span style="font-size:12px;color:#7a8a85;margin-left:8px;">📍 ${esc(trunc(e.location, 38))}</span>` : '';
+  const text = `${badge}${loc}`
+    + `<div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;"><a href="${esc(u)}" style="color:#1a2e29;text-decoration:none;">${esc(e.title)}</a></div>`
+    + `<div style="font-size:13.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${esc(trunc(e.summary, 175))}</div>`
+    + `<a href="${esc(u)}" style="color:${EV_ACCENT};text-decoration:none;border-bottom:1px solid ${EV_ACCENT};font-size:12.5px;font-weight:600;">Details →</a>`;
+  const img = (e.img && /^https?:\/\//.test(e.img))
+    ? `<td width="78" valign="top" style="padding-right:14px;"><img src="${esc(e.img)}" width="78" height="78" alt="" style="display:block;width:78px;height:78px;border-radius:6px;border:0;object-fit:cover;background:#eef1ee;"></td>`
+    : '';
+  return `<tr><td style="padding:13px 0;border-top:1px solid #eef1ee;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>${img}<td valign="top">${text}</td></tr></table></td></tr>`;
+}).join('');
 const section = (label, rows) => rows ? `<tr><td style="padding:24px 34px 0;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;border-bottom:1px solid #d4c9b0;padding-bottom:8px;">→ ${label}</div><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}</table></td></tr>` : '';
 
 const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
