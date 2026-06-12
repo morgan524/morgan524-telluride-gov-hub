@@ -1610,7 +1610,7 @@ const ROTARY_NEWS = [
     date: "June 2, 2026",
     firstSeen: "2026-06-02",
     newsTopic: "education",
-    copy: "Telluride Rotary Club takes pride in making several grants, giving scholarships to high school seniors, and participating in community service projects. Below are highlights since of our club's actions to make a positive difference: donate $1000 to Beacon Telluride to support seasonal workers and $5",
+    copy: "Telluride Rotary Club takes pride in making several grants, giving scholarships to high school seniors, and participating in community service projects. Below are highlights since of our club's actions to make a positive difference: gave $23,000 in May of 2026 in scholarships to high school seniors ",
     href: "https://portal.clubrunner.ca/3291/Stories/recent-grants-and-service-by-telluride-rotary-club",
     img: "https://clubrunner.blob.core.windows.net/00000003291/Images/1000015658_20250103-032420.jpeg"
   }
