@@ -18,6 +18,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 const GD = process.argv[2], GH = process.argv[3];
 const WEEK_START = process.argv[4] || new Date().toISOString().slice(0, 10);
 const LABEL = process.argv[5] || 'This Week';
@@ -121,6 +122,30 @@ const TOPIC_DEFS = [
   { key: 'family',   group: 'Family & Kids',          label: 'More for Families & Kids' },
   { key: 'outdoors', group: 'Outdoors & Recreation',  label: 'More Outdoors & Recreation' },
 ];
+// A topic section is included ONLY if its Event Topics group has ≥1 subscriber
+// — a category nobody has opted into should never appear in the email (per user
+// 2026-06-12). Returns a Set of group names with subscribers, or null if the
+// Mailchimp API key is absent / the call fails (→ topic sections hidden, erring
+// toward not showing an empty category). The key is only ever referenced as the
+// shell var $MAILCHIMP_API_KEY so it can't leak into logs/error messages.
+function getActiveTopicGroups() {
+  const key = process.env.MAILCHIMP_API_KEY;
+  if (!key || key.indexOf('-') < 0) { console.error('MAILCHIMP_API_KEY not set — topic sections hidden (cannot confirm subscribers).'); return null; }
+  const dc = key.split('-')[1];
+  const listId = 'f83dc56387';
+  const curl = (p) => execSync(`curl -sS --max-time 25 -u "any:$MAILCHIMP_API_KEY" "https://${dc}.api.mailchimp.com/3.0/${p}"`, { encoding: 'utf8' });
+  try {
+    const cats = JSON.parse(curl(`lists/${listId}/interest-categories?count=100`));
+    const cat = (cats.categories || []).find((c) => /event topics/i.test(c.title));
+    if (!cat) { console.error('Event Topics category not found via Mailchimp — topic sections hidden.'); return new Set(); }
+    const ints = JSON.parse(curl(`lists/${listId}/interest-categories/${cat.id}/interests?count=100`));
+    const active = new Set();
+    for (const it of (ints.interests || [])) if ((it.subscriber_count || 0) > 0) active.add(it.name);
+    console.error('Active Event Topics (subscribers>0): ' + ([...active].join(', ') || 'none'));
+    return active;
+  } catch (e) { console.error('Mailchimp interest check failed — topic sections hidden.'); return null; }
+}
+const activeTopicGroups = getActiveTopicGroups();
 const inChosen = new Set(chosen.map((e) => tkey(e.title)));
 const topicSections = TOPIC_DEFS.map((td) => {
   const seen = new Set();
@@ -130,7 +155,8 @@ const topicSections = TOPIC_DEFS.map((td) => {
     .sort((a, b) => (featuredScore(b) - featuredScore(a)) || (a.date < b.date ? -1 : a.date > b.date ? 1 : 0))
     .slice(0, 4);
   return { ...td, events };
-}).filter((td) => td.events.length);
+}).filter((td) => td.events.length)
+  .filter((td) => activeTopicGroups instanceof Set && activeTopicGroups.has(td.group));
 
 // ── Collect meetings (with real agenda links) ──
 const MEETING_FNS = ['getTellurideMeetings','getCountyCachedMeetings','getMVMeetings','getSchoolMeetings','getFireMeetings','getMedMeetings','getRidgwayMeetings','getNorwoodMeetings','getOphirMeetings','getSmartMeetings','getAirportMeetings','getRicoMeetings'];
@@ -266,7 +292,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
     <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#2f7a5f;background:rgba(47,122,95,.1);padding:3px 10px;border-radius:999px;">📅 The Week Ahead</span>
     <p style="margin:11px 0 0;font-size:15.5px;line-height:1.65;color:#2c3b35;">${esc(LEDE)}</p></td></tr>
   ${section('Public Meetings This Week', mh)}
-  ${section('One Event a Day', eh)}${topicHtml}
+  ${section('What We\'re Attending', eh)}${topicHtml}
   ${closingNote}
   <tr><td style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
     <div style="font-family:Georgia,serif;font-size:13px;font-weight:700;color:#21443c;">Livable Telluride</div>

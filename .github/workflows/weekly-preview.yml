@@ -23,6 +23,8 @@ jobs:
       # secrets are added. PREVIEW_SMTP_USER = a Gmail/Workspace address;
       # PREVIEW_SMTP_PASS = an app password for it.
       PREVIEW_SMTP_PASS: ${{ secrets.PREVIEW_SMTP_PASS }}
+      # Lets the renderer hide topic sections whose Event Topics group has no subscribers yet.
+      MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY_NEW }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
