@@ -147,6 +147,29 @@
       line-height: 1.65;
     }
 
+    /* ── Meet our Directors panel ── */
+    .directors-panel {
+      background: #fff;
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      padding: 32px 36px;
+      box-shadow: var(--shadow-card);
+    }
+    .directors-panel h2 { font-family: var(--font-heading); color: var(--forest); font-size: 1.5rem; margin: 0 0 8px; }
+    .directors-panel .dir-lead { font-size: 0.98rem; color: var(--text-secondary); margin: 0 0 18px; line-height: 1.6; }
+    .dir-grid { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; }
+    .dir-card {
+      background: linear-gradient(135deg, rgba(33,68,60,0.05), rgba(181,138,44,0.05));
+      border: 1px solid var(--border-card);
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+      font-size: 0.98rem;
+    }
+    .dir-contact { font-size: 0.92rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+    .dir-contact a { color: var(--forest); font-weight: 600; }
+
     /* ── Newsletter + Contact 2-col ── */
     .nc-row {
       display: grid;
@@ -335,6 +358,20 @@
         </div>
       </div>
       <div class="photo-col" aria-label="Mt Wilson, Telluride — warm light over a split-rail fence"></div>
+    </section>
+
+    <!-- ── Meet our Directors ── -->
+    <section class="directors-panel">
+      <h2>Meet Our Directors</h2>
+      <p class="dir-lead">Livable Telluride, Inc. is a 501(c)(3)-approved organization. Our board of directors:</p>
+      <div class="dir-grid">
+        <div class="dir-card">David Lavender</div>
+        <div class="dir-card">John Metzger</div>
+        <div class="dir-card">Keith Hill</div>
+        <div class="dir-card">Emily Masson</div>
+        <div class="dir-card">Morgan Smith</div>
+      </div>
+      <p class="dir-contact">Any board member can be reached through <a href="mailto:info@livabletelluride.org">info@livabletelluride.org</a> — please include their name in the subject line.</p>
     </section>
 
     <!-- ── What "Livable" Means ── -->

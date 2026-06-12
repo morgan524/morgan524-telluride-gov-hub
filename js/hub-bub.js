@@ -957,11 +957,14 @@
 
     // Constructive reactions
     var reactionsHtml = '<div class="hb-reactions">';
+    // Keys stay stable (existing reaction counts carry over); only the emoji +
+    // label change. firestore.rules allows any key under `reactions`, so no
+    // rules/data migration is needed.
     var reactionTypes = [
-      { key: 'useful', label: 'Useful', emoji: '👍' },
-      { key: 'helpful_source', label: 'Helpful source', emoji: '📚' },
-      { key: 'good_question', label: 'Good question', emoji: '❓' },
-      { key: 'learned', label: 'I learned', emoji: '💡' }
+      { key: 'useful', label: 'Support', emoji: '👍' },
+      { key: 'helpful_source', label: 'Helpful', emoji: '✅' },
+      { key: 'good_question', label: 'Worth Watching', emoji: '👀' },
+      { key: 'learned', label: 'Important', emoji: '📌' }
     ];
     reactionTypes.forEach(function(r) {
       var count = (post.reactions && post.reactions[r.key]) || 0;
