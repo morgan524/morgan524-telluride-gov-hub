@@ -590,10 +590,20 @@ function pemToPkcs8(pem) {
   for (let i = 0; i < bin.length; i++) buf[i] = bin.charCodeAt(i);
   return buf.buffer;
 }
+// Parse FIREBASE_SERVICE_ACCOUNT tolerantly: strip a BOM/whitespace and, if the
+// pasted value has stray characters around the object, extract first { … last }.
+// Throws a clear, non-sensitive error if it still isn't valid JSON.
+function getServiceAccount(env) {
+  let raw = (env.FIREBASE_SERVICE_ACCOUNT || "").replace(/^﻿/, "").trim();
+  const i = raw.indexOf("{"), j = raw.lastIndexOf("}");
+  if (i >= 0 && j > i) raw = raw.slice(i, j + 1);
+  try { return JSON.parse(raw); }
+  catch (e) { throw new Error("FIREBASE_SERVICE_ACCOUNT isn't valid JSON (" + String(e.message || "").slice(0, 50) + "). Re-paste the entire .json file as the secret."); }
+}
 let _gToken = null, _gTokenExp = 0;
 async function googleAccessToken(env, scope) {
   if (_gToken && Date.now() < _gTokenExp - 60000) return _gToken;
-  const sa = JSON.parse(env.FIREBASE_SERVICE_ACCOUNT);
+  const sa = getServiceAccount(env);
   const now = Math.floor(Date.now() / 1000);
   const enc = (o) => b64url(new TextEncoder().encode(JSON.stringify(o)));
   const signingInput = enc({ alg: "RS256", typ: "JWT" }) + "." +
@@ -611,7 +621,7 @@ async function googleAccessToken(env, scope) {
   return _gToken;
 }
 async function firestoreDelete(env, docPath) {
-  const sa = JSON.parse(env.FIREBASE_SERVICE_ACCOUNT);
+  const sa = getServiceAccount(env);
   const token = await googleAccessToken(env, "https://www.googleapis.com/auth/datastore");
   const url = "https://firestore.googleapis.com/v1/projects/" + (sa.project_id || MOD_PROJECT) +
     "/databases/(default)/documents/" + docPath;
