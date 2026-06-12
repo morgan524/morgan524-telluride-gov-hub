@@ -24,7 +24,7 @@ const OUT = process.argv[6] || 'weekly-email.html';
 const PREVIEW = !!process.env.WEEKLY_PREVIEW;   // render an info@ review draft (banner + topic sections shown inline, merge tags neutralised) instead of the paste-ready Mailchimp HTML
 
 // ── Edit this each week ──
-const LEDE = "The government calendar bunches up on Wednesday the 17th — Mountain Village Town Council and the County Commissioners both meet, with Telluride’s HARC and Parks & Rec the same evening — so if land use, open space, or what gets built next is your thing, that’s the day to show up. Norwood’s Planning & Zoning, the Fire District, and Ophir’s General Assembly round out the week, and summer’s hitting full stride across the box canyon.";
+const LEDE = "The government calendar bunches up on Wednesday the 17th — Mountain Village Town Council, the San Miguel County Commissioners, Telluride’s HARC, and Ridgway’s Planning Commission all meet the same day, so if land use and what gets built next is your thing, that’s the day to show up. Norwood’s Planning and Zoning Commission kicks the week off on Monday, and summer’s hitting full stride across the box canyon.";
 
 // 7-day window [WEEK_START, WEEK_START+6]
 const startD = new Date(WEEK_START + 'T00:00:00');
