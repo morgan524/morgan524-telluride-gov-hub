@@ -590,13 +590,30 @@ function pemToPkcs8(pem) {
   for (let i = 0; i < bin.length; i++) buf[i] = bin.charCodeAt(i);
   return buf.buffer;
 }
-// Parse FIREBASE_SERVICE_ACCOUNT tolerantly: strip a BOM/whitespace and, if the
-// pasted value has stray characters around the object, extract first { … last }.
+// Pull the FIRST complete, brace-balanced {…} object out of a string, ignoring
+// anything before or after it (handles a duplicate paste or trailing text).
+// String-aware so braces inside JSON string values don't fool the depth count.
+function firstJsonObject(s) {
+  const start = s.indexOf("{");
+  if (start < 0) return s;
+  let depth = 0, inStr = false, esc = false;
+  for (let i = start; i < s.length; i++) {
+    const c = s[i];
+    if (inStr) {
+      if (esc) esc = false;
+      else if (c === "\\") esc = true;
+      else if (c === '"') inStr = false;
+    } else if (c === '"') inStr = true;
+    else if (c === "{") depth++;
+    else if (c === "}") { depth--; if (depth === 0) return s.slice(start, i + 1); }
+  }
+  return s.slice(start);
+}
+// Parse FIREBASE_SERVICE_ACCOUNT tolerantly: strip a BOM, then take just the
+// first complete {…} object (so stray/duplicate content around it is ignored).
 // Throws a clear, non-sensitive error if it still isn't valid JSON.
 function getServiceAccount(env) {
-  let raw = (env.FIREBASE_SERVICE_ACCOUNT || "").replace(/^﻿/, "").trim();
-  const i = raw.indexOf("{"), j = raw.lastIndexOf("}");
-  if (i >= 0 && j > i) raw = raw.slice(i, j + 1);
+  const raw = firstJsonObject((env.FIREBASE_SERVICE_ACCOUNT || "").replace(/^﻿/, "").trim());
   try { return JSON.parse(raw); }
   catch (e) { throw new Error("FIREBASE_SERVICE_ACCOUNT isn't valid JSON (" + String(e.message || "").slice(0, 50) + "). Re-paste the entire .json file as the secret."); }
 }
