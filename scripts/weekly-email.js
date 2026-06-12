@@ -168,22 +168,41 @@ for (const fn of MEETING_FNS) {
     sm = sm || m.description || '';
     if (isWeak(sm)) sm = bodyDesc(name, src);
     const agenda = m.agendaLink || (m.hasAgenda ? m.link : '') || '';
-    meetings.push({ name, date, src, summary: trunc(sm, 220), agenda, link: m.link || (SITE + '/gov-hub.html'), hasAgenda: !!agenda });
+    meetings.push({ name, date, src, srcKey: m.source || '', summary: trunc(sm, 220), agenda, link: m.link || (SITE + '/gov-hub.html'), hasAgenda: !!agenda });
   }
 }
 meetings.sort((a, b) => a.date < b.date ? -1 : a.date > b.date ? 1 : 0);
 
 // ── "Actions You Can Take This Week" support. The Comment button opens the
-// reader's mail client with the subject + a starter body pre-filled. The
-// recipient comes from COMMENT_EMAILS — fill each entry with that board's
-// official public-comment address; blank = the To: line is left for the writer.
-const COMMENT_EMAILS = [
-  { re: /board of county commissioners|\bbocc\b/i,              email: '' },  // San Miguel County BOCC
-  { re: /planning commission|planning (and|&) zoning|\bp&z\b/i, email: '' },  // Planning Commissions / P&Z
-  { re: /town council/i,                                       email: '' },  // Telluride + Mountain Village Town Councils
-  { re: /historic (and|&) architectural|\bharc\b/i,            email: '' },  // Telluride HARC
-];
-const commentEmailFor = (n, s) => { const hit = COMMENT_EMAILS.find((c) => c.re.test(n + ' ' + s)); return hit ? hit.email : ''; };
+// reader's mail client with the subject + a starter body pre-filled, addressed
+// to each board's public-comment inbox. COMMENT_MAP + commentEmailFor() are
+// ported verbatim from gov-hub.html's COMMENT_MAP / commentInfo() so the email
+// uses the exact same recipients (and sub-type routing) as the website. Bodies
+// the website has no recipient for (e.g. Ridgway) resolve to '' → the writer
+// fills the To: line, same as on the site.
+const COMMENT_MAP = {
+  telluride:          'townclerk@telluride.gov',
+  'telluride-harc':   'dcandelaria@telluride.gov',
+  county:             'bocc@sanmiguelcountyco.gov',
+  'county-planning':  'planningcommission@sanmiguelcountyco.gov',
+  mv:                 'council@mtnvillage.org',
+  'mv-planning':      'planning@mtnvillage.org',
+  fire:               'pdasaro@telluridefire.com',
+  med:                'wcrossland@tellmed.org',
+  norwood:            'cross@norwoodtown.com',
+  ophir:              'clerk@ophir.us',
+  rico:               'townclerk@ricocolorado.gov',
+  airport:            'info@tellurideairport.com',
+  smrha:              'admin@smrha.org',
+};
+const commentEmailFor = (name, srcKey) => {
+  const title = String(name || '').toLowerCase();
+  let key = srcKey;
+  if (key === 'county'    && /planning|design review/.test(title)) key = 'county-planning';
+  if (key === 'mv'        && /planning|design review/.test(title)) key = 'mv-planning';
+  if (key === 'telluride' && /harc|historic|architectural review/.test(title)) key = 'telluride-harc';
+  return COMMENT_MAP[key] || '';
+};
 const boardName = (n, s) => (String(s).replace(/^town of /i, '') + ' ' + String(n).replace(/\s*meeting\s*$/i, ''))
   .replace(/\s+/g, ' ').trim().replace(/^(\w+)\s+\1\b/i, '$1');   // collapse "Ridgway Ridgway …"
 
@@ -191,7 +210,7 @@ const boardName = (n, s) => (String(s).replace(/^town of /i, '') + ' ' + String(
 const esc = (s) => String(s == null ? '' : s).replace(/&#0?39;/g, "'").replace(/[<>"]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])).replace(/&(?!amp;|lt;|gt;|quot;)/g, '&amp;');
 const wd = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'America/Denver' });
 const prettyDate = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'America/Denver' });
-const commentMailto = (m) => { const board = boardName(m.name, m.src); const subject = `Re: the ${prettyDate(m.date)} ${board} meeting`; const body = `To the ${board},\n\nI'd like to share a comment on the ${prettyDate(m.date)} meeting:\n\n`; return `mailto:${encodeURIComponent(commentEmailFor(m.name, m.src))}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; };
+const commentMailto = (m) => { const board = boardName(m.name, m.src); const subject = `Re: the ${prettyDate(m.date)} ${board} meeting`; const body = `To the ${board},\n\nI'd like to share a comment on the ${prettyDate(m.date)} meeting:\n\n`; return `mailto:${encodeURIComponent(commentEmailFor(m.name, m.srcKey))}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; };
 const safeUrl = (u) => /^https?:\/\//i.test(u || '') ? u : (SITE + '/events.html');
 const mh = meetings.map((m) => {
   const link = m.hasAgenda ? `<a href="${esc(m.agenda)}" style="color:#2f7a5f;text-decoration:none;border-bottom:1px solid #2f7a5f;font-size:12.5px;font-weight:600;">View agenda →</a>` : `<a href="${esc(m.link)}" style="color:#2f7a5f;text-decoration:none;border-bottom:1px solid #2f7a5f;font-size:12.5px;font-weight:600;">Meeting info →</a>`;
