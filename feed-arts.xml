@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Jun 2026 14:47:20 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 20:03:46 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Fri, Jun 12] North Fork Crossing w/ Brendan Forrest</title>
@@ -163,6 +163,19 @@ Born and raised in Austin, Texas, Calder Allen is a fifth-generation Texan whose
       <media:content url="https://ucarecdn.com/73cb4f4c-f615-4953-bfcf-3f5e356f3422/-/crop/3333x1665/0,504/-/preview/" medium="image" />
       <category>Community Event</category>
       <category>The Alibi</category>
+    </item>
+    <item>
+      <title>[Sun, Jun 14] Ethan Hale</title>
+      <link>https://www.telluride.com/event/ethan-hale/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/ethan%20hale%7C2026-06-14</guid>
+      <pubDate>Sun, 14 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62804/ethan_hale_2.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Solo acoustic guitar rock and roll with Ethan Hale at the Sheridan Historic Bar.]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/62804/ethan_hale_2.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
     </item>
     <item>
       <title>[Meeting] Planning and Zoning Commission Meeting — 2026-06-15</title>
