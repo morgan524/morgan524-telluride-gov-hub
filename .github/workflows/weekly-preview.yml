@@ -1,12 +1,13 @@
 name: Weekly Email Preview
 
 # Renders the upcoming weekly email (from the committed feed.xml that the
-# 6-hour content-refresh keeps fresh) and emails it to info@ every THURSDAY
-# for review. Edit the "Week Ahead" lede before Friday's send by putting the
-# corrected text in data/week-ahead-override.json (build-rss-feed.js uses it).
+# 6-hour content-refresh keeps fresh) and emails it to info@ every SATURDAY
+# for review — running after Friday means agendas posted Friday are picked up.
+# Edit the "Week Ahead" lede before the send by putting the corrected text in
+# data/week-ahead-override.json (build-rss-feed.js uses it).
 on:
   schedule:
-    - cron: '0 14 * * 4'   # Thursday 14:00 UTC (~8am Mountain)
+    - cron: '0 14 * * 6'   # Saturday 14:00 UTC (~8am Mountain)
   workflow_dispatch:
 
 permissions:
@@ -52,7 +53,7 @@ jobs:
 
       - name: Note when email isn't configured
         if: env.PREVIEW_SMTP_PASS == ''
-        run: echo "::warning::PREVIEW_SMTP_PASS secret not set — rendered weekly-preview.html (see artifact) but did not email. Add PREVIEW_SMTP_USER + PREVIEW_SMTP_PASS to enable the Thursday email."
+        run: echo "::warning::PREVIEW_SMTP_PASS secret not set — rendered weekly-preview.html (see artifact) but did not email. Add PREVIEW_SMTP_USER + PREVIEW_SMTP_PASS to enable the Saturday email."
 
       - name: Upload preview artifact
         if: always()
