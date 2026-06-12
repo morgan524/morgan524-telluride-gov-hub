@@ -90,6 +90,38 @@ for (const day of days) {
   if (pick) { chosen.push(pick); usedTitles.add(tkey(pick.title)); }
 }
 
+// ── Topic extras: events NOT already in the universal one-per-day list, grouped
+// by the Event Topics interest groups. Rendered inside Mailchimp *|INTERESTED|*
+// conditional blocks, so a subscriber only sees the topics they opted into.
+// Classifier mirrors scripts/build-rss-feed.js eventCategory() so the email and
+// the per-topic RSS feeds agree. Group names are the EXACT Mailchimp names
+// (category "Event Topics"); "Music & Arts" was renamed from "Music, Arts &
+// Festivals" to drop the comma that breaks the *|INTERESTED|* parser.
+const ARTS_SOURCES = /music on the green|sheridan|alibi|sherbino|opera house/i;
+function eventCategory(e) {
+  const t = [e.title, e.summary, e.location, e.source].map((x) => String(x || '')).join(' ').toLowerCase();
+  if (/\b(storytime|story time|kids?|children|youth|teens?|toddler|preschool|all[- ]ages|family|families|scouts?|baby|babies|tween)\b/.test(t)) return 'family';
+  if (/\b(hike|hiking|trail|trailhead|bike|biking|cycling|ski|skiing|nordic|snowshoe|climb|climbing|river|raft|rafting|fish|fishing|paddle|kayak|run|running|race|5k|10k|marathon|clean[- ]?up|stewardship|archery|birding|wildflower|trek)\b/.test(t)) return 'outdoors';
+  if (/\b(concert|live music|music|band|dj|open mic|singer|songwriter|symphony|orchestra|acoustic|jam|film|screening|cinema|movie|gallery|exhibit|exhibition|art walk|artist|theatre|theater|\bplay\b|dance|ballet|opera|festival|fest|jazz|bluegrass|blues|comedy)\b/.test(t)) return 'arts';
+  if (ARTS_SOURCES.test(String(e.source || ''))) return 'arts';
+  return null;
+}
+const TOPIC_DEFS = [
+  { key: 'arts',     group: 'Music & Arts',           label: 'More Music, Arts & Festivals' },
+  { key: 'family',   group: 'Family & Kids',          label: 'More for Families & Kids' },
+  { key: 'outdoors', group: 'Outdoors & Recreation',  label: 'More Outdoors & Recreation' },
+];
+const inChosen = new Set(chosen.map((e) => tkey(e.title)));
+const topicSections = TOPIC_DEFS.map((td) => {
+  const seen = new Set();
+  const events = evts
+    .filter((e) => eventCategory(e) === td.key && !inChosen.has(tkey(e.title)))
+    .filter((e) => { const k = tkey(e.title); if (seen.has(k)) return false; seen.add(k); return true; })
+    .sort((a, b) => (featuredScore(b) - featuredScore(a)) || (a.date < b.date ? -1 : a.date > b.date ? 1 : 0))
+    .slice(0, 4);
+  return { ...td, events };
+}).filter((td) => td.events.length);
+
 // ── Collect meetings (with real agenda links) ──
 const MEETING_FNS = ['getTellurideMeetings','getCountyCachedMeetings','getMVMeetings','getSchoolMeetings','getFireMeetings','getMedMeetings','getRidgwayMeetings','getNorwoodMeetings','getOphirMeetings','getSmartMeetings','getAirportMeetings','getRicoMeetings'];
 const getMeetingSummary = G('getMeetingSummary');
@@ -143,7 +175,7 @@ const mh = meetings.map((m) => {
   return `<tr><td style="padding:13px 0;border-top:1px solid #eef1ee;"><span style="display:inline-block;background:#21443c;color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(m.date)).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(m.src)}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;">${esc(m.name)}</div><div style="font-size:13.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${esc(m.summary)}</div>${link}</td></tr>`;
 }).join('');
 const EV_ACCENT = '#a8401f'; // reddish rust — complements the forest-green meeting badge
-const eh = chosen.map((e) => {
+const evRow = (e) => {
   const u = safeUrl(e.href);
   const badge = `<span style="display:inline-block;background:${EV_ACCENT};color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(e.date)).toUpperCase()}</span>`;
   const loc = e.location ? `<span style="font-size:12px;color:#7a8a85;margin-left:8px;">📍 ${esc(trunc(e.location, 38))}</span>` : '';
@@ -155,8 +187,15 @@ const eh = chosen.map((e) => {
     ? `<td width="78" valign="top" style="padding-right:14px;"><img src="${esc(e.img)}" width="78" height="78" alt="" style="display:block;width:78px;height:78px;border-radius:6px;border:0;object-fit:cover;background:#eef1ee;"></td>`
     : '';
   return `<tr><td style="padding:13px 0;border-top:1px solid #eef1ee;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>${img}<td valign="top">${text}</td></tr></table></td></tr>`;
-}).join('');
+};
+const eh = chosen.map(evRow).join('');
 const section = (label, rows) => rows ? `<tr><td style="padding:24px 34px 0;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;border-bottom:1px solid #d4c9b0;padding-bottom:8px;">→ ${label}</div><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}</table></td></tr>` : '';
+// Conditional per-interest extras — each block renders only for subscribers in
+// that Mailchimp "Event Topics" group. The *|INTERESTED|* tags are raw (NOT
+// html-escaped) so Mailchimp matches the literal group name including its "&".
+const topicHtml = topicSections.map((td) =>
+  `\n  *|INTERESTED:Event Topics:${td.group}|*` + section(td.label, td.events.map(evRow).join('')) + `*|END:INTERESTED|*`
+).join('');
 
 const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
 <body style="margin:0;background:#f0ece3;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
@@ -170,7 +209,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
     <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#2f7a5f;background:rgba(47,122,95,.1);padding:3px 10px;border-radius:999px;">📅 The Week Ahead</span>
     <p style="margin:11px 0 0;font-size:15.5px;line-height:1.65;color:#2c3b35;">${esc(LEDE)}</p></td></tr>
   ${section('Public Meetings This Week', mh)}
-  ${section('One Event a Day', eh)}
+  ${section('One Event a Day', eh)}${topicHtml}
   <tr><td style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
     <div style="font-family:Georgia,serif;font-size:13px;font-weight:700;color:#21443c;">Livable Telluride</div>
     <div style="font-size:12px;color:#7a8a85;line-height:1.6;margin-top:4px;">Community information for Telluride, Mountain Village &amp; San Miguel County.<br>
@@ -179,3 +218,4 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
 
 fs.writeFileSync(OUT, html);
 console.log(`weekly-email: ${meetings.length} meetings (${meetings.filter(m=>m.hasAgenda).length} w/ agenda links), ${chosen.length} events → ${OUT}`);
+console.log(`  conditional topic blocks: ${topicSections.map(t=>`${t.group} (${t.events.length})`).join(', ') || 'none this week'}`);
