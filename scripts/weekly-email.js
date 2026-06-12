@@ -21,6 +21,7 @@ const GD = process.argv[2], GH = process.argv[3];
 const WEEK_START = process.argv[4] || new Date().toISOString().slice(0, 10);
 const LABEL = process.argv[5] || 'This Week';
 const OUT = process.argv[6] || 'weekly-email.html';
+const PREVIEW = !!process.env.WEEKLY_PREVIEW;   // render an info@ review draft (banner + topic sections shown inline, merge tags neutralised) instead of the paste-ready Mailchimp HTML
 
 // ── Edit this each week ──
 const LEDE = "The government calendar bunches up on Wednesday the 17th — Mountain Village Town Council and the County Commissioners both meet, with Telluride’s HARC and Parks & Rec the same evening — so if land use, open space, or what gets built next is your thing, that’s the day to show up. Norwood’s Planning & Zoning, the Fire District, and Ophir’s General Assembly round out the week, and summer’s hitting full stride across the box canyon.";
@@ -144,6 +145,11 @@ function bodyDesc(name, src) {
 }
 const isWeak = (s) => !s || s.length < 32 || /agenda (tbd|not available|not yet|not posted)|hasn.t been posted|isn.t available|not available yet|no agenda|list of past meetings|meeting scheduled for|^regular meeting agenda/i.test(s);
 const trunc = (s, n) => { s = String(s || '').replace(/\s+/g, ' ').trim(); if (s.length <= n) return s; const c = s.slice(0, n); const d = c.lastIndexOf('. '); return (d > n * 0.5 ? c.slice(0, d + 1) : c.replace(/\s\S*$/, '') + '…'); };
+// The summary is limited to the four bodies whose decisions draw public
+// comment: Town Council (Telluride + Mountain Village), the County Commissioners
+// (BOCC), the Planning Commissions / P&Z boards, and HARC. Everything else
+// (fire, general assemblies, transit, school, trustees, subcommittees) is dropped.
+const KEEP_BODY = /\b(town council|board of county commissioners|bocc|planning commission|planning (and|&) zoning|p&z|historic (and|&) architectural|harc)\b/i;
 const meetSeen = new Set(); const meetings = [];
 for (const fn of MEETING_FNS) {
   const f = G(fn); if (typeof f !== 'function') continue;
@@ -155,6 +161,7 @@ for (const fn of MEETING_FNS) {
     if (!inWeek(date)) continue;
     const name = (m.title || '').replace(/\s*--?\s*Special Meeting$/i, '').trim();
     const src = m.sourceLabel || m.source || '';
+    if (!KEEP_BODY.test(name + ' ' + src)) continue;       // only TC / BOCC / PC / HARC
     const key = src + '|' + date + '|' + name.toLowerCase().replace(/[^a-z]/g, '').slice(0, 24);
     if (meetSeen.has(key)) continue; meetSeen.add(key);
     let sm = ''; try { sm = (getMeetingSummary && getMeetingSummary(m)) || ''; } catch (e) {}
@@ -166,9 +173,25 @@ for (const fn of MEETING_FNS) {
 }
 meetings.sort((a, b) => a.date < b.date ? -1 : a.date > b.date ? 1 : 0);
 
+// ── "Actions You Can Take This Week" support. The Comment button opens the
+// reader's mail client with the subject + a starter body pre-filled. The
+// recipient comes from COMMENT_EMAILS — fill each entry with that board's
+// official public-comment address; blank = the To: line is left for the writer.
+const COMMENT_EMAILS = [
+  { re: /board of county commissioners|\bbocc\b/i,              email: '' },  // San Miguel County BOCC
+  { re: /planning commission|planning (and|&) zoning|\bp&z\b/i, email: '' },  // Planning Commissions / P&Z
+  { re: /town council/i,                                       email: '' },  // Telluride + Mountain Village Town Councils
+  { re: /historic (and|&) architectural|\bharc\b/i,            email: '' },  // Telluride HARC
+];
+const commentEmailFor = (n, s) => { const hit = COMMENT_EMAILS.find((c) => c.re.test(n + ' ' + s)); return hit ? hit.email : ''; };
+const boardName = (n, s) => (String(s).replace(/^town of /i, '') + ' ' + String(n).replace(/\s*meeting\s*$/i, ''))
+  .replace(/\s+/g, ' ').trim().replace(/^(\w+)\s+\1\b/i, '$1');   // collapse "Ridgway Ridgway …"
+
 // ── Render ──
 const esc = (s) => String(s == null ? '' : s).replace(/&#0?39;/g, "'").replace(/[<>"]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])).replace(/&(?!amp;|lt;|gt;|quot;)/g, '&amp;');
 const wd = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'America/Denver' });
+const prettyDate = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'America/Denver' });
+const commentMailto = (m) => { const board = boardName(m.name, m.src); const subject = `Re: the ${prettyDate(m.date)} ${board} meeting`; const body = `To the ${board},\n\nI'd like to share a comment on the ${prettyDate(m.date)} meeting:\n\n`; return `mailto:${encodeURIComponent(commentEmailFor(m.name, m.src))}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; };
 const safeUrl = (u) => /^https?:\/\//i.test(u || '') ? u : (SITE + '/events.html');
 const mh = meetings.map((m) => {
   const link = m.hasAgenda ? `<a href="${esc(m.agenda)}" style="color:#2f7a5f;text-decoration:none;border-bottom:1px solid #2f7a5f;font-size:12.5px;font-weight:600;">View agenda →</a>` : `<a href="${esc(m.link)}" style="color:#2f7a5f;text-decoration:none;border-bottom:1px solid #2f7a5f;font-size:12.5px;font-weight:600;">Meeting info →</a>`;
@@ -189,6 +212,17 @@ const evRow = (e) => {
   return `<tr><td style="padding:13px 0;border-top:1px solid #eef1ee;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>${img}<td valign="top">${text}</td></tr></table></td></tr>`;
 };
 const eh = chosen.map(evRow).join('');
+// "Actions You Can Take This Week" — regenerates each week from the meetings in
+// the summary above: one comment opportunity per board, plus an evergreen
+// submit-an-event action.
+const ACT = '#2f7a5f';
+const actionRow = (m) => {
+  const board = boardName(m.name, m.src);
+  const agendaLink = m.hasAgenda ? `<a href="${esc(m.agenda)}" style="color:#5a6b64;text-decoration:none;border-bottom:1px solid #cbd3cf;font-size:12.5px;margin-left:14px;">Read the agenda →</a>` : '';
+  return `<tr><td style="padding:13px 0;border-top:1px solid #eef1ee;"><span style="display:inline-block;background:#21443c;color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(m.date)).toUpperCase()}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin:5px 0 3px;">Weigh in on the ${esc(board)} meeting</div><div style="font-size:13px;color:#5a6b64;line-height:1.5;margin-bottom:9px;">Public comment becomes part of the record — send yours before the meeting.</div><a href="${esc(commentMailto(m))}" style="display:inline-block;background:${ACT};color:#fff;text-decoration:none;font-size:12.5px;font-weight:700;padding:8px 15px;border-radius:5px;">💬 Comment on this meeting</a>${agendaLink}</td></tr>`;
+};
+const submitEventAction = `<tr><td style="padding:13px 0;border-top:1px solid #eef1ee;"><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-bottom:3px;">Have a community event?</div><div style="font-size:13px;color:#5a6b64;line-height:1.5;margin-bottom:9px;">Add it to the calendar so the whole valley sees it.</div><a href="${SITE}/events.html#submit" style="display:inline-block;background:${ACT};color:#fff;text-decoration:none;font-size:12.5px;font-weight:700;padding:8px 15px;border-radius:5px;">Submit an event →</a></td></tr>`;
+const ah = meetings.map(actionRow).join('') + submitEventAction;
 const section = (label, rows) => rows ? `<tr><td style="padding:24px 34px 0;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;border-bottom:1px solid #d4c9b0;padding-bottom:8px;">→ ${label}</div><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}</table></td></tr>` : '';
 // Conditional per-interest extras — each block renders only for subscribers in
 // that Mailchimp "Event Topics" group. The *|INTERESTED|* tags are raw (NOT
@@ -209,6 +243,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
     <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#2f7a5f;background:rgba(47,122,95,.1);padding:3px 10px;border-radius:999px;">📅 The Week Ahead</span>
     <p style="margin:11px 0 0;font-size:15.5px;line-height:1.65;color:#2c3b35;">${esc(LEDE)}</p></td></tr>
   ${section('Public Meetings This Week', mh)}
+  ${section('Actions You Can Take This Week', ah)}
   ${section('One Event a Day', eh)}${topicHtml}
   <tr><td style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
     <div style="font-family:Georgia,serif;font-size:13px;font-weight:700;color:#21443c;">Livable Telluride</div>
@@ -216,6 +251,18 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
     <a href="https://livabletelluride.org" style="color:#7a8a85;">livabletelluride.org</a> &nbsp;·&nbsp; <a href="*|UNSUB|*" style="color:#7a8a85;">Unsubscribe</a> &nbsp;·&nbsp; <a href="https://livabletelluride.org/profile.html?email=*|EMAIL|*&amp;fname=*|FNAME|*&amp;town=*|MMERGE6|*" style="color:#7a8a85;">Update preferences</a></div></td></tr>
 </table></td></tr></table></body></html>`;
 
-fs.writeFileSync(OUT, html);
-console.log(`weekly-email: ${meetings.length} meetings (${meetings.filter(m=>m.hasAgenda).length} w/ agenda links), ${chosen.length} events → ${OUT}`);
+// In preview mode, render an info@ review copy: a banner at the top, every topic
+// section shown inline (subscribers only see the ones they opted into), and the
+// Mailchimp merge tags neutralised so the footer/links aren't left broken.
+let out = html;
+if (PREVIEW) {
+  const banner = `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT — the upcoming weekly email. Look it over, then send the saved copy through Mailchimp. The topic sections below show in full here; each subscriber only sees the ones they opted into.</td></tr>\n`;
+  out = out.replace('  <tr><td style="background:#21443c;padding:26px 34px;">', banner + '  <tr><td style="background:#21443c;padding:26px 34px;">')
+           .replace(/\*\|INTERESTED:[^|]*\|\*/g, '').replace(/\*\|END:INTERESTED\|\*/g, '')
+           .replace(/\*\|UNSUB\|\*/g, '#').replace(/\*\|[A-Z0-9_]+\|\*/g, '');
+}
+fs.writeFileSync(OUT, out);
+const SUBJECT = `The Week Ahead — ${LABEL}`;
+console.log('SUBJECT=' + SUBJECT);
+console.log(`weekly-email: ${meetings.length} meetings (${meetings.filter(m=>m.hasAgenda).length} w/ agenda links), ${chosen.length} events → ${OUT}${PREVIEW ? ' [preview]' : ''}`);
 console.log(`  conditional topic blocks: ${topicSections.map(t=>`${t.group} (${t.events.length})`).join(', ') || 'none this week'}`);

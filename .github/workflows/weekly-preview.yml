@@ -1,10 +1,12 @@
 name: Weekly Email Preview
 
-# Renders the upcoming weekly email (from the committed feed.xml that the
-# 6-hour content-refresh keeps fresh) and emails it to info@ every SATURDAY
-# for review — running after Friday means agendas posted Friday are picked up.
-# Edit the "Week Ahead" lede before the send by putting the corrected text in
-# data/week-ahead-override.json (build-rss-feed.js uses it).
+# Renders the upcoming weekly email via scripts/weekly-email.js (from the live
+# gov-data.js + gov-helpers.js — real agenda links, curated events, topic
+# sections) and emails a review copy to info@ every SATURDAY — running after
+# Friday means agendas posted Friday are picked up. The run also saves the
+# paste-ready Mailchimp HTML (weekly-mailchimp.html) as an artifact.
+# Edit the "Week Ahead" lede before the send in the LEDE const of
+# scripts/weekly-email.js.
 on:
   schedule:
     - cron: '0 14 * * 6'   # Saturday 14:00 UTC (~8am Mountain)
@@ -30,11 +32,17 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Render weekly preview from feed.xml
+      - name: Render weekly email (preview + paste-ready) from live data
         id: render
         run: |
           set -o pipefail
-          node scripts/weekly-preview.js weekly-preview.html 2>&1 | tee /tmp/wp.log
+          curl -sS https://livabletelluride.org/js/gov-data.js    -o /tmp/gd.js
+          curl -sS https://livabletelluride.org/js/gov-helpers.js -o /tmp/gh.js
+          WS=$(date -u -d "next monday" +%F)
+          LABEL="$(date -u -d "$WS" '+%B %-d') – $(date -u -d "$WS +6 days" '+%B %-d, %Y')"
+          echo "Week start: $WS  ·  Label: $LABEL"
+          WEEKLY_PREVIEW=1 node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" weekly-preview.html 2>&1 | tee /tmp/wp.log
+          node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" weekly-mailchimp.html
           echo "subject=$(grep '^SUBJECT=' /tmp/wp.log | sed 's/^SUBJECT=//')" >> "$GITHUB_OUTPUT"
 
       - name: Email preview to info@livabletelluride.org
@@ -60,6 +68,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: weekly-preview
-          path: weekly-preview.html
+          path: |
+            weekly-preview.html
+            weekly-mailchimp.html
           retention-days: 14
           if-no-files-found: ignore
