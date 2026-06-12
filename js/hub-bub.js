@@ -208,6 +208,36 @@
   window.hbLogout = function() {
     if (auth) auth.signOut();
   };
+  // ── Avatars ── photo > chosen icon > first-letter circle. The five icon
+  // choices (Telluride nature). The user's choice lives on their users/{uid}
+  // doc (photoURL / avatarIcon) and is snapshotted onto each post/reply at
+  // creation so the feed renders without a per-author lookup.
+  var HB_AVATAR_ICONS = [
+    { id: 'mountain', emoji: '🏔️', bg: '#21443c' },
+    { id: 'pine',     emoji: '🌲', bg: '#2f7a5f' },
+    { id: 'gondola',  emoji: '🚡', bg: '#b58a2c' },
+    { id: 'deer',     emoji: '🦌', bg: '#8a5a2b' },
+    { id: 'sunrise',  emoji: '🌄', bg: '#c2683f' },
+  ];
+  var hbUserAvatar = { photo: null, icon: null };
+  function hbIconById(id) { for (var i = 0; i < HB_AVATAR_ICONS.length; i++) if (HB_AVATAR_ICONS[i].id === id) return HB_AVATAR_ICONS[i]; return null; }
+  function hbAvatarHtml(name, photo, icon, cls) {
+    if (photo) return '<div class="' + cls + ' hb-av-photo" style="background-image:url(\'' + String(photo).replace(/'/g, '%27') + '\')"></div>';
+    var ic = icon ? hbIconById(icon) : null;
+    if (ic) return '<div class="' + cls + '" style="background:' + ic.bg + '">' + ic.emoji + '</div>';
+    return '<div class="' + cls + '">' + (String(name || '?').charAt(0).toUpperCase()) + '</div>';
+  }
+  function hbSetComposeAvatar(name, isAdmin) {
+    var el = document.getElementById('hbComposeAvatar'); if (!el) return;
+    el.classList.remove('hb-av-photo'); el.style.backgroundImage = ''; el.textContent = '';
+    if (hbUserAvatar.photo) { el.classList.add('hb-av-photo'); el.style.backgroundImage = "url('" + String(hbUserAvatar.photo).replace(/'/g, '%27') + "')"; }
+    else {
+      var ic = hbUserAvatar.icon ? hbIconById(hbUserAvatar.icon) : null;
+      if (ic) { el.textContent = ic.emoji; el.style.background = ic.bg; }
+      else { el.textContent = String(name || 'U').charAt(0).toUpperCase(); el.style.background = isAdmin ? '#e53935' : 'var(--forest)'; }
+    }
+  }
+
   function hbUpdateAuthUI(user) {
     hbUser = user;
     var statusEl = document.getElementById('hbAuthStatus');
@@ -223,15 +253,88 @@
       userEl.style.display = '';
       userEl.textContent = name;
       logoutBtn.style.display = '';
-      avatarEl.textContent = name.charAt(0).toUpperCase();
-      avatarEl.style.background = isAdmin ? '#e53935' : 'var(--forest)';
+      if (avatarEl) { avatarEl.style.cursor = 'pointer'; avatarEl.title = 'Click to change your avatar'; avatarEl.onclick = function () { hbOpenAvatarPicker(); }; }
+      hbSetComposeAvatar(name, isAdmin);
+      // Load the saved avatar choice, then refresh the compose circle.
+      if (db) db.collection('users').doc(user.uid).get().then(function (d) {
+        var data = d.exists ? (d.data() || {}) : {};
+        hbUserAvatar = { photo: data.photoURL || null, icon: data.avatarIcon || null };
+        hbSetComposeAvatar(name, isAdmin);
+      }).catch(function () {});
     } else {
+      hbUserAvatar = { photo: null, icon: null };
       statusEl.style.display = '';
       userEl.style.display = 'none';
       logoutBtn.style.display = 'none';
-      avatarEl.textContent = '?';
-      avatarEl.style.background = '#999';
+      if (avatarEl) { avatarEl.classList.remove('hb-av-photo'); avatarEl.style.backgroundImage = ''; avatarEl.textContent = '?'; avatarEl.style.background = '#999'; avatarEl.onclick = null; avatarEl.style.cursor = ''; }
     }
+  }
+
+  // ── Avatar picker modal ──
+  window.hbOpenAvatarPicker = function () {
+    if (!hbUser) return;
+    var ov = document.getElementById('hbAvatarOverlay');
+    if (!ov) {
+      ov = document.createElement('div');
+      ov.id = 'hbAvatarOverlay';
+      ov.innerHTML =
+        '<div id="hbAvatarModal">' +
+          '<button type="button" class="hb-av-close" onclick="hbCloseAvatarPicker()" aria-label="Close">×</button>' +
+          '<h3>Your avatar</h3>' +
+          '<p class="hb-av-dek">Upload a photo, pick an icon, or keep your initial.</p>' +
+          '<div class="hb-av-current" id="hbAvatarPreview"></div>' +
+          '<label class="hb-av-upload">Upload a photo<input type="file" accept="image/*" id="hbAvatarFile" style="display:none"></label>' +
+          '<div class="hb-av-or">or pick an icon</div>' +
+          '<div class="hb-av-icons" id="hbAvatarIcons"></div>' +
+          '<div class="hb-av-actions">' +
+            '<button type="button" class="hb-av-letter" onclick="hbAvatarChoose(\'letter\')">Use my initial</button>' +
+            '<span class="hb-av-msg" id="hbAvatarMsg"></span>' +
+          '</div>' +
+        '</div>';
+      document.body.appendChild(ov);
+      ov.addEventListener('click', function (e) { if (e.target === ov) hbCloseAvatarPicker(); });
+      var iconsWrap = ov.querySelector('#hbAvatarIcons');
+      iconsWrap.innerHTML = HB_AVATAR_ICONS.map(function (ic) {
+        return '<button type="button" class="hb-av-icon" style="background:' + ic.bg + '" onclick="hbAvatarChoose(\'icon\',\'' + ic.id + '\')" title="' + ic.id + '">' + ic.emoji + '</button>';
+      }).join('');
+      ov.querySelector('#hbAvatarFile').addEventListener('change', function (e) { hbAvatarUpload(e.target.files && e.target.files[0]); });
+    }
+    hbRenderAvatarPreview();
+    ov.classList.add('open');
+  };
+  window.hbCloseAvatarPicker = function () { var ov = document.getElementById('hbAvatarOverlay'); if (ov) ov.classList.remove('open'); };
+  function hbRenderAvatarPreview() {
+    var p = document.getElementById('hbAvatarPreview'); if (!p) return;
+    var name = hbUser ? hbResolveName(hbUser) : 'U';
+    p.outerHTML = hbAvatarHtml(name, hbUserAvatar.photo, hbUserAvatar.icon, 'hb-av-current').replace('class="hb-av-current', 'id="hbAvatarPreview" class="hb-av-current');
+  }
+  function hbAvatarSave(fields, okMsg) {
+    // Include displayName so the write satisfies the users/{uid} create+update
+    // rules even if the person has no profile doc yet.
+    fields.displayName = hbResolveName(hbUser);
+    var msg = document.getElementById('hbAvatarMsg'); if (msg) { msg.className = 'hb-av-msg'; msg.textContent = 'Saving…'; }
+    db.collection('users').doc(hbUser.uid).set(fields, { merge: true }).then(function () {
+      hbUserAvatar = { photo: fields.photoURL || null, icon: fields.avatarIcon || null };
+      var isAdmin = hbUser.email === 'info@livabletelluride.org';
+      hbSetComposeAvatar(hbResolveName(hbUser), isAdmin);
+      hbRenderAvatarPreview();
+      if (msg) { msg.className = 'hb-av-msg ok'; msg.textContent = okMsg || 'Saved!'; }
+      setTimeout(hbCloseAvatarPicker, 1100);
+    }).catch(function () { if (msg) { msg.className = 'hb-av-msg err'; msg.textContent = 'Could not save — try again.'; } });
+  }
+  window.hbAvatarChoose = function (kind, id) {
+    if (kind === 'icon') hbAvatarSave({ avatarIcon: id, photoURL: firebase.firestore.FieldValue.delete() }, 'Icon set!');
+    else hbAvatarSave({ avatarIcon: firebase.firestore.FieldValue.delete(), photoURL: firebase.firestore.FieldValue.delete() }, 'Using your initial.');
+  };
+  function hbAvatarUpload(file) {
+    if (!file || !hbUser) return;
+    var msg = document.getElementById('hbAvatarMsg');
+    if (file.size > 5 * 1024 * 1024) { if (msg) { msg.className = 'hb-av-msg err'; msg.textContent = 'Image must be under 5 MB.'; } return; }
+    if (msg) { msg.className = 'hb-av-msg'; msg.textContent = 'Uploading…'; }
+    var ref = storage.ref('hub-bub/' + hbUser.uid + '/avatar_' + Date.now() + '_' + file.name);
+    ref.put(file).then(function (snap) { return snap.ref.getDownloadURL(); })
+      .then(function (url) { hbAvatarSave({ photoURL: url, avatarIcon: firebase.firestore.FieldValue.delete() }, 'Photo set!'); })
+      .catch(function () { if (msg) { msg.className = 'hb-av-msg err'; msg.textContent = 'Upload failed — try again.'; } });
   }
   // Listen for auth state changes
   if (hbFirebaseReady) {
@@ -661,6 +764,8 @@
         authorUid: hbUser.uid,
         authorId: hbUser.uid,
         authorName: hbResolveName(hbUser),
+        authorPhoto: hbUserAvatar.photo || null,
+        authorIcon: hbUserAvatar.icon || null,
         title: title,
         body: body,
         tags: selectedTags,
@@ -1027,7 +1132,7 @@
     // the far left; badge (post type) + admin delete button on the far right.
     card.innerHTML =
       '<div class="hb-post-head">' +
-        '<div class="hb-post-avatar">' + initial + '</div>' +
+        hbAvatarHtml(displayAuthor, post.authorPhoto, post.authorIcon, 'hb-post-avatar') +
         '<div class="hb-post-headline">' +
           '<div class="hb-post-title">' + hbEsc(post.title || '') + '</div>' +
           '<div class="hb-post-byline">' +
@@ -1293,7 +1398,7 @@
           var _rLinkHtml=r.linkUrl?'<div class="hb-reply-link-preview" data-link-url="'+hbEsc(r.linkUrl)+'"></div>':'';
           div.innerHTML=
             '<div class="hb-reply-head">'+
-              '<div class="hb-reply-avatar">'+initial+'</div>'+
+              hbAvatarHtml(r.authorName, r.authorPhoto, r.authorIcon, 'hb-reply-avatar')+
               '<span class="hb-reply-author">'+hbEsc(r.authorName||'Anonymous')+'</span>'+
               '<span class="hb-reply-time">'+time+'</span>'+
             '</div>'+
@@ -1380,6 +1485,8 @@
         authorUid: hbUser.uid,
         authorId: hbUser.uid,
         authorName: hbResolveName(hbUser),
+        authorPhoto: hbUserAvatar.photo || null,
+        authorIcon: hbUserAvatar.icon || null,
         body: finalBody,
         linkUrl: replyLinkUrl || null,
         createdAt: firebase.firestore.FieldValue.serverTimestamp()

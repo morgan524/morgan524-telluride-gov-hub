@@ -462,3 +462,26 @@
       border-radius: 50%; animation: hb-spin 0.7s linear infinite;
     }
     @keyframes hb-spin { to { transform: rotate(360deg); } }
+
+/* ── Avatars: photo fill + picker modal (2026-06-11) ── */
+.hb-post-avatar.hb-av-photo, .hb-reply-avatar.hb-av-photo, .hb-compose-avatar.hb-av-photo {
+  background-size: cover; background-position: center; color: transparent; font-size: 0;
+}
+#hbAvatarOverlay { position: fixed; inset: 0; background: rgba(20,40,34,.6); z-index: 10001; display: none; align-items: center; justify-content: center; padding: 20px; }
+#hbAvatarOverlay.open { display: flex; }
+#hbAvatarModal { background: #fff; border-radius: 16px; max-width: 380px; width: 100%; padding: 26px 24px 22px; position: relative; box-shadow: 0 25px 60px rgba(0,0,0,.35); text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+#hbAvatarModal h3 { margin: 0 0 4px; font-family: Georgia, serif; color: #21443c; font-size: 1.3rem; }
+#hbAvatarModal .hb-av-dek { font-size: .86rem; color: #5a6b64; margin: 0 0 16px; }
+#hbAvatarModal .hb-av-current { width: 76px; height: 76px; border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700; color: #fff; background: #21443c; background-size: cover; background-position: center; }
+#hbAvatarModal .hb-av-current.hb-av-photo { color: transparent; font-size: 0; }
+#hbAvatarModal .hb-av-upload { display: inline-block; background: #21443c; color: #fff; border-radius: 999px; padding: 9px 20px; font-weight: 700; font-size: .9rem; cursor: pointer; }
+#hbAvatarModal .hb-av-or { font-size: .74rem; text-transform: uppercase; letter-spacing: .08em; color: #9aa7a1; margin: 16px 0 10px; }
+#hbAvatarModal .hb-av-icons { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+#hbAvatarModal .hb-av-icon { width: 50px; height: 50px; border-radius: 50%; border: 2px solid transparent; font-size: 1.5rem; cursor: pointer; color: #fff; display: flex; align-items: center; justify-content: center; transition: transform .12s; }
+#hbAvatarModal .hb-av-icon:hover { border-color: #21443c; transform: scale(1.06); }
+#hbAvatarModal .hb-av-actions { margin-top: 18px; display: flex; align-items: center; gap: 12px; justify-content: center; flex-wrap: wrap; }
+#hbAvatarModal .hb-av-letter { background: #eef3ef; color: #21443c; border: 1px solid #d6e2da; border-radius: 999px; padding: 8px 16px; font-weight: 600; font-size: .85rem; cursor: pointer; }
+#hbAvatarModal .hb-av-msg { font-size: .85rem; }
+#hbAvatarModal .hb-av-msg.ok { color: #2f7a5f; font-weight: 600; }
+#hbAvatarModal .hb-av-msg.err { color: #b44b3c; }
+#hbAvatarModal .hb-av-close { position: absolute; top: 8px; right: 12px; background: none; border: none; font-size: 1.6rem; color: #7a8a85; cursor: pointer; line-height: 1; }
