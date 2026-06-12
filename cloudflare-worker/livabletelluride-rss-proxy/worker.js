@@ -648,6 +648,22 @@ async function firestoreDelete(env, docPath) {
 
 async function handleModerationAction(request, env) {
   const url = new URL(request.url);
+  // TEMP diagnostic — structural facts only, NO secret bytes returned. Remove after.
+  if (url.searchParams.get("diag") === "sa") {
+    const raw = env.FIREBASE_SERVICE_ACCOUNT || "";
+    let parseOk = false, parseErr = "";
+    try { JSON.parse(getServiceAccount ? firstJsonObject(raw.replace(/^﻿/, "").trim()) : raw); parseOk = true; }
+    catch (e) { parseErr = String(e.message || "").slice(0, 90); }
+    return new Response(JSON.stringify({
+      set: !!raw, len: raw.length,
+      startsBrace: raw.trim().slice(0, 1) === "{", endsBrace: raw.trim().slice(-1) === "}",
+      openBraces: (raw.match(/\{/g) || []).length, closeBraces: (raw.match(/\}/g) || []).length,
+      serviceAccountCount: (raw.match(/service_account/g) || []).length,
+      privateKeyCount: (raw.match(/BEGIN PRIVATE KEY/g) || []).length,
+      hasLiteralBackslashN: /\\n/.test(raw), hasRealNewlineInKey: /BEGIN PRIVATE KEY-----\n/.test(raw),
+      parseOk, parseErr,
+    }), { headers: { "Content-Type": "application/json" } });
+  }
   const id = url.searchParams.get("id") || "", a = url.searchParams.get("a") || "";
   const exp = url.searchParams.get("exp") || "", sig = url.searchParams.get("sig") || "";
   const page = (title, msg) => new Response(
