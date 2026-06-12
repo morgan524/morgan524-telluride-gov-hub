@@ -1085,7 +1085,7 @@
     reactionTypes.forEach(function(r) {
       var count = (post.reactions && post.reactions[r.key]) || 0;
       var isSelected = userReaction === r.key ? ' selected' : '';
-      reactionsHtml += '<button class="hb-react-btn' + isSelected + '" onclick="hbReact(\'' + post.id + '\',\'' + r.key + '\')" title="' + r.label + '">' + r.emoji + ' <span>' + count + '</span></button>';
+      reactionsHtml += '<button class="hb-react-btn' + isSelected + '" onclick="hbReact(\'' + post.id + '\',\'' + r.key + '\')" title="' + r.label + '"><span class="hb-react-emoji">' + r.emoji + '</span> <span>' + count + '</span></button>';
     });
     reactionsHtml += '</div>';
 

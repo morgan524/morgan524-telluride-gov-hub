@@ -11,7 +11,9 @@
   body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
   a{color:var(--green)}
   .topbar{display:flex;align-items:center;gap:14px;padding:12px 22px;background:#fff;border-bottom:1px solid var(--line)}
-  .topbar img{height:42px}
+  .topbar img{height:60px;display:block}
+  .topbar a.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .topbar a.logo:hover .brand{opacity:.85}
   .topbar .brand{font-weight:700;color:var(--green)}
   .topbar .nav{margin-left:auto;display:flex;gap:14px;font-size:.85rem}
   .topbar .nav a{color:var(--ink);text-decoration:none;opacity:.8}
@@ -81,8 +83,10 @@
 </head>
 <body>
   <header class="topbar">
-    <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="" onerror="this.style.display='none'">
-    <div class="brand">Livable&nbsp;Telluride</div>
+    <a href="https://livabletelluride.org/" class="logo" aria-label="Livable Telluride home">
+      <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
+      <span class="brand">Livable&nbsp;Telluride</span>
+    </a>
     <nav class="nav">
       <a href="https://livabletelluride.org/gov-hub.html">Gov-Hub</a>
       <a href="https://livabletelluride.org/events.html">Events</a>
