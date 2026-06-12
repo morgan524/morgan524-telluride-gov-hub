@@ -800,7 +800,18 @@
         postData.sourceQuestion = document.getElementById('hbSourceQuestion') ? document.getElementById('hbSourceQuestion').value.trim() : '';
       }
       return db.collection('posts').add(postData);
-    }).then(function() {
+    }).then(function(docRef) {
+      // AI moderation — fire-and-forget. The Worker asks Claude whether the post
+      // is a personal attack / harassment / threat; if so it emails info@ with
+      // one-click Accept/Deny links. Never blocks posting; failure is silent.
+      try {
+        if (docRef && docRef.id) {
+          fetch('https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/moderate', {
+            method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ postId: docRef.id, title: title, body: body, authorName: hbResolveName(hbUser) })
+          }).catch(function() {});
+        }
+      } catch (e) {}
       // Update user post count
       db.collection('users').doc(hbUser.uid).update({
         postCount: firebase.firestore.FieldValue.increment(1)

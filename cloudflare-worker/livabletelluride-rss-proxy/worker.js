@@ -477,6 +477,168 @@ async function handleSummarizeFlyer(request, env) {
   return json({ ok: true, summary });
 }
 
+// ════════════════════ HUB-BUB POST MODERATION ════════════════════
+// /moderate  — POST {postId,title,body,authorName}. Claude judges the post; if
+//   it's a personal attack/harassment/threat/slur (NOT mere criticism of
+//   policy/officials), email info@ with one-click Accept/Deny links back to
+//   /moderation-action. Reuses ANTHROPIC_API_KEY. Best-effort: returns ok even
+//   when nothing is configured, so a flag never blocks posting.
+// /moderation-action — GET from the emailed buttons. HMAC-verified. "deny"
+//   deletes the post from Firestore via the FIREBASE_SERVICE_ACCOUNT secret.
+const MOD_PROJECT = "telluride-gov-hub";
+const MOD_RECIPIENT = "info@livabletelluride.org";
+
+function b64url(buf) {
+  let s = ""; const b = new Uint8Array(buf);
+  for (let i = 0; i < b.length; i++) s += String.fromCharCode(b[i]);
+  return btoa(s).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+// HMAC key derived from a stable secret (no extra secret to manage). The
+// Accept/Deny links are unforgeable because only the Worker holds this seed.
+async function modHmacKey(env) {
+  const seed = (env.FIREBASE_SERVICE_ACCOUNT || env.ANTHROPIC_API_KEY || "fallback") + "|hubbub-moderation-v1";
+  return crypto.subtle.importKey("raw", new TextEncoder().encode(seed),
+    { name: "HMAC", hash: "SHA-256" }, false, ["sign", "verify"]);
+}
+async function modSign(env, payload) {
+  const key = await modHmacKey(env);
+  return b64url(await crypto.subtle.sign("HMAC", key, new TextEncoder().encode(payload)));
+}
+
+function modEmailHtml(o) {
+  const esc = (s) => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  return `<div style="font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:560px;margin:0 auto;color:#1a2e29">
+  <div style="background:#21443c;color:#fff;padding:18px 22px;border-radius:8px 8px 0 0">
+    <div style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#e7b24a">Hub-Bub moderation</div>
+    <div style="font-size:18px;font-weight:700;margin-top:3px">A post was flagged for review</div></div>
+  <div style="border:1px solid #e6e9e6;border-top:0;border-radius:0 0 8px 8px;padding:20px 22px">
+    <p style="margin:0 0 4px;font-size:13px;color:#7a8a85">Reason: <strong style="color:#a8401f">${esc(o.reason || "possible personal attack")}</strong>${o.severity ? " (" + esc(o.severity) + ")" : ""}</p>
+    <p style="margin:14px 0 4px;font-size:12px;color:#7a8a85;text-transform:uppercase;letter-spacing:.06em">Posted by ${esc(o.author)}</p>
+    <div style="font-weight:700;font-size:16px;margin:2px 0 8px">${esc(o.title)}</div>
+    <div style="font-size:14px;line-height:1.6;color:#41514b;white-space:pre-wrap;background:#f7faf8;border:1px solid #eef1ee;border-radius:8px;padding:12px 14px">${esc(o.body)}</div>
+    <table role="presentation" cellpadding="0" cellspacing="0" style="margin:22px 0 6px"><tr>
+      <td style="padding-right:10px"><a href="${o.acceptUrl}" style="display:inline-block;background:#e7efe9;color:#21443c;font-weight:700;font-size:14px;text-decoration:none;padding:11px 22px;border-radius:8px">&#10003; Accept (keep)</a></td>
+      <td><a href="${o.denyUrl}" style="display:inline-block;background:#a8401f;color:#fff;font-weight:700;font-size:14px;text-decoration:none;padding:11px 22px;border-radius:8px">&#10007; Deny (remove)</a></td>
+    </tr></table>
+    <p style="font-size:12px;color:#9aa7a1;margin-top:10px">&ldquo;Deny&rdquo; deletes the post immediately. Links expire in 7 days.</p>
+  </div></div>`;
+}
+
+async function handleModerate(request, env) {
+  const cors = profileCorsHeaders(request.headers.get("Origin") || "");
+  const json = (obj, status) => new Response(JSON.stringify(obj), { status: status || 200, headers: cors });
+  if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
+  if (request.method !== "POST") return json({ ok: false }, 405);
+  if (!env.ANTHROPIC_API_KEY) return json({ ok: true, skipped: "no anthropic key" });
+
+  let d; try { d = await request.json(); } catch { return json({ ok: false }, 400); }
+  const postId = String(d.postId || "").trim();
+  const title = String(d.title || "").slice(0, 300);
+  const body = String(d.body || "").slice(0, 4000);
+  const author = String(d.authorName || "a neighbor").slice(0, 80);
+  if (!postId || !body) return json({ ok: true, skipped: "missing fields" });
+
+  const sys = "You are a content-moderation assistant for a small-town civic forum in Telluride, Colorado. "
+    + "Neighbors discuss local government, housing, land use, and events. Vigorous criticism of policies, public officials, "
+    + "decisions, and institutions is WELCOME and must NOT be flagged, even when blunt or angry. "
+    + "Flag a post ONLY if it contains a personal attack on a private individual, harassment, threats of violence, "
+    + "slurs or hate toward a protected group, or doxxing (sharing private personal info). "
+    + "Respond with ONLY a compact JSON object and nothing else: "
+    + "{\"flag\": true|false, \"reason\": \"<=8 words\", \"severity\": \"low|medium|high\"}.";
+  let verdict = { flag: false };
+  try {
+    const r = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-api-key": env.ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01" },
+      body: JSON.stringify({ model: "claude-opus-4-8", max_tokens: 150, system: sys,
+        messages: [{ role: "user", content: "POST TITLE: " + title + "\n\nPOST BODY:\n" + body }] }),
+    });
+    const out = await r.json();
+    const txt = (out.content || []).filter(b => b && b.type === "text").map(b => b.text).join("");
+    const m = txt.match(/\{[\s\S]*\}/);
+    if (m) verdict = JSON.parse(m[0]);
+  } catch (e) { return json({ ok: false, msg: "classify failed" }); }
+
+  if (!verdict.flag) return json({ ok: true, flagged: false });
+
+  const exp = Date.now() + 7 * 24 * 3600 * 1000;
+  const origin = new URL(request.url).origin;
+  const mkLink = async (action) => {
+    const sig = await modSign(env, postId + "|" + action + "|" + exp);
+    return origin + "/moderation-action?id=" + encodeURIComponent(postId) + "&a=" + action + "&exp=" + exp + "&sig=" + sig;
+  };
+  const html = modEmailHtml({
+    title, body, author, reason: verdict.reason, severity: verdict.severity,
+    acceptUrl: await mkLink("accept"), denyUrl: await mkLink("deny"),
+  });
+
+  if (env.MAIL_RELAY_URL) {
+    try {
+      await fetch(env.MAIL_RELAY_URL, { method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ kind: "moderation", to: MOD_RECIPIENT, subject: "⚠️ Hub-Bub post flagged for review", html, secret: env.MAIL_RELAY_SECRET || "" }) });
+    } catch (e) { /* email best-effort */ }
+  }
+  return json({ ok: true, flagged: true });
+}
+
+// Service-account → Google OAuth token → Firestore REST (per-isolate token cache)
+function pemToPkcs8(pem) {
+  const b64 = String(pem).replace(/-----BEGIN [^-]+-----/, "").replace(/-----END [^-]+-----/, "").replace(/\\n/g, "").replace(/\s+/g, "");
+  const bin = atob(b64); const buf = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) buf[i] = bin.charCodeAt(i);
+  return buf.buffer;
+}
+let _gToken = null, _gTokenExp = 0;
+async function googleAccessToken(env, scope) {
+  if (_gToken && Date.now() < _gTokenExp - 60000) return _gToken;
+  const sa = JSON.parse(env.FIREBASE_SERVICE_ACCOUNT);
+  const now = Math.floor(Date.now() / 1000);
+  const enc = (o) => b64url(new TextEncoder().encode(JSON.stringify(o)));
+  const signingInput = enc({ alg: "RS256", typ: "JWT" }) + "." +
+    enc({ iss: sa.client_email, scope, aud: "https://oauth2.googleapis.com/token", iat: now, exp: now + 3600 });
+  const key = await crypto.subtle.importKey("pkcs8", pemToPkcs8(sa.private_key),
+    { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" }, false, ["sign"]);
+  const sig = b64url(await crypto.subtle.sign("RSASSA-PKCS1-v1_5", key, new TextEncoder().encode(signingInput)));
+  const r = await fetch("https://oauth2.googleapis.com/token", {
+    method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: "grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&assertion=" + signingInput + "." + sig,
+  });
+  const j = await r.json();
+  if (!j.access_token) throw new Error("token: " + (j.error_description || j.error || "unknown"));
+  _gToken = j.access_token; _gTokenExp = Date.now() + (j.expires_in || 3600) * 1000;
+  return _gToken;
+}
+async function firestoreDelete(env, docPath) {
+  const sa = JSON.parse(env.FIREBASE_SERVICE_ACCOUNT);
+  const token = await googleAccessToken(env, "https://www.googleapis.com/auth/datastore");
+  const url = "https://firestore.googleapis.com/v1/projects/" + (sa.project_id || MOD_PROJECT) +
+    "/databases/(default)/documents/" + docPath;
+  const r = await fetch(url, { method: "DELETE", headers: { Authorization: "Bearer " + token } });
+  if (!r.ok) throw new Error("firestore " + r.status + " " + (await r.text().catch(() => "")).slice(0, 120));
+}
+
+async function handleModerationAction(request, env) {
+  const url = new URL(request.url);
+  const id = url.searchParams.get("id") || "", a = url.searchParams.get("a") || "";
+  const exp = url.searchParams.get("exp") || "", sig = url.searchParams.get("sig") || "";
+  const page = (title, msg) => new Response(
+    "<!doctype html><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'>" +
+    "<body style='font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:520px;margin:60px auto;padding:0 24px;color:#1a2e29'>" +
+    "<h2 style='color:#21443c'>" + title + "</h2><p style='font-size:16px;line-height:1.6;color:#41514b'>" + msg + "</p>" +
+    "<p style='margin-top:24px'><a href='https://livabletelluride.org/hub-bub.html' style='color:#2f7a5f'>Open Hub-Bub &rarr;</a></p></body>",
+    { headers: { "Content-Type": "text/html; charset=utf-8" } });
+  if (!id || !a || !exp || !sig) return page("Invalid link", "This moderation link is missing information.");
+  if (Date.now() > Number(exp)) return page("Link expired", "This moderation link has expired. Open Hub-Bub to moderate directly.");
+  if ((await modSign(env, id + "|" + a + "|" + exp)) !== sig) return page("Invalid link", "This moderation link couldn't be verified.");
+  if (a === "accept") return page("Post kept", "No action taken — the post stays published. Thanks for reviewing.");
+  if (a === "deny") {
+    if (!env.FIREBASE_SERVICE_ACCOUNT) return page("Not configured yet", "Post removal isn't set up yet (missing FIREBASE_SERVICE_ACCOUNT). You can remove the post directly in Hub-Bub.");
+    try { await firestoreDelete(env, "posts/" + id); return page("Post removed", "The flagged post has been deleted from Hub-Bub."); }
+    catch (e) { return page("Couldn't remove it", "Deletion failed: " + String((e && e.message) || e).slice(0, 140) + ". You can remove it directly in Hub-Bub."); }
+  }
+  return page("Unknown action", "That action isn't recognized.");
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -491,6 +653,12 @@ export default {
     }
     if (url.pathname === "/summarize-flyer") {
       return handleSummarizeFlyer(request, env);
+    }
+    if (url.pathname === "/moderate") {
+      return handleModerate(request, env);
+    }
+    if (url.pathname === "/moderation-action") {
+      return handleModerationAction(request, env);
     }
     if (request.method !== "GET" && request.method !== "HEAD") {
       return new Response("Method Not Allowed", { status: 405 });
