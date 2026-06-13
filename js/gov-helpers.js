@@ -172,7 +172,7 @@ const MANUAL_SUMMARIES = {
     "Agenda not yet available",
 
   "norwood|2026-06-15|Planning and Zoning Commission Meeting":
-    "Agenda not yet available",
+    "The commission takes up two land-use code items. It will consider Resolution 0615-2026, recommending amendments to the Norwood Land Use Code to adopt the updated 2026 DarkSky International outdoor-lighting standards, alongside a discussion of the Dark Sky Coalition's updated rules. It also reviews a Current Conditions Analysis as part of the broader Land Use Code update. The consent agenda is limited to approving the May 18 minutes. 6:30 p.m. at Norwood Town Hall, with a Zoom option.",
 
   "ouray|2026-05-20|The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions.":
     "Land Use Code definitions review · Planning Commission work session",
