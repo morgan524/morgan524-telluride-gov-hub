@@ -2684,37 +2684,15 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Yoga for ALL with Jane & Jay",
-    link: "https://telluridelibrary.libcal.com/event/15803443?hs=a",
-    description: "8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
-    pubDate: "2026-06-12T14:30:00.000Z",
+    title: "Pieles y Pociones",
+    link: "https://telluridelibrary.libcal.com/event/16955150?hs=a",
+    description: "2:00 PM – 4:00 PM · &iexcl;Ven y aprende a crear tus propias pociones para cuidar tu piel y la de tu familia con Mar&iacute;a Mart&iacute;nez del Campo!",
+    pubDate: "2026-06-13T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg"
-  },
-  {
-    title: "Telluride Farmers Marketshow: Native American Hoopdancer ShanDien",
-    link: "https://telluridelibrary.libcal.com/event/15564467?hs=a",
-    description: "11:00 AM – 12:00 PM · ShanDien Sonwai LaRance is a champion hoop dancer and instructor. Growing up immersed in Native American arts and traditions, she shares her culture around the world, acting as an unofficial ambassador for Native American and First Nations peoples.",
-    pubDate: "2026-06-12T17:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Gondola Plaza - Telluride",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_26_40.png"
-  },
-  {
-    title: "Teen Manga and Ramen Club",
-    link: "https://telluridelibrary.libcal.com/event/16949864?hs=a",
-    description: "2:00 PM – 3:00 PM · Join Jackson and Rachel on select Fridays throughout the summer for our Teen Manga and Ramen Club. Each session we will make and eat homemade fancy ramen. We will also discuss manga, and have different crafts and activities related to manga/anime.",
-    pubDate: "2026-06-12T20:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_12_42_58.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_11_31_05.png"
   }
 ];
 
@@ -2762,18 +2740,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "North Fork Crossing w/ Brendan Forrest",
-    link: "https://www.alibitelluride.com/calendar#eca-event=north-folk-crossing",
-    description: "North Fork Crossing is a new-age Bluegrass band that resides between the Traditi...",
-    pubDate: "2026-06-12",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/f1d0587b-ecc4-4749-9dc7-6d561e93a852/-/crop/2500x1251/0,210/-/preview/"
-  },
   {
     title: "Ivanoff (DJ SET)",
     link: "https://www.alibitelluride.com/calendar#eca-event=ivanoff-dj-set",
@@ -3231,127 +3197,6 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
-    title: "Ridgway Farmers Market",
-    link: "www.ridgwayfarmersmarket.com",
-    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here.",
-    pubDate: "2026-06-12T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
-  },
-  {
-    title: "Ridgway Railroad Museum FREE Train Rides",
-    link: "https://www.ridgwayrailroadmuseum.org/",
-    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
-    pubDate: "2026-06-12T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
-  },
-  {
-    title: "True Grit Historic Walking Tours",
-    link: "https://truegrittours.org/true-grit-tours ",
-    description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
-    pubDate: "2026-06-12T21:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52285883190282/huge/99283c09e34ca5aeabd7006cca2ba5b2b28899c3.jpg"
-  },
-  {
-    title: "FLANNEL FEEDBACK",
-    link: "https://coloradoboydepot.com/calendar/",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-06-12T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Fun on the Field Night",
-    link: "ouraycountybaseball.com",
-    description: "Step up to the plate, Ouray County! Join us at Ridgway Athletic Park (Solar Ranch Fields) for an evening of baseball, fun games, and hometown connection for all ages. Let's come together as a community, the OCB way! Activities Include: Free Home Run Derby (ages 4–16)Free games for all agesDunk Tank – Dunk a Coach!Silent Auction and MLB prizesConcessions (hot dogs, chili, snacks)",
-    pubDate: "2026-06-12T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53126014497850/huge/2571ed6a8fa164f8de999470596fcf24a1311f63.jpg"
-  },
-  {
-    title: "ROCC'n By The River Summer Dinner",
-    link: "https://roccsummerdinner2026.rsvpify.com/?group=e01b5e91-6d69-432f-8dc1-101f63d09c89&view=Wall",
-    description: "Guest speaker is Heather Hansman author of Fierce Country: The Untold Story of Three Women Who Ignited America’s Love for the Wild. She brings to life the untold stories of these women who shaped the wild places we love--and shares fresh inspiration to protecting them. We hope you can attend! Catering by Stefan Davenport Music by local musicians Doug & Heather TICKETS ARE LIMITED AND HAVE SOLD OUT IN THE PAST Click the website link to buy tickets",
-    pubDate: "2026-06-12T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Pa-Co-Chu-Puk ",
-    imageUrl: "https://localist-images.azureedge.net/photos/52773337940831/huge/16b7fad506150558489741f3cda5604bf1be060a.jpg"
-  },
-  {
-    title: "ORGANTIC - Live @ Floating Lotus Brewery",
-    link: "www.FloatingLotusBrewery.com",
-    description: "Join us Friday, June 12 for a night of global grooves and high-energy instrumental jams on the outdoor stage at Floating Lotus Brewery! Featuring local favorites Organtic — a 5-piece instrumental group blending reggae, funk, afrobeat, Latin jazz, and jamband influences into a deep, danceable sonic journey. Their live shows are packed with rhythm, improvisation, and contagious energy that keeps the crowd moving all night long. Come support local music, grab a beer, and kick off your summer weekend under the Ridgway skies. 💵 $10 Cover 👨‍👩‍👧 All Ages Welcome",
-    pubDate: "2026-06-13T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52878975083462/huge/5d86abd02cae768f6aabc574f4fcfd17ed09e474.jpg"
-  },
-  {
-    title: "Ridgway Film Club",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-film-club-8555",
-    description: "Free screening! 7pm at the Decker Room. 675 Clinton St. Summer film screenings will be held on June 12, July 10, and August 14 For movie details, sign up here (movie names released via email the week prior) www.ridgwayfilmclub.wordpress.com",
-    pubDate: "2026-06-13T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53056380145290/huge/4bc303dba2f5121125f911d9a1be0c80caa07512.jpg"
-  },
-  {
-    title: "Trivia Night @ the Wright",
-    link: "https://thewrightoperahouse.org/",
-    description: "Trivia Night @ the Wright WHEN? Friday, June 12 Doors at 6:30 pm • Event at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Come test the true limits of the human mind at Trivia Night @ the Wright, where obscure facts become temporary personality traits. Questions may include history, movies, science, music, local lore, accidental expertise, and things you absolutely learned once in 8th grade and never expected to need again. Bring a team, bring a friend, or arrive alone like a mysterious wandering scholar of useless information. Competitive spirits, wild guesses, and dramatic confidence are all encouraged. No studying required. In fact, studying may make things worse. Free to attend In-person event at the historic Wright Opera House Part of programming at the Wright Opera House, bringing arts, conversation, and community to downtown Ouray since 1889.",
-    pubDate: "2026-06-13T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52886675356003/huge/9fd471ff714c45bd18ae9a67be7d9b0872cd5a56.jpg"
-  },
-  {
-    title: "High Step Society - Live",
-    link: "https://sherbino.org/event/high-step-society/",
-    description: "Doors at 7 pm || Show at 7:30 pm || Dancehall-style show with limited seating || Tickets: $25 advance / $30 day of show || A limited number of reserved tables are available. GA Tickets can be found under the venue diagram. Reserved tables are found by hovering over the diagram. GA seats are available in the bar area. Get ready for a high-energy night of vintage glamour and modern beats when High Step Society brings their electrifying electro-swing sound to the Sherbino. Part big band, part dance-floor DJ set, High Step Society delivers a high-flying, beat-dropping performance that blends the swagger of the Jazz Age with bass-heavy electronic grooves. Sultry, effervescent, low-down, dirty, and irresistibly danceable, this seven-piece powerhouse throws jazz straight back onto the dance floor where it belongs. Based between Portland, OR and New Orleans, LA, High Step Society has been a favorite on the U.S. …",
-    pubDate: "2026-06-13T01:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52993729729431/huge/e1d998becabcdd783bde62126a99bfdfad6d9a7d.jpg"
-  },
-  {
-    title: "2-Day Trail Stewardship Trip: Wright's Lake to Blue Lakes Pass",
-    link: "https://ouraytrails.org/volunteers",
-    description: "Join Ouray Trail Group Crew Leader Richfor a two-day stewardship trip from Wright's Lake to Blue Lakes Pass. Volunteers will perform trail maintenance while enjoying the spectacular scenery of Colorado’s backcountry. This is a rewarding opportunity to help maintain local trails alongside fellow volunteers. There's no cost, but please register.",
-    pubDate: "2026-06-13T14:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Wright's Lake Trailhead",
-    imageUrl: "https://localist-images.azureedge.net/photos/52932411507464/huge/45ad0cb327371f83a5fd76657c690337ddf55ebc.jpg"
-  },
-  {
     title: "San Juan Trail Triathlon",
     link: "https://sanjuantrailtri.com/",
     description: "DASH * PADDLE * PEDAL 3.5 mile run 1.5 mile paddle 8 mile mountain Divisions for individual racers, teams, and teens ages 12+ Money raised from this event directly benefits Montrose Recreation Foundation and Voyager Youth Program.",
@@ -3438,17 +3283,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52886832810301/huge/bf74d62304f30405fb5236ea392d4e442cdb2f68.jpg"
-  },
-  {
-    title: "2-Day Trail Stewardship Trip: Wright's Lake to Blue Lakes Pass",
-    link: "https://ouraytrails.org/volunteers",
-    description: "Join Ouray Trail Group Crew Leader Richfor a two-day stewardship trip from Wright's Lake to Blue Lakes Pass. Volunteers will perform trail maintenance while enjoying the spectacular scenery of Colorado’s backcountry. This is a rewarding opportunity to help maintain local trails alongside fellow volunteers. There's no cost, but please register.",
-    pubDate: "2026-06-14T06:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Wright's Lake Trailhead",
-    imageUrl: "https://localist-images.azureedge.net/photos/52932411507464/huge/45ad0cb327371f83a5fd76657c690337ddf55ebc.jpg"
   },
   {
     title: "Flag Day Service",
@@ -3902,17 +3736,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52092563418852/huge/6b966623135c4503564229a4b8f584add6755426.jpg"
   },
   {
-    title: "2-Day Trail Stewardship Trip: Blue Lakes Trail to Upper Lakes",
-    link: "https://ouraytrails.org/volunteers",
-    description: "Join OTG for a two-day stewardship trip to Blue Lakes Trail to Upper Lakes. Volunteers will perform trail maintenance while enjoying the spectacular scenery of Colorado’s backcountry. This is a rewarding opportunity to help maintain local trails alongside fellow volunteers. There's no cost, but please register.",
-    pubDate: "2026-06-20T14:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Blue Lakes Trailhead",
-    imageUrl: "https://localist-images.azureedge.net/photos/52932450369902/huge/9367aba3bb18c48b7da043ad4209431d66d6e66c.jpg"
-  },
-  {
     title: "3rd Annual Golf Scramble",
     link: "https://secure.anedot.com/ouray-county-republican-central-committee/faad1068-b55b-433f-9239-4260f4ad824f?utm_source=anedot&utm_medium=qr_code&utm_campaign=golf-tournament",
     description: "The Ouray County Republican Central Committee invites you to celebrate Amerca's 250 Birthday! Enjoy our 3rd Annual golf scramble at Cobble Creek gof Course. We will have prizes, auctions and candidates. Check-ins start at 7:30 AM. Contact Harry Pritchett for more info: 303-903-1088",
@@ -3966,17 +3789,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52092563418852/huge/6b966623135c4503564229a4b8f584add6755426.jpg"
-  },
-  {
-    title: "2-Day Trail Stewardship Trip: Blue Lakes Trail to Upper Lakes",
-    link: "https://ouraytrails.org/volunteers",
-    description: "Join OTG for a two-day stewardship trip to Blue Lakes Trail to Upper Lakes. Volunteers will perform trail maintenance while enjoying the spectacular scenery of Colorado’s backcountry. This is a rewarding opportunity to help maintain local trails alongside fellow volunteers. There's no cost, but please register.",
-    pubDate: "2026-06-21T06:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Blue Lakes Trailhead",
-    imageUrl: "https://localist-images.azureedge.net/photos/52932450369902/huge/9367aba3bb18c48b7da043ad4209431d66d6e66c.jpg"
   },
   {
     title: "Ouray Open Air Market",
@@ -4113,7 +3925,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Evenings of History 2026 @ the Wright",
     link: "https://www.ouraycountyhistoricalsociety.org/about-4",
-    description: "Evenings of History 2026 @ the Wright WHEN? Weekly Tuesdays • 7:00 pm – 9:00 pm Doors at 6:30 pm • Presentations at 7:00 pm June 16 June 23 June 30 July 7 July 14 July 21 July 28 August 4 WHERE? Wright Opera House 472 Main St. Ouray, Colorado SERIES: Presented by the Ouray County Historical Society ABOUT THE SERIES Join the Ouray County Historical Society for another season of Evenings of History, a community lecture series exploring the people, places, and stories that shaped Ouray County and the greater San Juan region. From mining legends and frontier photography to fashion, recreation, and Ute history, this year’s lineup offers a fascinating look into the characters and events that helped define the American West. Through local historians, researchers, storytellers, and community experts, Evenings of History continues a longstanding tradition of preserving and sharing the rich heritage of Ouray County. …",
+    description: "Evenings of History 2026 @ the Wright WHEN? Weekly Tuesdays • 7:00 pm �� 9:00 pm Doors at 6:30 pm • Presentations at 7:00 pm June 16 June 23 June 30 July 7 July 14 July 21 July 28 August 4 WHERE? Wright Opera House 472 Main St. Ouray, Colorado SERIES: Presented by the Ouray County Historical Society ABOUT THE SERIES Join the Ouray County Historical Society for another season of Evenings of History, a community lecture series exploring the people, places, and stories that shaped Ouray County and the greater San Juan region. From mining legends and frontier photography to fashion, recreation, and Ute history, this year’s lineup offers a fascinating look into the characters and events that helped define the American West. Through local historians, researchers, storytellers, and community experts, Evenings of History continues a longstanding tradition of preserving and sharing the rich heritage of Ouray County. …",
     pubDate: "2026-06-24T01:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4274,6 +4086,149 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52951532621249/huge/45a880540db97b7292e967c6f16b980532044c29.jpg"
+  },
+  {
+    title: "THIRSTY THURSDAY - Game Night at Floating Lotus",
+    link: "www.FloatingLotusBrewery.com",
+    description: "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who came to have a good time. Happening 7-9pm every week",
+    pubDate: "2026-06-26T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg"
+  },
+  {
+    title: "Ouray History Day",
+    link: "https://www.visitouray.com/150",
+    description: "Step back in time and experience the rich history of Ouray. Historic Walking Tour Centennial Park next to the Ouray Elks Lodge 421 Main St. | 10 AM–1 PM Discover the stories that shaped Ouray through guided tours of historic buildings and live portrayals of some of the town’s most prominent historical figures. Local actors will bring history to life as they share the experiences, memories, and personalities of early Ouray residents. Photo: Ouray County Historical Society",
+    pubDate: "2026-06-26T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray",
+    imageUrl: "https://localist-images.azureedge.net/photos/52993991365940/huge/293df0610b27e785b906c11f81085da47aadb892.jpg"
+  },
+  {
+    title: "Ridgway Farmers Market",
+    link: "www.ridgwayfarmersmarket.com",
+    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here.",
+    pubDate: "2026-06-26T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
+  },
+  {
+    title: "Ridgway Railroad Museum FREE Train Rides",
+    link: "https://www.ridgwayrailroadmuseum.org/",
+    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
+    pubDate: "2026-06-26T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
+  },
+  {
+    title: "True Grit Historic Walking Tours",
+    link: "https://truegrittours.org/true-grit-tours ",
+    description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
+    pubDate: "2026-06-26T21:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52285883190282/huge/99283c09e34ca5aeabd7006cca2ba5b2b28899c3.jpg"
+  },
+  {
+    title: "OLD MAN POLLY",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-06-26T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Final Friday: Tea Party",
+    link: "https://www.voyageryouth.org/hubb-teen-events",
+    description: "AN OPPORTUNITY TO WEAR A WHIMSICAL WARDROBE! For Middle & High School Students, Final Friday is reclaiming Voyager as the Teen Center it used to be. 🤘 Come hang out for an evening that mixes chill social time with free food and fun activities. Every month, we have games, art and more available. All we ask is that you clean up after yourself and help us create a welcoming space for everyone. This month, Erin Latta from the Artisan Bakery & Cafe will be joining us. If you've ever been interested in learning how to make scones, Erin will be showing us how to make two different favors of sweet scones. TO RSVP STEP 1: Once a year, make or update an account with Voyager so we have access to important information to best serve the Teens that are attending. …",
+    pubDate: "2026-06-26T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53047439328205/huge/285e8175b5195c6e4eb0f8c6b8e30f8735ea212a.jpg"
+  },
+  {
+    title: "Ouray: Echoes in the Canyon — Premiere Screening @ the Wright",
+    link: "Wrightoperahouse.org",
+    description: "Echoes in the Canyon: Premiere Screening: Movie Night @ the Wright WHEN? Friday, June 26 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado Tickets $5 ABOUT THE FILM Ouray: Echoes in the Canyon premieres at the Wright Opera House for a special hometown screening event with filmmaker Hank Braxtan in attendance. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call “The Gem of the Rockies.” Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. …",
+    pubDate: "2026-06-27T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53011656318052/huge/6cf2b8cc4168eefd5dcea2ff77191ad96b77bd76.jpg"
+  },
+  {
+    title: "Steps Tavern Presents Karaoke Night",
+    link: "https://www.facebook.com/stepstavern",
+    description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night",
+    pubDate: "2026-06-27T02:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "STEPS TAVERN",
+    imageUrl: "https://localist-images.azureedge.net/photos/53142698527493/huge/db3a6ef58a79b18eea8c70a4d583bbf3d9498404.jpg"
+  },
+  {
+    title: "Back To The Future Festival",
+    link: "https://events.ourayridgwayevents.com/event/back-to-the-future-festival",
+    description: "Fundraiser to support Sharing Ministries Food Bank. Food, Entertainment, Music, Museum Tours, and Vintage Photos. For more information, call 970-240-8385. Sharing Ministries provides supplemental food assistance and services to residents of Ouray, Montrose, Delta, San Miguel and Gunnison Counties.",
+    pubDate: "2026-06-27T14:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Museum of the Mountain West",
+    imageUrl: "https://localist-images.azureedge.net/photos/53056662722867/huge/f871fb72be98c25f0ffba65779b0681f719415ea.jpg"
+  },
+  {
+    title: "Ridgway Railroad Museum FREE Train Rides",
+    link: "https://www.ridgwayrailroadmuseum.org/",
+    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
+    pubDate: "2026-06-27T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
+  },
+  {
+    title: "18th Annual Ridgway RiverFest",
+    link: "https://ridgwayriverfest.org/",
+    description: "The Ridgway RiverFest is a family-friendly celebration of the Uncompahgre River, our watershed and river recreation with all-age river races, live music, local food and drink, kids’ activities, watershed educational and cultural programs. RiverFest is produced by the Uncompahgre Watershed Partnership, a Ouray County nonprofit watershed group dedicated to helping protect the economic, natural, and scenic values of the Upper Uncompahgre River Watershed. The highlight of the day is the infamous “Junk of the Unc” race in which boaters maneuver their craft, constructed from scrap materials not intended for river travel, through whitewater rapids and others’ junk, trying to keep it all intact until the finish line. The 2026 Ridgway RiverFest kicks off with the river races at 11am this year. This includes paddle boards, kayaks, duckies, and more! This event will go until 12pm and the main festivities will begin at 3pm. …",
+    pubDate: "2026-06-27T17:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52183972236736/huge/02f92530b9be036db720bee9d880832b463f5802.jpg"
+  },
+  {
+    title: "Ouray County Ranch History Museum's 20th Anniversary Day",
+    link: "ocrhm.org",
+    description: "Enjoy a fun-filled day of interactive activities & games, celebrating OC Ranch Museum's 20th Anniversary! Tour the acreage and see sites for future museum buildings, There will be mule rides, livestock, Rocking W Ice Cream truck from Webb Dairy, Sliders from Brittany at Uncompahgre Farm, 4-H youth showcasing their fair projects, CSU Extension offerings, zeroscape learning/plantings, Minerva West dress-up Trunk Show recognizing homesteader locals, Ridgway Community Apiary, Mighty Mini Horse Therapy, and more!",
+    pubDate: "2026-06-27T17:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53130955512768/huge/e51310a22a0fd90b349a2434edb7a63e61e96854.jpg"
   }
 ];
 

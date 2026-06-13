@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Jun 2026 02:50:56 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 08:53:16 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Sat, Jun 13] The Fretliners Live in Concert</title>
@@ -136,6 +136,19 @@ Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norto
 There will be a gathering to celebrate the life and birthday of Joanne Roudebush on Saturday, June 13th at Town Hall in Norwood. Noon to 4 p.m. All are welcome.]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sat, Jun 13] Pieles y Pociones</title>
+      <link>https://telluridelibrary.libcal.com/event/16955150?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/pieles%20y%20pociones%7C2026-06-13</guid>
+      <pubDate>Sat, 13 Jun 2026 20:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_11_31_05.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+2:00 PM – 4:00 PM · &iexcl;Ven y aprende a crear tus propias pociones para cuidar tu piel y la de tu familia con Mar&iacute;a Mart&iacute;nez del Campo!]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_11_31_05.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Sun, Jun 14] Calder Allen</title>
@@ -403,19 +416,6 @@ Join Planet Bluegrass at Sunset Plaza as they kick off the Telluride Bluegrass F
 
 Join Ah Haa for a celebratory kickoff to the summer season on Ah Haa’s stunning rooftop! Chef Israel Castro, an …]]></description>
       <media:content url="https://www.telluride.com/site/assets/files/58314/download_12.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Wed, Jun 17] Weird Wine Wednesdays at The National</title>
-      <link>https://www.telluride.com/event/weird-wine-wednesdays-at-the-national/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/weird%20wine%20wednesdays%20at%7C2026-06-17</guid>
-      <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62830/the_national_wine.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Elevate your evening on the rooftop at The National with Weird Wine Wednesdays, a laid-back, weekly tasting experience …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/62830/the_national_wine.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
     </item>
