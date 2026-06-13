@@ -145,9 +145,13 @@ function getActiveTopicGroups() {
     return active;
   } catch (e) { console.error('Mailchimp interest check failed — topic sections hidden.'); return null; }
 }
-const activeTopicGroups = getActiveTopicGroups();
+// Topic sub-categories (Music & Arts / Family & Kids / Outdoors) are HIDDEN for
+// now per user 2026-06-13 — all events live under "What We're Attending". Flip to
+// true to re-enable the per-interest *|INTERESTED|* blocks (infrastructure kept).
+const SHOW_TOPIC_SECTIONS = false;
+const activeTopicGroups = SHOW_TOPIC_SECTIONS ? getActiveTopicGroups() : null;
 const inChosen = new Set(chosen.map((e) => tkey(e.title)));
-const topicSections = TOPIC_DEFS.map((td) => {
+const topicSections = (SHOW_TOPIC_SECTIONS ? TOPIC_DEFS : []).map((td) => {
   const seen = new Set();
   const events = evts
     .filter((e) => eventCategory(e) === td.key && !inChosen.has(tkey(e.title)))
@@ -256,7 +260,7 @@ const mh = meetings.map((m) => {
     : '';
   return `<tr><td style="padding:13px 0;border-top:1px solid #eef1ee;"><span style="display:inline-block;background:#21443c;color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(m.date)).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(m.src)}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;">${esc(m.name)}</div><div style="font-size:13.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${esc(m.summary)}</div>${link}${commentBtn}</td></tr>`;
 }).join('');
-const EV_ACCENT = '#a8401f'; // reddish rust — complements the forest-green meeting badge
+const EV_ACCENT = '#a0531f'; // rust (toned down from the redder #a8401f) — complements the forest-green meeting badge
 const evRow = (e) => {
   const u = safeUrl(e.href);
   const badge = `<span style="display:inline-block;background:${EV_ACCENT};color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(e.date)).toUpperCase()}</span>`;
