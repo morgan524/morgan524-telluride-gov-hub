@@ -852,7 +852,7 @@ const TELLURIDE_CACHED_DATA = [
     title: 'HARC Meeting',
     board: 'harc',
     location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
-    agendaUrl: null
+    agendaUrl: 'https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8016'
   },
   {
     date: 'July 15, 2026',
