@@ -519,7 +519,11 @@ CONTENT RULES:
 - The "why it matters" section should connect agenda items to key local issues when relevant, written in the voice.
 
 SHORT SUMMARY — HARD CONSTRAINTS:
-- Maximum 100 words. Count and respect this cap; truncate lower-priority content first.
+- Length scales with the agenda. When a posted agenda offers real substance (code
+  changes, multiple land-use items, consequential decisions), write UP TO ~180 words
+  to give residents meaningful detail on what's actually being decided. When the
+  agenda is thin or routine, stay around 50-70 words. When no agenda is posted yet,
+  1 short sentence. Count and respect the upper cap; truncate lower-priority content first.
 - Order content by this priority hierarchy:
     1. CODE CHANGES — text amendments, ordinances, regulation changes, second readings, repeals,
        and anything that changes the rules of the road for the jurisdiction. Lead with these.
@@ -531,9 +535,9 @@ SHORT SUMMARY — HARD CONSTRAINTS:
        Sense, Four Seasons, Chair 7.
     3. EVERYTHING ELSE — staff reports, routine approvals, consent agenda, board reorg,
        liaison reports, public comment, executive sessions. These get the lowest word count
-       and are dropped first if the 100-word cap forces a choice.
+       and are dropped first if the word cap forces a choice.
 - A summary with only routine items can be 1 sentence noting that nothing of consequence
-  is on the agenda. Don't pad to meet 100 words.
+  is on the agenda. Never pad — length should track how much is actually on the agenda.
 
 TOPICS:
 - 3-6 key topic bullets in the same priority order (code changes, then land use, then other).
@@ -553,10 +557,16 @@ KEY LOCAL ISSUES IN THE TELLURIDE REGION:
 
 OUTPUT FORMAT (JSON):
 {
-  "shortSummary": "1-3 sentence overview for the meeting card — TARGET 40-60 WORDS. This is the field displayed on the card; it should read as a complete thought, not a fragment. Lead with the most consequential items (code changes / land use) and gesture at the rest. Voice-rule compliant.",
+  "shortSummary": "Overview for the meeting card. Scale to the agenda: ~50-70 words for a routine meeting, UP TO ~150 words when a posted agenda has substantive detail (code changes, multiple land-use items) worth spelling out for residents; 1 short sentence when no agenda is posted yet. Read as complete thoughts, never a fragment. Lead with the most consequential items (code changes / land use), then cover the rest. Voice-rule compliant.",
   "topics": ["topic 1", "topic 2", "topic 3"],
   "whyItMatters": "Paragraph connecting to key local issues, or empty string"
 }`;
+
+// Bump when the summary STYLE/length target changes. Agenda-backed summaries
+// generated under an older version get regenerated ONCE (see refreshSummaries),
+// so a prompt change rolls out to already-posted agendas instead of only new
+// ones. v2 (2026-06-13): longer, more-detailed summaries when a real agenda exists.
+const SUMMARY_VERSION = 2;
 
 async function callClaude(entityLabel, meetingTitle, date, agendaText) {
   if (!ANTHROPIC_API_KEY) {
@@ -1132,12 +1142,18 @@ async function refreshSummaries(existingSummaries, existingAgendaMeta) {
     // it gets regenerated the moment a real agenda appears.
     const isPlaceholder   = !!updated[key] && isPlaceholderSummary(updated[key]);
     const haveRealSummary = !!updated[key] && !isPlaceholder;
+    // Version-gated upgrade: when there's a real agenda to work from but the
+    // existing summary predates the current SUMMARY_VERSION (recorded in
+    // meta[key].sv), regenerate it once. This rolls a prompt/length change out
+    // to meetings whose agendas were already posted, not just future ones.
+    const summaryVersion = (existingZoom && typeof existingZoom === 'object') ? existingZoom.sv : undefined;
+    const needUpgrade = haveRealSummary && !!m.agendaUrl && summaryVersion !== SUMMARY_VERSION;
 
-    if (haveRealSummary && !needAgendaZoom) {
+    if (haveRealSummary && !needUpgrade && !needAgendaZoom) {
       console.log(`  ✓ Already have summary + zoom meta for: ${key}`);
       continue;
     }
-    if (haveRealSummary && needAgendaZoom && !m.agendaUrl) {
+    if (haveRealSummary && !needUpgrade && needAgendaZoom && !m.agendaUrl) {
       // Have a real summary; no agenda URL to fetch zoom info from; skip.
       continue;
     }
@@ -1153,13 +1169,13 @@ async function refreshSummaries(existingSummaries, existingAgendaMeta) {
     if (m.agendaUrl && (agendaText || (agendaUrls && agendaUrls.length))) {
       const zoom = parseZoomFromAgenda(agendaText, agendaUrls);
       if (zoom.zoomUrl || zoom.meetingId) {
-        meta[key] = zoom;
+        meta[key] = { ...(meta[key] || {}), ...zoom };  // merge, preserving sv
         const fields = Object.keys(zoom).filter(k => zoom[k]).join(', ');
         console.log(`    Zoom meta: ${fields}`);
       }
     }
 
-    if (haveRealSummary) {
+    if (haveRealSummary && !needUpgrade) {
       // Had a real summary already; only the zoom-meta update mattered. Skip
       // the Claude call (which we'd otherwise re-do unnecessarily).
       continue;
@@ -1183,6 +1199,13 @@ async function refreshSummaries(existingSummaries, existingAgendaMeta) {
       console.log(`    Using API-sourced seed text (${agendaText.length} chars; PDF body not reachable)`);
     }
 
+    // A version-upgrade must NOT clobber a good existing summary when this run
+    // couldn't fetch the agenda text (transient failure) — keep the old one.
+    if (needUpgrade && !agendaText) {
+      console.log(`    Upgrade deferred (no agenda text this run): ${key}`);
+      continue;
+    }
+
     if (!agendaText && !ANTHROPIC_API_KEY) {
       console.log(`    Skipped (no agenda text and no API key)`);
       continue;
@@ -1201,6 +1224,7 @@ async function refreshSummaries(existingSummaries, existingAgendaMeta) {
         // shortSummary is missing (e.g. older Claude responses).
         const topicBullets = (result.topics || []).join(' · ');
         updated[key] = result.shortSummary || topicBullets;
+        meta[key] = { ...(meta[key] || {}), sv: SUMMARY_VERSION };  // record summary style version
         newCount++;
         console.log(`    ✓ Generated summary (${result.topics?.length || 0} topics)`);
       }
