@@ -1,0 +1,22 @@
+name: Customer.io Trial — Seed Test People
+
+# Manual-only. Pushes a couple of TEST people (addresses you own) into the
+# Customer.io trial workspace with interest attributes, so you can watch them
+# land in the People view and build one segment per interest. Sends NO email
+# and does NOT touch Mailchimp. Keys stay as GitHub Actions secrets.
+on:
+  workflow_dispatch:
+
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Seed Customer.io test people
+        env:
+          CUSTOMERIO_SITE_ID: ${{ secrets.CUSTOMERIO_SITE_ID }}
+          CUSTOMERIO_TRACK_API_KEY: ${{ secrets.CUSTOMERIO_TRACK_API_KEY }}
+        run: node scripts/customerio-test.js
