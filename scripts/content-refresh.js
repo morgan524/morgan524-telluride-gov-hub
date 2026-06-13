@@ -4067,8 +4067,8 @@ async function syncNuclaNaturitaEvents() {
   console.log('\n📅 Task 11: Syncing Nucla-Naturita events (Tribe API)...');
   try {
     const resp = await fetch(NUCLA_TRIBE_API);
-    if (!resp.ok) { console.warn(`  Nucla-Naturita Tribe API HTTP ${resp.status}`); return null; }
-    const data = await resp.json();
+    if (!resp || resp.status !== 200) { console.warn(`  Nucla-Naturita Tribe API HTTP ${resp ? resp.status : 'no response'}`); return null; }
+    const data = JSON.parse(resp.text);
     const events = (data.events || []).map(ev => ({
       title:     ev.title || '',
       href:      ev.url   || 'https://nucla-naturita.com/events/',
@@ -4101,8 +4101,8 @@ async function syncClubRedShows() {
     const resp = await fetch(CLUB_RED_URL, {
       headers: { 'User-Agent': 'Mozilla/5.0 (compatible; LivableTelluride/1.0)' }
     });
-    if (!resp.ok) { console.warn(`  Club Red HTTP ${resp.status}`); return null; }
-    const data = await resp.json();
+    if (!resp || resp.status !== 200) { console.warn(`  Club Red HTTP ${resp ? resp.status : 'no response'}`); return null; }
+    const data = JSON.parse(resp.text);
     const itemCount = (data.collection && data.collection.itemCount) || 0;
     if (itemCount === 0) {
       console.log('  Club Red: 0 shows currently listed');
@@ -4148,8 +4148,8 @@ async function syncFreshFoodHubEvents() {
   console.log('\n🌽 Task 13: Syncing Fresh Food Hub events (Tribe API)...');
   try {
     const resp = await fetch(FRESH_FOOD_HUB_TRIBE_API);
-    if (!resp.ok) { console.warn(`  Fresh Food Hub Tribe API HTTP ${resp.status}`); return null; }
-    const data = await resp.json();
+    if (!resp || resp.status !== 200) { console.warn(`  Fresh Food Hub Tribe API HTTP ${resp ? resp.status : 'no response'}`); return null; }
+    const data = JSON.parse(resp.text);
     const events = (data.events || []).map(ev => ({
       title:    ev.title || '',
       href:     ev.url   || 'https://freshfoodhub.net/get-involved/',
@@ -4181,8 +4181,8 @@ async function syncSherbinoEvents() {
   console.log('\n🎭 Task 14: Syncing Sherbino Theater events (Tribe API)...');
   try {
     const resp = await fetch(SHERBINO_TRIBE_API);
-    if (!resp.ok) { console.warn(`  Sherbino Tribe API HTTP ${resp.status}`); return null; }
-    const data = await resp.json();
+    if (!resp || resp.status !== 200) { console.warn(`  Sherbino Tribe API HTTP ${resp ? resp.status : 'no response'}`); return null; }
+    const data = JSON.parse(resp.text);
     const now = Date.now();
     const horizon = now + 30 * 86400000;
     const events = (data.events || [])
@@ -4243,9 +4243,15 @@ async function syncTellurideScienceEvents() {
   let resp;
   try { resp = await fetch(TELLURIDE_SCIENCE_TRIBE_API); }
   catch (e) { console.warn('  Telluride Science fetch error:', e.message); return null; }
-  if (!resp.ok) { console.warn(`  Telluride Science Tribe API HTTP ${resp.status}`); return null; }
+  // NOTE: the module-local fetch() returns { status, text, headers } — it has
+  // no .ok and no .json(). Match the KOTO sync: gate on resp.status and parse
+  // resp.text yourself.
+  if (!resp || resp.status !== 200) {
+    console.warn(`  Telluride Science Tribe API HTTP ${resp ? resp.status : 'no response'}`);
+    return null;
+  }
   let data;
-  try { data = await resp.json(); }
+  try { data = JSON.parse(resp.text); }
   catch (e) { console.warn('  Telluride Science JSON parse error:', e.message); return null; }
   const now = Date.now();
   const events = (data.events || [])
