@@ -1058,15 +1058,19 @@ async function fetchSmcCountyMeetings(now, horizon) {
 }
 
 // A "placeholder" summary is the stub written when an agenda isn't posted
-// yet ("…agenda hasn't been posted yet." / "Agenda not yet available"). It
-// MUST be treated as NOT-a-real-summary so it gets REGENERATED the moment a
-// real agenda becomes available — otherwise the summary cache below skips
-// the Claude call forever and the card stays frozen on the stub. This is
-// exactly what kept the Medical Center / Fire / Ophir cards stale even after
-// their agenda PDFs were posted and successfully extracted.
+// yet ("…agenda hasn't been posted yet." / "Agenda not yet available" /
+// "Regular meeting agenda TBD" / "Work session agenda pending" / "Agenda
+// details pending · …"). It MUST be treated as NOT-a-real-summary so it gets
+// REGENERATED the moment a real agenda becomes available — otherwise the
+// summary cache below skips the Claude call forever and the card stays frozen
+// on the stub. This is exactly what kept the Medical Center / Fire / Ophir
+// cards stale, and (2026-06-12) the BOCC card stuck on "Regular meeting agenda
+// TBD" even after its agenda + packet were posted to CivicClerk.
+// Keep these patterns ANCHORED to the word "agenda" so a real summary that
+// merely mentions a "pending application" or "TBD" date isn't mistaken for a stub.
 function isPlaceholderSummary(s) {
   if (!s || typeof s !== 'string') return true;
-  return /agenda\s+(?:hasn'?t|has not)\s+been posted yet|agenda not yet available|no agenda(?:\s+text)?\s+available/i.test(s);
+  return /agenda\s+(?:hasn'?t|has not)\s+been posted yet|agenda not yet available|no agenda(?:\s+text)?\s+available|agenda\s+(?:details\s+)?(?:tbd|pending|forthcoming|to be (?:determined|announced|posted))/i.test(s);
 }
 
 async function refreshSummaries(existingSummaries, existingAgendaMeta) {
