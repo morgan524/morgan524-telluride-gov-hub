@@ -13,22 +13,34 @@ if (!APP_KEY) {
 }
 const BASE = 'https://api.customer.io/v1'; // US App API
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
 (async () => {
+  // Retry on 5xx — Customer.io's gateway occasionally returns a transient 502.
   let res, text = '';
-  try {
-    res = await fetch(`${BASE}/segments`, { headers: { Authorization: `Bearer ${APP_KEY}` } });
-    text = await res.text();
-  } catch (e) {
-    console.log(`  ✗ App API request error: ${e.message}`);
-    process.exit(1);
+  for (let attempt = 1; attempt <= 4; attempt++) {
+    try {
+      res = await fetch(`${BASE}/segments`, { headers: { Authorization: `Bearer ${APP_KEY}` } });
+      text = await res.text();
+    } catch (e) {
+      console.log(`  · attempt ${attempt}: request error ${e.message}`);
+      await sleep(2000 * attempt); continue;
+    }
+    if (res.status >= 500) {
+      console.log(`  · attempt ${attempt}: HTTP ${res.status} ${res.statusText} (transient) — retrying`);
+      await sleep(2000 * attempt); continue;
+    }
+    break; // 2xx or a 4xx (auth) — stop and report
   }
+  if (!res) { console.log('  ✗ App API unreachable after retries.'); process.exit(1); }
   if (!res.ok) {
-    console.log(`  ✗ App API HTTP ${res.status} — ${text.slice(0, 200)}`);
+    console.log(`  ✗ App API HTTP ${res.status} ${res.statusText} — ${text.slice(0, 300) || '(empty body)'}`);
+    console.log('    401/403 = key problem; 5xx = Customer.io-side. Endpoint: GET ' + BASE + '/segments');
     process.exit(1);
   }
   let data = {};
   try { data = JSON.parse(text); } catch {}
   const segs = data.segments || [];
   console.log(`  ✓ App API key authenticates (HTTP ${res.status}).`);
-  console.log(`  ${segs.length} segment(s): ${segs.map(s => s.name).join(', ') || '(none yet — build them in the UI)'}`);
+  console.log(`  ${segs.length} segment(s): ${segs.map((s) => s.name).join(', ') || '(none yet — build them in the UI)'}`);
 })();
