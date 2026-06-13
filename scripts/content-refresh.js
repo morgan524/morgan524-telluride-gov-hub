@@ -4660,6 +4660,48 @@ async function syncCountyAgendas() {
   return map;
 }
 
+// Town of Telluride — queries the CivicWeb MeetingsService for upcoming HARC
+// meetings and returns a {dateKey: agendaUrl} map keyed by gov-data.js's date
+// format ("Mon D, YYYY"). patchAgendaUrls() folds the URL into the (all-HARC)
+// TELLURIDE_CACHED_DATA so the gov-hub "View agenda" button points at the real
+// CivicWeb meeting page instead of the generic HARC landing page — closing the
+// hand-maintenance gap that left HARC cards link-less. Board-token filtering
+// (historic & architectural / HARC) picks the HARC meeting out of the day's
+// CivicWeb feed, which also lists Parks & Rec, Town Council, etc.; the shorter
+// "Chair" agenda variant is skipped in favor of the full commission agenda.
+async function syncTellurideAgendas() {
+  console.log('\n🏛  Syncing Town of Telluride (HARC) agenda URLs from CivicWeb...');
+  const now = new Date();
+  const horizon = new Date(now.getTime() + 90 * 86400000);
+  const fromStr = now.toISOString().split('T')[0];
+  const toStr = horizon.toISOString().split('T')[0];
+  const url = `${AGENDA_SOURCES.telluride.meetingsApiBase}` +
+    `?from=${encodeURIComponent(fromStr)}&to=${encodeURIComponent(toStr)}`;
+  const map = {};
+  let resp;
+  try { resp = await fetch(url); }
+  catch (e) { console.warn(`  CivicWeb fetch error: ${e.message}`); return map; }
+  if (resp.status !== 200) { console.warn(`  CivicWeb meetings API HTTP ${resp.status}`); return map; }
+  let items;
+  try { const p = JSON.parse(resp.text); items = Array.isArray(p) ? p : (p && (p.d || p.value)) || []; }
+  catch (e) { console.warn(`  CivicWeb JSON parse error: ${e.message}`); return map; }
+  const months = ['January','February','March','April','May','June',
+                  'July','August','September','October','November','December'];
+  for (const m of items) {
+    if (!m || m.Published !== true) continue;
+    const name = m.Name || '';
+    if (!/historic\s*(?:&|and)\s*architectural|\bharc\b/i.test(name)) continue; // HARC only
+    if (/chair/i.test(name)) continue;                                          // skip "Chair" variant
+    if (!m.Id) continue;
+    const d = new Date(m.MeetingDate || m.MeetingDateTime || '');
+    if (isNaN(d)) continue;
+    const dateKey = `${months[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`;
+    if (!map[dateKey]) map[dateKey] = `${AGENDA_SOURCES.telluride.detailBase}${m.Id}`;
+  }
+  console.log(`  Found ${Object.keys(map).length} Telluride HARC agenda URL(s) on CivicWeb`);
+  return map;
+}
+
 // Patches gov-data.js in place: for each (date → url) in `agendaMap`, finds
 // the matching entry inside the given CACHED_DATA array and rewrites its
 // `agendaUrl:` field. Scoped to the named array's brace block so the same
@@ -5719,10 +5761,11 @@ async function main() {
   // PDF URLs. Runs BEFORE summary generation so any agenda detected this
   // run can be summarized in the same run.
   for (const [arrName, syncFn] of [
-    ['MV_CACHED_DATA',     syncMVAgendas],
-    ['FIRE_CACHED_DATA',   syncFireAgendas],
-    ['MED_CACHED_DATA',    syncMedAgendas],
-    ['COUNTY_CACHED_DATA', syncCountyAgendas]
+    ['MV_CACHED_DATA',        syncMVAgendas],
+    ['FIRE_CACHED_DATA',      syncFireAgendas],
+    ['MED_CACHED_DATA',       syncMedAgendas],
+    ['COUNTY_CACHED_DATA',    syncCountyAgendas],
+    ['TELLURIDE_CACHED_DATA', syncTellurideAgendas]
   ]) {
     try {
       const agendaMap = await syncFn();
