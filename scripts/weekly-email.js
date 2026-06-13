@@ -343,6 +343,12 @@ if (PREVIEW) {
            .replace(/\*\|INTERESTED:[^|]*\|\*/g, '').replace(/\*\|END:INTERESTED\|\*/g, '')
            .replace(/\*\|UNSUB\|\*/g, '#').replace(/\*\|[A-Z0-9_]+\|\*/g, '');
 }
+// Encode every non-ASCII character as a numeric HTML entity so the output is
+// pure ASCII — immune to charset/encoding mismatches when the HTML is pasted
+// into Mailchimp or rendered by a mail client (fixes the "Telluride,Aos" /
+// ",Ai" / "‚Üí" mojibake from UTF-8 being mis-decoded as MacRoman). Existing
+// entities (&amp;, &#39;) are already ASCII and pass through untouched.
+out = Array.from(out).map((ch) => { const cp = ch.codePointAt(0); return cp > 127 ? '&#' + cp + ';' : ch; }).join('');
 fs.writeFileSync(OUT, out);
 const SUBJECT = `The Week Ahead — ${LABEL}`;
 console.log('SUBJECT=' + SUBJECT);
