@@ -148,7 +148,7 @@ const MANUAL_SUMMARIES = {
     "Virtual-only meeting. The Gondola update is the agenda's headline — that's the project that drives SMART's 3A ballot context. Resolution 2026-8 appoints Marya Stark to the Investment Committee. Q4 2025 / annual performance report and the May Ops report round out the formal business. The board closes in executive session under §24-6-402(4)(b) to confer with counsel on Masson v. SMC BOCC. Anyone tracking how the gondola conversation is evolving should bookmark the live link.",
 
   "mv|2026-06-17|Town Council Meeting":
-    "Agenda not yet available",
+    "A full agenda. The council votes on a resolution establishing expedited review for affordable-housing projects to qualify for state Prop 123 funding, while a second reading of lighting-code amendments (Community Development Code 17.5.12) is set to be continued to July 16. Land use: a resolution granting a height variance for a single-family home on Lot 164-B1R (San Joaquin Rd). Also up: a water-storage lease with Public Service Company of Colorado, a Telluride Film Festival sponsorship plus Town Hall lease, and a pickleball facilities agreement. A 60-minute work session reviews an independent investigation report and possible next steps, with a related executive session for legal advice. 8:30 a.m.",
 
   "fire|2026-06-16|Board of Directors Meeting":
     "The fire district's monthly board meeting covers their 2025 audit results, master planning updates, and wildfire assignments as summer approaches. Station 3 construction gets an update, along with the usual reports from chiefs and coordinators across the district's operations.",

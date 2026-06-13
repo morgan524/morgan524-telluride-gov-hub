@@ -799,15 +799,15 @@ const RIDGWAY_CACHED_DATA = [
     agendaUrl: null,
     note: 'Agenda typically posted the Friday before.'
   },
-  // ── Planning Commission (3rd Wednesday of each month, 5:30 PM) ──
+  // ── Town Council special meeting (one-off; confirmed via posted packet 2026-06-13) ──
   {
-    date: 'June 17, 2026',
-    time: '5:30 PM',
-    title: 'Ridgway Planning Commission Meeting',
-    board: 'pc',
-    agendaUrl: null,
-    note: 'Agenda typically posted the week of the meeting.'
+    date: 'June 16, 2026',
+    title: 'Ridgway Town Council Special Meeting',
+    board: 'council',
+    agendaUrl: 'https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Special-Meeting-Packet---June-16%2C-2026.pdf',
+    note: 'Special meeting -- see the agenda packet for items.'
   },
+  // ── Planning Commission (3rd Wednesday of each month, 5:30 PM) ──
   {
     date: 'July 15, 2026',
     time: '5:30 PM',
