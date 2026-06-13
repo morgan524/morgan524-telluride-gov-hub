@@ -283,6 +283,18 @@ const eh = chosen.map(evRow).join('');
 // "Actions You Can Take This Week" button list. (COMMENT_MAP / commentMailto()
 // recipient wiring above is left in place for possible reuse.)
 const closingNote = `<tr><td style="padding:28px 34px 6px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="background:#f1ece1;border-left:4px solid #21443c;border-radius:6px;padding:19px 22px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;margin-bottom:9px;">Why Showing Up Matters</div><p style="margin:0;font-size:14.5px;line-height:1.7;color:#2c3b35;">The decisions shaping this valley rarely arrive with a drumroll — they get made while most people are looking the other way. The fix is simple: keep showing up. Read an agenda and email the board before a vote, or just turn out for a council meeting, a concert on the green, or an opening at the gallery. None of it is too small. A community that keeps paying attention to itself, in the big ways and the little ones, is one that stays livable.</p></td></tr></table></td></tr>`;
+
+// One-off "What We're Reading" box — gated to a single week's WEEK_START so it
+// auto-disappears the following week (no manual cleanup). To feature a different
+// article another week, set WHATS_READING for that week's Monday date; leave it
+// null otherwise.
+const WHATS_READING = (WEEK_START === '2026-06-15') ? {
+  url: 'https://coloradosun.com/2026/06/13/opinion-stripped-for-parts-documentary/',
+  title: 'When communities lose their newspapers, they lose more than news',
+  source: 'The Colorado Sun · Essay by John Barry',
+  blurb: 'It names exactly why Livable Telluride exists. Barry argues that when local newspapers are hollowed out — often deliberately, by hedge funds chasing profit — a community loses far more than headlines: it loses the shared facts, the accountability, and the civic infrastructure that democracy runs on. His prescription, that local journalism deserves the same public and philanthropic support we give schools and libraries, is the very idea behind this donor-funded nonprofit.',
+} : null;
+const whatsReadingBox = WHATS_READING ? `<tr><td style="padding:26px 34px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="background:#f1ece1;border-left:4px solid #a0531f;border-radius:6px;padding:19px 22px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;margin-bottom:9px;">→ What We're Reading</div><div style="font-family:Georgia,serif;font-size:16px;font-weight:700;color:#1a2e29;line-height:1.3;"><a href="${WHATS_READING.url}" style="color:#1a2e29;text-decoration:none;">${esc(WHATS_READING.title)}</a></div><div style="font-size:12px;color:#7a8a85;margin:3px 0 9px;">${esc(WHATS_READING.source)}</div><p style="margin:0;font-size:14px;line-height:1.65;color:#2c3b35;">${esc(WHATS_READING.blurb)}</p><a href="${WHATS_READING.url}" style="display:inline-block;margin-top:10px;color:#a0531f;text-decoration:none;border-bottom:1px solid #a0531f;font-size:12.5px;font-weight:600;">Read it →</a></td></tr></table></td></tr>` : '';
 const section = (label, rows) => rows ? `<tr><td style="padding:24px 34px 0;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;border-bottom:1px solid #d4c9b0;padding-bottom:8px;">→ ${label}</div><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}</table></td></tr>` : '';
 // Conditional per-interest extras — each block renders only for subscribers in
 // that Mailchimp "Event Topics" group. The *|INTERESTED|* tags are raw (NOT
@@ -313,6 +325,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
     <p style="margin:11px 0 0;font-size:15.5px;line-height:1.65;color:#2c3b35;">${esc(LEDE)}</p></td></tr>
   ${section('Public Meetings This Week', mh)}
   ${section('What We\'re Attending', eh)}${topicHtml}
+  ${whatsReadingBox}
   ${closingNote}
   <tr><td style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
     <div style="font-family:Georgia,serif;font-size:13px;font-weight:700;color:#21443c;">Livable Telluride</div>
