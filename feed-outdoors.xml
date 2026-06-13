@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-outdoors.xml" rel="self" type="application/rss+xml" />
     <description>Hikes, races, ski events, and stewardship days — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Jun 2026 08:53:16 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 13:48:44 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Planning and Zoning Commission Meeting — 2026-06-15</title>
@@ -20,13 +20,37 @@ Agenda not yet available]]></description>
       <category>Town of Norwood</category>
     </item>
     <item>
-      <title>[Meeting] Board of Directors Meeting — 2026-06-16</title>
+      <title>[Meeting] Corrected Agenda for Open Space Commission Site Walk - Jun 15 2026 — 2026-06-15</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-15%7CCorrected%20Agenda%20for%20Open%20Space%20Commission%20Site%20Walk%20-%20Jun%2015%202026</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-06-15
+
+The June 15 Open Space Commission site walk agenda hasn't been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>[Meeting] Gondola Subcommittee - Jun 15 2026 — 2026-06-15</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-15%7CGondola%20Subcommittee%20-%20Jun%2015%202026</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-06-15
+
+The Jun 15 2026 Gondola Subcommittee agenda hasn't been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>⚡ [Meeting] Board of Directors Meeting — 2026-06-16</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/fire%7C2026-06-16%7CBoard%20of%20Directors%20Meeting</guid>
       <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Telluride Fire Protection District • 2026-06-16
 
-Agenda not yet available]]></description>
+The June fire board meeting covers the 2025 audit, wildfire assignments ahead of summer, and updates on Station 3 construction and master planning efforts.
+
+⚡ Why it matters: Summer wildfire readiness and fire station construction updates]]></description>
       <category>Meeting</category>
       <category>Telluride Fire Protection District</category>
     </item>
@@ -53,13 +77,15 @@ Agenda not yet available]]></description>
       <category>Mountain Village</category>
     </item>
     <item>
-      <title>[Meeting] Board of County Commissioners Meeting — 2026-06-17</title>
+      <title>⚡ [Meeting] Board of County Commissioners Meeting — 2026-06-17</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-06-17%7CBoard%20of%20County%20Commissioners%20Meeting</guid>
       <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[San Miguel County • 2026-06-17
 
-Regular meeting agenda TBD]]></description>
+County commissioners will interview candidates for the Board of Adjustment and Planning Commission, plus hear affordable housing updates and routine business.
+
+⚡ Why it matters: New appointees will decide future development and land-use appeals]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>

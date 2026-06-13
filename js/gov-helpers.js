@@ -94,7 +94,7 @@ const MANUAL_SUMMARIES = {
     "Agenda not yet available",
 
   "fire|2026-06-16|Board of Directors Meeting":
-    "Agenda not yet available",
+    "The June fire board meeting covers the 2025 audit, wildfire assignments ahead of summer, and updates on Station 3 construction and master planning efforts.",
 
   "med|2026-05-28|Regular Board Meeting":
     "A regular Telluride Hospital District board meeting. Past the consent agenda and the April draft financials, the substance is in Board Matters — updates on the new facility, partnership talks, and early mill levy considerations. The mill levy is the one to watch; that's the property-tax lever that funds the district. CEO and Foundation/campaign reports round it out. In person at 333 W. Colorado Ave. or by Zoom.",
@@ -130,13 +130,13 @@ const MANUAL_SUMMARIES = {
     "Agenda not available",
 
   "county|2026-06-17|Board of County Commissioners Meeting":
-    "Regular meeting agenda TBD",
+    "County commissioners will interview candidates for the Board of Adjustment and Planning Commission, plus hear affordable housing updates and routine business.",
 
   "county|2026-06-22|Open Space Commission Meeting":
-    "Agenda details pending · Trail and open space management · Development review matters",
+    "The June 22 Open Space Commission agenda hasn't been posted yet.",
 
   "county|2026-06-24|Board of County Commissioners Work Session":
-    "Work session agenda pending",
+    "The June 24 Board of County Commissioners work session agenda hasn't been posted yet.",
 
   "telluride|2026-06-17|Historic & Architectural Review Commission Chair - Jun 17 2026":
     "The agenda content for this Historic & Architectural Review Commission meeting isn't available yet — just the meeting date and a list of past meetings going back to 2018.",
@@ -196,7 +196,7 @@ const MANUAL_SUMMARIES = {
     "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The July 1, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The July 1st Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
     "The July 1st Board of County Commissioners agenda hasn't been posted yet.",
@@ -208,13 +208,13 @@ const MANUAL_SUMMARIES = {
     "The San Miguel Basin Fair Board meets to review junior livestock sale terms and update bylaws for the upcoming fair season.",
 
   "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
-    "The July 6, 2026 Open Space Commission agenda hasn't been posted yet.",
+    "The July 6 2026 Open Space Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-11|San Miguel Authority for Regional Transportation - Jun 11 2026":
     "The June 11, 2026 SMART agenda hasn't been posted yet.",
 
   "county|2026-07-08|Board of County Commissioners Work Session":
-    "The July 8 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The July 8 Board of County Commissioners work session agenda hasn't been posted yet.",
 
   "smart|2026-07-09|SMART Board of Directors":
     "The July 9 SMART Board of Directors agenda hasn't been posted yet.",
@@ -226,7 +226,13 @@ const MANUAL_SUMMARIES = {
     "The July 9 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-12|Judicial Subcommittee - Jun 12 2026":
-    "The June 12, 2026 Judicial Subcommittee agenda hasn't been posted yet."
+    "The June 12, 2026 Judicial Subcommittee agenda hasn't been posted yet.",
+
+  "telluride|2026-06-15|Corrected Agenda for Open Space Commission Site Walk - Jun 15 2026":
+    "The June 15 Open Space Commission site walk agenda hasn't been posted yet.",
+
+  "telluride|2026-06-15|Gondola Subcommittee - Jun 15 2026":
+    "The Jun 15 2026 Gondola Subcommittee agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -274,6 +280,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Wright’s Mesa Disc Golf Course lands new home",
+    source: "Telluride Times",
+    date: "June 13, 2026",
+    firstSeen: "2026-06-13",
+    newsTopic: "arts-culture",
+    copy: "The Wright's Mesa Disc Golf Course found a new home in Mountain Village after being displaced by Norwood's new school construction. The Town of Mountain Village is providing free use of 37 acres at 1545 Spruce Street until the land is eventually developed for housing. West End residents who originally financed the course through individual basket purchases are volunteering to rebuild the nine-hole layout, which should be ready for summer league play.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_547d13da-a89e-480b-9f57-6036d8e38a4a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/84/5846f840-9e2b-4d51-ac2b-adc7461e6406/6a2b035620bde.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "‘Music is just such a vital way that communities tell their stories’",
     source: "Telluride Times",
     date: "June 12, 2026",
@@ -315,8 +333,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 12, 2026",
     firstSeen: "2026-06-12",
     newsTopic: "infrastructure",
-    copy: "Good vibrations — water makes them possible.",
-    claudeSummary: false,
+    copy: "Dr. Matthias Heyden from Arizona State University will present a free science talk Tuesday at 6:30 p.m. at the Telluride Conference Center about water's role in molecular vibrations that make biology possible. His research into how water enables protein movement could lead to more targeted medications with fewer side effects and cleaner industrial processes using water instead of toxic chemical solvents.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/editorials/article_a3ed19e7-0f56-43e7-9aed-6199e1427ace.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     imgHiRes: true
@@ -3033,7 +3051,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "The Fretliners Live in Concert",
     link: "https://sheridanoperahouse.com/events/the-fretliners-live-in-concert-2/",
-    description: "",
+    description: "The Fretliners will perform live in concert at the Sheridan Opera House on June 13, 2026. This musical performance takes place at Telluride's historic downtown venue.",
     pubDate: "2026-06-13",
     endDate: "undefined",
     source: "sheridan",
@@ -3045,7 +3063,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Bluegrass Festival",
     link: "https://sheridanoperahouse.com/events/telluride-bluegrass-festival/",
-    description: "",
+    description: "The Telluride Bluegrass Festival presents a concert at the historic Sheridan Opera House. This performance is part of the renowned annual festival celebrating bluegrass music in Telluride.",
     pubDate: "2026-06-18",
     endDate: "2026-06-21",
     source: "sheridan",
@@ -3057,7 +3075,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "FREE Oak Street Park SummerSHOW Series: Elder Grown",
     link: "https://sheridanoperahouse.com/events/oak-street-park-summershow-series/",
-    description: "",
+    description: "The FREE Oak Street Park SummerSHOW Series presents Elder Grown at the Sheridan Opera House in Telluride. This concert is part of the free summer performance series offering live entertainment to the community.",
     pubDate: "2026-06-25",
     endDate: "undefined",
     source: "sheridan",
@@ -3180,17 +3198,6 @@ const OURAY_COUNTY_EVENTS = [
     sourceLabel: "Ouray County",
     category: "Community Event",
     location: "Pa-Co-Chu-Puk - Ridgway CO 81432",
-    imageUrl: ""
-  },
-  {
-    title: "Rollans Park Cleanup",
-    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3643",
-    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3643",
-    pubDate: "2026-06-13T09:00:00.000Z",
-    source: "ouraycounty",
-    sourceLabel: "Ouray County",
-    category: "Community Event",
-    location: "Rollans Park - 257 Sherman St. Ridgway CO 81432",
     imageUrl: ""
   }
 ];
@@ -3925,7 +3932,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Evenings of History 2026 @ the Wright",
     link: "https://www.ouraycountyhistoricalsociety.org/about-4",
-    description: "Evenings of History 2026 @ the Wright WHEN? Weekly Tuesdays • 7:00 pm �� 9:00 pm Doors at 6:30 pm • Presentations at 7:00 pm June 16 June 23 June 30 July 7 July 14 July 21 July 28 August 4 WHERE? Wright Opera House 472 Main St. Ouray, Colorado SERIES: Presented by the Ouray County Historical Society ABOUT THE SERIES Join the Ouray County Historical Society for another season of Evenings of History, a community lecture series exploring the people, places, and stories that shaped Ouray County and the greater San Juan region. From mining legends and frontier photography to fashion, recreation, and Ute history, this year’s lineup offers a fascinating look into the characters and events that helped define the American West. Through local historians, researchers, storytellers, and community experts, Evenings of History continues a longstanding tradition of preserving and sharing the rich heritage of Ouray County. …",
+    description: "Evenings of History 2026 @ the Wright WHEN? Weekly Tuesdays • 7:00 pm ��� 9:00 pm Doors at 6:30 pm • Presentations at 7:00 pm June 16 June 23 June 30 July 7 July 14 July 21 July 28 August 4 WHERE? Wright Opera House 472 Main St. Ouray, Colorado SERIES: Presented by the Ouray County Historical Society ABOUT THE SERIES Join the Ouray County Historical Society for another season of Evenings of History, a community lecture series exploring the people, places, and stories that shaped Ouray County and the greater San Juan region. From mining legends and frontier photography to fashion, recreation, and Ute history, this year’s lineup offers a fascinating look into the characters and events that helped define the American West. Through local historians, researchers, storytellers, and community experts, Evenings of History continues a longstanding tradition of preserving and sharing the rich heritage of Ouray County. …",
     pubDate: "2026-06-24T01:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4236,7 +4243,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-06-09-nwc-meeting",
-    description: "",
+    description: "The Town of Norwood will hold a meeting for the NWC on June 9th. This government meeting will take place in Norwood, Colorado.",
     pubDate: "2026-06-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4247,7 +4254,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Second Amended",
     link: "https://www.norwoodtown.com/2026-06-10-board-of-trustees-second-amended",
-    description: "",
+    description: "The Town of Norwood Board of Trustees will hold a meeting regarding a second amended item. This government meeting provides an opportunity for community members to observe local municipal proceedings.",
     pubDate: "2026-06-10T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4258,7 +4265,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting Meeting",
     link: "https://www.norwoodtown.com/2026-06-11-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "The Norwood Sanitation District will hold a meeting in Norwood, Colorado. This government meeting provides an opportunity for community members to learn about sanitation district operations and participate in local governance.",
     pubDate: "2026-06-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4269,7 +4276,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa Wolf Jett",
     link: "https://www.norwoodtown.com/2026-06-13-music-on-the-mesa-wolf-jett",
-    description: "",
+    description: "Music On The Mesa presents Wolf Jett performing in Norwood. This community music event takes place on the mesa, offering live entertainment in a scenic outdoor setting.",
     pubDate: "2026-06-13T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4280,7 +4287,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-06-15-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "The Town of Norwood Planning and Zoning Commission will hold a public meeting to review development proposals, zoning applications, and land use matters affecting the community. This government meeting provides an opportunity for public input on planning decisions within Norwood's jurisdiction.",
     pubDate: "2026-06-15T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4291,7 +4298,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4302,7 +4309,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5050,7 +5057,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Dinner and a Magic Show With Ty Gallenbeck",
     link: "https://www.telluride.com/event/dinner-and-a-magic-show-with-ty-gallenbeck/",
-    description: "A 3-course wine paired dinner followed by a VIP Magic show with Ty Gallenbeck.",
+    description: "Enjoy a three-course wine-paired dinner followed by a VIP magic show featuring performer Ty Gallenbeck in Telluride. This community event combines fine dining with live entertainment for an evening of food and magic.",
     pubDate: "2026-06-27",
     endDate: "undefined",
     source: "telluride-com",
@@ -6070,7 +6077,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Telluride Theatre&#039;s Annual Shakespeare in the Park",
     link: "https://www.telluride.com/event/telluride-theatres-annual-shakespeare-in-the-park/",
-    description: "Stay tuned for updates about the 2026 event!",
+    description: "Telluride Theatre presents its annual Shakespeare in the Park performance, bringing classic drama to an outdoor setting in Telluride. This community theater event offers residents and visitors the opportunity to enjoy professional Shakespeare productions in a scenic mountain environment.",
     pubDate: "2026-07-17",
     endDate: "2026-07-26",
     source: "telluride-com",
