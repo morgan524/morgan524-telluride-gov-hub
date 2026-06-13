@@ -1,18 +1,26 @@
 {
-  "hash": "4c9d298de9d2f0f7b83f40753fc91b853705c468",
-  "lede": "The gondola replacement project hits a critical milestone this week as the advisory committee discusses the $18M in local commitments needed by fall to secure federal funding. Meanwhile, the Historic Commission has its hands full with several projects, including staff's recommendation to deny aluminum window replacements at a historic garage on Colorado Avenue for using incompatible materials.",
+  "hash": "f89d6e2c5b194a6ff359b99fdc6a2ad7db76d278",
+  "lede": "The gondola replacement saga reaches a critical juncture this week as SMART needs $18 million committed by fall 2026 to enter the federal funding program. Meanwhile, the county commissioners interview candidates for planning positions, and HARC reviews three projects including staff recommendations to deny aluminum windows at a historic Colorado Avenue structure.",
   "notable": [
     {
       "id": 2,
-      "stake": "$18M local commitment deadline looms for gondola federal grant"
+      "stake": "$18M local commitment needed by fall for federal gondola funding"
+    },
+    {
+      "id": 6,
+      "stake": "Interviewing new Board of Adjustment and Planning Commission candidates"
     },
     {
       "id": 7,
-      "stake": "Historic garage window project faces staff denial recommendation"
+      "stake": "Staff recommends denying aluminum windows at historic 324 W Colorado"
+    },
+    {
+      "id": 8,
+      "stake": "Large new construction at 208 S Fir requires full commission review"
     },
     {
       "id": 9,
-      "stake": "Ice rink rates increasing 3.7% to $92.12 per hour"
+      "stake": "Ice rink fees increasing 3.7% for 2026-2027 winter programs"
     }
   ]
 }

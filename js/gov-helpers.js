@@ -74,22 +74,67 @@ const MEETING_AGENDA_META = {
     {"zoomUrl":"https://us02web.zoom.us/j/82926286001?pwd=hhw2xIVjbwIb6pBVuRTO5mtaLM70GN.1"},
 
   "county|2026-06-18|Lodging Tax Board 06/18/26":
-    {"meetingId":"860 8356 9395","passcode":"993341","phone":"970-728-3844"},
+    {"meetingId":"860 8356 9395","passcode":"993341","phone":"970-728-3844","sv":2},
 
   "county|2026-06-17|Board of County Commissioners Meeting":
-    {"zoomUrl":"https://us02web.zoom.us/meeting/register/4b60Vv3xSPWI1meA92I9Yw","meetingId":"864 8853 1282","passcode":"965124","phone":"719-359-4580"},
+    {"zoomUrl":"https://us02web.zoom.us/meeting/register/4b60Vv3xSPWI1meA92I9Yw","meetingId":"864 8853 1282","passcode":"965124","phone":"719-359-4580","sv":2},
 
   "telluride|2026-06-17|Historic & Architectural Review Commission Chair - Jun 17 2026":
-    {"zoomUrl":"https://us06web.zoom.us/meeting/register/dRjdHtmeTB6DmemBLALAFw","meetingId":"876 4109 1694","passcode":"695618.","phone":"301-715-8592"},
+    {"zoomUrl":"https://us06web.zoom.us/meeting/register/dRjdHtmeTB6DmemBLALAFw","meetingId":"876 4109 1694","passcode":"695618.","phone":"301-715-8592","sv":2},
 
   "telluride|2026-06-17|Historic & Architectural Review Commission - Jun 17 2026":
-    {"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592"},
+    {"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592","sv":2},
 
   "telluride|2026-06-17|Parks & Recreation Commission - Jun 17 2026":
-    {"zoomUrl":"https://us06web.zoom.us/meeting/register/tZIufu6srzwsH9X0sfxgA_In-LUt0azBIi8Z"},
+    {"zoomUrl":"https://us06web.zoom.us/meeting/register/tZIufu6srzwsH9X0sfxgA_In-LUt0azBIi8Z","sv":2},
 
   "telluride|2026-06-15|Gondola Subcommittee - Jun 15 2026":
-    {"zoomUrl":"https://gbsm.zoom.us/j/82559576086"}
+    {"zoomUrl":"https://gbsm.zoom.us/j/82559576086","sv":2},
+
+  "fire|2026-06-16|Board of Directors Meeting":
+    {"sv":2},
+
+  "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
+    {"sv":2},
+
+  "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
+    {"sv":2},
+
+  "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
+    {"sv":2},
+
+  "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
+    {"sv":2},
+
+  "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
+    {"sv":2},
+
+  "telluride|2026-06-30|Town Council - Jun 30 2026":
+    {"sv":2},
+
+  "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
+    {"sv":2},
+
+  "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
+    {"sv":2},
+
+  "telluride|2026-06-15|Corrected Agenda for Open Space Commission Site Walk - Jun 15 2026":
+    {"sv":2},
+
+  "county|2026-06-22|Open Space Commission Meeting":
+    {"sv":2},
+
+  "county|2026-06-24|Board of County Commissioners Work Session":
+    {"sv":2},
+
+  "county|2026-07-01|Board of County Commissioners Meeting":
+    {"sv":2},
+
+  "county|2026-07-08|Board of County Commissioners Work Session":
+    {"sv":2},
+
+  "county|2026-07-09|Planning Commission Meeting":
+    {"sv":2}
 };
 
 const MANUAL_SUMMARIES = {
@@ -106,7 +151,7 @@ const MANUAL_SUMMARIES = {
     "Agenda not yet available",
 
   "fire|2026-06-16|Board of Directors Meeting":
-    "The June fire board meeting covers the 2025 audit, wildfire assignments ahead of summer, and updates on Station 3 construction and master planning efforts.",
+    "The fire district's monthly board meeting covers their 2025 audit results, master planning updates, and wildfire assignments as summer approaches. Station 3 construction gets an update, along with the usual reports from chiefs and coordinators across the district's operations.",
 
   "med|2026-05-28|Regular Board Meeting":
     "A regular Telluride Hospital District board meeting. Past the consent agenda and the April draft financials, the substance is in Board Matters — updates on the new facility, partnership talks, and early mill levy considerations. The mill levy is the one to watch; that's the property-tax lever that funds the district. CEO and Foundation/campaign reports round it out. In person at 333 W. Colorado Ave. or by Zoom.",
@@ -142,7 +187,7 @@ const MANUAL_SUMMARIES = {
     "Agenda not available",
 
   "county|2026-06-17|Board of County Commissioners Meeting":
-    "County commissioners will interview candidates for the Board of Adjustment and Planning Commission, plus hear affordable housing updates and routine business.",
+    "The commissioners will interview candidates for the Board of Adjustment and Planning Commission — Jonathan Prince for a direct appointment, and three applicants competing for an alternate Planning Commission slot. They'll get an update on affordable housing from the county's housing specialist, along with routine wastewater variances for two Ophir properties. The consent agenda includes adopting the latest Community Wildfire Protection Plan and approving a liquor license renewal for The Blue Jay in Placerville.",
 
   "county|2026-06-22|Open Space Commission Meeting":
     "The June 22 Open Space Commission agenda hasn't been posted yet.",
@@ -151,13 +196,13 @@ const MANUAL_SUMMARIES = {
     "The June 24 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "telluride|2026-06-17|Historic & Architectural Review Commission Chair - Jun 17 2026":
-    "HARC Chair reviews two window and deck projects: aluminum window replacements for a historic garage at 324 W Colorado (staff recommends denial for incompatible materials) and deck expansion at 714 E Columbia.",
+    "The Historic & Architectural Review Commission Chair will review two projects: aluminum window replacements at 324 W Colorado (a contributing historic structure in an alley) and a deck expansion at 714 E Columbia. Both applications face staff recommendations for disapproval — the windows for introducing aluminum into a historic wood garage that's supposed to maintain its utilitarian character, and the deck for being too large and reducing the building's stepping down to Shadow Lane. The 324 W Colorado item was continued from May and includes a pre-meeting site walk.",
 
   "telluride|2026-06-17|Historic & Architectural Review Commission - Jun 17 2026":
-    "HARC reviews new construction at 208 S Fir (5,000+ square feet) and amendments to certificates of appropriateness for homes on N Aspen and W Columbia.",
+    "HARC reviews three projects with varying scope. Two minor Certificate of Appropriateness amendments for existing homes at 239 N Aspen and 566 W Columbia — routine changes that don't create new site plans. The bigger item is a large-scale preliminary review for new construction at 208 S Fir that hits the 5,000-square-foot threshold requiring full commission review. There's also a 3:00 PM site walk at the Fir Street property. Two projects at 238 N Pine continue getting pushed to August.",
 
   "telluride|2026-06-17|Parks & Recreation Commission - Jun 17 2026":
-    "The Parks & Recreation Commission will set the 2026-27 Hanley Ice Rink schedule and approve a 3.7% increase in hourly ice rates to $92.12.",
+    "The Parks & Recreation Commission will set the 2026-2027 ice rink schedule and approve a modest fee increase for winter programs. The Hanley Ice Rink schedule runs October 7 through March 3, dividing ice time between hockey clubs, figure skating, curling, school district PE, and public skating slots. The hourly rate for winter programs is going up 3.7% — from $88.85 to $92.12 per hour — driven by higher utility costs and reduced operational hours from last winter's warm weather.",
 
   "telluride|2026-06-09|Town Council - Jun 09 2026":
     "Agenda not yet published",
@@ -184,7 +229,7 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
     "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
@@ -205,10 +250,10 @@ const MANUAL_SUMMARIES = {
     "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The July 1 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The July 1st Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
     "The July 1st Board of County Commissioners agenda hasn't been posted yet.",
@@ -232,7 +277,7 @@ const MANUAL_SUMMARIES = {
     "The July 9 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-06-18|Lodging Tax Board 06/18/26":
-    "The Lodging Tax Board meets to review tax reports and hear updates from the Norwood Chamber and Telluride Tourism Board — the usual quarterly check-in on how visitor dollars are flowing.",
+    "The Lodging Tax Board meets to review tax reports and hear updates from the Norwood Chamber and Telluride Tourism Board. Standard quarterly check-in on how lodging tax dollars are being distributed and used across the county.",
 
   "county|2026-07-09|Planning Commission Meeting":
     "The July 9 Planning Commission agenda hasn't been posted yet.",
@@ -241,10 +286,10 @@ const MANUAL_SUMMARIES = {
     "The June 12, 2026 Judicial Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-06-15|Corrected Agenda for Open Space Commission Site Walk - Jun 15 2026":
-    "The Open Space Commission meets at the Shell Station for a site walk to review the Tilman-Beam Corral and fence at Pearl Subdivision Lot B.",
+    "The Open Space Commission will walk the Tilman-Beam Corral site at Lot B in the Pearl Subdivision to review corral and fence conditions. They'll meet at the Shell Station on Highway 145 at 4 PM before heading to the property.",
 
   "telluride|2026-06-15|Gondola Subcommittee - Jun 15 2026":
-    "The Gondola Advisory Committee meets to discuss federal funding requirements for the gondola replacement project, including $18M in local commitments needed by fall 2026 to enter the FTA grant program."
+    "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -3944,7 +3989,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Evenings of History 2026 @ the Wright",
     link: "https://www.ouraycountyhistoricalsociety.org/about-4",
-    description: "Evenings of History 2026 @ the Wright WHEN? Weekly Tuesdays • 7:00 pm – 9:00 pm Doors at 6:30 pm • Presentations at 7:00 pm June 16 June 23 June 30 July 7 July 14 July 21 July 28 August 4 WHERE? Wright Opera House 472 Main St. Ouray, Colorado SERIES: Presented by the Ouray County Historical Society ABOUT THE SERIES Join the Ouray County Historical Society for another season of Evenings of History, a community lecture series exploring the people, places, and stories that shaped Ouray County and the greater San Juan region. From mining legends and frontier photography to fashion, recreation, and Ute history, this year’s lineup offers a fascinating look into the characters and events that helped define the American West. Through local historians, researchers, storytellers, and community experts, Evenings of History continues a longstanding tradition of preserving and sharing the rich heritage of Ouray County. …",
+    description: "Evenings of History 2026 @ the Wright WHEN? Weekly Tuesdays • 7:00 pm ��� 9:00 pm Doors at 6:30 pm • Presentations at 7:00 pm June 16 June 23 June 30 July 7 July 14 July 21 July 28 August 4 WHERE? Wright Opera House 472 Main St. Ouray, Colorado SERIES: Presented by the Ouray County Historical Society ABOUT THE SERIES Join the Ouray County Historical Society for another season of Evenings of History, a community lecture series exploring the people, places, and stories that shaped Ouray County and the greater San Juan region. From mining legends and frontier photography to fashion, recreation, and Ute history, this year’s lineup offers a fascinating look into the characters and events that helped define the American West. Through local historians, researchers, storytellers, and community experts, Evenings of History continues a longstanding tradition of preserving and sharing the rich heritage of Ouray County. …",
     pubDate: "2026-06-24T01:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
