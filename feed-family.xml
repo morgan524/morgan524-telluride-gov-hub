@@ -6,32 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-family.xml" rel="self" type="application/rss+xml" />
     <description>Storytime, youth programs, and all-ages activities — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Jun 2026 20:03:46 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 00:21:58 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Meeting] Judicial Subcommittee - Jun 12 2026 — 2026-06-12</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-12%7CJudicial%20Subcommittee%20-%20Jun%2012%202026</guid>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Telluride • 2026-06-12
-
-The June 12, 2026 Judicial Subcommittee agenda hasn't been posted yet.]]></description>
-      <category>Meeting</category>
-      <category>Town of Telluride</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 12] Teen Manga and Ramen Club</title>
-      <link>https://telluridelibrary.libcal.com/event/16949864?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/teen%20manga%20and%20ramen%7C2026-06-12</guid>
-      <pubDate>Fri, 12 Jun 2026 20:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_12_42_58.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Teen Area
-
-2:00 PM – 3:00 PM · Join Jackson and Rachel on select Fridays throughout the summer for our Teen Manga and Ramen Club. Each session we will make and eat homemade fancy ramen. We will also discuss manga, and have different crafts and activities related to manga/anime.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_12_42_58.png" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
     <item>
       <title>[Sat, Jun 13] Movies Under the Stars</title>
       <link>https://www.telluride.com/event/movies-under-the-stars/</link>
@@ -54,6 +30,18 @@ Bundle up and bring the family down to Conference Center Plaza in Mountain Villa
 📍 Michael D. Palm Theater, Telluride
 
 Over the past 10 years, Mass Movement has taken place as an annual celebration of dance in our small mountain town. We bring together local dancers and choreographers and also invite visiting choreographers and dancers from the region. Mass Movement is a celebration to find what moves you, whether you are on stage performing or participating as an audience member. This performance has been a platform and catalyst for the growth of the dance community here in Telluride. TDC and Palm Arts are excited to include Palm Arts Dance as an additional partnership this year and provide programming that invites local youth to participate in an intergenerational performance experience.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sun, Jun 14] Fire and Ice Cream: Community Wildfire Education</title>
+      <link>https://koto.org/event/fire-and-ice-cream-community-wildfire-education/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/fire%20and%20ice%20cream%7C2026-06-14</guid>
+      <pubDate>Sun, 14 Jun 2026 21:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Heritage Plaza, Mountain Village
+
+The Town of Mountain Village Police Department, San Miguel County Office of Emergency Management and Telluride Fire Protection District present Fire and Ice Cream, an afternoon of wildfire education in Mountain Village on Sunday, June 14. The event will be held from 3 to 5 p.m. and will feature free ice cream, live music and informational tables from regional partners. Wildfire danger is at the forefront of our regional agencies' and residents’ minds as the area enters a dry summer season, and this event is an opportunity to learn about different aspects of wildfire preparedness, safety and prevention. In addition to the more serious topic of wildfire, the event will also feature free ice cream, live music and a fire truck and police squad car for kids to explore. …]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
     </item>
@@ -89,6 +77,18 @@ Agenda not yet available]]></description>
 Agenda not yet available]]></description>
       <category>Meeting</category>
       <category>Town of Ophir</category>
+    </item>
+    <item>
+      <title>[Tue, Jun 16] Talking Gourds’ Stories &amp; Poems Telluride</title>
+      <link>https://koto.org/event/talking-gourds-stories-poems-telluride/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/talking%20gourds%20stories%20and%7C2026-06-16</guid>
+      <pubDate>Tue, 16 Jun 2026 23:15:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+San Miguel County Poet Laureate Paulo Munguía will be the featured presenter in English and Spanish at the Talking Gourds’ Stories & Poems series at the Wilkinson Public Library on Tuesday June 16 th at 5:15 pm. “Paulo has really blossomed at our local poet laureate, creating fascinating (and funny) videos as well as making strong poetry performances in both Spanish and English,” said Talking Gourds director Art Goodtimes. Born in Morelos, México and based in Montrose, Colorado, Munguía defines himself as a free soul. He is the first Hispanic person to be named poet laureate in San Miguel County (2025-2027) Co-sponsored by the Wilkinson Public Library and the Telluride Institute, the literary event is free and open to the public of all ages. Attendees are encouraged to bring a story or poem of their own, or of someone they like, to read aloud. …]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
     <item>
       <title>[Meeting] Town Council Meeting — 2026-06-17</title>

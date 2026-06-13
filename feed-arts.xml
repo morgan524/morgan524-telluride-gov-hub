@@ -6,72 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Jun 2026 20:03:46 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 00:21:58 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Fri, Jun 12] North Fork Crossing w/ Brendan Forrest</title>
-      <link>https://www.alibitelluride.com/calendar#eca-event=north-folk-crossing</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/north%20fork%20crossing%20w%7C2026-06-12</guid>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://ucarecdn.com/f1d0587b-ecc4-4749-9dc7-6d561e93a852/-/crop/2500x1251/0,210/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
-📍 The Alibi • Telluride, CO
-🕒 9:00 PM
-
-North Fork Crossing is a new-age Bluegrass band that resides between the Traditi...]]></description>
-      <media:content url="https://ucarecdn.com/f1d0587b-ecc4-4749-9dc7-6d561e93a852/-/crop/2500x1251/0,210/-/preview/" medium="image" />
-      <category>Community Event</category>
-      <category>The Alibi</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 12] Music on the Green Summer Concert Series</title>
-      <link>https://www.telluride.com/event/music-on-the-green-summer-concert-series/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/music%20on%20the%20green%7C2026-06-12</guid>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/44414/16c6ff81-d87c-823e-1bd2-8a66b859eb9d.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-The Telluride Mountain Village Owners Association (TMVOA) and Beyond the Groove Productions Present Music on the Green …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/44414/16c6ff81-d87c-823e-1bd2-8a66b859eb9d.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 12] Mass Movement</title>
-      <link>https://www.telluride.com/event/mass-movement/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/mass%20movement%7C2026-06-12</guid>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/55257/download_14.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Over the past 10 years, Mass Movement has taken place as an annual celebration of dance in our small mountain town. …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/55257/download_14.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 12] North Fork Crossing</title>
-      <link>https://www.telluride.com/event/north-fork-crossing/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/north%20fork%20crossing%7C2026-06-12</guid>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62160/screenshot_2026-04-09_at_1_55_43_pm.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-North Fork Crossing is a new-age Bluegrass band that resides between the Traditional music world with their timeless …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/62160/screenshot_2026-04-09_at_1_55_43_pm.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Meeting] Judicial Subcommittee - Jun 12 2026 — 2026-06-12</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-12%7CJudicial%20Subcommittee%20-%20Jun%2012%202026</guid>
-      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Telluride • 2026-06-12
-
-The June 12, 2026 Judicial Subcommittee agenda hasn't been posted yet.]]></description>
-      <category>Meeting</category>
-      <category>Town of Telluride</category>
-    </item>
     <item>
       <title>[Sat, Jun 13] The Fretliners Live in Concert</title>
       <link>https://sheridanoperahouse.com/events/the-fretliners-live-in-concert-2/</link>
@@ -178,6 +114,18 @@ Solo acoustic guitar rock and roll with Ethan Hale at the Sheridan Historic Bar.
       <category>Telluride.com</category>
     </item>
     <item>
+      <title>[Sun, Jun 14] Drop In Tech Time with Oliver</title>
+      <link>https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-06-14/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/drop%20in%20tech%20time%7C2026-06-14</guid>
+      <pubDate>Sun, 14 Jun 2026 19:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
       <title>[Meeting] Planning and Zoning Commission Meeting — 2026-06-15</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/norwood%7C2026-06-15%7CPlanning%20and%20Zoning%20Commission%20Meeting</guid>
@@ -187,6 +135,20 @@ Solo acoustic guitar rock and roll with Ethan Hale at the Sheridan Historic Bar.
 Agenda not yet available]]></description>
       <category>Meeting</category>
       <category>Town of Norwood</category>
+    </item>
+    <item>
+      <title>[Tue, Jun 16] Palmyra w/ Frail Talk</title>
+      <link>https://www.alibitelluride.com/calendar#eca-event=palmyra-w-frail-talk</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/palmyra%20w%20frail%20talk%7C2026-06-16</guid>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://ucarecdn.com/3dfa7885-4aaa-428a-a201-0b14f3c8ad8b/-/crop/4430x2213/0,614/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
+📍 The Alibi • Telluride, CO
+🕒 9:00 PM
+
+Established in Virginia’s Shenandoah Valley, Palmyra captures the collective spi...]]></description>
+      <media:content url="https://ucarecdn.com/3dfa7885-4aaa-428a-a201-0b14f3c8ad8b/-/crop/4430x2213/0,614/-/preview/" medium="image" />
+      <category>Community Event</category>
+      <category>The Alibi</category>
     </item>
     <item>
       <title>[Meeting] Board of Directors Meeting — 2026-06-16</title>
@@ -209,6 +171,19 @@ Agenda not yet available]]></description>
 Agenda not yet available]]></description>
       <category>Meeting</category>
       <category>Town of Ophir</category>
+    </item>
+    <item>
+      <title>[Wed, Jun 17] FirstGrass Concert</title>
+      <link>https://www.telluride.com/event/firstgrass-concert/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/firstgrass%20concert%7C2026-06-17</guid>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/47924/firstgrass_2000x1000.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Join Planet Bluegrass at Sunset Plaza as they kick off the Telluride Bluegrass Festival with the annual FirstGrass …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/47924/firstgrass_2000x1000.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
     </item>
     <item>
       <title>[Meeting] Town Council Meeting — 2026-06-17</title>

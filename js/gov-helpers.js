@@ -74,7 +74,10 @@ const MEETING_AGENDA_META = {
     {"zoomUrl":"https://us02web.zoom.us/j/82926286001?pwd=hhw2xIVjbwIb6pBVuRTO5mtaLM70GN.1"},
 
   "county|2026-06-18|Lodging Tax Board 06/18/26":
-    {"meetingId":"860 8356 9395","passcode":"993341","phone":"970-728-3844"}
+    {"meetingId":"860 8356 9395","passcode":"993341","phone":"970-728-3844"},
+
+  "county|2026-06-17|Board of County Commissioners Meeting":
+    {"zoomUrl":"https://us02web.zoom.us/meeting/register/4b60Vv3xSPWI1meA92I9Yw","meetingId":"864 8853 1282","passcode":"965124","phone":"719-359-4580"}
 };
 
 const MANUAL_SUMMARIES = {
@@ -270,6 +273,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "‘Music is just such a vital way that communities tell their stories’",
+    source: "Telluride Times",
+    date: "June 12, 2026",
+    firstSeen: "2026-06-13",
+    newsTopic: "arts-culture",
+    copy: "Although Telluride Bluegrass is best known for its exceptional musical talent, the festival also comes with a dash of science.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_2b0f2184-b419-456f-b251-7b8ca0ec0a58.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/03/80330c81-ecb9-4d2a-9ddf-3a719fdf520e/6a2935bd7c432.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Where to enjoy Norwood’s summer scores",
+    source: "Telluride Times",
+    date: "June 12, 2026",
+    firstSeen: "2026-06-13",
+    newsTopic: "community",
+    copy: "Wright’s Mesa is waking up to summer with the sounds of guitar-picking, cello and violin.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_e8ac482b-c3a4-4c1e-b830-af336769c162.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/de/9deb3305-3fc3-4475-af64-5d963c9a9065/6a2afce94c807.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "A global gap year",
     source: "Telluride Times",
@@ -1276,42 +1303,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Housing and mental health",
-    source: "Telluride Times",
-    date: "May 30, 2026",
-    firstSeen: "2026-05-31",
-    newsTopic: "housing",
-    copy: "Local healthcare providers are reporting that housing instability has become a major driver of stress, anxiety and worsening mental health among patients. Dr. Sharon Grundy notes that uncertain housing affects everything from sleep to chronic condition management, while Tri-County Health Network has advocated with Town Council about housing policies that particularly challenge immigrant and Spanish-speaking residents. One local couple saw their Town-owned rental jump from $2,450 to $4,400 monthly under new policies, forcing them to question whether staying in Telluride remains viable despite their deep community ties.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_82784adf-bcaf-458a-a47e-25d04eeb187a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/61/16137491-cbb9-48aa-beb2-abece96f516e/6a18c781afb5e.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Mountains matter: notes from the UNMP Summit",
-    source: "Telluride Times",
-    date: "May 30, 2026",
-    firstSeen: "2026-05-31",
-    newsTopic: "recreation",
-    copy: "The UN Mountain Partnership summit in Andorra brought together 150 representatives from 50+ countries to tackle climate change impacts on mountain regions, with Telluride Institute among just four North American groups attending. The numbers tell the story: 186 French Alps ski areas have permanently closed, developing mountain countries need $187 billion annually for climate adaptation but received only $13.8 billion in 2022, and back home Mount Hood Meadows just closed a month early with 100 inches below normal snowpack.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_be1f24b0-2b42-454b-966c-2e8c825bb36e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/5f/85f9cd72-a2fd-4bcc-b4de-5fa0be078976/6a18dad99fd26.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Kick-off to adventure",
-    source: "Telluride Times",
-    date: "May 30, 2026",
-    firstSeen: "2026-05-30",
-    newsTopic: "community",
-    copy: "Telluride Academy is gearing up for its 10-week summer season with 120 camps serving over 700 kids, from day camps for younger ones to multi-day backcountry adventures for teens. The program offers significant tuition assistance for local families and maintains a device-free policy to get kids unplugged and outside.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_570c06c7-2d4d-4dd8-8349-90541606b9f6.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/04/104c5465-3a28-4379-9a51-c069fc546c61/6a1a90ee9adc7.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Releases Findings of Independent Investigation",
     source: "Town of Telluride",
     date: "June 10, 2026",
@@ -1359,7 +1350,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Click here for details.",
     source: "Town of Ridgway",
-    date: "June 12, 2026",
+    date: "June 13, 2026",
     firstSeen: "2026-06-09",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1392,7 +1383,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 12, 2026",
+    date: "June 13, 2026",
     firstSeen: "2026-06-04",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1403,7 +1394,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 12, 2026",
+    date: "June 13, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1447,6 +1438,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 6-12-26",
+    source: "KOTO Community Radio",
+    date: "June 13, 2026",
+    newsTopic: "public-safety",
+    copy: "On this week's Regional Roundup, we hear about a jazz festival in northern New Mexico that celebrates Indigenous jazz music. Then, we head to the Roaring Fork Valley on Colorado's Western Slope to hear about efforts to create safe passages for wildlife crossing highways. After that we head to Wyoming to hear how goats are being used for fire mitiga",
+    href: "https://koto.org/news/newscast-6-12-26/"
+  },
   {
     title: "Newscast 6-11-26",
     source: "KOTO Community Radio",
@@ -1502,14 +1501,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "community",
     copy: "CDOT Plans for Regional Construction; The Dark Veil of Romance",
     href: "https://koto.org/news/newscast-6-1-26/"
-  },
-  {
-    title: "Newscast 5-29-26",
-    source: "KOTO Community Radio",
-    date: "May 30, 2026",
-    newsTopic: "government",
-    copy: "On this week’s Regional Roundup, we hear about efforts to repeal the Roadless Rule for National Forests and learn about an upcoming movie set to benefit from a new Colorado tax credit. We also visit a popular Western Colorado trail that has introduced new fees for e-bikes, hear why water managers are worried about a dry summer ahead, and tag along ",
-    href: "https://koto.org/news/newscast-5-29-26/"
   }
 ];
 
@@ -2272,6 +2263,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A-1.png"
   },
   {
+    title: "Market on the Plaza",
+    link: "https://koto.org/event/market-on-the-plaza/2026-06-17/",
+    description: "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
+    pubDate: "2026-06-17T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Heritage Plaza, Mountain Village",
+    imageUrl: ""
+  },
+  {
     title: "Mahjongg for Independent Players",
     link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-06-17/",
     description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
@@ -2325,6 +2327,28 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Lone Cone Library Norwood",
     imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Ridgway Farmer's Market",
+    link: "https://koto.org/event/ridgway-farmers-market/2026-06-19/",
+    description: "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
+    pubDate: "2026-06-19T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Hartwell Park Ridgway",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Farmer's Market",
+    link: "https://koto.org/event/telluride-farmers-market/2026-06-19/",
+    description: "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
+    pubDate: "2026-06-19T16:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Oak Street Plaza, Telluride",
+    imageUrl: ""
   },
   {
     title: "Telluride Elks Lodge #692 Bluegrass Pancake Breakfast",
@@ -2426,6 +2450,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Market on the Plaza",
+    link: "https://koto.org/event/market-on-the-plaza/2026-06-24/",
+    description: "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
+    pubDate: "2026-06-24T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Heritage Plaza, Mountain Village",
+    imageUrl: ""
+  },
+  {
     title: "Mahjongg for Independent Players",
     link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-06-24/",
     description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
@@ -2501,6 +2536,28 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Lone Cone Library Norwood",
     imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Ridgway Farmer's Market",
+    link: "https://koto.org/event/ridgway-farmers-market/2026-06-26/",
+    description: "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
+    pubDate: "2026-06-26T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Hartwell Park Ridgway",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Farmer's Market",
+    link: "https://koto.org/event/telluride-farmers-market/2026-06-26/",
+    description: "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
+    pubDate: "2026-06-26T16:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Oak Street Plaza, Telluride",
+    imageUrl: ""
   },
   {
     title: "Free Youth Tennis & Pickleball Program",
@@ -2633,28 +2690,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Innovation Center",
     imageUrl: "https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A-3.png"
-  },
-  {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-01/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-07-01T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Mahjongg for Independent Players",
-    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-07-01/",
-    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-07-01T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
   }
 ];
 
@@ -2712,7 +2747,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Female",
     firstSeen: "2026-06-11",
     revealDate: "2026-06-11",
-    lastSeen: "2026-06-12"
+    lastSeen: "2026-06-13"
   },
   {
     id: "TEL-A-186",
@@ -2726,7 +2761,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Male",
     firstSeen: "2026-06-11",
     revealDate: "2026-06-13",
-    lastSeen: "2026-06-12"
+    lastSeen: "2026-06-13"
   }
 ];
 
@@ -4337,66 +4372,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [];
 
 const TELLURIDE_COM_EVENTS = [
   {
-    title: "Creative Exchange",
-    link: "https://www.telluride.com/event/creative-exchange/",
-    description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call …",
-    pubDate: "2026-06-11",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/60815/download_1.800x533.webp"
-  },
-  {
-    title: "Historic Walking Tour",
-    link: "https://www.telluride.com/event/historic-walking-tour/",
-    description: "Take a historic tour of Telluride on foot! These historic walking tours are led by historian Ashley Boling, and leave …",
-    pubDate: "2026-06-11",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/48069/walkingtour_tabloidsize_2021.800x533.webp"
-  },
-  {
-    title: "Free Tasting",
-    link: "https://www.telluride.com/event/free-tasting-at-telluride-wine-merchant/",
-    description: "Free tasting every Thursday from 4-6pm. The theme of the tasting will vary from different seasonal selections in wine, …",
-    pubDate: "2026-06-11",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62697/screenshot_2026-06-03_at_1_50_16_pm.800x533.webp"
-  },
-  {
-    title: "Telluride Gold Kings",
-    link: "https://www.telluride.com/event/telluride-gold-kings/",
-    description: "Dance and sing along with the Telluride Gold Kings every Thursday this summer. Free admission!",
-    pubDate: "2026-06-11",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/58285/download_9.800x533.webp"
-  },
-  {
-    title: "Live Music at Alloy Kitchen",
-    link: "https://www.telluride.com/event/live-music-at-alloy-kitchen/",
-    description: "Free live music, four nights a week, all season long. Alloy Kitchen at Mountain Lodge Telluride hosts a rotating lineup …",
-    pubDate: "2026-06-11",
-    endDate: "2026-06-15",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62862/alloy-live-music-pool-deck.800x533.webp"
-  },
-  {
     title: "Music on the Green Summer Concert Series",
     link: "https://www.telluride.com/event/music-on-the-green-summer-concert-series/",
     description: "The Telluride Mountain Village Owners Association (TMVOA) and Beyond the Groove Productions Present Music on the Green …",
@@ -5467,7 +5442,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Red, White & Blues",
     link: "https://www.telluride.com/event/red-white-and-blues/",
-    description: "Celebrate the Fourth of July with the whole family this year at Mountain Village’s Red, White & Blues …",
+    description: "Mountain Village's beloved Red, White & Blues Celebration returns July 3-4, 2026, bringing two days of FREE family …",
     pubDate: "2026-07-03",
     endDate: "2026-07-05",
     source: "telluride-com",
@@ -5487,6 +5462,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/48038/copy_of_alpine_cookout_hero.800x533.webp"
+  },
+  {
+    title: "Better Than Ezra",
+    link: "https://www.telluride.com/event/better-than-ezra/",
+    description: "Friday evening's live music lineup begins with acclaimed singer-songwriter and local legend Emily Scott Robinsonat 5 …",
+    pubDate: "2026-07-03",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62891/bte_show_poster.800x533.webp"
   },
   {
     title: "Games on the Green",
@@ -7203,6 +7190,66 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/54293/town-talks-grid1.800x533.webp"
+  },
+  {
+    title: "Market on the Plaza - Mountain Village",
+    link: "https://www.telluride.com/event/market-on-the-plaza-mountain-village/",
+    description: "Market on the Plaza is a vibrant local community market providing an avenue to support regional and local businesses …",
+    pubDate: "2026-08-12",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/44431/mplantz-3995.800x533.webp"
+  },
+  {
+    title: "Free Wine Tasting",
+    link: "https://www.telluride.com/event/free-wine-tasting/",
+    description: "Join the Mountain Village Wine Merchant every Wednesday for a free wine tasting of three different wines.",
+    pubDate: "2026-08-12",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/46449/mvwmplanetpic2.800x533.webp"
+  },
+  {
+    title: "Weird Wine Wednesdays at The National",
+    link: "https://www.telluride.com/event/weird-wine-wednesdays-at-the-national/",
+    description: "Elevate your evening on the rooftop at The National with Weird Wine Wednesdays, a laid-back, weekly tasting experience …",
+    pubDate: "2026-08-12",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62830/the_national_wine.800x533.webp"
+  },
+  {
+    title: "Sunset Concert Series",
+    link: "https://www.telluride.com/event/sunset-music-concert-series/",
+    description: "The Telluride Mountain Village Owners Association (TMVOA) has announced the return of the Sunset Concert Series for the …",
+    pubDate: "2026-08-12",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/44886/sunsetconcert.800x533.webp"
+  },
+  {
+    title: "Telluride Mushroom Festival",
+    link: "https://www.telluride.com/event/telluride-mushroom-festival/",
+    description: "Since 1981, the Telluride Mushroom Festival has been celebrating all things mycological, from the newest advancements …",
+    pubDate: "2026-08-12",
+    endDate: "2026-08-17",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/45066/photo-aug-19-2023--15-10-23-2100x1400-1be3c859-5c81-410b-94fb-9f05acb5d45c.800x533.webp"
   }
 ];
 
@@ -7812,6 +7859,9 @@ const HOUSING_LISTINGS = [
 ];
 
 const RIDGWAY_AGENDA_MAP = {
+  "June 16, 2026":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Special-Meeting-Packet---June-16%2C-2026.pdf",
+
   "June 10, 2026":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---June-10%2C-2026.pdf",
 

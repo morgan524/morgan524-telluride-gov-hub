@@ -184,7 +184,8 @@ const COUNTY_CACHED_DATA = [
     type: 'bocc',
     location: '305 W Colorado Ave, Telluride, CO 81435',
     civicClerkId: null,
-    note: 'Agenda typically posted the Friday before.'
+    note: 'Agenda typically posted the Friday before.',
+    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/897/files/agenda/1863'
   },
   {
     date: 'June 24, 2026',
@@ -299,7 +300,7 @@ const MV_CACHED_DATA = [
     time: '8:30 AM - 4:00 PM',
     title: 'Town Council Meeting',
     board: 'tc',
-    agendaUrl: null,
+    agendaUrl: 'https://townofmountainvillage.com/site/assets/files/49108/june_17-_2026_town_council_meeting_agenda-1.pdf',
     packetUrl: null,
     special: false,
     location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
