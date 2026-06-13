@@ -2161,23 +2161,44 @@ const MUSIC_ON_THE_GREEN = (function () {
   }));
 })();
 
-// Telluride Farmers Market — hand-curated weekly series (bots don't touch
-// this), same pattern as MUSIC_ON_THE_GREEN. Every Friday of the 2026 season
-// through the end of September on South Oak Street, 10:30 AM–3:30 PM. The
-// events.html 60-day rolling window only renders upcoming Fridays. Hero image
-// copied locally from thetelluridefarmersmarket.com. Refresh the Fridays list
-// (and re-grab the photo) each season.
+// Telluride Farmers Market — AUTO-RECURRING weekly series (no hand-refresh
+// needed each year), same render pattern as MUSIC_ON_THE_GREEN. The market
+// runs every Friday from the Friday after Memorial Day (the last Monday of
+// May) through the last Friday of September, on South Oak Street, 10:30 AM–
+// 3:30 PM. The Fridays are COMPUTED below for the current and next year, so
+// the series rolls over automatically — the events.html 60-day rolling window
+// only renders upcoming Fridays. (Computed client-side in the browser; the bot
+// never extracts this IIFE, only plain `const NAME = [` arrays.) Re-grab the
+// hero photo if the market ever changes its branding; the dates take care of
+// themselves.
 const TELLURIDE_FARMERS_MARKET = (function () {
   const LINK = 'https://www.thetelluridefarmersmarket.com/';
   const LOCATION = 'South Oak Street, downtown Telluride';
   const TIME = '10:30 AM – 3:30 PM';
   const IMAGE = '/img/telluride-farmers-market.webp';
-  const fridays = [
-    '2026-05-29', '2026-06-05', '2026-06-12', '2026-06-19', '2026-06-26',
-    '2026-07-03', '2026-07-10', '2026-07-17', '2026-07-24', '2026-07-31',
-    '2026-08-07', '2026-08-14', '2026-08-21', '2026-08-28',
-    '2026-09-04', '2026-09-11', '2026-09-18', '2026-09-25',
-  ];
+  // All UTC date math so the YYYY-MM-DD strings never drift by timezone.
+  const lastMondayOfMay = (y) => {
+    const d = new Date(Date.UTC(y, 4, 31));            // May 31
+    while (d.getUTCDay() !== 1) d.setUTCDate(d.getUTCDate() - 1);
+    return d;
+  };
+  const lastFridayOfSep = (y) => {
+    const d = new Date(Date.UTC(y, 8, 30));            // Sep 30
+    while (d.getUTCDay() !== 5) d.setUTCDate(d.getUTCDate() - 1);
+    return d;
+  };
+  const seasonFridays = (y) => {
+    const start = lastMondayOfMay(y);                  // step to the first Friday after it
+    do { start.setUTCDate(start.getUTCDate() + 1); } while (start.getUTCDay() !== 5);
+    const end = lastFridayOfSep(y);
+    const out = [];
+    for (const d = new Date(start); d <= end; d.setUTCDate(d.getUTCDate() + 7)) {
+      out.push(d.toISOString().slice(0, 10));
+    }
+    return out;
+  };
+  const thisYear = new Date().getUTCFullYear();
+  const fridays = seasonFridays(thisYear).concat(seasonFridays(thisYear + 1));
   return fridays.map(date => ({
     title: 'Telluride Farmers Market',
     date: date,
@@ -2191,10 +2212,14 @@ const TELLURIDE_FARMERS_MARKET = (function () {
 })();
 
 // Telluride Science — summer "Town Talk" public-lecture series + workshops at
-// the Telluride Innovation Center (300 S. Townsend), hand-curated (bots don't
-// touch this). Source: https://telluridescience.org/events/ — refresh the
-// lineup each season. The events.html collector applies a rolling 60-day
-// window, so out-of-season entries simply don't render until they approach.
+// the Telluride Innovation Center (300 S. Townsend). AUTO-SYNCED every refresh
+// by content-refresh.js Task 22 from the Tribe Events API at
+// https://telluridescience.org/wp-json/tribe/events/v1/events/ (same WordPress
+// + The Events Calendar stack as KOTO/Sherbino). The entries below are a
+// seed/fallback — the bot overwrites them on its first successful run, and if
+// the API ever errors the existing array carries forward instead of being
+// wiped. The events.html collector applies a rolling 60-day window, so
+// out-of-season entries simply don't render until they approach.
 const TELLURIDE_SCIENCE_EVENTS = [
   { title: "The Science of Connection: How Our Relationships with Animals Shape Health and Well-Being", date: "2026-06-05", time: "5:30 – 6:30 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "What does science have to say about the bonds we form with other animals?", link: "https://telluridescience.org/event/the-science-of-connection-how-our-relationships-with-animals-shape-health-and-well-being/", sourceLabel: "Telluride Science" },
   { title: "Town Talk: Can We Change the Weather (and Do We Really Want To?)", date: "2026-06-09", time: "6:30 – 7:30 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "Presented by Derek Posselt, NASA Jet Propulsion Laboratory.", link: "https://telluridescience.org/event/change-the-weather/", sourceLabel: "Telluride Science" },

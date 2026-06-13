@@ -4217,6 +4217,68 @@ async function syncSherbinoEvents() {
   }
 }
 
+// ── Task 22: Telluride Science Town Talks (Tribe Events JSON API) ──
+// Source: https://telluridescience.org/events/  (WordPress + The Events
+// Calendar, same stack as KOTO/Sherbino). Runs every refresh; emits the
+// same shape as the hand-curated seed it replaces (link/description/time),
+// so events.html's pushEvent reads it unchanged. Fetched direct (the host
+// does not block runner IPs); on any error we return null so the existing
+// array carries forward instead of being wiped.
+const TELLURIDE_SCIENCE_TRIBE_API = 'https://telluridescience.org/wp-json/tribe/events/v1/events/?per_page=50&status=publish';
+
+// "2026-06-16 18:30:00" -> "6:30 PM". The Tribe start/end strings are already
+// in the venue-local timezone (America/Denver), so parse the clock components
+// directly — do NOT new Date() them on a UTC runner.
+function fmtTribeClock(s) {
+  const m = String(s).match(/\d{4}-\d{2}-\d{2}[ T](\d{2}):(\d{2})/);
+  if (!m) return '';
+  let h = parseInt(m[1], 10); const min = m[2];
+  const ap = h >= 12 ? 'PM' : 'AM';
+  h = h % 12; if (h === 0) h = 12;
+  return `${h}:${min} ${ap}`;
+}
+
+async function syncTellurideScienceEvents() {
+  console.log('\n🔬 Task 22: Syncing Telluride Science events (Tribe API)...');
+  let resp;
+  try { resp = await fetch(TELLURIDE_SCIENCE_TRIBE_API); }
+  catch (e) { console.warn('  Telluride Science fetch error:', e.message); return null; }
+  if (!resp.ok) { console.warn(`  Telluride Science Tribe API HTTP ${resp.status}`); return null; }
+  let data;
+  try { data = await resp.json(); }
+  catch (e) { console.warn('  Telluride Science JSON parse error:', e.message); return null; }
+  const now = Date.now();
+  const events = (data.events || [])
+    .filter(ev => {
+      if (!ev || !ev.start_date) return false;
+      const t = new Date(ev.start_date.replace(' ', 'T')).getTime();
+      return !isNaN(t) && t >= now - 86400000;   // drop only past events
+    })
+    .map(ev => {
+      const startClock = fmtTribeClock(ev.start_date);
+      const endClock   = fmtTribeClock(ev.end_date);
+      const time = (startClock && endClock) ? `${startClock} – ${endClock}` : (startClock || '');
+      const venue = (ev.venue && ev.venue.venue) ? ev.venue.venue : '';
+      const city  = (ev.venue && ev.venue.city)  ? ev.venue.city  : '';
+      const location = venue
+        ? (city ? `${venue}, ${city}` : `${venue}, Telluride`)
+        : 'Telluride Innovation Center, 300 S. Townsend, Telluride';
+      return {
+        title:       decodeHtmlEntities(ev.title || ''),
+        date:        ev.start_date.slice(0, 10),
+        time,
+        location,
+        description: ev.description ? decodeHtmlEntities(
+                       smartTruncate(ev.description.replace(/<[^>]+>/g, ''), EVENT_DESC_MAX)) : '',
+        link:        ev.url || 'https://telluridescience.org/events/',
+        imageUrl:    (ev.image && ev.image.url) ? ev.image.url : '',
+        sourceLabel: 'Telluride Science',
+      };
+    });
+  console.log(`  Telluride Science events: ${events.length} upcoming`);
+  return events;
+}
+
 // ── Task 10: Telluride Foundation Events (HTML scraper) ──
 // The TF events page is a manually-maintained WPBakery page — no RSS.
 // We fetch the HTML, parse each wpb_text_column block for event data,
@@ -6264,6 +6326,17 @@ async function main() {
       govHubSrc = replaceJsValue(govHubSrc, 'SHERBINO_EVENTS', newSherbinoEvents, false);
       changed = true;
       console.log(`  SHERBINO_EVENTS updated (was ${existingSherbino.length}, now ${newSherbinoEvents.length})`);
+    }
+  }
+
+  // ── Task 22: Telluride Science Town Talks ──
+  const newScienceEvents = await syncTellurideScienceEvents();
+  if (newScienceEvents !== undefined && newScienceEvents !== null) {
+    const existingScience = extractJsArray(govHubSrc, 'TELLURIDE_SCIENCE_EVENTS') || [];
+    if (JSON.stringify(newScienceEvents) !== JSON.stringify(existingScience)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'TELLURIDE_SCIENCE_EVENTS', newScienceEvents, false);
+      changed = true;
+      console.log(`  TELLURIDE_SCIENCE_EVENTS updated (was ${existingScience.length}, now ${newScienceEvents.length})`);
     }
   }
 
