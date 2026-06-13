@@ -292,7 +292,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     firstSeen: "2026-06-13",
     newsTopic: "community",
     copy: "Wright’s Mesa is waking up to summer with the sounds of guitar-picking, cello and violin.",
-    claudeSummary: false,
+    claudeSummary: true,
     href: "https://www.telluridenews.com/arts_and_entertainment/article_e8ac482b-c3a4-4c1e-b830-af336769c162.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/de/9deb3305-3fc3-4475-af64-5d963c9a9065/6a2afce94c807.image.jpg",
     imgHiRes: true
@@ -2174,17 +2174,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Mass Movement",
-    link: "https://koto.org/event/mass-movement/",
-    description: "Over the past 10 years, Mass Movement has taken place as an annual celebration of dance in our small mountain town. We bring together local dancers and choreographers and also invite visiting choreographers and dancers from the region. Mass Movement is a celebration to find what moves you, whether you are on stage performing or participating as an audience member. This performance has been a platform and catalyst for the growth of the dance community here in Telluride. TDC and Palm Arts are excited to include Palm Arts Dance as an additional partnership this year and provide programming that invites local youth to participate in an intergenerational performance experience.",
-    pubDate: "2026-06-13T01:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Michael D. Palm Theater, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Bilingual Balance in Motion",
     link: "https://koto.org/event/bilingual-balance-in-motion/2026-06-13/",
