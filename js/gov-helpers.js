@@ -8921,8 +8921,17 @@ function getTownAgendaLink(title, eventDate) {
   return TOWN_CIVICWEB_BASE + meetingId;
 }
 
+// Bot-synced upcoming Telluride board/commission meetings — Town Council,
+// Planning & Zoning Commission, Telluride Housing Authority Subcommittee, Ethics
+// Commission, and the joint P&Z/HARC subcommittee. Populated by
+// content-refresh.js syncTellurideBoardMeetings() from the CivicWeb
+// MeetingsService (HARC stays in TELLURIDE_CACHED_DATA above). Empty until the
+// next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
+const TELLURIDE_BOARD_MEETINGS = [];
+
 function getTellurideMeetings() {
-  return TELLURIDE_CACHED_DATA.map(m => {
+  // HARC (hand-curated recurring schedule + bot-patched agenda links).
+  const harc = TELLURIDE_CACHED_DATA.map(m => {
     const eventDate = localDate(m.date);
     // Explicit agendaUrl overrides everything (legacy/direct PDF links)
     // civicWebId uses the Town's CivicWeb portal (same system as County)
@@ -8955,6 +8964,31 @@ function getTellurideMeetings() {
       agendaLink
     };
   });
+
+  // Other Telluride bodies the bot surfaces from CivicWeb. Rendered generically
+  // (no HARC-specific time/location defaults); summary + board-token matching is
+  // handled by getMeetingSummary via meetingBoardToken.
+  const list = (typeof TELLURIDE_BOARD_MEETINGS !== 'undefined' && Array.isArray(TELLURIDE_BOARD_MEETINGS)) ? TELLURIDE_BOARD_MEETINGS : [];
+  const board = list.map(m => {
+    const agendaLink = m.agendaUrl || '';
+    return {
+      title: m.title,
+      link: agendaLink || (typeof TOWN_CIVICWEB_FALLBACK !== 'undefined' ? TOWN_CIVICWEB_FALLBACK : agendaLink),
+      description: '',
+      eventDate: localDate(m.date),
+      eventDates: '',
+      eventTimes: m.time || '',
+      location: m.location || '',
+      source: 'telluride',
+      sourceLabel: 'Town of Telluride',
+      category: m.title,
+      canceled: false,
+      hasAgenda: !!m.hasAgenda && !!agendaLink,
+      agendaLink: agendaLink || null
+    };
+  });
+
+  return harc.concat(board);
 }
 
 // Canonical "board token" for a meeting title, so the website's short card
@@ -8963,9 +8997,14 @@ function getTellurideMeetings() {
 // Jun 17 2026", etc.). Returns '' when no known board matches.
 function meetingBoardToken(title) {
   const s = String(title || '').toLowerCase();
-  if (/\bharc\b|historic\s*(?:&|and)\s*architectural/.test(s)) return 'harc';
+  const hasPZ = /planning\s*(?:&|and)\s*zoning|planning commission|\bp&z\b/.test(s);
+  const hasHARC = /\bharc\b|historic\s*(?:&|and)\s*architectural/.test(s);
+  if (hasPZ && hasHARC) return 'joint';        // joint P&Z + HARC subcommittee
+  if (hasHARC) return 'harc';
   if (/town council/.test(s)) return 'council';
-  if (/planning\s*(?:&|and)\s*zoning|planning commission|\bp&z\b/.test(s)) return 'pz';
+  if (hasPZ) return 'pz';
+  if (/housing authority/.test(s)) return 'housing';
+  if (/ethics/.test(s)) return 'ethics';
   if (/parks?\s*(?:&|and)?\s*rec/.test(s)) return 'parks';
   if (/open space/.test(s)) return 'openspace';
   if (/gondola/.test(s)) return 'gondola';

@@ -4726,6 +4726,66 @@ async function syncTellurideAgendas() {
   return map;
 }
 
+// Town of Telluride board/commission meetings the bot already summarizes but the
+// site WASN'T rendering (it only showed HARC via TELLURIDE_CACHED_DATA): Town
+// Council, Planning & Zoning Commission, Telluride Housing Authority
+// Subcommittee, Ethics Commission, and the joint P&Z/HARC subcommittee. Returns
+// an array of {date,title,agendaUrl,hasAgenda,location,time} for getTellurideMeetings
+// to render, or null on fetch/parse failure (so a transient error never wipes the
+// committed list). HARC stays in TELLURIDE_CACHED_DATA and is excluded here.
+async function syncTellurideBoardMeetings() {
+  console.log('\n🏛  Syncing Town of Telluride board meetings (Council, P&Z, Housing Authority, Ethics, joint) from CivicWeb...');
+  const now = new Date();
+  const horizon = new Date(now.getTime() + 90 * 86400000);
+  const fromStr = now.toISOString().split('T')[0];
+  const toStr = horizon.toISOString().split('T')[0];
+  const url = `${AGENDA_SOURCES.telluride.meetingsApiBase}` +
+    `?from=${encodeURIComponent(fromStr)}&to=${encodeURIComponent(toStr)}`;
+  let resp;
+  try { resp = await fetch(url); }
+  catch (e) { console.warn(`  CivicWeb fetch error: ${e.message}`); return null; }
+  if (resp.status !== 200) { console.warn(`  CivicWeb meetings API HTTP ${resp.status}`); return null; }
+  let items;
+  try { const p = JSON.parse(resp.text); items = Array.isArray(p) ? p : (p && (p.d || p.value)) || []; }
+  catch (e) { console.warn(`  CivicWeb JSON parse error: ${e.message}`); return null; }
+  const months = ['January','February','March','April','May','June',
+                  'July','August','September','October','November','December'];
+  // Bodies to surface (HARC handled separately). The joint P&Z/HARC subcommittee
+  // is caught by the Planning & Zoning pattern.
+  const KEEP = /town council|planning\s*(?:&|and)\s*zoning|\bp&z\b|housing authority|ethics commission/i;
+  const out = [];
+  const seen = new Set();
+  for (const m of items) {
+    if (!m) continue;
+    const name = (m.Name || '').trim();
+    if (/^(?:\(?cancelled?\)?:?\s*|CANCELLED\b)/i.test(name)) continue;  // skip cancelled
+    if (!KEEP.test(name)) continue;
+    if (/chair/i.test(name)) continue;                                  // skip shorter "Chair" agenda variants
+    if (!m.Id) continue;
+    const d = new Date(m.MeetingDate || m.MeetingDateTime || '');
+    if (isNaN(d)) continue;
+    const dateKey = `${months[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`;
+    const title = name.replace(/\s*-\s*[A-Za-z]{3,9}\.?\s+\d{1,2}\s+\d{4}\s*$/, '').trim();  // drop CivicWeb date suffix
+    const dedup = dateKey + '|' + title.toLowerCase();
+    if (seen.has(dedup)) continue;
+    seen.add(dedup);
+    let time = '';
+    const tm = String(m.MeetingDateTime || '').match(/T(\d{2}):(\d{2})/);
+    if (tm) { const h = parseInt(tm[1], 10); time = `${((h + 11) % 12) + 1}:${tm[2]} ${h >= 12 ? 'PM' : 'AM'}`; }
+    out.push({
+      date: dateKey,
+      title,
+      agendaUrl: `${AGENDA_SOURCES.telluride.detailBase}${m.Id}`,
+      hasAgenda: m.Published === true,
+      location: (m.MeetingLocation || '').trim(),
+      time,
+    });
+  }
+  out.sort((a, b) => (new Date(a.date) - new Date(b.date)));
+  console.log(`  Found ${out.length} Telluride board meeting(s) on CivicWeb`);
+  return out;
+}
+
 // Patches gov-data.js in place: for each (date → url) in `agendaMap`, finds
 // the matching entry inside the given CACHED_DATA array and rewrites its
 // `agendaUrl:` field. Scoped to the named array's brace block so the same
@@ -5875,6 +5935,22 @@ async function main() {
   if (JSON.stringify(newMeta) !== JSON.stringify(existingMeta)) {
     govHubSrc = replaceJsValue(govHubSrc, 'MEETING_AGENDA_META', newMeta, true);
     changed = true;
+  }
+
+  // ── 1a. Telluride board/commission meetings (Town Council, P&Z, Housing
+  // Authority Subcommittee, Ethics, joint P&Z/HARC) — surfaced via
+  // TELLURIDE_BOARD_MEETINGS so the site renders the bodies the bot already
+  // summarizes (was HARC-only). Returns null on fetch failure → keep existing.
+  try {
+    const existingTellBoard = extractJsArray(govHubSrc, 'TELLURIDE_BOARD_MEETINGS') || [];
+    const newTellBoard = await syncTellurideBoardMeetings();
+    if (newTellBoard !== null && JSON.stringify(newTellBoard) !== JSON.stringify(existingTellBoard)) {
+      govHubSrc = replaceJsValue(govHubSrc, 'TELLURIDE_BOARD_MEETINGS', newTellBoard, false);
+      changed = true;
+      console.log(`  TELLURIDE_BOARD_MEETINGS: ${newTellBoard.length} meeting(s)`);
+    }
+  } catch (e) {
+    console.warn(`  Telluride board meetings sync error: ${e.message}`);
   }
 
   // ── 1b. Meeting Previews (from legal notices + agendas) ──
