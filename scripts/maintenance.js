@@ -318,7 +318,10 @@ function checkParity() {
 const FEED_URL = 'https://livabletelluride.org/feed.xml';
 const FEED_STALE_HOURS = 12;
 const EVENTS_CONFIG_FILE = path.join(REPO_ROOT, 'email-events-config.json');
-const MAILCHIMP_STALE_HOURS = 48;
+// The subscriber email is currently a MANUAL weekly REGULAR campaign (pasted from
+// scripts/weekly-email.js), not an RSS-driven daily digest — so check for any
+// recently-SENT campaign on a weekly cadence (9 days = 1 week + 2 days grace).
+const MAILCHIMP_STALE_HOURS = 216;
 
 async function checkFeedFreshness() {
   console.log('\n📰 Liveness: feed.xml freshness...');
@@ -409,7 +412,10 @@ async function checkMailchimpDigests() {
   }
   // Mailchimp API keys carry their data-center suffix: e.g. "abc123-us15".
   const dc = (apiKey.split('-')[1] || 'us15');
-  const url = `https://${dc}.api.mailchimp.com/3.0/campaigns?status=sent&type=rss&count=10&sort_field=send_time&sort_dir=DESC`;
+  // Any sent campaign (regular OR rss) — the weekly subscriber email is a manual
+  // REGULAR campaign now, so don't filter by type=rss (that caused a permanent
+  // false "no RSS campaign ever sent" warning).
+  const url = `https://${dc}.api.mailchimp.com/3.0/campaigns?status=sent&count=10&sort_field=send_time&sort_dir=DESC`;
   try {
     const res = await fetchText(url, 15000, {
       // Mailchimp accepts HTTP Basic with "anystring:<api-key>".
@@ -430,9 +436,10 @@ async function checkMailchimpDigests() {
     const campaigns = parsed.campaigns || [];
     if (campaigns.length === 0) {
       issues.push(
-        `No RSS-driven Mailchimp campaigns have EVER been sent. The daily / ` +
-        `weekly digest campaigns may not be configured. Set them up at ` +
-        `https://us15.admin.mailchimp.com/ → Campaigns → Create → RSS-driven email.`
+        `No Mailchimp campaigns have ever been sent. The weekly subscriber email ` +
+        `is a manual REGULAR campaign (build with scripts/weekly-email.js, paste into ` +
+        `Mailchimp → Campaigns → Regular, send to the Weekly Update group). Confirm ` +
+        `at https://us15.admin.mailchimp.com/.`
       );
       return;
     }
@@ -441,13 +448,13 @@ async function checkMailchimpDigests() {
     const hoursSinceLast = (Date.now() - sentAt.getTime()) / 3600000;
     if (hoursSinceLast > MAILCHIMP_STALE_HOURS) {
       issues.push(
-        `Newest Mailchimp RSS campaign was sent ${hoursSinceLast.toFixed(0)}h ago ` +
-        `(threshold: ${MAILCHIMP_STALE_HOURS}h). The daily digest may be paused. ` +
-        `Check https://us15.admin.mailchimp.com/ → Campaigns and confirm the ` +
-        `RSS-driven campaign is enabled and points at livabletelluride.org/feed.xml.`
+        `No Mailchimp campaign has been sent in ${(hoursSinceLast / 24).toFixed(1)} days ` +
+        `(threshold: ${(MAILCHIMP_STALE_HOURS / 24).toFixed(0)} days). The weekly subscriber ` +
+        `email may have been missed — it's a manual paste-and-send for now. Build it with ` +
+        `scripts/weekly-email.js and send the Regular campaign to the Weekly Update group.`
       );
     } else {
-      console.log(`  ✓ Latest Mailchimp RSS campaign sent ${hoursSinceLast.toFixed(1)}h ago — "${latest.settings && latest.settings.subject_line || '?'}"`);
+      console.log(`  ✓ Latest Mailchimp campaign sent ${hoursSinceLast.toFixed(1)}h ago — "${latest.settings && latest.settings.subject_line || '?'}"`);
     }
   } catch (e) {
     issues.push(`Mailchimp API check failed: ${e.message}`);
