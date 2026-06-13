@@ -1,0 +1,17 @@
+title = "Livable Telluride gitleaks config"
+
+# Use gitleaks' default rule set, plus an allowlist for identifiers that are
+# PUBLIC BY DESIGN in this repo and must not be treated as leaked secrets.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Public-by-design client identifiers — NOT secrets. Real secrets (Anthropic, Mailchimp, Cloudflare, SMTP, Firebase service account) live in GitHub/Worker secrets, never in the repo."
+regexes = [
+  # Firebase Web API key — a public client identifier. Access is enforced by
+  # firestore.rules / storage.rules, not by keeping this key private.
+  '''AIzaSy[A-Za-z0-9_-]{20,}''',
+  # Google Apps Script web-app deployment IDs (/macros/s/AKfycb…/exec) — public
+  # endpoint URLs for the event/org notify + lede-edit watchers, not credentials.
+  '''AKfycb[A-Za-z0-9_-]{20,}''',
+]
