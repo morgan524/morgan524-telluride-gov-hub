@@ -1,14 +1,18 @@
 {
-  "hash": "a57553087bb2d314c14b7677d2c07bc5f2ab1e2e",
-  "lede": "County commissioners will be interviewing candidates for the Board of Adjustment and Planning Commission Tuesday — positions that shape how development happens across the valley. Meanwhile, the fire district board meets Monday to discuss wildfire preparations and Station 3 construction, and the Lodging Tax Board checks in Thursday on how visitor dollars are flowing to local organizations.",
+  "hash": "4c9d298de9d2f0f7b83f40753fc91b853705c468",
+  "lede": "The gondola replacement project hits a critical milestone this week as the advisory committee discusses the $18M in local commitments needed by fall to secure federal funding. Meanwhile, the Historic Commission has its hands full with several projects, including staff's recommendation to deny aluminum window replacements at a historic garage on Colorado Avenue for using incompatible materials.",
   "notable": [
     {
-      "id": 6,
-      "stake": "New appointees will decide future development and land-use appeals"
+      "id": 2,
+      "stake": "$18M local commitment deadline looms for gondola federal grant"
     },
     {
-      "id": 3,
-      "stake": "Summer wildfire readiness and fire station construction updates"
+      "id": 7,
+      "stake": "Historic garage window project faces staff denial recommendation"
+    },
+    {
+      "id": 9,
+      "stake": "Ice rink rates increasing 3.7% to $92.12 per hour"
     }
   ]
 }
