@@ -190,7 +190,7 @@ const MANUAL_SUMMARIES = {
     "The commissioners will interview candidates for the Board of Adjustment and Planning Commission — Jonathan Prince for a direct appointment, and three applicants competing for an alternate Planning Commission slot. They'll get an update on affordable housing from the county's housing specialist, along with routine wastewater variances for two Ophir properties. The consent agenda includes adopting the latest Community Wildfire Protection Plan and approving a liquor license renewal for The Blue Jay in Placerville.",
 
   "county|2026-06-22|Open Space Commission Meeting":
-    "The June 22 Open Space Commission agenda hasn't been posted yet.",
+    "The June 22 Open Space Commission meeting agenda hasn't been posted yet.",
 
   "county|2026-06-24|Board of County Commissioners Work Session":
     "The June 24 Board of County Commissioners Work Session agenda hasn't been posted yet.",
@@ -229,7 +229,7 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
     "The June 25, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
@@ -244,7 +244,7 @@ const MANUAL_SUMMARIES = {
     "The June 30, 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The July 1, 2026 Ecology Commission agenda hasn't been posted yet.",
+    "The July 1 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
     "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
@@ -253,10 +253,10 @@ const MANUAL_SUMMARIES = {
     "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The July 1st Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The July 1, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
-    "The July 1st Board of County Commissioners agenda hasn't been posted yet.",
+    "The July 1 Board of County Commissioners agenda hasn't been posted yet.",
 
   "county|2026-06-10|Board of Review and Planning Commission Joint Work Session":
     "The county's Board of Review and Planning Commission will hear a presentation on Colorado's new Low Energy and Carbon Code — building standards that could reshape how structures get approved in the box canyon.",
@@ -271,7 +271,7 @@ const MANUAL_SUMMARIES = {
     "The June 11, 2026 SMART agenda hasn't been posted yet.",
 
   "county|2026-07-08|Board of County Commissioners Work Session":
-    "The July 8 Board of County Commissioners work session agenda hasn't been posted yet.",
+    "The July 8 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "smart|2026-07-09|SMART Board of Directors":
     "The July 9 SMART Board of Directors agenda hasn't been posted yet.",
@@ -2275,17 +2275,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Bilingual Balance in Motion",
-    link: "https://koto.org/event/bilingual-balance-in-motion/2026-06-13/",
-    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
-    pubDate: "2026-06-13T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
-  },
-  {
     title: "Celebration of the Life of Joanne Roudebush",
     link: "https://koto.org/event/celebration-of-the-life-of-joanne-roudebush/",
     description: "There will be a gathering to celebrate the life and birthday of Joanne Roudebush on Saturday, June 13th at Town Hall in Norwood. Noon to 4 p.m. All are welcome.",
@@ -2802,20 +2791,6 @@ const WILKINSON_EVENTS = [
 // none of which are advertised as adoptable. The sync filters those out, so
 // this repopulates automatically when THS posts genuinely-available pets.
 const HUMANE_SOCIETY_ANIMALS = [
-  {
-    id: "TEL-A-185",
-    name: "Frankie",
-    species: "Dog",
-    breed: "Bulldog, French",
-    ageGroup: "Young Dog",
-    sex: "Female",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/1df4fca9ccf1aaff944a025028f8ebe1/5183f466479dd2ae60b980fd4b66cb8d.jpg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/213834631",
-    summary: "Young Dog • Bulldog, French • Female",
-    firstSeen: "2026-06-11",
-    revealDate: "2026-06-11",
-    lastSeen: "2026-06-13"
-  },
   {
     id: "TEL-A-186",
     name: "Roman",

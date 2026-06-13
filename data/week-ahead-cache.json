@@ -1,26 +1,18 @@
 {
-  "hash": "f89d6e2c5b194a6ff359b99fdc6a2ad7db76d278",
-  "lede": "The gondola replacement saga reaches a critical juncture this week as SMART needs $18 million committed by fall 2026 to enter the federal funding program. Meanwhile, the county commissioners interview candidates for planning positions, and HARC reviews three projects including staff recommendations to deny aluminum windows at a historic Colorado Avenue structure.",
+  "hash": "480d2b19a99861b56dbfdffad121d5299d591f47",
+  "lede": "The big question this week is gondola funding — the Gondola Subcommittee meets Monday to hash out how to secure $18 million for federal grant requirements by fall, with local partners needing to formalize commitments soon. Meanwhile, Mountain Village votes Tuesday on fast-tracking affordable housing projects for state Prop 123 funding, and county commissioners interview candidates for planning boards.",
   "notable": [
     {
       "id": 2,
-      "stake": "$18M local commitment needed by fall for federal gondola funding"
+      "stake": "Partners must commit $18M by fall 2026 for federal gondola funding"
+    },
+    {
+      "id": 5,
+      "stake": "Vote on expedited review process for affordable housing projects"
     },
     {
       "id": 6,
-      "stake": "Interviewing new Board of Adjustment and Planning Commission candidates"
-    },
-    {
-      "id": 7,
-      "stake": "Staff recommends denying aluminum windows at historic 324 W Colorado"
-    },
-    {
-      "id": 8,
-      "stake": "Large new construction at 208 S Fir requires full commission review"
-    },
-    {
-      "id": 9,
-      "stake": "Ice rink fees increasing 3.7% for 2026-2027 winter programs"
+      "stake": "Interviews for Board of Adjustment and Planning Commission appointments"
     }
   ]
 }
