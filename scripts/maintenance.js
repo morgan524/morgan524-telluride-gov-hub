@@ -274,8 +274,16 @@ async function checkLinks(govHubSrc, pulseSrc) {
   console.log(`  Checking ${sample.length} random URLs...`);
 
   const results = await Promise.all(sample.map(checkUrl));
-  const dead = results.filter(r => !r.ok);
+  // 403/429 = the origin refused our CI runner's IP (KOTO, Ridgway, some gov
+  // hosts bot-block), NOT a removed page — those links work in a real browser.
+  // Treat them as blocked-not-dead so genuine 404/410/5xx/DNS failures aren't
+  // buried under IP-block noise.
+  const blocked = results.filter(r => !r.ok && (r.status === 403 || r.status === 429));
+  const dead = results.filter(r => !r.ok && r.status !== 403 && r.status !== 429);
 
+  if (blocked.length > 0) {
+    console.log(`  ℹ ${blocked.length} link(s) returned 403/429 (CI-IP blocked, not counted dead): ${blocked.slice(0, 5).map(b => b.url).join(', ')}`);
+  }
   if (dead.length > 0) {
     console.log(`\n  ⚠️ ${dead.length} dead links found:`);
     for (const d of dead) {
@@ -461,6 +469,73 @@ async function checkMailchimpDigests() {
   }
 }
 
+// ── Liveness: Telluride Times scrape (TT_AUTH_COOKIE) ──
+// TT scraping uses an authenticated cookie (GH secret TT_AUTH_COOKIE) that
+// expires silently. TELLURIDE_TIMES_ARTICLES is mixed-source (TT + gov news),
+// so count actual "Telluride Times" items: if there are none, or the newest is
+// stale, the cookie has likely expired (or the TT host/feed changed).
+function checkTellurideTimesFreshness(govHubSrc) {
+  console.log('\n📰 Liveness: Telluride Times scrape (TT_AUTH_COOKIE)...');
+  const articles = extractJsArray(govHubSrc, 'TELLURIDE_TIMES_ARTICLES') || [];
+  const tt = articles.filter(a => /telluride times/i.test(a.source || ''));
+  if (tt.length === 0) {
+    issues.push(
+      `No "Telluride Times" articles in TELLURIDE_TIMES_ARTICLES — the TT scrape may be failing ` +
+      `(TT_AUTH_COOKIE expired, or the TT feed/host changed). Check the latest content-refresh ` +
+      `"[feed] Telluride Times HTTP …" log line; refresh the TT_AUTH_COOKIE secret if it's 401/empty.`
+    );
+    return;
+  }
+  const newest = tt.map(a => parseDate(a.date)).filter(Boolean).sort((a, b) => b - a)[0];
+  if (newest) {
+    const days = (Date.now() - newest.getTime()) / 86400000;
+    if (days > 10) {
+      issues.push(
+        `Newest Telluride Times article is ${days.toFixed(0)} days old — the TT scrape may have ` +
+        `stopped (TT_AUTH_COOKIE expired?). Refresh the cookie if TT has published since.`
+      );
+    } else {
+      console.log(`  ✓ Newest Telluride Times article ${days.toFixed(1)} days old (${tt.length} TT items)`);
+    }
+  }
+}
+
+// ── Auto-maintain sitemap.xml from the public HTML pages ──
+const SITEMAP_FILE = path.join(REPO_ROOT, 'sitemap.xml');
+// Admin tools, email templates, and preview/scratch pages are NOT public.
+const SITEMAP_EXCLUDE = new Set([
+  'event-review.html', 'org-review.html', 'action-grid.html',
+  'source-document.html', 'week-ahead-email-template.html', 'weekly-preview.html',
+]);
+function regenerateSitemap() {
+  console.log('\n🗺  Task: regenerate sitemap.xml...');
+  const base = 'https://livabletelluride.org';
+  const locs = [];
+  for (const f of fs.readdirSync(REPO_ROOT)) {
+    if (!f.endsWith('.html') || SITEMAP_EXCLUDE.has(f)) continue;
+    locs.push(f === 'index.html' ? base + '/' : `${base}/${f}`);
+  }
+  const pmDir = path.join(REPO_ROOT, 'projects-map');
+  if (fs.existsSync(pmDir)) {
+    for (const f of fs.readdirSync(pmDir)) {
+      if (!f.endsWith('.html')) continue;
+      locs.push(f === 'index.html' ? base + '/projects-map/' : `${base}/projects-map/${f}`);
+    }
+  }
+  locs.sort((a, b) => (a === base + '/' ? -1 : b === base + '/' ? 1 : a.localeCompare(b)));
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+    locs.map(l => `  <url><loc>${l}</loc></url>`).join('\n') + `\n</urlset>\n`;
+  let existing = '';
+  try { existing = fs.readFileSync(SITEMAP_FILE, 'utf8'); } catch (_) {}
+  if (xml !== existing) {
+    fs.writeFileSync(SITEMAP_FILE, xml);
+    console.log(`  ✓ sitemap.xml updated (${locs.length} URLs)`);
+  } else {
+    console.log(`  ✓ sitemap.xml current (${locs.length} URLs)`);
+  }
+}
+
 // ══════════════════════════════════════════════════════════════
 // ── Main ──
 // ══════════════════════════════════════════════════════════════
@@ -594,6 +669,10 @@ async function main() {
   await checkFeedFreshness();
   await checkEventsSheet();
   await checkMailchimpDigests();
+  checkTellurideTimesFreshness(govHubSrc);
+
+  // Keep sitemap.xml in sync with the public HTML pages (git add -A commits it).
+  regenerateSitemap();
 
   // Deterministic daily code/site review (JS syntax, broken assets, nav).
   runDailyReview();
