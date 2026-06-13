@@ -229,10 +229,10 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
+    "The June 25, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -244,10 +244,10 @@ const MANUAL_SUMMARIES = {
     "The June 30, 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The July 1st Ecology Commission agenda hasn't been posted yet.",
+    "The July 1, 2026 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
     "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
@@ -271,7 +271,7 @@ const MANUAL_SUMMARIES = {
     "The June 11, 2026 SMART agenda hasn't been posted yet.",
 
   "county|2026-07-08|Board of County Commissioners Work Session":
-    "The July 8 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The July 8 Board of County Commissioners work session agenda hasn't been posted yet.",
 
   "smart|2026-07-09|SMART Board of Directors":
     "The July 9 SMART Board of Directors agenda hasn't been posted yet.",
