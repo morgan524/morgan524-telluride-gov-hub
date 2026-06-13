@@ -232,7 +232,7 @@ const MANUAL_SUMMARIES = {
     "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
+    "The June 25, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -244,16 +244,16 @@ const MANUAL_SUMMARIES = {
     "The June 30, 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The July 1st Ecology Commission agenda hasn't been posted yet.",
+    "The July 1 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
     "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The July 1st Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The July 1, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
     "The July 1st Board of County Commissioners agenda hasn't been posted yet.",
@@ -2221,16 +2221,106 @@ const TELLURIDE_FARMERS_MARKET = (function () {
 // wiped. The events.html collector applies a rolling 60-day window, so
 // out-of-season entries simply don't render until they approach.
 const TELLURIDE_SCIENCE_EVENTS = [
-  { title: "The Science of Connection: How Our Relationships with Animals Shape Health and Well-Being", date: "2026-06-05", time: "5:30 – 6:30 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "What does science have to say about the bonds we form with other animals?", link: "https://telluridescience.org/event/the-science-of-connection-how-our-relationships-with-animals-shape-health-and-well-being/", sourceLabel: "Telluride Science" },
-  { title: "Town Talk: Can We Change the Weather (and Do We Really Want To?)", date: "2026-06-09", time: "6:30 – 7:30 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "Presented by Derek Posselt, NASA Jet Propulsion Laboratory.", link: "https://telluridescience.org/event/change-the-weather/", sourceLabel: "Telluride Science" },
-  { title: "Workshop: Creating with AI — The Tools Worth Using and How to Use Them", date: "2026-06-12", time: "1:00 – 3:00 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "Hands-on workshop on developing marketing content with AI while keeping your brand voice.", link: "https://telluridescience.org/event/creating-with-ai-the-tools-worth-using-and-how-to-use-them/", sourceLabel: "Telluride Science" },
-  { title: "Town Talk: Good Vibrations — Water, Proteins, and the Molecular Motions that Make Biology Possible", date: "2026-06-16", time: "6:30 – 7:30 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "Water is far more than a refreshing drink — a look at the molecular motions behind biology.", link: "https://telluridescience.org/event/good-vibrations/", sourceLabel: "Telluride Science" },
-  { title: "Town Talk: Small Molecules at the Origins of Life", date: "2026-06-23", time: "6:30 – 7:30 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "Presented by David Lancy, University at Buffalo — how small molecules became the building blocks of life.", link: "https://telluridescience.org/event/small-molecules-at-the-origins-of-life/", sourceLabel: "Telluride Science" },
-  { title: "Town Talk: Tau — A Shape-Shifting Protein That May Hold the Key to Early Detection of Brain Diseases", date: "2026-06-30", time: "6:30 – 7:30 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "Presented by Lukasz Joachimiak on protein misfolding implicated in more than 25 brain diseases.", link: "https://telluridescience.org/event/tau-a-shape-shifting-protein/", sourceLabel: "Telluride Science" },
-  { title: "Town Talk: Breakthroughs in RNA Science — From Basic Research to Medicine", date: "2026-07-14", time: "6:30 – 7:30 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "Presented by Phil Bevilacqua, Penn State University.", link: "https://telluridescience.org/event/breakthroughs-in-rna-science/", sourceLabel: "Telluride Science" },
-  { title: "Town Talk: Clodagh O'Shea, Salk Institute for Biological Studies", date: "2026-07-21", time: "6:30 – 7:30 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "Presented by Clodagh O'Shea of the Salk Institute for Biological Studies (topic to be announced).", link: "https://telluridescience.org/event/clodagh-oshea/", sourceLabel: "Telluride Science" },
-  { title: "Town Talk: The Dual Challenge — Climate and Energy", date: "2026-07-28", time: "6:30 – 7:30 PM", location: "Sheridan Opera House, Telluride", description: "A panel discussion: the world needs both more energy and a stable climate.", link: "https://telluridescience.org/event/the-dual-challenge-climate-and-energy/", sourceLabel: "Telluride Science" },
-  { title: "Town Talk: Single-Molecule Views of Nature's Nanomachines", date: "2026-08-04", time: "6:30 – 7:30 PM", location: "Telluride Innovation Center, 300 S. Townsend, Telluride", description: "Presented by Taekjip (TJ) Ha, Harvard Medical School — proteins as nano-scale machines.", link: "https://telluridescience.org/event/single-molecule-views-of-natures-nanomachines/", sourceLabel: "Telluride Science" }
+  {
+    title: "Good Vibrations: Water, Proteins, and the Molecular Motions that Make Biology Possible",
+    date: "2026-06-16",
+    time: "6:30 PM – 7:30 PM",
+    location: "Telluride Conference Center, Telluride",
+    description: "This town talk will be presented by Matthias Heyden, Arizona State University. Water is far more than a refreshing drink — its unique molecular properties make life possible. By forming a dynamic network of weak chemical bonds, water acts as both a selective solvent and a kind of molecular lubricant, driving the assembly of cells and keeping the tiny protein machines inside them flexible and in constant motion. Understanding the role water plays in the generation of these vibrations is one of the great frontiers of modern science, with real-world implications for greener industrial chemistry and smarter, safer drug design. Town Talks will be held on Tuesdays at the Telluride Conference Center in Mountain Village June 9 to August 11 (with the exception of July 7, please note the July 28 talk will be at the Sheridan Opera House). …",
+    link: "https://telluridescience.org/event/good-vibrations/",
+    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/05/0616_water_1080-x-1080.jpg",
+    sourceLabel: "Telluride Science"
+  },
+  {
+    title: "Small Molecules at the Origins of Life",
+    date: "2026-06-23",
+    time: "6:30 PM – 7:30 PM",
+    location: "Telluride Conference Center, Telluride",
+    description: "This town talk will be presented by David Lacy, University of Buffalo. How did the atoms in the universe come together to form life? At the heart of this mystery is the conversion of small molecules into the building blocks of life, driven by metallocofactors—enzyme-like catalysts conserved across all domains of life. The chemical ancestors of these metallocofactors are thought to have been active prior to the traditional bounds of life, such as dynamic molecular architectures at mineral surfaces in early oceans. Understanding these chemistries in unusual abiotic environments enables unique insight into how life may have started and evolved into its present form. In this talk, I will share some of the exciting new developments in the science of extraterrestrial photosynthesis (the search for light-harvesting life on other planets) and other metal-based processes that underpin life on Earth, and possibly the cosmos. …",
+    link: "https://telluridescience.org/event/small-molecules-at-the-origins-of-life/",
+    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
+    sourceLabel: "Telluride Science"
+  },
+  {
+    title: "Tau: A shape-shifting protein that may hold the key to early detection of brain diseases",
+    date: "2026-06-30",
+    time: "6:30 PM – 7:30 PM",
+    location: "Telluride Conference Center, Telluride",
+    description: "This town talk will be presented by Lukasz Joachimiak, Associate Professor, UT Southwestern Medical Center. Tau is a protein in brain cells that normally helps support their internal structure. In more than 25 brain diseases, including Alzheimer’s, tau can misfold and clump together into harmful fibers. Recent advances in imaging have shown that these tau clumps can take on many different shapes depending on the disease, but it is still unclear how the same protein can form such a wide variety of structures. In this talk, I will describe how we are using both experiments and computational methods to understand the basic rules that guide how tau changes shape and forms these toxic aggregates. By uncovering these rules, we hope to develop better ways to detect specific forms of tau early and design targeted treatments that can stop or prevent these diseases. …",
+    link: "https://telluridescience.org/event/tau-a-shape-shifting-protein/",
+    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
+    sourceLabel: "Telluride Science"
+  },
+  {
+    title: "Breakthroughs in RNA Science: From Basic Research to Medicine",
+    date: "2026-07-14",
+    time: "6:30 PM – 7:30 PM",
+    location: "Telluride Conference Center, Telluride",
+    description: "Phil Bevilacqua, from Penn State University, will present breakthroughs in RNA medicine over the last decade including using CRISPR for gene editing, developing mRNA vaccines for stopping pandemics and curing cancer, and the investigating the roles of RNA in the origin of life itself.  He will also discuss how investing in basic science has led to these translational breakthroughs.\r\n\r\nTown Talks will be held on Tuesdays at the Telluride Conference Center in Mountain Village June 9 to August 11 (please note the July 28 talk will be at the Sheridan Opera House). Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public.\r\nThanks to our title sponsor Alpine Bank and Telluride Mountain Village Owner’s Association.",
+    link: "https://telluridescience.org/event/breakthroughs-in-rna-science/",
+    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
+    sourceLabel: "Telluride Science"
+  },
+  {
+    title: "Town Talk",
+    date: "2026-07-21",
+    time: "6:30 PM – 7:30 PM",
+    location: "Telluride Conference Center, Telluride",
+    description: "This town talk will be presented by Clodagh O'Shea, Salk Institute for Biological Studies. The title and topic will be posted soon. \r\nTown Talks will be held on Tuesdays at the Telluride Conference Center in Mountain Village June 9 to August 11 (please note the July 28 talk will be at the Sheridan Opera House). Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public.\r\nThanks to our title sponsor Alpine Bank and Telluride Mountain Village Owner’s Association.",
+    link: "https://telluridescience.org/event/clodagh-oshea/",
+    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
+    sourceLabel: "Telluride Science"
+  },
+  {
+    title: "The Dual Challenge: Climate and Energy",
+    date: "2026-07-28",
+    time: "6:30 PM – 7:30 PM",
+    location: "Sheridan Opera House, Telluride",
+    description: " \r\n\r\nThe world needs both more energy AND a stable climate. Delivering both is one of the defining challenges of our time.\r\nThree leading voices sit down to examine what this challenge actually looks like — the data, the tradeoffs, and the paths forward. Panelists include Dr. Guy Brasseur, Climate Scientist, NCAR and Max Planck Institute for Meteorology, Georgina Campbell Flatter, CEO of Greentown Labs, and Jeff Guldner, Retired CEO of Arizona Public Service Company and Pinnacle West. \r\nThis event, cosponsored by Telluride Science, Telluride Foundation, and Open Minds, is free and open to the public. \r\nThis special Town Talk will be held at the Sheridan Opera House. Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public, but RSVP is required.\r\nThanks to our title sponsor Alpine Bank and Telluride Mountain Village Owner’s Association.",
+    link: "https://telluridescience.org/event/the-dual-challenge-climate-and-energy/",
+    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/05/0728-TT_320-x-212-TF.jpg",
+    sourceLabel: "Telluride Science"
+  },
+  {
+    title: "Single molecule views of Nature’s nanomachines",
+    date: "2026-08-04",
+    time: "6:30 PM – 7:30 PM",
+    location: "Telluride Conference Center, Telluride",
+    description: "This town talk will be presented by Taekjip (TJ) Ha, Harvard Medical School, Boston Children's Hospital, Howard Hughes Medical School. \r\nDid you know that proteins are nano-scale machines that help us think, dance and keep the threat of cancer at bay? Did you know that biology is a new research frontier for physical scientists? In this talk, Professor Ha of Harvard University will discuss how biophysicists are using light-based tools to poke and examine Nature’s nano-machines, one molecule at a time, uncovering the amazing acrobatic abilities that are essential for all forms of life.\r\nTown Talks will be held on Tuesdays at the Telluride Conference Center in Mountain Village June 9 to August 11. Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public.\r\nThanks to our title sponsor Alpine Bank and Telluride Mountain Village Owner’s Association.",
+    link: "https://telluridescience.org/event/single-molecule-views-of-natures-nanomachines/",
+    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
+    sourceLabel: "Telluride Science"
+  },
+  {
+    title: "Telluride Chamber Music and Telluride Science Community Concert",
+    date: "2026-08-13",
+    time: "5:30 PM – 6:30 PM",
+    location: "Telluride Innovation Center, Telluride",
+    description: "Join Telluride Science and Telluride Chamber Music for a free community concert on the scenic patio at the Innovation Center.  All are welcome—come soak in the beauty of live chamber music in an inspiring setting.",
+    link: "https://telluridescience.org/event/community-concert-august/",
+    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/05/ChatGPT-Image-May-27-2026-03_58_05-PM.png",
+    sourceLabel: "Telluride Science"
+  },
+  {
+    title: "Exploring Earth’s Most Unusual Microbiology for Solutions to Humanity’s Most Pressing Challenges",
+    date: "2026-08-25",
+    time: "6:30 PM – 7:30 PM",
+    location: "Telluride Innovation Center, Telluride",
+    description: " \r\n\r\n\r\nThis special town talk, presented by Braden Tierney, cofounder and executive director of the Two Frontiers Project extends the season and will be held in town at the Telluride Innovation Center.  \r\nFrom hydrothermal vents and volcanic seeps to alpine soils and mine drainage right here in Telluride, Earth’s most unusual ecosystems are home to microscopic life with extraordinary abilities. In this talk, Tierney will  share stories from the field and the lab through their team at the Two Frontiers Project. They explore the planet’s microbial diversity in search of “microbial superpowers” that could help tackle pollution, support agriculture, protect ecosystems, and improve human health. With an emphasis on projects ongoing in Colorado, we’ll explore how these invisible ecosystems work, why they matter for everyday life, and how citizen scientists and students can help map this hidden world.\r\nThanks to our title sponsor Alpine Bank.",
+    link: "https://telluridescience.org/event/exploring-earths-most-unusual-microbiology-for-solutions-to-humanitys-most-pressing-challenges/",
+    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
+    sourceLabel: "Telluride Science"
+  },
+  {
+    title: "Telluride Chamber Music and Telluride Science Community Concert",
+    date: "2026-09-10",
+    time: "5:30 PM – 6:30 PM",
+    location: "Telluride Innovation Center, Telluride",
+    description: "Join Telluride Science and Telluride Chamber Music for a free community concert on the scenic patio at the Innovation Center.  All are welcome—come soak in the beauty of live chamber music in an inspiring setting.",
+    link: "https://telluridescience.org/event/community-concert-september/",
+    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/05/ChatGPT-Image-May-27-2026-03_58_05-PM.png",
+    sourceLabel: "Telluride Science"
+  }
 ];
 
 // Telluride Rotary Club meetings — hand-curated recurring series (bots don't
