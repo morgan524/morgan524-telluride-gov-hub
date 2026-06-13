@@ -817,6 +817,35 @@ async function extractAgendaText(url) {
       return { text: '', urls: [] };
     }
   }
+  // CivicWeb meeting-information pages (e.g. telluride-co.civicweb.net/Portal/
+  // MeetingInformation.aspx?Id=…) embed the real agenda as a RELATIVE link
+  // (/document/<id>/…pdf?handle=…) amid a sidebar list of past meetings. The
+  // generic HTML path below would tag-strip that sidebar into "a list of past
+  // meetings" junk (which is exactly why HARC summaries came out blank). So
+  // find the agenda PDF link, resolve it to absolute, and extract the PDF.
+  if (/\.civicweb\.net\/Portal\/MeetingInformation\.aspx/i.test(url)) {
+    try {
+      const resp = await fetch(url);
+      if (resp.status === 200) {
+        const m = resp.text.match(/href=["']([^"']*\/document\/\d+\/[^"']*\.pdf[^"']*)["']/i);
+        if (m) {
+          const pdfUrl = /^https?:/i.test(m[1]) ? m[1] : new URL(m[1], url).href;
+          const { extractPdfContent } = require('./civicclerk-pdf');
+          const pr = await fetchBuffer(pdfUrl);
+          if (pr.status === 200 && pr.buffer && pr.buffer.length) {
+            const { text, urls } = await extractPdfContent(pr.buffer);
+            const cleaned = (text || '').replace(/\s+/g, ' ').trim();
+            console.log(`    CivicWeb agenda PDF: ${cleaned.length} chars (${pr.buffer.length} bytes, ${urls.length} URLs)`);
+            return { text: cleaned.slice(0, MAX_AGENDA_TEXT), urls };
+          }
+          console.warn(`    CivicWeb agenda PDF fetch failed (status ${pr.status}) for ${pdfUrl}`);
+        } else {
+          console.log('    CivicWeb meeting page: no agenda PDF link (agenda not posted yet)');
+        }
+      }
+    } catch (e) { console.warn(`    CivicWeb agenda extract error: ${e.message}`); }
+    // fall through to the generic HTML path below as a last resort
+  }
   try {
     const resp = await fetch(url);
     if (resp.status !== 200) return { text: '', urls: [] };
@@ -1070,7 +1099,7 @@ async function fetchSmcCountyMeetings(now, horizon) {
 // merely mentions a "pending application" or "TBD" date isn't mistaken for a stub.
 function isPlaceholderSummary(s) {
   if (!s || typeof s !== 'string') return true;
-  return /agenda\s+(?:hasn'?t|has not)\s+been posted yet|agenda not yet available|no agenda(?:\s+text)?\s+available|agenda\s+(?:details\s+)?(?:tbd|pending|forthcoming|to be (?:determined|announced|posted))/i.test(s);
+  return /agenda\s+(?:hasn'?t|has not)\s+been posted yet|agenda not yet available|no agenda(?:\s+text)?\s+available|agenda\s+(?:details\s+)?(?:tbd|pending|forthcoming|to be (?:determined|announced|posted))|meeting information unavailable|meeting scheduled for|list of past meetings|agenda content for this/i.test(s);
 }
 
 async function refreshSummaries(existingSummaries, existingAgendaMeta) {

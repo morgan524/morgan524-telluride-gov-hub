@@ -8900,6 +8900,21 @@ function getTellurideMeetings() {
   });
 }
 
+// Canonical "board token" for a meeting title, so the website's short card
+// titles ("HARC Meeting", "Town Council Meeting") reconcile with the bot's
+// CivicWeb-sourced summary keys ("Historic & Architectural Review Commission -
+// Jun 17 2026", etc.). Returns '' when no known board matches.
+function meetingBoardToken(title) {
+  const s = String(title || '').toLowerCase();
+  if (/\bharc\b|historic\s*(?:&|and)\s*architectural/.test(s)) return 'harc';
+  if (/town council/.test(s)) return 'council';
+  if (/planning\s*(?:&|and)\s*zoning|planning commission|\bp&z\b/.test(s)) return 'pz';
+  if (/parks?\s*(?:&|and)?\s*rec/.test(s)) return 'parks';
+  if (/open space/.test(s)) return 'openspace';
+  if (/gondola/.test(s)) return 'gondola';
+  return '';
+}
+
 function getMeetingSummary(item) {
   if (!item.eventDate) return '';
   const dateKey = item.eventDate.toISOString().slice(0, 10);
@@ -8915,6 +8930,29 @@ function getMeetingSummary(item) {
 
   // 2. Check manual/fallback summaries
   if (MANUAL_SUMMARIES[exactKey]) return MANUAL_SUMMARIES[exactKey];
+
+  // 2.5 Board-token match. The website card title (e.g. "HARC Meeting") often
+  // differs from the bot's CivicWeb-sourced summary key (e.g. "Historic &
+  // Architectural Review Commission - Jun 17 2026"). Map both to a canonical
+  // board token and match on it — this resolves multi-meeting days where the
+  // single-meeting partial match (step 3) gives up. Prefer the full commission
+  // agenda over a "Chair" variant, then the longest substantive summary; a
+  // 40-char floor + isBadSummary() keep stubs from surfacing.
+  const itemTok = meetingBoardToken(cleanTitle);
+  if (itemTok) {
+    const prefix = item.source + '|' + dateKey + '|';
+    const pickBest = (store, getText) => {
+      const hits = Object.keys(store)
+        .filter(k => k.indexOf(prefix) === 0 && meetingBoardToken(k.slice(prefix.length)) === itemTok)
+        .sort((a, b) => (/chair/i.test(a) - /chair/i.test(b)) || (getText(b).length - getText(a).length));
+      for (const k of hits) { const s = getText(k); if (s && s.length >= 40 && !isBadSummary(s)) return s; }
+      return '';
+    };
+    const mm = pickBest(MANUAL_SUMMARIES, k => MANUAL_SUMMARIES[k] || '');
+    if (mm) return mm;
+    const am = pickBest(AI_SUMMARIES, k => (AI_SUMMARIES[k] && AI_SUMMARIES[k].shortSummary) || '');
+    if (am) return am;
+  }
 
   // 3. Partial match in manual summaries (source + date, single meeting)
   for (const key of Object.keys(MANUAL_SUMMARIES)) {
