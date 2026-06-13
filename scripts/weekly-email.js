@@ -284,6 +284,10 @@ const eh = chosen.map(evRow).join('');
 // recipient wiring above is left in place for possible reuse.)
 const closingNote = `<tr><td style="padding:28px 34px 6px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="background:#f1ece1;border-left:4px solid #21443c;border-radius:6px;padding:19px 22px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;margin-bottom:9px;">Why Showing Up Matters</div><p style="margin:0;font-size:14.5px;line-height:1.7;color:#2c3b35;">The decisions shaping this valley rarely arrive with a drumroll — they get made while most people are looking the other way. The fix is simple: keep showing up. Read an agenda and email the board before a vote, or just turn out for a council meeting, a concert on the green, or an opening at the gallery. None of it is too small. A community that keeps paying attention to itself, in the big ways and the little ones, is one that stays livable.</p></td></tr></table></td></tr>`;
 
+// Donate ask — bottom of the email, just above the footer. A gentle, polite
+// request to support the 501(c)(3); links straight to the Stripe checkout.
+const donateBlock = `<tr><td style="padding:26px 34px 6px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="background:#21443c;border-radius:8px;padding:27px 26px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e3c87a;margin-bottom:9px;">Keep This Going</div><p style="margin:0 0 17px;font-size:14.5px;line-height:1.7;color:#e7efe9;">Livable Telluride is an independent, reader-funded <strong>501(c)(3) nonprofit</strong> — no ads, no paywall, free to everyone in the valley. If this weekly note is useful to you, please consider chipping in to help keep the meeting summaries, local news, and community calendar coming. A gift of any size genuinely makes a difference.</p><a href="https://buy.stripe.com/7sY7sD2TZ2MV5Vudf40Ba00" style="display:inline-block;background:#b58a2c;color:#ffffff;text-decoration:none;font-weight:700;font-size:15px;padding:13px 32px;border-radius:999px;">&#9829; Donate</a><div style="font-size:11.5px;color:#9fbcb0;margin-top:13px;">Secure checkout via Stripe &middot; Your gift is tax-deductible to the extent allowed by law.</div></td></tr></table></td></tr>`;
+
 // One-off "What We're Reading" box — gated to a single week's WEEK_START so it
 // auto-disappears the following week (no manual cleanup). To feature a different
 // article another week, set WHATS_READING for that week's Monday date; leave it
@@ -327,6 +331,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
   ${section('What We\'re Attending', eh)}${topicHtml}
   ${whatsReadingBox}
   ${closingNote}
+  ${donateBlock}
   <tr><td style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
     <div style="font-family:Georgia,serif;font-size:13px;font-weight:700;color:#21443c;">Livable Telluride</div>
     <div style="font-size:12px;color:#7a8a85;line-height:1.6;margin-top:4px;">Community information for Telluride, Mountain Village &amp; San Miguel County.<br>
