@@ -286,7 +286,7 @@ const closingNote = `<tr><td class="callout-wrap" style="padding:28px 34px 6px;"
 
 // Donate ask — bottom of the email, just above the footer. A gentle, polite
 // request to support the 501(c)(3); links straight to the Stripe checkout.
-const donateBlock = `<tr><td style="padding:26px 34px 6px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="background:#21443c;border-radius:8px;padding:27px 26px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e3c87a;margin-bottom:9px;">Keep This Going</div><p style="margin:0 0 17px;font-size:14.5px;line-height:1.7;color:#e7efe9;">Livable Telluride is an independent, reader-funded <strong>501(c)(3) nonprofit</strong> — no ads, no paywall, free to everyone in the valley. If this weekly note is useful to you, please consider chipping in to help keep the meeting summaries, local news, and community calendar coming. A gift of any size genuinely makes a difference.</p><a href="https://buy.stripe.com/7sY7sD2TZ2MV5Vudf40Ba00" style="display:inline-block;background:#b58a2c;color:#ffffff;text-decoration:none;font-weight:700;font-size:15px;padding:13px 32px;border-radius:999px;">&#9829; Donate</a><div style="font-size:11.5px;color:#9fbcb0;margin-top:13px;">Secure checkout via Stripe &middot; Your gift is tax-deductible to the extent allowed by law.</div></td></tr></table></td></tr>`;
+const donateBlock = `<tr><td class="sec-pad" style="padding:26px 34px 6px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="background:#21443c;border-radius:8px;padding:27px 26px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e3c87a;margin-bottom:9px;">Keep This Going</div><p style="margin:0 0 17px;font-size:14.5px;line-height:1.7;color:#e7efe9;">Livable Telluride is an independent, reader-funded <strong>501(c)(3) nonprofit</strong> — no ads, no paywall, free to everyone in the valley. If this weekly note is useful to you, please consider chipping in to help keep the meeting summaries, local news, and community calendar coming. A gift of any size genuinely makes a difference.</p><a href="https://buy.stripe.com/7sY7sD2TZ2MV5Vudf40Ba00" style="display:inline-block;background:#b58a2c;color:#ffffff;text-decoration:none;font-weight:700;font-size:15px;padding:13px 32px;border-radius:999px;">&#9829; Donate</a><div style="font-size:11.5px;color:#9fbcb0;margin-top:13px;">Secure checkout via Stripe &middot; Your gift is tax-deductible to the extent allowed by law.</div></td></tr></table></td></tr>`;
 
 // One-off "What We're Reading" box — gated to a single week's WEEK_START so it
 // auto-disappears the following week (no manual cleanup). To feature a different
@@ -299,7 +299,7 @@ const WHATS_READING = (WEEK_START === '2026-06-15') ? {
   blurb: 'This essay names exactly why Livable Telluride exists. When local newspapers are hollowed out, a community loses far more than headlines: it loses the shared facts, the accountability, and the civic infrastructure that democracy runs on. His prescription, that local journalism deserves the same public and philanthropic support we give schools and libraries, is the very idea behind this donor-funded nonprofit.',
 } : null;
 const whatsReadingBox = WHATS_READING ? `<tr><td class="callout-wrap" style="padding:26px 34px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td class="callout-card" style="background:#f1ece1;border-left:4px solid #a0531f;border-radius:6px;padding:19px 22px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;margin-bottom:9px;">→ What We're Reading</div><div style="font-family:Georgia,serif;font-size:16px;font-weight:700;color:#1a2e29;line-height:1.3;"><a href="${WHATS_READING.url}" style="color:#1a2e29;text-decoration:none;">${esc(WHATS_READING.title)}</a></div><div style="font-size:12px;color:#7a8a85;margin:3px 0 9px;">${esc(WHATS_READING.source)}</div><p style="margin:0;font-size:14px;line-height:1.65;color:#2c3b35;">${esc(WHATS_READING.blurb)}</p><a href="${WHATS_READING.url}" style="display:inline-block;margin-top:10px;color:#a0531f;text-decoration:none;border-bottom:1px solid #a0531f;font-size:12.5px;font-weight:600;">Read it →</a></td></tr></table></td></tr>` : '';
-const section = (label, rows) => rows ? `<tr><td style="padding:24px 34px 0;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;border-bottom:1px solid #d4c9b0;padding-bottom:8px;">→ ${label}</div><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}</table></td></tr>` : '';
+const section = (label, rows) => rows ? `<tr><td class="sec-pad" style="padding:24px 34px 0;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;border-bottom:1px solid #d4c9b0;padding-bottom:8px;">→ ${label}</div><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}</table></td></tr>` : '';
 // Conditional per-interest extras — each block renders only for subscribers in
 // that Mailchimp "Event Topics" group. The *|INTERESTED|* tags are raw (NOT
 // html-escaped) so Mailchimp matches the literal group name including its "&".
@@ -317,12 +317,15 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
      accent bar and widen the text edge-to-edge for mobile readability. */
   .callout-wrap{padding-left:14px !important;padding-right:14px !important;}
   .callout-card{border-left:0 !important;padding:16px 16px !important;}
+  /* Trim the 34px side padding on every main block so body text runs wider
+     (longer lines, less right-edge whitespace) on phones. */
+  .sec-pad{padding-left:16px !important;padding-right:16px !important;}
 }
 </style></head>
 <body style="margin:0;background:#f0ece3;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f0ece3;"><tr><td align="center" style="padding:24px 10px 40px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#fdfbf6;border-radius:6px;overflow:hidden;">
-  <tr><td style="background:#21443c;padding:26px 34px;">
+  <tr><td class="sec-pad" style="background:#21443c;padding:26px 34px;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
       <td valign="middle" style="vertical-align:middle;">
         <div style="font-family:Georgia,serif;font-size:11px;color:#b58a2c;letter-spacing:.18em;text-transform:uppercase;">Livable Telluride · Weekly Update</div>
@@ -335,7 +338,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
         </td></tr></table>
       </td>
     </tr></table></td></tr>
-  <tr><td style="padding:22px 34px 4px;">
+  <tr><td class="sec-pad" style="padding:22px 34px 4px;">
     <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#2f7a5f;background:rgba(47,122,95,.1);padding:3px 10px;border-radius:999px;">📅 The Week Ahead</span>
     <p style="margin:11px 0 0;font-size:15.5px;line-height:1.65;color:#2c3b35;">${esc(LEDE)}</p></td></tr>
   ${section('Public Meetings This Week', mh)}
@@ -343,7 +346,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
   ${whatsReadingBox}
   ${closingNote}
   ${donateBlock}
-  <tr><td style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
+  <tr><td class="sec-pad" style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
     <div style="font-family:Georgia,serif;font-size:13px;font-weight:700;color:#21443c;">Livable Telluride</div>
     <div style="font-size:12px;color:#7a8a85;line-height:1.6;margin-top:4px;">Community information for Telluride, Mountain Village &amp; San Miguel County.<br>
     <a href="https://livabletelluride.org" style="color:#7a8a85;">livabletelluride.org</a> &nbsp;·&nbsp; <a href="*|UNSUB|*" style="color:#7a8a85;">Unsubscribe</a> &nbsp;·&nbsp; <a href="https://livabletelluride.org/profile.html?email=*|EMAIL|*&amp;fname=*|FNAME|*&amp;town=*|MMERGE6|*" style="color:#7a8a85;">Update preferences</a></div></td></tr>
@@ -355,7 +358,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
 let out = html;
 if (PREVIEW) {
   const banner = `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT — the upcoming weekly email. Look it over, then send the saved copy through Mailchimp. The topic sections below show in full here; each subscriber only sees the ones they opted into.<br><span style="font-weight:400;">To change the intro, just reply to this email with the new text (week-key ${WEEK_START}).</span></td></tr>\n`;
-  out = out.replace('  <tr><td style="background:#21443c;padding:26px 34px;">', banner + '  <tr><td style="background:#21443c;padding:26px 34px;">')
+  out = out.replace('  <tr><td class="sec-pad" style="background:#21443c;padding:26px 34px;">', banner + '  <tr><td class="sec-pad" style="background:#21443c;padding:26px 34px;">')
            .replace(/\*\|INTERESTED:[^|]*\|\*/g, '').replace(/\*\|END:INTERESTED\|\*/g, '')
            .replace(/\*\|UNSUB\|\*/g, '#').replace(/\*\|[A-Z0-9_]+\|\*/g, '');
 }
