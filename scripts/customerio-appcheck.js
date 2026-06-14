@@ -6,11 +6,16 @@
  * key to confirm it works and to list any segments you've built, so we know the
  * send-side auth is good before we wire up an actual broadcast.
  */
-const APP_KEY = process.env.CUSTOMERIO_APP_API_KEY;
-if (!APP_KEY) {
+const RAW = process.env.CUSTOMERIO_APP_API_KEY;
+if (!RAW) {
   console.error('Missing CUSTOMERIO_APP_API_KEY env var.');
   process.exit(1);
 }
+const APP_KEY = RAW.trim(); // strip any stray newline/space from the paste
+// Safe shape diagnostic — reveals nothing usable. A real App API key is long
+// (~60+ chars); the Track API key / Site ID are 20 hex chars, so a length of
+// 20 means the wrong value got pasted into this secret.
+console.log(`  key shape: length=${APP_KEY.length} (raw=${RAW.length}, whitespace-trimmed=${RAW.length - APP_KEY.length})`);
 const BASE = 'https://api.customer.io/v1'; // US App API
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
