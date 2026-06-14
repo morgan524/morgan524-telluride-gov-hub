@@ -1429,6 +1429,13 @@
       if (dow === 0 || dow === 5 || dow === 6) s += 6;                                                             // Fri / Sat / Sun
       if (e.img) s += 5;                                                                                           // has a promo flyer
       if (/\bfree\b/.test(text)) s += 4;                                                                           // free → broad appeal
+      // Proximity: a slight thumb on the scale for events in/around Telluride
+      // itself. A big event a ~45-min drive away (West End, Ridgway/Ouray) still
+      // surfaces when it's worth the drive — this nudges, it doesn't gate.
+      const town = (e.town || '').toLowerCase();
+      if (town === 'telluride') s += 12;                                                                          // in town
+      else if (town === 'mv') s += 10;                                                                            // Mountain Village (gondola-close)
+      else if (town === 'ophir' || town === 'placerville') s += 5;                                                // short drive, same end of the region
       return s;
     }
 
