@@ -1469,9 +1469,9 @@
       '<div class="hb-reply-compose">' +
         '<textarea placeholder="Write a reply..." id="hb-reply-text-' + postId + '"></textarea>' +
         '<div class="hb-reply-actions">' +
-          '<button type="button" class="hb-reply-attach" onclick="hbReplyTriggerPhoto(\'' + postId + '\')" title="Add a photo (JPG, PNG, GIF, WebP · max 5 MB)">📷</button>' +
-          '<button type="button" class="hb-reply-attach" onclick="hbReplyTriggerDoc(\'' + postId + '\')" title="Attach a document (PDF, Word, image · max ' + HB_DOC_MAX_MB + ' MB)">📄</button>' +
-          '<button type="button" class="hb-reply-attach" id="hb-reply-link-btn-' + postId + '" onclick="hbToggleReplyUrl(\'' + postId + '\')" title="Add a link">🔗</button>' +
+          '<button type="button" class="hb-reply-attach" onclick="hbReplyTriggerPhoto(\'' + postId + '\')" title="Add a photo (JPG, PNG, GIF, WebP · max 5 MB)">📷 Add Photo</button>' +
+          '<button type="button" class="hb-reply-attach" onclick="hbReplyTriggerDoc(\'' + postId + '\')" title="Attach a document (PDF, Word, image · max ' + HB_DOC_MAX_MB + ' MB)">📄 Attach Document</button>' +
+          '<button type="button" class="hb-reply-attach" id="hb-reply-link-btn-' + postId + '" onclick="hbToggleReplyUrl(\'' + postId + '\')" title="Add a link">🔗 Add Link</button>' +
           '<button type="button" class="hb-reply-send" id="hb-reply-send-' + postId + '" onclick="hbPostReply(\'' + postId + '\')">Reply</button>' +
         '</div>' +
       '</div>' +
