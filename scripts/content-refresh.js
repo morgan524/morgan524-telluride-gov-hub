@@ -5244,9 +5244,21 @@ function parseMVWhenText(whenText, fromMs, toMs) {
   return dates;
 }
 
+// Extract an og:<name> meta tag's content, tolerating unquoted property values
+// AND unquoted content. MV's pages mix `property=og:title content="..."` (quoted
+// content) with `property=og:image content=https://...png` (NO quotes on the
+// image URL), so the old `content="([^"]+)"` regex silently dropped the image.
+function mvOgContent(html, name) {
+  const tag = (html.match(new RegExp('<meta[^>]*\\bog:' + name + '\\b[^>]*>', 'i')) || [])[0];
+  if (!tag) return '';
+  const c = tag.match(/content\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i);
+  return c ? (c[1] || c[2] || c[3] || '') : '';
+}
+
 async function syncMountainVillageEvents() {
   console.log('\n🏔  Task 18: Syncing Mountain Village events (sitemap+pages)...');
-  const SITEMAP_URL = 'https://www.townofmountainvillage.com/sitemap.xml';
+  // Non-www host: MV moved canonical URLs off www (www 301-redirects here).
+  const SITEMAP_URL = 'https://townofmountainvillage.com/sitemap.xml';
   let sitemapXml;
   try {
     const resp = await fetch(SITEMAP_URL);
@@ -5260,16 +5272,33 @@ async function syncMountainVillageEvents() {
     return null;
   }
 
-  // Extract event page slugs
-  const slugRe = /https?:\/\/www\.townofmountainvillage\.com\/explore\/events\/all-events\/([^/<">\s]+)\//gi;
+  // Extract event slugs from each <url> block. MV keeps ~1,100 historical event
+  // pages in the sitemap, so fetching them all every run is wasteful. Match the
+  // all-events path HOST-AGNOSTICALLY (robust to the www→non-www move, and if
+  // they ever switch back), skip gov meetings (they belong in Gov-Hub), and keep
+  // only pages whose <lastmod> is recent. MV creates a fresh page per occurrence
+  // (e.g. "30th-annual-wild-west-fest"), so the current season's events have
+  // recent lastmods while dead past events are >1yr stale — this bounds the
+  // per-run fetch from ~1,100 to ~150.
+  const LASTMOD_WINDOW_MS = 180 * 86400000;
+  const sitemapNow = Date.now();
   const slugSet = new Set();
-  let m;
-  while ((m = slugRe.exec(sitemapXml)) !== null) {
-    const slug = m[1];
-    if (!MV_GOV_SLUG_RE.test(slug)) slugSet.add(slug);
+  const urlBlockRe = /<url>([\s\S]*?)<\/url>/gi;
+  let block;
+  while ((block = urlBlockRe.exec(sitemapXml)) !== null) {
+    const seg = block[1];
+    const loc = (seg.match(/<loc>\s*([^<]+?)\s*<\/loc>/i) || [])[1] || '';
+    const sm = loc.match(/\/explore\/events\/all-events\/([^/<">\s]+)\/?$/i);
+    if (!sm) continue;
+    const slug = sm[1];
+    if (MV_GOV_SLUG_RE.test(slug)) continue;
+    const lastmod = (seg.match(/<lastmod>\s*([^<]+?)\s*<\/lastmod>/i) || [])[1] || '';
+    const lm = lastmod ? new Date(lastmod).getTime() : NaN;
+    if (!isNaN(lm) && (sitemapNow - lm) > LASTMOD_WINDOW_MS) continue; // stale past event
+    slugSet.add(slug);
   }
   const slugs = Array.from(slugSet);
-  console.log(`  MV: ${slugs.length} non-gov event slugs found`);
+  console.log(`  MV: ${slugs.length} recent non-gov event slugs (lastmod <=180d)`);
 
   const now = Date.now();
   const fromMs = now - 86400000;        // allow yesterday (in case of timezone)
@@ -5279,7 +5308,7 @@ async function syncMountainVillageEvents() {
   let fetched = 0;
 
   for (const slug of slugs) {
-    const url = 'https://www.townofmountainvillage.com/explore/events/all-events/' + slug + '/';
+    const url = 'https://townofmountainvillage.com/explore/events/all-events/' + slug + '/';
     let html;
     try {
       const resp = await fetch(url);
@@ -5292,16 +5321,11 @@ async function syncMountainVillageEvents() {
     // Throttle
     await new Promise(r => setTimeout(r, 400));
 
-    // Extract metadata from og: tags
-    const ogTitle = (html.match(/<meta[^>]+property="og:title"[^>]+content="([^"]+)"/i) || [])[1]
-                 || (html.match(/<meta[^>]+content="([^"]+)"[^>]+property="og:title"/i) || [])[1]
+    // Extract metadata from og: tags (quote-tolerant — MV mixes quoted/unquoted)
+    const ogTitle = mvOgContent(html, 'title')
                  || slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-    const ogDesc  = (html.match(/<meta[^>]+property="og:description"[^>]+content="([^"]+)"/i) || [])[1]
-                 || (html.match(/<meta[^>]+content="([^"]+)"[^>]+property="og:description"/i) || [])[1]
-                 || '';
-    const ogImage = (html.match(/<meta[^>]+property="og:image"[^>]+content="([^"]+)"/i) || [])[1]
-                 || (html.match(/<meta[^>]+content="([^"]+)"[^>]+property="og:image"/i) || [])[1]
-                 || '';
+    const ogDesc  = mvOgContent(html, 'description');
+    const ogImage = mvOgContent(html, 'image');
 
     // Extract "When" section
     const whenMatch = html.match(/When<\/h[123456]>([\s\S]{0,600}?)(?:<h[123456]|<\/section|<\/div)/i)
