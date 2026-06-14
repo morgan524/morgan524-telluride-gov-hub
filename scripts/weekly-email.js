@@ -307,6 +307,40 @@ const topicHtml = topicSections.map((td) =>
   `\n  *|INTERESTED:Event Topics:${td.group}|*` + section(td.label, td.events.map(evRow).join('')) + `*|END:INTERESTED|*`
 ).join('');
 
+// ── Customer.io mode (CUSTOMERIO=1) ──
+// Emit the per-section blocks as a message_data JSON instead of the single
+// Mailchimp paste HTML. A Customer.io broadcast then assembles each email
+// per-person via Liquid (Claude Files/customerio-weekly-liquid-template.html),
+// showing only the sections a subscriber's topic_* attributes opt into. The
+// Mailchimp path below is unchanged.
+if (process.env.CUSTOMERIO) {
+  const topicBlock = (key, label) => {
+    const seen = new Set();
+    const rows = evts
+      .filter((e) => eventCategory(e) === key)
+      .filter((e) => { const k = tkey(e.title); if (seen.has(k)) return false; seen.add(k); return true; })
+      .sort((a, b) => (featuredScore(b) - featuredScore(a)) || (a.date < b.date ? -1 : a.date > b.date ? 1 : 0))
+      .slice(0, 8).map(evRow).join('');
+    return rows ? section(label, rows) : '';
+  };
+  // Same pure-ASCII entity pass the email uses, so the blocks render cleanly.
+  const ascii = (s) => Array.from(String(s)).map((ch) => { const cp = ch.codePointAt(0); return cp > 127 ? '&#' + cp + ';' : ch; }).join('');
+  const md = {
+    label:         LABEL,
+    lede:          LEDE,
+    meetings_html: section('Public Meetings This Week', mh),
+    events_html:   section('What We\'re Attending', eh),
+    arts_html:     topicBlock('arts', 'Music & Arts This Week'),
+    family_html:   topicBlock('family', 'Family & Kids This Week'),
+    outdoors_html: topicBlock('outdoors', 'Outdoors & Recreation This Week'),
+  };
+  for (const k of Object.keys(md)) md[k] = ascii(md[k]);
+  fs.writeFileSync(OUT, JSON.stringify(md, null, 2));
+  console.log('message_data → ' + OUT + ': ' + Object.entries(md).map(([k, v]) => `${k}(${v.length})`).join(' '));
+  console.log('SUBJECT=The Week Ahead — ' + LABEL);
+  process.exit(0);
+}
+
 const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>
 @media only screen and (max-width:480px){
   /* Event cards: stack image on top, text below, for easier mobile reading. */
