@@ -152,6 +152,11 @@
           </div>
         </div>
 
+        <!-- Topics ride inside the weekly email, so they're only choosable with a Weekly Update subscription. -->
+        <div id="profTopicGate" style="display:none;font-size:0.82rem;line-height:1.45;color:#7a5a2a;background:#fdf3e7;border:1px solid #e8c9a0;border-radius:8px;padding:9px 12px;margin:2px 0 12px;">
+          ⚠ Event topics are delivered inside the <strong>Weekly Update</strong> email. Subscribe to the Weekly Update above to choose topics — without it, we have no email in which to send your event notices.
+        </div>
+
         <!-- Event Topics (revealed only once the matching Mailchimp group exists) -->
         <div class="sub topic-row">
           <div><div class="sub-t">Music, Arts &amp; Festivals <span class="sub-status" data-status="arts"></span></div><div class="sub-d">Concerts, film, theater, gallery openings, and festivals.</div></div>
@@ -252,11 +257,44 @@
   function flagMissing(){ ['pFirst','pLast'].forEach(id=>{ const el=document.getElementById(id); if(el) el.classList.toggle('missing', !el.value.trim()); }); }
   function loadMsg(text, cls){ const el=document.getElementById('profLoadMsg'); if(!el) return; el.innerHTML=text; el.className='loadmsg show '+(cls||'info'); }
   function setSubStatus(key, val){
+    if(key==='weekly'){ _weeklyCurrent = (val===true); syncTopicGate(); }
     const el=document.querySelector('.sub-status[data-status="'+key+'"]');
     if(!el) return;
     if(val===true){ el.textContent='Currently subscribed'; el.className='sub-status on'; }
     else if(val===false){ el.textContent='Currently not subscribed'; el.className='sub-status off'; }
     else { el.textContent=''; el.className='sub-status'; }
+  }
+
+  // ── Gate Event Topics on the Weekly Update subscription ──
+  // Topics ride inside the weekly email, so they're only selectable when the
+  // person's EFFECTIVE weekly state is "subscribed": their current state, unless
+  // the Weekly Update segment is being changed right now. Mirrors the signup rule.
+  var _weeklyCurrent = null;                 // set by profile-read (true/false/null)
+  function effectiveWeeklyOn(){
+    const seg=document.querySelector('.seg[data-sub="weekly"]');
+    const act=seg && seg.querySelector('.seg-btn.active');
+    const v=act ? act.getAttribute('data-v') : '';
+    if(v==='on')  return true;
+    if(v==='off') return false;
+    return _weeklyCurrent===true;            // "Keep as-is" → current state
+  }
+  function syncTopicGate(){
+    const on=effectiveWeeklyOn();
+    document.querySelectorAll('.sub.topic-row').forEach(function(row){
+      row.style.opacity = on ? '' : '0.55';
+      row.querySelectorAll('.seg-btn').forEach(function(b){ b.disabled=!on; });
+      if(!on){
+        // Revert a pending topic "Subscribe" to Keep-as-is so a disabled control
+        // can't opt someone into a topic with no weekly email to carry it.
+        const seg=row.querySelector('.seg[data-sub]');
+        const act=seg && seg.querySelector('.seg-btn.active');
+        if(act && act.getAttribute('data-v')==='on'){
+          seg.querySelectorAll('.seg-btn').forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-v')===''); });
+        }
+      }
+    });
+    const note=document.getElementById('profTopicGate');
+    if(note) note.style.display = on ? 'none' : '';
   }
 
   // Pre-fill from the email "Update your info" link
@@ -275,6 +313,7 @@
       btn.addEventListener('click',()=>{
         seg.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('active'));
         btn.classList.add('active');
+        syncTopicGate();   // weekly change may enable/disable topics
       });
     });
   });
@@ -286,6 +325,7 @@
       document.querySelectorAll('.sub.topic-row .seg[data-sub]').forEach(function(seg){
         if (avail[seg.getAttribute('data-sub')]) seg.closest('.sub').classList.add('show');
       });
+      syncTopicGate();   // apply the weekly gate once topic rows are revealed
     }).catch(function(){});
 
   // ── If signed into Hub-Bub, load THIS person's own saved info ──

@@ -5302,7 +5302,9 @@ async function syncMountainVillageEvents() {
 
   const now = Date.now();
   const fromMs = now - 86400000;        // allow yesterday (in case of timezone)
-  const toMs   = now + 60 * 86400000;  // 60-day window
+  const toMs   = now + 30 * 86400000;  // rolling 30-day window (per product rule:
+                                        // only ever surface the next 30 days of MV
+                                        // events; re-derived every 6h refresh)
 
   const events = [];
   let fetched = 0;
