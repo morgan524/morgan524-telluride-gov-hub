@@ -979,7 +979,9 @@
       .hb-og-title { font-weight: 700; font-size: .92rem; color: #1a1a1a; margin-bottom: 3px; }
       .hb-og-desc  { font-size: .82rem; color: #555; margin-bottom: 4px;
                      overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-      .hb-og-domain { font-size: .76rem; color: #21443c; font-weight: 600; }
+      /* Full URL shown as a blue underlined link (the whole card is already an
+         <a> to this URL, so it navigates on click). word-break wraps long URLs. */
+      .hb-og-domain { font-size: .76rem; color: #1a6fd6; font-weight: 600; text-decoration: underline; word-break: break-all; }
       /* og:image fallback card (no preview image available) renders text-only */
       .hb-og-preview.hb-og-textonly { background: #f5f5f3; }
       /* ── Social-media warning + live composer link preview ─────────────── */

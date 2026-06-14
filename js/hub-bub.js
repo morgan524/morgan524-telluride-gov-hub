@@ -2076,7 +2076,7 @@
       '<div class="hb-og-text">' +
         (data.title ? '<div class="hb-og-title">' + hbEsc(data.title) + '</div>' : '') +
         (data.description ? '<div class="hb-og-desc">' + hbEsc(data.description.substring(0, 160)) + '</div>' : '') +
-        '<div class="hb-og-domain">' + hbEsc(hostname) + '</div>' +
+        '<div class="hb-og-domain">' + hbEsc(url) + '</div>' +
       '</div>';
     containerEl.appendChild(card);
   }
