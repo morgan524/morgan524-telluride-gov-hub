@@ -17,18 +17,21 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 (async () => {
   // Retry on 5xx — Customer.io's gateway occasionally returns a transient 502.
+  // Customer.io's App API gateway throws intermittent 502s that clear in
+  // ~30s — wait that long between tries so a blip doesn't masquerade as a
+  // config problem. A 4xx (auth) result breaks immediately.
   let res, text = '';
-  for (let attempt = 1; attempt <= 4; attempt++) {
+  for (let attempt = 1; attempt <= 6; attempt++) {
     try {
       res = await fetch(`${BASE}/segments`, { headers: { Authorization: `Bearer ${APP_KEY}` } });
       text = await res.text();
     } catch (e) {
-      console.log(`  · attempt ${attempt}: request error ${e.message}`);
-      await sleep(2000 * attempt); continue;
+      console.log(`  · attempt ${attempt}: request error ${e.message} — waiting 30s`);
+      await sleep(30000); continue;
     }
     if (res.status >= 500) {
-      console.log(`  · attempt ${attempt}: HTTP ${res.status} ${res.statusText} (transient) — retrying`);
-      await sleep(2000 * attempt); continue;
+      console.log(`  · attempt ${attempt}: HTTP ${res.status} ${res.statusText} (Customer.io-side) — waiting 30s`);
+      await sleep(30000); continue;
     }
     break; // 2xx or a 4xx (auth) — stop and report
   }
