@@ -4011,44 +4011,65 @@ async function syncTelluridComEventsFast() {
   const todayMs = Date.now();
   const today = new Date(todayMs); today.setUTCHours(0, 0, 0, 0);
   const horizon = today.getTime() + 60 * 86400000;
-  const events = [];
+  // Group rows by event URL. FullCalendar lists a recurring series (e.g.
+  // "Games on the Green", Sat–Thu all summer) as one row PER occurrence date,
+  // so emitting each row as its own card floods the grid with ~18 single-day
+  // cards. Collapse each series into ONE entry spanning first→last date: the
+  // renderer then shows a single date-range card, or — for spans ≥ 7 days —
+  // routes it to the "Ongoing Events" sidebar, where a season-long series
+  // belongs. Single-occurrence events are unaffected (min === max).
+  const byUrl = new Map();
   for (const e of arr) {
     if (!e || !e.start || !e.url) continue;
-    // start/end are YYYY-MM-DD
-    const startMs = new Date(e.start + 'T00:00:00Z').getTime();
+    const startMs = new Date(e.start + 'T00:00:00Z').getTime();   // start/end are YYYY-MM-DD
     if (isNaN(startMs)) continue;
-    if (startMs < today.getTime() - 86400000) continue;
-    if (startMs > horizon) continue;
-    // Extract clean title from the link variant: <a href="...">TITLE</a>
+    const endStr = (e.end && e.end !== e.start) ? e.end : e.start;
+    let endMs = new Date(endStr + 'T00:00:00Z').getTime();
+    if (isNaN(endMs)) endMs = startMs;
     let title = '';
     const tm = (e.title || '').match(/fc-event-title--link[^>]*>\s*<a[^>]*>([^<]+)</);
     if (tm) title = decodeHtmlEntities(tm[1]).trim();
     if (!title) continue;
-    // Extract image from eventContent tooltip
-    const imMatch = (e.eventContent || '').match(/<img[^>]+src="([^"]+)"/);
-    let imageUrl = imMatch ? imMatch[1] : '';
-    if (imageUrl && imageUrl.startsWith('/')) imageUrl = 'https://www.telluride.com' + imageUrl;
-    // Extract summary from eventContent tooltip's <p>...</p>
-    let summary = '';
-    const sm = (e.eventContent || '').match(/<p>([^<]+)</);
-    if (sm) summary = decodeHtmlEntities(sm[1]).trim();
-    summary = smartTruncate(summary, EVENT_DESC_MAX);
     const link = (e.url || '').startsWith('http') ? e.url : 'https://www.telluride.com' + e.url;
+    let g = byUrl.get(link);
+    if (!g) {
+      const imMatch = (e.eventContent || '').match(/<img[^>]+src="([^"]+)"/);
+      let imageUrl = imMatch ? imMatch[1] : '';
+      if (imageUrl && imageUrl.startsWith('/')) imageUrl = 'https://www.telluride.com' + imageUrl;
+      let summary = '';
+      const sm = (e.eventContent || '').match(/<p>([^<]+)</);
+      if (sm) summary = decodeHtmlEntities(sm[1]).trim();
+      summary = smartTruncate(summary, EVENT_DESC_MAX);
+      byUrl.set(link, { title, link, description: summary, imageUrl, minMs: startMs, maxMs: endMs });
+    } else {
+      if (startMs < g.minMs) g.minMs = startMs;
+      if (endMs   > g.maxMs) g.maxMs = endMs;
+    }
+  }
+  const events = [];
+  for (const g of byUrl.values()) {
+    // Keep when the span overlaps the [today-1d, +60d] window. A series that
+    // already started but runs past today still shows (start in the past is
+    // fine — the renderer gates ongoing events on endDate).
+    if (g.maxMs < today.getTime() - 86400000) continue;   // whole series already over
+    if (g.minMs > horizon) continue;                       // starts more than 60 days out
+    const startISO = new Date(g.minMs).toISOString().slice(0, 10);
+    const endISO   = new Date(g.maxMs).toISOString().slice(0, 10);
     events.push({
-      title,
-      link,
-      description: summary,
-      pubDate:     e.start,
-      endDate:     (e.end && e.end !== e.start) ? e.end : undefined,
+      title:       g.title,
+      link:        g.link,
+      description: g.description,
+      pubDate:     startISO,
+      endDate:     endISO !== startISO ? endISO : undefined,
       source:      'telluride-com',
       sourceLabel: 'Telluride.com',
       category:    'Community Event',
       location:    'Telluride, CO',
-      imageUrl,
+      imageUrl:    g.imageUrl,
     });
   }
   events.sort((a, b) => a.pubDate.localeCompare(b.pubDate));
-  console.log(`  Kept ${events.length} telluride.com event(s) within 60 days`);
+  console.log(`  Kept ${events.length} telluride.com event(s) within 60 days (recurring series collapsed by URL)`);
   return events;
 }
 
