@@ -1,22 +1,22 @@
 {
-  "hash": "4dbd729d38cc4ea8d08b3321a1c6efca6102e699",
-  "lede": "The biggest item this week is Mountain Village Council's Wednesday meeting, where they'll review an independent investigation report and vote on expedited affordable housing policies. Meanwhile, Telluride's Gondola Subcommittee meets Sunday to discuss the $18 million commitment deadline for federal funding, and county commissioners interview planning board candidates Tuesday.",
+  "hash": "e1a342892e76f4bb97a47f605e44d7ffba4f7829",
+  "lede": "Mountain Village council meets Tuesday with a packed agenda including a vote on expedited review policies for affordable housing projects and an hour-long review of an independent investigation report. Meanwhile, Telluride's Gondola Subcommittee discusses the critical $18M federal funding commitment deadline this fall, and Norwood's planning commission considers new dark-sky lighting standards.",
   "notable": [
     {
       "id": 2,
-      "stake": "Partners must commit $18M by fall 2026 for federal gondola funding"
+      "stake": "$18M commitment deadline for federal gondola funding approaching fall 2026"
     },
     {
       "id": 5,
-      "stake": "Council votes on expedited affordable housing review policies"
+      "stake": "Vote on expedited affordable housing reviews plus investigation report discussion"
     },
     {
-      "id": 6,
-      "stake": "Interviews for Board of Adjustment and Planning Commission positions"
+      "id": 0,
+      "stake": "New dark-sky lighting standards could change outdoor lighting requirements"
     },
     {
       "id": 9,
-      "stake": "Fee increase vote for winter recreation programs"
+      "stake": "Ice rink fees going up 3.7% for winter programs"
     }
   ]
 }

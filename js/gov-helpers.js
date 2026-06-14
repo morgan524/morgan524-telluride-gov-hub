@@ -232,10 +232,10 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The June 25 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
+    "The June 25, 2026 Planning & Zoning Commission chair meeting agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -250,13 +250,13 @@ const MANUAL_SUMMARIES = {
     "The July 1 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
     "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The July 1st Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The July 1, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
     "The July 1 Board of County Commissioners agenda hasn't been posted yet.",
@@ -274,7 +274,7 @@ const MANUAL_SUMMARIES = {
     "The June 11, 2026 SMART agenda hasn't been posted yet.",
 
   "county|2026-07-08|Board of County Commissioners Work Session":
-    "The July 8 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The July 8 Board of County Commissioners work session agenda hasn't been posted yet.",
 
   "smart|2026-07-09|SMART Board of Directors":
     "The July 9 SMART Board of Directors agenda hasn't been posted yet.",
@@ -283,7 +283,7 @@ const MANUAL_SUMMARIES = {
     "The Lodging Tax Board meets to review tax reports and hear updates from the Norwood Chamber and Telluride Tourism Board. Standard quarterly check-in on how lodging tax dollars are being distributed and used across the county.",
 
   "county|2026-07-09|Planning Commission Meeting":
-    "The July 9 Planning Commission agenda hasn't been posted yet.",
+    "The July 9 San Miguel County Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-12|Judicial Subcommittee - Jun 12 2026":
     "The June 12, 2026 Judicial Subcommittee agenda hasn't been posted yet.",
@@ -339,6 +339,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Run for good",
+    source: "Telluride Times",
+    date: "June 14, 2026",
+    firstSeen: "2026-06-14",
+    newsTopic: "infrastructure",
+    copy: "The annual Rundola race is back July 4th with a major change - Forest Service permits now require runners to stay on Telluride Trail instead of taking multiple routes like the straight-up Coonskin option. This year's race focuses on raising money for the Good Neighbor Fund, which has helped over 200 locals since early 2024 deal with emergencies from housing costs to medical bills, especially after the recent strike and poor snow season hit so many people hard.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_bf63620b-b013-435e-b903-f34e32bd10b5.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/cf/5cf25f00-552c-4489-96cc-7ee3fe73b005/6a2b52f2c1e00.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Trump administration opens public lands to off-road use",
     source: "Telluride Times",
@@ -2887,15 +2899,81 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Pieles y Pociones",
-    link: "https://telluridelibrary.libcal.com/event/16955150?hs=a",
-    description: "2:00 PM – 4:00 PM · &iexcl;Ven y aprende a crear tus propias pociones para cuidar tu piel y la de tu familia con Mar&iacute;a Mart&iacute;nez del Campo!",
-    pubDate: "2026-06-13T20:00:00.000Z",
+    title: "Parenting Book Club: How to Talk So Little Kids Will Listen",
+    link: "https://telluridelibrary.libcal.com/event/16942421?hs=a",
+    description: "10:30 AM – 11:30 AM · Parenting Book Club discussing How to Talk So Little Kids Will Listen: A Survival Guide to Life With Children Ages 2-7 b Joanna Faber and Julie King. Participants will dive into respectful and effective solutions to the challenges of raising children. This program is being offered in collaboration with Bright Futures and Parents As Teachers. The first 10 registrants will receive a copy of the book to keep. Reach out to madiea@brightfuturesforchildren.org with questions. Child care and snacks will be provided. Club de lectura sobre crianza que abordar&aacute; el libro *How to Talk So Little Kids Will Listen: A Survival Guide to Life With Children Ages 2-7*, de Joanna Faber y Julie King. Los participantes explorar&aacute;n soluciones respetuosas y eficaces para los desaf&iacute;os que conlleva la crianza de los hijos. Este programa se ofrece en colaboraci&oacute;n con Bright Futures y Parents As Teachers. …",
+    pubDate: "2026-06-14T16:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_15_34_57.png"
+  },
+  {
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://telluridelibrary.libcal.com/event/16536435?hs=a",
+    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-06-14T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_11_31_05.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
+  },
+  {
+    title: "Drop In Ping Pong",
+    link: "https://telluridelibrary.libcal.com/event/16986217?hs=a",
+    description: "1:00 PM – 3:00 PM · Drop by the library for casual table tennis matches. Our ping pong table will be set up and ready for players of all ages and skill levels. Whether you&#39;re a first-timer or a seasoned player, come enjoy this classic game with family and friends. No registration needed - just drop in! First come, first served (pun intended!) Pase por la biblioteca para partidos casuales de tenis de mesa. Nuestra mesa de ping pong estar&aacute; instalada y lista para jugadores de todas las edades y niveles de habilidad. Ya sea que juegue por primera vez o sea un jugador experimentado, venga a disfrutar de este juego cl&aacute;sico con familia y amigos. No necesita registrarse - &iexcl;simplemente venga!",
+    pubDate: "2026-06-14T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_30_12_13_38.png"
+  },
+  {
+    title: "Drop-In Tech Time with Oliver",
+    link: "https://telluridelibrary.libcal.com/event/15970378?hs=a",
+    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
+    pubDate: "2026-06-14T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "2nd Floor Desk",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+  },
+  {
+    title: "Holding Space/Espacio de Espera con Daniel Kanow",
+    link: "https://telluridelibrary.libcal.com/event/16899421?hs=a",
+    description: "1:00 PM – 3:00 PM · ATTENTION: IN ORDER TO ATTEND THIS WORKSHOP, YOU WILL ALSO NEED TO ATTEND THE WORKSHOP ON SUNDAY, JUNE 28TH. This two-week creative series offers a gentle, supportive space to explore grief and life transitions through art-making. Each session invites participants to engage in guided, low-pressure creative activities designed to support reflection, grounding, and self-expression. No art experience is needed. Participants are free to observe, modify activities, or step away as needed. Sharing is optional, and personal stories are never required. The focus is on healing the process of creative expression and the potential creation of meaningful heartfelt artworks. This program is not therapy, but it is facilitated with care, respect, and an understanding that grief and trauma affect everyone differently. All materials are provided, and sessions are structured to prioritize emotional safety, choice, and mutual respect. …",
+    pubDate: "2026-06-14T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_11_01_09.jpg"
+  },
+  {
+    title: "Clínica de Mantenimiento de Bicicletas",
+    link: "https://telluridelibrary.libcal.com/event/16730561?hs=a",
+    description: "2:00 PM – 4:00 PM · &iexcl;Nos reuniremos en la biblioteca p&uacute;blica y despu&eacute;s iremos a la estaci&oacute;n de reparaci&oacute;n de bicicletas del parque! QU&Eacute; APRENDEREMOS: Inflar los neum&aacute;ticos reparar un pinchazo limpiar y lubricar la cadena y la transmisi&oacute;n REVISAR los tornillos y la suspensi&oacute;n.",
+    pubDate: "2026-06-14T20:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Town Park",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_13_18_35.jpg"
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/16567829?hs=a",
+    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
+    pubDate: "2026-06-14T20:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
   }
 ];
 
@@ -2929,18 +3007,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "Ivanoff (DJ SET)",
-    link: "https://www.alibitelluride.com/calendar#eca-event=ivanoff-dj-set",
-    description: "IvanOff is a Montana-born tech house producer and DJ. His friends named him Ivan...",
-    pubDate: "2026-06-13",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/d2c64473-1f50-467d-a322-7085c50094b9/-/crop/1080x541/0,1088/-/preview/"
-  },
   {
     title: "Calder Allen",
     link: "https://www.alibitelluride.com/calendar#eca-event=calder-allen",
@@ -3386,94 +3452,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "San Juan Trail Triathlon",
-    link: "https://sanjuantrailtri.com/",
-    description: "DASH * PADDLE * PEDAL 3.5 mile run 1.5 mile paddle 8 mile mountain Divisions for individual racers, teams, and teens ages 12+ Money raised from this event directly benefits Montrose Recreation Foundation and Voyager Youth Program.",
-    pubDate: "2026-06-13T14:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway State Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/52922710682794/huge/7d09aec1e654bda398931d637d11654a01f64323.jpg"
-  },
-  {
-    title: "Shifting Consciousness with Food and Your SELF",
-    link: "https://www.beetrueyou.com/",
-    description: "A transformative, one-day retreat to reimagine your relationship with food, self-care, and belonging. Christine will guide you through powerful, paradigm-shifting topics—including the paradox of permission and what it means to truly belong as you are, breaking free from quick-fix self-care, and redefining the difference between healing and “fixing.” Explore authentic nutrition through the practice of attunement. Paired with Elisabeth’s spiritually grounded facilitation, the experience weaves together mindfulness, movement, meditation, and meaningful connection. Through guided reflection and supportive group sharing, you’ll gain both insight and practical tools to cultivate a more compassionate, sustainable relationship with your body and yourself.",
-    pubDate: "2026-06-13T14:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52836723968745/huge/c5e17d886587b3f2d245b1852b2398f4bc7df65e.jpg"
-  },
-  {
-    title: "Rollans Park Cleanup",
-    link: "https://www.uncompahgrewatershed.org/events/",
-    description: "Come help clean up Rollans Park in Ridgway and be treated with a breakfast burrito and conversation with UWP staff and board members. UWP has adopted this important park that protects and provides access to the Uncompahgre River. We make an annual effort through the Adopt-a-Park Program to pick up litter and branches and do other maintenance around the park. This event is supported by the Town of Ridgway. Please email tanya@uncompahgrewatershed.org to sign up!",
-    pubDate: "2026-06-13T15:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53001642609887/huge/fb9f391ed3891621f3b5be49abe7ace84d5ddd9c.jpg"
-  },
-  {
-    title: "Dallas Park Cemetery Tour",
-    link: "www.ouraycountyhistoricalsociety.org",
-    description: "Tour of Dallas Park Cemetery Tour, led by Coleen McElroy. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay",
-    pubDate: "2026-06-13T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Dallas Park Cemetery ",
-    imageUrl: "https://localist-images.azureedge.net/photos/52462667793124/huge/857907efd93056a1ba298d906bd6d5231a5f9d13.jpg"
-  },
-  {
-    title: "Ridgway Railroad Museum FREE Train Rides",
-    link: "https://www.ridgwayrailroadmuseum.org/",
-    description: "We will be operating our equipment on Fridays (starting May 29th) and Saturdays (starting May 9th) this spring, summer and fall in 2026. Come join us and enjoy a part of Ridgway history while riding on RGS Motor No. 1, RGS Goose No. 4, gasoline locomotive CW, and RGS Inspection Car No. 1.",
-    pubDate: "2026-06-13T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52773804648328/huge/27ee9f278b677eb9bf13a8ee9463855e6db07a7c.jpg"
-  },
-  {
-    title: "Spring Colors Gourd Bowls with Janice Reich",
-    link: "https://weehawkenarts.org/education/adult-art-classes/",
-    description: "Spring Colors Gourd Bowls with Janice Reich Alcohol Dye Technique with Seagrass Rim Saturday, June 13, 2026 | 10 am – 2 pm (includes a lunch break) Cora Annex, Ridgway (145 N. Cora St., Ridgway, CO 81432) Tuition: $75 Registration: www.weehawkenarts.org In this class, students will learn the basics of weaving seagrass around a gourd rim and working with TransTint alcohol dyes. When mixed, blended, or layered, these dyes create a wide range of vibrant colors and beautiful effects. Techniques may include dabbing, dripping, sponging, painting, and blending with alcohol dyes to achieve unique surface designs. Be bold—go with the color! All materials will be supplied by the instructor. If you have favorite beads or small embellishments, feel free to bring them along to personalize your bowl. About the Instructor: Shape, color, and texture lie at the heart of Janice’s artistic exploration. …",
-    pubDate: "2026-06-13T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52648597926478/huge/cb32e72fdc1ada493249dea5fe1899d8db619801.jpg"
-  },
-  {
-    title: "Happy Little Trees: Classes @ the Wright",
-    link: "https://www.zeffy.com/en-US/ticketing/emma-kalf-bob-ross-painting-classes",
-    description: "Happy Little Trees: Classes @ the Wright WHEN? Classes at 10:30 am WHERE? Wright Community Room Wright Opera House 472 Main St. Ouray, Colorado TICKETS: $55 Per Class (All supplies are included + coffee!) ABOUT THE CLASS Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All supplies are included, and no prior painting experience is necessary. Just bring your curiosity and enjoy a relaxed, creative morning inspired by the joy of painting. …",
-    pubDate: "2026-06-13T16:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52373044220947/huge/1d3e4ebb5835fbe0ed89bf2b3588d8e41db8f444.jpg"
-  },
-  {
-    title: "Kara Huber: Live Music @ the Wright",
-    link: "https://www.ocpag.org/",
-    description: "Kara Huber: Live Music @ the Wright WHEN? Saturday, June 13 Doors at 7:00 pm • Music at 7:30 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Ouray County Performing Arts Guild is thrilled to welcome concert pianist Kara Huber back to the Wright Opera House. GRAMMY®-nominated Canadian-American pianist and conductor Kara Huber has quickly become one of the standout performers of a new generation of concert pianists. Praised as “absolutely dazzling…in a word, flawless” by New York Concert Review following her Carnegie Hall debut, Huber blends the warmth and precision of a classical soloist with the charisma and energy of a modern virtuoso. Her performances have earned numerous awards, including the Audience Favorite Award at the Cincinnati World Piano Competition. Trained at both the University of Cincinnati College-Conservatory of Music and The Glenn Gould School of The Royal Conservatory of Music, Dr. …",
-    pubDate: "2026-06-14T01:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52886832810301/huge/bf74d62304f30405fb5236ea392d4e442cdb2f68.jpg"
-  },
   {
     title: "Flag Day Service",
     link: "https://events.ourayridgwayevents.com/event/flag-day-service-713",
@@ -4115,7 +4093,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Evenings of History 2026 @ the Wright",
     link: "https://www.ouraycountyhistoricalsociety.org/about-4",
-    description: "Evenings of History 2026 @ the Wright WHEN? Weekly Tuesdays • 7:00 pm ��� 9:00 pm Doors at 6:30 pm • Presentations at 7:00 pm June 16 June 23 June 30 July 7 July 14 July 21 July 28 August 4 WHERE? Wright Opera House 472 Main St. Ouray, Colorado SERIES: Presented by the Ouray County Historical Society ABOUT THE SERIES Join the Ouray County Historical Society for another season of Evenings of History, a community lecture series exploring the people, places, and stories that shaped Ouray County and the greater San Juan region. From mining legends and frontier photography to fashion, recreation, and Ute history, this year’s lineup offers a fascinating look into the characters and events that helped define the American West. Through local historians, researchers, storytellers, and community experts, Evenings of History continues a longstanding tradition of preserving and sharing the rich heritage of Ouray County. …",
+    description: "Evenings of History 2026 @ the Wright WHEN? Weekly Tuesdays • 7:00 pm – 9:00 pm Doors at 6:30 pm • Presentations at 7:00 pm June 16 June 23 June 30 July 7 July 14 July 21 July 28 August 4 WHERE? Wright Opera House 472 Main St. Ouray, Colorado SERIES: Presented by the Ouray County Historical Society ABOUT THE SERIES Join the Ouray County Historical Society for another season of Evenings of History, a community lecture series exploring the people, places, and stories that shaped Ouray County and the greater San Juan region. From mining legends and frontier photography to fashion, recreation, and Ute history, this year’s lineup offers a fascinating look into the characters and events that helped define the American West. Through local historians, researchers, storytellers, and community experts, Evenings of History continues a longstanding tradition of preserving and sharing the rich heritage of Ouray County. …",
     pubDate: "2026-06-24T01:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4419,6 +4397,61 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53130955512768/huge/e51310a22a0fd90b349a2434edb7a63e61e96854.jpg"
+  },
+  {
+    title: "Tavern & Tours: Ouray History Day @ the Wright",
+    link: "wrightoperahouse.org",
+    description: "Tavern & Tours: Ouray History Day @ the Wright WHEN? Saturday, June 27 Doors open: 11:00 am – 4:00 pm TOUR SCHEDULE Tour 1: 11:30 am – 12:30 pm Tour 2: 12:30 pm – 1:30 pm Tour 3: 1:30 pm – 2:30 pm Tour 4: 2:30 pm – 3:30 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Step inside one of Ouray’s most historic buildings for an afternoon of stories, cocktails, and local history at the Wright Opera House. Tavern & Tours: Ouray History Day invites guests to explore the fascinating past of the Wright through guided tours highlighting the building’s colorful frontier origins, theatrical legacy, hidden corners, and the larger history of Ouray itself. …",
+    pubDate: "2026-06-27T17:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53011860959808/huge/18d2c8168b9b4eb4feda6c306a6a74312794c185.jpg"
+  },
+  {
+    title: "Null and Void - Live at the Floating Lotus - FREE show",
+    link: "FloatingLotusBrewery.com",
+    description: "Null and Void is a rock duo from Denver, CO. Just guitar and drums, Null and void plays covers and originals. Inspired by bands like the Black Keys, Green Day, Smashing Pumpkins, The White Stripes, The Presidents of the United States of America, and Superchunk, their sets are on fire from start to finish. Null and Void has played Larimer Lounge, Lost Lake, Globe Hall, the Trailside Saloon, Goosetown, the Black Buzzard, Moe’s BBQ, and outdoor events and festivals like Run the Rocks (2022-2024) and Ridgway Rocks. Null and Void have shared the stage with the City of Sound, the Dirty Turkeys, Cinema Stereo, The Losers Club, Stray the Course, LOG, Hot Like Wasabi, 2 Seconds to Denver, Bicycle Day, and many more... Free Show All Ages Welcome Outdoor Stage",
+    pubDate: "2026-06-28T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53028364541359/huge/a175a92f468964f585613b57a9d781045075cb33.jpg"
+  },
+  {
+    title: "Ouray Open Air Market",
+    link: "www.ouray-events.com/open-air",
+    description: "The Ouray Open-Air Market is a brand-new cooperative, organized marketplace designed to provide a dedicated home for small-scale creators & producers. Our core mission is to promote local agriculture and artisan goods while fostering honest, transparent relationships between vendors and the community. This is an entirely fresh platform in town designed to showcase your artisanal goods and services, helping neighbors and visitors know exactly who made the products they love. When and Where? Location: The market will take place in a beautiful open-air setting at Billy Goat Gruff's Patio (located at 4th Ave. + Main Street, Ouray, CO).Schedule: We will operate every Sunday from June 21, 2026, through September 6, 2026.Hours: Market hours are 10:00 AM to 2:00 PM.",
+    pubDate: "2026-06-28T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Billy Goats Gruff Patio",
+    imageUrl: "https://localist-images.azureedge.net/photos/53054893063268/huge/ed5f6f42c1d6a9db337d04171355a33509b6e1d1.jpg"
+  },
+  {
+    title: "PARK - Ultimate Frisbee",
+    link: "https://events.ourayridgwayevents.com/event/park-ultimate-frisbee",
+    description: "Come play frisbee! Anyone is welcome.",
+    pubDate: "2026-06-28T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Fellin Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/51807883052581/huge/9d7f0c7c4c96318902b1dfef1c3f821c9b3189d1.jpg"
+  },
+  {
+    title: "Ridgway Fête de la Musique presented by Citizens State Bank, The Sherbino & Weehawken Creative Arts",
+    link: "https://www.ridgwayfete.com/",
+    description: "4 pm – Dark || Downtown Ridgway on Clinton & Cora + Hartwell Park, the Sherbino & The Courtyard at 610 Setting: Walking, Standing, Dancing Join us for one of Ridgway’s most joyful traditions — the Ridgway Fête de la Musique, an outdoor celebration of live music, community, and summer vibes! Presented by Citizen’s State Bank, Weehawken Creative Arts, and The Sherbino, this FREE event transforms downtown Ridgway into a bustling open-air festival filled with the sound of music. 15+ Musical Acts | Many Simultaneous Outdoor Stages + An Indoor Stage at the Sherbino From the vibrant rhythms of Mariachi San Jose to regional favorites like David Nunn, Heather & Doug, and Donny Morales, there’s something for every musical taste. Wander Clinton and Cora Streets, the Courtyard at 610, The Sherbino and Hartwell Park to enjoy an incredible lineup of performances across multiple stages! …",
+    pubDate: "2026-06-28T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52590090771453/huge/5f8f06133edd0a9151fe5e6e785bc44ecfc34e48.jpg"
   }
 ];
 
