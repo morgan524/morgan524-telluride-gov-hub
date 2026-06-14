@@ -2,25 +2,46 @@
 
 Goal: prove out how Livable Telluride's **per-interest** updates would work in
 Customer.io, **without disturbing the live Mailchimp setup**. Mailchimp stays
-the system of record; Customer.io gets a handful of test people only until
-we're satisfied.
+the system of record during the trial; Customer.io gets a handful of test
+people only until we're satisfied.
+
+## Decisions (2026-06-13)
+
+- **End state: eventually FULLY MIGRATE to Customer.io** and retire Mailchimp
+  once confident. Build toward that, but keep Mailchimp running in parallel
+  through the trial.
+- **First milestone: the weekly "Week Ahead"** — reproduce the email currently
+  built by `scripts/weekly-email.js` and send it from Customer.io to a
+  **Weekly Update** segment. (Daily digest is a later add — its own segment +
+  morning trigger — even though it was the original motivation.)
 
 ## Status / checklist
 
 - [x] Customer.io account + `Livable Telluride` workspace (US data center)
-- [x] Track API key created → stored as GitHub secrets
-      `CUSTOMERIO_SITE_ID`, `CUSTOMERIO_TRACK_API_KEY`
-- [ ] **App API key** created → secret `CUSTOMERIO_APP_API_KEY` (needed only to
-      *send* broadcasts; not needed to seed people)
+- [x] Track API key → secrets `CUSTOMERIO_SITE_ID`, `CUSTOMERIO_TRACK_API_KEY`
+- [x] **App API key** → secret `CUSTOMERIO_APP_API_KEY`
+      ⚠️ Gotcha that cost us several rounds: the **App API key lives on its own
+      "App API keys" tab**, NOT the "Create Track API Key" button. Track keys
+      and the Site ID are 20 hex chars; a real App API key is **32 chars**.
+      `customerio-appcheck.js` prints `key shape: length=…` so a wrong (20-char)
+      paste is obvious.
 - [x] Seed script + workflow (`scripts/customerio-test.js`,
-      `.github/workflows/customerio-test.yml`)
-- [ ] Run the seed workflow, confirm test people appear in **People**
-- [ ] Build one **segment per interest** (recipes below)
-- [ ] Build a test **broadcast/newsletter** → send to one segment → verify
-- [ ] (later) Daily-digest builder + scheduled send
+      `.github/workflows/customerio-test.yml`) — 2 test people seed OK
+- [x] App API auth verified (`scripts/customerio-appcheck.js` → `✓ HTTP 200`,
+      lists the 9 built-in default segments)
+- [ ] Build one **segment per interest** (recipes below) — only the built-in
+      defaults exist so far
+- [ ] **Verify a sending domain** (workspace is in "test mode" until then —
+      no real delivery). Recommend a dedicated subdomain so it's separate from
+      the Mailchimp DKIM on the apex.
+- [ ] Build the **weekly send** → target the Weekly Update segment → test to
+      one address → verify
+- [ ] (later) Daily-digest builder + scheduled morning send
+- [ ] (later) Full-list import + signup/profile-update wiring → migrate off
+      Mailchimp
 
-> ⚠️ The original Track key was visible in a screenshot during setup — regenerate
-> it in Customer.io if that wasn't already done, and re-set the secret.
+> ⚠️ The Track key was visible in screenshots during setup — regenerate it in
+> Customer.io when convenient and re-set the secret.
 
 ## Attribute schema (trial source of truth)
 
