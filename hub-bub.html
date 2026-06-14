@@ -1603,8 +1603,11 @@
           </div>
         </div>
 
-        <div class="hb-freq-group">
-          <span class="hb-freq-label">Event topics — add any to your weekly email (optional)</span>
+        <div class="hb-freq-group" id="hbTopicGroup">
+          <span class="hb-freq-label">Event topics — added to your weekly email (optional)</span>
+          <div id="hbTopicGateNote" style="display:none;font-size:0.82rem;line-height:1.45;color:#7a5a2a;background:#fdf3e7;border:1px solid #e8c9a0;border-radius:8px;padding:9px 12px;margin:2px 0 10px;">
+            ⚠ Event topics are delivered inside the <strong>Weekly look-ahead</strong> email. Re-check it above to choose topics — without the weekly summary, we have no email in which to send your event notices.
+          </div>
           <div class="hb-freq-options">
             <label class="hb-freq-opt">
               <input type="checkbox" class="hb-topic-cb" value="arts">
@@ -1727,11 +1730,14 @@
       });
       if (region) params.set('MMERGE6', region);   // Region (East End / West End / Ridgway/Ouray)
       if (digestFreq) params.set('MMERGE9', digestFreq);
-      // "Email Subscriptions" group category 7915 (created 2026-05-31, replacing
-      // the deleted "Topics of Interest" category 7912): Newsletter = 24641,
-      // Weekly Update = 24642. Mailchimp interest format is group[<catId>][<interestId>]=<interestId>.
-      if (includeNewsletter) params.set('group[7915][24641]', '24641');
-      if (digestFreq) params.set('group[7915][24642]', '24642');
+      // NOTE: we deliberately do NOT send group[7915][24641]/[24642] here.
+      // Those numbers are Mailchimp embedded-form "web IDs" that the audience
+      // API IGNORES — so they silently never attached, and signups ended up
+      // with MMERGE9=weekly but in NEITHER the Newsletter nor Weekly Update
+      // group (which is what the campaigns target). The Newsletter + Weekly
+      // Update groups are now set by NAME via the Worker /update-profile call
+      // in the signup handler (same reliable path as the Event Topics).
+      // mcSubscribe just creates the member + sets merge fields.
       // JSONP — supply the callback name explicitly via `&c=` (the
       // function name window[cbName] must match). No `c=?` placeholder
       // in MC_POST, otherwise two `c=` params race and Mailchimp picks
@@ -1873,6 +1879,27 @@
       } catch (e) { /* non-fatal */ }
     })();
 
+    /* ── Event-topic gating ──
+       Event topics ride inside the weekly look-ahead email, so they're only
+       selectable when "Weekly look-ahead" is checked. Unchecking it clears +
+       disables the topic boxes and explains why (per product rule: no weekly
+       summary → no event notices). */
+    (function topicGating() {
+      const weekly   = document.getElementById('hbFreqWeekly');
+      const group    = document.getElementById('hbTopicGroup');
+      const note     = document.getElementById('hbTopicGateNote');
+      const topicCbs = document.querySelectorAll('.hb-topic-cb');
+      if (!weekly || !topicCbs.length) return;
+      function sync() {
+        const on = weekly.checked;
+        topicCbs.forEach(function (cb) { if (!on) cb.checked = false; cb.disabled = !on; });
+        if (group) group.style.opacity = on ? '' : '0.55';
+        if (note)  note.style.display  = on ? 'none' : '';
+      }
+      weekly.addEventListener('change', sync);
+      sync();
+    })();
+
     /* ── SIGNUP submit ── */
     document.getElementById('hbSignupSubmit').addEventListener('click', function () {
       const btn       = this;
@@ -1913,19 +1940,24 @@
         // existing Mailchimp subscription never blocks getting a Hub-Bub login.
         if (!ok) console.warn('Hub-Bub signup: Mailchimp (' + (msg||'unknown') + ') — proceeding to Firebase.');
 
-        // Event Topics opt-ins — best-effort, fire-and-forget. The member was
-        // just created (or already existed), so the Worker PATCHes by email and
-        // resolves each topic name → real Mailchimp interest ID. CORS-locked to
-        // the live site; failure is non-fatal (topics just stay unset).
-        if (topics.length) {
-          const subs = {}; topics.forEach(function (t) { subs[t] = true; });
-          try {
-            fetch('https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/update-profile', {
-              method: 'POST', headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ email: email, subs: subs })
-            }).catch(function () {});
-          } catch (e) {}
-        }
+        // Subscriptions + Event Topics — ALL set by NAME via the Worker, which
+        // resolves each name → the real Mailchimp interest ID and PATCHes the
+        // member. This is the reliable path: the JSONP group[][] params above
+        // use web IDs the API ignores. The member was just created (or already
+        // existed), so PATCH-by-email works. Always sent (not just when topics
+        // are chosen) so Newsletter/Weekly Update actually attach. Event topics
+        // are only included when the weekly email is on (they ride in it).
+        const subs = {
+          weekly: digestFreq === 'weekly',
+          newsletter: includeNewsletter,
+        };
+        if (digestFreq === 'weekly') topics.forEach(function (t) { subs[t] = true; });
+        try {
+          fetch('https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/update-profile', {
+            method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email, subs: subs })
+          }).catch(function () {});
+        } catch (e) {}
 
         // Step 2: Firebase Auth — create account (auto-signs the user in)
         waitForFirebase(function () {
