@@ -1,6 +1,6 @@
 {
-  "hash": "480d2b19a99861b56dbfdffad121d5299d591f47",
-  "lede": "The big question this week is gondola funding — the Gondola Subcommittee meets Monday to hash out how to secure $18 million for federal grant requirements by fall, with local partners needing to formalize commitments soon. Meanwhile, Mountain Village votes Tuesday on fast-tracking affordable housing projects for state Prop 123 funding, and county commissioners interview candidates for planning boards.",
+  "hash": "4dbd729d38cc4ea8d08b3321a1c6efca6102e699",
+  "lede": "The biggest item this week is Mountain Village Council's Wednesday meeting, where they'll review an independent investigation report and vote on expedited affordable housing policies. Meanwhile, Telluride's Gondola Subcommittee meets Sunday to discuss the $18 million commitment deadline for federal funding, and county commissioners interview planning board candidates Tuesday.",
   "notable": [
     {
       "id": 2,
@@ -8,11 +8,15 @@
     },
     {
       "id": 5,
-      "stake": "Vote on expedited review process for affordable housing projects"
+      "stake": "Council votes on expedited affordable housing review policies"
     },
     {
       "id": 6,
-      "stake": "Interviews for Board of Adjustment and Planning Commission appointments"
+      "stake": "Interviews for Board of Adjustment and Planning Commission positions"
+    },
+    {
+      "id": 9,
+      "stake": "Fee increase vote for winter recreation programs"
     }
   ]
 }
