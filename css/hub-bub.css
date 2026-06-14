@@ -290,7 +290,7 @@
       font-size: 0.88rem; color: #444; line-height: 1.6; margin-bottom: 10px;
       white-space: pre-wrap; word-wrap: break-word;
     }
-    .hb-post-body.truncated { max-height: 120px; overflow: hidden; position: relative; }
+    .hb-post-body.truncated { max-height: 240px; overflow: hidden; position: relative; }
     .hb-post-body.truncated::after {
       content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40px;
       background: linear-gradient(transparent, #fff);
@@ -350,6 +350,15 @@
       font-size: 0.82rem; color: #888; cursor: pointer; padding: 4px 8px; border-radius: 6px;
     }
     .hb-reply-toggle:hover { background: var(--sand); color: var(--forest); }
+    /* Prominent primary CTA — encourage replies more than the subtle "N replies" toggle */
+    .hb-reply-here {
+      -webkit-appearance: none; appearance: none;  /* else native button chrome hides the fill */
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--forest); color: #fff; border: none;
+      font-size: 0.82rem; font-weight: 700; cursor: pointer;
+      padding: 7px 16px; border-radius: 16px; transition: background 0.15s;
+    }
+    .hb-reply-here:hover { background: #2a5347; }
     .hb-admin-delete-btn {
       display: flex; align-items: center; gap: 4px; background: none; border: 1.5px solid #e53935;
       font-size: 0.78rem; color: #e53935; cursor: pointer; padding: 4px 10px;

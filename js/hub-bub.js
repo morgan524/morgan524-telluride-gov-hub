@@ -972,8 +972,8 @@
 
     var initial = (post.authorName || '?').charAt(0).toUpperCase();
     var timeStr = post.createdAt ? hbTimeAgo(post.createdAt.toDate ? post.createdAt.toDate() : new Date(post.createdAt)) : 'just now';
-    var isLong = post.body && post.body.length > 400;
-    var bodyText = isLong ? post.body.substring(0, 400) + '...' : (post.body || '');
+    var isLong = post.body && post.body.length > 900;
+    var bodyText = isLong ? post.body.substring(0, 900) + '...' : (post.body || '');
     var myUid = hbUser ? hbUser.uid : '';
     var votedUp = post.upvoters && post.upvoters.indexOf(myUid) !== -1;
     var votedDown = post.downvoters && post.downvoters.indexOf(myUid) !== -1;
@@ -1160,6 +1160,7 @@
       nextStepHtml +
       reactionsHtml +
       '<div class="hb-post-foot">' +
+        '<button class="hb-reply-here" onclick="hbReplyHere(\'' + post.id + '\')">↩ Reply Here</button>' +
         '<button class="hb-reply-toggle" onclick="hbToggleReplies(\'' + post.id + '\')">💬 <span>' + (post.replyCount || 0) + '</span> replies</button>' +
       '</div>' +
       '<div class="hb-replies" id="hb-replies-' + post.id + '" style="display:none;"></div>';
@@ -1389,6 +1390,28 @@
     } else {
       container.style.display = 'none';
     }
+  };
+  // "Reply Here" CTA — always OPENS the replies area (never toggles it shut),
+  // then focuses the reply box. Replies load async, so poll briefly for the
+  // textarea before focusing/scrolling to it.
+  window.hbReplyHere = function(postId) {
+    var container = document.getElementById('hb-replies-' + postId);
+    if (!container) return;
+    if (container.style.display === 'none') {
+      container.style.display = '';
+      hbLoadReplies(postId, container);
+    }
+    var tries = 0;
+    var t = setInterval(function() {
+      var ta = document.getElementById('hb-reply-text-' + postId);
+      if (ta) {
+        clearInterval(t);
+        ta.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        ta.focus();
+      } else if (++tries > 40) {
+        clearInterval(t);
+      }
+    }, 50);
   };
   function hbLoadReplies(postId, container) {
     if (!hbFirebaseReady) {
