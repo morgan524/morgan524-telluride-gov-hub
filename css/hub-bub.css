@@ -1,4 +1,8 @@
     /* ═══════════ HUB-BUB FORUM STYLES ═══════════ */
+    /* Primary action-button green (lighter than --forest). Used by the Reply
+       button, Reply Here CTA, and the main "Post to Hub-Bub" button so they
+       all match. Adjust these two values to retune the shade. */
+    :root { --hb-action-green: #4a9079; --hb-action-green-h: #3f7d68; }
     .main-layout.hubbub-active .sidebar,
     .main-layout.hubbub-active .expand-pill-right,
     .main-layout.hubbub-active .left-sidebar {
@@ -145,7 +149,8 @@
     }
     .hb-compose-actions .hb-attach-btn:hover { border-color: var(--forest); color: var(--forest); }
     .hb-compose-actions .hb-post-btn {
-      background: var(--forest); color: #fff; border: none; border-radius: 8px;
+      -webkit-appearance: none; appearance: none;
+      background: var(--hb-action-green); color: #fff; border: none; border-radius: 8px;
       padding: 8px 20px; font-size: 0.84rem; font-weight: 700; cursor: pointer;
     }
     .hb-compose-actions .hb-post-btn:hover { opacity: 0.88; }
@@ -354,11 +359,11 @@
     .hb-reply-here {
       -webkit-appearance: none; appearance: none;  /* else native button chrome hides the fill */
       display: inline-flex; align-items: center; gap: 5px;
-      background: var(--forest); color: #fff; border: none;
+      background: var(--hb-action-green); color: #fff; border: none;
       font-size: 0.82rem; font-weight: 700; cursor: pointer;
       padding: 7px 16px; border-radius: 16px; transition: background 0.15s;
     }
-    .hb-reply-here:hover { background: #2a5347; }
+    .hb-reply-here:hover { background: var(--hb-action-green-h); }
     .hb-admin-delete-btn {
       display: flex; align-items: center; gap: 4px; background: none; border: 1.5px solid #e53935;
       font-size: 0.78rem; color: #e53935; cursor: pointer; padding: 4px 10px;
@@ -379,17 +384,38 @@
     .hb-reply-author { font-weight: 700; font-size: 0.8rem; color: var(--forest); }
     .hb-reply-time { font-size: 0.74rem; color: #aaa; }
     .hb-reply-body { font-size: 0.84rem; color: #444; line-height: 1.5; margin-left: 34px; }
-    .hb-reply-compose { display: flex; gap: 8px; margin-top: 8px; align-items: flex-start; }
+    .hb-reply-compose-wrap { margin-top: 8px; }
+    /* align-items:center → the action buttons sit shorter than the textarea
+       but vertically centered alongside it. */
+    .hb-reply-compose { display: flex; gap: 8px; align-items: center; }
     .hb-reply-compose textarea {
-      flex: 1; min-height: 36px; border: 1.5px solid var(--line); border-radius: 8px;
-      padding: 8px 10px; font-size: 0.82rem; font-family: inherit; resize: none;
+      flex: 1; min-height: 40px; border: 1.5px solid var(--line); border-radius: 8px;
+      padding: 9px 11px; font-size: 0.82rem; font-family: inherit; resize: none;
       outline: none; box-sizing: border-box;
     }
     .hb-reply-compose textarea:focus { border-color: var(--forest); }
-    .hb-reply-compose button {
-      background: var(--forest); color: #fff; border: none; border-radius: 8px;
-      padding: 8px 14px; font-size: 0.8rem; font-weight: 600; cursor: pointer; white-space: nowrap;
+    .hb-reply-actions { display: flex; align-items: center; gap: 6px; }
+    /* compact icon attach buttons: photo / document / link */
+    .hb-reply-attach {
+      -webkit-appearance: none; appearance: none;
+      background: #fff; border: 1.5px solid var(--line); border-radius: 8px;
+      padding: 6px 9px; font-size: 0.98rem; line-height: 1; cursor: pointer;
     }
+    .hb-reply-attach:hover { border-color: var(--hb-action-green); }
+    /* primary Reply button — lighter green, shorter than the textarea, centered */
+    .hb-reply-send {
+      -webkit-appearance: none; appearance: none;
+      background: var(--hb-action-green); color: #fff; border: none; border-radius: 8px;
+      padding: 8px 16px; font-size: 0.82rem; font-weight: 700; cursor: pointer; white-space: nowrap;
+    }
+    .hb-reply-send:hover { background: var(--hb-action-green-h); }
+    .hb-reply-send:disabled { opacity: 0.6; cursor: default; }
+    /* selected photo / doc chips below the reply row */
+    .hb-reply-attach-preview { display: flex; flex-wrap: wrap; gap: 6px; }
+    .hb-reply-attach-preview:not(:empty) { margin-top: 6px; }
+    /* rendered reply attachments */
+    .hb-reply-image img { max-width: 240px; max-height: 190px; border-radius: 8px; margin-top: 6px; display: block; }
+    .hb-reply-attachments { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
 
     /* Sort bar */
     .hb-sort-bar {

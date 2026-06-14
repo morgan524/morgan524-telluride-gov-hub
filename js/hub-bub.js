@@ -1430,6 +1430,8 @@
           var div = document.createElement('div');
           div.className = 'hb-reply';
           var _rLinkHtml=r.linkUrl?'<div class="hb-reply-link-preview" data-link-url="'+hbEsc(r.linkUrl)+'"></div>':'';
+          var _rImgHtml=r.imageUrl?'<a class="hb-reply-image" href="'+hbEsc(r.imageUrl)+'" target="_blank" rel="noopener"><img src="'+hbEsc(r.imageUrl)+'" alt="Reply photo" loading="lazy"></a>':'';
+          var _rDocsHtml=(r.attachments&&r.attachments.length)?'<div class="hb-reply-attachments">'+r.attachments.map(function(a){var ic=(a.type||'').indexOf('image/')===0?'🖼️':'📄';return '<a class="hb-post-attach" href="'+hbEsc(a.url)+'" target="_blank" rel="noopener">'+ic+' '+hbEsc(a.name||'attachment')+'</a>';}).join('')+'</div>':'';
           div.innerHTML=
             '<div class="hb-reply-head">'+
               hbAvatarHtml(r.authorName, r.authorPhoto, r.authorIcon, 'hb-reply-avatar')+
@@ -1437,7 +1439,7 @@
               '<span class="hb-reply-time">'+time+'</span>'+
             '</div>'+
             '<div class="hb-reply-body">'+hbEsc(r.body||'')+'</div>'+
-            _rLinkHtml;
+            _rImgHtml+_rDocsHtml+_rLinkHtml;
           container.appendChild(div);
           if(r.linkUrl){
             (function(url,el){
@@ -1452,22 +1454,66 @@
         console.error('Load replies error:', err);
       });
   }
+  // Per-reply pending uploads, keyed by postId (multiple reply composers can be
+  // open at once, so this can't be a single global like the main composer's).
+  var hbReplyPending = {};
+  function hbReplyState(postId) {
+    if (!hbReplyPending[postId]) hbReplyPending[postId] = { photo: null, attachments: [] };
+    return hbReplyPending[postId];
+  }
   function hbAddReplyCompose(postId, container) {
+    hbReplyPending[postId] = { photo: null, attachments: [] };
     var div = document.createElement('div');
-    div.className = 'hb-reply-compose';
+    div.className = 'hb-reply-compose-wrap';
     div.innerHTML =
-      '<textarea placeholder="Write a reply..." id="hb-reply-text-' + postId + '"></textarea>' +
+      '<div class="hb-reply-compose">' +
+        '<textarea placeholder="Write a reply..." id="hb-reply-text-' + postId + '"></textarea>' +
+        '<div class="hb-reply-actions">' +
+          '<button type="button" class="hb-reply-attach" onclick="hbReplyTriggerPhoto(\'' + postId + '\')" title="Add a photo (JPG, PNG, GIF, WebP · max 5 MB)">📷</button>' +
+          '<button type="button" class="hb-reply-attach" onclick="hbReplyTriggerDoc(\'' + postId + '\')" title="Attach a document (PDF, Word, image · max ' + HB_DOC_MAX_MB + ' MB)">📄</button>' +
+          '<button type="button" class="hb-reply-attach" id="hb-reply-link-btn-' + postId + '" onclick="hbToggleReplyUrl(\'' + postId + '\')" title="Add a link">🔗</button>' +
+          '<button type="button" class="hb-reply-send" id="hb-reply-send-' + postId + '" onclick="hbPostReply(\'' + postId + '\')">Reply</button>' +
+        '</div>' +
+      '</div>' +
+      '<input type="file" id="hb-reply-photo-input-' + postId + '" accept="image/png,image/jpeg,image/gif,image/webp" style="display:none;" onchange="hbReplyHandlePhoto(\'' + postId + '\', this)">' +
+      '<input type="file" id="hb-reply-doc-input-' + postId + '" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg,.gif,.webp" multiple style="display:none;" onchange="hbReplyHandleDoc(\'' + postId + '\', this)">' +
+      '<div class="hb-reply-attach-preview" id="hb-reply-attach-preview-' + postId + '"></div>' +
       '<div class="hb-reply-url-row" id="hb-reply-url-row-' + postId + '" style="display:none;">' +
         '<input type="url" class="hb-reply-url-input" id="hb-reply-url-' + postId + '"' +
         ' placeholder="https://… — the page image will appear with your reply">' +
         '<div class="hb-link-warning">⚠️ Social media links won’t show any image from the post, but you can add the link if you like.</div>' +
-      '</div>' +
-      '<div class="hb-reply-actions">' +
-        '<button class="hb-reply-link-btn" id="hb-reply-link-btn-' + postId + '"' +
-        ' onclick="hbToggleReplyUrl(\'' + postId + '\')" title="Add a URL">🔗 Add Link</button>' +
-        '<button onclick="hbPostReply(\'' + postId + '\')">Reply</button>' +
       '</div>';
     container.appendChild(div);
+  }
+  // ── Reply attachments (photo + document), mirroring the main composer ──
+  window.hbReplyTriggerPhoto = function(postId) { var i = document.getElementById('hb-reply-photo-input-' + postId); if (i) i.click(); };
+  window.hbReplyHandlePhoto = function(postId, input) {
+    var file = input.files && input.files[0]; if (!file) return;
+    if (!file.type.startsWith('image/')) { alert('Please select an image file (PNG, JPG, GIF, or WebP).'); input.value = ''; return; }
+    if (file.size > 5 * 1024 * 1024) { alert('Image is too large (max 5 MB). Please choose a smaller photo.'); input.value = ''; return; }
+    hbReplyState(postId).photo = file; input.value = ''; hbRenderReplyAttach(postId);
+  };
+  window.hbReplyRemovePhoto = function(postId) { hbReplyState(postId).photo = null; hbRenderReplyAttach(postId); };
+  window.hbReplyTriggerDoc = function(postId) { var i = document.getElementById('hb-reply-doc-input-' + postId); if (i) i.click(); };
+  window.hbReplyHandleDoc = function(postId, input) {
+    var st = hbReplyState(postId);
+    Array.from(input.files).forEach(function(file) {
+      if (!hbIsAllowedUpload(file)) { alert('"' + file.name + '" can\'t be attached. Allowed: images (JPG/PNG/GIF/WebP), PDF, Word, and text documents.'); return; }
+      if (file.size > HB_DOC_MAX_MB * 1024 * 1024) { alert('File "' + file.name + '" is too large (max ' + HB_DOC_MAX_MB + ' MB).'); return; }
+      st.attachments.push(file);
+    });
+    input.value = ''; hbRenderReplyAttach(postId);
+  };
+  window.hbReplyRemoveAttach = function(postId, idx) { hbReplyState(postId).attachments.splice(idx, 1); hbRenderReplyAttach(postId); };
+  function hbRenderReplyAttach(postId) {
+    var c = document.getElementById('hb-reply-attach-preview-' + postId); if (!c) return;
+    var st = hbReplyState(postId); var html = '';
+    if (st.photo) html += '<div class="hb-attach-item">🖼️ ' + hbEsc(st.photo.name) + ' <span class="hb-remove-attach" onclick="hbReplyRemovePhoto(\'' + postId + '\')">✕</span></div>';
+    st.attachments.forEach(function(f, i) {
+      var icon = (f.type || '').startsWith('image/') ? '🖼️' : '📄';
+      html += '<div class="hb-attach-item">' + icon + ' ' + hbEsc(f.name) + ' <span class="hb-remove-attach" onclick="hbReplyRemoveAttach(\'' + postId + '\',' + i + ')">✕</span></div>';
+    });
+    c.innerHTML = html;
   }
   window.hbToggleReplyUrl = function(postId) {
     var row=document.getElementById('hb-reply-url-row-'+postId);
@@ -1510,20 +1556,36 @@
 
     bodyPromise.then(function(finalBody) {
       if (!finalBody) return;
-      var btn = textarea.nextElementSibling;
-      btn.disabled = true;
-      btn.textContent = '...';
-      db.collection('posts').doc(postId).collection('replies').add({
-        // See note in createPost — rules require authorUid; authorId kept for
-        // any reader that still looks for it.
-        authorUid: hbUser.uid,
-        authorId: hbUser.uid,
-        authorName: hbResolveName(hbUser),
-        authorPhoto: hbUserAvatar.photo || null,
-        authorIcon: hbUserAvatar.icon || null,
-        body: finalBody,
-        linkUrl: replyLinkUrl || null,
-        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+      var btn = document.getElementById('hb-reply-send-' + postId);
+      if (btn) { btn.disabled = true; btn.textContent = '...'; }
+      // Upload the reply's photo + document attachments first (same Storage
+      // path + pattern as the main composer), then create the reply doc.
+      var st = hbReplyState(postId);
+      var photoPromise = st.photo
+        ? storage.ref('hub-bub/' + hbUser.uid + '/reply_photo_' + Date.now() + '_' + st.photo.name)
+            .put(st.photo).then(function(snap) { return snap.ref.getDownloadURL(); })
+        : Promise.resolve(null);
+      var uploadPromises = st.attachments.map(function(file) {
+        return storage.ref('hub-bub/' + hbUser.uid + '/reply_' + Date.now() + '_' + file.name)
+          .put(file).then(function(snap) {
+            return snap.ref.getDownloadURL().then(function(url) { return { name: file.name, url: url, type: file.type }; });
+          });
+      });
+      Promise.all([photoPromise, Promise.all(uploadPromises)]).then(function(results) {
+        return db.collection('posts').doc(postId).collection('replies').add({
+          // See note in createPost — rules require authorUid; authorId kept for
+          // any reader that still looks for it.
+          authorUid: hbUser.uid,
+          authorId: hbUser.uid,
+          authorName: hbResolveName(hbUser),
+          authorPhoto: hbUserAvatar.photo || null,
+          authorIcon: hbUserAvatar.icon || null,
+          body: finalBody,
+          linkUrl: replyLinkUrl || null,
+          imageUrl: results[0] || null,
+          attachments: results[1] || [],
+          createdAt: firebase.firestore.FieldValue.serverTimestamp()
+        });
       }).then(function() {
         // Increment reply count on parent post. Allowed by firestore.rules
         // Case B (counter allow-list) for any verified user.
@@ -1535,7 +1597,8 @@
         if(_rli)_rli.value='';
         var _rrr=document.getElementById('hb-reply-url-row-'+postId),_rlb=document.getElementById('hb-reply-link-btn-'+postId);
         if(_rrr)_rrr.style.display='none'; if(_rlb)_rlb.style.background='';
-        btn.disabled=false; btn.textContent='Reply';
+        hbReplyPending[postId] = { photo: null, attachments: [] };
+        if(btn){ btn.disabled=false; btn.textContent='Reply'; }
         hbLoadReplies(postId,document.getElementById('hb-replies-'+postId));
         // Update local cache
         var post = hbPosts.find(function(p) { return p.id === postId; });
@@ -1558,8 +1621,7 @@
         if (err && err.code) msg += ' (' + err.code + ')';
         if (err && err.message) msg += '\n\n' + err.message;
         alert(msg);
-        btn.disabled = false;
-        btn.textContent = 'Reply';
+        if (btn) { btn.disabled = false; btn.textContent = 'Reply'; }
       });
     });
   };
