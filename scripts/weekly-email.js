@@ -189,7 +189,31 @@ function bodyDesc(name, src) {
   return 'Regular public meeting — the agenda posts closer to the date on the Gov-Hub.';
 }
 const isWeak = (s) => !s || s.length < 32 || /agenda (tbd|not available|not yet|not posted)|hasn.t been posted|isn.t available|not available yet|no agenda|list of past meetings|meeting scheduled for|^regular meeting agenda/i.test(s);
-const trunc = (s, n) => { s = String(s || '').replace(/\s+/g, ' ').trim(); if (s.length <= n) return s; const c = s.slice(0, n); const d = c.lastIndexOf('. '); return (d > n * 0.5 ? c.slice(0, d + 1) : c.replace(/\s\S*$/, '') + '…'); };
+// Truncate without ever ending mid-sentence. Prefer cutting at a sentence
+// boundary; otherwise drop the dangling (often source-truncated) last word and
+// mark continuation with an ellipsis. This also cleans up source descriptions
+// that arrive already cut mid-thought (e.g. "… featuring The North").
+const sentenceEnd = (str) => Math.max(str.lastIndexOf('. '), str.lastIndexOf('! '), str.lastIndexOf('? '));
+const trunc = (s, n) => {
+  // Drop a source-supplied trailing truncation marker ("…" or "..") so it can't
+  // masquerade as a real sentence end and leave a cut word like "the mus...".
+  s = String(s || '').replace(/\s+/g, ' ').trim().replace(/\s*(?:\.{2,}|…)+$/, '').trim();
+  let out = s;
+  if (s.length > n) {
+    const w = s.slice(0, n);
+    const end = sentenceEnd(w);
+    if (end >= n * 0.5) return w.slice(0, end + 1).trim();   // clean full-sentence cut
+    out = w.replace(/\s+\S*$/, '');                          // drop the partial last word
+  }
+  // If we'd end mid-sentence (no terminal punctuation), back off to the last
+  // complete sentence; if there isn't one, drop the dangling word and add "…".
+  if (!/[.!?…]$/.test(out)) {
+    const end = sentenceEnd(out);
+    if (end >= out.length * 0.5) out = out.slice(0, end + 1).trim();
+    else out = out.replace(/\s+\S*$/, '').replace(/[,;:]+$/, '') + '…';
+  }
+  return out;
+};
 // The summary is limited to the four bodies whose decisions draw public
 // comment: Town Council (Telluride + Mountain Village), the County Commissioners
 // (BOCC), the Planning Commissions / P&Z boards, and HARC. Everything else
@@ -275,7 +299,7 @@ const evRow = (e) => {
   const loc = e.location ? `<span style="font-size:12px;color:#7a8a85;margin-left:8px;">📍 ${esc(trunc(e.location, 38))}</span>` : '';
   const text = `${badge}${loc}`
     + `<div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;"><a href="${esc(u)}" style="color:#1a2e29;text-decoration:none;">${esc(e.title)}</a></div>`
-    + `<div style="font-size:13.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${esc(trunc(e.summary, 175))}</div>`
+    + `<div style="font-size:13.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${esc(trunc(e.summary, 200))}</div>`
     + `<a href="${esc(u)}" style="color:${EV_ACCENT};text-decoration:none;border-bottom:1px solid ${EV_ACCENT};font-size:12.5px;font-weight:600;">Details →</a>`;
   const img = (e.img && /^https?:\/\//.test(e.img))
     ? `<td class="ev-img-cell" width="78" valign="top" style="padding-right:14px;"><img src="${esc(e.img)}" width="78" height="78" alt="" style="display:block;width:78px;height:78px;border-radius:6px;border:0;object-fit:cover;background:#eef1ee;"></td>`

@@ -1,5 +1,5 @@
 {
   "_comment": "The 'Week Ahead' intro for the weekly email. Edit this file — no code change needed. Each key is the week-start date (the Monday the email covers, YYYY-MM-DD); the Saturday workflow computes that automatically. Add a new dated entry before each week's send. If a week has no entry, the email uses 'default'.",
   "default": "A fresh week across the box canyon — public meetings, community events, and a few ways to get involved are all below.",
-  "2026-06-15": "The government calendar bunches up on Wednesday the 17th — Mountain Village Town Council, the San Miguel County Commissioners, and Telluride’s HARC all meet the same day, so if land use and what gets built next is your thing, that’s the day to show up. Norwood’s Planning and Zoning Commission kicks the week off on Monday, Ridgway’s Town Council holds a special meeting Tuesday, and summer’s hitting full stride across the box canyon."
+  "2026-06-15": "The government calendar bunches up on Wednesday the 17th — Mountain Village Town Council, the San Miguel County Commissioners, and Telluride’s HARC all meet the same day, so if land use and what gets built next is your thing, that’s the day to show up. Norwood’s Planning and Zoning Commission kicks the week off on Monday, Ridgway’s Town Council holds a special meeting Tuesday, and summer is hitting full stride across the box canyon."
 }
