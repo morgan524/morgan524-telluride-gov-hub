@@ -1680,10 +1680,10 @@
        });
      }
 
-     // ── Long-running events sidebar ─────────────────────────────────────
-     //    Multi-week events (span >= 7 days) diverted out of the grid by
-     //    finishAndRender(). Shows the full date range (e.g. "May 31 – June
-     //    28, 2026") with the same info the grid card carries.
+     // ── Multi-day / ongoing events sidebar ──────────────────────────────
+     //    Any multi-day event (span >= 1 day, non-festival) is diverted out of
+     //    the grid by finishAndRender(). Shows the full date range (e.g. "May
+     //    31 – June 28, 2026") with the same info the grid card carries.
      function googleCalUrlAllDay(title, startIso, endIso, location, details) {
        const stripDash = s => String(s).replace(/-/g, '');
        const [ey, em, ed] = String(endIso).split('-').map(Number);
@@ -1862,12 +1862,13 @@
                  if (!isNaN(ed)) {
                    endDateStr = ed.toLocaleDateString('en-CA', { timeZone: 'America/Denver' });
                    endDiff = (new Date(endDateStr + 'T00:00:00') - today) / 86400000;
-                   // "Long-running" = spans a week or more (e.g. the 4-week
-                   // Rotary Hikeathon, May 31–June 28). These render in the
-                   // left sidebar instead of as a single date-pinned card in
-                   // the grid. Festivals have their own sidebar, so exclude.
+                   // Any MULTI-DAY event (spans more than one calendar day —
+                   // e.g. the 4-week Rotary Hikeathon or a 3-night concert run)
+                   // renders in the left "Ongoing Events" sidebar instead of as
+                   // a single date-pinned grid card. The grid stays single-day
+                   // only. Festivals have their own sidebar, so exclude them here.
                    const spanDays = (new Date(endDateStr + 'T00:00:00') - new Date(dateStr + 'T00:00:00')) / 86400000;
-                   isLongRunning = !e.isFestival && spanDays >= 7;
+                   isLongRunning = !e.isFestival && spanDays >= 1;
                  }
                }
                if (endDiff < 0 || diff > maxDays) return;
@@ -1979,8 +1980,8 @@
                  keys.forEach(k => seenKeys.add(k));
                  return true;
                });
-               // Divert long-running (multi-week) events into the left
-               // sidebar; the grid shows only normal date-pinned events.
+               // Divert every multi-day event into the left sidebar; the
+               // grid shows only single-day, date-pinned events.
                renderLongRunningSidebar(deduped.filter(i => i.isLongRunning));
                if (deduped.length > 0) {
                  EVENTS.length = 0;
