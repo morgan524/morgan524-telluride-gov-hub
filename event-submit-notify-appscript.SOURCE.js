@@ -15,6 +15,12 @@
  *   safe to redeploy at any time. If this web app is down, submissions still
  *   land in the queue — only the courtesy email is skipped.
  *
+ *   It ALSO sends a thank-you/confirmation to the SUBMITTER when the admin
+ *   approves an event or org (event-review.html / org-review.html POST
+ *   { action:'approval', kind, email, name, title } on Approve). See
+ *   sendApprovalThankYou() + testApproval(). Approve-only; never on deny; only
+ *   when the submission included an email.
+ *
  * ──────────────────────────────────────────────────────────────────────────
  * DEPLOY (one time — do this in the Google account that should SEND the mail;
  *         info@livabletelluride.org is ideal so the From: matches the domain)
@@ -47,6 +53,8 @@
 var NOTIFY_TO      = 'info@livabletelluride.org';
 var REVIEW_URL     = 'https://livabletelluride.org/event-review.html';
 var SENDER_NAME    = 'Livable Telluride';
+var EVENTS_URL     = 'https://livabletelluride.org/events.html';
+var ORGS_URL       = 'https://livabletelluride.org/local-orgs.html';
 
 /** Web-app entry point — the browser POSTs the submission JSON here. */
 function doPost(e) {
@@ -55,7 +63,13 @@ function doPost(e) {
     if (e && e.postData && e.postData.contents) {
       data = JSON.parse(e.postData.contents);
     }
-    sendNotification(data);
+    if (data && data.action === 'approval') {
+      // Submitter thank-you, sent from event-review.html / org-review.html on Approve.
+      sendApprovalThankYou(data);
+    } else {
+      // New-submission heads-up to the admin (the original behavior).
+      sendNotification(data);
+    }
     return _json({ ok: true });
   } catch (err) {
     return _json({ ok: false, error: String(err) });
@@ -152,6 +166,64 @@ function sendNotification(d) {
     body:     plain,
     replyTo:  (replyTo && /\S+@\S+\.\S+/.test(replyTo)) ? String(replyTo) : undefined
   });
+}
+
+/**
+ * Submitter THANK-YOU / confirmation, sent when the admin approves an event or
+ * org at event-review.html / org-review.html. Payload:
+ *   { action:'approval', kind:'event'|'org', email, name, title }
+ * Sends only when a valid submitter email is present; replies route to info@.
+ */
+function sendApprovalThankYou(d) {
+  var email = (d && d.email ? String(d.email) : '').trim();
+  if (!/\S+@\S+\.\S+/.test(email)) return;   // no/invalid submitter email → nothing to send
+  var isOrg   = (d.kind === 'org');
+  var name    = (d.name ? String(d.name).trim() : '');
+  var title   = (d.title ? String(d.title).trim() : (isOrg ? 'your organization' : 'your event'));
+  var where   = isOrg ? 'the Local Organizations directory' : 'the community events calendar';
+  var pageUrl = isOrg ? ORGS_URL : EVENTS_URL;
+  var subject = isOrg
+    ? '✅ You’re in the directory — thanks for posting to Livable Telluride'
+    : '✅ You’re on the calendar — thanks for posting to Livable Telluride';
+  var greeting = name ? ('Hi ' + name + ',') : 'Hi there,';
+  var cta = isOrg ? 'See the directory →' : 'See it on the calendar →';
+
+  var html = ''
+    + '<div style="font-family:Georgia,\'Times New Roman\',serif;font-size:15px;color:#1a2e29;line-height:1.6;max-width:560px;">'
+    + '<p style="margin:0 0 14px;">' + _esc(greeting) + '</p>'
+    + '<p style="margin:0 0 14px;">Thank you for submitting <strong>' + _esc(title) + '</strong> to Livable Telluride. '
+    + 'Good news — it’s been <strong>approved</strong> and will appear in ' + where + ' shortly '
+    + '(usually within a few minutes).</p>'
+    + '<p style="margin:0 0 20px;"><a href="' + _esc(pageUrl) + '" '
+    + 'style="display:inline-block;background:#1f5130;color:#ffffff;text-decoration:none;padding:11px 22px;border-radius:999px;'
+    + 'font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:14px;">' + _esc(cta) + '</a></p>'
+    + '<p style="margin:0 0 14px;">We’re an independent, reader-funded nonprofit keeping the box canyon informed — '
+    + 'please post again anytime you have something for the community.</p>'
+    + '<p style="margin:18px 0 0;color:#5a6b64;">With gratitude,<br><strong>Livable Telluride</strong><br>'
+    + '<a href="https://livabletelluride.org" style="color:#5a6b64;">livabletelluride.org</a></p>'
+    + '</div>';
+
+  var plain = greeting + '\n\n'
+    + 'Thank you for submitting "' + title + '" to Livable Telluride. It has been approved and will appear in '
+    + where + ' shortly (usually within a few minutes).\n\n'
+    + cta.replace(' →', '') + ': ' + pageUrl + '\n\n'
+    + 'We are an independent, reader-funded nonprofit keeping the box canyon informed - please post again anytime.\n\n'
+    + 'With gratitude,\nLivable Telluride\nhttps://livabletelluride.org';
+
+  MailApp.sendEmail({
+    to:       email,
+    subject:  subject,
+    name:     SENDER_NAME,
+    htmlBody: html,
+    body:     plain,
+    replyTo:  NOTIFY_TO   // submitter replies land at info@
+  });
+}
+
+/** Run this manually from the editor to test the SUBMITTER thank-you (sends to
+ *  NOTIFY_TO so you see it yourself). Flip kind to 'org' to test that variant. */
+function testApproval() {
+  sendApprovalThankYou({ action: 'approval', kind: 'event', email: NOTIFY_TO, name: 'Jane', title: 'TEST — Community Potluck' });
 }
 
 /** Run this manually from the editor to test EVENT deliverability. */

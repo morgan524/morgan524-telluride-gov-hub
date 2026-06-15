@@ -88,7 +88,7 @@
       const logo = safeUrl(d.logoUrl);
       const web = safeUrl(d.website);
       const don = safeUrl(d.donate);
-      let h = '<div class="card" data-id="' + esc(id) + '">';
+      let h = '<div class="card" data-id="' + esc(id) + '" data-sub-email="' + esc(d.email || '') + '" data-sub-title="' + esc(d.name || '') + '">';
       if (logo) h += '<img class="card-logo" src="' + esc(logo) + '" alt="" onerror="this.style.display=\'none\'">';
       h += '<div class="card-body">';
       h += '<h2>' + (esc(d.name) || 'Unnamed organization') + '</h2>';
@@ -109,6 +109,20 @@
       return h;
     }
 
+    const NOTIFY_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbx0mroQH4gdRiOKI4xoCMjySCBF1vIqsPrvLJ-zIGa1RhoyhyD1pPiTG81DmAgQd5jj/exec';
+    // On Approve, ping the info@ Apps Script to email the SUBMITTER a thank-you /
+    // confirmation. Fire-and-forget; no-op when there's no contact email.
+    function notifyApproval(kind, email, title) {
+      if (!email || !/\S+@\S+\.\S+/.test(email)) return;
+      try {
+        fetch(NOTIFY_WEBAPP_URL, {
+          method: 'POST', mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ action: 'approval', kind: kind, email: email, name: '', title: title || '' })
+        }).catch(function () {});
+      } catch (e) {}
+    }
+
     function decide(id, status, btn) {
       const card = btn.closest('.card');
       card.querySelectorAll('button').forEach(b => b.disabled = true);
@@ -116,6 +130,7 @@
         status: status,
         reviewedAt: firebase.firestore.FieldValue.serverTimestamp()
       }).then(() => {
+        if (status === 'approved') notifyApproval('org', card.dataset.subEmail, card.dataset.subTitle);
         card.style.transition = 'opacity .3s'; card.style.opacity = '0.35';
         const note = document.createElement('div');
         note.style.cssText = 'padding:6px 24px 16px;font-weight:700;color:' + (status === 'approved' ? 'var(--forest)' : '#a33') + ';';

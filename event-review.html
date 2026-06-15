@@ -114,7 +114,7 @@
     function cardHtml(id, d) {
       const img = safeUrl(d.imageUrl);
       const url = safeUrl(d.url);
-      let h = '<div class="card" data-id="' + esc(id) + '">';
+      let h = '<div class="card" data-id="' + esc(id) + '" data-sub-email="' + esc(d.email || '') + '" data-sub-name="' + esc(d.name || '') + '">';
       h += '<div class="card-body">';
       // Every field is editable so you can fix anything (esp. the summary)
       // before publishing. Approve saves these values; Deny ignores them.
@@ -160,6 +160,20 @@
       return h;
     }
 
+    const NOTIFY_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbx0mroQH4gdRiOKI4xoCMjySCBF1vIqsPrvLJ-zIGa1RhoyhyD1pPiTG81DmAgQd5jj/exec';
+    // On Approve, ping the info@ Apps Script to email the SUBMITTER a thank-you /
+    // confirmation. Fire-and-forget; no-op when there's no submitter email.
+    function notifyApproval(kind, email, name, title) {
+      if (!email || !/\S+@\S+\.\S+/.test(email)) return;
+      try {
+        fetch(NOTIFY_WEBAPP_URL, {
+          method: 'POST', mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ action: 'approval', kind: kind, email: email, name: name || '', title: title || '' })
+        }).catch(function () {});
+      } catch (e) {}
+    }
+
     function decide(id, status, btn) {
       const card = btn.closest('.card');
       card.querySelectorAll('button').forEach(b => b.disabled = true);
@@ -174,6 +188,7 @@
         });
       }
       db.collection('event_submissions').doc(id).update(update).then(() => {
+        if (status === 'approved') notifyApproval('event', card.dataset.subEmail, card.dataset.subName, update.title);
         card.style.transition = 'opacity .3s'; card.style.opacity = '0.35';
         const note = document.createElement('div');
         note.style.cssText = 'padding:6px 24px 16px;font-weight:700;color:' + (status === 'approved' ? 'var(--forest)' : '#a33') + ';';
