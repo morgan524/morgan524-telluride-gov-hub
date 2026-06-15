@@ -1452,17 +1452,24 @@
         return false;
       };
       const todays = events.filter(happeningToday);
+      // An event genuinely dated today (or a marquee festival) should outrank a
+      // multi-day span that merely OVERLAPS today. Otherwise "Featured Today"
+      // can land on a span whose start date was days ago — it then reads as a
+      // stale/"yesterday" event even though it's technically still running.
+      const freshRank = (e) => (e.date === today || e.isFestival) ? 0 : 1;
       const byScore = (a, b) => (featuredScore(b) - featuredScore(a)) || ((featuredStartHour(a.time) || 99) - (featuredStartHour(b.time) || 99));
+      const byFreshThenScore = (a, b) => (freshRank(a) - freshRank(b)) || byScore(a, b);
       // Hand pins are a date-level override and only apply to the default view.
       if (!town || town === 'all') {
         const pin = FEATURED_PINS[today];
         if (pin) { const p = todays.find(e => pin.test(e.title || '')) || events.find(e => pin.test(e.title || '')); if (p) return p; }
         if (!todays.length) return null;
-        return todays.slice().sort(byScore)[0];
+        return todays.slice().sort(byFreshThenScore)[0];
       }
       if (!todays.length) return null;
       const target = TOWN_COORDS[town];
       return todays.slice().sort((a, b) => {
+        if (freshRank(a) !== freshRank(b)) return freshRank(a) - freshRank(b);  // today/festival before overlap-span
         const da = geoDist(eventCoord(a), target), db = geoDist(eventCoord(b), target);
         if (Math.abs(da - db) > 1e-6) return da - db;   // closest to the filter wins
         return byScore(a, b);                            // tie → popularity
@@ -1477,6 +1484,11 @@
       const h = featuredStartHour(e.time);
       const label = (h != null && h >= 16) ? 'Featured Tonight' : 'Featured Today';
       const safe = (s) => ltEsc(ltDecode(s || ''));
+      // Multi-day event still running today → show the range, never just the
+      // (possibly past) start date, so it never reads as "yesterday".
+      const feDate = (e.endDate && String(e.endDate) !== String(e.date))
+        ? formatLong(e.date) + ' – ' + formatLong(e.endDate)
+        : formatLong(e.date);
       const imgUrl = e.img || getFallbackImg(e);
       const sum = ltDecode(e.summary || '');
       const href = (e.href && e.href !== '#') ? e.href : '';
@@ -1487,7 +1499,7 @@
           '<div class="fe-body">' +
             '<span class="fe-badge">⭐ ' + label + '</span>' +
             '<h2>' + safe(e.title) + '</h2>' +
-            '<div class="fe-meta">📅 ' + safe(formatLong(e.date)) + (e.time ? ' · ' + safe(e.time) : '') + '</div>' +
+            '<div class="fe-meta">📅 ' + safe(feDate) + (e.time ? ' · ' + safe(e.time) : '') + '</div>' +
             (e.location ? '<div class="fe-meta">📍 ' + safe(e.location) + '</div>' : '') +
             (sum ? '<div class="fe-sum">' + ltEsc(sum.slice(0, 220)) + (sum.length > 220 ? '…' : '') + '</div>' : '') +
             '<div class="fe-actions">' +
