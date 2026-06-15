@@ -986,6 +986,13 @@
         .rc-go{background:#21443c;color:#fff;text-decoration:none;font-weight:700;font-size:0.85rem;padding:10px 18px;border-radius:999px;}
         .rc-cal{background:#b58a2c;color:#fff;text-decoration:none;font-weight:700;font-size:0.85rem;padding:10px 18px;border-radius:999px;}
         .rc-close{background:rgba(33,68,60,.08);color:#21443c;border:1px solid rgba(33,68,60,.15);font-weight:700;font-size:0.85rem;padding:10px 18px;border-radius:999px;cursor:pointer;}
+        /* Recurring view goes full-width: hide the left sidebar, filter moves on top */
+        .page-wrap.rc-full{grid-template-columns:1fr;}
+        .page-wrap.rc-full .sidebar{display:none;}
+        .rc-filter{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px;}
+        .rc-chip{border:1px solid #ddd6c8;background:#fdfbf6;color:#21443c;cursor:pointer;font-size:0.8rem;font-weight:700;padding:7px 14px;border-radius:999px;line-height:1;font-family:inherit;}
+        .rc-chip:hover{border-color:#2f564d;}
+        .rc-chip.active{background:#21443c;color:#fff;border-color:#21443c;}
       </style>
       <div id="featuredEvent" style="display:none;"></div>
 
@@ -1397,6 +1404,7 @@
     const RC_MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     const RC_DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
     const rcEsc = (s) => String(s==null?'':s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    const rcDecode = (function(){ const ta=document.createElement('textarea'); return (s) => { ta.innerHTML=String(s==null?'':s); return ta.value; }; })();
     const rcPad = (n) => String(n).padStart(2,'0');
     const rcDate = (iso) => { const p=String(iso).split('-'); return new Date(+p[0], +p[1]-1, +p[2], 12, 0, 0); };
     const rcIso = (d) => d.getFullYear()+'-'+rcPad(d.getMonth()+1)+'-'+rcPad(d.getDate());
@@ -1458,6 +1466,7 @@
       }).join('') || '<div class="rc-note">No recurring events in this area for these two weeks.</div>';
 
       host.innerHTML =
+        '<div class="rc-filter">'+TOWNS.map(t => '<button class="rc-chip'+(t.key===activeTown?' active':'')+'" data-rctown="'+t.key+'">'+rcEsc(t.label)+'</button>').join('')+'</div>'+
         '<div class="rc-calwrap"><div class="rc-calhead"><button class="rc-nav" id="rcPrev" aria-label="Previous two weeks">‹</button><h2>'+rcRange(ws,we)+', '+rcDate(we).getFullYear()+'</h2><button class="rc-nav" id="rcNext" aria-label="Next two weeks">›</button></div>'+
         '<div class="rc-dow"><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div><div>Sun</div></div>'+
         '<div class="rc-grid">'+cells+'</div></div>'+
@@ -1467,6 +1476,7 @@
       if(prev) prev.onclick=() => { RC_WIN=rcAddDays(RC_WIN,-14); render(); };
       if(next) next.onclick=() => { RC_WIN=rcAddDays(RC_WIN,14); render(); };
       host.querySelectorAll('[data-rcidx]').forEach(el => el.addEventListener('click', () => rcOpenModal(RECURRING[+el.getAttribute('data-rcidx')], el.getAttribute('data-rciso'))));
+      host.querySelectorAll('[data-rctown]').forEach(el => el.addEventListener('click', () => { activeTown = el.getAttribute('data-rctown'); render(); }));
     }
 
     function rcOpenModal(e, iso){
@@ -1650,6 +1660,9 @@
     }
 
     function render() {
+      // Recurring view = full-width (sidebar hidden; filter moves atop the calendar)
+      const pageWrap = document.querySelector('.page-wrap');
+      if (pageWrap) pageWrap.classList.toggle('rc-full', activeView === 'calendar');
       renderFeatured(EVENTS, activeTown);
       document.getElementById('sidebarFilter').innerHTML = filterHtml();
       const filtered = activeTown === 'all'
@@ -1955,9 +1968,15 @@
                    || /sheridan opera|sheridan arts/.test(String(e.location || '').toLowerCase())) {
                  return 'telluride';
                }
-               return townFromText(e.location)
-                 || townFromText(e.title)
-                 || (function () {
+               // telluride.com tags EVERY event location "Telluride, CO", so a
+               // SPECIFIC non-Telluride hint from the title (e.g. "… - Mountain
+               // Village") or the source should win over that generic location —
+               // otherwise everything buckets to Telluride and the MV/Norwood/etc.
+               // filters return nothing.
+               const fromLoc = townFromText(e.location), fromTitle = townFromText(e.title);
+               const specific = [fromTitle, fromLoc].filter(t => t && t !== 'telluride')[0];
+               if (specific) return specific;
+               return (function () {
                       const src = String(sourceLabel || e.sourceLabel || e.source || '').toLowerCase();
                       if (src.includes('ouray') || src.includes('ridgway')) {
                         // Within the combined Ouray/Ridgway calendar, refine by
@@ -2144,7 +2163,7 @@
                RECURRING.length = 0;
                deduped.filter(e => isRecurring(e) && !isSuppressed(e))
                  .sort((a,b) => a.date.localeCompare(b.date))
-                 .forEach((e, i) => { e.idx = i; e.color = RC_PALETTE[i % RC_PALETTE.length]; RECURRING.push(e); });
+                 .forEach((e, i) => { e.idx = i; e.color = RC_PALETTE[i % RC_PALETTE.length]; e.title = rcDecode(e.title); if (e.summary) e.summary = rcDecode(e.summary); if (e.location) e.location = rcDecode(e.location); if (e.source) e.source = rcDecode(e.source); RECURRING.push(e); });
                if (deduped.length > 0) {
                  EVENTS.length = 0;
                  deduped.filter(e => !isRecurring(e))
