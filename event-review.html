@@ -69,7 +69,7 @@
       <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
     </div>
     <div class="eyebrow">Admin</div>
-    <h1 class="page-title">Event submissions</h1>
+    <h1 class="page-title">Submissions to review</h1>
     <p class="sub">Review community event submissions. Approve to publish them to the calendar, or deny.</p>
     <div id="root"><div class="panel">Loading…</div></div>
   </div>
@@ -258,40 +258,83 @@
       });
     }
 
+    // ── Organization submissions (org_submissions) — same page, second section ──
+    function orgCardHtml(id, d) {
+      let h = '<div class="card" data-id="' + esc(id) + '" data-sub-email="' + esc(d.email || '') + '" data-sub-title="' + esc(d.name || '') + '">';
+      h += '<div class="card-body">';
+      h += '<label class="edit-label">Organization</label>'
+         + '<input class="edit-input edit-title" data-field="name" value="' + esc(d.name || '') + '">';
+      h += '<div class="edit-grid">'
+         + '<div><label class="edit-label">Category</label><input class="edit-input" data-field="category" value="' + esc(d.category || '') + '"></div>'
+         + '<div><label class="edit-label">Town</label><input class="edit-input" data-field="town" value="' + esc(d.town || '') + '"></div></div>';
+      h += '<label class="edit-label">Website</label><input class="edit-input" data-field="website" value="' + esc(d.website || '') + '" placeholder="https://…">';
+      h += '<label class="edit-label">Donation URL</label><input class="edit-input" data-field="donate" value="' + esc(d.donate || '') + '" placeholder="https://…">';
+      h += '<label class="edit-label">Description</label><textarea class="edit-textarea" data-field="description" rows="4">' + esc(d.description || '') + '</textarea>';
+      h += '<label class="edit-label">Social</label><input class="edit-input" data-field="social" value="' + esc(d.social || '') + '">';
+      h += '<label class="edit-label">Logo URL</label><input class="edit-input" data-field="logoUrl" value="' + esc(d.logoUrl || '') + '">';
+      if (d.email) h += '<div class="extras"><div>Contact: ' + esc(d.email) + '</div></div>';
+      h += '<p class="edit-hint">Edit any field, then Approve to publish to the directory — or Deny.</p>';
+      h += '<div class="actions">'
+        + '<button class="btn btn-approve" data-coll="org" data-act="approved" data-id="' + esc(id) + '">✓ Approve &amp; Publish</button>'
+        + '<button class="btn btn-deny" data-coll="org" data-act="rejected" data-id="' + esc(id) + '">✕ Deny</button>'
+        + '</div>';
+      h += '</div></div>';
+      return h;
+    }
+    function orgDecide(id, status, btn) {
+      const card = btn.closest('.card');
+      card.querySelectorAll('button').forEach(b => b.disabled = true);
+      const update = { status: status, reviewedAt: firebase.firestore.FieldValue.serverTimestamp() };
+      if (status === 'approved') {
+        card.querySelectorAll('[data-field]').forEach(el => { update[el.getAttribute('data-field')] = (el.value || '').trim(); });
+      }
+      db.collection('org_submissions').doc(id).update(update).then(() => {
+        if (status === 'approved') notifyApproval('org', card.dataset.subEmail, '', card.dataset.subTitle);
+        card.style.transition = 'opacity .3s'; card.style.opacity = '0.35';
+        const note = document.createElement('div');
+        note.style.cssText = 'padding:6px 24px 16px;font-weight:700;color:' + (status === 'approved' ? 'var(--forest)' : '#a33') + ';';
+        note.textContent = status === 'approved' ? '✓ Approved — it will appear in the directory.' : '✕ Denied.';
+        card.appendChild(note);
+        setTimeout(loadQueue, 1200);
+      }).catch(err => {
+        card.querySelectorAll('button').forEach(b => b.disabled = false);
+        alert('Could not update: ' + (err.message || err));
+      });
+    }
+    const sectionH = (label, n) => '<h2 style="font-family:Georgia,serif;color:var(--forest,#21443c);font-size:1.25rem;margin:26px 0 12px;border-bottom:1px solid #ddd6c8;padding-bottom:6px;">'
+      + esc(label) + ' <span style="color:#8a978f;font-size:0.85rem;font-weight:400;">(' + n + ')</span></h2>';
+
     function loadQueue() {
       root.innerHTML = '<div class="panel">Loading submissions…</div>';
-      db.collection('event_submissions').where('status', '==', 'pending').get()
-        .then(snap => {
-          const docs = [];
-          snap.forEach(doc => docs.push({ id: doc.id, d: doc.data() || {} }));
-          docs.sort((a, b) => {
-            const ta = a.d.createdAt && a.d.createdAt.seconds || 0;
-            const tb = b.d.createdAt && b.d.createdAt.seconds || 0;
-            return tb - ta;
-          });
-          let html = '<button class="signout" id="signout">Sign out</button>'
-            + '<div style="clear:both"></div>';
-          if (!docs.length) {
-            html += '<div class="empty">🎉 No pending submissions right now.</div>';
-          } else {
-            html += '<p class="sub">' + docs.length + ' submission' + (docs.length === 1 ? '' : 's') + ' awaiting review:</p>';
-            html += docs.map(x => cardHtml(x.id, x.d)).join('');
-          }
-          root.innerHTML = html;
-          document.getElementById('signout').addEventListener('click', () => auth.signOut());
-          root.querySelectorAll('button[data-act]').forEach(b => {
-            b.addEventListener('click', () => decide(b.getAttribute('data-id'), b.getAttribute('data-act'), b));
-          });
-          root.querySelectorAll('.flyer-file').forEach(inp => {
-            inp.addEventListener('change', () => handleFlyerUpload(inp));
-          });
-          root.querySelectorAll('.gen-summary-btn').forEach(btn => {
-            btn.addEventListener('click', () => generateSummary(btn));
-          });
-        })
-        .catch(err => {
-          root.innerHTML = '<div class="panel">Could not load submissions: ' + esc(err.message || String(err)) + '</div>';
+      Promise.all([
+        db.collection('event_submissions').where('status', '==', 'pending').get(),
+        db.collection('org_submissions').where('status', '==', 'pending').get()
+      ]).then(([evSnap, orgSnap]) => {
+        const byNew = (a, b) => ((b.d.createdAt && b.d.createdAt.seconds || 0) - (a.d.createdAt && a.d.createdAt.seconds || 0));
+        const evDocs = []; evSnap.forEach(doc => evDocs.push({ id: doc.id, d: doc.data() || {} })); evDocs.sort(byNew);
+        const orgDocs = []; orgSnap.forEach(doc => orgDocs.push({ id: doc.id, d: doc.data() || {} })); orgDocs.sort(byNew);
+
+        let html = '<button class="signout" id="signout">Sign out</button><div style="clear:both"></div>';
+        if (!evDocs.length && !orgDocs.length) {
+          html += '<div class="empty">🎉 No pending submissions right now.</div>';
+        } else {
+          html += sectionH('Events', evDocs.length);
+          html += evDocs.length ? evDocs.map(x => cardHtml(x.id, x.d)).join('') : '<div class="empty">No pending events.</div>';
+          html += sectionH('Organizations', orgDocs.length);
+          html += orgDocs.length ? orgDocs.map(x => orgCardHtml(x.id, x.d)).join('') : '<div class="empty">No pending organizations.</div>';
+        }
+        root.innerHTML = html;
+        document.getElementById('signout').addEventListener('click', () => auth.signOut());
+        root.querySelectorAll('button[data-act]').forEach(b => {
+          b.addEventListener('click', () => (b.getAttribute('data-coll') === 'org')
+            ? orgDecide(b.getAttribute('data-id'), b.getAttribute('data-act'), b)
+            : decide(b.getAttribute('data-id'), b.getAttribute('data-act'), b));
         });
+        root.querySelectorAll('.flyer-file').forEach(inp => inp.addEventListener('change', () => handleFlyerUpload(inp)));
+        root.querySelectorAll('.gen-summary-btn').forEach(btn => btn.addEventListener('click', () => generateSummary(btn)));
+      }).catch(err => {
+        root.innerHTML = '<div class="panel">Could not load submissions: ' + esc(err.message || String(err)) + '</div>';
+      });
     }
 
     function loginPanel(msg) {
