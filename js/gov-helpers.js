@@ -149,6 +149,9 @@ const MEETING_AGENDA_META = {
     {"sv":2},
 
   "telluride|2026-07-15|Parks & Recreation Commission - Jul 15 2026":
+    {"sv":2},
+
+  "county|2026-07-15|Board of County Commissioners Meeting":
     {"sv":2}
 };
 
@@ -208,7 +211,7 @@ const MANUAL_SUMMARIES = {
     "The June 22 Open Space Commission agenda hasn't been posted yet.",
 
   "county|2026-06-24|Board of County Commissioners Work Session":
-    "The June 24 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The June 24 Board of County Commissioners work session agenda hasn't been posted yet.",
 
   "telluride|2026-06-17|Historic & Architectural Review Commission Chair - Jun 17 2026":
     "The Historic & Architectural Review Commission Chair will review two projects: aluminum window replacements at 324 W Colorado (a contributing historic structure in an alley) and a deck expansion at 714 E Columbia. Both applications face staff recommendations for disapproval — the windows for introducing aluminum into a historic wood garage that's supposed to maintain its utilitarian character, and the deck for being too large and reducing the building's stepping down to Shadow Lane. The 324 W Colorado item was continued from May and includes a pre-meeting site walk.",
@@ -247,7 +250,7 @@ const MANUAL_SUMMARIES = {
     "The June 25, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
+    "The June 25, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -259,19 +262,19 @@ const MANUAL_SUMMARIES = {
     "The June 30, 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The July 1, 2026 Ecology Commission agenda hasn't been posted yet.",
+    "The July 1 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The July 1st Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
     "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
-    "The July 1 Board of County Commissioners agenda hasn't been posted yet.",
+    "The July 1st Board of County Commissioners agenda hasn't been posted yet.",
 
   "county|2026-06-10|Board of Review and Planning Commission Joint Work Session":
     "The county's Board of Review and Planning Commission will hear a presentation on Colorado's new Low Energy and Carbon Code — building standards that could reshape how structures get approved in the box canyon.",
@@ -310,13 +313,16 @@ const MANUAL_SUMMARIES = {
     "The July 14 Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
-    "The July 15, 2026 Historic & Architectural Review Commission agenda hasn't been posted yet.",
+    "The July 15, 2026 Historic & Architectural Review Commission meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
-    "The July 15 HARC agenda hasn't been posted yet.",
+    "The July 15, 2026 HARC agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Parks & Recreation Commission - Jul 15 2026":
-    "The July 15 Parks & Recreation Commission agenda hasn't been posted yet."
+    "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+
+  "county|2026-07-15|Board of County Commissioners Meeting":
+    "The July 15 Board of County Commissioners agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -363,6 +369,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Telluride installs outdoor warning siren to improve emergency alerts",
+    source: "Telluride Times",
+    date: "June 15, 2026",
+    firstSeen: "2026-06-15",
+    newsTopic: "arts-culture",
+    copy: "The town just installed its first outdoor warning siren, funded by a $25,000 Telluride Foundation grant, to address emergency communication during packed festival times when cell service gets jammed. The siren can broadcast eight different pre-recorded messages for situations like wildfires or floods and should be operational before Bluegrass starts June 18. Fire officials would like to eventually add more sirens throughout the county as funding becomes available.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_b2f12888-10ba-4d66-9c72-797fdcd50bd5.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/1d/81d34e98-64e8-4bb7-8510-2b2d9095c45d/6a2cd91b932a8.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Shades of the season",
     source: "Telluride Times",
@@ -2754,81 +2772,59 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Parenting Book Club: How to Talk So Little Kids Will Listen",
-    link: "https://telluridelibrary.libcal.com/event/16942421?hs=a",
-    description: "10:30 AM – 11:30 AM · Parenting Book Club discussing How to Talk So Little Kids Will Listen: A Survival Guide to Life With Children Ages 2-7 b Joanna Faber and Julie King. Participants will dive into respectful and effective solutions to the challenges of raising children. This program is being offered in collaboration with Bright Futures and Parents As Teachers. The first 10 registrants will receive a copy of the book to keep. Reach out to madiea@brightfuturesforchildren.org with questions. Child care and snacks will be provided. Club de lectura sobre crianza que abordar&aacute; el libro *How to Talk So Little Kids Will Listen: A Survival Guide to Life With Children Ages 2-7*, de Joanna Faber y Julie King. Los participantes explorar&aacute;n soluciones respetuosas y eficaces para los desaf&iacute;os que conlleva la crianza de los hijos. Este programa se ofrece en colaboraci&oacute;n con Bright Futures y Parents As Teachers. …",
-    pubDate: "2026-06-14T16:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_15_34_57.png"
-  },
-  {
-    title: "Gentle Yoga with Kristen Milord",
-    link: "https://telluridelibrary.libcal.com/event/16536435?hs=a",
-    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
-    pubDate: "2026-06-14T17:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
-  },
-  {
-    title: "Drop In Ping Pong",
-    link: "https://telluridelibrary.libcal.com/event/16986217?hs=a",
-    description: "1:00 PM – 3:00 PM · Drop by the library for casual table tennis matches. Our ping pong table will be set up and ready for players of all ages and skill levels. Whether you&#39;re a first-timer or a seasoned player, come enjoy this classic game with family and friends. No registration needed - just drop in! First come, first served (pun intended!) Pase por la biblioteca para partidos casuales de tenis de mesa. Nuestra mesa de ping pong estar&aacute; instalada y lista para jugadores de todas las edades y niveles de habilidad. Ya sea que juegue por primera vez o sea un jugador experimentado, venga a disfrutar de este juego cl&aacute;sico con familia y amigos. No necesita registrarse - &iexcl;simplemente venga!",
-    pubDate: "2026-06-14T19:00:00.000Z",
+    title: "Book Buzz with the Pour Over Pedaler",
+    link: "https://telluridelibrary.libcal.com/event/16687359?hs=a",
+    description: "9:00 AM – 10:00 AM · Get the scoop on the hottest new titles at the library during Book Buzz ! Discover upcoming releases, hidden gems, and staff favorites while enjoying a complimentary handcrafted coffee from Luke of The Pour Over Pedaler . Come sip, socialize, and leave with your next great read!",
+    pubDate: "2026-06-15T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_30_12_13_38.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_27_11_11_58.png"
   },
   {
-    title: "Drop-In Tech Time with Oliver",
-    link: "https://telluridelibrary.libcal.com/event/15970378?hs=a",
-    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
-    pubDate: "2026-06-14T19:00:00.000Z",
+    title: "Musik 4 Kinders",
+    link: "https://telluridelibrary.libcal.com/event/16568416?hs=a",
+    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
+    pubDate: "2026-06-15T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "2nd Floor Desk",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
   },
   {
-    title: "Holding Space/Espacio de Espera con Daniel Kanow",
-    link: "https://telluridelibrary.libcal.com/event/16899421?hs=a",
-    description: "1:00 PM – 3:00 PM · ATTENTION: IN ORDER TO ATTEND THIS WORKSHOP, YOU WILL ALSO NEED TO ATTEND THE WORKSHOP ON SUNDAY, JUNE 28TH. This two-week creative series offers a gentle, supportive space to explore grief and life transitions through art-making. Each session invites participants to engage in guided, low-pressure creative activities designed to support reflection, grounding, and self-expression. No art experience is needed. Participants are free to observe, modify activities, or step away as needed. Sharing is optional, and personal stories are never required. The focus is on healing the process of creative expression and the potential creation of meaningful heartfelt artworks. This program is not therapy, but it is facilitated with care, respect, and an understanding that grief and trauma affect everyone differently. All materials are provided, and sessions are structured to prioritize emotional safety, choice, and mutual respect. …",
-    pubDate: "2026-06-14T19:00:00.000Z",
+    title: "Savvy Seniors-Open Tech",
+    link: "https://telluridelibrary.libcal.com/event/16667563?hs=a",
+    description: "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.",
+    pubDate: "2026-06-15T19:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_11_01_09.jpg"
+    location: "Meeting Room #6 - large",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_14_07_56.png"
   },
   {
-    title: "Clínica de Mantenimiento de Bicicletas",
-    link: "https://telluridelibrary.libcal.com/event/16730561?hs=a",
-    description: "2:00 PM – 4:00 PM · &iexcl;Nos reuniremos en la biblioteca p&uacute;blica y despu&eacute;s iremos a la estaci&oacute;n de reparaci&oacute;n de bicicletas del parque! QU&Eacute; APRENDEREMOS: Inflar los neum&aacute;ticos reparar un pinchazo limpiar y lubricar la cadena y la transmisi&oacute;n REVISAR los tornillos y la suspensi&oacute;n.",
-    pubDate: "2026-06-14T20:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Town Park",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_13_18_35.jpg"
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://telluridelibrary.libcal.com/event/16567829?hs=a",
-    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
-    pubDate: "2026-06-14T20:30:00.000Z",
+    title: "Cíclica & Humana",
+    link: "https://telluridelibrary.libcal.com/event/16303303?hs=a",
+    description: "5:00 PM – 6:30 PM · C&iacute;clica & Humana es un proyecto que busca abrir un espacio para mujeres en el que podamos comprender el funcionamiento de nuestro ciclo hormonal y reconectar con nuestra feminidad desde el amor propio. El proyecto estar&aacute; organizado en 6 encuentros: 1. La feminidad y el Utero  2. Como Entender nuestro cuerpo?  3. Ciclo 1: Fase Lutea  4. Ciclo 2: Menstruaci&oacute;n  5. Ciclo 3: Fase Folicular  6. Ciclo 4: Fase Ovulaci&oacute;n  Por favor de registrase con Claudia para estas clases.",
+    pubDate: "2026-06-15T23:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_14_26_48.png"
+  },
+  {
+    title: "Songs of the Season: Summer!",
+    link: "https://telluridelibrary.libcal.com/event/16258330?hs=a",
+    description: "5:30 PM – 6:30 PM · Join Oliver & Jackson in a Seasonal Sing Along event, focusing on songs relevant to each coming season. Bring an instrument, just your voice, or even dancing shoes. All are invited. Chords and lyrics will be displayed. Registration is encouraged.",
+    pubDate: "2026-06-15T23:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1769024106.jpg"
   }
 ];
 
@@ -2862,18 +2858,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "Calder Allen",
-    link: "https://www.alibitelluride.com/calendar#eca-event=calder-allen",
-    description: "Born and raised in Austin, Texas, Calder Allen is a fifth-generation Texan whose...",
-    pubDate: "2026-06-14",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/73cb4f4c-f615-4953-bfcf-3f5e356f3422/-/crop/3333x1665/0,504/-/preview/"
-  },
   {
     title: "Palmyra w/ Frail Talk",
     link: "https://www.alibitelluride.com/calendar#eca-event=palmyra-w-frail-talk",
@@ -3319,39 +3303,6 @@ const OURAY_COUNTY_EVENTS = [
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
-  {
-    title: "Flag Day Service",
-    link: "https://events.ourayridgwayevents.com/event/flag-day-service-713",
-    description: "OPEN TO THE PUBLIC Please join us as we perform a ceremony commemorating the birth of the American Flag. The evolution of the American Flag marks the progression of the government of the American People.",
-    pubDate: "2026-06-14T20:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52958628193182/huge/8214dc385f12ed197990eb01311af55f28a4bd0b.jpg"
-  },
-  {
-    title: "PARK - Ultimate Frisbee",
-    link: "https://events.ourayridgwayevents.com/event/park-ultimate-frisbee",
-    description: "Come play frisbee! Anyone is welcome.",
-    pubDate: "2026-06-14T20:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Fellin Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/51807883052581/huge/9d7f0c7c4c96318902b1dfef1c3f821c9b3189d1.jpg"
-  },
-  {
-    title: "TYLER SIMMONS AT THE BOY",
-    link: "https://coloradoboydepot.com/calendar/",
-    description: "Live Music\\ Come on down the street to THE BOY to see Tyler Simmons!!\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-06-14T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
   {
     title: "Swimming Classes for Kids",
     link: "https://anc.apm.activecommunities.com/cityofouray/activity/search?activity_select_param=2&viewMode=list",
@@ -4319,6 +4270,28 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52590090771453/huge/5f8f06133edd0a9151fe5e6e785bc44ecfc34e48.jpg"
+  },
+  {
+    title: "Ongoing - Susan Clark Art Exhibition",
+    link: "susanclarkart.com",
+    description: "Susan Clark's work will be on display in the Space to Create gallery - located in the lobby of the building near Kate's Place - through the month of June. Artist Bio: With my art, I capture the spectacular interplay of color, light, and image and then distill it down, while still maintaining the original awe. I like to present the viewer with a different way of seeing images while evoking a sense of enjoyment and creating a smile. My “joie de vivre” is exploring with harmonious color & disappearing for hours to create whimsical and colorful expressive paintings. I paint the Colorado mountains and aspen trees, which surround me and provide a quiet escape. Other subject matter includes a series of pups with expressive personalities, lively bicycles, and an abstract series using my characteristic bold hues, shape, and texture. …",
+    pubDate: "2026-06-29T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create ",
+    imageUrl: "https://localist-images.azureedge.net/photos/53049566972371/huge/2331d84dd56cccb875a90575974a2a05c051a592.jpg"
+  },
+  {
+    title: "Senior Lunch by Neighbor to Neighbor",
+    link: "https://www.ourayneighbor.com/services",
+    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586.",
+    pubDate: "2026-06-29T18:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
   }
 ];
 

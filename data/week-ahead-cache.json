@@ -1,18 +1,30 @@
 {
-  "hash": "dcccc1d1f3d5db26e93d72effd73d67453f9d789",
-  "lede": "The biggest decision on tap this week is Mountain Village Council's vote Tuesday on expedited review policies for affordable housing projects, part of a packed agenda that includes an hour-long review of an independent investigation report. Meanwhile, Telluride's gondola replacement moves forward as the advisory committee discusses an $18 million federal funding commitment deadline.",
+  "hash": "0837c56b6dee6612f17198f05c1922eb9c7b6369",
+  "lede": "Mountain Village council meets Tuesday to review an independent investigation report and vote on expedited affordable housing policies, while the gondola replacement funding timeline gets a critical look Monday with $18M in commitments needed by fall. Norwood's planning commission considers new dark sky lighting standards, and the county interviews candidates for planning positions.",
   "notable": [
     {
+      "id": 0,
+      "stake": "New lighting rules could affect outdoor lighting throughout Norwood"
+    },
+    {
       "id": 2,
-      "stake": "$18M federal funding commitment needed by fall 2026"
+      "stake": "$18M in local commitments needed by fall 2026 for federal funding"
     },
     {
       "id": 5,
-      "stake": "Vote on expedited affordable housing review policies"
+      "stake": "Council votes on expedited review for affordable housing projects"
     },
     {
       "id": 6,
-      "stake": "Board appointments for Planning Commission and Board of Adjustment"
+      "stake": "Interviews determine new planning commission and board of adjustment members"
+    },
+    {
+      "id": 7,
+      "stake": "Historic window and deck projects face staff disapproval recommendations"
+    },
+    {
+      "id": 9,
+      "stake": "Winter recreation fees increase 3.7% with new ice rink schedule"
     }
   ]
 }
