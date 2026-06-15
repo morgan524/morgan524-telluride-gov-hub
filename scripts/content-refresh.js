@@ -4260,14 +4260,19 @@ async function syncSherbinoEvents() {
   }
 }
 
-// ── Task 22: Telluride Science Town Talks (Tribe Events JSON API) ──
-// Source: https://telluridescience.org/events/  (WordPress + The Events
-// Calendar, same stack as KOTO/Sherbino). Runs every refresh; emits the
-// same shape as the hand-curated seed it replaces (link/description/time),
-// so events.html's pushEvent reads it unchanged. Fetched direct (the host
-// does not block runner IPs); on any error we return null so the existing
-// array carries forward instead of being wiped.
-const TELLURIDE_SCIENCE_TRIBE_API = 'https://telluridescience.org/wp-json/tribe/events/v1/events/?per_page=50&status=publish';
+// ── Task 22: Telluride Science events + Town Talks (Tribe Events JSON API) ──
+// Covers BOTH https://telluridescience.org/events/ AND the /town-talks/ page:
+// they're the same The Events Calendar entries (town talks carry the
+// "Telluride Science Event" category and show on both pages), so this single
+// Tribe API returns all of them. Verified 2026-06-15: the /events/ listing is
+// 1:1 with the API; /town-talks/ adds only not-yet-published "Title TBD" talks,
+// which flow in automatically once Telluride Science publishes them.
+// Runs every refresh; emits the same shape as the hand-curated seed it replaces
+// (link/description/time), so events.html's pushEvent reads it unchanged.
+// Fetched direct (host doesn't block runner IPs); on any error returns null so
+// the existing array carries forward instead of being wiped. per_page=100 is
+// headroom (only ~10 are ever published at once).
+const TELLURIDE_SCIENCE_TRIBE_API = 'https://telluridescience.org/wp-json/tribe/events/v1/events/?per_page=100&status=publish';
 
 // "2026-06-16 18:30:00" -> "6:30 PM". The Tribe start/end strings are already
 // in the venue-local timezone (America/Denver), so parse the clock components
