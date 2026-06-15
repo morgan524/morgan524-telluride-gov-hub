@@ -1806,6 +1806,15 @@
              // Telluride bucket — that was the bug). Telluride-area sources
              // remain the final default.
              const townFor = (e, sourceLabel='') => {
+               // The Sheridan Opera House (a.k.a. Sheridan Arts Foundation) is
+               // ALWAYS in the Town of Telluride. Pin it before any text match
+               // so a touring act's name or a stray town word in the copy can't
+               // pull it into another town's bucket.
+               const srcAll = String(sourceLabel || e.sourceLabel || e.source || '').toLowerCase();
+               if (srcAll.includes('sheridan')
+                   || /sheridan opera|sheridan arts/.test(String(e.location || '').toLowerCase())) {
+                 return 'telluride';
+               }
                return townFromText(e.location)
                  || townFromText(e.title)
                  || (function () {
