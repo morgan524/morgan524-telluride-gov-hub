@@ -65,6 +65,11 @@ function featuredScore(e) {
   return s;
 }
 const isGovMeetingTitle = (t) => /\b(town council|board of (county )?commissioners|planning (and zoning|commission)|p&z|board of directors|general assembly|HARC|historic & architectural|parks (and|&) rec|fire protection|housing authority|school board|board of education|work session|subcommittee)\b/i.test(t) || /\bmeeting\b/i.test(t);
+// The marquee festivals (user 2026-06-15) get a featured hero at the top of the
+// events instead of competing as a one-per-day pick. Matched by name against
+// TELLURIDE_FESTIVALS; an event whose title matches is pulled OUT of the daily
+// picks so it doesn't double up with the hero.
+const MAJOR_FEST_RE = /mountainfilm|bluegrass|yoga festival|jazz festival|mushroom festival|telluride film festival|autumn classic|original thinkers|horror show/i;
 
 // ── Collect events from the source arrays ──
 const EVENT_ARRAYS = ['WILKINSON_EVENTS','SHERIDAN_EVENTS','ALIBI_EVENTS','SHERBINO_EVENTS','COMMUNITY_EVENTS','MUSIC_ON_THE_GREEN','TELLURIDE_FARMERS_MARKET','BEACON_EVENTS','CHAMBER_MUSIC_EVENTS','TELLURIDE_SCIENCE_EVENTS','TELLURIDE_FOUNDATION_EVENTS','TF_FOUNDATION_EVENTS','TELLURIDE_VENTURE_EVENTS','OURAY_COUNTY_EVENTS','NORWOOD_EVENTS','MOUNTAIN_VILLAGE_EVENTS','TELLURIDE_COM_EVENTS','KOTO_COMMUNITY_EVENTS','OURAY_RIDGWAY_EVENTS','SHERIDAN_OPERA_EVENTS'];
@@ -79,6 +84,7 @@ for (const name of EVENT_ARRAYS) {
     if (!inWeek(date)) continue;
     if (isGovMeetingTitle(e.title)) continue;            // meetings live in their own section
     if (/closed|closure|holiday hours/i.test(e.title)) continue;
+    if (MAJOR_FEST_RE.test(e.title)) continue;           // marquee festivals → featured hero, not daily picks
     evts.push({
       title: e.title, date,
       href: e.link || e.href || e.url || '',
@@ -307,6 +313,30 @@ const topicHtml = topicSections.map((td) =>
   `\n  *|INTERESTED:Event Topics:${td.group}|*` + section(td.label, td.events.map(evRow).join('')) + `*|END:INTERESTED|*`
 ).join('');
 
+// ── Featured festival hero(s) ──
+// The marquee Telluride festivals (Bluegrass, Mountainfilm, Yoga, Jazz,
+// Mushroom, Film Fest, Autumn Classic, Original Thinkers, Horror Show) get a
+// bold card at the top of the events whenever their run overlaps the week.
+// Driven by TELLURIDE_FESTIVALS (gov-data.js) so they carry the official dates,
+// logo, promo line, and ticket link. (User 2026-06-15.)
+const MONTHS_F = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const fpad = (n) => String(n).padStart(2, '0');
+const fYear = startD.getFullYear();
+const festISO = (f) => { const em = (f.endMonth != null ? f.endMonth : f.month); return { start: `${fYear}-${fpad(f.month + 1)}-${fpad(f.dayStart)}`, end: `${fYear}-${fpad(em + 1)}-${fpad(f.dayEnd)}` }; };
+const festLabel = (f) => { const em = (f.endMonth != null ? f.endMonth : f.month); const right = (em === f.month) ? `${f.dayEnd}` : `${MONTHS_F[em]} ${f.dayEnd}`; return `${MONTHS_F[f.month]} ${f.dayStart}–${right}, ${fYear}`; };
+const festivalsThisWeek = (G('TELLURIDE_FESTIVALS') || [])
+  .filter((f) => MAJOR_FEST_RE.test(f.name))
+  .filter((f) => { const r = festISO(f); return r.start <= days[6] && r.end >= days[0]; });
+const festCard = (f) => {
+  const link = f.ticketUrl || f.url || (SITE + '/events.html');
+  const cta = f.ticketLabel || 'Festival Details';
+  const logoImg = f.logo
+    ? `<img src="${esc(f.logo)}" width="64" height="64" alt="" style="display:block;width:64px;height:64px;object-fit:contain;">`
+    : `<div style="font-size:38px;line-height:64px;text-align:center;">${f.icon || '🎪'}</div>`;
+  return `<tr><td class="sec-pad" style="padding:20px 34px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="background:#21443c;border-radius:10px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td class="fest-logo-cell" width="96" valign="middle" style="padding:16px 0 16px 16px;vertical-align:middle;"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="background:#fff;border-radius:10px;padding:8px;width:80px;height:80px;text-align:center;vertical-align:middle;">${logoImg}</td></tr></table></td><td class="fest-body-cell" valign="middle" style="padding:16px 18px;vertical-align:middle;"><div style="font-family:Georgia,serif;font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e3c87a;">&#9733; Festival This Week</div><div style="font-family:Georgia,serif;font-size:19px;font-weight:700;color:#fff;margin-top:4px;line-height:1.2;"><a href="${esc(link)}" style="color:#fff;text-decoration:none;">${esc(f.name)}</a></div><div style="font-size:13px;color:#a8c4b8;margin-top:3px;">${esc(festLabel(f))}</div>${f.promo ? `<p style="margin:8px 0 11px;font-size:13px;line-height:1.55;color:#e7efe9;">${esc(f.promo)}</p>` : '<div style="height:10px;"></div>'}<a href="${esc(link)}" style="display:inline-block;background:#b58a2c;color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:9px 20px;border-radius:999px;">${esc(cta)} &rarr;</a></td></tr></table></td></tr></table></td></tr>`;
+};
+const festivalHero = festivalsThisWeek.map(festCard).join('');
+
 // ── Customer.io mode (CUSTOMERIO=1) ──
 // Emit the per-section blocks as a message_data JSON instead of the single
 // Mailchimp paste HTML. A Customer.io broadcast then assembles each email
@@ -329,7 +359,7 @@ if (process.env.CUSTOMERIO) {
     label:         LABEL,
     lede:          LEDE,
     meetings_html: section('Public Meetings This Week', mh),
-    events_html:   section('What We\'re Attending', eh),
+    events_html:   festivalHero + section('What to Attend', eh),
     arts_html:     topicBlock('arts', 'Music & Arts This Week'),
     family_html:   topicBlock('family', 'Family & Kids This Week'),
     outdoors_html: topicBlock('outdoors', 'Outdoors & Recreation This Week'),
@@ -347,6 +377,9 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
   .ev-img-cell{display:block !important;width:100% !important;padding:0 0 10px 0 !important;}
   .ev-img-cell img{width:160px !important;height:160px !important;}
   .ev-text-cell{display:block !important;width:100% !important;}
+  /* Festival hero: stack the logo above the text on phones. */
+  .fest-logo-cell{display:block !important;width:100% !important;padding:14px 14px 0 !important;}
+  .fest-body-cell{display:block !important;width:100% !important;padding:12px 14px 16px !important;}
   /* Callout cards (What We're Reading / Why Showing Up Matters): drop the
      accent bar and widen the text edge-to-edge for mobile readability. */
   .callout-wrap{padding-left:14px !important;padding-right:14px !important;}
@@ -376,9 +409,9 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
     <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#2f7a5f;background:rgba(47,122,95,.1);padding:3px 10px;border-radius:999px;">📅 The Week Ahead</span>
     <p style="margin:11px 0 0;font-size:15.5px;line-height:1.65;color:#2c3b35;">${esc(LEDE)}</p></td></tr>
   ${section('Public Meetings This Week', mh)}
-  ${section('What We\'re Attending', eh)}${topicHtml}
+  ${festivalHero}
+  ${section('What to Attend', eh)}${topicHtml}
   ${whatsReadingBox}
-  ${closingNote}
   ${donateBlock}
   <tr><td class="sec-pad" style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
     <div style="font-family:Georgia,serif;font-size:13px;font-weight:700;color:#21443c;">Livable Telluride</div>
