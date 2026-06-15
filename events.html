@@ -1413,9 +1413,9 @@
     const rcTodayIso = () => rcIso(new Date());
     const rcPretty = (iso) => { const d=rcDate(iso); return RC_DOW[d.getDay()]+', '+RC_MON[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear(); };
     const rcRange = (a,b) => { const sd=rcDate(a),ed=rcDate(b),sy=sd.getFullYear()===ed.getFullYear(); const L=RC_MON[sd.getMonth()]+' '+sd.getDate()+(sy?'':', '+sd.getFullYear()); const R=(sd.getMonth()===ed.getMonth()&&sy)?ed.getDate():RC_MON[ed.getMonth()]+' '+ed.getDate(); return L+' – '+R; };
-    const RC_ONGOING = /(hikeathon|every day|weeks of|all summer|on view|exhibit\b|season pass|through the season)/i;
-    function rcClassify(e){ const span=rcSpan(e.date,e.endDate); if(span>10 && RC_ONGOING.test((e.title+' '+(e.summary||'')).toLowerCase())) return 'ongoing'; if(span<=10) return 'run'; return 'weekly'; }
-    function rcCadence(e){ const k=rcClassify(e); if(k==='weekly') return 'Weekly · '+RC_DOW[rcDate(e.date).getDay()]+'s'; if(k==='ongoing') return 'Ongoing · through '+rcRange(e.date,e.endDate).split('– ')[1]; return rcRange(e.date,e.endDate); }
+    const RC_ONGOING = /(hikeathon|every day|weeks of|all summer|on view|exhibit|exhibition|ongoing|season pass|through the season)/i;
+    function rcClassify(e){ const txt=(e.title+' '+(e.summary||'')).toLowerCase(); if(RC_ONGOING.test(txt)) return 'ongoing'; const span=rcSpan(e.date,e.endDate); if(span<=10) return 'run'; return 'weekly'; }
+    function rcCadence(e){ const k=rcClassify(e); if(k==='weekly') return 'Weekly · '+RC_DOW[rcDate(e.date).getDay()]+'s'; if(k==='ongoing'){ const d=rcDate(e.endDate); return 'Ongoing · through '+RC_MON[d.getMonth()]+' '+d.getDate(); } return rcRange(e.date,e.endDate); }
     function rcOcc(e,ws,we){ const out=[]; const k=rcClassify(e); if(k==='ongoing') return out; if(k==='weekly'){ let d=e.date; while(d<ws) d=rcAddDays(d,7); while(d<=we && d<=e.endDate){ out.push(d); d=rcAddDays(d,7); } } else { let s=e.date>ws?e.date:ws, en=e.endDate<we?e.endDate:we; for(let d=s; d<=en; d=rcAddDays(d,1)) out.push(d); } return out; }
     function rcGcal(e,iso){ let det=(e.time?e.time+'\n\n':'')+(e.summary||''); if(e.href&&e.href!=='#') det+=(det?'\n\n':'')+e.href; const dates=iso.replace(/-/g,'')+'/'+rcAddDays(iso,1).replace(/-/g,''); return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(e.title||'')+'&dates='+dates+'&location='+encodeURIComponent(e.location||'')+'&details='+encodeURIComponent(det); }
     const rcLogoMini = (e) => (e.img && /^https?:\/\//.test(e.img)) ? 'style="background-image:url(\''+e.img.replace(/'/g,'%27')+'\')"' : '';
@@ -2113,18 +2113,57 @@
              if (typeof KOTO_COMMUNITY_EVENTS !== 'undefined') KOTO_COMMUNITY_EVENTS.forEach(e => pushEvent(e, 'KOTO'));
 
              // ── Ridgway/Ouray Localist calendar ──
+             // Localist lists a multi-day / recurring event as one entry PER day
+             // (no per-entry end date) — its true span is the event's
+             // first_date/last_date. Collapse to ONE span so "Ongoing:" exhibits
+             // and weekly series become a single multi-day event → the Recurring
+             // calendar, instead of flooding Daily with a card per day.
+             // (Live-fetch fallback path; raw Localist JSON.)
              const pushRidgwayLive = data => {
-               (data.events || []).forEach(ev => {
-                 const e = ev.event || ev;
+               const seen = new Set();
+               (data.events || []).forEach(wrapped => {
+                 const e = wrapped.event || wrapped;
+                 if (!e || !e.title) return;
+                 const inst = Array.isArray(e.event_instances) && e.event_instances[0] && e.event_instances[0].event_instance;
+                 const start = String(e.first_date || (inst && inst.start) || '').slice(0, 10);
+                 if (!start) return;
+                 const end = String(e.last_date || start).slice(0, 10);
+                 const key = e.id || e.urlname || e.title;
+                 if (seen.has(key)) return; seen.add(key);
                  pushEvent({
-                   title: e.title || '',
-                   pubDate: e.starts_at || '',
-                   location: (e.location && e.location.name)
-                     ? e.location.name + ', Ridgway' : 'Ouray/Ridgway area',
+                   title: e.title,
+                   pubDate: start,
+                   endDate: end !== start ? end : undefined,
+                   location: e.location_name ? e.location_name + ', Ridgway' : ((e.location && e.location.name) ? e.location.name + ', Ridgway' : 'Ouray/Ridgway area'),
                    description: (e.description_text || '').slice(0, 600),
                    link: e.url || `https://events.ourayridgwayevents.com/event/${e.urlname || e.id}`,
-                   imageUrl: (e.photo && e.photo.url) ? e.photo.url : '',
+                   imageUrl: (e.photo && e.photo.url) ? e.photo.url : (e.photo_url || ''),
                  }, 'Ouray/Ridgway');
+               });
+             };
+             // Static OURAY_RIDGWAY_EVENTS (bot-scraped) arrives as per-day rows
+             // with no endDate — collapse by link into a single span (min→max day)
+             // so multi-day events land in the Recurring calendar, not Daily.
+             const pushOurayRidgwayCollapsed = arr => {
+               const byKey = new Map();
+               arr.forEach(e => {
+                 const day = String(e.pubDate || e.date || '').slice(0, 10);
+                 if (!day) return;
+                 const key = e.link || e.href || e.title;
+                 let g = byKey.get(key);
+                 if (!g) byKey.set(key, { e, min: day, max: (e.endDate ? String(e.endDate).slice(0, 10) : day) });
+                 else { if (day < g.min) g.min = day; if (day > g.max) g.max = day; }
+               });
+               byKey.forEach(g => {
+                 pushEvent({
+                   title: g.e.title,
+                   pubDate: g.min,
+                   endDate: g.max !== g.min ? g.max : (g.e.endDate || undefined),
+                   location: g.e.location,
+                   description: g.e.description || g.e.summary || g.e.copy,
+                   link: g.e.link || g.e.href,
+                   imageUrl: g.e.imageUrl || g.e.img,
+                 }, g.e.sourceLabel || 'Ouray/Ridgway');
                });
              };
 
@@ -2180,7 +2219,7 @@
              // set rather than flickering.
 
              const ridgwayP = (typeof OURAY_RIDGWAY_EVENTS !== 'undefined' && OURAY_RIDGWAY_EVENTS.length > 0)
-               ? Promise.resolve(OURAY_RIDGWAY_EVENTS.forEach(e => pushEvent(e, e.sourceLabel || 'Ouray/Ridgway')))
+               ? Promise.resolve(pushOurayRidgwayCollapsed(OURAY_RIDGWAY_EVENTS))
                : fetch('https://events.ourayridgwayevents.com/api/2/events?school=ridgwayouray&days=30&pp=50')
                    .then(r => r.json()).then(pushRidgwayLive).catch(() => {});
 

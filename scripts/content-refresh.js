@@ -3494,54 +3494,76 @@ async function syncOurayRidgwayEvents() {
 
   const now = Date.now();
   const horizon = now + 60 * 86400000;
-  const seen = new Set();
-  const events = [];
+  // Collapse by event id into ONE entry spanning first_date→last_date. Localist
+  // lists a multi-day / "Ongoing:" / recurring event as one wrapped row PER day;
+  // emitting each as its own single-day card floods the grid and (since the
+  // client routes multi-day events to the Recurring calendar) keeps exhibits out
+  // of it. Using the event's own first_date/last_date gives the true span.
+  const byUid = new Map();
   let skippedGov = 0;
   let skippedPast = 0;
 
   for (const wrapped of rawEvents) {
     const ev = wrapped && wrapped.event;
     if (!ev || ev.private || ev.status !== 'live') continue;
-
-    // Skip government meetings
     if (GOV_MEETING_PATTERN_NODE.test(ev.title || '')) { skippedGov++; continue; }
 
-    // Parse start date from event_instances
+    // Span = first_date → last_date (fall back to the instance start).
     const inst = Array.isArray(ev.event_instances) && ev.event_instances[0]
       && ev.event_instances[0].event_instance;
-    const startStr = inst && inst.start;
-    let startDate = startStr ? new Date(startStr) : (ev.first_date ? new Date(ev.first_date + 'T19:00:00') : null);
+    const startStr = ev.first_date ? ev.first_date + 'T12:00:00' : (inst && inst.start);
+    const startDate = startStr ? new Date(startStr) : null;
     if (!startDate || isNaN(startDate.getTime())) continue;
+    const endDate = ev.last_date ? new Date(ev.last_date + 'T12:00:00') : startDate;
+    const endMs = isNaN(endDate.getTime()) ? startDate.getTime() : endDate.getTime();
 
-    const startMs = startDate.getTime();
-    if (startMs < now - 86400000) { skippedPast++; continue; } // allow today's events
-    if (startMs > horizon) continue;
+    // Keep when the span overlaps the [today-1d, +60d] window.
+    if (endMs < now - 86400000) { skippedPast++; continue; }  // whole run already over
+    if (startDate.getTime() > horizon) continue;               // starts >60 days out
 
     const uid = String(ev.id || ev.urlname || ev.title);
-    const key = uid + '|' + startDate.toISOString().slice(0, 10);
-    if (seen.has(key)) continue;
-    seen.add(key);
-
-    // Clean description
+    if (byUid.has(uid)) {
+      // Widen the span if a later wrapped row reports a broader range.
+      const g = byUid.get(uid);
+      if (startDate.getTime() < g.startMs) g.startMs = startDate.getTime();
+      if (endMs > g.endMs) g.endMs = endMs;
+      continue;
+    }
     let desc = (ev.description_text || '')
-      .replace(/\n/g, ' ').replace(/\r?\n+/g, ' ').replace(/\s+/g, ' ').trim();
+      .replace(/\r?\n+/g, ' ').replace(/\s+/g, ' ').trim();
     if (/^https?:\/\/\S+$/.test(desc)) desc = '';
     desc = smartTruncate(desc, EVENT_DESC_MAX);
-
-    events.push({
+    byUid.set(uid, {
       title: (ev.title || '').trim(),
       link: ev.url || `https://events.ourayridgwayevents.com/event/${ev.urlname || ev.id}`,
       description: desc,
-      pubDate: startDate.toISOString(),
-      source: 'oray',
-      sourceLabel: 'Ouray Ridgway Calendar',
-      category: 'Community Event',
+      startMs: startDate.getTime(),
+      endMs,
       location: ev.location || '',
       imageUrl: ev.photo_url || ''
     });
   }
 
-  console.log(`  Ouray/Ridgway: ${events.length} events (${skippedPast} past, ${skippedGov} gov skipped)`);
+  const events = [];
+  for (const g of byUid.values()) {
+    const startISO = new Date(g.startMs).toISOString();
+    const startDay = startISO.slice(0, 10);
+    const endDay = new Date(g.endMs).toISOString().slice(0, 10);
+    events.push({
+      title: g.title,
+      link: g.link,
+      description: g.description,
+      pubDate: startISO,
+      endDate: endDay !== startDay ? endDay : undefined,
+      source: 'oray',
+      sourceLabel: 'Ouray Ridgway Calendar',
+      category: 'Community Event',
+      location: g.location,
+      imageUrl: g.imageUrl
+    });
+  }
+  events.sort((a, b) => a.pubDate.localeCompare(b.pubDate));
+  console.log(`  Ouray/Ridgway: ${events.length} events (collapsed by id; ${skippedPast} past, ${skippedGov} gov skipped)`);
   return events;
 }
 
