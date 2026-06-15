@@ -4336,6 +4336,47 @@ async function syncTellurideScienceEvents() {
   return events;
 }
 
+// ── TMDB movie posters for recurring-acts.json ──
+// Movie series ("Movie Mondays" etc.) are curated into recurring-acts.json by the
+// weekly recurring-acts-review with image:"" (the events page then shows the
+// series logo). When the TMDB_API_KEY secret is set, fill those movie entries
+// with the film's official poster from The Movie Database. Only touches
+// movie-series entries whose image is EMPTY — never clobbers a hand-set image or
+// a band photo — and skips entirely when the key is absent.
+async function tmdbPosterUrl(title) {
+  const key = process.env.TMDB_API_KEY;
+  if (!key || !title) return '';
+  try {
+    const url = `https://api.themoviedb.org/3/search/movie?api_key=${key}&include_adult=false&query=${encodeURIComponent(title)}`;
+    const resp = await fetch(url);
+    if (!resp || resp.status !== 200) return '';
+    const data = JSON.parse(resp.text);
+    const hit = (data.results || []).find(r => r.poster_path);
+    return hit ? ('https://image.tmdb.org/t/p/w500' + hit.poster_path) : '';
+  } catch (e) { return ''; }
+}
+async function enrichRecurringActsPosters() {
+  console.log('\n🎬 Task 23: TMDB posters for recurring-acts.json movies...');
+  if (!process.env.TMDB_API_KEY) { console.log('  TMDB_API_KEY not set — skipping (movie cards keep the series logo).'); return; }
+  const file = path.join(__dirname, '..', 'recurring-acts.json');
+  let obj;
+  try { obj = JSON.parse(fs.readFileSync(file, 'utf8')); }
+  catch (e) { console.warn('  recurring-acts.json read/parse failed: ' + e.message); return; }
+  const arr = Array.isArray(obj.series) ? obj.series : [];
+  let changed = 0;
+  for (const e of arr) {
+    if (e.image) continue;                              // keep existing / hand-set images
+    if (!/\bmovie\b/i.test(e.series || '')) continue;   // movie series only (e.g. "Movie Mondays")
+    const film = String(e.title || '').split(':').slice(1).join(':').trim() || String(e.title || '');
+    const poster = await tmdbPosterUrl(film);
+    if (poster) { e.image = poster; changed++; console.log(`  ✓ ${film} → poster`); }
+    else console.log(`  – ${film} → no TMDB poster found`);
+  }
+  if (changed) { fs.writeFileSync(file, JSON.stringify(obj, null, 2) + '\n'); console.log(`  Filled ${changed} poster(s) in recurring-acts.json.`); }
+  else console.log('  No movie posters to fill.');
+}
+
+
 // ── Task 10: Telluride Foundation Events (HTML scraper) ──
 // The TF events page is a manually-maintained WPBakery page — no RSS.
 // We fetch the HTML, parse each wpb_text_column block for event data,
@@ -6422,6 +6463,10 @@ async function main() {
       console.log(`  TELLURIDE_SCIENCE_EVENTS updated (was ${existingScience.length}, now ${newScienceEvents.length})`);
     }
   }
+
+  // ── Task 23: fill movie posters in recurring-acts.json (writes its own file;
+  //    committed by the workflow's git add -A). No-op without TMDB_API_KEY. ──
+  try { await enrichRecurringActsPosters(); } catch (e) { console.warn('  recurring-acts poster enrich failed:', e.message); }
 
   // ── Task 20: Ridgway agenda map ──
   const newRidgwayAgendas = await syncRidgwayAgendas();
