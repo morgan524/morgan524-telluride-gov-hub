@@ -2000,8 +2000,13 @@
                       return 'telluride';
                     })();
              };
+             // Permanently hidden events (too niche / low-interest, per user).
+             // Matched on title across ALL sources → removed from Daily + Recurring.
+             // Add a pattern to hide another.
+             const EXCLUDED_EVENTS = /wright opera house guided tour|ridgway railroad museum|free train ride|summer bingo|ultimate frisbee/i;
              const pushEvent = (e, sourceLabel) => {
                if (!e || !e.title) return;
+               if (EXCLUDED_EVENTS.test(e.title)) return;   // permanently hidden niche events
                if (isGovMeeting(e)) return;   // gov meeting notices live in Gov-Hub, not Events
                if (isClosureNotice(e)) return; // holiday/office closure notices aren't events
                if (isAttendanceNotice(e)) return; // open-meetings "may attend" notices aren't public events

@@ -3507,6 +3507,9 @@ async function syncOurayRidgwayEvents() {
     const ev = wrapped && wrapped.event;
     if (!ev || ev.private || ev.status !== 'live') continue;
     if (GOV_MEETING_PATTERN_NODE.test(ev.title || '')) { skippedGov++; continue; }
+    // Permanently hidden niche events (per user 2026-06-15). Mirror of the
+    // EXCLUDED_EVENTS list in events.html — keep the two in sync.
+    if (/wright opera house guided tour|ridgway railroad museum|free train ride|summer bingo|ultimate frisbee/i.test(ev.title || '')) continue;
 
     // Span = first_date → last_date (fall back to the instance start).
     const inst = Array.isArray(ev.event_instances) && ev.event_instances[0]
