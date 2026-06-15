@@ -1,30 +1,26 @@
 {
-  "hash": "0837c56b6dee6612f17198f05c1922eb9c7b6369",
-  "lede": "Mountain Village council meets Tuesday to review an independent investigation report and vote on expedited affordable housing policies, while the gondola replacement funding timeline gets a critical look Monday with $18M in commitments needed by fall. Norwood's planning commission considers new dark sky lighting standards, and the county interviews candidates for planning positions.",
+  "hash": "0dd204a1339e03f984c203ef5986716a151bacbb",
+  "lede": "The gondola replacement moves toward a critical deadline this week, with SMART needing $18 million committed by fall 2026 to secure federal funding. Mountain Village Council tackles an independent investigation report and votes on expedited affordable housing review policies. Meanwhile, Telluride's historic commission faces two projects staff recommend rejecting, and Norwood considers updating outdoor lighting standards.",
   "notable": [
     {
-      "id": 0,
-      "stake": "New lighting rules could affect outdoor lighting throughout Norwood"
-    },
-    {
       "id": 2,
-      "stake": "$18M in local commitments needed by fall 2026 for federal funding"
+      "stake": "$18M commitment deadline looms for federal gondola funding"
     },
     {
       "id": 5,
-      "stake": "Council votes on expedited review for affordable housing projects"
+      "stake": "Investigation report review and affordable housing policy votes"
     },
     {
-      "id": 6,
-      "stake": "Interviews determine new planning commission and board of adjustment members"
+      "id": 0,
+      "stake": "Land use code changes for outdoor lighting standards"
     },
     {
       "id": 7,
-      "stake": "Historic window and deck projects face staff disapproval recommendations"
+      "stake": "Historic window and deck projects face staff disapproval"
     },
     {
       "id": 9,
-      "stake": "Winter recreation fees increase 3.7% with new ice rink schedule"
+      "stake": "Ice rink fees increasing 3.7% for winter programs"
     }
   ]
 }
