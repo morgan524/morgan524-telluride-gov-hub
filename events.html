@@ -1406,6 +1406,9 @@
        series as a per-day pill; "ongoing" months-long runs appear only as cards
        below. Click a bar → modal with an "Add to Calendar" link for that day. */
     const RECURRING = [];
+    // Series that have specific per-occurrence acts in recurring-acts.json — their
+    // generic span is suppressed from the Recurring calendar (the acts show in Daily).
+    const RECURRING_ACT_SERIES = new Set();
     const RC_PALETTE = ['#2f7a5f','#b8860b','#9c4221','#2c5282','#6b46c1','#b83280','#2b6cb0','#975a16','#285e61','#7b341e','#553c9a','#1a7e76','#9b2c2c','#3182ce','#805ad5'];
     const RC_MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     const RC_DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
@@ -2204,7 +2207,13 @@
                  .map(f => String(f.name || '').toLowerCase()).filter(Boolean);
                const isFestivalTitle = (t) => { const x = String(t || '').toLowerCase(); return FEST_NAMES.some(n => x.includes(n) || n.includes(x)); };
                const isRecurring  = (e) => e.isLongRunning && !e.isFestival && !isFestivalTitle(e.title);
-               const isSuppressed = (e) => isRecurring(e) && /music on the green/i.test(e.title || '');
+               const isSuppressed = (e) => {
+                 if (!isRecurring(e)) return false;
+                 const t = (e.title || '').toLowerCase();
+                 if (/music on the green/.test(t)) return true;        // per-band cards cover it in Daily
+                 for (const s of RECURRING_ACT_SERIES) if (s && t.includes(s)) return true;  // has specific acts in recurring-acts.json
+                 return false;
+               };
                RECURRING.length = 0;
                deduped.filter(e => isRecurring(e) && !isSuppressed(e))
                  .sort((a,b) => a.date.localeCompare(b.date))
@@ -2242,6 +2251,26 @@
                  link: e.sourceUrl || e.link || '',
                  imageUrl: e.imageUrl || ''
                }, 'Submitted')) : null)
+               .catch(() => {});
+
+             // Specific per-occurrence acts (recurring-acts.json): the rotating
+             // movie/band for series whose generic title hides the real act.
+             // Each renders as a single-day "Daily Events" card; its generic
+             // series is suppressed from the Recurring calendar (see isSuppressed).
+             // Maintained by the weekly recurring-acts-review scheduled task.
+             const recActsP = fetch('/recurring-acts.json?v=' + Math.floor(Date.now()/600000))
+               .then(r => r.ok ? r.json() : null)
+               .then(obj => {
+                 const arr = obj && Array.isArray(obj.series) ? obj.series : (Array.isArray(obj) ? obj : []);
+                 arr.forEach(e => {
+                   if (e.series) RECURRING_ACT_SERIES.add(String(e.series).toLowerCase());
+                   pushEvent({
+                     title: e.title, pubDate: e.date, time: e.time || '',
+                     location: e.location || '', description: e.description || '',
+                     link: e.link || '', imageUrl: e.image || ''
+                   }, e.source || 'Community');
+                 });
+               })
                .catch(() => {});
 
              // Approved community submissions from Firestore (the in-app
@@ -2282,7 +2311,7 @@
                })();
              });
 
-             Promise.allSettled([ridgwayP, communityJsonP, approvedP]).finally(() => finishAndRender());
+             Promise.allSettled([ridgwayP, communityJsonP, approvedP, recActsP]).finally(() => finishAndRender());
            } catch (err) { console.warn('loadLiveEvents failed:', err); }
        };
        s.onerror = () => console.warn('Could not load gov-helpers.js for live events');
