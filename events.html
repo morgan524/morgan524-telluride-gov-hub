@@ -1968,15 +1968,17 @@
              // Telluride bucket — that was the bug). Telluride-area sources
              // remain the final default.
              const townFor = (e, sourceLabel='') => {
-               // The Sheridan Opera House (a.k.a. Sheridan Arts Foundation) is
-               // ALWAYS in the Town of Telluride — regardless of which calendar
-               // lists it. Pin it before any text match by scanning the source,
-               // location, title AND description (so an event listed by the MV or
-               // telluride.com calendar but held AT the Sheridan still buckets to
-               // Telluride, not a touring act's name or a stray town word).
-               const sheridanHay = [sourceLabel, e.sourceLabel, e.source, e.location, e.title,
+               // Venues that are ALWAYS in the Town of Telluride, regardless of
+               // which calendar lists the event or where its location field
+               // points. Pin before any text match by scanning source, location,
+               // title AND description — so an event held at one of these but
+               // listed by the MV/telluride.com calendar still buckets to
+               // Telluride (not a touring act's name or a stray town word).
+               // Venues: Sheridan Opera House / Sheridan Arts Foundation, Ah Haa
+               // School for the Arts, the Alibi, the Telluride Depot.
+               const venueHay = [sourceLabel, e.sourceLabel, e.source, e.location, e.title,
                  e.description, e.summary, e.copy].map(x => String(x || '')).join(' ').toLowerCase();
-               if (/sheridan opera|sheridan arts/.test(sheridanHay)) return 'telluride';
+               if (/sheridan opera|sheridan arts|\bah ?haa?\b|\balibi\b|telluride depo/.test(venueHay)) return 'telluride';
                // telluride.com tags EVERY event location "Telluride, CO", so a
                // SPECIFIC non-Telluride hint from the title (e.g. "… - Mountain
                // Village") or the source should win over that generic location —
