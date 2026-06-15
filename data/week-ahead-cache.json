@@ -1,22 +1,18 @@
 {
-  "hash": "d60b5f037df0915443a53c788f92d1d147b8738e",
-  "lede": "The gondola replacement takes center stage this week as the Gondola Subcommittee meets Monday to hash out federal funding timelines — SMART needs $18 million committed by fall to enter the FTA program. Mountain Village Council tackles a packed agenda Tuesday including an investigation report review and votes on affordable housing policies, while Norwood's Planning Commission considers new dark sky lighting standards.",
+  "hash": "dcccc1d1f3d5db26e93d72effd73d67453f9d789",
+  "lede": "The biggest decision on tap this week is Mountain Village Council's vote Tuesday on expedited review policies for affordable housing projects, part of a packed agenda that includes an hour-long review of an independent investigation report. Meanwhile, Telluride's gondola replacement moves forward as the advisory committee discusses an $18 million federal funding commitment deadline.",
   "notable": [
     {
       "id": 2,
-      "stake": "$18M gondola funding decision with federal deadline looming"
+      "stake": "$18M federal funding commitment needed by fall 2026"
     },
     {
       "id": 5,
-      "stake": "Vote on expedited affordable housing policies plus investigation report review"
+      "stake": "Vote on expedited affordable housing review policies"
     },
     {
-      "id": 0,
-      "stake": "Vote on updated dark sky lighting code amendments"
-    },
-    {
-      "id": 9,
-      "stake": "Ice rink fee increase approval and 2026-27 schedule setting"
+      "id": 6,
+      "stake": "Board appointments for Planning Commission and Board of Adjustment"
     }
   ]
 }

@@ -140,6 +140,15 @@ const MEETING_AGENDA_META = {
     {"zoomUrl":"https://us06web.zoom.us/webinar/register/WN_XDMlJEPIRy6V3a5BeMEfCQ","phone":"970-369-6429","sv":2},
 
   "county|2026-07-14|Historical Commission":
+    {"sv":2},
+
+  "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
+    {"sv":2},
+
+  "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
+    {"sv":2},
+
+  "telluride|2026-07-15|Parks & Recreation Commission - Jul 15 2026":
     {"sv":2}
 };
 
@@ -250,16 +259,16 @@ const MANUAL_SUMMARIES = {
     "The June 30, 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The July 1 Ecology Commission agenda hasn't been posted yet.",
+    "The July 1, 2026 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 1 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The Jul 01 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
     "The July 1 Board of County Commissioners agenda hasn't been posted yet.",
@@ -277,7 +286,7 @@ const MANUAL_SUMMARIES = {
     "The June 11, 2026 SMART agenda hasn't been posted yet.",
 
   "county|2026-07-08|Board of County Commissioners Work Session":
-    "The July 8 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The July 8 Board of County Commissioners work session agenda hasn't been posted yet.",
 
   "smart|2026-07-09|SMART Board of Directors":
     "The July 9 SMART Board of Directors agenda hasn't been posted yet.",
@@ -298,7 +307,16 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14 Historical Commission agenda hasn't been posted yet."
+    "The July 14 Historical Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
+    "The July 15, 2026 Historic & Architectural Review Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
+    "The July 15 HARC agenda hasn't been posted yet.",
+
+  "telluride|2026-07-15|Parks & Recreation Commission - Jul 15 2026":
+    "The July 15 Parks & Recreation Commission agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -345,6 +363,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Shades of the season",
+    source: "Telluride Times",
+    date: "June 14, 2026",
+    firstSeen: "2026-06-15",
+    newsTopic: "community",
+    copy: "Telluride Arts is launching two community art shows this summer. \"The Color of Summer\" opens July 2 and invites artists to create works in whatever single color they feel best defines the season, running through October. \"This Is Colorado\" features over 120 one-square-foot canvases depicting artists' visions of the state for its 150th birthday, with locations in both Telluride and Mountain Village through August 1.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_2b8e7efc-eaa5-42b0-a151-475128fbc69f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/17/d17e963c-3647-4dc0-9584-8179e1d2f584/6a2b562591fd2.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Run for good",
     source: "Telluride Times",
@@ -1217,176 +1247,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Youth still served (just differently for a while)",
-    source: "Telluride Times",
-    date: "June 1, 2026",
-    firstSeen: "2026-06-01",
-    newsTopic: "housing",
-    copy: "The library's youth area is getting a renovation with new carpets, shelving, paint, and a custom playscape to replace the aging treehouse, while teen and tween spaces remain open during construction. The project had to start in June despite summer programming because of contractor delays, but library director Peggy Parrish says they'll be ready by September 1st before Film Festival. Some folks are questioning why they're changing what was already working fine for kids.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_37a03647-d1ec-48fc-8829-ee4373559b5a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/85/385842a0-96c9-4b78-85e5-78a8d2d39088/6a1dd99ed7988.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A foot up",
-    source: "Telluride Times",
-    date: "June 1, 2026",
-    firstSeen: "2026-06-01",
-    newsTopic: "arts-culture",
-    copy: "A local writer reflects on foot problems after years of hiking, table-waiting, and city walking, detailing various treatments from surgery to shock wave therapy for conditions like Morton's neuroma and bunions. The piece notes that while modern shoes may pamper our feet, they've also made them weaker compared to traditional cultures that went barefoot, and that 75% of Americans deal with foot issues despite having access to better footwear than miners who worked in hard leather boots year-round.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_c6d534ab-a901-4227-929a-5e5f512a2bd9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/82/382a382e-3855-4ef7-806f-faba2d535523/6a192af2d8365.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Pride Month 2026 has begun. Here's what to expect for the LGBTQ+ celebrations",
-    source: "Telluride Times",
-    date: "June 1, 2026",
-    firstSeen: "2026-06-01",
-    newsTopic: "public-safety",
-    copy: "Pride Month 2026 is underway with celebrations spanning from major cities to small towns, though the landscape has shifted considerably. Some corporate sponsors have pulled back following policy changes, while recent Supreme Court rulings and state restrictions have added new challenges to what began as protests after the 1969 Stonewall raid. The events maintain their mix of celebration and resistance, from traditional parades to community nights, even as organizers navigate a more complex political environment than in recent decades.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_182f85c0-ab8d-54b3-bc72-ae46c634936d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/17/e174862d-e689-5e26-b523-f24505a7eb0f/6a1de5ae18036.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Russell Wilson finalizing deal to join CBS Sports, AP source says",
-    source: "Telluride Times",
-    date: "June 1, 2026",
-    firstSeen: "2026-06-01",
-    newsTopic: "arts-culture",
-    copy: "Quarterback Russell Wilson is finalizing a deal to join CBS Sports and \"The NFL Today\" desk, replacing Matt Ryan who left for a front office role with the Falcons. Wilson, who spent 14 seasons in the league including that Super Bowl win with Seattle back in 2013, most recently played for the Giants after stops in Denver and Pittsburgh.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_e5de6dfb-2931-5df4-8b92-8ed9f22bf8e2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Colorado elections clerk set to be released from prison Monday based on her sentence commutation",
-    source: "Telluride Times",
-    date: "June 1, 2026",
-    firstSeen: "2026-06-01",
-    newsTopic: "government",
-    copy: "Former Mesa County elections clerk Tina Peters is being released from prison Monday after Governor Polis commuted her sentence. Peters was convicted in 2024 for allowing an outside computer expert linked to Mike Lindell to copy voting system data after the 2020 election, which was then used to promote false claims about election fraud. The commutation came after Trump pressured Polis and threatened to move federal facilities out of Colorado.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_931dd54d-a664-51d4-9de8-37dc88e1923f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Chalkboard week of May 28-June 3",
-    source: "Telluride Times",
-    date: "June 1, 2026",
-    firstSeen: "2026-06-01",
-    newsTopic: "government",
-    copy: "This week's community birthdays include residents from May 28 through June 3, with local kids and adults celebrating. The regular schedule continues with town board meetings, farmers market on Thursdays, senior meals twice weekly, food pantry on Sundays, and pickleball sessions multiple times a week at the school.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_57382ef3-2ef9-4f8e-be89-f6a22e3cb1b5.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/68/86897cd3-c9cb-4b41-bb5b-835407120d9f/6a1dd0ef0e241.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Marya Stark for town council",
-    source: "Telluride Times",
-    date: "June 1, 2026",
-    firstSeen: "2026-06-01",
-    newsTopic: "government",
-    copy: "This is an endorsement letter from Adrienne Christy supporting Marya Stark's reelection to Telluride Town Council. Christy praises Stark's prepared, thoughtful approach to meetings and her ability to listen to constituents while maintaining focus on both short-term issues and long-term planning. The endorser emphasizes Stark's fiscal responsibility and her potential to help bridge community divisions in an increasingly polarized political environment.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_3a10daa4-2137-4eb1-8fff-077a41f1f53c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    letterAuthor: "Adrienne Christy",
-    imgHiRes: true
-  },
-  {
-    title: "Urging a vote for Marya Stark",
-    source: "Telluride Times",
-    date: "June 1, 2026",
-    firstSeen: "2026-06-01",
-    newsTopic: "government",
-    copy: "Marya Stark was appointed to fill a vacant town council seat this winter from a pool of nearly a dozen applicants. The endorsement letter highlights her background spanning nonprofit, government and private sectors, plus degrees in business and data analytics. Her supporter emphasizes her ability to balance fiscal management with community listening as Telluride navigates growth pressures.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_0d781c0e-fd5a-487f-82a4-f84e5490e41b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    letterAuthor: "Patty Arndt",
-    imgHiRes: true
-  },
-  {
-    title: "TBC supports teachers",
-    source: "Telluride Times",
-    date: "June 1, 2026",
-    firstSeen: "2026-06-01",
-    newsTopic: "education",
-    copy: "Dear Editor,",
-    claudeSummary: false,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_5968bae2-1e30-494a-9b75-5f4c64590b51.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride Brewing Company's Face Down Brown Ale takes silver at World Beer Cup",
-    source: "Telluride Times",
-    date: "June 1, 2026",
-    firstSeen: "2026-06-01",
-    newsTopic: "community",
-    copy: "Telluride Brewing Company's Face Down Brown Ale won silver at the World Beer Cup, adding to an already solid collection of gold medals from previous competitions. The brewery celebrated at their Lawson Hill location with locals watching the awards live, and co-founder Chris Fish credited the production team for maintaining consistent quality over the years.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_523ccd12-7851-4aad-b1a9-189ef901b885.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/45/e455771d-f657-4a8b-b0ae-39cd5c01778b/6a1dc891decc8.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "So you've found some kittens",
-    source: "Telluride Times",
-    date: "June 1, 2026",
-    firstSeen: "2026-06-01",
-    newsTopic: "community",
-    copy: "When you find kittens, don't rush to rescue them right away. Kittens under 6 weeks are better off with mom - watch from 35 feet for a few hours or leave a flour ring to check for her footprints before taking action. Second Chance can help with spay/neuter services when they're old enough, and they're featuring Speedy, a 3-year-old lap cat who loves following people around.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_67f9c6c7-8e42-404b-a8d7-cd8a7d25fd10.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/62/06256b5d-f736-4f5e-a644-44c50f0974e9/6a1dc0e753520.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "County offers cost-share funding for noxious weed control",
-    source: "Telluride Times",
-    date: "June 1, 2026",
-    firstSeen: "2026-06-01",
-    newsTopic: "community",
-    copy: "San Miguel County is offering cost-share funding to help private landowners tackle noxious weeds, covering up to 50% of herbicide costs or $125 per acre, whichever is less, with a $500 cap per applicant. The program covers state and county-listed problem weeds, with herbicides purchased through the county and funding awarded first-come, first-served until the money runs out.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_70261750-b5d8-4895-bd7a-f728def47885.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/e0/1e0d9139-05c3-4882-a9a7-de3e67a8e2b4/6a1dc18f782e7.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Former Colorado elections clerk Tina Peters released from prison after scheme to copy her county's election system",
-    source: "Telluride Times",
-    date: "June 1, 2026",
-    firstSeen: "2026-06-01",
-    newsTopic: "government",
-    copy: "Former Colorado elections clerk Tina Peters released from prison after scheme to copy her county's election system.",
-    claudeSummary: false,
-    href: "https://www.telluridenews.com/news/state/article_282a700e-c727-5f63-bd41-46344645257f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Let there be baseball",
-    source: "Telluride Times",
-    date: "June 1, 2026",
-    firstSeen: "2026-06-01",
-    newsTopic: "housing",
-    copy: "Ouray County Baseball has launched a JV team through Ridgway School District with players from three towns, and is now raising $3 million for a new CHSAA-regulation field after the town approved their plans. They're hosting a fundraising event June 12 at Ridgway Athletic Park, complete with home run derby and dunk tank, hoping to build what could become a regional draw for Southwest Colorado baseball.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_604e7808-2cac-43cd-980d-cffc79b88aee.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/3a/33ac04dc-472c-4521-91c6-1622585fdb71/6a18c92358e80.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Releases Findings of Independent Investigation",
     source: "Town of Telluride",
     date: "June 10, 2026",
@@ -1434,7 +1294,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Click here for details.",
     source: "Town of Ridgway",
-    date: "June 14, 2026",
+    date: "June 15, 2026",
     firstSeen: "2026-06-09",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1467,7 +1327,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 14, 2026",
+    date: "June 15, 2026",
     firstSeen: "2026-06-04",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1478,7 +1338,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 14, 2026",
+    date: "June 15, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2374,39 +2234,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-06-14/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-06-14T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-06-14/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-06-14T20:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
-    title: "Fire and Ice Cream: Community Wildfire Education",
-    link: "https://koto.org/event/fire-and-ice-cream-community-wildfire-education/",
-    description: "The Town of Mountain Village Police Department, San Miguel County Office of Emergency Management and Telluride Fire Protection District present Fire and Ice Cream, an afternoon of wildfire education in Mountain Village on Sunday, June 14. The event will be held from 3 to 5 p.m. and will feature free ice cream, live music and informational tables from regional partners. Wildfire danger is at the forefront of our regional agencies' and residents’ minds as the area enters a dry summer season, and this event is an opportunity to learn about different aspects of wildfire preparedness, safety and prevention. In addition to the more serious topic of wildfire, the event will also feature free ice cream, live music and a fire truck and police squad car for kids to explore. …",
-    pubDate: "2026-06-14T21:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Heritage Plaza, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "Talking Gourds’ Stories & Poems Telluride",
     link: "https://koto.org/event/talking-gourds-stories-poems-telluride/",
     description: "San Miguel County Poet Laureate Paulo Munguía will be the featured presenter in English and Spanish at the Talking Gourds’ Stories & Poems series at the Wilkinson Public Library on Tuesday June 16 th at 5:15 pm. “Paulo has really blossomed at our local poet laureate, creating fascinating (and funny) videos as well as making strong poetry performances in both Spanish and English,” said Talking Gourds director Art Goodtimes. Born in Morelos, México and based in Montrose, Colorado, Munguía defines himself as a free soul. He is the first Hispanic person to be named poet laureate in San Miguel County (2025-2027) Co-sponsored by the Wilkinson Public Library and the Telluride Institute, the literary event is free and open to the public of all ages. Attendees are encouraged to bring a story or poem of their own, or of someone they like, to read aloud. …",
@@ -2900,6 +2727,28 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Sheridan Opera House, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/06/Town-of-Mountain-Village-Events-1800x900-1.png"
+  },
+  {
+    title: "Tennis Clinic | 105 | 3.0+ | Golden Hour",
+    link: "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-07-01/",
+    description: "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning the point off of an overhead winner. Suitable for levels 3.0+, this game is not only a workout and a ton of fun, but it will improve your tennis game by: Teaching you when to play near the net player. Improve your overall net game. Encourage you to practice being aggressive at the net. Finding a backhand volley. Execute deep lobs.",
+    pubDate: "2026-07-01T23:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-02/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-07-02T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
   }
 ];
 
@@ -3001,7 +2850,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Male",
     firstSeen: "2026-06-11",
     revealDate: "2026-06-13",
-    lastSeen: "2026-06-14"
+    lastSeen: "2026-06-15"
   }
 ];
 
@@ -3288,6 +3137,18 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://ucarecdn.com/3a7022df-2a89-4430-9639-65f67a9584ce/-/crop/500x500/0,63/-/preview/"
+  },
+  {
+    title: "The Copper Children - Telluride Mushroom Fest",
+    link: "https://www.alibitelluride.com/calendar#eca-event=the-copper-children-telluride-mushroom-fest",
+    description: "The Copper Children are a diverse blend of styles and influences that span from ...",
+    pubDate: "2026-08-13",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/dc85c3b0-3a00-458b-946e-3f08cb24a8bc/-/crop/500x500/0,63/-/preview/"
   }
 ];
 
@@ -4542,72 +4403,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Mountain Village Oktoberfest",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-oktoberfest/",
-    description: "Save the date: Steins up, Mountain Village! On Saturday, October 10, 2026, we're transforming Mountain Village Center into a high-",
-    pubDate: "2026-06-13T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47057/mv_oktoberfest26_std_1900x1010.png"
-  },
-  {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    pubDate: "2026-06-13T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
-    title: "KOTO Lip Sync Contest",
-    link: "https://townofmountainvillage.com/explore/events/all-events/koto-lip-sync-contest/",
-    description: "KOTO FM presents its annual Lip Snyc on Saturday, January 31 at the Sheridan Opera House.",
-    pubDate: "2026-06-13T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47782/koto_lip_sync_contest_1800x900.png"
-  },
-  {
-    title: "Mountain Village Movie Night- \"Zootopia 2\"",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-movie-night/",
-    description: "In the final Mountain Village Movie night of the season, the Town of Mountain Village and Telluride Conference Center are proud to present a free screening of",
-    pubDate: "2026-06-13T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48027/zootopia-2-8k-2025-3840x2160-22622.jpg"
-  },
-  {
-    title: "Telluride Foundation Rundola: Run for Good",
-    link: "https://townofmountainvillage.com/explore/events/all-events/telluride-foundation-rundola-run-for-good/",
-    description: "Celebrate Independence Day with the Telluride Foundation at the 16th Annual Rundola on July 4th, 2026! This exciting uphill foot race supports the Good",
-    pubDate: "2026-06-13T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48757/rundola26_1800x900.jpg"
-  },
-  {
-    title: "The Fretliners Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-fretliners-live-in-concert-1/",
-    description: "The Sheridan Arts Foundation presents The Fretliners Live in Concert on Saturday, June 13, doors at 7:30 p.m. and show at 8:30 p.m. The Fretliners are a band",
-    pubDate: "2026-06-13T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48799/tfl_summer_press_26.jpeg"
-  },
   {
     title: "Fire and Ice Cream: Community Wildfire Education Ice Cream Social",
     link: "https://townofmountainvillage.com/explore/events/all-events/fire-and-ice-community-wildfire-education-ice-cream-social/",
@@ -6359,18 +6154,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/46462/dsc09460-2000x1333-68a9e203-a80e-4c8c-9152-5d77c08fcc52.800x533.webp"
   },
   {
-    title: "The Fretliners",
-    link: "https://www.telluride.com/event/the-fretliners/",
-    description: "The Fretliners are a band defined by their songwriting—stories carried by powerful harmonies, dynamic arrangements, …",
-    pubDate: "2026-06-13",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/61781/download_13.800x533.webp"
-  },
-  {
     title: "Movies Under the Stars",
     link: "https://www.telluride.com/event/movies-under-the-stars/",
     description: "Bundle up and bring the family down to Conference Center Plaza in Mountain Village for Movies Under the Stars! Movies …",
@@ -6383,18 +6166,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/44447/screenshot_2026-05-15_at_3_52_12_pm.800x533.webp"
   },
   {
-    title: "Crawfish Boil Benefiting One to One Mentoring",
-    link: "https://www.telluride.com/event/oldmixon-crawfish-boil/",
-    description: "Join us for a community Crawfish Boil hosted by Oldmixon Construction and Telluride Brewing Company benefiting One to …",
-    pubDate: "2026-06-13",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/58115/download_11.800x533.webp"
-  },
-  {
     title: "Music on the Mesa",
     link: "https://www.telluride.com/event/music-on-the-mesa/",
     description: "Music on the Mesa is a FREE outdoor concert series presented two Saturdays a summer by Norwood Park & Rec District, …",
@@ -6405,18 +6176,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62177/screenshot_2026-04-09_at_2_09_57_pm.800x533.webp"
-  },
-  {
-    title: "IvanOff",
-    link: "https://www.telluride.com/event/ivanoff/",
-    description: "IvanOff is a Montana-born tech house producer and DJ. His friends named him IvanOff to remind him to cool off. …",
-    pubDate: "2026-06-13",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62303/screenshot_2026-04-29_at_2_54_10_pm.800x533.webp"
   },
   {
     title: "Fire and Ice Cream: Wildfire Education Ice Cream Social",
