@@ -876,17 +876,8 @@
       <!-- Location filter -->
       <div class="filter-card" id="sidebarFilter"><!-- populated by JS --></div>
 
-      <!-- Long-running events sidebar — multi-week events (e.g. the Rotary
-           Hikeathon, May 31–June 28) that span weeks. Rendered here instead
-           of as a single date-pinned card in the grid, by
-           renderLongRunningSidebar(). Sits ABOVE the festival sidebar. -->
-      <div class="festival-sidebar-card" id="sidebarLongRunningCard" style="display:none;">
-        <div class="festival-sidebar-head">
-          <span class="festival-sidebar-eyebrow">Spanning Several Weeks</span>
-          <h3>Ongoing Events</h3>
-        </div>
-        <div id="sidebarLongRunningList"><!-- populated by JS --></div>
-      </div>
+      <!-- (Ongoing Events sidebar removed 2026-06-15 — multi-day series now live
+           in the "Recurring Events" calendar view; festivals stay below.) -->
 
       <!-- Festival tickets sidebar — populated from TELLURIDE_FESTIVALS (gov-data.js)
            by renderFestivalCalendar(). Ticket button color reflects ticketStatus. -->
@@ -944,6 +935,57 @@
         .featured-event .fe-go { background:var(--forest,#21443c); color:#fff; }
         .featured-event .fe-cal { background:rgba(33,68,60,0.08); color:var(--forest,#21443c); border:1px solid rgba(33,68,60,0.15); }
         @media (max-width:640px){ .featured-event { grid-template-columns:1fr; } .featured-event .fe-img { min-height:170px; } }
+
+        /* ── Recurring Events calendar (multi-day series) ── */
+        .rc-calwrap{background:#fdfbf6;border:1px solid #ddd6c8;border-radius:16px;overflow:hidden;box-shadow:0 8px 26px rgba(33,68,60,.10);}
+        .rc-calhead{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:#21443c;color:#fff;}
+        .rc-calhead h2{font-family:Georgia,serif;font-size:1.15rem;margin:0;font-weight:700;}
+        .rc-nav{background:rgba(255,255,255,.14);color:#fff;border:0;border-radius:8px;font-size:1rem;font-weight:700;width:34px;height:34px;cursor:pointer;line-height:1;}
+        .rc-nav:hover{background:rgba(255,255,255,.26);}
+        .rc-dow{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));background:#eef0e9;border-bottom:1px solid #ddd6c8;}
+        .rc-dow div{padding:7px 6px;text-align:center;font-size:0.66rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#2f564d;}
+        .rc-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));}
+        .rc-cell{min-height:120px;border-right:1px solid #ece7da;border-bottom:1px solid #ece7da;padding:5px 5px 8px;overflow:hidden;}
+        .rc-cell:nth-child(7n){border-right:0;}
+        .rc-past{background:#e6e3da;opacity:.4;filter:grayscale(.5);}
+        .rc-today{background:#fbf6e7;}
+        .rc-daynum{font-size:0.7rem;font-weight:700;color:#5a6b64;margin-bottom:4px;}
+        .rc-today .rc-daynum{color:#b58a2c;}
+        .rc-bar{display:flex;align-items:center;gap:5px;width:100%;text-align:left;border:0;cursor:pointer;color:#fff;font-size:0.66rem;font-weight:700;line-height:1.15;padding:4px 7px;border-radius:6px;margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:inherit;}
+        .rc-bar .rc-ic{width:13px;height:13px;border-radius:3px;background:rgba(255,255,255,.85);flex:none;background-size:contain;background-repeat:no-repeat;background-position:center;}
+        .rc-run{height:24px;width:calc(100% + 10px);margin-left:-5px;border-radius:0;padding-left:9px;}
+        .rc-run.rl{border-top-left-radius:6px;border-bottom-left-radius:6px;}
+        .rc-run.rr{border-top-right-radius:6px;border-bottom-right-radius:6px;}
+        .rc-lane-empty{height:24px;margin-bottom:4px;}
+        .rc-cardsec{margin-top:24px;}
+        .rc-sech{font-family:Georgia,serif;color:#21443c;font-size:1.2rem;margin:0 0 13px;}
+        .rc-cardgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;}
+        .rc-card{display:flex;background:#fdfbf6;border:1px solid #ddd6c8;border-left-width:6px;border-radius:13px;overflow:hidden;box-shadow:0 5px 16px rgba(33,68,60,.08);}
+        .rc-card .rc-thumb{width:88px;min-width:88px;background-size:cover;background-position:center;background-color:#eef0e9;}
+        .rc-cbody{padding:11px 13px 12px;flex:1;min-width:0;}
+        .rc-cad{font-size:0.64rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;}
+        .rc-ctitle{font-family:Georgia,serif;font-size:1rem;font-weight:700;color:#21443c;line-height:1.18;margin:3px 0 5px;}
+        .rc-cmeta{font-size:0.74rem;color:#5a6b64;margin:2px 0;}
+        .rc-cdesc{font-size:0.76rem;color:#2c3b35;line-height:1.45;margin:7px 0 9px;}
+        .rc-cfoot{display:flex;align-items:center;justify-content:space-between;gap:8px;}
+        .rc-link{font-size:0.78rem;font-weight:800;color:#21443c;text-decoration:none;}
+        .rc-link:hover{text-decoration:underline;}
+        .rc-csrc{font-size:0.62rem;color:#8a978f;font-weight:700;text-transform:uppercase;letter-spacing:.04em;}
+        .rc-now{display:inline-block;font-size:0.56rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:#b45309;border-radius:9px;padding:2px 7px;margin-left:6px;vertical-align:middle;}
+        .rc-note{font-size:0.85rem;color:#5a6b64;padding:8px 0;}
+        .rc-ov{position:fixed;inset:0;background:rgba(20,30,26,.55);display:none;align-items:center;justify-content:center;padding:18px;z-index:9000;}
+        .rc-ov.open{display:flex;}
+        .rc-modal{background:#fdfbf6;border-radius:16px;max-width:460px;width:100%;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35);}
+        .rc-mimg{height:170px;background-size:cover;background-position:center;background-color:#21443c;}
+        .rc-mbody{padding:18px 20px 20px;}
+        .rc-mbody h3{font-family:Georgia,serif;color:#21443c;font-size:1.3rem;margin:0 0 8px;}
+        .rc-mrow{font-size:0.86rem;color:#2c3b35;margin:4px 0;display:flex;gap:7px;}
+        .rc-mrow b{color:#2f564d;font-weight:700;}
+        .rc-mbody p{font-size:0.88rem;line-height:1.55;color:#2c3b35;margin:12px 0 16px;}
+        .rc-macts{display:flex;gap:10px;flex-wrap:wrap;}
+        .rc-go{background:#21443c;color:#fff;text-decoration:none;font-weight:700;font-size:0.85rem;padding:10px 18px;border-radius:999px;}
+        .rc-cal{background:#b58a2c;color:#fff;text-decoration:none;font-weight:700;font-size:0.85rem;padding:10px 18px;border-radius:999px;}
+        .rc-close{background:rgba(33,68,60,.08);color:#21443c;border:1px solid rgba(33,68,60,.15);font-weight:700;font-size:0.85rem;padding:10px 18px;border-radius:999px;cursor:pointer;}
       </style>
       <div id="featuredEvent" style="display:none;"></div>
 
@@ -974,18 +1016,21 @@
       <div class="view-toggle" role="tablist" aria-label="Event view">
         <button type="button" id="viewListBtn" class="active" role="tab" aria-selected="true">
           <svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-          List
+          Daily Events
         </button>
         <button type="button" id="viewCalBtn" role="tab" aria-selected="false">
           <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          Calendar
+          Recurring Events
         </button>
       </div>
 
       <div class="event-grid" id="eventGrid"><!-- populated by JS --></div>
-      <div id="eventCalendar" style="display:none;"><!-- populated by JS when calendar view active --></div>
+      <div id="eventCalendar" style="display:none;"><!-- Recurring Events calendar, rendered by renderRecurring() --></div>
     </div>
   </main>
+
+  <!-- Recurring Events detail modal (opened from a calendar bar) -->
+  <div class="rc-ov" id="rcOv"><div class="rc-modal" id="rcModal"></div></div>
 
 
   <script>
@@ -1341,6 +1386,100 @@
       `;
     }
 
+    /* ───────── Recurring Events calendar (multi-day series) ─────────
+       Two-week, Monday-first calendar of the multi-day / recurring series in
+       RECURRING (built in finishAndRender). Festival-length runs render as one
+       continuous band held in a FIXED lane (so the line never jumps); weekly
+       series as a per-day pill; "ongoing" months-long runs appear only as cards
+       below. Click a bar → modal with an "Add to Calendar" link for that day. */
+    const RECURRING = [];
+    const RC_PALETTE = ['#2f7a5f','#b8860b','#9c4221','#2c5282','#6b46c1','#b83280','#2b6cb0','#975a16','#285e61','#7b341e','#553c9a','#1a7e76','#9b2c2c','#3182ce','#805ad5'];
+    const RC_MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const RC_DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    const rcEsc = (s) => String(s==null?'':s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    const rcPad = (n) => String(n).padStart(2,'0');
+    const rcDate = (iso) => { const p=String(iso).split('-'); return new Date(+p[0], +p[1]-1, +p[2], 12, 0, 0); };
+    const rcIso = (d) => d.getFullYear()+'-'+rcPad(d.getMonth()+1)+'-'+rcPad(d.getDate());
+    const rcAddDays = (iso,n) => { const d=rcDate(iso); d.setDate(d.getDate()+n); return rcIso(d); };
+    const rcSpan = (a,b) => Math.round((rcDate(b)-rcDate(a))/86400000);
+    const rcTodayIso = () => rcIso(new Date());
+    const rcPretty = (iso) => { const d=rcDate(iso); return RC_DOW[d.getDay()]+', '+RC_MON[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear(); };
+    const rcRange = (a,b) => { const sd=rcDate(a),ed=rcDate(b),sy=sd.getFullYear()===ed.getFullYear(); const L=RC_MON[sd.getMonth()]+' '+sd.getDate()+(sy?'':', '+sd.getFullYear()); const R=(sd.getMonth()===ed.getMonth()&&sy)?ed.getDate():RC_MON[ed.getMonth()]+' '+ed.getDate(); return L+' – '+R; };
+    const RC_ONGOING = /(hikeathon|every day|weeks of|all summer|on view|exhibit\b|season pass|through the season)/i;
+    function rcClassify(e){ const span=rcSpan(e.date,e.endDate); if(span>10 && RC_ONGOING.test((e.title+' '+(e.summary||'')).toLowerCase())) return 'ongoing'; if(span<=10) return 'run'; return 'weekly'; }
+    function rcCadence(e){ const k=rcClassify(e); if(k==='weekly') return 'Weekly · '+RC_DOW[rcDate(e.date).getDay()]+'s'; if(k==='ongoing') return 'Ongoing · through '+rcRange(e.date,e.endDate).split('– ')[1]; return rcRange(e.date,e.endDate); }
+    function rcOcc(e,ws,we){ const out=[]; const k=rcClassify(e); if(k==='ongoing') return out; if(k==='weekly'){ let d=e.date; while(d<ws) d=rcAddDays(d,7); while(d<=we && d<=e.endDate){ out.push(d); d=rcAddDays(d,7); } } else { let s=e.date>ws?e.date:ws, en=e.endDate<we?e.endDate:we; for(let d=s; d<=en; d=rcAddDays(d,1)) out.push(d); } return out; }
+    function rcGcal(e,iso){ let det=(e.time?e.time+'\n\n':'')+(e.summary||''); if(e.href&&e.href!=='#') det+=(det?'\n\n':'')+e.href; const dates=iso.replace(/-/g,'')+'/'+rcAddDays(iso,1).replace(/-/g,''); return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(e.title||'')+'&dates='+dates+'&location='+encodeURIComponent(e.location||'')+'&details='+encodeURIComponent(det); }
+    const rcLogoMini = (e) => (e.img && /^https?:\/\//.test(e.img)) ? 'style="background-image:url(\''+e.img.replace(/'/g,'%27')+'\')"' : '';
+    let RC_WIN = null;
+    function rcInitWin(){ const t=new Date(); const dow=t.getDay(); t.setDate(t.getDate()+(dow===0?-6:1-dow)); RC_WIN=rcIso(t); }  // Monday of current week
+
+    function renderRecurring(host, items){
+      if(!RC_WIN) rcInitWin();
+      const ws=RC_WIN, we=rcAddDays(ws,13), ti=rcTodayIso();
+      const active=[];
+      items.forEach(e => { const occ=rcOcc(e,ws,we); const overlaps=(e.date<=we && e.endDate>=ws); if(occ.length || (rcClassify(e)==='ongoing'&&overlaps)){ e._occ=occ; active.push(e); } });
+      active.sort((a,b) => { const ao=rcClassify(a)==='ongoing', bo=rcClassify(b)==='ongoing'; if(ao!==bo) return ao?-1:1; const ad=a._occ[0]||a.date, bd=b._occ[0]||b.date; return ad.localeCompare(bd)||a.title.localeCompare(b.title); });
+      const byDay={}; active.forEach(e => (e._occ||[]).forEach(iso => { (byDay[iso]=byDay[iso]||[]).push(e); }));
+      // lanes: each run keeps a fixed row; longest spans on top
+      const runs0=active.filter(e => rcClassify(e)==='run' && (e._occ||[]).length);
+      const runLane={}, laneEnd=[];
+      runs0.slice().sort((a,b) => b._occ.length-a._occ.length || (a._occ[0]<b._occ[0]?-1:a._occ[0]>b._occ[0]?1:0) || a.idx-b.idx).forEach(e => { const s=e._occ[0]; let L=0; while(laneEnd[L]!==undefined && laneEnd[L]>=s) L++; runLane[e.idx]=L; laneEnd[L]=e._occ[e._occ.length-1]; });
+      // labels: middle of each week-row segment, on the current (non-greyed) part
+      const runLabel={};
+      runs0.forEach(e => { const all=e._occ.slice().sort(), segs=[]; let cur=[]; all.forEach(iso => { if(cur.length && rcDate(iso).getDay()===1){ segs.push(cur); cur=[]; } cur.push(iso); }); if(cur.length) segs.push(cur); const set={}; segs.forEach(seg => { const pick=seg.filter(iso => iso>=ti); if(pick.length) set[pick[Math.floor((pick.length-1)/2)]]=1; }); runLabel[e.idx]=set; });
+
+      let cells='';
+      for(let i=0;i<14;i++){
+        const iso=rcAddDays(ws,i), d=rcDate(iso), dow=d.getDay();
+        const dayItems=byDay[iso]||[];
+        const weeklies=dayItems.filter(e => rcClassify(e)!=='run');
+        let inner='<div class="rc-daynum">'+RC_MON[d.getMonth()]+' '+d.getDate()+'</div>';
+        const laneMap={}; let maxL=-1;
+        dayItems.filter(e => rcClassify(e)==='run').forEach(e => { const L=runLane[e.idx]; laneMap[L]=e; if(L>maxL) maxL=L; });
+        for(let L=0;L<=maxL;L++){
+          const ev=laneMap[L];
+          if(!ev){ inner+='<div class="rc-lane-empty"></div>'; continue; }
+          const rs=(iso===ev.date), rend=(iso===ev.endDate), wsd=(dow===1), wend=(dow===0);
+          const lab=!!(runLabel[ev.idx] && runLabel[ev.idx][iso]);
+          const cls='rc-bar rc-run'+((rs||wsd)?' rl':'')+((rend||wend)?' rr':'');
+          inner+='<button class="'+cls+'" style="background:'+ev.color+'" data-rcidx="'+ev.idx+'" data-rciso="'+iso+'" title="'+rcEsc(ev.title)+'">'+(lab?('<span class="rc-ic" '+rcLogoMini(ev)+'></span>'+rcEsc(ev.title)):'')+'</button>';
+        }
+        weeklies.forEach(e => { inner+='<button class="rc-bar" style="background:'+e.color+'" data-rcidx="'+e.idx+'" data-rciso="'+iso+'"><span class="rc-ic" '+rcLogoMini(e)+'></span>'+rcEsc(e.title)+'</button>'; });
+        const cls=(iso===ti?'rc-cell rc-today':(iso<ti?'rc-cell rc-past':'rc-cell'));
+        cells+='<div class="'+cls+'">'+inner+'</div>';
+      }
+
+      const cards=active.map(e => {
+        const now=e.date<=ti && e.endDate>=ti;
+        const go=(e.href&&e.href!=='#')?'<a class="rc-link" href="'+rcEsc(e.href)+'" target="_blank" rel="noopener">More details →</a>':'<span></span>';
+        const thumb=(e.img&&/^https?:\/\//.test(e.img))?'<div class="rc-thumb" style="background-image:url(\''+e.img.replace(/'/g,'%27')+'\')"></div>':'<div class="rc-thumb" style="background:'+e.color+';color:#fff;font-family:Georgia,serif;font-size:1.6rem;font-weight:700;display:flex;align-items:center;justify-content:center;">'+rcEsc((e.title||'?').charAt(0))+'</div>';
+        return '<div class="rc-card" style="border-left-color:'+e.color+'">'+thumb+'<div class="rc-cbody"><div class="rc-cad" style="color:'+e.color+'">'+rcEsc(rcCadence(e))+(now?'<span class="rc-now">Now</span>':'')+'</div><div class="rc-ctitle">'+rcEsc(e.title)+'</div>'+(e.location?'<div class="rc-cmeta">📍 '+rcEsc(e.location)+'</div>':'')+(e.summary?'<div class="rc-cdesc">'+rcEsc(e.summary.slice(0,150))+(e.summary.length>150?'…':'')+'</div>':'')+'<div class="rc-cfoot">'+go+'<span class="rc-csrc">'+rcEsc(e.source||'')+'</span></div></div></div>';
+      }).join('') || '<div class="rc-note">No recurring events in this area for these two weeks.</div>';
+
+      host.innerHTML =
+        '<div class="rc-calwrap"><div class="rc-calhead"><button class="rc-nav" id="rcPrev" aria-label="Previous two weeks">‹</button><h2>'+rcRange(ws,we)+', '+rcDate(we).getFullYear()+'</h2><button class="rc-nav" id="rcNext" aria-label="Next two weeks">›</button></div>'+
+        '<div class="rc-dow"><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div><div>Sun</div></div>'+
+        '<div class="rc-grid">'+cells+'</div></div>'+
+        '<div class="rc-cardsec"><h3 class="rc-sech">Recurring &amp; Ongoing Events</h3><div class="rc-cardgrid">'+cards+'</div></div>';
+
+      const prev=document.getElementById('rcPrev'), next=document.getElementById('rcNext');
+      if(prev) prev.onclick=() => { RC_WIN=rcAddDays(RC_WIN,-14); render(); };
+      if(next) next.onclick=() => { RC_WIN=rcAddDays(RC_WIN,14); render(); };
+      host.querySelectorAll('[data-rcidx]').forEach(el => el.addEventListener('click', () => rcOpenModal(RECURRING[+el.getAttribute('data-rcidx')], el.getAttribute('data-rciso'))));
+    }
+
+    function rcOpenModal(e, iso){
+      if(!e) return; iso = iso || e.date;
+      const ov=document.getElementById('rcOv'), m=document.getElementById('rcModal');
+      const img=(e.img&&/^https?:\/\//.test(e.img))?'<div class="rc-mimg" style="background-image:url(\''+e.img.replace(/'/g,'%27')+'\')"></div>':'';
+      const go=(e.href&&e.href!=='#')?'<a class="rc-go" href="'+rcEsc(e.href)+'" target="_blank" rel="noopener">View details ↗</a>':'';
+      const cal='<a class="rc-cal" href="'+rcEsc(rcGcal(e,iso))+'" target="_blank" rel="noopener">📅 Add to Calendar</a>';
+      m.innerHTML=img+'<div class="rc-mbody"><h3>'+rcEsc(e.title)+'</h3><div class="rc-mrow"><b>📅</b><span>'+rcEsc(rcPretty(iso))+'</span></div><div class="rc-mrow"><b>🔁</b><span>'+rcEsc(rcCadence(e))+'</span></div>'+(e.time?'<div class="rc-mrow"><b>🕒</b><span>'+rcEsc(e.time)+'</span></div>':'')+(e.location?'<div class="rc-mrow"><b>📍</b><span>'+rcEsc(e.location)+'</span></div>':'')+(e.source?'<div class="rc-mrow"><b>•</b><span>'+rcEsc(e.source)+'</span></div>':'')+(e.summary?'<p>'+rcEsc(e.summary.slice(0,360))+(e.summary.length>360?'…':'')+'</p>':'')+'<div class="rc-macts">'+go+cal+'<button class="rc-close" id="rcClose">Close</button></div></div>';
+      ov.classList.add('open');
+    }
+    (function(){ const ov=document.getElementById('rcOv'); if(ov) ov.addEventListener('click', function(ev){ if(ev.target.id==='rcOv'||ev.target.id==='rcClose') this.classList.remove('open'); }); })();
+
     /* ───────── Featured event of the day ─────────
        Picks the single most-likely-popular event happening TODAY (Mountain
        Time) and shows it as a hero card above the grid. Recomputed from
@@ -1522,7 +1661,8 @@
       if (activeView === 'calendar') {
         grid.style.display = 'none';
         cal.style.display = '';
-        cal.innerHTML = renderCalendarView(filtered);
+        const rcFiltered = activeTown === 'all' ? RECURRING : RECURRING.filter(e => e.town === activeTown);
+        renderRecurring(cal, rcFiltered);
       } else {
         cal.style.display = 'none';
         grid.style.display = '';
@@ -1989,12 +2129,25 @@
                  keys.forEach(k => seenKeys.add(k));
                  return true;
                });
-               // Divert every multi-day event into the left sidebar; the
-               // grid shows only single-day, date-pinned events.
-               renderLongRunningSidebar(deduped.filter(i => i.isLongRunning));
+               // Split the set: single-day events + festivals → "Daily Events"
+               // grid; multi-day non-festival series → the "Recurring Events"
+               // calendar. The Music on the Green umbrella span is suppressed —
+               // its per-band single-day cards already cover it in Daily Events.
+               // A festival can survive dedup as its telluride.com copy (no
+               // isFestival flag), so also match marquee festivals BY NAME to
+               // keep them in Daily Events, not the Recurring calendar.
+               const FEST_NAMES = (typeof TELLURIDE_FESTIVALS !== 'undefined' ? TELLURIDE_FESTIVALS : [])
+                 .map(f => String(f.name || '').toLowerCase()).filter(Boolean);
+               const isFestivalTitle = (t) => { const x = String(t || '').toLowerCase(); return FEST_NAMES.some(n => x.includes(n) || n.includes(x)); };
+               const isRecurring  = (e) => e.isLongRunning && !e.isFestival && !isFestivalTitle(e.title);
+               const isSuppressed = (e) => isRecurring(e) && /music on the green/i.test(e.title || '');
+               RECURRING.length = 0;
+               deduped.filter(e => isRecurring(e) && !isSuppressed(e))
+                 .sort((a,b) => a.date.localeCompare(b.date))
+                 .forEach((e, i) => { e.idx = i; e.color = RC_PALETTE[i % RC_PALETTE.length]; RECURRING.push(e); });
                if (deduped.length > 0) {
                  EVENTS.length = 0;
-                 deduped.filter(i => !i.isLongRunning)
+                 deduped.filter(e => !isRecurring(e))
                    .sort((a,b) => a.date.localeCompare(b.date))
                    .forEach(e => EVENTS.push(e));
                  render();
