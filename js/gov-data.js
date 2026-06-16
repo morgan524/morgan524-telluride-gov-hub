@@ -185,7 +185,7 @@ const COUNTY_CACHED_DATA = [
     location: '305 W Colorado Ave, Telluride, CO 81435',
     civicClerkId: null,
     note: 'Agenda typically posted the Friday before.',
-    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/897/files/agenda/1867'
+    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/897/files/agenda/1869'
   },
   {
     date: 'June 24, 2026',
@@ -716,7 +716,7 @@ const OPHIR_CACHED_DATA = [
     date: 'June 16, 2026',
     title: 'General Assembly Meeting',
     board: 'ga',
-    agendaUrl: null
+    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/June-16%2C-2026-GA-Meeting-Packet.pdf'
   },
   {
     date: 'March 17, 2026',

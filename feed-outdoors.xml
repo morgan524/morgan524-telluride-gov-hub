@@ -6,41 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-outdoors.xml" rel="self" type="application/rss+xml" />
     <description>Hikes, races, ski events, and stewardship days — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Jun 2026 20:54:46 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 03:34:44 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Meeting] Planning and Zoning Commission Meeting — 2026-06-15</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/norwood%7C2026-06-15%7CPlanning%20and%20Zoning%20Commission%20Meeting</guid>
-      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Norwood • 2026-06-15
-
-The commission takes up two land-use code items. It will consider Resolution 0615-2026, recommending amendments to the Norwood Land Use Code to adopt the updated 2026 DarkSky International outdoor-lighting standards, alongside a discussion of the Dark Sky Coalition's updated rules. It also reviews a Current Conditions Analysis as part of the broader Land Use Code update. The consent agenda is limited to approving the May 18 minutes. 6:30 p.m. at Norwood Town Hall, with a Zoom option.]]></description>
-      <category>Meeting</category>
-      <category>Town of Norwood</category>
-    </item>
-    <item>
-      <title>[Meeting] Corrected Agenda for Open Space Commission Site Walk - Jun 15 2026 — 2026-06-15</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-15%7CCorrected%20Agenda%20for%20Open%20Space%20Commission%20Site%20Walk%20-%20Jun%2015%202026</guid>
-      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Telluride • 2026-06-15
-
-The Open Space Commission will walk the Tilman-Beam Corral site at Lot B in the Pearl Subdivision to review corral and fence conditions. They'll meet at the Shell Station on Highway 145 at 4 PM before heading to the property.]]></description>
-      <category>Meeting</category>
-      <category>Town of Telluride</category>
-    </item>
-    <item>
-      <title>[Meeting] Gondola Subcommittee - Jun 15 2026 — 2026-06-15</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-15%7CGondola%20Subcommittee%20-%20Jun%2015%202026</guid>
-      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Telluride • 2026-06-15
-
-The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.]]></description>
-      <category>Meeting</category>
-      <category>Town of Telluride</category>
-    </item>
     <item>
       <title>[Meeting] Board of Directors Meeting — 2026-06-16</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
@@ -126,6 +93,17 @@ The Parks & Recreation Commission will set the 2026-2027 ice rink schedule and a
       <description><![CDATA[San Miguel County • 2026-06-18
 
 The Lodging Tax Board meets to review tax reports and hear updates from the Norwood Chamber and Telluride Tourism Board. Standard quarterly check-in on how lodging tax dollars are being distributed and used across the county.]]></description>
+      <category>Meeting</category>
+      <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Meeting] Open Space Commission Meeting — 2026-06-22</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-06-22%7COpen%20Space%20Commission%20Meeting</guid>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[San Miguel County • 2026-06-22
+
+The June 22 Open Space Commission agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>

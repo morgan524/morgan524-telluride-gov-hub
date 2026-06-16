@@ -376,13 +376,25 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Small cart, big flavor",
+    source: "Telluride Times",
+    date: "June 16, 2026",
+    firstSeen: "2026-06-16",
+    newsTopic: "infrastructure",
+    copy: "The newest food cart in town, Benji Biber’s Mini Deli, is located at the Oak Street Gondola Plaza and serves fresh, made-to-order breakfast sandwiches from morning until the afternoon.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/business/article_c78aeb7d-1f1e-4fcf-a243-43810af97bc7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b3/ab314a9c-3cdf-40ca-bbef-659678381807/6a30ae0d9bcbe.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Birding for health",
     source: "Telluride Times",
     date: "June 15, 2026",
     firstSeen: "2026-06-15",
     newsTopic: "health",
     copy: "“There is an unreasonable joy to be had from the observation of small birds going about their bright, oblivious business”",
-    claudeSummary: false,
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_a85e4f1b-ece7-48ca-9f0e-b690c56fbc5c.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/36/3364de8d-3aa7-4f11-8966-289492ab6173/6a2b4b9d8dbe5.image.jpg",
     imgHiRes: true
@@ -1187,112 +1199,13 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "First Chair Destinations launches in Telluride",
-    source: "Telluride Times",
-    date: "June 2, 2026",
-    firstSeen: "2026-06-03",
-    newsTopic: "community",
-    copy: "A new vacation rental company called First Chair Destinations has launched in Telluride, taking over properties previously managed by Casago and promising a more locally-focused approach than bigger platforms. The company is run by former Wyndham and Vacasa executives and manages about 3,500 homes across mountain and resort destinations in nine states.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_84de633e-983c-45be-ae02-dec34ce8da39.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Fresh Foundation, Food Hub: more than a farmers' market booth",
-    source: "Telluride Times",
-    date: "June 2, 2026",
-    firstSeen: "2026-06-03",
-    newsTopic: "community",
-    copy: "Fresh Foundation runs eight food programs beyond their farmers' market booths, moving $1.4 million worth of local food through the community via wholesale connections, free pantries, senior meals, and markets in Mountain Village and Norwood that take SNAP benefits. They're addressing food insecurity that's easy to miss in our area — 2,400 people used regional food pantries last year, many just a short drive from the wealth of Telluride.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_77fd3c82-539e-47d5-820d-f610c4498a69.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/65/265a630a-8c4a-44d4-95b2-506ec323cc72/6a1f6e65c1014.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "What if anxiety, perfectionism and people-pleasing are assets, not liabilities?",
-    source: "Telluride Times",
-    date: "June 2, 2026",
-    firstSeen: "2026-06-03",
-    newsTopic: "community",
-    copy: "Attorney-turned-coach Jenny Robbins will speak at Wilkinson Public Library on Monday, June 8 at 5:30 p.m. about reframing anxiety and perfectionism as strengths rather than weaknesses. She'll share her personal story of leaving a 26-year legal career after a cancer diagnosis led her to build a coaching business, and attendees get a signed copy of her book \"The Box.\"",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_4a4621a9-cbec-46ad-8a7b-62b50575f9a6.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/31/b31e6565-65eb-4410-889b-222758816abf/6a1f6d110fd82.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride Housing Authority launches tenant advisory committee",
-    source: "Telluride Times",
-    date: "June 2, 2026",
-    firstSeen: "2026-06-03",
-    newsTopic: "housing",
-    copy: "The Housing Authority is creating a tenant advisory committee with seven residents representing different town-managed properties like Shandoka, Sunnyside, and Virginia Placer. Committee members will get quarterly rent credits and meet at least four times a year to give feedback on housing policies and operations, with applications due June 17.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_12442942-2378-4fdb-a325-fcf2aecde27d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Curating good",
-    source: "Telluride Times",
-    date: "June 2, 2026",
-    firstSeen: "2026-06-03",
-    newsTopic: "community",
-    copy: "Curate Telluride, a vacation rental management company, donated over $10,000 to local nonprofits this year through a program where they contribute 1% of commission revenue and homeowners match with either 1% of rental income or seven free nights for community use. The donations went to organizations ranging from the Mustang Sanctuary and Humane Society to youth hockey and the fire department. They're aiming to raise $50,000 next year.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_ae1f8e7b-822e-4cf5-8092-e39f744dfe9d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/de/1de8d61b-6f2b-4b7d-9170-344826fe3cfc/6a1f6bc061552.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Governor Polis signs 'negligently luring bears' bill",
-    source: "Telluride Times",
-    date: "June 2, 2026",
-    firstSeen: "2026-06-03",
-    newsTopic: "community",
-    copy: "Governor Polis signed a new law making it easier to cite people who negligently attract bears by lowering the standard from \"intentionally\" to \"knowingly\" luring them with improperly stored food and trash. The bill eliminates mandatory warnings for first-time offenders and raises fines for repeat violations to $5,000, giving wildlife officers more enforcement tools as human-bear conflicts continue rising across Colorado mountain communities.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_2acc4caf-12eb-443d-af21-eb9a657ec7d6.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/84/684d122b-88dd-4691-9a22-166d57eef212/6a1f6a8bc7dcc.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Investigation finds Prohaska ‘technically’ free of ethics violations",
-    source: "Telluride Times",
-    date: "June 2, 2026",
-    firstSeen: "2026-06-02",
-    newsTopic: "community",
-    copy: "An ethics investigation found former Mountain Village mayor Prohaska wasn't \"technically\" in violation when she and councilman Fee met with Telluride Ski Resort owner Chuck Horning about purchasing the resort for $127.5 million, but said her conduct was still inconsistent with ethical obligations. The investigators noted the officials used their political influence as a selling point, though they concluded town manager Wisor acted appropriately since he stood to lose his job if the deal went through.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_2fcca626-62fb-459c-9c24-a3ca6915d695.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/71/d7157d51-a6d7-4ddf-a1e2-8b9ddaeb4c13/6a1f033972ae9.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "The rhubarb in the sugar bowl",
-    source: "Telluride Times",
-    date: "June 2, 2026",
-    firstSeen: "2026-06-02",
-    newsTopic: "community",
-    copy: "A local writer reflects on how childhood creativity once flowed as easily as dipping rhubarb in sugar, when she and a friend would devour books on the school bus then spend hours crafting and sharing stories over the phone. Now she finds herself stuck on a novel that's been brewing for seven years, her writing having become too precious and studied compared to the bold, joyful storytelling of her youth.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_3a837034-4865-44ba-8d1c-f9f4cdfad790.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/93/89317d07-8c35-4d5f-8091-6fe8b02d6df5/6a192d9d2cddf.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride and Mountain Village farmers’ markets are open",
-    source: "Telluride Times",
-    date: "June 2, 2026",
-    firstSeen: "2026-06-02",
-    newsTopic: "recreation",
-    copy: "Both farmers' markets are back open, with Telluride's usual fruit vendors hit hard by April frost damage forcing organizers to bring in Palisade growers instead. Mountain Village reports record vendor participation this season, though the dry winter and early warm snap are creating challenges across the region with some orchards and crops likely to be lost entirely.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_b55834a9-3719-4d50-9dc7-897fefde7513.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/64/d6484aff-5bfb-4ff6-be20-dbb3292e170a/6a1e90bbb087e.image.jpg",
-    imgHiRes: true
+    title: "Colorado Supreme Court Rules Unanimously That Butcher Creek PUD Cannot Be Amended or Rezoned by...",
+    source: "Town of Telluride",
+    date: "June 16, 2026",
+    newsTopic: "land-use",
+    copy: "(June 15, 2026) – The Colorado Supreme Court today issued a unanimous decision in Kavanaugh v. Telluride Locals Coalition Petitioners’ Committee et al. (2026 CO 47), ruling in favor of the Town of Telluride and reversing the Colorado Court of Appeals.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=395",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15579"
   },
   {
     title: "Town of Telluride Releases Findings of Independent Investigation",
@@ -1351,7 +1264,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Click here for details.",
     source: "Town of Ridgway",
-    date: "June 15, 2026",
+    date: "June 16, 2026",
     firstSeen: "2026-06-09",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1395,7 +1308,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 15, 2026",
+    date: "June 16, 2026",
     firstSeen: "2026-06-04",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1406,7 +1319,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 15, 2026",
+    date: "June 16, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1462,6 +1375,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 
 const KOTO_NEWSCASTS = [
   {
+    title: "Newscast 6-15-26",
+    source: "KOTO Community Radio",
+    date: "June 16, 2026",
+    newsTopic: "government",
+    copy: "Telluride Discusses Town Council Ethics Code; The Photography of Humanity and Climate Change",
+    href: "https://koto.org/news/newscast-6-15-26/"
+  },
+  {
     title: "Newscast 6-12-26",
     source: "KOTO Community Radio",
     date: "June 13, 2026",
@@ -1516,14 +1437,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "recreation",
     copy: "Prohaska, Wisor Cleared from Ethics Violation in Mountain Village Investigation; Mars Sucks, According to Craig Childs; The Box of Anxiety",
     href: "https://koto.org/news/newscast-6-3-26/"
-  },
-  {
-    title: "Newscast 6-1-26",
-    source: "KOTO Community Radio",
-    date: "June 2, 2026",
-    newsTopic: "community",
-    copy: "CDOT Plans for Regional Construction; The Dark Veil of Romance",
-    href: "https://koto.org/news/newscast-6-1-26/"
   }
 ];
 
@@ -2226,7 +2139,7 @@ const TELLURIDE_SCIENCE_EVENTS = [
     location: "Sheridan Opera House, Telluride",
     description: " \r\n\r\nThe world needs both more energy AND a stable climate. Delivering both is one of the defining challenges of our time.\r\nThree leading voices sit down to examine what this challenge actually looks like — the data, the tradeoffs, and the paths forward. Panelists include Dr. Guy Brasseur, Climate Scientist, NCAR and Max Planck Institute for Meteorology, Georgina Campbell Flatter, CEO of Greentown Labs, and Jeff Guldner, Retired CEO of Arizona Public Service Company and Pinnacle West. \r\nThis event, cosponsored by Telluride Science, Telluride Foundation, and Open Minds, is free and open to the public. \r\nThis special Town Talk will be held at the Sheridan Opera House. Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public, but RSVP is required.\r\nThanks to our title sponsor Alpine Bank and Telluride Mountain Village Owner’s Association.",
     link: "https://telluridescience.org/event/the-dual-challenge-climate-and-energy/",
-    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/05/0728-TT_320-x-212-TF.jpg",
+    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/05/image.webp",
     sourceLabel: "Telluride Science"
   },
   {
@@ -2828,6 +2741,39 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-02/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-07-02T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Pilates for All Bodies with Laura",
+    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-07-02/",
+    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-07-02T18:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Art Walk Telluride",
+    link: "https://koto.org/event/art-walk-telluride/2026-07-02/",
+    description: "Join us the first Thursday of every month for Telluride's Art Walk. It will be an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists. From 5–7 pm, participating venues will open their doors, showcasing new collections and inviting art lovers to explore the vibrant gallery scene. Find what's new on www.telluridearts.org Note: Special Edition Art Walk May 21st.",
+    pubDate: "2026-07-02T23:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png"
   }
 ];
 
@@ -2918,7 +2864,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Male",
     firstSeen: "2026-06-11",
     revealDate: "2026-06-13",
-    lastSeen: "2026-06-15"
+    lastSeen: "2026-06-16"
   }
 ];
 
@@ -3075,6 +3021,18 @@ const ALIBI_EVENTS = [
     imageUrl: "https://ucarecdn.com/9944f858-66bb-428d-b435-1f6248dfb345/-/crop/2376x1189/0,1317/-/preview/"
   },
   {
+    title: "Zander Rodriguez",
+    link: "https://www.alibitelluride.com/calendar#eca-event=zander-rodriguez",
+    description: "Zander Rodriguez is a singer-songwriter now based in Phoenix, Arizona. Originall...",
+    pubDate: "2026-07-05",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/587eca13-bf75-4c6c-a808-93088ae7164f/-/crop/2624x1311/0,680/-/preview/"
+  },
+  {
     title: "River Spell",
     link: "https://www.alibitelluride.com/calendar#eca-event=river-spell",
     description: "River Spell is a Colorado-based jam band that delivers heartfelt songwriting and...",
@@ -3229,6 +3187,18 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://ucarecdn.com/dc85c3b0-3a00-458b-946e-3f08cb24a8bc/-/crop/500x500/0,63/-/preview/"
+  },
+  {
+    title: "Codestar X Jasper - Telluride Mushroom Fest",
+    link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
+    description: "Telluride Mushroom Fest After Party",
+    pubDate: "2026-08-14",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/"
   }
 ];
 
@@ -4048,18 +4018,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53136204077030/huge/73a73457770aa7ffe32d86c159c84b8eb038df21.jpg"
   },
   {
-    title: "Ouray History Day",
-    link: "https://www.visitouray.com/150",
-    description: "Step back in time and experience the rich history of Ouray. Historic Walking Tour Centennial Park next to the Ouray Elks Lodge 421 Main St. | 10 AM–1 PM Discover the stories that shaped Ouray through guided tours of historic buildings and live portrayals of some of the town’s most prominent historical figures. Local actors will bring history to life as they share the experiences, memories, and personalities of early Ouray residents. Photo: Ouray County Historical Society",
-    pubDate: "2026-06-26T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray",
-    imageUrl: "https://localist-images.azureedge.net/photos/52993991365940/huge/293df0610b27e785b906c11f81085da47aadb892.jpg"
-  },
-  {
     title: "OLD MAN POLLY",
     link: "https://coloradoboydepot.com/calendar/",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/",
@@ -4118,6 +4076,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Museum of the Mountain West",
     imageUrl: "https://localist-images.azureedge.net/photos/53056662722867/huge/f871fb72be98c25f0ffba65779b0681f719415ea.jpg"
+  },
+  {
+    title: "Ouray History Day",
+    link: "https://www.visitouray.com/150",
+    description: "Step back in time and experience the rich history of Ouray. Historic Walking Tour 10 AM–2:30 PM | Centennial Park next to the Ouray Elks Lodge, 421 Main St. (Tour leaves at 10:15) Discover the stories that shaped Ouray through guided tours of historic buildings and live portrayals of some of the town’s most prominent historical figures. Local actors will bring history to life as they share the experiences, memories, and personalities of early Ouray residents. Photo: Ouray County Historical Society Ute Creation Story 8 PM | Fellin Park Listen to the Ute Creation Story as told by Larry Cesspooch, and deepen your understanding of the people, cultures, and stories that have shaped the Ouray area for generations.",
+    pubDate: "2026-06-27T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray",
+    imageUrl: "https://localist-images.azureedge.net/photos/52993991365940/huge/293df0610b27e785b906c11f81085da47aadb892.jpg"
   }
 ];
 
@@ -4178,6 +4148,72 @@ const NORWOOD_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Closed In Observance Of 4th Of July",
+    link: "https://www.norwoodtown.com/2026-07-02-closed-in-observance-of-4th-of-july",
+    description: "",
+    pubDate: "2026-07-02T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Town Closure",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Star Spangled Saturday Parade 11 Am",
+    link: "https://www.norwoodtown.com/2026-07-04-star-spangled-saturday-parade-11-am",
+    description: "",
+    pubDate: "2026-07-04T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Board Of Trustees Meeting",
+    link: "https://www.norwoodtown.com/2026-07-08-board-of-trustees-meeting",
+    description: "",
+    pubDate: "2026-07-08T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Norwood Sanitation District Meeting Meeting",
+    link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
+    description: "",
+    pubDate: "2026-07-09T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "NWC Meeting",
+    link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
+    description: "",
+    pubDate: "2026-07-14T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Planning And Zoning Commission Meeting",
+    link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
+    description: "",
+    pubDate: "2026-07-20T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Government Meeting",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
     description: "",
@@ -4202,39 +4238,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Girl Scout Cookie Booth",
-    link: "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
-    description: "Support our local Girl Scout Troop with their cookie sales. Proceeds fund their activities & camps all year. The Girl Scouts will also donate 20 percent",
-    pubDate: "2026-06-14T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47998/20250202_153054.jpg"
-  },
-  {
-    title: "Sunday Rehab: Apres Edition",
-    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-apres-edition/",
-    description: "Sunday Rehab: Après Edition is Mountain Lodge Telluride’s weekly Sunday après-ski gathering, happening every Sunday from February 1 through March 29.",
-    pubDate: "2026-06-14T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
-  },
-  {
-    title: "From Forest to Front Door: A Community Conversation on Wildfire Preparendess",
-    link: "https://townofmountainvillage.com/explore/events/all-events/from-forest-to-front-door-a-community-conversation-on-wildfire-preparendess/",
-    description: "The San Miguel County Office of Emergency Management and the Telluride Foundation are hosting a free panel discussion that will kick off the public comment",
-    pubDate: "2026-06-14T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48302/from_forest_to_front_door_tomv_1800_x_900_px.png"
-  },
   {
     title: "Winter Fundraiser: Adventure Shorts",
     link: "https://townofmountainvillage.com/explore/events/all-events/winter-fundraiser-adventure-shorts/",
@@ -6019,30 +6022,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62177/screenshot_2026-04-09_at_2_09_57_pm.800x533.webp"
-  },
-  {
-    title: "Fire and Ice Cream: Wildfire Education Ice Cream Social",
-    link: "https://www.telluride.com/event/fire-and-ice-community-wildfire-education-ice-cream-social/",
-    description: "The Town of Mountain Village Police Department, San Miguel County Office of Emergency Management and Telluride Fire …",
-    pubDate: "2026-06-14",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/53605/download.800x533.webp"
-  },
-  {
-    title: "Calder Allen",
-    link: "https://www.telluride.com/event/calder-allen/",
-    description: "Born and raised in Austin, Texas, Calder Allen is a fifth-generation Texan whose roots run deep in the state. His …",
-    pubDate: "2026-06-14",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62163/screenshot_2026-04-09_at_1_57_27_pm.800x533.webp"
   },
   {
     title: "Sunday Rehab",
