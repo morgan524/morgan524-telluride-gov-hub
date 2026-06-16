@@ -84,6 +84,11 @@
     .doc-tag{font-size:0.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-green);}
     .doc-item a{font-size:0.86rem;color:var(--text-primary);text-decoration:none;font-weight:600;line-height:1.35;}
     .doc-item a:hover{color:var(--forest);}
+    /* Cards with an actual document link get a blue, underlined title so it
+       reads as clickable; titles with no document stay plain dark text. */
+    .doc-item a.doc-link{color:#1d6fb8;text-decoration:underline;}
+    .doc-item a.doc-link:hover{color:#13548c;}
+    .doc-item .doc-title{font-size:0.86rem;color:var(--text-primary);font-weight:600;line-height:1.35;}
     .doc-item p{margin:0;font-size:0.78rem;color:var(--text-secondary);}
     .player-item{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border-soft);}
     .player-item:last-child{border-bottom:none;padding-bottom:0;}
@@ -433,9 +438,12 @@
         html += `<div class="scard">
           <div class="scard-title">Key Documents</div>`;
         issue.docs.forEach(d => {
+          const _hasDoc = d.href && d.href !== '#';
           html += `<div class="doc-item">
             ${d.tag ? `<span class="doc-tag">${esc(d.tag)}</span>` : ''}
-            <a href="${esc(d.href||'#')}" target="_blank" rel="noopener">${esc(d.title||'')}</a>
+            ${_hasDoc
+              ? `<a class="doc-link" href="${esc(d.href)}" target="_blank" rel="noopener">${esc(d.title||'')}</a>`
+              : `<span class="doc-title">${esc(d.title||'')}</span>`}
             ${d.copy ? `<p>${esc(d.copy)}</p>` : ''}
           </div>`;
         });
