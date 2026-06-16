@@ -116,7 +116,7 @@ const MEETING_AGENDA_META = {
     {"sv":2},
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    {"sv":2},
+    {"sv":2,"zoomUrl":"https://us06web.zoom.us/meeting/register/m65fl_EfRuC-m1IoGX6uiQ","meetingId":"815 3599 7736","passcode":"769982","phone":"301-715-8592"},
 
   "telluride|2026-06-15|Corrected Agenda for Open Space Commission Site Walk - Jun 15 2026":
     {"sv":2},
@@ -375,6 +375,42 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "No surprises: Telluride Town Council candidate Marya Stark",
+    source: "Telluride Times",
+    date: "June 16, 2026",
+    firstSeen: "2026-06-16",
+    newsTopic: "government",
+    copy: "She’s only been on the job for approximately six months, but it’s been a full agenda for Telluride Town Council member Marya Stark, and she’s ready to dial down on the kinds of surprises council and the community have been…",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_18e52cae-4f5b-4d68-ae21-71b301384ac7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/a3/8a36df49-72ba-403a-8faa-317408ac8772/6a30fa8544efa.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "‘People over self’: Telluride Town Council candidate Chris Uihlein",
+    source: "Telluride Times",
+    date: "June 16, 2026",
+    firstSeen: "2026-06-16",
+    newsTopic: "government",
+    copy: "Chris Uihlein is serious about wanting to get to know his fellow candidates for Telluride Town Council. He knows Charles Dalton a bit from the Monday night winter curling league they both participate in and he knows Marya Stark from…",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_25ae29a6-e2a9-4b47-8c6d-5528fec8a9fb.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/fb/8fba0e1a-9241-458d-a6b7-30cd3d3bee4a/6a30f60f61b4f.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Steward for an uncertain future: Telluride Town Council candidate Charles Dalton",
+    source: "Telluride Times",
+    date: "June 16, 2026",
+    firstSeen: "2026-06-16",
+    newsTopic: "government",
+    copy: "Of the three candidates running for two seats on Telluride Town Council in the June 30 special election, Charles Dalton is the “old-timer,” having lived in Telluride for 10 years.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_d1f22fd4-022a-49f6-a26d-2d556533adf8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/e4/0e411176-7121-4f5b-8b1c-3efdf057083a/6a30fd9376842.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Small cart, big flavor",
     source: "Telluride Times",
@@ -2468,6 +2504,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
   },
   {
+    title: "This Is Colorado (In One Square Foot) Progressive Opening Reception",
+    link: "https://koto.org/event/this-is-colorado-in-one-square-foot-progressive-opening-reception/2026-06-24/1/",
+    description: "What does Colorado look like through the eyes of the people who live here? This spring, as part of the local effort to celebrate America’s 250th anniversary and Colorado’s 150th anniversary, Telluride Arts in partnership with the Telluride Historical Museum invited the community to explore this question by submitting artworks for This Is Colorado (In One Square Foot), the region's first community-wide art project. More than 120 artists, ranging from first-time participants to professional creatives, accepted the challenge of telling a Colorado story on a canvas measuring just one square foot, and now their work is ready to be unveiled to the public. Presented with the generous support from the Town of Mountain Village, TMVOA, and CCAASE, This is Colorado (In One Square Foot) will be on view from June 24 through August 1, 2026, from 10 a.m. to 5 p.m. …",
+    pubDate: "2026-06-24T22:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Properties on the Plaza Mountain Village",
+    imageUrl: ""
+  },
+  {
     title: "Tennis Clinic | 105 | 3.0+ | Golden Hour",
     link: "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-06-24/",
     description: "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning the point off of an overhead winner. Suitable for levels 3.0+, this game is not only a workout and a ton of fun, but it will improve your tennis game by: Teaching you when to play near the net player. Improve your overall net game. Encourage you to practice being aggressive at the net. Finding a backhand volley. Execute deep lobs.",
@@ -2476,6 +2523,17 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "This Is Colorado (In One Square Foot) Progressive Opening Reception",
+    link: "https://koto.org/event/this-is-colorado-in-one-square-foot-progressive-opening-reception/2026-06-24/2/",
+    description: "What does Colorado look like through the eyes of the people who live here? This spring, as part of the local effort to celebrate America’s 250th anniversary and Colorado’s 150th anniversary, Telluride Arts in partnership with the Telluride Historical Museum invited the community to explore this question by submitting artworks for This Is Colorado (In One Square Foot), the region's first community-wide art project. More than 120 artists, ranging from first-time participants to professional creatives, accepted the challenge of telling a Colorado story on a canvas measuring just one square foot, and now their work is ready to be unveiled to the public. Presented with the generous support from the Town of Mountain Village, TMVOA, and CCAASE, This is Colorado (In One Square Foot) will be on view from June 24 through August 1, 2026, from 10 a.m. to 5 p.m. …",
+    pubDate: "2026-06-24T23:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Properties on the Plaza Mountain Village",
     imageUrl: ""
   },
   {
@@ -2752,28 +2810,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
-  },
-  {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-07-02/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-07-02T18:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Art Walk Telluride",
-    link: "https://koto.org/event/art-walk-telluride/2026-07-02/",
-    description: "Join us the first Thursday of every month for Telluride's Art Walk. It will be an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists. From 5–7 pm, participating venues will open their doors, showcasing new collections and inviting art lovers to explore the vibrant gallery scene. Find what's new on www.telluridearts.org Note: Special Edition Art Walk May 21st.",
-    pubDate: "2026-07-02T23:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png"
   }
 ];
 
@@ -4082,17 +4118,6 @@ const OURAY_RIDGWAY_EVENTS = [
 ];
 
 const NORWOOD_EVENTS = [
-  {
-    title: "NWC Meeting",
-    link: "https://www.norwoodtown.com/2026-06-09-nwc-meeting",
-    description: "",
-    pubDate: "2026-06-09T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
   {
     title: "Board Of Trustees Second Amended",
     link: "https://www.norwoodtown.com/2026-06-10-board-of-trustees-second-amended",
@@ -5745,6 +5770,94 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48004/mv_to_jf-4.png"
+  },
+  {
+    title: "Kitchen Dwellers Live in Concert",
+    link: "https://townofmountainvillage.com/explore/events/all-events/kitchen-dwellers-live-in-concert-2/",
+    description: "KITCHEN DWELLERS LIVE IN CONCERT With Magoo The Sheridan Arts Foundation presents Kitchen Dwellers live in concert at the historic Sheridan Opera House on",
+    pubDate: "2026-07-16T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/47694/3.jpg"
+  },
+  {
+    title: "Western Medicine Live in Concert",
+    link: "https://townofmountainvillage.com/explore/events/all-events/western-medicine-live-in-concert/",
+    description: "The Sheridan Arts Foundation presents Western Medicine live in concert at the historic Sheridan Opera House on Thursday, February 19. Doors open at 7:30 p.m.,",
+    pubDate: "2026-07-16T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48000/mv_to_jf-2.jpg"
+  },
+  {
+    title: "The Brothers Comatose Live in Concert",
+    link: "https://townofmountainvillage.com/explore/events/all-events/the-brothers-comatose-live-in-concert/",
+    description: "The Sheridan Arts Foundation presents The Brothers Comatose live in concert at the historic Sheridan Opera House on Thursday, February 26.",
+    pubDate: "2026-07-16T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48006/mv_to_jf-5.png"
+  },
+  {
+    title: "Telluride Art Walk",
+    link: "https://townofmountainvillage.com/explore/events/all-events/telluride-art-walk-1/",
+    description: "Join in for Telluride Art Walk, an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists.",
+    pubDate: "2026-07-16T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48050/art_walk.png"
+  },
+  {
+    title: "Creative Exchange",
+    link: "https://townofmountainvillage.com/explore/events/all-events/creative-exchange/",
+    description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home.",
+    pubDate: "2026-07-16T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48052/creative_exchange-1.png"
+  },
+  {
+    title: "The House of Shimmy Shake features \"Remix\"",
+    link: "https://townofmountainvillage.com/explore/events/all-events/burlesque-week-remix-the-house-of-shimmy-shake/",
+    description: "Telluride Theatre's annual fundraiser resurrects the raucous and raunchy variety shows of Telluride’s vaudeville era, featuring dancing, comedy,",
+    pubDate: "2026-07-16T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48273/mv_graphic_-_remix.png"
+  },
+  {
+    title: "Galvin Cello Quartet",
+    link: "https://townofmountainvillage.com/explore/events/all-events/galvin-cello-quartet/",
+    description: "This concert features a program based around famous music for piano that has been stunningly arranged for four cellos. Performed by the multi award-",
+    pubDate: "2026-07-16T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48307/galvin_quartet.jpg"
+  },
+  {
+    title: "Big Something Live in Concert",
+    link: "https://townofmountainvillage.com/explore/events/all-events/big-something-live-in-concert/",
+    description: "The Sheridan Arts Foundation presents Big Something Live in Concert at the historic Sheridan Opera House on Thursday, March 12th & Friday the 13th.",
+    pubDate: "2026-07-16T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48320/mv-10.png"
   }
 ];
 
