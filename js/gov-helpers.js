@@ -2779,70 +2779,48 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Book Buzz with the Pour Over Pedaler",
-    link: "https://telluridelibrary.libcal.com/event/16687359?hs=a",
-    description: "9:00 AM – 10:00 AM · Get the scoop on the hottest new titles at the library during Book Buzz ! Discover upcoming releases, hidden gems, and staff favorites while enjoying a complimentary handcrafted coffee from Luke of The Pour Over Pedaler . Come sip, socialize, and leave with your next great read!",
-    pubDate: "2026-06-15T15:00:00.000Z",
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/16772758?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-06-16T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_27_11_11_58.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
   },
   {
-    title: "Musik 4 Kinders",
-    link: "https://telluridelibrary.libcal.com/event/16568416?hs=a",
-    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
-    pubDate: "2026-06-15T16:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
-  },
-  {
-    title: "Savvy Seniors-Open Tech",
-    link: "https://telluridelibrary.libcal.com/event/16667563?hs=a",
-    description: "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.",
-    pubDate: "2026-06-15T19:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Meeting Room #6 - large",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_14_07_56.png"
-  },
-  {
-    title: "Hobby Hopping",
-    link: "https://telluridelibrary.libcal.com/event/17065340?hs=a",
-    description: "2:00 PM – 3:00 PM · Learn a new hobby each week on Monday afternoons.  June 1: Perler Beads June 8: Friendship Bracelets June 15: Slime! June 22: Tie Dye June 29: Clay Studio",
-    pubDate: "2026-06-15T20:00:00.000Z",
+    title: "Teen Cook",
+    link: "https://telluridelibrary.libcal.com/event/16935711?hs=a",
+    description: "2:00 PM – 3:00 PM · Join us every Tuesday this summer for Teen Cook, where we prepare a variety of delicious foods and get to try out something new.",
+    pubDate: "2026-06-16T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_15_13_18_25.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png"
   },
   {
-    title: "Cíclica & Humana",
-    link: "https://telluridelibrary.libcal.com/event/16303303?hs=a",
-    description: "5:00 PM – 6:30 PM · C&iacute;clica & Humana es un proyecto que busca abrir un espacio para mujeres en el que podamos comprender el funcionamiento de nuestro ciclo hormonal y reconectar con nuestra feminidad desde el amor propio. El proyecto estar&aacute; organizado en 6 encuentros: 1. La feminidad y el Utero  2. Como Entender nuestro cuerpo?  3. Ciclo 1: Fase Lutea  4. Ciclo 2: Menstruaci&oacute;n  5. Ciclo 3: Fase Folicular  6. Ciclo 4: Fase Ovulaci&oacute;n  Por favor de registrase con Claudia para estas clases.",
-    pubDate: "2026-06-15T23:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_14_26_48.png"
-  },
-  {
-    title: "Songs of the Season: Summer!",
-    link: "https://telluridelibrary.libcal.com/event/16258330?hs=a",
-    description: "5:30 PM – 6:30 PM · Join Oliver & Jackson in a Seasonal Sing Along event, focusing on songs relevant to each coming season. Bring an instrument, just your voice, or even dancing shoes. All are invited. Chords and lyrics will be displayed. Registration is encouraged.",
-    pubDate: "2026-06-15T23:30:00.000Z",
+    title: "Talking Gourds Presents: Stories and Poems - Paulo Munguia",
+    link: "https://telluridelibrary.libcal.com/event/15798224?hs=a",
+    description: "5:15 PM – 7:00 PM · The Telluride Institute's Talking Gourds Poetry Program is hosting a live Stories & Poems series at the Wilkinson Public Library magazine room on the third Tuesday of every month at 5:15 pm. Following the featured poet&#39;s or story teller&#39;s reading we will hold a Talking Gourds sharing circle going around the room to let everyone speak. Attendees are encouraged to bring their own work or someone else's that they like to share. For more information, visit the Telluride Institute Talking Gourds website: tellurideinstitute.org/talking-gourds Jan. 20 / Tanya Ishikawa of Montrose Feb. 17 / Karen Bellerose of Lawson Mar. 17 / Mary Hearding of Rico Apr 21 / Joan Shapiro of Ridgway May 19 / Danny Rosen of Fruita June 16 / Paulo Munguia of Montrose July 21 / Peter Waldor of Trout Lake Aug. …",
+    pubDate: "2026-06-16T23:15:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1769024106.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_04_15_58_44.jpg"
+  },
+  {
+    title: "Spanish Happy Hour",
+    link: "https://telluridelibrary.libcal.com/event/16008000?hs=a",
+    description: "5:30 PM – 6:30 PM · Practice your Spanish skills with other Spanish speakers at La Cocina. The Library will provide appetizers, and the bar will be available for you to purchase a beverage of your choice. Registration is not required, but it helps us have an idea of how many people will be in attendance, and therefore how much food to order.  All levels welcome!",
+    pubDate: "2026-06-16T23:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "La Cocina de Luz Restaurant",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715701794.jpg"
   }
 ];
 
@@ -3514,18 +3492,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
   },
   {
-    title: "Swimming Classes for Kids",
-    link: "https://anc.apm.activecommunities.com/cityofouray/activity/search?activity_select_param=2&viewMode=list",
-    description: "The Ouray Hot Springs summer swim lesson program is a fun and supportive way for kids to build confidence in the water. Two-week sessions run through the summer from June 1 through Aug. 6. Details: ✔️ Classes meet Monday–Thursday for 30 minutes each day ✔️ 8 classes per session ✔️ $45 per session (that’s less than $6 per class!) ✔️ Pool entry during class period included Class Options: Parent Tots: (Under 3 with an adult) Level 1: Beginner Skills (Ages 3+) Level 2: Intermediate Skills (All Ages) Level 3: Advanced Skills (All Ages) 📅 You can register at tinyurl.com/ourayactivities! Registration for each session closes the Friday before the session begins. Questions? Contact our Swim Safety Coordinator at 970-325-3009 or JWyatt@CityofOuray.com.",
-    pubDate: "2026-06-01T12:00:00.000Z",
-    endDate: "2026-07-27",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52806871795839/huge/2b4a1f1e03bf8526d92866007630f4a159e579d5.jpg"
-  },
-  {
     title: "Ouray Mountain Air Music Series",
     link: "www.ouraymusicseries.com",
     description: "June 4th: AJ Fullerton and Grant Sabin June 11th: Nik Parr & The Selfless Lovers with You Knew Me When June 18th: The Sweet Lizzy Project with Sara Jean Kelley June 25th: Cruz Contreras & The Black Lillies and Griffin William Sherry Set in the heart of Ouray, the Mountain Air Music Series has become a signature summer tradition, offering a welcoming space for families, friends, and visitors of all ages to gather and unwind. Surrounded by breathtaking mountain views, the series creates an atmosphere that is equal parts relaxing and energizing—where laughter, community spirit, and live music blend seamlessly in one unforgettable outdoor experience. What makes the series truly special is the lineup of talented bands who bring both heart and authenticity to the stage. Each group shares a deep passion for music and a genuine appreciation for performing in small communities like Ouray. …",
@@ -3572,18 +3538,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52709642938173/huge/e2c21f0b2c1fb10c06c021e9b9d55a9ea535bccc.jpg"
-  },
-  {
-    title: "Movie Mondays in Hartwell Park",
-    link: "https://events.ourayridgwayevents.com/event/movie-mondays-ferris-buellers-day-off",
-    description: "Enjoy free movies under the stars in Ridgway's Hartwell Park. They'll start at 8:30pm. Bring your own chairs, blankets and snacks. Brought to you by the Ridgway Youth Advisory Council. Here's the line-up: June 15th - Ferris Bueller's Day Off (rated PG-13)July 20th - The Peanut Butter Falcon (rated PG-13)August 17th - Top Gun (rated 13+ by Common Sense Media)",
-    pubDate: "2026-06-15T12:00:00.000Z",
-    endDate: "2026-08-17",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52922424426850/huge/1e180755c642fe19893a7caee0beacbf99e967d3.jpg"
   },
   {
     title: "Craft Time: Birdhouses",
@@ -4088,6 +4042,42 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray",
     imageUrl: "https://localist-images.azureedge.net/photos/52993991365940/huge/293df0610b27e785b906c11f81085da47aadb892.jpg"
+  },
+  {
+    title: "18th Annual Ridgway RiverFest",
+    link: "https://ridgwayriverfest.org/",
+    description: "The Ridgway RiverFest is a family-friendly celebration of the Uncompahgre River, our watershed and river recreation with all-age river races, live music, local food and drink, kids’ activities, watershed educational and cultural programs. RiverFest is produced by the Uncompahgre Watershed Partnership, a Ouray County nonprofit watershed group dedicated to helping protect the economic, natural, and scenic values of the Upper Uncompahgre River Watershed. The highlight of the day is the infamous “Junk of the Unc” race in which boaters maneuver their craft, constructed from scrap materials not intended for river travel, through whitewater rapids and others’ junk, trying to keep it all intact until the finish line. The 2026 Ridgway RiverFest kicks off with the river races at 11am this year. This includes paddle boards, kayaks, duckies, and more! This event will go until 12pm and the main festivities will begin at 3pm. …",
+    pubDate: "2026-06-27T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52183972236736/huge/02f92530b9be036db720bee9d880832b463f5802.jpg"
+  },
+  {
+    title: "Ouray County Ranch History Museum's 20th Anniversary Day",
+    link: "ocrhm.org",
+    description: "Enjoy a fun-filled day of interactive activities & games, celebrating OC Ranch Museum's 20th Anniversary! Tour the acreage and see sites for future museum buildings, There will be mule rides, livestock, Rocking W Ice Cream truck from Webb Dairy, Sliders from Brittany at Uncompahgre Farm, 4-H youth showcasing their fair projects, CSU Extension offerings, zeroscape learning/plantings, Minerva West dress-up Trunk Show recognizing homesteader locals, Ridgway Community Apiary, Mighty Mini Horse Therapy, and more!",
+    pubDate: "2026-06-27T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53130955512768/huge/e51310a22a0fd90b349a2434edb7a63e61e96854.jpg"
+  },
+  {
+    title: "Tavern & Tours: Ouray History Day @ the Wright",
+    link: "wrightoperahouse.org",
+    description: "Tavern & Tours: Ouray History Day @ the Wright WHEN? Saturday, June 27 Doors open: 11:00 am – 4:00 pm TOUR SCHEDULE Tour 1: 11:30 am – 12:30 pm Tour 2: 12:30 pm – 1:30 pm Tour 3: 1:30 pm – 2:30 pm Tour 4: 2:30 pm – 3:30 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Step inside one of Ouray’s most historic buildings for an afternoon of stories, cocktails, and local history at the Wright Opera House. Tavern & Tours: Ouray History Day invites guests to explore the fascinating past of the Wright through guided tours highlighting the building’s colorful frontier origins, theatrical legacy, hidden corners, and the larger history of Ouray itself. …",
+    pubDate: "2026-06-27T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53011860959808/huge/18d2c8168b9b4eb4feda6c306a6a74312794c185.jpg"
   }
 ];
 

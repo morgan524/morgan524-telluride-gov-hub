@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-family.xml" rel="self" type="application/rss+xml" />
     <description>Storytime, youth programs, and all-ages activities — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jun 2026 03:34:44 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 11:04:43 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Board of Directors Meeting — 2026-06-16</title>
@@ -29,6 +29,32 @@ The fire district's monthly board meeting covers their 2025 audit results, maste
 Agenda not yet available]]></description>
       <category>Meeting</category>
       <category>Town of Ophir</category>
+    </item>
+    <item>
+      <title>[Tue, Jun 16] Storytime / Hora de Cuentos</title>
+      <link>https://telluridelibrary.libcal.com/event/16772758?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/storytime%20hora%20de%20cuentos%7C2026-06-16</guid>
+      <pubDate>Tue, 16 Jun 2026 16:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Lower Terrace - outdoors
+
+10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Tue, Jun 16] Teen Cook</title>
+      <link>https://telluridelibrary.libcal.com/event/16935711?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/teen%20cook%7C2026-06-16</guid>
+      <pubDate>Tue, 16 Jun 2026 20:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Teen Area
+
+2:00 PM – 3:00 PM · Join us every Tuesday this summer for Teen Cook, where we prepare a variety of delicious foods and get to try out something new.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Tue, Jun 16] Talking Gourds’ Stories &amp; Poems Telluride</title>
@@ -130,30 +156,6 @@ The Lodging Tax Board meets to review tax reports and hear updates from the Norw
 
 We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!]]></description>
       <media:content url="https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Sat, Jun 20] Telluride Elks Lodge #692 Bluegrass Pancake Breakfast</title>
-      <link>https://koto.org/event/telluride-elks-lodge-692-bluegrass-pancake-breakfast/2026-06-20/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20elks%20lodge%20692%7C2026-06-20</guid>
-      <pubDate>Sat, 20 Jun 2026 14:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Elks Lodge BPOE 692, TELLURIDE
-
-Telluride Elks Lodge 472 West Pacific Street, Telluride Saturday June 20 and Sunday June 21 Breakfast Served 8am to noon Adults $15 | Kids 12 and Under $10 | Cash Bar Pancakes, Scrambled Eggs, Hash Browns, Biscuits & Gravy, Bacon, Sausage, Coffee and Juice]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Sun, Jun 21] Telluride Elks Lodge #692 Bluegrass Pancake Breakfast</title>
-      <link>https://koto.org/event/telluride-elks-lodge-692-bluegrass-pancake-breakfast/2026-06-21/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20elks%20lodge%20692%7C2026-06-21</guid>
-      <pubDate>Sun, 21 Jun 2026 14:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Elks Lodge BPOE 692, TELLURIDE
-
-Telluride Elks Lodge 472 West Pacific Street, Telluride Saturday June 20 and Sunday June 21 Breakfast Served 8am to noon Adults $15 | Kids 12 and Under $10 | Cash Bar Pancakes, Scrambled Eggs, Hash Browns, Biscuits & Gravy, Bacon, Sausage, Coffee and Juice]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
     </item>
