@@ -126,7 +126,7 @@ function createAndSend(title, fullText, manualSummary, docName, docMime, docB64)
   const motionText = fullText || title;
   const summary = manualSummary && manualSummary.trim()
     ? manualSummary.trim()
-    : (summarize_(motionText) || motionText.slice(0, 240));
+    : (summarize_(motionText) || defaultSummary_(title));
 
   let docUrl = '';
   if (docB64 && docName) {
@@ -142,7 +142,7 @@ function createAndSend(title, fullText, manualSummary, docName, docMime, docB64)
     .concat([0, 0, 0, 'Awaiting motion', '']);
   votes.appendRow(row);
 
-  const sent = emailMembers_('invite', matterId, title, summary, motionText, docUrl, '', '');
+  const sent = emailMembers_('invite', matterId, title, summary, motionText, docUrl, '', '', new Date());
   return 'Matter "' + title + '" created and a link was sent to ' + sent + ' member(s).' +
     (docName ? '\nDocument attached for review: ' + docName : '') +
     '\n\nSummary recorded:\n' + summary +
@@ -158,12 +158,12 @@ function resendPrompt() {
   if (!row) { ui.alert('No matter found with that ID.'); return; }
   const m = readMatter_(row);
   const phase = (m.movedBy && m.secondedBy) ? 'voting' : 'invite';
-  const sent = emailMembers_(phase, matterId, m.title, m.summary, m.motionText, m.docUrl, m.movedBy, m.secondedBy);
+  const sent = emailMembers_(phase, matterId, m.title, m.summary, m.motionText, m.docUrl, m.movedBy, m.secondedBy, m.date);
   ui.alert('Re-sent the link to ' + sent + ' member(s).');
 }
 
 /** Email every member their personal status-page link. phase = 'invite' | 'voting'. */
-function emailMembers_(phase, matterId, title, summary, motionText, docUrl, movedBy, secondedBy) {
+function emailMembers_(phase, matterId, title, summary, motionText, docUrl, movedBy, secondedBy, matterDate) {
   const base = webAppUrl_();
   const members = getBoard_();
   let sent = 0;
@@ -176,7 +176,7 @@ function emailMembers_(phase, matterId, title, summary, motionText, docUrl, move
     t.openUrl = actionUrl_(base, matterId, i, '');
     MailApp.sendEmail({
       to: mem.email,
-      subject: (phase === 'voting' ? '[Board Vote - voting open] ' : '[Board Vote] ') + title,
+      subject: subjectFor_(title, matterDate),
       htmlBody: t.evaluate().getContent(),
       name: ORG_NAME + ' Board Votes',
     });
@@ -215,6 +215,7 @@ function doGet(e) {
       noUrl: actionUrl_(webAppUrl_(), matterId, vi, 'no'),
       abstainUrl: actionUrl_(webAppUrl_(), matterId, vi, 'abstain'),
       isMover: m.movedBy && m.movedBy === me.name,
+      isSeconder: m.secondedBy && m.secondedBy === me.name,
     }, m));
   } finally {
     lock.releaseLock();
@@ -318,7 +319,7 @@ function finalizeIfDecided_(row, members) {
 
 function sendVotingOpenNotice_(row) {
   const m = readMatter_(row);
-  emailMembers_('voting', m.id, m.title, m.summary, m.motionText, m.docUrl, m.movedBy, m.secondedBy);
+  emailMembers_('voting', m.id, m.title, m.summary, m.motionText, m.docUrl, m.movedBy, m.secondedBy, m.date);
 }
 
 function sendResult_(m, members, record) {
@@ -336,8 +337,8 @@ function sendResult_(m, members, record) {
 
   MailApp.sendEmail({
     to: recipients,
-    subject: '[Board Vote - Result] ' + (passed ? 'Passed' : (/^Failed/.test(m.result) ? 'Failed' : 'Final')) +
-      ': ' + String(m.title).slice(0, 80),
+    subject: 'Result - ' + subjectFor_(m.title, m.date) +
+      ' (' + (passed ? 'Passed' : (/^Failed/.test(m.result) ? 'Failed' : 'Final')) + ')',
     htmlBody: t.evaluate().getContent(),
     name: ORG_NAME + ' Board Votes',
     attachments: [record.blob],
@@ -425,6 +426,7 @@ function page_(data) {
   t.orgName = ORG_NAME;
   t.yes = d.yes || 0; t.no = d.no || 0; t.abstain = d.abst || 0;
   t.isMover = !!d.isMover;
+  t.isSeconder = !!d.isSeconder;
   t.majority = MAJORITY;
   return t.evaluate().setTitle(ORG_NAME + ' - Board Vote').addMetaTag('viewport', 'width=device-width, initial-scale=1');
 }
@@ -476,6 +478,30 @@ function sign_(matterId, vi) {
 
 function newMatterId_() {
   return 'M-' + fmtDate_(new Date(), 'yyyyMMdd') + '-' + Math.floor(1000 + Math.random() * 9000);
+}
+
+/** Fallback one-line summary when there's no manual summary and no AI key.
+ *  Kept distinct from the motion text so the motion isn't shown twice. */
+function defaultSummary_(title) {
+  const t = String(title || '').trim();
+  if (!t) return 'Board matter for approval.';
+  if (/^approve\b/i.test(t)) return 'Motion to ' + t.charAt(0).toLowerCase() + t.slice(1) + '.';
+  return 'Motion: ' + t + '.';
+}
+
+/** Automatic email subject: "Vote of the Livable Telluride Board on <date> to approve <name>".
+ *  <name> is the matter title with a leading "Approve" stripped so it doesn't double up.
+ *  Handles a 'yyyy-MM-dd' string without timezone drift, or a Date object. */
+function subjectFor_(title, dateVal) {
+  let name = String(title || '').replace(/^\s*approve[:\s-]+/i, '').trim() || 'this matter';
+  let d;
+  if (dateVal instanceof Date) { d = dateVal; }
+  else {
+    const s = String(dateVal || ''); const mt = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+    d = mt ? new Date(+mt[1], +mt[2] - 1, +mt[3]) : new Date(s);
+  }
+  const dateStr = (d && !isNaN(d.getTime())) ? fmtDate_(d, 'MMMM d, yyyy') : String(dateVal || '');
+  return 'Vote of the ' + ORG_NAME + ' Board on ' + dateStr + ' to approve ' + name;
 }
 
 function webAppUrl_() {

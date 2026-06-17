@@ -36,6 +36,11 @@
         <tr><td style="padding:12px 16px;font-size:14px;color:#1f2937;line-height:1.55;"><?= summary ?></td></tr>
       </table>
 
+      <? if (motionText && motionText !== summary) { ?>
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#2D4A3E;margin-bottom:6px;">Full motion</div>
+      <div style="font-size:13px;color:#374151;line-height:1.55;white-space:pre-wrap;border:1px solid #e6ebe8;border-radius:6px;padding:12px 16px;margin-bottom:16px;"><?= motionText ?></div>
+      <? } ?>
+
       <? if (docUrl) { ?>
       <div style="margin-bottom:18px;">
         <a href="<?= docUrl ?>" target="_blank" style="display:inline-block;background:#fff;border:1px solid #2D4A3E;color:#2D4A3E;text-decoration:none;font-size:13px;font-weight:600;padding:9px 16px;border-radius:8px;">Open the document to review</a>

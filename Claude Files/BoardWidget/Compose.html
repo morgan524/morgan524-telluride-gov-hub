@@ -112,6 +112,32 @@
       fire(title, fullText, manualSummary, '', '', '');
     }
   }
+
+  // --- Auto-fill a standard approval motion from the chosen document ---
+  var lastAutoMotion = '';
+  function docBaseName(name) { return String(name).replace(/\.[^.]+$/, '').trim(); }
+  function buildMotion(docName) {
+    var d = '"' + docBaseName(docName) + '"';
+    return 'WHEREAS the Board of Directors of Livable Telluride has reviewed ' + d + ';\n\n' +
+      'WHEREAS the Board finds that approving this matter is consistent with the organization\'s mission and in the best interest of Livable Telluride;\n\n' +
+      'NOW, THEREFORE, BE IT RESOLVED that the Board of Directors hereby approves ' + d + ', in the form presented to the Board and attached as the accompanying document; and\n\n' +
+      'BE IT FURTHER RESOLVED that the officers of Livable Telluride are authorized and directed to take all actions reasonably necessary to carry out the intent of this resolution.';
+  }
+  document.getElementById('doc').addEventListener('change', function () {
+    var f = this.files && this.files[0];
+    if (!f) return;
+    var ta = document.getElementById('fullText');
+    // Only auto-fill if the box is empty or still holds a previously auto-generated
+    // motion -- never clobber text the user typed or edited themselves.
+    if (!ta.value.trim() || ta.value.trim() === lastAutoMotion.trim()) {
+      var motion = buildMotion(f.name);
+      ta.value = motion;
+      lastAutoMotion = motion;
+    }
+    // Suggest a title if none has been entered yet.
+    var titleEl = document.getElementById('title');
+    if (!titleEl.value.trim()) titleEl.value = 'Approve ' + docBaseName(f.name);
+  });
 </script>
 </body>
 </html>

@@ -19,6 +19,9 @@
   .hd .org { font-size:16px; font-weight:700; } .hd .sub { font-size:12px; color:#bcd3c8; margin-top:2px; }
   .bd { padding:22px 24px 26px; }
   .notice { background:#ecfdf5; border:1px solid #a7f3d0; color:#065f46; border-radius:9px; padding:11px 14px; font-size:13px; margin-bottom:16px; }
+  .youract { background:#e7f5ee; border:1px solid #a7d8bf; color:#1f5f43; border-radius:9px; padding:12px 14px; font-size:14px; margin-bottom:16px; }
+  .youract b { color:#14492f; }
+  .youract .tick { color:#1f7a4d; font-weight:800; margin-right:6px; }
   .errbox { background:#fef2f2; border:1px solid #fecaca; color:#991b1b; border-radius:9px; padding:14px; font-size:14px; }
   h1 { font-size:19px; margin:0 0 8px; }
   .label { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.6px; color:#2D4A3E; margin:18px 0 5px; }
@@ -56,6 +59,13 @@
   ?>
     <div class="bd">
       <? if (notice) { ?><div class="notice"><?= notice ?></div><? } ?>
+
+      <? if (!notice && (isMover || isSeconder || myVote)) { ?>
+        <div class="youract"><span class="tick">&#10003;</span>
+          <? if (isMover) { ?>You already <b>moved this matter to approve</b>.<? } else if (isSeconder) { ?>You already <b>seconded this motion</b>.<? } ?>
+          <? if (myVote) { ?> Your vote is recorded as <b><?= myVote ?></b><? if (stage === 'voting') { ?> &mdash; click another option below to change it<? } ?>.<? } ?>
+        </div>
+      <? } ?>
 
       <h1><?= title ?></h1>
       <div class="label">Summary</div>
