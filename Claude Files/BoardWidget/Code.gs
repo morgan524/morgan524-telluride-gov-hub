@@ -56,6 +56,7 @@ function onOpen() {
     .createMenu('Board Votes')
     .addItem('New matter & send ballot...', 'openCompose')
     .addItem('Re-send link for a matter...', 'resendPrompt')
+    .addItem('Voting status pages (get links)', 'showStatusLinks')
     .addSeparator()
     .addItem('Send reminders now', 'sendRemindersNow')
     .addItem('Turn ON reminders (every 3 days)', 'installReminderTrigger_')
@@ -246,10 +247,161 @@ function turnOffReminders() {
   SpreadsheetApp.getUi().alert(n ? 'Daily reminders turned OFF.' : 'Daily reminders were not on.');
 }
 
+/* ===================== VOTING STATUS DASHBOARD ===================== */
+
+/** Token-protected status URL. viewer<0 (or null) = read-only overview; viewer>=0 =
+ *  that member's personal dashboard whose cards get a "Click to Vote" button. */
+function statusPageUrl_(viewer) {
+  if (viewer == null || viewer < 0) return webAppUrl_() + '?view=status&k=' + sign_('STATUS', 'all');
+  return webAppUrl_() + '?view=status&v=' + viewer + '&k=' + sign_('STATUS', viewer);
+}
+
+function statusOut_(html) {
+  return HtmlService.createHtmlOutput(html)
+    .setTitle(ORG_NAME + ' - Voting Status')
+    .addMetaTag('viewport', 'width=device-width, initial-scale=1');
+}
+
+function linkRow_(label, url) {
+  return '<div style="margin-bottom:11px;"><div style="font-size:12px;font-weight:700;color:#2D4A3E;margin-bottom:3px;">' + label + '</div>'
+    + '<input readonly value="' + url.replace(/&/g, '&amp;') + '" onclick="this.select()" '
+    + 'style="width:100%;box-sizing:border-box;font-size:11px;padding:6px 8px;border:1px solid #d1d5db;border-radius:6px;"></div>';
+}
+
+function showStatusLinks() {
+  const members = getBoard_();
+  let rows = '<div style="font-family:-apple-system,BlinkMacSystemFont,sans-serif;padding:4px 2px;color:#1f2937;">'
+    + '<p style="font-size:13px;margin:0 0 8px;">Read-only overview (all open matters, no vote buttons):</p>'
+    + linkRow_('Overview', statusPageUrl_(-1))
+    + '<p style="font-size:13px;margin:16px 0 6px;">Per-member dashboards -- each has a <b>Click to Vote</b> button to that member\'s own ballot. Send each member their own link:</p>';
+  members.forEach(function (m, i) { rows += linkRow_(m.name, statusPageUrl_(i)); });
+  rows += '</div>';
+  SpreadsheetApp.getUi().showModalDialog(HtmlService.createHtmlOutput(rows).setWidth(560).setHeight(540), 'Voting status links');
+}
+
+/** Build the whole status page HTML (ASCII; served via createHtmlOutput). */
+function buildStatusHtml_(viewer, members) {
+  const esc = function (s) {
+    return String(s == null ? '' : s).replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; });
+  };
+  const votes = sheet_(SHEET_VOTES);
+  const last = votes.getLastRow();
+  const n = members.length;
+  const base = webAppUrl_();
+
+  let cards = '', count = 0;
+  for (let row = 2; row <= last; row++) {
+    const m = readMatter_(row);
+    if (!m.id) continue;
+    let voted = 0;
+    m.votes.forEach(function (v) { if (String(v).trim()) voted++; });
+    if (voted >= n) continue;                      // fully voted -> drop from the dashboard
+    count++;
+
+    let pills = '';
+    members.forEach(function (mem, i) {
+      const v = String(m.votes[i] || '').trim().toLowerCase();
+      const role = mem.name === m.movedBy ? ' (moved)' : (mem.name === m.secondedBy ? ' (2nd)' : '');
+      let cls = 'none', label = 'no vote yet';
+      if (v === 'yes') { cls = 'yes'; label = 'Yes'; }
+      else if (v === 'no') { cls = 'no'; label = 'No'; }
+      else if (v === 'abstained') { cls = 'abs'; label = 'Abstained'; }
+      pills += '<span class="pill ' + cls + '"><span class="dot"></span><span class="nm">' + esc(mem.name) + esc(role) + '</span> ' + label + '</span>';
+    });
+
+    const rl = String(m.result).toLowerCase();
+    let badge = 'Voting open', bcls = 'open';
+    if (m.stage === 'awaiting_motion') { badge = 'Awaiting motion'; bcls = 'wait'; }
+    else if (m.stage === 'awaiting_second') { badge = 'Awaiting second'; bcls = 'wait'; }
+    else if (rl.indexOf('passed') === 0) { badge = 'Passed'; bcls = 'pass'; }
+    else if (rl.indexOf('failed') === 0) { badge = 'Failed'; bcls = 'fail'; }
+
+    let act = '';
+    if (viewer >= 0) {
+      const myV = String(m.votes[viewer] || '').trim();
+      const blabel = m.stage === 'voting' ? (myV ? 'Change your vote' : 'Click to Vote') : 'Open to act';
+      act = '<div class="vote-act"><a class="vote-btn" href="' + actionUrl_(base, m.id, viewer, '') + '">' + blabel + '</a>'
+        + (myV ? '<span class="myv">Your vote: ' + esc(myV) + '</span>' : '') + '</div>';
+    }
+
+    cards += '<div class="vote-card">'
+      + '<div class="vote-card-top">'
+      + '<div class="vote-info"><div class="vote-title">' + esc(m.title) + '</div>'
+      + '<div class="vote-desc">' + esc(m.summary) + '</div></div>'
+      + '<div class="vote-right"><span class="badge ' + bcls + '">' + badge + '</span>'
+      + '<span class="prog">' + voted + ' of ' + n + ' voted</span></div>'
+      + '</div>'
+      + '<div class="vote-pills">' + pills + '</div>'
+      + act
+      + '</div>';
+  }
+  if (!count) cards = '<div class="empty">No outstanding votes. Every open matter has been fully voted.</div>';
+
+  const css = 'body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0;background:#f3f4f6;color:#1f2937;}'
+    + '.wrap{max-width:760px;margin:0 auto;padding:24px 16px 40px;}'
+    + '.hd{background:#2D4A3E;color:#fff;border-radius:10px;padding:16px 20px;margin-bottom:14px;}'
+    + '.hd .org{font-size:18px;font-weight:700;}.hd .sub{font-size:13px;color:#bcd3c8;margin-top:2px;}'
+    + '.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:#4b5563;margin:0 2px 14px;}'
+    + '.legend span{display:inline-flex;align-items:center;gap:5px;}'
+    + '.legend i{width:11px;height:11px;border-radius:50%;display:inline-block;}'
+    + '.vote-card{background:#fff;border:1px solid #d6e3dc;border-radius:10px;margin-bottom:12px;overflow:hidden;}'
+    + '.vote-card-top{display:flex;align-items:flex-start;gap:12px;padding:14px 16px 10px;}'
+    + '.vote-info{flex:1;min-width:0;}'
+    + '.vote-title{font-size:16px;font-weight:700;color:#173d34;line-height:1.3;margin-bottom:4px;}'
+    + '.vote-desc{font-size:13px;color:#4b5563;line-height:1.45;}'
+    + '.vote-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0;}'
+    + '.badge{font-size:12px;font-weight:800;padding:4px 11px;border-radius:20px;white-space:nowrap;}'
+    + '.badge.pass{background:#dcfce7;color:#166534;}.badge.fail{background:#fee2e2;color:#991b1b;}'
+    + '.badge.open{background:#dbeafe;color:#1d4ed8;}.badge.wait{background:#fef3c7;color:#92400e;}'
+    + '.prog{font-size:11px;color:#6b7280;font-weight:600;}'
+    + '.vote-pills{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 14px;}'
+    + '.pill{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:14px;font-size:12px;white-space:nowrap;line-height:1.2;}'
+    + '.pill .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}.pill .nm{font-weight:700;}'
+    + '.pill.yes{background:#dcfce7;color:#166534;border:1px solid #bbf7d0;}.pill.yes .dot{background:#16a34a;}'
+    + '.pill.no{background:#fee2e2;color:#991b1b;border:1px solid #fecaca;}.pill.no .dot{background:#dc2626;}'
+    + '.pill.abs{background:#fef3c7;color:#92400e;border:1px solid #fde68a;}.pill.abs .dot{background:#d97706;}'
+    + '.pill.none{background:#fff;color:#9ca3af;border:1px dashed #d1d5db;}.pill.none .dot{background:#d1d5db;}'
+    + '.empty{background:#fff;border-radius:10px;padding:40px 20px;text-align:center;color:#6b7280;font-size:15px;}'
+    + '.foot{text-align:center;font-size:12px;color:#9ca3af;margin-top:8px;}'
+    + '.refresh{display:inline-block;margin:0 0 14px;font-size:13px;font-weight:600;color:#1d6fb8;text-decoration:none;}'
+    + '.vote-act{display:flex;align-items:center;gap:12px;padding:2px 16px 16px;}'
+    + '.vote-btn{display:inline-block;background:#2D4A3E;color:#fff;text-decoration:none;font-size:14px;font-weight:700;padding:10px 22px;border-radius:8px;}'
+    + '.myv{font-size:12px;color:#6b7280;font-weight:600;}';
+
+  return '<!DOCTYPE html><html><head><meta charset="utf-8"><base target="_top">'
+    + '<meta name="viewport" content="width=device-width, initial-scale=1">'
+    + '<meta http-equiv="refresh" content="60">'
+    + '<style>' + css + '</style></head><body><div class="wrap">'
+    + '<div class="hd"><div class="org">' + esc(ORG_NAME) + '</div>'
+    + '<div class="sub">' + (viewer >= 0 ? esc(members[viewer].name) + ' &middot; your pending votes' : 'Board Voting Status') + ' &middot; ' + count + ' outstanding</div></div>'
+    + '<a class="refresh" href="' + statusPageUrl_(viewer) + '">&#8635; Refresh now</a>'
+    + '<div class="legend"><span><i style="background:#16a34a"></i>Yes</span>'
+    + '<span><i style="background:#dc2626"></i>No</span>'
+    + '<span><i style="background:#d97706"></i>Abstained</span>'
+    + '<span><i style="background:#d1d5db"></i>No vote yet</span></div>'
+    + cards
+    + '<div class="foot">Auto-refreshes every minute. A matter disappears once all ' + n + ' members have voted.</div>'
+    + '</div></body></html>';
+}
+
 /* ===================== THE LIVE STATUS PAGE / ACTIONS ===================== */
 
 function doGet(e) {
   const p = (e && e.parameter) || {};
+
+  // Status dashboard: one token-protected page listing all matters not yet fully voted.
+  if (p.view === 'status') {
+    const stMembers = getBoard_();
+    const sv = parseInt(p.v, 10);
+    if (!isNaN(sv) && sv >= 0 && sv < stMembers.length && p.k === sign_('STATUS', sv)) {
+      return statusOut_(buildStatusHtml_(sv, stMembers));     // personalized (with Click to Vote)
+    }
+    if (p.k === sign_('STATUS', 'all')) {
+      return statusOut_(buildStatusHtml_(-1, stMembers));     // read-only overview
+    }
+    return HtmlService.createHtmlOutput('Status link could not be verified.');
+  }
+
   const matterId = p.m, vi = parseInt(p.v, 10), token = p.k, act = (p.act || '').toLowerCase();
 
   if (!matterId || isNaN(vi) || !token) return page_({ error: 'This link is incomplete or invalid.' });
