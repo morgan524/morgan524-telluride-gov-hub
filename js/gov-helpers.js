@@ -382,7 +382,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     firstSeen: "2026-06-16",
     newsTopic: "arts-culture",
     copy: "In the summer of 1999, my husband (then boyfriend) Travis and I moved to Telluride. Travis came to ski. I came to start a children’s theater company. We both came to be together.",
-    claudeSummary: false,
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_b0a15262-fe8d-43db-a2cc-339a9cde4826.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/88/688fd068-0afb-4bab-8f61-c0a7d2589729/6a2b4d6d50fb9.image.jpg",
     imgHiRes: true
@@ -400,18 +400,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Steward for an uncertain future: Telluride Town Council candidate Charles Dalton",
-    source: "Telluride Times",
-    date: "June 16, 2026",
-    firstSeen: "2026-06-16",
-    newsTopic: "government",
-    copy: "Of the three candidates running for two seats on Telluride Town Council in the June 30 special election, Charles Dalton is the “old-timer,” having lived in Telluride for 10 years.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_d1f22fd4-022a-49f6-a26d-2d556533adf8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/e4/0e411176-7121-4f5b-8b1c-3efdf057083a/6a30fd9376842.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "‘People over self’: Telluride Town Council candidate Chris Uihlein",
     source: "Telluride Times",
     date: "June 16, 2026",
@@ -421,6 +409,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_25ae29a6-e2a9-4b47-8c6d-5528fec8a9fb.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/fb/8fba0e1a-9241-458d-a6b7-30cd3d3bee4a/6a30f60f61b4f.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Steward for an uncertain future: Telluride Town Council candidate Charles Dalton",
+    source: "Telluride Times",
+    date: "June 16, 2026",
+    firstSeen: "2026-06-16",
+    newsTopic: "government",
+    copy: "Of the three candidates running for two seats on Telluride Town Council in the June 30 special election, Charles Dalton is the “old-timer,” having lived in Telluride for 10 years.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_d1f22fd4-022a-49f6-a26d-2d556533adf8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/e4/0e411176-7121-4f5b-8b1c-3efdf057083a/6a30fd9376842.image.jpg",
     imgHiRes: true
   },
   {
@@ -1211,42 +1211,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Telluride Elks Lodge celebrates 125 years",
-    source: "Telluride Times",
-    date: "June 3, 2026",
-    firstSeen: "2026-06-04",
-    newsTopic: "community",
-    copy: "The Telluride Elks Lodge is marking 125 years with 260 members across the region, operating out of the historic Swede-Finn Hall on Pacific Avenue. They've doubled their scholarship awards to $9,000 this year for six students pursuing any post-high school education, and continue hosting longtime community events like Turkey Bingo and Huck Finn Day.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_386937c3-275b-4201-9e98-a5cec14c3e0e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/4a/d4add403-c2db-43b7-96ec-6383d82789f5/6a1f45875dc53.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Ted Turner has come and gone",
-    source: "Telluride Times",
-    date: "June 3, 2026",
-    firstSeen: "2026-06-03",
-    newsTopic: "arts-culture",
-    copy: "A longtime filmmaker recalls making TNT's first original movie in 1988 and the nerve-wracking private screening for Ted Turner, who unexpectedly broke down in tears afterward because the father-son story reminded him of his own father's suicide. Turner called it possibly the best movie he'd ever seen and became a champion of the film, showing how even media titans carry deep personal wounds that shape their reactions in unexpected ways.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_2115e2f9-c198-493f-a7f6-14b7a49182dc.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/5a/15a827ae-a819-49d8-8c94-1af8b6799d8d/6a18d5289703b.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "CHALKBOARD",
-    source: "Telluride Times",
-    date: "June 3, 2026",
-    firstSeen: "2026-06-03",
-    newsTopic: "government",
-    copy: "This week's community birthdays include Lucas Priestley, Jodie Davis, Audrey Barrett Scholl, and several others from June 4-9. The Norwood Farmers Market continues every Thursday 2-6 p.m. through mid-October, while regular community meetings and services like the food pantry distribution on Sundays keep their usual schedules.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_db74ca0a-8ff4-4edd-be6c-73149d920ddd.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/a5/ca5fec16-c68c-4ca8-928f-e5332ef5a687/6a1f6f05c9138.image.png",
-    imgHiRes: true
-  },
-  {
     title: "Colorado Supreme Court Rules Unanimously That Butcher Creek PUD Cannot Be Amended or Rezoned by...",
     source: "Town of Telluride",
     date: "June 16, 2026",
@@ -1292,6 +1256,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15549"
   },
   {
+    title: "Bike to Work Day!",
+    source: "San Miguel County",
+    date: "June 17, 2026",
+    newsTopic: "community",
+    copy: "Join us for Bike To Work Day on June 24th!",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1398",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14309"
+  },
+  {
+    title: "County Enters Stage 1 Fire Restrictions",
+    source: "San Miguel County",
+    date: "June 17, 2026",
+    newsTopic: "public-safety",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1397",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14307"
+  },
+  {
     title: "Clerk's Office Shortened Office hours June 15-18 and June 29-July 2",
     source: "San Miguel County",
     date: "June 15, 2026",
@@ -1312,7 +1294,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Click here for details.",
     source: "Town of Ridgway",
-    date: "June 16, 2026",
+    date: "June 17, 2026",
     firstSeen: "2026-06-09",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1356,7 +1338,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 16, 2026",
+    date: "June 17, 2026",
     firstSeen: "2026-06-04",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1367,7 +1349,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 16, 2026",
+    date: "June 17, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2274,28 +2256,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Talking Gourds’ Stories & Poems Telluride",
-    link: "https://koto.org/event/talking-gourds-stories-poems-telluride/",
-    description: "San Miguel County Poet Laureate Paulo Munguía will be the featured presenter in English and Spanish at the Talking Gourds’ Stories & Poems series at the Wilkinson Public Library on Tuesday June 16 th at 5:15 pm. “Paulo has really blossomed at our local poet laureate, creating fascinating (and funny) videos as well as making strong poetry performances in both Spanish and English,” said Talking Gourds director Art Goodtimes. Born in Morelos, México and based in Montrose, Colorado, Munguía defines himself as a free soul. He is the first Hispanic person to be named poet laureate in San Miguel County (2025-2027) Co-sponsored by the Wilkinson Public Library and the Telluride Institute, the literary event is free and open to the public of all ages. Attendees are encouraged to bring a story or poem of their own, or of someone they like, to read aloud. …",
-    pubDate: "2026-06-16T23:15:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Town Talk: Good Vibrations",
-    link: "https://koto.org/event/town-talk-good-vibrations/",
-    description: "This town talk will be presented by Matthias Heyden, Arizona State University. Water is far more than a refreshing drink — its unique molecular properties make life possible. By forming a dynamic network of weak chemical bonds, water acts as both a selective solvent and a kind of molecular lubricant, driving the assembly of cells and keeping the tiny protein machines inside them flexible and in constant motion. Understanding the role water plays in the generation of these vibrations is one of the great frontiers of modern science, with real-world implications for greener industrial chemistry and smarter, safer drug design.",
-    pubDate: "2026-06-17T00:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Innovation Center",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A-1.png"
-  },
-  {
     title: "Market on the Plaza",
     link: "https://koto.org/event/market-on-the-plaza/2026-06-17/",
     description: "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
@@ -2811,17 +2771,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
-  },
-  {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-02/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-07-02T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
   }
 ];
 
@@ -2890,7 +2839,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Male",
     firstSeen: "2026-06-11",
     revealDate: "2026-06-13",
-    lastSeen: "2026-06-16"
+    lastSeen: "2026-06-17"
   }
 ];
 
@@ -3225,6 +3174,18 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/"
+  },
+  {
+    title: "Thom LaFond, DROS + Alexander Karvelas",
+    link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
+    description: "Telluride Mushroom Fest Puff Ball After Party",
+    pubDate: "2026-08-15",
+    time: "9:30 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/"
   }
 ];
 
@@ -3240,18 +3201,6 @@ const ALIBI_EVENTS = [
  * something on Day 1 instead of waiting for the next 6-hour refresh).
  * Bot overwrites this on first run. */
 const SHERIDAN_EVENTS = [
-  {
-    title: "The Fretliners Live in Concert",
-    link: "https://sheridanoperahouse.com/events/the-fretliners-live-in-concert-2/",
-    description: "",
-    pubDate: "2026-06-13",
-    endDate: "undefined",
-    source: "sheridan",
-    sourceLabel: "Sheridan Opera House",
-    category: "Concert / Performance",
-    location: "Sheridan Opera House • Telluride, CO",
-    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/03/unnamed-file.png"
-  },
   {
     title: "Telluride Bluegrass Festival",
     link: "https://sheridanoperahouse.com/events/telluride-bluegrass-festival/",
@@ -3275,6 +3224,18 @@ const SHERIDAN_EVENTS = [
     category: "Concert / Performance",
     location: "Sheridan Opera House • Telluride, CO",
     imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/03/dsc01583lr-1-.733x412.webp"
+  },
+  {
+    title: "Telluride Theatre Muleskinner's Ball Fundraiser",
+    link: "https://sheridanoperahouse.com/events/telluride-theatre-muleskinners-ball-fundraiser/",
+    description: "",
+    pubDate: "2026-06-27",
+    endDate: "undefined",
+    source: "sheridan",
+    sourceLabel: "Sheridan Opera House",
+    category: "Concert / Performance",
+    location: "Sheridan Opera House • Telluride, CO",
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/03/48278-gala25-2-thundertix-min.jpg"
   }
 ];
 
@@ -4289,17 +4250,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Winter Fundraiser: Adventure Shorts",
-    link: "https://townofmountainvillage.com/explore/events/all-events/winter-fundraiser-adventure-shorts/",
-    description: "Join Mountainfilm for our Winter Fundraiser at the Sheridan Opera House on Monday, February 16, 2026. Enjoy an evening of Adventure Shorts featuring The North",
-    pubDate: "2026-06-15T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47817/mf26_fundraiser_marketing_banner_image_tmv.jpg"
-  },
   {
     title: "Mountain Village Matters",
     link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-matters/",
@@ -6125,18 +6075,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62862/alloy-live-music-pool-deck.800x533.webp"
-  },
-  {
-    title: "Telluride Food + Vine",
-    link: "https://www.telluride.com/event/telluride-food-vine/",
-    description: "Telluride Food + Vine is the area's premier food and wine weekend, providing the ultimate epicurean experience in …",
-    pubDate: "2026-06-12",
-    endDate: "2026-06-15",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/46462/dsc09460-2000x1333-68a9e203-a80e-4c8c-9152-5d77c08fcc52.800x533.webp"
   },
   {
     title: "Movies Under the Stars",

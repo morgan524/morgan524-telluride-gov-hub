@@ -6,44 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jun 2026 20:48:44 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 03:32:11 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Tue, Jun 16] Palmyra w/ Frail Talk</title>
-      <link>https://www.alibitelluride.com/calendar#eca-event=palmyra-w-frail-talk</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/palmyra%20w%20frail%20talk%7C2026-06-16</guid>
-      <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://ucarecdn.com/3dfa7885-4aaa-428a-a201-0b14f3c8ad8b/-/crop/4430x2213/0,614/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
-📍 The Alibi • Telluride, CO
-🕒 9:00 PM
-
-Established in Virginia’s Shenandoah Valley, Palmyra captures the collective spi...]]></description>
-      <media:content url="https://ucarecdn.com/3dfa7885-4aaa-428a-a201-0b14f3c8ad8b/-/crop/4430x2213/0,614/-/preview/" medium="image" />
-      <category>Community Event</category>
-      <category>The Alibi</category>
-    </item>
-    <item>
-      <title>[Meeting] Board of Directors Meeting — 2026-06-16</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/fire%7C2026-06-16%7CBoard%20of%20Directors%20Meeting</guid>
-      <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Telluride Fire Protection District • 2026-06-16
-
-The fire district's monthly board meeting covers their 2025 audit results, master planning updates, and wildfire assignments as summer approaches. Station 3 construction gets an update, along with the usual reports from chiefs and coordinators across the district's operations.]]></description>
-      <category>Meeting</category>
-      <category>Telluride Fire Protection District</category>
-    </item>
-    <item>
-      <title>[Meeting] General Assembly Meeting — 2026-06-16</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/ophir%7C2026-06-16%7CGeneral%20Assembly%20Meeting</guid>
-      <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Ophir • 2026-06-16
-
-Agenda not yet available]]></description>
-      <category>Meeting</category>
-      <category>Town of Ophir</category>
-    </item>
     <item>
       <title>[Wed, Jun 17] Smörgåsgrass</title>
       <link>https://www.alibitelluride.com/calendar#eca-event=smorgasgrass</link>
@@ -217,6 +181,31 @@ The Ridgway Farmer's Market takes place every Friday from May 22nd through Octob
       <category>KOTO</category>
     </item>
     <item>
+      <title>[Sat, Jun 20] Bilingual Balance in Motion</title>
+      <link>https://koto.org/event/bilingual-balance-in-motion/2026-06-20/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/bilingual%20balance%20in%20motion%7C2026-06-20</guid>
+      <pubDate>Sat, 20 Jun 2026 16:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sun, Jun 21] Drop In Tech Time with Oliver</title>
+      <link>https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-06-21/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/drop%20in%20tech%20time%7C2026-06-21</guid>
+      <pubDate>Sun, 21 Jun 2026 19:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
       <title>[Meeting] Open Space Commission Meeting — 2026-06-22</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-06-22%7COpen%20Space%20Commission%20Meeting</guid>
@@ -226,6 +215,20 @@ The Ridgway Farmer's Market takes place every Friday from May 22nd through Octob
 The June 22 Open Space Commission agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Tue, Jun 23] Bombargo</title>
+      <link>https://www.alibitelluride.com/calendar#eca-event=bombargo</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/bombargo%7C2026-06-23</guid>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://ucarecdn.com/2812d2a2-8ee2-4e35-9f6c-8aeaa74ad435/-/crop/3300x1320/0,0/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
+📍 The Alibi • Telluride, CO
+🕒 9:00 PM
+
+Bombargo is a Canadian based international touring band that drops a vibrant spl...]]></description>
+      <media:content url="https://ucarecdn.com/2812d2a2-8ee2-4e35-9f6c-8aeaa74ad435/-/crop/3300x1320/0,0/-/preview/" medium="image" />
+      <category>Community Event</category>
+      <category>The Alibi</category>
     </item>
   </channel>
 </rss>
