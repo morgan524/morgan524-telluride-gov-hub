@@ -271,9 +271,9 @@ function linkRow_(label, url) {
 function showStatusLinks() {
   const members = getBoard_();
   let rows = '<div style="font-family:-apple-system,BlinkMacSystemFont,sans-serif;padding:4px 2px;color:#1f2937;">'
-    + '<p style="font-size:13px;margin:0 0 8px;">Read-only overview (all open matters, no vote buttons):</p>'
-    + linkRow_('Overview', statusPageUrl_(-1))
-    + '<p style="font-size:13px;margin:16px 0 6px;">Per-member dashboards -- each has a <b>Click to Vote</b> button to that member\'s own ballot. Send each member their own link:</p>';
+    + '<p style="font-size:13px;margin:0 0 8px;"><b>Share this one link with the whole board.</b> It shows every open matter and gives each member a vote button to their own ballot, so anyone can check status and vote from the same page:</p>'
+    + linkRow_('Board status + vote (share with everyone)', statusPageUrl_(-1))
+    + '<p style="font-size:13px;margin:16px 0 6px;">Optional private per-member dashboards (single Click-to-Vote button):</p>';
   members.forEach(function (m, i) { rows += linkRow_(m.name, statusPageUrl_(i)); });
   rows += '</div>';
   SpreadsheetApp.getUi().showModalDialog(HtmlService.createHtmlOutput(rows).setWidth(560).setHeight(540), 'Voting status links');
@@ -322,6 +322,12 @@ function buildStatusHtml_(viewer, members) {
       const blabel = m.stage === 'voting' ? (myV ? 'Change your vote' : 'Click to Vote') : 'Open to act';
       act = '<div class="vote-act"><a class="vote-btn" href="' + actionUrl_(base, m.id, viewer, '') + '">' + blabel + '</a>'
         + (myV ? '<span class="myv">Your vote: ' + esc(myV) + '</span>' : '') + '</div>';
+    } else {
+      let btns = '';
+      members.forEach(function (mem, i) {
+        btns += '<a class="vbtn" href="' + actionUrl_(base, m.id, i, '') + '">' + esc(String(mem.name).split(' ')[0]) + '</a>';
+      });
+      act = '<div class="vote-act overview"><span class="actlbl">Go to your ballot:</span>' + btns + '</div>';
     }
 
     cards += '<div class="vote-card">'
@@ -366,7 +372,10 @@ function buildStatusHtml_(viewer, members) {
     + '.refresh{display:inline-block;margin:0 0 14px;font-size:13px;font-weight:600;color:#1d6fb8;text-decoration:none;}'
     + '.vote-act{display:flex;align-items:center;gap:12px;padding:2px 16px 16px;}'
     + '.vote-btn{display:inline-block;background:#2D4A3E;color:#fff;text-decoration:none;font-size:14px;font-weight:700;padding:10px 22px;border-radius:8px;}'
-    + '.myv{font-size:12px;color:#6b7280;font-weight:600;}';
+    + '.myv{font-size:12px;color:#6b7280;font-weight:600;}'
+    + '.vote-act.overview{flex-wrap:wrap;gap:8px;}'
+    + '.actlbl{font-size:12px;color:#6b7280;font-weight:700;margin-right:2px;}'
+    + '.vbtn{display:inline-block;background:#eef3f1;color:#2D4A3E;border:1px solid #cdddd5;text-decoration:none;font-size:13px;font-weight:700;padding:7px 14px;border-radius:8px;}';
 
   return '<!DOCTYPE html><html><head><meta charset="utf-8"><base target="_top">'
     + '<meta name="viewport" content="width=device-width, initial-scale=1">'
