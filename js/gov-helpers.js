@@ -4087,17 +4087,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Board Of Trustees Second Amended",
-    link: "https://www.norwoodtown.com/2026-06-10-board-of-trustees-second-amended",
-    description: "",
-    pubDate: "2026-06-10T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "Norwood Sanitation District Meeting Meeting",
     link: "https://www.norwoodtown.com/2026-06-11-norwood-sanitation-district-meeting-meeting",
     description: "",
@@ -4221,28 +4210,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Mountain Village Matters",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-matters/",
-    description: "The Town of Mountain Village presents Mountain Village Matters on KOTO Community Radio. Tune in to hear Communications Manager Kathrine Warren chatting with",
-    pubDate: "2026-06-16T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48984/koto_show.png"
-  },
-  {
-    title: "Town Talk: Good Vibrations",
-    link: "https://townofmountainvillage.com/explore/events/all-events/town-talk-good-vibrations/",
-    description: "This town talk will be presented by Matthias Heyden, Arizona State University. Water is far more than a refreshing drink — its unique molecular properties",
-    pubDate: "2026-06-16T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48901/tt_logo_1048x802_a.png"
-  },
   {
     title: "TFF presents Village Film Nights",
     link: "https://townofmountainvillage.com/explore/events/all-events/tff-presents-village-film-nights/",
@@ -5815,6 +5782,105 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48320/mv-10.png"
+  },
+  {
+    title: "Red, White & Blues- Fourth of July Celebration",
+    link: "https://townofmountainvillage.com/explore/events/all-events/red-white-blues-fourth-of-july-celebration/",
+    description: "The Telluride Mountain Village Owners Association offers a fun, free, family-friendly Fourth of July celebration.",
+    pubDate: "2026-07-17T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35378/screenshot_2026-06-09_at_9_49_43_am.png"
+  },
+  {
+    title: "Tease the Season - A Burlesque Show",
+    link: "https://townofmountainvillage.com/explore/events/all-events/tease-the-season-a-burlesque-show/",
+    description: "The Sheridan Arts Foundation and Telluride Theater presents Tease The Season: A Burlesque Show featuring the House of Shimmy Shake at the historic Sheridan",
+    pubDate: "2026-07-17T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/47355/3.png"
+  },
+  {
+    title: "The Motet Live in Concert",
+    link: "https://townofmountainvillage.com/explore/events/all-events/the-motet-live-in-concert-2/",
+    description: "The Sheridan Arts Foundation presents The Motet Live in Concert Historic Sheridan Opera House Friday, January 9 Doors 7:30 PM | Show 8:30 PM After 26",
+    pubDate: "2026-07-17T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/47707/2.jpg"
+  },
+  {
+    title: "Young People&#039;s Theater presents: \"Guys & Dolls\"",
+    link: "https://townofmountainvillage.com/explore/events/all-events/young-peoples-theater-guys-dolls/",
+    description: "The Sheridan Arts Foundation Young People’s Theater presents the high school production of Guys and Dolls at the historic Sheridan Opera House on Friday,",
+    pubDate: "2026-07-17T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/47873/mv_to_jf-3.png"
+  },
+  {
+    title: "The Infamous Stringdusters Live in Concert",
+    link: "https://townofmountainvillage.com/explore/events/all-events/the-infamous-stringdusters-live-in-concert-4/",
+    description: "The Sheridan Arts Foundation presents The Infamous Stringdusters live in concert at the historic Sheridan Opera House on Friday, February 20; Saturday,",
+    pubDate: "2026-07-17T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48002/mv_to_jf-3.jpg"
+  },
+  {
+    title: "San Miguel County Spring Clean Up Events",
+    link: "https://townofmountainvillage.com/explore/events/all-events/san-miguel-county-spring-clean-up-events/",
+    description: "It's that time of year again! Join San Miguel County's Annual Spring Clean Up Events on Friday, May 15th in Telluride and Mountain Village and Saturday,",
+    pubDate: "2026-07-17T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48715/website_event_header.png"
+  },
+  {
+    title: "Randy Houser Benefit Concert",
+    link: "https://townofmountainvillage.com/explore/events/all-events/randy-houser-benefit-concert/",
+    description: "Great music, for a great cause. The Telluride Foundation, in partnership with The Alpine Club, is proud to announce the Randy Houser Benefit Concert,",
+    pubDate: "2026-07-17T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48771/tomv_1800x900.jpg"
+  },
+  {
+    title: "Wild West Fest Roundup Day",
+    link: "https://townofmountainvillage.com/explore/events/all-events/wild-west-fest-roundup-day/",
+    description: "Wild West Fest Roundup Day Free and open to the public! The Sheridan Arts Foundation Wild West Fest concludes with our Wild West Fest Roundup!",
+    pubDate: "2026-07-17T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48783/wild_west_fest_roundup_day_event_graphic.jpg"
+  },
+  {
+    title: "Music on the Green Presents Sway Wild",
+    link: "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-sway-wild/",
+    description: "Beyond the Groove Productions and the Telluride Mountain Village Owners Association (TMVOA) present Music on the Green with Sway Wild on Friday, July 17,",
+    pubDate: "2026-07-17T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48853/sway_wild_1800x900px_1.png"
   }
 ];
 
