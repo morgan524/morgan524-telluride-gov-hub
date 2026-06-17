@@ -1868,6 +1868,16 @@ const SMB_FORUM_ARTICLES = [
 
 const BLOG_POSTS = [
   {
+    title: "The Colorado Supreme Court's \"Butcher Creek\" Decision",
+    date: "Jun 17, 2026",
+    href: "https://mailchi.mp/99279f8aa0a7/participate-in-the-bocc-meeting-on-december-20251559",
+    image: "https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/newsletter-images%2Fbutcher-creek-pud-lot-a.jpg?alt=media&token=48edbaf5-841d-42c8-abea-6beafedc3381",
+    excerpt: "The Colorado Supreme Court's ruling in Kavanaugh v. Telluride Locals Coalition holds that a PUD agreement functions like a contract -- it can't be amended without following its own terms and the owner consent they require. We break down what the \"Butcher Creek\" decision means and how it could shape the pending fights over Backman Village/Carhenge and Diamond Ridge/Aldasoro.",
+    category: "Newsletter",
+    readTime: "4 min",
+    source: "mailchimp"
+  },
+  {
     title: "Come to the Livable Telluride Kickoff Event",
     date: "Jun 9, 2026",
     href: "https://mailchi.mp/862595911df1/come-to-the-livable-telluride-kickoff-event",
