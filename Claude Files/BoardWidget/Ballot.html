@@ -11,13 +11,23 @@
 
     <tr><td style="background:#2D4A3E;padding:20px 28px;">
       <div style="color:#fff;font-size:18px;font-weight:700;"><?= orgName ?></div>
-      <div style="color:#bcd3c8;font-size:12px;margin-top:2px;"><?= phase === 'voting' ? 'Board Vote - voting is now open' : 'Board Vote - action requested' ?></div>
+      <div style="color:#bcd3c8;font-size:12px;margin-top:2px;"><?= phase === 'reminder' ? 'Board Vote - reminder (action needed)' : (phase === 'voting' ? 'Board Vote - voting is now open' : 'Board Vote - action requested') ?></div>
     </td></tr>
 
     <tr><td style="padding:26px 28px 8px;">
       <p style="margin:0 0 14px;font-size:15px;color:#111827;">Hi <?= voterName ?>,</p>
 
-      <? if (phase === 'voting') { ?>
+      <? if (phase === 'reminder') { ?>
+        <p style="margin:0 0 18px;font-size:14px;color:#374151;line-height:1.55;">
+          <? if (stage === 'voting') { ?>
+            <b>Reminder:</b> voting is open on this matter and we haven't recorded your vote yet. Please open your page to cast Yes / No / Abstain.
+          <? } else if (stage === 'awaiting_second') { ?>
+            <b>Reminder:</b> this matter has been moved<? if (movedBy) { ?> by <?= movedBy ?><? } ?> and still needs a <b>second</b>. Please open your page to second it (which also opens voting and records your vote as Yes).
+          <? } else { ?>
+            <b>Reminder:</b> this matter is still open and awaits a <b>motion</b>. Please open your page to Move to Approve.
+          <? } ?>
+        </p>
+      <? } else if (phase === 'voting') { ?>
         <p style="margin:0 0 18px;font-size:14px;color:#374151;line-height:1.55;">
           This matter has been <b>moved</b><? if (movedBy) { ?> by <?= movedBy ?><? } ?>
           and <b>seconded</b><? if (secondedBy) { ?> by <?= secondedBy ?><? } ?>.
@@ -50,7 +60,7 @@
 
     <tr><td style="padding:0 28px 26px;">
       <a href="<?= openUrl ?>" target="_blank" style="display:block;text-align:center;background:#2D4A3E;color:#fff;text-decoration:none;font-size:16px;font-weight:700;padding:15px 0;border-radius:10px;">
-        <?= phase === 'voting' ? 'Open to vote' : 'Open the matter to Move, Second, or Vote' ?>
+        <?= phase === 'reminder' ? (stage === 'voting' ? 'Open to vote' : 'Open the matter to act') : (phase === 'voting' ? 'Open to vote' : 'Open the matter to Move, Second, or Vote') ?>
       </a>
     </td></tr>
 

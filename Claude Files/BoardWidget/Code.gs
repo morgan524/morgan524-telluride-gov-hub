@@ -57,6 +57,10 @@ function onOpen() {
     .addItem('New matter & send ballot...', 'openCompose')
     .addItem('Re-send link for a matter...', 'resendPrompt')
     .addSeparator()
+    .addItem('Send reminders now', 'sendRemindersNow')
+    .addItem('Turn ON reminders (every 3 days)', 'installReminderTrigger_')
+    .addItem('Turn OFF reminders', 'turnOffReminders')
+    .addSeparator()
     .addItem('Set up sheets', 'setup')
     .addItem('Test summary API key', 'testApiKey')
     .addToUi();
@@ -166,23 +170,80 @@ function resendPrompt() {
 function emailMembers_(phase, matterId, title, summary, motionText, docUrl, movedBy, secondedBy, matterDate) {
   const base = webAppUrl_();
   const members = getBoard_();
+  const m = { id: matterId, title: title, summary: summary, motionText: motionText, docUrl: docUrl,
+    movedBy: movedBy, secondedBy: secondedBy, date: matterDate };
   let sent = 0;
-  members.forEach(function (mem, i) {
-    if (!mem.email) return;
-    const t = HtmlService.createTemplateFromFile('Ballot');
-    t.orgName = ORG_NAME; t.phase = phase; t.voterName = mem.name;
-    t.title = title; t.summary = summary; t.motionText = motionText || '';
-    t.docUrl = docUrl || ''; t.movedBy = movedBy || ''; t.secondedBy = secondedBy || '';
-    t.openUrl = actionUrl_(base, matterId, i, '');
-    MailApp.sendEmail({
-      to: mem.email,
-      subject: subjectFor_(title, matterDate),
-      htmlBody: t.evaluate().getContent(),
-      name: ORG_NAME + ' Board Votes',
-    });
-    sent++;
-  });
+  members.forEach(function (mem, i) { if (mem.email) { ballotEmail_(phase, mem, i, m, base); sent++; } });
   return sent;
+}
+
+/** Send one member their matter email. phase = 'invite' | 'voting' | 'reminder'. */
+function ballotEmail_(phase, mem, vi, m, base) {
+  const stage = m.stage || (!m.movedBy ? 'awaiting_motion' : (!m.secondedBy ? 'awaiting_second' : 'voting'));
+  const t = HtmlService.createTemplateFromFile('Ballot');
+  t.orgName = ORG_NAME; t.phase = phase; t.stage = stage; t.voterName = mem.name;
+  t.title = m.title; t.summary = m.summary; t.motionText = m.motionText || '';
+  t.docUrl = m.docUrl || ''; t.movedBy = m.movedBy || ''; t.secondedBy = m.secondedBy || '';
+  t.openUrl = actionUrl_(base, m.id, vi, '');
+  MailApp.sendEmail({
+    to: mem.email,
+    subject: (phase === 'reminder' ? 'Reminder - ' : '') + subjectFor_(m.title, m.date),
+    htmlBody: t.evaluate().getContent(),
+    name: ORG_NAME + ' Board Votes',
+  });
+}
+
+/* ===================== DAILY VOTE REMINDERS ===================== */
+
+/** Time-driven (every 3 days): remind every member who hasn't yet acted on each open matter.
+ *  A member is "done" once their vote cell is filled (move/second/vote all fill it).
+ *  Finalized matters (Passed/Failed) are skipped, so reminders stop on their own. */
+function sendReminders_() {
+  const votes = sheet_(SHEET_VOTES);
+  const last = votes.getLastRow();
+  if (last < 2) return 0;
+  const members = getBoard_();
+  const base = webAppUrl_();
+  let total = 0;
+  for (let row = 2; row <= last; row++) {
+    const m = readMatter_(row);
+    if (!m.id || m.decided) continue;                 // skip blanks + finalized matters
+    members.forEach(function (mem, i) {
+      if (!mem.email) return;
+      if (String(m.votes[i] || '').trim()) return;     // already moved / seconded / voted
+      ballotEmail_('reminder', mem, i, m, base);
+      total++;
+    });
+  }
+  Logger.log('Reminders sent: ' + total);
+  return total;
+}
+
+function sendRemindersNow() {
+  const n = sendReminders_();
+  SpreadsheetApp.getUi().alert('Sent ' + n + ' reminder(s) for open matters.\n\n' +
+    'Members who already moved, seconded, or voted are not reminded; finalized matters are skipped.');
+}
+
+function installReminderTrigger_() {
+  removeReminderTrigger_();
+  ScriptApp.newTrigger('sendReminders_').timeBased().everyDays(3).atHour(8).create();
+  SpreadsheetApp.getUi().alert('Reminders are ON (every 3 days).\n\nEvery third day around 8 AM, each member who ' +
+    'has not yet acted on an open matter gets a reminder email with their link. Reminders stop automatically once ' +
+    'a matter is decided. (Turn them off anytime from this menu.)');
+}
+
+function removeReminderTrigger_() {
+  let removed = 0;
+  ScriptApp.getProjectTriggers().forEach(function (tr) {
+    if (tr.getHandlerFunction() === 'sendReminders_') { ScriptApp.deleteTrigger(tr); removed++; }
+  });
+  return removed;
+}
+
+function turnOffReminders() {
+  const n = removeReminderTrigger_();
+  SpreadsheetApp.getUi().alert(n ? 'Daily reminders turned OFF.' : 'Daily reminders were not on.');
 }
 
 /* ===================== THE LIVE STATUS PAGE / ACTIONS ===================== */
