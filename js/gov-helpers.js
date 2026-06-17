@@ -376,6 +376,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Rico’s Fireweed has a new owner",
+    source: "Telluride Times",
+    date: "June 17, 2026",
+    firstSeen: "2026-06-17",
+    newsTopic: "public-safety",
+    copy: "Emily Thorn’s path to Fireweed, the Rico café and mercantile that she purchased from founder/owners Chelsey Rajavuori and Matt Guerti in March, took a little while.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/business/article_f7697606-40d0-41ec-9f80-ad2ddf7a6f48.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/5e/c5edd619-4823-4736-aba7-d0b2005fb4c0/6a30e744a0f94.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "The family forged by theater",
     source: "Telluride Times",
     date: "June 16, 2026",
@@ -388,15 +400,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "No surprises: Telluride Town Council candidate Marya Stark",
+    title: "Steward for an uncertain future: Telluride Town Council candidate Charles Dalton",
     source: "Telluride Times",
     date: "June 16, 2026",
     firstSeen: "2026-06-16",
     newsTopic: "government",
-    copy: "She’s only been on the job for approximately six months, but it’s been a full agenda for Telluride Town Council member Marya Stark, and she’s ready to dial down on the kinds of surprises council and the community have been…",
+    copy: "Of the three candidates running for two seats on Telluride Town Council in the June 30 special election, Charles Dalton is the “old-timer,” having lived in Telluride for 10 years.",
     claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_18e52cae-4f5b-4d68-ae21-71b301384ac7.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/a3/8a36df49-72ba-403a-8faa-317408ac8772/6a30fa8544efa.image.jpg",
+    href: "https://www.telluridenews.com/news/article_d1f22fd4-022a-49f6-a26d-2d556533adf8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/e4/0e411176-7121-4f5b-8b1c-3efdf057083a/6a30fd9376842.image.jpg",
     imgHiRes: true
   },
   {
@@ -412,15 +424,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Steward for an uncertain future: Telluride Town Council candidate Charles Dalton",
+    title: "No surprises: Telluride Town Council candidate Marya Stark",
     source: "Telluride Times",
     date: "June 16, 2026",
     firstSeen: "2026-06-16",
     newsTopic: "government",
-    copy: "Of the three candidates running for two seats on Telluride Town Council in the June 30 special election, Charles Dalton is the “old-timer,” having lived in Telluride for 10 years.",
+    copy: "She’s only been on the job for approximately six months, but it’s been a full agenda for Telluride Town Council member Marya Stark, and she’s ready to dial down on the kinds of surprises council and the community have been…",
     claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_d1f22fd4-022a-49f6-a26d-2d556533adf8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/e4/0e411176-7121-4f5b-8b1c-3efdf057083a/6a30fd9376842.image.jpg",
+    href: "https://www.telluridenews.com/news/article_18e52cae-4f5b-4d68-ae21-71b301384ac7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/a3/8a36df49-72ba-403a-8faa-317408ac8772/6a30fa8544efa.image.jpg",
     imgHiRes: true
   },
   {
@@ -2776,48 +2788,81 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/16772758?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-06-16T16:30:00.000Z",
+    title: "Beans & Books",
+    link: "https://telluridelibrary.libcal.com/event/16249440?hs=a",
+    description: "8:30 AM – 9:30 AM · What better way to start out your day than by sipping on a hot cup of coffee while chatting with other bibliophiles about books? It&#39;s a chance to talk about whatever you have been reading (or listening to) and hear about what other folks have been reading (or listening to). Drop in anytime at the beautiful Coffee Cowboy General Store on the corner of Pacific and Willow the third Wednesday of every month!",
+    pubDate: "2026-06-17T14:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Coffee Cowboy General Store",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1762980178.jpg"
+  },
+  {
+    title: "Baby Bop",
+    link: "https://telluridelibrary.libcal.com/event/16610072?hs=a",
+    description: "9:00 AM – 10:00 AM · Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, dise&ntilde;ada para que cuidadores y peque&ntilde;os se muevan juntos mediante rutinas f&aacute;ciles de seguir. Te espera m&uacute;sica alegre, coreograf&iacute;as sencillas y un ambiente de apoyo centrado en el v&iacute;nculo, el movimiento y la alegr&iacute;a; &iexcl;no se requiere experiencia previa en baile!",
+    pubDate: "2026-06-17T15:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png"
+  },
+  {
+    title: "Mountain Village Farmers Marketshow: Storytime",
+    link: "https://telluridelibrary.libcal.com/event/15564453?hs=a",
+    description: "11:00 AM – 12:00 PM · Join us for songs and stories in the Mountain Village Core at the wooden stage!",
+    pubDate: "2026-06-17T17:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Mountain Village Market",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_27_19.png"
+  },
+  {
+    title: "Lite Lunch-The Calamity Club",
+    link: "https://telluridelibrary.libcal.com/event/16560674?hs=a",
+    description: "12:00 PM – 1:00 PM · The Calamity Club by Kathryn Stockett The multimillion-copy-selling author of The Help returns with a bold, big-hearted novel about a group of unbreakable women, fighting for what's rightfully theirs—and the power of friendship to change everything. \"Pure, hell-raising entertainment.\"—The New York Times Book Review Oxford, Mississippi, 1933. Abandoned by her mother one Christmas Eve, eleven-year-old Meg Lefleur has learned the hard way to rely on no one. Now one of the unadoptable \"big girls\" at the Lafayette County Orphan Asylum, she fights each day to keep her spirit unbowed. Birdie Calhoun, unmarried and outspoken, has come to Oxford to ask her socialite sister to help the struggling family she's left behind. But as the Depression tightens its grip, Birdie discovers her sister's seemingly charmed life is a tapestry of lies. …",
+    pubDate: "2026-06-17T18:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_12_12_21_24.png"
   },
   {
-    title: "Teen Cook",
-    link: "https://telluridelibrary.libcal.com/event/16935711?hs=a",
-    description: "2:00 PM – 3:00 PM · Join us every Tuesday this summer for Teen Cook, where we prepare a variety of delicious foods and get to try out something new.",
-    pubDate: "2026-06-16T20:00:00.000Z",
+    title: "Mahjongg for Independent Players",
+    link: "https://telluridelibrary.libcal.com/event/16767653?hs=a",
+    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-06-17T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg"
+  },
+  {
+    title: "Teen Movie and Ice Cream Club",
+    link: "https://telluridelibrary.libcal.com/event/16935731?hs=a",
+    description: "4:00 PM – 6:00 PM · Join us every Wednesday this summer for Teen Movie and Ice Cream Club. We will watch a movie on the teen TV with free ice cream available!",
+    pubDate: "2026-06-17T22:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_12_40_26.jpg"
   },
   {
-    title: "Talking Gourds Presents: Stories and Poems - Paulo Munguia",
-    link: "https://telluridelibrary.libcal.com/event/15798224?hs=a",
-    description: "5:15 PM – 7:00 PM · The Telluride Institute's Talking Gourds Poetry Program is hosting a live Stories & Poems series at the Wilkinson Public Library magazine room on the third Tuesday of every month at 5:15 pm. Following the featured poet&#39;s or story teller&#39;s reading we will hold a Talking Gourds sharing circle going around the room to let everyone speak. Attendees are encouraged to bring their own work or someone else's that they like to share. For more information, visit the Telluride Institute Talking Gourds website: tellurideinstitute.org/talking-gourds Jan. 20 / Tanya Ishikawa of Montrose Feb. 17 / Karen Bellerose of Lawson Mar. 17 / Mary Hearding of Rico Apr 21 / Joan Shapiro of Ridgway May 19 / Danny Rosen of Fruita June 16 / Paulo Munguia of Montrose July 21 / Peter Waldor of Trout Lake Aug. …",
-    pubDate: "2026-06-16T23:15:00.000Z",
+    title: "Summer Wellness: Bug Repellent Lotion Bar and Spray",
+    link: "https://telluridelibrary.libcal.com/event/16576521?hs=a",
+    description: "5:00 PM – 7:00 PM · Don&#39;t let the bugs be buggin&#39; you this summer! Come in and learn about how and why people use natural bug repellent and make your own bug repellent lotion bar and natural bug spray using essential oils. All materials will be provided. Registration is required.  Join us for our other DIY Summer Wellness programs on July 16th (Floral Bath Salts and Lavender Sachets) and August 26th (Soothing Foot Scrubs).",
+    pubDate: "2026-06-17T23:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_04_15_58_44.jpg"
-  },
-  {
-    title: "Spanish Happy Hour",
-    link: "https://telluridelibrary.libcal.com/event/16008000?hs=a",
-    description: "5:30 PM – 6:30 PM · Practice your Spanish skills with other Spanish speakers at La Cocina. The Library will provide appetizers, and the bar will be available for you to purchase a beverage of your choice. Registration is not required, but it helps us have an idea of how many people will be in attendance, and therefore how much food to order.  All levels welcome!",
-    pubDate: "2026-06-16T23:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "La Cocina de Luz Restaurant",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715701794.jpg"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_09_52_28.jpg"
   }
 ];
 
@@ -2851,18 +2896,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "Palmyra w/ Frail Talk",
-    link: "https://www.alibitelluride.com/calendar#eca-event=palmyra-w-frail-talk",
-    description: "Established in Virginia’s Shenandoah Valley, Palmyra captures the collective spi...",
-    pubDate: "2026-06-16",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/3dfa7885-4aaa-428a-a201-0b14f3c8ad8b/-/crop/4430x2213/0,614/-/preview/"
-  },
   {
     title: "Smörgåsgrass",
     link: "https://www.alibitelluride.com/calendar#eca-event=smorgasgrass",
@@ -3381,18 +3414,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52092171660517/huge/0e628304026c92db25e8df01849c962ac902a3b4.jpg"
   },
   {
-    title: "Ridgway FUSE Creative Main Street - Committee Meeting",
-    link: "https://www.ridgwayfuse.org/meetings",
-    description: "Ridgway FUSE, a Creative District & Main Street Program, nurtures the cultural and economic vitality of Ridgway, Colorado All Ridgway FUSE Committee Meetings are open to the public. Click here for agendas and notes. Interested residents may apply to serve on the FUSE committee here. Email Tera Wick at twick@town.ridgway.co.us or call 970-626-5308 x 215 with questions.",
-    pubDate: "2026-03-17T12:00:00.000Z",
-    endDate: "2028-02-15",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52305506266326/huge/6f7fb94915fd0e9d2c59d779c91e1ffdf9538f60.jpg"
-  },
-  {
     title: "Community Meditation",
     link: "www.ridgwayfuse.org",
     description: "Join us for a peer-led weekly meditation series at the Decker Community Room. Free and open to the public! We meet every 1st, 2nd, and 4th Tuesday of the month (all but the 3rd Tuesday!)",
@@ -3451,18 +3472,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
-  },
-  {
-    title: "Decker Room New Volunteer Orientation",
-    link: "www.ridgwayfuse.org",
-    description: "Join our wonderful volunteer team at the Decker! If you would like to help with Gallery Sitting during open hours, events, and more, please attend a New Volunteer Orientation to get started! You'll learn about the Decker Room and the events and programs that take place here. Volunteers should be able to commit to consistent volunteer hours each month! Email decker@ridgwayfuse.org for info and to RSVP.",
-    pubDate: "2026-04-21T12:00:00.000Z",
-    endDate: "2027-03-16",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52568082541214/huge/49b7c4c5e83ca4147b872fdb5be7fe87b78551c5.jpg"
   },
   {
     title: "Yoga in the Park- Wednesday evenings",
@@ -3549,66 +3558,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52709642938173/huge/e2c21f0b2c1fb10c06c021e9b9d55a9ea535bccc.jpg"
   },
   {
-    title: "Craft Time: Birdhouses",
-    link: "https://ouray.colibraries.org/lib-cal/",
-    description: "Join us at Ouray Library from 11:00 a.m. to 11:45 a.m. to make and paint some un-beak-lievable birdhouses. Ages: Elementary",
-    pubDate: "2026-06-16T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53081823470651/huge/77ad6ed6d9c39ef0cd228b6c87e6f9442fdd660a.jpg"
-  },
-  {
-    title: "JAY ROEMER",
-    link: "https://coloradoboydepot.com/calendar/",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-06-16T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Ouray County Baseball 11U Team vs. Norwood",
-    link: "ouraycountybaseball.com",
-    description: "Ouray County Baseball 11U Team vs. Norwood",
-    pubDate: "2026-06-16T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52118491920073/huge/05139b66e9f6daf3db0bec61ea6da7641d58cf5a.jpg"
-  },
-  {
-    title: "Adult Craft Night: Making Earrings out of Retired Books",
-    link: "https://ouray.colibraries.org/lib-cal/",
-    description: "Join us in the San Juan Room of the Ouray Community Center for our June Adult Craft Night. We will be making earrings out of retired books. Sign up is required at programsouraypl@gmail.com. Ages: Adults",
-    pubDate: "2026-06-16T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53082215882173/huge/724b2b666b05d818cc6f2eebfbd4bf96b638db06.jpg"
-  },
-  {
-    title: "Ouray County Baseball - 13u Baseball vs. Norwood",
-    link: "ouraycountybaseball.com",
-    description: "Ouray County Baseball - 13u Baseball vs. Norwood",
-    pubDate: "2026-06-16T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52118491920073/huge/05139b66e9f6daf3db0bec61ea6da7641d58cf5a.jpg"
-  },
-  {
     title: "Evenings of History 2026 @ the Wright",
     link: "https://www.ouraycountyhistoricalsociety.org/about-4",
     description: "Evenings of History 2026 @ the Wright WHEN? Weekly Tuesdays • 7:00 pm – 9:00 pm Doors at 6:30 pm • Presentations at 7:00 pm June 16 June 23 June 30 July 7 July 14 July 21 July 28 August 4 WHERE? Wright Opera House 472 Main St. Ouray, Colorado SERIES: Presented by the Ouray County Historical Society ABOUT THE SERIES Join the Ouray County Historical Society for another season of Evenings of History, a community lecture series exploring the people, places, and stories that shaped Ouray County and the greater San Juan region. From mining legends and frontier photography to fashion, recreation, and Ute history, this year’s lineup offers a fascinating look into the characters and events that helped define the American West. Through local historians, researchers, storytellers, and community experts, Evenings of History continues a longstanding tradition of preserving and sharing the rich heritage of Ouray County. …",
@@ -3619,18 +3568,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52887120617394/huge/59851e9ca29d75054645a0e488e33edbbcf73d69.jpg"
-  },
-  {
-    title: "OIFF Meet and Greet",
-    link: "https://ouray.colibraries.org/lib-cal/",
-    description: "Join us at Ouray Library at 7:00 p.m. to meet the fantastic founders of the Ouray International Film Festival (OIFF). This will include vivid discussion with Jake Abell and Jared LaCroix and learning about this year's festival scheduling.",
-    pubDate: "2026-06-16T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53074251930089/huge/526dac40d826b77c48509ef674c3ab3d0fc604aa.jpg"
   },
   {
     title: "Wildflower Walks & Talks with Mary Menz & Jaime Pisarowicz \"Blaine Basin Trail\"",
@@ -4111,6 +4048,30 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53011860959808/huge/18d2c8168b9b4eb4feda6c306a6a74312794c185.jpg"
+  },
+  {
+    title: "Null and Void - Live at the Floating Lotus - FREE show",
+    link: "FloatingLotusBrewery.com",
+    description: "Null and Void is a rock duo from Denver, CO. Just guitar and drums, Null and void plays covers and originals. Inspired by bands like the Black Keys, Green Day, Smashing Pumpkins, The White Stripes, The Presidents of the United States of America, and Superchunk, their sets are on fire from start to finish. Null and Void has played Larimer Lounge, Lost Lake, Globe Hall, the Trailside Saloon, Goosetown, the Black Buzzard, Moe’s BBQ, and outdoor events and festivals like Run the Rocks (2022-2024) and Ridgway Rocks. Null and Void have shared the stage with the City of Sound, the Dirty Turkeys, Cinema Stereo, The Losers Club, Stray the Course, LOG, Hot Like Wasabi, 2 Seconds to Denver, Bicycle Day, and many more... Free Show All Ages Welcome Outdoor Stage",
+    pubDate: "2026-06-27T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53028364541359/huge/a175a92f468964f585613b57a9d781045075cb33.jpg"
+  },
+  {
+    title: "Ridgway Fête de la Musique presented by Citizens State Bank, The Sherbino & Weehawken Creative Arts",
+    link: "https://www.ridgwayfete.com/",
+    description: "4 pm – Dark || Downtown Ridgway on Clinton & Cora + Hartwell Park, the Sherbino & The Courtyard at 610 Setting: Walking, Standing, Dancing Join us for one of Ridgway’s most joyful traditions — the Ridgway Fête de la Musique, an outdoor celebration of live music, community, and summer vibes! Presented by Citizen’s State Bank, Weehawken Creative Arts, and The Sherbino, this FREE event transforms downtown Ridgway into a bustling open-air festival filled with the sound of music. 15+ Musical Acts | Many Simultaneous Outdoor Stages + An Indoor Stage at the Sherbino From the vibrant rhythms of Mariachi San Jose to regional favorites like David Nunn, Heather & Doug, and Donny Morales, there’s something for every musical taste. Wander Clinton and Cora Streets, the Courtyard at 610, The Sherbino and Hartwell Park to enjoy an incredible lineup of performances across multiple stages! …",
+    pubDate: "2026-06-28T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52590090771453/huge/5f8f06133edd0a9151fe5e6e785bc44ecfc34e48.jpg"
   }
 ];
 
