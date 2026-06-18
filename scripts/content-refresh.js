@@ -1668,6 +1668,13 @@ function classifyNewsTopic(title, desc) {
   return 'community';
 }
 
+// Repair legacy "mojibake": runs of U+FFFD (replacement chars) left by the old
+// chunk-split UTF-8 bug. In these short news excerpts the culprit is almost
+// always a smart apostrophe inside a contraction/possessive ("It’s").
+function repairMojibake(s) {
+  return String(s).replace(/(\w)\uFFFD+(\w)/g, "$1'$2").replace(/\uFFFD+/g, "'");
+}
+
 async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
   console.log('\n📰 Task 2: Refreshing news articles...');
   // Build a lookup of articles we already have Claude summaries for, keyed by href.
@@ -1737,8 +1744,13 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
         // feature (commit 7f615b7) lack the field, leaving their cards without
         // the "By <author>" byline. Re-fetch just the full text (no re-summarize)
         // so we can extract the signature.
-        if (existingByHref.has(href) && existingByHref.get(href).claudeSummary) {
-          const cached = existingByHref.get(href);
+        const cachedHit = existingByHref.get(href);
+        // Skip carrying forward an entry whose text was corrupted by the old
+        // chunk-split UTF-8 bug (contains U+FFFD); let it fall through to a
+        // fresh fetch so apostrophes/quotes come back clean.
+        const cachedCorrupt = cachedHit && (/\uFFFD/.test(cachedHit.copy || '') || /\uFFFD/.test(cachedHit.letterAuthor || ''));
+        if (existingByHref.has(href) && cachedHit.claudeSummary && !cachedCorrupt) {
+          const cached = cachedHit;
           const isLetterCached = /\/letters_to_editor\//i.test(href);
           if (isLetterCached && !cached.letterAuthor && TT_AUTH_COOKIE) {
             try {
@@ -1843,6 +1855,13 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
         scrapedHrefs.add(href);    // prevent duplication if loop runs twice
       }
     }
+  }
+
+  // Final safety net: repair any remaining legacy mojibake on carried-forward
+  // (out-of-feed) entries the fresh-fetch path didn't touch.
+  for (const art of articles) {
+    if (typeof art.copy === 'string' && art.copy.indexOf('\uFFFD') >= 0) art.copy = repairMojibake(art.copy);
+    if (typeof art.letterAuthor === 'string' && art.letterAuthor.indexOf('\uFFFD') >= 0) art.letterAuthor = repairMojibake(art.letterAuthor);
   }
 
   // ── og:image enhancement pass ──────────────────────────────────────────
