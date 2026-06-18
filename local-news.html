@@ -190,6 +190,12 @@
       align-items: center; /* center the photo vertically next to taller text */
       margin-bottom: 28px;
     }
+    /* Letters-to-the-Editor banner across the top of letter cards */
+    .letters-banner { width: 100%; line-height: 0; }
+    .letters-banner img { width: 100%; height: auto; display: block; }
+    /* Banner sits above the photo, matching the photo column's width (not full card). */
+    .featured-card .featured-media { display: flex; flex-direction: column; }
+    .featured-card .corner-logo { height: 30px; width: auto; object-fit: contain; margin-left: auto; opacity: 0.9; }
     /* .featured-card .img replaced by .img-wrap-featured for blur-bg treatment */
     .featured-card .body {
       padding: 28px 32px;
@@ -727,7 +733,8 @@
       fire:      'https://livabletelluride.org/logo/Telluride%20Fire.png',
       med:       'https://livabletelluride.org/logo/Medical.jpeg',
       norwood:   'https://livabletelluride.org/logo/Norwood.jpeg',
-      community: 'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png'
+      community: 'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png',
+      letter:    'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png'
     };
 
     /* ──────────────────────────────────────────────────────────
@@ -826,9 +833,12 @@
       return !!(a && (a.isLetter === true || (a.href && /\/letters_to_editor\//i.test(a.href))));
     }
     function imgFor(a) {
-      // Letters use their own photo as the hero when one is supplied; otherwise
-      // they fall back to the Letter-to-the-Editor logo.
-      if (isLetterToEditor(a)) return a.img || '/logo/Letter%20to%20Editor.png';
+      // Our own letters (LOCAL_NEWS_FEATURED, isLetter:true) use their supplied
+      // photo as the hero. Telluride Times letters only carry a masthead
+      // placeholder image, so they ALWAYS fall back to the Letter-to-the-Editor
+      // logo regardless of what the scrape attached.
+      if (a.isLetter === true) return a.img || '/logo/Letter%20to%20Editor.png';
+      if (isLetterToEditor(a)) return '/logo/Letter%20to%20Editor.png';
       if (a.img) return a.img;
       if (a.sourceKey === 'koto') return 'img/koto-cow.webp';
       // SMBF: fall back to the masthead logo when the article didn't have
@@ -847,7 +857,7 @@
       const isKotoFallback = !a.img && a.sourceKey === 'koto';
       const isSmbFallback = !a.img && a.sourceKey === 'smb';
       const isLetter = isLetterToEditor(a);
-      const imgClass = isKotoFallback || isSmbFallback || (isLetter && !a.img) ? 'class="koto-fallback"' : '';
+      const imgClass = isKotoFallback || isSmbFallback || (isLetter && !(a.isLetter === true && a.img)) ? 'class="koto-fallback"' : '';
       const onload = imgClass ? '' : 'onload="handlePortrait(this)"';
       const imgEl = src
         ? `<img src="${src}" alt="" loading="lazy" ${imgClass} ${onload} onerror="this.style.background='#ddd'">`
@@ -858,8 +868,17 @@
       const letterLogo = isLetter
         ? `<img class="src-logo" src="/logo/Letter%20to%20Editor.png" alt="Letter to the Editor" onerror="this.style.display='none'">`
         : '';
+      const banner = a.isLetter === true
+        ? `<div class="letters-banner"><img src="/logo/letters-banner.png" alt="Letters to Livable Telluride"></div>`
+        : '';
+      const cornerLogo = a.isLetter === true
+        ? `<img class="corner-logo" src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">`
+        : '';
+      const media = banner
+        ? `<div class="featured-media">${banner}<div class="img-wrap-featured">${imgEl}</div></div>`
+        : `<div class="img-wrap-featured">${imgEl}</div>`;
       return `
-        <div class="img-wrap-featured">${imgEl}</div>
+        ${media}
         <div class="body">
           <span class="featured-tag">Featured</span>
           ${authorLine}
@@ -873,6 +892,7 @@
           <div class="summary">${a.summary}</div>
           <div class="actions">
             <a class="read-more" href="${a.href}" target="_blank" rel="noopener">Read more →</a>
+            ${cornerLogo}
           </div>
         </div>
       `;
@@ -886,7 +906,7 @@
       // Use the koto-fallback `object-fit:contain` styling for letter
       // icons and the SMB masthead fallback too so they aren't cropped
       // by the 4:3 cover crop.
-      const imgClass = isKotoFallback || isSmbFallback || (isLetter && !a.img) ? 'class="koto-fallback"' : '';
+      const imgClass = isKotoFallback || isSmbFallback || (isLetter && !(a.isLetter === true && a.img)) ? 'class="koto-fallback"' : '';
       const onload = imgClass ? '' : 'onload="handlePortrait(this)"';
       const imgEl = src
         ? `<img src="${src}" alt="" loading="lazy" ${imgClass} ${onload} onerror="this.style.opacity=0.3">`
@@ -897,8 +917,12 @@
       const authorLine = (isLetter && a.letterAuthor)
         ? `<div class="letter-author">By ${a.letterAuthor}</div>`
         : '';
+      const banner = a.isLetter === true
+        ? `<div class="letters-banner"><img src="/logo/letters-banner.png" alt="Letters to Livable Telluride"></div>`
+        : '';
       return `
         <article class="card">
+          ${banner}
           <div class="img-wrap">${imgEl}</div>
           <div class="body">
             ${authorLine}
@@ -1212,7 +1236,9 @@
 
             ARTICLES.length = 0;
             filtered.forEach(a => ARTICLES.push(a));
-            if (ARTICLES[0]) ARTICLES[0].featured = true;
+            // Honor a hand-pinned featured item (LOCAL_NEWS_FEATURED); otherwise
+            // feature the newest-dated article.
+            if (!ARTICLES.some(a => a.featured) && ARTICLES[0]) ARTICLES[0].featured = true;
             render();
         } catch (err) { console.warn('loadLiveData filter pass failed:', err); }
       };
