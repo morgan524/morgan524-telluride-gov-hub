@@ -536,7 +536,7 @@ const MED_CACHED_DATA = [
     date: 'June 25, 2026',
     time: '8:30 AM - 11:30 AM',
     title: 'Regular Board Meeting',
-    agendaUrl: null,
+    agendaUrl: 'https://www.tellmed.org/files/bab17808c/THD+Reg+BOD+Mtg+6.25.26+Agenda.pdf',
     packetUrl: null,
     special: false,
     location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom',

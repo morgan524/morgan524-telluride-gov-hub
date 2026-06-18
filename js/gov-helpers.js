@@ -3720,6 +3720,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52092563418852/huge/6b966623135c4503564229a4b8f584add6755426.jpg"
   },
   {
+    title: "Functional Fitness - Strength & Mobility Training For Women",
+    link: "https://www.signupgenius.com/go/10C044DAAA82DA7FAC70-60167874-functional#/",
+    description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Class Structure: 5 minute warm up / 30 minute circuit workout / 10 minute cooldown stretch & mobility What To Bring: yoga mat, water, no shoes preferred - If you need to wear shoes they must be clean indoor shoes only. No mud, dirt, snow, etc. Every Tuesday & Thursday 8:15-9 am / Advance sign up required! …",
+    pubDate: "2026-06-18T12:00:00.000Z",
+    endDate: "2026-12-22",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53188965998095/huge/55f592a5e84d7486827ccac53e3cf97ff5f937db.jpg"
+  },
+  {
     title: "Tween-Try-It: Photography",
     link: "https://ouray.colibraries.org/lib-cal/",
     description: "During this summer, once a month, the Ouray Library will be hosting Tween-Try-It, which is a program designed for 9-12 year olds where they can learn a new hobby or activity. This program will last an hour and should be very fun. Our June Tween-Try-It will be centered around Photography! This will happen at the Ouray Library on Thursday, June 18th, from 1:00 p.m. to 2:00 p.m. Sign up is requested at programsouraypl@gmail.com. Ages; Tweens (9-12)",
