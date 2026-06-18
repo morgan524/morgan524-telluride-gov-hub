@@ -23,6 +23,16 @@
   .hero h1{margin:0 0 6px;font-family:Georgia,"Times New Roman",serif;font-size:1.9rem;color:var(--green)}
   .hero p{margin:0;color:#3a443e}
   .wrap{max-width:620px;margin:22px auto 50px;padding:0 22px}
+  .avatar-wrap{display:flex;align-items:center;gap:16px;margin:0 0 18px;flex-wrap:wrap}
+  .avatar{width:84px;height:84px;border-radius:50%;overflow:hidden;flex-shrink:0;background:#eef3f0;border:2px solid var(--line);display:flex;align-items:center;justify-content:center}
+  .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+  .avatar img.contain{object-fit:contain;background:#fff;padding:6px}
+  .avatar .initials{font-size:1.7rem;font-weight:700;color:var(--green)}
+  .avatar-actions{display:flex;flex-direction:column;gap:5px}
+  .avatar-actions button{background:#fff;border:1px solid rgba(33,68,60,.25);color:var(--green);border-radius:999px;padding:8px 16px;font-weight:700;font-size:.85rem;cursor:pointer;font-family:inherit}
+  .avatar-actions .hint{font-size:.74rem;color:var(--muted)}
+  .avatar-status{font-size:.78rem;min-height:1em}
+  .avatar-status.ok{color:#1f7a4d}.avatar-status.err{color:#b3261e}.avatar-status.busy{color:var(--muted)}
   .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 24px 22px;box-shadow:0 8px 30px rgba(20,40,34,.05)}
   .row{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
   .row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
@@ -102,6 +112,15 @@
 
   <main class="wrap">
     <div class="card">
+      <div class="avatar-wrap" id="avatarWrap" style="display:none">
+        <div class="avatar" id="avatarCircle"><span class="initials" id="avatarInitials"></span></div>
+        <div class="avatar-actions">
+          <button type="button" id="avatarBtn">Change photo</button>
+          <span class="hint">JPG or PNG, up to 8&nbsp;MB. We resize it for you.</span>
+          <span class="avatar-status" id="avatarStatus"></span>
+        </div>
+        <input type="file" id="avatarFile" accept="image/*" style="display:none">
+      </div>
       <p class="loadmsg" id="profLoadMsg"></p>
       <form id="profForm" onsubmit="return submitProfile(event)" novalidate>
 
@@ -235,6 +254,8 @@
 <!-- Firebase (compat) — to detect the Hub-Bub login and load the person's own info -->
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-storage-compat.js"></script>
 <script>
   // ── Cloudflare Worker endpoints (Mailchimp API key lives server-side) ──
   const WORKER_ENDPOINT = 'https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/update-profile';
@@ -270,6 +291,7 @@
   // person's EFFECTIVE weekly state is "subscribed": their current state, unless
   // the Weekly Update segment is being changed right now. Mirrors the signup rule.
   var _weeklyCurrent = null;                 // set by profile-read (true/false/null)
+  var _db = null, _storage = null, _avatarUser = null;   // Firebase handles for the profile photo
   function effectiveWeeklyOn(){
     const seg=document.querySelector('.seg[data-sub="weekly"]');
     const act=seg && seg.querySelector('.seg-btn.active');
@@ -345,9 +367,11 @@
         appId: '1:14117089764:web:4287985258f0bc929cd7f1'
       });
     } catch(e) { /* already initialized */ }
+    try { _db = firebase.firestore(); _storage = firebase.storage(); } catch(e) {}
     firebase.auth().onAuthStateChanged(function(user){
       if (!user || !user.email) { loadMsg(loginHint, 'info'); return; }
       setVal('pEmail', user.email);
+      initAvatar(user);
       user.getIdToken().then(function(token){
         return fetch(READ_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ idToken: token }) });
       }).then(function(r){ return r.json(); }).then(function(resp){
@@ -366,6 +390,66 @@
       }).catch(function(){ loadMsg('Couldn’t load your saved info just now — you can still update anything below.', 'info'); });
     });
   })();
+
+  // ── Profile photo (avatar) ──────────────────────────────────────────
+  // Reuses the Hub-Bub avatar model: image goes to Storage hub-bub/{uid}/...
+  // and the URL is saved to the users/{uid}.photoURL doc, so it also shows on
+  // the person's Hub-Bub posts. info@ defaults to the Livable Telluride logo.
+  const INFO_EMAIL = 'info@livabletelluride.org';
+  const LT_LOGO = 'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png';
+  const AVATAR_MAX_MB = 8, AVATAR_MAX_PX = 512;
+  function avStatus(cls, txt){ const e=document.getElementById('avatarStatus'); if(e){ e.className='avatar-status '+(cls||''); e.textContent=txt||''; } }
+  function renderAvatar(user, photoURL){
+    const c=document.getElementById('avatarCircle'); if(!c) return;
+    if (photoURL){
+      c.innerHTML='<img src="'+String(photoURL).replace(/"/g,'&quot;')+'" alt="Profile photo">';
+    } else if (user && user.email && user.email.toLowerCase()===INFO_EMAIL){
+      c.innerHTML='<img class="contain" src="'+LT_LOGO+'" alt="Livable Telluride">';
+    } else {
+      const nm=((val('pFirst')+' '+val('pLast')).trim()) || (user&&user.email)||'';
+      const init=(nm.replace(/[^A-Za-z ]/g,'').trim().split(/\s+/).map(function(w){return w[0];}).slice(0,2).join('').toUpperCase())||'?';
+      c.innerHTML='<span class="initials">'+init+'</span>';
+    }
+  }
+  function initAvatar(user){
+    const wrap=document.getElementById('avatarWrap'); if(!wrap) return;
+    wrap.style.display=''; _avatarUser=user;
+    renderAvatar(user, null);   // placeholder (initials, or logo for info@) until the saved photo loads
+    const btn=document.getElementById('avatarBtn'), file=document.getElementById('avatarFile');
+    if(btn&&file){ btn.onclick=function(){ file.click(); }; file.onchange=function(){ handleAvatarUpload(user, file.files&&file.files[0]); file.value=''; }; }
+    if(_db){ _db.collection('users').doc(user.uid).get()
+      .then(function(doc){ const d=(doc&&doc.exists)?doc.data():{}; renderAvatar(user, d&&d.photoURL); })
+      .catch(function(){}); }
+  }
+  function downscaleImage(file, max){
+    return new Promise(function(resolve,reject){
+      const url=URL.createObjectURL(file), img=new Image();
+      img.onload=function(){ URL.revokeObjectURL(url);
+        var w=img.naturalWidth, h=img.naturalHeight, s=Math.min(1, max/Math.max(w,h));
+        w=Math.max(1,Math.round(w*s)); h=Math.max(1,Math.round(h*s));
+        var cv=document.createElement('canvas'); cv.width=w; cv.height=h;
+        cv.getContext('2d').drawImage(img,0,0,w,h);
+        cv.toBlob(function(b){ b?resolve(b):reject(new Error('Could not process that image.')); },'image/jpeg',0.85);
+      };
+      img.onerror=function(){ URL.revokeObjectURL(url); reject(new Error('That file is not a readable image.')); };
+      img.src=url;
+    });
+  }
+  function handleAvatarUpload(user, file){
+    if(!file) return;
+    if(!_storage||!_db){ avStatus('err','Photo upload needs you to be signed in.'); return; }
+    if(!/^image\//.test(file.type||'')){ avStatus('err','Please choose an image file (JPG or PNG).'); return; }
+    if(file.size > AVATAR_MAX_MB*1024*1024){ avStatus('err','That image is too large (max '+AVATAR_MAX_MB+' MB).'); return; }
+    avStatus('busy','Uploading your photo…');
+    downscaleImage(file, AVATAR_MAX_PX).then(function(blob){
+      var ref=_storage.ref('hub-bub/'+user.uid+'/photo_'+Date.now()+'_avatar.jpg');
+      return ref.put(blob,{contentType:'image/jpeg'}).then(function(){ return ref.getDownloadURL(); });
+    }).then(function(url){
+      return _db.collection('users').doc(user.uid).set({ photoURL:url, updatedAt: firebase.firestore.FieldValue.serverTimestamp() },{merge:true})
+        .then(function(){ return user.updateProfile({photoURL:url}).catch(function(){}); })
+        .then(function(){ renderAvatar(user, url); avStatus('ok','Profile photo updated — it also shows on your Hub-Bub posts.'); });
+    }).catch(function(err){ avStatus('err','Upload failed: '+((err&&err.message)||err)); });
+  }
 
   window.submitProfile = function(event){
     if(event&&event.preventDefault) event.preventDefault();
