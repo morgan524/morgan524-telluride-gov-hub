@@ -257,7 +257,7 @@ const COMMENT_MAP = {
   mv:                 'council@mtnvillage.org',
   'mv-planning':      'planning@mtnvillage.org',
   fire:               'pdasaro@telluridefire.com',
-  med:                'wcrossland@tellmed.org',
+  med:                'bodadmin@tellmed.org',
   norwood:            'cross@norwoodtown.com',
   ophir:              'clerk@ophir.us',
   rico:               'townclerk@ricocolorado.gov',
