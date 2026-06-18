@@ -373,6 +373,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Families of kids with disabilities warn Education Department changes could break a flawed system",
+    source: "Telluride Times",
+    date: "June 18, 2026",
+    firstSeen: "2026-06-18",
+    newsTopic: "housing",
+    copy: "Parents of kids with disabilities say they have waited months for the Education Department to address complaints of bullying or discrimination. Now, the department is offloading civil rights enforcement and special education, raising concerns about further chaos. On Tuesday, the…",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_725d3ce6-9ce1-5dac-aeb9-8b16fa147e13.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/68/a6858de1-2983-5f12-867f-0a64df83e7f5/6a33729ab42b8.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Bluegrass brothers",
     source: "Telluride Times",
     date: "June 18, 2026",
@@ -394,18 +406,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: false,
     href: "https://www.telluridenews.com/news/legals/article_5efd4701-ba7f-46ef-a7bd-74a242fdff7a.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Families of kids with disabilities warn Education Department changes could break a flawed system",
-    source: "Telluride Times",
-    date: "June 18, 2026",
-    firstSeen: "2026-06-18",
-    newsTopic: "housing",
-    copy: "Parents of kids with disabilities say they have waited months for the Education Department to address complaints of bullying or discrimination. Now, the department is offloading civil rights enforcement and special education, raising concerns about further chaos. On Tuesday, the…",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_725d3ce6-9ce1-5dac-aeb9-8b16fa147e13.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/68/a6858de1-2983-5f12-867f-0a64df83e7f5/6a33729ab42b8.image.jpg",
     imgHiRes: true
   },
   {
@@ -1398,6 +1398,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 1:00 a.m. MT on Thursday, June 18, 2026.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     img: ""
+  },
+  {
+    title: "What to do in Colorado this week: Juneteenth celebrations in Denver, Colorado Springs, Fort Collins and beyond",
+    source: "Colorado Sun",
+    date: "June 18, 2026",
+    firstSeen: "2026-06-18",
+    newsTopic: "housing",
+    copy: "Plus: The Telluride Bluegrass Festival, FIBArk in Salida and an open mic in Basalt where there are no parents allowed",
+    claudeSummary: false,
+    href: "https://coloradosun.com/2026/06/18/whats-happening-juneteenth-denver-fort-collins-colorado-springs-colorado/",
+    img: "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2022/04/AP21170715155922.jpg?fit=1024%2C730&amp;ssl=1"
   },
   {
     title: "Click here for details.",
@@ -4180,17 +4191,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Norwood Sanitation District Meeting Meeting",
-    link: "https://www.norwoodtown.com/2026-06-11-norwood-sanitation-district-meeting-meeting",
-    description: "",
-    pubDate: "2026-06-11T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "Music On The Mesa Wolf Jett",
     link: "https://www.norwoodtown.com/2026-06-13-music-on-the-mesa-wolf-jett",
     description: "",
@@ -4335,28 +4335,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
-  },
-  {
-    title: "FirstGrass",
-    link: "https://townofmountainvillage.com/explore/events/all-events/firstgrass/",
-    description: "Join our friends at Planet Bluegrass for their annual FirstGrass event in Mountain Village! This free concert kicks off Bluegrass weekend.",
-    pubDate: "2026-06-17T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/45823/firstgrass.png"
-  },
-  {
-    title: "Bluegrass Eve",
-    link: "https://townofmountainvillage.com/explore/events/all-events/bluegrass-eve/",
-    description: "Head on over to the Telluride Conference Center for Planet Bluegrass' Bluegrass Eve! Featuring members of Leftover Salmon & friends for an all-star jam.",
-    pubDate: "2026-06-17T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/45825/nightgrass.png"
   },
   {
     title: "Mountainfilm for Locals: Perspective Shifts",
@@ -5974,6 +5952,72 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48853/sway_wild_1800x900px_1.png"
+  },
+  {
+    title: "Mountain Village Oktoberfest",
+    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-oktoberfest/",
+    description: "Save the date: Steins up, Mountain Village! On Saturday, October 10, 2026, we're transforming Mountain Village Center into a high-",
+    pubDate: "2026-07-18T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/47057/mv_oktoberfest26_std_1900x1010.png"
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    pubDate: "2026-07-18T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    title: "KOTO Lip Sync Contest",
+    link: "https://townofmountainvillage.com/explore/events/all-events/koto-lip-sync-contest/",
+    description: "KOTO FM presents its annual Lip Snyc on Saturday, January 31 at the Sheridan Opera House.",
+    pubDate: "2026-07-18T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/47782/koto_lip_sync_contest_1800x900.png"
+  },
+  {
+    title: "Mountain Village Movie Night- \"Zootopia 2\"",
+    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-movie-night/",
+    description: "In the final Mountain Village Movie night of the season, the Town of Mountain Village and Telluride Conference Center are proud to present a free screening of",
+    pubDate: "2026-07-18T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48027/zootopia-2-8k-2025-3840x2160-22622.jpg"
+  },
+  {
+    title: "Telluride Foundation Rundola: Run for Good",
+    link: "https://townofmountainvillage.com/explore/events/all-events/telluride-foundation-rundola-run-for-good/",
+    description: "Celebrate Independence Day with the Telluride Foundation at the 16th Annual Rundola on July 4th, 2026! This exciting uphill foot race supports the Good",
+    pubDate: "2026-07-18T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48757/rundola26_1800x900.jpg"
+  },
+  {
+    title: "The Fretliners Live in Concert",
+    link: "https://townofmountainvillage.com/explore/events/all-events/the-fretliners-live-in-concert-1/",
+    description: "The Sheridan Arts Foundation presents The Fretliners Live in Concert on Saturday, June 13, doors at 7:30 p.m. and show at 8:30 p.m. The Fretliners are a band",
+    pubDate: "2026-07-18T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48799/tfl_summer_press_26.jpeg"
   }
 ];
 
