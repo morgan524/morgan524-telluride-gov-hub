@@ -21,15 +21,20 @@ const BASE = 'https://api.customer.io/v1';
 const AUTH = { Authorization: 'Bearer ' + APP, 'Content-Type': 'application/json' };
 
 (async () => {
-  // id_type=id because the Track import set each customer's id = their email.
-  const url = `${BASE}/customers/${encodeURIComponent(EMAIL)}/attributes?id_type=id`;
-  const r = await fetch(url, { headers: AUTH });
-  const text = await r.text();
-  if (!r.ok) {
-    console.error(`Lookup failed: HTTP ${r.status}\n${text.slice(0, 400)}`);
+  // The workspace may key people by email, by a custom id, or by cio_id — try
+  // each id_type until one resolves the person.
+  let j = null, used = null, lastStatus = null;
+  for (const idType of ['email', 'id', 'cio_id']) {
+    const url = `${BASE}/customers/${encodeURIComponent(EMAIL)}/attributes?id_type=${idType}`;
+    const r = await fetch(url, { headers: AUTH });
+    lastStatus = r.status;
+    if (r.ok) { j = await r.json(); used = idType; break; }
+  }
+  if (!j) {
+    console.error(`Lookup failed (last HTTP ${lastStatus}) — no id_type resolved ${EMAIL}.`);
     process.exit(1);
   }
-  let j; try { j = JSON.parse(text); } catch { console.error('Non-JSON response:\n' + text.slice(0, 400)); process.exit(1); }
+  console.log(`(resolved via id_type=${used})`);
   const attrs = (j.customer && j.customer.attributes) || {};
   console.log(`\nCustomer.io attributes for ${EMAIL}:\n`);
   const keys = Object.keys(attrs).sort();
