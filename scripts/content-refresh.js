@@ -396,9 +396,13 @@ function fetch(url, opts = {}) {
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
         return fetch(res.headers.location, opts).then(resolve).catch(reject);
       }
-      let data = '';
-      res.on('data', chunk => data += chunk);
-      res.on('end', () => resolve({ status: res.statusCode, text: data, headers: res.headers }));
+      // Collect raw Buffers and decode ONCE as UTF-8 at the end. The old
+      // `data += chunk` decoded each chunk separately, so a multi-byte char
+      // (e.g. a curly apostrophe = E2 80 99) split across a chunk boundary
+      // turned into replacement characters -- "It’s" -> "It<FFFD><FFFD><FFFD>s".
+      const chunks = [];
+      res.on('data', chunk => chunks.push(chunk));
+      res.on('end', () => resolve({ status: res.statusCode, text: Buffer.concat(chunks).toString('utf8'), headers: res.headers }));
     });
     req.on('error', reject);
     req.on('timeout', () => { req.destroy(); reject(new Error('Timeout')); });
