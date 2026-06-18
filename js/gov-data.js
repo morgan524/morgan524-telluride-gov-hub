@@ -1025,7 +1025,7 @@ const WHY_THIS_MATTERS = [
     who: 'Every commuter, worker, and visitor who uses the gondola, plus all property taxpayers in the SMART district.',
     stage: 'Check agenda for specific action items.',
     impact: 'The gondola (built 1996) is critical regional infrastructure. The current funding agreement expires in 2027. Ballot Issue 3A approved ~$8.2M/year in new tax revenue, but a replacement gondola is estimated at $120-150M+ -- leaving a significant funding gap.',
-    context: 'CORA records revealed over $175,000 in consultant spending before the 3A ballot referral, including $68K on polling (Keating Research) and $170K on project management (Ulysses Consulting). "Friends of the Gondola" raised $130K, with $60K from TMVOA and $60K from the Four Seasons developer. The campaign marketed the measure as funding a "new gondola" but the actual revenue only covers a fraction of replacement cost.'
+    context: 'CORA records revealed roughly $125K in campaign consulting before the ballot was referred. The campaign marketed the measure as funding a "new gondola" but the actual revenue only covers a fraction of replacement cost.'
   },
 
   // ── BOCC / Lucarelli Litigation ──
@@ -1067,7 +1067,7 @@ const WHY_THIS_MATTERS = [
     who: 'All community members who depend on transparent government. CORA is the primary tool for citizens to understand how public money is spent.',
     stage: 'Check agenda for context.',
     impact: 'CORA requests have been instrumental in uncovering the scale of consultant spending on the gondola project, the funding sources behind ballot measure campaigns, and the financial structure of housing projects.',
-    context: 'CORA requests regarding SMART revealed over $175,000 in consultant spending before the 3A ballot referral. Government responsiveness to records requests is a practical measure of transparency -- delays and excessive fees can effectively block public oversight.'
+    context: 'CORA requests regarding SMART revealed roughly $125K in campaign consulting before the ballot was referred. Government responsiveness to records requests is a practical measure of transparency -- delays and excessive fees can effectively block public oversight.'
   },
 
   // ── Forestry / Natural Resources ──
@@ -1483,25 +1483,25 @@ const LAND_USE_ISSUES = {
 const GONDOLA_DATA = {
   label: 'Gondola 3A',
   legalSummary: 'This case involved a challenge to the 3A campaign claiming that SMART failed to provide adequate TABOR notice because voters were not told where, when, or how to submit opposing comments for inclusion in the ballot notice. Additionally, the 3A campaign was claimed to be misleading in suggesting the measure would meaningfully fund a new gondola. The district court rejected the plaintiff\'s election claims. However, rather than let the matter rest, the public entities of Mountain Village, Town of Telluride, and SMART brought motions seeking attorney fees for just over $100,000. Plaintiff is currently appealing such award in court.',
-  intro: 'Ballot Issue 3A approved ~$8.2M/year in new SMART district tax revenue marketed as funding a new gondola. But the current gondola (built 1996) has a replacement cost estimated at $120-150M+, leaving a significant funding gap. CORA records revealed over $175,000 in consultant spending before the ballot referral.',
+  intro: 'Ballot Issue 3A approved ~$8.2M/year in new SMART district tax revenue marketed as funding a new gondola. But the current gondola (built 1996) has a replacement cost estimated at $120-150M+, leaving a significant funding gap. CORA records revealed roughly $125K in campaign consulting before the ballot was referred.',
   statusTitle: 'The gondola funding agreement expires in 2027 -- and the math does not add up.',
-  statusCopy: '3A revenue covers a fraction of the replacement cost. CORA requests uncovered $68K on polling (Keating Research), $170K on project management (Ulysses Consulting), and "Friends of the Gondola" raising $130K -- including $60K from TMVOA and $60K from the Four Seasons developer. The campaign marketed the measure as funding a "new gondola" but actual revenue only covers operating and partial capital costs.',
+  statusCopy: '3A revenue covers a fraction of the replacement cost. CORA requests uncovered roughly $125K in campaign consulting before the ballot was referred. The campaign marketed the measure as funding a "new gondola" but actual revenue only covers operating and partial capital costs.',
   nextStep: 'Watch SMART Board meetings for capital planning, funding strategy, and any new ballot measures or intergovernmental agreements.',
   metrics: [
     { label: 'Core tension', value: '$8.2M/year approved vs. $120-150M+ replacement cost', sub: 'The ballot measure was marketed as funding a new gondola but the revenue covers a fraction of the estimated replacement cost.' },
-    { label: 'What CORA revealed', value: '$175K+ in pre-ballot consultant spending', sub: '$68K polling, $170K project management, $130K "Friends of the Gondola" campaign -- funded in part by TMVOA and the Four Seasons developer.' }
+    { label: 'What CORA revealed', value: '~$125K in pre-ballot campaign consulting', sub: 'CORA records show campaign-consulting spending before the 3A ballot was referred.' }
   ],
   timeline: [
     { date: '1996', title: 'Free gondola connecting Telluride and Mountain Village opens', copy: 'The gondola becomes critical regional infrastructure used by commuters, workers, visitors, and residents daily.' },
     { date: '2024', title: 'Ballot Issue 3A passes', copy: 'Voters approve ~$8.2M/year in new SMART district tax revenue. The campaign frames it as funding a "new gondola" but the revenue covers only a small fraction of estimated replacement cost.' },
-    { date: '2025', title: 'CORA records reveal consultant spending and campaign funding', copy: 'Public records requests uncovered over $175,000 in consultant spending before the 3A referral, raising transparency questions about how the ballot measure was developed and marketed.' },
+    { date: '2025', title: 'CORA records reveal consultant spending and campaign funding', copy: 'Public records requests uncovered roughly $125K in campaign consulting before the ballot was referred, raising transparency questions about how the ballot measure was developed and marketed.' },
     { date: 'Apr 2026', title: 'Appellant files opening appellate brief', copy: 'Emily Masson files her opening brief appealing the district court\'s award of just over $100,000 in attorney fees to SMART, Mountain Village, and the Town of Telluride. The appeal addresses the fee award, not the merits of the election contest.' },
     { date: 'May 2026', title: 'Five entities sign 2026 gondola cost-sharing agreement', copy: 'Mountain Village, TMVOA, the Town of Telluride, San Miguel County, TSG Ski & Golf, and SMART execute the Third Supplement to the 2023 Cost-Sharing IGA, setting a $2,461,032 planning-and-development budget for 2026. SMART funds 50%, the Town of Telluride 25%, and the Mountain Village Entity 25% (split 12.5% Town of Mountain Village / 12.5% TMVOA). The work plans for the gondola after the current operating agreement expires Dec 31, 2027.' },
     { date: 'Next', title: 'Defendants\' appellate response due July 2, 2026', copy: 'The public entities\' response brief to the appeal is due July 2, 2026.', future: true }
   ],
   docs: [
     { title: 'Opening Appellate Brief', copy: 'Appellant Emily Masson\'s opening brief appealing the district court\'s award of just over $100,000 in attorney fees to SMART, Mountain Village, and the Town of Telluride. The appeal addresses the fee award, not the merits of the election contest.', tag: 'Appeal 2026', href: '/assets/Gondola/3a-appeal-opening-brief.pdf' },
-    { title: 'Order Following Trial on Election Contest', copy: 'District court order issued after the April 18, 2025 trial in Case 2024CV8. Court found SMART complied with TABOR notice requirements and that ballot language was not misleading. Vote tally: 1,956 for / 1,758 against.', tag: 'Court Order 2025', href: '/assets/Gondola/3a-order-following-trial.pdf' },
+    { title: 'Order Following Trial on Election Contest', copy: 'District court order issued after the April 18, 2025 trial in Case 2024CV8. Court found SMART complied with TABOR notice requirements and that ballot language was not misleading.', tag: 'Court Order 2025', href: '/assets/Gondola/3a-order-following-trial.pdf' },
     { title: 'Plaintiff\'s Written Closing Argument', copy: 'Masson\'s post-trial closing argument contending SMART provided no meaningful public notice for opposition comments, and that the TABOR notice misleadingly omitted the "slush fund" nature of capital improvement spending.', tag: 'Closing Arg. 2025', href: '/assets/Gondola/3a-closing-argument.pdf' },
     { title: 'Contestor Emily Masson\'s Trial Brief', copy: 'Pre-trial brief filed by Starritt Legal LLC arguing voters had only 12-24 hours to submit opposition comments and that TABOR notice language regarding "capital improvements" was misleading.', tag: 'Trial Brief 2025', href: '/assets/Gondola/3a-trial-brief.pdf' },
     { title: 'Written Statement to Contest Ballot Issue 3A', copy: 'Original election contest filing by Emily Masson (Case 2024CV8) challenging 3A on grounds of non-resident voter eligibility, inadequate TABOR notice, misleading ballot language, and unlawful public entity campaign contributions.', tag: 'Filing 2024' },
@@ -1511,14 +1511,14 @@ const GONDOLA_DATA = {
   ],
   legalIssues: [
     { icon: '💰', title: 'Funding gap and voter expectations', copy: '3A was marketed as funding a "new gondola," but ~$8.2M/year covers only a fraction of the $120-150M+ estimated replacement cost. Whether the ballot language created enforceable voter expectations is an open question.' },
-    { icon: '📋', title: 'Pre-ballot consultant spending', copy: 'CORA records revealed $68K on polling (Keating Research), $170K on project management (Ulysses Consulting), and a "Friends of the Gondola" campaign raising $130K -- including $60K from TMVOA and $60K from a Four Seasons developer. The timing and sourcing of this spending raise transparency concerns.' },
+    { icon: '📋', title: 'Pre-ballot consultant spending', copy: 'CORA records revealed roughly $125K in campaign consulting before the ballot was referred. The timing of this spending raises transparency concerns.' },
     { icon: '🔍', title: 'CORA compliance and public records', copy: 'Multiple CORA requests were required to piece together the full picture of pre-ballot spending. Delayed or incomplete responses raise questions about compliance with Colorado open records requirements.' },
     { icon: '⚖️', title: 'Intergovernmental authority and SMART governance', copy: 'The SMART district spans multiple jurisdictions. Questions persist about accountability, board governance, and whether the taxing authority is being used consistent with its enabling legislation.' }
   ],
   players: [
     { icon: '🚡', title: 'SMART Board', copy: 'Governs gondola operations, maintenance, and capital planning. Key decision-maker on how 3A revenue is allocated.' },
     { icon: '🏔️', title: 'TMVOA / Mountain Village', copy: 'Major stakeholder and campaign contributor. Mountain Village relies heavily on the gondola for connectivity.' },
-    { icon: '🏨', title: 'Resort developers', copy: 'Four Seasons developer contributed $60K to Friends of the Gondola. Development interests are intertwined with gondola infrastructure.' },
+    { icon: '🏨', title: 'Resort developers', copy: 'Development interests are intertwined with gondola infrastructure.' },
     { icon: '👥', title: 'Taxpayers and commuters', copy: 'Every property taxpayer in the SMART district funds the gondola. Commuters and workers depend on it daily.' }
   ],
   news: [
