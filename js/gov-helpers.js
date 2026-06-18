@@ -1991,6 +1991,27 @@ const SMB_FORUM_ARTICLES = [
   }
 ];
 
+// Hand-curated featured items for the Local News page. The bot never rewrites
+// this array (it only manages TELLURIDE_TIMES_ARTICLES / KOTO_* / SMB_*), so a
+// pinned letter or feature here is stable. local-news.html prepends these and
+// honors `featured: true`. Set `isLetter: true` to get the Letter-to-the-Editor
+// treatment (byline + logo) while still using a custom `img` as the hero.
+const LOCAL_NEWS_FEATURED = [
+  {
+    title: "Is Telluride Paradise?",
+    source: "Letter to the Editor",
+    sourceKey: "letter",
+    date: "June 17, 2026",
+    summary: "Paradise, California was a beautiful mountain town until the 2018 Camp Fire killed 85 people. Kate Fedack draws a direct comparison to Telluride -- a wildland-urban interface community at the dead end of a box canyon with one primary paved way out -- and asks why dense new development at the canyon's throat is advancing with no public wildfire egress analysis.",
+    href: "/Blog%20Posts/is-telluride-paradise/",
+    img: "/images/blog/telluride-paradise-fire.jpg",
+    category: "Opinion",
+    isLetter: true,
+    letterAuthor: "Kate Fedack",
+    featured: true
+  }
+];
+
 const BLOG_POSTS = [
   {
     title: "The Colorado Supreme Court's \"Butcher Creek\" Decision",

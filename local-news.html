@@ -823,10 +823,12 @@
        - KOTO: no enclosure → cow brand-logo fallback.
        - Everything else: enclosure image (a.img). */
     function isLetterToEditor(a) {
-      return a && a.href && /\/letters_to_editor\//i.test(a.href);
+      return !!(a && (a.isLetter === true || (a.href && /\/letters_to_editor\//i.test(a.href))));
     }
     function imgFor(a) {
-      if (isLetterToEditor(a)) return '/logo/Letter%20to%20Editor.png';
+      // Letters use their own photo as the hero when one is supplied; otherwise
+      // they fall back to the Letter-to-the-Editor logo.
+      if (isLetterToEditor(a)) return a.img || '/logo/Letter%20to%20Editor.png';
       if (a.img) return a.img;
       if (a.sourceKey === 'koto') return 'img/koto-cow.webp';
       // SMBF: fall back to the masthead logo when the article didn't have
@@ -845,13 +847,16 @@
       const isKotoFallback = !a.img && a.sourceKey === 'koto';
       const isSmbFallback = !a.img && a.sourceKey === 'smb';
       const isLetter = isLetterToEditor(a);
-      const imgClass = isKotoFallback || isSmbFallback || isLetter ? 'class="koto-fallback"' : '';
+      const imgClass = isKotoFallback || isSmbFallback || (isLetter && !a.img) ? 'class="koto-fallback"' : '';
       const onload = imgClass ? '' : 'onload="handlePortrait(this)"';
       const imgEl = src
         ? `<img src="${src}" alt="" loading="lazy" ${imgClass} ${onload} onerror="this.style.background='#ddd'">`
         : '';
       const authorLine = (isLetter && a.letterAuthor)
         ? `<div class="letter-author">By ${a.letterAuthor}</div>`
+        : '';
+      const letterLogo = isLetter
+        ? `<img class="src-logo" src="/logo/Letter%20to%20Editor.png" alt="Letter to the Editor" onerror="this.style.display='none'">`
         : '';
       return `
         <div class="img-wrap-featured">${imgEl}</div>
@@ -860,6 +865,7 @@
           ${authorLine}
           <h2><a href="${a.href}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${a.title}</a></h2>
           <div class="meta">
+            ${letterLogo}
             <span>${a.source}</span>
             <span class="sep">·</span>
             <span>${a.date}</span>
@@ -880,7 +886,7 @@
       // Use the koto-fallback `object-fit:contain` styling for letter
       // icons and the SMB masthead fallback too so they aren't cropped
       // by the 4:3 cover crop.
-      const imgClass = isKotoFallback || isSmbFallback || isLetter ? 'class="koto-fallback"' : '';
+      const imgClass = isKotoFallback || isSmbFallback || (isLetter && !a.img) ? 'class="koto-fallback"' : '';
       const onload = imgClass ? '' : 'onload="handlePortrait(this)"';
       const imgEl = src
         ? `<img src="${src}" alt="" loading="lazy" ${imgClass} ${onload} onerror="this.style.opacity=0.3">`
@@ -1061,6 +1067,11 @@
 
             // ── Collect from sources, then filter, then dedup by title ──
             const live = [];
+            // Hand-curated featured items (bot-safe) come first so a pinned
+            // letter/feature with `featured:true` wins the featured slot.
+            if (typeof LOCAL_NEWS_FEATURED !== 'undefined' && Array.isArray(LOCAL_NEWS_FEATURED)) {
+              LOCAL_NEWS_FEATURED.forEach(a => live.push(Object.assign({}, a)));
+            }
             TELLURIDE_TIMES_ARTICLES.slice(0, 30).forEach(a => live.push({
               title: a.title, source: a.source, sourceKey: 'ttimes',
               date: a.date, summary: a.copy, href: a.href, img: a.img,
