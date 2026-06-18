@@ -136,16 +136,21 @@ function processNewEmails() {
       var eventData = parseEventEmail(msg);
       if (eventData) {
         var session = fbAnonSession();
-        // If the event was forwarded AS an image (no flyer URL in the text),
-        // grab the largest image attachment / inline image, upload it to
-        // Firebase Storage, and use it as the flyer so it shows on the review
-        // page and the published event card.
+        // Choose a flyer image, preferring a real event PHOTO over a sender's
+        // logo. Order: (1) non-logo attachment/inline image, (2) non-logo image
+        // in the HTML body, (3) logo attachment, (4) logo in the HTML body.
+        // A logo is only used when nothing better was found.
+        var body = msg.getBody();
         if (session && !eventData.image) {
-          var blob = getEventImageBlob(msg);
+          var blob = getEventImageBlob(msg, false);                  // skip logos/icons
           if (blob) eventData.image = uploadEventImage(blob, session);
         }
-        // Last resort: a remote flyer linked in the HTML body (<img src>).
-        if (!eventData.image) eventData.image = extractImageFromHtml(msg.getBody());
+        if (!eventData.image) eventData.image = extractImageFromHtml(body, false);
+        if (session && !eventData.image) {
+          var lblob = getEventImageBlob(msg, true);                  // allow a logo
+          if (lblob) eventData.image = uploadEventImage(lblob, session);
+        }
+        if (!eventData.image) eventData.image = extractImageFromHtml(body, true);
         eventData.row = appendToSheet(sheet, eventData);                    // audit ('hold')
         eventData.firestoreOk = writeEventToFirestore(eventData, session);  // live review queue
         Logger.log('Queued: "' + eventData.title + '" (firestore=' + eventData.firestoreOk + ', image=' + (eventData.image ? 'yes' : 'no') + ')');
@@ -187,14 +192,24 @@ function fbAnonSession() {
 // Pull the best flyer image from a forwarded email: the LARGEST image
 // attachment or inline image (the main flyer; tiny logos/signatures lose).
 // Returns a Blob or null.
-function getEventImageBlob(msg) {
+// Logo / icon / social-badge detector — keeps marketing-email branding from
+// being chosen over a real event photo. Matches on filename / URL / alt text.
+function isLikelyLogo(s) {
+  return /(logo|wordmark|brand[-_]?mark|favicon|\bicon\b|social|facebook|fb[-_]|twitter|instagram|\big[-_]|linkedin|youtube|footer|header[-_]?logo|signature|email[-_]?sig|powered[-_]?by|sendgrid)/i.test(String(s || ''));
+}
+
+// Largest image attachment / inline image. When allowLogo is false, skip
+// logo/icon-named images and tiny tracking images so a real photo wins.
+function getEventImageBlob(msg, allowLogo) {
   try {
     var atts = msg.getAttachments({ includeInlineImages: true, includeAttachments: true });
     var best = null, bestSize = 0;
     for (var i = 0; i < atts.length; i++) {
       var a = atts[i];
       if ((a.getContentType() || '').indexOf('image/') !== 0) continue;
+      if (!allowLogo && isLikelyLogo(a.getName())) continue;
       var size = a.getBytes().length;
+      if (!allowLogo && size < 8 * 1024) continue;                 // skip tiny tracking/spacer
       if (size > bestSize && size < 10 * 1024 * 1024) { best = a; bestSize = size; }
     }
     return best;
@@ -465,17 +480,37 @@ function extractImageUrl(body) {
 // Last-resort flyer: a remote image linked in the email's HTML body (<img src>).
 // Skips obvious tracking pixels / spacers. Best-effort — the reviewer can always
 // upload a flyer on the review page instead.
-function extractImageFromHtml(html) {
+function imgDim_(tag, url, re2) {
+  var x = tag.match(re2) || url.match(re2);
+  return x ? parseInt(x[1], 10) : 0;
+}
+
+// Pick the best content image from the HTML body. Every <img> is scored by its
+// declared size, and logo/icon/tracking images are penalized, so a real event
+// photo is chosen over the header logo. When allowLogo is true, logos become
+// eligible (used as a last resort by the caller).
+function extractImageFromHtml(html, allowLogo) {
   if (!html) return '';
-  var re = /<img[^>]+src\s*=\s*["']([^"']+)["']/gi;
-  var m;
-  while ((m = re.exec(html)) !== null) {
-    var u = m[1];
+  var re = /<img\b[^>]*>/gi, tag, best = '', bestScore = -1e9;
+  while ((tag = re.exec(html)) !== null) {
+    var t = tag[0];
+    var sm = t.match(/src\s*=\s*["']([^"']+)["']/i);
+    if (!sm) continue;
+    var u = sm[1];
     if (!/^https?:\/\//i.test(u)) continue;                                  // skip cid:/data:
-    if (/(spacer|pixel|tracking|track|beacon|1x1|open\?|width=1|\bs\.gif)/i.test(u)) continue;
-    return u;
+    if (/(spacer|pixel|tracking|track|beacon|1x1|open\?|\bs\.gif)/i.test(u)) continue;
+    var alt = (t.match(/alt\s*=\s*["']([^"']*)["']/i) || ['', ''])[1];
+    var cls = (t.match(/class\s*=\s*["']([^"']*)["']/i) || ['', ''])[1];
+    var logoish = isLikelyLogo(u + ' ' + alt + ' ' + cls);
+    if (logoish && !allowLogo) continue;
+    var w = imgDim_(t, u, /width\s*[:=]\s*["']?\s*(\d{2,4})/i) || imgDim_(t, u, /[?&](?:w|width)=(\d{2,4})/i);
+    var h = imgDim_(t, u, /height\s*[:=]\s*["']?\s*(\d{2,4})/i) || imgDim_(t, u, /[?&](?:h|height)=(\d{2,4})/i);
+    var maxDim = Math.max(w, h);
+    if (maxDim && maxDim < 100 && !allowLogo) continue;                      // tiny icon
+    var score = (maxDim || 250) - (logoish ? 100000 : 0);
+    if (score > bestScore) { bestScore = score; best = u; }
   }
-  return '';
+  return best;
 }
 
 function cleanSubject(subject) {
