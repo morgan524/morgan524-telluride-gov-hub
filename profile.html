@@ -396,7 +396,9 @@
   // and the URL is saved to the users/{uid}.photoURL doc, so it also shows on
   // the person's Hub-Bub posts. info@ defaults to the Livable Telluride logo.
   const INFO_EMAIL = 'info@livabletelluride.org';
-  const LT_LOGO = 'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png';
+  // Square mountain-emblem crop of the logo — crops cleanly in a circle and is the
+  // SAME direct link used for info@'s Hub-Bub avatar (js/hub-bub.js).
+  const LT_LOGO = 'https://livabletelluride.org/logo/lt-avatar.png';
   const AVATAR_MAX_MB = 8, AVATAR_MAX_PX = 512;
   function avStatus(cls, txt){ const e=document.getElementById('avatarStatus'); if(e){ e.className='avatar-status '+(cls||''); e.textContent=txt||''; } }
   function renderAvatar(user, photoURL){
@@ -404,7 +406,7 @@
     if (photoURL){
       c.innerHTML='<img src="'+String(photoURL).replace(/"/g,'&quot;')+'" alt="Profile photo">';
     } else if (user && user.email && user.email.toLowerCase()===INFO_EMAIL){
-      c.innerHTML='<img class="contain" src="'+LT_LOGO+'" alt="Livable Telluride">';
+      c.innerHTML='<img src="'+LT_LOGO+'" alt="Livable Telluride">';
     } else {
       const nm=((val('pFirst')+' '+val('pLast')).trim()) || (user&&user.email)||'';
       const init=(nm.replace(/[^A-Za-z ]/g,'').trim().split(/\s+/).map(function(w){return w[0];}).slice(0,2).join('').toUpperCase())||'?';

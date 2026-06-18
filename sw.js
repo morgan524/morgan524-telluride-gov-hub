@@ -9,7 +9,7 @@
 // shell (the `activate` handler deletes every cache whose key != CACHE_NAME).
 // Needed because `/js/` is served stale-while-revalidate, so an old cached
 // hub-bub.js can otherwise survive a deploy for up to the 10-min ?v= window.
-const CACHE_NAME = 'livable-tlr-v24-20260614';
+const CACHE_NAME = 'livable-tlr-v25-20260618';
 
 const STATIC_ASSETS = [
   '/',

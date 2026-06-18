@@ -259,6 +259,12 @@
       if (db) db.collection('users').doc(user.uid).get().then(function (d) {
         var data = d.exists ? (d.data() || {}) : {};
         hbUserAvatar = { photo: data.photoURL || null, icon: data.avatarIcon || null };
+        // info@ defaults to the Livable Telluride mountain emblem (the same direct
+        // link used on the profile page) when no custom photo/icon is set, so the
+        // logo shows on the admin's posts. A custom photoURL/avatarIcon still wins.
+        if (!hbUserAvatar.photo && !hbUserAvatar.icon && isAdmin) {
+          hbUserAvatar.photo = 'https://livabletelluride.org/logo/lt-avatar.png';
+        }
         hbSetComposeAvatar(name, isAdmin);
       }).catch(function () {});
     } else {
