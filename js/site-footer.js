@@ -59,7 +59,7 @@
         '</div>' +
         '<div class="foot-mission"><p>Livable Telluride is a community-powered initiative.</p></div>' +
       '</div>' +
-      '<div class="foot-bottom">© 2026 Livable Telluride. All rights reserved.</div>' +
+      '<div class="foot-bottom">© 2025–2026 Livable Telluride. All rights reserved. Original content, design, and code are the property of Livable Telluride; news, logos, photos, public records, and user submissions remain the property of their respective owners.</div>' +
     '</footer>';
 
   function inject() {
