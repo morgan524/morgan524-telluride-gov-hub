@@ -38,6 +38,12 @@ const PDF_FOLDER     = 'Board Vote Records';  // permanent PDF record of each de
 // that deployment to a New version keeps this URL the same.
 const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbw932V45fnstX-ZJ5cNdBV96jsnl83LsIaIePVPCIE1sVSpkY3iJDC5rY8jmE9k6wsVxA/exec';
 
+// Master switch: when true, ALL voting is paused - no motions, seconds, or votes
+// record; no new ballots send; no reminders go out. Members who click a link see
+// a "voting is paused" notice. To RESUME, set this back to false and re-deploy
+// (Deploy > Manage deployments > Edit > New version).
+const VOTING_PAUSED = true;
+
 // Votes-tab column layout (1-indexed). Member vote columns start at COL.firstMember
 // and run for getBoard_().length columns; the tally/result/pdf columns follow.
 const COL = {
@@ -124,6 +130,7 @@ function setup() {
 /* ==================== CREATE + SEND INVITE ==================== */
 
 function createAndSend(title, fullText, manualSummary, docName, docMime, docB64) {
+  if (VOTING_PAUSED) throw new Error('Board voting is paused while the documents are updated. Resume voting (set VOTING_PAUSED = false and re-deploy) before sending a new ballot.');
   title = (title || '').trim();
   fullText = (fullText || '').trim();
   if (!title) throw new Error('Please enter a title for the matter.');
@@ -200,6 +207,7 @@ function ballotEmail_(phase, mem, vi, m, base) {
  *  A member is "done" once their vote cell is filled (move/second/vote all fill it).
  *  Finalized matters (Passed/Failed) are skipped, so reminders stop on their own. */
 function sendReminders_() {
+  if (VOTING_PAUSED) { Logger.log('Reminders skipped: voting paused.'); return 0; }
   const votes = sheet_(SHEET_VOTES);
   const last = votes.getLastRow();
   if (last < 2) return 0;
@@ -384,6 +392,7 @@ function buildStatusHtml_(viewer, members) {
     + '<div class="hd"><div class="org">' + esc(ORG_NAME) + '</div>'
     + '<div class="sub">' + (viewer >= 0 ? esc(members[viewer].name) + ' &middot; your pending votes' : 'Board Voting Status') + ' &middot; ' + count + ' outstanding</div></div>'
     + '<a class="refresh" href="' + statusPageUrl_(viewer) + '">&#8635; Refresh now</a>'
+    + (VOTING_PAUSED ? '<div style="background:#fef3c7;border:1px solid #fde68a;color:#92400e;border-radius:10px;padding:12px 16px;margin:0 0 14px;font-size:13px;font-weight:700;text-align:center;">&#9208; Voting is paused while the board updates its documents. No motions, seconds, or votes are being recorded.</div>' : '')
     + '<div class="legend"><span><i style="background:#16a34a"></i>Yes</span>'
     + '<span><i style="background:#dc2626"></i>No</span>'
     + '<span><i style="background:#d97706"></i>Abstained</span>'
@@ -394,6 +403,25 @@ function buildStatusHtml_(viewer, members) {
 }
 
 /* ===================== THE LIVE STATUS PAGE / ACTIONS ===================== */
+
+function pausedPage_() {
+  const html = '<!DOCTYPE html><html><head><meta charset="utf-8"><base target="_top">'
+    + '<meta name="viewport" content="width=device-width, initial-scale=1">'
+    + '<style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;'
+    + 'margin:0;background:#f3f4f6;color:#1f2937;}.wrap{max-width:480px;margin:0 auto;padding:60px 20px;}'
+    + '.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 14px rgba(0,0,0,.07);}'
+    + '.hd{background:#2D4A3E;color:#fff;padding:18px 24px;font-size:17px;font-weight:700;}'
+    + '.bd{padding:26px 24px;text-align:center;}.bd .ic{font-size:34px;}'
+    + '.bd h1{font-size:19px;margin:10px 0 8px;color:#111827;}.bd p{font-size:14px;line-height:1.6;color:#4b5563;}'
+    + '</style></head><body><div class="wrap"><div class="card">'
+    + '<div class="hd">' + ORG_NAME + '</div>'
+    + '<div class="bd"><div class="ic">&#9208;</div><h1>Board voting is paused</h1>'
+    + '<p>Voting is temporarily paused while the board updates its governing documents. '
+    + 'No motions, seconds, or votes are being recorded right now. Please check back soon.</p></div>'
+    + '</div></div></body></html>';
+  return HtmlService.createHtmlOutput(html).setTitle(ORG_NAME + ' - Voting paused')
+    .addMetaTag('viewport', 'width=device-width, initial-scale=1');
+}
 
 function doGet(e) {
   const p = (e && e.parameter) || {};
@@ -410,6 +438,9 @@ function doGet(e) {
     }
     return HtmlService.createHtmlOutput('Status link could not be verified.');
   }
+
+  // Voting paused - block every ballot page and action (move/second/vote).
+  if (VOTING_PAUSED) return pausedPage_();
 
   const matterId = p.m, vi = parseInt(p.v, 10), token = p.k, act = (p.act || '').toLowerCase();
 
