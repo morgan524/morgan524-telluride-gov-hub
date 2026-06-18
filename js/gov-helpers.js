@@ -373,6 +373,42 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Bluegrass brothers",
+    source: "Telluride Times",
+    date: "June 18, 2026",
+    firstSeen: "2026-06-18",
+    newsTopic: "community",
+    copy: "It���s hard to say how much of the DNA of Telluride Bluegrass is actually bluegrass.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_4542a375-f6aa-430a-8303-89dc325a685f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8f/f8f9939d-0ea1-42b7-8441-09455f348758/6a3100e01b44c.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Legals and Public Notices for June 18-24, 2026",
+    source: "Telluride Times",
+    date: "June 18, 2026",
+    firstSeen: "2026-06-18",
+    newsTopic: "community",
+    copy: "Legals and Public Notices for June 18-24, 2026.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/legals/article_5efd4701-ba7f-46ef-a7bd-74a242fdff7a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Families of kids with disabilities warn Education Department changes could break a flawed system",
+    source: "Telluride Times",
+    date: "June 18, 2026",
+    firstSeen: "2026-06-18",
+    newsTopic: "housing",
+    copy: "Parents of kids with disabilities say they have waited months for the Education Department to address complaints of bullying or discrimination. Now, the department is offloading civil rights enforcement and special education, raising concerns about further chaos. On Tuesday, the…",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_725d3ce6-9ce1-5dac-aeb9-8b16fa147e13.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/68/a6858de1-2983-5f12-867f-0a64df83e7f5/6a33729ab42b8.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Masterful, ‘heartburn-inducing’ performances on an intimate stage",
     source: "Telluride Times",
     date: "June 17, 2026",
@@ -1352,6 +1388,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "land-use",
     copy: "All vehicles entering Town or parked on Town property during the barricade period, including those with Town parking permits, must display San Miguel County Seal Sticker, 2026 Barricade Pass, or a 3-hour temporary access pass.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=66",
+    img: ""
+  },
+  {
+    title: "Stage 1 Fire Restrictions In Effect",
+    source: "Town of Telluride",
+    date: "June 17, 2026",
+    newsTopic: "public-safety",
+    copy: "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 1:00 a.m. MT on Thursday, June 18, 2026.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     img: ""
   },
   {
@@ -2849,81 +2894,103 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Beans & Books",
-    link: "https://telluridelibrary.libcal.com/event/16249440?hs=a",
-    description: "8:30 AM – 9:30 AM · What better way to start out your day than by sipping on a hot cup of coffee while chatting with other bibliophiles about books? It&#39;s a chance to talk about whatever you have been reading (or listening to) and hear about what other folks have been reading (or listening to). Drop in anytime at the beautiful Coffee Cowboy General Store on the corner of Pacific and Willow the third Wednesday of every month!",
-    pubDate: "2026-06-17T14:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Coffee Cowboy General Store",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1762980178.jpg"
-  },
-  {
-    title: "Baby Bop",
-    link: "https://telluridelibrary.libcal.com/event/16610072?hs=a",
-    description: "9:00 AM – 10:00 AM · Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, dise&ntilde;ada para que cuidadores y peque&ntilde;os se muevan juntos mediante rutinas f&aacute;ciles de seguir. Te espera m&uacute;sica alegre, coreograf&iacute;as sencillas y un ambiente de apoyo centrado en el v&iacute;nculo, el movimiento y la alegr&iacute;a; &iexcl;no se requiere experiencia previa en baile!",
-    pubDate: "2026-06-17T15:00:00.000Z",
+    title: "Yin Yang Yoga with Miriah",
+    link: "https://telluridelibrary.libcal.com/event/16801136?hs=a",
+    description: "9:00 AM – 10:00 AM · Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses.  We&#39;ll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.  Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.",
+    pubDate: "2026-06-18T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg"
   },
   {
-    title: "Mountain Village Farmers Marketshow: Storytime",
-    link: "https://telluridelibrary.libcal.com/event/15564453?hs=a",
-    description: "11:00 AM – 12:00 PM · Join us for songs and stories in the Mountain Village Core at the wooden stage!",
-    pubDate: "2026-06-17T17:00:00.000Z",
+    title: "Mountain Village Adventure Book Club",
+    link: "https://telluridelibrary.libcal.com/event/16576533?hs=a",
+    description: "10:00 AM – 12:00 PM · Do you love books and love to hike? Want to go on an adventure? Let&#39;s do all of those things and meet in Mountain Village at the San Sophia Station with our water bottles. We will hike down to the core and get some snacks at Dolce.",
+    pubDate: "2026-06-18T16:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Mountain Village Market",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_27_19.png"
+    location: "San Sophia Station - Gondola",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_30_10_50_26.png"
   },
   {
-    title: "Lite Lunch-The Calamity Club",
-    link: "https://telluridelibrary.libcal.com/event/16560674?hs=a",
-    description: "12:00 PM – 1:00 PM · The Calamity Club by Kathryn Stockett The multimillion-copy-selling author of The Help returns with a bold, big-hearted novel about a group of unbreakable women, fighting for what's rightfully theirs—and the power of friendship to change everything. \"Pure, hell-raising entertainment.\"—The New York Times Book Review Oxford, Mississippi, 1933. Abandoned by her mother one Christmas Eve, eleven-year-old Meg Lefleur has learned the hard way to rely on no one. Now one of the unadoptable \"big girls\" at the Lafayette County Orphan Asylum, she fights each day to keep her spirit unbowed. Birdie Calhoun, unmarried and outspoken, has come to Oxford to ask her socialite sister to help the struggling family she's left behind. But as the Depression tightens its grip, Birdie discovers her sister's seemingly charmed life is a tapestry of lies. …",
-    pubDate: "2026-06-17T18:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_12_12_21_24.png"
-  },
-  {
-    title: "Mahjongg for Independent Players",
-    link: "https://telluridelibrary.libcal.com/event/16767653?hs=a",
-    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-06-17T19:00:00.000Z",
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/16772759?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-06-18T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
   },
   {
-    title: "Teen Movie and Ice Cream Club",
-    link: "https://telluridelibrary.libcal.com/event/16935731?hs=a",
-    description: "4:00 PM – 6:00 PM · Join us every Wednesday this summer for Teen Movie and Ice Cream Club. We will watch a movie on the teen TV with free ice cream available!",
-    pubDate: "2026-06-17T22:00:00.000Z",
+    title: "Play Pickleball!",
+    link: "https://telluridelibrary.libcal.com/event/16897845?hs=a",
+    description: "11:30 AM – 1:00 PM · Our favorite summer series is back, and this time with a twist! Kristen Milord will be teaching adults how to play pickleball at the town courts (thank you, Parks and Recreation). We will offer one class each month for instruction, followed by another session to practice and put what you&#39;ve learned into action. Space is limited. Please sign up in advance.  Join us for some fun and fitness this summer! - June 4th - Learn to Play Pickleball - June 22nd - Play Pickleball (basic knowledge of the game is required) - July 6th - Learn to Play Pickleball - July 23rd - Play Pickleball (basic knowledge of the game is required) - August 6th - Learn to Play Pickleball - August 20th - Play Pickleball (basic knowledge of the game is required)",
+    pubDate: "2026-06-18T17:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_12_40_26.jpg"
+    location: "Telluride Town Park",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_31_10_03_27.png"
   },
   {
-    title: "Summer Wellness: Bug Repellent Lotion Bar and Spray",
-    link: "https://telluridelibrary.libcal.com/event/16576521?hs=a",
-    description: "5:00 PM – 7:00 PM · Don&#39;t let the bugs be buggin&#39; you this summer! Come in and learn about how and why people use natural bug repellent and make your own bug repellent lotion bar and natural bug spray using essential oils. All materials will be provided. Registration is required.  Join us for our other DIY Summer Wellness programs on July 16th (Floral Bath Salts and Lavender Sachets) and August 26th (Soothing Foot Scrubs).",
-    pubDate: "2026-06-17T23:00:00.000Z",
+    title: "Online Author Talk with Ted Page",
+    link: "https://telluridelibrary.libcal.com/event/16953287?hs=a",
+    description: "12:00 PM – 1:00 PM · Join us in virtual conversation with storyteller and popular blogger Ted Page as we chat about his book Good Grandpa: Stories from the Heart of Grandfatherhood. This heartfelt book highlights his journey to bring together the stories and wisdom of grandfathers from all walks of life—all with a mission to nurture the next great generation. When author Ted Page found out he was going to be a grandpa, he did a web search to learn more about the experience in store for him, but all he could find were references to the movie Bad Grandpa . He couldn't help but wonder, \"Where are the good ones?\" Page started a blog, GoodGrandpa.com, and set out to talk with grandfathers across a diverse spectrum. …",
+    pubDate: "2026-06-18T18:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_17_04_22.jpg"
+  },
+  {
+    title: "Pilates for All Bodies",
+    link: "https://telluridelibrary.libcal.com/event/16536276?hs=a",
+    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-06-18T18:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_09_52_28.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
+  },
+  {
+    title: "Family Lego Competition!",
+    link: "https://telluridelibrary.libcal.com/event/16826638?hs=a",
+    description: "3:00 PM – 4:00 PM · *PLEASE DO NOT REGISTER EACH INDIVIDUAL MEMBER OF YOUR FAMILY.  ONLY ONE NAME IS REQUIRED TO SIGN UP YOUR FAMILY* Gather your team (family) and join us on the patio for some friendly competition!  Each family will be given the same Lego set.  Prizes for the top three speeds!  All families will get to keep their Lego set.  Register on the website.  Space and Lego sets are limited.",
+    pubDate: "2026-06-18T21:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_12_30_38.png"
+  },
+  {
+    title: "Littles On the Move",
+    link: "https://telluridelibrary.libcal.com/event/13960348?hs=a",
+    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
+    pubDate: "2026-06-18T21:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
+  },
+  {
+    title: "Cancer Support Group",
+    link: "https://telluridelibrary.libcal.com/event/16067711?hs=a",
+    description: "5:00 PM – 6:00 PM · Join us for a supportive and compassionate space at our Cancer Support Group held every 3rd Thursday of the month from 5:00 PM to 6:00 PM . This group is designed for individuals currently experiencing cancer and for those who are in remission, offering a safe and welcoming environment for sharing personal stories, experiences, and encouragement. Whether you&#39;re navigating your cancer journey or reflecting on the road to recovery, this group provides emotional support and the opportunity to connect with others who understand your unique challenges. Come and find strength in the community, share your experiences, and know you&#39;re not alone in your journey.",
+    pubDate: "2026-06-18T23:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_02_26_11_55_25.jpg"
   }
 ];
 
@@ -2944,18 +3011,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "Smörgåsgrass",
-    link: "https://www.alibitelluride.com/calendar#eca-event=smorgasgrass",
-    description: "Smörgåsgrass is a multi-genre, hardly-strictly bluegrass outfit performing both ...",
-    pubDate: "2026-06-17",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/5feabfd9-65a6-417e-a789-602c9fa6d2a0/-/crop/1535x1536/256,0/-/preview/"
-  },
   {
     title: "NIGHTGRASS - Dallahan",
     link: "https://www.alibitelluride.com/calendar#eca-event=nightgrass-dallahan",
@@ -3474,6 +3529,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52092171660517/huge/0e628304026c92db25e8df01849c962ac902a3b4.jpg"
   },
   {
+    title: "Beautification Committee (OBC)",
+    link: "https://www.cityofouray.com/city_offices/committees___boards/beautification_committee_(obc).php",
+    description: "The Beautification Committee (OBC) works on projects to help beautify the community. The committee oversees the installation of all the flower gardens in the City as well as all the hanging baskets and plantings on Main Street. They have also worked hard over the years to acquire many historic mining pieces and equipment that are displayed throughout the community to recognize Ouray's mining heritage. The committee has also provided direction on signage, light poles, and benches on the public rights of way. The Beautification Committee also plays an important role in developing and implementing master plans for the City’s park system. The committee makes recommendations to the City Council on these many beautification projects as well as the use of dollars from the Beautification Fund. This fund is supported by a portion of the Lodging Occupation Tax and is used exclusively for projects that help beautify the community. …",
+    pubDate: "2026-03-04T12:00:00.000Z",
+    endDate: "2027-02-03",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Community Center, San Juan Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/50382168464273/huge/9567987a01fc4f1da8e171fabd1eb5b7bdbdccfa.jpg"
+  },
+  {
     title: "Community Meditation",
     link: "www.ridgwayfuse.org",
     description: "Join us for a peer-led weekly meditation series at the Decker Community Room. Free and open to the public! We meet every 1st, 2nd, and 4th Tuesday of the month (all but the 3rd Tuesday!)",
@@ -3630,66 +3697,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52887120617394/huge/59851e9ca29d75054645a0e488e33edbbcf73d69.jpg"
   },
   {
-    title: "Wildflower Walks & Talks with Mary Menz & Jaime Pisarowicz \"Blaine Basin Trail\"",
-    link: "https://weehawkenarts.org/education/adult-art-classes/",
-    description: "Wildflower Walks & Talks with Mary Menz & Jaime Pisarowicz \"Blaine Basin Trail\" June 17th Wednesday 8:00am - Noon $49-$69 Registration: www.weehawkenarts.org Different elevations and habitats provide opportunities to view a wide variety of Colorado’s native plants and wildflowers. Ridgway writer and Colorado Native Plant Master Mary Menz and Jaime Pisarowicz will share their extensive plant knowledge and excitement for the area with you. Special guest and fellow NPM Sandra Dick will also join the group as a guide! Registration includes a copy of their book Common Wildflowers of the San Juan Mountains ($49) or Wildflowers of Colorado’s Western Slope ($69). All groups are limited to 12 participants. Participants will meet and carpooling is recommended (we help facilitate this effort at the meet up location)—specific directions and more information will be provided via email prior to the event. A waiver needs to be signed before the event. …",
-    pubDate: "2026-06-17T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52650481604723/huge/42bc80f9e4801fc659045735a533374c32f0ca75.jpg"
-  },
-  {
-    title: "Ouray County Baseball - 13u Baseball vs. Naturita",
-    link: "ouraycountybaseball.com",
-    description: "Ouray County Baseball - 13u Baseball vs. Naturita",
-    pubDate: "2026-06-17T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52118491920073/huge/05139b66e9f6daf3db0bec61ea6da7641d58cf5a.jpg"
-  },
-  {
-    title: "Live Music- Boxcar Band",
-    link: "https://www.stelmohotel.com/summer-sound/boxcarband",
-    description: "Join us for a summer of live music, craft cocktails, mountain views, and unforgettable nights at the St. Elmo Tavern patio EVERY WEDNESDAY! We can’t wait for Boxcar Band to play on the patio Wednesday, June 17th at 5pm. A favorite of Southwest Colorado, this group brings a lively, acoustic sound to each performance. There’s not much better than the tunage of Boxcar Band set in the heart of the San Juan Rockies. No ticket required for this show. We hope to see you there!",
-    pubDate: "2026-06-17T12:00:00.000Z",
-    endDate: "2026-07-17",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53119177194372/huge/2eab84f8f8d44ba9710cb110f0a1e305bb2b7f39.jpg"
-  },
-  {
-    title: "Ouray County Baseball 11U Team vs. Naturita",
-    link: "ouraycountybaseball.com",
-    description: "Ouray County Baseball 11U Team vs. Naturita",
-    pubDate: "2026-06-17T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52118491920073/huge/05139b66e9f6daf3db0bec61ea6da7641d58cf5a.jpg"
-  },
-  {
-    title: "Paint & Sip with Nicole: Summer Skies",
-    link: "https://weehawkenarts.org/education/adult-art-classes/",
-    description: "Unwind, sip, and create! Join us for a relaxed painting session designed for all skill levels—no experience needed. Nicole will guide you through the featured painting while you enjoy a beverage of your choice! All art supplies and one adult beverage are included; just bring your creativity! About Nicole Greenfield: Nicole Greenfield is a painter based in Ridgway, Colorado. Working primarily in acrylic and oil, she creates expressive portraits and atmospheric landscapes that explore the quiet intimacy found in observing people and the natural world. Nicole is a self-taught artist who has developed her skills through years of dedicated practice and online learning. She is a proud member of the Mountain Girl Gallery, her work has been commissioned multiple times and featured in exhibitions at multiple local galleries, with additional pieces sold through online platforms. …",
-    pubDate: "2026-06-17T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53073595362723/huge/7f7aab2c4b4600a7cf46d711e7cdfb3669483f6a.jpg"
-  },
-  {
     title: "Ouray International Film Festival",
     link: "https://www.ourayfilmfestival.com/",
     description: "Film festivals were founded with a specific purpose in mind: to support the success of film and filmmakers from beyond the mainstream. Some of the most beloved movies of all time got their start at film festivals. Without the infrastructure, support, and community of film festivals, these movies might never have become a part of our collective artistic culture. Our festival stands in this legacy of support. We bring in films from around the United States and across the globe to expose audiences to material they’re unlikely to see on streaming platforms or in theaters. Our filmmakers are established artists in the industry and new voices making their first films; regardless, the movies we screen come from independent spaces that sometimes challenge our conventional notions of what a movie is or can be. At OIFF, we celebrate that independence through films that challenge and inspire. …",
@@ -3762,7 +3769,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52993792954971/huge/c0636618f641794e118b7899c385c7576b612e44.jpg"
   },
   {
-    title: "JACK HAIGHT",
+    title: "RED MOUNTAIN REVIVAL",
     link: "https://coloradoboydepot.com/calendar/",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/",
     pubDate: "2026-06-19T12:00:00.000Z",
@@ -3892,6 +3899,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53161338198111/huge/e7e7ee50f5d85056e1ef3d86e59eaad48b8121fb.jpg"
+  },
+  {
+    title: "Pride Game Night",
+    link: "https://events.ourayridgwayevents.com/event/pride-game-night",
+    description: "Join us for Gay Game Night at Floating Lotus Brewery on June 20 from 6–9 PM. Whether you’re part of the LGBTQ+ community or a supportive ally, everyone is welcome for an evening of games, community, and good company. Bring your favorite board game or jump into one that’s already underway. Plus, Floating Lotus is donating $1 from every pint sold to support Ouray County Pride. Come make new friends, reconnect with old ones, and help us raise a glass (and funds) for Pride. 🌈🎲🍻",
+    pubDate: "2026-06-20T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53192190014847/huge/99cdc0458f0bcd179baafa816306078d664bca40.jpg"
   },
   {
     title: "Ouray Open Air Market",
@@ -4132,6 +4151,30 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52590090771453/huge/5f8f06133edd0a9151fe5e6e785bc44ecfc34e48.jpg"
+  },
+  {
+    title: "CORAL  SKYE",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-06-30T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Live Music- Bright Light Social Hour",
+    link: "https://www.stelmohotel.com/summer-sound/bright-light-social-hour",
+    description: "Join us on Wednesday, July 1st as we welcome Bright Light Social Hour to the St. Elmo Tavern Patio! This Austin, Texas-based rock band is known for their explosive blend of psychedelic rock, funk, and soul. Drawing comparisons to classic acts like Cream and The Doors while maintaining a sound that is entirely their own, TBLSH delivers a high-energy, groove-heavy live experience that is hard to shake. Their music pulses with driving rhythms, swirling guitars, and a raw, electrifying energy that fills whatever room or patio they play. This is a ticketed show. Tickets can be purchased here: https://booking.whollyticket.com/84948 Show starts at 7pm. We look forward to seeing you there!",
+    pubDate: "2026-07-01T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53126268448586/huge/468e217f4d1a8e4e96ff7e00517be42b3e7eb5d7.jpg"
   }
 ];
 
