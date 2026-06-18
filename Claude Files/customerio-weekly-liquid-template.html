@@ -75,17 +75,20 @@
   </td></tr>
 
   <!-- ── Body: assembled per-person from their chosen topics ── -->
+  {# Customer.io stores boolean attributes as STRINGS ("true"/"false"). In Liquid
+     the string "false" is truthy, so every topic check must compare == "true"
+     explicitly — a bare {% if customer.topic_x %} is true even when "false". #}
   {% assign has_topic = false %}
-  {% if customer.topic_gov_meetings or customer.topic_music_arts or customer.topic_family_kids or customer.topic_outdoors_rec %}{% assign has_topic = true %}{% endif %}
+  {% if customer.topic_gov_meetings == "true" or customer.topic_music_arts == "true" or customer.topic_family_kids == "true" or customer.topic_outdoors_rec == "true" %}{% assign has_topic = true %}{% endif %}
 
   {% if has_topic == false %}
     {{ message_data.meetings_html }}
     {{ message_data.events_html }}
   {% else %}
-    {% if customer.topic_gov_meetings %}{{ message_data.meetings_html }}{% endif %}
-    {% if customer.topic_music_arts %}{{ message_data.arts_html }}{% endif %}
-    {% if customer.topic_family_kids %}{{ message_data.family_html }}{% endif %}
-    {% if customer.topic_outdoors_rec %}{{ message_data.outdoors_html }}{% endif %}
+    {% if customer.topic_gov_meetings == "true" %}{{ message_data.meetings_html }}{% endif %}
+    {% if customer.topic_music_arts == "true" %}{{ message_data.arts_html }}{% endif %}
+    {% if customer.topic_family_kids == "true" %}{{ message_data.family_html }}{% endif %}
+    {% if customer.topic_outdoors_rec == "true" %}{{ message_data.outdoors_html }}{% endif %}
   {% endif %}
 
   <!-- ── Why Showing Up Matters ── -->
