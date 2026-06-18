@@ -221,7 +221,13 @@
   ];
   var hbUserAvatar = { photo: null, icon: null };
   function hbIconById(id) { for (var i = 0; i < HB_AVATAR_ICONS.length; i++) if (HB_AVATAR_ICONS[i].id === id) return HB_AVATAR_ICONS[i]; return null; }
+  // info@ posts under the name "Info" (its email prefix) and older posts have no
+  // stored photo. Show the Livable Telluride emblem for the admin at RENDER time
+  // so it appears on ALL of info@'s posts/replies, not just newly created ones.
+  var HB_ADMIN_EMBLEM = 'https://livabletelluride.org/logo/lt-avatar.png';
+  function hbIsAdminName(n) { n = String(n || '').trim().toLowerCase(); return n === 'info' || n === 'admin' || n === 'livable telluride'; }
   function hbAvatarHtml(name, photo, icon, cls) {
+    if (!photo && !icon && hbIsAdminName(name)) photo = HB_ADMIN_EMBLEM;
     if (photo) return '<div class="' + cls + ' hb-av-photo" style="background-image:url(\'' + String(photo).replace(/'/g, '%27') + '\')"></div>';
     var ic = icon ? hbIconById(icon) : null;
     if (ic) return '<div class="' + cls + '" style="background:' + ic.bg + '">' + ic.emoji + '</div>';
