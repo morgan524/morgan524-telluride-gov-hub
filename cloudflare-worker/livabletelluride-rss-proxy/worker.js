@@ -179,6 +179,41 @@ const PROFILE_ALLOWED_ORIGINS = [
 ];
 const PROFILE_MERGE_FIELDS = ["FNAME", "LNAME", "MMERGE6", "MMERGE10", "MMERGE11"];
 
+// Customer.io dual-write (parallel to Mailchimp during the migration). Maps the
+// same signup/profile inputs onto the Customer.io attribute schema used by the
+// one-time import (scripts/mailchimp-to-customerio.js) so a person identified
+// here looks identical to an imported one. subs[] keys are the name-based keys
+// resolveInterests() returns; fields[] are Mailchimp merge tags.
+const CIO_SUBS_TO_ATTR = {
+  weekly:     "sub_weekly_update",
+  newsletter: "sub_newsletter",
+  arts:       "topic_music_arts",
+  civic:      "topic_gov_meetings",
+  family:     "topic_family_kids",
+  outdoors:   "topic_outdoors_rec",
+};
+const CIO_FIELDS_TO_ATTR = { FNAME: "first_name", LNAME: "last_name", MMERGE6: "region" };
+
+// Identify (upsert) a person in Customer.io via the Track API, keyed by email
+// (lowercased) — matches the import's identifier. Best-effort: returns a status
+// string and never throws, so a Customer.io hiccup can't break the Mailchimp
+// write or the signup. No-ops silently until the two Worker secrets are set.
+async function cioIdentify(env, email, attrs) {
+  if (!env.CUSTOMERIO_SITE_ID || !env.CUSTOMERIO_TRACK_API_KEY) return "skipped";
+  if (!attrs || !Object.keys(attrs).length) return "empty";
+  const auth = "Basic " + btoa(env.CUSTOMERIO_SITE_ID + ":" + env.CUSTOMERIO_TRACK_API_KEY);
+  try {
+    const r = await fetch("https://track.customer.io/api/v1/customers/" + encodeURIComponent(email), {
+      method: "PUT",
+      headers: { "Authorization": auth, "Content-Type": "application/json" },
+      body: JSON.stringify({ email, ...attrs }),
+    });
+    return r.ok ? "ok" : "http " + r.status;
+  } catch (e) {
+    return "error";
+  }
+}
+
 function profileCorsHeaders(origin) {
   const allow = PROFILE_ALLOWED_ORIGINS.includes(origin) ? origin : PROFILE_ALLOWED_ORIGINS[0];
   return {
@@ -334,6 +369,22 @@ async function handleUpdateProfile(request, env) {
   if (Object.keys(interests).length) body.interests = interests;
   if (!Object.keys(body).length) return json({ ok: false, msg: "Nothing to update." }, 400);
 
+  // Dual-write to Customer.io (parallel to Mailchimp during the migration).
+  // Map the SAME inputs onto the import's attribute schema. Booleans in
+  // data.subs are explicit toggles, so we always forward them (including
+  // false → drops the person from that segment). Best-effort; awaited so it
+  // completes within the request, but its result never affects the response.
+  const cioAttrs = {};
+  for (const [k, attr] of Object.entries(CIO_FIELDS_TO_ATTR)) {
+    if (merge_fields[k]) cioAttrs[attr] = merge_fields[k];
+  }
+  if (data.subs && typeof data.subs === "object") {
+    for (const [k, v] of Object.entries(data.subs)) {
+      if (CIO_SUBS_TO_ATTR[k] && typeof v === "boolean") cioAttrs[CIO_SUBS_TO_ATTR[k]] = v;
+    }
+  }
+  const cioStatus = await cioIdentify(env, email, cioAttrs);
+
   const dc = env.MAILCHIMP_API_KEY.split("-")[1] || "us15";
   const apiUrl = `https://${dc}.api.mailchimp.com/3.0/lists/${MC_LIST_ID}/members/${md5(email)}`;
   let resp;
@@ -353,7 +404,7 @@ async function handleUpdateProfile(request, env) {
     return json({ ok: false, msg: "We couldn't find that email on our list. Use the address you subscribed with, or sign up first." });
   }
   if (resp.status >= 200 && resp.status < 300) {
-    return json({ ok: true, msg: "Your info has been updated — thank you!" });
+    return json({ ok: true, msg: "Your info has been updated — thank you!", cio: cioStatus });
   }
   let detail = "";
   try { const j = await resp.json(); detail = j.detail || j.title || ""; } catch (_) {}

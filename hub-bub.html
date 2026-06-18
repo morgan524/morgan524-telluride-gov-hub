@@ -1954,10 +1954,15 @@
           newsletter: includeNewsletter,
         };
         if (digestFreq === 'weekly') topics.forEach(function (t) { subs[t] = true; });
+        // Also pass name + region as merge fields so the Worker's Customer.io
+        // dual-write captures them on signup (Mailchimp already got them via
+        // the JSONP call above; re-sending is idempotent).
+        var profFields = { FNAME: firstName, LNAME: lastName };
+        if (region) profFields.MMERGE6 = region;
         try {
           fetch('https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/update-profile', {
             method: 'POST', headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email: email, subs: subs })
+            body: JSON.stringify({ email: email, fields: profFields, subs: subs })
           }).catch(function () {});
         } catch (e) {}
 
