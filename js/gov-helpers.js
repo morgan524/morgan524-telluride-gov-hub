@@ -390,7 +390,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 18, 2026",
     firstSeen: "2026-06-18",
     newsTopic: "community",
-    copy: "It���s hard to say how much of the DNA of Telluride Bluegrass is actually bluegrass.",
+    copy: "It’s hard to say how much of the DNA of Telluride Bluegrass is actually bluegrass.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/arts_and_entertainment/article_4542a375-f6aa-430a-8303-89dc325a685f.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8f/f8f9939d-0ea1-42b7-8441-09455f348758/6a3100e01b44c.image.jpg",
