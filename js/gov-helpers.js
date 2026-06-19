@@ -162,9 +162,6 @@ const MEETING_AGENDA_META = {
 };
 
 const MANUAL_SUMMARIES = {
-  "ophir|2026-05-19|General Assembly Meeting":
-    "Charter Review Committee update tops the substantive list — Charter language work is the closest Ophir gets to code revision. Town Buildings Electrification & Solar gets a Wheels-led briefing alongside Lane Masters. Manager's report covers the New Dominion USFS project and two wildfire prep items: a Western Wildfire Council rapid risk assessment for the Town and fuel-reduction work at Town Hall and East Ophir. The agenda also notes the recent passing of John Eagle. A full evening for a town this size.",
-
   "smart|2026-05-20|SMART Board of Directors":
     "Virtual-only meeting. The Gondola update is the agenda's headline — that's the project that drives SMART's 3A ballot context. Resolution 2026-8 appoints Marya Stark to the Investment Committee. Q4 2025 / annual performance report and the May Ops report round out the formal business. The board closes in executive session under §24-6-402(4)(b) to confer with counsel on Masson v. SMC BOCC. Anyone tracking how the gondola conversation is evolving should bookmark the live link.",
 
@@ -375,6 +372,54 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Wyndham Clark seizes on changing nature of Shinnecock to lead US Open",
+    source: "Telluride Times",
+    date: "June 19, 2026",
+    firstSeen: "2026-06-19",
+    newsTopic: "housing",
+    copy: "The USGA set up a different course at Shinnecock Hills to handle strong wind Thursday. When the wind subsided later, Wyndham Clark seemed to play a different U.S. Open. He took advantage of the gentler conditions, pulling away to reach…",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_794045f7-c36a-5ceb-9f06-600ac299f284.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/c6/5c6fa879-d4aa-5fee-8d9e-a4b998252ab5/6a34a41ec6208.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Five years after a Navajo elder vanished, the man who robbed her was released from prison",
+    source: "Telluride Times",
+    date: "June 18, 2026",
+    firstSeen: "2026-06-19",
+    newsTopic: "infrastructure",
+    copy: "Five years to the day Navajo elder Ella Mae Begay disappeared, the man who acknowledged beating her and leaving her on the side of the road is free from prison. Preston Tolth pleaded guilty to robbing Begay and was sentenced…",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_23648ead-b435-52f6-a7f3-835255a06ac5.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/78/b78c743a-5325-5878-8598-1344be3031c5/6a348139ac276.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A trip to Bluegrass changed her life",
+    source: "Telluride Times",
+    date: "June 18, 2026",
+    firstSeen: "2026-06-19",
+    newsTopic: "community",
+    copy: "Emily Dwan’s first trip to Telluride came in 2010, when her family gathered to visit her older sister, Jenny, who had relocated to Durango from suburban Illinois for work.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_eba393de-e081-4012-a78b-5a57112acd53.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/7f/a7ff0fff-37f9-49ff-8061-e9d07dfc7463/6a2cd53e748c5.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "The cathedral tree",
+    source: "Telluride Times",
+    date: "June 18, 2026",
+    firstSeen: "2026-06-19",
+    newsTopic: "infrastructure",
+    copy: "In a steep fold of land near Sawpit stands a blue spruce so enormous it stops people in their tracks. From the road, it rises above the surrounding forest like something ancient and improbable; a tree less observed than encountered.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_8672b2da-93d9-4466-afba-a1005703e790.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/0f/70f776b1-3109-4dbc-ae78-adad8e103e3f/6a318fec1cda3.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Families of kids with disabilities warn Education Department changes could break a flawed system",
     source: "Telluride Times",
@@ -1226,66 +1271,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "What to know about new trials ordered for two paramedics in the death of Elijah McClain",
-    source: "Telluride Times",
-    date: "June 5, 2026",
-    firstSeen: "2026-06-05",
-    newsTopic: "public-safety",
-    copy: "An appeals court ordered new trials for two paramedics convicted in Elijah McClain's 2019 death, saying the trial judge gave faulty jury instructions about the standard of care required. The paramedics had injected the 23-year-old with ketamine after police restrained him following a 911 call about someone \"sketchy,\" leading to his cardiac arrest and death days later. Colorado's attorney general plans to appeal to the state supreme court, which could further delay any retrials.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_ed7b9cbb-c22f-5f67-acca-7f4b08e0e7c9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/c6/3c634127-4499-556f-998d-cb3a8ce57ab5/6a21ddc4d7772.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "‘If it took a leap of faith, I was willing’",
-    source: "Telluride Times",
-    date: "June 5, 2026",
-    firstSeen: "2026-06-06",
-    newsTopic: "arts-culture",
-    copy: "Town officials met secretly with Chuck Horning's son Chad in December about buying Telski, leading to the controversial California trip that resulted in three resignations this year. An independent investigation cleared former Mayor Prohaska and Town Manager Wisor of wrongdoing, though they acknowledged the meetings were poorly handled and ultimately unsuccessful.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_cff6929c-5967-4eb0-86a3-ac6ea9cac558.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/40/84063d4f-77dc-49e2-aa44-01fbb325eb32/6a233716d2697.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "The beauty of unsafe seats",
-    source: "Telluride Times",
-    date: "June 5, 2026",
-    firstSeen: "2026-06-06",
-    newsTopic: "arts-culture",
-    copy: "Safe legislative districts where primaries decide winners have created a system where party loyalists control outcomes while independents can't even vote in most states. This has pulled candidates toward ideological extremes, leading to legislative paralysis and opening doors for authoritarians who promise to cut through the gridlock. Competitive districts would shift focus back to pragmatic problem-solving and consensus-building, potentially restoring the legislative branch's ability to function through normal constitutional processes.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_d270be44-3425-4546-984c-3583d8200388.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/7c/c7c4b286-d7fa-45f9-8add-d7e11fd0d011/6a212435c9317.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Lady Miners emerge as all-leaguers",
-    source: "Telluride Times",
-    date: "June 5, 2026",
-    firstSeen: "2026-06-05",
-    newsTopic: "education",
-    copy: "The Lady Miners lacrosse team had their most successful season yet, finishing 6-2 in league and 10-5 overall before losing in the first round of state playoffs. Five players earned All-League honors, with Ruby Lake and Mikayla Ialeggio also receiving All-State recognition. The new coach emphasized how the team's chemistry and enthusiasm set this group apart from previous years.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_98a9d187-1dfd-4f4b-b34a-d7405b2cfebb.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/34/b34e32b7-5bb3-4e54-b78e-f3a17eeebfe7/6a210fe78801b.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "We got us a posse",
-    source: "Telluride Times",
-    date: "June 5, 2026",
-    firstSeen: "2026-06-05",
-    newsTopic: "public-safety",
-    copy: "Montrose County's volunteer sheriff's posse is looking for more help, especially on the West End where fewer than 20 people are available to respond to search and rescue, fires, and emergencies across a huge territory. The all-volunteer group saves taxpayers money by handling everything from medical assists to crowd control, but they're stretched thin as recreational use grows in the region.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_a744a27e-74c3-4832-9eec-21602ec87352.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/5b/75bf594d-9886-4fe3-94b6-b1db6eefbb16/6a213427926db.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Summer air service includes new LA flights",
     source: "Telluride Times",
     date: "June 9, 2026",
@@ -1446,7 +1431,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Click here for details.",
     source: "Town of Ridgway",
-    date: "June 18, 2026",
+    date: "June 19, 2026",
     firstSeen: "2026-06-09",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1457,7 +1442,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
     source: "Town of Ridgway",
-    date: "June 18, 2026",
+    date: "June 19, 2026",
     firstSeen: "2026-06-18",
     newsTopic: "infrastructure",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1501,7 +1486,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 18, 2026",
+    date: "June 19, 2026",
     firstSeen: "2026-06-04",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1512,7 +1497,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 18, 2026",
+    date: "June 19, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1622,14 +1607,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "housing",
     copy: "On this week's Regional Roundup, we hear about a new agreement signed by counties and conservation districts in Colorado aimed at preventing future reservoirs and water diversions on the Crystal River. We also learn about a major gasoline spill on Southern Ute tribal land in southwest Colorado that is raising concerns about drinking water contamina",
     href: "https://koto.org/news/newscast-6-5-26/"
-  },
-  {
-    title: "Newscast 6-4-26",
-    source: "KOTO Community Radio",
-    date: "June 5, 2026",
-    newsTopic: "public-safety",
-    copy: "Norwood Enters Stage 1 Fire Restrictions; West End Roundup with the San Miguel Basin Forum; Taxpayer Dollars Support Mental Health Services",
-    href: "https://koto.org/news/newscast-6-4-26/"
   }
 ];
 
@@ -1678,8 +1655,8 @@ const ROTARY_NEWS = [
     sourceKey: "rotary",
     date: "June 2, 2026",
     firstSeen: "2026-06-02",
-    newsTopic: "recreation",
-    copy: "Normally we meet the 1st and 3rd Wednesdays of the month. Meetings feature member updates, club news, and speakers. Our May 20 meeting is canceled due to unforseen circumstances. Join the June meetings! Wednesday, June 3, 6 - 7 p.m. we'll meet at Mountain Lodge in Mountain Village; gather at 5:30 in",
+    newsTopic: "arts-culture",
+    copy: "Normally we meet the 1st and 3rd Wednesdays of the month. Meetings feature member updates, club news, and speakers. We are not meeting the first Wednesday in July due the holiday that week. Join us Wednesday, July 15, 6pm at our new town meeting place, MountainFilm's office at 122 S Oak Street. Emai",
     href: "https://portal.clubrunner.ca/3291/Stories/upcoming-meetings-1",
     img: ""
   },
@@ -2433,17 +2410,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Salon Night at Telluride Arts HQ",
-    link: "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-06-18/",
-    description: "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it here in Telluride. These are evenings for conversation and connection, not lectures or formal programming. They are casual, open, and intentionally unstructured, designed to create the atmosphere where ideas can collide, new friendships form, and creativity sparks. Imagine an evening where musicians talk with writers, painters meet photographers, filmmakers share stories with ceramicists—and the unexpected happens!",
-    pubDate: "2026-06-18T23:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Arts HQ, TELLURIDE",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
-  },
-  {
     title: "Up-off Gymnastics, Dance, and Spanish",
     link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-06-19/",
     description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
@@ -2921,6 +2887,50 @@ const KOTO_COMMUNITY_EVENTS = [
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-02/",
     description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
     pubDate: "2026-07-02T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Pilates for All Bodies with Laura",
+    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-07-02/",
+    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-07-02T18:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Art Walk Telluride",
+    link: "https://koto.org/event/art-walk-telluride/2026-07-02/",
+    description: "Join us the first Thursday of every month for Telluride's Art Walk. It will be an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists. From 5–7 pm, participating venues will open their doors, showcasing new collections and inviting art lovers to explore the vibrant gallery scene. Find what's new on www.telluridearts.org Note: Special Edition Art Walk May 21st.",
+    pubDate: "2026-07-02T23:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png"
+  },
+  {
+    title: "Mountain Village Red, White & Blues Celebration",
+    link: "https://koto.org/event/mountain-village-red-white-blues-celebration/",
+    description: "Mountain Village's beloved Red, White &Blues Celebration returns July 3-4, 2026, bringing two days of FREE family activities, live music, arts and cultural programming, and community festivities to Mountain Village. Presented by the Telluride Mountain Village Owners Association (TMVOA), the annual Independence Day celebration invites residents and visitors alike to gather in the heart of the San Juan Mountains for a weekend filled with live entertainment, interactive activities, merchant specials, and fun for all ages. This year's celebration carries special significance as the nation commemorates the250thanniversary of the United States and Colorado celebrates its 150th anniversary of statehood. New programming includes a special Drone Show, a performance by '90s alt-rock legends Better Than Ezra, Telluride Arts' This is Colorado (In One Square Foot) Sesquicentennial exhibition, Telluride Theatre Sesquisemiquincentennial performances, and a new Family Happy Hour with Movies Under the Stars on Saturday evening. Festivities begin at 1 p.m. …",
+    pubDate: "2026-07-03T06:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Mountain Village Plazas",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/RWB-BTE-Mailchimpbanner-scaled.png"
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-03/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-07-03T15:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
@@ -4353,61 +4363,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "TFF presents Village Film Nights",
-    link: "https://townofmountainvillage.com/explore/events/all-events/tff-presents-village-film-nights/",
-    description: "The Telluride Film Festival and Telluride Mountain Village Owners Association are proud to announce the first show of the 2026 Village Film Nights series with",
-    pubDate: "2026-06-17T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48524/project_hail_mary.png"
-  },
-  {
-    title: "Mountain Village Community Clean Up Day",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-community-clean-up-day/",
-    description: "The Town of Mountain Village will host two Community Clean Up Days on Wednesday, May 13, 2026, at Village Court Apartments and Thursday, May 14, 2026,",
-    pubDate: "2026-06-17T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/33734/clean_up_day_blog.png"
-  },
-  {
-    title: "Market on the Plaza",
-    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
-    pubDate: "2026-06-17T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
-  },
-  {
-    title: "Mountainfilm for Locals: Perspective Shifts",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountainfilm-for-locals-perspective-shifts/",
-    description: "Join Mountainfilm for Mountainfilm for Locals: Perspective Shifts, a free short film night for our local community. Wednesday, January 7,",
-    pubDate: "2026-06-17T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47727/mountainfilmforlocals.jpg"
-  },
-  {
-    title: "Black Pistol Fire Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/black-pistol-fire-live-in-concert-2/",
-    description: "Black Pistol Fire Live in Concert The Sheridan Arts Foundation presents Black Pistol Fire live in concert at the historic Sheridan Opera House on Wednesday,",
-    pubDate: "2026-06-17T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48004/mv_to_jf-4.png"
-  },
   {
     title: "Kitchen Dwellers Live in Concert",
     link: "https://townofmountainvillage.com/explore/events/all-events/kitchen-dwellers-live-in-concert-2/",
@@ -6349,30 +6304,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/62804/ethan_hale_2.800x533.webp"
   },
   {
-    title: "FirstGrass Concert",
-    link: "https://www.telluride.com/event/firstgrass-concert/",
-    description: "Join Planet Bluegrass at Sunset Plaza as they kick off the Telluride Bluegrass Festival with the annual FirstGrass …",
-    pubDate: "2026-06-17",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/47924/firstgrass_2000x1000.800x533.webp"
-  },
-  {
-    title: "Summer Situation: Brazilian Barbecue",
-    link: "https://www.telluride.com/event/summer-situation/",
-    description: "Join Ah Haa for a celebratory kickoff to the summer season on Ah Haa’s stunning rooftop! Chef Israel Castro, an …",
-    pubDate: "2026-06-17",
-    endDate: "undefined",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/58314/download_12.800x533.webp"
-  },
-  {
     title: "Weird Wine Wednesdays at The National",
     link: "https://www.telluride.com/event/weird-wine-wednesdays-at-the-national/",
     description: "Elevate your evening on the rooftop at The National with Weird Wine Wednesdays, a laid-back, weekly tasting experience …",
@@ -7259,53 +7190,6 @@ const LEGAL_NOTICES = [
     expires: "2026-07-15",
     dates: "2/5 through 7/9 (biweekly)",
     papers: ["ttimes", "npost"]
-  },
-  {
-    title: "Notice of Vesting -- Korn Residence, 566 W Columbia Ave",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏗️",
-    iconClass: "type-rfp",
-    type: "Land Use",
-    filterTag: "ordinance",
-    summary: "A site-specific development plan and vested property right has been approved for the Korn Residence (Historic Residential zone, Lot 24A Block 9 West Telluride). Small-scale addition increasing floor area by more than 25%, small-scale repositioning of a designated THAS primary structure, minor scale alteration, and insubstantial scale addition. Owner: Korn David & Kristin Family Trust. Applicant: Shift Architects, Kristine Perpar. Approved March 18, 2026.",
-    deadline: "Subject to referendum and judicial review",
-    expires: "2026-06-18",
-    dates: "4/2",
-    papers: ["ttimes_apr2"],
-    address: "566 W Columbia Ave, Telluride, CO"
-  },
-  {
-    title: "Notice of Vesting -- 108 N Columbine Minor Addition/Remodel",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏗️",
-    iconClass: "type-rfp",
-    type: "Land Use",
-    filterTag: "ordinance",
-    summary: "A site-specific development plan and vested property right has been approved for 108 N Columbine Minor Addition/Remodel (Residential zone, Lot 1R Block 24 East Telluride). Minor scale addition increasing floor area by more than 25% and resulting in 1,000-2,500 sq ft, outside of the THLD but within the HPOD. Owner: ZKLF LLC. Applicant: McAllister Architects, Michael McAllister. Approved March 18, 2026.",
-    deadline: "Subject to referendum and judicial review",
-    expires: "2026-06-18",
-    dates: "4/2",
-    papers: ["ttimes_apr2"],
-    address: "108 N Columbine St, Telluride, CO"
-  },
-  {
-    title: "Notice of Vesting -- Fulton Residence (Hillside Transitional)",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏗️",
-    iconClass: "type-rfp",
-    type: "Land Use",
-    filterTag: "ordinance",
-    summary: "A site-specific development plan and vested property right has been approved for the Fulton Residence (Hillside Transitional zone, Lot 7R Block E North Telluride). Small-scale new construction of a principal structure containing 2,500 sq ft or more of floor area, on a lot with pre-construction grade or slope of building site coverage of 25% or greater. Owner: Tio Rico LLC. Applicant: William Erwin, ASUL. Approved March 18, 2026.",
-    deadline: "Subject to referendum and judicial review",
-    expires: "2026-06-18",
-    dates: "4/2",
-    papers: ["ttimes_apr2"]
   },
   {
     title: "Ordinance -- Community Development Code Amendment for Wildfire Resilience (Passed Second Reading)",

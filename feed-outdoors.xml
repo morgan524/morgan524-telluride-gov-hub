@@ -6,32 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-outdoors.xml" rel="self" type="application/rss+xml" />
     <description>Hikes, races, ski events, and stewardship days — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Jun 2026 20:25:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2026 03:47:46 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Meeting] Lodging Tax Board 06/18/26 — 2026-06-18</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-06-18%7CLodging%20Tax%20Board%2006%2F18%2F26</guid>
-      <pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[San Miguel County • 2026-06-18
-
-The Lodging Tax Board meets to review tax reports and hear updates from the Norwood Chamber and Telluride Tourism Board. Standard quarterly check-in on how lodging tax dollars are being distributed and used across the county.]]></description>
-      <category>Meeting</category>
-      <category>San Miguel County</category>
-    </item>
-    <item>
-      <title>[Thu, Jun 18] Mountain Village Adventure Book Club</title>
-      <link>https://telluridelibrary.libcal.com/event/16576533?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/mountain%20village%20adventure%20book%7C2026-06-18</guid>
-      <pubDate>Thu, 18 Jun 2026 16:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_30_10_50_26.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 San Sophia Station - Gondola
-
-10:00 AM – 12:00 PM · Do you love books and love to hike? Want to go on an adventure? Let&#39;s do all of those things and meet in Mountain Village at the San Sophia Station with our water bottles. We will hike down to the core and get some snacks at Dolce.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_30_10_50_26.png" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
     <item>
       <title>[Meeting] Open Space Commission Meeting — 2026-06-22</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
@@ -53,6 +29,52 @@ The June 22 Open Space Commission agenda hasn't been posted yet.]]></description
 The June 24 Board of County Commissioners work session agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Thu, Jun 25] Telluride Yoga Festival</title>
+      <link>https://www.telluride.com/event/telluride-yoga-festival/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20yoga%20festival%7C2026-06-25</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/28883/190827_001.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+The longest running yoga festival in the country, the Telluride Yoga Festival is a four-day yoga and wellness gathering …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/28883/190827_001.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Meeting] Regular Board Meeting — 2026-06-25</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/med%7C2026-06-25%7CRegular%20Board%20Meeting</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Telluride Medical Center • 2026-06-25
+
+The June 25th Regular Board Meeting agenda hasn't been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>Telluride Medical Center</category>
+    </item>
+    <item>
+      <title>[Meeting] Planning &amp; Zoning Commission - Jun 25 2026 — 2026-06-25</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-25%7CPlanning%20%26%20Zoning%20Commission%20-%20Jun%2025%202026</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-06-25
+
+The Jun 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>[Meeting] Planning &amp; Zoning Commission Chair - Jun 25 2026 — 2026-06-25</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-25%7CPlanning%20%26%20Zoning%20Commission%20Chair%20-%20Jun%2025%202026</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-06-25
+
+The June 25, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
     </item>
   </channel>
 </rss>
