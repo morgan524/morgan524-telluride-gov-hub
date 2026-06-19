@@ -5926,6 +5926,39 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48799/tfl_summer_press_26.jpeg"
+  },
+  {
+    title: "Girl Scout Cookie Booth",
+    link: "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
+    description: "Support our local Girl Scout Troop with their cookie sales. Proceeds fund their activities & camps all year. The Girl Scouts will also donate 20 percent",
+    pubDate: "2026-07-19T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/47998/20250202_153054.jpg"
+  },
+  {
+    title: "Sunday Rehab: Apres Edition",
+    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-apres-edition/",
+    description: "Sunday Rehab: Après Edition is Mountain Lodge Telluride’s weekly Sunday après-ski gathering, happening every Sunday from February 1 through March 29.",
+    pubDate: "2026-07-19T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
+  },
+  {
+    title: "From Forest to Front Door: A Community Conversation on Wildfire Preparendess",
+    link: "https://townofmountainvillage.com/explore/events/all-events/from-forest-to-front-door-a-community-conversation-on-wildfire-preparendess/",
+    description: "The San Miguel County Office of Emergency Management and the Telluride Foundation are hosting a free panel discussion that will kick off the public comment",
+    pubDate: "2026-07-19T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48302/from_forest_to_front_door_tomv_1800_x_900_px.png"
   }
 ];
 
