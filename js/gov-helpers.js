@@ -373,6 +373,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "‘Impossible ideas’ flourish at this year’s Bluegrass",
+    source: "Telluride Times",
+    date: "June 19, 2026",
+    firstSeen: "2026-06-19",
+    newsTopic: "arts-culture",
+    copy: "Looking back on 44 years of Béla Fleck playing the Telluride Bluegrass Festival, audiences have learned to expect the unexpected.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_a87f737d-c724-4832-97c6-bba719309e1d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/0c/60cae73d-3ec7-47be-815e-55aab92918ee/6a2e0b3c8fc7b.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Wyndham Clark seizes on changing nature of Shinnecock to lead US Open",
     source: "Telluride Times",
     date: "June 19, 2026",
@@ -1416,17 +1428,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 1:00 a.m. MT on Thursday, June 18, 2026.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=65",
     img: ""
-  },
-  {
-    title: "What to do in Colorado this week: Juneteenth celebrations in Denver, Colorado Springs, Fort Collins and beyond",
-    source: "Colorado Sun",
-    date: "June 18, 2026",
-    firstSeen: "2026-06-18",
-    newsTopic: "housing",
-    copy: "Plus: The Telluride Bluegrass Festival, FIBArk in Salida and an open mic in Basalt where there are no parents allowed",
-    claudeSummary: false,
-    href: "https://coloradosun.com/2026/06/18/whats-happening-juneteenth-denver-fort-collins-colorado-springs-colorado/",
-    img: "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2022/04/AP21170715155922.jpg?fit=1024%2C730&amp;ssl=1"
   },
   {
     title: "Click here for details.",
@@ -2940,105 +2941,7 @@ const KOTO_COMMUNITY_EVENTS = [
 ];
 
 const WILKINSON_EVENTS = [
-  {
-    title: "Yin Yang Yoga with Miriah",
-    link: "https://telluridelibrary.libcal.com/event/16801136?hs=a",
-    description: "9:00 AM – 10:00 AM · Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses.  We&#39;ll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.  Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.",
-    pubDate: "2026-06-18T15:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg"
-  },
-  {
-    title: "Mountain Village Adventure Book Club",
-    link: "https://telluridelibrary.libcal.com/event/16576533?hs=a",
-    description: "10:00 AM – 12:00 PM · Do you love books and love to hike? Want to go on an adventure? Let&#39;s do all of those things and meet in Mountain Village at the San Sophia Station with our water bottles. We will hike down to the core and get some snacks at Dolce.",
-    pubDate: "2026-06-18T16:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "San Sophia Station - Gondola",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_30_10_50_26.png"
-  },
-  {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/16772759?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-06-18T16:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
-  },
-  {
-    title: "Play Pickleball!",
-    link: "https://telluridelibrary.libcal.com/event/16897845?hs=a",
-    description: "11:30 AM – 1:00 PM · Our favorite summer series is back, and this time with a twist! Kristen Milord will be teaching adults how to play pickleball at the town courts (thank you, Parks and Recreation). We will offer one class each month for instruction, followed by another session to practice and put what you&#39;ve learned into action. Space is limited. Please sign up in advance.  Join us for some fun and fitness this summer! - June 4th - Learn to Play Pickleball - June 22nd - Play Pickleball (basic knowledge of the game is required) - July 6th - Learn to Play Pickleball - July 23rd - Play Pickleball (basic knowledge of the game is required) - August 6th - Learn to Play Pickleball - August 20th - Play Pickleball (basic knowledge of the game is required)",
-    pubDate: "2026-06-18T17:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Town Park",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_31_10_03_27.png"
-  },
-  {
-    title: "Online Author Talk with Ted Page",
-    link: "https://telluridelibrary.libcal.com/event/16953287?hs=a",
-    description: "12:00 PM – 1:00 PM · Join us in virtual conversation with storyteller and popular blogger Ted Page as we chat about his book Good Grandpa: Stories from the Heart of Grandfatherhood. This heartfelt book highlights his journey to bring together the stories and wisdom of grandfathers from all walks of life—all with a mission to nurture the next great generation. When author Ted Page found out he was going to be a grandpa, he did a web search to learn more about the experience in store for him, but all he could find were references to the movie Bad Grandpa . He couldn't help but wonder, \"Where are the good ones?\" Page started a blog, GoodGrandpa.com, and set out to talk with grandfathers across a diverse spectrum. …",
-    pubDate: "2026-06-18T18:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_17_04_22.jpg"
-  },
-  {
-    title: "Pilates for All Bodies",
-    link: "https://telluridelibrary.libcal.com/event/16536276?hs=a",
-    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-06-18T18:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
-  },
-  {
-    title: "Family Lego Competition!",
-    link: "https://telluridelibrary.libcal.com/event/16826638?hs=a",
-    description: "3:00 PM – 4:00 PM · *PLEASE DO NOT REGISTER EACH INDIVIDUAL MEMBER OF YOUR FAMILY.  ONLY ONE NAME IS REQUIRED TO SIGN UP YOUR FAMILY* Gather your team (family) and join us on the patio for some friendly competition!  Each family will be given the same Lego set.  Prizes for the top three speeds!  All families will get to keep their Lego set.  Register on the website.  Space and Lego sets are limited.",
-    pubDate: "2026-06-18T21:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_12_30_38.png"
-  },
-  {
-    title: "Littles On the Move",
-    link: "https://telluridelibrary.libcal.com/event/13960348?hs=a",
-    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
-    pubDate: "2026-06-18T21:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
-  },
-  {
-    title: "Cancer Support Group",
-    link: "https://telluridelibrary.libcal.com/event/16067711?hs=a",
-    description: "5:00 PM – 6:00 PM · Join us for a supportive and compassionate space at our Cancer Support Group held every 3rd Thursday of the month from 5:00 PM to 6:00 PM . This group is designed for individuals currently experiencing cancer and for those who are in remission, offering a safe and welcoming environment for sharing personal stories, experiences, and encouragement. Whether you&#39;re navigating your cancer journey or reflecting on the road to recovery, this group provides emotional support and the opportunity to connect with others who understand your unique challenges. Come and find strength in the community, share your experiences, and know you&#39;re not alone in your journey.",
-    pubDate: "2026-06-18T23:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_02_26_11_55_25.jpg"
-  }
+
 ];
 
 // Bot-managed by scripts/content-refresh.js Task 7 (syncHumaneSocietyAnimals).
@@ -3058,18 +2961,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "NIGHTGRASS - Dallahan",
-    link: "https://www.alibitelluride.com/calendar#eca-event=nightgrass-dallahan",
-    description: "Forged in Scotland and Ireland's traditional music scene, but drawing on the mus...",
-    pubDate: "2026-06-18",
-    time: "10:30 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/5bb37dbf-75d4-4378-9e29-724528deef37/-/crop/1920x959/0,78/-/preview/"
-  },
   {
     title: "NIGHTGRASS - Jake Shimabukuro",
     link: "https://www.alibitelluride.com/calendar#eca-event=nightgrass-dallahan-1",
@@ -3576,6 +3467,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52092171660517/huge/0e628304026c92db25e8df01849c962ac902a3b4.jpg"
   },
   {
+    title: "Beautification Committee (OBC)",
+    link: "https://www.cityofouray.com/city_offices/committees___boards/beautification_committee_(obc).php",
+    description: "The Beautification Committee (OBC) works on projects to help beautify the community. The committee oversees the installation of all the flower gardens in the City as well as all the hanging baskets and plantings on Main Street. They have also worked hard over the years to acquire many historic mining pieces and equipment that are displayed throughout the community to recognize Ouray's mining heritage. The committee has also provided direction on signage, light poles, and benches on the public rights of way. The Beautification Committee also plays an important role in developing and implementing master plans for the City’s park system. The committee makes recommendations to the City Council on these many beautification projects as well as the use of dollars from the Beautification Fund. This fund is supported by a portion of the Lodging Occupation Tax and is used exclusively for projects that help beautify the community. …",
+    pubDate: "2026-03-04T12:00:00.000Z",
+    endDate: "2027-02-03",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Community Center, San Juan Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/50382168464273/huge/9567987a01fc4f1da8e171fabd1eb5b7bdbdccfa.jpg"
+  },
+  {
     title: "Community Meditation",
     link: "www.ridgwayfuse.org",
     description: "Join us for a peer-led weekly meditation series at the Decker Community Room. Free and open to the public! We meet every 1st, 2nd, and 4th Tuesday of the month (all but the 3rd Tuesday!)",
@@ -3754,30 +3657,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53188965998095/huge/55f592a5e84d7486827ccac53e3cf97ff5f937db.jpg"
-  },
-  {
-    title: "Tween-Try-It: Photography",
-    link: "https://ouray.colibraries.org/lib-cal/",
-    description: "During this summer, once a month, the Ouray Library will be hosting Tween-Try-It, which is a program designed for 9-12 year olds where they can learn a new hobby or activity. This program will last an hour and should be very fun. Our June Tween-Try-It will be centered around Photography! This will happen at the Ouray Library on Thursday, June 18th, from 1:00 p.m. to 2:00 p.m. Sign up is requested at programsouraypl@gmail.com. Ages; Tweens (9-12)",
-    pubDate: "2026-06-18T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53119013139840/huge/68c03964e1e056baf14d98ca4fb2f96d7774c061.jpg"
-  },
-  {
-    title: "Best Slope Adventure Company Season Kickoff & Launch Party",
-    link: "https://events.ourayridgwayevents.com/event/best-slope-adventure-company-season-kickoff-launch-party",
-    description: "Good vibes, summer gear, and river adventures. Join us as we celebrate the start of our second season! Explore new apparel and gear, meet the team, and learn about our offerings. We'll have hot dogs, drinks, raffle prizes, and discounts. Come hang out, connect, and kick off summer with us.",
-    pubDate: "2026-06-18T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Best Slope Adventure Company",
-    imageUrl: "https://localist-images.azureedge.net/photos/53137598060230/huge/5ece77f833572529814e7b0eae85945d97b411da.jpg"
   },
   {
     title: "Juneteenth: Ouray City Offices Closed",
@@ -4246,6 +4125,30 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52590090771453/huge/5f8f06133edd0a9151fe5e6e785bc44ecfc34e48.jpg"
+  },
+  {
+    title: "CORAL  SKYE",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-06-30T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Live Music- Bright Light Social Hour",
+    link: "https://www.stelmohotel.com/summer-sound/bright-light-social-hour",
+    description: "Join us on Wednesday, July 1st as we welcome Bright Light Social Hour to the St. Elmo Tavern Patio! This Austin, Texas-based rock band is known for their explosive blend of psychedelic rock, funk, and soul. Drawing comparisons to classic acts like Cream and The Doors while maintaining a sound that is entirely their own, TBLSH delivers a high-energy, groove-heavy live experience that is hard to shake. Their music pulses with driving rhythms, swirling guitars, and a raw, electrifying energy that fills whatever room or patio they play. This is a ticketed show. Tickets can be purchased here: https://booking.whollyticket.com/84948 Show starts at 7pm. We look forward to seeing you there!",
+    pubDate: "2026-07-01T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53126268448586/huge/551649ade610d753640b4916bd308fa22ba0932e.jpg"
   }
 ];
 
