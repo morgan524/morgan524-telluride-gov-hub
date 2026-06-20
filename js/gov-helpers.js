@@ -2901,7 +2901,17 @@ const KOTO_COMMUNITY_EVENTS = [
 ];
 
 const WILKINSON_EVENTS = [
-
+  {
+    title: "90s Movie Matinee: Space Jam",
+    link: "https://telluridelibrary.libcal.com/event/15536159?hs=a",
+    description: "2:00 PM – 4:00 PM",
+    pubDate: "2026-06-20T20:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_13_17_29_37.png"
+  }
 ];
 
 // Bot-managed by scripts/content-refresh.js Task 7 (syncHumaneSocietyAnimals).
@@ -2921,30 +2931,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "NIGHTGRASS - Jake Shimabukuro",
-    link: "https://www.alibitelluride.com/calendar#eca-event=nightgrass-dallahan-1",
-    description: "Jake Shimabukuro is a world-renowned ukulele virtuoso whose groundbreaking artis...",
-    pubDate: "2026-06-19",
-    time: "10:30 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/552caaca-9040-49ed-9e0e-39c2176f0681/-/crop/1800x901/0,101/-/preview/"
-  },
-  {
-    title: "NIGHTGRASS - Boy Golden",
-    link: "https://www.alibitelluride.com/calendar#eca-event=nightgrass-dallahan-2",
-    description: "Who is Boy Golden? On the one hand it is moniker for a mysterious new artist, ...",
-    pubDate: "2026-06-19",
-    time: "10:30 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/ff68b41c-5bf1-41dd-ac81-91813095ba41/-/crop/5355x2674/0,2629/-/preview/"
-  },
   {
     title: "Bombargo",
     link: "https://www.alibitelluride.com/calendar#eca-event=bombargo",
@@ -3619,78 +3605,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53188965998095/huge/55f592a5e84d7486827ccac53e3cf97ff5f937db.jpg"
   },
   {
-    title: "Juneteenth: Ouray City Offices Closed",
-    link: "https://events.ourayridgwayevents.com/event/juneteenth-ouray-city-offices-closed",
-    description: "In observance of Juneteenth, City of Ouray offices will be closed on Friday, June 19. Juneteenth commemorates the end of slavery in the United States and is a time to reflect on freedom, resilience, and the ongoing pursuit of equality and justice. While City offices will be closed on 6/19 the Visitor Center will be open. Sheriff’s Officers will also be on duty.",
-    pubDate: "2026-06-19T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray City Hall",
-    imageUrl: "https://localist-images.azureedge.net/photos/53179943431134/huge/b1470444da8aed616de6438af345ad9bb572abd5.jpg"
-  },
-  {
-    title: "Library is Closed for Juneteenth",
-    link: "https://ouray.colibraries.org/lib-cal/",
-    description: "We will be closed in observance of Juneteenth. We will be back open on Saturday, June 20th from 10:00 a.m. to 2:00 p.m.",
-    pubDate: "2026-06-19T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53134741664533/huge/42d667efba843565bc80f2a2ad64e355517b4531.jpg"
-  },
-  {
-    title: "Twice Upon a Time: A Theatre Camp Performance",
-    link: "https://sherbino.org/event/twice-upon-a-time-a-theatre-camp-performance/",
-    description: "Doors at 1:00 pm || Show at 1:30 pm || Entry by Donation Twice Upon a Time: A Theatre Camp Performance Directed by Erin Cawley Join our Theatre Camp students for their performance of Twice Upon a Time! Camp students have worked hard all week for this culminating performance! This students in this performance are ages 6-13. While this camp is full please visit weehawkenarts.org for more theater camps and registration info. Play Synopsis: Twice Upon a Time Grandma doesn’t really like fairy tales — she prefers adventure stories about pirates and astronauts. So when her grandkids ask for fairy tales at bedtime, Grandma puts some very silly twists on the classics. “Twice upon a time…” begins each goofy retelling. Cindy-Rella is now an obsessive neat freak who refuses to leave her chores to attend the prince’s barbecue (even with a bouncy castle!). …",
-    pubDate: "2026-06-19T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52993792954971/huge/c0636618f641794e118b7899c385c7576b612e44.jpg"
-  },
-  {
-    title: "RED MOUNTAIN REVIVAL",
-    link: "https://coloradoboydepot.com/calendar/",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-06-19T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Courthouse Blues Band - Live at Floating Lotus Brewery - Outdoor Stage",
-    link: "FloatingLotusBrewery.com",
-    description: "Get ready for a night of authentic Western Colorado blues with Courthouse Blues Band live on the outdoor stage at Floating Lotus Brewery. Known as Ouray County’s jump blues specialists, Courthouse delivers a powerful mix of blues, rock, funk, and soul driven by two standout vocalists, a rock-solid rhythm section, and searing slide guitar. With decades of live performance experience behind them, the band brings the kind of timeless, high-energy blues show that keeps dance floors moving and crowds smiling all night long. Come enjoy a evening of great music, cold beer, and summer vibes in Ridgway.",
-    pubDate: "2026-06-19T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53028256693675/huge/7434caf37a20450c5906fcc5cf44f0186fd4c12d.jpg"
-  },
-  {
-    title: "Starlit Trails - Ridgway State Park Summer Program Series",
-    link: "https://cpw.state.co.us/events?f%5B0%5D=state_parks%3A186",
-    description: "Join us for Starlit Trails, a twilight adventure where the path meets the celestial. We’ll begin with a guided hike through the scenic landscape of Ridgway State Park before turning our focus toward the heavens as the stars emerge over the San Juan Mountains. Binoculars are welcomed.",
-    pubDate: "2026-06-19T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53161287482024/huge/d2e8572a24c20a771c9174a0ccc9244d229c3acd.jpg"
-  },
-  {
     title: "Steps Tavern Presents Karaoke Night",
     link: "https://www.facebook.com/stepstavern",
     description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night",
@@ -4097,6 +4011,66 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53126268448586/huge/551649ade610d753640b4916bd308fa22ba0932e.jpg"
+  },
+  {
+    title: "True Grit: CO-150 Film Festival @ the Wright",
+    link: "wrightoperahouse.org",
+    description: "True Grit: CO-150 Film Festival @ the Wright WHEN? Wednesday, July 1 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 2h 8min RATING: G ROTTEN TOMATOES SCORE: 89% ABOUT THE FILM True Grit (1969) stars John Wayne in his Academy Award-winning role as the tough and hard-drinking U.S. Marshal Rooster Cogburn, hired by a determined young girl to help track down her father’s killer through dangerous frontier territory. Blending rugged western action with humor, heart, and unforgettable performances, the film became a defining classic of the American West and one of the most beloved westerns ever made. A timeless frontier adventure about justice, courage, and the stubborn grit it takes to do what’s right. Tickets $5 In-person screening at the historic Wright Opera House Concessions available. …",
+    pubDate: "2026-07-01T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52931213000303/huge/4a35e556e3be8d09715931691264a9a9467bcf3a.jpg"
+  },
+  {
+    title: "Ouray Youth Summer Programs: Fly Fishing",
+    link: "https://anc.apm.activecommunities.com/cityofouray/activity/search/detail/339?onlineSiteId=0&from_original_cui=true",
+    description: "Participants will learn the basics of fly fishing techniques with instruction and equipment provided by Ridgway State Park staff. Please meet at the Pa-Co-Chu-Puk area of Ridgway State Park and bring snacks, water, weather-appropriate clothing, and sunglasses for eye protection while fishing. REGISTER HERE Scholarships are available if needed. This activity is part of the Youth Adventure Days, sponsored by Ouray's Parks and Recreation Department. For questions, contact Sean Hart at 970-318-1003 or seanhart@cityofouray.com",
+    pubDate: "2026-07-02T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52993896774577/huge/f8a8f4f0f395170cb24aaa84ed744e29fb7d74e4.jpg"
+  },
+  {
+    title: "Ridgway Concert Series",
+    link: "https://pickinproductions.com/upcomingshows",
+    description: "The Town of Ridgway & Pickin’ Productions Present THE 19TH ANNUAL 2026 RIDGWAY CONCERT SERIES JULY 2 LEVI PLATERO Shelby Means JULY 9 BLACK UHURU Psylo JULY 16 SAM GRISMAN PROJECT Tanasi JULY 23 DOGS IN A PILE Felix Y Los Gatos JULY 30 THE RUMBLE Ft. Chief Joseph Boudreaux Jr. Handmade Moments FREE SHOW 6PM FOOD - VENDORS - BEER WINE & MARGARITAS No Dogs or Outside Alcohol Permitted HARTWELL PARK Ridgway – Colorado SPONSORS Ridgway Real Estate – Alpine Bank – Chipeta Lodge Resort & Space- Orvis Hot Springs – Julie & Dave Duff – Bennett Forgeworks- OAK – Billings Artwork – Todd W. Hoffman Foundation- The Market at Ridgway – Fiddlers Green – KVNF Public Radio – Alpine Edge Engineering - Alt Space Coworking- Vacation Rental Collective For More Information, Please Visit: www.pickinproductions.com",
+    pubDate: "2026-07-02T12:00:00.000Z",
+    endDate: "2026-07-30",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52696447609647/huge/b28c8601f5e3e0db939bf8de5f0e8929fe11dc2b.jpg"
+  },
+  {
+    title: "On Display: Silverton, Interpreted",
+    link: "www.ridgwayfuse.org",
+    description: "We are excited to host a group show during the month of July from our neighbors in Silverton! Silverton, Interpreted is a traveling show features a selection of artists from The 9318 Collective whose work reflects the beauty, energy, and elemental character of the San Juan Mountains and the lands that surround them. Through varied styles and mediums, the exhibition offers multiple perspectives on a shared place, celebrating the artistic dialogue between land and maker.",
+    pubDate: "2026-07-03T12:00:00.000Z",
+    endDate: "2026-07-30",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53047351194602/huge/ca565426cdce176dbabc27b75052233f99cf4818.jpg"
+  },
+  {
+    title: "RIDGWAY WRECKING CREW",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-07-03T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   }
 ];
 
