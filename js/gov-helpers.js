@@ -158,13 +158,22 @@ const MEETING_AGENDA_META = {
     {"sv":2},
 
   "med|2026-06-25|Regular Board Meeting":
-    {"zoomUrl":"https://us02web.zoom.us/j/89509331558","meetingId":"895 0933 1558"},
+    {"zoomUrl":"https://us02web.zoom.us/j/89509331558","meetingId":"895 0933 1558","sv":2},
 
   "telluride|2026-06-23|Special Meeting - HARC and P&Z - Jun 23 2026":
-    {"zoomUrl":"https://us06web.zoom.us/j/83056176189?pwd=wUqZ62DdTaXbfx8NAiQ1yp595tbwuI.1","meetingId":"830 5617 6189","passcode":"042711.","phone":"301-715-8592"},
+    {"zoomUrl":"https://us06web.zoom.us/j/83056176189?pwd=wUqZ62DdTaXbfx8NAiQ1yp595tbwuI.1","meetingId":"830 5617 6189","passcode":"042711.","phone":"301-715-8592","sv":2},
 
   "telluride|2026-06-23|Special Meeting - P&Z and HARC - Jun 23 2026":
-    {"zoomUrl":"https://us06web.zoom.us/j/83056176189?pwd=wUqZ62DdTaXbfx8NAiQ1yp595tbwuI.1","meetingId":"830 5617 6189","passcode":"042711.","phone":"301-715-8592"}
+    {"zoomUrl":"https://us06web.zoom.us/j/83056176189?pwd=wUqZ62DdTaXbfx8NAiQ1yp595tbwuI.1","meetingId":"830 5617 6189","passcode":"042711.","phone":"301-715-8592","sv":2},
+
+  "airport|2026-07-16|TRAA Board of Commissioners Meeting":
+    {"sv":2},
+
+  "telluride|2026-07-16|Liquor Licensing Authority - Jul 16 2026":
+    {"sv":2},
+
+  "county|2026-07-08|Board of County Commissioners Special":
+    {"sv":2}
 };
 
 const MANUAL_SUMMARIES = {
@@ -208,16 +217,16 @@ const MANUAL_SUMMARIES = {
     "The commissioners will interview candidates for the Board of Adjustment and Planning Commission — Jonathan Prince for a direct appointment, and three applicants competing for an alternate Planning Commission slot. They'll get an update on affordable housing from the county's housing specialist, along with routine wastewater variances for two Ophir properties. The consent agenda includes adopting the latest Community Wildfire Protection Plan and approving a liquor license renewal for The Blue Jay in Placerville.",
 
   "county|2026-06-22|Open Space Commission Meeting":
-    "The June 22 Open Space Commission agenda hasn't been posted yet.",
+    "The Open Space Commission meets June 22 to work through several active trail and open space projects. On the table: a NEPA process update for the Perimeter Trail, new signage for the Keystone Gorge Loop Trail, and a conversation about future goals for the San Juan Skyway Scenic Byway Corridor. Conceptual plans for Mill Creek Park and an update on the Down Valley Connector Trail through Sawpit are also on the agenda. The commission will also address two vacancies — one regular seat and one alternate — plus a Northwest Mountain seasonal slot.",
 
   "county|2026-06-24|Board of County Commissioners Work Session":
     "MEETING CANCELED — the Board of County Commissioners' June 24 work session has been canceled. The next BOCC meeting is the regular meeting on July 1.",
 
   "telluride|2026-06-23|Special Meeting - HARC and P&Z - Jun 23 2026":
-    "HARC and the Planning & Zoning Commission meet jointly to consider Land Use Code and Design Guideline amendments for compliance with Colorado's new Wildfire Resiliency Code, which takes effect July 1. The single action item is to develop a recommendation to Town Council on what local code changes are needed so Telluride's building and design standards line up with the state's wildfire requirements. 1:00 PM at Rebekah Hall.",
+    "A joint subset of HARC and P&Z meets for one hour to work through proposed amendments to the Town's Land Use Code and Design Guidelines — changes needed to bring Telluride into alignment with the Colorado Wildfire Resiliency Code. Whatever language they recommend goes to Town Council for the final call. Wildfire code compliance has been working its way through mountain communities across the state; this is Telluride's turn to reconcile state requirements with local historic and architectural standards — two frameworks that don't always sit comfortably together.",
 
   "telluride|2026-06-23|Special Meeting - P&Z and HARC - Jun 23 2026":
-    "Joint HARC and Planning & Zoning meeting (same meeting as the HARC-listed version) to consider Land Use Code and Design Guideline amendments for compliance with Colorado's new Wildfire Resiliency Code, which takes effect July 1. The single action item is a recommendation to Town Council on what local code changes are needed so Telluride's building and design standards align with the state wildfire rules. 1:00 PM at Rebekah Hall.",
+    "A joint special session of P&Z and HARC — one hour, one item. The two commissions will review proposed amendments to the Town's Land Use Code and Design Guidelines needed to bring Telluride into consistency with the Colorado Wildfire Resiliency Code. Whatever they recommend moves to Town Council for final consideration. Wildfire code alignment has been on the horizon for mountain communities across the state; this is Telluride working through what that means for local rules on materials, design, and land use.",
 
   "telluride|2026-06-17|Historic & Architectural Review Commission Chair - Jun 17 2026":
     "The Historic & Architectural Review Commission Chair will review two projects: aluminum window replacements at 324 W Colorado (a contributing historic structure in an alley) and a deck expansion at 714 E Columbia. Both applications face staff recommendations for disapproval — the windows for introducing aluminum into a historic wood garage that's supposed to maintain its utilitarian character, and the deck for being too large and reducing the building's stepping down to Shadow Lane. The 324 W Colorado item was continued from May and includes a pre-meeting site walk.",
@@ -250,7 +259,7 @@ const MANUAL_SUMMARIES = {
     "The commissioners will handle two septic system variances in Ophir, consider ending a deed restriction on Society Drive, and hold a work session with Placerville residents about corridor beautification and Fire District expansion plans.",
 
   "med|2026-06-25|Regular Board Meeting":
-    "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
+    "The Telluride Hospital District board meets June 25 with a full slate of internal matters. The heaviest item on the agenda is a 45-minute discussion of mill levy considerations — the taxing mechanism that funds the district, and a recurring pressure point as the hospital works toward a new facility. Board members will also spend time on new facility updates and partnership updates, plus a communications strategy discussion. The finance committee and CFO will walk through May 2026 draft financials. Consent items include ratification of an updated investment policy.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
     "The commission holds an early-stage work session on the Shandoka Lot Redevelopment Project at 860 Black Bear Rd — the major Town-owned redevelopment proposal brought forward by Design Workshop. No decision is made at a work session; the commission gives feedback to staff and the applicant before any formal Land Use Code review begins. Continued without discussion from the May 28 meeting. 5:30 PM at Rebekah Hall.",
@@ -268,19 +277,19 @@ const MANUAL_SUMMARIES = {
     "The June 30, 2026 Town Council agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The July 1 Ecology Commission agenda hasn't been posted yet.",
+    "The July 1, 2026 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "The July 1st Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "The July 1, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
     "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The July 1 Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The July 1, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
-    "The July 1 Board of County Commissioners agenda hasn't been posted yet.",
+    "The July 1, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "county|2026-06-10|Board of Review and Planning Commission Joint Work Session":
     "The county's Board of Review and Planning Commission will hear a presentation on Colorado's new Low Energy and Carbon Code — building standards that could reshape how structures get approved in the box canyon.",
@@ -304,7 +313,7 @@ const MANUAL_SUMMARIES = {
     "The Lodging Tax Board meets to review tax reports and hear updates from the Norwood Chamber and Telluride Tourism Board. Standard quarterly check-in on how lodging tax dollars are being distributed and used across the county.",
 
   "county|2026-07-09|Planning Commission Meeting":
-    "The July 9 Planning Commission agenda hasn't been posted yet.",
+    "The July 9, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-12|Judicial Subcommittee - Jun 12 2026":
     "The June 12, 2026 Judicial Subcommittee agenda hasn't been posted yet.",
@@ -316,22 +325,31 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14 Historical Commission agenda hasn't been posted yet.",
+    "The July 14 San Miguel County Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
-    "The July 15 Historic & Architectural Review Commission agenda hasn't been posted yet.",
+    "The July 15, 2026 HARC Chair agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
     "The July 15, 2026 HARC agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Parks & Recreation Commission - Jul 15 2026":
-    "The July 15 Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15 Board of County Commissioners agenda hasn't been posted yet.",
+    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
-    "The June 30 Telluride Housing Authority agenda hasn't been posted yet."
+    "The June 30, 2026 Telluride Housing Authority agenda hasn't been posted yet.",
+
+  "airport|2026-07-16|TRAA Board of Commissioners Meeting":
+    "The July 16, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-07-16|Liquor Licensing Authority - Jul 16 2026":
+    "The July 16, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
+
+  "county|2026-07-08|Board of County Commissioners Special":
+    "The July 8 Board of County Commissioners Special Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -379,6 +397,30 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Rico Trails Alliance receives grant for bridge project",
+    source: "Telluride Times",
+    date: "June 20, 2026",
+    firstSeen: "2026-06-20",
+    newsTopic: "infrastructure",
+    copy: "The Rico Trails Alliance has raised over $300,000 — including a $250,000 Colorado Parks and Wildlife grant and $40,000 from the Telluride Foundation — to build a 68-foot ADA-compliant pedestrian bridge spanning the east fork of the Dolores River near Rico. The bridge anchors the RGS River Trail, linking Rico's rec facilities and the old Rio Grande Southern railroad grade to hundreds of miles of Forest Service trails.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_d0cf73ba-3f29-4037-a93a-6a60886242c3.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/73/873b82ff-8683-45c3-af51-3f30ea87d3b8/6a32698771b03.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "The soul of the West",
+    source: "Telluride Times",
+    date: "June 20, 2026",
+    firstSeen: "2026-06-20",
+    newsTopic: "recreation",
+    copy: "A longtime Telluride-area resident reflects on 35 years living at the confluence of two rivers on the Uncompahgre Plateau, tracing roots from a Sonoran Desert childhood in Tucson to the Western Slope. The piece moves through personal observations — petroglyphs, monsoon rainbows, wildfire smoke, winter squalls — as meditations on place and time.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_2eb36a10-3147-437b-8935-90158fe0e902.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/b7/5b7f3f51-d1c4-4ae9-9ef5-47b3c10edbf1/6a31bb6dbc01b.image.webp",
+    imgHiRes: true
+  },
+  {
     title: "Sierra Hull embodies new bluegrass generation of genre busters",
     source: "Telluride Times",
     date: "June 20, 2026",
@@ -408,8 +450,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 19, 2026",
     firstSeen: "2026-06-20",
     newsTopic: "community",
-    copy: "A most beautiful commute.",
-    claudeSummary: false,
+    copy: "A writer describes the daily routine of catching an 8 a.m. ferry that carries island schoolchildren to the mainland — the buggy ride down a dirt lane past bougainvillea, the harbor sounds, and the familiar scramble not to miss the one thing in the country that runs on time.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_9255a32d-c3f0-4a8a-968a-1006ae5dcad4.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/3c/e3ca20de-df9f-4cd3-9799-8449e974041a/6a3191a500501.image.jpg",
     imgHiRes: true
@@ -516,8 +558,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 18, 2026",
     firstSeen: "2026-06-18",
     newsTopic: "community",
-    copy: "Legals and Public Notices for June 18-24, 2026.",
-    claudeSummary: false,
+    copy: "A foreclosure sale is scheduled for July 16, 2026 at 10 a.m. at 305 W. Colorado Ave. in Telluride for a property at 122 43ZS Road in Norwood, with an outstanding balance of roughly $115,000 on a 2009 Wells Fargo deed of trust. A separate estate notice sets an October 18, 2026 deadline for creditor claims in San Miguel County probate case 26PR30006.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/legals/article_5efd4701-ba7f-46ef-a7bd-74a242fdff7a.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     imgHiRes: true
@@ -552,8 +594,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 17, 2026",
     firstSeen: "2026-06-17",
     newsTopic: "community",
-    copy: "Summer fun with your best friend.",
-    claudeSummary: false,
+    copy: "Before heading out on summer trails with your dog, check that vaccinations are current, leash rules are followed, and you're packing enough food, water, and basic first-aid supplies. Streams can carry harmful parasites, and waste should always be packed out. Second Chance Humane Society in Ridgway also has adoptable dogs if you're looking for a trail partner.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_5052f986-1380-444b-a0ef-057e89e4188b.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/b5/6b58ac41-299f-43f6-99d4-6dfbd28ad731/6a32d15c11f2e.image.jpg",
     imgHiRes: true
@@ -564,8 +606,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 17, 2026",
     firstSeen: "2026-06-17",
     newsTopic: "community",
-    copy: "Federal judge, bestselling author Roy Altman to speak in Telluride.",
-    claudeSummary: false,
+    copy: "Federal judge and Yale Law School graduate Roy Altman speaks in Telluride on June 30 at 5:30 p.m., drawing on his book *Israel on Trial* to examine how legal standards of evidence apply to contested historical and political claims. Tickets are $10 and include a copy of the book.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_55be3fc5-6ac0-4b3c-8c6e-a21c3edb8a48.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     imgHiRes: true
@@ -576,8 +618,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 17, 2026",
     firstSeen: "2026-06-17",
     newsTopic: "government",
-    copy: "Yonder, Szwarc elected to SMPA board.",
-    claudeSummary: false,
+    copy: "Joanna Yonder won the SMPA District 3 board seat, defeating incumbent David Alexander 228–178. In District 6, incumbent Valentine Szwarc held on, 179–171 over challenger Tricia Savage. SMPA board members serve four-year terms, elected by co-op members across seven districts.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_58cf11c3-ad10-4dbe-9d9f-d0578f392b0d.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/4b/04b1908d-1923-476d-ba0c-d6fe504c3bcb/6a32c995d6167.image.jpg",
     imgHiRes: true
@@ -588,8 +630,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 17, 2026",
     firstSeen: "2026-06-17",
     newsTopic: "community",
-    copy: "Play It Forward pickleball tournament fundraises for SMRC.",
-    claudeSummary: false,
+    copy: "SMRC, one of San Miguel County's oldest nonprofits serving survivors of domestic violence and sexual assault, is holding a pickleball fundraiser June 28 at Telluride Racquet Club in Mountain Village. Federal funding cuts are pressing on the organization. All skill levels welcome; registration at smrcco.org/events.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_135741c3-c073-4c37-b9e8-505682e27bcd.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/0d/b0d269cd-ce31-4dc6-bc21-b63d61102e16/6a32ca6a38d34.image.jpg",
     imgHiRes: true
@@ -600,8 +642,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 17, 2026",
     firstSeen: "2026-06-17",
     newsTopic: "community",
-    copy: "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
-    claudeSummary: false,
+    copy: "Residents across Telluride — workers, seniors, commuters, longtime locals — are raising concerns about proposed development, housing, and financing decisions they say they weren't meaningfully informed about. Common themes: unclear costs, vacant workforce units before 250 more are built, and a public process many can't participate in due to work schedules.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_e8370c3d-bc39-4acd-ac85-0854d3916528.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     letterAuthor: "Madelaine WhiteU",
@@ -613,8 +655,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 17, 2026",
     firstSeen: "2026-06-17",
     newsTopic: "community",
-    copy: "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
-    claudeSummary: false,
+    copy: "Telluride sits at the dead end of a box canyon with one paved evacuation route — Highway 145. Two proposed high-density developments in the canyon's southwest throat would add housing and vehicles near that single exit, with no public wildfire egress analysis completed. April snowpack in the basin hit 9% of its 30-year median, and a statewide drought emergency is active.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_0a47afcd-25ba-46c5-b953-131783c38019.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     letterAuthor: "Kate FedacU",
@@ -638,8 +680,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 17, 2026",
     firstSeen: "2026-06-17",
     newsTopic: "government",
-    copy: "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
-    claudeSummary: false,
+    copy: "A Telluride resident is endorsing Marya Stark for town council, citing her composure during the Telluride Ski and Golf labor dispute and her background in finance. The letter, signed by Dan Enright, points to her work ethic and ability to handle both high-pressure moments and routine municipal business.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_4723ca4f-db9e-4228-9168-b09c27162ec1.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     letterAuthor: "Dan Enright",
@@ -651,8 +693,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 17, 2026",
     firstSeen: "2026-06-17",
     newsTopic: "education",
-    copy: "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
-    claudeSummary: false,
+    copy: "Joanna Yonder has been elected to the SMPA District 3 board, succeeding Dave Alexander, who served 16 years. She thanked voters and volunteers, noting the campaign was built on community effort. She acknowledged the Western Slope faces complicated energy decisions ahead.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_d1d75e38-ec22-4340-bc9c-f94cb6a69bf4.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     letterAuthor: "Joanna Yonder",
@@ -664,8 +706,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 17, 2026",
     firstSeen: "2026-06-17",
     newsTopic: "education",
-    copy: "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
-    claudeSummary: false,
+    copy: "Joanna Yonder won the San Miguel Power Association District 3 board seat in the June 4 election, succeeding Dave Alexander, who served 16 years in the role. She credited community outreach for her campaign and acknowledged the Western Slope is entering a complicated period for energy.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_1090ef24-041f-45d1-8b55-ca2dd118b475.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/f9/8f939b57-1ce4-4bf3-89e3-efa596231507/6a32c73611113.image.jpg",
     letterAuthor: "Joanna Yonder",
@@ -2891,7 +2933,7 @@ const WILKINSON_EVENTS = [
   {
     title: "90s Movie Matinee: Space Jam",
     link: "https://telluridelibrary.libcal.com/event/15536159?hs=a",
-    description: "2:00 PM – 4:00 PM",
+    description: "A library screening of the beloved 1996 film *Space Jam*, featuring Michael Jordan and the Looney Tunes characters, part of the Wilkinson Public Library's 90s Movie Matinee series. The event takes place in the Program Room from 2:00 to 4:00 PM.",
     pubDate: "2026-06-20T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3185,7 +3227,7 @@ const ALIBI_EVENTS = [
   {
     title: "Codestar X Jasper - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "Telluride Mushroom Fest After Party",
+    description: "A late-night concert at The Alibi serving as an official after-party for Telluride Mushroom Fest, featuring Codestar and Jasper. The show kicks off at 9 PM as part of the wider Mushroom Fest festivities happening in Telluride.",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3197,7 +3239,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond, DROS + Alexander Karvelas",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Telluride Mushroom Fest Puff Ball After Party",
+    description: "An after-party for the Telluride Mushroom Festival, featuring live music from Thom LaFond, DROS, and Alexander Karvelas at The Alibi. The show begins at 9:30 PM and brings together multiple acts for a late-night celebration of the annual festival.",
     pubDate: "2026-08-15",
     time: "9:30 PM",
     source: "alibi",
@@ -3223,7 +3265,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Bluegrass Festival",
     link: "https://sheridanoperahouse.com/events/telluride-bluegrass-festival/",
-    description: "",
+    description: "The Telluride Bluegrass Festival presents a concert at the historic Sheridan Opera House. This performance is part of the renowned annual festival celebrating bluegrass music in Telluride.",
     pubDate: "2026-06-18",
     endDate: "2026-06-21",
     source: "sheridan",
@@ -3235,7 +3277,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "FREE Oak Street Park SummerSHOW Series: Elder Grown",
     link: "https://sheridanoperahouse.com/events/oak-street-park-summershow-series/",
-    description: "",
+    description: "The FREE Oak Street Park SummerSHOW Series presents Elder Grown at the Sheridan Opera House in Telluride. This concert is part of the free summer performance series offering live entertainment to the community.",
     pubDate: "2026-06-25",
     endDate: "undefined",
     source: "sheridan",
@@ -3247,7 +3289,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Theatre Muleskinner's Ball Fundraiser",
     link: "https://sheridanoperahouse.com/events/telluride-theatre-muleskinners-ball-fundraiser/",
-    description: "",
+    description: "Telluride Theatre hosts its Muleskinner's Ball fundraiser at the historic Sheridan Opera House, bringing together music and community to support the local theater organization. The event blends a lively ball-style atmosphere with fundraising for Telluride Theatre's programs and productions.",
     pubDate: "2026-06-27",
     endDate: "undefined",
     source: "sheridan",
@@ -4077,7 +4119,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-06-15-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "The Town of Norwood Planning and Zoning Commission will hold a public meeting to review development proposals, zoning applications, and land use matters affecting the community. This government meeting provides an opportunity for public input on planning decisions within Norwood's jurisdiction.",
     pubDate: "2026-06-15T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4088,7 +4130,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed In Observance Of 4th Of July",
     link: "https://www.norwoodtown.com/2026-07-02-closed-in-observance-of-4th-of-july",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of the 4th of July holiday. Residents should plan accordingly for any town services or offices they may need to access around this time.",
     pubDate: "2026-07-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4099,7 +4141,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Star Spangled Saturday Parade 11 Am",
     link: "https://www.norwoodtown.com/2026-07-04-star-spangled-saturday-parade-11-am",
-    description: "",
+    description: "The Town of Norwood hosts its annual Star Spangled Saturday Parade on the Fourth of July, stepping off at 11 a.m. This community celebration brings together residents and visitors to mark Independence Day with a traditional hometown parade through Norwood.",
     pubDate: "2026-07-04T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4110,7 +4152,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-07-08-board-of-trustees-meeting",
-    description: "",
+    description: "The Town of Norwood Board of Trustees will hold a regularly scheduled meeting in Norwood. Members of the public are welcome to attend this local government session, where town officials gather to conduct municipal business.",
     pubDate: "2026-07-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4121,7 +4163,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting Meeting",
     link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "A regularly scheduled public meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to observe or participate in district business.",
     pubDate: "2026-07-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4132,7 +4174,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4143,7 +4185,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4154,7 +4196,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4165,7 +4207,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4177,94 +4219,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Red, White & Blues- Fourth of July Celebration",
-    link: "https://townofmountainvillage.com/explore/events/all-events/red-white-blues-fourth-of-july-celebration/",
-    description: "The Telluride Mountain Village Owners Association offers a fun, free, family-friendly Fourth of July celebration.",
-    pubDate: "2026-06-19T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35378/screenshot_2026-06-09_at_9_49_43_am.png"
-  },
-  {
-    title: "Tease the Season - A Burlesque Show",
-    link: "https://townofmountainvillage.com/explore/events/all-events/tease-the-season-a-burlesque-show/",
-    description: "The Sheridan Arts Foundation and Telluride Theater presents Tease The Season: A Burlesque Show featuring the House of Shimmy Shake at the historic Sheridan",
-    pubDate: "2026-06-19T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47355/3.png"
-  },
-  {
-    title: "The Motet Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-motet-live-in-concert-2/",
-    description: "The Sheridan Arts Foundation presents The Motet Live in Concert Historic Sheridan Opera House Friday, January 9 Doors 7:30 PM | Show 8:30 PM After 26",
-    pubDate: "2026-06-19T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47707/2.jpg"
-  },
-  {
-    title: "Young People&#039;s Theater presents: \"Guys & Dolls\"",
-    link: "https://townofmountainvillage.com/explore/events/all-events/young-peoples-theater-guys-dolls/",
-    description: "The Sheridan Arts Foundation Young People’s Theater presents the high school production of Guys and Dolls at the historic Sheridan Opera House on Friday,",
-    pubDate: "2026-06-19T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47873/mv_to_jf-3.png"
-  },
-  {
-    title: "The Infamous Stringdusters Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-infamous-stringdusters-live-in-concert-4/",
-    description: "The Sheridan Arts Foundation presents The Infamous Stringdusters live in concert at the historic Sheridan Opera House on Friday, February 20; Saturday,",
-    pubDate: "2026-06-19T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48002/mv_to_jf-3.jpg"
-  },
-  {
-    title: "San Miguel County Spring Clean Up Events",
-    link: "https://townofmountainvillage.com/explore/events/all-events/san-miguel-county-spring-clean-up-events/",
-    description: "It's that time of year again! Join San Miguel County's Annual Spring Clean Up Events on Friday, May 15th in Telluride and Mountain Village and Saturday,",
-    pubDate: "2026-06-19T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48715/website_event_header.png"
-  },
-  {
-    title: "Wild West Fest Roundup Day",
-    link: "https://townofmountainvillage.com/explore/events/all-events/wild-west-fest-roundup-day/",
-    description: "Wild West Fest Roundup Day Free and open to the public! The Sheridan Arts Foundation Wild West Fest concludes with our Wild West Fest Roundup!",
-    pubDate: "2026-06-19T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48783/wild_west_fest_roundup_day_event_graphic.jpg"
-  },
-  {
-    title: "Mountain Village Oktoberfest",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-oktoberfest/",
-    description: "Save the date: Steins up, Mountain Village! On Saturday, October 10, 2026, we're transforming Mountain Village Center into a high-",
-    pubDate: "2026-06-20T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47057/mv_oktoberfest26_std_1900x1010.png"
-  },
-  {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
@@ -4274,50 +4228,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
-    title: "KOTO Lip Sync Contest",
-    link: "https://townofmountainvillage.com/explore/events/all-events/koto-lip-sync-contest/",
-    description: "KOTO FM presents its annual Lip Snyc on Saturday, January 31 at the Sheridan Opera House.",
-    pubDate: "2026-06-20T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47782/koto_lip_sync_contest_1800x900.png"
-  },
-  {
-    title: "Mountain Village Movie Night- \"Zootopia 2\"",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-movie-night/",
-    description: "In the final Mountain Village Movie night of the season, the Town of Mountain Village and Telluride Conference Center are proud to present a free screening of",
-    pubDate: "2026-06-20T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48027/zootopia-2-8k-2025-3840x2160-22622.jpg"
-  },
-  {
-    title: "Telluride Foundation Rundola: Run for Good",
-    link: "https://townofmountainvillage.com/explore/events/all-events/telluride-foundation-rundola-run-for-good/",
-    description: "Celebrate Independence Day with the Telluride Foundation at the 16th Annual Rundola on July 4th, 2026! This exciting uphill foot race supports the Good",
-    pubDate: "2026-06-20T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48757/rundola26_1800x900.jpg"
-  },
-  {
-    title: "The Fretliners Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-fretliners-live-in-concert-1/",
-    description: "The Sheridan Arts Foundation presents The Fretliners Live in Concert on Saturday, June 13, doors at 7:30 p.m. and show at 8:30 p.m. The Fretliners are a band",
-    pubDate: "2026-06-20T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48799/tfl_summer_press_26.jpeg"
   },
   {
     title: "Girl Scout Cookie Booth",
@@ -4340,17 +4250,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
-  },
-  {
-    title: "From Forest to Front Door: A Community Conversation on Wildfire Preparendess",
-    link: "https://townofmountainvillage.com/explore/events/all-events/from-forest-to-front-door-a-community-conversation-on-wildfire-preparendess/",
-    description: "The San Miguel County Office of Emergency Management and the Telluride Foundation are hosting a free panel discussion that will kick off the public comment",
-    pubDate: "2026-06-21T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48302/from_forest_to_front_door_tomv_1800_x_900_px.png"
   },
   {
     title: "Town Talk: Small Molecules at the Origins of Life",
@@ -4364,28 +4263,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48903/tt_logo_1048x802_a.png"
   },
   {
-    title: "TFF presents Village Film Nights",
-    link: "https://townofmountainvillage.com/explore/events/all-events/tff-presents-village-film-nights/",
-    description: "The Telluride Film Festival and Telluride Mountain Village Owners Association are proud to announce the first show of the 2026 Village Film Nights series with",
-    pubDate: "2026-06-24T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48524/project_hail_mary.png"
-  },
-  {
-    title: "Mountain Village Community Clean Up Day",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-community-clean-up-day/",
-    description: "The Town of Mountain Village will host two Community Clean Up Days on Wednesday, May 13, 2026, at Village Court Apartments and Thursday, May 14, 2026,",
-    pubDate: "2026-06-24T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/33734/clean_up_day_blog.png"
-  },
-  {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
@@ -4395,193 +4272,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
-  },
-  {
-    title: "Mountainfilm for Locals: Perspective Shifts",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountainfilm-for-locals-perspective-shifts/",
-    description: "Join Mountainfilm for Mountainfilm for Locals: Perspective Shifts, a free short film night for our local community. Wednesday, January 7,",
-    pubDate: "2026-06-24T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47727/mountainfilmforlocals.jpg"
-  },
-  {
-    title: "Black Pistol Fire Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/black-pistol-fire-live-in-concert-2/",
-    description: "Black Pistol Fire Live in Concert The Sheridan Arts Foundation presents Black Pistol Fire live in concert at the historic Sheridan Opera House on Wednesday,",
-    pubDate: "2026-06-24T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48004/mv_to_jf-4.png"
-  },
-  {
-    title: "Kitchen Dwellers Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/kitchen-dwellers-live-in-concert-2/",
-    description: "KITCHEN DWELLERS LIVE IN CONCERT With Magoo The Sheridan Arts Foundation presents Kitchen Dwellers live in concert at the historic Sheridan Opera House on",
-    pubDate: "2026-06-25T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47694/3.jpg"
-  },
-  {
-    title: "Western Medicine Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/western-medicine-live-in-concert/",
-    description: "The Sheridan Arts Foundation presents Western Medicine live in concert at the historic Sheridan Opera House on Thursday, February 19. Doors open at 7:30 p.m.,",
-    pubDate: "2026-06-25T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48000/mv_to_jf-2.jpg"
-  },
-  {
-    title: "The Brothers Comatose Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-brothers-comatose-live-in-concert/",
-    description: "The Sheridan Arts Foundation presents The Brothers Comatose live in concert at the historic Sheridan Opera House on Thursday, February 26.",
-    pubDate: "2026-06-25T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48006/mv_to_jf-5.png"
-  },
-  {
-    title: "Telluride Art Walk",
-    link: "https://townofmountainvillage.com/explore/events/all-events/telluride-art-walk-1/",
-    description: "Join in for Telluride Art Walk, an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists.",
-    pubDate: "2026-06-25T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48050/art_walk.png"
-  },
-  {
-    title: "Creative Exchange",
-    link: "https://townofmountainvillage.com/explore/events/all-events/creative-exchange/",
-    description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home.",
-    pubDate: "2026-06-25T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48052/creative_exchange-1.png"
-  },
-  {
-    title: "The House of Shimmy Shake features \"Remix\"",
-    link: "https://townofmountainvillage.com/explore/events/all-events/burlesque-week-remix-the-house-of-shimmy-shake/",
-    description: "Telluride Theatre's annual fundraiser resurrects the raucous and raunchy variety shows of Telluride’s vaudeville era, featuring dancing, comedy,",
-    pubDate: "2026-06-25T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48273/mv_graphic_-_remix.png"
-  },
-  {
-    title: "Galvin Cello Quartet",
-    link: "https://townofmountainvillage.com/explore/events/all-events/galvin-cello-quartet/",
-    description: "This concert features a program based around famous music for piano that has been stunningly arranged for four cellos. Performed by the multi award-",
-    pubDate: "2026-06-25T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48307/galvin_quartet.jpg"
-  },
-  {
-    title: "Big Something Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/big-something-live-in-concert/",
-    description: "The Sheridan Arts Foundation presents Big Something Live in Concert at the historic Sheridan Opera House on Thursday, March 12th & Friday the 13th.",
-    pubDate: "2026-06-25T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48320/mv-10.png"
-  },
-  {
-    title: "Red, White & Blues- Fourth of July Celebration",
-    link: "https://townofmountainvillage.com/explore/events/all-events/red-white-blues-fourth-of-july-celebration/",
-    description: "The Telluride Mountain Village Owners Association offers a fun, free, family-friendly Fourth of July celebration.",
-    pubDate: "2026-06-26T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35378/screenshot_2026-06-09_at_9_49_43_am.png"
-  },
-  {
-    title: "Tease the Season - A Burlesque Show",
-    link: "https://townofmountainvillage.com/explore/events/all-events/tease-the-season-a-burlesque-show/",
-    description: "The Sheridan Arts Foundation and Telluride Theater presents Tease The Season: A Burlesque Show featuring the House of Shimmy Shake at the historic Sheridan",
-    pubDate: "2026-06-26T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47355/3.png"
-  },
-  {
-    title: "The Motet Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-motet-live-in-concert-2/",
-    description: "The Sheridan Arts Foundation presents The Motet Live in Concert Historic Sheridan Opera House Friday, January 9 Doors 7:30 PM | Show 8:30 PM After 26",
-    pubDate: "2026-06-26T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47707/2.jpg"
-  },
-  {
-    title: "Young People&#039;s Theater presents: \"Guys & Dolls\"",
-    link: "https://townofmountainvillage.com/explore/events/all-events/young-peoples-theater-guys-dolls/",
-    description: "The Sheridan Arts Foundation Young People’s Theater presents the high school production of Guys and Dolls at the historic Sheridan Opera House on Friday,",
-    pubDate: "2026-06-26T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47873/mv_to_jf-3.png"
-  },
-  {
-    title: "The Infamous Stringdusters Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-infamous-stringdusters-live-in-concert-4/",
-    description: "The Sheridan Arts Foundation presents The Infamous Stringdusters live in concert at the historic Sheridan Opera House on Friday, February 20; Saturday,",
-    pubDate: "2026-06-26T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48002/mv_to_jf-3.jpg"
-  },
-  {
-    title: "San Miguel County Spring Clean Up Events",
-    link: "https://townofmountainvillage.com/explore/events/all-events/san-miguel-county-spring-clean-up-events/",
-    description: "It's that time of year again! Join San Miguel County's Annual Spring Clean Up Events on Friday, May 15th in Telluride and Mountain Village and Saturday,",
-    pubDate: "2026-06-26T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48715/website_event_header.png"
-  },
-  {
-    title: "Wild West Fest Roundup Day",
-    link: "https://townofmountainvillage.com/explore/events/all-events/wild-west-fest-roundup-day/",
-    description: "Wild West Fest Roundup Day Free and open to the public! The Sheridan Arts Foundation Wild West Fest concludes with our Wild West Fest Roundup!",
-    pubDate: "2026-06-26T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48783/wild_west_fest_roundup_day_event_graphic.jpg"
   },
   {
     title: "Music on the Green Presents LVDY",
@@ -4595,17 +4285,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48851/ldvy_1800x900px_1.png"
   },
   {
-    title: "Mountain Village Oktoberfest",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-oktoberfest/",
-    description: "Save the date: Steins up, Mountain Village! On Saturday, October 10, 2026, we're transforming Mountain Village Center into a high-",
-    pubDate: "2026-06-27T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47057/mv_oktoberfest26_std_1900x1010.png"
-  },
-  {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
@@ -4615,50 +4294,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
-    title: "KOTO Lip Sync Contest",
-    link: "https://townofmountainvillage.com/explore/events/all-events/koto-lip-sync-contest/",
-    description: "KOTO FM presents its annual Lip Snyc on Saturday, January 31 at the Sheridan Opera House.",
-    pubDate: "2026-06-27T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47782/koto_lip_sync_contest_1800x900.png"
-  },
-  {
-    title: "Mountain Village Movie Night- \"Zootopia 2\"",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-movie-night/",
-    description: "In the final Mountain Village Movie night of the season, the Town of Mountain Village and Telluride Conference Center are proud to present a free screening of",
-    pubDate: "2026-06-27T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48027/zootopia-2-8k-2025-3840x2160-22622.jpg"
-  },
-  {
-    title: "Telluride Foundation Rundola: Run for Good",
-    link: "https://townofmountainvillage.com/explore/events/all-events/telluride-foundation-rundola-run-for-good/",
-    description: "Celebrate Independence Day with the Telluride Foundation at the 16th Annual Rundola on July 4th, 2026! This exciting uphill foot race supports the Good",
-    pubDate: "2026-06-27T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48757/rundola26_1800x900.jpg"
-  },
-  {
-    title: "The Fretliners Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-fretliners-live-in-concert-1/",
-    description: "The Sheridan Arts Foundation presents The Fretliners Live in Concert on Saturday, June 13, doors at 7:30 p.m. and show at 8:30 p.m. The Fretliners are a band",
-    pubDate: "2026-06-27T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48799/tfl_summer_press_26.jpeg"
   },
   {
     title: "Girl Scout Cookie Booth",
@@ -4681,17 +4316,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
-  },
-  {
-    title: "From Forest to Front Door: A Community Conversation on Wildfire Preparendess",
-    link: "https://townofmountainvillage.com/explore/events/all-events/from-forest-to-front-door-a-community-conversation-on-wildfire-preparendess/",
-    description: "The San Miguel County Office of Emergency Management and the Telluride Foundation are hosting a free panel discussion that will kick off the public comment",
-    pubDate: "2026-06-28T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48302/from_forest_to_front_door_tomv_1800_x_900_px.png"
   },
   {
     title: "The Muleskinner&#039;s Ball (GALA Fundraiser for Telluride Theatre)",
@@ -4716,28 +4340,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48905/tt_logo_1048x802_a.png"
   },
   {
-    title: "TFF presents Village Film Nights",
-    link: "https://townofmountainvillage.com/explore/events/all-events/tff-presents-village-film-nights/",
-    description: "The Telluride Film Festival and Telluride Mountain Village Owners Association are proud to announce the first show of the 2026 Village Film Nights series with",
-    pubDate: "2026-07-01T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48524/project_hail_mary.png"
-  },
-  {
-    title: "Mountain Village Community Clean Up Day",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-community-clean-up-day/",
-    description: "The Town of Mountain Village will host two Community Clean Up Days on Wednesday, May 13, 2026, at Village Court Apartments and Thursday, May 14, 2026,",
-    pubDate: "2026-07-01T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/33734/clean_up_day_blog.png"
-  },
-  {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
@@ -4747,193 +4349,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
-  },
-  {
-    title: "Mountainfilm for Locals: Perspective Shifts",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountainfilm-for-locals-perspective-shifts/",
-    description: "Join Mountainfilm for Mountainfilm for Locals: Perspective Shifts, a free short film night for our local community. Wednesday, January 7,",
-    pubDate: "2026-07-01T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47727/mountainfilmforlocals.jpg"
-  },
-  {
-    title: "Black Pistol Fire Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/black-pistol-fire-live-in-concert-2/",
-    description: "Black Pistol Fire Live in Concert The Sheridan Arts Foundation presents Black Pistol Fire live in concert at the historic Sheridan Opera House on Wednesday,",
-    pubDate: "2026-07-01T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48004/mv_to_jf-4.png"
-  },
-  {
-    title: "Kitchen Dwellers Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/kitchen-dwellers-live-in-concert-2/",
-    description: "KITCHEN DWELLERS LIVE IN CONCERT With Magoo The Sheridan Arts Foundation presents Kitchen Dwellers live in concert at the historic Sheridan Opera House on",
-    pubDate: "2026-07-02T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47694/3.jpg"
-  },
-  {
-    title: "Western Medicine Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/western-medicine-live-in-concert/",
-    description: "The Sheridan Arts Foundation presents Western Medicine live in concert at the historic Sheridan Opera House on Thursday, February 19. Doors open at 7:30 p.m.,",
-    pubDate: "2026-07-02T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48000/mv_to_jf-2.jpg"
-  },
-  {
-    title: "The Brothers Comatose Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-brothers-comatose-live-in-concert/",
-    description: "The Sheridan Arts Foundation presents The Brothers Comatose live in concert at the historic Sheridan Opera House on Thursday, February 26.",
-    pubDate: "2026-07-02T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48006/mv_to_jf-5.png"
-  },
-  {
-    title: "Telluride Art Walk",
-    link: "https://townofmountainvillage.com/explore/events/all-events/telluride-art-walk-1/",
-    description: "Join in for Telluride Art Walk, an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists.",
-    pubDate: "2026-07-02T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48050/art_walk.png"
-  },
-  {
-    title: "Creative Exchange",
-    link: "https://townofmountainvillage.com/explore/events/all-events/creative-exchange/",
-    description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home.",
-    pubDate: "2026-07-02T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48052/creative_exchange-1.png"
-  },
-  {
-    title: "The House of Shimmy Shake features \"Remix\"",
-    link: "https://townofmountainvillage.com/explore/events/all-events/burlesque-week-remix-the-house-of-shimmy-shake/",
-    description: "Telluride Theatre's annual fundraiser resurrects the raucous and raunchy variety shows of Telluride’s vaudeville era, featuring dancing, comedy,",
-    pubDate: "2026-07-02T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48273/mv_graphic_-_remix.png"
-  },
-  {
-    title: "Galvin Cello Quartet",
-    link: "https://townofmountainvillage.com/explore/events/all-events/galvin-cello-quartet/",
-    description: "This concert features a program based around famous music for piano that has been stunningly arranged for four cellos. Performed by the multi award-",
-    pubDate: "2026-07-02T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48307/galvin_quartet.jpg"
-  },
-  {
-    title: "Big Something Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/big-something-live-in-concert/",
-    description: "The Sheridan Arts Foundation presents Big Something Live in Concert at the historic Sheridan Opera House on Thursday, March 12th & Friday the 13th.",
-    pubDate: "2026-07-02T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48320/mv-10.png"
-  },
-  {
-    title: "Red, White & Blues- Fourth of July Celebration",
-    link: "https://townofmountainvillage.com/explore/events/all-events/red-white-blues-fourth-of-july-celebration/",
-    description: "The Telluride Mountain Village Owners Association offers a fun, free, family-friendly Fourth of July celebration.",
-    pubDate: "2026-07-03T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35378/screenshot_2026-06-09_at_9_49_43_am.png"
-  },
-  {
-    title: "Tease the Season - A Burlesque Show",
-    link: "https://townofmountainvillage.com/explore/events/all-events/tease-the-season-a-burlesque-show/",
-    description: "The Sheridan Arts Foundation and Telluride Theater presents Tease The Season: A Burlesque Show featuring the House of Shimmy Shake at the historic Sheridan",
-    pubDate: "2026-07-03T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47355/3.png"
-  },
-  {
-    title: "The Motet Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-motet-live-in-concert-2/",
-    description: "The Sheridan Arts Foundation presents The Motet Live in Concert Historic Sheridan Opera House Friday, January 9 Doors 7:30 PM | Show 8:30 PM After 26",
-    pubDate: "2026-07-03T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47707/2.jpg"
-  },
-  {
-    title: "Young People&#039;s Theater presents: \"Guys & Dolls\"",
-    link: "https://townofmountainvillage.com/explore/events/all-events/young-peoples-theater-guys-dolls/",
-    description: "The Sheridan Arts Foundation Young People’s Theater presents the high school production of Guys and Dolls at the historic Sheridan Opera House on Friday,",
-    pubDate: "2026-07-03T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47873/mv_to_jf-3.png"
-  },
-  {
-    title: "The Infamous Stringdusters Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-infamous-stringdusters-live-in-concert-4/",
-    description: "The Sheridan Arts Foundation presents The Infamous Stringdusters live in concert at the historic Sheridan Opera House on Friday, February 20; Saturday,",
-    pubDate: "2026-07-03T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48002/mv_to_jf-3.jpg"
-  },
-  {
-    title: "San Miguel County Spring Clean Up Events",
-    link: "https://townofmountainvillage.com/explore/events/all-events/san-miguel-county-spring-clean-up-events/",
-    description: "It's that time of year again! Join San Miguel County's Annual Spring Clean Up Events on Friday, May 15th in Telluride and Mountain Village and Saturday,",
-    pubDate: "2026-07-03T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48715/website_event_header.png"
-  },
-  {
-    title: "Wild West Fest Roundup Day",
-    link: "https://townofmountainvillage.com/explore/events/all-events/wild-west-fest-roundup-day/",
-    description: "Wild West Fest Roundup Day Free and open to the public! The Sheridan Arts Foundation Wild West Fest concludes with our Wild West Fest Roundup!",
-    pubDate: "2026-07-03T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48783/wild_west_fest_roundup_day_event_graphic.jpg"
   },
   {
     title: "6th Annual Alpine Cookout",
@@ -4947,17 +4362,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48895/untitled_design_1.png"
   },
   {
-    title: "Mountain Village Oktoberfest",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-oktoberfest/",
-    description: "Save the date: Steins up, Mountain Village! On Saturday, October 10, 2026, we're transforming Mountain Village Center into a high-",
-    pubDate: "2026-07-04T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47057/mv_oktoberfest26_std_1900x1010.png"
-  },
-  {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
@@ -4969,28 +4373,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
   },
   {
-    title: "KOTO Lip Sync Contest",
-    link: "https://townofmountainvillage.com/explore/events/all-events/koto-lip-sync-contest/",
-    description: "KOTO FM presents its annual Lip Snyc on Saturday, January 31 at the Sheridan Opera House.",
-    pubDate: "2026-07-04T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47782/koto_lip_sync_contest_1800x900.png"
-  },
-  {
-    title: "Mountain Village Movie Night- \"Zootopia 2\"",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-movie-night/",
-    description: "In the final Mountain Village Movie night of the season, the Town of Mountain Village and Telluride Conference Center are proud to present a free screening of",
-    pubDate: "2026-07-04T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48027/zootopia-2-8k-2025-3840x2160-22622.jpg"
-  },
-  {
     title: "Telluride Foundation Rundola: Run for Good",
     link: "https://townofmountainvillage.com/explore/events/all-events/telluride-foundation-rundola-run-for-good/",
     description: "Celebrate Independence Day with the Telluride Foundation at the 16th Annual Rundola on July 4th, 2026! This exciting uphill foot race supports the Good",
@@ -5000,17 +4382,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48757/rundola26_1800x900.jpg"
-  },
-  {
-    title: "The Fretliners Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-fretliners-live-in-concert-1/",
-    description: "The Sheridan Arts Foundation presents The Fretliners Live in Concert on Saturday, June 13, doors at 7:30 p.m. and show at 8:30 p.m. The Fretliners are a band",
-    pubDate: "2026-07-04T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48799/tfl_summer_press_26.jpeg"
   },
   {
     title: "Girl Scout Cookie Booth",
@@ -5033,17 +4404,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
-  },
-  {
-    title: "From Forest to Front Door: A Community Conversation on Wildfire Preparendess",
-    link: "https://townofmountainvillage.com/explore/events/all-events/from-forest-to-front-door-a-community-conversation-on-wildfire-preparendess/",
-    description: "The San Miguel County Office of Emergency Management and the Telluride Foundation are hosting a free panel discussion that will kick off the public comment",
-    pubDate: "2026-07-05T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48302/from_forest_to_front_door_tomv_1800_x_900_px.png"
   },
   {
     title: "MusicFest",
@@ -5057,28 +4417,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48604/musicfest.jpg"
   },
   {
-    title: "TFF presents Village Film Nights",
-    link: "https://townofmountainvillage.com/explore/events/all-events/tff-presents-village-film-nights/",
-    description: "The Telluride Film Festival and Telluride Mountain Village Owners Association are proud to announce the first show of the 2026 Village Film Nights series with",
-    pubDate: "2026-07-08T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48524/project_hail_mary.png"
-  },
-  {
-    title: "Mountain Village Community Clean Up Day",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-community-clean-up-day/",
-    description: "The Town of Mountain Village will host two Community Clean Up Days on Wednesday, May 13, 2026, at Village Court Apartments and Thursday, May 14, 2026,",
-    pubDate: "2026-07-08T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/33734/clean_up_day_blog.png"
-  },
-  {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
@@ -5090,204 +4428,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   },
   {
-    title: "Mountainfilm for Locals: Perspective Shifts",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountainfilm-for-locals-perspective-shifts/",
-    description: "Join Mountainfilm for Mountainfilm for Locals: Perspective Shifts, a free short film night for our local community. Wednesday, January 7,",
-    pubDate: "2026-07-08T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47727/mountainfilmforlocals.jpg"
-  },
-  {
-    title: "Black Pistol Fire Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/black-pistol-fire-live-in-concert-2/",
-    description: "Black Pistol Fire Live in Concert The Sheridan Arts Foundation presents Black Pistol Fire live in concert at the historic Sheridan Opera House on Wednesday,",
-    pubDate: "2026-07-08T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48004/mv_to_jf-4.png"
-  },
-  {
-    title: "Kitchen Dwellers Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/kitchen-dwellers-live-in-concert-2/",
-    description: "KITCHEN DWELLERS LIVE IN CONCERT With Magoo The Sheridan Arts Foundation presents Kitchen Dwellers live in concert at the historic Sheridan Opera House on",
-    pubDate: "2026-07-09T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47694/3.jpg"
-  },
-  {
-    title: "Western Medicine Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/western-medicine-live-in-concert/",
-    description: "The Sheridan Arts Foundation presents Western Medicine live in concert at the historic Sheridan Opera House on Thursday, February 19. Doors open at 7:30 p.m.,",
-    pubDate: "2026-07-09T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48000/mv_to_jf-2.jpg"
-  },
-  {
-    title: "The Brothers Comatose Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-brothers-comatose-live-in-concert/",
-    description: "The Sheridan Arts Foundation presents The Brothers Comatose live in concert at the historic Sheridan Opera House on Thursday, February 26.",
-    pubDate: "2026-07-09T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48006/mv_to_jf-5.png"
-  },
-  {
-    title: "Telluride Art Walk",
-    link: "https://townofmountainvillage.com/explore/events/all-events/telluride-art-walk-1/",
-    description: "Join in for Telluride Art Walk, an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists.",
-    pubDate: "2026-07-09T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48050/art_walk.png"
-  },
-  {
-    title: "Creative Exchange",
-    link: "https://townofmountainvillage.com/explore/events/all-events/creative-exchange/",
-    description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home.",
-    pubDate: "2026-07-09T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48052/creative_exchange-1.png"
-  },
-  {
-    title: "The House of Shimmy Shake features \"Remix\"",
-    link: "https://townofmountainvillage.com/explore/events/all-events/burlesque-week-remix-the-house-of-shimmy-shake/",
-    description: "Telluride Theatre's annual fundraiser resurrects the raucous and raunchy variety shows of Telluride’s vaudeville era, featuring dancing, comedy,",
-    pubDate: "2026-07-09T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48273/mv_graphic_-_remix.png"
-  },
-  {
-    title: "Galvin Cello Quartet",
-    link: "https://townofmountainvillage.com/explore/events/all-events/galvin-cello-quartet/",
-    description: "This concert features a program based around famous music for piano that has been stunningly arranged for four cellos. Performed by the multi award-",
-    pubDate: "2026-07-09T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48307/galvin_quartet.jpg"
-  },
-  {
-    title: "Big Something Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/big-something-live-in-concert/",
-    description: "The Sheridan Arts Foundation presents Big Something Live in Concert at the historic Sheridan Opera House on Thursday, March 12th & Friday the 13th.",
-    pubDate: "2026-07-09T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48320/mv-10.png"
-  },
-  {
-    title: "Red, White & Blues- Fourth of July Celebration",
-    link: "https://townofmountainvillage.com/explore/events/all-events/red-white-blues-fourth-of-july-celebration/",
-    description: "The Telluride Mountain Village Owners Association offers a fun, free, family-friendly Fourth of July celebration.",
-    pubDate: "2026-07-10T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35378/screenshot_2026-06-09_at_9_49_43_am.png"
-  },
-  {
-    title: "Tease the Season - A Burlesque Show",
-    link: "https://townofmountainvillage.com/explore/events/all-events/tease-the-season-a-burlesque-show/",
-    description: "The Sheridan Arts Foundation and Telluride Theater presents Tease The Season: A Burlesque Show featuring the House of Shimmy Shake at the historic Sheridan",
-    pubDate: "2026-07-10T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47355/3.png"
-  },
-  {
-    title: "The Motet Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-motet-live-in-concert-2/",
-    description: "The Sheridan Arts Foundation presents The Motet Live in Concert Historic Sheridan Opera House Friday, January 9 Doors 7:30 PM | Show 8:30 PM After 26",
-    pubDate: "2026-07-10T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47707/2.jpg"
-  },
-  {
-    title: "Young People&#039;s Theater presents: \"Guys & Dolls\"",
-    link: "https://townofmountainvillage.com/explore/events/all-events/young-peoples-theater-guys-dolls/",
-    description: "The Sheridan Arts Foundation Young People’s Theater presents the high school production of Guys and Dolls at the historic Sheridan Opera House on Friday,",
-    pubDate: "2026-07-10T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47873/mv_to_jf-3.png"
-  },
-  {
-    title: "The Infamous Stringdusters Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-infamous-stringdusters-live-in-concert-4/",
-    description: "The Sheridan Arts Foundation presents The Infamous Stringdusters live in concert at the historic Sheridan Opera House on Friday, February 20; Saturday,",
-    pubDate: "2026-07-10T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48002/mv_to_jf-3.jpg"
-  },
-  {
-    title: "San Miguel County Spring Clean Up Events",
-    link: "https://townofmountainvillage.com/explore/events/all-events/san-miguel-county-spring-clean-up-events/",
-    description: "It's that time of year again! Join San Miguel County's Annual Spring Clean Up Events on Friday, May 15th in Telluride and Mountain Village and Saturday,",
-    pubDate: "2026-07-10T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48715/website_event_header.png"
-  },
-  {
-    title: "Wild West Fest Roundup Day",
-    link: "https://townofmountainvillage.com/explore/events/all-events/wild-west-fest-roundup-day/",
-    description: "Wild West Fest Roundup Day Free and open to the public! The Sheridan Arts Foundation Wild West Fest concludes with our Wild West Fest Roundup!",
-    pubDate: "2026-07-10T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48783/wild_west_fest_roundup_day_event_graphic.jpg"
-  },
-  {
-    title: "Mountain Village Oktoberfest",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-oktoberfest/",
-    description: "Save the date: Steins up, Mountain Village! On Saturday, October 10, 2026, we're transforming Mountain Village Center into a high-",
-    pubDate: "2026-07-11T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47057/mv_oktoberfest26_std_1900x1010.png"
-  },
-  {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
@@ -5297,50 +4437,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
-    title: "KOTO Lip Sync Contest",
-    link: "https://townofmountainvillage.com/explore/events/all-events/koto-lip-sync-contest/",
-    description: "KOTO FM presents its annual Lip Snyc on Saturday, January 31 at the Sheridan Opera House.",
-    pubDate: "2026-07-11T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47782/koto_lip_sync_contest_1800x900.png"
-  },
-  {
-    title: "Mountain Village Movie Night- \"Zootopia 2\"",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-movie-night/",
-    description: "In the final Mountain Village Movie night of the season, the Town of Mountain Village and Telluride Conference Center are proud to present a free screening of",
-    pubDate: "2026-07-11T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48027/zootopia-2-8k-2025-3840x2160-22622.jpg"
-  },
-  {
-    title: "Telluride Foundation Rundola: Run for Good",
-    link: "https://townofmountainvillage.com/explore/events/all-events/telluride-foundation-rundola-run-for-good/",
-    description: "Celebrate Independence Day with the Telluride Foundation at the 16th Annual Rundola on July 4th, 2026! This exciting uphill foot race supports the Good",
-    pubDate: "2026-07-11T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48757/rundola26_1800x900.jpg"
-  },
-  {
-    title: "The Fretliners Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-fretliners-live-in-concert-1/",
-    description: "The Sheridan Arts Foundation presents The Fretliners Live in Concert on Saturday, June 13, doors at 7:30 p.m. and show at 8:30 p.m. The Fretliners are a band",
-    pubDate: "2026-07-11T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48799/tfl_summer_press_26.jpeg"
   },
   {
     title: "Girl Scout Cookie Booth",
@@ -5363,17 +4459,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
-  },
-  {
-    title: "From Forest to Front Door: A Community Conversation on Wildfire Preparendess",
-    link: "https://townofmountainvillage.com/explore/events/all-events/from-forest-to-front-door-a-community-conversation-on-wildfire-preparendess/",
-    description: "The San Miguel County Office of Emergency Management and the Telluride Foundation are hosting a free panel discussion that will kick off the public comment",
-    pubDate: "2026-07-12T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48302/from_forest_to_front_door_tomv_1800_x_900_px.png"
   },
   {
     title: "Mountain Village Merchant Meeting",
@@ -5387,28 +4472,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png"
   },
   {
-    title: "TFF presents Village Film Nights",
-    link: "https://townofmountainvillage.com/explore/events/all-events/tff-presents-village-film-nights/",
-    description: "The Telluride Film Festival and Telluride Mountain Village Owners Association are proud to announce the first show of the 2026 Village Film Nights series with",
-    pubDate: "2026-07-15T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48524/project_hail_mary.png"
-  },
-  {
-    title: "Mountain Village Community Clean Up Day",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-community-clean-up-day/",
-    description: "The Town of Mountain Village will host two Community Clean Up Days on Wednesday, May 13, 2026, at Village Court Apartments and Thursday, May 14, 2026,",
-    pubDate: "2026-07-15T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/33734/clean_up_day_blog.png"
-  },
-  {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
@@ -5418,182 +4481,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
-  },
-  {
-    title: "Mountainfilm for Locals: Perspective Shifts",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountainfilm-for-locals-perspective-shifts/",
-    description: "Join Mountainfilm for Mountainfilm for Locals: Perspective Shifts, a free short film night for our local community. Wednesday, January 7,",
-    pubDate: "2026-07-15T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47727/mountainfilmforlocals.jpg"
-  },
-  {
-    title: "Black Pistol Fire Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/black-pistol-fire-live-in-concert-2/",
-    description: "Black Pistol Fire Live in Concert The Sheridan Arts Foundation presents Black Pistol Fire live in concert at the historic Sheridan Opera House on Wednesday,",
-    pubDate: "2026-07-15T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48004/mv_to_jf-4.png"
-  },
-  {
-    title: "Kitchen Dwellers Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/kitchen-dwellers-live-in-concert-2/",
-    description: "KITCHEN DWELLERS LIVE IN CONCERT With Magoo The Sheridan Arts Foundation presents Kitchen Dwellers live in concert at the historic Sheridan Opera House on",
-    pubDate: "2026-07-16T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47694/3.jpg"
-  },
-  {
-    title: "Western Medicine Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/western-medicine-live-in-concert/",
-    description: "The Sheridan Arts Foundation presents Western Medicine live in concert at the historic Sheridan Opera House on Thursday, February 19. Doors open at 7:30 p.m.,",
-    pubDate: "2026-07-16T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48000/mv_to_jf-2.jpg"
-  },
-  {
-    title: "The Brothers Comatose Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-brothers-comatose-live-in-concert/",
-    description: "The Sheridan Arts Foundation presents The Brothers Comatose live in concert at the historic Sheridan Opera House on Thursday, February 26.",
-    pubDate: "2026-07-16T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48006/mv_to_jf-5.png"
-  },
-  {
-    title: "Telluride Art Walk",
-    link: "https://townofmountainvillage.com/explore/events/all-events/telluride-art-walk-1/",
-    description: "Join in for Telluride Art Walk, an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists.",
-    pubDate: "2026-07-16T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48050/art_walk.png"
-  },
-  {
-    title: "Creative Exchange",
-    link: "https://townofmountainvillage.com/explore/events/all-events/creative-exchange/",
-    description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home.",
-    pubDate: "2026-07-16T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48052/creative_exchange-1.png"
-  },
-  {
-    title: "The House of Shimmy Shake features \"Remix\"",
-    link: "https://townofmountainvillage.com/explore/events/all-events/burlesque-week-remix-the-house-of-shimmy-shake/",
-    description: "Telluride Theatre's annual fundraiser resurrects the raucous and raunchy variety shows of Telluride’s vaudeville era, featuring dancing, comedy,",
-    pubDate: "2026-07-16T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48273/mv_graphic_-_remix.png"
-  },
-  {
-    title: "Galvin Cello Quartet",
-    link: "https://townofmountainvillage.com/explore/events/all-events/galvin-cello-quartet/",
-    description: "This concert features a program based around famous music for piano that has been stunningly arranged for four cellos. Performed by the multi award-",
-    pubDate: "2026-07-16T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48307/galvin_quartet.jpg"
-  },
-  {
-    title: "Big Something Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/big-something-live-in-concert/",
-    description: "The Sheridan Arts Foundation presents Big Something Live in Concert at the historic Sheridan Opera House on Thursday, March 12th & Friday the 13th.",
-    pubDate: "2026-07-16T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48320/mv-10.png"
-  },
-  {
-    title: "Red, White & Blues- Fourth of July Celebration",
-    link: "https://townofmountainvillage.com/explore/events/all-events/red-white-blues-fourth-of-july-celebration/",
-    description: "The Telluride Mountain Village Owners Association offers a fun, free, family-friendly Fourth of July celebration.",
-    pubDate: "2026-07-17T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35378/screenshot_2026-06-09_at_9_49_43_am.png"
-  },
-  {
-    title: "Tease the Season - A Burlesque Show",
-    link: "https://townofmountainvillage.com/explore/events/all-events/tease-the-season-a-burlesque-show/",
-    description: "The Sheridan Arts Foundation and Telluride Theater presents Tease The Season: A Burlesque Show featuring the House of Shimmy Shake at the historic Sheridan",
-    pubDate: "2026-07-17T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47355/3.png"
-  },
-  {
-    title: "The Motet Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-motet-live-in-concert-2/",
-    description: "The Sheridan Arts Foundation presents The Motet Live in Concert Historic Sheridan Opera House Friday, January 9 Doors 7:30 PM | Show 8:30 PM After 26",
-    pubDate: "2026-07-17T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47707/2.jpg"
-  },
-  {
-    title: "Young People&#039;s Theater presents: \"Guys & Dolls\"",
-    link: "https://townofmountainvillage.com/explore/events/all-events/young-peoples-theater-guys-dolls/",
-    description: "The Sheridan Arts Foundation Young People’s Theater presents the high school production of Guys and Dolls at the historic Sheridan Opera House on Friday,",
-    pubDate: "2026-07-17T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47873/mv_to_jf-3.png"
-  },
-  {
-    title: "The Infamous Stringdusters Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-infamous-stringdusters-live-in-concert-4/",
-    description: "The Sheridan Arts Foundation presents The Infamous Stringdusters live in concert at the historic Sheridan Opera House on Friday, February 20; Saturday,",
-    pubDate: "2026-07-17T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48002/mv_to_jf-3.jpg"
-  },
-  {
-    title: "San Miguel County Spring Clean Up Events",
-    link: "https://townofmountainvillage.com/explore/events/all-events/san-miguel-county-spring-clean-up-events/",
-    description: "It's that time of year again! Join San Miguel County's Annual Spring Clean Up Events on Friday, May 15th in Telluride and Mountain Village and Saturday,",
-    pubDate: "2026-07-17T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48715/website_event_header.png"
   },
   {
     title: "Randy Houser Benefit Concert",
@@ -5607,17 +4494,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48771/tomv_1800x900.jpg"
   },
   {
-    title: "Wild West Fest Roundup Day",
-    link: "https://townofmountainvillage.com/explore/events/all-events/wild-west-fest-roundup-day/",
-    description: "Wild West Fest Roundup Day Free and open to the public! The Sheridan Arts Foundation Wild West Fest concludes with our Wild West Fest Roundup!",
-    pubDate: "2026-07-17T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48783/wild_west_fest_roundup_day_event_graphic.jpg"
-  },
-  {
     title: "Music on the Green Presents Sway Wild",
     link: "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-sway-wild/",
     description: "Beyond the Groove Productions and the Telluride Mountain Village Owners Association (TMVOA) present Music on the Green with Sway Wild on Friday, July 17,",
@@ -5629,17 +4505,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48853/sway_wild_1800x900px_1.png"
   },
   {
-    title: "Mountain Village Oktoberfest",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-oktoberfest/",
-    description: "Save the date: Steins up, Mountain Village! On Saturday, October 10, 2026, we're transforming Mountain Village Center into a high-",
-    pubDate: "2026-07-18T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47057/mv_oktoberfest26_std_1900x1010.png"
-  },
-  {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
@@ -5649,50 +4514,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
-    title: "KOTO Lip Sync Contest",
-    link: "https://townofmountainvillage.com/explore/events/all-events/koto-lip-sync-contest/",
-    description: "KOTO FM presents its annual Lip Snyc on Saturday, January 31 at the Sheridan Opera House.",
-    pubDate: "2026-07-18T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47782/koto_lip_sync_contest_1800x900.png"
-  },
-  {
-    title: "Mountain Village Movie Night- \"Zootopia 2\"",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-movie-night/",
-    description: "In the final Mountain Village Movie night of the season, the Town of Mountain Village and Telluride Conference Center are proud to present a free screening of",
-    pubDate: "2026-07-18T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48027/zootopia-2-8k-2025-3840x2160-22622.jpg"
-  },
-  {
-    title: "Telluride Foundation Rundola: Run for Good",
-    link: "https://townofmountainvillage.com/explore/events/all-events/telluride-foundation-rundola-run-for-good/",
-    description: "Celebrate Independence Day with the Telluride Foundation at the 16th Annual Rundola on July 4th, 2026! This exciting uphill foot race supports the Good",
-    pubDate: "2026-07-18T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48757/rundola26_1800x900.jpg"
-  },
-  {
-    title: "The Fretliners Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-fretliners-live-in-concert-1/",
-    description: "The Sheridan Arts Foundation presents The Fretliners Live in Concert on Saturday, June 13, doors at 7:30 p.m. and show at 8:30 p.m. The Fretliners are a band",
-    pubDate: "2026-07-18T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48799/tfl_summer_press_26.jpeg"
   },
   {
     title: "Girl Scout Cookie Booth",
@@ -5715,18 +4536,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
-  },
-  {
-    title: "From Forest to Front Door: A Community Conversation on Wildfire Preparendess",
-    link: "https://townofmountainvillage.com/explore/events/all-events/from-forest-to-front-door-a-community-conversation-on-wildfire-preparendess/",
-    description: "The San Miguel County Office of Emergency Management and the Telluride Foundation are hosting a free panel discussion that will kick off the public comment",
-    pubDate: "2026-07-19T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48302/from_forest_to_front_door_tomv_1800_x_900_px.png"
-  },
+  }
 ];
 
 const TELLURIDE_COM_EVENTS = [
@@ -6129,7 +4939,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Dinner and a Magic Show With Ty Gallenbeck",
     link: "https://www.telluride.com/event/dinner-and-a-magic-show-with-ty-gallenbeck/",
-    description: "A 3-course wine paired dinner followed by a VIP Magic show with Ty Gallenbeck.",
+    description: "Enjoy a three-course wine-paired dinner followed by a VIP magic show featuring performer Ty Gallenbeck in Telluride. This community event combines fine dining with live entertainment for an evening of food and magic.",
     pubDate: "2026-06-27",
     endDate: "undefined",
     source: "telluride-com",
@@ -7252,6 +6062,80 @@ const LEGAL_NOTICES = [
     url: "https://www.telluride.gov/bids.aspx?bidID=130",
     address: "",
     totBidID: "130"
+  },
+  {
+    title: "Probate Notice -- Claims Against Estate (Case No. 26PR30006)",
+    entity: "Estate of (unnamed), Patricia L. Bode Personal Representative",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "Patricia L. Bode, as Personal Representative of an estate in San Miguel County, is notifying all persons with claims against the estate that they must present those claims to her or to the District Court of San Miguel County on or before October 18, 2026, or claims may be forever barred. The notice is published through attorney Zachary T. Reams of Reams & Reams in Grand Junction, CO.",
+    deadline: "2026-10-18",
+    expires: "2026-10-18",
+    dates: "6/18",
+    papers: ["ttimes_0618"],
+    url: "https://www.telluridenews.com/news/legals/article_5efd4701-ba7f-46ef-a7bd-74a242fdff7a.html",
+    address: "District Court of San Miguel County, Colorado",
+    noticeKey: "26PR30006",
+    caseNumber: "26PR30006"
+  },
+  {
+    title: "Public Hearing Notice -- Land Use Code Amendment Section 5-1908 Nonconforming Lots",
+    entity: "San Miguel County Board of County Commissioners",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "The San Miguel County Board of County Commissioners is holding a public hearing on July 15, 2026 at 10:00 a.m. in Telluride (333 W. Colorado Ave, 2nd Floor) and online to consider an amendment to Land Use Code Section 5-1908 regarding Nonconforming Lots, with related amendments to Sections 5-307 (Forestry, Agriculture and Open), 5-314 (Open Space), 5-319.1 (Wright's Mesa), 5-321 (High Country Area), and Article 7 (Definitions). This is the second step of a two-step process; written comments should be submitted to the San Miguel County Planning Department by noon on May 27, 2026.",
+    deadline: "2026-07-15",
+    expires: "2026-07-15",
+    dates: "6/18",
+    papers: ["ttimes_0618"],
+    url: "https://www.telluridenews.com/news/legals/article_5efd4701-ba7f-46ef-a7bd-74a242fdff7a.html",
+    address: "333 W. Colorado Ave, 2nd Floor, Telluride, CO 81435 (San Miguel County unincorporated lands)",
+    noticeKey: "luc-amendment-5-1908-nonconforming-lots"
+  },
+  {
+    title: "Foreclosure Sale Notice -- Stonegate Drive Mountain Village (Sale No. 202603)",
+    entity: "Federal Holding Realty / Public Trustee San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "The San Miguel County Public Trustee, Brandi R. Hatfield, will conduct a public foreclosure auction on August 13, 2026 at 10:00 a.m. at 305 W. Colorado Avenue, Telluride, for a vacant lot at Stonegate Drive, Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village). The original grantor is Two Stonegate LLC; the current debt holder is Federal Holding Realty, with an outstanding principal balance of $500,000.00 on a deed of trust dated February 23, 2026. The foreclosure is due to failure to make payments as provided in the Note and Deed of Trust.",
+    deadline: "2026-08-13",
+    expires: "2026-08-13",
+    dates: "6/18",
+    papers: ["ttimes_0618"],
+    url: "https://www.telluridenews.com/news/legals/article_5efd4701-ba7f-46ef-a7bd-74a242fdff7a.html",
+    address: "TBD (Vacant) Stonegate Drive, Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village, San Miguel County)",
+    noticeKey: "foreclosure-sale-202603",
+    caseNumber: "202603"
+  },
+  {
+    title: "Public Hearing Notice -- Land Use Code Amendment New Section 5-31 Natural Medicine Businesses",
+    entity: "San Miguel County Board of County Commissioners",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "The San Miguel County Board of County Commissioners is being asked to consider a Land Use Code amendment adding a new Section 5-31 governing Natural Medicine Businesses, along with related amendments to Article 7 (Definitions). The amendment requires review and recommendation by the County Planning Commission (CPC) and action by the Board of County Commissioners pursuant to LUC Section 3-601 D. This notice indicates this is the second step of a two-step public hearing process; full hearing details were not fully captured in the published text.",
+    deadline: "",
+    expires: "2026-08-18",
+    dates: "6/18",
+    papers: ["ttimes_0618"],
+    url: "https://www.telluridenews.com/news/legals/article_5efd4701-ba7f-46ef-a7bd-74a242fdff7a.html",
+    address: "San Miguel County, Colorado (countywide land use code)",
+    noticeKey: "luc-amendment-5-31-natural-medicine"
   }
 ];
 
