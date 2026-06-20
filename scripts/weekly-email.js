@@ -299,10 +299,31 @@ const mh = meetings.map((m) => {
   return `<tr><td style="padding:13px 0;border-top:1px solid #eef1ee;"><span style="display:inline-block;background:#21443c;color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(m.date)).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(m.src)}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;">${esc(m.name)}</div><div style="font-size:13.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${esc(m.summary)}</div>${commentBtn}${sep}${link}</td></tr>`;
 }).join('');
 const EV_ACCENT = '#a0531f'; // rust (toned down from the redder #a8401f) — complements the forest-green meeting badge
+// Town/area label for an event card. Prefers the scraped venue string when one
+// is present (e.g. "Sheridan Opera House · Telluride"); otherwise falls back to
+// the town name visible in the title, then to a source-based default. The
+// Ouray/Ridgway aggregator ('oray') rarely populates the Localist `location`
+// field, which previously left a bare date badge with no place marker.
+const TOWN_FROM_SOURCE = {
+  oray: 'Ouray / Ridgway', mv: 'Mountain Village', norwood: 'Norwood',
+  rico: 'Rico', ophir: 'Ophir', ridgway: 'Ridgway', ouray: 'Ouray',
+  county: 'San Miguel County',
+};
+function townLabel(e) {
+  if (e.location && String(e.location).trim()) return e.location;
+  const t = (e.title || '').toLowerCase();
+  if (/\bridgway\b/.test(t)) return 'Ridgway';
+  if (/\bouray\b/.test(t)) return 'Ouray';
+  if (/\bnorwood\b/.test(t)) return 'Norwood';
+  if (/\brico\b/.test(t)) return 'Rico';
+  if (/\bmountain village\b/.test(t)) return 'Mountain Village';
+  return TOWN_FROM_SOURCE[String(e.source || '').toLowerCase()] || 'Telluride';
+}
 const evRow = (e) => {
   const u = safeUrl(e.href);
   const badge = `<span style="display:inline-block;background:${EV_ACCENT};color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(e.date)).toUpperCase()}</span>`;
-  const loc = e.location ? `<span style="font-size:12px;color:#7a8a85;margin-left:8px;">📍 ${esc(trunc(e.location, 38))}</span>` : '';
+  const locText = townLabel(e);
+  const loc = locText ? `<span style="font-size:12px;color:#7a8a85;margin-left:8px;">📍 ${esc(trunc(locText, 38))}</span>` : '';
   const text = `${badge}${loc}`
     + `<div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;"><a href="${esc(u)}" style="color:#1a2e29;text-decoration:none;">${esc(e.title)}</a></div>`
     + `<div style="font-size:13.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${esc(trunc(e.summary, 200))}</div>`
@@ -322,7 +343,7 @@ const closingNote = `<tr><td class="callout-wrap" style="padding:28px 34px 6px;"
 
 // Donate ask — bottom of the email, just above the footer. A gentle, polite
 // request to support the 501(c)(3); links straight to the Stripe checkout.
-const donateBlock = `<tr><td class="sec-pad" style="padding:26px 34px 6px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="background:#21443c;border-radius:8px;padding:27px 26px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e3c87a;margin-bottom:9px;">Keep This Going</div><p style="margin:0 0 17px;font-size:14.5px;line-height:1.7;color:#e7efe9;">Livable Telluride is an independent, reader-funded <strong>501(c)(3) nonprofit</strong> — no ads, no paywall, free to everyone in the valley. If this weekly note is useful to you, please consider chipping in to help keep the meeting summaries, local news, and community calendar coming. A gift of any size genuinely makes a difference.</p><a href="https://buy.stripe.com/7sY7sD2TZ2MV5Vudf40Ba00" style="display:inline-block;background:#b58a2c;color:#ffffff;text-decoration:none;font-weight:700;font-size:15px;padding:13px 32px;border-radius:999px;">&#9829; Donate</a><div style="font-size:11.5px;color:#9fbcb0;margin-top:13px;">Secure checkout via Stripe &middot; Your gift is tax-deductible to the extent allowed by law.</div></td></tr></table></td></tr>`;
+const donateBlock = `<tr><td class="sec-pad" style="padding:26px 34px 6px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="background:#21443c;border-radius:8px;padding:27px 26px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e3c87a;margin-bottom:9px;">Keep This Going</div><p style="margin:0 0 17px;font-size:14.5px;line-height:1.7;color:#e7efe9;">Livable Telluride is a reader-funded <strong>501(c)(3) nonprofit</strong> — no ads, no paywall. If this is useful to you, a gift of any size keeps it coming.</p><a href="https://buy.stripe.com/7sY7sD2TZ2MV5Vudf40Ba00" style="display:inline-block;background:#b58a2c;color:#ffffff;text-decoration:none;font-weight:700;font-size:15px;padding:13px 32px;border-radius:999px;">&#9829; Donate</a><div style="font-size:11.5px;color:#9fbcb0;margin-top:13px;">Secure checkout via Stripe &middot; Your gift is tax-deductible to the extent allowed by law.</div></td></tr></table></td></tr>`;
 
 // One-off "What We're Reading" box — gated to a single week's WEEK_START so it
 // auto-disappears the following week (no manual cleanup). To feature a different
