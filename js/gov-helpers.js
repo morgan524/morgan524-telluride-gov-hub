@@ -211,7 +211,13 @@ const MANUAL_SUMMARIES = {
     "The June 22 Open Space Commission agenda hasn't been posted yet.",
 
   "county|2026-06-24|Board of County Commissioners Work Session":
-    "The June 24 Board of County Commissioners work session agenda hasn't been posted yet.",
+    "MEETING CANCELED — the Board of County Commissioners' June 24 work session has been canceled. The next BOCC meeting is the regular meeting on July 1.",
+
+  "telluride|2026-06-23|Special Meeting - HARC and P&Z - Jun 23 2026":
+    "HARC and the Planning & Zoning Commission meet jointly to consider Land Use Code and Design Guideline amendments for compliance with Colorado's new Wildfire Resiliency Code, which takes effect July 1. The single action item is to develop a recommendation to Town Council on what local code changes are needed so Telluride's building and design standards line up with the state's wildfire requirements. 1:00 PM at Rebekah Hall.",
+
+  "telluride|2026-06-23|Special Meeting - P&Z and HARC - Jun 23 2026":
+    "Joint HARC and Planning & Zoning meeting (same meeting as the HARC-listed version) to consider Land Use Code and Design Guideline amendments for compliance with Colorado's new Wildfire Resiliency Code, which takes effect July 1. The single action item is a recommendation to Town Council on what local code changes are needed so Telluride's building and design standards align with the state wildfire rules. 1:00 PM at Rebekah Hall.",
 
   "telluride|2026-06-17|Historic & Architectural Review Commission Chair - Jun 17 2026":
     "The Historic & Architectural Review Commission Chair will review two projects: aluminum window replacements at 324 W Colorado (a contributing historic structure in an alley) and a deck expansion at 714 E Columbia. Both applications face staff recommendations for disapproval — the windows for introducing aluminum into a historic wood garage that's supposed to maintain its utilitarian character, and the deck for being too large and reducing the building's stepping down to Shadow Lane. The 324 W Colorado item was continued from May and includes a pre-meeting site walk.",
@@ -247,10 +253,10 @@ const MANUAL_SUMMARIES = {
     "The June 25th Regular Board Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
-    "The Jun 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+    "The commission holds an early-stage work session on the Shandoka Lot Redevelopment Project at 860 Black Bear Rd — the major Town-owned redevelopment proposal brought forward by Design Workshop. No decision is made at a work session; the commission gives feedback to staff and the applicant before any formal Land Use Code review begins. Continued without discussion from the May 28 meeting. 5:30 PM at Rebekah Hall.",
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
-    "The June 25, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
+    "The Chair was scheduled to take up the 238 N Pine Street minor subdivision (a request to split a 7,500 sq ft Historic Residential lot into two), but the applicant has asked for it to be continued again — to the July 23 P&Z meeting. No substantive action is expected at this meeting. 4:00 PM at Rebekah Hall.",
 
   "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
     "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
@@ -4347,17 +4353,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48302/from_forest_to_front_door_tomv_1800_x_900_px.png"
   },
   {
-    title: "Winter Fundraiser: Adventure Shorts",
-    link: "https://townofmountainvillage.com/explore/events/all-events/winter-fundraiser-adventure-shorts/",
-    description: "Join Mountainfilm for our Winter Fundraiser at the Sheridan Opera House on Monday, February 16, 2026. Enjoy an evening of Adventure Shorts featuring The North",
-    pubDate: "2026-06-22T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47817/mf26_fundraiser_marketing_banner_image_tmv.jpg"
-  },
-  {
     title: "Town Talk: Small Molecules at the Origins of Life",
     link: "https://townofmountainvillage.com/explore/events/all-events/town-talk-small-molecules-at-the-origins-of-life/",
     description: "This town talk will be presented by David Lancy, University of Buffalo. How did the atoms in the universe come together to form life?",
@@ -4708,17 +4703,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48944/mv_calendar_-_muleskinners_ball_2.png"
-  },
-  {
-    title: "Winter Fundraiser: Adventure Shorts",
-    link: "https://townofmountainvillage.com/explore/events/all-events/winter-fundraiser-adventure-shorts/",
-    description: "Join Mountainfilm for our Winter Fundraiser at the Sheridan Opera House on Monday, February 16, 2026. Enjoy an evening of Adventure Shorts featuring The North",
-    pubDate: "2026-06-29T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47817/mf26_fundraiser_marketing_banner_image_tmv.jpg"
   },
   {
     title: "Town Talk: Tau",
@@ -5073,17 +5057,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48604/musicfest.jpg"
   },
   {
-    title: "Winter Fundraiser: Adventure Shorts",
-    link: "https://townofmountainvillage.com/explore/events/all-events/winter-fundraiser-adventure-shorts/",
-    description: "Join Mountainfilm for our Winter Fundraiser at the Sheridan Opera House on Monday, February 16, 2026. Enjoy an evening of Adventure Shorts featuring The North",
-    pubDate: "2026-07-06T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47817/mf26_fundraiser_marketing_banner_image_tmv.jpg"
-  },
-  {
     title: "TFF presents Village Film Nights",
     link: "https://townofmountainvillage.com/explore/events/all-events/tff-presents-village-film-nights/",
     description: "The Telluride Film Festival and Telluride Mountain Village Owners Association are proud to announce the first show of the 2026 Village Film Nights series with",
@@ -5401,17 +5374,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48302/from_forest_to_front_door_tomv_1800_x_900_px.png"
-  },
-  {
-    title: "Winter Fundraiser: Adventure Shorts",
-    link: "https://townofmountainvillage.com/explore/events/all-events/winter-fundraiser-adventure-shorts/",
-    description: "Join Mountainfilm for our Winter Fundraiser at the Sheridan Opera House on Monday, February 16, 2026. Enjoy an evening of Adventure Shorts featuring The North",
-    pubDate: "2026-07-13T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47817/mf26_fundraiser_marketing_banner_image_tmv.jpg"
   },
   {
     title: "Mountain Village Merchant Meeting",
@@ -5765,17 +5727,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48302/from_forest_to_front_door_tomv_1800_x_900_px.png"
   },
-  {
-    title: "Winter Fundraiser: Adventure Shorts",
-    link: "https://townofmountainvillage.com/explore/events/all-events/winter-fundraiser-adventure-shorts/",
-    description: "Join Mountainfilm for our Winter Fundraiser at the Sheridan Opera House on Monday, February 16, 2026. Enjoy an evening of Adventure Shorts featuring The North",
-    pubDate: "2026-07-20T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47817/mf26_fundraiser_marketing_banner_image_tmv.jpg"
-  }
 ];
 
 const TELLURIDE_COM_EVENTS = [

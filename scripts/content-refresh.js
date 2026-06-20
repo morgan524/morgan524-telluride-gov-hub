@@ -5329,11 +5329,32 @@ function parseMVWhenText(whenText, fromMs, toMs) {
     }
   }
 
-  // Pattern 2: Weekly on a specific weekday (e.g. "Saturdays" / "Every Friday")
-  const weeklyRe = /(?:every\s+|each\s+)?(sunday|monday|tuesday|wednesday|thursday|friday|saturday)s?/i;
+  // Pattern 2: Specific dates in text (Month DD, YYYY). This runs BEFORE the
+  // weekly recurrence pattern: a literal date like "Monday, February 16, 2026"
+  // contains a weekday name that the weekly regex would otherwise misread as
+  // "every Monday" and synthesise N false future occurrences. If we find a
+  // specific date, trust it as authoritative for a one-off event.
+  const specificRe = /(?:january|february|march|april|may|june|july|august|september|october|november|december)\s+\d{1,2},?\s+\d{4}/gi;
+  let sMatch;
+  while ((sMatch = specificRe.exec(text)) !== null) {
+    const d = new Date(sMatch[0]);
+    if (!isNaN(d.getTime())) {
+      d.setHours(12, 0, 0, 0);
+      const ms = d.getTime();
+      if (ms >= fromMs && ms <= toMs) dates.push(d);
+    }
+  }
+  if (dates.length) return dates;
+
+  // Pattern 3: Weekly on a specific weekday (e.g. "Saturdays" / "Every Friday").
+  // Require an explicit recurrence marker: "every <day>", "each <day>", or the
+  // plural form "<day>s". Bare "Monday" (e.g. inside the date string
+  // "Monday, February 16, 2026") no longer triggers — that's handled by the
+  // specific-date pattern above.
+  const weeklyRe = /(?:every|each)\s+(sunday|monday|tuesday|wednesday|thursday|friday|saturday)\b|\b(sunday|monday|tuesday|wednesday|thursday|friday|saturday)s\b/i;
   const wMatch = weeklyRe.exec(text);
   if (wMatch) {
-    const weekday = weekdayMap[wMatch[1].toLowerCase()];
+    const weekday = weekdayMap[(wMatch[1] || wMatch[2]).toLowerCase()];
     const cur = new Date(fromMs);
     // Advance to first matching weekday
     while (cur.getDay() !== weekday) cur.setDate(cur.getDate() + 1);
@@ -5345,17 +5366,6 @@ function parseMVWhenText(whenText, fromMs, toMs) {
     return dates;
   }
 
-  // Pattern 3: Specific dates in text (Month DD, YYYY)
-  const specificRe = /(?:january|february|march|april|may|june|july|august|september|october|november|december)\s+\d{1,2},?\s+\d{4}/gi;
-  let sMatch;
-  while ((sMatch = specificRe.exec(text)) !== null) {
-    const d = new Date(sMatch[0]);
-    if (!isNaN(d.getTime())) {
-      d.setHours(12, 0, 0, 0);
-      const ms = d.getTime();
-      if (ms >= fromMs && ms <= toMs) dates.push(d);
-    }
-  }
   return dates;
 }
 
