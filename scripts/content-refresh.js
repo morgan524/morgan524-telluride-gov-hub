@@ -33,7 +33,13 @@ const EVENTS_CONFIG = path.join(REPO_ROOT, 'email-events-config.json');
 // needs to write the HTML or sw.js anymore.)
 
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
-const CLAUDE_MODEL = 'claude-sonnet-4-20250514';
+// Sonnet 4.0 (claude-sonnet-4-20250514) was retired by Anthropic on/around
+// 2026-06-15, after which every Task 1 / Task 1b Claude call returned an
+// error and stale "agenda hasn't been posted yet" placeholders never got
+// regenerated. Use the current Sonnet alias so a model retirement doesn't
+// silently break summaries again — Anthropic auto-points the alias at the
+// latest stable Sonnet release.
+const CLAUDE_MODEL = 'claude-sonnet-4-6';
 
 // ── Smart truncation for event/meeting card descriptions ──
 // Caps text at maxLen, cutting at the nearest sentence boundary (or word
@@ -614,7 +620,7 @@ Return ONLY valid JSON matching the format specified.`;
       res.on('end', () => {
         try {
           const json = JSON.parse(data);
-          if (json.error) { reject(new Error(json.error.message)); return; }
+          if (json.error) { reject(new Error(`${json.error.type || 'error'}: ${json.error.message || JSON.stringify(json.error)}`)); return; }
           const text = json.content?.[0]?.text || '';
           let parsed = text;
           const m = text.match(/```(?:json)?\s*([\s\S]*?)```/);
@@ -659,7 +665,7 @@ async function callClaudeRaw(prompt) {
       res.on('end', () => {
         try {
           const json = JSON.parse(data);
-          if (json.error) { reject(new Error(json.error.message)); return; }
+          if (json.error) { reject(new Error(`${json.error.type || 'error'}: ${json.error.message || JSON.stringify(json.error)}`)); return; }
           resolve((json.content?.[0]?.text || '').trim());
         } catch (e) { reject(e); }
       });

@@ -231,7 +231,13 @@ for (const fn of MEETING_FNS) {
     const name = (m.title || '').replace(/\s*--?\s*Special Meeting$/i, '').trim();
     const src = m.sourceLabel || m.source || '';
     if (!KEEP_BODY.test(name + ' ' + src)) continue;       // only TC / BOCC / PC / HARC
-    const key = src + '|' + date + '|' + name.toLowerCase().replace(/[^a-z]/g, '').slice(0, 24);
+    // Dedup key: alphabetise the title's word tokens before joining so word-order
+    // anagrams collapse to the same key. Joint meetings show up in CivicWeb
+    // under each commission's roster (e.g. "Special Meeting - HARC and P&Z" and
+    // "Special Meeting - P&Z and HARC"); without the sort, the earlier
+    // first-24-chars key let both render as separate cards.
+    const titleTokens = (name.toLowerCase().match(/[a-z]+/g) || []).sort().join('');
+    const key = src + '|' + date + '|' + titleTokens.slice(0, 32);
     if (meetSeen.has(key)) continue; meetSeen.add(key);
     let sm = ''; try { sm = (getMeetingSummary && getMeetingSummary(m)) || ''; } catch (e) {}
     sm = sm || m.description || '';
