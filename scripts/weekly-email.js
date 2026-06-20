@@ -301,14 +301,12 @@ const mh = meetings.map((m) => {
 const EV_ACCENT = '#a0531f'; // rust (toned down from the redder #a8401f) — complements the forest-green meeting badge
 // Town/area label for an event card. Prefers the scraped venue string when one
 // is present (e.g. "Sheridan Opera House · Telluride"); otherwise falls back to
-// the town name visible in the title, then to a source-based default. The
-// Ouray/Ridgway aggregator ('oray') rarely populates the Localist `location`
-// field, which previously left a bare date badge with no place marker.
-const TOWN_FROM_SOURCE = {
-  oray: 'Ouray / Ridgway', mv: 'Mountain Village', norwood: 'Norwood',
-  rico: 'Rico', ophir: 'Ophir', ridgway: 'Ridgway', ouray: 'Ouray',
-  county: 'San Miguel County',
-};
+// town keywords in the title, then to substring matches in the source label.
+// The Ouray/Ridgway aggregator rarely populates Localist's `location`, which
+// previously left a bare date badge with no place marker. The upstream collect
+// loop overwrites e.source with e.sourceLabel ("Ouray Ridgway Calendar") when
+// the label is set, so the source check must match label patterns, not just
+// short codes like 'oray'.
 function townLabel(e) {
   if (e.location && String(e.location).trim()) return e.location;
   const t = (e.title || '').toLowerCase();
@@ -317,7 +315,16 @@ function townLabel(e) {
   if (/\bnorwood\b/.test(t)) return 'Norwood';
   if (/\brico\b/.test(t)) return 'Rico';
   if (/\bmountain village\b/.test(t)) return 'Mountain Village';
-  return TOWN_FROM_SOURCE[String(e.source || '').toLowerCase()] || 'Telluride';
+  const s = String(e.source || '').toLowerCase();
+  if (/ouray.*ridgway|ridgway.*ouray|\boray\b/.test(s)) return 'Ouray / Ridgway';
+  if (/\bouray\b/.test(s)) return 'Ouray';
+  if (/\bridgway\b/.test(s)) return 'Ridgway';
+  if (/\bnorwood\b/.test(s)) return 'Norwood';
+  if (/mountain village|\bmv\b/.test(s)) return 'Mountain Village';
+  if (/san miguel county|\bcounty\b/.test(s)) return 'San Miguel County';
+  if (/\brico\b/.test(s)) return 'Rico';
+  if (/\bophir\b/.test(s)) return 'Ophir';
+  return 'Telluride';
 }
 const evRow = (e) => {
   const u = safeUrl(e.href);
