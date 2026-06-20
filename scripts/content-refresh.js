@@ -383,6 +383,78 @@ async function checkWorkerHealth() {
   }
 }
 
+// Probe the Anthropic API at startup with a minimal request to confirm the
+// configured CLAUDE_MODEL is still accepted. When Anthropic retires a model,
+// every Task 1 (summary) and Task 1b (preview) call returns an error and
+// the placeholder-detection / version-upgrade machinery in refreshSummaries
+// silently writes "agenda hasn't been posted yet" into MANUAL_SUMMARIES.
+// That happened with claude-sonnet-4-20250514 on 2026-06-15 20:48 UTC; the
+// retirement was caught 5 days later, by which point the weekly email had
+// gone out with generic boilerplate for every meeting. Failing the run here
+// triggers the if:failure() step in content-refresh.yml to open a CI Health
+// issue within 6 hours of the next retirement.
+async function checkClaudeHealth() {
+  if (!ANTHROPIC_API_KEY) {
+    console.log('  ℹ ANTHROPIC_API_KEY not set — skipping Claude preflight (Task 1 / 1b will be skipped)');
+    return;
+  }
+  console.log(`🤖 Claude preflight: testing ${CLAUDE_MODEL}...`);
+  const body = JSON.stringify({
+    model: CLAUDE_MODEL,
+    max_tokens: 8,
+    messages: [{ role: 'user', content: 'ok' }]
+  });
+  const t0 = Date.now();
+  let json;
+  try {
+    json = await new Promise((resolve, reject) => {
+      const req = https.request({
+        hostname: 'api.anthropic.com',
+        path: '/v1/messages',
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': ANTHROPIC_API_KEY,
+          'anthropic-version': '2023-06-01',
+          'Content-Length': Buffer.byteLength(body)
+        },
+        timeout: 15000
+      }, (res) => {
+        let data = '';
+        res.on('data', c => data += c);
+        res.on('end', () => {
+          try { resolve({ status: res.statusCode, body: JSON.parse(data) }); }
+          catch (e) { reject(new Error(`non-JSON response (HTTP ${res.statusCode}): ${data.slice(0, 200)}`)); }
+        });
+      });
+      req.on('error', reject);
+      req.on('timeout', () => { req.destroy(); reject(new Error('preflight timed out after 15s')); });
+      req.write(body);
+      req.end();
+    });
+  } catch (e) {
+    throw new Error(
+      `Claude preflight FAILED — could not reach api.anthropic.com: ${e.message}. ` +
+      `Likely an outage or a transient network failure; re-run the workflow in a few minutes.`
+    );
+  }
+  if (json.body && json.body.error) {
+    const errType = json.body.error.type || 'error';
+    const errMsg = json.body.error.message || JSON.stringify(json.body.error);
+    throw new Error(
+      `Claude preflight FAILED — model "${CLAUDE_MODEL}" rejected by the API ` +
+      `(${errType}: ${errMsg}). The model has likely been retired by Anthropic. ` +
+      `Update the CLAUDE_MODEL constant at the top of scripts/content-refresh.js to the current Sonnet/Opus alias ` +
+      `and push. The May 2025 retirement of claude-sonnet-4-20250514 produced 5 days of empty meeting summaries ` +
+      `before being caught — this preflight is here to catch the next one within 6 hours.`
+    );
+  }
+  if (json.status !== 200) {
+    throw new Error(`Claude preflight FAILED — unexpected HTTP ${json.status} from api.anthropic.com.`);
+  }
+  console.log(`  ✓ Claude OK (${Date.now() - t0} ms)`);
+}
+
 function fetch(url, opts = {}) {
   url = maybeProxy(url);
   return new Promise((resolve, reject) => {
@@ -6058,6 +6130,16 @@ async function main() {
   // The failure-tracker step in content-refresh.yml will turn this into
   // a tracked GitHub Issue automatically.
   await checkWorkerHealth();
+
+  // Same idea for the Claude API: the configured CLAUDE_MODEL must be
+  // valid before Task 1 / Task 1b run, or every meeting summary call
+  // errors silently and stale "agenda hasn't been posted yet"
+  // placeholders pile up in MANUAL_SUMMARIES until someone notices the
+  // weekly email looks wrong. claude-sonnet-4-20250514 was retired
+  // 2026-06-15 20:48 UTC and produced 5 days of broken summaries
+  // before being caught. A single tiny test call at startup catches
+  // the next retirement within 6 hours.
+  await checkClaudeHealth();
 
   let govHubSrc = readJsFile(GOV_HELPERS_JS);
   let govDataSrc = readJsFile(GOV_DATA_JS);
