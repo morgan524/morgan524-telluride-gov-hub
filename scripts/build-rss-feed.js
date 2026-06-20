@@ -36,7 +36,12 @@ const BLOG_FEED_OUT = path.join(REPO_ROOT, 'feed-blog.xml');
 // with a genuinely consequential agenda item. Degrades gracefully: no key
 // / API error / parse error → feed builds normally with no lede or flags.
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
-const CLAUDE_MODEL = 'claude-sonnet-4-20250514';
+// Use the floating Sonnet alias so a model retirement (like
+// claude-sonnet-4-20250514 on 2026-06-15) doesn't silently break the
+// Week-Ahead lede generation. The Claude preflight in
+// scripts/content-refresh.js (which runs first in the same workflow)
+// will fail the run before this script executes if the model is rejected.
+const CLAUDE_MODEL = 'claude-sonnet-4-6';
 const WEEK_AHEAD_CACHE = path.join(REPO_ROOT, 'data', 'week-ahead-cache.json');
 
 // ── Per-topic event feeds (pilot, 2026-06) ──

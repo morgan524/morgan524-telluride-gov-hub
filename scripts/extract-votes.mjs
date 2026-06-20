@@ -49,7 +49,10 @@ const REPO_ROOT = resolve(__dirname, '..');
 const CONFIG_PATH = join(__dirname, 'vote-tracker-config.json');
 const PENDING_DIR = join(__dirname, 'pending');
 
-const CLAUDE_MODEL = process.env.CLAUDE_MODEL || 'claude-sonnet-4-20250514';
+// Default to the floating Sonnet alias so this works without an env override.
+// claude-sonnet-4-20250514 was retired 2026-06-15; the alias auto-points at
+// the current stable Sonnet release.
+const CLAUDE_MODEL = process.env.CLAUDE_MODEL || 'claude-sonnet-4-6';
 
 // ──────────────────────────── CLI parsing ───────────────────────────
 function parseArgs(argv) {
