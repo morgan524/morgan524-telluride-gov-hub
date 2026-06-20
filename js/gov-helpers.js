@@ -373,6 +373,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Sierra Hull embodies new bluegrass generation of genre busters",
+    source: "Telluride Times",
+    date: "June 20, 2026",
+    firstSeen: "2026-06-20",
+    newsTopic: "arts-culture",
+    copy: "Much of the bluegrass world first met Sierra Hull a year after she started learning mandolin, when she met Sam Bush as a fourth grader and had her first of countless impromptu jams with Sam.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_ccd5bf74-2043-4d36-bd76-ed763fa5e790.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/02/20223a93-b43c-42a2-a1c0-01c290f6b72d/6a2cdfe5814ac.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Bluegrass bites and buys",
     source: "Telluride Times",
     date: "June 19, 2026",
@@ -4076,17 +4088,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Music On The Mesa Wolf Jett",
-    link: "https://www.norwoodtown.com/2026-06-13-music-on-the-mesa-wolf-jett",
-    description: "",
-    pubDate: "2026-06-13T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Community Event",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-06-15-planning-and-zoning-commission-meeting",
     description: "",
@@ -4264,17 +4265,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48783/wild_west_fest_roundup_day_event_graphic.jpg"
-  },
-  {
-    title: "Music on the Green Presents The Lowest Pair",
-    link: "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-the-lowest-pair/",
-    description: "Beyond the Groove Productions and the Telluride Mountain Village Owners Association (TMVOA) present The Lowest Pair on Friday, June 19, from 5 to 7 p.m.,",
-    pubDate: "2026-06-19T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48849/the_lowest_pair_1800x900px.png"
   },
   {
     title: "Mountain Village Oktoberfest",
@@ -5793,6 +5783,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48302/from_forest_to_front_door_tomv_1800_x_900_px.png"
+  },
+  {
+    title: "Winter Fundraiser: Adventure Shorts",
+    link: "https://townofmountainvillage.com/explore/events/all-events/winter-fundraiser-adventure-shorts/",
+    description: "Join Mountainfilm for our Winter Fundraiser at the Sheridan Opera House on Monday, February 16, 2026. Enjoy an evening of Adventure Shorts featuring The North",
+    pubDate: "2026-07-20T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/47817/mf26_fundraiser_marketing_banner_image_tmv.jpg"
   }
 ];
 
