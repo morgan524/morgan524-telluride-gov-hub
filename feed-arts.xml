@@ -6,48 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Jun 2026 19:45:26 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2026 02:51:17 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Fri, Jun 19] NIGHTGRASS - Jake Shimabukuro</title>
-      <link>https://www.alibitelluride.com/calendar#eca-event=nightgrass-dallahan-1</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/nightgrass%20jake%20shimabukuro%7C2026-06-19</guid>
-      <pubDate>Fri, 19 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://ucarecdn.com/552caaca-9040-49ed-9e0e-39c2176f0681/-/crop/1800x901/0,101/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
-📍 The Alibi • Telluride, CO
-🕒 10:30 PM
-
-Jake Shimabukuro is a world-renowned ukulele virtuoso whose groundbreaking artis...]]></description>
-      <media:content url="https://ucarecdn.com/552caaca-9040-49ed-9e0e-39c2176f0681/-/crop/1800x901/0,101/-/preview/" medium="image" />
-      <category>Community Event</category>
-      <category>The Alibi</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 19] NIGHTGRASS - Boy Golden</title>
-      <link>https://www.alibitelluride.com/calendar#eca-event=nightgrass-dallahan-2</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/nightgrass%20boy%20golden%7C2026-06-19</guid>
-      <pubDate>Fri, 19 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://ucarecdn.com/ff68b41c-5bf1-41dd-ac81-91813095ba41/-/crop/5355x2674/0,2629/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
-📍 The Alibi • Telluride, CO
-🕒 10:30 PM
-
-Who is Boy Golden? On the one hand it is moniker for a mysterious new artist, ...]]></description>
-      <media:content url="https://ucarecdn.com/ff68b41c-5bf1-41dd-ac81-91813095ba41/-/crop/5355x2674/0,2629/-/preview/" medium="image" />
-      <category>Community Event</category>
-      <category>The Alibi</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 19] Ridgway Farmer&apos;s Market</title>
-      <link>https://koto.org/event/ridgway-farmers-market/2026-06-19/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/ridgway%20farmer%20s%20market%7C2026-06-19</guid>
-      <pubDate>Fri, 19 Jun 2026 16:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Hartwell Park Ridgway
-
-The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
     <item>
       <title>[Sat, Jun 20] Bilingual Balance in Motion</title>
       <link>https://koto.org/event/bilingual-balance-in-motion/2026-06-20/</link>
@@ -205,6 +165,33 @@ The Jun 25 2026 Planning & Zoning Commission agenda hasn't been posted yet.]]></
 The June 25, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 26] The Jauntee w/ San Leandro</title>
+      <link>https://www.alibitelluride.com/calendar#eca-event=the-jauntee</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/the%20jauntee%20w%20san%7C2026-06-26</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://ucarecdn.com/1885a7f2-416e-4cb2-a4e8-f91c7c656895/-/crop/3663x1830/0,126/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
+📍 The Alibi • Telluride, CO
+🕒 9:00 PM
+
+The Jauntee is an electrifying and genre-blending musical ensemble that has capt...]]></description>
+      <media:content url="https://ucarecdn.com/1885a7f2-416e-4cb2-a4e8-f91c7c656895/-/crop/3663x1830/0,126/-/preview/" medium="image" />
+      <category>Community Event</category>
+      <category>The Alibi</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 26] The play &quot;12 Incompetent Jurors&quot; presented by the Norwood Community Players</title>
+      <link>https://koto.org/event/the-play-12-incompetent-jurors-presented-by-the-norwood-community-players/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/the%20play%2012%20incompetent%7C2026-06-26</guid>
+      <pubDate>Fri, 26 Jun 2026 00:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/WSAC-12IJ-Poster.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 The Livery Norwood
+
+Wide Sky Arts Collective and the Norwood Community Players present "12 Incompetent Jurors" &#8230; a parody by Ian McWethey and directed by local Claire Jacobs. Shows are at The Livery on June 25th, 26th, and 27th, doors at 6:30, show at 7, cash bar. The link for discounted advance tickets is at www.norwoodparkandrec.org .]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/06/WSAC-12IJ-Poster.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
   </channel>
 </rss>

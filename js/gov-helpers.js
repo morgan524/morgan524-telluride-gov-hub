@@ -158,13 +158,16 @@ const MEETING_AGENDA_META = {
     {"sv":2},
 
   "med|2026-06-25|Regular Board Meeting":
-    {"zoomUrl":"https://us02web.zoom.us/j/89509331558","meetingId":"895 0933 1558"}
+    {"zoomUrl":"https://us02web.zoom.us/j/89509331558","meetingId":"895 0933 1558"},
+
+  "telluride|2026-06-23|Special Meeting - HARC and P&Z - Jun 23 2026":
+    {"zoomUrl":"https://us06web.zoom.us/j/83056176189?pwd=wUqZ62DdTaXbfx8NAiQ1yp595tbwuI.1","meetingId":"830 5617 6189","passcode":"042711.","phone":"301-715-8592"},
+
+  "telluride|2026-06-23|Special Meeting - P&Z and HARC - Jun 23 2026":
+    {"zoomUrl":"https://us06web.zoom.us/j/83056176189?pwd=wUqZ62DdTaXbfx8NAiQ1yp595tbwuI.1","meetingId":"830 5617 6189","passcode":"042711.","phone":"301-715-8592"}
 };
 
 const MANUAL_SUMMARIES = {
-  "smart|2026-05-20|SMART Board of Directors":
-    "Virtual-only meeting. The Gondola update is the agenda's headline — that's the project that drives SMART's 3A ballot context. Resolution 2026-8 appoints Marya Stark to the Investment Committee. Q4 2025 / annual performance report and the May Ops report round out the formal business. The board closes in executive session under §24-6-402(4)(b) to confer with counsel on Masson v. SMC BOCC. Anyone tracking how the gondola conversation is evolving should bookmark the live link.",
-
   "mv|2026-06-17|Town Council Meeting":
     "Council meets for a packed agenda that includes an executive session for legal advice on a recent investigation, plus a full hour set aside to review an independent investigation report and consider future actions. Two new staff members join — a housing director and planner. Council will vote on several items: expedited review policies for affordable housing projects to participate in state Prop 123, a water storage lease agreement with the utility company, and a height variance for a single-family home on San Joaquin Road. There's also a presentation on thermal energy network findings and the usual liquor permits for summer events.",
 
@@ -191,9 +194,6 @@ const MANUAL_SUMMARIES = {
 
   "norwood|2026-06-15|Planning and Zoning Commission Meeting":
     "The commission takes up two land-use code items. It will consider Resolution 0615-2026, recommending amendments to the Norwood Land Use Code to adopt the updated 2026 DarkSky International outdoor-lighting standards, alongside a discussion of the Dark Sky Coalition's updated rules. It also reviews a Current Conditions Analysis as part of the broader Land Use Code update. The consent agenda is limited to approving the May 18 minutes. 6:30 p.m. at Norwood Town Hall, with a Zoom option.",
-
-  "ouray|2026-05-20|The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions.":
-    "Land Use Code definitions review · Planning Commission work session",
 
   "county|2026-05-25|Open Space Commission Meeting":
     "Open Space Commission meeting",
@@ -372,6 +372,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Bluegrass bites and buys",
+    source: "Telluride Times",
+    date: "June 19, 2026",
+    firstSeen: "2026-06-20",
+    newsTopic: "arts-culture",
+    copy: "When the Bluegrass Festival hits Telluride, local retailers and restaurateurs tend to follow the Scouts’ motto, “Be prepared.” Shops and eateries are well stocked with festivarians’ needs in mind, offering specialty goods and festival-friendly menu items.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/business/article_5f947d77-1ff0-40ad-a878-8b3ea8c1e00c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/9c/59c20dc7-fd46-4854-887d-c6259f2f436d/6a30efecbeb06.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A most beautiful commute",
+    source: "Telluride Times",
+    date: "June 19, 2026",
+    firstSeen: "2026-06-20",
+    newsTopic: "community",
+    copy: "A most beautiful commute.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/opinion/columnists/article_9255a32d-c3f0-4a8a-968a-1006ae5dcad4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/3c/e3ca20de-df9f-4cd3-9799-8449e974041a/6a3191a500501.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "‘Impossible ideas’ flourish at this year’s Bluegrass",
     source: "Telluride Times",
@@ -1247,42 +1271,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "’Jacks prominent amongst kings",
-    source: "Telluride Times",
-    date: "June 6, 2026",
-    firstSeen: "2026-06-07",
-    newsTopic: "infrastructure",
-    copy: "The Telluride High lacrosse team's senior defensive core, nicknamed the \"Lumberjacks,\" wrapped up four years playing together with another strong season that included a first-place regular season finish and state tournament run. The Miners fell to Grand Junction 9-7 in the state quarterfinals, ending their season, but several players earned all-state honors including Henry Deppen and Leyton Holbrook on the first team.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_ec6dffc9-929a-4e69-808e-b1f485096412.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/0a/50ab7c10-3338-4b13-af85-5223da890f35/6a210c33e3bae.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A song for San Juan springtime",
-    source: "Telluride Times",
-    date: "June 6, 2026",
-    firstSeen: "2026-06-07",
-    newsTopic: "community",
-    copy: "Southwest Colorado sits along major flyway corridors, bringing waves of neo-tropical birds from late April through early June - songbirds, warblers, swallows and raptors returning to summer territory, with hummingbirds testing gravity around every spring flower. The area around San Miguel County hosts 11,000-15,000 elk according to Parks and Wildlife, and watching the annual cycle of pregnant cows disappearing into sheltered woods before emerging with gangly calves remains one of spring's reliable miracles.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_e85d2fd6-be85-4947-a5fa-dbae79bc61db.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/71/27166196-823f-4be9-8f59-f36960f74cc2/6a21268780f7f.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Commissioners approve Accelerated Housing Review",
-    source: "Telluride Times",
-    date: "June 6, 2026",
-    firstSeen: "2026-06-06",
-    newsTopic: "land-use",
-    copy: "County commissioners approved fast-track review for affordable housing projects to qualify for state funding from Proposition 123's housing fund. Projects with 50% or more affordable units will get decisions within 90 days, but the same approval standards and review processes still apply. Some stakeholders had concerns about no size limits on eligible projects, though others supported accessing the available state money.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_756e982e-d9f7-4554-b0a5-6efc70f47375.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/ae/0ae9ed7b-c9f6-4e1d-9d08-009945edf5aa/6a230685dbace.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Summer air service includes new LA flights",
     source: "Telluride Times",
     date: "June 9, 2026",
@@ -1338,15 +1326,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "(May 18, 2026) - The Telluride Parks & Recreation Department has mailed two 2026 Barricade Passes to all residential property owners within the barricade boundary and who either receive a Town water bill or hold a Town parking permit.",
     href: "https://www.telluride.gov/CivicAlerts.aspx?aid=391",
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15546"
-  },
-  {
-    title: "Telluride Housing Authority Launches Tenant Advisory Committee",
-    source: "Town of Telluride",
-    date: "May 21, 2026",
-    newsTopic: "housing",
-    copy: "(May 20, 2026) – Telluride, CO – The THA is now accepting applications for the newly established Tenant Advisory Committee, a resident-led group created to strengthen communication between tenants living in Town-managed rental housing and Town leadership.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=392",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15549"
   },
   {
     title: "Commissioners Finalize Deed Restriction Reversion Process",
@@ -1432,7 +1411,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Click here for details.",
     source: "Town of Ridgway",
-    date: "June 19, 2026",
+    date: "June 20, 2026",
     firstSeen: "2026-06-09",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1443,7 +1422,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
     source: "Town of Ridgway",
-    date: "June 19, 2026",
+    date: "June 20, 2026",
     firstSeen: "2026-06-18",
     newsTopic: "infrastructure",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1487,7 +1466,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 19, 2026",
+    date: "June 20, 2026",
     firstSeen: "2026-06-04",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1498,7 +1477,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 19, 2026",
+    date: "June 20, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1600,14 +1579,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "community",
     copy: "Coming Up Next, Telluride; Telluride Dance Collective Moves the Masses",
     href: "https://koto.org/news/newscast-6-8-26/"
-  },
-  {
-    title: "Newscast 6-5-26",
-    source: "KOTO Community Radio",
-    date: "June 6, 2026",
-    newsTopic: "housing",
-    copy: "On this week's Regional Roundup, we hear about a new agreement signed by counties and conservation districts in Colorado aimed at preventing future reservoirs and water diversions on the Crystal River. We also learn about a major gasoline spill on Southern Ute tribal land in southwest Colorado that is raising concerns about drinking water contamina",
-    href: "https://koto.org/news/newscast-6-5-26/"
   }
 ];
 
@@ -2411,28 +2382,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Ridgway Farmer's Market",
-    link: "https://koto.org/event/ridgway-farmers-market/2026-06-19/",
-    description: "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
-    pubDate: "2026-06-19T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Hartwell Park Ridgway",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride Farmer's Market",
-    link: "https://koto.org/event/telluride-farmers-market/2026-06-19/",
-    description: "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
-    pubDate: "2026-06-19T16:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Oak Street Plaza, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Telluride Elks Lodge #692 Bluegrass Pancake Breakfast",
     link: "https://koto.org/event/telluride-elks-lodge-692-bluegrass-pancake-breakfast/2026-06-20/",
     description: "Telluride Elks Lodge 472 West Pacific Street, Telluride Saturday June 20 and Sunday June 21 Breakfast Served 8am to noon Adults $15 | Kids 12 and Under $10 | Cash Bar Pancakes, Scrambled Eggs, Hash Browns, Biscuits & Gravy, Bacon, Sausage, Coffee and Juice",
@@ -2926,6 +2875,28 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Mountain Village Plazas",
     imageUrl: "https://koto.org/wp-content/uploads/2026/06/RWB-BTE-Mailchimpbanner-scaled.png"
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-03/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-07-03T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Up-off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-07-03/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-07-03T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   }
 ];
 
@@ -3816,18 +3787,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53161338198111/huge/e7e7ee50f5d85056e1ef3d86e59eaad48b8121fb.jpg"
   },
   {
-    title: "Pride Game Night",
-    link: "https://events.ourayridgwayevents.com/event/pride-game-night",
-    description: "Join us for Gay Game Night at Floating Lotus Brewery on June 20 from 6–9 PM. Whether you’re part of the LGBTQ+ community or a supportive ally, everyone is welcome for an evening of games, community, and good company. Bring your favorite board game or jump into one that’s already underway. Plus, Floating Lotus is donating $1 from every pint sold to support Ouray County Pride. Come make new friends, reconnect with old ones, and help us raise a glass (and funds) for Pride. 🌈🎲🍻",
-    pubDate: "2026-06-20T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53192190014847/huge/99cdc0458f0bcd179baafa816306078d664bca40.jpg"
-  },
-  {
     title: "Ouray Open Air Market",
     link: "www.ouray-events.com/open-air",
     description: "The Ouray Open-Air Market is a brand-new cooperative, organized marketplace designed to provide a dedicated home for small-scale creators & producers. Our core mission is to promote local agriculture and artisan goods while fostering honest, transparent relationships between vendors and the community. This is an entirely fresh platform in town designed to showcase your artisanal goods and services, helping neighbors and visitors know exactly who made the products they love. When and Where? Location: The market will take place in a beautiful open-air setting at Billy Goat Gruff's Patio (located at 4th Ave. + Main Street, Ouray, CO).Schedule: We will operate every Sunday from June 21, 2026, through September 6, 2026.Hours: Market hours are 10:00 AM to 2:00 PM.",
@@ -4255,94 +4214,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Kitchen Dwellers Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/kitchen-dwellers-live-in-concert-2/",
-    description: "KITCHEN DWELLERS LIVE IN CONCERT With Magoo The Sheridan Arts Foundation presents Kitchen Dwellers live in concert at the historic Sheridan Opera House on",
-    pubDate: "2026-06-18T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47694/3.jpg"
-  },
-  {
-    title: "Western Medicine Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/western-medicine-live-in-concert/",
-    description: "The Sheridan Arts Foundation presents Western Medicine live in concert at the historic Sheridan Opera House on Thursday, February 19. Doors open at 7:30 p.m.,",
-    pubDate: "2026-06-18T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48000/mv_to_jf-2.jpg"
-  },
-  {
-    title: "The Brothers Comatose Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-brothers-comatose-live-in-concert/",
-    description: "The Sheridan Arts Foundation presents The Brothers Comatose live in concert at the historic Sheridan Opera House on Thursday, February 26.",
-    pubDate: "2026-06-18T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48006/mv_to_jf-5.png"
-  },
-  {
-    title: "Telluride Art Walk",
-    link: "https://townofmountainvillage.com/explore/events/all-events/telluride-art-walk-1/",
-    description: "Join in for Telluride Art Walk, an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists.",
-    pubDate: "2026-06-18T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48050/art_walk.png"
-  },
-  {
-    title: "Creative Exchange",
-    link: "https://townofmountainvillage.com/explore/events/all-events/creative-exchange/",
-    description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home.",
-    pubDate: "2026-06-18T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48052/creative_exchange-1.png"
-  },
-  {
-    title: "The House of Shimmy Shake features \"Remix\"",
-    link: "https://townofmountainvillage.com/explore/events/all-events/burlesque-week-remix-the-house-of-shimmy-shake/",
-    description: "Telluride Theatre's annual fundraiser resurrects the raucous and raunchy variety shows of Telluride’s vaudeville era, featuring dancing, comedy,",
-    pubDate: "2026-06-18T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48273/mv_graphic_-_remix.png"
-  },
-  {
-    title: "Galvin Cello Quartet",
-    link: "https://townofmountainvillage.com/explore/events/all-events/galvin-cello-quartet/",
-    description: "This concert features a program based around famous music for piano that has been stunningly arranged for four cellos. Performed by the multi award-",
-    pubDate: "2026-06-18T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48307/galvin_quartet.jpg"
-  },
-  {
-    title: "Big Something Live in Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/big-something-live-in-concert/",
-    description: "The Sheridan Arts Foundation presents Big Something Live in Concert at the historic Sheridan Opera House on Thursday, March 12th & Friday the 13th.",
-    pubDate: "2026-06-18T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48320/mv-10.png"
-  },
   {
     title: "Red, White & Blues- Fourth of July Celebration",
     link: "https://townofmountainvillage.com/explore/events/all-events/red-white-blues-fourth-of-july-celebration/",
@@ -8644,17 +8515,17 @@ function getTownAgendaLink(title, eventDate) {
 const TELLURIDE_BOARD_MEETINGS = [
   {
     date: "June 23, 2026",
-    title: "Special Meeting - HARC & P&Z Joint Subcommittee Meeting",
+    title: "Special Meeting - HARC and P&Z",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8285",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: ""
   },
   {
     date: "June 23, 2026",
-    title: "Special Meeting- HARC & P&Z Joint Subcommittee",
+    title: "Special Meeting - P&Z and HARC",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8286",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: ""
   },
