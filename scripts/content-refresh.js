@@ -40,6 +40,10 @@ const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 // silently break summaries again — Anthropic auto-points the alias at the
 // latest stable Sonnet release.
 const CLAUDE_MODEL = 'claude-sonnet-4-6';
+// Mirror of CLAUDE_MODEL in scripts/deep-dive-refresh.js. Deep-dive runs
+// later in the same workflow and would silently break on a Haiku retirement
+// without the preflight below. Bump in lockstep with the deep-dive constant.
+const HAIKU_MODEL = 'claude-haiku-4-5-20251001';
 
 // ── Smart truncation for event/meeting card descriptions ──
 // Caps text at maxLen, cutting at the nearest sentence boundary (or word
@@ -383,24 +387,12 @@ async function checkWorkerHealth() {
   }
 }
 
-// Probe the Anthropic API at startup with a minimal request to confirm the
-// configured CLAUDE_MODEL is still accepted. When Anthropic retires a model,
-// every Task 1 (summary) and Task 1b (preview) call returns an error and
-// the placeholder-detection / version-upgrade machinery in refreshSummaries
-// silently writes "agenda hasn't been posted yet" into MANUAL_SUMMARIES.
-// That happened with claude-sonnet-4-20250514 on 2026-06-15 20:48 UTC; the
-// retirement was caught 5 days later, by which point the weekly email had
-// gone out with generic boilerplate for every meeting. Failing the run here
-// triggers the if:failure() step in content-refresh.yml to open a CI Health
-// issue within 6 hours of the next retirement.
-async function checkClaudeHealth() {
-  if (!ANTHROPIC_API_KEY) {
-    console.log('  ℹ ANTHROPIC_API_KEY not set — skipping Claude preflight (Task 1 / 1b will be skipped)');
-    return;
-  }
-  console.log(`🤖 Claude preflight: testing ${CLAUDE_MODEL}...`);
+// Ping one Anthropic model with a tiny request; throw with a diagnostic
+// message if the API rejects the model (the retirement-detection signal)
+// or the network is unreachable. Returns elapsed ms on success.
+async function pingClaudeModel(model) {
   const body = JSON.stringify({
-    model: CLAUDE_MODEL,
+    model,
     max_tokens: 8,
     messages: [{ role: 'user', content: 'ok' }]
   });
@@ -434,7 +426,7 @@ async function checkClaudeHealth() {
     });
   } catch (e) {
     throw new Error(
-      `Claude preflight FAILED — could not reach api.anthropic.com: ${e.message}. ` +
+      `Claude preflight FAILED — could not reach api.anthropic.com while testing "${model}": ${e.message}. ` +
       `Likely an outage or a transient network failure; re-run the workflow in a few minutes.`
     );
   }
@@ -442,17 +434,47 @@ async function checkClaudeHealth() {
     const errType = json.body.error.type || 'error';
     const errMsg = json.body.error.message || JSON.stringify(json.body.error);
     throw new Error(
-      `Claude preflight FAILED — model "${CLAUDE_MODEL}" rejected by the API ` +
+      `Claude preflight FAILED — model "${model}" rejected by the API ` +
       `(${errType}: ${errMsg}). The model has likely been retired by Anthropic. ` +
-      `Update the CLAUDE_MODEL constant at the top of scripts/content-refresh.js to the current Sonnet/Opus alias ` +
-      `and push. The May 2025 retirement of claude-sonnet-4-20250514 produced 5 days of empty meeting summaries ` +
+      `Update the corresponding constant: CLAUDE_MODEL (Sonnet) lives in scripts/content-refresh.js, ` +
+      `scripts/build-rss-feed.js, scripts/extract-votes.mjs, and govhub-summary-backend/functions/index.js; ` +
+      `HAIKU_MODEL is also in scripts/content-refresh.js and mirrors CLAUDE_MODEL in ` +
+      `scripts/deep-dive-refresh.js. See memory/claude-model-inventory.md for the full checklist. ` +
+      `The May 2025 retirement of claude-sonnet-4-20250514 produced 5 days of empty meeting summaries ` +
       `before being caught — this preflight is here to catch the next one within 6 hours.`
     );
   }
   if (json.status !== 200) {
-    throw new Error(`Claude preflight FAILED — unexpected HTTP ${json.status} from api.anthropic.com.`);
+    throw new Error(`Claude preflight FAILED — unexpected HTTP ${json.status} from api.anthropic.com while testing "${model}".`);
   }
-  console.log(`  ✓ Claude OK (${Date.now() - t0} ms)`);
+  return Date.now() - t0;
+}
+
+// Probe the Anthropic API at startup with one tiny request per model the
+// workflow uses. When Anthropic retires a model, every downstream Claude
+// call returns an error and stale placeholder summaries pile up until
+// someone notices. That happened with claude-sonnet-4-20250514 on
+// 2026-06-15 20:48 UTC; the retirement was caught 5 days later, by which
+// point the weekly email had shipped generic boilerplate for every
+// meeting. Failing the run here triggers the if:failure() step in
+// content-refresh.yml to open a CI Health issue within 6 hours of the
+// next retirement.
+//
+// Pings BOTH models in the workflow:
+//   * CLAUDE_MODEL (Sonnet) — used by Task 1 / 1b in this file and by
+//     scripts/build-rss-feed.js's Week-Ahead lede generator.
+//   * HAIKU_MODEL — used by scripts/deep-dive-refresh.js, which runs
+//     later in the same workflow. Without this ping a Haiku retirement
+//     would silently kill the daily deep-dive output.
+async function checkClaudeHealth() {
+  if (!ANTHROPIC_API_KEY) {
+    console.log('  ℹ ANTHROPIC_API_KEY not set — skipping Claude preflight (Task 1 / 1b and deep-dive will be skipped)');
+    return;
+  }
+  console.log(`🤖 Claude preflight: testing ${CLAUDE_MODEL} + ${HAIKU_MODEL}...`);
+  const sonnetMs = await pingClaudeModel(CLAUDE_MODEL);
+  const haikuMs  = await pingClaudeModel(HAIKU_MODEL);
+  console.log(`  ✓ Claude OK (sonnet ${sonnetMs} ms, haiku ${haikuMs} ms)`);
 }
 
 function fetch(url, opts = {}) {
