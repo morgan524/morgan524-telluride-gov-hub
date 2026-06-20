@@ -1,26 +1,18 @@
 {
-  "hash": "0dd204a1339e03f984c203ef5986716a151bacbb",
-  "lede": "The gondola replacement moves toward a critical deadline this week, with SMART needing $18 million committed by fall 2026 to secure federal funding. Mountain Village Council tackles an independent investigation report and votes on expedited affordable housing review policies. Meanwhile, Telluride's historic commission faces two projects staff recommend rejecting, and Norwood considers updating outdoor lighting standards.",
+  "hash": "fa3c82e4d0988b69570928410aaea2f2d18363a8",
+  "lede": "The biggest item this week is Monday's joint HARC and P&Z special session, where the two commissions will work through proposed amendments to Telluride's Land Use Code and Design Guidelines to bring the Town into compliance with the Colorado Wildfire Resiliency Code — whatever they recommend heads straight to Town Council. The Telluride Hospital District board meets Thursday with mill levy considerations on the agenda, a significant conversation as the hospital pushes toward a new facility. The Open Space Commission also meets Monday with trail and open space project updates, including a NEPA process update for the Perimeter Trail.",
   "notable": [
     {
-      "id": 2,
-      "stake": "$18M commitment deadline looms for federal gondola funding"
+      "id": 1,
+      "stake": "Commission recommends wildfire code changes to Town's Land Use Code and Design Guidelines."
     },
     {
-      "id": 5,
-      "stake": "Investigation report review and affordable housing policy votes"
+      "id": 4,
+      "stake": "Hospital board discusses mill levy — the tax mechanism funding the district and new facility."
     },
     {
       "id": 0,
-      "stake": "Land use code changes for outdoor lighting standards"
-    },
-    {
-      "id": 7,
-      "stake": "Historic window and deck projects face staff disapproval"
-    },
-    {
-      "id": 9,
-      "stake": "Ice rink fees increasing 3.7% for winter programs"
+      "stake": "NEPA update on Perimeter Trail could shape scope and timeline of a major regional trail project."
     }
   ]
 }
