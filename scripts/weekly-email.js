@@ -98,7 +98,22 @@ for (const name of EVENT_ARRAYS) {
 const byDay = {};
 for (const e of evts) { (byDay[e.date] = byDay[e.date] || []).push(e); }
 const chosen = []; const usedTitles = new Set();
-const tkey = (t) => String(t || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 28);
+// Cross-day dedup key: alphabetise the distinctive 4+-char tokens of the title
+// after dropping common stopwords. This is intentionally fuzzy so the same
+// event listed under varying titles across sources collapses to one card.
+// Concrete case: Telluride Theatre's Muleskinner's Ball is published by
+// Sheridan Opera House as "Telluride Theatre Muleskinner's Ball Fundraiser"
+// (correct Jun 27) and by Mountain Village's calendar as "The Muleskinner's
+// Ball (GALA Fundraiser for Telluride Theatre)" with a wrong Jun 28 date —
+// the old first-28-chars key let both render as separate days. Stripping
+// stopwords + sorting tokens makes the two titles produce the same key, so
+// only the first-day pick survives.
+const TKEY_STOPWORDS = new Set(['gala','fundraiser','presents','featuring','annual','event','show','live','from','with','this']);
+const tkey = (t) => {
+  const tokens = (String(t || '').toLowerCase().match(/[a-z]+/g) || [])
+    .filter(w => w.length >= 4 && !TKEY_STOPWORDS.has(w));
+  return tokens.sort().join('-');
+};
 for (const day of days) {
   const list = (byDay[day] || []).sort((a, b) => (featuredScore(b) - featuredScore(a)) || ((featuredStartHour(a.time) || 99) - (featuredStartHour(b.time) || 99)));
   // One DISTINCT event per day: skip an event whose title already ran earlier
