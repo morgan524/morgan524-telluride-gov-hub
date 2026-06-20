@@ -35,5 +35,12 @@ smc-watch.log
 scripts/node_modules/
 node_modules/
 
+# Firebase Cloud Function env file — contains live ANTHROPIC_API_KEY and
+# ADMIN_SECRET, loaded by govhub-summary-backend/functions at deploy time.
+# Never commit. Use `firebase functions:config:set` for production secrets,
+# or distribute via secure channel (1Password etc.) for redeploy.
+govhub-summary-backend/functions/.env
+**/.env
+
 # Daily review findings — transient, read by maintenance.yml issue step, never committed
 review-findings.log

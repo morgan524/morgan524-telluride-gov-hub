@@ -1,0 +1,21 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── Summaries collection ──
+    // Public read (frontend loads cached summaries)
+    // Write only via admin SDK (Cloud Functions use admin, not client rules)
+    match /summaries/{docId} {
+      allow read: if true;
+      allow write: if false;  // Only Cloud Functions (admin SDK) can write
+    }
+
+    // ── Existing comments collection (preserve current behavior) ──
+    match /comments/{docId} {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasAll(['topic', 'text', 'name']);
+      allow update: if request.resource.data.diff(resource.data).affectedKeys().hasOnly(['useful']);
+      allow delete: if false;
+    }
+  }
+}
